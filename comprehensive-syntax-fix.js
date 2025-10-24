@@ -4,10 +4,10 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-// Find all TypeScript/TSX files with syntax errors
-function findFilesWithSyntaxErrors() {
+// Find all TypeScript/TSX files
+function findAllTsxFiles() {
   try {
-    const result = execSync('find . -name "*.tsx" -o -name "*.ts" | head -50', { 
+    const result = execSync('find . -name "*.tsx" -o -name "*.ts" | grep -v node_modules | head -100', { 
       encoding: 'utf8',
       cwd: '/workspace'
     });
@@ -24,40 +24,39 @@ function fixFileSyntax(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix missing closing tags for div
-    const divPattern = /<div([^>]*)>([^<]*(?:<[^/][^>]*>[^<]*)*)(?!<\/div>)/g;
-    if (divPattern.test(content)) {
-      // This is complex, let's handle it case by case
-      content = content.replace(/<div([^>]*)>([^<]*(?:<[^/][^>]*>[^<]*)*)(?!<\/div>)/g, (match, attrs, inner) => {
-        if (!inner.includes('</div>')) {
-          return match + '</div>';
-        }
-        return match;
-      });
+    // Fix 1: Missing closing div tags
+    const openDivs = (content.match(/<div/g) || []).length;
+    const closeDivs = (content.match(/<\/div>/g) || []).length;
+    if (openDivs > closeDivs) {
+      content += '</div>'.repeat(openDivs - closeDivs);
       modified = true;
     }
 
-    // Fix missing equals signs in JSX props
+    // Fix 2: Fix malformed imports with extra braces
+    content = content.replace(/import\s+(\w+)\s+\}\s+from\s+['"]([^'"]+)['"]/g, 'import $1 from \'$2\'');
+    modified = true;
+
+    // Fix 3: Fix missing equals signs in JSX props
     content = content.replace(/(\w+)\s+(\w+)(?=\s*[>}])/g, '$1=$2');
     modified = true;
 
-    // Fix missing commas in object literals
+    // Fix 4: Fix missing commas in object literals
     content = content.replace(/(\w+):\s*([^,}\n]+)(?=\s*[}\n])/g, '$1: $2,');
     modified = true;
 
-    // Fix unterminated string literals
+    // Fix 5: Fix unterminated string literals
     content = content.replace(/(['"])([^'"]*)(?=\n|$)/g, '$1$2$1');
     modified = true;
 
-    // Fix missing semicolons
+    // Fix 6: Fix missing semicolons at end of statements
     content = content.replace(/([^;}])\n/g, '$1;\n');
     modified = true;
 
-    // Fix JSX fragment issues
+    // Fix 7: Fix JSX fragment issues
     content = content.replace(/<>([^<]*(?:<[^/][^>]*>[^<]*)*)(?!<\/>)/g, '<>$1</>');
     modified = true;
 
-    // Fix missing closing braces
+    // Fix 8: Fix missing closing braces
     const openBraces = (content.match(/\{/g) || []).length;
     const closeBraces = (content.match(/\}/g) || []).length;
     if (openBraces > closeBraces) {
@@ -65,11 +64,27 @@ function fixFileSyntax(filePath) {
       modified = true;
     }
 
-    // Fix missing closing parentheses
+    // Fix 9: Fix missing closing parentheses
     const openParens = (content.match(/\(/g) || []).length;
     const closeParens = (content.match(/\)/g) || []).length;
     if (openParens > closeParens) {
       content += ')'.repeat(openParens - closeParens);
+      modified = true;
+    }
+
+    // Fix 10: Fix malformed className attributes
+    content = content.replace(/className="([^"]*)\s+([^"]*)"/g, 'className="$1 $2"');
+    modified = true;
+
+    // Fix 11: Fix missing quotes in JSX attributes
+    content = content.replace(/(\w+)=([^"'\s][^>\s]*)/g, '$1="$2"');
+    modified = true;
+
+    // Fix 12: Fix duplicate React imports
+    const reactImports = content.match(/import\s+React[^;]*;/g);
+    if (reactImports && reactImports.length > 1) {
+      content = content.replace(/import\s+React[^;]*;\s*/g, '');
+      content = 'import React from \'react\';\n' + content;
       modified = true;
     }
 
@@ -87,8 +102,8 @@ function fixFileSyntax(filePath) {
 
 // Main execution
 function main() {
-  console.log('Finding files with syntax errors...');
-  const files = findFilesWithSyntaxErrors();
+  console.log('Finding TypeScript/TSX files...');
+  const files = findAllTsxFiles();
   
   if (files.length === 0) {
     console.log('No files found.');
