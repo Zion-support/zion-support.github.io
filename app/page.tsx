@@ -11,7 +11,7 @@ export default function HomePage() {
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+      setCurrentTestimonial((prev) => (prev + 1) % 3); // 3 testimonials
     }, 5000);
     return () => clearInterval(interval);
   }, []);
