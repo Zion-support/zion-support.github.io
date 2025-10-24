@@ -1,14 +1,29 @@
-
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOEnhancerProps {
-  // Add props here
+  title?: string;
+  description?: string;
+  keywords?: string;
+  children: React.ReactNode;
 }
 
-const SEOEnhancer: React.FC<SEOEnhancerProps> = (_props) => {
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
+  title = 'Zion Tech Group',
+  description = 'Advanced AI and IT solutions for your business.',
+  keywords = 'AI, IT, technology, solutions',
+  children,
+}) => {
   return (
-    <div>
-      {/* Component content */}
-    </div>
+    <>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
+      </Helmet>
+      {children}
+    </>
   );
 };
 

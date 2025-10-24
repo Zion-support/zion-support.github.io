@@ -16,13 +16,16 @@ const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-// Preload critical components;
-const preloadComponents = (;
-  if (typeof window !== 'undefined') {// Preload critical components after initial render;
+// Preload critical components
+const preloadComponents = () => {
+  if (typeof window !== 'undefined') {
+    // Preload critical components after initial render
     setTimeout(() => {
-      import('./components/ContentPromotionBanner');) => {
-  return($3;)
-  )}import('./components/ContentCarousel');}
+      import('./components/ContentPromotionBanner');
+      import('./components/ContentCarousel');
+    }, 1000);
+  }
+};
     }, 100);
   }
 }
