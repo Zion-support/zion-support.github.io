@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
@@ -189,3 +190,8 @@ async function main() {
 }
 
 main().catch(console.error);
+=======
+const fs = require('fs''
+const path = require('path''
+    const content = fs.readFileSync(filePath, 'utf8''
+>>>>>>> origin/main

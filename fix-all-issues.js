@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 const fs = require('fs')
 const path = require('path')
 // Function to fix all issues in a page file
@@ -106,3 +107,14 @@ const appDir = path.join(__dirname, 'app');
 console.log('Starting comprehensive fix...');
 const totalFixed = fixAllPages(appDir);
 console.log(`Fixed ${totalFixed} page files`);
+=======
+const fs = require('fs''
+const path = require('path''
+    let content = fs.readFileSync(filePath, 'utf8''
+    const componentName = dirName.split('-''
+    ).join('') + 'Page''
+    if (content.includes('const "PagePage": React.FC = () => {'',
+      if (name === 'PagePage' || name.includes('PagePage''
+      if (name === 'PagePage' || name.includes('PagePage''
+    if (content.includes("'use client''
+>>>>>>> origin/main

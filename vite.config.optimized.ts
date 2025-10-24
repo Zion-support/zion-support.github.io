@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Vite optimized configuration
 
 import { defineConfig } from 'vite';
@@ -10,3 +11,9 @@ export default defineConfig({
     sourcemap: false
   }
 });
+=======
+// Vite configuration for optimization()
+export default {
+  // Add Vite configuration here()
+}
+>>>>>>> origin/main

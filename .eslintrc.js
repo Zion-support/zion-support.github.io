@@ -1,4 +1,5 @@
 module.exports = {
+<<<<<<< HEAD
   env: {
     browser: true,
     es2021: true,
@@ -28,3 +29,13 @@ module.exports = {
   },
   ignorePatterns: ['dist', 'node_modules'],
 };
+=======
+  extends: ["next"],
+  rules: {
+    "no-console": "off",
+    "prefer-const": "error",
+    "no-var": "error",
+    "react/no-unescaped-entities": "off"
+  }
+}
+>>>>>>> origin/main

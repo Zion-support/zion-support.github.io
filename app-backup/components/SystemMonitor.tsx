@@ -6,13 +6,11 @@ import React from 'react'
 import { Brain } from 'lucide-react'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 import { ArrowRight } from 'lucide-react'
-'use client',
-    }
-  ]
-  const benefits = [
+'use client'
   'Increase efficiency by up to 50%'
     'Reduce costs by 30% with automation'
     'Improve decision-making with AI insights'
+<<<<<<< HEAD
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ];
@@ -30,3 +28,8 @@ export default SystemMonitorPage</div />
   )
 }
 export default SystemMonitorPage;
+=======
+    'Scale operations without proportional staff increases'
+    'Gain competitive advantage with advanced technology';
+const "SystemMonitor": React.FC<SystemMonitorProps> = ({ className = ' }) => {
+>>>>>>> origin/main

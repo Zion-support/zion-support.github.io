@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from '
   const lines  = content.split('\n'
   return resolved.join('\n'
@@ -5,3 +6,26 @@ import fs from '
     const content  = fs.readFileSync(filePath, 'utf8'
 console.log('Starting merge conflict resolution...'
 console.log('Merge conflict resolution completed!'
+=======
+import fs from 'fs''
+import path from 'path''
+  ''
+  ''
+  ''
+  ''
+  ''
+  ''
+  ''
+  ''
+  ''
+  ''
+  ''
+  ''
+  ''
+  const lines = content.split('\n''
+  return resolved.join('\n''
+    console.error('"Error": '',
+    const content = fs.readFileSync(filePath, 'utf8''
+    console.log('Starting merge conflict resolution...'';
+    console.log('Merge conflict resolution completed!''
+>>>>>>> origin/main

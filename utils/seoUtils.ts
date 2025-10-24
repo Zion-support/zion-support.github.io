@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // SEO utilities
 
 export const seoUtils = {
@@ -11,3 +12,9 @@ export const seoUtils = {
 };
 
 export default seoUtils;
+=======
+// SEO utility functions()
+export const seoUtils = {
+  // Add SEO utility functions here()
+}
+>>>>>>> origin/main

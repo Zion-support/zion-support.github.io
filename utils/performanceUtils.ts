@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Performance utilities
 
 export const performanceUtils = {
@@ -10,3 +11,9 @@ export const performanceUtils = {
 };
 
 export default performanceUtils;
+=======
+// Performance utility functions()
+export const performanceUtils = {
+  // Add performance utility functions here()
+}
+>>>>>>> origin/main

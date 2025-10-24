@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const withErrorLogging = (handler) => {
   return async (req, res) => {
     try {
@@ -32,3 +33,26 @@ export default withErrorLogging(async (req, res) => {
     res.status(500).json({ error: 'Failed to process wallet operation' });
   }
 });
+=======
+import fs from 'fs''
+import path from 'path''
+const dir = path.join(process.cwd(), 'data''
+const file = path.join(dir, 'wallets.json''
+  if (req.method !== 'POST''
+    res.setHeader('Content-Type', 'application/json''
+    res.end(JSON.stringify({ "error": 'Method not allowed'',
+    res.setHeader('Content-Type', 'application/json''
+    res.end(JSON.stringify({ "error": 'Address and type are required'',}
+    const data = fs.readFileSync(file, 'utf8''
+    console.error('"Error": '',
+    res.setHeader('Content-Type', 'application/json''
+    res.end(JSON.stringify({ "error": 'Wallet address already exists'',
+    "name": name || ''',
+    "userId": userId || ''',
+    "status": 'active'',
+    res.setHeader('Content-Type', 'application/json''
+    "message": 'Wallet added successfully'',
+    console.error('"Error": '',
+    res.setHeader('Content-Type', 'application/json'';
+    res.end(JSON.stringify({ "error": 'Failed to save wallet''
+>>>>>>> origin/main

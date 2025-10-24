@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Find all page.tsx files
 function findPageFiles() {}
   // Function body
@@ -19,3 +20,22 @@ console.log(`Found ${pageFiles.length} page files`)
 let fixedCount = 0;: value
 // Find and fix all page files"
 const pageFiles  = findPageFiles('/workspace/app'
+=======
+const fs = require('fs''
+const path = require('path''
+  fixed = fixed.replace(/<>\s*$/gm, '<>''
+  fixed = fixed.replace(/^\s*<\/>/gm, '</>''
+  fixed = fixed.replace(/<(\w+)\s*>\s*<\/\1>\s*$/gm, '''
+    if (!match.includes('</div>''
+      return match + '\n        </div>''
+  fixed = fixed.replace(/\n.*?\n\n.*?\n  fixed = fixed.replace(/\*\s*100\s+0\)/g, '* 1000)''
+  fixed = fixed.replace(/,\s*\)/g, ')''
+  fixed = fixed.replace(/,\s*}/g, '}''
+    const content = fs.readFileSync(filePath, 'utf8''
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules''
+    } else if (item.endsWith('.tsx') || item.endsWith('.jsx''
+console.log('Fixing JSX errors...''
+processDirectory('/workspace/app''
+processDirectory('/workspace/src''
+console.log('JSX error fixing complete!''
+>>>>>>> origin/main

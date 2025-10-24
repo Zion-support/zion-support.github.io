@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Function to fix specific syntax errors
 function fixSyntaxErrors(content, filePath) {}
   let  fixed = content
@@ -13,3 +14,12 @@ function fixSyntaxErrors(content, filePath) {}
   fixed = fixed.replace(/success\s*$/gm, 'success: true'
   fixed = fixed.replace(/error\s*$/gm, 'error: false'
   const filesToFix  = ['/workspace/App-backup.tsx',"/workspace/App-minimal.tsx', "/workspace/App-optimized.tsx',"/workspace/App.tsx',"/workspace/EnhancedFooter.tsx',"/workspace/__tests__/advanced-components.test.tsx',"/workspace/__tests__/components.test.tsx',"/workspace/__tests__/error-boundary.test.tsx',"/workspace/__tests__/image-optimizer.test.tsx',"/workspace/__tests__/loading-spinner.test.tsx',"/workspace/api/create-checkout-session.js',"/workspace/api/create-payment-intent.js',"/workspace/api/onsite-request.js',"/workspace/api/subscribe.js'
+=======
+const fs = require('fs''
+const path = require('path''
+  content = content.replace(/(\w+):\s*['"`][^'"`]*[''
+  content = content.replace(/(\w+):\s*['"`][^'"`]*[''
+  content = content.replace(/<meta name="description" content="([^"]*)" \/>\s*<\/>/g, ''
+  content = content.replace(/"title": \s*title,/g, ''
+  content = content.replace(/"description": \s*description,/g, ''
+>>>>>>> origin/main

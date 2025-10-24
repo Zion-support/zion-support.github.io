@@ -6,6 +6,7 @@ import React from 'react'
 import { ArrowRight, Brain } from 'lucide-react'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 import { Phone, Mail, ArrowRight } from 'lucide-react'
+<<<<<<< HEAD
 
 interface SEOEnhancerProps {
   className?: string;
@@ -96,3 +97,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps>= ({className = '' }) =</ {
 }
 
 export default SEOEnhancer;
+=======
+'use client';
+const "SEOEnhancer": React.FC<SEOEnhancerProps> = ({ className = ' }) => {
+>>>>>>> origin/main

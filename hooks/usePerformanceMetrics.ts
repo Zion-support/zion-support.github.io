@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 
 export const usePerformanceMetrics = () => {
@@ -9,3 +10,6 @@ export const usePerformanceMetrics = () => {
 
   return { metrics };
 };
+=======
+import React from 'react'
+>>>>>>> origin/main

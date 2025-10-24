@@ -32,9 +32,26 @@
   ],
   "exclude": [
     "node_modules",
+<<<<<<< HEAD
     "app-backup",
     "backup",
     "backup-problematic",
     "corrupted-src-backup"
+=======
+    "app-backup/**/*",
+    "ai-pages-backup/**/*",
+    "all-pages-backup/**/*",
+    "problematic-files-backup/**/*",
+    "src/**/*",
+    "components/**/*",
+    "hooks/**/*",
+    "types/**/*",
+    "utils/**/*",
+    "jest.d.ts",
+    "jest.setup.ts",
+    "setupTests.ts",
+    "app/App.tsx",
+    "app/root-layout.tsx"
+>>>>>>> origin/main
   ]
 }

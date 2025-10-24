@@ -1,6 +1,7 @@
 import React from 'react'
 import { Home, ChevronRight } from 'lucide-react'
 import { useLocation } from 'react-router-dom'
+<<<<<<< HEAD
 
 interface BreadcrumbItem {name: string;
   path: string;
@@ -48,3 +49,11 @@ const Breadcrumb: React.FC = () => {const location = useLocation()
 
 export default Breadcrumb;
 ;
+=======
+'use client'
+  if (location.pathname === '/'
+  const pathSegments = location.pathname.split('/').filter(segment => segment !== ''
+    { "name": 'Home', "path": '/',
+    const path = '/' + pathSegments.slice(0, index + 1).join('/';}
+    const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '
+>>>>>>> origin/main

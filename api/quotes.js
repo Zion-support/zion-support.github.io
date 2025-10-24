@@ -9,6 +9,7 @@ const withErrorLogging = (handler) => {
   };
 };
 
+<<<<<<< HEAD
 export default withErrorLogging(async (req, res) => {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -34,3 +35,20 @@ export default withErrorLogging(async (req, res) => {
     res.status(500).json({ error: 'Failed to generate quote' });
   }
 });
+=======
+export default async function handler(req, res) {
+  if (req.method !== 'POST''
+    res.setHeader('Content-Type', 'application/json''
+    res.end(JSON.stringify({ "error": 'Method not allowed'',
+    res.setHeader('Content-Type', 'application/json''
+    res.end(JSON.stringify({ "error": 'Name, email, phone, and details are required''
+      "country": country || 'Not specified'',
+    "service": service || 'General inquiry'',
+      "status": 'pending'',
+    console.log('Quote request "processed": '',
+    res.setHeader('Content-Type', 'application/json''
+    "message": 'Quote request submitted successfully'',
+    console.error('Quote submission "error": '',
+    res.setHeader('Content-Type', 'application/json''
+    res.end(JSON.stringify({ "error": 'Internal server error''
+>>>>>>> origin/main

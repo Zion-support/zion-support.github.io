@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Logger utility
 
 export const logger = {
@@ -13,3 +14,9 @@ export const logger = {
 };
 
 export default logger;
+=======
+// Logger utility functions()
+export const logger = {
+  // Add logger utility functions here()
+}
+>>>>>>> origin/main

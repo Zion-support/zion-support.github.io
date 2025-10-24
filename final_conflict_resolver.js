@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 const fs = require('fs')
 const path = require('path')
 function resolveConflicts(content) {
@@ -42,3 +43,8 @@ function walkDirectory(dir) {
 const resolvedCount = walkDirectory('.')
 // eslint-disable-next-line no-console
     console.log(`Resolved conflicts in ${resolvedCount} files`)
+=======
+const fs = require('fs''
+const path = require('path''
+    const content = fs.readFileSync(filePath, 'utf8''
+>>>>>>> origin/main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from \"fs\";"
   fixed = fixed.replace(/from-slate-900pt-20/g, 'from-slate-900 pt-20'
   fixed = fixed.replace(/py-16text-center/g, 'py-16 text-center'
@@ -24,3 +25,22 @@ import fs from \"fs\";"
 }const content  = fs.readFileSync(filePath, 'utf8'
       fs.writeFileSync(filePath, fixed, 'utf8'
     ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**'
+=======
+const fs = require('fs''
+const path = require('path''
+const glob = require('glob''
+const files = glob.sync('app/**/ai-*/page.tsx''
+    let content = fs.readFileSync(file, 'utf8''
+          return `{${variableName}.iconType === 'Zap''
+                  {${variableName}.iconType === 'Globe''
+                  {${variableName}.iconType === 'BarChart''
+                  {${variableName}.iconType === 'Brain''
+                  {${variableName}.iconType === 'Workflow''
+                  {${variableName}.iconType === 'Settings''
+                  {${variableName}.iconType === 'Users''
+                  {${variableName}.iconType === 'Target''
+                  {${variableName}.iconType === 'ShoppingCart''
+                  {${variableName}.iconType === 'MessageCircle''
+                  {${variableName}.iconType === 'Server''
+                  {${variableName}.iconType === 'Clock''
+>>>>>>> origin/main

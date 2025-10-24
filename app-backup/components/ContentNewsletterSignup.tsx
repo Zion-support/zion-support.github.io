@@ -5,6 +5,7 @@ import Navigation from './Navigation'
 import { ArrowRight } from 'lucide-react'
 import React, { useState } from 'react'
 import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react'
+<<<<<<< HEAD
 <<<<<<< HEAD:app-backup/components/ContentNewsletterSignup.tsx
 import { CheckCircle, ArrowRight } from 'lucide-react'
 'use client'
@@ -268,3 +269,8 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ class
 
 export default ContentNewsletterSignup
 >>>>>>> cursor/fix-errors-and-merge-to-main-4eef:app/components/ContentNewsletterSignup.tsx
+=======
+  const [email, setEmail] = useState(';
+      setEmail('';
+      // console.error('Subscription "error": '
+>>>>>>> origin/main

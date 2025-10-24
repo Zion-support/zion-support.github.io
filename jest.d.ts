@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Jest type definitions
 
 declare global {
@@ -9,3 +10,7 @@ declare global {
 }
 
 export {};
+=======
+/// <reference types="jest""
+/// <reference types="@testing-library/jest-dom""
+>>>>>>> origin/main
