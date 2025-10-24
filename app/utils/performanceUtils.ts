@@ -1,12 +1,17 @@
+// Performance monitoring utilities
+
+export interface PerformanceMetrics {
+  loadTime: number | null;
+  firstContentfulPaint: number | null;
+  largestContentfulPaint: number | null;
+  firstInputDelay: number | null;
+  cumulativeLayoutShift: number | null;
+  timeToInteractive: number | null;
+  totalBlockingTime: number | null;
+}
+
 // Global performance monitoring utilities
 export const performanceUtils = {
-  // Measure custom performance marks
-  mark: (_name: string) => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      performance.mark(_name);
-    }
-  },
-
   // Measure time between marks
   measure: (name: string, startMark: string, endMark?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -30,38 +35,31 @@ export const performanceUtils = {
   clearEntries: (type?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       if (type) {
-        performance.clearMarks(type);
         performance.clearMeasures(type);
+        performance.clearMarks(type);
       } else {
-        performance.clearMarks();
         performance.clearMeasures();
+        performance.clearMarks();
       }
     }
-  },
-
-  // Get navigation timing
-  getNavigationTiming: () => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      return navigation;
-    }
-    return null;
-  },
-
-  // Get resource timing
-  getResourceTiming: () => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      return performance.getEntriesByType('resource');
-    }
-    return [];
   }
 };
 
-interface _LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-}
-
-interface _PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-}
+// Google Analytics integration for performance tracking
+export const trackPerformanceToGA = (metrics: PerformanceMetrics) => {
+  if (typeof window !== 'undefined' && 'gtag' in window) {
+    (window as Window & { gtag: (..._args: unknown[]) => void }).gtag('event', 'performance_metrics', {
+      event_category: 'Performance',
+      event_label: 'Core Web Vitals',
+      custom_map: {
+        load_time: metrics.loadTime,
+        first_contentful_paint: metrics.firstContentfulPaint,
+        largest_contentful_paint: metrics.largestContentfulPaint,
+        first_input_delay: metrics.firstInputDelay,
+        cumulative_layout_shift: metrics.cumulativeLayoutShift,
+        time_to_interactive: metrics.timeToInteractive,
+        total_blocking_time: metrics.totalBlockingTime
+      }
+    });
+  }
+};
