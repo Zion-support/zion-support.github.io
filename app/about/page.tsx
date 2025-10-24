@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { Brain, ArrowRight, Shield, Globe, Users } from 'lucide-react'
+;
 
 export const metadata: Metadata = {
   title: 'About Us - Zion Tech Group | AI & IT Solutions',
@@ -13,7 +15,7 @@ export const metadata: Metadata = {
     url: 'https://ziontechgroup.com/about',
   },
 };
-import { ArrowRight, Users, Shield, Globe, Brain, CheckCircle, Award, Star, Send, BarChart3, Target, Zap, DollarSign, Clock, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react';
+;
 
 const AboutPage: React.FC = () => {
 
@@ -129,7 +131,7 @@ const AboutPage: React.FC = () => {
             <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12">
               <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Let's discuss how our AI and IT solutions can help your business grow and succeed.
+                Let&apos;s discuss how our AI and IT solutions can help your business grow and succeed.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 

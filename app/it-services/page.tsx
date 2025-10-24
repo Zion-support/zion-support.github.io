@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Cloud, Shield, Server, Database, CheckCircle, ArrowRight } from "lucide-react";
+import { Cloud, Server, ArrowRight, CheckCircle, Shield, Database } from 'lucide-react';
 
 const ITServicesPage: React.FC = () => {
   const services = [

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Zap, Layers, Users, TrendingUp, CheckCircle, ArrowRight } from "lucide-react";
+import { Layers, ArrowRight, CheckCircle, Zap, TrendingUp, Users } from 'lucide-react';
 
 const MicroSaasPage: React.FC = () => {
   const services = [

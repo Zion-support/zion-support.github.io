@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { Brain, BarChart3, Shield, Target, Zap, Globe, DollarSign, Calculator, Activity, TrendingUp, Lock, Building2, Database, FileText, CreditCard, Wallet, ArrowRight, CheckCircle, Star, Sparkles, PieChart } from 'lucide-react';
+import { ArrowRight, CheckCircle, Brain, Target, TrendingUp, Zap, BarChart3, DollarSign, Building2, Calculator, Activity, Lock, FileText, CreditCard, Database, Wallet, Sparkles, PieChart, Shield, Globe, Star, BarChart } from 'lucide-react';
 export default function AiFinancialAnalyticsProPage() {
   const features = [
     {

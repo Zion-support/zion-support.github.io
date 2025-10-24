@@ -1,3 +1,4 @@
+import { Users } from 'lucide-react'
 "use client";
 import React from "react";
 import { UsersIcon, TrophyIcon, LightBulbIcon } from "@heroicons/react/24/outline";

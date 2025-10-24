@@ -1,4 +1,5 @@
-import React from 'react';
+import { ArrowRight, Shield, Globe, Cloud } from 'lucide-react'
+
 import Link from 'next/link';
 import { 
   ArrowRightIcon, 
