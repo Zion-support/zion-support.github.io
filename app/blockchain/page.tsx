@@ -1,44 +1,73 @@
-'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-const BlockchainPage: React.FC = () => {
-  return (
+export default Page;
+const Page: React.FC = () => {
+  return()
+        <>
     <>
-      <Helmet>
-        <title>Blockchain Solutions - Zion Tech Group</title>
-        <meta name="description" content="Leverage blockchain technology for secure, transparent, and decentralized solutions for your business needs." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
-              Blockchain Solutions
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Leverage blockchain technology for secure, transparent, and decentralized solutions for your business needs.
-            </p>
-          </div>
+    <title>
+</>Page - Zion Tech Group<>
+    </title>
+    <h1 className="text-4xl font-bold text-white mb-6">
+</>Page<>
+    </h1>
+    <p className="text-lg text-gray-300 mb-8">
+</>Professional page services coming soon.</p>
+          Contact Us
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Smart Contracts</h3>
-              <p className="text-gray-600">Automated contract execution with blockchain technology.</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Supply Chain</h3>
-              <p className="text-gray-600">Transparent and traceable supply chain management.</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Digital Identity</h3>
-              <p className="text-gray-600">Secure digital identity verification and management.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+        <title>5G Data Analytics - Zion Tech Group<>
+    </title>
+    <title>
+</>Blockchain - Zion Tech Group<>
+    </title>
+    <h1 className="text-4 xl font-boldtext-whitemb-6">
+</>Blockchain<>
+    </h1>
+    <p className="text-lgtext-gray-300mb-8">
+</>Professional blockchain services coming soon.</p>
+          Contact Us
+    
+      </>)
+  );
+}
+
+    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+      <>
+    <Helmet>
+    </Helmet>
+</>
+        <title>Service - Zion Tech Group<>
+    </title>
+    <meta name="description", content="Professional services by Zion Tech Group. Transform your business with our expert solutions." />
+</><>
+    </meta>
+    </Helmet>
+</>
+      <>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+    </div>
+</>
+        <h1 className="text-4 xl font-bold text-white mb-6"  >Blockchain<>
+    </h1>
+    <p className="text-lg text-gray-300 mb-8">
+</>Professional blockchain services coming soon.<>
+    </p>
+    <Link;</Link>
+</></Link>
+          to="/contact"
+          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-centermx-auto w-fit"
+        ></Link>
+          Contact Us;
+          <>
+    <ArrowRight className="w-5h-5ml-2" />
+    </ArrowRight>
+</>
+        <>
+    </Link>
+    </div>
+</>
+    </div>
   );
 };
-
-export default BlockchainPage;

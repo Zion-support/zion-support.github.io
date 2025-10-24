@@ -1,45 +1,59 @@
-'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-const AiFintechPage: React.FC = () => {
-  return (
+export default function AifintechPage() {
+  return()
+        <>
     <>
-      <Helmet>
-        <title>AI Fintech Solutions - Zion Tech Group</title>
-        <meta name="description" content="Revolutionize financial services with AI-powered fraud detection, risk assessment, and automated trading solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
-              AI Fintech Solutions
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Transform financial services with AI-powered solutions for fraud detection, risk management, and automated trading.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Fraud Detection</h3>
-              <p className="text-gray-600">Real-time fraud detection using advanced AI algorithms.</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Risk Assessment</h3>
-              <p className="text-gray-600">AI-powered credit scoring and risk evaluation systems.</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Algorithmic Trading</h3>
-              <p className="text-gray-600">Automated trading strategies powered by machine learning.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <title>
+</>5G Data Analytics - Zion Tech Group<>
+    </title>
+    <title>
+</>Ai Fintech - Zion Tech Group<>
+    </title>
+    <h1 className="text-4 xl font-boldtext-whitemb-6">
+</>Ai Fintech<>
+    </h1>
+    <p className="text-lgtext-gray-300mb-8">
+</>Professional ai fintech services coming soon.</p>
+          Contact Us
+    
+      <>
     </>
-  );
-};
-
-
-export default AiFintechPage;
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+</><>
+    </div>
+    <Helmet>
+</><>
+    </Helmet>
+    <title>
+</>Service - Zion Tech Group<>
+    </title>
+    <meta name="description", content="Professional services by Zion Tech Group. Transform your business with our expert solutions." />
+</><>
+    </meta>
+    </Helmet>
+</>
+      <>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+    </div>
+</>
+        <h1 className="text-4 xl font-bold text-white mb-6"  >Ai Fintech<>
+    </h1>
+    <p className="text-lg text-gray-300 mb-8">
+</>Professional ai fintech services coming soon.<>
+    </p>
+    <Link;</Link>
+</></Link>
+          to="/contact"
+          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-centermx-auto w-fit"
+        ></Link>
+          Contact Us;
+          <>
+    <ArrowRight className="w-5h-5ml-2" />
+    </ArrowRight>
+</>
+        <>
+    </Link>
+    </div>
+</>)
+    </div>  );
+}

@@ -1,14 +1,23 @@
 import React from 'react'
-import '@testing-library/jest-dom'
+
 // Global type definitions for the application
 declare global {
   interface Window {
-    gtag?: (...args: unknown[]) => void
-    dataLayer?: unknown[]
+    gtag?: (...args: any[]) => void
+    dataLayer?: any[]
   }
 }
 
-// Environment variables - removed unused NodeJS namespace
+// Environment variables
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+declare namespace NodeJS {
+  interface ProcessEnv {
+    NODE_ENV: 'development' | 'production' | 'test'
+    NEXT_PUBLIC_GA_ID?: string
+    NEXT_PUBLIC_SITE_URL?: string
+  }
+}
+
 // Component props interfaces
 export interface BaseComponentProps {
   className?: string
@@ -21,7 +30,7 @@ export interface PageProps {
 }
 
 // API response types
-export interface ApiResponse<T = unknown> {
+export interface ApiResponse<T = any> {
   success: boolean
   data?: T
   error?: string

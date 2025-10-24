@@ -1,48 +1,59 @@
-'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-// import { CheckCircle } from 'lucide-react';
-
-
-const AutonomousSystemsPage: React.FC = () => {
-  return (
+export default function AutonomoussystemsPage() {
+  return()
+        <>
     <>
-      <Helmet>
-        <title>Autonomous Systems - Zion Tech Group</title>
-        <meta name="description" content="Develop intelligent autonomous systems with AI-powered robotics and automation solutions for various industries." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
-              Autonomous Systems
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Develop intelligent autonomous systems with AI-powered robotics and automation solutions for various industries.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Robotic Process Automation</h3>
-              <p className="text-gray-600">Intelligent robots for automated business processes.</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Autonomous Vehicles</h3>
-              <p className="text-gray-600">AI-powered autonomous vehicle systems and solutions.</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Smart Manufacturing</h3>
-              <p className="text-gray-600">Autonomous manufacturing systems and quality control.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <title>
+</>5G Data Analytics - Zion Tech Group<>
+    </title>
+    <title>
+</>Autonomous Systems - Zion Tech Group<>
+    </title>
+    <h1 className="text-4 xl font-boldtext-whitemb-6">
+</>Autonomous Systems<>
+    </h1>
+    <p className="text-lgtext-gray-300mb-8">
+</>Professional autonomous systems services coming soon.</p>
+          Contact Us
+    
+      <>
     </>
-  );
-};
-
-
-export default AutonomousSystemsPage;
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+</><>
+    </div>
+    <Helmet>
+</><>
+    </Helmet>
+    <title>
+</>Service - Zion Tech Group<>
+    </title>
+    <meta name="description", content="Professional services by Zion Tech Group. Transform your business with our expert solutions." />
+</><>
+    </meta>
+    </Helmet>
+</>
+      <>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+    </div>
+</>
+        <h1 className="text-4 xl font-bold text-white mb-6"  >Autonomous Systems<>
+    </h1>
+    <p className="text-lg text-gray-300 mb-8">
+</>Professional autonomous systems services coming soon.<>
+    </p>
+    <Link;</Link>
+</></Link>
+          to="/contact"
+          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-centermx-auto w-fit"
+        ></Link>
+          Contact Us;
+          <>
+    <ArrowRight className="w-5h-5ml-2" />
+    </ArrowRight>
+</>
+        <>
+    </Link>
+    </div>
+</>)
+    </div>  );
+}

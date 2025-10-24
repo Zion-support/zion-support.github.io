@@ -1,91 +1,111 @@
-'use client'
-import React, { useEffect } from 'react'
+'use client';
 
-interface AccessibilityEnhancerProps {
-  children: React.ReactNode
-  enableKeyboardNavigation?: boolean
-  enableScreenReaderSupport?: boolean
-  enableHighContrast?: boolean
-  enableFocusManagement?: boolean
-}
+import React, { useEffect } from 'react';
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  children,
-  enableKeyboardNavigation = true,
-  enableScreenReaderSupport = true,
-  enableHighContrast = false,
-  enableFocusManagement = true
-}) => {
+const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
-    // Keyboard navigation support
-    if (enableKeyboardNavigation) {
-      const handleKeyDown = (event: KeyboardEvent) => {
-        // Handle keyboard navigation
-        if (event.key === 'Tab') {
-          // Ensure focus is visible
-          document.body.classList.add('keyboard-navigation')
+    // Add high contrast support
+    const addHighContrastSupport = () => {
+      const style = document.createElement('style');
+      style.textContent = `
+        .high-contrast * {
+          filter: contrast(150%) brightness(120%);
         }
-      }
+      `;
+      document.head.appendChild(style);
+      return () => document.head.removeChild(style);
+    };
 
-      document.addEventListener('keydown', handleKeyDown)
-      return () => document.removeEventListener('keydown', handleKeyDown)
-    }
+    // Add focus indicators
+    const addFocusIndicators = () => {
+      const style = document.createElement('style');
+      style.textContent = `
+        *:focus {
+          outline: 2px solid #8b5cf6 !important;
+          outline-offset: 2px !important;
+        }
+        .focus-visible:focus {
+          outline: 3px solid #8b5cf6 !important;
+        }
+      `;
+      document.head.appendChild(style);
+      return () => document.head.removeChild(style);
+    };
 
-    // Add screen reader support
-    if (enableScreenReaderSupport) {
-      // Add skip links
-      const skipLinks = document.createElement('div')
-      skipLinks.className = 'sr-only'
+    // Add motion preferences support
+    const addMotionPreferences = () => {
+      const style = document.createElement('style');
+      style.textContent = `
+        @media (prefers-reduced-motion: reduce) {
+          *, *::before, *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+          }
+        }
+      `;
+      document.head.appendChild(style);
+      return () => document.head.removeChild(style);
+    };
+
+    // Add ARIA labels to interactive elements
+    const addAriaLabels = () => {
+      const buttons = document.querySelectorAll('button:not([aria-label])');
+      buttons.forEach((button) => {
+        if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
+          button.setAttribute('aria-label', 'Button');
+        }
+      });
+
+      const links = document.querySelectorAll('a:not([aria-label])');
+      links.forEach((link) => {
+        if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {
+          link.setAttribute('aria-label', 'Link');
+        }
+      });
+    };
+
+    // Add skip links
+    const addSkipLinks = () => {
+      const skipLinks = document.createElement('div');
       skipLinks.innerHTML = `
-        <a href="#main-content" class="skip-link">Skip to main content</a>
-        <a href="#navigation" class="skip-link">Skip to navigation</a>
-      `
-      document.body.insertBefore(skipLinks, document.body.firstChild)
+        <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded-lg z-50">
+          Skip to main content
+        </a>
+      `;
+      document.body.insertBefore(skipLinks, document.body.firstChild);
+      return () => document.body.removeChild(skipLinks);
+    };
 
-      return () => {
-        if (skipLinks.parentNode) {
-          skipLinks.parentNode.removeChild(skipLinks)
-        }
-      }
-    }
+    // Add screen reader announcements
+    const addScreenReaderAnnouncements = () => {
+      const announcement = document.createElement('div');
+      announcement.setAttribute('aria-live', 'polite');
+      announcement.setAttribute('aria-atomic', 'true');
+      announcement.className = 'sr-only';
+      announcement.id = 'announcements';
+      document.body.appendChild(announcement);
+    };
 
-    // High contrast mode
-    if (enableHighContrast) {
-      document.body.classList.add('high-contrast')
-      return () => document.body.classList.remove('high-contrast')
-    }
+    // Initialize accessibility features
+    const cleanupContrast = addHighContrastSupport();
+    const cleanupFocus = addFocusIndicators();
+    const cleanupMotion = addMotionPreferences();
+    const cleanupSkipLinks = addSkipLinks();
+    
+    addAriaLabels();
+    addScreenReaderAnnouncements();
 
-    // Focus management
-    if (enableFocusManagement) {
-      const handleFocusIn = (event: FocusEvent) => {
-        const target = event.target as HTMLElement
-        if (target) {
-          target.classList.add('focused')
-        }
-      }
-
-      const handleFocusOut = (event: FocusEvent) => {
-        const target = event.target as HTMLElement
-        if (target) {
-          target.classList.remove('focused')
-        }
-      }
-
-      document.addEventListener('focusin', handleFocusIn)
-      document.addEventListener('focusout', handleFocusOut)
-
-      return () => {
-        document.removeEventListener('focusin', handleFocusIn)
-        document.removeEventListener('focusout', handleFocusOut)
-      }
-    }
-
+    // Cleanup
     return () => {
-      // Cleanup function
-    }
-  }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement])
+      cleanupContrast?.();
+      cleanupFocus?.();
+      cleanupMotion?.();
+      cleanupSkipLinks?.();
+    };
+  }, []);
 
-  return <>{children}</>
-}
+  return <React.Fragment>{children}</React.Fragment>;
+};
 
-export default AccessibilityEnhancer
+export default AccessibilityEnhancer;

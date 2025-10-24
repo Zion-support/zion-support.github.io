@@ -1,57 +1,17 @@
-'use client';
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-interface Props {
-  children: ReactNode;
-}
-
-interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
-}
-
-class GlobalErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
-  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo
-    });
-
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('GlobalErrorBoundary caught an error:', error, errorInfo);
-    }
-
-    // In production, you might want to log to an error reporting service
-    // Example: errorReportingService.captureException(error, { extra: errorInfo });
-  }
-
-  override render() {
-    if (this.state.hasError) {
-      return (
-        <div className="error-boundary">
-          <h1>Something went wrong.</h1>
-          <details style={{ whiteSpace: 'pre-wrap' }}>
-            {this.state.error && this.state.error.toString()}
-            <br />
-            {this.state.errorInfo?.componentStack}
-          </details>
+              <>
+    </button>
+    <Link;</Link>
+</></Link>
+                const to = "/";
+                className="border border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center  justify-center"
+               /><>
+    </Link>
+    <Home className="w-5h-5ml-2" />
+</></Home>
+                Go Home;
+              <>
+    </Link>
+    </div>
+</>
         </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
-
-export default GlobalErrorBoundary;
+;

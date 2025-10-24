@@ -1,94 +1,135 @@
-'use client';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, Menu, X } from 'lucide-react';
+
 const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navigationItems = [
-    { name: 'Home', href: '/' },
-    { name: 'AI Services', href: '/ai-services' },
-    { name: 'IT Services', href: '/it-services' },
-    { name: 'Micro SaaS', href: '/micro-saas-solutions' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' }
-  ];
-
-  
-
-  
-
-  
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
+    <nav className="bg-gray-900 text-white shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+            <Link to="/" className="text-2xl font-bold text-purple-400">
+              Zion Tech Group
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            {navigationItems.map((item, index) => (
-              <Link
-                key={index}
-                to={item.href}
-                className="text-gray-700 hover:text-purple-600 transition-colors font-medium"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-
-          {/* CTA Button */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"
+            <Link to="/" className="hover:text-purple-400 transition-colors">
+              Home
+            </Link>
+            <Link to="/about" className="hover:text-purple-400 transition-colors">
+              About
+            </Link>
+            <div className="relative group">
+              <button className="hover:text-purple-400 transition-colors flex items-center">
+                AI Services
+                <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="absolute left-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <div className="py-1">
+                  <Link to="/ai-services" className="block px-4 py-2 text-sm hover:bg-gray-700">
+                    All AI Services
+                  </Link>
+                  <Link to="/ai-analytics" className="block px-4 py-2 text-sm hover:bg-gray-700">
+                    AI Analytics
+                  </Link>
+                  <Link to="/ai-automation" className="block px-4 py-2 text-sm hover:bg-gray-700">
+                    AI Automation
+                  </Link>
+                  <Link to="/ai-cybersecurity" className="block px-4 py-2 text-sm hover:bg-gray-700">
+                    AI Cybersecurity
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="relative group">
+              <button className="hover:text-purple-400 transition-colors flex items-center">
+                IT Services
+                <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="absolute left-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <div className="py-1">
+                  <Link to="/it-services" className="block px-4 py-2 text-sm hover:bg-gray-700">
+                    All IT Services
+                  </Link>
+                  <Link to="/cloud-migration" className="block px-4 py-2 text-sm hover:bg-gray-700">
+                    Cloud Migration
+                  </Link>
+                  <Link to="/cybersecurity" className="block px-4 py-2 text-sm hover:bg-gray-700">
+                    Cybersecurity
+                  </Link>
+                  <Link to="/web-development" className="block px-4 py-2 text-sm hover:bg-gray-700">
+                    Web Development
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <Link to="/pricing" className="hover:text-purple-400 transition-colors">
+              Pricing
+            </Link>
+            <Link to="/contact" className="hover:text-purple-400 transition-colors">
+              Contact
+            </Link>
+            <Link 
+              to="/demo" 
+              className="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-md transition-colors"
             >
-              Get Started
-              <ArrowRight className="w-4 h-4 ml-2" />
+              Get Demo
             </Link>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-purple-600 transition-colors"
+              onClick={toggleMenu}
+              className="text-gray-400 hover:text-white focus:outline-none focus:text-white"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {isMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
             </button>
           </div>
         </div>
 
-        {/* Mobile Navigation */}
-        {isOpen && (
+        {/* Mobile Menu */}
+        {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-              {navigationItems.map((item, index) => (
-                <Link
-                  key={index}
-                  to={item.href}
-                  className="block px-3 py-2 text-gray-700 hover:text-purple-600 transition-colors font-medium"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-              <Link
-                to="/contact"
-                className="block px-3 py-2 bg-gradient-to-r from-purple-500 to-blue-600 text-white rounded-lg font-medium hover:from-purple-600 hover:to-blue-700 transition-all duration-300"
-                onClick={() => setIsOpen(false)}
-              >
-                Get Started
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800 rounded-md mt-2">
+              <Link to="/" className="block px-3 py-2 hover:text-purple-400">
+                Home
+              </Link>
+              <Link to="/about" className="block px-3 py-2 hover:text-purple-400">
+                About
+              </Link>
+              <Link to="/ai-services" className="block px-3 py-2 hover:text-purple-400">
+                AI Services
+              </Link>
+              <Link to="/it-services" className="block px-3 py-2 hover:text-purple-400">
+                IT Services
+              </Link>
+              <Link to="/pricing" className="block px-3 py-2 hover:text-purple-400">
+                Pricing
+              </Link>
+              <Link to="/contact" className="block px-3 py-2 hover:text-purple-400">
+                Contact
+              </Link>
+              <Link to="/demo" className="block px-3 py-2 bg-purple-600 hover:bg-purple-700 rounded-md text-center">
+                Get Demo
               </Link>
             </div>
           </div>

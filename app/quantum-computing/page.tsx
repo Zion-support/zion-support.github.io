@@ -1,45 +1,84 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check, Send, BarChart3, DollarSign, Activity, Lock, FileText, CreditCard, Building2, Sparkles, PieChart } from 'lucide-react'
+
 const QuantumComputingPage: React.FC = () => {
-  return (
+  return()
+        <>
     <>
-      <Helmet>
-        <title>Quantum Computing Solutions - Zion Tech Group</title>
-        <meta name="description" content="Explore the future of computing with quantum solutions for complex problem solving and optimization." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
-              Quantum Computing Solutions
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Explore the future of computing with quantum solutions for complex problem solving and optimization.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Optimization Problems</h3>
-              <p className="text-gray-600">Solve complex optimization challenges with quantum algorithms.</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Cryptography</h3>
-              <p className="text-gray-600">Quantum-resistant encryption and security solutions.</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Simulation</h3>
-              <p className="text-gray-600">Quantum simulation for scientific and business applications.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <title>
+</>QuantumComputing - Zion Tech Group<>
+    </title>
     </>
+</>)
+  );
+}
+
+    <>
+    <>
+    </>
+</>
+      <>
+    <Helmet>
+    </Helmet>
+</>
+        <title>Quantum Computing - Zion Tech Group<>
+    </title>
+    <meta name="description", content="Quantum Computing services by Zion Tech Group. Professional AI and IT solutions." />
+</><>
+    </meta>
+    <meta name="keywords", content="quantum-computing, AI solutions, IT services" />
+</><>
+    </meta>
+    </Helmet>
+</>
+      <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+        <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <>
+    <h1 className="w-5h-5ml-2" />
+    </h1>
+</>
+              <span className="w-5h-5ml-2" />Quantum Computing;
+              <>
+    </span>
+    </h1>
+</>
+            <p className="w-5h-5ml-2">Professional quantum computing services by Zion Tech Group.
+            <>
+    </p>
+    </div>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon<>
+    </h2>
+    <p className="w-5h-5ml-2">
+</>We're working on bringing you comprehensive quantum computing solutions. 
+              Contact us to learn more about our services.
+            <>
+    </p>
+    <button className="w-5h-5ml-2">
+</>Contact Us;
+            <>
+    </button>
+    </div>
+</>
+      <>
+    </div>
+    </>
+</>
   );
 };
-
-
-export default QuantumComputingPage;

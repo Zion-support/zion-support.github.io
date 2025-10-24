@@ -1,45 +1,84 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check, Send, BarChart3, DollarSign, Activity, Lock, FileText, CreditCard, Building2, Sparkles, PieChart } from 'lucide-react'
+
 const ItSupportPage: React.FC = () => {
-  return (
+  return()
+        <>
     <>
-      <Helmet>
-        <title>IT Support Services - Zion Tech Group</title>
-        <meta name="description" content="Get reliable IT support services with 24/7 monitoring, troubleshooting, and technical assistance for your business." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
-              IT Support Services
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get reliable IT support services with 24/7 monitoring, troubleshooting, and technical assistance for your business.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">24/7 Monitoring</h3>
-              <p className="text-gray-600">Round-the-clock system monitoring and proactive issue detection.</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Help Desk Support</h3>
-              <p className="text-gray-600">Expert technical support for all your IT needs.</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Remote Assistance</h3>
-              <p className="text-gray-600">Quick remote troubleshooting and problem resolution.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <title>
+</>ItSupport - Zion Tech Group<>
+    </title>
     </>
+</>)
+  );
+}
+
+    <>
+    <>
+    </>
+</>
+      <>
+    <Helmet>
+    </Helmet>
+</>
+        <title>It Support - Zion Tech Group<>
+    </title>
+    <meta name="description", content="It Support services by Zion Tech Group. Professional AI and IT solutions." />
+</><>
+    </meta>
+    <meta name="keywords", content="it-support, AI solutions, IT services" />
+</><>
+    </meta>
+    </Helmet>
+</>
+      <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+        <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <>
+    <h1 className="w-5h-5ml-2" />
+    </h1>
+</>
+              <span className="w-5h-5ml-2" />It Support;
+              <>
+    </span>
+    </h1>
+</>
+            <p className="w-5h-5ml-2">Professional it support services by Zion Tech Group.
+            <>
+    </p>
+    </div>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon<>
+    </h2>
+    <p className="w-5h-5ml-2">
+</>We're working on bringing you comprehensive it support solutions. 
+              Contact us to learn more about our services.
+            <>
+    </p>
+    <button className="w-5h-5ml-2">
+</>Contact Us;
+            <>
+    </button>
+    </div>
+</>
+      <>
+    </div>
+    </>
+</>
   );
 };
-
-
-export default ItSupportPage;

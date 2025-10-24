@@ -1,45 +1,83 @@
-'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-const ARVRSolutionsPage: React.FC = () => {
-  return (
+export default ArVrSolutionsPage;
+'use client';
+
+const ArVrSolutionsPage: React.FC = () => {
+  return()
+        <>
     <>
-      <Helmet>
-        <title>AR/VR Solutions - Zion Tech Group</title>
-        <meta name="description" content="Immersive experiences with augmented and virtual reality solutions for training, visualization, and customer engagement." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
-              AR/VR Solutions
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Create immersive experiences with augmented and virtual reality solutions for training, visualization, and customer engagement.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Training Simulations</h3>
-              <p className="text-gray-600">Immersive training experiences for complex procedures.</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Product Visualization</h3>
-              <p className="text-gray-600">3D product visualization and virtual showrooms.</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Customer Engagement</h3>
-              <p className="text-gray-600">Interactive AR/VR experiences for customer engagement.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <title>
+</>ArVrSolutions - Zion Tech Group<>
+    </title>
     </>
+</>)
+  );
+}
+
+    <>
+    <>
+    </>
+</>
+      <>
+    <Helmet>
+    </Helmet>
+</>
+        <title>Ar Vr Solutions - Zion Tech Group<>
+    </title>
+    <meta name="description", content="Ar Vr Solutions services by Zion Tech Group. Professional AI and IT solutions." />
+</><>
+    </meta>
+    <meta name="keywords", content="ar-vr-solutions, AI solutions, IT services" />
+</><>
+    </meta>
+    </Helmet>
+</>
+      <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+        <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <>
+    <h1 className="w-5h-5ml-2" />
+    </h1>
+</>
+              <span className="w-5h-5ml-2" />Ar Vr Solutions;
+              <>
+    </span>
+    </h1>
+</>
+            <p className="w-5h-5ml-2">Professional ar vr solutions services by Zion Tech Group.
+            <>
+    </p>
+    </div>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon<>
+    </h2>
+    <p className="w-5h-5ml-2">
+</>We're working on bringing you comprehensive ar vr solutions solutions. 
+              Contact us to learn more about our services.
+            <>
+    </p>
+    <button className="w-5h-5ml-2">
+</>Contact Us;
+            <>
+    </button>
+    </div>
+</>
+      <>
+    </div>
+    </>
+</>
   );
 };
-
-
-export default ARVRSolutionsPage;

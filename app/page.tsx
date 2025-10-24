@@ -1,118 +1,121 @@
-'use client';
 import React from 'react';
-import { Brain, Zap, Shield, Globe } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-const AppPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'Advanced Technology',
-      description: 'Cutting-edge solutions powered by the latest technology and AI.'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Optimized for speed and efficiency with real-time processing capabilities.'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption and compliance standards.'
-    },
-    {
-      icon: Globe,
-      title: 'Global Scalability',
-      description: 'Scale effortlessly across multiple regions with automatic load balancing.'
-    }
-  ];
 
-  
-
+const HomePage: React.FC = () => {
   return (
-    <AccessibilityEnhancer>
+    <>
       <Helmet>
-        <title>App - Zion Tech Group | Advanced AI and IT Solutions</title>
-        <meta name="description" content="Professional app solutions powered by advanced AI and cutting-edge technology." />
-        <meta name="keywords" content="app, AI solutions, IT services, automation, technology, business solutions" />
+        <title>Zion Tech Group - Advanced AI & IT Solutions</title>
+        <meta name="description" content="Zion Tech Group provides cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development." />
+        <meta name="keywords" content="AI, artificial intelligence, IT solutions, cloud computing, cybersecurity, software development" />
+        <meta property="og:title" content="Zion Tech Group - Advanced AI & IT Solutions" />
+        <meta property="og:description" content="Leading provider of AI and IT solutions for modern enterprises." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zion Tech Group - Advanced AI & IT Solutions" />
+        <meta name="twitter:description" content="Leading provider of AI and IT solutions for modern enterprises." />
       </Helmet>
-
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      
+      <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              App
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional app solutions powered by advanced AI and cutting-edge technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                Get Started
-              </a>
-              <a
-                href="/services"
-                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                View All Services
-              </a>
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Advanced AI & IT Solutions
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Transform your business with cutting-edge artificial intelligence, 
+                cloud infrastructure, and cybersecurity solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+                  Get Started
+                </button>
+                <button className="border border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+                  Learn More
+                </button>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        {/* Services Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Powerful Features
+                Our Services
               </h2>
-              <p className="text-lg text-gray-300">
-                Everything you need for success
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Comprehensive AI and IT solutions tailored to your business needs
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
-              ))}
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* AI Services */}
+              <div className="bg-gradient-to-br from-purple-600 to-blue-600 p-8 rounded-lg">
+                <h3 className="text-2xl font-bold text-white mb-4">AI Solutions</h3>
+                <p className="text-gray-200 mb-6">
+                  Harness the power of artificial intelligence to automate processes, 
+                  gain insights, and drive innovation.
+                </p>
+                <ul className="text-gray-200 space-y-2">
+                  <li>• Machine Learning & Analytics</li>
+                  <li>• Natural Language Processing</li>
+                  <li>• Computer Vision</li>
+                  <li>• Predictive Analytics</li>
+                </ul>
+              </div>
+
+              {/* Cloud Services */}
+              <div className="bg-gradient-to-br from-blue-600 to-cyan-600 p-8 rounded-lg">
+                <h3 className="text-2xl font-bold text-white mb-4">Cloud Infrastructure</h3>
+                <p className="text-gray-200 mb-6">
+                  Scalable, secure, and reliable cloud solutions to power your digital transformation.
+                </p>
+                <ul className="text-gray-200 space-y-2">
+                  <li>• Cloud Migration</li>
+                  <li>• DevOps & CI/CD</li>
+                  <li>• Container Orchestration</li>
+                  <li>• Serverless Architecture</li>
+                </ul>
+              </div>
+
+              {/* Cybersecurity */}
+              <div className="bg-gradient-to-br from-red-600 to-pink-600 p-8 rounded-lg">
+                <h3 className="text-2xl font-bold text-white mb-4">Cybersecurity</h3>
+                <p className="text-gray-200 mb-6">
+                  Protect your business with advanced security solutions and threat detection.
+                </p>
+                <ul className="text-gray-200 space-y-2">
+                  <li>• Security Audits</li>
+                  <li>• Threat Detection</li>
+                  <li>• Compliance Management</li>
+                  <li>• Incident Response</li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
+              Ready to Transform Your Business?
             </h2>
-            <p className="text-lg text-gray-300 mb-8">
-              Let us help you implement this solution for your business.
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our AI and IT solutions can drive your success.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                Start Your Project
-              </a>
-              <a
-                href="/services"
-                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                Learn More
-              </a>
-            </div>
+            <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 px-8 rounded-lg text-lg transition-colors">
+              Schedule a Consultation
+            </button>
           </div>
         </section>
-      </main>
-    </AccessibilityEnhancer>
+      </div>
+    </>
   );
 };
 
-export default AppPage;
+export default HomePage;

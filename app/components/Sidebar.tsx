@@ -1,34 +1,68 @@
-'use client';
-import React from 'react';
 
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  return (
-    <div className={`fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
-      <div className="flex items-center justify-between p-4 border-b">
-        <h2 className="text-lg font-semibold">Menu</h2>
-        <button
-          onClick={onClose}
-          className="text-gray-500 hover:text-gray-700"
-          aria-label="Close sidebar"
-        >
-          ×
-        </button>
-      </div>
-      <nav className="p-4">
-        <ul className="space-y-2">
-          <li><a href="/" className="block py-2 text-gray-700 hover:text-blue-600">Home</a></li>
-          <li><a href="/about" className="block py-2 text-gray-700 hover:text-blue-600">About</a></li>
-          <li><a href="/services" className="block py-2 text-gray-700 hover:text-blue-600">Services</a></li>
-          <li><a href="/contact" className="block py-2 text-gray-700 hover:text-blue-600">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  );
-};
+  const navigationItems = [;
+    { name: 'Home', path: '/' },
+    { name: 'AI Services', path: '/ai-services' },
+    { name: 'IT Services', path: '/it-services' },
+    { name: 'Micro SaaS', path: '/micro-saas-services' },
+    { name: 'About', path: '/about' },
+    { name: 'Contact', path: '/contact' }
+  ]
 
-export default Sidebar;
+  return()
+    <>
+    <div className="{`fixed" inset-0 z-50 transform transition-transform duration-300 ease-in-out ${
+      isOpen ? 'translate-x-0' : '-translate-x-full'
+    }`} />
+    </div>
+</>
+      <>
+    <div className="fixed inset-0 bg-blackbg-opacity-50", onClick="{onClose}"  />
+    </div>
+</>
+      <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+        <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+          <span className="text-xl font-bold text-white"  >Menu<>
+    </span>
+    <button;
+            onClick="{onClose}"
+            className="text-gray-300 hover:text-white transition-colors" />
+</><>
+    </button>
+    <X className="w-5h-5ml-2" />
+</><>
+    </X>
+    </button>
+</>
+        <>
+    </div>
+    <nav className="w-5h-5ml-2" />
+</></nav>)
+          {navigationItems.map((item, index) => (
+            <>
+    <Link;</Link>
+    </Link>
+</>
+              key="{index}"
+              to="{item.path}"
+              className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-colors"
+              onClick="{onClose}"
+              />{item.name}
+            </Link>)
+          ))}
+        <>
+    </nav>
+    </div>
+</>
+  );
+}
