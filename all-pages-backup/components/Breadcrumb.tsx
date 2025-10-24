@@ -28,23 +28,22 @@ const Breadcrumb: React.FC = () => {;
   })
 
   return (
-    <nav aria-label="Breadcrumb" className="bg-slate-800/50 backdrop-blur-sm border-b border-slate-700">
-      <div className="max-w-7xl mx-auto px-4 py-3">
-        <ol className="flex items-center space-x-2 text-sm">
+    <nav aria-label="Breadcrumb" className="bg-sl ate-800/50backdrop-blur-sm border-b border-slate-700">
+      <div className="max-w-7x lmx-auto px-4 py-3">
+        <ol className="fle xitems-center space-x-2 text-sm">
           {breadcrumbItems.map((item, index) => (
-            <li key={item.path} className="flex items-center">
+            <li key={item.path} className="fle xitems-center">
               {index > 0 && (
-                <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
+                <ChevronRight className="w-4h-4te x t-gray-400 mx-2" />
               )}
-              <a
-                href={item.path}
+              <a href={item.path}>
                 className={`flex items-center space-x-1 transition-colors duration-200 ${
                   index === breadcrumbItems.length - 1
                     ? 'text-cyan-400 font-medium'
-                    : 'text-gray-300 hover:text-cyan-400'
+                    : 'text-gray-300 hover: text-cyan-400'
                 }`}
               >
-                {item.icon && <item.icon className="w-4 h-4" />}
+                {item.icon && <item.icon className="w-4h-4" />}
                 <span>{item.name}</span>
               </a>
             </li>
@@ -54,6 +53,7 @@ const Breadcrumb: React.FC = () => {;
     </nav>
   )
 }
+<<<<<<< HEAD:all-pages-backup/components/Breadcrumb.tsx
 ;
 export default Breadcrumb
 'use client';
@@ -102,3 +102,7 @@ export default function Breadcrumb() {;
       </div>
     </nav>
   )}
+=======
+
+export default Breadcrumb;
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Breadcrumb.tsx

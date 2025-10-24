@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
 
+<<<<<<< HEAD:all-pages-backup/components/SEOOptimizer.tsx
 interface SEOOptimizerProps {
   children: React.ReactNode
 }
@@ -55,6 +56,13 @@ interface SEOOptimizerProps {;
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({;
+=======
+interface SEOOptimizerProps {;
+  className?: string;
+}
+
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/SEOOptimizer.tsx
   title = 'Zion Tech Group - Advanced AI and IT Solutions'
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.'
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI']
@@ -66,8 +74,13 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({;
     // Update page title
     document.title = title
 
+<<<<<<< HEAD:all-pages-backup/components/SEOOptimizer.tsx
     // Update meta description
     const metaDescription = document.querySelector('meta[name=&quot;description&quot;]');
+=======
+    // Update meta description;
+    const metaDescription = document.querySelector('meta[name=&quot;description&quot;]')
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/SEOOptimizer.tsx
     if (metaDescription) {
       metaDescription.setAttribute('content', description)
     } else {
@@ -78,8 +91,13 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({;
     }
   ]
 
+<<<<<<< HEAD:all-pages-backup/components/SEOOptimizer.tsx
     // Update keywords
     const metaKeywords = document.querySelector('meta[name=&quot;keywords&quot;]');
+=======
+    // Update keywords;
+    const metaKeywords = document.querySelector('meta[name=&quot;keywords&quot;]')
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/SEOOptimizer.tsx
     if (metaKeywords) {
       metaKeywords.setAttribute('content', keywords.join(', '))
     } else {
@@ -89,8 +107,13 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({;
       document.head.appendChild(meta)
     }
 
+<<<<<<< HEAD:all-pages-backup/components/SEOOptimizer.tsx
     // Update canonical URL
     let canonicalLink = document.querySelector('link[rel=&quot;canonical&quot;]');
+=======
+    // Update canonical URL;
+    let canonicalLink = document.querySelector('link[rel=&quot;canonical&quot;]')
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/SEOOptimizer.tsx
     if (canonicalLink) {
       canonicalLink.setAttribute('href', canonicalUrl)
     } else {
@@ -102,7 +125,11 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({;
 
     // Update Open Graph tags
     const updateOGTag = (property: string, content: string) => {;
+<<<<<<< HEAD:all-pages-backup/components/SEOOptimizer.tsx
       let ogTag = document.querySelector(`meta[property=&quot;${property}&quot;]`);
+=======
+      let ogTag = document.querySelector(`meta[property=&quot;${property}&quot;]`)
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/SEOOptimizer.tsx
       if (ogTag) {
         ogTag.setAttribute('content', content)
       } else {
@@ -121,7 +148,11 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({;
 
     // Update Twitter Card tags
     const updateTwitterTag = (name: string, content: string) => {;
+<<<<<<< HEAD:all-pages-backup/components/SEOOptimizer.tsx
       let twitterTag = document.querySelector(`meta[name=&quot;${name}&quot;]`);
+=======
+      let twitterTag = document.querySelector(`meta[name=&quot;${name}&quot;]`)
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/SEOOptimizer.tsx
       if (twitterTag) {
         twitterTag.setAttribute('content', content)
       } else {
@@ -145,8 +176,13 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({;
       document.head.appendChild(script)
     }
 
+<<<<<<< HEAD:all-pages-backup/components/SEOOptimizer.tsx
     // Add viewport meta tag if not present
     let viewport = document.querySelector('meta[name=&quot;viewport&quot;]');
+=======
+    // Add viewport meta tag if not present;
+    let viewport = document.querySelector('meta[name=&quot;viewport&quot;]')
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/SEOOptimizer.tsx
     if (!viewport) {
       viewport = document.createElement('meta')
       viewport.setAttribute('name', 'viewport')
@@ -166,21 +202,28 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({;
 
   return (
     <Head>
+<<<<<<< HEAD:all-pages-backup/components/SEOOptimizer.tsx
       <title>{title}</title>;
       <meta name=&quot;description&quot; content={description} />
       <meta name=&quot;keywords&quot; content={keywords.join(', ')} />
       <link rel=&quot;canonical&quot; href={canonicalUrl} />
+=======
+        <title>{title}</title>;
+      <meta name=&quot;description&quot; content = {description} />;
+      <meta name=&quot;keywords&quot; content = {keywords.join(', ')} />;
+      <link rel=&quot;canonical&quot; href = {canonicalUrl} />
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/SEOOptimizer.tsx
       {/* Open Graph */}
-      <meta property=&quot;og:title&quot; content={title} />
-      <meta property=&quot;og:description&quot; content={description} />
-      <meta property=&quot;og:image&quot; content={ogImage} />
-      <meta property=&quot;og:url&quot; content={canonicalUrl} />
-      <meta property=&quot;og:type&quot; content=&quot;website&quot; />
+      <meta property=&quot;og:title&quot; content = {title} />;
+      <meta property=&quot;og:description&quot; content = {description} />;
+      <meta property=&quot;og:image&quot; content = {ogImage} />;
+      <meta property=&quot;og:url&quot; content = {canonicalUrl} />;
+      <meta property=&quot;og: type&quot; content=&quot;website&quot; />
       {/* Twitter Card */}
-      <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
-      <meta name=&quot;twitter:title&quot; content={title} />
-      <meta name=&quot;twitter:description&quot; content={description} />
-      <meta name=&quot;twitter:image&quot; content={ogImage} />
+      <meta name=&quot;twitter: card&quot; content=&quot;summary_large_image&quot; />
+      <meta name=&quot;twitter:title&quot; content = {title} />;
+      <meta name=&quot;twitter:description&quot; content = {description} />;
+      <meta name=&quot;twitter:image&quot; content = {ogImage} />
       {/* Additional SEO meta tags */}
       <meta name=&quot;robots&quot; content=&quot;index, follow&quot; />
       <meta name=&quot;author&quot; content=&quot;Zion Tech Group&quot; />
@@ -188,17 +231,27 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({;
       <meta charSet=&quot;UTF-8&quot; />
       {/* Structured Data */}
       {structuredData && (
+<<<<<<< HEAD:all-pages-backup/components/SEOOptimizer.tsx
         <script
           type=&quot;application/ld+json&quot
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+=======
+        <script type=&quot;application/ld+json&quot;>
+          dangerouslySetInnerHTML = {{ __html: JSON.stringify(structuredData) }}
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/SEOOptimizer.tsx
         />
       )}
     </Head>
   )
 }
 
-export default SEOOptimizer
+export default SEOOptimizer;
   );
+<<<<<<< HEAD:all-pages-backup/components/SEOOptimizer.tsx
 {};
 
 export default SEOOptimizerPage
+=======
+}
+export default SEOOptimizerPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/SEOOptimizer.tsx

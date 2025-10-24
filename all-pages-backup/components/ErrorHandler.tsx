@@ -1,4 +1,5 @@
 'use client'
+<<<<<<< HEAD:all-pages-backup/components/ErrorHandler.tsx
 import Footer from './Footer';
 import Navigation from './Navigation';
 import { Helmet } from 'react-helmet-async';
@@ -6,10 +7,20 @@ import { ArrowRight, CheckCircle, Brain, BarChart, Target, TrendingUp } from 'lu
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 import { Home } from 'lucide-react';
+=======
+import Footer from './Footer'
+import Navigation from './Navigation'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, Send, Target, CheckCircle, BarChart, Brain, TrendingUp } from 'lucide-react'
+import React, { Component, ErrorInfo, ReactNode } from 'react'
+import { ArrowRight, Send, Target, CheckCircle, BarChart, Brain, TrendingUp } from 'lucide-react'
+import { ArrowRight, Send, Target, CheckCircle, BarChart, Brain, TrendingUp } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ErrorHandler.tsx
 
 const ErrorHandlerPage: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD:all-pages-backup/components/ErrorHandler.tsx
       icon: Brain,
   title: title,
   description: description,
@@ -32,6 +43,30 @@ const ErrorHandlerPage: React.FC = () => {
   title: title,
   description: description,
   benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+=======
+      icon: Brain
+      title: 'AI-Powered Intelligence'
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    }
+    {
+      icon: BarChart
+      title: 'Advanced Analytics'
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    }
+    {
+      icon: Target
+      title: 'Precision Targeting'
+      description: 'Target specific goals and objectives with precision and accuracy.'
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    }
+    {
+      icon: TrendingUp
+      title: 'Growth Optimization'
+      description: 'Optimize your business growth with data-driven strategies.'
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ErrorHandler.tsx
     }
   ]
 
@@ -44,11 +79,21 @@ const ErrorHandlerPage: React.FC = () => {
   ]
 
   return (
+<<<<<<< HEAD:all-pages-backup/components/ErrorHandler.tsx
     <>;
       <Helmet>;
+=======
+    <>
+      <Helmet>;
+        <Head>
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ErrorHandler.tsx
         <title>ErrorHandler</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced ErrorHandler solution for modern businesses.&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ErrorHandler, AI solutions, intelligent automation&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
       </Helmet>
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
@@ -56,7 +101,7 @@ const ErrorHandlerPage: React.FC = () => {
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
+            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;>
               ErrorHandler
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
@@ -67,7 +112,7 @@ const ErrorHandlerPage: React.FC = () => {
                 Get Started
                 <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
     // Log error in development
-    if (process.env.NODE_ENV=== 'development') {// Error caught by handler
+    if (process.env.NODE_ENV = == 'development') {// Error caught by handler
    }
 
     // Send error to monitoring service in production
@@ -79,10 +124,17 @@ const ErrorHandlerPage: React.FC = () => {
   logErrorToService= (error: Error, errorInfo: ErrorInfo) => {// Example: Send to monitoring service
     try {
       // Replace with your actual error reportingserviceconsterrorData= {
+<<<<<<< HEAD:all-pages-backup/components/ErrorHandler.tsx
         message: error.message,
   stack: error.stack,
   componentStack: errorInfo.componentStack,
   timestamp: new Date().toISOString()
+=======
+        message: error.message
+        stack: error.stack
+        componentStack: errorInfo.componentStack
+        timestamp: new Date().toISOString()
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ErrorHandler.tsx
       }
       // Send to your error reporting service here
       // // console.log('Error data prepared for reporting:', errorData)
@@ -92,9 +144,15 @@ const ErrorHandlerPage: React.FC = () => {
   }
 
   handleRetry= () => {this.setState({
+<<<<<<< HEAD:all-pages-backup/components/ErrorHandler.tsx
       hasError: false,
   error: null,
   errorInfo: null
+=======
+      hasError: false
+      error: null
+      errorInfo: null
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ErrorHandler.tsx
    })
   }
 
@@ -106,7 +164,7 @@ const ErrorHandlerPage: React.FC = () => {
         return thi s.props.fallback
      }
 
-      return (
+      return (;
         <div className=&quot;min-h-screen flex items-center justify-center bg-gray-50&quot;></div>
           <div className=&quot;max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center&quot;></div>
             <div className=&quot;flex justify-center mb-4&quot;></div>
@@ -118,9 +176,9 @@ const ErrorHandlerPage: React.FC = () => {
             <p className=&quot;text-gray-600 mb-6&quot;>
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
             </p>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {process.env.NODE_ENV = == 'development' && this.state.error && (;
               <details className=&quot;mb-6 text-left&quot;>
-                <summary className=&quot;cursor-pointer text-sm text-gray-500 hover:text-gray-700&quot;>
+                <summary className=&quot;cursor-pointer text-sm text-gray-500 hover: text-gray-700&quot;>
                   Error Details (Development)
                 </summary>
                 <div className=&quot;mt-2 p-4 bg-gray-100 rounded text-xs font-mono overflow-auto&quot;></div>
@@ -129,13 +187,13 @@ const ErrorHandlerPage: React.FC = () => {
                   </div>
                   {this.state.error.stack && (
                     <div></div>
-                      <strong>Stack:</strong>
+                      <strong>Stack: </strong>
                       <pre className=&quot;whitespace-pre-wrap&quot;></p>{this.state.error.stack}</pre>
                     </div>
                   )}
                   {this.state.errorInfo?.componentStack && (
                     <div></div>
-                      <strong>Component Stack:</strong>
+                      <strong>Component Stack: </strong>
                       <pre className=&quot;whitespace-pre-wrap&quot;></p>{this.state.errorInfo.componentStack}</pre>
                     </div>
                   )}
@@ -143,9 +201,14 @@ const ErrorHandlerPage: React.FC = () => {
               </details>
             )}
               </button>
+<<<<<<< HEAD:all-pages-backup/components/ErrorHandler.tsx
               <button
                 onClick={this.handleGoHome}
                 className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors&quot
+=======
+              <button onClick = {this.handleGoHome};>
+                className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors&quot;
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ErrorHandler.tsx
               ></button>
                 <Home className=&quot;w-4 h-4 mr-2&quot; />
                 Go Home
@@ -163,7 +226,7 @@ const ErrorHandlerPage: React.FC = () => {
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
                   <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
@@ -184,6 +247,7 @@ const ErrorHandlerPage: React.FC = () => {
         </section>
                className=&quot;flex items-center justify-center px-4 py-2 bg-blue-600text-white rounded-lghover:bg-blue-700transition-colors&quot
               ></
+<<<<<<< HEAD:all-pages-backup/components/ErrorHandler.tsx
                 onClick={this.handleRetry}
                className=&quot;flex items-center justify-center px-4 py-2 bg-blue-600text-white rounded-lghover:bg-blue-700transition-colors&quot
               ><RefreshCwclassName=&quot;w-4h-4mr-2&quot; />Try Again
@@ -193,6 +257,17 @@ const ErrorHandlerPage: React.FC = () => {
               ></
                 onClick={this.handleGoHome}
                className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot
+=======
+                onClick = {this.handleRetry}
+               className=&quot;flex items-center justify-center px-4 py-2 bg-blue-600text-white rounded-lghover:bg-blue-700transition-colors&quot;
+              ><RefreshCwclassName=&quot;w-4h-4mr-2&quot; />Try Again
+            </butto><
+                onClick = {this.handleGoHome}
+               className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot;
+              ></
+                onClick = {this.handleGoHome}
+               className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot;
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ErrorHandler.tsx
               ><HomeclassName=&quot;w-4h-4mr-2&quot; />Go Home
             </butto></di></di></di>
       )
@@ -211,7 +286,7 @@ const ErrorHandlerPage: React.FC = () => {
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
                   <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
@@ -243,6 +318,11 @@ const ErrorHandlerPage: React.FC = () => {
       <Footer />
     </>
   );
+<<<<<<< HEAD:all-pages-backup/components/ErrorHandler.tsx
 {};
 
 export default ErrorHandlerPage
+=======
+}
+export default ErrorHandlerPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ErrorHandler.tsx

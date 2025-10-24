@@ -1,3 +1,5 @@
+'use client';
+:all-pages-backup/components/SEOHead.tsx
 import React from 'react';
 
 interface SEOHeadProps {

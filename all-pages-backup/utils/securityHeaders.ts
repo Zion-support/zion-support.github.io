@@ -23,11 +23,16 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {;
     "connect-src 'self' https://www.google-analytics.com https://analytics.google.com"
     "frame-ancestors 'none'"
     "base-uri 'self'"
+<<<<<<< HEAD:all-pages-backup/utils/securityHeaders.ts
     "form-action 'self'",
+=======
+    "form-action 'self'"
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/securityHeaders.ts
     'upgrade-insecure-requests';
   ].join('; ')
   // HTTP Strict Transport Security (HSTS)
   strictTransportSecurity: 'max-age=63072000; includeSubDomains; preload'
+<<<<<<< HEAD:all-pages-backup/utils/securityHeaders.ts
   // Prevent clickjacking,
   xFrameOptions: 'DENY'
   // Prevent MIME type sniffing,
@@ -37,6 +42,17 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {;
   // Permissions Policy (formerly Feature Policy)
   permissionsPolicy: [
     'camera=()'
+=======
+  // Prevent clickjacking
+  xFrameOptions: 'DENY'
+  // Prevent MIME type sniffing
+  xContentTypeOptions: 'nosniff'
+  // Referrer Policy
+  referrerPolicy: 'strict-origin-when-cross-origin'
+  // Permissions Policy (formerly Feature Policy)
+  permissionsPolicy: [
+    'camera = ()'
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/securityHeaders.ts
     'microphone=()'
     'geolocation=()'
     'payment=()'
@@ -51,10 +67,17 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {;
 /**
  * Get security headers as key-value pairs
  */
+<<<<<<< HEAD:all-pages-backup/utils/securityHeaders.ts
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Record<string, string> {;
   const config = { ...defaultSecurityHeaders, ...customConfig };
   const headers: Record<string, string> = {;
     'X-XSS-Protection': '1; mode=block'
+=======
+export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Record<string, string> {
+  const config = { ...defaultSecurityHeaders, ...customConfig }
+  const headers: Record<string, string> = {;
+    'X-XSS-Protection': '1; mode = block'
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/securityHeaders.ts
     'X-DNS-Prefetch-Control': 'on'
   }
 
@@ -82,7 +105,7 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
 
 /**
  * Get security headers in Next.js format
- */
+ */;
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Array<{ key: string; value: string }> {
   const headers = getSecurityHeaders(customConfig);
   return Object.entries(headers).map(([key, value]) => ({
@@ -90,5 +113,10 @@ export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersCon
     value
   }))
 }
+<<<<<<< HEAD:all-pages-backup/utils/securityHeaders.ts
 ;
 export default defaultSecurityHeaders
+=======
+
+export default defaultSecurityHeaders;
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/securityHeaders.ts

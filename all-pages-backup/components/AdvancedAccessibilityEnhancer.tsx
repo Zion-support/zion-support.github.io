@@ -1,7 +1,13 @@
 'use client'
+<<<<<<< HEAD:all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
 import { Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import Navigation from './Navigation';
 import React, { useEffect, useState, useCallback } from 'react';
+=======
+import { BarChart, Brain, TrendingUp, Target } from 'lucide-react'
+import Navigation from './Navigation'
+import React, { useEffect, useState, useCallback } from 'react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AdvancedAccessibilityEnhancer.tsx
 
 interface AdvancedAccessibilityEnhancerProps {
   enableKeyboardNavigation?: boolean
@@ -16,7 +22,11 @@ interface AdvancedAccessibilityEnhancerProps {
   enableVoiceNavigation?: boolean
 }
 
+<<<<<<< HEAD:all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
 constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s>= ({enableKeyboardNavigation= true
+=======
+constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s>= ({enableKeyboardNavigation = true
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AdvancedAccessibilityEnhancer.tsx
   enableScreenReader= true
   enableHighContrast= true
   enableFocusManagement= true
@@ -26,11 +36,19 @@ constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s
   enableMotionReduction= true
   enableFontScaling= true
   enableVoiceNavigation= true}) => {const [accessibilitySettingssetAccessibilitySettings] = useState({
+<<<<<<< HEAD:all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
     highContrast: false,
   reducedMotion: false,
   fontSize: fontSize,
   screenReader: false,
   keyboardNavigation: false
+=======
+    highContrast: false
+    reducedMotion: false
+    fontSize: 'normal'
+    screenReader: false
+    keyboardNavigation: false
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AdvancedAccessibilityEnhancer.tsx
   })
 
   // Detect user preferences
@@ -44,9 +62,15 @@ constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s
     // Check for color scheme preference
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches
     setAccessibilitySettings(prev => ({
+<<<<<<< HEAD:all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
       ...prev,
   reducedMotion: prefersReducedMotion,
   highContrast: prefersHighContrast
+=======
+      ...prev
+      reducedMotion: prefersReducedMotion
+      highContrast: prefersHighContrast
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AdvancedAccessibilityEnhancer.tsx
     }))
 
     // Listen for changes in user preferences
@@ -84,6 +108,7 @@ constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s
 const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD:all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
       icon: Brain,
   title: title,
   description: description,
@@ -106,6 +131,30 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   title: title,
   description: description,
   benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+=======
+      icon: Brain
+      title: 'AI-Powered Intelligence'
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    }
+    {
+      icon: BarChart
+      title: 'Advanced Analytics'
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    }
+    {
+      icon: Target
+      title: 'Precision Targeting'
+      description: 'Target specific goals and objectives with precision and accuracy.'
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    }
+    {
+      icon: TrendingUp
+      title: 'Growth Optimization'
+      description: 'Optimize your business growth with data-driven strategies.'
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AdvancedAccessibilityEnhancer.tsx
     }
   ]
 
@@ -143,7 +192,11 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
         }
       }
 
+<<<<<<< HEAD:all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
       // Arrow keys for menu navigation
+=======
+      // Arrow keys for menu navigation;
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AdvancedAccessibilityEnhancer.tsx
       if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {;
         const menu = document.querySelector('[role=&quot;menu&quot;]') as HTMLElement
         if (menu && menu.contains(event.target as Node)) {
@@ -201,7 +254,11 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     if (typeof window === 'undefined') return
 
     // Trap focus in modals
+<<<<<<< HEAD:all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
     const trapFocus = (element: HTMLElement) => {;
+=======
+    const trapFocus = (element: HTMLElement) => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AdvancedAccessibilityEnhancer.tsx
       const focusableElements = element.querySelectorAll(;
         'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])'
       ) as NodeListOf<HTMLElement>
@@ -232,10 +289,17 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       return () => element.removeEventListener('keydown', handleTabKey)
     }
 
+<<<<<<< HEAD:all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
     // Apply focus trap to modals
     const modals = document.querySelectorAll('[role=&quot;dialog&quot;]');
     modals.forEach(modal => {
       const cleanup = trapFocus(modal as HTMLElement);
+=======
+    // Apply focus trap to modals;
+    const modals = document.querySelectorAll('[role=&quot;dialog&quot;]')
+    modals.forEach(modal = > {
+      const cleanup = trapFocus(modal as HTMLElement)
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AdvancedAccessibilityEnhancer.tsx
       // Store cleanup function for later use
       (modal as any).__focusTrapCleanup = cleanup
 
@@ -246,7 +310,11 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     if (typeof window === 'undefined') return
 
     // Add missing ARIA labels to interactive elements
+<<<<<<< HEAD:all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
     const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
+=======
+    const buttons = document.querySelectorAll('button: not([aria-label]):not([aria-labelledby])')
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AdvancedAccessibilityEnhancer.tsx
     buttons.forEach((button, index) => {
       const text = button.textContent?.trim();
       if (text && text.length > 0) {
@@ -256,12 +324,20 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       }
 
     // Add ARIA labels to images
+<<<<<<< HEAD:all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
     const images = document.querySelectorAll('img:not([alt])');
+=======
+    const images = document.querySelectorAll('img: not([alt])')
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AdvancedAccessibilityEnhancer.tsx
     images.forEach((img, index) => {
       img.setAttribute('alt', `Image ${index + 1}`)
 
     // Add ARIA labels to form inputs
+<<<<<<< HEAD:all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
     const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
+=======
+    const inputs = document.querySelectorAll('input: not([aria-label]):not([aria-labelledby])')
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AdvancedAccessibilityEnhancer.tsx
     inputs.forEach((input, index) => {
       const placeholder = input.getAttribute('placeholder');
       const label = input.getAttribute('name');
@@ -341,9 +417,9 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       } else if (command.includes('go to services')) {
         window.location.href = '/services'
       } else if (command.includes('call phone')) {
-        window.location.href = 'tel:+13024640950'
+        window.location.href = 'tel: +13024640950'
       } else if (command.includes('send email')) {
-        window.location.href = 'mailto:kleber@ziontechgroup.com'
+        window.location.href = 'mailto: kleber@ziontechgroup.com'
       }
     }
 
@@ -389,6 +465,12 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 }
 
 export default AdvancedAccessibilityEnhancer
+<<<<<<< HEAD:all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx
 }}}}}};
 
 export default AdvancedAccessibilityEnhancerPage
+=======
+}}}}}
+}
+export default AdvancedAccessibilityEnhancerPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AdvancedAccessibilityEnhancer.tsx

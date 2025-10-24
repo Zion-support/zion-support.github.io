@@ -1,9 +1,17 @@
 'use client'
+<<<<<<< HEAD:all-pages-backup/components/ContentPromotionBanner.tsx
 import Navigation from './Navigation';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import React from 'react';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
+=======
+import Navigation from './Navigation'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react'
+import React from 'react'
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ContentPromotionBanner.tsx
 
 const ContentPromotionBanner: React.FC = () => {
   const benefits = [
@@ -15,11 +23,21 @@ const ContentPromotionBanner: React.FC = () => {
   ]
 
   return (
+<<<<<<< HEAD:all-pages-backup/components/ContentPromotionBanner.tsx
     <>;
       <Helmet>;
+=======
+    <>
+      <Helmet>;
+        <Head>
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ContentPromotionBanner.tsx
         <title>ContentPromotionBanner</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced ContentPromotionBanner solution for modern businesses.&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ContentPromotionBanner, AI solutions, intelligent automation&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
       </Helmet>
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
@@ -27,17 +45,17 @@ const ContentPromotionBanner: React.FC = () => {
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
+            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;>
               ContentPromotionBanner
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
               Advanced ContentPromotionBanner solution for modern businesses.
             </p>
           </div>
-          <div className="hidden md:block w-px h-6 bg-white/30"></div>
-          <button className="bg-white text-indigo-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+          <div className = "hidden md:block w-px h-6 bg-white/30"></div>
+          <button className="bg-wh itetext-indigo-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
             Learn More
-            <ArrowRight className="inline-block ml-1 h-4 w-4" />
+            <ArrowRight className="inl ine-blockml-1 h-4 w-4" />
           </button>
         </div>
         {/* Stats Section */}
@@ -53,7 +71,7 @@ const ContentPromotionBanner: React.FC = () => {
           ))}
         </div>
 <div className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-8&quot;></div>
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;></div>
+          <div className=&quot;grid grid-cols-1 md: grid-cols-2 gap-8&quot;></div>
             <div></div>
               <h3 className=&quot;text-2xl font-bold mb-4&quot;>Why Choose Us?</h3>
               <ul className=&quot;space-y-2&quot;>
@@ -148,7 +166,7 @@ const ContentPromotionBanner: React.FC = () => {
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
                   <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
@@ -177,7 +195,7 @@ const ContentPromotionBanner: React.FC = () => {
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
                   <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />

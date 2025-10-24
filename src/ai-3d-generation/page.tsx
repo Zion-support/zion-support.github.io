@@ -1,9 +1,9 @@
-import React from 'react';
-import { Play } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { CheckCircle, Camera, Zap } from 'lucide-react';
+import React from "react";
+import { Play } from "lucide-react";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
+import SEOOptimizer from "../components/SEOOptimizer";
+import { CheckCircle, Camera, Zap } from "lucide-react";
 
 const AI3DGenerationPage: React.FC = () => {
   const features = [
@@ -160,8 +160,8 @@ const AI3DGenerationPage: React.FC = () => {
                     href="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
-                        ? 'cyber-button'
-                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
+                        ? "cyber-button"
+                        : "border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900"
                     }`}
                   >
                     Get Started
@@ -190,7 +190,7 @@ const AI3DGenerationPage: React.FC = () => {
                   href="tel:+13024640950"
                   className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
-                  <span>Call +1 302 464 0950</span>
+                  <span />Call +1 302 464 0950</span>
                 </a>
               </div>
             </div>

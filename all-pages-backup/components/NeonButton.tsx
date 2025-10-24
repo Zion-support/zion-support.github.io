@@ -13,10 +13,17 @@ interface NeonButtonProps {
   disabled?: boolean
 }
 
+<<<<<<< HEAD:all-pages-backup/components/NeonButton.tsx
 const NeonButton: React.FC<NeonButtonProps> = ({;
   children
   href
   onClick,
+=======
+const NeonButton: React.FC<NeonButtonProps> = ({
+  children
+  href
+  onClick
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/NeonButton.tsx
   variant=&quot;primary&quot;
   size=&quot;md&quot;
   className=&quot;&quot;
@@ -24,7 +31,12 @@ const NeonButton: React.FC<NeonButtonProps> = ({;
   disabled = false
 }) => {
   const baseClasses =;
+<<<<<<< HEAD:all-pages-backup/components/NeonButton.tsx
     &quot;relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100&quot
+=======
+    &quot;relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover: scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100&quot;
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/NeonButton.tsx
   const benefits = [
     'Increase efficiency by up to 50%'
     'Reduce costs by 30% with automation'
@@ -35,10 +47,19 @@ const NeonButton: React.FC<NeonButtonProps> = ({;
 
   return (
     <>
+<<<<<<< HEAD:all-pages-backup/components/NeonButton.tsx
       <Helmet>;
+=======
+      <Helmet>
+        <Head>
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/NeonButton.tsx
         <title>NeonButton</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced NeonButton solution for modern businesses.&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, NeonButton, AI solutions, intelligent automation&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
       </Helmet>
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
@@ -46,7 +67,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({;
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
+            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;>
               NeonButton
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
@@ -73,7 +94,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({;
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
                   <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
@@ -102,7 +123,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({;
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
                   <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
@@ -133,6 +154,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({;
       </div>
       <Footer />
     </>
+<<<<<<< HEAD:all-pages-backup/components/NeonButton.tsx
   )};
 
 export default NeonButtonPage
@@ -147,6 +169,22 @@ export default NeonButtonPage
   const neonEffect =;
     &quot;before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 before:-z-10&quot
   const buttonClasses = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${neonEffect} ${className}`;
+=======
+  );
+}
+export default NeonButtonPage;
+
+  constvariantClasses = {primary: 
+     &quot;bg-gradient-to-r from-blue-600to-purple-600text-white shado w-lghover:shado w-blue-50 0/25 hover:shado w-2 xl&quot;
+    secondary:
+     &quot;bg-gradient-to-r from-purple-600to-pink-600text-white shado w-lghover:shado w-purple-50 0/25 hover:shado w-2 xl&quot;
+    accent: &quot;bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg hover:shadow-cyan-500/25 hover:shadow-2xl&quot;
+  }
+
+  const neonEffect =
+    &quot;before: absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 before:-z-10&quot;
+  const buttonClasses = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${neonEffect} ${className}`
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/NeonButton.tsx
 
   constcontent= (;
   <di v>{icon&&<spanclassName=&quot;mr-2&quot;>{icon}</spa>}
@@ -157,7 +195,7 @@ export default NeonButtonPage
 
   if (href) {
     return (
-      <a href={href} className={buttonClasses}>
+      <a href = {href} className={buttonClasses}>
         {content}
       </a>
     )
@@ -170,8 +208,15 @@ export default NeonButtonPage
   )
 {}
 
+<<<<<<< HEAD:all-pages-backup/components/NeonButton.tsx
 export default NeonButton
   );
 {};
 
 export default NeonButton
+=======
+export default NeonButton;
+  );
+}
+export default NeonButton;
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/NeonButton.tsx

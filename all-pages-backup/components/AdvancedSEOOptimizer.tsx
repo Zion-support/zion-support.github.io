@@ -1,13 +1,22 @@
 'use client'
+<<<<<<< HEAD:all-pages-backup/components/AdvancedSEOOptimizer.tsx
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Search, Target, TrendingUp, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+=======
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Search, ArrowRight, Target, CheckCircle, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AdvancedSEOOptimizer.tsx
 
 const AdvancedSEOOptimizerPage: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD:all-pages-backup/components/AdvancedSEOOptimizer.tsx
       icon: Search,
   title: title,
   description: description,
@@ -46,6 +55,24 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
   title: title,
   description: description,
   benefits: ['Batch processing', 'Scalable infrastructure', 'Consistent quality', 'Performance optimization']
+=======
+      icon: Search
+      title: 'Advanced SEO Analysis'
+      description: 'Comprehensive SEO analysis and optimization recommendations.'
+      benefits: ['Keyword research', 'Content optimization', 'Technical SEO', 'Performance insights']
+    }
+    {
+      icon: Target
+      title: 'Precision Targeting'
+      description: 'Target specific keywords and audiences with precision.'
+      benefits: ['Keyword targeting', 'Audience analysis', 'Competitor research', 'Market insights']
+    }
+    {
+      icon: TrendingUp
+      title: 'Growth Optimization'
+      description: 'Optimize your website for maximum growth and visibility.'
+      benefits: ['Growth strategies', 'Traffic optimization', 'Conversion tracking', 'ROI analysis']
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AdvancedSEOOptimizer.tsx
     }
   ]
 
@@ -60,28 +87,32 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
   return (
     <>
       <Helmet>
+        <Head>
         <title>Advanced SEO Optimizer</title>
-        <meta name="description" content="Advanced SEO Optimizer solution for modern businesses." />
+        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
         <meta name="keywords" content="AI, artificial intelligence, SEO optimization, AI solutions, intelligent automation" />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
       </Helmet>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+      <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+        <section className="rel ativepy-20 px-4 overflow-hidden">
+          <div className="abs oluteinset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="rel ativemax-w-7xl mx-auto text-center">
+            <h1 className="tex t-5xlmd: text-7xl font-bold text-white mb-6 leading-tight">
               Advanced SEO Optimizer
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="tex t-xltext-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced SEO Optimizer solution for modern businesses.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+            <div className="fle xflex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-em erald-600hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2h-5w-5" />
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              <button className="bor derborder-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Learn More
               </button>
             </div>
@@ -89,28 +120,29 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        <section className="py-20px-4">
+          <div className="max-w-7x lmx-auto">
+            <div className="tex t-centermb-16">
+              <h2 className="tex t-4xlfont-bold text-white mb-4">Key Features</h2>
+              <p className="tex t-xltext-gray-300 max-w-3xl mx-auto">
                 Powerful AI-driven SEO features designed to transform your online presence
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="gri dmd: grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
+                <div key={index} className="bg-wh ite/10backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <feature.icon className="h-12w-12te x t-emerald-400 mb-4" />
+                  <h3 className="tex t-xlfont-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="tex t-gray-300mb-4">{feature.description}</p>
+                  <ul className="spa ce-y-2">
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                      <li key={idx} className="fle xitems-center text-sm text-gray-300">
+                        <CheckCircle className="h-4w-4te x t-emerald-400 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
                     ))}
                   </ul>
+<<<<<<< HEAD:all-pages-backup/components/AdvancedSEOOptimizer.tsx
     'Generate 3D models 10x faster than traditional methods'
     'Reduce 3D asset creation costs by 70%'
     'Create high-quality 3D content with minimal expertise'
@@ -162,13 +194,15 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AdvancedSEOOptimizer.tsx
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-600 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
+                <h3 className="tex t-xlfont-semibold text-gray-900 mb-2">{feature.title}</h3>
+                <p className="tex t-gray-600mb-4">{feature.description}</p>
+                <ul className="spa ce-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 mr-2 text-emerald-500" />
+                    <li key={benefitIndex} className="fle xitems-center text-sm text-gray-600">
+                      <CheckCircle className="w-4h-4mr-2 t e xt-emerald-500" />
                       {benefit}
                     </li>
                   ))}
@@ -180,19 +214,19 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
       </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our SEO Solution?</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        <section className="py-20px-4 b g-white/5">
+          <div className="max-w-7x lmx-auto">
+            <div className="tex t-centermb-16">
+              <h2 className="tex t-4xlfont-bold text-white mb-4">Why Choose Our SEO Solution?</h2>
+              <p className="tex t-xltext-gray-300 max-w-3xl mx-auto">
                 Experience the power of AI-driven SEO optimization
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="gri dmd: grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <p className="text-gray-300 text-lg">{benefit}</p>
+                <div key={index} className="fle xitems-start space-x-3">
+                  <CheckCircle className="h-6w-6te x t-emerald-400 mt-1 flex-shrink-0" />
+                  <p className="tex t-gray-300text-lg">{benefit}</p>
                 </div>
               ))}
             </div>
@@ -200,23 +234,24 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
+        <section className="py-20px-4">
+          <div className="max-w-4x lmx-auto text-center">
+            <h2 className="tex t-4xlfont-bold text-white mb-6">
               Ready to Boost Your SEO?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="tex t-xltext-gray-300 mb-8">
               Join thousands of businesses already using our AI-powered SEO solutions
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+            <div className="fle xflex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-em erald-600hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
                 Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2h-5w-5" />
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              <button className="bor derborder-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Contact Sales
               </button>
             </div>
+<<<<<<< HEAD:all-pages-backup/components/AdvancedSEOOptimizer.tsx
       {/* Benefits Section */}
       <section className="py-20 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -227,12 +262,14 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Our proven track record and innovative approach deliver measurable results.
             </p>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AdvancedSEOOptimizer.tsx
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="gri dgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="w-6 h-6 text-emerald-500 mt-1" />
-                <p className="text-gray-700 text-lg">{benefit}</p>
+              <div key={index} className="fle xitems-start space-x-3">
+                <CheckCircle className="w-6h-6te x t-emerald-500 mt-1" />
+                <p className="tex t-gray-700text-lg">{benefit}</p>
               </div>
             ))}
           </div>
@@ -240,17 +277,17 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      <section className="py-20px-4">
+        <div className="max-w-4x lmx-auto text-center">
+          <h2 className="tex t-3xlmd: text-4xl font-bold text-gray-900 mb-4">
             Ready to Generate Amazing 3D Content?
           </h2>
-          <p className="text-xl text-gray-600 mb-8">
+          <p className="tex t-xltext-gray-600 mb-8">
             Let's discuss how our AI 3D generation can transform your creative workflow.
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center mx-auto">
+          <button className="bg-bl ue-600hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center mx-auto">
             Start Your Journey
-            <ArrowRight className="w-8 h-8" />
+            <ArrowRight className="w-8h-8" />
           </button>
         </div>
       </section>
@@ -259,6 +296,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
     </>
   )
 }
+<<<<<<< HEAD:all-pages-backup/components/AdvancedSEOOptimizer.tsx
 ;
 export default AdvancedSEOOptimizerPage
     </div>
@@ -266,3 +304,7 @@ export default AdvancedSEOOptimizerPage
 };
 ;
 export default AI3DGenerationPage
+=======
+
+export default AdvancedSEOOptimizerPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AdvancedSEOOptimizer.tsx
