@@ -74,17 +74,17 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
               Transform your e-commerce business with advanced AI optimization solutions that boost sales
               improve conversion rates, and maximize your online store performance.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-purple-600 transition-all duration-300"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact" 
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
               >
                 Get Started
                 <ArrowRight className="w-8 h-8" />
               </Link>
-              <Link
-                href="/ai-services"
-                className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-400 hover:text-white transition-all duration-300"
+              <Link 
+                href="/ai-services" 
+                className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
               >
                 View All Services
               </Link>
@@ -148,7 +148,7 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
                 </ul>
                 <Link
                   href="/contact"
-                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-600 transition-all duration-300 text-center block"
+                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 text-center block"
                 >
                   Get Started
                 </Link>
@@ -164,19 +164,19 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
             Ready to Optimize Your E-commerce Store?
           </h2>
           <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
-            Let's discuss how our AI e-commerce optimizer can transform your online business and drive growth.
+            Let&apos;s discuss how our AI e-commerce optimizer can transform your online business and drive growth.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-cyan-600 font-semibold rounded-lg hover: bg-gray-100 transition-colors duration-300"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center px-8 py-4 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
             >
               Start Optimization
               <ArrowRight className="w-8 h-8" />
             </Link>
-            <Link
-              href="/ai-services"
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover: bg-white hover:text-cyan-600 transition-colors duration-300"
+            <Link 
+              href="/ai-services" 
+              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-600 transition-colors duration-300"
             >
               Explore All AI Services
             </Link>

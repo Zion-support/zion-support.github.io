@@ -67,14 +67,14 @@ const AIAutomationPage: React.FC = () => {
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-purple-600 transition-all duration-300"
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
             >
               Get Started Today
               <ArrowRight className="w-8 h-8" />
             </Link>
             <Link
               href="/ai-services"
-              className="inline-flex items-center px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-400 hover:text-white transition-all duration-300"
+              className="inline-flex items-center px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
             >
               View All AI Services
             </Link>
@@ -190,17 +190,17 @@ const AIAutomationPage: React.FC = () => {
           <p className="text-xl text-cyan-100 mb-8">
             Let our experts help you identify automation opportunities and implement solutions that drive real results.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="inline-flex items-center px-8 py-3 bg-white text-cyan-600 font-semibold rounded-lg hover: bg-gray-100 transition-colors duration-300"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center px-8 py-3 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
             >
               Start Your Automation Journey
               <ArrowRight className="w-8 h-8" />
             </Link>
-            <Link
-              href="/ai-services"
-              className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover: bg-white hover:text-cyan-600 transition-colors duration-300"
+            <Link 
+              href="/ai-services" 
+              className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-600 transition-colors duration-300"
             >
               Explore All Services
             </Link>

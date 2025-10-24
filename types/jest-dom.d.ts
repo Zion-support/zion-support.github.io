@@ -1,3 +1,4 @@
+/// <reference types="jest" />
 /// <reference types="@testing-library/jest-dom" />
 
 declare global {
@@ -5,9 +6,7 @@ declare global {
     interface Matchers<R> {
       toBeInTheDocument(): R
       toHaveClass(className: string): R
-      toHaveAttribute(attr: string, value?: string): R
+      toHaveTextContent(text: string | RegExp): R
     }
   }
 }
-
-export {}

@@ -14,15 +14,16 @@ interface AdvancedAccessibilityEnhancerProps {
   enableFontScaling?: boolean
   enableVoiceNavigation?: boolean
 }
-constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s>= ({enableKeyboardNavigation= true
-  enableScreenReader= true
-  enableHighContrast= true
-  enableFocusManagement= true
-  enableARIALabels= true
-  enableSkipLinks= true
-  enableColorContrast= true
-  enableMotionReduction= true
-  enableFontScaling= true
+
+const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({enableKeyboardNavigation= true,
+  enableScreenReader= true,
+  enableHighContrast= true,
+  enableFocusManagement= true,
+  enableARIALabels= true,
+  enableSkipLinks= true,
+  enableColorContrast= true,
+  enableMotionReduction= true,
+  enableFontScaling= true,
   enableVoiceNavigation= true}) => {const [accessibilitySettingssetAccessibilitySettings] = useState({
     highContrast: false,
     reducedMotion: false

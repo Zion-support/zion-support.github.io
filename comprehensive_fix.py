@@ -88,8 +88,6 @@ def fix_imports_and_syntax(file_path):
         content = re.sub(r'<section([^>]*)>\s*$', r'<section\1></section>', content, flags=re.MULTILINE)
         
         # Fix merge conflict markers that might have been missed
-        content = re.sub(r'<<<<<<< HEAD.*?=======.*?>>>>>>>.*?\n', '', content, flags=re.DOTALL)
-        content = re.sub(r'=======.*?>>>>>>>.*?\n', '', content, flags=re.DOTALL)
         
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:

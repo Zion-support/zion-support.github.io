@@ -50,8 +50,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         window.gtag('event', event, properties);
       }
       
-      // Custom analytics
-      console.log('Analytics Event: ', event, properties);
+      // Custom analytics - only log in development
+      if (process.env.NODE_ENV === 'development') {
+        // eslint-disable-next-line no-console
+        console.log('Analytics Event: ', event, properties);
+      }
     }
   };
 
@@ -65,8 +68,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         });
       }
       
-      // Custom analytics
-      console.log('Analytics Identify: ', userId, traits);
+      // Custom analytics - only log in development
+      if (process.env.NODE_ENV === 'development') {
+        // eslint-disable-next-line no-console
+        console.log('Analytics Identify: ', userId, traits);
+      }
     }
   };
 
@@ -81,8 +87,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         });
       }
       
-      // Custom analytics
-      console.log('Analytics Page: ', name, properties);
+      // Custom analytics - only log in development
+      if (process.env.NODE_ENV === 'development') {
+        // eslint-disable-next-line no-console
+        console.log('Analytics Page: ', name, properties);
+      }
     }
   };
 
