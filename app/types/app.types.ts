@@ -16,7 +16,7 @@ export interface Service {
     basic: number;
     pro: number;
     enterprise: number;
-  };
+  }
   benefits: string[];
   useCases: string[];
   link?: string;
@@ -24,7 +24,7 @@ export interface Service {
   contactInfo?: {
     email: string;
     phone: string;
-  };
+  }
 }
 
 export interface ContactFormData {

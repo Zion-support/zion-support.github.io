@@ -9,12 +9,11 @@ import { Phone, Mail, MapPin, Send, Clock } from 'lucide-react';
 const Page: React.FC = () => {
   return (
     <>
-      <SEOOptimizer
-        title="Contact Us - ZionTechGroup"
+      <SEOOptimizer title="Contact Us - ZionTechGroup"
         description="Get in touch with ZionTechGroup for AI solutions, consultations, and support. We're here to help transform your business."
         keywords={['contact us', 'AI consultation', 'support', 'get in touch']}
         canonicalUrl="https://ziontechgroup.com/contact"
-      />
+       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         <main className="pt-24 pb-16 px-4">

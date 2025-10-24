@@ -32,12 +32,11 @@ const Page: React.FC = () => {
 
   return (
     <>
-      <SEOOptimizer
-        title="5G Smart City Solutions - ZionTechGroup"
+      <SEOOptimizer title="5G Smart City Solutions - ZionTechGroup"
         description="Revolutionary 5G-powered smart city solutions for modern urban development and management."
         keywords={['5G smart city', 'smart city solutions', 'IoT', 'urban technology']}
         canonicalUrl="https://ziontechgroup.com/5g-smart-city-solutions"
-      />
+       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         <main className="pt-24 pb-16 px-4">

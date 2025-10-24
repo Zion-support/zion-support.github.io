@@ -95,7 +95,7 @@ export const generateCSPHeader = (): string => {
 export const validateInput = (input: string, type: keyof typeof SECURITY_CONFIG.VALIDATION): boolean => {
   const pattern = SECURITY_CONFIG.VALIDATION[type];
   return pattern.test(input);
-};
+}
 
 export const sanitizeInput = (input: string): string => {
   // Remove script tags
@@ -103,36 +103,36 @@ export const sanitizeInput = (input: string): string => {
   
   // Basic HTML entity encoding
   sanitized = sanitized
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
+    .replace(/&/g, '&')
+    .replace(/</g, '<')
+    .replace(/>/g, '>')
+    .replace(/"/g, '"')
     .replace(/'/g, '&#x27;')
     .replace(/\//g, '&#x2F;');
   
   return sanitized;
-};
+}
 
 export const generateSecurityHeaders = (): Record<string, string> => {
   return {
     ...SECURITY_CONFIG.HEADERS,
     'Content-Security-Policy': generateCSPHeader()
-  };
+  }
 };
 
 export const isSecureContext = (): boolean => {
   if (typeof window === 'undefined') return false;
   return window.isSecureContext || window.location.protocol === 'https:';
-};
+}
 
 export const validateCSRFToken = (token: string, sessionToken: string): boolean => {
   // In a real application, you would validate against a stored session token
   // This is a simplified example
   return token === sessionToken && token.length > 0;
-};
+}
 
 export const generateCSRFToken = (): string => {
   const array = new Uint8Array(32);
   crypto.getRandomValues(array);
   return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
-};
+}
