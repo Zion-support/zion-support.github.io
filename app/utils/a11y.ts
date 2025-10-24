@@ -1,10 +1,4 @@
 /**
-<<<<<<< HEAD
- * Accessibility (A11Y) Utilities
- * Provides helpers for improving web accessibility
- */
-
-=======
 
   constructor(options: A11yOptions = {}) {}
     this.options = {}
@@ -197,7 +191,6 @@ export default A11yManager;
  * Accessibility (A11Y) Utilities;
  * Provides helpers for improving web accessibility;
  */
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 /**
  * Generate unique ID for aria-describedby and aria-labelledby
  */
@@ -229,32 +222,10 @@ export function announceToScreenReader(
 /**
  * Trap focus within a container (useful for modals)
  */
-<<<<<<< HEAD
-export function trapFocus(element: HTMLElement,): () => void {
-  const focusableElements = element.querySelectorAll(
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-  );
-  const firstFocusable = focusableElements[0] as HTMLElement;
-  const lastFocusable = focusableElements[focusableElements.length - 1] as HTMLElement;
-
-  const handleKeyDown = (e: KeyboardEvent,) => {
-    if (e.key === 'Tab') {
-      if (e.shiftKey) {
-        if (document.activeElement === firstFocusable) {
-          lastFocusable?.focus();
-          e.preventDefault();
-        }
-      } else {
-        if (document.activeElement === lastFocusable) {
-          firstFocusable?.focus();
-          e.preventDefault();
-        }
-=======
 export function trapFocus(elemen)
   t: HTMLElement): () => void {/* TODO: Fix JSX expression */}
       }
     } else {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       }
     }
   };
@@ -270,34 +241,19 @@ export function trapFocus(elemen)
 /**
  * Check if element is keyboard accessible
  */
-<<<<<<< HEAD
-export function isKeyboardAccessible(element: HTMLElement,): boolean {
-  const tabIndex = element.getAttribute('tabindex');
-  return tabIndex !== null && tabIndex !== '-1';
-=======
 export function isKeyboardAccessible(elemen)
   t: HTMLElement): boolean {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 }
 
 /**
  * Add keyboard navigation support to custom interactive elements
  */
-<<<<<<< HEAD
-export function makeKeyboardAccessible(
-  element: HTMLElement,
-  onClick: (e: Event,) => void,
-  options: {
-    role?: string;
-    tabindex?: number;
-=======
 export function makeKeyboardAccessible(elemen,
   t: HTMLElement,
   onClic)
   k: (e: Event) => void,
   option,
   s: {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   } = {}
 ): () => void {
   const { role = 'button', tabindex = 0 } = options;
@@ -324,18 +280,9 @@ export function makeKeyboardAccessible(elemen,
 /**
  * Check color contrast ratio (WCAG 2.1)
  */
-<<<<<<< HEAD
-export function getContrastRatio(color1: string, color2: string,): number {
-  const getLuminance = (color: string,): number => {
-    const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];
-    const [r, g, b] = rgb.map(c => {
-      c = c / 255;
-      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
-=======
 export function getContrastRatio(color,
   1: string, color)
   2: string): number {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     });
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
   };
@@ -364,13 +311,8 @@ export function meetsContrastRequirements(
 /**
  * Skip to content link helper
  */
-<<<<<<< HEAD
-export function createSkipLink(targetId: string, text = 'Skip to main content'): HTMLAnchorElement {
-  const skipLink = document.createElement('a');
-=======
 export function createSkipLink(targetI)
   d: string, text = 'Skip to main content'): HTMLAnchorElement {/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   skipLink.href = `#${targetId}`;
   skipLink.textContent = text;
   skipLink.className = 'skip-link';
@@ -411,14 +353,9 @@ export function prefersDarkMode(): boolean {
 /**
  * Get ARIA label for form validation error
  */
-<<<<<<< HEAD
-export function getAriaInvalid(hasError: boolean,): Record<string, string> {
-  return {
-=======
 export function getAriaInvalid(hasErro)
   r: boolean): {/* TODO: Fix JSX expression */}
 } {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     ...(hasError && { 'aria-describedby': generateId('error') })
   };
 }
@@ -503,20 +440,8 @@ export class FocusManager {
       this.previousActiveElement.focus();
     }
   }
-<<<<<<< HEAD
-
-  moveFocusInside(container: HTMLElement,): void {
-    const focusableElements = container.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    );
-    const firstFocusable = focusableElements[0] as HTMLElement;
-    firstFocusable?.focus();
-  }
-}
-=======
   moveFocusInside(containe)
   r: HTMLElement): void {/* TODO: Fix JSX expression */}
   }
 }
 `
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

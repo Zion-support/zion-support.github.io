@@ -1,67 +1,81 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
-import Footer from '../components/Footer';
-=======
-import React from "react";
-import { Helmet } from 'react-helmet-async';
-import { Brain, Globe, Shield, Zap } from 'lucide-react';
+import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe } from 'lucide-react';
 
-const ZionAiCrmOptimizerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'Advanced Technology',
-      description: 'Cutting-edge solutions powered by the latest technology and AI.'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Optimized for speed and efficiency with real-time processing capabilities.'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption and compliance standards.'
-    },
-    {
-      icon: Globe,
-      title: 'Global Scalability',
-      description: 'Scale effortlessly across multiple regions with automatic load balancing.'
-    }
-  ];
-
-  
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
-
-export default function ZionaicrmoptimizerPage() {
+export default function ZionAiCrmOptimizerPage() {
   return (
-    <div>
-      <Head>
-        <title>Zion Ai Crm Optimizer - Zion Tech Group</title>
-        <meta name="description" content="Professional services by Zion Tech Group." />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            Zion Ai Crm Optimizer
-          </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            zion-ai-crm-optimizer services Transform your business with our expert solutions. services coming soon.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+    <div className="min-h-screen bg-gray-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold mb-8">Zion Ai Crm Optimizer</h1>
+        <p className="text-xl text-gray-300 mb-8">
+          Discover our comprehensive zion ai crm optimizer solutions designed to meet your business needs.
+        </p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-12">
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Brain className="h-12 w-12 text-blue-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">AI-Powered Solutions</h3>
+            <p className="text-gray-300">
+              Leverage artificial intelligence to automate and optimize your business processes.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Shield className="h-12 w-12 text-green-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Enterprise Security</h3>
+            <p className="text-gray-300">
+              Robust security measures to protect your data and ensure compliance.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Users className="h-12 w-12 text-purple-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Expert Support</h3>
+            <p className="text-gray-300">
+              Dedicated support team to help you succeed with our solutions.
+            </p>
+          </div>
+        </div>
+        
+        <div className="mt-12">
+          <h2 className="text-3xl font-bold mb-6">Why Choose Our Zion Ai Crm Optimizer Solutions?</h2>
+          <ul className="space-y-4 text-lg text-gray-300 mb-8">
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Scalable and flexible architecture
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Industry-leading performance
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Easy integration with existing systems
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              24/7 monitoring and support
+            </li>
+          </ul>
+          
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Get Started
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+            <Link 
+              href="/services" 
+              className="inline-flex items-center px-6 py-3 border border-gray-600 text-white rounded-lg hover:bg-gray-800 transition-colors"
+            >
+              Learn More
+            </Link>
+          </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-"use client";
-=======
 'use client';
 import React from "react";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Home, ArrowLeft, Search, AlertTriangle, RefreshCw } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 
 import React from 'react';
 import Head from 'next/head';

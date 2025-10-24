@@ -129,15 +129,8 @@ const AISocialMediaManagerPage: React.FC = () => {
       </section>
 
       {/* Platforms Section */}
-<<<<<<< HEAD
-      <section className="py-16 px-4 bg-slate-800/30">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-=======
       <section className="py-16 px-4 bg-slate-800/30"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               All Platforms, One Solution
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
@@ -150,12 +143,7 @@ const AISocialMediaManagerPage: React.FC = () => {
               <div key={index} className="text-center"></div>
                 <div className="w-16 h-16 bg-slate-800/50 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <span className="text-3xl">{platform.icon}</span>
-<<<<<<< HEAD
-                </div>
-                <h3 className={`font-semibold ${platform.color}`}>
-=======
                 <h3 className={`font-semibold ${platform.color}`}></h3>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                   {platform.name}
                 </h3>
               </div>
@@ -165,14 +153,7 @@ const AISocialMediaManagerPage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-<<<<<<< HEAD
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-=======
       <section className="py-16 px-4"></section>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               Powerful AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -185,17 +166,9 @@ const AISocialMediaManagerPage: React.FC = () => {
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-pink-400/20 hover:border-pink-400/40 transition-all duration-300"></div>
                 <div className="w-12 h-12 bg-pink-500/10 rounded-lg flex items-center justify-center mb-4"></div>
                   <feature.icon className="w-6 h-6 text-pink-400" />
-<<<<<<< HEAD
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300">
-=======
                 <h3 className="text-xl font-semibold text-white mb-3"></h3>
                   {feature.title}
                 <p className="text-gray-300"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                   {feature.description}
                 </p>
               </div>
@@ -218,12 +191,7 @@ const AISocialMediaManagerPage: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-16"></div>
             {benefits.map((benefit, index) => (
-<<<<<<< HEAD
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-=======
                 <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4"></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                   <CheckCircle className="w-8 h-8 text-green-400" />
                 </div>
                 <p className="text-white font-semibold">{benefit}</p>
@@ -234,17 +202,9 @@ const AISocialMediaManagerPage: React.FC = () => {
           <div className="bg-gradient-to-r from-pink-500/10 to-purple-500/10 rounded-2xl p-8 text-center"></div>
             <h3 className="text-2xl font-bold text-white mb-4"></h3>
               Ready to Transform Your Social Media?
-<<<<<<< HEAD
-            </h3>
-            <p className="text-gray-300 mb-6">
-              Start your free trial today and experience the power of AI-driven social media management
-            </p>
-            <button className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300">
-=======
             <p className="text-gray-300 mb-6"></p>
               Start your free trial today and experience the power of AI-driven social media management
             <button className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300"></button>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               Get Started Now
             </button>
           </div>
@@ -280,12 +240,7 @@ const AISocialMediaManagerPage: React.FC = () => {
                 <div className="mb-6"></div>
                   <span className="text-4xl font-bold text-white">{plan.price}</span>
                   <span className="text-gray-400">{plan.period}</span>
-<<<<<<< HEAD
-                </div>
-                <ul className="space-y-3 mb-8">
-=======
                 <ul className="space-y-3 mb-8"></ul>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300"></li>
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
@@ -311,12 +266,7 @@ const AISocialMediaManagerPage: React.FC = () => {
         <div className="container mx-auto max-w-4xl text-center"></div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
             Ready to Get Started?
-<<<<<<< HEAD
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-=======
           <p className="text-xl text-gray-300 mb-8"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             Join thousands of brands already using AI Social Media Manager to grow their presence
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -333,15 +283,9 @@ const AISocialMediaManagerPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 export default AISocialMediaManagerPage;
 import React from 'react';

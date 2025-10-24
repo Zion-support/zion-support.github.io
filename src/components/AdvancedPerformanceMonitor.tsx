@@ -202,24 +202,6 @@ const memory =
   O: Add content;}
 }
     if (typeof window === 'undefined' || !('performance' in window)) return;
-<<<<<<< HEAD
-    const resources = performance.getEntriesByType('resource');
-    const slowResources = _resources.filter()
-      (resourc)
-  e: PerformanceResourceTiming) => resource.duration > 1000);
-    if (slowResources.length > 0) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      // eslint-disable-next-line no-console;
-// console.log('Slow,
-  resources:', slowResources.map(r => ({/* TODO: Fix JSX expression */}
-  e: r.name}
-      //   duratio,
-  n: r.duration,
-      //   siz,
-  e: r.transferSize;)
-      // })));
-=======
     const _resources = performance.getEntriesByType('resource');
     const slowResources = _resources.filter(
       (resource: PerformanceResourceTiming) => resource.duration > 1000
@@ -232,7 +214,6 @@ const memory =
           size: r.transferSize
         }))
       );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-063c
     }
   }, []);
   const measureCoreWebVitals = useCallback(() => {/* TODO: Fix JSX expression */}

@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-}
-=======
 'use client';
 /**
  * Rate Limiting Middleware
@@ -23,22 +11,6 @@ export interface RateLimitConfig {
   skipSuccessfulRequests?: boolean;
   skipFailedRequests?: boolean;
 }
-<<<<<<< HEAD
-interface RequestRecord {
-  count: number;
-  resetTime: number;
-}
-/**
- * Simple in-memory rate limiter
- * For production, use Redis or similar distributed storage
- */
-export class RateLimiter {
-  private requests: Map<string, RequestRecord> = new Map();
-  private config: RateLimitConfig;
-  constructor(config: RateLimitConfig) {
-    this.config = {
-      message: 'Too many requests, please try again later.',
-=======
 interface RequestRecord {// TODO: Add content;}
 };
   count: number;,
@@ -55,37 +27,16 @@ export class RateLimiter {// TODO: Add content;}
     this.config = {// TODO: Add content;}
 };
   message: 'Too many requests, please try again later.',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       skipSuccessfulRequests: false,
       skipFailedRequests: false,
       ...config
     };
     // Cleanup old entries every minute
     setInterval(() => this.cleanup(), 60000);
-<<<<<<< HEAD
-  }
-  /**
-   * Check if request is allowed
-   * @param identifier - Unique identifier (e.g., IP address)
-   * @returns Whether the request is allowed
-   */
-  check(identifier: string): { allowed: boolean; remaining: number; resetTime: number } {
-<<<<<<< HEAD
-<<<<<<< HEAD
     const now = Date.now();
     const record = this.requests.get(identifier);
     const now = Date.now();
     const record = this.requests.get(identifier);
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
-    const now = Date.now();
-    const record = this.requests.get(identifier);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
-=======
-    const now = Date.now();
-    const record = this.requests.get(identifier);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
     // No record or expired
     if (!record || now > record.resetTime) {
       const resetTime = now + this.config.windowMs;
@@ -94,8 +45,6 @@ export class RateLimiter {// TODO: Add content;}
     }
     // Increment count
     if (record.count < this.config.max) {
-<<<<<<< HEAD
-=======
    * Check if request is allowed;
    * @param identifier - Unique identifier (e.g., IP address)
    * @returns Whether the request is allowed;
@@ -113,36 +62,11 @@ export class RateLimiter {// TODO: Add content;}
     if (record.count;
           < this.config.max) {// TODO: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       record.count++;
       this.requests.set(identifier, record);
       return {
         allowed: true,
         remaining: this.config.max - record.count,
-<<<<<<< HEAD
-        resetTime: record.resetTime
-      };
-    }
-    // Limit exceeded
-    return { allowed: false, remaining: 0, resetTime: record.resetTime };
-  }
-  /**
-   * Reset rate limit for identifier
-   * @param identifier - Unique identifier
-   */
-<<<<<<< HEAD
-  reset(identifier: string): void {
-    this.requests.delete(identifier);
-  }
-  /**
-   * Cleanup expired entries
-   */
-  private cleanup(): void {
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
     const now = Date.now();
     for (const [key, record] of this.requests.entries()) {
       if (now > record.resetTime) {
@@ -157,9 +81,7 @@ export class RateLimiter {// TODO: Add content;}
     return { totalTracked: this.requests.size };
   }
 }
-=======
     return {totalTracked: this.requests.size};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 /**
  * Pre-configured rate limiters for common use cases
  */
@@ -200,8 +122,6 @@ export const rateLimiters = {
  * @returns Client identifier (IP address or user ID)
  */
 export function getClientIdentifier(request: Request): string {
-<<<<<<< HEAD
-=======
         resetTime: record.resetTime;
     // Limit exceeded;
     return { allowed: false, remaining: 0, resetTime: record.resetTime };
@@ -257,7 +177,6 @@ export const rateLimiters = {// TODO: Add content;}
  * @returns Client identifier (IP address or user ID)
 export function getClientIdentifier(request: Request): string {// TODO: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   // Try to get real IP from headers (for proxied requests)
   const headers = request.headers;
   const forwardedFor = headers.get('x-forwarded-for');
@@ -266,29 +185,6 @@ export function getClientIdentifier(request: Request): string {// TODO: Add cont
   if (cfConnectingIp) return cfConnectingIp;
   if (realIp) return realIp;
   if (forwardedFor) return forwardedFor.split(',')[0].trim();
-<<<<<<< HEAD
-  // Fallback to a default identifier
-  return 'unknown';
-}
-/**
- * Create rate limit middleware
- * @param limiter - Rate limiter instance
- * @returns Middleware function
- */
-export function createRateLimitMiddleware(limiter: RateLimiter) {
-  return async (request: Request): Promise<Response | null> => {
-    const identifier = getClientIdentifier(request);
-    const { allowed, remaining, resetTime } = limiter.check(identifier);
-    if (!allowed) {
-      return new Response(
-        JSON.stringify({
-          error: 'Rate limit exceeded',
-          retryAfter: Math.ceil((resetTime - Date.now()) / 1000)
-        }),
-        {
-          status: 429,
-          headers: {
-=======
   // Fallback to a default identifier;
   return 'unknown';
  * Create rate limit middleware;
@@ -300,24 +196,13 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {// TODO: Add co
           <Response | null> => {// TODO: Add content;}
 }
     const identifier = getClientIdentifier(request);
-<<<<<<< HEAD
-    const { allowed, remaining, resetTime } = limiter.check(identifier);
-    if (!allowed) {// TODO: Add content;}
-}
-      return new Response()
-        JSON.stringify({// TODO: Add content;}
-};
-  error: 'Rate limit exceeded',
-=======
     const {allowed, remaining, resetTime} = limiter.check(identifier);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
           retryAfter: Math.ceil((resetTime - Date.now()) / 1000)
         {// TODO: Add content;}
 };
   status: 429,
           headers: {// TODO: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             'Content-Type': 'application/json',
             'Retry-After': String(Math.ceil((resetTime - Date.now()) / 1000)),
             'X-RateLimit-Limit': String(limiter['config'].max),
@@ -326,23 +211,14 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {// TODO: Add co
           }
         }
       );
-<<<<<<< HEAD
-    }
-=======
     // Request allowed - headers can be added to response later;
 return null;
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     // Request allowed - headers can be added to response later
     return null;
   };
 }
-<<<<<<< HEAD
-export default RateLimiter;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
-=======
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

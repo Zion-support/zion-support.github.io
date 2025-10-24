@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-}
-=======
 'use client';
 /**
  * useForm Hook
@@ -24,12 +12,6 @@ import {
   getFormErrors,
   // ValidationResult as _ValidationResult
 } from '../utils/formValidation';
-<<<<<<< HEAD
-export interface UseFormConfig<T extends Record<string, unknown>> {
-  initialValues: T;
-  validationSchema?: Record<keyof T, ValidationRule[]>;
-  onSubmit: (values: T) => void | Promise<void>;
-=======
 export interface UseFormConfig;
           <T extends Record<string, unknown>> {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -41,7 +23,6 @@ export interface UseFormConfig;
   onSubmi,
   t: (value)
   s: T) => void | Promise<void>;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   validateOnChange?: boolean;
   validateOnBlur?: boolean;
 }
@@ -68,18 +49,12 @@ export function useForm<T extends Record<string, unknown>>({
   const [errors, setErrors] = useState<Record<keyof T, string[]>>({} as Record<keyof T, string[]>);
   const [touched, setTouched] = useState<Record<keyof T, boolean>>({} as Record<keyof T, boolean>);
   const [isSubmitting, setIsSubmitting] = useState(false);
-<<<<<<< HEAD
-  // Validate a single field
-  const validateSingleField = useCallback(
-    (field: keyof T): void => {
-=======
   // Validate a single field;
 const validateSingleField = useCallback()
     (fiel)
   d: keyof T): void => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       if (!validationSchema[field]) return;
       const fieldValue = values[field];
       const rules = validationSchema[field];
@@ -99,15 +74,8 @@ const validateSingleField = useCallback()
     setErrors(formErrors);
     return isFormValid(validationResults);
   }, [values, validationSchema]);
-<<<<<<< HEAD
-  // Handle input change
-  const handleChange = useCallback(
-    (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-      const { name, value, type } = e.target;
-=======
   // Handle input change;
       const {name, value, type} = e.target;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
       const fieldName = name as keyof T;
       // Handle checkbox inputs
       let fieldValue: unknown = value;
@@ -157,31 +125,11 @@ const validateSingleField = useCallback()
       }
       setIsSubmitting(true);
       try {
-<<<<<<< HEAD
-        await onSubmit(values);
-<<<<<<< HEAD
-=======
         await _onSubmit(values);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
       } catch (error) {
       } finally {
-=======
         console.error('Form submission error: ', error);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
         setIsSubmitting(false);
-<<<<<<< HEAD
-      }
-    },
-    [values, validateAllFields]
-  );
-  // Set field value programmatically
-  const setFieldValue = useCallback((field: keyof T, value: T[keyof T]) => {
-    setValues(prev => ({
-      ...prev,
-      [field]: value
-    }));
-    if (validateOnChange && touched[field]) {
-=======
 [values, validateAllFields]
   // Set field value programmatically;
   const setFieldValue = useCallback((fiel,
@@ -190,30 +138,9 @@ const validateSingleField = useCallback()
     if (validateOnChange && touched[field]) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       setTimeout(() => validateSingleField(field), 0);
     }
   }, [validateOnChange, touched, validateSingleField]);
-<<<<<<< HEAD
-  // Set field error programmatically
-  const setFieldError = useCallback((field: keyof T, fieldErrors: string[]) => {
-    setErrors(prev => ({
-      ...prev,
-      [field]: fieldErrors
-    }));
-  }, []);
-  // Set field touched programmatically
-  const setFieldTouched = useCallback((field: keyof T, isTouched: boolean) => {
-    setTouched(prev => ({
-      ...prev,
-      [field]: isTouched
-    }));
-  }, []);
-  // Reset form to initial values
-  const resetForm = useCallback(() => {
-    setValues(initialValues);
-    setErrors({} as Record<keyof T, string[]>);
-=======
 // Set field error programmatically;
   const setFieldError = useCallback((fiel,
   d: keyof T, fieldError)
@@ -227,19 +154,13 @@ const validateSingleField = useCallback()
   const resetForm = useCallback(() => {setValues(initialValues);}
     setErrors({} as Record;)
           <keyof T, string[]>);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     setTouched({} as Record<keyof T, boolean>);
     setIsSubmitting(false);
   }, [initialValues]);
   // Check if form is valid
   const isValid = Object.keys(errors).length === 0 || 
     Object.values(errors).every(errorArray => errorArray.length === 0);
-<<<<<<< HEAD
-  return {
-    values,
-=======
   return {values}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     errors,
     touched,
     isSubmitting,
@@ -255,7 +176,3 @@ const validateSingleField = useCallback()
     validateAllFields
   };
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522

@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-=======
 import React, { memo, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Play, Users, Shield, Brain, Cloud, Code, TrendingUp, Sparkles, Award } from 'lucide-react';
@@ -38,17 +29,13 @@ const FuturisticHero: React.FC = memo(() => {}
     { icon: Shield, value: "99.9%", label: "Uptime Guarantee" },
     { icon: Award, value: "50+", label: "Awards Won" }
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
 'use client';
 import React from 'react';
 import { Brain, Zap, Shield, Globe, ArrowRight, CheckCircle } from 'lucide-react';
 'use client'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
 const FuturisticHeroPage: React.FC = () => {
   const features = [
-=======
 'use client'
 import React from 'react'
 import { ArrowRight, Zap, Shield, Brain, Globe, Star } from 'lucide-react'
@@ -81,7 +68,6 @@ const FuturisticHero: React.FC<FuturisticHeroProps> = ({
   showBackground = true
 }) => {
   const defaultFeatures = [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -102,31 +88,6 @@ const FuturisticHero: React.FC<FuturisticHeroProps> = ({
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses',
     }
-<<<<<<< HEAD
-  ];
-
-<<<<<<< HEAD
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-
-const FuturisticHero: React.FC = () => {
-  return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="futuristichero">
-      <h2>FuturisticHero</h2>
-      <p>FuturisticHero component.</p>
-    </div>
-=======
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
@@ -134,7 +95,6 @@ const FuturisticHero: React.FC = () => {
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div></div>
-=======
   ]
 
   const displayFeatures = features.length > 0 ? features : defaultFeatures
@@ -193,9 +153,7 @@ const FuturisticHero: React.FC = () => {
                 <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-300 text-sm">{feature.description}</p>
               </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
             ))}
-=======
   return(<section className="relative min-h-screen flex items-center justify-center overflow-hidden neural-network-bg"></section>
       {/* Animated Background Elements */}
       <div className="absolute inset-0 particle-field"></div>
@@ -264,35 +222,7 @@ const FuturisticHero: React.FC = () => {
                 </div>
               ))}
             </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           </div>
-<<<<<<< HEAD
-        </div>
-      </section>
-
-<<<<<<< HEAD
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your futuristichero needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
-            </div></div></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
           {/* Right Column - Visual Elements */}
           <div className={`relative transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}></div>
             {/* Main Visual Container */}
@@ -355,15 +285,11 @@ const FuturisticHero: React.FC = () => {
         <div className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center"></div>
           <div className="w-1 h-3 bg-cyan-400 rounded-full mt-2 animate-pulse"></div>
     </section>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   );
 };
 
 export default FuturisticHero;
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
         )}
       </div>
     </div>
@@ -371,8 +297,6 @@ export default FuturisticHero;
 }
 
 export default FuturisticHero
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
-=======
 
 const FuturisticHero: React.FC<FuturisticHeroProps> = () => {
   return (
@@ -384,8 +308,6 @@ const FuturisticHero: React.FC<FuturisticHeroProps> = () => {
 };
 
 export default FuturisticHero;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
       <Helmet>
         <title>Futuristic Hero Solutions | Zion Tech Group</title>
@@ -484,4 +406,3 @@ export default FuturisticHero;
 };
 
 export default FuturisticHeroPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

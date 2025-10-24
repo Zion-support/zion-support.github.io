@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-interface EnhancedloadingProps {
-  className?: string;
-  children?: React.ReactNode;
-=======
 import React  from 'react';
 
 interface LoadingProps {
@@ -15,24 +5,13 @@ interface LoadingProps {
   text?: string
   fullScreen?: boolean
   color?: string
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 }
-<<<<<<< HEAD
-export default function Enhancedloading({ className = '', children, ...props }: EnhancedloadingProps) {
-  return (
-    <div className={`enhancedloading-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
-}
-=======
 
 const EnhancedLoading: React.FC = () => {
   return (
     <div className="enhancedloading">
       <h2>EnhancedLoading</h2>
       <p>EnhancedLoading component.</p>
-=======
 
 const EnhancedLoading: React.FC<LoadingProps> = ({
   message = "Loading...",
@@ -97,23 +76,16 @@ const EnhancedLoading: React.FC<LoadingProps> = ({
         <p className={`text-gray-300 ${textSizeClasses[size]} font-medium animate-pulse`}>{message}</p>
         </p>
       )}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
 
 const EnhancedLoading: React.FC<EnhancedLoadingProps> = () => {
   return (
     <div className="enhancedloading">
       <h2>EnhancedLoading</h2>
       <p>Component content coming soon.</p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
     </div>
   );
 };
 
-<<<<<<< HEAD
-export default EnhancedLoading;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-=======
 import {Helmet} from 'react-helmet-async';
 import {Link} from 'react-router-dom';
 import {ArrowRight} from 'lucide-react';
@@ -157,8 +129,6 @@ const EnhancedLoading: React.FC<LoadingProps   /> = ({const size = 'md',
 
 export default EnhancedLoading;
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 'use client'
 import React from 'react'
 import { Loader2 } from 'lucide-react'
@@ -178,14 +148,6 @@ const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
     lg: 'w-12 h-12'
   }
 
-<<<<<<< HEAD
-  return (
-    <div className="flex flex-col items-center justify-center p-8">
-      <Loader2 className={`animate-spin text-blue-500 ${sizeClasses[size]}`} />
-      <p className="mt-4 text-gray-600">{message}</p>
-    </div>
-  )
-=======
   const colorClasses = {
     cyan: 'border-cyan-400',
     purple: 'border-purple-400',
@@ -212,14 +174,7 @@ const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
   }
 
   return spinner
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 }
 
 export default EnhancedLoading
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
-=======
 export default EnhancedLoading;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

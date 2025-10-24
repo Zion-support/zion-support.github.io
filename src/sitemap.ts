@@ -1,21 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
 interface SitemapEntry {
   url: string;
   lastModified: Date;
   changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority: number;
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
 
 export default function sitemap(): SitemapEntry[] {
   const baseUrl = 'https://ziontechgroup.com'

@@ -1,186 +1,81 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
-import Footer from '../components/Footer';
-=======
-=======
-import React from "react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Calendar, 
-  BarChart3, 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Clock, 
-  Users,
-  Target, 
-  Sparkles,
-  Cpu,
-  Globe,
-  // Heart
-} from 'lucide-react';
+import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe } from 'lucide-react';
 
-const ZionAISocialSchedulerProPage: React.FC = () => {
-  const features = [
-    {
-      title: "AI-Powered Content Optimization",
-      description: "Advanced AI analyzes your audience and optimizes posting times, hashtags, and content for maximum engagement.",
-      icon: <Cpu className="w-6 h-6" />,
-      benefits: ["Optimal posting times", "Hashtag suggestions", "Content performance prediction"]
-    },
-    {
-      title: "Multi-Platform Management",
-      description: "Schedule and manage content across all major social media platforms from one unified dashboard.",
-      icon: <Globe className="w-6 h-6" />,
-      benefits: ["15+ platforms", "Bulk scheduling", "Cross-platform analytics"]
-    },
-    {
-      title: "Smart Content Calendar",
-      description: "Visual calendar with drag-and-drop scheduling, content planning, and campaign management.",
-      icon: <Calendar className="w-6 h-6" />,
-      benefits: ["Visual planning", "Campaign tracking", "Content approval workflow"]
-    },
-    {
-      title: "Advanced Analytics & Insights",
-      description: "Comprehensive analytics with engagement metrics, audience insights, and ROI tracking.",
-      icon: <BarChart3 className="w-6 h-6" />,
-      benefits: ["Engagement analytics", "Audience demographics", "ROI measurement"]
-    },
-    {
-      title: "AI Content Generation",
-      description: "Generate engaging social media content using AI, including captions, hashtags, and post ideas.",
-      icon: <Sparkles className="w-6 h-6" />,
-      benefits: ["AI captions", "Content ideas", "Brand voice consistency"]
-    },
-    {
-      title: "Team Collaboration",
-      description: "Collaborate with your team with approval workflows, role-based access, and content review processes.",
-      icon: <Users className="w-6 h-6" />,
-      benefits: ["Team workflows", "Approval processes", "Role management"]
-    }
-  ];
-
-  const platforms = [
-    { name: "Facebook", icon: "📘", color: "from-blue-500 to-blue-600" },
-    { name: "Instagram", icon: "📷", color: "from-pink-500 to-purple-600" },
-    { name: "Twitter", icon: "🐦", color: "from-blue-400 to-blue-500" },
-    { name: "LinkedIn", icon: "💼", color: "from-blue-600 to-blue-700" },
-    { name: "TikTok", icon: "🎵", color: "from-black to-gray-800" },
-    { name: "YouTube", icon: "📺", color: "from-red-500 to-red-600" },
-    { name: "Pinterest", icon: "📌", color: "from-red-500 to-pink-500" },
-    { name: "Snapchat", icon: "👻", color: "from-yellow-400 to-yellow-500" }
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$49",
-      period: "/month",
-      description: "Perfect for small businesses and individual creators",
-      features: [
-        "Up to 3 social accounts",
-        "30 posts per month",
-        "Basic analytics",
-        "Content calendar",
-        "Email support"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$149",
-      period: "/month",
-      description: "Ideal for growing businesses and marketing teams",
-      features: [
-        "Up to 10 social accounts",
-        "Unlimited posts",
-        "Advanced analytics",
-        "AI content generation",
-        "Team collaboration",
-        "Priority support",
-        "Custom branding"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$399",
-      period: "/month",
-      description: "For large organizations with complex social media needs",
-      features: [
-        "Unlimited social accounts",
-        "Unlimited posts",
-        "Enterprise analytics",
-        "Advanced AI features",
-        "White-label options",
-        "Dedicated support",
-        "Custom integrations",
-        "API access"
-      ],
-      popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Jessica Martinez",
-      company: "Creative Agency Co.",
-      role: "Social Media Manager",
-      content: "Zion AI Social Scheduler Pro increased our engagement by 300%. The AI optimization features are incredible!",
-      rating: 5,
-      avatar: "JM",
-    },
-    {
-      name: "David Kim",
-      company: "E-commerce Plus",
-      role: "Marketing Director",
-      content: "We manage 20+ social accounts effortlessly. The team collaboration features have streamlined our entire workflow.",
-      rating: 5,
-      avatar: "DK",
-    },
-    {
-      name: "Lisa Thompson",
-      company: "Fashion Forward",
-      role: "Brand Manager",
-      content: "The AI content generation saves us hours every week. Our content quality has improved dramatically.",
-      rating: 5,
-      avatar: "LT",
-    }
-  ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
-
-export default function ZionaisocialschedulerproPage() {
+export default function ZionAiSocialSchedulerProPage() {
   return (
-    <div>
-      <Head>
-        <title>Zion Ai Social Scheduler Pro - Zion Tech Group</title>
-        <meta name="description" content="Professional services by Zion Tech Group." />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            Zion Ai Social Scheduler Pro
-          </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            zion-ai-social-scheduler-pro services Transform your business with our expert solutions. services coming soon.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+    <div className="min-h-screen bg-gray-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold mb-8">Zion Ai Social Scheduler Pro</h1>
+        <p className="text-xl text-gray-300 mb-8">
+          Discover our comprehensive zion ai social scheduler pro solutions designed to meet your business needs.
+        </p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-12">
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Brain className="h-12 w-12 text-blue-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">AI-Powered Solutions</h3>
+            <p className="text-gray-300">
+              Leverage artificial intelligence to automate and optimize your business processes.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Shield className="h-12 w-12 text-green-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Enterprise Security</h3>
+            <p className="text-gray-300">
+              Robust security measures to protect your data and ensure compliance.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Users className="h-12 w-12 text-purple-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Expert Support</h3>
+            <p className="text-gray-300">
+              Dedicated support team to help you succeed with our solutions.
+            </p>
+          </div>
+        </div>
+        
+        <div className="mt-12">
+          <h2 className="text-3xl font-bold mb-6">Why Choose Our Zion Ai Social Scheduler Pro Solutions?</h2>
+          <ul className="space-y-4 text-lg text-gray-300 mb-8">
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Scalable and flexible architecture
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Industry-leading performance
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Easy integration with existing systems
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              24/7 monitoring and support
+            </li>
+          </ul>
+          
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Get Started
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+            <Link 
+              href="/services" 
+              className="inline-flex items-center px-6 py-3 border border-gray-600 text-white rounded-lg hover:bg-gray-800 transition-colors"
+            >
+              Learn More
+            </Link>
+          </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

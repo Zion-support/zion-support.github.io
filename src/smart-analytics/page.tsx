@@ -139,12 +139,7 @@ const SmartAnalyticsPage: React.FC = () => {
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
             Simple, Transparent Pricing
-<<<<<<< HEAD
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-=======
           <div className="grid md:grid-cols-3 gap-8"></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             {pricingPlans.map((plan, index) => (
               <div
                 key={index}
@@ -164,12 +159,7 @@ const SmartAnalyticsPage: React.FC = () => {
                 <div className="mb-6"></div>
                   <span className="text-4xl font-bold text-white">{plan.price}</span>
                   <span className="text-gray-400">{plan.period}</span>
-<<<<<<< HEAD
-                </div>
-                <ul className="space-y-3 mb-8">
-=======
                 <ul className="space-y-3 mb-8"></ul>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300"></li>
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
@@ -193,31 +183,6 @@ const SmartAnalyticsPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-        <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Data?
-          </h2>
-          <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses that have revolutionized their decision-making with our smart analytics platform.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
-              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              📞 Call: (302) 464-0950
-            </a>
-            <Link
-              to="/contact"
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
-            >
-              Get Free Demo
-            </Link>
-          </div>
-        </section>
-
-=======
         <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12"></section>
 
 
@@ -329,7 +294,6 @@ const PagePage: React.FC = () => {
           <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto"></p>
             Join thousands of businesses that have revolutionized their decision-making with our smart analytics platform.
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors" Get Free Demo;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
         {/* Contact Info */}
         <section className="mt-16 text-center"></section>
           <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20"></div>
@@ -337,20 +301,6 @@ const PagePage: React.FC = () => {
             <div className="grid md:grid-cols-3 gap-6 text-gray-300"></div>
               <div className="flex items-center justify-center"></div>
                 <Phone className="w-5 h-5 mr-2 text-cyan-400" />
-<<<<<<< HEAD
-                <a href="tel:+13024640950" className="hover:text-white transition-colors">
-                  +1 (302) 464-0950
-                </a>
-              </div>
-              <div className="flex items-center justify-center">
-                <Mail className="w-5 h-5 mr-2 text-cyan-400" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-              <div className="flex items-center justify-center">
-                <MapPin className="w-5 h-5 mr-2 text-cyan-400" />
-=======
                 <a href="tel:+13024640950" className="hover:text-white transition-colors"></a>
 +1 (302) 464-0950;
                 <Mail className="w-5 h-5 mr-2 text-cyan-400" />
@@ -358,7 +308,6 @@ const PagePage: React.FC = () => {
                   kleber@ziontechgroup.com;
                 <MapPin className="w-5 h-5 mr-2 text-cyan-400" />
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>

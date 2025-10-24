@@ -1,20 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Next.js type definitions
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Type definitions for Next.js compatibility in Vite
-export interface Metadata {
-  title?: string;
-=======
 const NextPage: React.FC = () => {
   const features = [
     {
@@ -57,15 +45,12 @@ const NextPage: React.FC = () => {
         <meta name="description" content="Professional Next.d services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="next.d, AI solutions, IT services, Zion Tech Group, next.d" />
       </Helmet>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602
   description?: string;
   keywords?: string[];
   authors?: Array<{ name: string; url?: string }> | string[];
-=======
 // Type definitions for Next.js compatibility in Vite;
 export interface Metadata {/* TODO: Fix JSX expression */}
   e: string; url?: string }> | string[];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   creator?: string;
   publisher?: string;
   formatDetection?: {
@@ -91,37 +76,6 @@ export interface Metadata {/* TODO: Fix JSX expression */}
     }>;
     locale?: string;
     type?: string;
-<<<<<<< HEAD
-    authors?: Array<{ name: string; url?: string }> | string[];
-    publishedTime?: string;
-  };
-  twitter?: {
-    card?: 'summary' | 'summary_large_image' | 'app' | 'player';
-    site?: string;
-    creator?: string;
-    title?: string;
-    description?: string;
-    images?: string[];
-  };
-  robots?: {
-    index?: boolean;
-    follow?: boolean;
-    googleBot?: {
-      index?: boolean;
-      follow?: boolean;
-      'max-video-preview'?: number;
-      'max-image-preview'?: 'none' | 'standard' | 'large';
-      'max-snippet'?: number;
-    };
-  };
-  verification?: {
-    google?: string;
-    yandex?: string;
-    yahoo?: string;
-    other?: Record<string, string>;
-  };
-}
-=======
 const Next.dPage: React.FC = () => {
   const features = [
     {
@@ -145,14 +99,12 @@ const Next.dPage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses',
     }
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 
 export interface MetadataRoute {
   url: string,
   lastModified?: string | Date;
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
-=======
     authors?: Array<{/* TODO: Fix JSX expression */}
   e: string; url?: string }> | string[];
     publishedTime?: string;
@@ -169,7 +121,6 @@ export interface MetadataRoute {/* TODO: Fix JSX expression */}
 }
 export type MetadataRouteType = 'sitemap' | 'robots' | 'manifest';
 export interface MetadataRouteSitemap {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 }
 
 export interface MetadataRouteSitemap extends MetadataRoute {
@@ -200,35 +151,6 @@ export interface NextPageProps {
               Transform your business with our advanced next.d solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-<<<<<<< HEAD
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-// API route types
-export interface ApiRouteHandler {
-  (req: Request): Promise<Response>;
-}
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-=======
           </div></div></div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
@@ -236,7 +158,6 @@ export interface ApiRouteHandler {
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
             ))}
           </div>
         </div>
@@ -252,8 +173,6 @@ export interface ApiRouteHandler {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our next.d solutions for your business.
             </p>
-<<<<<<< HEAD
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 <Phone className="mr-2 h-5 w-5" />
@@ -264,7 +183,6 @@ export interface ApiRouteHandler {
                 Email Us
               </button>
             </div></div></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
           </div>
 
 // Server components types
@@ -317,7 +235,6 @@ export interface NodeRuntime {
 }
 
 // Extend Next.js types
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
 declare module 'next' {
   interface NextConfig {
     experimental?: {
@@ -325,14 +242,7 @@ declare module 'next' {
     };
   }
 }
-<<<<<<< HEAD
-export {};
-=======
 
-<<<<<<< HEAD
-export {};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
-=======
 /// <reference types="next" />
 /// <reference types="next/image-types/global" />
 
@@ -340,11 +250,7 @@ declare module '*.svg' {
   const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
   export default content;
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-=======
 export {}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602
-=======
 // Type definitions for Next.js
 declare global {
   namespace NodeJS {
@@ -360,4 +266,3 @@ declare global {
 }
 
 export {};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

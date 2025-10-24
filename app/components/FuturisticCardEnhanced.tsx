@@ -1,11 +1,6 @@
 import React from 'react';
 interface FuturisticcardenhancedProps {
   className?: string;
-<<<<<<< HEAD
-  children?: React.ReactNode;
-}
-export default function Futuristiccardenhanced({ className = '', children, ...props }: FuturisticcardenhancedProps) {
-=======
   variant?: 'default' | 'gradient' | 'glass';
   glowColor?: string;
   hoverEffect?: boolean;
@@ -30,7 +25,6 @@ const FuturisticCardEnhanced: React.FC<FuturisticCardEnhancedProps> = ({
     glass: "bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20"
   };
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0326
   return (
     <div className={`futuristiccardenhanced-component ${className}`} {...props}>
       {children}

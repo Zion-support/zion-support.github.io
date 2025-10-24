@@ -74,41 +74,10 @@ class MonitoringService {
               clsValue += (entry as any).value || 0;
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
-<<<<<<< HEAD
-            }
-          })
-        })
-        clsObserver.observe({ entryTypes: ['layout-shift'] })
-        // First Contentful Paint
-        const fcpObserver = new PerformanceObserver(list => {
-          const entries = list.getEntries();
-          entries.forEach(entry => {
-            this.metrics.fcp = entry.startTime;
-            this.reportMetric('fcp', entry.startTime);
-          });
-        });
-        fcpObserver.observe({ entryTypes: ['paint'] });
-      } catch (error) {
-        // console.error('Error setting up performance observers:', error);
-      }
-    }
-  }
-  private monitorLongTasks(): void {
-    if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {
-      try {
-        const longTaskObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-<<<<<<< HEAD
-            console.warn('Long task detected:', {
-              duration: entry.duration,
-              startTime: entry.startTime
-            });
-=======
             // console.warn('Long task detected:', {
             //   duration: entry.duration,
             //   startTime: entry.startTime
             // });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-063c
           }
         });
         longTaskObserver.observe({ entryTypes: ['longtask'] });
@@ -122,16 +91,6 @@ class MonitoringService {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-<<<<<<< HEAD
-          entries.forEach((entry: PerformanceResourceTiming) => {
-            if (entry.duration > 1000) {
-<<<<<<< HEAD
-              console.warn('Slow resource detected:', {
-                name: entry.name,
-                duration: entry.duration,
-                type: entry.initiatorType
-              });
-=======
           entries.forEach((entry) => {
             const resourceEntry = entry as PerformanceResourceTiming;
             if (resourceEntry.duration > 1000) {
@@ -140,14 +99,11 @@ class MonitoringService {
               //   duration: resourceEntry.duration,
               //   type: resourceEntry.initiatorType
               // })
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
-=======
               // console.warn('Slow resource detected:', {
               //   name: entry.name,
               //   duration: entry.duration,
               //   type: entry.initiatorType
               // });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-063c
             }
           });
         });
@@ -204,7 +160,6 @@ class MonitoringService {
     this.errors.push(error)
     // Keep only last 50 errors
     if (this.errors.length > 50) {
-=======
         clsObserver.observe({/* TODO: Fix JSX expression */})
   s: ['layout-shift'] })
         // First Contentful Paint;
@@ -232,7 +187,6 @@ class MonitoringService {
     if (this.errors.length > 50) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       this.errors = this.errors.slice(-50)
     }
     // console.error('[Error]', error)
@@ -276,9 +230,6 @@ class MonitoringService {
     }
   }
 }
-<<<<<<< HEAD
-// Singleton instance
-=======
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {/* TODO: Fix JSX expression */}
   t: number } }).memory;
       if (memory) {/* TODO: Fix JSX expression */}
@@ -300,6 +251,5 @@ class MonitoringService {
 const _monitoring = new MonitoringService()
 export default monitoring;
 // Singleton instance;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 const monitoring = new MonitoringService()
 export default monitoring

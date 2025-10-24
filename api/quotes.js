@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -50,4 +48,3 @@ export default async function handler(req, res) {
     res.end(JSON.stringify({ error: 'Internal server error' }));
   }
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

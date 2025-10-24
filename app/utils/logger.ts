@@ -1,56 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-/**
- * Enhanced Logger Utility
- * Provides structured logging with different levels and contexts
- */
-=======
 // Utility file: logger
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 
 export enum LogLevel {
   DEBUG = 0,
   INFO = 1,
   WARN = 2,
-<<<<<<< HEAD
-  ERROR = 3,
-  FATAL = 4,
-}
-
-export interface LogContext {
-  component?: string;
-  action?: string;
-  userId?: string;
-  sessionId?: string;
-  requestId?: string;
-  [key: string]: unknown;
-}
-
-export interface LogMetadata {
-  timestamp?: string;
-  level?: LogLevel;
-  message?: string;
-  context?: LogContext;
-  error?: Error;
-  [key: string]: unknown;
-}
-
-class Logger {
-<<<<<<< HEAD
-  private logLevel: LogLevel;
-  private isDevelopment: boolean;
-
-  constructor() {
-    this.logLevel = process.env.NODE_ENV === 'development' ? LogLevel.DEBUG : LogLevel.INFO;
-    this.isDevelopment = process.env.NODE_ENV === 'development';
-  }
-
-  /**
-   * Set the minimum log level
-   */
-  setLogLevel(level: LogLevel): void {
-=======
   private logLevel: LogLevel = LogLevel.INFO;
   private logs: Array<{
     level: LogLevel,
@@ -61,7 +14,6 @@ class Logger {
   }> = []
 
   setLogLevel(level: LogLevel,): void {,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     this.logLevel = level;
   }
 
@@ -109,19 +61,6 @@ class Logger {
     // Handle different parameter combinations
     if (errorOrContextOrMetadata instanceof Error) {
       error = errorOrContextOrMetadata;
-<<<<<<< HEAD
-      context = contextOrMetadata as LogContext;
-      meta = metadata;
-    } else if (typeof errorOrContextOrMetadata === 'string') {
-      context = { component: errorOrContextOrMetadata };
-      meta = contextOrMetadata as Record<string, unknown>;
-    } else if (typeof errorOrContextOrMetadata === 'object') {
-      context = errorOrContextOrMetadata as LogContext;
-      meta = contextOrMetadata as Record<string, unknown>;
-    }
-
-    this.log(LogLevel.ERROR, message, context, { ...meta, error });
-=======
       context = typeof contextOrMetadata === 'string' ? { action: contextOrMetadata; } : contextOrMetadata;
       meta = metadata;
     } else if (typeof errorOrContextOrMetadata === 'string') {
@@ -130,10 +69,8 @@ class Logger {
     } else if (typeof errorOrContextOrMetadata === 'object') {
       context = errorOrContextOrMetadata;
       meta = contextOrMetadata as Record<string, unknown>
-=======
 'use client'
 /**
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
  * Enhanced Logger Utility;
  * Provides structured logging with different levels and contexts;
  */
@@ -149,11 +86,7 @@ class Logger {/* TODO: Fix JSX expression */,}
    * Set the minimum log level;
    */
   setLogLevel(leve)
-<<<<<<< HEAD
-  l: LogLevel,): void {/* TODO: Fix JSX expression */,}
-=======
   l: LogLevel): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   }
   /**
    * Get the current log level;
@@ -164,31 +97,19 @@ class Logger {/* TODO: Fix JSX expression */,}
    * Log a debug message;
    */
   debug(messag)
-<<<<<<< HEAD
-  e: string, context?: LogContext, metadata?: Record<string, unknown>): void {/* TODO: Fix JSX expression */,}
-=======
   e: string, context?: LogContext, metadata?: Record<string, unknown>): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   }
   /**
    * Log an info message;
    */
   info(messag)
-<<<<<<< HEAD
-  e: string, context?: LogContext, metadata?: Record<string, unknown>): void {/* TODO: Fix JSX expression */,}
-=======
   e: string, context?: LogContext, metadata?: Record<string, unknown>): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   }
   /**
    * Log a warning message;
    */
   warn(messag)
-<<<<<<< HEAD
-  e: string, context?: LogContext, metadata?: Record<string, unknown>): void {/* TODO: Fix JSX expression */,}
-=======
   e: string, context?: LogContext, metadata?: Record<string, unknown>): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   }
   /**
    * Log an error message;
@@ -202,38 +123,14 @@ class Logger {/* TODO: Fix JSX expression */,}
     } else if (typeof errorOrContextOrMetadata === 'string') {/* TODO: Fix JSX expression */,}
   t: errorOrContextOrMetadata; };
       meta = contextOrMetadata as Record<string, unknown>;
-<<<<<<< HEAD
-    } else if (typeof errorOrContextOrMetadata === 'object') {/* TODO: Fix JSX expression */,}
-=======
     } else if (typeof errorOrContextOrMetadata === 'object') {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     }
 
     this.log(LogLevel.ERROR, message, context, { ...meta, error: error?.stack ,})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   }
-<<<<<<< HEAD
-
-  /**
-   * Log a fatal error message
-   */
-  fatal(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
-    this.log(LogLevel.FATAL, message, context, metadata);
-  }
-
-<<<<<<< HEAD
-  /**
-   * Core logging method
-   */
-  private log(
-    level: LogLevel,
-    message: string,
-    context?: LogContext,
-=======
   private log(level: LogLevel;),
     message: string,),
     context?: LogContext),
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     metadata?: Record<string, unknown>
   ): void {
     // Check if we should log this level
@@ -246,13 +143,8 @@ class Logger {/* TODO: Fix JSX expression */,}
       level,
       message,
       context,
-<<<<<<< HEAD
-      ...metadata,
-    };
-=======
       metadata,
       timestamp: Date.now(),}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 
     // Format the log entry
     const formattedMessage = this.formatLogEntry(logEntry);
@@ -322,8 +214,6 @@ class Logger {/* TODO: Fix JSX expression */,}
     }
   }
 
-<<<<<<< HEAD
-=======
   getLogs(level?: LogLevel): Array<{
     level: LogLevel,
     message: string,
@@ -333,35 +223,13 @@ class Logger {/* TODO: Fix JSX expression */,}
   }> {
     if (level !== undefined) {
       return this.logs.filter(log => log.level === level)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   /**
    * Get console styles for different log levels
    */
-<<<<<<< HEAD
-<<<<<<< HEAD
-  private getConsoleStyles(level: LogLevel): string {
-    switch (level) {
-      case LogLevel.DEBUG:
-        return 'color: #6B7280; font-weight: normal;';
-      case LogLevel.INFO:
-        return 'color: #3B82F6; font-weight: normal;';
-      case LogLevel.WARN:
-        return 'color: #F59E0B; font-weight: bold;';
-      case LogLevel.ERROR:
-        return 'color: #EF4444; font-weight: bold;';
-      case LogLevel.FATAL:
-        return 'color: #DC2626; font-weight: bold; background: #FEF2F2;';
-      default:
-        return 'color: #6B7280; font-weight: normal;';
-=======
   fatal(messag)
   e: string, context?: LogContext, metadata?: Record<string, unknown>): void {/* TODO: Fix JSX expression */,}
-=======
   fatal(messag)
   e: string, context?: LogContext, metadata?: Record<string, unknown>): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   }
   /**
    * Core logging method;
@@ -384,24 +252,16 @@ class Logger {/* TODO: Fix JSX expression */,}
     }
     // In production, you might want to send to a logging service;
     if (!this.isDevelopment) {/* TODO: Fix JSX expression */,}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     }
   }
 
   /**
    * Send log entry to external logging service
    */
-<<<<<<< HEAD
-<<<<<<< HEAD
-  private sendToLoggingService(entry: LogMetadata): void {
-    // In a real application, you would send this to your logging service
-=======
   private formatLogEntry(entr)
   y: LogMetadata,): string {/* TODO: Fix JSX expression */,}
-=======
   private formatLogEntry(entr)
   y: LogMetadata): string {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     const contextStr = entry.context ? ` [${this.formatContext(entry.context)}]` : '';`
     const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata)}` : '';`
     return `[${timestamp}] ${levelStr}${contextStr}: ${entry.message}${metadataStr}`;
@@ -410,18 +270,6 @@ class Logger {/* TODO: Fix JSX expression */,}
    * Format context object for display;
    */
   private formatContext(contex)
-<<<<<<< HEAD
-  t: LogContext,): string {/* TODO: Fix JSX expression */,}`
-  t: ${context.component,}`);`
-    if (context.action) parts.push(`actio)`
-  n: ${context.action,}`);`
-    if (context.userId) parts.push(`use)`
-  r: ${context.userId,}`);`
-    if (context.sessionId) parts.push(`sessio)`
-  n: ${context.sessionId,}`);`
-    if (context.requestId) parts.push(`reques)`
-  t: ${context.requestId,}`);
-=======
   t: LogContext): string {/* TODO: Fix JSX expression */}`
   t:${context.component}`);`
     if (context.action) parts.push(`actio)`
@@ -432,7 +280,6 @@ class Logger {/* TODO: Fix JSX expression */,}
   n:${context.sessionId}`);`
     if (context.requestId) parts.push(`reques)`
   t:${context.requestId}`);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     return parts.join(', ');
   }
   /**
@@ -441,46 +288,20 @@ class Logger {/* TODO: Fix JSX expression */,}
   private outputToConsole(leve,
   l: LogLevel, messag,
   e: string, entr)
-<<<<<<< HEAD
-  y: LogMetadata,): void {/* TODO: Fix JSX expression */,}
-=======
   y: LogMetadata): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     }
   }
   /**
    * Get console styles for different log levels;
    */
   private getConsoleStyles(leve)
-<<<<<<< HEAD
-  l: LogLevel,): string {/* TODO: Fix JSX expression */,}
-=======
   l: LogLevel): string {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     }
     return [...this.logs]
   }
   /**
    * Send log entry to external logging service;
    */
-<<<<<<< HEAD
-  private sendToLoggingService(entry: LogMetadata,): void {,
-    // In a real application, you would send this to your logging service;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-    // For example: Sentry, LogRocket, DataDog, etc.
-    
-    // Example implementation:
-<<<<<<< HEAD
-    // fetch('/api/logs', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify(entry)
-    // }).catch(err => {
-    //   console.error('Failed to send log to service:', err);
-    // });
-  }
-
-=======
     // fetch('/api/logs', {)
     //   method: 'POST'),
     //   headers: {// 'Content-Type': 'application/json',})
@@ -499,60 +320,34 @@ export const logger = new Logger()
   private sendToLoggingService(entr)
   y: LogMetadata,): void {/* TODO: Fix JSX expression */,}
   s: {// 'Content-Type': 'application/json',},
-=======
   private sendToLoggingService(entr)
   y: LogMetadata): void {/* TODO: Fix JSX expression */}
   s: {// 'Content-Type': 'application/json'},
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     //   bod,
   y: JSON.stringify(entry)
     // }).catch(err => {/* TODO: Fix JSX expression */,})
     //   // });
   }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   /**
    * Get string representation of log level
    */
-<<<<<<< HEAD
-<<<<<<< HEAD
-  private getLevelString(level: LogLevel): string {
-    switch (level) {
-      case LogLevel.DEBUG:
-        return 'DEBUG';
-      case LogLevel.INFO:
-        return 'INFO';
-      case LogLevel.WARN:
-        return 'WARN';
-      case LogLevel.ERROR:
-        return 'ERROR';
-      case LogLevel.FATAL:
-        return 'FATAL';
-      default:
-        return 'UNKNOWN';
-=======
   private getLevelString(leve)
   l: LogLevel,): string {/* TODO: Fix JSX expression */,}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     }
   }
 }
 
 export const logger = new Logger();
-=======
 // Logger utility functions
 export function logger() {
   // Implementation here
   return null;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
-=======
   private getLevelString(leve)
   l: LogLevel): string {/* TODO: Fix JSX expression */}
     }
   }
 }
 export const logger = new Logger();`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
   ERROR = 3
 }
 
@@ -617,4 +412,3 @@ export class Logger {
 }
 
 export const logger = new Logger();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

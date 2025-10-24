@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client'
-import React, { useEffect } from 'react'
-=======
 'use client';
 import React, { useState, useEffect } from 'react';
 
@@ -31,7 +20,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ isVisible = fal
     firstPaint: 0,
     firstContentfulPaint: 0
   });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
@@ -40,33 +28,6 @@ const PerformanceMonitor: React.FC = () => {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         
         if (navigation) {
-<<<<<<< HEAD
-          const loadTime = navigation.loadEventEnd - navigation.fetchStart;
-          const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.fetchStart;
-          const firstPaint = performance.getEntriesByName('first-paint')[0]?.startTime || 0;
-          const firstContentfulPaint = performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0;
-
-          // Send to analytics service
-          if (window.gtag) {
-            window.gtag('event', 'performance_metrics', {
-              event_category: 'performance',
-              load_time: Math.round(loadTime),
-              dom_content_loaded: Math.round(domContentLoaded),
-              first_paint: Math.round(firstPaint),
-              first_contentful_paint: Math.round(firstContentfulPaint)
-            });
-          }
-
-          // Log to console in development
-          if (process.env.NODE_ENV === 'development') {
-            console.log('Performance Metrics:', {
-              loadTime,
-              domContentLoaded,
-              firstPaint,
-              firstContentfulPaint
-            });
-          }
-=======
           const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
           const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
           
@@ -84,7 +45,6 @@ const PerformanceMonitor: React.FC = () => {
             connectionSpeed,
             renderTime: Math.round(domContentLoaded),
           });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
         }
       };
 
@@ -95,29 +55,24 @@ const PerformanceMonitor: React.FC = () => {
         window.removeEventListener('load', monitorPerformance);
       };
     }
-<<<<<<< HEAD
-=======
 
     // Keyboard shortcut to toggle visibility
     const handleKeyDown = (e: KeyboardEvent,) => {
       if (e.ctrlKey && e.shiftKey && e.key === 'P') {
         e.preventDefault();
         setIsVisible(prev => !prev);
-=======
 import React, {useEffect} from 'react';
 import {getCLS, getFID, getFCP, getLCP, getTTFB};
 export default PerformanceMonitor;
 'use client';
 const PerformanceMonitor: React.FC = () => {useEffect(() => {
     // Monitor Core Web Vitals;
-=======
 import React, { useEffect } from 'react';
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
     const monitorCoreWebVitals = () => {
       if (typeof window !== 'undefined') {
         getCLS(console.log);
@@ -125,30 +80,12 @@ const PerformanceMonitor: React.FC = () => {
         getFCP(console.log);
         getLCP(console.log);
         getTTFB(console.log);
-<<<<<<< HEAD
-      if ('web-vitals' in, window) {
-          getCLS(console.log);
-          getFID(console.log);
-          getFCP(console.log);
-          getLCP(console.log);
-          getTTFB(console.log);});
-      if ('web-vitals' in window) {onCLS(console.log);
-        onINP(console.log);
-        onFCP(console.log);
-        onLCP(console.log);
-        onTTFB(console.log);}
-    };
-
-    // Monitor performance metrics;
-    const monitorPerformance = () => {if ('performance' in, window) {
-=======
       }
     };
 
     // Monitor performance metrics
     const monitorPerformance = () => {
         if ('performance' in window) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         window.addEventListener('load', () => {
           setTimeout(() => {
             const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -156,56 +93,34 @@ const PerformanceMonitor: React.FC = () => {
             console.log('Performance Metrics: ', {
               domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
               loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-<<<<<<< HEAD
-              firstPaint: paint.find(const entry = > entry.name === 'first-paint')?.startTime,
-              firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,});
-=======
                 firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime,
               firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
             });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           }, 0);
         });
       }
     };
 
-<<<<<<< HEAD
-    // Monitor memory usage;
-    const monitorMemory = () => {if ('memory' in, performance) {
-        setInterval(() => {
-          const memory = (performance as, any).memory;
-=======
     // Monitor memory usage
     const monitorMemory = () => {
         if ('memory' in performance) {
           setInterval(() => {
             const memory = (performance as any).memory;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           console.log('Memory Usage: ', {
             used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
             total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
             limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB',});
         }, 30000); // Check every 30 seconds;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
 
-<<<<<<< HEAD
-    return () => {
-      window.removeEventListener('load', measureWebVitals);
-      window.removeEventListener('keydown', handleKeyDown);
-    };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
     // Cleanup;
     return () => {// Cleanup if needed;};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   }, []);
 
   return null;
-=======
 import React from 'react';
 
 const PerformanceMonitor: React.FC = () => {
@@ -215,12 +130,9 @@ const PerformanceMonitor: React.FC = () => {
       <p>PerformanceMonitor component.</p>
     </div>
   );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
 };
 
 export default PerformanceMonitor;
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Monitor } from 'lucide-react';
 interface PerformancemonitorProps {
@@ -234,8 +146,6 @@ export default function Performancemonitor({ className = '', children, ...props 
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
-=======
 'use client'
 import React, { useEffect, useState } from 'react'
 
@@ -294,20 +204,14 @@ const PerformanceMonitor: React.FC = () => {
     </div>
   )
 }
-=======
 import React from 'react';
 
 const PerformanceMonitor: React.FC = () => {
   return null;
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
 export default PerformanceMonitor
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = () => {
@@ -320,4 +224,3 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = () => {
 };
 
 export default PerformanceMonitor;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

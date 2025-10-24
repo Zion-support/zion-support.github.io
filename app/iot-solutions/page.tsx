@@ -1,380 +1,81 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
-import React from "react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-export default function Page() {
+import React from 'react';
+import Link from 'next/link';
+import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe } from 'lucide-react';
+
+export default function IotSolutionsPage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional services coming soon." />
-      </Helmet>
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">
-          Coming Soon
-        </h1>
-        <p className="text-lg text-gray-300 mb-8">
-          Professional services coming soon.
+    <div className="min-h-screen bg-gray-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold mb-8">Iot Solutions</h1>
+        <p className="text-xl text-gray-300 mb-8">
+          Discover our comprehensive iot solutions solutions designed to meet your business needs.
         </p>
-        <Link
-          to="/contact"
-          className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-        >
-          Contact Us
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Link>
-      </div>
-=======
-    <div>
-      <Head>
-        <title>Iot Solutions - Zion Tech Group</title>
-        <meta name="description" content="Professional services by Zion Tech Group." />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            Iot Solutions
-          </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            iot-solutions services Transform your business with our expert solutions. services coming soon.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-      </div>
-      <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
-    </div>
-  );
-}
-=======
-import React from 'react'
-import {Link} from 'react-router-dom'
-=======
-import React from 'react'
-import { Link } from 'react-router-dom'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-
-import React from 'react';
-
-import {Link} from 'react-router-dom';
-import {ArrowRight} from 'lucide-react';
-
-import {ArrowRight, Zap, Shield, Globe, Database, Cloud, Cpu, Rocket, Network, BarChart3, CheckCircle, DollarSign, TrendingUp, Wrench, Heart} from 'lucide-react';
-
-export default function IoTSolutionsPage() {const iotServices = [{
-      icon: <Network className="w-5h-5ml-2"   />,
-      title: 'IoT Device Management',
-      description: 'Comprehensive platform for managing, monitoring, and maintaining IoT devices across your entire network.',
-      features: ['Device provisioning', 'Remote monitoring', 'Firmware updates', 'Health diagnostics'],
-      price: 'Starting at $299/month'},
-    {icon: <Database className="w-5h-5ml-2"   />,
-      title: 'IoT Data Analytics',
-      description: 'Advanced analytics platform to process, analyze, and derive insights from IoT sensor data.',
-      features: ['Real-time processing', 'Predictive analytics', 'Data visualization', 'Custom dashboards'],
-      price: 'Starting at $399/month'},
-    {icon: <Shield className="w-5h-5ml-2"   />,
-      title: 'IoT Security Suite',
-      description: 'End-to-end security solutions to protect your IoT infrastructure from cyber threats.',
-      features: ['Device authentication', 'Data encryption', 'Threat detection', 'Compliance monitoring'],
-      price: 'Starting at $499/month'},
-    {icon: <Cloud className="w-5h-5ml-2"   />,
-      title: 'IoT Cloud Platform',
-      description: 'Scalable cloud infrastructure designed specifically for IoT applications and workloads.',
-      features: ['Auto-scaling', 'Global edge locations', '99.9% uptime', 'Multi-cloud support'],
-      price: 'Starting at $199/month'},
-    {icon: <Cpu className="w-5h-5ml-2"   />,
-      title: 'Edge Computing Solutions',
-      description: 'Process data at the edge for faster response times and reduced latency in IoT applications.',
-      features: ['Local processing', 'Real-time decisions', 'Bandwidth optimization', 'Offline capability'],
-      price: 'Starting at $349/month'},
-    {icon: <BarChart3 className="w-5h-5ml-2"   />,
-      title: 'IoT Integration Services',
-      description: 'Seamlessly integrate IoT devices with existing systems and third-party applications.',
-      features: ['API development', 'System integration', 'Data synchronization', 'Legacy compatibility'],
-      price: 'Starting at $249/month'}
-  ]
-
-  const industries = [{name: 'Manufacturing',
-      description: 'Smart factories with predictive maintenance and quality control',
-      icon: <Wrench className="w-5h-5ml-2"   /></Wrench&gt;},
-    {name: 'Healthcare',
-      description: 'Medical device monitoring and patient care optimization',
-      icon: <Heart className="w-5h-5ml-2"   /></Heart&gt;},
-    {name: 'Agriculture',
-      description: 'Precision farming with soil and crop monitoring',
-      icon: <Globe className="w-5h-5ml-2"   /></Globe&gt;},
-    {name: 'Smart Cities',
-      description: 'Traffic management, waste optimization, and public safety',
-      icon: <Building className="w-5h-5ml-2"   /></Building&gt;},
-    {name: 'Retail',
-      description: 'Inventory management and customer experience enhancement',
-      icon: <ShoppingCart className="w-5h-5ml-2"   /></ShoppingCart&gt;},
-    {name: 'Energy',
-      description: 'Smart grid management and renewable energy optimization',
-      icon: <Zap className="w-5h-5ml-2"   /></Zap&gt;}]
-
-  const benefits = [{icon: <TrendingUp className="w-5h-5ml-2">,
-      title: 'Increased Efficiency',
-      description: 'Automate processes and optimize operations with real-time data insights'},
-    {icon: <DollarSign className="w-5h-5ml-2"   />,
-      title: 'Cost Reduction',
-      description: 'Reduce operational costs through predictive maintenance and resource optimization'},
-    {icon: <Shield className="w-5h-5ml-2"   />,
-      title: 'Enhanced Security',
-      description: 'Protect your IoT infrastructure with enterprise-grade security solutions'},
-    {icon: <Rocket className="w-5h-5ml-2"   />,
-      title: 'Scalability',
-      description: 'Scale your IoT solutions as your business grows with our flexible platform'}]
-
-  return (
-<<<<<<< HEAD
-    <>
-      <title>5G Data Analytics - Zion Tech Group</title>
-        <title>IoT Solutions - Zion Tech Group | Smart Device Management & Analytics</title>
-
-                    Ready to Connect Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent">World?</span>
-
-                    Transform your business with our comprehensive IoT solutions. Get started today and unlock the power of connected devices.
-
-                      <span>Get Started</span>
-                      <span>View Pricing</span>
-
-      <  />
-  );
-
-  );
-}
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function IotsolutionsPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Iot Solutions - Zion Tech Group</title>
-        <meta name="description" content="Professional iot solutions services by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Iot Solutions</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional iot solutions services coming soon.</p>
-          
-          <Link
-            to="/contact"
-            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-          >
-            Contact Us
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-        <title>IoT Solutions - Zion Tech Group | Smart Device Management & Analytics</title>
-        <meta name="description" content="Comprehensive IoT solutions including device management, data analytics, security, and cloud platforms. Transform your business with smart connected devices." / / />
-        <meta name="keywords" content="IoT solutions, internet of things, smart devices, IoT analytics, device management, edge computing, IoT security, connected devices" / / />
-        <meta name="robots" content="index, follow, max-image-preview: large, max-snippet: -1, max-video-preview:-1" / / />
-        <meta name="author" content="Zion Tech Group" / / />
-
-        {/* Open Graph Meta Tags */}
-        <meta property="og:title" content="IoT Solutions - Zion Tech Group | Smart Device Management & Analytics" / / />
-        <meta property="og: description" content="Comprehensive IoT solutions including device management, data analytics, security, and cloud platforms. Transform your business with smart connected devices." / / />
-        <meta property="og:type" content="website" / / />
-        <meta property="og:url" content="https://ziontechgroup.com/iot-solutions" / / />
-        <meta property="og:image" content="https://ziontechgroup.com/iot-solutions-og-image.jpg" / / />
-
-        {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" / / />
-        <meta name="twitter:title" content="IoT Solutions - Zion Tech Group | Smart Device Management & Analytics" / / />
-        <meta name="twitter: description" content="Comprehensive IoT solutions including device management, data analytics, security, and cloud platforms. Transform your business with smart connected devices." / / />
-        <meta name="twitter:image" content="https://ziontechgroup.com/iot-solutions-twitter-image.jpg" / / />
-
-        {/* Structured Data */}
-        <script type="application/ld+json"  />{JSON.stringify({
-            "@context": "https: //schema.org",
-            "@type": "Service",
-            "name": "IoT Solutions",
-            "description": "Comprehensive IoT solutions including device management, data analytics, security, and cloud platforms.",
-            "provider": {
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "url": "https: //ziontechgroup.com"
-            },
-            "offers": {
-              "@type": "Offer",
-              "price": "199",
-              "priceCurrency": "USD",
-              "priceSpecification": {
-                "@type": "PriceSpecification",
-                "price": "199",
-                "priceCurrency": "USD",
-                "unitText": "MONTH"
-              }
-            }
-          })}
-        </script>
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
-        {/* Hero Section */}
-        <section className="py-20px-4relative" />
-          <div className="absolute inset-0bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.4)_0%,transparent_50%)]animate-pulse" />
-          <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.4)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }} / />
-          <div className="relative max-w-7xlmx-autotext-center">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
-              <Network className="w-4 h-4" />
-              <span   />IoT Solutions</span>
-            </div>
-
-            <h1 className="text-6 xl md:text-8 xl font-bold text-white mb-8leading-tight" />
-              Connect Everything with
-              <br / />
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-texttext-transparentanimate-pulse">Smart IoT Solutions
-              </span>
-            </h1>
-
-            <p className="text-2 xl text-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">
-              Transform your business with comprehensive IoT solutions that connect, monitor, and optimize your devices and processes.
-              <br / />
-              <span className="text-cyan-400font-semibold">From device management to advanced analytics.</span>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-12">
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Brain className="h-12 w-12 text-blue-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">AI-Powered Solutions</h3>
+            <p className="text-gray-300">
+              Leverage artificial intelligence to automate and optimize your business processes.
             </p>
-
-            <div className="flex flex-col sm:flex-rowgap-6justify-center">
-              <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" >
-           
-          <span    />
-        </Link>Get Started</span>
-                <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-              </Link>
-              <Link to="/demo" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
-           
-          <span    />
-        </Link>View Demo</span>
-                <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-              </Link>
-            </div>
-        </section>
-
-        {/* Services Section */}
-        <section className="py-20px-4relative" />
-          <div className="absolute inset-0 bg-gradient-to-rfrom-cyan-500/5to-purple-500/5" />
-          <div className="relative max-w-7xlmx-auto">
-            <div className="text-centermb-16">
-              <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-                Complete <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />IoT Solutions</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-              From device management to advanced analytics, we provide everything you need to build and scale your IoT infrastructure.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
-        </div>
-              {iotServices.map((service, index) => (
-                <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2xll p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xllhover:shadow-cyan-500/10" />
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xll mb-6 group-hover:scale-110transition-transformduration-300">{service.icon}
-                  </div>
-
-              ))}
-            </div>
-        </section>
-
-        {/* Industries Section */}
-        <section className="py-20 px-4 bg-gradient-to-br from-slate-800/50to-purple-900/50relative" />
-
-              {industries.map((industry, index) => (
-                <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2xll p-6 border border-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
-                  <div className="flex items-centerspace-x-4mb-4">
-
-              {benefits.map((benefit, index) => (
-                <div key="{index}" className="text-centergroup" />
-                  <div className="flex justify-center mb-4 group-hover:scale-110transition-transformduration-300">{benefit.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3group-hover:text-cyan-400 transition-colors"  />{benefit.title}
-                  </h3>
-                  <p className="text-gray-300text-smleading-relaxed">
-              {benefit.description}
-                  </p>
-                </div>
-
-              ))}
-            </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20px-4relative" />
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" />
-          <div className="relative max-w-7xlmx-auto">
-            <div className="text-center">
-              <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8 sm:p-12 lg:p-16relativeoverflow-hidden">
-                <div className="relativez-10">
-                  <h2 className="text-4xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6leading-tight" />
-                    Ready to Connect Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent"   />World?</span>
-                  </h2>
-
-                  <p className="text-xl sm:text-2 xl text-white/90 mb-8 sm:mb-12 max-w-4 xlmx-autoleading-relaxed">
-              Transform your business with our comprehensive IoT solutions. Get started today and unlock the power of connected devices.
-                  </p>
-                  
-                  <div className="flex flex-col sm:flex-rowgap-6justify-center">
-                    <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" >
-           
-          <span    />
-        </Link>Get Started</span>
-                      <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-                    </Link>
-                    <Link to="/pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
-           
-          <span    />
-        </Link>View Pricing</span>
-                      <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-                    </Link>
-                  </div>
-              </div>
           </div>
-        </section>
-      </div>
+          
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Shield className="h-12 w-12 text-green-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Enterprise Security</h3>
+            <p className="text-gray-300">
+              Robust security measures to protect your data and ensure compliance.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Users className="h-12 w-12 text-purple-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Expert Support</h3>
+            <p className="text-gray-300">
+              Dedicated support team to help you succeed with our solutions.
+            </p>
+          </div>
         </div>
-      </div>
+        
+        <div className="mt-12">
+          <h2 className="text-3xl font-bold mb-6">Why Choose Our Iot Solutions Solutions?</h2>
+          <ul className="space-y-4 text-lg text-gray-300 mb-8">
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Scalable and flexible architecture
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Industry-leading performance
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Easy integration with existing systems
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              24/7 monitoring and support
+            </li>
+          </ul>
+          
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Get Started
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+            <Link 
+              href="/services" 
+              className="inline-flex items-center px-6 py-3 border border-gray-600 text-white rounded-lg hover:bg-gray-800 transition-colors"
+            >
+              Learn More
+            </Link>
           </div>
         </div>
       </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-      </div>
-
+    </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

@@ -329,32 +329,6 @@ const IoTEdgePage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Contact Section */}
-        <section className="py-16 bg-gradient-to-r from-cyan-600 to-blue-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Connect Your World?
-            </h2>
-            <p className="text-xl mb-8 text-cyan-100">
-              Contact our IoT experts for a free consultation and custom connected solution strategy
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:+13024640950"
-                className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors inline-flex items-center"
-              >
-                📞 +1 302 464 0950
-              </a>
-              <a 
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
-              >
-                ✉️ kleber@ziontechgroup.com
-              </a>
-            </div>
-            <div className="mt-8 text-sm text-cyan-200">
-=======
               <a
                 href="tel:+13024640950" className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors inline-flex items-center"
 // ></a>
@@ -364,7 +338,6 @@ href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-whi
                 ✉️ kleber@ziontechgroup.com;
             <div className="mt-8 text-sm text-cyan-200"></div>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>

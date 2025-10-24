@@ -1,16 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { Link } from 'react-router-dom';
 import { 
   ChevronDown, 
@@ -87,43 +75,30 @@ import {
   Truck,
   Smartphone
 } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03f4
-=======
 import React, {useState, useEffect} from 'react';
 export default Navigation;
-=======
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
-=======
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, TrendingUp } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-053f
-=======
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, TrendingUp } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
 
 const Navigation: React.FC = () => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   // Removed unused state variables;
   const [isScrolled, setIsScrolled] = useState(false);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-=======
 import React, { useState, useEffect, memo } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
 const Navigation: React.FC = memo(() => {
   const [isOpen, setIsOpen] = useState(false);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   const [servicesOpen, setServicesOpen] = useState(false);
 
   useEffect(() => {
@@ -139,12 +114,7 @@ const Navigation: React.FC = memo(() => {
     setIsOpen(false);
     setServicesOpen(false);
   };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function Component() {
-=======
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     if (isMenuOpen) {
@@ -285,14 +255,7 @@ export default function Component() {
     { name: 'Smart Analytics', href: '/smart-analytics', icon: TrendingUp }
   ];
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-053f
   return (
-<<<<<<< HEAD
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-=======
     setIsMenuOpen(!isMenuOpen);
       closeAllMenus();
   };
@@ -354,10 +317,8 @@ export default function Component() {
                   <span>+1 302 464 0950</span>
                   Get Started;
         )}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   );
 }
-=======
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
         ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' 
@@ -436,9 +397,6 @@ export default function Component() {
                         </div>
                       ))}
                     </div>
-<<<<<<< HEAD
-                    <div className="border-t border-gray-700 mt-6 pt-4 px-6"></div>
-=======
                     <div>
                       <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
                         <Brain className="w-4 h-4 mr-2" />
@@ -479,7 +437,6 @@ export default function Component() {
                   </div>
                   <div className="mt-4 pt-4 border-t border-gray-700">
                     <div className="grid grid-cols-2 gap-4">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
                       <Link
                         to="/services"
                         className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
@@ -493,17 +450,8 @@ export default function Component() {
               )}
             </div>
 
-<<<<<<< HEAD
-            <Link 
-              to="/case-studies" 
-              className="font-medium transition-colors hover:text-cyan-400 text-white"
-              onClick={closeAllMenus}
-            ></Link>
-              Case Studies
-=======
             <Link to="/about" className="text-white hover:text-cyan-400 transition-colors">
               About
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
             </Link>
 
             <Link
@@ -521,18 +469,6 @@ export default function Component() {
             ></Link>
               Contact
             </Link>
-<<<<<<< HEAD
-
-            {/* CTA Button */}
-            <Link
-              to="/contact"
-              className="cyber-button inline-flex items-center"
-              onClick={closeAllMenus}
-            ></Link>
-              <Phone className="w-4 h-4 mr-2" />
-              (302) 464-0950
-            </Link>
-=======
             
             <div className="flex items-center space-x-4">
               <a
@@ -548,7 +484,6 @@ export default function Component() {
                 Get Started
               </a>
             </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
           </div>
 
           {/* Mobile Menu Button */}
@@ -559,7 +494,6 @@ export default function Component() {
               aria-label="Toggle menu"
             ></button>
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-=======
 import React, { useState, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, Home, Shield, Zap, Brain, Globe } from 'lucide-react';
@@ -658,82 +592,12 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               aria-label="Toggle menu"
             >
               <Menu className="w-6 h-6" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
             </button>
           </div>
         </div>
 
-<<<<<<< HEAD
-        {/* Mobile menu */}
-        {isOpen && (
-          <div className="lg:hidden"></div>
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2"></div>
-              <Link
-                to="/"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-              ></Link>
-                Home
-              </Link>
-              <Link
-                to="/about"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-              ></Link>
-                About
-              </Link>
-
-              {/* Mobile Services */}
-              <div></div>
-                <button
-                  onClick={() => setServicesOpen(!servicesOpen)}
-                  className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                >
-                  <span className="flex items-center space-x-2"></span>
-                    <Brain className="w-4 h-4" />
-                    <span>Services</span>
-                  </span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {servicesOpen && (
-                  <div className="mt-2 ml-4 space-y-2"></div>
-                    {serviceCategories.map((category, categoryIndex) => (
-                      <div key={categoryIndex}></div>
-                        <div className="text-sm font-medium text-cyan-400 mb-2">{category.title}</div>
-                        <div className="ml-4 space-y-1"></div>
-                          {category.services.slice(0, 3).map((service, serviceIndex) => (
-                            <Link
-                              key={serviceIndex}
-                              to={service.path}
-                              className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-1"
-                            ></Link>
-                              {typeof service.icon === 'string' ? service.icon : <service.icon className="w-3 h-3 inline mr-1" />} {service.name}
-                            </Link>
-                          ))}
-                          <Link
-                            to="/services"
-                            className="block text-xs text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium"
-                          ></Link>
-                            View All →
-                          </Link>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-<<<<<<< HEAD
-              <Link
-                to="/case-studies"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-              ></Link>
-                Case Studies
-=======
               <Link to="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 About
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
               </Link>
 
               <Link
@@ -751,17 +615,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               ></Link>
                 Contact
               </Link>
-<<<<<<< HEAD
-
-              <a
-                href="tel:+13024640950"
-                className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
-                onClick={closeAllMenus}
-              ></a>
-                <Phone className="w-4 h-4 inline mr-2" />
-                (302) 464-0950
-              </a>
-=======
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
@@ -776,33 +629,22 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                       : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-400/10'
                   }`}
                   onClick={() => setIsOpen(false)}
-=======
               
               <div className="pt-4 border-t border-gray-700">
                 <a
                   href="tel:+13024640950"
                   className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors mb-4"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
                 >
                   {item.icon}
                   <span>{item.name}</span>
                 </Link>
               ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
             </div>
           </div>
         )}
       </div>
     </nav>
   );
-<<<<<<< HEAD
-});
-
-Navigation.displayName = 'Navigation';
-export default Navigation;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
 };
 
 export default Navigation;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df

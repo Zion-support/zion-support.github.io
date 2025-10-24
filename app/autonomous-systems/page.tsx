@@ -1,645 +1,81 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
-import React from "react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import React from 'react';
+import Link from 'next/link';
+import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe } from 'lucide-react';
 
-export default function GDataAnalyticsZionTechGroupPage() {
-
+export default function AutonomousSystemsPage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gray-900 text-white">
-=======
-    <React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-      <Helmet>
-=======
-          <div className="absolute inset-0 bg-black opacity-20"></section><div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-            <div className="text-center"></div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">Autonomous Systems Services</h1><p className="text-xl md:text-2xl mb-8 text-green-100 max-w-3xl mx-auto">Self-managing, self-optimizing systems that operate independently and continuously improve</p>
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors">Explore Autonomous Solutions<button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">Schedule Demo</button>
-          <div className="absolute inset-0 bg-black opacity-20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
-            <div className="text-center"></div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6"></h1>
-                Autonomous Systems Services;
-              </h1>,
-              <p className="text-xl md:text-2xl mb-8 text-green-100 max-w-3xl mx-auto">,
-                Self-managing, self-optimizing systems that operate independently and continuously improve;
-              </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-                <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors"></button>
-                  Explore Autonomous Solutions;
-                </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"></button>
-                  Schedule Demo;
-                </button>
-              </div>
-            </div>
-          </div>,
-        </section>,
-,
-        {/* Key Benefits */}
-        <section className="py-16 bg-white"></section>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
-            <div className="text-center mb-12"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Our Autonomous Systems?</h2><p className="text-xl text-gray-600">Cutting-edge autonomous technology that reduces costs, improves efficiency, and eliminates human errors</p>
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-              <div className="text-center"></div>
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                  <Bot className="w-8 h-8 text-green-600" />
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
-            <div className="text-center mb-12">,
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">,
-                Why Choose Our Autonomous Systems?,
-              </h2>,
-              <p className="text-xl text-gray-600">,
-                Cutting-edge autonomous technology that reduces costs, improves efficiency, and eliminates human errors;
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>
-              <div className="text-center">,
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">,
-                  <Bot className="w-8 h-8 text-green-600" />,
-                </div>,
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Self-Managing</h3>,
-                <p className="text-gray-600">Systems that monitor, diagnose, and repair themselves automatically</p>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Self-Managing</h3><p className="text-gray-600">Systems that monitor, diagnose, and repair themselves automatically</p>
-              </div>
-              <div className="text-center"></div>
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                  <Zap className="w-8 h-8 text-blue-600" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Continuous Learning</h3><p className="text-gray-600">AI systems that improve performance with every interaction</p>
-              </div>
-              <div className="text-center"></div>
-                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                  <Shield className="w-8 h-8 text-purple-600" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Zero Downtime</h3><p className="text-gray-600">Self-healing systems that prevent and resolve issues automatically</p>
-              </div>
-              <div className="text-center"></div>
-                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                  <Target className="w-8 h-8 text-orange-600" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven ROI</h3><p className="text-gray-600">Average 400% ROI within 12 months of implementation</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Services by Category */}
-        {categories.map(category => (
-          <section key={category} className="py-16 bg-gray-50">)
-            <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">)
-              <div className="text-center mb-12">)
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">),
-                  {category} Solutions;
-                </h2>
-                <p className="text-xl text-gray-600"></p>
-                  Autonomous {category.toLowerCase()} systems that adapt and optimize continuously;
-                </p>
-              </div>
-              <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
-                {autonomousServices;
-                  .filter(service => service.category === category),
-                  .map((service, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow">,
-                      <div className="text-4xl mb-4">{service.icon}</div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-                      <p className="text-gray-600 mb-4">{service.description}</p>
-
-                      <div className="mb-4"></div>
-                        <div className="flex items-center justify-between mb-2"></div>
-                          <span className="text-2xl font-bold text-green-600">{service.price}</span>
-                          <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
-                        </div>
-                        <div className="text-sm text-green-600 font-semibold"></div>
-                          Save up to 45% vs market rates;
-                        </div>
-                      </div>
-
-                      <div className="mb-4"></div>
-                      <div className="mb-4"></div>
-                        <div className="flex items-center justify-between mb-2"></div>
-                          <span className="text-2xl font-bold text-green-600">{service.price}</span><span className="text-sm text-gray-500">Market: {service.marketPrice}</span><div className="text-sm text-green-600 font-semibold">Save up to 45% vs market rates</div>
-                        </div>
-                      </div>
-
-                      <div className="mb-4"></div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Key Features:<ul className="space-y-1">{service.features.map((feature, featureIndex) => (</ul>
-                        <h4 className="font-semibold text-gray-900 mb-2">Key Features: </h4>,
-                        <ul className="space-y-1">,
-                          {service.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>
-                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" >{feature}</CheckCircle>
-                            </CheckCircle>
-                          ))}
-                        </ul>
-                      </div>
-
-                        <h4 className="font-semibold text-gray-900 mb-2">Technologies: </h4>,
-                        <div className="flex flex-wrap gap-2">,
-                          {service.technologies.map((tech, techIndex) => (
-                            <span key={techIndex} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded"></span>
-                              {tech}
-                      <div className="mb-4"></div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Technologies:<div className="flex flex-wrap gap-2">{service.technologies.map((tech, techIndex) => (</div><span key={techIndex} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">{tech}</span>
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-
-                      <div className="mb-6"></div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:<ul className="space-y-1">{service.benefits.map((benefit, benefitIndex) => (</ul>
-                        <h4 className="font-semibold text-gray-900 mb-2">Business Benefits: </h4>,
-                        <ul className="space-y-1">,
-                          {service.benefits.map((benefit, benefitIndex) => (
-                            <li key={benefitIndex} className="flex items-center text-sm text-gray-600"></li>
-                              <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" >{benefit}</Star>
-                            </Star>
-                          ))}
-                        </ul>
-                      </div>
-
-                      <button className="w-full bg-green-600 text-white py-2 px-4 rounded-lg font-semibold hover: bg-green-700 transition-colors"></button>
-                        Get Autonomous Consultation;
-                      </button>,
-                    </div>))}
-              </div>
-            </div>
-          </section>
-        ))}
-
-        {/* Autonomous Capabilities Showcase */}
-        <section className="py-16 bg-white"></section>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
-                Our Autonomous Capabilities;
-              </h2>,
-              <p className="text-xl text-gray-600">,
-                Advanced autonomous technologies that enable self-managing, self-optimizing systems;
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
-              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg"></div>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
-            <div className="text-center mb-12"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Autonomous Capabilities</h2><p className="text-xl text-gray-600">Advanced autonomous technologies that enable self-managing, self-optimizing systems</p>
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg"></div>
-                <Bot className="w-12 h-12 text-green-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Autonomous Operations</h3><p className="text-gray-600">Self-managing systems that operate without human intervention</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-cyan-100 rounded-lg"></div>
-                <Brain className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Machine Learning</h3><p className="text-gray-600">Continuous learning and adaptation from system behavior</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg"></div>
-                <RefreshCw className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Process Automation</h3><p className="text-gray-600">End-to-end automation of complex business processes</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg"></div>
-                <BarChart className="w-12 h-12 text-orange-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Predictive Analytics</h3><p className="text-gray-600">Anticipate issues and optimize performance before problems occur</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg"></div>
-                <Settings className="w-12 h-12 text-pink-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Adaptive Configuration</h3><p className="text-gray-600">Dynamic system configuration based on changing conditions</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg"></div>
-                <Cpu className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Intelligent Monitoring</h3><p className="text-gray-600">Advanced monitoring with anomaly detection and alerting</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section className="py-16 bg-gradient-to-r from-green-600 to-teal-600 text-white"></section>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Intelligent Monitoring</h3>
-                <p className="text-gray-600">Advanced monitoring with anomaly detection and alerting</p>
-              </div>,
-            </div>,
-          </div>,
-        </section>,
-,
-        {/* Contact Section */}
-        <section className="py-16 bg-gradient-to-r from-green-600 to-teal-600 text-white"></section>
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"></div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4"></h2>
-              Ready to Automate Your Operations?
-            </h2>
-            <p className="text-xl mb-8 text-green-100"></p>
-              Contact our autonomous systems experts for a free consultation and custom automation strategy;
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <a;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></section>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Automate Your Operations?</h2><p className="text-xl mb-8 text-green-100">Contact our autonomous systems experts for a free consultation and custom automation strategy</p>
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <a
-                href="tel:+13024640950"
-                className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center"
-              ></a>
-                📞 +1 302 464 0950;
-              </a>
-              <a;
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
-              ></a>
-                ✉️ kleber@ziontechgroup.com;
-              </a>,
-            </div>,
-            <div className="mt-8 text-sm text-green-200">,
-            <div className="mt-8 text-sm text-green-200"></div>
-              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-import { Bot, Cpu, Eye, Brain, Shield, Zap, CheckCircle, ArrowRight, Settings, Target } from 'lucide-react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-
-const AutonomousSystemsPage: React.FC = () => {
-  const features = [
-    {
-      icon: Bot,
-      title: "Intelligent Automation",
-      description: "Self-managing systems that adapt and optimize without human intervention",
-      benefits: ["Reduced operational costs", "24/7 autonomous operation", "Predictive maintenance"]
-    },
-    {
-      icon: Brain,
-      title: "Machine Learning Integration",
-      description: "Advanced AI algorithms that learn and improve system performance over time",
-      benefits: ["Continuous optimization", "Pattern recognition", "Adaptive behavior"]
-    },
-    {
-      icon: Eye,
-      title: "Computer Vision",
-      description: "Visual perception capabilities for autonomous decision-making and navigation",
-      benefits: ["Object detection", "Spatial awareness", "Real-time analysis"]
-    },
-    {
-      icon: Shield,
-      title: "Safety & Security",
-      description: "Built-in safety protocols and security measures for reliable autonomous operation",
-      benefits: ["Fail-safe mechanisms", "Threat detection", "Compliance standards"]
-    }
-  ];
-
-  const applications = [
-    {
-      title: "Autonomous Vehicles",
-      description: "Self-driving cars and trucks with advanced navigation and safety systems",
-      icon: Bot,
-      useCases: ["Fleet management", "Delivery automation", "Passenger transport"]
-    },
-    {
-      title: "Smart Manufacturing",
-      description: "Automated production lines with intelligent quality control and optimization",
-      icon: Settings,
-      useCases: ["Quality assurance", "Predictive maintenance", "Supply chain optimization"]
-    },
-    {
-      title: "Robotic Process Automation",
-      description: "Intelligent bots that handle complex business processes autonomously",
-      icon: Cpu,
-      useCases: ["Document processing", "Customer service", "Data management"]
-    },
-    {
-      title: "Smart Infrastructure",
-      description: "Autonomous systems for managing city infrastructure and utilities",
-      icon: Target,
-      useCases: ["Traffic management", "Energy optimization", "Environmental monitoring"]
-    }
-  ];
-
-  const benefits = [
-    "Reduced operational costs by up to 60%",
-    "24/7 autonomous operation without breaks",
-    "Improved accuracy and consistency",
-    "Enhanced safety through predictive analytics",
-    "Scalable solutions for any industry",
-    "Real-time monitoring and reporting"
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet></Helmet>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-        <title>Autonomous Systems - Zion Tech Group</title>
-        <meta name="description" content="Autonomous Systems solutions by Zion Tech Group" />
-      </Helmet>
-      
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold mb-8">Autonomous Systems</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive autonomous systems solutions designed to meet your business needs.
-          </p>
-<<<<<<< HEAD
+        <p className="text-xl text-gray-300 mb-8">
+          Discover our comprehensive autonomous systems solutions designed to meet your business needs.
+        </p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-12">
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Brain className="h-12 w-12 text-blue-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">AI-Powered Solutions</h3>
+            <p className="text-gray-300">
+              Leverage artificial intelligence to automate and optimize your business processes.
+            </p>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-=======
-      <Header />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto text-center"></div>
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1>
-            Autonomous <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Systems</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
-            Self-managing systems powered by advanced AI and machine learning. Transform your operations with intelligent automation that adapts, learns, and optimizes without human intervention.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <a
-              href="/contact"
-              className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-            ></a>
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Shield className="h-12 w-12 text-green-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Enterprise Security</h3>
+            <p className="text-gray-300">
+              Robust security measures to protect your data and ensure compliance.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Users className="h-12 w-12 text-purple-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Expert Support</h3>
+            <p className="text-gray-300">
+              Dedicated support team to help you succeed with our solutions.
+            </p>
+          </div>
+        </div>
+        
+        <div className="mt-12">
+          <h2 className="text-3xl font-bold mb-6">Why Choose Our Autonomous Systems Solutions?</h2>
+          <ul className="space-y-4 text-lg text-gray-300 mb-8">
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Scalable and flexible architecture
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Industry-leading performance
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Easy integration with existing systems
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              24/7 monitoring and support
+            </li>
+          </ul>
+          
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
               Get Started
-            </a>
-            <a
-              href="#features"
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            ></a>
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+            <Link 
+              href="/services" 
+              className="inline-flex items-center px-6 py-3 border border-gray-600 text-white rounded-lg hover:bg-gray-800 transition-colors"
+            >
               Learn More
-            </a>
+            </Link>
           </div>
         </div>
-      </section>
-
-      {/* Features Section */}
-      <section id="features" className="py-20 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
-              Key <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Features</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              Our autonomous systems combine cutting-edge AI, machine learning, and robotics to deliver intelligent, self-managing solutions.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group"></div>
-                <div className="text-cyan-400 mb-6 group-hover:text-cyan-300 transition-colors"></div>
-                  <feature.icon className="w-12 h-12" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300 mb-6">{feature.description}</p>
-                <ul className="space-y-2"></ul>
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-400"></li>
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-3" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Applications Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
-              Application <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Areas</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              Our autonomous systems are designed for diverse industries and use cases, from transportation to manufacturing.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {applications.map((app, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group"></div>
-                <div className="text-cyan-400 mb-4 group-hover:text-cyan-300 transition-colors"></div>
-                  <app.icon className="w-10 h-10" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">{app.title}</h3>
-                <p className="text-gray-300 mb-4 text-sm">{app.description}</p>
-                <ul className="space-y-1"></ul>
-                  {app.useCases.map((useCase, idx) => (
-                    <li key={idx} className="text-xs text-gray-400 flex items-center"></li>
-                      <ArrowRight className="w-3 h-3 mr-2 text-cyan-400" />
-                      {useCase}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"></div>
-            <div></div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
-                Why Choose <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Autonomous Systems</span>?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8"></p>
-                Autonomous systems offer unprecedented efficiency, reliability, and cost savings. Our solutions are designed to operate independently while maintaining the highest standards of safety and performance.
-              </p>
-              <ul className="space-y-4"></ul>
-                {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-center text-gray-300"></li>
-                    <CheckCircle className="w-6 h-6 text-cyan-400 mr-4 flex-shrink-0" />
-                    <span>{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8"></div>
-              <div className="text-center"></div>
-                <div className="w-32 h-32 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center"></div>
-                  <Bot className="w-16 h-16 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Ready to Automate?</h3>
-                <p className="text-gray-300 mb-6"></p>
-                  Let us help you implement autonomous systems that transform your operations and drive efficiency.
-                </p>
-                <a
-                  href="/contact"
-                  className="inline-flex items-center bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300"
-                ></a>
-                  Get Consultation
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
-            Ready to Implement Autonomous Systems?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8"></p>
-            Contact our experts to discuss how autonomous systems can transform your business operations and drive efficiency.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <a
-              href="tel:+13024640950"
-              className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-            ></a>
-              <Zap className="w-5 h-5" />
-              Call (302) 464-0950
-            </a>
-            <a
-              href="/contact"
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2"
-            ></a>
-              <ArrowRight className="w-5 h-5" />
-              Get Quote
-            </a>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-          </div>
-        </div>
-      </div>
-=======
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-      </div>
-      <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
-    </div>
-<<<<<<< HEAD
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Autonomous <span className="text-cyan-400">Systems</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced autonomous systems solutions for modern businesses.
-            </p>
-          </div></div></div>
-        </div>
-      </div>
-    </React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-  );
-}
-=======
-import React from 'react';
-
-import {Link} from 'react-router-dom';
-import {ArrowRight} from 'lucide-react';
-
-export default function AutonomoussystemsPage() {
-  return (
-    <>
-      <title>5G Data Analytics - Zion Tech Group</title>
-        <title>Autonomous Systems - Zion Tech Group</title>
-        <h1 className="text-4 xl font-boldtext-whitemb-6">Autonomous Systems</h1>
-        <p className="text-lgtext-gray-300mb-8">Professional autonomous systems services coming soon.</p>
-          Contact Us
-
-  );
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
-import React  from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function AutonomoussystemsPage() {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-      <Helmet>
-        <title>Autonomous Systems - Zion Tech Group</title>
-        <meta name="description" content="Professional autonomous systems services by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Autonomous Systems</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional autonomous systems services coming soon.</p>
-          
-<<<<<<< HEAD
-          <Link
-            to="/contact"
-            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-          >
-            Contact Us
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Link>
-        </div>
-=======
-          <ArrowRight className="w-5h-5ml-2"  />
-        </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

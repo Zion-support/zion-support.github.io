@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-}
-<<<<<<< HEAD
-=======
 
 
 'use client';
@@ -106,7 +93,6 @@ className="opacity-75""
           
           
           </svg>
-=======
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
   ({
     size = 'md',
@@ -226,12 +212,8 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
             </p>
           )}
         </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
       </div>
     );
-<<<<<<< HEAD
-  }
-=======
 
     );
 
@@ -264,11 +246,9 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
               {text}
           )}
   );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 );
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 
 export default OptimizedLoadingSpinner;
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

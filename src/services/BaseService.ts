@@ -3,15 +3,9 @@
  * Base Service Class
  * Provides common functionality for all service classes
  */
-<<<<<<< HEAD
-import logger from '../utils/logger';
-<<<<<<< HEAD
-=======
 import { apiClient } from '../utils/apiClient';
 import { logger } from '../utils/logger';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
 export interface ServiceOptions {
-=======
 import axios from 'axios';
 // Create axios instance with default config;
 const apiClient = axios.create({// TODO: Add content;}
@@ -22,7 +16,6 @@ const apiClient = axios.create({// TODO: Add content;}
     'Content-Type': 'application/json'}});
 export interface ServiceOptions {// TODO: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   baseUrl?: string;
   timeout?: number;
   retries?: number;
@@ -52,13 +45,6 @@ export class BaseService {
    */
   protected isCacheValid(key: string): boolean {
     const entry = this.cache.get(key);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const entry = this.cache.get(key);
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
     if (!entry) return false;
     const age = Date.now() - entry.timestamp;
     return age < (this.options.cacheDuration || 300000);

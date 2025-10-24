@@ -1,119 +1,5 @@
 /**
  * API Interceptor Utility;
-<<<<<<< HEAD
- * Provides request/response interceptors for API calls;
- */
-
-interface InterceptorConfig {
-  onRequest?: (config: any,) => any;
-  onResponse?: (response: any,) => any;
-  onError?: (error: any,) => any;
-}
-
-class APIInterceptor {
-  private requestInterceptors: Array<(config: any,) => any> = [];
-  private responseInterceptors: Array<(response: any,) => any> = [];
-  private errorInterceptors: Array<(error: any,) => any> = [];
-
-  // Add request interceptor;
-  addRequestInterceptor(interceptor: (config: any,) => any): void {,
-    this.requestInterceptors.push(interceptor);
-  }
-
-  // Add response interceptor;
-  addResponseInterceptor(interceptor: (response: any,) => any): void {,
-    this.responseInterceptors.push(interceptor);
-  }
-
-  // Add error interceptor;
-  addErrorInterceptor(interceptor: (error: any,) => any): void {,
-    this.errorInterceptors.push(interceptor);
-  }
-
-  // Remove request interceptor;
-  removeRequestInterceptor(interceptor: (config: any,) => any): void {,
-    const index = this.requestInterceptors.indexOf(interceptor);
-    if (index > -1) {,
-      this.requestInterceptors.splice(index, 1);
-    }
-  }
-
-  // Remove response interceptor;
-  removeResponseInterceptor(interceptor: (response: any,) => any): void {,
-    const index = this.responseInterceptors.indexOf(interceptor);
-    if (index > -1) {,
-      this.responseInterceptors.splice(index, 1);
-    }
-  }
-
-  // Remove error interceptor;
-  removeErrorInterceptor(interceptor: (error: any,) => any): void {,
-    const index = this.errorInterceptors.indexOf(interceptor);
-    if (index > -1) {,
-      this.errorInterceptors.splice(index, 1);
-    }
-  }
-
-  // Apply request interceptors;
-  applyRequestInterceptors(config: any,): any {,
-    return this.requestInterceptors.reduce((acc, interceptor) => {
-      try {
-        return interceptor(acc);
-      } catch (error) {
-        return acc;
-      }
-    }, config);
-  }
-
-  // Apply response interceptors;
-  applyResponseInterceptors(response: any,): any {,
-    return this.responseInterceptors.reduce((acc, interceptor) => {
-      try {
-        return interceptor(acc);
-      } catch (error) {
-        return acc;
-      }
-    }, response);
-  }
-
-  // Apply error interceptors;
-  applyErrorInterceptors(error: any,): any {,
-    return this.errorInterceptors.reduce((acc, interceptor) => {
-      try {
-        return interceptor(acc);
-      } catch (interceptorError) {
-        return acc;
-      }
-    }, error);
-  }
-
-  // Clear all interceptors;
-  clearAll(): void {
-    this.requestInterceptors = [];
-    this.responseInterceptors = [];
-    this.errorInterceptors = [];
-  }
-
-  // Get interceptor counts;
-  getInterceptorCounts(): {
-    request: number,
-    response: number,
-    error: number;
-  } {
-    return {
-      request: this.requestInterceptors.length;
-      response: this.responseInterceptors.length;
-      error: this.errorInterceptors.length;
-    };
-  }
-}
-
-// Create singleton instance;
-export const apiInterceptor = new APIInterceptor();
-
-export default APIInterceptor;
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
  * Centralized API request handling with error handling, retry logic, and caching;
  */
 // ErrorHandler class definition;
@@ -123,11 +9,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */,}
   }
   handleNetworkError(erro,
   r: Error, ur)
-<<<<<<< HEAD
-  l: string, config?: unknown): void {/* TODO: Fix JSX expression */,}
-=======
   l: string, config?: unknown): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     }
 }
 export interface APIConfig {/* TODO: Fix JSX expression */,}
@@ -155,11 +37,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */,}
    * Make API request;
    */
   async request<T = unknown>(confi)
-<<<<<<< HEAD
-  g: RequestConfig,): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */,}
-=======
   g: RequestConfig): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       }
     }
     // Check for pending identical requests;
@@ -178,11 +56,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */,}
    * Execute the actual request;
    */
   private async executeRequest<T>(confi)
-<<<<<<< HEAD
-  g: RequestConfig, attempt = 1): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */,}
-=======
   g: RequestConfig, attempt = 1): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       }
       const url = this.buildURL(finalConfig);
       const,
@@ -269,11 +143,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */,}
    * Prepare request configuration;
    */
   private prepareRequest(confi)
-<<<<<<< HEAD
-  g: RequestConfig,): RequestConfig {/* TODO: Fix JSX expression */,}
-=======
   g: RequestConfig): RequestConfig {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       },
       timeou,
   t: config.timeout || this.config.timeout,
@@ -287,11 +157,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */,}
    * Build full URL with query parameters;
    */
   private buildURL(confi)
-<<<<<<< HEAD
-  g: RequestConfig,): string {/* TODO: Fix JSX expression */,}`
-=======
   g: RequestConfig): string {/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url}`;
     if (config.params) {/* TODO: Fix JSX expression */,}
       });`
@@ -303,13 +169,8 @@ export class APIInterceptor {/* TODO: Fix JSX expression */,}
    * Build request headers;
    */
   private buildHeaders(confi)
-<<<<<<< HEAD
-  g: RequestConfig,): Headers {/* TODO: Fix JSX expression */,}
-    Object.entries(config.headers || {}).forEach(([key, value]) => {/* TODO: Fix JSX expression */,}
-=======
   g: RequestConfig): Headers {/* TODO: Fix JSX expression */}
     Object.entries(config.headers || {}).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     });
     return headers;
   }
@@ -317,21 +178,13 @@ export class APIInterceptor {/* TODO: Fix JSX expression */,}
    * Create abort signal for timeout;
    */
   private createAbortSignal(timeou)
-<<<<<<< HEAD
-  t: number,): AbortSignal {/* TODO: Fix JSX expression */,}
-=======
   t: number): AbortSignal {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   }
   /**
    * Parse response based on content type;
    */
   private async parseResponse<T>(respons)
-<<<<<<< HEAD
-  e: Response,): Promise<T> {/* TODO: Fix JSX expression */,}
-=======
   e: Response): Promise<T> {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     }
     if (contentType?.includes('text/')) {/* TODO: Fix JSX expression */,}
     }
@@ -341,22 +194,14 @@ export class APIInterceptor {/* TODO: Fix JSX expression */,}
    * Get cache key for request;
    */
   private getCacheKey(confi)
-<<<<<<< HEAD
-  g: RequestConfig,): string {/* TODO: Fix JSX expression */,}`
-=======
   g: RequestConfig): string {/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     return `${config.method}:${url}`;
   }
   /**
    * Get response from cache;
    */
   private getFromCache(ke)
-<<<<<<< HEAD
-  y: string,): APIResponse | null {/* TODO: Fix JSX expression */,}
-=======
   y: string): APIResponse | null {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     }
     return entry.data as APIResponse;
   }
@@ -365,11 +210,7 @@ export class APIInterceptor {/* TODO: Fix JSX expression */,}
    */
   private setInCache(ke,
   y: string, respons)
-<<<<<<< HEAD
-  e: APIResponse,): void {/* TODO: Fix JSX expression */,}
-=======
   e: APIResponse): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     });
   }
   /**
@@ -394,21 +235,13 @@ export class APIInterceptor {/* TODO: Fix JSX expression */,}
    * Delay helper for retry logic;
    */
   private delay(m)
-<<<<<<< HEAD
-  s: number,): Promise<void> {/* TODO: Fix JSX expression */,}
-=======
   s: number): Promise<void> {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   }
   /**
    * Update configuration;
    */
   updateConfig(confi)
-<<<<<<< HEAD
-  g: Partial<APIConfig>): void {/* TODO: Fix JSX expression */,}
-=======
   g: Partial<APIConfig>): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     this.config = { ...this.config, ...config };
   }
   /**

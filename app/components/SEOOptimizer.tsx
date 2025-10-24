@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Code } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-import React from 'react';
-
-interface SEOOptimizerProps {
-  children: React.ReactNode;
-<<<<<<< HEAD
-interface SeooptimizerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-export default function Seooptimizer({ className = '', children, ...props }: SeooptimizerProps) {
-  return (
-    <div className={`seooptimizer-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
-}
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -42,13 +17,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   canonicalUrl,
   structuredData
 }) => {
-<<<<<<< HEAD
-  const keywordsString = keywords.join(', ')
-=======
   title?: string;
   description?: string;
 }
-=======
   useEffect(() => {
     // Update page title
     document.title = title;
@@ -71,7 +42,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       addStructuredData(structuredData);
     }
     // Add breadcrumb structured data
-=======
 'use client';
 import { Helmet } from 'react-helmet-async';
 
@@ -136,20 +106,15 @@ const,
     }
     
     // Add breadcrumb structured data;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     addBreadcrumbStructuredData();
     // Add organization structured data
     addOrganizationStructuredData();
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
-<<<<<<< HEAD
-  const updateMetaTag = (name: string, content: string, attribute: string = 'name') => {
-=======
 
   const updateMetaTag = (nam,
   e: string, conten,
   t: string, attribut)
   e: string = 'name') => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     let meta = document.querySelector(`meta[${attribute}="${name}"]`);
     if (!meta) {
       meta = document.createElement('meta');
@@ -158,26 +123,6 @@ const,
     }
     meta.setAttribute('content', content);
   };
-<<<<<<< HEAD
-  const updateCanonicalUrl = (url: string,) => {
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute('href', url);
-  };
-  const addStructuredData = (data: Record<string, unknown>) => {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
-    script.id = 'structured-data';
-    // Remove existing structured data
-    const existing = document.getElementById('structured-data');
-    if (existing) {
-      existing.remove();
-=======
 
   const updateCanonicalUrl = (ur)
   l: string) => {/* TODO: Fix JSX expression */}
@@ -187,7 +132,6 @@ const,
 
   const addStructuredData = (dat)
   a: any) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     }
     document.head.appendChild(script);
   };
@@ -215,11 +159,7 @@ const,
     }
     document.head.appendChild(script);
   };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 
-<<<<<<< HEAD
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children, title, description }) => {
-=======
   const addFAQStructuredData = () => {/* TODO: Fix JSX expression */}
           }
         },
@@ -264,7 +204,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children, title, descriptio
     }
   };
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   useEffect(() => {
     // Add structured data for better SEO
     const addStructuredData = () => {
@@ -370,27 +309,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children, title, descriptio
       });
     };
 
-<<<<<<< HEAD
-    // Initialize SEO optimizations
-    addStructuredData();
-    addSocialMetaTags();
-    addPerformanceHints();
-  }, []);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0326
-
-  return (
-    <Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-<<<<<<< HEAD
-      <meta name="keywords" content={keywordsString} />
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-      {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      )}
-=======
   return(<Helmet>)
       <title>{seoData.title}</title>)
       <meta name="description" content={seoData.description} />)
@@ -412,19 +330,14 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children, title, descriptio
       <meta name="twitter:image" content={seoData.ogImage} />
       {/* Canonical */}
       <link rel="canonical" href={seoData.canonical} />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     </Helmet>
   )
 }
 
 export default SEOOptimizer
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
-=======
 import React from 'react';
-=======
 'use client';
 import React from "react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 
 const SEOOptimizer: React.FC = () => {
   return (
@@ -432,7 +345,6 @@ const SEOOptimizer: React.FC = () => {
       <h2>SEOOptimizer</h2>
       <p>SEOOptimizer component.</p>
     </div>
-=======
       <meta name="keywords" content={keywords.join(', ')} />
       <meta property="og: title" content={title,} />
       <meta property="og: description" content={description,} />
@@ -443,13 +355,10 @@ const SEOOptimizer: React.FC = () => {
       <meta name="twitter: image" content={ogImage,} />
       <link rel="canonical" href={canonicalUrl} />
     </Head>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   );
 };
 
 export default SEOOptimizer;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-=======
 
 import {useEffect} from 'react';
 
@@ -498,14 +407,10 @@ const SEOOptimizer: React.FC<SEOOptimizerProps   /> = ({
           name': 'What services does Zion Tech Group offer?',
           acceptedAnswer: {
             '@type': 'Answer',
-<<<<<<< HEAD
-            text': 'Zion Tech Group offers comprehensive AI solutions, IT services, 5 G implementation, cloud migration, cybersecurity, mobile development, and micro SAAS platforms for businesses of all sizes.'},
-=======
             'text': 'Zion Tech Group offers comprehensive AI solutions, IT services, 5G implementation, cloud migration, cybersecurity, mobile development, and micro SAAS platforms for businesses of all sizes.'
           }
         },
         {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           '@type': 'Question',
           name': 'How can I contact Zion Tech Group?',
           acceptedAnswer: {'@type': 'Answer',
@@ -522,24 +427,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps   /> = ({
 export default function SEOOptimizer() {return (
     <title>5G Data Analytics - Zion Tech Group</title>
       {/* Basic Meta Tags */}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <title>{title}</title>
       {/* Canonical URL */}
       {/* Open Graph Meta Tags */}
-<<<<<<< HEAD
-
-      {/* Twitter Card Meta Tags */}
-
-      {/* Additional SEO Meta Tags */}
-
-      {/* Performance Hints */}
-
-      {/* Structured Data */}
-
-=======
       <meta property="og: title" content="{title}" / / />
       <meta property="og: description" content="{description}" / / />
       <meta property="og:type" content="website" / / />
@@ -572,21 +462,14 @@ export default function SEOOptimizer() {return (
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       {/* Structured Data */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <script type="application/ld+json">{JSON.stringify(breadcrumbData)}
       <script type="application/ld+json">{JSON.stringify(faqData)}
       {structuredData && (
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         <script type="application/ld+json">{JSON.stringify(structuredData)}
 
       )}
   )
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = () => {
@@ -599,7 +482,3 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = () => {
 };
 
 export default SEOOptimizer;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

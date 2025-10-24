@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-<<<<<<< HEAD
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-}
-=======
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
@@ -112,27 +99,12 @@ class AdvancedErrorBoundary extends Component;
 //       error,
 //       errorInfo;)
     });
-<<<<<<< HEAD
-    // Log error to console in development;
-    if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      logger.error('Error Boundary caught an error', {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  contex,
-  t: 'ErrorBoundary',
-        erro,
-  r: error.message,
-//         errorInfo;)
-=======
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error Boundary caught an error', { 
         context: 'ErrorBoundary', 
         error: error.message,
         errorInfo 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
       });
     }
     // Call custom error handler;
@@ -195,24 +167,9 @@ class AdvancedErrorBoundary extends Component;
       return null;
     }
   };
-<<<<<<< HEAD
-  private getSessionId = (): string => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    // Generate or retrieve session ID;
-    try {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      let _sessionId = sessionStorage.getItem('sessionId');
-      if (!sessionId) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}`
-        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-=======
     // Generate or retrieve session ID
       let sessionId = sessionStorage.getItem('sessionId');
         sessionId={`session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         sessionStorage.setItem('sessionId', sessionId);
       }
       return sessionId;
@@ -249,23 +206,10 @@ class AdvancedErrorBoundary extends Component;
         bod)
   y: JSON.stringify(errorReport)
       });
-<<<<<<< HEAD
-    } catch (reportError) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      logger.error('Failed to send error report', {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  contex,
-  t: 'ErrorReporting',
-        erro,
-  r: reportError;)
-=======
     } catch (reportError) {
       console.error('Failed to send error report', { 
         context: 'ErrorReporting',
         error: reportError 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
       });
     }
   };
@@ -380,18 +324,7 @@ onClick={this.handleRetry} className='w-full flex justify-center py-2 px-4 borde
           
           </button>
                   )}
-<<<<<<< HEAD
-                <button></button>
-onClick={this.handleReload} className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white,
-  hover:bg-gray-50,
-  focus:outline-none,
-  focus:ring-2,
-  focus:ring-offset-2,
-  focus:ring-indigo-500'
-                >
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
                   Reload Page;
                 </button><button></button>
                   onClick={this.handleGoHome} className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white,
@@ -405,18 +338,9 @@ onClick={this.handleReload} className='w-full flex justify-center py-2 px-4 bord
                 </button></div><div className='mt-6 text-center'><p className='text-xs text-gray-500'></p>
                   If this problem persists, please contact our support team;
                   at&nbsp;
-<<<<<<< HEAD
-                  <a></a>
-                    href='mailt,
-  o:kleber@ziontechgroup.com' className='text-indigo-600,
-  hover:text-indigo-500'
-                  >
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
                     kleber@ziontechgroup.com;
                   </a></p></div></div></div></div>
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
@@ -478,7 +402,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
       );
     }
 
@@ -486,12 +409,4 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
   }
 }
 
-<<<<<<< HEAD
-export default AdvancedErrorBoundary;`
-
-
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
 export default EnhancedErrorBoundary;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df

@@ -1,374 +1,81 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-export default function Page() {
+'use client';
+import React from 'react';
+import Link from 'next/link';
+import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe } from 'lucide-react';
+
+export default function AiInventoryManagerPage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional services coming soon." />
-      </Helmet>
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">
-          Coming Soon
-        </h1>
-        <p className="text-lg text-gray-300 mb-8">
-          Professional services coming soon.
+    <div className="min-h-screen bg-gray-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold mb-8">Ai Inventory Manager</h1>
+        <p className="text-xl text-gray-300 mb-8">
+          Discover our comprehensive ai inventory manager solutions designed to meet your business needs.
         </p>
-        <Link
-          to="/contact"
-          className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-        >
-          Contact Us
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Link>
-      </div>
-=======
-    <div>
-      <Head>
-        <title>Ai Inventory Manager - Zion Tech Group</title>
-        <meta name="description" content="Professional services by Zion Tech Group." />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            Ai Inventory Manager
-          </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            ai-inventory-manager services Transform your business with our expert solutions. services coming soon.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-      </div>
-      <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
-    </div>
-  );
-}
-=======
-import React from 'react'
-import {Link} from 'react-router-dom'
-=======
-import React from 'react'
-import { Link } from 'react-router-dom'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-
-import React from 'react';
-
-import {Link} from 'react-router-dom';
-import {ArrowRight} from 'lucide-react';
-
-import {ArrowRight, Package, BarChart3, Zap, CheckCircle, Target, Smartphone, Shield, Bot, Star, Smartphone as Mobile, DollarSign, Activity} from 'lucide-react';
-
-export default function AIInventoryManagerPage() {const features = [{
-      icon: <Bot className="w-5h-5ml-2"   />,
-      title: 'AI Demand Forecasting',
-      description: 'Predict inventory needs with 95% accuracy using machine learning algorithms'},
-    {icon: <Package className="w-5h-5ml-2"   />,
-      title: 'Smart Reorder Points',
-      description: 'Automatically trigger reorders based on sales velocity and lead times'},
-    {icon: <BarChart3 className="w-5h-5ml-2"   />,
-      title: 'Real-time Analytics',
-      description: 'Comprehensive inventory insights with predictive analytics and trend analysis'},
-    {icon: <Zap className="w-5h-5ml-2"   />,
-      title: 'Automated Workflows',
-      description: 'Streamline inventory processes with intelligent automation and alerts'},
-    {icon: <Target className="w-5h-5ml-2"   />,
-      title: 'Multi-location Sync',
-      description: 'Seamlessly manage inventory across multiple warehouses and stores'},
-    {icon: <Shield className="w-5h-5ml-2"   />,
-      title: 'Loss Prevention',
-      description: 'AI-powered theft detection and shrinkage analysis with real-time alerts'}]
-
-  const pricingPlans = [{name: 'Starter',
-      price: '$39',
-      period: '/month',
-      description: 'Perfect for small businesses',
-      features: [
-        'Up to 1,000 SKUs',
-        'Basic AI forecasting',
-        'Mobile app access',
-        'Email support',
-        'Basic reporting',
-        '1 warehouse location'],
-      popular: false;},
-    {name: 'Professional',
-      price: '$99',
-      period: '/month',
-      description: 'Ideal for growing businesses',
-      features: ['Up to 10,000 SKUs',
-        'Advanced AI features',
-        'Multi-location support',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
-        'Barcode scanning',
-        'Supplier integration'],
-      popular: true;},
-    {name: 'Enterprise',
-      price: '$299',
-      period: '/month',
-      description: 'For large organizations',
-      features: ['Unlimited SKUs',
-        'All AI features',
-        'Custom integrations',
-        'Dedicated support',
-        'White-label option',
-        'Advanced security',
-        'Custom reporting',
-        'SLA guarantee'],
-      popular: false;}
-  ]
-
-  const testimonials = [{name: 'Jennifer Walsh',
-      company: 'Retail Chain Owner',
-      content: 'Reduced our inventory costs by 25% and eliminated stockouts completely. The AI forecasting is incredibly accurate.',
-      rating: 5,
-      avatar: 'JW'},
-    {name: 'Michael Torres',
-      company: 'E-commerce Store',
-      content: 'The automated reorder system saves us hours every week. Never run out of stock again.',
-      rating: 5,
-      avatar: 'MT'},
-    {name: 'Sarah Kim',
-      company: 'Manufacturing Company',
-      content: 'Multi-location sync is a game-changer. We can see inventory across all our facilities in real-time.',
-      rating: 5,
-      avatar: 'SK'}]
-
-  const benefits = [{icon: <DollarSign className="w-5h-5ml-2"   />,
-      title: '25% Cost Reduction',
-      description: 'Optimize inventory levels and reduce carrying costs'},
-    {icon: <Target className="w-5h-5ml-2"   />,
-      title: '95% Accuracy',
-      description: 'AI forecasting with industry-leading accuracy rates'},
-    {icon: <Activity className="w-5h-5ml-2"   />,
-      title: 'Zero Stockouts',
-      description: 'Smart reorder points prevent stockouts completely'},
-    {icon: <Zap className="w-5h-5ml-2"   />,
-      title: 'Real-time Sync',
-      description: 'Instant updates across all locations and devices'}]
-
-  const integrations = [{name: 'Shopify', icon: '🛍️'},
-    {name: 'WooCommerce', icon: '🛒'},
-    {name: 'Amazon', icon: '📦'},
-    {name: 'eBay', icon: '🏪'},
-    {name: 'QuickBooks', icon: '📊'},
-    {name: 'Xero', icon: '💰'},
-    {name: 'Sage', icon: '📈'},
-    {name: 'NetSuite', icon: '☁️'},
-    {name: 'Salesforce', icon: '⚡'},
-    {name: 'Zapier', icon: '🔗'}]
-
-  return (
-<<<<<<< HEAD
-    <>
-      <title>5G Data Analytics - Zion Tech Group</title>
-        <title>AI Inventory Manager - Zion Tech Group | Smart Inventory Management</title>
-
-                    <span>Start Free Trial</span>
-                    <span>View All Plans</span>
-
-                  <p>✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
-  );
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function AiinventorymanagerPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Ai Inventory Manager - Zion Tech Group</title>
-        <meta name="description" content="Professional ai inventory manager services by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Ai Inventory Manager</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional ai inventory manager services coming soon.</p>
-          
-          <Link
-            to="/contact"
-            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-          >
-            Contact Us
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Link>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
-      <Helmet />
-        <title   />AI Inventory Manager - Zion Tech Group | Smart Inventory Management</title>
-        <meta name="description" content="Revolutionary AI-powered inventory management with demand forecasting, automated reordering, and real-time analytics. Reduce costs by 25%. Starting at $39/month." / / />
-        <meta name="keywords" content="AI inventory management, demand forecasting, automated reordering, inventory analytics, stock management, warehouse management" / / />
-        <meta name="robots" content="index, follow" / / />
-        <link rel="canonical" href="https://ziontechgroup.com/micro-saas/ai-inventory-manager" />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20px-4overflow-hidden" />
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.1)_0%,transparent_50%)]" />
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.1)_0%,transparent_50%)]" />
-        <div className="relative max-w-7xlmx-autotext-center">
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
-            <Package className="w-4 h-4" />
-            <span   />AI-Powered Inventory Management</span>
-          </div>
-          
-          <h1 className="text-4xl sm:text-6 xl md:text-7 xl font-bold text-white mb-8leading-tight" />
-            AI Inventory
-            <br / />
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent">Manager
-            </span>
-          </h1>
-          
-          <p className="text-lg sm:text-xl md:text-2 xl text-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">
-              Transform your inventory management with AI-powered demand forecasting, automated reordering, 
-            and real-time analytics. Reduce costs by 25% and eliminate stockouts completely.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
-            <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" >
-           
-          <span    />
-        </Link>Start Free Trial</span>
-              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-            </Link>
-            <Link to="#pricing" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
-           
-          <span    />
-        </Link>View Pricing</span>
-              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-            </Link>
-          </div>
-
-          {/* Key Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xlmx-auto">
-            <div className="text-center">
-              <div className="text-3 xl font-boldtext-cyan-400mb-2"   />25%</div>
-              <div className="text-gray-300text-sm"   />Cost Reduction</div>
-            <div className="text-center">
-              <div className="text-3 xl font-boldtext-purple-400mb-2"   />95%</div>
-              <div className="text-gray-300text-sm"   />Forecast Accuracy</div>
-            <div className="text-center">
-              <div className="text-3 xl font-boldtext-pink-400mb-2"   />0</div>
-              <div className="text-gray-300text-sm"   />Stockouts</div>
-            <div className="text-center">
-              <div className="text-3 xl font-boldtext-emerald-400mb-2"   />15 K+</div>
-              <div className="text-gray-300text-sm"   />Active Users</div>
-          </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20px-4relative" />
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5via-cyan-500/5to-pink-500/5" />
-        <div className="relative max-w-7xlmx-auto">
-          <div className="text-centermb-16">
-            <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-              Why Choose Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />AI Inventory Manager?</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-              Experience the future of inventory management with cutting-edge AI technology that works for your business.
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-12">
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Brain className="h-12 w-12 text-blue-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">AI-Powered Solutions</h3>
+            <p className="text-gray-300">
+              Leverage artificial intelligence to automate and optimize your business processes.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-        </div>
-            {benefits.map((benefit, index) => (
-              <div key="{index}" className="text-centergroup" />
-                <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xll mb-6 mx-auto group-hover:scale-110transition-transformduration-300">{benefit.icon}
-                </div>
-
-            {features.map((feature, index) => (
-              <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2xll p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xllhover:shadow-cyan-500/10" />
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xll mb-6 group-hover:scale-110transition-transformduration-300">{feature.icon}
-                </div>
-
-            {pricingPlans.map((plan, index) => (
-              <div key="{index}" className="{`relative" bg-white/10 backdrop-blur-lg rounded-2xll p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xll ${
-                plan.popular 
-                  ? 'border-cyan-400/50 shadow-cyan-500/20 bg-gradient-to-br from-cyan-500/10 to-purple-500/10' 
-                  : 'border-white/20 hover: border-cyan-400/30'
-              }`} />
-                {plan.popular && (
-
-            {testimonials.map((testimonial, index) => (
-              <div key="{index}" className="bg-white/10 backdrop-blur-lg rounded-2xll p-8 border border-white/20 hover:bg-white/20transition-allduration-300" />
-                <div className="flex items-centermb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4"  />{testimonial.avatar}
-                  </div>
-                  <div />
-                    <div className="font-semiboldtext-white"   />{testimonial.name}</div>
-                    <div className="text-gray-400text-sm"   />{testimonial.company}</div>
-                </div>
-                <div className="flexmb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key="{i}" className="w-5 h-5text-yellow-400fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-300italic">
-              "{testimonial.content}"</p>
-              </div>
-            ))}
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Shield className="h-12 w-12 text-green-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Enterprise Security</h3>
+            <p className="text-gray-300">
+              Robust security measures to protect your data and ensure compliance.
+            </p>
           </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20px-4relative" />
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" />
-        <div className="relative max-w-7xlmx-auto">
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8 sm:p-12 lg:p-16relativeoverflow-hidden">
-              <div className="relativez-10">
-                <h2 className="text-4xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6leading-tight" />
-                  Ready to Transform Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent"   />Inventory Management?</span>
-                </h2>
-                
-                <p className="text-xl sm:text-2 xl text-white/90 mb-8 sm:mb-12 max-w-4 xlmx-autoleading-relaxed">
-              Join thousands of businesses already reducing costs by 25% with our AI-powered inventory manager. 
-                  Start your free trial today and experience the future of inventory management.
-                </p>
-                
-                <div className="flex flex-col sm:flex-row gap-6justify-centermb-8">
-                  <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" >
-           
-          <span    />
-        </Link>Start Free Trial</span>
-                    <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-                  </Link>
-                  <Link to="#pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
-           
-          <span    />
-        </Link>View All Plans</span>
-                    <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-                  </Link>
-                </div>
-                
-                <div className="text-white/80text-sm">
-                  <p />✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
-                </div>
-            </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
+          
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Users className="h-12 w-12 text-purple-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Expert Support</h3>
+            <p className="text-gray-300">
+              Dedicated support team to help you succeed with our solutions.
+            </p>
+          </div>
+        </div>
+        
+        <div className="mt-12">
+          <h2 className="text-3xl font-bold mb-6">Why Choose Our Ai Inventory Manager Solutions?</h2>
+          <ul className="space-y-4 text-lg text-gray-300 mb-8">
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Scalable and flexible architecture
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Industry-leading performance
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Easy integration with existing systems
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              24/7 monitoring and support
+            </li>
+          </ul>
+          
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Get Started
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+            <Link 
+              href="/services" 
+              className="inline-flex items-center px-6 py-3 border border-gray-600 text-white rounded-lg hover:bg-gray-800 transition-colors"
+            >
+              Learn More
+            </Link>
+          </div>
         </div>
       </div>
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

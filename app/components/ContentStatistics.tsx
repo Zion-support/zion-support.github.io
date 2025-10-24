@@ -1,18 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 
 const ContentStatistics: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <div className="contentstatistics">
-      <h2>ContentStatistics</h2>
-      <p>ContentStatistics component.</p>
-=======
   const [counters, setCounters] = useState({
     clients: 0,
     projects: 0,
@@ -43,10 +30,6 @@ const ContentStatistics: React.FC = () => {
       color: 'text-purple-400',
     },
     {
-<<<<<<< HEAD
-      icon: TrendingUp,
-      value: counters.satisfaction,
-=======
 const ContentStatistics: React.FC = () => {}
   const [isVisible, setIsVisible] = useState(false);
   const [counts, setCounts] = useState({)}
@@ -57,7 +40,6 @@ const ContentStatistics: React.FC = () => {}
     countries: 0,
     years: 0
   });
-=======
       icon: Zap,
       value: 300,
       suffix: '%',
@@ -66,7 +48,6 @@ const ContentStatistics: React.FC = () => {}
       color: 'text-purple-400'
     }
   ], []);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
 
   const stats = [
     {}
@@ -98,42 +79,8 @@ const ContentStatistics: React.FC = () => {}
       description: 'Reliable service delivery'},
     {}
       id: 'satisfaction',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       label: 'Client Satisfaction',
       suffix: '%',
-<<<<<<< HEAD
-      color: 'text-green-400',
-    },
-    {
-      icon: Clock,
-      value: counters.years,
-      label: 'Years Experience',
-      suffix: '+',
-      color: 'text-yellow-400',
-    }
-  ];
-
-  const achievements = [
-    {
-      icon: Brain,
-      title: 'AI Innovation',
-      description: 'Leading the industry in AI-powered solutions',
-    },
-    {
-      icon: Shield,
-      title: 'Security Excellence',
-      description: 'Bank-level security for all our solutions',
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Serving clients across 50+ countries',
-    },
-    {
-      icon: Zap,
-      title: 'Performance',
-      description: '99.9% uptime and lightning-fast response',
-=======
       icon: Star,
       color: 'text-yellow-400',
       bgColor: 'bg-yellow-500/10',
@@ -171,7 +118,6 @@ const ContentStatistics: React.FC = () => {}
     const element = document.getElementById('statistics-section');
     if (element) {}
       observer.observe(element);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     }
   ];
 
@@ -200,11 +146,6 @@ const ContentStatistics: React.FC = () => {}
     };
   }, [statistics]);
 
-<<<<<<< HEAD
-  return (
-
-<<<<<<< HEAD
-=======
   useEffect(() => {}
     if (isVisible) {}
       const duration = 2000; // 2 seconds
@@ -352,21 +293,16 @@ const ContentStatistics: React.FC = () => {
               <stat.icon className={`w-12 h-12 ${stat.color} mx-auto mb-4`} />
               <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
               <div className="text-gray-300">{stat.label}</div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </div>
           ))}
         </div>
       </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
 'use client';
 
 interface StatItem {id: string;,
-=======
 import { useState, useEffect} from 'react';
 interface StatItem {
   id: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   value: number;,
   label: string;,
   icon: React.ComponentType<{ className?: string}>;
@@ -429,14 +365,6 @@ export default function ContentStatistics() {return (
         return (
     <div;
             const key = {stat.id}
-<<<<<<< HEAD
-            className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-white/20transition-all duration-300"   /></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <IconComponent className="w-5h-5ml-2"   /></IconComponent>
-              </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.prefix}
-=======
             className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-white/20transition-allduration-300" />
             <div className="flexjustify-centermb-4">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-centerjustify-center">
@@ -444,22 +372,15 @@ export default function ContentStatistics() {return (
               </div>
 
             <div className="text-3 xl font-bold text-white mb-2"  />{stat.prefix}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               {stat.suffix === '%'
                 ? animatedValue.toFixed(1)
                 : Math.floor(animatedValue).toLocaleString()}
               {stat.suffix}
             </div>
-<<<<<<< HEAD
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.label}
-=======
             <div className="text-gray-300text-sm">{stat.label}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </div>
   );
       })}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React from 'react';
 
 const ContentStatistics: React.FC<ContentStatisticsProps> = () => {
@@ -467,25 +388,11 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = () => {
     <div className="contentstatistics">
       <h2>ContentStatistics</h2>
       <p>Component content coming soon.</p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
     </div>
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default ContentStatistics;
-<<<<<<< HEAD
-=======
-export default ContentStatistics;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
 export default ContentStatistics;
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 export default ContentStatistics;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

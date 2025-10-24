@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import Link from 'next/link';
-=======
 // eslint-disable-next-line react-refresh/only-export-components
 export const metadata = {
   title: 'AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90% | Zion Tech Group',
@@ -40,7 +37,6 @@ export default function AICostOptimizationBreakthrough2026() {
             className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors"
           ></Link>
             Contact Us
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
 export default function AICostOptimizationBreakthrough2026() {
   return (
@@ -155,28 +151,6 @@ export default function AICostOptimizationBreakthrough2026() {
             </p>
             <div className="bg-green-50 p-6 rounded-lg text-center">
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Begin Your 90% Cost Reduction</h3>
-<<<<<<< HEAD
-              <p className="text-gray-700 mb-4">
-                Join Fortune 500 companies achieving breakthrough cost savings with AI optimization
-              </p>
-              <div className="space-x-4">
-                <a 
-                  href="/contact"
-                  className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors">
-                  Get Cost Assessment
-                </a>
-                <a 
-                  href="/services"
-                  className="inline-block bg-white text-green-600 px-6 py-3 rounded-lg border-2 border-green-600 hover:bg-green-50 transition-colors">
-                  Explore AI Services
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-=======
               <p className="text-gray-700 mb-4"></p>
                 Join Fortune 500 companies achieving breakthrough cost savings with AI optimization;
               <div className="space-x-4"></div>
@@ -187,13 +161,9 @@ export default function AICostOptimizationBreakthrough2026() {
 href="/services" className="inline-block bg-white text-green-600 px-6 py-3 rounded-lg border-2 border-green-600 hover:bg-green-50 transition-colors">
 
                   Explore AI Services;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   );
 };
 
 export default AICostOptimizationBreakthrough2026Page;
-<<<<<<< HEAD
-=======
 export default AICostOptimizationBreakthrough2026Page;
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522

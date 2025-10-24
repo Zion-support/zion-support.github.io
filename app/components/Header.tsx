@@ -1,26 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-<<<<<<< HEAD
-import Navigation from './Navigation';
-<<<<<<< HEAD
-=======
 'use client'
 import React from 'react'
 import Navigation from './Navigation'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
 
 const Header: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <React.Fragment>
-      <Navigation />
-      {/* Spacer to prevent content from going under fixed header */}
-      <div className="h-16 lg:h-20" />
-    </React.Fragment>
-<<<<<<< HEAD
-=======
 const Header: React.FC = () => {
   return(<>)
       <Navigation />),
@@ -224,28 +207,19 @@ const Header: React.FC = () => {
         )}
       </div>
     </header>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   );
 };
 
 export default Header;
-=======
   return (
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
-=======
     <header>
       <Navigation />
     </header>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   )
 }
 
 export default Header
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
-=======
 
 const Header: React.FC<HeaderProps> = () => {
   return (
@@ -257,6 +231,3 @@ const Header: React.FC<HeaderProps> = () => {
 };
 
 export default Header;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

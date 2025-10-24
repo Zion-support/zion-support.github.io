@@ -4,45 +4,6 @@ import Footer from '../components/Footer';
 
 const PrivacyPage: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      <main className="pt-20">
-        <div className="container mx-auto px-4 py-16 max-w-4xl">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-            Privacy Policy
-          </h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Last updated: January 2025
-          </p>
-
-          <div className="cyber-card p-8 space-y-8">
-            <section>
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <Shield className="w-6 h-6 mr-3 text-cyan-400" />
-                Information We Collect
-              </h2>
-              <p className="text-gray-300 mb-4">
-                We collect information you provide directly to us, such as when you create an account, 
-                use our services, or contact us for support.
-              </p>
-              <ul className="list-disc list-inside text-gray-300 space-y-2">
-                <li>Contact information (name, email, phone number)</li>
-                <li>Business information (company name, industry, size)</li>
-                <li>Service usage data and preferences</li>
-                <li>Communication records and support requests</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <Eye className="w-6 h-6 mr-3 text-cyan-400" />
-                How We Use Your Information
-              </h2>
-              <p className="text-gray-300 mb-4">
-                We use the information we collect to provide, maintain, and improve our services:
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden"></section>
@@ -83,7 +44,6 @@ const PrivacyPage: React.FC = () => {
               </p>
               <p className="text-sm text-gray-400 mt-2"></p>
                 This privacy policy may be updated from time to time. We will notify you of any changes.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               </p>
               <ul className="list-disc list-inside text-gray-300 space-y-2">
                 <li>Deliver and maintain our AI services</li>
@@ -94,33 +54,6 @@ const PrivacyPage: React.FC = () => {
               </ul>
             </section>
 
-<<<<<<< HEAD
-            <section>
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <Lock className="w-6 h-6 mr-3 text-cyan-400" />
-                Data Security
-              </h2>
-              <p className="text-gray-300 mb-4">
-                We implement appropriate security measures to protect your personal information against 
-                unauthorized access, alteration, disclosure, or destruction.
-              </p>
-              <ul className="list-disc list-inside text-gray-300 space-y-2">
-                <li>Encryption of data in transit and at rest</li>
-                <li>Regular security audits and assessments</li>
-                <li>Access controls and authentication measures</li>
-                <li>Employee training on data protection</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <Database className="w-6 h-6 mr-3 text-cyan-400" />
-                Data Sharing
-              </h2>
-              <p className="text-gray-300 mb-4">
-                We do not sell, trade, or otherwise transfer your personal information to third parties 
-                without your consent, except as described in this policy.
-=======
       {/* Introduction */}
       <section className="py-20"></section>
         <div className="container mx-auto px-4"></div>
@@ -135,53 +68,9 @@ const PrivacyPage: React.FC = () => {
               <p className="text-gray-300 mb-6"></p>
                 By using our website or services, you agree to the collection and use of information in accordance with 
                 this policy. If you do not agree with the terms of this Privacy Policy, please do not access the site.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               </p>
             </section>
 
-<<<<<<< HEAD
-            <section>
-              <h2 className="text-2xl font-bold text-white mb-4">
-                Your Rights
-              </h2>
-              <p className="text-gray-300 mb-4">
-                You have the right to:
-              </p>
-              <ul className="list-disc list-inside text-gray-300 space-y-2">
-                <li>Access your personal information</li>
-                <li>Correct inaccurate or incomplete data</li>
-                <li>Request deletion of your data</li>
-                <li>Object to processing of your data</li>
-                <li>Data portability</li>
-                <li>Withdraw consent at any time</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-white mb-4">
-                Contact Us
-              </h2>
-              <p className="text-gray-300 mb-4">
-                If you have any questions about this Privacy Policy, please contact us:
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="tel:+13024640950"
-                  className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  (302) 464-0950
-                </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                >
-                  <Mail className="w-5 h-5 mr-2" />
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-            </section>
-=======
       {/* Information We Collect */}
       <section className="py-20 bg-slate-800/50"></section>
         <div className="container mx-auto px-4"></div>
@@ -250,14 +139,10 @@ const PrivacyPage: React.FC = () => {
                 </p>
               </div>
             </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           </div>
         </div>
       </main>
 
-<<<<<<< HEAD
-      <Footer />
-=======
       {/* Data Security */}
       <section className="py-20 bg-slate-800/50"></section>
         <div className="container mx-auto px-4"></div>
@@ -328,7 +213,6 @@ const PrivacyPage: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     </div>
   );
 };

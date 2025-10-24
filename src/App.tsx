@@ -1,18 +1,4 @@
-<<<<<<< HEAD
-'use client';
-import React, { useEffect, useState, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-// Lazy load components for better performance
-const HomePage = lazy(() => import('./page'));
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 const HomePage = lazy(() => import('../app/page'));
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 
 // Import enhancement utilities
 import PerformanceEnhancer from './utils/performanceEnhancer';
@@ -20,8 +6,6 @@ import SEOEnhancer from './utils/seoEnhancer';
 import AccessibilityEnhancer from './utils/accessibilityEnhancer';
 import SecurityEnhancer from './utils/securityEnhancer';
 import UserExperienceEnhancer from './utils/userExperienceEnhancer';
-<<<<<<< HEAD
-=======
 import ITServicesPage from './it-services/page';
 import ITInfrastructurePage from './it-infrastructure/page';
 import CybersecurityPage from './cybersecurity/page';
@@ -59,22 +43,11 @@ import Footer from './components/Footer';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-053f
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
 const AboutPage = lazy(() => import('./about/page'));
 const ContactPage = lazy(() => import('./contact/page'));
 const CaseStudiesPage = lazy(() => import('./case-studies/page'));
-<<<<<<< HEAD
-<<<<<<< HEAD
-const BlogPage = lazy(() => import('./blog/page'));
-=======
 const NotFoundPage = lazy(() => import('./not-found'));
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-053f
-=======
 const NotFoundPage = lazy(() => import('./not-found'));
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f
 
 // AI Services
 const AiServicesPage = lazy(() => import('./ai-services/page'));
@@ -97,7 +70,6 @@ const PrivacyPage = lazy(() => import('./privacy/page'));
 const TermsPage = lazy(() => import('./terms/page'));
 const CookiesPage = lazy(() => import('./cookies/page'));
 const NotFoundPage = lazy(() => import('./not-found'));
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
 // Loading component
 const LoadingSpinner: React.FC = () => (
@@ -149,12 +121,9 @@ import BlockchainWeb3Page from './blockchain-web3/page';
 import IoTEdgeComputingPage from './iot-edge-computing/page';
 import BusinessIntelligencePage from './business-intelligence/page';
 import RoboticsPage from './robotics/page';
-<<<<<<< HEAD
-=======
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
 // Company Pages
 import TeamPage from './team/page';
@@ -168,12 +137,9 @@ import CaseStudiesPage from './case-studies/page';
 
 // Support Pages
 
-<<<<<<< HEAD
-=======
 import AboutPage from './about/page';
 
 // Support Pages
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 // Additional Pages
 import PricingPage from './pricing/page';
 import DemoPage from './demo/page';
@@ -230,24 +196,10 @@ import AIAutomationPage from './ai-automation/page';
 import AIMLPlatformPage from './ai-ml-platform/page';
 
 const App: React.FC = () => {
-<<<<<<< HEAD
-  const [isInitialized, setIsInitialized] = useState(false);
-  const [, setEnhancers] = useState<{
-    performance: unknown;
-    seo: unknown;
-    accessibility: unknown;
-    security: unknown;
-    ux: unknown;
-  } | null>(null);
-
-  useEffect(() => {
-    initializeEnhancers();
-=======
   // Initialize performance monitoring
   React.useEffect(() => {
     performanceMonitor.measurePageLoad();
     performanceMonitor.measureCoreWebVitals();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03f4
   }, []);
 
   const initializeEnhancers = async () => {
@@ -364,14 +316,6 @@ const App: React.FC = () => {
 
       // Generate reports (for development)
       if (process.env.NODE_ENV === 'development') {
-<<<<<<< HEAD
-        // Reports generated silently in development
-      }
-
-      setIsInitialized(true);
-    } catch {
-<<<<<<< HEAD
-=======
         // Reports are available but not logged to console
         performanceEnhancer.getMetrics();
         accessibilityEnhancer.generateReport();
@@ -381,15 +325,12 @@ const App: React.FC = () => {
 
       setIsInitialized(true);
     } catch (error) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       // Silently handle enhancer initialization errors
       setIsInitialized(true); // Continue even if enhancers fail
-=======
       // Silently handle enhancer initialization errors
       setIsInitialized(true); // Continue even if enhancers fail
       // Continue even if enhancers fail
       setIsInitialized(true);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
     }
   };
 
@@ -398,13 +339,8 @@ const App: React.FC = () => {
   }
 
   return (
-<<<<<<< HEAD
-    <Router>
-      <Routes>
-=======
     <Router></Router>
       <Routes></Routes>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
         {/* Main Pages */}
         <Route path="/" element={<HomePage />} />
         
@@ -480,8 +416,6 @@ const App: React.FC = () => {
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
-<<<<<<< HEAD
-=======
     <ErrorBoundary></ErrorBoundary>
       <div className="App"></div>
         <Navigation />
@@ -522,19 +456,13 @@ const App: React.FC = () => {
         <Footer />
       </div>
     </ErrorBoundary>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   );
 };
 
 // 404 Page Component
 const NotFoundPage: React.FC = () => (
-<<<<<<< HEAD
-  <div className="min-h-screen flex items-center justify-center">
-    <div className="text-center">
-=======
   <div className="min-h-screen flex items-center justify-center"></div>
     <div className="text-center"></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       <h1 className="text-6xl font-bold text-cyan-400 mb-4">404</h1>
       <h2 className="text-2xl font-semibold text-white mb-4">Page Not Found</h2>
       <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>

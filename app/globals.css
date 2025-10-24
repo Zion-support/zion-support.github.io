@@ -16,17 +16,6 @@
   }
 }
 
-<<<<<<< HEAD
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-=======
 @keyframes neon-pulse {
   0%, 100% {
     box-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor, 0 0 20px currentColor;
@@ -1118,14 +1107,6 @@ body {
     border-width: 2px;
     border-color: #00ffff;
   }
-<<<<<<< HEAD
-  
-  .neon-text {
-    text-shadow: 
-      0 0 10px var(--neon-cyan),
-      0 0 20px var(--neon-cyan),
-      0 0 30px var(--neon-cyan);
-=======
 }
 
 /* Reduced motion */
@@ -1742,7 +1723,6 @@ button:focus-visible {
 @media (max-width: 768px) {
   .cyber-grid-enhanced {
     background-size: 15px 15px, 15px 15px, 80px 80px, 80px 80px;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602
   }
   
   .cyber-button {
@@ -1758,9 +1738,6 @@ button:focus-visible {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-<<<<<<< HEAD
-    scroll-behavior: auto !important;
-=======
   }
   
   .pulse-glow {
@@ -2136,7 +2113,5 @@ button:focus-visible {
   img {
     max-width: 100% !important;
     height: auto !important;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602
   }
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

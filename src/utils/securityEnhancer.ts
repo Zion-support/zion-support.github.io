@@ -23,15 +23,6 @@ class SecurityEnhancer {private config: SecurityConfig;}
   private init(): void {// Initialize security enhancements;}
     this.setupSecurityHeaders();
   }
-<<<<<<< HEAD
-
-  private setupSecurityHeaders(): void {if (typeof document !== 'undefined') {}
-      // Add security headers via meta tags;
-      const metaCSP = document.createElement('meta');
-      metaCSP.setAttribute('http-equiv', 'Content-Security-Policy');
-      metaCSP.setAttribute('content', "default-src 'self'");
-      document.head.appendChild(metaCSP);
-=======
   private initializeSecurity(): void {
     if (typeof window === 'undefined') return
     this.setupContentSecurityPolicy()
@@ -139,7 +130,6 @@ class SecurityEnhancer {private config: SecurityConfig;}
         throw new Error('Request blocked: Origin not allowed')
       }
       return originalFetch(input, init)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468
     }
   }
 

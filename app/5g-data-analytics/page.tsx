@@ -1,140 +1,81 @@
-<<<<<<< HEAD
+'use client';
 import React from 'react';
-=======
-import React  from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-import { Helmet } from 'react-helmet-async';
+import Link from 'next/link';
+import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function DataAnalytics5GPage() {
+export default function _5GDataAnalyticsPage() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Helmet>
-<<<<<<< HEAD
-      
+    <div className="min-h-screen bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold mb-8">5G Data Analytics</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Leverage the power of 5G networks for advanced data analytics and real-time insights.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Real-time Processing</h3>
-              <p className="text-gray-300">
-                Process massive data streams in real-time with 5G's ultra-low latency.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Edge Analytics</h3>
-              <p className="text-gray-300">
-                Deploy analytics at the edge for faster decision making and reduced bandwidth usage.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Machine Learning</h3>
-              <p className="text-gray-300">
-                Leverage AI and ML algorithms for intelligent data analysis and predictions.
-              </p>
-=======
-    <>
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-        <meta name="keywords" content="5G data analytics, real-time analytics, business intelligence, Zion Tech Group" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                5G Data Analytics
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Unlock the power of 5G networks with advanced data analytics solutions for real-time insights and business intelligence.
+        <p className="text-xl text-gray-300 mb-8">
+          Discover our comprehensive 5g data analytics solutions designed to meet your business needs.
+        </p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-12">
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Brain className="h-12 w-12 text-blue-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">AI-Powered Solutions</h3>
+            <p className="text-gray-300">
+              Leverage artificial intelligence to automate and optimize your business processes.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-              >
-                Get Started
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                to="/demo"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
-              >
-                View Demo
-              </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-            </div>
+          </div>
+          
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Shield className="h-12 w-12 text-green-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Enterprise Security</h3>
+            <p className="text-gray-300">
+              Robust security measures to protect your data and ensure compliance.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Users className="h-12 w-12 text-purple-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Expert Support</h3>
+            <p className="text-gray-300">
+              Dedicated support team to help you succeed with our solutions.
+            </p>
+          </div>
+        </div>
+        
+        <div className="mt-12">
+          <h2 className="text-3xl font-bold mb-6">Why Choose Our 5G Data Analytics Solutions?</h2>
+          <ul className="space-y-4 text-lg text-gray-300 mb-8">
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Scalable and flexible architecture
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Industry-leading performance
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Easy integration with existing systems
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              24/7 monitoring and support
+            </li>
+          </ul>
+          
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Get Started
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+            <Link 
+              href="/services" 
+              className="inline-flex items-center px-6 py-3 border border-gray-600 text-white rounded-lg hover:bg-gray-800 transition-colors"
+            >
+              Learn More
+            </Link>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
-=======
-export default function FiveGgdataanalyticsPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5g data analytics services by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">5G Data Analytics</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional 5g data analytics services coming soon.</p>
-          
-          <Link
-            to="/contact"
-            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-          >
-            Contact Us
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Link>
-        </div>
-      </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
     </div>
-=======
-    </>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   );
 }
-=======
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">5G Data Analytics</h1>
-        <p className="text-lg text-gray-300 mb-8">Professional 5G data analytics services coming soon.</p>
-        <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        >
-          Contact Us
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
-      </div>
-  );
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

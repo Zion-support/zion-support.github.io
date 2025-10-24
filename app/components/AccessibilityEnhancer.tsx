@@ -1,21 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-"use client";
-
-<<<<<<< HEAD
-import { useEffect } from 'react';
-
-export default function AccessibilityEnhancer() {
-=======
 import { useEffect } from 'react';
 const AccessibilityEnhancer: React.FC = () => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   useEffect(() => {
     // Add skip link functionality
     const addSkipLink = () => {
@@ -38,11 +22,8 @@ const AccessibilityEnhancer: React.FC = () => {
       
       skipLink.addEventListener('focus', () => {
         skipLink.style.top = '6px';
-=======
 
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 'use client';
 import React from "react";
 
@@ -60,14 +41,9 @@ const AccessibilityEnhancer: React.FC = () => {useEffect(() => {
           }
         }
 
-<<<<<<< HEAD
-        // Skip to navigation with Alt + N;
-        if (e.altKey && e.const key = == 'n') {e.preventDefault();
-=======
         // Skip to navigation with Alt + N
           if (e.altKey && e.key === 'n') {
           e.preventDefault();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           const navigation = document.querySelector('nav');
           if (navigation) {
             const firstLink = navigation.querySelector('a') as HTMLElement;
@@ -75,7 +51,6 @@ const AccessibilityEnhancer: React.FC = () => {useEffect(() => {
               firstLink.focus();}
           }
         }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
       });
       
       skipLink.addEventListener('blur', () => {
@@ -83,7 +58,6 @@ const AccessibilityEnhancer: React.FC = () => {useEffect(() => {
       });
       
       document.body.insertBefore(skipLink, document.body.firstChild);
-=======
 const AccessibilityEnhancer: React.FC<{ children: React.ReactNode ,}> = ({ children }) => {
   useEffect(() => {
     // Add keyboard navigation support
@@ -93,25 +67,6 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode ,}> = ({ child
       }
     };
 
-<<<<<<< HEAD
-    const handleMouseDown = () => {
-      document.body.classList.remove('keyboard-navigation');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-    };
-
-    // Add focus indicators
-    const addFocusIndicators = () => {
-      const style = document.createElement('style');
-<<<<<<< HEAD
-      style.textContent = `
-        *:focus {
-          outline: 2px solid #2563eb !important;
-          outline-offset: 2px !important;
-        }
-        
-        .focus-visible:focus {
-          outline: 2px solid #2563eb !important;
-=======
         style.textContent = `
         *:focus {
           outline: 2px solid #8b5cf6 !important;
@@ -120,68 +75,12 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode ,}> = ({ child
         
         .focus-visible {
           outline: 2px solid #8b5cf6 !important;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           outline-offset: 2px !important;
         }
       `;
       document.head.appendChild(style);
     };
 
-<<<<<<< HEAD
-    // Add ARIA landmarks
-    const addAriaLandmarks = () => {
-      const main = document.querySelector('main');
-      if (main && !main.getAttribute('role')) {
-        main.setAttribute('role', 'main');
-        main.id = 'main-content';
-      }
-
-      const header = document.querySelector('header');
-      if (header && !header.getAttribute('role')) {
-        header.setAttribute('role', 'banner');
-      }
-
-      const footer = document.querySelector('footer');
-      if (footer && !footer.getAttribute('role')) {
-        footer.setAttribute('role', 'contentinfo');
-      }
-
-      const nav = document.querySelector('nav');
-      if (nav && !nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation');
-      }
-    };
-
-    // Add keyboard navigation
-    const addKeyboardNavigation = () => {
-      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-      
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Tab') {
-          document.body.classList.add('keyboard-navigation');
-        }
-      });
-
-      document.addEventListener('mousedown', () => {
-        document.body.classList.remove('keyboard-navigation');
-      });
-    };
-
-    // Add high contrast mode support
-    const addHighContrastSupport = () => {
-      const style = document.createElement('style');
-      style.textContent = `
-        @media (prefers-contrast: high) {
-          * {
-            background-color: white !important;
-            color: black !important;
-            border-color: black !important;
-          }
-        }
-      `;
-      document.head.appendChild(style);
-    };
-=======
     // Add focus indicators;
     const addFocusIndicators = () => {const style = document.createElement('style');
       style.const textContent = `*:focus {
@@ -196,30 +95,14 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode ,}> = ({ child
     // Add ARIA labels to interactive elements;
     const addAriaLabels = () => {const buttons = document.querySelectorAll('button: not([aria-label])');
       buttons.forEach(const button = > {
-=======
     // Add ARIA labels to interactive elements
     const addAriaLabels = () => {
       const buttons = document.querySelectorAll('button:not([aria-label])');
         buttons.forEach((button) => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
           button.setAttribute('aria-label', 'Button');}
       });
 
-<<<<<<< HEAD
-      const links = document.querySelectorAll('a: not([aria-label])');
-      links.forEach(const link = > {if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {
-          link.setAttribute('aria-label', 'Link');}
-      });
-    };
-
-    // Add skip links;
-    const addSkipLinks = () => {const skipLinks = document.createElement('div');
-      skipLinks.const innerHTML = `<a href="#main-content" class="sr-only focus: not-sr-only focus: absolute,
-  focus: top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded-lg z-50"   /></a>
-          Skip to main content;
-    <><  />
-=======
       const links = document.querySelectorAll('a:not([aria-label])');
         links.forEach((link) => {
         if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {
@@ -237,14 +120,12 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode ,}> = ({ child
         </a>
         <a href="#navigation" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-48 bg-purple-600 text-white px-4 py-2 rounded-lg z-50">
           Skip to navigation
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         </a>
         <a href="#navigation" class="sr-only focus:not-sr-only focus: absolute,
   focus: top-4 focus:left-48 bg-purple-600 text-white px-4 py-2 rounded-lg z-50"></a>
           Skip to navigation;
         </a>`;
       document.body.insertBefore(skipLinks, document.body.firstChild);};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 
     // Add reduced motion support
     const addReducedMotionSupport = () => {
@@ -267,16 +148,6 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode ,}> = ({ child
     // Initialize all accessibility features
     addSkipLink();
     addFocusIndicators();
-<<<<<<< HEAD
-    addAriaLandmarks();
-    addKeyboardNavigation();
-    addHighContrastSupport();
-    addReducedMotionSupport();
-  }, []);
-
-<<<<<<< HEAD
-  return null;
-=======
 import React from 'react';
 interface AccessibilityenhancerProps {
   className?: string;
@@ -288,94 +159,24 @@ export default function Accessibilityenhancer({ className = '', children, ...pro
       {children}
     </div>
   );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
 }
-=======
 'use client'
 import React, { useEffect } from 'react'
-=======
 import React from 'react';
-=======
   return <React.Fragment>{children}</React.Fragment>;
-=======
 import React from 'react';
 
 const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return <>{children}</>;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 
-<<<<<<< HEAD
-=======
 import React from 'react';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 const AccessibilityEnhancer: React.FC = () => {
   return (
     <div className="accessibilityenhancer">
       <h2>AccessibilityEnhancer</h2>
-<<<<<<< HEAD
-      <p>AccessibilityEnhancer component.</p>
-    </div>
-  );
-};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-
-interface AccessibilityEnhancerProps {
-  enableKeyboardNavigation?: boolean
-  enableScreenReader?: boolean
-  enableHighContrast?: boolean
-  enableFocusIndicators?: boolean
-}
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  enableKeyboardNavigation = true,
-  enableScreenReader = true,
-  enableHighContrast = false,
-  enableFocusIndicators = true
-}) => {
-  useEffect(() => {
-    if (enableKeyboardNavigation && typeof window !== 'undefined') {
-      const handleKeyDown = (event: KeyboardEvent) => {
-        // Skip to main content
-        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-          const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement
-          if (skipLink) {
-            skipLink.focus()
-            event.preventDefault()
-          }
-        }
-      }
-
-      document.addEventListener('keydown', handleKeyDown)
-      return () => document.removeEventListener('keydown', handleKeyDown)
-    }
-  }, [enableKeyboardNavigation])
-
-  useEffect(() => {
-    if (enableHighContrast && typeof window !== 'undefined') {
-      document.documentElement.classList.add('high-contrast')
-      return () => document.documentElement.classList.remove('high-contrast')
-    }
-  }, [enableHighContrast])
-
-  useEffect(() => {
-    if (enableFocusIndicators && typeof window !== 'undefined') {
-      document.documentElement.classList.add('focus-visible')
-      return () => document.documentElement.classList.remove('focus-visible')
-    }
-  }, [enableFocusIndicators])
-
-  return null
-}
-
-export default AccessibilityEnhancer
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
-=======
 export default AccessibilityEnhancer;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
     addAriaLabels();
     addSkipLinks();
 
@@ -387,16 +188,9 @@ export default AccessibilityEnhancer;
 };
 
 export default AccessibilityEnhancer;
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
       <p>Component content coming soon.</p>
     </div>
   );
 };
 
 export default AccessibilityEnhancer;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

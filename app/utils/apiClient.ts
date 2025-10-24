@@ -1,54 +1,21 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Apiclient utility functions
-export function apiclient() {
-  // Implementation here
-  return null;
-=======
-=======
 export const apiClient = new APIClient(process.env.NEXT_PUBLIC_API_URL || '/api');
 export type {RequestConfig, APIResponse};
 export {APIError};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 /**
  * API Client Utility
  * Provides a centralized API client with error handling and caching
  */
 
-<<<<<<< HEAD
-import { apiCache } from './apiCache';
-
-interface RequestConfig {}
-=======
 export interface RequestConfig {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
   headers?: Record<string, string>;</string></<<<string>body</string></string>?: any;
   cache?: boolean;
   cacheTTL?: number;
 }
 
-<<<<<<< HEAD
-interface APIResponse<T = any> {}
-  data: T,
-  status: number,
-  statusText: string,
-  headers: Record<string, string>;</strin>
-}
-
-<<<<<<< HEAD
-class APIClient {}
-  private baseURL: string,
-  private defaultHeaders: Record<string, string>;
-=======
   status?: number;
   code?: string;
 
-=======
 export interface APIResponse<T = unknown> {
   data: T;
   status: number;
@@ -62,7 +29,6 @@ export class APIError extends Error {
     public status: number,
     public response?: Response
   ) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
     super(message);
     this.name = 'APIError';
   }
@@ -70,16 +36,11 @@ export class APIError extends Error {
 
 export class APIClient {
   private baseURL: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   private defaultHeaders: Record<string, string>;
   private cache: Map<string, { data: unknown; timestamp: number; ttl: number }> = new Map();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
   private defaultHeaders: Record<string, string   />;
   private cache: Map<string, {data: unknown; timestamp: number; ttl: number}   /> = new Map();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 
   constructor(baseURL: string = '', defaultHeaders: Record<string, string> = {}) {}
     this.baseURL = baseURL;
@@ -94,7 +55,6 @@ export class APIClient {
     config: RequestConfig = {,}
   ): Promise<APIResponse<T>> {}
     const {}
-=======
   private defaultHeaders: Record<string, string>;
 
   constructor(baseURL: string) {
@@ -109,33 +69,20 @@ export class APIClient {
     config: RequestConfig = {}
   ): Promise<APIResponse<T>> {
     const {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
       method = 'GET',
       headers = {},
       body,
       cache = false,
-<<<<<<< HEAD
-      cacheTTL;
-    } = config;
-
-<<<<<<< HEAD
-    const url = `${this.baseURL}${endpoint}`;
-    const cacheKey = apiCache.generateKey(url, body);
-=======
     const url={`${this.baseURL}${endpoint}`};
     const cacheKey={`${method}:${url}:${JSON.stringify(body || {})}`};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
     // Check cache for GET requests;
     if (method === 'GET' && cache) {
-=======
 /**
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     // Check cache for GET requests
     if (method === 'GET' && cache) {}
       const cachedData = apiCache.get(cacheKey);
       if (cachedData) {}
-=======
       cacheTTL = 300000
     } = config;
 
@@ -146,33 +93,10 @@ export class APIClient {
     if (method === 'GET' && cache) {
       const cachedData = this.getFromCache<T>(cacheKey);
       if (cachedData) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
         return cachedData;
       }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    try {
-      const response = await fetch(url, {)
-        method)
-        headers: {,
-          ...this.defaultHeaders),
-          ...headers;
-        })
-        body: body ? JSON.stringify(body) : undefined;
-      const data = await response.json();
-
-      const apiResponse: APIResponse<T> = {
-        data;
-        status: response.status;
-        statusText: response.statusText;
-        headers: Object.fromEntries(response.headers.entries()),};
-
-      // Cache successful GET requests;
-      if (method === 'GET' && cache && response.ok) {
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     try {}
       const response = await fetch(url, {)}
         method,
@@ -181,14 +105,12 @@ export class APIClient {
           ...headers
         },
         body: body ? JSON.stringify(body) : undefined
-=======
     try {
       const response = await fetch(url, {
         method,
         headers: { ...this.defaultHeaders, ...headers },
         body: body ? JSON.stringify(body) : undefined,
       });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 
       if (!response.ok) {
         throw new APIError(
@@ -200,26 +122,7 @@ export class APIClient {
 
       const data = await response.json();
 
-<<<<<<< HEAD
-      const apiResponse: APIResponse<T> = {,}
-        data,
-        status: response.status,
-        statusText: response.statusText,
-        headers: Object.fromEntries(response.headers.entries()),
-      };
-
-      // Cache successful GET requests
-      if (method === 'GET' && cache && response.ok) {}
-        apiCache.set(cacheKey, apiResponse, cacheTTL);
-      }
-
-      return apiResponse;
-    } catch (error) {}
-<<<<<<< HEAD
-      throw new Error(`API request failed: ${error instanceof Error ? error.message : 'Unknown error',}`);
-=======
       throw new Error(`API request failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
  * Enhanced API Client with retry logic, caching, and error handling;
  */
 export interface ApiClientConfig {/* TODO: Fix JSX expression */,}
@@ -236,11 +139,7 @@ class ApiClient {/* TODO: Fix JSX expression */,}
   private,
   abortControllers: Map<string, AbortController> = new Map();
   constructor(confi)
-<<<<<<< HEAD
-  g: ApiClientConfig = {,}) {/* TODO: Fix JSX expression */,}
-=======
   g: ApiClientConfig = {}) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       },
       cacheOption,
   s: config.cacheOptions;
@@ -249,72 +148,26 @@ class ApiClient {/* TODO: Fix JSX expression */,}
   /**
    * GET request;
    */
-<<<<<<< HEAD
-  async get<T = unknown>(ur,
-  l: string,
-    confi,
-  g: Omit<RequestConfig, 'url' | 'method' | 'body'> = {})
-  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}
-    });
-=======
     return this.request<T>(endpoint, {...config, method: 'GET'});
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   }
   /**
    * POST request;
    */
-<<<<<<< HEAD
-  async post<T = unknown>(ur,
-  l: string,
-    data?: unknown,
-    confi,
-  g: Omit<RequestConfig, 'url' | 'method'> = {})
-  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}
-    });
-=======
     return this.request<T>(endpoint, {...config, method: 'POST', body});
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   }
   /**
    * PUT request;
    */
-<<<<<<< HEAD
-  async put<T = unknown>(ur,
-  l: string,
-    data?: unknown,
-    confi,
-  g: Omit<RequestConfig, 'url' | 'method'> = {})
-  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}
-    });
-=======
     return this.request<T>(endpoint, {...config, method: 'PUT', body});
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   }
   /**
    * DELETE request;
    */
-<<<<<<< HEAD
-  async delete<T = unknown>(ur,
-  l: string,
-    confi,
-  g: Omit<RequestConfig, 'url' | 'method' | 'body'> = {})
-  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}
-    });
-=======
     return this.request<T>(endpoint, {...config, method: 'DELETE'});
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   }
   /**
    * PATCH request;
    */
-<<<<<<< HEAD
-  async patch<T = unknown>(ur,
-  l: string,
-    data?: unknown,
-    confi,
-  g: Omit<RequestConfig, 'url' | 'method'> = {})
-  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}
-=======
     return this.request<T>(endpoint, {...config, method: 'PATCH', body});
   }
 
@@ -336,18 +189,13 @@ class ApiClient {/* TODO: Fix JSX expression */,}
    * Set data in cache;
    */
       ttl;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
     });
   }
   /**
    * Main request method with retry logic;
    */
   private async request<T>(confi)
-<<<<<<< HEAD
-  g: RequestConfig,): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}
-=======
   g: RequestConfig): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       headers = {},
       cacheOption,
   s: cacheConfig,
@@ -420,11 +268,7 @@ class ApiClient {/* TODO: Fix JSX expression */,}
    */
   cancel(ur,
   l: string, metho)
-<<<<<<< HEAD
-  d: string = 'GET'): void {/* TODO: Fix JSX expression */,}`
-=======
   d: string = 'GET'): void {/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     const cacheKey = `${method}:${url}`;
     const controller = this.abortControllers.get(cacheKey);
     if (controller) {/* TODO: Fix JSX expression */,}
@@ -441,11 +285,7 @@ class ApiClient {/* TODO: Fix JSX expression */,}
    * Update default config;
    */
   setConfig(confi)
-<<<<<<< HEAD
-  g: Partial<ApiClientConfig>): void {/* TODO: Fix JSX expression */,}
-=======
   g: Partial<ApiClientConfig>): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
         ...(config.headers || {})
       }
     };
@@ -454,11 +294,7 @@ class ApiClient {/* TODO: Fix JSX expression */,}
    * Set authorization header;
    */
   setAuthToken(toke)
-<<<<<<< HEAD
-  n: string,): void {/* TODO: Fix JSX expression */,}`
-=======
   n: string): void {/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     this.config.headers['Authorization'] = `Bearer ${token}`;
   }
   /**
@@ -470,27 +306,16 @@ class ApiClient {/* TODO: Fix JSX expression */,}
    * Delay helper;
    */
   private delay(m)
-<<<<<<< HEAD
-  s: number,): Promise<void> {/* TODO: Fix JSX expression */,}
-=======
   s: number): Promise<void> {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   }
   /**
    * Health check;
    */
   async healthCheck(endpoin)
-<<<<<<< HEAD
-  t: string = '/health'): Promise<boolean> {/* TODO: Fix JSX expression */,}
-  s: 1; });
-      return response.status === 200;
-    } catch {/* TODO: Fix JSX expression */,}
-=======
   t: string = '/health'): Promise<boolean> {/* TODO: Fix JSX expression */}
   s: 1 });
       return response.status === 200;
     } catch {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     }
   }
 
@@ -514,21 +339,6 @@ class ApiClient {/* TODO: Fix JSX expression */,}
     return this.makeRequest<T>(endpoint, { ...config, method: 'DELETE' ,});
   }
 
-<<<<<<< HEAD
-  // Set base URL;
-  setBaseURL(baseURL: string,): void {,
-    this.baseURL = baseURL;
-  }
-
-  // Set default headers;
-  setDefaultHeaders(headers: Record<string, string>): void {
-    this.defaultHeaders = { ...this.defaultHeaders, ...headers };
-  }
-
-  // Clear cache;
-  clearCache(): void {
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   // Set base URL
   setBaseURL(baseURL: string,): void {,}
     this.baseURL = baseURL;
@@ -542,7 +352,6 @@ class ApiClient {/* TODO: Fix JSX expression */,}
   // Clear cache
   clearCache(): void {}
     apiCache.clear();
-=======
       const apiResponse: APIResponse<T> = {
         data,
         status: response.status,
@@ -574,19 +383,8 @@ class ApiClient {/* TODO: Fix JSX expression */,}
 
   private setCache(): void {
     // Implementation would depend on your caching strategy
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
   }
 }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-// Create singleton instance;
-export const apiClient = new APIClient();
-
-<<<<<<< HEAD
-export default APIClient;
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 // Create default instance;
 const apiClient = new ApiClient({/* TODO: Fix JSX expression */,}
   })
@@ -595,21 +393,10 @@ const apiClient = new ApiClient({/* TODO: Fix JSX expression */,}
 export { apiClient };
 export default ApiClient;
 `
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
 // Default API client instance;
 
 // Export types and classes;
     <  />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 export const apiClient = new APIClient(process.env.NEXT_PUBLIC_API_URL || '/api');
 export type { RequestConfig, APIResponse };
 export { APIError };
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

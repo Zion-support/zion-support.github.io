@@ -1,18 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async';
 import { Bot, MessageSquare, Users, BarChart, TrendingUp, Clock, Star, CheckCircle } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03cc
-=======
 'use client';
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -100,21 +90,6 @@ const AICustomerSupportBotPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">Ai Customer Support Bot</h1>
-        <p className="text-gray-300 mb-8">Coming Soon - Advanced ai customer support bot solutions</p>
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-          Contact Us
-        </a>
-      </div>
-    </div>
-  );
-};
-
-export default AiCustomerSupportBotPage;
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
         <title>AI Customer Support Bot | Zion Tech Group</title>
@@ -196,4 +171,3 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, BarChart, Calendar, Target, ArrowRight, Phone, Mail, MapPin, Brain, Cpu, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, MessageSquare, Headphones, Globe, Languages } from 'lucide-react';
 
 export default AICustomerSupportBotPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

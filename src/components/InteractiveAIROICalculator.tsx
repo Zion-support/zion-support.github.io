@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Component() {
-=======
 'use client';
 import React, { useState } from 'react';
 const InteractiveAIROICalculator: React.FC = () => {
@@ -11,32 +5,19 @@ const InteractiveAIROICalculator: React.FC = () => {
   const [efficiencyGain, setEfficiencyGain] = useState(70);
   const [timeframe, setTimeframe] = useState(12);
   const calculateROI = () => {
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
     const annualSavings = (currentCost * efficiencyGain) / 100;
     const totalSavings = annualSavings * (timeframe / 12);
     const roi = ((totalSavings - currentCost) / currentCost) * 100;
     return Math.max(0, roi);
   };
   const roi = calculateROI();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
   return (
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
     </div>
-=======
           AI ROI Calculator;
-=======
     <section className='bg-white py-16 rounded-2xll shadow-lg'>
       <div className='container mx-auto px-4'>
         <h2 className='text-4xl font-bold text-center text-gray-900 mb-8'>
@@ -47,7 +28,6 @@ const InteractiveAIROICalculator: React.FC = () => {
             <div className='space-y-6'>
               <div>
                 <label className='block text-sm font-medium text-gray-700 mb-2'>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                   Current Annual Cost ($)
 
  setCurrentCost(Number(e.target.value))}
@@ -67,9 +47,6 @@ const InteractiveAIROICalculator: React.FC = () => {
                   <option value={12}>12 months</option>
                   <option value={18}>18 months</option>
                   <option value={24}>24 months</option>
-<<<<<<< HEAD
-                Your ROI Projection;
-=======
                 </select>
               </div>
             <div className='bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xll'>
@@ -78,11 +55,8 @@ const InteractiveAIROICalculator: React.FC = () => {
               </h3>
               <div className='text-center'>
                 <div className='text-6xl font-bold text-blue-600 mb-4'>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                   {roi.toFixed(0)}%
                   Expected return on investment over {timeframe} months;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 import React, { useState } from 'react';
 
 interface InteractiveAIROICalculatorProps {
@@ -141,6 +115,5 @@ export default function InteractiveAIROICalculator({ className = '' }: Interacti
         </div>
       </div>
     </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
   );
 }

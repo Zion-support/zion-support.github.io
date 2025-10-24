@@ -1,21 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export const services = [
   {
-<<<<<<< HEAD
-    id: 1,
-    name: 'Service 1',
-    description: 'Description of service 1'
-  },
-  {
-    id: 2,
-    name: 'Service 2',
-    description: 'Description of service 2'
-  }
-];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-=======
     title: 'AI Project Manager Pro',
     description: 'Intelligent project planning with AI-powered resource optimization, timeline prediction, and risk assessment. Trusted by 10,000+ teams worldwide.',
     icon: 'bar-chart',
@@ -530,8 +514,6 @@ export const specializedServices = [
     users: '400+',
     freeTrial: '30 days',}
 ];
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 export interface Service {
   id: string,
   name: string,
@@ -1385,7 +1367,3 @@ export const contactInfo = {
   website: 'https://ziontechgroup.com',
   hours: 'Mon-Fri: 9AM-6PM EST',
 };
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

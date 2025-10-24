@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Sitemapgenerator utility functions
-export function sitemapgenerator() {
-  // Implementation here
-  return null;
-=======
 export const generateSitemap = useCallback((...args) => {
   const baseUrl = 'https: //ziontechgroup.com',
   const staticPages = [,
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 export const generateSitemap = useCallback((...args) => {}
   const baseUrl = 'https://ziontechgroup.com'
   const staticPages = [
@@ -54,13 +44,7 @@ export const generateSitemap = useCallback((...args) => {}
     '/productivity'
   ]
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
-  ${staticPages.map(page =>),
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-=======
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   ${staticPages.map(page =>)}
   <url>}
     <loc>${baseUrl}${page}</loc>
@@ -84,11 +68,7 @@ Disallow: /api/,
 Disallow: /_next/,
 Disallow: /private/`;}
 }
-<<<<<<< HEAD
-export interface SitemapEntry {/* TODO: Fix JSX expression */,}
-=======
 export interface SitemapEntry {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 }
 export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expression */,}
   l: `${baseUrl,}/`,
@@ -229,11 +209,6 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
 };
 export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */,}
 };`
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
 // Utility file: sitemapGenerator
 
 export interface SitemapEntry {
@@ -293,4 +268,3 @@ Sitemap: https://ziontechgroup.com/sitemap.xml`;
 }
 
 export const sitemapGenerator = new SitemapGenerator();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

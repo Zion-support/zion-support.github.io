@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';

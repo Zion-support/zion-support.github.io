@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-=======
 'use client';
 /**
  * Enhanced Performance Hook
@@ -19,10 +9,6 @@ export interface UseEnhancedPerformanceOptions {
   trackPerformance?: boolean;
   trackAnalytics?: boolean;
 }
-<<<<<<< HEAD
-export function useEnhancedPerformance(__options: UseEnhancedPerformanceOptions = {}) {
-  const {
-=======
 export function useEnhancedPerformance(__option)
   s: UseEnhancedPerformanceOptions = {}) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -30,7 +16,6 @@ export function useEnhancedPerformance(__option)
   const {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     component = 'Unknown',
     trackErrors = true,
     trackPerformance = true,
@@ -78,26 +63,10 @@ export function useEnhancedPerformance(__option)
       );
     }
   });
-<<<<<<< HEAD
-  const trackError = useCallback(
-    (error: Error, context?: Record<string, unknown>) => {
-      if (trackErrors) {
-        errorTracker.trackError(error, {
-          component,
-          ...context
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
         });
       }
     },
-<<<<<<< HEAD
-    [component, trackErrors]
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
-  );
-<<<<<<< HEAD
-}
-=======
     [component, trackErrors])
   const trackUserAction = useCallback()
     (actio,
@@ -110,13 +79,11 @@ export function useEnhancedPerformance(__option)
   O: Add content;}
 }
       const markName = `${component}-${operationName}`;
-=======
 
         analytics.trackCustomEvent('User Action', action, component, undefined, metadata);
     [component, trackAnalytics]
   );
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
       const startTime = performance.now();
       return {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -140,4 +107,3 @@ analytics.trackPerformance(
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

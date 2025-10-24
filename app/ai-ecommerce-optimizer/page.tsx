@@ -1,634 +1,81 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+'use client';
+import React from 'react';
+import Link from 'next/link';
+import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
-export default function GDataAnalyticsZionTechGroupPage() {
+export default function AiEcommerceOptimizerPage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gray-900 text-white">
-=======
-    <React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-      <Helmet>
-        <title>Ai Ecommerce Optimizer - Zion Tech Group</title>
-        <meta name="description" content="Ai Ecommerce Optimizer solutions by Zion Tech Group" />
-      </Helmet>
-<<<<<<< HEAD
-      
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold mb-8">Ai Ecommerce Optimizer</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive ai ecommerce optimizer solutions designed to meet your business needs.
-          </p>
-<<<<<<< HEAD
+        <p className="text-xl text-gray-300 mb-8">
+          Discover our comprehensive ai ecommerce optimizer solutions designed to meet your business needs.
+        </p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-12">
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Brain className="h-12 w-12 text-blue-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">AI-Powered Solutions</h3>
+            <p className="text-gray-300">
+              Leverage artificial intelligence to automate and optimize your business processes.
+            </p>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-=======
-
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Ecommerce Optimizer
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced AI-powered ai ecommerce optimizer solution for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Demo
-              </button>
-            </div></div></div></div></div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results
-              </p>
-            </div></div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div></div></div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our Solution?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency
-              </p>
-            </div></div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div></div></div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div></div></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-            </div>
-          </div>
-        </div>
-      </div>
-=======
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-      </div>
-      <Footer />
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
-    </div>
-=======
-    </React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-  );
-}
-=======
-const AIEcommerceOptimizerPage: React.FC = () => {
-  const features = [
-    {
-      icon: BarChart;
-      title: 'AI-Powered Analytics',
-      description: 'Advanced machine learning algorithms analyze customer behavior, purchase patterns, and market trends to optimize your e-commerce strategy.',
-      benefits: ['Real-time insights', 'Predictive analytics', 'Customer segmentation', 'Performance tracking']
-    },
-    {
-      icon: Target;
-      title: 'Smart Product Recommendations',
-      description: 'Intelligent recommendation engine that increases conversion rates by suggesting relevant products to customers.',
-      benefits: ['Personalized suggestions', 'Cross-selling optimization', 'Upselling strategies', 'Customer retention']
-    },
-    {
-      icon: Zap;
-      title: 'Automated Pricing Optimization',
-      description: 'Dynamic pricing strategies that adjust product prices based on demand, competition, and market conditions.',
-      benefits: ['Competitive pricing', 'Profit maximization', 'Demand forecasting', 'Price elasticity analysis']
-    },
-    {
-      icon: Users;
-      title: 'Customer Journey Optimization',
-      description: 'AI-driven customer journey mapping and optimization to improve user experience and increase conversions.',
-      benefits: ['Journey mapping', 'Funnel optimization', 'A/B testing', 'Conversion tracking']
-    },
-    {
-      icon: Shield;
-      title: 'Fraud Detection & Prevention',
-      description: 'Advanced fraud detection system that protects your business from fraudulent transactions and chargebacks.',
-      benefits: ['Real-time monitoring', 'Risk assessment', 'Chargeback prevention', 'Security alerts']
-    },
-    {
-      icon: Globe;
-      title: 'Multi-Channel Optimization',
-      description: 'Seamless optimization across all sales channels including web, mobile, social media, and marketplaces.',
-      benefits: ['Omnichannel strategy', 'Channel performance', 'Unified analytics', 'Cross-platform optimization']
-    }
-  ];
-
-  const optimizationAreas = [
-    {
-      title: 'Product Catalog Management',
-      description: 'AI-powered product categorization, tagging, and optimization for better searchability and discoverability.',
-      icon: Package;
-      metrics: ['40% faster product setup', '60% better search ranking', '35% increased visibility']
-    },
-    {
-      title: 'Inventory Optimization',
-      description: 'Smart inventory management with demand forecasting and automated reorder points.',
-      icon: Database;
-      metrics: ['50% reduction in stockouts', '30% lower inventory costs', '25% improved turnover']
-    },
-    {
-      title: 'Search & Filter Enhancement',
-      description: 'Intelligent search algorithms and dynamic filtering to help customers find products quickly.',
-      icon: Search;
-      metrics: ['45% faster product discovery', '55% improved search accuracy', '40% higher engagement']
-    },
-    {
-      title: 'Checkout Process Optimization',
-      description: 'Streamlined checkout experience with AI-powered form completion and payment optimization.',
-      icon: CreditCard;
-      metrics: ['35% reduction in cart abandonment', '50% faster checkout', '25% higher completion rate']
-    },
-    {
-      title: 'Mobile Experience Enhancement',
-      description: 'Mobile-first optimization with responsive design and touch-friendly interfaces.',
-      icon: Mobile;
-      metrics: ['60% better mobile performance', '45% increased mobile conversions', '30% faster load times']
-    },
-    {
-      title: 'Customer Support Automation',
-      description: 'AI-powered chatbots and automated support systems for 24/7 customer assistance.',
-      icon: Bot;
-      metrics: ['80% faster response times', '70% customer satisfaction', '50% reduced support costs']
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$99/month',
-      description: 'Perfect for small e-commerce businesses',
-      features: [
-        'Up to 1,000 products',
-        'Basic analytics dashboard',
-        'Standard recommendations',
-        'Email support',
-        'Mobile optimization',
-        'Basic fraud detection'
-      ],
-      popular: false;
-    },
-    {
-      name: 'Professional',
-      price: '$299/month',
-      description: 'Ideal for growing online stores',
-      features: [
-        'Up to 10,000 products',
-        'Advanced analytics & insights',
-        'AI-powered recommendations',
-        'Priority support',
-        'Multi-channel optimization',
-        'Advanced fraud detection',
-        'A/B testing tools',
-        'Custom integrations'
-      ],
-      popular: true;
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      description: 'For large-scale e-commerce operations',
-      features: [
-        'Unlimited products',
-        'Custom AI models',
-        'Dedicated account manager',
-        '24/7 phone support',
-        'White-label solutions',
-        'Advanced security features',
-        'Custom reporting',
-        'API access',
-        'On-premise deployment'
-      ],
-      popular: false;
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'TechGear Store',
-      role: 'E-commerce Director',
-      content: 'AI E-commerce Optimizer increased our conversion rate by 45% and reduced cart abandonment by 35%. The AI recommendations are incredibly accurate.',
-      rating: 5;
-    },
-    {
-      name: 'Michael Chen',
-      company: 'Fashion Forward',
-      role: 'CEO',
-      content: 'The pricing optimization feature alone paid for itself in the first month. We saw a 30% increase in profit margins.',
-      rating: 5;
-    },
-    {
-      name: 'Emily Rodriguez',
-      company: 'Home & Garden Plus',
-      role: 'Marketing Manager',
-      content: 'The customer journey optimization helped us understand our customers better and increased our average order value by 25%.',
-      rating: 5;
-    }
-  ];
-
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Navigation />
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4"></section>
-        <div className="container mx-auto max-w-6xl"></div>
-          <div className="text-center mb-16"></div>
-            <div className="inline-flex items-center space-x-2 bg-cyan-400/10 text-cyan-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
-        <div className="container mx-auto max-w-6xl"></section>
-          <div className="text-center mb-16"></div>
-            <div className="inline-flex items-center space-x-2 bg-cyan-400/10 text-cyan-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
-              <Brain className="w-4 h-4" />
-              <span>AI-Powered E-commerce Optimization</span>
-            </div>)
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">)
-              AI E-commerce <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Optimizer</span>)
-            </h1>)
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">),
-              Transform your online store with AI-powered optimization. Increase conversions, reduce cart abandonment)
-              and maximize revenue with intelligent automation and analytics.
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-              <a href="/contact" className="cyber-button px-8 py-4 text-lg"></a>
-                Get Started Today;
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </a>
-              <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg"></a>
-                View Demo;
-              </a>
-            </div>,
-          </div>,
-,
-          {/* Key Metrics */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"></div>
-            <div className="text-center"></div>
-              <div className="text-3xl font-bold text-cyan-400 mb-2">45%</div><div className="text-gray-300">Conversion Increase</div>
-            </div>
-            <div className="text-center"></div>
-              <div className="text-3xl font-bold text-purple-400 mb-2">35%</div><div className="text-gray-300">Cart Abandonment Reduction</div>
-            </div>
-            <div className="text-center"></div>
-              <div className="text-3xl font-bold text-green-400 mb-2">30%</div><div className="text-gray-300">Revenue Growth</div>
-            </div>
-            <div className="text-center"></div>
-              <div className="text-3xl font-bold text-yellow-400 mb-2">50%</div><div className="text-gray-300">Faster Checkout</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-              <div className="text-3xl font-bold text-yellow-400 mb-2">50%</div>
-              <div className="text-gray-300">Faster Checkout</div>
-            </div>,
-          </div>,
-        </div>,
-      </section>,
-,
-      {/* Features Section */}
-      <section className="py-16 px-4"></section>
-        <div className="container mx-auto max-w-6xl"></section>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl font-bold text-white mb-6">Powerful AI Features for E-commerce Success</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Our AI-powered platform provides comprehensive optimization tools to maximize your online store's performance.</p><div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-colors"></div>
-                <div className="w-12 h-12 bg-cyan-400/10 rounded-lg flex items-center justify-center mb-4"></div>
-                  <feature.icon className="w-6 h-6 text-cyan-400" />
-            <h2 className="text-4xl font-bold text-white mb-6"></h2>
-              Powerful AI Features for E-commerce Success;
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              Our AI-powered platform provides comprehensive optimization tools to maximize your online store's performance.
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Shield className="h-12 w-12 text-green-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Enterprise Security</h3>
+            <p className="text-gray-300">
+              Robust security measures to protect your data and ensure compliance.
             </p>
           </div>
-
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover: border-cyan-400/40 transition-colors">,
-                <div className="w-12 h-12 bg-cyan-400/10 rounded-lg flex items-center justify-center mb-4">,
-                  <feature.icon className="w-6 h-6 text-cyan-400" />,
-                </div>,
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p><ul className="space-y-2">{feature.benefits.map((benefit, idx) => (</ul>
-                    <li key={idx} className="flex items-center text-sm text-gray-300"></li>
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" >{benefit}</CheckCircle>
-                    </CheckCircle>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Optimization Areas */}
-      <section className="py-16 px-4 bg-slate-800/30"></section>
-        <div className="container mx-auto max-w-6xl"></section>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl font-bold text-white mb-6">Comprehensive E-commerce Optimization</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Every aspect of your online store optimized with AI for maximum performance and customer satisfaction.</p><div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{optimizationAreas.map((area, index) => (</div>
-              <div key={index} className="bg-slate-900/50 backdrop-blur-sm border border-purple-400/20 rounded-lg p-6 hover:border-purple-400/40 transition-colors"></div>
-                <div className="w-12 h-12 bg-purple-400/10 rounded-lg flex items-center justify-center mb-4"></div>
-                  <area.icon className="w-6 h-6 text-purple-400" />
-            <h2 className="text-4xl font-bold text-white mb-6"></h2>
-              Comprehensive E-commerce Optimization;
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              Every aspect of your online store optimized with AI for maximum performance and customer satisfaction.
-            </p>
-          </div>
-
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
-            {optimizationAreas.map((area, index) => (
-              <div key={index} className="bg-slate-900/50 backdrop-blur-sm border border-purple-400/20 rounded-lg p-6 hover: border-purple-400/40 transition-colors">,
-                <div className="w-12 h-12 bg-purple-400/10 rounded-lg flex items-center justify-center mb-4">,
-                  <area.icon className="w-6 h-6 text-purple-400" />,
-                </div>,
-                <h3 className="text-xl font-semibold text-white mb-3">{area.title}</h3>
-                <p className="text-gray-300 mb-4">{area.description}</p><div className="space-y-2">{area.metrics.map((metric, idx) => (</div>
-                    <div key={idx} className="flex items-center text-sm text-green-400"></div>
-                      <TrendingUp className="w-4 h-4 mr-2" >{metric}</TrendingUp>
-                    </TrendingUp>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-16 px-4"></section>
-        <div className="container mx-auto max-w-6xl"></section>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl font-bold text-white mb-6">Choose Your Optimization Plan</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Flexible pricing plans designed to scale with your business growth.</p><div className="grid md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</div><div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-lg p-8 ${
-                plan.popular
-                  ? 'border-cyan-400/40 ring-2 ring-cyan-400/20'
-                  : 'border-gray-600/50'
-              }`}>{plan.popular && (</div>
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
-                    <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
-            <h2 className="text-4xl font-bold text-white mb-6"></h2>
-              Choose Your Optimization Plan;
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              Flexible pricing plans designed to scale with your business growth.
-            </p>
-          </div>
-
-          <div className="grid md: grid-cols-3 gap-8">,
-            {pricingPlans.map((plan, index) => (
-              <div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-lg p-8 ${
-                plan.popular;
-                  ? 'border-cyan-400/40 ring-2 ring-cyan-400/20'}
-                  : 'border-gray-600/50'}
-              }`}></div>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
-                    <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium"></span>
-                      Most Popular;
-                    </span>
-                  </div>
-                )}
-                <div className="text-center mb-6"></div>
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3><div className="text-4xl font-bold text-cyan-400 mb-2">{plan.price}</div><p className="text-gray-300">{plan.description}</p><ul className="space-y-3 mb-8">{plan.features.map((feature, idx) => (</ul>
-                    <li key={idx} className="flex items-center text-gray-300"></li>
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" >{feature}</CheckCircle>
-                    </CheckCircle>
-                  ))}
-                <a href="/contact" className={`w-full block text-center py-3 px-6 rounded-lg font-medium transition-colors ${
-                  plan.popular;
-                    ? 'bg-cyan-400 text-slate-900 hover: bg-cyan-300'}
-                    : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10'}
-                }`}></a>
-                  Get Started;
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-16 px-4 bg-slate-800/30"></section>
-            <h2 className="text-4xl font-bold text-white mb-6"></h2>
-              What Our Customers Say;
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              Join thousands of successful e-commerce businesses using AI optimization.
-            </p>
-          </div>
-
-          <div className="grid md: grid-cols-3 gap-8">,
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-slate-900/50 backdrop-blur-sm border border-gray-600/50 rounded-lg p-6"></div>
-                <div className="flex items-center mb-4">{[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div></div>
-                  <div className="font-semibold text-white">{testimonial.name}<div className="text-cyan-400 text-sm">{testimonial.role}<div className="text-gray-400 text-sm">{testimonial.company}</div>
-        <div className="container mx-auto max-w-6xl"></section>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl font-bold text-white mb-6">What Our Customers Say</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Join thousands of successful e-commerce businesses using AI optimization.</p><div className="grid md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
-              <div key={index} className="bg-slate-900/50 backdrop-blur-sm border border-gray-600/50 rounded-lg p-6"></div>
-                <div className="flex items-center mb-4">{[...Array(testimonial.rating)].map((_, i) => (</div><Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div></div>
-                  <div className="font-semibold text-white">{testimonial.name}</div><div className="text-cyan-400 text-sm">{testimonial.role}</div><div className="text-gray-400 text-sm">{testimonial.company}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4"></section>
-        <div className="container mx-auto max-w-4xl text-center"></section>
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Optimize Your E-commerce Store?</h2><p className="text-xl text-gray-300 mb-8">Start your AI-powered optimization journey today and see immediate results.</p>
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <a href="/contact" className="cyber-button px-8 py-4 text-lg">Start Free Trial</a>
-              <ArrowRight className="w-5 h-5 ml-2" /></ArrowRigh>
-            <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">Schedule Demo</a>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-            <a href="/contact" className="cyber-button px-8 py-4 text-lg"></a>
-              Start Free Trial;
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </a>
-            <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg"></a>
-              Schedule Demo;
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <Footer />,
-    </div>);
-};
-
-export default AIEcommerceOptimizerPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
-import React from 'react';
-
-import {Link} from 'react-router-dom';
-import {ArrowRight} from 'lucide-react';
-
-export default function AiecommerceoptimizerPage() {
-  return (
-    <>
-      <title>5G Data Analytics - Zion Tech Group</title>
-        <title>Ai Ecommerce Optimizer - Zion Tech Group</title>
-        <h1 className="text-4 xl font-boldtext-whitemb-6">Ai Ecommerce Optimizer</h1>
-        <p className="text-lgtext-gray-300mb-8">Professional ai ecommerce optimizer services coming soon.</p>
-          Contact Us
-
-  );
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
-import React  from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function AiecommerceoptimizerPage() {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-      <Helmet>
-        <title>Ai Ecommerce Optimizer - Zion Tech Group</title>
-        <meta name="description" content="Professional ai ecommerce optimizer services by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Ai Ecommerce Optimizer</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional ai ecommerce optimizer services coming soon.</p>
           
-<<<<<<< HEAD
-          <Link
-            to="/contact"
-            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-          >
-            Contact Us
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Link>
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <Users className="h-12 w-12 text-purple-400 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">Expert Support</h3>
+            <p className="text-gray-300">
+              Dedicated support team to help you succeed with our solutions.
+            </p>
+          </div>
         </div>
-=======
-          <ArrowRight className="w-5h-5ml-2"  />
-        </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
+        
+        <div className="mt-12">
+          <h2 className="text-3xl font-bold mb-6">Why Choose Our Ai Ecommerce Optimizer Solutions?</h2>
+          <ul className="space-y-4 text-lg text-gray-300 mb-8">
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Scalable and flexible architecture
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Industry-leading performance
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              Easy integration with existing systems
+            </li>
+            <li className="flex items-center">
+              <ArrowRight className="h-5 w-5 text-blue-400 mr-3" />
+              24/7 monitoring and support
+            </li>
+          </ul>
+          
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Get Started
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+            <Link 
+              href="/services" 
+              className="inline-flex items-center px-6 py-3 border border-gray-600 text-white rounded-lg hover:bg-gray-800 transition-colors"
+            >
+              Learn More
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

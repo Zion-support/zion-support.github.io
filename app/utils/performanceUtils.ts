@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Performanceutils utility functions
-export function performanceutils() {
-  // Implementation here
-  return null;
-=======
   private observers: PerformanceObserver[] = [];
 
   constructor() {
@@ -171,18 +163,11 @@ export const measureFunction = <T extends (...args: any[]) => any>(
 };
 
 export const debounce = <T extends (...args: any[]) => any>(
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   func: T,
   wait: number,
 ): T => {
   let timeout: NodeJS.Timeout;
-<<<<<<< HEAD
-  
-  return ((...args: Parameters<T>) => {
-=======
   return (...args: Parameters<T>) => {}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   }) as T;
@@ -193,28 +178,6 @@ export const throttle = <T extends (...args: any[]) => any>(
   limit: number,
 ): T => {
   let inThrottle: boolean;
-<<<<<<< HEAD
-  
-  return ((...args: Parameters<T>) => {
-    if (!inThrottle) {
-      func(...args);
-      inThrottle = true;
-      setTimeout(() => inThrottle = false, limit);
-    }
-  }) as T;
-};
-
-export const lazyLoad = (callback: () => void): void => {
-  if ('requestIdleCallback' in window) {
-    requestIdleCallback(callback);
-  } else {
-    setTimeout(callback, 1);
-  }
-};
-
-export const preloadImage = (src: string,): Promise<void> => {
-  return new Promise((resolve, reject) => {
-=======
   return (...args: Parameters<T>) => {}
     if (!inThrottle) {}
       func(...args)
@@ -403,20 +366,10 @@ export const isInViewport = (element: Element): boolean => {}
 
 export const preloadImage = (src: string): Promise<void> => {}
   return new Promise((resolve, reject) => {}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     const img = new Image();
     img.onload = () => resolve();
     img.onerror = reject;
     img.src = src;
-<<<<<<< HEAD
-  });
-};
-
-export const preloadImages = (srcs: string[]): Promise<void[]> => {
-  return Promise.all(srcs.map(preloadImage));
-};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
 
 };
 
@@ -910,8 +863,6 @@ export const collectPerformanceMetrics = () => {
     });
   }
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
 // Utility file: performanceUtils
 
 export interface PerformanceData {
@@ -983,4 +934,3 @@ export class PerformanceUtils {
 }
 
 export const performanceUtils = new PerformanceUtils();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

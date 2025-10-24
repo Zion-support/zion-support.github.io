@@ -52,14 +52,6 @@ class AccessibilityEnhancer {private config: AccessibilityConfig;}
 
   public cleanup(): void {// Cleanup accessibility enhancements;}
   }
-<<<<<<< HEAD
-}
-
-export default AccessibilityEnhancer;`
-
-
-
-=======
   /**
    * Get accessibility report
    */
@@ -78,4 +70,3 @@ Screen Reader Score: ${metrics.screenReaderScore}/100
 `;
   }
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0468

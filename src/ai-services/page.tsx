@@ -1,15 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, Shield, BarChart } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03cc
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -49,29 +40,11 @@ const AIServicesPage: React.FC = () => {
     '300% Average ROI Increase',
     '95% Process Automation',
     '50% Cost Reduction',
-<<<<<<< HEAD
-    '99.9% Uptime Guarantee';  ];
-=======
     '99.9% Uptime Guarantee'
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 
 const AiServicesPage: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">Ai Services}</h1>
-        <p className="text-gray-300 mb-8">Coming Soon - Advanced ai services solutions</p>
-        }<a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-          Contact Us
-        </a>
-      </div>
-    }</div>;  );
-};
-
-export default AiServicesPage;
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
         <title>AI Services | Zion Tech Group</title>
@@ -423,4 +396,3 @@ export default function AIServicesPage() {
     </>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc

@@ -1,18 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function Page() {
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-=======
 import {
   Phone,
   Mail,
@@ -69,9 +57,6 @@ phone: '',
     } finally {
       setIsSubmitting(false);
     }
-<<<<<<< HEAD
-  };
-=======
 export default ContactPage;
 'use client';import React;
 'use client'
@@ -90,7 +75,6 @@ export default ContactPage;
         message: ''}
       })} catch (error) {setSubmitStatus('error')}
     } finally {setIsSubmitting(false)}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 
   const services = [
     'AI Solutions',
@@ -103,73 +87,12 @@ export default ContactPage;
     'Consulting',
     'Other'
   ];
-<<<<<<< HEAD
-
-  const contactInfo = [
-    {
-      icon: Phone,
-      title: 'Phone',
-      details: '+1 (302) 464-0950',
-      description: 'Mon-Fri 9AM-6PM EST',
-    },
-    {
-      icon: Mail,
-      title: 'Email',
-      details: 'kleber@ziontechgroup.com',
-      description: 'We respond within 24 hours',
-    },
-    {
-      icon: MapPin,
-      title: 'Address',
-      details: '123 Tech Street, Suite 100\nWilmington, DE 19801',
-      description: 'Visit our office',
-    },
-    {
-      icon: Clock,
-      title: 'Business Hours',
-      details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
-      description: 'Eastern Time',
-    }
-  ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-
-const ContactPageBroken2: React.FC = () => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-=======
     <React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
       <Helmet>
-<<<<<<< HEAD
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional services coming soon." />
-      </Helmet>
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">
-          Coming Soon
-        </h1>
-        <p className="text-lg text-gray-300 mb-8">
-          Professional services coming soon.
-        </p>
-        <Link
-          to="/contact"
-          className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-        >
-          Contact Us
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Link>
-      </div>
-    </div>
-  );
-}
-=======
         <title>Contact Us - Zion Tech Group</title>
         <meta name="description" content="Get in touch with our team for support and inquiries." />
         <meta name="keywords" content="contact, support, inquiry, help" />
       </Helmet>
-=======
   }, []);
 
   return (
@@ -208,7 +131,6 @@ const ContactPageBroken2: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">
@@ -220,28 +142,14 @@ const ContactPageBroken2: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Get in touch with our team for support and inquiries.
             </p>
-<<<<<<< HEAD
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Demo
-              </button>
-=======
 
           </div></div></div>
         </section>
 
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-<<<<<<< HEAD
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-              <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
-=======
             <div className="bg-white/10 backdrop-blur-sm rounded-2xll p-8 border border-white/20">
               <h2 className="text-2xl font-bold text-white mb-6">Send us a message</h2>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               
               {submitStatus === 'success' && (
                 <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3">
@@ -280,24 +188,6 @@ const ContactPageBroken2: React.FC = () => {
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Email Address *
                     </label>
-<<<<<<< HEAD
-                    <div className="relative">
-                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                      <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
-                        placeholder="your@email.com"
-                      />
-                    </div></div>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-=======
                     <input
                       type="email"
                       id="email"
@@ -370,7 +260,6 @@ const ContactPageBroken2: React.FC = () => {
                   </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Company
@@ -452,18 +341,6 @@ const ContactPageBroken2: React.FC = () => {
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
                 >
                   {isSubmitting ? (
-<<<<<<< HEAD
-                    <>
-                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                      <span>Sending...</span>
-                    </React.Fragment>
-                  ) : (
-                    <React.Fragment>
-                      <Send className="w-5 h-5" />
-                      <span>Send Message</span>
-                    </React.Fragment>
-                  )}
-=======
   ];return (
     <React.Fragment   /></React.Fragment>
       <Helmet></Helmet>
@@ -556,8 +433,6 @@ const ContactPageBroken2: React.FC = () => {
                       <span>Sending...</span>
                       <span>Send Message</span>
   )}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                       Sending...
 
@@ -567,7 +442,6 @@ const ContactPageBroken2: React.FC = () => {
 
                     </React.Fragment>
                   )}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                 </button>
               </form>
             </div>
@@ -575,11 +449,6 @@ const ContactPageBroken2: React.FC = () => {
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
-<<<<<<< HEAD
-                <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
-                <p className="text-lg text-gray-300 mb-8">
-                  We're here to help! Reach out to us through any of these channels 
-=======
                 <h2 className="text-2xl font-bold text-white mb-6">Get in touch</h2>
                 <p className="text-gray-300 mb-8">
                   Ready to transform your business with cutting-edge AI and IT solutions? 
@@ -595,10 +464,8 @@ const ContactPageBroken2: React.FC = () => {
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
                     <p className="text-gray-300">kleber@ziontechgroup.com</p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                   and we'll get back to you as soon as possible.
                 </p>
-=======
 
                 <h2 className="text-3 xl font-boldtext-whitemb-6">Contact Information</h2>
                   We're here to help! Reach out to us through any of these channels
@@ -606,7 +473,6 @@ const ContactPageBroken2: React.FC = () => {
                   and we'll get back to you as soon as possible.
 
               {/* Contact Information */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 
               </div></div>
 
@@ -616,39 +482,6 @@ const ContactPageBroken2: React.FC = () => {
                   <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
                   <p className="text-gray-300 mb-8">
                     We're here to help you transform your business with cutting-edge AI and technology solutions.
-<<<<<<< HEAD
-                  </p>
-                </div></div>
-
-                <div className="space-y-6">
-                  <div className="flex items-center">
-<<<<<<< HEAD
-                    <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4">
-                      <Phone className="w-6 h-6 text-white" />
-                    </div></div></div>
-                    <div>
-<h3 className="text-lg font-semibold text-white mb-1">
-                        {info.title}
-                      </h3>
-                      <p className="text-cyan-400 font-medium mb-1">
-                        {info.details}
-                      </p>
-                      <p className="text-gray-300 text-sm">
-                        {info.description}
-                      </p>
-
-                    </div>
-                  </div>
-
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4">
-                      <Mail className="w-6 h-6 text-white" />
-                    </div></div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white">Email</h3>
-                      <p className="text-gray-300">info@ziontechgroup.com</p>
-                    </div>
-=======
                     <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-centerjustify-centermr-4">
                       <Phone className="w-6h-6text-white" />
                     </div>
@@ -662,7 +495,6 @@ const ContactPageBroken2: React.FC = () => {
                 <div className="flex items-start space-x-4">
                   <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Phone className="w-6 h-6 text-white" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                   </div>
 
                   <div className="flex items-center">
@@ -686,7 +518,6 @@ const ContactPageBroken2: React.FC = () => {
                   </div>
                 </div>
               </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
             </div>
           </div>
         </section>
@@ -696,10 +527,6 @@ const ContactPageBroken2: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default ContactPageBroken2;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-=======
 
                       className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus: outline-nonefocus:border-cyan-500resize-none"
                       placeholder="Tell us about your project, goals, or any questions you have..."
@@ -721,7 +548,6 @@ export default ContactPageBroken2;
                 <h2 className="text-3 xl font-boldtext-whitemb-6">Contact Information</h2>
                   We're here to help! Reach out to us through any of these channels
 
-=======
 export default ContactPage;
                     </>}
 
@@ -735,15 +561,10 @@ export default ContactPage;
                 <h2 className="text-3 xl font-bold text-white mb-6"  >Contact Information</h2>
                 <p className="text-lg text-gray-300 mb-8">
               We're here to help! Reach out to us through any of these channels
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                   and we'll get back to you as soon as possible.
                 </p>
               </div>
               {/* Contact Information */}
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
               <div className="space-y-8"></div>
                 <div /></div>
                   <h2 className="text-3 xl font-bold text-white mb-6"  >Get in Touch</h2>
@@ -833,4 +654,3 @@ export default ContactPage
         </section>
       </div>
 ;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

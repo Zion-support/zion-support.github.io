@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-=======
 export default getErrorBoundaryConfig;
 /**
  * Error Boundary Configuration;
@@ -71,6 +61,5 @@ export default getErrorBoundaryConfig;
  (window.location.href = '/')}
             className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors"
             Go Home;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   );
 }

@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 
 interface AnalyticsContextType {
@@ -26,7 +20,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   useEffect(() => {
     // Initialize Google Analytics
     if (typeof window !== 'undefined' && trackingId !== 'G-XXXXXXXXXX') {
-=======
 'use client';
 import React, { useEffect } from 'react';
 
@@ -36,27 +29,16 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
     const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
     
     const initAnalytics = () => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
       // Load Google Analytics script
       const script = document.createElement('script');
       script.async = true;
-<<<<<<< HEAD
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
-=======
       script.src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       document.head.appendChild(script);
 
       // Initialize gtag
-<<<<<<< HEAD
-      window.dataLayer = window.dataLayer || [];
-      function gtag(...args: any[]) {
-        window.dataLayer.push(args);
-=======
       (window as any).dataLayer = (window as any).dataLayer || [];
       function gtag(...args: unknown[]) {
         (window as any).dataLayer.push(args);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
       }
       window.gtag = gtag;
 
@@ -109,21 +91,12 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
     track,
     page,
     identify};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 
 export default function Component() {
   return (
-<<<<<<< HEAD
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-=======
     <AnalyticsContext.Provider value={value}></AnalyticsContext>
       {children}
     </AnalyticsContext.Provider>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 
 interface AnalyticsContextType {
@@ -172,10 +145,8 @@ export default function AnalyticsProvider({ children }: AnalyticsProviderProps) 
     <AnalyticsContext.Provider value={{ trackEvent, trackPageView }}>
       {children}
     </AnalyticsContext.Provider>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
   );
 }
-=======
 export default AnalyticsProvider;
   const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
 
@@ -202,17 +173,12 @@ export default AnalyticsProvider;
     // Track user interactions;
         const target = e.target as HTMLElement;
           const text = target.textContent?.trim() || '';
-<<<<<<< HEAD
-          const href = target.getAttribute('href') || '';
-              value: href;
-=======
           const href = (target as HTMLAnchorElement).href || target.getAttribute('href') || '';
           if ((window as { gtag: unknown }).gtag) {
             (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'click', {
               event_category: 'engagement',
               event_label: text,
               value: href
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
             });
       });
       // Track form submissions;
@@ -222,9 +188,6 @@ export default AnalyticsProvider;
       });
       // Track phone number clicks;
         const target = e.target as HTMLElement;
-<<<<<<< HEAD
-              value: target.getAttribute('href')
-=======
         const href = (target as HTMLAnchorElement).href || target.getAttribute('href') || '';
         if (href && href.startsWith('tel:')) {
           if ((window as { gtag: unknown }).gtag) {
@@ -232,13 +195,9 @@ export default AnalyticsProvider;
               event_category: 'engagement',
               event_label: 'phone_number',
               value: href
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
             });
       });
     };
-<<<<<<< HEAD
-    // Initialize analytics;
-=======
     
     // Handle route changes
     const handleRouteChange = () => {
@@ -246,7 +205,6 @@ export default AnalyticsProvider;
     };
     
     // Initialize analytics
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
     initAnalytics();
     trackPageView();
     trackInteractions();
@@ -256,9 +214,6 @@ export default AnalyticsProvider;
   }, [GA_TRACKING_ID]);
   return <>{children}<  />;
 };
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 
 // Export useAnalytics hook for other components
 export const useAnalytics = () => {
@@ -282,4 +237,3 @@ export const useAnalytics = () => {
 };
 
 export default AnalyticsProvider;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-055f

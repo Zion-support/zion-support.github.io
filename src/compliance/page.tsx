@@ -1,26 +1,13 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-<<<<<<< HEAD
-=======
 
 
 
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-
-import { ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { ArrowLeft, CheckCircle, Shield, FileText, Award, Users, Lock } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-063c
 const CompliancePage: React.FC = () => {
   const _certifications = [
     { name: 'SOC 2 Type II', status: 'Certified' },
@@ -31,36 +18,6 @@ const CompliancePage: React.FC = () => {
     { name: 'NIST Framework', status: 'Implemented' }
   ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const complianceAreas = [
-    {
-      icon: Shield,
-      title: 'Data Protection',
-      description: 'Comprehensive data protection measures including encryption, access controls, and privacy by design.',
-      features: ['Data Encryption', 'Access Controls', 'Privacy by Design', 'Data Minimization', 'Right to Erasure', 'Data Portability']
-    },
-    {
-      icon: FileText,
-      title: 'Regulatory Compliance',
-      description: 'Full compliance with major regulations including GDPR, CCPA, HIPAA, and industry-specific requirements.',
-      features: ['GDPR Compliance', 'CCPA Compliance', 'HIPAA Compliance', 'SOX Compliance', 'Industry Standards', 'Regular Audits']
-    },
-    {
-      icon: Lock,
-      title: 'Security Standards',
-      description: 'Implementation of industry-leading security standards and best practices for data protection.',
-      features: ['ISO 27001', 'SOC 2 Type II', 'NIST Framework', 'OWASP Guidelines', 'Security Audits', 'Penetration Testing']
-    },
-    {
-      icon: Users,
-      title: 'Privacy Rights',
-      description: 'Respect for individual privacy rights with transparent data practices and user control mechanisms.',
-      features: ['Consent Management', 'Privacy Notices', 'Data Subject Rights', 'Transparency Reports', 'User Controls', 'Opt-out Mechanisms']
-    }
-  ];
-
-=======
   const complianceFrameworks = [
     {
       name: 'SOC 2 Type II',
@@ -142,27 +99,12 @@ const CompliancePage: React.FC = () => {
       frameworks: ['PCI DSS', 'SOX', 'Basel III']
     }
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-063c
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-=======
           <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
         <Navigation />
         
         {/* Header */}
-<<<<<<< HEAD
-        <section className="bg-white shadow-sm border-b">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div className="flex items-center">
-              <Link 
-                to="/privacy" 
-                className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
-              >
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Back to Privacy Policy
-              </Link>
-=======
         <section className="bg-white shadow-sm border-b"></section>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6"></div>
             <div className="flex items-center"></div>
@@ -182,7 +124,6 @@ const CompliancePage: React.FC = () => {
           <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
 // Back to Privacy Policy;
           </Link>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               <h1 className="text-2xl font-bold text-gray-900">Compliance & Certifications</h1>
             </div>
           </div>
@@ -273,13 +214,6 @@ const CompliancePage: React.FC = () => {
 };
 
 export default CompliancePage;
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522

@@ -2,12 +2,6 @@
  * Preload Optimizer;
  * Optimizes resource loading for better performance;
  */
-<<<<<<< HEAD
-export const preloadCriticalResources = useCallback((...args) => {
-  if (typeof window === 'undefined') return;
-  // Preload critical fonts;
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 export const preloadCriticalResources = useCallback((...args) => {}
   if (typeof window === 'undefined') return
   // Preload critical fonts
@@ -15,10 +9,6 @@ export const preloadCriticalResources = useCallback((...args) => {}
     'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
     'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap'
   ]
-<<<<<<< HEAD
-  fontPreloads.forEach(href => {)
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   fontPreloads.forEach(href => {)}
     const link = document.createElement('link')
     link.rel = 'preload'
@@ -26,22 +16,13 @@ export const preloadCriticalResources = useCallback((...args) => {}
     link.href = href;
     link.crossOrigin = 'anonymous',
     document.head.appendChild(link)}
-<<<<<<< HEAD
-export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */,}
-=======
 export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   })
   // Preload critical images;
   const criticalImages = [
     '/images/hero-bg.webp',
     '/images/logo.webp',
     '/images/favicon.ico'
-<<<<<<< HEAD
-  ]
-  criticalImages.forEach(src => {)
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   criticalImages.forEach(src => {)}
     const link = document.createElement('link')
     link.rel = 'preload'
@@ -50,13 +31,6 @@ export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
     document.head.appendChild(link)}
   })
 }
-<<<<<<< HEAD
-export const preloadRoute = useCallback((...args) => {
-  if (typeof window === 'undefined') return;
-  // Preload route-specific resources;
-  const routeResources = {
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 export const preloadRoute = useCallback((...args) => {}
   if (typeof window === 'undefined') return
   // Preload route-specific resources
@@ -66,11 +40,6 @@ export const preloadRoute = useCallback((...args) => {}
     '/contact': ['/api/contact', '/images/contact-hero.webp']}
   }
   const resources = routeResources[route as keyof typeof routeResources]
-<<<<<<< HEAD
-  if (resources) {
-    resources.forEach(resource => {)
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   if (resources) {}
     resources.forEach(resource => {)}
       const link = document.createElement('link')
@@ -80,23 +49,6 @@ export const preloadRoute = useCallback((...args) => {}
     })
   }
 }
-<<<<<<< HEAD
-export const optimizeImages = useCallback((...args) => {
-  if (typeof window === 'undefined') return;
-  // Add loading="lazy" to images below the fold;
-  const images = document.querySelectorAll('img[data-lazy]')
-  images.forEach(img => {)
-    img.setAttribute('loading', 'lazy')}
-  })
-  // Add intersection observer for lazy loading;
-  if ('IntersectionObserver' in window) {
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {)
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement;
-          if (img.dataset['src']) {
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 export const optimizeImages = useCallback((...args) => {}
   if (typeof window === 'undefined') return
   // Add loading="lazy" to images below the fold
@@ -119,11 +71,7 @@ export const optimizeImages = useCallback((...args) => {}
   })
 }
 export const preloadRoute = (rout)
-<<<<<<< HEAD
-  e: string,) => {/* TODO: Fix JSX expression */,}
-=======
   e: string) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   };
   const resources = routeResources[route as keyof typeof routeResources]
   if (resources) {/* TODO: Fix JSX expression */,}
@@ -133,11 +81,7 @@ export const preloadRoute = (rout)
 export const optimizeImages = () => {/* TODO: Fix JSX expression */,}
   })
   // Add intersection observer for lazy loading;
-<<<<<<< HEAD
-  if ('IntersectionObserver' in window) {/* TODO: Fix JSX expression */,}
-=======
   if ('IntersectionObserver' in window) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           }
         }
       })
@@ -146,19 +90,6 @@ export const optimizeImages = () => {/* TODO: Fix JSX expression */,}
     lazyImages.forEach(img => imageObserver.observe(img))
   }
 }
-<<<<<<< HEAD
-export const optimizeThirdPartyScripts = useCallback((...args) => {
-  if (typeof window === 'undefined') return;
-  // Defer non-critical scripts;
-  const scripts = document.querySelectorAll('script[data-defer]')
-  scripts.forEach(script => {)
-    script.setAttribute('defer', '')}
-  })
-  // Load analytics after page load;
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 export const optimizeThirdPartyScripts = useCallback((...args) => {}
   if (typeof window === 'undefined') return
   // Defer non-critical scripts
@@ -175,22 +106,13 @@ export const optimizeThirdPartyScripts = useCallback((...args) => {}
     loadAnalytics()}
   }
 }
-<<<<<<< HEAD
-const loadAnalytics = useCallback((...args) => {
-  // Load Google Analytics after page load;
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 const loadAnalytics = useCallback((...args) => {}
   // Load Google Analytics after page load
   const gaScript = document.createElement('script')
   gaScript.async = true;
   gaScript['src'] = 'https: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID',
   document.head.appendChild(gaScript)}
-<<<<<<< HEAD
-export const optimizeThirdPartyScripts = () => {/* TODO: Fix JSX expression */,}
-=======
 export const optimizeThirdPartyScripts = () => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   })
   // Load analytics after page load;
   if (document.readyState === 'loading') {/* TODO: Fix JSX expression */,}
@@ -198,9 +120,5 @@ export const optimizeThirdPartyScripts = () => {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */,}
   }
 }
-<<<<<<< HEAD
-const loadAnalytics = () => {/* TODO: Fix JSX expression */,}
-=======
 const loadAnalytics = () => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 }

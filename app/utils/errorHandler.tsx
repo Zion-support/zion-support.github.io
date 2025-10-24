@@ -1,73 +1,17 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-interface ErrorhandlerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-<<<<<<< HEAD
-export default function Errorhandler({ className = '', children, ...props }: ErrorhandlerProps) {
-  return (
-    <div className={`errorhandler-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
-}
-=======
 // Error severity levels;
 export enum ErrorSeverity {
-=======
 'use client';
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 /**
  * Advanced Error Handler
  * Comprehensive error handling utilities for React applications
  */
-<<<<<<< HEAD
-import React, { ErrorInfo, useCallback } from 'react';
-// Error types
-export enum ErrorType {}
-  RUNTIME = 'RUNTIME',
-  NETWORK = 'NETWORK',
-  VALIDATION = 'VALIDATION',
-  AUTHENTICATION = 'AUTHENTICATION',
-  AUTHORIZATION = 'AUTHORIZATION',
-  NOT_FOUND = 'NOT_FOUND',
-  SERVER = 'SERVER',
-  CLIENT = 'CLIENT',
-  UNKNOWN = 'UNKNOWN'
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-// Error severity levels
-export enum ErrorSeverity {}
-  LOW = 'LOW',
-  MEDIUM = 'MEDIUM',
-  HIGH = 'HIGH',
-  CRITICAL = 'CRITICAL'
-}
-<<<<<<< HEAD
-// Error interface;
-export interface AppError {
-  id: string;,
-    type: ErrorType,
-  severity: ErrorSeverity;,
-    message: string,
-// Error interface
-export interface AppError {}
-  id: string,
-  type: ErrorType,
-  severity: ErrorSeverity,
-  message: string,
-=======
 // Error interface
 export interface AppError {}
   id: string;
   type: ErrorType;
   severity: ErrorSeverity;
   message: string;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   stack?: string;
   timestamp: Date,
   userId?: string;
@@ -78,35 +22,6 @@ export interface AppError {}
   context?: Record<string, unknown>;</string></<<<strin>resolved</strin></strin>?: boolean;
   retryCount?: number;
 }
-<<<<<<< HEAD
-// Error handler configuration;
-export interface ErrorHandlerConfig {
-  enableLogging: boolean;,
-    enableReporting: boolean,
-  enableRetry: boolean;,
-    maxRetries: number,
-  retryDelay: number;,
-    enableUserNotification: boolean,
-  enableConsoleLogging: boolean;,
-    enableNetworkLogging: boolean,
-// Error handler configuration
-export interface ErrorHandlerConfig {}
-  enableLogging: boolean,
-  enableReporting: boolean,
-  enableRetry: boolean,
-  maxRetries: number,
-  retryDelay: number,
-  enableUserNotification: boolean,
-  enableConsoleLogging: boolean,
-  enableNetworkLogging: boolean,
-  reportEndpoint?: string;
-  logLevel: 'debug' | 'info' | 'warn' | 'error';
-}
-// Default configuration
-export const defaultErrorHandlerConfig: ErrorHandlerConfig = {,
-    enableLogging: true,
-export const defaultErrorHandlerConfig: ErrorHandlerConfig = {,}
-=======
 // Error handler configuration
 export interface ErrorHandlerConfig {}
   enableLogging: boolean;
@@ -121,7 +36,6 @@ export interface ErrorHandlerConfig {}
   logLevel: 'debug' | 'info' | 'warn' | 'error';
 }
 export const defaultErrorHandlerConfig: ErrorHandlerConfig = {}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   enableLogging: true,
   enableReporting: true,
   enableRetry: true,
@@ -133,31 +47,6 @@ export const defaultErrorHandlerConfig: ErrorHandlerConfig = {}
   logLevel: 'error'
 // Default configuration;
 export const defaultErrorHandlerConfig: ErrorHandlerConfig = {
-<<<<<<< HEAD
-  enableLogging: true,
-  enableReporting: true,
-  enableRetry: true,
-  maxRetries: 3,
-  retryDelay: 1000,
-  enableUserNotification: true,
-  enableConsoleLogging: true,
-  enableNetworkLogging: true,
-  logLevel: 'error',};
-// Error Handler class;
-export class ErrorHandler {
-// Error Handler class
-export class ErrorHandler {}
-  private static instance: ErrorHandler,
-  private config: ErrorHandlerConfig;</string>
-  private errors: AppError[] = [];</string>
-  private retryQueue: Array<{ error: AppError; retryCount: number; }> = [];
-  constructor(config: Partial<ErrorHandlerConfig>= {,}) {
-    this.config = { ...defaultErrorHandlerConfig, ...config };</ErrorHandlerConfig>
-  }</ErrorHandlerConfig>
-  static getInstance(config?: Partial<ErrorHandlerConfig>): ErrorHandler {
-    if (!ErrorHandler.instance) {
-      ErrorHandler.instance = new ErrorHandler(config);
-=======
   enableLogging: true;
   enableReporting: true;
   enableRetry: true;
@@ -173,7 +62,6 @@ export class ErrorHandler {}
   private config: ErrorHandlerConfig;</string>
   private errors: AppError[] = [];</string>
   private retryQueue: Array<{ error: AppError; retryCount: number }> = [];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 // Error types;
 export enum ErrorType {/* TODO: Fix JSX expression */,}
 }
@@ -191,21 +79,6 @@ export const,
   defaultErrorHandlerConfig: ErrorHandlerConfig = {/* TODO: Fix JSX expression */,}
 };
 // Error Handler class;
-<<<<<<< HEAD
-export class ErrorHandler {/* TODO: Fix JSX expression */,}
-  t: number; }> = [];
-  constructor(confi)
-  g: Partial<ErrorHandlerConfig> = {,}) {/* TODO: Fix JSX expression */,}
-    this.config = { ...defaultErrorHandlerConfig, ...config };
-  }
-  static getInstance(config?: Partial<ErrorHandlerConfig>): ErrorHandler {/* TODO: Fix JSX expression */,}
-    }
-    return ErrorHandler.instance;
-  }</ErrorHandlerConfig>
-  // Handle error</<<<ErrorHandlerConfig>handleError</ErrorHandlerConfig></ErrorHandlerConfig>(error: Error, errorInfo?: ErrorInfo, context?: Record<string, unknown>): AppError {</string></<<<strin>const</strin></<<strin>appError</strin>: AppError = {,
-    id: this.generateErrorId(),
-  constructor(config: Partial<ErrorHandlerConfig> = {,}) {}
-=======
 export class ErrorHandler {/* TODO: Fix JSX expression */}
   t: number }> = [];
   constructor(confi)
@@ -216,7 +89,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     }
     return ErrorHandler.instance;
   constructor(config: Partial<ErrorHandlerConfig> = {}) {}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     this.config = { ...defaultErrorHandlerConfig, ...config };
   }
   static getInstance(config?: Partial<ErrorHandlerConfig>): ErrorHandler {}
@@ -225,13 +97,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     }
     return ErrorHandler.instance;
   }
-<<<<<<< HEAD
-  // Handle error
-  handleError(error: Error, errorInfo?: ErrorInfo, context?: Record<string, unknown>): AppError {}
-    const appError: AppError = {,}
-      id: this.generateErrorId(),
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       type: this.determineErrorType(error),
       severity: this.determineErrorSeverity(error),
       message: error.message,
@@ -239,11 +104,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       timestamp: new Date(),
       url: typeof window !== 'undefined' ? window.location.href : undefined,
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-<<<<<<< HEAD
-      componentStack: errorInfo?.componentStack ?? undefined,}
-=======
       componentStack: errorInfo?.componentStack ?? undefined}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   // Handle error;
   handleError(error: Error, errorInfo?: ErrorInfo, context?: Record<string, unknown>): AppError {
     const appError: AppError = {
@@ -275,13 +136,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     }
     return appError;
   }
-<<<<<<< HEAD
-  // Handle network error;
-  handleNetworkError(error: Error, url: string, status?: number): AppError {
-    const appError: AppError = {,
-    id: this.generateErrorId(),
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   // Handle network error
   handleNetworkError(error: Error, url: string, status?: number): AppError {}
     const appError: AppError = {,}
@@ -312,13 +166,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     }
     return appError;
   }
-<<<<<<< HEAD
-  // Handle validation error;
-  handleValidationError(field: string, message: string, value?: unknown): AppError {
-    const appError: AppError = {,
-    id: this.generateErrorId(),
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   // Handle validation error
   handleValidationError(field: string, message: string, value?: unknown): AppError {}
     const appError: AppError = {,}
@@ -328,11 +175,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       id: this.generateErrorId(),
       type: ErrorType.VALIDATION;
       severity: ErrorSeverity.LOW;
-<<<<<<< HEAD
-      message: `Validation error in ${field,}: ${message}`,
-=======
       message: `Validation error in ${field}: ${message}`,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       timestamp: new Date(),
       url: typeof window !== 'undefined' ? window.location.href : undefined;
       context: { field, value },
@@ -345,18 +188,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     }
     return appError;
   }
-<<<<<<< HEAD
-  // Generate unique error ID;
-  private generateErrorId(): string {
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  }
-  // Determine error type;
-  private determineErrorType(error: Error,): ErrorType {
-    const message = error.message.toLowerCase();
-    const stack = error.stack?.toLowerCase() || '';
-    if (message.includes('network') || message.includes('fetch') || message.includes('axios')) {,
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   // Generate unique error ID
   private generateErrorId(): string {}
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
@@ -388,13 +219,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     }
     return ErrorType.UNKNOWN;
   }
-<<<<<<< HEAD
-  // Determine error severity;
-  private determineErrorSeverity(error: Error,): ErrorSeverity {
-    const message = error.message.toLowerCase();
-    if (message.includes('critical') || message.includes('fatal')) {,
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   // Determine error severity
   private determineErrorSeverity(error: Error,): ErrorSeverity {,}
     const message = error.message.toLowerCase();
@@ -409,11 +233,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     }
     return ErrorSeverity.LOW;
   }
-<<<<<<< HEAD
-  // Determine network error severity;
-  private determineNetworkErrorSeverity(status?: number): ErrorSeverity {
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   // Determine network error severity
   private determineNetworkErrorSeverity(status?: number): ErrorSeverity {}
     if (!status) return ErrorSeverity.MEDIUM;
@@ -421,19 +240,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     if (status >= 400) return ErrorSeverity.MEDIUM;
     return ErrorSeverity.LOW;
   }
-<<<<<<< HEAD
-  // Log error;
-  private logError(error: AppError,) {,
-    if (this.config.enableConsoleLogging) {,
-      const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;
-      switch (error.severity) {
-        case ErrorSeverity.CRITICAL: case ErrorSeverity.HIGH: break,
-        case ErrorSeverity.MEDIUM: break,
-        case ErrorSeverity.LOW:,
-          if (process.env['NODE_ENV'] === 'development') {,
-            if (import.meta.env.DEV) {,
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   // Log error
   private logError(error: AppError,) {,}
     if (this.config.enableConsoleLogging) {}
@@ -446,11 +252,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
             if (import.meta.env.DEV) {}
   // Handle error;
   handleError(erro)
-<<<<<<< HEAD
-  r: Error, errorInfo?: ErrorInfo, context?: Record<string, unknown>): AppError {/* TODO: Fix JSX expression */,}
-=======
   r: Error, errorInfo?: ErrorInfo, context?: Record<string, unknown>): AppError {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     };
     this.errors.push(appError);
     if (this.config.enableLogging) {/* TODO: Fix JSX expression */,}
@@ -466,13 +268,8 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   // Handle network error;
   handleNetworkError(erro,
   r: Error, ur)
-<<<<<<< HEAD
-  l: string, status?: number): AppError {/* TODO: Fix JSX expression */,}
-  e: status; },
-=======
   l: string, status?: number): AppError {/* TODO: Fix JSX expression */}
   e: status },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       resolve,
   d: false,
       retryCoun,
@@ -488,13 +285,8 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   // Handle validation error;
   handleValidationError(fiel,
   d: string, messag)
-<<<<<<< HEAD
-  e: string, value?: unknown): AppError {/* TODO: Fix JSX expression */,}
-  e: `Validation error in ${field,}: ${message}`,
-=======
   e: string, value?: unknown): AppError {/* TODO: Fix JSX expression */}
   e: `Validation error in ${field}: ${message}`,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       timestam,
   p: new Date(),
       ur,
@@ -517,11 +309,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   // Determine error type;
   private determineErrorType(erro)
-<<<<<<< HEAD
-  r: Error,): ErrorType {/* TODO: Fix JSX expression */,}
-=======
   r: Error): ErrorType {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     }
     if (message.includes('validation') || message.includes('invalid')) {/* TODO: Fix JSX expression */,}
     }
@@ -539,11 +327,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   // Determine error severity;
   private determineErrorSeverity(erro)
-<<<<<<< HEAD
-  r: Error,): ErrorSeverity {/* TODO: Fix JSX expression */,}
-=======
   r: Error): ErrorSeverity {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     }
     if (message.includes('error') || message.includes('exception')) {/* TODO: Fix JSX expression */,}
     }
@@ -556,32 +340,14 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   // Log error;
   private logError(erro)
-<<<<<<< HEAD
-  r: AppError,) {/* TODO: Fix JSX expression */,}`
-      const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;
-      switch (error.severity) {/* TODO: Fix JSX expression */,}
-=======
   r: AppError) {/* TODO: Fix JSX expression */}`
       const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;
       switch (error.severity) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               }
           }
           break;
       }
     }
-<<<<<<< HEAD
-    if (this.config.enableNetworkLogging) {}
-      this.logToNetwork(error);
-    }
-  }
-  // Log to network;
-  private async logToNetwork(error: AppError,) {,
-    if (!this.config.reportEndpoint) return;
-    try {
-      await fetch(this.config.reportEndpoint, {
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   // Log to network
   private async logToNetwork(error: AppError,) {,}
     if (!this.config.reportEndpoint) return;
@@ -593,21 +359,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         })
     body: JSON.stringify(error)
 
-<<<<<<< HEAD
-    try {,
-      await fetch(this.config.reportEndpoint, {)
-        method: 'POST'),
-        headers: {,
-          'Content-Type': 'application/json'})
-        body: JSON.stringify(error),
-} catch (err) {}
-  }
-  // Report error;
-  private async reportError(error: AppError,) {,
-    if (!this.config.reportEndpoint) return;
-    try {
-      await fetch(this.config.reportEndpoint, {} catch (err) {}
-=======
     try {
       await fetch(this.config.reportEndpoint, {)
         method: 'POST'),
@@ -620,7 +371,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   private async reportError(error: AppError) {
     if (!this.config.reportEndpoint) return;
     } catch (err) {}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       }
   }
   // Report error
@@ -632,14 +382,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         headers: {,}
           'Content-Type': 'application/json'
         },
-<<<<<<< HEAD
-        body: JSON.stringify({
-          ...error)
-    timestamp: error.timestamp.toISOString()
-    try {,
-=======
     try {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       await fetch(this.config.reportEndpoint, {)
         method: 'POST')
         headers: {)
@@ -647,29 +390,16 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         body: JSON.stringify({)
           ...error),
           timestamp: error.timestamp.toISOString(),
-<<<<<<< HEAD
-        body: JSON.stringify({),}
-          ...error,
-          timestamp: error.timestamp.toISOString(),
-=======
         body: JSON.stringify({)}
           ...error,
           timestamp: error.timestamp.toISOString()
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
         })
 
     } catch (err) {}
       }
   }
-<<<<<<< HEAD
-  // Notify user;
-  private notifyUser(error: AppError,) {
-  // Notify user
-  private notifyUser(error: AppError,) {,}
-=======
   // Notify user
   private notifyUser(error: AppError) {}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     if (typeof window === 'undefined') return;
     const notification = document.createElement('div');
     notification.className = 'error-notification';
@@ -685,14 +415,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       z-index: 10000,
       max-width: 400 px;
       font-family: Arial, sans-serif;
-<<<<<<< HEAD
-    `;</string>
-    notification.innerHTML = `</string>
-      <div style="display:flex;justify-content:space-between;align-items:center;"></div>
-        <div></div>
-          <strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}<button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     `;
     notification.innerHTML = `
       <div style="display: flex;justify-content:space-between;align-items:center;">,</div>
@@ -707,32 +429,17 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       </div>
     `;
     document.body.appendChild(notification);
-<<<<<<< HEAD
-    // Auto-remove after 5 seconds for non-critical errors;
-    if (error.severity !== ErrorSeverity.CRITICAL) {
-      setTimeout(() => {,
-        if (notification.parentElement) {,
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     // Auto-remove after 5 seconds for non-critical errors
     if (error.severity !== ErrorSeverity.CRITICAL) {}
       setTimeout(() => {}
         if (notification.parentElement) {}
           notification.remove();
-<<<<<<< HEAD
-    if (this.config.enableNetworkLogging) {/* TODO: Fix JSX expression */,}
-=======
     if (this.config.enableNetworkLogging) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     }
   }
   // Log to network;
   private async logToNetwork(erro)
-<<<<<<< HEAD
-  r: AppError,) {/* TODO: Fix JSX expression */,}
-=======
   r: AppError) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
         },
         bod,
   y: JSON.stringify(error),
@@ -742,11 +449,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   // Report error;
   private async reportError(erro)
-<<<<<<< HEAD
-  r: AppError,) {/* TODO: Fix JSX expression */,}
-=======
   r: AppError) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
         },
         bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */,})
@@ -757,13 +460,8 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   // Notify user;
   private notifyUser(erro)
-<<<<<<< HEAD
-  r: AppError,) {/* TODO: Fix JSX expression */,}
-  d: ${this.getNotificationColor(error.severity),};
-=======
   r: AppError) {/* TODO: Fix JSX expression */}
   d: ${this.getNotificationColor(error.severity)};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       colo,
   r: white,
       paddin,
@@ -808,21 +506,11 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     `;
     document.body.appendChild(notification);
     // Auto-remove after 5 seconds for non-critical errors;
-<<<<<<< HEAD
-    if (error.severity !== ErrorSeverity.CRITICAL) {/* TODO: Fix JSX expression */,}
-=======
     if (error.severity !== ErrorSeverity.CRITICAL) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
         }
       }, 5000);
     }
   }
-<<<<<<< HEAD
-  // Get notification color based on severity;
-  private getNotificationColor(severity: ErrorSeverity,): string {
-    switch (severity) {
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   // Get notification color based on severity
   private getNotificationColor(severity: ErrorSeverity,): string {,}
     switch (severity) {}
@@ -832,29 +520,12 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         return '#fd7 e14';
       case ErrorSeverity.MEDIUM:
         return '#ffc107';
-<<<<<<< HEAD
-      case ErrorSeverity.LOW: return '#28a745';,
-    default:
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       case ErrorSeverity.LOW:
         return '#28a745';
       default:,
         return '#6c757d';
     }
   }
-<<<<<<< HEAD
-  // Check if error should be retried;
-  private shouldRetry(error: AppError,): boolean {,
-    return(error.type === ErrorType.NETWORK &&)
-      error.retryCount! < this.config.maxRetries &&)
-      error.severity !== ErrorSeverity.CRITICAL;)
-    );
-  }
-  // Schedule retry;
-  private scheduleRetry(error: AppError,) {,
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   // Check if error should be retried
   private shouldRetry(error: AppError,): boolean {,}
     return (
@@ -864,59 +535,33 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     );
   }
   // Schedule retry
-<<<<<<< HEAD
-  private scheduleRetry(error: AppError,) {,}
-    const retryItem = { error, retryCount: error.retryCount! + 1 ,};
-=======
   private scheduleRetry(error: AppError) {}
     const retryItem = { error, retryCount: error.retryCount! + 1 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     this.retryQueue.push(retryItem);
     setTimeout(() => {}
       this.retryError(retryItem);
     }, this.config.retryDelay * retryItem.retryCount);
   }
-<<<<<<< HEAD
-  // Retry error;
-  private async retryError(retryItem: {// error: AppError; retryCount: number;}) {
-  // Get notification color based on severity;
-  private getNotificationColor(severit)
-  y: ErrorSeverity,): string {/* TODO: Fix JSX expression */,}
-=======
   // Get notification color based on severity;
   private getNotificationColor(severit)
   y: ErrorSeverity): string {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     }
   }
   // Check if error should be retried;
   private shouldRetry(erro)
-<<<<<<< HEAD
-  r: AppError,): boolean {/* TODO: Fix JSX expression */,}
-  }
-  // Schedule retry;
-  private scheduleRetry(erro)
-  r: AppError,) {/* TODO: Fix JSX expression */,}
-  t: error.retryCount! + 1 ,};
-=======
   r: AppError): boolean {/* TODO: Fix JSX expression */}
   }
   // Schedule retry;
   private scheduleRetry(erro)
   r: AppError) {/* TODO: Fix JSX expression */}
   t: error.retryCount! + 1 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     this.retryQueue.push(retryItem);
     setTimeout(() => {/* TODO: Fix JSX expression */,}
     }, this.config.retryDelay * retryItem.retryCount);
   }
 
   // Retry error
-<<<<<<< HEAD
-  private async retryError(retryItem: { error: AppError; retryCount: number; }) {
-=======
   private async retryError(retryItem: { error: AppError; retryCount: number }) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     try {
       // Implement retry logic based on error type;
       if (retryItem.error.type === ErrorType.NETWORK) {
@@ -942,29 +587,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         }
     }
   }
-<<<<<<< HEAD
-  // Get all errors;
-  getErrors(): AppError[] {
-    return [...this.errors];
-  }
-  // Get errors by type;
-  getErrorsByType(type: ErrorType,): AppError[] {,
-    return this.errors.filter(error => error.type === type);
-  }
-  // Get errors by severity;
-  getErrorsBySeverity(severity: ErrorSeverity,): AppError[] {,
-    return this.errors.filter(error => error.severity === severity);
-  }
-  // Get unresolved errors;
-  getUnresolvedErrors(): AppError[] {
-    return this.errors.filter(error => !error.resolved);
-  }
-  // Mark error as resolved;
-  markErrorResolved(errorId: string,): boolean {
-    const error = this.errors.find(e => e.id === errorId);
-    if (error) {,
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   // Get all errors
   getErrors(): AppError[] {}
     return [...this.errors];
@@ -990,20 +612,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     }
     return false;
   }
-<<<<<<< HEAD
-  // Clear resolved errors;
-  clearResolvedErrors(): void {
-    this.errors = this.errors.filter(error => !error.resolved);
-  }
-  // Clear all errors;
-  clearAllErrors(): void {
-    this.errors = [];
-    this.retryQueue = [];
-  }
-  // Get error statistics;
-  getErrorStatistics() {
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   // Clear resolved errors
   clearResolvedErrors(): void {}
     this.errors = this.errors.filter(error => !error.resolved);
@@ -1021,14 +629,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         acc[error.type] = (acc[error.type] || 0) + 1;
         return acc;
       },
-<<<<<<< HEAD
-      {} as Record<ErrorType, number>);
-    const bySeverity = this.errors.reduce(
-      (acc, error) => {
-      {} as Record<ErrorType, number>
-=======
       {} as Record<ErrorType, number></ErrorType>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             `);
 
           }
@@ -1045,30 +646,18 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   // Get errors by type;
   getErrorsByType(typ)
-<<<<<<< HEAD
-  e: ErrorType,): AppError[] {/* TODO: Fix JSX expression */,}
-  }
-  // Get errors by severity;
-  getErrorsBySeverity(severit)
-  y: ErrorSeverity,): AppError[] {/* TODO: Fix JSX expression */,}
-=======
   e: ErrorType): AppError[] {/* TODO: Fix JSX expression */}
   }
   // Get errors by severity;
   getErrorsBySeverity(severit)
   y: ErrorSeverity): AppError[] {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   }
   // Get unresolved errors;
   getUnresolvedErrors(): AppError[] {/* TODO: Fix JSX expression */,}
   }
   // Mark error as resolved;
   markErrorResolved(errorI)
-<<<<<<< HEAD
-  d: string,): boolean {/* TODO: Fix JSX expression */,}
-=======
   d: string): boolean {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     }
     return false;
   }
@@ -1095,39 +684,12 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       },</ErrorType>
       {} as Record<ErrorSeverity, number>);</ErrorSeverity></<<<ErrorSeverit>const</ErrorSeverit></<<ErrorSeverit>resolved</ErrorSeverit> = this.errors.filter(error => error.resolved).length;
     const unresolved = total - resolved;
-<<<<<<< HEAD
-    return {}
-      total,
-      resolved,
-      unresolved,
-      byType,
-      bySeverity;
-    return {/* TODO: Fix JSX expression */,}
-=======
     return {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     };
   }
   /**
    * Initialize error handler;
    */
-<<<<<<< HEAD
-  init(): void {
-    if (typeof window !== 'undefined') {
-      // Set up global error handler
-      window.addEventListener('error', event => {)
-    this.handleError(event.error || new Error(event.message));
-
-      // Set up unhandled promise rejection handler
-      window.addEventListener('unhandledrejection', event => {)
-    this.handleError(new Error(event.reason));
-
-    }
-  }
-}</ErrorSeverity>
-// React error boundary component</ErrorSeverity>
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       // Set up global error handler;
       window.addEventListener('error', event => {)
         this.handleError(event.error || new Error(event.message));
@@ -1144,11 +706,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       window.addEventListener('unhandledrejection', event => {)}
         this.handleError(new Error(event.reason));
 
-<<<<<<< HEAD
-  init(): void {/* TODO: Fix JSX expression */,}
-=======
   init(): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       });
       // Set up unhandled promise rejection handler;
       window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */,})
@@ -1167,35 +725,11 @@ export class ErrorBoundary extends React.Component<
     this.state = { hasError: false; };
     this.errorHandler = ErrorHandler.getInstance();
   }
-<<<<<<< HEAD
-  static getDerivedStateFromError(error: Error,) {,
-    return { hasError: true, error };
-  }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo,) {
-    this.errorHandler.handleError(error, errorInfo, {
-  static getDerivedStateFromError(error: Error,) {,}
-=======
   static getDerivedStateFromError(error: Error) {}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     return { hasError: true, error };
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo,) {,}
     this.errorHandler.handleError(error, errorInfo, {)}
-<<<<<<< HEAD
-      component: 'ErrorBoundary',
-
-  })
-    render() {
-  componentDidCatch(error: Error, errorInfo: ErrorInfo,) {,
-    this.errorHandler.handleError(error, errorInfo, {)
-      component: 'ErrorBoundary')
-)}
-  render() {
-    if (this.state.hasError) {
-      return(this.props.fallback || (
-          <div style={{ padding: '20px', textAlign: 'center' ,}}></div>
-            <h2>Something went wrong<p>We're sorry, but something unexpected happened.<button
-=======
       component: 'ErrorBoundary'
 
   })
@@ -1205,39 +739,25 @@ export class ErrorBoundary extends React.Component<
       component: 'ErrorBoundary')
 )}
     if (this.state.hasError) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   render() {}
     if (this.state.hasError) {}
       return (
         this.props.fallback || (
           <div style={{ padding: '20px', textAlign: 'center' ,}}></div>
             <h2>Something went wrong</h2><p>We're sorry, but something unexpected happened.</p><button
-<<<<<<< HEAD
-              onClick={() =>this.setState({ hasError: false, error: undefined; })}
-            <h2>Something went wrong</h2>)
-            <p>We're sorry, but something unexpected happened.</p>)
-            <button;)
-              onClick={() => this.setState({ hasError: false, error: undefined; })}
-=======
               onClick={() =>this.setState({ hasError: false, error: undefined })}
             <h2>Something went wrong</h2>)
             <p>We're sorry, but something unexpected happened.</p>)
             <button;)
               onClick={() => this.setState({ hasError: false, error: undefined })}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               style={{
               style={{}
                 padding: '10px 20px',
                 backgroundColor: '#007bff',
                 color: 'white',
                 border: 'none',
-<<<<<<< HEAD
-                borderRadius: '4px',}
-                cursor: 'pointer',}
-=======
                 borderRadius: '4px'}
                 cursor: 'pointer'}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 export class ErrorBoundary extends React.Component<
   {/* TODO: Fix JSX expression */,}
   n: React.ReactNode; fallback?: React.ReactNode },
@@ -1249,20 +769,12 @@ export class ErrorBoundary extends React.Component<
     this.errorHandler = ErrorHandler.getInstance();
   }
   static getDerivedStateFromError(erro)
-<<<<<<< HEAD
-  r: Error,) {/* TODO: Fix JSX expression */,}
-=======
   r: Error) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   r: true, error };
   }
   componentDidCatch(erro,
   r: Error, errorInf)
-<<<<<<< HEAD
-  o: ErrorInfo,) {/* TODO: Fix JSX expression */,}
-=======
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     });
   }
   render() {/* TODO: Fix JSX expression */,}
@@ -1270,19 +782,10 @@ export class ErrorBoundary extends React.Component<
             <h2>Something went wrong</h2>
             <p>We're sorry, but something unexpected happened.</p>
             <button></button>
-<<<<<<< HEAD
-              onClick={/* TODO: Fix JSX expression */,}
-  r: undefined; })}
-              style={/* TODO: Fix JSX expression */,}
-              }}
-            ></button>
-              Try again</button>
-=======
               onClick={/* TODO: Fix JSX expression */}
   r: undefined })}
               style={/* TODO: Fix JSX expression */}
               }}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             >
               Try again;
             </button>
@@ -1293,11 +796,6 @@ export class ErrorBoundary extends React.Component<
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-// React hook for error handling;
-export const useErrorHandler = () => {
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 // React hook for error handling
 export const useErrorHandler = () => {}
   const errorHandler = ErrorHandler.getInstance();
@@ -1325,11 +823,7 @@ export const useErrorHandler = () => {}
     handleValidationError,
     getErrors: () => errorHandler.getErrors(),
     getErrorStatistics: () => errorHandler.getErrorStatistics(),
-<<<<<<< HEAD
-    clearResolvedErrors: () => errorHandler.clearResolvedErrors(),};
-=======
     clearResolvedErrors: () => errorHandler.clearResolvedErrors()};
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 };
 export default ErrorHandler;</string>
 </string>
@@ -1340,21 +834,13 @@ export const useErrorHandler = () => {/* TODO: Fix JSX expression */,}
   );
   const handleNetworkError = useCallback((erro,
   r: Error, ur)
-<<<<<<< HEAD
-  l: string, status?: number) => {/* TODO: Fix JSX expression */,}
-=======
   l: string, status?: number) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     },
     [errorHandler]
   );
   const handleValidationError = useCallback((fiel,
   d: string, messag)
-<<<<<<< HEAD
-  e: string, value?: unknown) => {/* TODO: Fix JSX expression */,}
-=======
   e: string, value?: unknown) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     },
     [errorHandler]
   );
@@ -1363,20 +849,7 @@ export const useErrorHandler = () => {/* TODO: Fix JSX expression */,}
 };
 export default ErrorHandler;
 "`
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
 
-<<<<<<< HEAD
- void;
-  {hasError: boolean; error: AppError | null}
-    super(props)
-    this.state = {hasError: false, error: null}
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
 export interface AppError {
   message: string;
   code?: string;
@@ -1439,4 +912,3 @@ export const errorHandler = {
     timestamp: Date.now()
   })
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-export default function Component() {
-
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-}
-=======
 import React, { Suspense, useEffect, useState, useCallback } from "react";
 // import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Unused import
 // import { HelmetProvider } from "react-helmet-async"; // Unused import
@@ -175,4 +163,3 @@ function App() {
 }
 
 export default App;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df

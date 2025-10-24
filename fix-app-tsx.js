@@ -1,9 +1,5 @@
 const fs = require('fs');
 
-<<<<<<< HEAD
-// Read the App.tsx file
-let content = fs.readFileSync('/workspace/app/App.tsx', 'utf8');
-=======
 // Function to fix the app/App.tsx file;
 function fixAppTsx() {const filePath = '/workspace/app/App.tsx';
 
@@ -41,7 +37,6 @@ function fixAppTsx() {const filePath = '/workspace/app/App.tsx';
     return true;} catch (error) {
     console.error('Error fixing app/App.tsx: ', error.message);
     return false;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 
 // Fix malformed JSX tags
 content = content.replace(/<\/Route>/g, ' />');
