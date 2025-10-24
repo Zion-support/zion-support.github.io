@@ -13,7 +13,7 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
   showAvatar = false,
   showImage = false,
   height = 'auto',
-  className = '',
+  className = ''
 }) => {
   return (
     <div className={`animate-pulse ${className}`} style={{ height }}>
@@ -29,7 +29,7 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
         )}
         
         {showImage && (
-          <div className="w-full h-48 bg-gray-300 rounded-lg"></div>
+          <div className="w-full h-48 bg-gray-300 rounded"></div>
         )}
         
         <div className="space-y-2">

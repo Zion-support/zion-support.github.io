@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Zap, Shield, Brain, Cloud } from 'lucide-react';
+
 interface Slide {
   id: number;
   title: string;
@@ -105,30 +106,22 @@ const ContentCarousel: React.FC = () => {
                       <slide.icon className="h-12 w-12" />
                     </div>
                   </div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-                    {slide.title}
-                  </h2>
-                  <p className="text-xl text-center mb-8 text-white/90">
-                    {slide.description}
-                  </p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {slide.features.map((feature, index) => (
-                      <div key={index} className="flex items-center space-x-3">
-                        <div className="w-2 h-2 bg-white rounded-full"></div>
-                        <span className="text-white/90">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                  {slide.stats && (
-                    <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-                      {slide.stats.map((stat, index) => (
-                        <div key={index} className="text-center">
-                          <div className="text-2xl font-bold text-white">{stat.value}</div>
-                          <div className="text-white/80">{stat.label}</div>
+                  <div className="text-center">
+                    <h3 className="text-3xl md:text-4xl font-bold mb-4">
+                      {slide.title}
+                    </h3>
+                    <p className="text-lg md:text-xl mb-6 opacity-90">
+                      {slide.description}
+                    </p>
+                    <div className="grid grid-cols-2 gap-2 text-sm">
+                      {slide.features.map((feature, index) => (
+                        <div key={index} className="flex items-center">
+                          <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
+                          {feature}
                         </div>
                       ))}
                     </div>
-                  )}
+                  </div>
                 </div>
               </div>
             </div>
@@ -140,27 +133,29 @@ const ContentCarousel: React.FC = () => {
       <button
         onClick={prevSlide}
         className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
+        aria-label="Previous slide"
       >
         <ChevronLeft className="h-6 w-6" />
       </button>
       <button
         onClick={nextSlide}
         className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
+        aria-label="Next slide"
       >
         <ChevronRight className="h-6 w-6" />
       </button>
-      
+
       {/* Dots indicator */}
-      <div className="flex justify-center mt-6 space-x-2">
+      <div className="flex justify-center mt-4 space-x-2">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide ? 'bg-white' : 'bg-white/30'
+              index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
             }`}
-          >
-          </button>
+            aria-label={`Go to slide ${index + 1}`}
+          />
         ))}
       </div>
     </div>

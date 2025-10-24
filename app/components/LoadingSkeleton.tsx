@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 
 interface LoadingSkeletonProps {
-  className?: string
-  lines?: number
-  height?: string
-  width?: string
+  className?: string;
+  lines?: number;
+  height?: string;
+  width?: string;
 }
 
 const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
@@ -24,7 +24,7 @@ const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
         />
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default LoadingSkeleton
+export default LoadingSkeleton;

@@ -1,34 +1,49 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { X, Menu } from 'lucide-react';
 
-interface MenuItem {
-  label: string
-  href: string
-  submenu?: { label: string; href: string }[]
+interface NavigationBackupProps {
+  logo?: string;
+  logoText?: string;
+  menuItems?: Array<{
+    label: string;
+    href: string;
+    submenu?: Array<{
+      label: string;
+      href: string;
+    }>;
+  }>;
+  ctaText?: string;
+  ctaHref?: string;
 }
 
-interface NavigationProps {
-  logo?: string
-  logoText?: string
-  menuItems?: MenuItem[]
-  ctaText?: string
-  ctaHref?: string
-}
-
-const Navigation: React.FC<NavigationProps> = ({
+const NavigationBackup: React.FC<NavigationBackupProps> = ({
   logo,
   logoText = 'Zion Tech Group',
-  menuItems = [],
+  menuItems = [
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
+    { label: 'Services', href: '/services' },
+    { label: 'Contact', href: '/contact' }
+  ],
   ctaText = 'Get Started',
-  ctaHref = '/contact'
+  ctaHref = '/contact',
 }) => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null)
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const _toggleSubmenu = (label: string) => {
+    setActiveSubmenu(activeSubmenu === label ? null : label);
+  };
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <nav className="...">
+      <div className="...">
+        <div className="...">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="...">
             {logo ? (
               <img src={logo} alt={logoText} className="h-8 w-auto" />
             ) : (
@@ -37,24 +52,22 @@ const Navigation: React.FC<NavigationProps> = ({
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="...">
             {menuItems.map((item, index) => (
-              <div key={index} className="relative group">
+              <div key={index} className="...">
                 <a
                   href={item.href}
-                  className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors"
-                >
+                  className="...">
                   {item.label}
                 </a>
                 {item.submenu && (
-                  <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                    <div className="py-1">
+                  <div className="...">
+                    <div className="...">
                       {item.submenu.map((subItem, subIndex) => (
                         <a
                           key={subIndex}
                           href={subItem.href}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                        >
+                          className="...">
                           {subItem.label}
                         </a>
                       ))}
@@ -66,48 +79,42 @@ const Navigation: React.FC<NavigationProps> = ({
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:flex items-center">
+          <div className="...">
             <a
               href={ctaHref}
-              className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
-            >
+              className="...">
               {ctaText}
             </a>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="...">
             <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
-            >
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
+              onClick={toggleMenu}
+              className="...">
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
 
         {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        {isMenuOpen && (
+          <div className="...">
+            <div className="...">
               {menuItems.map((item, index) => (
                 <div key={index}>
                   <a
                     href={item.href}
-                    className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium"
-                  >
+                    className="...">
                     {item.label}
                   </a>
                   {item.submenu && (
-                    <div className="pl-4 space-y-1">
+                    <div className="...">
                       {item.submenu.map((subItem, subIndex) => (
                         <a
                           key={subIndex}
                           href={subItem.href}
-                          className="text-gray-600 hover:text-blue-600 block px-3 py-2 text-sm"
-                        >
+                          className="...">
                           {subItem.label}
                         </a>
                       ))}
@@ -115,12 +122,13 @@ const Navigation: React.FC<NavigationProps> = ({
                   )}
                 </div>
               ))}
-              <a
-                href={ctaHref}
-                className="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-blue-700"
-              >
-                {ctaText}
-              </a>
+              <div className="...">
+                <a
+                  href={ctaHref}
+                  className="...">
+                  {ctaText}
+                </a>
+              </div>
             </div>
           </div>
         )}
@@ -128,5 +136,4 @@ const Navigation: React.FC<NavigationProps> = ({
     </nav>
   )
 }
-
-export default Navigation
+export default NavigationBackup
