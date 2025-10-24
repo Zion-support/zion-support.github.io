@@ -4,7 +4,7 @@ interface Footer_brokenProps {
   // Add props here
 }
 
-const Footer_broken: React.FC<Footer_brokenProps> = (_props) => {
+const _Footer_broken: React.FC<Footer_brokenProps> = (_props) => {
   return (
     <div>
       {/* Component content */}
@@ -12,4 +12,5 @@ const Footer_broken: React.FC<Footer_brokenProps> = (_props) => {
   );
 };
 
-export default Footer_broken;
+export default _Footer_broken;
+
