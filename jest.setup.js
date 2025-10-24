@@ -37,10 +37,7 @@ jest.mock('react-router-dom', () => {
 // Suppress console warnings for tests
 const originalError = console.error
 beforeAll(() => {
-<<<<<<< HEAD
-=======
   // eslint-disable-next-line no-console
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
   console.error = (...args) => {
     if (typeof args[0] === 'string' && args[0].includes('Warning: ReactDOM.render is no longer supported')) {
       return
