@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import { Brain, Send, TrendingUp, Zap, BarChart3, Shield, DollarSign, Clock, Mail, ArrowRight, CheckCircle, Star } from 'lucide-react'
 const AIEmailAutomationPage: React.FC = () => {
   const features = [
     {
@@ -296,7 +297,7 @@ const AIEmailAutomationPage: React.FC = () => {
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-300 italic">&quot;{testimonial.content}&quot;</p>
+                <p className="text-gray-300 italic">&ldquo;{testimonial.content}&rdquo;</p>
               </div>
             ))}
           </div>

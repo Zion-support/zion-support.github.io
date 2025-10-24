@@ -198,21 +198,19 @@ class MonitoringService {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
       if (memory) {
-<<<<<<< HEAD:app/utils/monitoring.ts
         this.metrics.memory = {
           used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
           total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
           limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
         }
-
       }
     }
   }
+  
   public measureNavigationTiming(): void {
     if ('performance' in window && 'getEntriesByType' in performance) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       if (navigation) {
-<<<<<<< HEAD:app/utils/monitoring.ts
         console.log('Performance metrics:', {
           'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,
           'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,
@@ -222,13 +220,11 @@ class MonitoringService {
           'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`,
           'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
         });
-        })
-
       }
     }
   }
 }
+
 // Singleton instance
 const monitoring = new MonitoringService()
 export default monitoring
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d:app/utils/monitoring.ts

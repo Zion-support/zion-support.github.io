@@ -132,7 +132,7 @@ const AboutPage: React.FC = () => {
               <div className="bg-white rounded-xl shadow-lg p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
                 <p className="text-gray-600">
-                  To be the world's leading provider of AI-powered business solutions,
+                  To be the world&apos;s leading provider of AI-powered business solutions,
                   helping organizations across all industries achieve digital transformation
                   and sustainable growth in the age of artificial intelligence.
                 </p>
@@ -213,7 +213,7 @@ const AboutPage: React.FC = () => {
               Ready to Work With Us?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Let's discuss how we can help transform your business with our AI-powered solutions.
+              Let&apos;s discuss how we can help transform your business with our AI-powered solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

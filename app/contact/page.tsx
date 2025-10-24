@@ -78,7 +78,7 @@ const ContactPage: React.FC = () => {
             Get in <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">Touch</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Ready to transform your business with AI and technology? Let's start the conversation.
+            Ready to transform your business with AI and technology? Let&apos;s start the conversation.
           </p>
         </div>
       </section>

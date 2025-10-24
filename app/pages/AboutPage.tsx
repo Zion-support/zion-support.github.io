@@ -230,7 +230,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Passion</h3>
               <p className="text-gray-300">
-                We&apos;re passionate about technology and its potential to transform businesses and improve lives.
+                We're passionate about technology and its potential to transform businesses and improve lives.
               </p>
             </div>
 
@@ -280,7 +280,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Growth</h3>
               <p className="text-gray-300">
-                We&apos;re committed to continuous learning and helping our clients achieve sustainable growth.
+                We're committed to continuous learning and helping our clients achieve sustainable growth.
               </p>
             </div>
           </div>
@@ -380,7 +380,7 @@ export default function AboutPage() {
               Ready to Work With Us?
             </h2>
             <p className="text-xl text-gray-300 mb-12">
-              Let&apos;s discuss how we can help transform your business with our technology solutions
+              Let's discuss how we can help transform your business with our technology solutions
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
