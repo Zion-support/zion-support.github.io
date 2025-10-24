@@ -181,7 +181,7 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
             Ready to Optimize Your E-commerce Store?
           </h2>
           <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
-            Let's discuss how our AI e-commerce optimizer can transform your online business and drive growth.
+            Let&apos;s discuss how our AI e-commerce optimizer can transform your online business and drive growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 

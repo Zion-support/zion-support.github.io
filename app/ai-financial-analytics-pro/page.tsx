@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { ArrowRight, Calculator, Building2, Wallet, PiggyBank, BarChart, TrendingUp, CheckCircle, Brain, Settings } from 'lucide-react';
+import { ArrowRight, Calculator, Building2, Wallet, PiggyBank, BarChart, TrendingUp, CheckCircle, Brain, Settings, BarChart3, Shield, Target, Zap, Globe, DollarSign, Activity, Lock, Database, FileText, CreditCard, Helmet, Star } from 'lucide-react';
 
 export default function AiFinancialAnalyticsProPage() {
 
@@ -490,7 +490,7 @@ export default function AiFinancialAnalyticsProPage() {
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-300 italic mb-3">"{testimonial.content}"</p>
+                  <p className="text-gray-300 italic mb-3">&ldquo;{testimonial.content}&rdquo;</p>
                   <div className="text-cyan-400 font-semibold text-sm">
                     Result: {testimonial.results}
                   </div>

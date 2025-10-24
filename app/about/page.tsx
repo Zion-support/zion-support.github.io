@@ -136,7 +136,7 @@ const AboutPage: React.FC = () => {
             <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12">
               <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Let's discuss how our AI and IT solutions can help your business grow and succeed.
+                Let&apos;s discuss how our AI and IT solutions can help your business grow and succeed.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
