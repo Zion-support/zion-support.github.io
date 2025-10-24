@@ -1,20 +1,14 @@
-<<<<<<< HEAD
-import React from 'react'
-interface AdvancedSEOOptimizerProps {
-className?: string
-}
-}
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({ className = '' ,}) => {
-return (</AdvancedSEOOptimizerProps>,
-    <div className={className} /></div>h2>AdvancedSEOOptimizer</h2>p>This component is under construction.</p>/div>
-  )
-}
-export default AdvancedSEOOptimizer;
-}
-=======
+import React from 'react';
 
-const AdvancedSEOOptimizer: React.FC<
-return (<
-      <
-      <
->>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
+interface AdvancedSEOOptimizerProps {
+  className?: string;
+}
+
+export default function AdvancedSEOOptimizer({ className }: AdvancedSEOOptimizerProps) {
+  return (
+    <div className={className}>
+      <h1>AdvancedSEOOptimizer</h1>
+      <p>Component content</p>
+    </div>
+  );
+}

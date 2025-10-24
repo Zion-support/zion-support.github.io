@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-export const dynamic = () => {
-  return null;
-};
-=======
 
 interface dynamicProps {
   className?: string;
@@ -22,4 +17,3 @@ const dynamic: React.FC<dynamicProps> = ({
 };
 
 export default dynamic;
->>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

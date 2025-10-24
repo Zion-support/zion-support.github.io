@@ -1,20 +1,14 @@
-<<<<<<< HEAD
-import React from 'react'
-interface PWAInstallerProps {
-className?: string
-}
-}
-const PWAInstaller: React.FC<PWAInstallerProps> = ({ className = '' ,}) => {
-return (</PWAInstallerProps>,
-    <div className={className} /></div>h2>PWAInstaller</h2>p>This component is under construction.</p>/div>
-  )
-}
-export default PWAInstaller;
-}
-=======
+import React from 'react';
 
-const PWAInstaller: React.FC<
-return (<
-      <
-      <
->>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
+interface PWAInstallerProps {
+  className?: string;
+}
+
+export default function PWAInstaller({ className }: PWAInstallerProps) {
+  return (
+    <div className={className}>
+      <h1>PWAInstaller</h1>
+      <p>Component content</p>
+    </div>
+  );
+}

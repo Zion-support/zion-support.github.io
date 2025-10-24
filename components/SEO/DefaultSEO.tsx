@@ -1,21 +1,14 @@
-<<<<<<< HEAD
-import React from 'react'
-"use client"
-interface DefaultSEOProps {
-className?: string
-}
-}
-const DefaultSEO: React.FC<DefaultSEOProps> = ({ className = '' ,}) => {
-return (</DefaultSEOProps>,
-    <div className={className}></div>h2>DefaultSEO</h2>p>This component is under construction.</p>/div>
-  )
-}
-;
-export default DefaultSEO;
-=======
+import React from 'react';
 
-const DefaultSEO: React.FC<
-return (<
-      <
-      <
->>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
+interface DefaultSEOProps {
+  className?: string;
+}
+
+export default function DefaultSEO({ className }: DefaultSEOProps) {
+  return (
+    <div className={className}>
+      <h1>DefaultSEO</h1>
+      <p>Component content</p>
+    </div>
+  );
+}

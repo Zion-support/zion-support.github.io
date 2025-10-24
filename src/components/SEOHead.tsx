@@ -1,22 +1,14 @@
-<<<<<<< HEAD
-'use client'
-:all-pages-backup/components/SEOHead.tsx;
-import React from 'react'
-interface SEOHeadProps {
-className?: string
-}
-}
-const SEOHead: React.FC<SEOHeadProps> = ({ className = '' ,}) => {
-return (</SEOHeadProps>,
-    <div className={className} /></div>h2>SEOHead</h2>p>This component is under construction.</p>/div>
-  )
-}
-export default SEOHead;
-}
-=======
+import React from 'react';
 
-const SEOHead: React.FC<
-return (<
-      <
-      <
->>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
+interface SEOHeadProps {
+  className?: string;
+}
+
+export default function SEOHead({ className }: SEOHeadProps) {
+  return (
+    <div className={className}>
+      <h1>SEOHead</h1>
+      <p>Component content</p>
+    </div>
+  );
+}

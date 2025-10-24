@@ -1,10 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-export const errorHandler = () => {
-  return null;
-};
-=======
 
 export default function errorHandler() {
   return (
@@ -14,4 +9,3 @@ export default function errorHandler() {
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

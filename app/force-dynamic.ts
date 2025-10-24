@@ -1,1 +1,6 @@
-export const dynamic = 'force-dynamic';
+// force-dynamic
+export const forceDynamic = 'force-dynamic';
+
+export interface ForceDynamicProps {
+  className?: string;
+}

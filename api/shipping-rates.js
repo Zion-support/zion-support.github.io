@@ -1,1 +1,4 @@
-// API endpoint for shipping rates
+// shipping-rates
+export const shipping-rates = {
+  // Implementation
+};

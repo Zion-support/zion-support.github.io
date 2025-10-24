@@ -1,20 +1,14 @@
-<<<<<<< HEAD
-import React from 'react'
-interface DataCleanupManagerProps {
-className?: string
-}
-}
-const DataCleanupManager: React.FC<DataCleanupManagerProps> = ({ className = '' ,}) => {
-return (</DataCleanupManagerProps>,
-    <div className={className} /></div>h2>DataCleanupManager</h2>p>This component is under construction.</p>/div>
-  )
-}
-export default DataCleanupManager;
-}
-=======
+import React from 'react';
 
-const DataCleanupManager: React.FC<
-return (<
-      <
-      <
->>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
+interface DataCleanupManagerProps {
+  className?: string;
+}
+
+export default function DataCleanupManager({ className }: DataCleanupManagerProps) {
+  return (
+    <div className={className}>
+      <h1>DataCleanupManager</h1>
+      <p>Component content</p>
+    </div>
+  );
+}

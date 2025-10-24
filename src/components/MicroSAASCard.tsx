@@ -1,20 +1,14 @@
-<<<<<<< HEAD
-import React from 'react'
-interface MicroSAASCardProps {
-className?: string
-}
-}
-const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ className = '' ,}) => {
-return (</MicroSAASCardProps>,
-    <div className={className} /></div>h2>MicroSAASCard</h2>p>This component is under construction.</p>/div>
-  )
-}
-export default MicroSAASCard;
-}
-=======
+import React from 'react';
 
-const MicroSAASCard: React.FC<
-return (<
-      <
-      <
->>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
+interface MicroSAASCardProps {
+  className?: string;
+}
+
+export default function MicroSAASCard({ className }: MicroSAASCardProps) {
+  return (
+    <div className={className}>
+      <h1>MicroSAASCard</h1>
+      <p>Component content</p>
+    </div>
+  );
+}

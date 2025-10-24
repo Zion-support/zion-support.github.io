@@ -1,20 +1,14 @@
-<<<<<<< HEAD
-import React from 'react'
-interface FooterProps {
-className?: string
-}
-}
-const Footer: React.FC<FooterProps> = ({ className = '' ,}) => {
-return (</FooterProps>,
-    <div className={className} /></div>h2>Footer</h2>p>This component is under construction.</p>/div>
-  )
-}
-export default Footer;
-}
-=======
+import React from 'react';
 
-const Footer: React.FC<
-return (<
-      <
-      <
->>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
+interface FooterProps {
+  className?: string;
+}
+
+export default function Footer({ className }: FooterProps) {
+  return (
+    <div className={className}>
+      <h1>Footer</h1>
+      <p>Component content</p>
+    </div>
+  );
+}

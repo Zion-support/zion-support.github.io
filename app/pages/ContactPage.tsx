@@ -1,12 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-const ContactPage = () => {
-  return (
-    <div>h1>Contact Page</h1>p>Contact information coming soon.</p>/div>
-  );
-};
-export default ContactPage;
-=======
 
 interface ContactPageProps {
   className?: string;
@@ -25,4 +17,3 @@ const ContactPage: React.FC<ContactPageProps> = ({
 };
 
 export default ContactPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

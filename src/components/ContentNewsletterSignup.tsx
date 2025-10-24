@@ -1,20 +1,14 @@
-<<<<<<< HEAD
-import React from 'react'
-interface ContentNewsletterSignupProps {
-className?: string
-}
-}
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ className = '' ,}) => {
-return (</ContentNewsletterSignupProps>,
-    <div className={className} /></div>h2>ContentNewsletterSignup</h2>p>This component is under construction.</p>/div>
-  )
-}
-export default ContentNewsletterSignup;
-}
-=======
+import React from 'react';
 
-const ContentNewsletterSignup: React.FC<
-return (<
-      <
-      <
->>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
+interface ContentNewsletterSignupProps {
+  className?: string;
+}
+
+export default function ContentNewsletterSignup({ className }: ContentNewsletterSignupProps) {
+  return (
+    <div className={className}>
+      <h1>ContentNewsletterSignup</h1>
+      <p>Component content</p>
+    </div>
+  );
+}

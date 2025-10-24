@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-export const testRunner = () => {
-  return null;
-};
-=======
 
 interface testRunnerProps {
   className?: string;
@@ -22,4 +17,3 @@ const testRunner: React.FC<testRunnerProps> = ({
 };
 
 export default testRunner;
->>>>>>> cursor/fix-errors-and-merge-to-main-bd2c

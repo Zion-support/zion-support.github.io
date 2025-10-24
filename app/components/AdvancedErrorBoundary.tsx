@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-interface AdvancedErrorBoundaryProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-const AdvancedErrorBoundary: React.FC<AdvancedErrorBoundaryProps> = ({ className, children }) => {
-  return (
-    <div className={className}>
-      {children}
-    </div>
-  );
-};
-export default AdvancedErrorBoundary;
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
@@ -55,4 +39,3 @@ class AdvancedErrorBoundary extends Component<Props, State> {
 }
 
 export default AdvancedErrorBoundary;
->>>>>>> cursor/fix-errors-and-merge-to-main-bd2c
