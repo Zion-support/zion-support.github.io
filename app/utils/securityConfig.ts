@@ -96,7 +96,7 @@ export const validateInput = (input: string, type: keyof typeof SECURITY_CONFIG.
 }
 export const sanitizeInput = (input: string): string => {
   // Remove script tags
-  let sanitized = input.replace(SECURITY_CONFIG.VALIDATION.noScript, ')
+  let sanitized = input.replace(SECURITY_CONFIG.VALIDATION.noScript, '')
   // Basic HTML entity encoding
   sanitized = sanitized
     .replace(/&/g, '&amp;')
@@ -125,5 +125,5 @@ export const validateCSRFToken = (token: string, sessionToken: string): boolean 
 export const generateCSRFToken = (): string => {
   const array = new Uint8Array(32)
   crypto.getRandomValues(array)
-  return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join(')
+  return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
 }
