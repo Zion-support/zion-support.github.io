@@ -1,217 +1,108 @@
 'use client';
 import React from 'react';
-import Link from 'next/link';
-import { ArrowLeft, CheckCircle, Shield, FileText, Award, Users, Lock } from 'lucide-react';
-
-const CompliancePage: React.FC = () => {
-  const certifications = [
-    { name: 'SOC 2 Type II', status: 'Certified' },
-    { name: 'ISO 27001', status: 'Certified' },
-    { name: 'GDPR', status: 'Compliant' },
-    { name: 'HIPAA', status: 'Compliant' },
-    { name: 'PCI DSS', status: 'Compliant' }
-  ];
-
+import Navigation from '../components/Navigation';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+const PageFixedPage: React.FC = () => {
+  const features = [
+    {
+      ico
+  n: Brain
+    title: 'AI-Powered Analysis'
+      description: 'Advanced AI algorithms provide intelligent insights and recommendations.'
+    benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+}
+  {
+    icon: BarChart
+    title: 'Advanced Analytics'
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
+    benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+}
+  {
+    icon: Target
+    title: 'Precision Targeting'
+      description: 'Target specific goals and objectives with precision and accuracy.'
+    benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+}
+  {
+    icon: TrendingUp
+    title: 'Growth Optimization'
+      description: 'Optimize your business growth with data-driven strategies.'
+    benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+  ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Header */}
-      <section className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex items-center">
-            <Link 
-              href="/privacy" 
-              className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
-            >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Privacy Policy
-            </Link>
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900">Compliance</h1>
-              <p className="text-gray-600">Security, privacy, and regulatory compliance</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Overview */}
-        <section className="mb-16">
-          <div className="bg-white rounded-lg shadow-sm p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Compliance Overview</h2>
-            <p className="text-gray-600 mb-6">
-              At Zion Tech Group, we maintain the highest standards of security, privacy, and regulatory compliance. 
-              Our comprehensive compliance program ensures that your data is protected and our services meet 
-              industry standards and regulatory requirements.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <Shield className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Security First</h3>
-                <p className="text-gray-600">Bank-level security measures and encryption</p>
-              </div>
-              <div className="text-center">
-                <FileText className="w-12 h-12 text-green-600 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Regulatory Compliance</h3>
-                <p className="text-gray-600">Full compliance with industry regulations</p>
-              </div>
-              <div className="text-center">
-                <Award className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Certified Standards</h3>
-                <p className="text-gray-600">Third-party audited and certified</p>
-              </div>
-            </div>
-          </div>
+    <div></div>
+      <Helmet></Helmet>
+        <title>Page Fixed - Zion Tech Group</title>
+        <meta name="description" content="Advanced page fixed solutions powered by AI technology." /></meta>
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <section className="relative py-20 px-4 overflow-hidden"></section>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
+          <div className="relative max-w-7xl mx-auto text-center"></div>
+            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">Page Fixed</h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Advanced page fixed solutions powered by AI technology.</p>p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover: from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Get Started</button>
+              <button className="border border-purple-400 text-purple-400 hover: bg-purple-400 hove
+  r:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Learn More</button>
+            
+          
         </section>
-
-        {/* Certifications */}
-        <section className="mb-16">
-          <div className="bg-white rounded-lg shadow-sm p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Certifications & Standards</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {certifications.map((cert, index) => (
-                <div key={index} className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-lg font-semibold text-gray-900">{cert.name}</h3>
-                    <CheckCircle className="w-6 h-6 text-green-500" />
+        {/* Features Section */}
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">Key Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Powerful AI technology that drives results</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 l
+  g:grid-cols-4 gap-8">{features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hove
+  r: scale-110 transition-transform"></div>
+                    <feature.icon className="w-8 h-8 text-white" /></feature>
                   </div>
-                  <p className="text-sm text-gray-600 mb-2">Status: <span className="font-semibold text-green-600">{cert.status}</span></p>
-                  <p className="text-xs text-gray-500">
-                    {cert.name === 'SOC 2 Type II' && 'Security, availability, and confidentiality controls'}
-                    {cert.name === 'ISO 27001' && 'Information security management system'}
-                    {cert.name === 'GDPR' && 'General Data Protection Regulation compliance'}
-                    {cert.name === 'HIPAA' && 'Health Insurance Portability and Accountability Act'}
-                    {cert.name === 'PCI DSS' && 'Payment Card Industry Data Security Standard'}
-                  </p>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2"></ul>
+                      {feature.benefits.map((benefit, idx) => (</ul>
+                        <li key={idx} className="flex items-center text-sm text-gray-400"></li>
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
+                          {benefit}</CheckCircle>
+                        </li>
+                      ))}
+                    </ul>
+                  
                 </div>
-              ))}
+              
             </div>
           </div>
         </section>
-
-        {/* Security Measures */}
-        <section className="mb-16">
-          <div className="bg-white rounded-lg shadow-sm p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Security Measures</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Data Protection</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-600">End-to-end encryption for all data transmission</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-600">AES-256 encryption for data at rest</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-600">Regular security audits and penetration testing</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-600">Multi-factor authentication for all access</span>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Infrastructure Security</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-600">Secure cloud infrastructure with redundancy</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-600">24/7 monitoring and threat detection</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-600">Regular backup and disaster recovery procedures</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-600">Zero-trust network architecture</span>
-                  </li>
-                </ul>
+        {/* CTA Section */}
+        <section className="py-20 px-4"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">Ready to Get Started?</h2>
+              <p className="text-xl text-gray-300 mb-8">Contact our experts to discuss your requirements and get started today.</p>p>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover: from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Contact Us</button>
+                <button className="border border-purple-400 text-purple-400 hover: bg-purple-400 hove
+  r:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Learn More</button>
               </div>
             </div>
           </div>
         </section>
-
-        {/* Privacy & Data Handling */}
-        <section className="mb-16">
-          <div className="bg-white rounded-lg shadow-sm p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Privacy & Data Handling</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Data Privacy</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-600">GDPR compliant data processing</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-600">Data minimization and purpose limitation</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-600">Right to data portability and deletion</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-600">Transparent privacy policies and notices</span>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Data Retention</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-600">Automated data retention policies</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-600">Secure data destruction procedures</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-600">Regular data purging and cleanup</span>
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-600">Audit trails for all data operations</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact */}
-        <section className="text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-8 text-white">
-            <h2 className="text-2xl font-bold mb-4">Questions About Compliance?</h2>
-            <p className="text-blue-100 mb-6">
-              Our compliance team is available to answer any questions about our security measures, 
-              certifications, or data handling practices.
-            </p>
-            <a
-              href="/contact"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all inline-block"
-            >
-              Contact Compliance Team
-            </a>
-            <div className="mt-8 text-sm text-blue-200">
-              <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
-            </div>
-          </div>
-        </section>
-      </main>
-    </div>
+      </div>
+      </Footer>
+</div>;
   );
 };
 
-export default CompliancePage;
+export default PageFixedPage
+})))
+
+}
+}

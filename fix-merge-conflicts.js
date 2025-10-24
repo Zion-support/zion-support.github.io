@@ -1,74 +1,67 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+const fs = require('fs');
+const path = require('path');
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Function to fix merge conflicts in a file
 function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Remove merge conflict markers and keep the HEAD version
-    content = content.replace(/\n([\s\S]*?)
+    // Remove merge conflict markers
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
     
-    // Clean up any remaining conflict markers
-    content = content.replace(/\n/g, '');
-    content = content.replace(/
+    // Fix common syntax issues
+    content = content.replace(/,\s*$/gm, ''); // Remove trailing commas
+    content = content.replace(/,\s*}/g, '}'); // Remove commas before closing braces
+    content = content.replace(/,\s*]/g, ']'); // Remove commas before closing brackets
+    content = content.replace(/,\s*\)/g, ')'); // Remove commas before closing parentheses
     
+    // Fix JSX syntax issues
+    content = content.replace(/<(\w+)\s*\/>\s*<\/\1>/g, '<$1 />'); // Fix self-closing tags
+    content = content.replace(/(\w+)\s*=\s*{([^}]+)}\s*\/>/g, '$1={$2} />'); // Fix props syntax
+    
+    // Fix missing closing tags
+    content = content.replace(/<div([^>]*)>\s*$/gm, '<div$1>');
+    
+    // Fix import statements
+    content = content.replace(/import\s+{\s*([^}]+)\s*}\s*from\s+['"]([^'"]+)['"];?/g, (match, imports, module) => {
+      const cleanImports = imports.replace(/\s+/g, ' ').trim();
+      return `import { ${cleanImports} } from '${module}';`;
+    });
+    
+    // Fix function declarations
+    content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{/g, 'const $1: React.FC = () => {');
+    
+    // Fix JSX fragments
+    content = content.replace(/<>\s*$/gm, '<>');
+    content = content.replace(/^\s*<\/>/gm, '</>');
+    
+    // Write the fixed content back
     fs.writeFileSync(filePath, content);
-<<<<<<< HEAD
-
-=======
-    // console.log(`Fixed merge conflicts in: ${filePath}`);
->>>>>>> cursor/website-audit-and-update-with-deployment-572b
+    console.log(`Fixed: ${filePath}`);
+    return true;
   } catch (error) {
-    // console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Find all TypeScript/TSX files with merge conflicts
-function findFilesWithConflicts(dir) {
-  const files = [];
+function findAndFixFiles(dir) {
+  const files = fs.readdirSync(dir);
   
-  function scanDirectory(currentDir) {
-    const items = fs.readdirSync(currentDir);
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
     
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && !item.includes('node_modules')) {
-        scanDirectory(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts'))) {
-        const content = fs.readFileSync(fullPath, 'utf8');
-        if (content.includes('') || content.includes('
-          files.push(fullPath);
-        }
-      }
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      findAndFixFiles(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js')) {
+      fixMergeConflicts(filePath);
     }
   }
-  
-  scanDirectory(dir);
-  return files;
 }
 
-// Main execution
-const appDir = path.join(__dirname, 'app');
-const filesWithConflicts = findFilesWithConflicts(appDir);
+// Start fixing from the app directory
+findAndFixFiles('./app');
+findAndFixFiles('./components');
+findAndFixFiles('./src');
 
-<<<<<<< HEAD
-filesWithConflicts.forEach(file => console.log(`- ${file}`));
-
-// Fix all files
-filesWithConflicts.forEach(fixMergeConflicts);
-=======
-// console.log(`Found ${filesWithConflicts.length} files with merge conflicts:`);
-filesWithConflicts.forEach(file => // console.log(`- ${file}`));
-
-// Fix all files
-filesWithConflicts.forEach(fixMergeConflicts);
-
-// console.log('Merge conflict fixing completed!');
->>>>>>> cursor/website-audit-and-update-with-deployment-572b
+console.log('Merge conflict fixing completed!');

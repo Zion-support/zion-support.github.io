@@ -1,135 +1,83 @@
 #!/bin/bash
 
-echo "🚀 Starting comprehensive PR merge and conflict resolution process..."
+# Script to merge all open PRs
+echo "Starting to merge all open PRs..."
 
-# Function to check if a command exists
-command_exists() {
-    command -v "$1" >/dev/null 2>&1
-}
+# Get list of open PRs
+PR_LIST=$(gh pr list --state open --json number,title,headRefName --jq '.[] | "\(.number) \(.headRefName)"')
 
-# Function to resolve merge conflicts in a file
-resolve_merge_conflicts() {
-    local file="$1"
-    echo "🔧 Resolving merge conflicts in: $file"
-    
-    # Remove merge conflict markers and keep HEAD version
-    sed -i '/^<<<<<<< HEAD$/d' "$file"
-    sed -i '/^=======/,/^>>>>>>> /d' "$file"
-    
-    echo "✅ Resolved conflicts in: $file"
-}
-
-# Function to fix Next.js imports to React Router
-fix_imports() {
-    local file="$1"
-    echo "🔄 Fixing imports in: $file"
-    
-    # Replace Next.js imports with React Router
-    sed -i "s/from 'next\/link'/from 'react-router-dom'/g" "$file"
-    sed -i "s/import Link from/import { Link } from/g" "$file"
-    sed -i "s/import { Link } from 'next\/link'/import { Link } from 'react-router-dom'/g" "$file"
-    
-    echo "✅ Fixed imports in: $file"
-}
-
-# Function to clean console statements
-clean_console() {
-    local file="$1"
-    echo "🧹 Cleaning console statements in: $file"
-    
-    # Replace console.log with comments
-    sed -i 's/console\.log(/\/\/ console.log(/g' "$file"
-    sed -i 's/console\.warn(/\/\/ console.warn(/g' "$file"
-    sed -i 's/console\.error(/\/\/ console.error(/g' "$file"
-    
-    echo "✅ Cleaned console statements in: $file"
-}
-
-# Main execution
-echo "📋 Step 1: Finding all files with merge conflicts..."
-conflict_files=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD\|=======\|>>>>>>> " 2>/dev/null || true)
-
-if [ -n "$conflict_files" ]; then
-    echo "🔍 Found files with merge conflicts:"
-    echo "$conflict_files"
-    
-    echo "🔧 Resolving merge conflicts..."
-    for file in $conflict_files; do
-        resolve_merge_conflicts "$file"
-    done
-else
-    echo "✅ No merge conflicts found"
-fi
-
-echo "📋 Step 2: Fixing Next.js imports..."
-import_files=$(find . -name "*.tsx" -o -name "*.ts" | xargs grep -l "from 'next/link'" 2>/dev/null || true)
-
-if [ -n "$import_files" ]; then
-    echo "🔍 Found files with Next.js imports:"
-    echo "$import_files"
-    
-    echo "🔄 Fixing imports..."
-    for file in $import_files; do
-        fix_imports "$file"
-    done
-else
-    echo "✅ No Next.js imports found"
-fi
-
-echo "📋 Step 3: Cleaning console statements..."
-console_files=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "console\." 2>/dev/null || true)
-
-if [ -n "$console_files" ]; then
-    echo "🔍 Found files with console statements:"
-    echo "$console_files"
-    
-    echo "🧹 Cleaning console statements..."
-    for file in $console_files; do
-        clean_console "$file"
-    done
-else
-    echo "✅ No console statements found"
-fi
-
-echo "📋 Step 4: Checking build status..."
-if command_exists npm; then
-    echo "🔨 Running npm install..."
-    npm install --silent
-    
-    echo "🔨 Running build test..."
-    if npm run build > /dev/null 2>&1; then
-        echo "✅ Build successful!"
-    else
-        echo "❌ Build failed, checking for errors..."
-        npm run build
+# Process each PR
+while IFS= read -r line; do
+    if [ -z "$line" ]; then
+        continue
     fi
-else
-    echo "⚠️ npm not found, skipping build test"
-fi
-
-echo "📋 Step 5: Git operations..."
-if command_exists git; then
-    echo "📝 Adding all changes..."
-    git add .
     
-    echo "💾 Committing changes..."
-    git commit -m "Auto-resolve: Fix merge conflicts, update imports, clean console statements
-
-- Resolved all merge conflicts automatically
-- Updated Next.js imports to React Router
-- Cleaned console statements for production
-- Ensured build compatibility
-- Ready for main branch merge" || echo "No changes to commit"
+    PR_NUMBER=$(echo "$line" | awk '{print $1}')
+    BRANCH_NAME=$(echo "$line" | awk '{print $2}')
     
-    echo "📤 Pushing changes..."
-    git push origin main || echo "Push failed, may need manual intervention"
-else
-    echo "⚠️ git not found, skipping git operations"
-fi
+    echo "Processing PR #$PR_NUMBER ($BRANCH_NAME)..."
+    
+    # Check if PR can be merged directly
+    if gh pr merge "$PR_NUMBER" --merge --dry-run 2>/dev/null; then
+        echo "Merging PR #$PR_NUMBER directly..."
+        gh pr merge "$PR_NUMBER" --merge
+    else
+        echo "PR #$PR_NUMBER has conflicts, resolving..."
+        
+        # Checkout the PR branch
+        gh pr checkout "$PR_NUMBER"
+        
+        # Fetch latest main
+        git fetch origin main
+        
+        # Try to merge main into the branch
+        if git merge origin/main; then
+            echo "Merge successful, pushing changes..."
+            git push origin "$BRANCH_NAME"
+            
+            # Now try to merge the PR
+            if gh pr merge "$PR_NUMBER" --merge; then
+                echo "Successfully merged PR #$PR_NUMBER"
+            else
+                echo "Failed to merge PR #$PR_NUMBER after conflict resolution"
+            fi
+        else
+            echo "Merge conflict detected, attempting to resolve..."
+            
+            # Check for common conflict patterns and resolve them
+            if git status --porcelain | grep -q "deleted by us"; then
+                echo "Resolving delete conflicts..."
+                git status --porcelain | grep "deleted by us" | awk '{print $2}' | xargs git rm
+            fi
+            
+            if git status --porcelain | grep -q "deleted by them"; then
+                echo "Resolving delete conflicts (deleted by them)..."
+                git status --porcelain | grep "deleted by them" | awk '{print $2}' | xargs git add
+            fi
+            
+            # Add all changes
+            git add .
+            
+            # Commit the merge
+            if git commit -m "Resolve merge conflicts"; then
+                echo "Conflicts resolved, pushing changes..."
+                git push origin "$BRANCH_NAME"
+                
+                # Try to merge the PR
+                if gh pr merge "$PR_NUMBER" --merge; then
+                    echo "Successfully merged PR #$PR_NUMBER after conflict resolution"
+                else
+                    echo "Failed to merge PR #$PR_NUMBER after conflict resolution"
+                fi
+            else
+                echo "Failed to resolve conflicts for PR #$PR_NUMBER"
+            fi
+        fi
+    fi
+    
+    echo "Completed processing PR #$PR_NUMBER"
+    echo "---"
+    
+done <<< "$PR_LIST"
 
-echo "🎉 Merge conflict resolution and PR processing completed!"
-echo "📊 Summary:"
-echo "  - Merge conflicts: $(echo "$conflict_files" | wc -l) files processed"
-echo "  - Import fixes: $(echo "$import_files" | wc -l) files processed"
-echo "  - Console cleanup: $(echo "$console_files" | wc -l) files processed"
-echo "  - Build status: $(npm run build > /dev/null 2>&1 && echo "✅ Success" || echo "❌ Failed")"
+echo "Finished processing all PRs"

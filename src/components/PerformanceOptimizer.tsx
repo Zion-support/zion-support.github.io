@@ -1,196 +1,288 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import Navigation from './Navigation';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight } from 'lucide-react';
+
+import React, { useEffect, useState, useCallback } from 'react';
+import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
 
 interface PerformanceOptimizerProps {
-  enableImageOptimization?: boolean;
-  enableLazyLoading?: boolean;
-  enablePreloading?: boolean;
-  enableCodeSplitting?: boolean;
-  enableResourceHints?: boolean;
-  enableServiceWorker?: boolean;
+
+;
+:all-pages-backup/components/PerformanceOptimizer.tsx
+  className?: string}
 }
-
+;
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
+  className?: string
+}</PerformanceOptimizerProps>
+</PerformanceOptimizerProps>
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  enableImageOptimization = true,
-  enableLazyLoading = true,
-  enablePreloading = true,
-  enableCodeSplitting = true,
-  enableResourceHints = true,
-  enableServiceWorker = true
-}) => {
-  const [optimizationStatus, setOptimizationStatus] = useState({
-    imagesOptimized: 0,
-    lazyLoaded: 0,
-    preloaded: 0,
-    codeSplit: false,
-    resourceHints: 0,
-    serviceWorker: false
-  });
+  enableImageOptimization = true
+  enableLazyLoading = true
+  enablePreloading = true
+  enableCodeSplitting = true
+}) => {</PerformanceOptimizerProps>
+  const [isOptimizing, setIsOptimizing] = useState(false);</PerformanceOptimizerProps>
+  const [optimizationStatus, setOptimizationStatus] = useState<{;
+    images: boolean
+  lazyLoading: boolean
+  preloading: boolean
+  codeSplitting: boolean
+  }>({
+:all-pages-backup/components/PerformanceOptimizer.tsx
+    images: false
+  lazyLoading: false
+  preloading: false
+  codeSplitting: false
+    images: false
+    lazyLoading: false
+    preloading: false
+    codeSplittin
+  g: false
+  })
 
-  useEffect(() => {
-    if (enableImageOptimization) {
-      optimizeImages();
-    }
-    if (enableLazyLoading) {
-      setupLazyLoading();
-    }
-    if (enablePreloading) {
-      preloadCriticalResources();
-    }
-    if (enableCodeSplitting) {
-      setupCodeSplitting();
-    }
-    if (enableResourceHints) {
-      addResourceHints();
-    }
-    if (enableServiceWorker) {
-      registerServiceWorker();
-    }
-  }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting, enableResourceHints, enableServiceWorker]);
-
-  const optimizeImages = () => {
+  const optimizeImages = useCallback(() => {;
+    if (!enableImageOptimization) return,
+;
+    // Optimize images
     const images = document.querySelectorAll('img');
-    let optimized = 0;
-    
     images.forEach((img) => {
-      // Add loading="lazy" for images below the fold
-      if (img.getBoundingClientRect().top > window.innerHeight) {
-        img.setAttribute('loading', 'lazy');
-        optimized++;
+  
+      if (img.loading !== 'lazy') {
+        img.loading = 'lazy'
       }
-      
-      // Add decoding="async" for better performance
-      img.setAttribute('decoding', 'async');
-      
-      // Add fetchpriority="high" for above-the-fold images
-      if (img.getBoundingClientRect().top <= window.innerHeight) {
-        img.setAttribute('fetchpriority', 'high');
-      }
-      
-      // Add proper alt text if missing
-      if (!img.getAttribute('alt')) {
-        img.setAttribute('alt', 'Zion Tech Group - AI and IT Solutions');
-      }
-    });
-    
-    setOptimizationStatus(prev => ({ ...prev, imagesOptimized: optimized }));
-  };
 
-  const setupLazyLoading = () => {
-    if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver((entries) => {
+      // Add WebP support detection
+      if (!img.src.includes('.webp') && img.src.includes('.jpg')) {
+        const webpSrc = img.src.replace('.jpg', '.webp');
+        const webpImg = new Image();
+        webpImg.onload = () => {
+          img.src = webpSrc
+        }
+        webpImg.src = webpSrc
+      }
+    })
+
+    setOptimizationStatus(prev => ({ ...prev, images: true }))
+  }, [enableImageOptimization])
+
+  const enableLazyLoadingOptimization = useCallback(() => {;
+    if (!enableLazyLoading) return,
+;
+    // Intersection Observer for lazyloadingconstobserver= new IntersectionObserver()
+      (entries) => {
+  
         entries.forEach((entry) => {
+  
           if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
+            const img = entry.target as HTMLImageElement
             if (img.dataset.src) {
-              img.src = img.dataset.src;
+              img.src = img.dataset.src
               img.removeAttribute('data-src');
               observer.unobserve(img);
             }
           }
-        });
-      }, {
-        rootMargin: '50px 0px',
-        threshold: 0.1
-      });
-      
-      const lazyImages = document.querySelectorAll('img[data-src]');
-      lazyImages.forEach((img) => observer.observe(img));
-      
-      setOptimizationStatus(prev => ({ ...prev, lazyLoaded: lazyImages.length }));
-    }
-  };
+        })
+      }
+      { rootMargin: '50px' }
+    )
+;
+    const lazyImages = document.querySelectorAll('img[data-src]');
+    lazyImages.forEach((img) => observer.observe(img))
 
-  const preloadCriticalResources = () => {
+    setOptimizationStatus(prev => ({ ...prev, lazyLoading: true }))
+  }, [enableLazyLoading])
+
+  const enablePreloadingOptimization = useCallback(() => {;
+    if (!enablePreloading) return,
+;
+    // Preload critical resources
     const criticalResources = [
-      {
-        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
-        as: 'style',
-        type: 'text/css'
-      },
-      {
-        href: '/styles/critical.css',
-        as: 'style',
-        type: 'text/css'
-      }
-    ];
-
-    criticalResources.forEach((resource) => {
+      '/fonts/main.woff2'
+      '/css/critical.css'
+    ]
+;
+    criticalResources.forEach((resource) => {;
       const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource.href;
-      link.as = resource.as;
-      if (resource.type) {
-        link.type = resource.type;
+      link.rel = 'preload'
+      link.href = resource
+      link.as = resource.endsWith('.css') ? 'style' : 'font'
+      if (resource.endsWith('.woff2')) {
+        link.crossOrigin = 'anonymous'
       }
       document.head.appendChild(link);
-    });
+    })
 
-    setOptimizationStatus(prev => ({ ...prev, preloaded: criticalResources.length }));
-  };
+    setOptimizationStatus(prev => ({ ...prev, preloading: true }))
+  }, [enablePreloading])
 
-  const setupCodeSplitting = () => {
-    // This would be handled by Next.js dynamic imports
-    setOptimizationStatus(prev => ({ ...prev, codeSplit: true }));
-  };
-
-  const addResourceHints = () => {
-    const hints = [
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-      { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
-      { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }
-    ];
-
-    hints.forEach((hint) => {
-      const link = document.createElement('link');
-      link.rel = hint.rel;
-      link.href = hint.href;
-      if (hint.crossorigin) {
-        link.crossOrigin = hint.crossorigin;
-      }
-      document.head.appendChild(link);
-    });
-
-    setOptimizationStatus(prev => ({ ...prev, resourceHints: hints.length }));
-  };
-
-  const registerServiceWorker = async () => {
-    if ('serviceWorker' in navigator) {
+  const enableCodeSplittingOptimization = useCallback(() => {;
+    if (!enableCodeSplitting) return,
+;
+    // Dynamic imports for codesplittingconstloadComponent= async (componentName: string) => {
+  
       try {
-        const registration = await navigator.serviceWorker.register('/sw.js');
-        setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }));
+        const module = await import(`../components/${componentName}.tsx`);
+        return module.default
       } catch (error) {
-        // Service Worker registration failed - handled silently in production
+        // // console.warn(`Failed to load component: ${componentName}`, error);
+        return null
       }
     }
-  };
 
-  // Performance monitoring
-  useEffect(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            // Track LCP
-            if (typeof window !== 'undefined' && 'gtag' in window) {
-              (window as any).gtag('event', 'web_vitals', {
-                name: 'LCP',
-                value: Math.round(entry.startTime),
-                event_category: 'Performance'
-              });
-            }
-          }
-        }
-      });
-      
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+    // Store the function globally for use in other components
+    (window as any).loadComponent = loadComponent,
+;
+    setOptimizationStatus(prev => ({ ...prev, codeSplitting: true }))
+  }, [enableCodeSplitting])
+
+  const runOptimizations = useCallback(async () => {;
+    setIsOptimizing(true);
+    try {
+      await Promise.all([)
+        optimizeImages()
+        enableLazyLoadingOptimization()
+        enablePreloadingOptimization()
+        enableCodeSplittingOptimization()
+      ])
+    } catch (error) {
+      // // console.error('Optimization failed:', error);
+    } finally {
+      setIsOptimizing(false);
     }
-  }, []);
+  }, [optimizeImages, enableLazyLoadingOptimization, enablePreloadingOptimization, enableCodeSplittingOptimization])
 
-  return null;
-};
+  useEffect(() => {
+    runOptimizations();
+  }, [runOptimizations])
 
-export default PerformanceOptimizer;
+  const allOptimizationsComplete = Object.values(optimizationStatus).every(Boolean);
+
+  return (
+    <>
+</>
+      <Helmet></Helmet>
+:all-pages-backup/components/PerformanceOptimizer.tsx</Helmet>
+        <Head></Head>
+        <title>PerformanceOptimizer</title>;
+        <meta name=&quot;description&quot; content=&quot;Advanced PerformanceOptimizer solution for modern businesses.&quot; /></meta>
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
+      </Head>
+        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, PerformanceOptimizer, AI solutions, intelligent automation&quot; /></meta>
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
+      </Head>
+      </Helmet>
+      <Navigation />
+      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
+        {/* Hero Section */}
+    </div>
+        <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
+          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
+          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
+            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;></h1>
+              PerformanceOptimizer</h1>
+            </h1>
+            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;></p>
+              Advanced PerformanceOptimizer solution for modern businesses.</p>
+            </p>
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;></button>
+                Get Started</button>
+                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; /></ArrowRight>
+              </button>
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
+  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
+                Learn More</button>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className=&quot;py-20 px-4&quot;></section>
+          <div className=&quot;max-w-7xl mx-auto&quot;></div>
+            <div className=&quot;text-center mb-16&quot;></div>
+              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
+                Powerful AI-driven features designed to transform your business operations</p>
+              </p>
+            </div>
+            <div className=&quot;grid md: grid-cols-2 l
+  g:grid-cols-4 gap-8&quot;></div>
+              {features.map((feature, index) => (
+                <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
+                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; /></feature>
+                  <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
+                  <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
+                  <ul className=&quot;space-y-2&quot;></ul>
+                    {feature.benefits.map((benefit, idx) => (</ul>
+                      <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;></li>
+                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; /></CheckCircle>
+                        {benefit}</CheckCircle>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
+          <div className=&quot;max-w-7xl mx-auto&quot;></div>
+            <div className=&quot;text-center mb-16&quot;></div>
+              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
+                Experience the benefits of cutting-edge AI technology</p>
+              </p>
+            </div>
+            <div className=&quot;grid md: grid-cols-2 l
+  g:grid-cols-3 gap-8&quot;></div>
+              {benefits.map((benefit, index) => (
+                <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
+                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; /></CheckCircle>
+                  <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className=&quot;py-20 px-4&quot;></section>
+          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
+            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
+            <p className=&quot;text-xl text-gray-300 mb-8&quot;></p>
+              Join thousands of businesses already using our AI solutions</p>
+            </p>
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
+                Start Free Trial</button>
+              </button>
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
+  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
+                Contact Sales</button>
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  )
+}
+
+export default PerformanceOptimizer
+    </div>
+    </div>
+  );
+  );
+:all-pages-backup/components/PerformanceOptimizer.tsx
+{};
+
+export default PerformanceOptimizerPage
+}
+export default PerformanceOptimizerPage

@@ -1,185 +1,194 @@
 'use client';
-import React, { useEffect, useState, useCallback } from 'react';
+:all-pages-backup/components/AccessibilityEnhancer.tsx
+"use client"
+
+import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-  enableKeyboardNavigation?: boolean;
-  enableScreenReaderSupport?: boolean;
-  enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
-  enableSkipLinks?: boolean;
-  enableKeyboardNav?: boolean;
-  enableFocusIndicators?: boolean;
+  children: React.ReactNode}
 }
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  enableKeyboardNavigation = true,
-  enableScreenReaderSupport = true,
-  enableHighContrast = true,
-  enableFocusManagement = true,
-}) => {
-  const [isHighContrast, setIsHighContrast] = useState(false);
-  const [isReducedMotion, setIsReducedMotion] = useState(false);
-
+;
+export default function AccessibilityEnhancer({ children }: AccessibilityEnhancerProps) {
   useEffect(() => {
-    // Check for user preferences
+    // Accessibility enhancements
     if (typeof window !== 'undefined') {
-      const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      
-      setIsHighContrast(prefersHighContrast);
-      setIsReducedMotion(prefersReducedMotion);
+      // Add skip to content link
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content'
+      skipLink.textContent = 'Skip to main content'
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focu
+  s:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
+      document.body.insertBefore(skipLink, document.body.firstChild)
 
-      // Apply high contrast mode
-      if (enableHighContrast && prefersHighContrast) {
-        document.documentElement.classList.add('high-contrast');
+      // Add main content ID
+      const main = document.querySelector('main');
+      if (main && !main.id) {
+        main.id = 'main-content'
       }
 
-      // Apply reduced motion
-      if (prefersReducedMotion) {
-        document.documentElement.classList.add('reduced-motion');
+      return () => {
+        const existingSkipLink = document.querySelector('a[href="#main-content"]');
+        if (existingSkipLink) {
+          existingSkipLink.remove();
+        }
       }
     }
+  }, []);
+;
+  return <div>{children}</div>};
+import { useEffect } from 'react';
+import Navigation from './Navigation';
+
+const AccessibilityEnhancer: React.FC<{ childre
+  n: React.ReactNode }> = ({ children }) => {
+  useEffect(() => {
+    // Add keyboard navigation support
+:all-pages-backup/components/AccessibilityEnhancer.tsx
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Skip to main content with Alt + M
+      if (e.altKey && e.key === 'm') {;
+        e.preventDefault();
+        const mainContent = document.getElementById('main-content');
+        if (mainContent) {
+          mainContent.focus();
+          mainContent.scrollIntoView({ behavio)
+  r: 'smooth' })}
+      }
+
+      // Skip to navigation with Alt + N
+      if (e.altKey && e.key === 'n') {
+        e.preventDefault();
+        const navigation = document.querySelector('nav');
+        if (navigation) {
+          const firstLink = navigation.querySelector('a') as HTMLElement
+          if (firstLink) {
+            firstLink.focus()}
+    if (enableKeyboardNavigation) {
+      const handleKeyDown = (event: KeyboardEvent) => {
+        // Skip to main content
+        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {;
+          const mainContent = document.querySelector('main, [role=&quot;main&quot;]');
+          if (mainContent) {
+            (mainContent as HTMLElement).focus();
+            event.preventDefault();
+          }
+        }
+      }
+    }
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+:all-pages-backup/components/AccessibilityEnhancer.tsx
+      document.removeEventListener('keydown', handleKeyDown)}}, []);
+      document.removeEventListener('keydown', handleKeyDown);
+    }
+  }, []);
+
+  useEffect(() => {
+    // Add focus indicators
+    const style = document.createElement('style');
+    style.textContent = `
+:all-pages-backup/components/AccessibilityEnhancer.tsx
+      *:focus {
+        outline: 2px solid #8b5cf6 !important
+        outline-offset: 2px !important
+      *:focus {;
+        outline: 2px solid #8b5cf6 !important
+        outline-offse
+  t: 2px !important
+      }
+
+      const nav = document.querySelector('nav');
+      if (nav && !nav.getAttribute('role')) {
+        nav.setAttribute('role', 'navigation')}
+
+      const footer = document.querySelector('footer');
+      if (footer && !footer.getAttribute('role')) {
+        footer.setAttribute('role', 'contentinfo')}
+    }
+  }, [enableScreenReaderSupport]);
+
+  useEffect(() => {
+    // Add high contrast support
+    if (enableHighContrast) {
+      const style = document.createElement('style');
+      style.textContent = `
+        @media (prefers-contrast: high) {
+:all-pages-backup/components/AccessibilityEnhancer.tsx
+          * {
+            border-color: currentColor !important
+          * {;
+            border-colo
+  r: currentColor !important
+          }
+          button, a {
+            border: 2px solid currentColor !important
+          }
+        }
+      `;
+      document.head.appendChild(style)}
   }, [enableHighContrast]);
 
   useEffect(() => {
-    if (!enableKeyboardNavigation) return;
-
-    // Enhanced keyboard navigation
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Skip to main content
-      if (event.key === 'Tab' && !event.shiftKey && document.activeElement === document.body) {
-        const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
-        if (skipLink) {
-          skipLink.focus();
-          event.preventDefault();
-        }
-      }
-
-      // Escape key to close modals/dropdowns
-      if (event.key === 'Escape') {
-        const activeElement = document.activeElement as HTMLElement;
-        if (activeElement && activeElement.blur) {
-          activeElement.blur();
-        }
-      }
-
-      // Arrow key navigation for custom components
-      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-        const focusableElements = document.querySelectorAll(
-          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-        );
-        const currentIndex = Array.from(focusableElements).indexOf(document.activeElement as Element);
-        
-        if (currentIndex !== -1) {
-          const nextIndex = event.key === 'ArrowDown' 
-            ? Math.min(currentIndex + 1, focusableElements.length - 1)
-            : Math.max(currentIndex - 1, 0);
-          
-          (focusableElements[nextIndex] as HTMLElement)?.focus();
-          event.preventDefault();
-        }
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [enableKeyboardNavigation]);
-
-  useEffect(() => {
-    if (!enableFocusManagement) return;
-
-    // Focus management for better accessibility
-    const manageFocus = () => {
-      const focusableElements = document.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      );
-
-      // Add focus indicators
-      focusableElements.forEach((element) => {
-        element.addEventListener('focus', () => {
-          element.classList.add('focus-visible');
-        });
-        
-        element.addEventListener('blur', () => {
-          element.classList.remove('focus-visible');
-        });
-      });
-    };
-
-    manageFocus();
-
-    // Re-run when DOM changes
-    const observer = new MutationObserver(manageFocus);
-    observer.observe(document.body, { childList: true, subtree: true });
-
-    return () => observer.disconnect();
-  }, [enableFocusManagement]);
-
-  useEffect(() => {
-    if (!enableScreenReaderSupport) return;
-
-    // Announce dynamic content changes to screen readers
-    const announceToScreenReader = (message: string) => {
-      const announcement = document.createElement('div');
-      announcement.setAttribute('aria-live', 'polite');
-      announcement.setAttribute('aria-atomic', 'true');
-      announcement.className = 'sr-only';
-      announcement.textContent = message;
+    // Add focus management
+    if (enableFocusManagement) {
+      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])';
       
-      document.body.appendChild(announcement);
+      .sr-only {
+        position: absolute
+  width: 1px
+  height: 1px
+  padding: 0
+  margin: -1px
+  overflow: hidden
+  clip: rect(0, 0, 0, 0);
+        white-space: nowrap
+  border: 0
+      }
       
-      setTimeout(() => {
-        document.body.removeChild(announcement);
-      }, 1000);
-    };
+      .high-contrast {
+        filter: contrast(150%)}
+      
+      .reduce-motion * {
+        animation-duration: 0.01ms !important
+        animation-iteration-count: 1 !important
+        transition-duratio
+  n: 0.01ms !important
+      }
+    `;
+    document.head.appendChild(style);
 
-    // Announce page changes
-    const originalTitle = document.title;
-    const titleObserver = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (mutation.type === 'childList' && mutation.target === document.head) {
-          const titleElement = document.querySelector('title');
-          if (titleElement && titleElement.textContent !== originalTitle) {
-            announceToScreenReader(`Page changed to ${titleElement.textContent}`);
-          }
-        }
-      });
-    });
+    return () => {
+:all-pages-backup/components/AccessibilityEnhancer.tsx
+      document.head.removeChild(style)}}, []);
+      document.head.removeChild(style);
+    }
+  }, []);
 
-    titleObserver.observe(document.head, { childList: true });
+      // Apply focus trapping to modals
+      const modals = document.querySelectorAll('[role=&quot;dialog&quot;]');
+      modals.forEach(trapFocus);
+:all-pages-backup/components/AccessibilityEnhancer.tsx
+  useEffect(() => {
+    // Add ARIA landmarks
+    const main = document.querySelector('main');
+    if (main && !main.getAttribute('role')) {
+      main.setAttribute('role', 'main')}
+    }
 
-    return () => titleObserver.disconnect();
-  }, [enableScreenReaderSupport]);
+    const nav = document.querySelector('nav');
+    if (nav && !nav.getAttribute('role')) {
+      nav.setAttribute('role', 'navigation')}
 
-  // Toggle high contrast mode
-  const toggleHighContrast = useCallback(() => {
-    setIsHighContrast(!isHighContrast);
-    document.documentElement.classList.toggle('high-contrast', !isHighContrast);
-  }, [isHighContrast]);
+    const footer = document.querySelector('footer');
+    if (footer && !footer.getAttribute('role')) {
+      footer.setAttribute('role', 'contentinfo')}
+  }, []);
 
-  return (
-    <div className="accessibility-controls">
-      {/* High Contrast Toggle */}
-      {enableHighContrast && (
-        <button
-          onClick={toggleHighContrast}
-          className="sr-only focus:not-sr-only fixed top-4 right-4 bg-gray-800 text-white px-3 py-2 rounded text-sm z-50"
-          aria-label={`Toggle high contrast mode. Currently ${isHighContrast ? 'on' : 'off'}`}
-        >
-          {isHighContrast ? 'High Contrast: On' : 'High Contrast: Off'}
-        </button>
-      )}
+:all-pages-backup/components/AccessibilityEnhancer.tsx
+  return <div>{children}</div>};
 
-      {/* Skip to main content link */}
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
-      >
-        Skip to main content
-      </a>
-    </div>
-  );
-};
-
-export default AccessibilityEnhancer;
+export default AccessibilityEnhancer
+  return <div>{children}</div>
+}
+export default AccessibilityEnhancer

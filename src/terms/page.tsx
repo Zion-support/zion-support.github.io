@@ -1,120 +1,57 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { FileText, Scale, Shield, Phone, Mail } from 'lucide-react';
+"use client"
+
+import React from "react";
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const TermsPage: React.FC = () => {
+export default function TermsPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50"></div>
       <Navigation />
-      
-      <main className="pt-20">
-        <div className="container mx-auto px-4 py-16 max-w-4xl">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-            Terms of Service
-          </h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Last updated: January 2025
+      <main className="py-20 px-4"></main>
+        <div className="max-w-4xl mx-auto"></div>
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms of Service</h1>
+          <p className="text-xl text-gray-600 mb-8"></p>
+            Our terms and conditions for using our services.</p>
           </p>
-
-          <div className="cyber-card p-8 space-y-8">
-            <section>
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <FileText className="w-6 h-6 mr-3 text-cyan-400" />
-                Acceptance of Terms
-              </h2>
-              <p className="text-gray-300">
-                By accessing and using our services, you accept and agree to be bound by the terms and 
-                provision of this agreement. If you do not agree to abide by the above, please do not use this service.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <Scale className="w-6 h-6 mr-3 text-cyan-400" />
-                Use License
-              </h2>
-              <p className="text-gray-300 mb-4">
-                Permission is granted to temporarily use our services for personal, non-commercial transitory viewing only. 
-                This is the grant of a license, not a transfer of title, and under this license you may not:
-              </p>
-              <ul className="list-disc list-inside text-gray-300 space-y-2">
-                <li>Modify or copy the materials</li>
-                <li>Use the materials for any commercial purpose or for any public display</li>
-                <li>Attempt to reverse engineer any software contained on our website</li>
-                <li>Remove any copyright or other proprietary notations from the materials</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <Shield className="w-6 h-6 mr-3 text-cyan-400" />
-                Service Availability
-              </h2>
-              <p className="text-gray-300">
-                We strive to maintain high service availability but do not guarantee uninterrupted access. 
-                We reserve the right to modify, suspend, or discontinue any part of our services at any time.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-white mb-4">
-                Payment Terms
-              </h2>
-              <p className="text-gray-300 mb-4">
-                Payment terms are as follows:
-              </p>
-              <ul className="list-disc list-inside text-gray-300 space-y-2">
-                <li>All fees are due in advance unless otherwise agreed</li>
-                <li>Refunds are subject to our refund policy</li>
-                <li>Late payments may result in service suspension</li>
-                <li>Prices are subject to change with 30 days notice</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-white mb-4">
-                Limitation of Liability
-              </h2>
-              <p className="text-gray-300">
-                In no event shall Zion Tech Group or its suppliers be liable for any damages (including, without limitation, 
-                damages for loss of data or profit, or due to business interruption) arising out of the use or inability 
-                to use our services, even if we have been notified orally or in writing of the possibility of such damage.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-white mb-4">
-                Contact Information
-              </h2>
-              <p className="text-gray-300 mb-4">
-                If you have any questions about these Terms of Service, please contact us:
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="tel:+13024640950"
-                  className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  (302) 464-0950
-                </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                >
-                  <Mail className="w-5 h-5 mr-2" />
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-            </section>
-          </div>
         </div>
       </main>
-
       <Footer />
-    </div>
+    </div>;
+</>
   );
-};
+import React from 'react';
+import Head from "next/head";
 
-export default TermsPage;
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
+
+export default function TermsPage() {
+  return (
+    <>
+    :all-pages-backup/terms/page.tsx
+</>
+      <title>Terms - Zion Tech Group</title>
+        <meta name="description" content="Professional terms services by Zion Tech Group." /></meta>
+      </meta>
+        <Head></Head>
+        <title>Terms - Zion Tech Group</title>
+        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
+      </Head>
+      
+      
+      <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="con tainermx-auto px-4 py-16"></div>
+          <h1 className="tex t-4xlfont-bold text-white mb-6">Terms</h1>
+          <p className="tex t-lgtext-gray-300 mb-8">Professional terms services by Zion Tech Group.</p>
+          
+          <Link href="/contact" className="inl ine-flexitems-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"></Link>
+            Contact Us</Link>
+            <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
+          </Link>
+        </div>
+      </div>
+</div>;
+  )}
+}

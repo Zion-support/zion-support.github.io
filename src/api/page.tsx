@@ -1,31 +1,33 @@
 import React from 'react';
+import Head from "next/head";
 
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
-const DevelopertoolsPage: React.FC = () => {
+export default function ApiPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
+    <>
+    :all-pages-backup/api/page.tsx
+</>
+      <title>Api - Zion Tech Group</title>
+        <meta name="description" content="Professional api services by Zion Tech Group." /></meta>
+      </meta>
+        <Head></Head>
+        <title>Api - Zion Tech Group</title>
+        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
+      </Head>
       
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Developer-tools</h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            This page is under construction. Please check back soon for updates.
-          </p>
-          <a
-            href="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-          >
-            Contact Us
-          </a>
-        </section>
-      </main>
       
-      <Footer />
-    </div>
-  );
-};
-
-export default DevelopertoolsPage;
+      <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="con tainermx-auto px-4 py-16"></div>
+          <h1 className="tex t-4xlfont-bold text-white mb-6">Api</h1>
+          <p className="tex t-lgtext-gray-300 mb-8">Professional api services by Zion Tech Group.</p>
+          
+          <Link href="/contact" className="inl ine-flexitems-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"></Link>
+            Contact Us</Link>
+            <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
+          </Link>
+        </div>
+      </div>
+</div>;
+  )}

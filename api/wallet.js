@@ -1,65 +1,21 @@
-const { withSentry } = require('./withSentry.cjs');
-
-async function handler(req, res) {
-  if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
-    return;
-  }
-
-  const { action, amount, currency = 'USD' } = req.body || {};
-
-  if (!action) {
-    res.statusCode = 400;
-    res.json({ error: 'Action is required' });
-    return;
-  }
-
-  try {
-    switch (action) {
-      case 'create_payment_intent': {
-        if (!amount) {
-          res.statusCode = 400;
-          res.json({ error: 'Amount is required for payment intent' });
-          return;
-        }
-
-        const timestamp = Date.now();
-        const random = Math.random().toString(36).substr(2, 9);
-        const paymentIntent = {
-          id: 'pi_' + timestamp,
-          amount: Math.round(amount * 100),
-          currency: currency.toLowerCase(),
-          status: 'requires_payment_method',
-          client_secret: 'pi_' + timestamp + '_secret_' + random,
-        };
-
-        res.statusCode = 200;
-        res.json({ success: true, paymentIntent });
-        break;
-      }
-
-      case 'get_balance': {
-        const balance = {
-          available: 1000.0,
-          pending: 0.0,
-          currency: currency.toUpperCase(),
-        };
-
-        res.statusCode = 200;
-        res.json({ success: true, balance });
-        break;
-      }
-
-      default:
-        res.statusCode = 400;
-        res.json({ error: 'Invalid action' });
-    }
-  } catch {
-    //     res.statusCode = 500;
-    res.json({ error: 'Wallet operation failed' });
-  }
-}
-
-module.exports = withSentry(handler);
+import fs from 'fs'';
+import path from 'path'';
+const dir = path.join(process.cwd(), 'data'';
+const file = path.join(dir, 'wallets.json'';
+if (req.method !== 'POST'';
+res.setHeader('Content-Type', 'application/json'';
+res.end(JSON.stringify({ "error": 'Method not allowed'',;
+res.setHeader('Content-Type', 'application/json'';
+res.end(JSON.stringify({ "error": 'Address and type are required'',}
+    const data = fs.readFileSync(file, 'utf8'';
+console.error('"Error": '',;
+res.setHeader('Content-Type', 'application/json'';
+res.end(JSON.stringify({ "error": 'Wallet address already exists'',
+    "name": name || ''',
+    "userId": userId || ''',
+    "status": 'active'',;
+res.setHeader('Content-Type', 'application/json''
+    "message": 'Wallet added successfully'',;
+console.error('"Error": '',;
+res.setHeader('Content-Type', 'application/json'';
+    res.end(JSON.stringify({ "error": 'Failed to save wallet''

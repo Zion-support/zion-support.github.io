@@ -1,113 +1,72 @@
+'use client';
+:all-pages-backup/components/EnhancedSEO.tsx
+import Footer from './Footer';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Brain } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { Phone, Mail, ArrowRight } from 'lucide-react';
+import Footer from './Footer';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Brain, ArrowRight, Mail } from 'lucide-react';
+import { Brain, ArrowRight, Mail } from 'lucide-react';
+import { Brain, ArrowRight, Mail } from 'lucide-react';
 
-interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  twitterSite?: string;
-  structuredData?: any;
-  noindex?: boolean;
-  nofollow?: boolean;
-  lang?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-}
-
-const EnhancedSEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
-  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services'],
-  canonicalUrl,
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  twitterSite = '@ziontechgroup',
-  structuredData,
-  noindex = false,
-  nofollow = false,
-  lang = 'en',
-  author = 'Zion Tech Group',
-  publishedTime,
-  modifiedTime,
-  section,
-  tags = [],
-}) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
-  const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
-
-  return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
-      <meta name="description" content={fullDescription} />
-      <meta name="keywords" content={keywordsString} />
-      <meta name="author" content={author} />
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
-      <meta name="language" content={lang} />
-      <link rel="canonical" href={canonicalUrl} />
-
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={fullDescription} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:site" content={twitterSite} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={fullDescription} />
-      <meta name="twitter:image" content={ogImage} />
-
-      {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#00ffff" />
-      <meta name="msapplication-TileColor" content="#00ffff" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-
-      {/* Article Meta Tags */}
-      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-      {section && <meta property="article:section" content={section} />}
-      {tags.length > 0 && tags.map((tag, index) => (
-        <meta key={index} property="article:tag" content={tag} />
-      ))}
-
-      {/* Structured Data */}
-      {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      )}
-
-      {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
-
-      {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-    </Helmet>
+  const benefits = [
+    'Advanced AI technology integration'
+    'Real-time processing and analytics'
+    'Enterprise-grade security and compliance'
+    'Scalable and flexible solutions'
+    '2 4/7 technical support'
+:all-pages-backup/components/EnhancedSEO.tsx
+    'Easy integration with existing systems'
+    'Cost-effective pricing plans'
+    'Easy integration with existing systems',;
+    'Cost-effective pricing plans';
+    'Proven track record of success';
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
+                <Phone className=&quot;mr-2 h-5 w-5&quot; />
+                Call Now</Phone>
+              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hove
+  r:scale-105&quot;></button>
+                <Mail className=&quot;mr-2 h-5 w-5&quot; />
+                Email Us</Mail>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+</>
   );
-};
+:all-pages-backup/components/EnhancedSEO.tsx
+{};
 
-export default EnhancedSEO;
+export default EnhancedSEOPage
+}
+export default EnhancedSEOPage
+                </div>
+{              ))}
+            </div>
+          </div>
+          </div>
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>{benefits.map((benefit, index) => (</div>
+              <div key={index} className=&quot;flex items-start space-x-3&quot;></div>
+                <CheckCircle className=&quot;h-6 w-6 text-purple-400 mt-1 flex-shrink-0&quot; /></CheckCircle>
+                <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className=&quot;py-20 px-4 sm: px-6 lg:px-8&quot;></section>
+        <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
+          <div className=&quot;bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12&quot;></div>
+            <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;>Ready to Get Started?</h2>h2>
+            <p className=&quot;text-xl text-purple-100 mb-8&quot;>Contact our experts to discuss your enhancedseo needs and get a customized solution.</p>p>
+            <div className=&quot;flex flex-col s
+  m:flex-row gap-4 justify-center&quot;></div>
+            </div>
+          </div>]

@@ -1,125 +1,48 @@
-// Learn more: https://github.com/testing-library/jest-dom
-require('@testing-library/jest-dom');
-const _React = require('react');
-const { TextEncoder, TextDecoder } = require('util');
+require("@testing-library/jest-dom");
 
-// Polyfills for Node.js environment
+// Polyfill for TextEncoder/TextDecoder;
+const { TextEncoder, TextDecoder } = require('util');
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
-// Mock files that use import.meta.env
-jest.mock('./src/utils/logger.ts', () => ({
-  logger: {
-    debug: jest.fn(),
-    info: jest.fn(),
-    warn: jest.fn(),
-    error: jest.fn(),
-    log: jest.fn(),
-  },
-}));
-
-jest.mock('./src/utils/analytics.ts', () => ({
-  trackEvent: jest.fn(),
-  trackPageView: jest.fn(),
-  initAnalytics: jest.fn(),
-}));
-
-jest.mock('./src/utils/errorTracking.ts', () => ({
-  reportError: jest.fn(),
-  initErrorReporting: jest.fn(),
-}));
-
-jest.mock('./src/hooks/usePerformance.ts', () => ({
-  usePerformance: jest.fn(() => ({
-    metrics: {},
-    optimize: jest.fn(),
-  })),
-}));
-
-// usePerformanceMonitoring hook mock removed - hook doesn't exist
-
-// Mock React Router (this is a Vite project, not Next.js)
-jest.mock('react-router-dom', () => {
-  const actual = jest.requireActual('react-router-dom');
-  const mockReact = require('react');
-  return {
-    ...actual,
-    useNavigate: () => jest.fn(),
-    useLocation: () => ({
-      pathname: '/',
-      search: '',
-      hash: '',
-      state: null,
-    }),
-    useParams: () => ({}),
-    Link: ({ children, to, ...props }) => {
-      const React = require('react');
-      return React.createElement('a', { href: to, ...props }, children);
-    },
-    NavLink: ({ children, to, ...props }) => {
-      const React = require('react');
-      return React.createElement('a', { href: to, ...props }, children);
-    },
-    BrowserRouter: ({ children }) => children,
-    MemoryRouter: ({ children }) => {
-      const { createMemoryRouter, RouterProvider } = actual;
-      const router = createMemoryRouter([
-        {
-          path: '/',
-          element: children,
-        },
-      ], {
-        initialEntries: ['/'],
-        initialIndex: 0,
-      });
-      const React = require('react');
-      return React.createElement(RouterProvider, { router });
-    },
-    RouterProvider: ({ router }) => null,
-  };
+// Mock window.matchMedia;
+Object.defineProperty(window, 'matchMedia', {;
+writable: true,);
+value: jest.fn().mockImplementation(query => ({;
+matches: false,media: query,onchange: null,);
+addListener: jest.fn(),// deprecated;
+removeListener: jest.fn(),// deprecated;
+addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),
 });
 
-// Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {
-  writable: true,
-  value: jest.fn().mockImplementation((query) => ({
-    matches: false,
-    media: query,
-    onchange: null,
-    addListener: jest.fn(),
-    removeListener: jest.fn(),
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
-});
-
-// Mock IntersectionObserver
+// Mock IntersectionObserver;
 global.IntersectionObserver = class IntersectionObserver {
-  constructor() {}
+// Mock window.matchMedia;
+});
+
+// Mock IntersectionObserver;
+  constructor() {};
   disconnect() {}
   observe() {}
-  takeRecords() {
-    return [];
-  }
   unobserve() {}
 };
 
-// Suppress console errors in tests
-const _originalError = console.error;
-beforeAll(() => {
-  console.error = jest.fn((...args) => {
-    if (
-      typeof args[0] === 'string' &&
-      (args[0].includes('Warning: ReactDOM.render') ||
-        args[0].includes('Not implemented: HTMLFormElement.prototype.submit'))
-    ) {
-      return;
-    }
-    _originalError.call(console, ...args);
-  });
+// Mock ResizeObserver;
+global.ResizeObserver = class ResizeObserver {
+// Mock ResizeObserver;
+  constructor() {};
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock window.gtag;
+global.gtag = jest.fn();
+
+// Mock window.dataLayer;
+global.dataLayer = [];
+// Mock window.gtag;
 });
 
-afterAll(() => {
-  console.error = _originalError;
+// Mock window.dataLayer;
 });

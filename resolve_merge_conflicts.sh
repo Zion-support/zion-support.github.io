@@ -1,48 +1,69 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts by choosing HEAD version
-echo "Resolving merge conflicts in critical files..."
+# Script to resolve merge conflicts by accepting incoming changes
+# This will merge all cursor/fix-errors-and-merge-to-main branches
 
-# Function to resolve merge conflicts
-resolve_conflicts() {
-    local file="$1"
-    echo "Processing: $file"
+echo "Starting merge conflict resolution process..."
+
+# Function to resolve conflicts in a single branch
+resolve_branch() {
+    local branch=$1
+    echo "Processing branch: $branch"
     
-    # Create backup
-    cp "$file" "${file}.backup"
-    
-    # Use git checkout to resolve conflicts by choosing HEAD version
-    git checkout --ours "$file" 2>/dev/null || true
-    
-    # If that doesn't work, use sed to remove conflict markers and keep HEAD content
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        # Remove conflict markers and keep HEAD content
-        sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-        sed -i '/>>>>>>> origin/d' "$file"
-        sed -i '/>>>>>>> cursor/d' "$file"
+    # Try to merge the branch
+    if git merge "$branch" --no-commit --no-ff 2>/dev/null; then
+        echo "Successfully merged $branch"
+        git commit -m "Merge $branch - resolved conflicts by accepting incoming changes"
+        return 0
+    else
+        echo "Merge conflicts detected in $branch, resolving..."
+        
+        # Check if we're in a merge state
+        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+            echo "Resolving conflicts by accepting incoming changes..."
+            
+            # For content conflicts, accept incoming changes
+            git status --porcelain | grep "^UU\|^AA" | cut -c4- | xargs -I {} git checkout --theirs "{}"
+            
+            # For deleted files conflicts, keep the file (don't delete)
+            git status --porcelain | grep "^DD" | cut -c4- | xargs -I {} git add "{}"
+            
+            # Add all resolved files
+            git add .
+            
+            # Commit the merge
+            git commit -m "Merge $branch - resolved conflicts by accepting incoming changes"
+            echo "Successfully resolved conflicts for $branch"
+            return 0
+        else
+            echo "No conflicts to resolve for $branch"
+            return 1
+        fi
     fi
 }
 
-# List of critical files to fix
-files=(
-    "app/page.tsx"
-    "app/components/Footer.tsx"
-    "app/components/Navigation.tsx"
-    "app/components/EnhancedErrorBoundary.tsx"
-    "app/components/LoadingSpinner.tsx"
-    "app/ai-services/page.tsx"
-    "app/it-services/page.tsx"
-    "app/ai-workflow-automation/page.tsx"
-    "app/ai-3d-generation/page.tsx"
-    "app/api-docs/page.tsx"
-    "app/gdpr/page.tsx"
-)
+# Get list of branches to merge
+branches=($(git branch -r | grep -E "cursor/fix-errors-and-merge-to-main" | head -20))
 
-# Process each file
-for file in "${files[@]}"; do
-    if [ -f "$file" ]; then
-        resolve_conflicts "$file"
+echo "Found ${#branches[@]} branches to process"
+
+# Process each branch
+for branch in "${branches[@]}"; do
+    echo "----------------------------------------"
+    echo "Processing: $branch"
+    
+    # Check if branch has commits not in main
+    if git log --oneline main.."$branch" | head -1 > /dev/null 2>&1; then
+        echo "Branch $branch has new commits, attempting merge..."
+        resolve_branch "$branch"
+    else
+        echo "Branch $branch is already up to date with main, skipping..."
     fi
+    
+    echo "Completed processing: $branch"
+    echo "----------------------------------------"
 done
 
-echo "Merge conflicts resolved!"
+echo "Merge conflict resolution process completed!"
+echo "Current status:"
+git status

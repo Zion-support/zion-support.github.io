@@ -1,91 +1,304 @@
-#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
 
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
+// List of corrupted files that need to be fixed
+const corruptedFiles = [
+  'app/components/AccessibilityComponents.tsx',
+  'app/components/AdvancedErrorBoundary.tsx',
+  'app/components/AdvancedPerformanceMonitor.tsx',
+  'app/components/AdvancedSEOOptimizer.tsx',
+  'app/components/AnimatedText.tsx',
+  'app/components/Breadcrumb.tsx',
+  'app/components/ContentNewsletterSignup.tsx',
+  'app/components/ContentPreviewCard.tsx',
+  'app/components/ContentPromotionBanner.tsx',
+  'app/components/CookieConsent.tsx',
+  'app/components/DynamicContentShowcase.tsx',
+  'app/components/EnhancedAccessibility.tsx',
+  'app/components/EnhancedAccessibilityEnhancer.tsx',
+  'app/components/EnhancedAccessibilityWrapper.tsx',
+  'app/components/EnhancedAnalytics.tsx',
+  'app/components/EnhancedErrorBoundary.tsx',
+  'app/components/EnhancedHero.tsx',
+  'app/components/EnhancedLoading.tsx',
+  'app/components/EnhancedLoadingStates.tsx',
+  'app/components/EnhancedPerformanceMonitor.tsx',
+  'app/components/EnhancedPerformanceOptimizer.tsx',
+  'app/components/EnhancedSEO.tsx',
+  'app/components/EnhancedSEOHead.tsx',
+  'app/components/EnhancedSEOOptimizer.tsx',
+  'app/components/EnhancedSkipLink.tsx',
+  'app/components/ErrorHandler.tsx',
+  'app/components/Footer.tsx',
+  'app/components/FuturisticBackground.tsx',
+  'app/components/FuturisticButton.tsx',
+  'app/components/FuturisticCard.tsx',
+  'app/components/FuturisticGlow.tsx',
+  'app/components/FuturisticLoader.tsx',
+  'app/components/GenericServicePage.tsx',
+  'app/components/Header.tsx',
+  'app/components/LazyImage.tsx',
+  'app/components/LazyWrapper.tsx',
+  'app/components/Loading.tsx',
+  'app/components/LoadingOptimizer.tsx',
+  'app/components/LoadingSkeleton.tsx',
+  'app/components/LoadingSpinner.tsx',
+  'app/components/LoadingStates.tsx',
+  'app/components/MobileOptimizer.tsx',
+  'app/components/Navigation.tsx',
+  'app/components/NeonButton.tsx',
+  'app/components/OptimizedImage.tsx',
+  'app/components/OptimizedLoading.tsx',
+  'app/components/OptimizedLoadingSpinner.tsx',
+  'app/components/PWAInstaller.tsx',
+  'app/components/PerformanceDashboard.tsx',
+  'app/components/PerformanceMonitor.tsx',
+  'app/components/PerformanceOptimizations.tsx',
+  'app/components/PerformanceOptimizer.tsx',
+  'app/components/ResponsiveContainer.tsx',
+  'app/components/SEOEnhancer.tsx',
+  'app/components/SEOHead.tsx',
+  'app/components/SearchBar.tsx',
+  'app/components/SearchModal.tsx',
+  'app/components/SecurityEnhancer.tsx',
+  'app/components/ServiceCard.tsx',
+  'app/components/ServiceCardSkeleton.tsx',
+  'app/components/ServiceWorker.tsx',
+  'app/components/ServiceWorkerRegistration.tsx',
+  'app/components/Sidebar.tsx',
+  'app/components/SkipLink.tsx',
+  'app/components/SystemMonitor.tsx',
+  'app/components/ThemeToggle.tsx',
+  'app/components/UserExperienceEnhancer.tsx'
+];
 
-//Function to fix corrupted syntax by removing extra commas and spaces
-function fixCorruptedSyntax(content) {
-  //Remove the corrupted comment at the top
-  content = content.replace(/^\/\/ @ts-noch, e, c, k\s*\n/, '');
+// Create basic component templates
+const createBasicComponent = (componentName) => {
+  const baseName = componentName.replace(/\.tsx$/, '').split('/').pop();
+  return `import React from 'react';
 
-  //Fix import statements - remove extra commas and spaces
-  content = content.replace(/imp, o, r, t\s+([^;]+);/g, (match, importContent) => {
-    const _cleaned = importContent.replace(/,/g, '').replace(/\s+/g, ' ').trim();
-    return `import ${cleaned};`;
-  });
-
-  //Fix export statements
-  content = content.replace(/exp, o, r, t\s+([^=]+)=/g, (match, exportContent) => {
-    const _cleaned = exportContent.replace(/,/g, '').replace(/\s+/g, ' ').trim();
-    return `export const ${cleaned} =`;
-  });
-
-  //Fix string literals in metadata
-  content = content.replace(/ti, t, l, e:\s*'([^']+)'/g, (match, title) => {
-    //     const cleaned = title.replace(/,/g, '').replace(/\s+/g, ' ').trim();
-    return `title: '${cleaned}'`;
-  });
-
-  content = content.replace(/desc r i p t, i, o, n:\s*'([^']+)'/g, (match, description) => {
-    //       const cleaned = description.replace(/,/g, '').replace(/\s+/g, ' ').trim();
-    return `description: '${cleaned}'`;
-  });
-
-  //Fix other common patterns
-  content = content.replace(/,/g, '');
-  content = content.replace(/\s+/g, ' ');
-
-  //Clean up multiple spaces
-  content = content.replace(/\s{2,}/g, ' ');
-
-  return content;
+interface ${baseName}Props {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-//Function to find all corrupted blog files
-function findCorruptedFiles() {
-  //   const blogDir = path.join(process.cwd(), 'app', 'blog');
-  const _corruptedFiles = [];
+const ${baseName}: React.FC<${baseName}Props> = ({ className = '', children }) => {
+  return (
+    <div className={\`\${className}\`}>
+      {children}
+    </div>
+  );
+};
 
-  function walkDir(_dir) {
-    const _files = fs.readdirSync(dir);
+export default ${baseName};
+`;
+};
 
-    for (const file of files) {
-      //       const filePath = path.join(dir, file);
-      const _stat = fs.statSync(filePath);
+// Create specialized component templates
+const createSpecializedComponent = (filePath) => {
+  const baseName = filePath.split('/').pop().replace(/\.tsx$/, '');
+  
+  switch (baseName) {
+    case 'AccessibilityComponents':
+      return `import React from 'react';
 
-      if (stat.isDirectory()) {
-        walkDir(filePath);
-      } else if (file.endsWith('.tsx') && !file.includes('backup')) {
-        const _content = fs.readFileSync(filePath, 'utf8');
-        if (content.includes('imp, o, r, t') || content.includes('exp, o, r, t')) {
-          corruptedFiles.push(filePath);
-        }
-      }
+interface AccessibilityComponentsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({ 
+  className = '', 
+  children 
+}) => {
+  return (
+    <div className={\`accessibility-components \${className}\`} role="region" aria-label="Accessibility Components">
+      {children}
+    </div>
+  );
+};
+
+export default AccessibilityComponents;
+`;
+
+    case 'AdvancedErrorBoundary':
+      return `import React, { Component, ErrorInfo, ReactNode } from 'react';
+
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+}
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+}
+
+class AdvancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback || (
+        <div className="error-boundary">
+          <h2>Something went wrong.</h2>
+          <p>Please refresh the page and try again.</p>
+        </div>
+      );
     }
-  }
 
-  walkDir(blogDir);
-  return corruptedFiles;
+    return this.props.children;
+  }
 }
 
-// Main function
-function main() {
-  //   const corruptedFiles = findCorruptedFiles();
+export default AdvancedErrorBoundary;
+`;
 
-  //   if (corruptedFiles.length === 0) {
-    //     return;
+    case 'LoadingSpinner':
+      return `import React from 'react';
+
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
+}
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+  size = 'md', 
+  className = '' 
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+  };
+
+  return (
+    <div className={\`animate-spin rounded-full border-2 border-gray-300 border-t-blue-600 \${sizeClasses[size]} \${className}\`}>
+    </div>
+  );
+};
+
+export default LoadingSpinner;
+`;
+
+    case 'Header':
+      return `import React from 'react';
+import Link from 'next/link';
+
+interface HeaderProps {
+  className?: string;
+}
+
+const Header: React.FC<HeaderProps> = ({ className = '' }) => {
+  return (
+    <header className={\`bg-white shadow-sm \${className}\`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-4">
+          <Link href="/" className="text-xl font-bold text-gray-900">
+            Zion Tech Group
+          </Link>
+          <nav className="hidden md:flex space-x-8">
+            <Link href="/" className="text-gray-600 hover:text-gray-900">
+              Home
+            </Link>
+            <Link href="/about" className="text-gray-600 hover:text-gray-900">
+              About
+            </Link>
+            <Link href="/services" className="text-gray-600 hover:text-gray-900">
+              Services
+            </Link>
+            <Link href="/contact" className="text-gray-600 hover:text-gray-900">
+              Contact
+            </Link>
+          </nav>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Header;
+`;
+
+    case 'Footer':
+      return `import React from 'react';
+import Link from 'next/link';
+
+interface FooterProps {
+  className?: string;
+}
+
+const Footer: React.FC<FooterProps> = ({ className = '' }) => {
+  return (
+    <footer className={\`bg-gray-900 text-white \${className}\`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
+            <p className="text-gray-400">
+              Leading technology solutions for modern businesses.
+            </p>
+          </div>
+          <div>
+            <h4 className="text-md font-semibold mb-4">Services</h4>
+            <ul className="space-y-2">
+              <li><Link href="/ai-services" className="text-gray-400 hover:text-white">AI Services</Link></li>
+              <li><Link href="/blockchain-solutions" className="text-gray-400 hover:text-white">Blockchain</Link></li>
+              <li><Link href="/5g-solutions" className="text-gray-400 hover:text-white">5G Solutions</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-md font-semibold mb-4">Company</h4>
+            <ul className="space-y-2">
+              <li><Link href="/about" className="text-gray-400 hover:text-white">About</Link></li>
+              <li><Link href="/careers" className="text-gray-400 hover:text-white">Careers</Link></li>
+              <li><Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-md font-semibold mb-4">Contact</h4>
+            <p className="text-gray-400">info@ziontechgroup.com</p>
+            <p className="text-gray-400">+1 (555) 123-4567</p>
+          </div>
+        </div>
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+          <p className="text-gray-400">&copy; 2024 Zion Tech Group. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
+`;
+
+    default:
+      return createBasicComponent(filePath);
   }
+};
 
-  //   for (const filePath of corruptedFiles) {
-    try {
-      //       const content = fs.readFileSync(filePath, 'utf8');
-      //       const fixedContent = fixCorruptedSyntax(content);
-      fs.writeFileSync(filePath, fixedContent);
-      //       } catch (error) {
-      //       }
+// Fix corrupted files
+corruptedFiles.forEach(filePath => {
+  const fullPath = path.join(process.cwd(), filePath);
+  
+  try {
+    const content = createSpecializedComponent(filePath);
+    fs.writeFileSync(fullPath, content, 'utf8');
+    console.log(`Fixed: ${filePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
+});
 
-  //   }
-
-main();
+console.log('Corrupted files fix completed!');

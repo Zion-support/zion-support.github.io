@@ -1,272 +1,233 @@
 'use client';
-import React, { useEffect, useState, useCallback } from 'react';
-interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-  memory: number | null;
-}
-interface PerformanceMonitorProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-  enableRealTimeMonitoring?: boolean;
-}
-const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  onMetricsUpdate,
-  enableRealTimeMonitoring = true
-}) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-    memory: null
-  });
-  const measureWebVitals = useCallback(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) return;
-    if (typeof PerformanceObserver === 'undefined') return;
-    const observers: PerformanceObserver[] = [];
-    // Measure First Contentful Paint (FCP)
-    const _fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
-    const _fcp = _fcpEntries.length > 0 ? _fcpEntries[0].startTime : null;
-    // Measure Largest Contentful Paint (LCP)
-    if ('PerformanceObserver' in window) {
-      try {
-        const lcpObserver = new PerformanceObserver(list => {
-          const _entries = list.getEntries();
-          const _lastEntry = _entries[_entries.length - 1];
-          setMetrics(prev => ({ ...prev, lcp: _lastEntry.startTime }));
-        });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-        observers.push(lcpObserver);
-      } catch (error) {
-         
-        }
+:all-pages-backup/components/AdvancedPerformanceMonitor.tsx
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Target, CheckCircle, BarChart, Brain, TrendingUp } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+const Ai3dGenerationPage: React.FC = () => {
+const AdvancedPerformanceMonitorPage: React.FC = () => {
+  const features = [
+    {
+:all-pages-backup/components/AdvancedPerformanceMonitor.tsx
+      ico
+  n: Brain
+  title: title
+  description: description
+  benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     }
-    // Measure First Input Delay (FID)
-    if ('PerformanceObserver' in window) {
-      try {
-        const fidObserver = new PerformanceObserver(list => {
-          const _entries = list.getEntries();
-          _entries.forEach(entry => {
-            if (
-              entry.entryType === 'first-input' &&
-              'processingStart' in entry &&
-              'startTime' in entry
-            ) {
-              const _fidEntry = entry as PerformanceEventTiming;
-              setMetrics(prev => ({
-                ...prev,
-                fid: _fidEntry.processingStart - _fidEntry.startTime
-              }));
-            }
-          });
-        });
-        fidObserver.observe({ entryTypes: ['first-input'] });
-        observers.push(fidObserver);
-      } catch (error) {
-         
-        }
+  {
+    icon: BarChart
+  title: title
+  description: description
+  benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     }
-    // Measure Cumulative Layout Shift (CLS)
-    if ('PerformanceObserver' in window) {
-      try {
-        let _clsValue = 0;
-        const clsObserver = new PerformanceObserver(list => {
-          const _entries = list.getEntries();
-          _entries.forEach(entry => {
-            if (
-              entry.entryType === 'layout-shift' &&
-              'hadRecentInput' in entry &&
-              'value' in entry
-            ) {
-              const _clsEntry = entry as LayoutShift;
-              if (!_clsEntry.hadRecentInput) {
-                _clsValue += _clsEntry.value;
-                setMetrics(prev => ({ ...prev, cls: _clsValue }));
-              }
-            }
-          });
-        });
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
-        observers.push(clsObserver);
-      } catch (error) {
-         
-        }
+  {
+    icon: Target
+  title: title
+  description: description
+  benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     }
-    // Measure Time to First Byte (TTFB)
-    try {
-      const _navigationEntries = performance.getEntriesByType?.('navigation') || [];
-      const _navigationEntry = _navigationEntries[0] as PerformanceNavigationTiming;
-      const ttfb = _navigationEntry
-        ? _navigationEntry.responseStart - _navigationEntry.requestStart
-        : null;
-      // Measure Memory Usage
-      const memory =
-        (performance as Performance & { memory?: { usedJSHeapSize: number } })
-          .memory?.usedJSHeapSize || null;
-      setMetrics(prev => ({
-        ...prev,
-        fcp: _fcp,
-        ttfb,
-        memory
-      }));
-    } catch (error) {
-       
-      }
-    // Cleanup observers
-    return () => {
-      observers.forEach(observer => {
-        try {
-          observer.disconnect();
-        } catch (error) {
-           
-          }
-      });
-    };
-  }, []);
-  const measureResourceTiming = useCallback(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) return;
-    const _resources = performance.getEntriesByType('resource');
-    const slowResources = _resources.filter(
-      (resource: PerformanceResourceTiming) => resource.duration > 1000
-    );
-    if (slowResources.length > 0) {
-      // eslint-disable-next-line no-console
-      console.log('Slow resources:', slowResources.map(r => ({
-          name: r.name,
-          duration: r.duration,
-          size: r.transferSize
-        }))
-      );
+  {
+    icon: TrendingUp
+  title: title
+  description: description
+  benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+      icon: Brain
+      titl
+  e: 'AI-Powered Intelligence'
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     }
-  }, []);
-  const measureCoreWebVitals = useCallback(() => {
-    if (typeof window === 'undefined') return;
-    // Use web-vitals library if available
-    try {
-      import('web-vitals')
-        .then(webVitals => {
-          const { onCLS, onFCP, onLCP, onTTFB } = webVitals;
-          if (onCLS) {
-            onCLS((metric: { value: number }) =>
-              setMetrics(prev => ({ ...prev, cls: metric.value }))
-            );
-          }
-          if (onFCP) {
-            onFCP((metric: { value: number }) =>
-              setMetrics(prev => ({ ...prev, fcp: metric.value }))
-            );
-          }
-          if (onLCP) {
-            onLCP((metric: { value: number }) =>
-              setMetrics(prev => ({ ...prev, lcp: metric.value }))
-            );
-          }
-          if (onTTFB) {
-            onTTFB((metric: { value: number }) =>
-              setMetrics(prev => ({ ...prev, ttfb: metric.value }))
-            );
-          }
-        })
-        .catch(() => {
-          // web-vitals not available, continue without it
-        });
-    } catch {
-      // web-vitals not available, continue without it
+  {
+    icon: BarChart
+      titl
+  e: 'Advanced Analytics'
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     }
-  }, []);
-  useEffect(() => {
-    if (!enableRealTimeMonitoring) return;
-    const _cleanup = measureWebVitals();
-    measureResourceTiming();
-    measureCoreWebVitals();
-    // Monitor performance every 5 seconds
-    const interval = setInterval(() => {
-      measureResourceTiming();
-    }, 5000);
-    return () => {
-      if (_cleanup) _cleanup();
-      clearInterval(interval);
-    };
-  }, [
-    enableRealTimeMonitoring,
-    measureWebVitals,
-    measureResourceTiming,
-    measureCoreWebVitals,
-  ]);
-  useEffect(() => {
-    if (onMetricsUpdate) {
-      onMetricsUpdate(metrics);
+  {
+    icon: Target
+      titl
+  e: 'Precision Targeting'
+      description: 'Target specific goals and objectives with precision and accuracy.'
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     }
-  }, [metrics, onMetricsUpdate]);
-  // Performance recommendations
-  const getPerformanceRecommendations = useCallback(() => {
-    const recommendations: string[] = [];
-    if (metrics.fcp && metrics.fcp > 1800) {
-      recommendations.push(
-        'First Contentful Paint is slow. Consider optimizing critical rendering path.'
-      );
+  {
+    icon: TrendingUp
+      titl
+  e: 'Growth Optimization'
+      description: 'Optimize your business growth with data-driven strategies.'
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-    if (metrics.lcp && metrics.lcp > 2500) {
-      recommendations.push(
-        'Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.'
-      );
-    }
-    if (metrics.fid && metrics.fid > 100) {
-      recommendations.push(
-        'First Input Delay is high. Reduce JavaScript execution time.'
-      );
-    }
-    if (metrics.cls && metrics.cls > 0.1) {
-      recommendations.push(
-        'Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.'
-      );
-    }
-    if (metrics.ttfb && metrics.ttfb > 600) {
-      recommendations.push(
-        'Time to First Byte is slow. Optimize server response time.'
-      );
-    }
-    return recommendations;
-  }, [metrics]);
-  const _recommendations = getPerformanceRecommendations();
-  if (process.env['NODE_ENV'] === 'development') {
-    return (
-      <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>
-        <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
-        <div className='text-xs space-y-1'>
-          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
-          <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
-          <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
-          <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
-          <div>
-            TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}
+  ]
+
+  const benefits = [
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+:all-pages-backup/components/AdvancedPerformanceMonitor.tsx
+    'Scale operations without proportional staff increases',;
+    'Gain competitive advantage with advanced technology';
+  ];
+
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
+    'Scale operations without proportional staff increases'
+    'Gain competitive advantage with advanced technology'
+  ]
+
+export default function Implementation5GPage() {
+  return (
+    <>
+</>
+      <Helmet></Helmet>
+        <Head></Head>
+        <title>Advanced Performance Monitor</title>
+        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
+      </Head>
+        <meta name="keywords" content="AI, artificial intelligence, performance monitoring, AI solutions, intelligent automation" /></meta>
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
+      </Head>
+      </Helmet>
+      <Navigation />
+      <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
+        {/* Hero Section */}</div>
+:all-pages-backup/components/AdvancedPerformanceMonitor.tsx</div>
+        <section className="relative py-20 px-4 overflow-hidden"></section>
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center"></div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
+              AI 3D Generation</h1>
+        <section className="rel ativepy-20 px-4 overflow-hidden"></section>
+          <div className="abs oluteinset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="rel ativemax-w-7xl mx-auto text-center"></div>
+            <h1 className="tex t-5xlmd: text-7xl font-bold text-white mb-6 leading-tight"></h1>
+              Advanced Performance Monitor</h1>
+            </h1>
+            <p className="tex t-xltext-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>
+              Advanced Performance Monitor solution for modern businesses.</p>
+            </p>
+            <div className="fle xflex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-em erald-600hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"></button>
+                Get Started</button>
+                <ArrowRight className="ml-2h-5w-5" /></ArrowRight>
+              </button>
+              <button className="bor derborder-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
+  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
+                Learn More</button>
+              </button>
+            </div>
           </div>
-          <div>
-            Memory:{' '}
-            {metrics.memory
-              ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
-              : 'N/A'}
-          </div>
-        </div>
-        {_recommendations.length > 0 && (
-          <div className='mt-2'>
-            <h4 className='font-semibold text-xs text-red-600'>
-              Recommendations:
-            </h4>
-            <ul className='text-xs text-red-600'>
-              {_recommendations.map((rec, index) => (
-                <li key={index}>• {rec}</li>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20px-4"></section>
+          <div className="max-w-7x lmx-auto"></div>
+            <div className="tex t-centermb-16"></div>
+              <h2 className="tex t-4xlfont-bold text-white mb-4">Key Features</h2>
+              <p className="tex t-xltext-gray-300 max-w-3xl mx-auto"></p>
+                Powerful AI-driven features designed to transform your business operations</p>
+              </p>
+            </div>
+            <div className="gri dmd: grid-cols-2 l
+  g:grid-cols-4 gap-8"></div>
+              {features.map((feature, index) => (</div>
+                <div key={index} className="bg-wh ite/10backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
+                  <feature.icon className="h-12w-12te x t-emerald-400 mb-4" /></feature>
+                  <h3 className="tex t-xlfont-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="tex t-gray-300mb-4">{feature.description}</p>
+                  <ul className="spa ce-y-2"></ul>
+                    {feature.benefits.map((benefit, idx) => (</ul>
+                      <li key={idx} className="fle xitems-center text-sm text-gray-300"></li>
+                        <CheckCircle className="h-4w-4te x t-emerald-400 mr-2 flex-shrink-0" /></CheckCircle>
+                        {benefit}</CheckCircle>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
-        )}
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20px-4 b g-white/5"></section>
+          <div className="max-w-7x lmx-auto"></div>
+            <div className="tex t-centermb-16"></div>
+              <h2 className="tex t-4xlfont-bold text-white mb-4">Why Choose Our Solution?</h2>
+              <p className="tex t-xltext-gray-300 max-w-3xl mx-auto"></p>
+                Experience the power of AI-driven performance monitoring</p>
+              </p>
+            </div>
+            <div className="gri dmd: grid-cols-2 l
+  g:grid-cols-3 gap-8"></div>
+              {benefits.map((benefit, index) => (</div>
+                <div key={index} className="fle xitems-start space-x-3"></div>
+                  <CheckCircle className="h-6w-6te x t-emerald-400 mt-1 flex-shrink-0" /></CheckCircle>
+                  <p className="tex t-gray-300text-lg">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20px-4"></section>
+          <div className="max-w-4x lmx-auto text-center"></div>
+            <h2 className="tex t-4xlfont-bold text-white mb-6"></h2>
+              Ready to Transform Your Business?</h2>
+            </h2>
+            <p className="tex t-xltext-gray-300 mb-8"></p>
+              Join thousands of businesses already using our AI-powered solutions</p>
+            </p>
+            <div className="fle xflex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-em erald-600hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"></button>
+                Start Free Trial</button>
+                <ArrowRight className="ml-2h-5w-5" /></ArrowRight>
+              </button>
+              <button className="bor derborder-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
+                Contact Sales</button>
+              </button>
+            </div>
+          </div>
+        </section>
+:all-pages-backup/components/AdvancedPerformanceMonitor.tsx,
+      ;
+        <title>5G Implementation - Zion Tech Group</title>
+        <meta name="description" content="Professional 5G implementation services for enterprise solutions." />
+      </meta>
+      </meta>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="container mx-auto px-4 py-16"></div>
+          <h1 className="text-4xl font-bold text-white mb-6">5G Implementation</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional 5G implementation services for enterprise solutions.</p>
+          
+          <Link ;
+            href="/contact" 
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hove
+  r:bg-blue-700 transition-colors"
+          ></Link>
+            Contact Us</Link>
+            <ArrowRight className="ml-2 h-4 w-4" /></ArrowRight>
+          </Link>
+        </div>
       </div>
-    );
-  }
-  return null;
-};
-export default AdvancedPerformanceMonitor;
+    </div>
+  )
+}
+:all-pages-backup/components/AdvancedPerformanceMonitor.tsx
+;
+export default AdvancedPerformanceMonitorPage
+  )}
+
+export default Ai3dGenerationPage,
+;
+export default AdvancedPerformanceMonitorPage
+}

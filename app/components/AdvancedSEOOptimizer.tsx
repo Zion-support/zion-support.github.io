@@ -1,296 +1,144 @@
 'use client';
-import React, { useEffect, useCallback, useRef } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Search, Target, TrendingUp, CheckCircle } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-interface SEOData {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  structuredData?: Record<string, unknown>;
-  robots?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-}
-
-interface AdvancedSEOOptimizerProps {
-  seoData: SEOData;
-  enableStructuredData?: boolean;
-  enableOpenGraph?: boolean;
-  enableTwitterCards?: boolean;
-  enableSchemaMarkup?: boolean;
-}
-
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
-  seoData,
-  enableStructuredData = true,
-  enableOpenGraph = true,
-  enableTwitterCards = true,
-  enableSchemaMarkup = true,
-}) => {
-  const structuredDataRef = useRef<HTMLScriptElement | null>(null);
-  
-  const generateStructuredData = useCallback(() => {
-    if (!enableStructuredData || !seoData.structuredData) {
-      return null;
+const AdvancedSEOOptimizerPage: React.FC = () => {
+  const features = [
+    {
+      ico
+  n: Search
+    title: 'Advanced SEO Analysis'
+      description: 'Comprehensive SEO analysis and optimization recommendations.'
+      benefits: ['Keyword research', 'Content optimization', 'Technical SEO', 'Performance insights']
     }
-
-    const baseStructuredData = {
-      '@context': 'https://schema.org',
-      '@type': 'TechCompany',
-      name: 'Zion Tech Group',
-      description: seoData.description,
-      url: seoData.canonicalUrl,
-      logo: 'https://ziontechgroup.com/logo.png',
-      sameAs: [
-        'https://linkedin.com/company/zion-tech-group',
-        'https://twitter.com/ziontechgroup',
-        'https://github.com/zion-tech-group',
-      ],
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+1-555-ZION-TECH',
-        contactType: 'customer service',
-        availableLanguage: 'English',
-      },
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '123 Tech Innovation Drive',
-        addressLocality: 'San Francisco',
-        addressRegion: 'CA',
-        postalCode: '94105',
-        addressCountry: 'US',
-      },
-      ...seoData.structuredData,
-    };
-
-    if (seoData.author) {
-      baseStructuredData.author = {
-        '@type': 'Person',
-        name: seoData.author,
-      };
+    {
+      icon: Target
+      title: 'Precision Targeting'
+      description: 'Target specific keywords and audiences with precision.'
+      benefits: ['Keyword targeting', 'Audience analysis', 'Competitor research', 'Market insights']
     }
-
-    if (seoData.publishedTime) {
-      baseStructuredData.datePublished = seoData.publishedTime;
+    {
+      icon: TrendingUp
+      title: 'Growth Optimization'
+      description: 'Optimize your website for maximum growth and visibility.'
+      benefits: ['Growth strategies', 'Traffic optimization', 'Conversion tracking', 'ROI analysis']
     }
-
-    if (seoData.modifiedTime) {
-      baseStructuredData.dateModified = seoData.modifiedTime;
-    }
-
-    if (seoData.section) {
-      baseStructuredData.articleSection = seoData.section;
-    }
-
-    if (seoData.tags && seoData.tags.length > 0) {
-      baseStructuredData.keywords = seoData.tags.join(', ');
-    }
-
-    return baseStructuredData;
-  }, [seoData, enableStructuredData]);
-
-  // Generate Open Graph data
-  const generateOpenGraphData = useCallback(() => {
-    if (!enableOpenGraph) return {};
-
-    return {
-      'og:title': seoData.ogTitle || seoData.title,
-      'og:description': seoData.ogDescription || seoData.description,
-      'og:url': seoData.canonicalUrl,
-      'og:type': seoData.ogType || 'website',
-      'og:image': seoData.ogImage || '/og-image.jpg',
-      'og:site_name': 'Zion Tech Group',
-      'og:locale': 'en_US',
-    };
-  }, [seoData, enableOpenGraph]);
-
-  // Generate Twitter Card data
-  const generateTwitterCardData = useCallback(() => {
-    if (!enableTwitterCards) return {};
-
-    const faqData = {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What services does Zion Tech Group offer?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'We offer comprehensive AI solutions, digital transformation services, cloud computing, automation, and business intelligence services.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How can I contact Zion Tech Group?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'You can contact us through our website, email, or phone. Visit our contact page for more information.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What makes Zion Tech Group different?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'We combine cutting-edge AI technology with deep industry expertise to deliver transformative solutions that drive real business value.',
-          },
-        },
-      ],
-    };
-  }, [seoData, enableTwitterCards]);
-
-  // Generate meta tags
-  const generateMetaTags = useCallback(() => {
-    const metaTags = [
-      { name: 'description', content: seoData.description },
-      { name: 'keywords', content: seoData.keywords.join(', ') },
-      { name: 'author', content: seoData.author || 'Zion Tech Group' },
-      { name: 'robots', content: seoData.robots || 'index, follow' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-      { name: 'theme-color', content: '#3B82F6' },
-      { name: 'msapplication-TileColor', content: '#3B82F6' },
-      { name: 'msapplication-config', content: '/browserconfig.xml' },
-    ];
-
-  const structuredData = generateStructuredData();
-  const breadcrumbData = generateBreadcrumbStructuredData();
-  const faqData = generateFAQStructuredData();
-
-  useEffect(() => {
-    // Update page title and meta description for better SEO
-    if (typeof document !== 'undefined') {
-      document.title = seoData.title;
-      
-      let metaDescription = document.querySelector('meta[name="description"]');
-      if (!metaDescription) {
-        metaDescription = document.createElement('meta');
-        metaDescription.setAttribute('name', 'description');
-        document.head.appendChild(metaDescription);
-      }
-      metaDescription.setAttribute('content', seoData.description);
-
-      // Update canonical URL
-      let canonicalLink = document.querySelector('link[rel="canonical"]');
-      if (!canonicalLink) {
-        canonicalLink = document.createElement('link');
-        canonicalLink.setAttribute('rel', 'canonical');
-        document.head.appendChild(canonicalLink);
-      }
-      canonicalLink.setAttribute('href', seoData.canonicalUrl);
-    }
-
-    return metaTags;
-  }, [seoData]);
-
-  const addStructuredData = (data: Record<string, unknown>) => {
-    // Remove existing structured data
-    if (structuredDataRef.current) {
-      structuredDataRef.current.remove();
-    }
-    
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(structuredData);
-    document.head.appendChild(script);
-    _structuredDataRef.current = script;
-
-  useEffect(() => {
-    if (structuredData) {
-      addStructuredData(structuredData);
-    }
-  }, [structuredData]);
-
-  useEffect(() => {
-    if (breadcrumbData) {
-      addStructuredData(breadcrumbData);
-    }
-  }, [breadcrumbData]);
-
-  useEffect(() => {
-    if (faqData) {
-      addStructuredData(faqData);
-    }
-  }, [faqData]);
-
-  useEffect(() => {
-    // Track page performance
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (perfData) {
-        // Track performance metrics
-        if (typeof (window as any).gtag === 'function') {
-          (window as any).gtag('event', 'page_load_performance', {
-            event_category: 'Performance',
-            event_label: 'Page Load',
-            value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
-          });
-        }
-      }
-    }
-  }, []);
-
+  ]
+  const benefits = [
+  'Increase organic traffic by up to 300%'
+    'Improve search rankings with AI-powered insights'
+    'Optimize content for better visibility'
+    'Track performance with detailed analytics'
+    'Stay ahead of SEO trends and updates'
+  ]
   return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{seoData.title}</title>
-      {metaTags.map((tag, index) => (
-        <meta key={index} name={tag.name} content={tag.content} />
-      ))}
-
-      {/* Canonical URL */}
-      {seoData.canonicalUrl && (
-        <link rel="canonical" href={seoData.canonicalUrl} />
-      )}
-
-      {/* Open Graph Tags */}
-      {Object.entries(openGraphData).map(([property, content]) => (
-        <meta key={property} property={property} content={content} />
-      ))}
-
-      {/* Twitter Card Tags */}
-      {Object.entries(twitterCardData).map(([name, content]) => (
-        <meta key={name} name={name} content={content} />
-      ))}
-
-      {/* Additional SEO Tags */}
-      <meta name="format-detection" content="telephone=no" />
-      <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-
-      {/* Favicon and Icons */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="manifest" href="/site.webmanifest" />
-
-      {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
-
-      {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-    </Helmet>
+    <div></div>
+      <Helmet></Helmet>
+        <title>Advanced SEO Optimizer</title>
+        <meta name="description" content="Advanced SEO Optimizer solution for modern businesses." /></meta>
+        <meta name="keywords" content="AI, artificial intelligence, SEO optimization, AI solutions, intelligent automation" /></meta>
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden"></section>
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center"></div>
+            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight"></h1>
+              Advanced SEO Optimizer</h1>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>
+              Advanced SEO Optimizer solution for modern businesses.</p>
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"></button>
+                Get Started</button>
+                <ArrowRight className="ml-2 h-5 w-5" /></ArrowRight>
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hove
+  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
+                Learn More</button>
+              </button>
+            
+          
+        </section>
+        {/* Features Section */}
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+                Powerful AI-driven SEO features designed to transform your online presence</p>
+              </p>
+            
+            <div className="grid md: grid-cols-2 l
+  g:grid-cols-3 gap-8"></div>
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
+                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" /></feature>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2"></ul>
+                    {feature.benefits.map((benefit, idx) => (</ul>
+                      <li key={idx} className="flex items-center text-sm text-gray-300"></li>
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" /></CheckCircle>
+                        {benefit}</CheckCircle>
+                      </li>
+                    ))}
+                  </ul>
+                
+              ))}
+            
+          
+        </section>
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our SEO Solution?</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+                Experience the power of AI-driven SEO optimization</p>
+              </p>
+            </div>
+            <div className="grid md: grid-cols-2 l
+  g:grid-cols-3 gap-8"></div>
+              {benefits.map((benefit, index) => (</div>
+                <div key={index} className="flex items-start space-x-3"></div>
+                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /></CheckCircle>
+                  <p className="text-gray-300 text-lg">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* CTA Section */}
+        <section className="py-20 px-4"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h2 className="text-4xl font-bold text-white mb-6"></h2>
+              Ready to Boost Your SEO?</h2>
+            </h2>
+            <p className="text-xl text-gray-300 mb-8"></p>
+              Join thousands of businesses already using our AI-powered SEO solutions</p>
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"></button>
+                Start Free Trial</button>
+                <ArrowRight className="ml-2 h-5 w-5" /></ArrowRight>
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hove
+  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
+                Contact Sales</button>
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      </Footer>
+</div>;
   );
 };
 
-export default AdvancedSEOOptimizer;
+export default AdvancedSEOOptimizerPage

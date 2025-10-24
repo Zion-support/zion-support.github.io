@@ -1,62 +1,84 @@
-import React from 'react';
+
+
 const DynamicContentShowcase: React.FC = () => {
-  const features = [
-    {
-      icon: "🚀",
-      title: "AI-Powered Solutions",
-      description: "Cutting-edge artificial intelligence that transforms your business operations",
-      benefits: ["Machine Learning", "Natural Language Processing", "Computer Vision"]
-    },
-    {
-      icon: "⚡",
-      title: "Lightning Fast Performance",
-      description: "Optimized for speed with 99.9% uptime and sub-second response times",
-      benefits: ["Edge Computing", "CDN Optimization", "Real-time Processing"]
-    },
-    {
-      icon: "🔒",
-      title: "Enterprise Security",
-      description: "Bank-level security with comprehensive compliance and data protection",
-      benefits: ["End-to-End Encryption", "SOC 2 Compliance", "GDPR Ready"]
-    },
-    {
-      icon: "📊",
-      title: "Advanced Analytics",
-      description: "Real-time insights and predictive analytics for data-driven decisions",
-      benefits: ["Business Intelligence", "Predictive Modeling", "Custom Dashboards"]
-    }
-  ];
   return (
-    <section className="mb-16" aria-labelledby="showcase-heading">
-      <h2 id="showcase-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
-        Why Choose Zion Tech Group?
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {features.map((feature, index) => (
-          <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
-            <div className="flex items-start space-x-4">
-              <div className="text-4xl flex-shrink-0">{feature.icon}</div>
-              <div className="flex-1">
-                <h3 className="text-xl font-bold text-white mb-3 neon-text">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300 mb-4 leading-relaxed">
-                  {feature.description}
-                </p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-cyan-400">
-                      <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0"></span>
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
+    <div></div>
+      <Helmet></Helmet>
+        <title>DynamicContentShowcase</title>
+        <meta name="description" content="Advanced DynamicContentShowcase solution for modern businesses." /></meta>
+        <meta name="keywords" content="AI, artificial intelligence, DynamicContentShowcase, AI solutions, intelligent automation" /></meta>
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden"></section>
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center"></div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
+              DynamicContentShowcase</h1>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>
+              Advanced DynamicContentShowcase solution for modern businesses.</p>
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"></button>
+                Get Started</button>
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
+  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
+                Learn More</button>
+              </button>
+            
+          
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+                Discover the powerful features that make DynamicContentShowcase the perfect solution for your business.</p>
+              </p>
+            
+            <div className="grid md:grid-cols-2 l
+  g:grid-cols-4 gap-8"></div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"></div>
+                <h3 className="text-xl font-semibold text-white mb-3">AI-Powered</h3>
+                <p className="text-gray-300">Advanced AI algorithms for intelligent automation.</p>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"></div>
+                <h3 className="text-xl font-semibold text-white mb-3">Scalable</h3>
+                <p className="text-gray-300">Grows with your business needs and requirements.</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"></div>
+                <h3 className="text-xl font-semibold text-white mb-3">Secure</h3>
+                <p className="text-gray-300">Enterprise-grade security and data protection.</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"></div>
+                <h3 className="text-xl font-semibold text-white mb-3">Efficient</h3>
+                <p className="text-gray-300">Optimized performance for maximum productivity.</p>
               </div>
             </div>
           </div>
-        ))}
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+            <p className="text-xl text-gray-300 mb-8"></p>
+              Join thousands of businesses already using DynamicContentShowcase to transform their operations.</p>
+            </p>
+            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
+              Start Your Free Trial</button>
+            </button>
+          </div>
+        </section>
       </div>
-    </section>
+      </Footer>
+    </div>
   );
 };
-export default DynamicContentShowcase;
+
+export default DynamicContentShowcase

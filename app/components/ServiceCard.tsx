@@ -1,140 +1,85 @@
-'use client';
-import React, { memo } from 'react';
-import { LucideIcon, ArrowRight } from 'lucide-react';
 
-interface ServiceCardProps {
-  title: string;
-  description: string;
-  icon: LucideIcon | string;
-  price: string;
-  features: string[];
-  technologies: string[];
-  category: string;
-  href: string;
-  color?: string;
-  popular?: boolean;
-}
 
-const ServiceCard: React.FC<ServiceCardProps> = memo(({
-  title,
-  description,
-  icon: Icon,
-  price,
-  features,
-  technologies,
-  category,
-  href,
-  color = 'cyan',
-  popular = false
-}) => {
-  const colorClasses = {
-    cyan: 'text-cyan-400 hover:text-cyan-300',
-    pink: 'text-pink-400 hover:text-pink-300',
-    blue: 'text-blue-400 hover:text-blue-300',
-    green: 'text-green-400 hover:text-green-300',
-    purple: 'text-purple-400 hover:text-purple-300',
-    indigo: 'text-indigo-400 hover:text-indigo-300',
-    red: 'text-red-400 hover:text-red-300',
-    teal: 'text-teal-400 hover:text-teal-300',
-    orange: 'text-orange-400 hover:text-orange-300',
-    yellow: 'text-yellow-400 hover:text-yellow-300'
-  };
-
-  const bgColorClasses = {
-    cyan: 'bg-cyan-400/20',
-    pink: 'bg-pink-400/20',
-    blue: 'bg-blue-400/20',
-    green: 'bg-green-400/20',
-    purple: 'bg-purple-400/20',
-    indigo: 'bg-indigo-400/20',
-    red: 'bg-red-400/20',
-    teal: 'bg-teal-400/20',
-    orange: 'bg-orange-400/20',
-    yellow: 'bg-yellow-400/20'
-  };
-
+const ServiceCard: React.FC = () => {
   return (
-    <article 
-      className="quantum-card p-4 sm:p-6 energy-pulse group relative"
-      role="article"
-      aria-labelledby={`${title.toLowerCase().replace(/\s+/g, '-')}-title`}
-    >
-      {popular && (
-        <div className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-2 py-1 rounded-full">
-          Popular
-        </div>
-      )}
-      
-      <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line" aria-hidden="true">
-        {typeof Icon === 'string' ? Icon : <Icon className="w-12 h-12 mx-auto" />}
+    <div></div>
+      <Helmet></Helmet>
+        <title>ServiceCard</title>
+        <meta name="description" content="Advanced ServiceCard solution for modern businesses." /></meta>
+        <meta name="keywords" content="AI, artificial intelligence, ServiceCard, AI solutions, intelligent automation" /></meta>
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden"></section>
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center"></div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
+              ServiceCard</h1>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>
+              Advanced ServiceCard solution for modern businesses.</p>
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"></button>
+                Get Started</button>
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
+  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
+                Learn More</button>
+              </button>
+            
+          
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+                Discover the powerful features that make ServiceCard the perfect solution for your business.</p>
+              </p>
+            
+            <div className="grid md:grid-cols-2 l
+  g:grid-cols-4 gap-8"></div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"></div>
+                <h3 className="text-xl font-semibold text-white mb-3">AI-Powered</h3>
+                <p className="text-gray-300">Advanced AI algorithms for intelligent automation.</p>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"></div>
+                <h3 className="text-xl font-semibold text-white mb-3">Scalable</h3>
+                <p className="text-gray-300">Grows with your business needs and requirements.</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"></div>
+                <h3 className="text-xl font-semibold text-white mb-3">Secure</h3>
+                <p className="text-gray-300">Enterprise-grade security and data protection.</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"></div>
+                <h3 className="text-xl font-semibold text-white mb-3">Efficient</h3>
+                <p className="text-gray-300">Optimized performance for maximum productivity.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+            <p className="text-xl text-gray-300 mb-8"></p>
+              Join thousands of businesses already using ServiceCard to transform their operations.</p>
+            </p>
+            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
+              Start Your Free Trial</button>
+            </button>
+          </div>
+        </section>
       </div>
-      
-      <h3 
-        id={`${title.toLowerCase().replace(/\s+/g, '-')}-title`}
-        className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text"
-      >
-        {title}
-      </h3>
-      
-      <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
-        {description}
-      </p>
-      
-      <div className="mb-4">
-        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
-        <ul className="text-sm text-gray-300 space-y-1">
-          {features.slice(0, 3).map((feature, idx) => (
-            <li key={idx} className="flex items-center">
-              <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2 flex-shrink-0" />
-              {feature}
-            </li>
-          ))}
-          {features.length > 3 && (
-            <li className="text-cyan-400 text-xs">
-              +{features.length - 3} more features
-            </li>
-          )}
-        </ul>
-      </div>
-      
-      <div className="mb-4">
-        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Technologies:</h4>
-        <div className="flex flex-wrap gap-1">
-          {technologies.slice(0, 4).map((tech, idx) => (
-            <span 
-              key={idx} 
-              className={`px-2 py-1 ${bgColorClasses[color as keyof typeof bgColorClasses]} text-cyan-300 text-xs rounded`}
-            >
-              {tech}
-            </span>
-          ))}
-          {technologies.length > 4 && (
-            <span className="text-cyan-400 text-xs px-2 py-1">
-              +{technologies.length - 4}
-            </span>
-          )}
-        </div>
-      </div>
-      
-      <div className="text-center mb-4">
-        <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2 neon-text" aria-label="Starting price">
-          {price}
-        </div>
-        <div className="text-xs text-gray-400">Category: {category}</div>
-      </div>
-      
-      <a
-        href={href}
-        className={`${colorClasses[color as keyof typeof colorClasses]} font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded inline-flex items-center justify-center w-full py-2`}
-        aria-label={`Learn more about ${title}`}
-      >
-        Learn More
-        <ArrowRight className="w-4 h-4 ml-1" />
-      </a>
-    </article>
+      </Footer>
+    </div>
+
   );
-});
-
-ServiceCard.displayName = 'ServiceCard';
-
-export default ServiceCard;
+}  )}
+export default ServiceCard,
+;

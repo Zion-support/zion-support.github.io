@@ -1,99 +1,99 @@
-#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
 
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
-
-//Function to fix JSX syntax errors
+// Function to fix JSX syntax errors
 function fixJSXSyntax(content) {
-  let _fixed = content;
+  let fixed = content;
 
-  //Fix function declarations with malformed comments
-  fixed = fixed.replace(
-    /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\/\*\s*content\s*\/\}/g,
-    'const $1: React.FC = () => {'
-  );
-
-  //Fix malformed JSX elements that are self-closing but shouldn't be
-  //Pattern: <div></div> followed by content that should be inside
-  fixed = fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*([^<]+)/g, '<$1$2>$3</$1>');
-
-  //Fix malformed JSX elements with attributes
-  fixed = fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*<(\w+)([^>]*?)><\/\3>/g, '<$1$2><$3$4></$3></$1>');
-
-  //Fix array syntax issues
-  fixed = fixed.replace(/\[\s*\{\/\*\s*content\s*\/\}/g, '[{');
-
-  //Fix object syntax issues
-  fixed = fixed.replace(/\{\/\*\s*content\s*\/\}/g, '{');
-
-  //Fix missing closing braces for objects
-  fixed = fixed.replace(
-    /(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*\}/g,
-    "$1: '$2',\n      $3: '$4',\n      $5: '$6',\n      $7: '$8'\n    }"
-  );
-
+  // Fix malformed Head tags
+  fixed = fixed.replace(/<Head>title>/g, '<Head>\n        <title>');
+  fixed = fixed.replace(/title>meta name=/g, '</title>\n        <meta name=');
+  fixed = fixed.replace(/content=\"([^"]*)\" \/>/g, 'content="$1" />');
+  fixed = fixed.replace(/<\/Head>div className=/g, '</Head>\n      <div className=');
+  
+  // Fix missing opening tags
+  fixed = fixed.replace(/(<div className="[^"]*">)/g, (match) => {
+    if (!match.includes('<div')) {
+      return '<div ' + match;
+    }
+    return match;
+  });
+  
+  // Fix malformed JSX elements
+  fixed = fixed.replace(/(\w+)>\s*</g, '$1>');
+  fixed = fixed.replace(/(\w+)\s*>\s*</g, '$1>');
+  
+  // Fix missing closing tags
+  fixed = fixed.replace(/(<div[^>]*>)(?!.*<\/div>)/g, '$1');
+  
+  // Fix malformed attributes
+  fixed = fixed.replace(/className="([^"]*)"\s*>/g, 'className="$1">');
+  fixed = fixed.replace(/className='([^']*)'\s*>/g, "className=\"$1\">");
+  
+  // Fix missing spaces in JSX
+  fixed = fixed.replace(/(\w+)><(\w+)/g, '$1> <$2');
+  fixed = fixed.replace(/(\w+)><\/(\w+)/g, '$1></$2');
+  
+  // Fix malformed closing tags
+  fixed = fixed.replace(/(\w+)>\s*<\/(\w+)>/g, '$1></$2>');
+  
+  // Fix missing semicolons
+  fixed = fixed.replace(/(\w+)\s*}\s*const/g, '$1};\nconst');
+  fixed = fixed.replace(/(\w+)\s*]\s*const/g, '$1];\nconst');
+  
+  // Fix malformed return statements
+  fixed = fixed.replace(/return\s*\(\s*<>\s*<Head>/g, 'return (\n    <>\n      <Head>');
+  fixed = fixed.replace(/<\/Head>\s*<div/g, '</Head>\n      <div');
+  
+  // Fix missing spaces in JSX attributes
+  fixed = fixed.replace(/(\w+)="([^"]*)"(\w+)/g, '$1="$2" $3');
+  
+  // Fix malformed JSX fragments
+  fixed = fixed.replace(/<>\s*<Head>/g, '<>\n      <Head>');
+  fixed = fixed.replace(/<\/Head>\s*<div/g, '</Head>\n      <div');
+  
+  // Fix missing closing brackets
+  fixed = fixed.replace(/(\w+)\s*}\s*$/g, '$1}');
+  
   return fixed;
 }
 
-//Function to process a single file
-function processFile(filePath) {
-  try {
-    //     const content = fs.readFileSync(filePath, 'utf8');
-    const _fixed = fixJSXSyntax(content);
-
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      //       return true;
-    }
-    return false;
-  } catch (error) {
-    //     return false;
-  }
-}
-
-//Main function
-async function main() {
-  const _patterns = ['src/**/*.tsx', 'src/**/*.ts', 'app/**/*.tsx', 'app/**/*.ts'];
-
-  let _totalFixed = 0;
-
-  for (const pattern of patterns) {
-    const files = await glob(pattern, {
-      ignore: [
-        '**/node_modules/**',
-        '**/dist/**',
-        '**/build/**',
-        '**/__tests__/**',
-        '**/_app_disabled/**',
-        '**/_conflicted_disabled/**',
-        '**/_pages_api_disabled/**',
-        '**/_pages_disabled/**',
-        '**/admin-api-disabled/**',
-        '**/api-disabled/**',
-        '**/api.disabled/**',
-        '**/api.disabled.temp/**',
-        '**/api-backup/**',
-        '**/apps.backup/**',
-        '**/automation_backup/**',
-        '**/ai-optimization-backups/**',
-        '**/automation_logs/**',
-        '**/all-automations-reports/**',
-        '**/accessibility-reports/**',
-      ],
-    });
-
-    for (const file of files) {
-      if (processFile(file)) {
-        totalFixed++;
+// Function to process all TypeScript/TSX files
+function processFiles(dir) {
+  const files = fs.readdirSync(dir);
+  
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+      processFiles(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+      try {
+        const content = fs.readFileSync(filePath, 'utf8');
+        const fixed = fixJSXSyntax(content);
+        
+        if (content !== fixed) {
+          fs.writeFileSync(filePath, fixed);
+          console.log(`Fixed JSX: ${filePath}`);
+        }
+      } catch (error) {
+        console.error(`Error processing ${filePath}:`, error.message);
       }
     }
-  }
-
-  //   }
-
-if (import.meta.url === `file://${process.argv[1]}`) {
-  //   main().catch(console.error);
+  });
 }
 
-export { fixJSXSyntax, processFile };
+// Process app directory
+console.log('Fixing JSX syntax errors in app directory...');
+processFiles('./app');
+
+// Process src directory
+console.log('Fixing JSX syntax errors in src directory...');
+processFiles('./src');
+
+// Process components directory
+console.log('Fixing JSX syntax errors in components directory...');
+processFiles('./components');
+
+console.log('JSX syntax fixes completed!');

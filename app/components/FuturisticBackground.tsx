@@ -1,117 +1,85 @@
-'use client';
-import React, { useEffect, useRef } from 'react';
+
 
 const FuturisticBackground: React.FC = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
-
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-
-    // Particle system
-    const particles: Array<{
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      opacity: number;
-      color: string;
-    }> = [];
-
-    const colors = ['#8b5cf6', '#00ffff', '#ec4899', '#3b82f6', '#10b981'];
-
-    // Create particles
-    for (let i = 0; i < 100; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
-        size: Math.random() * 2 + 1,
-        opacity: Math.random() * 0.5 + 0.1,
-        color: colors[Math.floor(Math.random() * colors.length)]
-      });
-    }
-
-    const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      // Update and draw particles
-      particles.forEach((particle, index) => {
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-
-        // Wrap around screen
-        if (particle.x < 0) particle.x = canvas.width;
-        if (particle.x > canvas.width) particle.x = 0;
-        if (particle.y < 0) particle.y = canvas.height;
-        if (particle.y > canvas.height) particle.y = 0;
-
-        // Draw particle
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = particle.color + Math.floor(particle.opacity * 255).toString(16).padStart(2, '0');
-        ctx.fill();
-
-        // Draw connections
-        particles.forEach((otherParticle, otherIndex) => {
-          if (index !== otherIndex) {
-            const dx = particle.x - otherParticle.x;
-            const dy = particle.y - otherParticle.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-
-            if (distance < 150) {
-              ctx.beginPath();
-              ctx.moveTo(particle.x, particle.y);
-              ctx.lineTo(otherParticle.x, otherParticle.y);
-              ctx.strokeStyle = particle.color + Math.floor((1 - distance / 150) * 50).toString(16).padStart(2, '0');
-              ctx.lineWidth = 0.5;
-              ctx.stroke();
-            }
-          }
-        });
-      });
-
-      requestAnimationFrame(animate);
-    };
-
-    animate();
-
-    return () => {
-      window.removeEventListener('resize', resizeCanvas);
-    };
-  }, []);
-
   return (
-    <div className="fixed inset-0 pointer-events-none z-0">
-      <canvas
-        ref={canvasRef}
-        className="w-full h-full"
-        style={{ background: 'transparent' }}
-      />
-      
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-purple-900/60 to-slate-900/80"></div>
-      
-      {/* Grid Pattern */}
-      <div className="absolute inset-0 cyber-grid"></div>
-      
-      {/* Neural Network Pattern */}
-      <div className="absolute inset-0 neural-network-bg"></div>
+    <div></div>
+      <Helmet></Helmet>
+        <title>FuturisticBackground</title>
+        <meta name="description" content="Advanced FuturisticBackground solution for modern businesses." /></meta>
+        <meta name="keywords" content="AI, artificial intelligence, FuturisticBackground, AI solutions, intelligent automation" /></meta>
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden"></section>
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center"></div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
+              FuturisticBackground</h1>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>
+              Advanced FuturisticBackground solution for modern businesses.</p>
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"></button>
+                Get Started</button>
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
+  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
+                Learn More</button>
+              </button>
+            
+          
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+                Discover the powerful features that make FuturisticBackground the perfect solution for your business.</p>
+              </p>
+            
+            <div className="grid md:grid-cols-2 l
+  g:grid-cols-4 gap-8"></div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"></div>
+                <h3 className="text-xl font-semibold text-white mb-3">AI-Powered</h3>
+                <p className="text-gray-300">Advanced AI algorithms for intelligent automation.</p>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"></div>
+                <h3 className="text-xl font-semibold text-white mb-3">Scalable</h3>
+                <p className="text-gray-300">Grows with your business needs and requirements.</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"></div>
+                <h3 className="text-xl font-semibold text-white mb-3">Secure</h3>
+                <p className="text-gray-300">Enterprise-grade security and data protection.</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"></div>
+                <h3 className="text-xl font-semibold text-white mb-3">Efficient</h3>
+                <p className="text-gray-300">Optimized performance for maximum productivity.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+            <p className="text-xl text-gray-300 mb-8"></p>
+              Join thousands of businesses already using FuturisticBackground to transform their operations.</p>
+            </p>
+            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
+              Start Your Free Trial</button>
+            </button>
+          </div>
+        </section>
+      </div>
+      </Footer>
     </div>
+
   );
 };
 
-export default FuturisticBackground;
+export default FuturisticBackground

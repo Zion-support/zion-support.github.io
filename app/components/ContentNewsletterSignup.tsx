@@ -1,76 +1,107 @@
 'use client';
+import Navigation from './Navigation';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight } from 'lucide-react';
 import React, { useState } from 'react';
-import { Mail, ArrowRight } from 'lucide-react';
-const ContentNewsletterSignup: React.FC = () => {
+import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react';
+
+interface ContentNewsletterSignupProps {
+  title?: string
+  subtitle?: string
+  placeholder?: string
+  buttonText?: string
+  features?: Array<{}
+    icon: React.ComponentType<{ className?: string }>
+    text: string}>
+  onSubscribe?: (email: string) => void}constContentNewsletterSignup:React.FC<ContentNewsletterSignupProp s>= ({
+  title= "Stay Updated with Our LatestInsights"
+  subtitle= "Get exclusive content, industry insights, and early access to new features delivered to yourinbox."
+  placeholder= "Enter your emailaddress"
+  buttonText= "Subscribe"
+  features= [
+    { icon: Star, text: "Exclusive content&quot
+  }
+  {
+    icon: Users, text: "Industry insights&quot
+  }
+  {
+    icon: Globe, text: "Global updates&quot
+  }
+  {
+    icon: Zap, text: "Early access&quot
+  ]
+  onSubscribe
+}) => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubscribed, setIsSubscribed] = useState(false);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!email) return
     setIsSubmitting(true);
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    setIsSubmitted(true);
-    setIsSubmitting(false);
-    setEmail('');
-    // Reset after 3 seconds
-    setTimeout(() => setIsSubmitted(false), 3000);
-  };
-  if (isSubmitted) {
-    return (
-      <section className="mb-16" aria-labelledby="newsletter-heading">
-        <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white p-8 rounded-xl text-center">
-          <div className="text-4xl mb-4">✅</div>
-          <h2 className="text-2xl font-bold mb-2">Thank You!</h2>
-          <p className="text-green-100">You've been successfully subscribed to our newsletter.</p>
-        </div>
-      </section>
-    );
-  }
-  return (
-    <section className="mb-16" aria-labelledby="newsletter-heading">
-      <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-8 rounded-xl">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 id="newsletter-heading" className="text-2xl sm:text-3xl font-bold mb-4">
-            Stay Updated with AI Innovation
-          </h2>
-          <p className="text-purple-100 mb-6">
-            Get the latest insights on AI technology, industry trends, and exclusive offers delivered to your inbox.
-          </p>
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <div className="flex-1 relative">
-              <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email address"
-                className="w-full pl-10 pr-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-300"
-                required
-                aria-label="Email address"
-              />
-            </div>
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      if (onSubscribe) {
+        onSubscribe(email);
+      }
+      setIsSubscribed(true);
+      setEmail('');
+    } catch (error) {
+      console.error('Subscription failed:', error);
+    } finally {
+      setIsSubmitting(false)}
+  return (</ContentNewsletterSignupProp>
+    <div className="bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 py-16 px-4"></div>
+      <div className="max-w-4xl mx-auto text-center"></div>
+        <h2 className="text-4xl font-bold text-white mb-4">{title}</h2>
+        <p className="text-xl text-gray-300 mb-8">{subtitle}</p>
+        
+        <form onSubmit={handleSubmit} className="max-w-md mx-auto mb-8"></form>
+          <div className="flex flex-col sm:flex-row gap-4"></div>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder={placeholder}
+              className="flex-1 px-4 py-3 rounded-lg bg-slate-800 border border-slate-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focu
+  s:border-transparent"
+              required
+            /></input>
             <button
               type="submit"
-              disabled={isSubmitting}
-              className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+              disabled={isLoading}
+              className="bg-emerald-600 hover:bg-emerald-700 disable
+  d:bg-emerald-800 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
             >
-              {isSubmitting ? (
-                <div className="w-5 h-5 border-2 border-purple-600 border-t-transparent rounded-full animate-spin"></div>
-              ) : (
-                <>
-                  Subscribe
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </>
-              )}
+              {isLoading ? 'Subscribing...' : buttonText}</button>
+              <ArrowRight className="ml-2 h-4 w-4" /></ArrowRight>
             </button>
-          </form>
-          <p className="text-xs text-purple-200 mt-4">
-            We respect your privacy. Unsubscribe at any time.
-          </p>
+          
+        </form>
+        
+        {isSubscribed && (
+          <div className="mt-4 p-4 bg-emerald-600/20 border border-emerald-500/50 rounded-lg"></div>
+            <p className="text-emerald-400 flex items-center justify-center"></p>
+              <CheckCircle className="h-5 w-5 mr-2" />
+              Thank you for subscribing!</CheckCircle>
+            </p>
+          
+        )}
+        
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8"></div>
+          {features.map((feature, index) => (</div>
+            <div key={index} className="flex items-center space-x-2 text-gray-300"></div>
+              <feature.icon className="h-5 w-5 text-emerald-400" /></feature>
+              <span className="text-sm">{feature.text}</span>
+            </div>
+          ))}
         </div>
       </div>
-    </section>
   );
 };
-export default ContentNewsletterSignup;
+
+export default ContentNewsletterSignup
+;
+}

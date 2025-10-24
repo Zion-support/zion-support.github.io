@@ -1,61 +1,86 @@
-#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
 
-import fs from 'fs';
-import { glob } from 'glob';
+// Function to fix duplicate imports in a file;
+function fixDuplicateImports(filePath) {;
+try {;
+let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
 
-// Function to process a file
-function processFile(filePath) {
-  try {
-    let _content = fs.readFileSync(filePath, 'utf8');
-    let _modified = false;
+    // Fix duplicate Footer imports;
+if (content.includes("import Footer from '../components/Footer'\n\nimport Footer from '/components/Footer'")) {;
+content = content.replace(
+        /import Footer from '\.\.\/components\/Footer'\n\nimport Footer from '\/components\/Footer'\n/g,
+        "import Footer from '../components/Footer';\n"
+      );
+      modified = true;
+    }
 
-    // Split content into lines
-    const _lines = content.split('\n');
-    const _newLines = [];
-    let _seenReactImport = false;
-
-    for (let i = 0; i < lines.length; i++) {
-      const _line = lines[i];
-
-      // Check if this is a React import
-      if (line.trim().startsWith("import React from 'react';")) {
-        if (!seenReactImport) {
+    // Fix any other duplicate imports;
+const lines = content.split('\n');
+    const seenImports = new Set();
+    const newLines = [];
+;
+for (let i = 0; i < lines.length; i++) {;
+const line = lines[i];
+      if (line.trim().startsWith('import ')) {;
+const importKey = line.trim();
+        if (seenImports.has(importKey)) {
+          // Skip duplicate import;
+continue;
+        } else {;
+seenImports.add(importKey);
           newLines.push(line);
-          seenReactImport = true;
-          modified = true;
         }
-        // Skip duplicate React imports
-      } else {
-        newLines.push(line);
+      } else {;
+newLines.push(line);
       }
     }
-
-    if (modified) {
-      content = newLines.join('\n');
-      fs.writeFileSync(filePath, content, 'utf8');
-
+;
+const newContent = newLines.join('\n');
+    if (newContent !== content) {;
+fs.writeFileSync(filePath, newContent, 'utf8');
+      console.log(`Fixed: ${filePath,}`);
       return true;
     }
-
-    return false;
-  } catch (error) {
-
+;
+return modified;
+  } catch (error) {;
+console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Main execution
-async function main() {
-  // Find all TypeScript/JavaScript files in app directory
-  const _files = await glob('app/**/*.{ts,tsx,js,jsx}', { cwd: process.cwd() });
-
-  let _fixedCount = 0;
-  files.forEach(file => {
-    if (processFile(file)) {
-      fixedCount++;
+// Function to recursively find all .tsx files;
+function findTsxFiles(dir) {;
+const files = [];
+  const items = fs.readdirSync(dir);
+;
+for (const item of items) {;
+const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+;
+if (stat.isDirectory()) {;
+files.push(...findTsxFiles(fullPath));
+    } else if (item.endsWith('.tsx')) {;
+files.push(fullPath);
     }
-  });
-
+  }
+;
+return files;
 }
 
-main().catch(console.error);
+// Main execution;
+const appDir = path.join(__dirname, 'app');
+const tsxFiles = findTsxFiles(appDir);
+;
+console.log(`Found ${tsxFiles.length} .tsx files to check`);
+;
+let fixedCount = 0;
+for (const file of tsxFiles) {;
+if (fixDuplicateImports(file)) {;
+fixedCount++;
+  }
+}
+;
+console.log(`Fixed ${fixedCount} files`);
