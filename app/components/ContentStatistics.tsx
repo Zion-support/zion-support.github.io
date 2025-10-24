@@ -27,7 +27,7 @@ clients: "0",projects: "0")"
 uptime: "0"})"
 const targetCounters={"
 clients: "1000",projects: "500"
-    satisfactio",n: "99",years: "10"
+    satisfactio",n: "99",years: "10";
     countrie",s: "25",uptime: "99.9"};useEffect(() => {
 const duration = 2000
 const steps = 60

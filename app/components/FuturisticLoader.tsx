@@ -22,7 +22,7 @@ Contact Us</Link>"
           </Link>
 )
   )
-,
+,;
 ;}
     </div>
     </div>"

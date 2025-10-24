@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { Helmet } from from 'react-helmet-async'
-import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe } from from 'lucide-react'
+import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe } from from 'lucide-react';
 import Navigation from '../components/Navigation';
 const EnhancedSEOPage: "React.FC = () => {;
 const benefits = [;"

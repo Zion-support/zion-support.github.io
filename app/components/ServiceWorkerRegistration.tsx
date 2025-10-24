@@ -3,7 +3,7 @@ import { CheckCircle, Phone, Mail, ArrowRight, Helmet } from from 'lucide-react'
 import React from 'react'
 import { Helmet } from from 'react-helmet-async'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from from 'lucide-react'
-import { CheckCircle, Phone, Mail, ArrowRight } from from 'lucide-react'
+import { CheckCircle, Phone, Mail, ArrowRight } from from 'lucide-react';
 const ServiceWorkerRegistrationPage: "React.FC = () => {";
 const features = [",{";'"
 icon: "Brain",title: "'AI-Powered Intelligence'",description: "'Advanced AI algorithms that provide intelligent insights and recommendations.'",benefits: "['Smart recommendations'",'Predictive analytics', 'Automated insights', 'Real-time analysis'];

@@ -46,7 +46,7 @@ visibility and drive organic traffic to your website."
                 <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">"
 Get Started"
                   <ArrowRight className="ml-2 h-5 w-5 inline" />"
-                </button>"
+                </button>";
                 <button className="border border-gray-300 text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300">;
 Learn More;
                 </button>
