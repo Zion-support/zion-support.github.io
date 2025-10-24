@@ -34,61 +34,61 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         script.async = true;
         document.head.appendChild(script);
 
-        // Initialize gtag
-        (window as any).gtag = (window as any).gtag || function(..._args: any[]) {
-          ((window as any).gtag.q = (window as any).gtag.q || []).push(arguments);
-        };
-        window.gtag('js', new Date());
-        window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(...args: unknown[]) {
+          window.dataLayer.push(args);
+        }
+        gtag('js', new Date());
+        gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX');
       }
     }
   }, []);
 
-  const track = (event: string, properties?: Record<string, unknown>) => {
+  const track = (_event: string, _properties?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
       if ((window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag) {
-        (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', event, properties);
+        (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', _event, _properties);
       }
       
       // Custom analytics - only log in development
       if (process.env.NODE_ENV === 'development') {
-        console.log('Analytics Event: ', event, properties);
+        console.log('Analytics Event: ', _event, _properties);
       }
     }
   };
 
-  const identify = (userId: string, traits?: Record<string, unknown>) => {
+  const identify = (_userId: string, _traits?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
       if ((window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag) {
         (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
-          user_id: userId,
-          custom_map: traits
+          user_id: _userId,
+          custom_map: _traits
         });
       }
       
       // Custom analytics - only log in development
       if (process.env.NODE_ENV === 'development') {
-        console.log('Analytics Identify: ', userId, traits);
+        console.log('Analytics Identify: ', _userId, _traits);
       }
     }
   };
 
-  const page = (name: string, properties?: Record<string, unknown>) => {
+  const page = (_name: string, _properties?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
       if ((window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag) {
         (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', 'page_view', {
-          page_title: name,
+          page_title: _name,
           page_location: window.location.href,
-          ...properties
+          ..._properties
         });
       }
       
       // Custom analytics - only log in development
       if (process.env.NODE_ENV === 'development') {
-        console.log('Analytics Page: ', name, properties);
+        console.log('Analytics Page: ', _name, _properties);
       }
     }
   };
