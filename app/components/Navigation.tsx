@@ -18,6 +18,7 @@ import {
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -31,12 +32,27 @@ const Navigation = () => {
 
   const closeAllMenus = () => {
     setIsOpen(false);
+    setIsServicesOpen(false);
+  };
+
+  const isActive = (href: string) => {
+    return pathname === href;
   };
 
   const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },
     { name: 'About', href: '/about', icon: InformationCircleIcon },
-    { name: 'Services', href: '/services', icon: BriefcaseIcon },
+    { 
+      name: 'Services', 
+      href: '/services', 
+      icon: BriefcaseIcon,
+      submenu: [
+        { name: 'AI Solutions', href: '/services/ai-solutions' },
+        { name: 'Web Development', href: '/services/web-development' },
+        { name: 'Mobile Apps', href: '/services/mobile-apps' },
+        { name: 'Cloud Services', href: '/services/cloud-services' }
+      ]
+    },
     { name: 'Contact', href: '/contact', icon: PhoneIcon },
     { name: 'Team', href: '/team', icon: AcademicCapIcon }
   ];
@@ -56,9 +72,9 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg: flex items-center space-x-8">,
+          <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => {
-              const Icon = item.icon
+              const Icon = item.icon;
               return (
                 <div key={item.name} className="relative group">
                   <Link
@@ -66,7 +82,8 @@ const Navigation = () => {
                     className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                       isActive(item.href)
                         ? 'bg-purple-600 text-white'
-                        : 'text-gray-300 hover:text-white hover:bg-slate-800'}`}
+                        : 'text-gray-300 hover:text-white hover:bg-slate-800'
+                    }`}
                     onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
                     onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
                   >
@@ -88,8 +105,10 @@ const Navigation = () => {
                     </div>
                   )}
                 </div>
+              );
             })}
           </div>
+
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link
@@ -99,11 +118,12 @@ const Navigation = () => {
               Get Started
             </Link>
           </div>
+
           {/* Mobile menu button */}
-          <div className="lg: hidden">,
+          <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover: text-white p-2",
+              className="text-gray-300 hover:text-white p-2"
             >
               <span className="sr-only">Open main menu</span>
               {isOpen ? (
@@ -114,27 +134,33 @@ const Navigation = () => {
             </button>
           </div>
         </div>
+
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg: hidden">,
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg mt-2">{navigation.map((item) => {
-                const Icon = item.icon
+          <div className="lg:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg mt-2">
+              {navigation.map((item) => {
+                const Icon = item.icon;
                 return (
-                  </div><div key={item.name}> </div><Link
+                  <div key={item.name}>
+                    <Link
                       href={item.href}
                       onClick={() => setIsOpen(false)}
                       className={`flex items-center space-x-3 px-3 py-2 rounded-md text-base font-medium transition-colors ${
                         isActive(item.href)
                           ? 'bg-purple-600 text-white'
-                          : 'text-gray-300 hover:text-white hover:bg-slate-700'}`}
+                          : 'text-gray-300 hover:text-white hover:bg-slate-700'
+                      }`}
                     >
-                      <Icon className="w-5 h-5" /> </Icon><span>{item.name}</span>
+                      <Icon className="w-5 h-5" />
+                      <span>{item.name}</span>
                     </Link>
                     {item.submenu && (
-                      <div className="ml-8 space-y-1">{item.submenu.map((subItem) => (
-                          </div><Link key={subItem.name}
+                      <div className="ml-8 space-y-1">
+                        {item.submenu.map((subItem) => (
+                          <Link key={subItem.name}
                             href={subItem.href}
-                            className="text-gray-400 hover: text-white block px-3 py-2 rounded-md text-sm",
+                            className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm"
                             onClick={() => setIsOpen(false)}
                           >
                             {subItem.name}
@@ -143,8 +169,10 @@ const Navigation = () => {
                       </div>
                     )}
                   </div>
+                );
               })}
-              <div className="pt-4 border-t border-slate-700"> </div><Link
+              <div className="pt-4 border-t border-slate-700">
+                <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}
                   className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center"
@@ -154,44 +182,10 @@ const Navigation = () => {
               </div>
             </div>
           </div>
-          {/* Fun Fact */}
-          <div className="mt-8 p-4 bg-slate-800/30 rounded-lg">
-            <p className="text-sm text-gray-400">
-              <span className="text-cyan-400">Fun Fact: </span> Even our AI gets
-              confused sometimes. That's why we have humans to help when things
-              go wrong! 🤖
-            </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        )}
       </div>
-
-      {/* Mobile Navigation */}
-      {isOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
-                  pathname === item.href
-                    ? 'text-blue-600 bg-blue-50'
-                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-                }`}
-                onClick={closeAllMenus}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
     </nav>
+  );
+};
 
-  )
-}
-
-
-export default Navigation
+export default Navigation;

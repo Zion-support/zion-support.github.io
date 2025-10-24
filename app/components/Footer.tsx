@@ -102,7 +102,8 @@ const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
-            </div>
+          </div>
+
           {/* Company & Resources */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Company</h3>
