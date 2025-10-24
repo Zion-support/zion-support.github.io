@@ -88,7 +88,7 @@ export default function MicroSaasPage() {
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Build, launch, and scale your software-as-a-service solution with our expert development team. 
-            From MVP to enterprise, we've got you covered.
+            From MVP to enterprise, we&apos;ve got you covered.
           </p>
           <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center mx-auto">
             Start Your SaaS Journey
@@ -162,7 +162,7 @@ export default function MicroSaasPage() {
             Ready to Build Your SaaS Solution?
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            Let's turn your SaaS idea into a successful business with our expert development team.
+            Let&apos;s turn your SaaS idea into a successful business with our expert development team.
           </p>
           <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center mx-auto">
             Start Building Today
