@@ -10,11 +10,11 @@ import { useRef, useEffect } from 'react';
 export const debounce = <T extends (..._args: unknown[]) => unknown>(
   func: T,
   wait: number
-): ((...args: Parameters<T>) => void) => {
+): ((..._args: Parameters<T>) => void) => {
   let timeout: ReturnType<typeof setTimeout>;
-  return (...args: Parameters<T>) => {
+  return (..._args: Parameters<T>) => {
     clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
+    timeout = setTimeout(() => func(..._args), wait);
   };
 };
 

@@ -1,189 +1,187 @@
 'use client';
-import React from 'react';
-import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Users } from 'lucide-react';
+
+import React, { useState } from 'react';
+import { ArrowRight, CheckCircle, Zap, Shield, Globe } from 'lucide-react';
+
+interface Service {
+  id: string;
+  title: string;
+  description: string;
+  features: string[];
+  price: string;
+  popular?: boolean;
+  icon: React.ComponentType<{ className?: string }>;
+}
+
+const services: Service[] = [
+  {
+    id: '1',
+    title: 'AI Development',
+    description: 'Custom AI solutions tailored to your business needs',
+    features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
+    price: '$5,000/month',
+    popular: true,
+    icon: Zap,
+  },
+  {
+    id: '2',
+    title: 'Security Solutions',
+    description: 'Enterprise-grade security for your applications',
+    features: ['End-to-End Encryption', 'Multi-Factor Authentication', 'Security Audits', 'Compliance'],
+    price: '$3,000/month',
+    icon: Shield,
+  },
+  {
+    id: '3',
+    title: 'Global Deployment',
+    description: 'Scale your applications worldwide',
+    features: ['CDN Integration', 'Multi-Region Support', 'Load Balancing', 'Auto-Scaling'],
+    price: '$2,000/month',
+    icon: Globe,
+  },
+];
 
 const EnhancedServicesShowcase: React.FC = () => {
-  const services = [
-    {
-      icon: Brain,
-      title: 'AI Solutions',
-      description: 'Cutting-edge artificial intelligence solutions for modern businesses',
-      color: 'text-purple-400',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      stats: '95% Accuracy'
-    },
-    {
-      icon: Zap,
-      title: 'Performance Optimization',
-      description: 'Boost your application performance with our expert optimization services',
-      color: 'text-yellow-400',
-      features: ['Code Optimization', 'Database Tuning', 'Caching Strategies', 'Load Balancing'],
-      stats: '10x Faster'
-<<<<<<< HEAD
-    }
-  ];
-=======
-    },
-    {
-      icon: Shield,
-      title: 'Security Services',
-      description: 'Comprehensive security solutions to protect your digital assets',
-      color: 'text-green-400',
-      features: ['Penetration Testing', 'Security Audits', 'Compliance', 'Threat Monitoring'],
-      stats: '99.9% Uptime'
-    },
-    {
-      icon: Globe,
-      title: 'Cloud Solutions',
-      description: 'Scalable cloud infrastructure and migration services',
-      color: 'text-blue-400',
-      features: ['Cloud Migration', 'Infrastructure Setup', 'Auto-scaling', 'Monitoring'],
-      stats: '50% Cost Savings'
-    }
-  ]
->>>>>>> 25adb2f5c6bac8e2e9c4ea63f8e65ad0a7ecbbec
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
+    <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div className="max-w-7xl mx-auto">
+        {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Enhanced Services Showcase
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Our Services
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our comprehensive range of technology services designed to accelerate your business growth.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Comprehensive technology solutions designed to accelerate your business growth
+            and enhance your digital presence.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {services.map((service) => (
             <div
-              key={index}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
+              key={service.id}
+              className={`relative bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 cursor-pointer ${
+                service.popular ? 'ring-2 ring-blue-500' : ''
+              }`}
+              onClick={() => setSelectedService(service)}
             >
-              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <service.icon className="h-8 w-8 text-white" />
-              </div>
-              
-<<<<<<< HEAD
-              <h3 className="text-xl font-semibold text-white text-center mb-2">
-=======
-              <h3 className="text-xl font-semibold text-white text-center mb-3">
->>>>>>> 25adb2f5c6bac8e2e9c4ea63f8e65ad0a7ecbbec
-                {service.title}
-              </h3>
-              
-              <p className="text-gray-300 text-center mb-4 text-sm">
-                {service.description}
-              </p>
-<<<<<<< HEAD
-              
-              <div className="space-y-2 mb-4">
-                {service.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                    <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
-                    <span>{feature}</span>
-                  </div>
-                ))}
-              </div>
+              {service.popular && (
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                    Most Popular
+                  </span>
+                </div>
+              )}
               
               <div className="text-center">
-                <div className={`text-2xl font-bold ${service.color} mb-2`}>
-                  {service.stats}
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-6">
+                  <service.icon className="w-8 h-8 text-blue-600" />
                 </div>
-                <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg text-sm font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-                  Learn More
-                  <ArrowRight className="ml-1 h-4 w-4" />
+                
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  {service.title}
+                </h3>
+                
+                <p className="text-gray-600 mb-6">
+                  {service.description}
+                </p>
+                
+                <div className="text-3xl font-bold text-blue-600 mb-6">
+                  {service.price}
+                </div>
+                
+                <ul className="space-y-3 mb-8">
+                  {service.features.map((feature, index) => (
+                    <li key={index} className="flex items-center text-gray-600">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                
+                <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center">
+                  Get Started
+                  <ArrowRight className="ml-2 w-5 h-5" />
                 </button>
               </div>
-=======
-
-              <div className="mb-4">
-                <div className={`text-2xl font-bold ${service.color} text-center mb-2`}>
-                  {service.stats}
-                </div>
-                <div className="text-xs text-gray-400 text-center">
-                  Performance Metric
-                </div>
-              </div>
-
-              <ul className="space-y-2 mb-6">
-                {service.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center text-gray-300 text-sm">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-
-              <button className="w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-                Learn More
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </button>
->>>>>>> 25adb2f5c6bac8e2e9c4ea63f8e65ad0a7ecbbec
             </div>
           ))}
         </div>
 
-<<<<<<< HEAD
-        {/* Stats Section */}
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-white mb-2">500+</div>
-            <div className="text-gray-300">Projects Completed</div>
+        {/* Selected Service Details */}
+        {selectedService && (
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <div className="flex items-start justify-between mb-6">
+              <div>
+                <h3 className="text-3xl font-bold text-gray-900 mb-2">
+                  {selectedService.title}
+                </h3>
+                <p className="text-xl text-gray-600">
+                  {selectedService.description}
+                </p>
+              </div>
+              <button
+                onClick={() => setSelectedService(null)}
+                className="text-gray-400 hover:text-gray-600"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h4 className="text-xl font-semibold text-gray-900 mb-4">Features</h4>
+                <ul className="space-y-3">
+                  {selectedService.features.map((feature, index) => (
+                    <li key={index} className="flex items-center text-gray-600">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div>
+                <h4 className="text-xl font-semibold text-gray-900 mb-4">Pricing</h4>
+                <div className="text-3xl font-bold text-blue-600 mb-4">
+                  {selectedService.price}
+                </div>
+                <p className="text-gray-600 mb-6">
+                  Includes all features and 24/7 support
+                </p>
+                <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                  Contact Sales
+                </button>
+              </div>
+            </div>
           </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-white mb-2">99.9%</div>
-            <div className="text-gray-300">Uptime Guarantee</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-white mb-2">24/7</div>
-            <div className="text-gray-300">Support Available</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-white mb-2">50+</div>
-            <div className="text-gray-300">Expert Team Members</div>
-          </div>
-        </div>
+        )}
 
         {/* CTA Section */}
-        <div className="mt-20 text-center">
-          <h3 className="text-2xl font-bold text-white mb-4">
-            Ready to Get Started?
+        <div className="text-center mt-16">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            Ready to get started?
           </h3>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let's discuss your project and find the perfect solution for your business needs.
+          <p className="text-gray-600 mb-8">
+            Contact our team to discuss your project requirements
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
               Start Your Project
-              <ArrowRight className="ml-2 h-5 w-5" />
             </button>
-            <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center">
-              <Users className="mr-2 h-5 w-5" />
-              Schedule Consultation
+            <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+              View Portfolio
             </button>
           </div>
-=======
-        <div className="text-center mt-16">
-          <h3 className="text-2xl font-bold text-white mb-4">
-            Ready to Transform Your Business?
-          </h3>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our services can help you achieve your goals and drive innovation.
-          </p>
-          <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-            Get Started Today
-          </button>
->>>>>>> 25adb2f5c6bac8e2e9c4ea63f8e65ad0a7ecbbec
         </div>
       </div>
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default EnhancedServicesShowcase;
-=======
-export default EnhancedServicesShowcase
->>>>>>> 25adb2f5c6bac8e2e9c4ea63f8e65ad0a7ecbbec
