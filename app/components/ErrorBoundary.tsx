@@ -20,9 +20,8 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   public componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    // Log error to console in development
+    // Log error to console in development only
     if (process.env.NODE_ENV === 'development') {
-      // eslint-disable-next-line no-console
       console.error('Error caught by boundary:', error, errorInfo);
     }
   }
