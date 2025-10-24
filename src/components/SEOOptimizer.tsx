@@ -225,7 +225,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       )}</script>
     </Head>
   )
-}
+};
 
 export default SEOOptimizer
   );
@@ -233,5 +233,6 @@ export default SEOOptimizer
 {};
 
 export default SEOOptimizerPage
-}
+};
+
 export default SEOOptimizerPage

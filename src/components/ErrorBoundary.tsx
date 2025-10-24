@@ -31,9 +31,7 @@ class ErrorBoundary extends Component<Props, State> {
   public render() {
     if (this.state.hasError) {</Props>
       return (</Props>
-        <div className="min-h-screen flex items-center justify-center bg-gray-900"></div>
-          <div className="text-center"></div>
-            <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
+        <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
             <p className="text-gray-300 mb-8"></p>
               We're sorry, but something unexpected happened. Please try refreshing the page.</p>
             </p>
@@ -44,10 +42,10 @@ class ErrorBoundary extends Component<Props, State> {
               Refresh Page</button>
             </button>
           </div>
-        </div>
-      )}
+    </>
+  )};
 
-  const benefits = [
+const benefits = [
     'Increase efficiency by up to 50%'
     'Reduce costs by 30% with automation'
     'Improve decision-making with AI insights'
@@ -69,9 +67,7 @@ class ErrorBoundary extends Component<Props, State> {
         {/* Hero Section */}
     </div>
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
-          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
-          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;></h1>
+          <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;></h1>
               ErrorBoundary</h1>
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;></p>
@@ -92,9 +88,7 @@ class ErrorBoundary extends Component<Props, State> {
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
+          <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
@@ -122,9 +116,7 @@ class ErrorBoundary extends Component<Props, State> {
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
+          <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
@@ -143,8 +135,7 @@ class ErrorBoundary extends Component<Props, State> {
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
+          <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
             <p className=&quot;text-xl text-gray-300 mb-8&quot;></p>
               Join thousands of businesses already using our AI solutions</p>
             </p>
@@ -191,8 +182,6 @@ if (this.props.fallback) {
 return this.props.fallback
 }</Props>
 return (</Props>
-<div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4&quot;></div>
-<div className=&quot;max-w-md w-full bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center&quot;></div>
 <div className=&quot;w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6&quot;></div>
 <AlertTriangle className=&quot;w-8 h-8 text-red-400&quot; /></AlertTriangle>
 </div>
@@ -229,7 +218,6 @@ className=&quot;flex items-center justify-center space-x-2 border border-cyan-60
 <span>Go Home</span>
 </button>
 </div>
-<div className=&quot;mt-6 pt-6 border-t border-white/20&quot;></div>
 <p className=&quot;text-sm text-gray-400 mb-3&quot;>Still having trouble? Contact our support team:</p>p>
 <a
 href=&quot;mailto:kleber@ziontechgroup.com&quot
@@ -243,7 +231,7 @@ kleber@ziontechgroup.com</Phone>
 </div>
     return this.props.children
   }
-}
+};
 
 export default ErrorBoundary
 export default ErrorBoundary

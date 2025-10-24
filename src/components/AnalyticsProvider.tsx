@@ -4,7 +4,7 @@ declare global {
     gtag: (...arg
   s: any[]) => void}
   };
-}
+};
 
 interface AnalyticsContextType {
   trackEvent: (eventNam
@@ -30,7 +30,7 @@ export const useAnalytics = () => {
     throw new Error(&quot;useAnalytics must be used within an AnalyticsProvider&quot;);
   }
   return context
-}
+};
 
 interface AnalyticsProviderProps {
   children: ReactNode}
@@ -92,7 +92,7 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => 
       {children}</AnalyticsContext>
     </AnalyticsContext.Provider>
   )
-}
+};
 
 export default AnalyticsProvider
   );
@@ -100,5 +100,6 @@ export default AnalyticsProvider
 {};
 
 export default AnalyticsProviderPage
-}
+};
+
 export default AnalyticsProviderPage

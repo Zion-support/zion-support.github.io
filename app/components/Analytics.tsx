@@ -5,7 +5,8 @@ interface AnalyticsProps {
 
 
   className?: string
-}
+};
+
 const Analytics: React.FC<AnalyticsProps> = ({ children }) => {
   useEffect(() => {
     // Initialize analytics tracking

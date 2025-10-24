@@ -14,7 +14,7 @@ function Pageosmgfc6x4() {
           </p>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

@@ -1,159 +1,290 @@
 const fs = require('fs');
 const path = require('path');
 
-// List of corrupted files that need to be fixed
-const corruptedFiles = [
-  'app/components/AccessibilityComponents.tsx',
-  'app/components/AdvancedErrorBoundary.tsx',
-  'app/components/AdvancedPerformanceMonitor.tsx',
-  'app/components/AdvancedSEOOptimizer.tsx',
-  'app/components/AnimatedText.tsx',
-  'app/components/Breadcrumb.tsx',
-  'app/components/ContentNewsletterSignup.tsx',
-  'app/components/ContentPreviewCard.tsx',
-  'app/components/ContentPromotionBanner.tsx',
-  'app/components/CookieConsent.tsx',
-  'app/components/DynamicContentShowcase.tsx',
-  'app/components/EnhancedAccessibility.tsx',
-  'app/components/EnhancedAccessibilityEnhancer.tsx',
-  'app/components/EnhancedAccessibilityWrapper.tsx',
-  'app/components/EnhancedAnalytics.tsx',
-  'app/components/EnhancedErrorBoundary.tsx',
-  'app/components/EnhancedHero.tsx',
-  'app/components/EnhancedLoading.tsx',
-  'app/components/EnhancedLoadingStates.tsx',
-  'app/components/EnhancedPerformanceMonitor.tsx',
-  'app/components/EnhancedPerformanceOptimizer.tsx',
-  'app/components/EnhancedSEO.tsx',
-  'app/components/EnhancedSEOHead.tsx',
-  'app/components/EnhancedSEOOptimizer.tsx',
-  'app/components/EnhancedSkipLink.tsx',
-  'app/components/ErrorHandler.tsx',
-  'app/components/Footer.tsx',
-  'app/components/FuturisticBackground.tsx',
-  'app/components/FuturisticButton.tsx',
-  'app/components/FuturisticCard.tsx',
-  'app/components/FuturisticGlow.tsx',
-  'app/components/FuturisticLoader.tsx',
-  'app/components/GenericServicePage.tsx',
-  'app/components/Header.tsx',
-  'app/components/LazyImage.tsx',
-  'app/components/LazyWrapper.tsx',
-  'app/components/Loading.tsx',
-  'app/components/LoadingOptimizer.tsx',
-  'app/components/LoadingSkeleton.tsx',
-  'app/components/LoadingSpinner.tsx',
-  'app/components/LoadingStates.tsx',
-  'app/components/MobileOptimizer.tsx',
-  'app/components/Navigation.tsx',
-  'app/components/NeonButton.tsx',
-  'app/components/OptimizedImage.tsx',
-  'app/components/OptimizedLoading.tsx',
-  'app/components/OptimizedLoadingSpinner.tsx',
-  'app/components/PWAInstaller.tsx',
-  'app/components/PerformanceDashboard.tsx',
-  'app/components/PerformanceMonitor.tsx',
-  'app/components/PerformanceOptimizations.tsx',
-  'app/components/PerformanceOptimizer.tsx',
-  'app/components/ResponsiveContainer.tsx',
-  'app/components/SEOEnhancer.tsx',
-  'app/components/SEOHead.tsx',
-  'app/components/SearchBar.tsx',
-  'app/components/SearchModal.tsx',
-  'app/components/SecurityEnhancer.tsx',
-  'app/components/ServiceCard.tsx',
-  'app/components/ServiceCardSkeleton.tsx',
-  'app/components/ServiceWorker.tsx',
-  'app/components/ServiceWorkerRegistration.tsx',
-  'app/components/Sidebar.tsx',
-  'app/components/SkipLink.tsx',
-  'app/components/SystemMonitor.tsx',
-  'app/components/ThemeToggle.tsx',
-  'app/components/UserExperienceEnhancer.tsx'
-];
+// Function to fix AnimatedText component
+function fixAnimatedText() {
+  const content = `'use client';
+import React from 'react';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
-// Create basic component templates
-const createBasicComponent = (componentName) => {
-  const baseName = componentName.replace(/\.tsx$/, '').split('/').pop();
-  return `import React from 'react';
-
-interface ${baseName}Props {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const ${baseName}: React.FC<${baseName}Props> = ({ className = '', children }) => {
+export default function AnimatedText() {
   return (
-    <div className={\`\${className}\`}>
-      {children}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <h1 className="text-4xl font-bold text-white mb-6">
+          Service
+        </h1>
+        <p className="text-lg text-gray-300 mb-8">
+          Professional service services coming soon.
+        </p>
+        <Link
+          href="/contact"
+          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+        >
+          Contact Us
+          <ArrowRight className="w-5 h-5 ml-2" />
+        </Link>
+      </div>
     </div>
   );
-};
-
-export default ${baseName};
-`;
-};
-
-// Create specialized component templates
-const createSpecializedComponent = (filePath) => {
-  const baseName = filePath.split('/').pop().replace(/\.tsx$/, '');
+}`;
   
-  switch (baseName) {
-    case 'AccessibilityComponents':
-      return `import React from 'react';
-
-interface AccessibilityComponentsProps {
-  className?: string;
-  children?: React.ReactNode;
+  fs.writeFileSync('/workspace/app/components/AnimatedText.tsx', content);
+  console.log('Fixed: AnimatedText.tsx');
 }
 
-const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({ 
-  className = '', 
-  children 
-}) => {
+// Function to fix ContactForm component
+function fixContactForm() {
+  const content = `'use client';
+import React from 'react';
+import { useState } from 'react';
+import { MessageSquare, Mail, Phone, Send, CheckCircle } from 'lucide-react';
+
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  company: string;
+  message: string;
+  service: string;
+}
+
+const ContactForm: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    email: '',
+    phone: '',
+    company: '',
+    message: '',
+    service: ''
+  });
+  
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setIsSubmitted(false);
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        company: '',
+        message: '',
+        service: ''
+      });
+    }, 3000);
+  };
+
+  const services = [
+    'AI Solutions',
+    'Web Development',
+    'Mobile Development',
+    'Cloud Migration',
+    'Cybersecurity',
+    'Data Analytics',
+    'DevOps',
+    'Consulting'
+  ];
+
+  if (isSubmitted) {
+    return (
+      <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center">
+        <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
+        <h3 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>
+        <p className="text-gray-300">Thank you for reaching out. We&apos;ll get back to you soon.</p>
+      </div>
+    );
+  }
+
   return (
-    <div className={\`accessibility-components \${className}\`} role="region" aria-label="Accessibility Components">
-      {children}
+    <div>
+      <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div>
+          <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+            Full Name *
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+            placeholder="Your full name"
+          />
+        </div>
+        
+        <div>
+          <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+            Email Address *
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+            placeholder="your@email.com"
+          />
+        </div>
+        
+        <div>
+          <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+            Phone Number
+          </label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+            placeholder="+1 (555) 123-4567"
+          />
+        </div>
+        
+        <div>
+          <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+            Company
+          </label>
+          <input
+            type="text"
+            id="company"
+            name="company"
+            value={formData.company}
+            onChange={handleChange}
+            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+            placeholder="Your company name"
+          />
+        </div>
+        
+        <div>
+          <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
+            Service Interest
+          </label>
+          <select
+            id="service"
+            name="service"
+            value={formData.service}
+            onChange={handleChange}
+            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+          >
+            <option value="">Select a service</option>
+            {services.map((service, index) => (
+              <option key={index} value={service} className="bg-gray-800">
+                {service}
+              </option>
+            ))}
+          </select>
+        </div>
+        
+        <div>
+          <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+            Message *
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+            rows={6}
+            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
+            placeholder="Tell us about your project or how we can help..."
+          />
+        </div>
+        
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="w-full flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          {isSubmitting ? (
+            <>
+              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+              Sending...
+            </>
+          ) : (
+            <>
+              <Send className="w-5 h-5 mr-2" />
+              Send Message
+            </>
+          )}
+        </button>
+      </form>
     </div>
   );
 };
 
-export default AccessibilityComponents;
-`;
-
-    case 'AdvancedErrorBoundary':
-      return `import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
+export default ContactForm;`;
+  
+  fs.writeFileSync('/workspace/app/components/ContactForm.tsx', content);
+  console.log('Fixed: ContactForm.tsx');
 }
 
-interface State {
+// Function to fix ErrorBoundary component
+function fixErrorBoundary() {
+  const content = `'use client';
+import React from 'react';
+
+interface ErrorBoundaryProps {
+  children: React.ReactNode;
+  fallback?: React.ReactNode;
+}
+
+interface ErrorBoundaryState {
   hasError: boolean;
   error?: Error;
 }
 
-class AdvancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error: Error): State {
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
 
   render() {
     if (this.state.hasError) {
       return this.props.fallback || (
-        <div className="error-boundary">
-          <h2>Something went wrong.</h2>
-          <p>Please refresh the page and try again.</p>
+        <div className="min-h-screen flex items-center justify-center bg-gray-900">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+            <p className="text-gray-300 mb-4">We're sorry, but something unexpected happened.</p>
+            <button
+              onClick={() => this.setState({ hasError: false })}
+              className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded"
+            >
+              Try again
+            </button>
+          </div>
         </div>
       );
     }
@@ -162,143 +293,183 @@ class AdvancedErrorBoundary extends Component<Props, State> {
   }
 }
 
-export default AdvancedErrorBoundary;
-`;
-
-    case 'LoadingSpinner':
-      return `import React from 'react';
-
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  className?: string;
+export default ErrorBoundary;`;
+  
+  fs.writeFileSync('/workspace/app/components/ErrorBoundary.tsx', content);
+  console.log('Fixed: ErrorBoundary.tsx');
 }
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
-  size = 'md', 
-  className = '' 
-}) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
-  };
-
-  return (
-    <div className={\`animate-spin rounded-full border-2 border-gray-300 border-t-blue-600 \${sizeClasses[size]} \${className}\`}>
-    </div>
-  );
-};
-
-export default LoadingSpinner;
-`;
-
-    case 'Header':
-      return `import React from 'react';
+// Function to fix Header component
+function fixHeader() {
+  const content = `'use client';
+import React from 'react';
 import Link from 'next/link';
+import { Menu, X } from 'lucide-react';
 
-interface HeaderProps {
-  className?: string;
-}
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-const Header: React.FC<HeaderProps> = ({ className = '' }) => {
   return (
-    <header className={\`bg-white shadow-sm \${className}\`}>
+    <header className="bg-gray-900 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <Link href="/" className="text-xl font-bold text-gray-900">
-            Zion Tech Group
-          </Link>
+          <div className="flex items-center">
+            <Link href="/" className="text-2xl font-bold text-white">
+              Zion Tech Group
+            </Link>
+          </div>
+          
           <nav className="hidden md:flex space-x-8">
-            <Link href="/" className="text-gray-600 hover:text-gray-900">
+            <Link href="/" className="text-gray-300 hover:text-white">
               Home
             </Link>
-            <Link href="/about" className="text-gray-600 hover:text-gray-900">
+            <Link href="/about" className="text-gray-300 hover:text-white">
               About
             </Link>
-            <Link href="/services" className="text-gray-600 hover:text-gray-900">
+            <Link href="/services" className="text-gray-300 hover:text-white">
               Services
             </Link>
-            <Link href="/contact" className="text-gray-600 hover:text-gray-900">
+            <Link href="/contact" className="text-gray-300 hover:text-white">
               Contact
             </Link>
           </nav>
+          
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-gray-300 hover:text-white"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
+        
+        {isMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              <Link href="/" className="block px-3 py-2 text-gray-300 hover:text-white">
+                Home
+              </Link>
+              <Link href="/about" className="block px-3 py-2 text-gray-300 hover:text-white">
+                About
+              </Link>
+              <Link href="/services" className="block px-3 py-2 text-gray-300 hover:text-white">
+                Services
+              </Link>
+              <Link href="/contact" className="block px-3 py-2 text-gray-300 hover:text-white">
+                Contact
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </header>
   );
 };
 
-export default Header;
-`;
-
-    case 'Footer':
-      return `import React from 'react';
-import Link from 'next/link';
-
-interface FooterProps {
-  className?: string;
+export default Header;`;
+  
+  fs.writeFileSync('/workspace/app/components/Header.tsx', content);
+  console.log('Fixed: Header.tsx');
 }
 
-const Footer: React.FC<FooterProps> = ({ className = '' }) => {
+// Function to fix Navigation component
+function fixNavigation() {
+  const content = `'use client';
+import React from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
+const Navigation = () => {
+  const pathname = usePathname();
+
+  const navItems = [
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
+    { href: '/services', label: 'Services' },
+    { href: '/contact', label: 'Contact' }
+  ];
+
   return (
-    <footer className={\`bg-gray-900 text-white \${className}\`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-400">
-              Leading technology solutions for modern businesses.
-            </p>
+    <nav className="bg-gray-800 shadow-lg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-4">
+          <div className="flex items-center">
+            <Link href="/" className="text-xl font-bold text-white">
+              Zion Tech Group
+            </Link>
           </div>
-          <div>
-            <h4 className="text-md font-semibold mb-4">Services</h4>
-            <ul className="space-y-2">
-              <li><Link href="/ai-services" className="text-gray-400 hover:text-white">AI Services</Link></li>
-              <li><Link href="/blockchain-solutions" className="text-gray-400 hover:text-white">Blockchain</Link></li>
-              <li><Link href="/5g-solutions" className="text-gray-400 hover:text-white">5G Solutions</Link></li>
-            </ul>
+          
+          <div className="hidden md:flex space-x-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={\`\${pathname === item.href ? 'text-white border-b-2 border-blue-500' : 'text-gray-300 hover:text-white'} px-3 py-2 text-sm font-medium transition-colors\`}
+              >
+                {item.label}
+              </Link>
+            ))}
           </div>
-          <div>
-            <h4 className="text-md font-semibold mb-4">Company</h4>
-            <ul className="space-y-2">
-              <li><Link href="/about" className="text-gray-400 hover:text-white">About</Link></li>
-              <li><Link href="/careers" className="text-gray-400 hover:text-white">Careers</Link></li>
-              <li><Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-md font-semibold mb-4">Contact</h4>
-            <p className="text-gray-400">info@ziontechgroup.com</p>
-            <p className="text-gray-400">+1 (555) 123-4567</p>
-          </div>
-        </div>
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400">&copy; 2024 Zion Tech Group. All rights reserved.</p>
         </div>
       </div>
-    </footer>
+    </nav>
   );
 };
 
-export default Footer;
-`;
+export default Navigation;`;
+  
+  fs.writeFileSync('/workspace/app/components/Navigation.tsx', content);
+  console.log('Fixed: Navigation.tsx');
+}
 
-    default:
-      return createBasicComponent(filePath);
-  }
+// Function to fix ServiceCard component
+function fixServiceCard() {
+  const content = `'use client';
+import React from 'react';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
+
+interface ServiceCardProps {
+  title: string;
+  description: string;
+  href: string;
+  icon?: React.ReactNode;
+}
+
+const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, href, icon }) => {
+  return (
+    <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300">
+      <div className="flex items-center mb-4">
+        {icon && <div className="mr-3">{icon}</div>}
+        <h3 className="text-xl font-semibold text-white">{title}</h3>
+      </div>
+      <p className="text-gray-300 mb-4">{description}</p>
+      <Link
+        href={href}
+        className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+      >
+        Learn more
+        <ArrowRight className="w-4 h-4 ml-1" />
+      </Link>
+    </div>
+  );
 };
 
-// Fix corrupted files
-corruptedFiles.forEach(filePath => {
-  const fullPath = path.join(process.cwd(), filePath);
+export default ServiceCard;`;
   
-  try {
-    const content = createSpecializedComponent(filePath);
-    fs.writeFileSync(fullPath, content, 'utf8');
-    console.log(`Fixed: ${filePath}`);
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
-});
+  fs.writeFileSync('/workspace/app/components/ServiceCard.tsx', content);
+  console.log('Fixed: ServiceCard.tsx');
+}
+
+// Main execution
+console.log('Starting corrupted files fix...');
+
+fixAnimatedText();
+fixContactForm();
+fixErrorBoundary();
+fixHeader();
+fixNavigation();
+fixServiceCard();
 
 console.log('Corrupted files fix completed!');

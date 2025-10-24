@@ -36,5 +36,6 @@ import { Brain, Mail } from 'lucide-react';
           </div>
         </div>
       </section>
-{}
+{};
+
 export default PerformanceEnhancerPage

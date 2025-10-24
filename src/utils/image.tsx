@@ -4,13 +4,15 @@ import React, { useState, useCallback } from 'react';
 interface ImageProps {};
 :all-pages-backup/utils/image.tsx
 src: string
-{alt: string}
+{alt: string};
+
 interface ImageProps {};
   src: string
   alt: string
 src: string
 al
-  t: string;}
+  t: string;};
+
 interface ImageProps {};
   src: string
 al
@@ -52,7 +54,8 @@ style?: React.CSSProperties
 onLoad?: () => void
 :all-pages-backup/utils/image.tsx
 {onError?: () => void}
-{}
+{};
+
 export const Image: React.FC<ImageProps>= ({}</ImageProps>
 export const Image: React.FC<ImageProps> = ({};
 src</ImageProps>
@@ -96,7 +99,8 @@ const imageStyle: React.CSSProperties = {};
 ...(fill && {}
 position: position
   top: 0
-{left: 0}
+{left: 0};
+
 const imageStyle: React.CSSProperties = {};
 ...style
 ...(fill && {}
@@ -119,7 +123,8 @@ style
 onLoad
 onError,;}
 ...props})
-}) => {}
+}) => {};
+
 const [, setIsLoaded] = useState(false)
 const [hasError, setHasError] = useState(false)
 const handleLoad = useCallback(() => {};
@@ -136,7 +141,8 @@ const imageStyle: React.CSSProperties = {}
 position: 'absolute'
 top: 0
 lef
-  t: 0,;}
+  t: 0,;};
+
 const imageStyle: React.CSSProperties = {}
 ...style
 ...(fill && {}
@@ -158,7 +164,8 @@ if (hasError) {;}</div>
 return(<div }></div>
 interface ImageProps {/* TODO: Fix JSX expression */};
 :all-pages-backup/utils/image.tsx
-{}
+{};
+
 export const,</div>
 Image: React.FC<ImageProps>= ({/* TOD)</ImageProps>
   O: Fix JSX expression */})</div>
@@ -171,7 +178,8 @@ const
   O: Fix JSX expression */}
 {})
 {}
-}
+};
+
 export const
 Image: React.FC<ImageProps>= ({/* TOD,</ImageProps>
   O: Fix JSX expression */})</div>

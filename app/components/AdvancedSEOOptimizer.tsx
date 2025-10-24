@@ -45,9 +45,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden"></section>
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center"></div>
-            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight"></h1>
+          <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight"></h1>
               Advanced SEO Optimizer</h1>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>
@@ -67,9 +65,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
         </section>
         {/* Features Section */}
         <section className="py-20 px-4"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Powerful AI-driven SEO features designed to transform your online presence</p>
               </p>
@@ -96,9 +92,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
         </section>
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our SEO Solution?</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our SEO Solution?</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Experience the power of AI-driven SEO optimization</p>
               </p>
@@ -116,8 +110,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
         </section>
         {/* CTA Section */}
         <section className="py-20 px-4"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <h2 className="text-4xl font-bold text-white mb-6"></h2>
+          <h2 className="text-4xl font-bold text-white mb-6"></h2>
               Ready to Boost Your SEO?</h2>
             </h2>
             <p className="text-xl text-gray-300 mb-8"></p>

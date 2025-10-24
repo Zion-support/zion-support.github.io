@@ -19,16 +19,14 @@ const Page: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <Navigation />
         <main className="container mx-auto px-4 py-16 pt-24"></main>
-          <div className="text-center"></div>
-            <h1 className="text-4xl m
+          <h1 className="text-4xl m
   d:text-5xl font-bold text-white mb-8 neon-text"></h1>
               Not Found</h1>
             </h1>
             <p className="text-xl text-gray-300 mb-8"></p>
               Professional not found services and solutions for your business needs.</p>
             </p>
-            <div className="cyber-card p-8 max-w-4xl mx-auto"></div>
-              <p className="text-gray-300"></p>
+            <p className="text-gray-300"></p>
                 This page is under development. Please check back soon for more information about our not found services.</p>
               </p>
             </div>
@@ -37,7 +35,7 @@ const Page: React.FC = () => {
         <Footer />
       </div>
     </div>
-    </div>
+    </>
   );
 };
 

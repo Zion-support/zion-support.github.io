@@ -103,9 +103,7 @@ const ErrorHandlerPage: React.FC = () => {
     </div>
     </div>
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
-          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
-          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;></h1>
+          <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;></h1>
               ErrorHandler</h1>
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;></p>
@@ -169,9 +167,7 @@ const ErrorHandlerPage: React.FC = () => {
      }
 </ArrowRight>
       return (;</ArrowRight>
-        <div className=&quot;min-h-screen flex items-center justify-center bg-gray-50&quot;></div>
-          <div className=&quot;max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center&quot;></div>
-            <div className=&quot;flex justify-center mb-4&quot;></div>
+        <div className=&quot;flex justify-center mb-4&quot;></div>
               <AlertTriangle className=&quot;w-16 h-16 text-red-500&quot; /></AlertTriangle>
             </div>
             <h1 className=&quot;text-2xl font-bold text-gray-900 mb-4&quot;></h1>
@@ -185,8 +181,7 @@ const ErrorHandlerPage: React.FC = () => {
                 <summary className=&quot;cursor-pointer text-sm text-gray-500 hover: text-gray-700&quot;></summary>
                   Error Details (Development)</summary>
                 </summary>
-                <div className=&quot;mt-2 p-4 bg-gray-100 rounded text-xs font-mono overflow-auto&quot;></div>
-                  <div className=&quot;mb-2&quot;></div>
+                <div className=&quot;mb-2&quot;></div>
                     <strong>Erro,</strong>
   r:</strong> {this.state.error.message}
                   </div>
@@ -222,9 +217,7 @@ const ErrorHandlerPage: React.FC = () => {
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
+          <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
@@ -283,9 +276,7 @@ this.handleRetry
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
+          <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
@@ -304,8 +295,7 @@ this.handleRetry
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
+          <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
             <p className=&quot;text-xl text-gray-300 mb-8&quot;></p>
               Join thousands of businesses already using our AI solutions</p>
             </p>
@@ -328,5 +318,6 @@ this.handleRetry
 {};
 
 export default ErrorHandlerPage
-}
+};
+
 export default ErrorHandlerPage

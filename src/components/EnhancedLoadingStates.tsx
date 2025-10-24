@@ -101,9 +101,7 @@ const EnhancedLoadingStatesPage: React.FC = () => {
     </div>
     </div>
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
-          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
-          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;></h1>
+          <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;></h1>
               EnhancedLoadingStates</h1>
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;></p>
@@ -124,9 +122,7 @@ const EnhancedLoadingStatesPage: React.FC = () => {
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
+          <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
@@ -154,9 +150,7 @@ const EnhancedLoadingStatesPage: React.FC = () => {
 
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
+          <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
               <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
@@ -175,8 +169,7 @@ const EnhancedLoadingStatesPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
+          <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
             <p className=&quot;text-xl text-gray-300 mb-8&quot;></p>
               Join thousands of businesses already using our AI solutions</p>
             </p>
@@ -202,7 +195,8 @@ export default EnhancedLoadingStatesPage
   md: 'w-8 h-8'
 {lg: 'w-12h-1 2'}
   );
-}
+};
+
 export default EnhancedLoadingStatesPage
 sm: 'w-4 h-4'
 md: 'w-8 h-8'
@@ -221,47 +215,30 @@ return (
 )
 :all-pages-backup/components/EnhancedLoadingStates.tsx
 {}
-}
+};
+
 export const PageLoader: React.FC = () => (;
-<div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center&quot;></div>
-<div className=&quot;text-center&quot;></div>
 <div className=&quot;w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4 mx-auto animate-pulse&quot;></div>
 <Brain className=&quot;w-8 h-8 text-white&quot; /></Brain>
 </div>
 <h2 className=&quot;text-xl font-semibold text-white mb-2&quot;>Zion Tech Group</h2>
 <p className=&quot;text-gray-300&quot;>Loading amazing content...</p>
 </div>
-</div>
-)
+    </>
+  )
 export const ServiceCardSkeleton: React.FC = () => (;
-<div className=&quot;bg-white/5 backdrop-blur-sm rounded-2xl p-8 animate-pulse&quot;></div>
-<div className=&quot;w-16 h-16 bg-gray-600 rounded-2xl mb-6&quot;></div>
-<div className=&quot;h-6 bg-gray-600 rounded mb-4&quot;></div>
 <div className=&quot;h-4 bg-gray-600 rounded mb-4&quot;></div>
-<div className=&quot;space-y-2&quot;></div>
-<div className=&quot;h-3 bg-gray-600 rounded&quot;></div>
-<div className=&quot;h-3 bg-gray-600 rounded&quot;></div>
-<div className=&quot;h-3 bg-gray-600 rounded w-3/4&quot;></div>
 </div>
-</div>
-)
+    </>
+  )
 export const StatsSkeleton: React.FC = () => (;
 <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8&quot;>{Array.from({ lengt)</div>
   h: 4 }).map((_, index) => (</div>
-<div key={index} className=&quot;text-center animate-pulse&quot;></div>
-<div className=&quot;h-8 bg-gray-600 rounded mb-2&quot;></div>
-<div className=&quot;h-4 bg-gray-600 rounded w-3/4 mx-auto&quot;></div>
 </div>
-))}
+  ))}
 </div>
 )
 export const ContentSkeleton: React.FC = () => (;
-<div className=&quot;space-y-6 animate-pulse&quot;></div>
-<div className=&quot;h-8 bg-gray-600 rounded w-3/4&quot;></div>
-<div className=&quot;space-y-2&quot;></div>
-<div className=&quot;h-4 bg-gray-600 rounded&quot;></div>
-<div className=&quot;h-4 bg-gray-600 rounded&quot;></div>
-<div className=&quot;h-4 bg-gray-600 rounded w-2/3&quot;></div>
 </div>
-</div>
-)
+    </>
+  )
