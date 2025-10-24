@@ -7,7 +7,8 @@ function withSentry(handler) {
       // console.error('API Error:', error);
 
       // In production, you would send this to Sentry
-      if (process.env.NODE_ENV === "production" && process.env.SENTRY_DSN) {
+      // eslint-disable-next-line no-undef
+      if (typeof process !== 'undefined' && process.env && process.env.NODE_ENV === "production" && process.env.SENTRY_DSN) {
         // Sentry.captureException(error);
       }
 
