@@ -1,73 +1,64 @@
-const fs = require('fs');
-const path = require('path');
-
-// Function to completely rewrite a malformed file
-function rewriteFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Extract basic info from the file
-    const fileName = path.basename(filePath, '.tsx');
-    const componentName = fileName
-      .replace(/-/g, ' ')
-      .replace(/\b\w/g, l => l.toUpperCase())
-      .replace(/\s/g, '') + 'Page';
-    
-    // Check if it's a page file
-    const isPageFile = filePath.includes('/page.tsx');
-    
-    // Extract title from existing content
-    const titleMatch = content.match(/<title>([^<]+)<\/title>/);
-    const title = titleMatch ? titleMatch[1] : componentName.replace('Page', '');
-    
-    // Extract description from existing content
-    const descMatch = content.match(/content="([^"]+)"/);
-    const description = descMatch ? descMatch[1] : `Advanced ${componentName.replace('Page', '')} solution for modern businesses.`;
-    
-    // Create a clean, working component
-    const cleanContent = `'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
-
+const fs = require('fs')
+const path = require('path')
+// Function to completely rewrite a malformed file
+function rewriteFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8')
+    // Extract basic info from the file
+    const fileName = path.basename(filePath, '.tsx')
+    const componentName = fileName
+      .replace(/-/g, ' ')
+      .replace(/\b\w/g, l => l.toUpperCase())
+      .replace(/\s/g, '') + 'Page'
+    // Check if it's a page file
+    const isPageFile = filePath.includes('/page.tsx')
+    // Extract title from existing content
+    const titleMatch = content.match(/<title>([^<]+)<\/title>/)
+    const title = titleMatch ? titleMatch[1] : componentName.replace('Page', '')
+    // Extract description from existing content
+    const descMatch = content.match(/content="([^"]+)"/)
+    const description = descMatch ? descMatch[1] : `Advanced ${componentName.replace('Page', '')} solution for modern businesses.`
+    // Create a clean, working component
+    const cleanContent = `'use client'
 const ${componentName}: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Intelligence',
+    title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
+    benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+}
     {
-      icon: BarChart,
-      title: 'Advanced Analytics',
+  icon: BarChart,
+    title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
+    benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+}
     {
-      icon: Target,
-      title: 'Precision Targeting',
+  icon: Target,
+    title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
+    benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+}
     {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
+  icon: TrendingUp,
+    title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+    benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+}
   ]
-
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
+  'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
-
   return (
     <>
       <Helmet>
@@ -81,24 +72,23 @@ const ${componentName}: React.FC = () => {
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
               ${componentName.replace('Page', '')}
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               ${description}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Learn More
               </button>
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -108,7 +98,7 @@ const ${componentName}: React.FC = () => {
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                   <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
@@ -127,7 +117,6 @@ const ${componentName}: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -137,7 +126,7 @@ const ${componentName}: React.FC = () => {
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-4">
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
@@ -147,7 +136,6 @@ const ${componentName}: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -155,11 +143,11 @@ const ${componentName}: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of businesses already using our AI solutions
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Start Free Trial
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Contact Sales
               </button>
             </div>
@@ -167,44 +155,40 @@ const ${componentName}: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </>
-  );
-};
-
-export default ${componentName};`;
-
-    fs.writeFileSync(filePath, cleanContent);
-    console.log(`Rewrote: ${filePath}`);
-    return true;
+</>
+  )
+}
+export default ${componentName}`
+    fs.writeFileSync(filePath, cleanContent)
+    // eslint-disable-next-line no-console
+    console.log(`Rewrote: ${filePath}`)
+    return true
   } catch (error) {
-    console.error(`Error rewriting ${filePath}:`, error.message);
-    return false;
+    // eslint-disable-next-line no-console
+    console.error(`Error rewriting ${filePath}:`, error.message)
+    return false
   }
 }
-
 // Get all problematic files
-const { execSync } = require('child_process');
-
+const { execSync } = require('child_process')
 // Find files with JSX syntax errors
 const problematicFiles = execSync('find app -name "*.tsx" -type f', { encoding: 'utf8' })
   .trim()
   .split('\n')
-  .filter(file => file.trim() !== '');
-
-console.log(`Found ${problematicFiles.length} files to check`);
-
-let fixedCount = 0;
+  .filter(file => file.trim() !== '')
+// eslint-disable-next-line no-console
+    console.log(`Found ${problematicFiles.length} files to check`)
+let fixedCount = 0
 problematicFiles.forEach(file => {
   // Skip files that are already working
-  if (file.includes('ai-agricultural-intelligence-pro') || 
-      file.includes('components/Navigation') || 
+  if (file.includes('ai-agricultural-intelligence-pro') ||
+      file.includes('components/Navigation') ||
       file.includes('components/Footer')) {
-    return;
-  }
-  
+    return
+}
   if (rewriteFile(file)) {
-    fixedCount++;
-  }
-});
-
-console.log(`Rewrote ${fixedCount} out of ${problematicFiles.length} files`);
+  fixedCount++
+}
+})
+// eslint-disable-next-line no-console
+    console.log(`Rewrote ${fixedCount} out of ${problematicFiles.length} files`)

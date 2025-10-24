@@ -1,8 +1,12 @@
-"use client";
-import React from 'react';
+/// <reference types="jest" />
+/// <reference types="@testing-library/jest-dom" />
 
-const jest.d.ts = () => {
-  return null;
-};
-
-export default jest.d.ts;
+declare global {
+  namespace jest {
+    interface Matchers<R> {
+      toBeInTheDocument(): R
+      toHaveClass(className: string): R
+      toHaveTextContent(text: string | RegExp): R
+    }
+  }
+}

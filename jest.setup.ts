@@ -1,3 +1,4 @@
+import { TextEncoder, TextDecoder } from 'util'
 // Jest-DOM matchers
 import '@testing-library/jest-dom'
 // Polyfill fetch and enable fetch mocks
@@ -9,7 +10,6 @@ import 'whatwg-fetch'
 //   fetchMock.resetMocks()
 // })
 // Polyfill TextEncoder and TextDecoder for JSDOM environment
-import { TextEncoder, TextDecoder } from 'util'
 // Set up a mock for Vite environment variables accessed via import.meta.env
 process.env['VITE_REOWN_PROJECT_ID'] = 'test_project_id_from_jest_setup'
 process.env['NEXT_PUBLIC_SUPABASE_URL'] = 'http://localhost:54321'
@@ -27,20 +27,20 @@ Object.defineProperty(window, 'matchMedia', {
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn()
   }))
-});
+})
 // Mock ResizeObserver for Radix UI components and other libraries that might use it
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
   unobserve: jest.fn(),
   disconnect: jest.fn()
-}));
+}))
 // Polyfill for URL.revokeObjectURL
 if (typeof URL.revokeObjectURL === 'undefined') {
-  URL.revokeObjectURL = jest.fn();
+  URL.revokeObjectURL = jest.fn()
 }
 // Polyfill for window.scrollTo
 if (typeof window.scrollTo === 'undefined') {
-  window.scrollTo = jest.fn();
+  window.scrollTo = jest.fn()
 }
 // Polyfill IntersectionObserver for components that use it (e.g., embla-carousel)
 if (typeof window.IntersectionObserver === 'undefined') {
@@ -49,16 +49,18 @@ if (typeof window.IntersectionObserver === 'undefined') {
     observe() {}
     unobserve() {}
     disconnect() {}
-    takeRecords() { return []; }
+    takeRecords() {
+      return []
+    }
   }
   // @ts-expect-error - Mock implementation for testing
-  window.IntersectionObserver = MockIntersectionObserver;
+  window.IntersectionObserver = MockIntersectionObserver
   // @ts-expect-error - Mock implementation for testing
-  global.IntersectionObserver = MockIntersectionObserver;
+  global.IntersectionObserver = MockIntersectionObserver
 }
 // Polyfill performance.getEntriesByType for JSDOM (used in productionLogger)
 if (typeof performance.getEntriesByType !== 'function') {
-  (performance as Performance & { getEntriesByType: () => PerformanceEntry[] }).getEntriesByType = () => [];
+  (performance as Performance & { getEntriesByType: () => PerformanceEntry[] }).getEntriesByType = () => []
 }
 // Ensure all code paths use the mock implementation
 // global.fetch = fetchMock
