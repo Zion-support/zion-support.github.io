@@ -1,6 +1,9 @@
 User-agent: *
 Allow: /
 
+<<<<<<< HEAD
+Sitemap: https://ziontechgroup.com/sitemap.xml
+=======
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
@@ -12,13 +15,34 @@ Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /private/
-Disallow: /*.json$
-Disallow: /*.xml$
 
 # Allow important pages
+Allow: /ai-services/
+Allow: /ai-solutions/
+Allow: /cloud-migration/
+Allow: /cybersecurity/
+Allow: /quantum-computing/
+Allow: /autonomous-systems/
+Allow: /blockchain/
+Allow: /blog/
+Allow: /case-studies/
+Allow: /contact/
+Allow: /about/
+
+# Host
+Host: https://ziontechgroup.com
+Allow: /partners
+Allow: /support
+Allow: /faq
+Allow: /demo
+Allow: /consultation
+Allow: /micro-saas
 Allow: /ai-services
 Allow: /it-services
-Allow: /micro-saas
-Allow: /about
-Allow: /contact
-Allow: /blog
+Allow: /privacy
+Allow: /terms
+Allow: /cookies
+Allow: /docs
+Allow: /community
+Allow: /tutorials
+>>>>>>> cursor/delete-records-30ea

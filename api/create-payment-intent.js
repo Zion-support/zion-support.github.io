@@ -1,6 +1,6 @@
-import { withErrorLogging } from './withErrorLogging.cjs';
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
-async function handler(req, res) {
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
@@ -8,32 +8,22 @@ async function handler(req, res) {
     return;
   }
 
-  const { amount, currency = 'usd' } = req.body || {};
-
-  if (!amount) {
-    res.statusCode = 400;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Amount is required' }));
-    return;
-  }
-
   try {
-    const paymentIntent = {
-      id: 'pi_' + Math.random().toString(36).substr(2, 9),
+    const { amount, currency = 'usd' } = req.body;
+
+    if (!amount) {
+      res.statusCode = 400;
+      res.end(JSON.stringify({ error: 'Amount is required' }));
+
+    const paymentIntent = await stripe.paymentIntents.create({
       amount: Math.round(amount * 100), // Convert to cents
       currency,
-      status: 'requires_payment_method',
-      created: Math.floor(Date.now() / 1000)
-    };
+
 
     res.statusCode = 200;
-    res.json({ paymentIntent });
-  } catch (err) {
-    console.error("Error:", err);
-    res.statusCode = 500;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to create payment intent' }));
-  }
-}
+    res.end(JSON.stringify({ clientSecret: paymentIntent.client_secret }));
 
-export default withErrorLogging(handler);
+  } catch (error) {
+    console.error('Stripe payment intent error:', error);
+    res.statusCode = 500;
+

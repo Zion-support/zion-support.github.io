@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-// Find all files with react-helmet-async imports
-const findFilesWithHelmet = (dir) => {
+// Find all files using react-helmet-async
+const findFiles = (dir) => {
   const files = [];
   const items = fs.readdirSync(dir);
   
@@ -11,7 +11,7 @@ const findFilesWithHelmet = (dir) => {
     const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory()) {
-      files.push(...findFilesWithHelmet(fullPath));
+      files.push(...findFiles(fullPath));
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
       const content = fs.readFileSync(fullPath, 'utf8');
       if (content.includes('react-helmet-async')) {
@@ -28,14 +28,13 @@ const fixFile = (filePath) => {
   let content = fs.readFileSync(filePath, 'utf8');
   
   // Remove Helmet import
-  content = content.replace(/import\s*{\s*Helmet\s*}\s*from\s*['"]react-helmet-async['"];\s*\n?/g, '');
+  content = content.replace(/import\s*{\s*Helmet\s*}\s*from\s*['"]react-helmet-async['"];?\s*\n?/g, '');
   
   // Remove Helmet usage
-  content = content.replace(/<Helmet>[\s\S]*?<\/Helmet>\s*\n?/g, '');
+  content = content.replace(/<Helmet>[\s\S]*?<\/Helmet>/g, '');
   
-  // Fix return statements that had Helmet
-  content = content.replace(/return\s*\(\s*<>\s*<div/g, 'return (\n    <div');
-  content = content.replace(/<\/div>\s*<\/>\s*\);/g, '</div>\n  );');
+  // Clean up extra whitespace
+  content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
   
   fs.writeFileSync(filePath, content);
   console.log(`Fixed: ${filePath}`);
@@ -43,10 +42,10 @@ const fixFile = (filePath) => {
 
 // Main execution
 const appDir = path.join(__dirname, 'app');
-const files = findFilesWithHelmet(appDir);
+const files = findFiles(appDir);
 
-console.log(`Found ${files.length} files with Helmet imports`);
+console.log(`Found ${files.length} files with Helmet usage`);
 
 files.forEach(fixFile);
 
-console.log('All Helmet imports have been removed!');
+console.log('All files fixed!');

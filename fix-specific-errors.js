@@ -1,90 +1,62 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
+
 import fs from 'fs';
-import { glob } from 'glob';
+import path from 'path';
 
-// Function to process a file;
-function processFile(filePath) {
+// Function to fix specific syntax errors
+function fixSpecificErrors(filePath) {
   try {
-    // Fix malformed closing tags;
-    if (content.includes('</div>}')) {
-function processFile(filePath) {/* TODO: Fix JSX expression */}
-    if (content.includes('</div>}')) {/* TODO: Fix JSX expression */}
-      content = content.replace(/<\/div>\}/g, '}');
-      modified = true;
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
+    
+    // Fix malformed import statements
+    content = content.replace(/Monitor\}\} from 'lucide-react'/g, "Monitor\n} from 'lucide-react';");
+    
+    // Fix malformed array structures
+    content = content.replace(/\];\s*\{\s*icon: Shield,\s*title: 'Cloud Security'\}\];/g, '];');
+    content = content.replace(/const benefits = \[\s*\{\s*icon: Shield,\s*title: 'Cloud Security'\}\s*\]\;\;\s*const benefits = \[\;\s*\]\;\s*const benefits = \[\s*\]/g, 'const benefits = [];');
+    
+    // Fix malformed JSX
+    content = content.replace(/\{feature\.description\<\/p\>\}\<\/p\>/g, '{feature.description}</p>');
+    
+    // Fix malformed array declarations
+    content = content.replace(/features: \[,\s*/g, 'features: [');
+    
+    // Fix duplicate semicolons
+    content = content.replace(/\]\;\;/g, '];');
+    
+    // Fix malformed object properties
+    content = content.replace(/title: 'Cloud Security'\}\];/g, "title: 'Cloud Security',\n      description: 'Comprehensive security solutions',\n      features: ['Firewall protection', 'Intrusion detection']\n    }];");
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
     }
-
-    // Fix malformed closing tags with semicolons;
-    if (content.includes('</div>;')) {
-      content = content.replace(/<\/div>;/g, ';');
-      modified = true;
-    }
-
-    // Fix malformed closing tags with commas;
-    if (content.includes('</div>,') && !content.includes('</div>, ')) {
-      content = content.replace(/<\/div>,/g, ',');
-      modified = true;
-    }
-
-    // Fix unterminated regular expressions;
-    if (content.includes('const regex = /')) {
-      content = content.replace(/const regex = \/([^/]*)$/gm, 'const regex = /$1/;');
-      modified = true;
-    }
-
-    // Fix malformed object properties;
-    if (content.includes('const config = {')) {
-      // Look for lines that might be missing colons;
-      for (let i = 0; i < lines.length; i++) {
-        // Fix lines that look like property assignments but are missing colons;
-        if (line.match(/^\s*[a-zA-Z_][a-zA-Z0-9_]*\s+[a-zA-Z_][a-zA-Z0-9_]*\s*$/)) {
-          line = line.replace(
-            /^(\s*[a-zA-Z_][a-zA-Z0-9 _]*)\s+([a-zA-Z_][a-zA-Z0-9 _]*)\s*$/,
-            '$1: $2,'
-          );
-          modified = true;
-        }
-    if (content.includes('</div>;')) {/* TODO: Fix JSX expression */}
-    }
-
-    // Fix malformed closing tags with commas;
-    if (content.includes('</div>,') && !content.includes('</div>, ')) {/* TODO: Fix JSX expression */}
-    }
-
-    // Fix unterminated regular expressions;
-    if (content.includes('const regex = /')) {/* TODO: Fix JSX expression */}
-    }
-
-    // Fix malformed object properties;
-    if (content.includes('const config = {/* TODO: Fix JSX expression */}
-        })
-        newLines.push(line);
-      }
-      if (modified) {/* TODO: Fix JSX expression */}
-      }
-    }
-
-    if (modified) {/* TODO: Fix JSX expression */}
-    }
-
+    
     return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Main execution;
-async function main() {
-  // Find all TypeScript/JavaScript files in app directory;
-  files.forEach(file => {)
-    if (processFile(file)) {
-      fixedCount++;
-    }
-async function main() {/* TODO: Fix JSX expression */}
-}
-  // Find all TypeScript/JavaScript files in app directory;
-  files.forEach(file => {/* TODO: Fix JSX expression */}
-    })
-  });
+// Files to fix
+const filesToFix = [
+  '/workspace/app/cloud-infrastructure-manager/page.tsx',
+  '/workspace/app/cloud-migration/page.tsx',
+  '/workspace/app/cloud-security/page.tsx',
+  '/workspace/app/cloud-services/page.tsx'
+];
 
+console.log('Fixing specific syntax errors...');
+
+let fixedCount = 0;
+for (const file of filesToFix) {
+  if (fixSpecificErrors(file)) {
+    fixedCount++;
+  }
 }
 
-main().catch(console.error);
+console.log(`Fixed ${fixedCount} files`);
+console.log('Specific error fixes completed!');

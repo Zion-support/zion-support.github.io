@@ -1,132 +1,59 @@
-#!/usr/bin/env node;
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
+const fs = require('fs');
+const path = require('path');
 
-//Function to fix JSX syntax errors;
-function fixJSXSyntax(content) {
-
-  //Fix function declarations with malformed comments;
-  fixed = fixed.replace(
-    /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\/\*\s*content\s*\/\}/g,
-    'const $1: React.FC = () => {'
-  );
-,
-  //Fix malformed JSX elements that are self-closing but shouldn't be;
-  //Pattern: <div></div> followed by content that should be inside;
-  fixed = fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*([^<]+)/g, '<$1$2>$3</$1>');
-
-  //Fix malformed JSX elements with attributes;
-  fixed = fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*<(\w+)([^>]*?)><\/\3>/g, '<$1$2><$3$4></$3></$1>');
-
-  //Fix array syntax issues;
-  fixed = fixed.replace(/\[\s*\{\/\*\s*content\s*\/\}/g, '[{');
-
-  //Fix object syntax issues;
-  fixed = fixed.replace(/\{\/\*\s*content\s*\/\}/g, '{');
-
-  //Fix missing closing braces for objects;
-  fixed = fixed.replace(
-function fixJSXSyntax(content) {/* TODO: Fix JSX expression */}
-    /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\/\*\s*content\s*\/\}/g,
-    'const $1: React.FC = () => {/* TODO: Fix JSX expression */}
-  fixed = fixed.replace(/\[\s*\{\/\*\s*content\s*\/\}/g, '[{/* TODO: Fix JSX expression */}
-  fixed = fixed.replace(/\{\/\*\s*content\s*\/\}/g, '{/* TODO: Fix JSX expression */})
-    /(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*\}/g,
-    "$1: '$2',\n      $3: '$4',\n      $5: '$6',\n      $7: '$8'\n    }"
-  );
-
-  return fixed;
-}
-
-//Function to process a single file;
-function processFile(filePath) {
-  try {
-    //     const content = fs.readFileSync(filePath, 'utf8');
-
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      //       return true;
-function processFile(filePath) {/* TODO: Fix JSX expression */}
-    }
-  },
-  // Fix malformed JSX fragments
-  {
-    pattern: /<>\s*<div([^>]*)>([^<]*?)<\/div>\s*<\/>/g,
-    replacement: '<div$1>$2</div>'
-  }
-];
-
-function fixFile(filePath) {
+// Function to fix JSX syntax issues in a file
+function fixJSXSyntax(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-    
-    fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
-    });
-    
+
+    // Fix LinkContact Us pattern
+    if (content.includes('LinkContact Us')) {
+      content = content.replace(
+        /<LinkContact Us\s*>\s*\$\d+\s*<ArrowRight\$\d+ \/>\s*<\/Link>/g,
+        `<Link
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>`
+      );
+      modified = true;
+    }
+
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
-    }
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  return false;
+
+// Function to recursively find all .tsx files
+function findTSXFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
     
-    return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
-  }
-}
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      files.push(...findTSXFiles(fullPath));
+    } else if (item.endsWith('.tsx')) {
+      files.push(fullPath);
+  
+  return files;
 
-//Main function;
-async function main() {
-  // Get all TSX files in the app directory
-  const files = await glob('app/**/*.tsx', { cwd: process.cwd() });
+// Main execution
+console.log('Starting JSX syntax fixes...');
+const appDir = path.join(__dirname, 'app');
+const tsxFiles = findTSXFiles(appDir);
 
-  console.log(`Found ${files.length} TSX files to check...`);
+let fixedCount = 0;
+for (const file of tsxFiles) {
+  if (fixJSXSyntax(file)) {
+    fixedCount++;
 
-  for (const pattern of patterns) {
-    const files = await glob(pattern, {
-      ignore: [,
-        '**/node_modules/**',
-        '**/dist/**',
-        '**/build/**',
-        '**/__tests__/**',
-        '**/_app_disabled/**',
-        '**/_conflicted_disabled/**',
-        '**/_pages_api_disabled/**',
-        '**/_pages_disabled/**',
-        '**/admin-api-disabled/**',
-        '**/api-disabled/**',
-        '**/api.disabled/**',
-        '**/api.disabled.temp/**',
-        '**/api-backup/**',
-        '**/apps.backup/**',
-        '**/automation_backup/**')
-        '**/ai-optimization-backups/**')
-        '**/automation_logs/**')
-        '**/all-automations-reports/**')
-        '**/accessibility-reports/**')
-      ])
-async function main() {/* TODO: Fix JSX expression */}
-}
-  for (const pattern of patterns) {/* TODO: Fix JSX expression */}
-    });
-
-    for (const file of files) {/* TODO: Fix JSX expression */}
-      }
-    }
-  });
-
-  //   }
-
-if (import.meta.url === `fil)`
-  e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
-}
-
-export { fixJSXSyntax, processFile };
-
-}"`
+console.log(`\nFixed ${fixedCount} files out of ${tsxFiles.length} total .tsx files`);

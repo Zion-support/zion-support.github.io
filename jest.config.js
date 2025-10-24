@@ -1,5 +1,4 @@
 export default {
-  preset: 'ts-jest',
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapper: {
@@ -15,7 +14,8 @@ export default {
   },
   transform: {
     '^.+\\.(ts|tsx)$': ['ts-jest', {
-      tsconfig: 'tsconfig.json'
+      tsconfig: 'tsconfig.json',
+      useESM: true
     }],
     '^.+\\.(js|jsx)$': 'babel-jest'
   },
@@ -40,5 +40,11 @@ export default {
   ],
   transformIgnorePatterns: [
     'node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))'
-  ]
+  ],
+  extensionsToTreatAsEsm: ['.ts', '.tsx'],
+  globals: {
+    'ts-jest': {
+      useESM: true
+    }
+  }
 };

@@ -1,66 +1,27 @@
 'use client';
 import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { Star, ArrowRight } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment with local support and compliance'
-    }
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
   return (
-    <div className="bg-gradient-to-r from-purple-600 to-cyan-600 py-16 px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Transform Your Business with
-            <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-              Advanced AI Solutions
+    <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 text-white py-4 relative overflow-hidden">
+      {/* Animated background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 via-purple-600/20 to-pink-600/20 animate-pulse"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left">
+          <div className="flex items-center space-x-2 mb-2 sm:mb-0">
+            <Star className="w-5 h-5 animate-pulse" />
+            <span className="font-semibold text-sm sm:text-base">
+              <span className="sr-only">Screen reader: </span>New AI Solutions Available
             </span>
-          </h2>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
-            Join thousands of businesses that have already revolutionized their operations 
-            with our cutting-edge AI and IT solutions.
-          </p>
-        </div>
-
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <div key={index} className="text-center">
-              <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <feature.icon className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-lg font-bold text-white mb-2">{feature.title}</h3>
+            <Star className="w-4 h-4 text-yellow-300 animate-bounce" />
+          </div>
+          
+          <div className="flex items-center space-x-4 ml-0 sm:ml-6">
+            <span className="text-sm sm:text-base">
+              <span className="sr-only">Screen reader: </span>
+              Transform your business with cutting-edge AI technology</h3>
               <p className="text-white/80 text-sm">{feature.description}</p>
             </div>
           ))}
@@ -108,6 +69,36 @@ const ContentPromotionBanner: React.FC = () => {
             Free consultation • No commitment • 30-day money-back guarantee
           </p>
         </div>
+=======
+    <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 text-white py-4 relative overflow-hidden">
+      {/* Animated background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 via-purple-600/20 to-pink-600/20 animate-pulse"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left">
+          <div className="flex items-center space-x-2 mb-2 sm:mb-0">
+            <Star className="w-5 h-5 animate-pulse" />
+            <span className="font-semibold text-sm sm:text-base">
+              <span className="sr-only">Screen reader: </span>New AI Solutions Available
+            </span>
+            <Star className="w-4 h-4 text-yellow-300 animate-bounce" />
+          </div>
+          
+          <div className="flex items-center space-x-4 ml-0 sm:ml-6">
+            <span className="text-sm sm:text-base">
+              <span className="sr-only">Screen reader: </span>
+              Transform your business with cutting-edge AI technology
+            </span>
+            <a
+              href="/services"
+              className="flex items-center space-x-1 bg-white/20 hover:bg-white/30 px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105"
+            >
+              <span><span className="sr-only">Screen reader: </span>Learn More</span>
+              <ArrowRight className="w-3 h-3" />
+            </a>
+          </div>
+        </div>
+>>>>>>> main
       </div>
     </div>
   );

@@ -1,10 +1,15 @@
-'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+interface EnhancedLoadingProps {
+  // Add props here
+}
+
+const EnhancedLoading: React.FC<EnhancedLoadingProps> = (_props) => {
+  return (
+    <div>
+      {/* Component content */}
     </div>
-  );
-};
+  )
+}
 
-export default EnhancedLoadingPage;
+export default EnhancedLoading

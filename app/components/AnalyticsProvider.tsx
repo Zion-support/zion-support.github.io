@@ -1,12 +1,10 @@
 'use client';
-import React from 'react';
-'use client';
 
-import React, { createContext, useContext, useEffect } from 'react';
+import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 
 interface AnalyticsContextType {
-  trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
-  trackPageView: (pageName: string) => void;
+  trackEvent: (_eventName: string, _parameters?: Record<string, unknown>) => void;
+  trackPageView: (_pageName: string, _pagePath: string) => void;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
@@ -19,35 +17,72 @@ export const useAnalytics = () => {
   return context;
 };
 
-const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+interface AnalyticsProviderProps {
+  children: ReactNode;
+}
+
+const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   useEffect(() => {
-    // Initialize Google Analytics
-    if (typeof window !== 'undefined' && typeof gtag !== 'undefined') {
-      gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: document.title,
-        page_location: window.location.href,
-      });
+    // Initialize analytics
+    if (typeof window !== 'undefined') {
+      // Google Analytics
+      if (process.env.NODE_ENV === 'production') {
+        // Load Google Analytics script
+        const script = document.createElement('script');
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX'}`;
+        script.async = true;
+        document.head.appendChild(script);
+
+        // Initialize gtag
+        const gtagFunction = function(...args: unknown[]) {
+          const gtag = window as { gtag?: { q?: unknown[] } };
+          gtag.gtag = gtag.gtag || { q: [] };
+          gtag.gtag.q = gtag.gtag.q || [];
+          gtag.gtag.q.push(args);
+        };
+        (window as { gtag?: unknown }).gtag = (window as { gtag?: unknown }).gtag || gtagFunction;
+        window.gtag = window.gtag || gtagFunction;
+        window.gtag('js', new Date());
+        window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX');
+      }
     }
   }, []);
 
-  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
-    if (typeof window !== 'undefined' && typeof gtag !== 'undefined') {
-      gtag('event', eventName, parameters);
+  const trackEvent = (_eventName: string, _parameters?: Record<string, unknown>) => {
+    if (typeof window !== 'undefined') {
+      // Google Analytics
+      if ((window as any).gtag) {
+        (window as any).gtag('event', _eventName, _parameters);
+      }
+      
+      // Custom analytics - only log in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Analytics Event:', _eventName, _parameters);
+      }
     }
   };
 
-  const trackPageView = (pageName: string) => {
-    if (typeof window !== 'undefined' && typeof gtag !== 'undefined') {
-      gtag('event', 'page_view', {
-        page_title: pageName,
-        page_location: window.location.href,
-      });
+  const trackPageView = (_pageName: string, _pagePath: string) => {
+    if (typeof window !== 'undefined') {
+      // Google Analytics
+      if ((window as any).gtag) {
+        (window as any).gtag('event', 'page_view', {
+          page_title: _pageName,
+          page_location: window.location.href,
+          page_path: _pagePath
+        });
+      }
+      
+      // Custom analytics - only log in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Analytics Page View:', _pageName, _pagePath);
+      }
     }
   };
 
-  const value = {
+  const value: AnalyticsContextType = {
     trackEvent,
-    trackPageView,
+    trackPageView
   };
 
   return (
@@ -57,4 +92,12 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
   );
 };
 
-export { AnalyticsProvider };
+// Extend Window interface for TypeScript
+declare global {
+  interface Window {
+    dataLayer: any[];
+    gtag: (..._args: any[]) => void;
+  }
+}
+
+export default AnalyticsProvider;

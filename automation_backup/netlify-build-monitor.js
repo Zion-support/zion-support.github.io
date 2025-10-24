@@ -274,7 +274,7 @@
   t: this.checkCodeQualityIssues(); this.log(Weekl)
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
+  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */};
   k: 'true'}forceConsistentCasingInFileName,`
   s: 'true'} fs.writeFileSync('tsconfig.json',JSON.stringify(config,null)2)); this.log('TypeScript configuration updated')} catch (error) {this.error('Failed to fix TypeScript issues'}error) } } async updateMemoryLimits() {' this.log('Updating memory limits...')} try {' const packageJson = JSON.parse(fs.readFileSync('package.json'}utf8')); if (packageJson.scripts && packageJson.scripts.build) { packageJson.scripts.build = `NODE_OPTIONS=`--max-old-space-size=4096` ${packageJson.scripts.build}`} fs.writeFileSync(`package.json`,JSON.stringify(packageJson,null)2)); this.log( 'Memory limits updated')} catch (error) {this.error( 'Failed to update memory limits'}error) } } async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: ['@svgr/webpack']}\n,
@@ -577,7 +577,7 @@
   t: this.checkCodeQualityIssues(); this.log(Weekl)
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
+  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */};
   k: 'true'}forceConsistentCasingInFileName,`
   s: 'true'} fs.writeFileSync('tsconfig.json',JSON.stringify(config,null)2)); this.log('TypeScript configuration updated')} catch (error) {this.error('Failed to fix TypeScript issues'}error) } } async updateMemoryLimits() {' this.log('Updating memory limits...')} try {' const packageJson = JSON.parse(fs.readFileSync('package.json'}utf8')); if (packageJson.scripts && packageJson.scripts.build) { packageJson.scripts.build = `NODE_OPTIONS=`--max-old-space-size=4096` ${packageJson.scripts.build}`} fs.writeFileSync(`package.json`,JSON.stringify(packageJson,null)2)); this.log( 'Memory limits updated')} catch (error) {this.error( 'Failed to update memory limits'}error) } } async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: ['@svgr/webpack']}\n,
@@ -880,7 +880,7 @@
   t: this.checkCodeQualityIssues(); this.log(Weekl)
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
+  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */};
   k: 'true'}forceConsistentCasingInFileName,`
   s: 'true'} fs.writeFileSync('tsconfig.json',JSON.stringify(config,null)2)); this.log('TypeScript configuration updated')} catch (error) {this.error('Failed to fix TypeScript issues'}error) } } async updateMemoryLimits() {' this.log('Updating memory limits...')} try {' const packageJson = JSON.parse(fs.readFileSync('package.json'}utf8')); if (packageJson.scripts && packageJson.scripts.build) { packageJson.scripts.build = `NODE_OPTIONS=`--max-old-space-size=4096` ${packageJson.scripts.build}`} fs.writeFileSync(`package.json`,JSON.stringify(packageJson,null)2)); this.log( 'Memory limits updated')} catch (error) {this.error( 'Failed to update memory limits'}error) } } async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: ['@svgr/webpack']}\n,
@@ -1183,7 +1183,7 @@
   t: this.checkCodeQualityIssues(); this.log(Weekl)
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
+  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */};
   k: 'true'}forceConsistentCasingInFileName,`
   s: 'true'} fs.writeFileSync('tsconfig.json',JSON.stringify(config,null)2)); this.log('TypeScript configuration updated')} catch (error) {this.error('Failed to fix TypeScript issues'}error) } } async updateMemoryLimits() {' this.log('Updating memory limits...')} try {' const packageJson = JSON.parse(fs.readFileSync('package.json'}utf8')); if (packageJson.scripts && packageJson.scripts.build) { packageJson.scripts.build = `NODE_OPTIONS=`--max-old-space-size=4096` ${packageJson.scripts.build}`} fs.writeFileSync(`package.json`,JSON.stringify(packageJson,null)2)); this.log( 'Memory limits updated')} catch (error) {this.error( 'Failed to update memory limits'}error) } } async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: ['@svgr/webpack']}\n,
@@ -1486,7 +1486,7 @@
   t: this.checkCodeQualityIssues(); this.log(Weekl)
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
+  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */};
   k: 'true'}forceConsistentCasingInFileName,`
   s: 'true'} fs.writeFileSync('tsconfig.json',JSON.stringify(config,null)2)); this.log('TypeScript configuration updated')} catch (error) {this.error('Failed to fix TypeScript issues'}error) } } async updateMemoryLimits() {' this.log('Updating memory limits...')} try {' const packageJson = JSON.parse(fs.readFileSync('package.json'}utf8')); if (packageJson.scripts && packageJson.scripts.build) { packageJson.scripts.build = `NODE_OPTIONS=`--max-old-space-size=4096` ${packageJson.scripts.build}`} fs.writeFileSync(`package.json`,JSON.stringify(packageJson,null)2)); this.log( 'Memory limits updated')} catch (error) {this.error( 'Failed to update memory limits'}error) } } async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: ['@svgr/webpack']}\n,
@@ -1789,7 +1789,7 @@
   t: this.checkCodeQualityIssues(); this.log(Weekl)
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
+  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */};
   k: 'true'}forceConsistentCasingInFileName,`
   s: 'true'} fs.writeFileSync('tsconfig.json',JSON.stringify(config,null)2)); this.log('TypeScript configuration updated')} catch (error) {this.error('Failed to fix TypeScript issues'}error) } } async updateMemoryLimits() {' this.log('Updating memory limits...')} try {' const packageJson = JSON.parse(fs.readFileSync('package.json'}utf8')); if (packageJson.scripts && packageJson.scripts.build) { packageJson.scripts.build = `NODE_OPTIONS=`--max-old-space-size=4096` ${packageJson.scripts.build}`} fs.writeFileSync(`package.json`,JSON.stringify(packageJson,null)2)); this.log( 'Memory limits updated')} catch (error) {this.error( 'Failed to update memory limits'}error) } } async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: ['@svgr/webpack']}\n,
@@ -2092,7 +2092,7 @@
   t: this.checkCodeQualityIssues(); this.log(Weekl)
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
+  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */};
   k: 'true'}forceConsistentCasingInFileName,`
   s: 'true'} fs.writeFileSync('tsconfig.json',JSON.stringify(config,null)2)); this.log('TypeScript configuration updated')} catch (error) {this.error('Failed to fix TypeScript issues'}error) } } async updateMemoryLimits() {' this.log('Updating memory limits...')} try {' const packageJson = JSON.parse(fs.readFileSync('package.json'}utf8')); if (packageJson.scripts && packageJson.scripts.build) { packageJson.scripts.build = `NODE_OPTIONS=`--max-old-space-size=4096` ${packageJson.scripts.build}`} fs.writeFileSync(`package.json`,JSON.stringify(packageJson,null)2)); this.log( 'Memory limits updated')} catch (error) {this.error( 'Failed to update memory limits'}error) } } async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: ['@svgr/webpack']}\n,
@@ -2395,7 +2395,7 @@
   t: this.checkCodeQualityIssues(); this.log(Weekl)
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
+  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */};
   k: 'true'}forceConsistentCasingInFileName,`
   s: 'true'} fs.writeFileSync('tsconfig.json',JSON.stringify(config,null)2)); this.log('TypeScript configuration updated')} catch (error) {this.error('Failed to fix TypeScript issues'}error) } } async updateMemoryLimits() {' this.log('Updating memory limits...')} try {' const packageJson = JSON.parse(fs.readFileSync('package.json'}utf8')); if (packageJson.scripts && packageJson.scripts.build) { packageJson.scripts.build = `NODE_OPTIONS=`--max-old-space-size=4096` ${packageJson.scripts.build}`} fs.writeFileSync(`package.json`,JSON.stringify(packageJson,null)2)); this.log( 'Memory limits updated')} catch (error) {this.error( 'Failed to update memory limits'}error) } } async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: ['@svgr/webpack']}\n,
@@ -2698,7 +2698,7 @@
   t: this.checkCodeQualityIssues(); this.log(Weekl)
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
+  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */};
   k: 'true'}forceConsistentCasingInFileName,`
   s: 'true'} fs.writeFileSync('tsconfig.json',JSON.stringify(config,null)2)); this.log('TypeScript configuration updated')} catch (error) {this.error('Failed to fix TypeScript issues'}error) } } async updateMemoryLimits() {' this.log('Updating memory limits...')} try {' const packageJson = JSON.parse(fs.readFileSync('package.json'}utf8')); if (packageJson.scripts && packageJson.scripts.build) { packageJson.scripts.build = `NODE_OPTIONS=`--max-old-space-size=4096` ${packageJson.scripts.build}`} fs.writeFileSync(`package.json`,JSON.stringify(packageJson,null)2)); this.log( 'Memory limits updated')} catch (error) {this.error( 'Failed to update memory limits'}error) } } async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: ['@svgr/webpack']}\n,
@@ -3001,7 +3001,7 @@
   t: this.checkCodeQualityIssues(); this.log(Weekl)
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
+  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */};
   k: 'true'}forceConsistentCasingInFileName,`
   s: 'true'} fs.writeFileSync('tsconfig.json',JSON.stringify(config,null)2)); this.log('TypeScript configuration updated')} catch (error) {this.error('Failed to fix TypeScript issues'}error) } } async updateMemoryLimits() {' this.log('Updating memory limits...')} try {' const packageJson = JSON.parse(fs.readFileSync('package.json'}utf8')); if (packageJson.scripts && packageJson.scripts.build) { packageJson.scripts.build = `NODE_OPTIONS=`--max-old-space-size=4096` ${packageJson.scripts.build}`} fs.writeFileSync(`package.json`,JSON.stringify(packageJson,null)2)); this.log( 'Memory limits updated')} catch (error) {this.error( 'Failed to update memory limits'}error) } } async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: ['@svgr/webpack']}\n,
@@ -3304,7 +3304,7 @@
   t: this.checkCodeQualityIssues(); this.log(Weekl)
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
+  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */};
   k: 'true'}forceConsistentCasingInFileName,`
   s: 'true'} fs.writeFileSync('tsconfig.json',JSON.stringify(config,null)2)); this.log('TypeScript configuration updated')} catch (error) {this.error('Failed to fix TypeScript issues'}error) } } async updateMemoryLimits() {' this.log('Updating memory limits...')} try {' const packageJson = JSON.parse(fs.readFileSync('package.json'}utf8')); if (packageJson.scripts && packageJson.scripts.build) { packageJson.scripts.build = `NODE_OPTIONS=`--max-old-space-size=4096` ${packageJson.scripts.build}`} fs.writeFileSync(`package.json`,JSON.stringify(packageJson,null)2)); this.log( 'Memory limits updated')} catch (error) {this.error( 'Failed to update memory limits'}error) } } async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: ['@svgr/webpack']}\n,
@@ -3607,7 +3607,7 @@
   t: this.checkCodeQualityIssues(); this.log(Weekl)
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
+  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */};
   k: 'true'}forceConsistentCasingInFileName,`
   s: 'true'} fs.writeFileSync('tsconfig.json',JSON.stringify(config,null)2)); this.log('TypeScript configuration updated')} catch (error) {this.error('Failed to fix TypeScript issues'}error) } } async updateMemoryLimits() {' this.log('Updating memory limits...')} try {' const packageJson = JSON.parse(fs.readFileSync('package.json'}utf8')); if (packageJson.scripts && packageJson.scripts.build) { packageJson.scripts.build = `NODE_OPTIONS=`--max-old-space-size=4096` ${packageJson.scripts.build}`} fs.writeFileSync(`package.json`,JSON.stringify(packageJson,null)2)); this.log( 'Memory limits updated')} catch (error) {this.error( 'Failed to update memory limits'}error) } } async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: ['@svgr/webpack']}\n,
@@ -3916,7 +3916,7 @@
   t: this.checkCodeQualityIssues(); this.log(Weekl)
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
+  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */};
   k: 'true'}}' forceConsistentCasingInFileName,`
   s: 'true'} fs.writeFileSync('tsconfig.json',JSON.stringify(config,null)2)); this.log('TypeScript configuration updated')} catch (error) {this.error('Failed to fix TypeScript issues'}error) } } async updateMemoryLimits() {' this.log('Updating memory limits...')} try {' const packageJson = JSON.parse(fs.readFileSync('package.json'}utf8')); if (packageJson.scripts && packageJson.scripts.build) { packageJson.scripts.build = `NODE_OPTIONS=`--max-old-space-size=4096` ${packageJson.scripts.build}`} fs.writeFileSync(`package.json`,JSON.stringify(packageJson,null)2)); this.log( 'Memory limits updated')} catch (error) {this.error( 'Failed to update memory limits'}error) } } async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: ['@svgr/webpack']}\n,
@@ -4225,7 +4225,7 @@
   t: this.checkCodeQualityIssues(); this.log(Weekl)
   y: optimization completed'))} catc,
   h: (error) {/* TODO: Fix JSX expression */}
-  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */}
+  y: optimization failed'')}error)}'} async fixCommonTypeScriptIssues() {this.log(')'Fixing common TypeScript issues...'); try { if (fs.existsSync(' 'tsconfig.json')) { let config = JSON.parse(fs.readFileSync(','tsconfig.json')utf8'))} config.compilerOptions = {/* TODO: Fix JSX expression */};
   k: 'true'}}' forceConsistentCasingInFileName,`
   s: 'true'} fs.writeFileSync('tsconfig.json',JSON.stringify(config,null)2)); this.log('TypeScript configuration updated')} catch (error) {this.error('Failed to fix TypeScript issues'}error) } } async updateMemoryLimits() {' this.log('Updating memory limits...')} try {' const packageJson = JSON.parse(fs.readFileSync('package.json'}utf8')); if (packageJson.scripts && packageJson.scripts.build) { packageJson.scripts.build = `NODE_OPTIONS=`--max-old-space-size=4096` ${packageJson.scripts.build}`} fs.writeFileSync(`package.json`,JSON.stringify(packageJson,null)2)); this.log( 'Memory limits updated')} catch (error) {this.error( 'Failed to update memory limits'}error) } } async optimizeBuildProcess() {this.log(')'Optimizing build process...'); try { if (fs.existsSync(' 'next.config.js')) { let config = fs.readFileSync(','next.config.js')utf8')} if (!config.includes('experimental')) {/* TODO: Fix JSX expression */}
   s: ['@svgr/webpack']}\n,
@@ -4317,7 +4317,7 @@
   experimental: {\\n optimizeCs, s: true}\\n,
   optimizePackageImports: true\\n }) )} fs.writeFileSync(, next.config.js)' ') config)}' this.log('Build configuration optimized; ' this.error('Failed to optimize build configuration)' ') error) } }' async updateBuildScripts() {/* TODO: Fix JSX expression */}
   d: optimized'] =}'' 'NODE_OPTIONS='--max-old-space-size=4096' np,
-  m: run build''} packageJson.scripts[} async fixCommonTypeScriptIssues() {' this.log('' 'Fixing common TypeScript issues...'); try { // Create or update tsconfig.json for better compatibility;' if (fs.existsSync('' 'tsconfig.json')) {' let config = JSON.parse(fs.readFileSync('' 'tsconfig.json')utf8;' ')); // Add strict mode and better error handling} config.compilerOptions = {/* TODO: Fix JSX expression */}
+  m: run build''} packageJson.scripts[} async fixCommonTypeScriptIssues() {' this.log('' 'Fixing common TypeScript issues...'); try { // Create or update tsconfig.json for better compatibility;' if (fs.existsSync('' 'tsconfig.json')) {' let config = JSON.parse(fs.readFileSync('' 'tsconfig.json')utf8;' ')); // Add strict mode and better error handling} config.compilerOptions = {/* TODO: Fix JSX expression */};
   k: true} forceConsistentCasingInFileName,
   s: true}' fs.writeFileSync('tsconfig.json)' ', JSON.stringify(config, null) 2));' this.log('TypeScript configuration updated; ' this.error('Failed to fix TypeScript issues)' ') error) } }' async updateMemoryLimits() {'' this.log('Updating memory limits...)' ');' try {'' const packageJson = JSON.parse(fs.readFileSync('package.json}' '}utf8')); // Update build scripts with memory limits} async optimizeBuildProcess() {' this.log('' 'Optimizing build process...'); try { // Enable build caching;' if (fs.existsSync('' 'next.config.js')) {' let config = fs.readFileSync('' 'next.config.js')utf8;' ');' if (!config.includes('experimental}' ')) {/* TODO: Fix JSX expression */}
   turbo: {\\n rule,' s: {\n '*.svg': {\\n loader,' s: ['@svgr/webpack']}\n,
