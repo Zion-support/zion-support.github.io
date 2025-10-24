@@ -1,35 +1,65 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface SEOHeadProps {
-  title?: string;
-  description?: string;
+interface EnhancedSEOHeadProps {
+  title: string;
+  description: string;
   keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  siteName?: string;
+  canonicalUrl?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
   structuredData?: object;
+  noIndex?: boolean;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+  locale?: string;
+  alternateUrls?: { hreflang: string; href: string }[];
+  breadcrumbs?: Array<{ name: string; url: string }>;
 }
 
-const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Achieve 300% ROI with our cutting-edge AI technology.',
-  keywords = 'AI solutions, artificial intelligence, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, IT consulting',
-  image = 'https://ziontechgroup.com/og-image.jpg',
-  url = 'https://ziontechgroup.com',
-  type = 'website',
-  siteName = 'Zion Tech Group',
-  structuredData
+const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
+  title,
+  description,
+  keywords,
+  canonicalUrl,
+  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  structuredData,
+  noIndex = false,
+  author = 'Zion Tech Group',
+  publishedTime,
+  modifiedTime,
+  section,
+  tags = [],
+  locale = 'en_US',
+  alternateUrls = [],
+  breadcrumbs = []
 }) => {
-  const defaultStructuredData = {
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} - Zion Tech Group`;
+  const fullDescription = description || 'Leading provider of AI and IT solutions for modern businesses. Expert services in artificial intelligence, cloud infrastructure, and digital transformation.';
+  const fullKeywords = keywords || 'AI solutions, IT services, artificial intelligence, cloud infrastructure, digital transformation, machine learning, data analytics, business automation';
+  const siteUrl = 'https://ziontechgroup.com';
+  const currentUrl = canonicalUrl || siteUrl;
+
+  // Enhanced structured data
+  const enhancedStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
+    "description": fullDescription,
+    "url": siteUrl,
     "logo": "https://ziontechgroup.com/logo.png",
-    "description": "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service",
+      "email": "kleber@ziontechgroup.com"
+    },
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
@@ -38,83 +68,107 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       "postalCode": "19709",
       "addressCountry": "US"
     },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
-    },
     "sameAs": [
-      "https://linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup",
-      "https://github.com/zion-tech-group"
-    ]
+      "https://linkedin.com/company/ziontechgroup",
+      "https://twitter.com/ziontechgroup"
+    ],
+    ...structuredData
   };
+
+  // Breadcrumb structured data
+  const breadcrumbStructuredData = breadcrumbs.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": breadcrumbs.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      "item": item.url
+    }))
+  } : null;
 
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content="index, follow" />
-      <meta name="googlebot" content="index, follow" />
-      <meta name="bingbot" content="index, follow" />
+      <title>{fullTitle}</title>
+      <meta name="description" content={fullDescription} />
+      <meta name="keywords" content={fullKeywords} />
+      <meta name="author" content={author} />
+      <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow'} />
+      <link rel="canonical" href={currentUrl} />
       
-      {/* Canonical URL */}
-      <link rel="canonical" href={url} />
+      {/* Language and Locale */}
+      <meta name="language" content="English" />
+      <meta property="og:locale" content={locale} />
       
       {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={url} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={currentUrl} />
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={fullDescription} />
+      <meta property="og:image" content={ogImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content={title} />
-      <meta property="og:site_name" content={siteName} />
-      <meta property="og:locale" content="en_US" />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      
+      {/* Article specific meta tags */}
+      {ogType === 'article' && (
+        <>
+          {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+          {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+          {author && <meta property="article:author" content={author} />}
+          {section && <meta property="article:section" content={section} />}
+          {tags.map((tag, index) => (
+            <meta key={index} property="article:tag" content={tag} />
+          ))}
+        </>
+      )}
       
       {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:url" content={url} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      <meta name="twitter:image:alt" content={title} />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta property="twitter:card" content={twitterCard} />
+      <meta property="twitter:url" content={currentUrl} />
+      <meta property="twitter:title" content={fullTitle} />
+      <meta property="twitter:description" content={fullDescription} />
+      <meta property="twitter:image" content={ogImage} />
+      <meta property="twitter:site" content="@ziontechgroup" />
+      <meta property="twitter:creator" content="@ziontechgroup" />
       
-      {/* Additional SEO Meta Tags */}
-      <meta name="theme-color" content="#00ffff" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+      {/* Additional SEO meta tags */}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="revisit-after" content="7 days" />
+      <meta name="distribution" content="global" />
+      <meta name="rating" content="general" />
+      <meta name="theme-color" content="#3b82f6" />
       
-      {/* Business Information */}
-      <meta name="contact" content="kleber@ziontechgroup.com" />
-      <meta name="phone" content="+1-302-464-0950" />
-      <meta name="address" content="364 E Main St STE 1008, Middletown, DE 19709" />
+      {/* Alternate URLs for internationalization */}
+      {alternateUrls.map((alt, index) => (
+        <link key={index} rel="alternate" hrefLang={alt.hreflang} href={alt.href} />
+      ))}
+      
+      {/* Preconnect to external domains for performance */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      
+      {/* Favicon and app icons */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
       
       {/* Structured Data */}
       <script type="application/ld+json">
-          {JSON.stringify(structuredData || defaultStructuredData)}
+        {JSON.stringify(enhancedStructuredData)}
       </script>
+      
+      {breadcrumbStructuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbStructuredData)}
+        </script>
+      )}
     </Helmet>
   );
 };
 
-interface SEOHeadProps {
-  title?: string
-  description?: string
-  keywords?: string
-  canonical?: string
-  ogImage?: string
-  ogType?: string
-  twitterCard?: string
-  structuredData?: object
-  noIndex?: boolean
-}
-
-
-export default EnhancedSEOHead
+export default EnhancedSEOHead;
