@@ -12,9 +12,12 @@ const InteractiveAIROICalculator: React.FC = () => {
   const [timeframe, setTimeframe] = useState(12);
 <<<<<<< HEAD
   const calculateROI = () => {
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
     const annualSavings = (currentCost * efficiencyGain) / 100;
     const totalSavings = annualSavings * (timeframe / 12);
     const roi = ((totalSavings - currentCost) / currentCost) * 100;
@@ -22,7 +25,10 @@ const InteractiveAIROICalculator: React.FC = () => {
   };
   const roi = calculateROI();
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
   return (
     <div>
       <h1>Component</h1>

@@ -2,11 +2,26 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 'use client';
 import React, { memo } from 'react';
+=======
+import { Link } from 'react-router-dom';
+import { Phone, Mail, MapPin, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Calculator, TrendingUp, CheckCircle } from 'lucide-react';
+
+const Footer: React.FC = () => {
+  const microSaasServices = [
+    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' },
+    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
+    { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Data insights & analytics' },
+    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Smart email campaigns' },
+    { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support' },
+    { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' }
+  ];
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
 
 const Footer: React.FC = memo(() => {
   const _currentYear = new Date().getFullYear();

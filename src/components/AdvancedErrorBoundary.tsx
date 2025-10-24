@@ -112,6 +112,7 @@ class AdvancedErrorBoundary extends Component;
 //       error,
 //       errorInfo;)
     });
+<<<<<<< HEAD
     // Log error to console in development;
     if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -124,6 +125,14 @@ class AdvancedErrorBoundary extends Component;
         erro,
   r: error.message,
 //         errorInfo;)
+=======
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error Boundary caught an error', { 
+        context: 'ErrorBoundary', 
+        error: error.message,
+        errorInfo 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
       });
     }
     // Call custom error handler;
@@ -234,6 +243,7 @@ class AdvancedErrorBoundary extends Component;
         bod)
   y: JSON.stringify(errorReport)
       });
+<<<<<<< HEAD
     } catch (reportError) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -244,6 +254,12 @@ class AdvancedErrorBoundary extends Component;
   t: 'ErrorReporting',
         erro,
   r: reportError;)
+=======
+    } catch (reportError) {
+      console.error('Failed to send error report', { 
+        context: 'ErrorReporting',
+        error: reportError 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
       });
     }
   };

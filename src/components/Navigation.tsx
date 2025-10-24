@@ -6,6 +6,7 @@ import React from 'react';
 =======
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Link } from 'react-router-dom';
 import { 
@@ -87,6 +88,12 @@ import {
 =======
 import React, {useState, useEffect} from 'react';
 export default Navigation;
+=======
+import { Link } from 'react-router-dom';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
+
+const Navigation: React.FC = () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   // Removed unused state variables;
@@ -273,7 +280,50 @@ export default function Component() {
                         </div>
                       ))}
                     </div>
+<<<<<<< HEAD
                     <div className="border-t border-gray-700 mt-6 pt-4 px-6"></div>
+=======
+                    <div>
+                      <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
+                        <Brain className="w-4 h-4 mr-2" />
+                        AI Services
+                      </h3>
+                      <div className="space-y-2">
+                        {aiServices.slice(0, 6).map((service) => (
+                          <a key={service.name}
+                            href={service.href}
+                            className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                            onClick={closeAllMenus}
+                          >
+                            <service.icon className="w-3 h-3" />
+                            <span>{service.name}</span>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
+                        <Settings className="w-4 h-4 mr-2" />
+                        IT Services
+                      </h3>
+                      <div className="space-y-2">
+                        {itServices.slice(0, 6).map((service) => (
+                          <Link
+                            key={service.name}
+                            to={service.href}
+                            className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                            onClick={closeAllMenus}
+                          >
+                            <service.icon className="w-3 h-3" />
+                            <span>{service.name}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-gray-700">
+                    <div className="grid grid-cols-2 gap-4">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
                       <Link
                         to="/services"
                         className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
@@ -287,12 +337,17 @@ export default function Component() {
               )}
             </div>
 
+<<<<<<< HEAD
             <Link 
               to="/case-studies" 
               className="font-medium transition-colors hover:text-cyan-400 text-white"
               onClick={closeAllMenus}
             ></Link>
               Case Studies
+=======
+            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors">
+              About
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
             </Link>
 
             <Link
@@ -310,6 +365,7 @@ export default function Component() {
             ></Link>
               Contact
             </Link>
+<<<<<<< HEAD
 
             {/* CTA Button */}
             <Link
@@ -320,6 +376,23 @@ export default function Component() {
               <Phone className="w-4 h-4 mr-2" />
               (302) 464-0950
             </Link>
+=======
+            
+            <div className="flex items-center space-x-4">
+              <a
+                href="tel:+13024640950"
+                className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors"
+              >
+                <Phone className="w-4 h-4" />
+                <span className="hidden sm:inline">+1 302 464 0950</span>
+              </a>
+              <a href="/contact"
+                className="cyber-button px-4 py-2 text-sm"
+              >
+                Get Started
+              </a>
+            </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
           </div>
 
           {/* Mobile Menu Button */}
@@ -494,12 +567,17 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 )}
               </div>
 
+<<<<<<< HEAD
               <Link
                 to="/case-studies"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               ></Link>
                 Case Studies
+=======
+              <Link to="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                About
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
               </Link>
 
               <Link
@@ -517,6 +595,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               ></Link>
                 Contact
               </Link>
+<<<<<<< HEAD
 
               <a
                 href="tel:+13024640950"
@@ -541,6 +620,13 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                       : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-400/10'
                   }`}
                   onClick={() => setIsOpen(false)}
+=======
+              
+              <div className="pt-4 border-t border-gray-700">
+                <a
+                  href="tel:+13024640950"
+                  className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors mb-4"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
                 >
                   {item.icon}
                   <span>{item.name}</span>

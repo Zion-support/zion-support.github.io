@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
@@ -25,6 +26,17 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   useEffect(() => {
     // Initialize Google Analytics
     if (typeof window !== 'undefined' && trackingId !== 'G-XXXXXXXXXX') {
+=======
+'use client';
+import React, { useEffect } from 'react';
+
+const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  useEffect(() => {
+    // Initialize Google Analytics
+    const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
+    
+    const initAnalytics = () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
       // Load Google Analytics script
       const script = document.createElement('script');
       script.async = true;
@@ -32,9 +44,15 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       document.head.appendChild(script);
 
       // Initialize gtag
+<<<<<<< HEAD
       window.dataLayer = window.dataLayer || [];
       function gtag(...args: any[]) {
         window.dataLayer.push(args);
+=======
+      (window as any).dataLayer = (window as any).dataLayer || [];
+      function gtag(...args: unknown[]) {
+        (window as any).dataLayer.push(args);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
       }
       window.gtag = gtag;
 
@@ -180,8 +198,17 @@ export default AnalyticsProvider;
     // Track user interactions;
         const target = e.target as HTMLElement;
           const text = target.textContent?.trim() || '';
+<<<<<<< HEAD
           const href = target.getAttribute('href') || '';
               value: href;
+=======
+          const href = (target as HTMLAnchorElement).href || target.getAttribute('href') || '';
+          if ((window as { gtag: unknown }).gtag) {
+            (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'click', {
+              event_category: 'engagement',
+              event_label: text,
+              value: href
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
             });
       });
       // Track form submissions;
@@ -191,11 +218,31 @@ export default AnalyticsProvider;
       });
       // Track phone number clicks;
         const target = e.target as HTMLElement;
+<<<<<<< HEAD
               value: target.getAttribute('href')
+=======
+        const href = (target as HTMLAnchorElement).href || target.getAttribute('href') || '';
+        if (href && href.startsWith('tel:')) {
+          if ((window as { gtag: unknown }).gtag) {
+            (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'phone_click', {
+              event_category: 'engagement',
+              event_label: 'phone_number',
+              value: href
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
             });
       });
     };
+<<<<<<< HEAD
     // Initialize analytics;
+=======
+    
+    // Handle route changes
+    const handleRouteChange = () => {
+      trackPageView();
+    };
+    
+    // Initialize analytics
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
     initAnalytics();
     trackPageView();
     trackInteractions();
