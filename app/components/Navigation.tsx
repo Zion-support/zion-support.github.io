@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-<<<<<<< HEAD
 import { usePathname } from 'next/navigation'
 import {
   Bars3Icon,
@@ -15,33 +14,6 @@ import {
   AcademicCapIcon,
   ChevronDownIcon
 } from '@heroicons/react/24/outline'
-=======
-import { 
-  ChevronDown, 
-  Mail, 
-  Menu, 
-  X, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Code, 
-  BarChart, 
-  ArrowRight, 
-  Target, 
-  Smartphone, 
-  TrendingUp, 
-  Settings, 
-  FileText, 
-  MessageCircle, 
-  DollarSign, 
-  Box, 
-  Link as LinkIcon, 
-  Mic, 
-  Workflow, 
-  Eye, 
-  Wifi
-} from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-70e6
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
