@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Phone, Mail, ArrowRight, MapPin } from 'lucide-react'
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
 // import React from "react";
 // import { Link } from "react-router-dom"; // Unused import
 // import { ArrowRight, Mail, Phone, MapPin } from "lucide-react"; // Unused import

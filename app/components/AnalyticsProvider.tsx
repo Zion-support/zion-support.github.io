@@ -18,8 +18,13 @@ import React, { createContext, useContext, useEffect } from 'react';
 
 <<<<<<< HEAD
 interface AnalyticsContextType {
+<<<<<<< HEAD
   trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
   trackPageView: (pageName: string,) => void;
+=======
+  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
+  trackPageView: (pageName: string, properties?: Record<string, unknown>) => void;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
@@ -48,6 +53,7 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode ,}> = ({ children 
     }
   }, []);
 
+<<<<<<< HEAD
   const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
     if (typeof window !== 'undefined' && typeof gtag !== 'undefined') {
       gtag('event', eventName, parameters);
@@ -66,6 +72,16 @@ interface AnalyticsProviderProps {children: React.ReactNode;}
   }, []);
   const trackEvent = (eventName: string, parameters?: Record<string, unknown   />) => {if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', eventName, parameters);}
+=======
+  const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
+    console.log('Analytics Event:', eventName, properties);
+    // Add your analytics tracking logic here
+  };
+
+  const trackPageView = (pageName: string, properties?: Record<string, unknown>) => {
+    console.log('Page View:', pageName, properties);
+    // Add your page view tracking logic here
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
   };
 
     if (typeof window !== 'undefined' && window.gtag) {window.gtag('config', 'GA_MEASUREMENT_ID', {

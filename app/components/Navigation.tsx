@@ -19,6 +19,7 @@ const Navigation: React.FC = () => {
 =======
 import React, { useState, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+<<<<<<< HEAD
 import React, { useState, useCallback, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -49,6 +50,10 @@ import { Cloud } from 'lucide-react';
 import { Package } from 'lucide-react';
 import { Heart } from 'lucide-react';
 import { Receipt } from 'lucide-react';
+=======
+import { Menu, Home, Shield, Zap, Brain, Globe } from 'lucide-react';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
 interface NavigationProps {
   onSidebarToggle?: () => void;
 }

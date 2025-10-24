@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function Component() {
   return (
@@ -218,6 +219,47 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
       const {retryCount, error} = this.state;
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+}
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+}
+
+class EnhancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback || (
+        <div className="min-h-screen flex items-center justify-center bg-gray-900">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+            <p className="text-gray-400 mb-4">We're sorry for the inconvenience.</p>
+            <button 
+              onClick={() => window.location.reload()}
+              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+            >
+              Reload Page
+            </button>
+          </div>
+        </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
       );
     }
 
@@ -226,5 +268,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
 }
 
 export default EnhancedErrorBoundary;
+<<<<<<< HEAD
 "`
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df

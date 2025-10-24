@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Search } from 'lucide-react';
@@ -37,6 +38,9 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 export default function Services() {
+=======
+import { Brain, Shield, Cloud, BarChart3, Globe, Zap } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
 
   const services = [
     {

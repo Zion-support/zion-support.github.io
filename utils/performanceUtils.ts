@@ -35,10 +35,19 @@ export function addResourceHints(): void {
 ): IntersectionObserver | null {if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
     return null;
 
+<<<<<<< HEAD
   return new IntersectionObserver(callback, {
     rootMargin: '50px',
     threshold: 0.1,
     ...options,});
+=======
+  measureMemoryUsage() {
+    if (typeof window !== 'undefined' && (window as any).performance?.memory) { // eslint-disable-line @typescript-eslint/no-explicit-any
+      const memory = (window as any).performance.memory; // eslint-disable-line @typescript-eslint/no-explicit-any
+      this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+    }
+  }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
 
 // Performance monitoring utilities;
  void): void {if (typeof window === 'undefined' || !('performance' in window)) {

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
 import { Home } from 'lucide-react';
 import { Users } from 'lucide-react';
@@ -21,6 +22,9 @@ import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { X, ChevronDown, ChevronRight, Home, Users, Settings, BarChart3, Shield, Cloud, Code, Brain, Zap, Database, Star, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+=======
+import { X, Home, Shield, Zap, Brain, Globe } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
 
 interface SidebarProps {
   isOpen: boolean;

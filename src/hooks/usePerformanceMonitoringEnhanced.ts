@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
@@ -16,6 +17,44 @@ import { useEffect, useCallback } from 'react';
 
 export const _usePerformanceMonitoring = () => {// TODO: Add content;}
 
+=======
+import { useState, useEffect, useCallback } from 'react';
+
+interface EnhancedPerformanceMetrics {
+  loadTime: number;
+  memoryUsage: number;
+  fps: number;
+  renderTime: number;
+  networkLatency: number;
+}
+
+export function usePerformanceMonitoringEnhanced() {
+  const [metrics, setMetrics] = useState<EnhancedPerformanceMetrics>({
+    loadTime: 0,
+    memoryUsage: 0,
+    fps: 0,
+    renderTime: 0,
+    networkLatency: 0
+  });
+
+  const updateMetrics = useCallback(() => {
+    setMetrics({
+      loadTime: performance.now(),
+        memoryUsage: (performance as any).memory?.usedJSHeapSize || 0, // eslint-disable-line @typescript-eslint/no-explicit-any
+      fps: 60, // Placeholder
+      renderTime: performance.now(),
+      networkLatency: 0 // Placeholder
+    });
+  }, []);
+
+  useEffect(() => {
+    updateMetrics();
+    const interval = setInterval(updateMetrics, 1000);
+    return () => clearInterval(interval);
+  }, [updateMetrics]);
+
+  return { metrics, updateMetrics };
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
 }
   const reportWebVitals = useCallback((metri)
   c: any) => {/* TODO: Fix JSX expression */}

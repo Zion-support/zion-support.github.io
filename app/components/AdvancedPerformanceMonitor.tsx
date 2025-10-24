@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
 
 interface PerformanceMetrics {
@@ -360,3 +361,11 @@ const AdvancedPerformanceMonitor: React.FC = () => {
 
 export default AdvancedPerformanceMonitor;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
+=======
+// import React from 'react';
+
+// interface AdvancedPerformanceMonitorProps {
+//   className?: string;
+//   children?: React.ReactNode;
+// }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df

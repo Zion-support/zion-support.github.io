@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -131,3 +132,6 @@ interface FuturisticButtonProps {children: React.ReactNode;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   );
 }
+=======
+// import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df

@@ -3,9 +3,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { memo } from 'react';
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight } from 'lucide-react';
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Brain, Mail, Phone, MapPin, Twitter, Linkedin, Github } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
 
 const Footer: React.FC = memo(function Footer() {
   const aiServices = [

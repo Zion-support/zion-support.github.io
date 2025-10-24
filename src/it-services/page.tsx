@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 =======
@@ -528,6 +529,17 @@ export default function ITServicesPage() {
           </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
         </div>
+=======
+
+export default function ITServicesPage() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold mb-8">IT Services</h1>
+        <p className="text-lg text-gray-300">
+          Comprehensive IT solutions for your business needs.
+        </p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
       </div>
     </div>
   );
