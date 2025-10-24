@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-'use client';;
-
-import React from 'react';
-
-interface AdvancedPerformanceOptimizerProps {
-  // Add props here
-}
-
-const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = (_props) => {
-  return (
-    <div>
-      {/* Component content */}
-    </div>
-  )};
-
-export default AdvancedPerformanceOptimizer;
-=======
 'use client';
 
 import React, { useEffect, useState, useCallback } from 'react';
@@ -168,4 +150,3 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 };
 
 export default AdvancedPerformanceOptimizer;
->>>>>>> cursor/fix-errors-and-merge-to-main-21fe
