@@ -97,8 +97,4 @@ const FuturisticHero: React.FC<FuturisticHeroProps> = ({
   );
 };
 
-<<<<<<< HEAD
 export default FuturisticHero;
-=======
-export default FuturisticHero;
->>>>>>> origin/main

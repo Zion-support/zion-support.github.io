@@ -70,12 +70,6 @@ export interface ErrorReport {
   severity: ErrorSeverity;
   resolved: boolean;
   createdAt: string;
-<<<<<<< HEAD
-};
-
-export type ErrorSeverity = "low" | "medium" | "high" | "critical";
-=======
 }
 
 export type ErrorSeverity = "low" | "medium" | "high" | "critical";
->>>>>>> origin/main

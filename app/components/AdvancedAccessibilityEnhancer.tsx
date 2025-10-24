@@ -40,7 +40,8 @@ const benefits = [
 
 const AdvancedAccessibilityEnhancer: React.FC = () => {
   return (
-    <div>
+    <>
+      <div>
       <Helmet>
         <title>Advanced Accessibility Enhancer | Zion Tech Group</title>
         <meta name="description" content="Professional Advanced Accessibility Enhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
@@ -146,6 +147,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
           </div>
         </div>
       </section>
+      </div>
     </>
   );
 };
