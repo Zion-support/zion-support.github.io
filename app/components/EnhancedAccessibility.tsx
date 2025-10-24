@@ -1,5 +1,6 @@
-export default EnhancedAccessibility;
 'use client';
+
+import React, { useEffect } from 'react';
 
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
@@ -62,4 +63,5 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
   return <React.Fragment>{children}</React.Fragment>;
 };
 
+export default EnhancedAccessibility;
 export default $1;

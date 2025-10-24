@@ -1,62 +1,66 @@
-import { useEffect } from 'react'
-export default MobileOptimizer;
+'use client';
 
-    // Prevent zoom on input focus for iOS;
-      const viewport = document.querySelector('meta[name="viewport"]');
-      if (viewport) {
-        viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+import React, { useEffect } from 'react';
 
-    // Add touch-friendly classes;
+const MobileOptimizer: React.FC = () => {
+  useEffect(() => {
+    // Optimize touch interactions
+    const optimizeTouchInteractions = () => {
       const buttons = document.querySelectorAll('button, a, [role="button"]');
+      buttons.forEach((button) => {
         if (!button.classList.contains('touch-manipulation')) {
-          button.classList.add('touch-manipulation')
-      })
+          button.classList.add('touch-manipulation');
+        }
+      });
+    };
 
-    // Optimize images for mobile;
+    // Optimize images for mobile
+    const optimizeImages = () => {
       const images = document.querySelectorAll('img');
+      images.forEach((img) => {
         const imageElement = img as HTMLImageElement;
         if (!imageElement.loading) {
-          imageElement.loading = 'lazy'
+          imageElement.loading = 'lazy';
+        }
         if (!imageElement.decoding) {
-          imageElement.decoding = 'async'
-      })
+          imageElement.decoding = 'async';
+        }
+      });
+    };
 
-    // Add mobile-specific event listeners;
-      // Prevent double-tap zoom;
-      let lastTouchEnd = 0;
-        const now = new Date().getTime();
-        if (now - lastTouchEnd;)
-          event.preventDefault()
-        lastTouchEnd = now;
-      }, false)
+    // Optimize viewport
+    const optimizeViewport = () => {
+      const viewport = document.querySelector('meta[name="viewport"]');
+      if (!viewport) {
+        const meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';
+        document.head.appendChild(meta);
+      }
+    };
 
-      // Add haptic feedback for supported devices;
-          if ('vibrate' in navigator) {
-            navigator.vibrate(10) // Short vibration;
-        })
+    // Initialize optimizations
+    optimizeTouchInteractions();
+    optimizeImages();
+    optimizeViewport();
 
-      const interactiveElements = document.querySelectorAll('button, a, [role="button"]');
-      interactiveElements.forEach(addHapticFeedback)
+    // Re-run optimizations when DOM changes
+    const observer = new MutationObserver(() => {
+      optimizeTouchInteractions();
+      optimizeImages();
+    });
 
-    // Optimize scroll performance;
-      let ticking = false;
-        // Add scroll-based optimizations here;
-        ticking = false;
-        if (!ticking) {
-          requestAnimationFrame(updateScrollPosition)
-          ticking = true;
-      window.addEventListener('scroll', requestTick, { passive: true })
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
 
-    // Initialize mobile optimizations;
-    preventZoom()
-    addTouchClasses()
-    optimizeImagesForMobile()
-    addMobileEventListeners()
-    optimizeScrollPerformance()
-
-    // Cleanup;
- {})
- {})
-  }, [])
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return null;
+};
+
+export default MobileOptimizer;
