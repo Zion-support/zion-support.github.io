@@ -1,18 +1,7 @@
-<<<<<<< HEAD
-import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react',;
-    }
-  ]
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology',
-            <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
-=======
+'use client';
+
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Link } from 'react-router-dom';
-import { Bug, RefreshCw, Home } from 'lucide-react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
@@ -20,92 +9,79 @@ interface Props {
 
 interface State {
   hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
-  errorId?: string;
+  error: Error | null;
 }
 
 class GlobalErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = {
+      hasError: false,
+      error: null
+    };
   }
 
   static getDerivedStateFromError(error: Error): State {
     return {
       hasError: true,
-      error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      error
     };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo
-    });
-
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Global error caught:', error, errorInfo);
+    
+    // Log to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      // Here you would typically send to an error reporting service
+      console.error('Production error:', error, errorInfo);
     }
-
-    // In production, you might want to send this to an error reporting service
-    // Example: errorReportingService.captureException(error, { extra: errorInfo });
   }
 
   handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+    this.setState({
+      hasError: false,
+      error: null
+    });
+  };
+
+  handleGoHome = () => {
+    window.location.href = '/';
   };
 
   render() {
     if (this.state.hasError) {
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center border border-white/20">
-            <div className="w-16 h-16 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center">
-              <Bug className="w-8 h-8 text-red-400" />
->>>>>>> cursor/fix-errors-and-merge-to-main-f713
+          <div className="max-w-md w-full bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8 text-center">
+            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
             
             <h1 className="text-2xl font-bold text-white mb-4">
-              Oops! Something went wrong
+              Something went wrong
             </h1>
             
             <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
+              We encountered an unexpected error. Please try again.
             </p>
 
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <div className="mb-6 p-4 bg-red-900/20 border border-red-500/30 rounded-lg text-left">
-                <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
-                <p className="text-red-200 text-sm font-mono break-all">
-                  {this.state.error.message}
-                </p>
-                {this.state.errorId && (
-                  <p className="text-gray-400 text-xs mt-2">
-                    Error ID: {this.state.errorId}
-                  </p>
-                )}
-              </div>
-            )}
-
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col gap-4">
               <button
                 onClick={this.handleRetry}
-                className="flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300"
+                className="flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
               >
-                <RefreshCw className="w-4 h-4" />
+                <RefreshCw className="w-4 h-4 mr-2" />
                 Try Again
               </button>
               
-              <Link
-                to="/"
-                className="flex items-center justify-center gap-2 border border-white/30 text-white hover:bg-white/10 font-semibold py-3 px-6 rounded-lg transition-all duration-300"
+              <button
+                onClick={this.handleGoHome}
+                className="flex items-center justify-center px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white rounded-lg font-semibold transition-colors"
               >
-                <Home className="w-4 h-4" />
+                <Home className="w-4 h-4 mr-2" />
                 Go Home
-              </Link>
+              </button>
             </div>
           </div>
         </div>

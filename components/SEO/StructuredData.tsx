@@ -1,25 +1,16 @@
-import React from 'react'
-
-"use client"
+import React from 'react';
 
 interface StructuredDataProps {
-  className?: string
+  data: any;
 }
 
-const StructuredData: React.FC<StructuredDataProps> = ({ className = '' }) => {
+const StructuredData: React.FC<StructuredDataProps> = ({ data }) => {
   return (
-    <div className={className}>
-      <h2>StructuredData</h2>
-<<<<<<< HEAD
-      <p>This component is under construction.</p>
-    </div>
-  )
-}
-
-=======
-      <p>This component is under construction.</p>;
-    </div>;
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-f713
-export default StructuredData
+
+export default StructuredData;
