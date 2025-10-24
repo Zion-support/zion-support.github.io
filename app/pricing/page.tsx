@@ -1,3 +1,7 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { CheckCircle, Star, ArrowRight, Zap } from 'lucide-react';
 import React from "react";
 import Footer from '../components/Footer';
 import Head from "next/head";
@@ -86,3 +90,5 @@ const Page: React.FC = () => {
 export default Page;
 
 export default PagePage;
+
+export default PricingPage;

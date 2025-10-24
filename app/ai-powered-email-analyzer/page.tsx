@@ -1,4 +1,5 @@
 import React from 'react';
+import SEOHead from '../components/SEOHead';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
@@ -80,3 +81,5 @@ const Page: React.FC = () => {
 export default Page;
 
 export default PagePage;
+
+export default AiPoweredEmailAnalyzerPage;

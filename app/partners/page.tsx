@@ -1,3 +1,6 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp, Building2, Zap } from 'lucide-react';
 import React from "react";
 import Footer from '../components/Footer';
 import Head from "next/head";
@@ -86,3 +89,5 @@ const Page: React.FC = () => {
 export default Page;
 
 export default PagePage;
+
+export default PartnersPage;

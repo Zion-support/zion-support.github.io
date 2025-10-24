@@ -1,4 +1,7 @@
 import React from "react";
+import Head from "next/head";
+import { MessageCircle, Bot, Zap, CheckCircle, ArrowRight } from "lucide-react";
+import React from "react";
 import Footer from '../components/Footer';
 import Head from "next/head";
 import Link from "next/link";
@@ -86,3 +89,5 @@ const Page: React.FC = () => {
 export default Page;
 
 export default PagePage;
+
+export default AIChatbotBuilderPage;

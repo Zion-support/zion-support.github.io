@@ -140,5 +140,8 @@ const PagePage: React.FC = () => {
 };
 
 export default PagePage;
+<<<<<<< HEAD:app-broken/app/api-development-advanced/page.tsx
 
 export default PagePage;
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-be4b:app/ai-customer-support/page.tsx

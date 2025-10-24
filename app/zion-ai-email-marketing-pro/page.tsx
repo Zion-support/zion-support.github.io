@@ -1,4 +1,22 @@
 import React from "react";
+import Link from "next/link";
+import {
+  Mail,
+  BarChart3,
+  Target,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Clock,
+  Sparkles,
+  Cpu,
+  Send,
+  Heart,
+  MousePointer,
+  Shield,
+  Zap,
+  TrendingUp,
+} from "lucide-react";
 import Footer from '../components/Footer';
 import Head from "next/head";
 import Link from "next/link";
@@ -86,3 +104,5 @@ const Page: React.FC = () => {
 export default Page;
 
 export default PagePage;
+
+export default ZionAIEmailMarketingProPage;

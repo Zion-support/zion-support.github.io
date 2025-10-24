@@ -1,4 +1,9 @@
 import React from "react";
+import Head from "next/head";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
+import { CheckCircle, ArrowRight } from "lucide-react";
+import React from "react";
 import Footer from '../components/Footer';
 import Head from "next/head";
 import Link from "next/link";
@@ -84,5 +89,7 @@ const Page: React.FC = () => {
 };
 
 export default Page;
+
+export default PagePage;
 
 export default PagePage;

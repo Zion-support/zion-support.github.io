@@ -1,4 +1,21 @@
 import React from "react";
+import Link from "next/link";
+import {
+  Package,
+  BarChart3,
+  Target,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Clock,
+  Zap,
+  Sparkles,
+  Cpu,
+  AlertTriangle,
+  ShoppingCart,
+  Truck,
+  Globe,
+} from "lucide-react";
 import Footer from '../components/Footer';
 import Head from "next/head";
 import Link from "next/link";
@@ -86,3 +103,5 @@ const Page: React.FC = () => {
 export default Page;
 
 export default PagePage;
+
+export default ZionAIInventoryOptimizerProPage;

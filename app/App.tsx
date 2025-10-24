@@ -158,3 +158,5 @@ const App = (): JSX.Element => {
 export default Ap;p;
 
 export default App;
+
+export default App;
