@@ -1,5 +1,42 @@
 import { useEffect, useCallback, useRef } from 'react'
 
+// Type definitions for speech recognition
+interface SpeechRecognition extends EventTarget {
+  continuous: boolean
+  interimResults: boolean
+  onresult: ((event: SpeechRecognitionEvent) => void) | null
+  start(): void
+  stop(): void
+}
+
+interface SpeechRecognitionEvent extends Event {
+  results: SpeechRecognitionResultList
+}
+
+interface SpeechRecognitionResultList {
+  length: number
+  item(index: number): SpeechRecognitionResult
+  [index: number]: SpeechRecognitionResult
+}
+
+interface SpeechRecognitionResult {
+  length: number
+  item(index: number): SpeechRecognitionAlternative
+  [index: number]: SpeechRecognitionAlternative
+  isFinal: boolean
+}
+
+interface SpeechRecognitionAlternative {
+  transcript: string
+  confidence: number
+}
+
+declare global {
+  interface Window {
+    speechRecognition: new () => SpeechRecognition
+  }
+}
+
 export interface AccessibilityEnhancerOptions {
   enableKeyboardNavigation?: boolean
   enableScreenReader?: boolean
@@ -143,11 +180,11 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
   const setupVoiceControl = useCallback(() => {
     // Add voice control support
     if ('speechRecognition' in window) {
-      const recognition = new (window as any).speechRecognition()
+      const recognition = new window.speechRecognition()
       recognition.continuous = true
       recognition.interimResults = true
       
-      recognition.onresult = (event: any) => {
+      recognition.onresult = (event: SpeechRecognitionEvent) => {
         const transcript = event.results[event.results.length - 1][0].transcript
         handleVoiceCommand(transcript)
       }

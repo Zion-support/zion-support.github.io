@@ -23,7 +23,7 @@ export function useEnhancedPerformance(options: UseEnhancedPerformanceOptions = 
     renderCountRef.current += 1
 
     // Track component mount
-    if (trackAnalytics) {
+    if (trackAnalytics && process.env.NODE_ENV === 'development') {
       console.log(`Component ${component} mounted`)
     }
 
@@ -32,14 +32,14 @@ export function useEnhancedPerformance(options: UseEnhancedPerformanceOptions = 
       if (trackPerformance) {
         const duration = performance.now() - mountTimeRef.current
         
-        if (duration > 5000) {
+        if (duration > 5000 && process.env.NODE_ENV === 'development') {
           // Long-lived component
           console.log(`Long component lifetime: ${component} - ${Math.round(duration)}ms`)
         }
       }
 
       // Track component unmount
-      if (trackAnalytics) {
+      if (trackAnalytics && process.env.NODE_ENV === 'development') {
         console.log(`Component ${component} unmounted`)
       }
     };
@@ -49,7 +49,7 @@ export function useEnhancedPerformance(options: UseEnhancedPerformanceOptions = 
   useEffect(() => {
     renderCountRef.current++;
 
-    if (trackPerformance && renderCountRef.current > 10) {
+    if (trackPerformance && renderCountRef.current > 10 && process.env.NODE_ENV === 'development') {
       // Many re-renders detected
       console.log(`High render count in ${component}: ${renderCountRef.current}`)
     }
@@ -72,14 +72,18 @@ export function useEnhancedPerformance(options: UseEnhancedPerformanceOptions = 
 
   const trackError = useCallback((error: Error, context?: Record<string, unknown>) => {
     if (trackErrors) {
-      console.error(`Error in ${component}:`, error, context)
+      if (process.env.NODE_ENV === 'development') {
+        console.error(`Error in ${component}:`, error, context)
+      }
       // Here you would typically send to an error tracking service
     }
   }, [component, trackErrors])
 
   const trackAnalyticsEvent = useCallback((event: string, data?: Record<string, unknown>) => {
     if (trackAnalytics) {
-      console.log(`Analytics event in ${component}:`, event, data)
+      if (process.env.NODE_ENV === 'development') {
+        console.log(`Analytics event in ${component}:`, event, data)
+      }
       // Here you would typically send to an analytics service
     }
   }, [component, trackAnalytics])

@@ -21,7 +21,7 @@ const PerformanceDashboard: React.FC = () => {
       const currentTime = performance.now();
       const renderTime = currentTime - lastTime;
       
-      const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
+      const memoryUsage = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || 0;
       
       _frameCount++;
       const fps = Math.round(1000 / renderTime);

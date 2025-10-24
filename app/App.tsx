@@ -1,9 +1,10 @@
 'use client';
-import React, { Suspense, lazy } from 'react';
+import { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
 // Lazy load pages for better performance
@@ -72,8 +73,9 @@ const App: React.FC = () => {
       <HelmetProvider>
         <BrowserRouter>
           <div className="App">
-            <PerformanceMonitor />
-            <AccessibilityEnhancer>
+            <PerformanceOptimizer>
+              <PerformanceMonitor />
+              <AccessibilityEnhancer>
               <Suspense fallback={<AppLoadingSpinner />}>
               <Routes>
                 {/* Main Pages */}
@@ -125,6 +127,7 @@ const App: React.FC = () => {
               </Routes>
             </Suspense>
             </AccessibilityEnhancer>
+            </PerformanceOptimizer>
           </div>
         </BrowserRouter>
       </HelmetProvider>

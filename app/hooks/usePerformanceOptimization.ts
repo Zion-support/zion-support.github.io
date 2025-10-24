@@ -35,14 +35,17 @@ export function usePerformanceOptimization(options: PerformanceOptimizationOptio
   void _enableBundleAnalysis
 
   const [isOptimized, setIsOptimized] = useState(false)
-  const [performanceMetrics, setPerformanceMetrics] = useState<any>({})
-  const _optimizationRef = useRef<any>({})
+  const [performanceMetrics, setPerformanceMetrics] = useState<{
+    entries?: PerformanceEntry[]
+    [key: string]: unknown
+  }>({})
+  const _optimizationRef = useRef<Record<string, unknown>>({})
 
   useEffect(() => {
     if (enablePerformanceMonitoring) {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries()
-        setPerformanceMetrics((prev: any) => ({
+        setPerformanceMetrics((prev) => ({
           ...prev,
           entries: [...(prev.entries || []), ...entries]
         }))
@@ -91,10 +94,14 @@ export function usePerformanceOptimization(options: PerformanceOptimizationOptio
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
         .then(registration => {
-          console.log('Service Worker registered:', registration)
+          if (process.env.NODE_ENV === 'development') {
+            console.log('Service Worker registered:', registration)
+          }
         })
         .catch(error => {
-          console.error('Service Worker registration failed:', error)
+          if (process.env.NODE_ENV === 'development') {
+            console.error('Service Worker registration failed:', error)
+          }
         })
     }
   }, [enableCaching])
@@ -121,7 +128,9 @@ export function usePerformanceOptimization(options: PerformanceOptimizationOptio
     prefetchResources()
     
     setIsOptimized(true)
-    console.log('Performance optimizations applied')
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Performance optimizations applied')
+    }
   }, [optimizeImages, optimizeLazyLoading, enableCachingStrategy, prefetchResources])
 
   const getOptimizationStatus = useCallback(() => {

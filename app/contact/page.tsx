@@ -20,7 +20,9 @@ const ContactPage: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Form submitted:', formData)
+    }
     // Add form submission logic here
   }
 

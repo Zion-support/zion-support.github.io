@@ -25,7 +25,9 @@ const ConsultationPage: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Consultation form submitted:', formData)
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Consultation form submitted:', formData)
+    }
     // Add form submission logic here
   }
 

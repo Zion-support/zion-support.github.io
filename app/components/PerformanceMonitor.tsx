@@ -8,20 +8,24 @@ const PerformanceMonitor: React.FC = () => {
       // Monitor Core Web Vitals
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          console.log('Performance Entry:', entry.name, (entry as any).value || 'N/A')
+          if (process.env.NODE_ENV === 'development') {
+            console.log('Performance Entry:', entry.name, (entry as PerformanceEntry & { value?: number }).value || 'N/A')
+          }
         }
       })
 
       try {
         observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] })
       } catch (e) {
-        console.warn('Performance Observer not supported')
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('Performance Observer not supported')
+        }
       }
 
       // Monitor resource loading
       window.addEventListener('load', () => {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-        if (navigation) {
+        if (navigation && process.env.NODE_ENV === 'development') {
           console.log('Page Load Time:', navigation.loadEventEnd - navigation.loadEventStart)
         }
       })
