@@ -53,6 +53,16 @@ export const preloadCriticalImages = (imageUrls: string[]): void => {
   })
 }
 export const lazyLoadImage = (img: HTMLImageElement): void => {
+  // Check if IntersectionObserver is available (e.g., in test environments)
+  if (typeof IntersectionObserver === 'undefined') {
+    // Fallback: load image immediately
+    if (img.dataset.src) {
+      img.src = img.dataset.src;
+      img.removeAttribute('data-src');
+    }
+    return;
+  }
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {

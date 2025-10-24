@@ -1,25 +1,118 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { Menu, X } from 'lucide-react';
 
-const NavigationPage: React.FC = () => {
+const Navigation = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
+    <nav className="bg-white shadow-lg fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Navigation
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under construction and will be available soon.
-          </p>
-          <div className="bg-white rounded-lg shadow-md p-8">
-            <p className="text-gray-700">
-              We are working hard to bring you the best experience. Please check back later.
-            </p>
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Link href="/" className="text-2xl font-bold text-blue-600">
+              ZionTechGroup
+            </Link>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              <Link
+                href="/"
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
+                Home
+              </Link>
+              <Link
+                href="/services"
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
+                Services
+              </Link>
+              <Link
+                href="/about"
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
+                About
+              </Link>
+              <Link
+                href="/contact"
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
+                Contact
+              </Link>
+              <Link
+                href="/pricing"
+                className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
+              >
+                Pricing
+              </Link>
+            </div>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
           </div>
         </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+              <Link
+                href="/"
+                className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors"
+                onClick={toggleMenu}
+              >
+                Home
+              </Link>
+              <Link
+                href="/services"
+                className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors"
+                onClick={toggleMenu}
+              >
+                Services
+              </Link>
+              <Link
+                href="/about"
+                className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors"
+                onClick={toggleMenu}
+              >
+                About
+              </Link>
+              <Link
+                href="/contact"
+                className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors"
+                onClick={toggleMenu}
+              >
+                Contact
+              </Link>
+              <Link
+                href="/pricing"
+                className="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-blue-700 transition-colors"
+                onClick={toggleMenu}
+              >
+                Pricing
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
-    </div>
+    </nav>
   );
 };
 
-export default NavigationPage;
+export default Navigation;
