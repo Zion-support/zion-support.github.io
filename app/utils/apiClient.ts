@@ -46,3 +46,65 @@ export class ApiClient {
       clearTimeout(timeoutId);
 
       if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      const headers: Record<string, string> = {};
+      response.headers.forEach((value, key) => {
+        headers[key] = value;
+      });
+
+      return {
+        data,
+        status: response.status,
+        statusText: response.statusText,
+        headers,
+      };
+    } catch (error) {
+      clearTimeout(timeoutId);
+      throw error;
+    }
+  }
+
+  async get<T>(url: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
+    return this.makeRequest<T>(`${this.baseURL}${url}`, {
+      ...options,
+      method: 'GET',
+    });
+  }
+
+  async post<T>(url: string, data?: unknown, options: RequestOptions = {}): Promise<ApiResponse<T>> {
+    return this.makeRequest<T>(`${this.baseURL}${url}`, {
+      ...options,
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        ...options.headers,
+      },
+      body: data ? JSON.stringify(data) : undefined,
+    });
+  }
+
+  async put<T>(url: string, data?: unknown, options: RequestOptions = {}): Promise<ApiResponse<T>> {
+    return this.makeRequest<T>(`${this.baseURL}${url}`, {
+      ...options,
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        ...options.headers,
+      },
+      body: data ? JSON.stringify(data) : undefined,
+    });
+  }
+
+  async delete<T>(url: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
+    return this.makeRequest<T>(`${this.baseURL}${url}`, {
+      ...options,
+      method: 'DELETE',
+    });
+  }
+}
+
+// Export default instance
+export const apiClient = new ApiClient();
