@@ -2,35 +2,38 @@
 import React from "react"
 
 export class PerformanceMonitor {
+
   private static instance: PerformanceMonitor,
   private metrics: Map<string, number> = new Map()
 
   static getInstance(): PerformanceMonitor {
+
     if (!PerformanceMonitor.instance) {
       PerformanceMonitor.instance = new PerformanceMonitor()
     }
-    return PerformanceMonitor.instance
-  }
-
+    return PerformanceMonitor.instance;
+}
   startTiming(label: string): void {
+
     if (typeof window !== "undefined" && "performance" in window) {
       performance.mark(`${label}-start`)
     }
   }
 
   endTiming(label: string): number {
+
     if (typeof window !== "undefined" && "performance" in window) {
       performance.mark(`${label}-end`)
       performance.measure(label, `${label}-start`, `${label}-end`)
       const measure = performance.getEntriesByName(label)[0]
       const duration = measure ? measure.duration: 0,
       this.metrics.set(label, duration)
-      return duration
-    }
-    return 0
-  }
-
+      return duration;
+}
+    return 0;
+}
   getMetric(label: string): number | undefined {
+
     return this.metrics.get(label)
   }
 
@@ -39,11 +42,13 @@ export class PerformanceMonitor {
   }
 
   clearMetrics(): void {
+
     this.metrics.clear()
   }
 
   // Web Vitals monitoring
   measureWebVitals(): void {
+
     if (typeof window === "undefined") return
 
     // Largest Contentful Paint
@@ -61,7 +66,7 @@ export class PerformanceMonitor {
       entries.forEach((entry) => {
 
         // Use processingStart if available, otherwise calculate from startTime
-        const processingStart = (entry as { processingStart?: number }).processingStart || entry.startTime
+        const processingStart = (entry as { processingStart?: number}).processingStart || entry.startTime
         this.metrics.set("FID", processingStart - entry.startTime)
       })
     }).observe({ entryTypes: ["first-input"] })
@@ -73,9 +78,9 @@ export class PerformanceMonitor {
       const entries = entryList.getEntries()
       entries.forEach((entry) => {
 
-        if (!(entry as { hadRecentInput?: boolean }).hadRecentInput) {
-          clsValue += (entry as { value?: number }).value || 0
-        }
+        if (!(entry as { hadRecentInput?: boolean}).hadRecentInput) {
+          clsValue += (entry as { value?: number}).value || 0;
+}
       })
       this.metrics.set("CLS", clsValue)
     }).observe({ entryTypes: ["layout-shift"] })
@@ -96,6 +101,7 @@ export function usePerformanceMonitor() {
 export function measureComponentRender(componentName: string) {
 
   return function <T extends React.ComponentType<unknown>>(WrappedComponent: T): T {
+
     return ((props: unknown) => {
 
       const monitor = PerformanceMonitor.getInstance()
@@ -108,6 +114,6 @@ export function measureComponentRender(componentName: string) {
         }
       })
       return React.createElement(WrappedComponent, props)
-    }) as T
-  }
+    }) as T;
+}
 };

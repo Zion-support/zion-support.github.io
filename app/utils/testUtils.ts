@@ -6,14 +6,13 @@
 
 // Jest types for testing environment
 declare global {
+
   const jest: {
-    fn: (_implementation?: (..._args: any[]) => any) => any;
-  };
+  fn: (_implementation?: (..._args: any[]) => any) => any};
   const Console: {
-    log: (..._args: any[]) => void;
+  log: (..._args: any[]) => void;
     error: (..._args: any[]) => void;
-    warn: (..._args: any[]) => void;
-  };
+    warn: (..._args: any[]) => void};
 }
 
 /**
@@ -49,7 +48,7 @@ export const mockFetch = (
   headers: Record<string, string> = {}
 ): void => {
   if (typeof global !== 'undefined') {
-    (global as typeof global & { fetch: typeof fetch }).fetch = (() =>
+    (global as typeof global & { fetch: typeof fetch}).fetch = (() =>
       Promise.resolve({
         ok: status >= 200 && status < 300,
         status,
@@ -64,30 +63,37 @@ export const mockFetch = (
  * Mock local storage
  */
 export class MockStorage implements Storage {
+
   private store: Map<string, string> = new Map();
 
   get length(): number {
+
     return this.store.size;
   }
 
   clear(): void {
+
     this.store.clear();
   }
 
   getItem(key: string): string | null {
+
     return this.store.get(key) || null;
   }
 
   key(index: number): string | null {
+
     const keys = Array.from(this.store.keys());
     return keys[index] || null;
   }
 
   removeItem(key: string): void {
+
     this.store.delete(key);
   }
 
   setItem(key: string, value: string): void {
+
     this.store.set(key, value);
   }
 }
@@ -107,10 +113,8 @@ export const mockWindow = (overrides: Partial<Window> = {}): void => {
     Object.defineProperty(global, 'window', {
       value: {
         ...global.window,
-        ...overrides
-      },
-      writable: true
-    });
+        ...overrides},
+      writable: true});
   }
 };
 
@@ -120,6 +124,7 @@ export const mockWindow = (overrides: Partial<Window> = {}): void => {
 export const createMockPerformance = (): Performance => {
   const entries: PerformanceEntry[] = [];
   return {
+
     now: () => Date.now(),
     mark: (name: string) => {
       entries.push({
@@ -184,7 +189,7 @@ export const generateTestData = {
     return new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000);
   },
   array: <T>(generator: () => T, length = 5): T[] => {
-    return Array.from({ length }, generator);
+    return Array.from({ length}, generator);
   }
 };
 
@@ -206,17 +211,19 @@ export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {
  * Spy on console methods
  */
 export class ConsoleSpy {
+
   private originalConsole: typeof console;
   private logs: string[] = [];
   private errors: string[] = [];
   private warnings: string[] = [];
 
   constructor() {
-    this.originalConsole = { ...console };
+    this.originalConsole = { ...console};
     this.mock();
   }
 
   private mock(): void {
+
     console.log = (...args: unknown[]) => {
       this.logs.push(args.map(String).join(' '));
     };
@@ -241,10 +248,12 @@ export class ConsoleSpy {
   }
 
   restore(): void {
+
     Object.assign(console, this.originalConsole);
   }
 
   clear(): void {
+
     this.logs = [];
     this.errors = [];
     this.warnings = [];
@@ -257,8 +266,7 @@ export class ConsoleSpy {
 export interface Deferred<T> {
   promise: Promise<T>;
   resolve: (_value: T) => void;
-  reject: (_reason?: unknown) => void;
-}
+  reject: (_reason?: unknown) => void}
 
 export const createDeferred = <T>(): Deferred<T> => {
   let resolve: (_value: T) => void;
@@ -267,7 +275,7 @@ export const createDeferred = <T>(): Deferred<T> => {
     resolve = res;
     reject = rej;
   });
-  return { promise, resolve, reject };
+  return { promise, resolve, reject};
 };
 
 /**
@@ -281,6 +289,7 @@ export const retryWithBackoff = async <T>(
   let lastError: Error;
   for (let i = 0; i < maxRetries; i++) {
     try {
+
       return await fn();
     } catch (error) {
       lastError = error as Error;
@@ -297,11 +306,11 @@ export const retryWithBackoff = async <T>(
  */
 export const measureExecutionTime = async <T>(
   fn: () => T | Promise<T>
-): Promise<{ result: T; duration: number }> => {
+): Promise<{ result: T; duration: number}> => {
   const start = performance.now();
   const result = await fn();
   const duration = performance.now() - start;
-  return { result, duration };
+  return { result, duration};
 };
 
 const testUtils = {
@@ -317,7 +326,6 @@ const testUtils = {
   ConsoleSpy,
   createDeferred,
   retryWithBackoff,
-  measureExecutionTime
-};
+  measureExecutionTime};
 
 export default testUtils;

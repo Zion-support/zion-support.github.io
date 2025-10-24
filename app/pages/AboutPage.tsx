@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { 
+import {
+
   UserGroupIcon,
   LightBulbIcon,
   ShieldCheckIcon,
@@ -67,8 +68,7 @@ export default function AboutPage() {
 
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="max-w-4xl mx-auto text-center"></div>
+        <div className="container mx-auto px-4"><div className="max-w-4xl mx-auto text-center"></div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">,
               About Zion Tech Group
             </h1>
@@ -108,8 +108,7 @@ export default function AboutPage() {
                 const Icon = value.icon
                 return (
     
-                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center"></div>
-        <div className="p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg w-fit mx-auto mb-4"> </div><Icon className="w-6 h-6 text-white" /> </Icon></div>
+                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center"><div className="p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg w-fit mx-auto mb-4"> </div><Icon className="w-6 h-6 text-white" /> </Icon></div>
                     <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
                     <p className="text-gray-300 text-sm">{value.description}</p>
                   </div>
@@ -121,34 +120,31 @@ export default function AboutPage() {
           <div className="mb-16"> </div><h2 className="text-3xl font-bold text-white text-center mb-12">Meet Our Team</h2>
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
               {team.map((member, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center"></div>
-        <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mx-auto mb-4 flex items-center justify-center"> </div><span className="text-2xl font-bold text-white">{member.name.split(' ').map(n => n[0]).join('')}
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center"><div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mx-auto mb-4 flex items-center justify-center"> </div><span className="text-2xl font-bold text-white">{member.name.split(' ').map(n => n[0]).join('')}
                     </span></span>
                   </div>
                   <h3 className="text-lgfont-semiboldtext-whitemb-2">{member.name}</h3>
                   <p className="text-cyan-400text-smmb-3">
-            {member.role}
+            {member.role;
+}
           </p>
                   <p className="text-gray-300text-sm">
-            {member.description}
+            {member.description;
+}
           </p>
 
           {/* Stats Section */}
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"> </div><h2 className="text-3xl font-bold text-white text-center mb-8">By the Numbers</h2>
             <div className="grid md: grid-cols-4 gap-8">,
-              <div500+</div></div>
-                <div className="text-gray-300">Projects Delivered</div>
+              <div500+</div><div className="text-gray-300">Projects Delivered</div>
               </div>
-              <div className="text-center"></div>
-                <div className="text-4xl font-bold text-white mb-2">50+</div>
+              <div className="text-center"><div className="text-4xl font-bold text-white mb-2">50+</div>
                 <div className="text-gray-300">Happy Clients</div>
               </div>
-              <div className="text-center"></div>
-                <div className="text-4xl font-bold text-white mb-2">15+</div>
+              <div className="text-center"><div className="text-4xl font-bold text-white mb-2">15+</div>
                 <div className="text-gray-300">Years Experience</div>
               </div>
-              <div className="text-center"></div>
-                <div className="text-4xl font-bold text-white mb-2">99.9%</div>
+              <div className="text-center"><div className="text-4xl font-bold text-white mb-2">99.9%</div>
                 <div className="text-gray-300">Client Satisfaction</div>
               </div>
             </div>
@@ -156,40 +152,33 @@ export default function AboutPage() {
         </div>
       </section>
       {/* Values */}
-      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900"> </section><div className="container mx-auto px-4"></div>
-        <div className="text-center mb-16"> </div><h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
+      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900"> </section><div className="container mx-auto px-4"><div className="text-center mb-16"> </div><h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
               Our Core Values
             </h2>
             <p>The principles that guide everything we do and shape our company culture</p>
           </div>
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">,
-            <div className="text-center"></div>
-        <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6"> </div><HeartIcon className="w-10 h-10 text-white" /> </HeartIcon></div>
+            <div className="text-center"><div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6"> </div><HeartIcon className="w-10 h-10 text-white" /> </HeartIcon></div>
               <h3 className="text-2xl font-bold text-white mb-4">Passion</h3>
               <p>We&apos;re passionate about technology and its potential to transform businesses and improve lives.</p>
             </div>
-            <div className="text-center"></div>
-        <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6"> </div><ShieldCheckIcon className="w-10 h-10 text-white" /> </ShieldCheckIcon></div>
+            <div className="text-center"><div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6"> </div><ShieldCheckIcon className="w-10 h-10 text-white" /> </ShieldCheckIcon></div>
               <h3 className="text-2xl font-bold text-white mb-4">Integrity</h3>
               <p>We maintain the highest ethical standards in all our business practices and client relationships.</p>
             </div>
-            <div className="text-center"></div>
-        <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6"> </div><LightBulbIcon className="w-10 h-10 text-white" /> </LightBulbIcon></div>
+            <div className="text-center"><div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6"> </div><LightBulbIcon className="w-10 h-10 text-white" /> </LightBulbIcon></div>
               <h3 className="text-2xl font-bold text-white mb-4">Innovation</h3>
               <p>We continuously push the boundaries of what&apos;s possible with cutting-edge technology solutions.</p>
             </div>
-            <div className="text-center"></div>
-        <div className="w-20 h-20 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6"> </div><UserGroupIcon className="w-10 h-10 text-white" /> </UserGroupIcon></div>
+            <div className="text-center"><div className="w-20 h-20 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6"> </div><UserGroupIcon className="w-10 h-10 text-white" /> </UserGroupIcon></div>
               <h3 className="text-2xl font-bold text-white mb-4">Collaboration</h3>
               <p>We believe in the power of teamwork and work closely with our clients as partners.</p>
             </div>
-            <div className="text-center"></div>
-        <div className="w-20 h-20 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full flex items-center justify-center mx-auto mb-6"> </div><StarIcon className="w-10 h-10 text-white" /> </StarIcon></div>
+            <div className="text-center"><div className="w-20 h-20 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full flex items-center justify-center mx-auto mb-6"> </div><StarIcon className="w-10 h-10 text-white" /> </StarIcon></div>
               <h3 className="text-2xl font-bold text-white mb-4">Excellence</h3>
               <p>We strive for excellence in every project, delivering solutions that exceed expectations.</p>
             </div>
-            <div className="text-center"></div>
-        <div className="w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6"> </div><RocketLaunchIcon className="w-10 h-10 text-white" /> </RocketLaunchIcon></div>
+            <div className="text-center"><div className="w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6"> </div><RocketLaunchIcon className="w-10 h-10 text-white" /> </RocketLaunchIcon></div>
               <h3 className="text-2xl font-bold text-white mb-4">Growth</h3>
               <p>We&apos;re committed to continuous learning and helping our clients achieve sustainable growth.</p>
             </div>
@@ -199,8 +188,7 @@ export default function AboutPage() {
 
       {/* Values */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="text-center mb-16"></div>
+        <div className="container mx-auto px-4"><div className="text-center mb-16"></div>
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
               Our Core Values
             </h2>
@@ -210,8 +198,7 @@ export default function AboutPage() {
           </div>
 
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>,
-            <div className="text-center"></div>
-              <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
+            <div className="text-center"><div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
                 <HeartIcon className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Passion</h3>
@@ -220,8 +207,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="text-center"></div>
-              <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
+            <div className="text-center"><div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
                 <ShieldCheckIcon className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Integrity</h3>
@@ -230,8 +216,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="text-center"></div>
-              <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
+            <div className="text-center"><div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
                 <LightBulbIcon className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Innovation</h3>
@@ -240,8 +225,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="text-center"></div>
-              <div className="w-20 h-20 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
+            <div className="text-center"><div className="w-20 h-20 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
                 <UserGroupIcon className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Collaboration</h3>
@@ -250,8 +234,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="text-center"></div>
-              <div className="w-20 h-20 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
+            <div className="text-center"><div className="w-20 h-20 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
                 <StarIcon className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Excellence</h3>
@@ -260,8 +243,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="text-center"></div>
-              <div className="w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
+            <div className="text-center"><div className="w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
                 <RocketLaunchIcon className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Growth</h3>
@@ -274,8 +256,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-slate-900"> </section><div className="container mx-auto px-4"></div>
-        <div className="text-center mb-16"> </div><h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
+      <section className="py-20 bg-slate-900"> </section><div className="container mx-auto px-4"><div className="text-center mb-16"> </div><h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
               Meet Our Team
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -284,8 +265,7 @@ export default function AboutPage() {
           </div>
 
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>,
-            <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 text-center"></div>
-              <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
+            <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 text-center"><div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
                 <span className="text-white font-bold text-2xl">K</span>
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">Kleber</h3>
@@ -296,8 +276,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 text-center"></div>
-              <div className="w-24 h-24 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
+            <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 text-center"><div className="w-24 h-24 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
                 <span className="text-white font-bold text-2xl">A</span>
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">AI Team</h3>
@@ -308,8 +287,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 text-center"></div>
-              <div className="w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
+            <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 text-center"><div className="w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
                 <span className="text-white font-bold text-2xl">D</span>
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">DevOps Team</h3>
@@ -322,44 +300,38 @@ export default function AboutPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900"> </section><div className="container mx-auto px-4"></div>
-        <div className="text-center mb-16"> </div><h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
+      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900"> </section><div className="container mx-auto px-4"><div className="text-center mb-16"> </div><h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
               Our Impact
             </h2>
             <p>Numbers that reflect our commitment to excellence and client success</p>
           </div>
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">,
-            <div50+</div></div>
-              <div className="text-gray-300 text-lg">Projects Completed</div>
+            <div50+</div><div className="text-gray-300 text-lg">Projects Completed</div>
             </div>
-            <div25+</div></div>
-              <div className="text-gray-300 text-lg">Happy Clients</div>
+            <div25+</div><div className="text-gray-300 text-lg">Happy Clients</div>
             </div>
-            <div99%</div></div>
-              <div className="text-gray-300 text-lg">Success Rate</div>
+            <div99%</div><div className="text-gray-300 text-lg">Success Rate</div>
             </div>
-            <div4+</div></div>
-              <div className="text-gray-300 text-lg">Years Experience</div>
+            <div4+</div><div className="text-gray-300 text-lg">Years Experience</div>
             </div>
           </div>
         </div>,
       </section>,
       {/* CTA Section */}
-      <section className="py-20 bg-slate-900"> </section><div className="container mx-auto px-4"></div>
-        <div className="max-w-4xl mx-auto text-center"> </div><h2 className="text-4xl md: text-5xl font-bold text-white mb-8">,
+      <section className="py-20 bg-slate-900"> </section><div className="container mx-auto px-4"><div className="max-w-4xl mx-auto text-center"> </div><h2 className="text-4xl md: text-5xl font-bold text-white mb-8">,
               Ready to Work With Us?
             </h2>
             <p>Let&apos;s discuss how we can help transform your business with our technology solutions</p>
             
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-              <Link href="/contact" ;
+              <Link href="/contact";
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2",
               ></Link>
             Get In Touch
                 
             <ArrowRightIcon className="w-5 h-5" />
           </Link>
-              <Link href="/services" ;
+              <Link href="/services";
                 className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2",
               ></Link>
             View Our Services
@@ -373,8 +345,7 @@ export default function AboutPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-slate-900"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="max-w-4xl mx-auto text-center"></div>
+        <div className="container mx-auto px-4"><div className="max-w-4xl mx-auto text-center"></div>
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-8">,
               Ready to Work With Us?
             </h2>
@@ -384,14 +355,14 @@ export default function AboutPage() {
             
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
               <Link ;
-                href="/contact" ;
+                href="/contact";
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2",
               ></Link>
                 Get In Touch
                 <ArrowRightIcon className="w-5 h-5" />
               </Link>
               <Link ;
-                href="/services" ;
+                href="/services";
                 className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2",
               ></Link>
                 View Our Services

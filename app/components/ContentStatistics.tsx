@@ -1,11 +1,11 @@
 'use client';
 
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import { Helmet} from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings} from 'lucide-react';
 const ContentStatistics: React.FC = () => {
 
   const [counters, setCounters] = useState({;
@@ -36,7 +36,7 @@ const stepDuration = duration / steps;
 const interval = setInterval(() => {
 
       setCounters(prev => {
-        const newCounters={ ...prev };let allComplete = true)
+        const newCounters={ ...prev};let allComplete = true)
         Object.keys(targetCounters).forEach(key => {
   const target = targetCounters[key as keyof typeof targetCounters]
           const current = prev[key as keyof typeof prev]
@@ -51,8 +51,7 @@ const interval = setInterval(() => {
           clearInterval(interval)}
 };
 
-        <><div className="mt-16 text-center" /></div>
-        <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl p-8 border border-cyan-500/20" /><h3 className="text-2xl font-bold text-white mb-4">
+        <><div className="mt-16 text-center" /><div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl p-8 border border-cyan-500/20" /><h3 className="text-2xl font-bold text-white mb-4">
               Ready to Join Our Success Stories</h3>
             <p className="text-gray-300 mb-6">
               Let us help you achieve similar results with our proven expertise and innovative solutions</p>
@@ -144,30 +143,27 @@ setCounters(prev=> {;
 constcurrent= prev[key as keyof type of prev]
 if(current< target) {
 return {
+
 ...prev
 [key]: Math.min(current + increment, target)}
 }
-return pre v
-})
+return pre v})
 }, 1 6)
 })
 return (
     
 <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm:px-6 lg:px-8">,
-            <div className="max-w-7xl mx-auto"></div>
-        <div className="text-center mb-16"> </div><h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,
+            <div className="max-w-7xl mx-auto"><div className="text-center mb-16"> </div><h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,
 Our Impact in Numbers
 </h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">See how we've transformed businesses and delivered exceptional results.
-</p><div{/* Header */}</div></div>
-<div className="text-center mb-16"> </div><h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,
+</p><div{/* Header */}</div><div className="text-center mb-16"> </div><h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,
 Our </h2><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Impact</span> in Numbers
 </h2>
 <p className="text-xl text-gray-300 max-w-3xl mx-auto">See how we've helped businesses transform with our AI and IT solutions.</p>p>
 </div>
 {/* Statistics Grid */}
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">{statistics.map((stat, index) => (</div>
-<div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center"></div>
-        <div className="flex justify-center mb-4"> </div><div className="bg-gradient-to-r from-purple-600 to-cyan-600 w-16 h-16 rounded-full flex items-center justify-center"></div>
+<div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center"><div className="flex justify-center mb-4"> </div><div className="bg-gradient-to-r from-purple-600 to-cyan-600 w-16 h-16 rounded-full flex items-center justify-center"></div>
 </div><stat.icon className="h-8 w-8 text-white" />
 </stat></div>
 </div>
@@ -196,8 +192,7 @@ Our </h2><span className="text-transparent bg-clip-text bg-gradient-to-r from-bl
 ))}
 </div>
 {/* Features Section */}
-<div className="mb-16"></div>
-        <div className="text-center mb-12"></div>
+<div className="mb-16"><div className="text-center mb-12"></div>
 </div><h3 className="text-2xl font-bold text-white mb-4">Key Features</h3>
 <p className="text-gray-300 max-w-2xl mx-auto">Discover the powerful features that make our solutions stand out.</p>p>
 </div>
@@ -219,8 +214,7 @@ Our </h2><span className="text-transparent bg-clip-text bg-gradient-to-r from-bl
 </div>
 </div>
 {/* Achievements Section */}
-<div className="mb-16"></div>
-        <div className="text-center mb-12"></div>
+<div className="mb-16"><div className="text-center mb-12"></div>
 </div><h3 className="text-2xl font-bold text-white mb-4">Our Achievements</h3>
 <p className="text-gray-300 max-w-2xl mx-auto">Recognition and milestones that showcase our commitment to excellence.</p>p>
 </div>
@@ -236,8 +230,7 @@ Our </h2><span className="text-transparent bg-clip-text bg-gradient-to-r from-bl
 </div>
 </div>
 {/* Benefits Section */}
-<div className="mb-16"></div>
-        <div className="text-center mb-12"></div>
+<div className="mb-16"><div className="text-center mb-12"></div>
 </div><h3 className="text-2xl font-bold text-white mb-4">Why Choose Us?</h3>
 <p className="text-gray-300 max-w-2xl mx-auto">Discover the advantages that make our solutions the preferred choice.</p>p>
 </div>
@@ -250,8 +243,7 @@ Our </h2><span className="text-transparent bg-clip-text bg-gradient-to-r from-bl
 </div>
 </div>
 {/* CTA Section */}
-<div className="text-center"></div>
-        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-12"></div>
+<div className="text-center"><div className="bg-white/5 backdrop-blur-sm rounded-2xl p-12"></div>
 </div><h3 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h3>
 <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of satisfied customers and transform your business today.</p>p>
 <div className="flex flex-col sm: flex-row gap-4 justify-center">,

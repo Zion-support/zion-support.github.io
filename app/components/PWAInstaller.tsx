@@ -2,6 +2,7 @@
 import React from 'react';
 
 interface PWAInstallerProps {
+
   onInstall?: () => void;
   onUpdate?: () => void;
 }

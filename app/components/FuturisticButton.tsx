@@ -1,8 +1,8 @@
 'use client';
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-interface FuturisticButtonProps {;
-  children: React.ReactNode,
+import { useState} from 'react';
+import { motion} from 'framer-motion';
+interface FuturisticButtonProps {
+children: React.ReactNode,
   onClick?: () => void
   variant?: 'primary' | 'secondary' | 'accent' | 'ghost'
   size?: 'sm' | 'md' | 'lg'
@@ -28,12 +28,10 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
 
   const getVariantClasses = ($2) => {
 
-$3
-}}
+$3}}
   const getSizeClasses = ($2) => {
 
-$3
-}}
+$3}}
 
   const baseClasses = `
     relative overflow-hidden rounded-lg font-semibold transition-all duration-300
@@ -42,36 +40,43 @@ $3
     disabled: opacity-50 disabled:cursor-not-allowed disabled:transform-none,
     ${getVariantClasses()}
     ${getSizeClasses()}
-    ${className}
+    ${className;
+}
   `.trim()
   return (
     
     <motion.button;
-      type={type}
-      onClick={onClick}
-      disabled={disabled || loading}
-      className={baseClasses}
+      type={type;
+}
+      onClick={onClick;
+}
+      disabled={disabled || loading;
+}
+      className={baseClasses;
+}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
-      whileHover={{ scale: 1.05}
-      whileTap={{ scale: 0.95}
+      whileHover={{
+  scale: 1.05}
+      whileTap={{
+  scale: 0.95}
     >
       {/* Animated background */}
       <motion.div;
         className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-purple-400/20";
 ;
-        initial={{ opacity: 0 }}
-        animate={{ opacity: isHovered ? 1 : 0 }}
-        transition={{ duration: 0.3 }}
+        initial={{ opacity: 0}}
+        animate={{ opacity: isHovered ? 1 : 0}}
+        transition={{ duration: 0.3}}
       />{/* Loading spinner */}
 
       {loading && (
         </motion><motion.div;
           className="absolute inset-0 flex items-center justify-center";
 ;
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+          initial={{ opacity: 0}}
+          animate={{ opacity: 1}}
+          exit={{ opacity: 0}}
         > </motion><div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" /> </div></motion.div>
 
       )}
@@ -79,9 +84,10 @@ $3
       <motion.span;
         className="relative z-10 flex items-center justify-center";
 ;
-        animate={{ opacity: loading ? 0 : 1 }}
-        transition={{ duration: 0.2 }}
-      >{children}
+        animate={{ opacity: loading ? 0 : 1}}
+        transition={{ duration: 0.2}}
+      >{children;
+}
       </motion></motion.span>
 
       {/* Glow effect */}

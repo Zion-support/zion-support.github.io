@@ -1,13 +1,12 @@
-import { useState, useCallback } from "react";
-
+import { useState, useCallback} from "react";
 interface FormState<T /> {;
-  data: T;,;
-  isSubmitting: boolean;,;
-  submitStatus: "idle" | "success" | "error";,;
+  data: T,;
+  isSubmitting: boolean,;
+  submitStatus: "idle" | "success" | "error",;
   errors: Partial<Record<keyof T, string />>}
 
 interface UseFormOptions<T /> {;
-  initialData: T;,;
+  initialData: T,;
   onSubmit: (data: T) => Promise<void />,
   validate?: (data: T) => Partial<Record<keyof T, string />>}
 
@@ -23,7 +22,7 @@ export function useForm<T extends Record<string, any />>({
 
   const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement />) => {
 
-    const { name, value       } = e.target;
+    const { name, value} = e.target;
     setFormState(prev => ({
       ...prev,;
       data: {
@@ -31,8 +30,7 @@ export function useForm<T extends Record<string, any />>({
         [name]: value},;
       errors: {
         ...prev.errors,
-        [name]: "", // Clear error when user starts typing
-      }}))}, []);
+        [name]: "", // Clear error when user starts typing}}))}, []);
 
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
 
@@ -45,8 +43,8 @@ const validationErrors = validate ? validate(formState.data) : {};
       setFormState(prev => ({
         ...prev,;
         errors: validationErrors}));
-      return}
-
+      return;
+}
     setFormState(prev => ({
       ...prev,;
       isSubmitting: true,;
@@ -54,12 +52,12 @@ const validationErrors = validate ? validate(formState.data) : {};
       errors: {}}));
 
     try {
+
       await onSubmit(formState.data);
       setFormState(prev => ({
         ...prev,;
         submitStatus: "success",;
-        data: initialData, // Reset form
-      }))} catch (error) {
+        data: initialData, // Reset form}))} catch (error) {
       // Log error in development, send to error service in production
       if (process.env.NODE_ENV === "development") {
         console.error("Form submission error:", error)}
@@ -69,6 +67,7 @@ const validationErrors = validate ? validate(formState.data) : {};
       setFormState(prev => ({
         ...prev,;
         submitStatus: "error"}))} finally {
+
       setFormState(prev => ({
         ...prev,;
         isSubmitting: false}))}
@@ -83,6 +82,7 @@ const validationErrors = validate ? validate(formState.data) : {};
       errors: {}})}, [initialData]);
 
   return {
+
     ...formState,
     handleInputChange,
     handleSubmit,

@@ -3,37 +3,36 @@
  * Comprehensive Test Runner and Testing Utilities
  * Provides advanced testing capabilities, mocking, and test automation
  */
-import React, { useCallback } from 'react';
+import React, { useCallback} from 'react';
 
-export interface PerformanceMetrics {;
-  renderTime: number,;
+export interface PerformanceMetrics {
+renderTime: number,;
       memoryUsage: number,;
-      timestamp: string}
-
-export interface CoverageMetrics {;
-  statements: number,;
+      timestamp: string;
+}
+export interface CoverageMetrics {
+statements: number,;
       branches: number,;
       functions: number,;
-      lines: number}
-
+      lines: number;
+}
 // Test configuration interface
-export interface TestConfig {;
-  enableMocking: boolean,;
+export interface TestConfig {
+enableMocking: boolean,;
       enableCoverage: boolean,;
       enablePerformance: boolean,;
-      enableAccessibility: boolean}
-
+      enableAccessibility: boolean;
+}
 // Test result types
-export interface TestResult {;
-  name: string,;
+export interface TestResult {
+name: string,;
       status: 'passed' | 'failed' | 'skipped',;
   duration: number,
-  error?: string
+  error?: string;
 }
-
-export interface TestSuite {;
-  name: string,;
-      tests: TestResult[  ];,;
+export interface TestSuite {
+name: string,;
+      tests: TestResult[  ],;
   duration: number,;
       status: 'passed' | 'failed' | 'partial'}
 
@@ -47,23 +46,23 @@ export const mockFunction = <T extends (..._args: any[]) => any,>(
   return (() => {}) as any};
 
 // Test runner component
-interface TestRunnerProps {;
-  config: TestConfig;
+interface TestRunnerProps {
+config: TestConfig;
   onTestComplete?: (_results: TestSuite[]) => void;
   onPerformanceUpdate?: (_metrics: PerformanceMetrics) => void;
-  onCoverageUpdate?: (_metrics: CoverageMetrics) => void}
-
+  onCoverageUpdate?: (_metrics: CoverageMetrics) => void;
+}
 const TestRunner: React.FC<TestRunnerProps> = ({
   config
   onTestComplete
   onPerformanceUpdate
-  onCoverageUpdate
-}) => {
+  onCoverageUpdate}) => {
 
   const runTests = useCallback(async () => {
 
     const results: TestSuite[] = [  ];
     try {
+
       // Run performance tests
       if (config.enablePerformance) {
         const performanceMetrics = await measurePerformance()
@@ -145,6 +144,6 @@ const TestRunner: React.FC<TestRunnerProps> = ({
       runTests()
     }
   }, [runTests, config])
-  return null
+  return null;
 }
 export default TestRunner;

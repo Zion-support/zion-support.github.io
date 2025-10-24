@@ -1,22 +1,23 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Zap, Shield, Brain, Cloud } from 'lucide-react';
+import React, { useState, useEffect} from 'react';
+import { ChevronLeft, ChevronRight, Zap, Shield, Brain, Cloud} from 'lucide-react';
 
 interface Slide {
+
   id: number;
   title: string;
   description: string;
   features: string[];
-  icon: React.ComponentType<{ className?: string }>;
+  icon: React.ComponentType<{ className?: string}>;
   color: string;
   stats?: {
-    value: string;
-    label: string;
-  }[];
+  value: string;
+    label: string}[];
 }
 
 const ContentCarousel: React.FC = () => {
+
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides: Slide[] = [
@@ -108,16 +109,19 @@ const ContentCarousel: React.FC = () => {
                   </div>
                   <div className="text-center">
                     <h3 className="text-3xl md:text-4xl font-bold mb-4">
-                      {slide.title}
+                      {slide.title;
+}
                     </h3>
                     <p className="text-lg md:text-xl mb-6 opacity-90">
-                      {slide.description}
+                      {slide.description;
+}
                     </p>
                     <div className="grid grid-cols-2 gap-2 text-sm">
                       {slide.features.map((feature, index) => (
                         <div key={index} className="flex items-center">
                           <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
-                          {feature}
+                          {feature;
+}
                         </div>
                       ))}
                     </div>
@@ -131,14 +135,16 @@ const ContentCarousel: React.FC = () => {
       
       {/* Navigation buttons */}
       <button
-        onClick={prevSlide}
+        onClick={prevSlide;
+}
         className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
         aria-label="Previous slide"
       >
         <ChevronLeft className="h-6 w-6" />
       </button>
       <button
-        onClick={nextSlide}
+        onClick={nextSlide;
+}
         className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
         aria-label="Next slide"
       >
@@ -149,7 +155,8 @@ const ContentCarousel: React.FC = () => {
       <div className="flex justify-center mt-4 space-x-2">
         {slides.map((_, index) => (
           <button
-            key={index}
+            key={index;
+}
             onClick={() => setCurrentSlide(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
               index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'

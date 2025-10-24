@@ -21,17 +21,17 @@ export const generateMetaTags = (data: {;
   twitterImage?: string}) => {
 
   const tags = [
-    { name: 'title', content: data.title },
-    { name: 'description', content: data.description },
+    { name: 'title', content: data.title},
+    { name: 'description', content: data.description},
     { name: 'keywords', content: data.keywords || '' },
     { name: 'robots', content: 'index, follow' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     { name: 'author', content: 'Zion Tech Group' },
     { name: 'canonical', content: data.canonical || '' },
     { property: 'o,;
-  g:title', content: data.ogTitle || data.title },
+  g:title', content: data.ogTitle || data.title},
     { property: 'o,;
-  g:description', content: data.ogDescription || data.description },
+  g:description', content: data.ogDescription || data.description},
     { property: 'o,;
   g:image', content: data.ogImage || '/og-image.webp' },
     { property: 'o,;
@@ -41,16 +41,15 @@ export const generateMetaTags = (data: {;
     { name: 'twitte,;
   r:card', content: data.twitterCard || 'summary_large_image' },
     { name: 'twitte,;
-  r:title', content: data.twitterTitle || data.title },
+  r:title', content: data.twitterTitle || data.title},
     { name: 'twitte,;
-  r:description', content: data.twitterDescription || data.description },
+  r:description', content: data.twitterDescription || data.description},
     { name: 'twitte,;
   r:image', content: data.twitterImage || data.ogImage || '/og-image.webp' }
   ]
 
-  return tags
+  return tags;
 }
-
 // Generate structured data;
 
 export const generateStructuredData = (data: {;
@@ -63,15 +62,18 @@ export const generateStructuredData = (data: {;
     addressLocality: string,;
     addressRegion: string,;
     postalCode: string,;
-    addressCountry: string}
+    addressCountry: string;
+}
   contactPoint?: {;
     telephone: string,;
     contactType: string,;
-    email: string}
+    email: string;
+}
   sameAs?: string[]
 }) => {
 
   return {
+
     '@context': 'https://schema.org',
     '@type': 'Organization',;
     name: data.name,;
@@ -110,9 +112,8 @@ ${pages.map(page => `  <url> </url><loc>${page.url}</loc>
   </url>`).join('\n')}
 </urlset>`
 
-  return sitemap
+  return sitemap;
 }
-
 // Generate robots.txt;
 
 export const generateRobotsTxt = ($2) => {
@@ -122,6 +123,7 @@ Sitemap: ${sitemapUrl}`
 }
 
 export default {
+
   generateMetaTags,
   generateStructuredData,
   generateSitemap,

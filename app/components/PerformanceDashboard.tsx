@@ -2,6 +2,7 @@
 import React from 'react';
 
 interface PerformanceDashboardProps {
+
   showMetrics?: boolean;
   refreshInterval?: number;
 }

@@ -1,12 +1,13 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useEffect} from 'react';
 
 interface AnalyticsProps {
+
   className?: string;
 }
 
-const Analytics: React.FC<AnalyticsProps> = ({ className }) => {
+const Analytics: React.FC<AnalyticsProps> = ({ className}) => {
   useEffect(() => {
     // Initialize analytics tracking
     const initAnalytics = () => {
@@ -27,9 +28,10 @@ const Analytics: React.FC<AnalyticsProps> = ({ className }) => {
 
 // Extend Window interface for gtag
 declare global {
+
   interface Window {
-    gtag: (...args: unknown[]) => void;
-  }
+
+  gtag: (...args: unknown[]) => void}
 }
 
 export default Analytics;

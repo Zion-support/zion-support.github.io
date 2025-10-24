@@ -1,8 +1,9 @@
 'use client';
 import React from 'react';
-import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
+import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle} from 'lucide-react';
 
 const EnhancedServicesShowcase: React.FC = () => {
+
   const services = [
     {
       icon: Brain,
@@ -53,7 +54,8 @@ const EnhancedServicesShowcase: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <div
-              key={index}
+              key={index;
+}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
             >
               <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -61,16 +63,19 @@ const EnhancedServicesShowcase: React.FC = () => {
               </div>
               
               <h3 className="text-xl font-semibold text-white text-center mb-3">
-                {service.title}
+                {service.title;
+}
               </h3>
               
               <p className="text-gray-300 text-center mb-4 text-sm">
-                {service.description}
+                {service.description;
+}
               </p>
 
               <div className="mb-4">
                 <div className={`text-2xl font-bold ${service.color} text-center mb-2`}>
-                  {service.stats}
+                  {service.stats;
+}
                 </div>
                 <div className="text-xs text-gray-400 text-center">
                   Performance Metric
@@ -81,7 +86,8 @@ const EnhancedServicesShowcase: React.FC = () => {
                 {service.features.map((feature, idx) => (
                   <li key={idx} className="flex items-center text-gray-300 text-sm">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                    {feature}
+                    {feature;
+}
                   </li>
                 ))}
               </ul>

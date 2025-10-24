@@ -1,9 +1,10 @@
 'use client';
 
-import React, { useState, useCallback } from 'react';
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle, User, Building, Globe, MessageCircle } from 'lucide-react';
+import React, { useState, useCallback} from 'react';
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle, User, Building, Globe, MessageCircle} from 'lucide-react';
 
 const ContactPage: React.FC = () => {
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -18,11 +19,10 @@ const ContactPage: React.FC = () => {
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   
   const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value} = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
-    }));
+      [name]: value}));
   }, []);
   
   const handleSubmit = async (e: React.FormEvent) => {
@@ -31,6 +31,7 @@ const ContactPage: React.FC = () => {
     setSubmitStatus('idle');
 
     try {
+
       // Simulate form submission
       await new Promise(resolve => setTimeout(resolve, 1000));
       setSubmitStatus('success');
@@ -47,6 +48,7 @@ const ContactPage: React.FC = () => {
     } catch (_error) {
       setSubmitStatus('error');
     } finally {
+
       setIsSubmitting(false);
     }
   };
@@ -135,8 +137,10 @@ const ContactPage: React.FC = () => {
                     type="text"
                     id="name"
                     name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
+                    value={formData.name;
+}
+                    onChange={handleInputChange;
+}
                     required
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
                     placeholder="Your full name"
@@ -152,8 +156,10 @@ const ContactPage: React.FC = () => {
                     type="email"
                     id="email"
                     name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
+                    value={formData.email;
+}
+                    onChange={handleInputChange;
+}
                     required
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
                     placeholder="your@email.com"
@@ -171,8 +177,10 @@ const ContactPage: React.FC = () => {
                     type="text"
                     id="company"
                     name="company"
-                    value={formData.company}
-                    onChange={handleInputChange}
+                    value={formData.company;
+}
+                    onChange={handleInputChange;
+}
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
                     placeholder="Your company name"
                   />
@@ -187,8 +195,10 @@ const ContactPage: React.FC = () => {
                     type="tel"
                     id="phone"
                     name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
+                    value={formData.phone;
+}
+                    onChange={handleInputChange;
+}
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
                     placeholder="+1 (555) 123-4567"
                   />
@@ -204,15 +214,18 @@ const ContactPage: React.FC = () => {
                   <select
                     id="service"
                     name="service"
-                    value={formData.service}
-                    onChange={handleInputChange}
+                    value={formData.service;
+}
+                    onChange={handleInputChange;
+}
                     required
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
                   >
                     <option value="">Select a service</option>
                     {services.map((service) => (
                       <option key={service} value={service} className="bg-gray-800">
-                        {service}
+                        {service;
+}
                       </option>
                     ))}
                   </select>
@@ -225,8 +238,10 @@ const ContactPage: React.FC = () => {
                   <select
                     id="budget"
                     name="budget"
-                    value={formData.budget}
-                    onChange={handleInputChange}
+                    value={formData.budget;
+}
+                    onChange={handleInputChange;
+}
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
                   >
                     <option value="">Select budget range</option>
@@ -245,8 +260,10 @@ const ContactPage: React.FC = () => {
                 <select
                   id="timeline"
                   name="timeline"
-                  value={formData.timeline}
-                  onChange={handleInputChange}
+                  value={formData.timeline;
+}
+                  onChange={handleInputChange;
+}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
                 >
                   <option value="">Select timeline</option>
@@ -265,10 +282,13 @@ const ContactPage: React.FC = () => {
                 <textarea
                   id="message"
                   name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
+                  value={formData.message;
+}
+                  onChange={handleInputChange;
+}
                   required
-                  rows={6}
+                  rows={6;
+}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent resize-none"
                   placeholder="Tell us about your project, goals, and any specific requirements..."
                 />
@@ -276,7 +296,8 @@ const ContactPage: React.FC = () => {
 
               <button
                 type="submit"
-                disabled={isSubmitting}
+                disabled={isSubmitting;
+}
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center"
               >
                 {isSubmitting ? (

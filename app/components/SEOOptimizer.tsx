@@ -2,6 +2,7 @@
 import React from 'react';
 
 interface SEOOptimizerProps {
+
   pageTitle?: string;
   metaDescription?: string;
   keywords?: string[];

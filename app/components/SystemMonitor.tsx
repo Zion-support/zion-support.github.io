@@ -4,8 +4,7 @@
 
         </section>,
         {/* Features Section */}
-        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto"></div>
-        <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto"><div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p>Powerful AI-driven features designed to transform your business operations</p>
             </div>
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
@@ -13,15 +12,15 @@
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"> </div><feature.icon className="h-12 w-12 text-emerald-400 mb-4" /> </feature><h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">{feature.benefits.map((benefit, idx) => (
-                      </ul><li key={idx} className="flex items-center text-sm text-gray-300"> </li><CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />{benefit}
+                      </ul><li key={idx} className="flex items-center text-sm text-gray-300"> </li><CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />{benefit;
+}
                       </CheckCircle></li>
                     ))}
                   </ul>
 
         </section>
         {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5"> </section><div className="max-w-7xl mx-auto"></div>
-        <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+        <section className="py-20 px-4 bg-white/5"> </section><div className="max-w-7xl mx-auto"><div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p>Experience the benefits of cutting-edge AI technology</p>
             </div>
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
@@ -55,14 +54,13 @@
   )
 }
 
-interface SystemStats {;
-  cpu: number,;
+interface SystemStats {
+cpu: number,;
       memory: number,;
       disk: number,;
       network: number,
-  battery?: number
+  battery?: number;
 }
-
 const SystemMonitor: React.FC<SystemMonitorProps> = ({;
   _showDetails = true,;
   refreshInterval = 1000,;
@@ -104,19 +102,16 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({;
   }
   return (
     
-    <div className={`p-4 bg-white rounded-lg shadow-lg ${className}`}></div>
-      <div className="grid grid-cols-2 md: grid-cols-4 gap-4"></div>,
+    <div className={`p-4 bg-white rounded-lg shadow-lg ${className}`}><div className="grid grid-cols-2 md: grid-cols-4 gap-4"></div>,
         {/* CPU */}
-        <div className="..."></div>
-          <div className="..."></div>
+        <div className="..."><div className="..."></div>
             <Cpu className="w-5 h-5 text-blue-500 mr-1" />
             <span className="text-sm font-medium text-gray-700">CPU</span>
           </div>
           <div className="..."></div>
             {stats.cpu.toFixed(0)}%
           </div>
-          <div className="..."></div>
-            <div;
+          <div className="..."><div
               className={`h-2 rounded-full ${getStatusBgColor(stats.cpu)}`}
               style={{ width: `${stats.cpu}%` }}
             ></div>
@@ -124,16 +119,14 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({;
         </div>
 
         {/* Memory */}
-        <div className="..."></div>
-          <div className="..."></div>
+        <div className="..."><div className="..."></div>
             <HardDrive className="w-5 h-5 text-green-500 mr-1" />
             <span className="text-sm font-medium text-gray-700">Memory</span>
           </div>
           <div className="..."></div>
             {stats.memory.toFixed(0)}%
           </div>
-          <div className="..."></div>
-            <div;
+          <div className="..."><div
               className={`h-2 rounded-full ${getStatusBgColor(stats.memory)}`}
               style={{ width: `${stats.memory}%` }}
             ></div>
@@ -141,16 +134,14 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({;
         </div>
 
         {/* Disk */}
-        <div className="..."></div>
-          <div className="..."></div>
+        <div className="..."><div className="..."></div>
             <HardDrive className="w-5 h-5 text-purple-500 mr-1" />
             <span className="text-sm font-medium text-gray-700">Disk</span>
           </div>
           <div className="..."></div>
             {stats.disk.toFixed(0)}%
           </div>
-          <div className="..."></div>
-            <div;
+          <div className="..."><div
               className={`h-2 rounded-full ${getStatusBgColor(stats.disk)}`}
               style={{ width: `${stats.disk}%` }}
             ></div>
@@ -158,16 +149,14 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({;
         </div>
 
         {/* Network */}
-        <div className="..."></div>
-          <div className="..."></div>
+        <div className="..."><div className="..."></div>
             <Wifi className="w-5 h-5 text-orange-500 mr-1" />
             <span className="text-sm font-medium text-gray-700">Network</span>
           </div>
           <div className="..."></div>
             {stats.network.toFixed(0)}%
           </div>
-          <div className="..."></div>
-            <div;
+          <div className="..."><div
               className={`h-2 rounded-full ${getStatusBgColor(stats.network)}`}
               style={{ width: `${stats.network}%` }}
             ></div>
@@ -177,8 +166,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({;
 
       {/* Battery (if available) */}
       {stats.battery !== undefined && (
-        <div className="..."></div>
-          <div className="..."></div>
+        <div className="..."><div className="..."></div>
             <div className="..."></div>
               <Battery className="w-5 h-5 text-gray-500 mr-2" />
               <span className="text-sm font-medium text-gray-700">Battery</span>
@@ -187,8 +175,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({;
               <span className="...">
                 {stats.battery.toFixed(0)}%
               </span>
-              <div className="..."></div>
-                <div;
+              <div className="..."><div
                   className={`h-2 rounded-full ${getStatusBgColor(stats.battery)}`}
                   style={{ width: `${stats.battery}%` }}
                 ></div>

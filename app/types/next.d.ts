@@ -1,16 +1,18 @@
 // Type definitions for Next.js compatibility;
 
 export interface Metadata {
+
   title?: string;
   description?: string;
   keywords?: string[]
-  authors?: Array<{ name: string; url?: string }> | string[]
+  authors?: Array<{ name: string; url?: string}> | string[]
   creator?: string;
   publisher?: string;
   formatDetection?: {
   email?: boolean;
     address?: boolean;
-    telephone?: boolean}
+    telephone?: boolean;
+}
   metadataBase?: URL;
   alternates?: {
   canonical?: string;
@@ -27,8 +29,9 @@ export interface Metadata {
       alt?: string}>
     locale?: string;
     type?: string;
-    authors?: Array<{ name: string; url?: string }> | string[]
-    publishedTime?: string}
+    authors?: Array<{ name: string; url?: string}> | string[]
+    publishedTime?: string;
+}
   twitter?: {
   card?: 'summary' | 'summary_large_image' | 'app' | 'player'
     site?: string;
@@ -45,7 +48,7 @@ export interface Metadata {
       follow?: boolean;
       'max-video-preview'?: number
       'max-image-preview'?: 'none' | 'standard' | 'large'
-      'max-snippet'?: number
+      'max-snippet'?: number;
 }
   }
   verification?: {
@@ -54,42 +57,50 @@ export interface Metadata {
     yahoo?: string;
     other?: Record<string, string>}
 }
-export interface MetadataRoute {;
-  url: string,
+export interface MetadataRoute {
+url: string,
   lastModified?: string | Date
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
-  priority?: number}
+  priority?: number;
+}
 export interface MetadataRouteSitemap extends MetadataRoute {;
   url: string,
   lastModified?: string | Date
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
-  priority?: number}
+  priority?: number;
+}
 // Custom Next.js types;
 
-export interface NextPageProps {;
-  params: { [key: string]: string }
-  searchParams: { [key: string]: string | string[] | undefined }
+export interface NextPageProps {
+params: { [key: string]: string;
+}
+  searchParams: { [key: string]: string | string[] | undefined;
+}
 }
 // API route types;
 
 export interface ApiRouteHandler {
+
   (req: Request): Promise</string><Response>};
 // Server components types;
 
-export interface ServerComponentProps {;
-  params: { [key: string]: string }
-  searchParams: { [key: string]: string | string[] | undefined }
+export interface ServerComponentProps {
+params: { [key: string]: string;
+}
+  searchParams: { [key: string]: string | string[] | undefined;
+}
 }
 // Client components types;
 
 export interface ClientComponentProps {
 
-
   children?: React.ReactNode;
-  className?: string}
+  className?: string;
+}
 // Route handlers;
 
 export interface RouteHandler {
+
   GET?: (req: Request) => Promise<Response>,
   POST?: (req: Request) => Promise<Response>,
   PUT?: (req: Request) => Promise<Response>,
@@ -97,38 +108,41 @@ export interface RouteHandler {
   PATCH?: (req: Request) => Promise<Response>};
 // Dynamic route types;
 
-export interface DynamicRoute {;
-  params: { [key: string]: string }
+export interface DynamicRoute {
+params: { [key: string]: string;
+}
 }
 // Static generation types;
 
-export interface StaticProps {;
-  props: { [key: string]: any }
+export interface StaticProps {
+props: { [key: string]: any;
+}
   revalidate?: number;
-  notFound?: boolean}
+  notFound?: boolean;
+}
 // ISR types;
 
-export interface ISRConfig {;
-  revalidate: number,
+export interface ISRConfig {
+revalidate: number,
   tags?: string[]
 }
 // Edge runtime types;
 
-export interface EdgeRuntime {;
-  runtime: 'edge'}
+export interface EdgeRuntime {
+runtime: 'edge'}
 // Node.js runtime types;
 
-export interface NodeRuntime {;
-  runtime: 'nodejs'}
+export interface NodeRuntime {
+runtime: 'nodejs'}
 // Extend Next.js types
 declare module 'next' {
   interface NextApiRequest {
 
-
     user?: {;
       id: string,;
     email: string,
-      name?: string}
+      name?: string;
+}
   }
 }
 export {}</Response>

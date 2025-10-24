@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 
 const InteractiveAIROICalculator: React.FC = () => {
+
   const [currentCost, setCurrentCost] = useState(100000);
   const [efficiencyGain, setEfficiencyGain] = useState(70);
   const [timeframe, setTimeframe] = useState(12);
@@ -29,7 +30,8 @@ const InteractiveAIROICalculator: React.FC = () => {
                 </label>
                 <input
                   type='number'
-                  value={currentCost}
+                  value={currentCost;
+}
                   onChange={e => setCurrentCost(Number(e.target.value))}
                   className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
                 />
@@ -42,7 +44,8 @@ const InteractiveAIROICalculator: React.FC = () => {
                   type='range'
                   min='10'
                   max='90'
-                  value={efficiencyGain}
+                  value={efficiencyGain;
+}
                   onChange={e => setEfficiencyGain(Number(e.target.value))}
                   className='w-full'
                 />
@@ -58,7 +61,8 @@ const InteractiveAIROICalculator: React.FC = () => {
                   type='range'
                   min='3'
                   max='24'
-                  value={timeframe}
+                  value={timeframe;
+}
                   onChange={e => setTimeframe(Number(e.target.value))}
                   className='w-full'
                 />

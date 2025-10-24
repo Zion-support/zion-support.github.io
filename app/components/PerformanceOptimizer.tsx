@@ -1,8 +1,9 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useEffect} from 'react';
 
 const PerformanceOptimizer: React.FC = () => {
+
   useEffect(() => {
     // Initialize performance optimizations
     const initPerformanceOptimizations = () => {
@@ -49,7 +50,7 @@ const PerformanceOptimizer: React.FC = () => {
           ticking = true;
         }
       };
-      window.addEventListener('scroll', requestTick, { passive: true });
+      window.addEventListener('scroll', requestTick, { passive: true});
     };
 
     initPerformanceOptimizations();

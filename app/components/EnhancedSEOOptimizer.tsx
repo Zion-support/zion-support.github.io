@@ -2,6 +2,7 @@
 import React from 'react';
 
 interface EnhancedSEOOptimizerProps {
+
   pageTitle?: string;
   pageDescription?: string;
   enableOptimization?: boolean;

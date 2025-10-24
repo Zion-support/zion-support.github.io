@@ -2,14 +2,13 @@
 
 import React from 'react'
 ;
-interface BreadcrumbProps {;
-  items: Array<{;
+interface BreadcrumbProps {
+items: Array<{;
     label: string,
-    href?: string
-  }>
+    href?: string}>
 }
 
-const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
+const Breadcrumb: React.FC<BreadcrumbProps> = ({ items}) => {
 
   return (
     
@@ -28,12 +27,12 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
             
             return (
     
-              <li key={name} className="flex items-center"> </li><svg;
+              <li key={name} className="flex items-center"> </li><svg
                   className="flex-shrink-0 h-4 w-4 text-gray-400 mx-2";
                   fill="currentColor";
                   viewBox="0 0 20 20"
                 >
-                  <path;
+                  <path
                     fillRule="evenodd";
                     d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z";
                     clipRule="evenodd"
@@ -44,8 +43,9 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
                     {name.charAt(0).toUpperCase() + name.slice(1).replace(/-/g, ' ')}
                   </span>
                 ) : (
-                  <Link;
-                    href={routeTo}
+                  <Link
+                    href={routeTo;
+}
                     className="text-gray-400 hover: text-white transition-colors",
                   ></Link>
                     {name.charAt(0).toUpperCase() + name.slice(1).replace(/-/g, ' ')}

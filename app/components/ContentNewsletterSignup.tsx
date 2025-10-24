@@ -1,15 +1,16 @@
 
-import React, { useState } from 'react';
-import { CheckCircle, ArrowRight } from 'lucide-react';
+import React, { useState} from 'react';
+import { CheckCircle, ArrowRight} from 'lucide-react';
 
 interface ContentNewsletterSignupProps {
+
   title?: string;
   subtitle?: string;
   placeholder?: string;
   buttonText?: string;
   onSubscribe?: (_email: string) => Promise<void>}
 ;
-    icon: React.ComponentType<{ className?: string }>;
+    icon: React.ComponentType<{ className?: string}>;
     text: string}>
   onSubscribe?: (email: string) => void}constContentNewsletterSignup: React.FC<ContentNewsletterSignupProp s>= ({;
   title= &quot;Stay Updated with Our LatestInsights&quot;
@@ -23,15 +24,17 @@ interface ContentNewsletterSignupProps {
   {;
     icon: Globe, text: &quot;Global updates&quot},
   {;
-    icon: Zap, text: &quot;Early access&quot}
+    icon: Zap, text: &quot;Early access&quot;
+}
   ]
-  onSubscribe
-}) => {
+  onSubscribe}) => {
 
     try {
+
       if (onSubscribe) {
         await onSubscribe(email)
       } else {
+
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 1000))
       }
@@ -39,14 +42,14 @@ interface ContentNewsletterSignupProps {
       setIsSubscribed(true);
       setEmail('')} catch (error) {
       console.error('Subscription failed:', error)} finally {
+
       setIsSubmitting(false)}
   };
 
   if (isSubscribed) {
     return (
     
-      <div className="bg-gradient-to-r from-green-500 to-blue-600 py-16 px-4"></div>
-        <div className="max-w-4xl mx-auto text-center"></div>
+      <div className="bg-gradient-to-r from-green-500 to-blue-600 py-16 px-4"><div className="max-w-4xl mx-auto text-center"></div>
           <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6"></div>
             <CheckCircle className="w-8 h-8 text-white" />
           </div>
@@ -56,7 +59,7 @@ interface ContentNewsletterSignupProps {
           <p className="text-xl text-blue-100 mb-8">
             Thank you for subscribing. You'll receive our latest insights and updates soon.
           </p>
-          <button;
+          <button
             onClick={() =>setIsSubscribed(false)}
             className="text-white underline hover: text-blue-200 transition-colors",
           >
@@ -67,24 +70,27 @@ interface ContentNewsletterSignupProps {
 
   return (
     
-    <div className="bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 py-16 px-4"></div>
-        <div className="max-w-4xl mx-auto text-center"> </div><h2 className="text-4xl font-bold text-white mb-4">{title}</h2>
+    <div className="bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 py-16 px-4"><div className="max-w-4xl mx-auto text-center"> </div><h2 className="text-4xl font-bold text-white mb-4">{title}</h2>
         <p className="text-xl text-gray-300 mb-8">{subtitle}</p>
         
         <form onSubmit={handleSubmit} className="max-w-md mx-auto mb-8"> </form><div className="flex flex-col sm: flex-row gap-4">,
-            <input;
+            <input
               type="email";
-              value={email}
+              value={email;
+}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder={placeholder}
+              placeholder={placeholder;
+}
               className="flex-1 px-4 py-3 rounded-lg bg-slate-800 border border-slate-600 text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent",
               required
             />
-            <button;
+            <button
               type="submit";
-              disabled={isLoading}
+              disabled={isLoading;
+}
               className="bg-emerald-600 hover: bg-emerald-700 disabled:bg-emerald-800 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center",
-            >{isLoading ? 'Subscribing...' : buttonText}
+            >{isLoading ? 'Subscribing...' : buttonText;
+}
               </button><ArrowRight className="ml-2 h-4 w-4" />
             </button>
           </div>

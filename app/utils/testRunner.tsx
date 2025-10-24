@@ -3,8 +3,7 @@ import React from 'react';
 
 const testRunner = ($2) => {
 
-$3
-};
+$3};
 
 export default testRunner
 ;

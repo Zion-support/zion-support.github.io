@@ -2,6 +2,7 @@
 import React from 'react';
 
 interface UltimateBusinessIntelligence2025BannerProps {
+
   title?: string;
   subtitle?: string;
   onAction?: () => void;

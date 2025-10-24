@@ -1,9 +1,8 @@
 "use client";
+import React, { useRef, useEffect} from 'react';
 
-import React, { useRef, useEffect } from 'react';
-
-interface FuturisticGlowProps {;
-  children: React.ReactNode;,
+interface FuturisticGlowProps {
+children: React.ReactNode,
   intensity?: 'low' | 'medium' | 'high';
   color?: string;
   className?: string;
@@ -25,13 +24,11 @@ export default function FuturisticGlow({
 
     const getIntensityValue = ($2) => {
 
-$3
-}};
+$3}};
 
     const getColorValue = ($2) => {
 
-$3
-}};
+$3}};
 
 
     const rgb = getColorValue();
@@ -44,8 +41,9 @@ const getIntensityValue = () => {
 
   return (
     
-    <div;
-      ref={containerRef}
+    <div
+      ref={containerRef;
+}
       className={`
         relative;
         before: absolute,;
@@ -67,9 +65,11 @@ const getIntensityValue = () => {
         after: transition-opacity ,;
         after: duration-500,;
         hover: after:opacity-100,
-        ${className}
+        ${className;
+}
       `}
 
-    >{children}
+    >{children;
+}
     </div></div>
   )}

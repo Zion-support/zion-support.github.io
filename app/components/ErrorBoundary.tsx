@@ -1,21 +1,23 @@
 
 'use client';
 import React from 'react';
-import React, { Component, ReactNode, ErrorInfo } from 'react';
+import React, { Component, ReactNode, ErrorInfo} from 'react';
 
 
 
 import Footer from '../components/Footer';interface Props {
-  children: ReactNode;,
+
+  children: ReactNode,
 }
 
 
-  children: ReactNode;,
+  children: ReactNode,
 ,
 
 }
 interface State {
-  hasError: boolean;,
+
+  hasError: boolean,
   error: Error | undefined;
 }
 
@@ -40,8 +42,7 @@ interface State {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth = {
-2
-};
+2};
         
         
         
@@ -85,7 +86,8 @@ interface State {
                 </div><div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;> </div><feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; /> </feature><h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
                   <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
                   <ul className=&quot;space-y-2&quot;>{feature.benefits.map((benefit, idx) => (
-                      </ul><li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;> </li><CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; />{benefit}
+                      </ul><li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;> </li><CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; />{benefit;
+}
                       </CheckCircle></li>
                     ))}
                   </ul>
@@ -130,12 +132,14 @@ interface State {
 export default ErrorBoundaryPage
 error?: Error;
 
-errorInfo?: ErrorInfo}
+errorInfo?: ErrorInfo;
+}
 class ErrorBoundary extends Component<Props, State>{constructor(props: Props) {,
 super(props)
-this.state= { hasError: false}
-static getDerivedStateFromError(error: Error): State {return { hasError: true, error}
-
+this.state= {
+  hasError: false}
+static getDerivedStateFromError(error: Error): State {return { hasError: true, error;
+}
 }
 componentDidCatch(error: Error, errorInfo: ErrorInfo) {// Log error for monitoring in production,
 
@@ -146,11 +150,9 @@ this.setState({errorerrorInfo})
 
 }
 handleReload = ($2) => {
-$3
-};
+$3};
 handleGoHome = ($2) => {
-$3
-};
+$3};
 render() {
   if(this.state.hasError) {
 if(this.props.fallback) {
@@ -168,21 +170,24 @@ return (
 </details><summary className=&quot;text-sm text-gray-400 cursor-pointer mb-2&quot;>Error Details (Development)
 </summary></summary>
 <pre className=&quot;text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto&quot;>{this.state.error.toString()},
-{this.state.errorInfo?.componentStack}
+{this.state.errorInfo?.componentStack;
+}
 </pre>
 </details>
 )}
 <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;>,
 </div><button
-onClick={this.handleReload}
-className=&quot;flex items-center justify-center space-x-2 bg-cyan-600 hover: bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200&quot;,
+onClick={this.handleReload;
+}
+className=&quot;flex items-center justify-center space-x-2 bg-cyan-600 hover: bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200&quot,
 >
 </button><RefreshCw className=&quot;w-4 h-4&quot; />
 </RefreshCw><span>Reload Page</span>
 </button>
 <button
-onClick={this.handleGoHome}
-className=&quot;flex items-center justify-center space-x-2 border border-cyan-600 text-cyan-400 hover: bg-cyan-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200&quot;,
+onClick={this.handleGoHome;
+}
+className=&quot;flex items-center justify-center space-x-2 border border-cyan-600 text-cyan-400 hover: bg-cyan-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200&quot,
 >
 </button><Home className=&quot;w-4 h-4&quot; />
 </Home><span>Go Home</span>
@@ -191,7 +196,7 @@ className=&quot;flex items-center justify-center space-x-2 border border-cyan-60
 <div className=&quot;mt-6 pt-6 border-t border-white/20&quot;>
 </div><p className=&quot;text-sm text-gray-400 mb-3&quot;>Still having trouble? Contact our support team: </p>p>,
 <a
-href=&quot;mailto: kleber@ziontechgroup.com&quot;,
+href=&quot;mailto: kleber@ziontechgroup.com&quot,
 className=&quot;inline-flex items-center text-cyan-400 hover: text-cyan-300 transition-colors&quot;>,
 <Phone className=&quot;w-4 h-4 mr-2&quot; />kleber@ziontechgroup.com
 </Phone></a>

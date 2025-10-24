@@ -2,7 +2,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -147,8 +147,7 @@ export default function AccessibilityPage() {
       
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-        <div className="relative max-w-7xl mx-auto text-center">
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"><div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Accessibility Solutions
           </h1>
@@ -211,7 +210,8 @@ export default function AccessibilityPage() {
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-gray-700">
                       <CheckCircle className="h-4 w-4 text-emerald-500 mr-2" />
-                      {benefit}
+                      {benefit;
+}
                     </li>
                   ))}
                 </ul>
@@ -270,3 +270,4 @@ export default function AccessibilityPage() {
     </>
   );
 }
+</div></div></div></div></div></div></div>

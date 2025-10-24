@@ -1,9 +1,10 @@
 'use client';
 
-import React, { useEffect, useState, useCallback } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useEffect, useState, useCallback} from 'react';
+import { Helmet} from 'react-helmet-async';
 
 interface SEOOptimizerProps {
+
   title?: string
   description?: string
   keywords?: string
@@ -11,9 +12,8 @@ interface SEOOptimizerProps {
   ogImage?: string
   twitterCard?: string
   structuredData?: object
-  children: React.ReactNode
+  children: React.ReactNode;
 }
-
 const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
@@ -22,8 +22,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
   ogImage = '/images/og-image.jpg',
   twitterCard = 'summary_large_image',
   structuredData,
-  children
-}) => {
+  children}) => {
   const [seoScore, setSeoScore] = useState(0)
   const [recommendations, setRecommendations] = useState<string[]>([])
   const analyzeSEO = useCallback(() => {
@@ -32,37 +31,37 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
     const newRecommendations: string[] = [];
     // Check title length
     if (title.length >= 30 && title.length <= 60) {
-      score += 20
-    } else {
+      score += 20} else {
+
       newRecommendations.push('Title should be between 30-60 characters')
     }
 
     // Check description length
     if (description.length >= 120 && description.length <= 160) {
-      score += 20
-    } else {
+      score += 20} else {
+
       newRecommendations.push('Description should be between 120-160 characters')
     }
 
     // Check for keywords in title
     if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
-      score += 15
-    } else {
+      score += 15} else {
+
       newRecommendations.push('Include primary keyword in title')
     }
 
     // Check for keywords in description
     if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
-      score += 15
-    } else {
+      score += 15} else {
+
       newRecommendations.push('Include primary keyword in description')
     }
 
     // Check for heading structure
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6')
     if (headings.length > 0) {
-      score += 10
-    } else {
+      score += 10} else {
+
       newRecommendations.push('Add proper heading structure')
     }
 
@@ -70,16 +69,16 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
     const images = document.querySelectorAll('img')
     const imagesWithAlt = document.querySelectorAll('img[alt]')
     if (images.length === imagesWithAlt.length && images.length > 0) {
-      score += 10
-    } else {
+      score += 10} else {
+
       newRecommendations.push('Add alt text to all images')
     }
 
     // Check for internal links
     const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]')
     if (internalLinks.length > 0) {
-      score += 10
-    } else {
+      score += 10} else {
+
       newRecommendations.push('Add internal links for better SEO')
     }
 
@@ -102,8 +101,8 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
         "https://linkedin.com/company/ziontechgroup"
       ]
     }
-    return structuredData || defaultStructuredData
-  }
+    return structuredData || defaultStructuredData;
+}
     return (
     <>
       <Helmet>
@@ -151,8 +150,8 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
         </script>
       </Helmet>
 
-      {children}
-
+      {children;
+}
       {process.env.NODE_ENV === 'development' && (
         <div
           className="seo-debug"

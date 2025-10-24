@@ -2,9 +2,9 @@
 import React from "react";
 interface AccessibilityComponentsProps {
 
-  className?: string}
-
-const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({ className }) => {
+  className?: string;
+}
+const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({ className}) => {
 
   return (
     

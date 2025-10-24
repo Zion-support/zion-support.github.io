@@ -1,23 +1,23 @@
-import React, { Component, ReactNode, ErrorInfo } from 'react'
-import { AlertTriangle, Home, RefreshCw } from 'lucide-react'
+import React, { Component, ReactNode, ErrorInfo} from 'react'
+import { AlertTriangle, Home, RefreshCw} from 'lucide-react'
 
 interface AdvancedErrorBoundaryProps {
+
   children: ReactNode
   className?: string
-  onError?: (_error: Error, _errorInfo: ErrorInfo) => void
+  onError?: (_error: Error, _errorInfo: ErrorInfo) => void;
 }
-
 interface State {
+
   hasError: boolean
   error?: Error
   errorInfo?: ErrorInfo
-  errorId?: string
-}
-
+  errorId?: string}
 class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State> {
   constructor(props: AdvancedErrorBoundaryProps) {
     super(props)
-    this.state = { hasError: false }
+    this.state = {
+  hasError: false}
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
@@ -31,8 +31,7 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
     this.setState({
       hasError: true,
       error: _error,
-      errorInfo: _errorInfo
-    })
+      errorInfo: _errorInfo})
     
     // Call custom error handler if provided
     if (this.props.onError) {
@@ -69,7 +68,7 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
   }
 
   handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined })
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined})
   }
 
   render() {
@@ -84,7 +83,8 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
             </p>
             <div className="...">
               <button
-                onClick={this.handleRetry}
+                onClick={this.handleRetry;
+}
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 flex items-center justify-center"
               >
                 <RefreshCw className="h-4 w-4 mr-2" />
@@ -103,8 +103,8 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
       )
     }
 
-    return this.props.children
-  }
+    return this.props.children;
+}
 }
 
 export default AdvancedErrorBoundary
