@@ -3,11 +3,9 @@ import React, { createContext, useContext, useEffect, useState } from 'react';
 
 
 interface AnalyticsContextType {
-  trackEvent: (eventNam,
-      e: string, parameters?: Record<string, any>) => void;
-  trackPageView: (pag,
-      e: string) => void;
-};
+  trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
+  trackPageView: (page: string) => void;
+}
 
   const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
