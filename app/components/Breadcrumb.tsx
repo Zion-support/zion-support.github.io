@@ -1,11 +1,12 @@
 'use client';
 
 import React from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 const Breadcrumb: React.FC = () => {
-  const location = useLocation();
-  const pathnames = location.pathname.split('/').filter((x) => x);
+  const pathname = usePathname();
+  const pathnames = pathname.split('/').filter((x) => x);
   
   if (pathnames.length === 0) {
     return null;
@@ -43,7 +44,7 @@ const Breadcrumb: React.FC = () => {
                   </span>
                 ) : (
                   <Link
-                    to={routeTo}
+                    href={routeTo}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
                     {name.charAt(0).toUpperCase() + name.slice(1).replace(/-/g, ' ')}
