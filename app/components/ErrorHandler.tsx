@@ -58,12 +58,6 @@ const ErrorHandler: React.FC = () => {
           </div>
 
           <div className="text-center">
-<<<<<<< HEAD
-            <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center mx-auto">
-              Get Started
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </button>
-=======
             <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Transform your business with our cutting-edge AI solutions. Contact us today to learn more.
@@ -75,20 +69,12 @@ const ErrorHandler: React.FC = () => {
               Get Started
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
->>>>>>> 25adb2f5c6bac8e2e9c4ea63f8e65ad0a7ecbbec
           </div>
         </div>
       </div>
       <Footer />
     </>
-<<<<<<< HEAD
   );
 };
 
-export default Page;
-=======
-  )
-}
-
-export default ErrorHandler
->>>>>>> 25adb2f5c6bac8e2e9c4ea63f8e65ad0a7ecbbec
+export default ErrorHandler;

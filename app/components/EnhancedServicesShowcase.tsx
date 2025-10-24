@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Users } from 'lucide-react';
-=======
-'use client'
-import React from 'react'
-import { Brain, Zap, Shield, Globe, ArrowRight, CheckCircle } from 'lucide-react'
->>>>>>> 25adb2f5c6bac8e2e9c4ea63f8e65ad0a7ecbbec
 
 const EnhancedServicesShowcase: React.FC = () => {
   const services = [
