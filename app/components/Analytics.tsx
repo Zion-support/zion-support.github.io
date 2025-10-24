@@ -1,12 +1,14 @@
 'use client';
-import React, { useEffect } from 'react';
 
-// Extend Window interface for gtag
+import { useEffect } from 'react';
+
 declare global {
   interface Window {
-    gtag?: (..._args: unknown[]) => void;
+    gtag: (...args: unknown[]) => void;
   }
 }
+
+const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_TRACKING_ID;
 
 interface AnalyticsProps {
   enableGoogleAnalytics?: boolean;
@@ -22,63 +24,111 @@ const Analytics: React.FC<AnalyticsProps> = ({
   enableUserBehaviorTracking = true,
 }) => {
   useEffect(() => {
-<<<<<<< HEAD
     if (enableGoogleAnalytics) {
-      initializeGoogleAnalytics()
-=======
-    if (!GA_TRACKING_ID) return
-
-    // Initialize gtag
-    window.gtag = window.gtag || function() {
-      (window.gtag as any).q = (window.gtag as any).q || []
-      ;(window.gtag as any).q.push(arguments)
->>>>>>> origin/fix-typescript-errors-main
+      initializeGoogleAnalytics();
     }
     
     if (enablePerformanceMonitoring) {
-      initializePerformanceMonitoring()
+      initializePerformanceMonitoring();
     }
     
     if (enableErrorTracking) {
-      initializeErrorTracking()
+      initializeErrorTracking();
     }
     
     if (enableUserBehaviorTracking) {
-      initializeUserBehaviorTracking()
+      initializeUserBehaviorTracking();
     }
-  }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking])
+  }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]);
 
   const initializeGoogleAnalytics = () => {
-    // Load Google Analytics
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', 'GA_MEASUREMENT_ID')
-    }
-  }
+    if (!GA_TRACKING_ID) return;
+
+    // Load Google Analytics script
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
+    document.head.appendChild(script);
+
+    // Initialize gtag
+    window.gtag = window.gtag || function() {
+      (window.gtag as any).q = (window.gtag as any).q || [];
+      (window.gtag as any).q.push(arguments);
+    };
+    
+    window.gtag('js', new Date());
+    window.gtag('config', GA_TRACKING_ID, {
+      page_title: document.title,
+      page_location: window.location.href,
+    });
+  };
 
   const initializePerformanceMonitoring = () => {
-    // Initialize performance monitoring
+    // Monitor Core Web Vitals
     if (typeof window !== 'undefined' && 'performance' in window) {
-      // Performance monitoring logic
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            window.gtag?.('event', 'LCP', {
+              value: Math.round(entry.startTime),
+              event_category: 'Web Vitals',
+            });
+          }
+        }
+      });
+      
+      observer.observe({ entryTypes: ['largest-contentful-paint'] });
     }
-  }
+  };
 
   const initializeErrorTracking = () => {
-    // Initialize error tracking
-    if (typeof window !== 'undefined') {
-      window.addEventListener('error', (event) => {
-        console.error('Error tracked:', event.error)
-      })
-    }
-  }
+    // Track JavaScript errors
+    window.addEventListener('error', (event) => {
+      window.gtag?.('event', 'exception', {
+        description: event.error?.message || 'Unknown error',
+        fatal: false,
+        event_category: 'Error',
+      });
+    });
+
+    // Track unhandled promise rejections
+    window.addEventListener('unhandledrejection', (event) => {
+      window.gtag?.('event', 'exception', {
+        description: event.reason?.message || 'Unhandled promise rejection',
+        fatal: false,
+        event_category: 'Error',
+      });
+    });
+  };
 
   const initializeUserBehaviorTracking = () => {
-    // Initialize user behavior tracking
-    if (typeof window !== 'undefined') {
-      // User behavior tracking logic
-    }
-  }
+    // Track page views
+    const trackPageView = () => {
+      window.gtag?.('event', 'page_view', {
+        page_title: document.title,
+        page_location: window.location.href,
+        event_category: 'Navigation',
+      });
+    };
 
-  return null; // This component doesn't render anything visible
-}
+    // Track clicks on external links
+    document.addEventListener('click', (event) => {
+      const target = event.target as HTMLElement;
+      const link = target.closest('a');
+      
+      if (link && link.hostname !== window.location.hostname) {
+        window.gtag?.('event', 'click', {
+          event_category: 'Outbound Link',
+          event_label: link.href,
+        });
+      }
+    });
 
-export default Analytics
+    // Initial page view
+    trackPageView();
+  };
+
+  return null;
+};
+
+export default Analytics;

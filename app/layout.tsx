@@ -1,8 +1,16 @@
-import type { Metadata } from 'next'
-import './globals.css'
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+import Analytics from './components/Analytics';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceMonitor from './components/PerformanceMonitor';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-<<<<<<< HEAD
   title: 'Zion Tech Group - Leading AI & Technology Solutions Provider',
   description: 'Transform your business with cutting-edge AI, cloud architecture, cybersecurity, and innovative development services. Expert technology solutions for modern enterprises.',
   keywords: 'AI solutions, artificial intelligence, cloud architecture, web development, mobile apps, data analytics, cybersecurity, machine learning, cloud computing, digital transformation',
@@ -14,14 +22,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://zion.app'),
+  metadataBase: new URL('https://ziontechgroup.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: 'Zion Tech Group - Leading AI & Technology Solutions Provider',
     description: 'Transform your business with cutting-edge AI, cloud architecture, cybersecurity, and innovative development services.',
-    url: 'https://zion.app',
+    url: 'https://ziontechgroup.com',
     siteName: 'Zion Tech Group',
     images: [
       {
@@ -42,6 +50,9 @@ export const metadata: Metadata = {
   },
   robots: {
     index: true,
+    follow: true,
+    googleBot: {
+      index: true,
       follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
@@ -51,19 +62,14 @@ export const metadata: Metadata = {
   verification: {
     google: 'your-google-verification-code',
   },
-=======
-  title: 'Zion Tech Group - AI & IT Solutions',
-  description: 'Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology.',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5588
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-<<<<<<< HEAD
     <html lang="en" className="scroll-smooth">
       <head>
         <link rel="icon" href="/favicon.ico" />
@@ -71,8 +77,8 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        <meta name="theme-color" content="#7c3aed" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        <meta name="theme-color" content="#3b82f6" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className={`${inter.className} antialiased`}>
         <Analytics />
@@ -82,10 +88,6 @@ export default function RootLayout({
         </AccessibilityEnhancer>
         <PerformanceMonitor />
       </body>
-=======
-    <html lang="en">
-      <body>{children}</body>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5588
     </html>
-  )
+  );
 }
