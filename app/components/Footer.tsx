@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight } from 'lucide-react';
 
 const Footer: React.FC = memo(function Footer() {
@@ -71,7 +71,7 @@ const Footer: React.FC = memo(function Footer() {
               {aiServices.map((service, index) => (
                 <li key={index}>
                   <Link
-                    to={service.url}
+                    href={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
                   >
                     {service.name}
@@ -88,7 +88,7 @@ const Footer: React.FC = memo(function Footer() {
               {itServices.map((service, index) => (
                 <li key={index}>
                   <Link
-                    to={service.url}
+                    href={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
                   >
                     {service.name}
@@ -105,7 +105,7 @@ const Footer: React.FC = memo(function Footer() {
               {technologies.map((tech, index) => (
                 <li key={index}>
                   <Link
-                    to={tech.url}
+                    href={tech.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
                   >
                     {tech.name}
@@ -122,7 +122,7 @@ const Footer: React.FC = memo(function Footer() {
               {company.map((item, index) => (
                 <li key={index}>
                   <Link
-                    to={item.url}
+                    href={item.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
                   >
                     {item.name}
@@ -136,7 +136,7 @@ const Footer: React.FC = memo(function Footer() {
               {resources.map((resource, index) => (
                 <li key={index}>
                   <Link
-                    to={resource.url}
+                    href={resource.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
                   >
                     {resource.name}

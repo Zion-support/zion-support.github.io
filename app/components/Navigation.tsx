@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap } from 'lucide-react';
 
 const Navigation: React.FC = () => {
@@ -72,7 +72,7 @@ const Navigation: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
                 <Brain className="w-5 h-5 text-white" />
               </div>
@@ -100,7 +100,7 @@ const Navigation: React.FC = () => {
                         {aiServices.map((service, serviceIndex) => (
                           <Link
                             key={serviceIndex}
-                            to={service.href}
+                            href={service.href}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors"
                             onClick={handleDropdownClose}
                           >
@@ -124,7 +124,7 @@ const Navigation: React.FC = () => {
                         {itServices.map((service, serviceIndex) => (
                           <Link
                             key={serviceIndex}
-                            to={service.href}
+                            href={service.href}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors"
                             onClick={handleDropdownClose}
                           >
@@ -148,7 +148,7 @@ const Navigation: React.FC = () => {
                         {microSaaSServices.map((service, serviceIndex) => (
                           <Link
                             key={serviceIndex}
-                            to={service.href}
+                            href={service.href}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors"
                             onClick={handleDropdownClose}
                           >
@@ -160,7 +160,7 @@ const Navigation: React.FC = () => {
                   </div>
                 ) : (
                   <Link
-                    to={item.href}
+                    href={item.href}
                     className="text-gray-700 hover:text-purple-600 transition-colors font-medium"
                   >
                     {item.name}
@@ -173,7 +173,7 @@ const Navigation: React.FC = () => {
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
             <Link
-              to="/contact"
+              href="/contact"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-200 font-medium"
             >
               Get Started
@@ -211,7 +211,7 @@ const Navigation: React.FC = () => {
                           {aiServices.map((service, serviceIndex) => (
                             <Link
                               key={serviceIndex}
-                              to={service.href}
+                              href={service.href}
                               className="block px-3 py-2 text-sm text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors"
                               onClick={() => {
                                 setIsOpen(false);
@@ -238,7 +238,7 @@ const Navigation: React.FC = () => {
                           {itServices.map((service, serviceIndex) => (
                             <Link
                               key={serviceIndex}
-                              to={service.href}
+                              href={service.href}
                               className="block px-3 py-2 text-sm text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors"
                               onClick={() => {
                                 setIsOpen(false);
@@ -265,7 +265,7 @@ const Navigation: React.FC = () => {
                           {microSaaSServices.map((service, serviceIndex) => (
                             <Link
                               key={serviceIndex}
-                              to={service.href}
+                              href={service.href}
                               className="block px-3 py-2 text-sm text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors"
                               onClick={() => {
                                 setIsOpen(false);
@@ -280,7 +280,7 @@ const Navigation: React.FC = () => {
                     </div>
                   ) : (
                     <Link
-                      to={item.href}
+                      href={item.href}
                       className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors"
                       onClick={() => setIsOpen(false)}
                     >
@@ -293,7 +293,7 @@ const Navigation: React.FC = () => {
               {/* Mobile CTA Button */}
               <div className="pt-4 border-t border-gray-200">
                 <Link
-                  to="/contact"
+                  href="/contact"
                   className="block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-200 font-medium text-center"
                   onClick={() => setIsOpen(false)}
                 >

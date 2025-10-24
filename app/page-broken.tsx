@@ -45,30 +45,31 @@ export default function AppPage() {
 
       {/* Services Section */}
       <section className="mb-16" aria-labelledby="services-heading">
-        <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-          Our Services
-        </h2>
-        <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-          Comprehensive AI and IT solutions designed to transform your business operations
-        </p>
-        
-        {/* Primary Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
-          <Suspense fallback={<ServiceCardSkeleton />}>
-            <article className="cyber-card hologram-card p-4 sm:p-6">
-              <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🤖</div>
-              <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Services</h3>
-              <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
-                Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
-              </p>
-              <div className="text-center">
-                <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2">Starting at $1,500/month</div>
-                <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base">
-                  Learn More →
-                </a>
-              </div>
-            </article>
-          </Suspense>
+        <div className="container mx-auto px-4">
+          <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+            Our Services
+          </h2>
+          <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
+            Comprehensive AI and IT solutions designed to transform your business operations
+          </p>
+          
+          {/* Primary Services Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="cyber-card hologram-card p-4 sm:p-6">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🤖</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Services</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2">Starting at $1,500/month</div>
+                  <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card hologram-card p-4 sm:p-6">
@@ -210,7 +211,7 @@ export default function AppPage() {
             </a>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

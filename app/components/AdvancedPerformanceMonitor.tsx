@@ -92,7 +92,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               'hadRecentInput' in entry &&
               'value' in entry
             ) {
-              const clsEntry = entry as LayoutShift;
+              const clsEntry = entry as any;
               if (!clsEntry.hadRecentInput) {
                 clsValue += clsEntry.value;
                 setMetrics(prev => ({ ...prev, cls: clsValue }));
