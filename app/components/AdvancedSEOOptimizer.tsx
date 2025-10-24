@@ -74,9 +74,9 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Powerful AI-driven features designed to transform your business operations
@@ -217,14 +217,30 @@ return (
 {process.env.NODE_ENV === 'development' && (
 <div className="seo-debug" style={{
 position: 'fixed',
-top: '10 px',
-left: '10 px',
-background: 'rgba(0,0,0,0.8)',
-color: 'white',
-padding: '10 px',
-borderRadius: '5 px',
-fontSize: '12 px',
-zIndex:1000,
-maxWidth: '300 px'}}><di v>SEOScore:{seoScore}/100</di>{recommendations.length >0&&(<di v><di v>Recommendations:</di><ulstyle={{ margin: '5 px 0', paddingLeft: '15 px'}}>{recommendations.map((recindex)=>(<likey={index}>{rec}</l>))}</u></di>)}</di>)}</>)
+        top: '10px',
+        left: '10px',
+        background: 'rgba(0,0,0,0.8)',
+        color: 'white',
+        padding: '10px',
+        borderRadius: '5px',
+        fontSize: '12px',
+        zIndex: 1000,
+        maxWidth: '300px'
+      }}>
+        <div>SEO Score: {seoScore}/100</div>
+        {recommendations.length > 0 && (
+          <div>
+            <div>Recommendations:</div>
+            <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
+              {recommendations.map((rec, index) => (
+                <li key={index}>{rec}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+    )}
+  </>
+)
 }
 export default AdvancedSEOOptimizer

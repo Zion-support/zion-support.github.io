@@ -204,8 +204,8 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     if (typeof window === 'undefined') return
 
     // Report to analytics
-    if ('gtag' in windo w) {
-      (windo w as any).gtag('event', 'web_vitals', {
+    if ('gtag' in window) {
+      (window as any).gtag('event', 'web_vitals', {
         event_category: 'Performance',
         event_label: 'Core Web Vitals',
         value: Math.round(performanceMetrics.lcp),
@@ -213,7 +213,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           fcp: Math.round(performanceMetrics.fcp),
           lcp: Math.round(performanceMetrics.lcp),
           fid: Math.round(performanceMetrics.fid),
-          cls: Math.round(performanceMetrics.cls * 100 0) / 1000}
+          cls: Math.round(performanceMetrics.cls * 1000) / 1000
 
     }
   }, [performanceMetrics])
@@ -246,7 +246,3 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 }
 
 export default AdvancedPerformanceOptimizer
-}}}}}
-};
-
-export default AdvancedPerformanceOptimizerPage;
