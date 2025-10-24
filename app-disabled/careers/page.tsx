@@ -3,7 +3,17 @@ import { Helmet } from 'react-helmet-async';
 import { MapPin, Clock, Users, Briefcase, Star } from 'lucide-react';
 
 interface JobPosition {
-  // Add properties here
+  id: number;
+  title: string;
+  department: string;
+  location: string;
+  type: string;
+  experience: string;
+  posted: string;
+  description: string;
+  requirements: string[];
+  benefits: string[];
+  featured: boolean;
 }
   id: number
 import { Right, Circle} from 'lucide-react
@@ -164,41 +174,33 @@ import { Right, Circle, Star} from 'lucide-react'
   const filteredPositions = positions.filter(position => {}
     const matchesDepartment = selectedDepartment === 'all || position.department === selectedDepartment
 
-    const matchesLocation = selectedLocation === 'all || position.location === selectedLocation
+const CareersPage: React.FC = () => {
+  const [selectedDepartment, setSelectedDepartment] = useState('all');
+  const [selectedLocation, setSelectedLocation] = useState('all');
 
-  const featuredPositions = filteredPositions.filter(position => position.featured)
-  const regularPositions = filteredPositions.filter(position => !position.featured)
-      id: '1,
-      title: 'Senior AI Engineer,
-      department: 'AI Solutions',      location: 'Remote,
-      type: 'Full-time,
-      experience: '5+ years,
-      description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.,
-      requirements: []
-        '5+ years experience in AI/ML development,
-        'Expertise in Python, TensorFlow, PyTorch,
-        'Experience with cloud platforms (AWS, Azure, GCP),
-        'Strong understanding of deep learning algorithms,
-        Previous experience in production AI systems
-      ],
-      benefits: []
-        'Competitive salary: $120,000 - $180,000,
-        'Equity participation,
-        'Flexible remote work,
-        Professional development budget
+  const positions: JobPosition[] = [
+    {
+      id: 1,
+      title: 'Senior AI Engineer',
+      department: 'Engineering',
+      location: 'Remote',
+      type: 'Full-time',
+      experience: '5+ years',
+      posted: '2 days ago',
       description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
-      requirements: []
+      requirements: [
+        'Master\'s degree in Computer Science or related field',
         '5+ years experience in AI/ML development',
         'Expertise in Python, TensorFlow, PyTorch',
         'Experience with cloud platforms (AWS, Azure, GCP)',
-        'Strong understanding of deep learning algorithms',
-        'Previous experience in production AI systems'
+        'Strong problem-solving and communication skills'
       ],
-      benefits: []
-        'Competitive salary: $120,000 - $180,000',
-        'Equity participation',
-        'Flexible remote work',
-        'Professional development budget'
+      benefits: [
+        'Competitive salary and equity',
+        'Comprehensive health insurance',
+        'Flexible work arrangements',
+        'Professional development budget',
+        '401k with company matching'
       ],
       posted: '2 days ago,
       featured: true}
