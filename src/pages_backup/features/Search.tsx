@@ -1,21 +1,12 @@
+import React from 'react';
 
-    <
-      <
-        <
-    <
-    <
-    <
-    <
-    <
-          <
-    <
-    <
-    <
-            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: </p>,<
-    <
-    <
-            <
-    <
-    <
-            <
-    <
+const Search: React.FC = () => {
+  return (
+    <div className="search">
+      <h1>Search Features</h1>
+      <p>Advanced search functionality.</p>
+    </div>
+  );
+};
+
+export default Search;

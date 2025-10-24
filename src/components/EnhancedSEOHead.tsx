@@ -1,31 +1,16 @@
+import React from 'react';
 
-const SEOHead: React.FC<
-d: React.FC<
-    <
-        <
-    <
-    <
-    <
-            <
-            </p>,<
-        <
-    <
-    <
-    <
-              <
-    <
-                <
-    <
-                  <
-    <
-    <
-    <
-              <
-    <
-                <
-                  <
-    <
-    <
-            <
-    <
-      <
+interface EnhancedSEOHeadProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default EnhancedSEOHead;

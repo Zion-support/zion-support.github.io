@@ -1,21 +1,16 @@
+import React from 'react';
 
-      <
-      <
-        <
-    <
-    <
-    <
-    <
-    <
-          <
-    <
-    <
-    <
-            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: </p>,<
-    <
-    <
-            <
-    <
-    <
-            <
-    <
+interface NavigationProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const Navigation: React.FC<NavigationProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default Navigation;

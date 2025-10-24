@@ -1,5 +1,17 @@
+import React from 'react';
+import { createRoot } from 'react-dom/client';
 
-<
-    <
-    <div className="max-w-7 xl mx-auto px-4 sm: px-6 lg:px-8 py-16 text-center"></div>,<
-          <
+const App = () => {
+  return (
+    <div>
+      <h1>Zion Tech Group</h1>
+      <p>Welcome to our application</p>
+    </div>
+  );
+};
+
+const container = document.getElementById('root');
+if (container) {
+  const root = createRoot(container);
+  root.render(<App />);
+}

@@ -1,11 +1,22 @@
-'use client';
-import React from 'react';
+import { useState, useCallback } from 'react';
 
-export default function useForm() {
-  return (
-    <div>
-      <h1>useForm</h1>
-      <p>useForm content.</p>
-    </div>
-  );
-}
+export const useForm = (initialValues: Record<string, any> = {}) => {
+  const [values, setValues] = useState(initialValues);
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  const handleChange = useCallback((name: string, value: any) => {
+    setValues(prev => ({ ...prev, [name]: value }));
+    if (errors[name]) {
+      setErrors(prev => ({ ...prev, [name]: '' }));
+    }
+  }, [errors]);
+
+  const handleSubmit = useCallback((onSubmit: (values: Record<string, any>) => void) => {
+    return (e: React.FormEvent) => {
+      e.preventDefault();
+      onSubmit(values);
+    };
+  }, [values]);
+
+  return { values, errors, handleChange, handleSubmit, setErrors };
+};

@@ -1,11 +1,6 @@
-'use client';
-import React from 'react';
+import { clsx, type ClassValue } from 'clsx';
+import { twMerge } from 'tailwind-merge';
 
-export default function cn() {
-  return (
-    <div>
-      <h1>cn</h1>
-      <p>cn content.</p>
-    </div>
-  );
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
 }

@@ -1,21 +1,12 @@
+import React from 'react';
 
-    <
-      <
-        <
-    <
-    <
-    <
-    <
-    <
-          <
-    <
-    <
-    <
-            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: </p>,<
-    <
-    <
-            <
-    <
-    <
-            <
-    <
+const InstantMessaging: React.FC = () => {
+  return (
+    <div className="instant-messaging">
+      <h1>Instant Messaging</h1>
+      <p>Real-time messaging capabilities.</p>
+    </div>
+  );
+};
+
+export default InstantMessaging;

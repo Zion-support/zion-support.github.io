@@ -1,21 +1,16 @@
+import React from 'react';
 
-    <
-      <
-        <
-    <
-    <
-    <
-    <
-    <
-          <
-    <
-    <
-    <
-            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: </p>,<
-    <
-    <
-            <
-    <
-    <
-            <
-    <
+interface PWAInstallerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const PWAInstaller: React.FC<PWAInstallerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default PWAInstaller;

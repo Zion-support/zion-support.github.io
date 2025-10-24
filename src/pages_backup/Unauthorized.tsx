@@ -1,21 +1,12 @@
+import React from 'react';
 
-    <
-      <
-        <
-    <
-    <
-    <
-    <
-    <
-          <
-    <
-    <
-    <
-            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: </p>,<
-    <
-    <
-            <
-    <
-    <
-            <
-    <
+const Unauthorized: React.FC = () => {
+  return (
+    <div className="unauthorized">
+      <h1>Unauthorized Access</h1>
+      <p>You don't have permission to access this resource.</p>
+    </div>
+  );
+};
+
+export default Unauthorized;

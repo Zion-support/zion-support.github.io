@@ -1,5 +1,16 @@
+import React from 'react';
 
-const SEOEnhancer: React.FC<
-return (<
-      <
-      <
+interface SEOEnhancerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default SEOEnhancer;

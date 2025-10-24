@@ -1,5 +1,16 @@
+import React from 'react';
 
-const PerformanceDashboard: React.FC<
-return (<
-      <
-      <
+interface PerformanceDashboardProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default PerformanceDashboard;

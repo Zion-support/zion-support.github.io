@@ -1,30 +1,16 @@
+import React from 'react';
 
-    <
-        <
-    <
-    <
-    <
-    <
-            <
-            </p>,<
-        <
-    <
-    <
-    <
-              <
-g: grid-cols-4 gap-8"></div>,<
-    <
-                <
-    <
-    <
-                <
-    <
-    <
-                <
-    <
-    <
-                <
-        <
-    <
-    <
-            <
+interface OptimizedLoadingSpinnerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default OptimizedLoadingSpinner;

@@ -1,9 +1,16 @@
+import React from 'react';
 
-    <
-    </div>,<div className="flex-shrink-0" /><
-                  <
-        <
-    <div className="max-w-4 xl mx-auto text-center" /></div><
-            <
-            <
-    <
+interface EnhancedHeroProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const EnhancedHero: React.FC<EnhancedHeroProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default EnhancedHero;

@@ -1,11 +1,15 @@
-'use client';
-import React from 'react';
-
-export default function accessibilityUtils() {
-  return (
-    <div>
-      <h1>accessibilityUtils</h1>
-      <p>accessibilityUtils content.</p>
-    </div>
-  );
-}
+export const accessibilityUtils = {
+  addAriaLabel: (element: HTMLElement, label: string) => {
+    element.setAttribute('aria-label', label);
+  },
+  
+  addAriaRole: (element: HTMLElement, role: string) => {
+    element.setAttribute('role', role);
+  },
+  
+  isAccessible: (element: HTMLElement): boolean => {
+    return element.hasAttribute('aria-label') || 
+           element.hasAttribute('aria-labelledby') ||
+           element.textContent?.trim().length > 0;
+  }
+};

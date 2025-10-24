@@ -1,7 +1,7 @@
+import { NextPage } from 'next';
 
-authors?: Array<
-    authors?: Array<
-  (req: Request): Promise<
-PUT?: (req: Request) => Promise<
-q: Request) => Promise<
-PATCH?: (req: Request) => Promise<
+declare module 'next' {
+  interface NextPageProps {
+    params?: { [key: string]: string };
+  }
+}

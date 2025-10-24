@@ -1,5 +1,12 @@
+import React from 'react';
 
-        <
-    <
-    <div className="max-w-7 xl mx-auto px-4 sm: px-6 lg:px-8 py-16 text-center"></div>,<
-          <
+const Services: React.FC = () => {
+  return (
+    <div className="services">
+      <h1>Our Services</h1>
+      <p>Comprehensive technology solutions for your business.</p>
+    </div>
+  );
+};
+
+export default Services;

@@ -1,21 +1,12 @@
+import React from 'react';
 
-      <
-      <
-        <
-    <
-    <
-    <
-    <
-    <
-          <
-    <
-    <
-    <
-            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: </p>,<
-    <
-    <
-            <
-    <
-    <
-            <
-    <
+const TestRunner: React.FC = () => {
+  return (
+    <div className="test-runner">
+      <h1>Test Runner</h1>
+      <p>Automated testing utilities.</p>
+    </div>
+  );
+};
+
+export default TestRunner;

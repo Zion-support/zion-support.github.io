@@ -1,30 +1,16 @@
+import React from 'react';
 
-const ResponsiveContainer: React.FC<
-    <
-        <
-    <
-    <
-    <
-    <
-            <
-            </p>,<
-        <
-    <
-    <
-    <
-              <
-    <
-                <
-    <
-                  <
-    <
-    <
-    <
-              <
-    <
-                <
-                  <
-    <
-    <
-            <
-    <
+interface ResponsiveContainerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default ResponsiveContainer;

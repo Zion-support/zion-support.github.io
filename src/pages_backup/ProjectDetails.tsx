@@ -1,21 +1,12 @@
+import React from 'react';
 
-    <
-      <
-        <
-    <
-    <
-    <
-    <
-    <
-          <
-    <
-    <
-    <
-            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: </p>,<
-    <
-    <
-            <
-    <
-    <
-            <
-    <
+const ProjectDetails: React.FC = () => {
+  return (
+    <div className="project-details">
+      <h1>Project Details</h1>
+      <p>Detailed information about the project.</p>
+    </div>
+  );
+};
+
+export default ProjectDetails;

@@ -1,12 +1,16 @@
+import React from 'react';
 
-    icon: React.ComponentType<
-onSubscribe?: (email: string) => void}constContentNewsletterSignup: React.FC<
-  return (<
-    <
-    <
-        <
-    <
-    <
-            <
-    <
-    <
+interface ContentNewsletterSignupProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default ContentNewsletterSignup;

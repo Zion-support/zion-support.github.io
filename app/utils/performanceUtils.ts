@@ -1,17 +1,13 @@
-'use client';
-import React from 'react';
-
-interface performanceUtilsProps {
-  className?: string;
-}
-
-const performanceUtils: React.FC<performanceUtilsProps> = ({ className }) => {
-  return (
-    <div className={className}>
-      <h2>performanceUtils</h2>
-      <p>performanceUtils component for enhanced functionality.</p>
-    </div>
-  );
+export const performanceUtils = {
+  isSlowConnection: () => {
+    if (typeof navigator !== 'undefined' && 'connection' in navigator) {
+      const connection = (navigator as any).connection;
+      return connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g';
+    }
+    return false;
+  },
+  
+  shouldUseLowQualityImages: () => {
+    return performanceUtils.isSlowConnection();
+  }
 };
-
-export default performanceUtils;

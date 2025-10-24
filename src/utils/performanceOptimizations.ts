@@ -1,11 +1,13 @@
-'use client';
-import React from 'react';
-
-export default function performanceOptimizations() {
-  return (
-    <div>
-      <h1>performanceOptimizations</h1>
-      <p>performanceOptimizations content.</p>
-    </div>
-  );
-}
+export const performanceOptimizations = {
+  debounce: (func: Function, wait: number) => {
+    let timeout: NodeJS.Timeout;
+    return function executedFunction(...args: any[]) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
+  }
+};

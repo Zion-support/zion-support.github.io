@@ -1,11 +1,20 @@
-'use client';
-import React from 'react';
+import { useEffect, useState } from 'react';
 
-export default function useEnhancedPerformance() {
-  return (
-    <div>
-      <h1>useEnhancedPerformance</h1>
-      <p>useEnhancedPerformance content.</p>
-    </div>
-  );
-}
+export const useEnhancedPerformance = () => {
+  const [performance, setPerformance] = useState({
+    isSlow: false,
+    connectionType: 'unknown'
+  });
+
+  useEffect(() => {
+    if ('connection' in navigator) {
+      const connection = (navigator as any).connection;
+      setPerformance({
+        isSlow: connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g',
+        connectionType: connection.effectiveType || 'unknown'
+      });
+    }
+  }, []);
+
+  return performance;
+};

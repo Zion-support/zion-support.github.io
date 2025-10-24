@@ -1,5 +1,16 @@
+import React from 'react';
 
-const ContentNewsletterSignup: React.FC<
-return (<
-      <
-      <
+interface ContentNewsletterSignupProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default ContentNewsletterSignup;

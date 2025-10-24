@@ -1,21 +1,16 @@
+import React from 'react';
 
-    <
-      <
-        <
-    <
-    <
-    <
-    <
-    <
-          <
-    <
-    <
-    <
-            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: </p>,<
-    <
-    <
-            <
-    <
-    <
-            <
-    <
+interface EnhancedAccessibilityProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default EnhancedAccessibility;

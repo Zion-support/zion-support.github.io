@@ -1,36 +1,16 @@
+import React from 'react';
 
-const NeonButton: React.FC<
-const NeonButton: React.FC<
-    <
-      <
-        <
-    <
-    <
-    <
-    <
-            <
-            </p>,<
-        <
-    <
-    <
-    <
-              <
-    <
-                <
-    <
-                  <
-    <
-    <
-    <
-              <
-    <
-                <
-                  <
-    <
-    <
-            <
-    <
-  <di v>{icon&&<spanclassName=&quot;mr-2&quot;><
-      {!icon && <
-    <
-    <
+interface NeonButtonProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const NeonButton: React.FC<NeonButtonProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default NeonButton;

@@ -1,11 +1,14 @@
-'use client';
-import React from 'react';
-
-export default function performanceMonitoring() {
-  return (
-    <div>
-      <h1>performanceMonitoring</h1>
-      <p>performanceMonitoring content.</p>
-    </div>
-  );
-}
+export const performanceMonitoring = {
+  startTiming: (name: string) => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      performance.mark(`${name}-start`);
+    }
+  },
+  
+  endTiming: (name: string) => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      performance.mark(`${name}-end`);
+      performance.measure(name, `${name}-start`, `${name}-end`);
+    }
+  }
+};

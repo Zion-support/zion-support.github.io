@@ -1,11 +1,26 @@
-'use client';
-import React from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-export default function useLazyLoading() {
-  return (
-    <div>
-      <h1>useLazyLoading</h1>
-      <p>useLazyLoading content.</p>
-    </div>
-  );
-}
+export const useLazyLoading = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const ref = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsLoaded(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return [ref, isLoaded] as const;
+};

@@ -1,11 +1,28 @@
-'use client';
-import React from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-export default function useIntersectionObserver() {
-  return (
-    <div>
-      <h1>useIntersectionObserver</h1>
-      <p>useIntersectionObserver content.</p>
-    </div>
-  );
-}
+export const useIntersectionObserver = (options?: IntersectionObserverInit) => {
+  const [isIntersecting, setIsIntersecting] = useState(false);
+  const ref = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsIntersecting(entry.isIntersecting);
+      },
+      options
+    );
+
+    const currentRef = ref.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, [options]);
+
+  return [ref, isIntersecting] as const;
+};

@@ -1,30 +1,16 @@
+import React from 'react';
 
-    <
-        <
-    <
-    <
-    <
-    <
-            <
-            </p>,<
-        <
-    <
-    <
-    <
-              <
-g: grid-cols-4 gap-8"></div>,<
-    <
-                <
-    <
-    <
-                <
-    <
-    <
-                <
-    <
-    <
-                <
-        <
-    <
-    <
-            <
+interface LoadingStatesProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const LoadingStates: React.FC<LoadingStatesProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default LoadingStates;

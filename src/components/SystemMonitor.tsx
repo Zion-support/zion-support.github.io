@@ -1,31 +1,16 @@
+import React from 'react';
 
-const SystemMonitor: React.FC<
-    <
-      <
-        <
-    <
-    <
-    <
-    <
-            <
-            </p>,<
-        <
-    <
-    <
-    <
-              <
-    <
-                <
-    <
-                  <
-    <
-    <
-    <
-              <
-    <
-                <
-                  <
-    <
-    <
-            <
-    <
+interface SystemMonitorProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default SystemMonitor;

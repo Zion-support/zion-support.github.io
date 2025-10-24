@@ -1,30 +1,16 @@
+import React from 'react';
 
-const ServiceWorker: React.FC<
-    <
-      <
-        <
-    <
-    <
-    <
-    <
-            <
-            </p>,<
-    <
-    <
-    <
-              <
-              </div>,<
-                <
-    <
-                  <
-    <
-    <
-    <
-              <
-    <
-                <
-                  <
-    <
-    <
-            <
-    <
+interface ServiceWorkerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default ServiceWorker;

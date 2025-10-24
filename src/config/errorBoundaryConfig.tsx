@@ -1,33 +1,8 @@
+import React from 'react';
 
-customMessage,s: Record<
-default: React.ComponentType<
-network: React.ComponentType<
-notFound: React.ComponentType<
-    <
-    <
-    <
-    <
-<
-<
-    <
-<
-<pre className="mt-4 p-4 bg-gray-100 roundedtext-xsoverflow-auto"><
-    <
-<button,<
-<
-<pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto"><
-    <
-    <
-    <
-    <
-<
-    <
-<
-    <
-    <
-    <
-    <
-    <
-<
-    <
-export function formatErrorForLogging(error: Error): Record<
+export const errorBoundaryConfig = {
+  fallback: <div>Something went wrong. Please refresh the page.</div>,
+  onError: (error: Error, errorInfo: any) => {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+};

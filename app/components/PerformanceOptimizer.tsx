@@ -1,30 +1,16 @@
+import React from 'react';
 
-    <
-        <
-    <
-    <
-    <
-    <
-            <
-            </p>,<
-        <
-    <
-    <
-    <
-              <
-g: grid-cols-4 gap-8"></div>,<
-    <
-                <
-    <
-    <
-                <
-    <
-    <
-                <
-    <
-    <
-                <
-        <
-    <
-    <
-            <
+interface PerformanceOptimizerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default PerformanceOptimizer;

@@ -1,10 +1,6 @@
-
-export function getSecurityHeaders(customConfig?: Partial<
-): Record<
-const headers: Record<
-): Record<
-headers: Record<
-export function getNextSecurityHeaders(customConfig?: Partial<
-): Array<
-customConfig?: Partial<
-): Array<
+export const securityHeaders = {
+  'X-Frame-Options': 'DENY',
+  'X-Content-Type-Options': 'nosniff',
+  'Referrer-Policy': 'origin-when-cross-origin',
+  'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
+};

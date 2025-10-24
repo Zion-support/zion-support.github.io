@@ -1,5 +1,18 @@
-// app.types type definitions
+export interface User {
+  id: string;
+  name: string;
+  email: string;
+}
 
-export interface app.types {
-  // Add type definitions here
+export interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+}
+
+export interface ApiResponse<T> {
+  data: T;
+  success: boolean;
+  message?: string;
 }

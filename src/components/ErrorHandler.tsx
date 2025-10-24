@@ -1,45 +1,18 @@
+import React from 'react';
 
-    <
-      <
-    <
-      <
-        <
-    <
-            <
-            <
-    <
-    <
-    <
-    <
-            <
-                </summary>,<
-    <
-                    <
-                    <
-                      <strong>Stack: </strong>,<pre className=&quot;whitespace-pre-wrap&quot; /><
-                    <
-                      <strong>Component Stack: </strong>,<pre className=&quot;whitespace-pre-wrap&quot; /><
-        <
-    <
-    <
-    <
-              <
-    <
-                <
-    <
-                  <
-              ><
-              ><
-              ><
-            </butto></di><
-    <
-    <
-    <
-              <
-    <
-                <
-                  <
-    <
-    <
-            <
-    <
+interface ErrorHandlerProps {
+  error: Error;
+  resetError: () => void;
+}
+
+const ErrorHandler: React.FC<ErrorHandlerProps> = ({ error, resetError }) => {
+  return (
+    <div className="error-handler">
+      <h2>An error occurred</h2>
+      <p>{error.message}</p>
+      <button onClick={resetError}>Try again</button>
+    </div>
+  );
+};
+
+export default ErrorHandler;

@@ -1,21 +1,12 @@
+import React from 'react';
 
-    <
-      <
-        <
-    <
-    <
-    <
-    <
-    <
-          <
-    <
-    <
-    <
-            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: </p>,<
-    <
-    <
-            <
-    <
-    <
-            <
-    <
+const TalentMarketplace: React.FC = () => {
+  return (
+    <div className="talent-marketplace">
+      <h1>Talent Marketplace</h1>
+      <p>Connect with top talent worldwide.</p>
+    </div>
+  );
+};
+
+export default TalentMarketplace;

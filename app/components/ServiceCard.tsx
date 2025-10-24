@@ -1,30 +1,16 @@
+import React from 'react';
 
-    <
-        <
-    <
-    <
-    <
-    <
-            <
-            </p>,<
-        <
-    <
-    <
-    <
-              <
-g: grid-cols-4 gap-8"></div>,<
-    <
-                <
-    <
-    <
-                <
-    <
-    <
-                <
-    <
-    <
-                <
-        <
-    <
-    <
-            <
+interface ServiceCardProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const ServiceCard: React.FC<ServiceCardProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default ServiceCard;

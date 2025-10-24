@@ -1,93 +1,16 @@
+import React from 'react';
 
-    <
-      <
-        <
-    <
-    <
-    <
-            <
-            </p>,<
-        <
-    <
-    <
-    <
-              <
-    <
-                <
-    <
-                  <
-    <
-    <
-    <
-              <
-    <
-                <
-                  <
-    <
-    <
-            <
-    <
-:all-pages-backup/components/LoadingStates.tsx,<
-    <
-    <
-    <
-    <
-    <
-        <
-    <
-    <
-    <
-    <
-export const LoadingSpinner: React.FC<
-return (<
-    <
-    <
-    <
-  return (<
-    <
-    <
-    <
-  return (<
-    <
-    <
-  return (<
-    <
-    <
-    <
-    <
-    <
-export const LoadingSkeleton: React.FC<
-export const LoadingSpinner: React.FC<
-    <
-      <
-    <
-      </Loader2>,<
-    <
-    <
-    <
-    <>,<
-    <
-    <
-    <
-    <>,<
-    <
-    <
-    <>,<
-    <
-    <
-    <
-    <
-    <
-export const LoadingSkeleton: React.FC<
-    <
-  return (<
-    <
-    <
-    <
-    <
-        <
-    <>,<
-    <
-    <
-    <
-    <
+interface LoadingStatesProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const LoadingStates: React.FC<LoadingStatesProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default LoadingStates;

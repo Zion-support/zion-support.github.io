@@ -1,27 +1,16 @@
+import React from 'react';
 
-    <
-        <
-    <
-    <
-    <
-    <
-            <
-            </p>,<
-    <
-    <
-    <
-              <
-    <
-                <
-    <
-                  <
-    <
-    <
-    <
-              <
-    <
-                  <
-    <
-    <
-            <
-    <
+interface AdvancedPerformanceMonitorProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default AdvancedPerformanceMonitor;

@@ -1,21 +1,16 @@
+import React from 'react';
 
-      <
-      <
-        <
-    <
-    <
-    <
-    <
-    <
-          <
-    <
-    <
-    <
-            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: </p>,<
-    <
-    <
-            <
-    <
-    <
-            <
-    <
+interface UltimateBusinessIntelligence2025BannerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const UltimateBusinessIntelligence2025Banner: React.FC<UltimateBusinessIntelligence2025BannerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default UltimateBusinessIntelligence2025Banner;

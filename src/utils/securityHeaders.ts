@@ -1,6 +1,5 @@
-
-export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Record<
-const headers: Record<
-export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Record<
-  const headers: Record<
-export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Array<
+export const securityHeaders = {
+  'X-Frame-Options': 'DENY',
+  'X-Content-Type-Options': 'nosniff',
+  'Referrer-Policy': 'origin-when-cross-origin'
+};

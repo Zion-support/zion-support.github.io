@@ -1,21 +1,12 @@
+import React from 'react';
 
-    <
-      <
-        <
-    <
-    <
-    <
-    <
-    <
-          <
-    <
-    <
-    <
-            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: </p>,<
-    <
-    <
-            <
-    <
-    <
-            <
-    <
+const Internationalization: React.FC = () => {
+  return (
+    <div className="internationalization">
+      <h1>Internationalization</h1>
+      <p>Multi-language support features.</p>
+    </div>
+  );
+};
+
+export default Internationalization;

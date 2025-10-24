@@ -1,8 +1,12 @@
+import React from 'react';
 
-    <
-      /></SEOOptimizer>,<
-    <
-    <
-            <
-            </p>,<
-              <
+const PageOriginal: React.FC = () => {
+  return (
+    <div className="page-original">
+      <h1>Original Page</h1>
+      <p>This is the original page content.</p>
+    </div>
+  );
+};
+
+export default PageOriginal;

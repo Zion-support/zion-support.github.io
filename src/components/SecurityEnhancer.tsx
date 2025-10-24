@@ -1,32 +1,16 @@
+import React from 'react';
 
-    <
-      <
-    <
-      <
-        <
-    <
-    <
-    <
-    <
-            <
-            </p>,<
-        <
-    <
-    <
-    <
-              <
-    <
-                <
-    <
-                  <
-    <
-    <
-    <
-              <
-    <
-                <
-                  <
-    <
-    <
-            <
-    <
+interface SecurityEnhancerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default SecurityEnhancer;

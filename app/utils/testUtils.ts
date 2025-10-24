@@ -1,11 +1,14 @@
-'use client';
-import React from 'react';
-
-export default function testUtils() {
-  return (
-    <div>
-      <h1>testUtils</h1>
-      <p>testUtils content.</p>
-    </div>
-  );
-}
+export const testUtils = {
+  createMockUser: () => ({
+    id: '1',
+    name: 'Test User',
+    email: 'test@example.com'
+  }),
+  
+  createMockService: () => ({
+    id: '1',
+    name: 'Test Service',
+    description: 'A test service',
+    price: 99
+  })
+};

@@ -1,31 +1,16 @@
+import React from 'react';
 
-    <
-    <
-    <
-    <h1 className="text-4 xl md: text-6 xl font-bold text-gray-900 mb-6" /></h1>,<
-          <
-    <
-            <
-            <
-      <
-    <
-    <
-    <
-            <
-            </div>,<
-    <
-    <
-                <
-                <
-    <
-      <
-    <
-    <
-    <
-            <
-            </div>,<
-                <
-    <
-    <
-          <
-          <
+interface EnhancedSEOOptimizerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default EnhancedSEOOptimizer;

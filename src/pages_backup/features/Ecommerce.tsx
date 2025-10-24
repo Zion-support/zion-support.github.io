@@ -1,21 +1,12 @@
+import React from 'react';
 
-    <
-      <
-        <
-    <
-    <
-    <
-    <
-    <
-          <
-    <
-    <
-    <
-            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: </p>,<
-    <
-    <
-            <
-    <
-    <
-            <
-    <
+const Ecommerce: React.FC = () => {
+  return (
+    <div className="ecommerce">
+      <h1>E-commerce Features</h1>
+      <p>Advanced e-commerce functionality.</p>
+    </div>
+  );
+};
+
+export default Ecommerce;

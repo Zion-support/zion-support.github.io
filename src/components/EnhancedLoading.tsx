@@ -1,32 +1,16 @@
+import React from 'react';
 
-    <
-      <
-    <
-      <
-        <
-    <
-    <
-    <
-    <
-            <
-            </p>,<
-        <
-    <
-    <
-    <
-              <
-    <
-                <
-    <
-                  <
-    <
-    <
-    <
-              <
-    <
-                <
-                  <
-    <
-    <
-            <
-    <
+interface EnhancedLoadingProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default EnhancedLoading;

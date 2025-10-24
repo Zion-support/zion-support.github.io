@@ -1,8 +1,12 @@
+import React from 'react';
 
-    <
-      /></SEOOptimizer>,<
-    <
-    <
-            <
-            </p>,<
-              <
+const PageOptimized: React.FC = () => {
+  return (
+    <div className="page-optimized">
+      <h1>Optimized Page</h1>
+      <p>This page has been optimized for performance.</p>
+    </div>
+  );
+};
+
+export default PageOptimized;

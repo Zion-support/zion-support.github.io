@@ -1,17 +1,7 @@
-'use client';
-import React from 'react';
-
-interface securityProps {
-  className?: string;
-}
-
-const security: React.FC<securityProps> = ({ className }) => {
-  return (
-    <div className={className}>
-      <h2>security</h2>
-      <p>security component for enhanced functionality.</p>
-    </div>
-  );
+export const securityConfig = {
+  headers: {
+    'X-Frame-Options': 'DENY',
+    'X-Content-Type-Options': 'nosniff',
+    'Referrer-Policy': 'origin-when-cross-origin'
+  }
 };
-
-export default security;
