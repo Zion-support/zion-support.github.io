@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, Brain, Users, BarChart, Target, TrendingUp, Zap, Shield } from 'lucide-react';
+import { ArrowRight, CheckCircle, Brain, Users, BarChart, Target } from 'lucide-react';
 
 
 const AIProjectManagementProPage: React.FC = () => {
