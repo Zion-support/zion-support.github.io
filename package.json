@@ -20,41 +20,9 @@
     "start:prod": "NODE_ENV=production next start"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@heroicons/react": "^2.2.0",
-    "axios": "^1.6.0",
     "clsx": "^2.1.1",
-    "framer-motion": "^10.16.0",
-    "lucide-react": "^0.294.0",
-    "next": "^14.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-helmet-async": "^2.0.0",
-    "react-router-dom": "^6.8.0",
-    "recharts": "^2.8.0",
-    "tailwind-merge": "^2.0.0",
-    "web-vitals": "^3.5.0"
-  },
-  "devDependencies": {
-    "@types/node": "^20.0.0",
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "autoprefixer": "^10.4.0",
-    "eslint": "^8.0.0",
-    "eslint-config-next": "^14.0.0",
-    "postcss": "^8.4.0",
-    "tailwindcss": "^3.3.0",
-    "typescript": "^5.0.0"
-=======
-    "@esbuild/linux-x64": "^0.25.10",
-    "@heroicons/react": "^2.2.0",
-    "@types/react-router-dom": "^5.3.3",
-    "clsx": "^2.1.1",
-    "esbuild": "^0.25.10",
     "framer-motion": "^12.23.24",
-    "jsdom": "^27.0.0",
     "lucide-react": "^0.544.0",
     "next": "^15.5.4",
     "react": "^18.3.1",
@@ -100,9 +68,21 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "8.44.1",
     "vite": "^7.1.9"
->>>>>>> cursor/fix-errors-and-merge-to-main-57e4
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
