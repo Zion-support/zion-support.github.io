@@ -10,17 +10,7 @@ import {
   Activity,
   Target,
   CheckCircle,
-  ArrowRight,
-  Star,
-  Clock,
-  Users,
-  Zap,
-  Star as StarIcon,
-  CheckCircle as Check,
-  ArrowRight as Arrow,
-  Phone as PhoneIcon,
-  Mail as MailIcon,
-  MapPin as Location
+  Zap
 } from 'lucide-react'
 
 const AIAnalyticsDashboardPage: React.FC = () => {

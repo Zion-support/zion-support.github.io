@@ -22,10 +22,11 @@ const BusinessAppsPage: React.FC = () => {
     {icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards for your business data',},
-    {icon: Globe,
+    {
+      icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international business applications',}];
-  ];];];
+      description: 'Worldwide deployment and support for international business applications'
+    }
   ]
   const benefits = [
     '24/7 technical support',

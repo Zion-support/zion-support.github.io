@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {Cloud,}
-  Settings,
+import {Cloud, Settings,
   CheckCircle,
   BarChart,
   Clock,

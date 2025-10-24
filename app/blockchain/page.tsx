@@ -136,8 +136,6 @@ const BlockchainPage: React.FC = () => {
       category: 'Consulting',
       technologies: ['Strategic Planning', 'Technology Evaluation', 'Risk Assessment', 'ROI Analysis']
     }
-      description: 'Worldwide blockchain deployment and support for international businesses',}];
-  ];];];
   ]
   const benefits = [
     'Advanced blockchain technology integration',
