@@ -1,19 +1,11 @@
-/**
- * Data Record Manager;
- * Manages data records in localStorage with TTL support;
- */
-export interface DataRecord {;
-  id: string;
-  timestamp: number;
-  data: any;
-  category: string;
-  type: string;
-  version: string;
-  ttl?: number;
-}
+// dataRecordManager utility
+export const dataRecordManager = () => {
+  // Utility implementation
+  return null;
+};
 
-export interface RecordOptions {;
-  ttl?: number;
+export interface RecordOptions {
+  ttl?: number
 }
 
 export interface RecordQuery {;
@@ -56,7 +48,7 @@ class DataRecordManager {
     try {
       localStorage.setItem(id, JSON.stringify(record))
     } catch (error) {
-      // console.warn('Failed to store data record:', error)
+      // // console.warn('Failed to store data record:', error)
     }
 
     return record;
@@ -81,8 +73,8 @@ class DataRecordManager {
 
       return record;
     } catch (error) {
-      // console.warn('Failed to retrieve data record:', error)
-      return null;
+      // // console.warn('Failed to retrieve data record:', error)
+      return null
     }
   }
 
@@ -124,11 +116,11 @@ class DataRecordManager {
 
           records.push(record)
         } catch (parseError) {
-          // console.warn('Failed to parse data record:', parseError)
+          // // console.warn('Failed to parse data record:', parseError)
         }
       }
     } catch (error) {
-      // console.warn('Failed to query data records:', error)
+      // // console.warn('Failed to query data records:', error)
     }
 
     return records;
@@ -140,8 +132,8 @@ class DataRecordManager {
       localStorage.removeItem(key)
       return true;
     } catch (error) {
-      // console.warn('Failed to delete data record:', error)
-      return false;
+      // // console.warn('Failed to delete data record:', error)
+      return false
     }
   }
 
@@ -197,11 +189,11 @@ class DataRecordManager {
             stats.byAge.veryOld++
           }
         } catch (parseError) {
-          // console.warn('Failed to parse data record for stats:', parseError)
+          // // console.warn('Failed to parse data record for stats:', parseError)
         }
       }
     } catch (error) {
-      // console.warn('Failed to get data record stats:', error)
+      // // console.warn('Failed to get data record stats:', error)
     }
 
     return stats;
@@ -224,7 +216,7 @@ class DataRecordManager {
         cleared++
       })
     } catch (error) {
-      // console.warn('Failed to clear data records:', error)
+      // // console.warn('Failed to clear data records:', error)
     }
 
     return cleared;
@@ -232,3 +224,4 @@ class DataRecordManager {
 }
 
 export const dataRecordManager = new DataRecordManager()
+>>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d

@@ -8,59 +8,10 @@ declare global {
     __REACT_ERROR_HANDLER__?: (error: Error, errorInfo: unknown) => void;
   }
 }
+>>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
 export const useErrorMonitoring = () => {
-  const { trackEvent } = useAnalytics()
-  const reportError = useCallback(
-    (error: Error, context?: string) => {
-      trackEvent('error', {
-        error_message: error.message,
-        error_stack: error.stack,
-        context: context || 'unknown'
-      })
-    },
-    [trackEvent]
-  )
-  useEffect(() => {;
-    // Global error handler;
-    const handleError = (event: unknown) => {
-      const errorEvent = event as { message: string; error?: Error }
-      const error = new Error(errorEvent.message)
-      error.stack = errorEvent.error?.stack;
-      reportError(error, 'global_error')
-    }
-    // Unhandled promise rejection handler;
-    const handleUnhandledRejection = (event: unknown) => {
-      const rejectionEvent = event as { reason: unknown }
-      const error =
-        rejectionEvent.reason instanceof Error;
-          ? rejectionEvent.reason;
-          : new Error(String(rejectionEvent.reason))
-      reportError(error, 'unhandled_promise_rejection')
-    }
-    // React error boundary handler (if available)
-    const handleReactError = (error: Error, errorInfo: unknown) => {
-      const componentStack =
-        (errorInfo as { componentStack?: string })?.componentStack || 'unknown'
-      reportError(error, `react_error_boundary: ${componentStack}`)
-    }
-    // Add event listeners;
-    window.addEventListener('error', handleError)
-    window.addEventListener('unhandledrejection', handleUnhandledRejection)
-    // Expose React error handler globally for error boundaries;
-    (
-      window as Window & {
-        __REACT_ERROR_HANDLER__?: (error: Error, errorInfo: unknown) => void;
-      }
-    ).__REACT_ERROR_HANDLER__ = handleReactError;
-    // Cleanup;
-    return () => {
-      window.removeEventListener('error', handleError)
-      window.removeEventListener('unhandledrejection', handleUnhandledRejection)
-      delete (window as Window & { __REACT_ERROR_HANDLER__?: unknown }).__REACT_ERROR_HANDLER__;
-    }
-  }, [reportError])
-  return {
-    reportError;
-  }
-}
+  // Hook implementation
+  return null;
+};
+
 export default useErrorMonitoring;

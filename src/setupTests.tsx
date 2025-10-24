@@ -22,23 +22,6 @@ console.error = (...args) => {
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation(query => ({
-import React from 'react';
-import '@testing-library/jest-do m';
-// Polyfill for TextEncoder/TextDecoder;
-import {TextEncoderTextDecoder} from 'util';
-global.TextEncoder= TextEncoder as any;
-global.TextDecoder= TextDecoder as any;
-// Suppress jsdo m navigationwarningsconstoriginalConsoleError= console.error;
-console.error= (...args) =>{constmessage= args[0]?.toString?.() || args[0]?.message || '';
-  if (message.includes('Notimplemented: navigation') || 
-      message.includes('navigation (except hash changes)')) {
-    return;
- }
-  originalConsoleError(...args);
-};
-// Mock windo w.matchMedia;
-Object.defineProperty(windo w, 'matchMedia', {writable: true,
-  value: jest.fn().mockImplementation(query=> ({
     matches: false,
     media: query,
     onchange: null,
@@ -76,18 +59,12 @@ global.fetch = jest.fn()
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
 console.warn = (...args) => {
-    return;
-  const _message = args[0]?.toString?.() || '';
-  if (_message.includes('Warning: ReactDOM.render is no longer supported')) {
-    return;
+    return
   }
   _originalConsoleWarn(...args)
 }
 console.info = (...args) => {
-    return;
-  const _message = args[0]?.toString?.() || '';
-  if (_message.includes('ReactDOM.render is no longer supported')) {
-    return;
+    return
   }
   _originalConsoleInfo(...args)
 }
@@ -136,9 +113,9 @@ global.PerformanceObserver= class MockPerformanceObserve r {static reado nlysupp
   takeRecords() {return [];
  }
 };
-// Suppress JSDOM navigation warnings;
+// Suppress JSDOM navigation warnings
 console.error= (...args) => {if (args[0] && args[0].type=== 'not implemented' && args[0].message?.includes('navigation')) {
-    return; // Suppress JSDOM navigation warnings;
+    return; // Suppress JSDOM navigation warnings
   }
   _originalConsoleError.apply(console, args)
 }
@@ -147,13 +124,6 @@ delete (window as unknown as Record<string, unknown>).location;
 (window as unknown as Record<string, unknown>).location = {
   href: 'http://localhost:3000',
   origin: 'http://localhost:3000',
- }
-  _originalConsoleError.apply(consoleargs);
-};
-// Mock windo w.location;
-delete (windo w as unknownasRecord<string, unknown>).location;
-(windo w as unknownasRecord<string, unknown>).location= {href: 'http:// localhost:300 0',
-  origin: 'http:// localhost:300 0',
   protocol: 'http:',
   host: 'localhost:300 0',
   hostname: 'localhost',
@@ -165,4 +135,4 @@ delete (windo w as unknownasRecord<string, unknown>).location;
   assign: jest.fn(),
   replace: jest.fn()
 }
-  replace: jest.fn()};
+>>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d

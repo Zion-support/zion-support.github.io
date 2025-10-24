@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import React, { createContext, useContext, useEffect } from "react"
 
@@ -9,12 +9,6 @@ interface AnalyticsContextType {;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
-"useclient";
-
-import React, {createContext, useContext, useEffect} from "react";
-
-interface AnalyticsContextTyp e {track: (event: string, properties?: Record<string, unknown>) => voididentify: (userId: string,traits?:Record<string, unknown>) => voidpage: (name: string,properties?:Record<string, unknown>) => void;}
-constAnalyticsContext=createContext<AnalyticsContextType | undefined>(
   undefined,
 )
 
@@ -29,20 +23,12 @@ export const useAnalytics = () => {
 interface AnalyticsProviderProps {
   children: React.ReactNode;
 }
-export constuseAnalytics= () => {constcontext= useContext(AnalyticsContext);
-  if (!context) {
-    throw newError("useAnalytics must be used within an AnalyticsProvider");
- }
-  return contex t;
-};
-
-interface AnalyticsProviderProp s {children: React.ReactNode;}
 
 exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
   
     // Initialize analytics;
     if (type of windo w !=="undefined") {
-      // Google Analytics;
+      // Google Analytics
       if (process.env.NODE_ENV === "production") {
         const script = document.createElement("script")
         script.async = true;
@@ -56,18 +42,6 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
         }
         gtag("js", new Date())
         gtag("config", process.env.REACT_APP_GA_ID)
-      if (process.env.NODE_ENV==="production") {
-        constscript= document.createElement("script");
-        script.async= true;
-        script.src=`https://www.googletagmanager.com/$1/js?id=${process.env.REACT_APP_GA_ID}`;
-        do cument.head.appendChild(script);
-
-        (windo w as unknown as {dataLayer: unknown[]}).dataLayer=
-          (windo w as unknown as {dataLayer: unknown[]}).dataLayer || [];
-        function gtag(...args: unknown[]) {(windo w as unknown as { dataLayer: unknown[]}).dataLayer.push(args);
-        }
-       gtag("js", new Date());
-       gtag("config", process.env.REACT_APP_GA_ID);
       }
     }
   }, [])
@@ -94,8 +68,6 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
             custom_map: traits,
           },
         )
-         },
-        );
       }
 
       // Custom analytics;
@@ -112,8 +84,6 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
             ...properties,
           },
         )
-         },
-        );
       }
 
       // Custom analytics;
@@ -138,26 +108,12 @@ declare global {
     dataLayer: unknown[]
     gtag: (...args: any[]) => void;
   }
- };
-
-  return (
-  <AnalyticsContext.Providervalue={value}>{children}
-  </AnalyticsContext.Provider>
-  );
-};
-
-// Extend Windo w interface for TypeScript;
-declare global {interface Windo w {
-    dataLayer: unknown[];
-    gtag: (...args: any[]) => void;
- }
 }
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
 const EnhancedAnalyticsPage: React.FC = () => {
   const features = [
@@ -197,11 +153,7 @@ const EnhancedAnalyticsPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>EnhancedAnalytics</title>
-        <meta name="description" content="Advanced EnhancedAnalytics solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, EnhancedAnalytics, AI solutions, intelligent automation" />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}

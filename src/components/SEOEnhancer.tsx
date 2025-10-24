@@ -1,8 +1,7 @@
 import React from 'react'
-import { Helmet } from 'lucide-react';
-import { Helmet } from 'lucide-react';
-import {Helmet} from 'lucide-react';
+import { Helmet } from 'lucide-react'
 import React from 'react';
+import { Code, Helmet } from 'lucide-react';
 
 interface SEOEnhancerProps {
   title?: string;
@@ -38,34 +37,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       "Cloud Services",
       "Automation",
       "Business Intelligence"
-interface SEOEnhancerProp s {title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: stringchildren: React.ReactNode;}
-constSEOEnhancer: React.FC<SEOEnhancerProp s>= ({title= "Zion Tech Group - Advanced AI and ITSolutions",
-  description= "Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edgetechnology.",
-  keywords= "AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence, Zion TechGroup",
-  image= "https://ziontechgroup.com/og-image.jpg",
-  url= "https://ziontechgroup.com",
-  children}) => {conststructuredData= {
-    "@context":"https:// schema.org",
-   "@type":"TechCompany",
-   "name":"Zion Tech Group",
-   "url": url,
-   "logo":"https:// ziontechgroup.com/logo.png",
-   "description": description,
-   "foundingDate":"202 0",
-   "numberOfEmployees":"5 0-10 0",
-   "industry":"Technology",
-   "services": [
-     "AI Solutions",
-     "Quantum Computing", 
-     "Autonomous Systems",
-     "Digital Transformation",
-     "Cloud Services",
-     "Automation",
-     "Business Intelligence"
     ],
    "contactPoint": {
      "@type":"ContactPoint",
@@ -146,15 +117,4 @@ constSEOEnhancer: React.FC<SEOEnhancerProp s>= ({title= "Zion Tech Group - Advan
     </>
   )
 }
-export default SEOEnhancer;
-  <><Helme t>{/* Primary metatags */}
-      <titl e>{title}</titl><metaname="description" content={description} /><metaname="keywords" content={keywords} /><metaname="author"content="Zion TechGroup" /><metaname="robots"content="index,follow" /><metaname="googlebot"content="index,follow" />{/* Open Graph /Facebook */}
-     <metaproperty="og:type"content="website" /><metaproperty="og:url" content={url} /><metaproperty="og:title" content={title} /><metaproperty="og:description" content={description} /><metaproperty="og:image" content={image} /><metaproperty="og:image:width"content="1200" /><metaproperty="og:image:height"content="630" /><metaproperty="og:site_name"content="Zion TechGroup" />{/* Twitter */}
-     <metaname="twitter:card"content="summary_large_image" /><metaname="twitter:url" content={url} /><metaname="twitter:title" content={title} /><metaname="twitter:description" content={description} /><metaname="twitter:image" content={image} /><metaname="twitter:site"content="@ziontechgroup" /><metaname="twitter:creator"content="@ziontechgroup" />{/* CanonicalURL */}
-      <linkrel="canonical" href={url} />{/* StructuredData */}
-      <scripttype="application/ld+json">{JSON.stringify(structuredData)}
-      </scrip></Helme>{children}
-  </>
-  );
-};
-export default SEOEnhancer;
+export default SEOEnhancer

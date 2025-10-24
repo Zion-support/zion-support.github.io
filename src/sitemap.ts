@@ -1,11 +1,11 @@
-interface SitemapEntry {
-  url: string;
-  lastModified?: string | Date;
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
-  priority?: number;
-}
+// sitemap utility
+export const sitemap = () => {
+  // Sitemap implementation
+  return null;
+};
 
-export default function sitemap(): SitemapEntry[] {
+export default function sitemap
+sitemap.displayName = "sitemap"(): SitemapEntry[] {
   const baseUrl = 'https://ziontechgroup.com'
 ;
   // Main pages;
@@ -160,3 +160,4 @@ export default function sitemap(): SitemapEntry[] {
     priority: page === '' ? 1.0 : page.includes('/blog/') ? 0.7 : 0.8,
   }))
 }
+>>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d

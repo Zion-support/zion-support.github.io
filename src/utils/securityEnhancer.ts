@@ -1,4 +1,5 @@
 'use client'
+import { X } from 'lucide-react'
 import React from 'react'
 /**;
  * Security Enhancer;
@@ -231,7 +232,8 @@ Security Report:
     this.eventListeners = []
   }
 }
-// Export singleton instance;
-export const securityEnhancer = new SecurityEnhancer();
-// Export class for custom instances;
+// Export singleton instance
+export const securityEnhancer = new SecurityEnhancer()
+// Export class for custom instances
 export { SecurityEnhancer, type SecurityConfig, type SecurityMetrics }
+>>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d

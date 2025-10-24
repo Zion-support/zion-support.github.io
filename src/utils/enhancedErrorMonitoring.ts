@@ -202,7 +202,7 @@ class EnhancedErrorMonitoring {
     }
     // Log to console in development;
     if (process.env['NODE_ENV'] === 'development') {
-      // // console.error('Error captured:', errorReport)
+      // // // console.error('Error captured:', errorReport)
     }
   }
   /**
@@ -347,6 +347,7 @@ ${stats.recent.map(error => `
     `.trim()
   }
 }
-// Export singleton instance;
-export const enhancedErrorMonitoring = EnhancedErrorMonitoring.getInstance();
-export default enhancedErrorMonitoring;
+// Export singleton instance
+export const enhancedErrorMonitoring = EnhancedErrorMonitoring.getInstance()
+export default enhancedErrorMonitoring
+>>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d

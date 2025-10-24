@@ -1,24 +1,14 @@
 'use client'
+import { Brain, BarChart } from 'lucide-react'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 import { FileText, FileImage } from 'lucide-react'
 import { CheckCircle, Phone, Mail } from 'lucide-react'
-;
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { FileText, FileImage, CheckCircle, Phone, Mail, Check } from 'lucide-react';
+
 const AIDocumentProcessingPage: React.FC = () => {
   const features = [
-import Navigation from '../$1/Navigation';
-import Footer from '../$1/Footer';
-import SEOOptimizer from '../$1/SEOOptimizer';
-import {FileText, FileImage, CheckCircle, Phone, Mail} from 'lucide-react';;
-constAIDocumentProcessingPage: React.FC= () =>{constfeatures= [
     {
       icon: Eye,
       title: 'Advanced OCR',
@@ -55,11 +45,6 @@ constAIDocumentProcessingPage: React.FC= () =>{constfeatures= [
     {
       name: 'Starter',
       price: '$149',
-   }
-  ];
-  constpricingPlans= [
-    {name: 'Starter',
-      price: '$14 9',
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
@@ -101,7 +86,7 @@ constAIDocumentProcessingPage: React.FC= () =>{constfeatures= [
         'On-premise option',
         'SLA guarantee'
       ],
-      popular: false;
+      popular: false
     }
   ]
   const stats = [
@@ -113,16 +98,6 @@ constAIDocumentProcessingPage: React.FC= () =>{constfeatures= [
   const useCases = [
     {
       title: 'Invoice Processing',
-   }
-  ];
-  conststats= [
-    {number: '9 9.9%', label: 'Accuracy Rate'},
-    {number: '9 0%', label: 'Time Savings'},
-    {number: '5 0+', label: 'Document Types'},
-    {number: '2 4/7', label: 'Processing'}
-  ];
-  constuseCases= [
-    {title: 'Invoice Processing',
       description: 'Automatically extract data from invoices, validate information, and integrate with accounting systems.',
       icon: FileText;
    },
@@ -136,23 +111,21 @@ constAIDocumentProcessingPage: React.FC= () =>{constfeatures= [
    },
     {title: 'Medical Records',
       description: 'Extract patient information from medical records while maintaining HIPAA compliance and data security.',
-      icon: Shield;
+      icon: Shield
     }
   ]
-   }
-  ];
   return (
   <><SEOOptimizertitle="AI Document Processing Platform - ZionTechGroup"
         description="Automate do cument processing with AI-powered OCR and data extraction. 9 9.9% accuracy,90% time savings, and50+ do cument typessupported."
         keywords={['AI do cument processing', 'OCR', 'data extraction', 'do cument automation', 'AIparsing']}
         canonicalUrl="https://ziontechgroup.com/ai-document-processing"
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <Navigation />
         <main className="pt-16">
           {/* Hero Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="max-w-4xl mx-auto">
+          <section className="container mx-auto px-4 py-16 text-center"></section>
+            <div className="max-w-4xl mx-auto"></div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
                 AI Document Processing Platform</h1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8">
@@ -161,8 +134,8 @@ constAIDocumentProcessingPage: React.FC= () =>{constfeatures= [
                 Our AI-powered document processing platform automatically extracts, analyzes, and processes;
                 documents with advanced OCR and intelligent data extraction capabilities.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-                <a;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"></div>
+                <a
                   href="tel:+13024640950"
                   className="cyber-button flex items-center space-x-2"
                 >
@@ -179,10 +152,10 @@ constAIDocumentProcessingPage: React.FC= () =>{constfeatures= [
                 </a>
               </div>
               {/* Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"></div>
                 {stats.map((stat, index) => (
-                  <div key={index} className="cyber-card p-6 text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text">
+                  <div key={index} className="cyber-card p-6 text-center"></div>
+                    <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text"></div>
                       {stat.number}
                     </div>
                     <div className="text-gray-300 font-medium">{stat.label}</div>
@@ -192,12 +165,13 @@ constAIDocumentProcessingPage: React.FC= () =>{constfeatures= [
             </div>
           </section>
           {/* Features Section */}
-          <section className="container mx-auto px-4 py-16">
+          <section className="container mx-auto px-4 py-16"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Powerful Document Processing Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              Powerful Document Processing Features
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {features.map((feature, index) => (
-                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
                   <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -214,12 +188,13 @@ constAIDocumentProcessingPage: React.FC= () =>{constfeatures= [
             </div>
           </section>
           {/* Use Cases Section */}
-          <section className="container mx-auto px-4 py-16">
+          <section className="container mx-auto px-4 py-16"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Perfect for Every Document Type</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              Perfect for Every Document Type
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
               {useCases.map((useCase, index) => (
-                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
                   <useCase.icon className="w-12 h-12 text-cyan-400 mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300">{useCase.description}</p>
@@ -228,36 +203,14 @@ constAIDocumentProcessingPage: React.FC= () =>{constfeatures= [
             </div>
           </section>
           {/* Pricing Section */}
-          <section className="container mx-auto px-4 py-16">
+          <section className="container mx-auto px-4 py-16"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Simple, Transparent Pricing</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              Simple, Transparent Pricing
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
               {pricingPlans.map((plan, index) => (
                 <div;
                   key={index}
-      /><divclassName="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"><Navigation /><mainclassName="pt-16">{/* HeroSection */}
-        <sectionclassName="container mx-auto px-4 py-16text-center"><divclassName="max-w-4xlmx-auto"><spanclassName="text-4 xlmd:text-6 xl font-bold text-whitemb-6neon-text"></className="text-4 xlmd:text-6 xl font-bold text-whitemb-6neon-text">AI Document Processing Platform</h><spanclassName="text-xlmd:text-2 xl text-cyan-400mb-8"></className="text-xlmd:text-2 xl text-cyan-400mb-8">Automate do cument processing with99.9% accuracy</p><spanclassName="text-lg text-gray-300mb-12max-w-3xlmx-auto"></className="text-lg text-gray-300mb-12max-w-3xlmx-auto">Our AI-powered do cument processing platform automatically extracts, analyzes, and processes;
-                do cuments with advanced OCR and intelligent data extraction capabilities.
-            </p><divclassName="flex flex-colsm:flex-row gap-4 justify-center items-centermb-16"><ahref="tel:+13024640950"
-                 className="cyber-button flexitems-centerspace-x-2"
-                ><PhoneclassName="w-5h-5" /><spa n>Call (302)464-0950</spa></a><ahref="mailto:kleber@ziontechgroup.com"
-                 className="cyber-button flexitems-centerspace-x-2"
-                  style={{background: 'linear-gradient(45 deg, #8 b5cf6, #ec4899)'}}
-                ><MailclassName="w-5h-5" /><spa n>GetFreeDemo</spa></a></di>{/* Stats */}
-            <divclassName="grid grid-cols-2 md:grid-cols-4 gap-8mb-16">{stats.map((statindex) => (
-               <divkey={index}className="cyber-cardp-6text-center"><divclassName="text-3 xlmd:text-4 xl font-boldtext-cyan-400mb-2neon-text">{stat.number}
-                  </di><divclassName="text-gray-300font-medium">{stat.label}</di></di>))}
-            </di></di></sectio>{/* FeaturesSection */}
-        <sectionclassName="container mx-auto px-4py-16"><spanclassName="text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text"></className="text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text">Powerful Document Processing Features</h><divclassName="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">{features.map((featureindex) => (
-             <divkey={index}className="cyber-card p-6 hover:scale-105transition-allduration-300"><feature.iconclassName="w-12h-12text-cyan-400mb-4" /><h3className="text-xl font-boldtext-whitemb-3">{feature.title}</h><pclassName="text-gray-300mb-4">{feature.description}</p><ulclassName="space-y-2">{feature.benefits.map((benefitidx) => (
-                   <likey={idx}className="flex items-center space-x-2 text-smtext-cyan-400"><CheckCircleclassName="w-4h-4" /><spa n>{benefit}</spa></l>))}
-                </u></di>))}
-          </di></sectio>{/* Use CasesSection */}
-        <sectionclassName="container mx-auto px-4py-16"><spanclassName="text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text"></className="text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text">Perfect for Every Document Type</h><divclassName="grid grid-cols-1md:grid-cols-2gap-8">{useCases.map((useCaseindex) => (
-             <divkey={index}className="cyber-card p-6 hover:scale-105transition-allduration-300"><useCase.iconclassName="w-12h-12text-cyan-400mb-4" /><h3className="text-xl font-boldtext-whitemb-3">{useCase.title}</h><pclassName="text-gray-300">{useCase.description}</p></di>))}
-          </di></sectio>{/* PricingSection */}
-        <sectionclassName="container mx-auto px-4py-16"><spanclassName="text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text"></className="text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text">Simple, Transparent Pricing</h><divclassName="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xlmx-auto">{pricingPlans.map((planindex) => (
-             <divkey={index}
                   className={`cyber-card p-8 relative ${
                     plan.popular ? 'ring-2 ring-cyan-400scale-10 5'  : ''
                 }`}
@@ -267,7 +220,7 @@ constAIDocumentProcessingPage: React.FC= () =>{constfeatures= [
                    <likey={idx}className="flexitems-centerspace-x-3"><CheckCircleclassName="w-5 h-5 text-cyan-400flex-shrink-0" /><spanclassName="text-gray-300">{feature}</spa></l>))}
                 </u><ahref="tel:+13024640950"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-medium transition-all duration-300${
-                      plan.popular;
+                      plan.popular
                         ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}
@@ -278,15 +231,16 @@ constAIDocumentProcessingPage: React.FC= () =>{constfeatures= [
             </div>
           </section>
           {/* CTA Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
+          <section className="container mx-auto px-4 py-16 text-center"></section>
+            <div className="cyber-card p-12 max-w-4xl mx-auto"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
                 Ready to Automate Your Documents?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join 1,800+ companies already using our document processing platform</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a;
+                Join 1,800+ companies already using our document processing platform
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+                <a
                   href="tel:+13024640950"
                   className="cyber-button flex items-center justify-center space-x-2"
                 >
@@ -310,19 +264,4 @@ constAIDocumentProcessingPage: React.FC= () =>{constfeatures= [
     </>
   )
 }
-export default AIDocumentProcessingPage;
-                        ? 'bg-cyan-400text-slate-900 hover:bg-cyan-30 0'
-                         : 'bg-slate-700text-whitehover:bg-slate-60 0'
-                  }`}
-                  >Get Started</a></di>))}
-          </di></sectio>{/* CTASection */}
-        <sectionclassName="container mx-auto px-4 py-16text-center"><divclassName="cyber-card p-12max-w-4xlmx-auto"><spanclassName="text-3 xlmd:text-4 xl font-bold text-whitemb-6neon-text"></className="text-3 xlmd:text-4 xl font-bold text-whitemb-6neon-text">Ready to Automate Your Documents?
-            </h><spanclassName="text-xl text-gray-300mb-8"></className="text-xl text-gray-300mb-8">Join 1800+ companies already using our do cument processing platform</p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><ahref="tel:+13024640950"
-                 className="cyber-button flex items-centerjustify-centerspace-x-2"
-                ><PhoneclassName="w-5h-5" /><spa n>Call (302)464-0950</spa></a><ahref="mailto:kleber@ziontechgroup.com"
-                 className="cyber-button flex items-centerjustify-centerspace-x-2"
-                  style={{background: 'linear-gradient(45 deg, #8 b5cf6, #ec4899)'}}
-                ><MailclassName="w-5h-5" /><spa n>ScheduleDemo</spa></a></di></di></sectio></mai><Footer /></di></>
-  );
-};
-export default AIDocumentProcessingPage;
+export default AIDocumentProcessingPage

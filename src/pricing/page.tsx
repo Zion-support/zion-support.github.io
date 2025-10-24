@@ -3,17 +3,7 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Phone, Mail } from 'lucide-react';
-import { CheckCircle, Phone, Mail, Check } from 'lucide-react';
-'use client';
-import {CheckCircle, Phone, Mail} from 'lucide-react';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import Navigation from '../$1/Navigation';
-import Footer from '../$1/Footer';
-import SEOOptimizer from '../$1/SEOOptimizer';
+import { CheckCircle, Phone, Mail } from 'lucide-react'
 
 constPricingPage: React.FC= () =>{constpricingPlans= [
     {
@@ -68,8 +58,6 @@ constPricingPage: React.FC= () =>{constpricingPlans= [
       cta: 'Contact Sales'
     }
   ]
-   }
-  ];
 
   constaddOns= [
     {name: 'AI Model Training',
@@ -89,8 +77,6 @@ constPricingPage: React.FC= () =>{constpricingPlans= [
       description: 'Custom feature development and integrations'
     }
   ]
-   }
-  ];
 
   constfaqs= [
     {question: 'Can I change my plan anytime?',
@@ -107,24 +93,20 @@ constPricingPage: React.FC= () =>{constpricingPlans= [
       answer: 'Yes, we offer a 14-day free trial for all plans. No credit card required to get started.'
     }
   ]
-   },
-    {question: 'Is there a free trial available?',
-      answer: 'Yes, we offer a14-day free trial for all plans. No credit card required to get started.'
-   }
-  ];
 
+const Page = () => {
   return (
   <><SEOOptimizertitle="Pricing Plans - ZionTechGroup"
         description="Transparent pricing for AI and IT services. Choose the perfect plan for your business needs. Starting at$299/month."
         keywords={['pricing', 'AI services pricing', 'IT services pricing', 'business plans', 'enterprisepricing']}
         canonicalUrl="https://ziontechgroup.com/pricing"
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <Navigation />
         <main className="pt-16">
           {/* Hero Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="max-w-4xl mx-auto">
+          <section className="container mx-auto px-4 py-16 text-center"></section>
+            <div className="max-w-4xl mx-auto"></div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
                 Simple, Transparent Pricing</h1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8">
@@ -136,17 +118,11 @@ constPricingPage: React.FC= () =>{constpricingPlans= [
             </div>
           </section>
           {/* Pricing Plans */}
-          <section className="container mx-auto px-4 py-16">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <section className="container mx-auto px-4 py-16"></section>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto"></div>
               {pricingPlans.map((plan, index) => (
                 <div;
                   key={index}
-      /><divclassName="min-h-screen bg-gradient-to-br from-slate-90 0via-purple-900to-slate-900"><Navigation /><mainclassName="pt-16">{/* HeroSection */}
-        <sectionclassName="container mx-auto px-4 py-16text-center"><divclassName="max-w-4xlmx-auto"><spanclassName="text-4 xlmd:text-6 xl font-bold text-whitemb-6neon-text"></className="text-4 xlmd:text-6 xl font-bold text-whitemb-6neon-text">Simple, Transparent Pricing</h><spanclassName="text-xlmd:text-2 xl text-cyan-400mb-8"></className="text-xlmd:text-2 xl text-cyan-400mb-8">Choose the perfect plan for your business needs</p><spanclassName="text-lg text-gray-300mb-12max-w-3xlmx-auto"></className="text-lg text-gray-300mb-12max-w-3xlmx-auto">All plans include our core AI and IT services with no hidden fees. 
-                Scale up or do wn as your business grows.
-            </p></di></sectio>{/* PricingPlans */}
-        <sectionclassName="container mx-auto px-4py-16"><divclassName="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xlmx-auto">{pricingPlans.map((planindex) => (
-             <divkey={index}
                   className={`cyber-card p-8 relative ${
                     plan.popular ? 'ring-2 ring-cyan-400scale-10 5'  : ''
                 }`}
@@ -170,12 +146,13 @@ constPricingPage: React.FC= () =>{constpricingPlans= [
             </div>
           </section>
           {/* Add-ons Section */}
-          <section className="container mx-auto px-4 py-16">
+          <section className="container mx-auto px-4 py-16"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Additional Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+              Additional Services
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"></div>
               {addOns.map((addon, index) => (
-                <div key={index} className="cyber-card p-6 text-center">
+                <div key={index} className="cyber-card p-6 text-center"></div>
                   <h3 className="text-xl font-bold text-white mb-2">{addon.name}</h3>
                   <div className="text-2xl font-bold text-cyan-400 mb-2">{addon.price}</div>
                   <p className="text-gray-300 text-sm">{addon.description}</p>
@@ -184,12 +161,13 @@ constPricingPage: React.FC= () =>{constpricingPlans= [
             </div>
           </section>
           {/* FAQ Section */}
-          <section className="container mx-auto px-4 py-16">
+          <section className="container mx-auto px-4 py-16"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Frequently Asked Questions</h2>
-            <div className="max-w-4xl mx-auto space-y-6">
+              Frequently Asked Questions
+            </h2>
+            <div className="max-w-4xl mx-auto space-y-6"></div>
               {faqs.map((faq, index) => (
-                <div key={index} className="cyber-card p-6">
+                <div key={index} className="cyber-card p-6"></div>
                   <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
                   <p className="text-gray-300">{faq.answer}</p>
                 </div>
@@ -197,15 +175,16 @@ constPricingPage: React.FC= () =>{constpricingPlans= [
             </div>
           </section>
           {/* CTA Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
+          <section className="container mx-auto px-4 py-16 text-center"></section>
+            <div className="cyber-card p-12 max-w-4xl mx-auto"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Contact us today to discuss your needs and find the perfect plan</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a;
+                Contact us today to discuss your needs and find the perfect plan
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+                <a
                   href="tel:+13024640950"
                   className="cyber-button flex items-center justify-center space-x-2"
                 >
@@ -229,25 +208,5 @@ constPricingPage: React.FC= () =>{constpricingPlans= [
     </>
   )
 }
-                         : 'bg-gray-700text-whitehover:bg-gray-60 0'
-                  }`}
-                  >{plan.popular ? 'Contact Sales' :plan.cta}
-                </a></di>))}
-          </di></sectio>{/* Add-onsSection */}
-        <sectionclassName="container mx-auto px-4py-16"><spanclassName="text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text"></className="text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text">Additional Services</h><divclassName="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xlmx-auto">{addOns.map((addo nindex) => (
-             <divkey={index}className="cyber-cardp-6text-center"><h3className="text-xl font-boldtext-whitemb-2">{addon.name}</h><divclassName="text-2 xl font-bold text-cyan-400mb-2">{addon.price}</di><pclassName="text-gray-300text-sm">{addon.description}</p></di>))}
-          </di></sectio>{/* FAQSection */}
-        <sectionclassName="container mx-auto px-4py-16"><spanclassName="text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text"></className="text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text">Frequently Asked Questions</h><divclassName="max-w-4 xlmx-autospace-y-6">{faqs.map((faqindex) => (
-             <divkey={index}className="cyber-cardp-6"><h3className="text-xl font-boldtext-whitemb-3">{faq.question}</h><pclassName="text-gray-300">{faq.answer}</p></di>))}
-          </di></sectio>{/* CTASection */}
-        <sectionclassName="container mx-auto px-4 py-16text-center"><divclassName="cyber-card p-12max-w-4xlmx-auto"><spanclassName="text-3 xlmd:text-4 xl font-bold text-whitemb-6neon-text"></className="text-3 xlmd:text-4 xl font-bold text-whitemb-6neon-text">Ready to Get Started?
-            </h><spanclassName="text-xl text-gray-300mb-8"></className="text-xl text-gray-300mb-8">Contact us today to discuss your needs and find the perfect plan</p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><ahref="tel:+13024640950"
-                 className="cyber-button flex items-centerjustify-centerspace-x-2"
-                ><PhoneclassName="w-5h-5" /><spa n>Call (302)464-0950</spa></a><ahref="mailto:kleber@ziontechgroup.com"
-                 className="cyber-button flex items-centerjustify-centerspace-x-2"
-                  style={{background: 'linear-gradient(45 deg, #8 b5cf6, #ec4899)'}}
-                ><MailclassName="w-5h-5" /><spa n>GetFreeQuote</spa></a></di></di></sectio></mai><Footer /></di></>
-  );
-};
 
-export default PricingPage;
+export default Page;

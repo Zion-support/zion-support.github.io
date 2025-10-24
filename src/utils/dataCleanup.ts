@@ -1,12 +1,12 @@
-/**
- * Data Cleanup Utilities;
- * Provides utilities for cleaning up old data and managing storage;
- */
-import { dataRecordManager, DataRecord } from './dataRecordManager'
+// dataCleanup utility
+export const dataCleanup = () => {
+  // Utility implementation
+  return null;
+};
 
-export interface CleanupConfig {;
-  maxAge?: number;
-  maxRecords?: number;
+export interface CleanupConfig {
+  maxAge?: number
+  maxRecords?: number
   categories?: string[]
   types?: string[]
 }
@@ -173,7 +173,7 @@ class DataCleanup {
         }
       }
     } catch (error) {
-      // console.warn('Failed to get storage stats:', error)
+      // // console.warn('Failed to get storage stats:', error)
     }
 
     return stats;
@@ -225,3 +225,4 @@ class DataCleanup {
 }
 
 export const dataCleanup = new DataCleanup()
+>>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d

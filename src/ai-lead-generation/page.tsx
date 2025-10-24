@@ -1,24 +1,14 @@
 'use client'
+import { Brain, BarChart, Target } from 'lucide-react'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 import { Building } from 'lucide-react'
 import { CheckCircle, Phone, Mail, PhoneIcon, MailIcon } from 'lucide-react'
-;
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { Building, CheckCircle, Phone, Mail, PhoneIcon, MailIcon, Check } from 'lucide-react';
+
 const AILeadGenerationPage: React.FC = () => {
   const features = [
-import Navigation from '../$1/Navigation';
-import Footer from '../$1/Footer';
-import SEOOptimizer from '../$1/SEOOptimizer';
-import {Building, CheckCircle, PhoneIcon, MailIcon} from 'lucide-react';;
-constAILeadGenerationPage: React.FC= () =>{constfeatures= [
     {
       icon: Brain,
       title: 'AI Lead Scoring',
@@ -55,11 +45,6 @@ constAILeadGenerationPage: React.FC= () =>{constfeatures= [
     {
       name: 'Starter',
       price: '$199',
-   }
-  ];
-  constpricingPlans= [
-    {name: 'Starter',
-      price: '$19 9',
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
@@ -101,7 +86,7 @@ constAILeadGenerationPage: React.FC= () =>{constfeatures= [
         'Advanced compliance',
         'SLA guarantee'
       ],
-      popular: false;
+      popular: false
     }
   ]
   const stats = [
@@ -114,18 +99,7 @@ constAILeadGenerationPage: React.FC= () =>{constfeatures= [
     {
       title: 'B2B Lead Generation',
       description: 'Generate high-quality B2B leads using AI-powered company research, contact discovery, and intent signals.',
-   }
-  ];
-  conststats= [
-    {number: '30 0%', label: 'More Qualified Leads'},
-    {number: '8 5%', label: 'Time Savings'},
-    {number: '9 5%', label: 'Lead Accuracy'},
-    {number: '5 0+', label: 'CRM Integrations'}
-  ];
-  constuseCases= [
-    {title: 'B2 B Lead Generation',
-      description: 'Generate high-quality B2 B leads using AI-powered company research, contact discovery, and intent signals.',
-      icon: Building;
+      icon: Building
    },
     {title: 'E-commerce Prospecting',
       description: 'Find and engage potential customers for e-commerce businesses with personalized outreach and retargeting.',
@@ -137,31 +111,27 @@ constAILeadGenerationPage: React.FC= () =>{constfeatures= [
    },
     {title: 'Real Estate Leads',
       description: 'Generate qualified real estate leads with AI-powered market analysis and automated follow-up sequences.',
-      icon: Home;
+      icon: Home
     }
   ]
-   }
-  ];
   return (
   <><SEOOptimizertitle="AI Lead Generation Platform - ZionTechGroup"
         description="Generate 30 0% more qualified leads with AI-powered prospecting, lead scoring, and automated outreach.85% time savingsand95%accuracy."
         keywords={['AI lead generation', 'lead scoring', 'prospecting', 'sales automation', 'leadnurturing']}
         canonicalUrl="https://ziontechgroup.com/ai-lead-generation"
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <Navigation />
         <main className="pt-16">
           {/* Hero Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="max-w-4xl mx-auto">
+          <section className="container mx-auto px-4 py-16 text-center"></section>
+            <div className="max-w-4xl mx-auto"></div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
                 AI Lead Generation Platform</h1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8">
                 Generate 300% more qualified leads with AI</p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Our AI-powered lead generation platform helps businesses find, score, and nurture high-quality leads;
-      /><divclassName="min-h-screen bg-gradient-to-br from-slate-90 0via-purple-900to-slate-900"><Navigation /><mainclassName="pt-16">{/* HeroSection */}
-        <sectionclassName="container mx-auto px-4 py-16text-center"><divclassName="max-w-4xlmx-auto"><spanclassName="text-4 xlmd:text-6 xl font-bold text-whitemb-6neon-text"></className="text-4 xlmd:text-6 xl font-bold text-whitemb-6neon-text">AI Lead Generation Platform</h><spanclassName="text-xlmd:text-2 xl text-cyan-400mb-8"></className="text-xlmd:text-2 xl text-cyan-400mb-8">Generate300% more qualified leads with AI</p><spanclassName="text-lg text-gray-300mb-12max-w-3xlmx-auto"></className="text-lg text-gray-300mb-12max-w-3xlmx-auto">Our AI-powered lead generation platform helps businesses find, score, and nurture high-quality leads;
+                Our AI-powered lead generation platform helps businesses find, score, and nurture high-quality leads
                 with intelligent automation and personalized outreach.
             </p><divclassName="flex flex-colsm:flex-row gap-4 justify-center items-centermb-16"><ahref="tel:+13024640950"
                  className="cyber-button flexitems-centerspace-x-2"
@@ -192,7 +162,7 @@ constAILeadGenerationPage: React.FC= () =>{constfeatures= [
                    <likey={idx}className="flexitems-centerspace-x-3"><CheckCircleclassName="w-5 h-5 text-cyan-400flex-shrink-0" /><spanclassName="text-gray-300">{feature}</spa></l>))}
                 </u><ahref="tel:+13024640950"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-medium transition-all duration-300${
-                      plan.popular;
+                      plan.popular
                         ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}
@@ -203,15 +173,16 @@ constAILeadGenerationPage: React.FC= () =>{constfeatures= [
             </div>
           </section>
           {/* CTA Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
+          <section className="container mx-auto px-4 py-16 text-center"></section>
+            <div className="cyber-card p-12 max-w-4xl mx-auto"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
                 Ready to 3x Your Lead Generation?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join 2,500+ companies already using our AI lead generation platform</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a;
+                Join 2,500+ companies already using our AI lead generation platform
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+                <a
                   href="tel:+13024640950"
                   className="cyber-button flex items-center justify-center space-x-2"
                 >
@@ -235,19 +206,4 @@ constAILeadGenerationPage: React.FC= () =>{constfeatures= [
     </>
   )
 }
-export default AILeadGenerationPage;
-                        ? 'bg-cyan-400text-slate-900 hover:bg-cyan-30 0'
-                         : 'bg-slate-700text-whitehover:bg-slate-60 0'
-                  }`}
-                  >Get Started</a></di>))}
-          </di></sectio>{/* CTASection */}
-        <sectionclassName="container mx-auto px-4 py-16text-center"><divclassName="cyber-card p-12max-w-4xlmx-auto"><spanclassName="text-3 xlmd:text-4 xl font-bold text-whitemb-6neon-text"></className="text-3 xlmd:text-4 xl font-bold text-whitemb-6neon-text">Ready to3x Your Lead Generation?
-            </h><spanclassName="text-xl text-gray-300mb-8"></className="text-xl text-gray-300mb-8">Join 2500+ companies already using our AI lead generation platform</p><divclassName="flex flex-colsm:flex-rowgap-4justify-center"><ahref="tel:+13024640950"
-                 className="cyber-button flex items-centerjustify-centerspace-x-2"
-                ><PhoneIconclassName="w-5h-5" /><spa n>Call (302)464-0950</spa></a><ahref="mailto:kleber@ziontechgroup.com"
-                 className="cyber-button flex items-centerjustify-centerspace-x-2"
-                  style={{background: 'linear-gradient(45 deg, #8 b5cf6, #ec4899)'}}
-                ><MailIconclassName="w-5h-5" /><spa n>ScheduleDemo</spa></a></di></di></sectio></mai><Footer /></di></>
-  );
-};
-export default AILeadGenerationPage;
+export default AILeadGenerationPage
