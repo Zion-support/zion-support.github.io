@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
 interface UserExperienceEnhancerProps {
-  children: React.ReactNode;
-  enableAnimations?: boolean;
-  enableHoverEffects?: boolean;
-  enableFocusManagement?: boolean;
-  enableKeyboardNavigation?: boolean;
-  enableAccessibility?: boolean;
+  children: React.ReactNode
+  enableAnimations?: boolean
+  enableHoverEffects?: boolean
+  enableFocusManagement?: boolean
+  enableKeyboardNavigation?: boolean
+  enableAccessibility?: boolean
 }
 
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
@@ -51,11 +51,11 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
       document.addEventListener('keydown', handleKeyDown)
       document.addEventListener('mousedown', handleMouseDown)
       return () => {
-        document.removeEventListener('keydown', handleKeyDown);
-        document.removeEventListener('mousedown', handleMouseDown);
-      };
+        document.removeEventListener('keydown', handleKeyDown)
+        document.removeEventListener('mousedown', handleMouseDown)
+      }
     }
-  }, [enableAccessibility, enableKeyboardNavigation, isHighContrast, isReducedMotion]);
+  }, [enableAccessibility, enableKeyboardNavigation, isHighContrast, isReducedMotion])
   // Add CSS classes for enhanced UX
   useEffect(() => {
     const style = document.createElement('style')
@@ -100,6 +100,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
     <div className="...">
       {children}
     </div>
-  )
-}
-export default UserExperienceEnhancer
+  );
+};
+
+export default UserExperienceEnhancer;

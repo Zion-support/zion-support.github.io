@@ -1,19 +1,43 @@
 'use client';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Sun, Moon } from "lucide-react";
 
-import Link from 'next/link';
-import { ArrowRight} from "lucide-react";
 export default function ThemeToggle() {
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
+    if (savedTheme) {
+      setTheme(savedTheme);
+      document.documentElement.classList.toggle('dark', savedTheme === 'dark');
+    } else {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setTheme(prefersDark ? 'dark' : 'light');
+      document.documentElement.classList.toggle('dark', prefersDark);
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+    document.documentElement.classList.toggle('dark', newTheme === 'dark');
+  };
 
   return (
-    
-    <></>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>,
-          <h1>Service</h1>
-          <p>Professional service services coming soon.</p>;
-          <Link href="/contact";
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit",
-          ></Link>
+    <button
+      onClick={toggleTheme}
+      className="p-2 rounded-lg bg-slate-700 hover:bg-slate-600 text-white transition-colors duration-200"
+      aria-label="Toggle theme"
+    >
+      {theme === 'light' ? (
+        <Moon className="w-5 h-5" />
+      ) : (
+        <Sun className="w-5 h-5" />
+      )}
+    </button>
+  );
+}
             Contact Us
             
             <ArrowRight className="w-5 h-5 ml-2" />

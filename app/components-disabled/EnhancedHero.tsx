@@ -1,8 +1,8 @@
-'use client';
+'use client'
 
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Phone, Mail, CheckCircle, Zap, Shield, Brain, Globe } from 'lucide-react';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, Phone, Mail, CheckCircle, Zap, Shield, Brain, Globe } from 'lucide-react'
 
 const EnhancedHero: React.FC = () => {
   const features = [
@@ -37,10 +37,10 @@ const EnhancedHero: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
+  ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
       <Helmet>
         <title>Enhanced Hero | Zion Tech Group</title>
         <meta name="description" content="Professional Enhanced Hero services by Zion Tech Group. Advanced AI and IT solutions for your business." />
@@ -48,18 +48,17 @@ const EnhancedHero: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
-        <div className="relative max-w-7xl mx-auto text-center">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+      <section className="...">
+        <div className="...">
+          <div className="...">
+            <h1 className="...">
+              <span className="...">
                 Enhanced Hero
               </span>
               <br />
               <span className="text-white">Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="...">
               Transform your business with our advanced enhanced hero solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
@@ -68,7 +67,7 @@ const EnhancedHero: React.FC = () => {
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              <button className="...">
                 Learn More
               </button>
             </div>
@@ -77,21 +76,21 @@ const EnhancedHero: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
+      <section className="...">
+        <div className="...">
+          <div className="...">
+            <h2 className="...">
               Why Choose Our Enhanced Hero?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="...">
               Our enhanced hero solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="...">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg p-3 w-fit mb-4">
+              <div key={index} className="...">
+                <div className="...">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -103,20 +102,20 @@ const EnhancedHero: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
+      <section className="...">
+        <div className="...">
+          <div className="...">
+            <h2 className="...">
               Key Benefits
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="...">
               Experience the power of our enhanced hero solutions for your business.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="...">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
+              <div key={index} className="...">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
@@ -126,21 +125,21 @@ const EnhancedHero: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 border border-white/20">
-            <h2 className="text-4xl font-bold text-white mb-6">
+      <section className="...">
+        <div className="...">
+          <div className="...">
+            <h2 className="...">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="...">
               Contact our experts to discuss your enhanced hero needs and get a customized solution.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+            <div className="...">
+              <button className="...">
                 <Phone className="mr-2 h-5 w-5" />
                 Call Now
               </button>
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+              <button className="...">
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
               </button>
@@ -149,7 +148,7 @@ const EnhancedHero: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default EnhancedHero;
+export default EnhancedHero

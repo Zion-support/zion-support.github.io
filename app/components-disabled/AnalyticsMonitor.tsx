@@ -1,28 +1,29 @@
 'use client';
 
-import React, { useEffect, useCallback, useState} from 'react';
+import React, { useEffect, useCallback, useState } from 'react';
 
 interface AnalyticsEvent {
-name: string;
+  name: string;
   properties?: Record<string, any>;
   timestamp: number;
 }
-interface PerformanceMetrics {
-fcp: number; // First Contentful Paint,;
-  lcp: number; // Largest Contentful Paint;
-  fid: number; // First Input Delay,;
-  cls: number; // Cumulative Layout Shift;
-  ttfb: number; // Time to First Byte;
-}
-interface AnalyticsMonitorProps {
 
+interface PerformanceMetrics {
+  fcp: number; // First Contentful Paint
+  lcp: number; // Largest Contentful Paint
+  fid: number; // First Input Delay
+  cls: number; // Cumulative Layout Shift
+  ttfb: number; // Time to First Byte
+}
+
+interface AnalyticsMonitorProps {
   enableGoogleAnalytics?: boolean;
   enablePerformanceMonitoring?: boolean;
   enableErrorTracking?: boolean;
   enableUserBehaviorTracking?: boolean;
   enableRealTimeMonitoring?: boolean;
-  gaTrackingId?: string;
-}
+  gaTrackingId?: string}
+
 const AnalyticsMonitor: React.FC<AnalyticsMonitorProps> = ({;
   enableGoogleAnalytics = true,;
   enablePerformanceMonitoring = true,;
@@ -91,14 +92,11 @@ const AnalyticsMonitor: React.FC<AnalyticsMonitorProps> = ({;
       list.getEntries().forEach((entry) => {
 
         if (entry.entryType === 'largest-contentful-paint') {
-          metrics.lcp = entry.startTime;
-}
+          metrics.lcp = entry.startTime}
         if (entry.entryType === 'first-input') {
-          metrics.fid = (entry as any).processingStart - entry.startTime;
-}
+          metrics.fid = (entry as any).processingStart - entry.startTime}
         if (entry.entryType === 'layout-shift') {
-          metrics.cls = (entry as any).value;
-}
+          metrics.cls = (entry as any).value}
       })});
 
     observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
@@ -106,13 +104,13 @@ const AnalyticsMonitor: React.FC<AnalyticsMonitorProps> = ({;
     // Measure FCP
     const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
     if (fcpEntry) {
-      metrics.fcp = fcpEntry.startTime;
-}
+      metrics.fcp = fcpEntry.startTime}
+
     // Measure TTFB
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {
-      metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
-}
+      metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart}
+
     // Update metrics after a delay to allow all measurements
     setTimeout(() => {
 
@@ -191,7 +189,7 @@ const AnalyticsMonitor: React.FC<AnalyticsMonitorProps> = ({;
       const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
       if (scrollDepth > maxScrollDepth) {;
         maxScrollDepth = scrollDepth;
-        trackEvent('scroll_depth', { depth: scrollDepth})}
+        trackEvent('scroll_depth', { depth: scrollDepth })}
     };
 
     // Add event listeners
@@ -199,7 +197,7 @@ const AnalyticsMonitor: React.FC<AnalyticsMonitorProps> = ({;
     window.addEventListener('popstate', trackPageView);
     document.addEventListener('click', trackClick);
     document.addEventListener('submit', trackFormSubmit);
-    window.addEventListener('scroll', trackScroll, { passive: true});
+    window.addEventListener('scroll', trackScroll, { passive: true });
 
     return () => {
 

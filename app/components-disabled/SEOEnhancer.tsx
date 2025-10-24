@@ -2,14 +2,14 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOEnhancerProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonicalUrl?: string;
-  ogImage?: string;
-  twitterCard?: string;
-  structuredData?: object;
-  children: React.ReactNode;
+  title?: string
+  description?: string
+  keywords?: string
+  canonicalUrl?: string
+  ogImage?: string
+  twitterCard?: string
+  structuredData?: object
+  children: React.ReactNode
 }
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
@@ -54,24 +54,12 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         canonical.setAttribute('href', canonicalUrl)
       } else {
         const link = document.createElement('link')
-        link.rel = 'canonical';
-        link.href = canonicalUrl;
-        document.head.appendChild(link);
+        link.rel = 'canonical'
+        link.href = canonicalUrl
+        document.head.appendChild(link)
       }
     }
-  }, [title, description, keywords, canonicalUrl]);
-    return (
-    <>
-      <Helmet>
-        <title>Page Title</title>
-        <meta name="description" content="Page description" />
-      </Helmet>
-=======
-        link.href = canonicalUrl;
-        document.head.appendChild(link);
-      }
-    }
-  }, [title, description, keywords, canonicalUrl]);
+  }, [title, description, keywords, canonicalUrl])
 
   return (
     <Helmet>
@@ -101,6 +89,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         )}
       </Helmet>
       {children}
-      )
-}
-export default SEOEnhancer
+    </>
+  );
+};
+
+export default SEOEnhancer;

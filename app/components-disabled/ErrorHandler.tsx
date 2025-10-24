@@ -1,10 +1,9 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
-import { CheckCircle, Brain, BarChart, Target, ArrowRight} from 'lucide-react';
+import { CheckCircle, Brain, BarChart, Target, ArrowRight } from 'lucide-react';
 
 const ErrorHandler: React.FC = () => {
-
   const features = [
     {
       icon: Brain,
@@ -50,8 +49,7 @@ const ErrorHandler: React.FC = () => {
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                      {benefit;
-}
+                      {benefit}
                     </li>
                   ))}
                 </ul>
