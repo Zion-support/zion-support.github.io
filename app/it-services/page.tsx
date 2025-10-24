@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { Cloud, Shield, Server, Database, CheckCircle, ArrowRight } from "lucide-react";
+export const dynamic = 'force-dynamic';
 
 const ITServicesPage: React.FC = () => {
   const services = [

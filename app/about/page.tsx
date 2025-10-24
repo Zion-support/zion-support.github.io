@@ -1,17 +1,25 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react';
 import Link from 'next/link';
+import { Metadata } from 'next';
 import { 
   ArrowRight, Users, Shield, Globe, Brain, CheckCircle, Award, Star
 } from 'lucide-react';
 
-const AboutPage: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
+export const dynamic = 'force-dynamic';
 
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
+export const metadata: Metadata = {
+  title: 'About Us - Zion Tech Group | AI & IT Solutions',
+  description: 'Learn about Zion Tech Group\'s mission, values, and team. We\'re dedicated to delivering cutting-edge AI and IT solutions that transform businesses.',
+  keywords: 'about us, AI solutions, IT services, technology company, digital transformation',
+  openGraph: {
+    title: 'About Us - Zion Tech Group',
+    description: 'Learn about Zion Tech Group\'s mission, values, and team. We\'re dedicated to delivering cutting-edge AI and IT solutions that transform businesses.',
+    type: 'website',
+    url: 'https://ziontechgroup.com/about',
+  },
+};
+
+const AboutPage: React.FC = () => {
 
   const values = [
     {
@@ -44,22 +52,11 @@ const AboutPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
-        <title>About Us - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and team. We're dedicated to delivering cutting-edge AI and IT solutions that transform businesses." />
-        <meta name="keywords" content="about us, AI solutions, IT services, technology company, digital transformation" />
-        <meta property="og:title" content="About Us - Zion Tech Group" />
-        <meta property="og:description" content="Learn about Zion Tech Group's mission, values, and team. We're dedicated to delivering cutting-edge AI and IT solutions that transform businesses." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/about" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
         {/* Hero Section */}
         <section className="pt-32 pb-20">
           <div className="container mx-auto px-4 text-center">
-            <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div className="transition-all duration-1000 opacity-100 translate-y-0">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 About <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Zion Tech Group</span>
               </h1>
@@ -157,7 +154,6 @@ const AboutPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
   );
 };
 

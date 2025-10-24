@@ -3,6 +3,7 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Code, Check } from 'lucide-react'
+export const dynamic = 'force-dynamic';
 
 const AiCodeGenerationPage: React.FC = () => {
   const features = [

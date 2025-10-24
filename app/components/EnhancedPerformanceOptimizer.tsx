@@ -1,6 +1,6 @@
 'use client'
+import { Metadata } from 'next';
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -44,11 +44,7 @@ const EnhancedPerformanceOptimizerPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>EnhancedPerformanceOptimizer | Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Professional EnhancedPerformanceOptimizer services by Zion Tech Group. Advanced AI and IT solutions for your business.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, EnhancedPerformanceOptimizer, AI solutions, intelligent automation&quot; />
-      </Helmet>
+      
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
@@ -172,11 +168,7 @@ constbenefits= [
 ]
 return (
 <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
-<Helmet>
-<title>EnhancedPerformanceOptimizer | Zion Tech Group</title>
-<meta name=&quot;description&quot; content=&quot;Professional EnhancedPerformanceOptimizer services by Zion Tech Group. Advanced AI and IT solutions for your business.&quot; />
-<meta name=&quot;keywords&quot; content=&quot;EnhancedPerformanceOptimizer, AI solutions, IT services, Zion Tech Group, enhancedperformanceoptimizer&quot; />
-</Helmet>
+
 {/* Features Section */}
 <section className=&quot;py-20 px-4 sm:px-6 lg:px-8&quot;></section>
 <div className=&quot;max-w-7xl mx-auto&quot;></div>

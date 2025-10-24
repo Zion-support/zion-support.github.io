@@ -1,9 +1,17 @@
-'use client';
+import { Metadata } from 'next';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Link from 'next/link';
 import { ArrowRight, Zap, Brain, CheckCircle, Users, BarChart, MessageCircle, Target, Settings, Workflow, Globe, Server, Clock, ShoppingCart } from 'lucide-react';
-
+export const dynamic = 'force-dynamic';
+export const metadata: Metadata = {
+  title: 'Zion Tech Group | AI & IT Solutions',
+  description: 'Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology and innovative digital transformation services.',
+  openGraph: {
+    title: 'Zion Tech Group | AI & IT Solutions',
+    description: 'Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology and innovative digital transformation services.',
+    type: 'website',
+  },
+};
 const AiChatbotBuilderPage: React.FC = () => {
   const features = [
     {
@@ -129,11 +137,7 @@ const AiChatbotBuilderPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      <Helmet>
-        <title>AI Chatbot Builder - Zion Tech Group | No-Code Chatbot Platform</title>
-        <meta name="description" content="Build intelligent chatbots without coding. Our no-code AI chatbot builder helps you create, deploy, and manage chatbots for customer support, lead generation, and more." />
-        <meta name="keywords" content="AI chatbot builder, no-code chatbot, conversational AI, customer support bot, lead generation bot, chatbot platform" />
-      </Helmet>
+      
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -146,14 +150,14 @@ const AiChatbotBuilderPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
             >
               Start Building Free
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link
-              to="/ai-services"
+              href="/ai-services"
               className="inline-flex items-center px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
             >
               View All AI Services
@@ -277,7 +281,7 @@ const AiChatbotBuilderPage: React.FC = () => {
                   ))}
                 </ul>
                 <Link
-                  to="/contact"
+                  href="/contact"
                   className={`w-full inline-flex items-center justify-center px-6 py-3 font-semibold rounded-lg transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600'
@@ -304,14 +308,14 @@ const AiChatbotBuilderPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              to="/contact" 
+              href="/contact" 
               className="inline-flex items-center px-8 py-3 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
             >
               Start Building Today
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link 
-              to="/ai-services" 
+              href="/ai-services" 
               className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-600 transition-colors duration-300"
             >
               Explore All AI Services

@@ -1,7 +1,7 @@
 'use client'
+import { Metadata } from 'next';
 import {Phone, Mail, Brain} from 'lucide-react';
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -45,11 +45,7 @@ const SidebarPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Sidebar</title>
-        <meta name=&quot;description&quot; content=&quot;Advanced Sidebar solution for modern businesses.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, Sidebar, AI solutions, intelligent automation&quot; />
-      </Helmet>
+      
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
@@ -293,7 +289,7 @@ isOpen ? 'translate-x-0' : '-translate-x-full'
 <div className=&quot;flex flex-col h-full&quot;></div>
 {/* Header */}</div>
 <div className=&quot;flex items-center justify-between p-6 border-b border-slate-700/50&quot;></div>
-<Link to=&quot;/&quot; className=&quot;flex items-center space-x-3&quot; onClick={() => setIsOpen(false)}>
+<Link href=&quot;/&quot; className=&quot;flex items-center space-x-3&quot; onClick={() => setIsOpen(false)}>
 <div className=&quot;w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center&quot;></div>
 <Brain className=&quot;w-6 h-6 text-white&quot; />
 </div>
