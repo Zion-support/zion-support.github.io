@@ -14,8 +14,8 @@ const ApiDevelopmentPage: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Api Development</h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Advanced AI solutions for modern businesses.</p>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">API Development</h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Professional API development services for modern businesses.</p>
           </div>
         </section>
 
@@ -23,20 +23,20 @@ const ApiDevelopmentPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Features</h2>
-              <p className="text-xl text-gray-300">Advanced AI solutions</p>
+              <p className="text-xl text-gray-300">Professional API development solutions</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-white mb-4">AI-Powered</h3>
-                <p className="text-gray-300">Leverage artificial intelligence for enhanced performance and insights.</p>
+                <h3 className="text-xl font-semibold text-white mb-4">RESTful APIs</h3>
+                <p className="text-gray-300">Build robust and scalable RESTful APIs for your applications.</p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-white mb-4">Scalable</h3>
-                <p className="text-gray-300">Built to scale with your business needs and growth.</p>
+                <h3 className="text-xl font-semibold text-white mb-4">GraphQL APIs</h3>
+                <p className="text-gray-300">Modern GraphQL APIs for efficient data fetching and manipulation.</p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-white mb-4">Secure</h3>
-                <p className="text-gray-300">Enterprise-grade security and compliance features.</p>
+                <h3 className="text-xl font-semibold text-white mb-4">API Security</h3>
+                <p className="text-gray-300">Enterprise-grade security and authentication for your APIs.</p>
               </div>
             </div>
           </div>
@@ -48,7 +48,4 @@ const ApiDevelopmentPage: React.FC = () => {
   );
 };
 
-}
-
-export default ApiDevelopmentPage
-}
+export default ApiDevelopmentPage;

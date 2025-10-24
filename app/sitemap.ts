@@ -1,24 +1,25 @@
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from 'next';
 
-export const dynamic = 'force-static'
-export const revalidate = false
-}
+export const dynamic = 'force-static';
+export const revalidate = false;
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ziontechgroup.com'
-  const currentDate = new Date()
+  const baseUrl = 'https://ziontechgroup.com';
+  const currentDate = new Date();
   
   return [
     {
       url: baseUrl,
       lastModified: currentDate,
       changeFrequency: 'yearly',
-      priority: 1},
+      priority: 1,
+    },
     {
       url: `${baseUrl}/about`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
-      priority: 0.8},
+      priority: 0.8,
+    },
     {
       url: `${baseUrl}/contact`,
       lastModified: currentDate,
@@ -42,6 +43,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.6,
-    }
-  ]
+    },
+  ];
 }
