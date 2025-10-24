@@ -1,124 +1,43 @@
+'use client'
 import React from 'react'
 import { ArrowRight, Brain, Mail, CheckCircle, Zap, TrendingUp, Send, BarChart3, Shield, DollarSign, Clock, Star } from 'lucide-react'
 import Link from 'next/link'
 
-const AIEmailAutomationPage: React.FC = () => {
+const Page: React.FC = () => {
   const features = [
     {
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      title: 'AI Email Generation',
-      description: 'Generate personalized, high-converting emails using AI that understands your audience and brand voice.',
-      benefits: ['Personalized content', 'A/B testing', 'Brand voice training', 'Multi-language support']
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
-      icon: <Send className="w-8 h-8 text-emerald-400" />,
-      title: 'Smart Automation',
-      description: 'Create complex email workflows with AI-powered triggers, segmentation, and behavioral targeting.',
-      benefits: ['Behavioral triggers', 'Smart segmentation', 'Dynamic content', 'Cross-channel sync']
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-purple-400" />,
-      title: 'Performance Analytics',
-      description: 'Advanced analytics with AI insights to optimize email performance and improve ROI.',
-      benefits: ['Open rate optimization', 'Click-through analysis', 'Revenue tracking', 'Predictive insights']
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
     {
-      icon: <Zap className="w-8 h-8 text-red-400" />,
-      title: 'Automated Sequences',
-      description: 'AI-powered email sequences that adapt based on recipient behavior and engagement patterns.',
-      benefits: ['Adaptive sequences', 'Behavioral triggers', 'Personalization', 'Optimal timing']
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8 text-orange-400" />,
-      title: 'Lead Scoring',
-      description: 'AI automatically scores leads based on email engagement and behavior to prioritize follow-ups.',
-      benefits: ['Lead scoring', 'Engagement tracking', 'Priority alerts', 'CRM integration']
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-pink-400" />,
-      title: 'Deliverability Optimization',
-      description: 'AI ensures maximum deliverability with reputation monitoring and content optimization.',
-      benefits: ['Reputation monitoring', 'Content optimization', 'Spam prevention', 'Compliance checks']
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
+  ];
 
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$59',
-      period: '/month',
-      description: 'Perfect for small businesses and startups',
-      features: [
-        'Up to 5,000 contacts',
-        '10,000 emails/month',
-        'Basic AI features',
-        'Email templates',
-        'Email support'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$149',
-      period: '/month',
-      description: 'Ideal for growing businesses and agencies',
-      features: [
-        'Up to 25,000 contacts',
-        '50,000 emails/month',
-        'Advanced AI features',
-        'A/B testing',
-        'Priority support',
-        'API access'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$399',
-      period: '/month',
-      description: 'For large organizations with high volume needs',
-      features: [
-        'Unlimited contacts',
-        'Unlimited emails',
-        'Full AI suite',
-        'Custom integrations',
-        'Dedicated support',
-        'White-label options'
-      ],
-      popular: false
-    }
-  ]
-
-  const testimonials = [
-    {
-      name: 'Jennifer Lee',
-      company: 'E-commerce Store',
-      content: 'AI Email Automation increased our email revenue by 300%. The AI-generated content is incredibly effective.',
-      rating: 5,
-      avatar: 'JL'
-    },
-    {
-      name: 'Mark Thompson',
-      company: 'SaaS Company',
-      content: 'The lead scoring feature helped us identify high-value prospects and increased our conversion rate by 150%.',
-      rating: 5,
-      avatar: 'MT'
-    },
-    {
-      name: 'Lisa Chen',
-      company: 'Marketing Agency',
-      content: 'Saves us 20+ hours per week on email campaigns. The automation features are incredibly powerful.',
-      rating: 5,
-      avatar: 'LC'
-    }
-  ]
-
-  const stats = [
-    { number: '300%', label: 'Revenue Increase', icon: <DollarSign className="w-6 h-6 text-cyan-400" /> },
-    { number: '150%', label: 'Conversion Boost', icon: <TrendingUp className="w-6 h-6 text-emerald-400" /> },
-    { number: '20hrs', label: 'Time Saved/Week', icon: <Clock className="w-6 h-6 text-purple-400" /> },
-    { number: '95%', label: 'Deliverability Rate', icon: <Shield className="w-6 h-6 text-orange-400" /> }
-  ]
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
 
   return (
     <>
@@ -198,45 +117,85 @@ const AIEmailAutomationPage: React.FC = () => {
               Our AI-powered email automation platform uses machine learning to create, 
               send, and optimize email campaigns that drive real business results.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More
+              </button>
+            </div>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                  {feature.icon}
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  {feature.description}
-                </p>
-                <div className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <div key={benefitIndex} className="flex items-center space-x-2 text-gray-400 text-sm">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
-                      <span>{benefit}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Pricing Section */}
-      <section className="py-20 px-4 bg-gray-900">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Transparent <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Pricing</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              Choose the perfect plan for your email marketing needs. All plans include our core AI features 
-              with scalable options for businesses of all sizes.
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Powerful features designed to transform your business operations
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-black/20">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solutions?</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the benefits of intelligent automation and advanced technology
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="h-6 w-6 text-emerald-400 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's work together to create intelligent solutions that work for your business.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Start Your Project
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Contact Us
+              </button>
+            </div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -357,7 +316,7 @@ const AIEmailAutomationPage: React.FC = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default AIEmailAutomationPage
+export default Page;

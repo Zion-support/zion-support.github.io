@@ -6,93 +6,64 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
-    { name: 'AI Analytics & BI', url: '/ai-analytics', description: 'Business intelligence' },
-    { name: 'AI Automation', url: '/ai-automation', description: 'Process automation' },
-    { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder', description: 'Conversational AI' },
-    { name: 'AI Content Generation', url: '/ai-content-generation', description: 'Automated content' },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security' },
-    { name: 'Computer Vision', url: '/computer-vision', description: 'Image recognition' },
-    { name: 'Predictive Analytics', url: '/predictive-analytics', description: 'Forecasting' },
-    { name: 'Speech & Voice AI', url: '/ai-voice-assistant', description: 'Voice technology' }
+    { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard' },
+    { name: 'AI Content Generator', href: '/ai-content-generator' },
+    { name: 'AI Voice Assistant', href: '/ai-voice-assistant' },
+    { name: 'AI Image Generator', href: '/ai-image-generator' },
+    { name: 'AI Code Assistant', href: '/ai-code-assistant' },
+    { name: 'AI Business Intelligence', href: '/ai-business-intelligence' }
   ];
 
-  const itServices = [
-    { name: 'Web Development', url: '/web-development', description: 'Custom websites' },
-    { name: 'Mobile Development', url: '/mobile-development', description: 'iOS & Android apps' },
-    { name: 'Cloud Migration', url: '/cloud-migration', description: 'Cloud solutions' },
-    { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security services' },
-    { name: 'DevOps', url: '/devops', description: 'Development operations' },
-    { name: 'Data Analytics', url: '/data-analytics', description: 'Data insights' },
-    { name: 'IoT Solutions', url: '/iot-solutions', description: 'Internet of Things' },
-    { name: 'Blockchain', url: '/blockchain', description: 'Blockchain technology' }
+  const techServices = [
+    { name: 'Blockchain Solutions', href: '/blockchain' },
+    { name: 'Cloud Migration', href: '/cloud-migration-pro' },
+    { name: 'Cybersecurity', href: '/security' },
+    { name: '5G Implementation', href: '/5g-implementation' },
+    { name: 'Quantum Computing', href: '/quantum-computing' },
+    { name: 'IoT Solutions', href: '/zion-iot-solutions' }
   ];
 
-  const microSaas = [
-    { name: 'AI Email Marketing', url: '/micro-saas/ai-email-marketing-automation', description: 'Email automation' },
-    { name: 'AI Inventory Manager', url: '/micro-saas/ai-inventory-manager', description: 'Inventory tracking' },
-    { name: 'AI Project Manager', url: '/micro-saas/ai-project-manager', description: 'Project management' },
-    { name: 'AI Social Scheduler', url: '/micro-saas/ai-social-media-scheduler', description: 'Social media' }
-  ];
-
-  const company = [
-    { name: 'About Us', url: '/about' },
-    { name: 'Our Team', url: '/team' },
-    { name: 'Careers', url: '/careers' },
-    { name: 'News', url: '/news' },
-    { name: 'Contact', url: '/contact' }
-  ];
-
-  const resources = [
-    { name: 'Documentation', url: '/docs' },
-    { name: 'API Reference', url: '/api' },
-    { name: 'Blog', url: '/blog' },
-    { name: 'Tutorials', url: '/tutorials' },
-    { name: 'Case Studies', url: '/case-studies' },
-    { name: 'Support', url: '/support' }
-  ];
-
-  const legal = [
-    { name: 'Privacy Policy', url: '/privacy' },
-    { name: 'Terms of Service', url: '/terms' },
-    { name: 'Cookie Policy', url: '/cookies' },
-    { name: 'GDPR Compliance', url: '/gdpr' }
+  const companyLinks = [
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Blog', href: '/blog' }
   ];
 
   return (
-    <footer className="bg-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="space-y-4">
+          <div className="space-y-6">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Z</span>
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center">
+                <Brain className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold">Zion Tech Group</span>
             </div>
-            <p className="text-gray-400 text-sm">
-              Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology and innovative digital transformation services.
+            <p className="text-gray-300 leading-relaxed">
+              Leading the future of technology with innovative AI, blockchain, and cloud solutions that transform businesses worldwide.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
                 <Github className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
             </div>
           </div>
 
           {/* AI Services */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold flex items-center">
-              <Brain className="w-5 h-5 mr-2 text-cyan-400" />
-              AI Services
-            </h3>
-            <ul className="space-y-2">
+          <div className="space-y-6">
+            <h3 className="text-lg font-semibold text-white">AI Services</h3>
+            <ul className="space-y-3">
               {aiServices.map((service, index) => (
                 <li key={index}>
                   <Link 
@@ -164,15 +135,11 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Contact Info */}
-        <div className="border-t border-slate-800 mt-12 pt-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="flex items-center space-x-3">
-              <Mail className="w-5 h-5 text-cyan-400" />
-              <div>
-                <p className="text-sm text-gray-400">Email</p>
-                <p className="text-white">contact@ziontechgroup.com</p>
-              </div>
+        {/* Bottom Section */}
+        <div className="border-t border-gray-700 mt-12 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="text-gray-400 text-sm">
+              © {currentYear} Zion Tech Group. All rights reserved.
             </div>
             <div className="flex items-center space-x-3">
               <Phone className="w-5 h-5 text-purple-400" />
@@ -202,11 +169,14 @@ const Footer: React.FC = () => {
               >
                 {item.name}
               </Link>
-            ))}
+              <Link href="/terms" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                Terms of Service
+              </Link>
+              <Link href="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                Cookie Policy
+              </Link>
+            </div>
           </div>
-          <p className="text-gray-400 text-sm">
-            © {currentYear} Zion Tech Group. All rights reserved.
-          </p>
         </div>
       </div>
     </footer>

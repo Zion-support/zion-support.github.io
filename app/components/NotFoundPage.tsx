@@ -29,7 +29,7 @@ const NotFoundPagePage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
+  ];
 
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -37,7 +37,7 @@ const NotFoundPagePage: React.FC = () => {
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  ];
 
   return (
     <>
@@ -52,8 +52,7 @@ const NotFoundPagePage: React.FC = () => {
       </section>
     </div>
   )
-}
+, }
 
-export default NotFoundPagePage
-
+export default NotFoundPagePage;
 export default NotFoundPagePage;

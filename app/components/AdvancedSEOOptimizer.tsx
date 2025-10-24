@@ -70,9 +70,9 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Powerful AI-driven features designed to transform your business operations
@@ -142,11 +142,11 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
 };
 
 export default AdvancedSEOOptimizerPage;
-description?: string
-keywords?: string
-canonicalUrl?: string
-ogImage?: string
-twitterCard?: string
+description?: string;
+keywords?: string;
+canonicalUrl?: string;
+ogImage?: string;
+twitterCard?: string;
 structuredData?: objectchildren: React.ReactNode}
 constAdvancedSEOOptimizer: React.FC<SEOOptimizerProp s>= ({title= 'Zion Tech Group - Advanced AI and IT Solutions',
 description= 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
@@ -155,19 +155,19 @@ canonicalUrl,
 ogImage= '/$1/og-image.jpg',
 twitterCard= 'summary_large_image',
 structuredData,
-children}) => {const [seoScoresetSeoScore] = useState(0)
+children}) =</ {const [seoScoresetSeoScore] = useState(0)
 const [recommendationssetRecommendations]=useState<string[]>([])
 constanalyzeSEO= useCallback(() => {
   
 if (type ofwindow=== 'undefined') return letscore=0constnewRecommendations: string[] = []
-// Check title length
-if (title.length >= 30&&title.length<= 6 0) {
+// Check title length;
+if (title.length </= 30&&title.length<= 6 0) {
 score +=20} else {newRecommendations.push('Title should be between 3 0-60characters')}
-// Check description length
+// Check description length;
 if (description.length >= 120&&description.length<= 16 0) {score +=20} else {newRecommendations.push('Description should be between 12 0-160characters')}
-// Check for keywords in title
+// Check for keywords in title;
 if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {score +=15} else {newRecommendations.push('Include primary keyword in title')}
-// Check for keywords in description
+// Check for keywords in description;
 if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {score +=15} else {newRecommendations.push('Include primary keyword in description')}
 // Check for headingstructureconstheadings= do cument.querySelectorAll('h1, h2, h3, h4, h5, h6')
 if (headings.length >0) {score +=10} else {newRecommendations.push('Add proper heading structure')}
@@ -180,11 +180,11 @@ setSeoScore(score)
 setRecommendations(newRecommendations)
 }, [title, description, keywords])
 useEffect(() => {analyzeSEO()}, [analyzeSEO])
-constgenerateStructuredData= () => {const defaultStructuredData= {"@context":"https:// schema.org","@type":"Organization","name":"Zion Tech Group","description": description,"url": canonicalUrl || windo w.location.origin,"logo": ogImage,"sameAs": ["https:// twitter.com/ziontechgroup","https:// linkedin.com/$1/ziontechgroup"
+constgenerateStructuredData= () =</ {const defaultStructuredData= {"@context":"https:// schema.org","@type":"Organization","name":"Zion Tech Group","description": description,"url": canonicalUrl || windo w.location.origin,"logo": ogImage,"sameAs": ["https:// twitter.com/ziontechgroup","https: // linkedin.com/$1/ziontechgroup"
 ]}
-return structuredDat a || default StructuredData
+return structuredDat a || default StructuredData;
 }
-return structuredData || defaultStructuredData
+return structuredData || defaultStructuredData;
 }
 return (
     <>
@@ -193,14 +193,30 @@ return (
 {process.env.NODE_ENV === 'development' && (
 <div className="seo-debug" style={{
 position: 'fixed',
-top: '10 px',
-left: '10 px',
-background: 'rgba(0,0,0,0.8)',
-color: 'white',
-padding: '10 px',
-borderRadius: '5 px',
-fontSize: '12 px',
-zIndex:1000,
-maxWidth: '300 px'}}><di v>SEOScore:{seoScore}/100</di>{recommendations.length >0&&(<di v><di v>Recommendations:</di><ulstyle={{ margin: '5 px 0', paddingLeft: '15 px'}}>{recommendations.map((recindex)=>(<likey={index}>{rec}</l>))}</u></di>)}</di>)}</>)
+        top: '10px',
+        left: '10px',
+        background: 'rgba(0,0,0,0.8)',
+        color: 'white',
+        padding: '10px',
+        borderRadius: '5px',
+        fontSize: '12px',
+        zIndex: 1000,
+        maxWidth: '300px'
+      }}>
+        <div>SEO Score: {seoScore}/100</div>
+        {recommendations.length > 0 && (
+          <div>
+            <div>Recommendations:</div>
+            <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
+              {recommendations.map((rec, index) => (
+                <li key={index}>{rec}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+    )}
+  </>
+)
 }
-export default AdvancedSEOOptimizer
+export default AdvancedSEOOptimizer;

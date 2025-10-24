@@ -23,32 +23,37 @@ const AboutPage: React.FC = () => {
 
   const values = [
     {
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      title: 'Innovation',
-      description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions.'
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
-      icon: <Shield className="w-8 h-8 text-purple-400" />,
-      title: 'Security',
-      description: 'Your data and systems are protected with enterprise-grade security measures.'
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
-      icon: <Globe className="w-8 h-8 text-green-400" />,
-      title: 'Global Reach',
-      description: 'Serving clients worldwide with localized support and expertise.'
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
     {
-      icon: <Users className="w-8 h-8 text-orange-400" />,
-      title: 'Collaboration',
-      description: 'We work closely with our clients to understand their unique needs.'
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ];
 
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '5+', label: 'Years Experience' },
-    { number: '24/7', label: 'Support Available' }
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
   ];
 
   return (
@@ -82,45 +87,51 @@ const AboutPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Mission Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl font-bold text-white mb-8">Our Mission</h2>
-              <p className="text-xl text-gray-300 mb-8">
-                To empower businesses with cutting-edge AI and IT solutions that drive growth, 
-                efficiency, and innovation. We believe technology should be accessible, 
-                reliable, and transformative.
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Powerful features designed to transform your business operations
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-                {stats.map((stat, index) => (
-                  <div key={index} className="text-center">
-                    <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.number}</div>
-                    <div className="text-gray-300">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Values Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-black/20">
+          <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Our Values</h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                These core values guide everything we do and shape our company culture.
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solutions?</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the benefits of intelligent automation and advanced technology
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
-                  <div className="flex justify-center mb-4">
-                    {value.icon}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="h-6 w-6 text-emerald-400 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
-                  <p className="text-gray-300">{value.description}</p>
                 </div>
               ))}
             </div>
@@ -157,4 +168,4 @@ const AboutPage: React.FC = () => {
   );
 };
 
-export default AboutPage;
+export default Page;

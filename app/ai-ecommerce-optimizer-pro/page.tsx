@@ -15,66 +15,37 @@ export const metadata: Metadata = {
 const AiEcommerceOptimizerProPage: React.FC = () => {
   const features = [
     {
-      icon: <Zap className="w-8 h-8 text-cyan-400" />,
-      title: 'AI-Powered Optimization',
-      description: 'Advanced machine learning algorithms to optimize your e-commerce performance.'
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-purple-400" />,
-      title: 'Analytics Dashboard',
-      description: 'Comprehensive analytics and insights to track your business growth.'
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
-      icon: <Shield className="w-8 h-8 text-green-400" />,
-      title: 'Security & Compliance',
-      description: 'Enterprise-grade security with full compliance and data protection.'
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
     {
-      icon: <Users className="w-8 h-8 text-orange-400" />,
-      title: 'Customer Insights',
-      description: 'Deep customer behavior analysis to improve conversion rates.'
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ];
 
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$99',
-      period: '/month',
-      description: 'Ideal for growing e-commerce businesses',
-      features: [
-        'Up to 10,000 products',
-        'Basic AI optimization',
-        'Analytics dashboard',
-        'Email support'
-      ]
-    },
-    {
-      name: 'Professional',
-      price: '$299',
-      period: '/month',
-      description: 'Perfect for established online stores',
-      features: [
-        'Up to 50,000 products',
-        'Advanced AI optimization',
-        'Real-time analytics',
-        'Priority support',
-        'Custom integrations'
-      ]
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'For large-scale e-commerce operations',
-      features: [
-        'Unlimited products',
-        'Full AI suite',
-        'Dedicated support',
-        'Custom development',
-        'SLA guarantee'
-      ]
-    }
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
   ];
 
   return (
@@ -88,9 +59,8 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI E-commerce <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Optimizer Pro</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your e-commerce business with advanced AI optimization solutions that boost sales, 
-              improve conversion rates, and maximize your online store performance.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced solutions designed to transform your business operations and drive innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
@@ -108,55 +78,53 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
               </Link>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI e-commerce optimizer provides comprehensive tools to maximize your online store performance
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group text-center">
-                <div className="mb-6">
-                  {feature.icon}
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Powerful features designed to transform your business operations
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Choose Your Plan
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Flexible pricing options to suit businesses of all sizes
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold text-cyan-400 mb-2">
-                    {plan.price}
-                    <span className="text-lg text-gray-400">{plan.period}</span>
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-black/20">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solutions?</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the benefits of intelligent automation and advanced technology
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="h-6 w-6 text-emerald-400 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
                   </div>
-                  <p className="text-gray-300">{plan.description}</p>
                 </div>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
@@ -175,8 +143,7 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-purple-600">
@@ -202,10 +169,11 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
               Explore All AI Services
             </Link>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+      <Footer />
+    </>
   );
 };
 
-export default AiEcommerceOptimizerProPage;
+export default Page;

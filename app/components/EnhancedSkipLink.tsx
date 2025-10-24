@@ -144,13 +144,12 @@ const EnhancedSkipLinkPage: React.FC = () => {
 export default EnhancedSkipLinkPage;
 e.preventDefault()
 constmain= do cument.querySelector('#main-content')
-if (mai n) {
-main.focus()
+if (mai n) {main.focus()
 main.scrollIntoView({ behavior: 'smooth'})
 }
 }}
->
-Skip to maincontent</a>
+</
+Skip to maincontent</a />
 )
 }
-export default EnhancedSkipLink
+export default EnhancedSkipLink;

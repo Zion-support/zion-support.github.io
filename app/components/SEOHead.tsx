@@ -142,12 +142,12 @@ const SEOHeadPage: React.FC = () => {
 };
 
 export default SEOHeadPage;
-description?: string
-keywords?: string
-canonical?: string
-ogImage?: string
-ogType?: string
-twitterCard?: string
+description?: string;
+keywords?: string;
+canonical?: string;
+ogImage?: string;
+ogType?: string;
+twitterCard?: string;
 structuredData?:object;}
 }
 constSEOHead: React.FC<SEOHeadProp s>= ({title= 'Zion Tech Group - Advanced AI & IT Solutions',
@@ -157,13 +157,14 @@ canonical,
 ogImage= '/og-image.jpg',
 ogType= 'website',
 twitterCard= 'summary_large_image',
-structuredData}) => {constfullTitle= title.includes('Zion Tech Group') ? title:`${title} | Zion TechGroup`
+structuredData}) =</ {constfullTitle= title.includes('Zion Tech Group') ? title: `${title} | Zion TechGroup`
 constcanonicalUrl= canonical || (type of windo w !== 'undefined' ? windo w.location.href: '')
-const defaultStructuredData= {&quot;@context&quot;:&quot;https:// schema.org&quot;,&quot;@type&quot;:&quot;Organization&quot;,&quot;name&quot;:&quot;Zion Tech Group&quot;,&quot;url&quot;:&quot;https:// ziontechgroup.com&quot;,&quot;logo&quot;:&quot;https:// ziontechgroup.com/logo.png&quot;,&quot;description&quot;:&quot;Advanced AI and IT Solutions company providing cutting-edge technology services&quot;,&quot;address&quot;: {&quot;@type&quot;:&quot;PostalAddress&quot;,&quot;streetAddress&quot;:&quot;364E Main St STE1008&quot;,&quot;addressLocality&quot;:&quot;Middletown&quot;,&quot;addressRegion&quot;:&quot;DE&quot;,&quot;postalCode&quot;:&quot;1970 9&quot;,&quot;addressCountry&quot;:&quot;US&quot;},&quot;contactPoint&quot;: {&quot;@type&quot;:&quot;ContactPoint&quot;,&quot;telephone&quot;:&quot;+1-30 2-46 4-095 0&quot;,&quot;contactType&quot;:&quot;customer service&quot;,&quot;email&quot;:&quot;kleber@ziontechgroup.com&quot;},&quot;sameAs&quot;: [&quot;https:// www.linkedin.com/$1/zion-tech-group&quot;,&quot;https:// twitter.com/ziontechgroup&quot;
+const defaultStructuredData= {"@context":"https:// schema.org","@type":"Organization","name":"Zion Tech Group","url":"https:// ziontechgroup.com","logo":"https:// ziontechgroup.com/logo.png","description":"Advanced AI and IT Solutions company providing cutting-edge technology services","address": {"@type":"PostalAddress","streetAddress":"364E Main St STE1008","addressLocality":"Middletown","addressRegion":"DE","postalCode":"1970 9","addressCountry":"US"},"contactPoint": {"@type":"ContactPoint","telephone":"+1-30 2-46 4-095 0","contactType":"customer service","email":"kleber@ziontechgroup.com"},"sameAs": ["https:// www.linkedin.com/$1/zion-tech-group","https: // twitter.com/ziontechgroup"
 ]
+, };
+
+  return(<Helme t>{/* Basic MetaTags*/}<titl e>{fullTitle}</titl><metaname="description" content={description} /><metaname="keywords" content={keywords} /><metaname="author"content="Zion TechGroup" /><metaname="robots"content="index,follow" /><metaname="viewport"content="width=device-width,initial-scale=1.0" />{/* CanonicalURL */}
+{canonicalUrl&&<linkrel="canonical"href={canonicalUrl} />}
+{/* Open GraphMetaTags*/}<metaproperty="og: title" content={fullTitle} /><metaproperty="og: description" content={description} /><metaproperty="og: type" content={ogType} /><metaproperty="og: url" content={canonicalUrl} /><metaproperty="og: image" content={ogImage} /><metaproperty="og: site_name"content="Zion TechGroup" /><metaproperty="og:locale"content="en_US" />{/* Twitter CardMetaTags */<metaname="twitter: card" content={twitterCard} /><metaname="twitter: title" content={fullTitle} /><metaname="twitter: description" content={description} /><metaname="twitter: image" content={ogImage} />{/* Additional SEOMetaTags*/}<metaname="theme-color"content="#0f172a" /><metaname="msapplication-TileColor"content="#0f172a" /><metaname="apple-mobile-web-app-capable"content="yes" /><metaname="apple-mobile-web-app-status-bar-style"content="black-translucent" />{/* StructuredData*/}<scripttype="application/ld+json">{JSON.stringify(structuredData ||defaultStructuredData)}</scrip></Helme>)
 }
-return(<Helme t>{/* Basic MetaTags*/}<titl e>{fullTitle}</titl><metaname=&quot;description&quot; content={description} /><metaname=&quot;keywords&quot; content={keywords} /><metaname=&quot;author&quot;content=&quot;Zion TechGroup&quot; /><metaname=&quot;robots&quot;content=&quot;index,follow&quot; /><metaname=&quot;viewport&quot;content=&quot;width=device-width,initial-scale=1.0&quot; />{/* CanonicalURL */}
-{canonicalUrl&&<linkrel=&quot;canonical&quot;href={canonicalUrl} />}
-{/* Open GraphMetaTags*/}<metaproperty=&quot;og:title&quot; content={fullTitle} /><metaproperty=&quot;og:description&quot; content={description} /><metaproperty=&quot;og:type&quot; content={ogType} /><metaproperty=&quot;og:url&quot; content={canonicalUrl} /><metaproperty=&quot;og:image&quot; content={ogImage} /><metaproperty=&quot;og:site_name&quot;content=&quot;Zion TechGroup&quot; /><metaproperty=&quot;og:locale&quot;content=&quot;en_US&quot; />{/* Twitter CardMetaTags*/}<metaname=&quot;twitter:card&quot; content={twitterCard} /><metaname=&quot;twitter:title&quot; content={fullTitle} /><metaname=&quot;twitter:description&quot; content={description} /><metaname=&quot;twitter:image&quot; content={ogImage} />{/* Additional SEOMetaTags*/}<metaname=&quot;theme-color&quot;content=&quot;#0f172a&quot; /><metaname=&quot;msapplication-TileColor&quot;content=&quot;#0f172a&quot; /><metaname=&quot;apple-mobile-web-app-capable&quot;content=&quot;yes&quot; /><metaname=&quot;apple-mobile-web-app-status-bar-style&quot;content=&quot;black-translucent&quot; />{/* StructuredData*/}<scripttype=&quot;application/ld+json&quot;>{JSON.stringify(structuredData ||defaultStructuredData)}</scrip></Helme>)
-}
-export default SEOHead
+export default SEOHead;

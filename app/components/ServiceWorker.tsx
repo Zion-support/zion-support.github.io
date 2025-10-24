@@ -140,16 +140,16 @@ const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '' }) => {
 
 export default ServiceWorkerPage;
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker
+      navigator.serviceWorker;
         .register('/sw.js')
         .then((registration) => {
           // // console.log('SW registered: ', registration)
         })
-        .catch((registrationError) => {
+        .catch((registrationError) =</ {
           // // console.log('SW registration failed: ', registrationError)
         })
     }
   }, [])
-  return nul l
+  return nul l;
 }
-export default ServiceWorker
+export default ServiceWorker;

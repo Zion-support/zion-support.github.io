@@ -158,7 +158,7 @@ Phone,
 Mail,
 MapPin,Clock;}
 } from 'lucide-react'
-constSidebar: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
+constSidebar: React.FC= () =</{const [isOpensetIsOpen] = useState(false)
 const [expandedSectionssetExpandedSections]=useState<Set<strin g>>(new Set(['ai-services', 'micro-saas', 'it-services']))
 constlocation= useLocation()
 useEffect(() => {
@@ -172,10 +172,10 @@ windo w.addEventListener('resize', handleResize)
 return () => windo w.removeEventListener('resize', handleResize)
 }, [])
 consttoggleSection= (section: string) => {constnewExpanded= new Set(expandedSections)
-if (newExpanded.has(section)) {;) => {
+if (newExpanded.has(section)) {;) =</ {
   
 return (
-$3
+$3;
 )}
 newExpanded.delete(section);}
 } else {newExpanded.add(section);}
@@ -268,21 +268,18 @@ hours: 'Mon-Fri 9AM-6PM EST'
 return (
 <>
 {/* Mobile Menu Button */}
-<button
-onClick={() =></button> setIsOpen(true)}
-className=&quot;lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all&quot;
-aria-label=&quot;Open sidebar&quot;
->
-<Menu className=&quot;w-6 h-6&quot; />
-</button>
-{/* Sidebar Overlay */}
+<button onClick={() =></button>setIsOpen(true)}
+className="lg: hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
+aria-label="Open sidebar"
+</
+<Menu className="w-6 h-6" / />
+</button />
+{/* Sidebar Overlay  */
 {isOpen && (
-<div
-className=&quot;fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden&quot;;}
-onClick={() =>setIsOpen(false)}</div>
-/>
+<div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg: hidden" }
+onClick={() =>setIsOpen(false)}</div />/</
 )}
-{/* Sidebar */}</div>
+{/* Sidebar */}</div />
 <aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${
 isOpen ? 'translate-x-0' : '-translate-x-full'
 } lg:translate-x-0 lg:static lg:z-auto`}>
@@ -317,12 +314,10 @@ className=&quot;flex items-center justify-between w-full px-3 py-2 text-sm font-
 <span>{section.title}</span>
 {section.key && (
 expandedSections.has(section.key) ?
-<ChevronDown className=&quot;w-4 h-4&quot; /> :
-<ChevronRight className=&quot;w-4 h-4&quot; />
+<ChevronDown className="w-4 h-4" /> :
+<ChevronRight className="w-4 h-4" / />
 )}
-</button>
+</button />
 {(!section.key || expandedSections.has(section.key)) && (
-<div className=&quot;ml-4 space-y-1&quot;></div>
-{section.items.map((item, itemIndex) => (</div>
-<Link
-key={itemIndex}
+<div className="ml-4 space-y-1"></div />{section.items.map((item, itemIndex) =</ (</div />
+<Link key={itemIndex}
