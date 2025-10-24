@@ -32,7 +32,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   const trackEvent = (event: string, properties?: Record<string, any>) => {
     if (isLoaded && typeof window !== 'undefined') {
       // Track event with analytics service
-      // In production, this would send to analytics service
       if (process.env.NODE_ENV === 'development') {
         // console.log('Analytics Event:', event, properties);
       }

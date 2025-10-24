@@ -53,7 +53,7 @@ const teamMembers = [
   }
 ]
 
-export const values = [
+const values = [
   {
     icon: Brain,
     title: 'Innovation',
@@ -76,7 +76,7 @@ export const values = [
   }
 ]
 
-export const stats = [
+const stats = [
   { label: 'Years Combined Experience', value: '150+' },
   { label: 'AI Projects Delivered', value: '1000+' },
   { label: 'Team Members', value: '25+' },
@@ -177,7 +177,7 @@ const TeamPage: React.FC = () => {
             {values.map((value, index) => (
               <div key={index} className="text-center">
                 <div className="bg-gradient-to-r from-purple-500 to-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <value.icon {...value.iconProps} />
+                  <value.icon />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {value.title}
