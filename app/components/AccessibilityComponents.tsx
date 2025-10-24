@@ -11,10 +11,10 @@ interface AccessibilityComponentsProps {
 
 const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({ className }) => {
   return (
-    <div className={className}> </div><h2>Accessibility Components</h2>
+    <div className={className}>
+      <h2>Accessibility Components</h2>
       <p>Accessibility components for enhanced user experience.</p>
     </div>
-
   );
 };
 

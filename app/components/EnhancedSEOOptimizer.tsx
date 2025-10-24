@@ -53,11 +53,9 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Enhanced SEO Optimizer
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Enhanced SEO Optimizer
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Advanced SEO optimization tools powered by AI that maximize your search engine
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Advanced SEO optimization tools powered by AI that maximize your search engine
                 visibility and drive organic traffic to your website.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -80,8 +78,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Key Features
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our enhanced SEO optimizer provides comprehensive tools for maximum visibility.
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our enhanced SEO optimizer provides comprehensive tools for maximum visibility.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
