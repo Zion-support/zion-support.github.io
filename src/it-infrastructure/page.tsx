@@ -1,19 +1,14 @@
-"use client";
 import React from 'react';
 
-import { Server, Lock, Monitor } from 'lucide-react';
-import { CheckCircle, Star, Zap, BarChart, Shield, Helmet } from 'lucide-react';
-import { Clock } from 'lucide-react';
-
-const $1: React.FC = () => {;
-  const itServices = [];
-  return ()
+const ItInfrastructurePage = () => {
+  return (
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">ItInfrastructure</h1>
+        <p className="text-gray-600">This page is under construction. Please check back later.</p>
       </div>
-</>
-  )
-<<<<<<< HEAD
+    </div>
+  );
 };
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
-export default ITInfrastructurePage;
+
+export default ItInfrastructurePage;

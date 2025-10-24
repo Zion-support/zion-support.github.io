@@ -1,25 +1,14 @@
-"use client";
 import React from 'react';
 
-<<<<<<< HEAD
-import { Coins } from 'lucide-react';
-import { CheckCircle, Star, Zap, Brain, BarChart, Shield, Target, Helmet } from 'lucide-react';
-import { Cpu } from 'lucide-react';
-=======
-import { Coins, Target } from 'lucide-react'
-import { Coins, Target } from 'lucide-react'
-import { Coins, Target } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
-
-const $1: React.FC = () => {;
-  const blockchainServices = [];
-  return ()
+const Page = () => {
+  return (
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">Page Under Construction</h1>
+        <p className="text-gray-600">This page is being updated. Please check back later.</p>
       </div>
-</>
-  )
-<<<<<<< HEAD
+    </div>
+  );
 };
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
-export default BlockchainPage;
+
+export default Page;

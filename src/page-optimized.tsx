@@ -1,32 +1,14 @@
-'use client'
-import React, { lazy, Suspense } from 'react';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceMonitor from './components/PerformanceMonitor';
-// Fallback component
-const EmptyComponent = () => null;
-// Lazy load heavy components - these may not exist, so make them optional
-const UnifiedBanner = lazy(() =>;
-  import('./components/NewestContent2025Banner').catch(() =>
-    import('./components/EmptyComponent').catch(() => ({ default: EmptyComponent }))
-  )
-)
-const ContentPromotion = lazy(() =>;
-  import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({}
-    default: EmptyComponent
-{  }))
-)
-const ContentShowcase = lazy(() =>;
-  import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({}
-    default: () => <div /></div>
-{  }))
-)
+import React from 'react';
 
+const SrcPage = () => {
+  return (
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">Src</h1>
+        <p className="text-gray-600">This page is under construction. Please check back later.</p>
+      </div>
     </div>
-<<<<<<< HEAD
   );
-{};
-=======
-  )
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
+};
+
+export default SrcPage;
