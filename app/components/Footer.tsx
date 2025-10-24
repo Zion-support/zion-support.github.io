@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import Link from 'next/link'
-
-const Footer: React.FC = () => {
-  return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto py-12 px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-400">
-              Advanced AI and IT solutions for modern businesses.
-            </p>
-=======
 import React from 'react';
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Star } from 'lucide-react';
@@ -82,42 +67,58 @@ const Footer: React.FC = () => {
                 <Twitter className="h-5 w-5" />
               </a>
             </div>
->>>>>>> e20c8f3deeeec918a2c8d9f41b300a271dcc999c
           </div>
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Company</h4>
+          {/* AI Services */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-white">AI Services</h4>
             <ul className="space-y-2">
-              <li><Link href="/about" className="text-gray-400 hover:text-white">About</Link></li>
-              <li><Link href="/services" className="text-gray-400 hover:text-white">Services</Link></li>
-              <li><Link href="/pricing" className="text-gray-400 hover:text-white">Pricing</Link></li>
-              <li><Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link></li>
+              {aiServices.slice(0, 6).map((service, index) => (
+                <li key={index}>
+                  <Link 
+                    href={service.url} 
+                    className="text-gray-300 hover:text-emerald-400 transition-colors text-sm"
+                  >
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Solutions</h4>
-            <ul className="space-y-2">
-              <li><Link href="/ai-services" className="text-gray-400 hover:text-white">AI Services</Link></li>
-              <li><Link href="/it-services" className="text-gray-400 hover:text-white">IT Services</Link></li>
-              <li><Link href="/5g-solutions" className="text-gray-400 hover:text-white">5G Solutions</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <p className="text-gray-400 mb-2">Email: info@ziontech.com</p>
-            <p className="text-gray-400">Phone: +1 (555) 123-4567</p>
-          </div>
-        </div>
-<<<<<<< HEAD
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400">&copy; 2024 Zion Tech Group. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
-  )
-}
 
-export default Footer
-=======
+          {/* IT Services */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-white">IT Services</h4>
+            <ul className="space-y-2">
+              {itServices.slice(0, 6).map((service, index) => (
+                <li key={index}>
+                  <Link 
+                    href={service.url} 
+                    className="text-gray-300 hover:text-emerald-400 transition-colors text-sm"
+                  >
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company Links */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-white">Company</h4>
+            <ul className="space-y-2">
+              {companyLinks.map((link, index) => (
+                <li key={index}>
+                  <Link 
+                    href={link.url} 
+                    className="text-gray-300 hover:text-emerald-400 transition-colors text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
 
         {/* Contact Info */}
         <div className="border-t border-gray-800 mt-8 pt-8">
@@ -161,4 +162,3 @@ export default Footer
 };
 
 export default Footer;
->>>>>>> e20c8f3deeeec918a2c8d9f41b300a271dcc999c
