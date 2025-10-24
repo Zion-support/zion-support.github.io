@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import React from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import Link from 'next/link';
