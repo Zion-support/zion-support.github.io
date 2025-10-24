@@ -2,11 +2,11 @@
 
 
 import React from "react";
-import { CheckCircle, ArrowRight } from "lucide-react";
+import { CheckCircle, ArrowRight, Brain, Zap, BarChart, Target } from "lucide-react";
 const AIServicesPage: React.FC = () => {
   const services = [
   {
-      icon: 'Brain',
+      icon: Brain,
     title: "Machine Learning Solutions",
       description: "Custom ML models tailored to your business needs",
     features: [
@@ -30,7 +30,7 @@ const AIServicesPage: React.FC = () => {
       price: "Starting at $3,000"
 },
   {
-    icon: 'Target',
+    icon: Target,
     title: "Natural Language Processing",
       description: "Understand and process human language at scale",
     features: [
@@ -42,7 +42,7 @@ const AIServicesPage: React.FC = () => {
       price: "Starting at $4,000"
 },
   {
-    icon: 'BarChart',
+    icon: BarChart,
     title: "Computer Vision",
       description: "Extract insights from images and videos",
     features: [

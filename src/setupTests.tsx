@@ -6,14 +6,11 @@ import '@testing-library/jest-dom';
 
 // Jest globals
 declare global {
-  const jest: any;
-  const PerformanceObserverCallback: any;
-}
-
-// Jest globals
-declare global {
-  const jest: any;
-  const PerformanceObserverCallback: any;
+  namespace jest {
+    function fn(): any;
+    function mockImplementation(impl: any): any;
+  }
+  var PerformanceObserverCallback: any;
 }
 
 // Polyfill for TextEncoder/TextDecoder
