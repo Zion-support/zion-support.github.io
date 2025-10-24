@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Shield, CheckCircle, Clock, Database, Lock, ArrowRight} from 'lucide-react';
 
-const CompliancePageBackup: React.FC = () => {
+const CompliancePageFixed: React.FC = () => {
 
   const features = [
     {
@@ -35,6 +35,7 @@ const CompliancePageBackup: React.FC = () => {
   ];
 
   return (
+    
     <>
       <Navigation />
       
@@ -45,9 +46,9 @@ const CompliancePageBackup: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Page Backup
+              Page Fixed
             </h1>
-            <p className="...">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced page backup solutions powered by AI technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -59,17 +60,17 @@ const CompliancePageBackup: React.FC = () => {
                 Learn More
               </button>
             </div>
+              
+            </button>
           </div>
         </div>
       </section>
 
         {/* Stats Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <section className="py-16 px-4"></section>
+          <div className="max-w-7xl mx-auto"><div className="grid grid-cols-1 md: grid-cols-3 gap-8"></div>,
               {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4">
+                <div key={index} className="text-center"><div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4"></div>
                     <stat.icon className="h-8 w-8 text-white" />
                   </div>
                   <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
@@ -81,10 +82,9 @@ const CompliancePageBackup: React.FC = () => {
       </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"><div className="text-center mb-16"></div>
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,
                 Advanced Backup Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -92,10 +92,10 @@ const CompliancePageBackup: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8"></div>,
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mb-6">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>,
+                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mb-6"></div>
                     <feature.icon className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
@@ -104,7 +104,8 @@ const CompliancePageBackup: React.FC = () => {
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                        {benefit}
+                        {benefit;
+}
                       </li>
                     ))}
                   </ul>
@@ -115,25 +116,24 @@ const CompliancePageBackup: React.FC = () => {
       </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,
               Ready to Secure Your Data?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Get started with our advanced backup solutions today.
             </p>
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-purple-600 hover:to-blue-700 transition-all duration-300">
               Start Free Trial
+            
             </button>
           </div>
         </section>
-          </div>
-        </section>
       </main>
+
       <Footer />
     </>
-  );
-};
+  )};
 
-export default CompliancePageBackup;
+export default CompliancePageFixed;

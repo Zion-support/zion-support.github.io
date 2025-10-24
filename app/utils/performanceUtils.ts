@@ -1,5 +1,22 @@
 // Performance utilities for optimization
+export const defaultConfig = {
+  enabled: true,
+  debug: false
+};
+
+export const defaultFunction = () => {
+  return null;
+};
+
+// Performance utilities object
 export const performanceUtils = {
+  measurePerformance: (name: string, fn: () => void) => {
+    const start = performance.now();
+    fn();
+    const end = performance.now();
+    console.log(`${name} took ${end - start} milliseconds`);
+  },
+
   monitorWebVitals: () => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       // Monitor Core Web Vitals
@@ -11,88 +28,104 @@ export const performanceUtils = {
           if (entry.entryType === 'first-input') {
             console.log('FID:', entry.processingStart - entry.startTime);
           }
+          console.log('Performance metric:', entry.name, entry.value);
         }
       });
       
       try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'measure', 'navigation'] });
       } catch (e) {
         // Fallback for older browsers
-        console.log('Performance Observer not supported');
+        console.log('Performance monitoring not fully supported');
       }
     }
   },
 
   optimizeImages: () => {
     if (typeof window !== 'undefined') {
-      const images = document.querySelectorAll('img');
-      images.forEach((img) => {
+      // Lazy load images with intersection observer
+      const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            img.src = img.dataset.src || '';
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
+          }
+        });
+      });
+
+      images.forEach(img => imageObserver.observe(img));
+      
+      // Also set loading="lazy" for regular images
+      const regularImages = document.querySelectorAll('img:not([data-src])');
+      regularImages.forEach(img => {
         if (!img.loading) {
           img.loading = 'lazy';
         }
-        if (!img.decoding) {
-          img.decoding = 'async';
-        }
       });
     }
+    return true;
   },
 
-  preloadCriticalResources: () => {
+  optimizeFonts: () => {
     if (typeof window !== 'undefined') {
-      const criticalResources = [
-        '/fonts/inter.woff2',
-        '/css/critical.css'
+      // Preload critical fonts
+      const fontPreloads = [
+        { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2' },
+        { href: '/fonts/inter-var.woff', as: 'font', type: 'font/woff' }
       ];
-      
-      criticalResources.forEach((resource) => {
+
+      fontPreloads.forEach(font => {
         const link = document.createElement('link');
         link.rel = 'preload';
-        link.href = resource;
-        link.as = resource.endsWith('.css') ? 'style' : 'font';
-        if (resource.endsWith('.woff2')) {
-          link.crossOrigin = 'anonymous';
-        }
+        link.href = font.href;
+        link.as = font.as;
+        if (font.type) link.type = font.type;
+        link.crossOrigin = 'anonymous';
         document.head.appendChild(link);
       });
     }
+    return true;
   },
 
-  debounce: (func: Function, wait: number) => {
-    let timeout: NodeJS.Timeout;
-    return function executedFunction(...args: any[]) {
-      const later = () => {
-        clearTimeout(timeout);
-        func(...args);
-      };
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-    };
+  optimizeThirdParty: () => {
+    if (typeof window !== 'undefined') {
+      // Defer non-critical scripts
+      const scripts = document.querySelectorAll('script[data-defer]');
+      scripts.forEach(script => {
+        script.setAttribute('defer', '');
+      });
+      
+      // Also optimize regular scripts
+      const regularScripts = document.querySelectorAll('script[src]:not([data-defer])');
+      regularScripts.forEach(script => {
+        if (!script.async && !script.defer) {
+          script.async = true;
+        }
+      });
+    }
+    return true;
   },
 
-  throttle: (func: Function, limit: number) => {
-    let inThrottle: boolean;
-    return function executedFunction(...args: any[]) {
-      if (!inThrottle) {
-        func.apply(this, args);
-        inThrottle = true;
-        setTimeout(() => inThrottle = false, limit);
-      }
-    };
+  preloadResource: (href: string, as: string) => {
+    if (typeof window !== 'undefined') {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = href;
+      link.as = as;
+      document.head.appendChild(link);
+    }
   },
 
   cleanup: () => {
+    // Cleanup function for component unmount
     if (typeof window !== 'undefined') {
       // Remove any performance observers or timers
-      console.log('Performance optimizer cleanup completed');
+      const observers = document.querySelectorAll('[data-performance-observer]');
+      observers.forEach(observer => observer.remove());
+      console.log('Performance utilities cleanup');
     }
   }
-};
-
-export const defaultConfig = {
-  enabled: true,
-  debug: false
-};
-
-export const defaultFunction = () => {
-  return null;
 };
