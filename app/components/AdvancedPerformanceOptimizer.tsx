@@ -1,130 +1,166 @@
-'use client';
+'use client'
+import React, { useEffect, useState, useCallback } from 'react'
 
-import React, { useEffect, useState, useCallback } from 'react';
-
-interface PerformanceOptimizerProps {
-  children: React.ReactNode;
-  enableOptimizations?: boolean;
+interface AdvancedPerformanceOptimizerProps {
+  enableAdvancedCaching?: boolean
+  enableImageOptimization?: boolean
+  enableLazyLoading?: boolean
+  enablePreloading?: boolean
+  enableCodeSplitting?: boolean
+  enableResourceHints?: boolean
+  enableServiceWorker?: boolean
+  enableCriticalCSS?: boolean
+  enableWebVitals?: boolean
 }
 
-const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  children,
-  enableOptimizations = true
+const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({
+  enableAdvancedCaching = true,
+  enableImageOptimization = true,
+  enableLazyLoading = true,
+  enablePreloading = true,
+  enableCodeSplitting = true,
+  enableResourceHints = true,
+  enableServiceWorker = true,
+  enableCriticalCSS = true,
+  enableWebVitals = true
 }) => {
-  const [isOptimized, setIsOptimized] = useState(false)
-  const [optimizationMetrics, setOptimizationMetrics] = useState({
-    imagesOptimized: 0,
-    scriptsOptimized: 0,
-    cssOptimized: 0,
-    totalSavings: 0
-  });
-  const optimizeImages = useCallback(() => {
+  const [performanceMetrics, setPerformanceMetrics] = useState({
+    fcp: 0,
+    lcp: 0,
+    fid: 0,
+    cls: 0,
+    ttfb: 0
+  })
+
+  // Web Vitals monitoring
+  useEffect(() => {
+    if (enableWebVitals && typeof window !== 'undefined') {
+      const measureWebVitals = () => {
+        // First Contentful Paint
+        new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.name === 'first-contentful-paint') {
+              setPerformanceMetrics(prev => ({ ...prev, fcp: entry.startTime }))
+            }
+          }
+        }).observe({ entryTypes: ['paint'] })
+
+        // Largest Contentful Paint
+        new PerformanceObserver((list) => {
+          const entries = list.getEntries()
+          const lastEntry = entries[entries.length - 1]
+          setPerformanceMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))
+        }).observe({ entryTypes: ['largest-contentful-paint'] })
+
+        // First Input Delay
+        new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            setPerformanceMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }))
+          }
+        }).observe({ entryTypes: ['first-input'] })
+
+        // Cumulative Layout Shift
+        let clsValue = 0
+        new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (!(entry as any).hadRecentInput) {
+              clsValue += (entry as any).value
+              setPerformanceMetrics(prev => ({ ...prev, cls: clsValue }))
+            }
+          }
+        }).observe({ entryTypes: ['layout-shift'] })
+      }
+
+      measureWebVitals()
+    }
+  }, [enableWebVitals])
+
+  // Advanced caching strategies
+  const setupAdvancedCaching = useCallback(() => {
     if (typeof window === 'undefined') return
+
+    // Service Worker for advanced caching
+    if ('serviceWorker' in navigator && enableServiceWorker) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('Service Worker registered:', registration)
+        })
+        .catch((registrationError) => {
+          console.error('Service Worker registration failed:', registrationError)
+        })
+    }
+
+    // Memory-based caching for API responses
+    const cache = new Map()
+    const originalFetch = window.fetch
+    window.fetch = async (input, init) => {
+      const url = typeof input === 'string' ? input : input.url
+      const cacheKey = `${url}_${JSON.stringify(init)}`
+
+      if (cache.has(cacheKey)) {
+        return cache.get(cacheKey)
+      }
+
+      const response = await originalFetch(input, init)
+      cache.set(cacheKey, response)
+      return response
+    }
+  }, [enableServiceWorker])
+
+  // Image optimization
+  const setupImageOptimization = useCallback(() => {
+    if (typeof window === 'undefined' || !enableImageOptimization) return
+
     const images = document.querySelectorAll('img')
-    let optimizedCount = 0
-    images.forEach((img) => {
-      // Add lazy loading if not already present
+    images.forEach(img => {
+      // Add loading="lazy" if not already present
       if (!img.hasAttribute('loading')) {
         img.setAttribute('loading', 'lazy')
-        optimizedCount++
       }
 
-      // Add decoding attribute for better performance
+      // Add decoding="async" for better performance
       if (!img.hasAttribute('decoding')) {
         img.setAttribute('decoding', 'async')
-        optimizedCount++
       }
     })
-    return optimizedCount
-  }, [])
-  const optimizeScripts = useCallback(() => {
-    if (typeof window === 'undefined') return
-    const scripts = document.querySelectorAll('script[src]')
-    let optimizedCount = 0
-    scripts.forEach((script) => {
-      // Add defer attribute if not already present
-      if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {
-        script.setAttribute('defer', '')
-        optimizedCount++
-      }
-    })
-    return optimizedCount
-  }, [])
-  const optimizeCSS = useCallback(() => {
-    if (typeof window === 'undefined') return
-    const stylesheets = document.querySelectorAll('link[rel="stylesheet"]')
-    let optimizedCount = 0
-    stylesheets.forEach((link) => {
-      // Add media attribute for non-critical CSS
-      if (!link.hasAttribute('media') && !link.hasAttribute('data-critical')) {
-        link.setAttribute('media', 'print')
-        link.setAttribute('onload', "this.media='all'")
-        optimizedCount++
-      }
-    })
-    return optimizedCount
-  }, [])
-  const runOptimizations = useCallback(() => {
-    if (!enableOptimizations) return
-    const imagesOptimized = optimizeImages()
-    const scriptsOptimized = optimizeScripts()
-    const cssOptimized = optimizeCSS()
-    setOptimizationMetrics({
-      imagesOptimized,
-      scriptsOptimized,
-      cssOptimized,
-      totalSavings: imagesOptimized + scriptsOptimized + cssOptimized
-    });
-    setIsOptimized(true)
-  }, [enableOptimizations, optimizeImages, optimizeScripts, optimizeCSS])
-  useEffect(() => {
-    // Run optimizations after component mount
-    const timer = setTimeout(runOptimizations, 100)
-    return () => clearTimeout(timer)
-  }, [runOptimizations])
-  // Add performance monitoring
-  useEffect(() => {
-    if (typeof window === 'undefined') return
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries()
-      entries.forEach((entry) => {
-        if (entry.entryType === 'navigation') {
-          const navEntry = entry as PerformanceNavigationTiming
-          if (navEntry.loadEventEnd - navEntry.loadEventStart > 1000) {
-            console.warn('Page load time exceeded 1 second')
-          }
-        }
-      })
-    })
-    observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] })
-    return () => observer.disconnect()
-  }, [])
-  return (
-    <div className="performance-optimized" data-optimized={isOptimized}>
-      {children}
-      {process.env.NODE_ENV === 'development' && (
-        <div
-          className="optimization-debug"
-          style={{
-            position: 'fixed',
-            bottom: '10px',
-            right: '10px',
-            background: 'rgba(0,0,0,0.8)',
-            color: 'white',
-            padding: '10px',
-            borderRadius: '5px',
-            fontSize: '12px',
-            zIndex: 1000
-          }}
-        >
-          <div>Images: {optimizationMetrics.imagesOptimized}</div>
-          <div>Scripts: {optimizationMetrics.scriptsOptimized}</div>
-          <div>CSS: {optimizationMetrics.cssOptimized}</div>
-          <div>Total: {optimizationMetrics.totalSavings}</div>
-        </div>
-      )}
-    </div>
-  );
-};
+  }, [enableImageOptimization])
 
-export default AdvancedPerformanceOptimizer;
+  // Resource hints
+  const setupResourceHints = useCallback(() => {
+    if (typeof window === 'undefined' || !enableResourceHints) return
+
+    // Preload critical resources
+    const criticalResources = [
+      '/fonts/inter-var.woff2',
+      '/css/critical.css'
+    ]
+
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link')
+      link.rel = 'preload'
+      link.href = resource
+      link.as = resource.endsWith('.woff2') ? 'font' : 'style'
+      if (resource.endsWith('.woff2')) {
+        link.crossOrigin = 'anonymous'
+      }
+      document.head.appendChild(link)
+    })
+  }, [enableResourceHints])
+
+  // Initialize optimizations
+  useEffect(() => {
+    if (enableAdvancedCaching) {
+      setupAdvancedCaching()
+    }
+    if (enableImageOptimization) {
+      setupImageOptimization()
+    }
+    if (enableResourceHints) {
+      setupResourceHints()
+    }
+  }, [enableAdvancedCaching, enableImageOptimization, enableResourceHints, setupAdvancedCaching, setupImageOptimization, setupResourceHints])
+
+  return null
+}
+
+export default AdvancedPerformanceOptimizer

@@ -1,33 +1,31 @@
 'use client';
-
-import { useRef, useEffect } from 'react';
-
 /**
  * Performance Enhancement Utilities
  * Advanced performance optimization tools for the application
  */
+import React, { useEffect } from 'react';
 
 // Debounce function for performance optimization
-export const debounce = <T extends (..._args: unknown[]) => unknown>(
+export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
   wait: number
-): ((..._args: Parameters<T>) => void) => {
-  let timeout: ReturnType<typeof setTimeout>;
-  return (..._args: Parameters<T>) => {
+): ((...args: Parameters<T>) => void) => {
+  let timeout: NodeJS.Timeout;
+  return (...args: Parameters<T>) => {
     clearTimeout(timeout);
-    timeout = setTimeout(() => func(..._args), wait);
+    timeout = setTimeout(() => func(...args), wait);
   };
 };
 
 // Throttle function for performance optimization
-export const throttle = <T extends (..._args: unknown[]) => unknown>(
+export const throttle = <T extends (...args: unknown[]) => unknown>(
   func: T,
   limit: number
-): ((..._args: Parameters<T>) => void) => {
+): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean;
-  return (..._args: Parameters<T>) => {
+  return (...args: Parameters<T>) => {
     if (!inThrottle) {
-      func(..._args);
+      func(...args);
       inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);
     }
@@ -100,7 +98,7 @@ export class PerformanceMonitor {
 
 // React hook for performance monitoring
 export const usePerformanceMonitor = (componentName: string) => {
-  const renderStartTime = useRef<number>(0);
+  const renderStartTime = React.useRef<number>(0);
   const monitor = PerformanceMonitor.getInstance();
 
   useEffect(() => {
@@ -130,7 +128,7 @@ export const lazyLoadImages = () => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
-        img.src = img.dataset.src || '';
+        img['src'] = img.dataset['src'] || '';
         img.classList.remove('lazy');
         imageObserver.unobserve(img);
       }
@@ -144,7 +142,7 @@ export const preloadCriticalResources = () => {
   if (typeof window === 'undefined') return;
   const criticalResources = [
     '/fonts/inter-var.woff2',
-    '/css/critical.css'
+    '/css/critical.css',
   ];
   criticalResources.forEach((resource) => {
     const link = document.createElement('link');
@@ -203,7 +201,7 @@ export const optimizeScrollPerformance = () => {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         if (process.env['NODE_ENV'] === 'development') {
-          console.log('LCP:', entry.startTime);
+          // console.log('LCP:', entry);
         }
       }
     });
@@ -220,7 +218,7 @@ export const optimizeScrollPerformance = () => {
         const fidEntry = entry as FirstInputEntry;
         const fid = fidEntry.processingStart - entry.startTime;
         if (process.env['NODE_ENV'] === 'development') {
-          console.log('FID:', fid);
+          // console.log('FID:', fid);
         }
       }
     });
@@ -287,6 +285,6 @@ export const initializePerformanceEnhancements = () => {
   // Collect performance metrics
   const metrics = collectPerformanceMetrics();
   if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
-    console.log('Performance metrics:', metrics);
+    // console.log('Performance metrics:', metrics)
   }
 };

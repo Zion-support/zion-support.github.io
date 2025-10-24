@@ -1,12 +1,12 @@
-'use client';
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react'
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 
 interface AnimatedCounterProps {
-  end: number;
-  duration?: number;
-  suffix?: string;
-  prefix?: string;
-  className?: string;
+  end: number
+  duration?: number
+  suffix?: string
+  prefix?: string
+  className?: string
 }
 
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
@@ -14,63 +14,55 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   duration = 2000,
   suffix = '',
   prefix = '',
-  className = ''
+  className = '',
 }) => {
-  const [count, setCount] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-  const elementRef = useRef<HTMLSpanElement>(null);
+  const [count, setCount] = useState(0)
+  const [isVisible, setIsVisible] = useState(false)
+  const [setNode, entry] = useIntersectionObserver({
+    threshold: 0.5
+  })
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !isVisible) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
+    if (entry?.isIntersecting && !isVisible) {
+      setIsVisible(true)
     }
-
-    return () => observer.disconnect();
-  }, [isVisible]);
+  }, [entry, isVisible])
 
   useEffect(() => {
-    if (!isVisible) return;
+    if (!isVisible) return
 
-    let startTime: number;
-    let animationFrame: number;
+    let startTime: number
+    let animationFrame: number
 
     const animate = (currentTime: number) => {
-      if (!startTime) startTime = currentTime;
-      const progress = Math.min((currentTime - startTime) / duration, 1);
-      
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-      const currentCount = Math.floor(easeOutQuart * end);
-      
-      setCount(currentCount);
+      if (!startTime) startTime = currentTime
+      const progress = Math.min((currentTime - startTime) / duration, 1)
+
+      // Easing function for smooth animation
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4)
+      const currentCount = Math.floor(easeOutQuart * end)
+
+      setCount(currentCount)
 
       if (progress < 1) {
-        animationFrame = requestAnimationFrame(animate);
+        animationFrame = requestAnimationFrame(animate)
       }
-    };
+    }
 
-    animationFrame = requestAnimationFrame(animate);
+    animationFrame = requestAnimationFrame(animate)
 
     return () => {
       if (animationFrame) {
-        cancelAnimationFrame(animationFrame);
+        cancelAnimationFrame(animationFrame)
       }
-    };
-  }, [isVisible, end, duration]);
+    }
+  }, [isVisible, end, duration])
 
   return (
-    <span ref={elementRef} className={className}>
+    <span ref={setNode} className={className}>
       {prefix}{count.toLocaleString()}{suffix}
     </span>
-  );
-};
+  )
+}
 
-export default AnimatedCounter;
+export default AnimatedCounter
