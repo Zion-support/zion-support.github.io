@@ -1,27 +1,14 @@
-<<<<<<< HEAD
 const LoadingSpinner: React.FC = () => {
 return(<div>
-=======
-'use client';
->>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   className?: string;
 }
 
-<<<<<<< HEAD
         <title>LoadingSpinner</title>
         <meta name="description" content="Advanced LoadingSpinner solution for modern businesses." / />
         <meta name="keywords" content="AI,artificial, intelligence, LoadingSpinner, AI, solutions, intelligent automation" / />
-=======
-export default function LoadingSpinner({ size = 'md', className = '' }: LoadingSpinnerProps) {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
-  };
->>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81
 
   return (
     <div className={`flex justify-center items-center ${className}`}>
@@ -33,7 +20,6 @@ export default function LoadingSpinner({ size = 'md', className = '' }: LoadingS
         <span className="sr-only">Loading...</span>
       </div>
     </div>
-<<<<<<< HEAD
       <Navigation/ />,
     <divclassName = "min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900" />
         {/* Hero Section */,}
@@ -101,7 +87,4 @@ Start Your Free Trial</button>
   );
 ,}  )};
 export default LoadingSpinner;
-=======
-  );
->>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81
 }

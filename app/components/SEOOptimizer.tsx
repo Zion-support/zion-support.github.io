@@ -94,7 +94,6 @@ dangerouslySetInnerHTML={{ __html: "JSON.stringify(structuredData) ",;};}
     </script></Head>
   )
 ;}
-=======
     <Head />;
       <title>{title}</title>;
       <meta name = "description" content={description,};/>
@@ -124,7 +123,6 @@ dangerouslySetInnerHTML={{ __html: "JSON.stringify(structuredData)",};/>
       )}
     </Head>
 
-=======;
 export default SEOOptimizer; }
 
 "

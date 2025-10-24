@@ -11,6 +11,5 @@ const benefits = [
     <divclassName="flex flex-col sm: flex-row gap-4 justify-center" />
             </div>
 
-=======,<divclassName="flex flex-col sm: flex-row gap-4 justify-center" / />
 ,;};
 ;

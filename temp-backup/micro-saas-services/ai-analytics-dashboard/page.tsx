@@ -1,25 +1,25 @@
 'use client';
 import React from 'react';
+import Head from 'next/head';
 
-<<<<<<< HEAD
 export default function ServicePage() {
   return (
     <>
       <Head>
-        <title>Ai Email Assistant | Zion Tech Group</title>
-        <meta name="description" content="Professional ai email assistant services and solutions for modern businesses." />
+        <title>Ai Analytics Dashboard | Zion Tech Group</title>
+        <meta name="description" content="Professional ai analytics dashboard services and solutions for modern businesses." />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Ai Email Assistant | Zion Tech Group" />
-        <meta property="og:description" content="Professional ai email assistant services and solutions for modern businesses." />
+        <meta property="og:title" content="Ai Analytics Dashboard | Zion Tech Group" />
+        <meta property="og:description" content="Professional ai analytics dashboard services and solutions for modern businesses." />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Ai Email Assistant
+            Ai Analytics Dashboard
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional ai email assistant services and solutions for modern businesses.
+            Professional ai analytics dashboard services and solutions for modern businesses.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -35,26 +35,11 @@ export default function ServicePage() {
               Learn More
             </Link>
           </div>
-=======
-function AiEmailAssistantPage() {
-  return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Page Title</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional services and solutions for your business needs.
-          </p>
->>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
-}
 
-
-export default AiEmailAssistantPage;
->>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81
+    </>
+  );
+}

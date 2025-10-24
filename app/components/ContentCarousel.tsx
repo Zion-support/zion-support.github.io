@@ -446,7 +446,6 @@ Contact Sales
       </div>
 
 </div>
-<<<<<<< HEAD,)
 ;}
  ContentCarouselPage
             <ArrowRightclassName = "w-5 h-5 ml-2" />

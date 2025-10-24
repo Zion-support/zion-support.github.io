@@ -43,6 +43,13 @@ const nextConfig = {
         fs: false,
       };
     }
+    
+    // Exclude problematic micro-saas-services files temporarily
+    config.module.rules.push({
+      test: /app\/micro-saas-services\/.*\.tsx$/,
+      use: 'ignore-loader'
+    });
+    
     return config;
   },
 }

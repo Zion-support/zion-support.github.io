@@ -1,29 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-<<<<<<< HEAD
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw     ;} from 'lucide-react';
 const Navigation = (
 
   return(<div>
-=======
-import { useState } from 'react';
-
-export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <nav className="bg-black/20 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">Z</span>
-            </div>
-            <span className="text-white font-bold text-xl">Zion Tech Group</span>
-          </Link>
->>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -47,7 +28,6 @@ export default function Navigation() {
             </Link>
           </div>
 
-<<<<<<< HEAD
         <title>404 - Page Not Found | Zion Tech Group</title>
         <meta name="robots" content="noindex, nofollow" />
         <meta property="og: type" content="website" />
@@ -103,10 +83,6 @@ Go Home
 
       </Link>
     </div>
-=======
-          {/* Mobile menu button */}
-          <div className="md:hidden">
->>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white focus:outline-none focus:text-white focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md p-1"
@@ -122,7 +98,6 @@ Go Home
                 )}
               </svg>
             </button>
-<<<<<<< HEAD
 </div>
           {/* Help Section */,},
     <divclassName="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-lg p-6" />,
@@ -161,54 +136,4 @@ go wrong! 🤖
 ",};
 export default Navigation;
     </div>
-=======
-          </div>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden" id="mobile-menu">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/40 backdrop-blur-md rounded-lg mt-2" role="menu" aria-orientation="vertical">
-              <Link
-                href="/about"
-                className="block px-3 py-2 text-gray-300 hover:text-white transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                About
-              </Link>
-              <Link
-                href="/services"
-                className="block px-3 py-2 text-gray-300 hover:text-white transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                Services
-              </Link>
-              <Link
-                href="/solutions"
-                className="block px-3 py-2 text-gray-300 hover:text-white transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                Solutions
-              </Link>
-              <Link
-                href="/contact"
-                className="block px-3 py-2 text-gray-300 hover:text-white transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                Contact
-              </Link>
-              <Link
-                href="/contact"
-                className="block px-3 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-md transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                Get Started
-              </Link>
-            </div>
-          </div>
-        )}
-      </div>
-    </nav>
-  );
->>>>>>> 25500927562937ed05befe3bb53e25b2bd9a2d81
 }
