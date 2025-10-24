@@ -145,6 +145,11 @@ class MonitoringService {
       } catch (_error) {
         }
     }
+<<<<<<< HEAD
+
+    // Send to error tracking service (if configured)
+=======
+>>>>>>> origin/main
   }
   private setupErrorHandling(): void {
     // Global error handler

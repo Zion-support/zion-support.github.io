@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import { CheckCircle, Phone, Mail } from 'lucide-react';}
+  ]
+=======
 'use client';
 import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react',;
   ]

@@ -47,6 +47,7 @@ export default function ContactPage() {
             $2
             <ArrowRight$3 />
           </Link>
+>>>>>>> origin/main
         </div>
       </div>
       <Footer />
