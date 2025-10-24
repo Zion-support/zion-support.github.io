@@ -1,10 +1,36 @@
-'use client';
-
 import React, { memo, useMemo } from 'react';
 import Link from 'next/link';
-import EnhancedSEOHead from './components/EnhancedSEOHead';
+import { Metadata } from 'next';
 
 export const dynamic = 'force-dynamic';
+
+export const metadata: Metadata = {
+  title: 'Zion Tech Group - Advanced AI and IT Solutions',
+  description: 'Leading provider of AI and IT solutions for modern businesses. Expert services in artificial intelligence, cloud infrastructure, and digital transformation.',
+  keywords: 'AI solutions, IT services, cloud infrastructure, digital transformation, machine learning, artificial intelligence',
+  openGraph: {
+    title: 'Zion Tech Group - Advanced AI and IT Solutions',
+    description: 'Leading provider of AI and IT solutions for modern businesses. Expert services in artificial intelligence, cloud infrastructure, and digital transformation.',
+    url: 'https://ziontechgroup.com',
+    siteName: 'Zion Tech Group',
+    images: [
+      {
+        url: 'https://ziontechgroup.com/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Zion Tech Group - AI Solutions',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zion Tech Group - Advanced AI and IT Solutions',
+    description: 'Leading provider of AI and IT solutions for modern businesses. Expert services in artificial intelligence, cloud infrastructure, and digital transformation.',
+    images: ['https://ziontechgroup.com/og-image.jpg'],
+  },
+};
 
 const HomePage: React.FC = memo(() => {
   const structuredData = useMemo(() => ({
@@ -36,12 +62,11 @@ const HomePage: React.FC = memo(() => {
 
   return (
     <>
-      <EnhancedSEOHead
-        title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading provider of AI and IT solutions for modern businesses. Expert services in artificial intelligence, cloud infrastructure, and digital transformation."
-        keywords="AI solutions, IT services, cloud infrastructure, digital transformation, machine learning, artificial intelligence"
-        canonicalUrl="https://ziontechgroup.com"
-        structuredData={structuredData}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
       />
       
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
