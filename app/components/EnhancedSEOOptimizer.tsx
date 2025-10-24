@@ -145,4 +145,3 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
 };
 
 export default EnhancedSEOOptimizerPage;
->>>>>>> origin/main

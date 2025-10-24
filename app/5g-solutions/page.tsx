@@ -27,7 +27,6 @@ export default function GsolutionsPage() {
       <Footer />
   );
 }
->>>>>>> origin/main
     </div>);
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-1948
