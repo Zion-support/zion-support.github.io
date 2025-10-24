@@ -1,107 +1,203 @@
 'use client';
-import React from 'react';
-import Head from 'next/head';"
-import Link from 'next/link";"
-import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react";
-const monitorCoreWebVitals = (
-return(<div>
 
-      <Head>"
-"
-        <title>404 - Page Not Found | Zion Tech Group</title>"
-        <meta name="robots" content="noindex, nofollow" />
-        <meta property="og: type" content="website" />
-"
-      </Head>"
-    </div>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4" />,"
-    <div className="max-w-2 xl w-full text-center" />
-          {/* 404 Animation */,) => {"
-$3"
-},"
-    <div className="relative mb-8" />,"
-    <div className="text-9 xl font-bold text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text animate-pulse" />"
-              404,"
-    <div className="absolute -top-4 -right-4 w-8 h-8 bg-red-500/20 rounded-full animate-bounce" />"
-              <AlertTriangle className="w-6 h-6 text-red-400" />
-                </div>"
-              </div>"
-          {/* Error Message */,},"
-    <h1 className="text-4 xl md: text-5 xl font-bold text-white mb-6" />"
-Page Not Found"
-          </h1>"
-          <p className="text-xl text-gray-300 mb-8 leading-relaxed" />"'"
-Oops! The page you're looking for seems to have vanished into the digital void. Don't, worry,even our AI can"t predict everything!
-          </p>"
-"
-          {/* Search Suggestion */},"
-    <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 mb-8" />,"
-    <div className="flex items-center justify-center mb-4" />"
-              <Search className="w-6 h-6 text-cyan-400 mr-2" />,"
-    <h1 className="text-lg font-semibold text-white">What were you looking for?</h2>"
-                </div>"
-            <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: "</p>",<div className="flex flex-wrap gap-2 justify-center" />"
-              {["
-                { name: "Home",path: "/" ,}"
-                { name: "About",path: "/about" ,}"
-                { name: "Services",path: "/services" ,}"
-                { name: "Contact",path: "/contact" ,})"
-              ].map((item, index) => ("
-                <Link key = {index,} href = {item.path,} className="px-4 py-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-purple-300 rounded-lg hover: from-purple-600/30 hover:to-blue-600/30 transition-all duration-300">
-                  {item.name,}
-                </Link>
-              ))}
-                </div>"
-              </div>"
-          {/* Action Buttons */},"
-    <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">"
-      <Link href="/" className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">"
-"
-              <Home className="w-5 h-5 mr-2" />
-Go Home
+import { useEffect } from 'react';
 
-      </Link>
-    </div>"
-            <button"
-onClick={() => window.history.back(),}"
-              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">"
-              <ArrowLeft className="w-5 h-5 mr-2" />
-Go Back
-            </button>"
-              </div>"
-          {/* Help Section */,;},"
-    <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-lg p-6" />,"
-    <h1 className="text-lg font-semibold text-white mb-3">Need Help?</h3>"
-            <p className="text-gray-300 text-sm mb-4" />"
-Our support team is here to help you navigate our services and find exactly what you"re looking for."
-            </p>,"
-    <div className="flex flex-col sm: flex-row gap-3 justify-center">"
-      <Link href="/contact" className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">"
-"
-                <RefreshCw className="w-4 h-4 mr-2" />
-Contact Support
+interface PerformanceMetrics {
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  ttfb?: number;
+  loadTime?: number;
+}
 
-      </Link>"
-    </div>"
-              <a"
-href="mailto:support@ziontechgroup.com"
-className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center">
-Send Email;
-              </a>
-                </div>"
-              </div>"
-          {/* Fun Fact */,;},"
-    <div className="mt-8 p-4 bg-slate-800/30 rounded-lg" />"
-            <p className="text-sm text-gray-400" />,"
-    <span className="text-cyan-400">Fun Fact: "</span> Even our AI gets"
-confused sometimes. That"s why we have humans to help when things
-go wrong! 🤖
-            </p>
-              </div>
-            </div>
-          </div>"
-    </div>"
-  )"
-",;}
-export default monitorCoreWebVitals"
-    </div>;"
-};"'"
+const PerformanceMonitor: React.FC = () => {
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const metrics: PerformanceMetrics = {};
+
+    // Track page load time
+    const trackLoadTime = () => {
+      const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+      metrics.loadTime = loadTime;
+      
+      // Send to analytics
+      if (window.gtag) {
+        window.gtag('event', 'page_load_time', {
+          value: Math.round(loadTime),
+          custom_parameter: 'load_time_ms'
+        });
+      }
+    };
+
+    // Track Core Web Vitals
+    const trackWebVitals = () => {
+      // First Contentful Paint (FCP)
+      if ('PerformanceObserver' in window) {
+        const fcpObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.name === 'first-contentful-paint') {
+              metrics.fcp = entry.startTime;
+              if (window.gtag) {
+                window.gtag('event', 'web_vitals', {
+                  metric_name: 'FCP',
+                  metric_value: Math.round(entry.startTime),
+                  metric_rating: entry.startTime < 1800 ? 'good' : entry.startTime < 3000 ? 'needs_improvement' : 'poor'
+                });
+              }
+            }
+          }
+        });
+        fcpObserver.observe({ entryTypes: ['paint'] });
+
+        // Largest Contentful Paint (LCP)
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          metrics.lcp = lastEntry.startTime;
+          if (window.gtag) {
+            window.gtag('event', 'web_vitals', {
+              metric_name: 'LCP',
+              metric_value: Math.round(lastEntry.startTime),
+              metric_rating: lastEntry.startTime < 2500 ? 'good' : lastEntry.startTime < 4000 ? 'needs_improvement' : 'poor'
+            });
+          }
+        });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+        // First Input Delay (FID)
+        const fidObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            metrics.fid = entry.processingStart - entry.startTime;
+            if (window.gtag) {
+              window.gtag('event', 'web_vitals', {
+                metric_name: 'FID',
+                metric_value: Math.round(metrics.fid),
+                metric_rating: metrics.fid < 100 ? 'good' : metrics.fid < 300 ? 'needs_improvement' : 'poor'
+              });
+            }
+          }
+        });
+        fidObserver.observe({ entryTypes: ['first-input'] });
+
+        // Cumulative Layout Shift (CLS)
+        let clsValue = 0;
+        const clsObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (!(entry as any).hadRecentInput) {
+              clsValue += (entry as any).value;
+            }
+          }
+          metrics.cls = clsValue;
+          if (window.gtag) {
+            window.gtag('event', 'web_vitals', {
+              metric_name: 'CLS',
+              metric_value: Math.round(clsValue * 1000) / 1000,
+              metric_rating: clsValue < 0.1 ? 'good' : clsValue < 0.25 ? 'needs_improvement' : 'poor'
+            });
+          }
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+      }
+    };
+
+    // Track Time to First Byte (TTFB)
+    const trackTTFB = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        metrics.ttfb = navigation.responseStart - navigation.requestStart;
+        if (window.gtag) {
+          window.gtag('event', 'web_vitals', {
+            metric_name: 'TTFB',
+            metric_value: Math.round(metrics.ttfb),
+            metric_rating: metrics.ttfb < 800 ? 'good' : metrics.ttfb < 1800 ? 'needs_improvement' : 'poor'
+          });
+        }
+      }
+    };
+
+    // Track resource loading performance
+    const trackResourcePerformance = () => {
+      const resources = performance.getEntriesByType('resource');
+      let totalResourceSize = 0;
+      let slowResources = 0;
+
+      resources.forEach((resource: any) => {
+        totalResourceSize += resource.transferSize || 0;
+        if (resource.duration > 1000) { // Resources taking more than 1 second
+          slowResources++;
+        }
+      });
+
+      if (window.gtag) {
+        window.gtag('event', 'resource_performance', {
+          total_resources: resources.length,
+          total_size: Math.round(totalResourceSize / 1024), // Size in KB
+          slow_resources: slowResources
+        });
+      }
+    };
+
+    // Track memory usage (if available)
+    const trackMemoryUsage = () => {
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
+        if (window.gtag) {
+          window.gtag('event', 'memory_usage', {
+            used_js_heap_size: Math.round(memory.usedJSHeapSize / 1024 / 1024), // MB
+            total_js_heap_size: Math.round(memory.totalJSHeapSize / 1024 / 1024), // MB
+            js_heap_size_limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024) // MB
+          });
+        }
+      }
+    };
+
+    // Initialize tracking
+    if (document.readyState === 'complete') {
+      trackLoadTime();
+      trackWebVitals();
+      trackTTFB();
+      trackResourcePerformance();
+      trackMemoryUsage();
+    } else {
+      window.addEventListener('load', () => {
+        trackLoadTime();
+        trackWebVitals();
+        trackTTFB();
+        trackResourcePerformance();
+        trackMemoryUsage();
+      });
+    }
+
+    // Track page visibility changes
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        if (window.gtag) {
+          window.gtag('event', 'page_visible', {
+            page_title: document.title,
+            page_location: window.location.href
+          });
+        }
+      } else {
+        if (window.gtag) {
+          window.gtag('event', 'page_hidden', {
+            page_title: document.title,
+            page_location: window.location.href
+          });
+        }
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    // Cleanup
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, []);
+
+  return null; // This component doesn't render anything
+};
+
+export default PerformanceMonitor;
