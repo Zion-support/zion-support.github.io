@@ -1,2 +1,8 @@
-import { render, screen } from '@testing-library/react'';
-import '@testing-library/jest-dom''
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+
+describe('Components', () => {
+  it('should render without errors', () => {
+    // Test implementation
+  });
+});
