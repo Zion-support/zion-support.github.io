@@ -108,5 +108,3 @@ const Aiaudioprocessor = () => {
 };
 
 export default Aiaudioprocessor;
-
-export default AiAudioProcessor;

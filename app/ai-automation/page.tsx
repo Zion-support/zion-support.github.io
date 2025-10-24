@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-import React from "react";
-import React from "react";
-import React from "react";
-import React from "react";
->>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 'use client';
 import React from 'react';
 import Link from 'next/link';
@@ -18,104 +11,81 @@ const AIAutomationPage: React.FC = () => {
     {
       icon: <Zap className="w-8 h-8 text-cyan-400" />,
       title: 'Workflow Automation',
-      description: 'Automate complex business processes with intelligent workflow management.'
+      description: 'Streamline your business processes with intelligent automation that adapts to your needs.',
+      benefits: ['Reduce manual tasks by 80%', '24/7 automated operations', 'Error-free processing', 'Scalable solutions']
     },
     {
       icon: <Brain className="w-8 h-8 text-purple-400" />,
-      title: 'Intelligent Decision Making',
-      description: 'AI-powered decision making based on data analysis and business rules.'
+      title: 'AI-Powered Intelligence',
+      description: 'Leverage advanced AI algorithms to make smarter decisions and optimize your operations.',
+      benefits: ['Predictive analytics', 'Smart recommendations', 'Automated decision making', 'Continuous learning']
     },
     {
       icon: <Settings className="w-8 h-8 text-green-400" />,
-      title: 'Custom Integrations',
-      description: 'Seamlessly integrate with your existing systems and third-party applications.'
+      title: 'Custom Integration',
+      description: 'Seamlessly integrate with your existing systems and workflows for maximum efficiency.',
+      benefits: ['API-first architecture', 'Easy customization', 'Third-party integrations', 'Flexible deployment']
     },
     {
       icon: <Globe className="w-8 h-8 text-orange-400" />,
-      title: 'Scalable Solutions',
-      description: 'Automation solutions that grow with your business and adapt to changing needs.'
-    }
-  ];
-
-  const useCases = [
-    {
-      title: 'Customer Service',
-      description: 'Automate ticket routing, response generation, and issue resolution.',
-      icon: <Users className="w-6 h-6 text-blue-400" />
-    },
-    {
-      title: 'Data Processing',
-      description: 'Automate data collection, validation, and analysis workflows.',
-      icon: <BarChart className="w-6 h-6 text-green-400" />
-    },
-    {
-      title: 'Marketing Automation',
-      description: 'Automate email campaigns, lead scoring, and customer segmentation.',
-      icon: <MessageCircle className="w-6 h-6 text-purple-400" />
-    },
-    {
-      title: 'Financial Operations',
-      description: 'Automate invoice processing, expense management, and financial reporting.',
-      icon: <FileText className="w-6 h-6 text-orange-400" />
+      title: 'Global Scale',
+      description: 'Deploy automation solutions that work across multiple locations and time zones.',
+      benefits: ['Multi-region support', 'Cloud-native architecture', 'High availability', 'Global compliance']
     }
   ];
 
   const benefits = [
-    'Reduce operational costs by up to 70%',
-    'Increase productivity and efficiency',
+    'Increase productivity by up to 300%',
+    'Reduce operational costs by 60%',
     'Eliminate human errors in repetitive tasks',
-    '24/7 automated operations',
-    'Scalable and adaptable solutions',
-    'ROI within 3-6 months'
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced automation'
   ];
 
   const stats = [
-    { number: '70%', label: 'Cost Reduction', icon: <TrendingUp className="w-6 h-6" /> },
-    { number: '24/7', label: 'Automated Operations', icon: <Clock className="w-6 h-6" /> },
-    { number: '99.9%', label: 'Accuracy Rate', icon: <Shield className="w-6 h-6" /> },
-    { number: '3-6', label: 'Months ROI', icon: <Star className="w-6 h-6" /> }
+    { number: '500+', label: 'Automated Processes' },
+    { number: '99.9%', label: 'Uptime Guarantee' },
+    { number: '50+', label: 'Enterprise Clients' },
+    { number: '24/7', label: 'Support Available' }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Automation</span> Services
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-purple-600/20"></div>
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Automation</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your business operations with intelligent automation solutions that reduce costs, increase efficiency, and eliminate repetitive tasks.
+            Transform your business with intelligent automation solutions that work 24/7 to optimize your operations and drive growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
+            <Link 
+              href="/contact" 
+              className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
             >
-              Get Started Today
-              <ArrowRight className="ml-2 w-5 h-5" />
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
-            <Link
-              to="/ai-services"
-              className="inline-flex items-center px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
+            <Link 
+              href="/services" 
+              className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
             >
-              View All AI Services
+              Learn More
             </Link>
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-4">
-                  {stat.icon}
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{stat.number}</div>
                 <div className="text-gray-300">{stat.label}</div>
               </div>
             ))}
@@ -127,46 +97,29 @@ const AIAutomationPage: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Powerful Automation Features
             </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Our AI automation solutions come with advanced features designed to streamline your business processes.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover the advanced capabilities that make our AI automation solutions stand out
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
-                <div className="mb-6">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-cyan-400/40 transition-all duration-300">
+                <div className="flex justify-center mb-4">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Real-World Use Cases
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              See how our AI automation solutions are transforming businesses across different industries.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-400/50 transition-all duration-300 group">
-                <div className="mb-6">
-                  {useCase.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
-                <p className="text-gray-300">{useCase.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
@@ -174,68 +127,49 @@ const AIAutomationPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Why Choose Our AI Automation?
-              </h2>
-              <p className="text-lg text-gray-300 mb-8">
-                Our AI automation solutions are designed to deliver measurable results and transform your business operations.
-              </p>
-              <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-start">
-                    <CheckCircle className="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="relative">
-              <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
-                <div className="text-center">
-                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-6">
-                    <Cpu className="w-10 h-10 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">Intelligent Automation</h3>
-                  <p className="text-gray-300">
-                    Our AI-powered automation learns from your business processes and continuously optimizes performance.
-                  </p>
-                </div>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Why Choose Our AI Automation?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the transformative benefits of intelligent automation
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-4">
+                <CheckCircle className="w-8 h-8 text-green-400 flex-shrink-0 mt-1" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
-<<<<<<< HEAD
-            </div>
-=======
             ))}
->>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-purple-600">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Automate Your Business?
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Ready to Automate Your Future?
           </h2>
-          <p className="text-xl text-cyan-100 mb-8">
-            Let our experts help you identify automation opportunities and implement solutions that drive real results.
+          <p className="text-xl text-gray-300 mb-8">
+            Join thousands of businesses already using our AI automation solutions to transform their operations
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              to="/contact" 
-              className="inline-flex items-center px-8 py-3 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
+              href="/contact" 
+              className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
             >
               Start Your Automation Journey
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link 
-              to="/ai-services" 
-              className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-600 transition-colors duration-300"
+              href="/services" 
+              className="border-2 border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
             >
-              Explore All Services
+              Explore Solutions
             </Link>
           </div>
         </div>
@@ -244,14 +178,4 @@ const AIAutomationPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutomationPage;
-=======
-export default AIAutomationPage;
-
-export default Aiautomation;
-
-export default AiAutomation;
-
-export default AiAutomationPag;
->>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a

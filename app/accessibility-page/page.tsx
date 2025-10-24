@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from "lucide-react";
->>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check, Send, BarChart3, DollarSign, Activity, Lock, FileText, CreditCard, Building2, Sparkles, PieChart } from 'lucide-react'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check, Send, BarChart3, DollarSign, Activity, Lock, FileText, CreditCard, Building2, Sparkles, PieChart } from 'lucide-react';
 
-const AccessibilityPagePage: React.FC = () => {
+const AccessibilityPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -46,7 +39,6 @@ const AccessibilityPagePage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ];
 
-const AccessibilityPage = () => {
   return (
     <>
       <Navigation />
@@ -86,7 +78,7 @@ const AccessibilityPage = () => {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={ ind, e, x } className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-emerald-500/20 hover:border-emerald-400/40 transition-all duration-300">
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-emerald-500/20 hover:border-emerald-400/40 transition-all duration-300">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full mb-4">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
@@ -153,10 +145,4 @@ const AccessibilityPage = () => {
   );
 };
 
-export default AccessibilityPagePage;
-
-export default PagePage;
-
-export default PagePage;
-
-export default PagePage;
+export default AccessibilityPage;

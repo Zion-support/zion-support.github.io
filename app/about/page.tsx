@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-=======
-import React from "react";
-import { Brain, Target, Users, Award, CheckCircle } from "lucide-react";
-import React from "react";
-import { Brain, Target, Users, Award, CheckCircle } from "lucide-react";
-import React from "react";
-import { Brain, Target, Users, Award, CheckCircle } from "lucide-react";
-import React from "react";
-import { Brain, Target, Users, Award, CheckCircle } from "lucide-react";
-import React from 'react';
-import { Brain, Target, Users, Award, CheckCircle } from "lucide-react";
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
->>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -116,8 +100,7 @@ const AboutPage: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
         {/* Values Section */}
         <section className="py-20">
@@ -172,10 +155,4 @@ const AboutPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default AboutPage;
-=======
-export default AboutPage;
-
-export default AboutPage;
->>>>>>> 99cc915ab6ea3b7c6d03b1deab5f3717dd5fff3a

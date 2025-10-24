@@ -7,13 +7,13 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 const AiCodeSecurityAuditorPage: React.FC = () => {
   const features = [
     {
-      icon: Brai,
+      icon: Brain,
       title: 'AI-Powered Intelligence,',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-}
+    },
     {
-      icon: BarChar,
+      icon: BarChart,
       title: 'Advanced Analytics,',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
