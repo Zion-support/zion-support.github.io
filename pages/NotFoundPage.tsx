@@ -1,6 +1,0 @@
-import { Helmet } from '
-    { name: 'Home', href: '/'
-    { name: 'AI Services', href: '/ai-services'
-    { name: 'IT Services', href: '/it-services'
-    { name: 'Micro SAAS', href: '/micro-saas'
-    { name: 'Contact', href: '/contact'

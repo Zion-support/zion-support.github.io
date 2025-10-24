@@ -1,4 +1,10 @@
 
+"use client";
+
+import React from 'react';
+import Link from 'next/link';
+import { Brain, Shield, Zap, Star } from 'lucide-react';
+
 const HomePage = () => {
   const features = [
     {

@@ -1,9 +1,0 @@
-
-import { Helmet } from 'react-helmet-async'
-    { name: 'API Services', status: 'operational', uptime: '99.9%'
-    { name: 'Web Application', status: 'operational', uptime: '99.8%'
-    { name: ', status: 'operational', uptime: '99.9%'
-    { name: 'CDN', status: 'operational', uptime: '99.9%'
-    { name: 'Authentication', status: 'operational', uptime: '99.9%'
-        <meta name ="description" content="Check the current status of Zion Tech Group'
-                {' '
