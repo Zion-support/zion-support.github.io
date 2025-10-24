@@ -1,27 +1,23 @@
-import { useState } from 'react'
-import { MessageSquare, Mail, Phone, Send, CheckCircle } from 'lucide-react'
+import { useState     } from 'react';
+import { MessageSquare, Mail, Phone, Send, CheckCircle     } from 'lucide-react';
 'use client'
-<<<<<<< HEAD
-    "name": ''',
-=======
-    "name": '',
->>>>>>> cursor/fix-errors-and-merge-to-main-d1ed
-    "email": '',
-    "phone": '',
-    "company": '',
-    "message": '',
-    "service": '',
-        "name": '',
-    "email": '',
-        "phone": '',
-    "company": '',
-        "message": '',
-    "service": '',
+
+    "email": ''
+    "phone": ''
+    "company": ''
+    "message": ''
+    "service": ''
+        "name": ''
+    "email": ''
+        "phone": ''
+    "company": ''
+        "message": ''
+    "service": ''
   'AI Solutions'
     'Web Development'
     'Mobile Development'
     'Cloud Migration'
     'Cybersecurity'
     'Data Analytics'
-    'DevOps';
+    'DevOps'
     'Consulting'

@@ -1,64 +1,64 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix a single page file
-function fixPageFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Check if file has the problematic pattern
-    if (content.includes('return (\n    <div>') && content.includes('<Head>')) {
-      // Fix the JSX structure
-      content = content.replace(
-        /return \(\s*<div>\s*<Head>/g,
+// Function to fix a single page file;
+function fixPageFile(filePath) {;
+try {;
+let content = fs.readFileSync(filePath, 'utf8');
+
+    // Check if file has the problematic pattern;
+if (content.includes('return (\n    <div></div>') && content.includes('<Head>')) {
+      // Fix the JSX structure;
+content = content.replace(
+        /return \(\s*<div></div>\s*<Head>/g,
         'return (\n    <>\n      <Head>'
       );
-      
-      // Fix the closing tags
-      content = content.replace(
+
+      // Fix the closing tags;
+content = content.replace(
         /<\/Head>\s*<div className=/g,
-        '</Head>\n      <div className='
+        '</Head></div>\n      <div className='
       );
-      
-      // Fix the final closing
-      content = content.replace(
-        /<\/div>\s*\);\s*}/g,
+
+      // Fix the final closing;
+content = content.replace(
+        /<\/div></div>\s*\);\s*}/g,
         '</div>\n    </>\n  );\n}'
       );
-      
-      // Write the fixed content back
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
+
+      // Write the fixed content back;
+fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath,}`);
       return true;
     }
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+  } catch (error) {;
+console.error(`Error fixing ${filePath}:`, error.message);
   }
   return false;
 }
 
-// Function to recursively find and fix all page.tsx files
-function fixAllPages(dir) {
-  const files = fs.readdirSync(dir);
+// Function to recursively find and fix all page.tsx files;
+function fixAllPages(dir) {;
+const files = fs.readdirSync(dir);
   let fixedCount = 0;
-  
-  for (const file of files) {
-    const filePath = path.join(dir, file);
+;
+for (const file of files) {;
+const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory()) {
-      fixedCount += fixAllPages(filePath);
-    } else if (file === 'page.tsx') {
-      if (fixPageFile(filePath)) {
-        fixedCount++;
+;
+if (stat.isDirectory()) {;
+fixedCount += fixAllPages(filePath);
+    } else if (file === 'page.tsx') {;
+if (fixPageFile(filePath)) {;
+fixedCount++;
       }
     }
   }
-  
-  return fixedCount;
+;
+return fixedCount;
 }
 
-// Start fixing from the app directory
+// Start fixing from the app directory;
 const appDir = path.join(__dirname, 'app');
 console.log('Starting to fix page files...');
 const totalFixed = fixAllPages(appDir);

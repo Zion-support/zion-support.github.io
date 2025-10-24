@@ -1,8 +1,8 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react'
-import Navigation from '../components/Navigation'
+'use client';
+import React from 'react';
+import { Helmet     } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle     } from 'lucide-react';
+import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'
   "benefits": ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'
   "benefits": ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'
@@ -12,6 +12,6 @@ import Footer from '../components/Footer'
     'Reduce costs by 30% with automation'
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases'
-    'Gain competitive advantage with advanced technology'
+    'Gain competitive advantage with advanced technology';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight     } from 'lucide-react';

@@ -1,7 +1,6 @@
 'use client';
-import React from 'react';
+import React from 'react'
 </div>
         </div>
-      </section>
-export default PerformanceEnhancerPage }
-
+      </section>;
+export default PerformanceEnhancerPage; }
