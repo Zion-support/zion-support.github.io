@@ -110,3 +110,5 @@ const Marketingtools = () => {
 export default Marketingtools;
 
 export default MarketingTools;
+
+export default PagePage;

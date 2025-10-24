@@ -1,3 +1,39 @@
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Database, Clock, ShieldCheck } from 'lucide-react'
+const BackupRecoveryPage: React.FC = () => {
+const features = [
+{
+icon: Shield,
+title: 'Secure Backup Solutions',
+description: 'Advanced encryption and secure storage for your critical business data'
+},
+{
+icon: Zap,
+title: 'Fast Recovery',
+description: 'Lightning-fast data recovery with minimal downtime for your business'
+},
+{
+icon: Brain,
+title: 'AI-Powered Monitoring',
+description: 'Intelligent monitoring and automated backup scheduling'
+},
+{
+icon: Globe,
+title: 'Global Redundancy',
+description: 'Worldwide backup storage with multiple redundancy layers'
+}
+]
+const benefits = [
+'Advanced data protection and encryption',
+'Real-time backup monitoring and alerts',
+'Enterprise-grade security and compliance',
+'Scalable and flexible backup solutions',
+'24/7 technical support',
+'Easy integration with existing systems',
+'Cost-effective pricing plans',
+'Proven track record of success'
+];
 "use client";
 import React from "react";
 
@@ -110,3 +146,5 @@ const Backuprecovery = () => {
 export default Backuprecovery;
 
 export default BackupRecovery;
+
+export default BackupRecoveryPage;

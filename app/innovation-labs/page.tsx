@@ -109,3 +109,5 @@ const Innovationlabs = () => {
 };
 
 export default Innovationlabs;
+
+export default PagePage;

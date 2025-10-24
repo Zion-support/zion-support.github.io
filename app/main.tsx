@@ -29,27 +29,29 @@ const features = [
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+import Navigation from 'components/Navigation'
+import Footer from 'components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+
 const MainPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+      description: 'Bank-level security with advanced encryption and compliance standards.',
+      benefits: ['End-to-end encryption', 'GDPR compliance', 'SOC 2 certified', 'Regular audits']
     }
   ]
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e87d
@@ -66,9 +68,9 @@ const MainPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" >
       <Helmet>
-        <title>Main | Zion Tech Group</title>
-        <meta name="description" content="Professional Main services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="main, AI solutions, IT services, Zion Tech Group, main" />
+        <title>MainPage - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered solution for modern businesses." />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions, technology" />
       </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8" >

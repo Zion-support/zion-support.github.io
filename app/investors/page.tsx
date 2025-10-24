@@ -108,3 +108,5 @@ const Investors = () => {
 };
 
 export default Investors;
+
+export default PagePage;

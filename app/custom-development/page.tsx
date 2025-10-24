@@ -108,3 +108,5 @@ const Customdevelopment = () => {
 };
 
 export default Customdevelopment;
+
+export default PagePage;

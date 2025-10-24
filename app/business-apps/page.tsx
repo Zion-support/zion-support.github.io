@@ -1,3 +1,54 @@
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Smartphone, Monitor, Cloud } from 'lucide-react'
+const BusinessAppsPage: React.FC = () => {
+const features = [
+{
+icon: Smartphone,
+title: 'Mobile Apps',
+description: 'Custom mobile applications for iOS and Android platforms'
+},
+{
+icon: Monitor,
+title: 'Web Applications',
+description: 'Responsive web applications with modern UI/UX design'
+},
+{
+icon: Cloud,
+title: 'Cloud Integration',
+description: 'Seamless cloud integration and deployment solutions'
+},
+{
+icon: Brain,
+title: 'AI-Powered Business Apps',
+description: 'Advanced AI technology to transform your business applications and improve efficiency'
+},
+{
+icon: Zap,
+title: 'High Performance',
+description: 'Lightning-fast processing and real-time analytics for optimal business results'
+},
+{
+icon: Shield,
+title: 'Enterprise Security',
+description: 'Bank-level security with encryption and compliance standards for your business data'
+},
+{
+icon: Globe,
+title: 'Global Reach',
+description: 'Worldwide deployment and support for international business applications'
+}
+]
+const benefits = [
+'Advanced AI technology integration',
+'Real-time processing and analytics',
+'Enterprise-grade security and compliance',
+'Scalable and flexible business solutions',
+'24/7 technical support',
+'Easy integration with existing systems',
+'Cost-effective pricing plans',
+'Proven track record of success'
+];
 "use client";
 import React from "react";
 
@@ -110,3 +161,5 @@ const Businessapps = () => {
 export default Businessapps;
 
 export default BusinessApps;
+
+export default BusinessAppsPage;

@@ -108,3 +108,5 @@ const Devopscicd = () => {
 };
 
 export default Devopscicd;
+
+export default PagePage;

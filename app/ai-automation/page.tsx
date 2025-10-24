@@ -242,3 +242,5 @@ export default AIAutomationPage;
 export default Aiautomation;
 
 export default AiAutomation;
+
+export default AiAutomationPag;

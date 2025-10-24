@@ -110,3 +110,5 @@ const Intelligentemailinfrastructure = () => {
 export default Intelligentemailinfrastructure;
 
 export default IntelligentEmailInfrastructure;
+
+export default PagePage;

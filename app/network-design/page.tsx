@@ -110,3 +110,5 @@ const Networkdesign = () => {
 export default Networkdesign;
 
 export default NetworkDesign;
+
+export default PagePage;

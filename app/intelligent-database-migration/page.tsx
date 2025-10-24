@@ -110,3 +110,5 @@ const Intelligentdatabasemigration = () => {
 export default Intelligentdatabasemigration;
 
 export default IntelligentDatabaseMigration;
+
+export default PagePage;

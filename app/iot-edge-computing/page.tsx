@@ -108,3 +108,5 @@ const Iotedgecomputing = () => {
 };
 
 export default Iotedgecomputing;
+
+export default PagePage;

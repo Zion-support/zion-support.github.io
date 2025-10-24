@@ -109,3 +109,5 @@ const Itassetmanagement = () => {
 };
 
 export default Itassetmanagement;
+
+export default PagePage;

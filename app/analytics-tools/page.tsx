@@ -1,3 +1,39 @@
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+const AnalyticsToolsPage: React.FC = () => {
+const features = [
+{
+icon: Brain,
+title: 'AI-Powered Analytics',
+description: 'Advanced AI technology to transform your data analysis and business intelligence'
+},
+{
+icon: Zap,
+title: 'Real-Time Processing',
+description: 'Lightning-fast data processing and real-time analytics for optimal insights'
+},
+{
+icon: Shield,
+title: 'Enterprise Security',
+description: 'Bank-level security with encryption and compliance standards for your data'
+},
+{
+icon: Globe,
+title: 'Global Scalability',
+description: 'Worldwide deployment and support for international business analytics'
+}
+]
+const benefits = [
+'Advanced AI-powered data analysis',
+'Real-time processing and insights',
+'Enterprise-grade security and compliance',
+'Scalable and flexible analytics solutions',
+'24/7 technical support',
+'Easy integration with existing systems',
+'Cost-effective pricing plans',
+'Proven track record of success'
+];
 "use client";
 import React from "react";
 
@@ -110,3 +146,5 @@ const Analyticstools = () => {
 export default Analyticstools;
 
 export default AnalyticsTools;
+
+export default AnalyticsToolsPage;

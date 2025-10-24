@@ -1,3 +1,5 @@
+import React from 'react';
+import SEOHead from '../components/SEOHead';
 "use client";
 import React from "react";
 

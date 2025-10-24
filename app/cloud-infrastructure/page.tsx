@@ -1,3 +1,39 @@
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database } from 'lucide-react'
+const CloudInfrastructurePage: React.FC = () => {
+const features = [
+{
+icon: Shield,
+title: 'Secure Cloud Infrastructure',
+description: 'Enterprise-grade cloud infrastructure with advanced security and compliance'
+},
+{
+icon: Zap,
+title: 'High Performance',
+description: 'Lightning-fast cloud services with optimized performance and scalability'
+},
+{
+icon: Brain,
+title: 'AI-Powered Management',
+description: 'Intelligent cloud management powered by advanced AI technology'
+},
+{
+icon: Globe,
+title: 'Global Deployment',
+description: 'Worldwide cloud infrastructure deployment and support'
+}
+]
+const benefits = [
+'Advanced cloud technology integration',
+'Real-time monitoring and analytics',
+'Enterprise-grade security and compliance',
+'Scalable and flexible cloud solutions',
+'24/7 technical support',
+'Easy integration with existing systems',
+'Cost-effective pricing plans',
+'Proven track record of success'
+];
 "use client";
 import React from "react";
 
@@ -110,3 +146,5 @@ const Cloudinfrastructure = () => {
 export default Cloudinfrastructure;
 
 export default CloudInfrastructure;
+
+export default CloudInfrastructurePage;

@@ -39,7 +39,7 @@ const EnhancedSEO: React.FC = () => {
                 Email Us
               </button>
 =======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-12b7
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6f1b
             </div>
 
             <//div>

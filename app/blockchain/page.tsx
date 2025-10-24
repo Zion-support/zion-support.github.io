@@ -165,3 +165,5 @@ const BlockchainPage: React.FC = () => {
 export default BlockchainPage;
 
 export default Blockchain;
+
+export default BlockchainPage;

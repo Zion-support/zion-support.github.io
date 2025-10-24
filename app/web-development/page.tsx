@@ -110,3 +110,5 @@ const Webdevelopment = () => {
 export default Webdevelopment;
 
 export default WebDevelopment;
+
+export default WebDevelopmentPage;

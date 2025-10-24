@@ -108,3 +108,5 @@ const Itperformance = () => {
 };
 
 export default Itperformance;
+
+export default PagePage;

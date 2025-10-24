@@ -108,3 +108,5 @@ const Health = () => {
 };
 
 export default Health;
+
+export default PagePage;

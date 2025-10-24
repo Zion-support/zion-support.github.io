@@ -108,3 +108,5 @@ const Help = () => {
 };
 
 export default Help;
+
+export default PagePage;

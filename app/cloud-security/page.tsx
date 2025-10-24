@@ -1,3 +1,39 @@
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Lock, Eye, ShieldCheck } from 'lucide-react'
+const CloudSecurityPage: React.FC = () => {
+const features = [
+{
+icon: Shield,
+title: 'Advanced Cloud Security',
+description: 'Comprehensive cloud security solutions with enterprise-grade protection'
+},
+{
+icon: Zap,
+title: 'Real-Time Monitoring',
+description: 'Continuous monitoring and threat detection for your cloud infrastructure'
+},
+{
+icon: Brain,
+title: 'AI-Powered Security',
+description: 'Intelligent security solutions powered by advanced AI technology'
+},
+{
+icon: Globe,
+title: 'Global Compliance',
+description: 'Worldwide compliance with security standards and regulations'
+}
+]
+const benefits = [
+'Advanced cloud security technology',
+'Real-time threat monitoring and detection',
+'Enterprise-grade security and compliance',
+'Scalable and flexible security solutions',
+'24/7 technical support',
+'Easy integration with existing systems',
+'Cost-effective pricing plans',
+'Proven track record of success'
+];
 "use client";
 import React from "react";
 
@@ -110,3 +146,5 @@ const Cloudsecurity = () => {
 export default Cloudsecurity;
 
 export default CloudSecurity;
+
+export default CloudSecurityPage;

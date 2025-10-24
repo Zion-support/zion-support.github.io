@@ -108,3 +108,5 @@ const Iotedge = () => {
 };
 
 export default Iotedge;
+
+export default PagePage;

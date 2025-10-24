@@ -108,3 +108,5 @@ const Developertools = () => {
 };
 
 export default Developertools;
+
+export default PagePage;
