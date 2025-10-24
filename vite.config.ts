@@ -32,7 +32,7 @@ export default defineConfig({
       mangle: {
         safari10: true,
       },
-    },
+    } as any,
     rollupOptions: {
       output: {
         manualChunks: (id) => {

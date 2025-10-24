@@ -1,4 +1,17 @@
 
+'use client';
+import React from 'react';
+import Head from 'next/head';
+
+interface SEOOptimizerProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  ogImage?: string;
+  canonicalUrl?: string;
+  className?: string;
+}
+
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = 'ZionTechGroup - AI Solutions & Technology Services',
   description = 'Leading provider of AI solutions, technology services, and digital transformation for businesses worldwide.',
