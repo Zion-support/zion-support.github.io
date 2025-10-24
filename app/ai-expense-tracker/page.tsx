@@ -199,7 +199,7 @@ const AiExpenseTrackerPage: React.FC = () => {
               Perfect for Every Use Case
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Whether you're managing personal finances or corporate expenses, our AI expense tracker adapts to your needs.
+              Whether you&apos;re managing personal finances or corporate expenses, our AI expense tracker adapts to your needs.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

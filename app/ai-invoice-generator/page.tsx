@@ -199,7 +199,7 @@ const AiInvoiceGeneratorPage: React.FC = () => {
               Perfect for Every Business
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Whether you're a freelancer or a large enterprise, our AI invoice generator adapts to your needs.
+              Whether you&apos;re a freelancer or a large enterprise, our AI invoice generator adapts to your needs.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
