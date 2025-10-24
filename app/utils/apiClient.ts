@@ -62,53 +62,41 @@ export class ApiClient {
     }
   }
 
-  async get<T>(url: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
+  async get<T>(url: string, options?: RequestOptions): Promise<ApiResponse<T>> {
     return this.makeRequest<T>(`${this.baseURL}${url}`, {
+      ...options,
       method: 'GET',
-      ...options,
     });
   }
 
-  async post<T>(url: string, data?: unknown, options: RequestOptions = {}): Promise<ApiResponse<T>> {
+  async post<T>(url: string, data?: unknown, options?: RequestOptions): Promise<ApiResponse<T>> {
     return this.makeRequest<T>(`${this.baseURL}${url}`, {
+      ...options,
       method: 'POST',
+      body: data ? JSON.stringify(data) : undefined,
       headers: {
         'Content-Type': 'application/json',
-        ...options.headers,
+        ...options?.headers,
       },
-      body: data ? JSON.stringify(data) : undefined,
-      ...options,
     });
   }
 
-  async put<T>(url: string, data?: unknown, options: RequestOptions = {}): Promise<ApiResponse<T>> {
+  async put<T>(url: string, data?: unknown, options?: RequestOptions): Promise<ApiResponse<T>> {
     return this.makeRequest<T>(`${this.baseURL}${url}`, {
+      ...options,
       method: 'PUT',
+      body: data ? JSON.stringify(data) : undefined,
       headers: {
         'Content-Type': 'application/json',
-        ...options.headers,
+        ...options?.headers,
       },
-      body: data ? JSON.stringify(data) : undefined,
-      ...options,
     });
   }
 
-  async patch<T>(url: string, data?: unknown, options: RequestOptions = {}): Promise<ApiResponse<T>> {
+  async delete<T>(url: string, options?: RequestOptions): Promise<ApiResponse<T>> {
     return this.makeRequest<T>(`${this.baseURL}${url}`, {
-      method: 'PATCH',
-      headers: {
-        'Content-Type': 'application/json',
-        ...options.headers,
-      },
-      body: data ? JSON.stringify(data) : undefined,
       ...options,
-    });
-  }
-
-  async delete<T>(url: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
-    return this.makeRequest<T>(`${this.baseURL}${url}`, {
       method: 'DELETE',
-      ...options,
     });
   }
 }

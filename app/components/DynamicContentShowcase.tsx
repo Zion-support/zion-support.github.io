@@ -1,9 +1,9 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { Zap, Shield, Brain, Globe } from 'lucide-react';
+'use client'
+import React, { useState, useEffect } from 'react'
+import { Zap, Shield, Globe, Brain } from 'lucide-react'
 
 const DynamicContentShowcase: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0)
 
   const features = [
     {
@@ -30,17 +30,17 @@ const DynamicContentShowcase: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses',
       color: 'from-orange-500 to-red-600'
     }
-  ];
+  ]
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % features.length);
-    }, 3000);
+      setCurrentIndex((prev) => (prev + 1) % features.length)
+    }, 3000)
 
-    return () => clearInterval(timer);
-  }, [features.length]);
+    return () => clearInterval(timer)
+  }, [features.length])
 
-  const currentFeature = features[currentIndex];
+  const currentFeature = features[currentIndex]
 
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
@@ -91,7 +91,7 @@ const DynamicContentShowcase: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default DynamicContentShowcase;
+export default DynamicContentShowcase

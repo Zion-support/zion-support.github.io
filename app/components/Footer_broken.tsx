@@ -1,11 +1,10 @@
-'use client';
 import React from 'react';
 
-interface FooterBrokenProps {
+interface Footer_brokenProps {
   // Add props here
 }
 
-const FooterBroken: React.FC<FooterBrokenProps> = (_props) => {
+const Footer_broken: React.FC<Footer_brokenProps> = (_props) => {
   return (
     <div>
       {/* Component content */}
@@ -13,4 +12,5 @@ const FooterBroken: React.FC<FooterBrokenProps> = (_props) => {
   );
 };
 
-export default FooterBroken;
+export default Footer_broken;
+
