@@ -1,5 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+
+export const dynamic = 'force-dynamic';
 import { Helmet } from 'react-helmet-async';
 import Link from 'next/link';
 import { 
