@@ -1,57 +1,50 @@
-import { useState, useEffect } from 'react';
-
-interface PerformanceData {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
-}
-
-export const usePerformanceMonitor = () => {
-  const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null);
-  const [isMonitoring, setIsMonitoring] = useState(false);
-
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-
-    const measurePerformance = () => {
-      try {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const paintEntries = performance.getEntriesByType('paint');
-        
-        const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-        const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
-        const cls = performance.getEntriesByType('layout-shift')[0];
-        const fid = performance.getEntriesByType('first-input')[0];
-
-        setPerformanceData({
-          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-          firstContentfulPaint: fcp ? fcp.startTime : 0,
-          largestContentfulPaint: lcp ? lcp.startTime : 0,
-          cumulativeLayoutShift: cls ? (cls as unknown as { value: number }).value : 0,
-          firstInputDelay: fid ? (fid as unknown as { processingStart: number }).processingStart - fid.startTime : 0,
+import { useEffect } from 'react;
+export const usePerformanceMonitor = (
+  useEffect(() => {"
+    // Monitor page load performance"
+    const monitorPageLoad = () => {;
+      if ('performance" in, window) {;
+        const navigation = performance.getEntriesByType('navigation")[0,] as PerformanceNavigationTiming;
+        const paint = performance.getEntriesByType('paint");
+        "
+        // Log performance metrics"'"
+        console.log('Page Load Performance: "'", {"
+          domContentLoaded: "navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart","
+          loadComplete: "navigation.loadEventEnd - navigation.loadEventStart",)"'"
+          firstPaint: "paint.find(entry = > entry.name === 'first-paint')?.startTime",;
+          firstContentfulPaint: "paint.find(entry => entry.name === 'first-contentful-paint')?.startTime",;
+        ) => {
+$3
+});
+      }
+    };
+    // Monitor resource loading"
+    const monitorResourceLoading = ("'"
+      if ('performance" in, window) {"
+        const observer = new PerformanceObserver((list) => {"
+          list.getEntries().forEach((entry) => {"'"
+            if (entry.entryType === 'resource") {"'"
+              console.log('Resource loaded: "'", {"
+                name: "entry.name","
+                duration: "entry.duration",);
+                size: "(entry, as, any).transferSize",;
+              ) => {
+$3
+});
+            }
+          });
         });
-      } catch (error) {
-        console.error('Error measuring performance:', error);
+        "'"
+        observer.observe({ entryTypes: "['resource'] ",});
+        return () => observer.disconnect();
       }
-    };
-
-    const startMonitoring = () => {
-      setIsMonitoring(true);
-      if (document.readyState === 'complete') {
-        measurePerformance();
-      } else {
-        window.addEventListener('load', measurePerformance);
-      }
-    };
-
-    startMonitoring();
-
-    return () => {
-      window.removeEventListener('load', measurePerformance);
-    };
+    }
+    // Initialize monitoring;
+    monitorPageLoad();
+    const cleanup = monitorResourceLoading();
+    // Cleanup;
+    return () => {;
+      cleanup?.();
+    ,};
   }, []);
-
-  return { performanceData, isMonitoring };
 };

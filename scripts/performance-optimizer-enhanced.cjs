@@ -1,65 +1,73 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { glob } = require('glob');
+const fs = require("fs");
+const path = require("path");
+const { glob } = require("glob");
 
-console.log('🚀 Starting enhanced performance optimization...');
+console.log("🚀 Starting enhanced performance optimization...");
 
 // 1. Optimize images
 async function optimizeImages() {
-  console.log('📸 Optimizing images...');
-  
-  const imageFiles = await glob('public/**/*.{jpg,jpeg,png,webp,svg}', { cwd: __dirname + '/..' });
-  
+  console.log("📸 Optimizing images...");
+
+  const imageFiles = await glob("public/**/*.{jpg,jpeg,png,webp,svg}", {
+    cwd: __dirname + "/..",
+  });
+
   for (const file of imageFiles) {
-    const filePath = path.join(__dirname, '..', file);
+    const filePath = path.join(__dirname, "..", file);
     const stats = fs.statSync(filePath);
-    
-    if (stats.size > 100000) { // Files larger than 100KB
-      console.log(`Large image detected: ${file} (${(stats.size / 1024).toFixed(2)}KB)`);
+
+    if (stats.size > 100000) {
+      // Files larger than 100KB
+      console.log(
+        `Large image detected: ${file} (${(stats.size / 1024).toFixed(2)}KB)`,
+      );
     }
   }
-  
+
   console.log(`✅ Processed ${imageFiles.length} images`);
 }
 
 // 2. Analyze bundle size
 async function analyzeBundleSize() {
-  console.log('📊 Analyzing bundle size...');
-  
-  const distPath = path.join(__dirname, '..', 'dist');
+  console.log("📊 Analyzing bundle size...");
+
+  const distPath = path.join(__dirname, "..", "dist");
   if (!fs.existsSync(distPath)) {
-    console.log('❌ Dist folder not found. Run build first.');
+    console.log("❌ Dist folder not found. Run build first.");
     return;
   }
-  
-  const jsFiles = await glob('dist/assets/*.js', { cwd: __dirname + '/..' });
+
+  const jsFiles = await glob("dist/assets/*.js", { cwd: __dirname + "/.." });
   let totalSize = 0;
   const largeFiles = [];
-  
+
   for (const file of jsFiles) {
-    const filePath = path.join(__dirname, '..', file);
+    const filePath = path.join(__dirname, "..", file);
     const stats = fs.statSync(filePath);
     totalSize += stats.size;
-    
-    if (stats.size > 50000) { // Files larger than 50KB
+
+    if (stats.size > 50000) {
+      // Files larger than 50KB
       largeFiles.push({
         file: file,
         size: stats.size,
-        sizeKB: (stats.size / 1024).toFixed(2)
+        sizeKB: (stats.size / 1024).toFixed(2),
       });
     }
   }
-  
+
   console.log(`📦 Total bundle size: ${(totalSize / 1024).toFixed(2)}KB`);
-  console.log(`📦 Total bundle size: ${(totalSize / 1024 / 1024).toFixed(2)}MB`);
-  
+  console.log(
+    `📦 Total bundle size: ${(totalSize / 1024 / 1024).toFixed(2)}MB`,
+  );
+
   if (largeFiles.length > 0) {
-    console.log('⚠️  Large files detected:');
+    console.log("⚠️  Large files detected:");
     largeFiles
       .sort((a, b) => b.size - a.size)
-      .forEach(file => {
+      .forEach((file) => {
         console.log(`   ${file.file}: ${file.sizeKB}KB`);
       });
   }
@@ -67,106 +75,108 @@ async function analyzeBundleSize() {
 
 // 3. Check for performance issues
 async function checkPerformanceIssues() {
-  console.log('🔍 Checking for performance issues...');
-  
+  console.log("🔍 Checking for performance issues...");
+
   const issues = [];
-  
+
   // Check for large components
-  const componentFiles = await glob('app/**/*.tsx', { cwd: __dirname + '/..' });
-  
+  const componentFiles = await glob("app/**/*.tsx", { cwd: __dirname + "/.." });
+
   for (const file of componentFiles) {
-    const filePath = path.join(__dirname, '..', file);
-    const content = fs.readFileSync(filePath, 'utf8');
-    const lines = content.split('\n').length;
-    
+    const filePath = path.join(__dirname, "..", file);
+    const content = fs.readFileSync(filePath, "utf8");
+    const lines = content.split("\n").length;
+
     if (lines > 500) {
       issues.push({
-        type: 'Large Component',
+        type: "Large Component",
         file: file,
-        lines: lines
+        lines: lines,
       });
     }
-    
+
     // Check for inline styles
     const inlineStyleMatches = content.match(/style=\{[^}]*\}/g);
     if (inlineStyleMatches && inlineStyleMatches.length > 10) {
       issues.push({
-        type: 'Too Many Inline Styles',
+        type: "Too Many Inline Styles",
         file: file,
-        count: inlineStyleMatches.length
+        count: inlineStyleMatches.length,
       });
     }
-    
+
     // Check for console statements
     const consoleMatches = content.match(/console\.(log|warn|error|debug)/g);
     if (consoleMatches) {
       issues.push({
-        type: 'Console Statements',
+        type: "Console Statements",
         file: file,
-        count: consoleMatches.length
+        count: consoleMatches.length,
       });
     }
   }
-  
+
   if (issues.length > 0) {
-    console.log('⚠️  Performance issues found:');
-    issues.forEach(issue => {
-      console.log(`   ${issue.type}: ${issue.file}${issue.count ? ` (${issue.count})` : ''}${issue.lines ? ` (${issue.lines} lines)` : ''}`);
+    console.log("⚠️  Performance issues found:");
+    issues.forEach((issue) => {
+      console.log(
+        `   ${issue.type}: ${issue.file}${issue.count ? ` (${issue.count})` : ""}${issue.lines ? ` (${issue.lines} lines)` : ""}`,
+      );
     });
   } else {
-    console.log('✅ No major performance issues found');
+    console.log("✅ No major performance issues found");
   }
 }
 
 // 4. Generate performance report
 async function generatePerformanceReport() {
-  console.log('📋 Generating performance report...');
-  
+  console.log("📋 Generating performance report...");
+
   const report = {
     timestamp: new Date().toISOString(),
     bundleAnalysis: {},
     performanceIssues: [],
     recommendations: [
-      'Consider implementing code splitting for large components',
-      'Use lazy loading for non-critical components',
-      'Optimize images and use WebP format',
-      'Implement service worker for caching',
-      'Use React.memo for expensive components',
-      'Consider using a CDN for static assets'
-    ]
+      "Consider implementing code splitting for large components",
+      "Use lazy loading for non-critical components",
+      "Optimize images and use WebP format",
+      "Implement service worker for caching",
+      "Use React.memo for expensive components",
+      "Consider using a CDN for static assets",
+    ],
   };
-  
+
   // Check if dist folder exists
-  const distPath = path.join(__dirname, '..', 'dist');
+  const distPath = path.join(__dirname, "..", "dist");
   if (fs.existsSync(distPath)) {
-    const jsFiles = await glob('dist/assets/*.js', { cwd: __dirname + '/..' });
+    const jsFiles = await glob("dist/assets/*.js", { cwd: __dirname + "/.." });
     let totalSize = 0;
-    
+
     for (const file of jsFiles) {
-      const filePath = path.join(__dirname, '..', file);
+      const filePath = path.join(__dirname, "..", file);
       const stats = fs.statSync(filePath);
       totalSize += stats.size;
     }
-    
+
     report.bundleAnalysis = {
       totalFiles: jsFiles.length,
       totalSizeKB: Math.round(totalSize / 1024),
-      totalSizeMB: Math.round(totalSize / 1024 / 1024 * 100) / 100
+      totalSizeMB: Math.round((totalSize / 1024 / 1024) * 100) / 100,
     };
   }
-  
+
   fs.writeFileSync(
-    path.join(__dirname, '..', 'performance-report.json'),
-    JSON.stringify(report, null, 2)
+    path.join(__dirname, "..", "performance-report.json"),
+    JSON.stringify(report, null, 2),
   );
-  
-  console.log('✅ Performance report generated: performance-report.json');
+
+  console.log("✅ Performance report generated: performance-report.json");
 }
 
 // 5. Create optimized build configuration
 async function createOptimizedConfig() {
-  console.log('⚙️  Creating optimized configuration...');
-  
+  console.log("⚙️  Creating optimized configuration...");
+
   const viteConfig = `import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
@@ -267,11 +277,11 @@ export default defineConfig({
 });`;
 
   fs.writeFileSync(
-    path.join(__dirname, '..', 'vite.config.optimized.ts'),
-    viteConfig
+    path.join(__dirname, "..", "vite.config.optimized.ts"),
+    viteConfig,
   );
-  
-  console.log('✅ Optimized configuration created: vite.config.optimized.ts');
+
+  console.log("✅ Optimized configuration created: vite.config.optimized.ts");
 }
 
 // Main execution
@@ -282,13 +292,14 @@ async function main() {
     await checkPerformanceIssues();
     await generatePerformanceReport();
     await createOptimizedConfig();
-    
-    console.log('🎉 Enhanced performance optimization completed!');
-    console.log('📊 Check performance-report.json for detailed analysis');
-    console.log('⚙️  Use vite.config.optimized.ts for better build performance');
-    
+
+    console.log("🎉 Enhanced performance optimization completed!");
+    console.log("📊 Check performance-report.json for detailed analysis");
+    console.log(
+      "⚙️  Use vite.config.optimized.ts for better build performance",
+    );
   } catch (error) {
-    console.error('❌ Error during optimization:', error.message);
+    console.error("❌ Error during optimization:", error.message);
     process.exit(1);
   }
 }

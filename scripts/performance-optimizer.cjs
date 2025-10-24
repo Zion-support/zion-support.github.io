@@ -1,12 +1,12 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 // Simple performance optimizer
 const optimizePerformance = () => {
-  console.log('Running performance optimizations...');
-  
+  console.log("Running performance optimizations...");
+
   // Create public directory if it doesn't exist
-  const publicDir = path.join(__dirname, '../public');
+  const publicDir = path.join(__dirname, "../public");
   if (!fs.existsSync(publicDir)) {
     fs.mkdirSync(publicDir, { recursive: true });
   }
@@ -17,8 +17,8 @@ Allow: /
 
 Sitemap: https://ziontechgroup.com/sitemap.xml`;
 
-  fs.writeFileSync(path.join(publicDir, 'robots.txt'), robotsTxt);
-  console.log('Created robots.txt');
+  fs.writeFileSync(path.join(publicDir, "robots.txt"), robotsTxt);
+  console.log("Created robots.txt");
 
   // Create .htaccess for better caching
   const htaccess = `# Enable compression
@@ -46,10 +46,10 @@ Sitemap: https://ziontechgroup.com/sitemap.xml`;
     ExpiresByType image/svg+xml "access plus 1 year"
 </IfModule>`;
 
-  fs.writeFileSync(path.join(publicDir, '.htaccess'), htaccess);
-  console.log('Created .htaccess for caching');
+  fs.writeFileSync(path.join(publicDir, ".htaccess"), htaccess);
+  console.log("Created .htaccess for caching");
 
-  console.log('Performance optimizations completed');
+  console.log("Performance optimizations completed");
 };
 
 optimizePerformance();
