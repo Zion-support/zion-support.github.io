@@ -12,4 +12,3 @@ const Footer_broken: React.FC<Footer_brokenProps> = (_props) => {
   );
 };
 
-export default Footer_broken;
