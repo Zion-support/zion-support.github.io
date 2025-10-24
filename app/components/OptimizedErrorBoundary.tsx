@@ -1,44 +1,34 @@
-import React from 'react';
+import React, { Component, ReactNode, ErrorInfo } from 'react';
+
 interface OptimizedErrorBoundaryProps {
-  children: ReactNode
-  );
-  fallback?: ReactNode
-  );
-  onError?: (error: Error, errorInfo: ErrorInfo) => void
-  );
-  resetOnPropsChange?: boolean
-  );
-  resetKeys?: Array<string | number>
-  );
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  resetOnPropsChange?: boolean;
+  resetKeys?: Array<string | number>;
 }
 
 interface State {
-  hasError: boolean
-  );
-  error: Error | null
-  );
-  errorInfo: ErrorInfo | null
-  );
-  errorId: string
-  );
+  hasError: boolean;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
+  errorId: string;
 }
 
 class OptimizedErrorBoundary extends Component<
   OptimizedErrorBoundaryProps,
   State
 > {
-  private resetTimeoutId: number | null = null
-  );
+  private resetTimeoutId: number | null = null;
+
   constructor(props: OptimizedErrorBoundaryProps) {
-    super(props)
-  );
+    super(props);
     this.state = {
       hasError: false,
       error: null,
       errorInfo: null,
       errorId: '',
-    }
-  );
+    };
   }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
@@ -46,16 +36,14 @@ class OptimizedErrorBoundary extends Component<
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-    }
-  );
+    };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo,
-    })
-  );
+    });
     // Log error to console in development
     if (process.env['NODE_ENV'] === 'development') {
 
@@ -63,31 +51,25 @@ class OptimizedErrorBoundary extends Component<
 
     // Call custom error handler if provided
     if (this.props.onError) {
-      this.props.onError(error, errorInfo)
-  );
+      this.props.onError(error, errorInfo);
     }
 
     // Send error to monitoring service in production
     if (process.env['NODE_ENV'] === 'production') {
-      this.reportError(error, errorInfo)
-  );
+      this.reportError(error, errorInfo);
     }
   }
 
   componentDidUpdate(prevProps: OptimizedErrorBoundaryProps) {
-    const { resetKeys, resetOnPropsChange } = this.props
-  );
-    const { hasError } = this.state
-  );
+    const { resetKeys, resetOnPropsChange } = this.props;
+    const { hasError } = this.state;
     if (hasError && prevProps.resetKeys !== resetKeys) {
       if (resetKeys && prevProps.resetKeys) {
         const hasResetKeyChanged = resetKeys.some(
-          (key, index) => key !== prevProps.resetKeys?.[index];
-        )
-  );
+          (key, index) => key !== prevProps.resetKeys?.[index]
+        );
         if (hasResetKeyChanged) {
-          this.resetErrorBoundary()
-  );
+          this.resetErrorBoundary();
         }
       }
     }
@@ -97,15 +79,13 @@ class OptimizedErrorBoundary extends Component<
       resetOnPropsChange &&
       prevProps.children !== this.props.children
     ) {
-      this.resetErrorBoundary()
-  );
+      this.resetErrorBoundary();
     }
   }
 
   componentWillUnmount() {
     if (this.resetTimeoutId) {
-      clearTimeout(this.resetTimeoutId)
-  );
+      clearTimeout(this.resetTimeoutId);
     }
   }
 
@@ -119,10 +99,8 @@ class OptimizedErrorBoundary extends Component<
             action: string,
             parameters: Record<string, unknown>
           ) => void
-  );
         }
-      ).gtag
-  );
+      ).gtag;
       gtag('event', 'exception', {
         description: error.message,
         fatal: false,
@@ -130,15 +108,13 @@ class OptimizedErrorBoundary extends Component<
           error_id: this.state.errorId,
           component_stack: errorInfo.componentStack,
         },
-      })
-  );
+      });
     }
   }
-  );
+
   private resetErrorBoundary = () => {
     if (this.resetTimeoutId) {
-      clearTimeout(this.resetTimeoutId)
-  );
+      clearTimeout(this.resetTimeoutId);
     }
 
     this.resetTimeoutId = window.setTimeout(() => {
@@ -147,22 +123,18 @@ class OptimizedErrorBoundary extends Component<
         error: null,
         errorInfo: null,
         errorId: '',
-      })
-  );
-    }, 100)
-  );
-  }
-  );
+      });
+    }, 100);
+  };
+
   private handleRetry = () => {
-    this.resetErrorBoundary()
-  );
-  }
-  );
+    this.resetErrorBoundary();
+  };
+
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback
-  );
+        return this.props.fallback;
       }
 
       return (
@@ -172,24 +144,18 @@ class OptimizedErrorBoundary extends Component<
           errorId={this.state.errorId}
           onRetry={this.handleRetry}
         />
-      )
-  );
+      );
     }
 
-    return this.props.children
-  );
+    return this.props.children;
   }
 }
 
 interface ErrorFallbackProps {
-  error: Error | null
-  );
-  errorInfo: ErrorInfo | null
-  );
-  errorId: string
-  );
-  onRetry: () => void
-  );
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
+  errorId: string;
+  onRetry: () => void;
 }
 
 const ErrorFallback = memo<ErrorFallbackProps>(
@@ -269,8 +235,8 @@ const ErrorFallback = memo<ErrorFallbackProps>(
       </div>
     </div>
   )
-)
-  );
-ErrorFallback.displayName = 'ErrorFallback'
-export default OptimizedErrorBoundar;y
-  );
+);
+
+ErrorFallback.displayName = 'ErrorFallback';
+
+export default OptimizedErrorBoundary;
