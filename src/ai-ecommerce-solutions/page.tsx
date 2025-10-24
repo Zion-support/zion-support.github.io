@@ -1,15 +1,11 @@
-import React from 'react'
+"use client";
+import React from 'react';
 
 import { BarChart3 } from 'lucide-react'
 import { CheckCircle, Zap, Shield, Users, Helmet } from 'lucide-react'
 
-<<<<<<< HEAD
-=======
-import { BarChart3, CheckCircle, Mail, Zap, Shield, Users, BarChart, Helmet, Check } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
 const AIEcommerceSolutionsPage: React.FC = () => {
   const ecommerceServices = [
-=======
 import {BarChart3, CheckCircle, Zap, Users, Shield, Helmet} from 'lucide-react';;
 constAIEcommerceSolutionsPage: React.FC= () =>{constecommerceServices= [
     {
@@ -187,24 +183,24 @@ constAIEcommerceSolutionsPage: React.FC= () =>{constecommerceServices= [
     { metric: '95%', description: 'Fraud Detection Accuracy' }
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50"></div>
       <Helmet>
         <title>AI E-commerce Solutions | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered e-commerce solutions including personalized shopping, inventory management, payment processing, and marketing automation. Boost your online sales with cutting-edge technology." />
         <meta name="keywords" content="AI e-commerce, online store, e-commerce platform, inventory management, payment processing, marketing automation, customer service" />
       </Helmet>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20">
+      <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20"></section>
         <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center"></div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               AI E-commerce Solutions
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-purple-100 max-w-3xl mx-auto">
               Transform your online business with AI-powered e-commerce solutions that boost sales, reduce costs, and enhance customer experience
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
                 href="tel:+13024640950"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
@@ -222,9 +218,9 @@ constAIEcommerceSolutionsPage: React.FC= () =>{constecommerceServices= [
         </div>
       </section>
       {/* Industry Stats */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+      <section className="py-16 bg-white"></section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Proven Results
             </h2>
@@ -232,9 +228,9 @@ constAIEcommerceSolutionsPage: React.FC= () =>{constecommerceServices= [
               Our AI e-commerce solutions deliver measurable improvements
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8"></div>
             {industryStats.map((stat, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center"></div>
                 <div className="text-4xl font-bold text-purple-600 mb-2">{stat.metric}</div>
                 <div className="text-gray-600">{stat.description}</div>
               </div>
@@ -243,9 +239,9 @@ constAIEcommerceSolutionsPage: React.FC= () =>{constecommerceServices= [
         </div>
       </section>
       {/* Services Grid */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+      <section className="py-16 bg-gray-50"></section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our E-commerce Solutions
             </h2>
@@ -253,17 +249,17 @@ constAIEcommerceSolutionsPage: React.FC= () =>{constecommerceServices= [
               Comprehensive AI-powered tools for every aspect of e-commerce
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {ecommerceServices.map((service, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-100">
+              <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-100"></div>
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
-                <div className="mb-4">
+                <div className="mb-4"></div>
                   <span className="text-2xl font-bold text-purple-600">{service.price}</span>
                   <span className="text-sm text-gray-500 ml-2">Market: {service.marketPrice}</span>
                 </div>
-                <div className="mb-4">
+                <div className="mb-4"></div>
                   <span className="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-2 py-1 rounded">
                     {service.category}
                   </span>
@@ -276,7 +272,7 @@ constAIEcommerceSolutionsPage: React.FC= () =>{constecommerceServices= [
                     </li>
                   ))}
                 </ul>
-                <div className="space-y-2 mb-6">
+                <div className="space-y-2 mb-6"></div>
                   <h4 className="font-semibold text-gray-900">Key Benefits:</h4>
                   {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (
                     <p key={benefitIndex} className="text-sm text-green-600">✓ {benefit}</p>
@@ -294,9 +290,9 @@ constAIEcommerceSolutionsPage: React.FC= () =>{constecommerceServices= [
         </div>
       </section>
       {/* Features Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+      <section className="py-16 bg-white"></section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Our E-commerce Solutions?
             </h2>
@@ -304,10 +300,10 @@ constAIEcommerceSolutionsPage: React.FC= () =>{constecommerceServices= [
               Advanced AI technology designed specifically for e-commerce success
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {ecommerceFeatures.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="flex justify-center mb-4">
+              <div key={index} className="text-center"></div>
+                <div className="flex justify-center mb-4"></div>
                   {feature.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
@@ -318,9 +314,9 @@ constAIEcommerceSolutionsPage: React.FC= () =>{constecommerceServices= [
         </div>
       </section>
       {/* Success Stories */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+      <section className="py-16 bg-gray-50"></section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Success Stories
             </h2>
@@ -328,20 +324,20 @@ constAIEcommerceSolutionsPage: React.FC= () =>{constecommerceServices= [
               Real results from our e-commerce clients
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg p-8 shadow-lg">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+            <div className="bg-white rounded-lg p-8 shadow-lg"></div>
               <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
               <p className="text-gray-600 mb-4 italic">"Zion Tech Group's AI e-commerce platform increased our online sales by 150% in just 6 months. The personalized recommendations are incredible!"</p>
               <div className="font-semibold text-gray-900">Sarah Johnson</div>
               <div className="text-sm text-gray-500">CEO, Fashion Forward</div>
             </div>
-            <div className="bg-white rounded-lg p-8 shadow-lg">
+            <div className="bg-white rounded-lg p-8 shadow-lg"></div>
               <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
               <p className="text-gray-600 mb-4 italic">"The AI inventory management system reduced our stockouts by 80% and saved us $500K annually. Highly recommended!"</p>
               <div className="font-semibold text-gray-900">Michael Chen</div>
               <div className="text-sm text-gray-500">Operations Director, TechGear</div>
             </div>
-            <div className="bg-white rounded-lg p-8 shadow-lg">
+            <div className="bg-white rounded-lg p-8 shadow-lg"></div>
               <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
               <p className="text-gray-600 mb-4 italic">"Their AI customer service automation reduced our support costs by 70% while improving customer satisfaction. Amazing results!"</p>
               <div className="font-semibold text-gray-900">Emily Rodriguez</div>
@@ -351,15 +347,15 @@ constAIEcommerceSolutionsPage: React.FC= () =>{constecommerceServices= [
         </div>
       </section>
       {/* Contact Section */}
-      <section className="py-16 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-16 bg-gradient-to-r from-purple-600 to-indigo-600 text-white"></section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Transform Your E-commerce?
           </h2>
           <p className="text-xl mb-8 text-purple-100">
             Get a free e-commerce audit and discover how AI can boost your online sales
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
@@ -373,11 +369,12 @@ constAIEcommerceSolutionsPage: React.FC= () =>{constecommerceServices= [
               ✉️ kleber@ziontechgroup.com
             </a>
           </div>
-          <div className="mt-8 text-sm text-purple-200">
+          <div className="mt-8 text-sm text-purple-200"></div>
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
+>>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
         </div>
-      </section>
+      </div>
     </div>
   )
 }
