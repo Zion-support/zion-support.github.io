@@ -1,38 +1,47 @@
-'use client';
-
 import React, { useEffect } from 'react';
 
-interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-}
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
-    // Add accessibility enhancements
+    // Add keyboard navigation support
+    const addKeyboardNavigation = () => {
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Tab') {
+          document.body.classList.add('keyboard-navigation');
+        }
+      });
+
+      document.addEventListener('mousedown', () => {
+        document.body.classList.remove('keyboard-navigation');
+      });
+    };
+
+    // Add focus indicators
+    const addFocusIndicators = () => {
+      const style = document.createElement('style');
+      style.textContent = `
+        .keyboard-navigation *:focus {
+          outline: 2px solid #3b82f6 !important;
+          outline-offset: 2px !important;
+        }
+      `;
+      document.head.appendChild(style);
+    };
+
+    // Add skip links
     const addSkipLinks = () => {
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
       skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50';
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded';
       document.body.insertBefore(skipLink, document.body.firstChild);
     };
 
-    const enhanceFocusManagement = () => {
-      // Add focus management for better keyboard navigation
-      const focusableElements = document.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      );
-      
-      focusableElements.forEach((element) => {
-        element.setAttribute('tabindex', '0');
-      });
-    };
-
+    addKeyboardNavigation();
+    addFocusIndicators();
     addSkipLinks();
-    enhanceFocusManagement();
   }, []);
 
-  return <>{children}</>;
+  return null;
 };
 
 export default AccessibilityEnhancer;
