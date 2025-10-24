@@ -29,6 +29,9 @@ import SEOOptimizer from '../$1/SEOOptimizer';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
 
 export const Page = (): JSX.Element => {
+
+const Page = () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e02
   return (
   <><SEOOptimizertitle=&quot;AI Analytics Dashboard - Intelligent Business Intelligence | ZionTechGroup&quot;
         description=&quot;Transform your data into actionable insights with AI-powered analytics dashboard. Get predictive insights, real-time monitoring, andintelligentrecommendations.&quot;
@@ -63,8 +66,7 @@ export const Page = (): JSX.Element => {
                   href=&quot;#demo&quot;
                   className=&quot;border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300&quot;
                 >
-                  Watch Demo
-                </a>
+                  Watch Demo</a>
               </div>
             </div>
             {/* Key Stats */}

@@ -199,7 +199,7 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
     }
   }, [enableWebVitals, performanceMetrics, reportPerformanceMetrics]);
 
-  return null
+  return null;
 }
 ;
 export default AdvancedPerformanceOptimizer

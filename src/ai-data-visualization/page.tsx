@@ -198,12 +198,11 @@ const Page = (): JSX.Element => {
                       </li>
                     ))}
                   </ul>
-                  <a
+                  <a;
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} Plan`}
                     className=&quot;cyber-button w-full text-center block&quot;
                   >
-                    Get Started
-                  </a>
+                    Get Started</a>
                 </div>
               ))}
             </div>

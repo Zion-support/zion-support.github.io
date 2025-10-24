@@ -4,14 +4,14 @@ import React from 'react'
 import { CheckCircle, Star, ArrowRight } from "lucide-react";
 interface MicroSAASCardProps {
   service: {
-    title: string
-    description: string
-    icon: string
-    price: string
+    title: string;
+    description: string;
+    icon: string;
+    price: string;
     features: string[]
     benefits: string[]
-    marketPrice?: string
-    category: string
+    marketPrice?: string;
+    category: string;
     technologies: string[]
     contactInfo: string
     link?: string

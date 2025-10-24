@@ -250,7 +250,7 @@ const ContentCarousel: React.FC = () => {const [currentSlide, setCurrentSlide] =
             className=&quot;absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;></button>
             <ChevronLeft className=&quot;h-6 w-6&quot; />
           </button>
-          <button
+          <button;
             onClick={nextSlide}
             className=&quot;absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;></button>
             <ChevronRight className=&quot;h-6 w-6&quot; />

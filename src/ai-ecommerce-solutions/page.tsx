@@ -8,6 +8,7 @@ const AIEcommerceSolutionsPage: React.FC = () => {
   const ecommerceServices = [
 import {BarChart3, CheckCircle, Zap, Users, Shield, Helmet} from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e02
         </div>
       </div>
     </div>

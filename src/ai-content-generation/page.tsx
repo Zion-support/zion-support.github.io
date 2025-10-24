@@ -81,8 +81,7 @@ constAIContentGenerationPage: React.FC= () => {
               href="tel:+13024640950"
               className="cyber-button"
             >
-              Call (302) 464-0950
-            </a>
+              Call (302) 464-0950</a>
           </div>
         </section>
         {/* Services Section */}
@@ -109,8 +108,7 @@ constAIContentGenerationPage: React.FC= () => {
                   href="/contact"
                   className="cyber-button w-full text-center block"
                 >
-                  Get Started
-                </a>
+                  Get Started</a>
               </div>
             ))}
           </div>
@@ -153,8 +151,7 @@ constAIContentGenerationPage: React.FC= () => {
               href="tel:+13024640950"
               className="cyber-button"
             >
-              Call (302) 464-0950
-            </a>
+              Call (302) 464-0950</a>
           </div>
         </section>
       </main>

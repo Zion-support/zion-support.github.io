@@ -137,7 +137,7 @@ const Page = (): JSX.Element => {
                     </l>))}
                 </u><ahref={plan.popular ?&quot;mailto:kleber@ziontechgroup.com&quot; :&quot;tel:+13024640950&quot;}
                     className={`w-full text-center block py-3 px-6 rounded-lg font-medium transition-all ${
-                      plan.popular
+                      plan.popular;
                         ? 'cyber-button'
                         : 'bg-gray-700 text-white hover:bg-gray-600'
                     }`}

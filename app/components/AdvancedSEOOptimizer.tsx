@@ -160,7 +160,7 @@ score +=20} else {newRecommendations.push('Title should be between 3 0-60charact
 if (description.length >= 120&&description.length<= 16 0) {score +=20} else {newRecommendations.push('Description should be between 12 0-160characters')}
 // Check for keywords in title;
 if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {score +=15} else {newRecommendations.push('Include primary keyword in title')}
-// Check for keywords in description
+// Check for keywords in description;
 if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {score +=15} else {newRecommendations.push('Include primary keyword in description')}
 // Check for headingstructureconstheadings= do cument.querySelectorAll('h1, h2, h3, h4, h5, h6')
 if (headings.length >0) {
@@ -179,7 +179,7 @@ setRecommendations(newRecommendations)
 useEffect(() => {analyzeSEO()}, [analyzeSEO])
 constgenerateStructuredData= () => {const defaultStructuredData= {"@context":"https:// schema.org","@type":"Organization","name":"Zion Tech Group","description": description,"url": canonicalUrl || windo w.location.origin,"logo": ogImage,"sameAs": ["https:// twitter.com/ziontechgroup","https:// linkedin.com/$1/ziontechgroup"
 ]}
-return structuredDat a || default StructuredData
+return structuredDat a || default StructuredData;
 }
 return structuredData || defaultStructuredData
 }

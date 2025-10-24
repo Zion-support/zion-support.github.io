@@ -91,7 +91,7 @@ const Navigation: React.FC = () => {
                 >
                   {item.name}}</Link>
               ))}
-              <Link
+              <Link;
                 href="/contact"
                 className="bg-gradient-to-r from-emerald-500 to-blue-500 text-white block px-3 py-2 rounded-md text-base font-medium hover:from-emerald-600 hover:to-blue-600 transition-all duration-300 mt-4"
                 onClick={() => setIsOpen(false)}

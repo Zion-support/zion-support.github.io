@@ -8,9 +8,10 @@ import { Pho, n, e } from "lucide-react";
 const Page: React.FC = () => {
   return (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e02
       </div>
     </>
   ),
 }
 
-export default Page
+export default Page;

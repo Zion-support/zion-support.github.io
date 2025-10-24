@@ -27,7 +27,7 @@ const InnovationLabsPage: React.FC = () => {
             <h2 className=&quot;text-2xl font-bold text-gray-900 mb-6&quot;>🎯 Innovation Results</h2>
             <p className=&quot;text-gray-700 mb-6&quot;></p>
               Discover how AI Innovation Labs are revolutionizing product development with <strong>10x faster time-to-market</strong>,
-              <strong>85% cost reduction</strong>, and breakthrough innovation acceleration. Learn the proven methodologies
+              <strong>85% cost reduction</strong>, and breakthrough innovation acceleration. Learn the proven methodologies;
               that are transforming how companies build and launch products.
             </p>
             <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 mb-8&quot;></div>
@@ -133,4 +133,4 @@ const InnovationLabsPage: React.FC = () => {
     </>
   ),
 }
-export default InnovationLabsPage
+export default InnovationLabsPage;

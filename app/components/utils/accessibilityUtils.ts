@@ -184,6 +184,7 @@ export default {
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d3e3
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e02
 "use client"
 >>>>>>> cursor/fix-errors-and-merge-to-main-4b1f
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f20

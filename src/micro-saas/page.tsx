@@ -171,8 +171,7 @@ const Page = (): JSX.Element => {
               href="tel:+13024640950"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
-              (302) 464-0950
-            </a>
+              (302) 464-0950</a>
           </div>
         </section>
         {/* Categories */}
@@ -252,8 +251,7 @@ const Page = (): JSX.Element => {
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
               >
-                Get Started
-              </a>
+                Get Started</a>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border-2 border-cyan-500"></div>
               <h3 className="text-xl font-bold text-white mb-4">Professional</h3>
@@ -280,8 +278,7 @@ const Page = (): JSX.Element => {
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
               >
-                Get Started
-              </a>
+                Get Started</a>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6"></div>
               <h3 className="text-xl font-bold text-white mb-4">Enterprise</h3>
@@ -308,8 +305,7 @@ const Page = (): JSX.Element => {
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
               >
-                Contact Sales
-              </a>
+                Contact Sales</a>
             </div>
           </div>
         </section>
@@ -331,8 +327,7 @@ const Page = (): JSX.Element => {
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
-                (302) 464-0950
-              </a>
+                (302) 464-0950</a>
             </div>
             <div className="mt-8 text-sm text-gray-400"></div>
               <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown DE 19709</p>

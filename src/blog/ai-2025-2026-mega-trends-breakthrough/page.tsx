@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helm, e, t } from "lucide-react";
 import React from 'react';
+import { Helmet } from 'lucide-react';
 import { Helm, e, t } from "lucide-react";
 constAIMegaTrends2025202 6: React.FC= () => {
   return (
@@ -37,8 +38,7 @@ constAIMegaTrends2025202 6: React.FC= () => {
                   <a href=&quot;/services&quot;
                     className=&quot;inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors&quot;
                   >
-                    Explore AI Services
-                  </a>
+                    Explore AI Services</a>
                 </div>
               </div>
             </div>

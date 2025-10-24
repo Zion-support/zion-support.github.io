@@ -154,8 +154,7 @@ const Page = (): JSX.Element => {
             <a href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
-              Start Free Trial
-            </a>
+              Start Free Trial</a>
           </div>
         </div>
         {/* Key Benefits */}
@@ -220,7 +219,7 @@ const Page = (): JSX.Element => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
-                plan.popular
+                plan.popular;
                   ? 'border-cyan-400 scale-105' 
                   : 'border-slate-700 hover:border-cyan-500/50'
               }`}></div>
@@ -295,8 +294,7 @@ const Page = (): JSX.Element => {
             <a href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
-              Start Free Trial
-            </a>
+              Start Free Trial</a>
           </div>
         </section>
       </section>

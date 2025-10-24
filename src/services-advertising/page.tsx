@@ -31,7 +31,7 @@ ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {
             </p>
             <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto">
               Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy,
-              60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven
+              60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven;
               methodology has helped 500+ businesses increase their advertising effectiveness while reducing costs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
@@ -44,8 +44,7 @@ ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {
               <a href="#services"
                 className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
               >
-                View Our Services
-              </a>
+                View Our Services</a>
             </div>
           </div>
         </div>
@@ -333,8 +332,7 @@ ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {
             <a href="/case-studies"
               className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
             >
-              View Success Stories
-            </a>
+              View Success Stories</a>
           </div>
 >>>>>>> 995b39195cc56a514459b6fa1d6f8ba8874b88ba
         </div>

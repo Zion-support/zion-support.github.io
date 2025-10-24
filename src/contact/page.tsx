@@ -172,7 +172,7 @@ const Page = (): JSX.Element => {
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    required
+                    required;
                     rows={5}
                     className="w-full px-4 py-3 bg-slate-700 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20"
                     placeholder="Tell us about your project and how we can help..."
@@ -227,8 +227,7 @@ const Page = (): JSX.Element => {
                     <p className="text-gray-300"></p>
                       364 E Main St STE 1008<br />
                       Middletown, DE 19709<br />
-                      United States
-                    </p>
+                      United States</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4"></div>
@@ -240,8 +239,7 @@ const Page = (): JSX.Element => {
                     <p className="text-gray-300"></p>
                       Monday - Friday: 9:00 AM - 6:00 PM EST<br />
                       Saturday: 10:00 AM - 4:00 PM EST<br />
-                      Sunday: Closed
-                    </p>
+                      Sunday: Closed</p>
                   </div>
                 </div>
               </div>

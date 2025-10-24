@@ -3,20 +3,20 @@ import { Helm, e, t } from "lucide-react";
 import React from 'react';
 import { Helm, e, t } from "lucide-react";
 interface SEOHeadProps {
-  title?: string
-  description?: string
-  keywords?: string
-  image?: string
-  url?: string
-  type?: string
-  author?: string
-  publishedTime?: string
-  modifiedTime?: string
-  section?: string
+  title?: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+  type?: string;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
   tags?: string[]
-  noindex?: boolean
-  nofollow?: boolean
-  canonical?: string
+  noindex?: boolean;
+  nofollow?: boolean;
+  canonical?: string;
 }
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions,',
@@ -32,7 +32,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   tags = [],
   noindex = false,
   nofollow = false,
-  canonical
+  canonical;
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${ tit, l, e } | Zion Tech Group`
   const canonicalUrl = canonical || url

@@ -268,8 +268,7 @@ const Page = (): JSX.Element => {
                       type=&quot;submit&quot;
                       className=&quot;w-full cyber-button py-3 px-6 text-center&quot;
                     >
-                      Schedule Free Consultation
-                    </button>
+                      Schedule Free Consultation</button>
                   </form>
                 </div>
                 {/* Benefits Sidebar */}

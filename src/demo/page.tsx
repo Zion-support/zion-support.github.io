@@ -175,8 +175,7 @@ const Page = (): JSX.Element => {
                       type=&quot;submit&quot;
                       className=&quot;w-full cyber-button py-3 px-6 text-center&quot;
                     >
-                      Schedule Demo
-                    </button>
+                      Schedule Demo</button>
                   </form>
                 </div>
                 {/* Contact Info */}

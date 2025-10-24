@@ -287,7 +287,7 @@ const Footer = (): JSX.Element => {
             <ul className="space-y-2">
               {additionalServices.map((service) => (
                 <li key={service.name}>
-                  <a
+                  <a;
                     href={service.url}
                     className="group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                   >

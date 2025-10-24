@@ -159,8 +159,7 @@ const AIDataAnalyticsPage: React.FC = () => {
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
-                ✉️ Get Free Consultation
-              </a>
+                ✉️ Get Free Consultation</a>
             </div>
           </div>
         </div>
@@ -209,8 +208,7 @@ const AIDataAnalyticsPage: React.FC = () => {
                   href="/contact"
                   className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center justify-center"
                 >
-                  Get Started
-                </a>
+                  Get Started</a>
               </div>
             ),)}
           </div>
@@ -260,8 +258,7 @@ const AIDataAnalyticsPage: React.FC = () => {
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >
-              ✉️ kleber@ziontechgroup.com
-            </a>
+              ✉️ kleber@ziontechgroup.com</a>
           </div>
           <div className="mt-8 text-sm text-blue-200"></div>
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>

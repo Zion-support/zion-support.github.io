@@ -3269,8 +3269,7 @@ constMicroSAASPage: React.FC= () => {
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
             >
-              Email Us
-            </a>
+              Email Us</a>
           </div>
         </div>
       </section>

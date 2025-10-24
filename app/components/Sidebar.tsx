@@ -148,7 +148,7 @@ BarChart,
 ChevronDown,
 ChevronRight,
 Phone,
-Mail,
+Mail,;
 MapPin,Clock;}
 } from 'lucide-react'"
 constSidebar: React.FC="()" =>{const [isOpensetIsOpen] = useState(false);

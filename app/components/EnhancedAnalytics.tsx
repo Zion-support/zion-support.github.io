@@ -72,7 +72,7 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
         )
       }
 
-      // Custom analytics
+      // Custom analytics;
       }
   }
 
@@ -88,7 +88,7 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
         )
       }
 
-      // Custom analytics
+      // Custom analytics;
       }
   };
   constvalue: AnalyticsContextType="{track,";}

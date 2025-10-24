@@ -221,7 +221,7 @@ if(current< target) {}
 return {...prev,
 [key]: Math.min(current + increment, target)}
 }
-return pre v
+return pre v;
 })
 }, 1 6)
 });

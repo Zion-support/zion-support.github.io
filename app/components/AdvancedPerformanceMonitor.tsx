@@ -307,7 +307,7 @@ return (
 <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
 <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}</div>
 <div>Memory:{' '}</div>
-{metrics.memory
+{metrics.memory;
 ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
 : 'N/A'}
 </div>
@@ -340,6 +340,6 @@ if (process.env.NODE_ENV="==" 'development') {return(<divclassName="'fixed" bott
 ?`${(metrics.memory /1024/1024).toFixed(1)}MB`</di>"
 :'N/A'}</di></di>{_recommendations.length >0&&(<divclassName="'mt-2'"><h4className='font-semibold text-xs text-red-60 0'>Recommendations:</h><ulclassName="'text-xs" text-red-60 0'>{_recommendations.map((recindex)=>(<likey="{index}">•{rec}</l>))}</u></di>)}</di>)
 }
-return nul l
+return nul l;
 }
 export default AdvancedPerformanceMonitor"

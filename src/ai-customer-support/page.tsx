@@ -90,8 +90,7 @@ const AICustomerSupportPage: React.FC = () => {
                 href=&quot;/contact&quot;
                 className=&quot;border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300&quot;
               >
-                Learn More
-              </a>
+                Learn More</a>
             </div>
           </section>
           {/* Features Section */}
@@ -147,12 +146,11 @@ const AICustomerSupportPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  <a
+                  <a;
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} Plan`}
                     className=&quot;cyber-button w-full text-center block&quot;
                   >
-                    Get Started
-                  </a>
+                    Get Started</a>
                 </div>
               ))}
             </div>

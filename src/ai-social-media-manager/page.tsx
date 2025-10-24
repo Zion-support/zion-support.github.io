@@ -43,6 +43,7 @@ constAISocialMediaManagerPage: React.FC= () => {
 const Page = (): JSX.Element => {
   return (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e02
       </div>
     </>
   ),

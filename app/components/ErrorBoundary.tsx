@@ -190,7 +190,7 @@ className=&quot;flex items-center justify-center space-x-2 bg-cyan-600 hover:bg-
 <RefreshCw className=&quot;w-4 h-4&quot; />
 <span>Reload Page</span>
 </button>
-<button
+<button;
 onClick={this.handleGoHome}
 className=&quot;flex items-center justify-center space-x-2 border border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200&quot;
 ></button>
