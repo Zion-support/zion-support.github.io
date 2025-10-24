@@ -25,9 +25,12 @@ const EnhancedHero: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
+<<<<<<< HEAD:app/components/EnhancedHero.tsx
+=======
 <<<<<<< HEAD:app/components-disabled/EnhancedHero.tsx
   ];
 =======
+>>>>>>> 792ede1bbcc67e039785774fff286f6ebc90e4ab:app/components-disabled/EnhancedHero.tsx
   ]
 >>>>>>> cursor/fix-errors-and-merge-to-main-155f:app/components/EnhancedHero.tsx
 
