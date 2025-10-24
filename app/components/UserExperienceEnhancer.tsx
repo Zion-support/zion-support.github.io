@@ -1,4 +1,6 @@
 
+import React from 'react';
+
 interface UserExperienceEnhancerProps {
   // Add props here
 }
