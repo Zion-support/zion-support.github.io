@@ -1,17 +1,11 @@
-'use client'
 import React from 'react'
-import Head from 'next/head'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import Footer from './components/Footer'
 
-const HomePage: React.FC = () => {
+export default function HomePage() {
   return (
     <div>
-      <Head>
-        <title>Zion Tech Group - AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of enterprise AI solutions, cloud services, and digital transformation services." />
-      </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         <div className="container mx-auto px-4 py-20">
@@ -174,5 +168,3 @@ const HomePage: React.FC = () => {
     </div>
   )
 }
-
-export default HomePage
