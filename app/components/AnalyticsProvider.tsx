@@ -9,11 +9,9 @@ interface AnalyticsContextType {
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined
 )
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext)
-  if (!context) {
-    throw new Error(&quot;useAnalytics must be used within an AnalyticsProvider&quot;)
-  }
+export const useAnalytics = ($2) => {
+$3
+};
   return context
 }
 interface AnalyticsProviderProps {
@@ -28,7 +26,7 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => 
         document.head.appendChild(script)
         window.gtag =
           window.gtag ||
-          function (...args: any[]) {
+          function (...args: any[]) {,
             (window.gtag as any).q = (window.gtag as any).q || []
             (window.gtag as any).q.push(args)
           }
@@ -37,26 +35,21 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => 
       }
     }
   }, [])
-  consttrackEvent= (
-    eventName: string
-    parameters?: Record<string, unknown>
-  ) => {
-    if (typeof window !== &quot;undefined&quot; && window.gtag) {
-      window.gtag(&quot;event&quot;, eventName, parameters)
-    }
+  consttrackEvent = ($2) => {
+$3
+};
   }
-  consttrackPageView= (pageName: string) => {if (type of windo w !==&quot;undefined&quot; && windo w.gtag) {
+  consttrackPageView= (pageName: string) => {if (type of windo w !==&quot;undefined&quot; && windo w.gtag) {,
       window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {
         page_title: pageName,
     page_location: window.location.href})
     }
   }
-  constvalue: AnalyticsContextType = {trackEvent
+  constvalue: AnalyticsContextType = {trackEvent,
     trackPageView}
   return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
-    </AnalyticsContext.Provider>
+    <AnalyticsContext.Provider value={value}>{children}
+    </AnalyticsContext></AnalyticsContext.Provider>
   )
 }
 

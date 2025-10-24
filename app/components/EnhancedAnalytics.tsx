@@ -10,15 +10,13 @@ interface AnalyticsContextType {
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined
 )
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext)
-  if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider')
-  }
+export const useAnalytics = ($2) => {
+$3
+};
   return context
 }
 interface AnalyticsProviderProps {
-  children: React.ReactNode
+  children: React.ReactNode,
 }
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
@@ -34,7 +32,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 
         ;(window as unknown as { dataLayer: unknown[] }).dataLayer =
           (window as unknown as { dataLayer: unknown[] }).dataLayer || []
-        function gtag(...args: unknown[]) {
+        function gtag(...args: unknown[]) {,
           ;(window as unknown as { dataLayer: unknown[] }).dataLayer.push(args)
         }
         gtag('js', new Date())
@@ -95,16 +93,15 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
   }
 
-  const value: AnalyticsContextType = {
+  const value: AnalyticsContextType = {,
     track,
     identify,
     page,
   }
 
   return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
-    </AnalyticsContext.Provider>
+    <AnalyticsContext.Provider value={value}>{children}
+    </AnalyticsContext></AnalyticsContext.Provider>
   )
 }
 

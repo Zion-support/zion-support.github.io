@@ -8,10 +8,10 @@ export interface UseEnhancedPerformanceOptions {
 }
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  networkLatency: number;
+  loadTime: number;,
+  renderTime: number;,
+  memoryUsage: number;,
+  networkLatency: number;,
 }
 
 export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {
@@ -32,14 +32,16 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     mountTimeRef.current = performance.now();
     renderCountRef.current += 1;
 
-    // Measure load time
-    const measureLoadTime = () => {
+    // Measure load time;
+
+const measureLoadTime = () => {
       const loadTime = performance.now();
       setMetrics(prev => ({ ...prev, loadTime }));
     };
 
-    // Measure render time
-    const measureRenderTime = () => {
+    // Measure render time;
+
+const measureRenderTime = () => {
       const renderStart = performance.now();
       requestAnimationFrame(() => {
         const renderTime = performance.now() - renderStart;
@@ -47,8 +49,9 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
       });
     };
 
-    // Measure memory usage
-    const measureMemoryUsage = () => {
+    // Measure memory usage;
+
+const measureMemoryUsage = () => {
       if ('memory' in performance) {
         const memory = (performance as any).memory;
         const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
@@ -56,8 +59,9 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
       }
     };
 
-    // Measure network latency
-    const measureNetworkLatency = () => {
+    // Measure network latency;
+
+const measureNetworkLatency = () => {
       const start = performance.now();
       fetch('/api/ping', { method: 'HEAD' })
         .then(() => {
@@ -76,8 +80,9 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     measureMemoryUsage();
     measureNetworkLatency();
 
-    // Check if performance is optimized
-    const checkOptimization = () => {
+    // Check if performance is optimized;
+
+const checkOptimization = () => {
       const isOptimized = 
         metrics.loadTime < 1000 && // Load time under 1 second
         metrics.renderTime < 16 && // Render time under 16ms (60fps)
@@ -86,17 +91,25 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
       setIsOptimized(isOptimized);
     };
 
-    // Check optimization after metrics are updated
-    const timeoutId = setTimeout(checkOptimization, 1000);
+    // Check optimization after metrics are updated;
 
-    return () => clearTimeout(timeoutId);
+const timeoutId = setTimeout(checkOptimization, 1000);
+
+    return (
+    <>
+      ) => clearTimeout(timeoutId
+    </>
+    </>
+    </>
+  );
   }, [metrics.loadTime, metrics.renderTime, metrics.memoryUsage, metrics.networkLatency]);
 
   const optimizePerformance = useCallback(() => {
     if (typeof document === 'undefined') return;
 
-    // Preload critical resources
-    const criticalResources = [
+    // Preload critical resources;
+
+const criticalResources = [
       '/fonts/inter.woff2',
       '/images/hero-bg.jpg',
       '/images/logo.png',
@@ -113,8 +126,9 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
       document.head.appendChild(link);
     });
 
-    // Optimize images
-    const images = document.querySelectorAll('img[data-src]');
+    // Optimize images;
+
+const images = document.querySelectorAll('img[data-src]');
     const imageObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -128,10 +142,16 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
 
     images.forEach((img) => imageObserver.observe(img));
 
-    return () => imageObserver.disconnect();
+    return (
+    <>
+      ) => imageObserver.disconnect(
+    </>
+    </>
+    </>
+  );
   }, []);
 
-  const measurePerformance = useCallback((name: string, fn: () => void) => {
+  const measurePerformance = useCallback((name: string, fn: () => void) => {,
     if (trackPerformance) {
       performance.mark(`${component}-${name}-start`);
       fn();
@@ -174,6 +194,6 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
     trackError,
     trackAnalytics: trackAnalyticsEvent,
     renderCount: renderCountRef.current,
-    mountTime: mountTimeRef.current
+    mountTime: mountTimeRef.current,
   };
 };

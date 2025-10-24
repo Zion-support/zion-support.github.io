@@ -1,15 +1,15 @@
-// Performance monitoring utilities
+// Performance monitoring utilities;
+
 export interface PerformanceMetric {
-  name: string;
-  value: number;
-  timestamp: number;
-  url: string;
+  name: string;,
+  value: number;,
+  timestamp: number;,
+  url: string;,
 }
 
 class PerformanceMonitor {
-  private metrics: PerformanceMetric[] = [];
-  private isEnabled: boolean;
-
+  private metrics: PerformanceMetric[] = [];,
+  private isEnabled: boolean;,
   constructor() {
     this.isEnabled = typeof window !== "undefined" && "performance" in window;
   }
@@ -27,10 +27,10 @@ class PerformanceMonitor {
   }
 
   // Record a custom metric
-  recordMetric(name: string, value: number): void {
+  recordMetric(name: string, value: number): void {,
     if (!this.isEnabled) return;
 
-    const metric: PerformanceMetric = {
+    const metric: PerformanceMetric = {,
       name,
       value,
       timestamp: Date.now(),
@@ -51,8 +51,8 @@ class PerformanceMonitor {
   }
 
   // Send metrics to analytics service
-  private sendToAnalytics(metric: PerformanceMetric): void {
-    // Example: Send to Google Analytics
+  private sendToAnalytics(metric: PerformanceMetric): void {,
+    // Example: Send to Google Analytics,
     if (typeof window !== "undefined" && (window as any).gtag) {
       (window as any).gtag("event", metric.name, {
         event_category: "Performance",
@@ -62,5 +62,6 @@ class PerformanceMonitor {
   }
 }
 
-// Export singleton instance
+// Export singleton instance;
+
 export const performanceMonitor = new PerformanceMonitor();

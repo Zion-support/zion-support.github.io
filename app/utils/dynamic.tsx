@@ -1,8 +1,7 @@
 
-// dynamic utility
-export const dynamic = () => {
-  // Utility function implementation
-  return null
-}
+// dynamic utility;
 
+export const dynamic = ($2) => {
+$3
+};
 export default dynamic

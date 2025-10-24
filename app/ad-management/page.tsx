@@ -1,4 +1,4 @@
-
+'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -16,7 +16,7 @@ const AdManagementPage: React.FC = () => {
             <h1 className="text-4xl font-bold text-gray-900 mb-6">
               AI-Powered Ad Management
             </h1>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-lg text-gray-600 mb-8">
               Maximize your advertising ROI with intelligent campaign management
             </p>
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
@@ -30,7 +30,3 @@ const AdManagementPage: React.FC = () => {
 };
 
 export default AdManagementPage;
-
-
-
-

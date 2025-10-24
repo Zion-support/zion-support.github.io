@@ -1,29 +1,28 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
-import { Mail } from 'lucide-react';
+import { AlertTriangle, RefreshCw, Home, Mail , Mail  } from 'lucide-react';
 import { Home } from 'lucide-react';
 interface AdvancedErrorBoundaryProps {
-  className?: string
+  className?: string;
 }
 interface State {
-  hasError: boolean
-  error?: Error
-  errorInfo?: ErrorInfo
-  errorId?: string
+  hasError: boolean,
+  error?: Error;
+  errorInfo?: ErrorInfo;
+  errorId?: string;
 }
 class AdvancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+  constructor(props: Props) {,
     super(props)
     this.state = { hasError: false }
   }
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {,
     const errorReport: ErrorReport = {,
-    errorId: this.state.errorId || this.generateErrorId()
+    errorId: this.state.errorId || this.generateErrorId(),
       error
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     }
   }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
   this.setState({
       error
       errorInfo
@@ -42,6 +41,6 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       this.logErrorToService(error, errorInfo)
     }
   }
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {,
     // You can integrate with services like Sentry, LogRocket, etc.
     const errorData = {

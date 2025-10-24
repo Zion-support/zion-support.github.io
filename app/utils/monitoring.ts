@@ -6,7 +6,7 @@ import React from 'react';
  */
 const performanceConfig = {
   monitoring: {,
-    enableLongTaskDetection: true
+    enableLongTaskDetection: true,
     enableMemoryMonitoring: true,
     sampleRate: 0.1}
   webVitals: {,
@@ -19,25 +19,25 @@ const performanceConfig = {
   }
 }
 export interface PerformanceMetrics {
-  lcp?: number
-  fid?: number
-  cls?: number
-  fcp?: number
-  ttfb?: number
-  inp?: number
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fcp?: number;
+  ttfb?: number;
+  inp?: number;
 }
 export interface ErrorReport {
-  message: string;
-  stack?: string
-  component?: string
+  message: string;,
+  stack?: string;
+  component?: string;
   timestamp: number;,
-    userAgent: string;
-  url: string
+    userAgent: string;,
+  url: string,
   }
 class MonitoringService {
   private metrics: PerformanceMetrics = {}
-  private errors: ErrorReport[] = []
-  private observer: PerformanceObserver | null = null
+  private errors: ErrorReport[] = [],
+  private observer: PerformanceObserver | null = null,
   constructor() {
     if (typeof window !== 'undefined') {
       this.initializeMonitoring()
@@ -56,28 +56,31 @@ class MonitoringService {
   private monitorWebVitals(): void {
     if ('PerformanceObserver' in window) {
       try {
-        // Largest Contentful Paint
-        const lcpObserver = new PerformanceObserver((list) => {
+        // Largest Contentful Paint;
+
+const lcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries()
           const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
           this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0
           this.reportMetric('lcp', this.metrics.lcp)
         })
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
-        // First Input Delay
-        const fidObserver = new PerformanceObserver((list) => {
+        // First Input Delay;
+
+const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries()
-          entries.forEach((entry: PerformanceEntry) => {
+          entries.forEach((entry: PerformanceEntry) => {,
             this.metrics.fid = (entry as any).processingStart - entry.startTime
             this.reportMetric('fid', this.metrics.fid)
           })
         })
         fidObserver.observe({ entryTypes: ['first-input'] })
         // Cumulative Layout Shift
-        let clsValue = 0
-        const clsObserver = new PerformanceObserver(list => {
+        let clsValue = 0;
+
+const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries()
-          entries.forEach((entry: PerformanceEntry) => {
+          entries.forEach((entry: PerformanceEntry) => {,
             if (!(entry as any).hadRecentInput) {
               clsValue += entry.value
               this.metrics.cls = clsValue
@@ -86,8 +89,9 @@ class MonitoringService {
           })
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] })
-        // First Contentful Paint
-        const fcpObserver = new PerformanceObserver(list => {
+        // First Contentful Paint;
+
+const fcpObserver = new PerformanceObserver(list => {
           const entries = list.getEntries()
           entries.forEach(entry => {
             this.metrics.fcp = entry.startTime
@@ -117,7 +121,7 @@ class MonitoringService {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries()
-          entries.forEach((entry: PerformanceResourceTiming) => {
+          entries.forEach((entry: PerformanceResourceTiming) => {,
             if (entry.duration > 1000) {
               }
           })
@@ -132,9 +136,9 @@ class MonitoringService {
     window.addEventListener('error', (event) => {
       this.logError({
         message: event.message,
-    stack: event.error?.stack
+    stack: event.error?.stack,
         timestamp: Date.now(),
-    userAgent: navigator.userAgent
+    userAgent: navigator.userAgent,
         url: window.location.href})
     })
     // Unhandled promise rejection handler
@@ -142,11 +146,11 @@ class MonitoringService {
       this.logError({
         message: `Unhandled Promise Rejection: ${event.reason}`
         timestamp: Date.now(),
-    userAgent: navigator.userAgent
+    userAgent: navigator.userAgent,
         url: window.location.href})
     })
   }
-  private reportMetric(name: string, value: number): void {
+  private reportMetric(name: string, value: number): void {,
   // Sample rate
     if (Math.random() > performanceConfig.monitoring.sampleRate) {
       return
@@ -162,7 +166,7 @@ class MonitoringService {
     event_category: 'Web Vitals'})
     }
   }
-  public logError(error: ErrorReport): void {
+  public logError(error: ErrorReport): void {,
     this.errors.push(error)
     // Keep only last 50 errors
     if (this.errors.length > 50) {
@@ -210,6 +214,7 @@ class MonitoringService {
     }
   }
 }
-// Singleton instance
+// Singleton instance;
+
 const monitoring = new MonitoringService()
 export default monitoring
