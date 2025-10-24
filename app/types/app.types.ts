@@ -18,13 +18,13 @@ export interface Service {
   };
   benefits: string[];
   useCases: string[];
-  marketPrice: string;
-  contactInfo: {
-    phone: string;
+  link?: string;
+  marketPrice?: string;
+  contactInfo?: {
     email: string;
-    website: string;
+    phone: string;
+    website?: string;
   };
-  link: string;
 }
 export interface ContactFormData {
   name: string;
