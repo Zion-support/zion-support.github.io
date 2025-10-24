@@ -56,8 +56,6 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
       };
     }
   }, [enableAccessibility, enableKeyboardNavigation, isHighContrast, isReducedMotion]);
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
   // Add CSS classes for enhanced UX
   useEffect(() => {
     const style = document.createElement('style')
