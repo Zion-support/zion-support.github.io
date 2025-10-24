@@ -391,14 +391,14 @@ export default function AboutPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
+                href="/contact" 
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Get In Touch
                 <ArrowRightIcon className="w-5 h-5" />
               </Link>
               <Link 
-                to="/services" 
+                href="/services" 
                 className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
               >
                 View Our Services

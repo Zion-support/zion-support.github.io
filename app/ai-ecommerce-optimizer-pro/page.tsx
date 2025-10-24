@@ -90,14 +90,14 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
+                href="/contact" 
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
               >
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link 
-                to="/ai-services" 
+                href="/ai-services" 
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
               >
                 View All Services
@@ -163,7 +163,7 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
                   ))}
                 </ul>
                 <Link
-                  to="/contact"
+                  href="/contact"
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 text-center block"
                 >
                   Get Started
@@ -185,14 +185,14 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              to="/contact" 
+              href="/contact" 
               className="inline-flex items-center px-8 py-4 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
             >
               Start Optimization
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link 
-              to="/ai-services" 
+              href="/ai-services" 
               className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-600 transition-colors duration-300"
             >
               Explore All AI Services
