@@ -57,21 +57,10 @@ const PerformanceEnhancer: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
-
-interface PerformanceEnhancerProps {
-  enableOptimizations?: boolean;
-  onOptimizationComplete?: () => void;
-}
-
-const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = (_props) => {
-
-  return (
-    
-    <div></div>
-      {/* Component content */}
+      </div>
     </div>
-  )};
+  );
+};
 
-export default PerformanceEnhancerPage
+export default PerformanceEnhancer;
 ;
