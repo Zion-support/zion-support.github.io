@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { performanceUtils } from '../utils/performanceUtils';
+import { performanceUtils } from './performanceUtils';
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;

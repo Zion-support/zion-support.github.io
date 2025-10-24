@@ -153,7 +153,7 @@ const TestRunner: React.FC<TestRunnerProps> = ({
 
   React.useEffect(() => {
     if (config.enablePerformance || config.enableCoverage || config.enableAccessibility) {
-      runTests()
+      runTests();
     }
   }, [runTests, config])
   return null

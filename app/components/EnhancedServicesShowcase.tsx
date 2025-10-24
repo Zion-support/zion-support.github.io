@@ -76,19 +76,18 @@ const EnhancedServicesShowcase: React.FC = () => {
                   Average Improvement
                 </div>
               </div>
-
               <ul className="space-y-2 mb-6">
                 {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-green-400 flex-shrink-0" />
-                    <span className="text-gray-300 text-sm">{feature}</span>
+                  <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                    {feature}
                   </li>
                 ))}
               </ul>
-
-              <button className="w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+              
+              <button className="w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white py-2 px-4 rounded-lg text-sm font-medium hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center group">
                 Learn More
-                <ArrowRight className="h-4 w-4 ml-2" />
+                <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
           ))}
