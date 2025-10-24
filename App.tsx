@@ -10,7 +10,7 @@ import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 // import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
-import SEOOptimizer from './app/components/SEOOptimizer';
+// import SEOOptimizer from './app/components/SEOOptimizer';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./app/page'));

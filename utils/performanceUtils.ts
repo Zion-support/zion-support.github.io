@@ -1,135 +1,177 @@
-export function debounce<T extends (...args: any[]) => any>()</T>
-export function throttle<T extends (...args: any[]) => any>(
-export function createIntersectionObserver()
-export function getMemoryUsage(): any {
-export function preloadCriticalResources(): void {
-export function optimizeImage(sr,)
-  c: string, width?: number, height?: number): string {
-export function createLazyImageObserver(): IntersectionObserver | null {
-export function checkPerformanceBudget(): void {
-export function addResourceHints(): void {
-/**
- * Performance optimization utilities for the Zion Tech Group application;
- */
-
-// Debounce function for performance optimization;
+export function debounce<T extends (...args: any[]) => any>(
   func: T,
-  wait: number;</T>
+  wait: number
 ): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout;
-  return (...arg,</T>
-  s: Parameters<T>) => {
+  return (...args: Parameters<T>) => {
     clearTimeout(timeout);
- func(...args), wait);
+    timeout = setTimeout(() => func(...args), wait);
   };
+}
 
-// Throttle function for performance optimization;
+export function throttle<T extends (...args: any[]) => any>(
   func: T,
-  limit: number;</T>
+  limit: number
 ): (...args: Parameters<T>) => void {
   let inThrottle: boolean;
-  return (...arg,</T>
-  s: Parameters<T>) => {
+  return (...args: Parameters<T>) => {
     if (!inThrottle) {
       func(...args);
       inThrottle = true;
- (inThrottle = false), limit);
+      setTimeout(() => (inThrottle = false), limit);
+    }
   };
+}
 
-// Intersection Observer for lazy loading;
+export function createIntersectionObserver(
   callback: IntersectionObserverCallback,
-  options?: IntersectionObserverInit;
-): IntersectionObserver | null {
-  if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
-    return null;
-  
-  return new IntersectionObserver(callback, {
-    rootMargin: '50px',
-    threshold: 0.1,)
-    ...options,)
-  });
+  options?: IntersectionObserverInit
+): IntersectionObserver {
+  return new IntersectionObserver(callback, options);
+}
 
-// Performance monitoring utilities;
- void): void {
-  if (typeof window === 'undefined' || !('performance' in window)) {
-    fn();
-    return;
+export function getMemoryUsage(): any {
+  if (typeof performance !== 'undefined' && performance.memory) {
+    return performance.memory;
+  }
+  return null;
+}
 
-  const start = performance.now();
-  fn();
-  const end = performance.now();
-  
-  if (process.env.NODE_ENV === 'development') {
-    console.log(`${name} took ${end - start} milliseconds`);
-
-// Memory usage monitoring;
-  if (typeof window === 'undefined' || !('memory' in performance)) {
-    return null;
-  
-  return (performance, as, any).memory;
-
-// Bundle size optimization - preload critical resources;
-  if (typeof window === 'undefined') return;
-  
-  const criticalResources = [;
+export function preloadCriticalResources(): void {
+  // Preload critical resources
+  const criticalResources = [
     '/fonts/inter.woff2',
-    '/images/logo.png',
-    '/images/og-image.jpg'
+    '/images/hero-bg.jpg',
+    '/css/critical.css'
   ];
-  
+
+  criticalResources.forEach(resource => {
     const link = document.createElement('link');
     link.rel = 'preload';
     link.href = resource;
-    link.as = resource.endsWith('.woff2') ? 'font' : 'image';
+    link.as = resource.endsWith('.woff2') ? 'font' : 
+              resource.endsWith('.css') ? 'style' : 'image';
     if (resource.endsWith('.woff2')) {
       link.crossOrigin = 'anonymous';
+    }
     document.head.appendChild(link);
   });
+}
 
-// Image optimization utility;
-  // Add image optimization parameters if needed;
-  const url = new URL(src, window.location.origin);
-  if (width) url.searchParams.set('w', width.toString());
-  if (height) url.searchParams.set('h', height.toString());
-  url.searchParams.set('q', '80'); // Quality;
-  url.searchParams.set('f', 'webp'); // Format;
-  return url.toString();
+export function measurePerformance(name: string, fn: () => void): void {
+  const start = performance.now();
+  fn();
+  const end = performance.now();
+  console.log(`${name} took ${end - start} milliseconds`);
+}
 
-// Lazy loading utility for images;
+export function getPerformanceMetrics() {
+  if (typeof performance === 'undefined') {
+    return null;
+  }
+
+  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  const paint = performance.getEntriesByType('paint');
+  
+  return {
+    navigation: {
+      domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+      loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+      totalTime: navigation.loadEventEnd - navigation.fetchStart
+    },
+    paint: {
+      firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
+      firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
+    }
+  };
+}
+
+export function optimizeImages(): void {
+  const images = document.querySelectorAll('img[data-src]');
+  const imageObserver = createIntersectionObserver((entries) => {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
-        const src = img.dataset.src;
-        if (src) {
-          img.src = src;
-          img.classList.remove('lazy');
-          img.classList.add('loaded');
+        img.src = img.dataset.src || '';
+        img.classList.remove('lazy');
+        imageObserver.unobserve(img);
+      }
     });
   });
 
-// Performance budget monitoring;
-  if (typeof window === 'undefined') return;
-  
-  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-  if (!navigation) return;
-  
-  const loadTime = navigation.loadEventEnd - navigation.fetchStart;
-  const budget = 3000; // 3 seconds;
- budget) {
- ${budget}ms`);
+  images.forEach(img => imageObserver.observe(img));
+}
 
-// Resource hints for better performance;
-  if (typeof window === 'undefined') return;
+export function lazyLoadComponents(): void {
+  const lazyComponents = document.querySelectorAll('[data-lazy-component]');
+  const componentObserver = createIntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const element = entry.target as HTMLElement;
+        const componentName = element.dataset.lazyComponent;
+        if (componentName) {
+          // Load component dynamically
+          import(`../components/${componentName}`).then(() => {
+            // Component loaded
+            element.classList.add('loaded');
+          });
+          componentObserver.unobserve(element);
+        }
+      }
+    });
+  });
+
+  lazyComponents.forEach(component => componentObserver.observe(component));
+}
+
+export function optimizeScrollPerformance(): void {
+  let ticking = false;
   
-  const hints = [;
-    { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
-    { rel: 'dns-prefetch', href: '//fonts.gstatic.com' },
-    { rel: 'preconnect', href: 'http,
-  s://fonts.googleapis.com' },
-    { rel: 'preconnect', href: 'http,
-  s://fonts.gstatic.com', crossorigin: 'anonymous' },
-  ];
+  function updateScrollPosition() {
+    // Update scroll position
+    ticking = false;
+  }
   
-    const link = document.createElement('link');
-    Object.assign(link, hint);
-    document.head.appendChild(link);
-  });</T>
+  function requestTick() {
+    if (!ticking) {
+      requestAnimationFrame(updateScrollPosition);
+      ticking = true;
+    }
+  }
+  
+  window.addEventListener('scroll', requestTick, { passive: true });
+}
+
+export function preloadRoute(route: string): void {
+  const link = document.createElement('link');
+  link.rel = 'prefetch';
+  link.href = route;
+  document.head.appendChild(link);
+}
+
+export function getConnectionInfo() {
+  if ('connection' in navigator) {
+    const connection = (navigator as any).connection;
+    return {
+      effectiveType: connection.effectiveType,
+      downlink: connection.downlink,
+      rtt: connection.rtt,
+      saveData: connection.saveData
+    };
+  }
+  return null;
+}
+
+export function adaptToConnectionSpeed(): void {
+  const connection = getConnectionInfo();
+  if (connection) {
+    if (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g') {
+      // Reduce quality for slow connections
+      document.body.classList.add('slow-connection');
+    }
+    if (connection.saveData) {
+      // Enable data saver mode
+      document.body.classList.add('data-saver');
+    }
+  }
+}

@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import Navigation from './Navigation';
-import Footer from './Footer';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 
 const features = [
