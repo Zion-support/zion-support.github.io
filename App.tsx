@@ -1,71 +1,154 @@
-import React, { Suspense } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { HelmetProvider } from 'react-helmet-async'
-import Navigation from './app/components/Navigation'
-import Footer from './app/components/Footer'
-import ErrorBoundary from './app/components/ErrorBoundary'
-import LoadingSpinner from './app/components/LoadingSpinner'
-import SEOHead from './app/components/SEOHead'
+import React, { Suspense, useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import './globals.css';
 
-// Lazy load pages for better performance
-const HomePage = React.lazy(() => import('./app/page'))
-const AboutPage = React.lazy(() => import('./app/about/page'))
-const ContactPage = React.lazy(() => import('./app/contact/page'))
-const AIServicesPage = React.lazy(() => import('./app/ai-services/page'))
-const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'))
-const ITServicesPage = React.lazy(() => import('./app/it-services/page'))
-const MicroSAASServicesPage = React.lazy(() => import('./app/micro-saas-services/page'))
-const CloudServicesPage = React.lazy(() => import('./app/cloud-services/page'))
-const DigitalTransformationPage = React.lazy(() => import('./app/digital-transformation/page'))
-const CareersPage = React.lazy(() => import('./app/careers/page'))
-const BlogPage = React.lazy(() => import('./app/blog/page'))
+// Components
+import Header from './app/components/Header';
+import Footer from './app/components/Footer';
+import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
+import PerformanceOptimizer from './app/components/PerformanceOptimizer';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import BundleAnalyzer from './app/components/BundleAnalyzer';
 
-// Loading component for Suspense
-const PageLoader = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-    <LoadingSpinner size="lg" text="Loading page..." />
-  </div>
-)
+// Pages
+import HomePage from './app/page';
+import AboutPage from './app/about/page';
+import ServicesPage from './app/services/page';
+import ContactPage from './app/contact/page';
+import PrivacyPage from './app/privacy/page';
+import TermsPage from './app/terms/page';
+import BlogPage from './app/blog/page';
+import CareersPage from './app/careers/page';
+
+// Service Pages
+import AiAnalyticsDashboardProPage from './app/ai-analytics-dashboard-pro/page';
+import AiContentGenerationProPage from './app/ai-content-generation-pro/page';
+import AiAutomationSuitePage from './app/ai-automation-suite/page';
+import AiBusinessIntelligenceProPage from './app/ai-business-intelligence-pro/page';
+import AiCodeAssistantProPage from './app/ai-code-assistant-pro/page';
+import AiChatbotEnterprisePage from './app/ai-chatbot-enterprise/page';
+import AiCloudInfrastructurePage from './app/ai-cloud-infrastructure/page';
+import AiApiManagementPage from './app/ai-api-management/page';
+import DatabaseSolutionsPage from './app/database-solutions/page';
+import AdvancedSecuritySuitePage from './app/advanced-security-suite/page';
+import PerformanceMonitoringPage from './app/performance-monitoring/page';
+import DevOpsSolutionsPage from './app/devops-solutions/page';
+import FiveGImplementationPage from './app/5g-implementation/page';
+import FiveGNetworkInfrastructurePage from './app/5g-network-infrastructure/page';
+import FiveGIotSolutionsPage from './app/5g-iot-solutions/page';
+import FiveGSmartCitySolutionsPage from './app/5g-smart-city-solutions/page';
+import FiveGEdgeComputingPage from './app/5g-edge-computing/page';
+import FiveGPrivateNetworksPage from './app/5g-private-networks/page';
+import AiAccountingAssistantPage from './app/ai-accounting-assistant/page';
+import AiContentModerationProPage from './app/ai-content-moderation-pro/page';
+import AiClimateSolutionsProPage from './app/ai-climate-solutions-pro/page';
+import AiAgriculturalIntelligenceProPage from './app/ai-agricultural-intelligence-pro/page';
+import Ai3DGenerationPage from './app/ai-3d-generation/page';
+import AiBlockchainSolutionsPage from './app/ai-blockchain-solutions/page';
+import AiCustomerInsightsProPage from './app/ai-customer-insights-pro/page';
+import AiProjectManagementProPage from './app/ai-project-management-pro/page';
+import AiSocialMediaManagerProPage from './app/ai-social-media-manager-pro/page';
+import AiEmailMarketingProPage from './app/ai-email-marketing-pro/page';
+import AiInventoryManagementProPage from './app/ai-inventory-management-pro/page';
+import AiHrAssistantProPage from './app/ai-hr-assistant-pro/page';
+import AiSalesOptimizerProPage from './app/ai-sales-optimizer-pro/page';
+import MicroSaasPage from './app/micro-saas/page';
+
+const App: React.FC = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="text-white text-xl">Loading application...</div>
+      </div>
+    );
+  }
 
 function App() {
   return (
     <HelmetProvider>
       <ErrorBoundary>
         <Router>
-          <div className="min-h-screen bg-gray-50">
-            <SEOHead />
-            <Navigation />
-            <Suspense fallback={<PageLoader />}>
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/ai-services" element={<AIServicesPage />} />
-                <Route path="/it-services" element={<ITServicesPage />} />
-                <Route path="/micro-saas-services" element={<MicroSAASServicesPage />} />
-                <Route path="/cloud-services" element={<CloudServicesPage />} />
-                <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-                <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-                <Route path="/careers" element={<CareersPage />} />
-                <Route path="/blog" element={<BlogPage />} />
-                <Route path="/contact" element={<ContactPage />} />
-                {/* 404 Route */}
-                <Route path="*" element={
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-                    <div className="text-center">
-                      <h1 className="text-6xl font-bold text-white mb-4">404</h1>
-                      <p className="text-xl text-gray-300 mb-8">Page not found</p>
-                      <a 
-                        href="/" 
-                        className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-                      >
-                        Go Home
-                      </a>
-                    </div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+            <Header />
+            <main className="relative z-10 pt-20 lg:ml-80" id="main-content" role="main">
+              <Suspense fallback={
+                <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                  <div className="text-center">
+                    <div className="cyber-loading mx-auto mb-4"></div>
+                    <div className="text-white text-xl">Loading application...</div>
                   </div>
-                } />
-              </Routes>
-            </Suspense>
+                </div>
+              }>
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/about" element={<AboutPage />} />
+                  <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/micro-saas" element={<MicroSaasPage />} />
+                  <Route path="/contact" element={<ContactPage />} />
+                  <Route path="/privacy" element={<PrivacyPage />} />
+                  <Route path="/terms" element={<TermsPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/careers" element={<CareersPage />} />
+                  
+                  {/* AI Services */}
+                  <Route path="/ai-analytics-dashboard-pro" element={<AiAnalyticsDashboardProPage />} />
+                  <Route path="/ai-content-generation-pro" element={<AiContentGenerationProPage />} />
+                  <Route path="/ai-automation-suite" element={<AiAutomationSuitePage />} />
+                  <Route path="/ai-business-intelligence-pro" element={<AiBusinessIntelligenceProPage />} />
+                  <Route path="/ai-code-assistant-pro" element={<AiCodeAssistantProPage />} />
+                  <Route path="/ai-chatbot-enterprise" element={<AiChatbotEnterprisePage />} />
+                  
+                  {/* IT Services */}
+                  <Route path="/ai-cloud-infrastructure" element={<AiCloudInfrastructurePage />} />
+                  <Route path="/ai-api-management" element={<AiApiManagementPage />} />
+                  <Route path="/database-solutions" element={<DatabaseSolutionsPage />} />
+                  <Route path="/advanced-security-suite" element={<AdvancedSecuritySuitePage />} />
+                  <Route path="/performance-monitoring" element={<PerformanceMonitoringPage />} />
+                  <Route path="/devops-solutions" element={<DevOpsSolutionsPage />} />
+                  
+                  {/* 5G Solutions */}
+                  <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+                  <Route path="/5g-network-infrastructure" element={<FiveGNetworkInfrastructurePage />} />
+                  <Route path="/5g-iot-solutions" element={<FiveGIotSolutionsPage />} />
+                  <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
+                  <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
+                  <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
+                  
+                  {/* Micro SAAS */}
+                  <Route path="/ai-accounting-assistant" element={<AiAccountingAssistantPage />} />
+                  <Route path="/ai-content-moderation-pro" element={<AiContentModerationProPage />} />
+                  <Route path="/ai-climate-solutions-pro" element={<AiClimateSolutionsProPage />} />
+                  <Route path="/ai-agricultural-intelligence-pro" element={<AiAgriculturalIntelligenceProPage />} />
+                  <Route path="/ai-3d-generation" element={<Ai3DGenerationPage />} />
+                  <Route path="/ai-blockchain-solutions" element={<AiBlockchainSolutionsPage />} />
+                  <Route path="/ai-customer-insights-pro" element={<AiCustomerInsightsProPage />} />
+                  <Route path="/ai-project-management-pro" element={<AiProjectManagementProPage />} />
+                  <Route path="/ai-social-media-manager-pro" element={<AiSocialMediaManagerProPage />} />
+                  <Route path="/ai-email-marketing-pro" element={<AiEmailMarketingProPage />} />
+                  <Route path="/ai-inventory-management-pro" element={<AiInventoryManagementProPage />} />
+                  <Route path="/ai-hr-assistant-pro" element={<AiHrAssistantProPage />} />
+                  <Route path="/ai-sales-optimizer-pro" element={<AiSalesOptimizerProPage />} />
+                </Routes>
+              </Suspense>
+            </main>
             <Footer />
+            <PerformanceMonitor />
+            <PerformanceOptimizer />
+            <AccessibilityEnhancer />
+            <BundleAnalyzer />
           </div>
         </Router>
       </ErrorBoundary>

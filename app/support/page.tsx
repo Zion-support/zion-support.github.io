@@ -1,8 +1,11 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Phone, Mail, MapPin, MessageCircle, Clock, Search, HelpCircle, BookOpen, Users, Zap } from 'lucide-react';
+import { 
+  HelpCircle,
+  Mail,
+  Phone
+} from 'lucide-react';
+
+import React, { useState } from 'react';
+import { Helmet } from "react-helmet-async";
 
 interface FAQ {
   question: string;
@@ -13,9 +16,10 @@ interface FAQ {
 const SupportPage: React.FC = () => {
   const faqs: FAQ[] = [
     {
-      question: "How do I get started with your AI services?",
-      answer: "Getting started is easy! Simply contact us through our contact form or call us directly. We'll schedule a consultation to understand your needs and recommend the best AI solutions for your business.",
-      category: "Getting Started"
+      question: "How do I get started with your AI solutions?",
+      answer:
+        "Contact our team for a free consultation where we'll assess your needs and recommend the best AI solutions for your business. We'll guide you through the entire process from planning to implementation.",
+      category: "general",
     },
     {
       question: "What AI technologies do you specialize in?",
@@ -164,27 +168,24 @@ const SupportPage: React.FC = () => {
         {/* Contact Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Still Need Help?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Our expert team is ready to assist you with any questions or issues
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300"
-              >
-                <Mail className="w-5 h-5 mr-2" />
-                Email Us
-              </a>
-              <a
-                href="tel:+13024640950"
-                className="flex items-center justify-center px-8 py-4 border border-blue-500 text-blue-400 rounded-lg font-semibold text-lg hover:bg-blue-500/10 transition-all duration-300"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Call Us
-              </a>
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
+              <h2 className="text-3xl font-bold text-white mb-6">
+                Still Need Help?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Can't find what you're looking for? Our expert team is
+                here to help with any questions or issues.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+                  <Phone className="w-5 h-5" />
+                  Call Support
+                </button>
+                <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <Mail className="w-5 h-5" />
+                  Email Support
+                </button>
+              </div>
             </div>
           </div>
         </section>

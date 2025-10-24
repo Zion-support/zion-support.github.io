@@ -1,8 +1,7 @@
-'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 
-const Page: React.FC = () => {
+const PropertyManagementAiPage: React.FC = () => {
   return (
     <React.Fragment>
       <Helmet>

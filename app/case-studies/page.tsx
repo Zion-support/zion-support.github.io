@@ -1,6 +1,25 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
+import { 
+  ArrowRight,
+  CheckCircle,
+  ExternalLink
+} from 'lucide-react';
+
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+
+interface CaseStudy {
+  id: string;
+  title: string;
+  client: string;
+  industry: string;
+  challenge: string;
+  solution: string;
+  results: string[];
+  image: string;
+  duration: string;
+  team: string;
+}
 
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
@@ -71,8 +90,9 @@ const CaseStudiesPage: React.FC = () => {
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Case Studies
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Real results from our AI and IT implementations across various industries
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
+              Discover how we've helped businesses across industries
+              transform their operations with cutting-edge AI and IT solutions.
             </p>
           </div>
         </div>
@@ -120,19 +140,29 @@ const CaseStudiesPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Create Your Success Story?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how we can help transform your business with AI and IT solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
-                Start Your Project
-              </button>
-              <button className="px-8 py-4 border border-blue-500 text-blue-400 rounded-lg font-semibold text-lg hover:bg-blue-500/10 transition-all duration-300">
-                Contact Us
-              </button>
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
+              <h2 className="text-3xl font-bold text-white mb-6">
+                Ready toWrite Your Success Story?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Let's discuss how we can help transform your business with
+                our AI and IT solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+                >
+                  Start Your Project
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+                <Link
+                  to="/services"
+                  className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
+                >
+                  Explore Our Services
+                </Link>
+              </div>
             </div>
           </div>
         </section>

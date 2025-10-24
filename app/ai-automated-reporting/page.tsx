@@ -1,39 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Brain, BarChart3, FileText, Clock, TrendingUp, CheckCircle, ArrowRight, Zap, Target, Users } from 'lucide-react';
-
-const AIAutomatedReportingPage: React.FC = () => {
-  const features = [
-    {
-      icon: <Brain className="w-8 h-8" />,
-      title: "Intelligent Data Analysis",
-      description: "AI algorithms automatically analyze your data to identify patterns, trends, and insights that matter most to your business."
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8" />,
-      title: "Real-time Dashboards",
-      description: "Live dashboards that update automatically with the latest data, providing instant visibility into your business performance."
-    },
-    {
-      icon: <FileText className="w-8 h-8" />,
-      title: "Automated Report Generation",
-      description: "Generate comprehensive reports automatically on schedule or on-demand, saving hours of manual work."
-    },
-    {
-      icon: <Clock className="w-8 h-8" />,
-      title: "Scheduled Delivery",
-      description: "Set up automated report delivery to stakeholders via email, Slack, or other platforms at your preferred intervals."
-    }
-  ];
-
-  const benefits = [
-    "Reduce report generation time by 90%",
-    "Eliminate manual data processing errors",
-    "Get insights 24/7 without human intervention",
-    "Scale reporting across all departments",
-    "Improve decision-making speed",
-    "Reduce operational costs significantly"
-  ];
+import { Helmet } from "react-helmet-async";
 
   return (
     <>

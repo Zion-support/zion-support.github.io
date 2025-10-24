@@ -1,29 +1,5 @@
-'use client';
-import { Helmet } from 'react-helmet-async';
-
-const BusinessIntelligencePage: React.FC = () => {}
-  const features = [
-    {}
-    icon: Brain,
-      title: 'AI-Powered Analytics',
-      description: 'Advanced AI technology to transform your business intelligence and data analysis'
-},
-    {}
-    icon: Zap,
-      title: 'Real-Time Insights',
-      description: 'Lightning-fast data processing and real-time business intelligence'
-},
-    {}
-    icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards for your data'
-},
-    {}
-    icon: Globe,
-      title: 'Global Analytics',
-      description: 'Worldwide business intelligence deployment and support'
-}
-  ];
+import React from 'react';
+import { Helmet } from "react-helmet-async";
 
   const benefits = [
     'Advanced AI technology integration',

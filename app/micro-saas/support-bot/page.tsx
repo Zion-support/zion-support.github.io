@@ -1,13 +1,16 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Bot, ArrowRight } from 'lucide-react';
-const SmartSupportBotPage: React.FC = () => {}
-  return ()
-    <React.Fragment></React>
-      <Helmet></Helmet>
-        <title>Smart Support Bot | Zion Tech Group - AI Customer Service Automation</title>
-        <meta name="description" content="AI-powered customer service automation with intelligent support bot. 24/7 customer assistance and automated responses." /></meta>
-        <link rel="canonical" href="https://ziontechgroup.com/micro-saas/support-bot" /></link>
+import { Helmet } from "react-helmet-async";
+
+const SupportBotPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Support Bot</title>
+        <meta
+          name="description"
+          content="Professional support bot solutions and services"
+        />
+        <meta name="keywords" content="support, bot" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <section className="pt-24 pb-16 px-4"></section>

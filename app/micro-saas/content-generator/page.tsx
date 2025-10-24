@@ -1,15 +1,16 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Settings, ArrowRight } from 'lucide-react';
-const MicroSaaSPage: React.FC = () => {}
-  const serviceName = 'content-generator'
-  const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
-  return ()
-    <React.Fragment></React>
-      <Helmet></Helmet>
-        <title>{title} | Zion Tech Group - Micro SaaS Solutions</title>
-        <meta name="description" content={`Powerful ${title.toLowerCase()} micro SaaS solution for modern businesses.`} /></meta>
-        <link rel="canonical" href={`https://ziontechgroup.com/micro-saas/${serviceName}`} /></link>
+import { Helmet } from "react-helmet-async";
+
+const ContentGeneratorPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Content Generator</title>
+        <meta
+          name="description"
+          content="Professional content generator solutions and services"
+        />
+        <meta name="keywords" content="content, generator" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <section className="pt-24 pb-16 px-4"></section>

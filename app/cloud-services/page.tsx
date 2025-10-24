@@ -1,34 +1,5 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Cloud, Server, Shield, Database } from 'lucide-react'
-
-export default function CloudServicesPage() {
-  const services = [
-    {
-      icon: <Cloud className="w-8 h-8 text-blue-500" />,
-      title: 'Cloud Migration',
-      description: 'Seamless migration to cloud platforms with zero downtime.',
-      pricing: 'Starting at $10,000'
-    },
-    {
-      icon: <Server className="w-8 h-8 text-purple-500" />,
-      title: 'Cloud Infrastructure',
-      description: 'Design and implement scalable cloud infrastructure.',
-      pricing: 'Starting at $5,000/month'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-red-500" />,
-      title: 'Cloud Security',
-      description: 'Comprehensive cloud security and compliance solutions.',
-      pricing: 'Starting at $3,000/month'
-    },
-    {
-      icon: <Database className="w-8 h-8 text-green-500" />,
-      title: 'Cloud Databases',
-      description: 'Managed database services in the cloud.',
-      pricing: 'Starting at $1,500/month'
-    }
-  ]
+import React from 'react';
+import { Helmet } from "react-helmet-async";
 
   return (
     <>

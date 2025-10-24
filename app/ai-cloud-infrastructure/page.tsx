@@ -1,8 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import { Cloud, Server, CheckCircle, ArrowRight, Star, Phone, Mail, Play, Shield, Zap, Brain, Database } from 'lucide-react';
+
+const AiCloudInfrastructurePage: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
 const PagePage: React.FC = () => {}
   const features = [

@@ -1,98 +1,35 @@
-/**
- * Enhanced Analytics utilities with advanced tracking capabilities
- */
-
-export interface AnalyticsEvent {
-  event: string;
-  category: string;
-  action: string;
-  label?: string;
-  value?: number;
-  custom_parameters?: Record<string, any>;
-  timestamp?: number;
-  session_id?: string;
-}
-
-export interface UserProperties {
-  user_id?: string;
-  user_type?: string;
-  subscription_tier?: string;
-  signup_date?: string;
-  last_active?: string;
-  custom_properties?: Record<string, any>;
-}
-
-export interface PageViewEvent {
-  page_path: string;
-  page_title: string;
-  page_location?: string;
-  referrer?: string;
-  custom_parameters?: Record<string, any>;
-}
-
-export class EnhancedAnalytics {
-  private sessionId: string;
-  private userId?: string;
-  private userProperties: UserProperties = {};
-  private eventQueue: AnalyticsEvent[] = [];
-  private isInitialized: boolean = false;
-
-  constructor() {
-    this.sessionId = this.generateSessionId();
-    this.initialize();
-  }
-
-  /**
-   * Initialize enhanced analytics
-   */
-  private initialize(): void {
-    if (typeof window === 'undefined') return;
-
-    this.setupEventQueue();
-    this.setupPerformanceTracking();
-    this.setupUserInteractionTracking();
-    this.isInitialized = true;
-  }
-
-  /**
-   * Generate unique session ID
-   */
-  private generateSessionId(): string {
-    return `${Date.now()}-${Math.random().toString(36).substring(7)}`;
-  }
-
-  /**
-   * Setup event queue for batch processing
-   */
-  private setupEventQueue(): void {
-    // Process events every 5 seconds
-    setInterval(() => {
-      this.processEventQueue();
-    }, 5000);
-
-    // Process events on page unload
-    window.addEventListener('beforeunload', () => {
-      this.processEventQueue();
-    });
-  }
-
-  /**
-   * Setup performance tracking
-   */
-  private setupPerformanceTracking(): void {
-    if ('performance' in window) {
-      // Track page load performance
-      window.addEventListener('load', () => {
-        const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        this.trackPerformance('page_load', {
-          dom_content_loaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
-          load_complete: perfData.loadEventEnd - perfData.loadEventStart,
-          total_time: perfData.loadEventEnd - perfData.fetchStart,
-        });
+export const enhancedAnalytics = {
+  trackPageView: (page: string, title?: string) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'page_view', {
+        page_title: title || document.title;
+        page_location: window.location.href;
+        page_path: page
       });
-
-      // Track Core Web Vitals
-      this.trackCoreWebVitals();
+    }
+  };
+  trackUserInteraction: (action: string, category: string, label?: string) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', action, {
+        event_category: category;
+        event_label: label
+      });
+    }
+  };
+  trackUserEngagement: (engagementType: string, value?: number) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'user_engagement', {
+        engagement_type: engagementType;
+        value: value
+      });
+    }
+  };
+  trackPerformance: (metric: string, value: number) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'performance_metric', {
+        metric_name: metric;
+        metric_value: value
+      })
     }
   }
 

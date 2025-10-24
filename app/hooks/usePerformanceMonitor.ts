@@ -1,4 +1,7 @@
-import { useEffect, useCallback, useRef } from 'react';
+import React from 'react';
+import { useState, useEffect } from 'react'
+export const usePerformanceMonitor = () => {
+  const [metrics, setMetrics] = useState<Record<string, number>>({ /* empty */ });
 
 interface PerformanceMetrics {
   renderTime: number;

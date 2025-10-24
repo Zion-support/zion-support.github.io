@@ -1,34 +1,5 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { RefreshCw, Target, Users, Zap } from 'lucide-react'
-
-export default function DigitalTransformationPage() {
-  const services = [
-    {
-      icon: <RefreshCw className="w-8 h-8 text-blue-500" />,
-      title: 'Process Automation',
-      description: 'Automate business processes to improve efficiency and reduce costs.',
-      pricing: 'Starting at $5,000'
-    },
-    {
-      icon: <Target className="w-8 h-8 text-purple-500" />,
-      title: 'Digital Strategy',
-      description: 'Develop comprehensive digital transformation strategies.',
-      pricing: 'Starting at $10,000'
-    },
-    {
-      icon: <Users className="w-8 h-8 text-green-500" />,
-      title: 'Change Management',
-      description: 'Support your team through digital transformation initiatives.',
-      pricing: 'Starting at $3,000/month'
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-orange-500" />,
-      title: 'Technology Integration',
-      description: 'Integrate new technologies into your existing systems.',
-      pricing: 'Starting at $7,500'
-    }
-  ]
+import React from 'react';
+import { Helmet } from "react-helmet-async";
 
 const Page: React.FC = () => {
   return (

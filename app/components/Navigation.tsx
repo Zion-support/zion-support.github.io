@@ -1,6 +1,6 @@
-import React, { useState, useCallback, useMemo } from 'react'
-import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown } from 'lucide-react'
+import { Mail, Menu, Phone, X, Zap } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navigation = React.memo(() => {
   const [isOpen, setIsOpen] = useState(false)

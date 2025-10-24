@@ -1,27 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight } from 'lucide-react';
-
-const AIAPIManagerPage: React.FC = () => {
-  const features = [
-    {
-      title: 'API Gateway Management',
-      description: 'Centralized API gateway with advanced routing, load balancing, and traffic management capabilities.',
-      benefits: ['High availability', 'Load balancing', 'Rate limiting']
-    },
-    {
-      title: 'Authentication & Security',
-      description: 'Enterprise-grade security with OAuth 2.0, JWT tokens, and API key management.',
-      benefits: ['Secure access', 'Token management', 'Role-based permissions']
-    },
-    {
-      title: 'Analytics & Monitoring',
-      description: 'Real-time API analytics, performance monitoring, and detailed usage reports.',
-      benefits: ['Real-time metrics', 'Performance tracking', 'Usage insights']
-    }
-  ];
+import { Helmet } from "react-helmet-async";
 
   const benefits = [
     'Centralized API management',

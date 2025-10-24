@@ -1,34 +1,5 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Package, Zap, Users, TrendingUp } from 'lucide-react'
-
-export default function MicroSAASServicesPage() {
-  const services = [
-    {
-      icon: <Package className="w-8 h-8 text-blue-500" />,
-      title: 'Micro SaaS Development',
-      description: 'Custom micro SaaS applications tailored to your business needs.',
-      pricing: 'Starting at $5,000'
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-purple-500" />,
-      title: 'Rapid Prototyping',
-      description: 'Quick development and deployment of SaaS prototypes.',
-      pricing: 'Starting at $2,000'
-    },
-    {
-      icon: <Users className="w-8 h-8 text-green-500" />,
-      title: 'User Management',
-      description: 'Complete user authentication and management systems.',
-      pricing: 'Starting at $1,500'
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8 text-orange-500" />,
-      title: 'Analytics Integration',
-      description: 'Built-in analytics and reporting for your SaaS application.',
-      pricing: 'Starting at $1,000'
-    }
-  ]
+import React from 'react';
+import { Helmet } from "react-helmet-async";
 
   return (
     <>

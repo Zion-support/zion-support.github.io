@@ -1,38 +1,5 @@
-'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Users, MessageCircle, Calendar, Award, Globe, Zap } from 'lucide-react';
-
-const CommunityPage: React.FC = () => {}
-  const events = [
-    {}
-    id: '1',
-      title: 'AI Innovation Summit 2024',
-      date: 'March 15, 2024',
-      time: '9:00 AM - 5:00 PM',
-      location: 'San Francisco, CA',
-      description: 'Join industry leaders for a day of AI innovation, networking, and collaboration.',
-      type: 'Conference'
-},
-    {}
-    id: '2',
-      title: 'Cloud Computing Workshop',
-      date: 'March 22, 2024',
-      time: '2:00 PM - 4:00 PM',
-      location: 'Online',
-      description: 'Learn the latest cloud computing strategies and best practices.',
-      type: 'Workshop'
-},
-    {}
-    id: '3',
-      title: 'Cybersecurity Roundtable',
-      date: 'March 29, 2024',
-      time: '6:00 PM - 8:00 PM',
-      location: 'New York, NY',
-      description: 'Discuss emerging cybersecurity threats and defense strategies.',
-      type: 'Roundtable'
-}
-  ];
+import { Helmet } from "react-helmet-async";
 
   const communityStats = [
     { number: '10,000+', label: 'Active Members' },

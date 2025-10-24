@@ -1,16 +1,13 @@
-/**
- * Google Analytics gtag types
- */
-
-interface GtagEvent {
-  event_category?: string;
-  event_label?: string;
-  value?: number;
-  [key: string]: unknown;
+import React from 'react';
+declare global {
+  interface Window {
+    gtag: (
+      command: 'config' | 'event' | 'js' | 'set',
+      targetId: string,
+      config?: Record<string, unknown>
+    ) => void;
+    dataLayer: unknown[];
+  }
 }
 
-type GtagCommand = 'config' | 'set' | 'event' | 'js';
-
-interface Window {
-  gtag?: (command: GtagCommand, targetId: string, config?: GtagEvent) => void;
-}
+export { /* empty */ };

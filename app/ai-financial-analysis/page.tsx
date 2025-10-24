@@ -1,24 +1,5 @@
-<<<<<<< HEAD
-import { ArrowRight, BarChart3, Brain, Shield, Zap, Globe, Star, Users, Award, CheckCircle, TrendingUp, Clock, DollarSign, PieChart, Activity, Target } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-=======
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { BarChart, TrendingUp, Target, CheckCircle, ArrowRight, Star, Users, Clock, Shield } from 'lucide-react';
-
-const AIFinancialAnalysisPage = () => {
-  const features = [
-    {
-      icon: BarChart,
-      title: 'Advanced Financial Analytics',
-      description: 'Comprehensive financial analysis with machine learning insights.',
-      color: "from-orange-500 to-red-500"
-    }
-  ];
->>>>>>> cursor/fix-errors-and-merge-to-main-fe66
+import { Helmet } from "react-helmet-async";
 
 const AIFinancialAnalysis = () => {
   const features = [

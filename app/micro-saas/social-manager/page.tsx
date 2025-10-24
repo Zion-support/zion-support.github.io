@@ -1,13 +1,16 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Share2, ArrowRight } from 'lucide-react';
-const SocialMediaManagerPage: React.FC = () => {}
-  return ()
-    <React.Fragment></React>
-      <Helmet></Helmet>
-        <title>Social Media Manager | Zion Tech Group - AI Social Media Automation</title>
-        <meta name="description" content="AI-powered social media management and automation. Schedule posts, analyze engagement, and grow your social presence." /></meta>
-        <link rel="canonical" href="https://ziontechgroup.com/micro-saas/social-manager" /></link>
+import { Helmet } from "react-helmet-async";
+
+const SocialManagerPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Social Manager</title>
+        <meta
+          name="description"
+          content="Professional social manager solutions and services"
+        />
+        <meta name="keywords" content="social, manager" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <section className="pt-24 pb-16 px-4"></section>

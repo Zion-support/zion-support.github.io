@@ -19,11 +19,41 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: false,
-    minify: 'terser',
-    target: 'es2020',
-    cssTarget: 'chrome80',
+    minify: "esbuild",
+    cssCodeSplit: true,
+    modulePreload: {
+      polyfill: false,
+    },
+    // Performance optimizations
+    chunkSizeWarningLimit: 500,
+    assetsInlineLimit: 4096, // Increased for better performance
+    // Enable compression
     reportCompressedSize: true,
-    chunkSizeWarningLimit: 300,
+    // Target modern browsers for smaller bundles
+    target: 'es2020',
+    // Enable tree shaking
+    treeshake: {
+      moduleSideEffects: false,
+    },
+    // Optimize for production
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        passes: 2,
+      },
+      mangle: {
+        safari10: true,
+      },
+    },
+    // Additional optimizations
+    cssMinify: true,
+    minifyInternalExports: true,
+    emptyOutDir: true,
+    // Advanced optimizations
+    assetsDir: 'assets',
+    copyPublicDir: true,
     rollupOptions: {
       output: {
         manualChunks: (id) => {

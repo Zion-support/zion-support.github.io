@@ -1,47 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Zap, Brain, Shield, Globe, Star, Users, Award, CheckCircle, TrendingUp, Clock, Settings, Target, Workflow } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-
-const AIAutomationPlatform = () => {
-  const features = [
-    {
-      title: "Workflow Automation",
-      description: "Automate complex business processes with AI-powered workflows",
-      icon: <Workflow className="w-6 h-6" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Smart Decision Making",
-      description: "AI-driven decision making for automated business processes",
-      icon: <Brain className="w-6 h-6" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Process Optimization",
-      description: "Continuously optimize processes using machine learning",
-      icon: <TrendingUp className="w-6 h-6" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Integration Hub",
-      description: "Connect and automate across all your business systems",
-      icon: <Settings className="w-6 h-6" />,
-      color: "from-orange-500 to-red-500"
-    }
-  ];
-
-  const benefits = [
-    "70% process efficiency gain",
-    "Automated decision making",
-    "Seamless integrations",
-    "Real-time optimization",
-    "Scalable workflows",
-    "Cost reduction"
-  ];
+import { Helmet } from "react-helmet-async";
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">

@@ -1,25 +1,30 @@
-'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const Validation.tsPage: React.FC = () => {
-  return (
-    <React.Fragment>
-      <Helmet>
-        <title>Validation.ts - Zion Tech Group</title>
-        <meta name="description" content="Professional validation.ts services by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gray-900 text-white">
-        <div className="container mx-auto px-4 py-8">
-          <h1 className="text-4xl font-bold mb-6">Validation.ts</h1>
-          <p className="text-lg text-gray-300">
-            This page is currently under development. Please check back soon for more information.
-          </p>
-        </div>
-      </div>
-    </React.Fragment>
-  );
+export const validation = {
+  email: (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+  phone: (phone: string) => {
+    const phoneRegex = /^[+]?[1-9][\d]{0,15}$/;
+    return phoneRegex.test(phone.replace(/\s/g, ''));
+  };
+  required: (value: unknown) => {
+    return value !== null && value !== undefined && value !== '';
+  };
+  minLength: (value: string, min: number) => {
+    return value.length >= min;
+  };
+  maxLength: (value: string, max: number) => {
+    return value.length <= max;
+  };
+  url: (url: string) => {
+    try {
+      new URL(url);
+      return true;
+    } catch {
+      return false;
+    }
+  }
 };
 
 export default Validation.tsPage;

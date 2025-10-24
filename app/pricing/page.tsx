@@ -1,53 +1,5 @@
-'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const PricingPage: React.FC = () => {}
-  const plans = [
-    {}
-    name: 'Starter',
-      price: '$99',
-      period: '/month',
-      description: 'Perfect for small businesses getting started with AI',
-      features: [
-        'Basic AI integration',
-        'Email support',
-        'Standard features',
-        'Monthly reporting'
-      ],
-      popular: false
-},
-    {}
-    name: 'Professional',
-      price: '$299',
-      period: '/month',
-      description: 'For growing businesses that need advanced AI capabilities',
-      features: [
-        'Advanced AI features',
-        'Priority support',
-        'Custom integrations',
-        'Dedicated account manager',
-        'Advanced analytics',
-        'API access'
-      ],
-      popular: true
-},
-    {}
-    name: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'For large organizations with complex requirements',
-      features: [
-        'Custom AI solutions',
-        '24/7 dedicated support',
-        'White-label options',
-        'Custom integrations',
-        'SLA guarantees',
-        'Dedicated infrastructure'
-      ],
-      popular: false
-}
-  ];
+import { Helmet } from "react-helmet-async";
 
   return ()
     <>

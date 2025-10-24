@@ -1,17 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
-import AdDashboard from '../components/AdDashboard';
-
-export const metadata: Metadata = {
-  title: 'Ad Management System | Zion Tech Group',
-  description: 'Comprehensive advertising management system with campaign creation, analytics, scheduling, and template management.',
-  keywords: 'ad management, advertising, campaigns, analytics, scheduling, templates, marketing',
-  openGraph: {
-    title: 'Ad Management System | Zion Tech Group',
-    description: 'Comprehensive advertising management system with campaign creation, analytics, scheduling, and template management.',
-    type: 'website',
-  },
-};
+import { Helmet } from "react-helmet-async";
 
 const AdManagementPage: React.FC = () => {
   return (

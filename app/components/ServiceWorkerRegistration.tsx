@@ -1,5 +1,17 @@
-"use client";
 import React from 'react';
+import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const ServiceWorkerRegistration: React.FC = () => {
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then((registration) => { /* empty */ })
+          .catch((registrationError) => { /* empty */ });
+      });
+    }
+  }, []);
 
 const ServiceWorkerRegistration = () => {
   return (

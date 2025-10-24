@@ -1,46 +1,5 @@
-'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const CompliancePage: React.FC = () => {}
-  const complianceStandards = [
-    {}
-    name: 'SOC 2 Type II',
-      description: 'Security, availability, and confidentiality controls for service organizations',
-      status: 'Certified',
-      icon: Shield
-},
-    {}
-    name: 'ISO 27001',
-      description: 'Information security management system certification',
-      status: 'Certified',
-      icon: Lock
-},
-    {}
-    name: 'GDPR',
-      description: 'General Data Protection Regulation compliance for EU data',
-      status: 'Compliant',
-      icon: FileText
-},
-    {}
-    name: 'HIPAA',
-      description: 'Health Insurance Portability and Accountability Act compliance',
-      status: 'Compliant',
-      icon: Users
-},
-    {}
-    name: 'PCI DSS',
-      description: 'Payment Card Industry Data Security Standard',
-      status: 'Compliant',
-      icon: Award
-},
-    {}
-    name: 'CCPA',
-      description: 'California Consumer Privacy Act compliance',
-      status: 'Compliant',
-      icon: Globe
-}
-  ];
+import { Helmet } from "react-helmet-async";
 
   const features = [
     {}

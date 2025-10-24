@@ -5,29 +5,85 @@ import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react'
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
-  const footerLinks = {
-    services: [
-      { name: 'AI Services', href: '/ai-services' },
-      { name: 'IT Services', href: '/it-services' },
-      { name: 'Cloud Migration', href: '/cloud-services' },
-      { name: 'Cybersecurity', href: '/cybersecurity' },
-      { name: 'Data Analytics', href: '/data-analytics' }
-    ],
-    company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Careers', href: '/careers' },
-      { name: 'Blog', href: '/blog' },
-      { name: 'Contact', href: '/contact' },
-      { name: 'Pricing', href: '/pricing' }
-    ],
-    resources: [
-      { name: 'Documentation', href: '/docs' },
-      { name: 'API Reference', href: '/api' },
-      { name: 'Support', href: '/support' },
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' }
-    ]
-  }
+  const serviceCategories = [
+    {
+      title: 'AI Services',
+      icon: <Brain className="w-5 h-5 text-cyan-400" />,
+      services: [
+        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
+        { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro' },
+        { name: 'AI Automation Suite', href: '/ai-automation-suite' },
+        { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' },
+        { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
+        { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
+        { name: 'AI Customer Insights Pro', href: '/ai-customer-insights-pro' },
+        { name: 'AI Project Management Pro', href: '/ai-project-management-pro' },
+        { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager-pro' },
+        { name: 'AI Email Marketing Pro', href: '/ai-email-marketing-pro' }
+      ]
+    },
+    {
+      title: 'IT Services',
+      icon: <Code className="w-5 h-5 text-purple-400" />,
+      services: [
+        { name: 'AI Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
+        { name: 'AI API Management', href: '/ai-api-management' },
+        { name: 'Database Solutions', href: '/database-solutions' },
+        { name: 'Advanced Security Suite', href: '/advanced-security-suite' },
+        { name: 'Performance Monitoring', href: '/performance-monitoring' },
+        { name: 'DevOps Solutions', href: '/devops-solutions' }
+      ]
+    },
+    {
+      title: '5G Solutions',
+      icon: <Wifi className="w-5 h-5 text-green-400" />,
+      services: [
+        { name: '5G Implementation', href: '/5g-implementation' },
+        { name: '5G Network Infrastructure', href: '/5g-network-infrastructure' },
+        { name: '5G IoT Solutions', href: '/5g-iot-solutions' },
+        { name: '5G Smart City Solutions', href: '/5g-smart-city-solutions' },
+        { name: '5G Edge Computing', href: '/5g-edge-computing' },
+        { name: '5G Private Networks', href: '/5g-private-networks' }
+      ]
+    },
+    {
+      title: 'Micro SAAS',
+      icon: <Cloud className="w-5 h-5 text-orange-400" />,
+      services: [
+        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
+        { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro' },
+        { name: 'AI Lead Generation Pro', href: '/ai-lead-generation-pro' },
+        { name: 'AI CRM Enterprise', href: '/ai-crm-enterprise' },
+        { name: 'AI Scheduling Assistant Pro', href: '/ai-scheduling-assistant-pro' },
+        { name: 'AI Document Processor Pro', href: '/ai-document-processor-pro' },
+        { name: 'AI Email Marketing Pro', href: '/ai-email-marketing-pro' },
+        { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager-pro' },
+        { name: 'AI Price Optimization Pro', href: '/ai-price-optimization-pro' },
+        { name: 'AI Security Monitor Pro', href: '/ai-security-monitor-pro' },
+        { name: 'AI Password Manager Pro', href: '/ai-password-manager-pro' },
+        { name: 'AI Compliance Monitor Pro', href: '/ai-compliance-monitor-pro' }
+      ]
+    }
+  ];
+
+  const quickLinks = [
+    { name: 'Home', href: '/' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Careers', href: '/careers' }
+  ];
+
+  const socialLinks = [
+    { name: 'Facebook', icon: <Facebook className="w-5 h-5" />, href: 'https://facebook.com/ziontechgroup' },
+    { name: 'Twitter', icon: <Twitter className="w-5 h-5" />, href: 'https://twitter.com/ziontechgroup' },
+    { name: 'LinkedIn', icon: <Linkedin className="w-5 h-5" />, href: 'https://linkedin.com/company/ziontechgroup' },
+    { name: 'Instagram', icon: <Instagram className="w-5 h-5" />, href: 'https://instagram.com/ziontechgroup' },
+    { name: 'GitHub', icon: <Github className="w-5 h-5" />, href: 'https://github.com/ziontechgroup' }
+  ];
 
 const FooterPage: React.FC = () => {
   return (

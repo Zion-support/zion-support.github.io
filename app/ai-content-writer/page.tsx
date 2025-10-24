@@ -1,36 +1,5 @@
-'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const AIContentWriterPage: React.FC = () => {}
-  const features = [
-    {}
-    title: 'AI Writing Assistant',
-      description: 'Advanced AI-powered content generation and writing assistance.',
-      benefits: ['Content Generation', 'Grammar Check', 'Style Optimization', 'Tone Adjustment'],
-      icon: <PenTool className="w-8 h-8 text-blue-400" /></PenTool>
-},
-    {}
-    title: 'Content Templates',
-      description: 'Pre-built templates for various content types and formats.',
-      benefits: ['Blog Posts', 'Social Media', 'Email Campaigns', 'Product Descriptions'],
-      icon: <FileText className="w-8 h-8 text-purple-400" /></FileText>
-},
-    {}
-    title: 'SEO Optimization',
-      description: 'Built-in SEO tools to optimize content for search engines.',
-      benefits: ['Keyword Research', 'Meta Tags', 'Content Analysis', 'Ranking Insights'],
-      icon: <Target className="w-8 h-8 text-green-400" /></Target>
-},
-    {}
-    title: 'Creative Enhancement',
-      description: 'AI-powered creative tools to enhance your content quality.',
-      benefits: ['Ideas Generation', 'Headline Creation', 'Content Expansion', 'Creative Writing'],
-      icon: <Sparkles className="w-8 h-8 text-orange-400" /></Sparkles>
-}
-  ];
+import { Helmet } from "react-helmet-async";
 
   return ()
     <>

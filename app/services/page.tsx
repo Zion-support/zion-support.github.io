@@ -149,30 +149,60 @@ const ServicesPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Contact Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Contact us today to discuss your project requirements
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300"
-              >
-                <Mail className="w-5 h-5 mr-2" />
-                Email Us
-              </a>
-              <a
-                href="tel:+13024640950"
-                className="flex items-center justify-center px-8 py-4 border border-blue-500 text-blue-400 rounded-lg font-semibold text-lg hover:bg-blue-500/10 transition-all duration-300"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Call Us
-              </a>
+        {/* Why Choose Our Services */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our Services?</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We combine technical expertise with business acumen to deliver solutions that drive real results
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="text-center group">
+                <div className="w-20 h-20 bg-gradient-to-r from-cyan-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Lock className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Enterprise Security</h3>
+                <p className="text-gray-300">Bank-level security measures to protect your data and systems from threats.</p>
+              </div>
+              
+              <div className="text-center group">
+                <div className="w-20 h-20 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Zap className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Rapid Deployment</h3>
+                <p className="text-gray-300">Fast implementation with minimal disruption to your business operations.</p>
+              </div>
+              
+              <div className="text-center group">
+                <div className="w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Shield className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
+                <p className="text-gray-300">Round-the-clock support to ensure your systems run smoothly at all times.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
+          <div className="container mx-auto px-4">
+            <div className="text-center max-w-4xl mx-auto">
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Let's discuss how our AI and IT solutions can accelerate your success and drive innovation.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+                  Get Started Today
+                </button>
+                <button className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+                  Schedule Consultation
+                </button>
+              </div>
             </div>
           </div>
         </section>
