@@ -22,9 +22,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/contact`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
-<<<<<<< HEAD
-      priority: 0.8}]
-=======
       priority: 0.8,
     },
     {
@@ -46,5 +43,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
   ]
->>>>>>> cursor/fix-errors-and-merge-to-main-21fe
 }

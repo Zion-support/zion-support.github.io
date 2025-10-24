@@ -54,7 +54,6 @@
     "**/*.backup.*",
     "**/*.bak",
     "**/backup/**",
-<<<<<<< HEAD
     "**/ai-pages-disabled/**",
     "**/clean-build/**",
     "**/apps/**",
@@ -92,11 +91,7 @@
     "**/corrupted-pages/**",
     "**/AdvancedAccessibilityEnhancer.tsx",
     "**/ecommerce-analytics-pro/**",
-    "**/edge-computing/**"
-=======
-    "**/*-backup.*",
-    "**/*-fixed.*",
-    "**/*-broken.*",
+    "**/edge-computing/**",
     "**/*-broken2.*",
     "**/*-original.*",
     "ai-pages-disabled",
@@ -111,6 +106,5 @@
     "app/utils",
     "apps",
     "blog"
->>>>>>> cursor/fix-errors-and-merge-to-main-21fe
   ]
 }

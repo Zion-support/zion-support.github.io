@@ -1,13 +1,6 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
-=======
-'use client'
-
-import React, { useState, useEffect, useCallback } from 'react'
-import Link from 'next/link'
->>>>>>> cursor/fix-errors-and-merge-to-main-21fe
 import { 
   ChevronDown, 
   Menu, 
@@ -22,14 +15,6 @@ import {
   Settings, 
   MessageCircle, 
   Mic, 
-<<<<<<< HEAD
-  Eye
-} from 'lucide-react';
-
-const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-=======
   Eye,
   Shield,
   FileText,
@@ -37,20 +22,18 @@ const Navigation: React.FC = () => {
   Brain,
   Code,
   Package
-} from 'lucide-react'
+} from 'lucide-react';
 
 const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [aiServicesOpen, setAiServicesOpen] = useState(false)
-  const [itServicesOpen, setItServicesOpen] = useState(false)
-  const [microSaasOpen, setMicroSaasOpen] = useState(false)
->>>>>>> cursor/fix-errors-and-merge-to-main-21fe
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [aiServicesOpen, setAiServicesOpen] = useState(false);
+  const [itServicesOpen, setItServicesOpen] = useState(false);
+  const [microSaasOpen, setMicroSaasOpen] = useState(false);
 
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-<<<<<<< HEAD
       setIsScrolled(window.scrollY > 0);
     };
     window.addEventListener('scroll', handleScroll);
@@ -59,21 +42,10 @@ const Navigation: React.FC = () => {
 
   const closeAllMenus = useCallback(() => {
     setIsOpen(false);
+    setAiServicesOpen(false);
+    setItServicesOpen(false);
+    setMicroSaasOpen(false);
   }, []);
-=======
-      setIsScrolled(window.scrollY > 0)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  const closeAllMenus = useCallback(() => {
-    setIsOpen(false)
-    setAiServicesOpen(false)
-    setItServicesOpen(false)
-    setMicroSaasOpen(false)
-  }, [])
->>>>>>> cursor/fix-errors-and-merge-to-main-21fe
 
   // Service data
   const aiServices = [
@@ -101,7 +73,7 @@ const Navigation: React.FC = () => {
     { name: 'Zion Cloud Vault', href: '/zion-cloud-vault', icon: Cloud, description: 'Cloud backup & recovery' },
     { name: 'Zion Content Studio', href: '/zion-content-studio', icon: FileText, description: 'AI content creation' },
     { name: 'Zion CRM Intelligence', href: '/zion-crm-intelligence', icon: Users, description: 'AI-enhanced CRM' }
-  ]
+  ];
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -143,13 +115,6 @@ const Navigation: React.FC = () => {
                 <span>AI Services</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
-<<<<<<< HEAD
-              <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold mb-4">AI Services</h3>
-                  <div className="grid grid-cols-1 gap-3">
-                    {aiServices.map(service => (
-=======
               
               {aiServicesOpen && (
                 <div
@@ -159,7 +124,6 @@ const Navigation: React.FC = () => {
                 >
                   <div className="grid grid-cols-2 gap-4 px-4">
                     {aiServices.map((service, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-21fe
                       <Link
                         key={index}
                         href={service.href}
@@ -174,18 +138,11 @@ const Navigation: React.FC = () => {
                     ))}
                   </div>
                 </div>
-<<<<<<< HEAD
-              </div>
-=======
               )}
->>>>>>> cursor/fix-errors-and-merge-to-main-21fe
             </div>
 
             {/* IT Services Dropdown */}
             <div className="relative group">
-<<<<<<< HEAD
-              <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors">
-=======
               <button
                 className={`flex items-center space-x-1 py-2 px-3 rounded-lg transition-colors ${
                   isScrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'
@@ -194,7 +151,6 @@ const Navigation: React.FC = () => {
                 onMouseLeave={() => setItServicesOpen(false)}
               >
                 <Code className="w-4 h-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-21fe
                 <span>IT Services</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
@@ -224,12 +180,6 @@ const Navigation: React.FC = () => {
               )}
             </div>
 
-<<<<<<< HEAD
-            <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
-              About
-            </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">
-=======
             {/* Micro SaaS Dropdown */}
             <div className="relative group">
               <button
@@ -283,7 +233,6 @@ const Navigation: React.FC = () => {
                 isScrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'
               }`}
             >
->>>>>>> cursor/fix-errors-and-merge-to-main-21fe
               Contact
             </Link>
           </div>
@@ -389,16 +338,6 @@ const Navigation: React.FC = () => {
               >
                 Contact
               </Link>
-<<<<<<< HEAD
-              <div className="pt-4">
-                <Link
-                  href="/contact"
-                  className="block bg-blue-600 text-white px-6 py-2 rounded-lg text-center hover:bg-blue-700 transition-colors"
-                  onClick={closeAllMenus}>
-                  Get Started
-                </Link>
-              </div>
-=======
               <Link
                 href="/contact"
                 className="block w-full bg-blue-600 text-white text-center py-3 rounded-lg font-medium hover:bg-blue-700"
@@ -406,20 +345,12 @@ const Navigation: React.FC = () => {
               >
                 Get Started
               </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-21fe
             </div>
           </div>
         )}
       </div>
     </nav>
-<<<<<<< HEAD
   );
 };
 
 export default Navigation;
-=======
-  )
-}
-
-export default Navigation
->>>>>>> cursor/fix-errors-and-merge-to-main-21fe
