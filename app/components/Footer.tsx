@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 'use client';
 
 import React from 'react';
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud } from 'lucide-react';
+=======
+import React from 'react'
+import Link from 'next/link'
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud } from 'lucide-react'
+>>>>>>> 6cb44e76a25e5b2f4f623775c504882c3c96c14e
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -48,6 +54,26 @@ const Footer: React.FC = () => {
     { name: 'Terms of Service', url: '/terms' },
     { name: 'Cookie Policy', url: '/cookies' }
   ];
+
+  const company = [
+    { name: 'About Us', url: '/about' },
+    { name: 'Our Team', url: '/team' },
+    { name: 'Careers', url: '/careers' },
+    { name: 'News', url: '/news' }
+  ]
+
+  const resources = [
+    { name: 'Blog', url: '/blog' },
+    { name: 'Case Studies', url: '/case-studies' },
+    { name: 'Documentation', url: '/docs' },
+    { name: 'Support', url: '/support' }
+  ]
+
+  const legal = [
+    { name: 'Privacy Policy', url: '/privacy' },
+    { name: 'Terms of Service', url: '/terms' },
+    { name: 'Cookie Policy', url: '/cookies' }
+  ]
 
   return (
     <footer className="bg-slate-900 border-t border-slate-800">
@@ -114,7 +140,11 @@ const Footer: React.FC = () => {
           {/* Company & Resources */}
           <div className="space-y-6">
             <div>
+<<<<<<< HEAD
               <h3 className="text-lg font-semibold mb-4 text-emerald-400">Company</h3>
+=======
+              <h3 className="text-lg font-semibold mb-4 text-white">Company</h3>
+>>>>>>> 6cb44e76a25e5b2f4f623775c504882c3c96c14e
               <ul className="space-y-2">
                 {company.map((item, index) => (
                   <li key={index}>
@@ -126,7 +156,11 @@ const Footer: React.FC = () => {
               </ul>
             </div>
             <div>
+<<<<<<< HEAD
               <h3 className="text-lg font-semibold mb-4 text-emerald-400">Resources</h3>
+=======
+              <h3 className="text-lg font-semibold mb-4 text-white">Resources</h3>
+>>>>>>> 6cb44e76a25e5b2f4f623775c504882c3c96c14e
               <ul className="space-y-2">
                 {resources.map((item, index) => (
                   <li key={index}>
@@ -173,7 +207,14 @@ const Footer: React.FC = () => {
         </div>
       </div>
     </footer>
+<<<<<<< HEAD
   );
 };
 
 export default Footer;
+=======
+  )
+}
+
+export default Footer
+>>>>>>> 6cb44e76a25e5b2f4f623775c504882c3c96c14e

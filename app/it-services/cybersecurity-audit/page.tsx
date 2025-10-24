@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 export const dynamic = 'force-dynamic';
@@ -48,19 +49,37 @@ const Page: React.FC = () => {
     }
   };
 
+=======
+'use client'
+import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
+import Footer from '../../components/Footer'
+
+export default function Page() {
+>>>>>>> 6cb44e76a25e5b2f4f623775c504882c3c96c14e
   return (
-    <>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Cybersecurity Audit
-            </h1>
-            <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
-              Professional cybersecurity audit services and solutions from Zion Tech Group.
+    <div>
+      <Head>
+        <title>Cybersecurity Audit - Zion Tech Group</title>
+        <meta name="description" content="Professional cybersecurity audit services and solutions by Zion Tech Group." />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">
+            Cybersecurity Audit
+          </h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional cybersecurity audit services and solutions by Zion Tech Group.
+          </p>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+            <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
+            <p className="text-gray-300">
+              Our cybersecurity audit services are currently under development. Contact us to learn more about our upcoming services.
             </p>
           </div>
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {features.map((feature, index) => (
@@ -123,11 +142,20 @@ const Page: React.FC = () => {
               <span className="ml-2">→</span>
             </Link>
           </div>
+=======
+>>>>>>> 6cb44e76a25e5b2f4f623775c504882c3c96c14e
         </div>
+        <Footer />
       </div>
+<<<<<<< HEAD
       <Footer />
     </>
   );
 };
 
 export default Page;
+=======
+    </div>
+  )
+}
+>>>>>>> 6cb44e76a25e5b2f4f623775c504882c3c96c14e

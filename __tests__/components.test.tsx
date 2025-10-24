@@ -1,6 +1,7 @@
 import { describe, test, expect } from '@jest/globals';
 import { render, screen } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
+import '@testing-library/jest-dom';
 const TestComponent = () => {
   return (
     <HelmetProvider>
@@ -14,7 +15,7 @@ describe('Components', () => {
   });
   test('should render test content', () => {
     render(<TestComponent />);
-    expect(screen.getByText('Test content')).toBeInTheDocument();
+    expect(screen.getByText('Test content')).toBeTruthy();
   });
   test('should handle SEO head component', () => {
     render(
@@ -22,6 +23,6 @@ describe('Components', () => {
         <div>SEO Test</div>
       </HelmetProvider>
     );
-    expect(screen.getByText('SEO Test')).toBeInTheDocument();
+    expect(screen.getByText('SEO Test')).toBeTruthy();
   });
 });

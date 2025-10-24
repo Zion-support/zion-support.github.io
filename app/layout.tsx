@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
@@ -24,6 +24,18 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+<<<<<<< HEAD
+=======
+  verification: {
+    google: 'your-google-verification-code',
+  },
+  category: 'technology',
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+>>>>>>> 6cb44e76a25e5b2f4f623775c504882c3c96c14e
 }
 
 export default function RootLayout({
