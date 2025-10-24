@@ -142,3 +142,5 @@ export default ZionDevopsAutomationPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

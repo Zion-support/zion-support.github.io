@@ -108,3 +108,5 @@ const Aianalytics = () => {
 };
 
 export default Aianalytics;
+
+export default AiAnalytics;

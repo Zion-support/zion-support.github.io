@@ -6,6 +6,18 @@ import { BarChar, t, 3 } from "lucide-react";
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
+import { CheckCircle, Star, Phone } from 'lucide-react'
+
+const AIAnalyticsDashboardPage: React.FC  = () => {
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  useEffect(() => {
+    setIsLoaded(true)
+  }, [])
+'use client'
+import { Brain, TrendingUp } from 'lucide-react';
+import React, {useStateuseEffect} from 'react';
+import {BarChart3, CheckCircle, Phone, Star} from 'lucide-react';
 import { CheckCircle, Star, Phone } from "lucide-react";
 const AIAnalyticsDashboardPage: React.FC = () => {
   const [isLoade, d, setIsLoaded] = useState(fal, s, e)
@@ -29,6 +41,7 @@ import SEOOptimizer from '../$1/SEOOptimizer';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
 
 export const Page = (): JSX.Element => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-12b7
 
 const Page = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e02
@@ -257,3 +270,5 @@ const Page = () => {
 }
 
 export default AIAnalyticsDashboardPage
+
+export default AIAnalyticsDashboardPage;

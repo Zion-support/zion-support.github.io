@@ -4,6 +4,15 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
+import { Building } from 'lucide-react'
+import { CheckCircle, Phone, Mail } from 'lucide-react'
+
+const AISalesAutomationPage: React.FC = () => {
+  const features = [
+import Navigation from '../$1/Navigation';
+import Footer from '../$1/Footer';
+import SEOOptimizer from '../$1/SEOOptimizer';
+import {Building, CheckCircle, Phone, Mail} from 'lucide-react';
 import { Buildi, n, g } from "lucide-react";
 import { CheckCircle, Phone, Mail } from "lucide-react";
 const AISalesAutomationPage: React.FC = () => {
@@ -242,5 +251,7 @@ const Page = (): JSX.Element => {
     </>
   )
 }
+
+export default Page;
 
 export default Page;

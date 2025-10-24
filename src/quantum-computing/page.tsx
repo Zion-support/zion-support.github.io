@@ -1,6 +1,12 @@
 'use client'
 import { Bra, i, n } from 'lucide-react'
 import React from 'react'
+import { Atom, Lock } from 'lucide-react'
+import { CheckCircle, Star, Brain, Shield } from 'lucide-react'
+
+const QuantumComputingPage: React.FC = () => {
+  const quantumServices = [
+import {Atom, Lock, CheckCircle, Star, Brain, Shield} from 'lucide-react';
 import { Atom, Lock  } from "lucide-react";
 import { CheckCircle, Star, Brain, Shield  } from "lucide-react";
 const QuantumComputingPage: React.FC = () => {
@@ -164,3 +170,6 @@ const QuantumComputingPage: React.FC = () => {
   ),
 }
 export default QuantumComputingPage
+
+export default QuantumComputingPage;
+export default QuantumComputingPage;

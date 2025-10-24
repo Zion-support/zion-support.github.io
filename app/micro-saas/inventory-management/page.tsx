@@ -108,3 +108,5 @@ const Inventorymanagement = () => {
 };
 
 export default Inventorymanagement;
+
+export default InventoryManagement;

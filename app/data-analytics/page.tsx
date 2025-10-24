@@ -108,3 +108,5 @@ const Dataanalytics = () => {
 };
 
 export default Dataanalytics;
+
+export default DataAnalytics;

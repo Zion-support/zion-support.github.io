@@ -167,3 +167,5 @@ export default EnergyManagementPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

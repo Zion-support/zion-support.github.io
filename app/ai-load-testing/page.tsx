@@ -142,3 +142,5 @@ export default AiLoadTestingPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

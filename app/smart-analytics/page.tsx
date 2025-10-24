@@ -180,3 +180,5 @@ export default SmartAnalyticsPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

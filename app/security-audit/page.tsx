@@ -108,3 +108,5 @@ const Securityaudit = () => {
 };
 
 export default Securityaudit;
+
+export default SecurityAudit;

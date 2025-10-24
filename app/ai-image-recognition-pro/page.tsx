@@ -108,3 +108,5 @@ const Aiimagerecognitionpro = () => {
 };
 
 export default Aiimagerecognitionpro;
+
+export default AiImageRecognitionPro;

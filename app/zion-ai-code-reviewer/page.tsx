@@ -110,3 +110,5 @@ const Zionaicodereviewer = () => {
 export default Zionaicodereviewer;
 
 export default Zionaicodereviewer;
+
+export default ZionAiCodeReviewer;

@@ -108,3 +108,5 @@ const Businessintelligence = () => {
 };
 
 export default Businessintelligence;
+
+export default BusinessIntelligence;

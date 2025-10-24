@@ -46,3 +46,5 @@ import React from &quot;react&quot;;
   );
 };
 
+
+export default DevopsAutomation;

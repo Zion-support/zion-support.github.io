@@ -108,3 +108,5 @@ const Iotsolutionspro = () => {
 };
 
 export default Iotsolutionspro;
+
+export default IotSolutionsPro;

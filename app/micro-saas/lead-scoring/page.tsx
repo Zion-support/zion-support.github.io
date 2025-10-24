@@ -108,3 +108,5 @@ const Leadscoring = () => {
 };
 
 export default Leadscoring;
+
+export default LeadScoring;

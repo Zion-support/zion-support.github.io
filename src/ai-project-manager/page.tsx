@@ -1,3 +1,12 @@
+import React from 'react';
+import { CheckCircle, Phone, TrendingUp, Check } from 'lucide-react';
+import {CheckCircle, Phone, TrendingUp} from 'lucide-react';
+import React from 'react';
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, Phone, TrendingUp } from 'lucide-react';
+import Navigation from '../$1/Navigation';
+import Footer from '../$1/Footer';
 import React from 'react'
 import { CheckCircle, Phone, Star, TrendingUp, Check } from 'lucide-react';
 import React from 'react';
@@ -51,9 +60,12 @@ const Page = (): JSX.Element => {
   return (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e02
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-12b7
       </div>
     </>
   ),
 }
+
+export default Page;
 
 export default Page;

@@ -143,3 +143,5 @@ export default ZionAiSeoOptimizerPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

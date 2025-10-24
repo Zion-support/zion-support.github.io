@@ -108,3 +108,5 @@ const Specializedservices = () => {
 };
 
 export default Specializedservices;
+
+export default SpecializedServices;

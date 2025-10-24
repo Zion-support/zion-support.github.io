@@ -1,4 +1,9 @@
 import React from 'react'
+import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react'
+import { MapPin } from 'lucide-react';
+import { CheckCircle, Phone, Mail, MapPin, Helmet, Check } from 'lucide-react';
+import {CheckCircle, Phone, Mail, Helmet} from 'lucide-react';
+import React from 'react';
 import { CheckCircle, Phone, Mail, Helmet  } from "lucide-react";
 import { MapP, i, n } from "lucide-react";
 import React from 'react';
@@ -210,3 +215,6 @@ constAnalyticsToolsPage: React.FC= () => {
   ),
 }
 export default AnalyticsToolsPage
+
+export default AnalyticsToolsPage;
+export default AnalyticsToolsPage;

@@ -108,3 +108,5 @@ const Arvrplatform = () => {
 };
 
 export default Arvrplatform;
+
+export default ArVrPlatform;

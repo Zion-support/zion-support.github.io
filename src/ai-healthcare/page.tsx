@@ -1,4 +1,8 @@
 import React from 'react'
+import { CheckCircle, Star, Zap, Brain, Shield, Target, Users, Heart, Helmet } from 'lucide-react';
+import { CheckCircle, Star, Brain, Shield, Zap, Users, Target, Heart, Helmet, Check } from 'lucide-react';
+import {CheckCircle, Star, Zap, Brain, Target, Users, Shield, Heart, Helmet} from 'lucide-react';
+import React from 'react';
 import { CheckCircle, Star, Zap, Brain, Shield, Target, Users, Heart, Helmet  } from "lucide-react";
 import React from 'react';
 import { CheckCircle, Star, Brain, Zap, Shield, Target, Database, Users, Video, Heart, Helmet, Check  } from "lucide-react";
@@ -130,8 +134,12 @@ constAIHealthcarePage: React.FC= () => {
   return (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e02
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-12b7
       </div>
     </>
   )
 }
 export default AIHealthcarePage
+
+export default AIHealthcarePage;
+export default AIHealthcarePage;

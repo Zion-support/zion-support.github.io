@@ -215,6 +215,7 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,"}
       // Log to console if enabled;
       if (logToConsole) {// // console.log('Performance Metrics Updated: ', newMetrics)
       }
+      if (logToConsol e) {}
     }
 
     // Measure performance after page load;"
@@ -233,6 +234,9 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,"}
         })
         .catch((registrationError) => {// // console.log('Service Worker registration failed: ', registrationError)
         })
+  
+         })
+        .catch((registrationError) => {})
     }
   }, [])
   // Performance monitoring dashboard (only, in, development)

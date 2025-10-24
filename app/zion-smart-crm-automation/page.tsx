@@ -142,3 +142,5 @@ export default ZionSmartCrmAutomationPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

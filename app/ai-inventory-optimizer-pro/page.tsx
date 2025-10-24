@@ -108,3 +108,5 @@ const Aiinventoryoptimizerpro = () => {
 };
 
 export default Aiinventoryoptimizerpro;
+
+export default AiInventoryOptimizerPro;

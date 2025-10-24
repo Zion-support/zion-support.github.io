@@ -108,3 +108,5 @@ const Serverlessarchitecture = () => {
 };
 
 export default Serverlessarchitecture;
+
+export default ServerlessArchitecture;

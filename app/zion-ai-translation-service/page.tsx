@@ -142,3 +142,5 @@ export default ZionAiTranslationServicePage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

@@ -142,3 +142,5 @@ export default AiRealEstatePage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

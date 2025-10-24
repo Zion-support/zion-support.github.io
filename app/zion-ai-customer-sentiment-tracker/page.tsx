@@ -108,3 +108,5 @@ const Zionaicustomersentimenttracker = () => {
 };
 
 export default Zionaicustomersentimenttracker;
+
+export default ZionAiCustomerSentimentTracker;

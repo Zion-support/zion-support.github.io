@@ -180,3 +180,5 @@ export default ZionProjectMasterPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

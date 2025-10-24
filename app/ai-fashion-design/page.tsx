@@ -142,3 +142,5 @@ export default AiFashionDesignPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

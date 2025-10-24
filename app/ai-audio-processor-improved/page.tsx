@@ -39,6 +39,7 @@ const AiAudioProcessorImprovedPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
 
+const AiAudioProcessorImproved = () => {
   return (
     <><Navigation /></Navigation>
       <div className='min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900'></div>
@@ -138,6 +139,8 @@ const AiAudioProcessorImprovedPage: React.FC = () => {
 };
 
 export default AiAudioProcessorImprovedPage;
+
+export default PagePage;
 
 export default PagePage;
 

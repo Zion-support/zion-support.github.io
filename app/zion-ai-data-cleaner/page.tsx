@@ -110,3 +110,5 @@ const Zionaidatacleaner = () => {
 export default Zionaidatacleaner;
 
 export default Zionaidatacleaner;
+
+export default ZionAiDataCleaner;

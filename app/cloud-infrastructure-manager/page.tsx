@@ -108,3 +108,5 @@ const Cloudinfrastructuremanager = () => {
 };
 
 export default Cloudinfrastructuremanager;
+
+export default CloudInfrastructureManager;

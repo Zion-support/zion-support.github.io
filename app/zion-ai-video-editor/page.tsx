@@ -142,3 +142,5 @@ export default ZionAiVideoEditorPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

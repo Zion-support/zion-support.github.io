@@ -142,3 +142,5 @@ export default AiLegalAssistantPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

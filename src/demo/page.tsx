@@ -256,3 +256,5 @@ const Page = (): JSX.Element => {
 }
 
 export default Page;
+
+export default Page;

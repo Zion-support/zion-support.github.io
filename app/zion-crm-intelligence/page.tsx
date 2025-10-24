@@ -142,3 +142,5 @@ export default ZionCrmIntelligencePage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

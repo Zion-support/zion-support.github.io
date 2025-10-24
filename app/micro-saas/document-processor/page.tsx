@@ -108,3 +108,5 @@ const Documentprocessor = () => {
 };
 
 export default Documentprocessor;
+
+export default DocumentProcessor;

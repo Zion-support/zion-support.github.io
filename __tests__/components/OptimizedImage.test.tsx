@@ -24,6 +24,7 @@ export const OptimizedImage = ({
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c0b7
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b820
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2b3c
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-12b7
     />
   );
 };
@@ -70,6 +71,7 @@ describe('OptimizedImage Component', () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c0b7
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b820
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2b3c
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-12b7
     
     const image = screen.getByTestId('optimized-image');
     expect(image).toBeInTheDocument();
@@ -107,3 +109,4 @@ describe('OptimizedImage Component', () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
   });
 });
+}

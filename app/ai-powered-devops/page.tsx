@@ -108,3 +108,5 @@ const Aipowereddevops = () => {
 };
 
 export default Aipowereddevops;
+
+export default AiPoweredDevops;

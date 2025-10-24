@@ -142,3 +142,5 @@ export default AiImageRecognitionPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

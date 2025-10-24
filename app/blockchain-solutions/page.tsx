@@ -108,3 +108,5 @@ const Blockchainsolutions = () => {
 };
 
 export default Blockchainsolutions;
+
+export default BlockchainSolutions;

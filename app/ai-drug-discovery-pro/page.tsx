@@ -142,3 +142,5 @@ export default AiDrugDiscoveryProPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

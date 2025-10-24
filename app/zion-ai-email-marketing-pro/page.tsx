@@ -108,3 +108,5 @@ const Zionaiemailmarketingpro = () => {
 };
 
 export default Zionaiemailmarketingpro;
+
+export default ZionAiEmailMarketingPro;

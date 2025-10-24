@@ -108,3 +108,5 @@ const Aiemailoptimizer = () => {
 };
 
 export default Aiemailoptimizer;
+
+export default AiEmailOptimizer;

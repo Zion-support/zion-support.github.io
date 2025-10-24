@@ -108,3 +108,5 @@ const Itconsulting = () => {
 };
 
 export default Itconsulting;
+
+export default ItConsulting;

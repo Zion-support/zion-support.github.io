@@ -108,3 +108,5 @@ const Backuprecovery = () => {
 };
 
 export default Backuprecovery;
+
+export default BackupRecovery;

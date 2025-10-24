@@ -108,3 +108,5 @@ const Aicustomerfeedbackanalyzer = () => {
 };
 
 export default Aicustomerfeedbackanalyzer;
+
+export default AiCustomerFeedbackAnalyzer;

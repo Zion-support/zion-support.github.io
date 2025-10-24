@@ -108,3 +108,5 @@ const Cybersecurityaudit = () => {
 };
 
 export default Cybersecurityaudit;
+
+export default CybersecurityAudit;

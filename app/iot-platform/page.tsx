@@ -108,3 +108,5 @@ const Iotplatform = () => {
 };
 
 export default Iotplatform;
+
+export default IotPlatform;

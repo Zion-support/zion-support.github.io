@@ -12,3 +12,5 @@ export default AIVoiceAssistantPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

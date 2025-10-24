@@ -108,3 +108,5 @@ const Mobiledevelopment = () => {
 };
 
 export default Mobiledevelopment;
+
+export default MobileDevelopment;

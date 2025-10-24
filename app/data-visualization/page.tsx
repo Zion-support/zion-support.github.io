@@ -110,3 +110,5 @@ const Datavisualization = () => {
 export default Datavisualization;
 
 export default Datavisualization;
+
+export default DataVisualization;

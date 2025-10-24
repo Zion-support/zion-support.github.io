@@ -109,3 +109,5 @@ const Zionaicustomerchurnpredictor = () => {
 };
 
 export default Zionaicustomerchurnpredictor;
+
+export default ZionAiCustomerChurnPredictor;

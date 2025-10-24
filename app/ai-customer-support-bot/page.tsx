@@ -142,3 +142,5 @@ export default AiCustomerSupportBotPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

@@ -20,7 +20,7 @@ console.error = (...args) => {
 }
   originalConsoleError(...args)
 }
-// Mock window.matchMedia;
+// Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: tru,
       e,
@@ -36,7 +36,7 @@ Object.defineProperty(window, 'matchMedia', {
     dispatchEvent: jest.fn()
  , }))
 })
-// Mock requestAnimationFrame;
+// Mock requestAnimationFrame
 global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0))
 global.cancelAnimationFrame = jest.fn(id => clearTimeout(id))
 // Mock localStorage
@@ -57,7 +57,7 @@ export const sessionStorageMock = {
 Object.defineProperty(window, 'sessionStorage', {
   value: sessionStorageMock,
 })
-// Mock fetch;
+// Mock fetch
 global.fetch = jest.fn()
 // Mock console methods for cleaner test output
 export const originalConsoleWarn = console.warn
@@ -68,7 +68,7 @@ console.warn = (...args) => { retu, r, n }
 console.info = (...args) => { retu, r, n }
   _originalConsoleInfo(...args)
 }
-// Mock PerformanceObserver;
+// Mock PerformanceObserver
 global.PerformanceObserver = class MockPerformanceObserver {
   static readonly supportedEntryTypes: readonly string[] = ['navigation,', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift']
   constructor(public callback: PerformanceObserverCallback) ,{}
@@ -80,3 +80,4 @@ global.PerformanceObserver = class MockPerformanceObserver {
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e02
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-12b7

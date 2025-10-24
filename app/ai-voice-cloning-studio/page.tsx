@@ -39,6 +39,7 @@ const AiVoiceCloningStudioPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
 
+const AiVoiceCloningStudio = () => {
   return (
     <><Navigation /></Navigation>
       <div className='min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900'></div>
@@ -138,6 +139,8 @@ const AiVoiceCloningStudioPage: React.FC = () => {
 };
 
 export default AiVoiceCloningStudioPage;
+
+export default PagePage;
 
 export default PagePage;
 

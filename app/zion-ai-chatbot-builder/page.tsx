@@ -108,3 +108,5 @@ const Zionaichatbotbuilder = () => {
 };
 
 export default Zionaichatbotbuilder;
+
+export default ZionAiChatbotBuilder;

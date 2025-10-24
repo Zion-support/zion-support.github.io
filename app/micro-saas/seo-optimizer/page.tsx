@@ -108,3 +108,5 @@ const Seooptimizer = () => {
 };
 
 export default Seooptimizer;
+
+export default SeoOptimizer;

@@ -112,3 +112,5 @@ export default Machinelearning;
 export default MachineLearning;
 
 export default Machinelearning;
+
+export default MachineLearning;

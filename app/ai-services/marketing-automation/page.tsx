@@ -142,3 +142,5 @@ export default MarketingAutomationPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

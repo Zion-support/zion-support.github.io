@@ -108,3 +108,5 @@ const Dataprotection = () => {
 };
 
 export default Dataprotection;
+
+export default DataProtection;

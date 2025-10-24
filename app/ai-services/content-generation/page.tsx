@@ -167,3 +167,5 @@ export default ContentGenerationPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

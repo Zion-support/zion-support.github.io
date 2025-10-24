@@ -142,3 +142,5 @@ export default AiFinancialCrimeDetectionProPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

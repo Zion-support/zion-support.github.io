@@ -154,3 +154,5 @@ export default AiAccountingAssistantPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

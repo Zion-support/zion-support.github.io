@@ -1,4 +1,6 @@
 import { render, screen } from '@testing-library/react';
+
+export default function Page() {
 import '@testing-library/jest-dom';
 
 // Mock the App component to avoid PerformanceObserver issues

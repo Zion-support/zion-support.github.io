@@ -108,3 +108,5 @@ const Appointmentscheduler = () => {
 };
 
 export default Appointmentscheduler;
+
+export default AppointmentScheduler;

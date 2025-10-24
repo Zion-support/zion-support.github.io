@@ -12,3 +12,5 @@ export default AIInvoiceGeneratorPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

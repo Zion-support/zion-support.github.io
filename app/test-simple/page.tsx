@@ -142,3 +142,5 @@ export default TestSimplePage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

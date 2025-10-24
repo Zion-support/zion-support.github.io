@@ -39,6 +39,7 @@ const AiApiManagerPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
 
+const AiApiManager = () => {
   return (
     <><Navigation /></Navigation>
       <div className='min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900'></div>
@@ -138,6 +139,8 @@ const AiApiManagerPage: React.FC = () => {
 };
 
 export default AiApiManagerPage;
+
+export default PagePage;
 
 export default PagePage;
 

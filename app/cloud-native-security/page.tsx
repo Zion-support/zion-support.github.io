@@ -110,3 +110,5 @@ const Cloudnativesecurity = () => {
 export default Cloudnativesecurity;
 
 export default Cloudnativesecurity;
+
+export default CloudNativeSecurity;

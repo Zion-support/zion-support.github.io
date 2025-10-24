@@ -346,7 +346,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 }
     }
 
-    // Add voice navigation button;
+    // Add voice navigation button
     const voiceButton = document.createElement('button')
     voiceButton.textContent = 'Voice Navigation'
     voiceButton.className = 'voice-navigation-button'

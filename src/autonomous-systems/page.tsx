@@ -167,3 +167,6 @@ constAutonomousSystemsPage: React.FC= () => {
   ),
 }
 export default AutonomousSystemsPage
+
+export default AutonomousSystemsPage;
+export default AutonomousSystemsPage;

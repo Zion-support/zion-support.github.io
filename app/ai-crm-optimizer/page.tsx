@@ -108,3 +108,5 @@ const Aicrmoptimizer = () => {
 };
 
 export default Aicrmoptimizer;
+
+export default AiCrmOptimizer;

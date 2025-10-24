@@ -108,3 +108,5 @@ const Onlinelearningplatform = () => {
 };
 
 export default Onlinelearningplatform;
+
+export default OnlineLearningPlatform;

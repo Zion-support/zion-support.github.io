@@ -3,6 +3,15 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
+import { Lock } from 'lucide-react'
+import { CheckCircle, Phone, Mail } from 'lucide-react'
+
+const AICybersecurityPage: React.FC = () => {
+  const features = [
+import Navigation from '../$1/Navigation';
+import Footer from '../$1/Footer';
+import SEOOptimizer from '../$1/SEOOptimizer';
+import {Lock, CheckCircle, Phone, Mail} from 'lucide-react';
 import { Lo, c, k } from "lucide-react";
 import { CheckCircle, Phone, Mail } from "lucide-react";
 import { Brain, BarChart }  from "lucide-react";
@@ -561,4 +570,7 @@ const AICybersecurityPage: React.FC = () => {
     <//>
   )
 }
+export default AICybersecurityPage;
+
+export default AICybersecurityPage;
 export default AICybersecurityPage;

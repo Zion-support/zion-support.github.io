@@ -3,6 +3,15 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
+import { MessageCircle } from 'lucide-react'
+import { CheckCircle, Phone, Mail } from 'lucide-react'
+
+const AICustomerSupportPage: React.FC = () => {
+  const features = [
+import Navigation from '../$1/Navigation';
+import Footer from '../$1/Footer';
+import SEOOptimizer from '../$1/SEOOptimizer';
+import {MessageCircle, CheckCircle, Phone, Mail} from 'lucide-react';
 import { MessageCirc, l, e } from "lucide-react";
 import { CheckCircle, Phone, Mail } from "lucide-react";
 const AICustomerSupportPage: React.FC = () => {
@@ -188,5 +197,7 @@ const AICustomerSupportPage: React.FC = () => {
     </>
   )
 }
+
+export default Page;
 
 export default Page;

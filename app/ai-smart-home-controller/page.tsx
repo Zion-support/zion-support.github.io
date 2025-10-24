@@ -39,6 +39,7 @@ const AiSmartHomeControllerPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
 
+const AiSmartHomeController = () => {
   return (
     <><Navigation /></Navigation>
       <div className='min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900'></div>
@@ -138,6 +139,8 @@ const AiSmartHomeControllerPage: React.FC = () => {
 };
 
 export default AiSmartHomeControllerPage;
+
+export default PagePage;
 
 export default PagePage;
 

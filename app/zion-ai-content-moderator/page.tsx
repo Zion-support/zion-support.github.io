@@ -109,3 +109,5 @@ const Zionaicontentmoderator = () => {
 };
 
 export default Zionaicontentmoderator;
+
+export default ZionAiContentModerator;

@@ -338,5 +338,8 @@ ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {
         </div>
       </div>
     </div>
+import {ArrowLeft, CheckCircle, Target, ArrowRight} from 'lucide-react';
   ),
-}
+
+export default function ServicesAdvertisingPage() {return (
+    <divclassName="min-h-screenbg-gradient-to-brfrom-slate-50to-blue-50">{/* Header */};}

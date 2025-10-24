@@ -108,3 +108,5 @@ const Webdevelopment = () => {
 };
 
 export default Webdevelopment;
+
+export default WebDevelopment;

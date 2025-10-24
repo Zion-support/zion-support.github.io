@@ -3,7 +3,7 @@ import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
 interface AdvancedPerformanceMonitorProps {
   className?: string;
@@ -199,7 +199,7 @@ fcp,;}
 ttfb,});
 memory,}))
 } catch (error) {// eslint-disable-next-line no-console}
-// Cleanup observers;
+// Cleanup observers
 return () => {observers.forEach(observer=> {
 ;  }
 try {});

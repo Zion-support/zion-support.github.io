@@ -108,3 +108,5 @@ const Supplychainoptimizer = () => {
 };
 
 export default Supplychainoptimizer;
+
+export default SupplyChainOptimizer;

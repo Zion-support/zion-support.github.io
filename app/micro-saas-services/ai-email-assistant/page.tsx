@@ -108,3 +108,5 @@ const Aiemailassistant = () => {
 };
 
 export default Aiemailassistant;
+
+export default AiEmailAssistant;

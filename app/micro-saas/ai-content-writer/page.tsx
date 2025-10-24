@@ -108,3 +108,5 @@ const Aicontentwriter = () => {
 };
 
 export default Aicontentwriter;
+
+export default AiContentWriter;

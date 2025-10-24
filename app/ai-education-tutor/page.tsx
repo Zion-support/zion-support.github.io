@@ -108,3 +108,5 @@ const Aieducationtutor = () => {
 };
 
 export default Aieducationtutor;
+
+export default AiEducationTutor;

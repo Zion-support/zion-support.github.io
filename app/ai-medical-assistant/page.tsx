@@ -108,3 +108,5 @@ const Aimedicalassistant = () => {
 };
 
 export default Aimedicalassistant;
+
+export default AiMedicalAssistant;

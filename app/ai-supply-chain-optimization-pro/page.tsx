@@ -142,3 +142,5 @@ export default AiSupplyChainOptimizationProPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

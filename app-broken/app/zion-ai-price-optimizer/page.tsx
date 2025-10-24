@@ -23,3 +23,4 @@ import React from &quot;react&quot;;
   );
 };
 
+export default ZionAiFraudDetection;

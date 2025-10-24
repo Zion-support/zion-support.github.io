@@ -1,4 +1,8 @@
 import React from 'react'
+import { CheckCircle, Star, Zap, Brain, BarChart, TrendingUp, Target, Users, Helmet } from 'lucide-react';
+import { CheckCircle, Star, Brain, Zap, Users, Target, TrendingUp, BarChart, Helmet, Check } from 'lucide-react';
+import {CheckCircle, Star, Zap, Brain, BarChart, Target, Users, TrendingUp, Helmet} from 'lucide-react';
+import React from 'react';
 import { CheckCircle, Star, Zap, Brain, BarChart, TrendingUp, Target, Users, Helmet  } from "lucide-react";
 import React from 'react';
 import { CheckCircle, Mail, Star, Brain, Zap, Target, TrendingUp, Users, Video, BarChart, Helmet, Check  } from "lucide-react";
@@ -130,8 +134,12 @@ constAIMarketingPage: React.FC= () => {
   return (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e02
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-12b7
       </div>
     </>
   )
 }
 export default AIMarketingPage
+
+export default AIMarketingPage;
+export default AIMarketingPage;

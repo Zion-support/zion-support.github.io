@@ -108,3 +108,5 @@ const Socialmanager = () => {
 };
 
 export default Socialmanager;
+
+export default SocialManager;

@@ -108,3 +108,5 @@ const Aitranslator = () => {
 };
 
 export default Aitranslator;
+
+export default AiTranslator;

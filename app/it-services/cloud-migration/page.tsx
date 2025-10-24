@@ -108,3 +108,5 @@ const Cloudmigration = () => {
 };
 
 export default Cloudmigration;
+
+export default CloudMigration;

@@ -108,3 +108,5 @@ const Roboticprocessautomation = () => {
 };
 
 export default Roboticprocessautomation;
+
+export default RoboticProcessAutomation;

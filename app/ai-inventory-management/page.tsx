@@ -142,3 +142,5 @@ export default AiInventoryManagementPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

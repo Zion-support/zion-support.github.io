@@ -58,7 +58,7 @@ new PerformanceObserver((list) => {
         }).observe({ entryTypes: ['largest-contentful-paint'],});
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
   
-        // First Contentful Paint;
+        // First Contentful Paint
         new PerformanceObserver((list) => {
 ;  
           for (const entry of list.getEntries()) {"}

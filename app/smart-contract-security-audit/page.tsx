@@ -142,3 +142,5 @@ export default SmartContractSecurityAuditPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

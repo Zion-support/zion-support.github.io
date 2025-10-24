@@ -142,3 +142,5 @@ export default TrainingPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

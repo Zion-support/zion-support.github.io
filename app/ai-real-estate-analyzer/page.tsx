@@ -108,3 +108,5 @@ const Airealestateanalyzer = () => {
 };
 
 export default Airealestateanalyzer;
+
+export default AiRealEstateAnalyzer;

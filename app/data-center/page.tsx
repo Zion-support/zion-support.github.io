@@ -108,3 +108,5 @@ const Datacenter = () => {
 };
 
 export default Datacenter;
+
+export default DataCenter;

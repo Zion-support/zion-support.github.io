@@ -298,7 +298,7 @@ const ContentCarousel: React.FC<ContentCarouselProps> = ({ className = '' }) => 
               ))}
             </div>
           </div>
-        </section>
+        </div>
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>

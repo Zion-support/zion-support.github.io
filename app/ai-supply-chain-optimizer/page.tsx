@@ -108,3 +108,5 @@ const Aisupplychainoptimizer = () => {
 };
 
 export default Aisupplychainoptimizer;
+
+export default AiSupplyChainOptimizer;

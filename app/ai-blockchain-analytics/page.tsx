@@ -108,3 +108,5 @@ const Aiblockchainanalytics = () => {
 };
 
 export default Aiblockchainanalytics;
+
+export default AiBlockchainAnalytics;

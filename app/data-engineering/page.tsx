@@ -108,3 +108,5 @@ const Dataengineering = () => {
 };
 
 export default Dataengineering;
+
+export default DataEngineering;

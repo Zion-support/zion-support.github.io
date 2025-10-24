@@ -108,3 +108,5 @@ const Healthcareit = () => {
 };
 
 export default Healthcareit;
+
+export default HealthcareIt;

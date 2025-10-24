@@ -108,3 +108,5 @@ const Blockchainweb3 = () => {
 };
 
 export default Blockchainweb3;
+
+export default BlockchainWeb3;

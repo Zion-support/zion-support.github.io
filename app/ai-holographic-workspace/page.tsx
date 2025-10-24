@@ -142,3 +142,5 @@ export default AiHolographicWorkspacePage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

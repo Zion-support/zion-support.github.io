@@ -108,3 +108,5 @@ const Contentgenerator = () => {
 };
 
 export default Contentgenerator;
+
+export default ContentGenerator;

@@ -108,3 +108,5 @@ const Businessapps = () => {
 };
 
 export default Businessapps;
+
+export default BusinessApps;

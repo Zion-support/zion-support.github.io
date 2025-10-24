@@ -142,3 +142,5 @@ export default AiWritingAssistantPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

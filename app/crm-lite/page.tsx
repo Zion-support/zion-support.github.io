@@ -108,3 +108,5 @@ const Crmlite = () => {
 };
 
 export default Crmlite;
+
+export default CrmLite;

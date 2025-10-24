@@ -108,3 +108,5 @@ const Enterprisesecurity = () => {
 };
 
 export default Enterprisesecurity;
+
+export default EnterpriseSecurity;

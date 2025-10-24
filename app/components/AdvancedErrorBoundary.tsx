@@ -53,7 +53,7 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
     if (this.props.onError) {}
       this.props.onError(error, errorInfo)
     }
-    // Log error to console in development;
+    // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error caught by boundary:', error, errorInfo)
     }

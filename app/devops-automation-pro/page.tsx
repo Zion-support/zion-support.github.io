@@ -108,3 +108,5 @@ const Devopsautomationpro = () => {
 };
 
 export default Devopsautomationpro;
+
+export default DevopsAutomationPro;

@@ -1,3 +1,14 @@
+import React from 'react';
+import { CheckCircle, Zap, Palette, Camera, Check } from 'lucide-react';
+import {CheckCircle, Camera, Zap, Palette} from 'lucide-react';
+import React from 'react';
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { CheckCircle, Camera, Zap, Palette } from 'lucide-react';
+import Navigation from '../$1/Navigation';
+import Footer from '../$1/Footer';
+import SEOOptimizer from '../$1/SEOOptimizer';
 import React from 'react'
 import { CheckCircle, Star, Zap, Camera, Palette, Check } from 'lucide-react';
 import React from 'react';

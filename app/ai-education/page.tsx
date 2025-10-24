@@ -142,3 +142,5 @@ export default AiEducationPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

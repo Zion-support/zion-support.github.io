@@ -110,3 +110,5 @@ const Devopsadvanced = () => {
 export default Devopsadvanced;
 
 export default Devopsadvanced;
+
+export default DevopsAdvanced;

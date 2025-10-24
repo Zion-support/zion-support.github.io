@@ -108,3 +108,5 @@ const Aiformbuilder = () => {
 };
 
 export default Aiformbuilder;
+
+export default AiFormBuilder;

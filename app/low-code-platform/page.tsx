@@ -108,3 +108,5 @@ const Lowcodeplatform = () => {
 };
 
 export default Lowcodeplatform;
+
+export default LowCodePlatform;

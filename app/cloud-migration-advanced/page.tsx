@@ -110,3 +110,5 @@ const Cloudmigrationadvanced = () => {
 export default Cloudmigrationadvanced;
 
 export default Cloudmigrationadvanced;
+
+export default CloudMigrationAdvanced;

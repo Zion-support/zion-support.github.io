@@ -110,3 +110,5 @@ const Cybersecurityadvanced = () => {
 export default Cybersecurityadvanced;
 
 export default Cybersecurityadvanced;
+
+export default CybersecurityAdvanced;

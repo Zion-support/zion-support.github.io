@@ -108,3 +108,5 @@ const Smartcityinfrastructure = () => {
 };
 
 export default Smartcityinfrastructure;
+
+export default SmartCityInfrastructure;

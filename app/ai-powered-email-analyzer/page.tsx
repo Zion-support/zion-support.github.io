@@ -108,3 +108,5 @@ const Aipoweredemailanalyzer = () => {
 };
 
 export default Aipoweredemailanalyzer;
+
+export default AiPoweredEmailAnalyzer;

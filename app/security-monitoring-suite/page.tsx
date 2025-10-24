@@ -108,3 +108,5 @@ const Securitymonitoringsuite = () => {
 };
 
 export default Securitymonitoringsuite;
+
+export default SecurityMonitoringSuite;

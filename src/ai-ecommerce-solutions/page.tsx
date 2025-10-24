@@ -9,9 +9,13 @@ const AIEcommerceSolutionsPage: React.FC = () => {
 import {BarChart3, CheckCircle, Zap, Users, Shield, Helmet} from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e02
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-12b7
         </div>
       </div>
     </div>
   )
 }
 export default AIEcommerceSolutionsPage
+
+export default AIEcommerceSolutionsPage;
+export default AIEcommerceSolutionsPage;

@@ -108,3 +108,5 @@ const Containerorchestration = () => {
 };
 
 export default Containerorchestration;
+
+export default ContainerOrchestration;

@@ -108,3 +108,5 @@ const Ailegaldocumentanalyzer = () => {
 };
 
 export default Ailegaldocumentanalyzer;
+
+export default AiLegalDocumentAnalyzer;

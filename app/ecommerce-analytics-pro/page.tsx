@@ -108,3 +108,5 @@ const Ecommerceanalyticspro = () => {
 };
 
 export default Ecommerceanalyticspro;
+
+export default EcommerceAnalyticsPro;

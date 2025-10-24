@@ -54,6 +54,7 @@ const SupportPage: React.FC = () => {
     }
   ];
 
+const Support = () => {
   return (
     <>
       <Helmet>

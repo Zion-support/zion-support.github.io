@@ -142,3 +142,5 @@ export default AiPredictiveAnalyticsPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

@@ -39,6 +39,7 @@ const AiContentWriterPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
 
+const AiContentWriter = () => {
   return (
     <><Navigation /></Navigation>
       <div className='min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900'></div>
@@ -138,6 +139,8 @@ const AiContentWriterPage: React.FC = () => {
 };
 
 export default AiContentWriterPage;
+
+export default PagePage;
 
 export default PagePage;
 

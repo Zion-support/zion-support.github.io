@@ -39,6 +39,7 @@ const ZionAiSocialSchedulerProPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
 
+const ZionAiSocialSchedulerPro = () => {
   return (
     <><Navigation /></Navigation>
       <div className='min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900'></div>
@@ -138,6 +139,8 @@ const ZionAiSocialSchedulerProPage: React.FC = () => {
 };
 
 export default ZionAiSocialSchedulerProPage;
+
+export default PagePage;
 
 export default PagePage;
 

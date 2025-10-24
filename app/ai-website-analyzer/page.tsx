@@ -108,3 +108,5 @@ const Aiwebsiteanalyzer = () => {
 };
 
 export default Aiwebsiteanalyzer;
+
+export default AiWebsiteAnalyzer;

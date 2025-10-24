@@ -108,3 +108,5 @@ const Networkinfrastructure = () => {
 };
 
 export default Networkinfrastructure;
+
+export default NetworkInfrastructure;

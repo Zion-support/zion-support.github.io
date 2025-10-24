@@ -142,3 +142,5 @@ export default AI3DGenerationPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

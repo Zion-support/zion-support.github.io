@@ -142,3 +142,5 @@ export default ZionLeadMagnetPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

@@ -108,3 +108,5 @@ const Customersupporthub = () => {
 };
 
 export default Customersupporthub;
+
+export default CustomerSupportHub;

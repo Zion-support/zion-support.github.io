@@ -108,3 +108,5 @@ const Zionaipriceoptimizer = () => {
 };
 
 export default Zionaipriceoptimizer;
+
+export default ZionAiPriceOptimizer;

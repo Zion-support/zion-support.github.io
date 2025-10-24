@@ -110,3 +110,5 @@ const Aidocumentintelligence = () => {
 export default Aidocumentintelligence;
 
 export default Aidocumentintelligence;
+
+export default AiDocumentIntelligence;

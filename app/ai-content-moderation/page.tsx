@@ -110,3 +110,5 @@ const Aicontentmoderation = () => {
 export default Aicontentmoderation;
 
 export default Aicontentmoderation;
+
+export default AiContentModeration;

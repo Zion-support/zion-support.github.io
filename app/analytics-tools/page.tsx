@@ -108,3 +108,5 @@ const Analyticstools = () => {
 };
 
 export default Analyticstools;
+
+export default AnalyticsTools;

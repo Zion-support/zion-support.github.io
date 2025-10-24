@@ -108,3 +108,5 @@ const Aileadscoringpro = () => {
 };
 
 export default Aileadscoringpro;
+
+export default AiLeadScoringPro;

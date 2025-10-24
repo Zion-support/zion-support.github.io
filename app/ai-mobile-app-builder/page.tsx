@@ -142,3 +142,5 @@ export default AiMobileAppBuilderPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

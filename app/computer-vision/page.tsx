@@ -112,3 +112,5 @@ export default Computervision;
 export default ComputerVision;
 
 export default Computervision;
+
+export default ComputerVision;

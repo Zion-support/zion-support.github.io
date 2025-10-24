@@ -108,3 +108,5 @@ const Aicrmassistant = () => {
 };
 
 export default Aicrmassistant;
+
+export default AiCrmAssistant;

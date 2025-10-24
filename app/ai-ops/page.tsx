@@ -142,3 +142,5 @@ export default AiOpsPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

@@ -108,3 +108,5 @@ const Aiautomationplatform = () => {
 };
 
 export default Aiautomationplatform;
+
+export default AiAutomationPlatform;

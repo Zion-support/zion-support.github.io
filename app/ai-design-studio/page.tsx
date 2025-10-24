@@ -142,3 +142,5 @@ export default AiDesignStudioPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

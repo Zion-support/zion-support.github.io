@@ -142,3 +142,5 @@ export default AiQualityAssurancePage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

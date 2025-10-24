@@ -108,3 +108,5 @@ const Edgecomputingsolutions = () => {
 };
 
 export default Edgecomputingsolutions;
+
+export default EdgeComputingSolutions;

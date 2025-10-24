@@ -108,3 +108,5 @@ const Marketingtools = () => {
 };
 
 export default Marketingtools;
+
+export default MarketingTools;

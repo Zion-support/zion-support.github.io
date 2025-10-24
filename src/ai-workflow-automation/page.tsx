@@ -4,6 +4,15 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
+import { Workflow } from 'lucide-react'
+import { CheckCircle, Phone, Mail } from 'lucide-react'
+
+const AIWorkflowAutomationPage: React.FC = () => {
+  const features = [
+import Navigation from '../$1/Navigation';
+import Footer from '../$1/Footer';
+import SEOOptimizer from '../$1/SEOOptimizer';
+import {Workflow, CheckCircle, Phone, Mail} from 'lucide-react';
 import { Workfl, o, w } from "lucide-react";
 import { CheckCircle, Phone, Mail } from "lucide-react";
 const AIWorkflowAutomationPage: React.FC = () => {
@@ -84,9 +93,12 @@ const Page = (): JSX.Element => {
   return (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e02
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-12b7
       </div>
     </>
   )
 }
+
+export default Page;
 
 export default Page;

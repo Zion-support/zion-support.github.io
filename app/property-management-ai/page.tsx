@@ -108,3 +108,5 @@ const Propertymanagementai = () => {
 };
 
 export default Propertymanagementai;
+
+export default PropertyManagementAi;

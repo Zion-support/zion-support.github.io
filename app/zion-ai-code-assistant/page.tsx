@@ -108,3 +108,5 @@ const Zionaicodeassistant = () => {
 };
 
 export default Zionaicodeassistant;
+
+export default ZionAiCodeAssistant;

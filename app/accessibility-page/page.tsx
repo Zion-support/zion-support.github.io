@@ -43,6 +43,7 @@ const AccessibilityPagePage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ];
 
+const AccessibilityPage = () => {
   return (
     <>
       <Navigation />
@@ -150,6 +151,8 @@ const AccessibilityPagePage: React.FC = () => {
 };
 
 export default AccessibilityPagePage;
+
+export default PagePage;
 
 export default PagePage;
 

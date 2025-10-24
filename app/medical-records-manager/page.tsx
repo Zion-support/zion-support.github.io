@@ -108,3 +108,5 @@ const Medicalrecordsmanager = () => {
 };
 
 export default Medicalrecordsmanager;
+
+export default MedicalRecordsManager;

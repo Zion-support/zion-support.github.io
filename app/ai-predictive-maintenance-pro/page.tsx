@@ -108,3 +108,5 @@ const Aipredictivemaintenancepro = () => {
 };
 
 export default Aipredictivemaintenancepro;
+
+export default AiPredictiveMaintenancePro;

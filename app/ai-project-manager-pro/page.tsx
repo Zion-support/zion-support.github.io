@@ -108,3 +108,5 @@ const Aiprojectmanagerpro = () => {
 };
 
 export default Aiprojectmanagerpro;
+
+export default AiProjectManagerPro;

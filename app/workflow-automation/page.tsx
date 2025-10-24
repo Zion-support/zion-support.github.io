@@ -110,3 +110,5 @@ const Workflowautomation = () => {
 export default Workflowautomation;
 
 export default Workflowautomation;
+
+export default WorkflowAutomation;

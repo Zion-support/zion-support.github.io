@@ -108,3 +108,5 @@ const Projectmanagementpro = () => {
 };
 
 export default Projectmanagementpro;
+
+export default ProjectManagementPro;

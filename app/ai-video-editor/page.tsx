@@ -12,3 +12,5 @@ export default AIVideoEditorPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

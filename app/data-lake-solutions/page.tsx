@@ -108,3 +108,5 @@ const Datalakesolutions = () => {
 };
 
 export default Datalakesolutions;
+
+export default DataLakeSolutions;

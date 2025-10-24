@@ -110,3 +110,5 @@ const Complianceautomation = () => {
 export default Complianceautomation;
 
 export default Complianceautomation;
+
+export default ComplianceAutomation;

@@ -1,6 +1,11 @@
 'use client'
 import { ArrowRight, Brain, BarChart, Target } from 'lucide-react'
 import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight } from 'lucide-react';
+import Navigation from '../$1/Navigation';
+import Footer from '../$1/Footer';
 
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'

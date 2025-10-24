@@ -142,3 +142,5 @@ export default AiProjectManagementPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

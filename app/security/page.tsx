@@ -142,3 +142,5 @@ export default SecurityPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

@@ -108,3 +108,5 @@ const Ittraining = () => {
 };
 
 export default Ittraining;
+
+export default ItTraining;

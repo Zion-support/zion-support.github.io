@@ -39,6 +39,7 @@ const ZionBlockchainSolutionsPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
 
+const ZionBlockchainSolutions = () => {
   return (
     <><Navigation /></Navigation>
       <div className='min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900'></div>
@@ -176,6 +177,8 @@ const ZionBlockchainSolutionsPage: React.FC = () => {
 };
 
 export default ZionBlockchainSolutionsPage;
+
+export default PagePage;
 
 export default PagePage;
 

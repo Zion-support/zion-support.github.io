@@ -108,3 +108,5 @@ const Inventorymanager = () => {
 };
 
 export default Inventorymanager;
+
+export default InventoryManager;

@@ -14,6 +14,9 @@ interface ITService {
   category: string;
   benefits: string[]
   technologies: string[]
+import {Smartphone, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2, ShieldCheck, FileText, Rocket, Lock, CheckCircle, Star, ArrowRight} from 'lucide-react';
+import Navigation from '../$1/Navigation';
+import Footer from '../$1/Footer';
   contactInfo: string
   color?: string,
 }

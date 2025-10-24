@@ -108,3 +108,5 @@ const Penetrationtesting = () => {
 };
 
 export default Penetrationtesting;
+
+export default PenetrationTesting;

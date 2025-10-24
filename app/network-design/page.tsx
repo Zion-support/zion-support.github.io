@@ -108,3 +108,5 @@ const Networkdesign = () => {
 };
 
 export default Networkdesign;
+
+export default NetworkDesign;

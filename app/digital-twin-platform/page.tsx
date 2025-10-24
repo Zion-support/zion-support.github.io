@@ -108,3 +108,5 @@ const Digitaltwinplatform = () => {
 };
 
 export default Digitaltwinplatform;
+
+export default DigitalTwinPlatform;

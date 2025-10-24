@@ -108,3 +108,5 @@ const Zionaidocumentprocessor = () => {
 };
 
 export default Zionaidocumentprocessor;
+
+export default ZionAiDocumentProcessor;

@@ -12,3 +12,5 @@ export default AISocialMediaManagerPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

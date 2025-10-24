@@ -108,3 +108,5 @@ const Aipriceoptimizer = () => {
 };
 
 export default Aipriceoptimizer;
+
+export default AiPriceOptimizer;

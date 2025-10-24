@@ -108,3 +108,5 @@ const Zionaifinancialforecaster = () => {
 };
 
 export default Zionaifinancialforecaster;
+
+export default ZionAiFinancialForecaster;

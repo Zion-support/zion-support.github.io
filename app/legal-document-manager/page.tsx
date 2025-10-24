@@ -108,3 +108,5 @@ const Legaldocumentmanager = () => {
 };
 
 export default Legaldocumentmanager;
+
+export default LegalDocumentManager;

@@ -5,6 +5,7 @@ import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
 <<<<<<< HEAD:temp-pages/cloud-infrastructure-manager/page.tsx
+<<<<<<< HEAD:temp-pages/cloud-infrastructure-manager/page.tsx
 const Cloudinfrastructuremanager = () => {
   const features = [
     {
@@ -14,10 +15,16 @@ const Cloudinfrastructuremanager = () => {
 const PagePage: React.FC = () => {
   const features = [
     {
+=======
+const PagePage: React.FC = () => {
+  const features = [
+    {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-12b7:app/ai-customer-support/page.tsx
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+<<<<<<< HEAD:temp-pages/cloud-infrastructure-manager/page.tsx
 <<<<<<< HEAD:temp-pages/cloud-infrastructure-manager/page.tsx
 <<<<<<< HEAD:temp-pages/cloud-infrastructure-manager/page.tsx
 >>>>>>> main:app/zion-ai-social-media-manager/page.tsx
@@ -25,6 +32,8 @@ const PagePage: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a086:app/zion-ai-sales-predictor/page.tsx
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891:app/zion-ai-sales-predictor/page.tsx
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-12b7:app/ai-customer-support/page.tsx
     },
     {
       icon: BarChart,
@@ -39,6 +48,7 @@ const PagePage: React.FC = () => {
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
     {
+<<<<<<< HEAD:temp-pages/cloud-infrastructure-manager/page.tsx
 <<<<<<< HEAD:temp-pages/cloud-infrastructure-manager/page.tsx
       icon: "🔧",
       title: "Customizable",
@@ -125,6 +135,8 @@ const PagePage: React.FC = () => {
 };
 
 export default Cloudinfrastructuremanager;
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-12b7:app/ai-customer-support/page.tsx
       icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
@@ -271,8 +283,12 @@ export default Cloudinfrastructuremanager;
   );
 };
 
+<<<<<<< HEAD:temp-pages/cloud-infrastructure-manager/page.tsx
 export default PagePage;
 <<<<<<< HEAD:temp-pages/cloud-infrastructure-manager/page.tsx
 >>>>>>> main:app/zion-ai-social-media-manager/page.tsx
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891:app/zion-ai-sales-predictor/page.tsx
+=======
+export default PagePage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-12b7:app/ai-customer-support/page.tsx

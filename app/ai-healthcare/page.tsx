@@ -142,3 +142,5 @@ export default AiHealthcarePage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

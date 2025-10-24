@@ -108,3 +108,5 @@ const Zionaiemailoptimizer = () => {
 };
 
 export default Zionaiemailoptimizer;
+
+export default ZionAiEmailOptimizer;

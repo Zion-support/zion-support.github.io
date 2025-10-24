@@ -142,3 +142,5 @@ export default AiFintechPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

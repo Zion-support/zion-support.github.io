@@ -108,3 +108,5 @@ const Aisolutions = () => {
 };
 
 export default Aisolutions;
+
+export default AiSolutions;

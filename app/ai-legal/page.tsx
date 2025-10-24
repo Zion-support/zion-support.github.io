@@ -108,3 +108,5 @@ const Ailegal = () => {
 };
 
 export default Ailegal;
+
+export default AiLegal;

@@ -110,3 +110,5 @@ const Disasterrecoveryadvanced = () => {
 export default Disasterrecoveryadvanced;
 
 export default Disasterrecoveryadvanced;
+
+export default DisasterRecoveryAdvanced;

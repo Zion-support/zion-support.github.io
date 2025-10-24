@@ -142,3 +142,5 @@ export default AiMlPlatformPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

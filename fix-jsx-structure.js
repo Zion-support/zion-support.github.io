@@ -10,16 +10,32 @@ function fixFile(filePa, t, h) {
 
     let content = fs.readFileSync(fullPath, 'utf8');
     let modified = false;
-
-    // Fix malformed JSX closing structure like </div>););
-    if (content.includes('););')) {
-      content = content.replace(/<\/div>\s*\);\s*\);/g, '\n    </div>\n  );\n}');
+    
+    // Fix missing closing braces for function components
+    if (content.includes('return (') && !content.includes('export default')) {
+      // Add export default if missing
+      if (!content.includes('export default')) {
+        content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{/, 'const $1 = () => {');
+        content += '\n\nexport default About;';
+        modified = true;
+      }
+    }
+    
+    // Fix malformed JSX closing tags
+    content = content.replace(/<\/a><a/g, '</a>\n            <a');
+    content = content.replace(/<\/div><\/div><\/section><\/div>/g, '</div>\n        </div>\n      </section>\n    </div>');
+    
+    // Fix missing closing braces
+    const openBraces = (content.match(/\{/g) || []).length;
+    const closeBraces = (content.match(/\}/g) || []).length;
+    if (openBraces > closeBraces) {
+      content += '\n}'.repeat(openBraces - closeBraces);
       modified = true;
     }
-
-    // Fix missing closing div tags
-    if (content.includes('</div>\n  );')) {
-      content = content.replace(/<\/div>\s*\);\s*}/g, '\n    </div>\n  );\n}');
+    
+    // Fix missing closing parentheses for return statements
+    if (content.includes('return (') && !content.includes(');')) {
+      content = content.replace(/(<\/div>\s*}\s*})/g, '$1\n  );\n}');
       modified = true;
     }
 
@@ -64,9 +80,7 @@ function getAllTsxFiles(d, i, r) {
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
       files.push(fullPath.replace(__dirname + '/', ''));
     }
-  }
-  
-  return files;
+  });
 }
 
 // Fix all TSX/TS files

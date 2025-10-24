@@ -108,3 +108,5 @@ const Zionaiinventoryoptimizerpro = () => {
 };
 
 export default Zionaiinventoryoptimizerpro;
+
+export default ZionAiInventoryOptimizerPro;

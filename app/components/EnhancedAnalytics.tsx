@@ -72,7 +72,7 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
         )
       }
 
-      // Custom analytics;
+      // Custom analytics
       }
   }
 
@@ -88,7 +88,7 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
         )
       }
 
-      // Custom analytics;
+      // Custom analytics
       }
   };
   constvalue: AnalyticsContextType="{track,";}
@@ -111,6 +111,7 @@ declare global {interface Window {}
 }
 'use client'
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'

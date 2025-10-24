@@ -142,3 +142,5 @@ export default AiBusinessIntelligencePage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

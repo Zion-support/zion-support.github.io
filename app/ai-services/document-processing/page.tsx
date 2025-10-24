@@ -108,3 +108,5 @@ const Documentprocessing = () => {
 };
 
 export default Documentprocessing;
+
+export default DocumentProcessing;

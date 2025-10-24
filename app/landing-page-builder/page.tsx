@@ -108,3 +108,5 @@ const Landingpagebuilder = () => {
 };
 
 export default Landingpagebuilder;
+
+export default LandingPageBuilder;

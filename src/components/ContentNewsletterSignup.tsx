@@ -11,12 +11,12 @@ const ContentNewsletterSignup: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    // Simulate API call;
+    // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000))
     setIsSubmitted(true)
     setIsSubmitting(false)
     setEmail('')
-    // Reset after 3 seconds;
+    // Reset after 3 seconds
     setTimeout(() => setIsSubmitted(false), 3000)
     </div>
   )

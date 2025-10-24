@@ -142,3 +142,5 @@ export default ZionAiVoiceAssistantPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

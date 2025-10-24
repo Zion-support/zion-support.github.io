@@ -108,3 +108,5 @@ const Aileadgeneration = () => {
 };
 
 export default Aileadgeneration;
+
+export default AiLeadGeneration;

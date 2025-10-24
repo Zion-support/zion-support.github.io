@@ -108,3 +108,5 @@ const Chatanalytics = () => {
 };
 
 export default Chatanalytics;
+
+export default ChatAnalytics;

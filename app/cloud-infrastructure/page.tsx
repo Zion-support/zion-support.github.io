@@ -108,3 +108,5 @@ const Cloudinfrastructure = () => {
 };
 
 export default Cloudinfrastructure;
+
+export default CloudInfrastructure;

@@ -110,3 +110,5 @@ const Cloudnativedevelopment = () => {
 export default Cloudnativedevelopment;
 
 export default Cloudnativedevelopment;
+
+export default CloudNativeDevelopment;

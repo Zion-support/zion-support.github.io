@@ -3,6 +3,15 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
+import { Building } from 'lucide-react'
+import { CheckCircle, Phone, Mail, PhoneIcon, MailIcon } from 'lucide-react'
+
+const AILeadGenerationPage: React.FC = () => {
+  const features = [
+import Navigation from '../$1/Navigation';
+import Footer from '../$1/Footer';
+import SEOOptimizer from '../$1/SEOOptimizer';
+import {Building, CheckCircle, PhoneIcon, MailIcon} from 'lucide-react';
 import { Buildi, n, g } from "lucide-react";
 import { CheckCircle, Phone, Mail, PhoneIcon, MailIcon  } from "lucide-react";
 import { Brain, BarChart, Target }  from "lucide-react";
@@ -377,4 +386,7 @@ const AILeadGenerationPage: React.FC = () => {
     <//>
   )
 }
+export default AILeadGenerationPage;
+
+export default AILeadGenerationPage;
 export default AILeadGenerationPage;

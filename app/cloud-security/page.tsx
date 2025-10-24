@@ -108,3 +108,5 @@ const Cloudsecurity = () => {
 };
 
 export default Cloudsecurity;
+
+export default CloudSecurity;

@@ -110,3 +110,5 @@ const Aiiotanalytics = () => {
 export default Aiiotanalytics;
 
 export default Aiiotanalytics;
+
+export default AiIotAnalytics;

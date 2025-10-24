@@ -142,3 +142,5 @@ export default AiHrPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

@@ -110,3 +110,5 @@ const Zionaiemailassistant = () => {
 export default Zionaiemailassistant;
 
 export default Zionaiemailassistant;
+
+export default ZionAiEmailAssistant;

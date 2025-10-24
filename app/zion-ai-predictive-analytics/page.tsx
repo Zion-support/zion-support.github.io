@@ -108,3 +108,5 @@ const Zionaipredictiveanalytics = () => {
 };
 
 export default Zionaipredictiveanalytics;
+
+export default ZionAiPredictiveAnalytics;

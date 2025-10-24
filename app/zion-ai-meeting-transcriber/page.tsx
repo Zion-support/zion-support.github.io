@@ -109,3 +109,5 @@ const Zionaimeetingtranscriber = () => {
 };
 
 export default Zionaimeetingtranscriber;
+
+export default ZionAiMeetingTranscriber;

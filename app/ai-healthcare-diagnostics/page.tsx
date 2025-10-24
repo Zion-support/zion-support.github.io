@@ -108,3 +108,5 @@ const Aihealthcarediagnostics = () => {
 };
 
 export default Aihealthcarediagnostics;
+
+export default AiHealthcareDiagnostics;

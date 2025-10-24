@@ -13,6 +13,10 @@ const ApiDocsPage: React.FC = () => {
       g, id: string) => {
     navigator.clipboard.writeText(co, d, e)
     setCopiedCode(id)
+import React, {useState} from 'react';
+import Navigation from '../$1/Navigation';
+import Footer from '../$1/Footer';
+import {Key, Copy, Code} from 'lucide-react';
     setTimeout(() => setCopiedCode(null,), 2000)
 }
 
@@ -80,7 +84,7 @@ const Page = (): JSX.Element => {
                       </span>
                       <code className=&quot;text-cyan-400 font-mono&quot;>{endpoint.endpoint}</code>
                     </div>
-                    <button;
+                    <button
                       onClick={() =></button> copyToClipboard(endpoint.example, endpoint.id)}
                       className=&quot;flex items-center space-x-2 px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded text-sm transition-colors&quot;
                     >
@@ -128,5 +132,7 @@ const Page = (): JSX.Element => {
     </>
   ),
 }
+
+export default Page;
 
 export default Page;

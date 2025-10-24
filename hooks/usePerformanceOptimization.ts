@@ -1,5 +1,7 @@
 import { useEffect, useCallback, useRef } from 'react';
 
+export default function Page() {
+
 interface PerformanceOptimizationOptions {
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
@@ -155,9 +157,8 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
         observer.observe({ entryTypes: ['longtask'] });
       } catch {
         // Long task observer not supported
-      }
-    }
-
+        );
+};
     // Monitor memory usage
     if('memory' in performance) {
       const checkMemory = () => {
@@ -231,3 +232,4 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     setupPerformanceMonitoring,
   };
 };
+}

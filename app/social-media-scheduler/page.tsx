@@ -108,3 +108,5 @@ const Socialmediascheduler = () => {
 };
 
 export default Socialmediascheduler;
+
+export default SocialMediaScheduler;

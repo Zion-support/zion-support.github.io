@@ -108,3 +108,5 @@ const Zionaidatavisualizer = () => {
 };
 
 export default Zionaidatavisualizer;
+
+export default ZionAiDataVisualizer;

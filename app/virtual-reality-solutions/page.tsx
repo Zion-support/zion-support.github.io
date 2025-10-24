@@ -108,3 +108,5 @@ const Virtualrealitysolutions = () => {
 };
 
 export default Virtualrealitysolutions;
+
+export default VirtualRealitySolutions;

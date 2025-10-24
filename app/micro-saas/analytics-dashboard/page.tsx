@@ -108,3 +108,5 @@ const Analyticsdashboard = () => {
 };
 
 export default Analyticsdashboard;
+
+export default AnalyticsDashboard;

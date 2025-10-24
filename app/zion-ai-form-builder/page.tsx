@@ -108,3 +108,5 @@ const Zionaiformbuilder = () => {
 };
 
 export default Zionaiformbuilder;
+
+export default ZionAiFormBuilder;

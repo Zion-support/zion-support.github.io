@@ -1,4 +1,10 @@
 import React from 'react'
+import { BarChart3 } from 'lucide-react'
+import { CheckCircle, Brain, Target, Database } from 'lucide-react'
+
+const AIDataAnalyticsPage: React.FC = () => {
+  const analyticsServices = [
+import {BarChart3, CheckCircle, Brain, Database, Target} from 'lucide-react';
 import { BarChar, t, 3 } from "lucide-react";
 import { CheckCircle, Brain, Target, Database  } from "lucide-react";
 const AIDataAnalyticsPage: React.FC = () => {
@@ -270,3 +276,6 @@ const AIDataAnalyticsPage: React.FC = () => {
   )
 }
 export default AIDataAnalyticsPage
+
+export default AIDataAnalyticsPage;
+export default AIDataAnalyticsPage;

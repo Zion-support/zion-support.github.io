@@ -3,6 +3,16 @@ import { Brain, BarChart } from 'lucide-react'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+import { CheckCircle, Zap, Brain, Eye, BarChart } from 'lucide-react'
+
+const AIContentGenerationPage: React.FC = () => {constcontentServices= [
+    {
+      title: 'AI Blog Content Generator Pro',
+      description: 'Advanced AI-powered blog content creation with SEO optimization, research integration, and brand voice consistency.',
+      icon: '✍️',
+      price: '$19 9/month',
+      features: ['SEO-optimized content', 'Brand voice consistency', 'Research integration', 'Multi-format output'],
+      popular: true;
 import { CheckCircle, Zap, Brain, Eye, BarChart  } from "lucide-react";
 constAIContentGenerationPage: React.FC= () => {
   constcontentServices= [
@@ -161,3 +171,6 @@ constAIContentGenerationPage: React.FC= () => {
   ),
 }
 export default AIContentGenerationPage
+
+export default AIContentGenerationPage;
+export default AIContentGenerationPage;

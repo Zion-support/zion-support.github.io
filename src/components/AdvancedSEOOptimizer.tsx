@@ -108,13 +108,13 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         }
       ]
     }
-    return faqData;
+    return faqData
   }, [enableSchemaMarkup])
   const _structuredData = generateStructuredData()
   const _breadcrumbData = generateBreadcrumbStructuredData()
   const _faqData = generateFAQStructuredData()
   useEffect(() => {
-    // Update meta description;
+    // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]')
     if (metaDescription) {
       metaDescription.setAttribute('content', seoData.description)

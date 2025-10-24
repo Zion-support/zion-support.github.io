@@ -109,3 +109,5 @@ const Zionaidocumentanalyzer = () => {
 };
 
 export default Zionaidocumentanalyzer;
+
+export default ZionAiDocumentAnalyzer;

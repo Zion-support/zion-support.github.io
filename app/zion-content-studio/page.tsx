@@ -142,3 +142,5 @@ export default ZionContentStudioPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

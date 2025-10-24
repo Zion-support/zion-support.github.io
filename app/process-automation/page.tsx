@@ -108,3 +108,5 @@ const Processautomation = () => {
 };
 
 export default Processautomation;
+
+export default ProcessAutomation;

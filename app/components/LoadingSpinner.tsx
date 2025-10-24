@@ -2,7 +2,7 @@ import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
 const LoadingSpinnerPage: React.FC = () => {const features = [
       title: 'AI-Powered Intelligence',}
@@ -137,7 +137,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ className = '' }) => {
 export default LoadingSpinnerPage;
 color?: 'primary' | 'secondary' | 'white'
 text?: string}
-constLoadingSpinner: React.FC<LoadingSpinnerProp s>= ({size= 'md',
+const LoadingSpinner: React.FC<LoadingSpinnerProp s>= ({size= 'md',
 color= 'primary',
 text}) => {constsizeClasses= {
 sm: 'w-4 h-4',

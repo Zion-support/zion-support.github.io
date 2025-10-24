@@ -23,10 +23,16 @@ const Page = (): JSX.Element => {
   return (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e02
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-12b7
       </div>
       <Footer /></Footer>
     </>
   )
 }
+import {ArrowLeft, FileText, Lock, CheckCircle, Users, Shield, Award, Award} from 'lucide-react';
+import Navigation from '../$1/Navigation';
+import Footer from '../$1/Footer';
+
+export default Page;
 
 export default Page;

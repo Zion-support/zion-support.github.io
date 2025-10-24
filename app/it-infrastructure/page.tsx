@@ -109,3 +109,5 @@ const Itinfrastructure = () => {
 };
 
 export default Itinfrastructure;
+
+export default ItInfrastructure;

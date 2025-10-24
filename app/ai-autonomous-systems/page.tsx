@@ -108,3 +108,5 @@ const Aiautonomoussystems = () => {
 };
 
 export default Aiautonomoussystems;
+
+export default AiAutonomousSystems;

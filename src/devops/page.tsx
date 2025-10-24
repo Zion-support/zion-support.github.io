@@ -1,6 +1,14 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+import { GitBranch } from 'lucide-react'
+import { CheckCircle } from 'lucide-react'
+
+const DevOpsPage: React.FC = () => {
+  const services = [
+import Navigation from '../$1/Navigation';
+import Footer from '../$1/Footer';
+import {GitBranchCheckCircle} from 'lucide-react';
 import { GitBran, c, h } from "lucide-react";
 import { CheckCirc, l, e } from "lucide-react";
 const DevOpsPage: React.FC = () => {
@@ -65,3 +73,6 @@ const DevOpsPage: React.FC = () => {
   )
 }
 export default DevOpsPage
+
+export default DevOpsPage;
+export default DevOpsPage;

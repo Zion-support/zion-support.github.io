@@ -108,3 +108,5 @@ const Zionaileadscoring = () => {
 };
 
 export default Zionaileadscoring;
+
+export default ZionAiLeadScoring;

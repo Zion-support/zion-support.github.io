@@ -142,3 +142,5 @@ export default AiEnergyGridManagementProPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

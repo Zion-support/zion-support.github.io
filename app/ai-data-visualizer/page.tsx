@@ -108,3 +108,5 @@ const Aidatavisualizer = () => {
 };
 
 export default Aidatavisualizer;
+
+export default AiDataVisualizer;

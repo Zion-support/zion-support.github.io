@@ -110,3 +110,5 @@ const Aicustomerchurn = () => {
 export default Aicustomerchurn;
 
 export default Aicustomerchurn;
+
+export default AiCustomerChurn;

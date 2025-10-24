@@ -110,3 +110,5 @@ const Cloudcostoptimization = () => {
 export default Cloudcostoptimization;
 
 export default Cloudcostoptimization;
+
+export default CloudCostOptimization;

@@ -110,3 +110,5 @@ const Zionairecruitmentpro = () => {
 export default Zionairecruitmentpro;
 
 export default Zionairecruitmentpro;
+
+export default ZionAiRecruitmentPro;

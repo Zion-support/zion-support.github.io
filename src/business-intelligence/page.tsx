@@ -166,3 +166,6 @@ constBusinessIntelligencePage: React.FC= () => {
   ),
 }
 export default BusinessIntelligencePage
+
+export default BusinessIntelligencePage;
+export default BusinessIntelligencePage;

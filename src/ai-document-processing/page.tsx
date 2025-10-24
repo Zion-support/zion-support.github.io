@@ -3,6 +3,15 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
+import { FileText, FileImage } from 'lucide-react'
+import { CheckCircle, Phone, Mail } from 'lucide-react'
+
+const AIDocumentProcessingPage: React.FC = () => {
+  const features = [
+import Navigation from '../$1/Navigation';
+import Footer from '../$1/Footer';
+import SEOOptimizer from '../$1/SEOOptimizer';
+import {FileText, FileImage, CheckCircle, Phone, Mail} from 'lucide-react';
 import { FileText, FileImage  } from "lucide-react";
 import { CheckCircle, Phone, Mail } from "lucide-react";
 import { Brain, BarChart }  from "lucide-react";
@@ -558,4 +567,7 @@ const AIDocumentProcessingPage: React.FC = () => {
     <//>
   )
 }
+export default AIDocumentProcessingPage;
+
+export default AIDocumentProcessingPage;
 export default AIDocumentProcessingPage;

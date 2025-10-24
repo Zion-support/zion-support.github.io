@@ -108,3 +108,5 @@ const Aifrauddetectionpro = () => {
 };
 
 export default Aifrauddetectionpro;
+
+export default AiFraudDetectionPro;

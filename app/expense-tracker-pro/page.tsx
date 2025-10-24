@@ -108,3 +108,5 @@ const Expensetrackerpro = () => {
 };
 
 export default Expensetrackerpro;
+
+export default ExpenseTrackerPro;

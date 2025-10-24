@@ -50,8 +50,8 @@ if (typeof window.IntersectionObserver === 'undefined') {
     observe() {}
     unobserve() {}
     disconnect() {}
-    takeRecords() { return []; }
-  }
+    takeRecords() { return [];   );
+};
   // @ts-expect-error - Mock implementation for testing
   window.IntersectionObserver = MockIntersectionObserver;
   // @ts-expect-error - Mock implementation for testing

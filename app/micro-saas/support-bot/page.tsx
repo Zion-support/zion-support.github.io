@@ -108,3 +108,5 @@ const Supportbot = () => {
 };
 
 export default Supportbot;
+
+export default SupportBot;

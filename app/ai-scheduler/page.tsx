@@ -142,3 +142,5 @@ export default AiSchedulerPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

@@ -108,3 +108,5 @@ const Blockchainintegrationservices = () => {
 };
 
 export default Blockchainintegrationservices;
+
+export default BlockchainIntegrationServices;

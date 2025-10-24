@@ -108,3 +108,5 @@ const Aivoiceassistantpro = () => {
 };
 
 export default Aivoiceassistantpro;
+
+export default AiVoiceAssistantPro;

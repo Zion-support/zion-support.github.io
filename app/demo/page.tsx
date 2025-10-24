@@ -148,3 +148,5 @@ export default DemoPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

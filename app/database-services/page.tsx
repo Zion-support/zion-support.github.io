@@ -108,3 +108,5 @@ const Databaseservices = () => {
 };
 
 export default Databaseservices;
+
+export default DatabaseServices;

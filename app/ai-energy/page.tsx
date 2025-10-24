@@ -142,3 +142,5 @@ export default AiEnergyPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

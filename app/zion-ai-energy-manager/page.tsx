@@ -110,3 +110,5 @@ const Zionaienergymanager = () => {
 export default Zionaienergymanager;
 
 export default Zionaienergymanager;
+
+export default ZionAiEnergyManager;

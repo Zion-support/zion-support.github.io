@@ -1,4 +1,8 @@
 import React from 'react'
+import { Helmet } from 'lucide-react';
+import { Helmet } from 'lucide-react';
+import {Helmet} from 'lucide-react';
+import React from 'react';
 import { Helm, e, t } from "lucide-react";
 import React from 'react';
 import { Helm, e, t } from "lucide-react";
@@ -79,3 +83,6 @@ const SitemapPage: React.FC = () => {
   ),
 }
 export default SitemapPage
+
+export default SitemapPage;
+export default SitemapPage;

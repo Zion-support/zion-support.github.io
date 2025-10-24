@@ -142,3 +142,5 @@ export default AiSmartCalendarPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

@@ -108,3 +108,5 @@ const Emailmarketingautomation = () => {
 };
 
 export default Emailmarketingautomation;
+
+export default EmailMarketingAutomation;

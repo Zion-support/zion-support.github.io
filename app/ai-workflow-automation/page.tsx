@@ -142,3 +142,5 @@ export default AiWorkflowAutomationPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

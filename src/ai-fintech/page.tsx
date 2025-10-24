@@ -347,3 +347,6 @@ constAIFintechPage: React.FC= () => {
   )
 }
 export default AIFintechPage
+
+export default AIFintechPage;
+export default AIFintechPage;

@@ -108,3 +108,5 @@ const Aiinfrastructure = () => {
 };
 
 export default Aiinfrastructure;
+
+export default AiInfrastructure;

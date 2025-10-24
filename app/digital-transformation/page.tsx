@@ -108,3 +108,5 @@ const Digitaltransformation = () => {
 };
 
 export default Digitaltransformation;
+
+export default DigitalTransformation;

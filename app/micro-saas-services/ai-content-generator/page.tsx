@@ -108,3 +108,5 @@ const Aicontentgenerator = () => {
 };
 
 export default Aicontentgenerator;
+
+export default AiContentGenerator;

@@ -108,3 +108,5 @@ const Cloudservices = () => {
 };
 
 export default Cloudservices;
+
+export default CloudServices;

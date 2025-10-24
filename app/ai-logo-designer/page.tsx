@@ -142,3 +142,5 @@ export default AiLogoDesignerPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

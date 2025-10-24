@@ -142,3 +142,5 @@ export default AiEcommerceOptimizerPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

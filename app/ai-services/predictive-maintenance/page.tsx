@@ -142,3 +142,5 @@ export default PredictiveMaintenancePage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

@@ -108,3 +108,5 @@ const Financialit = () => {
 };
 
 export default Financialit;
+
+export default FinancialIt;

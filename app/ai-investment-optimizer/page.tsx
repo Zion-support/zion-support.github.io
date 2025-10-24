@@ -39,6 +39,7 @@ const AiInvestmentOptimizerPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
 
+const AiInvestmentOptimizer = () => {
   return (
     <><Navigation /></Navigation>
       <div className='min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900'></div>
@@ -138,6 +139,8 @@ const AiInvestmentOptimizerPage: React.FC = () => {
 };
 
 export default AiInvestmentOptimizerPage;
+
+export default PagePage;
 
 export default PagePage;
 

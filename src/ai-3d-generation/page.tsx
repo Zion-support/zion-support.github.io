@@ -196,3 +196,6 @@ export const Page = (): JSX.Element => {
 }
 
 export default AI3DGenerationPage;
+
+export default AI3DGenerationPage;
+export default AI3 DGenerationPage;

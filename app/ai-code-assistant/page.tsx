@@ -142,3 +142,5 @@ export default AiCodeAssistantPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

@@ -110,3 +110,5 @@ const Zionaicontractanalyzer = () => {
 export default Zionaicontractanalyzer;
 
 export default Zionaicontractanalyzer;
+
+export default ZionAiContractAnalyzer;

@@ -108,3 +108,5 @@ const Emailoptimizer = () => {
 };
 
 export default Emailoptimizer;
+
+export default EmailOptimizer;

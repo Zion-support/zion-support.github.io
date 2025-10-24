@@ -108,3 +108,5 @@ const Zionaipredictivemaintenance = () => {
 };
 
 export default Zionaipredictivemaintenance;
+
+export default ZionAiPredictiveMaintenance;

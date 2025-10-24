@@ -108,3 +108,5 @@ const Apidocs = () => {
 };
 
 export default Apidocs;
+
+export default ApiDocs;

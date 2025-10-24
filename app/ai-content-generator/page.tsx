@@ -1,4 +1,5 @@
 import React from "react";
+import React from "react";
 'use client';
 import React from 'react';
 import { ArrowRight, Brain, CheckCircle, FileText, MessageCircle, Target, Globe, Send, BarChart3, Shield, Zap, DollarSign, Clock, Star, Activity, Lock, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react';
@@ -110,3 +111,5 @@ export default function AIContentGeneratorPage() {
 }
 
 export default Aicontentgenerator;
+
+export default AiContentGenerator;

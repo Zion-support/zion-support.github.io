@@ -108,3 +108,5 @@ const Emailmarketing = () => {
 };
 
 export default Emailmarketing;
+
+export default EmailMarketing;

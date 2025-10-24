@@ -110,3 +110,5 @@ const Aivideoanalysis = () => {
 export default Aivideoanalysis;
 
 export default Aivideoanalysis;
+
+export default AiVideoAnalysis;

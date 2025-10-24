@@ -108,3 +108,5 @@ const Aiblockchainsolutions = () => {
 };
 
 export default Aiblockchainsolutions;
+
+export default AiBlockchainSolutions;

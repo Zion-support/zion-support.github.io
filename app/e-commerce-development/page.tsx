@@ -110,3 +110,5 @@ const Ecommercedevelopment = () => {
 export default Ecommercedevelopment;
 
 export default Ecommercedevelopment;
+
+export default ECommerceDevelopment;

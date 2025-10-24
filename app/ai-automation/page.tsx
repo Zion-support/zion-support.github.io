@@ -1,6 +1,7 @@
 import React from "react";
 import React from "react";
 import React from "react";
+import React from "react";
 'use client';
 import React from 'react';
 import Link from 'next/link';
@@ -239,3 +240,5 @@ const AIAutomationPage: React.FC = () => {
 export default AIAutomationPage;
 
 export default Aiautomation;
+
+export default AiAutomation;

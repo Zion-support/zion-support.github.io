@@ -142,3 +142,5 @@ export default RoboticsPage;
 export default PagePage;
 
 export default PagePage;
+
+export default PagePage;

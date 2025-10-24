@@ -108,3 +108,5 @@ const Augmentedrealitysolutions = () => {
 };
 
 export default Augmentedrealitysolutions;
+
+export default AugmentedRealitySolutions;
