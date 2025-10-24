@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -99,7 +101,7 @@ const NotFound = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default NotFound
+export default NotFound;
