@@ -60,7 +60,7 @@ const values = [
     title: "Innovation",
       description: "We constantly push the boundaries of what's possible with AI and technology."},
   {
-    icon: 'Globe',
+    icon: Brain,
     title: "Global Impact",
       description: "Our solutions create positive change for businesses and communities worldwide."},
   {

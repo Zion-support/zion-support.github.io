@@ -36,11 +36,18 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 
         // Initialize gtag
         (window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag = (window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag || function(..._args: unknown[]) {
+<<<<<<< HEAD
           ((window as unknown as { gtag: { q?: unknown[] } }).gtag.q = (window as unknown as { gtag: { q?: unknown[] } }).gtag.q || []).push(_args);
         };
         window.gtag = window.gtag || gtagFunction;
         window.gtag('js', new Date());
         window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX');
+=======
+          ((window as unknown as { gtag: { q: unknown[] } }).gtag.q = (window as unknown as { gtag: { q: unknown[] } }).gtag.q || []).push(arguments);
+        };
+        (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('js', new Date());
+        (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX');
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbff
       }
     }
   }, []);

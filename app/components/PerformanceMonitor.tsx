@@ -96,7 +96,11 @@ export default function PerformanceMonitor({
         const clsObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
+<<<<<<< HEAD
             const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number };
+=======
+            const clsEntry = entry as PerformanceEntry & { hadRecentInput: boolean; value: number };
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbff
             if (!clsEntry.hadRecentInput) {
               clsValue += clsEntry.value;
             }
