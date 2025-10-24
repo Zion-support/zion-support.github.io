@@ -1,67 +1,46 @@
-'use client';
-
-import React, { useEffect, useState } from 'react';
-import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
-
-interface PerformanceMetrics {
-  cls: number | null;
-  fid: number | null;
-  fcp: number | null;
-  lcp: number | null;
-  ttfb: number | null;
-}
+'use client'
+import React, { useEffect } from 'react'
 
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    cls: null,
-    fid: null,
-    fcp: null,
-    lcp: null,
-    ttfb: null,
-  });
-
   useEffect(() => {
-    // Only run in production
-    if (process.env.NODE_ENV !== 'production') return;
+    // Performance monitoring logic
+    if (typeof window !== 'undefined') {
+      // Monitor Core Web Vitals
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (process.env.NODE_ENV === 'development') {
+            console.log('Performance Entry:', entry.name, (entry as PerformanceEntry & { value?: number }).value || 'N/A')
+          }
+        }
+      })
 
-    const handleMetric = (metric: { name: string; value: number; id: string }) => {
-      setMetrics(prev => ({
-        ...prev,
-        [metric.name]: metric.value,
-      }));
-
-      // Send to analytics service (replace with your analytics endpoint)
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', metric.name, {
-          event_category: 'Web Vitals',
-          value: Math.round(metric.value),
-          event_label: metric.id,
-          non_interaction: true,
-        });
+      try {
+        observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] })
+      } catch (e) {
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('Performance Observer not supported')
+        }
       }
-    };
 
-    onCLS(handleMetric);
-    onFCP(handleMetric);
-    onLCP(handleMetric);
-    onTTFB(handleMetric);
-  }, []);
+      // Monitor resource loading
+      window.addEventListener('load', () => {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+        if (navigation && process.env.NODE_ENV === 'development') {
+          console.log('Page Load Time:', navigation.loadEventEnd - navigation.loadEventStart)
+        }
+      })
 
-  // Don't render anything in production
-  if (process.env.NODE_ENV === 'production') return null;
+      return () => {
+        observer.disconnect()
+      }
+    }
 
-  return (
-    <div className="fixed bottom-4 right-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg text-xs font-mono z-50">
-      <h3 className="font-bold mb-2">Performance Metrics</h3>
-      <div className="space-y-1">
-        <div>CLS: {metrics.cls?.toFixed(3) || 'N/A'}</div>
-        <div>FID: {metrics.fid?.toFixed(2) || 'N/A'}ms</div>
-        <div>FCP: {metrics.fcp?.toFixed(2) || 'N/A'}ms</div>
-        <div>LCP: {metrics.lcp?.toFixed(2) || 'N/A'}ms</div>
-        <div>TTFB: {metrics.ttfb?.toFixed(2) || 'N/A'}ms</div>
-      </div>
-    </div>
-  );
-};
+    return () => {
+      // Cleanup function
+    }
+  }, [])
 
-export default PerformanceMonitor;
+  return null
+}
+
+export default PerformanceMonitor

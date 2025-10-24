@@ -1,0 +1,24 @@
+Bundle Analysis Report
+====================
+
+Total Size: 792.72 KB
+Gzip Size: 396.37 KB
+Compression Ratio: 50.0%
+
+Largest Files:
+- assets/pages-jsOo-ZWG.js: 190.04 KB (95.02 KB gzipped)
+- assets/saas-pages-BLOgsssH.js: 165.37 KB (82.69 KB gzipped)
+- assets/ai-pages-5Nlye-GR.js: 144.86 KB (72.43 KB gzipped)
+- assets/react-dom-S20mgL5w.js: 127.35 KB (63.67 KB gzipped)
+- assets/index-DFxEzHH4.js: 32.68 KB (16.34 KB gzipped)
+- assets/index-Ch0tDLQE.css: 31.93 KB (15.96 KB gzipped)
+- assets/router-8FpXcHd0.js: 31.03 KB (15.51 KB gzipped)
+- assets/react-core-4Eh1Hjxg.js: 24.93 KB (12.46 KB gzipped)
+- assets/components-BIfokMzy.js: 13.55 KB (6.78 KB gzipped)
+- assets/seo-BPcXusdp.js: 11.64 KB (5.82 KB gzipped)
+
+Recommendations:
+- [WARNING] Large files detected: assets/pages-jsOo-ZWG.js, assets/saas-pages-BLOgsssH.js, assets/ai-pages-5Nlye-GR.js, assets/react-dom-S20mgL5w.js
+  Action: Consider code splitting or lazy loading
+- [WARNING] Low compression ratio: 50.0%
+  Action: Check for already compressed assets
