@@ -135,6 +135,7 @@ describe("Advanced Components", () => {
   });
   
   it("should render test content", () => {
+    const TestComponent = () => <div>Test content</div>;
     render(<TestComponent />);
     expect(screen.getByText("Test content")).toBeInTheDocument();
   });

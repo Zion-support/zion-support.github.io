@@ -1,4 +1,6 @@
 
+import React from 'react';
+
 interface GlobalErrorBoundaryProps {
   children: React.ReactNode;
 }
@@ -10,4 +12,6 @@ const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = ({ children }) =
     </div>
   );
 };
+
+export default GlobalErrorBoundary;
 
