@@ -18,7 +18,6 @@ interface SystemStats {
 }
 
 const SystemMonitor: React.FC<SystemMonitorProps> = ({
-  _showDetails = true,
   refreshInterval = 1000,
   className = '',
 }) => {
