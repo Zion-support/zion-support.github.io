@@ -10,7 +10,7 @@ interface EnhancedAccessibilityEnhancerProps {
   enableHighContrast?: boolean
   enableFocusManagement?: boolean
   enableVoiceNavigation?: boolean
-
+}
 
 const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({
   children,

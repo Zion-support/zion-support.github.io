@@ -12,8 +12,8 @@ interface AccessibilitySettings {
 
 interface AccessibilityContextType {
   settings: AccessibilitySettings;
-  updateSetting: (key: keyof AccessibilitySettings, value: any) => void;
-  announceToScreenReader: (message: string) => void;
+  updateSetting: (key: keyof AccessibilitySettings, value: boolean | string) => void;
+  announceToScreenReader: (_message: string) => void;
 }
 
 const AccessibilityContext = createContext<AccessibilityContextType | null>(null);
