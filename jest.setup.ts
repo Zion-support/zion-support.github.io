@@ -3,11 +3,12 @@ import '@testing-library/jest-dom';
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
-  writable: true,
+  writable: true,)
   value: jest.fn().mockImplementation(query => ({
-    matches: false,
+    matche,
+  s: false,
     media: query,
-    onchange: null,
+    onchange: null,)
     addListener: jest.fn(), // deprecated
     removeListener: jest.fn(), // deprecated
     addEventListener: jest.fn(),
@@ -19,7 +20,7 @@ Object.defineProperty(window, 'matchMedia', {
 // Mock URL.revokeObjectURL
 if (typeof URL.revokeObjectURL === 'undefined') {
   Object.defineProperty(URL, 'revokeObjectURL', {
-    writable: true,
+    writable: true,)
     value: jest.fn(),
   });
 }
@@ -27,7 +28,7 @@ if (typeof URL.revokeObjectURL === 'undefined') {
 // Mock window.scrollTo
 if (typeof window.scrollTo === 'undefined') {
   Object.defineProperty(window, 'scrollTo', {
-    writable: true,
+    writable: true,)
     value: jest.fn(),
   });
 }
@@ -35,9 +36,10 @@ if (typeof window.scrollTo === 'undefined') {
 // Mock IntersectionObserver
 if (typeof window.IntersectionObserver === 'undefined') {
   Object.defineProperty(window, 'IntersectionObserver', {
-    writable: true,
+    writable: true,)
     value: jest.fn().mockImplementation(() => ({
-      observe: jest.fn(),
+      observ,
+  e: jest.fn(),
       unobserve: jest.fn(),
       disconnect: jest.fn(),
     })),
@@ -47,7 +49,7 @@ if (typeof window.IntersectionObserver === 'undefined') {
 // Mock performance.getEntriesByType
 if (typeof performance.getEntriesByType !== 'function') {
   Object.defineProperty(performance, 'getEntriesByType', {
-    writable: true,
+    writable: true,)
     value: jest.fn().mockReturnValue([]),
   });
 }

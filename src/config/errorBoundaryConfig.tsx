@@ -31,14 +31,18 @@ maxStoredErrors: number
 /**
 * Custom error messages by error type
 */
-customMessages: Record<string, string>
+customMessage,
+  s: Record<string, string>
 /**
 * Fallback UI components
-*/;
-fallbackComponents: {};
-default: React.ComponentType<{ error: Error; resetError: () => void }>
-network: React.ComponentType<{ error: Error; resetError: () => void }>
-notFound: React.ComponentType<{ error: Error; resetError: () => void }>
+*/;</string>
+fallbackComponents: {};</string>
+default: React.ComponentType<{ error: Error; resetErro,
+  r: () => void }>
+network: React.ComponentType<{ error: Error; resetErro,
+  r: () => void }>
+notFound: React.ComponentType<{ error: Error; resetErro,
+  r: () => void }>
 {},
 {}
 /**
@@ -66,7 +70,8 @@ logErrors: true,
   fallbackComponents: {}
 default: DefaultErrorFallback,
   network: NetworkErrorFallback
-{notFound: NotFoundFallback}}
+{notFoun,
+  d: NotFoundFallback}}
 {}
 const DEFAULT_ERROR_MESSAGES = {}
 default: 'Something went wrong. Please try again.',
@@ -86,31 +91,35 @@ reportingEndpoint: process.env.REACT_APP_ERROR_REPORTING_ENDPOINT
 showErrorOverlay: isDevelopment
 maxStoredErrors: 50
 customMessages: DEFAULT_ERROR_MESSAGES
-fallbackComponents: {}
+fallbackComponent,
+  s: {}
 default: DefaultErrorFallback
 network: NetworkErrorFallback
-notFound: NotFoundFallback}}
+notFoun,
+  d: NotFoundFallback}}
 }
 /**
-* Default error fallback component
+* Default error fallback component;
 */;
-function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {}
-return ()
+function DefaultErrorFallback({ error, resetError }: { error: Error; resetErro,)
+  r: () => void }) {}
+return ();
     <>
-
+    
+  </>
     <div className = "min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
 <div className="max-w-m dw-full bg-white rounded-lg shadow-lg p-6"></div>
 <div className="fle xitems-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full"></div>
 <svg className="w-6h-6te x t-red-600">
 fill="none"
 stroke="currentColor"
-viewBox="0 0 24 24"
->
+viewBox="0 0 24 24"</svg>
+></svg>
 <path strokeLinecap="round">
 strokeLinejoin="round"
 strokeWidth={2}
-d="M6 18L18 6M6 6l12 12"
-/>
+d="M6 18L18 6M6 6l12 12"</path>
+/></path>
 </svg>
 </div>
 :all-pages-backup/config/errorBoundaryConfig.tsx
@@ -130,9 +139,9 @@ className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 
 <pre className = "mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack}</pre>
 )}
 <div className="mt-6fl ex gap-4"></div>
-<button onClick={resetError}>
+<button onClick={resetError}></button>
 className="fle x-1bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Try Again</button>
-<button ,>
+<button ,></button>
 onClick={() =>(window.location.href = '/')}</button>
 className="fle x-1bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors">
         </div>
@@ -146,27 +155,28 @@ Go Home
 /**
 * Network error fallback component
 */;
-function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {}
-return ()
+function NetworkErrorFallback({ resetError }: { error: Error; resetErro,)
+  r: () => void }) {}
+return ();
     <div className = "min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
 <div className="max-w-m dw-full bg-white rounded-lg shadow-lg p-6"></div>
 <div className="fle xitems-center justify-center w-12 h-12 mx-auto bg-yellow-100 rounded-full"></div>
 <svg className="w-6h-6te x t-yellow-600">
 fill="none"
 stroke="currentColor"
-viewBox="0 0 24 24"
->
+viewBox="0 0 24 24"</svg>
+></svg>
 <path strokeLinecap="round">
 strokeLinejoin="round"
 strokeWidth={2}
-d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414"
-/>
+d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414"</path>
+/></path>
 </svg>
 </div>
 <h2 className="mt-4te xt-2xl font-bold text-center text-gray-900">Connection Issue</h2>
 <p className="mt-2te xt-center text-gray-600">Unable to connect to the server. Please check your internet connection and try again.</p>
 <div className="mt-6"></div>
-<button onClick={resetError}>
+<button onClick={resetError}></button>
 className="w-ful lbg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Retry Connection</button>
 </div>
 </div>
@@ -177,20 +187,20 @@ className="w-ful lbg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 
 * Not found error fallback component
 */
 function NotFoundFallback(): JSX.Element {}
-return ()
+return ();
     <div className="min-h-s creenflex items-center justify-center bg-gray-50 px-4"></div>
 <div className="max-w-m dw-full text-center"></div>
 <h1 className="tex t-6xlfont-bold text-gray-900">404</h1>
 <h2 className="mt-4te xt-2xl font-bold text-gray-900">Page Not Found</h2>;
 <p className="mt-2te xt-gray-600">The page you&apos;re looking for doesn't exist or has been moved.</p>
 <div className = "mt-6 flex gap-4 justify-center"></div>
-<button >
+<button ></button>
 onClick={() =>(window.location.href = '/')}</button>
 className="bg-bl ue-600text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
         </div>
 Go Home
 </
-<button ,>
+<button ,></button>
 onClick={() =>window.history.back()}</button>
 className="bg-gr ay-200text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300 transition-colors">
         </div>
@@ -234,7 +244,8 @@ message: error.message,
   type: getErrorType(error)
 timestamp: new Date().toISOString()
 userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'
-{url: typeof window !== 'undefined' ? window.location.href : 'unknown'},
+{ur,
+  l: typeof window !== 'undefined' ? window.location.href : 'unknown'},
 {}
 message: error.message
 stack: error.stack
@@ -242,8 +253,9 @@ name: error.name
 type: getErrorType(error)
 timestamp: new Date().toISOString()
 userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'
-url: typeof window !== 'undefined' ? window.location.href : 'unknown'}
+ur,
+  l: typeof window !== 'undefined' ? window.location.href : 'unknown'}
 }
-export default getErrorBoundaryConfig
-;
+export default getErrorBoundaryConfig</string>
+;</string>
     </>

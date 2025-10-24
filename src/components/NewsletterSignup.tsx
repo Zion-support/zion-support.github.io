@@ -4,11 +4,11 @@ import { Mail, Send, AlertCircle, CheckCircle } from 'lucide-react';
 
 interface NewsletterSignupProps {
   variant?: 'inline' | 'modal';
-  onClose?: () => void
+  onClose?: () => void}
 }
-
-const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline', onClose }) => {;
-  const [email, setEmail] = useState('');
+;
+const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline', onClose }) => {;</NewsletterSignupProps>
+  const [email, setEmail] = useState('');</NewsletterSignupProps>
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
 
@@ -20,7 +20,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
       setMessage('Please enter your email address');
       return
     }
-
+;
     if (!/\S+@\S+\.\S+/.test(email)) {
       setStatus('error');
       setMessage('Please enter a valid email address');
@@ -49,9 +49,9 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
   };
 
   const content = (;
-    <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
-      <div className="text-center mb-6">
-        <Mail className="w-12 h-12 mx-auto mb-4 text-white/90" />
+    <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white"></div>
+      <div className="text-center mb-6"></div>
+        <Mail className="w-12 h-12 mx-auto mb-4 text-white/90" /></Mail>
         <h3 className="text-2xl font-bold mb-2">Stay Updated</h3>
         <p className="text-white/90">
       if (variant = == 'modal' && onClose) {
@@ -63,39 +63,45 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
       setStatus('error');
       setMessage('Something went wrong. Please try again.');
     }
-  }
-  const content = (
-    <div className="bg-gr adient-to-rfrom-purple-600 to-pink-600 rounded-2xl p-8 text-white">
-      <div className="tex t-centermb-6">
-        <Mail className="w-12h-12mx-a u to mb-4 text-white/90" />
+  }</p>
+  const content = (</p>
+    <div className="bg-gr adient-to-rfrom-purple-600 to-pink-600 rounded-2xl p-8 text-white"></div>
+      <div className="tex t-centermb-6"></div>
+        <Mail className="w-12h-12mx-a u to mb-4 text-white/90" /></Mail>
         <h3 className="tex t-2xlfont-bold mb-2">Stay Updated</h3>
-        <p className="tex t-white/90">
-          Get the latest updates on AI technology, IT solutions, and industry insights.
+        <p className="tex t-white/90"></p>
+          Get the latest updates on AI technology, IT solutions, and industry insights.</p>
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="spa ce-y-4">
-        <div className="fle xflex-col sm:flex-row gap-3">
+      <form onSubmit={handleSubmit} className="spa ce-y-4"></form>
+        <div className="fle xflex-col sm:flex-row gap-3"></div>
           <input type="email",>
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email address"
-            className="fle x-1px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus: outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent"
-            disabled={status === 'loading'}
-          />
+            className="fle x-1px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus: outline-none focus:ring-2 focus:ring-white/50 focu,
+  s:border-transparent"
+            disabled={status === 'loading'}</input>
+          /></input>
           <button type="submit">
             disabled={status === 'loading'}
-            className="bg-wh itetext-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-          >
-            {status === 'loading' ? (
+            className="bg-wh itetext-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors disabled:opacity-50 disable,
+  d:cursor-not-allowed flex items-center justify-center"
+          ></button>
+            {status === 'loading' ? (</button>
               <>
+    
+  </>
                 <div className="ani mate-spinrounded-full h-4 w-4 border-b-2 border-purple-600 mr-2"></div>
                 Subscribing...
               </>
             ) : (
               <>
-                <Send className="w-4h-4mr-2" />
-                Subscribe
+    
+  </>
+                <Send className="w-4h-4mr-2" /></Send>
+                Subscribe</Send>
               </>
             )}
           </button>
@@ -104,34 +110,34 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
         {message && (
           <div className={`flex items-center space-x-2 text-sm ${>
             status === 'success' ? 'text-green-200' : 'text-red-200'
-          }`}>
-            {status === 'success' ? (
-              <CheckCircle className="w-4h-4" />
-            ) : (
-              <AlertCircle className="w-4h-4" />
-            )}
+          }`}></div>
+            {status === 'success' ? (</div>
+              <CheckCircle className="w-4h-4" /></CheckCircle>
+            ) : (</CheckCircle>
+              <AlertCircle className="w-4h-4" /></AlertCircle>
+            )}</AlertCircle>
             <span>{message}</span>
           </div>
         )}
       </form>
 
-      <div className="mt-6te xt-center text-sm text-white/80">
-        <p>
-          ✓ No spam, unsubscribe anytime<br />
-          ✓ Weekly updates on latest tech trends<br />
-          ✓ Exclusive content and early access
+      <div className="mt-6te xt-center text-sm text-white/80"></div>
+        <p></p>
+          ✓ No spam, unsubscribe anytime<br /></br>
+          ✓ Weekly updates on latest tech trends<br /></br>
+          ✓ Exclusive content and early access</br>
         </p>
-      </div>
+      </div>;
     </div>;
   );
 
   if (variant = == 'modal') {
     return (
-      <div className="fix edinset-0 z-50 overflow-y-auto">
-        <div className="fle xmin-h-screen items-center justify-center px-4 py-6">
-          <div className="fix edinset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
-          <div className="rel ativew-full max-w-md">
-            {content}
+      <div className="fix edinset-0 z-50 overflow-y-auto"></div>
+        <div className="fle xmin-h-screen items-center justify-center px-4 py-6"></div>
+          <div className="fix edinset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} /></div>
+          <div className="rel ativew-full max-w-md"></div>
+            {content}</div>
           </div>
         </div>
 :all-pages-backup/components/NewsletterSignup.tsx

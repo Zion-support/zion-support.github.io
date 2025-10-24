@@ -18,7 +18,7 @@ export default function AiecommerceassistantPage() {
             Ai Ecommerce Assistant
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-ecommerce-assistant services coming soon.
+            ai-ecommerce-assistant services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

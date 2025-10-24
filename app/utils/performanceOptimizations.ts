@@ -4,21 +4,23 @@ import { useCallback, useMemo } from 'react';
 // Debounce utility for performance
 export const debounce = <T extends (...args: any[]) => any>(,
     func: T
-  wait: number
-): ((...args: Parameters<T>) => void) => {
+  wait: number</T>
+): ((...args: Parameters<T>) => void) => {;
   let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {
+  return (...arg,</T>
+  s: Parameters<T>) => {
     clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait)
   }
 }
-// Throttle utility for performance
+// Throttle utility for performance</T>
 export const throttle = <T extends (...args: any[]) => any>(,
     func: T
-  limit: number
-): ((...args: Parameters<T>) => void) => {
+  limit: number</T>
+): ((...args: Parameters<T>) => void) => {;
   let inThrottle: boolean;
-  return (...args: Parameters<T>) => {
+  return (...arg,</T>
+  s: Parameters<T>) => {
     if (!inThrottle) {
       func(...args)
       inThrottle = true
@@ -28,25 +30,26 @@ export const throttle = <T extends (...args: any[]) => any>(,
 }
 // Intersection Observer hook for lazy loading
 export const useIntersectionObserver = (
-  callback: (entries: IntersectionObserverEntry[]) => void,
+  callback: (entrie,
+  s: IntersectionObserverEntry[]) => void,
     options: IntersectionObserverInit = {}
 ) => {
-  const observer = useMemo(
+  const observer = useMemo()
     () =>
       typeof window !== 'undefined'
         ? new IntersectionObserver(callback, {
             threshold: 0.1,
     rootMargin: '50px',
-            ...options
+            ...options)
 })
         : null
     [callback, options]
   )
-  const observe = useCallback(
+  const observe = useCallback()
     (element: Element | null) => {
       if (observer && element) {
         observer.observe(element)
-        return (
+        return (</T>
     <>
       ) => observer.unobserve(element)
       }
@@ -70,7 +73,7 @@ export const useLazyImage = (src: string, placeholder?: string) => {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isError, setIsError] = useState(false)
   const { observe } = useIntersectionObserver(
-    useCallback(
+    useCallback()
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !isLoaded && !isError) {
@@ -87,7 +90,7 @@ export const useLazyImage = (src: string, placeholder?: string) => {
         })
       }
       [src, isLoaded, isError]
-    
+    ;
   );
   return { imageSrc, isLoaded, isError, observe }
 }
@@ -111,7 +114,7 @@ export const usePerformanceMonitoring = (
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime
       setMetrics({
         fcp
-        lcp
+        lcp)
         ttfb: navigation?.responseStart - navigation?.requestStart})
     }
     // Monitor performance after page load
@@ -155,7 +158,8 @@ export const useMemoryMonitoring = (
         setMemoryInfo({
           usedJSHeapSize: memory.usedJSHeapSize,
     totalJSHeapSize: memory.totalJSHeapSize
-          jsHeapSizeLimit: memory.jsHeapSizeLimit})
+          jsHeapSizeLimi,)
+  t: memory.jsHeapSizeLimit})
       }
     }
     updateMemoryInfo()
@@ -220,7 +224,7 @@ export const useBundleSizeMonitoring = (
   totalSize
         jsSize
         cssSize
-        imageSize
+        imageSize)
 })
     }
     // Calculate after page load
@@ -250,4 +254,4 @@ const performanceOptimizations = {
   preloadCriticalResources
   useBundleSizeMonitoring
 }
-export default performanceOptimizations
+export default performanceOptimizations;

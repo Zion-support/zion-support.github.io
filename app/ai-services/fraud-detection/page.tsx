@@ -18,7 +18,7 @@ export default function FrauddetectionPage() {
             Fraud Detection
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional fraud-detection services coming soon.
+            fraud-detection services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

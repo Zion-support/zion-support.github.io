@@ -18,7 +18,7 @@ export default function AiimagerecognitionproPage() {
             Ai Image Recognition Pro
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-image-recognition-pro services coming soon.
+            ai-image-recognition-pro services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

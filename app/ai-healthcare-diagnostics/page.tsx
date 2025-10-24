@@ -18,7 +18,7 @@ export default function AihealthcarediagnosticsPage() {
             Ai Healthcare Diagnostics
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-healthcare-diagnostics services coming soon.
+            ai-healthcare-diagnostics services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

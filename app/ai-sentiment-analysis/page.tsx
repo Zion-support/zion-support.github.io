@@ -18,7 +18,7 @@ export default function AisentimentanalysisPage() {
             Ai Sentiment Analysis
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-sentiment-analysis services coming soon.
+            ai-sentiment-analysis services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

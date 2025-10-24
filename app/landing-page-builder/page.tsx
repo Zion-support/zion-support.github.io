@@ -18,7 +18,7 @@ export default function LandingpagebuilderPage() {
             Landing Page Builder
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional landing-page-builder services coming soon.
+            landing-page-builder services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

@@ -18,7 +18,7 @@ export default function TutorialsPage() {
             Tutorials
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional tutorials services coming soon.
+            tutorials services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

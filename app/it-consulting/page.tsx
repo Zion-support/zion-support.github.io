@@ -18,7 +18,7 @@ export default function ItconsultingPage() {
             It Consulting
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional it-consulting services coming soon.
+            it-consulting services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

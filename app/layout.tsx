@@ -5,10 +5,12 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'ZionTechGroup - AI Solutions & Technology Services',
+  titl,
+  e: 'ZionTechGroup - AI Solutions & Technology Services',
   description: 'Leading provider of AI solutions, technology services, and digital transformation for businesses worldwide.',
   keywords: ['AI solutions', 'technology services', 'digital transformation', 'machine learning', 'artificial intelligence'],
-  authors: [{ name: 'ZionTechGroup' }],
+  authors: [{ nam,
+  e: 'ZionTechGroup' }],
   creator: 'ZionTechGroup',
   publisher: 'ZionTechGroup',
   formatDetection: {
@@ -55,7 +57,9 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'your-google-verification-code',
-  },}
+  },
+};
+
 export default function RootLayout({
   children,
 }: {

@@ -13,9 +13,6 @@ import { CheckCircle, ArrowRight } from 'lucide-react'
     'Reduce costs by 30% with automation'
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases'
-    'Gain competitive advantage with advanced technology';}
-<<<<<<< HEAD
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ className = '''
-=======
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ className = ''
->>>>>>> cursor/fix-errors-and-merge-to-main-d1ed
+    'Gain competitive advantage with advanced technology';};
+
+export default ContentNewsletterSignup;

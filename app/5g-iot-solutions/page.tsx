@@ -18,7 +18,7 @@ export default function GiotsolutionsPage() {
             5g Iot Solutions
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional 5g-iot-solutions services coming soon.
+            5g-iot-solutions services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

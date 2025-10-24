@@ -18,7 +18,7 @@ export default function GdprPage() {
             Gdpr
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional gdpr services coming soon.
+            gdpr services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

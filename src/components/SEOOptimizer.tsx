@@ -6,9 +6,9 @@ import { Helmet } from 'react-helmet-async';
 
 :all-pages-backup/components/SEOOptimizer.tsx
 interface SEOOptimizerProps {
-  children: React.ReactNode
+  children: React.ReactNode}
 }
-
+;
 export default function SEOOptimizer({ children }: SEOOptimizerProps) {
   useEffect(() => {
     // SEO optimizations
@@ -38,34 +38,37 @@ export default function SEOOptimizer({ children }: SEOOptimizerProps) {
 
   return (
     <>
-      <Helmet>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#059669" />
-        <link rel="canonical" href={typeof window !== 'undefined' ? window.location.href : ''} />
+    
+  </>
+      <Helmet></Helmet>
+        <meta name="viewport" content="width=device-width, initial-scale=1" /></meta>
+        <meta name="theme-color" content="#059669" /></meta>
+        <link rel="canonical" href={typeof window !== 'undefined' ? window.location.href : ''} /></link>
       </Helmet>
       {children}
     </>
-  )
+  );
 };
 ;
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 
 interface SEOOptimizerProps {;
-  className?: string
+  className?: string}
 }
-
+;
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({;
 interface SEOOptimizerProps {;
-  className?: string;
-}
-
+  className?: string;}
+}</SEOOptimizerProps>
+;</SEOOptimizerProps>
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions'
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.'
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI']
   canonicalUrl = 'https://ziontechgroup.com'
-  ogImage = 'https://ziontechgroup.com/og-image.jpg'
+  ogImage = 'http,
+  s://ziontechgroup.com/og-image.jpg'
   structuredData
 }) => {
   useEffect(() => {
@@ -185,44 +188,45 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
 
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData])
-
-  return (
-    <Head>
-:all-pages-backup/components/SEOOptimizer.tsx
+</SEOOptimizerProps>
+  return (</SEOOptimizerProps>
+    <Head></Head>
+:all-pages-backup/components/SEOOptimizer.tsx</Head>
       <title>{title}</title>;
-      <meta name=&quot;description&quot; content={description} />
-      <meta name=&quot;keywords&quot; content={keywords.join(', ')} />
-      <link rel=&quot;canonical&quot; href={canonicalUrl} />
+      <meta name=&quot;description&quot; content={description} /></meta>
+      <meta name=&quot;keywords&quot; content={keywords.join(', ')} /></meta>
+      <link rel=&quot;canonical&quot; href={canonicalUrl} /></link>
         <title>{title}</title>;
-      <meta name=&quot;description&quot; content = {description} />;
-      <meta name=&quot;keywords&quot; content = {keywords.join(', ')} />;
-      <link rel=&quot;canonical&quot; href = {canonicalUrl} />
-      {/* Open Graph */}
-      <meta property=&quot;og:title&quot; content = {title} />;
-      <meta property=&quot;og:description&quot; content = {description} />;
-      <meta property=&quot;og:image&quot; content = {ogImage} />;
-      <meta property=&quot;og:url&quot; content = {canonicalUrl} />;
-      <meta property=&quot;og: type&quot; content=&quot;website&quot; />
-      {/* Twitter Card */}
-      <meta name=&quot;twitter: card&quot; content=&quot;summary_large_image&quot; />
-      <meta name=&quot;twitter:title&quot; content = {title} />;
-      <meta name=&quot;twitter:description&quot; content = {description} />;
-      <meta name=&quot;twitter:image&quot; content = {ogImage} />
-      {/* Additional SEO meta tags */}
-      <meta name=&quot;robots&quot; content=&quot;index, follow&quot; />
-      <meta name=&quot;author&quot; content=&quot;Zion Tech Group&quot; />
-      <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; />
+      <meta name=&quot;description&quot; content = {description} />;</meta>
+      <meta name=&quot;keywords&quot; content = {keywords.join(', ')} />;</meta>
+      <link rel=&quot;canonical&quot; href = {canonicalUrl} /></link>
+      {/* Open Graph */}</link>
+      <meta property=&quot;og:title&quot; content = {title} />;</meta>
+      <meta property=&quot;og:description&quot; content = {description} />;</meta>
+      <meta property=&quot;og:image&quot; content = {ogImage} />;</meta>
+      <meta property=&quot;og:url&quot; content = {canonicalUrl} />;</meta>
+      <meta property=&quot;og: type&quot; content=&quot;website&quot; /></meta>
+      {/* Twitter Card */}</meta>
+      <meta name=&quot;twitter: card&quot; content=&quot;summary_large_image&quot; /></meta>
+      <meta name=&quot;twitte,
+  r:title&quot; content = {title} />;</meta>
+      <meta name=&quot;twitter:description&quot; content = {description} />;</meta>
+      <meta name=&quot;twitter:image&quot; content = {ogImage} /></meta>
+      {/* Additional SEO meta tags */}</meta>
+      <meta name=&quot;robots&quot; content=&quot;index, follow&quot; /></meta>
+      <meta name=&quot;author&quot; content=&quot;Zion Tech Group&quot; /></meta>
+      <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /></meta>
       <meta charSet=&quot;UTF-8&quot; />
       {/* Structured Data */}
-      {structuredData && (
-:all-pages-backup/components/SEOOptimizer.tsx
+      {structuredData && (</meta>
+:all-pages-backup/components/SEOOptimizer.tsx</meta>
         <script
           type=&quot;application/ld+json&quot
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         <script type=&quot;application/ld+json&quot;>
           dangerouslySetInnerHTML = {{ __html: JSON.stringify(structuredData) }}
-        />
-      )}
+        /></script>
+      )}</script>
     </Head>
   )
 }

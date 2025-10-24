@@ -3,4 +3,4 @@
 export const link = () => {
   // Utility function implementation
   return null
-export default link
+export default link;

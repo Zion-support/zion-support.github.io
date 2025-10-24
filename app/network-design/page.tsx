@@ -18,7 +18,7 @@ export default function NetworkdesignPage() {
             Network Design
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional network-design services coming soon.
+            network-design services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

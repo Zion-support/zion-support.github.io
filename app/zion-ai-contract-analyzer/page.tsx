@@ -18,7 +18,7 @@ export default function ZionaicontractanalyzerPage() {
             Zion Ai Contract Analyzer
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional zion-ai-contract-analyzer services coming soon.
+            zion-ai-contract-analyzer services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

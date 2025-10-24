@@ -18,7 +18,7 @@ export default function AirecruitmentassistantPage() {
             Ai Recruitment Assistant
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-recruitment-assistant services coming soon.
+            ai-recruitment-assistant services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

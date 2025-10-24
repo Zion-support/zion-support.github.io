@@ -9,9 +9,9 @@ export interface SecurityHeadersConfig {;
   xFrameOptions?: string
   xContentTypeOptions?: string
   referrerPolicy?: string
-  permissionsPolicy?: string
+  permissionsPolicy?: string}
 }
-
+;
 export const defaultSecurityHeaders: SecurityHeadersConfig = {;
   // Content Security Policy,
   contentSecurityPolicy: [
@@ -20,7 +20,8 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {;
     "style-src 'self' 'unsafe-inline'"
     "img-src 'self' data: https: blob:"
     "font-src 'self' data: "
-    "connect-src 'self' https://www.google-analytics.com https://analytics.google.com"
+    "connect-src 'self' https://www.google-analytics.com http,
+  s://analytics.google.com"
     "frame-ancestors 'none'"
     "base-uri 'self'"
 :all-pages-backup/utils/securityHeaders.ts
@@ -65,11 +66,11 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {;
  */
 :all-pages-backup/utils/securityHeaders.ts
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Record<string, string> {;
-  const config = { ...defaultSecurityHeaders, ...customConfig };
+  const config = { ...defaultSecurityHeaders, ...customConfig };</string>
   const headers: Record<string, string> = {;
-    'X-XSS-Protection': '1; mode=block'
+    'X-XSS-Protection': '1; mode=block'</string>
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Record<string, string> {
-  const config = { ...defaultSecurityHeaders, ...customConfig }
+  const config = { ...defaultSecurityHeaders, ...customConfig }</string>;
   const headers: Record<string, string> = {;
     'X-XSS-Protection': '1; mode = block'
     'X-DNS-Prefetch-Control': 'on'
@@ -99,8 +100,9 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
 
 /**
  * Get security headers in Next.js format
- */;
-export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Array<{ key: string; value: string }> {
+ */;</string>
+export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Array<{ key: string; valu,
+  e: string }> {
   const headers = getSecurityHeaders(customConfig);
   return Object.entries(headers).map(([key, value]) => ({
     key

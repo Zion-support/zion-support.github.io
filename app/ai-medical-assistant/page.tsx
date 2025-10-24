@@ -18,7 +18,7 @@ export default function AimedicalassistantPage() {
             Ai Medical Assistant
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-medical-assistant services coming soon.
+            ai-medical-assistant services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

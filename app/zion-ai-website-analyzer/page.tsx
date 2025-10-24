@@ -18,7 +18,7 @@ export default function ZionaiwebsiteanalyzerPage() {
             Zion Ai Website Analyzer
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional zion-ai-website-analyzer services coming soon.
+            zion-ai-website-analyzer services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

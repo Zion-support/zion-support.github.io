@@ -2,14 +2,15 @@ import { useCallback, useEffect, useState, useRef } from 'react'
 interface UsePerformanceMonitorOptions {
   enabled?: boolean
   threshold?: number
-  measureMemoryUsage?: boolean
-}
+  measureMemoryUsage?: boolean}
+};
 interface PerformanceData {
   fps: number
   memoryUsage: number
   loadTime: number
-  renderTime: number
-}
+  renderTim,
+  e: number}
+};
 export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}) => {
   const [metrics, setMetrics] = useState<PerformanceData>({
     fps: 0,
@@ -25,7 +26,7 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
       const memory = (performance as any).memory
       setMetrics(prev => ({
         ...prev,
-        memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
+        memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB)
       }))
     }
   }, [])
@@ -44,7 +45,7 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
         const fps = Math.round((frameCountRef.current * 1000) / (currentTime - lastTimeRef.current))
         setMetrics(prev => ({
           ...prev,
-          fps,
+          fps,)
         }))
         frameCountRef.current = 0
         lastTimeRef.current = currentTime
@@ -66,5 +67,5 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
     measureMemoryUsage,
     init
   }
-}
-export default usePerformanceMonitor;
+};
+export default usePerformanceMonitor;</PerformanceData>

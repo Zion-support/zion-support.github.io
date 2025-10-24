@@ -18,7 +18,7 @@ export default function ZionsmartcrmautomationPage() {
             Zion Smart Crm Automation
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional zion-smart-crm-automation services coming soon.
+            zion-smart-crm-automation services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"

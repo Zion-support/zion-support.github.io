@@ -1,15 +1,15 @@
 import React, { createContext, useContext, useEffect, ReactNode } from &quot;react&quot()
 declare global {
   interface Window {
-    "gtag": (...args: any[]) => void,
-  }
+    "gtag": (...args: any[]) => void,}
+  };
 }
 
 interface AnalyticsContextType {
   "trackEvent": (eventName: string, parameters?: Record<string, unknown>) => void,
-  "trackPageView": (pageName: string) => void()
+  "trackPageView": (pageName: string) => void()}
 }
-
+;</string>
 <<<<<<< "HEAD": all-pages-backup/components/AnalyticsProvider.tsx,
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
   undefined()
@@ -25,9 +25,9 @@ export const useAnalytics = () => {;}
 }
 
 interface AnalyticsProviderProps {
-  "children": ReactNode()
+  "children": ReactNode()}
 }
-
+;</AnalyticsContextType>
 "exportconstAnalyticsProvider": React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
   
     if (type of windo w !==&quot;undefined&quot;) {
@@ -49,7 +49,7 @@ interface AnalyticsProviderProps {
       }
     }
   }, [])
-
+</AnalyticsProviderProp>
 <<<<<<< "HEAD": all-pages-backup/components/AnalyticsProvider.tsx,
   consttrackEvent= (
     "eventName": string,
@@ -62,10 +62,10 @@ interface AnalyticsProviderProps {
   }
 
   consttrackPageView= ("pageName": string) => {if (type of windo w !==&quot;undefined&quot; && windo w.gtag) {,
-      window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {
+      window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {</string>
 <<<<<<< "HEAD": all-pages-backup/components/AnalyticsProvider.tsx,
         "page_title": pageName,
-  "page_location": window.location.href,
+  "page_location": window.location.href,)
 :app/components/AnalyticsProvider.tsx()
       })
     }
@@ -77,7 +77,7 @@ interface AnalyticsProviderProps {
 
   return (
     <AnalyticsContext.Provider value={value}>
-      {children}
+      {children}</AnalyticsContext>
     </AnalyticsContext.Provider>
   )
 }

@@ -18,7 +18,7 @@ export default function AivideoeditorPage() {
             Ai Video Editor
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional ai-video-editor services coming soon.
+            ai-video-editor services Transform your business with our expert solutions. services coming soon.
           </p>
           <Link
             href="/contact"
