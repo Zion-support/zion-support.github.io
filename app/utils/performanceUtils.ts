@@ -10,6 +10,13 @@ export const defaultFunction = () => {
 
 // Performance monitoring utilities
 export const performanceUtils = {
+  measurePerformance: (name: string, fn: () => void) => {
+    const start = performance.now();
+    fn();
+    const end = performance.now();
+    console.log(`${name} took ${end - start} milliseconds`);
+  },
+
   monitorWebVitals: () => {
     if (typeof window !== 'undefined' && 'web-vitals' in window) {
       // Web vitals monitoring would go here
@@ -27,6 +34,7 @@ export const performanceUtils = {
         }
       });
     }
+    return true;
   },
 
   optimizeFonts: () => {
@@ -39,9 +47,10 @@ export const performanceUtils = {
       link.crossOrigin = 'anonymous';
       document.head.appendChild(link);
     }
+    return true;
   },
 
-  optimizeThirdPartyScripts: () => {
+  optimizeThirdParty: () => {
     if (typeof window !== 'undefined') {
       // Third-party script optimization
       const scripts = document.querySelectorAll('script[src]');
@@ -51,6 +60,7 @@ export const performanceUtils = {
         }
       });
     }
+    return true;
   },
 
   preloadResource: (href: string, as: string) => {
