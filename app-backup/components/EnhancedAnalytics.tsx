@@ -1,9 +1,16 @@
+<<<<<<< HEAD:app-backup/components/EnhancedAnalytics.tsx
 import React, { createContext, useContext, useEffect } from &quot;react&quot
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 &quot;use client&quot
+=======
+'use client'
+
+import React, { createContext, useContext, useEffect } from 'react'
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-4eef:app/components/EnhancedAnalytics.tsx
 interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, unknown>) => void
   identify: (userId: string, traits?: Record<string, unknown>) => void
@@ -15,42 +22,69 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext)
   if (!context) {
-    throw new Error(&quot;useAnalytics must be used within an AnalyticsProvider&quot;)
+    throw new Error('useAnalytics must be used within an AnalyticsProvider')
   }
   return context
 }
 interface AnalyticsProviderProps {
+<<<<<<< HEAD:app-backup/components/EnhancedAnalytics.tsx
   children: React.ReactNode}
 exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => {useEffect(() => {
+=======
+  children: React.ReactNode
+}
+
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  useEffect(() => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-4eef:app/components/EnhancedAnalytics.tsx
     // Initialize analytics
-    if (type of windo w !==&quot;undefined&quot;) {
+    if (typeof window !== 'undefined') {
       // Google Analytics
-      if (process.env.NODE_ENV === &quot;production&quot;) {
-        const script = document.createElement(&quot;script&quot;)
+      if (process.env.NODE_ENV === 'production') {
+        const script = document.createElement('script')
         script.async = true
         script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID}`
         document.head.appendChild(script)
+<<<<<<< HEAD:app-backup/components/EnhancedAnalytics.tsx
         (window as unknown as { dataLayer: unknown[] }).dataLayer =
+=======
+
+        ;(window as unknown as { dataLayer: unknown[] }).dataLayer =
+>>>>>>> cursor/fix-errors-and-merge-to-main-4eef:app/components/EnhancedAnalytics.tsx
           (window as unknown as { dataLayer: unknown[] }).dataLayer || []
         function gtag(...args: unknown[]) {
-          (window as unknown as { dataLayer: unknown[] }).dataLayer.push(args)
+          ;(window as unknown as { dataLayer: unknown[] }).dataLayer.push(args)
         }
-        gtag(&quot;js&quot;, new Date())
-        gtag(&quot;config&quot;, process.env.REACT_APP_GA_ID)
+        gtag('js', new Date())
+        gtag('config', process.env.REACT_APP_GA_ID)
       }
     }
   }, [])
+<<<<<<< HEAD:app-backup/components/EnhancedAnalytics.tsx
   consttrack= (event: string,properties?:Record<string, unknown>) => {if (type of windo w !==&quot;undefined&quot;) {
       // Google Analytics
       if ((windo w as unknown as { gtag?: (...args: unknown[]) => void}).gtag) {(windo w as unknown as { gtag: (...args: unknown[]) => void}).gtag(
          &quot;event&quot;
           event
           properties
+=======
+
+  const track = (event: string, properties?: Record<string, unknown>) => {
+    if (typeof window !== 'undefined') {
+      // Google Analytics
+      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
+        ;(window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
+          'event',
+          event,
+          properties,
+>>>>>>> cursor/fix-errors-and-merge-to-main-4eef:app/components/EnhancedAnalytics.tsx
         )
       }
       // Custom analytics
-      }
+      console.log('Analytics Event:', event, properties)
+    }
   }
+<<<<<<< HEAD:app-backup/components/EnhancedAnalytics.tsx
   constidentify= (userId: string,traits?:Record<string, unknown>) => {if (type of windo w !==&quot;undefined&quot;) {
       // Google Analytics
       if ((windo w as unknown as { gtag?: (...args: unknown[]) => void}).gtag) {(windo w as unknown as { gtag: (...args: unknown[]) => void}).gtag(
@@ -58,11 +92,27 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => 
           process.env.REACT_APP_GA_ID
           {user_id: userId,
     custom_map: traits}
+=======
+
+  const identify = (userId: string, traits?: Record<string, unknown>) => {
+    if (typeof window !== 'undefined') {
+      // Google Analytics
+      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
+        ;(window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
+          'config',
+          process.env.REACT_APP_GA_ID,
+          {
+            user_id: userId,
+            custom_map: traits,
+          },
+>>>>>>> cursor/fix-errors-and-merge-to-main-4eef:app/components/EnhancedAnalytics.tsx
         )
       }
       // Custom analytics
-      }
+      console.log('Analytics Identify:', userId, traits)
+    }
   }
+<<<<<<< HEAD:app-backup/components/EnhancedAnalytics.tsx
   constpage= (name: string,properties?:Record<string, unknown>) => {if (type of windo w !==&quot;undefined&quot;) {
       // Google Analytics
       if ((windo w as unknown as { gtag?: (...args: unknown[]) => void}).gtag) {(windo w as unknown as { gtag: (...args: unknown[]) => void}).gtag(
@@ -71,20 +121,47 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => 
           {page_title: name,
     page_location: windo w.location.href
             ...properties}
+=======
+
+  const page = (name: string, properties?: Record<string, unknown>) => {
+    if (typeof window !== 'undefined') {
+      // Google Analytics
+      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
+        ;(window as unknown as { gtag: (...args: unknown[]) => void }).gtag(
+          'config',
+          process.env.REACT_APP_GA_ID,
+          {
+            page_title: name,
+            page_location: window.location.href,
+            ...properties,
+          },
+>>>>>>> cursor/fix-errors-and-merge-to-main-4eef:app/components/EnhancedAnalytics.tsx
         )
       }
       // Custom analytics
-      }
+      console.log('Analytics Page:', name, properties)
+    }
   }
+<<<<<<< HEAD:app-backup/components/EnhancedAnalytics.tsx
   constvalue: AnalyticsContextType = {track
     identify
     page}
+=======
+
+  const value: AnalyticsContextType = {
+    track,
+    identify,
+    page,
+  }
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-4eef:app/components/EnhancedAnalytics.tsx
   return (
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
   )
 }
+<<<<<<< HEAD:app-backup/components/EnhancedAnalytics.tsx
 // Extend Window interface for TypeScript
 declare global {
   interface Window {
@@ -221,3 +298,7 @@ const EnhancedAnalyticsPage: React.FC = () => {
   )
 }
 export default EnhancedAnalyticsPage
+=======
+
+export default AnalyticsProvider
+>>>>>>> cursor/fix-errors-and-merge-to-main-4eef:app/components/EnhancedAnalytics.tsx

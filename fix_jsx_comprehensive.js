@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 const fs = require('fs')
 const path = require('path')
 function fixFile(filePath) {
@@ -68,3 +69,60 @@ function walkDir(dir) {
 const fixedCount = walkDir('./app')
 // eslint-disable-next-line no-console
     console.log(`Fixed ${fixedCount} files`)
+=======
+function fixJSXComprehensive(content) {
+  // Fix self-closing divs that should be opening divs (with className)
+  content = content.replace(/<div className="[^"]*"><\/div>\s*{/g, (match) => {
+    const className = match.match(/className="([^"]*)"/)[1];
+    return `<div className="${className}">\n            {`;
+  });
+  
+  // Fix self-closing sections that should be opening sections
+  content = content.replace(/<section className="[^"]*"><\/section>\s*{/g, (match) => {
+    const className = match.match(/className="([^"]*)"/)[1];
+    return `<section className="${className}">\n          {`;
+  });
+  
+  // Fix self-closing divs that should be opening divs (without className)
+  content = content.replace(/<div><\/div>\s*{/g, '<div>\n            {');
+  
+  // Fix self-closing divs that should be opening divs (with className, no braces after)
+  content = content.replace(/<div className="[^"]*"><\/div>\s*<[^>]*>/g, (match) => {
+    const className = match.match(/className="([^"]*)"/)[1];
+    const rest = match.replace(/<div className="[^"]*"><\/div>\s*/, '');
+    return `<div className="${className}">\n            ${rest}`;
+  });
+  
+  // Fix self-closing sections that should be opening sections (with className, no braces after)
+  content = content.replace(/<section className="[^"]*"><\/section>\s*<[^>]*>/g, (match) => {
+    const className = match.match(/className="([^"]*)"/)[1];
+    const rest = match.replace(/<section className="[^"]*"><\/section>\s*/, '');
+    return `<section className="${className}">\n          ${rest}`;
+  });
+  
+  return content;
+}
+
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixedContent = fixJSXComprehensive(content);
+    if (content !== fixedContent) {
+      fs.writeFileSync(filePath, fixedContent);
+      console.log(`Fixed: ${filePath}`);
+    }
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+  }
+}
+
+// Process all TSX files in app/components
+const componentsDir = path.join(__dirname, 'app', 'components');
+const files = fs.readdirSync(componentsDir).filter(file => file.endsWith('.tsx'));
+
+files.forEach(file => {
+  processFile(path.join(componentsDir, file));
+});
+
+console.log('Comprehensive JSX fixes completed');
+>>>>>>> cursor/fix-errors-and-merge-to-main-4eef
