@@ -1,4 +1,5 @@
 'use client';
+import React from 'react';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Mail , Mail  } from 'lucide-react';
 import { Home } from 'lucide-react';

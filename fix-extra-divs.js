@@ -1,36 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix JSX structure issues
-function fixJSXStructure(content) {
+// Function to fix extra closing divs
+function fixExtraDivs(content) {
   let fixed = content;
   
-  // Ensure proper React import at the top
-  if (!fixed.includes("import React from 'react';")) {
-    if (fixed.includes("'use client';")) {
-      fixed = fixed.replace("'use client';", "'use client';\nimport React from 'react';");
-    } else {
-      fixed = "import React from 'react';\n" + fixed;
-    }
-  }
-  
-  // Fix malformed Link components
-  fixed = fixed.replace(/LinkContact Us\s*>\s*\$2\s*<ArrowRight\$3 \/>\s*<\/Link>/g, 
-    `Link
-            href="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>`);
-  
-  // Fix ArrowRight$ pattern
-  fixed = fixed.replace(/ArrowRight\$[0-9]/g, 'ArrowRight className="w-5 h-5 ml-2"');
-  
-  // Fix $2, $3 patterns
-  fixed = fixed.replace(/\$[0-9]/g, '');
-  
-  // Fix extra closing divs
+  // Fix extra closing divs at the end of the file
   const lines = fixed.split('\n');
   let extraDivs = 0;
   
@@ -43,7 +18,7 @@ function fixJSXStructure(content) {
     }
   }
   
-  // Remove extra closing divs
+  // Remove extra closing divs (keep only one)
   if (extraDivs > 1) {
     const extraDivsToRemove = extraDivs - 1;
     let removed = 0;
@@ -56,16 +31,6 @@ function fixJSXStructure(content) {
     fixed = lines.join('\n');
   }
   
-  // Fix missing closing fragment tags
-  fixed = fixed.replace(/<\/div>\s*\)\s*$/, '</>\n  );');
-  fixed = fixed.replace(/<\/div>\s*\)\s*;\s*$/, '</>\n  );');
-  
-  // Fix missing semicolon after return statement
-  fixed = fixed.replace(/\)\s*$/, ');');
-  
-  // Fix malformed closing tags
-  fixed = fixed.replace(/<\/div>\s*\)\s*$/, '</>\n  );');
-  
   return fixed;
 }
 
@@ -73,7 +38,7 @@ function fixJSXStructure(content) {
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixJSXStructure(content);
+    const fixed = fixExtraDivs(content);
     
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');

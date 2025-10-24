@@ -1,4 +1,10 @@
 'use client';
+<<<<<<< HEAD
+=======
+import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp, Users, Globe, Database, Settings, Shield, Zap } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-607a
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';

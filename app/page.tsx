@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Head from 'next/head';
@@ -26,5 +27,13 @@ export default function HomePage() {
       </div>
       <Footer />
     </>
+=======
+export default function Home() {
+  return (
+    <div>
+      <h1>Zion Tech Group</h1>
+      <p>Welcome to our website</p>
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-607a
   );
 }

@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+'use client';
+import React from 'react';
+import React from "react";
+>>>>>>> cursor/fix-errors-and-merge-to-main-607a
 "use client";
 import React from "react";
 interface AccessibilityComponentsProps {
