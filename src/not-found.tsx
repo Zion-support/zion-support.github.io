@@ -51,17 +51,17 @@ NotFound.displayName = "NotFound"() {constpopularPages= [
     },
   ]
   return (
-    <div className=&quot;min-h-screen bg-gray-50 flex items-center justify-center px-4&quot;></div>
-      <div className=&quot;max-w-2xl w-full text-center&quot;></div>
+    <div className=&quot;min-h-screen bg-gray-50 flex items-center justify-center px-4&quot; />
+      <div className=&quot;max-w-2xl w-full text-center&quot; />
         {/* Error Code */}
-        <div className=&quot;mb-8&quot;></div>
+        <div className=&quot;mb-8&quot; />
           <h1 className=&quot;text-9xl font-bold text-white/20 mb-4&quot;>
             404
           </h1>
           <div className=&quot;text-6xl mb-4&quot;>🔍</div>
         </div>
         {/* Error Message */}
-        <div className=&quot;mb-12&quot;></div>
+        <div className=&quot;mb-12&quot; />
           <h2 className=&quot;text-3xl font-bold text-gray-900 mb-4&quot;>
             Page Not Found
           </h2>
@@ -85,7 +85,7 @@ NotFound.displayName = "NotFound"() {constpopularPages= [
           ))}
         </div>
         {/* Action Buttons */}
-        <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+        <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot; />
           <a href=&quot;/&quot;
             className=&quot;inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300&quot;
           >

@@ -106,12 +106,12 @@ const Footer: React.FC = () => {
 const Footer = () => {
   return (
     <footer className="bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
-      <div className="container mx-auto px-4 py-12"></div>
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8"></div>
+      <div className="container mx-auto px-4 py-12" />
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8" />
           {/* Company Info */}
-          <div className="lg:col-span-1"></div>
-            <div className="flex items-center space-x-2 mb-4"></div>
-              <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center"></div>
+          <div className="lg:col-span-1" />
+            <div className="flex items-center space-x-2 mb-4" />
+              <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center" />
                 <Brain className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
@@ -119,27 +119,27 @@ const Footer = () => {
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.
             </p>
-            <div className="space-y-3"></div>
-              <div className="flex items-center space-x-3 text-gray-300"></div>
+            <div className="space-y-3" />
+              <div className="flex items-center space-x-3 text-gray-300" />
                 <Phone className="w-4 h-4 text-cyan-400" />
                 <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
                   +1 302 464 0950
                 </a>
               </div>
-              <div className="flex items-center space-x-3 text-gray-300"></div>
+              <div className="flex items-center space-x-3 text-gray-300" />
                 <Mail className="w-4 h-4 text-cyan-400" />
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
                   kleber@ziontechgroup.com
                 </a>
               </div>
-              <div className="flex items-center space-x-3 text-gray-300"></div>
+              <div className="flex items-center space-x-3 text-gray-300" />
                 <MapPin className="w-4 h-4 text-cyan-400" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
           </div>
           {/* Micro SAAS Services */}
-          <div></div>
+          <div />
             <h3 className="text-cyan-400 font-semibold mb-4 flex items-center"></h3>
               <Zap className="w-4 h-4 mr-2" />
               Micro SAAS
@@ -163,13 +163,13 @@ const Footer = () => {
             </a>
           </div>
           {/* AI & IT Services */}
-          <div></div>
+          <div />
             <h3 className="text-cyan-400 font-semibold mb-4 flex items-center"></h3>
               <Brain className="w-4 h-4 mr-2" />
               AI & IT Services
             </h3>
-            <div className="space-y-4"></div>
-              <div></div>
+            <div className="space-y-4" />
+              <div />
                 <h4 className="text-white font-medium mb-2">AI Services</h4>
                 <ul className="space-y-1">
                   {aiServices.slice(0, 3).map((service) => (
@@ -183,7 +183,7 @@ const Footer = () => {
                   ))}
                 </ul>
               </div>
-              <div></div>
+              <div />
                 <h4 className="text-white font-medium mb-2">IT Services</h4>
                 <ul className="space-y-1">
                   {itServices.slice(0, 3).map((service) => (
@@ -205,7 +205,7 @@ const Footer = () => {
             </a>
           </div>
           {/* Additional AI Services */}
-          <div></div>
+          <div />
             <h3 className="text-cyan-400 font-semibold mb-4 flex items-center"></h3>
               <Zap className="w-4 h-4 mr-2" />
               AI Tools
@@ -225,10 +225,10 @@ const Footer = () => {
             </ul>
           </div>
           {/* Company & Support */}
-          <div></div>
+          <div />
             <h3 className="text-cyan-400 font-semibold mb-4">Company</h3>
-            <div className="grid grid-cols-2 gap-4"></div>
-              <div></div>
+            <div className="grid grid-cols-2 gap-4" />
+              <div />
                 <h4 className="text-white font-medium mb-2">Company</h4>
                 <ul className="space-y-1">
                   {companyLinks.slice(0, 4).map((link) => (
@@ -242,7 +242,7 @@ const Footer = () => {
                   ))}
                 </ul>
               </div>
-              <div></div>
+              <div />
                 <h4 className="text-white font-medium mb-2">Support</h4>
                 <ul className="space-y-1">
                   {supportLinks.slice(0, 4).map((link) => (
@@ -260,12 +260,12 @@ const Footer = () => {
           </div>
         </div>
         {/* Bottom Section */}
-        <div className="border-t border-gray-700 mt-8 pt-8"></div>
-          <div className="flex flex-col md:flex-row justify-between items-center"></div>
-            <div className="text-gray-400 text-sm mb-4 md:mb-0"></div>
+        <div className="border-t border-gray-700 mt-8 pt-8" />
+          <div className="flex flex-col md:flex-row justify-between items-center" />
+            <div className="text-gray-400 text-sm mb-4 md:mb-0" />
               © 2024 Zion Tech Group. All rights reserved.
             </div>
-            <div className="flex space-x-6"></div>
+            <div className="flex space-x-6" />
               {legalLinks.map((link) => (
                 <a key={link.name}
                   href={link.url}

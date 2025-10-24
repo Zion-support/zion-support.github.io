@@ -67,11 +67,11 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
 
 const Page = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
-        <section className="text-center mb-16"></section>
+        <section className="text-center mb-16" />
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
             <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
               Contact Us
@@ -83,20 +83,20 @@ const Page = () => {
 >>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
           </p>
         </section>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12" />
           {/* Contact Form */}
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8"></div>
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8" />
             <h2 className="text-2xl font-bold text-white mb-6">Get Your Free Consultation</h2>
             {isSubmitted ? (
-              <div className="text-center py-8"></div>
+              <div className="text-center py-8" />
                 <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Thank You!</h3>
                 <p className="text-gray-300">We'll get back to you within 24 hours.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-                  <div></div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6" />
+                  <div />
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                       Full Name *
                     </label>
@@ -120,8 +120,8 @@ const Page = () => {
                     />
                   </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-                  <div></div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6" />
+                  <div />
                     <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
                       Company
                     </label>
@@ -144,7 +144,7 @@ const Page = () => {
                     />
                   </div>
                 </div>
-                <div></div>
+                <div />
                   <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                     Service Interest
                   </label>
@@ -161,7 +161,7 @@ const Page = () => {
                     ))}
                   </select>
                 </div>
-                <div></div>
+                <div />
                   <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                     Message *
                   </label>
@@ -178,8 +178,7 @@ const Page = () => {
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105 flex items-center justify-center"
-                ></button>
+                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105 flex items-center justify-center" />
                   <Send className="w-5 h-5 mr-2" />
                   Send Message
                 </button>
@@ -187,16 +186,16 @@ const Page = () => {
             )}
           </div>
           {/* Contact Information */}
-          <div className="space-y-8"></div>
+          <div className="space-y-8" />
             {/* Contact Details */}
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8"></div>
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8" />
               <h2 className="text-2xl font-bold text-white mb-6">Get In Touch</h2>
-              <div className="space-y-6"></div>
-                <div className="flex items-start space-x-4"></div>
-                  <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center flex-shrink-0"></div>
+              <div className="space-y-6" />
+                <div className="flex items-start space-x-4" />
+                  <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center flex-shrink-0" />
                     <Phone className="w-6 h-6 text-cyan-400" />
                   </div>
-                  <div></div>
+                  <div />
                     <h3 className="text-lg font-semibold text-white mb-1">Phone</h3>
                     <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                       +1 (302) 464-0950
@@ -204,11 +203,11 @@ const Page = () => {
                     <p className="text-sm text-gray-400 mt-1">Mon-Fri 9AM-6PM EST</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-4"></div>
-                  <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center flex-shrink-0"></div>
+                <div className="flex items-start space-x-4" />
+                  <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center flex-shrink-0" />
                     <Mail className="w-6 h-6 text-cyan-400" />
                   </div>
-                  <div></div>
+                  <div />
                     <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
                     <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                       kleber@ziontechgroup.com
@@ -216,11 +215,11 @@ const Page = () => {
                     <p className="text-sm text-gray-400 mt-1">We respond within 24 hours</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-4"></div>
-                  <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center flex-shrink-0"></div>
+                <div className="flex items-start space-x-4" />
+                  <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center flex-shrink-0" />
                     <MapPin className="w-6 h-6 text-cyan-400" />
                   </div>
-                  <div></div>
+                  <div />
                     <h3 className="text-lg font-semibold text-white mb-1">Address</h3>
                     <p className="text-gray-300"></p>
                       364 E Main St STE 1008<br />
@@ -229,11 +228,11 @@ const Page = () => {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-4"></div>
-                  <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center flex-shrink-0"></div>
+                <div className="flex items-start space-x-4" />
+                  <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center flex-shrink-0" />
                     <Clock className="w-6 h-6 text-cyan-400" />
                   </div>
-                  <div></div>
+                  <div />
                     <h3 className="text-lg font-semibold text-white mb-1">Business Hours</h3>
                     <p className="text-gray-300"></p>
                       Monday - Friday: 9:00 AM - 6:00 PM EST<br />
@@ -245,12 +244,12 @@ const Page = () => {
               </div>
             </div>
             {/* Achievements */}
-            <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-xl p-8"></div>
+            <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-xl p-8" />
               <h3 className="text-xl font-bold text-white mb-6">Why Choose Us?</h3>
-              <div className="grid grid-cols-2 gap-4"></div>
+              <div className="grid grid-cols-2 gap-4" />
                 {achievements.map((achievement, index) => (
-                  <div key={index} className="text-center"></div>
-                    <div className="w-12 h-12 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-2"></div>
+                  <div key={index} className="text-center" />
+                    <div className="w-12 h-12 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-2" />
                       <achievement.icon className="w-6 h-6 text-cyan-400" />
                     </div>
                     <p className="text-sm text-gray-300">{achievement.text}</p>
@@ -259,7 +258,7 @@ const Page = () => {
               </div>
             </div>
             {/* Quick Contact */}
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 text-center"></div>
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 text-center" />
               <h3 className="text-xl font-bold text-white mb-4">Need Immediate Assistance?</h3>
               <p className="text-gray-300 mb-6">Call us now for urgent IT support or emergency services.</p>
               <a

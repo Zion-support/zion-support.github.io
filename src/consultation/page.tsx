@@ -98,12 +98,12 @@ const Page = () => {
         keywords={['free consultation', 'business consultation', 'technology assessment', 'AI consultation', 'ITconsultation']}
         canonicalUrl=&quot;https://ziontechgroup.com/consultation&quot;
       />
-      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
+      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot; />
         <Navigation />
         <main className=&quot;pt-16&quot;>
           {/* Hero Section */}
-          <section className=&quot;container mx-auto px-4 py-16 text-center&quot;></section>
-            <div className=&quot;max-w-4xl mx-auto&quot;></div>
+          <section className=&quot;container mx-auto px-4 py-16 text-center&quot; />
+            <div className=&quot;max-w-4xl mx-auto&quot; />
               <h1 className=&quot;text-4xl md:text-6xl font-bold text-white mb-6 neon-text&quot;>
                 Free Business Consultation
               </h1>
@@ -114,7 +114,7 @@ const Page = () => {
                 Get a free 30-minute consultation with our technology experts. We'll assess your current setup,
                 identify opportunities, and provide actionable recommendations to drive your business forward.
               </p>
-              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;></div>
+              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot; />
                 <a
                   href=&quot;tel:+13024640950&quot;
                   className=&quot;cyber-button flex items-center space-x-2&quot;
@@ -134,13 +134,13 @@ const Page = () => {
             </div>
           </section>
           {/* Benefits Section */}
-          <section className=&quot;container mx-auto px-4 py-16&quot;></section>
+          <section className=&quot;container mx-auto px-4 py-16&quot; />
             <h2 className=&quot;text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text&quot;>
               What You'll Get
             </h2>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot; />
               {consultationBenefits.map((benefit, index) => (
-                <div key={index} className=&quot;cyber-card p-6 text-center hover:scale-105 transition-all duration-300&quot;></div>
+                <div key={index} className=&quot;cyber-card p-6 text-center hover:scale-105 transition-all duration-300&quot; />
                   <benefit.icon className=&quot;w-12 h-12 text-cyan-400 mx-auto mb-4&quot; />
                   <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{benefit.title}</h3>
                   <p className=&quot;text-gray-300&quot;>{benefit.description}</p>
@@ -149,14 +149,14 @@ const Page = () => {
             </div>
           </section>
           {/* Process Section */}
-          <section className=&quot;container mx-auto px-4 py-16&quot;></section>
+          <section className=&quot;container mx-auto px-4 py-16&quot; />
             <h2 className=&quot;text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text&quot;>
               Our Consultation Process
             </h2>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot; />
               {consultationProcess.map((step, index) => (
-                <div key={index} className=&quot;cyber-card p-6 text-center&quot;></div>
-                  <div className=&quot;w-16 h-16 bg-cyan-400 text-slate-900 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4&quot;></div>
+                <div key={index} className=&quot;cyber-card p-6 text-center&quot; />
+                  <div className=&quot;w-16 h-16 bg-cyan-400 text-slate-900 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4&quot; />
                     {step.step}
                   </div>
                   <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{step.title}</h3>
@@ -166,15 +166,15 @@ const Page = () => {
             </div>
           </section>
           {/* Consultation Form */}
-          <section className=&quot;container mx-auto px-4 py-16&quot;></section>
-            <div className=&quot;max-w-4xl mx-auto&quot;></div>
-              <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-12&quot;></div>
+          <section className=&quot;container mx-auto px-4 py-16&quot; />
+            <div className=&quot;max-w-4xl mx-auto&quot; />
+              <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-12&quot; />
                 {/* Form */}
-                <div className=&quot;cyber-card p-8&quot;></div>
+                <div className=&quot;cyber-card p-8&quot; />
                   <h2 className=&quot;text-2xl font-bold text-white mb-6&quot;>Schedule Your Free Consultation</h2>
                   <form onSubmit={handleSubmit} className=&quot;space-y-6&quot;>
-                    <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;></div>
-                      <div></div>
+                    <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot; />
+                      <div />
                         <label htmlFor=&quot;name&quot; className=&quot;block text-sm font-medium text-gray-300 mb-2&quot;>
                           Full Name *
                         </label>
@@ -270,8 +270,8 @@ const Page = () => {
                   </form>
                 </div>
                 {/* Benefits Sidebar */}
-                <div className=&quot;space-y-8&quot;></div>
-                  <div className=&quot;cyber-card p-8&quot;></div>
+                <div className=&quot;space-y-8&quot; />
+                  <div className=&quot;cyber-card p-8&quot; />
                     <h3 className=&quot;text-xl font-bold text-white mb-6&quot;>Why Choose Our Consultation?</h3>
                     <ul className=&quot;space-y-4&quot;>
                       <li className=&quot;flex items-start&quot;>
@@ -296,22 +296,22 @@ const Page = () => {
                       </li>
                     </ul>
                   </div>
-                  <div className=&quot;cyber-card p-8&quot;></div>
+                  <div className=&quot;cyber-card p-8&quot; />
                     <h3 className=&quot;text-xl font-bold text-white mb-6&quot;>Contact Information</h3>
-                    <div className=&quot;space-y-4&quot;></div>
-                      <div className=&quot;flex items-center&quot;></div>
+                    <div className=&quot;space-y-4&quot; />
+                      <div className=&quot;flex items-center&quot; />
                         <Phone className=&quot;w-5 h-5 text-cyan-400 mr-3&quot; />
                         <a href=&quot;tel:+13024640950&quot; className=&quot;text-gray-300 hover:text-cyan-400&quot;>
                           (302) 464-0950
                         </a>
                       </div>
-                      <div className=&quot;flex items-center&quot;></div>
+                      <div className=&quot;flex items-center&quot; />
                         <Mail className=&quot;w-5 h-5 text-cyan-400 mr-3&quot; />
                         <a href=&quot;mailto:kleber@ziontechgroup.com&quot; className=&quot;text-gray-300 hover:text-cyan-400&quot;>
                           kleber@ziontechgroup.com
                         </a>
                       </div>
-                      <div className=&quot;flex items-center&quot;></div>
+                      <div className=&quot;flex items-center&quot; />
                         <Clock className=&quot;w-5 h-5 text-cyan-400 mr-3&quot; />
                         <span className=&quot;text-gray-300&quot;>Mon-Fri: 9AM-6PM EST</span>
                       </div>
@@ -322,20 +322,20 @@ const Page = () => {
             </div>
           </section>
           {/* Testimonials */}
-          <section className=&quot;container mx-auto px-4 py-16&quot;></section>
+          <section className=&quot;container mx-auto px-4 py-16&quot; />
             <h2 className=&quot;text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text&quot;>
               What Our Clients Say
             </h2>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;></div>
+            <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot; />
               {testimonials.map((testimonial, index) => (
-                <div key={index} className=&quot;cyber-card p-6&quot;></div>
-                  <div className=&quot;flex items-center mb-4&quot;></div>
+                <div key={index} className=&quot;cyber-card p-6&quot; />
+                  <div className=&quot;flex items-center mb-4&quot; />
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className=&quot;w-5 h-5 text-yellow-400 fill-current&quot; />
                     ))}
                   </div>
                   <p className=&quot;text-gray-300 mb-4&quot;>&quot;{testimonial.text}&quot;</p>
-                  <div></div>
+                  <div />
                     <div className=&quot;font-bold text-white&quot;>{testimonial.name}</div>
                     <div className=&quot;text-cyan-400 text-sm&quot;>{testimonial.company}</div>
                   </div>

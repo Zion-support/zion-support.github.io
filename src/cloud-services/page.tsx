@@ -35,11 +35,11 @@ constCloudServicesPage: React.FC= () =>{constservices= [
     'Global CDN'
   ]
   return (
-    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
+    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot; />
       <Navigation />
       <main className=&quot;container mx-auto px-4 py-16 pt-24&quot;>
         {/* Hero Section */}
-        <section className=&quot;text-center mb-16&quot;></section>
+        <section className=&quot;text-center mb-16&quot; />
           <h1 className=&quot;text-4xl md:text-6xl font-bold text-white mb-6&quot;>
             Cloud Services
           </h1>
@@ -47,7 +47,7 @@ constCloudServicesPage: React.FC= () =>{constservices= [
             Transform your business with our comprehensive cloud solutions.
             From migration to optimization, we provide end-to-end cloud services.
           </p>
-          <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+          <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot; />
             <a
               href=&quot;tel:+13024640950&quot;
               className=&quot;bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all&quot;
@@ -63,11 +63,11 @@ constCloudServicesPage: React.FC= () =>{constservices= [
           </div>
         </section>
         {/* Services Grid */}
-        <section className=&quot;mb-16&quot;></section>
+        <section className=&quot;mb-16&quot; />
           <h2 className=&quot;text-3xl font-bold text-white mb-12 text-center&quot;>Our Cloud Services</h2>
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot; />
             {services.map((service, index) => (
-              <div key={index} className=&quot;bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20&quot;></div>
+              <div key={index} className=&quot;bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20&quot; />
                 <service.icon className=&quot;w-12 h-12 text-cyan-400 mb-4&quot; />
                 <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{service.title}</h3>
                 <p className=&quot;text-gray-300 mb-4&quot;>{service.description}</p>
@@ -84,12 +84,12 @@ constCloudServicesPage: React.FC= () =>{constservices= [
           </div>
         </section>
         {/* Benefits Section */}
-        <section className=&quot;mb-16&quot;></section>
+        <section className=&quot;mb-16&quot; />
           <h2 className=&quot;text-3xl font-bold text-white mb-12 text-center&quot;>Why Choose Our Cloud Services?</h2>
-          <div className=&quot;grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6&quot;></div>
+          <div className=&quot;grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6&quot; />
             {benefits.map((benefit, index) => (
-              <div key={index} className=&quot;text-center&quot;></div>
-                <div className=&quot;bg-gradient-to-r from-cyan-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4&quot;></div>
+              <div key={index} className=&quot;text-center&quot; />
+                <div className=&quot;bg-gradient-to-r from-cyan-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4&quot; />
                   <CheckCircle className=&quot;w-8 h-8 text-white&quot; />
                 </div>
                 <p className=&quot;text-white font-medium&quot;>{benefit}</p>
@@ -98,14 +98,14 @@ constCloudServicesPage: React.FC= () =>{constservices= [
           </div>
         </section>
         {/* CTA Section */}
-        <section className=&quot;text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-12&quot;></section>
+        <section className=&quot;text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-12&quot; />
           <h2 className=&quot;text-3xl font-bold text-white mb-4&quot;>
             Ready to Transform Your Infrastructure?
           </h2>
           <p className=&quot;text-gray-300 mb-8 max-w-2xl mx-auto&quot;>
             Let our cloud experts help you migrate, optimize, and secure your cloud infrastructure.
           </p>
-          <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+          <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot; />
             <a
               href=&quot;tel:+13024640950&quot;
               className=&quot;bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all&quot;

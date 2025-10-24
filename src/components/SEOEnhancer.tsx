@@ -83,7 +83,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     <>
       <Helmet>
         {/* Primary meta tags */}
-        <title>{title}</title>
+        <title>Advanced SEO Optimizer</title>
         <meta name=&quot;description&quot; content={description} />
         <meta name=&quot;keywords&quot; content={keywords} />
         <meta name=&quot;author&quot; content=&quot;Zion Tech Group&quot; />

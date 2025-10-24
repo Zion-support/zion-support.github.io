@@ -109,11 +109,11 @@ constMicroSAASPage: React.FC= () =>{constcategories= [
 
 const Page = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
-        <section className="text-center mb-16"></section>
+        <section className="text-center mb-16" />
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
             <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
               Micro SAAS Solutions
@@ -123,7 +123,7 @@ const Page = () => {
             Choose from 100+ ready-to-use AI-powered applications that solve specific business problems.
             Deploy instantly and start seeing results from day one.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center" />
             <a
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
@@ -139,25 +139,25 @@ const Page = () => {
           </div>
         </section>
         {/* Categories */}
-        <section className="mb-16"></section>
+        <section className="mb-16" />
           <h2 className="text-3xl font-bold text-white text-center mb-12">Solution Categories</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" />
             {categories.map((category, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300"></div>
-                <div className="flex items-center mb-6"></div>
-                  <div className={`w-12 h-12 ${category.bgColor} rounded-lg flex items-center justify-center mr-4`}></div>
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300" />
+                <div className="flex items-center mb-6" />
+                  <div className={`w-12 h-12 ${category.bgColor} rounded-lg flex items-center justify-center mr-4`} />
                     <category.icon className={`w-6 h-6 ${category.color}`} />
                   </div>
                   <h3 className="text-xl font-bold text-white">{category.title}</h3>
                 </div>
-                <div className="space-y-3"></div>
+                <div className="space-y-3" />
                   {category.services.map((service, serviceIndex) => (
-                    <div key={serviceIndex} className="flex justify-between items-center p-3 bg-slate-700/50 rounded-lg hover:bg-slate-700/70 transition-colors"></div>
-                      <div></div>
+                    <div key={serviceIndex} className="flex justify-between items-center p-3 bg-slate-700/50 rounded-lg hover:bg-slate-700/70 transition-colors" />
+                      <div />
                         <div className="font-medium text-white text-sm">{service.name}</div>
                         <div className="text-xs text-gray-400">{service.description}</div>
                       </div>
-                      <div className="text-right"></div>
+                      <div className="text-right" />
                         <div className={`font-bold ${category.color} text-sm`}>{service.price}</div>
                         <a
                           href="/contact"
@@ -174,13 +174,13 @@ const Page = () => {
           </div>
         </section>
         {/* Benefits Section */}
-        <section className="mb-16"></section>
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8"></div>
+        <section className="mb-16" />
+          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8" />
             <h2 className="text-3xl font-bold text-white text-center mb-12">Why Choose Our Micro SAAS Solutions?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" />
               {benefits.map((benefit, index) => (
-                <div key={index} className="text-center"></div>
-                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+                <div key={index} className="text-center" />
+                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4" />
                     <benefit.icon className="w-8 h-8 text-cyan-400" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">{benefit.title}</h3>
@@ -191,10 +191,10 @@ const Page = () => {
           </div>
         </section>
         {/* Pricing Tiers */}
-        <section className="mb-16"></section>
+        <section className="mb-16" />
           <h2 className="text-3xl font-bold text-white text-center mb-12">Simple Pricing</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6"></div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8" />
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6" />
               <h3 className="text-xl font-bold text-white mb-4">Starter</h3>
               <div className="text-3xl font-bold text-cyan-400 mb-4">$19/month</div>
               <ul className="space-y-2 mb-6">
@@ -218,7 +218,7 @@ const Page = () => {
                 Get Started
               </a>
             </div>
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border-2 border-cyan-500"></div>
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border-2 border-cyan-500" />
               <h3 className="text-xl font-bold text-white mb-4">Professional</h3>
               <div className="text-3xl font-bold text-cyan-400 mb-4">$99/month</div>
               <ul className="space-y-2 mb-6">
@@ -246,7 +246,7 @@ const Page = () => {
                 Get Started
               </a>
             </div>
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6"></div>
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6" />
               <h3 className="text-xl font-bold text-white mb-4">Enterprise</h3>
               <div className="text-3xl font-bold text-cyan-400 mb-4">Custom</div>
               <ul className="space-y-2 mb-6">
@@ -277,13 +277,13 @@ const Page = () => {
           </div>
         </section>
         {/* CTA Section */}
-        <section className="text-center"></section>
-          <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-2xl p-8"></div>
+        <section className="text-center" />
+          <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-2xl p-8" />
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Choose from our extensive library of AI-powered applications and start seeing results immediately.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center" />
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
@@ -297,7 +297,7 @@ const Page = () => {
                 (302) 464-0950
               </a>
             </div>
-            <div className="mt-8 text-sm text-gray-400"></div>
+            <div className="mt-8 text-sm text-gray-400" />
               <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>

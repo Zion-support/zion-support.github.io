@@ -101,12 +101,12 @@ const Page = () => {
         keywords={['pricing', 'AI services pricing', 'IT services pricing', 'business plans', 'enterprisepricing']}
         canonicalUrl=&quot;https://ziontechgroup.com/pricing&quot;
       />
-      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
+      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot; />
         <Navigation />
         <main className=&quot;pt-16&quot;>
           {/* Hero Section */}
-          <section className=&quot;container mx-auto px-4 py-16 text-center&quot;></section>
-            <div className=&quot;max-w-4xl mx-auto&quot;></div>
+          <section className=&quot;container mx-auto px-4 py-16 text-center&quot; />
+            <div className=&quot;max-w-4xl mx-auto&quot; />
               <h1 className=&quot;text-4xl md:text-6xl font-bold text-white mb-6 neon-text&quot;>
                 Simple, Transparent Pricing
               </h1>
@@ -120,8 +120,8 @@ const Page = () => {
             </div>
           </section>
           {/* Pricing Plans */}
-          <section className=&quot;container mx-auto px-4 py-16&quot;></section>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto&quot;></div>
+          <section className=&quot;container mx-auto px-4 py-16&quot; />
+            <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto&quot; />
               {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
@@ -148,13 +148,13 @@ const Page = () => {
             </div>
           </section>
           {/* Add-ons Section */}
-          <section className=&quot;container mx-auto px-4 py-16&quot;></section>
+          <section className=&quot;container mx-auto px-4 py-16&quot; />
             <h2 className=&quot;text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text&quot;>
               Additional Services
             </h2>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto&quot;></div>
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto&quot; />
               {addOns.map((addon, index) => (
-                <div key={index} className=&quot;cyber-card p-6 text-center&quot;></div>
+                <div key={index} className=&quot;cyber-card p-6 text-center&quot; />
                   <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{addon.name}</h3>
                   <div className=&quot;text-2xl font-bold text-cyan-400 mb-2&quot;>{addon.price}</div>
                   <p className=&quot;text-gray-300 text-sm&quot;>{addon.description}</p>
@@ -163,13 +163,13 @@ const Page = () => {
             </div>
           </section>
           {/* FAQ Section */}
-          <section className=&quot;container mx-auto px-4 py-16&quot;></section>
+          <section className=&quot;container mx-auto px-4 py-16&quot; />
             <h2 className=&quot;text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text&quot;>
               Frequently Asked Questions
             </h2>
-            <div className=&quot;max-w-4xl mx-auto space-y-6&quot;></div>
+            <div className=&quot;max-w-4xl mx-auto space-y-6&quot; />
               {faqs.map((faq, index) => (
-                <div key={index} className=&quot;cyber-card p-6&quot;></div>
+                <div key={index} className=&quot;cyber-card p-6&quot; />
                   <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{faq.question}</h3>
                   <p className=&quot;text-gray-300&quot;>{faq.answer}</p>
                 </div>
@@ -177,15 +177,15 @@ const Page = () => {
             </div>
           </section>
           {/* CTA Section */}
-          <section className=&quot;container mx-auto px-4 py-16 text-center&quot;></section>
-            <div className=&quot;cyber-card p-12 max-w-4xl mx-auto&quot;></div>
+          <section className=&quot;container mx-auto px-4 py-16 text-center&quot; />
+            <div className=&quot;cyber-card p-12 max-w-4xl mx-auto&quot; />
               <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6 neon-text&quot;>
                 Ready to Get Started?
               </h2>
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
                 Contact us today to discuss your needs and find the perfect plan
               </p>
-              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot; />
                 <a
                   href=&quot;tel:+13024640950&quot;
                   className=&quot;cyber-button flex items-center justify-center space-x-2&quot;

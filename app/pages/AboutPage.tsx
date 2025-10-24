@@ -69,7 +69,6 @@ export default function AboutPage() {
 
   return (
     <>
-
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4">

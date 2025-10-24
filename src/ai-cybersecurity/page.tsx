@@ -123,12 +123,12 @@ const AICybersecurityPage: React.FC = () => {
         keywords={['AI cybersecurity', 'threat detection', 'security monitoring', 'cyber protection', 'AIsecurity']}
         canonicalUrl=&quot;https://ziontechgroup.com/ai-cybersecurity&quot;
       />
-      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
+      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot; />
         <Navigation />
         <main className=&quot;pt-16&quot;>
           {/* Hero Section */}
-          <section className=&quot;container mx-auto px-4 py-16 text-center&quot;></section>
-            <div className=&quot;max-w-4xl mx-auto&quot;></div>
+          <section className=&quot;container mx-auto px-4 py-16 text-center&quot; />
+            <div className=&quot;max-w-4xl mx-auto&quot; />
               <h1 className=&quot;text-4xl md:text-6xl font-bold text-white mb-6 neon-text&quot;>
                 AI Cybersecurity Solutions
               </h1>
@@ -139,7 +139,7 @@ const AICybersecurityPage: React.FC = () => {
                 Our AI-powered cybersecurity platform provides advanced threat detection,
                 automated response, and 24/7 monitoring to protect your business from evolving cyber threats.
               </p>
-              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center mb-16&quot;></div>
+              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center mb-16&quot; />
                 <a
                   href=&quot;tel:+13024640950&quot;
                   className=&quot;cyber-button flex items-center space-x-2&quot;
@@ -157,10 +157,10 @@ const AICybersecurityPage: React.FC = () => {
                 </a>
               </div>
               {/* Stats */}
-              <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 mb-16&quot;></div>
+              <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 mb-16&quot; />
                 {stats.map((stat, index) => (
-                  <div key={index} className=&quot;cyber-card p-6 text-center&quot;></div>
-                    <div className=&quot;text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text&quot;></div>
+                  <div key={index} className=&quot;cyber-card p-6 text-center&quot; />
+                    <div className=&quot;text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text&quot; />
                       {stat.number}
                     </div>
                     <div className=&quot;text-gray-300 font-medium&quot;>{stat.label}</div>
@@ -170,13 +170,13 @@ const AICybersecurityPage: React.FC = () => {
             </div>
           </section>
           {/* Features Section */}
-          <section className=&quot;container mx-auto px-4 py-16&quot;></section>
+          <section className=&quot;container mx-auto px-4 py-16&quot; />
             <h2 className=&quot;text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text&quot;>
               Advanced Security Features
             </h2>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot; />
               {features.map((feature, index) => (
-                <div key={index} className=&quot;cyber-card p-6 hover:scale-105 transition-all duration-300&quot;></div>
+                <div key={index} className=&quot;cyber-card p-6 hover:scale-105 transition-all duration-300&quot; />
                   <feature.icon className=&quot;w-12 h-12 text-cyan-400 mb-4&quot; />
                   <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{feature.title}</h3>
                   <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
@@ -193,13 +193,13 @@ const AICybersecurityPage: React.FC = () => {
             </div>
           </section>
           {/* Threats Section */}
-          <section className=&quot;container mx-auto px-4 py-16&quot;></section>
+          <section className=&quot;container mx-auto px-4 py-16&quot; />
             <h2 className=&quot;text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text&quot;>
               Protect Against All Threats
             </h2>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;></div>
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot; />
               {threats.map((threat, index) => (
-                <div key={index} className=&quot;cyber-card p-6 hover:scale-105 transition-all duration-300&quot;></div>
+                <div key={index} className=&quot;cyber-card p-6 hover:scale-105 transition-all duration-300&quot; />
                   <threat.icon className=&quot;w-12 h-12 text-cyan-400 mb-4&quot; />
                   <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{threat.title}</h3>
                   <p className=&quot;text-gray-300&quot;>{threat.description}</p>
@@ -208,11 +208,11 @@ const AICybersecurityPage: React.FC = () => {
             </div>
           </section>
           {/* Pricing Section */}
-          <section className=&quot;container mx-auto px-4 py-16&quot;></section>
+          <section className=&quot;container mx-auto px-4 py-16&quot; />
             <h2 className=&quot;text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text&quot;>
               Simple, Transparent Pricing
             </h2>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto&quot;></div>
+            <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto&quot; />
               {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
@@ -238,15 +238,15 @@ const AICybersecurityPage: React.FC = () => {
             </div>
           </section>
           {/* CTA Section */}
-          <section className=&quot;container mx-auto px-4 py-16 text-center&quot;></section>
-            <div className=&quot;cyber-card p-12 max-w-4xl mx-auto&quot;></div>
+          <section className=&quot;container mx-auto px-4 py-16 text-center&quot; />
+            <div className=&quot;cyber-card p-12 max-w-4xl mx-auto&quot; />
               <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6 neon-text&quot;>
                 Ready to Secure Your Business?
               </h2>
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
                 Join 3,000+ companies already protected by our AI cybersecurity platform
               </p>
-              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot; />
                 <a
                   href=&quot;tel:+13024640950&quot;
                   className=&quot;cyber-button flex items-center justify-center space-x-2&quot;

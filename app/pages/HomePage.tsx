@@ -14,12 +14,11 @@ import {
 
 export default function HomePage() {  return (
     <>
-
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 opacity-20">
-          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
+          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20" />
         </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center">
@@ -54,9 +53,9 @@ export default function HomePage() {  return (
         </div>
         
         {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-purple-500 rounded-full opacity-20 animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-cyan-500 rounded-full opacity-20 animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-20 w-16 h-16 bg-pink-500 rounded-full opacity-20 animate-pulse delay-500"></div>
+        <div className="absolute top-20 left-10 w-20 h-20 bg-purple-500 rounded-full opacity-20 animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-cyan-500 rounded-full opacity-20 animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-20 w-16 h-16 bg-pink-500 rounded-full opacity-20 animate-pulse delay-500" />
       </section>
 
       {/* Services Section */}

@@ -120,12 +120,12 @@ const AILeadGenerationPage: React.FC = () => {
         keywords={['AI lead generation', 'lead scoring', 'prospecting', 'sales automation', 'leadnurturing']}
         canonicalUrl=&quot;https://ziontechgroup.com/ai-lead-generation&quot;
       />
-      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
+      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot; />
         <Navigation />
         <main className=&quot;pt-16&quot;>
           {/* Hero Section */}
-          <section className=&quot;container mx-auto px-4 py-16 text-center&quot;></section>
-            <div className=&quot;max-w-4xl mx-auto&quot;></div>
+          <section className=&quot;container mx-auto px-4 py-16 text-center&quot; />
+            <div className=&quot;max-w-4xl mx-auto&quot; />
               <h1 className=&quot;text-4xl md:text-6xl font-bold text-white mb-6 neon-text&quot;>
                 AI Lead Generation Platform
               </h1>
@@ -180,15 +180,15 @@ const AILeadGenerationPage: React.FC = () => {
             </div>
           </section>
           {/* CTA Section */}
-          <section className=&quot;container mx-auto px-4 py-16 text-center&quot;></section>
-            <div className=&quot;cyber-card p-12 max-w-4xl mx-auto&quot;></div>
+          <section className=&quot;container mx-auto px-4 py-16 text-center&quot; />
+            <div className=&quot;cyber-card p-12 max-w-4xl mx-auto&quot; />
               <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6 neon-text&quot;>
                 Ready to 3x Your Lead Generation?
               </h2>
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
                 Join 2,500+ companies already using our AI lead generation platform
               </p>
-              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot; />
                 <a
                   href=&quot;tel:+13024640950&quot;
                   className=&quot;cyber-button flex items-center justify-center space-x-2&quot;

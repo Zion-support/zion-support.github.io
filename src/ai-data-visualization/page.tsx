@@ -80,12 +80,12 @@ const Page = () => {
         keywords={['AI data visualization', 'business intelligence', 'data analytics', 'interactive dashboards', 'datainsights']}
         canonicalUrl=&quot;https://ziontechgroup.com/ai-data-visualization&quot;
       />
-      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
+      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot; />
         <Navigation />
         <main className=&quot;pt-16&quot;>
           {/* Hero Section */}
-          <section className=&quot;container mx-auto px-4 py-16 text-center&quot;></section>
-            <div className=&quot;max-w-4xl mx-auto&quot;></div>
+          <section className=&quot;container mx-auto px-4 py-16 text-center&quot; />
+            <div className=&quot;max-w-4xl mx-auto&quot; />
               <h1 className=&quot;text-4xl md:text-6xl font-bold text-white mb-6 neon-text&quot;>
                 AI Data Visualization Solutions
               </h1>
@@ -96,7 +96,7 @@ const Page = () => {
                 Our AI-powered data visualization platform automatically transforms your raw data into
                 interactive dashboards, intelligent reports, and actionable insights that drive business growth.
               </p>
-              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center mb-16&quot;></div>
+              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center mb-16&quot; />
                 <a
                   href=&quot;tel:+13024640950&quot;
                   className=&quot;cyber-button flex items-center space-x-2&quot;
@@ -114,10 +114,10 @@ const Page = () => {
                 </a>
               </div>
               {/* Stats */}
-              <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 mb-16&quot;></div>
+              <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 mb-16&quot; />
                 {stats.map((stat, index) => (
-                  <div key={index} className=&quot;cyber-card p-6 text-center&quot;></div>
-                    <div className=&quot;text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text&quot;></div>
+                  <div key={index} className=&quot;cyber-card p-6 text-center&quot; />
+                    <div className=&quot;text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text&quot; />
                       {stat.number}
                     </div>
                     <div className=&quot;text-gray-300 font-medium&quot;>{stat.label}</div>
@@ -127,13 +127,13 @@ const Page = () => {
             </div>
           </section>
           {/* Features Section */}
-          <section className=&quot;mb-16&quot;></section>
+          <section className=&quot;mb-16&quot; />
             <h2 className=&quot;text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text&quot;>
               Key Features
             </h2>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot; />
               {features.map((feature, index) => (
-                <div key={index} className=&quot;cyber-card p-6 text-center hover:scale-105 transition-all duration-300&quot;></div>
+                <div key={index} className=&quot;cyber-card p-6 text-center hover:scale-105 transition-all duration-300&quot; />
                   <feature.icon className=&quot;w-12 h-12 text-cyan-400 mx-auto mb-4&quot; />
                   <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{feature.title}</h3>
                   <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
@@ -150,13 +150,13 @@ const Page = () => {
             </div>
           </section>
           {/* Use Cases Section */}
-          <section className=&quot;container mx-auto px-4 py-16&quot;></section>
+          <section className=&quot;container mx-auto px-4 py-16&quot; />
             <h2 className=&quot;text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text&quot;>
               Perfect for Every Department
             </h2>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;></div>
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot; />
               {useCases.map((useCase, index) => (
-                <div key={index} className=&quot;cyber-card p-6 hover:scale-105 transition-all duration-300&quot;></div>
+                <div key={index} className=&quot;cyber-card p-6 hover:scale-105 transition-all duration-300&quot; />
                   <useCase.icon className=&quot;w-12 h-12 text-cyan-400 mb-4&quot; />
                   <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{useCase.title}</h3>
                   <p className=&quot;text-gray-300&quot;>{useCase.description}</p>
@@ -165,20 +165,19 @@ const Page = () => {
             </div>
           </section>
           {/* Pricing Section */}
-          <section className=&quot;mb-16&quot;></section>
+          <section className=&quot;mb-16&quot; />
             <h2 className=&quot;text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text&quot;>
               Pricing Plans
             </h2>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto&quot;></div>
+            <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto&quot; />
               {pricing.map((plan, index) => (
                 <div
                   key={index}
                   className={`cyber-card p-8 relative ${
                     index === 1 ? 'ring-2 ring-cyan-400 scale-105' : ''
-                  }`}
-                ></div>
+                  }`} />
                   {index === 1 && (
-                    <div className=&quot;absolute -top-4 left-1/2 transform -translate-x-1/2&quot;></div>
+                    <div className=&quot;absolute -top-4 left-1/2 transform -translate-x-1/2&quot; />
                       <span className=&quot;bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold&quot;>
                         Most Popular
                       </span>
@@ -206,15 +205,15 @@ const Page = () => {
             </div>
           </section>
           {/* CTA Section */}
-          <section className=&quot;container mx-auto px-4 py-16 text-center&quot;></section>
-            <div className=&quot;cyber-card p-12 max-w-4xl mx-auto&quot;></div>
+          <section className=&quot;container mx-auto px-4 py-16 text-center&quot; />
+            <div className=&quot;cyber-card p-12 max-w-4xl mx-auto&quot; />
               <h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6 neon-text&quot;>
                 Ready to Transform Your Data?
               </h2>
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
                 Join 300+ companies already using our AI data visualization solutions
               </p>
-              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot; />
                 <a
                   href=&quot;tel:+13024640950&quot;
                   className=&quot;cyber-button flex items-center justify-center space-x-2&quot;

@@ -11,10 +11,10 @@ const InnovationLabsPage: React.FC = () => {
         <meta name=&quot;description&quot; content=&quot;Discover how AI Innovation Labs are revolutionizing product development with 10x faster time-to-market, 85% cost reduction, and breakthrough innovation acceleration.&quot; />
         <meta property=&quot;og:url&quot; content=&quot;/og/ai-innovation-labs-2025.jpg&quot; />
       </Helmet>
-      <div className=&quot;min-h-screen bg-gray-50&quot;></div>
-      <div className=&quot;max-w-4xl mx-auto px-4 py-8&quot;></div>
-        <div className=&quot;bg-white rounded-lg shadow-lg p-8&quot;></div>
-          <div className=&quot;text-center mb-8&quot;></div>
+      <div className=&quot;min-h-screen bg-gray-50&quot; />
+      <div className=&quot;max-w-4xl mx-auto px-4 py-8&quot; />
+        <div className=&quot;bg-white rounded-lg shadow-lg p-8&quot; />
+          <div className=&quot;text-center mb-8&quot; />
             <span className=&quot;inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-4&quot;>
               🚀 Innovation Lab
             </span>
@@ -25,23 +25,23 @@ const InnovationLabsPage: React.FC = () => {
               January 28, 2025 · 45 min read · AI Innovation
             </p>
           </div>
-          <div className=&quot;prose max-w-none&quot;></div>
+          <div className=&quot;prose max-w-none&quot; />
             <h2 className=&quot;text-2xl font-bold text-gray-900 mb-6&quot;>🎯 Innovation Results</h2>
             <p className=&quot;text-gray-700 mb-6&quot;></p>
               Discover how AI Innovation Labs are revolutionizing product development with <strong>10x faster time-to-market</strong>,
               <strong>85% cost reduction</strong>, and breakthrough innovation acceleration. Learn the proven methodologies
               that are transforming how companies build and launch products.
             </p>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 mb-8&quot;></div>
-              <div className=&quot;bg-blue-50 p-6 rounded-lg text-center&quot;></div>
+            <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 mb-8&quot; />
+              <div className=&quot;bg-blue-50 p-6 rounded-lg text-center&quot; />
                 <div className=&quot;text-3xl font-bold text-blue-600 mb-2&quot;>10x</div>
                 <div className=&quot;text-gray-700&quot;>Faster Time-to-Market</div>
               </div>
-              <div className=&quot;bg-green-50 p-6 rounded-lg text-center&quot;></div>
+              <div className=&quot;bg-green-50 p-6 rounded-lg text-center&quot; />
                 <div className=&quot;text-3xl font-bold text-green-600 mb-2&quot;>85%</div>
                 <div className=&quot;text-gray-700&quot;>Cost Reduction</div>
               </div>
-              <div className=&quot;bg-purple-50 p-6 rounded-lg text-center&quot;></div>
+              <div className=&quot;bg-purple-50 p-6 rounded-lg text-center&quot; />
                 <div className=&quot;text-3xl font-bold text-purple-600 mb-2&quot;>300%</div>
                 <div className=&quot;text-gray-700&quot;>Innovation Speed</div>
               </div>
@@ -85,7 +85,7 @@ const InnovationLabsPage: React.FC = () => {
               <li>• <strong>80% faster</strong> time from concept to market</li>
             </ul>
             <h2 className=&quot;text-2xl font-bold text-gray-900 mb-6&quot;>🛠️ Technology Stack</h2>
-            <div className=&quot;bg-gray-100 p-6 rounded-lg mb-6&quot;></div>
+            <div className=&quot;bg-gray-100 p-6 rounded-lg mb-6&quot; />
               <pre className=&quot;text-sm text-gray-800 overflow-x-auto&quot;></p>
 {`AI Innovation Lab Stack:
 ├── AI/ML Platform
@@ -111,12 +111,12 @@ const InnovationLabsPage: React.FC = () => {
               Ready to revolutionize your product development? Our AI Innovation Labs can help you
               achieve breakthrough results in product development speed, cost, and innovation.
             </p>
-            <div className=&quot;bg-blue-50 p-6 rounded-lg text-center&quot;></div>
+            <div className=&quot;bg-blue-50 p-6 rounded-lg text-center&quot; />
               <h3 className=&quot;text-xl font-semibold text-gray-800 mb-4&quot;>Start Your AI Innovation Journey</h3>
               <p className=&quot;text-gray-700 mb-4&quot;>
                 Join leading companies transforming product development with AI-powered innovation
               </p>
-              <div className=&quot;space-x-4&quot;></div>
+              <div className=&quot;space-x-4&quot; />
                 <a href=&quot;/contact&quot;
                   className=&quot;inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors&quot;>
                   Schedule Innovation Assessment

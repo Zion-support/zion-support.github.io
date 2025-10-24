@@ -57,11 +57,11 @@ constAIContentGenerationPage: React.FC= () =>{constcontentServices= [
     }
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
-        <section className="text-center mb-16"></section>
+        <section className="text-center mb-16" />
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Content Generation
           </h1>
@@ -69,7 +69,7 @@ constAIContentGenerationPage: React.FC= () =>{constcontentServices= [
             Transform your content strategy with our AI-powered content generation services.
             Create blog posts, social media content, and marketing copy 10x faster.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center" />
             <a
               href="/contact"
               className="cyber-button"
@@ -85,13 +85,13 @@ constAIContentGenerationPage: React.FC= () =>{constcontentServices= [
           </div>
         </section>
         {/* Services Section */}
-        <section className="mb-16"></section>
+        <section className="mb-16" />
           <h2 className="text-3xl font-bold text-white mb-8 text-center">
             Content Generation Services
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8" />
             {contentServices.map((service, index) => (
-              <div key={index} className="cyber-card hologram-card p-6"></div>
+              <div key={index} className="cyber-card hologram-card p-6" />
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4">{service.description}</p>
@@ -115,14 +115,14 @@ constAIContentGenerationPage: React.FC= () =>{constcontentServices= [
           </div>
         </section>
         {/* Process Section */}
-        <section className="mb-16"></section>
+        <section className="mb-16" />
           <h2 className="text-3xl font-bold text-white mb-8 text-center">
             How It Works
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" />
             {processSteps.map((step, index) => (
-              <div key={index} className="text-center"></div>
-                <div className="bg-cyan-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+              <div key={index} className="text-center" />
+                <div className="bg-cyan-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4" />
                   {step.step}
                 </div>
                 <div className="text-cyan-400 mb-2">{step.icon}</div>
@@ -133,7 +133,7 @@ constAIContentGenerationPage: React.FC= () =>{constcontentServices= [
           </div>
         </section>
         {/* CTA Section */}
-        <section className="text-center"></section>
+        <section className="text-center" />
           <h2 className="text-3xl font-bold text-white mb-8">
             Ready to Transform Your Content?
           </h2>
@@ -141,7 +141,7 @@ constAIContentGenerationPage: React.FC= () =>{constcontentServices= [
             Join thousands of businesses using our AI content generation services to create
             engaging, high-quality content at scale.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center" />
             <a
               href="/contact"
               className="cyber-button"

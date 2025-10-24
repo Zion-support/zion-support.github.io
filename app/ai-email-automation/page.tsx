@@ -122,7 +122,6 @@ const AIEmailAutomationPage: React.FC = () => {
 
   return (
     <>
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)]" />

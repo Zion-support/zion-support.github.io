@@ -58,14 +58,14 @@ const Page = () => {
         keywords={['AI fashion design', 'fashion trends', 'design generation', 'fashion AI', 'trend analysis', 'fashiontechnology']}
         canonicalUrl=&quot;https://ziontechgroup.com/ai-fashion-design&quot;
       />
-      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
+      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot; />
         <Navigation />
         <main className=&quot;container mx-auto px-4 py-16 pt-24&quot;>
           {/* Hero Section */}
-          <section className=&quot;text-center mb-16&quot;></section>
-            <div className=&quot;max-w-4xl mx-auto&quot;></div>
-              <div className=&quot;flex items-center justify-center mb-6&quot;></div>
-                <div className=&quot;w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mr-4&quot;></div>
+          <section className=&quot;text-center mb-16&quot; />
+            <div className=&quot;max-w-4xl mx-auto&quot; />
+              <div className=&quot;flex items-center justify-center mb-6&quot; />
+                <div className=&quot;w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mr-4&quot; />
                   <Palette className=&quot;w-8 h-8 text-white&quot; />
                 </div>
                 <h1 className=&quot;text-4xl md:text-5xl font-bold text-white neon-text&quot;>
@@ -75,7 +75,7 @@ const Page = () => {
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
                 AI-powered fashion design and trend prediction for retail businesses
               </p>
-              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot; />
                 <a
                   href=&quot;/contact&quot;
                   className=&quot;cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300&quot;
@@ -93,14 +93,14 @@ const Page = () => {
             </div>
           </section>
           {/* Features Section */}
-          <section className=&quot;mb-16&quot;></section>
+          <section className=&quot;mb-16&quot; />
             <h2 className=&quot;text-3xl font-bold text-white mb-8 text-center neon-text&quot;>
               AI Fashion Design Features
             </h2>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot;></div>
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6&quot; />
               {features.map((feature, index) => (
-                <div key={index} className=&quot;cyber-card p-6 hover:scale-105 transition-all duration-300&quot;></div>
-                  <div className=&quot;flex items-center mb-4&quot;></div>
+                <div key={index} className=&quot;cyber-card p-6 hover:scale-105 transition-all duration-300&quot; />
+                  <div className=&quot;flex items-center mb-4&quot; />
                     <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3&quot; />
                     <h3 className=&quot;text-lg font-semibold text-white&quot;>{feature}</h3>
                   </div>
@@ -109,14 +109,14 @@ const Page = () => {
             </div>
           </section>
           {/* Benefits Section */}
-          <section className=&quot;mb-16&quot;></section>
+          <section className=&quot;mb-16&quot; />
             <h2 className=&quot;text-3xl font-bold text-white mb-8 text-center neon-text&quot;>
               Why Choose AI Fashion Designer?
             </h2>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot; />
               {benefits.map((benefit, index) => (
-                <div key={index} className=&quot;text-center&quot;></div>
-                  <div className=&quot;w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4&quot;></div>
+                <div key={index} className=&quot;text-center&quot; />
+                  <div className=&quot;w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4&quot; />
                     <Zap className=&quot;w-8 h-8 text-white&quot; />
                   </div>
                   <h3 className=&quot;text-lg font-semibold text-white mb-2&quot;>{benefit}</h3>
@@ -125,23 +125,23 @@ const Page = () => {
             </div>
           </section>
           {/* Pricing Section */}
-          <section className=&quot;mb-16&quot;></section>
+          <section className=&quot;mb-16&quot; />
             <h2 className=&quot;text-3xl font-bold text-white mb-8 text-center neon-text&quot;>
               Simple, Transparent Pricing
             </h2>
-            <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto&quot;></div>
+            <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto&quot; />
               {pricingPlans.map((plan, index) => (
-                <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}></div>
+                <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`} />
                   {plan.popular && (
-                    <div className=&quot;absolute -top-4 left-1/2 transform -translate-x-1/2&quot;></div>
-                      <div className=&quot;bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold&quot;></div>
+                    <div className=&quot;absolute -top-4 left-1/2 transform -translate-x-1/2&quot; />
+                      <div className=&quot;bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold&quot; />
                         Most Popular
                       </div>
                     </div>
                   )}
-                  <div className=&quot;text-center mb-6&quot;></div>
+                  <div className=&quot;text-center mb-6&quot; />
                     <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>{plan.name}</h3>
-                    <div className=&quot;flex items-baseline justify-center&quot;></div>
+                    <div className=&quot;flex items-baseline justify-center&quot; />
                       <span className=&quot;text-4xl font-bold text-cyan-400&quot;>{plan.price}</span>
                       <span className=&quot;text-gray-400 ml-1&quot;>{plan.period}</span>
                     </div>
@@ -169,15 +169,15 @@ const Page = () => {
             </div>
           </section>
           {/* CTA Section */}
-          <section className=&quot;text-center mb-16&quot;></section>
-            <div className=&quot;cyber-card p-12 max-w-4xl mx-auto&quot;></div>
+          <section className=&quot;text-center mb-16&quot; />
+            <div className=&quot;cyber-card p-12 max-w-4xl mx-auto&quot; />
               <h2 className=&quot;text-3xl font-bold text-white mb-4 neon-text&quot;>
                 Ready to Revolutionize Fashion Design?
               </h2>
               <p className=&quot;text-xl text-gray-300 mb-8&quot;>
                 Join leading fashion brands using AI design technology
               </p>
-              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot; />
                 <a
                   href=&quot;/contact&quot;
                   className=&quot;cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300&quot;

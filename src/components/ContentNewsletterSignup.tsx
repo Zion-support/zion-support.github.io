@@ -20,8 +20,8 @@ const ContentNewsletterSignup: React.FC = () => {
   }
   if (isSubmitted) {
     return (
-      <section className=&quot;mb-16&quot; aria-labelledby=&quot;newsletter-heading&quot;></section>
-        <div className=&quot;bg-gradient-to-r from-green-600 to-emerald-600 text-white p-8 rounded-xl text-center&quot;></div>
+      <section className=&quot;mb-16&quot; aria-labelledby=&quot;newsletter-heading&quot; />
+        <div className=&quot;bg-gradient-to-r from-green-600 to-emerald-600 text-white p-8 rounded-xl text-center&quot; />
           <div className=&quot;text-4xl mb-4&quot;>✅</div>
           <h2 className=&quot;text-2xl font-bold mb-2&quot;>Thank You!</h2>
           <p className=&quot;text-green-100&quot;>You've been successfully subscribed to our newsletter.</p>
@@ -46,7 +46,7 @@ const ContentNewsletterSignup: React.FC = () => {
               className=&quot;bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center&quot;
             ></button>
               {isSubmitting ? (
-                <div className=&quot;w-5 h-5 border-2 border-purple-600 border-t-transparent rounded-full animate-spin&quot;></div>
+                <div className=&quot;w-5 h-5 border-2 border-purple-600 border-t-transparent rounded-full animate-spin&quot; />
               ) : (
                 <>
                   Subscribe

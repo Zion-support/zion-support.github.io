@@ -18,7 +18,7 @@ const ContentPromotion = lazy(() =>
 )
 const ContentShowcase = lazy(() =>
   import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({
-    default: () => <div /></div>
+    default: () => <div / />
   }))
 )
 

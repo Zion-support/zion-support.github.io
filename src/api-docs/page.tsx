@@ -48,13 +48,13 @@ const ApiDocsPage: React.FC = () => {
 const Page = () => {
   return (
     <>
-      <div className=&quot;min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900&quot;></div>
+      <div className=&quot;min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900&quot; />
         <Navigation />
-        <div className=&quot;container mx-auto px-4 py-8&quot;></div>
+        <div className=&quot;container mx-auto px-4 py-8&quot; />
           {/* Hero Section */}
-          <section className=&quot;text-center mb-16 relative overflow-hidden&quot;></section>
-            <div className=&quot;absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-3xl&quot;></div>
-            <div className=&quot;relative z-10 py-16 px-4&quot;></div>
+          <section className=&quot;text-center mb-16 relative overflow-hidden&quot; />
+            <div className=&quot;absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-3xl&quot; />
+            <div className=&quot;relative z-10 py-16 px-4&quot; />
               <h1 className=&quot;text-4xl md:text-6xl font-bold text-white mb-6 leading-tight&quot;></h1>
                 <span className=&quot;bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent&quot;>
                   API Documentation
@@ -66,13 +66,13 @@ const Page = () => {
             </div>
           </section>
           {/* API Endpoints */}
-          <section className=&quot;mb-16&quot;></section>
+          <section className=&quot;mb-16&quot; />
             <h2 className=&quot;text-3xl font-bold text-white mb-8 text-center&quot;>API Endpoints</h2>
-            <div className=&quot;space-y-6&quot;></div>
+            <div className=&quot;space-y-6&quot; />
               {apiEndpoints.map((endpoint) => (
-                <div key={endpoint.id} className=&quot;bg-gray-800 rounded-lg p-6&quot;></div>
-                  <div className=&quot;flex items-center justify-between mb-4&quot;></div>
-                    <div className=&quot;flex items-center space-x-4&quot;></div>
+                <div key={endpoint.id} className=&quot;bg-gray-800 rounded-lg p-6&quot; />
+                  <div className=&quot;flex items-center justify-between mb-4&quot; />
+                    <div className=&quot;flex items-center space-x-4&quot; />
                       <span className={`px-3 py-1 rounded text-sm font-semibold ${
                         endpoint.method === 'POST' ? 'bg-green-600 text-white' : 'bg-blue-600 text-white'
                       }`}>
@@ -81,7 +81,7 @@ const Page = () => {
                       <code className=&quot;text-cyan-400 font-mono&quot;>{endpoint.endpoint}</code>
                     </div>
                     <button
-                      onClick={() =></button> copyToClipboard(endpoint.example, endpoint.id)}
+                      onClick={() = /> copyToClipboard(endpoint.example, endpoint.id)}
                       className=&quot;flex items-center space-x-2 px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded text-sm transition-colors&quot;
                     >
                       {copiedCode === endpoint.id ? <Check className=&quot;w-4 h-4&quot; /> : <Copy className=&quot;w-4 h-4&quot; />}
@@ -90,7 +90,7 @@ const Page = () => {
                   </div>
                   <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>{endpoint.title}</h3>
                   <p className=&quot;text-gray-300 mb-4&quot;>{endpoint.description}</p>
-                  <div className=&quot;bg-gray-900 rounded p-4 overflow-x-auto&quot;></div>
+                  <div className=&quot;bg-gray-900 rounded p-4 overflow-x-auto&quot; />
                     <pre className=&quot;text-sm text-gray-300 whitespace-pre-wrap&quot;></p>{endpoint.example}</pre>
                   </div>
                 </div>
@@ -98,13 +98,13 @@ const Page = () => {
             </div>
           </section>
           {/* CTA Section */}
-          <section className=&quot;text-center py-16&quot;></section>
-            <div className=&quot;bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8&quot;></div>
+          <section className=&quot;text-center py-16&quot; />
+            <div className=&quot;bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8&quot; />
               <h2 className=&quot;text-3xl font-bold text-white mb-4&quot;>Ready to Get Started?</h2>
               <p className=&quot;text-gray-300 mb-6 text-lg&quot;>
                 Contact us for API access and integration support.
               </p>
-              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot;></div>
+              <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center items-center&quot; />
                 <a
                   href=&quot;tel:+13024640950&quot;
                   className=&quot;flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105&quot;
