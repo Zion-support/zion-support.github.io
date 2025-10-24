@@ -7,10 +7,8 @@ import './app/styles/futuristic.css';
 
 // Components
 import Navigation from './app/components/Navigation';
-import Sidebar from './app/components/Sidebar';
 import Footer from './app/components/Footer';
 import ErrorBoundaryWrapper from './app/components/ErrorBoundaryWrapper';
-import GlobalErrorBoundary from './app/components/GlobalErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import FuturisticBackground from './app/components/FuturisticBackground';
 import LoadingSpinner from './app/components/LoadingSpinner';
