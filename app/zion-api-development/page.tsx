@@ -140,3 +140,5 @@ const ZionApiDevelopmentPage: React.FC = () => {
 export default ZionApiDevelopmentPage;
 
 export default PagePage;
+
+export default PagePage;

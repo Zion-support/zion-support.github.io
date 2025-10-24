@@ -140,3 +140,5 @@ const AiPredictiveMaintenancePage: React.FC = () => {
 export default AiPredictiveMaintenancePage;
 
 export default PagePage;
+
+export default PagePage;

@@ -140,3 +140,5 @@ const AiHolographicWorkspacePage: React.FC = () => {
 export default AiHolographicWorkspacePage;
 
 export default PagePage;
+
+export default PagePage;

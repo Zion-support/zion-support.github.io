@@ -140,3 +140,5 @@ const ZionAiWebsiteAnalyzerPage: React.FC = () => {
 export default ZionAiWebsiteAnalyzerPage;
 
 export default PagePage;
+
+export default PagePage;

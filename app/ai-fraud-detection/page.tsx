@@ -140,3 +140,5 @@ const AiFraudDetectionPage: React.FC = () => {
 export default AiFraudDetectionPage;
 
 export default PagePage;
+
+export default PagePage;

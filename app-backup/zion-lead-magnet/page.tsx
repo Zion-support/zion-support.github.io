@@ -139,4 +139,8 @@ const ZionLeadMagnetPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD:app-backup/zion-lead-magnet/page.tsx
 export default ZionLeadMagnetPage;
+=======
+export default PagePage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e87d:app/zion-ai-workflow-automator/page.tsx

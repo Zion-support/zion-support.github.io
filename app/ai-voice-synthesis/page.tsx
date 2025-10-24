@@ -140,3 +140,5 @@ const AiVoiceSynthesisPage: React.FC = () => {
 export default AiVoiceSynthesisPage;
 
 export default PagePage;
+
+export default PagePage;

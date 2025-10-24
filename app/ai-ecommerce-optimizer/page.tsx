@@ -140,3 +140,5 @@ const AiEcommerceOptimizerPage: React.FC = () => {
 export default AiEcommerceOptimizerPage;
 
 export default PagePage;
+
+export default PagePage;

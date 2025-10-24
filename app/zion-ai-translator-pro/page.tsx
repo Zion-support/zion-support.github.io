@@ -140,3 +140,5 @@ const ZionAiTranslatorProPage: React.FC = () => {
 export default ZionAiTranslatorProPage;
 
 export default PagePage;
+
+export default PagePage;

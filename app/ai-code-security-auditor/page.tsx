@@ -140,3 +140,5 @@ const AiCodeSecurityAuditorPage: React.FC = () => {
 export default AiCodeSecurityAuditorPage;
 
 export default PagePage;
+
+export default PagePage;

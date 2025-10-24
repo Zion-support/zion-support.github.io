@@ -140,3 +140,5 @@ const AiQuantumOptimizationPage: React.FC = () => {
 export default AiQuantumOptimizationPage;
 
 export default PagePage;
+
+export default PagePage;

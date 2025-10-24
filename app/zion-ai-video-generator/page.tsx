@@ -140,3 +140,5 @@ const ZionAiVideoGeneratorPage: React.FC = () => {
 export default ZionAiVideoGeneratorPage;
 
 export default PagePage;
+
+export default PagePage;

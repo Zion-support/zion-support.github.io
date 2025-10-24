@@ -139,4 +139,8 @@ const ZionChatAiPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD:app-backup/zion-chat-ai/page.tsx
 export default ZionChatAiPage;
+=======
+export default PagePage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e87d:app/zion-ai-sales-predictor/page.tsx

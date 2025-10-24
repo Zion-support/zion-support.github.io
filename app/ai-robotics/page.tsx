@@ -140,3 +140,5 @@ const AiRoboticsPage: React.FC = () => {
 export default AiRoboticsPage;
 
 export default PagePage;
+
+export default PagePage;

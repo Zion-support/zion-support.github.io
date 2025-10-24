@@ -140,3 +140,5 @@ const AiProjectManagementPage: React.FC = () => {
 export default AiProjectManagementPage;
 
 export default PagePage;
+
+export default PagePage;

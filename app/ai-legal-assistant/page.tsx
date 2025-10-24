@@ -140,3 +140,5 @@ const AiLegalAssistantPage: React.FC = () => {
 export default AiLegalAssistantPage;
 
 export default PagePage;
+
+export default PagePage;

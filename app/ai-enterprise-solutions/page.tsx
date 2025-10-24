@@ -140,3 +140,5 @@ const AiEnterpriseSolutionsPage: React.FC = () => {
 export default AiEnterpriseSolutionsPage;
 
 export default PagePage;
+
+export default PagePage;

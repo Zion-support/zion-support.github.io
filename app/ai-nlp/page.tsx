@@ -140,3 +140,5 @@ const AiNlpPage: React.FC = () => {
 export default AiNlpPage;
 
 export default PagePage;
+
+export default PagePage;

@@ -140,3 +140,5 @@ const AiHrAssistantPage: React.FC = () => {
 export default AiHrAssistantPage;
 
 export default PagePage;
+
+export default PagePage;

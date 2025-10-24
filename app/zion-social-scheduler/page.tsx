@@ -140,3 +140,5 @@ const ZionSocialSchedulerPage: React.FC = () => {
 export default ZionSocialSchedulerPage;
 
 export default PagePage;
+
+export default PagePage;

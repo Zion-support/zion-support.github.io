@@ -140,3 +140,5 @@ const ManagedItPage: React.FC = () => {
 export default ManagedItPage;
 
 export default PagePage;
+
+export default PagePage;

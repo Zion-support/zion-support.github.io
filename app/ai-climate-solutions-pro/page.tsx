@@ -140,3 +140,5 @@ const AiClimateSolutionsProPage: React.FC = () => {
 export default AiClimateSolutionsProPage;
 
 export default PagePage;
+
+export default PagePage;

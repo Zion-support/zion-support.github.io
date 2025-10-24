@@ -140,3 +140,5 @@ const AiWritingAssistantPage: React.FC = () => {
 export default AiWritingAssistantPage;
 
 export default PagePage;
+
+export default PagePage;

@@ -140,3 +140,5 @@ const AiAutomatedReportingPage: React.FC = () => {
 export default AiAutomatedReportingPage;
 
 export default PagePage;
+
+export default PagePage;

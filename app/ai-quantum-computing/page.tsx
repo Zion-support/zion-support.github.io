@@ -140,3 +140,5 @@ const AiQuantumComputingPage: React.FC = () => {
 export default AiQuantumComputingPage;
 
 export default PagePage;
+
+export default PagePage;

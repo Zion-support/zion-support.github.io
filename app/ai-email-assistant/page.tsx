@@ -185,3 +185,5 @@ const AIEmailAssistantPage: React.FC = () => {
 export default AIEmailAssistantPage;
 
 export default PagePage;
+
+export default PagePage;

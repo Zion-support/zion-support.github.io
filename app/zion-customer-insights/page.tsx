@@ -140,3 +140,5 @@ const ZionCustomerInsightsPage: React.FC = () => {
 export default ZionCustomerInsightsPage;
 
 export default PagePage;
+
+export default PagePage;

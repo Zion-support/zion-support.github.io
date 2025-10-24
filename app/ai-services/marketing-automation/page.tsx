@@ -140,3 +140,5 @@ const MarketingAutomationPage: React.FC = () => {
 export default MarketingAutomationPage;
 
 export default PagePage;
+
+export default PagePage;

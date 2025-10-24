@@ -140,3 +140,5 @@ const TrainingPage: React.FC = () => {
 export default TrainingPage;
 
 export default PagePage;
+
+export default PagePage;

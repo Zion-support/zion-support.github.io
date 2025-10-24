@@ -140,3 +140,5 @@ const AiMobileAppDevelopmentPage: React.FC = () => {
 export default AiMobileAppDevelopmentPage;
 
 export default PagePage;
+
+export default PagePage;

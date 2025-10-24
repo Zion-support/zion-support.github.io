@@ -140,3 +140,5 @@ const ZionEmailAutomationPage: React.FC = () => {
 export default ZionEmailAutomationPage;
 
 export default PagePage;
+
+export default PagePage;

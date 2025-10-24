@@ -140,3 +140,5 @@ const FiveGSolutionsPage: React.FC = () => {
 export default FiveGSolutionsPage;
 
 export default PagePage;
+
+export default PagePage;

@@ -108,3 +108,5 @@ const PerformanceOptimization = () => {
 };
 
 export default PerformanceOptimization;
+
+export default Performanceoptimization;

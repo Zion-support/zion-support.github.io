@@ -140,3 +140,5 @@ const AiInventoryManagementPage: React.FC = () => {
 export default AiInventoryManagementPage;
 
 export default PagePage;
+
+export default PagePage;

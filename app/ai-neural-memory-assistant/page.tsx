@@ -140,3 +140,5 @@ const AiNeuralMemoryAssistantPage: React.FC = () => {
 export default AiNeuralMemoryAssistantPage;
 
 export default PagePage;
+
+export default PagePage;

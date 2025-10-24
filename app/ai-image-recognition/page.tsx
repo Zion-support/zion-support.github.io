@@ -140,3 +140,5 @@ const AiImageRecognitionPage: React.FC = () => {
 export default AiImageRecognitionPage;
 
 export default PagePage;
+
+export default PagePage;

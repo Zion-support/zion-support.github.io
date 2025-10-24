@@ -140,3 +140,5 @@ const AiSocialMediaSchedulerPage: React.FC = () => {
 export default AiSocialMediaSchedulerPage;
 
 export default PagePage;
+
+export default PagePage;

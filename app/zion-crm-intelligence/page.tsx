@@ -140,3 +140,5 @@ const ZionCrmIntelligencePage: React.FC = () => {
 export default ZionCrmIntelligencePage;
 
 export default PagePage;
+
+export default PagePage;

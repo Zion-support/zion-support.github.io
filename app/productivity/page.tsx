@@ -140,3 +140,5 @@ const ProductivityPage: React.FC = () => {
 export default ProductivityPage;
 
 export default PagePage;
+
+export default PagePage;

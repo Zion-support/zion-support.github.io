@@ -140,3 +140,5 @@ const SmartCitiesPage: React.FC = () => {
 export default SmartCitiesPage;
 
 export default PagePage;
+
+export default PagePage;

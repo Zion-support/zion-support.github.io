@@ -140,3 +140,5 @@ const ZionBlockchainSolutionsPage: React.FC = () => {
 export default ZionBlockchainSolutionsPage;
 
 export default PagePage;
+
+export default PagePage;

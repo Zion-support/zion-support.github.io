@@ -140,3 +140,5 @@ const TaskManagerProPage: React.FC = () => {
 export default TaskManagerProPage;
 
 export default PagePage;
+
+export default PagePage;

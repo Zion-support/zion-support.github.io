@@ -140,3 +140,5 @@ const AiContentWriterPage: React.FC = () => {
 export default AiContentWriterPage;
 
 export default PagePage;
+
+export default PagePage;

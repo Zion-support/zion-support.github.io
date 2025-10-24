@@ -108,3 +108,5 @@ const Systemadmin = () => {
 };
 
 export default Systemadmin;
+
+export default SystemAdmin;

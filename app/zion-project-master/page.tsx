@@ -140,3 +140,5 @@ const ZionProjectMasterPage: React.FC = () => {
 export default ZionProjectMasterPage;
 
 export default PagePage;
+
+export default PagePage;

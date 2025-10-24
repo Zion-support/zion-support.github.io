@@ -140,3 +140,5 @@ const AiMobileAppBuilderPage: React.FC = () => {
 export default AiMobileAppBuilderPage;
 
 export default PagePage;
+
+export default PagePage;

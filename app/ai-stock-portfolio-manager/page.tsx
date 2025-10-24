@@ -140,3 +140,5 @@ const AiStockPortfolioManagerPage: React.FC = () => {
 export default AiStockPortfolioManagerPage;
 
 export default PagePage;
+
+export default PagePage;

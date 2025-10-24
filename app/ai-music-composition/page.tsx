@@ -140,3 +140,5 @@ const AiMusicCompositionPage: React.FC = () => {
 export default AiMusicCompositionPage;
 
 export default PagePage;
+
+export default PagePage;

@@ -140,3 +140,5 @@ const CustomerExperiencePage: React.FC = () => {
 export default CustomerExperiencePage;
 
 export default PagePage;
+
+export default PagePage;

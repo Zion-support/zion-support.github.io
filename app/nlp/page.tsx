@@ -108,3 +108,5 @@ const Nlp = () => {
 };
 
 export default Nlp;
+
+export default NLP;

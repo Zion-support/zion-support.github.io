@@ -140,3 +140,5 @@ const OfflinePage: React.FC = () => {
 export default OfflinePage;
 
 export default PagePage;
+
+export default PagePage;

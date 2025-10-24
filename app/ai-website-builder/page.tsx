@@ -140,3 +140,5 @@ const AiWebsiteBuilderPage: React.FC = () => {
 export default AiWebsiteBuilderPage;
 
 export default PagePage;
+
+export default PagePage;

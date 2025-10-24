@@ -140,3 +140,5 @@ const AiEnergyGridManagementProPage: React.FC = () => {
 export default AiEnergyGridManagementProPage;
 
 export default PagePage;
+
+export default PagePage;

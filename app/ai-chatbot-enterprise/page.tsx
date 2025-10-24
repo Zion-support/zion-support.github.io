@@ -140,3 +140,5 @@ const AiChatbotEnterprisePage: React.FC = () => {
 export default AiChatbotEnterprisePage;
 
 export default PagePage;
+
+export default PagePage;

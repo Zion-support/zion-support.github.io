@@ -140,3 +140,5 @@ const AiInvestmentOptimizerPage: React.FC = () => {
 export default AiInvestmentOptimizerPage;
 
 export default PagePage;
+
+export default PagePage;

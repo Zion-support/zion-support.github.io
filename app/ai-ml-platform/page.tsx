@@ -140,3 +140,5 @@ const AiMlPlatformPage: React.FC = () => {
 export default AiMlPlatformPage;
 
 export default PagePage;
+
+export default PagePage;

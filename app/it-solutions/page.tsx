@@ -140,3 +140,5 @@ const ItSolutionsPage: React.FC = () => {
 export default ItSolutionsPage;
 
 export default PagePage;
+
+export default PagePage;

@@ -140,3 +140,5 @@ const ZionSmartCrmAutomationPage: React.FC = () => {
 export default ZionSmartCrmAutomationPage;
 
 export default PagePage;
+
+export default PagePage;

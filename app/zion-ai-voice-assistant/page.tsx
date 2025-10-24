@@ -140,3 +140,5 @@ const ZionAiVoiceAssistantPage: React.FC = () => {
 export default ZionAiVoiceAssistantPage;
 
 export default PagePage;
+
+export default PagePage;

@@ -76,7 +76,7 @@ export default function HomePage() {
             </button>
             <button className='border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200'></button>
               Learn More
-            </button>
+            </a>
           </div>
         </div>
       </section>

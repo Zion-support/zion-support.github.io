@@ -140,3 +140,5 @@ const ZionAiWorkflowAutomatorProPage: React.FC = () => {
 export default ZionAiWorkflowAutomatorProPage;
 
 export default PagePage;
+
+export default PagePage;

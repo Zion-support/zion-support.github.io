@@ -140,3 +140,5 @@ const QualityAssurancePage: React.FC = () => {
 export default QualityAssurancePage;
 
 export default PagePage;
+
+export default PagePage;

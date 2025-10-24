@@ -140,3 +140,5 @@ const AiLeadGenerationPage: React.FC = () => {
 export default AiLeadGenerationPage;
 
 export default PagePage;
+
+export default PagePage;

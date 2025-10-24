@@ -140,3 +140,5 @@ const AiSpaceTechnologyProPage: React.FC = () => {
 export default AiSpaceTechnologyProPage;
 
 export default PagePage;
+
+export default PagePage;
