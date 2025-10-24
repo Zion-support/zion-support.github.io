@@ -57,28 +57,28 @@ export const performanceUtils = {
     }
   },
 
-  debounce: (func: Function, wait: number) => {
-    let timeout: NodeJS.Timeout;
-    return function executedFunction(...args: any[]) {
-      const later = () => {
-        clearTimeout(timeout);
-        func(...args);
-      };
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-    };
-  },
+        debounce: <T extends (...args: any[]) => any>(func: T, wait: number) => {
+          let timeout: NodeJS.Timeout;
+          return function executedFunction(...args: Parameters<T>) {
+            const later = () => {
+              clearTimeout(timeout);
+              func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+          };
+        },
 
-  throttle: (func: Function, limit: number) => {
-    let inThrottle: boolean;
-    return function executedFunction(...args: any[]) {
-      if (!inThrottle) {
-        func.apply(this, args);
-        inThrottle = true;
-        setTimeout(() => inThrottle = false, limit);
-      }
-    };
-  },
+        throttle: <T extends (...args: any[]) => any>(func: T, limit: number) => {
+          let inThrottle: boolean;
+          return function executedFunction(...args: Parameters<T>) {
+            if (!inThrottle) {
+              func.apply(this, args);
+              inThrottle = true;
+              setTimeout(() => inThrottle = false, limit);
+            }
+          };
+        },
 
   cleanup: () => {
     if (typeof window !== 'undefined') {
