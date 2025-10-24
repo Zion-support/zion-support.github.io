@@ -46,17 +46,17 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
     <>
       <Helmet>
         <title>AdvancedPerformanceMonitor</title>
-        <meta name=&quot;description&quot; content=&quot;Advanced AdvancedPerformanceMonitor solution for modern businesses.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, AdvancedPerformanceMonitor, AI solutions, intelligent automation&quot; />
+        <meta name="description" content="Advanced Performance Monitor solution for modern businesses." />
+        <meta name="keywords" content="AI, artificial intelligence, performance monitoring, AI solutions, intelligent automation" />
       </Helmet>
       <Navigation />
-      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
-        <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
-          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
-          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
-              AdvancedPerformanceMonitor
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Advanced Performance Monitor
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
               Advanced AdvancedPerformanceMonitor solution for modern businesses.
