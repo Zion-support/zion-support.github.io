@@ -1,18 +1,16 @@
-'use client'
-
-import React from 'react'
-import Image from 'next/image'
+import React from 'react';
+import Image from 'next/image';
 
 interface OptimizedImageProps {
-  src: string
-  alt: string
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
-  quality?: number
-  placeholder?: 'empty' | 'blur'
-  blurDataURL?: string
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  priority?: boolean;
+  quality?: number;
+  placeholder?: 'blur' | 'empty';
+  blurDataURL?: string;
+  className?: string;
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
@@ -20,30 +18,28 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   alt,
   width = 800,
   height = 600,
-  className = '',
   priority = false,
   quality = 75,
-  placeholder = 'empty',
-  blurDataURL
+  placeholder = 'blur',
+  blurDataURL,
+  className = ''
 }) => {
   return (
-    <div className={`relative overflow-hidden ${className}`}></div>
+    <div className={`relative overflow-hidden ${className}`}>
       <Image
-        src={src
-        alt={alt
-        width={width
-        height={height
-        priority={priority
-        quality={quality
-        placeholder={placeholder
-        blurDataURL={blurDataURL
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        priority={priority}
+        quality={quality}
+        placeholder={placeholder}
+        blurDataURL={blurDataURL}
         className="w-full h-auto object-cover transition-transform duration-300 hover:scale-105"
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
     </div>
-  )
-}
+  );
+};
 
-}
-
-export default OptimizedImage;}
+export default OptimizedImage;

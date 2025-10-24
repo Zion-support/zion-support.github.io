@@ -1,19 +1,15 @@
+import React from 'react';
 
-import React from 'react'
-
-interface Footer_brokenProps {
+interface FooterBrokenProps {
   // Add props here
 }
 
-const Footer_broken: React.FC<Footer_brokenProps> = (_props) => {
+const FooterBroken: React.FC<FooterBrokenProps> = (_props) => {
   return (
     <div>
-      {/* Component content */
+      {/* Component content */}
     </div>
-  )
-}
+  );
+};
 
-}
-
-export default Footer_broken
-}
+export default FooterBroken;
