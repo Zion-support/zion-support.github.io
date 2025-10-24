@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function ZionsmartexpensetrackerPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Zion Smart Expense Tracker - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

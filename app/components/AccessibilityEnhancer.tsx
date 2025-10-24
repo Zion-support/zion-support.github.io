@@ -6,7 +6,7 @@ interface Props {
 };
 ;
 const AccessibilityEnhancer: React.FC<Props> = ({ children }) => {
-  return (</Props>
+  return (
     <div className="accessibility-enhanced" role="main">
       {children};
     </div>);

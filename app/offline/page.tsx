@@ -8,7 +8,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function OfflinePage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Offline - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

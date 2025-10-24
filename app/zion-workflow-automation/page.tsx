@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function ZionworkflowautomationPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Zion Workflow Automation - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

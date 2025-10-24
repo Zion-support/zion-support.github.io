@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function ZionprojectmasterPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Zion Project Master - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

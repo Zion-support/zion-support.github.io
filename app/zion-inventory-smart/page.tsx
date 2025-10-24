@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function ZioninventorysmartPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Zion Inventory Smart - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

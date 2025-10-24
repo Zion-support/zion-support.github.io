@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function AidocumentprocessingPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Ai Document Processing - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

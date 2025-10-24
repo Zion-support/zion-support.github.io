@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function ZioncompliancemanagerPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Zion Compliance Manager - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

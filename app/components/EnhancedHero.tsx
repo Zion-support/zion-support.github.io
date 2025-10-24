@@ -40,7 +40,7 @@ const EnhancedHero: React.FC = () => {
                 </div>
               
             </div>
-          </div>
+          
         </section>
 
         / CTA Section /

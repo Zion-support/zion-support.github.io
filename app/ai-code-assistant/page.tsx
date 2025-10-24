@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function AicodeassistantPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Ai Code Assistant - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

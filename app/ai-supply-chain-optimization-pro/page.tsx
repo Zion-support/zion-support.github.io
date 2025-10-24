@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function AisupplychainoptimizationproPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Ai Supply Chain Optimization Pro - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function AiaudioprocessorimprovedPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Ai Audio Processor Improved - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

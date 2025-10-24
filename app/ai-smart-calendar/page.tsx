@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function AismartcalendarPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Ai Smart Calendar - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function ZiondatasyncPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Zion Data Sync - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

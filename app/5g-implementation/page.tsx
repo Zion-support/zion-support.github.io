@@ -6,7 +6,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function GimplementationPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>5g Implementation - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

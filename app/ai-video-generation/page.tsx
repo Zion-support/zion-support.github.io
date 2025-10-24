@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function AivideogenerationPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Ai Video Generation - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function AienergygridmanagementproPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Ai Energy Grid Management Pro - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

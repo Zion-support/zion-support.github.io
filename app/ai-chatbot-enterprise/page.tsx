@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function AichatbotenterprisePage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Ai Chatbot Enterprise - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

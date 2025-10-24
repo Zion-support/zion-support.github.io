@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function AiimagerecognitionPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Ai Image Recognition - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

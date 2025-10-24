@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function ZionaisurveybuilderPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Zion Ai Survey Builder - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

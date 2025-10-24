@@ -238,36 +238,36 @@ const ContentCarousel: React.FC = () => {;
                 </div>,
               </div>,
               {/* Visual Element */}
-              <div className="relative"></div>
-                <div className="aspect-square bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center"></div>
-                  <div className="text-center"></div>
-                    <div className="w-32 h-32 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center"></div>
+              <div className="relative">
+                <div className="aspect-square bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-32 h-32 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
                       <currentSlideData.icon className="w-16 h-16 text-white" />
-                    </div>
-                    <div className="text-4xl font-bold text-white mb-2">{currentSlideData.title}</div>div>
-                    <div className="text-gray-300">Slide {currentSlide + 1} of {slides.length}</div>div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{currentSlideData.features.map((feature, index) => (</div>
-                <div key={index} className="flex items-center gap-3"></div>
+                    
+                    <div className="text-4xl font-bold text-white mb-2">{currentSlideData.title}div>
+                    <div className="text-gray-300">Slide {currentSlide + 1} of {slides.length}div>
+                  
+                
+              
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{currentSlideData.features.map((feature, index) => (
+                <div key={index} className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                   <span className="text-gray-300">{feature}</span>
-                </div>
+                
               ))}
-            </div>
+            
             {/* Stats */}
             {currentSlideData.stats && (
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-8 border-t border-slate-700">{currentSlideData.stats.map((stat, index) => (</div>
-                  <div key={index} className="text-center"></div>
-                    <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-                    <div className="text-sm text-gray-400">{stat.label}</div>
-                  </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-8 border-t border-slate-700">{currentSlideData.stats.map((stat, index) => (
+                  <div key={index} className="text-center">
+                    <div className="text-3xl font-bold text-white mb-1">{stat.value}
+                    <div className="text-sm text-gray-400">{stat.label}
+                  
                 ))}
-              </div>
+              
             )}
-          </div>
+          
           <button
             onClick={prevSlide}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover: bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"></button>
@@ -278,7 +278,7 @@ const ContentCarousel: React.FC = () => {;
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover: bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"></button>
             <ChevronRight className="h-6 w-6" />
           </button>
-        </div>
+        
 {/* Slide Indicators */}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover: bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"
           >
@@ -432,7 +432,7 @@ const ContentCarousel: React.FC = () => {;
     </div>
 
         {/* Slide Indicators */}
-        <div className="flex justify-center mt-8 space-x-2">{slides.map((_, index) => (</div>
+        <div className="flex justify-center mt-8 space-x-2">{slides.map((_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
@@ -441,43 +441,43 @@ const ContentCarousel: React.FC = () => {;
               }`}
             />
           ))}
-        </div>
+        
         {/* Additional Info */}
-        <div className="mt-16 text-center"></div>
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-4xl mx-auto"></div>
-            <div className="flex items-center justify-center gap-3 text-white"></div>
+        <div className="mt-16 text-center">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="flex items-center justify-center gap-3 text-white">
               <Star className="w-6 h-6 text-yellow-400" />
-              <div className="text-left"></div>
-                <div className="text-2xl font-bold">4.9/5</div>
-                <div className="text-gray-400 text-sm">Customer Rating</div>
-              </div>
-            </div>
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
+              <div className="text-left">
+                <div className="text-2xl font-bold">4.9/5
+                <div className="text-gray-400 text-sm">Customer Rating
+              
+            
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4"></div>
+                <div key={index} className="flex items-start space-x-4">
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
-                </div>
+                
               ))}
-            </div>
-          </div>
+            
+          
         </section>
         {/* CTA Section */}
         <section className="py-20 px-4"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
+          <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of businesses already using our AI solutions
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Start Free Trial
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Contact Sales
               </button>
-            </div>
-          </div>
+            
+          
         </section>
       </div>
       <EnhancedFooter />

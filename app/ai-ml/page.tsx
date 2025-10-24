@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function AimlPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Ai Ml - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

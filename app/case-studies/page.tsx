@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function CasestudiesPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Case Studies - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

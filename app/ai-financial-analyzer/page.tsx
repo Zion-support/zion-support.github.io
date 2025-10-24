@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function AifinancialanalyzerPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Ai Financial Analyzer - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter';
 
 export default function CareersPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Careers - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

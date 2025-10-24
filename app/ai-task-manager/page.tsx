@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function AitaskmanagerPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Ai Task Manager - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

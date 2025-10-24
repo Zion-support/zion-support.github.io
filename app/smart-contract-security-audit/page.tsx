@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function SmartcontractsecurityauditPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Smart Contract Security Audit - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

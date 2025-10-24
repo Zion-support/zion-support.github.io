@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function ZionsocialschedulerPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Zion Social Scheduler - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function AifinancialcrimedetectionproPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Ai Financial Crime Detection Pro - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

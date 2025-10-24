@@ -8,7 +8,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function TrainingPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Training - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

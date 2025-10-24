@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function AicodesecurityauditorPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Ai Code Security Auditor - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function AiroboticsPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Ai Robotics - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

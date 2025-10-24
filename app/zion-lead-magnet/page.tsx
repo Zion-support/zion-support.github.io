@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function ZionleadmagnetPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Zion Lead Magnet - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

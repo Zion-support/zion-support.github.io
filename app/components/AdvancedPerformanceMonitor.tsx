@@ -3,13 +3,12 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from 'Footer';
+import Footer from './Footer';
 const AdvancedPerformanceMonitorPage: React.FC = () => {
   const features = [
     {
-      ico,
-  n: Brain,
-    title: 'AI-Powered Intelligence',
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
     benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
 },
@@ -38,11 +37,11 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
     'Improve decision-making with AI insights''',
     'Scale operations without proportional staff increases''',
     'Gain competitive advantage with advanced technology'
-  ]
+  ];
   return (
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>Advanced Performance Monitor</title>
         <meta name="description" content="Advanced Performance Monitor solution for modern businesses." /></meta>
@@ -100,32 +99,32 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
             </div></div></section>
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution?</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Experience the power of AI-driven performance monitoring</p>
               </p>
-            </div>
+            
             <div className="grid md: grid-cols-2 l,
-  g:grid-cols-3 gap-8"></div>
-              {benefits.map((benefit, index) => (</div>
-                <div key={index} className="flex items-start space-x-3"></div>
+  g:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-3">
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /></CheckCircle>
                   <p className="text-gray-300 text-lg">{benefit}</p>
-                </div>
+                
               ))}
             </div></div></section>
         {/* CTA Section */}
         <section className="py-20 px-4"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
+          <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6"></h2>
               Ready to Transform Your Business?</h2>
             </h2>
             <p className="text-xl text-gray-300 mb-8"></p>
               Join thousands of businesses already using our AI-powered solutions</p>
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"></button>
                 Start Free Trial</button>
                 <ArrowRight className="ml-2 h-5 w-5" /></ArrowRight>
@@ -134,8 +133,8 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
                 Contact Sales</button>
               </button>
-            </div>
-          </div>
+            
+          
         </section>
       </div>
       <EnhancedFooter /></Footer>

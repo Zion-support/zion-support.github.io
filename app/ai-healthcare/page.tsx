@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function AihealthcarePage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Ai Healthcare - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

@@ -3,7 +3,8 @@ import  Helmet  from 'react-helmet-async';
 import Link  } from 'next/link';
 import  ArrowRightIcon ShieldCheckIcon CloudIcon CpuChipIcon ChartBarIcon GlobeAltIcon PhoneIcon EnvelopeIcon MapPinIcon } from 'heroicons/react/24/outline'  ;
 
-export default function HomePage() {  return (
+export default function HomePage() {
+  return (
     <>
     
   
@@ -179,8 +180,8 @@ export default function HomePage() {  return (
       </section>,
       {/* About Section */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="max-w-4xl mx-auto text-center"></div>
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-8"></h2>
               Why Choose Zion Tech Group?</h2>
             </h2>
@@ -189,20 +190,20 @@ export default function HomePage() {  return (
               we&apos;ve helped businesses across various industries transform their operations </p>
               and achieve unprecedented growth.</p>
             </p>
-            <div className="grid md: grid-cols-3 gap-8 mb-12"></div>
-              <div className="text-center"></div>
-                <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
-                <div className="text-gray-300">Projects Completed</div>
-              </div>
-              <div className="text-center"></div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">25+</div>
-                <div className="text-gray-300">Happy Clients</div>
-              </div>
-              <div className="text-center"></div>
-                <div className="text-4xl font-bold text-green-400 mb-2">99%</div>
-                <div className="text-gray-300">Success Rate</div>
-              </div>
-            </div>
+            <div className="grid md: grid-cols-3 gap-8 mb-12">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-purple-400 mb-2">50+
+                <div className="text-gray-300">Projects Completed
+              
+              <div className="text-center">
+                <div className="text-4xl font-bold text-cyan-400 mb-2">25+
+                <div className="text-gray-300">Happy Clients
+              
+              <div className="text-center">
+                <div className="text-4xl font-bold text-green-400 mb-2">99%
+                <div className="text-gray-300">Success Rate
+              
+            
             
             <Link 
               href="/about" 
@@ -211,13 +212,13 @@ export default function HomePage() {  return (
             ></Link>
               Learn More About Us <ArrowRightIcon className="w-5 h-5" /></ArrowRightIcon>
             </Link>
-          </div>
-        </div>,
+          
+        ,
       </section>,
       {/* Contact Section */}
       <section className="py-20 bg-slate-900"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="max-w-4xl mx-auto text-center"></div>
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-8"></h2>
               Ready to Transform Your Business?</h2>
             </h2>
@@ -225,22 +226,22 @@ export default function HomePage() {  return (
               Let&apos;s discuss how our technology solutions can drive your business forward</p>
             </p>
             <div className="grid m,
-  d: grid-cols-3 gap-8 mb-12"></div>
-              <div className="flex items-center justify-center gap-4 text-gray-300"></div>
+  d: grid-cols-3 gap-8 mb-12">
+              <div className="flex items-center justify-center gap-4 text-gray-300">
                 <PhoneIcon className="w-6 h-6 text-purple-400" /></PhoneIcon>
                 <span>+1-302-464-0950</span>
-              </div>
-              <div className="flex items-center justify-center gap-4 text-gray-300"></div>
+              
+              <div className="flex items-center justify-center gap-4 text-gray-300">
                 <EnvelopeIcon className="w-6 h-6 text-purple-400" /></EnvelopeIcon>
                 <span>kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center justify-center gap-4 text-gray-300"></div>
+              
+              <div className="flex items-center justify-center gap-4 text-gray-300">
                 <MapPinIcon className="w-6 h-6 text-purple-400" /></MapPinIcon>
                 <span>Middletown, DE</span>
-              </div>
-            </div>
+              
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact" 
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
@@ -254,10 +255,10 @@ export default function HomePage() {  return (
               ></Link>
                 Schedule Demo</Link>
               </Link>
-            </div>
-          </div>
-        </div>
+            
+          
+        
       </section>
-</div>,
+,
   );,
 }

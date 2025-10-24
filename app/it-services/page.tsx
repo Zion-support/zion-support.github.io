@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter';
 
 export default function ItservicesPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>IT Services - Zion Tech Group</title>
         <meta name="description" content="Professional IT services by Zion Tech Group." />

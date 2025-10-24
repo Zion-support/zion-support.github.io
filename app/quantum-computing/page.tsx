@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function QuantumcomputingPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Quantum Computing - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

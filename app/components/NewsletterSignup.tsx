@@ -79,8 +79,8 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
         {message && (
           <div className={`flex items-center space-x-2 text-sm ${
             status === 'success' ? 'text-green-200' : 'text-red-200'
-}`}></div>
-            {status === 'success' ? (</div>
+}`}>
+            {status === 'success' ? (
               <CheckCircle className="w-4 h-4" /></CheckCircle>
             ) : (</CheckCircle>
               <AlertCircle className="w-4 h-4" /></AlertCircle>
@@ -89,7 +89,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
           </div>
         
       </form>
-      <div className="mt-6 text-center text-sm text-white/80"></div>
+      <div className="mt-6 text-center text-sm text-white/80">
         <p></p>
           ✓ No spam, unsubscribe anytime<br /></br>
           ✓ Weekly updates on latest tech trends<br /></br>

@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function AicomputervisionPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Ai Computer Vision - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

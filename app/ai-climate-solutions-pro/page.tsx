@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function AiclimatesolutionsproPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Ai Climate Solutions Pro - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

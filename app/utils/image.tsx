@@ -114,14 +114,14 @@ style = {
 imageStyle
 };
 {...props})
->)</div>
+>)
 <span className="text-gray-500text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
 </div>;
   );
 {...props}
-></div>
+>
 <span className="text-gray-500text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
-</div>
+
 return(<img
 return (<img></img>
 src={src}

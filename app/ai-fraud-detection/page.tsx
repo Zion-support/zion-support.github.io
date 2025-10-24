@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function AifrauddetectionPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Ai Fraud Detection - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

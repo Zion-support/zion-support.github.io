@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function AiinventorymanagementPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Ai Inventory Management - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

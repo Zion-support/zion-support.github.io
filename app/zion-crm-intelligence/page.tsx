@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function ZioncrmintelligencePage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Zion Crm Intelligence - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function AiseooptimizerPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Ai Seo Optimizer - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

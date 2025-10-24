@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function SmartanalyticsPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Smart Analytics - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

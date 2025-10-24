@@ -7,7 +7,7 @@ import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react'
 
 const useAnalytics = () => {
   return (
-    <>
+    <div>
       <Head>
         <title>404 - Page Not Found | Zion Tech Group</title>
         <meta name="robots" content="noindex, nofollow" />
@@ -109,8 +109,8 @@ const useAnalytics = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-};
+    
+      </div>
+  );;
 
 export default useAnalytics;

@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function AicybersecuritysuitePage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Ai Cybersecurity Suite - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

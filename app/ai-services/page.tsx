@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter';
 
 export default function AiservicesPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>AI Services - Zion Tech Group</title>
         <meta name="description" content="Professional AI services by Zion Tech Group." />

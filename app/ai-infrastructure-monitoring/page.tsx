@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function AiinfrastructuremonitoringPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Ai Infrastructure Monitoring - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />

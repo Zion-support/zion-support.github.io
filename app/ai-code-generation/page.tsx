@@ -7,7 +7,7 @@ import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function AicodegenerationPage() {
   return (
-    <div>
+    <>
       <Head>
         <title>Ai Code Generation - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
