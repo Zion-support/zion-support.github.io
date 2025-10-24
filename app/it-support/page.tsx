@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 export default function Softwaredevelopment() {
@@ -146,3 +147,14 @@ export default function Softwaredevelopment() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   );
 }
+=======
+import React from 'react';
+
+const ItSupportPage: React.FC = () => {return (
+    <>
+      <title>ItSupport - Zion Tech Group</title>
+
+      <  />
+  );}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

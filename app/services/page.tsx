@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -1964,3 +1965,19 @@ export default ServicesPage
 =======
 export default ServicesPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+import React from 'react';
+
+import {Helmet} from 'react-helmet-async';
+
+import {Link} from 'react-router-dom';
+import {ArrowRight} from 'lucide-react';
+
+export default function Services() {return (
+    <>
+      <title>Services - Zion Tech Group</title>
+
+      <  />
+  );}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

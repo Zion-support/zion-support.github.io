@@ -30,6 +30,38 @@ export default function Page() {
 }
 =======
 import React from 'react';
+<<<<<<< HEAD
+=======
+export interface ErrorBoundaryConfig {/**
+export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {if (error.message.includes('Network') || error.message.includes('fetch')) {return 'network'}
+export default getErrorBoundaryConfig;
+/**
+ * Error Boundary Configuration;
+ * Centralized configuration for error handling across the application;
+ */
+   * Whether to log errors to console*/
+  /**
+   * Whether to show detailed error messages*/
+  /**
+   * Whether to send errors to external service*/
+  /**
+   * Error reporting endpoint*/
+  reportingEndpoint?: string;/**
+   * Whether to show error overlay in development*/
+  /**
+   * Maximum number of errors to store*/
+  /**
+   * Custom error messages by error type*/
+  customMessages: Record<string, string   />;/**
+   * Fallback UI components*/
+  fallbackComponents: {}
+    default: React.ComponentType<{error: Error; resetError: () => void}>
+    network: React.ComponentType<{error: Error; resetError: () => void}>
+    notFound: React.ComponentType<{error: Error; resetError: () => void}>}}
+/**
+ * Default error messages;
+ */
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 
 const ErrorBoundaryConfig = {
   fallback: <div>Something went wrong</div>,
@@ -38,6 +70,7 @@ const ErrorBoundaryConfig = {
   }
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default ErrorBoundaryConfig;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
@@ -85,10 +118,26 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
         </div>
         <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">
           Oops! Something went wrong
+=======
+ * Default error messages*/
+;
+};/**
+ * Get error boundary configuration based on environment*/
+      notFound: NotFoundFallback,}
+    },}}
+/**
+ * Default error fallback component*/
+
+            />
+          </svg>
+        </div>
+        <h2 className="w-5h-5ml-2"   />Oops! Something went wrong;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
         </h2>
         <p className="mt-2 text-center text-gray-600">
           {error.message || 'An unexpected error occurred'}
         </p>
+<<<<<<< HEAD
         {process.env['NODE_ENV'] === 'development' && (
           <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack}</pre>
         )}
@@ -97,6 +146,14 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
             onClick={resetError}
             className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
           >
+=======
+        {process.env['NODE_ENV'] === 'development' && (}
+
+          <pre className="mt-4 p-4 bg-gray-100 roundedtext-xsoverflow-auto">{error.stack}</pre>
+  )}
+        </div></div>
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
             Try Again
           </button>
           <button
@@ -111,9 +168,14 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
   );
 }
 
+<<<<<<< HEAD
+=======
+  )}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 /**
  * Network error fallback component
  */
+<<<<<<< HEAD
 function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
@@ -150,9 +212,47 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
   );
 }
 
+=======
+
+        </div></div>
+        </div></div>
+        </div></div>
+
+            Try Again
+
+ (window.location.href = '/')}
+
+            Go Home
+
+    </div>
+  )}
+/**
+ * Network error fallback component*/;
+function NetworkErrorFallback({resetError}: {error: Error; resetError: () => void}) {return (
+    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            viewBox="0 0 24 24">
+
+function NetworkErrorFallback({ resetError}: {error: Error; resetError: () => void}) {return (
+    <div>
+        </div></div>
+        </div></div>
+        </div></div>
+
+        <h2 className="mt-4 text-2 xl font-boldtext-centertext-gray-900">Connection Issue</h2>
+          Unable to connect to the server. Please check your internet connection and try again.
+
+        </div></div>
+
+            Retry Connection
+
+  )}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 /**
  * Not found error fallback component
  */
+<<<<<<< HEAD
 function NotFoundFallback(): JSX.Element {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
@@ -181,9 +281,63 @@ function NotFoundFallback(): JSX.Element {
   );
 }
 
+=======
+
+        </div></div>
+      <div className="max-w-mdw-fulltext-center"   /></div>
+        <h1 className="text-6 xlfont-boldtext-gray-900">404</h1>
+        <h2 className="mt-4 text-2 xlfont-boldtext-gray-900">Page Not Found</h2>
+          The page you're looking for doesn't exist or has been moved.
+
+        </div></div>
+
+ (window.location.href = '/')}
+
+            Go Home
+
+ window.history.back()}
+
+            Go Back
+
+  )}
+/**
+ * Get error type from error object;
+ */
+    return 'network'
+            className="w-full bg-blue-600 text-white px-4 py-2 rounded-lghover:bg-blue-700 transition-colors">
+            Retry Connection;
+          </button>
+        </div>
+    </div>
+  )}
+/**
+ * Not found error fallback component*/
+
+function NotFoundFallback(): JSX.Element {return (
+    <div>
+        </div></div>
+      <div className="max-w-mdw-fulltext-center"   /></div>
+        <h1 className="text-6 xlfont-boldtext-gray-900">404</h1>
+        <h2 className="mt-4 text-2 xlfont-boldtext-gray-900">Page Not Found</h2>
+          The page you're looking for doesn't exist or has been moved.
+
+        </div></div>
+
+ (window.location.href = '/')}
+
+            Go Home
+
+ window.history.back()}
+
+            Go Back
+
+    </div>
+  )}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 /**
  * Get error type from error object
  */
+<<<<<<< HEAD
 export function getErrorType(error: Error,): keyof typeof DEFAULT_ERROR_MESSAGES {
   if (error.message.includes('Network') || error.message.includes('fetch')) {
     return 'network';
@@ -220,3 +374,12 @@ export function formatErrorForLogging(error: Error,): Record<string, unknown> {
 
 export default getErrorBoundaryConfig;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
+=======
+export default getErrorBoundaryConfig
+
+/**
+ * Format error for logging*/
+    url: typeof window !== 'undefined' ? window.location.href : 'unknown',}
+  }};
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

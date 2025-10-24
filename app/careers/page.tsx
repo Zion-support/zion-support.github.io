@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 import React from 'react';
 
+<<<<<<< HEAD
 import EnhancedSEO from '../components/EnhancedSEO';
 import { Helmet } from 'react-helmet-async';
 
@@ -1007,8 +1008,46 @@ const CareersPage: React.FC = () => {
             </h2>,
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">,
               We offer competitive benefits and a culture that values innovation, growth, and work-life balance;
+=======
+import {Helmet} from 'react-helmet-async';
+import {Link} from 'react-router-dom';
+import {ArrowRight} from 'lucide-react';
+
+export default function Careers() {return (
+    <title>Careers - Zion Tech Group</title>
+
+            <h1 className="text-4xl font-bold text-white mb-6">Careers</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional careers services coming soon.</p>
+
+              Contact Us
+
+      <  />
+  );}
+
+    <><  />
+      <Helmet></Helmet>
+        <title>Careers - Zion Tech Group</title>
+        <meta name="description" content="Careers services by Zion Tech Group. Professional AI and IT solutions."   /></meta>
+        <meta name="keywords" content="careers, AI solutions, IT services"   /></meta>
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <h1 className="w-5h-5ml-2"   /></h1>
+              <span className="w-5h-5ml-2"   />Careers;
+              </span>
+            </h1>
+            <p className="w-5h-5ml-2">Professional careers services by Zion Tech Group.
             </p>
           </div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
+            <p className="w-5h-5ml-2">We're working on bringing you comprehensive careers solutions.
+              Contact us to learn more about our services.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+            </p>
+          </div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center group"></div>
@@ -1161,3 +1200,10 @@ const CareersPage: React.FC = () => {
 
 export default CareersPage
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
+=======
+      </div>
+    <  />
+  );
+};
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

@@ -30,11 +30,15 @@ export const usePerformanceMonitoring = () => {
     const url = '/api/analytics';
     if (navigator.sendBeacon) {
       navigator.sendBeacon(url, body);
+<<<<<<< HEAD
     } else {
       fetch(url, { body, method: 'POST', keepalive: true }).catch(() => {
         // Analytics reporting failed
       });
     }
+=======
+      fetch(url, {body, method: 'POST', keepalive: true}).catch(console.error);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   }, []);
   useEffect(() => {
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -48,10 +52,15 @@ export const usePerformanceMonitoring = () => {
           });
         }
       });
+<<<<<<< HEAD
       observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
       return () => observer.disconnect();
     }
+=======
+      observer.observe({entryTypes: ['navigation', 'paint', 'largest-contentful-paint']});
+ observer.disconnect();
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   }, [reportWebVitals]);
-  return { reportWebVitals };
+  return {reportWebVitals};
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1

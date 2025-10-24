@@ -1,6 +1,7 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface EnhancedseoProps {
   className?: string;
   children?: React.ReactNode;
@@ -128,12 +129,20 @@ import { Helmet } from 'react-helmet-async';
 
 interface EnhancedSEOProps {
   title?: string;
+=======
+import {Helmet} from 'react-helmet-async';
+import {Link} from 'react-router-dom';
+import {ArrowRight} from 'lucide-react';
+
+interface SEOProps {title?: string;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   description?: string;
   keywords?: string[];
   canonicalUrl?: string;
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
+<<<<<<< HEAD
   structuredData?: any;
   noIndex?: boolean;
   noFollow?: boolean;
@@ -166,6 +175,17 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services', 'artificial intelligence', 'business intelligence', 'data analytics', 'cybersecurity', 'cloud migration', 'DevOps', 'IT consulting'],
   canonicalUrl = 'https: //ziontechgroup.com',
   ogImage = 'https: //ziontechgroup.com/og-image.webp',
+=======
+  structuredData?: object;
+  noindex?: boolean;
+  nofollow?: boolean;
+const EnhancedSEO: React.FC<SEOProps   /> = ({
+  const title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Leading provider of AI-powered solutions, IT services, 5 G implementation, and micro SAAS platforms. 99.8% client satisfaction, 24/7 support.',
+  keywords = 'AI solutions, artificial intelligence, IT services, 5 G implementation, micro SAAS, cloud migration, cybersecurity, mobile development, machine learning, enterprise technology, digital transformation, Zion Tech Group, Delaware technology company',
+  canonical,
+  ogImage = 'https: // ziontechgroup.com/og-image.jpg',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData,
@@ -190,6 +210,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   const robotsContent = robots || `${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`;
 
   const defaultStructuredData = {
+<<<<<<< HEAD
     '@context': 'https: //schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group'
@@ -331,3 +352,57 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
 
 export default EnhancedSEO;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
+=======
+    "@context": "https: // schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": "https: // ziontechgroup.com",
+    "logo": "https: // ziontechgroup.com/logo.png",
+    "description": description,
+    "foundingDate": "2020",
+    "founder": {
+      "@type": "Person",
+      "name": "Dr. Kleber Santos"},
+    "address": {"@type": "PostalAddress",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"},
+    "contactPoint": {"@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service",
+      "email": "kleber@ziontechgroup.com"},
+    "sameAs": ["https: // linkedin.com/company/ziontechgroup",
+      "https: // twitter.com/ziontechgroup",
+      "https: // github.com/ziontechgroup"],
+    "offers": {"@type": "AggregateOffer",
+      "offerCount": "50+",
+      "lowPrice": "99",
+      "highPrice": "2999",
+      "priceCurrency": "USD"
+
+  const finalStructuredData = structuredData || defaultStructuredData;
+  const canonicalUrl = canonical || `https: // ziontechgroup.com${window.location.pathname}`
+
+  return (
+    <title>5G Data Analytics - Zion Tech Group</title>
+      {/* Basic Meta Tags */}
+
+      <title>{title}</title>
+      {/* Canonical URL */}
+      {/* Open Graph Meta Tags */}
+
+      {/* Twitter Card Meta Tags */}
+
+      {/* Additional SEO Meta Tags */}
+
+      {/* Performance Hints */}
+
+      {/* Structured Data */}
+
+      <script type="application/ld+json">{JSON.stringify(finalStructuredData)}
+
+  )
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

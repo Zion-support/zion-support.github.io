@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import { Link } from 'react-router-dom';
@@ -61,6 +62,22 @@ export default function GDataAnalyticsZionTechGroupPage() {
       <Footer />
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
+=======
+import React from 'react';
+
+import {Link} from 'react-router-dom';
+import {ArrowRight} from 'lucide-react';
+
+export default function DigitaltransformationPage() {
+  return (
+    <>
+      <title>5G Data Analytics - Zion Tech Group</title>
+        <title>Digital Transformation - Zion Tech Group</title>
+        <h1 className="text-4 xl font-boldtext-whitemb-6">Digital Transformation</h1>
+        <p className="text-lgtext-gray-300mb-8">Professional digital transformation services coming soon.</p>
+          Contact Us
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   );
 }
 =======
@@ -72,6 +89,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, BarChart, Users, Settings, Target, TrendingUp, Clock } from 'lucide-react'
 
+<<<<<<< HEAD
 =======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -776,3 +794,5 @@ export default DigitalTransformationPage
 
 export default DigitalTransformationPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

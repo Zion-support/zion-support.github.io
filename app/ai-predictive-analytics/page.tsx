@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -173,3 +174,14 @@ export default function AiPredictiveAnalyticsZionTechGroup() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   );
 }
+=======
+import React from 'react';
+
+const AiPredictiveAnalyticsPage: React.FC = () => {return (
+    <>
+      <title>AiPredictiveAnalytics - Zion Tech Group</title>
+
+      <  />
+  );}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

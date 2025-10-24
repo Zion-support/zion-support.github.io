@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import { Link } from 'react-router-dom';
@@ -474,3 +475,14 @@ const AIHealthcarePage: React.FC = memo(() => {}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   );
 }
+=======
+import React from 'react';
+
+const AiHealthcarePage: React.FC = () => {return (
+    <>
+      <title>AiHealthcare - Zion Tech Group</title>
+
+      <  />
+  );}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

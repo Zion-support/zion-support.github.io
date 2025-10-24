@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -268,3 +269,7 @@ const AIInventoryManagerPage: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   );
 }
+=======
+
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

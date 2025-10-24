@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Monitor, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Users, Eye, Hand } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
@@ -491,3 +492,13 @@ export default function AiHolographicWorkspacePage() {
     </div>
   );
 }
+=======
+
+const AiHolographicWorkspacePage: React.FC = () => {return (
+    <>
+      <title>AiHolographicWorkspace - Zion Tech Group</title>
+
+      <  />
+  );}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

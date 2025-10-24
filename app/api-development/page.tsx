@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -300,3 +301,14 @@ const ApiDevelopmentPage: React.FC = () => {
 
 export default ApiDevelopmentPage
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
+=======
+import React from 'react';
+
+const ApiDevelopmentPage: React.FC = () => {return (
+    <>
+      <title>ApiDevelopment - Zion Tech Group</title>
+
+      <  />
+  );}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

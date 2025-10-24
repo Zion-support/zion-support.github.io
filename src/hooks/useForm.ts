@@ -99,10 +99,15 @@ const validateSingleField = useCallback()
     setErrors(formErrors);
     return isFormValid(validationResults);
   }, [values, validationSchema]);
+<<<<<<< HEAD
   // Handle input change
   const handleChange = useCallback(
     (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
       const { name, value, type } = e.target;
+=======
+  // Handle input change;
+      const {name, value, type} = e.target;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
       const fieldName = name as keyof T;
       // Handle checkbox inputs
       let fieldValue: unknown = value;
@@ -153,8 +158,12 @@ const validateSingleField = useCallback()
       setIsSubmitting(true);
       try {
         await onSubmit(values);
+<<<<<<< HEAD
       } catch (error) {
       } finally {
+=======
+        console.error('Form submission error: ', error);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
         setIsSubmitting(false);
 <<<<<<< HEAD
       }

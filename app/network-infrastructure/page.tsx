@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import { Link } from 'react-router-dom';
@@ -720,3 +721,14 @@ export default NetworkInfrastructurePage;
 
 export default NetworkInfrastructurePage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+import React from 'react';
+
+const NetworkInfrastructurePage: React.FC = () => {return (
+    <>
+      <title>NetworkInfrastructure - Zion Tech Group</title>
+
+      <  />
+  );}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

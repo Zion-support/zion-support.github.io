@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { ArrowRight, CheckCircle, BarChart3, DollarSign } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
@@ -121,3 +122,20 @@ export default function ZionAnalyticsProPage() {
     </div>
   );
 }
+=======
+
+
+  return (
+    <>
+      <title>ZionAnalyticsPro - Zion Tech Group</title>
+
+            <h1 className="text-4xl font-bold text-white mb-6">ZionAnalyticsPro</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional zionanalyticspro services coming soon.</p>
+
+              Contact Us
+
+      <  />
+  );
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

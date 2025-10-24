@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
@@ -23,6 +24,13 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children ,}) => {
         'X-Content-Type-Options': 'nosniff',
         'X-Frame-Options': 'DENY',
         'X-XSS-Protection': '1; mode=block',
+=======
+
+import {useEffect} from 'react';
+'use client'
+  children: React.ReactNode}
+    // Security enhancement logic;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
         'Referrer-Policy': 'strict-origin-when-cross-origin'
       };
 
@@ -297,6 +305,7 @@ const,
         throw new Error('Suspicious network request blocked');
       }
 
+<<<<<<< HEAD
       return originalFetch.apply(window, args);
     };
 
@@ -352,6 +361,51 @@ const,
     localStorage.setItem(`rate_limit_${key}`, JSON.stringify(requests));
     return true;
   }, []);
+=======
+      // Add CSP meta tag;
+      const cspMeta = document.createElement('meta')
+      cspMeta.setAttribute('http-equiv', 'Content-Security-Policy');
+      cspMeta.setAttribute('content', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: http,
+  s: ; font-src 'self' data:; connect-src 'self' https:;")
+      document.head.appendChild(cspMeta)
+
+      // Add security event listeners;
+      const handleSecurityEvent = (event: Event) => {console.log('Security event detected: ', event.type)}
+
+      window.addEventListener('beforeunload', handleSecurityEvent)
+      window.addEventListener('unload', handleSecurityEvent)
+
+      return () => {window.removeEventListener('beforeunload', handleSecurityEvent)
+        window.removeEventListener('unload', handleSecurityEvent)
+        document.head.removeChild(cspMeta)}
+    }
+
+    const cleanup = enhanceSecurity()
+    return cleanup;
+  }, [])
+
+export default function SecurityEnhancer() {return (
+    <div className="{`security-enhanced" ${className}`}>{children}
+
+  )
+}
+
+const SecurityEnhancer: React.FC<SecurityEnhancerProps >= ({children}) => {useEffect(() => {// Security enhancement logic;
+    $3;
+  )}
+        'Referrer-Policy': 'strict-origin-when-cross-origin'};
+      };// Add CSP meta tag;
+      cspMeta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
+      document.head.appendChild(cspMeta)
+      // Disable right-click context menu;
+        e.preventDefault()})
+      // Disable F12 and other dev tools shortcuts;
+          e.preventDefault()}
+      })}
+    enhanceSecurity()}, [])
+  return </SecurityEnhancerProps ><React.Fragment >{children}</React.Fragment ></React.Fragment>}
+export default SecurityEnhancer
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 
   // Initialize security monitoring
   useEffect(() => {}
@@ -370,6 +424,7 @@ const,
   const handleSecurityEvent = useCallback((event: string, data: any) => {}
     logger.info('Security event', { event, data });
 
+<<<<<<< HEAD
     // Rate limit security events
     if (!rateLimit('security_events', 10, 60000)) {}
       return;
@@ -441,3 +496,5 @@ const,
 };
 
 export default SecurityEnhancer;
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

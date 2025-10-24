@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -370,6 +371,22 @@ export default function AIProjectManagerPro() {
 =======
     </React.Fragment>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
+=======
+import React from 'react';
+
+import {Link} from 'react-router-dom';
+import {ArrowRight} from 'lucide-react';
+
+export default function AiprojectmanagerPage() {
+  return (
+    <>
+      <title>5G Data Analytics - Zion Tech Group</title>
+        <title>Ai Project Manager - Zion Tech Group</title>
+        <h1 className="text-4 xl font-boldtext-whitemb-6">Ai Project Manager</h1>
+        <p className="text-lgtext-gray-300mb-8">Professional ai project manager services coming soon.</p>
+          Contact Us
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   );
 =======
       {/* Features Section */}
@@ -386,6 +403,7 @@ export default function AIProjectManagerPro() {
               <div key={index} className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover: bg-white/10 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
 
+<<<<<<< HEAD
                 <div className="relative z-10"></div>
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform mb-6">,
                     <feature.icon className="w-8 h-8 text-white" />,
@@ -568,3 +586,5 @@ export default function AIProjectManagerPro() {
     </div>);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 }
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

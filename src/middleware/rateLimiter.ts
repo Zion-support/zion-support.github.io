@@ -97,8 +97,8 @@ export class RateLimiter {// TODO: Add content;}
     if (!record || now > record.resetTime) {// TODO: Add content;}
 }
       const resetTime = now + this.config.windowMs;
-      this.requests.set(identifier, { count: 1, resetTime });
-      return { allowed: true, remaining: this.config.max - 1, resetTime };
+      this.requests.set(identifier, {count: 1, resetTime});
+      return {allowed: true, remaining: this.config.max - 1, resetTime};
     // Increment count;
     if (record.count;
           < this.config.max) {// TODO: Add content;}
@@ -120,6 +120,7 @@ export class RateLimiter {// TODO: Add content;}
    * Reset rate limit for identifier
    * @param identifier - Unique identifier
    */
+<<<<<<< HEAD
   reset(identifier: string): void {
     this.requests.delete(identifier);
   }
@@ -143,6 +144,9 @@ export class RateLimiter {// TODO: Add content;}
     return { totalTracked: this.requests.size };
   }
 }
+=======
+    return {totalTracked: this.requests.size};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 /**
  * Pre-configured rate limiters for common use cases
  */
@@ -283,6 +287,7 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {// TODO: Add co
           <Response | null> => {// TODO: Add content;}
 }
     const identifier = getClientIdentifier(request);
+<<<<<<< HEAD
     const { allowed, remaining, resetTime } = limiter.check(identifier);
     if (!allowed) {// TODO: Add content;}
 }
@@ -290,6 +295,9 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {// TODO: Add co
         JSON.stringify({// TODO: Add content;}
 };
   error: 'Rate limit exceeded',
+=======
+    const {allowed, remaining, resetTime} = limiter.check(identifier);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
           retryAfter: Math.ceil((resetTime - Date.now()) / 1000)
         {// TODO: Add content;}
 };

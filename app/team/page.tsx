@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import { Link } from 'react-router-dom';
@@ -452,6 +453,37 @@ const OurTeamPage: React.FC = () => {
           <div className="container mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
               Our Team
+=======
+import React from 'react';
+
+import {Helmet} from 'react-helmet-async';
+import {Link} from 'react-router-dom';
+import {ArrowRight} from 'lucide-react';
+
+export default function Team() {return (
+    <title>Team - Zion Tech Group</title>
+
+            <h1 className="text-4xl font-bold text-white mb-6">Team</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional team services coming soon.</p>
+
+              Contact Us
+
+      <  />
+  );}
+
+    <><  />
+      <Helmet></Helmet>
+        <title>Team - Zion Tech Group</title>
+        <meta name="description" content="Team services by Zion Tech Group. Professional AI and IT solutions."   /></meta>
+        <meta name="keywords" content="team, AI solutions, IT services"   /></meta>
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <h1 className="w-5h-5ml-2"   /></h1>
+              <span className="w-5h-5ml-2"   />Team;
+              </span>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Meet the talented individuals who make Zion Tech Group a leader in AI and IT solutions. 
@@ -487,6 +519,7 @@ const OurTeamPage: React.FC = () => {
               </div>
             ))}
           </div>
+<<<<<<< HEAD
         </div>
       </section>
 
@@ -496,6 +529,12 @@ const OurTeamPage: React.FC = () => {
             <p className="text-lg text-gray-300 max-w-3xl mx-auto"></p>
               Meet the visionary leaders driving innovation and growth at Zion Tech Group;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
+            <p className="w-5h-5ml-2">We're working on bringing you comprehensive team solutions.
+              Contact us to learn more about our services.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {stats.map((stat, index) => (
@@ -552,6 +591,7 @@ const OurTeamPage: React.FC = () => {
             </p>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           </div>
+<<<<<<< HEAD
         </section>
 
 <<<<<<< HEAD
@@ -962,3 +1002,10 @@ export default OurTeamPage;
 =======
 export default TeamPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+      </div>
+    <  />
+  );
+};
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

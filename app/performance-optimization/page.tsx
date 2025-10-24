@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import { Link } from 'react-router-dom';
@@ -505,3 +506,14 @@ const PerformanceOptimizationPage: React.FC = () => {
 
 export default PerformanceOptimizationPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
+=======
+import React from 'react';
+
+const PerformanceOptimizationPage: React.FC = () => {return (
+    <>
+      <title>PerformanceOptimization - Zion Tech Group</title>
+
+      <  />
+  );}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
@@ -226,6 +227,36 @@ const CompliancePage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Compliance
+=======
+
+import {Helmet} from 'react-helmet-async';
+import {Link} from 'react-router-dom';
+import {ArrowRight} from 'lucide-react';
+
+export default function Compliance() {return (
+    <title>Compliance - Zion Tech Group</title>
+
+            <h1 className="text-4xl font-bold text-white mb-6">Compliance</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional compliance services coming soon.</p>
+
+              Contact Us
+
+      <  />
+  );}
+
+    <><  />
+      <Helmet></Helmet>
+        <title>Compliance - Zion Tech Group</title>
+        <meta name="description" content="Compliance services by Zion Tech Group. Professional AI and IT solutions."   /></meta>
+        <meta name="keywords" content="compliance, AI solutions, IT services"   /></meta>
+      </Helmet>
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <h1 className="w-5h-5ml-2"   /></h1>
+              <span className="w-5h-5ml-2"   />Compliance;
+              </span>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Ensure compliance with industry standards and regulations.
@@ -239,6 +270,7 @@ const CompliancePage: React.FC = () => {
               </button>
             </div>
           </div>
+<<<<<<< HEAD
         </section>
 
         {/* Features Section */}
@@ -424,6 +456,14 @@ const CompliancePage: React.FC = () => {
             <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
               <Phone className="mr-2 h-5 w-5" />
               Call Now
+=======
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <h2 className="text-2xl font-bold text-white mb-4"  >Coming Soon</h2>
+            <p className="w-5h-5ml-2">We're working on bringing you comprehensive compliance solutions.
+              Contact us to learn more about our services.
+            </p>
+            <button className="w-5h-5ml-2">Contact Us;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
             </button>
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               <Mail className="mr-2 h-5 w-5" />
@@ -433,6 +473,7 @@ const CompliancePage: React.FC = () => {
         </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
       </div>
+<<<<<<< HEAD
       <Footer />
     </>
   );
@@ -670,3 +711,9 @@ export default CompliancePage;
 
 export default CompliancePage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+    <  />
+  );
+};
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

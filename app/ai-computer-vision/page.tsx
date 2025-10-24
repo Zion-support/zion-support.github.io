@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import { Link } from 'react-router-dom';
@@ -465,3 +466,10 @@ export default PagePage;
 =======
 export default AIComputerVisionPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
+=======
+import React from 'react';
+
+  );
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

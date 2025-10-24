@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
@@ -1030,3 +1031,16 @@ export default CloudMigrationPage;
 
 export default CloudMigrationPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+
+
+  return (
+    <>
+      <title>CloudMigration - Zion Tech Group</title>
+
+            <h1 className="text-4xl font-bold text-white mb-6">CloudMigration</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional cloudmigration services coming soon.</p>
+
+              Contact Us
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

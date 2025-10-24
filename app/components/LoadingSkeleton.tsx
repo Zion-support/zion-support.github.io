@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import React from 'react';
 
 export const ServiceCardSkeleton: React.FC = React.memo(() => (
@@ -19,10 +20,28 @@ export const HeroSkeleton: React.FC = React.memo(() => (
     <div className="flex justify-center gap-4"></div>
       <div className="h-12 bg-gray-700 rounded w-48"></div>
       <div className="h-12 bg-gray-700 rounded w-48"></div>
+=======
+
+import React from 'react';
+
+interface LoadingSkeletonProps {lines?: number;
+  className?: string;}
+
+const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({lines = 3,
+  className = ''}) => {return (
+    <div className={`animate-pulse ${className}`}>
+      {Array.from({ length: lines}).map((_, index) => (
+        <div
+          key={index}
+          className="h-4 bg-gray-300 rounded mb-2"
+          />
+      ))}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
     </div>
   </div>
 );
 
+<<<<<<< HEAD
 export const ContentSkeleton: React.FC = React.memo(() => (
   <div className="animate-pulse"></div>
     <div className="h-8 bg-gray-700 rounded mb-4"></div>
@@ -42,3 +61,6 @@ export const CardSkeleton: React.FC = React.memo(() => (
 );
 ,
 export default ServiceCardSkeleton;
+=======
+export default LoadingSkeleton;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

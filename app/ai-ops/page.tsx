@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -317,3 +318,21 @@ const AIOpsPage: React.FC = () => {
 
 export default AIOpsPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+import React from 'react';
+
+import {Link} from 'react-router-dom';
+import {ArrowRight} from 'lucide-react';
+
+export default function AiopsPage() {
+  return (
+    <>
+      <title>5G Data Analytics - Zion Tech Group</title>
+        <title>Ai Ops - Zion Tech Group</title>
+        <h1 className="text-4 xl font-boldtext-whitemb-6">Ai Ops</h1>
+        <p className="text-lgtext-gray-300mb-8">Professional ai ops services coming soon.</p>
+          Contact Us
+
+  );
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

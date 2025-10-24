@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 'use client';
 import React from 'react';
@@ -413,3 +414,14 @@ export default QuantumComputingPage;
 =======
 export default QuantumComputingPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+import React from 'react';
+
+const QuantumComputingPage: React.FC = () => {return (
+    <>
+      <title>QuantumComputing - Zion Tech Group</title>
+
+      <  />
+  );}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

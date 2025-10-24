@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { Helmet } from 'react-helmet-async';
 import React from "react";
@@ -62,3 +63,14 @@ export default function ZionAiTranslatorProPage() {
     </div>
   );
 }
+=======
+import React from 'react';
+
+const ZionAiTranslatorProPage: React.FC = () => {return (
+    <>
+      <title>ZionAiTranslatorPro - Zion Tech Group</title>
+
+      <  />
+  );}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

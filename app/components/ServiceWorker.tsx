@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -128,3 +129,9 @@ const ServiceWorkerPage: React.FC = () => {
 };
 
 export default ServiceWorkerPage;
+=======
+
+
+'use client';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

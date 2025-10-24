@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { Helmet } from 'react-helmet-async';
 import { Code } from 'lucide-react';
@@ -61,3 +62,14 @@ export default function ZionAiCodeReviewerPage() {
     </div>
   );
 }
+=======
+import React from 'react';
+
+const ZionAiCodeReviewerPage: React.FC = () => {return (
+    <>
+      <title>ZionAiCodeReviewer - Zion Tech Group</title>
+
+      <  />
+  );}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { useState } from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
@@ -1271,3 +1272,18 @@ const PricingPage: React.FC = () => {
 
 export default PricingPage
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
+=======
+
+
+  return (
+    <>
+      <title>Pricing - Zion Tech Group</title>
+
+            <h1 className="text-4xl font-bold text-white mb-6">Pricing</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional pricing services coming soon.</p>
+
+      <  />
+  );
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

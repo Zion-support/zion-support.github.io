@@ -1,10 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
 =======
 'use client';
+=======
+import React, {useState, useEffect, useCallback} from 'react';
+export default SystemMonitor;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 /**
  * System Monitor Component
  * Real-time monitoring dashboard for performance, errors, and system health
@@ -259,8 +264,12 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       };
       setMetrics(newMetrics);
       setLastUpdate(new Date());
+<<<<<<< HEAD
     } catch (error) {
     }
+=======
+      console.error('Failed to update metrics: ', error);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   }, []);
   // Initialize monitoring
   useEffect(() => {
@@ -281,6 +290,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
     const interval = setInterval(updateMetrics, refreshInterval);
     return () => clearInterval(interval);
   }, [isMonitoring, refreshInterval, updateMetrics]);
+<<<<<<< HEAD
   // Get memory information
   const getMemoryInfo = () => {
     if ('memory' in performance) {
@@ -292,6 +302,16 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       return { used, total, limit, percentage };
     }
     return { used: 0, total: 0, limit: 0, percentage: 0 };
+=======
+  // Get memory information;
+      const memory = (performance as Performance & {memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number} }).memory;
+      const used = memory.usedJSHeapSize / 1024 / 1024; // MB;
+      const total = memory.totalJSHeapSize / 1024 / 1024; // MB;
+      const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB;
+      const percentage = (used / limit) * 100;
+      return {used, total, limit, percentage};
+    return {used: 0, total: 0, limit: 0, percentage: 0};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   };
   // Get network information
   const getNetworkInfo = () => {
@@ -315,6 +335,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Export data
   const handleExport = () => {
     if (!metrics) return;
+<<<<<<< HEAD
     const exportData = {
       metrics,
       performanceData: performanceOptimizer.getMetrics(),
@@ -323,6 +344,11 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
     };
     const blob = new Blob([JSON.stringify(exportData, null, 2)], {
       type: 'application/json'
+=======
+
+    };
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
     });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -463,6 +489,7 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
             <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}></div>"
             <span className="text-sm text-gray-600"></span>
               {isMonitoring ? 'Monitoring' : 'Stopped'}
+<<<<<<< HEAD
             </span>
           {enableExport && ()}
           <button></button>
@@ -475,6 +502,10 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
 // >
 //               Export Data;
           </button>
+=======
+
+              Export Data;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
           )}
       {lastUpdate && ()}"
           <p className="text-sm text-gray-500 mb-4"></p>
@@ -542,6 +573,7 @@ className={`h-2 rounded-full ${}
                     metrics.memory.percentage > 80 ? 'bg-red-500' :
                     metrics.memory.percentage > 60 ? 'bg-yellow-500' : 'bg-green-500'`
                   }`}
+<<<<<<< HEAD
                   style={/* TODO: Fix JSX expression */}`
   h: `${Math.min(metrics.memory.percentage, 100)}%` }}
           
@@ -565,6 +597,27 @@ className={`h-2 rounded-full ${}
                   <span>{error.type}</span>
                   <span>{new Date(error.timestamp).toLocaleTimeString()}</span>
             ))}
+=======
+                  style={{ width:`${Math.min(metrics.memory.percentage, 100)}%` }}
+                ></div>
+            <h4 className="text-sm font-medium text-gray-600 mb-2">Network</h4>
+                <span>Connection</span>
+                <span>{metrics.network.effectiveType}</span>
+                <span>Downlink</span>
+                <span>{metrics.network.downlink} Mbps</span>
+                <span>RTT</span>
+                <span>{metrics.network.rtt} ms</span>
+                <span>Save Data</span>
+                <span>{metrics.network.saveData ? 'Yes' : 'No'}</span>
+      {/* Recent Errors */}
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Errors</h3>
+                  <span className="text-sm font-medium text-gray-900">{error.message}</span>
+                    {error.severity}
+                  <span>{error.type}</span>
+                  <span>{new Date(error.timestamp).toLocaleTimeString()}</span>
+  ))}
+      )}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
       {/* Error Distribution */}
       {showDetails && (}"
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Error Distribution</h3>"
@@ -573,13 +626,26 @@ className={`h-2 rounded-full ${}
                 {Object.entries(metrics.errors.byType).map(([type, count]) => ()}"
           <div key={type} className="flex justify-between text-sm"></div>"
                     <span className="capitalize">{type}</span>
+<<<<<<< HEAD
                     <span>{count}</span>"
+=======
+                    <span>{count}</span>
+  ))}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
               <h4 className="text-sm font-medium text-gray-600 mb-2">By Category</h4>
                 {Object.entries(metrics.errors.byCategory).map(([category, count]) => ()}"
           <div key={category} className="flex justify-between text-sm"></div>"
                     <span className="capitalize">{category}</span>
+<<<<<<< HEAD
 
 export default SystemMonitor;
 
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+                    <span>{count}</span>
+  ))}
+      )}
+  );
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
@@ -14,8 +15,14 @@ const GlobalErrorBoundary: React.FC = () => {
         <meta name="description" content="Professional GlobalErrorBoundary services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="GlobalErrorBoundary, AI solutions, IT services, Zion Tech Group, globalerrorboundary" />
       </Helmet>
+=======
 
 
+                Go Home
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+
+
+<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -194,3 +201,5 @@ export default GlobalErrorBoundary;
 
 export { GlobalErrorBoundary };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

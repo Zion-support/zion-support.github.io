@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import { Link } from 'react-router-dom';
@@ -669,3 +670,21 @@ export default IoTEdgeComputingPage;
 =======
 export default IotEdgeComputingPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+import React from 'react';
+
+import {Link} from 'react-router-dom';
+import {ArrowRight} from 'lucide-react';
+
+export default function IotedgecomputingPage() {
+  return (
+    <>
+      <title>5G Data Analytics - Zion Tech Group</title>
+        <title>Iot Edge Computing - Zion Tech Group</title>
+        <h1 className="text-4 xl font-boldtext-whitemb-6">Iot Edge Computing</h1>
+        <p className="text-lgtext-gray-300mb-8">Professional iot edge computing services coming soon.</p>
+          Contact Us
+
+  );
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -312,3 +313,21 @@ const AIVisionPage: React.FC = () => {
 
 export default AIVisionPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+import React from 'react';
+
+import {Link} from 'react-router-dom';
+import {ArrowRight} from 'lucide-react';
+
+export default function AivisionPage() {
+  return (
+    <>
+      <title>5G Data Analytics - Zion Tech Group</title>
+        <title>Ai Vision - Zion Tech Group</title>
+        <h1 className="text-4 xl font-boldtext-whitemb-6">Ai Vision</h1>
+        <p className="text-lgtext-gray-300mb-8">Professional ai vision services coming soon.</p>
+          Contact Us
+
+  );
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

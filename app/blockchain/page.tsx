@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -618,3 +619,26 @@ const BlockchainPage: React.FC = () => {
 
 export default BlockchainSolutionsPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
+=======
+import React from 'react';
+
+import {Link} from 'react-router-dom';
+import {ArrowRight} from 'lucide-react';
+
+export default function PagePage() {return (
+    <>
+      <title>Page - Zion Tech Group</title>
+        <h1 className="text-4xl font-bold text-white mb-6">Page</h1>
+        <p className="text-lg text-gray-300 mb-8">Professional page services coming soon.</p>
+          Contact Us
+
+        <title>5G Data Analytics - Zion Tech Group</title>
+        <title>Blockchain - Zion Tech Group</title>
+        <h1 className="text-4 xl font-boldtext-whitemb-6">Blockchain</h1>
+        <p className="text-lgtext-gray-300mb-8">Professional blockchain services coming soon.</p>
+          Contact Us
+
+      <  />
+  );}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

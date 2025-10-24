@@ -78,12 +78,16 @@ export function useEnhancedPerformance(__option)
       );
     }
   });
+<<<<<<< HEAD
   const trackError = useCallback(
     (error: Error, context?: Record<string, unknown>) => {
       if (trackErrors) {
         errorTracker.trackError(error, {
           component,
           ...context
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
         });
       }
     },
@@ -91,6 +95,7 @@ export function useEnhancedPerformance(__option)
     [component, trackErrors]
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
   );
+<<<<<<< HEAD
 }
 =======
     [component, trackErrors])
@@ -105,6 +110,13 @@ export function useEnhancedPerformance(__option)
   O: Add content;}
 }
       const markName = `${component}-${operationName}`;
+=======
+
+        analytics.trackCustomEvent('User Action', action, component, undefined, metadata);
+    [component, trackAnalytics]
+  );
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
       const startTime = performance.now();
       return {/* TODO: Fix JSX expression */}
   O: Add content;}

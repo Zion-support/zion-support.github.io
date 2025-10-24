@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import { 
@@ -699,3 +700,21 @@ const AIAnalyticsPage: React.FC = () => {
       benefits: ["Interactive charts", "Custom dashboards", "Mobile-responsive", "Export capabilities"]
     }
   ];
+=======
+
+import {Helmet} from 'react-helmet-async';
+import {Link} from 'react-router-dom';
+import {ArrowRight} from 'lucide-react';
+
+export default function AiAnalytics() {return (
+    <title>AiAnalytics - Zion Tech Group</title>
+
+            <h1 className="text-4xl font-bold text-white mb-6">AiAnalytics</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional aianalytics services coming soon.</p>
+
+              Contact Us
+
+      <  />
+  );}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

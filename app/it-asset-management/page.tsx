@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import { Link } from 'react-router-dom';
@@ -478,3 +479,14 @@ const ItAssetManagementPage: React.FC = () => {
 
 export default ITAssetManagementPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
+=======
+import React from 'react';
+
+const ItAssetManagementPage: React.FC = () => {return (
+    <>
+      <title>ItAssetManagement - Zion Tech Group</title>
+
+      <  />
+  );}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

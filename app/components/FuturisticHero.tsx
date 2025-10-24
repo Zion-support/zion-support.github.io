@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
@@ -253,3 +254,6 @@ const FuturisticHero: React.FC = () => {
 };
 
 export default FuturisticHero;
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

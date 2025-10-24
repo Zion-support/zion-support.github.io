@@ -357,6 +357,7 @@ onClick={this.handleRetry} className='w-full flex justify-center py-2 px-4 borde
           
           </button>
                   )}
+<<<<<<< HEAD
                 <button></button>
 onClick={this.handleReload} className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white,
   hover:bg-gray-50,
@@ -365,6 +366,9 @@ onClick={this.handleReload} className='w-full flex justify-center py-2 px-4 bord
   focus:ring-offset-2,
   focus:ring-indigo-500'
                 >
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
                   Reload Page;
                 </button><button></button>
                   onClick={this.handleGoHome} className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white,
@@ -378,11 +382,15 @@ onClick={this.handleReload} className='w-full flex justify-center py-2 px-4 bord
                 </button></div><div className='mt-6 text-center'><p className='text-xs text-gray-500'></p>
                   If this problem persists, please contact our support team;
                   at&nbsp;
+<<<<<<< HEAD
                   <a></a>
                     href='mailt,
   o:kleber@ziontechgroup.com' className='text-indigo-600,
   hover:text-indigo-500'
                   >
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
                     kleber@ziontechgroup.com;
                   </a></p></div></div></div></div>
       );

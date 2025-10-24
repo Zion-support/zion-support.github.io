@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -128,3 +129,6 @@ const PageFixedPage: React.FC = () => {
 };
 
 export default PageFixedPage;
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

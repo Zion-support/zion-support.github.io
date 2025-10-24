@@ -107,6 +107,7 @@ export const validationPatterns = {
 export function sanitizeInput(input: string): string {
   return input
     .replace(/[<>]/g, '') // Remove < and >
+<<<<<<< HEAD
     .replace(/javascript:/gi, '') // Remove javascript: protocol
     .replace(/on\w+\s*=/gi, '') // Remove event handlers
     .trim();
@@ -132,6 +133,9 @@ export function sanitizeInput(inpu)
 
     .replace(/javascript:/gi, '') // Remove javascript: protocol;
 
+=======
+    .replace(/javascript: /gi, '') // Remove javascript: protocol;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
     .replace(/on\w+\s*=/gi, '') // Remove event handlers;
     .trim();
  * Validate email address;

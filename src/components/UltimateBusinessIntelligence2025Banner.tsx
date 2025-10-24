@@ -8,6 +8,7 @@ export default function Component() {
 import React, { useState, useEffect } from 'react';
 const UltimateBusinessIntelligence2025Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+<<<<<<< HEAD
   const [isVisible, setIsVisible] = useState(true);
   const content = [
     {
@@ -56,6 +57,14 @@ const UltimateBusinessIntelligence2025Banner = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
+=======
+  const [isVisible] = useState(true);
+
+  ];
+  const currentContent = content[currentSlide];
+
+ (prev + 1) % content.length);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
     }, 5000);
     return () => clearInterval(timer);
   }, [content.length]);
@@ -184,7 +193,11 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
           <div key={index} className="text-center"></div>"
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>"
               <div className="text-gray-300">{stat.label}</div>
+<<<<<<< HEAD
     </section>
+=======
+  ))}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   );
 };
 

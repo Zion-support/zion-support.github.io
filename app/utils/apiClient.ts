@@ -1,10 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Apiclient utility functions
 export function apiclient() {
   // Implementation here
   return null;
 =======
+=======
+export const apiClient = new APIClient(process.env.NEXT_PUBLIC_API_URL || '/api');
+export type {RequestConfig, APIResponse};
+export {APIError};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 /**
  * API Client Utility;
  * Provides a centralized API client with error handling and caching;
@@ -26,9 +32,26 @@ interface APIResponse<T = any> {}
   headers: Record<string, string>;</strin>
 }
 
+<<<<<<< HEAD
 class APIClient {}
   private baseURL: string,
   private defaultHeaders: Record<string, string>;
+=======
+  status?: number;
+  code?: string;
+
+    super(message);
+    this.name = 'APIError';
+    this.status = status;
+    this.code = code;
+  }
+}
+
+  private baseURL: string;
+
+  private defaultHeaders: Record<string, string   />;
+  private cache: Map<string, {data: unknown; timestamp: number; ttl: number}   /> = new Map();
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 
   constructor(baseURL: string = '', defaultHeaders: Record<string, string> = {}) {}
     this.baseURL = baseURL;
@@ -146,16 +169,21 @@ class ApiClient {/* TODO: Fix JSX expression */,}
   /**
    * GET request;
    */
+<<<<<<< HEAD
   async get<T = unknown>(ur,
   l: string,
     confi,
   g: Omit<RequestConfig, 'url' | 'method' | 'body'> = {})
   ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}
     });
+=======
+    return this.request<T>(endpoint, {...config, method: 'GET'});
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   }
   /**
    * POST request;
    */
+<<<<<<< HEAD
   async post<T = unknown>(ur,
   l: string,
     data?: unknown,
@@ -163,10 +191,14 @@ class ApiClient {/* TODO: Fix JSX expression */,}
   g: Omit<RequestConfig, 'url' | 'method'> = {})
   ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}
     });
+=======
+    return this.request<T>(endpoint, {...config, method: 'POST', body});
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   }
   /**
    * PUT request;
    */
+<<<<<<< HEAD
   async put<T = unknown>(ur,
   l: string,
     data?: unknown,
@@ -174,26 +206,57 @@ class ApiClient {/* TODO: Fix JSX expression */,}
   g: Omit<RequestConfig, 'url' | 'method'> = {})
   ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}
     });
+=======
+    return this.request<T>(endpoint, {...config, method: 'PUT', body});
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   }
   /**
    * DELETE request;
    */
+<<<<<<< HEAD
   async delete<T = unknown>(ur,
   l: string,
     confi,
   g: Omit<RequestConfig, 'url' | 'method' | 'body'> = {})
   ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}
     });
+=======
+    return this.request<T>(endpoint, {...config, method: 'DELETE'});
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   }
   /**
    * PATCH request;
    */
+<<<<<<< HEAD
   async patch<T = unknown>(ur,
   l: string,
     data?: unknown,
     confi,
   g: Omit<RequestConfig, 'url' | 'method'> = {})
   ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}
+=======
+    return this.request<T>(endpoint, {...config, method: 'PATCH', body});
+  }
+
+  /**
+   * Get data from cache;
+   */
+    const cached = this.cache.get(key);
+    if (!cached) return null;
+
+    const now = Date.now();
+      this.cache.delete(key);
+      return null;
+    }
+
+    return cached.data;
+  }
+
+  /**
+   * Set data in cache;
+   */
+      ttl;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
     });
   }
   /**
@@ -406,6 +469,7 @@ class ApiClient {/* TODO: Fix JSX expression */,}
 // Create singleton instance;
 export const apiClient = new APIClient();
 
+<<<<<<< HEAD
 export default APIClient;
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
@@ -421,3 +485,9 @@ export default ApiClient;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+// Default API client instance;
+
+// Export types and classes;
+    <  />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

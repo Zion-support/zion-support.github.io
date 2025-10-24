@@ -2,6 +2,7 @@
 'use client';
 import React from 'react';
 import Navigation from './Navigation';
+<<<<<<< HEAD
 
 const Header: React.FC = () => {
   return (
@@ -219,3 +220,7 @@ const Header: React.FC = () => {
 };
 
 export default Header;
+=======
+  return (
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

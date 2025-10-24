@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client'
 import React, { useEffect } from 'react'
 =======
@@ -411,9 +412,20 @@ const Analytics: React.FC<AnalyticsProps> = ({
           button_text: target.textContent?.trim(),
           button_class: target.className,
         });
+=======
+
+
+    // Initialize analytics tracking
+      // Google Analytics initialization
+
+      if (typeof window !== 'undefined' && window.gtag) {window.gtag('config', 'GA_MEASUREMENT_ID', {
+          page_title: document.title,
+          page_location: window.location.href,});
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
       }
     });
 
+<<<<<<< HEAD
     // Track form submissions
     document.addEventListener('submit', (event) => {
       const form = event.target as HTMLFormElement;
@@ -441,6 +453,9 @@ const Analytics: React.FC<AnalyticsProps> = ({
         form_class: form.className),
         form_action: form.action;
   };
+=======
+  return <React.Fragment   />{children}</React.Fragment>;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 
         value: typeof value === 'number' ? value : undefined
   const trackEvent = (category: string, action: string, value?: any) => {
@@ -465,6 +480,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 declare global {
   interface Window {
+<<<<<<< HEAD
     gtag?: (...args: any[]) => void;
   }
 }
@@ -591,3 +607,7 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode ,}> = ({ ch
 </AnalyticsProps>
 export default Analytics;</AnalyticsProps>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+ void;
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

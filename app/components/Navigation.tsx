@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -65,6 +66,14 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" }
   ];
+=======
+import React from 'react';
+
+import {Link} from 'react-router-dom';
+import {ArrowRight} from 'lucide-react';
+
+import {ChevronDown, Phone, Mail, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, Database, Smartphone, Settings, CheckSquare, FileText, MessageCircle, Link as LinkIcon, Mic, Eye} from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 
   const aiServices = [
     { name: "AI Analytics", href: "/ai-analytics" },
@@ -132,6 +141,7 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
     };
   }, []);
 
+<<<<<<< HEAD
 =======
     {
       name: 'Home',
@@ -1173,3 +1183,8 @@ export default Navigation;
 =======
 export default Navigation;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+  );
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

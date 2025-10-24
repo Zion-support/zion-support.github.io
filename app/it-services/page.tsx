@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 <<<<<<< HEAD
 =======
@@ -2390,3 +2391,19 @@ export default ItServicesPage
 
 export default ITServicesPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+
+
+  return (
+    <>
+      <title>ItServices - Zion Tech Group</title>
+
+            <h1 className="text-4xl font-bold text-white mb-6">ItServices</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional itservices services coming soon.</p>
+
+              Contact Us
+
+      <  />
+  );
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

@@ -800,5 +800,32 @@ export const utilityFunction = () => {
   public generateReport(): string {/* TODO: Fix JSX expression */}
     }
 
+<<<<<<< HEAD
 }}"`
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+  /**
+   * Generate accessibility report summary;
+   */
+    const report = this.runAllChecks();
+    const score = this.getAccessibilityScore();
+
+    return `Accessibility Report;
+Score: ${score}%
+Total Checks: ${report.totalChecks}
+Passed: ${report.passedChecks}
+Failed: ${report.failedChecks}
+Warnings: ${report.warnings}
+
+Issues Found:
+${report.results;
+ !r.passed)`- ${r.severity.toUpperCase()}: ${r.message}`)
+  .join('\n')}`.trim();
+
+// Export a default instance;
+
+// Export utility functions;
+ accessibilityChecker.runAllChecks();
+ accessibilityChecker.getAccessibilityScore();
+ accessibilityChecker.generateReport();
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

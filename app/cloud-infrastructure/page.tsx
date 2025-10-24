@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Helmet } from 'react-helmet-async';
 import { Cloud, Server, Shield, CheckCircle, ArrowRight, Globe, BarChart3, Settings, Clock, Award, Star, Activity, Lock } from 'lucide-react';
@@ -981,3 +982,13 @@ export default CloudInfrastructurePage
 
 export default CloudInfrastructurePage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
+=======
+
+const CloudInfrastructurePage: React.FC = () => {return (
+    <>
+      <title>CloudInfrastructure - Zion Tech Group</title>
+
+      <  />
+  );}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -433,3 +434,14 @@ const AIWorkflowAutomationPage: React.FC = () => {
 
 export default AIWorkflowAutomationPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+import React from 'react';
+
+const AiWorkflowAutomationPage: React.FC = () => {return (
+    <>
+      <title>AiWorkflowAutomation - Zion Tech Group</title>
+
+      <  />
+  );}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

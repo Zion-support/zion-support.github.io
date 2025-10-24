@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -355,3 +356,14 @@ const DatabaseManagementPage: React.FC = () => {
 
 export default DatabaseManagementPage
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
+=======
+import React from 'react';
+
+const DatabaseManagementPage: React.FC = () => {return (
+    <>
+      <title>DatabaseManagement - Zion Tech Group</title>
+
+      <  />
+  );}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

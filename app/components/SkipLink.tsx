@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const SkipLink: React.FC = () => (
@@ -10,3 +11,14 @@ const SkipLink: React.FC = () => (
 );
 
 export default SkipLink;
+=======
+
+
+'use client';
+
+const SkipLink: React.FC = () => {return (
+
+      Skip to main content
+  );}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

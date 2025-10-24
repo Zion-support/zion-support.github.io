@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Home } from 'lucide-react';
 import { AlertTriangle } from 'lucide-react';
@@ -229,6 +230,44 @@ class EnhancedErrorBoundary extends Component<Props, State> {
           <div className="max-w-md w-full bg-slate-800/50 backdrop-blur-sm border border-red-400/20 rounded-xl p-8 text-center"></div>
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6"></div>
               <AlertTriangle className="w-8 h-8 text-red-400" />
+=======
+import {Component, ErrorInfo, ReactNode} from 'react';
+import {Home} from 'lucide-react';
+import {Link} from 'react-router-dom';
+
+interface Props {children: ReactNode;
+  fallback?: ReactNode;}
+
+interface State {hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+
+class EnhancedErrorBoundary extends Component<Props, State   /> {
+  constructor(props: Props) {
+    super(props);
+    this.const state = { hasError: false};
+
+  static getDerivedStateFromError(error: Error): State {return { hasError: true, error};
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {this.setState({
+      error,
+      errorInfo;});
+    // Log error to monitoring service
+    console.error('Error caught by boundary: ', error, errorInfo);
+
+    this.setState({hasError: false, error: undefined, errorInfo: undefined});
+  };
+  render() {if (this.state.hasError) {
+      if (this.props.fallback) {
+        return this.props.fallback;
+
+      return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <AlertTriangle className="w-5h-5ml-2"   /></AlertTriangle>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
             </div>
             
             <h1 className="text-2xl font-bold text-white mb-4"></h1>
@@ -238,6 +277,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             <p className="text-gray-300 mb-6"></p>
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
             </p>
+<<<<<<< HEAD
 
             {process.env.NODE_ENV === 'development' && this.state.error && (}
               <details className="mb-6 text-left"></details>
@@ -504,3 +544,34 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
 export default EnhancedErrorBoundary;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
+=======
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <h3 className="text-red-400font-semiboldmb-2"  >Error Details:</h3>
+                <pre className="w-5h-5ml-2"   />{this.state.error.toString()}
+                </pre>
+                {this.state.errorInfo && (
+
+                  <pre className="text-xs text-gray-400mt-2overflow-auto">{this.state.errorInfo.componentStack}
+
+                )}
+              </div>
+  )}
+
+                Try Again
+
+                Go Home
+
+                Still having issues? Contact our support team:
+
+                  kleber@ziontechgroup.com
+
+                <span className="hiddensm:inlinetext-gray-500">•</span>
+                  <span>+1 302 464 0950</span>
+  );
+
+    return this.props.children;
+
+export default EnhancedErrorBoundary;
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

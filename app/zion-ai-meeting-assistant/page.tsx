@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -59,3 +60,14 @@ export default function ZionAiMeetingAssistantZionTechGroup() {
     </div>
   );
 }
+=======
+import React from 'react';
+
+const ZionAiMeetingAssistantPage: React.FC = () => {return (
+    <>
+      <title>ZionAiMeetingAssistant - Zion Tech Group</title>
+
+      <  />
+  );}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

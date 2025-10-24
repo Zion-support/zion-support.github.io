@@ -1,12 +1,20 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 export default function GDataAnalyticsZionTechGroupPage() {
+=======
+import React from 'react';
+import {Helmet} from 'react-helmet-async';
+import {Link} from 'react-router-dom';
+import {ArrowRight} from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 
 <<<<<<< HEAD
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen bg-gray-900 text-white">
 =======
@@ -329,3 +337,14 @@ const AILeadGeneration: React.FC = () => {
 
 export default AILeadGeneration;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+
+  return (
+    <>
+      <title>5G Data Analytics - Zion Tech Group</title>
+        <title>Ai Lead Generation - Zion Tech Group</title>
+        <h1 className="text-4xl font-boldtext-whitemb-6">Ai Lead Generation</h1>
+        <p className="text-lgtext-gray-300mb-8">Professional ai lead generation services coming soon.</p>
+          Contact Us
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

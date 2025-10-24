@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function Page() {
 =======
 import React from 'react';
@@ -158,6 +159,10 @@ import { Brain, Shield, Globe, ArrowRight, CheckCircle, Star, Users, Award, Cloc
   ];
 
 export default function MicroSaasPage() {
+=======
+
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   return (
 import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
@@ -325,6 +330,7 @@ const MicroSaaSServicesPage: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
   return (
     <>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <Helmet>
         <title>Micro SaaS Services - Zion Tech Group</title>
@@ -627,3 +633,16 @@ export default MicroSaaSServicesPage;
 =======
 export default MicroSAASPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+      <title>MicroSaas - Zion Tech Group</title>
+
+            <h1 className="text-4xl font-bold text-white mb-6">MicroSaas</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional microsaas services coming soon.</p>
+
+              Contact Us
+
+      <  />
+  );
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

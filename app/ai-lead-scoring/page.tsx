@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -59,3 +60,7 @@ export default function AiLeadScoringZionTechGroup() {
     </div>
   );
 }
+=======
+
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

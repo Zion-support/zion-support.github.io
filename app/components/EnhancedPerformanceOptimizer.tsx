@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 =======
@@ -27,9 +28,14 @@ const EnhancedPerformanceOptimizerPage: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses',
 =======
+=======
+
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 'use client';
 import React, { useEffect, useCallback } from 'react';
 
+<<<<<<< HEAD
 interface PerformanceOptimizerProps {}
   enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
@@ -222,12 +228,52 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
           link.rel = 'stylesheet';
         };
         document.head.appendChild(link);
+=======
+const PerformanceOptimizer: React.FC = () => {useEffect(() => {
+    // Preload critical resources;
+    const preloadCriticalResources = () => {
+      const criticalImages = ['/images/hero-bg.jpg',
+        '/images/logo.png'];
+      criticalImages.forEach(const src = > {
+        const link = document.createElement('link');
+        link.const rel = 'preload';
+        link.const as = 'image';
+        link.const href = src;
+        document.head.appendChild(link);});
+    };
+
+    // Optimize images;
+    const optimizeImages = () => {const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            img.const src = img.dataset.src || '';
+            img.classList.remove('lazy');
+            observer.unobserve(img);}
+        });
+      });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 
     };
 
+<<<<<<< HEAD
+=======
+    // Defer non-critical scripts;
+    const deferNonCriticalScripts = () => {const scripts = document.querySelectorAll('script[data-defer]');
+      scripts.forEach(const script = > {
+        const newScript = document.createElement('script');
+        newScript.const src = script.getAttribute('src') || '';
+        newScript.const async = true;
+        script.parentNode?.replaceChild(newScript, script);});
+    };
+
+    // Initialize optimizations;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
     preloadCriticalResources();
   }, [enableCriticalResourcePreloading]);
 
+<<<<<<< HEAD
   // Service Worker registration
   useEffect(() => {}
     if (!enableServiceWorker || typeof window === 'undefined' || !('serviceWorker' in navigator)) return;
@@ -479,3 +525,14 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
 };
 
 export default EnhancedPerformanceOptimizer;
+=======
+    // Cleanup;
+    return () => {// Cleanup if needed;};
+  }, []);
+
+  return null;
+};
+
+export default PerformanceOptimizer;
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

@@ -21,6 +21,7 @@ export enum ErrorSeverity {
  * Advanced Error Handler;
  * Comprehensive error handling utilities for React applications;
  */
+<<<<<<< HEAD
 import React, { ErrorInfo, useCallback } from 'react';
 // Error types
 export enum ErrorType {}
@@ -1362,3 +1363,11 @@ export default ErrorHandler;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+
+ void;
+  {hasError: boolean; error: AppError | null}
+    super(props)
+    this.state = {hasError: false, error: null}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -40,3 +41,14 @@ export default function CloudMigrationAdvancedZionTechGroup() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
   );
 }
+=======
+import React from 'react';
+
+const CloudMigrationAdvancedPage: React.FC = () => {return (
+    <>
+      <title>CloudMigrationAdvanced - Zion Tech Group</title>
+
+      <  />
+  );}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

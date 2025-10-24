@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -174,3 +175,25 @@ export default function AICustomerSupportBotZionTechGroup() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   );
 }
+=======
+import React from 'react';
+
+import {Helmet} from 'react-helmet-async';
+
+import {Link} from 'react-router-dom';
+import {ArrowRight} from 'lucide-react';
+
+export default function AICustomerSupportBot() {
+
+  return (
+    <>
+      <title>AI Customer Support Bot - Zion Tech Group</title>
+
+            <h1 className="text-4xl font-bold text-white mb-6">AI Customer Support Bot</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional AI customer support bot services coming soon.</p>
+
+              Contact Us
+
+  );
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

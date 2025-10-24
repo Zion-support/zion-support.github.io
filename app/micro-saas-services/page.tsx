@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { Shield } from 'lucide-react';
@@ -604,3 +605,11 @@ export const contactInfo = {
   hours: '24/7 Support Available',
   timezone: 'EST (Eastern Standard Time)',};
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
+=======
+import React from 'react';
+import {Helmet} from 'react-helmet-async';
+import {Link} from 'react-router-dom';
+
+import React from 'react'
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

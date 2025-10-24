@@ -123,6 +123,7 @@ export default function Component() {
       <div className="container mx-auto px-4 py-16"></div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
           {/* Company Info */}
+<<<<<<< HEAD
           <div className="space-y-6"></div>
             <div></div>
               <Link to="/" className="flex items-center space-x-2 group"></Link>
@@ -157,6 +158,35 @@ export default function Component() {
               ))}
             </div>
           </div>
+=======
+              <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
+              Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.
+                  +1 302 464 0950;
+                  kleber@ziontechgroup.com;
+                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+          {/* Micro SAAS Services */}
+              Micro SAAS;
+                    <span>{service.name}</span>
+  ))}
+
+              View All Micro SAAS →
+
+          {/* AI & IT Services */}
+              AI & IT Services;
+                <h4 className="text-white font-medium mb-2">AI Services</h4>
+                        {service.name}
+                  ))}
+                <h4 className="text-white font-medium mb-2">IT Services</h4>
+                        {service.name}
+                  ))}
+
+              View All Services →
+
+          {/* Additional AI Services */}
+              AI Tools;
+                    <span>{service.name}</span>
+  ))}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 
           {/* AI Services */}
           <div></div>

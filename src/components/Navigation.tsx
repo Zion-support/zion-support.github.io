@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 import React, { useState, useEffect } from 'react';
@@ -82,6 +83,14 @@ import {
   Smartphone
 } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03f4
+=======
+import React, {useState, useEffect} from 'react';
+export default Navigation;
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  // Removed unused state variables;
+  const [isScrolled, setIsScrolled] = useState(false);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -111,6 +120,7 @@ const Navigation: React.FC = memo(() => {
   };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
 
+<<<<<<< HEAD
 export default function Component() {
   return (
 <<<<<<< HEAD
@@ -118,6 +128,69 @@ export default function Component() {
       <h1>Component</h1>
       <p>This component is under construction.</p>
     </div>
+=======
+    setIsMenuOpen(!isMenuOpen);
+      closeAllMenus();
+  };
+
+    setIsServicesOpen(!isServicesOpen);
+  };
+
+  ];
+
+  ];
+
+  ];
+
+  // Removed specializedServices as it was unused;
+          {/* Logo */}
+            <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
+          {/* Desktop Navigation */}
+                <span>Services</span>
+                        Micro SAAS;
+                            <span>{service.name}</span>
+  ))}
+                        AI Services;
+                            <span>{service.name}</span>
+  ))}
+                        IT Services;
+                            <span>{service.name}</span>
+  ))}
+                        <span>View All Services</span>
+                        <span>Specialized Solutions</span>
+  )}
+
+              About;
+              Blog;
+              Case Studies;
+              Pricing;
+              Contact;
+                <span className="hidden sm:inline">+1 302 464 0950</span>
+                Get Started;
+          {/* Mobile Menu Button */}
+
+            {isMenuOpen ? <X className="w-6 h-6"   /> : <Menu className="w-6 h-6"   /></X></X>
+        {/* Mobile Menu */}
+                  <span>Services</span>
+                      <h4 className="text-cyan-400 font-semibold mb-2">Micro SAAS</h4>
+                            {service.name}
+                        ))}
+                      <h4 className="text-cyan-400 font-semibold mb-2">AI Services</h4>
+                            {service.name}
+                        ))}
+
+                      View All Services →
+                )}
+
+                About;
+                Blog;
+                Case Studies;
+                Pricing;
+                Contact;
+                  <span>+1 302 464 0950</span>
+                  Get Started;
+        )}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   );
 }
 =======

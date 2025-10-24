@@ -107,7 +107,42 @@ className="opacity-75""
           </svg>
       </div>
     );
+<<<<<<< HEAD
   }
+=======
+
+    );
+
+    );
+
+    );
+
+    );
+
+          );
+        case 'pulse':
+
+          );
+        case 'skeleton':
+
+  );
+        case 'bars':
+
+              ))}
+  );
+        case 'spinner':
+        default:
+
+          );
+    }, [size, variant, color, sizeClasses, colorClasses, baseClasses]);
+
+      return `${baseClasses} ${fullScreen ? fullScreenClasses : ''} ${className}`;
+    }, [baseClasses, fullScreen, fullScreenClasses, className]);
+          {renderSpinner}
+              {text}
+          )}
+  );
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 );
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const Component: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
@@ -31,12 +32,16 @@ interface Props {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
+=======
+import {Component, ErrorInfo, ReactNode} from 'react';
 
-interface State {
-  hasError: boolean;
-  error?: Error;
-}
+interface Props {children: ReactNode;}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 
+interface State {hasError: boolean;
+  error?: Error;}
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -214,12 +219,34 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     }
 
 <<<<<<< HEAD
+=======
+class ErrorBoundary extends Component<Props, State> {public state: State = {
+    hasError: false};
+
+  public static getDerivedStateFromError(error: Error): State {return { hasError: true, error};
+  }
+
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {console.error('ErrorBoundary caught an error: ', error, errorInfo);}
+
+  public render() {if (this.state.hasError) {
+      return (
+    <h1 className="text-6 xl font-boldtext-whitemb-4">Oops!</h1>
+            <p className="text-xltext-gray-300mb-8">Something went wrong.</p>
+
+this.setState({ hasError: false, error: undefined})}
+              className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600transition-allduration-300"
+              Try Again
+
+      );
+    }
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
     return this.props.children;
   }
 }
 
-<<<<<<< HEAD
 export default ErrorBoundary;
+<<<<<<< HEAD
 =======
 export default function Errorboundary({ className = '', children, ...props }: ErrorboundaryProps) {
   return (
@@ -241,3 +268,6 @@ export default ErrorBoundary
 
 export default Component;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

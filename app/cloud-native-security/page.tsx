@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -60,3 +61,14 @@ export default function CloudNativeSecurityZionTechGroup() {
     </div>
   );
 }
+=======
+import React from 'react';
+
+const CloudNativeSecurityPage: React.FC = () => {return (
+    <>
+      <title>CloudNativeSecurity - Zion Tech Group</title>
+
+      <  />
+  );}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

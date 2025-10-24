@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -268,3 +269,14 @@ const devopscicdPage: React.FC = () => {
 
 export default DevOpsCICDPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
+=======
+import React from 'react';
+
+const DevopsCicdPage: React.FC = () => {return (
+    <>
+      <title>DevopsCicd - Zion Tech Group</title>
+
+      <  />
+  );}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

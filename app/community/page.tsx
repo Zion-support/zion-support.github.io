@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
@@ -325,6 +326,36 @@ const CommunityPage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Community
+=======
+
+import {Helmet} from 'react-helmet-async';
+import {Link} from 'react-router-dom';
+import {ArrowRight} from 'lucide-react';
+
+export default function Community() {return (
+    <title>Community - Zion Tech Group</title>
+
+            <h1 className="text-4xl font-bold text-white mb-6">Community</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional community services coming soon.</p>
+
+              Contact Us
+
+      <  />
+  );}
+
+    <><  />
+      <Helmet></Helmet>
+        <title>Community - Zion Tech Group</title>
+        <meta name="description" content="Community services by Zion Tech Group. Professional AI and IT solutions."   /></meta>
+        <meta name="keywords" content="community, AI solutions, IT services"   /></meta>
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <h1 className="w-5h-5ml-2"   /></h1>
+              <span className="w-5h-5ml-2"   />Community;
+              </span>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Join our vibrant community of developers and innovators.
@@ -338,6 +369,7 @@ const CommunityPage: React.FC = () => {
               </button>
             </div>
           </div>
+<<<<<<< HEAD
         </section>
 
         {/* Features Section */}
@@ -378,6 +410,14 @@ const CommunityPage: React.FC = () => {
             </button>
             <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"></button>
               Browse Discussions;
+=======
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
+            <p className="w-5h-5ml-2">We're working on bringing you comprehensive community solutions.
+              Contact us to learn more about our services.
+            </p>
+            <button className="w-5h-5ml-2">Contact Us;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
             </button>
           </div>
         </div>,
@@ -650,6 +690,7 @@ const CommunityPage: React.FC = () => {
         </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
       </div>
+<<<<<<< HEAD
       <Footer />
     </>
   );
@@ -657,3 +698,9 @@ const CommunityPage: React.FC = () => {
 
 export default CommunityPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
+=======
+    <  />
+  );
+};
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

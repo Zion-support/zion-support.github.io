@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -53,3 +54,7 @@ export default function AiEmailAutomationZionTechGroup() {
     </div>
   );
 }
+=======
+
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

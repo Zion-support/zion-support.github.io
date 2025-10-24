@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 export default function AiAutomation() {
@@ -931,3 +932,9 @@ export default AIAutomationPage;
 
 export default AIAutomationPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
+=======
+import React from 'react';
+import {Helmet} from 'react-helmet-async';
+import {Link} from 'react-router-dom';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

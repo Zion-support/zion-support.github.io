@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 
@@ -7,6 +8,17 @@ export default function Component() {
       <h1>Component</h1>
       <p>This component is under construction.</p>
     </div>
+=======
+export default useErrorMonitoring;
+// // ErrorInfo interface removed as it's not used in this hook;
+// Global type definitions for browser events;
+ void;
+  // const {trackError} = useAnalytics();
+
+      console.error('Error reported: ', error, context);
+      // trackError(error, context);
+    []
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
   );
 }
 =======
@@ -41,17 +53,22 @@ export const _useErrorMonitoring = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     // Global error handler;
+<<<<<<< HEAD
 const handleError = (even)
   t: unknown) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       const errorEvent = event as {/* TODO: Fix JSX expression */}
   e: string; error?: Error };
+=======
+      const errorEvent = event as {message: string; error?: Error};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
       const error = new Error(errorEvent.message);
       error.stack = errorEvent.error?.stack;
       reportError(error, 'global_error');
     };
     // Unhandled promise rejection handler;
+<<<<<<< HEAD
 const handleUnhandledRejection = (even)
   t: unknown) => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -61,10 +78,15 @@ const handleUnhandledRejection = (even)
       const error =
 //         rejectionEvent.reason instanceof Error;
 //           ? rejectionEvent.reason;
+=======
+      const rejectionEvent = event as {reason: unknown};
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
           : new Error(String(rejectionEvent.reason));
       reportError(error, 'unhandled_promise_rejection');
     };
     // React error boundary handler (if available)
+<<<<<<< HEAD
     const handleReactError = (erro,
   r: Error, errorInf)
   o: unknown) => {/* TODO: Fix JSX expression */}
@@ -74,6 +96,11 @@ const handleUnhandledRejection = (even)
         (errorInfo as { componentStack?: string })?.componentStack || 'unknown';
       reportError(error, `react_error_boundar)`
   y: ${componentStack}`);
+=======
+
+        (errorInfo as {componentStack?: string})?.componentStack || 'unknown';
+      reportError(error, `react_error_boundary: ${componentStack}`);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
     };
     // Add event listeners;
     window.addEventListener('error', handleError);
@@ -90,7 +117,7 @@ const handleUnhandledRejection = (even)
 }
       window.removeEventListener('error', handleError);
       window.removeEventListener('unhandledrejection', handleUnhandledRejection);
-      delete (window as Window & { __REACT_ERROR_HANDLER__?: unknown }).__REACT_ERROR_HANDLER__;
+      delete (window as Window & {__REACT_ERROR_HANDLER__?: unknown}).__REACT_ERROR_HANDLER__;
     };
   }, [reportError]);
   return {/* TODO: Fix JSX expression */}

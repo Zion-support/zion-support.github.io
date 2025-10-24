@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
@@ -169,3 +170,13 @@ export default function CybersecuritySolutionsPage() {
     </div>
   );
 }
+=======
+
+const CybersecuritySolutionsPage: React.FC = () => {return (
+    <>
+      <title>CybersecuritySolutions - Zion Tech Group</title>
+
+      <  />
+  );}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
