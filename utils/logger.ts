@@ -1,9 +1,4 @@
 // Logger utility functions
-<<<<<<< HEAD
-export const logger = {
-  // Add logger utility functions here
-}
-=======
 
 export enum LogLevel {
   DEBUG = 'debug',
@@ -58,4 +53,3 @@ export class Logger {
 }
 
 export const logger = Logger.getInstance()
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d

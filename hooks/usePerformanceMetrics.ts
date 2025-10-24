@@ -1,10 +1,7 @@
-import React from 'react'
-
-<<<<<<< HEAD
 "use client"
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
+import React from 'react'
+
 const usePerformanceMetrics = () => {
   return null
 }

@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-import React from 'react'
-
 "use client"
 
-const usePerformanceMonitor = () => {
-  return null
-}
-
-export default usePerformanceMonitor
-=======
 import { useState, useEffect } from 'react';
 
 interface PerformanceData {
@@ -99,4 +90,3 @@ export const usePerformanceMonitor = () => {
 
   return { performanceData };
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d

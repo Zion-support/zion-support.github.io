@@ -16,10 +16,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     enableCodeSplitting = true,
     enableCaching = true
   } = options
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
   const observerRef = useRef<IntersectionObserver | null>(null)
 
   // Lazy loading for images
@@ -60,19 +57,13 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
   // Preload critical resources
   const preloadCriticalResources = useCallback(() => {
     if (!enablePreloading || typeof window === 'undefined') return
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
     const criticalResources = [
       '/fonts/inter.woff2',
       '/images/hero-bg.jpg',
       '/images/logo.svg'
     ]
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
     criticalResources.forEach((resource) => {
       const link = document.createElement('link')
       link.rel = 'preload'
@@ -85,10 +76,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       } else if (resource.endsWith('.jpg') || resource.endsWith('.png')) {
         link.as = 'image'
       }
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
       document.head.appendChild(link)
     })
   }, [enablePreloading])
@@ -123,10 +111,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       '/static/js/main.js',
       '/static/css/main.css'
     ]
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
     criticalChunks.forEach((chunk) => {
       const link = document.createElement('link')
       link.rel = 'preload'
@@ -139,10 +124,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
   // Service Worker registration for caching
   const registerServiceWorker = useCallback(() => {
     if (!enableCaching || typeof window === 'undefined' || !('serviceWorker' in navigator)) return
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
@@ -159,10 +141,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
   // Performance monitoring
   const setupPerformanceMonitoring = useCallback(() => {
     if (typeof window === 'undefined') return
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
     // Monitor long tasks
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
@@ -204,10 +183,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
     ]
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
     hints.forEach((hint) => {
       const link = document.createElement('link')
       Object.entries(hint).forEach(([key, value]) => {
@@ -246,10 +222,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     setupPerformanceMonitoring,
     addResourceHints
   ])
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
   return {
     setupLazyLoading,
     preloadCriticalResources,
