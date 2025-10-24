@@ -1,6 +1,9 @@
+'use client';
+
+export const dynamic = 'force-dynamic';
+
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Database, Brain, PieChart, Cpu } from 'lucide-react';
+import { CheckCircle, Database, Brain, PieChart, Cpu, BarChart, Zap, Shield, Target, Star, TrendingUp } from 'lucide-react';
 
 const BusinessIntelligencePage: React.FC = () => {
   const biServices = [
@@ -141,12 +144,7 @@ const BusinessIntelligencePage: React.FC = () => {
   const categories = [...new Set(biServices.map(service => service.category))];
 
   return (
-    <>
-      <Helmet>
-        <title>Business Intelligence Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced business intelligence services including analytics, data visualization, predictive modeling, and AI-powered insights." />
-        <meta name="keywords" content="business intelligence, data analytics, data visualization, predictive analytics, BI consulting" />
-      </Helmet>
+    
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
         {/* Hero Section */}
@@ -357,7 +355,7 @@ const BusinessIntelligencePage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

@@ -1,6 +1,12 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Metadata } from 'next';
 import { Brain, Cloud, Shield, Code, BarChart, Zap } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'About Us - Zion Tech Group',
+  description: 'Learn about Zion Tech Group\'s mission, team, and expertise in AI, quantum computing, and enterprise technology solutions.',
+  keywords: 'about us, team, AI experts, quantum computing, enterprise technology, Zion Tech Group',
+};
 
 const AboutPage: React.FC = () => {
   const teamMembers = [
@@ -48,13 +54,7 @@ const AboutPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI solutions, cloud infrastructure, and enterprise technology services." />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20"></div>
@@ -167,7 +167,6 @@ const AboutPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
   );
 };
 

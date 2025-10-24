@@ -1,5 +1,6 @@
+'use client';
+
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MapPin, Send, CheckCircle } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
@@ -40,13 +41,7 @@ const ContactPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
-        <title>Contact Us - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for AI solutions, cloud infrastructure, and enterprise technology services." />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20"></div>
@@ -255,7 +250,6 @@ const ContactPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
   );
 };
 

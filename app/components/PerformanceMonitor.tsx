@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -196,7 +198,7 @@ const PerformanceMonitor: React.FC = () => {
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
   return null;
 };
 

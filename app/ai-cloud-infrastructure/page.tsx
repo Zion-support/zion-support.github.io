@@ -1,5 +1,8 @@
+'use client';
+
+export const dynamic = 'force-dynamic';
+
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Zap, Shield, Clock, TrendingUp } from 'lucide-react';
 
 const AICloudInfrastructurePage: React.FC = () => {
@@ -196,11 +199,6 @@ const AICloudInfrastructurePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      <Helmet>
-        <title>AI Cloud Infrastructure Services | Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered cloud infrastructure services including migration, optimization, security, and monitoring. Transform your cloud operations with intelligent automation." />
-        <meta name="keywords" content="cloud infrastructure, cloud migration, cloud optimization, DevOps, cloud security, multi-cloud, AWS, Azure, GCP" />
-      </Helmet>
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">

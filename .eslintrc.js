@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ["eslint:recommended"],
+  extends: ["next/core-web-vitals"],
   rules: {
     "no-console": "off",
     "prefer-const": "error",

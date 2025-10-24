@@ -1,7 +1,7 @@
 "use client";
 
 import React, { Suspense } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowRight, Brain, Cloud, Shield, Code, BarChart, Zap, CheckCircle } from 'lucide-react';
 
 const ServiceCardSkeleton = () => (
@@ -74,13 +74,13 @@ export default function AppPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/contact"
+                href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
               >
                 Get Started
               </Link>
               <Link
-                to="/demo"
+                href="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
               >
                 View Demo
@@ -115,7 +115,7 @@ export default function AppPage() {
                   ))}
                 </ul>
                 <Link
-                  to={service.href}
+                  href={service.href}
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:translate-x-1 transition-transform"
                 >
                   Learn More
@@ -127,7 +127,7 @@ export default function AppPage() {
           
           <div className="text-center mt-8">
             <Link 
-              to="/services"
+              href="/services"
               className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
             >
               View All Services
@@ -178,13 +178,13 @@ export default function AppPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/contact"
+                href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
               >
                 Start Your Project
               </Link>
               <Link
-                to="/about"
+                href="/about"
                 className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
               >
                 Learn More About Us

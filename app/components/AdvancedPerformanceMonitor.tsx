@@ -1,9 +1,17 @@
+'use client';
+
 import React, { useEffect, useState, useCallback } from 'react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+
+interface LayoutShift {
+  hadRecentInput: boolean;
+  value: number;
+}
 
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
-  fid: number | null;
+  inp: number | null;
   cls: number | null;
   ttfb: number | null;
   memory: number | null;
@@ -21,7 +29,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
-    fid: null,
+    inp: null,
     cls: null,
     ttfb: null,
     memory: null,
@@ -53,30 +61,30 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       }
     }
 
-    // Measure First Input Delay (FID)
+    // Measure Interaction to Next Paint (INP)
     if ('PerformanceObserver' in window) {
       try {
-        const fidObserver = new PerformanceObserver(list => {
+        const inpObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach(entry => {
             if (
-              entry.entryType === 'first-input' &&
+              entry.entryType === 'event' &&
               'processingStart' in entry &&
               'startTime' in entry
             ) {
-              const fidEntry = entry as PerformanceEventTiming;
+              const inpEntry = entry as PerformanceEventTiming;
               setMetrics(prev => ({
                 ...prev,
-                fid: fidEntry.processingStart - fidEntry.startTime,
+                inp: inpEntry.processingStart - inpEntry.startTime,
               }));
             }
           });
         });
-        fidObserver.observe({ entryTypes: ['first-input'] });
-        observers.push(fidObserver);
+        inpObserver.observe({ entryTypes: ['event'] });
+        observers.push(inpObserver);
       } catch (error) {
         // eslint-disable-next-line no-console
-        console.warn('FID observer not supported:', error);
+        console.warn('INP observer not supported:', error);
       }
     }
 
@@ -246,7 +254,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       );
     }
 
-    if (metrics.fid && metrics.fid > 100) {
+    if (metrics.inp && metrics.inp > 100) {
       recommendations.push(
         'First Input Delay is high. Reduce JavaScript execution time.'
       );
@@ -276,7 +284,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         <div className='text-xs space-y-1'>
           <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
           <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
-          <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
+          <div>INP: {metrics.inp ? `${metrics.inp.toFixed(0)}ms` : 'N/A'}</div>
           <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
           <div>
             TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}
