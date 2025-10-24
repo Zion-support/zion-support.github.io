@@ -83,6 +83,6 @@ const InteractiveAIROICalculator: React.FC = () => {
       </div>
     </section>
   );
-}
-export default InteractiveAIROICalculato;r
-  );
+};
+
+export default InteractiveAIROICalculator;

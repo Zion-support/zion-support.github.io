@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-=======
-import { describe, test, expect } from '@jest/globals';
-import { render, screen } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
 
 const TestComponent = () => {
@@ -16,16 +12,12 @@ const TestComponent = () => {
 };
 
 const MockComponent = () => <div data-testid="mock-component">Mock Component</div>;
->>>>>>> cursor/fix-errors-and-merge-to-main-0278
 
 // Basic test structure
 describe('Components', () => {
   it('renders without crashing', () => {
     expect(true).toBe(true);
   });
-<<<<<<< HEAD
-});
-=======
   
   test('should render test content', () => {
     render(<TestComponent />);
@@ -51,4 +43,3 @@ describe('Components', () => {
     expect(screen.getByText('Mock Component')).toBeInTheDocument();
   });
 });
->>>>>>> cursor/fix-errors-and-merge-to-main-0278
