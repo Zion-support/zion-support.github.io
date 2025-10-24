@@ -4,9 +4,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { 
   ChevronDown, 
-  Phone, 
   Mail, 
-  MapPin, 
   Menu, 
   X, 
   Brain, 
@@ -14,35 +12,20 @@ import {
   Shield, 
   Code, 
   BarChart, 
-  Users, 
-  Zap, 
   ArrowRight, 
-  Cpu, 
   Target, 
-  Globe, 
-  Database, 
   Smartphone, 
-  Lock, 
   TrendingUp, 
   Settings, 
-  Calendar, 
-  CheckSquare, 
   FileText, 
   MessageCircle, 
-  Heart, 
   DollarSign, 
   Box, 
-  Monitor, 
   Link as LinkIcon, 
-  Server, 
-  Package, 
   Mic, 
   Workflow, 
   Eye, 
-  Wifi, 
-  MessageSquare, 
-  CheckCircle, 
-  ShoppingCart 
+  Wifi
 } from 'lucide-react';
 
 const Navigation: React.FC = () => {

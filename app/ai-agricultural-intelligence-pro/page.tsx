@@ -4,7 +4,7 @@ import React from 'react';
 export const dynamic = 'force-dynamic';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+import { CheckCircle, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
 const AIAgriculturalIntelligenceProPage: React.FC = () => {
   const features = [
