@@ -1,6 +1,12 @@
 "use client"
 
-const ContactPage: React.FC = () => {
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+
+export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -65,8 +71,6 @@ const ContactPage: React.FC = () => {
     "Consulting",
     "Other"
   ];
-
-export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}
