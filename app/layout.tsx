@@ -24,8 +24,6 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-<<<<<<< HEAD
-=======
   verification: {
     google: 'your-google-verification-code',
   },
@@ -35,7 +33,6 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
->>>>>>> 6cb44e76a25e5b2f4f623775c504882c3c96c14e
 }
 
 export default function RootLayout({
