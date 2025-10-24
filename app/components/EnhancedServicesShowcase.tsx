@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
-import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react'
-
+import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react'
 const EnhancedServicesShowcase: React.FC = () => {
   const services = [
     {
@@ -91,7 +90,16 @@ const EnhancedServicesShowcase: React.FC = () => {
                 <ArrowRight className="h-4 w-4 ml-2" />
               </button>
             </div>
+<<<<<<< HEAD
           ))}
+=======
+<<<<<<< HEAD
+          </div>
+        ))}
+=======
+          ))}
+>>>>>>> origin/main
+>>>>>>> origin/main
         </div>
       </div>
     </div>
