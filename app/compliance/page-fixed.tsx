@@ -61,7 +61,6 @@ const CompliancePageFixed: React.FC = () => {
               </button>
             </div>
           </div>
-        </div>
       </section>
 
         {/* Stats Section */}
@@ -69,7 +68,8 @@ const CompliancePageFixed: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {stats.map((stat, index) => (
-                <div key={index} className="text-center"><div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4"></div>
+                <div key={index} className="text-center">
+                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4">
                     <stat.icon className="h-8 w-8 text-white" />
                   </div>
                   <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>

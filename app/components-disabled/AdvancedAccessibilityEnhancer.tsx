@@ -124,16 +124,16 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our accessibility solutions for your business.
             </p>
-                </div>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-                {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg"></p>
-                {benefit}
+                <p className="text-gray-300 text-lg">
+                  {benefit}
                 </p>
-                </div>
+              </div>
             ))}
           </div>
         </div>
