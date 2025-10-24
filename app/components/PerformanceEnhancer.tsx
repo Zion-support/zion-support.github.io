@@ -19,8 +19,8 @@ import { ArrowRight } from 'lucide-react';
               <div key={index} className=&quot;flex items-start space-x-3&quot;> </div><CheckCircle className=&quot;h-6 w-6 text-purple-400 mt-1 flex-shrink-0&quot; /> </CheckCircle><p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
               </div>
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
 
 interface PerformanceEnhancerProps {

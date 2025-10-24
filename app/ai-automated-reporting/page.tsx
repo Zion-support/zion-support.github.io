@@ -30,7 +30,7 @@ const PagePage = () => {
               Contact us to learn more about how we can help you achieve your goals.
             </p>
           </div>
-        </div>
+                </div>
       </section>
 
       <Footer />

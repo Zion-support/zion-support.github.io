@@ -18,7 +18,7 @@ export interface ErrorContext {// TODO: Add content
   action?: string
   userId?: string
   sessionId?: string
-  metadata?: Record<string>
+  metadata?: Record<string></string>
 }
 export interface TrackedError {
     message: string
@@ -41,13 +41,15 @@ class EnhancedErrorTracker {
   }
   private setupGlobalErrorHandler(): void {
     if (typeof window !== 'undefined') {
-      window.addEventListener('error', event => {
+      window.addEventListener('error', event =>
+                {
         this.trackError(event.error, {
           component: 'Global',
           action:         ,
 $4})
       })
-      window.addEventListener('unhandledrejection', event => {
+      window.addEventListener('unhandledrejection', event =>
+                {
         this.trackError(new Error(event.reason), {
           component: 'Global',
           action:         ,
@@ -108,11 +110,12 @@ $4})
   }
   public getErrorStats(): {
     total: number,
-    byComponent: Record<string>
+    byComponent: Record<string></string>
     recent: TrackedError[]
   } {
     const byComponent: Record<string, number> = {}
-    this.errors.forEach(error => {
+    this.errors.forEach(error =>
+                {
     byComponent[component] = (byComponent[component] || 0) + 1
   })
     return {
@@ -126,7 +129,7 @@ $4})
 export const errorTracker = new EnhancedErrorTracker()
 export default errorTracker
   metadata?: Record
-          <string>
+          <string></string>
 }
 export interface TrackedError {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -171,7 +174,8 @@ class EnhancedErrorTracker {
     if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      window.addEventListener('error', event => {/* TODO: Fix JSX expression */}
+      window.addEventListener('error', event =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
         this.trackError(event.error, {/* TODO: Fix JSX expression */}
@@ -183,7 +187,8 @@ class EnhancedErrorTracker {
   n: 'Uncaught Error')
         })
       })
-      window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */}
+      window.addEventListener('unhandledrejection', event =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
         this.trackError(new Error(event.reason), {/* TODO: Fix JSX expression */}
@@ -301,7 +306,7 @@ class EnhancedErrorTracker {
   l: number,,
     byComponen,
   t: Record,
-          <string>
+          <string></string>
     recen,
   t: TrackedError[],
   } {/* TODO: Fix JSX expression */}
@@ -310,7 +315,8 @@ class EnhancedErrorTracker {
     const,
   byComponent: Record,
           <string, number> = {}
-    this.errors.forEach(error => {
+    this.errors.forEach(error =>
+                {
     byComponent[component] = (byComponent[component] || 0) + 1
   }
     })

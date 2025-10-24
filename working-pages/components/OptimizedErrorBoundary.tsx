@@ -119,10 +119,10 @@ interface ErrorFallbackProps {
 
 const ErrorFallback = React.memo<ErrorFallbackProps>(
   ({ error, errorInfo, errorId, onRetry }) => (
-    <div className='min-h-screen flex items-center justify-center bg-gray-50 px-4'>
-      <div className='max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center'>
-        <div className='mb-4'>
-          <div className='mx-auto w-12 h-12 bg-red-100 rounded-full flex items-center justify-center'>
+    <div className='min-h-screen flex items-center justify-center bg-gray-50 px-4'></div>
+      <div className='max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center'></div>
+        <div className='mb-4'></div>
+          <div className='mx-auto w-12 h-12 bg-red-100 rounded-full flex items-center justify-center'></div>
             <svg
               className='w-6 h-6 text-red-600'
               fill='none'
@@ -146,8 +146,8 @@ const ErrorFallback = React.memo<ErrorFallbackProps>(
         </p>
 
         {process.env['NODE_ENV'] === 'development' && error && (
-          <details className='mb-4 text-left'>
-            <summary className='cursor-pointer text-sm text-gray-500 hover:text-gray-700'>
+          <details className='mb-4 text-left'></details>
+            <summary className='cursor-pointer text-sm text-gray-500 hover:text-gray-700'></summary>
               Error Details (Development)
             </summary>
             <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto'>

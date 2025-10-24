@@ -35,7 +35,8 @@ const ContactForm: React.FC = () => {
       [name]: value
     }));
   }
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) =>
+                {
     e.preventDefault()
     setStatus({ type: 'loading', message: 'Sending message...' })
     try {

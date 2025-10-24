@@ -62,17 +62,17 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
               Transform your business with our advanced accessibility solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"></button>
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"></button>
                 Learn More
               </button>
-            </div>
+                </div>
           </div>
-        </div>
+                </div>
       </section>
 
       {/* Features Section */}
@@ -85,7 +85,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our accessibility solutions deliver unmatched performance, security, and scalability.
             </p>
-          </div>
+                </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {features.map((feature, index) => {
@@ -123,14 +123,16 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our accessibility solutions for your business.
             </p>
-          </div>
+                </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-3"></div>
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
+                <p className="text-gray-300 text-lg"></p>
+                {benefit}
+                </p>
+                </div>
             ))}
           </div>
         </div>
@@ -146,16 +148,16 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
             <p className="text-xl text-purple-100 mb-8">
               Contact our experts to discuss your accessibility needs and get a customized solution.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"></button>
                 <Phone className="mr-2 h-5 w-5" />
                 Call Now
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"></button>
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
               </button>
-            </div>
+                </div>
           </div>
         </div>
       </section>

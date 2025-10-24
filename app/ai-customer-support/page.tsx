@@ -31,7 +31,7 @@ const PagePage = () => {
             </p>
           </div>
         </div>
-      </section>
+                </section>
 
       <Footer />
     </div>

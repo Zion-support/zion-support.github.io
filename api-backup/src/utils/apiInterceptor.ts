@@ -39,17 +39,17 @@ export interface APIConfig {
     enableCaching: boolean,,
     cacheTimeout: number
   headers?: Record,
-          <string>
+          <string></string>
   interceptors?: {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     request?: (confi)
   g: RequestConfig) => RequestConfig | Promise,
-          <RequestConfig>
+          <RequestConfig></RequestConfig>
     response?: (respons)
-  e: Response) => Response | Promise<Response>
+  e: Response) => Response | Promise<Response></Response>
     error?: (erro)
-  r: Error) => Error | Promise<Error>
+  r: Error) => Error | Promise<Error></Error>
   }
 }
 export interface RequestConfig {/* TODO: Fix JSX expression */}
@@ -60,14 +60,15 @@ export interface RequestConfig {/* TODO: Fix JSX expression */}
     metho,
   d: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH'
   headers?: Record
-          <string>
+          <string></string>
   body?: unknown
-  params?: Record<string>
+  params?: Record<string></string>
   timeout?: number
   cache?: boolean
   retryAttempts?: number,
 }
-export interface APIResponse<T = unknown> {/* TODO: Fix JSX expression */}
+export interface APIResponse<T = unknown></T>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 
@@ -142,7 +143,8 @@ export class APIInterceptor {
    */
   async request
           <T = unknown>(confi)
-  g: RequestConfig): Promise<APIResponse<T>> {
+  g: RequestConfig): Promise<APIResponse<T>>
+                {
     const cacheKey = this.getCacheKey(fullConfig)
   }
     // Check cache for GET requests
@@ -154,7 +156,7 @@ export class APIInterceptor {
   O: Add content,}
 }
         return cachedResponse as APIResponse
-          <T>
+          <T></T>
       }
     }
     // Check for pending identical requests
@@ -190,7 +192,8 @@ const requestPromise = this.executeRequest
    */
   private async executeRequest
           <T>(confi)
-  g: RequestConfig, attempt = 1): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
+  g: RequestConfig, attempt = 1): Promise<APIResponse<T>>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     const startTime = performance.now()
@@ -273,7 +276,8 @@ const data = await this.parseResponse
   g: Partial,
           <RequestConfig> = {}
 
-  ): Promise<APIResponse<T>> {
+  ): Promise<APIResponse<T>>
+                {
     // TODO: Add content
   }
 }
@@ -291,7 +295,8 @@ const data = await this.parseResponse
   g: Partial,
           <RequestConfig> = {}
 
-  ): Promise<APIResponse<T>> {
+  ): Promise<APIResponse<T>>
+                {
     // TODO: Add content
   }
 }
@@ -309,7 +314,8 @@ const data = await this.parseResponse
   g: Partial,
           <RequestConfig> = {}
 
-  ): Promise<APIResponse<T>> {
+  ): Promise<APIResponse<T>>
+                {
     // TODO: Add content
   }
 }
@@ -326,7 +332,8 @@ const data = await this.parseResponse
   g: Partial,
           <RequestConfig> = {}
 
-  ): Promise<APIResponse<T>> {
+  ): Promise<APIResponse<T>>
+                {
     // TODO: Add content
   }
 }
@@ -344,7 +351,8 @@ const data = await this.parseResponse
   g: Partial,
           <RequestConfig> = {}
 
-  ): Promise<APIResponse<T>> {
+  ): Promise<APIResponse<T>>
+                {
     // TODO: Add content
   }
 }
@@ -392,7 +400,8 @@ const data = await this.parseResponse
   O: Add content,}
 }
       const params = new URLSearchParams()
-      Object.entries(config.params).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
+      Object.entries(config.params).forEach(([key, value]) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
         params.append(key, String(value))
@@ -414,7 +423,8 @@ const data = await this.parseResponse
     // Add default headers
     headers.set('Content-Type', 'application/json')
     // Add config headers
-    Object.entries(config.headers || {}).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
+    Object.entries(config.headers || {}).forEach(([key, value]) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       headers.set(key, value)
@@ -439,7 +449,8 @@ const data = await this.parseResponse
    */
   private async parseResponse
           <T>(respons)
-  e: Response): Promise<T> {/* TODO: Fix JSX expression */}
+  e: Response): Promise<T></T>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     const contentType = response.headers.get('content-type')
@@ -568,7 +579,8 @@ const data = await this.parseResponse
    */
 
   private delay(ms: number): Promise,
-          <void> {
+          <void></void>
+                {
     // TODO: Add content
   }
 

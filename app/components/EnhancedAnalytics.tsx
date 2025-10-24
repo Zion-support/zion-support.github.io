@@ -81,6 +81,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       if (process.env.NODE_ENV === 'development') {
         console.log('Analytics Page:', name, properties)}
     }
+    console.log('Analytics Page View:', pageName)
   }
   const value: AnalyticsContextType = {
     track,
