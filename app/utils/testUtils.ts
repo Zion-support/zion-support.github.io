@@ -37,7 +37,7 @@ export const mockFetch = (
   headers: Record<string, string> = {}
 ): void => {
   if (typeof global !== 'undefined') {
-    (global as typeof global & { fetch: typeof fetch }).fetch = jest.fn(() =>
+    (global as typeof global & { fetch: typeof fetch }).fetch = (global as any).jest.fn(() =>
       Promise.resolve({
         ok: status >= 200 && status < 300,
         status,
@@ -195,7 +195,7 @@ export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {
  * Spy on console methods
  */
 export class ConsoleSpy {
-  private originalConsole: Console
+  private originalConsole: typeof console
   private logs: string[] = []
   private errors: string[] = []
   private warnings: string[] = []
@@ -248,13 +248,13 @@ export class ConsoleSpy {
  */
 export interface Deferred<T> {
   promise: Promise<T>
-  resolve: (value: T) => void
-  reject: (reason?: unknown) => void
+  resolve: (_value: T) => void
+  reject: (_reason?: unknown) => void
 }
 
 export const createDeferred = <T>(): Deferred<T> => {
-  let resolve: (value: T) => void
-  let reject: (reason?: unknown) => void
+  let resolve: (_value: T) => void
+  let reject: (_reason?: unknown) => void
   const promise = new Promise<T>((res, rej) => {
     resolve = res
     reject = rej

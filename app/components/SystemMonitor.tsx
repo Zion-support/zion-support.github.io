@@ -1,11 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import { Cpu, HardDrive, Wifi, Battery } from 'lucide-react';
-=======
 import { Activity, Cpu, HardDrive, Wifi, Battery } from 'lucide-react';
->>>>>>> 883b2f1837ad94df26f75676952a53319ed72f1c
 
 interface SystemMonitorProps {
   showDetails?: boolean;
@@ -22,11 +18,7 @@ interface SystemStats {
 }
 
 const SystemMonitor: React.FC<SystemMonitorProps> = ({
-<<<<<<< HEAD
-  _showDetails = true,
-=======
   showDetails: _showDetails = true,
->>>>>>> 883b2f1837ad94df26f75676952a53319ed72f1c
   refreshInterval = 1000,
   className = '',
 }) => {
@@ -68,9 +60,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   };
 
   return (
-<<<<<<< HEAD
-    <div className={`p-4 bg-white rounded-lg shadow-lg ${className}`}>
-=======
     <div className={`bg-white rounded-lg shadow-lg p-4 ${className}`}>
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold text-gray-900 flex items-center">
@@ -82,7 +71,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
         </div>
       </div>
 
->>>>>>> 883b2f1837ad94df26f75676952a53319ed72f1c
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {/* CPU */}
         <div className="text-center">

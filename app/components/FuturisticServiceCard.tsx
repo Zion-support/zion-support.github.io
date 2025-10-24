@@ -17,21 +17,21 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
   isPopular = false,
 }) => {
   return (
-    <div className={`relative group ${isPopular ? 'scale-105' : ''}`}></div>
+    <div className={`relative group ${isPopular ? 'scale-105' : ''}`}>
       {isPopular && (
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10"></div>
+        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
           <div className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
             Most Popular
           </div>
         </div>
       )
       
-      <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl"></div>
+      <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl">
         {/* Background gradient */
         <div className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-5 rounded-2xl group-hover:opacity-10 transition-opacity`}></div>
         
         {/* Content */
-        <div className="relative z-10"></div>
+        <div className="relative z-10">
           {/* Icon */
           {icon && (
             <div className={`w-16 h-16 bg-gradient-to-r ${gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>

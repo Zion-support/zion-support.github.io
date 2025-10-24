@@ -6,22 +6,22 @@ import { useRef, useEffect } from 'react'
  */
 
 // Debounce function for performance optimization
-export const debounce = <T extends (...args: unknown[]) => unknown>(
+export const debounce = <T extends (..._args: unknown[]) => unknown>(
   func: T,
   wait: number
-): ((...args: Parameters<T>) => void) => {
-  let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {
+): ((..._args: Parameters<T>) => void) => {
+  let timeout: ReturnType<typeof setTimeout>;
+  return (..._args: Parameters<T>) => {
     clearTimeout(timeout)
-    timeout = setTimeout(() => func(...args), wait)
+    timeout = setTimeout(() => func(..._args), wait)
   }
 }
 
 // Throttle function for performance optimization
-export const throttle = <T extends (...args: unknown[]) => unknown>(
+export const throttle = <T extends (..._args: unknown[]) => unknown>(
   func: T,
   limit: number
-): ((...args: Parameters<T>) => void) => {
+): ((..._args: Parameters<T>) => void) => {
   let inThrottle: boolean;
   return (...args: Parameters<T>) => {
     if (!inThrottle) {
