@@ -6,14 +6,7 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
 export default function APIDocsPage() {
-  const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-
-  const copyToClipboard = (code: string, id: string) => {
-    navigator.clipboard.writeText(code);
-    setCopiedCode(id);
-    setTimeout(() => setCopiedCode(null), 2000);
-  };
 
   const apiEndpoints = [
     {
@@ -45,11 +38,7 @@ export default function APIDocsPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEOOptimizer 
-        title="API Documentation - Zion Tech Group"
-        description="Complete API documentation for Zion Tech Group's AI and IT solutions. Explore endpoints, authentication, and integration guides."
-        keywords="API documentation, REST API, AI API, cloud API, integration, developer tools, API reference"
-      />
+      <SEOOptimizer />
       <Navigation />
       
       <main className="pt-20">

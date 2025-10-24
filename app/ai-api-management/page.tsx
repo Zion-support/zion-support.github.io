@@ -3,7 +3,7 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import { CheckCircle, Zap, Shield, Brain, BarChart, Users, Settings } from 'lucide-react'
 
 const AIApiManagementPage: React.FC = () => {
   const features = [
