@@ -1,60 +1,29 @@
-import React from 'react';
-import { CheckCircle, Phone, Star, TrendingUp, Check } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, Phone, TrendingUp } from 'lucide-react';
+import React from "react";
 
+interface PagePageProps {
+  // Add props here
+}
 
-const Page: React.FC = () => {
-  const feature,
-      s = []
-    'AI-powered project planning and resource allocation'
-    'Intelligent timeline prediction and risk assessment'
-    'Smart task management with priority optimization'
-    'Real-time collaboration and team coordination'
-    'Predictive analytics for project success'
-    'Automated progress tracking and reporting'
-    'Budget optimization and cost forecasting'
-    'Integration with popular project management tools'
-  ]
-
-
-    '50% faster decision making'
-  ]
-
-  constpricin,
-      g = [
-    {
-      plan: 'Starter'
-      price: '$19 9'
-      perio,
-      d: '/month'
-      feature,
-      s: ['Up to5projects', '10team members', 'Basic AI planning', 'Email support']
-      popular: false
-   }
-    {plan: 'Professional'
-      price: '$39 9'
-      perio,
-      d: '/month'
-      feature,
-      s: ['Unlimited projects', '50team members', 'Advanced AI features', 'Priority support', 'Custom integrations']
-      popular: true
-   }
-    {plan: 'Enterprise'
-      price: 'Custom'
-      perio,
-      d: ''
-      feature,
-      s: ['Unlimited everything', 'Custom AI training', 'Dedicated support', 'On-premise deployment', 'SLA guarantee']
-      popular: false
-    }
-  ]
-
-const Page = () => {};
+const PagePage: React.FC<PagePageProps> = () => {
   return (
-</>
-  )
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">
+          
+        </h1>
+        <div className="prose max-w-none">
+          <p className="text-lg text-gray-600">
+            This is a placeholder for the  page.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
 
+<<<<<<< HEAD
 export default Page;
 }
+=======
+export default PagePage;
+>>>>>>> origin/main

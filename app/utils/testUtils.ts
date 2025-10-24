@@ -1,16 +1,14 @@
-'use client'
+'use client';
 /**
  * Testing Utilities
  * Provides helper functions and utilities for testing
  */
-
 /**
  * Wait for a specified amount of time
  */
 export const wait = (ms: number): Promise<void> => {
-  return new Promise(resolve => setTimeout(resolve, ms))
-}
-
+  return new Promise(resolve => setTimeout(resolve, ms));
+};
 /**
  * Wait for a condition to be true
  */
@@ -19,15 +17,14 @@ export const waitFor = async (
   timeout = 5000,
   interval = 100
 ): Promise<void> => {
-  const startTime = Date.now()
+  const startTime = Date.now();
   while (!condition()) {
     if (Date.now() - startTime > timeout) {
-      throw new Error(`Timeout waiting for condition after ${timeout}ms`)
+      throw new Error(`Timeout waiting for condition after ${timeout}ms`);
     }
-    await wait(interval)
+    await wait(interval);
   }
-}
-
+};
 /**
  * Mock fetch for testing
  */
@@ -45,101 +42,77 @@ export const mockFetch = (
         json: async () => response,
         text: async () => JSON.stringify(response)
       } as Response)
-    ) as typeof fetch
+    ) as typeof fetch;
   }
-}
-
+};
 /**
  * Mock local storage
  */
 export class MockStorage implements Storage {
-  private store: Map<string, string> = new Map()
-
+  private store: Map<string, string> = new Map();
   get length(): number {
-    return this.store.size
+    return this.store.size;
   }
-
   key(index: number): string | null {
-    const keys = Array.from(this.store.keys())
-    return keys[
-        index
-      ] || null
+    const keys = Array.from(this.store.keys());
+    return keys[index] || null;
   }
-
   getItem(key: string): string | null {
-    return this.store.get(key) || null
+    return this.store.get(key) || null;
   }
-
   setItem(key: string, value: string): void {
-    this.store.set(key, value)
+    this.store.set(key, value);
   }
-
   removeItem(key: string): void {
-    this.store.delete(key)
+    this.store.delete(key);
   }
-
   clear(): void {
-    this.store.clear()
+    this.store.clear();
   }
 }
-
 /**
  * Mock session storage
  */
 export class MockSessionStorage implements Storage {
-  private store: Map<string, string> = new Map()
-
+  private store: Map<string, string> = new Map();
   get length(): number {
-    return this.store.size
+    return this.store.size;
   }
-
   key(index: number): string | null {
-    const keys = Array.from(this.store.keys())
-    return keys[
-        index
-      ] || null
+    const keys = Array.from(this.store.keys());
+    return keys[index] || null;
   }
-
   getItem(key: string): string | null {
-    return this.store.get(key) || null
+    return this.store.get(key) || null;
   }
-
   setItem(key: string, value: string): void {
-    this.store.set(key, value)
+    this.store.set(key, value);
   }
-
   removeItem(key: string): void {
-    this.store.delete(key)
+    this.store.delete(key);
   }
-
   clear(): void {
-    this.store.clear()
+    this.store.clear();
   }
 }
-
 /**
  * Create a mock element for testing
  */
 export const createMockElement = (tagName: string, attributes: Record<string, string> = {}): HTMLElement => {
-  const element = document.createElement(tagName)
+  const element = document.createElement(tagName);
   Object.entries(attributes).forEach(([key, value]) => {
-    element.setAttribute(key, value)
-  })
-  return element
-}
-
+    element.setAttribute(key, value);
+  });
+  return element;
+};
 /**
  * Mock window object for testing
  */
 export const mockWindow = (overrides: Partial<Window> = {}): Window => {
   const mockWin = {
     location: {
-      href: 'htt,
-      p://localhos,
-      t:3000',
-      origin: 'htt,
-      p://localhos,
-      t:3000',
+      href: 'http://localhost:3000',
+      origin: 'http://localhost:3000',
       pathname: '/',
       search: '',
       hash: '',
@@ -148,14 +121,12 @@ export const mockWindow = (overrides: Partial<Window> = {}): Window => {
       reload: jest.fn()
     },
     navigator: {
-      userAgen,
-      t: 'test-agent',
+      userAgent: 'test-agent',
       language: 'en-US',
       platform: 'test-platform'
     },
     document: {
-      titl,
-      e: 'Test Document',
+      title: 'Test Document',
       createElement: jest.fn(() => createMockElement('div')),
       querySelector: jest.fn(),
       querySelectorAll: jest.fn(() => []),
@@ -164,88 +135,73 @@ export const mockWindow = (overrides: Partial<Window> = {}): Window => {
     },
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-    setTimeout: jest.fn((f,
-      n: Function, delay: number) => setTimeout(fn, delay)),
+    setTimeout: jest.fn((fn: Function, delay: number) => setTimeout(fn, delay)),
     clearTimeout: jest.fn(),
-    setInterval: jest.fn((f,
-      n: Function, delay: number) => setInterval(fn, delay)),
+    setInterval: jest.fn((fn: Function, delay: number) => setInterval(fn, delay)),
     clearInterval: jest.fn(),
     ...overrides
-  } as unknown as Window
-
-  return mockWin
-}
-
+  } as unknown as Window;
+  return mockWin;
+};
 /**
  * Mock console methods for testing
  */
-export const Page = () => {
-  const originalConsole = { ...console }
-  
+export const mockConsole = () => {
+  const originalConsole = { ...console };
   beforeEach(() => {
-    console.log = jest.fn()
-    console.error = jest.fn()
-    console.warn = jest.fn()
-    console.info = jest.fn()
-  })
-
+    console.log = jest.fn();
+    console.error = jest.fn();
+    console.warn = jest.fn();
+    console.info = jest.fn();
+  });
   afterEach(() => {
-    Object.assign(console, originalConsole)
-  })
-}
-
+    Object.assign(console, originalConsole);
+  });
+};
 /**
  * Create a mock event for testing
  */
 export const createMockEvent = (type: string, options: EventInit = {}): Event => {
-  return new Event(type, options)
-}
-
+  return new Event(type, options);
+};
 /**
  * Create a mock custom event for testing
  */
 export const createMockCustomEvent = (type: string, detail: unknown = null): CustomEvent => {
-  return new CustomEvent(type, { detail })
-}
-
+  return new CustomEvent(type, { detail });
+};
 /**
  * Mock IntersectionObserver for testing
  */
-export const Page = () => {
+export const mockIntersectionObserver = () => {
   const mockObserver = {
     observe: jest.fn(),
     unobserve: jest.fn(),
     disconnect: jest.fn()
-  }
-
+  };
   Object.defineProperty(window, 'IntersectionObserver', {
     writable: true,
     configurable: true,
     value: jest.fn().mockImplementation(() => mockObserver)
-  })
-
-  return mockObserver
-}
-
+  });
+  return mockObserver;
+};
 /**
  * Mock ResizeObserver for testing
  */
-export const Page = () => {
+export const mockResizeObserver = () => {
   const mockObserver = {
     observe: jest.fn(),
     unobserve: jest.fn(),
     disconnect: jest.fn()
-  }
-
+  };
   Object.defineProperty(window, 'ResizeObserver', {
     writable: true,
     configurable: true,
     value: jest.fn().mockImplementation(() => mockObserver)
-  })
-
-  return mockObserver
-}
-
+  });
+  return mockObserver;
+};
 /**
  * Mock matchMedia for testing
  */
@@ -262,18 +218,16 @@ export const mockMatchMedia = (matches: boolean = false) => {
       removeEventListener: jest.fn(),
       dispatchEvent: jest.fn()
     }))
-  })
-}
-
+  });
+};
 /**
  * Mock performance API for testing
  */
-export const Page = () => {
+export const mockPerformance = () => {
   Object.defineProperty(window, 'performance', {
     writable: true,
     value: {
-      no,
-      w: jest.fn(() => Date.now()),
+      now: jest.fn(() => Date.now()),
       mark: jest.fn(),
       measure: jest.fn(),
       getEntriesByType: jest.fn(() => []),
@@ -281,39 +235,35 @@ export const Page = () => {
       clearMarks: jest.fn(),
       clearMeasures: jest.fn()
     }
-  })
-}
-
+  });
+};
 /**
  * Mock requestAnimationFrame for testing
  */
-export const Page = () => {
+export const mockRequestAnimationFrame = () => {
   Object.defineProperty(window, 'requestAnimationFrame', {
     writable: true,
     value: jest.fn(cb => setTimeout(cb, 16))
-  })
-
+  });
   Object.defineProperty(window, 'cancelAnimationFrame', {
     writable: true,
     value: jest.fn()
-  })
-}
-
+  });
+};
 /**
  * Setup common mocks for testing
  */
-export const Page = () => {
-  mockIntersectionObserver()
-  mockResizeObserver()
-  mockMatchMedia()
-  mockPerformance()
-  mockRequestAnimationFrame()
-}
-
+export const setupMocks = () => {
+  mockIntersectionObserver();
+  mockResizeObserver();
+  mockMatchMedia();
+  mockPerformance();
+  mockRequestAnimationFrame();
+};
 /**
  * Clean up mocks after testing
  */
-export const Page = () => {
-  jest.clearAllMocks()
-  jest.restoreAllMocks()
-}
+export const cleanupMocks = () => {
+  jest.clearAllMocks();
+  jest.restoreAllMocks();
+};

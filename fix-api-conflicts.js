@@ -1,19 +1,15 @@
-import fs from 'fs'
-#!/usr/bin// Fixed regex
-  '
-  '
-  '
-  '
-  '
-  '
-  '
-  '
-  const lines = content.split('\n'
-  return resolved.join('\n'
-  // eslint-disable-next-line no-console
-    console.error('Error: '
-    const content = fs.readFileSync(filePath, 'utf8'
-// eslint-disable-next-line no-console
-    console.log('Fixing API files merge conflicts...'
-// eslint-disable-next-line no-console
-    console.log('API files merge conflict resolution completed!'
+import fs from 'fs''
+  ''
+  ''
+  ''
+  ''
+  ''
+  ''
+  ''
+  ''
+  const lines = content.split('\n''
+  return resolved.join('\n''
+    console.error('"Error": '',
+    const content = fs.readFileSync(filePath, 'utf8''
+    console.log('Fixing API files merge conflicts...'';
+    console.log('API files merge conflict resolution completed!''

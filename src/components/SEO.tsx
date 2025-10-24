@@ -1,79 +1,26 @@
-import React from 'react';
-import { Helmet } from 'lucide-react';
-'use client'
-/**
- * SEO Component
- * Provides comprehensive SEO meta tags and structured data
- */
+import React from "react";
 
-export interface SEOProps {};
-  title?: string
-  description?: string
-  keywords?: string[]
-  image?: string
-  url?: string
-  type?: 'website' | 'article' | 'product' | 'profile'
-  author?: string
-  publishDate?: string
-  modifiedDate?: string
-  canonical?: string
-  noIndex?: boolean
-  structuredData?: Record<string, unknown>
-
-  description: 'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve300% ROI with cutting-edge AI technology.'
-  keywords: []
-    'AI'
-    'artificial intelligence'
-    'enterprise solutions'
-    'digital transformation'
-    'IT services']
-  image: 'https:// ziontechgroup.com/og-image.jpg'
-  url: 'https:// ziontechgroup.com'
-  type: 'website' as const
-  local,
-      e: 'en_US'
-  twitterCar,
-      d: 'summary_large_image' as const
+interface SEOProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
 }
 
-  alternateLocales= []}) => {constseo= {
-  title: title ?`${title} | Zion TechGroup` : default SEO.title,
-      description: description || default SEO.description
-    keywords: keywords || default SEO.keywords
-    imag,
-      e: image || default SEO.image
-    ur,
-      l: url || default SEO.url
-    type
-    twitterCard
-    locale
-  }
-  // Generate structured data
-  const Page = () => {};
-    if (structuredData) {};
-
-  return structuredData
-
-      image: seo.image
-{    }
-    if (author) {}
-      baseStructuredData.author = {}
-        '@type': 'Person'
-        name: author
-{      }
-{    }
-    if (publishDate) {}
-      baseStructuredData.datePublished = publishDate
-{    }
-    if (modifiedDate) {}
-      baseStructuredData.dateModified = modifiedDate
-{    };
-
-  return baseStructuredData
-{  };
-
+const SEO: React.FC<SEOProps> = ({
+  title = "Default Title",
+  description = "Default Description",
+  keywords = "default, keywords"
+}) => {
   return (
+    <>
+      <title>{title}</title>
+      <meta name="description" content="{description}" />
+      <meta name="keywords" content="{keywords}" />
+    </>
+  );
+};
 
+<<<<<<< HEAD
       {/* Canonical URL */}
       {canonical && <link rel=&quot;canonical&quot; href = {canonical} />}
       {/* No Index */}
@@ -173,3 +120,6 @@ export interface SEOProps {};
 {}
 export default Page;
 }}}}}
+=======
+export default SEO;
+>>>>>>> origin/main
