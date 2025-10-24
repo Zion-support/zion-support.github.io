@@ -97,3 +97,9 @@ global.gtag = jest.fn();
 
 // Mock window.dataLayer
 global.dataLayer = [];
+
+// Mock window.scrollTo
+Object.defineProperty(window, 'scrollTo', {
+  writable: true,
+  value: jest.fn(),
+});

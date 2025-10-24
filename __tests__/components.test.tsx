@@ -14,8 +14,9 @@ const TestComponent = () => {
 
 const MockComponent = () => <div data-testid="mock-component">Mock Component</div>;
 
+// Basic test structure
 describe('Components', () => {
-  test('should render without errors', () => {
+  it('renders without crashing', () => {
     expect(true).toBe(true);
   });
   
