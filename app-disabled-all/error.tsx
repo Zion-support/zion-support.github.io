@@ -1,14 +1,10 @@
 'use client';;
 import React from 'react';
-<<<<<<< HEAD
-=======
 <<<<<<<< HEAD:app-disabled-all/error.tsx
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings} from 'lucide-react';
-========
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-e66e
 
 const ErrorPage: React.FC = () => {
   return (

@@ -93,13 +93,9 @@ const AIDataAnalyticsPro = () => {
             </div>
           </div>
         </ResponsiveContainer>
-<<<<<<< HEAD
-export default AIDataAnalyticsPro;
-=======
       </section>
     </div>
   );
 };
 
 export default AIDataAnalyticsProPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-fe66

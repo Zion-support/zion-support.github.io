@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-// Mock analytics
-jest.mock('./app/utils/analytics.ts', () => ({
-=======
 
 // Polyfills for Node.js environment
 global.TextEncoder = TextEncoder;
@@ -19,7 +15,6 @@ jest.mock('./src/utils/logger.ts', () => ({
 }));
 
 jest.mock('./src/utils/analytics.ts', () => ({
->>>>>>> cursor/fix-errors-and-merge-to-main-e66e
   trackEvent: jest.fn(),
   trackPageView: jest.fn(),
   initAnalytics: jest.fn(),
@@ -30,12 +25,6 @@ jest.mock('./src/utils/errorTracking.ts', () => ({
   initErrorReporting: jest.fn(),
 }));
 
-<<<<<<< HEAD
-jest.mock('./app/utils/performance.ts', () => ({
-  measurePerformance: jest.fn(),
-  getPerformanceMetrics: jest.fn(),
-  initPerformanceMonitoring: jest.fn(),
-=======
 jest.mock('./src/hooks/usePerformance.ts', () => ({
   usePerformance: jest.fn(() => ({
     metrics: {},
@@ -48,7 +37,6 @@ jest.mock('./src/hooks/usePerformanceMonitoring.ts', () => ({
     metrics: {},
     report: {},
   })),
->>>>>>> cursor/fix-errors-and-merge-to-main-e66e
 }));
 
 jest.mock('./app/utils/seoData.ts', () => ({

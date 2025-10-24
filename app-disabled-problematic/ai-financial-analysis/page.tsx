@@ -100,13 +100,9 @@ const AIFinancialAnalysis = () => {
             </div>
           </div>
         </ResponsiveContainer>
-<<<<<<< HEAD
-export default AIFinancialAnalysis;
-=======
       </section>
     </div>
   );
 };
 
 export default AIFinancialAnalysisPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-fe66

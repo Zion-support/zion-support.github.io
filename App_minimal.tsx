@@ -6,13 +6,6 @@ const App_minimalPage: React.FC = () => {
   return (
     <HelmetProvider>
       <Router>
-<<<<<<< HEAD
-        <div className="App">
-          <Navigation />
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-          </Routes>
-=======
         <div className="min-h-screen bg-white">
           <Navigation />
           <main>
@@ -20,7 +13,6 @@ const App_minimalPage: React.FC = () => {
               <Route path="/" element={<HomePage />} />
             </Routes>
           </main>
->>>>>>> cursor/fix-errors-and-merge-to-main-fe66
           <Footer />
         </div>
       </div>

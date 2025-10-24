@@ -13,14 +13,6 @@ export default {
     '^@/content/(.*)$': '<rootDir>/content/$1'
   },
   transform: {
-<<<<<<< HEAD
-    '^.+\\.(ts|tsx)$': ['ts-jest', {
-      tsconfig: 'tsconfig.json',
-      useESM: true
-    }],
-    '^.+\\.(js|jsx)$': 'babel-jest'
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e66e
   },
   testMatch: [
     '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',

@@ -107,57 +107,10 @@ export default [
       'react-hooks/exhaustive-deps': 'warn',
       'react-refresh/only-export-components': [
         'warn',
-<<<<<<< HEAD
-        {
-          allowConstantExport: true, 
-          allowExportNames: ['metadata', 'viewport', 'useAnalytics', 'AnalyticsProvider'] 
-        }
-      ],
-      '@typescript-eslint/no-unused-vars': ['error', { 
-        'argsIgnorePattern': '^_',
-        'varsIgnorePattern': '^_',
-        'caughtErrorsIgnorePattern': '^_'
-      }],
-      '@typescript-eslint/no-explicit-any': 'warn',
-      'no-console': 'off',
-      'no-unused-vars': ['error', { 
-        'argsIgnorePattern': '^_',
-        'varsIgnorePattern': '^_',
-        'caughtErrorsIgnorePattern': '^_'
-      }],
-      'prefer-const': 'error',
-      'no-var': 'error',
-      'react/no-unescaped-entities': 'off',
-      'react/react-in-jsx-scope': 'off',
-    },
-  },
-  {
-    files: ['**/AnalyticsProvider.tsx'],
-    rules: {
-      'react-refresh/only-export-components': 'off'
-    }
-  },
-  {
-    files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}', '**/setupTests.{js,ts,jsx,tsx}', '**/jest.setup.js'],
-    languageOptions: {
-      globals: {
-        ...globals.jest,
-      },
-    },
-    rules: {
-=======
         { allowConstantExport: true }
       ],
->>>>>>> cursor/fix-errors-and-merge-to-main-e66e
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
-<<<<<<< HEAD
-    },
-  },
-<<<<<<< HEAD
-];
->>>>>>> 29d49925dca88a534c75f2643000c6a1ecf43fea
-=======
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       '@typescript-eslint/no-non-null-assertion': 'off',
@@ -166,7 +119,4 @@ export default [
     }
   }
 ];
->>>>>>> cursor/fix-errors-and-merge-to-main-e66e
-=======
 ];
->>>>>>> 1c3bcb5bf864

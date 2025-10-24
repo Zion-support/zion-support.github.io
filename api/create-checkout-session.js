@@ -1,7 +1,5 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
-<<<<<<< HEAD
-=======
 const PROD_DOMAIN = 'https://ziontechgroup.com';
 
 async function handler(req, res) {
@@ -12,7 +10,6 @@ async function handler(req, res) {
     return;
   }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-fe66
   const { productId, userId } = req.body || {};
 
   if (!productId) {
@@ -61,11 +58,7 @@ async function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       error: 'Failed to create checkout session',
-<<<<<<< HEAD
-      details: process.env.NODE_ENV === 'development' ? _error.message : undefined
-=======
       details: process.env.NODE_ENV === 'development' ? error.message : undefined
->>>>>>> cursor/fix-errors-and-merge-to-main-fe66
     }));
   }
 }
