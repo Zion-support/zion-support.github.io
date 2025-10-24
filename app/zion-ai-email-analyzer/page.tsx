@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Mail, Shield, Heart, MessageSquare, Star, CheckCircle, Sparkles, Smartphone, Globe, Settings, Headphones, Play, Share, Zap, Target, Users, BarChart3, TrendingUp, FileText } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0326
 import { Helmet } from 'react-helmet-async';
 
 export default function ZionAiEmailAnalyzerPage() {

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import { Brain, Code, Zap, Shield, CheckCircle, ArrowRight, Star, Globe } from "lucide-react";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0326
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
 import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";

@@ -1,5 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function Page() {
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Brain, Shield, Globe, ArrowRight, CheckCircle, Star, Users, Award, Clock, Smartphone, Mail, FileText, BarChart3, Target, Video, Grid, Cloud, Calendar } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0326
 
   const benefits = [
     "Benefit 1",

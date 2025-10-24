@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -12,6 +13,17 @@ import ErrorBoundary from './components/ErrorBoundary'
 const inter = Inter({ subsets: ['latin'] });
 =======
 import MobileNavigation from "./components/MobileNavigation";
+=======
+import React, { useState } from "react";
+import { BrowserRouter } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+import AnalyticsProvider from "./components/AnalyticsProvider";
+import EnhancedPerformanceMonitor from "./components/EnhancedPerformanceMonitor";
+// import LoadingSpinner from "./components/LoadingSpinner"; // Removed unused import
+import { ErrorBoundary } from "react-error-boundary";
+import ErrorFallback from "./components/ErrorFallback";
+import { Helmet } from "react-helmet-async";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0326
 import ImprovedNavigation from "./components/ImprovedNavigation";
 import ImprovedFooter from "./components/ImprovedFooter";
 import ImprovedSidebar from "./components/ImprovedSidebar";

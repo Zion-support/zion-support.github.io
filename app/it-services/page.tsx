@@ -1,6 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from "react";
+<<<<<<< HEAD
+=======
+import { ArrowRight, Star, Shield, Cloud, Database, Code, Network, Smartphone, Monitor, Headphones, Clock, Settings, Zap, BarChart3, Award, Target, HardDrive, Minimize, Star as StarIcon, Phone } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0326
 import SEOOptimizer from "../components/SEOOptimizer";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';

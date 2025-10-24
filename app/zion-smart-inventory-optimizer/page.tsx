@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Package, BarChart3, TrendingUp, Target, Star, CheckCircle, Sparkles, Mail, Smartphone, Globe, Shield, Settings, Headphones, RefreshCw, Bell, DollarSign, AlertCircle, Play, Truck, Warehouse, ShoppingCart, Store, Calendar, Minimize } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0326
 import { Helmet } from 'react-helmet-async';
 
 export default function ZionSmartInventoryOptimizerPage() {

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
 import { Users } from 'lucide-react';
 import { Star } from 'lucide-react';
@@ -12,6 +13,9 @@ import { MessageSquare } from 'lucide-react';
 import { Play } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { ArrowRight, Target, Brain, BarChart3, CheckCircle, Star, Zap, Mail, MessageSquare, Users, Globe, Play, Address } from 'lucide-react';
+=======
+import { ArrowRight, Target, Brain, BarChart3, CheckCircle, Star, Zap, Mail, MessageSquare, Users, TrendingUp, Globe, Play, Star as StarIcon, Zap as ZapIcon, Star as StarIcon2, TrendingUp as Growth, CheckCircle as Success, MapPin as Address, Phone } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0326
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
