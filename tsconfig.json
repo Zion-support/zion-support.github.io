@@ -65,7 +65,6 @@
     "**/*.backup.*",
     "**/*.bak",
     "**/backup/**",
-<<<<<<< HEAD
     "**/AdvancedPerformanceOptimizer.tsx",
     "**/AdvancedSEOOptimizer.tsx",
     "**/Analytics.tsx",
@@ -88,9 +87,7 @@
     "**/SecurityEnhancer.tsx",
     "**/SEOOptimizer.tsx",
     "**/ServiceWorker.tsx",
-    "**/Sidebar.tsx"
-=======
-    "**/ai-pages-disabled/**",
+    "**/Sidebar.tsx",
     "**/clean-build/**",
     "**/apps/**",
     "**/components/api/**",
@@ -100,7 +97,6 @@
     "**/lib.disabled/**",
     "**/lib/**",
     "**/netlify/**",
-    "**/pages.disabled/**",
     "**/pages_backup/**",
     "**/page_template.tsx",
     "**/pages_minimal/**",
@@ -118,14 +114,10 @@
     "**/zion-os/**",
     "utils/fsdb.ts",
     "**/__tests__/**",
-    "**/ai-customer-support-disabled/**",
-    "**/ai-workflow-automation-disabled/**",
-    "**/api-disabled/**",
     "**/*-backup.*",
     "**/*-broken*",
     "**/*-fixed.*",
     "**/corrupted-pages/**",
-    "**/AdvancedAccessibilityEnhancer.tsx",
     "**/ecommerce-analytics-pro/**",
     "**/edge-computing/**",
     "**/*-broken2.*",
@@ -138,10 +130,7 @@
     "api-backup",
     "app-disabled",
     "app-disabled-all",
-    "app/components",
-    "app/utils",
     "apps",
     "blog"
->>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
   ]
 }
