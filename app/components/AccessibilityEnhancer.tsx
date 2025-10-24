@@ -11,10 +11,10 @@ interface AccessibilityEnhancerProps {
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
   children,
-  enableKeyboardNavigation = true,
-  enableScreenReaderSupport = true,
-  enableHighContrast = false,
-  enableFocusManagement = true
+  enableKeyboardNavigation: _enableKeyboardNavigation = true,
+  enableScreenReaderSupport: _enableScreenReaderSupport = true,
+  enableHighContrast: _enableHighContrast = false,
+  enableFocusManagement: _enableFocusManagement = true
 }) => {
   return (
     <div className="accessibility-enhanced">

@@ -11,12 +11,12 @@ interface PerformanceMetrics {
 }
 
 interface PerformanceMonitorProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+  onMetricsUpdate?: (_metrics: PerformanceMetrics) => void;
   enableRealTimeMonitoring?: boolean;
 }
 
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  onMetricsUpdate,
+  onMetricsUpdate: _onMetricsUpdate,
   enableRealTimeMonitoring = true,
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -68,8 +68,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     try {
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          if (entry.processingStart && entry.startTime) {
+        entries.forEach((entry: PerformanceEntry) => {
+          if ('processingStart' in entry && 'startTime' in entry) {
             setMetrics(prev => ({ 
               ...prev, 
               fid: entry.processingStart - entry.startTime 
@@ -88,8 +88,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          if (!entry.hadRecentInput) {
+        entries.forEach((entry: PerformanceEntry) => {
+          if (!('hadRecentInput' in entry) || !entry.hadRecentInput) {
             clsValue += entry.value;
             setMetrics(prev => ({ ...prev, cls: clsValue }));
           }
@@ -117,7 +117,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     // Measure Memory Usage
     try {
       if ('memory' in performance) {
-        const memoryInfo = (performance as any).memory;
+        const memoryInfo = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
         setMetrics(prev => ({ 
           ...prev, 
           memory: memoryInfo.usedJSHeapSize / 1024 / 1024 // Convert to MB
@@ -149,10 +149,10 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   }, [measureWebVitals, enableRealTimeMonitoring]);
 
   useEffect(() => {
-    if (onMetricsUpdate) {
-      onMetricsUpdate(metrics);
+    if (_onMetricsUpdate) {
+      _onMetricsUpdate(metrics);
     }
-  }, [metrics, onMetricsUpdate]);
+  }, [metrics, _onMetricsUpdate]);
 
   return null; // This component doesn't render anything visible
 };

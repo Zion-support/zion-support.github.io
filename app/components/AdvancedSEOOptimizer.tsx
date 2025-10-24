@@ -23,8 +23,8 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
   structuredData,
   children
 }) => {
-  const [seoScore, setSeoScore] = useState(0);
-  const [recommendations, setRecommendations] = useState<string[]>([]);
+  const [_seoScore, setSeoScore] = useState(0);
+  const [_recommendations, setRecommendations] = useState<string[]>([]);
 
   const analyzeSEO = useCallback(() => {
     if (typeof window === 'undefined') return;
