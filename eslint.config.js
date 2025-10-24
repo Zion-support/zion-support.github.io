@@ -9,7 +9,6 @@ import react from 'eslint-plugin-react';
 export default [
   {ignores: ['dist', 'node_modules', '.next', 'out']},
   {
-
     languageOptions: {
       ecmaVersion: 2020,
       globals: {
@@ -20,18 +19,24 @@ export default [
       parserOptions: {
         ecmaFeatures: {
           jsx: true,
+        },
+      },
+    },
     plugins: {
       '@typescript-eslint': tseslint,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
       'react': react,
+    },
     rules: {
       ...js.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
+        {
           allowConstantExport: true, 
           allowExportNames: ['metadata', 'useAnalytics', 'AnalyticsProvider'] 
+        }
       ],
       '@typescript-eslint/no-unused-vars': ['error', { 
         'argsIgnorePattern': '^_',
@@ -41,13 +46,27 @@ export default [
       '@typescript-eslint/no-explicit-any': 'warn',
       'no-console': 'off',
       'no-unused-vars': ['error', { 
+        'argsIgnorePattern': '^_',
+        'varsIgnorePattern': '^_',
+        'caughtErrorsIgnorePattern': '^_'
+      }],
       'prefer-const': 'error',
       'no-var': 'error',
       'react/no-unescaped-entities': 'off',
       'react/react-in-jsx-scope': 'off',
+    },
+  },
+  {
     files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}', '**/setupTests.{js,ts,jsx,tsx}', '**/jest.setup.js'],
+    languageOptions: {
+      globals: {
         ...globals.jest,
+      },
+    },
+    rules: {
       '@typescript-eslint/no-unused-vars': 'off',
       'no-unused-vars': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
+    },
+  },
 ];
