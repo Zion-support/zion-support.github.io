@@ -1,89 +1,115 @@
 import React from 'react';
 import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react';
 import { MapPin } from 'lucide-react';
+=======
+>>>>>>> 936c9169b8529ba98f1996ac9beac1bb365b75be
 import React from 'react';
 import Head from "next/head";
 import { Phone, Target, Mail, CheckCircle, Helmet } from 'lucide-react';
 
-constAnalyticsToolsPage: React.FC = () =>{constanalyticsTools= [
+
+constAnalyticsToolsPage: React.FC = () => {constanalyticsTool,
+      s = [
     {
       title: 'AI Business Intelligence'
       price: '$39 9/month'
-      description: 'Advanced business intelligence with AI-powered insights and predictive analytics.'
-      features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Data visualization', 'ROI tracking', 'Performance forecasting']
+      descriptio,
+      n: 'Advanced business intelligence with AI-powered insights and predictive analytics.'
+      feature,
+      s: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Data visualization', 'ROI tracking', 'Performance forecasting']
       icon: '📊'
-      category: 'Business Intelligence'
+      categor,
+      y: 'Business Intelligence'
    }
     {title: 'AI Web Analytics'
       price: '$29 9/month'
-      description: 'Comprehensive web analytics with AI-powered insights and user behavior analysis.'
-      features: ['User behavior tracking', 'Conversion analysis', 'Traffic insights', 'Performance metrics', 'Custom events', 'Real-time monitoring']
+      descriptio,
+      n: 'Comprehensive web analytics with AI-powered insights and user behavior analysis.'
+      feature,
+      s: ['User behavior tracking', 'Conversion analysis', 'Traffic insights', 'Performance metrics', 'Custom events', 'Real-time monitoring']
       icon: '🌐'
-      category: 'Web Analytics'
+      categor,
+      y: 'Web Analytics'
    }
     {title: 'AI Marketing Analytics'
       price: '$24 9/month'
-      description: 'Marketing performance analytics with AI-powered optimization recommendations.'
-      features: ['Campaign tracking', 'ROI analysis', 'Attribution modeling', 'Customer journey', 'Channel performance', 'Predictive insights']
+      descriptio,
+      n: 'Marketing performance analytics with AI-powered optimization recommendations.'
+      feature,
+      s: ['Campaign tracking', 'ROI analysis', 'Attribution modeling', 'Customer journey', 'Channel performance', 'Predictive insights']
       icon: '📈'
-      category: 'Marketing Analytics'
+      categor,
+      y: 'Marketing Analytics'
    }
     {title: 'AI Sales Analytics'
       price: '$19 9/month'
-      description: 'Sales performance analytics with AI-powered forecasting and optimization.'
-      features: ['Sales forecasting', 'Pipeline analysis', 'Performance tracking', 'Lead scoring', 'Conversion optimization', 'Revenue insights']
+      descriptio,
+      n: 'Sales performance analytics with AI-powered forecasting and optimization.'
+      feature,
+      s: ['Sales forecasting', 'Pipeline analysis', 'Performance tracking', 'Lead scoring', 'Conversion optimization', 'Revenue insights']
       icon: '💰'
-      category: 'Sales Analytics'
+      categor,
+      y: 'Sales Analytics'
    }
     {title: 'AI Customer Analytics'
       price: '$17 9/month'
-      description: 'Customer behavior analytics with AI-powered insights and personalization.'
-      features: ['Customer segmentation', 'Behavior analysis', 'Churn prediction', 'Lifetime value', 'Engagement tracking', 'Personalization insights']
+      descriptio,
+      n: 'Customer behavior analytics with AI-powered insights and personalization.'
+      feature,
+      s: ['Customer segmentation', 'Behavior analysis', 'Churn prediction', 'Lifetime value', 'Engagement tracking', 'Personalization insights']
       icon: '👥'
-      category: 'Customer Analytics'
+      categor,
+      y: 'Customer Analytics'
    }
     {title: 'AI Financial Analytics'
       price: '$34 9/month'
-      description: 'Financial performance analytics with AI-powered insights and risk assessment.'
-      features: ['Financial reporting', 'Risk analysis', 'Budget tracking', 'Cost optimization', 'Revenue analysis', 'Predictive modeling']
+      descriptio,
+      n: 'Financial performance analytics with AI-powered insights and risk assessment.'
+      feature,
+      s: ['Financial reporting', 'Risk analysis', 'Budget tracking', 'Cost optimization', 'Revenue analysis', 'Predictive modeling']
       icon: '💳'
-      category: 'Financial Analytics'
+      categor,
+      y: 'Financial Analytics'
     }
   ]
-  const benefits = [;
-    {
-      icon: TrendingUp
-      title: 'Data-Driven Decisions'
-      description: 'Make informed decisions with comprehensive analytics and AI insights'
-   }
-    {icon: Target
-      title: 'Predictive Insights'
-      description: 'Anticipate trends and opportunities with AI-powered predictions'
-   }
-    {icon: BarChart
-      title: 'Real-Time Monitoring'
-      description: 'Track performance in real-time with live dashboards and alerts'
-   }
-    {icon: Brain
-      title: 'AI-Powered'
-      description: 'Leverage advanced AI algorithms for deeper insights and automation'
-    }
+  const benefits = [
+    {,,,
+    'icon: TrendingUp,',,,
+    'title: 'Data-Driven Decisions'',,,
+    'description: 'Make informed decisions with comprehensive analytics and AI insights'',,,
+    '}',,,
+    {,,,
+    'icon: Target,',,,
+    'title: 'Predictive Insights'',,,
+    'description: 'Anticipate trends and opportunities with AI-powered predictions'',,,
+    '}',,,
+    {,,,
+    'icon: BarChart,',,,
+    'title: 'Real-Time Monitoring'',,,
+    'description: 'Track performance in real-time with live dashboards and alerts'',,,
+    '}',,,
+    {,,,
+    'icon: Brain,',,,
+    'title: 'AI-Powered'',,,
+    'description: 'Leverage advanced AI algorithms for deeper insights and automation'',,,
+    '}'
   ]
-  return ()
-    <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+  return (</div>
       <Helmet>
         <Head>
-        <title>Analytics Tools - Zion Tech Group</title>
+        <title >Analytics Tools - Zion Tech Group</title>
         <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
       </Head>
         <meta name="keywords" content="analytics tools, business intelligence, web analytics, marketing analytics, sales analytics, ai analytics" />
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
       </Head>
       </Helmet>
-      {/* Hero Section */}
-      <section className="pt-24pb-16 p x-4"></section>
+      {
+    /* Hero Section  */
+    return (</section>
         <div className="max-w-7x lmx-auto text-center"></div>
-          <h1 className="tex t-4xlsm: text-5xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="tex t-4xlsm: text-5xl m,
+      d:text-6xl font-bold text-white mb-6">
         </div>
             AI Analytics Tools
           </h1>
@@ -91,8 +117,9 @@ constAnalyticsToolsPage: React.FC = () =>{constanalyticsTools= [
         </div>
             Transform your data into actionable insights with AI-powered analytics tools for business intelligence, marketing, and performance tracking.
           </p>
-          {/* Stats */}
-          <div className="gri dgrid-cols-2 md: grid-cols-4 gap-6 mb-12"></div>
+          {
+    /* Stats  */
+    return (</div>
             <div className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6"></div>
               <div className="tex t-3xlfont-bold text-cyan-400 mb-2">6</div>
               <div className="tex t-gray-300">Analytics Tools</div>
@@ -110,9 +137,12 @@ constAnalyticsToolsPage: React.FC = () =>{constanalyticsTools= [
               <div className="tex t-gray-300">Monitoring</div>
             </div>
           </div>
-          {/* Contact Info */}
-          <div className="bg-gr adient-to-rfrom-purple-600 to-blue-600 rounded-lg p-6 mb-12"></div>
-            <div className="fle xflex-col md: flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8"></div>
+          {
+    /* Contact Info  */
+    return (</div>
+            <div className="fle xflex-col md: flex-row items-center justify-center space-y-4 m,
+      d:space-y-0 m,
+      d:space-x-8"></div>
               <div className="fle xitems-center space-x-2"></div>
                 <Phone className="w-5h-5" />
                 <span className="tex t-whitefont-medium">+1 302 464 0950</span>
@@ -129,23 +159,33 @@ constAnalyticsToolsPage: React.FC = () =>{constanalyticsTools= [
           </div>
         </div>
       </section>
-      {/* Analytics Tools Grid */}
-      <section className="py-16px-4"></section>
+      {
+    /* Analytics Tools Grid  */
+    return (</section>
         <div className="max-w-7x lmx-auto"></div>
           <h2 className="tex t-3xlmd: text-4xl font-bold text-white text-center mb-12 neon-text">
         </div>
             Our Analytics Tools
           </h2>
-          <div className="gri dgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+          <div className="gri dgrid-cols-1 m,
+      d:grid-cols-2 l,
+      g:grid-cols-3 gap-8"></div>
             {analyticsTools.map((tool, index) => ()
               <div key={index} className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300"></div>
                 <div className="tex t-centermb-6"></div>
-                  <div className="tex t-5xlmb-4">{tool.icon}</div>
-                  <h3 className="tex t-xlfont-bold text-white mb-2">{tool.title}</h3>
-                  <p className="tex t-gray-300text-sm mb-4">{tool.description}</p>
+                  <div className="tex t-5xlmb-4">{tool.icon};
+
+  return (
+                  <h3 className="tex t-xlfont-bold text-white mb-2">{tool.title};
+
+  return (
+                  <p className="tex t-gray-300text-sm mb-4">{tool.description};
+
+  return (
                   <div className="bg-pu rple-100text-purple-800 text-xs px-2 py-1 rounded-full inline-block mb-4"></div>
-                    {tool.category}
-                  </div>
+                    {tool.category};
+
+  return (
                 </div>
                 <div className="mb-6"></div>
                   <h4 className="fon t-semiboldtext-white mb-3">Features: </h4>
@@ -155,45 +195,60 @@ constAnalyticsToolsPage: React.FC = () =>{constanalyticsTools= [
                       <li key={featureIndex} className="fle xitems-center text-sm text-gray-300">
         </div>
                         <CheckCircle className="w-4h-4te x t-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                        {feature};
+
+  return (
+                    ))};
+
+  return (
                 </div>
                 <div className="tex t-center"></div>
-                  <div className="tex t-2xlfont-bold text-cyan-400 mb-4">{tool.price}</div>
+                  <div className="tex t-2xlfont-bold text-cyan-400 mb-4">{tool.price};
+
+  return (
                   <a href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}>
-                    className="w-ful lbg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-cyan-600 hover:to-blue-700 transition-all inline-block"
+                    className="w-ful lbg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-cyan-600 hove,
+      r:to-blue-700 transition-all inline-block"
                   >
         </div>
                     Get Started
                   </a>
                 </div>
               </div>
-            ))}
-          </div>
+            ))};
+
+  return (
         </div>
       </section>
-      {/* Benefits Section */}
-      <section className="py-16px-4"></section>
+      {
+    /* Benefits Section  */
+    return (</section>
         <div className="max-w-7x lmx-auto"></div>
           <h2 className="tex t-3xlmd: text-4xl font-bold text-white text-center mb-12 neon-text">
         </div>
             Why Choose Our Analytics Tools?
           </h2>
-          <div className="gri dgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+          <div className="gri dgrid-cols-1 m,
+      d:grid-cols-2 l,
+      g:grid-cols-4 gap-8"></div>
             {benefits.map((benefit, index) => ()
               <div key={index} className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300"></div>
                 <benefit.icon className="w-12h-12te x t-cyan-400 mx-auto mb-4" />
-                <h3 className="tex t-xlfont-bold text-white mb-3">{benefit.title}</h3>
-                <p className="tex t-gray-300text-sm">{benefit.description}</p>
+                <h3 className="tex t-xlfont-bold text-white mb-3">{benefit.title};
+
+  return (
+                <p className="tex t-gray-300text-sm">{benefit.description};
+
+  return (
               </div>
-            ))}
-          </div>
+            ))};
+
+  return (
         </div>
       </section>
-      {/* CTA Section */}
-      <section className="py-16px-4 b g-gradient-to-r from-purple-600 to-blue-600"></section>
+      {
+    /* CTA Section  */
+    return (</section>
         <div className="max-w-4x lmx-auto text-center"></div>
           <h2 className="tex t-3xlmd: text-4xl font-bold text-white mb-6">
         </div>
@@ -211,7 +266,9 @@ constAnalyticsToolsPage: React.FC = () =>{constanalyticsTools= [
               Call (302) 464-0950
             </a>
             <a href="mailto:kleber@ziontechgroup.com">
-              className="bg-tr ansparentborder-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
+              className="bg-tr ansparentborder-2 border-white text-white px-8 py-3 rounded-lg font-medium hove,
+      r:bg-white hove,
+      r:text-purple-600 transition-colors"
             >
         </div>
               Email Us
@@ -222,4 +279,5 @@ constAnalyticsToolsPage: React.FC = () =>{constanalyticsTools= [
     </div>
   )
 }
-export default AnalyticsToolsPage;
+export default Page;
+}}}}}}

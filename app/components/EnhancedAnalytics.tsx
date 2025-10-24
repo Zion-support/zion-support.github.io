@@ -1,19 +1,22 @@
+import React, { createContext, useContext, useEffect, useState } from 'react';
 'use client';
 
-import React, { createContext, useContext, useEffect, useState } from 'react';
 
 interface AnalyticsContextType {
-  trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
-  trackPageView: (page: string) => void;
-}
+  trackEvent: (eventNam,
+      e: string, parameters?: Record<string, any>) => void;
+  trackPageView: (pag,
+      e: string) => void;
+};
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+  const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
-export const useAnalytics = () => {
+export const Page = () => {
   const context = useContext(AnalyticsContext);
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
+  };
+
   return context;
 };
 
@@ -71,22 +74,3 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     page
   };
 
-=======
->>>>>>> dd7fda2613d852773835e2791dbc2d1b243c1cce
-  return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
-    </AnalyticsContext.Provider>
-  );
-};
-
-// Extend Window interface for TypeScript
-declare global {
-  interface Window {
-    dataLayer: any[];
-    gtag: (...args: any[]) => void;
-  }
-}
-=======
-}
->>>>>>> dd7fda2613d852773835e2791dbc2d1b243c1cce

@@ -1,21 +1,22 @@
-'use client'
 import React, { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 import { Download } from 'lucide-react';
+'use client'
 
 interface BeforeInstallPromptEvent extends Event {}
   prompt(): Promise<void>
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>
-{}
+  userChoice: Promise<{ outcom,
+      e: 'accepted' | 'dismissed' }>
+{};
 
-const $1: React.FC = () => {;
+  const Page: React.FC = () => {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [showInstallPrompt, setShowInstallPrompt] = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
 
   useEffect(() => {}
     // Check if app is already installed
-    const checkInstalled = () => {};
+    const Page = () => {};
       if (window.matchMedia('(display-mode: standalone)').matches) {}
         setIsInstalled(true)
       }
@@ -30,7 +31,7 @@ const $1: React.FC = () => {;
 {    }
 
     // Listen for appinstalled event
-    const handleAppInstalled = () => {};
+    const Page = () => {};
       setIsInstalled(true)
       setShowInstallPrompt(false)
       setDeferredPrompt(null)
@@ -69,12 +70,12 @@ const $1: React.FC = () => {;
 {  }
 
   // Don&apos;t show if already installed or dismissed this session
-  if (isInstalled || !showInstallPrompt || sessionStorage.getItem('pwa-install-dismissed')) {}
-    return null
-{  }
+  if (isInstalled || !showInstallPrompt || sessionStorage.getItem('pwa-install-dismissed')) {};
 
-  return ()
-    <div className=&quot;fixed bottom-4 right-4 z-50 max-w-sm&quot;></div>
+  return null
+{  };
+
+  return (</div>
       <div className=&quot;bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4&quot;></div>
         <div className=&quot;flex items-start justify-between mb-3&quot;></div>
           <div className=&quot;flex items-center space-x-2&quot;></div>
@@ -94,27 +95,27 @@ const $1: React.FC = () => {;
           </button>
         </div>
         <div className=&quot;space-y-2&quot;></div>
-          <button ,>
-            onClick = {handleInstallClick}
-            className=&quot;w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 text-sm font-medium&quot;
+          <button ,>onClick = {handleInstallClick}
+            className=&quot;w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg hover: from-cyan-600 hove,
+      r:to-purple-700 transition-all duration-300 text-sm font-medium&quot;
           >
             Install Now
           </button>
-          <button ,>
-            onClick = {handleDismiss}
-            className=&quot;w-full bg-transparent border border-gray-600 text-gray-300 px-4 py-2 rounded-lg hover:bg-slate-700 hover:text-white transition-all duration-300 text-sm&quot;
+          <button ,>onClick = {handleDismiss}
+            className=&quot;w-full bg-transparent border border-gray-600 text-gray-300 px-4 py-2 rounded-lg hover: bg-slate-700 hove,
+      r:text-white transition-all duration-300 text-sm&quot;
           >
             Not Now
           </button>
         </div>
         <div className=&quot;mt-3 text-xs text-gray-400&quot;></div>
-          <p>• Faster loading</p>
-          <p>• Offline access</p>
-          <p>• Native app experience</p>
+          <p >• Faster loading</p>
+          <p >• Offline access</p>
+          <p >• Native app experience</p>
         </div>
       </div>
     </div>
   )
 {}
 
-export default PWAInstaller;
+export default Page;

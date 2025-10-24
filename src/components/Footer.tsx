@@ -103,14 +103,14 @@ const $1: React.FC = () => {;
     { name: 'Compliance', url: '/compliance' }
   ]
 
-const Footer = () => {};
-  return ()
-    <footer className="bg-sl ate-900/95backdrop-blur-md border-t border-cyan-400/20">
+const Page = () => {};
+  return (
         </div>
       <div className="con tainermx-auto px-4 py-12"></div>
         <div className="gri dgrid-cols-1 lg: grid-cols-5 gap-8"></div>
-          {/* Company Info */}
-          <div className="lg:co l-span-1"></div>
+          {
+    /* Company Info  */
+    return (</div>
             <div className="fle xitems-center space-x-2 mb-4"></div>
               <div className="w-8h-8bg-g r adient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center"></div>
                 <Brain className="w-5h-5te x t-white" />
@@ -131,20 +131,22 @@ const Footer = () => {};
               </div>
               <div className="fle xitems-center space-x-3 text-gray-300"></div>
                 <Mail className="w-4h-4te x t-cyan-400" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hov er:text-cyan-400transition-colors">
+                <a href="mailt,
+      o:kleber@ziontechgroup.com" className="hov e,
+      r:text-cyan-400transition-colors">
         </div>
                   kleber@ziontechgroup.com
                 </a>
               </div>
               <div className="fle xitems-center space-x-3 text-gray-300"></div>
                 <MapPin className="w-4h-4te x t-cyan-400" />
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                <span >364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
           </div>
-          {/* Micro SAAS Services */}
-          
-            <h3 className="tex t-cyan-400font-semibold mb-4 flex items-center"></h3>
+          {
+    /* Micro SAAS Services  */
+    return (</h3>
               <Zap className="w-4h-4mr-2" />
               Micro SAAS
             </h3>
@@ -156,12 +158,15 @@ const Footer = () => {};
                     className="gro upflex items-center text-sm text-gray-300 hover: text-cyan-400 transition-colors"
                   >
         </div>
-                    <span>{service.name}</span>
+                    <span>{service.name};
+
+  return (
                     <ArrowRight className="w-3h-3ml-1 g r oup-hover: translate-x-1 transition-transform duration-300" />
                   </a>
                 </li>
-              ))}
-            </ul>
+              ))};
+
+  return (
             <a href="/services">
               className="inl ine-flexitems-center text-cyan-400 hover: text-white transition-colors mt-4"
             >
@@ -169,9 +174,9 @@ const Footer = () => {};
               View All Micro SAAS →
             </a>
           </div>
-          {/* AI & IT Services */}
-          
-            <h3 className="tex t-cyan-400font-semibold mb-4 flex items-center"></h3>
+          {
+    /* AI & IT Services  */
+    return (</h3>
               <Brain className="w-4h-4mr-2" />
               AI & IT Services
             </h3>
@@ -186,11 +191,13 @@ const Footer = () => {};
                         className="tex t-smtext-gray-300 hover: text-cyan-400 transition-colors"
                       >
         </div>
-                        {service.name}
-                      </a>
+                        {service.name};
+
+  return (
                     </li>
-                  ))}
-                </ul>
+                  ))};
+
+  return (
               </div>
               
                 <h4 className="tex t-whitefont-medium mb-2">IT Services</h4>
@@ -202,11 +209,13 @@ const Footer = () => {};
                         className="tex t-smtext-gray-300 hover: text-cyan-400 transition-colors"
                       >
         </div>
-                        {service.name}
-                      </a>
+                        {service.name};
+
+  return (
                     </li>
-                  ))}
-                </ul>
+                  ))};
+
+  return (
               </div>
             </div>
             <a href="/services">
@@ -216,9 +225,9 @@ const Footer = () => {};
               View All Services →
             </a>
           </div>
-          {/* Additional AI Services */}
-          
-            <h3 className="tex t-cyan-400font-semibold mb-4 flex items-center"></h3>
+          {
+    /* Additional AI Services  */
+    return (</h3>
               <Zap className="w-4h-4mr-2" />
               AI Tools
             </h3>
@@ -230,16 +239,19 @@ const Footer = () => {};
                     className="gro upflex items-center text-sm text-gray-300 hover: text-cyan-400 transition-colors"
                   >
         </div>
-                    <span>{service.name}</span>
+                    <span>{service.name};
+
+  return (
                     <ArrowRight className="w-3h-3ml-1 g r oup-hover: translate-x-1 transition-transform duration-300" />
                   </a>
                 </li>
-              ))}
-            </ul>
+              ))};
+
+  return (
           </div>
-          {/* Company & Support */}
-          
-            <h3 className="tex t-cyan-400font-semibold mb-4">Company</h3>
+          {
+    /* Company & Support  */
+    return (Company</h3>
             <div className="gri dgrid-cols-2 gap-4"></div>
               
                 <h4 className="tex t-whitefont-medium mb-2">Company</h4>
@@ -251,11 +263,13 @@ const Footer = () => {};
                         className="tex t-smtext-gray-300 hover: text-cyan-400 transition-colors"
                       >
         </div>
-                        {link.name}
-                      </a>
+                        {link.name};
+
+  return (
                     </li>
-                  ))}
-                </ul>
+                  ))};
+
+  return (
               </div>
               
                 <h4 className="tex t-whitefont-medium mb-2">Support</h4>
@@ -267,19 +281,23 @@ const Footer = () => {};
                         className="tex t-smtext-gray-300 hover: text-cyan-400 transition-colors"
                       >
         </div>
-                        {link.name}
-                      </a>
+                        {link.name};
+
+  return (
                     </li>
-                  ))}
-                </ul>
+                  ))};
+
+  return (
               </div>
             </div>
           </div>
         </div>
-        {/* Bottom Section */}
-        <div className="bor der-tborder-gray-700 mt-8 pt-8"></div>
+        {
+    /* Bottom Section  */
+    return (</div>
           <div className="fle xflex-col md: flex-row justify-between items-center"></div>
-            <div className="tex t-gray-400text-sm mb-4 md:mb-0"></div>
+            <div className="tex t-gray-400text-sm mb-4 m,
+      d:mb-0"></div>
               © 2024 Zion Tech Group. All rights reserved.
             </div>
             <div className="fle xspace-x-6"></div>
@@ -289,10 +307,12 @@ const Footer = () => {};
                   className="tex t-smtext-gray-400 hover: text-cyan-400 transition-colors"
                 >
         </div>
-                  {link.name}
-                </a>
-              ))}
-            </div>
+                  {link.name};
+
+  return (
+              ))};
+
+  return (
           </div>
         </div>
       </div>

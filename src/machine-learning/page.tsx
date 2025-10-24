@@ -1,12 +1,13 @@
 import React from 'react';
-import React from 'react';
 import { CheckCircle, Phone, Star, TrendingUp, Check } from 'lucide-react';
-
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Phone, TrendingUp } from 'lucide-react';
 
-constMachineLearningPage: React.FC = () =>{constfeatures= []
+
+const Page: React.FC = () => {
+  const feature,
+      s = []
     'Custom ML model development and training'
     'Predictive analytics and forecasting'
     'Data preprocessing and feature engineering'
@@ -26,37 +27,48 @@ constMachineLearningPage: React.FC = () =>{constfeatures= []
     '80% cost savings on analytics'
   ]
 
-  constuseCases= [
+  constuseCase,
+      s = [
     {
       title: 'Predictive Analytics'
-      description: 'Forecast sales, demand, and market trends with high accuracy'
+      descriptio,
+      n: 'Forecast sales, demand, and market trends with high accuracy'
       icon: '📈'
    }
     {title: 'Customer Segmentation'
-      description: 'Identify and target customer groups for personalized marketing'
-      icon: '👥'
+      descriptio,
+      n: 'Identify and target customer groups for personalized marketing'
+      ico,
+      n: '👥'
    }
     {title: 'Fraud Detection'
-      description: 'Detect and prevent fraudulent activities in real-time'
-      icon: '🛡️'
+      descriptio,
+      n: 'Detect and prevent fraudulent activities in real-time'
+      ico,
+      n: '🛡️'
    }
     {title: 'Recommendation Systems'
-      description: 'Provide personalized recommendations to increase engagement'
-      icon: '🎯'
+      descriptio,
+      n: 'Provide personalized recommendations to increase engagement'
+      ico,
+      n: '🎯'
    }
     {title: 'Process Optimization'
-      description: 'Optimize business processes and reduce operational costs'
-      icon: '⚙️'
+      descriptio,
+      n: 'Optimize business processes and reduce operational costs'
+      ico,
+      n: '⚙️'
    }
     {title: 'Risk Assessment'
-      description: 'Evaluate and mitigate business risks with data-driven insights'
-      icon: '⚠️'
+      descriptio,
+      n: 'Evaluate and mitigate business risks with data-driven insights'
+      ico,
+      n: '⚠️'
     }
   ]
 
 const Page = () => {};
-  return ()
-      </div>
+  return (
 </>
   )
 };

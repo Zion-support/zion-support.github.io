@@ -1,35 +1,4 @@
 import React from 'react';
-import { Helmet } from 'lucide-react';
-import React from 'react';
-import Head from "next/head";
-import { Code, Helmet } from 'lucide-react';
-
-interface SEOEnhancerProps {}
-  title?: string
-  description?: string
-  keywords?: string
-  image?: string
-  url?: string
-  children: React.ReactNode
-{}
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({};
-  title = &quot;Zion Tech Group - Advanced AI and IT Solutions&quot;,
-  description = &quot;Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.&quot;,
-  keywords = &quot;AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence, Zion Tech Group&quot;,
-  image = &quot;https://ziontechgroup.com/og-image.jpg&quot;,
-  url = &quot;https://ziontechgroup.com&quot;,
-  children
-{}) => {}
-  const structuredData = {};
-    &quot;@context&quot;: &quot;https://schema.org&quot;,
-    &quot;@type&quot;: &quot;TechCompany&quot;,
-    &quot;name&quot;: &quot;Zion Tech Group&quot;,
-    &quot;url&quot;: url,
-    &quot;logo&quot;: &quot;https://ziontechgroup.com/logo.png&quot;,
-    &quot;description&quot;: description,
-    &quot;foundingDate&quot;: &quot;2020&quot;,
-    &quot;numberOfEmployees&quot;: &quot;50-100&quot;,
-    &quot;industry&quot;: &quot;Technology&quot;,
     &quot;services&quot;: []
       &quot;AI Solutions&quot;
       &quot;Quantum Computing&quot;
@@ -47,8 +16,9 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({};
      &quot;availableLanguage&quot;:&quot;en&quot;
 {   },
    &quot;sameAs&quot;: []
-     &quot;https:// twitter.com/ziontechgroup&quot;
-     &quot;https: // linkedin.com/$1/ziontechgroup&quot;
+     &quot;https: // twitter.com/ziontechgroup&quot;
+     &quot;http,
+      s: // linkedin.com/$1/ziontechgroup&quot;
     ]
    &quot;address&quot;: {&quot;@type&quot;:&quot;PostalAddress&quot;
      &quot;streetAddress&quot;:&quot;364E Main St STE1008&quot;
@@ -79,13 +49,16 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({};
      }
      &quot;geoRadius&quot;:&quot;100000 0&quot;
 {    }
-{  }
-  return ()
-    <>
+{  };
+
+  return (
       <Helmet>
-        {/* Primary meta tags */}
-        <Head>
-        <title>{title}</title>
+        {
+    /* Primary meta tags  */
+    return (
+        <title>{title};
+
+  return (
         <meta name=&quot;description&quot; content = {description} />
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
       </Head>;
@@ -101,8 +74,9 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({};
         <meta name=&quot;googlebot&quot; content=&quot;index, follow&quot; />
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
       </Head>
-        {/* Open Graph / Facebook */}
-        <meta property=&quot;og: type&quot; content=&quot;website&quot; />
+        {
+    /* Open Graph / Facebook  */
+    return (
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
       </Head>
         <meta property=&quot;og:url&quot; content = {url} />
@@ -120,14 +94,17 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({};
         <meta property=&quot;og: image:width&quot; content=&quot;1200&quot; />
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
       </Head>
-        <meta property=&quot;og:image:height&quot; content=&quot;630&quot; />
+        <meta property=&quot;og:imag,
+      e:height&quot; content=&quot;630&quot; />
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
       </Head>
-        <meta property=&quot;og:site_name&quot; content=&quot;Zion Tech Group&quot; />
+        <meta property=&quot;o,
+      g:site_name&quot; content=&quot;Zion Tech Group&quot; />
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
       </Head>
-        {/* Twitter */}
-        <meta name=&quot;twitter: card&quot; content=&quot;summary_large_image&quot; />
+        {
+    /* Twitter  */
+    return (
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
       </Head>
         <meta name=&quot;twitter:url&quot; content = {url} />
@@ -145,18 +122,22 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({};
         <meta name=&quot;twitter: site&quot; content=&quot;@ziontechgroup&quot; />
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
       </Head>
-        <meta name=&quot;twitter:creator&quot; content=&quot;@ziontechgroup&quot; />
+        <meta name=&quot;twitte,
+      r:creator&quot; content=&quot;@ziontechgroup&quot; />
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
       </Head>
-        {/* Canonical URL */}
-        <link rel=&quot;canonical&quot; href = {url} />
-        {/* Structured Data */}
-        <script type=&quot;application/ld+json&quot;>
-          {JSON.stringify(structuredData)}
-        </script>
+        {
+    /* Canonical URL  */
+    return (
+        {
+    /* Structured Data  */
+    return (
+          {JSON.stringify(structuredData)};
+
+  return (
       </Helmet>
-      {children}
-</>
-  )
-{}
-export default SEOEnhancer;
+      {children};
+
+  return (}
+export default Page;
+}}}

@@ -4,7 +4,13 @@ import React from 'react';
 import Link from 'next/link';
 import { Brain, Shield, Zap, Star } from 'lucide-react';
 
-const HomePage = () => {
+import React from 'react';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+import SEOOptimizer from './components/SEOOptimizer';
+import { Brain, Zap, Shield, Target, ArrowRight, CheckCircle } from 'lucide-react';
+
+const Page: React.FC = () => {
   const features = [
     {
       title: "AI-Powered Solutions",

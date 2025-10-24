@@ -15,8 +15,8 @@ export const wait = (ms: number): Promise<void> => {
  * Wait for a condition to be true
  */
 export const waitFor = async (
-  condition: () => boolean
-  timeout = 5000
+  condition: () => boolean,
+  timeout = 5000,
   interval = 100
 ): Promise<void> => {
   const startTime = Date.now()
@@ -32,17 +32,17 @@ export const waitFor = async (
  * Mock fetch for testing
  */
 export const mockFetch = (
-  response: unknown
-  status = 200
+  response: unknown,
+  status = 200,
   headers: Record<string, string> = {}
 ): void => {
   if (typeof global !== 'undefined') {
     (global as typeof global & { fetch: typeof fetch }).fetch = jest.fn(() =>
       Promise.resolve({
-        ok: status >= 200 && status < 300
-        status
-        headers: new Headers(headers)
-        json: async () => response
+        ok: status >= 200 && status < 300,
+        status,
+        headers: new Headers(headers),
+        json: async () => response,
         text: async () => JSON.stringify(response)
       } as Response)
     ) as typeof fetch
@@ -59,257 +59,261 @@ export class MockStorage implements Storage {
     return this.store.size
   }
 
-  clear(): void {
-    this.store.clear()
+  key(index: number): string | null {
+    const keys = Array.from(this.store.keys())
+    return keys[
+        index
+      ] || null
   }
 
   getItem(key: string): string | null {
     return this.store.get(key) || null
   }
 
-  key(index: number): string | null {
-    const keys = Array.from(this.store.keys())
-    return keys[index] || null
+  setItem(key: string, value: string): void {
+    this.store.set(key, value)
   }
 
   removeItem(key: string): void {
     this.store.delete(key)
   }
 
+  clear(): void {
+    this.store.clear()
+  }
+}
+
+/**
+ * Mock session storage
+ */
+export class MockSessionStorage implements Storage {
+  private store: Map<string, string> = new Map()
+
+  get length(): number {
+    return this.store.size
+  }
+
+  key(index: number): string | null {
+    const keys = Array.from(this.store.keys())
+    return keys[
+        index
+      ] || null
+  }
+
+  getItem(key: string): string | null {
+    return this.store.get(key) || null
+  }
+
   setItem(key: string, value: string): void {
     this.store.set(key, value)
   }
-}
 
-/**
- * Create a mock localStorage for testing
- */
-export const createMockStorage = (): MockStorage => {
-  return new MockStorage()
-}
-
-/**
- * Mock window object
- */
-export const mockWindow = (overrides: Partial<Window> = {}): void => {
-  if (typeof global !== 'undefined') {
-    Object.defineProperty(global, 'window', {
-      value: {
-        ...global.window
-        ...overrides
-      }
-      writable: true
-    })
-  }
-}
-
-/**
- * Create a mock performance API
- */
-export const createMockPerformance = (): Performance => {
-  const entries: PerformanceEntry[] = []
-  return {
-    now: () => Date.now()
-    mark: (name: string) => {
-      entries.push({
-        name
-        entryType: 'mark'
-        startTime: Date.now()
-        duration: 0
-        toJSON: () => ({})
-      } as PerformanceEntry)
-    }
-    measure: (name: string, startMark?: string, endMark?: string) => {
-      entries.push({
-        name
-        entryType: 'measure'
-        startTime: Date.now()
-        duration: 100
-        toJSON: () => ({})
-      } as PerformanceEntry)
-    }
-    getEntriesByName: (name: string) => entries.filter(e => e.name === name)
-    getEntriesByType: (type: string) => entries.filter(e => e.entryType === type)
-    getEntries: () => entries
-    clearMarks: () => {
-      entries.length = 0
-    }
-    clearMeasures: () => {
-      entries.length = 0
-    }
-    clearResourceTimings: () => {}
-    setResourceTimingBufferSize: () => {}
-    toJSON: () => ({})
-    addEventListener: () => {}
-    removeEventListener: () => {}
-    dispatchEvent: () => true
-    onresourcetimingbufferfull: null
-    timeOrigin: Date.now()
-  } as unknown as Performance
-}
-
-/**
- * Generate random test data
- */
-export const generateTestData = {
-  string: (length = 10): string => {
-    return Math.random()
-      .toString(36)
-      .substring(2, length + 2)
-  }
-  number: (min = 0, max = 100): number => {
-    return Math.floor(Math.random() * (max - min + 1)) + min
-  }
-  boolean: (): boolean => {
-    return Math.random() > 0.5
-  }
-  email: (): string => {
-    return `test${generateTestData.string(5)}@example.com`
-  }
-  url: (): string => {
-    return `https://example.com/${generateTestData.string(10)}`
-  }
-  date: (): Date => {
-    return new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000)
-  }
-  array: <T>(generator: () => T, length = 5): T[] => {
-    return Array.from({ length }, generator)
-  }
-}
-
-/**
- * Deep clone an object
- */
-export const deepClone = <T>(obj: T): T => {
-  return JSON.parse(JSON.stringify(obj))
-}
-
-/**
- * Compare objects for equality
- */
-export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {
-  return JSON.stringify(obj1) === JSON.stringify(obj2)
-}
-
-/**
- * Spy on console methods
- */
-export class ConsoleSpy {
-  private originalConsole: Console
-  private logs: string[] = []
-  private errors: string[] = []
-  private warnings: string[] = []
-
-  constructor() {
-    this.originalConsole = { ...console }
-    this.mock()
-  }
-
-  private mock(): void {
-    // eslint-disable-next-line no-console
-    console.log = (...args: unknown[]) => {
-      this.logs.push(args.map(String).join(' '))
-    }
-    // eslint-disable-next-line no-console
-    console.error = (...args: unknown[]) => {
-      this.errors.push(args.map(String).join(' '))
-    }
-    // eslint-disable-next-line no-console
-    console.warn = (...args: unknown[]) => {
-      this.warnings.push(args.map(String).join(' '))
-    }
-  }
-
-  getLogs(): string[] {
-    return [...this.logs]
-  }
-
-  getErrors(): string[] {
-    return [...this.errors]
-  }
-
-  getWarnings(): string[] {
-    return [...this.warnings]
-  }
-
-  restore(): void {
-    Object.assign(console, this.originalConsole)
+  removeItem(key: string): void {
+    this.store.delete(key)
   }
 
   clear(): void {
-    this.logs = []
-    this.errors = []
-    this.warnings = []
+    this.store.clear()
   }
 }
 
 /**
- * Create a deferred promise
+ * Create a mock element for testing
  */
-export interface Deferred<T> {
-  promise: Promise<T>
-  resolve: (value: T) => void
-  reject: (reason?: unknown) => void
-}
-
-export const createDeferred = <T>(): Deferred<T> => {
-  let resolve: (value: T) => void
-  let reject: (reason?: unknown) => void
-  const promise = new Promise<T>((res, rej) => {
-    resolve = res
-    reject = rej
+export const createMockElement = (tagName: string, attributes: Record<string, string> = {}): HTMLElement => {
+  const element = document.createElement(tagName)
+  Object.entries(attributes).forEach(([key, value]) => {
+    element.setAttribute(key, value)
   })
-  return { promise, resolve, reject }
+  return element
 }
 
 /**
- * Retry a function with exponential backoff
+ * Mock window object for testing
  */
-export const retryWithBackoff = async <T>(
-  fn: () => Promise<T>
-  maxRetries = 3
-  initialDelay = 1000
-): Promise<T> => {
-  let lastError: Error;
-  for (let i = 0; i < maxRetries; i++) {
-    try {
-      return await fn()
-    } catch (error) {
-      lastError = error as Error
-      if (i < maxRetries - 1) {
-        await wait(initialDelay * Math.pow(2, i))
-      }
-    }
+export const mockWindow = (overrides: Partial<Window> = {}): Window => {
+  const mockWin = {
+    location: {
+      href: 'htt,
+      p://localhos,
+      t:3000',
+      origin: 'htt,
+      p://localhos,
+      t:3000',
+      pathname: '/',
+      search: '',
+      hash: '',
+      assign: jest.fn(),
+      replace: jest.fn(),
+      reload: jest.fn()
+    },
+    navigator: {
+      userAgen,
+      t: 'test-agent',
+      language: 'en-US',
+      platform: 'test-platform'
+    },
+    document: {
+      titl,
+      e: 'Test Document',
+      createElement: jest.fn(() => createMockElement('div')),
+      querySelector: jest.fn(),
+      querySelectorAll: jest.fn(() => []),
+      addEventListener: jest.fn(),
+      removeEventListener: jest.fn()
+    },
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    setTimeout: jest.fn((f,
+      n: Function, delay: number) => setTimeout(fn, delay)),
+    clearTimeout: jest.fn(),
+    setInterval: jest.fn((f,
+      n: Function, delay: number) => setInterval(fn, delay)),
+    clearInterval: jest.fn(),
+    ...overrides
+  } as unknown as Window
+
+  return mockWin
+}
+
+/**
+ * Mock console methods for testing
+ */
+export const Page = () => {
+  const originalConsole = { ...console }
+  
+  beforeEach(() => {
+    console.log = jest.fn()
+    console.error = jest.fn()
+    console.warn = jest.fn()
+    console.info = jest.fn()
+  })
+
+  afterEach(() => {
+    Object.assign(console, originalConsole)
+  })
+}
+
+/**
+ * Create a mock event for testing
+ */
+export const createMockEvent = (type: string, options: EventInit = {}): Event => {
+  return new Event(type, options)
+}
+
+/**
+ * Create a mock custom event for testing
+ */
+export const createMockCustomEvent = (type: string, detail: unknown = null): CustomEvent => {
+  return new CustomEvent(type, { detail })
+}
+
+/**
+ * Mock IntersectionObserver for testing
+ */
+export const Page = () => {
+  const mockObserver = {
+    observe: jest.fn(),
+    unobserve: jest.fn(),
+    disconnect: jest.fn()
   }
-  throw lastError!
+
+  Object.defineProperty(window, 'IntersectionObserver', {
+    writable: true,
+    configurable: true,
+    value: jest.fn().mockImplementation(() => mockObserver)
+  })
+
+  return mockObserver
 }
 
 /**
- * Measure execution time of a function
+ * Mock ResizeObserver for testing
  */
-export const measureExecutionTime = async <T>(
-  fn: () => T | Promise<T>;
-): Promise<{ result: T; duration: number }> => {
-  const start = performance.now()
-  const result = await fn()
-  const duration = performance.now() - start
-  return { result, duration }
+export const Page = () => {
+  const mockObserver = {
+    observe: jest.fn(),
+    unobserve: jest.fn(),
+    disconnect: jest.fn()
+  }
+
+  Object.defineProperty(window, 'ResizeObserver', {
+    writable: true,
+    configurable: true,
+    value: jest.fn().mockImplementation(() => mockObserver)
+  })
+
+  return mockObserver
 }
 
-const testUtils = {
-  wait
-  waitFor
-  mockFetch
-  createMockStorage
-  mockWindow
-  createMockPerformance
-  generateTestData
-  deepClone
-  deepEqual
-  ConsoleSpy
-  createDeferred
-  retryWithBackoff
-  measureExecutionTime
+/**
+ * Mock matchMedia for testing
+ */
+export const mockMatchMedia = (matches: boolean = false) => {
+  Object.defineProperty(window, 'matchMedia', {
+    writable: true,
+    value: jest.fn().mockImplementation(query => ({
+      matches,
+      media: query,
+      onchange: null,
+      addListener: jest.fn(),
+      removeListener: jest.fn(),
+      addEventListener: jest.fn(),
+      removeEventListener: jest.fn(),
+      dispatchEvent: jest.fn()
+    }))
+  })
 }
 
-export default testUtils;
+/**
+ * Mock performance API for testing
+ */
+export const Page = () => {
+  Object.defineProperty(window, 'performance', {
+    writable: true,
+    value: {
+      no,
+      w: jest.fn(() => Date.now()),
+      mark: jest.fn(),
+      measure: jest.fn(),
+      getEntriesByType: jest.fn(() => []),
+      getEntriesByName: jest.fn(() => []),
+      clearMarks: jest.fn(),
+      clearMeasures: jest.fn()
+    }
+  })
+}
+
+/**
+ * Mock requestAnimationFrame for testing
+ */
+export const Page = () => {
+  Object.defineProperty(window, 'requestAnimationFrame', {
+    writable: true,
+    value: jest.fn(cb => setTimeout(cb, 16))
+  })
+
+  Object.defineProperty(window, 'cancelAnimationFrame', {
+    writable: true,
+    value: jest.fn()
+  })
+}
+
+/**
+ * Setup common mocks for testing
+ */
+export const Page = () => {
+  mockIntersectionObserver()
+  mockResizeObserver()
+  mockMatchMedia()
+  mockPerformance()
+  mockRequestAnimationFrame()
+}
+
+/**
+ * Clean up mocks after testing
+ */
+export const Page = () => {
+  jest.clearAllMocks()
+  jest.restoreAllMocks()
+}

@@ -3,20 +3,19 @@ import { Calendar } from 'lucide-react';
 import { Clock } from 'lucide-react';
 
 export default function Page;
-Page.displayName = "Page"() {}
-  return ()
-    <main className='min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50'>
+Page.displayName = "Page"() {};
+
+  return (
       <header className='bg-gradient-to-br from-fuchsia-900 via-purple-900 to-slate-900 text-white py-20'>
         <div className='max-w-5xl mx-auto px-6'></div>
           <div className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6'></div>
             <ListChecks />
             <span className='text-sm font-semibold'>Agent Ops • 2026</span>
           </div>
-          <h1 className='text-5xl md: text-6xl font-extrabold leading-tight mb-4'>
-            Agent Release Runbooks v2 (2026)
+          <h1 className='text-5xl md: text-6xl font-extrabold leading-tight mb-4'>Agent Release Runbooks v2 (2026)
           </h1>
-          <p className='text-lg md:text-xl text-white/80 max-w-3xl'>
-            Ship autonomous agents with budgeted actions, KPI
+          <p className='text-lg m,
+      d:text-xl text-white/80 max-w-3xl'>Ship autonomous agents with budgeted actions, KPI
           </p>
         </div>
       </section>
@@ -51,8 +50,7 @@ Page.displayName = "Page"() {}
               <h3 className='text-2xl font-bold flex items-center gap-2'></h3>
                 <FileWarning /> Prevent Regressions
               </h3>
-              <p className='text-white/90'>
-                We implement v2 runbooks in 4–6 weeks with audits and training.
+              <p className='text-white/90'>We implement v2 runbooks in 4–6 weeks with audits and training.
               </p>;
             </div>;
             <a href=&quot;/contact&quot;

@@ -13,11 +13,3 @@ const DefaultSEO: React.FC<DefaultSEOProps> = ({ className = '' }) => {
   );
 };
 export default DefaultSEO
-=======
-      <p>This component is under construction.</p>
-    </div>
-  );
-};
-
-export default DefaultSEO;
->>>>>>> dd7fda2613d852773835e2791dbc2d1b243c1cce

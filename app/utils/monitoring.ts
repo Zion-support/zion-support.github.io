@@ -4,19 +4,32 @@
  * Real-time application monitoring, performance tracking, and error reporting
  */
 
-const performanceConfig = {
+// Declare gtag function for Google Analytics
+declare global {
+  function gtag(...args: any[]): void
+};
+
+  const performanceConfig = {
   monitoring: {
-    enableLongTaskDetection: true
-    enableMemoryMonitoring: true
+    enableLongTaskDetectio,
+      n: true,
+    enableMemoryMonitoring: true,
     sampleRate: 0.1
-  }
+  },
   webVitals: {
-    lcp: { good: 2500, needsImprovement: 4000 }
-    fid: { good: 100, needsImprovement: 300 }
-    cls: { good: 0.1, needsImprovement: 0.25 }
-    fcp: { good: 1800, needsImprovement: 3000 }
-    ttfb: { good: 800, needsImprovement: 1800 }
-    inp: { good: 200, needsImprovement: 500 }
+    lc,
+      p: { goo,
+      d: 2500, needsImprovement: 4000 },
+    fid: { goo,
+      d: 100, needsImprovement: 300 },
+    cls: { goo,
+      d: 0.1, needsImprovement: 0.25 },
+    fcp: { goo,
+      d: 1800, needsImprovement: 3000 },
+    ttfb: { goo,
+      d: 800, needsImprovement: 1800 },
+    inp: { goo,
+      d: 200, needsImprovement: 500 }
   }
 }
 
@@ -34,14 +47,17 @@ export interface ErrorReport {
   stack?: string
   component?: string
   timestamp: number
-  userAgent: string
-  url: string
+  userAgen,
+      t: string
+  ur,
+      l: string
 }
 
 class MonitoringService {
   private metrics: PerformanceMetrics = {}
   private errors: ErrorReport[] = []
-  private observer: PerformanceObserver | null = null
+  private observe,
+      r: PerformanceObserver | null = null
 
   constructor() {
     if (typeof window !== 'undefined') {
@@ -70,7 +86,9 @@ class MonitoringService {
           this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0
           this.reportMetric('lcp', this.metrics.lcp)
         })
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
+        lcpObserver.observe({ entryTypes: [
+        'largest-contentful-paint'
+      ] })
 
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
@@ -80,7 +98,9 @@ class MonitoringService {
             this.reportMetric('fid', this.metrics.fid)
           })
         })
-        fidObserver.observe({ entryTypes: ['first-input'] })
+        fidObserver.observe({ entryTypes: [
+        'first-input'
+      ] })
 
         // Cumulative Layout Shift
         let clsValue = 0
@@ -88,13 +108,15 @@ class MonitoringService {
           const entries = list.getEntries()
           entries.forEach((entry: PerformanceEntry) => {
             if (!(entry as any).hadRecentInput) {
-              clsValue += entry.value
+              clsValue += (entry as any).value
               this.metrics.cls = clsValue
               this.reportMetric('cls', clsValue)
             }
           })
         })
-        clsObserver.observe({ entryTypes: ['layout-shift'] })
+        clsObserver.observe({ entryTypes: [
+        'layout-shift'
+      ] })
 
         // First Contentful Paint
         const fcpObserver = new PerformanceObserver(list => {
@@ -104,7 +126,9 @@ class MonitoringService {
             this.reportMetric('fcp', entry.startTime)
           })
         })
-        fcpObserver.observe({ entryTypes: ['paint'] })
+        fcpObserver.observe({ entryTypes: [
+        'paint'
+      ] })
       } catch (error) {
         // eslint-disable-next-line no-console
         console.error('Error setting up Web Vitals monitoring:', error)
@@ -121,7 +145,9 @@ class MonitoringService {
         console.log('Long task detected:', entry.duration)
           }
         })
-        longTaskObserver.observe({ entryTypes: ['longtask'] })
+        longTaskObserver.observe({ entryTypes: [
+        'longtask'
+      ] })
       } catch (error) {
         // Long task API might not be available
         // eslint-disable-next-line no-console
@@ -138,11 +164,14 @@ class MonitoringService {
           entries.forEach((entry: PerformanceResourceTiming) => {
             if (entry.duration > 1000) {
               // eslint-disable-next-line no-console
-              console.log('Slow resource:', entry.name, entry.duration)
+              console.log('Slow resourc,
+      e:', entry.name, entry.duration)
             }
           })
         })
-        resourceObserver.observe({ entryTypes: ['resource'] })
+        resourceObserver.observe({ entryTypes: [
+        'resource'
+      ] })
       } catch (error) {
         // eslint-disable-next-line no-console
         console.warn('Resource timing monitoring not available:', error)
@@ -154,10 +183,10 @@ class MonitoringService {
     // Global error handler
     window.addEventListener('error', (event) => {
       this.logError({
-        message: event.message
-        stack: event.error?.stack
-        timestamp: Date.now()
-        userAgent: navigator.userAgent
+        message: event.message,
+        stack: event.error?.stack,
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent,
         url: window.location.href
       })
     })
@@ -165,9 +194,10 @@ class MonitoringService {
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
       this.logError({
-        message: `Unhandled Promise Rejection: ${event.reason}`
-        timestamp: Date.now()
-        userAgent: navigator.userAgent
+        message: `Unhandled Promise Rejectio,
+      n: ${event.reason}`,
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent,
         url: window.location.href
       })
     })
@@ -177,9 +207,9 @@ class MonitoringService {
     // Sample rate
     if (Math.random() > performanceConfig.monitoring.sampleRate) {
       return
-    }
+    };
 
-    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
+  const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
     if (thresholds) {
       const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
       // eslint-disable-next-line no-console
@@ -189,7 +219,8 @@ class MonitoringService {
     // Send to analytics (if configured)
     if (typeof gtag === 'function') {
       gtag('event', name, {
-        value: Math.round(name === 'cls' ? value * 1000 : value)
+        value: Math.round(name === 'cls' ? value * 100,
+      0: value),
         event_category: 'Web Vitals'
       })
     }
@@ -208,7 +239,7 @@ class MonitoringService {
     // Send to error tracking service (if configured)
     if (typeof gtag === 'function') {
       gtag('event', 'exception', {
-        description: error.message
+        description: error.message,
         fatal: false
       })
     }
@@ -227,13 +258,15 @@ class MonitoringService {
   }
 
   public measureMemory(): void {
-    if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {;
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
+    if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSiz,
+      e: number; jsHeapSizeLimi,
+      t: number } }).memory
       if (memory) {
         // eslint-disable-next-line no-console
         console.log('Memory usage:', {
-          used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`
-          total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`
+          used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
+          total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
           limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
         })
       }
@@ -242,16 +275,18 @@ class MonitoringService {
 
   public measureNavigationTiming(): void {
     if ('performance' in window && 'getEntriesByType' in performance) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+      const navigation = performance.getEntriesByType('navigation')[
+        0
+      ] as PerformanceNavigationTiming
       if (navigation) {
         // eslint-disable-next-line no-console
         console.log('Performance metrics:', {
-          'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`
-          'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`
-          'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`
-          'Download': `${Math.round(navigation.responseEnd - navigation.responseStart)}ms`
-          'DOM Interactive': `${Math.round(navigation.domInteractive - navigation.fetchStart)}ms`
-          'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`
+          'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,
+          'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,
+          'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`,
+          'Download': `${Math.round(navigation.responseEnd - navigation.responseStart)}ms`,
+          'DOM Interactive': `${Math.round(navigation.domInteractive - navigation.fetchStart)}ms`,
+          'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`,
           'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
         })
       }
@@ -261,4 +296,4 @@ class MonitoringService {
 
 // Singleton instance
 const monitoring = new MonitoringService()
-export default monitoring;
+export default Page;

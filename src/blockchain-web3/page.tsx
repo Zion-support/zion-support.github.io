@@ -1,14 +1,14 @@
-"use client";
 import React from 'react';
-
 import { Coins } from 'lucide-react';
 import { CheckCircle, Star, Zap, Brain, Shield, Database, Helmet } from 'lucide-react';
 import { Globe } from 'lucide-react';
+"use client";
 
-const $1: React.FC = () => {;
-  const blockchainServices = [];
-  return ()
-      </div>
+
+const Page: React.FC = () => {
+  const blockchainService,
+      s = [;
+  return (
 </>
   )
 };

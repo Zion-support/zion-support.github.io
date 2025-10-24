@@ -1,89 +1,115 @@
 import React from 'react';
 import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react';
 import { MapPin } from 'lucide-react';
+=======
+>>>>>>> 936c9169b8529ba98f1996ac9beac1bb365b75be
 import React from 'react';
 import Head from "next/head";
 import { Phone, Target, Mail, CheckCircle, Helmet } from 'lucide-react';
 
-constMarketingToolsPage: React.FC = () =>{constmarketingTools= [
+
+constMarketingToolsPage: React.FC = () => {constmarketingTool,
+      s = [
     {
       title: 'AI Content Generator'
-      price: '$19 9/month'
-      description: 'Generate high-quality content for blogs, social media, and marketing materials using advanced AI.'
+      pric,
+      e: '$19 9/month'
+      descriptio,
+      n: 'Generate high-quality content for blogs, social media, and marketing materials using advanced AI.'
       features: ['Blog post generation', 'Social media content', 'Email campaigns', 'Ad copy creation', 'SEO optimization', 'Multi-language support']
       icon: '✍️'
-      category: 'Content Creation'
+      categor,
+      y: 'Content Creation'
    }
     {title: 'AI SEO Optimizer'
       price: '$29 9/month'
-      description: 'Advanced SEO analysis and optimization recommendations powered by machine learning.'
-      features: ['Keyword research', 'Content optimization', 'Technical SEO', 'Competitor analysis', 'Rank tracking', 'Performance insights']
+      descriptio,
+      n: 'Advanced SEO analysis and optimization recommendations powered by machine learning.'
+      feature,
+      s: ['Keyword research', 'Content optimization', 'Technical SEO', 'Competitor analysis', 'Rank tracking', 'Performance insights']
       icon: '🔍'
-      category: 'SEO'
+      categor,
+      y: 'SEO'
    }
     {title: 'AI Social Media Manager'
       price: '$24 9/month'
-      description: 'Automated social media management with intelligent posting and engagement optimization.'
-      features: ['Content scheduling', 'Hashtag optimization', 'Engagement tracking', 'Trend analysis', 'Multi-platform posting', 'Performance analytics']
+      descriptio,
+      n: 'Automated social media management with intelligent posting and engagement optimization.'
+      feature,
+      s: ['Content scheduling', 'Hashtag optimization', 'Engagement tracking', 'Trend analysis', 'Multi-platform posting', 'Performance analytics']
       icon: '📱'
-      category: 'Social Media'
+      categor,
+      y: 'Social Media'
    }
     {title: 'AI Email Marketing'
       price: '$17 9/month'
-      description: 'Intelligent email marketing campaigns with personalization and automation capabilities.'
-      features: ['Email templates', 'Personalization', 'A/B testing', 'Automation workflows', 'Analytics dashboard', 'List management']
+      descriptio,
+      n: 'Intelligent email marketing campaigns with personalization and automation capabilities.'
+      feature,
+      s: ['Email templates', 'Personalization', 'A/B testing', 'Automation workflows', 'Analytics dashboard', 'List management']
       icon: '📧'
-      category: 'Email Marketing'
+      categor,
+      y: 'Email Marketing'
    }
     {title: 'AI Ad Campaign Manager'
       price: '$39 9/month'
-      description: 'Automated ad campaign creation and optimization across multiple platforms.'
-      features: ['Campaign creation', 'Bid optimization', 'Audience targeting', 'Performance tracking', 'Budget management', 'ROI analysis']
+      descriptio,
+      n: 'Automated ad campaign creation and optimization across multiple platforms.'
+      feature,
+      s: ['Campaign creation', 'Bid optimization', 'Audience targeting', 'Performance tracking', 'Budget management', 'ROI analysis']
       icon: '📊'
-      category: 'Advertising'
+      categor,
+      y: 'Advertising'
    }
     {title: 'AI Analytics Dashboard'
       price: '$29 9/month'
-      description: 'Comprehensive marketing analytics with AI-powered insights and predictions.'
-      features: ['Real-time analytics', 'Predictive insights', 'Custom reports', 'Data visualization', 'ROI tracking', 'Performance forecasting']
+      descriptio,
+      n: 'Comprehensive marketing analytics with AI-powered insights and predictions.'
+      feature,
+      s: ['Real-time analytics', 'Predictive insights', 'Custom reports', 'Data visualization', 'ROI tracking', 'Performance forecasting']
       icon: '📈'
-      category: 'Analytics'
+      categor,
+      y: 'Analytics'
     }
   ]
-  const benefits = [;
-    {
-      icon: TrendingUp
-      title: 'Increase ROI'
-      description: 'Average250% increase in marketing ROI with AI-powered optimization'
-   }
-    {icon: Clock
-      title: 'Save Time'
-      description: 'Reduce marketing tasks by80% with intelligent automation'
-   }
-    {icon: Target
-      title: 'Better Targeting'
-      description: 'Reach the right audience with AI-powered targeting and personalization'
-   }
-    {icon: BarChart
-      title: 'Data-Driven'
-      description: 'Make informed decisions with comprehensive analytics and insights'
-    }
+  const benefits = [
+    {,,,
+    'icon: TrendingUp,',,,
+    'title: 'Increase ROI'',,,
+    'description: 'Average250% increase in marketing ROI with AI-powered optimization'',,,
+    '}',,,
+    {,,,
+    'icon: Clock,',,,
+    'title: 'Save Time'',,,
+    'description: 'Reduce marketing tasks by80% with intelligent automation'',,,
+    '}',,,
+    {,,,
+    'icon: Target,',,,
+    'title: 'Better Targeting'',,,
+    'description: 'Reach the right audience with AI-powered targeting and personalization'',,,
+    '}',,,
+    {,,,
+    'icon: BarChart,',,,
+    'title: 'Data-Driven'',,,
+    'description: 'Make informed decisions with comprehensive analytics and insights'',,,
+    '}'
   ]
-  return ()
-    <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+  return (</div>
       <Helmet>
         <Head>
-        <title>Marketing Tools - Zion Tech Group</title>
+        <title >Marketing Tools - Zion Tech Group</title>
         <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
       </Head>
         <meta name="keywords" content="marketing tools, ai marketing, content generation, seo optimization, social media management, email marketing" />
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
       </Head>
       </Helmet>
-      {/* Hero Section */}
-      <section className="pt-24pb-16 p x-4"></section>
+      {
+    /* Hero Section  */
+    return (</section>
         <div className="max-w-7x lmx-auto text-center"></div>
-          <h1 className="tex t-4xlsm: text-5xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="tex t-4xlsm: text-5xl m,
+      d:text-6xl font-bold text-white mb-6">
         </div>
             AI Marketing Tools
           </h1>
@@ -91,8 +117,9 @@ constMarketingToolsPage: React.FC = () =>{constmarketingTools= [
         </div>
             Transform your marketing with AI-powered tools for content creation, SEO optimization, social media management, and analytics.
           </p>
-          {/* Stats */}
-          <div className="gri dgrid-cols-2 md: grid-cols-4 gap-6 mb-12"></div>
+          {
+    /* Stats  */
+    return (</div>
             <div className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6"></div>
               <div className="tex t-3xlfont-bold text-cyan-400 mb-2">6</div>
               <div className="tex t-gray-300">Marketing Tools</div>
@@ -110,9 +137,12 @@ constMarketingToolsPage: React.FC = () =>{constmarketingTools= [
               <div className="tex t-gray-300">Time Saved</div>
             </div>
           </div>
-          {/* Contact Info */}
-          <div className="bg-gr adient-to-rfrom-purple-600 to-blue-600 rounded-lg p-6 mb-12"></div>
-            <div className="fle xflex-col md: flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8"></div>
+          {
+    /* Contact Info  */
+    return (</div>
+            <div className="fle xflex-col md: flex-row items-center justify-center space-y-4 m,
+      d:space-y-0 m,
+      d:space-x-8"></div>
               <div className="fle xitems-center space-x-2"></div>
                 <Phone className="w-5h-5" />
                 <span className="tex t-whitefont-medium">+1 302 464 0950</span>
@@ -129,23 +159,33 @@ constMarketingToolsPage: React.FC = () =>{constmarketingTools= [
           </div>
         </div>
       </section>
-      {/* Marketing Tools Grid */}
-      <section className="py-16px-4"></section>
+      {
+    /* Marketing Tools Grid  */
+    return (</section>
         <div className="max-w-7x lmx-auto"></div>
           <h2 className="tex t-3xlmd: text-4xl font-bold text-white text-center mb-12 neon-text">
         </div>
             Our Marketing Tools
           </h2>
-          <div className="gri dgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+          <div className="gri dgrid-cols-1 m,
+      d:grid-cols-2 l,
+      g:grid-cols-3 gap-8"></div>
             {marketingTools.map((tool, index) => ()
               <div key={index} className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300"></div>
                 <div className="tex t-centermb-6"></div>
-                  <div className="tex t-5xlmb-4">{tool.icon}</div>
-                  <h3 className="tex t-xlfont-bold text-white mb-2">{tool.title}</h3>
-                  <p className="tex t-gray-300text-sm mb-4">{tool.description}</p>
+                  <div className="tex t-5xlmb-4">{tool.icon};
+
+  return (
+                  <h3 className="tex t-xlfont-bold text-white mb-2">{tool.title};
+
+  return (
+                  <p className="tex t-gray-300text-sm mb-4">{tool.description};
+
+  return (
                   <div className="bg-pu rple-100text-purple-800 text-xs px-2 py-1 rounded-full inline-block mb-4"></div>
-                    {tool.category}
-                  </div>
+                    {tool.category};
+
+  return (
                 </div>
                 <div className="mb-6"></div>
                   <h4 className="fon t-semiboldtext-white mb-3">Features: </h4>
@@ -155,45 +195,60 @@ constMarketingToolsPage: React.FC = () =>{constmarketingTools= [
                       <li key={featureIndex} className="fle xitems-center text-sm text-gray-300">
         </div>
                         <CheckCircle className="w-4h-4te x t-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                        {feature};
+
+  return (
+                    ))};
+
+  return (
                 </div>
                 <div className="tex t-center"></div>
-                  <div className="tex t-2xlfont-bold text-cyan-400 mb-4">{tool.price}</div>
+                  <div className="tex t-2xlfont-bold text-cyan-400 mb-4">{tool.price};
+
+  return (
                   <a href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}>
-                    className="w-ful lbg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-cyan-600 hover:to-blue-700 transition-all inline-block"
+                    className="w-ful lbg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-cyan-600 hove,
+      r:to-blue-700 transition-all inline-block"
                   >
         </div>
                     Get Started
                   </a>
                 </div>
               </div>
-            ))}
-          </div>
+            ))};
+
+  return (
         </div>
       </section>
-      {/* Benefits Section */}
-      <section className="py-16px-4"></section>
+      {
+    /* Benefits Section  */
+    return (</section>
         <div className="max-w-7x lmx-auto"></div>
           <h2 className="tex t-3xlmd: text-4xl font-bold text-white text-center mb-12 neon-text">
         </div>
             Why Choose Our Marketing Tools?
           </h2>
-          <div className="gri dgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+          <div className="gri dgrid-cols-1 m,
+      d:grid-cols-2 l,
+      g:grid-cols-4 gap-8"></div>
             {benefits.map((benefit, index) => ()
               <div key={index} className="bg-wh ite/10backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300"></div>
                 <benefit.icon className="w-12h-12te x t-cyan-400 mx-auto mb-4" />
-                <h3 className="tex t-xlfont-bold text-white mb-3">{benefit.title}</h3>
-                <p className="tex t-gray-300text-sm">{benefit.description}</p>
+                <h3 className="tex t-xlfont-bold text-white mb-3">{benefit.title};
+
+  return (
+                <p className="tex t-gray-300text-sm">{benefit.description};
+
+  return (
               </div>
-            ))}
-          </div>
+            ))};
+
+  return (
         </div>
       </section>
-      {/* CTA Section */}
-      <section className="py-16px-4 b g-gradient-to-r from-purple-600 to-blue-600"></section>
+      {
+    /* CTA Section  */
+    return (</section>
         <div className="max-w-4x lmx-auto text-center"></div>
           <h2 className="tex t-3xlmd: text-4xl font-bold text-white mb-6">
         </div>
@@ -211,7 +266,9 @@ constMarketingToolsPage: React.FC = () =>{constmarketingTools= [
               Call (302) 464-0950
             </a>
             <a href="mailto:kleber@ziontechgroup.com">
-              className="bg-tr ansparentborder-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
+              className="bg-tr ansparentborder-2 border-white text-white px-8 py-3 rounded-lg font-medium hove,
+      r:bg-white hove,
+      r:text-purple-600 transition-colors"
             >
         </div>
               Email Us
@@ -222,4 +279,5 @@ constMarketingToolsPage: React.FC = () =>{constmarketingTools= [
     </div>
   )
 }
-export default MarketingToolsPage;
+export default Page;
+}}}}}}

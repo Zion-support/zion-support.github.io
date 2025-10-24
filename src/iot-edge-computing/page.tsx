@@ -1,14 +1,14 @@
-"use client";
 import React from 'react';
-
 import { Wifi } from 'lucide-react';
 import { CheckCircle, Star, Zap, BarChart, Shield, Database, Helmet } from 'lucide-react';
 import { Cpu, Globe } from 'lucide-react';
+"use client";
 
-const $1: React.FC = () => {;
-  const iotServices = [];
-  return ()
-      </div>
+
+const Page: React.FC = () => {
+  const iotService,
+      s = [;
+  return (
 </>
   )
 };

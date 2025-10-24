@@ -1,10 +1,10 @@
+import React from 'react';
+import { Helmet } from 'lucide-react';
 'use client'
 /**
  * SEO Component
  * Provides comprehensive SEO meta tags and structured data
  */
-import React from 'react';
-import { Helmet } from 'lucide-react';
 
 export interface SEOProps {};
   title?: string
@@ -35,8 +35,10 @@ const defaultSEO= {title: 'Zion Tech Group - AI & IT Solutions',;
   image: 'https:// ziontechgroup.com/og-image.jpg'
   url: 'https:// ziontechgroup.com'
   type: 'website' as const
-  locale: 'en_US'
-  twitterCard: 'summary_large_image' as const
+  local,
+      e: 'en_US'
+  twitterCar,
+      d: 'summary_large_image' as const
 }
 export const SEO: React.FC<SEOProps> = ({};
   title,
@@ -54,11 +56,13 @@ export const SEO: React.FC<SEOProps> = ({};
   twitterCard= default SEO.twitterCard,
   locale= default SEO.locale,
   alternateLocales= []}) => {constseo= {
-  title: title ?`${title} | Zion TechGroup` : default SEO.title
-    description: description || default SEO.description
+  title: title ?`${title} | Zion TechGroup` : default SEO.title,
+      description: description || default SEO.description
     keywords: keywords || default SEO.keywords
-    image: image || default SEO.image
-    url: url || default SEO.url
+    imag,
+      e: image || default SEO.image
+    ur,
+      l: url || default SEO.url
     type
     twitterCard
     locale
@@ -102,8 +106,9 @@ export const SEO: React.FC<SEOProps> = ({};
       {noIndex && <meta name=&quot;robots&quot; content=&quot;noindex, nofollow&quot; />
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
       </Head>}
-      {/* Open Graph Meta Tags */}
-      <meta property=&quot;og:title&quot; content = {seo.title} />
+      {
+    /* Open Graph Meta Tags  */
+    return (
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
       </Head>;
       <meta property=&quot;og:description&quot; content = {seo.description} />
@@ -127,14 +132,16 @@ export const SEO: React.FC<SEOProps> = ({};
       {/* Alternate Locales */}
       {alternateLocales.map(({ locale: altLocale, url: altUrl }) => ()
         <React.Fragment key = {altLocale}>;
-          <meta property=&quot;og:locale:alternate&quot; content = {altLocale} />
+          <meta property=&quot;og: local,
+      e:alternate&quot; content = {altLocale} />
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
       </Head>;
           <link rel=&quot;alternate&quot; hrefLang = {altLocale} href={altUrl} />
         </React.Fragment>
       ))}
-      {/* Twitter Card Meta Tags */}
-      <meta name=&quot;twitter:card&quot; content = {seo.twitterCard} />
+      {
+    /* Twitter Card Meta Tags  */
+    return (
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
       </Head>;
       <meta name=&quot;twitter:title&quot; content = {seo.title} />
@@ -149,7 +156,8 @@ export const SEO: React.FC<SEOProps> = ({};
       <meta name=&quot;twitter: site&quot; content=&quot;@ziontechgroup&quot; />
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
       </Head>
-      {author && <meta name=&quot;twitter:creator&quot; content = {`@${author}`} />
+      {author && <meta name=&quot;twitte,
+      r:creator&quot; content = {`@${author}`} />
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
       </Head>}
       {/* Article Meta Tags */}
@@ -163,22 +171,31 @@ export const SEO: React.FC<SEOProps> = ({};
       </Head>}
           {author && <meta property=&quot;article:author&quot; content = {author} />
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>}
-</>
+      </Head>};
+
+  return (
       )}
-      {/* Structured Data */}
-      <script type=&quot;application/ld+json&quot;>{JSON.stringify(generateStructuredData())}</script>
-      {/* Preconnect to external domains */}
-      <link rel=&quot;preconnect&quot; href=&quot;https: //fonts.googleapis.com&quot; />
+      {
+    /* Structured Data  */
+    return ({JSON.stringify(generateStructuredData())};
+
+  return (
+      {
+    /* Preconnect to external domains  */
+    return (
       <link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossOrigin=&quot;anonymous&quot; />
-      {/* DNS Prefetch */}
-      <link rel=&quot;dns-prefetch&quot; href=&quot;https: //www.google-analytics.com&quot; />
-      {/* Preload critical resources */}
-      <link rel=&quot;preload&quot;>
-        href=&quot;https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap&quot;
+      {
+    /* DNS Prefetch  */
+    return (
+      {
+    /* Preload critical resources  */
+    return (
+        href=&quot;https: //fonts.googleapis.com/css2?family=Inte,
+      r:wght@400;500;600;700&display=swap&quot;
         as=&quot;style&quot;
       />
     </Helmet>
   )
 {}
-export default SEO;
+export default Page;
+}}}}}

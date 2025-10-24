@@ -8,57 +8,78 @@ import { CheckCircle, Star } from 'lucide-react';
 
 constAICRMPage: React.FC = () =>{constfeatures= [
     {
-      icon: Brain
+      ico,
+      n: Brain,
       title: 'AI-Powered Lead Scoring'
-      description: 'Automatically score and prioritize leads using machine learning algorithms that analyze behavior patterns.'
-      benefits: ['Behavioral analysis', 'Predictive scoring', 'Lead prioritization', 'Conversion optimization']
+      descriptio,
+      n: 'Automatically score and prioritize leads using machine learning algorithms that analyze behavior patterns.'
+      benefit,
+      s: ['Behavioral analysis', 'Predictive scoring', 'Lead prioritization', 'Conversion optimization']
    }
-    {icon: Users
+    {
+      icon: Users,
       title: 'Intelligent Customer Segmentation'
-      description: 'AI automatically segments customers based on behavior, preferences, and value potential.'
+      descriptio,
+      n: 'AI automatically segments customers based on behavior, preferences, and value potential.'
       benefits: ['Dynamic segmentation', 'Behavioral insights', 'Personalization', 'Targeted campaigns']
    }
-    {icon: Target
+    {
+      icon: Target,
       title: 'Predictive Sales Forecasting'
-      description: 'Accurate sales predictions using AI that analyzes historical data and market trends.'
-      benefits: ['Revenue forecasting', 'Pipeline analysis', 'Risk assessment', 'Goal tracking']
+      descriptio,
+      n: 'Accurate sales predictions using AI that analyzes historical data and market trends.'
+      benefit,
+      s: ['Revenue forecasting', 'Pipeline analysis', 'Risk assessment', 'Goal tracking']
    }
-    {icon: TrendingUp
+    {
+      icon: TrendingUp,
       title: 'Automated Follow-ups'
-      description: 'AI schedules and personalizes follow-up communications based on customer engagement patterns.'
-      benefits: ['Smart scheduling', 'Personalized content', 'Engagement tracking', 'Response optimization']
+      descriptio,
+      n: 'AI schedules and personalizes follow-up communications based on customer engagement patterns.'
+      benefit,
+      s: ['Smart scheduling', 'Personalized content', 'Engagement tracking', 'Response optimization']
     }
   ]
 
-  constcapabilities= []
+  const capabilities = []
     {title: 'Smart Contact Management'
-      description: 'AI automatically enriches contact data and maintains up-to-date information.'
-      icon: Users
+      descriptio,
+      n: 'AI automatically enriches contact data and maintains up-to-date information.'
+      ico,
+      n: Users,
       stats: '9 5% data accuracy'
    }
     {title: 'Intelligent Email Automation'
-      description: 'Send personalized emails at the perfect time with AI-optimized content.'
-      icon: Mail
+      descriptio,
+      n: 'Send personalized emails at the perfect time with AI-optimized content.'
+      ico,
+      n: Mail,
       stats: '4 0% higher open rates'
    }
     {title: 'Advanced Analytics'
-      description: 'Comprehensive insights into customer behavior and sales performance.'
-      icon: BarChart
+      descriptio,
+      n: 'Comprehensive insights into customer behavior and sales performance.'
+      ico,
+      n: BarChart,
       stats: 'Real-time insights'
    }
     {title: 'Mobile-First Design'
-      description: 'Access your CRM anywhere with our responsive mobile application.'
-      icon: Phone
+      descriptio,
+      n: 'Access your CRM anywhere with our responsive mobile application.'
+      ico,
+      n: Phone,
       stats: '100% mobile optimized'
     }
   ]
 
-  constpricingPlans= []
+  const pricingPlans = []
     {name: 'Starter'
       price: '$4 9'
       period: '/$1/month'
-      description: 'Perfect for small teams getting started'
-      features: []
+      descriptio,
+      n: 'Perfect for small teams getting started'
+      feature,
+      s: []
         'Up to 1,000contacts'
         'Basic AI lead scoring'
         'Email automation'
@@ -71,8 +92,10 @@ constAICRMPage: React.FC = () =>{constfeatures= [
     {name: 'Professional'
       price: '$9 9'
       period: '/$1/month'
-      description: 'Ideal for growing businesses'
-      features: []
+      descriptio,
+      n: 'Ideal for growing businesses'
+      feature,
+      s: []
         'Up to 1 0,000contacts'
         'Advanced AI features'
         'Custom workflows'
@@ -88,7 +111,8 @@ constAICRMPage: React.FC = () =>{constfeatures= [
       price: '$19 9'
       period: '/$1/month'
       description: 'Comprehensive solution for large organizations'
-      features: []
+      feature,
+      s: []
         'Unlimited contacts'
         'Full AI suite'
         'Custom integrations'
@@ -98,35 +122,42 @@ constAICRMPage: React.FC = () =>{constfeatures= [
         'Custom development'
         'Dedicated account manager'
       ]
-      popular: false
+      popula,
+      r: false
     }
   ]
 
-  consttestimonials= []
+  const testimonials = []
     {name: 'Sarah Johnson'
       company: 'TechStart Inc.'
       role: 'Sales Director'
-      content: 'AI CRM increased our lead conversion by65% and saved us 20hours per week on manual tasks.'
-      rating:5}
+      conten,
+      t: 'AI CRM increased our lead conversion by65% and saved us 20hours per week on manual tasks.'
+      ratin,
+      g:5}
     {name: 'Michael Chen'
       company: 'GrowthCorp'
       role: 'VP of Sales'
-      content: 'The predictive analytics helped us identify high-value prospects we would have missed otherwise.'
-      rating:5}
+      conten,
+      t: 'The predictive analytics helped us identify high-value prospects we would have missed otherwise.'
+      ratin,
+      g:5}
     {name: 'Emily Rodriguez'
       company: 'ScaleUp Solutions'
       role: 'Marketing Manager'
-      content: 'Automated follow-ups and personalized content have dramatically improved our customer engagement.'
-      rating: 5
+      conten,
+      t: 'Automated follow-ups and personalized content have dramatically improved our customer engagement.'
+      ratin,
+      g: 5
     }
   ]
 
 const Page = () => {};
-  return ()
-    <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+  return (</div>
       <Navigation />
-      {/* Hero Section */}
-      <section className="pt-20pb-16 p x-4"></section>
+      {
+    /* Hero Section  */
+    return (</section>
         <div className="max-w-7x lmx-auto"></div>
           <div className="tex t-centermb-16"></div>
             <h1 className="tex t-5xlmd: text-6xl font-bold text-white mb-6 neon-text">
@@ -148,8 +179,9 @@ const Page = () => {};
               </button>
             </div>
           </div>
-          {/* Stats */}
-          <div className="gri dgrid-cols-2 md: grid-cols-4 gap-8 mb-16"></div>
+          {
+    /* Stats  */
+    return (</div>
             <div className="tex t-center"></div>
               <div className="tex t-4xlfont-bold text-cyan-400 mb-2">65%</div>
               <div className="tex t-gray-300">Higher Conversion Rate</div>
@@ -169,59 +201,78 @@ const Page = () => {};
           </div>
         </div>
       </section>
-      {/* Features Section */}
-      <section className="py-16px-4"></section>
+      {
+    /* Features Section  */
+    return (</section>
         <div className="max-w-7x lmx-auto"></div>
           <div className="tex t-centermb-16"></div>
             <h2 className="tex t-4xlfont-bold text-white mb-4">Intelligent CRM Features</h2>
             <p className="tex t-xltext-gray-300">Everything you need to manage and grow your customer relationships</p>
           </div>
-          <div className="gri dgrid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>
+          <div className="gri dgrid-cols-1 md: grid-cols-2 l,
+      g:grid-cols-4 gap-8"></div>
             {features.map((feature, index) => ()
               <div key={index} className="cyb er-cardp-6"></div>
                 <div className="w-12h-12bg-g r adient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4"></div>
                   <feature.icon className="w-6h-6te x t-white" />
                 </div>
-                <h3 className="tex t-xlfont-semibold text-white mb-3">{feature.title}</h3>
-                <p className="tex t-gray-300mb-4">{feature.description}</p>
+                <h3 className="tex t-xlfont-semibold text-white mb-3">{feature.title};
+
+  return (
+                <p className="tex t-gray-300mb-4">{feature.description};
+
+  return (
                 <ul className="spa ce-y-2">
         </div>
                   {feature.benefits.map((benefit, idx) => ()
                     <li key={idx} className="fle xitems-center text-sm text-gray-400">
         </div>
                       <CheckCircle className="w-4h-4te x t-cyan-400 mr-2" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
+                      {benefit};
+
+  return (
+                  ))};
+
+  return (
               </div>
-            ))}
-          </div>
+            ))};
+
+  return (
         </div>
       </section>
-      {/* Capabilities Section */}
-      <section className="py-16px-4 b g-slate-800/50"></section>
+      {
+    /* Capabilities Section  */
+    return (</section>
         <div className="max-w-7x lmx-auto"></div>
           <div className="tex t-centermb-16"></div>
             <h2 className="tex t-4xlfont-bold text-white mb-4">Powerful Capabilities</h2>
             <p className="tex t-xltext-gray-300">Advanced features that set us apart from traditional CRM systems</p>
           </div>
-          <div className="gri dgrid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>
+          <div className="gri dgrid-cols-1 md: grid-cols-2 l,
+      g:grid-cols-4 gap-8"></div>
             {capabilities.map((capability, index) => ()
               <div key={index} className="cyb er-cardp-6"></div>
                 <div className="w-12h-12bg-g r adient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4"></div>
                   <capability.icon className="w-6h-6te x t-white" />
                 </div>
-                <h3 className="tex t-xlfont-semibold text-white mb-3">{capability.title}</h3>
-                <p className="tex t-gray-300mb-4">{capability.description}</p>
-                <div className="tex t-cyan-400font-semibold text-lg">{capability.stats}</div>
+                <h3 className="tex t-xlfont-semibold text-white mb-3">{capability.title};
+
+  return (
+                <p className="tex t-gray-300mb-4">{capability.description};
+
+  return (
+                <div className="tex t-cyan-400font-semibold text-lg">{capability.stats};
+
+  return (
               </div>
-            ))}
-          </div>
+            ))};
+
+  return (
         </div>
       </section>
-      {/* Testimonials Section */}
-      <section className="py-16px-4"></section>
+      {
+    /* Testimonials Section  */
+    return (</section>
         <div className="max-w-7x lmx-auto"></div>
           <div className="tex t-centermb-16"></div>
             <h2 className="tex t-4xlfont-bold text-white mb-4">What Our Customers Say</h2>
@@ -233,20 +284,27 @@ const Page = () => {};
                 <div className="fle xitems-center mb-4"></div>
                   {[...Array(testimonial.rating)].map((_, i) => ()
                     <Star key={i} className="w-5h-5te x t-yellow-400 fill-current" />
-                  ))}
-                </div>
+                  ))};
+
+  return (
                 <p className="tex t-gray-300mb-4 italic">"{testimonial.content}"</p>
                 
-                  <div className="fon t-semiboldtext-white">{testimonial.name}</div>
-                  <div className="tex t-smtext-gray-400">{testimonial.role}, {testimonial.company}</div>
+                  <div className="fon t-semiboldtext-white">{testimonial.name};
+
+  return (
+                  <div className="tex t-smtext-gray-400">{testimonial.role}, {testimonial.company};
+
+  return (
                 </div>
               </div>
-            ))}
-          </div>
+            ))};
+
+  return (
         </div>
       </section>
-      {/* Pricing Section */}
-      <section className="py-16px-4 b g-slate-800/50"></section>
+      {
+    /* Pricing Section  */
+    return (</section>
         <div className="max-w-7x lmx-auto"></div>
           <div className="tex t-centermb-16"></div>
             <h2 className="tex t-4xlfont-bold text-white mb-4">Simple, Transparent Pricing</h2>
@@ -262,14 +320,22 @@ const Page = () => {};
                       Most Popular
                     </span>
                   </div>
-                )}
-                <div className="tex t-centermb-6"></div>
-                  <h3 className="tex t-2xlfont-bold text-white mb-2">{plan.name}</h3>
+                )};
+
+  return (</div>
+                  <h3 className="tex t-2xlfont-bold text-white mb-2">{plan.name};
+
+  return (
                   <div className="tex t-4xlfont-bold text-cyan-400 mb-2"></div>
-                    {plan.price}
-                    <span className="tex t-lgtext-gray-400">{plan.period}</span>
+                    {plan.price};
+
+  return ({plan.period};
+
+  return (
                   </div>
-                  <p className="tex t-gray-300">{plan.description}</p>
+                  <p className="tex t-gray-300">{plan.description};
+
+  return (
                 </div>
                 <ul className="spa ce-y-3mb-8">
         </div>
@@ -277,24 +343,29 @@ const Page = () => {};
                     <li key={idx} className="fle xitems-center text-gray-300">
         </div>
                       <CheckCircle className="w-5h-5te x t-cyan-400 mr-3" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${}>
-                  plan.popular
-                    ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover: from-cyan-600 hover:to-purple-700' 
-                    : 'bg-slate-700 text-white hover:bg-slate-600'
+                      {feature};
+
+  return (
+                  ))};
+
+  return (
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${}>plan.popular
+                    ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover: from-cyan-600 hove,
+      r:to-purple-700' 
+                    : 'bg-slate-700 text-white hove,
+      r:bg-slate-600'
                 }`}>
                   Get Started
                 </button>
               </div>
-            ))}
-          </div>
+            ))};
+
+  return (
         </div>
       </section>
-      {/* CTA Section */}
-      <section className="py-16px-4 b g-gradient-to-r from-purple-600/20 to-blue-600/20"></section>
+      {
+    /* CTA Section  */
+    return (</section>
         <div className="max-w-4x lmx-auto text-center"></div>
           <h2 className="tex t-4xlfont-bold text-white mb-6">Ready to Transform Your CRM?</h2>
           <p className="tex t-xltext-gray-300 mb-8">
@@ -318,3 +389,4 @@ const Page = () => {};
 {};
 ;
 export default Page;
+}}}}}}}

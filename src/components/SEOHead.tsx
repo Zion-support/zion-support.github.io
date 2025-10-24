@@ -1,40 +1,7 @@
 import React from 'react';
-import { Helmet } from 'lucide-react';
-import React from 'react';
-import { Helmet } from 'lucide-react';
-
-interface SEOHeadProps {}
-  title?: string
-  description?: string
-  keywords?: string
-  image?: string
-  url?: string
-  type?: string
-  author?: string
-  publishedTime?: string
-  modifiedTime?: string
-  section?: string
-  tags?: string[]
-  noindex?: boolean
-  nofollow?: boolean
-  canonical?: string
-{}
-const SEOHead: React.FC<SEOHeadProps> = ({};
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Transform your business with cutting-edge technology.',
-  keywords = 'AI solutions, artificial intelligence, enterprise automation, digital transformation, cloud services, machine learning, business intelligence',
-  image = 'https://ziontechgroup.com/og-image.jpg',
-  url = 'https://ziontechgroup.com',
-  type = 'website',
-  author = 'Zion Tech Group',
-  publishedTime,
-  modifiedTime,
-  section,
-  tags = [],
-  noindex = false,
-  nofollow = false,
   canonical
-{}) => {}
+{}) => {};
+
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || url;
   const robotsContent = `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`;
@@ -49,26 +16,35 @@ const SEOHead: React.FC<SEOHeadProps> = ({};
          {author&&<metaproperty=&quot;article:author&quot;content = {author} />}
          {section&&<metaproperty=&quot;article:section&quot;content = {section} />}
           {tags.map((tagindex) => ();
-         <metakey={index}property=&quot;article:tag&quot; content = {tag} />))}
-</>)}
-      {/* Additional SEO MetaTags */}
-   <metaname=&quot;theme-color&quot;content=&quot;#4f46e5&quot; /><metaname=&quot;msapplication-TileColor&quot;content=&quot;#4f46e5&quot; /><metaname=&quot;apple-mobile-web-app-title&quot;content=&quot;Zion TechGroup&quot; /><metaname=&quot;application-name&quot;content=&quot;Zion TechGroup&quot; />{/* StructuredData */}
-    <scripttype=&quot;application/ld+json&quot;>{JSON.stringify({}
-          '@context': 'https:// schema.org'
+         <metakey={index}property=&quot;article:tag&quot; content = {tag} />))};
+
+  return ()}
+      {
+    /* Additional SEO MetaTags  */
+    return (<metaname=&quot;msapplication-TileColor&quot;content=&quot;#4f46e5&quot; /><metaname=&quot;apple-mobile-web-app-title&quot;content=&quot;Zion TechGroup&quot; /><metaname=&quot;application-name&quot;content=&quot;Zion TechGroup&quot; />{
+    /* StructuredData  */
+    return ({JSON.stringify({}
+          '@context': 'https: // schema.org'
           '@type': type = == 'article' ? 'Article' : 'WebPage'
-          name: fullTitle
-          description: description
+          nam,
+      e: fullTitle,
+      description: description
           url: url
-          image: image
-          author: {}
+          imag,
+      e: image
+          autho,
+      r: {}
             '@type': 'Organization'
             name : author
          }
           publisher: {'@type': 'Organization'
-            name: 'Zion Tech Group'
-            logo: {}
+            nam,
+      e: 'Zion Tech Group'
+            log,
+      o: {}
               '@type': 'ImageObject'
-              url: 'https:// ziontechgroup.com/logo.png'
+              url: 'http,
+      s:// ziontechgroup.com/logo.png'
            }
 {          },
           ...(type=== 'article' && {datePublished: publishedTime,
@@ -77,9 +53,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({};
               '@id': url
            }
 {          })
-{{        })}
-      </script>
+{{        })};
+
+  return (
     </Helmet>
   )
 {}
-export default SEOHead;
+export default Page;
+}}

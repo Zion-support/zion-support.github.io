@@ -16,8 +16,7 @@ const $1: React.FC = () => {;
   ]
 
 const Page = () => {};
-  return ()
-      </div>
+  return (
       <Footer />
 </>
   )

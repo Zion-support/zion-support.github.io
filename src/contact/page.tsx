@@ -6,73 +6,17 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Phone, Mail } from 'lucide-react';
 import { MapPin, Clock } from 'lucide-react';
-
-constContactPage: React.FC = () =>{const [formDatasetFormData] = useState({}
-    name: ''
-    email: ''
-    company: ''
-    phone: ''
-    service: ''
-    message: ''
-  })
-;
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {};
-    const { name, value } = e.target;
-    setFormData(prev => ({}
-      ...prev
-      [name]: value
-{    }))
-{  }
-
-  const handleSubmit = (e: React.FormEvent) => {};
-    e.preventDefault()
-    // Here you would typically send the form data to your backend
-    // // // console.log('Form submitted:', formData)
-    setIsSubmitted(true)
-    // Reset form after 3 seconds
-    setTimeout(() => {}
-      setIsSubmitted(false)
-      setFormData({}
-        name: ''
-        email: ''
-        company: ''
-        phone: ''
-        service: ''
-        message: ''
-{      })
-{    }, 3000)
-{  }
-
-  constservices= []
-    'AI Services'
-    'IT Services'
-    'Micro SAAS Solutions'
-    'Cloud Migration'
-    'Cybersecurity'
-    'DevOps & CI/CD'
-    'Database Management'
-    'Mobile App Development'
-    'Custom Development'
-    'Other'
-  ]
-
-  const achievements = [];
-    { icon: Users, text: '100+ Happy Clients' },
-    { icon: Award, text: '50+ Successful Projects' },
-    { icon: TrendingUp, text: '300% Average ROI' },
     { icon: Shield, text: '99.9% Uptime Guarantee' }
   ]
 
 const Page = () => {};
-  return ()
-    <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+  return (</div>
       <Navigation />
       <main className="con tainermx-auto px-4 py-16 pt-24">
         </div>
-        {/* Hero Section */}
-        <section className="tex t-centermb-16"></section>
+        {
+    /* Hero Section  */
+    return (</section>
           <h1 className="tex t-4xlmd: text-6xl font-bold text-white mb-6"></h1>
             <span className="bg-gr adient-to-rfrom-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
         </div>
@@ -85,9 +29,11 @@ const Page = () => {};
             Get in touch with our experts for a free consultation.
           </p>
         </section>
-        <div className="gri dgrid-cols-1 lg:grid-cols-2 gap-12"></div>
-          {/* Contact Form */}
-          <div className="bg-sl ate-800/50backdrop-blur-sm rounded-xl p-8"></div>
+        <div className="gri dgrid-cols-1 l,
+      g:grid-cols-2 gap-12"></div>
+          {
+    /* Contact Form  */
+    return (</div>
             <h2 className="tex t-2xlfont-bold text-white mb-6">Get Your Free Consultation</h2>
             {isSubmitted ? ()
               <div className="tex t-centerpy-8"></div>
@@ -109,21 +55,25 @@ const Page = () => {};
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                     requiredclassName="w-ful lpx-4 py-3 bg-slate-700text-white rounded-lg border border-slate-600 focus: border-cyan-400 focus:outline-nonefocus:ring-2 focus:ring-cyan-400/20"
+                     requiredclassName="w-ful lpx-4 py-3 bg-slate-700text-white rounded-lg border border-slate-600 focus: border-cyan-400 focus:outline-nonefocu,
+      s:ring-2 focu,
+      s:ring-cyan-400/20"
                      placeholder="Your fullname"
-                    /></di><di v><labelhtmlFor="email"className="blo cktext-sm font-medium text-gray-300mb-2">Email Address *
+                    /></di><di v><labe lhtmlFor="email"className="blo cktext-sm font-medium text-gray-300mb-2">Email Address *
                   </labe><inputtype ="email">
                      id="email"
                      name="email"
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-ful lpx-4 py-3 bg-slate-700 text-white rounded-lg border border-slate-600 focus: border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20"
+                      className="w-ful lpx-4 py-3 bg-slate-700 text-white rounded-lg border border-slate-600 focus: border-cyan-400 focus:outline-none focus:ring-2 focu,
+      s:ring-cyan-400/20"
                       placeholder="your@email.com"
                     />
                   </div>
                 </div>
-                <div className="gri dgrid-cols-1 md:grid-cols-2 gap-6"></div>
+                <div className="gri dgrid-cols-1 m,
+      d:grid-cols-2 gap-6"></div>
                   
                     <label htmlFor="company" className="blo cktext-sm font-medium text-gray-300 mb-2">
         </div>
@@ -134,15 +84,19 @@ const Page = () => {};
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
-                     className="w-ful lpx-4 py-3 bg-slate-700text-white rounded-lg border border-slate-600 focus: border-cyan-400 focus:outline-nonefocus:ring-2 focus:ring-cyan-400/20"
+                     className="w-ful lpx-4 py-3 bg-slate-700text-white rounded-lg border border-slate-600 focus: border-cyan-400 focus:outline-nonefocu,
+      s:ring-2 focu,
+      s:ring-cyan-400/20"
                      placeholder="Your companyname"
-                    /></di><di v><labelhtmlFor="phone"className="blo cktext-sm font-medium text-gray-300mb-2">Phone Number
+                    /></di><di v><labe lhtmlFor="phone"className="blo cktext-sm font-medium text-gray-300mb-2">Phone Number
                   </labe><inputtype ="tel">
                      id="phone"
                      name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-ful lpx-4 py-3 bg-slate-700 text-white rounded-lg border border-slate-600 focus: border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20"
+                      className="w-ful lpx-4 py-3 bg-slate-700 text-white rounded-lg border border-slate-600 focus: border-cyan-400 focus:outline-none focu,
+      s:ring-2 focu,
+      s:ring-cyan-400/20"
                       placeholder="(555) 123-4567"
                     />
                   </div>
@@ -156,14 +110,19 @@ const Page = () => {};
                     name="service"
                     value={formData.service}
                     onChange={handleInputChange}
-                    className="w-ful lpx-4 py-3 bg-slate-700 text-white rounded-lg border border-slate-600 focus: border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20"
+                    className="w-ful lpx-4 py-3 bg-slate-700 text-white rounded-lg border border-slate-600 focus: border-cyan-400 focus:outline-none focu,
+      s:ring-2 focu,
+      s:ring-cyan-400/20"
                   >
         </div>
                     <option value="">Select a service</option>
                     {services.map((service, index) => ()
-                      <option key={index} value={service}>{service}</option>
-                    ))}
-                  </select>
+                      <option key={index} value={service}>{service};
+
+  return (
+                    ))};
+
+  return (
                 </div>
                 
                   <label htmlFor="message" className="blo cktext-sm font-medium text-gray-300 mb-2">
@@ -180,19 +139,23 @@ const Page = () => {};
                     placeholder="Tell us about your project and how we can help..."
                   />
                 </div>
-                <button type="submit">
-                  className="w-ful lbg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105 flex items-center justify-center"
+                <button type="submit">className="w-ful lbg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hove,
+      r:to-purple-700 transition-all duration-300 hove,
+      r:scale-105 flex items-center justify-center"
                 ></button>
                   <Send className="w-5h-5mr-2" />
                   Send Message
                 </button>
               </form>
-            )}
-          </div>
-          {/* Contact Information */}
-          <div className="spa ce-y-8"></div>
-            {/* Contact Details */}
-            <div className="bg-sl ate-800/50backdrop-blur-sm rounded-xl p-8"></div>
+            )};
+
+  return (
+          {
+    /* Contact Information  */
+    return (</div>
+            {
+    /* Contact Details  */
+    return (</div>
               <h2 className="tex t-2xlfont-bold text-white mb-6">Get In Touch</h2>
               <div className="spa ce-y-6"></div>
                 <div className="fle xitems-start space-x-4"></div>
@@ -214,7 +177,9 @@ const Page = () => {};
                   </div>
                   
                     <h3 className="tex t-lgfont-semibold text-white mb-1">Email</h3>
-                    <a href="mailto:kleber@ziontechgroup.com" className="tex t-cyan-400hover:text-cyan-300 transition-colors">
+                    <a href="mailt,
+      o:kleber@ziontechgroup.com" className="tex t-cyan-400hove,
+      r:text-cyan-300 transition-colors">
         </div>
                       kleber@ziontechgroup.com
                     </a>
@@ -242,15 +207,18 @@ const Page = () => {};
                     <h3 className="tex t-lgfont-semibold text-white mb-1">Business Hours</h3>
                     <p className="tex t-gray-300"></p>
                       Monday - Friday: 9:00 AM - 6:00 PM EST<br />
-                      Saturday: 10:00 AM - 4:00 PM EST<br />
-                      Sunday: Closed
+                      Saturday: 10:00 AM - ,
+      4:00 PM EST<br />
+                      Sunda,
+      y: Closed
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-            {/* Achievements */}
-            <div className="bg-gr adient-to-rfrom-indigo-900/50 to-purple-900/50 rounded-xl p-8"></div>
+            {
+    /* Achievements  */
+    return (</div>
               <h3 className="tex t-xlfont-bold text-white mb-6">Why Choose Us?</h3>
               <div className="gri dgrid-cols-2 gap-4"></div>
                 {achievements.map((achievement, index) => ()
@@ -258,21 +226,27 @@ const Page = () => {};
                     <div className="w-12h-12bg-c y an-500/20 rounded-full flex items-center justify-center mx-auto mb-2"></div>
                       <achievement.icon className="w-6h-6te x t-cyan-400" />
                     </div>
-                    <p className="tex t-smtext-gray-300">{achievement.text}</p>
+                    <p className="tex t-smtext-gray-300">{achievement.text};
+
+  return (
                   </div>
-                ))}
-              </div>
+                ))};
+
+  return (
             </div>
-            {/* Quick Contact */}
-            <div className="bg-sl ate-800/50backdrop-blur-sm rounded-xl p-8 text-center"></div>
+            {
+    /* Quick Contact  */
+    return (</div>
               <h3 className="tex t-xlfont-bold text-white mb-4">Need Immediate Assistance?</h3>
               <p className="tex t-gray-300mb-6">Call us now for urgent IT support or emergency services.</p>
               <a href="tel: +13024640950">
-                className="inl ine-flexitems-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
+                className="inl ine-flexitems-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hove,
+      r:scale-105"
               >
         </div>
                 <Phone className="w-5h-5mr-2" />
-                Call Now: (302) 464-0950
+                Call No,
+      w: (302) 464-0950
               </a>
             </div>
           </div>
@@ -283,3 +257,4 @@ const Page = () => {};
 {};
 ;
 export default Page;
+}}}}}}

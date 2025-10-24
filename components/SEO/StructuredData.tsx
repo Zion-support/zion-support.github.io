@@ -13,11 +13,3 @@ const StructuredData: React.FC<StructuredDataProps> = ({ className = '' }) => {
   );
 };
 export default StructuredData
-=======
-      <p>This component is under construction.</p>
-    </div>
-  );
-};
-
-export default StructuredData;
->>>>>>> dd7fda2613d852773835e2791dbc2d1b243c1cce
