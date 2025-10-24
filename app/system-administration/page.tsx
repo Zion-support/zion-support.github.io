@@ -4,32 +4,6 @@ import { Helmet } from "react-helmet-async";
 import { CheckCircle, ArrowRight, Star, BarChart, Shield, Zap } from "lucide-react";
 
 const SystemAdministrationPage: React.FC = () => {
-  const features = [
-    {
-      icon: <BarChart className="w-8 h-8" />,
-      title: "Advanced Analytics",
-      description: "Comprehensive data analysis with AI-powered insights and real-time reporting."
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Secure & Reliable",
-      description: "Enterprise-grade security with 99.9% uptime guarantee and advanced protection."
-    },
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Expert Support",
-      description: "24/7 expert support and monitoring to ensure your success."
-    }
-  ];
-
-  const benefits = [
-    "Improve efficiency by 40%",
-    "Reduce costs by 30%",
-    "Enhance security posture",
-    "Scale operations seamlessly",
-    "Get 24/7 expert support"
-  ];
-
   return (
     <>
       <Helmet>

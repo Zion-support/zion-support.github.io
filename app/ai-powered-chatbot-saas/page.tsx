@@ -1,43 +1,40 @@
+"use client";
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { CheckCircle, ArrowRight, Star, BarChart, Shield, Zap } from "lucide-react";
 
-                </FuturisticButton>
-              </Link>
+const AiPoweredChatbotSaasPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>AI Powered Chatbot SaaS - Zion Tech Group</title>
+        <meta name="description" content="Professional AI powered chatbot SaaS services by Zion Tech Group. Advanced solutions for your business needs." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              AI Powered Chatbot SaaS
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Professional AI powered chatbot SaaS services by Zion Tech Group. Advanced solutions for your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More
+              </button>
             </div>
-          </ResponsiveContainer>
+          </div>
         </section>
-}"
-  );}"
-}"
-"
-const Page = () => {"
-  return ("
-    <div className="min-h-screen bg-gray-50 py-12">"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">"
-            Service Page"
-          </h1>"
-          <p className="text-xl text-gray-600">"
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700"
-            <Layers className="w-12 h-12 text-cyan-400 mb-4"
-            <h3 className="text-xl font-semibold text-white mb-3"
-            <p className="text-gray-300"
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700"
-            <Layers className="w-12 h-12 text-purple-400 mb-4"
-            <h3 className="text-xl font-semibold text-white mb-3"
-            <p className="text-gray-300"
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700"
-            <Layers className="w-12 h-12 text-yellow-400 mb-4"
-            <h3 className="text-xl font-semibold text-white mb-3"
-            <p className="text-gray-300"
-        <div className="text-center"
-          <p className="text-lg text-gray-300 mb-8"
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"
-              to="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"
-              to="/demo"
-              className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
-  );"
-"
-"
+      </div>
+    </>
+  );
+};
+
+export default AiPoweredChatbotSaasPage;

@@ -1,14 +1,40 @@
-'use client"
-  UserGroupIcon,"
-  ShieldCheckIcon,"
-  DevicePhoneMobileIcon"
-} from '
-  const features  = ['Real-time data visualization',"Custom dashboard creation',"Predictive analytics and forecasting',"Multi-source data integration',"Advanced reporting tools',"Mobile-responsive design',"API access for custom integrations',"Automated alerts and notifications',"Data export capabilities',"Team collaboration features',"White-label options'
-    {name: 'Starter'
-      price: '$99'
-      period: '/month'
-      description: 'Perfect for small businesses'
-        '5 dashboards',"Basic data sources',"Standard reports',"Email support'
-        'Unlimited dashboards',"All data sources',"Advanced analytics',"Priority support',"Up to 10 users',"API access'
-        'Everything in Pro',"Unlimited users',"White-label solution',"Dedicated support',"Custom development',"SLA guarantee'
-                        ? 'bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white": '
+"use client";
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { CheckCircle, ArrowRight, Star, BarChart, Shield, Zap } from "lucide-react";
+
+const AnalyticsDashboardPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Analytics Dashboard - Zion Tech Group</title>
+        <meta name="description" content="Professional analytics dashboard services by Zion Tech Group. Advanced solutions for your business needs." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Analytics Dashboard
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Professional analytics dashboard services by Zion Tech Group. Advanced solutions for your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+
+export default AnalyticsDashboardPage;
