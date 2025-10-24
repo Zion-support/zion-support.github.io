@@ -56,16 +56,19 @@ constAIContentGenerationPage: React.FC= () =>{constcontentServices= [
       icon: <BarChart className="w-6 h-6" />
     }
   ]
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
+        </div>
         {/* Hero Section */}
         <section className="text-center mb-16"></section>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        </div>
             AI Content Generation
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+        </div>
             Transform your content strategy with our AI-powered content generation services.
             Create blog posts, social media content, and marketing copy 10x faster.
           </p>
@@ -74,12 +77,14 @@ constAIContentGenerationPage: React.FC= () =>{constcontentServices= [
               href="/contact"
               className="cyber-button"
             >
+        </div>
               Get Started
             </a>
             <a
               href="tel:+13024640950"
               className="cyber-button"
             >
+        </div>
               Call (302) 464-0950
             </a>
           </div>
@@ -87,17 +92,20 @@ constAIContentGenerationPage: React.FC= () =>{constcontentServices= [
         {/* Services Section */}
         <section className="mb-16"></section>
           <h2 className="text-3xl font-bold text-white mb-8 text-center">
+        </div>
             Content Generation Services
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"></div>
-            {contentServices.map((service, index) => (
+            {contentServices.map((service, index) => ()
               <div key={index} className="cyber-card hologram-card p-6"></div>
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <ul className="text-sm text-gray-400 mb-4">
-                  {service.features.map((feature, idx) => (
+        </div>
+                  {service.features.map((feature, idx) => ()
                     <li key={idx} className="flex items-center mb-1">
+        </div>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {feature}
                     </li>
@@ -108,6 +116,7 @@ constAIContentGenerationPage: React.FC= () =>{constcontentServices= [
                   href="/contact"
                   className="cyber-button w-full text-center block"
                 >
+        </div>
                   Get Started
                 </a>
               </div>
@@ -117,10 +126,11 @@ constAIContentGenerationPage: React.FC= () =>{constcontentServices= [
         {/* Process Section */}
         <section className="mb-16"></section>
           <h2 className="text-3xl font-bold text-white mb-8 text-center">
+        </div>
             How It Works
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {processSteps.map((step, index) => (
+            {processSteps.map((step, index) => ()
               <div key={index} className="text-center"></div>
                 <div className="bg-cyan-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   {step.step}
@@ -135,9 +145,11 @@ constAIContentGenerationPage: React.FC= () =>{constcontentServices= [
         {/* CTA Section */}
         <section className="text-center"></section>
           <h2 className="text-3xl font-bold text-white mb-8">
+        </div>
             Ready to Transform Your Content?
           </h2>
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+        </div>
             Join thousands of businesses using our AI content generation services to create
             engaging, high-quality content at scale.
           </p>
@@ -146,12 +158,14 @@ constAIContentGenerationPage: React.FC= () =>{constcontentServices= [
               href="/contact"
               className="cyber-button"
             >
+        </div>
               Start Free Trial
             </a>
             <a
               href="tel:+13024640950"
               className="cyber-button"
             >
+        </div>
               Call (302) 464-0950
             </a>
           </div>

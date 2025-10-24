@@ -129,7 +129,7 @@ constAIFintechPage: React.FC= () =>{constaiFintechServices= [
     }
   ]
   const categories = [...new Set(aiFintechServices.map(service => service.category))]
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
       <main>
@@ -139,16 +139,20 @@ constAIFintechPage: React.FC= () =>{constaiFintechServices= [
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
             <div className="text-center"></div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
+        </div>
                 AI Fintech Solutions
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-indigo-100 max-w-3xl mx-auto">
+        </div>
                 Revolutionize financial services with cutting-edge AI technology that automates trading, prevents fraud, and optimizes financial decisions
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors">
+        </div>
                   Start Fintech AI
                 </button>
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
+        </div>
                   View Trading Demo
                 </button>
               </div>
@@ -160,9 +164,11 @@ constAIFintechPage: React.FC= () =>{constaiFintechServices= [
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
             <div className="text-center mb-12"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        </div>
                 Why Choose AI Fintech?
               </h2>
               <p className="text-xl text-gray-600">
+        </div>
                 Revolutionary AI technology that transforms financial services and maximizes returns
               </p>
             </div>
@@ -199,21 +205,23 @@ constAIFintechPage: React.FC= () =>{constaiFintechServices= [
           </div>
         </section>
         {/* Services by Category */}
-        {categories.map(category => (
+        {categories.map(category => ()
           <section key={category} className="py-16 bg-gray-50"></section>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
               <div className="text-center mb-12"></div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        </div>
                   {category} Solutions
                 </h2>
                 <p className="text-xl text-gray-600">
+        </div>
                   Advanced {category.toLowerCase()} services powered by state-of-the-art AI technology
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
                 {aiFintechServices
                   .filter(service => service.category === category)
-                  .map((service, index) => (
+                  .map((service, index) => ()
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"></div>
                       <div className="text-4xl mb-4">{service.icon}</div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
@@ -230,8 +238,10 @@ constAIFintechPage: React.FC= () =>{constaiFintechServices= [
                       <div className="mb-4"></div>
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
                         <ul className="space-y-1">
-                          {service.features.map((feature, featureIndex) => (
+        </div>
+                          {service.features.map((feature, featureIndex) => ()
                             <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+        </div>
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                               {feature}
                             </li>
@@ -241,8 +251,9 @@ constAIFintechPage: React.FC= () =>{constaiFintechServices= [
                       <div className="mb-4"></div>
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
                         <div className="flex flex-wrap gap-2"></div>
-                          {service.technologies.map((tech, techIndex) => (
+                          {service.technologies.map((tech, techIndex) => ()
                             <span key={techIndex} className="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">
+        </div>
                               {tech}
                             </span>
                           ))}
@@ -251,8 +262,10 @@ constAIFintechPage: React.FC= () =>{constaiFintechServices= [
                       <div className="mb-6"></div>
                         <h4 className="font-semibold text-gray-900 mb-2">Financial Benefits:</h4>
                         <ul className="space-y-1">
-                          {service.benefits.map((benefit, benefitIndex) => (
+        </div>
+                          {service.benefits.map((benefit, benefitIndex) => ()
                             <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
+        </div>
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
                               {benefit}
                             </li>
@@ -260,6 +273,7 @@ constAIFintechPage: React.FC= () =>{constaiFintechServices= [
                         </ul>
                       </div>
                       <button className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
+        </div>
                         Get Fintech Consultation
                       </button>
                     </div>
@@ -273,9 +287,11 @@ constAIFintechPage: React.FC= () =>{constaiFintechServices= [
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
             <div className="text-center mb-12"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        </div>
                 AI Fintech Capabilities
               </h2>
               <p className="text-xl text-gray-600">
+        </div>
                 Cutting-edge AI technologies that power the future of financial services
               </p>
             </div>
@@ -317,9 +333,11 @@ constAIFintechPage: React.FC= () =>{constaiFintechServices= [
         <section className="py-16 bg-gradient-to-r from-indigo-600 to-purple-600 text-white"></section>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        </div>
               Ready to Transform Financial Services?
             </h2>
             <p className="text-xl mb-8 text-indigo-100">
+        </div>
               Contact our AI fintech experts for a free consultation and custom financial AI strategy
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
@@ -327,12 +345,14 @@ constAIFintechPage: React.FC= () =>{constaiFintechServices= [
                 href="tel:+13024640950"
                 className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors inline-flex items-center"
               >
+        </div>
                 📞 +1 302 464 0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
               >
+        </div>
                 ✉️ kleber@ziontechgroup.com
               </a>
             </div>

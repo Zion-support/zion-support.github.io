@@ -6,10 +6,10 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { Phone } from 'lucide-react'
 
-const AIEmailMarketingPage: React.FC = () => {
-  return (
+const AIEmailMarketingPage: React.FC = () => {}
+  return ()
       </div>
-    </>
+</>
   )
 }
 

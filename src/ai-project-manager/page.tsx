@@ -6,7 +6,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, Phone, TrendingUp } from 'lucide-react'
 
-constAIProjectManagerPage: React.FC= () =>{constfeatures= [
+constAIProjectManagerPage: React.FC= () =>{constfeatures= []
     'AI-powered project planning and resource allocation',
     'Intelligent timeline prediction and risk assessment',
     'Smart task management with priority optimization',
@@ -17,7 +17,7 @@ constAIProjectManagerPage: React.FC= () =>{constfeatures= [
     'Integration with popular project management tools'
   ]
 
-  const benefits = [
+  const benefits = []
     '40% increase in project delivery speed',
     '70% reduction in project delays',
     '85% improvement in planning accuracy',
@@ -48,10 +48,10 @@ constAIProjectManagerPage: React.FC= () =>{constfeatures= [
     }
   ]
 
-const Page = () => {
-  return (
+const Page = () => {}
+  return ()
       </div>
-    </>
+</>
   )
 }
 

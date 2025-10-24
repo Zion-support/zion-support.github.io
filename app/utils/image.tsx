@@ -1,10 +1,10 @@
 import React from 'react'
 'use client'
 import React, { useState, useCallback } from 'react'
-interface ImageProps {
+interface ImageProps {}
 src: string,
 alt: string;}
-interface ImageProps {
+interface ImageProps {}
   src: string,
 alt: string
 width?: number
@@ -64,9 +64,9 @@ const handleError = useCallback(() => {}
 setHasError(true)
 if (onError) onError();}
 }, [onError])
-const imageStyle: React.CSSProperties = {
+const imageStyle: React.CSSProperties = {}
 ...style
-...(fill && {
+...(fill && {}
 position: 'absolute'
 top: 0,
 left: 0,;}
@@ -84,7 +84,7 @@ objectFit: 'cover'}
 if (hasError) {</ImageProps>
 return (</ImageProps>;}
 if (hasError) {}
-return (
+return ()
     <div}
 if (hasError) {;}
 return(<div}
@@ -117,7 +117,7 @@ style={imageStyle}
 )
 }
 return(<img
-return (<img></img>
+return ()
 src={src}
 alt={alt}
 width={width}

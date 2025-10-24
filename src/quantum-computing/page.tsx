@@ -4,7 +4,7 @@ import React from 'react'
 import { Atom, Lock } from 'lucide-react'
 import { CheckCircle, Star, Brain, Shield } from 'lucide-react'
 
-const QuantumComputingPage: React.FC = () => {
+const $1: React.FC = () => {
   const quantumServices = [
     {
       id: 'quantum-algorithms',
@@ -35,7 +35,7 @@ const QuantumComputingPage: React.FC = () => {
       technologies: ['D-Wave', 'IBM Qiskit', 'Rigetti', 'IonQ', 'Custom Algorithms']
     }
   ]
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50"></div>
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-purple-600 to-indigo-700 text-white"></section>
@@ -43,13 +43,16 @@ const QuantumComputingPage: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
           <div className="text-center"></div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
+        </div>
               Quantum Computing Services
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-purple-100 max-w-3xl mx-auto">
+        </div>
               Harness the power of quantum mechanics to solve the world's most complex computational problems
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
+        </div>
                 Explore Quantum Solutions
               </button>
             </div>
@@ -61,9 +64,11 @@ const QuantumComputingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
           <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        </div>
               Why Choose Quantum Computing?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        </div>
               Quantum computing offers unprecedented computational power for solving complex problems
             </p>
           </div>
@@ -97,22 +102,26 @@ const QuantumComputingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
           <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        </div>
               Our Quantum Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        </div>
               Cutting-edge quantum computing services designed to solve your most challenging problems
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
-            {quantumServices.map((service) => (
+            {quantumServices.map((service) => ()
               <div key={service.id} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"></div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
                 <p className="text-gray-600 mb-6">{service.description}</p>
                 <div className="mb-6"></div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
-                    {service.features.map((feature, index) => (
+        </div>
+                    {service.features.map((feature, index) => ()
                       <li key={index} className="flex items-center text-gray-600">
+        </div>
                         <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
                         {feature}
                       </li>
@@ -122,8 +131,10 @@ const QuantumComputingPage: React.FC = () => {
                 <div className="mb-6"></div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-3">Benefits:</h4>
                   <ul className="space-y-2">
-                    {service.benefits.map((benefit, index) => (
+        </div>
+                    {service.benefits.map((benefit, index) => ()
                       <li key={index} className="flex items-center text-gray-600">
+        </div>
                         <Star className="w-5 h-5 text-yellow-500 mr-2" />
                         {benefit}
                       </li>
@@ -145,16 +156,20 @@ const QuantumComputingPage: React.FC = () => {
       <section className="py-16 bg-purple-600 text-white"></section>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        </div>
             Ready to Go Quantum?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
+        </div>
             Let our quantum experts help you harness the power of quantum computing
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
+        </div>
               Get Started Today
             </button>
             <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+        </div>
               Learn More
             </button>
           </div>

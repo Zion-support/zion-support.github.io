@@ -68,7 +68,7 @@ constMarketingToolsPage: React.FC= () =>{constmarketingTools= [
       description: 'Make informed decisions with comprehensive analytics and insights'
     }
   ]
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>Marketing Tools - Zion Tech Group</title>
@@ -79,9 +79,11 @@ constMarketingToolsPage: React.FC= () =>{constmarketingTools= [
       <section className="pt-24 pb-16 px-4"></section>
         <div className="max-w-7xl mx-auto text-center"></div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+        </div>
             AI Marketing Tools
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+        </div>
             Transform your marketing with AI-powered tools for content creation, SEO optimization, social media management, and analytics.
           </p>
           {/* Stats */}
@@ -126,10 +128,11 @@ constMarketingToolsPage: React.FC= () =>{constmarketingTools= [
       <section className="py-16 px-4"></section>
         <div className="max-w-7xl mx-auto"></div>
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+        </div>
             Our Marketing Tools
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            {marketingTools.map((tool, index) => (
+            {marketingTools.map((tool, index) => ()
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300"></div>
                 <div className="text-center mb-6"></div>
                   <div className="text-5xl mb-4">{tool.icon}</div>
@@ -142,8 +145,10 @@ constMarketingToolsPage: React.FC= () =>{constmarketingTools= [
                 <div className="mb-6"></div>
                   <h4 className="font-semibold text-white mb-3">Features:</h4>
                   <ul className="space-y-2">
-                    {tool.features.map((feature, featureIndex) => (
+        </div>
+                    {tool.features.map((feature, featureIndex) => ()
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+        </div>
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
@@ -156,6 +161,7 @@ constMarketingToolsPage: React.FC= () =>{constmarketingTools= [
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
                     className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all inline-block"
                   >
+        </div>
                     Get Started
                   </a>
                 </div>
@@ -168,10 +174,11 @@ constMarketingToolsPage: React.FC= () =>{constmarketingTools= [
       <section className="py-16 px-4"></section>
         <div className="max-w-7xl mx-auto"></div>
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+        </div>
             Why Choose Our Marketing Tools?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => ()
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300"></div>
                 <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
@@ -185,9 +192,11 @@ constMarketingToolsPage: React.FC= () =>{constmarketingTools= [
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600"></section>
         <div className="max-w-4xl mx-auto text-center"></div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        </div>
             Ready to Transform Your Marketing?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
+        </div>
             Get started with our AI marketing tools today and see the difference intelligent automation can make.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
@@ -195,12 +204,14 @@ constMarketingToolsPage: React.FC= () =>{constmarketingTools= [
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
             >
+        </div>
               Call (302) 464-0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
             >
+        </div>
               Email Us
             </a>
           </div>

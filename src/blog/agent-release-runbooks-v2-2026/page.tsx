@@ -3,8 +3,8 @@ import { Calendar } from 'lucide-react'
 import { Clock } from 'lucide-react'
 
 export default function Page
-Page.displayName = "Page"() {
-  return (
+Page.displayName = "Page"() {}
+  return ()
     <main className='min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50'>
       <header className='bg-gradient-to-br from-fuchsia-900 via-purple-900 to-slate-900 text-white py-20'>
         <div className='max-w-5xl mx-auto px-6'></div>
@@ -47,7 +47,7 @@ Page.displayName = "Page"() {
       <section className='py-16'></section>
         <div className='max-w-4xl mx-auto px-6'></div>
           <div className='bg-gradient-to-r from-fuchsia-600 to-indigo-600 text-white rounded-2xl p-8 flex items-center justify-between gap-4'></div>
-            <div></div>
+            
               <h3 className='text-2xl font-bold flex items-center gap-2'></h3>
                 <FileWarning /> Prevent Regressions
               </h3>

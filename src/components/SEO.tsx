@@ -6,7 +6,7 @@
 import React from 'react'
 import { Helmet } from 'lucide-react'
 
-export interface SEOProps {
+export interface SEOProps {}
   title?: string
   description?: string
   keywords?: string[]
@@ -26,20 +26,19 @@ export interface SEOProps {
 const defaultSEO= {title: 'Zion Tech Group - AI & IT Solutions',
   description:
     'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve300% ROI with cutting-edge AI technology.',
-  keywords: [
+  keywords: []
     'AI',
     'artificial intelligence',
     'enterprise solutions',
     'digital transformation',
-    'IT services',
-  ],
+    'IT services'],
   image: 'https:// ziontechgroup.com/og-image.jpg',
   url: 'https:// ziontechgroup.com',
   type: 'website' as const,
   locale: 'en_US',
   twitterCard: 'summary_large_image' as const
 }
-export const SEO: React.FC<SEOProps> = ({
+export const SEO: React.FC<SEOProps> = ({}
   title,
   description,
   keywords,
@@ -55,7 +54,7 @@ export const SEO: React.FC<SEOProps> = ({
   twitterCard= default SEO.twitterCard,
   locale= default SEO.locale,
   alternateLocales= []}) => {constseo= {
-    title: title ?`${title} | Zion TechGroup` : default SEO.title,
+  title: title ?`${title} | Zion TechGroup` : default SEO.title,
     description: description || default SEO.description,
     keywords: keywords || default SEO.keywords,
     image: image || default SEO.image,
@@ -65,11 +64,11 @@ export const SEO: React.FC<SEOProps> = ({
     locale
   }
   // Generate structured data
-  const generateStructuredData = () => {
-    if (structuredData) {
+  const generateStructuredData = () => {}
+    if (structuredData) {}
       return structuredData
     }
-    const baseStructuredData: Record<string, unknown> = {
+    const baseStructuredData: Record<string, unknown> = {}
       '@context': 'https://schema.org',
       '@type': type === 'article' ? 'Article' : 'WebPage',
       headline: seo.title,
@@ -77,21 +76,21 @@ export const SEO: React.FC<SEOProps> = ({
       url: seo.url,
       image: seo.image
     }
-    if (author) {
-      baseStructuredData.author = {
+    if (author) {}
+      baseStructuredData.author = {}
         '@type': 'Person',
         name: author
       }
     }
-    if (publishDate) {
+    if (publishDate) {}
       baseStructuredData.datePublished = publishDate
     }
-    if (modifiedDate) {
+    if (modifiedDate) {}
       baseStructuredData.dateModified = modifiedDate
     }
     return baseStructuredData
   }
-  return (
+  return ()
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{seo.title}</title>
@@ -110,7 +109,7 @@ export const SEO: React.FC<SEOProps> = ({
       <meta property=&quot;og:locale&quot; content={seo.locale} />
       <meta property=&quot;og:site_name&quot; content=&quot;Zion Tech Group&quot; />
       {/* Alternate Locales */}
-      {alternateLocales.map(({ locale: altLocale, url: altUrl }) => (
+      {alternateLocales.map(({ locale: altLocale, url: altUrl }) => ()
         <React.Fragment key={altLocale}>
           <meta property=&quot;og:locale:alternate&quot; content={altLocale} />
           <link rel=&quot;alternate&quot; hrefLang={altLocale} href={altUrl} />
@@ -124,12 +123,12 @@ export const SEO: React.FC<SEOProps> = ({
       <meta name=&quot;twitter:site&quot; content=&quot;@ziontechgroup&quot; />
       {author && <meta name=&quot;twitter:creator&quot; content={`@${author}`} />}
       {/* Article Meta Tags */}
-      {type === 'article' && (
+      {type === 'article' && ()
         <>
           {publishDate && <meta property=&quot;article:published_time&quot; content={publishDate} />}
           {modifiedDate && <meta property=&quot;article:modified_time&quot; content={modifiedDate} />}
           {author && <meta property=&quot;article:author&quot; content={author} />}
-        </>
+</>
       )}
       {/* Structured Data */}
       <script type=&quot;application/ld+json&quot;>{JSON.stringify(generateStructuredData())}</script>

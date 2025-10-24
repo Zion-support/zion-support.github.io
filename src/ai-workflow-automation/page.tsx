@@ -7,7 +7,7 @@ import SEOOptimizer from '../components/SEOOptimizer'
 import { Workflow } from 'lucide-react'
 import { CheckCircle, Phone, Mail } from 'lucide-react'
 
-const AIWorkflowAutomationPage: React.FC = () => {
+const $1: React.FC = () => {
   const features = [
     {
       icon: Workflow,
@@ -49,14 +49,14 @@ const AIWorkflowAutomationPage: React.FC = () => {
       features: ['Unlimited workflows', 'Custom AI models', 'Advanced analytics', 'Dedicated support', 'On-premise deployment']
     }
   ]
-  const stats = [
+  const stats = []
     { number: '70%', label: 'Process Efficiency' },
     { number: '90%', label: 'Error Reduction' },
     { number: '50%', label: 'Time Savings' },
     { number: '99.9%', label: 'Reliability' }
   ]
 
-  constuseCases= [
+  constuseCases= []
     {title: 'HR Onboarding',
       description: 'Automate employee onboarding processes from application to first day.',
       icon: Users
@@ -77,10 +77,10 @@ const AIWorkflowAutomationPage: React.FC = () => {
 
   const pricing = pricingPlans
 
-const Page = () => {
-  return (
+const Page = () => {}
+  return ()
       </div>
-    </>
+</>
   )
 }
 

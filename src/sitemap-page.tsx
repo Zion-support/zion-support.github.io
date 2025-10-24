@@ -3,8 +3,8 @@ import { Helmet } from 'lucide-react'
 import React from 'react';
 import { Helmet } from 'lucide-react';
 
-const SitemapPage: React.FC = () => {
-  const pages = [
+const $1: React.FC = () => {
+  const pages = []
     { url: '/', title: 'Home', priority: '1.0' },
     { url: '/about', title: 'About Us', priority: '0.8' },
     { url: '/services', title: 'All Services', priority: '0.9' },
@@ -34,12 +34,11 @@ const SitemapPage: React.FC = () => {
     { url: '/blog', title: 'Blog', priority: '0.7' },
     { url: '/guides', title: 'Technical Guides', priority: '0.6' },
     { url: '/privacy', title: 'Privacy Policy', priority: '0.3' },
-    { url: '/terms', title: 'Terms of Service', priority: '0.3' },
-  ]
-  return (
+    { url: '/terms', title: 'Terms of Service', priority: '0.3' }]
+  return ()
         </div>
       </div>
-    </>
+</>
   )
 }
 export default SitemapPage

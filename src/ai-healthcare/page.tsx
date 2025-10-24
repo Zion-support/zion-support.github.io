@@ -127,9 +127,9 @@ constAIHealthcarePage: React.FC= () =>{constaiHealthcareServices= [
     }
   ]
   const categories = [...new Set(aiHealthcareServices.map(service => service.category))]
-  return (
+  return ()
       </div>
-    </>
+</>
   )
 }
 export default AIHealthcarePage

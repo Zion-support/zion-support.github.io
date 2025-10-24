@@ -33,7 +33,7 @@ constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
       technologies: ['Snowflake', 'BigQuery', 'Redshift', 'Azure Synapse', 'Talend']
     }
   ]
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white"></section>
@@ -41,16 +41,20 @@ constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
           <div className="text-center"></div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
+        </div>
               Business Intelligence Services
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
+        </div>
               Transform your data into strategic insights that drive business growth
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+        </div>
                 Explore BI Solutions
               </button>
               <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+        </div>
                 Schedule Demo
               </button>
             </div>
@@ -62,9 +66,11 @@ constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
           <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        </div>
               Why Choose Our BI Solutions?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        </div>
               Our business intelligence solutions deliver actionable insights that drive real business value
             </p>
           </div>
@@ -98,22 +104,26 @@ constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
           <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        </div>
               Our BI Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        </div>
               Comprehensive business intelligence services designed to unlock the value in your data
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
-            {biServices.map((service) => (
+            {biServices.map((service) => ()
               <div key={service.id} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"></div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
                 <p className="text-gray-600 mb-6">{service.description}</p>
                 <div className="mb-6"></div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
-                    {service.features.map((feature, index) => (
+        </div>
+                    {service.features.map((feature, index) => ()
                       <li key={index} className="flex items-center text-gray-600">
+        </div>
                         <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
                         {feature}
                       </li>
@@ -123,8 +133,10 @@ constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
                 <div className="mb-6"></div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-3">Benefits:</h4>
                   <ul className="space-y-2">
-                    {service.benefits.map((benefit, index) => (
+        </div>
+                    {service.benefits.map((benefit, index) => ()
                       <li key={index} className="flex items-center text-gray-600">
+        </div>
                         <Star className="w-5 h-5 text-yellow-500 mr-2" />
                         {benefit}
                       </li>
@@ -146,16 +158,20 @@ constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
       <section className="py-16 bg-blue-600 text-white"></section>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        </div>
             Ready to Transform Your Data?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
+        </div>
             Let our BI experts help you unlock the full potential of your business data
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+        </div>
               Get Started Today
             </button>
             <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+        </div>
               Learn More
             </button>
           </div>

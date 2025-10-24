@@ -12,12 +12,12 @@ const UnifiedBanner = lazy(() =>
   )
 )
 const ContentPromotion = lazy(() =>
-  import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({
+  import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({}
     default: EmptyComponent
   }))
 )
 const ContentShowcase = lazy(() =>
-  import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({
+  import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({}
     default: () => <div /></div>
   }))
 )

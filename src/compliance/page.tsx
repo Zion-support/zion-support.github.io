@@ -6,8 +6,8 @@ import Footer from '../components/Footer'
 import { CheckCircle, Shield, Users } from 'lucide-react'
 import { Award } from 'lucide-react'
 
-const CompliancePage: React.FC = () => {
-  const certifications = [
+const $1: React.FC = () => {
+  const certifications = []
     { name: 'SOC 2 Type II', status: 'Certified' },
     { name: 'ISO 27001', status: 'Certified' },
     { name: 'GDPR', status: 'Compliant' },
@@ -15,11 +15,11 @@ const CompliancePage: React.FC = () => {
     { name: 'PCI DSS', status: 'Compliant' }
   ]
 
-const Page = () => {
-  return (
+const Page = () => {}
+  return ()
       </div>
       <Footer />
-    </>
+</>
   )
 }
 

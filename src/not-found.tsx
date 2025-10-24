@@ -48,9 +48,8 @@ NotFound.displayName = "NotFound"() {constpopularPages= [
       description: 'Get in touch with our AI experts',
       href: '/contact',
       icon: '📞'
-    },
-  ]
-  return (
+    }]
+  return ()
     <div className=&quot;min-h-screen bg-gray-50 flex items-center justify-center px-4&quot;></div>
       <div className=&quot;max-w-2xl w-full text-center&quot;></div>
         {/* Error Code */}
@@ -69,7 +68,7 @@ NotFound.displayName = "NotFound"() {constpopularPages= [
             The page you&apos;re looking for doesn&apos;t exist or has been moved.
             Don&apos;t worry, let's get you back on track!
         </p></di>{/* PopularPages */}
-      <divclassName=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3gap-4mb-8&quot;>{popularPages.map((pageindex) => (
+      <divclassName=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3gap-4mb-8&quot;>{popularPages.map((pageindex) => ()
          <akey={index}
               href={page.href}
               className=&quot;block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-left&quot;
