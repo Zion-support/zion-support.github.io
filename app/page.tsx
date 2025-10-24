@@ -47,7 +47,7 @@ const HomePage: React.FC = () => {
                 Leading technology solutions provider helping businesses transform their digital
                 presence with AI, cloud architecture, and innovative development services.
               </p>
-              <div className="flexflex-colsm:flex-rowgap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-whitetext-blue-600px-8py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
                   Get Started
                   <ArrowRight className="ml-2w-5h-5" />
@@ -76,7 +76,7 @@ const HomePage: React.FC = () => {
               <div className="gridgrid-cols-1md:grid-cols-3gap-8">
                 {features.map((feature, index) => (
                   <div key={index} className="bg-whitep-8rounded-lgshadow-lg hover:shadow-xl transition-shadow">
-                    <feature.icon className="w-12h-12text-blue-600mb-4" />
+                    <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                     <h3 className="text-xlfont-semiboldtext-gray-900mb-3">
                       {feature.title}
                     </h3>
@@ -129,7 +129,7 @@ const HomePage: React.FC = () => {
               <p className="text-xltext-gray-300mb-8">
                 Let's discuss how our technology solutions can drive your success
               </p>
-              <div className="flexflex-colsm:flex-rowgap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-blue-600text-whitepx-8py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center">
                   Start Your Project
                   <ArrowRight className="ml-2w-5h-5" />

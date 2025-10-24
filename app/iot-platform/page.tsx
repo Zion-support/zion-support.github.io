@@ -3,50 +3,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-const PagePage: React.FC = () => {
-  return (
-    <>
-
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-4">Our Services</h2>
-              <p className="text-gray-300 mb-6">
-                We provide comprehensive Page solutions tailored to your business needs.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 1</h3>
-                  <p className="text-gray-300">Description of service 1</p>
-                </div>
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 2</h3>
-                  <p className="text-gray-300">Description of service 2</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-
-      <Footer />
-    </>
-  );
-};
-=======
 import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
 
 const IoTPlatformPage: React.FC = () => {
@@ -132,7 +88,7 @@ const IoTPlatformPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900">
+    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>IoT Platform - Zion Tech Group | Internet of Things Solutions</title>
         <meta name="description" content="Build and scale IoT solutions with our comprehensive platform. Connect, manage, and analyze millions of devices with secure, reliable IoT technology." />
@@ -152,11 +108,11 @@ const IoTPlatformPage: React.FC = () => {
               Solutions
             </span>
           </h1>
-          <p className="text-xltext-gray-300mb-8max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Build and scale IoT solutions with our comprehensive platform. Connect, manage, and analyze 
             millions of devices with secure, reliable Internet of Things technology.
           </p>
-          <div className="flexflex-colsm:flex-rowgap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-rfrom-purple-500to-blue-600hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
               Get IoT Platform Demo
             </button>
@@ -175,7 +131,7 @@ const IoTPlatformPage: React.FC = () => {
               IoT Platform Features
             </h2>
             <h2 className="text-4xl font-boldtext-whitemb-4">IoT Platform Features</h2>
-            <p className="text-xltext-gray-300max-w-3xlmx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our IoT platform provides everything you need to build, deploy, and scale 
               Internet of Things solutions for any industry or use case.
             </p>
@@ -183,8 +139,8 @@ const IoTPlatformPage: React.FC = () => {
           
           <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/5backdrop-blur-smrounded-xlp-6 border border-white/10 hover:border-purple-400/50 transition-all duration-300">
-                <feature.icon className="w-12h-12text-purple-400mb-4" />
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-400/50 transition-all duration-300">
+                <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                 <h3 className="text-xlfont-semiboldtext-whitemb-3">{feature.title}</h3>
                 <p className="text-gray-300mb-4">{feature.description}</p>
                 <ul className="space-y-2">
@@ -229,13 +185,12 @@ return (<p>
       </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
-            <h2>IoT Use Cases;</h2>
-            </h2>
+            <h2>Why Choose Our Cloud Migration?</h2>
             <p>Our IoT platform supports a wide range of industries and applications,</p>
               from smart manufacturing to connected cities.
             </p>
           </div>
-          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8"></div>,
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>,
             {useCases.map((useCase, index) => (} <div key={index}className="bg-white/5backdrop-blur-smborderborder-white/10 rounded-xl p-6 text-center hover: bg-white/10 transition-all duration-300"></div>,
                 <div className="text-4xlmb-4">{useCase.icon</div>}</div>
                 <h3 className="text-xlfont-semiboldtext-whitemb-3">{useCase.title}</h3>
@@ -261,7 +216,7 @@ return (<p>
           <p className="text-xltext-gray-100mb-8">
             Get started with our IoT platform today and connect your devices to the future.
           </p>
-          <div className="flexflex-colsm:flex-rowgap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-rfrom-purple-500to-blue-600hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Get Free Consultation
             <button className="bg-whitetext-purple-600hover:bg-gray-100font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -272,10 +227,10 @@ return (<p>
         <div$2>
           <div className="text-center mb-16">
             <h2 className="text-4xl font-boldtext-whitemb-4">IoT Use Cases
-            <p className="text-xltext-gray-300max-w-3xlmx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our IoT platform supports a wide range of industries and applications, 
               from smart manufacturing to connected cities.
-          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-white/5backdrop-blur-smborderborder-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
                 <div className="text-4xlmb-4">{useCase.icon}
@@ -284,7 +239,7 @@ return (<p>
             ))}
       {/* Benefits Section */}
       <section className="py-20px-4">
-          </section>< className="$2/><divclassName="text-center mb-16">
+          </section>< className="$2/><divclass Name="text-center mb-16">
               </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
@@ -292,8 +247,7 @@ return (<p>
       </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
-            <h2>Why Choose Our IoT Platform?</h2>
-            </h2>
+            <h2>Why Choose Our Cloud Migration?</h2>
             <p>Experience the benefits of a comprehensive IoT platform designed for scale,</p>
               security, and performance.
             </p>
@@ -316,9 +270,7 @@ return (<p>
             <button>Schedule Demo;</button>
         <div className="max-w-7xl mx-auto" / /></div>
           <div className="text-center mb-16" / /></div>
-            <h2></h2>
-              Why Choose Our IoT Platform?
-            </h2>
+            <h2>Why Choose Our Cloud Migration?</h2>
             <p></p>
               Experience the benefits of a comprehensive IoT platform designed for scale,
               security, and performance.
@@ -343,6 +295,5 @@ return (<p>
       <Footer />
 </div>
   )};
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5
 
 export default PagePage;

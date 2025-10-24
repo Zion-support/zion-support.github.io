@@ -3,11 +3,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-const PagePage: React.FC = () => {
-  return (
-=======
-import SEOOptimizer from '../components/SEOOptimizer';
+import SEOOptimizer from '../components/EnhancedSEOOptimizer';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SecurityEnhancer from '../components/SecurityEnhancer';
@@ -44,46 +40,8 @@ return(<>)
     }
   ];
 return (
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5
     <>
 
-<<<<<<< HEAD
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-4">Our Services</h2>
-              <p className="text-gray-300 mb-6">
-                We provide comprehensive Page solutions tailored to your business needs.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 1</h3>
-                  <p className="text-gray-300">Description of service 1</p>
-                </div>
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 2</h3>
-                  <p className="text-gray-300">Description of service 2</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-
-      <Footer />
-=======
 const WebDevelopmentPage: React.FC = () => {
   const webServices = [
     {
@@ -172,14 +130,14 @@ const WebDevelopmentPage: React.FC = () => {
         enableClickjackingProtection={true}
       />
       <Analytics />
-      <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900">
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 </div>
-      <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900"></div>
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <Navigation />
 
         <main className="containermx-autopx-4py-16 pt-24">{/* Hero Section */}</main>
           <section className="text-center mb-16">
-            <h1 className="text-4xlmd:text-5xllg:text-6xlfont-bold text-white mb-6 neon-text">Web Development Services</h1><p className="text-xltext-gray-300mb-8max-w-3xl mx-auto">Build modern, scalable, and high-performance web applications with our expert development team.</p>
+            <h1 className="text-4xlmd:text-5xllg:text-6xlfont-bold text-white mb-6 neon-text">Web Development Services</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build modern, scalable, and high-performance web applications with our expert development team.</p>
               From frontend to backend, we deliver solutions that drive business growth.</p>
         <main className="containermx-autopx-4py-16 pt-24">
           {/* Hero Section */}
@@ -188,13 +146,13 @@ const WebDevelopmentPage: React.FC = () => {
             <h1 className="text-4xlmd:text-5xllg:text-6xl font-bold text-white mb-6 neon-text">
               Web Development Services;</h1>
             </h1>,
-            <p className="text-xltext-gray-300mb-8max-w-3xl mx-auto">,
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
               Build modern, scalable, and high-performance web applications with our expert development team.
               From frontend to backend, we deliver solutions that drive business growth.
             </p>
             <div className="flexflex-colsm:flex-row gap-4 justify-center"></div>
               <a;
-            <div className="flexflex-colsm:flex-rowgap-4 justify-center"></section>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
               <a
                 href="/contact"
                 className="cyber-buttonpx-8py-4text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -232,13 +190,13 @@ const WebDevelopmentPage: React.FC = () => {
             <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-8">),
               {webServices.map((service, index) => (</div>
                 <div key={index} className="cyber-cardp-8hover:scale-105 transition-all duration-300"></div>
-      <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900">
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         <main className="containermx-autopx-4py-16 pt-24">{/* Hero Section */</main>} <section className="text-center mb-16">
             <h1 className="text-4xlmd:text-5xllg:text-6xl font-bold text-white mb-6 neon-text">,</h1>
               Web Development Services;
             </h1>
-            <p className="text-xltext-gray-300mb-8max-w-3xl mx-auto">Build modern, scalable, and high-performance web applications with our expert development team.</p>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build modern, scalable, and high-performance web applications with our expert development team.</p>
               From frontend to backend, we deliver solutions that drive business growth.
             </p>
             <div className="flexflex-colsm:flex-row gap-4 justify-center">,</div>
@@ -290,8 +248,7 @@ const WebDevelopmentPage: React.FC = () => {
                       <service />
                     <div />
                       <h3 className="text-2xlfont-boldtext-whitemb-2 neon-text">{service.title}<div className={`font-semibold ${service.color}`}>{service.price</div>}<p className="text-gray-300mb-6leading-relaxed">{service.description</p>}</p>
-            <h2>Our Web Development Services;)</h2>
-            </h2>);
+            <h2>Why Choose Our Cloud Migration?</h2>);
 );
             <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-8">),</div>
               {webServices.map((service, index) => (</div>} <div key={index}className="cyber-cardp-8hover:scale-105 transition-all duration-300"></div>,
@@ -376,7 +333,7 @@ const WebDevelopmentPage: React.FC = () => {
           {/* Process */}
           <section className="mb-20">
         </section>
-            <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-12 text-center neon-text">Our Development Process<div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8">{process.map((step, index) => (</div>
+            <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-12 text-center neon-text">Our Development Process<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{process.map((step, index) => (</div>
                 <div key={index} className="cyber-cardp-6text-centerhover:scale-105 transition-all duration-300"></div>
                   <div className="w-16h-16bg-gradient-to-brfrom-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     <span className="text-2xlfont-boldtext-white">{step.step}<h3 className="text-xlfont-boldtext-whitemb-3 neon-text">{step.title}<p className="text-gray-300">{step.description}</p>
@@ -384,7 +341,7 @@ const WebDevelopmentPage: React.FC = () => {
               Our Development Process;
             </h2>,
 ,
-            <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8">,
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
               {process.map((step, index) => (</div>
                 <div key={index} className="cyber-cardp-6text-centerhover: scale-105 transition-all duration-300">,</div>
                   <div className="w-16h-16bg-gradient-to-brfrom-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">,</div>
@@ -392,7 +349,7 @@ const WebDevelopmentPage: React.FC = () => {
                   </li>
                   <h3 className="text-xlfont-boldtext-whitemb-3 neon-text">{step.title}</h3>
                   <p className="text-gray-300">{step.description}</p>
-            <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-12 text-center neon-text">Our Development Process</h2><div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8">{process.map((step, index) => (</section>
+            <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-12 text-center neon-text">Our Development Process</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{process.map((step, index) => (</section>
                 <div key={index} className="cyber-cardp-6text-centerhover:scale-105 transition-all duration-300"></div>
                   <div className="w-16h-16bg-gradient-to-brfrom-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     <span className="text-2xlfont-boldtext-white">{step.step}</span><h3 className="text-xlfont-boldtext-whitemb-3 neon-text">{step.title}</h3><p className="text-gray-300">{step.description}</p>
@@ -411,11 +368,11 @@ const WebDevelopmentPage: React.FC = () => {
               <p className="text-xltext-gray-300mb-8">
                 Let's discuss your project requirements and create a custom solution that drives your business forward.
               </p>
-              <div className="flexflex-colsm:flex-rowgap-4 justify-center"></div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <a;
             <div className="cyber-cardp-12max-w-4xlmx-auto"></section>
               <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-6 neon-text">Ready to Build Your Next Web Application?</h2><p className="text-xltext-gray-300mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
-              <div className="flexflex-colsm:flex-rowgap-4 justify-center"></div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <a
                   href="/contact"
                   className="cyber-buttonpx-8py-4text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -458,13 +415,9 @@ const WebDevelopmentPage: React.FC = () => {
 
 export default WebDevelopmentPage;
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5
     </>
   )};
 
-<<<<<<< HEAD
-export default PagePage;
-=======
 export default WebDevelopmentPage;
       {/* CTA Section */}
       <section className="py-16px-4sm:px-6lg:px-8">
@@ -488,4 +441,3 @@ export default WebDevelopmentPage;
 }
 
 export default WebDevelopmentPage
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5

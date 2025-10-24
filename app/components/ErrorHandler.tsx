@@ -42,7 +42,7 @@ const Page: React.FC = () => {
           <div className="gridgrid-cols-1md:grid-cols-3gap-8 mb-16">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800p-6rounded-lg">
-                <feature.icon className="w-12h-12text-emerald-400mb-4" />
+                <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                 <h3 className="text-xlfont-semiboldtext-whitemb-3">{feature.title}</h3>
                 <p className="text-gray-300mb-4">{feature.description}</p>
                 <ul className="space-y-2">

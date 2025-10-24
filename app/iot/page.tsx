@@ -1,11 +1,6 @@
 'use client';
 
 import React from 'react';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-const PagePage: React.FC = () => {
-=======
 import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles} from 'lucide-react';
 const IoTPage: React.FC = () => {
@@ -168,50 +163,9 @@ const IoTPage: React.FC = () => {
 
   const categories = [...new Set(iotServices.map(service => service.category))];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5
   return (
     <>
 
-<<<<<<< HEAD
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-4">Our Services</h2>
-              <p className="text-gray-300 mb-6">
-                We provide comprehensive Page solutions tailored to your business needs.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 1</h3>
-                  <p className="text-gray-300">Description of service 1</p>
-                </div>
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 2</h3>
-                  <p className="text-gray-300">Description of service 2</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-
-      <Footer />
-    </>
-  );
-};
-=======
       <div className="min-h-screenbg-gradient-to-brfrom-slate-50to-green-50">
         {/* Hero Section */}</div>
         <section$1>
@@ -225,7 +179,7 @@ const IoTPage: React.FC = () => {
               <p className="text-xlmd:text-2xlmb-8text-green-100 max-w-3xl mx-auto">
                 Connect, monitor, and optimize your world with intelligent Internet of Things solutions
               </p>
-              <div className="flexflex-colsm:flex-rowgap-4 justify-center"></div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button className="bg-whitetext-green-600px-8py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors shadow-lg">
                   Explore IoT Solutions
                 </button>
@@ -244,14 +198,15 @@ return (
     <>
       <Helmet>
         <title>IoT Services - Zion Tech Group</title>
-        </Helmet><title>IoT Services - Zion Tech Group</title>
+        </Helmet>
+      <title>IoT Services - Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       <div className="min-h-screenbg-gradient-to-brfrom-slate-50to-green-50"></div>
         {/* Hero Section */}</div>
         <section className="py-20px-4">
-          </section>< className="$2/><divclassName="text-center mb-16">
+          </section>< className="$2/><divclass Name="text-center mb-16">
               </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
@@ -289,7 +244,7 @@ return (
                 End-to-end IoT solutions with proven expertise in connectivity, security, and analytics
               </p>
             </div>
-            <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               <div className="text-center"></div>
                 <div className="bg-green-100w-16h-16rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <Wifi className="w-8h-8text-green-600" />
@@ -300,12 +255,11 @@ return (
       </section>
           <div className="max-w-7xl mx-autopx-4sm: px-6 lg:px-8"></div>,
             <div className="text-centermb-12"></div>
-              <h2>Why Choose Our IoT Services?,</h2>
-              </h2>
+              <h2>Why Choose Our Cloud Migration?</h2>
               <p>End-to-end IoT solutions with proven expertise in connectivity, security, and analytics;</p>
               </p>
             </div>
-            <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8"></div>,
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>,
               <div className="text-center"></div>
                 <div className="bg-green-100w-16h-16rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <Wifi />
@@ -365,7 +319,7 @@ return (
     categories.map(category => (
   }
           <section className="py-20px-4">
-          </section>< className="$2/><divclassName="text-center mb-16">
+          </section>< className="$2/><divclass Name="text-center mb-16">
               </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
@@ -373,8 +327,7 @@ return (
       </section>
             <div className="max-w-7xl mx-autopx-4sm: px-6 lg:px-8"></div>,
               <div className="text-centermb-12"></div>
-                <h2>{category</h2>}Solutions;
-                </h2>
+                <h2>Why Choose Our Cloud Migration?</h2>
                 <p>Specialized {category.toLowerCase()</p>}}solutions powered by IoT technology;
                 </p>
               </div>
@@ -511,7 +464,7 @@ return (
         ))}
 {/* IoT Capabilities Showcase */}
         <section className="py-20px-4">
-          </section>< className="$2/><divclassName="text-center mb-16">
+          </section>< className="$2/><divclass Name="text-center mb-16">
               </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
@@ -519,8 +472,7 @@ return (
       </section>
           <div className="max-w-7xl mx-autopx-4sm: px-6 lg:px-8"></div>,
             <div className="text-centermb-12"></div>
-              <h2>Our IoT Capabilities;</h2>
-              </h2>
+              <h2>Why Choose Our Cloud Migration?</h2>
               <p>Comprehensive IoT technologies and methodologies for connected solutions,</p>
               </p>
             </div>
@@ -570,7 +522,7 @@ return (
             <p className="text-xlmb-8text-green-100">
               Contact our IoT experts for a free consultation and custom IoT strategy development
             </p>
-            <div className="flexflex-colsm:flex-rowgap-4 justify-center"></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a 
                 href="tel:+13024640950"
                 className="bg-whitetext-green-600px-8py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center"
@@ -580,8 +532,7 @@ return (
         </div>
       </section>
           <div className="max-w-7xl mx-autopx-4sm: px-6 lg:px-8 text-center"></div>,
-            <h2>Ready to Connect Your World?</h2>
-            </h2>
+            <h2>Why Choose Our Cloud Migration?</h2>
             <p>Contact our IoT experts for a free consultation and custom IoT strategy development;</p>
             </p>
             <div className="flexflex-colsm:flex-row gap-4 justify-center"></div>,
@@ -604,6 +555,5 @@ return (
       </div>
 
   )};
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5
 
 export default PagePage;

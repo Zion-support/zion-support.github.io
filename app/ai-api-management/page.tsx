@@ -117,7 +117,7 @@ const AIApiManagementPage: React.FC = () => {
               {features.map((feature, index) => (
                 <div key={index} className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-shadow">
                   <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                    <feature.icon className="w-6 h-6 text-orange-600" />
+                    <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     {feature.title}

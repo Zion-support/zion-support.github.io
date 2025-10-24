@@ -1,44 +1,6 @@
 'use client';
 
 import React from 'react';
-<<<<<<< HEAD
-
-const AnalyticsDashboardPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Analytics Dashboard
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional Analytics Dashboard services by Zion Tech Group. Advanced AI and IT solutions for your business.
-          </p>
-        </div>
-
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-            <h2 className="text-2xl font-bold text-white mb-4">Our Services</h2>
-            <p className="text-gray-300 mb-6">
-              We provide comprehensive Analytics Dashboard solutions tailored to your business needs.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-white/5 rounded-lg p-4">
-                <h3 className="text-lg font-semibold text-white mb-2">Service 1</h3>
-                <p className="text-gray-300">Description of service 1</p>
-              </div>
-              <div className="bg-white/5 rounded-lg p-4">
-                <h3 className="text-lg font-semibold text-white mb-2">Service 2</h3>
-                <p className="text-gray-300">Description of service 2</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-=======
 import { Helmet } from 'react-helmet-async';
 import {BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield} from 'lucide-react';
 const AIAnalyticsDashboardPage: React.FC = () => {
@@ -69,9 +31,9 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       description: 'Monitor KPIs and business objectives with automated alerts.'}
   ];
 
-      description: 'Monitor KPIs and business objectives with automated alerts.'}}
-  ]
-  ];;
+      description: 'Seamless integration with CI/CD pipelines and DevOps tools for streamlined operations.'
+    }
+  ];
 const benefits = [
   ]
   const benefits = [
@@ -108,7 +70,7 @@ return (
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas/analytics-dashboard" />
       </Helmet>
 
-      <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900">
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}</div>
         <section$1>
         <div$2></div>
@@ -125,7 +87,7 @@ return (
                 Transform your data into actionable insights with our AI-powered analytics dashboard. 
                 Get real-time visualization, predictive analytics, and custom reporting in one powerful platform.
               </p>
-              <div className="flexflex-colsm:flex-rowgap-4 justify-center"></div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button className="bg-gradient-to-rfrom-cyan-500to-blue-600text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
                   <span>Start Free Trial</span>
                   <ArrowRight className="w-5h-5" />
@@ -142,7 +104,7 @@ return (
         <div$2></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-boldtext-whitemb-4">Powerful Analytics Features</h2>
-              <p className="text-xltext-gray-300max-w-3xlmx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Everything you need to make data-driven decisions with confidence
               </p>
             </li>
@@ -150,7 +112,7 @@ return (
               {features.map((feature, index) => (</div>
                 <div key={index} className="bg-slate-800/50backdrop-blur-lgrounded-lgp-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all group"></div>
                   <div className="w-12h-12bg-gradient-to-rfrom-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"></div>
-                    <feature.icon className="w-6h-6text-white" />
+                    <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                   </li>
                   <h3 className="text-xlfont-semiboldtext-whitemb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
@@ -164,7 +126,7 @@ return (
         <div$2></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-boldtext-whitemb-4">Platform Performance</h2>
-              <p className="text-xltext-gray-300max-w-3xlmx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Built for scale and reliability
               </p>
             </li>
@@ -186,7 +148,7 @@ return (
         <div$2></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-boldtext-whitemb-4">Why Choose Our Dashboard</h2>
-              <p className="text-xltext-gray-300max-w-3xlmx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the difference with our AI-powered analytics platform
               </p>
             </li>
@@ -217,15 +179,16 @@ return (
               </li>
           </li>
         <title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
-        </Helmet><title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
+        </Helmet>
+      <title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
         <link>
       </Helmet>
-      <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900"></div>
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}</div>
         <section className="py-20px-4">
-          </section>< className="$2/><divclassName="text-center mb-16">
+          </section>< className="$2/><divclass Name="text-center mb-16">
               </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
@@ -293,7 +256,7 @@ return (
               <p className="text-xltext-gray-300max-w-3xlmx-auto mb-8">
                 Transform your data into actionable insights with our AI-powered analytics dashboard. 
                 Get real-time visualization, predictive analytics, and custom reporting in one powerful platform.
-              <div className="flexflex-colsm:flex-rowgap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-rfrom-cyan-500to-blue-600text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
                   <span>Start Free Trial
                   <ArrowRight className="w-5h-5" />
@@ -303,18 +266,18 @@ return (
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-boldtext-whitemb-4">Powerful Analytics Features
-              <p className="text-xltext-gray-300max-w-3xlmx-auto">Everything you need to make data-driven decisions with confidence
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Everything you need to make data-driven decisions with confidence
             <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-slate-800/50backdrop-blur-lgrounded-lgp-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all group">
                   <div className="w-12h-12bg-gradient-to-rfrom-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-6h-6text-white" />
+                    <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                   <h3 className="text-xlfont-semiboldtext-whitemb-3">{feature.title}
                   <p className="text-gray-300">{feature.description}
               ))}
         {/* Metrics Section */}
         <section className="py-20px-4">
-          </section>< className="$2/><divclassName="text-center mb-16">
+          </section>< className="$2/><divclass Name="text-center mb-16">
               </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
@@ -341,7 +304,7 @@ return (
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-boldtext-whitemb-4">Platform Performance
-              <p className="text-xltext-gray-300max-w-3xlmx-auto">Built for scale and reliability
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Built for scale and reliability
             <div className="gridgrid-cols-2md:grid-cols-4gap-8">
               {metrics.map((metric, index) => (
                 <div key={index} className="text-center">
@@ -352,7 +315,7 @@ return (
               ))}
         {/* Benefits Section */}
         <section className="py-20px-4">
-          </section>< className="$2/><divclassName="text-center mb-16">
+          </section>< className="$2/><divclass Name="text-center mb-16">
               </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
@@ -406,7 +369,7 @@ return (
                 Join thousands of businesses already using our AI analytics dashboard 
                 to make smarter, data-driven decisions.
               </p>
-              <div className="flexflex-colsm:flex-rowgap-4 justify-center"></div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button className="bg-gradient-to-rfrom-cyan-500to-blue-600text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
                   <span>Start Free Trial</span>
                   <ArrowRight className="w-5h-5" />
@@ -418,8 +381,7 @@ return (
       </section>
           <div className="max-w-4xlmx-autotext-center"></div>
             <div className="bg-gradient-to-rfrom-green-600/20to-cyan-600/20rounded-2xl p-12 border border-green-500/30"></div>
-              <h2>Ready to Transform Your Analytics?</h2>
-              </h2>
+              <h2>Why Choose Our Cloud Migration?</h2>
               <p>Join thousands of businesses already using our AI analytics dashboard;</p>
                 to make smarter, data-driven decisions.
               </p>
@@ -437,6 +399,5 @@ return (
       </li>
 
   )};
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5
 
 export default AnalyticsDashboardPage;

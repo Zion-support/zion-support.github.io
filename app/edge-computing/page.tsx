@@ -3,52 +3,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-const PagePage: React.FC = () => {
-  return (
-    <>
-
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-4">Our Services</h2>
-              <p className="text-gray-300 mb-6">
-                We provide comprehensive Page solutions tailored to your business needs.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 1</h3>
-                  <p className="text-gray-300">Description of service 1</p>
-                </div>
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 2</h3>
-                  <p className="text-gray-300">Description of service 2</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-
-      <Footer />
-    </>
-  );
-};
-
-export default PagePage;
-=======
 import {CheckCircle, Zap, Cpu, Globe, Shield, ArrowRight, Cloud, Database, Wifi, Server} from 'lucide-react';
 const EdgeComputingPage: React.FC = () => {
     const features = [
@@ -140,11 +94,9 @@ const services = [
       description: 'Comprehensive security solutions for edge environments'},
     {icon: '📱',
       title: 'Mobile Edge',
-      description: 'Mobile edge computing for 5G and mobile applications'}}
-  ]
+      description: 'Seamless integration with CI/CD pipelines and DevOps tools for streamlined operations.'
+    }
   ];
-const benefits = [
-  ]
   const benefits = [
     'Ultra-Low Latency',
     'Reduced Bandwidth Costs',
@@ -186,14 +138,15 @@ return(<div className="min-h-screenbg-gradient-to-brfrom-slate-900via-blue-900 t
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
-        </Helmet><title>Edge Computing Solutions | Zion Tech Group</title>
+        </Helmet>
+      <title>Edge Computing Solutions | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       <Navigation>
       {/* Hero Section */}
       </Navigation><section className="py-20px-4">
-          </section>< className="$2/><divclassName="text-center mb-16">
+          </section>< className="$2/><divclass Name="text-center mb-16">
               </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
@@ -268,7 +221,7 @@ return(<div className="min-h-screenbg-gradient-to-brfrom-slate-900via-blue-900 t
             <p>Comprehensive edge computing solutions for all your business needs;</p>
             </p>
           </div>
-          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8"></div>,
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>,
             {services.map((service, index) => (} <div key={index}className="bg-white/5backdrop-blur-smborderborder-white/10 rounded-xl p-6 text-center hover: bg-white/10 transition-all duration-300"></div>,
                 <div className="text-4xlmb-4">{service.icon</div>}</div>
                 <h3 className="text-xlfont-semiboldtext-whitemb-3">{service.title}</h3>
@@ -383,7 +336,7 @@ export default EdgeComputingPage
       icon: '🎮'}
   ]
   return (
-    <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900">
+    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Edge Computing Solutions - Zion Tech Group | Distributed Computing</title>
         <meta name="description" content="Transform your applications with edge computing solutions. Low-latency processing, real-time analytics, and distributed computing for modern applications." />
@@ -402,11 +355,11 @@ export default EdgeComputingPage
               Solutions
             </span>
           </h1>
-          <p className="text-xltext-gray-300mb-8max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Bring computing power closer to your data and users with our edge computing solutions. 
             Reduce latency, improve performance, and enable real-time applications.
           </p>
-          <div className="flexflex-colsm:flex-rowgap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-rfrom-purple-500to-blue-600hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
               Get Edge Computing Demo
             </button>
@@ -422,7 +375,7 @@ export default EdgeComputingPage
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-boldtext-whitemb-4">Advanced Edge Computing Features</h2>
-            <p className="text-xltext-gray-300max-w-3xlmx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive edge computing solution designed for modern applications and IoT deployments.
             </p>
           </div>
@@ -431,7 +384,7 @@ export default EdgeComputingPage
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50backdrop-blur-smborderborder-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
                 <div className="w-12h-12bg-gradient-to-rfrom-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="w-6h-6text-white" />
+                  <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                 </div>
                 <h3 className="text-xlfont-semiboldtext-whitemb-3">{feature.title}</h3>
                 <p className="text-gray-300mb-4">{feature.description}</p>
@@ -451,7 +404,7 @@ export default EdgeComputingPage
         <div$2>
           <div className="text-center mb-16">
             <h2 className="text-4xl font-boldtext-whitemb-4">Use Cases
-            <p className="text-xltext-gray-300max-w-3xlmx-auto">Edge computing solutions for various industries and applications
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Edge computing solutions for various industries and applications
           <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-white/5backdrop-blur-smborderborder-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300 group">
@@ -468,7 +421,7 @@ export default EdgeComputingPage
         <div$2>
           <div className="text-center mb-16">
             <h2 className="text-4xl font-boldtext-whitemb-4">Why Choose Edge Computing?
-            <p className="text-xltext-gray-300max-w-3xlmx-auto">Experience the benefits of edge computing with our proven solutions
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the benefits of edge computing with our proven solutions
           <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white/5backdrop-blur-smborderborder-white/10 rounded-xl p-6 text-center">
@@ -485,7 +438,7 @@ export default EdgeComputingPage
         <div className="max-w-4xlmx-autotext-center">
           <h2 className="text-4xl font-boldtext-whitemb-6">Ready to Deploy Edge Computing?</h2>
           <p className="text-xltext-gray-300mb-8">Join leading enterprises using edge computing to optimize their applications and reduce latency</p>
-          <div className="flexflex-colsm:flex-rowgap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-rfrom-blue-500to-purple-600hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Start Free Trial
             </button>
@@ -505,4 +458,3 @@ export default EdgeComputingPage;
   )
 }
 export default EdgeComputingPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></button></button></button></button></p></p></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></h2></h3></h3></h3></h3></ul></li></section></section></section></section></section></section>
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5

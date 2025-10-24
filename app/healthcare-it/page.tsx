@@ -3,54 +3,8 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-const PagePage: React.FC = () => {
-  return (
-    <>
-
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-4">Our Services</h2>
-              <p className="text-gray-300 mb-6">
-                We provide comprehensive Page solutions tailored to your business needs.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 1</h3>
-                  <p className="text-gray-300">Description of service 1</p>
-                </div>
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 2</h3>
-                  <p className="text-gray-300">Description of service 2</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-
-      <Footer />
-    </>
-  );
-};
-
-export default PagePage;
-=======
 import {CheckCircle, Zap, Heart, Clock, Users, Shield, BarChart, ArrowRight} from 'lucide-react';
-import SEOOptimizer from '../components/SEOOptimizer';
+import SEOOptimizer from '../components/EnhancedSEOOptimizer';
 
 export default function HealthcareITPage() {
   const features = [
@@ -134,7 +88,7 @@ return (
         <div className="absoluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)]animate-pulse" /></div>
         <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} /></div>
         <div className="relativemax-w-7xl mx-autotext-center"></div>
-          <h1 className="text-5xlmd:text-7xlfont-boldtext-white mb-6 leading-tight">Healthcare<span className="blockbg-gradient-to-rfrom-red-400via-blue-400 to-cyan-400 bg-clip-text text-transparent">IT Solutions<p className="text-xltext-gray-300mb-8max-w-3xl mx-auto leading-relaxed">Specialized IT solutions for healthcare with HIPAA compliance, security, and interoperability.</p>
+          <h1 className="text-5xlmd:text-7xlfont-boldtext-white mb-6 leading-tight">Healthcare<span className="blockbg-gradient-to-rfrom-red-400via-blue-400 to-cyan-400 bg-clip-text text-transparent">IT Solutions<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Specialized IT solutions for healthcare with HIPAA compliance, security, and interoperability.</p>
         <div className="absoluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)]animate-pulse" /></section>
         <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} /></div>
 
@@ -154,12 +108,12 @@ return (
           <h1 className="text-5xlmd:text-7xlfont-boldtext-white mb-6 leading-tight">
             Healthcare
             <span className="blockbg-gradient-to-rfrom-red-400via-pink-400 to-purple-400 bg-clip-text text-transparent">IT Solutions
-          <p className="text-xltext-gray-300mb-8max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Secure, compliant, and innovative IT solutions designed specifically for healthcare organizations. 
             Protect patient data while improving operational efficiency.
           </p>
           
-          <div className="flexflex-colsm:flex-rowgap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-rfrom-red-500to-pink-600hover:from-red-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-red-500/25">
               Get Started
               <ArrowRight className="inline-blockml-2w-5h-5" />
@@ -197,7 +151,7 @@ return (
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5backdrop-blur-smrounded-2xlp-8 border border-white/10 hover:border-red-500/50 transition-all duration-300 group">
                 <div className="w-16h-16bg-gradient-to-rfrom-red-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <feature.icon className="w-8h-8text-white" />
+                  <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                 </div>
                 
                 <h3 className="text-2xlfont-boldtext-whitemb-4 group-hover:text-red-400 transition-colors">
@@ -231,10 +185,10 @@ return (
               Healthcare Services
             </h2>
             <h2 className="text-4xl font-boldtext-whitemb-4">Healthcare Services</h2>
-            <p className="text-xltext-gray-300max-w-3xlmx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive healthcare technology solutions for every medical need
         </section>
-            <p className="text-xltext-gray-300max-w-3xlmx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               <p className="text-xltext-gray-300">Section description</p>
             </div>
         </div>
@@ -242,7 +196,7 @@ return (
             <p>Comprehensive IT solutions for all aspects of healthcare delivery and management.</p>
             </p>
           </div>
-          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8"></div>,
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>,
             {services.map((service, index) => (} <div key={index}className="bg-white/5backdrop-blur-smborderborder-white/10 rounded-xl p-6 text-center hover: bg-white/10 transition-all duration-300"></div>,
                 <div className="text-4xlmb-4">{service.icon</div>}</div>
                 <h3 className="text-xlfont-semiboldtext-whitemb-3">{service.title}</h3>
@@ -260,7 +214,7 @@ return (
               Comprehensive IT solutions for all aspects of healthcare delivery and management.
             </p>
           </div>
-          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8" / /></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" / /></div>
             {
     services.map((service, index) => ()
             ))}
@@ -279,8 +233,7 @@ return (
       </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
-            <h2>Why Choose Our Healthcare IT Solutions?</h2>
-            </h2>
+            <h2>Why Choose Our Cloud Migration?</h2>
             <p>Experience the benefits of modern healthcare technology with our proven solutions.</p>
             </p>
           </div>
@@ -322,7 +275,7 @@ return (
           <p className="text-xltext-red-100mb-8">
             Let's discuss how our healthcare IT solutions can improve your operations and patient care.
           </p>
-          <div className="flexflex-colsm:flex-rowgap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-whitetext-red-600px-8py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
               Schedule Consultation
             </button>
@@ -330,7 +283,7 @@ return (
               View Case Studies
       {/* CTA Section */}
 <section className="py-20px-4">
-          </section>< className="$2/><divclassName="text-center mb-16">
+          </section>< className="$2/><divclass Name="text-center mb-16">
               </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
@@ -351,4 +304,3 @@ return (
       <Footer />
   )
 }</div></div></div></div></div></div></span></button></button></p></p></p></p></h1></h2></h3></h3></section></section></section></section>
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5

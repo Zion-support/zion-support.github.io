@@ -4,49 +4,6 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const PagePage: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <>
-
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-4">Our Services</h2>
-              <p className="text-gray-300 mb-6">
-                We provide comprehensive Page solutions tailored to your business needs.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 1</h3>
-                  <p className="text-gray-300">Description of service 1</p>
-                </div>
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 2</h3>
-                  <p className="text-gray-300">Description of service 2</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-
-      <Footer />
-    </>
-  );
-};
-=======
     const features = [
     {
       icon: Brain,
@@ -60,9 +17,9 @@ const PagePage: React.FC = () => {
       description: 'Bank-level security with encryption and compliance standards'},
     {icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'}}
-  ]
-  ];;
+      description: 'Seamless integration with CI/CD pipelines and DevOps tools for streamlined operations.'
+    }
+  ];
 const benefits = [
   ]
   const benefits = [
@@ -78,10 +35,10 @@ const benefits = [
     'Cost-effective pricing plans',
 
   return (
-    <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900">
+    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
     'Proven track record of success'
   ]
-return(<div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900"></div>)
+return(<div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
       <Helmet />
       <Helmet>
         <title>Page | Zion Tech Group</title>
@@ -95,9 +52,10 @@ return(<div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900
     'Proven track record of success'
   ]
 return (
-    <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900"></div>
+    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
-        </Helmet><title>Page | Zion Tech Group</title>
+        </Helmet>
+      <title>Page | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
@@ -105,8 +63,8 @@ return (
       <section$1>
         <div$2>
           <div className="text-center">
-            <h1 className="text-4xlmd:text-6xlfont-boldtext-white mb-6">
-              <span className="bg-gradient-to-rfrom-purple-400to-blue-400bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
               <p className="text-xltext-gray-300">Section description</p>
             </div>
         </div>
@@ -145,11 +103,11 @@ return (
             </p>
           </div>
 
-          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10backdrop-blur-smrounded-xlp-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="flexitems-centerjustify-centerw-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6w-6text-white" />
+                  <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                 </div>
                 <h3 className="text-xlfont-semiboldtext-whitemb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -175,7 +133,7 @@ return (
             </p>
           </div>
 
-          <div className="gridgrid-cols-1md:grid-cols-2gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flexitems-startspace-x-3">
                 <CheckCircle className="h-6w-6text-purple-400mt-1 flex-shrink-0" />
@@ -210,6 +168,5 @@ return (
       </section>
     </div>
   )};
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5
 
 export default PagePage;

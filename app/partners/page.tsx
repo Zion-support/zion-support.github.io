@@ -1,11 +1,5 @@
 'use client';
 
-<<<<<<< HEAD
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-const PagePage: React.FC = () => {
-=======
 const PartnersPage: React.FC = () => {
   const partners = [
 import {ExternalLink, Award, Handshake, Users, Star, CheckCircle, ArrowRight} from 'lucide-react';
@@ -124,40 +118,9 @@ const PartnersPage: React.FC = () => {
       name: 'IBM',
       logo: '/api/placeholder/200/100'];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5
   return (
     <>
 
-<<<<<<< HEAD
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-4">Our Services</h2>
-              <p className="text-gray-300 mb-6">
-                We provide comprehensive Page solutions tailored to your business needs.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 1</h3>
-                  <p className="text-gray-300">Description of service 1</p>
-                </div>
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 2</h3>
-                  <p className="text-gray-300">Description of service 2</p>
-                </div>
-=======
             <div className="bg-white/5backdrop-blur-lgrounded-xlp-8 border border-white/10">
               <h2 className="text-2xlfont-boldtext-whitemb-6 text-center">Partnership Benefits</h2>
               <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-4">
@@ -283,11 +246,11 @@ const PartnersPage: React.FC = () => {
               Zion Tech Group
             </span>
           </h1>
-          <p className="text-xltext-gray-300mb-8max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Join our growing ecosystem of partners and unlock new opportunities for growth, 
             innovation, and success in the AI and IT solutions market.
           </p>
-          <div className="flexflex-colsm:flex-rowgap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-rfrom-cyan-500to-purple-600hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">
               Become a Partner
               <ArrowRight className="inline-blockml-2w-5h-5" />
@@ -307,7 +270,7 @@ const PartnersPage: React.FC = () => {
             <p className="text-xltext-gray-300">Join our ecosystem of successful partners</p>
           </div>
           
-          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
                 <div className="w-16h-16bg-gradient-to-rfrom-cyan-500 to-purple-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
@@ -407,7 +370,7 @@ const PartnersPage: React.FC = () => {
               Let's discuss how we can work together to drive mutual success and 
               deliver exceptional value to your customers.
             </p>
-            <div className="flexflex-colsm:flex-rowgap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-rfrom-cyan-500to-purple-600hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">
                 Apply to Partner
                 <ArrowRight className="inline-blockml-2w-5h-5" />
@@ -478,14 +441,14 @@ export default PartnersPage;
 
   ];
 
-      <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900">
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-4xlmd:text-6xlfont-bold text-white mb-6">,</h1>
                 Our Technology Partners;
               </h1>
-              <p className="text-xltext-gray-300mb-8max-w-3xl mx-auto">We work with leading technology companies to deliver the best solutions for our clients.</p>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We work with leading technology companies to deliver the best solutions for our clients.</p>
             </div>
 
             <div className="flexflex-wrapjustify-centergap-4 mb-12">{categories.map((category) => (</div>
@@ -493,13 +456,13 @@ export default PartnersPage;
                   key={category}className="px-6py-3bg-white/10backdrop-blur-lg border border-white/20 rounded-full text-white hover: bg-white/20 transition-all duration-300",
                 >{category</button>} </button>
   ]
-      <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900">
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         </div><section className="py-20px-4">
-          </section>< className="$2/><divclassName="text-center mb-16">
-              </div><h1 className="text-4xlmd:text-6xlfont-boldtext-white mb-6">
+          </section>< className="$2/><divclass Name="text-center mb-16">
+              </div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Our Technology Partners
               </h1>
-              <p className="text-xltext-gray-300mb-8max-w-3xl mx-auto" /></p>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" /></p>
                 We work with leading technology companies to deliver the best solutions for our clients.
               </p>
             </div>
@@ -630,21 +593,10 @@ export default PartnersPage;
                 </div>
                 <h3 className="text-lgfont-semiboldtext-gray-900mb-2">Launch</h3>
                 <p className="text-gray-600">We launch joint initiatives and begin delivering value together.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5
               </div>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-      </main>
-
-      <Footer />
-    </>
-  );
-};
-
-export default PagePage;
-=======
       </section>
 
       {/* Call to Action */}
@@ -657,7 +609,7 @@ export default PagePage;
             <p className="text-xlmb-8text-blue-100">
               Join our network of strategic partners and help us deliver innovative solutions to clients worldwide.
             </p>
-            <div className="flexflex-colsm:flex-rowgap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="bg-whitetext-blue-900px-8py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
@@ -682,7 +634,7 @@ export default PagePage;
       </section>
       </div>
 
-  const categories = ['all', ...Array.from(new Set(partners.map(partner => partner.category)))];;
+  const categories = ['all', ...Array.from(new Set(partners.map(partner => partner.category)))];
   const tiers = ['all', ...Array.from(new Set(partners.map(partner => partner.tier)))];
 
   const filteredPartners = partners.filter(partner => {)
@@ -715,7 +667,7 @@ export default PagePage;
         return <CheckCircle className="w-4h-4" />;
       default: return <Handshake className="w-4h-4" />}};
 
-  return (<div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900">
+  return (<div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet><title>Partners - Zion Tech Group | Strategic Partnerships</title>
         <meta name="description" content="Meet our strategic partners and learn about our technology partnerships that enable us to deliver cutting-edge AI and IT solutions." />
         <meta name="keywords" content="partners, partnerships, strategic partners, technology partners, AI partners, cloud partners" />
@@ -726,7 +678,7 @@ export default PagePage;
           <h1 className="text-5xlmd:text-7xlfont-bold text-white mb-6">,</h1>
             Our <span className="bg-gradient-to-rfrom-blue-400to-purple-400bg-clip-text text-transparent">Partners</span>
           </h1>
-          <p className="text-xltext-gray-300mb-8max-w-3xl mx-auto">We work with industry leaders to deliver the best AI and IT solutions.</p>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We work with industry leaders to deliver the best AI and IT solutions.</p>
             Our strategic partnerships enable us to provide comprehensive, cutting-edge technology.
           </p>
         </div>
@@ -736,7 +688,7 @@ export default PagePage;
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-boldtext-whitemb-6">Why Partner With Us?</h2>
-            <p className="text-xltext-gray-300max-w-3xlmx-auto">We offer comprehensive partnership programs that benefit both our partners and our clients;</p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">We offer comprehensive partnership programs that benefit both our partners and our clients;</p>
           </div>
 
           <div className="gridgrid-cols-1md:grid-cols-3 gap-8">,</div>
@@ -830,7 +782,7 @@ export default PagePage;
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-boldtext-whitemb-6">Partnership Tiers</h2>
-            <p className="text-xltext-gray-300max-w-3xlmx-auto">We offer different partnership levels to meet the needs of various organizations;</p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">We offer different partnership levels to meet the needs of various organizations;</p>
           </div>
 
           <div className="gridgrid-cols-1md:grid-cols-3 gap-8">,</div>
@@ -1020,33 +972,33 @@ export default PartnersPage
         <meta name="description" content="Our strategic partners and ecosystem that help us deliver world-class AI and IT solutions." />
         <meta name="keywords" content="partners, strategic partnerships, technology partners, AI solutions, IT services" />
       <Navigation />
-      <main className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900">
+      <main className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relativepy-20px-4sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-autotext-center">
-            <h1 className="text-4xlmd:text-6xlfont-boldtext-white mb-6">Our Partners
-            <p className="text-xltext-gray-300mb-8max-w-3xl mx-auto">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Our Partners
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               We work with industry leaders to deliver cutting-edge AI and IT solutions.
         {/* Partners Grid */}
         <section className="py-20px-4sm:px-6lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {partners.map((partner, index) => (
                 <div key={index} className="bg-white/10backdrop-blur-smrounded-xlp-6 hover:bg-white/20 transition-all duration-300">
                   <div className="aspect-videobg-gray-800rounded-lgmb-4 flex items-center justify-center">
                     <span className="text-gray-400text-sm">{partner.name}
-                  <h3 className="text-xlfont-semiboldtext-whitemb-2">{partner.name}
+                  <h3 className="text-xl font-semibold text-white mb-2">{partner.name}
                   <p className="text-gray-300text-smmb-3">{partner.description}
                   <span className="inline-blockbg-purple-600text-whitetext-xs px-2 py-1 rounded-full">
                     {partner.category}
         <title>Partners - Zion Tech Group | Strategic Technology Partnerships
         <meta name="description" content="Explore our strategic partnerships with leading technology companies. We work with Microsoft, AWS, Google Cloud, and more to deliver cutting-edge solutions." />
         <meta name="keywords" content="technology partners, strategic partnerships, Microsoft, AWS, Google Cloud, IBM, enterprise solutions" />
-      <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900">
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20px-4">
           <div className="max-w-7xl mx-autotext-center">
-            <h1 className="text-4xlmd:text-6xlfont-boldtext-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Strategic <span className="text-transparentbg-clip-textbg-gradient-to-rfrom-blue-400 to-purple-400">Partnerships
             <p className="text-xltext-gray-300max-w-3xlmx-auto mb-12">
               We partner with industry leaders to deliver cutting-edge AI and IT solutions. Our strategic alliances ensure you get the best technology available.
@@ -1065,7 +1017,7 @@ export default PartnersPage
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xlfont-boldtext-whitemb-6">Partnership Tiers
-              <p className="text-xltext-gray-300max-w-3xlmx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our partnerships are structured to provide maximum value and support for our clients.
             <div className="gridgrid-cols-1md:grid-cols-3gap-8">
               {partnershipTiers.map((tier, index) => (
@@ -1080,9 +1032,9 @@ export default PartnersPage
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xlfont-boldtext-whitemb-6">Our Technology Partners
-              <p className="text-xltext-gray-300max-w-3xlmx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We work with the world's leading technology companies to deliver comprehensive solutions.
-            <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {partners.map((partner, index) => {
                 const tierInfo = getTierInfo(partner.tier)
                 return (
@@ -1111,7 +1063,7 @@ export default PartnersPage
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xlfont-boldtext-whitemb-6">Partnership Benefits
-              <p className="text-xltext-gray-300max-w-3xlmx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our strategic partnerships provide significant advantages for your business.
             <div className="bg-white/10backdrop-blur-lgrounded-2xlp-8 border border-white/20">
               <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-6">
@@ -1138,4 +1090,3 @@ export default PartnersPage
   )
 }
 export default PartnersPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></button></p></p></p></p></p></p></p></p></p></h1></h1></h2></h2></h2></h2></h2></h3></h3></h3></main></section></section></section></section></section></section></section>
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5

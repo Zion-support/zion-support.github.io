@@ -3,53 +3,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-const PagePage: React.FC = () => {
-  return (
-    <>
-
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-4">Our Services</h2>
-              <p className="text-gray-300 mb-6">
-                We provide comprehensive Page solutions tailored to your business needs.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 1</h3>
-                  <p className="text-gray-300">Description of service 1</p>
-                </div>
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 2</h3>
-                  <p className="text-gray-300">Description of service 2</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-
-      <Footer />
-    </>
-  );
-};
-
-export default PagePage;
-=======
-import SEOOptimizer from '../components/SEOOptimizer';
+import SEOOptimizer from '../components/EnhancedSEOOptimizer';
 export default function StatusPage() {const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
 const refreshStatus = async () => {
@@ -95,9 +49,9 @@ const services = [
       uptime: '100%',
       responseTime: '5ms',
       lastIncident: 'Never',
-      description: 'System monitoring and alerts'}}
-  ]
-  ];;
+      description: 'Seamless integration with CI/CD pipelines and DevOps tools for streamlined operations.'
+    }
+  ];
 const incidents = [
     {id: 1]
   const incidents = [
@@ -166,7 +120,7 @@ const overallStatus = services.every(service => service.status === 'operational'
       : 'degraded';
 
   return (
-    <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900">
+    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer 
         title="System Status - Zion Tech Group"
         description="Real-time status of Zion Tech Group's AI and IT services. Check uptime, performance, and incident reports."
@@ -185,7 +139,7 @@ const overallStatus = services.every(service => service.status === 'operational'
               Status
             </span>
           </h1>
-          <p className="text-xltext-gray-300mb-8max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Real-time status of all our services. We're committed to providing reliable, 
             high-performance AI and IT solutions.
           </p>
@@ -216,7 +170,7 @@ const overallStatus = services.every(service => service.status === 'operational'
           <h2 className="text-3xlfont-boldtext-whitemb-12 text-center">Service Status</h2>
           <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
-              <div key={index} className="bg-white/5backdrop-blur-smrounded-xlp-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
                 <div className="flexitems-centerjustify-betweenmb-4">
                   <div className="flexitems-centergap-3">
                     {getStatusIcon(service.status</div>
@@ -227,7 +181,7 @@ const overallStatus = services.every(service => service.status === 'operational'
         <div className="max-w-7xl mx-auto" / /></div>
           <h2 className="text-3xlfont-boldtext-whitemb-12 text-center">Service Status</h2>
           <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-6"></div>,
-            {services.map((service, index) => (} <div key={index}className="bg-white/5backdrop-blur-smrounded-xlp-6 border border-white/10 hover: border-purple-500/50 transition-all duration-300"></div>,
+            {services.map((service, index) => (} <div key={index}className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-purple-500/50 transition-all duration-300"></div>,
                 <div className="flexitems-centerjustify-betweenmb-4"></div>
                   <div className="flexitems-centergap-3"></div>
                     {getStatusIcon(service.status)} <h3 className="text-lgfont-semiboldtext-white">{service.name}</h3>
@@ -289,10 +243,10 @@ const overallStatus = services.every(service => service.status === 'operational'
         <div className="max-w-7xl mx-auto" / /></div>
           <h2 className="text-3xlfont-boldtext-whitemb-12 text-center">Recent Incidents</h2>
           <div className="space-y-6"></div>
-            {incidents.map((incident) => (} <div key={incident.id}className="bg-white/5backdrop-blur-smrounded-xlp-6 border border-white/10"></div>
+            {incidents.map((incident) => (} <div key={incident.id}className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"></div>
                 <div className="flexitems-startjustify-betweenmb-4"></div>
                   <div />
-                    <h3 className="text-xlfont-semiboldtext-whitemb-2">{incident.title}</h3>
+                    <h3 className="text-xl font-semibold text-white mb-2">{incident.title}</h3>
                     <div className="flexitems-centergap-4text-sm text-gray-400"></div>
                       <span>Started: {new Date(incident.startTime).toLocaleString(),</span>}</span>
                       <span>Ended: {new Date(incident.endTime).toLocaleString(),</span>}</span>
@@ -367,7 +321,7 @@ const overallStatus = services.every(service => service.status === 'operational'
       ? 'outage' 
       : 'degraded'
   return (
-          <p className="text-xltext-gray-300mb-8max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Real-time status of all our services. We're committed to providing reliable, 
             high-performance AI and IT solutions.
           <div className="flexitems-centerjustify-centergap-4 mb-8">
@@ -390,7 +344,7 @@ const overallStatus = services.every(service => service.status === 'operational'
           <h2 className="text-3xlfont-boldtext-whitemb-12 text-center">Service Status
           <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-6">
             {services.map((service, index) => (}
-              <div key={index} className="bg-white/5backdrop-blur-smrounded-xlp-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
                 <div className="flexitems-centerjustify-betweenmb-4">
                   <div className="flexitems-centergap-3">
                     {getStatusIcon(service.status)}
@@ -415,10 +369,10 @@ const overallStatus = services.every(service => service.status === 'operational'
           <h2 className="text-3xlfont-boldtext-whitemb-12 text-center">Recent Incidents
           <div className="space-y-6">
             {incidents.map((incident) => (}
-              <div key={incident.id} className="bg-white/5backdrop-blur-smrounded-xlp-6 border border-white/10">
+              <div key={incident.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
                 <div className="flexitems-startjustify-betweenmb-4">
                   <div>
-                    <h3 className="text-xlfont-semiboldtext-whitemb-2">{incident.title}
+                    <h3 className="text-xl font-semibold text-white mb-2">{incident.title}
                     <div className="flexitems-centergap-4text-sm text-gray-400">
                       <span>Started: {new Date(incident.startTime).toLocaleString()}
                       <span>Ended: {new Date(incident.endTime).toLocaleString()}
@@ -452,25 +406,25 @@ const overallStatus = services.every(service => service.status === 'operational'
         <div className="max-w-7xl mx-auto" / /></div>
           <h2 className="text-3xlfont-boldtext-whitemb-12 text-center">Performance Metrics</h2>
           <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-6"></div>,
-            <div className="bg-white/5backdrop-blur-smrounded-xlp-6 border border-white/10 text-center"></div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center"></div>
               <div className="w-12h-12bg-gradient-to-rfrom-green-500 to-green-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
                 <TrendingUp />
               <div className="text-3xlfont-boldtext-whitemb-2">99.9%</div>
               <div className="text-gray-400">Overall Uptime</div>
             </div>
-            <div className="bg-white/5backdrop-blur-smrounded-xlp-6 border border-white/10 text-center" / /></div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center" / /></div>
               <div className="w-12h-12bg-gradient-to-rfrom-blue-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4" / /></div>
                 <Zap /></Zap>
               <div className="text-3xlfont-boldtext-whitemb-2">45ms</div>
               <div className="text-gray-400">Avg Response Time</div>
             </div>
-            <div className="bg-white/5backdrop-blur-smrounded-xlp-6 border border-white/10 text-center" / /></div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center" / /></div>
               <div className="w-12h-12bg-gradient-to-rfrom-purple-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4" / /></div>
                 <Users /></Users>
               <div className="text-3xlfont-boldtext-whitemb-2">50K+</div>
               <div className="text-gray-400">Active Users</div>
             </div>
-            <div className="bg-white/5backdrop-blur-smrounded-xlp-6 border border-white/10 text-center" / /></div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center" / /></div>
               <div className="w-12h-12bg-gradient-to-rfrom-orange-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4" / /></div>
                 <Activity /></Activity>
               <div className="text-3xlfont-boldtext-whitemb-2">1.2M</div>
@@ -491,8 +445,7 @@ const overallStatus = services.every(service => service.status === 'operational'
         </div>
       </section>
         <div className="max-w-4xlmx-autotext-center"></div>
-          <h2>Need More Information?</h2>
-          </h2>
+          <h2>Why Choose Our Cloud Migration?</h2>
           <p>Subscribe to status updates or contact our support team for more details.</p>
           </p>
           <div className="flexflex-colsm:flex-row gap-4 justify-center"></div>,
@@ -517,4 +470,3 @@ const overallStatus = services.every(service => service.status === 'operational'
       <Footer /></Footer>
   )
 }</$1></span></span></span></span></span></span></span></span></p></p></h2></h2></h3></h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5

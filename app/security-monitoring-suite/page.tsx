@@ -1,12 +1,6 @@
 'use client';
 
 import React from 'react';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-const PagePage: React.FC = () => {
-  return (
-=======
 import { Helmet } from 'react-helmet-async';
 import {Shield}
   Eye,
@@ -47,9 +41,9 @@ const SecurityMonitoringSuitePage: React.FC = () => {
       description: 'Detailed security reports and analytics to help you understand and improve your security posture.'},
     {icon: Zap,
       title: 'Automated Response',
-      description: 'Automated incident response and threat mitigation to protect your systems 24/7.'}}
-  ]
-  ];;
+      description: 'Seamless integration with CI/CD pipelines and DevOps tools for streamlined operations.'
+    }
+  ];
 const benefits = [
   ]
   const benefits = [
@@ -71,50 +65,9 @@ return(<>)
     'Expert security team support'
   ]
 return (
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5
     <>
 
-<<<<<<< HEAD
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-4">Our Services</h2>
-              <p className="text-gray-300 mb-6">
-                We provide comprehensive Page solutions tailored to your business needs.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 1</h3>
-                  <p className="text-gray-300">Description of service 1</p>
-                </div>
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 2</h3>
-                  <p className="text-gray-300">Description of service 2</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-
-      <Footer />
-    </>
-  );
-};
-=======
-      <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900">
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20pb-16px-4">
         </section>
@@ -124,7 +77,7 @@ return (
               <h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
         {/* Hero Section */}
         <section className="py-20px-4">
-          </section>< className="$2/><divclassName="text-center mb-16">
+          </section>< className="$2/><divclass Name="text-center mb-16">
               </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
@@ -161,12 +114,11 @@ return (
       </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
-              <h2>Platform Features;</h2>
-              </h2>
+              <h2>Why Choose Our Cloud Migration?</h2>
               <p>Our security monitoring suite provides everything you need to protect your business from cyber threats.,</p>
               </p>
             </div>
-            <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8"></div>,
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>,
               {features.map((feature, index) => (
                 <div key={index}className="bg-white/10backdrop-blur-smrounded-xlp-6 border border-white/20 hover: bg-white/20 transition-all duration-300"></div>,
                   <div className="flexitems-centerjustify-centerw-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
@@ -182,10 +134,10 @@ return (
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-5xlmd:text-6xlfont-boldtext-white mb-6">Security Monitoring Suite
-              <p className="text-xltext-gray-300mb-8max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Comprehensive cybersecurity platform with real-time monitoring, advanced threat detection, 
                 and automated response capabilities to protect your business 24/7.
-              <div className="flexflex-colsm:flex-rowgap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-rfrom-cyan-500to-purple-600text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                   <Shield className="mr-2h-5w-5" />
                   Start Free Trial
@@ -197,19 +149,19 @@ return (
         <div$2>
             <div className="text-center mb-16">
               <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">Platform Features
-              <p className="text-xltext-gray-300max-w-3xlmx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our security monitoring suite provides everything you need to protect your business from cyber threats.
-            <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10backdrop-blur-smrounded-xlp-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="flexitems-centerjustify-centerw-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                    <feature.icon className="h-6w-6text-white" />
+                    <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                   <h3 className="text-xlfont-semiboldtext-whitemb-3">{feature.title}
                   <p className="text-gray-300">{feature.description}
               ))}
         {/* Benefits Section */}
         <section className="py-20px-4">
-          </section>< className="$2/><divclassName="text-center mb-16">
+          </section>< className="$2/><divclass Name="text-center mb-16">
               </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
@@ -223,8 +175,7 @@ return (
               <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
-              <h2>Why Choose Our Suite?</h2>
-              </h2>
+              <h2>Why Choose Our Cloud Migration?</h2>
               <p>Experience comprehensive security protection with our all-in-one monitoring platform.,</p>
                 Why Choose Our Suite?
               </h2>
@@ -232,15 +183,15 @@ return (
                 Experience comprehensive security protection with our all-in-one monitoring platform.,
               </p>
             </div>
-            <div className="gridgrid-cols-1md:grid-cols-2gap-6"></div>,
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>,
               {benefits.map((benefit, index) => (
                 <div key={index}className="flexitems-startspace-x-3"></div>
                   <CheckCircle />
                   <p className="text-gray-300text-lg">{benefit</p>}</p>
                 </div>
-              <p className="text-xltext-gray-300max-w-3xlmx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience comprehensive security protection with our all-in-one monitoring platform.
-            <div className="gridgrid-cols-1md:grid-cols-2gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flexitems-startspace-x-3">
                   <CheckCircle className="h-6w-6text-purple-400mt-1 flex-shrink-0" />
@@ -263,8 +214,7 @@ return (
       </section>
           <div className="max-w-4xlmx-autotext-center"></div>
             <div className="bg-gradient-to-rfrom-purple-600to-blue-600rounded-2xl p-8 md: p-12"></div>,
-              <h2>Ready to Secure Your Business?</h2>
-              </h2>
+              <h2>Why Choose Our Cloud Migration?</h2>
               <p>Start your free trial today and experience the power of our security monitoring suite.</p>
                 Ready to Secure Your Business?
               </h2>
@@ -287,6 +237,5 @@ return (
       </div>
 
   )};
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5
 
 export default PagePage;

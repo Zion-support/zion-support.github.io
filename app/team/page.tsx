@@ -79,7 +79,7 @@ const stats = [
 ]
 const TeamPage: React.FC = () => {
   return (
-    <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900">
+    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="relativeoverflow-hidden">
         <div className="absoluteinset-0bg-gradient-to-rfrom-blue-600/20 to-purple-600/20"></div>
         <div className="relativemax-w-7xl mx-autopx-4 sm: px-6 lg:px-8 py-24">
@@ -87,7 +87,7 @@ const TeamPage: React.FC = () => {
             <h1 className="text-4xlmd:text-6xlfont-bold text-white mb-6">
               Our Team
             </h1>
-            <p className="text-xltext-gray-300mb-8max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Meet the brilliant minds behind our innovative AI and IT solutions.
               Our diverse team of experts is dedicated to transforming your business.
             </p>
@@ -113,7 +113,7 @@ const TeamPage: React.FC = () => {
                       {member.name.split(' ').map(n => n[0]).join('')}
                     </span>
                   </div>
-                  <h3 className="text-xlfont-semiboldtext-whitemb-2">
+                  <h3 className="text-xl font-semibold text-white mb-2">
                     {member.name}
                   </h3>
                   <p className="text-blue-300mb-3">
@@ -135,7 +135,7 @@ const TeamPage: React.FC = () => {
           </div>
           {/* Values Section */}
           <div className="text-center mb-16">
-            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Our Values
             </h2>
             <p className="text-xltext-gray-300mb-12max-w-3xl mx-auto">
@@ -159,7 +159,7 @@ const TeamPage: React.FC = () => {
           </div>
           {/* CTA Section */}
           <div className="text-center">
-            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Work With Us?
             </h2>
             <p className="text-xltext-gray-300mb-8max-w-2xl mx-auto">

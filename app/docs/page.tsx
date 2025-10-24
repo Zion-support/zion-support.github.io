@@ -1,11 +1,5 @@
 'use client';
 
-<<<<<<< HEAD
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-const PagePage: React.FC = () => {
-=======
 const DocsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -126,53 +120,10 @@ const DocsPage: React.FC = () => {
         doc.description.toLowerCase().includes(searchQuery.toLowerCase())
       )
     : filteredDocs
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5
   return (
     <>
 
-<<<<<<< HEAD
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-4">Our Services</h2>
-              <p className="text-gray-300 mb-6">
-                We provide comprehensive Page solutions tailored to your business needs.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 1</h3>
-                  <p className="text-gray-300">Description of service 1</p>
-                </div>
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 2</h3>
-                  <p className="text-gray-300">Description of service 2</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-
-      <Footer />
-    </>
-  );
-};
-
-export default PagePage;
-=======
-      <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900">
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="containermx-autopx-4py-16 pt-24">{/* Header */</div>} <div className="text-center mb-16">
             <div className="flexitems-centerjustify-centermb-6">
               <div className="w-16h-16bg-gradient-to-rfrom-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
@@ -293,7 +244,7 @@ export default PagePage;
           {searchResults.length === 0 && searchQuery && (
             <div className="cyber-card-enhancedp-8text-center">
               </div><Search className="w-16h-16text-gray-400mx-auto mb-4" />
-              <h3 className="text-xlfont-semiboldtext-whitemb-2">No results found</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">No results found</h3>
               <p className="text-gray-300mb-6">Try adjusting your search terms or browse our documentation categories.</p>
               <button;
                 onClick={() =>setSearchQuery('')</button>}className="bg-gradient-to-rfrom-cyan-500to-blue-600hover: from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300",
@@ -370,7 +321,7 @@ import React, { useState } from 'react'
 import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight, Globe, Brain, Cloud, Shield, Settings, Users, Database, Zap, Eye, Sparkles } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
+import SEOOptimizer from '../components/EnhancedSEOOptimizer'
 export default function DocsPage() {
   const [searchQuery, setSearchQuery] = useState('')
   const docCategories = [
@@ -429,7 +380,7 @@ export default function DocsPage() {
     )
   })).filter(category => category.docs.length > 0)
   return (
-    <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900">
+    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer 
         title="Documentation - Zion Tech Group"
         description="Complete documentation for Zion Tech Group's AI and IT solutions. Find guides, tutorials, API references, and best practices."
@@ -448,7 +399,7 @@ export default function DocsPage() {
               Center
             </span>
           </h1>
-          <p className="text-xltext-gray-300mb-8max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Everything you need to know about our AI and IT solutions. 
             Comprehensive guides, API references, and best practices.
           </p>
@@ -476,7 +427,7 @@ export default function DocsPage() {
           <h2 className="text-3xlfont-boldtext-whitemb-8 text-center">Popular Documentation
           <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-6">
             {popularDocs.map((doc, index) => (}
-              <div key={index} className="bg-white/5backdrop-blur-smrounded-xlp-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">
                 <div className="flexitems-centergap-3mb-4">
                   <div className="w-10h-10bg-gradient-to-rfrom-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
                     <BookOpen className="w-5h-5text-white" />
@@ -526,11 +477,10 @@ export default function DocsPage() {
             Need Help?
           <p className="text-xltext-purple-100mb-8">
             Can't find what you're looking for? Our support team is here to help.
-          <div className="flexflex-colsm:flex-rowgap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-whitetext-purple-600px-8py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">Contact Support
             <button className="border-2border-whitetext-whitepx-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">Join Community
       <Footer />
   )
 }</div></div></div></div></div></div></div></div></div></span></button></button></p></p></p></p></h2></h2></h2></h3></h3></h4></section></section></section>
 </li>
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5

@@ -1,6 +1,4 @@
 'use client';
-<<<<<<< HEAD
-=======
 import React, {Suspense, lazy}from 'react';
 import {Link} from 'react-router-dom';
 import {Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight}
@@ -98,8 +96,7 @@ const itServices = [
       category: 'infrastructure',
       icon: Server,
       price: 'Starting at $5,000',
-      features: [,
-        'Network architecture design',
+      features: ['Network architecture design',
         'Server deployment and configuration',
         'Storage solutions implementation',
         'Backup and disaster recovery setup',
@@ -137,8 +134,7 @@ const itServices = [
       category: 'cloud',
       icon: Cloud,
       price: 'Starting at $3,000',
-      features: [,
-        'Cloud readiness assessment',
+      features: ['Cloud readiness assessment',
         'Migration strategy development',
         'Data and application migration',
         'Cloud security implementation',
@@ -176,8 +172,7 @@ const itServices = [
       category: 'security',
       icon: Shield,
       price: 'Starting at $2,500',
-      features: [,
-        'Security risk assessment',
+      features: ['Security risk assessment',
         'Penetration testing',
         'Security policy development',
         'Firewall and endpoint protection',
@@ -215,8 +210,7 @@ const itServices = [
       category: 'networking',
       icon: Network,
       price: 'Starting at $2,000',
-      features: [,
-        'Network architecture design',
+      features: ['Network architecture design',
         'Bandwidth optimization',
         'Quality of Service (QoS) setup',
         'Wireless network deployment',
@@ -254,8 +248,7 @@ const itServices = [
       category: 'database',
       icon: Database,
       price: 'Starting at $1,500',
-      features: [,
-        'Database design and architecture',
+      features: ['Database design and architecture',
         'Performance optimization',
         'Backup and recovery setup',
         'Security implementation',
@@ -293,8 +286,7 @@ const itServices = [
       category: 'support',
       icon: Headphones,
       price: 'Starting at $99/user/month',
-      features: [,
-        '24/7 technical support',
+      features: ['24/7 technical support',
         'Remote monitoring and management',
         'Proactive maintenance',
         'Software updates and patches',
@@ -332,8 +324,7 @@ const itServices = [
       category: 'development',
       icon: Code,
       price: 'Starting at $5,000',
-      features: [,
-        'Requirements analysis',
+      features: ['Requirements analysis',
         'Custom application development',
         'Web and mobile app development',
         'API development and integration',
@@ -371,8 +362,7 @@ const itServices = [
       category: 'consulting',
       icon: Briefcase,
       price: 'Starting at $200/hour',
-      features: [,
-        'IT strategy development',
+      features: ['IT strategy development',
         'Technology roadmap planning',
         'Digital transformation consulting',
         'Vendor evaluation and selection',
@@ -410,8 +400,7 @@ const itServices = [
       category: 'recovery',
       icon: RefreshCw,
       price: 'Starting at $3,500',
-      features: [,
-        'Business impact analysis',
+      features: ['Business impact analysis',
         'Recovery time objective planning',
         'Backup strategy implementation',
         'Disaster recovery testing',
@@ -449,8 +438,7 @@ const itServices = [
       category: 'compliance',
       icon: CheckSquare,
       price: 'Starting at $2,000',
-      features: [,
-        'Compliance gap analysis',
+      features: ['Compliance gap analysis',
         'Policy and procedure development',
         'Security control implementation',
         'Audit preparation and support',
@@ -516,56 +504,13 @@ const filteredServices = itServices.filter(service => {;
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch});
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5
 
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const PagePage: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <>
-
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-4">Our Services</h2>
-              <p className="text-gray-300 mb-6">
-                We provide comprehensive Page solutions tailored to your business needs.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 1</h3>
-                  <p className="text-gray-300">Description of service 1</p>
-                </div>
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 2</h3>
-                  <p className="text-gray-300">Description of service 2</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-
-      <Footer />
-    </>
-  );
-};
-=======
-    <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900">
+    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}</div>
       <section$1>
         <div$2></div>
@@ -577,7 +522,7 @@ const PagePage: React.FC = () => {
             Comprehensive IT solutions designed to optimize your technology infrastructure, 
             enhance security, and drive business growth. Expert consulting and implementation.
           </p>
-          <div className="flexflex-colsm:flex-rowgap-4 justify-center mb-12"></div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"></div>
             <a
               href="tel:+13024640950"
               className="cyber-buttonpx-8py-4rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
@@ -585,7 +530,7 @@ const PagePage: React.FC = () => {
               <Phone className="w-5h-5inlinemr-2" />
       {/* Hero Section */}</div>
       <section className="py-20px-4">
-          </section>< className="$2/><divclassName="text-center mb-16">
+          </section>< className="$2/><divclass Name="text-center mb-16">
               </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
@@ -926,7 +871,7 @@ const PagePage: React.FC = () => {
             Our certified IT professionals deliver reliable, secure, and scalable solutions. 
             All services include free consultations and ongoing support.
           </p>
-          <div className="flexflex-colsm:flex-rowgap-4 justify-center"></div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
               href="tel:+13024640950"
               className="cyber-buttonpx-8py-4rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
@@ -944,8 +889,7 @@ const PagePage: React.FC = () => {
         </div>
       </section>
         <div className="max-w-4xlmx-autotext-center"></div>
-          <h2>Ready to Optimize Your IT Infrastructure?,</h2>
-          </h2>
+          <h2>Why Choose Our Cloud Migration?</h2>
           <p>Our certified IT professionals deliver reliable, secure, and scalable solutions.;</p>
             All services include free consultations and ongoing support.
           </p>
@@ -964,6 +908,5 @@ const PagePage: React.FC = () => {
       </section>
     </div>
   )};
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5
 
 export default PagePage;

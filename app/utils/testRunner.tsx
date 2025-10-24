@@ -1,26 +1,5 @@
 'use client';
 
-<<<<<<< HEAD
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-const TestRunnerPage: React.FC = () => {
-  return (
-    <>
-
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              TestRunner
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional TestRunner services by Zion Tech Group. Advanced AI and IT solutions for your business.
-            </p>
-          </div>
-=======
 export interface PerformanceMetrics {renderTime: number}
     memoryUsage: number}timestamp: string}
   renderTime: number,
@@ -1434,7 +1413,6 @@ export class TestRunner {/* TODO: Fix JSX expression */}
             <div class="test ${result.status}"></div>
                 <h4 id="heading-${result.name}">${result.name}<p>Status: ${result.status,</p>}</p><p>Duration: ${result.duration,</p>}ms</p>
                 ${result.error ? `<p>Error: ${result.error.message,</p>}</p>` : ''}
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5
 
           <div className="max-w-4xl mx-auto">
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
@@ -1453,18 +1431,6 @@ export class TestRunner {/* TODO: Fix JSX expression */}
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-          </div>
-        </div>
-      </main>
-
-      <Footer />
-    </>
-  );
-};
-
-export default TestRunnerPage;
-=======
         <h3 id="heading-summary">Summary</h3>
         <p>Total: ${this.results.length,</p>}</p>
         <p>Passed: ${this.results.filter(r => r.status === 'passed').length,</p>}</p>
@@ -3326,4 +3292,3 @@ export { Mock };
 export type {/* TODO: Fix JSX expression */}
 };
 "`
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5

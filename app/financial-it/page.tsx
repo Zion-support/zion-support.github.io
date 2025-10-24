@@ -3,52 +3,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-const PagePage: React.FC = () => {
-  return (
-    <>
-
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-4">Our Services</h2>
-              <p className="text-gray-300 mb-6">
-                We provide comprehensive Page solutions tailored to your business needs.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 1</h3>
-                  <p className="text-gray-300">Description of service 1</p>
-                </div>
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 2</h3>
-                  <p className="text-gray-300">Description of service 2</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-
-      <Footer />
-    </>
-  );
-};
-
-export default PagePage;
-=======
 import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
 
 const FinancialITPage: React.FC = () => {
@@ -120,11 +74,9 @@ const services = [
       description: 'Advanced risk assessment and management tools'},
     {icon: '🔒',
       title: 'Security Services',
-      description: 'Cybersecurity and data protection solutions'}}
-  ]
+      description: 'Seamless integration with CI/CD pipelines and DevOps tools for streamlined operations.'
+    }
   ];
-const benefits = [
-  ]
   const benefits = [
     'SOX Compliance Ready',
     'Bank-level Security',
@@ -158,11 +110,11 @@ const benefits = [
               IT Solutions
             </span>
           </h1>
-          <p className="text-xltext-gray-300mb-8max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Specialized IT solutions for financial services with SOX compliance, security, and regulatory requirements.
             Built for banks, credit unions, investment firms, and fintech companies.
           </p>
-          <div className="flexflex-colsm:flex-rowgap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-rfrom-green-500to-blue-600hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-green-500/25">
               Get Started Today
               <ArrowRight className="inline-blockml-2w-5h-5" />
@@ -186,14 +138,15 @@ return(<div className="min-h-screenbg-gradient-to-brfrom-slate-900via-green-900 
 return (
     <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-green-900 to-slate-900"></div>
       <Helmet>
-        </Helmet><title>Financial IT Solutions | Zion Tech Group</title>
+        </Helmet>
+      <title>Financial IT Solutions | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       <Navigation>
       {/* Hero Section */}
       </Navigation><section className="py-20px-4">
-          </section>< className="$2/><divclassName="text-center mb-16">
+          </section>< className="$2/><divclass Name="text-center mb-16">
               </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
@@ -261,7 +214,7 @@ return (
             <h2 className="text-4xl font-boldtext-whitemb-4">
               Financial IT Solutions
             </h2>
-            <p className="text-xltext-gray-300max-w-3xlmx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive IT solutions designed specifically for the financial services industry 
               with built-in compliance, security, and regulatory features.
             </p>
@@ -274,12 +227,12 @@ return (
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-boldtext-whitemb-4">Financial IT Solutions
-            <p className="text-xltext-gray-300max-w-3xlmx-auto">Comprehensive IT solutions designed specifically for financial services industry
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive IT solutions designed specifically for financial services industry
           <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50backdrop-blur-smborderborder-gray-700 rounded-xl p-6 hover:border-green-400/50 transition-all duration-300 group">
                 <div className="w-12h-12bg-gradient-to-rfrom-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="w-6h-6text-white" />
+                  <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                 </div>
                 <h3 className="text-xlfont-semiboldtext-whitemb-3">{feature.title}</h3>
                 <p className="text-gray-300mb-4">{feature.description}</p>
@@ -292,7 +245,7 @@ return (
             ))}
       {/* Services Section */}
       <section className="py-20px-4">
-          </section>< className="$2/><divclassName="text-center mb-16">
+          </section>< className="$2/><divclass Name="text-center mb-16">
               </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
@@ -303,12 +256,11 @@ return (
       {/* Benefits Section */}
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
-            <h2>Financial Services;</h2>
-            </h2>
+            <h2>Why Choose Our Cloud Migration?</h2>
             <p>Comprehensive IT solutions for all aspects of financial services and banking operations.</p>
             </p>
           </div>
-          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8"></div>,
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>,
             {services.map((service, index) => (} <div key={index}className="bg-white/5backdrop-blur-smborderborder-white/10 rounded-xl p-6 text-center hover: bg-white/10 transition-all duration-300"></div>,
                 <div className="text-4xlmb-4">{service.icon</div>}</div>
                 <h3 className="text-xlfont-semiboldtext-whitemb-3">{service.title}</h3>
@@ -326,7 +278,7 @@ return (
             <h2 className="text-4xl font-boldtext-whitemb-4">
               Why Choose Our Financial IT Solutions
             </h2>
-            <p className="text-xltext-gray-300max-w-3xlmx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our solutions are designed to meet the unique challenges and requirements of the financial services industry.
             </p>
           </div>
@@ -335,7 +287,7 @@ return (
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white/5backdrop-blur-smborderborder-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
                 <CheckCircle className="w-12h-12text-green-400mx-auto mb-4" />
-                <h3 className="text-xlfont-semiboldtext-whitemb-2">{benefit}</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">{benefit}</h3>
               </div>
             ))}
           </div>
@@ -353,7 +305,7 @@ return (
               Let's discuss how our specialized financial IT solutions can help your organization 
               meet compliance requirements while improving efficiency and security.
             </p>
-            <div className="flexflex-colsm:flex-rowgap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-rfrom-green-500to-blue-600hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-green-500/25">
                 Get Started Today
                 <ArrowRight className="inline-blockml-2w-5h-5" />
@@ -368,15 +320,15 @@ return (
               Comprehensive IT solutions for all aspects of financial services and banking operations.
             </p>
           </div>
-          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8" / /></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" / /></div>
             {
     services.map((service, index) => ()
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-boldtext-whitemb-4">Financial Services
-            <p className="text-xltext-gray-300max-w-3xlmx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive IT solutions for all aspects of financial services and banking operations.
-          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white/5backdrop-blur-smborderborder-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
                 <div className="text-4xlmb-4">{service.icon}
@@ -395,8 +347,7 @@ return (
       </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
-            <h2>Why Choose Our Financial IT Solutions?</h2>
-            </h2>
+            <h2>Why Choose Our Cloud Migration?</h2>
             <p>Experience the benefits of modern financial technology with our proven solutions.</p>
             </p>
           </div>
@@ -441,11 +392,10 @@ export default FinancialITPage
         <div className="max-w-4xlmx-autotext-center">
           <h2 className="text-4xl font-boldtext-whitemb-6">Ready for Financial IT Excellence?
           <p className="text-xltext-gray-300mb-8">Join leading financial institutions using our specialized IT solutions for compliance and security
-          <div className="flexflex-colsm:flex-rowgap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-rfrom-green-500to-blue-600hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Start Free Trial
             <button className="borderborder-green-400text-green-400hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Contact Sales
       <Footer />
   )
 }
 export default FinancialITPage</div></div></div></div></div></div></div></div></div></div></div></span></button></button></button></button></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></h3></h3></h3></ul></li></section></section></section></section></section>
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5

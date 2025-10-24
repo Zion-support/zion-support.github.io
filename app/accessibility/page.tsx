@@ -89,7 +89,7 @@ const AccessibilityPage: React.FC = () => {
                 Making technology accessible to everyone. Our comprehensive accessibility 
                 solutions ensure your digital products work for users of all abilities.
               </p>
-              <div className="flexflex-colsm:flex-rowgap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-green-600text-whitepx-8py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transition-colors">
                   Start Free Trial
                 </button>
@@ -117,7 +117,7 @@ const AccessibilityPage: React.FC = () => {
               {features.map((feature, index) => (
                 <div key={index} className="bg-gray-50p-6rounded-xlhover:shadow-lg transition-shadow">
                   <div className="w-12h-12bg-green-100rounded-lg flex items-center justify-center mb-4">
-                    <feature.icon className="w-6h-6text-green-600" />
+                    <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                   </div>
                   <h3 className="text-xlfont-semiboldtext-gray-900mb-3">
                     {feature.title}
@@ -203,7 +203,7 @@ const AccessibilityPage: React.FC = () => {
             <p className="text-xltext-green-100mb-8">
               Join thousands of businesses already providing inclusive digital experiences.
             </p>
-            <div className="flexflex-colsm:flex-rowgap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-whitetext-green-600px-8py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
                 Start Free Trial
               </button>

@@ -4,51 +4,6 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const PagePage: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <>
-
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-4">Our Services</h2>
-              <p className="text-gray-300 mb-6">
-                We provide comprehensive Page solutions tailored to your business needs.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 1</h3>
-                  <p className="text-gray-300">Description of service 1</p>
-                </div>
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 2</h3>
-                  <p className="text-gray-300">Description of service 2</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-
-      <Footer />
-    </>
-  );
-};
-
-export default PagePage;
-=======
   const features = [
     {
       icon: Brain,
@@ -68,7 +23,8 @@ export default PagePage;
       description: 'Worldwide deployment and support for international businesses'}
   ];
 'use client';
-import React, {useState}from 'react';
+
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import {Users, MessageCircle, Calendar, Star, ArrowRight, ExternalLink, Mail, Phone, MapPin, Clock, CheckCircle, Award, TrendingUp, Heart} from 'lucide-react';
 
@@ -138,13 +94,14 @@ const CommunityPage: React.FC = () => {
 
   return(<>)
       <Helmet><title>Community - Zion Tech Group</title>
-        </Helmet><title>Community - Zion Tech Group</title>
+        </Helmet>
+      <title>Community - Zion Tech Group</title>
         <meta name="description" content="Join the Zion Tech Group community. Connect with developers, entrepreneurs, and tech enthusiasts. Learn, share, and grow together." />
         <meta name="keywords" content="community, developers, tech community, networking, events, forums, AI community" />
         <link rel="canonical" href="https: //ziontechgroup.com/community" />,
       </Helmet>
 
-      <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900">
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="containermx-autopx-4py-16 pt-24">{/* Header */</div>} <div className="text-center mb-16">
             <div className="flexitems-centerjustify-centermb-6">
               <div className="w-16h-16bg-gradient-to-rfrom-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
@@ -186,16 +143,16 @@ const CommunityPage: React.FC = () => {
             <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">
               Why Choose Our Page?
             </h2>
-            <p className="text-xltext-gray-300max-w-3xlmx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
 
-          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10backdrop-blur-smrounded-xlp-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="flexitems-centerjustify-centerw-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6w-6text-white" />
+                  <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                 </div>
                 <h3 className="text-xlfont-semiboldtext-whitemb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -214,12 +171,12 @@ const CommunityPage: React.FC = () => {
             <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">
               Key Benefits
             </h2>
-            <p className="text-xltext-gray-300max-w-3xlmx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our page solutions for your business.
             </p>
           </div>
 
-          <div className="gridgrid-cols-1md:grid-cols-2gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flexitems-startspace-x-3">
                 <CheckCircle className="h-6w-6text-purple-400mt-1 flex-shrink-0" />
@@ -240,7 +197,7 @@ const CommunityPage: React.FC = () => {
             <p className="text-xltext-purple-100mb-8">
               Contact our experts to discuss your page needs and get a customized solution.
             </p>
-            <div className="flexflex-colsm:flex-rowgap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-whitetext-purple-600px-8py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 <Phone className="mr-2h-5w-5" />
                 Call Now
@@ -283,7 +240,7 @@ export default PagePage;
                   just starting out or you're a seasoned professional, you'll find value in our diverse and;
                   welcoming community.
                 </p>
-                <div className="gridgrid-cols-1md:grid-cols-2gap-6">,</div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">,</div>
                   <div>
                     <h3 className="text-lgfont-semiboldtext-whitemb-3">What You'll Find</h3>
                     <ul className="space-y-2">
@@ -313,7 +270,7 @@ export default PagePage;
                   just starting out or you're a seasoned professional, you'll find value in our diverse and 
                   welcoming community.
                 </p>
-                <div className="gridgrid-cols-1md:grid-cols-2gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     </div><h3 className="text-lgfont-semiboldtext-whitemb-3">What You'll Find</h3>
                     <ul className="space-y-2">
@@ -369,7 +326,7 @@ export default PagePage;
                     <div key={index}className="bg-slate-800rounded-lgp-6">
                       <div className="flexitems-startjustify-betweenmb-4">
                         <div className="flex-1">
-                          <h3 className="text-xlfont-semiboldtext-whitemb-2">{event.title}</h3>
+                          <h3 className="text-xl font-semibold text-white mb-2">{event.title}</h3>
                           <p className="text-gray-300mb-3">{event.description</p>}</p>
                           <div className="flexitems-centerspace-x-6text-sm text-gray-400">
                             <span className="flexitems-center">
@@ -393,7 +350,7 @@ export default PagePage;
                     <div key={index} className="bg-slate-800rounded-lgp-6">
                       <div className="flexitems-startjustify-betweenmb-4">
                         <div className="flex-1">
-                          </div><h3 className="text-xlfont-semiboldtext-whitemb-2">{event.title}</h3>
+                          </div><h3 className="text-xl font-semibold text-white mb-2">{event.title}</h3>
                           <p className="text-gray-300mb-3">{event.description}</p>
                           <div className="flexitems-centerspace-x-6text-sm text-gray-400">
                             </div><span className="flexitems-center">
@@ -432,7 +389,7 @@ export default PagePage;
             <div className="space-y-8">
               <div className="cyber-card-enhancedp-8">
                 <h2 className="text-2xlfont-boldtext-whitemb-6">Community Forums</h2>
-                <div className="gridgrid-cols-1md:grid-cols-2gap-6">,</div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">,</div>
                   {forums.map((forum, index) => (
                     <div key={index}className="bg-slate-800rounded-lgp-6">
                       <h3 className="text-lgfont-semiboldtext-whitemb-2">{forum.name}</h3>
@@ -457,7 +414,7 @@ export default PagePage;
             <div className="space-y-8">
               <div className="cyber-card-enhancedp-8">
                 </div><h2 className="text-2xlfont-boldtext-whitemb-6">Community Forums</h2>
-                <div className="gridgrid-cols-1md:grid-cols-2gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {forums.map((forum, index) => (
                     <div key={index} className="bg-slate-800rounded-lgp-6">
                       </div><h3 className="text-lgfont-semiboldtext-whitemb-2">{forum.name}</h3>
@@ -492,7 +449,7 @@ export default PagePage;
             <div className="space-y-8">
               <div className="cyber-card-enhancedp-8">
                 <h2 className="text-2xlfont-boldtext-whitemb-6">Community Benefits</h2>
-                <div className="gridgrid-cols-1md:grid-cols-2gap-6">,</div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">,</div>
                   {benefits.map((benefit, index) => (
                     <div key={index}className="flexitems-startspace-x-4">
                       <div className="flex-shrink-0">
@@ -510,7 +467,7 @@ export default PagePage;
             <div className="space-y-8">
               <div className="cyber-card-enhancedp-8">
                 </div><h2 className="text-2xlfont-boldtext-whitemb-6">Community Benefits</h2>
-                <div className="gridgrid-cols-1md:grid-cols-2gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {benefits.map((benefit, index) => (
                     <div key={index} className="flexitems-startspace-x-4">
                       <div className="flex-shrink-0">
@@ -603,15 +560,15 @@ export default CommunityPage
       <div className="containermx-autopx-4py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xlfont-boldtext-whitemb-6">Community
-          <p className="text-xltext-gray-300mb-8max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Join our vibrant community of developers, entrepreneurs, and tech enthusiasts. 
             Connect, learn, and grow together.
-          <p className="text-xltext-gray-300max-w-3xlmx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Our community provides opportunities for networking, learning, and collaboration.
         <div className="gridmd:grid-cols-2lg:grid-cols-4gap-8 mb-16">
           {features.map((feature, index) => (
             <div key={index} className="bg-white/10backdrop-blur-smrounded-xlp-6 text-center hover:bg-white/20 transition-all duration-300">
-              <feature.icon className="h-12w-12text-purple-400mx-auto mb-4" />
+              <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
               <h3 className="text-xlfont-semiboldtext-whitemb-3">{feature.title}
               <p className="text-gray-300">{feature.description}
           ))}
@@ -629,7 +586,7 @@ export default CommunityPage
             Ready to Join?
           <p className="text-xltext-purple-100mb-8">
             Become part of our growing community and start connecting with like-minded professionals.
-          <div className="flexflex-colsm:flex-rowgap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-whitetext-purple-600px-8py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
               <Users className="mr-2h-5w-5" />
               Join Community
@@ -638,4 +595,3 @@ export default CommunityPage
   )
 }
 export default CommunityPage</div></div></div></div></div></span></button></p></p></p></p></h1></h2></h2></h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5

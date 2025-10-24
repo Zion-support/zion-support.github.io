@@ -89,7 +89,7 @@ const AIAgriculturalIntelligenceProPage: React.FC = () => {
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
                 <div className="flex items-center mb-4">
-                  <feature.icon className="w-8 h-8 text-green-400 mr-3" />
+                  <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                 </div>
                 <p className="text-gray-300 mb-4">{feature.description}</p>

@@ -94,7 +94,7 @@ const ITServicesPage: React.FC = () => {
               End-to-end technology services to power your business growth.
             </p>
           </div>
-          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-whitep-6rounded-xlshadow-lg hover: shadow-xl transition-shadow duration-300">
                 <div className="flexitems-centerjustify-centerw-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg mb-4">
@@ -205,7 +205,7 @@ const ITServicesPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20px-4bg-gradient-to-rfrom-emerald-600 to-blue-600">
         <div className="max-w-4xlmx-autotext-center">
-          <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Transform Your IT Infrastructure Today
           </h2>
           <p className="text-xltext-emerald-100mb-8">

@@ -1,11 +1,6 @@
 'use client';
 
 import React from 'react';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-const PageBroken2Page: React.FC = () => {
-=======
 'use client';
 import React, {useState, useCallback}from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -92,7 +87,7 @@ const services = [
     'Consulting',
 
     'Other';
-  ];;
+  ];
 const contactInfo = [
     {icon: Phone,
       title: 'Phone',
@@ -115,23 +110,10 @@ const contactInfo = [
       description: 'Eastern Time'}
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5
   return (
     <>
 
-<<<<<<< HEAD
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Page Broken2
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional Page Broken2 services by Zion Tech Group. Advanced AI and IT solutions for your business.
-=======
-<div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900 py-20">
+<div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
         <div className="containermx-autopx-4">
           {/* Header */}
           <div className="text-center mb-16">
@@ -141,17 +123,18 @@ const contactInfo = [
                 {' '}Touch
               </span>
             </h1>
-            <p className="text-xltext-gray-300max-w-3xlmx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Ready to transform your business? Let's discuss your project and explore 
       description: 'Eastern Time'}}
   ]
 return(<>)
       <Helmet><title>Contact Us - Zion Tech Group | Get in Touch</title>
-        </Helmet><title>Contact Us - Zion Tech Group | Get in Touch</title>
+        </Helmet>
+      <title>Contact Us - Zion Tech Group | Get in Touch</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
-<div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900 py-20"></div>
+<div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20"></div>
         <div className="containermx-autopx-4"></div>
           {/* Header */} <div className="text-center mb-16"></div>
             <h1>Get in;</h1>
@@ -160,29 +143,9 @@ return(<>)
             </h1>
             <p>Ready to transform your business? Let's discuss your project and explore;</p>
               how our AI and IT solutions can help you achieve your goals.
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5
             </p>
           </div>
 
-<<<<<<< HEAD
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-4">Our Services</h2>
-              <p className="text-gray-300 mb-6">
-                We provide comprehensive Page Broken2 solutions tailored to your business needs.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 1</h3>
-                  <p className="text-gray-300">Description of service 1</p>
-                </div>
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 2</h3>
-                  <p className="text-gray-300">Description of service 2</p>
-                </div>
-              </div>
-            </div>
-=======
 <div className="gridgrid-cols-1lg:grid-cols-2gap-12">
             {/* Contact Form */}
             <div className="bg-white/5backdrop-blur-lgrounded-2xlp-8 border border-white/10">
@@ -200,7 +163,7 @@ return(<>)
                 </div>
               </div>
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="gridgrid-cols-1md:grid-cols-2gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="blocktext-smfont-mediumtext-gray-300 mb-2">
                       Full Name *
@@ -225,7 +188,7 @@ return(<>)
                   <span className="text-red-400">Failed to send message. Please try again.</span>
                 </div>})}
 <form>
-                <div className="gridgrid-cols-1md:grid-cols-2gap-6"></div>,
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>,
                   <div />
                     <label>
                       Full Name *
@@ -243,7 +206,7 @@ return(<>)
                       </Mail><input />
                   </div>
                 </div>
-                <div className="gridgrid-cols-1md:grid-cols-2gap-6"></div>,
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>,
                   <div />
                     <label>
                       Company;
@@ -354,7 +317,7 @@ return(<>)
                   </div>
                 </div>
 
-                <div className="gridgrid-cols-1md:grid-cols-2gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="blocktext-smfont-mediumtext-gray-300 mb-2">
                       Company
@@ -516,18 +479,10 @@ return(<>)
                 </div>
               </div>
             ))
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5
           </div>
         </div>
       </main>
 
-<<<<<<< HEAD
-      <Footer />
-    </>
-  );
-};
-=======
   )};
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5
 
 export default PageBroken2Page;

@@ -4,9 +4,6 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const ErrorPage: React.FC = () => {
-<<<<<<< HEAD
-  return (
-=======
   const features = [
     {
       icon: Brain,
@@ -31,42 +28,10 @@ const ErrorPage: React.FC = () => {
       <Helmet />
     }]
   return (
-    <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900">
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5
+    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
     <>
 
       <Navigation />
-<<<<<<< HEAD
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Error
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional Error services by Zion Tech Group. Advanced AI and IT solutions for your business.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-4">Our Services</h2>
-              <p className="text-gray-300 mb-6">
-                We provide comprehensive Error solutions tailored to your business needs.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 1</h3>
-                  <p className="text-gray-300">Description of service 1</p>
-                </div>
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 2</h3>
-                  <p className="text-gray-300">Description of service 2</p>
-                </div>
-              </div>
-            </div>
-=======
       <main className="min-h-screenbg-gradient-to-brfrom-slate-50to-blue-50">{/* Hero Section */</main>} <section className="relativepy-20px-4sm: px-6 lg:px-8">,</section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
@@ -94,7 +59,7 @@ const ErrorPage: React.FC = () => {
               <p className="text-xltext-gray-600max-w-3xlmx-auto">Discover how our solutions can help transform your business.</p>
         {/* Features Section */}
         <section className="py-20px-4sm:px-6 lg:px-8">
-          </section>< className="$2/><divclassName="text-center mb-16">
+          </section>< className="$2/><divclass Name="text-center mb-16">
               </div><h2 className="text-3xlmd:text-4xl font-boldtext-gray-900 mb-4">
                 Our Services,
   
@@ -102,11 +67,11 @@ const ErrorPage: React.FC = () => {
                 Discover how our solutions can help transform your business.
               </p>
             </div>
-            <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8">,</div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index}className="bg-whitep-6rounded-xlshadow-lg hover: shadow-xl transition-shadow">,</div>
                   <div className="flexitems-centermb-4">
-                    <feature.icon className="h-8w-8text-blue-600mr-3" />
+                    <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                     <h3 className="text-xlfont-semiboldtext-gray-900">{feature.title}</h3>
                   </div>
                   <p className="text-gray-600mb-4">{feature.description</p>}</p>
@@ -127,18 +92,12 @@ const ErrorPage: React.FC = () => {
             <button className="bg-whitetext-blue-600px-8py-3 rounded-lg hover: bg-gray-100 transition-colors font-semibold">,</button>
               Contact Us;
   </
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5
           </div>
         </div>
       </main>
 
       <Footer />
     </>
-<<<<<<< HEAD
-  );
-};
-=======
   )};
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5
 
 export default ErrorPage;

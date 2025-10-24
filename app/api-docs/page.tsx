@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+import SEOOptimizer from '../components/AdvancedSEOOptimizer';
 
 export default function APIDocsPage() {
   const [_copiedCode, setCopiedCode] = useState<string | null>(null);

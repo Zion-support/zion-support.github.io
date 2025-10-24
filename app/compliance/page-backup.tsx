@@ -4,9 +4,6 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const PageBackupPage: React.FC = () => {
-<<<<<<< HEAD
-  return (
-=======
     const features = [
     {
       icon: Brain,
@@ -32,7 +29,7 @@ return(<>)
         <meta />
       </Helmet>
       <Navigation />
-      <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900"></div>
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */} <section className="py-20px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -50,19 +47,10 @@ return(<>)
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}
     ]
 return (
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5
     <>
 
       <Navigation />
-<<<<<<< HEAD
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Page Backup
-=======
-      <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900"></div>
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
         <section$1>
         <div$2>
@@ -78,30 +66,10 @@ return (
           <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} /></div>
           <div className="relativemax-w-7xl mx-autotext-center"></div>
             <h1>Page Backup;</h1>
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Professional Page Backup services by Zion Tech Group. Advanced AI and IT solutions for your business.
             </p>
-<<<<<<< HEAD
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-4">Our Services</h2>
-              <p className="text-gray-300 mb-6">
-                We provide comprehensive Page Backup solutions tailored to your business needs.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 1</h3>
-                  <p className="text-gray-300">Description of service 1</p>
-                </div>
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 2</h3>
-                  <p className="text-gray-300">Description of service 2</p>
-                </div>
-=======
             <div className="flexflex-colsm:flex-row gap-4 justify-center"></div>,
               <button>Get Started;</button>
               </button>
@@ -123,14 +91,14 @@ return (
           <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relativemax-w-7xl mx-autotext-center">
             <h1 className="text-5xlmd:text-7xlfont-boldtext-white mb-6 leading-tight">Page Backup
-            <p className="text-xltext-gray-300mb-8max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced page backup solutions powered by AI technology.
-            <div className="flexflex-colsm:flex-rowgap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-rfrom-purple-500to-blue-600hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Get Started
               <button className="borderborder-purple-400text-purple-400hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Learn More
         {/* Features Section */}
         <section className="py-20px-4">
-          </section>< className="$2/><divclassName="text-center mb-16">
+          </section>< className="$2/><divclass Name="text-center mb-16">
               </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
@@ -138,12 +106,11 @@ return (
       </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
-              <h2>Key Features;</h2>
-              </h2>
+              <h2>Why Choose Our Cloud Migration?</h2>
               <p>Powerful AI technology that drives results;</p>
               </p>
             </div>
-            <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8"></div>,
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>,
               {features.map((feature, index) => (
                 <div key={index}className="bg-white/5backdrop-blur-smrounded-2xlp-8 hover: bg-white/10 transition-all duration-300 group"></div>,
                   <div className="w-16h-16bg-gradient-to-brfrom-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
@@ -169,12 +136,12 @@ return (
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xlmd:text-5xlfont-boldtext-white mb-6">Key Features
-              <p className="text-xltext-gray-300max-w-3xlmx-auto">Powerful AI technology that drives results
-            <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Powerful AI technology that drives results
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/5backdrop-blur-smrounded-2xlp-8 hover:bg-white/10 transition-all duration-300 group">
                   <div className="w-16h-16bg-gradient-to-brfrom-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8h-8text-white" />
+                    <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                   <h3 className="text-xlfont-boldtext-whitemb-4">{feature.title}
                   <p className="text-gray-300mb-4">{feature.description}
                   {feature.benefits && (
@@ -190,7 +157,7 @@ return (
               ))}
         {/* CTA Section */}
         <section className="py-20px-4">
-          </section>< className="$2/><divclassName="text-center mb-16">
+          </section>< className="$2/><divclass Name="text-center mb-16">
               </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
             </div>
@@ -204,8 +171,7 @@ return (
               <h2 className="text-4xlmd:text-5xlfont-boldtext-white mb-6">
           <div className="max-w-4xlmx-autotext-center"></div>
             <div className="bg-white/5backdrop-blur-smrounded-3xlp-12"></div>
-              <h2>Ready to Get Started?</h2>
-              </h2>
+              <h2>Why Choose Our Cloud Migration?</h2>
               <p>Contact our experts to discuss your requirements and get started today.</p>
               </p>
               <div className="flexflex-colsm:flex-row gap-4 justify-center"></div>,
@@ -224,20 +190,12 @@ return (
                 <button></button>
                   Learn More
                 </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5
               </div>
             </div>
           </div>
         </div>
       </main>
 
-<<<<<<< HEAD
-      <Footer />
-    </>
-  );
-};
-=======
   )};
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5
 
 export default PageBackupPage;

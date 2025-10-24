@@ -1,46 +1,6 @@
 'use client';
 
 import React from 'react';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-const PageOriginalPage: React.FC = () => {
-  return (
-    <>
-
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Page Original
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional Page Original services by Zion Tech Group. Advanced AI and IT solutions for your business.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-4">Our Services</h2>
-              <p className="text-gray-300 mb-6">
-                We provide comprehensive Page Original solutions tailored to your business needs.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 1</h3>
-                  <p className="text-gray-300">Description of service 1</p>
-                </div>
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 2</h3>
-                  <p className="text-gray-300">Description of service 2</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-=======
 'use client';
 import React, {useCallback, useState, useEffect, Suspense, lazy, memo}from 'react';
 import {Phone, Mail, MapPin, Clock} from 'lucide-react';
@@ -193,13 +153,13 @@ useEffect(() => {
         enableClickjackingProtection={true}
         enableContentTypeSniffingProtection={true}
       />
-      <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
       <SEOOptimizer>
       </SEOOptimizer><PerformanceOptimizer>
       </PerformanceOptimizer><AccessibilityEnhancer>
       </AccessibilityEnhancer><Analytics>
       </Analytics><SecurityEnhancer>
-      </SecurityEnhancer><div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain"></div>
+      </SecurityEnhancer><div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain"></div>
         {/* Navigation */}</div>
         <Navigation />
         {/* Skip to main content for accessibility */}
@@ -339,8 +299,7 @@ useEffect(() => {
             </div>
         </div>
       </section>
-          <h2>Our Services;</h2>
-          </h2>
+          <h2>Why Choose Our Cloud Migration?</h2>
           <p>Comprehensive AI and IT solutions designed to transform your business operations;</p>
           </p>
 
@@ -2278,8 +2237,7 @@ useEffect(() => {
             </div>
         </div>
       </section>
-          <h2>Micro SAAS Solutions;</h2>
-          </h2>
+          <h2>Why Choose Our Cloud Migration?</h2>
           <p>Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.</p>
           </p>
           {/* Productivity Tools */} <div className="mb-12"></div>
@@ -2657,8 +2615,7 @@ useEffect(() => {
         </div>
       </section>
           <div className="max-w-6xlmx-auto"></div>
-            <h2>Ready to Transform Your Business?</h2>
-            </h2>
+            <h2>Why Choose Our Cloud Migration?</h2>
             <p>Get in touch with our experts to discuss your AI and IT needs. We're here to help you achieve unprecedented growth.</p>
             </p>
             <div className="gridgrid-cols-1lg:grid-cols-2 gap-8"></div>,
@@ -2840,17 +2797,9 @@ useEffect(() => {
             </div>
         </div>
       </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5
       </main>
 
       <Footer />
-<<<<<<< HEAD
-    </>
-  );
-};
-
-export default PageOriginalPage;
-=======
     </div>
 
   )});
@@ -2893,4 +2842,3 @@ export default HomePage
   </PerformanceOptimizer>
   </SEOOptimizer>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5
