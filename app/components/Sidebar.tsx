@@ -1,3 +1,4 @@
+import React from 'react';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -14,17 +15,51 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         >
           Close
         </button>
-        <h1>Sidebar</h1>
+        <h1 className="text-xl font-bold mt-4">Navigation</h1>
+        
+        <nav className="mt-6">
+          <ul className="space-y-2">
+            <li>
+              <a 
+                href="/" 
+                className="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded"
+                onClick={onClose}
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a 
+                href="/about" 
+                className="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded"
+                onClick={onClose}
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a 
+                href="/services" 
+                className="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded"
+                onClick={onClose}
+              >
+                Services
+              </a>
+            </li>
+            <li>
+              <a 
+                href="/contact" 
+                className="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded"
+                onClick={onClose}
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
   );
 };
 
-            onClick={onClose};
-
-          ></>
-            Contact
-          </>
-        </nav>
-      </div>
-
+export default Sidebar;

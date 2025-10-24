@@ -26,7 +26,11 @@ export function useEnhancedPerformance(options: UseEnhancedPerformanceOptions = 
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'measure') {
-            console.log(`Performance measure for ${component}:`, entry.name, entry.duration)
+            // Performance measure logged for debugging
+            if (process.env.NODE_ENV === 'development') {
+              // eslint-disable-next-line no-console
+              console.log(`Performance measure for ${component}:`, entry.name, entry.duration)
+            }
           }
         }
       })
@@ -56,14 +60,20 @@ export function useEnhancedPerformance(options: UseEnhancedPerformanceOptions = 
 
   const trackError = useCallback((error: Error, context?: Record<string, unknown>) => {
     if (trackErrors) {
-      console.error(`Error in ${component}:`, error, context)
+      if (process.env.NODE_ENV === 'development') {
+        // eslint-disable-next-line no-console
+        console.error(`Error in ${component}:`, error, context)
+      }
       // Here you would typically send to an error tracking service
     }
   }, [component, trackErrors])
 
   const trackAnalyticsEvent = useCallback((event: string, data?: Record<string, unknown>) => {
     if (trackAnalytics) {
-      console.log(`Analytics event in ${component}:`, event, data)
+      if (process.env.NODE_ENV === 'development') {
+        // eslint-disable-next-line no-console
+        console.log(`Analytics event in ${component}:`, event, data)
+      }
       // Here you would typically send to an analytics service
     }
   }, [component, trackAnalytics])
