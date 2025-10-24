@@ -16,31 +16,7 @@ const AccessibilityPage: React.FC = () => {
       icon: Volume2,
       title: 'Audio Accessibility',
       description: 'Audio alternatives and visual indicators for users with hearing impairments.',
-      benefits: ['Audio descriptions', 'Visual alerts', 'Captions', 'Sign language support']
-    },
-    {
-      icon: Keyboard,
-      title: 'Motor Accessibility',
-      description: 'Support for users with motor impairments through alternative input methods.',
-      benefits: ['Keyboard navigation', 'Voice commands', 'Switch control', 'Customizable controls']
-    },
-    {
-      icon: Mouse,
-      title: 'Cognitive Accessibility',
-      description: 'Clear navigation and simplified interfaces to support users with cognitive differences.',
-      benefits: ['Clear language', 'Consistent navigation', 'Progress indicators', 'Error prevention']
-    },
-    {
-      icon: Globe,
-      title: 'Inclusive Design',
-      description: 'Design principles that ensure our solutions work for users of all abilities and backgrounds.',
-      benefits: ['Universal design', 'Cultural sensitivity', 'Language support', 'Age-friendly interfaces']
-    },
-    {
-      icon: Shield,
-      title: 'Global Standards',
-      description: 'Compliance with international accessibility standards including WCAG 2.1 AA and Section 508.',
-      benefits: ['WCAG 2.1 AA compliance', 'Section 508 compliance', 'ADA compliance', 'EN 301 549 compliance']
+  
     }
   ];
 
