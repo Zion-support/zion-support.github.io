@@ -2,7 +2,7 @@
 import React from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import { Users, TrendingUp, Shield, Zap, ArrowRight, CheckCircle, Brain, Cloud, Code, BarChart } from 'lucide-react';
+import { Users, TrendingUp, Shield, Zap, CheckCircle, Brain, Cloud, Code, BarChart } from 'lucide-react';
 
 const HomePage: React.FC = () => {
   const services = [

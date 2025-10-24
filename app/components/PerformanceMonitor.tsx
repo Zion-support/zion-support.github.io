@@ -1,7 +1,5 @@
-'use client';;
-
+'use client';
 import React, { useState, useEffect } from 'react';
-import '@/types/analytics';
 
 interface PerformanceMetrics {
   loadTime: number | null;
@@ -14,19 +12,20 @@ interface PerformanceMetrics {
 }
 
 interface PerformanceMonitorProps {
-  onMetricsUpdate?: (_metrics: PerformanceMetrics) => void;
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
   enableRealTimeMonitoring?: boolean;
   logToConsole?: boolean;
 }
 
-interface _LayoutShift extends PerformanceEntry {
+interface LayoutShift extends PerformanceEntry {
   value: number;
   hadRecentInput: boolean;
 }
 
-interface _PerformanceEventTiming extends PerformanceEntry {
+interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
 }
+
 export default function PerformanceMonitor({
   onMetricsUpdate,
   enableRealTimeMonitoring = true,
@@ -86,7 +85,7 @@ export default function PerformanceMonitor({
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            const fidEntry = entry as PerformanceEntry & { processingStart: number };
+            const fidEntry = entry as PerformanceEventTiming;
             newMetrics.firstInputDelay = fidEntry.processingStart - fidEntry.startTime;
           });
         });
@@ -97,7 +96,7 @@ export default function PerformanceMonitor({
         const clsObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number };
+            const clsEntry = entry as LayoutShift;
             if (!clsEntry.hadRecentInput) {
               clsValue += clsEntry.value;
             }
@@ -187,5 +186,3 @@ export default function PerformanceMonitor({
 
   return null;
 }
-
-// Performance utilities are now available from their respective utility files
