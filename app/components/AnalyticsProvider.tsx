@@ -96,7 +96,7 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
 declare global {
   interface Window {
     dataLayer: unknown[];
-    gtag: (...args: any[]) => void;
+    gtag: (..._args: unknown[]) => void;
   }
 }
 

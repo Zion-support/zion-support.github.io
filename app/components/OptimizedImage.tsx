@@ -10,7 +10,7 @@ interface OptimizedImageProps {
   priority?: boolean;
 }
 
-const _OptimizedImage: React.FC<OptimizedImageProps> = ({
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
   width = 800,
