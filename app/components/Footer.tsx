@@ -43,6 +43,14 @@ const Footer: React.FC = () => {
     { name: 'GDPR Compliance', url: '/gdpr' }
   ];
 
+  const supportLinks = [
+    { name: 'Help Center', url: '/help' },
+    { name: 'Documentation', url: '/docs' },
+    { name: 'API Reference', url: '/api-docs' },
+    { name: 'Status Page', url: '/status' },
+    { name: 'Contact Support', url: '/contact' }
+  ];
+
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
