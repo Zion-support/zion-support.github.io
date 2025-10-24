@@ -1,5 +1,4 @@
 "use client"
-
 import React from "react"
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
@@ -11,62 +10,32 @@ export default function Home() {
       title: 'AI-Powered Solutions',
       description: 'Cutting-edge artificial intelligence to transform your business operations with machine learning, natural language processing, and predictive analytics',
       icon: Brain,
-      benefits: [
-        'Machine Learning Implementation',
-        'Natural Language Processing',
-        'Predictive Analytics',
-        'Automated Decision Making'
+      benefits: ['Machine Learning Implementation',
+        "Natural Language Processing",
+        "Predictive Analytics",
+        "Automated Decision Making"
       ]
     },
     {
       title: 'IT Services',
       description: 'Comprehensive technology solutions including cloud infrastructure, cybersecurity, and digital transformation for modern businesses',
       icon: BarChart,
-      benefits: [
-        'Cloud Infrastructure Setup',
-        'Cybersecurity Solutions',
-        'Digital Transformation',
-        '24/7 Technical Support'
+      benefits: ['Cloud Infrastructure Setup',
+        "Cybersecurity Solutions",
+        "Digital Transformation",
+        "24/7 Technical Support"
       ]
     },
     {
       title: 'Micro SaaS',
       description: 'Custom software solutions designed to solve specific business problems with scalable, maintainable applications',
       icon: Target,
-<<<<<<< HEAD
       benefits: ['Custom Software Development',
         "Scalable Architecture",
         "Maintenance & Support",
         "Performance Optimization"
       ]
     }
-=======
-      benefits: [
-        'Rapid Deployment',
-        'Scalable Architecture',
-        'Custom Development',
-        'Ongoing Maintenance'
-      ]
-    },
-    {
-      title: 'Business Intelligence',
-      description: 'Advanced analytics and reporting tools to help you make data-driven decisions and optimize your business performance',
-      icon: TrendingUp,
-      benefits: [
-        'Data Visualization',
-        'Performance Analytics',
-        'Predictive Modeling'
-      ]
-    }
-  ];
-
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
->>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15
   ]
 
   return (
