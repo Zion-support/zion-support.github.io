@@ -6,28 +6,28 @@ function fixSpecificJSX(filePath) {"
 try{;"'"
 let content = fs.readFileSync(filePath, 'utf8");
     let modified = false;
-"
+
     // Fix malformed Head tags;"
 content = content.replace(/<Head><\/Head>\s*<title>([^<]+)<\/title>\s*<meta[^>]*\/><\/meta>\s*<\/Head>/g, ;"'"
-      '<Head>\n        <title>$1</title>\n        <meta name="description" content="Professional services by Zion Tech Group." />\n      </Head>");"
-"
-    // Fix malformed className attributes with spaces;"'"
-content = content.replace(/className="([^"]*)\s+([^"]*)"/g, 'className="$1$2"");"
-"
+      '<Head>\n        <title>$1</title>\n        <meta name="description" content="Professional services by Zion Tech Group." />\n      </Head>);
+
+    // Fix malformed className attributes with spaces;'"
+content = content.replace(/className="([^]*)\s+([^]*)"/g, 'className="$1$2"");"
+
     // Fix malformed div tags;"
-content = content.replace(/<divclassName="([^"]*)"[^ />]*><\/div>\s*<divclassName="([^"]*)"[^ />]*><\/div>/g, ;"'"
-      '<div className="$1" />\n        <div className="$2" />");
+content = content.replace(/<divclassName="([^]*)[^ /">]*><\/div>\s*<divclassName="([^]*)"[^ />]*><\/div>/g, ;"'"
+      '<div className="$1 /">\n        <div className=$"2" />);
 
     // Fix missing closing tags for common patterns;
-const patterns = [;"
-      // Fix h1 tags;"
+const patterns = [;
+      // Fix h1 tags;
       {;"'"
-pattern: /<h1className = "([^"]*)"[^ />]*><\/h1>\s*([^<]+)\s*<\/h1>/g,replacement: '<h1 className="$1">\n            $2\n          </h1>"
+pattern: /<h1className = "([^"]*)"[^ />]*><\/h1>\s*([^<]+)\s*<\/h1>/g,replacement: '<h1 className="$1">\n            $2\n          </h1>
 ,}
-      ,},;"
-      // Fix p tags;"
+      ,},;
+      // Fix p tags;
       {;"'"
-pattern: /<pclassName = "([^"]*)"[^ />]*><\/p>\s*([^<]+)\s*<\/p>/g,replacement: '<p className="$1">\n            $2\n          </p>";
+pattern: /<pclassName = "([^"]*)"[^ />]*><\/p>\s*([^<]+)\s*<\/p>/g,replacement: '<p className="$1">\n            $2\n          </p>;
       ,};
     ];
 ;
@@ -37,11 +37,11 @@ const newContent = content.replace(pattern, replacement);
 content = newContent;
         modified = true;
       ,, , }
-    });"
-"
-    // Fix missing closing fragments;"'"
-if (content.includes('return (') && content.includes('<>') && !content.includes('</>")) {"
-      // Find the last line before the closing parenthesis;"'"
+    });
+
+    // Fix missing closing fragments;'"
+if (content.includes('return (') && content.includes('<>') && !content.includes('</>)) {
+      // Find the last line before the closing parenthesis;'"
 const lines = content.split('\n");
       let lastContentLine = -1;"
 ;"
@@ -53,7 +53,7 @@ lastContentLine = i;
       }"
 ;"
 if(lastContentLine > 0) {  ;"'"
-lines.splice(lastContentLine, 0, '    </>");"'"
+lines.splice(lastContentLine, 0, '    </>);'
         content = lines.join('\n");
         modified = true;
       ,}
@@ -77,14 +77,14 @@ const filePath = path.join(dir, file);
 ;
 if (stat.isDirectory()) {;
 walkDir(filePath);"
-    "
+
 "'"
 ,} else if (file.endsWith('.tsx') || file.endsWith('.ts")) {;
 fixSpecificJSX(filePath);
     }
   });
 }"
-"
+
 // Start fixing from the app directory;"'"
 console.log('Starting specific JSX fixes...");"'"
 walkDir('./app");"'"

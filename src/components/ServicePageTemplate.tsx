@@ -1,5 +1,5 @@
-&quot;use client&quot;
-import React from &quot;react&quot;
+&quot;use client&quot
+import React from &quot;react&quot
 import { Helmet ;} from &quot;react-helmet-async&quot
 const ServicePageTemplatePage: "React.FC = () => {"
 const features = ["
@@ -36,14 +36,14 @@ return(<>
     <divclassName=&quot;text-center mb-16&quot; / />,"
     <h1 className=&quot;text-5 xl md: "text-6 xl font-bold text-white mb-6&quot;>ServicePageTemplate</h1>
             <p className=&quot;text-xl text-gray-300 max-w-3 xl mx-auto leading-relaxed&quot;>Professional ServicePageTemplate services tailored to your business needs.</p>p>
-            </div>"
-          </div>"
-      </section>)"
-    </div>",)
+            </div>
+          </div>
+      </section>)
+    </div>,)
       </div>
   );
 }
-;
-export default ServicePageTemplatePage;"
-export default ServicePageTemplatePage;"
+
+export default ServicePageTemplatePage
+export default ServicePageTemplatePage;
 }"'"

@@ -1,10 +1,10 @@
-import React from 'react"
+import React from 'react"'
 interface PWAInstallerProps {
 className?: string
 ;}
 ;}"
 ;}"
-"'"
+""
 const PWAInstaller: "React.FC<PWAInstallerProps> = ({ className = '' ",;}) => {
 return(</PWAInstallerProps>,
     <div className={className,;} />

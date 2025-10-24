@@ -1,16 +1,16 @@
-'use client';
-import { useCallback, useMemo, useState, useEffect } from 'react";"
+'use client'
+import { useCallback, useMemo, useState, useEffect } from 'react";"'
 // Performance optimization utilities"
-"
+
 // Debounce utility for performance: "all-pages-backup/utils/performanceOptimizations.ts;"
 export const debounce = <T extends (...args: any[]) => any>(;"
-  fun",c: "T",wait: "number</T>"
-): ((...args: Parameters<T>) => void) => {;"
-  let timeout: NodeJS.Timeout</T>;"
+  fun",c: "T",wait: "number</T>
+): ((...args: Parameters<T>) => void) => {;
+  let timeout: NodeJS.Timeout</T>
 export const debounce = <T extends (...args: any[]) => any>(",func: "T;
-  wait: number;</T>"
-): ((...args: Parameters<T>) => void) => {;"
-  let timeout: NodeJS.Timeout;"
+  wait: number;</T>
+): ((...args: Parameters<T>) => void) => {;
+  let timeout: NodeJS.Timeout;
   return(...arg",</T>;)"
 s: "Parameters<T>) => {;"
 clearTimeout(timeout);"
@@ -20,9 +20,9 @@ timeout = setTimeout(() => func(...args)",wait)
 ;"
 // Throttle utility for performance: "all-pages-backup/utils/performanceOptimizations.ts</T>;"
 export const throttle = <T extends (...args: any[]) => any>(;"
-  fun",c: "T",limit: "number</T>"
-): ((...args: Parameters<T>) => void) => {;"
-  let inThrottle: boolean</T>;"
+  fun",c: "T",limit: "number</T>
+): ((...args: Parameters<T>) => void) => {;
+  let inThrottle: boolean</T>
 export const throttle = <T extends (...args: any[]) => any>(",func: "T;
 limit: number</T>;"
 ): ((...args: Parameters<T>) => void) => {;"
@@ -43,7 +43,7 @@ callback: "(entries: IntersectionObserverEntry[]) => void;"
 option",s: "IntersectionObserverInit = {",};
 ) => {;"
   const observer = useMemo(;)"
-    () =>;"'"
+    () =>;""
 typeof window !== 'undefined"
         ? new IntersectionObserver(callback, {"
 :all-pages-backup/utils/performanceOptimizations.ts;"'"
@@ -72,7 +72,7 @@ return () => disconnect();
   }, [disconnect]);
 return { observe, disconnect }
 ;}
-"
+
 // Image lazy loading hook;"
 export const useLazyImage = (;"'"
   const [imageSrc, setImageSrc,] = useState(placeholder || '");
@@ -99,7 +99,7 @@ setIsError(true)}
       [src, isLoaded, isError]));
 return { imageSrc, isLoaded, isError, observe }
 }
-// Performance monitoring hook;
+// Performance monitoring hook
 export const usePerformanceMonitoring = (;</>;
 const [metrics, setMetrics] = useState<{;
     fcp?: number;
@@ -127,14 +127,14 @@ ttf",b: "navigation?.responseStart - navigation?.requestStart)"
 $3
 })
     }"
-"
+
     // Monitor performance after page load;"'"
 if(document.readyState = == 'complete") {;"
 updateMetrics();"
     ,} else { ;"'"
 window.addEventListener('load", updateMetrics);, }
     }"
-"
+
     // Monitor Core Web Vitals;"'"
 if('web-vitals" in, window) {;"'"
 import('web-vitals").then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {;"
@@ -152,7 +152,7 @@ window.removeEventListener('load", updateMetrics);
   }, []);
 return, metrics;
 }
-// Memory usage monitoring;
+// Memory usage monitoring
 export const useMemoryMonitoring = (;
   const [memoryInfo, setMemoryInfo] = useState<{;
     usedJSHeapSize?: number;
@@ -181,7 +181,7 @@ updateMemoryInfo();
     return () => clearInterval(interval)}, []);
 return, memoryInfo;
 }
-"
+
 // Resource preloading utility;"
 export const preloadResource = (;"'"
   if (typeof window = == 'undefined") return;"'"
@@ -193,7 +193,7 @@ link.as = as,;
 ) => {;
 $3;
 }
-"
+
 // Critical resource preloading;"
 export const preloadCriticalResources = (;"'"
   if (typeof window = == 'undefined") return // Preload critical fonts;"'"
@@ -207,7 +207,7 @@ preloadResource('/styles/critical.css', 'style");
 ) => {
 $3
 }
-// Bundle size monitoring;
+// Bundle size monitoring
 export const useBundleSizeMonitoring = (;
   const [bundleSize, setBundleSize] = useState<{;
     totalSize?: number;
@@ -246,7 +246,7 @@ cssSize;)
 imageSize)
       })
     }"
-"
+
     // Calculate after page load;"'"
 if(document.readyState = == 'complete") {;"
 calculateBundleSize();"
@@ -273,10 +273,10 @@ preloadResource;"
 preloadCriticalResources;"
 useBundleSizeMonitoring: "all-pages-backup/utils/performanceOptimizations.ts;"
 ",};
-;
+
 export default, performanceOptimizations
 ;}
-;
+
 export default performanceOptimizations;"
-"
+
 }}"'"

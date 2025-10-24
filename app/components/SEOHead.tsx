@@ -10,19 +10,19 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   keywords = "AI, artificial, intelligence, technology, solutions, business automation",
   structuredData)
 }) => {
-  return (<Head>"
-      <title>{title}</title>"
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
+  return (<Head>
+      <title>{title}</title>
+      <meta name=description" content={description} />
+      <meta name="keywords content={keywords} /">
       <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
+      <meta property="og:description content={description} /">
       <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description}  />
+      <meta name="twitter:description content={description}  /">
       {structuredData && ("
         <script "
-          type="application/ld+json")
+          type="application/ld+json)
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-         />
+         /">
       )}
     </Head>
   )}"

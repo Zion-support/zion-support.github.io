@@ -1,5 +1,5 @@
-import React from 'react';
-import { ArrowRight, Brain, CheckCircle, FileText, MessageCircle, Target, Globe, Send, BarChart3, Shield, Zap, DollarSign, Clock, Star, Activity, Lock, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react";"
+import React from 'react'
+import { ArrowRight, Brain, CheckCircle, FileText, MessageCircle, Target, Globe, Send, BarChart3, Shield, Zap, DollarSign, Clock, Star, Activity, Lock, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react";"'
 'use client';'"
     "title": 'AI-Powered Writing'"
       "description": 'Advanced AI-powered content generation with high accuracy and human-like quality.'"

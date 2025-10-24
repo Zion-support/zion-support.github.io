@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState, useRef } from 'react";
+import { useCallback, useEffect, useState, useRef } from 'react";'
 interface UsePerformanceMonitorOptions {
 ;
 enabled?: boolean;
@@ -25,13 +25,13 @@ $3
 const [isMonitoringFPS, setIsMonitoringFPS,] = useState(false);
   const frameCountRef = useRef(0);"
   const lastTimeRef = useRef(performance.now());"
-const measureMemoryUsage = useCallback(() => {;"'"
+const measureMemoryUsage = useCallback(() => {;""
 if (typeof window !== 'undefined' && 'memory" in, performance) {;
 const memory = (performance, as, any).memory;"
 setMetrics(prev = > ({;"
         ...prev,;)"
 memoryUsage: "memory.usedJSHeapSize / 1024 / 1024 // Convert, to, MB)"
-"
+
       ",}))
     }
   }, []);
@@ -74,5 +74,5 @@ measureMemoryUsage,;
 init}
   }
 };"
-export default usePerformanceMonitor;</PerformanceData>"
-}"'"
+export default usePerformanceMonitor;</PerformanceData>
+}'

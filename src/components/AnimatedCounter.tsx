@@ -1,19 +1,19 @@
 import, React, { useEffect, useState, useRef } from "react";"
-import { useIntersectionObserver } from '../hooks/useIntersectionObserver";
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver";'
 interface AnimatedCounterProps {
 :all-pages-backup/components/AnimatedCounter.tsx
 className?: string
 }
 }"
 }"
-"
+
 const AnimatedCounter: "React.FC<AnimatedCounterProps> = ({"
   className?: string"
 ",}"
-</AnimatedCounterProps>"
-const AnimatedCounter: "React.FC<AnimatedCounterProps> = ({"
+</AnimatedCounterProps>
+const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 end"
-duration = 2000"'
+duration = 2000"
 suffix = ''"
 prefix = ''",className = '"
 ,}) => {

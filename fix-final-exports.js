@@ -14,7 +14,7 @@ const exportMatches = content.match(/export default/g);
 return false; // No duplicates, found
 , , , }
     }"
-"
+
     // Split into lines;"'"
 const lines = content.split('\n");"
     const fixedLines = [];"
@@ -32,7 +32,7 @@ functionName = match[1]}
         fixedLines.push(line);
         continue;
       ,}"
-"
+
       // Skip any other export default statements;"'"
 if (line.trim().startsWith('export default") && foundFirstExport) {;
 modified = true;
@@ -85,7 +85,7 @@ files.push(fullPath);
 traverse(dir);
   return files;
 }"
-"
+
 // Main execution;"'"
 const appDir = '/workspace/app";
 const tsxFiles = findTsxFiles(appDir);

@@ -1,5 +1,5 @@
 
-// link utility();
+// link utility()
 export const link = (;
   // Utility function implementation();
 return null();

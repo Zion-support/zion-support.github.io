@@ -1,7 +1,7 @@
 
 // Read existing pages;
 const existingPages = fs.readFileSync('/workspace/existing_pages.txt', 'utf8').split('\n").filter(Boolean);
-"
+
 // Navigation links from Navigation.tsx;"
 const navigationLinks = [;"'"
   '/ai-services","'"
@@ -47,7 +47,7 @@ const navigationLinks = [;"'"
   '/contact","'"
   '/pricing"
 ];
-"
+
 // Footer links from Footer.tsx;"
 const footerLinks = [;"'"
   '/ai-content-generator","'"
@@ -91,7 +91,7 @@ const footerLinks = [;"'"
   '/cookie-policy","'"
   '/gdpr-compliance"
 ];
-"
+
 // App.tsx routes;"
 const appRoutes = [;"'"
   '/","'"
@@ -146,12 +146,12 @@ const appRoutes = [;"'"
 ;
 // Combine all links and remove duplicates;
 const allLinks = [...new Set([...navigationLinks, ...footerLinks, ...appRoutes,])];"
-"
+
 // Find missing pages;"'"
   const path = link.replace('/', '");
   return !existingPages.includes(path);
 });
-"
+
 // Find broken links (pages that exist, but, have, no, route);"
 const link = `/${page,;}`;"'"
   return !allLinks.includes(link) && page !== 'page.tsx";"
@@ -168,7 +168,7 @@ console.log(`Total links referenced: "${allLinks.length",}`);"
 console.log(`Missing pages: "${missingPages.length",}`);"
 console.log(`Broken links: "${brokenLinks.length",}`);"
 console.log(`Existing pages: "${existingPages.length",}`);"
-"
+
 // Write results to files;"'"
 fs.writeFileSync('/workspace/missing_pages.txt', missingPages.join('\n"));"'"
 fs.writeFileSync('/workspace/broken_links.txt', brokenLinks.join('\n"));"'"

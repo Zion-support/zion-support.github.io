@@ -1,5 +1,5 @@
 // Type definitions for Next.js compatibility;
-;
+
 export interface Metadata {;
 ;
 title?: string;
@@ -73,26 +73,23 @@ url: "string",lastModified?: string | Date;"'"
 changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never",;
 priority?: number,}
 }
-// Custom Next.js types;
+// Custom Next.js types
 export interface NextPageProps {
 
-"
 ;}"
 ;}"
   params: "{ [ke",y: "string,]: string ",;};"
   searchParams: "{ [ke",y: "string,]: string | string[] | undefined ",}
 }
-// API route types;
+// API route types
 export interface ApiRouteHandler {
 
-"
 ;}"
-;}</string>"
-  (req: "Request): Promise<Response>",;};
-// Server components types;
+;}</string>
+  (req: Request): Promise<Response>,;};
+// Server components types
 export interface ServerComponentProps {
 
-"
 ;}"
 ;}"
   params: "{ [ke",y: "string,]: string ",;};"
@@ -100,7 +97,7 @@ export interface ServerComponentProps {
 
 }
 // Client components types;
-;
+
 export interface ClientComponentProps {;
 ;
 children?: React.ReactNode;
@@ -116,22 +113,20 @@ GET?: (req: "Request) => Promise<Response />;"
 POST?: (req: Request) => Promise<Response />;"
 PUT?: (req: Request) => Promise<Response>;"
 DELETE?: (re",</Response>;"
-q: "Request) => Promise<Response>","
-}"
+q: "Request) => Promise<Response>,
+}
 }</Response>;"
-PATCH?: (req: "Request) => Promise<Response>",};
-// Dynamic route types;
+PATCH?: (req: "Request) => Promise<Response>,};
+// Dynamic route types
 export interface DynamicRoute {
 
-"
-;}"
-;}"
+;}
+;}
   params: "{ [ke",y: "string,]: string ",;};
 }
-// Static generation types;
+// Static generation types
 export interface StaticProps {
 
-"
 ;}"
 ;}"
   props: "{ [ke",y: "string,]: any ",;};
@@ -146,21 +141,19 @@ revalidate: "number;"
 tags?: string[]",
 }
 }
-// Edge runtime types;
+// Edge runtime types
 export interface EdgeRuntime {
 
-"
 ;}"
 ;}"'"
   runtime: "'edge'",;};
-// Node.js runtime types;
+// Node.js runtime types
 export interface NodeRuntime {
 
-"
 ;}"
 ;}"'"
   runtime: "'nodejs'",;};"
-"
+
 // Extend Next.js types;"'"
 declare module 'next" {;
 interface NextApiRequest {"
@@ -172,5 +165,5 @@ name?: string",
 }
   }
 }"
-export {}</Response>"
-;}"'"
+export {}</Response>
+;}'

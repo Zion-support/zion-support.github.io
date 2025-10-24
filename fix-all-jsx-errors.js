@@ -18,7 +18,7 @@ pattern: "/<Link\s+([^>]*?)>\s*<\/Link>\s*([^<]+)\s*<([^>]*?)\s*\/><\/[^>]*>\s*<
 pattern: "/<ArrowRight\s+([^>]*?)\s*\/><\/ArrowRight>/g",replacement: "'<ArrowRight$1 />'",}"
       ,},"
       // Fix malformed className attributes with commas{;"
-pattern: /className="([^"]*?)\s*,\s*([^"]*?)"/g,;"'"
+pattern: /className="([^]*?)\s*,\s*([^]*?)"/g,;"'"
 replacement: 'className = "$1 $2"",}
       ,},;"
       // Fix malformed hover classes;"
@@ -35,9 +35,9 @@ pattern: "/return\s*\(\s*([^<]*?)\s*\)\s*;?\s*$/gm",replacement: "'return (\n   
 pattern: "/(\w+)\s*\n\s*export/g",replacement: "'$1;\n\nexport'",}"
       ,},"
       // Fix malformed Head tags{;"'"
-pattern: "/<Head><\/Head>\s*<title>([^<]+)<\/title>\s*<meta[^>]*\/><\/meta>\s*<\/Head>/gs",replacement: '<Head>\n        <title>$1</title>\n        <meta name = "description" content="Professional services by Zion Tech Group." />\n      </Head>",}
-      ,},;"
-      // Fix malformed div tags;"
+pattern: "/<Head><\/Head>\s*<title>([^<]+)<\/title>\s*<meta[^>]*\/><\/meta>\s*<\/Head>/gs",replacement: '<Head>\n        <title>$1</title>\n        <meta name = "description" content="Professional services by Zion Tech Group. /">\n      </Head>,}
+      ,},;
+      // Fix malformed div tags;
       {;"'"
 pattern: "/<div[^ />]*><\/div>\s*<div[^ />]*>([^<]+)<\/div>/gs",replacement: "'<div$1</div />'"
       ",},"
@@ -57,18 +57,18 @@ content = newContent;
 ;
 ,}
     });
-"
+
     // Additional specific fixes"
     // Fix the specific Link + ArrowRight pattern;"'"
 if (content.includes('Contact Us') && content.includes('ArrowRight")) {;"
 content = content.replace("
         /<Link\s+([^>]*?)>\s*<\/Link>\s*Contact Us\s*<ArrowRight\s+([^>]*?)\s*\/><\/ArrowRight>\s*<\/Link>/gs,;"'"
-        '<Link $1>\n            Contact Us\n            <ArrowRight$2 />\n          </Link>";
+        '<Link $1>\n            Contact Us\n            <ArrowRight$2 />\n          </Link>;
       );
       modified = true;
     ,}
-;"
-if (modified) {;"
+;
+if (modified) {;
 fs.writeFileSync(filePath, content);"
       console.log(`Fixed JSX errors in: "${filePath",}`);
       return true;
@@ -91,7 +91,7 @@ const filePath = path.join(dir, file);"
 ;"'"
 if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules") {;
 fixedCount += walkDirectory(filePath);"
-    "
+
 "'"
 ,} else if (file.endsWith('.tsx') || file.endsWith('.ts")) {;
 if (fixJSXErrors(filePath)) {;

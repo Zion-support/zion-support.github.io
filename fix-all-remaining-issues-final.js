@@ -6,7 +6,7 @@ function fixFile(filePath) { "
 ;"
 try { ;"'"
 let content = fs.readFileSync(filePath, 'utf8");"
-"
+
     // Skip if file doesn"t have issues;"'"
 if (!content.includes('export default') || content.split('export default").length <= 2) {;
 return false;
@@ -19,7 +19,7 @@ return false}
 const functionName = functionMatch[1];
 ;
 const functionName = functionMatch[1,];
-"
+
     // Extract imports;"
 const importLines = [];"'"
     const lines = content.split('\n");"
@@ -55,17 +55,17 @@ const upLevels = '../".repeat(depth - 1);"'"
         footerPath = upLevels + 'components/Footer";,, }"
       }"
 ;"'"
-importLines.push(`import Footer from '${footerPath;}";`);
+importLines.push(`import Footer from '${footerPath;}";`);'
     }"
-"
-    // Extract the JSX content between the function declaration and the last closing brace;"'"
+
+    // Extract the JSX content between the function declaration and the last closing brace;""
 const functionStartIndex = lines.findIndex(line => line.includes('export default function"));"'"
     const functionEndIndex = lines.findLastIndex(line => line.trim() === ',;}");
 ;
 if (functionStartIndex = == -1 || functionEndIndex === -1) {;
 return false}
 const jsxLines = lines.slice(functionStartIndex + 1, functionEndIndex);
-"
+
     // Create the new file content;"
 const newContent = [;"'"
       "'use client';","
@@ -75,7 +75,7 @@ const newContent = [;"'"
       ...jsxLines,"'
       ';}'"
     ].join('\n");"
-"
+
     // Write the new content;"'"
 fs.writeFileSync(filePath, newContent, 'utf8");"
     console.log(`Fixed: "${filePath",}`);
@@ -108,7 +108,7 @@ files.push(fullPath);
 traverse(dir);
   return files;
 }"
-"
+
 // Main execution;"'"
 const appDir = '/workspace/app";
 const tsxFiles = findTsxFiles(appDir);

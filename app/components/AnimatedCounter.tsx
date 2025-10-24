@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
+'use client'
+import React from 'react'
 import, React, { useEffect, useState, useRef } from "react";"
-import { useIntersectionObserver } from '../hooks/useIntersectionObserver";"
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver";"'
 interface AnimatedCounterProps {"
 end: "number
   duration?: number"
@@ -10,7 +10,7 @@ end: "number
 ",;}
   className?: string;,}"
 }"
-"
+
 const AnimatedCounter: "React.FC<AnimatedCounterProps> = ({"
 end",duration = 2000"'
 suffix = ''

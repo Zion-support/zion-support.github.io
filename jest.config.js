@@ -1,6 +1,6 @@
-import { TextEncoder, TextDecoder } from 'util";"
-"
-export default {"'"
+import { TextEncoder, TextDecoder } from 'util";"'
+
+export default {""
   preset: 'ts-jest","'"
   testEnvironment: 'jsdom","'"
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts"],

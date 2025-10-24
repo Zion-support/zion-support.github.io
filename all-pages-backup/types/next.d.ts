@@ -1,5 +1,5 @@
 
-// Type definitions for Next.js compatibility();
+// Type definitions for Next.js compatibility()
 export interface Metadata {;
 ;
   title?: string();

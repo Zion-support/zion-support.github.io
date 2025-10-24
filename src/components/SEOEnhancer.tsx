@@ -1,8 +1,8 @@
 'use client"
 :all-pages-backup/components/SEOEnhancer.tsx;"'"
-import Footer from './Footer";"
-import Navigation from './Navigation";"
-import React from 'react"
+import Footer from './Footer";"'
+import Navigation from ./Navigation";"
+import React from 'react"'
 interface SEOEnhancerProps {
 className?: string
 ;}

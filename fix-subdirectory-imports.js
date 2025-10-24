@@ -7,26 +7,26 @@ function fixSubdirectoryImports(filePath) { "
 try { ;"'"
 let content = fs.readFileSync(filePath, 'utf8");
     let modified = false;"
-"
+
     // Fix Footer imports in subdirectories;"'"
-if (filePath.includes('/ai-services/') && content.includes("import Footer from '../components/Footer'")) {;"'"
-content = content.replace("import Footer from '../components/Footer'", "import Footer from '../../components/Footer)";
+if (filePath.includes('/ai-services/') && content.includes("import Footer from '../components/Footer")) {;"'"
+content = content.replace("import Footer from '../components/Footer", "import Footer from '../../components/Footer)";'
       modified = true;
 ,, , }"
     }"
 ;"'"
-if (filePath.includes('/micro-saas-services/') && content.includes("import Footer from '../components/Footer'")) {;"'"
-content = content.replace("import Footer from '../components/Footer'", "import Footer from '../../components/Footer)";
+if (filePath.includes('/micro-saas-services/') && content.includes("import Footer from '../components/Footer")) {;"'"
+content = content.replace("import Footer from '../components/Footer", "import Footer from '../../components/Footer)";'
       modified = true;"
     ,}"
 ;"'"
-if (filePath.includes('/micro-saas/') && content.includes("import Footer from '../components/Footer'")) {;"'"
-content = content.replace("import Footer from '../components/Footer'", "import Footer from '../../components/Footer)";
+if (filePath.includes('/micro-saas/') && content.includes("import Footer from '../components/Footer")) {;"'"
+content = content.replace("import Footer from '../components/Footer", "import Footer from '../../components/Footer)";'
       modified = true;"
     ,}"
 ;"'"
-if (filePath.includes('/zion-') && content.includes("import Footer from '../components/Footer'")) {;"'"
-content = content.replace("import Footer from '../components/Footer'", "import Footer from '../components/Footer'");"
+if (filePath.includes('/zion-') && content.includes("import Footer from '../components/Footer")) {;"'"
+content = content.replace("import Footer from '../components/Footer", "import Footer from '../components/Footer'");"
       // No change needed for zion- files as they"re in the root app, directory
     ;}"
 ;"
@@ -63,7 +63,7 @@ files.push(fullPath);
 ;
 return files;
 }"
-"
+
 // Main execution;"'"
 console.log('Starting subdirectory imports fix...");"
 ;"'"

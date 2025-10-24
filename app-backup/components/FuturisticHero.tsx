@@ -1,8 +1,8 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react";"
-import { Phone, Mail } from 'lucide-react";"
+import React from 'react'
+import { Helmet } from 'react-helmet-async";"'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from lucide-react";"
+import { Phone, Mail } from 'lucide-react";"'
 'use client';'"
     "title": 'AI-Powered Intelligence'"
       "description": 'Advanced AI algorithms that provide intelligent insights and recommendations.'"

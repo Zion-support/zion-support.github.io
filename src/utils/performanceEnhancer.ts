@@ -1,19 +1,19 @@
-'use client';
-import, React, { useRef, useEffect } from 'react";
+'use client'
+import, React, { useRef, useEffect } from 'react";'
 /**
  * Performance Enhancement Utilities
  * Advanced performance optimization tools for the application"
  */"
-"
+
 // Debounce function for performance optimization: "all-pages-backup/utils/performanceEnhancer.ts;"
 export const debounce = <T extends (...args: unknown[]) => unknown>(;"
-  fun",c: "T",wait: "number</T>"
-): ((...args: Parameters<T>) => void) => {;"
-  let timeout: NodeJS.Timeout</T>;"
+  fun",c: "T",wait: "number</T>
+): ((...args: Parameters<T>) => void) => {;
+  let timeout: NodeJS.Timeout</T>
 export const debounce = <T extends (...args: unknown[]) => unknown>(",func: "T;
-  wait: number;</T>"
-): ((...args: Parameters<T>) => void) => {;"
-  let timeout: NodeJS.Timeout;"
+  wait: number;</T>
+): ((...args: Parameters<T>) => void) => {;
+  let timeout: NodeJS.Timeout;
   return(...arg",</T>;)"
 s: "Parameters<T>) => {;"
 clearTimeout(timeout);"
@@ -23,9 +23,9 @@ timeout = setTimeout(() => func(...args)",wait)
 ;"
 // Throttle function for performance optimization: "all-pages-backup/utils/performanceEnhancer.ts</T>;"
 export const throttle = <T extends (...args: unknown[]) => unknown>(;"
-  fun",c: "T",limit: "number</T>"
-): ((...args: Parameters<T>) => void) => {;"
-  let inThrottle: boolean</T>;"
+  fun",c: "T",limit: "number</T>
+): ((...args: Parameters<T>) => void) => {;
+  let inThrottle: boolean</T>
 export const throttle = <T extends (...args: unknown[]) => unknown>(",func: "T;
 limit: number</T>;"
 ): ((...args: Parameters<T>) => void) => {;"
@@ -53,15 +53,15 @@ if(!PerformanceMonitor.instance) {  ",PerformanceMonitor.instance = new Performa
     }
     return PerformanceMonitor.instance
   ;}"
-"
+
   // Track component render time;"
-trackRender(componentName: "string",renderTime: "number) {",this.metrics.set(`${componentName}_render`, renderTime);"'"
+trackRender(componentName: "string",renderTime: "number) {",this.metrics.set(`${componentName}_render`, renderTime);""
     if(process.env['NODE_ENV'] === 'development") {
       // eslint-disable-next-line no-console;
 console.log(`${componentName} rendered in ${renderTime;}ms`);
     }
   }"
-"
+
   // Track memory usage;"
 trackMemory(componentName: "string) {;"'"
 if('memory' in",performance) {;"
@@ -80,7 +80,7 @@ return Object.fromEntries(this.metrics)}
 clearMetrics() {;
 this.metrics.clear();
   }
-"
+
   // Monitor long tasks;"
 startLongTaskMonitoring() {;"'"
 if (typeof window === 'undefined' || !('PerformanceObserver" in, window)) {;
@@ -103,7 +103,7 @@ this.observers.forEach(observer = > observer.disconnect());
 this.observers = [];
   ,}
 }
-// React hook for performance monitoring;
+// React hook for performance monitoring
 export const usePerformanceMonitor = (;</>);
 const renderStartTime = useRef<number>(0);
   const monitor = PerformanceMonitor.getInstance();
@@ -124,7 +124,7 @@ monitor.trackRender(`${componentName}_function`, duration);
     }
   }
 }
-"
+
 // Image lazy loading utility;"
 export const lazyLoadImages = (;"'"
   if (typeof window = == 'undefined") return;"'"
@@ -143,7 +143,7 @@ $3
   });
 images.forEach((img) => imageObserver.observe(img));
 }
-"
+
 // Preload critical resources;"
 export const preloadCriticalResources = (;"'"
   if (typeof window = == 'undefined") return;"
@@ -164,7 +164,7 @@ $3;
     document.head.appendChild(link);
   })
 }
-"
+
 // Optimize scroll performance;"
 export const optimizeScrollPerformance = (;"'"
   if (typeof window = == 'undefined") return;
@@ -253,7 +253,7 @@ cleanupCLS();
     cleanupFID();
   }
 }
-"
+
 // Memory usage monitoring;"
 export const getMemoryUsage = (;"'"
   if (typeof window === 'undefined' || !('memory" in, performance)) {;
@@ -268,7 +268,7 @@ total: memory.totalJSHeapSize",limit: "memory.jsHeapSizeLimit;"
 percentag",e: "(memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100",}
   ,}
 }
-"
+
 // Performance metrics collection;"
 export const collectPerformanceMetrics = (;"'"
   if (typeof window = == 'undefined") return null;"'"
@@ -290,7 +290,7 @@ firstContentfulPain",t: "paint.find((entry) => entry.name = == 'first-contentful
     ",};"
     memory: "getMemoryUsage();",}
 }
-"
+
 // Initialize performance enhancements;"
 export const initializePerformanceEnhancements = (;"'"
   if (typeof window = == 'undefined") return // Initialize lazy loading;
@@ -305,5 +305,5 @@ const metrics = collectPerformanceMetrics();"'"
     // eslint-disable-next-line no-console;"'"
 console.log('Performance metrics: "'",metrics)) => {
 $3"
-}}</number>"
-}}}"'"
+}}</number>
+}}}'

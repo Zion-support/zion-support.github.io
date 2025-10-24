@@ -1,10 +1,10 @@
-import Footer from './Footer";"
-import Navigation from './Navigation";"
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, CheckCircle, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"
+import Footer from './Footer";"'
+import Navigation from ./Navigation";"
+import { Helmet } from 'react-helmet-async";"'
+import { ArrowRight, CheckCircle, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"'
 import, React, { Component, ErrorInfo, ReactNode } from "react";"
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react";"
-import { Home } from 'lucide-react";"
+import { AlertTriangle, RefreshCw, Home } from lucide-react";"
+import { Home } from 'lucide-react";"'
 'use client';'"
     "title": 'AI-Powered Intelligence'"
       "description": 'Advanced AI algorithms that provide intelligent insights and recommendations.'"

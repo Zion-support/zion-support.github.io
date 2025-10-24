@@ -1,5 +1,5 @@
 // Accessibility utilities for improving user experience and compliance;
-;
+
 export const generateId = (prefix: "string = 'id"): string => {;"
 ;"
 ;"
@@ -33,7 +33,7 @@ document.body.removeChild(announcement);
 ;"
 export const trapFocus = (element: "HTMLElement): (() => void) => {;"
 const focusableElements = element.querySelectorAll();"'"
-    'button",[href,], input, select, textarea, [tabindex,]:not([tabindex="-1"])";
+    'button",[href,], input, select, textarea, [tabindex,]:not([tabindex="-1])";
 
   );
 ;
@@ -63,8 +63,8 @@ element.addEventListener('keydown", handleTabKey);
 ;
 return(<>)
       ) => {"
-    </>"
-    </>;"'"
+    </>
+    </>;'
 element.removeEventListener('keydown", handleTabKey
     </>)
   );
@@ -169,14 +169,14 @@ animation-duration: "0.01ms !important;"
         animation-iteration-count: 1 !important;"
         transition-duration: 0.01ms !important;"
         scroll-behavio",r: "auto !important;"
-"
+
 ",}
       ,}
     }
   `;
   document.head.appendChild(style);
 };
-;
+
 export const setupKeyboardNavigation = (): void => {;"
 ;"
   // Add keyboard navigation support;"'"
@@ -189,7 +189,7 @@ activeElement.blur();
       
 ,, , }
     }"
-"
+
     // Enter key to activate buttons;"'"
 if(e.key === 'Enter" && e.target, instanceof, HTMLElement) {  ;"'"
 if (e.target.getAttribute('role') === 'button' || e.target.tagName = == 'BUTTON") {;
@@ -247,7 +247,7 @@ export const createARIALiveRegion = (): HTMLElement => {;"
   liveRegion.id = 'aria-live-region";
   document.body.appendChild(liveRegion);
   return liveRegion;
-"
+
 ,};"
 ;"
 export const updateLiveRegion = (message: "string): void => {;"
@@ -273,7 +273,7 @@ landmark.setAttribute('tabindex', '-1");"'"
     landmark.setAttribute('aria-label", label);
   });
 };
-;
+
 export const setupLandmarkNavigation = (): void => {;
 ;
   createLandmarkNavigation();
@@ -286,7 +286,7 @@ createLandmarkNavigation();
 ;"
 observer.observe(document.body, {;)"
 childList: "true",subtree: "true)"
-"
+
   ",});
 };
 /**
@@ -362,7 +362,7 @@ border: "2px solid #ffffff !important;"
           colo",r: "#ffffff !important;"
 ",}
         ,}"
-"
+
         .neon-text, .cyber-text{;}"
 text-shadow: "0 0 5px #00ffff !important;",}
       }
@@ -380,7 +380,7 @@ document.body.classList.add('keyboard-navigation");,, , }
 document.addEventListener('mousedown", () => {;"'"
 document.body.classList.remove('keyboard-navigation");
     });
-"
+
     // Add focus styles;"
 ;"'"
 const focusStyle = document.createElement('style");"
@@ -416,7 +416,7 @@ previousElement.focus();,}
         }
       }
     });"
-"
+
     // Track focus changes;"'"
 document.addEventListener('focusin", (event) => {;
 if(event.target, instanceof, HTMLElement) {  ;
@@ -445,7 +445,7 @@ link.setAttribute('aria-label', 'Link");
 collectMetrics(): AccessibilityMetrics{;"
 const metrics: "AccessibilityMetrics = {;",}"
 overallScor,e: "0",colorContrast: "this.checkColorContrast()",keyboardNavigation: "this.checkKeyboardNavigation()",screenReaderCompatibility: "this.checkScreenReaderCompatibility()",focusManagement: "this.checkFocusManagement()",ariaLabels: "this.checkAriaLabels()",headingStructure: "this.checkHeadingStructure()",altText: "this.checkAltText()",};
-"
+
     // Calculate overall score;"
 ;"'"
 const scores = Object.values(metrics).filter(score => typeof score === 'number" && score > 0);"
@@ -480,7 +480,7 @@ return totalElements > 0 ? (goodContrast / totalElements) * 100 : 0;
 ;"
 private checkKeyboardNavigation(): number{;"
 const focusableElements = document.querySelectorAll();"'"
-      'a[href,], button, input, textarea, select, [tabindex,]:not([tabindex="-1"])";
+      'a[href,], button, input, textarea, select, [tabindex,]:not([tabindex="-1])";
     );
     let accessibleElements = 0;
 ;"
@@ -518,7 +518,7 @@ return elements.length > 0 ? (compatibleElements / elements.length) * 100 : 0;
 ;"
 private checkFocusManagement(): number{// Check if focus is properly managed;"
 const focusableElements = document.querySelectorAll();"'"
-      'a[href,], button, input, textarea, select, [tabindex,]:not([tabindex="-1"])";
+      'a[href,], button, input, textarea, select, [tabindex,]:not([tabindex="-1])";
 
     );
 ;
@@ -537,7 +537,7 @@ return focusableElements.length > 0 ? (properlyManaged / focusableElements.lengt
 ;"
 private checkAriaLabels(): number{;"
 const interactiveElements = document.querySelectorAll(;)"'"
-      'button, input, textarea, select, [role="button"], [role = "link"]");
+      'button, input, textarea, select, [role="button], [role = "link"]");
     );
 ;"
 let labeledElements = 0;"

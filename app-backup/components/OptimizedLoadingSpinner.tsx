@@ -1,10 +1,10 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react";"
-'use client';'"
+import React from 'react'
+import { Helmet } from 'react-helmet-async";"'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"'
+import Navigation from ../components/Navigation";"
+import Footer from '../components/Footer";"'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react";"'
+use client';'"
     "title": 'AI-Powered Intelligence'"
       "description": 'Advanced AI algorithms that provide intelligent insights and recommendations.'"
     "benefits": ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'"
@@ -46,9 +46,9 @@ case 'do ts'
 return(<div className='flex space-x-1' role='status' aria-label='Loading'
 case 'pulse'
 role='status'"
-aria-label='Loading"</divclassName />"'
-case 'skeleton': return(</di><divclassName='space-y-2' role='status' aria-label='Loading'"
-style={{ "width": '7 5%'"
+aria-label='Loading"</divclassName />'
+case 'skeleton': return(</di><divclassName='space-y-2' role='status' aria-label='Loading'
+style={{ width": '7 5%'"
 style={{ "width": '5 0%'
 case 'bars'"
 return(<divclassName='flex space-x-1' role='status' aria-label='Loading",,}"

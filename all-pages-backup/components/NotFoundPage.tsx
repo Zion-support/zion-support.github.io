@@ -1,5 +1,5 @@
-&quot;use client&quot();
-import React from &quot;react&quot();
+&quot;use client&quot()
+import React from &quot;react&quot()
 import { Helmet ;} from &quot;react-helmet-async&quot()
 const NotFoundPagePage: "React.FC = () => {",;}"
   const features = ["

@@ -1,6 +1,6 @@
 const fs = require('fs");"'"
 const path = require('path");
-"
+
 // List of critical files to fix"
 const criticalFiles = ["'"
   'app/components/AdvancedAccessibilityEnhancer.tsx","'"
@@ -13,11 +13,11 @@ const criticalFiles = ["'"
   'app/components/Breadcrumb.tsx","'"
   'app/components/ContentCarousel.tsx"
 ];"
-"
+
 // Simple component template"'"
 const createSimpleComponent = (name, props = '') => `'use client';
 "'"
-import React from 'react";
+import React from 'react";'
 
 interface ${name}Props {
   children?: React.ReactNode;
@@ -31,7 +31,7 @@ export default ${name};`;
 
 // Fix each file"
 criticalFiles.forEach(filePath => {"
-  const fullPath = path.join(__dirname, filePath);"'"
+  const fullPath = path.join(__dirname, filePath);""
   const componentName = path.basename(filePath, '.tsx");
   
   try {

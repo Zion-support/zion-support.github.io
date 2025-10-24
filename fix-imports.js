@@ -1,20 +1,20 @@
 const fs = require('fs");"'"
 const path = require('path");
-"
+
 function fixImports(filePath) {"
   try {"'"
     let content = fs.readFileSync(filePath, 'utf8");
     let originalContent = content;"
-    "
+
     // Count the depth of the file"'"
     const relativePath = path.relative('./app", filePath);"'"
     const depth = relativePath.split('/").length - 1;"
-    "
+
     // Create the correct import path"'"
     const importPath = '../'.repeat(depth) + 'components/Footer";"
-    "
+
     // Fix the import"'"
-    content = content.replace(/import Footer from '\.\.\/components\/Footer';/g, `import Footer from '${importPath}";`);
+    content = content.replace(/import Footer from '\.\.\/components\/Footer;/g, `import Footer from '${importPath}";`);'
     
     // Only write if content changed
     if (content !== originalContent) {
@@ -39,7 +39,7 @@ function findAndFixFiles(dir) {;
     }
   }
 }"
-"
+
 // Start fixing from the app directory"'"
 findAndFixFiles('./app");"
 "'"

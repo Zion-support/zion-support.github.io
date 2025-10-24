@@ -7,16 +7,16 @@ function removeFooterImports(filePath) { "
 try { ;"'"
 let content = fs.readFileSync(filePath, 'utf8");
     let modified = false;"
-"
+
     // Remove Footer import;"
 if (content.includes("import Footer from")) {;"'"
 content = content.replace(/import Footer from ['"][^'"]*['"];?\n?/g, '");
       modified = true;
 ,, , }
     }"
-"
+
     // Remove Footer usage;"'"
-if (content.includes('<Footer />")) {;"'"
+if (content.includes('<Footer />)) {;'
 content = content.replace(/<Footer\ />/g, '");
       modified = true;
     ,}"
@@ -52,7 +52,7 @@ fixedCount++}
 ;
 return fixedCount;
 }"
-"
+
 // Start fixing from the app directory;"'"
 const appDir = path.join(__dirname, 'app");"'"
 console.log('Removing Footer imports...");"

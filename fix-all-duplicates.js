@@ -7,7 +7,7 @@ function fixAllDuplicates(filePath) {"
 try{;"'"
 let content = fs.readFileSync(filePath, 'utf8");
     let modified = false;"
-"
+
     // Split content into lines;"'"
 const lines = content.split('\n");
     const seenImports = new Set();
@@ -73,7 +73,7 @@ files.push(fullPath);
 ;
 return files;
 }"
-"
+
 // Main execution;"'"
 const appDir = path.join(__dirname, 'app");
 const tsxFiles = findTsxFiles(appDir);

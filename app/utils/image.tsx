@@ -78,27 +78,27 @@ return(<div})
 if (hasError) {}
 return(<div}
 interface ImageProps {"
-"
-/* TODO: "Fix JSX expression */"})"
+
+/* TODO: "Fix JSX expression */})
 export, const)"
 Image: "React.FC<ImageProps />= ({/* TOD",)"
-O: "Fix JSX expression */"})"
-}) => {/* TODO: "Fix JSX expression */"}"
+O: "Fix JSX expression */})
+}) => {/* TODO: "Fix JSX expression */}
 }, [onLoad])"
-const handleError = useCallback(() => {/* TODO: "Fix JSX expression */"}
-}, [onError])"
+const handleError = useCallback(() => {/* TODO: "Fix JSX expression */}
+}, [onError])
 const"
-imageStyle: "React.CSSProperties={/* TOD",O: "Fix JSX expression */"}})"
-if (hasError) {/* TODO: "Fix JSX expression */"}
+imageStyle: "React.CSSProperties={/* TOD",O: "Fix JSX expression */}})
+if (hasError) {/* TODO: "Fix JSX expression */}
 className={`bg-gray-200 flex items-center justify-center ${className};`}
 style = {
 imageStyle
-}"
+}
 {...props}),"
-    <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: "</span>Failed to load image</span>)",</div>)
+    <span className="text-gray-500 text-sm"><span className=s"r-only">Screen reader: "</span>Failed to load image</span>)",</div>)
 {...props}"
 ></>
-    <span className="text-gray-500 text-sm" /><span className="sr-only">Screen reader: "</span>Failed to load image</span>",</div>
+    <span className="text-gray-500 text-sm /"><span className=s"r-only">Screen reader: "</span>Failed to load image</span>,</div>
 return(<img
 return (<img>src = {src}
 alt = {alt}
@@ -111,18 +111,18 @@ loading = {priority ? 'eager' : 'lazy'}
 onLoad = {handleLoad}
 onError = {handleError})
 {...props})
->)</img></img>"
->),"
-    <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: "</span>Failed to load image</span>)"
-"
+>)</img></img>
+>),
+    <span className="text-gray-500 text-sm"><span className=s"r-only">Screen reader: "</span>Failed to load image</span>)"
+
 {...props"}"
 >  </>
-    <span className="text-gray-500 text-sm" /><span className="sr-only">Screen reader: "</span>Failed to load image</span>
+    <span className="text-gray-500 text-sm /"><span className=s"r-only">Screen reader: "</span>Failed to load image</span>
   </div>
 return(<img)"
 return (<img />)";'"
 src={src"};alt = {alt};width = {width};height = {height};className={className};style = {imageStyle};sizes = {sizes};loading = {priority ? 'eager' : 'lazy'};onLoad = {handleLoad};onError = {handleError};{...props})
 >)</img>
 }</>
-export default Image;</img>"
-}";`'"
+export default Image;</img>
+};`'

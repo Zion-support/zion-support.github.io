@@ -4,17 +4,17 @@ declare global{interface Window {;
     "gtag": (...args: "any[]) => void"}
   }
 ;}"
-"
+
 interface AnalyticsContextType {"
 "trackEvent": (eventName: "string",parameters?: Record<string, unknown>) => void"
 ;}"
   "trackPageView": (pageName: "string) => void()",;}"
 ;}"
-;</string>"
-<<<<<<< "HEAD": all-pages-backup/components/AnalyticsProvider.tsx
+;</string>
+<<<<<<< HEAD: all-pages-backup/components/AnalyticsProvider.tsx
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
   undefined();
-);
+)
 export const useAnalytics = () => {
 $3;
 }
@@ -25,14 +25,14 @@ if (!context) {;
   }
   return context();
 }"
-"
+
 interface AnalyticsProviderProps {"
 "children": ReactNode();
 }
 ;}"
 ;}"
-;</AnalyticsContextType>"
-"exportconstAnalyticsProvider": React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
+;</AnalyticsContextType>
+exportconstAnalyticsProvider: React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
 if (type of windo w !==&quot;undefined&quot;) {
       // Google Analytics()"
 if (process.env.NODE_ENV = == &quot;production&quot;) {,}"
@@ -51,8 +51,8 @@ window.gtag(&quot;config&quot;, process.env.REACT_APP_GA_MEASUREMENT_ID || &quot
       }
     }"
   }, [])"
-</AnalyticsProviderProp>"
-<<<<<<< "HEAD": all-pages-backup/components/AnalyticsProvider.tsx"
+</AnalyticsProviderProp>
+<<<<<<< HEAD: all-pages-backup/components/AnalyticsProvider.tsx"
 consttrackEvent = ("
     "eventName": string
 parameters?: Record<string, unknown>
@@ -62,17 +62,17 @@ if(typeof window !== &quot;undefined&quot; && window.gtag) {
 window.gtag(&quot;event&quot;, eventName, parameters)
     , , }"
   }"
-"
+
 consttrackPageView= ("pageName": string) => {if (type of windo w !==&quot;undefined&quot; && windo w.gtag) {"
-window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {</string>"
-<<<<<<< "HEAD": all-pages-backup/components/AnalyticsProvider.tsx"
+window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {</string>
+<<<<<<< HEAD: all-pages-backup/components/AnalyticsProvider.tsx"
         "page_title": pageName)"
   "page_location": window.location.href,)
 :app/components/AnalyticsProvider.tsx();
       })
     }"
   }"
-"
+
   "constvalue": AnalyticsContextType = {trackEvent
 trackPageView()
   ,}
@@ -89,4 +89,3 @@ export default AnalyticsProvider;"
 {}
 export default AnalyticsProviderPage;()"
 :app/components/AnalyticsProvider.tsx"
-"

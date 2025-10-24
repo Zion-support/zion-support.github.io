@@ -62,18 +62,18 @@ method: "'GET'",headers,
 </T>;"
 async post<T>(;"
 endpoint: "string",data?: any,</T>;
-headers?: Record<string, string />"
-  ): Promise<ApiResponse<T>> {</ApiResponse>;"
-return this.request<T>(endpoint, {;"'"
+headers?: Record<string, string />
+  ): Promise<ApiResponse<T>> {</ApiResponse>;
+return this.request<T>(endpoint, {;'"
 method: "'POST'",body: "data ? JSON.stringify(data) : undefined",headers,
     });
   }"
 </T>;"
 async put<T>(;"
 endpoint: "string",data?: any,</T>;
-headers?: Record<string, string />"
-  ): Promise<ApiResponse<T>> {</ApiResponse>;"
-return this.request<T>(endpoint, {;"'"
+headers?: Record<string, string />
+  ): Promise<ApiResponse<T>> {</ApiResponse>;
+return this.request<T>(endpoint, {;'"
 method: "'PUT'",body: "data ? JSON.stringify(data) : undefined",headers,
     });"
   }"
@@ -85,7 +85,7 @@ method: "'DELETE'",headers,
   }
 }
 const apiClient = new ApiClient();
-;
+
 export default apiClient;"
-export { ApiClient, type, ApiResponse, type, ApiError  ;};</T>"
-}"'"
+export { ApiClient, type, ApiResponse, type, ApiError  ;};</T>
+}'

@@ -3,8 +3,8 @@
  * useForm Hook"
  * Provides form state management and validation"
  */;"'"
-import { useState, useCallback, ChangeEvent } from 'react";"
-// import { logger } from '../utils/logger";
+import { useState, useCallback, ChangeEvent } from 'react";"'
+// import { logger } from ../utils/logger"
 import{ValidationRule,;
 validateField,;
 validateForm,;"
@@ -35,7 +35,7 @@ handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;"
   resetForm: () => void;"
   validateField: (field: keyof, T) => void;"
   validateAllField",s: "() => boolean;"
-",}</HTMLFormElement>;
+",}</HTMLFormElement>
 export function useForm<T extends Record<string, unknown>>({;
 initialValues, validationSchema = {,}, onSubmit, validateOnChange = true, validateOnBlur = true</T>;
 ,}: UseFormConfig<T>): UseFormReturn<T> {</T>;
@@ -169,5 +169,5 @@ setFieldTouched,;"
 resetForm,;"
 validateField: "validateSingleField",validateAllFields}
   };"
-}</keyof>"
-}"'"
+}</keyof>
+}'

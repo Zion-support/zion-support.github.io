@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import, React, { useEffect, useState, useCallback } from "react";"
 import, React, { useEffect, useCallback, useState } from 'react'
 if(enableWebVitals && typeof window !== 'undefined'"

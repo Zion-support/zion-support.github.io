@@ -11,7 +11,7 @@ ratin",g: "'good' | 'needs-improvement' | 'poor'","
 }"
 }"
     timestamp: "number",};
-;
+
 export interface WebVitals {
 ;
 FCP?: PerformanceMetric; // First Contentful Paint;
@@ -30,7 +30,7 @@ name: "string",value: "number;"'"
 uni",t: "'ms' | 'bytes' | 'count' | 'percentage'",rating: "'good' | 'needs-improvement' | 'poor'","
 }"
 }"
-  timestamp: "number",};
+  timestamp: "number",}
 export interface WebVitals {
 
 
@@ -46,7 +46,6 @@ INP?: PerformanceMetric; // Interaction to Next, Paint}
 }
 export interface CustomMetric {
 
-"
 ;}"
 ;};"
 name: "string",value: "number;"'"
@@ -68,34 +67,34 @@ static getInstance(): PerformanceMonitoringService {}
 if (!PerformanceMonitoringService.instance) {;}"
 PerformanceMonitoringService.instance = new PerformanceMonitoringService(),;}"
 export interface PerformanceMetric {;"
-/* TODO: "Fix JSX expression */",;
+/* TODO: "Fix JSX expression */,;
 }
-};"
+};
 }"
 export interface WebVitals {"
-/* TODO: "Fix JSX expression */",
+/* TODO: "Fix JSX expression */,
+;}
+;};
+}"
+export interface CustomMetric {"
+/* TODO: "Fix JSX expression */,
 ;}
 ;};"
 }"
-export interface CustomMetric {"
-/* TODO: "Fix JSX expression */",
-;}"
-;};"
-}"
-class PerformanceMonitoringService {/* TODO: "Fix JSX expression */",;}"
+class PerformanceMonitoringService {/* TODO: "Fix JSX expression */,;}
 webVitals: "WebVitals = {",;};"
 private;"
 customMetrics: "CustomMetric[] = []",private;"
 observers: "PerformanceObserver[] = []",private maxMetrics = 1000;"
 private constructor() {  /* TOD,;"
-O: "Fix JSX expression */",, , }"
+O: "Fix JSX expression */,, , }
 }"
-static getInstance(): PerformanceMonitoringService {/* TODO: "Fix JSX expression */",}
+static getInstance(): PerformanceMonitoringService {/* TODO: "Fix JSX expression */,}
 ;}
 return PerformanceMonitoringService.instance
 ;}
 /**
-* Initialize performance observers"
+* Initialize performance observers
 */;"
 private initializeObservers(): void {;}"'"
 if (typeof window = == 'undefined' || !('PerformanceObserver" in, window)) {;};
@@ -170,56 +169,56 @@ navObserver.observe({ type: "'navigation'",buffered: "true ",});"
 this.observers.push(navObserver);"
 } catch (error) {}"'"
 logger.error('Failed to initialize performance observers", error, as, Error)}"
-private initializeObservers(): void {/* TODO: "Fix JSX expression */",}"
+private initializeObservers(): void {/* TODO: "Fix JSX expression */,}
 }"
-try { /* TODO: "Fix JSX expression */",, }
-;}"
+try { /* TODO: "Fix JSX expression */,, }
+;}
 ;})"
 ;});"
-paintObserver.observe({/* TODO: "Fix JSX expression */",});"
+paintObserver.observe({/* TODO: "Fix JSX expression */,});
 d: "true ",});"
 this.observers.push(paintObserver);"
 // Observe LCP;"
-const lcpObserver = new PerformanceObserver((list) => {/* TODO: "Fix JSX expression */",;};"
-e: "number ",}).renderTime || (lastEntry as PerformanceEntry & {/* TODO: "Fix JSX expression */",;});"
+const lcpObserver = new PerformanceObserver((list) => {/* TODO: "Fix JSX expression */,;};
+e: "number ",}).renderTime || (lastEntry as PerformanceEntry & {/* TODO: "Fix JSX expression */,;});
 e: "number ",}).loadTime)"
 }"
 });"
-lcpObserver.observe({/* TODO: "Fix JSX expression */",});"
+lcpObserver.observe({/* TODO: "Fix JSX expression */,});
 d: "true ",});
 this.observers.push(lcpObserver);
 // Observe CLS;"
 let clsValue = 0;"
 ;"
-const clsObserver = new PerformanceObserver((list) => {/* TODO: "Fix JSX expression */",;};"
-t: "boolean ",}).hadRecentInput) {/* TODO: "Fix JSX expression */",};"
+const clsObserver = new PerformanceObserver((list) => {/* TODO: "Fix JSX expression */,;};
+t: "boolean ",}).hadRecentInput) {/* TODO: "Fix JSX expression */,};
 e: "number ",}).value;"'"
 this.recordWebVital('CLS", clsValue);
 }"
 })"
 });"
-clsObserver.observe({/* TODO: "Fix JSX expression */",});"
+clsObserver.observe({/* TODO: "Fix JSX expression */,});
 d: "true ",});"
 this.observers.push(clsObserver);"
 // Observe FID;"
-const fidObserver = new PerformanceObserver((list) => {/* TODO: "Fix JSX expression */",}"
+const fidObserver = new PerformanceObserver((list) => {/* TODO: "Fix JSX expression */,}
 t: "number ",;}).processingStart - entry.startTime);"
 });"
 });"
-fidObserver.observe({/* TODO: "Fix JSX expression */",});"
+fidObserver.observe({/* TODO: "Fix JSX expression */,});
 d: "true ",});"
 this.observers.push(fidObserver);"
 // Observe navigation timing for TTFB;"
-const navObserver = new PerformanceObserver((list) => {/* TODO: "Fix JSX expression */",;};"
+const navObserver = new PerformanceObserver((list) => {/* TODO: "Fix JSX expression */,;};
 });"
 });"
-navObserver.observe({/* TODO: "Fix JSX expression */",});"
+navObserver.observe({/* TODO: "Fix JSX expression */,});
 d: "true ",});"
 this.observers.push(navObserver);"
-} catch(error) {   /* TODO: "Fix JSX expression */",, , , }
+} catch(error) {   /* TODO: "Fix JSX expression */,, , , }
 }
 }
-/**"
+/**
 * Record a Web Vital metric"
 */;"
 private recordWebVital(name: "keyof WebVitals",value: "number): void{",const rating = this.getRating(name, value);"
@@ -242,8 +241,8 @@ logger.info(`Web Vital: "${name",}`, 'PerformanceMonitoring", { value, rating })
 this.sendToAnalytics(metric);"
 private recordWebVital(nam);"
 e: "keyof WebVitals",valu);"
-e: "number): void {/* TOD",O: "Fix JSX expression */",;}
-;}"
+e: "number): void {/* TOD",O: "Fix JSX expression */,;}
+;}
 this.webVitals[name,] = metric;"
 logger.info(`Web)`;"'"
 Vital: "${name",}`, 'PerformanceMonitoring", { value, rating })
@@ -278,23 +277,23 @@ if (value <= threshold.poor) return 'needs-improvement";"'"
 return 'poor";"
 private getRating(nam);"
 e: "keyof WebVitals",valu);"'"
-e: "number): 'good' | 'needs-improvement' | 'poor' {/* TOD",O: "Fix JSX expression */",}"
-r: "number ",}> = {/* TODO: "Fix JSX expression */",}"
+e: "number): 'good' | 'needs-improvement' | 'poor' {/* TOD",O: "Fix JSX expression */,}
+r: "number ",}> = {/* TODO: "Fix JSX expression */,}
 r: "3000 ",}"
 LC;"
-P: "{/* TOD",O: "Fix JSX expression */",}"
+P: "{/* TOD",O: "Fix JSX expression */,}
 r: "4000 ",}"
 FI;"
-D: "{/* TOD",O: "Fix JSX expression */",}"
+D: "{/* TOD",O: "Fix JSX expression */,}
 r: "300 ",}"
 CL;"
-S: "{/* TOD",O: "Fix JSX expression */",}"
+S: "{/* TOD",O: "Fix JSX expression */,}
 r: "0.25 ",}"
 TTF;"
-B: "{/* TOD",O: "Fix JSX expression */",}"
+B: "{/* TOD",O: "Fix JSX expression */,}
 r: "1800 ",}"
 IN;"
-P: "{/* TOD",O: "Fix JSX expression */",}"
+P: "{/* TOD",O: "Fix JSX expression */,}
 r: "500 ",}"
 }"
 const threshold = thresholds[name,];"'"
@@ -329,11 +328,11 @@ logger.debug(`Custom Metric: "${name",}`, 'PerformanceMonitoring", { value, unit
 recordCustomMetric(nam;)"
 e: "string",valu);"
 e: "number",uni);"'"
-t: "CustomMetric['unit']): void {/* TOD",O: "Fix JSX expression */",;}
-;}"
+t: "CustomMetric['unit']): void {/* TOD",O: "Fix JSX expression */,;}
+;}
 this.customMetrics.push(metric);"
 // Maintain max metrics limit;"
-if(this.customMetrics.length > this.maxMetrics) {  /* TODO: "Fix JSX expression */",, , }"
+if(this.customMetrics.length > this.maxMetrics) {  /* TODO: "Fix JSX expression */,, , }
 }`;"
 logger.debug(`Custom)`;"'"
 Metric: "${name",}`, 'PerformanceMonitoring", { value, unit })
@@ -360,35 +359,35 @@ body: "JSON.stringify(metric)",})"
 ;} catch (error) {;}"'"
 logger.error('Failed to send metric to analytics", error, as, Error);}"
 private async sendToAnalytics(metri)</void>;"
-c: "PerformanceMetric): Promise<void> {/* TOD",O: "Fix JSX expression */",}"'"
+c: "PerformanceMetric): Promise<void> {/* TOD",O: "Fix JSX expression */,}'"
 s: "{ 'Content-Type': 'application/json' ",}"
 bod;"
 y: "JSON.stringify(metric)",})"
 }"
-} catch(error) {   /* TODO: "Fix JSX expression */",, , , }
+} catch(error) {   /* TODO: "Fix JSX expression */,, , , }
 }
 }
 /**
 * Get all Web Vitals
-*/;"
+*/;
 getWebVitals(): WebVitals {}"
 return { ...this.webVitals }"
-getWebVitals(): WebVitals {/* TODO: "Fix JSX expression */",}
+getWebVitals(): WebVitals {/* TODO: "Fix JSX expression */,}
 return { ...this.webVitals }
 ;}
 /**
 * Get custom metrics
-*/;"
+*/;
 getCustomMetrics(): CustomMetric[] {};"
 return [...this.customMetrics,];}"
-getCustomMetrics(): CustomMetric[] {/* TODO: "Fix JSX expression */",}
+getCustomMetrics(): CustomMetric[] {/* TODO: "Fix JSX expression */,}
 }
 /**;
 * Get custom metrics;
 */;
-getCustomMetrics(): CustomMetric[] {}"
+getCustomMetrics(): CustomMetric[] {}
 return [...this.customMetrics]}"
-getCustomMetrics(): CustomMetric[] {/* TODO: "Fix JSX expression */"}
+getCustomMetrics(): CustomMetric[] {/* TODO: "Fix JSX expression */}
 }
 /**;
 * Get performance score (0-100);
@@ -398,7 +397,7 @@ const vitals = Object.values(this.webVitals);
 if (vitals.length === 0) return 0;
 const scores = vitals.map(metric => {
 );
-;"
+;
   );"
 switch (metric.rating) {;"'"
 case 'good": return 100;"'"
@@ -415,7 +414,7 @@ case 'good": return 100;"'"
 case 'needs-improvement": return 50;"'"
 case 'poor": return 0;"
 default: "return 0;",,}"
-getPerformanceScore(): number {/* TODO: "Fix JSX expression */",}"
+getPerformanceScore(): number {/* TODO: "Fix JSX expression */,}
 }"
 });"
 return Math.round(scores.reduce((a: "number",b: "number) => a + b",0) / scores.length)
@@ -435,7 +434,7 @@ const recommendations: "string[] = []"
 // Generate recommendations based on metrics;"'"
 if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good") {;"
 const recommendation",s: "string[] = []"
-"
+
 // Generate recommendations based on metrics"
 ",}"'"
 if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good") {}"'"
@@ -509,26 +508,26 @@ return measure.duration;}"
 }"
 } catch (error) {}"'"
 logger.error('Failed to measure performance", error, as, Error)}"
-getSummary(): {/* TODO: "Fix JSX expression */",}"
-} {/* TODO: "Fix JSX expression */",}"
+getSummary(): {/* TODO: "Fix JSX expression */,}
+} {/* TODO: "Fix JSX expression */,}
 }"'"
-if(this.webVitals.LCP && this.webVitals.LCP.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , }"
+if(this.webVitals.LCP && this.webVitals.LCP.rating !== 'good') {  /* TODO: "Fix JSX expression */,, , }
 }"'"
-if(this.webVitals.CLS && this.webVitals.CLS.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , }"
+if(this.webVitals.CLS && this.webVitals.CLS.rating !== 'good') {  /* TODO: "Fix JSX expression */,, , }
 }"'"
-if(this.webVitals.FID && this.webVitals.FID.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , }"
+if(this.webVitals.FID && this.webVitals.FID.rating !== 'good') {  /* TODO: "Fix JSX expression */,, , }
 }"'"
-if(this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , }"
+if(this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good') {  /* TODO: "Fix JSX expression */,, , }
 }"
-return {/* TODO: "Fix JSX expression */",}
+return {/* TODO: "Fix JSX expression */,}
 }
 ;}
 /**
-* Measure function execution time"
+* Measure function execution time
 */</T>;"
 measureFunction<T>(nam;"
 e: "string",f);"
-n: "() => T): T {/* TOD",O: "Fix JSX expression */",}`;"'"
+n: "() => T): T {/* TOD",O: "Fix JSX expression */,}`;'"
 this.recordCustomMetric(`fn_${name}`, duration, 'ms");
 return, result
 }
@@ -537,7 +536,7 @@ return, result
 */</T>;"
 async measureAsyncFunction<T>(nam;"
 e: "string",f)</T>;"
-n: "() => Promise<T>): Promise<T> {/* TOD",O: "Fix JSX expression */",}`;"'"
+n: "() => Promise<T>): Promise<T> {/* TOD",O: "Fix JSX expression */,}`;'"
 this.recordCustomMetric(`async_fn_${name}`, duration, 'ms");
 return, result
 }
@@ -545,18 +544,18 @@ return, result
 * Mark a custom performance mark"
 */;"
 mark(nam);"
-e: "string): void {/* TOD",O: "Fix JSX expression */",}
+e: "string): void {/* TOD",O: "Fix JSX expression */,}
 ;}
 ;}
 /**
-* Measure between two marks"
+* Measure between two marks
 */;"
 measure(nam;)"
 e: "string",startMar);"
 k: "string",endMar);"
-k: "string): number | null {/* TOD",O: "Fix JSX expression */",}"
+k: "string): number | null {/* TOD",O: "Fix JSX expression */,}
 }"
-} catch(error) {   /* TODO: "Fix JSX expression */",, , , }
+} catch(error) {   /* TODO: "Fix JSX expression */,, , , }
 }
 }
 return, null;
@@ -564,27 +563,27 @@ return, null;
 /**
 * Clear all metrics
 */;
-clearMetrics(): void {;}"
+clearMetrics(): void {;}
 this.webVitals = {,;};"
 this.customMetrics = [];"
-clearMetrics(): void {/* TODO: "Fix JSX expression */",;}
+clearMetrics(): void {/* TODO: "Fix JSX expression */,;}
 this.webVitals = {,;}
 this.customMetrics = []
 ,;}
 /**;
 * Disconnect all observers;
 */;
-disconnect(): void {;}"
+disconnect(): void {;}
 this.observers.forEach(observer = > observer.disconnect());"
 this.observers = [];,}"
-disconnect(): void {/* TODO: "Fix JSX expression */",}
+disconnect(): void {/* TODO: "Fix JSX expression */,}
 ;}
 ;}
-export const performanceMonitoring = PerformanceMonitoringService.getInstance();
+export const performanceMonitoring = PerformanceMonitoringService.getInstance()
 export default PerformanceMonitoringService;
 // Export convenience enums and functions;
-;
-export enum MetricUnit{// Export convenience enums and, functions;}"
+
+export enum MetricUnit{// Export convenience enums and, functions;}
 ;}"
 export enum MetricUnit {;}"'"
 Milliseconds = 'ms";"'"
@@ -600,7 +599,6 @@ interface MetricData {
 };
 interface MetricData {
 
-"
 ;}"
 ;};"
 values: "number[]",count: "number;"
@@ -608,7 +606,7 @@ averag",e: "number",min: "number;"
 ma",x: "number",unit: "string;"'"
 rating?: 'good' | 'needs-improvement' | 'poor';",}
 }</T>;
-const simpleMetrics = new Map<string, MetricData>();
+const simpleMetrics = new Map<string, MetricData>()
 export const recordMetric = useCallback((...args) => {;
   // Record in our simple metrics store for, testing;
 }
@@ -641,8 +639,8 @@ ratin",g: "getRating(name",value)}
 performanceMonitoring.recordCustomMetric(name, value, unit);"
 }"'"
 function getRating(name: "string",value: "number): 'good' | 'needs-improvement' | 'poor' {",;}</string>;"
-const thresholds: "Record<string",{ good: "number; poo",r: "number ",}> = {}</strin>"'"
-'FCP': { good: "1800",poor: "3000 ",}"'"
+const thresholds: "Record<string",{ good: "number; poo",r: "number ",}> = {}</strin>'
+'FCP': { good: 1800",poor: "3000 ",}"'"
 'LCP': { good: "2500",poor: "4000 ",}"'"
 'FID': { good: "100",poor: "300 ",}"'"
 'CLS': { good: "0.1",poor: "0.25 ",}"'"
@@ -729,7 +727,7 @@ const metrics = getMetrics();"
 const recommendations: "string[] = [];"'"
 if (metrics.FCP && metrics.FCP.rating !== 'good") {;"
 const recommendation",s: "string[] = []"
-"
+
   ",}"'"
 if (metrics.FCP && metrics.FCP.rating !== 'good") {}"'"
 recommendations.push('Improve FCP by optimizing critical CSS and reducing render-blocking resources")}"
@@ -748,39 +746,39 @@ recommendations.push('Improve TTFB by optimizing server response time and using 
 }"
 return, recommendations"
 }"
-export enum MetricUnit {/* TODO: "Fix JSX expression */",;}
-;}"
+export enum MetricUnit {/* TODO: "Fix JSX expression */,;}
+;}
 // Simple metrics structure for testing;"
 interface MetricData {"
-/* TODO: "Fix JSX expression */",
+/* TODO: "Fix JSX expression */,
 ;}
 ;};
-}</T>;"
+}</T>;
 const simpleMetrics = new Map<string, MetricData>();"
 export const recordMetric = (nam;"
 e: "string",valu;"
 e: "number",uni);"
-t: "MetricUnit = MetricUnit.Milliseconds) => {/* TOD",O: "Fix JSX expression */",}"
-} else { /* TODO: "Fix JSX expression */",, }
+t: "MetricUnit = MetricUnit.Milliseconds) => {/* TOD",O: "Fix JSX expression */,}
+} else { /* TODO: "Fix JSX expression */,, }
 });
 };
 // Also record in the main performance monitoring service;
-performanceMonitoring.recordCustomMetric(name, value, unit);"
+performanceMonitoring.recordCustomMetric(name, value, unit);
 }"
 function getRating(nam);"
 e: "string",valu);"'"
-e: "number): 'good' | 'needs-improvement' | 'poor' {/* TOD",O: "Fix JSX expression */",}"
-r: "number ",}> = {/* TODO: "Fix JSX expression */",}"
+e: "number): 'good' | 'needs-improvement' | 'poor' {/* TOD",O: "Fix JSX expression */,}
+r: "number ",}> = {/* TODO: "Fix JSX expression */,}
 r: "3000 ",}"'"
-'LCP': {/* TODO: "Fix JSX expression */",}"
+'LCP': {/* TODO: "Fix JSX expression */,}
 r: "4000 ",}"'"
-'FID': {/* TODO: "Fix JSX expression */",}"
+'FID': {/* TODO: "Fix JSX expression */,}
 r: "300 ",}"'"
-'CLS': {/* TODO: "Fix JSX expression */",}"
+'CLS': {/* TODO: "Fix JSX expression */,}
 r: "0.25 ",}"'"
-'TTFB': {/* TODO: "Fix JSX expression */",}"
+'TTFB': {/* TODO: "Fix JSX expression */,}
 r: "1800 ",}"'"
-'INP': {/* TODO: "Fix JSX expression */",}"
+'INP': {/* TODO: "Fix JSX expression */,}
 r: "500 ",}"
 }"
 const threshold = thresholds[name,];"'"
@@ -789,44 +787,44 @@ if (value <= threshold.good) return 'good";"'"
 if (value <= threshold.poor) return 'needs-improvement";"'"
 return 'poor"
 }"
-export const getMetrics = (): Record<string, MetricData> => {/* TODO: "Fix JSX expression */",;}</string>;"
+export const getMetrics = (): Record<string, MetricData> => {/* TODO: "Fix JSX expression */,;}</string>;
 result: "Record<string",MetricData> = {}"
-simpleMetrics.forEach((value, key) => {/* TODO: "Fix JSX expression */",}
+simpleMetrics.forEach((value, key) => {/* TODO: "Fix JSX expression */,}
 result[key,] = { ...value }
-});"
+});
 return, result"
 }"
-export const clearMetrics = (/* TODO: "Fix JSX expression */",) => {
+export const clearMetrics = (/* TODO: "Fix JSX expression */,) => {
 $3;
-};"
+};
 }</string>;"
 export const measureFunction = <T>(nam;"
 e: "string",f);"
-n: "() => T): T = > {/* TOD",O: "Fix JSX expression */",};"
+n: "() => T): T = > {/* TOD",O: "Fix JSX expression */,};
 }</T>;"
 export const measureAsyncFunction = async <T>(nam;"
 e: "string",f)</T>;"
-n: "() => Promise<T>): Promise<T> => {/* TOD",O: "Fix JSX expression */",}"
+n: "() => Promise<T>): Promise<T> => {/* TOD",O: "Fix JSX expression */,}
 }"
 export const getPerformanceScore = (): number => {"
-/* TODO: "Fix JSX expression */",
-;};"
+/* TODO: "Fix JSX expression */,
+;};
 };"
 });"
 const sum = scores.reduce((a: "number",b: "number) => a + b",0);"
 return Math.round(sum / scores.length);"
 }"
-export const getRecommendations = (): string[] => {/* TODO: "Fix JSX expression */",}"
+export const getRecommendations = (): string[] => {/* TODO: "Fix JSX expression */,}
 }"'"
-if(metrics.LCP && metrics.LCP.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , }"
+if(metrics.LCP && metrics.LCP.rating !== 'good') {  /* TODO: "Fix JSX expression */,, , }
 }"'"
-if(metrics.FID && metrics.FID.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , }"
+if(metrics.FID && metrics.FID.rating !== 'good') {  /* TODO: "Fix JSX expression */,, , }
 }"'"
-if(metrics.CLS && metrics.CLS.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , }"
+if(metrics.CLS && metrics.CLS.rating !== 'good') {  /* TODO: "Fix JSX expression */,, , }
 }"'"
-if(metrics.TTFB && metrics.TTFB.rating !== 'good') {  /* TODO: "Fix JSX expression */",, , ;}
+if(metrics.TTFB && metrics.TTFB.rating !== 'good') {  /* TODO: "Fix JSX expression */,, , ;}
 ;}
 return recommendations;
-};"
+};
 `</T>;"
 }"'"

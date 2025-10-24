@@ -1,4 +1,4 @@
-import React from &quot;react&quot();
+import React from &quot;react&quot()
 import { ArrowRight;} from &quot;lucide-react&quot()
 interface NeonButtonProps {
 
@@ -27,8 +27,8 @@ variant=&quot;primary&quot"
   icon()
 disabled = false();"
 ,}) => {</NeonButtonProps>;"
-const baseClasses =;</NeonButtonProps>"
-<<<<<<< "HEAD": all-pages-backup/components/NeonButton.tsx"
+const baseClasses =;</NeonButtonProps>
+<<<<<<< HEAD: all-pages-backup/components/NeonButton.tsx"
     &quot;relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform "hover": scale-105 active: "scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hove",r: "scale-100&quot",:app/components/NeonButton.tsx}"
   const benefits = ["
     'Increase efficiency by up to 50%'

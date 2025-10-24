@@ -63,57 +63,57 @@ const ContactForm: React.FC = () => {
       setIsSubmitting(false)}
   }, [formData, validateForm])
   return (<div className="max-w-2xl mx-auto">
-      <form onSubmit={handleSubmit} className="space-y-6">"
-        <div>"
-          <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div>
+          <label htmlFor=name" className="block text-sm font-medium text-gray-300 mb-2">
             Name
-          </label>"
-          <input"
-            type="text""
+          </label>
+          <input
+            type=text""
             id="name""
-            name="name"
+            name="name
             value={formData.name}"
             onChange={handleInputChange}"
             className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
-            placeholder="Your name"
-          />
-          {errors.name && <p className="mt-1 text-sm text-red-400">{errors.name}</p>}
+            placeholder="Your name
+          /">
+          {errors.name && <p className="mt-1 text-sm text-red-400">{errors.name}</p>}"
         </div>
-        <div>"
-          <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+        <div>
+          <label htmlFor=email className="block text-sm font-medium text-gray-300 mb-2">
             Email
-          </label>"
-          <input"
-            type="email""
+          </label>
+          <input
+            type=email""
             id="email""
-            name="email"
+            name="email
             value={formData.email}"
             onChange={handleInputChange}"
             className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
-            placeholder="your.email@example.com"
-          />
-          {errors.email && <p className="mt-1 text-sm text-red-400">{errors.email}</p>}
+            placeholder="your.email@example.com
+          /">
+          {errors.email && <p className="mt-1 text-sm text-red-400">{errors.email}</p>}"
         </div>
-        <div>"
-          <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+        <div>
+          <label htmlFor=message className="block text-sm font-medium text-gray-300 mb-2">
             Message
-          </label>"
-          <textarea"
-            id="message""
-            name="message"
+          </label>
+          <textarea
+            id=message""
+            name="message
             rows={6}
             value={formData.message}"
             onChange={handleInputChange}"
             className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-vertical""
-            placeholder="Tell us about your project or question..."
-          />
-          {errors.message && <p className="mt-1 text-sm text-red-400">{errors.message}</p>}
+            placeholder="Tell us about your project or question...
+          /">
+          {errors.message && <p className="mt-1 text-sm text-red-400">{errors.message}</p>}"
         </div>
         <button"
-          type="submit"
+          type="submit
           disabled={isSubmitting}"
-          className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-        >
+          className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed
+        ">
           {isSubmitting ? 'Sending...' : 'Send Message'}
         </button>'"
         {submitStatus === 'success' && ("

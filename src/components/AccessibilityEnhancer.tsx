@@ -1,18 +1,18 @@
 'use client"
 :all-pages-backup/components/AccessibilityEnhancer.tsx"
-'use client';
-import, React, { useEffect } from 'react"
+'use client'
+import, React, { useEffect } from 'react"'
 interface AccessibilityEnhancerProps {
-"
-"
+
+
 ;}"
 children: "React.ReactNode",;}
 ;}
-;
+
 export default function AccessibilityEnhancer() {
-"
+
 return useEffect(() => {"
-    // Accessibility enhancements"'"
+    // Accessibility enhancements""
 if (typeof window !== 'undefined") {"
       // Add skip to content link"'"
 const skipLink = document.createElement('a")"'
@@ -20,16 +20,16 @@ const skipLink = document.createElement('a")"'
 skipLink.textContent = 'Skip to main content'"
 skipLink.className = 'sr-only focus: "not-sr-only focus:absolute focus:top-4 focu",s: "left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'"
 document.body.insertBefore(skipLink",document.body.firstChild)"
-"
+
       // Add main content ID"'"
 const main = document.querySelector('main")"
       if (main && !main.id) {"'"
 main.id = 'main-content"
       
 ,;}"
-"
+
 return () => {"'"
-const existingSkipLink = document.querySelector('a[href="#main-content"]")
+const existingSkipLink = document.querySelector('a[href="#main-content]")
         if(existingSkipLink) {  
 existingSkipLink.remove()
         ,, , ;}
@@ -37,8 +37,8 @@ existingSkipLink.remove()
     ;}"
   ;}, []);"
   return <div>{children}</div>;};"'"
-import { useEffect } from 'react";"
-import Navigation from './Navigation'"
+import { useEffect } from 'react";"'
+import Navigation from ./Navigation'"
 const AccessibilityEnhancer: "React.FC<{ childre",n: "React.ReactNode ",}> = ({ children }) => {"
 useEffect(() => {"
     // Add keyboard navigation support: "all-pages-backup/components/AccessibilityEnhancer.tsx"
@@ -54,7 +54,7 @@ r: "'smooth' ",) => {
 $3
 });}
       ;}"
-"
+
       // Skip to navigation with Alt + N"'"
 if (e.altKey && e.key = == 'n") {"
 e.preventDefault()"'"
@@ -129,10 +129,10 @@ if (enableFocusManagement) {;"'
 const focusableElements = 'button, [href,], input, select, textarea, [tabindex,]:not([tabindex=&quot;-1&quot;])'"
       .sr-only{position: "absolute",width: "1 px",height: "1 px",padding: "0",margin: "-1 px",overflow: "hidden",clip: "rect(0",0, 0, 0)}"
         white-space: "nowrap",border: "0",}"
-"
+
       .high-contrast {"
 filter: "contrast(150%)",}"
-"
+
       .reduce-motion * {"
 animation-duration: "0.01 ms !important"
 animation-iteration-count: 1 !important"

@@ -1,8 +1,8 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react";"
-import { HelmetProvider } from 'react-helmet-async";"
-import { MemoryRouter } from 'react-router-dom";"
-import { Helmet } from 'react-helmet-async";"
-import { Component, ErrorInfo, ReactNode, useState, useEffect } from 'react";
+import { render, screen, fireEvent, waitFor } from '@testing-library/react";"'
+import { HelmetProvider } from react-helmet-async";"
+import { MemoryRouter } from 'react-router-dom";"'
+import { Helmet } from 'react-helmet-async";"'
+import { Component, ErrorInfo, ReactNode, useState, useEffect } from react";
 
 // Test component that throws an error"
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {"
@@ -85,65 +85,65 @@ const PerformanceMonitor = () => {
     </div>
   );"
 };"
-"
+
 describe("Advanced Components", () => {"
   test("should render error boundary without errors", () => {
     render(
       <ErrorBoundary>
-        <div>Test content</div>"
-      </ErrorBoundary>"
-    );"
+        <div>Test content</div>
+      </ErrorBoundary>
+    );
     expect(screen.getByText("Test content")).toBeInTheDocument();"
   });"
-"
+
   test("should catch and display errors", () => {
     const onError = jest.fn();
     render(
       <ErrorBoundary onError={onError}>
-        <ThrowError shouldThrow={true} />"
-      </ErrorBoundary>"
-    );"
+        <ThrowError shouldThrow={true} />
+      </ErrorBoundary>
+    );
     expect(screen.getByText("Something went wrong.")).toBeInTheDocument();"
   });"
-"
+
   test("should handle retry functionality", () => {
     render(
       <ErrorBoundary>
         <ThrowError shouldThrow={true} />
-      </ErrorBoundary>"
-    );"
-    "
-    const retryButton = screen.getByText("Retry");"
+      </ErrorBoundary>
+    );
+
+    const retryButton = screen.getByText(Retry");"
     fireEvent.click(retryButton);"
-    "
+
     expect(screen.getByText("Something went wrong.")).toBeInTheDocument();"
   });"
-"
+
   test("should render performance monitor", () => {
     render(<PerformanceMonitor />);
     expect(screen.getByText(/Render Time:/)).toBeInTheDocument();
     expect(screen.getByText(/Memory Usage:/)).toBeInTheDocument();
     expect(screen.getByText(/Error Count:/)).toBeInTheDocument();"
   });"
-"
+
   test("should work with router", () => {
     render(
       <MemoryRouter>
-        <div>Router test</div>"
-      </MemoryRouter>"
-    );"
+        <div>Router test</div>
+      </MemoryRouter>
+    );
     expect(screen.getByText("Router test")).toBeInTheDocument();"
   });"
-"
+
   test("should work with helmet provider", () => {
     render(
       <HelmetProvider>
         <Helmet>
           <title>Test Title</title>
         </Helmet>
-        <div>Helmet test</div>"
-      </HelmetProvider>"
-    );"
+        <div>Helmet test</div>
+      </HelmetProvider>
+    );
     expect(screen.getByText("Helmet test")).toBeInTheDocument();"
   });"
 });"'"

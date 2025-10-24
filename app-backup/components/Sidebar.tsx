@@ -1,10 +1,10 @@
-import { Phone, Mail, Brain } from 'lucide-react";"
-import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react";"
+import { Phone, Mail, Brain } from 'lucide-react";"'
+import React from react'
+import { Helmet } from 'react-helmet-async";"'
+import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from lucide-react";"
+import Navigation from '../components/Navigation";"'
+import Footer from '../components/Footer";"'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from lucide-react";"
 'use client';'"
     "title": 'AI-Powered Intelligence'"
       "description": 'Advanced AI algorithms that provide intelligent insights and recommendations.'"
@@ -23,7 +23,7 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
-} from 'lucide-react'"
+} from 'lucide-react"'
 const [expandedSectionssetExpandedSections,]=useState<Set<strin g>>(new Set(['ai-services', 'micro-saas', 'it-services")"'"
 windo w.addEventListener('resize")"'
       ) => windo w.removeEventListener('resize'"

@@ -7,11 +7,11 @@ function fixFooterImports(filePath) { "
 try { ;"'"
 let content = fs.readFileSync(filePath, 'utf8");
     let modified = false;"
-"
+
     // Fix incorrect Footer import paths;"'"
-if (content.includes("import Footer from '../components/Footer'")) {;"'"
-content = content.replace("import Footer from '../components/Footer'",;"'"
-        "import Footer from '../../components/Footer'";)
+if (content.includes("import Footer from '../components/Footer")) {;"'"
+content = content.replace("import Footer from '../components/Footer",;"'"
+        "import Footer from '../../components/Footer";)'
       );
       modified = true;
 ,, , }
@@ -48,7 +48,7 @@ fixedCount++}
 ;
 return fixedCount;
 }"
-"
+
 // Start fixing from the app directory;"'"
 const appDir = path.join(__dirname, 'app");"'"
 console.log('Starting Footer import fixes...");"

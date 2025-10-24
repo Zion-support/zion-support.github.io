@@ -1,13 +1,13 @@
-import, React, { useEffect } from 'react"
+import, React, { useEffect } from 'react"'
 interface PerformanceMonitorProps {
 performanceData?: any
 ;}
 ;}"
 ;}"
-"
+
 const PerformanceMonitor: "React.FC<PerformanceMonitorProps> = ({ performanceData ",;}) => {"
 useEffect(() => {"
-    // Monitor Core Web Vitals"'"
+    // Monitor Core Web Vitals""
 if('web-vitals" in, window) {;"'"
 import('web-vitals").then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {"
 const logMetric = ("'"
@@ -20,9 +20,9 @@ $3
         getCLS(logMetric)
         getFID(logMetric);
         getFCP(logMetric);"
-        getLCP(logMetric);</PerformanceMonitorProps>"
-getTTFB(logMetric);</PerformanceMonitorProps>"
-const PerformanceMonitor: "React.FC<PerformanceMonitorProps> = ({ performanceData ",;}) => {"
+        getLCP(logMetric);</PerformanceMonitorProps>
+getTTFB(logMetric);</PerformanceMonitorProps>
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData ",;}) => {"
   useEffect(() => {"
     // Monitor Core Web Vitals"'"
 if('web-vitals" in, window) {;"'"
@@ -32,7 +32,7 @@ import('web-vitals").then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
         getFCP(console.log)
         getLCP(console.log)
         getTTFB(console.log)})}"
-"
+
     // Monitor performance metrics"'"
 if('performance" in, window) {"'"
 window.addEventListener('load", () => {"
@@ -47,7 +47,7 @@ firstPaint: "paint.find(entry => entry.name === 'first-paint')?.startTime",first
           console.log('Performance Metrics: "'",{)"
 domContentLoaded: "navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart",loadComplete: "navigation.loadEventEnd - navigation.loadEventStart",)"'"
 firstPaint: "paint.find(entry => entry.name === 'first-paint')?.startTime",firstContentfulPaint: "paint.find(entry => entry.name === 'first-contentful-paint')?.startTime",})}, 0)})}"
-"
+
     // Monitor memory usage"'"
 if('memory" in, performance) {"
 const memory = (performance, as, any).memory"'"
@@ -59,7 +59,6 @@ limi",t: "Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB'"
         ",;});}</PerformanceMonitorProps>
 return(</PerformanceMonitorProps>
     <>
-
   </>
       <Helmet />;
         <title>PerformanceMonitor</>;
@@ -75,27 +74,27 @@ return(</PerformanceMonitorProps>
     <divclassName=&quot;relative max-w-7 xl mx-auto text-center&quot; / />,"
     <h1className=&quot;text-5 xl md: "text-7 xl font-bold text-white mb-6 leading-tight&quot; / />
 PerformanceMonitor</h1>
-            </h1>"
-            <pclassName=&quot;text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed&quot; / />"
-Advanced PerformanceMonitor solution for modern businesses.</p>"
-            </p>",<divclassName=&quot;flex flex-col sm: "flex-row gap-4 justify-center&quot; / />
+            </h1>
+            <pclassName=&quot;text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed&quot; / />
+Advanced PerformanceMonitor solution for modern businesses.</p>
+            </p>,<divclassName=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot; / />
               <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot; />
-Get Started</button>"
-                <ArrowRightclassName=&quot;ml-2 h-5 w-5&quot; / />"
-              </button>"
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove",r: "text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
+Get Started</button>
+                <ArrowRightclassName=&quot;ml-2 h-5 w-5&quot; / />
+              </button>
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,r: "text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
 Learn More</button>
-              </button>"
-            </div>"
-          </div>"
-        </section>",{/* Features Section */}
+              </button>
+            </div>
+          </div>
+        </section>,{/* Features Section */}
         <section className=&quot;py-20 px-4&quot; />,;
     <div className=&quot;max-w-7 xl mx-auto&quot; / />,;
     <div className=&quot;text-center mb-16&quot; / />,;
     <h1 className=&quot;text-4 xl font-bold text-white mb-4&quot;>Key Features</h2>
               <pclassName=&quot;text-xl text-gray-300 max-w-3 xl mx-auto&quot; / />
-Powerful AI-driven features designed to transform your business operations</p>"
-              </p>"
+Powerful AI-driven features designed to transform your business operations</p>
+              </p>
             </div>,"
     <divclassName=&quot;grid md: "grid-cols-2 l",g: "grid-cols-4 gap-8&quot; / />)"
               {features.map((feature",index) => (
@@ -122,11 +121,11 @@ Powerful AI-driven features designed to transform your business operations</p>"
     <div className=&quot;text-center mb-16&quot; / />,;
     <h1 className=&quot;text-4 xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
               <pclassName=&quot;text-xl text-gray-300 max-w-3 xl mx-auto&quot; / />
-Experience the benefits of cutting-edge AI technology</p>"
-              </p>"
-            </div>,"
-    <divclassName=&quot;grid md: "grid-cols-2 l",g: "grid-cols-3 gap-8&quot; / />"
-              {benefits.map((benefit",index) => (
+Experience the benefits of cutting-edge AI technology</p>
+              </p>
+            </div>,
+    <divclassName=&quot;grid md: "grid-cols-2 l",g: "grid-cols-3 gap-8&quot; / />
+              {benefits.map((benefit,index) => (
                 <divkey = {index,} className = &quot;flex items-start space-x-4&quot; / />
                   <CheckCircleclassName=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; / />
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit,}</p>
@@ -139,22 +138,22 @@ Experience the benefits of cutting-edge AI technology</p>"
         <section className=&quot;py-20 px-4&quot; />,;
     <div className=&quot;max-w-4 xl mx-auto text-center&quot; / />,;
     <h1 className=&quot;text-4 xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
-            <pclassName=&quot;text-xl text-gray-300 mb-8&quot; / />"
-Join thousands of businesses already using our AI solutions</p>"
-            </p>,"
-    <divclassName=&quot;flex flex-col sm: "flex-row gap-4 justify-center&quot; / />
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />"
-Start Free Trial</button>"
-              </button>"
+            <pclassName=&quot;text-xl text-gray-300 mb-8&quot; / />
+Join thousands of businesses already using our AI solutions</p>
+            </p>,
+    <divclassName=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot; / />
+              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
+Start Free Trial</button>
+              </button>
               <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove",r: "text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
 Contact Sales</button>
               </button>
             </div>
           </div>
         </section>
-      </div>"
-      <Footer/ />"
-    </>"
+      </div>
+      <Footer/ />
+    </>
   )",}"
 export default PerformanceMonitorPage;"
 interface PerformanceMonitorProp s{onMetricsUpdate?: (metrics: "PerformanceMetrics) =>void",enableRealTimeMonitoring?: boolean;}
@@ -168,9 +167,9 @@ logToConsole = true"
 ,}: PerformanceMonitorProps) {"
 const [metrics, setMetrics,] = useState<PerformanceMetrics>({"
     loadTime: "null",firstContentfulPaint: "null",largestContentfulPaint: "null",firstInputDelay: "null",cumulativeLayoutShift: "null",timeToInteractive: "null",totalBlockingTime: "null",}
-    </div>"
-  )"
-  useEffect(() => {"'"
+    </div>
+  )
+  useEffect(() => {'"
 if (!enableRealTimeMonitoring || typeof window = == 'undefined") return const measurePerformance = ("
       const newMetrics: "PerformanceMetrics={"
         loadTim",e: "null",firstContentfulPaint: "null",largestContentfulPaint: "null",firstInputDelay: "null",cumulativeLayoutShift: "null",timeToInteractive: "null",totalBlockingTime: "null",) => {
@@ -180,7 +179,7 @@ $3
 if(performance.timing) {consttiming = performance.timing
 newMetrics.loadTime= timing.loadEventEnd - timing.navigationStart
      ,}"
-"
+
       // Measure Core Web Vitals using Performance Observer"'"
 if('PerformanceObserver" in, windo, w) {  // First Contentful Paint (FCP)"
 constfcpObserver= new PerformanceObserver((list) => {"
@@ -234,18 +233,18 @@ setMetrics(prevMetrics => ({ ...prevMetrics, ...newMetrics }));
       // Call callback if provided;
 if(onMetricsUpdat, e) {onMetricsUpdate(newMetrics);
      }
-"
+
       // Log to console if enabled"
 if(logToConsole) {  "'"
         // // console.log('Performance Metrics Updated: "'",newMetrics)
       , , }
     }"
-"
+
     // Measure performance after page load"'"
 if(do, cument.readyState = == 'complete") {measurePerformance()"'"
    ,} else { windo w.addEventListener('load", measurePerformance), }
    }"
-"
+
     // Cleanup"'"
 return () => {windo w.removeEventListener('load", measurePerformance)
    }"
@@ -261,8 +260,8 @@ navigator.serviceWorker.register('/sw.js")"
         })
     ;};"
   }, []);"
-  // Performance monitoring dashboard (only, in, development);</PerformanceMetrics>"'"
-if(process.env.NODE_ENV=== 'development") {return(;</PerformanceMetrics>)"'"
+  // Performance monitoring dashboard (only, in, development);</PerformanceMetrics>'
+if(process.env.NODE_ENV=== 'development) {return(;</PerformanceMetrics>)"'"
     <divclassName=&quot;fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lgtext-xsfont-monomax-w-xs&quot; /><h3className=&quot;font-boldmb-2&quot; />PerformanceMetrics</h><divclassName=&quot;space-y-1&quot; /><di v>LoadTime: "{metrics.loadTime ?`${metrics.loadTime.toFixed(2)",}ms`:'N/A'}</di><di v>FCP: "{metrics.firstContentfulPaint?`${metrics.firstContentfulPaint.toFixed(2)",}ms`:'N/A'}</di><di v>LCP: "{metrics.largestContentfulPaint?`${metrics.largestContentfulPaint.toFixed(2)",}ms`:'N/A'}</di><di v>FID: "{metrics.firstInputDelay?`${metrics.firstInputDelay.toFixed(2)",}ms`:'N/A'}</di><di v>CLS: "{metrics.cumulativeLayoutShift ?metrics.cumulativeLayoutShift.toFixed(4):'N/A'",}</di><di v>TTI: "{metrics.timeToInteractive?`${metrics.timeToInteractive.toFixed(2)",}ms`:'N/A'}</di><di v>TBT: "{metrics.totalBlockingTime?`${metrics.totalBlockingTime.toFixed(2)",}ms`:'N/A"}</di></di></di>
         </div>
         </div>
@@ -271,7 +270,7 @@ if(process.env.NODE_ENV=== 'development") {return(;</PerformanceMetrics>)"'"
 
 return nul, l"
 ;}"
-"
+
 // Global performance monitoring utilitiesexportconstperformanceUtils = {// Measure custom performance marksmark: "(nam",e: "string) => {;"'"
 if(type",of, windo, w !== 'undefined' && 'performance" in, windo, w) {  ;
 performance.mark(name);
@@ -315,8 +314,8 @@ load_tim",e: "metrics.loadTime",first_contentful_paint: "metrics.firstContentful
 }
 
 declare global{interface Window {
-"
-"
+
+
 }"
 gtag: "(...arg",s: "any[]) => void",}
   ;}"
@@ -330,11 +329,11 @@ limi",t: "Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB'"
       ",;});}
   ;}, [])
 return null;
-};
+}
 export default PerformanceMonitor;
 {}
 export default PerformanceMonitor;
 </divclassName>
-</h3 className>"
-</divclassName>"
-}}"'"
+</h3 className>
+</divclassName>
+}}'"

@@ -1,6 +1,6 @@
 import, React, { useState } from "react";"
-import { Play, CheckCircle, ArrowRight, Brain, Zap, Shield, Send, BarChart3, Target, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react";"
-'use client';'
+import { Play, CheckCircle, ArrowRight, Brain, Zap, Shield, Send, BarChart3, Target, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react";"'
+use client';'
 const [activeDemo, setActiveDemo,] = useState('ai-chatbot'"
       "id": 'ai-chatbot'"
     "title": 'AI Chatbot Demo'"

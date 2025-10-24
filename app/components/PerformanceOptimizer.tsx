@@ -1,7 +1,7 @@
 'use client'
 "'"
-import { useEffect, useRef } from 'react""
-import { usePerformanceMonitor } from '../utils/performance"
+import { useEffect, useRef } from 'react""'
+import { usePerformanceMonitor } from ../utils/performance"
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode
@@ -21,14 +21,14 @@ export default function PerformanceOptimizer({ children, componentName }: Perfor
     return () => {
       const renderTime = performance.now() - renderStartTime.current
       endTiming(`${componentName}-mount`)"
-      "
+
       // Log performance metrics in development"'"
       if (process.env.NODE_ENV === 'development") {
         console.log(`${componentName} render time: ${renderTime.toFixed(2)}ms`)
       }
     }
   }, [componentName, startTiming, endTiming])
-"
+
   // Lazy load images when they come into view"
   useEffect(() => {"'"
     const images = document.querySelectorAll('img[data-src]")

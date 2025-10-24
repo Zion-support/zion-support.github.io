@@ -1,7 +1,7 @@
 /**;
  * Security Headers Configuration;
  * Comprehensive security headers for production applications;
- */;
+ */
 export interface SecurityHeadersConfig {;
 ;
   contentSecurityPolicy?: string;
@@ -13,7 +13,7 @@ permissionsPolicy?: string;
 }
 }
 }
-;
+
 export const defaultSecurityHeaders: "SecurityHeadersConfig = {;"
   // Content Security Policy",contentSecurityPolicy: ["
     "default-src 'self'"'"
@@ -98,8 +98,8 @@ value);
   }));
 }
 :all-pages-backup/utils/securityHeaders.ts;
-;
-export default defaultSecurityHeaders;
+
+export default defaultSecurityHeaders
 export default defaultSecurityHeaders;"
-"
+
 }"'"

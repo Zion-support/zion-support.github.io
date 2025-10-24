@@ -1,7 +1,7 @@
-import React from 'react';
-import Link from 'next/link";"
-import { ArrowRight, Code, Zap, CheckCircle, Brain, Settings, Target, Users, Calendar, BarChart, Send, BarChart3, Shield, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react";"
-'use client';'"
+import React from 'react'
+import Link from 'next/link";"'
+import { ArrowRight, Code, Zap, CheckCircle, Brain, Settings, Target, Users, Calendar, BarChart, Send, BarChart3, Shield, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react";"'
+use client';'"
     "title": 'RESTful API Design'"
       "description": 'Well-designed RESTful APIs that, are, intuitive, scalable, and easy to integrate.'"
     "title": 'High Performance'"

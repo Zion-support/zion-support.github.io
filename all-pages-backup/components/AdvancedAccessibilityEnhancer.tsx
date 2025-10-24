@@ -1,6 +1,6 @@
-'use client';
-import { Brain, BarChart, Target, TrendingUp } from 'lucide-react";"
-import Navigation from './Navigation";"
+'use client'
+import { Brain, BarChart, Target, TrendingUp } from 'lucide-react";"'
+import Navigation from ./Navigation";"
 import, React, { useEffect, useState, useCallback } from 'react'"
 if(typeof window = == 'undefined")"'"
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-"motion": reduce)'"

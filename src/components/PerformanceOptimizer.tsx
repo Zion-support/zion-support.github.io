@@ -1,31 +1,31 @@
-'use client';
-import Navigation from './Navigation";"
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight } from 'lucide-react";"
+'use client'
+import Navigation from './Navigation";"'
+import { Helmet } from react-helmet-async";"
+import { ArrowRight } from 'lucide-react";"'
 import, React, { useEffect, useState, useCallback } from "react";"
-import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react";"
-import { CheckCircle } from 'lucide-react";"
-import { AlertTriangle } from 'lucide-react";
+import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react";"'
+import { CheckCircle } from lucide-react";"
+import { AlertTriangle } from 'lucide-react";'
 interface PerformanceOptimizerProps {
 :all-pages-backup/components/PerformanceOptimizer.tsx
 className?: string
 }
 ;}"
 ;}"
-"
+
 const PerformanceOptimizer: "React.FC<PerformanceOptimizerProps> = ({"
   className?: string"
-",;}</PerformanceOptimizerProps>"
-</PerformanceOptimizerProps>"
-const PerformanceOptimizer: "React.FC<PerformanceOptimizerProps> = ({
+",;}</PerformanceOptimizerProps>
+</PerformanceOptimizerProps>
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 enableImageOptimization = true
 enableLazyLoading = true"
 enablePreloading = true"
 enableCodeSplitting = true;"
 ",}) => {</PerformanceOptimizerProps>;"
-const [isOptimizing, setIsOptimizing,] = useState(false);</PerformanceOptimizerProps>"
-const [optimizationStatus, setOptimizationStatus,] = useState<{"
-    images: "boolean",lazyLoading: "boolean",preloading: "boolean",codeSplitting: "boolean",}>({"
+const [isOptimizing, setIsOptimizing,] = useState(false);</PerformanceOptimizerProps>
+const [optimizationStatus, setOptimizationStatus,] = useState<{
+    images: boolean",lazyLoading: "boolean",preloading: "boolean",codeSplitting: "boolean",}>({"
 :all-pages-backup/components/PerformanceOptimizer.tsx"
 images: "false",lazyLoading: "false",preloading: "false",codeSplitting: "false",images: "false"
 lazyLoading: false",preloading: "false"
@@ -38,7 +38,7 @@ const images = document.querySelectorAll('img")"
 if(img.loading !== 'lazy") {"'"
 img.loading = 'lazy"
       ,}"
-"
+
       // Add WebP support detection"'"
 if (!img.src.includes('.webp') && img.src.includes('.jpg")) {"'"
 const webpSrc = img.src.replace('.jpg', '.webp")
@@ -110,7 +110,7 @@ const module = await import(`../components/${componentName}.tsx`);"
         // // console.warn(`Failed to load component: "${componentName"}`, error);
         return, null}
     }
-"
+
     // Store the function globally for use in other components"
     (window, as, any).loadComponent = loadComponent"
 setOptimizationStatus(prev => ({ ...prev, codeSplitting: "true ",;}))
@@ -133,20 +133,19 @@ runOptimizations()
   ;}, [runOptimizations,])
 const allOptimizationsComplete = Object.values(optimizationStatus).every(Boolean)
 return(<>
-
   </>
       <Helmet />
 :all-pages-backup/components/PerformanceOptimizer.tsx</Helmet>
         <Head />;"
         <title>PerformanceOptimizer</title>;"
-        <meta name=&quot;description&quot; content=&quot;Advanced PerformanceOptimizer solution for modern businesses.&quot; / />"
-<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;"
+        <meta name=&quot;description&quot; content=&quot;Advanced PerformanceOptimizer solution for modern businesses.&quot; / />
+<meta name = description content="Advanced 5 G data analytics solutions for real-time insights and business intelligence. / /">;"
       </Head>;"
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, PerformanceOptimizer, AI, solutions, intelligent automation&quot; / />"
-<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />
+        <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, PerformanceOptimizer, AI, solutions, intelligent automation&quot; / />
+<meta name = description content="Advanced 5 G data analytics solutions for real-time insights and business intelligence. / /">
       </>;"
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, PerformanceOptimizer, AI, solutions, intelligent automation&quot; / />"
-<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." /  />
+        <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, PerformanceOptimizer, AI, solutions, intelligent automation&quot; / />
+<meta name = description content="Advanced 5 G data analytics solutions for real-time insights and business intelligence. /  /">
       </Head>;
       </>;
       <Navigation/ />,;
@@ -158,27 +157,27 @@ return(<>
     <divclassName=&quot;relative max-w-7 xl mx-auto text-center&quot; / />,"
     <h1className=&quot;text-5 xl md: "text-7 xl font-bold text-white mb-6 leading-tight&quot; / />
 PerformanceOptimizer</h1>
-            </h1>"
-            <pclassName=&quot;text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed&quot; / />"
-Advanced PerformanceOptimizer solution for modern businesses.</p>"
-            </p>",<divclassName=&quot;flex flex-col sm: "flex-row gap-4 justify-center&quot; / />
+            </h1>
+            <pclassName=&quot;text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed&quot; / />
+Advanced PerformanceOptimizer solution for modern businesses.</p>
+            </p>,<divclassName=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot; / />
               <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot; />
-Get Started</button>"
-                <ArrowRightclassName=&quot;ml-2 h-5 w-5&quot; / />"
-              </button>"
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove",r: "text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
+Get Started</button>
+                <ArrowRightclassName=&quot;ml-2 h-5 w-5&quot; / />
+              </button>
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,r: "text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
 Learn More</button>
-              </button>"
-              </div>"
-            </div>"
-        </section>",{/* Features Section */}
+              </button>
+              </div>
+            </div>
+        </section>,{/* Features Section */}
         <section className=&quot;py-20 px-4&quot; />,;
     <div className=&quot;max-w-7 xl mx-auto&quot; / />,;
     <div className=&quot;text-center mb-16&quot; / />,;
     <h1 className=&quot;text-4 xl font-bold text-white mb-4&quot;>Key Features</h2>
               <pclassName=&quot;text-xl text-gray-300 max-w-3 xl mx-auto&quot; / />
-Powerful AI-driven features designed to transform your business operations</p>"
-              </p>"
+Powerful AI-driven features designed to transform your business operations</p>
+              </p>
               </div>,"
     <divclassName=&quot;grid md: "grid-cols-2 l",g: "grid-cols-4 gap-8&quot; / />)"
               {features.map((feature",index) => (
@@ -205,11 +204,11 @@ Powerful AI-driven features designed to transform your business operations</p>"
     <div className=&quot;text-center mb-16&quot; / />,;
     <h1 className=&quot;text-4 xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
               <pclassName=&quot;text-xl text-gray-300 max-w-3 xl mx-auto&quot; / />
-Experience the benefits of cutting-edge AI technology</p>"
-              </p>"
-              </div>,"
-    <divclassName=&quot;grid md: "grid-cols-2 l",g: "grid-cols-3 gap-8&quot; / />"
-              {benefits.map((benefit",index) => (
+Experience the benefits of cutting-edge AI technology</p>
+              </p>
+              </div>,
+    <divclassName=&quot;grid md: "grid-cols-2 l",g: "grid-cols-3 gap-8&quot; / />
+              {benefits.map((benefit,index) => (
                 <divkey = {index,} className = &quot;flex items-start space-x-4&quot; / />
                   <CheckCircleclassName=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; / />
                   <p className=&quot;text-gray-300 text-lg&quot;>{benefit,}</p>
@@ -222,21 +221,21 @@ Experience the benefits of cutting-edge AI technology</p>"
         <section className=&quot;py-20 px-4&quot; />,;
     <div className=&quot;max-w-4 xl mx-auto text-center&quot; / />,;
     <h1 className=&quot;text-4 xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
-            <pclassName=&quot;text-xl text-gray-300 mb-8&quot; / />"
-Join thousands of businesses already using our AI solutions</p>"
-            </p>,"
-    <divclassName=&quot;flex flex-col sm: "flex-row gap-4 justify-center&quot; / />
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />"
-Start Free Trial</button>"
-              </button>"
+            <pclassName=&quot;text-xl text-gray-300 mb-8&quot; / />
+Join thousands of businesses already using our AI solutions</p>
+            </p>,
+    <divclassName=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot; / />
+              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
+Start Free Trial</button>
+              </button>
               <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove",r: "text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
 Contact Sales</button>
               </button>
               </div>
-            </div>"
-        </section>"
-        </div>"
-    </div>",)
+            </div>
+        </section>
+        </div>
+    </div>,)
 }
 export default PerformanceOptimizer;
       </div>
@@ -246,6 +245,6 @@ export default PerformanceOptimizer;
 :all-pages-backup/components/PerformanceOptimizer.tsx;
 {}
 export default PerformanceOptimizerPage;
-}"
-export default PerformanceOptimizerPage;"
+}
+export default PerformanceOptimizerPage;
 }"'"

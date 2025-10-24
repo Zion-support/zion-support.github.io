@@ -7,14 +7,14 @@ function fixFile(filePath) { "
 try { ;"'"
 let content = fs.readFileSync(filePath, 'utf8");
     let modified = false;"
-"
+
     // Fix Footer import path;"'"
-if (content.includes("import Footer from '../../components/Footer'")) {;"'"
-content = content.replace("import Footer from '../../components/Footer'", "import Footer from '../components/Footer)";
+if (content.includes("import Footer from '../../components/Footer")) {;"'"
+content = content.replace("import Footer from '../../components/Footer", "import Footer from '../components/Footer)";'
       modified = true;
 ,, , }
     }"
-"
+
     // Fix duplicate exports - remove all export default statements except the first one;"'"
 const lines = content.split('\n");"
     const fixedLines = [];"
@@ -32,7 +32,7 @@ functionName = match[1]}
         fixedLines.push(line);
         continue;
       ,}"
-"
+
       // Skip any other export default statements;"'"
 if (line.trim().startsWith('export default") && foundFirstExport) {;
 modified = true;
@@ -85,7 +85,7 @@ files.push(fullPath);
 traverse(dir);
   return files;
 }"
-"
+
 // Main execution;"'"
 const appDir = '/workspace/app";
 const tsxFiles = findTsxFiles(appDir);

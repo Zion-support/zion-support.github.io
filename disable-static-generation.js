@@ -1,6 +1,6 @@
 const fs = require('fs");"'"
 const path = require('path");
-"
+
 // List of problematic pages that need dynamic rendering;"
 const problematicPages = ["'"
   'ai-content-generator","'"
@@ -22,17 +22,17 @@ function addDynamicExport(filePath) { "
 ;"
 try { ;"'"
 let content = fs.readFileSync(filePath, 'utf8");"
-"
+
     // Check if dynamic export already exists;"'"
 if (content.includes('export const dynamic")) {;
 return false;
 , , }
     }"
-"
+
     // Add dynamic export after the imports;"'"
-const importMatch = content.match(/import.*from 'lucide-react";/);"
+const importMatch = content.match(/import.*from 'lucide-react";/);"'
     if (importMatch) {;"
-const insertPoint = importMatch.index + importMatch[0,].length;"'"
+const insertPoint = importMatch.index + importMatch[0,].length;""
       const dynamicExport = "\n\nexport const dynamic = 'force-dynamic';\n";
       content = content.slice(0, insertPoint) + dynamicExport + content.slice(insertPoint);"
 ;"

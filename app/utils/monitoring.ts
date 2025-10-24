@@ -1,5 +1,5 @@
-'use client';
-import React from 'react";
+'use client'
+import React from 'react";'
 /**
  * Comprehensive Monitoring Utility
  * Real-time, application, monitoring, performance, tracking, and error reporting"
@@ -40,7 +40,7 @@ class MonitoringService{;}"
 private metrics: "PerformanceMetrics = {",;};"
   private errors: "ErrorReport[] = [];"
 private observe",r: "PerformanceObserver | null = null;"
-constructor() {  ;"'"
+constructor() {  ;""
 if (typeof window !== 'undefined') { ",this.initializeMonitoring();,
     , , , }
   }
@@ -70,7 +70,7 @@ const fidObserver = new PerformanceObserver((list) => {;"
 const entries = list.getEntries();"
           entries.forEach((entry: "PerformanceEntry) => {",this.metrics.fid = (entry, as, any).processingStart - entry.startTime,;"'"
 this.reportMetric('fid", this.metrics.fid);
-"
+
           })"
         });"'"
 fidObserver.observe({ entryTypes: "['first-input'] ",});
@@ -95,7 +95,7 @@ const entries = list.getEntries();"
 entries.forEach(entry => {;)"
 this.metrics.fcp = entry.startTime);"'"
 this.reportMetric('fcp", entry.startTime)
-          "
+
 })"
         });"'"
 fcpObserver.observe({ entryTypes: "['paint'] ",});
@@ -136,7 +136,7 @@ message: "event.message",stack: "event.error?.stack;)"
 timestam",);"
 p: "Date.now()",userAgent: "navigator.userAgent;",}"
 ur,l: "window.location.href",})
-"
+
     })"
     // Unhandled promise rejection handler;"'"
 window.addEventListener('unhandledrejection", (event) => {;"
@@ -144,7 +144,7 @@ this.logError({;)"
 message: "`Unhandled Promise Rejectio",n: "${event.reason",}`);"
 timestamp: "Date.now()",userAgent: "navigator.userAgent;"
 ur",l: "window.location.href",})
-"
+
     })"
   }"
   private reportMetric(name: "string",value: "number): void{",// Sample rate;
@@ -163,7 +163,7 @@ value: "Math.round(name = == 'cls' ? value * 1000 : value)",event_category: "'We
   };"
 public logError(error: "ErrorReport): void{;
 this.errors.push(error);"
-"
+
     // Keep only last 50 errors;"
 if(this.errors.length > 50) {  ",this.errors = this.errors.slice(-50);,, , }
     }

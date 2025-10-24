@@ -12,7 +12,7 @@ error: 'Internal server error",message: "error.message "
     };
   };
 };
-;
+
 export default withErrorLogging(async (req, res) => {"
-"
+
 ;"'"

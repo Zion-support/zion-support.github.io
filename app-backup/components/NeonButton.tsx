@@ -1,4 +1,4 @@
-import React from &quot;react&quot();
+import React from &quot;react&quot()
 import { ArrowRight;} from &quot;lucide-react&quot()
 interface NeonButtonProps {
 

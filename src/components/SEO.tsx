@@ -1,10 +1,10 @@
-import React from 'react"
+import React from 'react"'
 interface SEOProps {
 className?: string
 ;}
 ;}"
 ;}"
-"'"
+""
 const SEO: "React.FC<SEOProps> = ({ className = '' ",;}) => {
 return(</SEOProps>,
     <div className={className,;} />

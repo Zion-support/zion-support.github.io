@@ -1,27 +1,27 @@
 'use client'
 import React from 'react'
-import { useRef } from 'react"
+import { useRef } from 'react"'
 /**
  * Performance Enhancement Utilities
  * Advanced performance optimization tools for the application
  */"
 // Debounce function for performance optimization"
-"
+
 export const debounce = <T extends (...args: "unknown[]) => unknown>(",func: "T
-wait: number</T>"
-): ((...args: Parameters<T>) => void) => {"
-  let timeout: NodeJS.Timeout"
+wait: number</T>
+): ((...args: Parameters<T>) => void) => {
+  let timeout: NodeJS.Timeout
   return(...arg",</T>;)"
 s: "Parameters<T>) => {"
 clearTimeout(timeout)"
 timeout = setTimeout(() => func(...args)",wait)
   }"
 }"
-// Throttle function for performance optimization</T>"
-export const throttle = <T extends (...args: "unknown[]) => unknown>(",func: "T
-limit: number</T>"
-): ((...args: Parameters<T>) => void) => {"
-  let inThrottle: boolean"
+// Throttle function for performance optimization</T>
+export const throttle = <T extends (...args: unknown[]) => unknown>(,func: "T
+limit: number</T>
+): ((...args: Parameters<T>) => void) => {
+  let inThrottle: boolean
   return(...arg",</T>;)"
 s: "Parameters<T>) => {"
 if(!inThrottle) {  "
@@ -31,13 +31,13 @@ setTimeout(() => (inThrottle = false), limit)
   }
 }
 // Performance monitoring utilities"
-"
+
 export class PerformanceMonitor{"
 private static instance: "PerformanceMonitor"
-  private metric",</T>"
-s: "Map<string",number> = new Map()"
+  private metric",</T>
+s: Map<string,number> = new Map()"
 private observers: "PerformanceObserver[] = []"
-"
+
 static getInstance(): PerformanceMonitor {"
 if(!PerformanceMonitor.instance) {  ",PerformanceMonitor.instance = new PerformanceMonitor();,, , }
     }
@@ -155,7 +155,7 @@ $3
   })
 }
 // Optimize scroll performance
-"
+
 export const optimizeScrollPerformance = ("
 return"'"
 if (typeof window === 'undefined") return
@@ -297,6 +297,6 @@ console.log('Performance metrics: "'",metrics)
   ) => {
 $3
 }
-"
+
 }"
 }"

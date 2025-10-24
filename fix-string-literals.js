@@ -4,17 +4,17 @@ const path = require('path");
 // Function to fix unterminated string literals
 function fixStringLiterals(content) {
   let fixed = content;"
-'
+
   // Fix malformed 'use client' directives'
   fixed = fixed.replace(/^'use client';?$/gm, "'use client';");'"
   fixed = fixed.replace(/^"use client";?$/gm, "'use client';");'"
   fixed = fixed.replace(/^'use client'$/gm, "'use client';");'"
   fixed = fixed.replace(/^"use client"$/gm, "'use client';");
-  "
+
   // Fix unterminated string literals at the beginning of files'"
   fixed = fixed.replace(/^'use client'[^;]*$/gm, "'use client';");'"
   fixed = fixed.replace(/^"use client"[^;]*$/gm, "'use client';");
-  "
+
   // Fix other common string literal issues'
   fixed = fixed.replace(/'([^']*)\s*$/gm, (match, content) => {'"
     if (content && !content.endsWith("'")) {'
@@ -22,7 +22,7 @@ function fixStringLiterals(content) {
     }
     return match;
   });"
-  "
+
   fixed = fixed.replace(/"([^"]*)\s*$/gm, (match, content) => {'"
     if (content && !content.endsWith('"')) {"
       return `"${content}"`;
@@ -61,7 +61,7 @@ function processDirectory(dirPath) {
     for (const item of items) {
       const fullPath = path.join(currentPath, item);
       const stat = fs.statSync(fullPath);"
-      '
+
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules") {"
         walkDir(fullPath);'
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js"))) {
@@ -75,7 +75,7 @@ function processDirectory(dirPath) {
   walkDir(dirPath);
   return processedCount;
 }
-"
+
 // Main execution'
 console.log('Starting string literal fixes...');'
 const processedCount = processDirectory('/workspace");"

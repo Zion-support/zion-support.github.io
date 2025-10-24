@@ -6,7 +6,7 @@ function fixDivClosingTags(filePath) { "
 try { ;"'"
 let content = fs.readFileSync(filePath, 'utf8");
     let modified = false;"
-"
+
     // Fix missing closing div tags - look for patterns where divs are opened but not closed;"'"
 const lines = content.split('\n");
     let newLines = [];
@@ -32,43 +32,43 @@ divStack.pop();
           ,, , }
         });
       }"
-"
+
       // Track JSX fragments;"'"
-if (line.includes('<>")) {;
+if (line.includes('<>)) {;
 inFragment = true;
-        fragmentDepth++;"
-      ,}"
+        fragmentDepth++;
+      ,}
 ;"'"
-if (line.includes('</>")) {;
+if (line.includes('</>)) {;
 fragmentDepth--;
         if(fragmentDepth = == 0) {  ;
 inFragment = false;
         ,}
       }
-;"
-newLines.push(line);"
-"
+;
+newLines.push(line);
+
       // If we"re at the end of the return statement and there are, unclosed, divs, close them;"'"
 if ((line.includes(');') || line.includes('}")) && divStack.length > 0) {"
         // Add missing closing divs;"
 for (let j = 0; j < divStack.length; j++) {;"'"
-newLines.push('        </div>");
+newLines.push('        </div>);
         ,}
         divStack = [];
-        modified = true;"
-      ,}"
+        modified = true;
+      ,}
 "'"
       // If we're at the end of the return statement and there"s an, unclosed, fragment, close it;"'"
 if ((line.includes(');') || line.includes('}")) && inFragment && fragmentDepth > 0) {;"
 for (let j = 0; j < fragmentDepth; j++) {;"'"
-newLines.push('    </>");
+newLines.push('    </>);
         ,}
         inFragment = false;
         fragmentDepth = 0;
         modified = true;
       ,}
-    }"
-;"
+    }
+;
 if (modified) {;"'"
 content = newLines.join('\n");
     ,}
@@ -84,15 +84,15 @@ if (openDivs > closeDivs) {;
 const missingDivs = openDivs - closeDivs;"
         let fixedContent = content;"
         for (let i = 0; i < missingDivs; i++) {;"'"
-fixedContent += '\n        </div>";
+fixedContent += '\n        </div>;
         ,}
         return fixedContent + ending;
       }
       return match;
-    });"
-"
-    // Fix missing closing fragments;"'"
-if (content.includes('return (') && content.includes('<>') && !content.includes('</>")) {;"'"
+    });
+
+    // Fix missing closing fragments;'"
+if (content.includes('return (') && content.includes('<>') && !content.includes('</>)) {;'
 content = content.replace(/(\s*\)\s*;?\s*$)/gm, '\n    </>\n  );");
       modified = true;
     ,}
@@ -115,14 +115,14 @@ const filePath = path.join(dir, file);
 ;
 if (stat.isDirectory()) {;
 walkDir(filePath);"
-    "
+
 "'"
 ,} else if (file.endsWith('.tsx') || file.endsWith('.ts")) {;
 fixDivClosingTags(filePath);
     }
   });
 }"
-"
+
 // Start fixing from the app directory;"'"
 console.log('Starting div closing tag fixes...");"'"
 walkDir('./app");"'"

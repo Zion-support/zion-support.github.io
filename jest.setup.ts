@@ -1,6 +1,6 @@
-import { TextEncoder, TextDecoder } from 'util";"
-import '@testing-library/jest-dom";"
-"
+import { TextEncoder, TextDecoder } from 'util";"'
+import @testing-library/jest-dom";"
+
 // Mock window.matchMedia"'"
 Object.defineProperty(window, 'matchMedia", {
   writable: true,
@@ -15,7 +15,7 @@ Object.defineProperty(window, 'matchMedia", {
     dispatchEvent: jest.fn(),
   })),
 });"
-"
+
 // Mock URL.revokeObjectURL"'"
 if (typeof URL.revokeObjectURL === 'undefined") {"'"
   Object.defineProperty(URL, 'revokeObjectURL", {
@@ -23,7 +23,7 @@ if (typeof URL.revokeObjectURL === 'undefined") {"'"
     value: jest.fn(),
   });
 }"
-"
+
 // Mock window.scrollTo"'"
 if (typeof window.scrollTo === 'undefined") {"'"
   Object.defineProperty(window, 'scrollTo", {
@@ -51,7 +51,7 @@ global.ResizeObserver = class ResizeObserver {
 // Mock TextEncoder and TextDecoder
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder as any;"
-"
+
 // Mock Next.js router"'"
 jest.mock('next/router", () => ({"
   useRouter() {"
@@ -75,7 +75,7 @@ jest.mock('next/router", () => ({"
     };
   },
 }));"
-"
+
 // Mock Next.js navigation"'"
 jest.mock('next/navigation", () => ({
   useRouter() {
@@ -95,7 +95,7 @@ jest.mock('next/navigation", () => ({
     return '/";
   },
 }));"
-"
+
 // Mock framer-motion"'"
 jest.mock('framer-motion", () => ({"
   motion: {"'"
@@ -127,13 +127,13 @@ jest.mock('framer-motion", () => ({"
   useScroll: () => ({ scrollY: { get: jest.fn() } }),
   useViewportScroll: () => ({ scrollY: { get: jest.fn() } }),
 }));"
-"
+
 // Mock react-helmet-async"'"
 jest.mock('react-helmet-async", () => ({
   Helmet: ({ children }: { children: React.ReactNode }) => children,
   HelmetProvider: ({ children }: { children: React.ReactNode }) => children,
 }));"
-"
+
 // Mock web-vitals"'"
 jest.mock('web-vitals", () => ({
   getCLS: jest.fn(),

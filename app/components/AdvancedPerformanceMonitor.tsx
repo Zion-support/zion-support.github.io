@@ -1,11 +1,11 @@
-'use client';
-import React from 'react";
+'use client'
+import React from 'react";'
 
 interface AdvancedPerformanceMonitorProps {
 className?: string;
 }"
 }"
-"
+
 const AdvancedPerformanceMonitor: "React.FC<AdvancedPerformanceMonitorProps> = ({ className ",}) => {
   return(<div className = {className,;}>
       <h2>Advanced Performance Monitor</h2>
@@ -13,5 +13,5 @@ const AdvancedPerformanceMonitor: "React.FC<AdvancedPerformanceMonitorProps> = (
     </div>;)
   );
 };"
-"
+
 export default AdvancedPerformanceMonitor;"'"

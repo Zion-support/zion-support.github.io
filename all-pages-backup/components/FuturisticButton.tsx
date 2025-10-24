@@ -1,6 +1,6 @@
-'use client';
-import { useState } from 'react";"
-import { motion } from 'framer-motion";"
+'use client'
+import { useState } from 'react";"'
+import { motion } from framer-motion";"
   variant?: 'primary' | 'secondary' | 'accent' | 'ghost'
 size?: 'sm' | 'md' | 'lg'
 type?: 'button' | 'submit' | 'reset'

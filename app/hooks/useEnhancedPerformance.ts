@@ -1,5 +1,5 @@
-import { useEffect, useCallback, useRef, useState } from 'react";
-;
+import { useEffect, useCallback, useRef, useState } from 'react";'
+
 export interface UseEnhancedPerformanceOptions {;
 ;
 component?: string;
@@ -21,7 +21,7 @@ loadTime: "number;"
 
 }"
 ;"
-export const useEnhancedPerformance = (;"'"
+export const useEnhancedPerformance = (;""
   const { component = 'unknown", trackErrors = true, trackPerformance = true, trackAnalytics = false ) => {
 $3;
 ,} = options;"
@@ -131,7 +131,7 @@ link.crossOrigin = 'anonymous";
       ,}
       document.head.appendChild(link);
     });
-"
+
     // Optimize images;"
 ;"'"
 const images = document.querySelectorAll('img[data-src,]");
@@ -196,5 +196,5 @@ optimizePerformance,;"
 measurePerformance,;"
 trackError,;}"
 trackAnalytics: "trackAnalyticsEvent",renderCount: "renderCountRef.current",mountTime: "mountTimeRef.current",};"
-};</string>"
-}"'"
+};</string>
+}'

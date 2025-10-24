@@ -12,8 +12,8 @@ let content = fs.readFileSync(filePath, 'utf8");
 ;
     // Fix common JSX closing tag issues;
 const fixes = ["
-      // Fix standalone </> tags that should be </div>"
-,}"'"
+      // Fix standalone </> tags that should be </div>
+,}'
       { pattern: "/(\s*)<\/>(\s*)/g",replacement: "'$1</div>$2' ",},"
       // Fix missing opening tags"'"
       { pattern: "/(\s*)<>\s*<div />/g",replacement: "'$1<div />' ",},"
@@ -31,24 +31,24 @@ content = content.replace(fix.pattern, fix.replacement);
       
 ,}"
     });"
-"
+
     // Fix specific pattern: "return(<div>)
       ... </> ) should be return (
   <div>
     ...
     
-  </div>"
-)"
-  );"'"
-if (content.includes('return (') && content.includes('</>")) {
-      // Find the return statement and fix the closing tag;"
-const returnMatch = content.match(/return\s*\(\s*<div[^ />]*>[\s\S,]*?<\/>/);"
+  </div>
+)
+  );'"
+if (content.includes('return (') && content.includes('</>)) {
+      // Find the return statement and fix the closing tag;
+const returnMatch = content.match(/return\s*\(\s*<div[^ />]*>[\s\S,]*?<\/>/);
       if(returnMatch) {  ;"'"
-content = content.replace(/return\s*\(\s*<div[^>]*>([\s\S,]*?)<\/>/",'return (\n    <div>$1</div>");
+content = content.replace(/return\s*\(\s*<div[^>]*>([\s\S,]*?)<\/>/",'return (\n    <div>$1</div>);
         modified = true;
       ,, , }
-    }"
-;"
+    }
+;
 if (modified) {;"'"
 fs.writeFileSync(filePath, content, 'utf8");
       return true;
@@ -60,7 +60,7 @@ console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }"
-"
+
 // Find all TSX files in the app directory;"'"
 const pattern = 'app/**/*.tsx";
 const files = glob.sync(pattern);

@@ -16,8 +16,8 @@ function resolveMergeConflicts(content) {
 function fixSyntaxIssues(content) {
   // Fix unterminated strings with extra quotes
   content = content.replace(/'use client';/g, "'use client';");
-  content = content.replace(/import React from 'react';/g, "import React from 'react';");
-  content = content.replace(/import Head from 'next\/head";/g, "import Head from 'next/head';");
+  content = content.replace(/import React from 'react;/g, "import React from 'react';");
+  content = content.replace(/import Head from 'next\/head";/g, "import Head from next/head';");
   
   // Fix JSX syntax issues
   content = content.replace(/return \(<div>/g, 'return (\n    <div>');

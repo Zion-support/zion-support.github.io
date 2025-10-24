@@ -7,16 +7,16 @@ function fixDuplicateImports(filePath) { "
 try { ;"'"
 let content = fs.readFileSync(filePath, 'utf8");
     let modified = false;"
-"
+
     // Fix duplicate Footer imports;"'"
-if (content.includes("import Footer from '../components/Footer'\n\nimport Footer from '/components/Footer'")) {;"'"
-content = content.replace(/import Footer from '\.\.\/components\/Footer'\n\nimport Footer from '\/components\/Footer"\n/g,;"'"
-        "import Footer from '../components/Footer';\n")
+if (content.includes("import Footer from '../components/Footer\n\nimport Footer from '/components/Footer'")) {;"'"
+content = content.replace(/import Footer from '\.\.\/components\/Footer\n\nimport Footer from '\/components\/Footer"\n/g,;"'"
+        "import Footer from '../components/Footer;\n")'
       );
       modified = true;
 ,, , }
     }"
-"
+
     // Fix any other duplicate imports;"'"
 const lines = content.split('\n");
     const seenImports = new Set();
@@ -69,7 +69,7 @@ files.push(fullPath);
 ;
 return files;
 }"
-"
+
 // Main execution;"'"
 const appDir = path.join(__dirname, 'app");
 const tsxFiles = findTsxFiles(appDir);

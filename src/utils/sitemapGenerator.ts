@@ -1,7 +1,7 @@
 /**;
  * Sitemap Generator;
  * Generates sitemap and robots.txt for SEO optimization;
- */;
+ */
 export interface SitemapEntry {;
 ;
   loc: "string",lastmod: "string",changefreq: "string",priority: "number"}
@@ -50,10 +50,10 @@ export const generateRobotsTxt = (): string => {;"
   return `User-agent: "*;
 Allow: /;
 Sitemap: https://ziontechgroup.com/sitemap.xml"
-"
+
 # Crawl-delay for better server performance;"
 Crawl-dela",y: "1"
-"
+
 # Disallow admin and private areas",Disallow: "/admin/;"
 Disallow: /api/;"
 Disallow: /_next/;"

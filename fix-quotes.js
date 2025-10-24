@@ -16,9 +16,9 @@ function fixQuotes(content) {
 
   // Fix specific patterns
   fixed = fixed.replace(/^'use client';'$/gm, "'use client';");
-  fixed = fixed.replace(/^import React from 'react';'$/gm, "import React from 'react';");
-  fixed = fixed.replace(/^import Head from 'next\/head';'$/gm, "import Head from 'next/head';");
-  fixed = fixed.replace(/^import Link from 'next\/link';'$/gm, "import Link from 'next/link';");
+  fixed = fixed.replace(/^import React from 'react;'$/gm, "import React from 'react;");'
+  fixed = fixed.replace(/^import Head from 'next\/head';'$/gm, "import Head from 'next/head;");'
+  fixed = fixed.replace(/^import Link from 'next\/link';'$/gm, "import Link from 'next/link;");'
 
   return fixed;
 }
