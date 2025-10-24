@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Link from 'next/link';
 import { 
   CheckCircleIcon,
@@ -70,12 +69,7 @@ export default function AboutPage() {
 
   return (
     <>
-      <Helmet>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and expertise in AI and IT solutions. Discover our team and company culture." />
-        <meta name="keywords" content="about us, company, team, mission, values, AI solutions, IT services" />
-      </Helmet>
-      
+
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4">
@@ -386,7 +380,7 @@ export default function AboutPage() {
               Ready to Work With Us?
             </h2>
             <p className="text-xl text-gray-300 mb-12">
-              Let's discuss how we can help transform your business with our technology solutions
+              Let&apos;s discuss how we can help transform your business with our technology solutions
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

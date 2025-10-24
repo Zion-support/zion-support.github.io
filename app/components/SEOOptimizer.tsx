@@ -1,10 +1,16 @@
-'use client'
+'use client';
 
 import React, { useEffect } from 'react'
 import Head from 'next/head'
 
 interface SEOOptimizerProps {
-  className?: string;
+  title?: string
+  description?: string
+  keywords?: string[]
+  canonicalUrl?: string
+  ogImage?: string
+  structuredData?: object
+  className?: string
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
@@ -13,7 +19,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
   canonicalUrl = 'https://ziontechgroup.com',
   ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  structuredData
+  structuredData,
+  className
 }) => {
   useEffect(() => {
     // Update page title
@@ -29,7 +36,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       meta.content = description
       document.head.appendChild(meta)
     }
-  ]
 
     // Update keywords
     const metaKeywords = document.querySelector('meta[name="keywords"]')
@@ -151,7 +157,3 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 }
 
 export default SEOOptimizer
-  );
-};
-
-export default SEOOptimizerPage;

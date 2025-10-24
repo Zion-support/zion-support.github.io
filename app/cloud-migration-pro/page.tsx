@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Link from 'next/link';
 import { ArrowRight, Cloud, Zap, CheckCircle, Brain, Settings, Target, Users, Calendar, BarChart, Shield } from 'lucide-react';
 
@@ -39,11 +38,6 @@ const CloudMigrationProPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      <Helmet>
-        <title>Cloud Migration Pro - Zion Tech Group | Professional Cloud Migration</title>
-        <meta name="description" content="Transform your business with professional cloud migration services. Seamlessly migrate to the cloud with zero downtime and enhanced security." />
-        <meta name="keywords" content="cloud migration, cloud services, cloud computing, cloud infrastructure, cloud security" />
-      </Helmet>
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
