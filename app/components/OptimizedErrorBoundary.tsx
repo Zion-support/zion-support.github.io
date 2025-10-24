@@ -11,7 +11,6 @@ const OptimizedErrorBoundary: React.FC<OptimizedErrorBoundaryProps> = (_props) =
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default OptimizedErrorBoundary;

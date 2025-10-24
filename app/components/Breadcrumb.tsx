@@ -4,13 +4,11 @@ import React from 'react';
 interface BreadcrumbProps {
   items: Array<{
     label: string;
-    href?: string;
-  }>;
-}
+    href?: string}>}
 
 const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
   return (
-    <nav aria-label="Breadcrumb" className="flex items-center space-x-2 text-sm text-gray-600">
+    <nav aria-label="Breadcrumb" className="flexitems-center space-x-2 text-sm text-gray-600">
       {items.map((item, index) => (
         <React.Fragment key={index}>
           {index > 0 && <span>/</span>}
@@ -24,8 +22,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
         </React.Fragment>
       ))}
     </nav>
-  );
-};
+  )};
 
 export default Breadcrumb;
 

@@ -11,7 +11,6 @@ const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> 
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default EnhancedPerformanceOptimizer;

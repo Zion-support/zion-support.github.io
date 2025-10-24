@@ -11,7 +11,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default LoadingSpinner;

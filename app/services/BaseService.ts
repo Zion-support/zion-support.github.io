@@ -11,13 +11,11 @@ export interface ServiceOptions {
   timeout?: number;
   retries?: number;
   cache?: boolean;
-  cacheDuration?: number;
-}
+  cacheDuration?: number}
 
 export interface CacheEntry<T> {
   data: T;
-  timestamp: number;
-}
+  timestamp: number}
 
 export class BaseService {
   protected baseUrl: string;
@@ -31,9 +29,7 @@ export class BaseService {
       retries: 3,
       cache: false,
       cacheDuration: 300000, // 5 minutes
-      ...options,
-    };
-  }
+      ...options}}
 
   /**
    * Check if cached data is still valid
@@ -42,8 +38,7 @@ export class BaseService {
     const entry = this.cache.get(key);
     if (!entry) return false;
     const age = Date.now() - entry.timestamp;
-    return age < (this.options.cacheDuration || 300000);
-  }
+    return age < (this.options.cacheDuration || 300000)}
 
   /**
    * Get data from cache
@@ -52,12 +47,10 @@ export class BaseService {
     if (!this.options.cache) return null;
     if (this.isCacheValid(key)) {
       logger.debug(`Cache hit for key: ${key}`, { component: 'BaseService' });
-      return this.cache.get(key)?.data as T;
-    }
+      return this.cache.get(key)?.data as T}
 
     this.cache.delete(key);
-    return null;
-  }
+    return null}
 
   /**
    * Set data in cache
@@ -66,19 +59,15 @@ export class BaseService {
     if (!this.options.cache) return;
     this.cache.set(key, {
       data,
-      timestamp: Date.now(),
-    });
-  }
+      timestamp: Date.now()})}
 
   /**
    * Clear cache for a specific key or all cache
    */
   protected clearCache(key?: string): void {
     if (key) {
-      this.cache.delete(key);
-    } else {
-      this.cache.clear();
-    }
+      this.cache.delete(key)} else {
+      this.cache.clear()}
   }
 
   /**
@@ -88,27 +77,21 @@ export class BaseService {
     const cacheKey = `GET:${endpoint}`;
     if (useCache) {
       const cached = this.getFromCache<T>(cacheKey);
-      if (cached) return cached;
-    }
+      if (cached) return cached}
 
     try {
       logger.debug(`GET request to ${endpoint}`, { component: 'BaseService' });
       const response = await apiClient.get<T>(`${this.baseUrl}${endpoint}`, {
         timeout: this.options.timeout,
-        retries: this.options.retries,
-      });
+        retries: this.options.retries});
       if (useCache) {
-        this.setInCache(cacheKey, response.data);
-      }
+        this.setInCache(cacheKey, response.data)}
 
-      return response.data;
-    } catch (error) {
+      return response.data} catch (error) {
       logger.error('GET request failed', error as Error, {
         component: 'BaseService',
-        endpoint,
-      });
-      throw error;
-    }
+        endpoint});
+      throw error}
   }
 
   /**
@@ -119,16 +102,12 @@ export class BaseService {
       logger.debug(`POST request to ${endpoint}`, { component: 'BaseService' });
       const response = await apiClient.post<T>(`${this.baseUrl}${endpoint}`, data, {
         timeout: this.options.timeout,
-        retries: this.options.retries,
-      });
-      return response.data;
-    } catch (error) {
+        retries: this.options.retries});
+      return response.data} catch (error) {
       logger.error('POST request failed', error as Error, {
         component: 'BaseService',
-        endpoint,
-      });
-      throw error;
-    }
+        endpoint});
+      throw error}
   }
 
   /**
@@ -139,16 +118,12 @@ export class BaseService {
       logger.debug(`PUT request to ${endpoint}`, { component: 'BaseService' });
       const response = await apiClient.put<T>(`${this.baseUrl}${endpoint}`, data, {
         timeout: this.options.timeout,
-        retries: this.options.retries,
-      });
-      return response.data;
-    } catch (error) {
+        retries: this.options.retries});
+      return response.data} catch (error) {
       logger.error('PUT request failed', error as Error, {
         component: 'BaseService',
-        endpoint,
-      });
-      throw error;
-    }
+        endpoint});
+      throw error}
   }
 
   /**
@@ -159,16 +134,12 @@ export class BaseService {
       logger.debug(`PATCH request to ${endpoint}`, { component: 'BaseService' });
       const response = await apiClient.patch<T>(`${this.baseUrl}${endpoint}`, data, {
         timeout: this.options.timeout,
-        retries: this.options.retries,
-      });
-      return response.data;
-    } catch (error) {
+        retries: this.options.retries});
+      return response.data} catch (error) {
       logger.error('PATCH request failed', error as Error, {
         component: 'BaseService',
-        endpoint,
-      });
-      throw error;
-    }
+        endpoint});
+      throw error}
   }
 
   /**
@@ -179,16 +150,12 @@ export class BaseService {
       logger.debug(`DELETE request to ${endpoint}`, { component: 'BaseService' });
       const response = await apiClient.delete<T>(`${this.baseUrl}${endpoint}`, {
         timeout: this.options.timeout,
-        retries: this.options.retries,
-      });
-      return response.data;
-    } catch (error) {
+        retries: this.options.retries});
+      return response.data} catch (error) {
       logger.error('DELETE request failed', error as Error, {
         component: 'BaseService',
-        endpoint,
-      });
-      throw error;
-    }
+        endpoint});
+      throw error}
   }
 
   /**
@@ -197,10 +164,8 @@ export class BaseService {
   protected handleError(error: Error, context?: Record<string, unknown>): never {
     logger.error('Service error', error, {
       component: this.constructor.name,
-      ...context,
-    });
-    throw error;
-  }
+      ...context});
+    throw error}
 }
 
 export default BaseService;

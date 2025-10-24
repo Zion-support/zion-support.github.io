@@ -11,7 +11,6 @@ const NavigationBackup: React.FC<NavigationBackupProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default NavigationBackup;

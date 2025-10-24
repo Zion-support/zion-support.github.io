@@ -11,7 +11,6 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default AnalyticsProvider;

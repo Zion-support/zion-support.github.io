@@ -11,7 +11,6 @@ const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default ServiceCardSkeleton;

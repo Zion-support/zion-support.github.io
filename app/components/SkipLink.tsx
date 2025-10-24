@@ -11,7 +11,6 @@ const SkipLink: React.FC<SkipLinkProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default SkipLink;

@@ -5,8 +5,7 @@ export interface StructuredData {
   description: string;
   url: string;
   logo?: string;
-  sameAs?: string[];
-}
+  sameAs?: string[]}
 
 export interface SEOData {
   title: string;
@@ -21,8 +20,7 @@ export interface SEOData {
   twitterTitle?: string;
   twitterDescription?: string;
   twitterImage?: string;
-  structuredData?: StructuredData;
-}
+  structuredData?: StructuredData}
 
 export const defaultSEOData: SEOData = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -59,5 +57,4 @@ export const generateSEOData = (customData: Partial<SEOData> = {}): SEOData => {
       ...defaultSEOData.structuredData,
       ...customData.structuredData
     }
-  };
-};
+  }};

@@ -13,7 +13,7 @@ const FAQPage: React.FC = () => {
       prev.includes(index) 
         ? prev.filter(item => item !== index)
         : [...prev, index]
-    );}const faqs = [
+    )}const faqs = [
     {question: "What AI services do you offer?",
       answer: "We offer comprehensive AI services including marketing automation, customer support, data analytics, content generation, healthcare solutions, financial services, e-commerce solutions, cybersecurity, mobile apps, sales automation, workflow automation, and data visualization."},
     {question: "How can AI benefit my business?",
@@ -30,7 +30,7 @@ const FAQPage: React.FC = () => {
       answer: "Absolutely! We work with businesses of all sizes, from startups to enterprise organizations. Our micro SAAS solutions are specifically designed for small businesses looking to leverage AI technology."},
     {question: "What industries do you serve?",
       answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards."}]
-  return(<React.Fragment>)</React.Fragment>
+  return (<React.Fragment>
       <Helmet />
   }
   const faqs = [
@@ -75,29 +75,29 @@ const FAQPage: React.FC = () => {
         <meta name="description" content="Find answers to common questions about our AI and IT solutions, services, development process, and how we can help transform your business." />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+        <div className="containermx-auto px-4">
+          <div className="text-centermb-16">
+            <h1 className="text-5xlfont-bold text-white mb-6">
               Frequently Asked Questions
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xltext-gray-300 max-w-3xl mx-auto">
               Find answers to common questions about our AI and IT solutions, 
               services, and how we can help transform your business.
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xlmx-auto">
             <div className="space-y-6">
               {faqs.map((faq, index) => (
                 <div
                   key={index}
-                  className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20"
+                  className="bg-white/10backdrop-blur-lg rounded-lg p-6 border border-white/20"
                 >
-                  <h3 className="text-xl font-semibold text-white mb-3">
+                  <h3 className="text-xlfont-semibold text-white mb-3">
                     {faq.question}
                   </h3>
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-gray-300leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
@@ -107,54 +107,53 @@ const FAQPage: React.FC = () => {
         </Helmet><title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
         <meta name="description" content="Find answers to frequently asked questions about our AI and IT services, pricing, implementation, and support." />
         <meta name="keywords" content="FAQ, frequently asked questions, AI services, IT services, support, pricing" />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">,</h1>
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="py-20px-4">
+          <div className="max-w-7xlmx-auto text-center">
+            <h1 className="text-4xlmd: text-6xl font-bold text-white mb-6">,</h1>
               Frequently Asked <span className="text-cyan-400">Questions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Find answers to common questions about our AI and IT services, pricing, and implementation.</p>
-            </p>
+            <p className="text-xltext-gray-300 mb-8 max-w-3xl mx-auto">Find answers to common questions about our AI and IT services, pricing, and implementation.</p>
           </div>
         </section>
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto">
+        <section className="py-16px-4">
+          <div className="max-w-4xlmx-auto">
             <div className="space-y-4">{faqs.map((faq, index) => (</div>
-                <div key={index}className="bg-slate-800/50 backdrop-blur-sm rounded-lg border border-cyan-500/20">
+                <div key={index}className="bg-slate-800/50backdrop-blur-sm rounded-lg border border-cyan-500/20">
                   <button;
-                    onClick={() =>toggleItem(index)</button>}className="w-full px-6 py-4 text-left flex items-center justify-between hover: bg-slate-700/30 transition-colors">,
-                    <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
+                    onClick={() =>toggleItem(index)</button>}className="w-fullpx-6 py-4 text-left flex items-center justify-between hover: bg-slate-700/30 transition-colors">,
+                    <h3 className="text-lgfont-semibold text-white pr-4">{faq.question}</h3>
                     {openItems.includes(index) ? (
-                      <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                      <ChevronUp className="w-5h-5 text-cyan-400 flex-shrink-0" />
                     ) : (
-                      <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                      <ChevronDown className="w-5h-5 text-cyan-400 flex-shrink-0" />
                     )} </button>
                   {openItems.includes(index) && (
-                    <div className="px-6 pb-4">
-                      <p className="text-gray-300 leading-relaxed">{faq.answer</p>}</p>
+                    <div className="px-6pb-4">
+                      <p className="text-gray-300leading-relaxed">{faq.answer</p>}</p>
                     </div>
-                      <p className="text-gray-300 leading-relaxed">{faq.answer}
+                      <p className="text-gray-300leading-relaxed">{faq.answer}
                   )}
               ))}
             </div>
 
-            <div className="mt-16 text-center">
-              <h2 className="text-3xl font-bold text-white mb-6">
+            <div className="mt-16text-center">
+              <h2 className="text-3xlfont-bold text-white mb-6">
                 Still have questions?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xltext-gray-300 mb-8">
                 Our team is here to help. Contact us for personalized assistance.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flexflex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
-                  className="bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors"
+                  className="bg-cyan-600text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors"
                 >
                   Contact Us
                 </a>
                 <a
                   href="/consultation"
-                  className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+                  className="bg-purple-600text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
                 >
                   Free Consultation
                 </a>
@@ -164,7 +163,6 @@ const FAQPage: React.FC = () => {
         </div>
       ))
 
-  );
-};
+  )};
 
 export default FAQPage;

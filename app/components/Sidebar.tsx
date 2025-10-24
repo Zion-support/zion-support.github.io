@@ -11,7 +11,6 @@ const Sidebar: React.FC<SidebarProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default Sidebar;

@@ -11,7 +11,6 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default EnhancedAccessibilityEnhancer;

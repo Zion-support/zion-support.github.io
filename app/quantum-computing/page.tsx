@@ -11,7 +11,6 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default EnhancedHero;

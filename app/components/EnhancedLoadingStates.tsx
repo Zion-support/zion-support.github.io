@@ -11,7 +11,6 @@ const EnhancedLoadingStates: React.FC<EnhancedLoadingStatesProps> = (_props) => 
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default EnhancedLoadingStates;

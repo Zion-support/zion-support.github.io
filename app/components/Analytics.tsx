@@ -11,7 +11,6 @@ const Analytics: React.FC<AnalyticsProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default Analytics;

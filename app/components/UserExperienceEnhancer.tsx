@@ -11,7 +11,6 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = (_props) =
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default UserExperienceEnhancer;

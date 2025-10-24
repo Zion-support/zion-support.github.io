@@ -11,7 +11,6 @@ const UltimateBusinessIntelligence2025Banner: React.FC<UltimateBusinessIntellige
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default UltimateBusinessIntelligence2025Banner;

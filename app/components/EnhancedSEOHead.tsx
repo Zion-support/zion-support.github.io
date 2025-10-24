@@ -11,7 +11,6 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default EnhancedSEOHead;

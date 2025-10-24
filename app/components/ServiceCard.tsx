@@ -11,7 +11,6 @@ const ServiceCard: React.FC<ServiceCardProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default ServiceCard;

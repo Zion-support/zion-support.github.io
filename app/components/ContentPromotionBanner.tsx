@@ -11,7 +11,6 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = (_props) =
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default ContentPromotionBanner;

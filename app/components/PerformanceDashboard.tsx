@@ -11,7 +11,6 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default PerformanceDashboard;

@@ -11,7 +11,6 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = (_pr
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default ServiceWorkerRegistration;

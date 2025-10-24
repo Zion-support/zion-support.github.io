@@ -11,7 +11,6 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = (_props)
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default EnhancedLoadingSkeleton;

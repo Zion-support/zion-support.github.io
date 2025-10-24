@@ -11,8 +11,7 @@ const CloudServicesPage: React.FC = () => {
       title: 'Cloud Migration',
       description: 'Seamlessly migrate your infrastructure to the cloud with zero downtime and maximum security.',
       features: ['AWS, Azure, GCP expertise', 'Zero-downtime migration', 'Cost optimization', 'Security compliance']},
-    {icon: Server,
-    },
+    {icon: Server},
     {
       icon: Server,
       title: 'Cloud Infrastructure',
@@ -23,14 +22,13 @@ const CloudServicesPage: React.FC = () => {
       description: 'Managed database services with automated backups, monitoring, and optimization.',
       features: ['MySQL, PostgreSQL, MongoDB', 'Automated backups', 'Performance tuning', '24/7 monitoring']},
     {icon: Shield,
-      title: 'Cloud Security',}];
+      title: 'Cloud Security'}];
   const benefits = [
     },
     {
       icon: Shield,
-      title: 'Cloud Security',
-    }
-  ];];];
+      title: 'Cloud Security'}
+  ];;
   const benefits = [;
   ];
   ]
@@ -48,13 +46,11 @@ const CloudServicesPage: React.FC = () => {
         'Standard security',
         'Up to 5 users'
       ]},
-    {name: 'Professional',
-    },
+    {name: 'Professional'},
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
-    }
+      description: 'Worldwide deployment and support for international businesses'}
   ];
 
   const benefits = [
@@ -79,7 +75,7 @@ const CloudServicesPage: React.FC = () => {
         'Up to 25 users',
         'Custom integrations'
       ],
-      popular: true;,},
+      popular: true},
     {name: 'Enterprise',
       price: 'Custom',
       period: 'pricing',
@@ -92,14 +88,14 @@ const CloudServicesPage: React.FC = () => {
         'Unlimited users',
         'Custom development'
       ]}]
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
+  return (<div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet />
     }
 
   ]
   return (
 
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Cloud Services - Zion Tech Group | Cloud Solutions & Migration</title>
       </div><Helmet>
@@ -114,24 +110,24 @@ const CloudServicesPage: React.FC = () => {
         <meta name="twitter: description" content="Expert cloud solutions and migration services" />,
       </Helmet>
 
-      {/* Hero Section */} <section className="relative py-20 px-4 sm: px-6 lg:px-8">,</section>
-        <div className="max-w-7xl mx-auto">
+      {/* Hero Section */} <section className="relativepy-20 px-4 sm: px-6 lg:px-8">,</section>
+        <div className="max-w-7xlmx-auto">
           <div className="text-center">
-            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">,</h1>
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Cloud Services;</span>
+            <h1 className="text-4xlmd: text-6xl font-bold text-white mb-6">,</h1>
+              <span className="bg-gradient-to-rfrom-purple-400 to-blue-400 bg-clip-text text-transparent">Cloud Services;</span>
               </span>
               <br />
               <span className="text-white">Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our comprehensive cloud services.</p>
+            <p className="text-xltext-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our comprehensive cloud services.</p>
               From migration to management, we provide end-to-end cloud solutions.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">,</button>
+            <div className="flexflex-col sm: flex-row gap-4 justify-center">,</div>
+              <button className="bg-gradient-to-rfrom-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">,</button>
                 Get Started;
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2h-5 w-5" />
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-gray-900 transition-all duration-300">,</button>
+              <button className="borderborder-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-gray-900 transition-all duration-300">,</button>
                 Learn More;
               </button>
             </div>
@@ -139,30 +135,29 @@ const CloudServicesPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Services Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,<section>
+      {/* Services Section */} <section className="py-20px-4 sm: px-6 lg:px-8">,<section>
         <div>
           <div>
             <h2>,</h2>
               Our Cloud Services;
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive cloud solutions designed to accelerate your digital transformation.</p>
-            </p>
+            <p className="text-xltext-gray-300 max-w-3xl mx-auto">Comprehensive cloud solutions designed to accelerate your digital transformation.</p>
           </div>
 
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
+          <div className="gridmd: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
             {services.map((service, index) => (
-              <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover: bg-white/20 transition-all duration-300">,</div>
-                <div className="flex items-center mb-4">
-                  <div className="bg-purple-500 p-3 rounded-lg">
-                    <service.icon className="h-6 w-6 text-white" />
+              <div key={index}className="bg-white/10backdrop-blur-sm rounded-xl p-6 hover: bg-white/20 transition-all duration-300">,</div>
+                <div className="flexitems-center mb-4">
+                  <div className="bg-purple-500p-3 rounded-lg">
+                    <service.icon className="h-6w-6 text-white" />
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-4">{service.description</p>}</p>
+                <h3 className="text-xlfont-bold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-300mb-4">{service.description</p>}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex}className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                    <li key={featureIndex}className="flexitems-center text-sm text-gray-300">
+                      <CheckCircle className="h-4w-4 text-green-400 mr-2 flex-shrink-0" />
                       {feature} </li>
                   ))}
                 </ul>
@@ -172,63 +167,61 @@ const CloudServicesPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Benefits Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">,<section>
+      {/* Benefits Section */} <section className="py-20px-4 sm: px-6 lg:px-8 bg-white/5">,<section>
         <div>
           <div>
             <h2>,</h2>
               Why Choose Our Cloud Services?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the benefits of working with cloud experts who understand your business needs.</p>
-            </p>
+            <p className="text-xltext-gray-300 max-w-3xl mx-auto">Experience the benefits of working with cloud experts who understand your business needs.</p>
           </div>
 
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
+          <div className="gridmd: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
             {benefits.map((benefit, index) => (
               <div key={index}className="text-center">
-                <div className="bg-gradient-to-r from-purple-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="h-8 w-8 text-white" />
+                <div className="bg-gradient-to-rfrom-purple-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="h-8w-8 text-white" />
                 </div>
-                <p className="text-white font-medium">{benefit</p>}</p>
+                <p className="text-whitefont-medium">{benefit</p>}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Pricing Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,<section>
+      {/* Pricing Section */} <section className="py-20px-4 sm: px-6 lg:px-8">,<section>
         <div>
           <div>
             <h2>,</h2>
               Flexible Pricing Plans;
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the plan that best fits your business needs and budget.</p>
-            </p>
+            <p className="text-xltext-gray-300 max-w-3xl mx-auto">Choose the plan that best fits your business needs and budget.</p>
           </div>
 
-          <div className="grid md: grid-cols-3 gap-8">,</div>
+          <div className="gridmd: grid-cols-3 gap-8">,</div>
             {pricing.map((plan, index) => (
               <div key={index}className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 relative ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}>{plan.popular && (</div>
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium">Most Popular;</span>
+                  <div className="absolute-top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-rfrom-purple-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium">Most Popular;</span>
                     </span>
                   </div>
-                )} <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold text-white mb-2">{plan.price</div>} <span className="text-lg text-gray-300 font-normal">/{plan.period</span>}</span>
+                )} <div className="text-centermb-8">
+                  <h3 className="text-2xlfont-bold text-white mb-2">{plan.name}</h3>
+                  <div className="text-4xlfont-bold text-white mb-2">{plan.price</div>} <span className="text-lgtext-gray-300 font-normal">/{plan.period</span>}</span>
                   </div>
                   <p className="text-gray-300">{plan.description</p>}</p>
                 </div>
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-4mb-8">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex}className="flex items-center text-gray-300">
-                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
+                    <li key={featureIndex}className="flexitems-center text-gray-300">
+                      <CheckCircle className="h-5w-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature} </li>
                   ))}
                 </ul>
                 <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular;
                     ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover: from-purple-600 hover:to-blue-700',
-                    : 'bg-white/20 text-white hover: bg-white/30',}`}>Get Started;</button>
+                    : 'bg-white/20 text-white hover: bg-white/30'}`}>Get Started;</button>
                 </button>
               </div>
             ))}
@@ -236,20 +229,17 @@ const CloudServicesPage: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,</h2>
-            Ready to Transform Your Business with Cloud?
-          </h2>
-          <p className="text-xl text-purple-100 mb-8">Contact our cloud experts to discuss your needs and get a customized solution.</p>
-          </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
-            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-all duration-300 flex items-center justify-center">,</button>
-              <Phone className="mr-2 h-5 w-5" />
+      {/* CTA Section */} <section className="py-20px-4 sm: px-6 lg:px-8">,</section>
+        <div className="max-w-4xlmx-auto text-center">
+          <h2 className="text-3xlmd: text-4xl font-bold text-white mb-6">Ready to Transform Your Business with Cloud?</h2>
+          <p className="text-xltext-purple-100 mb-8">Contact our cloud experts to discuss your needs and get a customized solution.</p>
+          <div className="flexflex-col sm: flex-row gap-4 justify-center">,</div>
+            <button className="bg-whitetext-purple-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-all duration-300 flex items-center justify-center">,</button>
+              <Phone className="mr-2h-5 w-5" />
               Call Now;
             </button>
-            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">,</button>
-              <Mail className="mr-2 h-5 w-5" />
+            <button className="borderborder-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">,</button>
+              <Mail className="mr-2h-5 w-5" />
               Email Us;
             </button>
           </div>
@@ -257,8 +247,7 @@ const CloudServicesPage: React.FC = () => {
       </section>
     </div>
 
-  ),
-};
+  )};
 
 export default CloudServicesPage;
   </button>
@@ -275,23 +264,19 @@ const features = [
     {
       icon: Shield,
       title: 'Secure Cloud Services',
-      description: 'Comprehensive cloud services with enterprise-grade security and reliability',
-    },
+      description: 'Comprehensive cloud services with enterprise-grade security and reliability'},
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast cloud services with optimized performance and scalability',
-    },
+      description: 'Lightning-fast cloud services with optimized performance and scalability'},
     {
       icon: Brain,
       title: 'AI-Powered Management',
-      description: 'Intelligent cloud management powered by advanced AI technology',
-    },
+      description: 'Intelligent cloud management powered by advanced AI technology'},
     {
       icon: Globe,
       title: 'Global Deployment',
-      description: 'Worldwide cloud services deployment and support',
-    }
+      description: 'Worldwide cloud services deployment and support'}
   ]
   const benefits = [
 'Advanced cloud technology integration',
@@ -317,23 +302,23 @@ const features = [
       <section$1>
         <div$2>
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+            <h1 className="text-4xlmd:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-rfrom-purple-400 to-blue-400 bg-clip-text text-transparent">
                 Cloud
               </span>
               <br />
               <span className="text-white">Services</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xltext-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced cloud solutions. 
               Powered by cutting-edge technology and industry expertise.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+            <div className="flexflex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-rfrom-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2h-5 w-5" />
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+              <button className="borderborder-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
             </div>
@@ -341,15 +326,15 @@ const features = [
       </section>
 
         {/* Features Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <section className="py-16px-4">
+          <div className="max-w-7xlmx-auto">
+            <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg mb-4">
-                    <feature.icon className="w-6 h-6 text-white" />
+                <div key={index} className="bg-white/10backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="flexitems-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg mb-4">
+                    <feature.icon className="w-6h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <h3 className="text-xlfont-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
               ))}
@@ -358,14 +343,14 @@ const features = [
       </section>
 
         {/* Benefits Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Our Cloud Services?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <section className="py-16px-4">
+          <div className="max-w-7xlmx-auto">
+            <h2 className="text-3xlfont-bold text-white mb-12 text-center">Why Choose Our Cloud Services?</h2>
+            <div className="gridgrid-cols-1 md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
+                <div key={index} className="flexitems-center space-x-3">
+                  <CheckCircle className="w-6h-6 text-green-400 flex-shrink-0" />
+                  <span className="text-gray-300text-lg">{benefit}</span>
                 </div>
               ))}
             </div>
@@ -373,22 +358,22 @@ const features = [
       </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <section className="py-20px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xlmx-auto text-center">
+            <div className="bg-gradient-to-rfrom-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+              <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4">
                 Ready to Get Started?
               </h2>
-              <p className="text-xl text-purple-100 mb-8">
+              <p className="text-xltext-purple-100 mb-8">
                 Contact our experts to discuss your cloud needs and get a customized solution.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                  <Phone className="w-5 h-5 mr-2" />
+              <div className="flexflex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-whitetext-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                  <Phone className="w-5h-5 mr-2" />
                   Call Us
                 </button>
-                <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                  <Mail className="w-5 h-5 mr-2" />
+                <button className="bg-transparentborder-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+                  <Mail className="w-5h-5 mr-2" />
                   Email Us
                 </button>
               </div>
@@ -398,24 +383,24 @@ const features = [
       </div>
     </>
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section className="py-20px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xlmx-auto">
+          <div className="text-centermb-16">
+            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4">
               Why Choose Our Page?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xltext-gray-300 max-w-3xl mx-auto">
               Our cloud solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
+              <div key={index} className="bg-white/10backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flexitems-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  <feature.icon className="h-6w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <h3 className="text-xlfont-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
@@ -424,42 +409,42 @@ const features = [
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section className="py-20px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xlmx-auto">
+          <div className="text-centermb-16">
+            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4">
               Key Benefits
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xltext-gray-300 max-w-3xl mx-auto">
               Experience the power of our cloud solutions for your business.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="gridgrid-cols-1 md:grid-cols-2 gap-6">
 <title>Cloud Services | Zion Tech Group
         <meta name="description" content="Professional Cloud Services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="cloud services, cloud computing, IT services, Zion Tech Group, cloud solutions" />
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">Cloud Services
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+      <div className="containermx-auto px-4 py-16">
+        <div className="text-centermb-16">
+          <h1 className="text-5xlfont-bold text-white mb-6">Cloud Services
+          <p className="text-xltext-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced cloud services. 
             Powered by cutting-edge AI technology and industry expertise.
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xltext-gray-300 max-w-3xl mx-auto">
             Our cloud services deliver unmatched performance, security, and scalability.
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="gridmd:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
-              <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}
+            <div key={index} className="bg-white/10backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
+              <feature.icon className="h-12w-12 text-purple-400 mx-auto mb-4" />
+              <h3 className="text-xlfont-semibold text-white mb-3">{feature.title}
               <p className="text-gray-300">{feature.description}
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-8">
+        <div className="bg-white/10backdrop-blur-sm rounded-2xl p-8 mb-16">
+          <h2 className="text-3xlfont-bold text-white text-center mb-8">
             Why Choose Our Cloud Services?
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="gridmd:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-3">
-                <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
+              <div key={index} className="flexitems-center space-x-3">
+                <CheckCircle className="h-6w-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}
             ))}
           </div>
@@ -467,22 +452,22 @@ const features = [
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section className="py-20px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xlmx-auto text-center">
+          <div className="bg-gradient-to-rfrom-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-purple-100 mb-8">
+            <p className="text-xltext-purple-100 mb-8">
               Contact our experts to discuss your page needs and get a customized solution.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
+            <div className="flexflex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-whitetext-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                <Phone className="mr-2h-5 w-5" />
                 Call Now
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
+              <button className="borderborder-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+                <Mail className="mr-2h-5 w-5" />
                 Email Us
               </button>
             </div>
@@ -490,7 +475,6 @@ const features = [
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default PagePage;

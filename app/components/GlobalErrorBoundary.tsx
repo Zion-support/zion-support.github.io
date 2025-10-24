@@ -11,7 +11,6 @@ const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default GlobalErrorBoundary;

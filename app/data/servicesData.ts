@@ -7,19 +7,16 @@ export interface Service {
   pricing: {
     basic: string;
     pro: string;
-    enterprise: string;
-  };
+    enterprise: string};
   contactInfo: {
     website: string;
     email: string;
-    phone: string;
-  };
+    phone: string};
   price?: string;
   icon?: string;
   href: string;
   popular?: boolean;
-  category: "ai" | "it" | "cloud" | "security" | "data" | "automation";
-}
+  category: "ai" | "it" | "cloud" | "security" | "data" | "automation"}
 
 export const aiServices: Service[] = [
   {

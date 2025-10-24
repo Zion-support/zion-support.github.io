@@ -11,7 +11,6 @@ const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = (_
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default EnhancedPerformanceMonitor;

@@ -6,8 +6,7 @@ interface AccessibilityEnhancerProps {
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
-}
+  enableFocusManagement?: boolean}
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
   children,
@@ -20,7 +19,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     <div className="accessibility-enhanced">
       {children}
     </div>
-  );
-};
+  )};
 
 export default AccessibilityEnhancer;

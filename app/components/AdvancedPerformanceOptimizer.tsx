@@ -11,7 +11,6 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default AdvancedPerformanceOptimizer;

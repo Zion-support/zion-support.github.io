@@ -53,8 +53,7 @@ export interface Service {
   }
   link: string
   category: 'ai' | 'it' | '5g' | 'blockchain' | 'iot'
-  tags: string[];
-}
+  tags: string[]}
 export interface User {
   id: string
   email: string
@@ -124,8 +123,7 @@ export interface AccessibilityConfig {
 export type Optional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>
 export type RequiredFields<T, K extends keyof T> = T & Required<Pick<T, K>>
 export type DeepPartial<T> = {
-  [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
-}
+  [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P]}
 // API Response types
 export interface ApiResponse<T = unknown> {
   success: boolean

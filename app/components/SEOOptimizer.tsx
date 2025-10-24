@@ -11,7 +11,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default SEOOptimizer;

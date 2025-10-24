@@ -11,7 +11,6 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default EnhancedSEOOptimizer;

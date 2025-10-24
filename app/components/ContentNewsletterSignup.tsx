@@ -11,7 +11,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = (_props)
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default ContentNewsletterSignup;

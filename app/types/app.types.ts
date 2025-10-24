@@ -3,8 +3,7 @@ export interface User {
   id: string;
   email: string;
   name: string;
-  role: "admin" | "user" | "guest";
-}
+  role: "admin" | "user" | "guest"}
 export interface Service {
   id: string;
   title: string;
@@ -15,37 +14,31 @@ export interface Service {
   pricing: {
     basic: number;
     pro: number;
-    enterprise: number;
-  };
+    enterprise: number};
   benefits: string[];
   useCases: string[];
   marketPrice: string;
   contactInfo: {
     phone: string;
     email: string;
-    website: string;
-  };
-  link: string;
-}
+    website: string};
+  link: string}
 export interface ContactFormData {
   name: string;
   email: string;
   company: string;
   message: string;
-  service: string;
-}
+  service: string}
 export interface AnalyticsEvent {
   name: string;
   timestamp: number;
-  properties?: Record<string, string | number | boolean | null>;
-}
+  properties?: Record<string, string | number | boolean | null>}
 export interface PerformanceMetrics {
   loadTime: number;
   firstContentfulPaint: number;
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
-  firstInputDelay: number;
-}
+  firstInputDelay: number}
 export interface ErrorContext {
   url?: string;
   userAgent?: string;
@@ -53,8 +46,7 @@ export interface ErrorContext {
   userId?: string;
   sessionId?: string;
   component?: string;
-  action?: string;
-}
+  action?: string}
 export interface ErrorReport {
   id: string;
   message: string;
@@ -62,6 +54,5 @@ export interface ErrorReport {
   context: ErrorContext;
   severity: ErrorSeverity;
   resolved: boolean;
-  createdAt: string;
-}
+  createdAt: string}
 export type ErrorSeverity = "low" | "medium" | "high" | "critical";
