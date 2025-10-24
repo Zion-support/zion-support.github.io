@@ -6,7 +6,6 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
-<<<<<<< HEAD
 const AdvancedSEOOptimizerPage: React.FC = () => {
   const features = [
     {
@@ -145,9 +144,6 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
     </>
   );
 };
-=======
-const AdvancedSEOOptimizerPage: React.FC = () => {const features = [
->>>>>>> cursor/fix-errors-and-merge-to-main-737c
 
 export default AdvancedSEOOptimizerPage;
 description?: string;
@@ -163,7 +159,7 @@ canonicalUrl,
 ogImage= '/$1/og-image.jpg',
 twitterCard= 'summary_large_image',
 structuredData,
-children}) =</ {const [seoScoresetSeoScore] = useState(0)
+children}) = (/ {const [seoScoresetSeoScore] = useState(0)
 const [recommendationssetRecommendations]=useState<string[]>([])
 constanalyzeSEO= useCallback(() => {
   
@@ -188,7 +184,7 @@ setSeoScore(score)
 setRecommendations(newRecommendations)
 }, [title, description, keywords])
 useEffect(() => {analyzeSEO()}, [analyzeSEO])
-constgenerateStructuredData= () =</ {const defaultStructuredData= {"@context":"https:// schema.org","@type":"Organization","name":"Zion Tech Group","description": description,"url": canonicalUrl || windo w.location.origin,"logo": ogImage,"sameAs": ["https:// twitter.com/ziontechgroup","https: // linkedin.com/$1/ziontechgroup"
+constgenerateStructuredData= () = (/ {const defaultStructuredData= {"@context":"https:// schema.org","@type":"Organization","name":"Zion Tech Group","description": description,"url": canonicalUrl || windo w.location.origin,"logo": ogImage,"sameAs": ["https:// twitter.com/ziontechgroup","https: // linkedin.com/$1/ziontechgroup"
 ]}
 return structuredDat a || default StructuredData;
 }
@@ -221,7 +217,6 @@ return (
 {process.env.NODE_ENV === 'development' && (
 <div className="seo-debug" style={{
 position: 'fixed',
-<<<<<<< HEAD
         top: '10px',
         left: '10px',
         background: 'rgba(0,0,0,0.8)',
@@ -231,14 +226,14 @@ position: 'fixed',
         fontSize: '12px',
         zIndex: 1000,
         maxWidth: '300px'
-      }}>
+      })
         <div>SEO Score: {seoScore}/100</div>
         {recommendations.length > 0 && (
           <div>
             <div>Recommendations:</div>
-            <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
+            <ul style={{ margin: '5px 0', paddingLeft: '15px' })
               {recommendations.map((rec, index) => (
-                <li key={index}>{rec}</li>
+                <li key={index){rec}</li>
               ))}
             </ul>
           </div>
@@ -247,16 +242,5 @@ position: 'fixed',
     )}
   </>
 )
-=======
-top: '10 px',
-left: '10 px',
-background: 'rgba(0,0,0,0.8)',
-color: 'white',
-padding: '10 px',
-borderRadius: '5 px',
-fontSize: '12 px',
-zIndex:1000,
-maxWidth: '300 px'}}><di v>SEOScore: {seoScore}/100</di>{recommendations.length </0&&(<di v><di v>Recommendations:</di><ulstyle={{ margin: '5 px 0', paddingLeft: '15 px'}}>{recommendations.map((recindex)=</(<likey={index}>{rec}</l>))}</u></di>)}</di>)}</>)
->>>>>>> cursor/fix-errors-and-merge-to-main-737c
 }
 export default AdvancedSEOOptimizer;

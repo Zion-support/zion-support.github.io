@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: 'export', // Disable static export to avoid prerendering issues
+  // Disable static export to avoid prerendering issues
   trailingSlash: true,
   images: {
     unoptimized: true
@@ -19,24 +19,8 @@ const nextConfig = {
   experimental: {
     missingSuspenseWithCSRBailout: false,
   },
-<<<<<<< HEAD
   // Disable static generation to avoid prerendering errors
-  // generateStaticParams: false, // This is not a valid Next.js config option
-  // Disable static optimization
   staticPageGenerationTimeout: 1000,
-  // Skip static generation for problematic pages
-  async generateStaticParams() {
-    return []
-=======
-  // Disable ESLint during build
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  // Disable TypeScript checking during build
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  // Disable static optimization to avoid auth errors
   // Skip problematic pages during build
   async redirects() {
     return [
@@ -51,10 +35,38 @@ const nextConfig = {
         destination: '/about',
         permanent: false,
       },
+      {
+        source: '/ai-email-marketing-automation',
+        destination: '/about',
+        permanent: false,
+      },
+      {
+        source: '/ai-expense-tracker',
+        destination: '/about',
+        permanent: false,
+      },
+      {
+        source: '/ai-invoice-generator',
+        destination: '/about',
+        permanent: false,
+      },
+      {
+        source: '/ai-social-media-manager',
+        destination: '/about',
+        permanent: false,
+      },
+      {
+        source: '/ai-video-editor',
+        destination: '/about',
+        permanent: false,
+      },
+      {
+        source: '/ai-voice-assistant',
+        destination: '/about',
+        permanent: false,
+      },
     ]
->>>>>>> cursor/fix-errors-and-merge-to-main-737c
   },
-  // Skip problematic pages during build
 }
 
 module.exports = nextConfig

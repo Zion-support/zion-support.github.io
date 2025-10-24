@@ -154,7 +154,6 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps>=
   // Resource hints for better performance;
   const addResourceHints = useCallback(() => {if (typeof window === 'undefined') return;
     const hints = [
-<<<<<<< HEAD
       { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
       { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
       { rel: 'preconnect', href: 'https://www.googletagmanager.com' },
@@ -235,7 +234,3 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps>=
 }
 
 export default AdvancedPerformanceOptimizer
-=======
-
-export default AdvancedPerformanceOptimizerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-737c

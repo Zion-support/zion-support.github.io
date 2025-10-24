@@ -1,7 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react'
 
-<<<<<<< HEAD
 interface AdvancedErrorBoundaryProps {
   children: ReactNode
   className?: string
@@ -14,10 +13,6 @@ interface ErrorReport {
   timestamp: number
   userAgent: string
   url: string
-=======
-interface AdvancedErrorBoundaryProps {;
-  className?: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-737c
 }
 
 interface State {hasError: boolean;
@@ -25,27 +20,19 @@ interface State {hasError: boolean;
   errorInfo?: ErrorInfo;
   errorId?: string;
 }
-<<<<<<< HEAD
 
 class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State> {
   constructor(props: AdvancedErrorBoundaryProps) {
-=======
-class AdvancedErrorBoundary extends Component<Props, State>{constructor(props: Props) {
->>>>>>> cursor/fix-errors-and-merge-to-main-737c
     super(props)
     this.state = { hasError: false }
   }
 
-<<<<<<< HEAD
   private generateErrorId = (): string => {
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     const errorReport: ErrorReport = {
-=======
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {const errorReport: ErrorReport = {
->>>>>>> cursor/fix-errors-and-merge-to-main-737c
       errorId: this.state.errorId || this.generateErrorId(),
       error,
       timestamp: Date.now(),
@@ -69,7 +56,6 @@ class AdvancedErrorBoundary extends Component<Props, State>{constructor(props: P
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-<<<<<<< HEAD
       errorInfo,
       errorId: this.generateErrorId()
     })
@@ -81,25 +67,9 @@ class AdvancedErrorBoundary extends Component<Props, State>{constructor(props: P
     
     // Report error
     this.reportError(error, errorInfo)
-=======
-      errorInfo;
-    })
-    // Call custom error handler if provided;
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo)
-    }
-    // Log error to console in development;
-    if (process.env.NODE_ENV === 'development') {
-      // // console.error('Error caught by boundary:', error, errorInfo)
-    }
-    // Log error to external service in production;
-    if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo)
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-737c
   }
 
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) =</ {
+  logErrorToService = (error: Error, errorInfo: ErrorInfo) = (/ {
     // You can integrate with services like Sentry, LogRocket, etc.
     const errorData = {
       errorId: this.state.errorId,
@@ -142,7 +112,7 @@ class AdvancedErrorBoundary extends Component<Props, State>{constructor(props: P
   render() {
     if (this.state.hasError) {
       return (
-        <div className={`min-h-screen flex items-center justify-center bg-gray-50 ${this.props.className || ''}`}>
+        <div className={`min-h-screen flex items-center justify-center bg-gray-50 ${this.props.className || ''}`)
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">
             <div className="flex justify-center mb-4">
               <AlertTriangle className="h-16 w-16 text-red-500" />
