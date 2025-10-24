@@ -47,10 +47,10 @@ const AboutPage: React.FC = () => {
     <>
       <Helmet>
         <title>About Us - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and team. We're dedicated to delivering cutting-edge AI and IT solutions that transform businesses." />
+        <meta name="description" content="Learn about Zion Tech Group&apos;s mission, values, and team. We&apos;re dedicated to delivering cutting-edge AI and IT solutions that transform businesses." />
         <meta name="keywords" content="about us, AI solutions, IT services, technology company, digital transformation" />
         <meta property="og:title" content="About Us - Zion Tech Group" />
-        <meta property="og:description" content="Learn about Zion Tech Group's mission, values, and team. We're dedicated to delivering cutting-edge AI and IT solutions that transform businesses." />
+        <meta property="og:description" content="Learn about Zion Tech Group&apos;s mission, values, and team. We&apos;re dedicated to delivering cutting-edge AI and IT solutions that transform businesses." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/about" />
       </Helmet>
@@ -136,7 +136,7 @@ const AboutPage: React.FC = () => {
             <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12">
               <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Let's discuss how our AI and IT solutions can help your business grow and succeed.
+                Let&apos;s discuss how our AI and IT solutions can help your business grow and succeed.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
