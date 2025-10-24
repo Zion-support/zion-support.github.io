@@ -234,8 +234,4 @@ import { ArrowRight, Users, Target, Award, Lightbulb } from 'lucide-react';
   );
 };
 
-<<<<<<< HEAD
 export default AboutPage;
-=======
-export default AboutPage;
->>>>>>> 3bbbb316823654fcf319acd81f26c406bbae20e6
