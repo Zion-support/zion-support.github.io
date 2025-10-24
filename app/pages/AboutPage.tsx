@@ -250,7 +250,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Innovation</h3>
               <p className="text-gray-300">
-                We continuously push the boundaries of what's possible with cutting-edge technology solutions.
+                We continuously push the boundaries of what&apos;s possible with cutting-edge technology solutions.
               </p>
             </div>
 
