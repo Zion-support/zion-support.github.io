@@ -1,98 +1,66 @@
-  ]"
-  const stats = ["
-    { number: '40%', label: 'Higher Open Rates'
-    { number: '60%', label: 'Better Click Rates'
-    { number: '300%', label: 'ROI Increase'
-    { number: '50K+', label: 'Active Users'
-      name: 'Jennifer Smith'
-      company: 'E-commerce Store'
-      content: 'Zion Tech Group\'s AI Email Marketing has transformed our email campaigns. Our open rates increased by 40% and our revenue from email marketing has tripled in just 3 months.'
-      name: 'Michael Chen'
-      company: 'SaaS Startup'
-      content: 'The AI content generation is incredible. We can now create personalized email campaigns for different customer segments in minutes instead of hours. The automation features are a game-changer.'
-      name: 'Sarah Johnson'
-      company: 'Marketing Agency'
-      content: 'The predictive analytics help us optimize our campaigns before we even send them. We\'ve been able to increase our clients\' email ROI by 300% using this platform.'
-import React from '
-import { Helmet } from '
-import { Link } from '
-import { ArrowRight, Mail, Brain, Target, BarChart3, CheckCircle, Star, Users, Clock, Zap, Globe, Shield, Sparkles, PenTool, Calendar, DollarSign, FileText, MessageSquare, Mic, Code, Eye, EyeOff, Key, Fingerprint, Smartphone, Laptop, Monitor, Database, Cpu, Network, AlertTriangle } from '
-import React from '
-import { Helmet } from '
-import { Link } from '
-import { ArrowRight, Mail, Brain, Target, BarChart3, CheckCircle, Star, Users, Clock, Zap, Globe, Shield, Sparkles, PenTool, Calendar, DollarSign, FileText, MessageSquare, Mic, Code, Eye, EyeOff, Key, Fingerprint, Smartphone, Laptop, Monitor, Database, Cpu, Network, AlertTriangle } from 'lucide-react'
-      title: 'AI Content Generation'
-      description: '
-      title: 'Smart Segmentation'
-      description: '
-      title: 'Predictive Analytics'
-      description: '
-      title: 'Automation Workflows'
-      description: '
-      title: 'Personalization Engine'
-      description: 'Dynamic content personalization that adapts emails to each subscriber\'s interests, behavior, and demographics."
-"
-      icon: <Globe className="w-6 h-6 text-blue-400" />,"
-      title: 'Multi-Channel Integration'
-      description: '
-      title: 'Email Builder'
-      description: 'Drag-and-drop email builder with AI-powered templates and content suggestions.'
-      price: 'Included'
-      features: ['Drag-and-drop editor', 'AI templates', 'Mobile optimization', 'A/B testing'
-      title: 'AI Content Assistant'
-      description: 'Generate subject lines, email content, and CTAs using AI that learns from your best-performing campaigns.'
-      price: 'Included'
-      features: ['Subject line generation', 'Content creation', 'CTA optimization', 'Brand voice training'
-      title: 'Smart Segmentation'
-      description: 'Automatically segment your audience based on behavior, preferences, and engagement patterns.'
-      price: 'Included'
-      features: ['Behavioral segmentation', 'Demographic targeting', 'Engagement scoring', 'Dynamic lists'
-      title: 'Advanced Analytics'
-      description: 'Comprehensive analytics dashboard with predictive insights and performance optimization.'
-      price: '$9.99/month'
-      features: ['Predictive analytics', 'ROI tracking', 'Engagement insights', 'Custom reports'
-      title: 'Automation Studio'
-      description: 'Create complex email automation workflows with AI-powered triggers and conditions.'
-      price: '$19.99/month'
-      features: ['Visual workflow builder', 'AI triggers', 'Conditional logic', 'Multi-step campaigns'
-      title: 'Deliverability Suite'
-      description: 'Advanced deliverability tools to ensure your emails reach the inbox and avoid spam filters.'
-      price: '$14.99/month'
-      features: ['Spam score analysis', 'IP warming', 'Reputation monitoring', 'Bounce management'
-    {name: 'Starter'
-      price: '$29'
-      period: '/month'
-      description: 'Perfect for small businesses'
-        'Up to 5,000 subscribers',"Unlimited emails',"AI content generation',"Basic automation',"Email support'
-      name: 'Professional'
-      price: '$79'
-      period: '/month'
-      description: 'Ideal for growing businesses'
-        'Up to 25,000 subscribers',"Everything in Starter',"Advanced automation',"Predictive analytics',"Priority support',"Custom integrations'
-      name: 'Enterprise'
-      price: '$199'
-      period: '/month'
-      description: 'For large organizations'
-        'Unlimited subscribers',"Everything in Professional',"Advanced analytics',"Custom AI training',"Dedicated support',"White-label options'
-  const stats  = [{ number: '40%', label: 'Higher Open Rates'
-    { number: '60%', label: 'Better Click Rates'
-    { number: '300%', label: 'ROI Increase'
-    { number: '50K+', label: 'Active Users'
-    {name: 'Jennifer Smith'
-      company: 'E-commerce Store'
-      content: 'Zion Tech Group\'s AI Email Marketing has transformed our email campaigns. Our open rates increased by 40% and our revenue from email marketing has tripled in just 3 months.'
-      name: 'Michael Chen'
-      company: 'SaaS Startup'
-      content: 'The AI content generation is incredible. We can now create personalized email campaigns for different customer segments in minutes instead of hours. The automation features are a game-changer.'
-      name: 'Sarah Johnson'
-      company: 'Marketing Agency'
-      content: 'The predictive analytics help us optimize our campaigns before we even send them. We\'ve been able to increase our clients\' email ROI by 300% using this platform.'
-                    ? 'border-cyan-400/50 shadow-2xl shadow-cyan-500/20'
-                    : '
-                        ? '
-                        : '
-                    ? 'border-cyan-400/50 shadow-2xl shadow-cyan-500/20' ": '
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700": '
-                        {testimonial.name.split('
-  ]).join('
-                        {testimonial.name.split(' ').map(n => n[0]).join('
+"use client";
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { CheckCircle, ArrowRight, Star, BarChart, Shield, Zap } from "lucide-react";
+
+const AiEmailMarketingPage: React.FC = () => {
+  const features = [
+    {
+      icon: <BarChart className="w-8 h-8" />,
+      title: "Advanced Analytics",
+      description: "Comprehensive data analysis with AI-powered insights and real-time reporting."
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Secure & Reliable",
+      description: "Enterprise-grade security with 99.9% uptime guarantee and advanced protection."
+    },
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: "Expert Support",
+      description: "24/7 expert support and monitoring to ensure your success."
+    }
+  ];
+
+  const benefits = [
+    "Improve efficiency by 40%",
+    "Reduce costs by 30%",
+    "Enhance security posture",
+    "Scale operations seamlessly",
+    "Get 24/7 expert support"
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Ai Email Marketing - Zion Tech Group</title>
+        <meta name="description" content="Professional ai email marketing services by Zion Tech Group. Advanced solutions for your business needs." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Ai Email Marketing
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Professional ai email marketing services by Zion Tech Group. Advanced solutions for your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+
+export default AiEmailMarketingPage;

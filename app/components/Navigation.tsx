@@ -4,11 +4,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { 
   Bars3Icon, 
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import {
-  Bars3Icon,
   XMarkIcon,
   HomeIcon,
   UserGroupIcon,
@@ -44,6 +39,13 @@ const Navigation = () => {
     { name: 'Contact', href: '/contact', icon: DocumentTextIcon },
   ];
 
+  const services = [
+    { name: 'AI Services', href: '/ai-services', icon: ShieldCheckIcon },
+    { name: 'IT Services', href: '/it-services', icon: CogIcon },
+    { name: 'Micro SAAS', href: '/micro-saas', icon: CurrencyDollarIcon },
+    { name: 'Consulting', href: '/consulting', icon: AcademicCapIcon },
+  ];
+
   const isActive = (path: string) => {
     return pathname === path;
   };
@@ -71,7 +73,11 @@ const Navigation = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+                    isActive(item.href) 
+                      ? 'text-white bg-white/10' 
+                      : 'text-gray-300 hover:text-white hover:bg-white/5'
+                  }`}
                 >
                   {item.name}
                 </Link>
@@ -179,4 +185,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation
+export default Navigation;

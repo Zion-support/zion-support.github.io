@@ -14,13 +14,13 @@ const Footer: React.FC = () => {
     { name: 'AI Business Intelligence', href: '/ai-business-intelligence' }
   ];
 
-  const techServices = [
-    { name: 'Blockchain Solutions', href: '/blockchain' },
-    { name: 'Cloud Migration', href: '/cloud-migration-pro' },
-    { name: 'Cybersecurity', href: '/security' },
-    { name: '5G Implementation', href: '/5g-implementation' },
-    { name: 'Quantum Computing', href: '/quantum-computing' },
-    { name: 'IoT Solutions', href: '/zion-iot-solutions' }
+  const itServices = [
+    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
+    { name: 'Cybersecurity Suite', href: '/cybersecurity-suite' },
+    { name: 'DevOps Automation', href: '/devops-automation' },
+    { name: 'Network Management', href: '/network-management' },
+    { name: 'Data Management', href: '/data-management' },
+    { name: 'IT Consulting', href: '/it-consulting' }
   ];
 
   const companyLinks = [
@@ -30,6 +30,22 @@ const Footer: React.FC = () => {
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Contact', href: '/contact' },
     { name: 'Blog', href: '/blog' }
+  ];
+
+  const resources = [
+    { name: 'Documentation', href: '/docs' },
+    { name: 'API Reference', href: '/api' },
+    { name: 'Tutorials', href: '/tutorials' },
+    { name: 'Support', href: '/support' },
+    { name: 'Status', href: '/status' },
+    { name: 'News', href: '/news' }
+  ];
+
+  const legal = [
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Cookie Policy', href: '/cookies' },
+    { name: 'SLA', href: '/sla' }
   ];
 
   return (
@@ -67,7 +83,7 @@ const Footer: React.FC = () => {
               {aiServices.map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url} 
+                    href={service.href} 
                     className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -88,7 +104,7 @@ const Footer: React.FC = () => {
               {itServices.map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url} 
+                    href={service.href} 
                     className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -104,10 +120,10 @@ const Footer: React.FC = () => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Company</h3>
               <ul className="space-y-2">
-                {company.map((item, index) => (
+                {companyLinks.map((item, index) => (
                   <li key={index}>
                     <Link 
-                      href={item.url} 
+                      href={item.href} 
                       className="text-gray-400 hover:text-white transition-colors text-sm"
                     >
                       {item.name}
@@ -123,7 +139,7 @@ const Footer: React.FC = () => {
                 {resources.map((item, index) => (
                   <li key={index}>
                     <Link 
-                      href={item.url} 
+                      href={item.href} 
                       className="text-gray-400 hover:text-white transition-colors text-sm"
                     >
                       {item.name}
@@ -145,7 +161,7 @@ const Footer: React.FC = () => {
               <Phone className="w-5 h-5 text-purple-400" />
               <div>
                 <p className="text-sm text-gray-400">Phone</p>
-                <p className="text-white">+1 (555) 123-4567</p>
+                <p className="text-white">+1 (302) 600-9898</p>
               </div>
             </div>
             <div className="flex items-center space-x-3">
@@ -164,18 +180,12 @@ const Footer: React.FC = () => {
             {legal.map((item, index) => (
               <Link 
                 key={index}
-                href={item.url} 
-                className="text-gray-400 hover:text-white transition-colors text-sm"
+                href={item.href} 
+                className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
               >
                 {item.name}
               </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                Terms of Service
-              </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                Cookie Policy
-              </Link>
-            </div>
+            ))}
           </div>
         </div>
       </div>

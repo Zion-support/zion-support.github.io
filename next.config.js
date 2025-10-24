@@ -16,7 +16,6 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   output: 'standalone'
-  },
   // Skip problematic pages during build
 }
 

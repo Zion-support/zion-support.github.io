@@ -1,64 +1,66 @@
-      rating: 4.8,
-      students: 1250,
-      thumbnail: "🤖"},"
-"
-      id: 2,"
-      title: "Infrastructure Setup","
-      description: "Complete guide to setting up cloud infrastructure on AWS and Azure.","
-      duration: "3 hours","
-      level: "Intermediate","
-      instructor: "Michael Chen","
-      rating: 4.9,"
-      students: 980,"
-      thumbnail: "☁️"},"
-"
-      id: 3,"
-      title: "Cybersecurity Fundamentals","
-      description: "Essential cybersecurity practices and threat protection strategies.","
-      duration: "4 hours","
-      level: "Beginner","
-      instructor: "Emily Rodriguez","
-      rating: 4.7,"
-      students: 2100,"
-      thumbnail: "🔒"},"
-"
-      id: 4,"
-      title: "Advanced Machine Learning","
-      description: "Deep dive into advanced ML algorithms and neural networks.","
-      duration: "6 hours","
-      level: "Advanced","
-      instructor: "Dr. David Kim","
-      rating: 4.9,"
-      students: 750,"
-      thumbnail: "🧠"},"
-"
-      id: 5,"
-      title: "DevOps Best Practices","
-      description: "Learn modern DevOps practices and CI/CD pipeline implementation.","
-      duration: "5 hours","
-      level: "Intermediate","
-      instructor: "Lisa Wang","
-      rating: 4.8,"
-      students: 1100,"
-      thumbnail: "⚙️"},"
-"
-      id: 6,"
-      title: "Data Analytics with Python","
-      description: "Master data analysis and visualization using Python and popular libraries.","
-      duration: "4 hours","
-      level: "Intermediate","
-      instructor: "James Wilson","
-      rating: 4.6,"
-      students: 1650,"
-      thumbnail: "📊"}"
-  ];"
-const Page  = () => {"
-  const features  = ["
-    {icon: <CheckCircle className="w-8 h-8" />,"
-      title: 'Advanced Features'
-      description: '
-      title: 'Secure & Reliable'
-      description: '
-      title: 'Expert Support'
-      description: '
-const page  = React.lazy(() => import('./page'
+"use client";
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { CheckCircle, ArrowRight, Star, BarChart, Shield, Zap } from "lucide-react";
+
+const TutorialsPage: React.FC = () => {
+  const features = [
+    {
+      icon: <BarChart className="w-8 h-8" />,
+      title: "Advanced Analytics",
+      description: "Comprehensive data analysis with AI-powered insights and real-time reporting."
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Secure & Reliable",
+      description: "Enterprise-grade security with 99.9% uptime guarantee and advanced protection."
+    },
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: "Expert Support",
+      description: "24/7 expert support and monitoring to ensure your success."
+    }
+  ];
+
+  const benefits = [
+    "Improve efficiency by 40%",
+    "Reduce costs by 30%",
+    "Enhance security posture",
+    "Scale operations seamlessly",
+    "Get 24/7 expert support"
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Tutorials - Zion Tech Group</title>
+        <meta name="description" content="Professional tutorials services by Zion Tech Group. Advanced solutions for your business needs." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Tutorials
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Professional tutorials services by Zion Tech Group. Advanced solutions for your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+
+export default TutorialsPage;

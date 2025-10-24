@@ -1,96 +1,66 @@
-  ]"
-  const stats = ["
-    { number: '40%', label: 'Productivity Increase'
-    { number: '95%', label: 'Task Completion Rate'
-    { number: '2hrs', label: 'Time Saved Daily'
-    { number: '50K+', label: 'Active Users'
-      name: 'Jessica Martinez'
-      company: 'Product Manager'
-      content: 'Zion Tech Group\'s AI Task Manager has completely transformed how I organize my work. The AI prioritization is incredibly accurate and I\'ve increased my productivity by 40%.'
-      name: 'David Kim'
-      company: 'Freelance Designer'
-      content: 'The smart scheduling feature is a game-changer. It automatically finds the best times for my creative work and blocks out distractions. I\'ve never been more organized.'
-      name: 'Sarah Johnson'
-      company: 'Team Lead'
-      content: 'The team collaboration features are outstanding. We can now track everyone\'s progress in real-time and the AI helps us identify bottlenecks before they become problems.'
-import React from '
-import { Helmet } from '
-import { Link } from '
-import { ArrowRight, CheckCircle, Brain, Target, BarChart3, CheckCircle2, Star, Users, Clock, Zap, Globe, Shield, Sparkles, PenTool, Calendar, DollarSign, FileText, Mail, MessageSquare, Mic, Code, Eye, EyeOff, Key, Fingerprint, Smartphone, Laptop, Monitor, Database, Cpu, Network, AlertTriangle } from '
-import React from '
-import { Helmet } from '
-import { Link } from '
-import { ArrowRight, CheckCircle, Brain, Target, BarChart3, CheckCircle2, Star, Users, Clock, Zap, Globe, Shield, Sparkles, PenTool, Calendar, DollarSign, FileText, Mail, MessageSquare, Mic, Code, Eye, EyeOff, Key, Fingerprint, Smartphone, Laptop, Monitor, Database, Cpu, Network, AlertTriangle } from 'lucide-react'
-      title: 'AI Task Prioritization'
-      description: '
-      title: 'Smart Scheduling'
-      description: '
-      title: 'Progress Analytics'
-      description: '
-      title: 'Team Collaboration'
-      description: '
-      title: 'Automation'
-      description: '
-      title: 'Cross-Platform Sync'
-      description: '
-      title: 'Smart Task Creation'
-      description: 'Create tasks using natural language and let AI extract details, set priorities, and suggest deadlines.'
-      price: 'Included'
-      features: ['Natural language input', 'Auto-categorization', 'Priority detection', 'Deadline suggestions'
-      title: 'Intelligent Scheduling'
-      description: 'AI-powered calendar integration that finds optimal time slots and prevents scheduling conflicts.'
-      price: 'Included'
-      features: ['Calendar sync', 'Time blocking', 'Conflict detection', 'Energy optimization'
-      title: 'Productivity Analytics'
-      description: 'Comprehensive analytics dashboard to track your productivity and identify improvement opportunities.'
-      price: 'Included'
-      features: ['Time tracking', 'Productivity metrics', 'Goal tracking', 'Performance insights'
-      title: 'Team Management'
-      description: 'Advanced team collaboration features with task assignments, progress tracking, and communication tools.'
-      price: '$4.99/month'
-      features: ['Team workspaces', 'Task assignments', 'Progress tracking', 'Team analytics'
-      title: 'Workflow Automation'
-      description: 'Automate repetitive tasks and create custom workflows to boost your productivity.'
-      price: '$2.99/month'
-      features: ['Custom workflows', 'Task automation', 'Integration triggers', 'Smart notifications'
-      title: 'Enterprise Security'
-      description: 'Advanced security features for enterprise teams including SSO, audit logs, and compliance.'
-      price: '$9.99/month'
-      features: ['SSO integration', 'Audit logs', 'Compliance tools', 'Advanced permissions'
-    {name: 'Personal'
-      price: '$4.99'
-      period: '/month'
-      description: 'Perfect for individuals'
-        'Unlimited tasks',"AI prioritization',"Smart scheduling',"Basic analytics',"Cross-platform sync'
-      name: 'Professional'
-      price: '$9.99'
-      period: '/month'
-      description: 'Ideal for professionals'
-        'Everything in Personal',"Advanced analytics',"Team collaboration',"Workflow automation',"Priority support'
-      name: 'Enterprise'
-      price: '$19.99'
-      period: '/month'
-      description: 'For teams and organizations'
-        'Everything in Professional',"Advanced team features',"Enterprise security',"Custom AI training',"Dedicated support'
-  const stats  = [{ number: '40%', label: 'Productivity Increase'
-    { number: '95%', label: 'Task Completion Rate'
-    { number: '2hrs', label: 'Time Saved Daily'
-    { number: '50K+', label: 'Active Users'
-    {name: 'Jessica Martinez'
-      company: 'Product Manager'
-      content: 'Zion Tech Group\'s AI Task Manager has completely transformed how I organize my work. The AI prioritization is incredibly accurate and I\'ve increased my productivity by 40%.'
-      name: 'David Kim'
-      company: 'Freelance Designer'
-      content: 'The smart scheduling feature is a game-changer. It automatically finds the best times for my creative work and blocks out distractions. I\'ve never been more organized.'
-      name: 'Sarah Johnson'
-      company: 'Team Lead'
-      content: 'The team collaboration features are outstanding. We can now track everyone\'s progress in real-time and the AI helps us identify bottlenecks before they become problems.'
-                    ? 'border-cyan-400/50 shadow-2xl shadow-cyan-500/20'
-                    : '
-                        ? '
-                        : '
-                    ? 'border-cyan-400/50 shadow-2xl shadow-cyan-500/20' ": '
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700": '
-                        {testimonial.name.split('
-  ]).join('
-                        {testimonial.name.split(' ').map(n => n[0]).join('
+"use client";
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { CheckCircle, ArrowRight, Star, BarChart, Shield, Zap } from "lucide-react";
+
+const AiTaskManagerPage: React.FC = () => {
+  const features = [
+    {
+      icon: <BarChart className="w-8 h-8" />,
+      title: "Advanced Analytics",
+      description: "Comprehensive data analysis with AI-powered insights and real-time reporting."
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Secure & Reliable",
+      description: "Enterprise-grade security with 99.9% uptime guarantee and advanced protection."
+    },
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: "Expert Support",
+      description: "24/7 expert support and monitoring to ensure your success."
+    }
+  ];
+
+  const benefits = [
+    "Improve efficiency by 40%",
+    "Reduce costs by 30%",
+    "Enhance security posture",
+    "Scale operations seamlessly",
+    "Get 24/7 expert support"
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Ai Task Manager - Zion Tech Group</title>
+        <meta name="description" content="Professional ai task manager services by Zion Tech Group. Advanced solutions for your business needs." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Ai Task Manager
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Professional ai task manager services by Zion Tech Group. Advanced solutions for your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+
+export default AiTaskManagerPage;

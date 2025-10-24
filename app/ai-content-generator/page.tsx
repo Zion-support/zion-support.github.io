@@ -1,28 +1,66 @@
+"use client";
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { CheckCircle, ArrowRight, Star, BarChart, Shield, Zap } from "lucide-react";
+
+const AiContentGeneratorPage: React.FC = () => {
+  const features = [
+    {
+      icon: <BarChart className="w-8 h-8" />,
+      title: "Advanced Analytics",
+      description: "Comprehensive data analysis with AI-powered insights and real-time reporting."
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Secure & Reliable",
+      description: "Enterprise-grade security with 99.9% uptime guarantee and advanced protection."
+    },
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: "Expert Support",
+      description: "24/7 expert support and monitoring to ensure your success."
+    }
+  ];
+
+  const benefits = [
+    "Improve efficiency by 40%",
+    "Reduce costs by 30%",
+    "Enhance security posture",
+    "Scale operations seamlessly",
+    "Get 24/7 expert support"
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Ai Content Generator - Zion Tech Group</title>
+        <meta name="description" content="Professional ai content generator services by Zion Tech Group. Advanced solutions for your business needs." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Ai Content Generator
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Professional ai content generator services by Zion Tech Group. Advanced solutions for your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More
+              </button>
             </div>
           </div>
         </section>
+      </div>
+    </>
+  );
+};
 
-        {/* Features Section */}
-                </div>
-              )}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-16 sm:py-20">"
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-            <div className="text-center mb-12 sm:mb-16">"
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">"
-                Simple, Transparent <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Pricing</span>"
-              </h2>"
-              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">"
-              </p>"
-            </div>"
-            "
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
-                      ? '
-                      : '
-                        ? '
-                        : '
-const page  = React.lazy(() => import('./page'
+export default AiContentGeneratorPage;

@@ -1,100 +1,66 @@
-  ]"
-  const stats = ["
-    { number: '99.9%', label: 'Security Uptime'
-    { number: '256-bit', label: 'Encryption'
-    { number: '24/7', label: 'Monitoring'
-    { number: '1M+', label: 'Users Protected'
-      name: 'Sarah Johnson'
-      company: 'Tech Professional'
-      content: 'Zion Tech Group\'s AI Password Manager has completely transformed how I handle passwords. The AI generation is incredibly smart and the breach monitoring gives me peace of mind.'
-      name: 'Michael Chen'
-      company: 'Small Business Owner'
-      content: 'The family sharing features are perfect for our household. We can securely share important accounts while maintaining individual privacy. The AI security scan caught several weak passwords we didn\'t even know about.'
-      name: 'Emily Rodriguez'
-      company: 'IT Manager'
-      content: 'The business features are exactly what we needed. The team management and admin controls make it easy to ensure our employees are following security best practices.'
-import React from '
-import { Helmet } from '
-import { Link } from '
-import { ArrowRight, Lock, Brain, Shield, CheckCircle, Star, Users, Clock, Target, BarChart3, Globe, Zap, Eye, EyeOff, Key, Fingerprint, Smartphone, Laptop, Monitor, Database, Cpu, Network, AlertTriangle, FileText, Mail, MessageSquare, Calendar, DollarSign } from '
-import React from '
-import { Helmet } from '
-import { Link } from '
-import { ArrowRight, Lock, Brain, Shield, CheckCircle, Star, Users, Clock, Target, BarChart3, Globe, Zap, Eye, EyeOff, Key, Fingerprint, Smartphone, Laptop, Monitor, Database, Cpu, Network, AlertTriangle, FileText, Mail, MessageSquare, Calendar, DollarSign } from 'lucide-react'
-      title: 'AI Password Generation'
-      description: 'Generate ultra-secure passwords using AI algorithms that adapt to each site\'s requirements and your preferences."
-"
-      icon: <Shield className="w-6 h-6 text-emerald-400" />,"
-      title: 'Advanced Security'
-      description: '
-      title: 'Breach Monitoring'
-      description: '
-      title: 'Auto-Fill & Sync'
-      description: '
-      title: 'Biometric Access'
-      description: '
-      title: 'Security Analytics'
-      description: '
-      title: 'Password Vault'
-      description: 'Store unlimited passwords with end-to-end encryption and secure cloud backup.'
-      price: 'Included'
-      features: ['Unlimited storage', 'End-to-end encryption', 'Cloud backup', 'Offline access'
-      title: 'AI Security Scan'
-      description: 'AI-powered analysis of your passwords to identify weak, reused, or compromised credentials.'
-      price: 'Included'
-      features: ['Weak password detection', 'Reuse analysis', 'Breach monitoring', 'Security scoring'
-      title: 'Two-Factor Auth'
-      description: 'Built-in 2FA support with TOTP generation and secure backup codes.'
-      price: 'Included'
-      features: ['TOTP support', 'Backup codes', 'QR code scanning', 'Multiple devices'
-      title: 'Family Sharing'
-      description: 'Secure password sharing with family members and trusted contacts.'
-      price: '$2.99/month'
-      features: ['Family vault', 'Secure sharing', 'Permission controls', 'Activity monitoring'
-      title: 'Dark Web Monitoring'
-      description: 'Continuous monitoring of the dark web for your personal information and credentials.'
-      price: '$4.99/month'
-      features: ['Dark web scanning', 'Identity monitoring', 'Credit monitoring', 'Alert system'
-      title: 'Business Features'
-      description: 'Advanced features for businesses including team management and admin controls.'
-      price: '$9.99/month'
-      features: ['Team management', 'Admin dashboard', 'SSO integration', 'Compliance reporting'
-    {name: 'Personal'
-      price: '$2.99'
-      period: '/month'
-      description: 'Perfect for individuals'
-        'Unlimited passwords',"AI password generation',"Auto-fill & sync',"Biometric access',"Breach monitoring'
-      name: 'Family'
-      price: '$4.99'
-      period: '/month'
-      description: 'Ideal for families'
-        'Everything in Personal',"Up to 6 family members',"Secure sharing',"Family vault',"Priority support'
-      name: 'Business'
-      price: '$9.99'
-      period: '/month'
-      description: 'For small businesses'
-        'Everything in Family',"Team management',"Admin dashboard',"SSO integration',"Compliance reporting'
-  const stats  = [{ number: '99.9%', label: 'Security Uptime'
-    { number: '256-bit', label: 'Encryption'
-    { number: '24/7', label: 'Monitoring'
-    { number: '1M+', label: 'Users Protected'
-    {name: 'Sarah Johnson'
-      company: 'Tech Professional'
-      content: 'Zion Tech Group\'s AI Password Manager has completely transformed how I handle passwords. The AI generation is incredibly smart and the breach monitoring gives me peace of mind.'
-      name: 'Michael Chen'
-      company: 'Small Business Owner'
-      content: 'The family sharing features are perfect for our household. We can securely share important accounts while maintaining individual privacy. The AI security scan caught several weak passwords we didn\'t even know about.'
-      name: 'Emily Rodriguez'
-      company: 'IT Manager'
-      content: 'The business features are exactly what we needed. The team management and admin controls make it easy to ensure our employees are following security best practices.'
-                    ? 'border-cyan-400/50 shadow-2xl shadow-cyan-500/20'
-                    : '
-                        ? '
-                        : '
-                    ? 'border-cyan-400/50 shadow-2xl shadow-cyan-500/20' ": '
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700": '
-                        {testimonial.name.split('
-  ]).join('
-                Don'
-                        {testimonial.name.split(' ').map(n => n[0]).join('
-                Don'
+"use client";
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { CheckCircle, ArrowRight, Star, BarChart, Shield, Zap } from "lucide-react";
+
+const AiPasswordManagerPage: React.FC = () => {
+  const features = [
+    {
+      icon: <BarChart className="w-8 h-8" />,
+      title: "Advanced Analytics",
+      description: "Comprehensive data analysis with AI-powered insights and real-time reporting."
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Secure & Reliable",
+      description: "Enterprise-grade security with 99.9% uptime guarantee and advanced protection."
+    },
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: "Expert Support",
+      description: "24/7 expert support and monitoring to ensure your success."
+    }
+  ];
+
+  const benefits = [
+    "Improve efficiency by 40%",
+    "Reduce costs by 30%",
+    "Enhance security posture",
+    "Scale operations seamlessly",
+    "Get 24/7 expert support"
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Ai Password Manager - Zion Tech Group</title>
+        <meta name="description" content="Professional ai password manager services by Zion Tech Group. Advanced solutions for your business needs." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Ai Password Manager
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Professional ai password manager services by Zion Tech Group. Advanced solutions for your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+
+export default AiPasswordManagerPage;

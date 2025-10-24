@@ -1,61 +1,66 @@
+"use client";
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { CheckCircle, ArrowRight, Star, BarChart, Shield, Zap } from "lucide-react";
+
+const CloudInfrastructurePage: React.FC = () => {
+  const features = [
+    {
+      icon: <BarChart className="w-8 h-8" />,
+      title: "Advanced Analytics",
+      description: "Comprehensive data analysis with AI-powered insights and real-time reporting."
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Secure & Reliable",
+      description: "Enterprise-grade security with 99.9% uptime guarantee and advanced protection."
+    },
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: "Expert Support",
+      description: "24/7 expert support and monitoring to ensure your success."
+    }
+  ];
+
+  const benefits = [
+    "Improve efficiency by 40%",
+    "Reduce costs by 30%",
+    "Enhance security posture",
+    "Scale operations seamlessly",
+    "Get 24/7 expert support"
+  ];
+
+  return (
+    <>
       <Helmet>
-        <title>Infrastructure | Zion Tech Group</title>
-        <meta name ="description" content="Professional Infrastructure services by Zion Tech Group. Advanced AI and IT solutions for your business." />"
-        <meta name ="keywords" content="cloud infrastructure, cloud services, IT services, Zion Tech Group, cloud computing" />"
-      </Helmet>"
-      <div className ="container mx-auto px-4 py-16">"
-        <div className ="text-center mb-16">"
-          <h1 className ="text-5xl font-bold text-white mb-6">"
-            Infrastructure <span className ="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>"
-          </h1>"
-          <p className ="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
-            Transform your business with our advanced cloud infrastructure solutions designed for scalability, security, and performance.;"
-          </p>"
-        </div>"
-        <div className ="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">"
-          <div className ="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">"
-            <h3 className ="text-xl font-semibold text-white mb-4">Migration</h3>"
-            <p className ="text-gray-300 mb-4">"
-              Seamlessly migrate your applications and data to the cloud with minimal downtime."
-            </p>"
-            <ul className ="text-sm text-gray-400 space-y-2">"
-              <li>• Cost optimization</li>"
-            </ul>"
-          </div>"
-          <div className ="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">"
-            <h3 className ="text-xl font-semibold text-white mb-4"></h3>"
-            <p className ="text-gray-300 mb-4">"
-              Comprehensive security solutions to protect your cloud infrastructure."
-            </p>"
-            <ul className ="text-sm text-gray-400 space-y-2">"
-              <li>• Compliance monitoring</li>"
-            </ul>"
-          </div>"
-          <div className ="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">"
-            <h3 className ="text-xl font-semibold text-white mb-4">Auto Scaling</h3>"
-            <p className ="text-gray-300 mb-4">"
-              Automatically scale your infrastructure based on demand and usage patterns."
-            </p>"
-            <ul className ="text-sm text-gray-400 space-y-2">"
-            </ul>"
-          </div>"
-        </div>"
-        <div className ="text-center">"
-          <div className ="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">"
-            <h2 className ="text-2xl font-bold text-white mb-4">Ready to Transform Your Infrastructure?</h2>"
-            <p className ="text-gray-300 mb-6">"
-              Our cloud infrastructure experts are ready to help you build a scalable, secure, and efficient cloud environment."
-            </p>"
-            <button className ="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">"
-"
-const Page  = () => {"
-  const features  = ["
-    {icon: <CheckCircle className="w-8 h-8" />,"
-      title: 'Advanced Features'
-      description: '
-      title: 'Secure & Reliable'
-      description: '
-      title: 'Expert Support'
-      description: '
-              Let'
-const page  = React.lazy(() => import('./page'
+        <title>Cloud Infrastructure - Zion Tech Group</title>
+        <meta name="description" content="Professional cloud infrastructure services by Zion Tech Group. Advanced solutions for your business needs." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Cloud Infrastructure
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Professional cloud infrastructure services by Zion Tech Group. Advanced solutions for your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+
+export default CloudInfrastructurePage;
