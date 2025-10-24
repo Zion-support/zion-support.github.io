@@ -17,20 +17,24 @@ const AboutPage: React.FC = () => {
   const values = [
     {
       icon: Brain,
-    title: 'Innovation',
-      description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions.'},
-  {
-    icon: Shield,
-    title: 'Security',
-      description: 'Your data and systems are protected with enterprise-grade security measures.'},
-  {
-    icon: Globe,
-    title: 'Global Reach',
-      description: 'Serving clients worldwide with localized support and expertise.'},
-  {
-    icon: Users,
-    title: 'Collaboration',
-    description: 'We work closely with our clients to understand their unique needs.'}
+      title: 'Innovation',
+      description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions.'
+    },
+    {
+      icon: Shield,
+      title: 'Security',
+      description: 'Your data and systems are protected with enterprise-grade security measures.'
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Serving clients worldwide with localized support and expertise.'
+    },
+    {
+      icon: Users,
+      title: 'Collaboration',
+      description: 'We work closely with our clients to understand their unique needs.'
+    }
   ]
   const stats = [
     { number: '500+', label: 'Projects Completed' },
@@ -44,23 +48,23 @@ const AboutPage: React.FC = () => {
         <section className="pt-32 pb-20">
           <div className="container mx-auto px-4 text-center">
             <div className="transition-all duration-1000 opacity-100 translate-y-0">
-              <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 About <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Zion Tech Group</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 We are a leading technology company specializing in AI and IT solutions that transform businesses and drive innovation across industries.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-500 hover: from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+                  className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
                 >
                   Get in Touch
                   <ArrowRight className="w-8 h-8" />
                 </Link>
                 <Link
                   href="/services"
-                  className="border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
+                  className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
                 >
                   Our Services
                 </Link>
@@ -78,7 +82,7 @@ const AboutPage: React.FC = () => {
                 efficiency, and innovation. We believe technology should be accessible
                 reliable, and transformative.
               </p>
-              <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
                 {stats.map((stat, index) => (
                   <div key={index} className="text-center">
                     <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.number}</div>
@@ -98,9 +102,9 @@ const AboutPage: React.FC = () => {
                 These core values guide everything we do and shape our company culture.
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover: bg-white/20 transition-all duration-300">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
                   <div className="flex justify-center mb-4">
                     {value.icon}
                   </div>

@@ -52,72 +52,72 @@ export default function AiFinancialAnalyticsProPage() {
 }
   ]
   const analyticsTypes = [
-  {
-  category: 'Revenue Analytics',
-    icon: DollarSign
+    {
+      category: 'Revenue Analytics',
+      icon: DollarSign,
       items: [
         'Revenue forecasting',
         'Sales performance tracking',
         'Customer lifetime value',
         'Revenue optimization',
-    'Market share analysis'
-  ]
-}
+        'Market share analysis'
+      ]
+    },
     {
-  category: 'Expense Management',
-    icon: Calculator
+      category: 'Expense Management',
+      icon: Calculator,
       items: [
         'Cost center analysis',
         'Budget variance tracking',
         'Expense categorization',
         'Spend optimization',
-    'Vendor performance'
-  ]
-}
+        'Vendor performance'
+      ]
+    },
     {
-  category: 'Cash Flow Analysis',
-    icon: Activity
+      category: 'Cash Flow Analysis',
+      icon: Activity,
       items: [
         'Cash flow forecasting',
         'Working capital analysis',
         'Liquidity management',
         'Payment optimization',
-    'Credit risk assessment'
-  ]
-}
+        'Credit risk assessment'
+      ]
+    },
     {
-  category: 'Investment Analytics',
-    icon: TrendingUp
+      category: 'Investment Analytics',
+      icon: TrendingUp,
       items: [
         'Portfolio performance',
         'Risk-return analysis',
         'Asset allocation',
         'Investment tracking',
-    'ROI calculations'
-  ]
-}
+        'ROI calculations'
+      ]
+    },
     {
-  category: 'Compliance & Audit',
-    icon: Lock
+      category: 'Compliance & Audit',
+      icon: Lock,
       items: [
         'Regulatory compliance',
         'Audit trail management',
         'Financial controls',
         'Risk monitoring',
-    'Documentation'
-  ]
-}
+        'Documentation'
+      ]
+    },
     {
-  category: 'Predictive Modeling',
-    icon: Brain
+      category: 'Predictive Modeling',
+      icon: Brain,
       items: [
         'Financial forecasting',
         'Scenario planning',
         'Risk modeling',
         'Market predictions',
-    'Trend analysis'
-  ]
-}
+        'Trend analysis'
+      ]
+    }
   ]
   const pricingPlans = [
   {
@@ -131,15 +131,16 @@ export default function AiFinancialAnalyticsProPage() {
         'Monthly reports',
         'Email support',
         'Standard integrations',
-    '1GB data storage'
-  ]
+        '1GB data storage'
+      ],
       popular: false,
-    cta: 'Start Free Trial'}
+      cta: 'Start Free Trial'
+    },
     {
       name: 'Professional',
-    price: '$499',
+      price: '$499',
       period: '/month',
-    description: 'Ideal for growing businesses and finance teams',
+      description: 'Ideal for growing businesses and finance teams',
       features: [
         'Unlimited data sources',
         'Advanced analytics suite',
@@ -148,15 +149,16 @@ export default function AiFinancialAnalyticsProPage() {
         'Custom integrations',
         '10GB data storage',
         'AI-powered insights',
-    'Custom reporting'
-  ]
+        'Custom reporting'
+      ],
       popular: true,
-    cta: 'Get Started'}
+      cta: 'Get Started'
+    },
     {
       name: 'Enterprise',
-    price: '$1,299',
+      price: '$1,299',
       period: '/month',
-    description: 'For large organizations with complex financial needs',
+      description: 'For large organizations with complex financial needs',
       features: [
         'Everything in Professional',
         'Custom AI models',
@@ -165,10 +167,11 @@ export default function AiFinancialAnalyticsProPage() {
         'Unlimited storage',
         'API access',
         'On-premise deployment',
-    'Custom compliance'
-  ]
+        'Custom compliance'
+      ],
       popular: false,
-    cta: 'Contact Sales'}
+      cta: 'Contact Sales'
+    }
   ]
   const testimonials = [
     {
@@ -177,24 +180,27 @@ export default function AiFinancialAnalyticsProPage() {
       role: 'CFO',
     content: 'AI Financial Analytics Pro has transformed our financial reporting. The AI insights help us make data-driven decisions and identify opportunities we would have missed.',
       rating: 5,
-    avatar: 'JW',
-      results: '35% faster financial reporting'}
+      avatar: 'JW',
+      results: '35% faster financial reporting'
+    },
     {
       name: 'Robert Kim',
-    company: 'Global Investments',
+      company: 'Global Investments',
       role: 'Financial Director',
-    content: 'The predictive analytics are incredibly accurate. We can now forecast revenue with 95% accuracy, helping us plan better and reduce financial risks.',
+      content: 'The predictive analytics are incredibly accurate. We can now forecast revenue with 95% accuracy, helping us plan better and reduce financial risks.',
       rating: 5,
-    avatar: 'RK',
-      results: '95% forecast accuracy'}
+      avatar: 'RK',
+      results: '95% forecast accuracy'
+    },
     {
       name: 'Lisa Thompson',
-    company: 'Enterprise Corp',
+      company: 'Enterprise Corp',
       role: 'VP Finance',
-    content: 'The automated reporting saves us 20+ hours per week. Our team can now focus on strategic analysis instead of manual data processing.',
+      content: 'The automated reporting saves us 20+ hours per week. Our team can now focus on strategic analysis instead of manual data processing.',
       rating: 5,
-    avatar: 'LT',
-    results: '20+ hours saved weekly'}
+      avatar: 'LT',
+      results: '20+ hours saved weekly'
+    }
   ]
   const stats = [
     { number: '500+', label: 'Financial Institutions', icon: Building2 },

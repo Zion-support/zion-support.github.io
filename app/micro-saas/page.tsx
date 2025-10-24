@@ -1,55 +1,56 @@
+"use client";
+
 import React from "react";
 import { Zap, Layers, Users, TrendingUp, CheckCircle, ArrowRight } from "lucide-react";
-"use client",
 const MicroSaasPage: React.FC = () => {
   const services = [
-  {
+    {
       icon: Zap,
-    title: "Rapid Development",
+      title: "Rapid Development",
       description: "Get your SaaS product to market in weeks, not months",
       features: [
         "MVP Development",
         "Rapid Prototyping",
         "Agile Methodology",
-    "Quick Iterations"
-  ]
+        "Quick Iterations"
+      ],
       price: "Starting at $8,000"
-},
-  {
-    icon: Layers,
-    title: "Scalable Architecture",
+    },
+    {
+      icon: Layers,
+      title: "Scalable Architecture",
       description: "Built to grow with your business from day one",
-    features: [
+      features: [
         "Microservices Design",
         "Cloud-Native Solutions",
         "Auto-Scaling",
-    "Load Balancing"
-  ]
+        "Load Balancing"
+      ],
       price: "Starting at $12,000"
-},
-  {
-    icon: Users,
-    title: "User Management",
+    },
+    {
+      icon: Users,
+      title: "User Management",
       description: "Complete user authentication and management system",
-    features: [
+      features: [
         "Multi-Tenant Support",
         "Role-Based Access",
         "SSO Integration",
-    "User Analytics"
-  ]
+        "User Analytics"
+      ],
       price: "Starting at $6,000"
-},
-  {
-    icon: TrendingUp,
-    title: "Analytics & Insights",
+    },
+    {
+      icon: TrendingUp,
+      title: "Analytics & Insights",
       description: "Comprehensive analytics to drive growth",
-    features: [
+      features: [
         "Usage Analytics",
         "Performance Metrics",
         "Business Intelligence",
-    "Custom Dashboards"
-  ]
-      price: "Starting at $4,000",
+        "Custom Dashboards"
+      ],
+      price: "Starting at $4,000"
     }
   ]
   const platforms = [
@@ -61,10 +62,10 @@ const MicroSaasPage: React.FC = () => {
     "Chrome Extensions"
   ]
   const techStack = [
-  "React", "Next.js", "Vue.js", "Angular", "Node.js", "Python", "Go"
-    "PostgreSQL", "MongoDB", "Redis", "AWS", "Docker", "Kubernetes"
+    "React", "Next.js", "Vue.js", "Angular", "Node.js", "Python", "Go",
+    "PostgreSQL", "MongoDB", "Redis", "AWS", "Docker", "Kubernetes",
     "Stripe", "Auth0", "SendGrid", "Twilio", "WebSocket", "GraphQL"
-]
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}

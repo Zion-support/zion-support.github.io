@@ -1,35 +1,36 @@
+"use client";
+
 import React from "react";
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Send, BarChart3, Shield, Zap, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react';
-"use client",
 export default function HomePage() {
   const features = [
-  {
+    {
       title: "AI-Powered Solutions",
-    description: "Cutting-edge artificial intelligence to transform your business operations with machine learning, natural language processing, and predictive analytics",
+      description: "Cutting-edge artificial intelligence to transform your business operations with machine learning, natural language processing, and predictive analytics",
       icon: Brain,
-    benefits: [
+      benefits: [
         "Machine Learning Implementation",
         "Natural Language Processing",
         "Predictive Analytics",
-    "Automated Decision Making"
-  ]
-}
+        "Automated Decision Making"
+      ]
+    },
     {
-  title: "IT Services",
-    description: "Comprehensive technology solutions including cloud infrastructure, cybersecurity, and digital transformation for modern businesses",
+      title: "IT Services",
+      description: "Comprehensive technology solutions including cloud infrastructure, cybersecurity, and digital transformation for modern businesses",
       icon: BarChart,
-    benefits: [
+      benefits: [
         "Cloud Infrastructure Setup",
         "Cybersecurity Solutions",
         "Digital Transformation",
-    "24/7 Technical Support"
-  ]
-}
+        "24/7 Technical Support"
+      ]
+    },
     {
-  title: "Micro SaaS",
-    description: "Scalable software-as-a-service solutions designed for rapid deployment and growth, perfect for startups and enterprises",
+      title: "Micro SaaS",
+      description: "Scalable software-as-a-service solutions designed for rapid deployment and growth, perfect for startups and enterprises",
       icon: Target,
     benefits: [
         "Rapid Deployment",
@@ -37,10 +38,10 @@ export default function HomePage() {
         "Custom Development",
     "Ongoing Maintenance"
   ]
-}
+    },
     {
-  title: "Business Intelligence",
-    description: "Advanced analytics and reporting tools to help you make data-driven decisions and optimize your business performance",
+      title: "Business Intelligence",
+      description: "Advanced analytics and reporting tools to help you make data-driven decisions and optimize your business performance",
       icon: TrendingUp,
     benefits: [
         "Data Visualization",

@@ -38,12 +38,14 @@ const AIAutomationPage: React.FC = () => {
     },
     {
       title: 'Marketing Automation',
-    description: 'Automate email campaigns, lead scoring, and customer segmentation.',
-      icon: MessageCircle}
+      description: 'Automate email campaigns, lead scoring, and customer segmentation.',
+      icon: MessageCircle
+    },
     {
       title: 'Financial Operations',
-    description: 'Automate invoice processing, expense management, and financial reporting.',
-    icon: FileText}
+      description: 'Automate invoice processing, expense management, and financial reporting.',
+      icon: FileText
+    }
   ]
   const benefits = [
   'Reduce operational costs by up to 70%',

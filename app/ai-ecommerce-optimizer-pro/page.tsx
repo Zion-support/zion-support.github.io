@@ -31,35 +31,35 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
         'Up to 10,000 products',
         'Basic AI optimization',
         'Analytics dashboard',
-    'Email support'
-  ]
-}
+        'Email support'
+      ]
+    },
     {
-  name: 'Professional',
-    price: '$299',
+      name: 'Professional',
+      price: '$299',
       period: '/month',
-    description: 'Perfect for established online stores',
+      description: 'Perfect for established online stores',
       features: [
         'Up to 50,000 products',
         'Advanced AI optimization',
         'Real-time analytics',
         'Priority support',
-    'Custom integrations'
-  ]
-}
+        'Custom integrations'
+      ]
+    },
     {
-  name: 'Enterprise',
-    price: 'Custom',
+      name: 'Enterprise',
+      price: 'Custom',
       period: '',
-    description: 'For large-scale e-commerce operations',
+      description: 'For large-scale e-commerce operations',
       features: [
         'Unlimited products',
         'Full AI suite',
         'Dedicated support',
         'Custom development',
-    'SLA guarantee'
-  ]
-}
+        'SLA guarantee'
+      ]
+    }
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">

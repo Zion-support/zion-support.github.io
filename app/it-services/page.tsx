@@ -1,63 +1,64 @@
+"use client";
+
 import React from "react";
 import { Cloud, Shield, Server, Database, CheckCircle, ArrowRight } from "lucide-react";
-"use client",
 const ITServicesPage: React.FC = () => {
   const services = [
-  {
+    {
       icon: Cloud,
-    title: "Cloud Solutions",
+      title: "Cloud Solutions",
       description: "Scalable cloud infrastructure for modern businesses",
-    features: [
+      features: [
         "AWS/Azure/GCP Migration",
         "Cloud Architecture Design",
         "Cost Optimization",
-    "24/7 Monitoring"
-  ]
+        "24/7 Monitoring"
+      ],
       price: "Starting at $2,000"
-},
-  {
-    icon: Shield,
-    title: "Cybersecurity",
+    },
+    {
+      icon: Shield,
+      title: "Cybersecurity",
       description: "Protect your business from evolving threats",
-    features: [
+      features: [
         "Security Audits",
         "Threat Detection",
         "Compliance Management",
-    "Incident Response"
-  ]
+        "Incident Response"
+      ],
       price: "Starting at $3,500"
-},
-  {
-    icon: Server,
-    title: "DevOps Services",
+    },
+    {
+      icon: Server,
+      title: "DevOps Services",
       description: "Streamline development and deployment processes",
-    features: [
+      features: [
         "CI/CD Pipeline Setup",
         "Infrastructure as Code",
         "Container Orchestration",
-    "Performance Monitoring"
-  ]
+        "Performance Monitoring"
+      ],
       price: "Starting at $4,000"
-},
-  {
-    icon: Database,
-    title: "Data Analytics",
+    },
+    {
+      icon: Database,
+      title: "Data Analytics",
       description: "Turn your data into actionable insights",
-    features: [
+      features: [
         "Data Warehousing",
         "Business Intelligence",
         "Real-time Dashboards",
-    "Predictive Analytics"
-  ]
-      price: "Starting at $5,000",
+        "Predictive Analytics"
+      ],
+      price: "Starting at $5,000"
     }
   ]
   const technologies = [
-  "AWS", "Azure", "Google Cloud", "Docker", "Kubernetes", "Terraform"
-    "Jenkins", "GitLab CI", "Prometheus", "Grafana", "Elasticsearch"
-    "PostgreSQL", "MongoDB", "Redis", "Apache Kafka", "React", "Node.js"
+    "AWS", "Azure", "Google Cloud", "Docker", "Kubernetes", "Terraform",
+    "Jenkins", "GitLab CI", "Prometheus", "Grafana", "Elasticsearch",
+    "PostgreSQL", "MongoDB", "Redis", "Apache Kafka", "React", "Node.js",
     "Python", "Go", "Rust", "TypeScript"
-]
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}

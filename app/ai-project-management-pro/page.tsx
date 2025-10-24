@@ -37,43 +37,43 @@ const AIProjectManagementProPage: React.FC = () => {
   name: 'Starter',
     price: '$29.99',
       period: '/month',
-    description: 'Perfect for small teams and freelancers',
+      description: 'Perfect for small teams and freelancers',
       features: [
         'Up to 5 projects',
         'Basic AI features',
         'Team collaboration',
         'Basic analytics',
-    'Email support'
-  ]
-}
+        'Email support'
+      ]
+    },
     {
-  name: 'Professional',
-    price: '$79.99',
+      name: 'Professional',
+      price: '$79.99',
       period: '/month',
-    description: 'Ideal for growing businesses',
+      description: 'Ideal for growing businesses',
       features: [
         'Up to 25 projects',
         'Advanced AI features',
         'Advanced analytics',
         'Priority support',
         'API access',
-    'Custom integrations'
-  ]
-}
+        'Custom integrations'
+      ]
+    },
     {
-  name: 'Enterprise',
-    price: 'Custom',
+      name: 'Enterprise',
+      price: 'Custom',
       period: '',
-    description: 'For large organizations',
+      description: 'For large organizations',
       features: [
         'Unlimited projects',
         'Full AI suite',
         'Custom integrations',
         'Dedicated support',
         'White-label solution',
-    'SLA guarantee'
-  ]
-}
+        'SLA guarantee'
+      ]
+    }
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">

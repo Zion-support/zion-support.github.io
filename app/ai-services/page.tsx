@@ -1,78 +1,84 @@
+"use client";
+
 import React from "react";
 import { Brain, Zap, Target, BarChart, CheckCircle, ArrowRight } from "lucide-react";
-"use client",
 const AIServicesPage: React.FC = () => {
   const services = [
-  {
+    {
       icon: Brain,
-    title: "Machine Learning Solutions",
+      title: "Machine Learning Solutions",
       description: "Custom ML models tailored to your business needs",
-    features: [
+      features: [
         "Predictive Analytics",
         "Pattern Recognition",
         "Automated Decision Making",
-    "Real-time Processing"
-  ]
+        "Real-time Processing"
+      ],
       price: "Starting at $5,000"
-},
-  {
-    icon: Zap,
-    title: "AI Automation",
+    },
+    {
+      icon: Zap,
+      title: "AI Automation",
       description: "Streamline operations with intelligent automation",
-    features: [
+      features: [
         "Process Automation",
         "Workflow Optimization",
         "Intelligent Routing",
-    "Error Reduction"
-  ]
+        "Error Reduction"
+      ],
       price: "Starting at $3,000"
-},
-  {
-    icon: Target,
-    title: "Natural Language Processing",
+    },
+    {
+      icon: Target,
+      title: "Natural Language Processing",
       description: "Understand and process human language at scale",
-    features: [
+      features: [
         "Text Analysis",
         "Sentiment Analysis",
         "Language Translation",
-    "Chatbot Development"
-  ]
+        "Chatbot Development"
+      ],
       price: "Starting at $4,000"
-},
-  {
-    icon: BarChart,
-    title: "Computer Vision",
+    },
+    {
+      icon: BarChart,
+      title: "Computer Vision",
       description: "Extract insights from images and videos",
-    features: [
+      features: [
         "Image Recognition",
         "Object Detection",
         "Video Analysis",
-    "Quality Control"
-  ]
-      price: "Starting at $6,000",
+        "Quality Control"
+      ],
+      price: "Starting at $6,000"
     }
   ]
   const process = [
     {
       step: "1",
-    title: "Discovery & Analysis",
-      description: "We analyze your business needs and data to understand the best AI approach."}
+      title: "Discovery & Analysis",
+      description: "We analyze your business needs and data to understand the best AI approach."
+    },
     {
       step: "2",
-    title: "Solution Design",
-      description: "Our team designs a custom AI solution tailored to your specific requirements."}
+      title: "Solution Design",
+      description: "Our team designs a custom AI solution tailored to your specific requirements."
+    },
     {
       step: "3",
-    title: "Development & Training",
-      description: "We develop and train your AI models using the latest technologies and best practices."}
+      title: "Development & Training",
+      description: "We develop and train your AI models using the latest technologies and best practices."
+    },
     {
       step: "4",
-    title: "Integration & Deployment",
-      description: "We integrate the solution into your existing systems and deploy it securely."}
+      title: "Integration & Deployment",
+      description: "We integrate the solution into your existing systems and deploy it securely."
+    },
     {
       step: "5",
-    title: "Monitoring & Optimization",
-    description: "We continuously monitor performance and optimize the solution for better results."}
+      title: "Monitoring & Optimization",
+      description: "We continuously monitor performance and optimize the solution for better results."
+    }
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
