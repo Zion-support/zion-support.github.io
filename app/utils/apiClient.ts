@@ -1,3 +1,4 @@
+// RequestInit is a built-in TypeScript type for fetch options
 export interface ApiResponse<T = unknown> {
   data: T;
   status: number;
@@ -27,7 +28,7 @@ export class ApiClient {
     url: string,
     options: RequestOptions = {}
   ): Promise<ApiResponse<T>> {
-    const { timeout = 30000, retries = 3, ...fetchOptions } = {
+    const { timeout = 30000, retries: _retries = 3, ...fetchOptions } = {
       ...this.defaultOptions,
       ...options,
     };

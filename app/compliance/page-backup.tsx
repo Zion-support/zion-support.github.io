@@ -9,21 +9,24 @@ const PageBackupPage: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Analysis',
       description: 'Advanced AI algorithms provide intelligent insights and recommendations.',
-      
-    {icon: BarChart},
+      icon: BarChart
+    },
     {
-    icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      
-    {icon: Target,
+      icon: Target
+    },
+    {
       title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision and accuracy.',
-      
-    {icon: TrendingUp,
+      icon: TrendingUp
+    },
+    {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ];
 return(<>)
       <Helmet><title>Page Backup - Zion Tech Group</title>
         <meta />

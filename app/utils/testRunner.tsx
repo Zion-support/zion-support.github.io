@@ -1,23 +1,27 @@
 'use client';
 
-export interface PerformanceMetrics {renderTime: number}
-    memoryUsage: number}timestamp: string}
-  renderTime: number,
-    memoryUsage: number
-  timestamp: string}
+export interface PerformanceMetrics {
+  renderTime: number;
+  memoryUsage: number;
+  timestamp: string;
 }
 export interface CoverageMetrics {
   statements: number,
-    branches: number
-  functions: number,
-    lines: number}
-  renderTime: number,
-  memoryUsage: number,
-  timestamp: string}
+    branches: number;
+    functions: number;
+    lines: number;
+  };
+  renderTime: number;
+  memoryUsage: number;
+  timestamp: string;
 }
-export interface CoverageMetrics {statements: number}
-    branches: number,
-  functions: number}lines: number}
+
+export interface CoverageMetrics {
+  statements: number;
+  branches: number;
+  functions: number;
+  lines: number;
+}
   renderTime: number,
   memoryUsage: number,
   timestamp: string}

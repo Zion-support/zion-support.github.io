@@ -2,23 +2,17 @@
 
 import React from 'react';
 'use client';
-import React, {useState, useCallback}from 'react';
+import React, {useState, useCallback} from 'react';
 import { Helmet } from 'react-helmet-async';
-import {Phone}
-  Mail,
+import {Phone, Mail, MapPin, Clock, Send, CheckCircle} from 'lucide-react';
+
   MapPin,
+
   Clock,
+
   Send,
   CheckCircle
 } from 'lucide-react';
-
-  MapPin,
-
-  Clock,
-
-  Send,
-
-  CheckCircle}} from 'lucide-react'
 const ContactPage: React.FC = () => {
     const [formData, setFormData] = useState({)
     name: '',

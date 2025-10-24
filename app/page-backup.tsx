@@ -16,10 +16,10 @@ import StructuredData from './components/StructuredData';
 
 import {Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText} from 'lucide-react';
 
-// Loading skeleton component;
-const ServiceCardSkeleton: React.FC = memo(() => (,
-  <div className="bg-whiterounded-lgshadow-lgp-6 animate-pulse" role="status" aria-label="Loading service card">
-    <div className="h-8bg-gray-200roundedmb-4 w-3/4"></div>
+// Loading skeleton component
+const ServiceCardSkeleton: React.FC = memo(() => (
+  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
+    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
     <div className="h-4bg-gray-200roundedmb-2"></div>
     <div className="h-4bg-gray-200roundedw-5/6"></div>
   </div>
