@@ -1,9 +1,8 @@
+"use client";
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react';
-"use client",
 const NotFound = () => {
   return (
     <>
