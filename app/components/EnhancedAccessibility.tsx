@@ -30,9 +30,9 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 
   return (
     <>
+      {children}
     </>
-    </>
-    };
+  );
 
     // Add reduced motion support;
 
