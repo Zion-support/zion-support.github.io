@@ -1,5 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
+import Link from 'next/link';
+import { ArrowRight, MessageCircle, Brain, Zap, Users, Shield, Globe, Settings } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Page - Zion Tech Group',

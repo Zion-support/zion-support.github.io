@@ -1,3 +1,4 @@
+import React from 'react';
 
 // Function to fix common JSX errors comprehensively()
 function fixJSXErrors(content) {

@@ -1,39 +1,24 @@
-import React from 'react''
-import { Play } from 'lucide-react''
-import Navigation from '../components/Navigation''
-import Footer from '../components/Footer''
-import SEOOptimizer from '../components/SEOOptimizer''
-import { CheckCircle, Zap, Music } from 'lucide-react''
-    'AI Composition''
-    'Multiple Genres''
-    'Custom Length''
-    'Royalty-free''
-    'Commercial Use''
-    'High Quality''
-    'Mood Selection''
-    'Instrument Selection''
-    'Tempo Control''
-    'Export Options''
-    'Unlimited music''
-    'No copyright issues''
-    'Custom compositions''
-    'Professional quality''
-    'Fast generation''
-    'Cost-effective''
-      "name": 'Starter'',
-      "price": '$9 9'',
-      "d": '/month''
-      "s": ['10tracks/month', 'MP3 export', 'Basic genres', 'Email support''
-    {"name": 'Professional'',
-      "price": '$19 9'',
-      "d": '/month''
-      "s": ['Unlimited tracks', 'WAV/MP3 export', 'All genres', 'API access', 'Priority support''
-    {"name": 'Enterprise'',
-      "price": '$39 9'',
-      "d": '/month''
-      "s": ['Everything in Pro', 'Custom genres', 'White-label', 'Dedicated support', 'Commercial license''
-        keywords = {['AI music composition', 'royalty-free music', 'AI music generation', 'background music', 'music automation', 'AIcomposer''
-                <div key = {index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : '''
-                        ? 'cyber-button''
-                        : '';
-      "r": text-slate-900''
+import React from "react";
+
+interface PagePageProps {
+  // Add props here
+}
+
+const PagePage: React.FC<PagePageProps> = () => {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">
+          
+        </h1>
+        <div className="prose max-w-none">
+          <p className="text-lg text-gray-600">
+            This is a placeholder for the  page.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default PagePage;

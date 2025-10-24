@@ -1,36 +1,24 @@
-'use client''
-import React from 'react''
-import { Play } from 'lucide-react''
-import Navigation from '../components/Navigation''
-import Footer from '../components/Footer''
-import SEOOptimizer from '../components/SEOOptimizer''
-import { CheckCircle, Camera, Zap } from 'lucide-react''
-    '3D Model Generation''
-    'Animation Creation''
-    'Texture Mapping''
-    'Rendering''
-    'VR/AR Support''
-    'Export Formats''
-    'AI Texturing''
-    'Lighting Setup''
-    'Material Library''
-    'Scene Composition''
-    'Professional3D content''
-    'Time savings''
-    'No3D skills needed''
-    'High quality output''
-    'Cost-effective''
-    'Scalable production''
-      "name": 'Starter'',
-      "price": '$29 9'',
-      "period": '/month'',
-      "features": ['5 models/month', 'Basic textures', 'Standard quality', 'Email support''
-    {"name": 'Professional'',
-      "price": '$49 9'',
-      "period": '/month'',
-      "features": ['Unlimited models', 'Premium textures', '4 K rendering', 'API access', 'Priority support''
-    {"name": 'Enterprise'',
-      "price": '$99 9'',
-      "period": '/month'',
-      "features": ['Everything in Pro', 'Custom models', 'White-label', 'Dedicated support', 'Commercial license'';
-        keywords = {['AI3D generation', '3 D models', '3 D animation', 'VR AR content', '3 D automation', 'AI 3D''
+import React from "react";
+
+interface PagePageProps {
+  // Add props here
+}
+
+const PagePage: React.FC<PagePageProps> = () => {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">
+          
+        </h1>
+        <div className="prose max-w-none">
+          <p className="text-lg text-gray-600">
+            This is a placeholder for the  page.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default PagePage;

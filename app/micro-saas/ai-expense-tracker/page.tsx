@@ -38,4 +38,4 @@ const PagePage = () => {
   );
 };
 
-export default PagePage;
+export default AiExpenseTrackerPage;

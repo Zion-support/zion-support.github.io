@@ -1,13 +1,24 @@
-'use client''
-import { Brain, Target, TrendingUp } from 'lucide-react''
-import React, { useState } from 'react''
-import Navigation from '../components/Navigation''
-import Footer from '../components/Footer''
-import SEOOptimizer from '../components/SEOOptimizer''
-import { CheckCircle, Star, Phone, Mail } from 'lucide-react''
-import { Clock } from 'lucide-react''
-        keywords = {['free consultation', 'business consultation', 'technology assessment', 'AI consultation', 'ITconsultation'';
-              <p className=&quot;text-lg text-gray-300 mb-12 max-w-3xl mx-auto&quot;>Get a free 30-minute consultation with our technology experts. We''
-      "d": 'linear-gradient(45deg, #8b5cf6, #ec4899)''
-            <h2 className=&quot;text-3xl "md": text-4xl font-bold text-white text-center mb-12 neon-text&quot;>What You'',
-                        placeholder=&quot;Any additional information you''
+import React from "react";
+
+interface PagePageProps {
+  // Add props here
+}
+
+const PagePage: React.FC<PagePageProps> = () => {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">
+          
+        </h1>
+        <div className="prose max-w-none">
+          <p className="text-lg text-gray-600">
+            This is a placeholder for the  page.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default PagePage;

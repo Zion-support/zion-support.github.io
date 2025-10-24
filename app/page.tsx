@@ -60,10 +60,7 @@ const HomePage: React.FC = memo(() => {
     ]
   }), []);
 
-<<<<<<< HEAD
 export default function HomePage() {
-=======
->>>>>>> 36b018b2c6b3d9694f459ee8efc09b4df34dcda5
   return (
     <>
       <script

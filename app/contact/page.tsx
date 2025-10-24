@@ -106,7 +106,6 @@ const ContactPage: React.FC = memo(() => {
               </div>
             </div>
             
-<<<<<<< HEAD
             <div>
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">Send us a Message</h2>
               
@@ -192,9 +191,6 @@ const ContactPage: React.FC = memo(() => {
                 </button>
               </form>
             </div>
-=======
-            <ContactForm />
->>>>>>> 36b018b2c6b3d9694f459ee8efc09b4df34dcda5
           </div>
 
           {/* Services Overview */}
@@ -305,8 +301,4 @@ const ContactPage: React.FC = memo(() => {
 
 ContactPage.displayName = 'ContactPage';
 
-<<<<<<< HEAD
 export default ContactPage;
-=======
-export default ContactPage;
->>>>>>> 36b018b2c6b3d9694f459ee8efc09b4df34dcda5

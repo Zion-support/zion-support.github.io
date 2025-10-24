@@ -1,15 +1,12 @@
 'use client';
-
 /**
  * Comprehensive Monitoring Utility
  * Real-time application monitoring, performance tracking, and error reporting
  */
-
 // Declare gtag function for Google Analytics
 declare global {
   function gtag(...args: any[]): void;
 }
-
 const performanceConfig = {
   monitoring: {
     enableLongTaskDetection: true,
@@ -25,7 +22,6 @@ const performanceConfig = {
     inp: { good: 200, needsImprovement: 500 }
   }
 };
-
 export interface PerformanceMetrics {
   lcp?: number;
   fid?: number;
@@ -34,7 +30,6 @@ export interface PerformanceMetrics {
   ttfb?: number;
   inp?: number;
 }
-
 export interface ErrorReport {
   message: string;
   stack?: string;
@@ -43,47 +38,38 @@ export interface ErrorReport {
   userAgent: string;
   url: string;
 }
-
 class MonitoringService {
   private metrics: PerformanceMetrics = {};
   private errors: ErrorReport[] = [];
   private isInitialized = false;
-
   constructor() {
     if (typeof window !== 'undefined') {
       this.initializeMonitoring();
     }
   }
-
   private initializeMonitoring() {
     if (this.isInitialized) return;
-    
     this.isInitialized = true;
     this.setupPerformanceObserver();
     this.setupErrorHandling();
     this.setupLongTaskDetection();
   }
-
   private setupPerformanceObserver() {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
-
     try {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           this.handlePerformanceEntry(entry);
         }
       });
-
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'first-contentful-paint', 'navigation'] });
     } catch (error) {
       console.warn('Performance Observer not supported:', error);
     }
   }
-
   private handlePerformanceEntry(entry: PerformanceEntry) {
     const name = entry.name;
     const value = entry.startTime;
-
     switch (entry.entryType) {
       case 'largest-contentful-paint':
         this.metrics.lcp = value;
@@ -92,7 +78,7 @@ class MonitoringService {
         this.metrics.fid = value;
         break;
       case 'layout-shift':
-        if (!entry.hadRecentInput) {
+        if (!(entry as any).hadRecentInput) {
           this.metrics.cls = (this.metrics.cls || 0) + (entry as any).value;
         }
         break;
@@ -103,13 +89,10 @@ class MonitoringService {
         this.metrics.ttfb = value;
         break;
     }
-
     this.reportMetric(entry.entryType, value);
   }
-
   private setupErrorHandling() {
     if (typeof window === 'undefined') return;
-
     window.addEventListener('error', (event) => {
       this.reportError({
         message: event.message,
@@ -120,7 +103,6 @@ class MonitoringService {
         url: window.location.href
       });
     });
-
     window.addEventListener('unhandledrejection', (event) => {
       this.reportError({
         message: `Unhandled Promise Rejection: ${event.reason}`,
@@ -132,10 +114,8 @@ class MonitoringService {
       });
     });
   }
-
   private setupLongTaskDetection() {
     if (typeof window === 'undefined' || !performanceConfig.monitoring.enableLongTaskDetection) return;
-
     if ('PerformanceObserver' in window) {
       try {
         const observer = new PerformanceObserver((list) => {
@@ -145,17 +125,14 @@ class MonitoringService {
             }
           }
         });
-
         observer.observe({ entryTypes: ['longtask'] });
       } catch (error) {
         console.warn('Long task detection not supported:', error);
       }
     }
   }
-
   private reportMetric(type: string, value: number) {
     if (typeof window === 'undefined' || !window.gtag) return;
-
     try {
       window.gtag('event', 'performance_metric', {
         metric_type: type,
@@ -166,10 +143,8 @@ class MonitoringService {
       console.warn('Failed to report metric:', error);
     }
   }
-
   public reportError(error: ErrorReport) {
     this.errors.push(error);
-    
     if (typeof window !== 'undefined' && window.gtag) {
       try {
         window.gtag('event', 'exception', {
@@ -184,13 +159,11 @@ class MonitoringService {
         console.warn('Failed to report error to analytics:', e);
       }
     }
-
     // Send to external monitoring service if configured
     if (process.env.NEXT_PUBLIC_MONITORING_ENDPOINT) {
       this.sendToMonitoringService(error);
     }
   }
-
   private async sendToMonitoringService(error: ErrorReport) {
     try {
       await fetch(process.env.NEXT_PUBLIC_MONITORING_ENDPOINT!, {
@@ -204,19 +177,15 @@ class MonitoringService {
       console.warn('Failed to send error to monitoring service:', e);
     }
   }
-
   public getMetrics(): PerformanceMetrics {
     return { ...this.metrics };
   }
-
   public getErrors(): ErrorReport[] {
     return [...this.errors];
   }
-
   public clearErrors() {
     this.errors = [];
   }
 }
-
 export const monitoringService = new MonitoringService();
 export default monitoringService;

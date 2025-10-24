@@ -1,37 +1,25 @@
-import React from &quot;react&quot()
-import { ArrowRight } from &quot;lucide-react&quot()
-interface NeonButtonProps {
-  children?: React.ReactNode}
-  className?: string()
-  title?: string()
-  description?: string()
-  href?: string()
-  onClick?: () => void()
-  variant?: &quot;primary&quot; | &quot;secondary&quot; | &quot;accent&quot()
-  size?: &quot;sm&quot; | &quot;md&quot; | &quot;lg&quot()
-  icon?: React.ReactNode()
-  disabled?: boolean()
-}
+import React from 'react';
 
-<<<<<<< "HEAD": all-pages-backup/components/NeonButton.tsx,
-const "NeonButton": React.FC<NeonButtonProps> = ({;,
-  children()
-  href()
-  onClick,
-:app/components/NeonButton.tsx()
-  variant=&quot;primary&quot;
-  size=&quot;md&quot;}
-  className=&quot;&quot;
-  icon()
-  disabled = false()
-}) => {
-  const baseClasses =;
-<<<<<<< "HEAD": all-pages-backup/components/NeonButton.tsx,
-    &quot;relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform "hover": scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100&quot,
-:app/components/NeonButton.tsx}
-  const benefits = [
-    'Increase efficiency by up to 50%''
-    'Reduce costs by 30% with automation''
-    'Improve decision-making with AI insights''
-    'Scale operations without proportional staff increases''
-    'Gain competitive advantage with advanced technology''
+const NeonButtonPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            NeonButton
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            This page is under construction and will be available soon.
+          </p>
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <p className="text-gray-700">
+              We are working hard to bring you the best experience. Please check back later.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default NeonButtonPage;

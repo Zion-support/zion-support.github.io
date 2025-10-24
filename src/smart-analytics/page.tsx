@@ -1,17 +1,24 @@
-'use client''
-import { Brain, BarChart, Target } from 'lucide-react''
-import React from 'react''
-import { CheckCircle, Star, Phone, BarChart } from 'lucide-react''
-    { "name": 'Slack', "icon": '💬', "description": 'Team communication'',
-    {"name": 'Alex Thompson'',
-      "company": 'GrowthCo'',
-      "role": 'CEO'',
-      "t": 'Smart Analytics helped us identify a 3 0% revenue opportunity we never knew existed. The AI insights are game-changing.''
-    {"name": 'Maria Garcia'',
-      "company": 'Digital Marketing Pro'',
-      "role": 'Marketing Director'',
-      "t": 'We can now track ROI across all channels in real-time. Our marketing efficiency improved by 5 0% in just2months.''
-    {"name": 'James Wilson'',
-      "company": 'E-commerce Solutions'',
-      "role": 'Operations Manager'';,
-      "t": 'The automated alerts saved us from a potential crisis. We caught a 40% drop in conversions within minutes.''
+import React from "react";
+
+interface PagePageProps {
+  // Add props here
+}
+
+const PagePage: React.FC<PagePageProps> = () => {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">
+          
+        </h1>
+        <div className="prose max-w-none">
+          <p className="text-lg text-gray-600">
+            This is a placeholder for the  page.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default PagePage;

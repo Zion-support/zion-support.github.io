@@ -1,33 +1,24 @@
-import { Brain, BarChart } from 'lucide-react''
-import React from 'react''
-import Navigation from '../components/Navigation''
-import Footer from '../components/Footer''
-import { CheckCircle, Zap, Brain, Eye, BarChart } from 'lucide-react''
-'use client''
-      "title": 'AI Blog Content Generator Pro'',
-      "n": 'Advanced AI-powered blog content creation with SEO optimization, research integration, and brand voice consistency.''
-      "icon": '✍️'',
-      "e": '$19 9/month''
-      "s": ['SEO-optimized content', 'Brand voice consistency', 'Research integration', 'Multi-format output''
-    {"title": 'Social Media Content Suite'',
-      "n": 'Create engaging social media posts, captions, and hashtags across all platforms with AI-powered optimization.''
-      "icon": '📱'',
-      "e": '$14 9/month''
-      "s": ['Platform-specific content', 'Hashtag optimization', 'Visual content ideas', 'Engagement analytics''
-    {"title": 'Email Marketing AI'',
-      "n": 'Generate compelling email campaigns, subject lines, and personalized content that converts.''
-      "icon": '📧'',
-      "e": '$17 9/month''
-      "s": ['Subject line optimization', 'Personalization', 'A/B testing', 'Conversion tracking''
-    {"title": 'E-commerce Product Descriptions'',
-      "n": 'Create compelling product descriptions, reviews, and marketing copy that drives sales.''
-      "icon": '🛍️'',
-      "e": '$12 9/month''
-      "s": ['Product descriptions', 'Review generation', 'Marketing copy', 'SEO optimization''
-    '"step": '1''',
-    '"title": 'Input Your Requirements''',
-    '"description": 'Tell us about your brand, target audience, and content goals.'''
-    ''
-    ''
-    '';
-    ''
+import React from "react";
+
+interface PagePageProps {
+  // Add props here
+}
+
+const PagePage: React.FC<PagePageProps> = () => {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">
+          
+        </h1>
+        <div className="prose max-w-none">
+          <p className="text-lg text-gray-600">
+            This is a placeholder for the  page.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default PagePage;
