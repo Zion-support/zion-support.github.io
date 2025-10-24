@@ -291,6 +291,7 @@ const ConsultationPage: React.FC = () => {
           </div>
         </section>
       </div>
+    </div>
   )
 }
 

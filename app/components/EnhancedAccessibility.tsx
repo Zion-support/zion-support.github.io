@@ -1,20 +1,6 @@
 'use client';
 import React, { useEffect, useState, createContext, useContext } from 'react';
-
-interface AccessibilitySettings {
-  highContrast: boolean;
-  reducedMotion: boolean;
-  fontSize: 'small' | 'medium' | 'large';
-  focusVisible: boolean;
-  screenReaderMode: boolean;
-  keyboardNavigation: boolean;
-}
-
-interface AccessibilityContextType {
-  settings: AccessibilitySettings;
-  updateSetting: (_key: keyof AccessibilitySettings, _value: boolean | string) => void;
-  announceToScreenReader: (_message: string) => void;
-}
+import { AccessibilitySettings, AccessibilityContextType } from '../types/accessibility';
 
 const AccessibilityContext = createContext<AccessibilityContextType | null>(null);
 
@@ -152,12 +138,12 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children 
     }
   }, [announcements]);
 
-  const updateSetting = (_key: keyof AccessibilitySettings, _value: boolean | string) => {
-    setSettings(prev => ({ ...prev, [_key]: _value }));
+  const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
+    setSettings(prev => ({ ...prev, [key]: value }));
   };
 
-  const announceToScreenReader = (_message: string) => {
-    setAnnouncements(prev => [...prev, _message]);
+  const announceToScreenReader = (message: string) => {
+    setAnnouncements(prev => [...prev, message]);
   };
 
   const contextValue: AccessibilityContextType = {
