@@ -107,9 +107,17 @@ import {MemoryRouter} from 'react-router-dom'
     // Mock performance API;
     Object.defineProperty(window, 'performance', {value: mockPerformance,
       writable: true,
+<<<<<<< HEAD
       configurable: true,})
     // Mock PerformanceObserver;
     global.PerformanceObserver = MockPerformanceObserver as unknown as typeof PerformanceObserver})
+=======
+      configurable: true,
+    })
+    // Mock PerformanceObserver
+    global.PerformanceObserver = MockPerformanceObserver as unknown as typeof PerformanceObserver})
+  afterEach(() => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
     jest.clearAllMocks()})
     const originalEnv = process.env['NODE_ENV']
     Object.defineProperty(process.env, 'NODE_ENV', {value: 'production', writable: true})

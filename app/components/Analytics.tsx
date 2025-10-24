@@ -23,6 +23,9 @@ interface AnalyticsProps {}
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
 const Analytics: React.FC<AnalyticsProps> = ({
   enableGoogleAnalytics = true,
   enablePerformanceMonitoring = true,
@@ -31,6 +34,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
 }) => {
   useEffect(() => {
     if (enableGoogleAnalytics) {
+<<<<<<< HEAD
 =======
 const Analytics: React.FC<AnalyticsProps> = ({}
   enableGoogleAnalytics = true,
@@ -44,8 +48,32 @@ const Analytics: React.FC<AnalyticsProps> = ({
     if (enableGoogleAnalytics) {}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       initializeGoogleAnalytics();
+=======
+      initializeGoogleAnalytics()
     }
+    if (enablePerformanceMonitoring) {
+      initializePerformanceMonitoring()
+    }
+    if (enableErrorTracking) {
+      initializeErrorTracking()
+    }
+    if (enableUserBehaviorTracking) {
+      initializeUserBehaviorTracking()
+    }
+  }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking])
 
+  const initializeGoogleAnalytics = () => {
+    // Load Google Analytics
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: document.title,
+        page_location: window.location.href
+      })
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
+    }
+  }
+
+<<<<<<< HEAD
     if (enablePerformanceMonitoring) {
       initializePerformanceMonitoring();
     }
@@ -482,8 +510,59 @@ declare global {
   interface Window {
 <<<<<<< HEAD
     gtag?: (...args: any[]) => void;
+=======
+  const initializePerformanceMonitoring = () => {
+    // Performance monitoring setup
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      window.addEventListener('load', () => {
+        const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+        if (perfData) {
+          console.log('Page load time:', perfData.loadEventEnd - perfData.loadEventStart)
+        }
+      })
+    }
   }
+
+  const initializeErrorTracking = () => {
+    // Error tracking setup
+    if (typeof window !== 'undefined') {
+      window.addEventListener('error', (event) => {
+        console.error('JavaScript error:', event.error)
+        // Send error to analytics service
+      })
+    }
+  }
+
+  const initializeUserBehaviorTracking = () => {
+    // User behavior tracking setup
+    if (typeof window !== 'undefined') {
+      // Track page views
+      const trackPageView = () => {
+        console.log('Page view tracked:', window.location.pathname)
+      }
+      
+      // Track clicks
+      const trackClick = (event: Event) => {
+        const target = event.target as HTMLElement
+        if (target.tagName === 'BUTTON' || target.tagName === 'A') {
+          console.log('Click tracked:', target.textContent)
+        }
+      }
+
+      window.addEventListener('load', trackPageView)
+      document.addEventListener('click', trackClick)
+
+      return () => {
+        window.removeEventListener('load', trackPageView)
+        document.removeEventListener('click', trackClick)
+      }
+    }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
+  }
+
+  return null
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import React from 'react';
@@ -611,3 +690,7 @@ export default Analytics;</AnalyticsProps>
  void;
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+
+export default Analytics
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb

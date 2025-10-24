@@ -479,8 +479,62 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
           </button>
         </div></div></div>
       </div>
+<<<<<<< HEAD
       {children}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
+=======
+
+      <div className="space-y-4">
+        {features.map((feature) => (
+          <div key={feature.id} className="flex items-center justify-between">
+            <div className="flex items-center space-x-3">
+              <feature.icon className="w-5 h-5 text-gray-600" />
+              <div>
+                <div className="text-sm font-medium text-gray-900">{feature.name}</div>
+                <div className="text-xs text-gray-500">{feature.description}</div>
+              </div>
+            </div>
+            <button
+              onClick={() => toggleFeature(feature.id as keyof typeof settings)}
+              disabled={!feature.enabled}
+              className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                settings[feature.id as keyof typeof settings] ? 'bg-blue-600' : 'bg-gray-200'
+              } ${!feature.enabled ? 'opacity-50 cursor-not-allowed' : ''}`}
+            >
+              <span
+                className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                  settings[feature.id as keyof typeof settings] ? 'translate-x-6' : 'translate-x-1'
+                }`}
+              />
+            </button>
+          </div>
+        ))}
+
+        {enableTextScaling && (
+          <div className="pt-4 border-t border-gray-200">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-sm font-medium text-gray-900">Text Scaling</span>
+              <span className="text-sm text-gray-500">{settings.textScaling}%</span>
+            </div>
+            <input
+              type="range"
+              min="75"
+              max="200"
+              value={settings.textScaling}
+              onChange={() => toggleFeature('textScaling')}
+              className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+            />
+          </div>
+        )}
+      </div>
+
+      <div className="mt-4 pt-4 border-t border-gray-200">
+        <div className="flex items-center text-sm text-gray-600">
+          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+          Accessibility features are active
+        </div>
+      </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
     </div>
   );
 =======

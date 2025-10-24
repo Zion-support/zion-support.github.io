@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import { Link } from 'react-router-dom';
@@ -8,6 +9,13 @@ import { ArrowRight } from 'lucide-react';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const EnhancedAnalyticsPage: React.FC = () => {
+=======
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, Zap, Shield, Brain, Globe } from 'lucide-react'
+const EnhancedAnalytics: React.FC = () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
   const features = [
     {
       icon: Brain,

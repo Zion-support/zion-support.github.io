@@ -1,6 +1,10 @@
 <<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3 } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
 
 const ContentPromotionBanner: React.FC = () => {
 <<<<<<< HEAD

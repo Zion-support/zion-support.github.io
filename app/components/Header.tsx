@@ -1,8 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Navigation from './Navigation';
 <<<<<<< HEAD
+=======
+'use client'
+import React from 'react'
+import Navigation from './Navigation'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
 
 const Header: React.FC = () => {
   return (
@@ -11,6 +17,7 @@ const Header: React.FC = () => {
       {/* Spacer to prevent content from going under fixed header */}
       <div className="h-16 lg:h-20" />
     </React.Fragment>
+<<<<<<< HEAD
 =======
 const Header: React.FC = () => {
   return(<>)
@@ -224,3 +231,9 @@ export default Header;
   return (
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+  )
+}
+
+export default Header
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb

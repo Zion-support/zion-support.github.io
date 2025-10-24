@@ -68,6 +68,7 @@
     }
   ];
 
+<<<<<<< HEAD
   const currentTab = tabs[activeTab];
 
   return(<section className="py-16" aria-labelledby="showcase-heading"></section>
@@ -154,6 +155,10 @@
           </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 import React from 'react';
+=======
+import React, { useState, useEffect } from 'react';
+import { CheckCircle, ArrowRight, Zap, Star, Users, Shield, Cloud, BarChart3, ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
 
 const DynamicContentShowcase: React.FC = () => {
 <<<<<<< HEAD

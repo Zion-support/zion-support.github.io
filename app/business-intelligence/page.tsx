@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -66,6 +67,9 @@ export default function GDataAnalyticsZionTechGroupPage() {
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+=======
+import { CheckCircle, Phone, Mail, Zap, Shield, Brain, Globe } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
 
 const BusinessIntelligencePage: React.FC = () => {
   const features = [

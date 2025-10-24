@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import { Helmet } from 'react-helmet-async';
 export default function AIServices() {
@@ -92,6 +93,12 @@ import {}
 } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+=======
+import React from 'react';
+import { CheckCircle, ArrowRight, Brain, Zap, Eye, MessageCircle, BarChart, Shield, Users, Star } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
 
 const AiServicesPage: React.FC = () => {
   const serviceType = 'ai'
@@ -1073,6 +1080,7 @@ const AIServicesPage: React.FC = () => {
       popular: false
     },
     {
+<<<<<<< HEAD
       id: 'ai-process-automation',
       name: 'AI Process Automation',
       description: 'Streamline business processes with intelligent automation and workflow optimization',
@@ -1407,6 +1415,15 @@ const AIServicesPage: React.FC = () => {
         'Adaptive memory patterns',
         'Cognitive enhancement'
       ]
+=======
+      icon: <Users className="w-8 h-8 text-yellow-500" />,
+      title: 'AI for HR & Recruitment',
+      description: 'Automated resume screening, candidate matching, and HR process optimization.',
+      features: ['Resume screening', 'Candidate matching', 'Interview scheduling', 'Bias detection', 'Performance analysis'],
+      pricing: '$349/month',
+      popular: false,
+      category: 'HR'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
     }
   ];
 
@@ -1421,6 +1438,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
   }
 
   return (
+<<<<<<< HEAD
     <>
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden"></div>
@@ -1433,6 +1451,40 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
       <div className="absolute inset-0 opacity-20"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[length:100px_100px] animate-pulse" />
       </div>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>AI Services - Zion Tech Group</title>
+        <meta name="description" content="Transform your business with cutting-edge AI services including machine learning, NLP, computer vision, and predictive analytics from Zion Tech Group." />
+        <meta name="keywords" content="AI services, machine learning, natural language processing, computer vision, predictive analytics, AI automation, artificial intelligence" />
+      </Helmet>
+      
+      <main className="pt-20 px-4 py-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Services & Solutions
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Harness the power of artificial intelligence to transform your business. From machine learning to computer vision, we deliver cutting-edge AI solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+              >
+                Get AI Consultation
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link 
+                to="/about" 
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
 
       {/* Header */}
       <div className="relative overflow-hidden"></div>
@@ -1468,6 +1520,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
                 <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
                 <div className="text-gray-300">AI Support</div>
               </div>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
@@ -1493,6 +1546,44 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
             <div className="flex flex-wrap justify-center gap-4 mb-8"></div>
               <div className="holographic px-6 py-3 rounded-lg"></div>
                 <span className="text-cyan-400 font-semibold">15+ AI Platforms</span>
+=======
+            ))}
+          </div>
+        </div>
+      </main>
+
+      {/* AI Capabilities */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our AI Capabilities</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Comprehensive AI expertise across all major domains
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+              >
+                Start Your AI Journey
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link 
+                to="/services" 
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+            {aiCapabilities.map((capability, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                <div className="mb-4">{capability.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-4">{capability.title}</h3>
+                <p className="text-gray-300">{capability.description}</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
               </div>
               <div className="holographic px-6 py-3 rounded-lg"></div>
                 <span className="text-purple-400 font-semibold">25,000+ Companies</span>
@@ -1506,6 +1597,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Category Filter */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8"></div>
         <div className="flex flex-wrap justify-center gap-4"></div>
@@ -2203,10 +2295,88 @@ const AIServicesPage: React.FC = () => {
                 ></Link>
                   <Mail className="w-5 h-5" />
                   Get Started
+=======
+      {/* Services Grid */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">AI Service Packages</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Choose from our comprehensive AI service packages
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+            {aiServices.map((service, index) => (
+              <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 relative ${service.popular ? 'ring-2 ring-purple-500' : ''}`}>
+                {service.popular && (
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
+                      <Star className="w-4 h-4 mr-1" />
+                      Popular
+                    </span>
+                  </div>
+                )}
+                <div className="mb-4">{service.icon}</div>
+                <div className="mb-2">
+                  <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm font-medium">
+                    {service.category}
+                  </span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
+                <p className="text-gray-300 mb-6">{service.description}</p>
+                <div className="mb-6">
+                  <div className="text-2xl font-bold text-white mb-2">{service.pricing}</div>
+                  <div className="text-gray-400 text-sm">per month</div>
+                </div>
+                <ul className="space-y-2 mb-8">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <Link 
+                  to="/contact"
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                >
+                  Get Started
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
+              <h2 className="text-4xl font-bold text-white mb-4">Ready to Harness the Power of AI?</h2>
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Get a free AI consultation and discover how artificial intelligence can transform your business.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  to="/contact" 
+                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Get Free AI Consultation
+                </Link>
+                <Link 
+                  to="/about" 
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+                >
+                  Learn About Us
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
                 </Link>
               </div>
             </div>
           </div>
+<<<<<<< HEAD
         </section>
       </div>
     </>
@@ -2215,10 +2385,16 @@ const AIServicesPage: React.FC = () => {
 }
 =======
     </React.Fragment>
+=======
+        </div>
+      </section>
+    </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
   );
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default AiServicesPage
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
@@ -2239,3 +2415,6 @@ export default AIServicesPage;
   );
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+export default AiServicesPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb

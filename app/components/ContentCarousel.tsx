@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import { ArrowRight, X, Brain, BarChart, Target, TrendingUp, Cloud, Shield, Globe, Database, Users, Settings } from 'lucide-react';
 
 interface Slide {
@@ -16,6 +17,9 @@ interface Slide {
 =======
 import { ChevronLeft, ChevronRight, Star, Users, TrendingUp, Award } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+import { ChevronLeft, ChevronRight, Play, Pause, Zap, Shield, Cloud, BarChart3, Users, Target, CheckCircle } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
 
 const ContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

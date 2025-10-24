@@ -25,7 +25,7 @@ const ContentStatistics: React.FC = () => {
     years: 10;
   };
 
-  const statistics = [
+  const statistics = React.useMemo(() => [
     {
       icon: Users,
       value: counters.clients,
@@ -41,6 +41,7 @@ const ContentStatistics: React.FC = () => {
       color: 'text-purple-400',
     },
     {
+<<<<<<< HEAD
       icon: TrendingUp,
       value: counters.satisfaction,
 =======
@@ -54,6 +55,16 @@ const ContentStatistics: React.FC = () => {}
     countries: 0,
     years: 0
   });
+=======
+      icon: Zap,
+      value: 300,
+      suffix: '%',
+      label: 'Efficiency Gain',
+      description: 'Average improvement',
+      color: 'text-purple-400'
+    }
+  ], []);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
 
   const stats = [
     {}
@@ -185,7 +196,7 @@ const ContentStatistics: React.FC = () => {}
     return () => {
       timers.forEach(timer => clearInterval(timer));
     };
-  }, []);
+  }, [statistics]);
 
 <<<<<<< HEAD
   return (

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 
@@ -20,6 +21,18 @@ interface OptimizedLoadingSpinnerProps {
   className?: string;
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
   fullScreen?: boolean;
+=======
+'use client'
+import React, { memo, useMemo } from 'react'
+
+interface OptimizedLoadingSpinnerProps {
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+  variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars'
+  text?: string
+  className?: string
+  color?: 'blue' | 'gray' | 'green' | 'red' | 'purple'
+  fullScreen?: boolean
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
 }
 
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
@@ -52,7 +65,11 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps   /> = memo
         lg: 'h-12 w-12',
         xl: 'h-16 w-16',}),
       []
+<<<<<<< HEAD
     );
+=======
+    )
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
 
     const textSizeClasses = useMemo(
       () => ({xs: 'text-xs',
@@ -61,7 +78,11 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps   /> = memo
         lg: 'text-lg',
         xl: 'text-xl',}),
       []
+<<<<<<< HEAD
     );
+=======
+    )
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
 
     const colorClasses = useMemo(
 <<<<<<< HEAD
@@ -73,15 +94,23 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps   /> = memo
         purple: 'border-purple-600 bg-purple-600',
       }),
       []
+<<<<<<< HEAD
     );
 
     const renderSpinner = useMemo(() => {switch (variant) {
+=======
+    )
+
+    const renderSpinner = useMemo(() => {
+      switch (variant) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
         case 'dots':
           return (
-            <div className='flex space-x-1' role='status' aria-label='Loading'>
-              {[0, 1, 2].map(i => (</div>
+            <div className="flex space-x-1" role="status" aria-label="Loading">
+              {[0, 1, 2].map(i => (
                 <div
                   key={i}
+<<<<<<< HEAD
                   className={`w-2 h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
                   style={{ animationDelay: `${i * 0.1,}s` }}
                 />
@@ -176,14 +205,51 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps   /> = memo
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"> </div>
   )
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+                  className={`${sizeClasses[size]} rounded-full ${colorClasses[color].split(' ')[1]} animate-pulse`}
+                  style={{ animationDelay: `${i * 0.2}s` }}
+                />
+              ))}
+            </div>
+          )
+
+        case 'pulse':
+          return (
+            <div
+              className={`${sizeClasses[size]} rounded-full ${colorClasses[color].split(' ')[1]} animate-pulse`}
+              role="status"
+              aria-label="Loading"
+            />
+          )
+
+        case 'spinner':
+          return (
+            <div
+              className={`${sizeClasses[size]} border-2 border-gray-300 border-t-transparent rounded-full animate-spin ${colorClasses[color].split(' ')[0]}`}
+              role="status"
+              aria-label="Loading"
+            />
+          )
+
+        case 'skeleton':
+          return (
+            <div className="space-y-2" role="status" aria-label="Loading">
+              <div className={`h-4 bg-gray-300 rounded animate-pulse ${sizeClasses[size]}`} />
+              <div className={`h-4 bg-gray-300 rounded animate-pulse ${sizeClasses[size]}`} />
+              <div className={`h-4 bg-gray-300 rounded animate-pulse ${sizeClasses[size]}`} />
+            </div>
+          )
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
         case 'bars':
           return (
-            <div className='flex space-x-1' role='status' aria-label='Loading'>
-              {[0, 1, 2, 3].map(i => (</div>
+            <div className="flex space-x-1" role="status" aria-label="Loading">
+              {[0, 1, 2, 3].map(i => (
                 <div
                   key={i}
                   className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
                   style={{
+<<<<<<< HEAD
                     height: `${12 + i * 4,}px`,
                     animationDelay: `${i * 0.1,}s`,
                   }}
@@ -252,3 +318,40 @@ export default OptimizedLoadingSpinner;
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';export default OptimizedLoadingSpinner
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+                    height: `${(i + 1) * 4}px`,
+                    animationDelay: `${i * 0.1}s`,
+                  }}
+                />
+              ))}
+            </div>
+          )
+
+        default:
+          return null
+      }
+    }, [variant, sizeClasses, colorClasses, size, color])
+
+    const containerClasses = fullScreen
+      ? 'fixed inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center z-50'
+      : 'flex items-center justify-center p-8'
+
+    return (
+      <div className={`${containerClasses} ${className}`}>
+        <div className="flex flex-col items-center space-y-4">
+          {renderSpinner}
+          {text && (
+            <p className={`text-gray-600 ${textSizeClasses[size]}`}>
+              {text}
+            </p>
+          )}
+        </div>
+      </div>
+    )
+  }
+)
+
+OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'
+
+export default OptimizedLoadingSpinner
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb

@@ -2,6 +2,7 @@ import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
 import { Users } from 'lucide-react';
 import { Award } from 'lucide-react';
@@ -9,6 +10,9 @@ import { Globe } from 'lucide-react';
 import { Calendar } from 'lucide-react';
 import { Hand } from 'lucide-react';
 import { Cloud } from 'lucide-react';
+=======
+import { Users, MessageCircle, Calendar, Award, Globe, Zap } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
 
 export default function Community() {
 

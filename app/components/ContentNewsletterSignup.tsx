@@ -1,7 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 <<<<<<< HEAD
 import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react';
+=======
+'use client'
+import React, { useState } from 'react'
+import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
 
 interface ContentNewsletterSignupProps {
 <<<<<<< HEAD
@@ -11,6 +17,7 @@ interface ContentNewsletterSignupProps {
   buttonText?: string
   features?: Array<{}
     icon: React.ComponentType<{ className?: string }>
+<<<<<<< HEAD
     text: string}>
   onSubscribe?: (email: string) => void}constContentNewsletterSignup:React.FC<ContentNewsletterSignupProp s>= ({
   title= "Stay Updated with Our LatestInsights"
@@ -56,6 +63,13 @@ interface ContentNewsletterSignupProps {title?: string;
 }
 
 <<<<<<< HEAD
+=======
+    text: string
+  }>
+  onSubscribe?: (email: string) => void
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
   title = "Stay Updated with Our Latest Insights",
   subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
@@ -98,6 +112,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps   /> = ({co
 }) => {const [email, setEmail] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubscribed, setIsSubscribed] = useState(false)
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -136,6 +151,45 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps   /> = ({co
   s:border-transparent"
               required
             /></input>
+=======
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!email) return
+    
+    setIsSubmitting(true)
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000))
+      
+      if (onSubscribe) {
+        onSubscribe(email)
+      }
+      
+      setIsSubscribed(true)
+      setEmail('')
+    } catch (error) {
+      console.error('Subscription error:', error)
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  if (isSubscribed) {
+    return (
+      <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/20">
+            <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <CheckCircle className="w-10 h-10 text-white" />
+            </div>
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Thank You for Subscribing!
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              You'll receive our latest insights and updates soon.
+            </p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
             <button
               type="submit"
               disabled={isLoading}
@@ -146,6 +200,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps   /> = ({co
               <ArrowRight className="ml-2 h-4 w-4" /></ArrowRight>
             </button>
           </div>
+<<<<<<< HEAD
         </form>
         
         {isSubscribed && (
@@ -191,6 +246,11 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps   /> = ({co
         </div>
       </div>
     );
+=======
+        </div>
+      </div>
+    )
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
   }
 
   return (
@@ -202,13 +262,21 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps   /> = ({co
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               {title}
             </h2>
+<<<<<<< HEAD
             <p className="text-xl text-blue-100 mb-8">
               {subtitle}
             </p>
             
             <div className="space-y-4">
+=======
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
+              {subtitle}
+            </p>
+            
+            <div className="flex flex-wrap justify-center gap-6 mb-8">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
               {features.map((feature, index) => (
-                <div key={index} className="flex items-center space-x-3">
+                <div key={index} className="flex items-center space-x-2">
                   <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
                     <feature.icon className="w-4 h-4 text-white" />
                   </div></div></div></div></div></div></div>
@@ -225,6 +293,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps   /> = ({co
                 <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                   Email Address
                 </label>
+<<<<<<< HEAD
                 <input
                   type="email"
                   id="email"
@@ -244,12 +313,37 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps   /> = ({co
                 {isLoading ? (
                   <React.Fragment>
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2"></div>
+=======
+                <div className="relative">
+                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input
+                    type="email"
+                    id="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder={placeholder}
+                    required
+                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  />
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isSubmitting ? (
+                  <>
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
                     Subscribing...
-                  </React.Fragment>
+                  </>
                 ) : (
-                  <React.Fragment>
+                  <>
                     {buttonText}
                     <ArrowRight className="w-5 h-5 ml-2" />
+<<<<<<< HEAD
                   </React.Fragment>
                 )}
 =======
@@ -507,6 +601,22 @@ export default function ContentNewsletterSignup() {return (
           </form>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             {features.map((feature, index) => (
+=======
+                  </>
+                )}
+              </button>
+            </form>
+
+            <p className="text-sm text-gray-400 text-center mt-4">
+              We respect your privacy. Unsubscribe at any time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
 
                 <div key={index} className="text-center"   /></div>
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>

@@ -18,6 +18,9 @@ import { Helmet } from 'react-helmet-async'
 
 interface SEOHeadProps {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
   title?: string
   description?: string
   keywords?: string
@@ -26,6 +29,7 @@ interface SEOHeadProps {
   ogType?: string
   twitterCard?: string
   structuredData?: object
+<<<<<<< HEAD
   noIndex?: boolean
   author?: string
   publishedTime?: string
@@ -43,6 +47,8 @@ interface SEOHeadProps {
     section: string
     tags: string[]
   }
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -66,6 +72,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   faqData = [],
   articleData
 }) => {
+<<<<<<< HEAD
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} - Zion Tech Group`
   const fullDescription = description || 'Professional AI and IT solutions for modern businesses'
   const fullKeywords = keywords || 'AI solutions, IT services, technology consulting, software development, artificial intelligence'
@@ -167,9 +174,42 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     }
   }
 
+=======
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
+  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '')
+  
+  const defaultStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "description": "Advanced AI and IT Solutions company providing cutting-edge technology services",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service",
+      "email": "kleber@ziontechgroup.com"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/zion-tech-group",
+      "https://twitter.com/ziontechgroup"
+    ]
+  }
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
   return (
     <Helmet>
       <title>{fullTitle}</title>
+<<<<<<< HEAD
       <meta name="description" content={fullDescription} />
       <meta name="keywords" content={fullKeywords} />
       <link rel="canonical" href={currentUrl} />
@@ -187,6 +227,18 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {tags.length > 0 && <meta name="article:tag" content={tags.join(', ')} />}
       
       {/* Open Graph */}
+=======
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="robots" content="index, follow" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      
+      {/* Canonical URL */}
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      
+      {/* Open Graph Meta Tags */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={fullDescription} />
       <meta property="og:type" content={ogType} />
@@ -203,6 +255,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og: image" content={ogImage,} />
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
       <meta property="og:site_name" content="Zion Tech Group" />
+<<<<<<< HEAD
       
 <<<<<<< HEAD
       {/* Twitter */}
@@ -234,11 +287,27 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+=======
+      <meta property="og:locale" content="en_US" />
+      
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      
+      {/* Additional SEO Meta Tags */}
+      <meta name="theme-color" content="#0f172a" />
+      <meta name="msapplication-TileColor" content="#0f172a" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
       
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(generateStructuredData())}
       </script>
+<<<<<<< HEAD
       
       {/* Breadcrumb Structured Data */}
       {breadcrumbs.length > 0 && (
@@ -248,6 +317,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   title: string;
   description: string;
   structuredData?: any;
+=======
+    </Helmet>
+  )
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({ title, description, structuredData }) => {

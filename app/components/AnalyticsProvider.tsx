@@ -19,12 +19,17 @@ import React, { createContext, useContext, useEffect } from 'react';
 <<<<<<< HEAD
 interface AnalyticsContextType {
 <<<<<<< HEAD
+<<<<<<< HEAD
   trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
   trackPageView: (pageName: string,) => void;
 =======
   trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
   trackPageView: (pageName: string, properties?: Record<string, unknown>) => void;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
+=======
+  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void;
+  trackPageView: (pageName: string, pagePath: string) => void;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
@@ -44,8 +49,16 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined   />(und
 
 const AnalyticsProvider: React.FC<{ children: React.ReactNode ,}> = ({ children }) => {
   useEffect(() => {
+<<<<<<< HEAD
     // Initialize Google Analytics
     if (typeof window !== 'undefined' && typeof gtag !== 'undefined') {
+=======
+    // Initialize Google Analytics if available
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      const gtag = (window as { gtag: (command: string, targetId: string, config?: Record<string, unknown>) => void }).gtag;
+      
+      // Configure Google Analytics
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
       gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: document.title,
         page_location: window.location.href,
@@ -54,9 +67,29 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode ,}> = ({ children 
   }, []);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
     if (typeof window !== 'undefined' && typeof gtag !== 'undefined') {
       gtag('event', eventName, parameters);
+=======
+  const trackEvent = (eventName: string, parameters: Record<string, unknown> = {}) => {
+    if (typeof window === 'undefined') return;
+
+    // Google Analytics
+    if ('gtag' in window) {
+      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+      gtag('event', eventName, {
+        event_category: parameters.category || 'engagement',
+        event_label: parameters.label,
+        value: parameters.value,
+        ...parameters,
+      });
+    }
+
+    // Console logging for development
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Analytics Event:', eventName, parameters);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
     }
   };
 
@@ -65,6 +98,7 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode ,}> = ({ children 
       gtag('event', 'page_view', {
 =======
 
+<<<<<<< HEAD
 interface AnalyticsProviderProps {children: React.ReactNode;}
 
     // Initialize analytics
@@ -86,6 +120,12 @@ interface AnalyticsProviderProps {children: React.ReactNode;}
 
     if (typeof window !== 'undefined' && window.gtag) {window.gtag('config', 'GA_MEASUREMENT_ID', {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+    // Google Analytics
+    if ('gtag' in window) {
+      const gtag = (window as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag;
+      gtag('config', 'GA_MEASUREMENT_ID', {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
         page_title: pageName,
         page_location: window.location.href,});
     }
