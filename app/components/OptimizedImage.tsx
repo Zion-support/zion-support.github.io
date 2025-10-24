@@ -1,6 +1,6 @@
 import Footer from './Footer'
 import React from 'react'
-import { ArrowRight, Brain } from 'lucide-react'
+import { ArrowRight, Brain, Mail, CheckCircle } from 'lucide-react'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 import { Phone, Mail, ArrowRight } from 'lucide-react'
 

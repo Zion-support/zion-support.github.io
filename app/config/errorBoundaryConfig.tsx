@@ -153,7 +153,7 @@ return (
 <div className="max-w-md w-full text-center"></div>
 <h1 className="text-6xl font-bold text-gray-900">404</h1>
 <h2 className="mt-4 text-2xl font-bold text-gray-900">Page Not Found</h2>
-<p className="mt-2 text-gray-600">The page you're looking for doesn't exist or has been moved.</p>
+<p className="mt-2 text-gray-600">The page you&apos;re looking for doesn't exist or has been moved.</p>
 <div className="mt-6 flex gap-4 justify-center"></div>
 <button
 onClick={() =>(window.location.href = '/')}</button>

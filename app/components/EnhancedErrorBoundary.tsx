@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp, Mail, CheckCircle } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
@@ -181,7 +181,7 @@ class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
               <AlertTriangle className=&quot;w-8 h-8 text-red-400&quot; />
             </div>
             <h1 className=&quot;text-2xl font-bold text-white mb-4&quot;>Oops! Something went wrong</h1>
-            <p className=&quot;text-gray-300 mb-6&quot;>We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.</p>p>
+            <p className=&quot;text-gray-300 mb-6&quot;>We&apos;re sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.</p>p>
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className=&quot;mb-6 text-left&quot;>
                 <summary className=&quot;text-sm text-gray-400 cursor-pointer mb-2&quot;>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Brain } from 'lucide-react'
+import { Brain, CheckCircle } from 'lucide-react'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 import { ArrowRight } from 'lucide-react'
 

@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 'use client'
 import Footer from './Footer'
 import Navigation from './Navigation'
 import React from 'react'
-import { ArrowRight, Brain } from 'lucide-react'
+import { ArrowRight, Brain, Mail, CheckCircle } from 'lucide-react'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 import { Phone, Mail, ArrowRight } from 'lucide-react'
 
@@ -152,5 +151,4 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {
 };
 
 export default SEOEnhancerPage;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4da8
+

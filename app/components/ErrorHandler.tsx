@@ -110,7 +110,7 @@ const ErrorHandlerPage: React.FC = () => {
               Oops! Something went wrong
             </h1>
             <p className=&quot;text-gray-600 mb-6&quot;>
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
+              We&apos;re sorry, but something unexpected happened. Our team has been notified and is working to fix it.
             </p>
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className=&quot;mb-6 text-left&quot;>

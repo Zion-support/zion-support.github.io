@@ -1,6 +1,6 @@
 'use client';
 import Navigation from './Navigation'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, CheckCircle } from 'lucide-react'
 
 import React, { useEffect, useState, useCallback } from 'react'
 import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react'

@@ -1,4 +1,4 @@
-import {Helmet} from 'lucide-react';
+import { Helmet, CheckCircle, ArrowRight } from 'lucide-react';
 import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
