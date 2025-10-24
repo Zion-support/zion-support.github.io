@@ -6,7 +6,6 @@ const InteractiveAIROICalculator: React.FC = () => {
   const [timeframe, setTimeframe] = useState(12);
   
   const calculateROI = () => {
-<<<<<<< HEAD
     const annualSavings = (currentCost * efficiencyGain) / 100;
     const totalSavings = annualSavings * (timeframe / 12);
     const roi = ((totalSavings - currentCost) / currentCost) * 100;
@@ -15,16 +14,6 @@ const InteractiveAIROICalculator: React.FC = () => {
   
   const roi = calculateROI();
   
-=======
-    const annualSavings = (currentCost * efficiencyGain) / 100
-    const totalSavings = annualSavings * (timeframe / 12)
-    const roi = ((totalSavings - currentCost) / currentCost) * 100
-    return Math.max(0, roi)
-  }
-  
-  const roi = calculateROI()
-  
->>>>>>> 25adb2f5c6bac8e2e9c4ea63f8e65ad0a7ecbbec
   return (
     <section className='bg-white py-16 rounded-2xl shadow-lg'>
       <div className='container mx-auto px-4'>

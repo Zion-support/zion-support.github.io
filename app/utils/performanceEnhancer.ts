@@ -10,23 +10,13 @@ import { useRef, useEffect } from 'react';
 export const debounce = <T extends (..._args: unknown[]) => unknown>(
   func: T,
   wait: number
-<<<<<<< HEAD
-): ((..._args: Parameters<T>) => void) => {
-  let timeout: ReturnType<typeof setTimeout>;
-  return (..._args: Parameters<T>) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(..._args), wait);
-  };
-};
-=======
 ): ((...args: Parameters<T>) => void) => {
   let timeout: ReturnType<typeof setTimeout>;
   return (...args: Parameters<T>) => {
-    clearTimeout(timeout)
-    timeout = setTimeout(() => func(...args), wait)
-  }
-}
->>>>>>> 25adb2f5c6bac8e2e9c4ea63f8e65ad0a7ecbbec
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(...args), wait);
+  };
+};
 
 // Throttle function for performance optimization
 export const throttle = <T extends (..._args: unknown[]) => unknown>(
@@ -60,11 +50,7 @@ export class PerformanceMonitor {
   trackRender(componentName: string, renderTime: number) {
     this.metrics.set(`${componentName}_render`, renderTime);
     if (process.env['NODE_ENV'] === 'development') {
-<<<<<<< HEAD
       console.log(`${componentName} rendered in ${renderTime}ms`);
-=======
-      console.log(`${componentName} rendered in ${renderTime}ms`)
->>>>>>> 25adb2f5c6bac8e2e9c4ea63f8e65ad0a7ecbbec
     }
   }
 
@@ -96,11 +82,7 @@ export class PerformanceMonitor {
     const observer = new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {
         if (entry.duration > 50) { // Tasks longer than 50ms
-<<<<<<< HEAD
           console.log(`Long task detected: ${entry.name} took ${entry.duration}ms`);
-=======
-          console.log(`Long task detected: ${entry.name} took ${entry.duration}ms`)
->>>>>>> 25adb2f5c6bac8e2e9c4ea63f8e65ad0a7ecbbec
         }
       });
     });
@@ -220,11 +202,7 @@ export const optimizeScrollPerformance = () => {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         if (process.env['NODE_ENV'] === 'development') {
-<<<<<<< HEAD
           console.log('LCP:', entry.startTime);
-=======
-          console.log('LCP:', entry.startTime)
->>>>>>> 25adb2f5c6bac8e2e9c4ea63f8e65ad0a7ecbbec
         }
       }
     });
@@ -241,11 +219,7 @@ export const optimizeScrollPerformance = () => {
         const fidEntry = entry as FirstInputEntry;
         const fid = fidEntry.processingStart - entry.startTime;
         if (process.env['NODE_ENV'] === 'development') {
-<<<<<<< HEAD
           console.log('FID:', fid);
-=======
-          console.log('FID:', fid)
->>>>>>> 25adb2f5c6bac8e2e9c4ea63f8e65ad0a7ecbbec
         }
       }
     });
@@ -312,10 +286,6 @@ export const initializePerformanceEnhancements = () => {
   // Collect performance metrics
   const metrics = collectPerformanceMetrics();
   if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
-<<<<<<< HEAD
     console.log('Performance metrics:', metrics);
-=======
-    console.log('Performance metrics:', metrics)
->>>>>>> 25adb2f5c6bac8e2e9c4ea63f8e65ad0a7ecbbec
   }
 };

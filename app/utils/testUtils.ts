@@ -37,11 +37,7 @@ export const mockFetch = (
   headers: Record<string, string> = {}
 ): void => {
   if (typeof global !== 'undefined') {
-<<<<<<< HEAD
     (global as typeof global & { fetch: typeof fetch }).fetch = (() =>
-=======
-    (global as typeof global & { fetch: typeof fetch }).fetch = (global as { jest?: { fn: typeof jest.fn } }).jest?.fn(() =>
->>>>>>> 25adb2f5c6bac8e2e9c4ea63f8e65ad0a7ecbbec
       Promise.resolve({
         ok: status >= 200 && status < 300,
         status,
