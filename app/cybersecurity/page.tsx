@@ -1,46 +1,70 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Zap, Shield, Brain, Globe } from 'lucide-react';
+  return()
+        <>
+    <>
+    <title>
+</>Page - Zion Tech Group<>
+    </title>
+    <h1 className="text-4xl font-bold text-white mb-6">
+</>Page<>
+    </h1>
+    <p className="text-lg text-gray-300 mb-8">
+</>Professional page services coming soon.</p>
+          Contact Us
+          
+        <title>5G Data Analytics - Zion Tech Group<>
+    </title>
+    <title>
+</>Cybersecurity - Zion Tech Group<>
+    </title>
+    <h1 className="text-4 xl font-boldtext-whitemb-6">
+</>Cybersecurity<>
+    </h1>
+    <p className="text-lgtext-gray-300mb-8">
+</>Professional cybersecurity services coming soon.</p>
+          Contact Us
+    
+      </>)
+  );
 
-const CybersecurityPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'Advanced Technology',
-      description: 'Cutting-edge solutions powered by the latest technology and AI.'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Optimized for speed and efficiency with real-time processing capabilities.'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption and compliance standards.'
-    },
-    {
-      icon: Globe,
-      title: 'Global Scalability',
-      description: 'Scale effortlessly across multiple regions with automatic load balancing.'
-    }
-  ];
-
-  // const benefits = [] // Unused variable
-
-export default function CybersecurityPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Cybersecurity
-          </h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Learn more about our cybersecurity solutions.
-          </p>
-        </div>
-      </div>
+    <>
+    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+      <>
+    <Helmet>
+    </Helmet>
+</>
+        <title>Service - Zion Tech Group<>
+    </title>
+    <meta name="description", content="Professional services by Zion Tech Group. Transform your business with our expert solutions." />
+</><>
+    </meta>
+    </Helmet>
+</>
+      <>
+    <div className="max-w-7xlmx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+    </div>
+</>
+        <h1 className="text-4xl font-bold text-white mb-6"  >Cybersecurity<>
+    </h1>
+    <p className="text-lgtext-gray-300 mb-8">
+</>Professional cybersecurity services coming soon.<>
+    </p>
+    <Link;</Link>
+</></Link>
+          to="/contact"
+          className="bg-gradient-to-rfrom-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-centermx-auto w-fit"
+        ></Link>
+          Contact Us;
+          <>
+    <ArrowRight className="w-5h-5ml-2" />
+    </ArrowRight>
+</>
+        <>
+    </Link>
+    </div>
+</>
     </div>
   );
 }

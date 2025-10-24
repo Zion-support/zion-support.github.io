@@ -1,197 +1,139 @@
-import React from 'react';
-import Link from 'next/link';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-interface NavigationProps {
-  onSidebarToggle?: () => void;
-}
+const Navigation: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
-  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
-  const location = useLocation();
-
-  const navigation = [
-    { name: 'Home', href: '/', icon: HomeIcon },";
-    { name: 'About', href: '/about', icon: InformationCircleIcon },";
-    {
-      name: 'AI Services',
-      href: '/ai-services',
-      icon: CpuChipIcon,
-      submenu: [
-        { name: 'AI Solutions Overview', href: '/ai-solutions', icon: CpuChipIcon },";
-        { name: 'AI Email Marketing', href: '/ai-email-marketing-automation', icon: EnvelopeIcon },";
-        { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: ShareIcon },";
-        { name: 'AI Customer Support Chatbot', href: '/ai-customer-support-chatbot', icon: ChatBubbleLeftRightIcon },";
-        { name: 'AI Project Management Pro', href: '/ai-project-management-pro', icon: CogIcon },";
-        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro', icon: ChartBarIcon },";
-        { name: 'AI Content Generation', href: '/ai-content-generation-pro', icon: DocumentTextIcon },";
-        { name: 'AI Computer Vision', href: '/ai-computer-vision', icon: EyeIcon },";
-        { name: 'AI Automation Platform', href: '/ai-automation-platform', icon: CogIcon }";
-      ]
-    },
-    {
-      name: 'Micro SaaS',";
-      href: '/micro-saas-solutions',";
-      icon: GlobeAltIcon,
-      submenu: [
-        { name: 'Micro SaaS Overview', href: '/micro-saas-solutions', icon: GlobeAltIcon },
-        { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircleIcon },
-        { name: 'Analytics Dashboard', href: '/analytics-dashboard', icon: ChartBarIcon },
-        { name: 'Customer Support Hub', href: '/customer-support-hub', icon: ChatBubbleLeftRightIcon },
-        { name: 'Inventory Manager', href: '/inventory-manager', icon: CircleStackIcon },
-        { name: 'Social Media Scheduler', href: '/social-media-scheduler', icon: ShareIcon },
-        { name: 'Expense Tracker Pro', href: '/expense-tracker-pro', icon: CurrencyDollarIcon }
-      ]
-    },
-    {
-      name: 'IT Solutions',
-      href: '/it-services',
-      icon: CogIcon,
-      submenu: [
-        { name: 'IT Solutions Overview', href: '/it-services', icon: CogIcon },
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
-        { name: 'Cybersecurity Solutions', href: '/cybersecurity', icon: ShieldCheckIcon },
-        { name: 'Web Development', href: '/web-development', icon: CodeBracketIcon },
-        { name: 'Mobile App Development', href: '/mobile-development', icon: DevicePhoneMobileIcon },
-        { name: 'Database Management', href: '/database-management', icon: CircleStackIcon },
-        { name: 'Network Infrastructure', href: '/network-infrastructure', icon: SignalIcon },
-        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
-      ]
-    },
-    {
-      name: 'Resources',";
-      href: '#',";
-      icon: DocumentTextIcon,
-      submenu: [
-        { name: 'Blog', href: '/blog', icon: DocumentTextIcon },";
-        { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },";
-        { name: 'Documentation', href: '/docs', icon: DocumentTextIcon },";
-        { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon },";
-        { name: 'API Documentation', href: '/api-docs', icon: CodeBracketIcon },";
-        { name: 'Help Center', href: '/help', icon: QuestionMarkCircleIcon }";
-      ]
-    },
-    {
-      name: 'Company',";
-      href: '#',";
-      icon: UserGroupIcon,
-      submenu: [
-        { name: 'About Us', href: '/about', icon: InformationCircleIcon },";
-        { name: 'Our Team', href: '/team', icon: UserGroupIcon },";
-        { name: 'Careers', href: '/careers', icon: UserGroupIcon },";
-        { name: 'Partnerships', href: '/partnerships', icon: UserPlusIcon },";
-        { name: 'Contact', href: '/contact', icon: PhoneIcon }";
-      ]
-    },
-    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },";
-    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon }";
-  ];
-
-  // const aiServices = [
-  //   { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder' },
-  //   { name: 'AI Content Generator', href: '/ai-content-generator' },
-  //   { name: 'AI Data Visualizer', href: '/ai-data-visualizer' },
-  //   { name: 'AI Document Intelligence', href: '/ai-document-intelligence' },
-  //   { name: 'AI Financial Forecasting', href: '/ai-financial-forecasting' },
-  //   { name: 'AI Fraud Detection', href: '/ai-fraud-detection' }
-  // ];
-
-  // const itServices = [
-  //   { name: 'Web Development', href: '/web-development' },
-  //   { name: 'Mobile Development', href: '/mobile-development' },
-  //   { name: 'API Development', href: '/api-development' },
-  //   { name: 'Cloud Solutions', href: '/cloud-solutions' },
-  //   { name: 'Cybersecurity', href: '/cybersecurity' },
-  //   { name: 'Data Analytics', href: '/data-analytics' }
-  // ];
-
-  // const microSaas = [
-  //   { name: 'Analytics Dashboard', href: '/analytics-dashboard' },
-  //   { name: 'Expense Tracker Pro', href: '/expense-tracker-pro' },
-  //   { name: 'Inventory Manager', href: '/inventory-manager' },
-  //   { name: 'Task Manager Pro', href: '/task-manager-pro' },
-  //   { name: 'Social Media Scheduler', href: '/social-media-scheduler' }
-  // ];
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
-    <nav className="bg-slate-900 shadow-lg">
+    <nav className="bg-gray-900 text-white shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex">
-            <div className="flex-shrink-0 flex items-center">
-              <Link to="/" className="flex-shrink-0 flex items-center">
-                <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">Z</span>
+        <div className="flex justify-between items-center py-4">
+          {/* Logo */}
+          <div className="flex items-center">
+            <Link to="/" className="text-2xl font-bold text-purple-400">
+              Zion Tech Group
+            </Link>
+          </div>
+
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center space-x-8">
+            <Link to="/" className="hover:text-purple-400 transition-colors">
+              Home
+            </Link>
+            <Link to="/about" className="hover:text-purple-400 transition-colors">
+              About
+            </Link>
+            <div className="relative group">
+              <button className="hover:text-purple-400 transition-colors flex items-center">
+                AI Services
+                <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="absolute left-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <div className="py-1">
+                  <Link to="/ai-services" className="block px-4 py-2 text-sm hover:bg-gray-700">
+                    All AI Services
+                  </Link>
+                  <Link to="/ai-analytics" className="block px-4 py-2 text-sm hover:bg-gray-700">
+                    AI Analytics
+                  </Link>
+                  <Link to="/ai-automation" className="block px-4 py-2 text-sm hover:bg-gray-700">
+                    AI Automation
+                  </Link>
+                  <Link to="/ai-cybersecurity" className="block px-4 py-2 text-sm hover:bg-gray-700">
+                    AI Cybersecurity
+                  </Link>
                 </div>
-                <span className="ml-2 text-white font-bold text-xl">Zion Tech Group</span>
+              </div>
+            </div>
+            <div className="relative group">
+              <button className="hover:text-purple-400 transition-colors flex items-center">
+                IT Services
+                <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="absolute left-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <div className="py-1">
+                  <Link to="/it-services" className="block px-4 py-2 text-sm hover:bg-gray-700">
+                    All IT Services
+                  </Link>
+                  <Link to="/cloud-migration" className="block px-4 py-2 text-sm hover:bg-gray-700">
+                    Cloud Migration
+                  </Link>
+                  <Link to="/cybersecurity" className="block px-4 py-2 text-sm hover:bg-gray-700">
+                    Cybersecurity
+                  </Link>
+                  <Link to="/web-development" className="block px-4 py-2 text-sm hover:bg-gray-700">
+                    Web Development
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <Link to="/pricing" className="hover:text-purple-400 transition-colors">
+              Pricing
+            </Link>
+            <Link to="/contact" className="hover:text-purple-400 transition-colors">
+              Contact
+            </Link>
+            <Link 
+              to="/demo" 
+              className="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-md transition-colors"
+            >
+              Get Demo
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-400 hover:text-white focus:outline-none focus:text-white"
+            >
+              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {isMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800 rounded-md mt-2">
+              <Link to="/" className="block px-3 py-2 hover:text-purple-400">
+                Home
+              </Link>
+              <Link to="/about" className="block px-3 py-2 hover:text-purple-400">
+                About
+              </Link>
+              <Link to="/ai-services" className="block px-3 py-2 hover:text-purple-400">
+                AI Services
+              </Link>
+              <Link to="/it-services" className="block px-3 py-2 hover:text-purple-400">
+                IT Services
+              </Link>
+              <Link to="/pricing" className="block px-3 py-2 hover:text-purple-400">
+                Pricing
+              </Link>
+              <Link to="/contact" className="block px-3 py-2 hover:text-purple-400">
+                Contact
+              </Link>
+              <Link to="/demo" className="block px-3 py-2 bg-purple-600 hover:bg-purple-700 rounded-md text-center">
+                Get Demo
               </Link>
             </div>
           </div>
-        </div>
-
-        {/* Mobile Navigation */}
-        <div className={`lg:hidden ${isOpen ? 'block' : 'hidden'}`}>
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 border-t border-slate-700 max-h-96 overflow-y-auto">
-            {navigation.map((item) => (
-              <div key={item.name}>
-                {item.submenu ? (
-                  <div>
-                    <button
-                      onClick={() => {
-                        if (item.name === 'AI Services') toggleServicesMenu();
-                        else if (item.name === 'Micro SaaS') toggleSolutionsMenu();
-                        else if (item.name === 'IT Solutions') toggleResourcesMenu();
-                        else if (item.name === 'Resources') toggleResourcesMenu();
-                        else if (item.name === 'Company') toggleCompanyMenu();
-                      }}
-                      className="flex items-center w-full px-3 py-2 rounded-md text-base font-medium transition-colors text-gray-300 hover:text-white hover:bg-slate-700"
-                    >
-                      <item.icon className="w-5 h-5 mr-3" />
-                      <span>{item.name}</span>
-                      <ChevronDownIcon className="w-4 h-4 ml-auto" />
-                    </button>
-                    {/* Mobile Submenu */}
-                    <div className={`pl-6 ${
-                      (item.name === 'AI Services' && isServicesOpen) ||
-                      (item.name === 'Micro SaaS' && isSolutionsOpen) ||
-                      (item.name === 'IT Solutions' && isResourcesOpen) ||
-                      (item.name === 'Resources' && isResourcesOpen) ||
-                      (item.name === 'Company' && isCompanyOpen)
-                        ? 'block' : 'hidden'
-                    }`}>
-                      {item.submenu.map((subItem) => (
-                        <Link key={subItem.name}
-                          to={subItem.href}
-                          className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-slate-700"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          <subItem.icon className="w-4 h-4 mr-3" />
-                          <span>{subItem.name}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                ) : (
-                  <div>
-                    <Link
-                      to={item.href}
-                      className={`flex items-center px-3 py-2 rounded-md text-base font-medium transition-colors ${
-                        isActive(item.href) ? 'text-white bg-slate-700' : 'text-gray-300 hover:text-white hover:bg-slate-700'
-                      }`}
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <item.icon className="w-5 h-5 mr-3" />
-                      {item.name}
-                    </Link>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
+        )}
       </div>
     </nav>
   );

@@ -1,11 +1,7 @@
+'use client';
 
-interface PerformanceMetrics {
-  fcp: number | null
-  lcp: number | null
-  fid= number | null
-  cls: number | null
-  ttfb: number | null
-}
+import React, { useEffect } from 'react';
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -16,46 +12,47 @@ const PerformanceMonitor: React.FC = () => {
     ttfb: null
   })
   useEffect(() => {
-    const initPerformanceMonitoring = async () => {
-      try {
-        const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
-        
-        if (typeof window !== 'undefined') {
-          getCLS((metric) => {
-            // Log performance metrics in development
-            if (process.env.NODE_ENV === 'development') {
-              // console.log('CLS:', metric);
-            }
-          });
-          getFID((metric) => {
-            if (process.env.NODE_ENV === 'development') {
-              // console.log('FID:', metric);
-            }
-          });
-          getFCP((metric) => {
-            if (process.env.NODE_ENV === 'development') {
-              // console.log('FCP:', metric);
-            }
-          });
-          getLCP((metric) => {
-            if (process.env.NODE_ENV === 'development') {
-              // console.log('LCP:', metric);
-            }
-          });
-          getTTFB((metric) => {
-            if (process.env.NODE_ENV === 'development') {
-              // console.log('TTFB:', metric);
-            }
-          });
-        }
-      } catch (error) {
-        if (process.env.NODE_ENV === 'development') {
-          // console.warn('Performance monitoring not available:', error);
-        }
+    // Monitor Core Web Vitals
+    const monitorCoreWebVitals = () => {
+      if (typeof window !== 'undefined') {
+        getCLS(console.log);
+        getFID(console.log);
+        getFCP(console.log);
+        getLCP(console.log);
+        getTTFB(console.log);
       }
     };
 
-    initPerformanceMonitoring();
+    // Monitor performance metrics
+    const monitorPerformance = () => {
+      if (typeof window !== 'undefined' && 'performance' in window) {
+        // Monitor page load time
+        window.addEventListener('load', () => {
+          const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+          console.log('Page load time:', navigation.loadEventEnd - navigation.loadEventStart);
+        });
+
+        // Monitor resource loading
+        const observer = new PerformanceObserver((list) => {
+          list.getEntries().forEach((entry) => {
+            if (entry.entryType === 'resource') {
+              console.log('Resource loaded:', entry.name, entry.duration);
+            }
+          });
+        });
+
+        observer.observe({ entryTypes: ['resource'] });
+      }
+    };
+
+    // Initialize monitoring
+    monitorCoreWebVitals();
+    monitorPerformance();
+
+    // Cleanup
+    return () => {
+      // Cleanup if needed
+    };
   }, []);
 
   return (
@@ -109,3 +106,4 @@ const PerformanceMonitor: React.FC = () => {
     </div>
 
 
+export default PerformanceMonitor;

@@ -1,90 +1,263 @@
-'use client';
-import React from 'react';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe } from 'lucide-react';
-
-const features = [
-  {
-    icon: Target,
-    title: 'Keyword Research',
-    description: 'Advanced AI-powered keyword research and analysis tools',
-  },
-  {
-    icon: BarChart,
-    title: 'Performance Analytics',
-    description: 'Comprehensive SEO performance tracking and reporting',
-  },
-  {
-    icon: Brain,
-    title: 'Content Optimization',
-    description: 'AI-driven content optimization for better search rankings',
-  },
-  {
-    icon: TrendingUp,
-    title: 'Rank Tracking',
-    description: 'Monitor your search engine rankings across multiple keywords',
-  },
-];
-
-const EnhancedSEOOptimizer: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+export default EnhancedSEOOptimizerPage;
+ursor/
+      description: 'Advanced AI technology to automatically optimize your website for search engines',
+      description: 'Advanced AI technology to optimize your website for search engines and improve rankings',
+    },
+    {
+      icon: Brain,
+      title: 'AI-Powered SEO Optimization',
+      icon: Zap,
+      title: 'Real-time Analysis',
+      description: 'Lightning-fast SEO analysis and optimization with instant recommendations',
+    },
+    {
+      icon: Shield,
+      title: 'White-Hat Techniques',
+      description: 'Ethical SEO practices with long-term sustainable results and compliance',
+    },
+    {
+      icon: Globe,
+      title: 'Global Optimization',
+      description: 'Worldwide SEO optimization and support for international businesses',
+    }
+  ];
+  const benefits = [;
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ];
+  return()
+    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+      <>
+    <Helmet>
+    </Helmet>
+</>
+        <title>Enhanced SEO Optimizer | Zion Tech Group<>
+    </title>
+    <meta name="description", content="Professional SEO optimization services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+</><>
+    </meta>
+    <meta name="keywords", content="SEO optimizer, AI solutions, IT services, Zion Tech Group, search engine optimization" />
+</><>
+    </meta>
+    <meta name="description", content="Professional Enhanced SEO Optimizer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+</><>
+    </meta>
+    <meta name="keywords", content="SEO optimizer, search engine optimization, AI solutions, IT services, Zion Tech Group" />
+</><>
+    </meta>
+    </Helmet>
+</>
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Enhanced <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">SEO Optimizer</span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Boost your website's search engine visibility with our advanced SEO optimization tools and AI-powered insights.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300">
-              Get Started
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </button>
-            <button className="inline-flex items-center px-8 py-3 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
-              Learn More
-            </button>
-          </div>
-        </div>
-      </section>
-
+      <>
+    <section className="w-5h-5ml-2" />
+    </section>
+</>
+        <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <>
+    <h1 className="w-5h-5ml-2" />
+    </h1>
+</>
+              <span className="w-5h-5ml-2" />Enhanced SEO;
+                Enhanced SEO Optimizer;
+              <>
+    </span>
+    <br />
+</><>
+    </br>
+    <span className="text-white"  >
+</>Optimizer<>
+    </span>
+    </h1>
+</>
+            <p className="w-5h-5ml-2">Transform your business with our advanced SEO optimization solutions.
+              Powered by cutting-edge AI technology and industry expertise.
+              Optimize your website for search engines with our advanced AI-powered SEO optimization solutions.
+              Improve rankings and drive more organic traffic.
+            <>
+    </p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+</><>
+    </div>
+    <button className="w-5h-5ml-2" />
+</></button>
+                Get Started;
+                <>
+    <ArrowRight className="w-5h-5ml-2" />
+    </ArrowRight>
+</>
+              <>
+    </button>
+    <button className="w-5h-5ml-2">
+</>Learn More;
+              <>
+    </button>
+    </div>
+</>
+        <>
+    </div>
+    </section>
+</>
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">SEO Features</h2>
-            <p className="text-xl text-gray-300">Comprehensive SEO optimization tools</p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <>
+    <section className="w-5h-5ml-2" />
+    </section>
+</>
+        <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <h2 className="w-5h-5ml-2" />Our Features;
+            <>
+    </h2>
+    <p className="w-5h-5ml-2">
+</>Discover the powerful features that make our enhanced SEO optimizer solutions stand out.
+            <>
+    </p>
+    </div>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>)
             {features.map((feature, index) => (
-              <div key={index} className="p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-4">
-                  <feature.icon className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
+              <>
+    <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300borderborder-white/20" />
+    </div>
+</>
+                <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+                  <>
+    <feature.icon className="w-6 h-6text-white"  />
+    </feature>
+</>
+                <>
+    </div>
+    <h3 className="w-5h-5ml-2" />
+</>{feature.title}
+                <>
+    </h3>
+    <p className="w-5h-5ml-2">
+</>{feature.description}
+                <>
+    </p>
+    </div>
+</>)
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Optimize Your SEO?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Start improving your search engine rankings today with our advanced SEO tools.
-          </p>
-          <button className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300">
-            Start SEO Optimization
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </button>
-        </div>
-      </section>
+          <>
+    </div>
+    </section>
+</>
+      {/* Benefits Section */}
+      <>
+    <section className="w-5h-5ml-2" />
+    </section>
+</>
+        <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <h2 className="w-5h-5ml-2" />Why Choose Our Solutions?
+            <>
+    </h2>
+    <p className="w-5h-5ml-2">
+</>Experience the benefits of working with our cutting-edge enhanced SEO optimizer solutions.
+            <>
+    </p>
+    </div>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            {benefits.map((benefit, index) => (
+              <>
+    <div key={index} className="flexitems-start space-x-4" />
+    </div>
+</>
+                <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+                  <>
+    <CheckCircle className="w-5h-5ml-2" />
+    </CheckCircle>
+</>
+                <>
+    </div>
+    <p className="w-5h-5ml-2">
+</>{benefit}
+                <>
+    </p>
+    </div>
+</>)
+            ))}
+          <>
+    </div>
+    </section>
+</>
+      {/* Contact Section */}
+      <>
+    <section className="w-5h-5ml-2" />
+    </section>
+</>
+        <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <h2 className="w-5h-5ml-2" />Ready to Get Started?
+            <>
+    </h2>
+    <p className="w-5h-5ml-2">
+</>Contact us today to learn more about our SEO optimization solutions and how they can benefit your business.
+            <>
+    </p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+</><>
+    </div>
+    <button className="w-5h-5ml-2">
+</>Contact Us;
+              <>
+    </button>
+    <button className="w-5h-5ml-2">
+</>Schedule Demo;
+              <>
+    </button>
+    </div>
+</>
+        <>
+    </div>
+    </section>
+</>
     </div>
   );
 };

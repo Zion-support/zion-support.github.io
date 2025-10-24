@@ -4,115 +4,266 @@ import { Helmet } from 'react-helmet-async';
 import { Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const TutorialsPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'Advanced Technology',
-      description: 'Cutting-edge solutions powered by the latest technology and AI.'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Optimized for speed and efficiency with real-time processing capabilities.'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption and compliance standards.'
-    },
-    {
-      icon: Globe,
-      title: 'Global Scalability',
-      description: 'Scale effortlessly across multiple regions with automatic load balancing.'
-    }
-  ];
+  return()
+        <>
+    <>
+    <title>
+</>Tutorials - Zion Tech Group<>
+    </title>
+    </>
+</>)
+  );
+}
 
-  // const benefits = [] // Unused variable
-
-  return (
-    <React.Fragment>
-      <Helmet>
-        <title>Tutorials - Zion Tech Group | Advanced AI and IT Solutions</title>
-        <meta name="description" content="Professional tutorials solutions powered by advanced AI and cutting-edge technology." />
-        <meta name="keywords" content="tutorials, AI solutions, IT services, automation, technology, business solutions" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Tutorials
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional tutorials solutions powered by advanced AI and cutting-edge technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                Get Started
-              </a>
-              <a
-                href="/services"
-                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                View All Services
-              </a>
+    <>
+    <>
+    </>
+</>
+      <>
+    <Helmet>
+    </Helmet>
+</>
+        <title>Tutorials - Zion Tech Group<>
+    </title>
+    <meta name="description", content="Learn AI and IT solutions with our comprehensive tutorials and guides." />
+</><>
+    </meta>
+    <meta name="keywords", content="tutorials, AI tutorials, IT tutorials, learning, guides, education" />
+</><>
+    </meta>
+    </Helmet>
+</>
+      <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+        <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <>
+    <h1 className="w-5h-5ml-2" />
+    </h1>
+</>
+              <span className="w-5h-5ml-2" />Tutorials & Learning Center;
+              <>
+    </span>
+    </h1>
+</>
+            <p className="w-5h-5ml-2">Master AI and IT technologies with our comprehensive tutorials, guides, and hands-on learning resources.
+            <>
+    </p>
+    </div>
+</>
+          <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            {/* AI Tutorials */}
+            <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+              <h3 className="text-2 xl font-bold text-white mb-4"  >AI Tutorials<>
+    </h3>
+    <p className="w-5h-5ml-2">
+</>Learn artificial intelligence from basics to advanced implementations.
+              <>
+    </p>
+    <ul className="w-5h-5ml-2" />
+</><>
+    </ul>
+    <li  >
+</>• Machine Learning Fundamentals<>
+    </li>
+    <li  >
+</>• Deep Learning with TensorFlow<>
+    </li>
+    <li  >
+</>• Natural Language Processing<>
+    </li>
+    <li  >
+</>• Computer Vision Applications<>
+    </li>
+    </ul>
+</>
             </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Powerful Features
-              </h2>
-              <p className="text-lg text-gray-300">
-                Everything you need for success
-              </p>
+            {/* IT Infrastructure */}
+            <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+              <h3 className="text-2 xl font-bold text-white mb-4"  >IT Infrastructure<>
+    </h3>
+    <p className="w-5h-5ml-2">
+</>Master cloud computing, DevOps, and system administration.
+              <>
+    </p>
+    <ul className="w-5h-5ml-2" />
+</><>
+    </ul>
+    <li  >
+</>• Cloud Architecture Design<>
+    </li>
+    <li  >
+</>• Container Orchestration<>
+    </li>
+    <li  >
+</>• CI/CD Pipeline Setup<>
+    </li>
+    <li  >
+</>• Security Best Practices<>
+    </li>
+    </ul>
+</>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
-              ))}
+            {/* Web Development */}
+            <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+              <h3 className="text-2 xl font-bold text-white mb-4"  >Web Development<>
+    </h3>
+    <p className="w-5h-5ml-2">
+</>Build modern, scalable web applications with cutting-edge technologies.
+              <>
+    </p>
+    <ul className="w-5h-5ml-2" />
+</><>
+    </ul>
+    <li  >
+</>• React & Next.js Mastery<>
+    </li>
+    <li  >
+</>• Full-Stack Development<>
+    </li>
+    <li  >
+</>• API Design & Integration<>
+    </li>
+    <li  >
+</>• Performance Optimization<>
+    </li>
+    </ul>
+</>
             </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-lg text-gray-300 mb-8">
-              Let us help you implement this solution for your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                Start Your Project
-              </a>
-              <a
-                href="/services"
-                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                Learn More
-              </a>
+            {/* Data Science */}
+            <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+              <h3 className="text-2 xl font-bold text-white mb-4"  >Data Science<>
+    </h3>
+    <p className="w-5h-5ml-2">
+</>Extract insights from data using advanced analytics and visualization.
+              <>
+    </p>
+    <ul className="w-5h-5ml-2" />
+</><>
+    </ul>
+    <li  >
+</>• Data Analysis with Python<>
+    </li>
+    <li  >
+</>• Statistical Modeling<>
+    </li>
+    <li  >
+</>• Data Visualization<>
+    </li>
+    <li  >
+</>• Big Data Processing<>
+    </li>
+    </ul>
+</>
             </div>
-          </div>
-        </section>
-      </div>
-    </React.Fragment>
+            {/* Cybersecurity */}
+            <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+              <h3 className="text-2 xl font-bold text-white mb-4"  >Cybersecurity<>
+    </h3>
+    <p className="w-5h-5ml-2">
+</>Protect systems and data with comprehensive security strategies.
+              <>
+    </p>
+    <ul className="w-5h-5ml-2" />
+</><>
+    </ul>
+    <li  >
+</>• Threat Detection & Response<>
+    </li>
+    <li  >
+</>• Penetration Testing<>
+    </li>
+    <li  >
+</>• Security Architecture<>
+    </li>
+    <li  >
+</>• Compliance & Governance<>
+    </li>
+    </ul>
+</>
+            </div>
+            {/* Mobile Development */}
+            <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+              <h3 className="text-2 xl font-bold text-white mb-4"  >Mobile Development<>
+    </h3>
+    <p className="w-5h-5ml-2">
+</>Create cross-platform mobile applications with modern frameworks.
+              <>
+    </p>
+    <ul className="w-5h-5ml-2" />
+</><>
+    </ul>
+    <li  >
+</>• React Native Development<>
+    </li>
+    <li  >
+</>• Flutter Applications<>
+    </li>
+    <li  >
+</>• Native iOS & Android<>
+    </li>
+    <li  >
+</>• Mobile UI/UX Design<>
+    </li>
+    </ul>
+</>
+            <>
+    </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+</><>
+    </div>
+    <h2 className="text-3 xl font-bold text-white mb-6"  >
+</>Ready to Start Learning?<>
+    </h2>
+    <p className="w-5h-5ml-2">
+</>Join thousands of developers and IT professionals who are advancing their careers with our tutorials.
+            <>
+    </p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+</><>
+    </div>
+    <button className="w-5h-5ml-2">
+</>Browse All Tutorials;
+              <>
+    </button>
+    <button className="w-5h-5ml-2">
+</>Get Personalized Recommendations;
+              <>
+    </button>
+    </div>
+</>
+        <>
+    </div>
+    </>
+</>
   );
 };
-
-export default TutorialsPage;

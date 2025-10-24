@@ -3,116 +3,84 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Zap, Shield, Brain, Globe } from 'lucide-react';
 
-const FiveGSolutionsPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'Advanced Technology',
-      description: 'Cutting-edge solutions powered by the latest technology and AI.'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Optimized for speed and efficiency with real-time processing capabilities.'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption and compliance standards.'
-    },
-    {
-      icon: Globe,
-      title: 'Global Scalability',
-      description: 'Scale effortlessly across multiple regions with automatic load balancing.'
-    }
-  ];
-
-  // const benefits = [] // Unused variable
-
-  return (
-    <React.Fragment>
-      <Helmet>
-        <title>5g Solutions - Zion Tech Group | Advanced AI and IT Solutions</title>
-        <meta name="description" content="Professional 5gsolutions solutions powered by advanced AI and cutting-edge technology." />
-        <meta name="keywords" content="5gsolutions, AI solutions, IT services, automation, technology, business solutions" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              5g Solutions
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional 5gsolutions solutions powered by advanced AI and cutting-edge technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                Get Started
-              </a>
-              <a
-                href="/services"
-                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                View All Services
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Powerful Features
-              </h2>
-              <p className="text-lg text-gray-300">
-                Everything you need for success
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-lg text-gray-300 mb-8">
-              Let us help you implement this solution for your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                Start Your Project
-              </a>
-              <a
-                href="/services"
-                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                Learn More
-              </a>
-            </div>
-          </div>
-        </section>
-      </div>
-    </React.Fragment>
+export default function FiveGSolutionsPage() {
+  return()
+    <>
+    <>
+    <Helmet>
+</>
+        <title>5G Solutions - Zion Tech Group<>
+    </title>
+    </Helmet>
+</>
+      <>
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
+    <div className="text-center">
+</>
+          <h1 className="text-4xl font-bold text-white mb-6">5G Solutions<>
+    </h1>
+    <p className="text-lg text-gray-300 mb-8">
+</>Professional 5G solutions services coming soon.<>
+    </p>
+    <Link 
+            to="/contact" 
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+</>
+            Contact Us
+            <>
+    <ArrowRight className="ml-2 h-5 w-5" />
+    </Link>
+</>
+        <>
+    </div>
+    </div>
+</>
+    </>)
   );
-};
+}
 
 export default FiveGSolutionsPage;
+const FiveGSolutionsPage: React.FC = () => {
+  return()
+    <>
+    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+      <>
+    <Helmet>
+    </Helmet>
+</>
+        <title>5G Solutions - Zion Tech Group<>
+    </title>
+    <meta name="description", content="Comprehensive 5G solutions by Zion Tech Group. Transform your business with our expert 5G technology solutions." />
+</><>
+    </meta>
+    </Helmet>
+</>
+      <>
+    <div className="max-w-7xlmx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+    </div>
+</>
+        <h1 className="text-4xlfont-bold text-white mb-6">5G Solutions<>
+    </h1>
+    <p className="text-lgtext-gray-300 mb-8">
+</>Comprehensive 5G solutions by Zion Tech Group. Transform your business with our expert solutions.<>
+    </p>
+    <Link;</Link>
+</></Link>
+          to="/contact"
+          className="bg-gradient-to-rfrom-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+        ></Link>
+          Contact Us;
+          <>
+    <ArrowRight className="w-5h-5 ml-2" />
+    </ArrowRight>
+</>
+        <>
+    </Link>
+    </div>
+</>
+    </div>)
+  );
+};

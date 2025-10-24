@@ -2,8 +2,13 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
 interface AnalyticsContextType {
-  trackEvent: (event: string, properties?: Record<string, any>) => void;
-  trackPageView: (page: string) => void;
+    <>
+    <>
+    </>
+</>
+  track: (event: string, properties?: Record<string, any />) => void;
+  identify: (userId: string, traits?: Record<string, any />) => void;
+  page: (name: string, properties?: Record<string, any />) => void;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
@@ -38,22 +43,49 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
   };
 
-  const trackPageView = (page: string) => {
-    if (isLoaded && typeof window !== 'undefined') {
-      // Track page view
-      // console.log('Page View:', page);
+  const identify = (userId: string, traits?: Record<string, any />) => {
+    if (typeof window !== 'undefined') {
+      // Google Analytics;
+      if (window.gtag) {
+        window.gtag('config', process.env.REACT_APP_GA_ID, {
+          user_id: userId,
+          custom_map: traits;)
+        });
+      }
+      
+      // Custom analytics;
+      console.log('Analytics Identify: ', userId, traits);
     }
   };
 
-  const value = {
-    trackEvent,
-    trackPageView,
+  const page = (name: string, properties?: Record<string, any />) => {
+    if (typeof window !== 'undefined') {
+      // Google Analytics;
+      if (window.gtag) {
+        window.gtag('event', 'page_view', {
+          page_title: name,
+          page_location: window.location.href,
+          ...properties;)
+        });
+      }
+      
+      // Custom analytics;
+      console.log('Analytics Page: ', name, properties);
+    }
   };
 
-  return (
-    <AnalyticsContext.Provider value={value}>
+  const value: const AnalyticsContextType = {
+    track,
+    identify,
+    page;
+  };
+  return()
+    <>
+    <AnalyticsContext.Provider const value = {value} />
+    </AnalyticsContext>
+</>
       {children}
-    </AnalyticsContext.Provider>
+    </AnalyticsContext.Provider>)
   );
 };
 

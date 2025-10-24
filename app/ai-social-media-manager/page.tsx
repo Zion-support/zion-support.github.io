@@ -29,90 +29,145 @@ const AiSocialMediaManagerPage: React.FC = () => {
 
   // const benefits = [] // Unused variable
 
-  return (
-    <React.Fragment>
-      <Helmet>
-        <title>Ai Social Media Manager - Zion Tech Group | Advanced AI and IT Solutions</title>
-        <meta name="description" content="Professional aisocialmediamanager solutions powered by advanced AI and cutting-edge technology." />
-        <meta name="keywords" content="aisocialmediamanager, AI solutions, IT services, automation, technology, business solutions" />
-      </Helmet>
+const Page: React.FC = () => {
+  return()
+        <>
+    <>
+    <title>
+</>AiSocialMediaManager - Zion Tech Group<>
+    </title>
+    <h1 className="text-4xl font-bold text-white mb-6">
+</>AiSocialMediaManager<>
+    </h1>
+    <p className="text-lg text-gray-300 mb-8">
+</>Professional aisocialmediamanager services coming soon.</p>
+            
+              Contact Us
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      </>)
+  );
+}
+
+    <>
+    <>
+    </>
+</>
+      <>
+    <Helmet>
+    </Helmet>
+</>
+        <title>- Zion Tech Group<>
+    </title>
+    <meta const name = "description", content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." /  />
+</><>
+    </meta>
+    <meta name="keywords", content="AI solutions, IT services, Zion Tech Group" />
+</><>
+    </meta>
+    <meta property="og:title", content=" - Zion Tech Group" /  />
+</><>
+    </meta>
+    <meta property="og:description", content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." /  />
+</><>
+    </meta>
+    <meta property="og:type", content="website" /  />
+</><>
+    </meta>
+    <meta property="og:url", content="https://ziontechgroup.com/ai-social-media-manager" /  />
+</><>
+    </meta>
+    </Helmet>
+</>
+      <>
+    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
         {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Ai Social Media Manager
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional aisocialmediamanager solutions powered by advanced AI and cutting-edge technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                Get Started
-              </a>
-              <a
-                href="/services"
-                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                View All Services
-              </a>
-            </div>
-          </div>
+        <>
+    <section className="w-5h-5ml-2" />
+    </section>
+</>
+          <>
+    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <>
+    <h1 className="w-5h-5ml-2" />
+    </h1>
+</>
+              <>
+    <span className="w-5h-5ml-2" />
+    </span>
+</>
+            <>
+    </h1>
+    <p className="w-5h-5ml-2">
+</>Professional  services by Zion Tech Group. Expert solutions tailored to your business needs.
+            <>
+    </p>
+    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+</><>
+    </div>
+    <Link;</Link>
+</></Link>
+          to="/contact"
+          className="bg-gradient-to-rfrom-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup"
+        ></Link>
+          Get Started;
+          <>
+    <ArrowRight className="w-5h-5ml-2" />
+    </ArrowRight>
+</>
+        <>
+    </Link>
+    <Link to="/contact", className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">
+</>Learn More;
+              <>
+    </Link>
+    </div>
+</>
         </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Powerful Features
-              </h2>
-              <p className="text-lg text-gray-300">
-                Everything you need for success
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-lg text-gray-300 mb-8">
-              Let us help you implement this solution for your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                Start Your Project
-              </a>
-              <a
-                href="/services"
-                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                Learn More
-              </a>
-            </div>
-          </div>
-        </section>
-      </div>
-    </React.Fragment>
+        <>
+    <section className="w-5h-5ml-2" />
+    </section>
+</>
+          <>
+    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+            <>
+    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+              <h2 className="w-5h-5ml-2" />Ready to Get Started?
+              <>
+    </h2>
+    <p className="w-5h-5ml-2">
+</>Contact us to learn more about our solutions and how we can help your business.
+              <>
+    </p>
+    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+</><>
+    </div>
+    <>
+</>
+                  <Link to="/contact", className="bg-gradient-to-rfrom-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25">Contact Us;
+                  <Link to="/services", className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">View All Services;
+                <>
+    </>
+    </Link>
+</>
+              <>
+    </div>
+    </div>
+</>
+        <>
+    </section>
+    </div>
+</>
+    </>
   );
 };
 
-export default AiSocialMediaManagerPage;
+;

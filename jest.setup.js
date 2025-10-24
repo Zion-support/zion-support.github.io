@@ -1,14 +1,53 @@
-import React from 'react''
-import '@testing-library/jest-dom''
-jest.mock('react-router-dom''
-  const actual = jest.requireActual('react-router-dom''
-      "pathname": '/'',
-      "search": ''',
-      "hash": ''',
-      "key": 'default'',
-      const mockReact = jest.requireActual('react''
-      return mockReact.createElement('a''
-      const mockReact = jest.requireActual('react''
-        "path": '/'',
-        "element": mockReact.createElement('div'';,
-    if (typeof args[0] === 'string' && args[0].includes('"Warning": ReactDOM.render is no longer supported''
+require("@testing-library/jest-dom");
+
+// Polyfill for TextEncoder/TextDecoder;
+const { TextEncoder, TextDecoder } = require('util');
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
+
+// Mock window.matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,)
+  value: jest.fn().mockImplementation(query => ({
+    matches: false,
+    media: query,
+    onchange: null,)
+    addListener: jest.fn(), // deprecated
+    removeListener: jest.fn(), // deprecated
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
+});
+
+// Mock IntersectionObserver
+global.IntersectionObserver = class IntersectionObserver {
+// Mock window.matchMedia;
+});
+
+// Mock IntersectionObserver;
+  constructor() {};
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+// Mock ResizeObserver;
+  constructor() {};
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock window.gtag
+global.gtag = jest.fn();
+
+// Mock window.dataLayer
+global.dataLayer = [];
+// Mock window.gtag;
+});
+
+// Mock window.dataLayer;
+});

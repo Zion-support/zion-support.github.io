@@ -10,74 +10,117 @@ const ContentStatistics: React.FC = () => {
     experience: 0,
   });
 
-  useEffect(() => {
-    const targetStats = {
-      clients: 500,
-      projects: 1000,
-      satisfaction: 99,
-      experience: 10,
-    };
+interface ContentStatisticsProps {
+  stats?: StatItem[];
+  animationDuration?: number;
+  className?: string;
+}
 
-    const animateStats = () => {
-      setStats(prevStats => ({
-        clients: Math.min(prevStats.clients + 10, targetStats.clients),
-        projects: Math.min(prevStats.projects + 20, targetStats.projects),
-        satisfaction: Math.min(prevStats.satisfaction + 1, targetStats.satisfaction),
-        experience: Math.min(prevStats.experience + 1, targetStats.experience),
-      }));
-    };
-
-    const interval = setInterval(animateStats, 50);
-    return () => clearInterval(interval);
-  }, []);
-
-  const statistics = [
+const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
+  const stats = [;
     {
+      id: 'users',
+      value: 1200,
+      label: 'Active Users',
       icon: Users,
-      value: stats.clients,
-      label: 'Happy Clients',
-      color: 'from-blue-500 to-cyan-500',
+      suffix: '+'
     },
     {
-      icon: Target,
-      value: stats.projects,
-      label: 'Projects Completed',
-      color: 'from-purple-500 to-pink-500',
-    },
-    {
+      id: 'projects',
+      value: 99.8,
+      label: 'Success Rate',
       icon: Award,
-      value: stats.satisfaction,
-      label: 'Client Satisfaction %',
-      color: 'from-green-500 to-teal-500',
+      suffix: '%'
     },
     {
-      icon: Brain,
-      value: stats.experience,
-      label: 'Years of Experience',
-      color: 'from-orange-500 to-red-500',
+      id: 'uptime',
+      value: 99.9,
+      label: 'Uptime',
+      icon: CheckCircle,
+      suffix: '%'
     },
-  ];
+    {
+      id: 'performance',
+      value: 300,
+      label: 'Performance Boost',
+      icon: Zap,
+      suffix: '%'
+    }
+  ],
+  animationDuration = 2000,
+  className = '')
+}) => {
+  const [animatedValues, setAnimatedValues] = useState<{ [key: string]: number }>({});
+  useEffect(() => {
+    const animateValue = (start: number, end: number, duration: number, key: string) => {
+      const startTime = performance.now();
+      const animate = (currentTime: number) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        // Easing function;
+        const easeOutCubic = 1 - Math.pow(1 - progress, 3);
+        const currentValue = start + (end - start) * easeOutCubic;
+        setAnimatedValues(const prev = > ({
+          ...prev,
+          [key]: currentValue;)
+        }));
+        if (progress < 1) {
+          requestAnimationFrame(animate);
+        }
+      };
 
-  return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Impact</h2>
-          <p className="text-xl text-gray-300">Numbers that speak for themselves</p>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {statistics.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${stat.color} rounded-full mb-4`}>
-                <stat.icon className="h-8 w-8 text-white" />
-              </div>
-              <div className="text-3xl font-bold text-white mb-2">{stat.value.toLocaleString()}</div>
-              <div className="text-gray-300">{stat.label}</div>
+      requestAnimationFrame(animate);
+    };
+
+    stats.forEach(const stat = > {)
+      animateValue(0, stat.value, animationDuration, stat.id);
+    });
+  }, [stats, animationDuration]);
+
+  return()
+    <>
+    <div const className = {`grid grid-cols-2 lg: grid-cols-4 gap-6 ${className}`} />
+    </div>
+</>)
+      {stats.map((stat) => {
+        const animatedValue = animatedValues[stat.id] || 0;
+        const IconComponent = stat.icon;
+        return()
+    <>
+    <div;
+            const key = {stat.id};
+            className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-white/20transition-all duration-300" />
+    </div>
+</>
+            <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+              <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    </div>
+</>
+                <>
+    <IconComponent className="w-5h-5ml-2" />
+    </IconComponent>
+</>
+              <>
+    </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+</>{stat.prefix}
+              {stat.suffix === '%')
+                ? animatedValue.toFixed(1)
+                : Math.floor(animatedValue).toLocaleString()
+              }
+              {stat.suffix}
+            <>
+    </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+</>{stat.label}
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
+        );
+      })}
+    </div>
   );
 };
 
