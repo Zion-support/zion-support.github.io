@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { analytics } from '../utils/analytics';
 interface PerformanceMetrics {
   loadTime: number;
   domContentLoaded: number;
@@ -23,12 +22,12 @@ export const usePerformance = () => {
       const _paintEntries = performance.getEntriesByType('paint');
 
       const firstContentfulPaint =
-        paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+        _paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
       const largestContentfulPaint =
-        paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
+        _paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
 
       // Measure CLS (Cumulative Layout Shift)
-      const _cumulativeLayoutShift = 0;
+      let cumulativeLayoutShift = 0;
       if ('PerformanceObserver' in window) {
         const observer = new PerformanceObserver(list => {
           for (const entry of list.getEntries()) {
@@ -44,7 +43,7 @@ export const usePerformance = () => {
       }
 
       // Measure FID (First Input Delay)
-      const _firstInputDelay = 0;
+      let firstInputDelay = 0;
       if ('PerformanceObserver' in window) {
         const observer = new PerformanceObserver(list => {
           for (const entry of list.getEntries()) {
@@ -69,26 +68,6 @@ export const usePerformance = () => {
 
       setMetrics(performanceData);
       setIsMonitoring(false);
-
-      // Report to analytics using trackTiming
-      analytics.trackTiming('performance', 'load_time', performanceData.loadTime);
-      analytics.trackTiming('performance', 'dom_content_loaded', performanceData.domContentLoaded);
-      analytics.trackTiming(
-        'performance',
-        'first_contentful_paint',
-        performanceData.firstContentfulPaint
-      );
-      analytics.trackTiming(
-        'performance',
-        'largest_contentful_paint',
-        performanceData.largestContentfulPaint
-      );
-      analytics.trackTiming(
-        'performance',
-        'cumulative_layout_shift',
-        performanceData.cumulativeLayoutShift
-      );
-      analytics.trackTiming('performance', 'first_input_delay', performanceData.firstInputDelay);
     };
 
     // Start monitoring
