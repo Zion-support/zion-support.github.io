@@ -206,15 +206,15 @@ export class ConsoleSpy {
   }
 
   private mock(): void {
-    // eslint-disable-next-line no-console
+     
     console.log = (...args: unknown[]) => {
       this.logs.push(args.map(String).join(' '))
     }
-    // eslint-disable-next-line no-console
+     
     console.error = (...args: unknown[]) => {
       this.errors.push(args.map(String).join(' '))
     }
-    // eslint-disable-next-line no-console
+     
     console.warn = (...args: unknown[]) => {
       this.warnings.push(args.map(String).join(' '))
     }
