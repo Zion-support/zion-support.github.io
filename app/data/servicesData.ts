@@ -228,9 +228,8 @@ export const allServices: Service[] = [...aiServices, ...itServices];
 // Export as servicesData for backward compatibility
 export const servicesData = {
   aiServices,
-  itSolutions: itServices, // Add alias for itSolutions
   itServices,
-  itSolutions,
+  itSolutions: itServices, // Add alias for itSolutions
   allServices
 };
 
