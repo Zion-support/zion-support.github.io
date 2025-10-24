@@ -1,4 +1,4 @@
-import React, { Component, ReactNode, ErrorInfo } from 'react';
+import React, { Component, ReactNode, ErrorInfo, memo } from 'react';
 
 interface OptimizedErrorBoundaryProps {
   children: ReactNode;

@@ -1,5 +1,10 @@
 import React from 'react';
 import Footer from 'components/Footer';
+<<<<<<< HEAD
+// import Head from "next/head";
+// import Link from "next/link";
+=======
+>>>>>>> 7731b4b6fd97e47e852139145bd07a5c5da22c6d
 import Navigation from 'components/Navigation';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target } from 'lucide-react';
 
