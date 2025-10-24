@@ -37,8 +37,7 @@ export const mockFetch = (
   headers: Record<string, string> = {}
 ): void => {
   if (typeof global !== 'undefined') {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (global as any).fetch = () =>
+    (global as typeof global & { fetch: typeof fetch }).fetch = jest.fn(() =>
       Promise.resolve({
         ok: status >= 200 && status < 300,
         status,
@@ -46,6 +45,7 @@ export const mockFetch = (
         json: async () => response,
         text: async () => JSON.stringify(response)
       } as Response)
+    ) as typeof fetch
   }
 }
 
@@ -195,7 +195,7 @@ export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {
  * Spy on console methods
  */
 export class ConsoleSpy {
-  private originalConsole: typeof console
+  private originalConsole: Console
   private logs: string[] = []
   private errors: string[] = []
   private warnings: string[] = []
@@ -206,16 +206,16 @@ export class ConsoleSpy {
   }
 
   private mock(): void {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (console as any).log = (...args: unknown[]) => {
+     
+    console.log = (...args: unknown[]) => {
       this.logs.push(args.map(String).join(' '))
     }
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (console as any).error = (...args: unknown[]) => {
+     
+    console.error = (...args: unknown[]) => {
       this.errors.push(args.map(String).join(' '))
     }
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (console as any).warn = (...args: unknown[]) => {
+     
+    console.warn = (...args: unknown[]) => {
       this.warnings.push(args.map(String).join(' '))
     }
   }
@@ -248,18 +248,18 @@ export class ConsoleSpy {
  */
 export interface Deferred<T> {
   promise: Promise<T>
-  resolve: (_value: T) => void
-  reject: (_reason?: unknown) => void
+  resolve: (value: T) => void
+  reject: (reason?: unknown) => void
 }
 
 export const createDeferred = <T>(): Deferred<T> => {
-  let resolve: (_value: T) => void
-  let reject: (_reason?: unknown) => void
+  let resolve: (value: T) => void
+  let reject: (reason?: unknown) => void
   const promise = new Promise<T>((res, rej) => {
     resolve = res
     reject = rej
   })
-  return { promise, resolve: resolve!, reject: reject! }
+  return { promise, resolve, reject }
 }
 
 /**

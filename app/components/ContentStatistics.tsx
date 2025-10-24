@@ -1,6 +1,6 @@
-'use client'
-import React, { useState, useEffect } from 'react'
-import { TrendingUp, Users, Award, Clock } from 'lucide-react'
+'use client';
+import React, { useState, useEffect } from 'react';
+import { TrendingUp, Users, Award, Clock } from 'lucide-react';
 
 const ContentStatistics: React.FC = () => {
   const [counters, setCounters] = useState({
@@ -8,7 +8,11 @@ const ContentStatistics: React.FC = () => {
     projects: 0,
     satisfaction: 0,
     years: 0
+<<<<<<< HEAD
   })
+=======
+  });
+>>>>>>> 98218686378212b6baf73ef26cac59271bb18de7
 
   useEffect(() => {
     const targetCounters = {
@@ -16,34 +20,38 @@ const ContentStatistics: React.FC = () => {
       projects: 1000,
       satisfaction: 99,
       years: 10
+<<<<<<< HEAD
     }
 
+=======
+    };
+>>>>>>> 98218686378212b6baf73ef26cac59271bb18de7
     const duration = 2000; // 2 seconds
-    const steps = 60
-    const stepDuration = duration / steps
+    const steps = 60;
+    const stepDuration = duration / steps;
 
     const animateCounters = () => {
-      let step = 0
+      let step = 0;
       const timer = setInterval(() => {
-        step++
-        const progress = step / steps
+        step++;
+        const progress = step / steps;
         
         setCounters({
           clients: Math.floor(targetCounters.clients * progress),
           projects: Math.floor(targetCounters.projects * progress),
           satisfaction: Math.floor(targetCounters.satisfaction * progress),
           years: Math.floor(targetCounters.years * progress)
-        })
+        });
 
         if (step >= steps) {
-          clearInterval(timer)
-          setCounters(targetCounters)
+          clearInterval(timer);
+          setCounters(targetCounters);
         }
-      }, stepDuration)
-    }
+      }, stepDuration);
+    };
 
-    animateCounters()
-  }, [])
+    animateCounters();
+  }, []);
 
   const stats = [
     {
@@ -70,7 +78,7 @@ const ContentStatistics: React.FC = () => {
       label: 'Years Experience',
       suffix: '+'
     }
-  ]
+  ];
 
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">

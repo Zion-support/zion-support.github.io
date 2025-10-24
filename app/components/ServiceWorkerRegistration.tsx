@@ -5,13 +5,21 @@ import React, { useEffect } from 'react';
 interface ServiceWorkerRegistrationProps {
   onUpdateAvailable?: () => void;
   onUpdateInstalled?: () => void;
+<<<<<<< HEAD
   onError?: (_error: Error) => void;
+=======
+<<<<<<< HEAD
+  onError?: (_error: Error) => void;
+=======
+  onError?: (error: Error) => void;
+>>>>>>> 883b2f1837ad94df26f75676952a53319ed72f1c
+>>>>>>> 98218686378212b6baf73ef26cac59271bb18de7
 }
 
 const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
   onUpdateAvailable,
   onUpdateInstalled,
-  onError: _onError,
+  onError,
 }) => {
   useEffect(() => {
     if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
@@ -45,8 +53,16 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
           window.location.reload();
         });
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      } catch (_error) {
+        onError?.(_error as Error);
+=======
+>>>>>>> 98218686378212b6baf73ef26cac59271bb18de7
       } catch (error) {
         onError?.(error as Error);
+>>>>>>> 883b2f1837ad94df26f75676952a53319ed72f1c
       }
     };
 

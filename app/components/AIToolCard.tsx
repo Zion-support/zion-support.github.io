@@ -26,4 +26,4 @@ const AIToolCard: React.FC<AIToolCardProps> = memo(({ title, description, link }
 
 AIToolCard.displayName = 'AIToolCard'
 
-export default AIToolCard
+export default AIToolCard;

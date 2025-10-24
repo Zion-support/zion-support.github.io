@@ -3,7 +3,11 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+<<<<<<< HEAD
 import { Shield, Zap, Globe, BarChart } from 'lucide-react';
+=======
+import { Shield, Zap, Globe, BarChart} from 'lucide-react';
+>>>>>>> 98218686378212b6baf73ef26cac59271bb18de7
 
 const AIApiManagementPage: React.FC = () => {
   const features = [
