@@ -1,7 +1,25 @@
-'use client'
-import { Brain, Target } from 'lucide-react';
 import React from 'react';
-import { PenTool, FileText } from 'lucide-react';
-import { CheckCircle, Star, Phone } from 'lucide-react';
-export default Page;
-}}}}}}}
+
+const PagePage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Page
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            This page is under construction and will be available soon.
+          </p>
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <p className="text-gray-700">
+              We are working hard to bring you the best experience. Please check back later.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default PagePage;

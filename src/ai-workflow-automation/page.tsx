@@ -1,45 +1,25 @@
-'use client'
-import { Brain, BarChart } from 'lucide-react';
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { Workflow } from 'lucide-react';
-import { CheckCircle, Phone, Mail } from 'lucide-react';
-    { number: '99.9%', label: 'Reliability' }
-  ]
 
-  const useCases = []
-    {title: 'HR Onboarding'
-      descriptio,
-      n: 'Automate employee onboarding processes from application to first day.'
-      ico,
-      n: Users
-   }
-    {title: 'Invoice Processing'
-      descriptio,
-      n: 'Automatically process invoices, validate data, and route for approval.'
-      icon: Database
-   }
-    {title: 'Customer Support'
-      descriptio,
-      n: 'Route tickets, escalate issues, and provide automated responses.'
-      icon: Globe
-   }
-    {title: 'Data Migration'
-      descriptio,
-      n: 'Safely migrate data between systems with automated validation.'
-      ico,
-      n: Settings
-    }
-  ]
-
-  const pricing = pricingPlans;
-
-const Page = () => {};
+const PagePage: React.FC = () => {
   return (
-</>
-  )
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Page
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            This page is under construction and will be available soon.
+          </p>
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <p className="text-gray-700">
+              We are working hard to bring you the best experience. Please check back later.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
-;
-export default Page;
+
+export default PagePage;
