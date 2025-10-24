@@ -1,7 +1,7 @@
 interface StructuredData {
   '@context': string;
   '@type': string;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 interface SEOData {

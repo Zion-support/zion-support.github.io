@@ -3,7 +3,7 @@ interface AnalyticsEvent {
   action: string;
   label?: string;
   value?: number;
-  custom_parameters?: Record<string, any>;
+  custom_parameters?: Record<string, unknown>;
 }
 
 class Analytics {
@@ -18,7 +18,7 @@ class Analytics {
   // Track custom events
   track(event: AnalyticsEvent): void {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', event.action, {
+      (window as unknown as { gtag: (_command: string, _action: string, _parameters: Record<string, unknown>) => void }).gtag('event', event.action, {
         event_category: event.category,
         event_label: event.label,
         value: event.value,
