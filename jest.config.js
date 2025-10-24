@@ -26,8 +26,7 @@ export default {
       tsconfig: {
         jsx: 'react-jsx'
       }
-    }],
-    '^.+\\.(js|jsx)$': 'babel-jest'
+    }]
   },
   testMatch: [
     '<rootDir>/app/**/__tests__/**/*.(ts|tsx|js|jsx)',
