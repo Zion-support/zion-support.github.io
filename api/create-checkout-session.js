@@ -9,14 +9,11 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { priceId, quantity = 1 } = req.body;
+
 
     if (!priceId) {
       res.statusCode = 400;
-      res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ error: 'Price ID is required' }));
-      return;
-    }
 
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
@@ -32,13 +29,9 @@ export default async function handler(req, res) {
     });
 
     res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ sessionId: session.id }));
 
   } catch (error) {
     console.error('Stripe checkout error:', error);
     res.statusCode = 500;
-    res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Internal server error' }));
-  }
-}

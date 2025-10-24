@@ -1,4 +1,4 @@
-'use client';
+'use client';;
 
 import React, { useState, useEffect } from 'react';
 
@@ -26,7 +26,6 @@ interface _LayoutShift extends PerformanceEntry {
 interface _PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
 }
-
 export default function PerformanceMonitor({
   onMetricsUpdate,
   enableRealTimeMonitoring = true,
@@ -86,10 +85,8 @@ export default function PerformanceMonitor({
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            const fidEntry = entry as any;
-            if ('processingStart' in fidEntry) {
-              newMetrics.firstInputDelay = fidEntry.processingStart - fidEntry.startTime;
-            }
+            const fidEntry = entry as PerformanceEntry & { processingStart: number };
+            newMetrics.firstInputDelay = fidEntry.processingStart - fidEntry.startTime;
           });
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
@@ -99,7 +96,7 @@ export default function PerformanceMonitor({
         const clsObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            const clsEntry = entry as any;
+            const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number };
             if (!clsEntry.hadRecentInput) {
               clsValue += clsEntry.value;
             }
@@ -111,7 +108,7 @@ export default function PerformanceMonitor({
         // Time to Interactive (TTI) - approximation
         const ttiObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          const longTasks = entries.filter((entry: PerformanceEntry) => entry.duration > 50);
+          const longTasks = entries.filter((entry: PerformanceEntry) => (entry as PerformanceEntry & { duration: number }).duration > 50);
           if (longTasks.length === 0) {
             newMetrics.timeToInteractive = performance.now();
           }
@@ -122,8 +119,8 @@ export default function PerformanceMonitor({
         const tbtObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const blockingTime = entries
-            .filter((entry: PerformanceEntry) => entry.duration > 50)
-            .reduce((total, entry: PerformanceEntry) => total + (entry.duration - 50), 0);
+            .filter((entry: PerformanceEntry) => (entry as PerformanceEntry & { duration: number }).duration > 50)
+            .reduce((total, entry: PerformanceEntry) => total + ((entry as PerformanceEntry & { duration: number }).duration - 50), 0);
           newMetrics.totalBlockingTime = blockingTime;
         });
         tbtObserver.observe({ entryTypes: ['longtask'] });
@@ -188,11 +185,4 @@ export default function PerformanceMonitor({
   }
 
   return null;
-}
-
-
-declare global {
-  interface Window {
-    gtag: (..._args: unknown[]) => void;
-  }
 }

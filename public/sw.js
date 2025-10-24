@@ -1,5 +1,4 @@
-// Fetch event - serve from cache when offline"'"
-self.addEventListener('fetch", (event) => {
+
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
 // Service Worker for Zion Tech Group;
@@ -25,26 +24,19 @@ const STATIC_ASSETS = ['/',
       })
         console.log('Static assets cached successfully')
         return self.skipWaiting()
-      })
         console.error('Failed to cache static assets: ', error)
-      })
   )
-})
 
 // Activate event - clean up old caches;
   console.log('Service Worker activating...')
 
-  event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
         return Promise.all(
             if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {console.log('Deleting old cache: ', cacheName)
               return caches.delete(cacheName)})
-        )
-      })
       .then(() => {
         return self.clients.claim();
-      })
   );
 });
 
@@ -77,19 +69,8 @@ const STATIC_ASSETS = ['/',
             caches.open(DYNAMIC_CACHE)
                 cache.put(request, responseToCache)})
                 console.error('Failed to cache dynamic content: ', error)
-              })
 
-            return response;
-          })
-            console.error('Fetch failed: ', error)
 
-            // Return offline page for navigation requests;
-            if (request.destination === 'document') {return caches.match('/offline.html')
-
-            throw error;})
-      })
-  )
-})
 
 // Background sync for form submissions;
   if (event.tag === 'contact-form') {event.waitUntil(
@@ -107,69 +88,12 @@ const STATIC_ASSETS = ['/',
       vibrate: [100, 50, 100],
       data: {
         dateOfArrival: Date.now(),
-        primaryKey: data.primaryKey;},
-      actions: [action: 'explore',
-          title: 'Learn More',
-          icon: '/icon-192x192.png'
+
         },
           action: 'close',
           title: 'Close',
-          icon: '/icon-192x192.png']
 
-    event.waitUntil(
-      self.registration.showNotification(data.title, options)
-    )
-})
-//Activate event - clean up old caches self.addEventListener("activate", (event) => {
-  event.waitUntil(caches.keys().then((cacheNames) => {
-      return Promise.all(cacheNames.map((cacheName) => {
           if (cacheName !== CACHE_NAME) {
             console.log("Deleting old cache:", cacheName)
             return caches.delete(cacheName)
-          }
-        })
-      );
-    })
-  );
-});"
 
-}}'"
-// Install event - cache resources;
-self.addEventListener('install', (event) => {;
-  event.waitUntil(;
-    caches.open(CACHE_NAME);
-      .then((cache) => {;
-        console.log('Opened cache');
-        return cache.addAll(urlsToCache);
-      });
-  )});
-;
-// Fetch event - serve from cache when offline;
-self.addEventListener('fetch', (event) => {;
-  event.respondWith(;
-    caches.match(event.request);
-      .then((response) => {;
-        // Return cached version or fetch from network;
-        return response || fetch(event.request)});
-  )});
-;
-// Activate event - clean up old caches;
-self.addEventListener('activate', (event) => {;
-  event.waitUntil(;
-    caches.keys().then((cacheNames) => {;
-      return Promise.all(;
-        cacheNames.map((cacheName) => {;
-          if (cacheName !== CACHE_NAME) {;
-            console.log('Deleting old cache:', cacheName);
-            return caches.delete(cacheName)}
-        });
-      )});
-  )});
-  )
-})
-}}}}}))))))
-  event.notification.close()
-
-  if (event.action === 'explore') {event.waitUntil(
-      clients.openWindow('/')
-    )})

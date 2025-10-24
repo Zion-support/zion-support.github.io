@@ -4,7 +4,7 @@ const path = require('path');
 // Function to fix icon serialization issues in a file
 function fixIconSerialization(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if the file has icon: ComponentName patterns
     if (!content.includes('icon:') || content.includes('iconMap')) {
