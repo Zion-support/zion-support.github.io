@@ -1,3 +1,9 @@
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
+}
+
 interface PerformanceMetrics {
   loadTime: number | null;
   firstContentfulPaint: number | null;
@@ -53,7 +59,7 @@ export const performanceUtils = {
 // Google Analytics integration for performance tracking
 export const trackPerformanceToGA = (metrics: PerformanceMetrics) => {
   if (typeof window !== 'undefined' && 'gtag' in window) {
-    (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', 'performance_metrics', {
+    window.gtag('event', 'performance_metrics', {
       event_category: 'Performance',
       event_label: 'Core Web Vitals',
       custom_map: {
@@ -68,9 +74,3 @@ export const trackPerformanceToGA = (metrics: PerformanceMetrics) => {
     });
   }
 };
-
-declare global {
-  interface Window {
-    gtag: (..._args: unknown[]) => void;
-  }
-}

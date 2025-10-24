@@ -2,6 +2,13 @@
 
 import React, { createContext, useContext, useEffect } from 'react';
 
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+    dataLayer: unknown[];
+  }
+}
+
 interface AnalyticsContextType {
   track: (_event: string, _properties?: Record<string, unknown>) => void;
   identify: (_userId: string, _traits?: Record<string, unknown>) => void;
@@ -35,10 +42,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         document.head.appendChild(script);
 
         // Initialize gtag
-        const gtagFunction = function(...args: unknown[]) {
-          ((window as unknown as { gtag: { q?: unknown[] } }).gtag.q = (window as unknown as { gtag: { q?: unknown[] } }).gtag.q || []).push(args);
+        const gtagFunction = function(...args: any[]) {
+          (window as any).gtag.q = (window as any).gtag.q || [];
+          (window as any).gtag.q.push(args);
         };
-        (window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag = (window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag || gtagFunction;
+        window.gtag = window.gtag || gtagFunction;
         window.gtag = window.gtag || gtagFunction;
         window.gtag('js', new Date());
         window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX');
@@ -49,8 +57,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   const track = (event: string, properties?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
-      if ((window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag) {
-        (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', event, properties);
+      if (window.gtag) {
+        window.gtag('event', event, properties);
       }
       
       // Custom analytics - only log in development
@@ -63,8 +71,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   const identify = (userId: string, traits?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
-      if ((window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag) {
-        (window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
+      if (window.gtag) {
+        window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
           user_id: userId,
           custom_map: traits
         });
@@ -80,8 +88,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   const page = (name: string, properties?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
-      if ((window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag) {
-        (window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag('event', 'page_view', {
+      if (window.gtag) {
+        window.gtag('event', 'page_view', {
           page_title: name,
           page_location: window.location.href,
           ...properties
@@ -109,11 +117,5 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 };
 
 // Extend Window interface for TypeScript
-declare global {
-  interface Window {
-    dataLayer: unknown[];
-    gtag?: (..._args: unknown[]) => void;
-  }
-}
 
 export default AnalyticsProvider;

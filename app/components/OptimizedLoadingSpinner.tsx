@@ -47,3 +47,67 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({
               />
             ))}
           </div>
+        );
+      case 'pulse':
+        return (
+          <div className="flex items-center justify-center" role="status" aria-label="Loading">
+            <div className={`${sizeClasses[size]} bg-current rounded-full animate-pulse`}></div>
+          </div>
+        );
+      case 'spinner':
+        return (
+          <div className="flex items-center justify-center" role="status" aria-label="Loading">
+            <div 
+              className={`${sizeClasses[size]} border-2 border-current border-t-transparent rounded-full animate-spin ${colorClasses[color]}`}
+            ></div>
+          </div>
+        );
+      case 'skeleton':
+        return (
+          <div className="animate-pulse" role="status" aria-label="Loading">
+            <div className={`${sizeClasses[size]} bg-current rounded`}></div>
+          </div>
+        );
+      case 'bars':
+        return (
+          <div className="flex items-end space-x-1" role="status" aria-label="Loading">
+            {[0, 1, 2, 3].map(i => (
+              <div
+                key={i}
+                className={`w-1 bg-current rounded-full animate-pulse`}
+                style={{ 
+                  height: `${(i + 1) * 4}px`,
+                  animationDelay: `${i * 0.1}s`
+                }}
+              />
+            ))}
+          </div>
+        );
+      default:
+        return null;
+    }
+  };
+
+  const content = (
+    <div className={`flex flex-col items-center justify-center gap-2 ${className}`}>
+      {renderSpinner()}
+      {text && (
+        <p className="text-sm text-gray-600 animate-pulse">
+          {text}
+        </p>
+      )}
+    </div>
+  );
+
+  if (fullScreen) {
+    return (
+      <div className="fixed inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center z-50">
+        {content}
+      </div>
+    );
+  }
+
+  return content;
+};
+
+export default OptimizedLoadingSpinner;
