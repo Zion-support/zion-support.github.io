@@ -288,5 +288,7 @@ function App() {
         </BrowserRouter>
       </ErrorBoundary>
     </HelmetProvider>
+  );
+};
 
 export default App;
