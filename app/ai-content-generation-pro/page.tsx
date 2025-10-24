@@ -1,28 +1,28 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { FileText, Brain, Zap, Target, CheckCircle, ArrowRight, Star, Users, BarChart, Globe, Lock, PenTool } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { FileText, Brain, Zap, Target, CheckCircle, ArrowRight, Star, Users, BarChart, Globe, Lock, PenTool } from 'lucide-react'
 
 const AIContentGenerationProPage: React.FC = () => {
   return (
-    <>
-      <Helmet>
+    <></>
+      <Helmet></Helmet>
         <title>AI Content Generation Pro | Zion Tech Group</title>
         <meta name="description" content="Advanced AI content generation platform with enterprise-grade features, multi-format support, and intelligent content optimization for professional content creation." />
         <meta name="keywords" content="AI content generation, content creation, AI writing, content automation, enterprise content" />
       
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        {/* Hero Section */
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-8">
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center"></div>
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-8"></div>
                 <Brain className="w-5 h-5 text-cyan-400 mr-2" />
                 <span className="text-cyan-400 font-medium">Professional AI</span>
               </div>
               
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6"></h1>
                 AI Content Generation
                 <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Pro
@@ -35,7 +35,7 @@ const AIContentGenerationProPage: React.FC = () => {
                 content creation at scale.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                   Start Free Trial
                   <ArrowRight className="w-5 h-5 ml-2 inline" />
@@ -47,11 +47,10 @@ const AIContentGenerationProPage: React.FC = () => {
             </div>
         </div>
       </section>
-
-        {/* Features Section */}
+        {/* Features Section */
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">
                 Professional Content Creation
               </h2>
@@ -60,10 +59,9 @@ const AIContentGenerationProPage: React.FC = () => {
                 with advanced AI capabilities and enterprise-grade features.
               </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300"></div>
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6"></div>
                   <FileText className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Multi-Format Content</h3>
@@ -86,9 +84,8 @@ const AIContentGenerationProPage: React.FC = () => {
                   </li>
                 </ul>
               </div>
-
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6">
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300"></div>
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6"></div>
                   <Brain className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Advanced AI Models</h3>
@@ -111,9 +108,8 @@ const AIContentGenerationProPage: React.FC = () => {
                   </li>
                 </ul>
               </div>
-
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20 hover:border-green-500/40 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6">
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20 hover:border-green-500/40 transition-all duration-300"></div>
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6"></div>
                   <Target className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">SEO Optimization</h3>
@@ -136,9 +132,8 @@ const AIContentGenerationProPage: React.FC = () => {
                   </li>
                 </ul>
               </div>
-
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl flex items-center justify-center mb-6">
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300"></div>
+                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl flex items-center justify-center mb-6"></div>
                   <Zap className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Batch Processing</h3>
@@ -161,9 +156,8 @@ const AIContentGenerationProPage: React.FC = () => {
                   </li>
                 </ul>
               </div>
-
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6">
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300"></div>
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6"></div>
                   <PenTool className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Content Editing</h3>
@@ -186,9 +180,8 @@ const AIContentGenerationProPage: React.FC = () => {
                   </li>
                 </ul>
               </div>
-
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-pink-500/20 hover:border-pink-500/40 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-pink-500/20 hover:border-pink-500/40 transition-all duration-300"></div>
+                <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl flex items-center justify-center mb-6"></div>
                   <BarChart className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Analytics & Insights</h3>
@@ -214,11 +207,10 @@ const AIContentGenerationProPage: React.FC = () => {
             </div>
         </div>
       </section>
-
-        {/* Content Types Section */}
+        {/* Content Types Section */
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">
                 Content Types & Formats
               </h2>
@@ -227,34 +219,30 @@ const AIContentGenerationProPage: React.FC = () => {
                 with specialized AI models for each content type.
               </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 text-center"></div>
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4"></div>
                   <FileText className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Blog Articles</h3>
                 <p className="text-gray-400 text-sm">Long-form content, how-to guides, and thought leadership pieces</p>
               </div>
-
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20 text-center"></div>
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-4"></div>
                   <Globe className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Social Media</h3>
                 <p className="text-gray-400 text-sm">Posts, captions, and content for all major social platforms</p>
               </div>
-
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-green-500/20 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-green-500/20 text-center"></div>
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mx-auto mb-4"></div>
                   <Target className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Marketing Copy</h3>
                 <p className="text-gray-400 text-sm">Ad copy, email campaigns, and promotional content</p>
               </div>
-
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-orange-500/20 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-orange-500/20 text-center"></div>
+                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl flex items-center justify-center mx-auto mb-4"></div>
                   <PenTool className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Technical Docs</h3>
@@ -263,10 +251,9 @@ const AIContentGenerationProPage: React.FC = () => {
             </div>
         </div>
       </section>
-
-        {/* CTA Section */}
+        {/* CTA Section */
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center"></div>
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Scale Your Content?
             </h2>
@@ -274,7 +261,7 @@ const AIContentGenerationProPage: React.FC = () => {
               Join thousands of content creators and businesses using AI Content Generation Pro 
               to produce high-quality content at scale.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 inline" />
@@ -287,7 +274,7 @@ const AIContentGenerationProPage: React.FC = () => {
       </section>
       </div>
     </>
-  );
-};
-
-export default AIContentGenerationProPage;
+  )
+}
+}
+export default AIContentGenerationProPage;}

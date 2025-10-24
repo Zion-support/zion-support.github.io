@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings} from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+'use client'
+import React from 'react'
+import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings} from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
@@ -12,12 +12,8 @@ const AiCloudInfrastructurePage: React.FC = () => {
 ,
     {icon: BarChart,
       title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-  
-  
-  
-  
-  ];
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
+  ]
 
   const benefits = [
     'Reduce infrastructure costs by 40%',
@@ -28,9 +24,9 @@ const AiCloudInfrastructurePage: React.FC = () => {
     'Automate infrastructure management',
     'Enhance security and compliance',
     'Optimize resource utilization'
-  ];
+  ]
 
-  const useCases = [
+  const useCases = [,
     {
       title: 'Enterprise Migration',
       description: 'Migrate enterprise applications to cloud with AI-powered optimization',
@@ -59,14 +55,13 @@ const AiCloudInfrastructurePage: React.FC = () => {
     {
       title: 'AI/ML Workloads',
       description: 'Run AI and machine learning workloads on optimized cloud infrastructure',
-      icon: '🤖',
-    }
-  ];
+      icon: '🤖'
+  ]
 
   return (
     <>
   </>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Ai Cloud Infrastructure - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai cloud infrastructure solution for modern businesses." />
         <meta name="keywords" content="AI ai cloud infrastructure, artificial intelligence, ai cloud infrastructure, AI solutions, intelligent automation" />
@@ -78,19 +73,19 @@ const AiCloudInfrastructurePage: React.FC = () => {
         <meta name="keywords" content="AI cloud infrastructure, artificial intelligence, cloud computing, AI solutions, intelligent infrastructure" />
       
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">
-        {/* Hero Section */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900"></div>
+        {/* Hero Section */
         <section$1>
-        <div$2>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
+        <div$2></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
+          <div className="relative max-w-7xl mx-auto text-center"></div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Ai Cloud Infrastructure
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced AI-powered ai cloud infrastructure solution for modern businesses.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-r from-pink-500 to-blue-600 hover:from-pink-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Get Started
               </button>
@@ -100,11 +95,10 @@ const AiCloudInfrastructurePage: React.FC = () => {
             </div>
         </div>
       </section>
-
-        {/* Features Section */}
+        {/* Features Section */
         <section$1>
-        <div$2>
-            <div className="text-center mb-16">
+        <div$2></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,</h2>
                 Powerful AI Features,
   </
@@ -113,8 +107,8 @@ const AiCloudInfrastructurePage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-sky-500 to-blue-500 rounded-lg mb-4">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-sky-500 to-blue-500 rounded-lg mb-4"></div>
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -123,9 +117,9 @@ const AiCloudInfrastructurePage: React.FC = () => {
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-sky-400 mr-2 flex-shrink-0" />
-                        {benefit}
+                        {benefit
                       </li>
-                    ))}
+                    ))
                   </ul>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -134,21 +128,20 @@ const AiCloudInfrastructurePage: React.FC = () => {
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
+                          {benefit
                         </li>
-                      ))}
+                      ))
                     </ul>
                   </div>
                 </div>
-              ))}
+              ))
             </div>
         </div>
       </section>
-
-        {/* Use Cases Section */}
+        {/* Use Cases Section */
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Applications & Use Cases
               </h2>
@@ -156,22 +149,21 @@ const AiCloudInfrastructurePage: React.FC = () => {
                 From startups to enterprises, our AI Cloud Infrastructure serves diverse needs
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {useCases.map((useCase, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center"></div>
                   <div className="text-4xl mb-4">{useCase.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300">{useCase.description}</p>
                 </div>
-              ))}
+              ))
             </div>
         </div>
       </section>
-
-        {/* Benefits Section */}
+        {/* Benefits Section */
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Why Choose Our AI Cloud Infrastructure?
               </h2>
@@ -179,26 +171,24 @@ const AiCloudInfrastructurePage: React.FC = () => {
                 Experience the future of cloud computing with our revolutionary AI technology
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-sky-500 to-blue-500 rounded-lg mb-4">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center"></div>
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-sky-500 to-blue-500 rounded-lg mb-4"></div>
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <p className="text-white font-medium">{benefit}</p>
                 </div>
-              ))}
+              ))
             </div>
         </div>
       </section>
-
-        {/* CTA Section */}
+        {/* CTA Section */
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-
-        {/* Benefits Section */}
+        {/* Benefits Section */
         <section$1>
-        <div$2>
-            <div className="text-center mb-16">
+        <div$2></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Why Choose Our Solution?
               </h2>
@@ -206,11 +196,10 @@ const AiCloudInfrastructurePage: React.FC = () => {
                 Proven results that drive business growth and efficiency
               </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>
                     <CheckCircle className="w-8 h-8 text-white" />
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
@@ -221,27 +210,26 @@ const AiCloudInfrastructurePage: React.FC = () => {
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                      {benefit}
+                      {benefit
                     </li>
-                  ))}
+                  ))
                 </ul>
               </div>
-            ))}
+            ))
           </div>
         </div>
       </section>
-
-{/* CTA Section */}
+{/* CTA Section */
         <section$1>
-        <div$2>
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+        <div$2></div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Contact our experts to discuss your requirements and get started today.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button className="bg-gradient-to-r from-pink-500 to-blue-600 hover:from-pink-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Contact Us
                 </button>
@@ -254,14 +242,14 @@ const AiCloudInfrastructurePage: React.FC = () => {
       </section>
       </div>
         {/* CTA Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">,</section>
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center"></div>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,</h2>
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-blue-100 mb-8">Join thousands of businesses already using our AI platform.</p>
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover: bg-gray-100 transition-colors font-semibold">,</button>
-              Start Your Free Trial;
+              Start Your Free Trial
   </
           </div>
 </section>
@@ -269,17 +257,17 @@ const AiCloudInfrastructurePage: React.FC = () => {
       <Footer />
     </React.Fragment>
   ),
-};
-
-export default AiCloudInfrastructurePage;
+}
+}
+export default AiCloudInfrastructurePage
   </button>
   </h2>
   </button>
   </button>
   </h1>
 'use client'
-              ))}
-        {/* CTA Section */}
+              ))
+        {/* CTA Section */
         <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">
           </section>< className="$2 />
             </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -292,11 +280,10 @@ export default AiCloudInfrastructurePage;
               Start Your Free Trial
   
           </div>
-
             <p className="text-xl text-blue-100 mb-8">
               Join thousands of businesses already using our AI platform.
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">Start Your Free Trial
       <Footer />
   )
 }
-export default AiCloudInfrastructurePage</div></div></div></div></div></div></div></div></div></button></button></button></p></p></p></p></h1></h2></h2></h3></ul></li></main></section></section></section>
+export default AiCloudInfrastructurePage</div></div></div></div></div></div></div></div></div></button></button></button></p></p></p></p></h1></h2></h2></h3></ul></li></main></section></section></section>}

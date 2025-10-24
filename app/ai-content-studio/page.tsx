@@ -1,22 +1,20 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
 const AiContentStudioPage: React.FC = () => {
-  const features = [
+  const features = [,
     {
       icon: Palette,
       title: 'AI Design Studio',
       description: 'Create stunning visual content with AI-powered design tools and templates.',
       benefits: ['AI design generation', 'Custom templates', 'Brand consistency', 'High-quality output']
       title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-  
-    }
-  ];
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
+  ]
 
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -24,33 +22,32 @@ const AiContentStudioPage: React.FC = () => {
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ];
+  ]
 
-  const useCases = [
+  const useCases = [,
     {
       title: 'Marketing Campaigns',
       description: 'Create compelling marketing campaigns with AI-powered content generation',
       icon: '📢',
-    },
+    }
   ]
   return(<React.Fragment>)</React.Fragment>
       
   return (
     <>
   </>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Ai Content Studio - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai content studio solution for modern businesses." />
         <meta name="keywords" content="AI ai content studio, artificial intelligence, ai content studio, AI solutions, intelligent automation" />
       
-
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
-        {/* Hero Section */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900"></div>
+        {/* Hero Section */
         <section$1>
-        <div$2>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
+        <div$2></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
+          <div className="relative max-w-7xl mx-auto text-center"></div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Ai Content Studio
             </h1>
@@ -58,7 +55,7 @@ const AiContentStudioPage: React.FC = () => {
               Create stunning content with our AI Content Studio. Advanced design tools, 
               content generation, and collaboration features for better content creation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Get Started
               </button>
@@ -68,11 +65,10 @@ const AiContentStudioPage: React.FC = () => {
             </div>
         </div>
       </section>
-
-        {/* Features Section */}
+        {/* Features Section */
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Advanced Content Studio Features
               </h2>
@@ -80,10 +76,10 @@ const AiContentStudioPage: React.FC = () => {
                 Our AI Content Studio combines cutting-edge technology with creative expertise
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-rose-500 to-pink-500 rounded-lg mb-4">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-rose-500 to-pink-500 rounded-lg mb-4"></div>
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -92,17 +88,17 @@ const AiContentStudioPage: React.FC = () => {
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-rose-400 mr-2 flex-shrink-0" />
-                        {benefit}
+                        {benefit
                       </li>
-                    ))}
+                    ))
                   </ul>
                 </div>
-              ))}
+              ))
             </div>
         </div>
       <section>
-        <div>
-          <div>
+        <div></div>
+          <div></div>
             <h2>
                 Key Features
               </h2>
@@ -110,11 +106,10 @@ const AiContentStudioPage: React.FC = () => {
                 Advanced AI technology that drives results
               </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
@@ -124,21 +119,20 @@ const AiContentStudioPage: React.FC = () => {
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
+                          {benefit
                         </li>
-                      ))}
+                      ))
                     </ul>
                   </div>
                 </div>
-              ))}
+              ))
             </div>
         </div>
       </section>
-
-        {/* Benefits Section */}
+        {/* Benefits Section */
         <section$1>
-        <div$2>
-            <div className="text-center mb-16">
+        <div$2></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Why Choose Our Solution?
               </h2>
@@ -146,31 +140,29 @@ const AiContentStudioPage: React.FC = () => {
                 Proven results that drive business growth and efficiency
               </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>
                     <CheckCircle className="w-8 h-8 text-white" />
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </div>
-              ))}
+              ))
             </div>
           ))
         </section>
-
-        {/* CTA Section */}
+        {/* CTA Section */
         <section$1>
-        <div$2>
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+        <div$2></div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Contact our experts to discuss your requirements and get started today.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button className="bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Contact Us
                 </button>
@@ -178,28 +170,28 @@ const AiContentStudioPage: React.FC = () => {
                   Learn More
                 </button>
               </div>
-            ))}
+            ))
           ))
 </section>
       </div>
         <title>AI Content Studio - Zion Tech Group</title>
-    <React.Fragment>
-      </React><Helmet>
+    <React.Fragment></React.Fragment>
+      </React><Helmet></Helmet>
         <title>AI Content Studio - Zion Tech Group</title>
         <meta name="description" content="Professional content studio powered by AI technology." />
         <meta name="keywords" content="AI content studio, artificial intelligence, content creation, AI solutions, intelligent design" />
       <Navigation />
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">{/* Hero Section */</main>} <section className="relative py-20 px-4 sm: px-6 lg:px-8">,</section>
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center"></div>
               <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">,</h1>
-                AI Content Studio;
+                AI Content Studio
   </
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Transform your business with intelligent solutions powered by cutting-edge AI technology.</p>
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
                 <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover: bg-blue-700 transition-colors">,</button>
-                  Get Started;
+                  Get Started
   </
                 <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover: bg-blue-50 transition-colors">,</button>
                   Learn More,
@@ -209,17 +201,17 @@ const AiContentStudioPage: React.FC = () => {
         </div>
       </section>
         {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,<section>
-        <div>
-          <div>
+        <div></div>
+          <div></div>
             <h2>,</h2>
                 Powerful AI Features,
   </
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">Discover how our AI platform can revolutionize your business operations.</p>
-        {/* Features Section */}
+        {/* Features Section */
         <section className="py-20 px-4 sm: px-6 lg:px-8">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
-              </div><h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              </div><h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
                 Powerful AI Features,
   
               <p className="text-xl text-gray-600 max-w-3xl mx-auto" /></p>
@@ -229,7 +221,7 @@ const AiContentStudioPage: React.FC = () => {
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
               {features.map((feature, index) => (
                 <div key={index}className="bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow">,</div>
-                  <div className="flex items-center mb-4">
+                  <div className="flex items-center mb-4"></div>
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
                     <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
                   </div>
@@ -239,13 +231,13 @@ const AiContentStudioPage: React.FC = () => {
                       <li key={benefitIndex}className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                         {benefit} </li>
-                    ))}
-              ))}
+                    ))
+              ))
             </div>
         </div>
       </section>
         {/* CTA Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">,</section>
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center"></div>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,</h2>
               Ready to Transform Your Business?
             </h2>
@@ -267,39 +259,39 @@ const AiContentStudioPage: React.FC = () => {
                     <li key={benefitIndex}className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                       {benefit} </li>
-                  ))}
-            ))}
+                  ))
+            ))
           </div>
         </div>
       </section>
       {/* Benefits Section */} <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Content Studio?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the benefits of our proven solutions;</p>
   </
           </div>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,</div>
             {benefits.map((benefit, index) => (
-              <div key={index}className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+              <div key={index}className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center"></div>
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>
                   <CheckCircle className="w-8 h-8 text-white" />
-                <h3 className="text-lg font-semibold text-white">{benefit}
-            ))}
+                <h3 className="text-lg font-semibold text-white">$3</h3>{benefit
+            ))
           </div>
         </div>
       </section>
       {/* CTA Section */} <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center"></div>
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-gray-300 mb-8">Transform your content creation with our AI Content Studio solutions today;</p>
   </
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">,</button>
-              Start Free Trial;
+              Start Free Trial
   </
             <button className="border border-blue-400 text-blue-400 hover: bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">,</button>
-              Contact Sales;
+              Contact Sales
   </
           </div>
         </div>
@@ -307,9 +299,9 @@ const AiContentStudioPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   ),
-};
-
-export default AiContentStudioPage;
+}
+}
+export default AiContentStudioPage
   </button>
   </button>
   </p>
@@ -320,7 +312,7 @@ export default AiContentStudioPage;
   </button>
   </h1>
   </main>
-      {/* CTA Section */}
+      {/* CTA Section */
       <section className="py-20 px-4">
         </section>< className="$2 />
           </div><h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
@@ -337,14 +329,14 @@ export default AiContentStudioPage;
           </div>
         </div>
       </section>
-
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <h2 className="text-4xl font-bold text-white mb-6"></h2>Ready to Get Started?
           <p className="text-xl text-gray-300 mb-8">Transform your content creation with our AI Content Studio solutions today
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Start Free Trial
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Contact Sales
       <Footer />
   )
 }
 export default AiContentStudioPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></button></button></button></button></button></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></h3></h3></h3></ul></ul></li></main></section></section></section></section></section>
+}

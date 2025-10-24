@@ -1,11 +1,10 @@
-<<<<<<< HEAD
-'use client';;
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+'use client';
+import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
   
 const UltimateBusinessIntelligence2025Banner = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible] = useState(true);
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [isVisible] = useState(true)
   
   const content = [
     {
@@ -40,24 +39,24 @@ const UltimateBusinessIntelligence2025Banner = () => {
         productivity: '300%',
         cost: '80% reduction'
       tags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
-    }
-  ];
-=======
+  ]
 
->>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
 
-import React from 'react';
+import React from 'react'
 
 interface UltimateBusinessIntelligence2025BannerProps {
   // Add props here
-}
+
 
 const UltimateBusinessIntelligence2025Banner: React.FC<UltimateBusinessIntelligence2025BannerProps> = (_props) => {
   return (
     <div>
-      {/* Component content */}
+      {/* Component content */
     </div>
-  );
-};
+  )
+}
 
-export default UltimateBusinessIntelligence2025Banner;
+}
+
+export default UltimateBusinessIntelligence2025Banner
+}

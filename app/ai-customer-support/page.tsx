@@ -1,12 +1,12 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { MessageCircle, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Brain, Target, Activity, TrendingUp, Award, Lock, Database, Cloud, Code, Smartphone, Settings, Search, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Compass, Navigation as NavIcon, PieChart, TrendingDown, Phone, Mail, MapPin } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { MessageCircle, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Brain, Target, Activity, TrendingUp, Award, Lock, Database, Cloud, Code, Smartphone, Settings, Search, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Compass, Navigation as NavIcon, PieChart, TrendingDown, Phone, Mail, MapPin } from 'lucide-react'
 
 const AICustomerSupportPage: React.FC = () => {
-  const features = [
+  const features = [,
     {
       icon: Bot,
       title: 'AI-Powered Chatbots',
@@ -16,10 +16,8 @@ const AICustomerSupportPage: React.FC = () => {
     {
       icon: MessageCircle,
       title: 'Omnichannel Communication',
-      description: 'Seamless integration across email, chat, phone, and social media platforms.',
-  
-    }
-  ];
+      description: 'Seamless integration across email, chat, phone, and social media platforms.'
+  ]
 
   const benefits = [
     'Increase customer satisfaction by 95%',
@@ -30,9 +28,9 @@ const AICustomerSupportPage: React.FC = () => {
     'Improve resolution rates',
     'Scale support operations',
     'Enhance customer experience'
-  ];
+  ]
 
-  const useCases = [
+  const useCases = [,
     {
       title: 'E-commerce Support',
       description: 'Handle product inquiries, order tracking, and returns with AI assistance',
@@ -62,8 +60,8 @@ const AICustomerSupportPage: React.FC = () => {
       title: 'General Inquiries',
       description: 'Handle general questions and provide information about services',
       icon: '❓',
-    }
-    const features = [
+    
+    const features = [,
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -89,42 +87,38 @@ const AICustomerSupportPage: React.FC = () => {
     {
     icon: TrendingUp,
       title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-  }
-    ]
+      description: 'Optimize your business growth with data-driven strategies.'
+  ]
 const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology',
-  ]
-return (
-    <>)
-      
-  ];
-return (
-    <>
-  </>
-      <Helmet>
-        <title>Ai Customer Support - Zion Tech Group</title>
     'Gain competitive advantage with advanced technology'
   ]
 return (
+    <></>)
+  ]
+return (
     <>
-      <Helmet>
+  </>
+      <Helmet></Helmet>
+        <title>Ai Customer Support - Zion Tech Group</title>,
+    'Gain competitive advantage with advanced technology'
+  ]
+return (
+    <></>
+      <Helmet></Helmet>
         <title>Ai Customer Support - Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       
-
       <Navigation />
-
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
-        {/* Hero Section */}
+        {/* Hero Section */
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full mb-8">
+          <div className="max-w-7xl mx-auto text-center"></div>
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full mb-8"></div>
               <MessageCircle className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -134,19 +128,19 @@ return (
               Transform your customer support with our AI Customer Support solutions. Intelligent automation, 
               omnichannel communication, and human-AI collaboration for better customer experience.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center">
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
         {/* Hero Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
         <section$1>
-        <div$2>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+        <div$2></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
+          <div className="relative max-w-7xl mx-auto text-center"></div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
               Ai Customer Support
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -176,25 +170,24 @@ return (
             </div>
         </div>
       </section>
-
-        {/* Features Section */}
+        {/* Features Section */
         <section className="py-20 px-4">
         </section>
         {/* Features Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
         <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Ai Customer Support
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
+          <div className="relative max-w-7xl mx-auto text-center"></div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>Ai Customer Support
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced AI-powered ai customer support solution for modern businesses.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Get Started
               <button className="border border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">View Demo
-        {/* Features Section */}
+        {/* Features Section */
         <section className="py-20 px-4">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
@@ -212,13 +205,13 @@ return (
             </div>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg mb-4">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg mb-4"></div>
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description</p>}</p>
-                  {feature.benefits && (;
+                  {feature.benefits && (
                     <ul>
                       {feature.benefits.map((benefit, idx) => (} <li>
                           <CheckCircle />
@@ -227,14 +220,13 @@ return (
     feature.benefits && (
                     <ul>
                       {feature.benefits.map((benefit, idx) => (
-  }
+  
                         </ul><li>
                           </li><CheckCircle>
-
-        {/* Use Cases Section */}
+        {/* Use Cases Section */
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Applications & Use Cases
               </h2>
@@ -242,13 +234,13 @@ return (
                 From e-commerce to technical support, our AI Customer Support serves diverse needs
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {useCases.map((useCase, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center"></div>
                   <div className="text-4xl mb-4">{useCase.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300">{useCase.description}</p>
-  const features = [
+  const features = [,
     {
       icon: Brain,
       title: 'AI-Powered Chatbots',
@@ -284,9 +276,7 @@ return (
       title: 'Always Available',
       description: 'Round-the-clock support without human limitations',
       details: ['24/7 Operation', 'Holiday Coverage', 'Scalable Infrastructure', 'Zero Downtime']
-    }
   ]
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -299,7 +289,7 @@ return (
         'Email support',
         'Standard analytics',
         '1 integration'
-      ],
+  ],
       popular: false
     },
     {
@@ -314,7 +304,7 @@ return (
         'Advanced analytics',
         '5 integrations',
         'Priority support'
-      ],
+  ],
       popular: true
     },
     {
@@ -330,18 +320,15 @@ return (
         'Unlimited integrations',
         'Dedicated support',
         'Custom deployment'
-      ],
+  ],
       popular: false
-    }
   ]
-
   const stats = [
     { value: '95%', label: 'Customer Satisfaction', icon: <Star className="w-8 h-8 text-yellow-400" /> },
     { value: '2.3s', label: 'Average Response Time', icon: <Clock className="w-8 h-8 text-green-400" /> },
     { value: '24/7', label: 'Availability', icon: <Zap className="w-8 h-8 text-blue-400" /> },
-    { value: '50%', label: 'Cost Reduction', icon: <BarChart className="w-8 h-8 text-purple-400" /> }
+    { value: '50%', label: 'Cost Reduction', icon: <BarChart className="w-8 h-8 text-purple-400" />
   ]
-
   const testimonials = [
     {
       name: 'Sarah Johnson',
@@ -362,26 +349,24 @@ return (
       role: 'Head of Support, InnovateLab',
       content: 'Implementation was seamless and the results exceeded our expectations. Highly recommended!',
       rating: 5,
-      company: 'InnovateLab',
-    }
+      company: 'InnovateLab'
   ]
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
       
-      {/* Hero Section */}
+      {/* Hero Section */
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center"></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
               AI-Powered <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Customer Support</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your customer experience with intelligent AI chatbots and automated support systems. 
               Reduce response times by 80% while increasing customer satisfaction.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
               </button>
@@ -392,32 +377,30 @@ return (
           </div>
         </div>
       </section>
-
-      {/* Stats Section */}
+      {/* Stats Section */
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center"></div>
                 <div className="flex justify-center mb-4">
-                  {stat.icon}
+                  {stat.icon
                 </div>
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">
-                  {stat.value}
+                  {stat.value
                 </div>
                 <div className="text-gray-300">
-                  {stat.label}
+                  {stat.label
                 </div>
               </div>
-            ))}
+            ))
           </div>
         </div>
       </section>
-
-      {/* Features Section */}
+      {/* Features Section */
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Powerful AI Features
             </h2>
@@ -426,28 +409,27 @@ return (
             </p>
           </div>
         </section>
-
-        {/* Benefits Section */}
+        {/* Benefits Section */
         <section className="py-20 px-4 sm:px-6 lg:px-8">
         {/* Benefits Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Key Features
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>Key Features
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">Advanced AI technology that drives results
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-sky-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-sky-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>
                     <feature.icon className="w-8 h-8 text-white" />
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}
-                  <p className="text-gray-300 mb-4">{feature.description}
+                  <h3 className="text-xl font-bold text-white mb-4">$3</h3>{feature.title
+                  <p className="text-gray-300 mb-4">{feature.description
                   {feature.benefits && (
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                      ))}
+                          {benefit
+                      ))
                     </ul>
                   </div>
           <div className="max-w-7xl mx-auto"></div>
@@ -459,28 +441,26 @@ return (
             </div>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
               {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg mb-4">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center"></div>
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg mb-4"></div>
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <p className="text-white font-medium">{benefit}</p>
                 </div>
-              ))}
+              ))
             </div>
         </div>
       </section>
-
-        {/* CTA Section */}
+        {/* CTA Section */
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-teal-500 to-cyan-500 rounded-2xl p-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <div className="bg-gradient-to-r from-teal-500 to-cyan-500 rounded-2xl p-12"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
                 Ready to Transform Your Customer Support?
-
-        {/* Benefits Section */}
+        {/* Benefits Section */
         <section$1>
-        <div$2>
-            <div className="text-center mb-16">
+        <div$2></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
           <div className="max-w-7xl mx-auto" / /></div>
             <div className="text-center mb-16" / /></div>
@@ -493,8 +473,8 @@ return (
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
               {benefits.map((benefit, index) => ()
-              ))}
-        {/* CTA Section */}
+              ))
+        {/* CTA Section */
         <section className="py-20 px-4">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
@@ -503,12 +483,11 @@ return (
             </div>
           ))
         </section>
-
-        {/* CTA Section */}
+        {/* CTA Section */
         <section$1>
-        <div$2>
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        <div$2></div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
           <div className="max-w-4xl mx-auto text-center"></div>
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>
               <h2>Ready to Get Started?</h2>
@@ -537,17 +516,16 @@ return (
         </section>
       </div>
       <Footer />
-
-  );
-};
-
-export default AiCustomerSupportPage;
+  )
+}
+}
+export default AiCustomerSupportPage
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mr-4">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300"></div>
+                <div className="flex items-center mb-4"></div>
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mr-4"></div>
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white">{feature.title}</h3>
@@ -557,20 +535,19 @@ export default AiCustomerSupportPage;
                   {feature.details.map((detail, detailIndex) => (
                     <li key={detailIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {detail}
+                      {detail
                     </li>
-                  ))}
+                  ))
                 </ul>
               </div>
-            ))}
+            ))
           </div>
         </div>
       </section>
-
-      {/* Pricing Section */}
+      {/* Pricing Section */
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Simple, Transparent Pricing
             </h2>
@@ -579,22 +556,22 @@ export default AiCustomerSupportPage;
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-2xl p-8 relative ${
                 plan.popular ? 'ring-2 ring-cyan-400 bg-white/15' : ''
-              }`}>
+              }`}></div>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
                   </div>
-                )}
-                <div className="text-center mb-8">
+                )
+                <div className="text-center mb-8"></div>
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
+                  <div className="flex items-baseline justify-center"></div>
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-300 ml-1">{plan.period}</span>
                   </div>
@@ -603,9 +580,9 @@ export default AiCustomerSupportPage;
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      {feature
                     </li>
-                  ))}
+                  ))
                 </ul>
                 <button className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-300 ${
                   plan.popular 
@@ -615,15 +592,14 @@ export default AiCustomerSupportPage;
                   Start Free Trial
                 </button>
               </div>
-            ))}
+            ))
           </div>
         </div>
       </section>
-
-      {/* Testimonials Section */}
+      {/* Testimonials Section */
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               What Our Customers Say
             </h2>
@@ -632,36 +608,35 @@ export default AiCustomerSupportPage;
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-                <div className="flex items-center mb-4">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8"></div>
+                <div className="flex items-center mb-4"></div>
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
+                  ))
                 </div>
                 <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
-                <div>
+                <div></div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-cyan-400 text-sm">{testimonial.role}</div>
                   <div className="text-gray-400 text-sm">{testimonial.company}</div>
                 </div>
               </div>
-            ))}
+            ))
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* CTA Section */
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center"></div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Customer Support?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Start your free trial today and see the difference AI can make in your customer experience.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
               <ArrowRight className="w-5 h-5 mr-2" />
               Start Free Trial
@@ -672,12 +647,10 @@ export default AiCustomerSupportPage;
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   )
+
 }
-
 export default AiCustomerSupportPage
-
 }}}}}}}}}

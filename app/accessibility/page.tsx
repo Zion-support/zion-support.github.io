@@ -1,13 +1,13 @@
-'use client';
-import React from 'react';
+'use client'
+import React from 'react'
 
-export const dynamic = 'force-dynamic';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Eye, Volume2, Keyboard, Mouse, CheckCircle, Shield, Brain, BarChart, Target, Code, Globe } from 'lucide-react';
+export const dynamic = 'force-dynamic'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { Eye, Volume2, Keyboard, Mouse, CheckCircle, Shield, Brain, BarChart, Target, Code, Globe } from 'lucide-react'
 
 const AccessibilityPage: React.FC = () => {
-  const accessibilityFeatures = [
+  const accessibilityFeatures = [,
     {
       icon: Eye,
       title: 'Visual Accessibility',
@@ -43,8 +43,7 @@ const AccessibilityPage: React.FC = () => {
       title: 'Global Standards',
       description: 'Compliance with international accessibility standards including WCAG 2.1 AA and Section 508.',
       benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards']
-    }
-  ];
+  ]
 
   const services = [
     {
@@ -70,19 +69,18 @@ const AccessibilityPage: React.FC = () => {
       title: 'Ongoing Monitoring',
       description: 'Continuous monitoring and maintenance of accessibility compliance as your products evolve.',
       features: ['Automated testing', 'Regular audits', 'Performance tracking', 'Compliance reporting']
-    }
-  ];
+  ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <Navigation />
         
-        {/* Hero Section */}
+        {/* Hero Section */
         <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
+          <div className="relative max-w-7xl mx-auto text-center"></div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
               Accessibility
               <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Solutions
@@ -91,7 +89,7 @@ const AccessibilityPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure your applications are usable by people of all abilities and comply with international standards.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                 Get Started
               </button>
@@ -102,14 +100,14 @@ const AccessibilityPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Features Section */}
+        {/* Features Section */
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl mx-auto"></div>
             <h2 className="text-4xl font-bold text-white text-center mb-16">Accessibility Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {accessibilityFeatures.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
+                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300"></div>
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6"></div>
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
@@ -118,24 +116,24 @@ const AccessibilityPage: React.FC = () => {
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-400">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {benefit}
+                        {benefit
                       </li>
-                    ))}
+                    ))
                   </ul>
                 </div>
-              ))}
+              ))
             </div>
           </div>
         </section>
 
-        {/* Services Section */}
+        {/* Services Section */
         <section className="py-20 px-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl mx-auto"></div>
             <h2 className="text-4xl font-bold text-white text-center mb-16">Our Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
               {services.map((service, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
+                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300"></div>
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6"></div>
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
@@ -144,24 +142,24 @@ const AccessibilityPage: React.FC = () => {
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-400">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {feature}
+                        {feature
                       </li>
-                    ))}
+                    ))
                   </ul>
                 </div>
-              ))}
+              ))
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA Section */
         <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center"></div>
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Make Your Products Accessible?</h2>
             <p className="text-xl text-gray-300 mb-8">
               Let's work together to create inclusive digital experiences that work for everyone.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                 Start Your Project
               </button>
@@ -174,7 +172,9 @@ const AccessibilityPage: React.FC = () => {
 
         <Footer />
       </div>
-  );
-};
+  )
+}
 
-export default AccessibilityPage;
+}
+
+export default AccessibilityPage;}

@@ -1,6 +1,6 @@
-'use client';
-import React from 'react';
-import Link from 'next/link';
+'use client'
+import React from 'react'
+import Link from 'next/link'
 
 
 const teamMembers = [
@@ -51,11 +51,10 @@ const teamMembers = [
     bio: "Specializing in natural language processing and computer vision applications.",
     expertise: ["NLP", "Computer Vision", "AI Implementation"],
     image: "/api/placeholder/300/300"
-  }
-]
-const values = [
-  {
-    icon: '🧠',
+  ]
+const values = [,
+    {
+      icon: '🧠',
     title: "Innovation",
       description: "We constantly push the boundaries of what's possible with AI and technology."},
   {
@@ -69,21 +68,21 @@ const values = [
   {
     icon: '⚡',
     title: "Excellence",
-    description: "We deliver exceptional results through meticulous attention to detail."}
+    description: "We deliver exceptional results through meticulous attention to detail."
   ]
 const stats = [
   { label: "Years Combined Experience", value: "150+" },
   { label: "AI Projects Delivered", value: "1000+" },
   { label: "Team Members", value: "25+" },
-  { label: "Client Satisfaction", value: "99%" }
-]
+  { label: "Client Satisfaction", value: "99%"
+  ]
 const TeamPage: React.FC = () => {
   return (
-    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="relativeoverflow-hidden">
+    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <div className="relativeoverflow-hidden"></div>
         <div className="absoluteinset-0bg-gradient-to-rfrom-blue-600/20 to-purple-600/20"></div>
-        <div className="relativemax-w-7xl mx-autopx-4 sm: px-6 lg:px-8 py-24">
-          <div className="text-center">
+        <div className="relativemax-w-7xl mx-autopx-4 sm: px-6 lg:px-8 py-24"></div>
+          <div className="text-center"></div>
             <h1 className="text-4xlmd:text-6xlfont-bold text-white mb-6">
               Our Team
             </h1>
@@ -92,80 +91,80 @@ const TeamPage: React.FC = () => {
               Our diverse team of experts is dedicated to transforming your business.
             </p>
           </div>
-          {/* Stats Section */}
-          <div className="gridgrid-cols-2md:grid-cols-4 gap-8 mb-20">
+          {/* Stats Section */
+          <div className="gridgrid-cols-2md:grid-cols-4 gap-8 mb-20"></div>
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center"></div>
                 <div className="text-3xlmd:text-4xl font-bold text-white mb-2">
-                  {stat.value}
+                  {stat.value
                 </div>
                 <div className="text-gray-300">{stat.label}</div>
               </div>
-            ))}
+            ))
           </div>
-          {/* Team Members */}
-          <div className="gridmd:grid-cols-2lg:grid-cols-3 gap-8 mb-20">
+          {/* Team Members */
+          <div className="gridmd:grid-cols-2lg:grid-cols-3 gap-8 mb-20"></div>
             {teamMembers.map((member) => (
-              <div key={member.id} className="bg-white/10backdrop-blur-mdrounded-xlp-6 hover: bg-white/20 transition-all duration-300">
-                <div className="text-center">
-                  <div className="w-24h-24bg-gradient-to-rfrom-blue-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+              <div key={member.id} className="bg-white/10backdrop-blur-mdrounded-xlp-6 hover: bg-white/20 transition-all duration-300"></div>
+                <div className="text-center"></div>
+                  <div className="w-24h-24bg-gradient-to-rfrom-blue-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>
                     <span className="text-2xlfont-boldtext-white">
-                      {member.name.split(' ').map(n => n[0]).join('')}
+                      {member.name.split(' ').map(n => n[0]).join('')
                     </span>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">
-                    {member.name}
+                    {member.name
                   </h3>
                   <p className="text-blue-300mb-3">
-                    {member.role}
+                    {member.role
                   </p>
                   <p className="text-gray-300text-smmb-4">
-                    {member.bio}
+                    {member.bio
                   </p>
-                  <div className="flexflex-wrapgap-2justify-center">
+                  <div className="flexflex-wrapgap-2justify-center"></div>
                     {member.expertise.map((skill, skillIndex) => (
                       <span key={skillIndex} className="px-3py-1bg-blue-500/20text-blue-300 text-xs rounded-full">
-                        {skill}
+                        {skill
                       </span>
-                    ))}
+                    ))
                   </div>
                 </div>
               </div>
-            ))}
+            ))
           </div>
-          {/* Values Section */}
-          <div className="text-center mb-16">
+          {/* Values Section */
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Our Values
             </h2>
             <p className="text-xltext-gray-300mb-12max-w-3xl mx-auto">
               The principles that guide everything we do and shape our company culture.
             </p>
-            <div className="gridmd:grid-cols-2lg:grid-cols-4 gap-8">
+            <div className="gridmd:grid-cols-2lg:grid-cols-4 gap-8"></div>
               {values.map((value, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16h-16bg-gradient-to-rfrom-blue-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <div key={index} className="text-center"></div>
+                  <div className="w-16h-16bg-gradient-to-rfrom-blue-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>
                     <span className="text-2xl">{value.icon}</span>
                   </div>
                   <h3 className="text-xlfont-semiboldtext-whitemb-3">
-                    {value.title}
+                    {value.title
                   </h3>
                   <p className="text-gray-300">
-                    {value.description}
+                    {value.description
                   </p>
                 </div>
-              ))}
+              ))
             </div>
           </div>
-          {/* CTA Section */}
-          <div className="text-center">
+          {/* CTA Section */
+          <div className="text-center"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Work With Us?
             </h2>
             <p className="text-xltext-gray-300mb-8max-w-2xl mx-auto">
               Join our team of innovators and help shape the future of AI and technology.
             </p>
-            <div className="flexflex-colsm:flex-row gap-4 justify-center">
+            <div className="flexflex-colsm:flex-row gap-4 justify-center"></div>
               <Link
                 href="/contact"
                 className="bg-blue-600hover:bg-blue-700text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 inline-flex items-center justify-center"
@@ -185,4 +184,5 @@ const TeamPage: React.FC = () => {
     </div>
   )
 }
-export default TeamPage
+
+export default TeamPage}

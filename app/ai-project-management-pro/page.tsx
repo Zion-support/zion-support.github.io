@@ -1,11 +1,10 @@
-'use client';
-import React from 'react';
-import Link from 'next/link';
-import { ArrowRight, CheckCircle, Brain } from 'lucide-react';
-
+'use client'
+import React from 'react'
+import Link from 'next/link'
+import { ArrowRight, CheckCircle, Brain } from 'lucide-react'
 
 const AIProjectManagementProPage: React.FC = () => {
-  const features = [
+  const features = [,
     {
       icon: 'Brain',
     title: 'AI Project Planning',
@@ -24,7 +23,7 @@ const AIProjectManagementProPage: React.FC = () => {
   {
     icon: 'Target',
     title: 'Smart Resource Management',
-    description: 'AI-driven resource allocation and workload balancing for optimal team productivity.'}
+    description: 'AI-driven resource allocation and workload balancing for optimal team productivity.'
   ]
   const benefits = [
     'Increase project success rate by 40%',
@@ -46,7 +45,7 @@ const AIProjectManagementProPage: React.FC = () => {
         'Team collaboration',
         'Basic analytics',
     'Email support'
-      ]
+  ]
     },
     {
       name: 'Professional',
@@ -60,7 +59,7 @@ const AIProjectManagementProPage: React.FC = () => {
         'Priority support',
         'API access',
     'Custom integrations'
-      ]
+  ]
     },
     {
       name: 'Enterprise',
@@ -75,20 +74,19 @@ const AIProjectManagementProPage: React.FC = () => {
         'White-label solution',
     'SLA guarantee'
   ]
-}
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      {/* Hero Section */}
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"></div>
+      {/* Hero Section */
       <section className="relative py-20 px-4 sm: px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
+        <div className="max-w-7xl mx-auto text-center"></div>
+          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6"></h1>
             AI Project Management <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Pro</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform project management with AI-powered automation. Plan, track, and deliver projects efficiently with our intelligent project management platform.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <Link
               href="/contact"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
@@ -105,10 +103,10 @@ const AIProjectManagementProPage: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* Features Section */}
+      {/* Features Section */
       <section className="py-20 px-4 sm: px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Smart Project Management Features
             </h2>
@@ -116,24 +114,24 @@ const AIProjectManagementProPage: React.FC = () => {
               Our AI project management platform provides everything you need to plan, execute, and deliver successful projects.
             </p>
           </div>
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover: border-cyan-400/50 transition-all duration-300 group">
-                <div className="mb-6">
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover: border-cyan-400/50 transition-all duration-300 group"></div>
+                <div className="mb-6"></div>
                   <div className="w-12 h-12 text-cyan-400">{feature.icon}</div>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-            ))}
+            ))
           </div>
         </div>
       </section>
-      {/* Benefits Section */}
+      {/* Benefits Section */
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-black/20">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg: grid-cols-2 gap-12 items-center">
-            <div>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="grid lg: grid-cols-2 gap-12 items-center"></div>
+            <div></div>
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Why Choose Our AI Project Management?
               </h2>
@@ -146,13 +144,13 @@ const AIProjectManagementProPage: React.FC = () => {
                     <CheckCircle className="w-8 h-8" />
                     <span className="text-gray-300">{benefit}</span>
                   </li>
-                ))}
+                ))
               </ul>
             </div>
-            <div className="relative">
-              <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
-                <div className="text-center">
-                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-6">
+            <div className="relative"></div>
+              <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10"></div>
+                <div className="text-center"></div>
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-6"></div>
                     <Brain className="w-8 h-8" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">AI-Powered Intelligence</h3>
@@ -165,10 +163,10 @@ const AIProjectManagementProPage: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* Pricing Section */}
+      {/* Pricing Section */
       <section className="py-20 px-4 sm: px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Simple, Transparent Pricing
             </h2>
@@ -176,12 +174,12 @@ const AIProjectManagementProPage: React.FC = () => {
               Choose the plan that fits your team size and project needs. All plans include our core AI features with no hidden fees.
             </p>
           </div>
-          <div className="grid md: grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-3 gap-8"></div>
             {pricing.map((plan, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover: border-cyan-400/50 transition-all duration-300">
-                <div className="text-center mb-6">
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover: border-cyan-400/50 transition-all duration-300"></div>
+                <div className="text-center mb-6"></div>
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center mb-2">
+                  <div className="flex items-baseline justify-center mb-2"></div>
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-300 ml-1">{plan.period}</span>
                   </div>
@@ -193,30 +191,30 @@ const AIProjectManagementProPage: React.FC = () => {
                       <CheckCircle className="w-8 h-8" />
                       <span className="text-gray-300">{feature}</span>
                     </li>
-                  ))}
+                  ))
                 </ul>
                 <Link
                   href="/contact"
                   className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
                 >
-                  {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
+                  {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'
                   <ArrowRight className="w-8 h-8" />
                 </Link>
               </div>
-            ))}
+            ))
           </div>
         </div>
       </section>
-      {/* CTA Section */}
+      {/* CTA Section */
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-purple-600">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center"></div>
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
             Ready to Transform Your Project Management?
           </h2>
           <p className="text-xl text-cyan-100 mb-8">
             Join thousands of teams already using our AI project management to deliver better projects faster.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <Link 
               href="/contact" 
               className="inline-flex items-center px-8 py-3 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
@@ -236,4 +234,4 @@ const AIProjectManagementProPage: React.FC = () => {
     </div>
   )
 }
-export default AIProjectManagementProPage
+export default AIProjectManagementProPage}

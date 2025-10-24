@@ -1,11 +1,11 @@
-import React from "react";
-import { CheckCircle, ArrowRight } from "lucide-react";
-"use client";
+import React from "react"
+import { CheckCircle, ArrowRight } from "lucide-react"
+"use client"
 
 
 const ITServicesPage: React.FC = () => {
-  const services = [
-  {
+  const services = [,
+    {
       icon: 'Cloud',
     title: "Cloud Solutions",
       description: "Scalable cloud infrastructure for modern businesses",
@@ -14,7 +14,7 @@ const ITServicesPage: React.FC = () => {
         "Cloud Architecture Design",
         "Cost Optimization",
     "24/7 Monitoring"
-      ],
+  ],
       price: "Starting at $2,000"
 },
   {
@@ -26,7 +26,7 @@ const ITServicesPage: React.FC = () => {
         "Threat Detection",
         "Compliance Management",
     "Incident Response"
-      ],
+  ],
       price: "Starting at $3,500"
 },
   {
@@ -38,7 +38,7 @@ const ITServicesPage: React.FC = () => {
         "Infrastructure as Code",
         "Container Orchestration",
     "Performance Monitoring"
-      ],
+  ],
       price: "Starting at $4,000"
 },
   {
@@ -50,9 +50,8 @@ const ITServicesPage: React.FC = () => {
         "Business Intelligence",
         "Real-time Dashboards",
     "Predictive Analytics"
-      ],
+  ],
       price: "Starting at $5,000"
-    }
   ]
   const technologies = [
     "AWS", "Azure", "Google Cloud", "Docker", "Kubernetes", "Terraform",
@@ -61,18 +60,18 @@ const ITServicesPage: React.FC = () => {
     "Python", "Go", "Rust", "TypeScript"
   ]
   return (
-    <div className="min-h-screenbg-gradient-to-brfrom-gray-50to-blue-50">
-      {/* Hero Section */}
+    <div className="min-h-screenbg-gradient-to-brfrom-gray-50to-blue-50"></div>
+      {/* Hero Section */
       <section className="relativepy-20px-4overflow-hidden">
         <div className="absoluteinset-0bg-gradient-to-rfrom-emerald-600/20 to-blue-600/20"></div>
-        <div className="relativemax-w-7xl mx-autotext-center">
-          <h1 className="text-4xlmd:text-6xlfont-bold text-gray-900 mb-6">
+        <div className="relativemax-w-7xl mx-autotext-center"></div>
+          <h1 className="text-4xlmd:text-6xlfont-bold text-gray-900 mb-6"></h1>
             IT <span className="text-transparentbg-clip-textbg-gradient-to-rfrom-emerald-600 to-blue-600">Services</span>
           </h1>
           <p className="text-xltext-gray-600mb-8max-w-3xl mx-auto">
             Comprehensive technology solutions to modernize your infrastructure and accelerate your digital transformation.
           </p>
-          <div className="flexflex-colsm:flex-row gap-4 justify-center">
+          <div className="flexflex-colsm:flex-row gap-4 justify-center"></div>
             <button className="bg-emerald-600hover:bg-emerald-700text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
               Get Started
               <ArrowRight className="ml-2h-5w-5" />
@@ -83,10 +82,10 @@ const ITServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* Services Grid */}
+      {/* Services Grid */
       <section className="py-20px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xlmd:text-4xl font-bold text-gray-900 mb-4">
               Our IT Solutions
             </h2>
@@ -94,10 +93,10 @@ const ITServicesPage: React.FC = () => {
               End-to-end technology services to power your business growth.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {services.map((service, index) => (
-              <div key={index} className="bg-whitep-6rounded-xlshadow-lg hover: shadow-xl transition-shadow duration-300">
-                <div className="flexitems-centerjustify-centerw-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg mb-4">
+              <div key={index} className="bg-whitep-6rounded-xlshadow-lg hover: shadow-xl transition-shadow duration-300"></div>
+                <div className="flexitems-centerjustify-centerw-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg mb-4"></div>
                   <div className="h-6w-6text-white">{service.icon}</div>
                 </div>
                 <h3 className="text-xlfont-semiboldtext-gray-900mb-2">{service.title}</h3>
@@ -106,23 +105,23 @@ const ITServicesPage: React.FC = () => {
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flexitems-centertext-smtext-gray-600">
                       <CheckCircle className="h-4w-4text-emerald-500mr-2" />
-                      {feature}
+                      {feature
                     </li>
-                  ))}
+                  ))
                 </ul>
                 <div className="text-emerald-600font-semiboldmb-4">{service.price}</div>
                 <button className="w-fullbg-emerald-600hover:bg-emerald-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200">
                   Learn More
                 </button>
               </div>
-            ))}
+            ))
           </div>
         </div>
       </section>
-      {/* Technologies Section */}
+      {/* Technologies Section */
       <section className="py-20px-4bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xlmd:text-4xl font-bold text-gray-900 mb-4">
               Technologies We Work With
             </h2>
@@ -130,63 +129,63 @@ const ITServicesPage: React.FC = () => {
               We use the latest and most reliable technologies to build robust solutions.
             </p>
           </div>
-          <div className="gridgrid-cols-2md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <div className="gridgrid-cols-2md:grid-cols-4 lg:grid-cols-6 gap-4"></div>
             {technologies.map((tech, index) => (
-              <div key={index} className="bg-whitep-4rounded-lgshadow-md text-center hover: shadow-lg transition-shadow duration-300">
+              <div key={index} className="bg-whitep-4rounded-lgshadow-md text-center hover: shadow-lg transition-shadow duration-300"></div>
                 <span className="text-gray-700font-medium">{tech}</span>
               </div>
-            ))}
+            ))
           </div>
         </div>
       </section>
-      {/* Why Choose Us Section */}
+      {/* Why Choose Us Section */
       <section className="py-20px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="gridgrid-cols-1lg:grid-cols-2 gap-12 items-center">
-            <div>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="gridgrid-cols-1lg:grid-cols-2 gap-12 items-center"></div>
+            <div></div>
               <h2 className="text-3xlmd:text-4xl font-bold text-gray-900 mb-6">
                 Why Choose Our IT Services?
               </h2>
-              <div className="space-y-6">
-                <div className="flexitems-startspace-x-4">
-                  <div className="flex-shrink-0w-8h-8bg-emerald-500 rounded-full flex items-center justify-center">
+              <div className="space-y-6"></div>
+                <div className="flexitems-startspace-x-4"></div>
+                  <div className="flex-shrink-0w-8h-8bg-emerald-500 rounded-full flex items-center justify-center"></div>
                     <CheckCircle className="h-5w-5text-white" />
                   </div>
-                  <div>
+                  <div></div>
                     <h3 className="text-lgfont-semiboldtext-gray-900mb-2">Expert Team</h3>
                     <p className="text-gray-600">Our certified professionals have years of experience with cutting-edge technologies.</p>
                   </div>
                 </div>
-                <div className="flexitems-startspace-x-4">
-                  <div className="flex-shrink-0w-8h-8bg-emerald-500 rounded-full flex items-center justify-center">
+                <div className="flexitems-startspace-x-4"></div>
+                  <div className="flex-shrink-0w-8h-8bg-emerald-500 rounded-full flex items-center justify-center"></div>
                     <CheckCircle className="h-5w-5text-white" />
                   </div>
-                  <div>
+                  <div></div>
                     <h3 className="text-lgfont-semiboldtext-gray-900mb-2">24/7 Support</h3>
                     <p className="text-gray-600">Round-the-clock monitoring and support to ensure your systems run smoothly.</p>
                   </div>
                 </div>
-                <div className="flexitems-startspace-x-4">
-                  <div className="flex-shrink-0w-8h-8bg-emerald-500 rounded-full flex items-center justify-center">
+                <div className="flexitems-startspace-x-4"></div>
+                  <div className="flex-shrink-0w-8h-8bg-emerald-500 rounded-full flex items-center justify-center"></div>
                     <CheckCircle className="h-5w-5text-white" />
                   </div>
-                  <div>
+                  <div></div>
                     <h3 className="text-lgfont-semiboldtext-gray-900mb-2">Scalable Solutions</h3>
                     <p className="text-gray-600">Our solutions grow with your business, adapting to your changing needs.</p>
                   </div>
                 </div>
-                <div className="flexitems-startspace-x-4">
-                  <div className="flex-shrink-0w-8h-8bg-emerald-500 rounded-full flex items-center justify-center">
+                <div className="flexitems-startspace-x-4"></div>
+                  <div className="flex-shrink-0w-8h-8bg-emerald-500 rounded-full flex items-center justify-center"></div>
                     <CheckCircle className="h-5w-5text-white" />
                   </div>
-                  <div>
+                  <div></div>
                     <h3 className="text-lgfont-semiboldtext-gray-900mb-2">Cost-Effective</h3>
                     <p className="text-gray-600">Optimize your IT spending with our efficient and cost-effective solutions.</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="bg-gradient-to-rfrom-emerald-500to-blue-500rounded-2xl p-8 text-white">
+            <div className="bg-gradient-to-rfrom-emerald-500to-blue-500rounded-2xl p-8 text-white"></div>
               <h3 className="text-2xlfont-boldmb-4">Ready to Get Started?</h3>
               <p className="text-lgmb-6">
                 Let&apos;s discuss your IT needs and create a customized solution that drives your business forward.
@@ -202,16 +201,16 @@ const ITServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* CTA Section */}
+      {/* CTA Section */
       <section className="py-20px-4bg-gradient-to-rfrom-emerald-600 to-blue-600">
-        <div className="max-w-4xlmx-autotext-center">
+        <div className="max-w-4xlmx-autotext-center"></div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Transform Your IT Infrastructure Today
           </h2>
           <p className="text-xltext-emerald-100mb-8">
             Partner with us to build a robust, scalable, and secure technology foundation for your business.
           </p>
-          <div className="flexflex-colsm:flex-row gap-4 justify-center">
+          <div className="flexflex-colsm:flex-row gap-4 justify-center"></div>
             <a
               href="/contact"
               className="bg-whitetext-emerald-600px-8py-4 rounded-lg font-semibold hover: bg-gray-100 transition-colors duration-200 flex items-center justify-center"
@@ -231,4 +230,5 @@ const ITServicesPage: React.FC = () => {
     </div>
   )
 }
-export default ITServicesPage
+
+export default ITServicesPage}

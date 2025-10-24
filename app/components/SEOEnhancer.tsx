@@ -1,25 +1,19 @@
-<<<<<<< HEAD
-'use client';;
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-=======
 'use client';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
 
 interface SEOEnhancerProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonicalUrl?: string;
-  ogImage?: string;
-  twitterCard?: string;
-  structuredData?: object;
-  children: React.ReactNode;
-}
+  title?: string
+  description?: string
+  keywords?: string
+  canonicalUrl?: string
+  ogImage?: string
+  twitterCard?: string
+  structuredData?: object
+  children: React.ReactNode
+
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -33,75 +27,77 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
 }) => {
   useEffect(() => {
     // Update document title
-    document.title = title;
+    document.title = title
 
     // Update meta description
-    const metaDescription = document.querySelector('meta[name="description"]');
+    const metaDescription = document.querySelector('meta[name="description"]')
     if (metaDescription) {
-      metaDescription.setAttribute('content', description);
+      metaDescription.setAttribute('content', description)
     } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = description;
-      document.head.appendChild(meta);
-    }
+      const meta = document.createElement('meta')
+      meta.name = 'description'
+      meta.content = description
+      document.head.appendChild(meta)
+    
 
     // Update meta keywords
-    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    const metaKeywords = document.querySelector('meta[name="keywords"]')
     if (metaKeywords) {
-      metaKeywords.setAttribute('content', keywords);
+      metaKeywords.setAttribute('content', keywords)
     } else {
-      const meta = document.createElement('meta');
-      meta.name = 'keywords';
-      meta.content = keywords;
-      document.head.appendChild(meta);
-    }
+      const meta = document.createElement('meta')
+      meta.name = 'keywords'
+      meta.content = keywords
+      document.head.appendChild(meta)
+    
 
     // Update canonical URL
     if (canonicalUrl) {
-      const canonical = document.querySelector('link[rel="canonical"]');
+      const canonical = document.querySelector('link[rel="canonical"]')
       if (canonical) {
-        canonical.setAttribute('href', canonicalUrl);
+        canonical.setAttribute('href', canonicalUrl)
       } else {
-        const link = document.createElement('link');
-        link.rel = 'canonical';
-        link.href = canonicalUrl;
-        document.head.appendChild(link);
-      }
-    }
-  }, [title, description, keywords, canonicalUrl]);
+        const link = document.createElement('link')
+        link.rel = 'canonical'
+        link.href = canonicalUrl
+        document.head.appendChild(link)
+      
+    
+  }, [title, description, keywords, canonicalUrl])
 
   return (
-    <>
-      <Helmet>
+    <></>
+      <Helmet></Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />
         
-        {/* Open Graph */}
+        {/* Open Graph */
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={ogImage} />
         <meta property="og:type" content="website" />
-        {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+        {canonicalUrl && <meta property="og:url" content={canonicalUrl} />
         
-        {/* Twitter Card */}
+        {/* Twitter Card */
         <meta name="twitter:card" content={twitterCard} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={ogImage} />
         
-        {/* Structured Data */}
+        {/* Structured Data */
         {structuredData && (
           <script type="application/ld+json">
-            {JSON.stringify(structuredData)}
+            {JSON.stringify(structuredData)
           </script>
-        )}
+        )
       </Helmet>
-      {children}
+      {children
     </>
-  );
-};
+  )
+}
 
-export default SEOEnhancer;
+}
+
+export default SEOEnhancer;}

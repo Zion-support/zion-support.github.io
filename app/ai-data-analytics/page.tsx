@@ -1,11 +1,11 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings} from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings} from 'lucide-react'
 const AiDataAnalyticsPage: React.FC = () => {
-    const features = [
+    const features = [,
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -24,9 +24,8 @@ const AiDataAnalyticsPage: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
-    }
-  ];
+      description: 'Worldwide deployment and support for international businesses'
+  ]
 
   const benefits = [
     'Advanced AI technology integration',
@@ -61,40 +60,37 @@ const AiDataAnalyticsPage: React.FC = () => {
     {
     icon: TrendingUp,
       title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-  }
-    ]
+      description: 'Optimize your business growth with data-driven strategies.'
+  ]
 const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology',
-  ]
-return (
-    <>)
-      
-  ];
-return (
-    <>
-  </>
-      <Helmet>
-        <title>Ai Data Analytics - Zion Tech Group</title>
     'Gain competitive advantage with advanced technology'
   ]
 return (
+    <></>)
+  ]
+return (
     <>
-      <Helmet>
+  </>
+      <Helmet></Helmet>
+        <title>Ai Data Analytics - Zion Tech Group</title>,
+    'Gain competitive advantage with advanced technology'
+  ]
+return (
+    <></>
+      <Helmet></Helmet>
         <title>Ai Data Analytics - Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       
-
-      {/* Hero Section */}
+      {/* Hero Section */
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center"></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 Page
               </span>
@@ -105,17 +101,17 @@ return (
               Transform your business with our advanced page solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
         {/* Hero Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
         <section$1>
-        <div$2>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+        <div$2></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
+          <div className="relative max-w-7xl mx-auto text-center"></div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
               Ai Data Analytics
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -141,11 +137,10 @@ return (
           </div>
         </div>
       </section>
-
-      {/* Features Section */}
+      {/* Features Section */
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Page?
             </h2>
@@ -153,25 +148,23 @@ return (
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-            ))}
+            ))
           </div>
         </div>
       </section>
-
-      {/* Benefits Section */}
+      {/* Benefits Section */
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
             </h2>
@@ -179,47 +172,44 @@ return (
               Experience the power of our page solutions for your business.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
+              <div key={index} className="flex items-start space-x-3"></div>
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
-            ))}
+            ))
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* CTA Section */
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-purple-100 mb-8">
               Contact our experts to discuss your page needs and get a customized solution.
             </p>
-
-        {/* Features Section */}
+        {/* Features Section */
         <section className="py-20 px-4">
         </section>
         {/* Features Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
         <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Ai Data Analytics
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
+          <div className="relative max-w-7xl mx-auto text-center"></div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>Ai Data Analytics
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced AI-powered ai data analytics solution for modern businesses.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Get Started
               <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">View Demo
-        {/* Features Section */}
+        {/* Features Section */
         <section className="py-20 px-4">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
@@ -231,10 +221,10 @@ return (
       </section>
     </div>
     </>
-  );
-};
-
-export default PagePage;
+  )
+}
+}
+export default PagePage
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2>Key Features;</h2>
@@ -249,15 +239,14 @@ export default PagePage;
                     <feature />
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description</p>}</p>
-                  {feature.benefits && (;
+                  {feature.benefits && (
                     <ul>
                       {feature.benefits.map((benefit, idx) => (} <li>
                           <CheckCircle />
-
                           {benefit} </li>
-                      ))}
+                      ))
                     </ul>
-                  )}
+                  )
       icon: Database,
       title: 'Data Integration',
       description: 'Connect and analyze data from multiple sources seamlessly',
@@ -274,9 +263,7 @@ export default PagePage;
       title: 'Automated Reports',
       description: 'Generate comprehensive reports automatically on your schedule',
       details: ['Scheduled Reports', 'Custom Templates', 'Email Delivery', 'PDF Export']
-    }
   ]
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -290,7 +277,7 @@ export default PagePage;
         'Standard dashboards',
         'Email support',
         '1 user'
-      ],
+  ],
       popular: false
     },
     {
@@ -306,7 +293,7 @@ export default PagePage;
         'Priority support',
         '5 users',
         'API access'
-      ],
+  ],
       popular: true
     },
     {
@@ -323,19 +310,16 @@ export default PagePage;
         'Unlimited users',
         'Custom integrations',
         'On-premise deployment'
-      ],
+  ],
       popular: false
-    }
   ]
-
   const stats = [
     { value: '40%', label: 'Faster Decision Making', icon: <Clock className="w-8 h-8 text-green-400" /> },
     { value: '85%', label: 'Accuracy Improvement', icon: <Target className="w-8 h-8 text-blue-400" /> },
     { value: '60%', label: 'Cost Reduction', icon: <DollarSign className="w-8 h-8 text-purple-400" /> },
-    { value: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-8 h-8 text-cyan-400" /> }
+    { value: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-8 h-8 text-cyan-400" />
   ]
-
-  const useCases = [
+  const useCases = [,
     {
       title: 'Sales Analytics',
       description: 'Track sales performance, identify top performers, and predict future revenue',
@@ -355,9 +339,7 @@ export default PagePage;
       title: 'Financial Forecasting',
       description: 'Predict cash flow, budget planning, and financial performance',
       icon: <DollarSign className="w-8 h-8 text-purple-400" />
-    }
   ]
-
   const testimonials = [
     {
       name: 'David Kim',
@@ -378,26 +360,24 @@ export default PagePage;
       role: 'Head of BI, TechStart',
       content: 'Implementation was smooth and the insights are game-changing. ROI was achieved in 3 months.',
       rating: 5,
-      company: 'TechStart',
-    }
+      company: 'TechStart'
   ]
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
       
-      {/* Hero Section */}
+      {/* Hero Section */
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center"></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
               AI-Powered <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Data Analytics</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your data into actionable insights with advanced AI analytics. 
               Make smarter decisions, predict trends, and drive business growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
               </button>
@@ -408,32 +388,30 @@ export default PagePage;
           </div>
         </div>
       </section>
-
-      {/* Stats Section */}
+      {/* Stats Section */
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center"></div>
                 <div className="flex justify-center mb-4">
-                  {stat.icon}
+                  {stat.icon
                 </div>
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">
-                  {stat.value}
+                  {stat.value
                 </div>
                 <div className="text-gray-300">
-                  {stat.label}
+                  {stat.label
                 </div>
               </div>
-            ))}
+            ))
           </div>
         </div>
       </section>
-
-      {/* Features Section */}
+      {/* Features Section */
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Advanced AI Analytics Features
             </h2>
@@ -443,24 +421,24 @@ export default PagePage;
           </div>
         </section>
         {/* Benefits Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Key Features
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>Key Features
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">Advanced AI technology that drives results
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>
                     <feature.icon className="w-8 h-8 text-white" />
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}
-                  <p className="text-gray-300 mb-4">{feature.description}
+                  <h3 className="text-xl font-bold text-white mb-4">$3</h3>{feature.title
+                  <p className="text-gray-300 mb-4">{feature.description
                   {feature.benefits && (
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                      ))}
+                          {benefit
+                      ))
                     </ul>
                   </div>
           <div className="max-w-7xl mx-auto"></div>
@@ -477,15 +455,14 @@ export default PagePage;
                     <CheckCircle />
                   <p className="text-lg text-white font-medium">{benefit</p>}</p>
                 </div>
-              ))}
+              ))
             </div>
         </div>
       </section>
-
-        {/* Benefits Section */}
+        {/* Benefits Section */
         <section$1>
-        <div$2>
-            <div className="text-center mb-16">
+        <div$2></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
           <div className="max-w-7xl mx-auto" / /></div>
             <div className="text-center mb-16" / /></div>
@@ -498,8 +475,8 @@ export default PagePage;
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
               {benefits.map((benefit, index) => ()
-              ))}
-        {/* CTA Section */}
+              ))
+        {/* CTA Section */
         <section className="py-20 px-4">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
@@ -508,12 +485,11 @@ export default PagePage;
             </div>
           ))
         </section>
-
-        {/* CTA Section */}
+        {/* CTA Section */
         <section$1>
-        <div$2>
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        <div$2></div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
           <div className="max-w-4xl mx-auto text-center"></div>
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>
               <h2>Ready to Get Started?</h2>
@@ -542,17 +518,16 @@ export default PagePage;
         </section>
       </div>
       <Footer />
-
-  );
-};
-
-export default AiDataAnalyticsPage;
+  )
+}
+}
+export default AiDataAnalyticsPage
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mr-4">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300"></div>
+                <div className="flex items-center mb-4"></div>
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mr-4"></div>
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white">{feature.title}</h3>
@@ -562,20 +537,19 @@ export default AiDataAnalyticsPage;
                   {feature.details.map((detail, detailIndex) => (
                     <li key={detailIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {detail}
+                      {detail
                     </li>
-                  ))}
+                  ))
                 </ul>
               </div>
-            ))}
+            ))
           </div>
         </div>
       </section>
-
-      {/* Use Cases Section */}
+      {/* Use Cases Section */
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Use Cases
             </h2>
@@ -584,24 +558,23 @@ export default AiDataAnalyticsPage;
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {useCases.map((useCase, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/20 transition-all duration-300">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/20 transition-all duration-300"></div>
                 <div className="flex justify-center mb-4">
-                  {useCase.icon}
+                  {useCase.icon
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{useCase.title}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
               </div>
-            ))}
+            ))
           </div>
         </div>
       </section>
-
-      {/* Pricing Section */}
+      {/* Pricing Section */
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Choose Your Plan
             </h2>
@@ -610,22 +583,22 @@ export default AiDataAnalyticsPage;
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-2xl p-8 relative ${
                 plan.popular ? 'ring-2 ring-cyan-400 bg-white/15' : ''
-              }`}>
+              }`}></div>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
                   </div>
-                )}
-                <div className="text-center mb-8">
+                )
+                <div className="text-center mb-8"></div>
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
+                  <div className="flex items-baseline justify-center"></div>
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-300 ml-1">{plan.period}</span>
                   </div>
@@ -634,9 +607,9 @@ export default AiDataAnalyticsPage;
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      {feature
                     </li>
-                  ))}
+                  ))
                 </ul>
                 <button className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-300 ${
                   plan.popular 
@@ -646,15 +619,14 @@ export default AiDataAnalyticsPage;
                   Start Free Trial
                 </button>
               </div>
-            ))}
+            ))
           </div>
         </div>
       </section>
-
-      {/* Testimonials Section */}
+      {/* Testimonials Section */
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Customer Success Stories
             </h2>
@@ -663,36 +635,35 @@ export default AiDataAnalyticsPage;
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-                <div className="flex items-center mb-4">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8"></div>
+                <div className="flex items-center mb-4"></div>
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
+                  ))
                 </div>
                 <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
-                <div>
+                <div></div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-cyan-400 text-sm">{testimonial.role}</div>
                   <div className="text-gray-400 text-sm">{testimonial.company}</div>
                 </div>
               </div>
-            ))}
+            ))
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* CTA Section */
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center"></div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Unlock Your Data's Potential?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Start your free trial today and discover insights that will transform your business.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
               <ArrowRight className="w-5 h-5 mr-2" />
               Start Free Trial
@@ -703,10 +674,10 @@ export default AiDataAnalyticsPage;
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   )
-}
 
+}
 export default AiDataAnalyticsPage
+}

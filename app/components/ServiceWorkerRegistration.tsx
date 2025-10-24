@@ -1,13 +1,11 @@
-<<<<<<< HEAD
-'use client';;
-import React from 'react';
+'use client';
+import React from 'react'
 
-'use client';;
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+'use client';
+import { Helmet } from 'react-helmet-async'
 const ServiceWorkerRegistrationPage: React.FC = () => {
 const ServiceWorkerRegistrationPage: React.FC = () => {
-    const features = [
+    const features = [,
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -18,11 +16,13 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
     {icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards',},
-    {icon: Globe,
+    {
+      icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',}}
+      description: 'Worldwide deployment and support for international businesses',
+    }
   ]
-  ];];];
+  ];];]
 const benefits = [
   ]
   const benefits = [
@@ -36,19 +36,20 @@ const benefits = [
     'Easy integration with existing systems',
 
     'Cost-effective pricing plans',
-
+,
     'Proven track record of success'
   ]
-return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
-      <Helmet />
+return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
+      <Helmet /></Helmet>
         <title>ServiceWorkerRegistration | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       {/* Hero Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>,
     'Proven track record of success'
   ]
 return (
@@ -58,11 +59,11 @@ return (
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
-      {/* Hero Section */}
+      {/* Hero Section */
       <section$1>
-        <div$2>
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <div$2></div>
+          <div className="text-center"></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -70,7 +71,7 @@ return (
       </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center"></div>
-            <h1>
+            <h1></h1>
               <span>ServiceWorkerRegistration;</span>
                 ServiceWorkerRegistration
               </span>
@@ -92,8 +93,8 @@ return (
       </section>
       {/* Features Section */} <section className="py-20 px-4">
           <section>
-        <div>
-          <div>
+        <div></div>
+          <div></div>
             <h2>Section Title</h2>
             <p>Section description</p>
           </div>
@@ -115,50 +116,50 @@ return (
                 <p className="text-gray-300">{feature.description</p>}</p>
               </div>
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet></Helmet>
         <title>ServiceWorkerRegistration | Zion Tech Group
         <meta name="description" content="Professional ServiceWorkerRegistration services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="ServiceWorkerRegistration, AI solutions, IT services, Zion Tech Group, serviceworkerregistration" />
-      {/* Hero Section */}
+      {/* Hero Section */
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center"></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">ServiceWorkerRegistration
               <br />
               <span className="text-white">Solutions
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced serviceworkerregistration solutions. 
               Powered by cutting-edge AI technology and industry expertise.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">Learn More
-      {/* Features Section */}
+      {/* Features Section */
       <section$1>
-        <div$2>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div$2></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Why Choose Our ServiceWorkerRegistration?
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our serviceworkerregistration solutions deliver unmatched performance, security, and scalability.
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
                   <feature.icon className="h-6 w-6 text-white" />
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}
-                <p className="text-gray-300">{feature.description}
-            ))}
+                <h3 className="text-xl font-semibold text-white mb-3">$3</h3>{feature.title
+                <p className="text-gray-300">{feature.description
+            ))
           </div>
         </div>
       </section>
       {/* Benefits Section */} <section className="py-20 px-4">
           <section>
-        <div>
-          <div>
+        <div></div>
+          <div></div>
             <h2>Section Title</h2>
             <p>Section description</p>
           </div>
@@ -178,28 +179,28 @@ return (
                 <p className="text-gray-300 text-lg">{benefit</p>}</p>
               </div>
       <section$1>
-        <div$2>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits
+        <div$2></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>Key Benefits
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our serviceworkerregistration solutions for your business.
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
+              <div key={index} className="flex items-start space-x-3"></div>
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}
-            ))}
+                <p className="text-gray-300 text-lg">{benefit
+            ))
           </div>
         ))
       </section>
       {/* CTA Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
       <section$1>
-        <div$2>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div$2></div>
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
         </div>
@@ -217,11 +218,11 @@ return (
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
               <button>
                 <Phone>
-                Call Now;
+                Call Now
               </button>
               <button>
                 <Mail>
-                Email Us;
+                Email Us
               </button>
             </div>
           </div>
@@ -229,17 +230,8 @@ return (
       </section>
     </div>
   ),
-=======
-'use client';
 
-import React, { useEffect } from 'react';
 
-interface ServiceWorkerRegistrationProps {
-  onUpdateAvailable?: () => void;
-  onUpdateInstalled?: () => void;
-  onError?: (error: Error) => void;
->>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
-}
 
 const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
   onUpdateAvailable,
@@ -248,45 +240,47 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
 }) => {
   useEffect(() => {
     if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
-      return;
-    }
+      return
+    
 
     const registerServiceWorker = async () => {
       try {
-        const registration = await navigator.serviceWorker.register('/sw.js');
+        const registration = await navigator.serviceWorker.register('/sw.js')
         
         // Check for updates
         registration.addEventListener('updatefound', () => {
-          const newWorker = registration.installing;
+          const newWorker = registration.installing
           if (newWorker) {
             newWorker.addEventListener('statechange', () => {
               if (newWorker.state === 'installed') {
                 if (navigator.serviceWorker.controller) {
                   // New content is available
-                  onUpdateAvailable?.();
+                  onUpdateAvailable?.()
                 } else {
                   // Content is cached for the first time
-                  onUpdateInstalled?.();
-                }
-              }
-            });
-          }
-        });
+                  onUpdateInstalled?.()
+                
+              
+            })
+          
+        })
 
         // Handle controller change
         navigator.serviceWorker.addEventListener('controllerchange', () => {
-          window.location.reload();
-        });
+          window.location.reload()
+        })
 
       } catch (error) {
-        onError?.(error as Error);
-      }
-    };
+        onError?.(error as Error)
+      
+    }
 
-    registerServiceWorker();
-  }, [onUpdateAvailable, onUpdateInstalled, onError]);
+    registerServiceWorker()
+  }, [onUpdateAvailable, onUpdateInstalled, onError])
 
-  return null;
-};
+  return null
+}
 
-export default ServiceWorkerRegistration;
+}
+
+export default ServiceWorkerRegistration;}

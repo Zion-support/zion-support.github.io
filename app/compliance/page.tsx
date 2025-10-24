@@ -1,11 +1,11 @@
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, Shield, Brain, BarChart, Target } from 'lucide-react';
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, Shield, Brain, BarChart, Target } from 'lucide-react'
 
 const CompliancePage: React.FC = () => {
-  const features = [
+  const features = [,
     {
       icon: Shield,
       title: 'Regulatory Compliance',
@@ -29,24 +29,23 @@ const CompliancePage: React.FC = () => {
       title: 'Precision Targeting',
       description: 'Target specific compliance goals and objectives with precision and accuracy.',
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    }
-  ];
+  ]
 
   return (
-    <>
+    <></>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        {/* Hero Section */
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h1 className="text-5xl font-bold text-white mb-6">
                 Compliance Solutions
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Ensure your business meets all regulatory requirements with our comprehensive compliance solutions powered by AI and expert guidance.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                   Get Started
                 </button>
@@ -58,16 +57,16 @@ const CompliancePage: React.FC = () => {
           </div>
         </section>
 
-        {/* Features Section */}
+        {/* Features Section */
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Our Compliance Solutions</h2>
               <p className="text-xl text-gray-300">Comprehensive tools and services to keep your business compliant</p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors"></div>
                   <feature.icon className="w-12 h-12 text-blue-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -75,19 +74,19 @@ const CompliancePage: React.FC = () => {
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {benefit}
+                        {benefit
                       </li>
-                    ))}
+                    ))
                   </ul>
                 </div>
-              ))}
+              ))
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA Section */
         <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center"></div>
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Ensure Compliance?
             </h2>
@@ -102,7 +101,9 @@ const CompliancePage: React.FC = () => {
       </div>
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default CompliancePage;
+}
+
+export default CompliancePage;}

@@ -1,8 +1,7 @@
-import React from 'react';
-import { ArrowRight, Mail, CheckCircle, Star } from 'lucide-react';
-import Link from 'next/link';
-import type { Metadata } from 'next';
-
+import React from 'react'
+import { ArrowRight, Mail, CheckCircle, Star } from 'lucide-react'
+import Link from 'next/link'
+import type { Metadata } from 'next'
 
 
 export const metadata: Metadata = {
@@ -16,10 +15,9 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://ziontechgroup.com/ai-email-automation',
   },
-}
 
 const AIEmailAutomationPage: React.FC = () => {
-  const features = [
+  const features = [,
     {
       icon: 'Brain',
     title: 'AI Email Generation',
@@ -29,7 +27,7 @@ const AIEmailAutomationPage: React.FC = () => {
   {
     icon: 'Send',
     title: 'Smart Automation',
-      description: 'Create complex email workflows with AI-powered triggers, segmentation, and behavioral targeting.',
+      description: 'Create complex email workflows with AI-powered triggers, segmentation, and behavioral targeting.'
   ]
   const pricingPlans = [
   {
@@ -43,7 +41,7 @@ const AIEmailAutomationPage: React.FC = () => {
         'Basic AI features',
         'Email templates',
         'Email support'
-      ],
+  ],
       popular: false
     },
     {
@@ -58,7 +56,7 @@ const AIEmailAutomationPage: React.FC = () => {
         'A/B testing',
         'Priority support',
         'API access'
-      ],
+  ],
       popular: true
     },
     {
@@ -73,9 +71,8 @@ const AIEmailAutomationPage: React.FC = () => {
         'Custom integrations',
         'Dedicated support',
         'White-label options'
-      ],
+  ],
       popular: false
-    }
   ]
   const testimonials = [
     {
@@ -97,27 +94,26 @@ const AIEmailAutomationPage: React.FC = () => {
     company: 'Marketing Agency',
       content: 'Saves us 20+ hours per week on email campaigns. The automation features are incredibly powerful.',
     rating: 5,
-    avatar: 'LC'}
+    avatar: 'LC'
   ]
   const stats = [
     { number: '300%', label: 'Revenue Increase', icon: 'DollarSign' },
     { number: '150%', label: 'Conversion Boost', icon: 'TrendingUp' },
     { number: '20hrs', label: 'Time Saved/Week', icon: 'Clock' },
-    { number: '95%', label: 'Deliverability Rate', icon: 'Shield' }
+    { number: '95%', label: 'Deliverability Rate', icon: 'Shield'
   ]
   return (
-    <>
-
-      {/* Hero Section */}
+    <></>
+      {/* Hero Section */
       <section className="relative py-20 px-4 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(6,182,212,0.3)_0%,transparent_50%)]" />
-        <div className="relative max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-400 px-6 py-3 rounded-full text-sm font-medium mb-8 border border-blue-400/30">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)]" /></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(6,182,212,0.3)_0%,transparent_50%)]" /></div>
+        <div className="relative max-w-7xl mx-auto text-center"></div>
+          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-400 px-6 py-3 rounded-full text-sm font-medium mb-8 border border-blue-400/30"></div>
             <Mail className="w-8 h-8" />
             <span>AI-Powered Email Marketing</span>
           </div>
-          <h1 className="text-4xl sm: text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
+          <h1 className="text-4xl sm: text-6xl md:text-7xl font-bold text-white mb-8 leading-tight"></h1>
             AI Email
             <br />
             <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -129,7 +125,7 @@ const AIEmailAutomationPage: React.FC = () => {
             content generation, and performance optimization that increases revenue by 300%.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16"></div>
             <Link 
               href="/contact" 
               className="group bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transform hover:scale-105"
@@ -147,31 +143,31 @@ const AIEmailAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* Stats Section */}
+      {/* Stats Section */
       <section className="py-20 px-4 bg-gray-900">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-8"></div>
             {stats.map((stat, index) => (
-              <div key={index} className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-                <div className="flex justify-center mb-4">
+              <div key={index} className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"></div>
+                <div className="flex justify-center mb-4"></div>
                   <div className="w-8 h-8 text-blue-400">{stat.icon}</div>
                 </div>
                 <div className="text-3xl md: text-4xl font-bold text-white mb-2">
-                  {stat.number}
+                  {stat.number
                 </div>
                 <div className="text-gray-300 text-sm">
-                  {stat.label}
+                  {stat.label
                 </div>
               </div>
-            ))}
+            ))
           </div>
         </div>
       </section>
-      {/* Features Section */}
+      {/* Features Section */
       <section className="py-20 px-4 bg-gradient-to-br from-slate-800/50 to-blue-900/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6"></h2>
               Advanced <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Features</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
@@ -179,36 +175,36 @@ const AIEmailAutomationPage: React.FC = () => {
               send, and optimize email campaigns that drive real business results.
             </p>
           </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {features.map((feature, index) => (
-              <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-105">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2xl mb-6 group-hover: scale-110 transition-transform duration-300">
+              <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-105"></div>
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2xl mb-6 group-hover: scale-110 transition-transform duration-300"></div>
                   <div className="w-8 h-8 text-white">{feature.icon}</div>
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-blue-400 transition-colors">
-                  {feature.title}
+                  {feature.title
                 </h3>
                 <p className="text-gray-300 mb-6 leading-relaxed">
-                  {feature.description}
+                  {feature.description
                 </p>
-                <div className="space-y-2">
+                <div className="space-y-2"></div>
                   {feature.benefits.map((benefit, benefitIndex) => (
-                    <div key={benefitIndex} className="flex items-center space-x-2 text-gray-400 text-sm">
+                    <div key={benefitIndex} className="flex items-center space-x-2 text-gray-400 text-sm"></div>
                       <CheckCircle className="w-8 h-8" />
                       <span>{benefit}</span>
                     </div>
-                  ))}
+                  ))
                 </div>
               </div>
-            ))}
+            ))
           </div>
         </div>
       </section>
-      {/* Pricing Section */}
+      {/* Pricing Section */
       <section className="py-20 px-4 bg-gray-900">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6"></h2>
               Transparent <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Pricing</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
@@ -216,34 +212,34 @@ const AIEmailAutomationPage: React.FC = () => {
               with scalable options for businesses of all sizes.
             </p>
           </div>
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8"></div>
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 hover: scale-105 ${
                 plan.popular
                   ? 'border-blue-400/50 shadow-2xl shadow-blue-500/20'
-                  : 'border-white/20 hover: border-white/40'}`}>
+                  : 'border-white/20 hover: border-white/40'}`}></div>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <div className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </div>
                   </div>
-                )}
-                <div className="text-center mb-8">
+                )
+                <div className="text-center mb-8"></div>
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
+                  <div className="flex items-baseline justify-center"></div>
                     <span className="text-5xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-400 ml-2">{plan.period}</span>
                   </div>
                 </div>
-                <div className="space-y-4 mb-8">
+                <div className="space-y-4 mb-8"></div>
                   {plan.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center space-x-3">
+                    <div key={featureIndex} className="flex items-center space-x-3"></div>
                       <CheckCircle className="w-8 h-8" />
                       <span className="text-gray-300">{feature}</span>
                     </div>
-                  ))}
+                  ))
                 </div>
                 
                 <Link 
@@ -251,53 +247,53 @@ const AIEmailAutomationPage: React.FC = () => {
                   className={`block w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover: from-blue-600 hover:to-cyan-700 shadow-lg shadow-blue-500/25'
-                      : 'border-2 border-blue-400 text-blue-400 hover: bg-blue-400 hover:text-gray-900'}`}
+                      : 'border-2 border-blue-400 text-blue-400 hover: bg-blue-400 hover:text-gray-900'}`
                 >
                   Get Started
                 </Link>
               </div>
-            ))}
+            ))
           </div>
         </div>
       </section>
-      {/* Testimonials Section */}
+      {/* Testimonials Section */
       <section className="py-20 px-4 bg-gradient-to-br from-blue-900/50 to-purple-900/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6"></h2>
               Trusted by <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Marketers</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               See how AI Email Automation is transforming email marketing for businesses worldwide.
             </p>
           </div>
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8"></div>
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                <div className="flex items-center mb-4">
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20"></div>
+                <div className="flex items-center mb-4"></div>
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
-                    {testimonial.avatar}
+                    {testimonial.avatar
                   </div>
-                  <div>
+                  <div></div>
                     <h4 className="text-white font-semibold">{testimonial.name}</h4>
                     <p className="text-gray-400 text-sm">{testimonial.company}</p>
                   </div>
                 </div>
-                <div className="flex items-center mb-4">
+                <div className="flex items-center mb-4"></div>
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
+                  ))
                 </div>
                 <p className="text-gray-300 italic">&quot;{testimonial.content}&quot;</p>
               </div>
-            ))}
+            ))
           </div>
         </div>
       </section>
-      {/* CTA Section */}
+      {/* CTA Section */
       <section className="py-20 px-4 bg-gradient-to-r from-blue-600 via-cyan-600 to-purple-600">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6">
+        <div className="max-w-7xl mx-auto text-center"></div>
+          <h2 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6"></h2>
             Ready to Revolutionize Your
             <br />
             <span className="bg-gradient-to-r from-blue-300 to-cyan-300 bg-clip-text text-transparent">
@@ -308,7 +304,7 @@ const AIEmailAutomationPage: React.FC = () => {
             Join thousands of marketers already increasing revenue and saving time with AI Email Automation.
             Start your free trial today - no credit card required.
           </p>
-          <div className="flex flex-col sm: flex-row gap-6 justify-center">
+          <div className="flex flex-col sm: flex-row gap-6 justify-center"></div>
             <Link
               href="/contact"
               className="group bg-white text-blue-600 px-10 py-4 rounded-xl font-bold text-lg hover: bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105"

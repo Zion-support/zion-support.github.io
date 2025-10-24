@@ -6,14 +6,14 @@ import { Mail, Phone, MapPin } from 'lucide-react'
 
 const ContactPage: React.FC = () => {
   return (
-    <>
+    <></>
       <Navigation />
       
       <main className="pt-16">
-        {/* Hero Section */}
+        {/* Hero Section */
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
+          <div className="container mx-auto px-4"></div>
+            <div className="max-w-4xl mx-auto text-center"></div>
               <h1 className="text-5xl font-bold mb-6">Contact Us</h1>
               <p className="text-xl text-blue-100">
                 Ready to transform your business? Let's discuss your project
@@ -22,22 +22,22 @@ const ContactPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Contact Info Section */}
+        {/* Contact Info Section */
         <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="text-center">
+          <div className="container mx-auto px-4"></div>
+            <div className="max-w-6xl mx-auto"></div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+                <div className="text-center"></div>
                   <Mail className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Email</h3>
                   <p className="text-gray-600">info@ziontechgroup.com</p>
                 </div>
-                <div className="text-center">
+                <div className="text-center"></div>
                   <Phone className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Phone</h3>
                   <p className="text-gray-600">+1 (555) 123-4567</p>
                 </div>
-                <div className="text-center">
+                <div className="text-center"></div>
                   <MapPin className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Address</h3>
                   <p className="text-gray-600">123 Tech Street, Innovation City</p>
@@ -51,6 +51,8 @@ const ContactPage: React.FC = () => {
       <Footer />
     </>
   )
+
+
 }
 
-export default ContactPage
+export default ContactPage}

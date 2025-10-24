@@ -1,21 +1,21 @@
-'use client';
+'use client'
 
-import React from 'react';
-<<<<<<< HEAD
-'use client';;
-interface SEOOptimizerProps {title: string;,}
+import React from 'react'
+'use client';
+interface SEOOptimizerProps {title: string;,
   description: string;,
   keywords?: string[]
-  canonicalUrl?: string;
+  canonicalUrl?: string
   structuredData?: object;}const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,
   title,
   description,
   keywords = [],
   canonicalUrl,
   structuredData;}) => {
-  const keywordsString = keywords.join(', ');
+  const keywordsString = keywords.join(', ')
 
-  return(<Helmet />)
+  return (
+    <Helmet /></Helmet /></Helmet>)
       <title>{title}</title>
       <meta name="description" content={description}/>
       <meta name="keywords" content={keywordsString}/>
@@ -30,24 +30,25 @@ interface SEOOptimizerProps {title: string;,}
       {/* Twitter Card */} <meta name="twitter: card" content="summary_large_image" />,
       <meta name="twitter: title" content={title,}/>
       <meta name="twitter: description" content={description,}/>
-'use client';;
+'use client';
 
-import React, { useEffect } from 'react';
-import Head from 'next/head';
-=======
+import React, { useEffect } from 'react'
+import Head from 'next/head'
 
->>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
 
 interface SEOOptimizerProps {
   // Add props here
-}
+
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = (_props) => {
   return (
     <div>
-      {/* Component content */}
+      {/* Component content */
     </div>
-  );
-};
+  )
+}
 
-export default SEOOptimizer;
+}
+
+export default SEOOptimizer
+}

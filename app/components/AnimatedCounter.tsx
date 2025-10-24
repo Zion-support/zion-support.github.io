@@ -1,25 +1,23 @@
-<<<<<<< HEAD
-'use client';;
-=======
+'use client';
 
->>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
-import React from 'react';
+import React from 'react'
 
 interface AnimatedCounterProps {
   // Add props here
-}
+
 
 const AnimatedCounter: React.FC<AnimatedCounterProps> = (_props) => {
   return (
     <div>
-      {/* Component content */}
+      {/* Component content */
     </div>
-  );
-};
+  )
+}
 
-export default AnimatedCounter;
-<<<<<<< HEAD
-'use client';
+}
+
+export default AnimatedCounter
+'use client'
 import React from 'react'
 import React, { useState, useEffect } from 'react'
 interface AnimatedCounterProps {
@@ -28,7 +26,7 @@ interface AnimatedCounterProps {
   prefix?: string
   suffix?: string
   className?: string
-}
+
 
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ()
 }) => {
@@ -45,24 +43,24 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ()
       setCount(currentCount)
       if (progress < 1) {
         animationFrame = requestAnimationFrame(animate)
-      }
-    }
+      
+    
 
     animationFrame = requestAnimationFrame(animate)
     return (
-    <React.Fragment>
+    <React.Fragment></React.Fragment>
       ) => {
       if (animationFrame) {
         cancelAnimationFrame(animationFrame)
-      }
-    }
+      
+    
   }, [end, duration])
-  return() {prefix}, {count.toLocaleString()}, {suffix}
+  return() {prefix}, {count.toLocaleString()}, {suffix
     </span>
     </React.Fragment>
   )
 }
-export default AnimatedCounter
-=======
 
->>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
+export default AnimatedCounter
+
+}

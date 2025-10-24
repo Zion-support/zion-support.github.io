@@ -1,11 +1,12 @@
-'use client';
-import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+'use client'
+import React, { useState } from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
+}
 
 export default function APIDocsPage() {
-  const [searchQuery, _setSearchQuery] = useState('');
+  const [searchQuery, _setSearchQuery] = useState('')
 
   const apiEndpoints = [
     {
@@ -24,24 +25,21 @@ export default function APIDocsPage() {
           response: "Hello! I'm here to help you with any questions or tasks you might have.",
           confidence: 0.95,
           tokens_used: 25
-        }
-      }
-    }
-  ];
+  ]
 
   const filteredEndpoints = apiEndpoints.filter(endpoint =>
     endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
     endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
     endpoint.path.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  )
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
       
       <main className="pt-20">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
+        <div className="container mx-auto px-4 py-16"></div>
+          <div className="text-center mb-16"></div>
             <h1 className="text-5xl font-bold text-white mb-6">
               API Documentation
             </h1>
@@ -50,26 +48,26 @@ export default function APIDocsPage() {
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto"></div>
             {filteredEndpoints.map((endpoint, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 mb-8">
-                <div className="flex items-center justify-between mb-4">
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 mb-8"></div>
+                <div className="flex items-center justify-between mb-4"></div>
                   <h3 className="text-2xl font-bold text-white">{endpoint.name}</h3>
                   <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                    {endpoint.method}
+                    {endpoint.method
                   </span>
                 </div>
                 <p className="text-gray-300 mb-4">{endpoint.description}</p>
                 <code className="bg-gray-800 text-green-400 px-3 py-2 rounded text-sm">
-                  {endpoint.path}
+                  {endpoint.path
                 </code>
               </div>
-            ))}
+            ))
           </div>
         </div>
       </main>
 
       <Footer />
     </div>
-  );
+  )
 }
