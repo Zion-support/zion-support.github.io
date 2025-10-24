@@ -33,7 +33,7 @@ function fixSyntaxErrors(filePath) {
     // Fix malformed imports
     const importFixes = [
       // Fix malformed import statements
-      {
+      {;
         pattern: /import\s+{([^}]*)\s+from\s+'([^']*)';\s*}/g,
         replacement: "import { $1 } from '$2';"
       },
@@ -43,7 +43,7 @@ function fixSyntaxErrors(filePath) {
         replacement: "import { $1, $2 } from '$3';"
       },
       // Fix malformed import with semicolon
-      {
+      {;
         pattern: /import\s+{([^}]*)\s+from\s+'([^']*)';\s*}/g,
         replacement: "import { $1 } from '$2';"
       }

@@ -13,15 +13,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return
   }
 }
-import type { NextApiRequest, NextApiResponse } from './next'
-import { require_user  } from '../../../../utils / api / auth'
-import {
-  add_milestone,
+import type { NextApiRequest, NextApiResponse } from './next';
+import { require_user   } from '../../../../utils / api / auth';
+import { add_milestone,
   get_project,
   assertParticipantOrAdmin,
-  is_client,
-} from '../../../../utils / api / projects'
-import { Milestone  } from '../../../../utils / types / milestones'
+  is_client,;
+ } from '../../../../utils / api / projects';import { Milestone  } from '../../../../utils / types / milestones'
 export default /**
  * handler - Function description
  */
@@ -68,7 +66,7 @@ if ( {) {
         .json ({ error: "Only client (or admin) can add milestones" })
       return
     }
-    const body = req.body as Partial < Milestone>
+    const body = req.body as Partial < Milestone></>
     // Check condition
 if ( {) {
   $2
@@ -91,3 +89,4 @@ if ( {) {
   res.set_header ("Allow", "GET, POST")
   res.status (405).end ("Method Not Allowed")
 }
+;

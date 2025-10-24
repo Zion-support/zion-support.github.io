@@ -3,9 +3,10 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Shield, CheckCircle, Clock, Database, Lock, ArrowRight } from 'lucide-react';
+import { Shield, CheckCircle, Clock, Database, Lock, ArrowRight, } from 'lucide-react';
 
 const CompliancePageFixed: React.FC = () => {
+
   const features = [
     {
       icon: Shield,
@@ -39,11 +40,11 @@ const CompliancePageFixed: React.FC = () => {
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="...">
+        <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="...">
-            <h1 className="...">
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Page Fixed
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -59,12 +60,23 @@ const CompliancePageFixed: React.FC = () => {
               </button>
             </div>
           </div>
+<<<<<<< HEAD
+      </section>
+=======
         </section>
+>>>>>>> origin/main
 
+<<<<<<< HEAD
+      {/* Stats Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+=======
         {/* Stats Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+>>>>>>> origin/main
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4">

@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-Script to fix merge conflicts by removing conflict markers and keeping the most recent version
+Script to automatically resolve merge conflicts by choosing HEAD version
 """
 import os
 import re
 import glob
 
 def fix_merge_conflicts(file_path):
-    """Fix merge conflicts in a single file"""
+    """Fix merge conflicts in a single file by choosing HEAD version"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -19,35 +19,20 @@ def fix_merge_conflicts(file_path):
         in_conflict = False
         conflict_depth = 0
         
-        for line in lines:
-            if line.strip().startswith('<<<<<<<'):
-                in_conflict = True
-                conflict_depth += 1
-                continue
-            elif line.strip().startswith('======='):
-                continue
-            elif line.strip().startswith('>>>>>>>'):
-                in_conflict = False
-                conflict_depth -= 1
-                continue
-            elif not in_conflict:
-                fixed_lines.append(line)
+        # Pattern to match merge conflict blocks
+        pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n?'
         
-        # If we're still in a conflict at the end, just take everything
-        if in_conflict:
-            # Take the last section before any conflict markers
-            content_before_conflicts = content.split('<<<<<<<')[0]
-            if content_before_conflicts.strip():
-                fixed_lines = content_before_conflicts.split('\n')
+        # Replace with HEAD version (first capture group)
+        def replace_conflict(match):
+            head_content = match.group(1)
+            # Remove any trailing newlines that might cause issues
+            return head_content.rstrip() + '\n'
         
-        fixed_content = '\n'.join(fixed_lines)
+        new_content = re.sub(pattern, replace_conflict, content, flags=re.DOTALL)
         
-        # Clean up any remaining syntax issues
-        fixed_content = re.sub(r'\n\s*\n\s*\n+', '\n\n', fixed_content)  # Remove excessive newlines
-        fixed_content = re.sub(r'import\s+.*?;\s*import', 'import', fixed_content)  # Fix duplicate imports
-        
+        # Write back the fixed content
         with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(fixed_content)
+            f.write(new_content)
         
         print(f"Fixed merge conflicts in: {file_path}")
         return True
@@ -57,52 +42,25 @@ def fix_merge_conflicts(file_path):
         return False
 
 def main():
-    # Find all TypeScript/JavaScript files with merge conflicts
+    """Main function to fix all merge conflicts"""
+    # Get all TypeScript/JavaScript files in the app directory
     patterns = [
         'app/**/*.tsx',
         'app/**/*.ts',
-        '*.tsx',
-        '*.ts',
-        'src/**/*.tsx',
-        'src/**/*.ts'
+        'app/**/*.js',
+        'app/**/*.jsx'
     ]
     
-    files_processed = 0
     files_fixed = 0
+    total_files = 0
     
     for pattern in patterns:
         for file_path in glob.glob(pattern, recursive=True):
-<<<<<<< HEAD
-            # Skip node_modules and other irrelevant directories
-=======
-            # Skip node_modules and other directories
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-            if 'node_modules' in file_path or '.git' in file_path:
-                continue
-                
-            files_processed += 1
+            total_files += 1
             if fix_merge_conflicts(file_path):
                 files_fixed += 1
-                print(f"Fixed: {file_path}")
     
-    # Filter out backup files and node_modules
-    files_to_fix = [f for f in files_to_fix if not f.endswith('.original') and 'node_modules' not in f]
-    
-    print(f"Found {len(files_to_fix)} files to check for merge conflicts")
-    
-    fixed_count = 0
-    for file_path in files_to_fix:
-        if os.path.isfile(file_path):
-            try:
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                    if '<<<<<<<' in content or '=======' in content or '>>>>>>>' in content:
-                        if fix_merge_conflicts(file_path):
-                            fixed_count += 1
-            except Exception as e:
-                print(f"Error reading {file_path}: {e}")
-    
-    print(f"Fixed merge conflicts in {fixed_count} files")
+    print(f"\nFixed merge conflicts in {files_fixed} out of {total_files} files")
 
 if __name__ == "__main__":
     main()

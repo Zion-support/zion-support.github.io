@@ -6,7 +6,8 @@ export interface ValidationResult {
 }
 
 // URL Validation
-export const isValidUrl = (url: string): boolean => {
+export const isValidUrl = (url: string): boolean =>
+                {
   if (!url || typeof url !== 'string') return false
   try {
     const urlObj = new URL(url)
@@ -15,7 +16,8 @@ export const isValidUrl = (url: string): boolean => {
     return false
   }
 }
-export const validateURL = (url: string): ValidationResult => {
+export const validateURL = (url: string): ValidationResult =>
+                {
   if (!url) {
     return { isValid: false, error: 'URL is required' }
   }
@@ -32,7 +34,8 @@ export const validateLength = (
   min: number, 
   max: number, 
   fieldName: string = 'Field'
-): ValidationResult => {
+): ValidationResult =>
+                {
   if (!value) {
     return { isValid: false, error: `${fieldName} is required` }
   }
@@ -48,7 +51,8 @@ export const validateLength = (
   return { isValid: true }
 }
 // Password Validation
-export const isValidPassword = (password: string): boolean => {
+export const isValidPassword = (password: string): boolean =>
+                {
   if (!password || password.length < 8) return false
   const hasUpperCase = /[A-Z]/.test(password)
   const hasLowerCase = /[a-z]/.test(password)
@@ -56,7 +60,8 @@ export const isValidPassword = (password: string): boolean => {
   const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password)
   return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar
 }
-export const validatePassword = (password: string): ValidationResult => {
+export const validatePassword = (password: string): ValidationResult =>
+                {
   if (!password) {
     return { isValid: false, error: 'Password is required' }
   }
@@ -79,7 +84,8 @@ export const validatePassword = (password: string): ValidationResult => {
   return { isValid: true }
 }
 // HTML Sanitization
-export const sanitizeHTML = (input: string | null | undefined): string => {
+export const sanitizeHTML = (input: string | null | undefined): string =>
+                {
   if (!input || typeof input !== 'string') return ''
   return input
     .replace(/&/g, '&amp;')
@@ -90,7 +96,8 @@ export const sanitizeHTML = (input: string | null | undefined): string => {
     .replace(/\//g, '&#x2F;')
 }
 // Date Validation
-export const validateDate = (dateString: string): ValidationResult => {
+export const validateDate = (dateString: string): ValidationResult =>
+                {
   if (!dateString) {
     return { isValid: false, error: 'Date is required' }
   }
@@ -115,7 +122,8 @@ export const validateDate = (dateString: string): ValidationResult => {
   return { isValid: true }
 }
 // Credit Card Validation (Luhn Algorithm)
-export const validateCreditCard = (cardNumber: string): ValidationResult => {
+export const validateCreditCard = (cardNumber: string): ValidationResult =>
+                {
   if (!cardNumber) {
     return { isValid: false, error: 'Credit card number is required' }
   }
@@ -149,7 +157,8 @@ export const validateCreditCard = (cardNumber: string): ValidationResult => {
   return { isValid: true }
 }
 // JSON Validation
-export const validateJSON = (jsonString: string): ValidationResult => {
+export const validateJSON = (jsonString: string): ValidationResult =>
+                {
   if (!jsonString) {
     return { isValid: false, error: 'JSON string is required' }
   }
@@ -162,7 +171,8 @@ export const validateJSON = (jsonString: string): ValidationResult => {
   }
 }
 // Required Field Validation
-export const validateRequired = (value: any, fieldName: string = 'Field'): ValidationResult => {
+export const validateRequired = (value: any, fieldName: string = 'Field'): ValidationResult =>
+                {
   if (value === null || value === undefined || value === '') {
     return { isValid: false, error: `${fieldName} is required` }
   }
@@ -173,7 +183,8 @@ export const validateRequired = (value: any, fieldName: string = 'Field'): Valid
 export const validateComposite = (
   value: string, 
   validators: Array<(val: string) => ValidationResult>
-): ValidationResult => {
+): ValidationResult =>
+                {
   for (const validator of validators) {
     const result = validator(value)
     if (!result.isValid) {
@@ -184,7 +195,8 @@ export const validateComposite = (
   return { isValid: true }
 }
 // Async Validation Helper
-export const asyncValidator = async (val: string): Promise<string> => {
+export const asyncValidator = async (val: string): Promise<string> =>
+                {
   // Simulate async validation
   await new Promise(resolve => setTimeout(resolve, 100))
   return 'success'

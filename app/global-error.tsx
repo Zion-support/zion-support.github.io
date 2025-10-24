@@ -1,25 +1,40 @@
-"use client";
-import React from 'react';
-import { Helmet } from "react-helmet-async";
+'use client';
 
-const GlobalErrorPage: React.FC = () => {
+import Link from 'next/link';
+
+export default function GlobalError({
+  error: _error,
+  reset,
+}: {
+  error: Error & { digest?: string};
+  reset: () => void;
+}) {
   return (
-    <React.Fragment>
-      <Helmet>
-        <title>Global-error - Zion Tech Group</title>
-        <meta name="description" content="Professional global-error services by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gray-900 text-white">
-        <div className="container mx-auto px-4 py-8">
-          <h1 className="text-4xl font-bold mb-6">Global-error</h1>
-          <p className="text-lg text-gray-300">
-            This page is currently under development. Please check back soon for more information.
-          </p>
+    <html>
+      <body>
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong!</h1>
+            <p className="text-gray-600 mb-6">
+              We apologize for the inconvenience. Please try again or contact support if the problem persists.
+            </p>
+            <div className="space-x-4">
+              <button
+                onClick={reset}
+                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+              >
+                Try again
+              </button>
+              <Link
+                href="/"
+                className="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300"
+              >
+                Go home
+              </Link>
+            </div>
+          </div>
         </div>
-      </div>
-    </React.Fragment>
+      </body>
+    </html>
   );
-};
-
-export default GlobalErrorPage;
+}

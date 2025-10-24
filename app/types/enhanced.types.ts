@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
-=======
->>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
 // Enhanced type definitions for better type safety
 export interface PerformanceMetrics {
   loadTime: number;
@@ -23,8 +16,6 @@ export interface ErrorContext {
   timestamp?: string;
   userId?: string;
   sessionId?: string;
-  component?: string;
-<<<<<<< HEAD
   action?: string;
   stack?: string;
 }
@@ -101,31 +92,12 @@ export interface AnalyticsEvent {
   properties?: Record<string, string | number | boolean | null>;
   userId?: string;
   sessionId?: string;
-=======
-  errorBoundary?: string;
-  stackTrace?: string;
-}
-
-export interface AccessibilityMetrics {
-  score: number;
-  issues: AccessibilityIssue[];
-  recommendations: string[];
-}
-
-export interface AccessibilityIssue {
-  id: string;
-  severity: 'error' | 'warning' | 'info';
-  message: string;
-  element?: string;
-  helpUrl?: string;
->>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
 }
 
 export interface SEOData {
   title: string;
   description: string;
   keywords: string[];
-<<<<<<< HEAD
   canonical?: string;
   ogTitle?: string;
   ogDescription?: string;
@@ -234,69 +206,3 @@ export interface InputProps extends BaseComponentProps {
   error?: string;
   label?: string;
 }
-=======
-  canonicalUrl?: string;
-  ogImage?: string;
-  twitterCard?: string;
-  structuredData?: Record<string, unknown>;
-}
-
-export interface AnalyticsEvent {
-  name: string;
-  category: string;
-  action: string;
-  label?: string;
-  value?: number;
-  customParameters?: Record<string, unknown>;
-}
-
-export interface UserPreferences {
-  theme: 'light' | 'dark' | 'auto';
-  language: string;
-  accessibility: {
-    highContrast: boolean;
-    reducedMotion: boolean;
-    screenReader: boolean;
-  };
-  notifications: {
-    email: boolean;
-    push: boolean;
-    sms: boolean;
-  };
-}
-
-export interface APIResponse<T = unknown> {
-  success: boolean;
-  data?: T;
-  error?: string;
-  message?: string;
-  timestamp: string;
-}
-
-export interface PaginationParams {
-  page: number;
-  limit: number;
-  sortBy?: string;
-  sortOrder?: 'asc' | 'desc';
-}
-
-export interface SearchParams {
-  query: string;
-  filters?: Record<string, unknown>;
-  pagination?: PaginationParams;
-}
-
-export interface CacheConfig {
-  ttl: number;
-  maxSize: number;
-  strategy: 'lru' | 'fifo' | 'ttl';
-}
-
-export interface FeatureFlag {
-  name: string;
-  enabled: boolean;
-  description?: string;
-  rolloutPercentage?: number;
-  targetUsers?: string[];
-}
->>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)

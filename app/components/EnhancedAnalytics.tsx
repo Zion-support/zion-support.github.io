@@ -1,14 +1,17 @@
-'use client'
-import React, { createContext, useContext, useEffect } from 'react'
+'use client';
+
+import React, { createContext, useContext, useEffect } from 'react';
+
 interface AnalyticsContextType {
   track: (_event: string, _properties?: Record<string, unknown>) => void;
   identify: (_userId: string, _traits?: Record<string, unknown>) => void;
   page: (_name: string, _properties?: Record<string, unknown>) => void;
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+
 export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext)
+  const context = useContext(AnalyticsContext);
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
@@ -26,10 +29,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       // Google Analytics
       if (process.env.NODE_ENV === 'production') {
         // Load Google Analytics script
-        const script = document.createElement('script')
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX'}`
-        script.async = true
-        document.head.appendChild(script)
+        const script = document.createElement('script');
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX'}`;
+        script.async = true;
+        document.head.appendChild(script);
+
         // Initialize gtag
         const gtagFunction = function(...args: unknown[]) {
           ((window as unknown as { gtag: { q?: unknown[] } }).gtag.q = (window as unknown as { gtag: { q?: unknown[] } }).gtag.q || []).push(args);
@@ -42,59 +46,63 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
   }, []);
 
-  const track = (event: string, properties?: Record<string, unknown>) => {
+  const track = (_event: string, _properties?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
       if ((window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag) {
-        (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', event, properties);
+        (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', _event, _properties);
       }
       
       // Custom analytics - only log in development
       if (process.env.NODE_ENV === 'development') {
-        console.log('Analytics Event:', event, properties);
+        console.log('Analytics Event:', _event, _properties);
       }
     }
   };
 
-  const identify = (userId: string, traits?: Record<string, unknown>) => {
+  const identify = (_userId: string, _traits?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
-      if ((window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag) {
-        (window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
-          user_id: userId,
-          custom_map: traits
+      const gtag = (window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag;
+      if (gtag) {
+        gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
+          user_id: _userId,
+          custom_map: _traits
         });
       }
       
       // Custom analytics - only log in development
       if (process.env.NODE_ENV === 'development') {
-        console.log('Analytics Identify:', userId, traits);
+        console.log('Analytics Identify:', _userId, _traits);
       }
     }
   };
 
-  const page = (name: string, properties?: Record<string, unknown>) => {
+  const page = (_name: string, _properties?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
-      if ((window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag) {
-        (window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag('event', 'page_view', {
-          page_title: name,
+      const gtag = (window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag;
+      if (gtag) {
+        gtag('event', 'page_view', {
+          page_title: _name,
           page_location: window.location.href,
-          ...properties
+          ..._properties
         });
       }
       
       // Custom analytics - only log in development
       if (process.env.NODE_ENV === 'development') {
-        console.log('Analytics Page:', name, properties);
+        console.log('Analytics Page:', _name, _properties);
       }
     }
-  }
+  };
+
   const value: AnalyticsContextType = {
-    track
-    identify
+    track,
+    identify,
     page
-  }
+  };
+
   return (
     <AnalyticsContext.Provider value={value}>
       {children}

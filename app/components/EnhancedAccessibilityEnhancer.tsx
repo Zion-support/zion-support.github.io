@@ -1,5 +1,7 @@
-'use client'
-import React, { useState, useEffect } from 'react'
+'use client';
+
+
+import React, { useState, useEffect } from 'react';
 
 interface EnhancedAccessibilityEnhancerProps {
   children: React.ReactNode
@@ -16,7 +18,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
   enableScreenReaderSupport: _enableScreenReaderSupport = true,
   enableHighContrast: _enableHighContrast = false,
   enableFocusManagement: _enableFocusManagement = true,
-  enableVoiceNavigation = false,
+  enableVoiceNavigation: _enableVoiceNavigation = false,
 }) => {
   const [isHighContrast, setIsHighContrast] = useState(false)
   const [_fontSize, setFontSize] = useState('medium')
@@ -86,13 +88,13 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
   }
 
   const toggleVoiceNavigation = () => {
-    if (enableVoiceNavigation && 'speechSynthesis' in window) {
+    if (_enableVoiceNavigation && 'speechSynthesis' in window) {
       setIsVoiceEnabled(!isVoiceEnabled)
     }
   }
 
   return (
-    <div className="...">
+    <div className="accessibility-enhanced">
       <div 
         className="accessibility-controls" 
         style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }}
@@ -105,7 +107,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
           {isHighContrast ? 'Normal Contrast' : 'High Contrast'}
         </button>
         
-        <div className="...">
+        <div className="font-size-controls">
           <button
             onClick={() => changeFontSize('small')}
             className="accessibility-button"
@@ -129,7 +131,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
           </button>
         </div>
 
-        {enableVoiceNavigation && (
+        {_enableVoiceNavigation && (
           <button
             onClick={toggleVoiceNavigation}
             className="accessibility-button"
@@ -144,4 +146,4 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
   )
 }
 
-export default EnhancedAccessibilityEnhancer
+export default EnhancedAccessibilityEnhancer;

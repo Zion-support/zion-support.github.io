@@ -1,8 +1,6 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import type { Metadata} from 'next';
+import { Inter} from 'next/font/google';
 import './globals.css';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
 import Analytics from './components/Analytics';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
@@ -67,8 +65,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
-}) {
+  children: React.ReactNode}) {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
@@ -82,10 +79,11 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} antialiased`}>
         <Analytics />
-        <PerformanceOptimizer />
-        <AccessibilityEnhancer>
-          {children}
-        </AccessibilityEnhancer>
+        <PerformanceOptimizer>
+          <AccessibilityEnhancer>
+            {children}
+          </AccessibilityEnhancer>
+        </PerformanceOptimizer>
         <PerformanceMonitor />
       </body>
     </html>
