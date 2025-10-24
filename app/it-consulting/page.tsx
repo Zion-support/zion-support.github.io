@@ -1,6 +1,6 @@
 'use client';
 import React, {Suspense, lazy}from 'react';
-import {Link}}from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import {Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight,}
   Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock,
   TrendingUp, Star, Settings, Calendar, CheckSquare, FileText,
@@ -76,7 +76,7 @@ import {Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight,}
 const ITConsultingPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   Webcam as WebcamIcon, Speaker as SpeakerIcon;}} from 'lucide-react';
-const ITConsultingPage: React.FC = () => {,
+const ITConsultingPage: React.FC = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 const itServices = [;

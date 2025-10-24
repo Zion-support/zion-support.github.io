@@ -1,7 +1,7 @@
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Bot, ArrowRight}}from 'lucide-react';
-const SmartSupportBotPage: React.FC = () => {,
+import { Helmet } from 'react-helmet-async';
+import {Bot, ArrowRight} from 'lucide-react';
+const SmartSupportBotPage: React.FC = () => {
     return(<>)
       <Helmet />
         <title>Smart Support Bot | Zion Tech Group - AI Customer Service Automation</title>

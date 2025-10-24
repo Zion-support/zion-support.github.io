@@ -1,7 +1,7 @@
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 
-const DataAnalyticsBiPage: React.FC = () => {,
+const DataAnalyticsBiPage: React.FC = () => {
   return(<>)
       <Helmet />
         <title>Data Analytics & BI - Zion Tech Group</title>

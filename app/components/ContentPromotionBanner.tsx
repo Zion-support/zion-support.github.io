@@ -31,9 +31,9 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const ContentPromotionBannerPage: React.FC = () => {
-import {Zap, Shield, Star, Users, ArrowRight}}from 'lucide-react';
+import {Zap, Shield, Star, Users, ArrowRight} from 'lucide-react';
 
-const ContentPromotionBanner: React.FC = () => {,
+const ContentPromotionBanner: React.FC = () => {
 
 'use client'
 import React from 'react'

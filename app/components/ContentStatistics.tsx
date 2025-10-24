@@ -7,9 +7,9 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 
 const ContentStatisticsPage: React.FC = () => {
 import React, {useState, useEffect}from 'react';
-import {CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock}}from 'lucide-react';
+import {CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock} from 'lucide-react';
 
-const ContentStatistics: React.FC = () => {,
+const ContentStatistics: React.FC = () => {
   const [counters, setCounters] = useState({)
     clients: 0,
     projects: 0,

@@ -46,7 +46,7 @@ const AdvancedSEOOptimizer_newPage: React.FC = () => {
         <meta name="keywords" content="AdvancedSEOOptimizer_new, AI solutions, IT services, Zion Tech Group, advancedseooptimizer_new" />
 'use client';
 import React, {useEffect, useState, useCallback}from 'react';
-import {Helmet}}from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 interface SEOOptimizerProps {title?: string;}
   description?: string;
   keywords?: string;

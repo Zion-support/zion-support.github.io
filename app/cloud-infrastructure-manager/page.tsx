@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import {Cloud,}
   Settings,
   CheckCircle,
@@ -26,7 +26,7 @@ import {Cloud,}
   Server,
 
   Monitor;}} from 'lucide-react'
-const CloudInfrastructureManagerPage: React.FC = () => {,
+const CloudInfrastructureManagerPage: React.FC = () => {
     const features = [
     {
       icon: Cloud,

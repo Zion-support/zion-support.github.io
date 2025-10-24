@@ -1,10 +1,10 @@
 'use client';
 import React, {useState}from 'react';
-import {Helmet}}from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 
-const PartnersPage: React.FC = () => {,
+const PartnersPage: React.FC = () => {
   const partners = [
-import {ExternalLink, Award, Handshake, Users, Star, CheckCircle, ArrowRight}}from 'lucide-react';
+import {ExternalLink, Award, Handshake, Users, Star, CheckCircle, ArrowRight} from 'lucide-react';
 
 interface Partner {id: string;,}
   name: string;,
@@ -12,7 +12,7 @@ interface Partner {id: string;,}
   description: string;,
   category: string;,
   website: string;,
-  tier: 'preferred' | 'certified' | 'strategic';,}const PartnersPage: React.FC = () => {,
+  tier: 'preferred' | 'certified' | 'strategic';,}const PartnersPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedTier, setSelectedTier] = useState('all');
 

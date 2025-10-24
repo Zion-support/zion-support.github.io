@@ -146,7 +146,7 @@ const ServiceCardPage: React.FC = () => {
           ))
         </div>
       </section>
-import {ArrowRight, CheckCircle}}from 'lucide-react';
+import {ArrowRight, CheckCircle} from 'lucide-react';
 interface ServiceCardProps {title: string;,}
   description: string;,
   features: string[],

@@ -5,8 +5,8 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-const ServiceWorkerRegistrationPage: React.FC = () => {,
+import { Helmet } from 'react-helmet-async';
+const ServiceWorkerRegistrationPage: React.FC = () => {
 const ServiceWorkerRegistrationPage: React.FC = () => {
     const features = [
     {

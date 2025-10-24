@@ -20,7 +20,7 @@ const ContentCarouselPage: React.FC = () => {
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards',
 import React, {useState, useEffect}from 'react';
-import {Cloud, Zap, Shield, ChevronLeft, ChevronRight}}from 'lucide-react';
+import {Cloud, Zap, Shield, ChevronLeft, ChevronRight} from 'lucide-react';
 import { ChevronLeft, ChevronRight, Cloud, Zap, Shield, Brain } from 'lucide-react';
 import { Cloud, Zap, Shield, ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -38,7 +38,7 @@ interface Slide {
   }[];
 }
 
-const ContentCarousel: React.FC = () => {,
+const ContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides: Slide[] = [

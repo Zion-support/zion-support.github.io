@@ -63,8 +63,8 @@ export interface TestConfig {}
     enableCoverage: boolean,
   enablePerformance: boolean,
     enableAccessibility: boolean,
-// Test result types;}export interface PerformanceMetrics {}}import {render, RenderOptions}}from '@testing-library/react';
-import {BrowserRouter}}from 'react-router-dom';
+// Test result types;}export interface PerformanceMetrics {}}import {render, RenderOptions} from '@testing-library/react';
+import {BrowserRouter} from 'react-router-dom';
 
 // Test result types;
 export interface PerformanceMetrics {renderTime: number;,}
