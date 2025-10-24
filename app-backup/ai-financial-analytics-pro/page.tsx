@@ -3,6 +3,10 @@
 
 import Link from 'next/link';
 import { ArrowRight, Calculator, Building2, Wallet, PiggyBank, BarChart, TrendingUp, CheckCircle, Brain, Settings, BarChart3, Shield, Target, Zap, Globe, DollarSign, Activity, Lock, Database, FileText, CreditCard, Star, Sparkles, PieChart } from 'lucide-react';
+<<<<<<< HEAD:app-backup/ai-financial-analytics-pro/page.tsx
+=======
+import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/ai-financial-analytics-pro/page.tsx
 
 =======
 import Link from 'next/link'
@@ -233,17 +237,30 @@ export default function AiFinancialAnalyticsProPage() {
             Transform your financial analysis with AI-powered insights, real-time analytics
             and predictive modeling. Make smarter financial decisions with advanced intelligence.
           </p>
+<<<<<<< HEAD:app-backup/ai-financial-analytics-pro/page.tsx
           <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">
             <Link
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+=======
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <Link 
+              href="/contact" 
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+>>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/ai-financial-analytics-pro/page.tsx
             >
               Start Free Trial
               <ArrowRight className="w-8 h-8" />
             </Link>
+<<<<<<< HEAD:app-backup/ai-financial-analytics-pro/page.tsx
             <Link
               href="/ai-services"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white/10 transition-colors flex items-center justify-center"
+=======
+            <Link 
+              href="/ai-services" 
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors flex items-center justify-center"
+>>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/ai-financial-analytics-pro/page.tsx
             >
               View All AI Services
             </Link>
@@ -422,7 +439,7 @@ export default function AiFinancialAnalyticsProPage() {
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-300 italic mb-3">"{testimonial.content}"</p>
+                  <p className="text-gray-300 italic mb-3">&quot;{testimonial.content}&quot;</p>
                   <div className="text-cyan-400 font-semibold text-sm">
                     Result: {testimonial.results}
                   </div>
@@ -444,14 +461,22 @@ export default function AiFinancialAnalyticsProPage() {
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 href="/contact"
+<<<<<<< HEAD:app-backup/ai-financial-analytics-pro/page.tsx
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center justify-center"
+=======
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center justify-center"
+>>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/ai-financial-analytics-pro/page.tsx
               >
                 Start Free Trial
                 <Sparkles className="w-8 h-8" />
               </Link>
               <Link
                 href="/about"
+<<<<<<< HEAD:app-backup/ai-financial-analytics-pro/page.tsx
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white/10 transition-colors inline-flex items-center justify-center"
+=======
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center"
+>>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/ai-financial-analytics-pro/page.tsx
               >
                 Learn More
                 <PieChart className="w-8 h-8" />

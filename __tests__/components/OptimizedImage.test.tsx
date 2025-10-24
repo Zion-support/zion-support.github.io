@@ -19,11 +19,17 @@ const OptimizedImage = ({
       alt={alt}
       width={width}
       height={height}
+<<<<<<< HEAD
+=======
+      data-testid="optimized-image"
+      loading="lazy"
+>>>>>>> cursor/fix-errors-and-merge-to-main-50f0
     />
   )
 }
 describe('OptimizedImage', () => {
   it('renders with required props', () => {
+<<<<<<< HEAD
     render(<OptimizedImage src="/test-image.jpg" alt="Test image" data-testid="optimized-image" />)
     const image = screen.getByTestId('optimized-image')
     expect(image).toBeInTheDocument()
@@ -41,6 +47,48 @@ describe('OptimizedImage', () => {
     const image = screen.getByTestId('optimized-image')
     expect(image).toHaveAttribute('alt', '')
   })
+=======
+    render(
+      <OptimizedImage 
+        src="/test-image.jpg" 
+        alt="Test image" 
+      />
+    );
+    
+    const image = screen.getByTestId('optimized-image');
+    expect(image).toBeInTheDocument();
+    expect(image).toHaveAttribute('src', '/test-image.jpg');
+    expect(image).toHaveAttribute('alt', 'Test image');
+  });
+
+  it('renders with optional width and height props', () => {
+    render(
+      <OptimizedImage 
+        src="/test-image.jpg" 
+        alt="Test image"
+        width={300}
+        height={200}
+      />
+    );
+    
+    const image = screen.getByTestId('optimized-image');
+    expect(image).toHaveAttribute('width', '300');
+    expect(image).toHaveAttribute('height', '200');
+  });
+
+  it('handles missing alt text gracefully', () => {
+    render(
+      <OptimizedImage 
+        src="/test-image.jpg" 
+        alt="" 
+      />
+    );
+    
+    const image = screen.getByTestId('optimized-image');
+    expect(image).toHaveAttribute('alt', '');
+  });
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-50f0
   it('renders with different image sources', () => {
     const testSources = [
       '/image1.jpg',

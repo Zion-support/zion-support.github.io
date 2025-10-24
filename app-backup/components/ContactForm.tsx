@@ -59,7 +59,7 @@ const ContactForm: React.FC = () => {
       <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center">
         <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
         <h3 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>
-        <p className="text-gray-300">Thank you for reaching out. We'll get back to you soon.</p>
+        <p className="text-gray-300">Thank you for reaching out. We&apos;ll get back to you soon.</p>
       </div>
     )
   }
