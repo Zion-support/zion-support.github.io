@@ -37,15 +37,15 @@ const ContentStatistics: React.FC = () => {
 
         if (step >= steps) {
           clearInterval(timer)
-          setCounters(targetCounters)
-        
+        }
+        setCounters(targetCounters)
       }, stepDuration)
     }
 
     animateCounters()
   }, [])
 
-  const stats = [,
+  const stats = [
     {
       icon: Users,
       value: counters.clients,
@@ -69,11 +69,12 @@ const ContentStatistics: React.FC = () => {
       value: counters.years,
       label: 'Years Experience',
       suffix: '+'
+    }
   ]
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4"></div>
-      <div className="max-w-7xl mx-auto"></div>
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16"></div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Our Impact in Numbers
