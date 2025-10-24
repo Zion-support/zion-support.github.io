@@ -3,21 +3,22 @@
 import React, { useState, useCallback, useEffect } from 'react';
 
 interface PerformanceMetrics {
-  fcp: number | null
-  lcp: number | null
-  fid: number | null
-  cls: number | null
-  ttfb: number | null
-  memory: number | null
-
+  fcp: number | null;
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  ttfb: number | null;
+  memory: number | null;
+}
 
 interface PerformanceMonitorProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void
-  enableRealTimeMonitoring?: boolean
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+  enableRealTimeMonitoring?: boolean;
+}
 
 
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  onMetricsUpdate: _onMetricsUpdate,
+  onMetricsUpdate,
   enableRealTimeMonitoring = true,
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -57,15 +58,15 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         const entries = list.getEntries()
         entries.forEach((entry: any) => {
           if (entry.processingStart && entry.startTime) {
-            setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }))
-          
-        })
-      })
-      fidObserver.observe({ entryTypes: ['first-input'] })
-      observers.push(fidObserver)
+            setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+          }
+        });
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+      observers.push(fidObserver);
     } catch (error) {
-      console.warn('FID measurement failed:', error)
-    
+      console.warn('FID measurement failed:', error);
+    }
 
     // Measure Cumulative Layout Shift (CLS)
     try {
@@ -74,42 +75,42 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         const entries = list.getEntries()
         entries.forEach((entry: any) => {
           if (!entry.hadRecentInput) {
-            clsValue += entry.value
-            setMetrics(prev => ({ ...prev, cls: clsValue }))
-          
-        })
-      })
-      clsObserver.observe({ entryTypes: ['layout-shift'] })
-      observers.push(clsObserver)
+            clsValue += entry.value;
+            setMetrics(prev => ({ ...prev, cls: clsValue }));
+          }
+        });
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      observers.push(clsObserver);
     } catch (error) {
-      console.warn('CLS measurement failed:', error)
-    
+      console.warn('CLS measurement failed:', error);
+    }
 
     // Measure Time to First Byte (TTFB)
     try {
       const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       if (navigationEntry) {
-        const ttfb = navigationEntry.responseStart - navigationEntry.requestStart
-        setMetrics(prev => ({ ...prev, ttfb }))
-      
+        const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
+        setMetrics(prev => ({ ...prev, ttfb }));
+      }
     } catch (error) {
-      console.warn('TTFB measurement failed:', error)
-    
+      console.warn('TTFB measurement failed:', error);
+    }
 
     // Measure Memory Usage
     try {
       if ('memory' in performance) {
-        const memory = (performance as any).memory
-        setMetrics(prev => ({ ...prev, memory: memory.usedJSHeapSize }))
-      
+        const memory = (performance as any).memory;
+        setMetrics(prev => ({ ...prev, memory: memory.usedJSHeapSize }));
+      }
     } catch (error) {
-      console.warn('Memory measurement failed:', error)
-    
+      console.warn('Memory measurement failed:', error);
+    }
 
     return () => {
-      observers.forEach(observer => observer.disconnect())
-    }
-  }, [])
+      observers.forEach(observer => observer.disconnect());
+    };
+  }, []);
 
   useEffect(() => {
     if (!enableRealTimeMonitoring) return
@@ -129,9 +130,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   useEffect(() => {
     if (onMetricsUpdate) {
-      onMetricsUpdate(metrics)
-    
-  }, [metrics, onMetricsUpdate])
+      onMetricsUpdate(metrics);
+    }
+  }, [metrics, onMetricsUpdate]);
 
   return (
     <div className="performance-monitor">
