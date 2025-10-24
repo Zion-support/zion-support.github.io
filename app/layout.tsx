@@ -5,7 +5,6 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-<<<<<<< HEAD
   title: 'Zion Tech Group - Advanced AI & IT Solutions',
   description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.',
   keywords: 'AI solutions, IT services, cybersecurity, cloud computing, digital transformation',
@@ -29,16 +28,6 @@ export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
-=======
-  title: 'Zion Tech Group - AI & Technology Solutions',
-  description: 'Leading provider of AI services, IT solutions, and 5G technology implementations.',
-};
-
-export default function RootLayout({
-  children
-}: {
-  children: React.ReactNode
->>>>>>> a2b75cc80608d547a0b17d6894e9e70b9194f3c6
 }) {
   return (
     <html lang="en">
@@ -47,8 +36,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> a2b75cc80608d547a0b17d6894e9e70b9194f3c6
