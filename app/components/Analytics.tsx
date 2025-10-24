@@ -1,11 +1,18 @@
 'use client'
 import React, { useEffect } from 'react'
 
+<<<<<<< HEAD
 interface AnalyticsProps {
   enableGoogleAnalytics?: boolean
   enablePerformanceMonitoring?: boolean
   enableErrorTracking?: boolean
   enableUserBehaviorTracking?: boolean
+=======
+declare global {
+  interface Window {
+    gtag: (..._args: unknown[]) => void
+  }
+>>>>>>> 883b2f1837ad94df26f75676952a53319ed72f1c
 }
 
 const Analytics: React.FC<AnalyticsProps> = ({
@@ -15,8 +22,17 @@ const Analytics: React.FC<AnalyticsProps> = ({
   enableUserBehaviorTracking = true,
 }) => {
   useEffect(() => {
+<<<<<<< HEAD
     if (enableGoogleAnalytics) {
       initializeGoogleAnalytics()
+=======
+    if (!GA_TRACKING_ID) return
+
+    // Initialize gtag
+    window.gtag = window.gtag || function() {
+      (window.gtag as any).q = (window.gtag as any).q || []
+      ;(window.gtag as any).q.push(arguments)
+>>>>>>> 883b2f1837ad94df26f75676952a53319ed72f1c
     }
     
     if (enablePerformanceMonitoring) {

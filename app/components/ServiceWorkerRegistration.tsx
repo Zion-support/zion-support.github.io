@@ -5,7 +5,11 @@ import React, { useEffect } from 'react';
 interface ServiceWorkerRegistrationProps {
   onUpdateAvailable?: () => void;
   onUpdateInstalled?: () => void;
+<<<<<<< HEAD
   onError?: (_error: Error) => void;
+=======
+  onError?: (error: Error) => void;
+>>>>>>> 883b2f1837ad94df26f75676952a53319ed72f1c
 }
 
 const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
@@ -45,8 +49,13 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
           window.location.reload();
         });
 
+<<<<<<< HEAD
       } catch (_error) {
         onError?.(_error as Error);
+=======
+      } catch (error) {
+        onError?.(error as Error);
+>>>>>>> 883b2f1837ad94df26f75676952a53319ed72f1c
       }
     };
 

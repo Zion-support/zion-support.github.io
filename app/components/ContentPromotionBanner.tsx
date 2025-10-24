@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Star, ArrowRight } from 'lucide-react';
+=======
+'use client'
+import React from 'react'
+import { Star, ArrowRight } from 'lucide-react'
+>>>>>>> 883b2f1837ad94df26f75676952a53319ed72f1c
 
 const ContentPromotionBanner: React.FC = () => {
   return (
@@ -34,7 +40,14 @@ const ContentPromotionBanner: React.FC = () => {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );
 };
 
 export default ContentPromotionBanner;
+=======
+  )
+}
+
+export default ContentPromotionBanner
+>>>>>>> 883b2f1837ad94df26f75676952a53319ed72f1c
