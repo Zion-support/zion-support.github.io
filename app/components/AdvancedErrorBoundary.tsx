@@ -81,10 +81,9 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
             <p className="text-gray-600 mb-6">
               We&apos;re sorry, but something unexpected happened. Please try again.
             </p>
-            <div className="...">
+            <div className="space-y-3">
               <button
-                onClick={this.handleRetry;
-}
+                onClick={this.handleRetry}
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 flex items-center justify-center"
               >
                 <RefreshCw className="h-4 w-4 mr-2" />
@@ -104,7 +103,7 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
     }
 
     return this.props.children;
-}
+  }
 }
 
-export default AdvancedErrorBoundary
+export default AdvancedErrorBoundary;
