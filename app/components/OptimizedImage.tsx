@@ -1,21 +1,20 @@
 'use client';
-
-import React, { useState, useRef } from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { ImageIcon, Loader2 } from 'lucide-react';
+import React, { useState, useCallback } from 'react';
+import Image from 'next/image';
 
 interface OptimizedImageProps {
   src: string;
   alt: string;
-  width?: number | string;
-  height?: number | string;
+  width?: number;
+  height?: number;
   className?: string;
-  placeholder?: string;
-  blurDataURL?: string;
   priority?: boolean;
   quality?: number;
+  placeholder?: 'blur' | 'empty';
+  blurDataURL?: string;
   sizes?: string;
-  loading?: 'lazy' | 'eager';
+  fill?: boolean;
+  style?: React.CSSProperties;
   onLoad?: () => void;
   onError?: () => void;
 }
@@ -26,119 +25,158 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   width,
   height,
   className = '',
-  placeholder,
+  priority = false,
+  quality = 75,
+  placeholder = 'empty',
   blurDataURL,
-  priority: _priority = false,
-  quality: _quality = 75,
   sizes,
-  loading = 'lazy',
+  fill = false,
+  style,
   onLoad,
   onError
 }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
-  const [imageSrc, setImageSrc] = useState(src);
-  const imgRef = useRef<HTMLImageElement>(null);
 
-  // Generate blur data URL if not provided
-  const defaultBlurDataURL = blurDataURL || `data:image/svg+xml;base64,${btoa(`
-    <svg width="${width || 400}" height="${height || 300}" xmlns="http://www.w3.org/2000/svg">
-      <rect width="100%" height="100%" fill="#f3f4f6"/>
-      <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle" dy=".3em">
-        Loading...
-      </text>
-    </svg>
-  `)}`;
-
-  const handleLoad = () => {
+  const handleLoad = useCallback(() => {
     setIsLoading(false);
-    setHasError(false);
     onLoad?.();
-  };
+  }, [onLoad]);
 
-  const handleError = () => {
-    setIsLoading(false);
+  const handleError = useCallback(() => {
     setHasError(true);
+    setIsLoading(false);
     onError?.();
-  };
-
-  // Retry loading on error
-  const retryLoad = () => {
-    setHasError(false);
-    setIsLoading(true);
-    setImageSrc(`${src}?retry=${Date.now()}`);
-  };
-
-  // Generate responsive srcSet if sizes is provided
-  const generateSrcSet = (baseSrc: string) => {
-    if (!sizes) return undefined;
-    
-    const breakpoints = [
-      { width: 640, suffix: '?w=640' },
-      { width: 768, suffix: '?w=768' },
-      { width: 1024, suffix: '?w=1024' },
-      { width: 1280, suffix: '?w=1280' },
-      { width: 1536, suffix: '?w=1536' }
-    ];
-
-    return breakpoints
-      .map(bp => `${baseSrc}${bp.suffix} ${bp.width}w`)
-      .join(', ');
-  };
-
-  const srcSet = generateSrcSet(src);
+  }, [onError]);
 
   if (hasError) {
     return (
       <div 
-        className={`flex flex-col items-center justify-center bg-gray-100 text-gray-400 ${className}`}
-        style={{ width, height }}
+        className={`bg-gray-200 flex items-center justify-center ${className}`}
+        style={style}
       >
-        <ImageIcon className="w-8 h-8 mb-2" />
-        <span className="text-sm">Failed to load image</span>
-        <button
-          onClick={retryLoad}
-          className="mt-2 px-3 py-1 text-xs bg-gray-200 hover:bg-gray-300 rounded transition-colors"
-        >
-          Retry
-        </button>
+        <span className="text-gray-500 text-sm">Failed to load image</span>
       </div>
     );
   }
 
   return (
-    <div className={`relative ${className}`} style={{ width, height }}>
+    <div className={`relative ${className}`} style={style}>
       {isLoading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
-          <Loader2 className="w-6 h-6 animate-spin text-gray-400" />
-        </div>
+        <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />
       )}
-      
-      <LazyLoadImage
-        ref={imgRef}
-        src={imageSrc}
+      <Image
+        src={src}
         alt={alt}
-        width={width}
-        height={height}
-        className={`transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
-        placeholderSrc={placeholder || defaultBlurDataURL}
-        effect="blur"
-        threshold={100}
-        delayMethod="debounce"
-        delayTime={200}
-        loading={loading}
+        width={fill ? undefined : width}
+        height={fill ? undefined : height}
+        fill={fill}
+        priority={priority}
+        quality={quality}
+        placeholder={placeholder}
+        blurDataURL={blurDataURL}
+        sizes={sizes}
         onLoad={handleLoad}
         onError={handleError}
-        srcSet={srcSet}
-        sizes={sizes}
-        style={{
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover'
-        }}
+        className={`transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
       />
     </div>
   );
 };
 
 export default OptimizedImage;
+              <br />
+              <span className=&quot;text-white&quot;>Solutions</span>
+            </h1>
+            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
+              Advanced OptimizedImage solution for modern businesses.
+            </p>
+            <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
+              <button className=&quot;bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
+                Get Started
+                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
+              </button>
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Features Section */}
+      <section className=&quot;py-20 px-4 sm: px-6 lg:px-8&quot;></section>
+        <div className=&quot;max-w-7xl mx-auto&quot;></div>
+          <div className=&quot;text-center mb-16&quot;></div>
+            <h2 className=&quot;text-3xl md: text-4xl font-bold text-white mb-4&quot;>
+              Why Choose Our OptimizedImage?
+            </h2>
+            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
+              Our optimizedimage solutions deliver unmatched performance, security, and scalability.
+            </p>
+          </div>
+          <div className=&quot;grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            {features.map((feature, index) => (
+              <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300&quot;></div>
+                <div className=&quot;flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4&quot;></div>
+                  <feature.icon className=&quot;h-6 w-6 text-white&quot; />
+                </div>
+                <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
+                <p className=&quot;text-gray-300&quot;>{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Benefits Section */}
+      <section className=&quot;py-20 px-4 sm: px-6 lg:px-8 bg-white/5&quot;></section>
+        <div className=&quot;max-w-7xl mx-auto&quot;></div>
+          <div className=&quot;text-center mb-16&quot;></div>
+            <h2 className=&quot;text-3xl md: text-4xl font-bold text-white mb-4&quot;></h2>
+              Key Benefits
+            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
+              Experience the power of our optimizedimage solutions for your business.
+            </p>
+          </div>
+        </section>
+        {/* Benefits Section */}
+        <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
+          <div className=&quot;max-w-7xl mx-auto&quot;></div>
+            <div className=&quot;text-center mb-16&quot;></div>
+              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
+                Experience the benefits of cutting-edge AI technology
+              </p>
+            </div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+              {benefits.map((benefit, index) => (
+                <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
+                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
+                  <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* CTA Section */}
+        <section className=&quot;py-20 px-4&quot;></section>
+          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
+            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
+            <p className=&quot;text-xl text-gray-300 mb-8&quot;>
+              Join thousands of businesses already using our AI solutions
+            </p>
+            <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
+              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover: from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
+                <Phone className=&quot;mr-2 h-5 w-5&quot; />
+                Call Now
+              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover: from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
+                <Mail className=&quot;mr-2 h-5 w-5&quot; />
+                Email Us
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+</>
+  )
+}
+export default OptimizedImagePage

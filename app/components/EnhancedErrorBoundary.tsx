@@ -1,12 +1,99 @@
 'use client';
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-const EnhancedErrorBoundaryPage: React.FC = () => {
-  const features = [
+
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw } from 'lucide-react';
+
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+}
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+}
+
+class EnhancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({ error, errorInfo });
+    
+    // Log error to monitoring service
+    console.error('Error caught by boundary:', error, errorInfo);
+    
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+  }
+
+  handleReload = () => {
+    window.location.reload();
+  };
+
+  render() {
+    if (this.state.hasError) {
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
+            <div className="w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+              <AlertTriangle className="w-8 h-8 text-red-400" />
+            </div>
+            <h1 className="text-2xl font-bold text-white mb-4">Oops! Something went wrong</h1>
+            <p className="text-gray-300 mb-6">
+              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+            </p>
+            
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="mb-6 text-left">
+                <summary className="text-sm text-gray-400 cursor-pointer mb-2">
+                  Error Details (Development)
+                </summary>
+                <pre className="text-xs text-red-300 bg-black/20 p-3 rounded overflow-auto">
+                  {this.state.error.toString()}
+                </pre>
+              </details>
+            )}
+            
+            <div className="flex flex-col sm:flex-row gap-3">
+              <button
+                onClick={this.handleReload}
+                className="flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+              >
+                <RefreshCw className="w-4 h-4" />
+                Reload Page
+              </button>
+              <button
+                onClick={() => window.history.back()}
+                className="flex items-center justify-center gap-2 bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+              >
+                Go Back
+              </button>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
+export default EnhancedErrorBoundary;
     {
       icon: Brain,
     title: 'AI-Powered Intelligence',
@@ -33,16 +120,10 @@ const EnhancedErrorBoundaryPage: React.FC = () => {
 =======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
-=======
-
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-2b30
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-<<<<<<< HEAD
   onError?: (_error: Error, _errorInfo: ErrorInfo) => void;
 >>>>>>> cursor/fix-errors-and-merge-to-main-d47f
 }
@@ -59,13 +140,13 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className
     <>
       <Helmet>
         <title>EnhancedErrorBoundary | Zion Tech Group</title>
-        <meta name="description" content="Professional EnhancedErrorBoundary services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="AI, artificial intelligence, EnhancedErrorBoundary, AI solutions, intelligent automation" />
+        <meta name=&quot;description&quot; content=&quot;Professional EnhancedErrorBoundary services by Zion Tech Group. Advanced AI and IT solutions for your business.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, EnhancedErrorBoundary, AI solutions, intelligent automation&quot; />
       </Helmet>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
+        <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
             <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;>
@@ -168,46 +249,29 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className
       <Footer />
 </>
   )
-=======
-  className?: string;
 }
-
-interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b30
-}
-
-class EnhancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
+export default EnhancedErrorBoundaryPage
+  error?: Error
+  errorInfo?: ErrorInfo}
+class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Props) {
+    super(props)
+    this.state= { hasError: false}
   }
-
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+  static getDerivedStateFromError(error: Error): State {return { hasError: true, error}
   }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({ error, errorInfo });
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {this.setState({errorerrorInfo})
     // Log error to monitoring service
-     
-    console.error('Error caught by boundary:', error, errorInfo);
+    // // // eslint-disable-next-line no-console
+    console.error('Error caught by boundary:', error, errorInfo)
   }
-
-  handleReload = () => {
-    window.location.reload();
-  };
-
+  handleReload= () => {windo w.location.reload()
+ }
   render() {
-    if (this.state.hasError) {
+  if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
-      }
-
+        return thi s.props.fallback
+}
       return (
-<<<<<<< HEAD
         <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4&quot;></div>
           <div className=&quot;max-w-md w-full bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center&quot;></div>
             <div className=&quot;w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center mb-6 mx-auto&quot;></div>
@@ -215,54 +279,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             </div>
             <h1 className=&quot;text-2xl font-bold text-white mb-4&quot;>Oops! Something went wrong</h1>
             <p className=&quot;text-gray-300 mb-6&quot;>We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.</p>p>
-=======
-        <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4 ${this.props.className || ''}`}>
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
-            <div className="w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center mb-6 mx-auto">
-              <AlertTriangle className="w-8 h-8 text-red-400" />
-            </div>
-            <h1 className="text-2xl font-bold text-white mb-4">Oops! Something went wrong</h1>
-            <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
-            </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b30
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className=&quot;mb-6 text-left&quot;>
                 <summary className=&quot;text-sm text-gray-400 cursor-pointer mb-2&quot;>
                   Error Details (Development)
                 </summary>
-<<<<<<< HEAD
                 <pre className=&quot;text-xs text-red-300 bg-black/20 p-3 rounded overflow-auto&quot;></p>
-=======
-                <pre className="text-xs text-red-300 bg-black/20 p-3 rounded overflow-auto">
->>>>>>> cursor/fix-errors-and-merge-to-main-2b30
                   {this.state.error.toString()}
-                  {this.state.errorInfo?.componentStack}
-                </pre>
-              </details>
-            )}
-            <div className="flex flex-col sm:flex-row gap-3">
-              <button
-                onClick={this.handleReload}
-                className="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
-              >
-                <RefreshCw className="w-4 h-4" />
-                Reload Page
-              </button>
-              <button
-                onClick={() => window.history.back()}
-                className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
-              >
-                Go Back
-              </button>
-            </div>
-          </div>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
-
-export default EnhancedErrorBoundary;
