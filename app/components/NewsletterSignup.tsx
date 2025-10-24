@@ -1,6 +1,7 @@
 'use client';
+'use client';
 import { useState } from 'react';
-import { AlertCircle } from 'lucide-react';
+import { AlertCircle, Send, Mail, CheckCircle } from 'lucide-react';
 
 interface NewsletterSignupProps {
   variant?: 'inline' | 'modal';
@@ -38,7 +39,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
       setMessage('Thank you for subscribing! Check your email for confirmation.');
       setEmail('');
 
-      // Close modal after success if it's a modal variant
+      // Close modal after success if it&apos;s a modal variant
       if (variant === 'modal' && onClose) {
         setTimeout(() => {
           onClose();

@@ -9,6 +9,10 @@ const nextConfig = {
   },
   typescript: {
     ignoreBuildErrors: true,
+  },
+  generateStaticParams: false,
+  experimental: {
+    missingSuspenseWithCSRBailout: false,
   }
 }
 

@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Link from 'next/link';
 import { ArrowRight, BarChart, TrendingUp, CheckCircle, Brain, Settings, Target, Users, Calendar, Zap } from 'lucide-react';
 
@@ -39,11 +38,6 @@ const AnalyticsPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      <Helmet>
-        <title>Analytics - Zion Tech Group | Advanced Business Intelligence</title>
-        <meta name="description" content="Transform your business with advanced analytics and business intelligence solutions. Get insights that drive growth and optimize performance." />
-        <meta name="keywords" content="business analytics, data analysis, business intelligence, performance tracking, data visualization" />
-      </Helmet>
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">

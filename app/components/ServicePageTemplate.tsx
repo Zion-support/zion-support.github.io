@@ -40,11 +40,7 @@ const ServicePageTemplatePage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>ServicePageTemplate | Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Professional ServicePageTemplate services by Zion Tech Group.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ServiceTemplatePage, AI solutions, intelligent automation&quot; />
-      </Helmet>
+      
       <section className=&quot;py-20 px-4&quot;></section>
         <div className=&quot;container mx-auto max-w-6xl&quot;></div>
           <div className=&quot;text-center mb-16&quot;></div>

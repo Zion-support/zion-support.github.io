@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Link from 'next/link';
 import { 
   ArrowRight, Zap, Brain, Settings, Globe, Users, Star, CheckCircle,
@@ -72,11 +71,6 @@ const AIAutomationPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      <Helmet>
-        <title>AI Automation Services - Zion Tech Group</title>
-        <meta name="description" content="Transform your business with AI-powered automation solutions. Reduce costs, increase efficiency, and eliminate manual processes." />
-        <meta name="keywords" content="AI automation, business process automation, workflow automation, intelligent automation, RPA" />
-      </Helmet>
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">

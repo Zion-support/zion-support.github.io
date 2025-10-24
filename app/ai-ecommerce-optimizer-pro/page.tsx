@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, Zap, Shield, BarChart3, Users } from 'lucide-react';
+import { ArrowRight, CheckCircle, Zap, Shield, BarChart3, Users, BarChart } from 'lucide-react';
 
 const AiEcommerceOptimizerProPage: React.FC = () => {
   const features = [
@@ -71,11 +70,6 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      <Helmet>
-        <title>AI E-commerce Optimizer Pro - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered e-commerce optimization solutions. Boost sales, improve conversion rates, and maximize your online store performance." />
-        <meta name="keywords" content="AI e-commerce, e-commerce optimization, AI solutions, online store optimization, Zion Tech Group" />
-      </Helmet>
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
