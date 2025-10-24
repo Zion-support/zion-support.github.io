@@ -14,21 +14,21 @@ interface ContentNewsletterSignupProps {
     icon: React.ComponentType<{ className?: string }>
     text: string}>
   onSubscribe?: (email: string) => void}constContentNewsletterSignup:React.FC<ContentNewsletterSignupProp s>= ({
-  title= &quot;Stay Updated with Our LatestInsights&quot;
-  subtitle= &quot;Get exclusive content, industry insights, and early access to new features delivered to yourinbox.&quot;
-  placeholder= &quot;Enter your emailaddress&quot;
-  buttonText= &quot;Subscribe&quot;
+  title= "Stay Updated with Our LatestInsights"
+  subtitle= "Get exclusive content, industry insights, and early access to new features delivered to yourinbox."
+  placeholder= "Enter your emailaddress"
+  buttonText= "Subscribe"
   features= [
-    { icon: Star, text: &quot;Exclusive content&quot
+    { icon: Star, text: "Exclusive content&quot
   },
   {
-    icon: Users, text: &quot;Industry insights&quot
+    icon: Users, text: "Industry insights&quot
   },
   {
-    icon: Globe, text: &quot;Global updates&quot
+    icon: Globe, text: "Global updates&quot
   },
   {
-    icon: Zap, text: &quot;Early access&quot,
+    icon: Zap, text: "Early access&quot,
   ]
   onSubscribe
 }) => {
