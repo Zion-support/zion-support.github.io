@@ -99,7 +99,10 @@ const App = () => {
               <ErrorBoundary>
                 <PerformanceMonitor />
                 <AccessibilityEnhancer>
-                  <SEOOptimizer>
+                  <SEOOptimizer 
+                    title="ZionTechGroup - Advanced Technology Solutions"
+                    description="Leading provider of AI, IT, and 5G technology solutions for modern businesses"
+                  >
                     <Suspense fallback={<LoadingFallback />}>
                       <ErrorBoundary>
                         <Routes>
