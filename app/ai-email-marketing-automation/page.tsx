@@ -6,25 +6,25 @@ import { ArrowRight, Mail, Target, BarChart, Users, CheckCircle, Zap, Brain, Set
 const AiEmailMarketingAutomationPage: React.FC = () => {
   const features = [
     {
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
+      icon: Brain,
       title: 'AI-Powered Campaigns',
       description: 'Create intelligent email campaigns that adapt to user behavior and preferences automatically.',
       benefits: ['Smart segmentation', 'Predictive content', 'Optimal send times', 'Personalization engine']
     },
     {
-      icon: <Target className="w-8 h-8 text-purple-400" />,
+      icon: Target,
       title: 'Advanced Segmentation',
       description: 'Segment your audience with precision using AI-driven behavioral and demographic analysis.',
       benefits: ['Behavioral triggers', 'Demographic targeting', 'Engagement scoring', 'Lifecycle stages']
     },
     {
-      icon: <BarChart className="w-8 h-8 text-green-400" />,
+      icon: BarChart,
       title: 'Analytics & Insights',
       description: 'Comprehensive analytics dashboard with AI-powered insights and recommendations.',
       benefits: ['Real-time metrics', 'Predictive analytics', 'A/B testing', 'ROI tracking']
     },
     {
-      icon: <Zap className="w-8 h-8 text-orange-400" />,
+      icon: Zap,
       title: 'Automation Workflows',
       description: 'Build complex email automation workflows with drag-and-drop visual builder.',
       benefits: ['Visual workflow builder', 'Multi-step sequences', 'Conditional logic', 'Trigger-based actions']
@@ -35,25 +35,25 @@ const AiEmailMarketingAutomationPage: React.FC = () => {
     {
       title: 'Welcome Series',
       description: 'Automated welcome email sequences for new subscribers',
-      icon: <Mail className="w-6 h-6 text-blue-400" />,
+      icon: Mail,
       benefits: ['Increase engagement by 40%', 'Build brand awareness', 'Set expectations']
     },
     {
       title: 'Abandoned Cart Recovery',
       description: 'Re-engage customers who left items in their cart',
-      icon: <ShoppingCart className="w-6 h-6 text-green-400" />,
+      icon: ShoppingCart,
       benefits: ['Recover 15-25% of lost sales', 'Personalized offers', 'Multi-touch sequences']
     },
     {
       title: 'Re-engagement Campaigns',
       description: 'Win back inactive subscribers with targeted campaigns',
-      icon: <Users className="w-6 h-6 text-purple-400" />,
+      icon: Users,
       benefits: ['Reduce churn by 30%', 'Identify at-risk subscribers', 'Personalized content']
     },
     {
       title: 'Post-Purchase Follow-up',
       description: 'Nurture customers after purchase with relevant content',
-      icon: <Star className="w-6 h-6 text-yellow-400" />,
+      icon: Star,
       benefits: ['Increase customer lifetime value', 'Gather feedback', 'Cross-sell opportunities']
     }
   ];
@@ -106,10 +106,10 @@ const AiEmailMarketingAutomationPage: React.FC = () => {
   ];
 
   const stats = [
-    { number: '2.5M+', label: 'Emails Sent Daily', icon: <Send className="w-6 h-6" /> },
-    { number: '40%', label: 'Higher Open Rates', icon: <TrendingUp className="w-6 h-6" /> },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6" /> },
-    { number: '24/7', label: 'Customer Support', icon: <Clock className="w-6 h-6" /> }
+    { number: '2.5M+', label: 'Emails Sent Daily', icon: Send },
+    { number: '40%', label: 'Higher Open Rates', icon: TrendingUp },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
+    { number: '24/7', label: 'Customer Support', icon: Clock }
   ];
 
   return (
@@ -148,7 +148,7 @@ const AiEmailMarketingAutomationPage: React.FC = () => {
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-4">
-                  {stat.icon}
+                  <stat.icon className="w-8 h-8 text-white" />
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300">{stat.label}</div>
@@ -173,7 +173,7 @@ const AiEmailMarketingAutomationPage: React.FC = () => {
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
                 <div className="mb-6">
-                  {feature.icon}
+                  <feature.icon className="w-8 h-8 text-cyan-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -206,7 +206,7 @@ const AiEmailMarketingAutomationPage: React.FC = () => {
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-400/50 transition-all duration-300 group">
                 <div className="mb-6">
-                  {useCase.icon}
+                  <useCase.icon className="w-8 h-8 text-purple-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
                 <p className="text-gray-300 mb-4">{useCase.description}</p>

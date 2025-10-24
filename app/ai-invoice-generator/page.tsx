@@ -6,25 +6,25 @@ import { ArrowRight, FileText, Calculator, CheckCircle, Brain, Settings, Target,
 const AiInvoiceGeneratorPage: React.FC = () => {
   const features = [
     {
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
+      icon: Brain,
       title: 'AI-Powered Generation',
       description: 'Automatically generate professional invoices using AI that understands your business patterns and client preferences.',
       benefits: ['Smart templates', 'Auto-population', 'Brand consistency', 'Learning algorithms']
     },
     {
-      icon: <Calculator className="w-8 h-8 text-purple-400" />,
+      icon: Calculator,
       title: 'Automatic Calculations',
       description: 'AI handles all calculations including taxes, discounts, and currency conversions automatically.',
       benefits: ['Tax calculations', 'Discount management', 'Multi-currency', 'Error prevention']
     },
     {
-      icon: <Target className="w-8 h-8 text-green-400" />,
+      icon: Target,
       title: 'Smart Categorization',
       description: 'Intelligent categorization of expenses and services for better financial tracking and reporting.',
       benefits: ['Auto-categorization', 'Expense tracking', 'Financial insights', 'Reporting']
     },
     {
-      icon: <Zap className="w-8 h-8 text-orange-400" />,
+      icon: Zap,
       title: 'Workflow Automation',
       description: 'Streamline your invoicing process with automated workflows and follow-up reminders.',
       benefits: ['Auto-reminders', 'Payment tracking', 'Workflow automation', 'Time savings']
@@ -35,25 +35,25 @@ const AiInvoiceGeneratorPage: React.FC = () => {
     {
       title: 'Freelancers',
       description: 'Perfect for freelancers who need to create professional invoices quickly',
-      icon: <Users className="w-6 h-6 text-blue-400" />,
+      icon: Users,
       benefits: ['Quick generation', 'Professional templates', 'Time tracking', 'Client management']
     },
     {
       title: 'Small Business',
       description: 'Ideal for small businesses managing multiple clients and projects',
-      icon: <Building2 className="w-6 h-6 text-green-400" />,
+      icon: Building2,
       benefits: ['Multi-client support', 'Project tracking', 'Team collaboration', 'Scalable pricing']
     },
     {
       title: 'Service Providers',
       description: 'Great for service-based businesses with recurring billing needs',
-      icon: <Settings className="w-6 h-6 text-purple-400" />,
+      icon: Settings,
       benefits: ['Recurring billing', 'Service templates', 'Automated reminders', 'Payment integration']
     },
     {
       title: 'E-commerce',
       description: 'Perfect for online stores with complex product catalogs and pricing',
-      icon: <ShoppingCart className="w-6 h-6 text-yellow-400" />,
+      icon: ShoppingCart,
       benefits: ['Product integration', 'Inventory sync', 'Bulk invoicing', 'Order management']
     }
   ];
@@ -106,10 +106,10 @@ const AiInvoiceGeneratorPage: React.FC = () => {
   ];
 
   const stats = [
-    { number: '95%', label: 'Time Saved', icon: <Clock className="w-6 h-6" /> },
-    { number: '10K+', label: 'Invoices Generated', icon: <FileText className="w-6 h-6" /> },
-    { number: '99.9%', label: 'Accuracy Rate', icon: <Target className="w-6 h-6" /> },
-    { number: '24/7', label: 'Customer Support', icon: <Shield className="w-6 h-6" /> }
+    { number: '95%', label: 'Time Saved', icon: Clock },
+    { number: '10K+', label: 'Invoices Generated', icon: FileText },
+    { number: '99.9%', label: 'Accuracy Rate', icon: Target },
+    { number: '24/7', label: 'Customer Support', icon: Shield }
   ];
 
   return (
@@ -148,7 +148,7 @@ const AiInvoiceGeneratorPage: React.FC = () => {
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-4">
-                  {stat.icon}
+                  <stat.icon className="w-8 h-8 text-white" />
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300">{stat.label}</div>
@@ -173,7 +173,7 @@ const AiInvoiceGeneratorPage: React.FC = () => {
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
                 <div className="mb-6">
-                  {feature.icon}
+                  <feature.icon className="w-8 h-8 text-cyan-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -206,7 +206,7 @@ const AiInvoiceGeneratorPage: React.FC = () => {
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-400/50 transition-all duration-300 group">
                 <div className="mb-6">
-                  {useCase.icon}
+                  <useCase.icon className="w-8 h-8 text-purple-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
                 <p className="text-gray-300 mb-4">{useCase.description}</p>

@@ -1,8 +1,7 @@
 'use client';
-<<<<<<< HEAD
-'use client'
-import React from 'react'
-import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+'use client';
+import React from 'react';
+import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
@@ -340,6 +339,4 @@ export default ContentCarouselPage;
   )
 }
 
-export default ContentCarousel
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4da8
+export default ContentCarousel;
