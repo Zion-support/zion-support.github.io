@@ -1,6 +1,6 @@
 'use client';
-'use client';
-import { useState } from 'react';
+
+import React, { useState } from 'react';
 import { AlertCircle, Mail, Send, CheckCircle } from 'lucide-react';
 
 interface NewsletterSignupProps {
@@ -45,7 +45,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
           onClose();
         }, 2000);
       }
-    } catch (error) {
+    } catch (_error) {
       setStatus('error');
       setMessage('Something went wrong. Please try again.');
     }
