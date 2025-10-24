@@ -1,4 +1,3 @@
-
 import React from 'react'
 
 interface Footer_brokenProps {
@@ -8,12 +7,9 @@ interface Footer_brokenProps {
 const Footer_broken: React.FC<Footer_brokenProps> = (_props) => {
   return (
     <div>
-      {/* Component content */
+      {/* Component content */}
     </div>
   )
 }
 
-}
-
 export default Footer_broken
-}
