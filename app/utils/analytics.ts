@@ -1,5 +1,9 @@
 // Analytics utilities for tracking user interactions and performance
+<<<<<<< HEAD
 import React from "react"
+=======
+
+>>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
 interface AnalyticsEvent {
   category: string;
   action: string;
@@ -10,8 +14,14 @@ interface AnalyticsEvent {
 }
 
 class Analytics {
+<<<<<<< HEAD
   private static instance: Analytics
   private events: AnalyticsEvent[] = [  ];
+=======
+  private static instance: Analytics;
+  private events: AnalyticsEvent[] = [];
+
+>>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
   static getInstance(): Analytics {
     if (!Analytics.instance) {
       Analytics.instance = new Analytics();
@@ -24,12 +34,25 @@ class Analytics {
     this.events.push({
       ...event
       timestamp: Date.now()
+<<<<<<< HEAD
     })
     // In production, you would send this to your analytics service
     if (process.env.NODE_ENV === "production") {
       this.sendToAnalytics(event);
     } else {
       console.log("Analytics Event:", event);
+=======
+    });
+
+    // Send to external analytics service
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', event.action, {
+        event_category: event.category,
+        event_label: event.label,
+        value: event.value,
+        ...event.custom_parameters
+      });
+>>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
     }
   }
 
@@ -40,6 +63,7 @@ class Analytics {
       action: "View"
       label: page,
       custom_parameters: {
+<<<<<<< HEAD
         page_title: title || document.title
         page_url: window.location.href
       }
@@ -48,31 +72,54 @@ class Analytics {
   }
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
+=======
+        page_title: title || (typeof document !== 'undefined' ? document.title : ''),
+        page_url: typeof window !== 'undefined' ? window.location.href : ''
+      }
+    });
+  }
+>>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
 
   // Track user interactions
   trackClick(element: string, location?: string): void {
     this.track({
+<<<<<<< HEAD
       category: "User Interaction"
       action: "Click"
       label: element,
       custom_parameters: {
         location
+=======
+      category: "Interaction",
+      action: "Click",
+      label: element,
+      custom_parameters: {
+        location: location || 'unknown'
+>>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
       }
     });
   }
 
   // Track form submissions
-  trackFormSubmission(formName: string, success: boolean): void {
+  trackFormSubmit(formName: string, success: boolean): void {
     this.track({
+<<<<<<< HEAD
       category: "Form"
       action: success ? "Submit Success" : "Submit Error"
       label: formName
+=======
+      category: "Form",
+      action: "Submit",
+      label: formName,
+      value: success ? 1 : 0
+>>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
     });
   }
 
   // Track performance metrics
-  trackPerformance(metric: string, value: number, unit: string = "ms"): void {
+  trackPerformance(metric: string, value: number): void {
     this.track({
+<<<<<<< HEAD
       category: "Performance"
       action: "Metric"
       label: metric
@@ -94,6 +141,12 @@ class Analytics {
         error_stack: error.stack
         context
       }
+=======
+      category: "Performance",
+      action: "Metric",
+      label: metric,
+      value: Math.round(value)
+>>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
     });
   }
 
@@ -106,6 +159,7 @@ class Analytics {
   clearEvents(): void {
     this.events = [];
   }
+<<<<<<< HEAD
 
   // Send to analytics service (implement based on your analytics provider)
   private sendToAnalytics(event: AnalyticsEvent): void {
@@ -144,3 +198,8 @@ export function withAnalytics<T extends React.ComponentType<unknown>>(WrappedCom
     return React.createElement(WrappedComponent, props);
   }) as T;
 }
+=======
+}
+
+export default Analytics;
+>>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)

@@ -10,6 +10,9 @@ export interface StructuredData {
 
 export interface SEOData {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
   title: string;
   description: string;
   keywords: string[];
@@ -23,6 +26,7 @@ export interface SEOData {
   twitterDescription?: string;
   twitterImage?: string;
   structuredData?: StructuredData;
+<<<<<<< HEAD
 =======
   title: string
   description: string
@@ -37,6 +41,8 @@ export interface SEOData {
   twitterDescription?: string
   twitterImage?: string
   structuredData?: StructuredData;
+=======
+>>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
 }
 
 export const defaultSEOData: SEOData = {
@@ -46,21 +52,23 @@ export const defaultSEOData: SEOData = {
   canonical: 'https://ziontechgroup.com',
   ogTitle: 'Zion Tech Group - AI & Technology Solutions',
   ogDescription: 'Leading provider of AI-powered solutions, 5G technology, and innovative software development services.',
-  ogImage: '/og-image.jpg',
+  ogImage: 'https://ziontechgroup.com/og-image.jpg',
   ogUrl: 'https://ziontechgroup.com',
   twitterCard: 'summary_large_image',
   twitterTitle: 'Zion Tech Group - AI & Technology Solutions',
   twitterDescription: 'Leading provider of AI-powered solutions, 5G technology, and innovative software development services.',
-  twitterImage: '/twitter-image.jpg',
+  twitterImage: 'https://ziontechgroup.com/twitter-image.jpg',
   structuredData: {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
-    description: 'Leading provider of AI-powered solutions and technology services',
+    description: 'Leading provider of AI-powered solutions, 5G technology, and innovative software development services.',
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/logo.png',
     sameAs: [
+      'https://linkedin.com/company/ziontechgroup',
       'https://twitter.com/ziontechgroup',
+<<<<<<< HEAD
       'https://linkedin.com/company/ziontechgroup'
   ]
   
@@ -103,3 +111,24 @@ export const generateSEOData = (customData: Partial<SEOData> = {}): SEOData => {
     }
   };
 };
+=======
+      'https://github.com/ziontechgroup'
+    ]
+  }
+};
+
+export const generatePageSEO = (pageData: Partial<SEOData>): SEOData => {
+  return {
+    ...defaultSEOData,
+    ...pageData,
+    keywords: [...defaultSEOData.keywords, ...(pageData.keywords || [])]
+  };
+};
+
+export const generateStructuredData = (data: Partial<StructuredData>): StructuredData => {
+  return {
+    ...defaultSEOData.structuredData!,
+    ...data
+  };
+};
+>>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)

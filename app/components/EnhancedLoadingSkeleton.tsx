@@ -1,11 +1,11 @@
 import React from 'react';
 
 interface EnhancedLoadingSkeletonProps {
-  lines?: number
-  showAvatar?: boolean
-  showImage?: boolean
-  height?: string
-  className?: string
+  lines?: number;
+  showAvatar?: boolean;
+  showImage?: boolean;
+  height?: string;
+  className?: string;
 }
 
 const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
@@ -17,6 +17,7 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
 }) => {
   return (
     <div className={`animate-pulse ${className}`} style={{ height }}>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className="...">
         {showAvatar && (
@@ -30,6 +31,13 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
             <div className="w-12 h-12 bg-gray-300 rounded-full"></div>
             <div className="space-y-2 flex-1">
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
+=======
+      <div className="space-y-4">
+        {showAvatar && (
+          <div className="flex items-center space-x-4">
+            <div className="w-12 h-12 bg-gray-300 rounded-full"></div>
+            <div className="space-y-2 flex-1">
+>>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
               <div className="h-4 bg-gray-300 rounded w-1/4"></div>
               <div className="h-3 bg-gray-300 rounded w-1/2"></div>
             </div>
@@ -37,6 +45,7 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
         )}
         
         {showImage && (
+<<<<<<< HEAD
           <div className="w-full h-48 bg-gray-300 rounded-lg"></div>
         )}
         
@@ -45,6 +54,12 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
 =======
         <div className="space-y-2">
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
+=======
+          <div className="w-full h-48 bg-gray-300 rounded"></div>
+        )}
+        
+        <div className="space-y-2">
+>>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
           {Array.from({ length: lines }).map((_, index) => (
             <div
               key={index}
@@ -56,6 +71,13 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
 export default EnhancedLoadingSkeleton
+=======
+  );
+};
+
+export default EnhancedLoadingSkeleton;
+>>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)

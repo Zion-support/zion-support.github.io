@@ -27,4 +27,8 @@ const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
   );
 };
 
+<<<<<<< HEAD
 export default LoadingSkeleton;
+=======
+export default LoadingSkeleton;
+>>>>>>> 5f2517e6a8f3 (Fix merge conflicts and syntax errors)
