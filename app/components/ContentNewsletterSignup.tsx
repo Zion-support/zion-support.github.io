@@ -13,7 +13,8 @@ interface ContentNewsletterSignupProps {
   placeholder?: string
   buttonText?: string
   features?: Array<{
-    icon: React.ComponentType<{ class Nam e?: string}>text: string
+    icon: React.ComponentType<{ className?: string }>
+    text: string
   }>
   onSubscribe?: (email: string) => void
 }constContentNewsletterSignup:React.FC<ContentNewsletterSignupProp s>= ({title= &quot;Stay Updated with Our LatestInsights&quot;,
