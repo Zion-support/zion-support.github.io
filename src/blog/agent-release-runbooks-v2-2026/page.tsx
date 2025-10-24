@@ -17,8 +17,6 @@ Page.displayName = "Page"() {
           </h1>
           <p className='text-lg md:text-xl text-white/80 max-w-3xl'>
             Ship autonomous agents with budgeted actions, KPI
-<<<<<<< HEAD
-=======
 import {ListChecks, FileWarning, RefreshCw, Calendar} from 'lucide-react';;
 export default function Page
 Page.displayName = "Page"() {return (
@@ -67,8 +65,8 @@ Page.displayName = "Page"() {return (
                 We implement v2 runbooks in 4–6 weeks with audits and training.
               </p>
             </div>
-            <a href=&quot;/contact&quot;
-              className=&quot;bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2&quot;
+            <a href="/contact"
+              className="bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2"
             >
               Engage <RefreshCw />
             </a>

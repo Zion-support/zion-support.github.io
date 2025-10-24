@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-// usePerformanceMonitoring hook
-=======
 'use client'
 import Navigation from './Navigation'
 import { useCallback } from 'react'

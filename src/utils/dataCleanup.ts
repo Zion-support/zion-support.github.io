@@ -200,7 +200,7 @@ class DataCleanup {
     const allRecords = dataRecordManager.queryRecords({})
     allRecords.sort((a, b) => a.timestamp - b.timestamp)
 
-    // Remove oldest records until we&apos;re under the limit
+    // Remove oldest records until we're under the limit
     const recordsToRemove = allRecords.slice(0, stats.total - maxRecords)
     let cleaned = 0
 

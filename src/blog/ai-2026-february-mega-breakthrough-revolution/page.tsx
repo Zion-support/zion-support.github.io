@@ -8,17 +8,6 @@ import { Star } from 'lucide-react';
 export default function AI2026FebruaryMegaBreakthroughRevolution
 AI2026FebruaryMegaBreakthroughRevolution.displayName = "AI2026FebruaryMegaBreakthroughRevolution"() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-100 py-8">
-      <div className="max-w-4xl mx-auto px-4">
-        <h1 className="text-3xl font-bold text-gray-900 mb-6">
-          Page
-        </h1>
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <p className="text-gray-600">
-            This page is under construction. Please check back later.
-          </p>
-=======
     <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
       <div className=&quot;container mx-auto px-4 py-16&quot;></div>
         {/* Hero Section */}
