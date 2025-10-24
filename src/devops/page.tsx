@@ -1,7 +1,9 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Check, CheckCircle, GitBranch } from 'lucide-react';
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { GitBranch } from 'lucide-react'
+import { CheckCircle } from 'lucide-react'
+
 const DevOpsPage: React.FC = () => {
   const services = [
     {
@@ -9,49 +11,46 @@ const DevOpsPage: React.FC = () => {
       title: 'CI/CD Pipeline',
       description: 'Automated continuous integration and deployment pipelines',
       features: ['Automated Testing', 'Code Quality Checks', 'Deployment Automation', 'Rollback Capabilities']
-    },
-    {
-      icon: GitBranch,
+   },
+    {icon: GitBranch,
       title: 'Version Control',
       description: 'Git-based version control and collaboration workflows',
       features: ['Git Workflows', 'Code Review', 'Branch Management', 'Merge Strategies']
-    },
-    {
-      icon: Zap,
+   },
+    {icon: Zap,
       title: 'Infrastructure as Code',
       description: 'Automated infrastructure provisioning and management',
       features: ['Terraform', 'Ansible', 'CloudFormation', 'Kubernetes']
-    },
-    {
-      icon: Shield,
+   },
+    {icon: Shield,
       title: 'Security Integration',
       description: 'Security-first DevOps practices and tools',
       features: ['SAST/DAST', 'Dependency Scanning', 'Secrets Management', 'Compliance']
     }
-  ];
+  ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">DevOps Services</h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Accelerate your development lifecycle with our comprehensive DevOps solutions. 
+      <main className=&quot;container mx-auto px-4 py-16 pt-24&quot;>
+        <section className=&quot;text-center mb-16&quot;></section>
+          <h1 className=&quot;text-4xl md:text-6xl font-bold text-white mb-6&quot;>DevOps Services</h1>
+          <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;>
+            Accelerate your development lifecycle with our comprehensive DevOps solutions.
             From CI/CD to infrastructure automation, we help you deliver faster and more reliably.
           </p>
         </section>
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Our DevOps Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <section className=&quot;mb-16&quot;></section>
+          <h2 className=&quot;text-3xl font-bold text-white mb-12 text-center&quot;>Our DevOps Services</h2>
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
             {services.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
-                <service.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-4">{service.description}</p>
-                <ul className="space-y-2">
+              <div key={index} className=&quot;bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20&quot;></div>
+                <service.icon className=&quot;w-12 h-12 text-cyan-400 mb-4&quot; />
+                <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{service.title}</h3>
+                <p className=&quot;text-gray-300 mb-4&quot;>{service.description}</p>
+                <ul className=&quot;space-y-2&quot;>
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    <li key={featureIndex} className=&quot;flex items-center text-sm text-gray-300&quot;>
+                      <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2&quot; />
                       {feature}
                     </li>
                   ))}
@@ -62,7 +61,8 @@ const DevOpsPage: React.FC = () => {
         </section>
       </main>
       <Footer />
+>>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
     </div>
-  );
-};
-export default DevOpsPage;
+  )
+}
+export default DevOpsPage
