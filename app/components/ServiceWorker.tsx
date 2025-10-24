@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface ServiceWorkerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default ServiceWorker;
-=======
 'use client'
 
 import React, { useEffect } from 'react'
@@ -37,4 +19,3 @@ const ServiceWorker: React.FC = () => {
 }
 
 export default ServiceWorker
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface SearchBarProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const SearchBar: React.FC<SearchBarProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default SearchBar;
-=======
 'use client'
 
 import React, { useState } from 'react'
@@ -43,4 +25,3 @@ const SearchBar: React.FC = () => {
 }
 
 export default SearchBar
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

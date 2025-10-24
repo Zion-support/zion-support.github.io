@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface BreadcrumbProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const Breadcrumb: React.FC<BreadcrumbProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default Breadcrumb;
-=======
 'use client'
 
 import React from 'react'
@@ -53,4 +35,3 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
 }
 
 export default Breadcrumb
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

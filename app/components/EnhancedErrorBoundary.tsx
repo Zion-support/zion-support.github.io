@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface EnhancedErrorBoundaryProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default EnhancedErrorBoundary;
-=======
 'use client'
 
 import React, { Component, ErrorInfo, ReactNode } from 'react'
@@ -61,4 +43,3 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 }
 
 export default EnhancedErrorBoundary
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

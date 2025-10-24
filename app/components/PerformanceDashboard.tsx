@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface PerformanceDashboardProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default PerformanceDashboard;
-=======
 'use client'
 
 import React from 'react'
@@ -39,4 +21,3 @@ const PerformanceDashboard: React.FC = () => {
 }
 
 export default PerformanceDashboard
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

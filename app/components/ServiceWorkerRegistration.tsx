@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface ServiceWorkerRegistrationProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default ServiceWorkerRegistration;
-=======
 'use client'
 
 import React, { useEffect } from 'react'
@@ -37,4 +19,3 @@ const ServiceWorkerRegistration: React.FC = () => {
 }
 
 export default ServiceWorkerRegistration
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

@@ -1,24 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface DynamicContentShowcaseProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default DynamicContentShowcase;
-=======
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import Image from 'next/image'
 
 interface ContentItem {
   id: string
@@ -96,9 +79,11 @@ const DynamicContentShowcase: React.FC = () => {
         {filteredContent.map(item => (
           <div key={item.id} className="bg-white rounded-lg shadow-md overflow-hidden">
             <div className="aspect-video bg-gray-200">
-              <img
+              <Image
                 src={item.image}
                 alt={item.title}
+                width={400}
+                height={300}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -117,4 +102,3 @@ const DynamicContentShowcase: React.FC = () => {
 }
 
 export default DynamicContentShowcase
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

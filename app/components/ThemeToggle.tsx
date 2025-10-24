@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface ThemeToggleProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default ThemeToggle;
-=======
 'use client'
 
 import React, { useState, useEffect } from 'react'
@@ -44,4 +26,3 @@ const ThemeToggle: React.FC = () => {
 }
 
 export default ThemeToggle
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

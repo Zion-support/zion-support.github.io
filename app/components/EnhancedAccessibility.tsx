@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface EnhancedAccessibilityProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default EnhancedAccessibility;
-=======
 'use client'
 
 import React from 'react'
@@ -47,4 +29,3 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
 }
 
 export default EnhancedAccessibility
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

@@ -1,25 +1,8 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface ContentPreviewCardProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default ContentPreviewCard;
-=======
 'use client'
 
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 interface ContentPreviewCardProps {
   title: string
@@ -42,9 +25,11 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
     <article className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
       {image && (
         <div className="aspect-video bg-gray-200">
-          <img
+          <Image
             src={image}
             alt={title}
+            width={400}
+            height={300}
             className="w-full h-full object-cover"
           />
         </div>
@@ -82,4 +67,3 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
 }
 
 export default ContentPreviewCard
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

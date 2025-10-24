@@ -1,24 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface OptimizedImageProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default OptimizedImage;
-=======
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 
 interface OptimizedImageProps {
   src: string
@@ -28,9 +11,11 @@ interface OptimizedImageProps {
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({ src, alt, className = '' }) => {
   return (
-    <img
+    <Image
       src={src}
       alt={alt}
+      width={400}
+      height={300}
       className={`optimized-image ${className}`}
       loading="lazy"
     />
@@ -38,4 +23,3 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ src, alt, className = '
 }
 
 export default OptimizedImage
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface FuturisticCardProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const FuturisticCard: React.FC<FuturisticCardProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default FuturisticCard;
-=======
 'use client'
 
 import React from 'react'
@@ -34,4 +16,3 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({ children, className = '
 }
 
 export default FuturisticCard
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface SidebarProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const Sidebar: React.FC<SidebarProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default Sidebar;
-=======
 'use client'
 
 import React from 'react'
@@ -39,4 +21,3 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 }
 
 export default Sidebar
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

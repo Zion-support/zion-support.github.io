@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface AdvancedPerformanceMonitorProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default AdvancedPerformanceMonitor;
-=======
 'use client'
 
 import React, { useEffect, useState } from 'react'
@@ -62,4 +44,3 @@ const AdvancedPerformanceMonitor: React.FC = () => {
 }
 
 export default AdvancedPerformanceMonitor
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

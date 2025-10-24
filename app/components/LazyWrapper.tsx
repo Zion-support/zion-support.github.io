@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface LazyWrapperProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const LazyWrapper: React.FC<LazyWrapperProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default LazyWrapper;
-=======
 'use client'
 
 import React, { Suspense } from 'react'
@@ -37,4 +19,3 @@ const LazyWrapper: React.FC<LazyWrapperProps> = ({
 }
 
 export default LazyWrapper
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

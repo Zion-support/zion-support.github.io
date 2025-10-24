@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface ContentNewsletterSignupProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default ContentNewsletterSignup;
-=======
 'use client'
 
 import React, { useState } from 'react'
@@ -73,4 +55,3 @@ const ContentNewsletterSignup: React.FC = () => {
 }
 
 export default ContentNewsletterSignup
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

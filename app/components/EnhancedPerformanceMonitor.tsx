@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface EnhancedPerformanceMonitorProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default EnhancedPerformanceMonitor;
-=======
 'use client'
 
 import React, { useEffect, useState } from 'react'
@@ -62,4 +44,3 @@ const EnhancedPerformanceMonitor: React.FC = () => {
 }
 
 export default EnhancedPerformanceMonitor
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

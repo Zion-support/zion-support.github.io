@@ -1,24 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-interface AccessibilityComponentsProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({ 
-  className = '', 
-  children 
-}) => {
-  return (
-    <div className={`accessibility-components ${className}`} role="region" aria-label="Accessibility Components">
-      {children}
-    </div>
-  );
-};
-
-export default AccessibilityComponents;
-=======
 'use client'
 
 import React from 'react'
@@ -36,4 +17,3 @@ const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({ child
 }
 
 export default AccessibilityComponents
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface EnhancedSEOProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const EnhancedSEO: React.FC<EnhancedSEOProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default EnhancedSEO;
-=======
 'use client'
 
 import React from 'react'
@@ -35,4 +17,3 @@ const EnhancedSEO: React.FC<SEOProps> = ({ title, description }) => {
 }
 
 export default EnhancedSEO
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

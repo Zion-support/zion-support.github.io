@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface ContentPromotionBannerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default ContentPromotionBanner;
-=======
 'use client'
 
 import React from 'react'
@@ -60,4 +42,3 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
 }
 
 export default ContentPromotionBanner
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

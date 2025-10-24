@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface SearchModalProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const SearchModal: React.FC<SearchModalProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default SearchModal;
-=======
 'use client'
 
 import React, { useState } from 'react'
@@ -40,4 +22,3 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
 }
 
 export default SearchModal
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

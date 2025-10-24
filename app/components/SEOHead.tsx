@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface SEOHeadProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const SEOHead: React.FC<SEOHeadProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default SEOHead;
-=======
 'use client'
 
 import React from 'react'
@@ -36,4 +18,3 @@ const SEOHead: React.FC<SEOHeadProps> = ({ title, description }) => {
 }
 
 export default SEOHead
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

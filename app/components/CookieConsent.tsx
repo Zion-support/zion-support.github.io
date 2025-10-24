@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface CookieConsentProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const CookieConsent: React.FC<CookieConsentProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default CookieConsent;
-=======
 'use client'
 
 import React, { useState, useEffect } from 'react'
@@ -70,4 +52,3 @@ const CookieConsent: React.FC = () => {
 }
 
 export default CookieConsent
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

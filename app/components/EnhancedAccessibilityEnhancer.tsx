@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface EnhancedAccessibilityEnhancerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default EnhancedAccessibilityEnhancer;
-=======
 'use client'
 
 import React, { useEffect } from 'react'
@@ -63,4 +45,3 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
 }
 
 export default EnhancedAccessibilityEnhancer
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

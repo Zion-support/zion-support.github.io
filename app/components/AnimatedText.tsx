@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface AnimatedTextProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const AnimatedText: React.FC<AnimatedTextProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default AnimatedText;
-=======
 'use client'
 
 import React from 'react'
@@ -45,4 +27,3 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
 }
 
 export default AnimatedText
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

@@ -1,24 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface LazyImageProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const LazyImage: React.FC<LazyImageProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default LazyImage;
-=======
 'use client'
 
 import React, { useState } from 'react'
+import Image from 'next/image'
 
 interface LazyImageProps {
   src: string
@@ -30,9 +13,11 @@ const LazyImage: React.FC<LazyImageProps> = ({ src, alt, className = '' }) => {
   const [loaded, setLoaded] = useState(false)
 
   return (
-    <img
+    <Image
       src={src}
       alt={alt}
+      width={400}
+      height={300}
       className={`lazy-image ${className} ${loaded ? 'loaded' : ''}`}
       onLoad={() => setLoaded(true)}
     />
@@ -40,4 +25,3 @@ const LazyImage: React.FC<LazyImageProps> = ({ src, alt, className = '' }) => {
 }
 
 export default LazyImage
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

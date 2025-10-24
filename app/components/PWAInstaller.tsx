@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface PWAInstallerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const PWAInstaller: React.FC<PWAInstallerProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default PWAInstaller;
-=======
 'use client'
 
 import React, { useState, useEffect } from 'react'
@@ -52,4 +34,3 @@ const PWAInstaller: React.FC = () => {
 }
 
 export default PWAInstaller
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

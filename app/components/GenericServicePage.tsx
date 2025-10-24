@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface GenericServicePageProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const GenericServicePage: React.FC<GenericServicePageProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default GenericServicePage;
-=======
 'use client'
 
 import React from 'react'
@@ -41,4 +23,3 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
 }
 
 export default GenericServicePage
->>>>>>> cursor/fix-errors-and-merge-to-main-2503

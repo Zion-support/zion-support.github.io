@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface EnhancedLoadingStatesProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const EnhancedLoadingStates: React.FC<EnhancedLoadingStatesProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default EnhancedLoadingStates;
-=======
 'use client'
 
 import React from 'react'
@@ -39,4 +21,3 @@ const EnhancedLoadingStates: React.FC<LoadingStateProps> = ({ isLoading, childre
 }
 
 export default EnhancedLoadingStates
->>>>>>> cursor/fix-errors-and-merge-to-main-2503
