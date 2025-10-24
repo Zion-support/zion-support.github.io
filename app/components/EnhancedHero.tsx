@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet-async'
 import { ArrowRight, Phone, Mail, CheckCircle, Zap, Shield, Brain, Globe } from 'lucide-react'
 
 const EnhancedHero: React.FC = () => {
-  const features = [,
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -25,6 +25,7 @@ const EnhancedHero: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
+    }
   ]
 
   const benefits = [

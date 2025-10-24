@@ -10,7 +10,7 @@ interface EnhancedAccessibilityEnhancerProps {
   enableHighContrast?: boolean
   enableFocusManagement?: boolean
   enableVoiceNavigation?: boolean
-
+}
 
 const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({
   children,
@@ -18,7 +18,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
   enableScreenReaderSupport: _enableScreenReaderSupport = true,
   enableHighContrast: _enableHighContrast = false,
   enableFocusManagement: _enableFocusManagement = true,
-  enableVoiceNavigation = false,
+  enableVoiceNavigation: _enableVoiceNavigation = false,
 }) => {
   const [isHighContrast, setIsHighContrast] = useState(false)
   const [_fontSize, setFontSize] = useState('medium')

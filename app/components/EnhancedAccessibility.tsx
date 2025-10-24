@@ -12,7 +12,7 @@ interface AccessibilitySettings {
 
 interface AccessibilityContextType {
   settings: AccessibilitySettings;
-  updateSetting: (key: keyof AccessibilitySettings, value: any) => void;
+  updateSetting: (key: keyof AccessibilitySettings, value: unknown) => void;
   announceToScreenReader: (message: string) => void;
 }
 

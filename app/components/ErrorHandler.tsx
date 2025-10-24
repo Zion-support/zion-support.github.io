@@ -4,7 +4,7 @@ import Navigation from '../components/Navigation'
 import { CheckCircle, Brain, BarChart, Target, ArrowRight } from 'lucide-react'
 
 const Page: React.FC = () => {
-  const features = [,
+  const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -22,6 +22,7 @@ const Page: React.FC = () => {
       title: 'Precision Targeting',
       description: 'Target the right audience with AI-driven precision and accuracy.',
       benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
+    }
   ]
 
   return (
