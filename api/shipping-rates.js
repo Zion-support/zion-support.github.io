@@ -14,35 +14,55 @@ export default async function handler(req, res) {
       serviceType = 'standard' 
     } = req.body || {};
 
+    if (!apiKey) {
+      res.statusCode = 500;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'EasyPost API key not configured' }));
+      return;
+    }
 
-
-    // Mock shipping rates calculation
-    // In a real application, you would integrate with shipping providers like UPS, FedEx, etc.
-    const baseRate = 10; // Base rate in USD
-    const weightMultiplier = weight * 0.5; // $0.50 per pound
-    const distanceMultiplier = destination === 'US' ? 1 : 2; // International shipping costs more
-    
-    const shippingRates = [
-      {
-        service: 'Standard',
-        cost: Math.round((baseRate + weightMultiplier) * distanceMultiplier * 100) / 100,
-        estimatedDays: destination === 'US' ? '3-5' : '7-14'
+    const response = await fetch('https://api.easypost.com/v2/shipments', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`
       },
-        service: 'Express',
-        cost: Math.round((baseRate + weightMultiplier) * distanceMultiplier * 1.5 * 100) / 100,
-        estimatedDays: destination === 'US' ? '1-2' : '3-7'
-        service: 'Overnight',
-        cost: Math.round((baseRate + weightMultiplier) * distanceMultiplier * 2 * 100) / 100,
-        estimatedDays: destination === 'US' ? '1' : '2-3'
-    ];
+      body: JSON.stringify({
+        shipment: {
+          to_address: toAddress,
+          from_address: fromAddress,
+          parcel: parcel
+        }
+      })
+    });
+
+    if (!response.ok) {
+      throw new Error(`EasyPost API error: ${response.status}`);
+    }
+
+    const data = await response.json();
+    const rates = data.shipment.rates || [];
 
     res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({
-      success: true,
-      rates: shippingRates
+      message: 'Shipping rates retrieved successfully',
+      rates: rates.map(rate => ({
+        id: rate.id,
+        service: rate.service,
+        rate: rate.rate,
+        currency: rate.currency,
+        deliveryDays: rate.delivery_days,
+        carrier: rate.carrier
+      }))
     }));
 
   } catch (error) {
     console.error('Shipping rates error:', error);
     res.statusCode = 500;
-    res.end(JSON.stringify({ error: 'Internal server error' }));
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to fetch shipping rates' }));
+  }
+}
+
+module.exports = withSentry(handler);

@@ -9,13 +9,8 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { amount, currency = 'usd' } = req.body;
-
-    if (!amount) {
-      res.statusCode = 400;
-      res.end(JSON.stringify({ error: 'Amount is required' }));
-
-    const paymentIntent = await stripe.paymentIntents.create({
+    const paymentIntent = {
+      id: 'pi_' + Math.random().toString(36).substr(2, 9),
       amount: Math.round(amount * 100), // Convert to cents
       currency,
 

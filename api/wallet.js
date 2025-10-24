@@ -18,15 +18,17 @@ async function handler(req, res) {
     switch (action) {
       case 'create_payment_intent': {
         if (!amount) {
+          res.statusCode = 400;
+          res.setHeader('Content-Type', 'application/json');
           res.end(JSON.stringify({ error: 'Amount is required for payment intent' }));
 
         // Mock payment intent creation
         const paymentIntent = {
-          id: `pi_${Date.now()}`,
+          id: 'pi_' + Math.random().toString(36).substr(2, 9),
           amount: Math.round(amount * 100), // Convert to cents
-          currency: currency.toLowerCase(),
+          currency,
           status: 'requires_payment_method',
-          client_secret: `pi_${Date.now()}_secret_${Math.random().toString(36).substr(2, 9)}`
+          created: Math.floor(Date.now() / 1000)
         };
 
         res.statusCode = 200;
@@ -36,9 +38,10 @@ async function handler(req, res) {
       case 'get_balance': {
         // Mock balance retrieval
         const balance = {
-          available: 1000.00,
-          pending: 0.00,
-          currency: currency.toUpperCase()
+          currency,
+          amount: 0, // In a real app, this would come from a database
+          lastUpdated: new Date().toISOString()
+        };
 
         res.end(JSON.stringify({ balance }));
 
@@ -62,11 +65,68 @@ async function handler(req, res) {
 
         res.end(JSON.stringify({ transactions }));
 
+      case 'add_funds': {
+        if (!amount) {
+          res.statusCode = 400;
+          res.setHeader('Content-Type', 'application/json');
+          res.end(JSON.stringify({ error: 'Amount is required for adding funds' }));
+          return;
+        }
+
+        // In a real app, this would update the database
+        const transaction = {
+          id: 'tx_' + Math.random().toString(36).substr(2, 9),
+          amount: Math.round(amount * 100),
+          currency,
+          type: 'credit',
+          status: 'completed',
+          created: Math.floor(Date.now() / 1000)
+        };
+
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'application/json');
+        res.end(JSON.stringify({
+          message: 'Funds added successfully',
+          transaction
+        }));
+        break;
+      }
+
+      case 'withdraw_funds': {
+        if (!amount) {
+          res.statusCode = 400;
+          res.setHeader('Content-Type', 'application/json');
+          res.end(JSON.stringify({ error: 'Amount is required for withdrawal' }));
+          return;
+        }
+
+        // In a real app, this would check balance and update the database
+        const transaction = {
+          id: 'tx_' + Math.random().toString(36).substr(2, 9),
+          amount: Math.round(amount * 100),
+          currency,
+          type: 'debit',
+          status: 'completed',
+          created: Math.floor(Date.now() / 1000)
+        };
+
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'application/json');
+        res.end(JSON.stringify({
+          message: 'Funds withdrawn successfully',
+          transaction
+        }));
+        break;
+      }
+
       default: {
         res.end(JSON.stringify({ error: 'Invalid action' }));
   } catch (error) {
     console.error('Wallet API error:', error);
     res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Internal server error' }));
+  }
+}
 
-
+module.exports = withSentry(handler);
