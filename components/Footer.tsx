@@ -15,27 +15,26 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
-              <li><Link href="/ai-services" className="text-gray-400 hover:text-white">AI Services</Link></li>
-              <li><Link href="/it-services" className="text-gray-400 hover:text-white">IT Services</Link></li>
-              <li><Link href="/micro-saas" className="text-gray-400 hover:text-white">Micro SaaS</Link></li>
+              <li><Link href="/services" className="text-gray-400 hover:text-white">AI Solutions</Link></li>
+              <li><Link href="/services" className="text-gray-400 hover:text-white">IT Consulting</Link></li>
+              <li><Link href="/services" className="text-gray-400 hover:text-white">Data Analytics</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
-              <li><Link href="/about" className="text-gray-400 hover:text-white">About</Link></li>
-              <li><Link href="/team" className="text-gray-400 hover:text-white">Team</Link></li>
+              <li><Link href="/about" className="text-gray-400 hover:text-white">About Us</Link></li>
               <li><Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <p className="text-gray-400">info@ziontechgroup.com</p>
-            <p className="text-gray-400">+1 (555) 123-4567</p>
+            <p className="text-gray-400">Email: info@ziontechgroup.com</p>
+            <p className="text-gray-400">Phone: +1 (555) 123-4567</p>
           </div>
         </div>
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-          <p className="text-gray-400">&copy; 2025 Zion Tech Group. All rights reserved.</p>
+          <p className="text-gray-400">&copy; 2024 Zion Tech Group. All rights reserved.</p>
         </div>
       </div>
     </footer>

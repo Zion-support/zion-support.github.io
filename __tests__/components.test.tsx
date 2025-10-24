@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import { describe, test, expect } from '@jest/globals';
 import { HelmetProvider } from 'react-helmet-async';
 
 const TestComponent = () => {

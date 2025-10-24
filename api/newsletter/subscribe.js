@@ -1,3 +1,9 @@
+const withSentry = require('../../api/withSentry.cjs');
+
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -6,12 +12,6 @@ async function handler(req, res) {
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
-try{}
-const { email } = req.body;
-;
-if (!email || !isValidEmail(email)) {;
-return res.status(400).json({ error: "'Valid email is required' ",;});
-    }"
 
   try {
     const { email } = req.body || {};

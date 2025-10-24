@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+<<<<<<< HEAD
   // Disable static generation completely
   output: 'export',
   trailingSlash: true,
@@ -21,45 +22,14 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+=======
+>>>>>>> 5293b236622674c6333b6090e66fa97042fa3b60
   typescript: {
     ignoreBuildErrors: true,
   },
-  
-  // Generate build ID for better caching
-  generateBuildId: async () => {
-    return 'build-' + Date.now();
-  },
-  
-  // Headers removed for static export compatibility
-  
-  
-  // Webpack optimizations
-  webpack: (config, { isServer, dev }) => {
-    // Optimize for production
-    if (!dev) {
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
-            chunks: 'all',
-          },
-        },
-      };
-    }
-    
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false,
-        net: false,
-        tls: false,
-      };
-    }
-    
-    return config;
+  eslint: {
+    ignoreDuringBuilds: true,
   },
 }
 
-module.exports = nextConfig
+export default nextConfig

@@ -30,24 +30,50 @@ import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react',;
                   </p>
                 )}
               </div>
-            )}
-
-            <div className="flex flex-col sm:flex-row gap-3">
-              <button
-                onClick={this.handleRetry}
-                className="flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300"
-              >
-                <RefreshCw className="w-4 h-4" />
-                Try Again
-              </button>
               
-              <Link
-                to="/"
-                className="flex items-center justify-center gap-2 border border-white/30 text-white hover:bg-white/10 font-semibold py-3 px-6 rounded-lg transition-all duration-300"
-              >
-                <Home className="w-4 h-4" />
-                Go Home
-              </Link>
+              <h1 className="text-2xl font-bold text-gray-900 mb-2">
+                Oops! Something went wrong
+              </h1>
+              
+              <p className="text-gray-600 mb-6">
+                We're sorry, but something unexpected happened. Please try again or contact support if the problem persists.
+              </p>
+
+              {process.env.NODE_ENV === 'development' && this.state.error && (
+                <details className="mb-6 text-left">
+                  <summary className="cursor-pointer text-sm font-medium text-gray-700 mb-2">
+                    Error Details (Development)
+                  </summary>
+                  <div className="bg-gray-100 p-3 rounded text-xs font-mono text-gray-800 overflow-auto">
+                    <div className="mb-2">
+                      <strong>Error:</strong> {this.state.error.message}
+                    </div>
+                    {this.state.errorInfo && (
+                      <div>
+                        <strong>Stack:</strong>
+                        <pre className="whitespace-pre-wrap mt-1">
+                          {this.state.errorInfo.componentStack}
+                        </pre>
+                      </div>
+                    )}
+                  </div>
+                </details>
+              )}
+
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <button
+                  onClick={this.handleRetry}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
+                >
+                  Try Again
+                </button>
+                <Link
+                  to="/"
+                  className="border border-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-50 transition-colors text-center"
+                >
+                  Go Home
+                </Link>
+              </div>
             </div>
           </div>
         </div>
