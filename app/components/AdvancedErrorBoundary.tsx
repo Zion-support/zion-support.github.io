@@ -1,128 +1,120 @@
-import React from 'react';
+import React, { Component, ReactNode, ErrorInfo } from 'react';
 import { AlertTriangle, Home, Mail, RefreshCw } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 interface AdvancedErrorBoundaryProps {
-  children: ReactNode
-  );
-  className?: string
-  );
-  children: ReactNode
-  );
-  onError?: (error: Error, errorInfo: ErrorInfo) => void
-  );
+  children: ReactNode;
+  className?: string;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface ErrorReport {
-  errorId: string
-  );
-  error: Error
-  );
+  errorId: string;
+  error: Error;
+  errorInfo: ErrorInfo;
+  timestamp: string;
+  userAgent: string;
+  url: string;
 }
 
 interface State {
-  hasError: boolean
-  );
-  error?: Error
-  );
-  errorInfo?: ErrorInfo
-  );
-  errorId?: string
-  );
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+  errorId?: string;
 }
 
 class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State> {
-  constructor(props: "AdvancedErrorBoundaryProps) {
-    super(props)
-    this.state = { hasError: false "}
-
+  constructor(props: AdvancedErrorBoundaryProps) {
+    super(props);
+    this.state = { hasError: false };
   }
 
-  private reportError = (error: "Error", errorInfo: "ErrorInfo) => {
-    const errorReport = {
-      errorId: this.state.errorId || this.generateErrorId()"
-      error
-      errorInfo
-      timestamp: "new Date().toISOString()",
-    userAgent: "navigator.userAgent"
-      url: "window.location.href"
-    }
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+    const errorReport: ErrorReport = {
+      errorId: this.state.errorId || this.generateErrorId(),
+      error,
+      errorInfo,
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      url: window.location.href
+    };
 
-    //Log to console in development
-    if(process.env.NODE_ENV = == "development") {  
-      console.error("Error Boundary caught an error: """, error, errorInfo)
+    // Send error report to monitoring service
+    this.sendErrorReport(errorReport);
+  };
+
+  private generateErrorId = (): string => {
+    return Math.random().toString(36).substr(2, 9);
+  };
+
+  private sendErrorReport = (report: ErrorReport) => {
+    // Implementation for sending error reports
+    console.error('Error Report:', report);
+  };
+
+  static getDerivedStateFromError(error: Error): State {
+    return {
+      hasError: true,
+      error,
+      errorId: Math.random().toString(36).substr(2, 9)
+    };
   }
 
-  componentDidCatch(error: "Error", errorInfo: "ErrorInfo) {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-      hasError: true"
-      error
-      errorInfo)
-    })
-    // Call custom error handler if provided
-  );
-    if (this.props.onError) {}
-      this.props.onError(error, errorInfo)
-    }
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo)
-    }
-    // Log error to external service in production;"
-    if (process.env.NODE_ENV="==" 'production') {}
-      this.logErrorToService(error, errorInfo
-  );
-}
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    // You can integrate with services like Sentry, LogRocket, etc.
-    const errorData = {
-      errorId: this.state.errorId,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
-      error: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      timestamp: new Date().toISOString()
-    }
+      error,
+      errorInfo
+    });
     
-    // Send to external service (implement as needed)
-    console.error('Error logged to service:', errorData)
-  }
-
-    return`error_${Date.now()_${Math.random().toString(36).substr(2, 9)`
+    this.reportError(error, errorInfo);
   }
 
   render() {
     if (this.state.hasError) {
       return (
         <div className={`min-h-screen flex items-center justify-center bg-gray-50 ${this.props.className || ''}`}>
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">
-            <AlertTriangle className="h-16 w-16 text-red-500 mx-auto mb-4" />
-            <h1 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong</h1>
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+            <div className="flex items-center mb-4">
+              <AlertTriangle className="h-8 w-8 text-red-500 mr-3" />
+              <h1 className="text-xl font-semibold text-gray-900">Something went wrong</h1>
+            </div>
+            
             <p className="text-gray-600 mb-6">
-              We're sorry, but something unexpected happened. Please try again.
+              We're sorry, but something unexpected happened. Our team has been notified.
             </p>
+            
             <div className="space-y-3">
               <button
-                onClick={this.handleRetry}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 flex items-center justify-center"
+                onClick={() => window.location.reload()}
+                className="w-full flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
               >
                 <RefreshCw className="h-4 w-4 mr-2" />
                 Try Again
               </button>
-              <button onClick={() => window.location.href="/"} > <Home className="icon" />
+              
+              <button
+                onClick={() => window.location.href = '/'}
+                className="w-full flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-colors"
+              >
+                <Home className="h-4 w-4 mr-2" />
                 Go Home
+              </button>
+              
+              <button
+                onClick={() => window.location.href = 'mailto:support@ziontechgroup.com'}
+                className="w-full flex items-center justify-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
+              >
+                <Mail className="h-4 w-4 mr-2" />
+                Contact Support
               </button>
             </div>
           </div>
         </div>
-      )
-   , }
+      );
+    }
 
-    return this.props.children
+    return this.props.children;
   }
 }
 
 export default AdvancedErrorBoundary;
-  
