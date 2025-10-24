@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 import React from 'react';
 const PerformanceDashboard = () => {};
@@ -10,19 +11,35 @@ const PerformanceDashboard = () => {};
         </div>
         <h1 className="tex t-3xlfont-bold text-gray-900 mb-6">
         </div>
+=======
+import React from "react";
+
+interface PerformanceDashboardProps {
+  // Add props here
+}
+
+const PerformanceDashboard: React.FC<PerformanceDashboardProps> = () => {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">
+>>>>>>> origin/main
           PerformanceDashboard
         </h1>
-        <div className="bg-wh iterounded-lg shadow-md p-6">
-        </div>
-        </div>
-          <p className="tex t-gray-600">
-        </div>
-            This page is under construction. Please check back later.
+        <div className="prose max-w-none">
+          <p className="text-lg text-gray-600">
+            This is a placeholder for the PerformanceDashboard page.
           </p>
         </div>
       </div>
-    </div>;
+    </div>
   );
+<<<<<<< HEAD
 {};
 }
 export default PerformanceDashboard;
+=======
+};
+
+export default PerformanceDashboard;
+>>>>>>> origin/main

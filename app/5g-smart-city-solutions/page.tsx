@@ -1,139 +1,113 @@
 import React from 'react';
-import Head from "next/head";
-
 import Link from 'next/link';
-import { Wifi, ArrowRight, Users, CheckCircle, Brain, Building } from 'lucide-react';
+import { Wifi, ArrowRight, CheckCircle } from 'lucide-react';
 
-export default function FiveGSmartCitySolutions() {
+export default function FiveGSmartCitySolutionsPage() {
   const features = [
     {
-      icon: <Wifi className="w-6 h-6 text-cyan-400" />,
-      title: 'Ultra-Fast Connectivity',
-      description: '5G networks providing 10x faster speeds and ultra-low latency for smart city applications'
+      icon: <Wifi className="w-8 h-8" />,
+      title: 'Feature 1',
+      description: 'Description of the first key feature.',
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3', 'Benefit 4']
     },
     {
-      icon: <Building className="w-6 h-6 text-purple-400" />,
-      title: 'Smart Infrastructure',
-      description: 'Intelligent traffic management, energy optimization, and environmental monitoring systems'
+      icon: <Wifi className="w-8 h-8" />,
+      title: 'Feature 2',
+      description: 'Description of the second key feature.',
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3', 'Benefit 4']
     },
     {
-      icon: <Brain className="w-6 h-6 text-yellow-400" />,
-      title: 'AI-Powered Analytics',
-      description: 'Machine learning algorithms analyze city data to optimize services and improve quality of life'
+      icon: <Wifi className="w-8 h-8" />,
+      title: 'Feature 3',
+      description: 'Description of the third key feature.',
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3', 'Benefit 4']
     },
     {
-      icon: <Users className="w-6 h-6 text-green-400" />,
-      title: 'Citizen Engagement',
-      description: 'Digital platforms connecting citizens with city services and enabling participatory governance'
+      icon: <Wifi className="w-8 h-8" />,
+      title: 'Feature 4',
+      description: 'Description of the fourth key feature.',
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3', 'Benefit 4']
     }
   ];
 
-  const smartCityModules = [
-    {
-      category: 'Transportation',
-      items: ['Smart Traffic Lights', 'Autonomous Vehicle Support', 'Public Transit Optimization', 'Parking Management', 'Traffic Analytics', 'Emergency Response']
-    },
-    {
-      category: 'Energy & Environment',
-      items: ['Smart Grid Management', 'Air Quality Monitoring', 'Waste Management', 'Water Systems', 'Renewable Energy', 'Carbon Footprint Tracking']
-    },
-    {
-      category: 'Public Safety',
-      items: ['Video Surveillance', 'Emergency Alerts', 'Crime Prevention', 'Disaster Response', 'Crowd Management', 'Health Monitoring']
-    },
-    {
-      category: 'Digital Services',
-      items: ['Citizen Portal', 'Mobile Apps', 'Digital Payments', 'Service Requests', 'Open Data Platform', 'E-Government']
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: 'Pilot Program',
-      price: '$50,000',
-      period: 'one-time',
-      description: 'Perfect for small cities starting their smart city journey',
-      features: [
-        'Basic 5G infrastructure',
-        'Core smart modules',
-        'Citizen engagement platform',
-        '6-month implementation',
-        'Training and support'
-      ],
-      popular: false
-    },
-    {
-      name: 'Smart City Pro',
-      price: '$250,000',
-      period: 'one-time',
-      description: 'Comprehensive solution for medium-sized cities',
-      features: [
-        'Full 5G network deployment',
-        'Complete smart city suite',
-        'Advanced AI analytics',
-        '12-month implementation',
-        'Dedicated support team',
-        'Custom integrations'
-      ],
-      popular: true
-    },
-    {
-      name: 'Mega City',
-      price: 'Custom',
-      period: 'pricing',
-      description: 'Enterprise solution for large metropolitan areas',
-      features: [
-        'City-wide 5G coverage',
-        'Custom smart city modules',
-        'White-label platform',
-        'Multi-year implementation',
-        '24/7 support team',
-        'SLA guarantee'
-      ],
-      popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Mayor Sarah Johnson',
-      company: 'Tech Valley City',
-      content: '5G Smart City Solutions transformed our city. Traffic congestion reduced by 30% and citizen satisfaction increased significantly.',
-      rating: 5
-    },
-    {
-      name: 'David Chen',
-      company: 'Metro Planning Department',
-      content: 'The AI-powered analytics help us make data-driven decisions. Our energy efficiency improved by 25% in the first year.',
-      rating: 5
-    },
-    {
-      name: 'Lisa Rodriguez',
-      company: 'Urban Development Corp',
-      content: 'Citizen engagement platform is incredible. Residents can now access city services 24/7 through their smartphones.',
-      rating: 5
-    }
+  const stats = [
+    { number: '95%', label: 'Success Rate' },
+    { number: '80%', label: 'Efficiency Gain' },
+    { number: '1000+', label: 'Projects Completed' },
+    { number: '99.9%', label: 'Uptime Guarantee' }
   ];
 
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+            5G Smart City Solutions
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Next-generation connectivity for smart cities.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
+            >
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+            <Link
+              href="/demo"
+              className="border border-gray-300 text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors"
+            >
+              View Demo
+            </Link>
+          </div>
+        </div>
 
-        <Head>
-        <title>5G Smart City Solutions - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+              <div className="text-gray-300">{stat.label}</div>
+            </div>
+          ))}
+        </div>
 
-      <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="con tainermx-auto px-4 py-16">
-          <h1 className="tex t-4xlfont-bold text-white mb-6">5G Smart City Solutions</h1>
-          <p className="tex t-lgtext-gray-300 mb-8">Professional 5G smart city solutions by Zion Tech Group. Transform your city with our expert solutions.</p>
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Key Features</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <div className="flex items-center mb-4">
+                  <div className="text-blue-400 mr-4">{feature.icon}</div>
+                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                </div>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
 
-          <Link href="/contact" className="inl ine-flexitems-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-            Contact Us
-            <ArrowRight className="ml-2h-4w-4" />
+        <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-8">
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
+          <p className="text-gray-300 mb-6">Contact us today to learn more about our solutions.</p>
+          <Link
+            href="/contact"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center"
+          >
+            Get Started Now
+            <ArrowRight className="ml-2 w-5 h-5" />
           </Link>
         </div>
       </div>
-    </>
+    </div>
   );
 }
