@@ -1,45 +1,42 @@
-// Type definitions for API client
-// RequestInit is a built-in TypeScript type for fetch options
-export interface ApiResponse<T = unknown> {
+// API Client for making HTTP requests
+interface RequestOptions {
+  method?: string;
+  headers?: Record<string, string>;
+  body?: string | FormData;
+  timeout?: number;
+}
+
+interface ApiResponse<T = unknown> {
   data: T;
   status: number;
   statusText: string;
   headers: Record<string, string>;
 }
 
-export interface RequestOptions extends globalThis.RequestInit {
-  timeout?: number;
-  retries?: number;
-}
-
-export class ApiClient {
+class ApiClient {
   private baseURL: string;
-  private defaultOptions: RequestOptions;
+  private defaultHeaders: Record<string, string>;
 
-  constructor(baseURL = '', options: RequestOptions = {}) {
+  constructor(baseURL: string = '/api', defaultHeaders: Record<string, string> = {}) {
     this.baseURL = baseURL;
-    this.defaultOptions = {
-      timeout: 30000,
-      retries: 3,
-      ...options,
+    this.defaultHeaders = {
+      'Content-Type': 'application/json',
+      ...defaultHeaders,
     };
   }
 
-  private async makeRequest<T>(
-    url: string,
-    options: RequestOptions = {}
-  ): Promise<ApiResponse<T>> {
-    const { timeout = 30000, retries: _retries = 3, ...fetchOptions } = {
-      ...this.defaultOptions,
-      ...options,
-    };
-
+  private async makeRequest<T>(url: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), timeout);
+    const timeoutId = setTimeout(() => controller.abort(), options.timeout || 10000);
 
     try {
       const response = await fetch(url, {
-        ...fetchOptions,
+        method: options.method || 'GET',
+        headers: {
+          ...this.defaultHeaders,
+          ...options.headers,
+        },
+        body: options.body,
         signal: controller.signal,
       });
 
@@ -69,38 +66,18 @@ export class ApiClient {
     });
   }
 
-  async post<T>(url: string, data?: unknown, options: RequestOptions = {}): Promise<ApiResponse<T>> {
+  async post<T>(url: string, data: unknown, options: RequestOptions = {}): Promise<ApiResponse<T>> {
     return this.makeRequest<T>(`${this.baseURL}${url}`, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        ...options.headers,
-      },
-      body: data ? JSON.stringify(data) : undefined,
+      body: JSON.stringify(data),
       ...options,
     });
   }
 
-  async put<T>(url: string, data?: unknown, options: RequestOptions = {}): Promise<ApiResponse<T>> {
+  async put<T>(url: string, data: unknown, options: RequestOptions = {}): Promise<ApiResponse<T>> {
     return this.makeRequest<T>(`${this.baseURL}${url}`, {
       method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-        ...options.headers,
-      },
-      body: data ? JSON.stringify(data) : undefined,
-      ...options,
-    });
-  }
-
-  async patch<T>(url: string, data?: unknown, options: RequestOptions = {}): Promise<ApiResponse<T>> {
-    return this.makeRequest<T>(`${this.baseURL}${url}`, {
-      method: 'PATCH',
-      headers: {
-        'Content-Type': 'application/json',
-        ...options.headers,
-      },
-      body: data ? JSON.stringify(data) : undefined,
+      body: JSON.stringify(data),
       ...options,
     });
   }
@@ -108,6 +85,14 @@ export class ApiClient {
   async delete<T>(url: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
     return this.makeRequest<T>(`${this.baseURL}${url}`, {
       method: 'DELETE',
+      ...options,
+    });
+  }
+
+  async patch<T>(url: string, data: unknown, options: RequestOptions = {}): Promise<ApiResponse<T>> {
+    return this.makeRequest<T>(`${this.baseURL}${url}`, {
+      method: 'PATCH',
+      body: JSON.stringify(data),
       ...options,
     });
   }

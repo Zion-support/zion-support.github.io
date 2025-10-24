@@ -1,18 +1,14 @@
-import React, { useEffect, useState } from 'react'
-import { MessageSquare, Video } from 'lucide-react'
-import { use_messaging } from '@/context / MessagingContext'
-import { ProtectedRoute } from '@/components / ProtectedRoute'
-import { ConversationsList, ConversationDetailView } from '@/components / messaging'
-import { useIsMobile } from '@/hooks / use - mobile'
-import { toast } from 'sonner'
-import { Button } from '@/components/ui/button'
-import { LoadingSpinner } from '@/components/ui/enhanced-loading-states'
-import { useRouter } from 'next/router'; // Changed from react-router-dom
+import React, { useEffect, useState } from 'react';
+import { MessageSquare, Video  } from 'lucide-react';
+import { use_messaging  } from '@/context / MessagingContext';import { ProtectedRoute  } from '@/components / ProtectedRoute';
+import { ConversationsList, ConversationDetailView  } from '@/components / messaging';import { useIsMobile  } from '@/hooks / use - mobile';
+import { toast  } from 'sonner';import { Button  } from '@/components/ui/button';
+import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states';import { useRouter } from 'next/router'; // Changed from react-router-dom
 
 
-import React, { useEffect, useState } from 'react',
-import { MessageSquare, Video } from 'lucide-react'
-import { useMessaging } from '@/context/MessagingContext',
+import React, { useEffect, useState } from 'react',;
+import { MessageSquare, Video  } from 'lucide-react';
+import { useMessaging  } from '@/context/MessagingContext';,
 import { ProtectedRoute } from '@/components/ProtectedRoute',
 import { ConversationsList, ConversationDetailView } from '@/components/messaging',
 import { useIsMobile } from '@/hooks/use-mobile',
@@ -43,7 +39,8 @@ export default function MessagingInbox() {
   const isMobile = useIsMobile()
   const router = useRouter(), // Changed from navigate
   const [activeCall, setActiveCall] = useState<string | null>(null)
-  useEffect((,) => {
+  useEffect((,) =>
+                {
   const { 
     conversations,
 
@@ -61,18 +58,21 @@ export default function MessagingInbox() {
   const router = useRouter(), // Changed from navigate
   const [activeCall, setActiveCall] = useState<string | null>(null),
   
-  useEffect(() => {
+  useEffect(() =>
+                {
   const [activeCall, setActiveCall] = useState<string | null>(null)
-  useEffect((,) => {
+  useEffect((,) =>
+                {
   const [activeCall, setActiveCall] = useState<string | null>(null),
   
-  useEffect(() => {
+  useEffect(() =>
+                {
 
     // Fetch conversations when component mounts
-    const loadData = async () => {
-import { Button } from '@/components / ui / button'
-import { LoadingSpinner } from '@/components / ui / enhanced - loading - states'
-import { use_router } from 'next / router'; // Changed from react-router-dom
+    const loadData = async () =>
+                {;
+import { Button  } from '@/components / ui / button';
+import { LoadingSpinner  } from '@/components / ui / enhanced - loading - states';import { use_router } from 'next / router'; // Changed from react-router-dom
 import {logErrorToProduction} from '@/utils / production_logger'
 export default /**
  * MessagingInbox - Function description
@@ -89,9 +89,11 @@ function MessagingInbox() {
   const is_mobile = useIsMobile ()
   const router = use_router (), // Changed from navigate
   const [active_call, setActiveCall] = useState < string | null>(null)
-  useEffect ((, ) => {
+  useEffect ((, ) =>
+                {
     // Fetch conversations when component mounts
-    const load_data = async () => {
+    const load_data = async () =>
+                {
       try {
         await fetchConversations()
       } catch (error) {
@@ -105,7 +107,7 @@ function MessagingInbox() {
     }
     loadData()
   }, [fetchConversations])
-  const startVideoCall = () => {
+  const startVideoCall  = () => {
     if (!activeConversation) {
       toast.error("Please select a conversation first")
       return
@@ -143,11 +145,11 @@ function MessagingInbox() {
 
   
   return (
-    <ProtectedRoute>
-      <div className="min-h-screen bg-zion-blue">
-        <div className="container mx-auto py-8 px-4">
-          <div className="flex justify-between items-center mb-6">
-            <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold text-white flex items-center gap-2`}>
+    <ProtectedRoute></ProtectedRoute>
+      <div className="min-h-screen bg-zion-blue"></div>
+        <div className="container mx-auto py-8 px-4"></div>
+          <div className="flex justify-between items-center mb-6"></div>
+            <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold text-white flex items-center gap-2`}></h1>
               <MessageSquare className="h-6 w-6" />
               Messages
             </h1>
@@ -156,17 +158,18 @@ function MessagingInbox() {
 
 
 
-  useEffect((,) => {
+  useEffect((,) =>
+                {
             {activeConversation && (
               <Button 
                 onClick={startVideoCall}
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
-              >
+              ></Button>
                 <Video className="h-4 w-4" />
                 Start Call
               </Button>
             )}
-          </div>
+                </div>
           
 
 
@@ -175,9 +178,9 @@ function MessagingInbox() {
 
               
 
-import React, { useEffect, useState } from 'react',
-import { MessageSquare, Video } from 'lucide-react'
-import { useMessaging } from '@/context/MessagingContext',
+import React, { useEffect, useState } from 'react',;
+import { MessageSquare, Video  } from 'lucide-react';
+import { useMessaging  } from '@/context/MessagingContext';,
 import { ProtectedRoute } from '@/components/ProtectedRoute',
 import { ConversationsList, ConversationDetailView } from '@/components/messaging',
 import { useIsMobile } from '@/hooks/use-mobile',
@@ -198,9 +201,11 @@ export default function MessagingInbox() {
   const isMobile = useIsMobile(),
   const router = useRouter(), // Changed from navigate
   const [activeCall, setActiveCall] = useState<string | null>(null),
-  useEffect(() => {
+  useEffect(() =>
+                {
     // Fetch conversations when component mounts
-    const loadData = async () => {
+    const loadData = async () =>
+                {
       try {
         await fetchConversations()
       } catch (error) {
@@ -210,7 +215,7 @@ export default function MessagingInbox() {
     },
     loadData()
   }, [fetchConversations]),
-  const startVideoCall = () => {
+  const startVideoCall  = () => {
     if (!activeConversation) {
       toast.error("Please select a conversation first"),
       return
@@ -226,27 +231,26 @@ export default function MessagingInbox() {
     router.push(`/call/${roomId}`), // Changed from navigate
   }
   return (
-    <ProtectedRoute>
-      <div className="min-h-screen bg-zion-blue">
-        <div className="container mx-auto py-8 px-4">
-          <div className="flex justify-between items-center mb-6">
-            <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold text-white flex items-center gap-2`}>
+    <ProtectedRoute></ProtectedRoute>
+      <div className="min-h-screen bg-zion-blue"></div>
+        <div className="container mx-auto py-8 px-4"></div>
+          <div className="flex justify-between items-center mb-6"></div>
+            <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold text-white flex items-center gap-2`}></h1>
               <MessageSquare className="h-6 w-6" />
               Messages</$1>
-            {activeConversation && (
+                {activeConversation && (
               <Button
                 onClick = {startVideoCall,};
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light">
                 <Video className="h-4 w-4" />
                 Start Call</$1>
             )}
-
-          </div>
-          <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">
-            <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>
-              {/* Conversations List */}
+                </div>
+          <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden"></div>
+            <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}></div>
+                {/* Conversations List */}
               {isLoading ? (
-                <div className="flex-1 flex items-center justify-center p-8">
+                <div className="flex-1 flex items-center justify-center p-8"></div>
                   <LoadingSpinner variant="primary" /></$1>
               ) : (
                 <ConversationsList
@@ -258,14 +262,14 @@ export default function MessagingInbox() {
               )}
 
               {/* Conversation Detail */}
-              <ConversationDetailView />
+                <ConversationDetailView />
             </div>
-          </div>
+                </div>
         </div>
-        {/* Add extra bottom padding on mobile to account for the bottom nav */}
+                {/* Add extra bottom padding on mobile to account for the bottom nav */}
         {isMobile && <div className="h-16"></div>}
-      </div>
-    </ProtectedRoute>
+                </div>
+                </ProtectedRoute>
 )
 }
 loadData () 
@@ -285,7 +289,9 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
 }> <MessageSquare className="h-6 w-6" /> activeConversation && (<ButtononClick={
   startVideoCall "
 }className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"> <Video className="h-4 w-4" /> Start Call </Button>) 
-}</div> </div>) : (<ConversationsListconversations= {
+}
+                </div>
+                </div>) : (<ConversationsListconversations= {
   conversations 
 }activeConversation= {
   activeConversation 
@@ -296,7 +302,10 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
 
 }/>) 
 }{/* Conversation Detail */ 
-}<ConversationDetailView /> </div> </div> </div> </div> </ProtectedRoute>) 
+}
+                <ConversationDetailView /> </div>
+                </div> </div>
+                </div> </ProtectedRoute>) 
 }'"}
 
         logErrorToProduction ('Failed to load conversations:', { data: error }),
@@ -325,26 +334,27 @@ if ( {) {
   }
 
   return (
-    <ProtectedRoute>
-      <div className="min - h-screen bg - zion - blue">
-        <div className="container mx - auto py - 8 px - 4">
-          <div className="flex justify - between items - center mb - 6">
-            <h1 className={`text-${is_mobile ? '2xl' : '3xl'} font - bold text - white flex items - center gap - 2`}>
+    <ProtectedRoute></ProtectedRoute>
+      <div className="min - h-screen bg - zion - blue"></div>
+        <div className="container mx - auto py - 8 px - 4"></div>
+          <div className="flex justify - between items - center mb - 6"></div>
+            <h1 className={`text-${is_mobile ? '2xl' : '3xl'} font - bold text - white flex items - center gap - 2`}></h1>
               <MessageSquare className="h - 6 w - 6" />
               Messages</$1>
-            {active_conversation && (
+                {active_conversation && (
               <Button
                 on_click = {startVideoCall, };
                 className="flex items - center gap - 2 bg - zion - purple hover:bg - zion - purple - light"
-              >
+              ></Button
+>
                 <Video className="h - 4 w - 4" />
                 Start Call</$1>)}
-          </div>
-          <div className="bg - zion - blue - light / 10 rounded - lg shadow - lg border border - zion - purple / 20 overflow - hidden">
-            <div className={`flex flex - col md:flex - row h-[${is_mobile ? '85vh' : '75vh'}]`}>
-              {/* Conversations List */}
+                </div>
+          <div className="bg - zion - blue - light / 10 rounded - lg shadow - lg border border - zion - purple / 20 overflow - hidden"></div>
+            <div className={`flex flex - col md:flex - row h-[${is_mobile ? '85vh' : '75vh'}]`}></div>
+                {/* Conversations List */}
               {is_loading ? (
-                <div className="flex - 1 flex items - center justify - center p - 8">
+                <div className="flex - 1 flex items - center justify - center p - 8"></div>
                   <LoadingSpinner variant="primary" /></$1>) : (
                 <ConversationsList
                   conversations = {conversations, };
@@ -353,10 +363,12 @@ if ( {) {
                   markAsRead = {markAsRead, };
                 />)}
               {/* Conversation Detail */}
-              <ConversationDetailView /></$1></$1></$1>
-        {/* Add extra bottom padding on mobile to account for the bottom nav */}
+                <ConversationDetailView /></$1>
+                </$1></$1>
+                {/* Add extra bottom padding on mobile to account for the bottom nav */}
         {is_mobile && <div className="h - 16"></div>}
-      </div></$1>)
+                </div>
+                </$1>)
 }
 load_data () 
 }, [fetch_conversations])
@@ -375,7 +387,9 @@ return (<ProtectedRoute> <div className="min - h-screen bg - zion - blue" > <div
 }> <MessageSquare className="h - 6 w - 6" /> active_conversation && (<Button on_click={
   startVideoCall "
 }className="flex items - center gap - 2 bg - zion - purple hover:bg - zion - purple - light" > <Video className="h - 4 w - 4" /> Start Call </Button>) 
-}</div> </div>) : (<ConversationsList conversations= {
+}
+                </div>
+                </div>) : (<ConversationsList conversations= {
   conversations 
 }active_conversation= {
   active_conversation 
@@ -384,12 +398,15 @@ return (<ProtectedRoute> <div className="min - h-screen bg - zion - blue" > <div
 }markAsRead= {
   markAsRead 
 }/>) 
-}{
-  /* Conversation Detail */ 
-}<ConversationDetailView /> </div> </div> </div> </div> </ProtectedRoute>) 
+}{/* Conversation Detail */ 
+}
+                <ConversationDetailView /> </div>
+                </div> </div>
+                </div> </ProtectedRoute>) 
 }'"}
 
 
 
   )
 }
+;

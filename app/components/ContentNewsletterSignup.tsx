@@ -1,103 +1,83 @@
-'use client';
-
 import React, { useState } from 'react';
-import { Mail, CheckCircle, AlertCircle } from 'lucide-react';
+import { CheckCircle, ArrowRight } from 'lucide-react';
 
 interface ContentNewsletterSignupProps {
   title?: string;
-  description?: string;
+  subtitle?: string;
   placeholder?: string;
   buttonText?: string;
-  onSubscribe?: (_email: string) => Promise<void>;
+  onSubscribe?: (email: string) => Promise<void>;
 }
 
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
-  title = 'Stay Updated',
-  description = 'Get the latest news and updates delivered to your inbox.',
-  placeholder = 'Enter your email address',
-  buttonText = 'Subscribe',
-  onSubscribe,
+  title = "Stay Updated with Our Latest Insights",
+  subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
+  placeholder = "Enter your email address",
+  buttonText = "Subscribe",
+  onSubscribe
 }) => {
   const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-  const [message, setMessage] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubscribed, setIsSubscribed] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!email || !onSubscribe) return;
     
-    if (!email) {
-      setStatus('error');
-      setMessage('Please enter your email address');
-      return;
-    }
-
-    setStatus('loading');
-    setMessage('Subscribing...');
-
+    setIsSubmitting(true);
     try {
-      if (onSubscribe) {
-        await onSubscribe(email);
-      } else {
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1000));
-      }
-      
-      setStatus('success');
-      setMessage('Successfully subscribed!');
-      setEmail('');
-    } catch (_error) {
-      setStatus('error');
-      setMessage('Failed to subscribe. Please try again.');
+      await onSubscribe(email);
+      setIsSubscribed(true);
+    } catch (error) {
+      console.error('Subscription failed:', error);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
-  return (
-    <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-8 text-white">
-      <div className="text-center mb-6">
-        <Mail className="w-12 h-12 mx-auto mb-4 text-blue-200" />
-        <h3 className="text-2xl font-bold mb-2">{title}</h3>
-        <p className="text-blue-100">{description}</p>
+  if (isSubscribed) {
+    return (
+      <div className="bg-emerald-900/20 border border-emerald-500/30 rounded-lg p-8 text-center">
+        <CheckCircle className="w-16 h-16 text-emerald-400 mx-auto mb-4" />
+        <h3 className="text-2xl font-bold text-white mb-2">Thank you for subscribing!</h3>
+        <p className="text-emerald-300">You'll receive our latest updates soon.</p>
       </div>
+    );
+  }
 
-      <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-        <div className="flex flex-col sm:flex-row gap-2">
+  return (
+    <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8">
+      <div className="text-center mb-6">
+        <h3 className="text-2xl font-bold text-white mb-2">{title}</h3>
+        <p className="text-gray-300">{subtitle}</p>
+      </div>
+      
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="flex flex-col sm:flex-row gap-3">
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder={placeholder}
-            className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300"
-            disabled={status === 'loading'}
+            className="flex-1 px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+            required
           />
           <button
             type="submit"
-            disabled={status === 'loading'}
-            className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+            disabled={isSubmitting}
+            className="bg-emerald-600 hover:bg-emerald-700 disabled:opacity-50 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
           >
-            {status === 'loading' ? (
-              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
+            {isSubmitting ? (
+              <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
             ) : (
-              buttonText
+              <>
+                {buttonText}
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </>
             )}
           </button>
         </div>
-
-        {message && (
-          <div className={`mt-4 p-3 rounded-lg flex items-center space-x-2 ${
-            status === 'success' ? 'bg-green-100 text-green-800' :
-            status === 'error' ? 'bg-red-100 text-red-800' :
-            'bg-blue-100 text-blue-800'
-          }`}>
-            {status === 'success' && <CheckCircle className="w-5 h-5" />}
-            {status === 'error' && <AlertCircle className="w-5 h-5" />}
-            <span className="text-sm">{message}</span>
-          </div>
-        )}
       </form>
-
-      <p className="text-center text-blue-200 text-sm mt-4">
-        We respect your privacy. Unsubscribe at any time.
-      </p>
     </div>
   );
 };

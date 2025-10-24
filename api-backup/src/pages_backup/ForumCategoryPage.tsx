@@ -18,9 +18,8 @@
     adminOnly: true
     icon: "Megaphone"
 
-import { log_info } from '@/utils / production_logger'
-import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
-// Mock category data
+import { log_info  } from '@/utils / production_logger';
+import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search  } from 'lucide-react';// Mock category data
 const categories_info: Record < string, ForumCategoryInfo> = {
   "getting - hired": {
     id: "getting - hired",
@@ -61,7 +60,7 @@ function CategoryContent({
   user}: {
   categoryId: string
   category: ForumCategoryInfo
-  IconComponent: React.ComponentType<any>
+  IconComponent: React.ComponentType<any></any>
   user: any
 }) {
 
@@ -98,7 +97,7 @@ function CategoryContent({
   const canCreatePost = user && (!category.adminOnly |user.userType === 'admin' |user.role === 'admin')
   const { isFollowed, follow, unfollow } = useFollowedCategories()
   const { toast } = useToast()
-  const handleFollow = () => {
+  const handleFollow  = () => {
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
 
@@ -115,18 +114,17 @@ function CategoryContent({
 
 
 
-  const handleFollow = () => {
+  const handleFollow  = () => {
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' })
       return
 
 
 
-import React from 'react'
-import { logInfo } from '@/utils/productionLogger'
-import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
-import { logInfo } from '@/utils/productionLogger'
-import { useState, useEffect } from "react",
+import React from 'react';
+import { logInfo  } from '@/utils/productionLogger';
+import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search  } from 'lucide-react';import { logInfo  } from '@/utils/productionLogger';
+import { useState, useEffect  } from 'react';,
 import Link from "next/link",
 import { useRouter } from "next/router",
 import { Suspense } from "react",
@@ -221,7 +219,7 @@ function CategoryContent({
   const canCreatePost = user && (!category.adminOnly || user.userType === 'admin' || user.role === 'admin'),
   const { isFollowed, follow, unfollow } = useFollowedCategories(),
   const { toast } = useToast(),
-  const handleFollow = () => {
+  const handleFollow  = () => {
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
       return
@@ -229,28 +227,37 @@ function CategoryContent({
   logInfo('CategoryContent - categoryPosts:', { data: categoryPosts }),
   logInfo('CategoryContent - filteredPosts:', { data: filteredPosts }),
   return (
-    <div className="container py-8">
-      <div className="flex items-center gap-3 mb-6">
-        <Link href="/community" className="text-sm text-muted-foreground hover:text-foreground">
+    <div className="container py-8"></div>
+      <div className="flex items-center gap-3 mb-6"></div>
+        <Link href="/community" className="text-sm text-muted-foreground hover:text-foreground"></Link>
           Forum</$1>
         <span className="text-muted-foreground">/</span>
-        <span className="font-medium">{category.name}</span></$1>
-      <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
-        <div className="flex items-center gap-4">
-          <div className="p-3 bg-zion-purple/10 rounded-full">
+        <span className="font-medium"></span>
+                {category.name}
+                </span>
+                </$1>
+      <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4"></div>
+        <div className="flex items-center gap-4"></div>
+          <div className="p-3 bg-zion-purple/10 rounded-full"></div>
             <IconComponent className="h-8 w-8 text-zion-purple" /></$1>
-          <div>
-            <h1 className="text-3xl font-bold">{category.name}</h1>
-            <p className="text-muted-foreground mt-1">{category.description}</p></$1></$1>
-        <div className="flex items-center gap-2">
-          {canCreatePost && <CreatePostButton categoryId={categoryId} />}
-          <Button
+          <div></div>
+            <h1 className="text-3xl font-bold"></h1>
+                {category.name}
+                </h1>
+            <p className="text-muted-foreground mt-1"></p>
+                {category.description}
+                </p>
+                </$1></$1>
+        <div className="flex items-center gap-2"></div>
+                {canCreatePost && <CreatePostButton categoryId={categoryId} />}
+                <Button
             variant={isFollowed(categoryId) ? 'outline' : 'default'}
             onClick={handleFollow}
-          >
-            {isFollowed(categoryId) ? 'Following' : 'Follow'}
-          </Button>
-        </div>
+          ></Button
+>
+                {isFollowed(categoryId) ? 'Following' : 'Follow'}
+                </Button>
+                </div>
       </div>
 
 
@@ -301,5 +308,5 @@ if ( {) {
 }
   )
 }
-
-</$1></a></a>
+                </$1>
+                </a></a>;

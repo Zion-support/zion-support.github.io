@@ -1,4 +1,5 @@
 export interface Service {
+
   id: string;
   title: string;
   description: string;
@@ -9,14 +10,15 @@ export interface Service {
     pro: string;
     enterprise: string};
   contactInfo: {
-    website: string;
+  website: string;
     email: string;
     phone: string};
   price?: string;
   icon?: string;
   href: string;
   popular?: boolean;
-  category: "ai" | "it" | "cloud" | "security" | "data" | "automation"}
+  category: "ai" | "it" | "cloud" | "security" | "data" | "automation";
+}
 
 export const aiServices: Service[] = [
   {
@@ -37,8 +39,8 @@ export const aiServices: Service[] = [
       "Cost savings"
     ],
     pricing: {
-      basic: "$999/month",
-      pro: "$2,999/month",
+      basic: "$299/month",
+      pro: "$999/month",
       enterprise: "Custom pricing"
     },
     contactInfo: {
@@ -46,7 +48,7 @@ export const aiServices: Service[] = [
       email: "sales@ziontechgroup.com",
       phone: "+1-555-0123"
     },
-    price: "Starting at $999/month",
+    price: "Starting at $299/month",
     icon: "📊",
     href: "/services/ai-analytics",
     popular: true,
@@ -70,8 +72,8 @@ export const aiServices: Service[] = [
       "Scalable solutions"
     ],
     pricing: {
-      basic: "$1,499/month",
-      pro: "$3,999/month",
+      basic: "$499/month",
+      pro: "$999/month",
       enterprise: "Custom pricing"
     },
     contactInfo: {
@@ -79,7 +81,7 @@ export const aiServices: Service[] = [
       email: "sales@ziontechgroup.com",
       phone: "+1-555-0123"
     },
-    price: "Starting at $1,499/month",
+    price: "Starting at $499/month",
     icon: "🤖",
     href: "/services/ai-automation",
     popular: true,
@@ -103,8 +105,8 @@ export const aiServices: Service[] = [
       "Scalable support"
     ],
     pricing: {
-      basic: "$799/month",
-      pro: "$2,499/month",
+      basic: "$199/month",
+      pro: "$499/month",
       enterprise: "Custom pricing"
     },
     contactInfo: {
@@ -112,13 +114,13 @@ export const aiServices: Service[] = [
       email: "sales@ziontechgroup.com",
       phone: "+1-555-0123"
     },
-    price: "Starting at $799/month",
+    price: "Starting at $199/month",
     icon: "💬",
     href: "/services/ai-chatbots",
     popular: false,
     category: "ai"
   }
-];
+]
 
 export const itServices: Service[] = [
   {
@@ -172,8 +174,8 @@ export const itServices: Service[] = [
       "Peace of mind"
     ],
     pricing: {
-      basic: "$2,999/month",
-      pro: "$7,999/month",
+      basic: "$1,999/month",
+      pro: "$4,999/month",
       enterprise: "Custom pricing"
     },
     contactInfo: {
@@ -181,14 +183,14 @@ export const itServices: Service[] = [
       email: "sales@ziontechgroup.com",
       phone: "+1-555-0123"
     },
-    price: "Starting at $2,999/month",
+    price: "Starting at $1,999/month",
     icon: "🔒",
     href: "/services/cybersecurity",
     popular: true,
     category: "security"
   }
-];
+]
 
-export const allServices: Service[] = [...aiServices, ...itServices];
+export const allServices: Service[] = [...aiServices, ...itServices]
 
-export default allServices;
+export default allServices

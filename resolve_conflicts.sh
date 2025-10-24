@@ -1,55 +1,45 @@
 #!/bin/bash
 
 # Script to resolve merge conflicts by accepting incoming changes
-echo "Resolving merge conflicts by accepting incoming changes..."
+# This will merge the branch and resolve conflicts automatically
 
-# List of conflicted files
-conflicted_files=(
-    "app/about/page.tsx"
-    "app/analytics-tools/page.tsx"
-    "app/api-development/page.tsx"
-    "app/api-docs/page.tsx"
-    "app/api/page.tsx"
-    "app/ar-vr-platform/page.tsx"
-    "app/ar-vr-solutions/page.tsx"
-    "app/backup-recovery/page.tsx"
-    "app/blockchain-integration-services/page.tsx"
-    "app/blockchain/page.tsx"
-    "app/business-apps/page.tsx"
-    "app/cloud-infrastructure-manager/page.tsx"
-    "app/cloud-migration/page.tsx"
-    "app/cloud-security/page.tsx"
-    "app/cloud-services/page.tsx"
-    "app/community/page.tsx"
-    "app/components/Footer.tsx"
-    "app/components/Navigation.tsx"
-    "app/crm-lite/page.tsx"
-    "app/custom-development/page.tsx"
-    "app/custom-software/page.tsx"
-    "app/cybersecurity-solutions/page.tsx"
-    "app/cybersecurity-suite/page.tsx"
-    "app/data-analytics-bi/page.tsx"
-    "app/data-analytics/page.tsx"
-    "app/data-center/page.tsx"
-    "app/data-protection/page.tsx"
-    "app/database-management/page.tsx"
-    "app/database-services/page.tsx"
-    "app/developer-tools/page.tsx"
-    "app/devops-cicd/page.tsx"
-    "app/digital-transformation/page.tsx"
-    "app/digital-twin-platform/page.tsx"
-    "app/docs/page.tsx"
-)
+echo "Starting merge conflict resolution..."
 
-# Resolve conflicts by accepting incoming changes
-for file in "${conflicted_files[@]}"; do
-    if [ -f "$file" ]; then
+# Merge the branch
+git merge origin/cursor/fix-errors-and-merge-to-main-8aeb --no-commit
+
+# Check if there are conflicts
+if [ $? -ne 0 ]; then
+    echo "Merge conflicts detected. Resolving automatically..."
+    
+    # Get list of conflicted files
+    conflicted_files=$(git diff --name-only --diff-filter=U)
+    
+    echo "Conflicted files:"
+    echo "$conflicted_files"
+    
+    # For each conflicted file, accept the incoming version (theirs)
+    for file in $conflicted_files; do
         echo "Resolving conflicts in $file..."
         git checkout --theirs "$file"
         git add "$file"
-    else
-        echo "File $file not found, skipping..."
-    fi
-done
+    done
+    
+    # Handle deleted files - remove them if they were deleted in the incoming branch
+    deleted_files=$(git diff --name-only --diff-filter=D)
+    for file in $deleted_files; do
+        echo "Removing deleted file: $file"
+        git rm "$file"
+    done
+    
+    echo "All conflicts resolved. Committing merge..."
+    git commit -m "Merge branch 'cursor/fix-errors-and-merge-to-main-8aeb' with automatic conflict resolution
 
-echo "All conflicts resolved. Ready to commit."
+- Resolved merge conflicts by accepting incoming changes
+- Applied fixes from the branch to main
+- Removed deleted files as per branch changes"
+    
+    echo "Merge completed successfully!"
+else
+    echo "No conflicts detected. Merge completed successfully!"
+fi
