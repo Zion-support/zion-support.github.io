@@ -2,11 +2,11 @@
 
 
 import React from "react";
-import { CheckCircle, ArrowRight } from "lucide-react";
+import { CheckCircle, ArrowRight, Cloud, Shield, Server, Database } from "lucide-react";
 const ITServicesPage: React.FC = () => {
   const services = [
   {
-      icon: 'Cloud',
+      icon: Cloud,
     title: "Cloud Solutions",
       description: "Scalable cloud infrastructure for modern businesses",
     features: [
@@ -18,7 +18,7 @@ const ITServicesPage: React.FC = () => {
       price: "Starting at $2,000"
 },
   {
-    icon: 'Shield',
+    icon: Shield,
     title: "Cybersecurity",
       description: "Protect your business from evolving threats",
     features: [
@@ -30,7 +30,7 @@ const ITServicesPage: React.FC = () => {
       price: "Starting at $3,500"
 },
   {
-    icon: 'Server',
+    icon: Server,
     title: "DevOps Services",
       description: "Streamline development and deployment processes",
     features: [
@@ -42,7 +42,7 @@ const ITServicesPage: React.FC = () => {
       price: "Starting at $4,000"
 },
   {
-    icon: 'Database',
+    icon: Database,
     title: "Data Analytics",
       description: "Turn your data into actionable insights",
     features: [
@@ -95,10 +95,12 @@ const ITServicesPage: React.FC = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
+            {services.map((service, index) => {
+              const IconComponent = service.icon;
+              return (
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg mb-4">
-                  <service.icon className="h-6 w-6 text-white" />
+                  <IconComponent className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
@@ -115,7 +117,8 @@ const ITServicesPage: React.FC = () => {
                   Learn More
                 </button>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

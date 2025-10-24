@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Brain, Globe, Shield, Zap } from 'lucide-react';
 
 
 const teamMembers = [
@@ -56,19 +56,19 @@ const teamMembers = [
 ]
 const values = [
   {
-    icon: 'Brain',
+    icon: Brain,
     title: "Innovation",
       description: "We constantly push the boundaries of what's possible with AI and technology."},
   {
-    icon: 'Globe',
+    icon: Globe,
     title: "Global Impact",
       description: "Our solutions create positive change for businesses and communities worldwide."},
   {
-    icon: 'Shield',
+    icon: Shield,
     title: "Trust & Security",
       description: "We prioritize data security and ethical AI practices in everything we do."},
   {
-    icon: 'Zap',
+    icon: Zap,
     title: "Excellence",
     description: "We deliver exceptional results through meticulous attention to detail."}
   ]
@@ -143,10 +143,12 @@ const TeamPage: React.FC = () => {
               The principles that guide everything we do and shape our company culture.
             </p>
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => (
+              {values.map((value, index) => {
+                const IconComponent = value.icon;
+                return (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <value.icon className="w-8 h-8 text-white" />
+                    <IconComponent className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {value.title}
@@ -155,7 +157,8 @@ const TeamPage: React.FC = () => {
                     {value.description}
                   </p>
                 </div>
-              ))}
+                );
+              })}
             </div>
           </div>
           {/* CTA Section */}

@@ -2,32 +2,32 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight } from 'lucide-react';
+import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
 
 const Ai3dModelGeneratorPage: React.FC = () => {
   const features = [
     {
-      icon: 'Brain',
-    title: 'AI-Powered Intelligence',
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-    benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-},
-  {
-    icon: 'BarChart',
-    title: 'Advanced Analytics',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
-    benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-},
-  {
-    icon: 'Target',
-    title: 'Precision Targeting',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision and accuracy.',
-    benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-},
-  {
-    icon: 'TrendingUp',
-    title: 'Growth Optimization',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
     benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
 }
@@ -74,10 +74,12 @@ const Ai3dModelGeneratorPage: React.FC = () => {
               </p>
             </div>
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+              {features.map((feature, index) => {
+                const IconComponent = feature.icon;
+                return (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                   <div className="h-12 w-12 text-emerald-400 mb-4">
-                    <feature.icon className="h-12 w-12" />
+                    <IconComponent className="h-12 w-12" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -90,7 +92,8 @@ const Ai3dModelGeneratorPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>

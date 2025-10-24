@@ -46,7 +46,6 @@ const AboutPage: React.FC = () => {
     { number: '24/7', label: 'Support Available' }
   ];
 
-export default function AboutPage() {
   return (
     <div className="min-h-screen py-12">
       <div className="max-w-4xl mx-auto px-4">
@@ -62,4 +61,6 @@ export default function AboutPage() {
       </div>
     </div>
   );
-}
+};
+
+export default AboutPage;
