@@ -1,17 +1,22 @@
-'use client'
-import React from 'react';
-
-interface layoutProps {
-  className?: string;
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+const inter = Inter({ subsets: ['latin'] })
+export const metadata: Metadata = {
+    title: 'Zion Tech Group - Advanced AI and IT Solutions',
+    description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
+    keywords: 'AI solutions, IT services, quantum computing, autonomous systems, enterprise technology'
 }
-
-const layout: React.FC<layoutProps> = ({ className }) => {
+export default function RootLayout({
+  children
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <div className={className}>
-      <h2 className="text-xl font-semibold mb-4">Layout</h2>
-      <p className="text-gray-600">This is a placeholder component for Layout.</p>
-    </div>
-  );
-};
-
-export default layout;
+    <html lang="en">
+      <body className={inter.className}>
+        {children}
+      </body>
+    </html>
+  )
+}

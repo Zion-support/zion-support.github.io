@@ -2,14 +2,14 @@
 import React from 'react';
 
 interface GlobalErrorBoundaryProps {
+  children: React.ReactNode;
   className?: string;
 }
 
-const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = ({ className }) => {
+const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = ({ children, className }) => {
   return (
     <div className={className}>
-      <h2 className="text-xl font-semibold mb-4">Global Error Boundary</h2>
-      <p className="text-gray-600">This is a placeholder component for Global Error Boundary.</p>
+      {children}
     </div>
   );
 };
