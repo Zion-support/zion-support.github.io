@@ -12,7 +12,7 @@ export default function PerformanceDashboard({ show = false }: PerformanceDashbo
   const [isVisible, setIsVisible] = useState(show);
   const [metrics, setMetrics] = useState<Record<string, number>>({});
   const { getAllMetrics } = usePerformanceMonitor();
-  const { getEvents } = useAnalytics();
+  // Note: getEvents is not available in the current analytics hook
 
   useEffect(() => {
     const interval = setInterval(() => {

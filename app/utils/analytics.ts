@@ -7,6 +7,7 @@ interface AnalyticsEvent {
   label?: string;
   value?: number;
   custom_parameters?: Record<string, any>;
+  timestamp?: number;
 }
 
 class Analytics {
