@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 :all-pages-backup/components/AccessibilityEnhancer.tsx
 "use client";
@@ -157,16 +156,3 @@ export default AccessibilityEnhancer;
 return <div>{children}  </div>
 }
 export default AccessibilityEnhancer;
-=======
-'use client';
-import React from 'react';
-
-export default function AccessibilityEnhancer() {
-  return (
-    <div>
-      <h1>AccessibilityEnhancer</h1>
-      <p>AccessibilityEnhancer content.</p>
-    </div>
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
-}

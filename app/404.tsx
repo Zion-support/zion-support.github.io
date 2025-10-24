@@ -1,6 +1,4 @@
 'use client';
-import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react';
@@ -63,19 +61,3 @@ const NotFound = () => {
   );
 };
 export default NotFound;
-=======
-
-export default function NotFound() {
-  return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
-        <p className="text-xl text-gray-600 mb-8">Page not found</p>
-        <a href="/" className="text-blue-600 hover:text-blue-800">
-          Go back home
-        </a>
-      </div>
-    </div>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36

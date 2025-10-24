@@ -1,5 +1,3 @@
-import React from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { ArrowRight     } from 'lucide-react';
 export default function services() {
@@ -17,16 +15,3 @@ Contact Us</Link>ArrowRightclassNam e="w-5 h-5 ml-2" / />
 ,}
     </div>/div>/div>
 }
-=======
-
-const Services: React.FC = () => {
-  return (
-    <div className="services">
-      <h1>Our Services</h1>
-      <p>Comprehensive technology solutions for your business.</p>
-    </div>
-  );
-};
-
-export default Services;
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36

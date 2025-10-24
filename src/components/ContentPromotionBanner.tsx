@@ -1,5 +1,3 @@
-import React from 'react';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check     } from 'lucide-react';
 import Navigation from './Navigation';
 import { Helmet     } from 'react-helmet-async';
@@ -154,20 +152,3 @@ Get Started Now
           <ArrowRightclassNam e=&quot;w-5 h-5 ml-2&quot; / />
         </button>/div>/div>,)
       </div>
-=======
-
-interface ContentPromotionBannerProps {
-  className?: string;
-  children?: React.ReactNode;
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
-}
-
-const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default ContentPromotionBanner;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react'
 /**
@@ -162,13 +161,3 @@ timestam,p: new Date().toISOString(),userAgent: typeof navigator !== 'undefined'
 ur,l: typeof window !== 'undefined' ? window.location.href : 'unknown',}
 export default getErrorBoundaryConfig</string>
 }}}}}}}
-=======
-import React from 'react';
-
-export const errorBoundaryConfig = {
-  fallback: <div>Something went wrong. Please refresh the page.</div>,
-  onError: (error: Error, errorInfo: any) => {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36

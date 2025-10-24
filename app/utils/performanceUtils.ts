@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Performance monitoring utilities;
 export interface PerformanceMetric {
 ;
@@ -38,38 +37,3 @@ this.metrics.push(metric);
     // Send to analytics in production;
 if (process.env.NODE_ENV === "production") {;
 this.sendToAnalytics(metric);
-=======
-export const performanceUtils = {
-  isSlowConnection: () => {
-    if (typeof navigator !== 'undefined' && 'connection' in navigator) {
-      const connection = (navigator as any).connection;
-      return connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g';
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
-    }
-    return false;
-  },
-  
-  shouldUseLowQualityImages: () => {
-    return performanceUtils.isSlowConnection();
-  }
-<<<<<<< HEAD
-  // Get all recorded metrics;
-getMetrics(): PerformanceMetric[] {;
-return [...this.metrics];
-  }
-  // Send metrics to analytics service;
-private sendToAnalytics(metric: PerformanceMetric): void {
-    // Exampl,e: Send to Google Analytics;
-if (typeof window !== "undefined" && (window as any).gtag) {
-      (window as any).gtag("event",metric.name, {;
-event_category: "Performance",);
-value: Math.round(metric.value),});
-    }
-  }
-}
-// Export singleton instance;
-export const performanceMonitor = new PerformanceMonitor();
-}
-=======
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36

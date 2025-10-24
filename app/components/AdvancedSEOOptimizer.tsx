@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react'
 const AdvancedSEOOptimizerPage: React.FC = () => {
@@ -85,21 +84,3 @@ Contact Sales</button>/button>/div>/div>/section>/div>/Footer>/div>
 ,}
 }
 export default AdvancedSEOOptimizerPage;
-=======
-import React from 'react';
-
-interface AdvancedSEOOptimizerProps {
-  className?: string;
-  children?: React.ReactNode;
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
-}
-
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default AdvancedSEOOptimizer;

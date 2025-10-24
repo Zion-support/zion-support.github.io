@@ -1,8 +1,3 @@
-'use client';
-import React from 'react';
-
-interface OptimizedImageProps {
-<<<<<<< HEAD
 src: string
 alt: string
 width?: number
@@ -30,18 +25,3 @@ return (</OptimizedImageProps>Imagesr c={src}
 }
 ;
 export default OptimizedImage;</Image>
-=======
-  className?: string;
-}
-
-const OptimizedImage: React.FC<OptimizedImageProps> = ({ className }) => {
-  return (
-    <div className={className}>
-      <h2>OptimizedImage</h2>
-      <p>OptimizedImage component for enhanced functionality.</p>
-    </div>
-  );
-};
-
-export default OptimizedImage;
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36

@@ -1,8 +1,3 @@
-'use client';
-import React from 'react';
-
-interface SEOProps {
-<<<<<<< HEAD
 className?: string
 }
 }
@@ -13,18 +8,3 @@ return (</SEOProps>,
 }
 export default SEO;
 }
-=======
-  className?: string;
-}
-
-const SEO: React.FC<SEOProps> = ({ className }) => {
-  return (
-    <div className={className}>
-      <h2>SEO</h2>
-      <p>SEO component for enhanced functionality.</p>
-    </div>
-  );
-};
-
-export default SEO;
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36

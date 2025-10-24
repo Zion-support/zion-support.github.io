@@ -1,5 +1,3 @@
-import React from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
 export default function AboutPage() {
 return
@@ -225,16 +223,3 @@ className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-
 r: text-white transition-all duration-300 flex items-center justify-center gap-2" />
 View Our Services</Link>ArrowRightIconclassNam e="w-5 h-5" / />
               </Link>/div>/div>/div>/section>/div>
-=======
-
-const AboutPage: React.FC = () => {
-  return (
-    <div className="about-page">
-      <h1>About Zion Tech Group</h1>
-      <p>We are a leading technology company specializing in AI, blockchain, and 5G solutions.</p>
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
-  );
-};
-
-export default AboutPage;

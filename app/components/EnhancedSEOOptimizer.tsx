@@ -1,5 +1,3 @@
-import React from 'react';
-<<<<<<< HEAD
 import { Helmet     } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Phone, Mail, Zap, Shield, Globe     } from 'lucide-react';
 import Navigation from '../components/Navigation'
@@ -79,20 +77,3 @@ Email Us
 ,}
 export default EnhancedSEOOptimizerPage;
 </div>
-=======
-
-interface EnhancedSEOOptimizerProps {
-  className?: string;
-  children?: React.ReactNode;
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
-}
-
-const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default EnhancedSEOOptimizer;

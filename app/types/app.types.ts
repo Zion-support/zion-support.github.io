@@ -1,9 +1,3 @@
-export interface User {
-  id: string;
-  name: string;
-  email: string;
-}
-<<<<<<< HEAD
 export interface AnalyticsEvent {
 ;
 name: string;
@@ -28,18 +22,3 @@ userId?: string;
 sessionId?: string;
 component?: string;
 action?: string
-=======
-
-export interface Service {
-  id: string;
-  name: string;
-  description: string;
-  price: number;
-}
-
-export interface ApiResponse<T> {
-  data: T;
-  success: boolean;
-  message?: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
-}

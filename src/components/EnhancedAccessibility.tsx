@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import { useEffect     } from 'react';
 const EnhancedAccessibility: React.FC<{ childre,n: React.ReactNode ,}> = ({ children }) => {
   useEffect(() => {
@@ -119,15 +118,3 @@ return <div>{children}</div>}
 export default EnhancedAccessibility;
 }
 export default EnhancedAccessibility;
-=======
-import React from 'react';
-
-export default function EnhancedAccessibility() {
-  return (
-    <div>
-      <h1>EnhancedAccessibility</h1>
-      <p>EnhancedAccessibility content.</p>
-    </div>
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
-}

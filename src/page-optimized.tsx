@@ -1,5 +1,3 @@
-import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer'
@@ -22,16 +20,3 @@ This page is under development. Please check back soon for more information abou
 }
 export default Page;
 }
-=======
-
-const PageOptimized: React.FC = () => {
-  return (
-    <div className="page-optimized">
-      <h1>Optimized Page</h1>
-      <p>This page has been optimized for performance.</p>
-    </div>
-  );
-};
-
-export default PageOptimized;
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36

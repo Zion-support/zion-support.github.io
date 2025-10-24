@@ -1,6 +1,4 @@
 'use client';
-import React from 'react';
-<<<<<<< HEAD
 import { Helmet     } from 'react-helmet-async';
 import { ArrowRight, X, Brain, BarChart, Target, TrendingUp     } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -303,14 +301,3 @@ expandedSections.has(section.key) ?
     <div className=&quot;ml-4 space-y-1&quot; /></div>
 {section.items.map((item, itemIndex) => (</div>Linkke y={itemIndex} / />
 }}}}}
-=======
-
-export default function Sidebar() {
-  return (
-    <div>
-      <h1>Sidebar</h1>
-      <p>Sidebar content.</p>
-    </div>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36

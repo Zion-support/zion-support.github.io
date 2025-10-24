@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+'use client';
 import React, { useEffect } from "react"
 interface AnalyticsProps {
 className?: string
@@ -31,16 +31,3 @@ export default AnalyticsPage;
 }
 export default AnalyticsPage;
 }}
-=======
-'use client';
-import React from 'react';
-
-export default function Analytics() {
-  return (
-    <div>
-      <h1>Analytics</h1>
-      <p>Analytics content.</p>
-    </div>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36

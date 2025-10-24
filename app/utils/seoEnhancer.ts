@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 /**
 * SEO Enhancement Utilities
@@ -78,24 +77,3 @@ ${allowAll ? 'Allow: /' : 'Disallo,w: /',}
 ;
 export const generateRobotsTxt = ($2) => {;
 $3
-=======
-export const seoEnhancer = {
-  generateMetaTags: (title: string, description: string, url: string) => {
-    return {
-      title,
-      description,
-      openGraph: {
-        title,
-        description,
-        url,
-        type: 'website'
-      },
-      twitter: {
-        card: 'summary_large_image',
-        title,
-        description
-      }
-    };
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
-};

@@ -1,5 +1,3 @@
-import React from 'react';
-<<<<<<< HEAD
 import { Helmet     } from 'react-helmet-async';
 import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe     } from 'lucide-react';
 import Navigation from '../components/Navigation'
@@ -58,20 +56,3 @@ Email Us
   )
 ,}
 export default EnhancedPerformanceMonitorPage;
-=======
-
-interface EnhancedPerformanceMonitorProps {
-  className?: string;
-  children?: React.ReactNode;
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
-}
-
-const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default EnhancedPerformanceMonitor;

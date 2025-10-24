@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Type definitions for Next.js compatibility;
 export interface Metadata {
 ;
@@ -151,12 +150,3 @@ emai,l: string;
 name?: string,
 }
 };
-=======
-import { NextPage } from 'next';
-
-declare module 'next' {
-  interface NextPageProps {
-    params?: { [key: string]: string };
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
-  }
-}

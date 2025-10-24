@@ -1,5 +1,4 @@
-import React from 'react';
-<<<<<<< HEAD
+'use client';
 import Head from 'next/head';
 import Link from 'next/link';
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw     } from 'lucide-react';
@@ -72,20 +71,3 @@ go wrong! 🤖
   )
 ,}
 export default handleScroll}
-=======
-
-interface NavigationProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const Navigation: React.FC<NavigationProps> = ({ className = '', children }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default Navigation;
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Head from 'next/head';
@@ -21,17 +20,3 @@ const WorkingPage = ({ title: "Page Broken2", description: "Professional page br
   );
 };
 export default WorkingPage;
-=======
-import React from 'react';
-
-const PageBroken2: React.FC = () => {
-  return (
-    <div className="page-broken2">
-      <h1>Contact Page</h1>
-      <p>This is a contact page component.</p>
-    </div>
-  );
-};
-
-export default PageBroken2;
->>>>>>> cursor/fix-errors-and-merge-to-main-9a36
