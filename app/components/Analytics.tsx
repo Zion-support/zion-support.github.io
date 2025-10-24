@@ -22,8 +22,17 @@ const Analytics: React.FC<AnalyticsProps> = ({
   enableUserBehaviorTracking = true,
 }) => {
   useEffect(() => {
+<<<<<<< HEAD
     if (enableGoogleAnalytics) {
       initializeGoogleAnalytics()
+=======
+    if (!GA_TRACKING_ID) return
+
+    // Initialize gtag
+    window.gtag = window.gtag || function() {
+      (window.gtag as any).q = (window.gtag as any).q || []
+      ;(window.gtag as any).q.push(arguments)
+>>>>>>> origin/fix-typescript-errors-main
     }
     
     if (enablePerformanceMonitoring) {
