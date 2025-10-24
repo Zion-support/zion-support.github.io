@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react''
+import React, { useRef, useEffect } from 'react'';
 "use client;
 if(process.env['NODE_ENV'] === "development;
 if ("memory;

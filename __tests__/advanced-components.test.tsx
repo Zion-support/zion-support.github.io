@@ -37,6 +37,7 @@ class TestErrorBoundary extends Component<
     if (this.state.hasError) {
       return (
         <div data-testid="error-boundary">
+
           <h2>Something went wrong.</h2>
           <button onClick={this.handleRetry}>Try again</button>
           <p>Retry count: {this.state.retryCount}</p>
@@ -64,8 +65,10 @@ const TestPerformanceMonitor = () => {
   }, []);
   return (
     <div data-testid="performance-monitor">
+
       {metrics && (
         <div>
+
           <p>Load Time: {metrics.loadTime}ms</p>
           <p>DOM Content Loaded: {metrics.domContentLoaded}ms</p>
           <p>First Paint: {metrics.firstPaint}ms</p>

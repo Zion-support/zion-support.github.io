@@ -1,8 +1,11 @@
+import React from 'react'
+
 export default function TestPage() {
   return (
     <div>
+
       <h1>Test Page</h1>
-      <p>This is a test page to verify the build works.</p>
+      <p>This is a test page.</p>
     </div>
-  )
+  );
 }

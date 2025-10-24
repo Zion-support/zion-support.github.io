@@ -7,12 +7,15 @@ import Footer from '../components/Footer'
 const AboutPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-900 text-white">
+
       <main className="container mx-auto px-4 py-16 pt-24">
         <div className="max-w-4xl mx-auto">
+
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-8">
             About Zion Tech Group
           </h1>
           <div className="prose prose-lg prose-invert max-w-none">
+
             <p className="text-xl text-gray-300 mb-6">
               Zion Tech Group is a leading provider of advanced AI solutions, cloud services, and IT consulting for modern businesses.
             </p>
@@ -38,4 +41,4 @@ const AboutPage: React.FC = () => {
   )
 }
 
-export default AboutPage
+export default AboutPage;

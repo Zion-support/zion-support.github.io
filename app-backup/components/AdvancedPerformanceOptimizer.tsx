@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useState } from 'react'
+import React, { useEffect, useCallback, useState } from 'react';
 'use client';'
 if(enableWebVitals && typeof window !== 'undefined'
 lcpObserver.observe({ "entryTypes": ['largest-contentful-paint'"

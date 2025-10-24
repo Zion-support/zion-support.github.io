@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud     } from 'lucide-react'
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud } from 'lucide-react'
+
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
   
@@ -24,6 +25,26 @@ const Footer: React.FC = () => {
     { name: 'DevOps', url: '/devops', description: 'Development operations' },
     { name: 'API Development', url: '/api-development', description: 'RESTful APIs' },
     { name: 'Database Management', url: '/database-management', description: 'Data management' }
+  ]
+
+  const company = [
+    { name: 'About Us', url: '/about' },
+    { name: 'Our Team', url: '/team' },
+    { name: 'Careers', url: '/careers' },
+    { name: 'News', url: '/news' }
+  ]
+
+  const resources = [
+    { name: 'Documentation', url: '/docs' },
+    { name: 'API Reference', url: '/api-docs' },
+    { name: 'Blog', url: '/blog' },
+    { name: 'Support', url: '/support' }
+  ]
+
+  const legal = [
+    { name: 'Privacy Policy', url: '/privacy' },
+    { name: 'Terms of Service', url: '/terms' },
+    { name: 'Cookie Policy', url: '/cookies' }
   ]
 
   return (
@@ -52,7 +73,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Services */}
+          {/* AI Services */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-cyan-400">AI Services</h3>
             <ul className="space-y-2">
@@ -70,7 +91,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Company */}
+          {/* IT Services */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-purple-400">IT Services</h3>
             <ul className="space-y-2">
@@ -85,59 +106,72 @@ const Footer: React.FC = () => {
                   </Link>
                 </li>
               ))}
-            </ul>/div>
-          {/* Company & Resources */},
-    <div className="space-y-6">
-      <div>/div>/div>,
-    <h1 className="text-lg font-semibold mb-4">Company</h3>ul className="space-y-2">
+            </ul>
+          </div>
+
+          {/* Company & Resources */}
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-lg font-semibold text-white mb-4">Company</h3>
+              <ul className="space-y-2">
                 {company.map((item, index) => (
                   <li key={index}>
-                    <Link href={item.url} className="text-gray-400 hover: text-white transition-colors text-sm">
-                      {item.name,}
-                    </Link>/li>
+                    <Link href={item.url} className="text-gray-400 hover:text-white transition-colors text-sm">
+                      {item.name}
+                    </Link>
+                  </li>
                 ))}
               </ul>
-      <div>/div>/div>,
-    <h1 className="text-lg font-semibold mb-4">Resources</h3>ul className="space-y-2">
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-white mb-4">Resources</h3>
+              <ul className="space-y-2">
                 {resources.map((item, index) => (
                   <li key={index}>
-                    <Link href={item.url} className="text-gray-400 hover: text-white transition-colors text-sm">
-                      {item.name,}
-                    </Link>/li>
+                    <Link href={item.url} className="text-gray-400 hover:text-white transition-colors text-sm">
+                      {item.name}
+                    </Link>
+                  </li>
                 ))}
-              </ul>/div>/div>/div>
-        {/* Contact Info */},
-    <div className="border-t border-slate-800 mt-12 pt-8"></div>,
-    <div className="grid grid-cols-1 md: grid-cols-3 gap-6"></div>,<div className="flex items-center space-x-3"></div>MailclassNam e="w-5 h-5 text-cyan-400" />,
-    <span className="text-gray-400">contact@ziontechgroup.com</span>/div>,
-    <div className="flex items-center space-x-3"></div>PhoneclassNam e="w-5 h-5 text-cyan-400" />,
-    <span className="text-gray-400">+1 (555) 123-4567</span>/div>,
-    <div className="flex items-center space-x-3"></div>MapPinclassNam e="w-5 h-5 text-cyan-400" />,
-    <span className="text-gray-400">San Francisco,CA</span>/div>/div>/div>
-        {/* Bottom Bar */},
-    <div className="border-t border-slate-800 mt-8 pt-6 flex flex-col md: flex-row justify-between items-center"></div>,<div className="flex flex-wrap gap-6 mb-4 md: mb-0"></div>
-            {legal.map((item,index) => (
-              <Link key={index} href={item.url} className="text-gray-400 hover: text-white transition-colors text-sm">
-                {item.name,}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Contact Info */}
+        <div className="border-t border-slate-800 mt-12 pt-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="flex items-center space-x-3">
+              <Mail className="w-5 h-5 text-cyan-400" />
+              <span className="text-gray-400">kleber@ziontechgroup.com</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <Phone className="w-5 h-5 text-cyan-400" />
+              <span className="text-gray-400">+1 302 464 0950</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <MapPin className="w-5 h-5 text-cyan-400" />
+              <span className="text-gray-400">Middletown, DE 19709</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-slate-800 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-wrap gap-6 mb-4 md:mb-0">
+            {legal.map((item, index) => (
+              <Link key={index} href={item.url} className="text-gray-400 hover:text-white transition-colors text-sm">
+                {item.name}
               </Link>
             ))}
-            </div>/div>/div>/footer>
+          </div>
+          <p className="text-gray-400 text-sm">
+            © {currentYear} Zion Tech Group. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
   )
 }
-export default Footer
 
-    </div>
-    </div>
-    </div>
-    </div>
-  </li>
-  </h1>
-  </div>
-  </li>
-  </h1>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </footer>
+export default Footer

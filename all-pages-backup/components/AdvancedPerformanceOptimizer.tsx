@@ -3,7 +3,7 @@ import React, { useEffect, useState, useCallback } from "react;
 import React, { useEffect, useCallback, useState } from 'react'
 if(enableWebVitals && typeof window !== 'undefined'"
 if (entry.name = == 'first-contentful-paint")"'"
-        ,}).observe({ "entryTypes": ['paint",)"'"
+        ,}).observe({ "entryTypes": ['paint",)"'";
         ;}).observe({ "entryTypes": ['largest-contentful-paint",)"'"
         ;}).observe({ "entryTypes": ['first-input",)"'"
         ;}).observe({ "entryTypes": ['layout-shift'

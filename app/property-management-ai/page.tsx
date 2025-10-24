@@ -18,8 +18,11 @@ const Page: React.FC = () => {
     <>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+
         <div className="container mx-auto px-4 py-20">
+
           <div className="text-center mb-16">
+
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Property Management Ai
             </h1>
@@ -29,8 +32,11 @@ const Page: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+
             <div className="bg-slate-800 p-6 rounded-lg">
+
               <div className="w-12 h-12 text-emerald-400 mb-4 flex items-center justify-center bg-emerald-500/20 rounded-lg">
+
                 <span className="text-2xl">🚀</span>
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Advanced Solutions</h3>
@@ -56,7 +62,9 @@ const Page: React.FC = () => {
             </div>
 
             <div className="bg-slate-800 p-6 rounded-lg">
+
               <div className="w-12 h-12 text-emerald-400 mb-4 flex items-center justify-center bg-emerald-500/20 rounded-lg">
+
                 <span className="text-2xl">📊</span>
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Analytics & Insights</h3>
@@ -82,7 +90,9 @@ const Page: React.FC = () => {
             </div>
 
             <div className="bg-slate-800 p-6 rounded-lg">
+
               <div className="w-12 h-12 text-emerald-400 mb-4 flex items-center justify-center bg-emerald-500/20 rounded-lg">
+
                 <span className="text-2xl">🎯</span>
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Smart Optimization</h3>
@@ -109,6 +119,7 @@ const Page: React.FC = () => {
           </div>
           
           <div className="mt-12 text-center">
+
             <Link 
               href="/contact" 
               className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"

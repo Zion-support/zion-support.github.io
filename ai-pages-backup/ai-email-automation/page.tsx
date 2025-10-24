@@ -5,7 +5,7 @@ import React from 'react';
 import { ArrowRight, Brain, Mail, CheckCircle, Zap, TrendingUp, Send, BarChart3, Shield, DollarSign, Clock, Star, BarChart } from 'lucide-react;
 import Link from "next/link
     { number: 300%, label: Revenue Increase
-    { number: 150%, label: Conversion Boost"
+    { number: 150%, label: Conversion Boost";
     { number: 20 hrs, label: Time Saved/Week;
     { "number": '95%', "label": 'Deliverability Rate'
 }}}}'"

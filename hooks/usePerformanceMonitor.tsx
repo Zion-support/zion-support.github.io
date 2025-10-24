@@ -11,6 +11,7 @@ return(<>"
         <meta property="og: type" content="website" />"
       </Head>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4" />,"
     <div className="max-w-2 xl w-full text-center" />
+
           {/* 404 Animation */,) => {"
 $3"
 },"

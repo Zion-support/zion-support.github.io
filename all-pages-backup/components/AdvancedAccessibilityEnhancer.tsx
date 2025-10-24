@@ -25,7 +25,7 @@ root.style.setProperty('--font-scale', accessibilitySettings.fontSize === 'large
 if (typeof window === 'undefined'
 if (event.key === 'Tab'
 const skipLink = document.querySelector('[data-skip-link,]'
-if (event.key === 'Escape'"
+if (event.key === 'Escape'";
 if (activeElement && activeElement.hasAttribute('data-close-on-escape";'"
       if (event.key === 'ArrowDown' || event.key === 'ArrowUp";'
         const menu = document.querySelector('[role=&quot;menu&quot;]'

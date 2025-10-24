@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link'"
+import Link from 'next/link'";
  } from "lucide-react";'"
   "description": 'Automate complex business processes with intelligent workflow management.'"
   "description": 'AI-powered decision making based on data analysis and business rules.'"

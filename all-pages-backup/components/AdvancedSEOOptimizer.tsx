@@ -14,4 +14,4 @@ import Footer from '../components/Footer'"
     'Improve search rankings with AI-powered insights'
     'Optimize content for better visibility'
     'Track performance with detailed analytics'
-    'Stay ahead of SEO trends and updates'"
+    'Stay ahead of SEO trends and updates'";
