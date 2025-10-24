@@ -26,22 +26,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   blurDataURL
 }) => {
   return (
-<<<<<<< HEAD
-    <div className={`relative overflow-hidden ${className}`}>
-      <Image
-        src={src}
-        alt={alt}
-        width={width}
-        height={height}
-        priority={priority}
-        quality={quality}
-        placeholder={placeholder}
-        blurDataURL={blurDataURL}
-        className="w-full h-auto object-cover transition-transform duration-300 hover:scale-105"
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-      />
-    </div>
-=======
     <Image
       className={className}
       src={src}
@@ -53,7 +37,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       placeholder={placeholder}
       blurDataURL={blurDataURL}
     />
->>>>>>> cursor/fix-errors-and-merge-to-main-463e
   );
 };
 
