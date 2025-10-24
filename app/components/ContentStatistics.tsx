@@ -1,8 +1,7 @@
 'use client';
+import { Zap, Brain, Globe, Users, TrendingUp, Clock, Star, CheckCircle, Target, Shield, Database } from 'lucide-react';
 
 import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-
 const ContentStatistics: React.FC = () => {
   const [counters, setCounters] = useState({
     clients: 0,
@@ -11,14 +10,14 @@ const ContentStatistics: React.FC = () => {
     years: 0
   });
 
-  const targetCounters = {
-    clients: 1000,
-    projects: 500,
-    satisfaction: 99,
-    years: 5
-  };
-
   useEffect(() => {
+    const targetCounters = {
+      clients: 1000,
+      projects: 500,
+      satisfaction: 99,
+      years: 5
+    };
+
     const duration = 2000; // 2 seconds
     const steps = 60;
     const stepDuration = duration / steps;
@@ -51,7 +50,7 @@ const ContentStatistics: React.FC = () => {
     }, stepDuration);
 
     return () => clearInterval(interval);
-  }, [targetCounters]);
+  }, []);
 
   const statistics = [
     {

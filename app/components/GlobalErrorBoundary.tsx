@@ -1,6 +1,6 @@
 'use client';
+import { CheckCircle } from 'lucide-react';
 import React from 'react';
-import { CheckCircle, Phone, Mail } from 'lucide-react';
 
 const GlobalErrorBoundary: React.FC = () => {
   const benefits = [
@@ -53,3 +53,5 @@ const GlobalErrorBoundary: React.FC = () => {
     </div>
   );
 };
+
+export default GlobalErrorBoundary;

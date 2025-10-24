@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { ArrowRight, Calendar, Clock, User, Mail, Phone, Building, CheckCircle } from 'lucide-react'
+import {ArrowRight, Calendar, Clock, User, Mail, Phone, Building, CheckCircle} from 'lucide-react';
 
 const ConsultationPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -61,6 +61,10 @@ const ConsultationPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<<<<<<< HEAD
+=======
+      {/* Hero Section */}
+>>>>>>> origin/main
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
@@ -74,9 +78,17 @@ const ConsultationPage: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+=======
+      {/* Consultation Form */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Form */}
+>>>>>>> origin/main
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
               <h2 className="text-2xl font-bold text-white mb-6">Schedule Your Consultation</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -229,6 +241,10 @@ const ConsultationPage: React.FC = () => {
               </form>
             </div>
 
+<<<<<<< HEAD
+=======
+            {/* Benefits & Info */}
+>>>>>>> origin/main
             <div className="space-y-8">
               <div>
                 <h2 className="text-2xl font-bold text-white mb-6">Why Choose Our Consultation?</h2>
