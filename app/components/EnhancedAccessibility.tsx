@@ -1,17 +1,8 @@
 'use client';
 import { Settings } from 'lucide-react';
-import React, { useEffect, useState, createContext, useContext } from 'react';
-import { AccessibilitySettings, AccessibilityContextType } from '../types/accessibility';
-
-const AccessibilityContext = createContext<AccessibilityContextType | null>(null);
-
-export const useAccessibility = () => {
-  const context = useContext(AccessibilityContext);
-  if (!context) {
-    throw new Error('useAccessibility must be used within an AccessibilityProvider');
-  }
-  return context;
-};
+import React, { useEffect, useState } from 'react';
+import { AccessibilitySettings } from '../types/accessibility';
+import { AccessibilityContext, useAccessibility } from '../contexts/AccessibilityContext';
 
 interface EnhancedAccessibilityProps {
   children: React.ReactNode;

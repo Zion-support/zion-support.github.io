@@ -1,7 +1,6 @@
 'use client';
 import { Zap, Brain, Globe, Shield } from 'lucide-react';
-'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 const DynamicContentShowcase: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
