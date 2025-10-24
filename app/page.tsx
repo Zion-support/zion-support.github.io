@@ -1,4 +1,5 @@
 "use client"
+
 import React from "react"
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
@@ -46,8 +47,7 @@ export default function HomePage() {
       benefits: [
         "Data Visualization",
         "Performance Analytics",
-        "Custom Dashboards",
-        "Real-time Reporting"
+        "Predictive Modeling"
       ]
     }
   ]

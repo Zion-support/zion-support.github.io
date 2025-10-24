@@ -1,3 +1,4 @@
+
 'use client'
 /**
 * SEO Enhancement Utilities;
@@ -31,8 +32,9 @@ return { ...baseStructure, ...data }
 }
 // SEO Enhancer class;
 export class SEOEnhancer {
-private static instance: SEOEnhancer,
-// SEO Enhancer class;}
+  private static instance: SEOEnhancer
+// SEO Enhancer class
+}
 export class SEOEnhancer {}
 private static instance: SEOEnhancer;
 private config: SEOConfig;, }
@@ -40,7 +42,7 @@ constructor(config: Partial<SEOConfig> = {, }) {}</SEOConfig></<<<SEOConfig>this
 }
 static getInstance(config?: Partial<SEOConfig>): SEOEnhancer {}
 if (!SEOEnhancer.instance) {}
-SEOEnhancer.instance = new SEOEnhancer(config);}
+SEOEnhancer.instance = new SEOEnhancer(config)}
 }
 return SEOEnhancer.instance;
 }
@@ -84,7 +86,7 @@ let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkEleme
 if (!canonical) {}
 canonical = document.createElement('link')
 canonical.rel = 'canonical'
-document.head.appendChild(canonical);}
+document.head.appendChild(canonical)}
 }
 canonical.href = url;
 }
@@ -121,8 +123,8 @@ title: document.title;
 description: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',;}
 return {}
 title: document.title,
-description:
-document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
+    description:
+document.querySelector('meta[name="description"]')?.getAttribute('content') || ''
 keywords: document.querySelector('meta[name="keywords"]')?.getAttribute('content') || '',
 canonical: document.querySelector('link[rel="canonical"]')?.getAttribute('href') || '', }
 }
@@ -148,11 +150,14 @@ sameAs: data.sameAs || [], }
 }
 // Add type-specific properties;
 if (data.type === 'Organization') {
-return {
-...baseStructure,
-address: {,
-// Add type-specific properties;}
-if (data.type === 'Organization') {}
+  return {
+...baseStructure
+address: {
+// Add type-specific properties
+}
+if (data.type === 'Organization'
+    </>
+  ) {}
 return {}
 ...baseStructure,
 address: {, }
@@ -237,7 +242,7 @@ target: {, }
 urlTemplate: `${data.url}/search?q={search_term_string}
 if (data.type === 'WebSite') {/* TODO: Fix JSX expression  */`
 e: `${data.url}/search?q={search_term_string}`
-},
+}
 'query-input': 'required name=search_term_string'
 }
 }
@@ -264,7 +269,7 @@ logo: {, }
 '@type': 'ImageObject',
 url: data.logo || '/logo.webp', }
 }
-},
+}
 datePublished: new Date().toISOString(),
 dateModified: new Date().toISOString(), }
 }
@@ -272,21 +277,22 @@ return baseStructure;
 }
 // Generate sitemap data;
 export const generateSitemapData = useCallback((...args) => {
-return {
+  return {
 urlset: {
-'@xmlns': 'http://www.sitemaps.org/schemas/sitemap/0.9'
-url: pages.map(page => ({),
+'@xmlns': 'http: //www.sitemaps.org/schemas/sitemap/0.9',
+    url: pages.map(page => ({)
 loc: page.url;),
-lastmod: page.lastModified),
-changefreq: page.changeFrequency),
-// Generate sitemap data;}
+    lastmod: page.lastModified)
+changefreq: page.changeFrequency)
+// Generate sitemap data
+}
 export const generateSitemapData = useCallback((...args) => {}
 return {}
 urlset: {, }
 '@xmlns': 'http://www.sitemaps.org/schemas/sitemap/0.9',
 url: pages.map(page => ({)}
 loc: page.url,
-lastmod: page.lastModified,
+    lastmod: page.lastModified
 changefreq: page.changeFrequency,
 priority: page.priority, }
 }))
@@ -296,7 +302,7 @@ priority: page.priority, }
 // Generate robots.txt content;
 export const generateRobotsTxt = useCallback((...args) => {`}
 const disallowRules = disallowPaths.map(path => `Disallow: ${path}`).join('\n')
-return `User-agent: *,
+return `User-agent: *
 ${disallowRules}
 Sitemap: ${sitemapUrl}`
 }
@@ -330,8 +336,8 @@ export const generateRobotsTxt = (sitemapUr,
 l: string, disallowPath)
 s: string[] = []) =</ {/* TODO: Fix JSX expression  */`
 w: ${path}`).join('
-');`
-return `User-agen,
+')`
+return `User-agen
 t: *
 ${disallowRules}
 Sitema,`
@@ -357,7 +363,8 @@ issues.push('Title is too long (recommended: 30-60 characters)');, }
 }
 // Check description length;
 if (data.description.length < 120) {
-// Check description length;}
+  // Check description length
+}
 if (data.description.length < 120) {}
 issues.push('Description is too short (recommended: 120-160 characters)');, }
 } else if (data.description.length >160) {}
@@ -365,7 +372,8 @@ issues.push('Description is too long (recommended: 120-160 characters)');, }
 }
 // Check URL format;
 if (!data.url.startsWith('http')) {
-// Check URL format;}
+  // Check URL format
+}
 if (!data.url.startsWith('http')) {}
 issues.push('URL should start with http: // or https://');, }
 }
@@ -373,13 +381,14 @@ return issues;
 }
 // Generate breadcrumb data;
 export const generateBreadcrumbData = useCallback((...args) => {
-return {
-'@context': 'https: //schema.org',
-// Generate breadcrumb data;}
+  return {
+'@context': 'https: //schema.org'
+// Generate breadcrumb data
+}
 export const generateBreadcrumbData = useCallback((...args) => {}
 return {}
-'@context': 'https://schema.org',
-'@type': 'BreadcrumbList',
+'@context': 'https://schema.org'
+'@type': 'BreadcrumbList'
 itemListElement: breadcrumbs.map((crumb, index) => ({}
 '@type': 'ListItem',
 position: index + 1;
@@ -404,7 +413,7 @@ if (typeof document === 'undefined') return;
 // Add structured data for organization;
 const organizationData = generateStructuredData({)}
 type: 'Organization',
-name: 'Zion Holdings',
+    name: 'Zion Holdings'
 description: 'Leading provider of AI-powered business solutions',
 url: 'https://zion.app',
 logo: 'https://zion.app/logo.webp',
@@ -446,3 +455,18 @@ script.textContent = JSON.stringify(organizationData)
 document.head.appendChild(script)
 }
 "`
+=======
+export const generateRobotsTxt = (sitemapUrl: string, allowAll: boolean = true) => {
+  return `User-agent: *
+${allowAll ? 'Allow: /' : 'Disallow: /'}
+
+Sitemap: ${sitemapUrl}`
+}
+
+export default {
+  generateMetaTags,
+  generateStructuredData,
+  generateSitemap,
+  generateRobotsTxt
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-4eef:app/utils/seoEnhancer.ts

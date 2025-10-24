@@ -6,31 +6,27 @@ continue
 
     
     // Check if file has merge conflicts
-        inConflict = false;
-        keepHead = false;
-        continue;
-      }
-      
+        inConflict = false
+        keepHead = false
+        continue
+}
       if (inConflict && !keepHead) {
-        continue; // Skip lines in the non-HEAD section
-      }
-      
-      fixedLines.push(line);
+  continue; // Skip lines in the non-HEAD section
+}
+      fixedLines.push(line)
     }
-    
-    const fixedContent = fixedLines.join('\n');
-    
+    const fixedContent = fixedLines.join('\n')
     // Clean up any remaining syntax issues
     const cleanedContent = fixedContent
       .replace(/;\s*$/gm, '') // Remove trailing semicolons
       .replace(/\s+$/gm, '') // Remove trailing whitespace
-      .replace(/\n\s*\n\s*\n/g, '\n\n'); // Remove multiple empty lines
-    
-    fs.writeFileSync(filePath, cleanedContent);
-    return true;
+      .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove multiple empty lines
+    fs.writeFileSync(filePath, cleanedContent)
+    return true
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+    // eslint-disable-next-line no-console
+    console.error(`Error fixing ${filePath}:`, error.message)
+    return false
   }
 }
 

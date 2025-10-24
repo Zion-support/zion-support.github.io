@@ -1,4 +1,3 @@
-'use client'
 import React from 'react'
 import { Home, ChevronRight } from 'lucide-react'
 import { useLocation } from 'react-router-dom'
@@ -22,7 +21,6 @@ const Breadcrumb: React.FC = () => {const location = useLocation()
     const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ')
     breadcrumbItems.push({ name, path, icon: null })
   })
-
   return (
     <nav aria-label="Breadcrumb" className="bg-slate-800/50 backdrop-blur-sm border-b border-slate-700" />
       <div className="max-w-7xl mx-auto px-4 py-3">

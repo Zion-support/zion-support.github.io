@@ -1,6 +1,6 @@
-const fs = require('fs');
-const path = require('path');
 
+const fs = require('fs')
+const path = require('path')
 function resolveConflicts(content) {
   // Remove all merge conflict markers and keep the HEAD version
   return content
@@ -15,33 +15,31 @@ function processFile(filePath) {
       return true;
     }
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    // eslint-disable-next-line no-console
+    console.error(`Error processing ${filePath}:`, error.message)
   }
-  return false;
+  return false
 }
-
 function walkDirectory(dir) {
-  const files = fs.readdirSync(dir);
-  let resolvedCount = 0;
-  
+  const files = fs.readdirSync(dir)
+  let resolvedCount = 0
   for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
+    const filePath = path.join(dir, file)
+    const stat = fs.statSync(filePath)
     if (stat.isDirectory()) {
       if (file !== 'node_modules' && file !== '.git') {
-        resolvedCount += walkDirectory(filePath);
+        resolvedCount += walkDirectory(filePath)
       }
     } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.json') || file.endsWith('.xml') || file.endsWith('.md')) {
-      if (processFile(filePath)) {
-        resolvedCount++;
-      }
+  if (processFile(filePath)) {
+        resolvedCount++
+}
     }
   }
-  
-  return resolvedCount;
+  return resolvedCount
 }
-
-console.log('Starting comprehensive conflict resolution...');
-const resolvedCount = walkDirectory('.');
-console.log(`Resolved conflicts in ${resolvedCount} files`);
+// eslint-disable-next-line no-console
+    console.log('Starting comprehensive conflict resolution...')
+const resolvedCount = walkDirectory('.')
+// eslint-disable-next-line no-console
+    console.log(`Resolved conflicts in ${resolvedCount} files`)

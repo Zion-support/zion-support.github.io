@@ -4,16 +4,12 @@ declare global {interface Window {
     gtag: (...args: any[]) => void;
   }
 }
-
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void
-  trackPageView: (pageName: string) => void
-}
-
+  trackPageView: (pageName: string) => void}
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
-  undefined,
+  undefined
 )
-
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext)
   if (!context) {
@@ -27,11 +23,8 @@ export const useAnalytics = () => {
   page: (name: string, properties?: Record<string, any>) => void}
 const AnalyticsContext  = createContext<AnalyticsContextType | undefined>(undefined)
 interface AnalyticsProviderProps {
-  children: ReactNode
-}
-
-exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
-  
+  children: ReactNode}
+exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => {useEffect(() => {
     if (type of windo w !==&quot;undefined&quot;) {
       // Google Analytics
       if (process.env.NODE_ENV === &quot;production&quot;) {
@@ -55,7 +48,6 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => 
         script.src = `https: //www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`
         script.async = true;
         document.head.appendChild(script)
-
         window.gtag =
           window.gtag ||
           function (...args: any[]) {(window.gtag as any).q = (window.gtag as any).q || []
@@ -66,16 +58,14 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => 
       }
     }
   }, [])
-
   consttrackEvent= (
-    eventName: string,
-    parameters?: Record<string, unknown>,
+    eventName: string
+    parameters?: Record<string, unknown>
   ) => {
     if (typeof window !== &quot;undefined&quot; && window.gtag) {
       window.gtag(&quot;event&quot;, eventName, parameters)
     }
   }
-
   consttrackPageView= (pageName: string) => {if (type of windo w !==&quot;undefined&quot; && windo w.gtag) {
       window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {
         page_title: pageName,
@@ -92,9 +82,7 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => 
     </AnalyticsContext.Provider>
   )
 }
-
 export default AnalyticsProvider
-  );
-};
-
-export default AnalyticsProviderPage;
+  )
+}
+export default AnalyticsProviderPage

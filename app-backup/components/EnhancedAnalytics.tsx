@@ -33,4 +33,5 @@ script.async = true
          "config",
           process.env.REACT_APP_GA_ID,
 
-export default EnhancedAnalyticsPage;
+export default AnalyticsProvider
+>>>>>>> cursor/fix-errors-and-merge-to-main-4eef:app/components/EnhancedAnalytics.tsx

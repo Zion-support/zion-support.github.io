@@ -1,99 +1,103 @@
-'use client';
-import React from 'react';
-import Link from 'next/link';
-import { ArrowRight, CheckCircle, Zap, Shield, BarChart3, Users, Send, Target, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react';
-
+import React from 'react'
+import Link from 'next/link'
+import { ArrowRight, CheckCircle, Zap, Shield, BarChart3, Users, Send, Target, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react'
+'use client'
 const AiEcommerceOptimizerProPage: React.FC = () => {
   const features = [
     {
       icon: Zap,
-      title: 'AI-Powered Optimization',
-      description: 'Advanced machine learning algorithms to optimize your e-commerce performance.'
-    },
+    title: 'AI-Powered Optimization',
+      description: 'Advanced machine learning algorithms to optimize your e-commerce performance.'}
     {
       icon: BarChart3,
-      title: 'Analytics Dashboard',
-      description: 'Comprehensive analytics and insights to track your business growth.'
-    },
+    title: 'Analytics Dashboard',
+      description: 'Comprehensive analytics and insights to track your business growth.'}
     {
       icon: Shield,
-      title: 'Security & Compliance',
-      description: 'Enterprise-grade security with full compliance and data protection.'
-    },
+    title: 'Security & Compliance',
+      description: 'Enterprise-grade security with full compliance and data protection.'}
     {
       icon: Users,
-      title: 'Customer Insights',
-      description: 'Deep customer behavior analysis to improve conversion rates.'
-    }
-  ];
-
+    title: 'Customer Insights',
+    description: 'Deep customer behavior analysis to improve conversion rates.'}
+  ]
   const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$99',
+  {
+  name: 'Starter',
+    price: '$99'
       period: '/month',
-      description: 'Ideal for growing e-commerce businesses',
+    description: 'Ideal for growing e-commerce businesses'
       features: [
-        'Up to 10,000 products',
-        'Basic AI optimization',
+        'Up to 10,000 products'
+        'Basic AI optimization'
         'Analytics dashboard',
-        'Email support'
-      ]
-    },
+    'Email support'
+  ]
+}
     {
-      name: 'Professional',
-      price: '$299',
+  name: 'Professional',
+    price: '$299'
       period: '/month',
-      description: 'Perfect for established online stores',
+    description: 'Perfect for established online stores'
       features: [
-        'Up to 50,000 products',
-        'Advanced AI optimization',
-        'Real-time analytics',
+        'Up to 50,000 products'
+        'Advanced AI optimization'
+        'Real-time analytics'
         'Priority support',
-        'Custom integrations'
-      ]
-    },
+    'Custom integrations'
+  ]
+}
     {
-      name: 'Enterprise',
-      price: 'Custom',
+  name: 'Enterprise',
+    price: 'Custom'
       period: '',
-      description: 'For large-scale e-commerce operations',
+    description: 'For large-scale e-commerce operations'
       features: [
-        'Unlimited products',
-        'Full AI suite',
-        'Dedicated support',
+        'Unlimited products'
+        'Full AI suite'
+        'Dedicated support'
         'Custom development',
-        'SLA guarantee'
-      ]
-    }
-  ];
-
+    'SLA guarantee'
+  ]
+}
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      
-
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
               AI E-commerce <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Optimizer Pro</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your e-commerce business with advanced AI optimization solutions that boost sales, 
+              Transform your e-commerce business with advanced AI optimization solutions that boost sales
               improve conversion rates, and maximize your online store performance.
             </p>
+<<<<<<< HEAD:app-backup/ai-ecommerce-optimizer-pro/page.tsx
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-purple-600 transition-all duration-300"
+=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact" 
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
+>>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/ai-ecommerce-optimizer-pro/page.tsx
               >
                 Get Started
                 <ArrowRight className="w-8 h-8" />
               </Link>
+<<<<<<< HEAD:app-backup/ai-ecommerce-optimizer-pro/page.tsx
+              <Link
+                href="/ai-services"
+                className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-400 hover:text-white transition-all duration-300"
+=======
               <Link 
                 href="/ai-services" 
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
+>>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/ai-ecommerce-optimizer-pro/page.tsx
               >
                 View All Services
               </Link>
@@ -101,21 +105,20 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Powerful Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI e-commerce optimizer provides comprehensive tools to maximize your online store performance
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group text-center">
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover: border-cyan-400/50 transition-all duration-300 group text-center">
                 <div className="mb-6">
                   {feature.icon}
                 </div>
@@ -126,21 +129,20 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-black/20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Choose Your Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Flexible pricing options to suit businesses of all sizes
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover: border-cyan-400/50 transition-all duration-300">
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="text-4xl font-bold text-cyan-400 mb-2">
@@ -159,7 +161,11 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
                 </ul>
                 <Link
                   href="/contact"
+<<<<<<< HEAD:app-backup/ai-ecommerce-optimizer-pro/page.tsx
+                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-600 transition-all duration-300 text-center block"
+=======
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 text-center block"
+>>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/ai-ecommerce-optimizer-pro/page.tsx
                 >
                   Get Started
                 </Link>
@@ -168,27 +174,39 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-purple-600">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-purple-600">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
             Ready to Optimize Your E-commerce Store?
           </h2>
           <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
-            Let's discuss how our AI e-commerce optimizer can transform your online business and drive growth.
+            Let&apos;s discuss how our AI e-commerce optimizer can transform your online business and drive growth.
           </p>
+<<<<<<< HEAD:app-backup/ai-ecommerce-optimizer-pro/page.tsx
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center px-8 py-4 bg-white text-cyan-600 font-semibold rounded-lg hover: bg-gray-100 transition-colors duration-300"
+=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/contact" 
               className="inline-flex items-center px-8 py-4 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
+>>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/ai-ecommerce-optimizer-pro/page.tsx
             >
               Start Optimization
               <ArrowRight className="w-8 h-8" />
             </Link>
+<<<<<<< HEAD:app-backup/ai-ecommerce-optimizer-pro/page.tsx
+            <Link
+              href="/ai-services"
+              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover: bg-white hover:text-cyan-600 transition-colors duration-300"
+=======
             <Link 
               href="/ai-services" 
               className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-600 transition-colors duration-300"
+>>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/ai-ecommerce-optimizer-pro/page.tsx
             >
               Explore All AI Services
             </Link>
@@ -196,7 +214,6 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default AiEcommerceOptimizerProPage;
+  )
+}
+export default AiEcommerceOptimizerProPage

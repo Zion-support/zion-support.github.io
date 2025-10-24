@@ -1,6 +1,4 @@
-"use client";
-import React, { useState } from "react";
-import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
+"use client"
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -68,6 +66,7 @@ const ContactPage: React.FC = () => {
     "Other"
   ];
 
+export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}
@@ -251,7 +250,5 @@ const ContactPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default ContactPage;
+  )
+}
