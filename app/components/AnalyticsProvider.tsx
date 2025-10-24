@@ -1,193 +1,148 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-interface AnalyticsproviderProps {
-  className?: string;
-  children?: React.ReactNode;
+'use client'
+import React, { createContext, useContext, useEffect, ReactNode } from "react";
+  
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void
+  }
 }
-export default function Analyticsprovider({ className = '', children, ...props }: AnalyticsproviderProps) {
-=======
-=======
-
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-'use client';
-import React, { createContext, useContext, useEffect } from 'react';
-
-<<<<<<< HEAD
-=======
-import { createContext, useContext, useEffect} from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
+gtag: "(...args: any[]) => void"}
 interface AnalyticsContextType {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
-  trackPageView: (pageName: string,) => void;
-=======
-  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
-  trackPageView: (pageName: string, properties?: Record<string, unknown>) => void;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
-=======
-  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void;
-  trackPageView: (pageName: string, pagePath: string) => void;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
+  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void
+  trackPageView: (pageName: string) => void
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
+  undefined,
+)
 
 export const useAnalytics = () => {
-=======
-interface AnalyticsContextType {trackEvent: (eventName: string, parameters?: Record<string, any   />) => void;
-  trackPageView: (pageName: string) => void;}
+  const context = useContext(AnalyticsContext)
+  if (!context) {
+    throw new Error("useAnalytics must be used within an AnalyticsProvider")
+  );
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
+  }
+  return context
+}
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined   />(undefined);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-  const context = useContext(AnalyticsContext);
-  if (!context) {throw new Error('useAnalytics must be used within an AnalyticsProvider');}
-  return context;
-<<<<<<< HEAD
-};
-
-const AnalyticsProvider: React.FC<{ children: React.ReactNode ,}> = ({ children }) => {
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children, }) => {
   useEffect(() => {
-<<<<<<< HEAD
-    // Initialize Google Analytics
-    if (typeof window !== 'undefined' && typeof gtag !== 'undefined') {
-=======
-    // Initialize Google Analytics if available
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (window as { gtag: (command: string, targetId: string, config?: Record<string, unknown>) => void }).gtag;
-      
-      // Configure Google Analytics
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
-      gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: document.title,
-        page_location: window.location.href,
-      });
+    if (typeof window !== &quot;undefined&quot;) {
+      // Google Analytics
+<<<<<<< HEAD:app-broken/app/components/AnalyticsProvider.tsx
+      if (process.env.NODE_ENV === &quot;production&quot;) {
+        const script = document.createElement(&quot;script&quot;)
+  );
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`
+  );
+        script.async = true
+  );
+        document.head.appendChild(script)
+  );
+      if (process.env.NODE_ENV === "production") {
+        const script = document.createElement("script")
+  );
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`
+  );
+        script.async = true
+  );
+        document.head.appendChild(script)
+  );
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
+
+        window.gtag =
+          window.gtag ||
+          function (...args: any[]) {
+            (window.gtag as any).q = (window.gtag as any).q || [];
+            (window.gtag as any).q.push(args)
+  );
+          }
+  );
+        window.gtag("js", new Date())
+  );
+        window.gtag("config", process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "")
+  );
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
+      }
     }
-  }, []);
+  }, [])
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
-    if (typeof window !== 'undefined' && typeof gtag !== 'undefined') {
-      gtag('event', eventName, parameters);
-=======
-  const trackEvent = (eventName: string, parameters: Record<string, unknown> = {}) => {
-    if (typeof window === 'undefined') return;
-
-    // Google Analytics
-    if ('gtag' in window) {
-      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
-      gtag('event', eventName, {
-        event_category: parameters.category || 'engagement',
-        event_label: parameters.label,
-        value: parameters.value,
-        ...parameters,
-      });
+  const trackEvent = (
+    eventName: string,
+    parameters?: Record<string, unknown>,
+  ) => {
+<<<<<<< HEAD:app-broken/app/components/AnalyticsProvider.tsx
+    if (typeof window !== &quot;undefined&quot; && window.gtag) {
+      window.gtag(&quot;event&quot;, eventName, parameters)
+  );
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("event", eventName, parameters)
+  );
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
     }
+  }
 
-    // Console logging for development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Event:', eventName, parameters);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
-    }
-  };
-
-  const trackPageView = (pageName: string,) => {
-    if (typeof window !== 'undefined' && typeof gtag !== 'undefined') {
-      gtag('event', 'page_view', {
-=======
-
-<<<<<<< HEAD
-interface AnalyticsProviderProps {children: React.ReactNode;}
-
-    // Initialize analytics
-    // Analytics initialization logic here
-  }, []);
-  const trackEvent = (eventName: string, parameters?: Record<string, unknown   />) => {if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', eventName, parameters);}
-=======
-  const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
-    console.log('Analytics Event:', eventName, properties);
-    // Add your analytics tracking logic here
-  };
-
-  const trackPageView = (pageName: string, properties?: Record<string, unknown>) => {
-    console.log('Page View:', pageName, properties);
-    // Add your page view tracking logic here
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
-  };
-
-    if (typeof window !== 'undefined' && window.gtag) {window.gtag('config', 'GA_MEASUREMENT_ID', {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
-    // Google Analytics
-    if ('gtag' in window) {
-      const gtag = (window as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag;
-      gtag('config', 'GA_MEASUREMENT_ID', {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
+  const trackPageView = (pageName: string) => {if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("config", "GA_MEASUREMENT_ID", {
         page_title: pageName,
-        page_location: window.location.href,});
-    }
-  };
-<<<<<<< HEAD
-
-  const value = {
-    trackEvent,
-    trackPageView,
-  };
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-  return (
-    <div className={`analyticsprovider-component ${className}`} {...props}>
-=======
-  const value: const AnalyticsContextType = {trackEvent,
-    trackPageView,};
-  return (
-    <AnalyticsContext.Provider const value = {value}   /></AnalyticsContext>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-      {children}
-    </div>
+        page_location: window.location.href,
+      }
   );
 }
-=======
-
-const AnalyticsProvider: React.FC = () => {
-  return (
-    <div className="analyticsprovider">
-      <h2>AnalyticsProvider</h2>
-      <p>AnalyticsProvider component.</p>
-    </div>
+  return context
   );
-};
+}
 
-export default AnalyticsProvider;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-=======
-import React from 'react';
-
-const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  return <>{children}</>;
-};
-
-export { AnalyticsProvider };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
-import React from 'react';
-
-const AnalyticsProvider: React.FC<AnalyticsProviderProps> = () => {
-  return (
-    <div className="analyticsprovider">
-      <h2>AnalyticsProvider</h2>
-      <p>Component content coming soon.</p>
-    </div>
+interface AnalyticsProviderProps {
+  children: React.ReactNode
   );
-};
+}
 
-export default AnalyticsProvider;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
+  useEffect(() => {
+    // Initialize analytics
+    // Analytics initialization logic here
+  }, [])
+  );
+  const trackEvent = (eventName: string, parameters?: Record<string, unknown>) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', eventName, parameters)
+  );
+    }
+  }
+
+  const trackPageView = (pageName: string) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: pageName,
+        page_location: window.location.href,
+      })
+    }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+  }
+  );
+  const value: AnalyticsContextType = {
+    trackEvent,
+    trackPageView,
+  }
+
+  return (
+    <AnalyticsContext.Provider value={value}>
+      {children}
+    </AnalyticsContext.Provider>
+  );
+}
+  );
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+export default AnalyticsProvide;r
+  );
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80

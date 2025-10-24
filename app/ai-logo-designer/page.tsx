@@ -1,686 +1,82 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import React from 'react';
+import Footer from '../components/Footer';
+import Head from "next/head";
+import Link from "next/link";
+import Navigation from '../components/Navigation';
+import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
-<<<<<<< HEAD
-export default function GDataAnalyticsZionTechGroupPage() {
+const Page: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time monitoring', 'Custom dashboards', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target the right audience with AI-driven precision and accuracy.',
+      benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
+    }
+  ];
+
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-900 text-white">
-=======
-    <React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-      <Helmet>
-        <title>Ai Logo Designer - Zion Tech Group</title>
-        <meta name="description" content="Ai Logo Designer solutions by Zion Tech Group" />
-      </Helmet>
-<<<<<<< HEAD
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Ai Logo Designer</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive ai logo designer solutions designed to meet your business needs.
-          </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-=======
-
+    <>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-yellow-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Ai Logo Designer
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced AI-powered ai logo designer solution for modern businesses.
+            <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
+              Advanced ai logo designer solutions powered by artificial intelligence and machine learning.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-yellow-500 to-blue-600 hover:from-yellow-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Demo
-              </button>
-            </div></div></div></div></div>
           </div>
-        </section>
 
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results
-              </p>
-            </div></div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div></div></div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-=======
-const AILogoDesignerPage: React.FC = () => {
-  const features = [
-    'AI-powered logo generation',
-    'Unlimited logo variations',
-    'High-resolution downloads',
-    'Vector format support',
-    'Brand color palette',
-    'Typography suggestions',
-    'Icon library access',
-    'Custom logo editing',
-    'Brand guidelines generation',
-    'Social media templates',
-    'Business card designs',
-    'Watermark removal'
-  ];
-
-  const benefits = [
-    'Create logos in minutes',
-    'Professional quality guaranteed',
-    'Unlimited revisions',
-    'Commercial use rights',
-    'Brand consistency tools',
-    '24/7 design support'
-  ];
-
-  const logoStyles = [
-    {
-      name: 'Modern Minimalist',
-      description: 'Clean, simple designs perfect for tech and startup companies',
-      examples: ['Geometric shapes', 'Clean typography', 'Monochrome palette'],
-      price: 'Free'},
-    {
-      name: 'Classic Corporate',
-      description: 'Professional and trustworthy designs for established businesses',
-      examples: ['Serif fonts', 'Traditional colors', 'Formal layout'],
-      price: '$19'},
-    {
-      name: 'Creative Artistic',
-      description: 'Unique and creative designs for creative agencies and artists',
-      examples: ['Hand-drawn elements', 'Vibrant colors', 'Unique shapes'],
-      price: '$29'},
-    {
-      name: 'Vintage Retro',
-      description: 'Nostalgic designs with a modern twist for lifestyle brands',
-      examples: ['Retro fonts', 'Warm colors', 'Classic elements'],
-      price: '$24'},
-    {
-      name: 'Playful Fun',
-      description: 'Light-hearted and friendly designs for children and entertainment',
-      examples: ['Rounded shapes', 'Bright colors', 'Friendly fonts'],
-      price: '$19'},
-    {
-      name: 'Luxury Premium',
-      description: 'Elegant and sophisticated designs for high-end brands',
-      examples: ['Gold accents', 'Elegant fonts', 'Refined details'],
-      price: '$39'}
-  ];
-
-  const pricingPlans = [
-    {
-      name: 'Basic'
-      price: '$29',
-      period: '/month',
-      originalPrice: '$49',
-      features: [
-        '10 logo downloads',
-        'Basic templates',
-        'PNG format only',
-        'Standard resolution',
-        'Email support',
-        'Commercial use'
-      ],
-      popular: false;
-    },
-    {
-      name: 'Professional'
-      price: '$59',
-      period: '/month',
-      originalPrice: '$99',
-      features: [
-        'Unlimited downloads',
-        'Premium templates',
-        'All formats (PNG, SVG, PDF)',
-        'High resolution',
-        'Priority support',
-        'Brand guidelines',
-        'Social media templates',
-        'Business card designs'
-      ],
-      popular: true;
-    },
-    {
-      name: 'Enterprise'
-      price: '$99',
-      period: '/month',
-      originalPrice: '$149',
-      features: [
-        'Everything in Professional',
-        'White-label options',
-        'API access',
-        'Custom templates',
-        'Dedicated support',
-        'Team collaboration',
-        'Advanced editing tools',
-        'Brand asset management'
-      ],
-      popular: false;
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Alex Rodriguez',
-      role: 'Startup Founder',
-      content: 'AI Logo Designer Pro created the perfect logo for my startup in just 10 minutes. The AI understood my brand vision and delivered exactly what I needed.',
-      rating: 5;
-    },
-    {
-      name: 'Maria Santos',
-      role: 'Graphic Designer',
-      content: 'As a designer, I was skeptical about AI tools, but this one is incredible. It helps me generate initial concepts quickly and then I can refine them.',
-      rating: 5;
-    },
-    {
-      name: 'James Wilson',
-      role: 'Small Business Owner',
-      content: 'The brand guidelines feature is amazing. It gave me everything I needed to maintain consistency across all my marketing materials.',
-      rating: 5;
-    }
-  ];
-
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Navigation />
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4"></section>
-        <div className="container mx-auto max-w-6xl"></div>
-          <div className="text-center mb-16"></div>
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-6"></div>
-              <Palette className="w-10 h-10 text-white" />
-            </div>
-            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6"></h1>
-              AI Logo Designer Pro;
-            </h1>,
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
-              Create stunning, professional logos in minutes with AI-powered design generation. From concept to completion, get the perfect logo for your brand with unlimited variations and commercial rights.
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-8"></div>
-              <div className="flex items-center space-x-2 text-green-400"></div>
-                <CheckCircle className="w-5 h-5" />,
-                <span>Free trial available</span>,
-              </div>,
-              <div className="flex items-center space-x-2 text-blue-400">,
-                <Users className="w-5 h-5" />,
-        <div className="container mx-auto max-w-6xl"></section>
-          <div className="text-center mb-16"></div>
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-6"></div>
-              <Palette className="w-10 h-10 text-white" />
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Logo Designer Pro</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Create stunning, professional logos in minutes with AI-powered design generation. From concept to completion, get the perfect logo for your brand with unlimited variations and commercial rights.</p>
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"></div>
-              <div className="flex items-center space-x-2 text-green-400"></div>
-                <CheckCircle className="w-5 h-5" />
-                <span>Free trial available</span>
-              </div>
-              <div className="flex items-center space-x-2 text-blue-400"></div>
-                <Users className="w-5 h-5" />
-                <span>75,000+ logos created</span>
-              </div>
-              <div className="flex items-center space-x-2 text-yellow-400"></div>
-                <Star className="w-5 h-5 fill-current" />
-                <span>4.9/5 rating</span>
-              </div>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <a
-                href="#pricing"
-                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
-              ></a>
-                Start Creating Free;
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </a>
-              <a;
-                href="#demo"
-                className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
-              ></a>
-                Watch Demo;
-              </a>
-            </div>
-          </div>
-        </div>,
-      </section>,
-,
-      {/* Features Section */}
-      <section className="py-16 px-4 bg-slate-800/50"></section>
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6"></h2>
-              Powerful Logo Design Features;
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              Everything you need to create professional logos that represent your brand perfectly.
-            </p>)
-          </div>)
-)
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">),
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6 hover: border-purple-400/40 transition-all duration-300">,
-                <div className="flex items-center space-x-3 mb-4">,
-                  <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center">,
-                    <Sparkles className="w-5 h-5 text-white" />,
-                  </div>,
-                  <h3 className="text-lg font-semibold text-white">{feature}</h3>
-                </div>
-                <p className="text-gray-300 text-sm"></p>
-                  {feature === 'AI-powered logo generation' && 'Advanced AI analyzes your brand description and generates unique, professional logo concepts tailored to your industry.'}
-        <div className="container mx-auto max-w-6xl"></section>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Powerful Logo Design Features</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Everything you need to create professional logos that represent your brand perfectly.</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
-              <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6 hover:border-purple-400/40 transition-all duration-300"></div>
-                <div className="flex items-center space-x-3 mb-4"></div>
-                  <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center"></div>
-                    <Sparkles className="w-5 h-5 text-white" />
-                  <h3 className="text-lg font-semibold text-white">{feature}</h3><p className="text-gray-300 text-sm">{feature === 'AI-powered logo generation' && 'Advanced AI analyzes your brand description and generates unique, professional logo concepts tailored to your industry.'}
-                  {feature === 'Unlimited logo variations' && 'Generate unlimited variations of your logo with different colors, fonts, and layouts until you find the perfect match.'}
-                  {feature === 'High-resolution downloads' && 'Download your logos in high resolution (up to 4 K) for use in print, web, and any other medium.'}
-                  {feature === 'Vector format support' && 'Get your logos in vector format (SVG) for infinite scalability without quality loss.'}
-                  {feature === 'Brand color palette' && 'AI suggests complementary color palettes that work perfectly with your logo design.'}
-                  {feature === 'Typography suggestions' && 'Get font recommendations that match your logo style and brand personality.'}
-                  {feature === 'Icon library access' && 'Access thousands of professional icons and symbols to incorporate into your logo design.'}
-                  {feature === 'Custom logo editing' && 'Fine-tune your logo with our advanced editing tools for perfect customization.'}
-                  {feature === 'Brand guidelines generation' && 'Automatically generate comprehensive brand guidelines including logo usage, colors, and typography.'}
-                  {feature === 'Social media templates' && 'Get pre-made social media templates featuring your logo for consistent branding.'}
-                  {feature === 'Business card designs' && 'Create matching business cards and stationery with your new logo design.'}</p>
-                  {feature === 'Watermark removal' && 'Remove watermarks from your final logo designs for professional use.'}</p>
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Logo Styles Section */}
-      <section className="py-16 px-4"></section>
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6"></h2>
-              Logo Design Styles;
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              Choose from various design styles or let AI suggest the perfect style for your brand.
-            </p>
-          </div>,
-,
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
-            {logoStyles.map((style, index) => (
-              <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6 hover: border-purple-400/40 transition-all duration-300">,
-                <div className="h-32 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-4">,
-                  <Palette className="w-16 h-16 text-white opacity-50" />,
-                </div>,
-                <div className="flex items-center justify-between mb-2">,
-                  <h3 className="text-lg font-semibold text-white">{style.name}</h3>
-                  <span className="text-purple-400 font-semibold">{style.price}</span>
-                </div>
-                <p className="text-gray-300 text-sm mb-4">{style.description}</p>
-                <ul className="space-y-1"></ul>
-                  {style.examples.map((example, exampleIndex) => (
-        <div className="container mx-auto max-w-6xl"></section>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Logo Design Styles</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose from various design styles or let AI suggest the perfect style for your brand.</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{logoStyles.map((style, index) => (</div>
-              <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6 hover:border-purple-400/40 transition-all duration-300"></div>
-                <div className="h-32 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-4"></div>
-                  <Palette className="w-16 h-16 text-white opacity-50" />
-                </div>
-                <div className="flex items-center justify-between mb-2"></div>
-                  <h3 className="text-lg font-semibold text-white">{style.name}</h3><span className="text-purple-400 font-semibold">{style.price}</span><p className="text-gray-300 text-sm mb-4">{style.description}</p><ul className="space-y-1">{style.examples.map((example, exampleIndex) => (</ul>
-                    <li key={exampleIndex} className="flex items-center space-x-2 text-sm text-gray-400"></li>
-                      <CheckCircle className="w-3 h-3 text-green-400" />
-                      <span>{example}</span>
+              <div key={index} className="bg-slate-800 p-6 rounded-lg">
+                <feature.icon className="w-12 h-12 text-emerald-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+                      {benefit}
                     </li>
                   ))}
                 </ul>
-                <button className="w-full mt-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 rounded-lg hover: from-purple-700 hover:to-pink-700 transition-all duration-300"></button>
-                  Try This Style;
-                </button>,
-              </div>))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-16 px-4 bg-slate-800/50"></section>
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6"></h2>
-              Why Choose AI Logo Designer Pro?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              Experience the future of logo design with AI-powered creativity and professional results.,
-            </p>,
-          </div>,
-,
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center"></div>
-                <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-        <div className="container mx-auto max-w-6xl"></section>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Why Choose AI Logo Designer Pro?</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the future of logo design with AI-powered creativity and professional results.</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, index) => (</div>
-              <div key={index} className="text-center"></div>
-                <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                  <CheckCircle className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-semibold text-white mb-2">{benefit}</h3><p className="text-gray-300">{benefit === 'Create logos in minutes' && 'AI-powered generation means you can have a professional logo ready in minutes, not days or weeks.'}
-                  {benefit === 'Professional quality guaranteed' && 'Our AI is trained on thousands of professional logos to ensure high-quality, industry-standard designs.'}
-                  {benefit === 'Unlimited revisions' && 'Generate as many variations as you need until you find the perfect logo for your brand.'}
-                  {benefit === 'Commercial use rights' && 'All logos come with full commercial use rights, so you can use them for any business purpose.'}
-                  {benefit === 'Brand consistency tools' && 'Generate brand guidelines and templates to maintain consistency across all your marketing materials.'}</p>
-                  {benefit === '24/7 design support' && 'Get help from our design experts whenever you need assistance with your logo creation process.'}</p>
-                </p>
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* Pricing Section */}
-      <section id="pricing" className="py-16 px-4"></section>
-        <div className="container mx-auto max-w-6xl"></section>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Choose Your Design Plan</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Flexible pricing plans designed to meet your logo design needs, from personal projects to enterprise branding.</p><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</div><div key={index} className={`bg-slate-800/80 backdrop-blur-sm border rounded-xl p-8 relative ${plan.popular ? 'border-purple-400/40 ring-2 ring-purple-400/20' : 'border-gray-600/40'}`}>{plan.popular && (</div>
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
-                    <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6"></h2>
-              Choose Your Design Plan;
-            </h2>,
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">,
-              Flexible pricing plans designed to meet your logo design needs, from personal projects to enterprise branding.
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Transform your business with our cutting-edge AI solutions. Contact us today to learn more.
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
-            {pricingPlans.map((plan, index) => (
-              <div key={index} className={`bg-slate-800/80 backdrop-blur-sm border rounded-xl p-8 relative ${plan.popular ? 'border-purple-400/40 ring-2 ring-purple-400/20' : 'border-gray-600/40'}`}></div>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
-                    <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold"></span>
-                      Most Popular;
-                    </span>
-                  </div>
-                )}
-
-                <div className="text-center mb-8"></div>
-                  <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
-                  <div className="flex items-center justify-center space-x-2 mb-2"></div>
-                    <span className="text-4xl font-bold text-white">{plan.price}</span><span className="text-gray-400">{plan.period}</span>
-                  </div>
-                  {plan.originalPrice && (
-                    <span className="text-gray-400 line-through text-lg">{plan.originalPrice}</spa>
-                  )}
-                <ul className="space-y-4 mb-8">{plan.features.map((feature, featureIndex) => (</u>
-                    <li key={featureIndex} className="flex items-center space-x-3"></l>
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" /></CheckCircl>
-                      <span className="text-gray-300">{feature}</spa>
-                    </li>
-                  ))}
-                </ul>
-
-                <a;
-                  href="#contact"
-                  className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular;
-                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover: from-purple-700 hover:to-pink-700'}
-                      : 'border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white'}
-                  }`}
-                ></a>
-                  Get Started;
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-16 px-4 bg-slate-800/50"></section>
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6"></h2>
-              Success Stories;
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              See how AI Logo Designer Pro has helped businesses create amazing brand identities.
-            </p>
-          </div>,
-,
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6"></div>
-                <div className="flex items-center space-x-1 mb-4">{[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div></div>
-                  <p className="font-semibold text-white">{testimonial.name}<p className="text-gray-400 text-sm">{testimonial.role}</p>
-        <div className="container mx-auto max-w-6xl"></section>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Success Stories</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">See how AI Logo Designer Pro has helped businesses create amazing brand identities.</p><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
-              <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6"></div>
-                <div className="flex items-center space-x-1 mb-4">{[...Array(testimonial.rating)].map((_, i) => (</div><Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div></div>
-                  <p className="font-semibold text-white">{testimonial.name}</p><p className="text-gray-400 text-sm">{testimonial.role}</p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our Solution?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency
-              </p>
-            </div></div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div></div></div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-yellow-500 to-blue-600 hover:from-yellow-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div></div></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-            </div>
-          </div>
-        </div>
-<<<<<<< HEAD
-      </div>
-=======
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-=======
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="py-16 px-4 bg-gradient-to-r from-purple-600 to-pink-600"></section>
-          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6"></h2>
-            Ready to Create Your Logo?
-          </h2>
-          <p className="text-xl text-purple-100 mb-8"></p>
-            Start designing your perfect logo today with AI Logo Designer Pro.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
-            <a;
-        <div className="container mx-auto max-w-4xl text-center"></section>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Create Your Logo?</h2><p className="text-xl text-purple-100 mb-8">Start designing your perfect logo today with AI Logo Designer Pro.</p>
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
             <a
-              href="tel:+13024640950"
-              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-50 transition-colors flex items-center space-x-2"
-            ></a>
-              <Phone className="w-5 h-5" /></Phon>
-              <span>+1 302 464 0950</spa>
-            </a>
-            <a;
-              href="mailto:kleber@ziontechgroup.com"
-              className="border border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-colors flex items-center space-x-2"
-            ></a>
-              <Mail className="w-5 h-5" /></Mai>
-              <<<<span>kleber</span></span>@ziontechgroup.com</span>
+              href="/contact"
+              className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-3 rounded-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-300"
+            >
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
             </a>
           </div>
-          <div className="mt-8 text-purple-100"></div>
-            <p className="flex items-center justify-center space-x-2"></p>
-              <MapPin className="w-4 h-4" />
-              <span>364 E Main St STE 1008, Middletown, DE 19709</span>
-            </p>
-          </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
         </div>
       </div>
       <Footer />
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
-    </div>
-=======
-    </React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
+    </>
   );
-}
-=======
-import React from 'react';
+};
 
-import {Link} from 'react-router-dom';
-import {ArrowRight} from 'lucide-react';
-
-export default function AilogodesignerPage() {
-  return (
-    <>
-      <title>5G Data Analytics - Zion Tech Group</title>
-        <title>Ai Logo Designer - Zion Tech Group</title>
-        <h1 className="text-4 xl font-boldtext-whitemb-6">Ai Logo Designer</h1>
-        <p className="text-lgtext-gray-300mb-8">Professional ai logo designer services coming soon.</p>
-          Contact Us
-
-  );
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
-import React  from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function AilogodesignerPage() {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-      <Helmet>
-        <title>Ai Logo Designer - Zion Tech Group</title>
-        <meta name="description" content="Professional ai logo designer services by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Ai Logo Designer</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional ai logo designer services coming soon.</p>
-          
-<<<<<<< HEAD
-          <Link
-            to="/contact"
-            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-          >
-            Contact Us
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Link>
-        </div>
-=======
-          <ArrowRight className="w-5h-5ml-2"  />
-        </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-      </div>
-    </div>
-  );
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
+export default Page;

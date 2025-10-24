@@ -1,34 +1,40 @@
 'use client'
 /**
- * Cache Manager;
- * Provides in-memory and localStorage caching with TTL support;
+ * Cache Manager
+  );
+ * Provides in-memory and localStorage caching with TTL support
+  );
  */
-<<<<<<< HEAD
 export enum CacheStorage {}
   Memory = 'memory',
   LocalStorage = 'localStorage',
-  SessionStorage = 'sessionStorage'
+  SessionStorage = 'sessionStorage'})
+  );
 }
 
 export interface CacheOptions {
-  ttl?: number; // Time to live in milliseconds;
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+  ttl?: number; // Time to live in milliseconds
 export interface CacheOptions {}
   ttl?: number; // Time to live in milliseconds
-  storage?: CacheStorage;
-  compress?: boolean;
+  );
+  storage?: CacheStorage
+  );
+  compress?: boolean})
+  );
 }
 
 export interface CacheConfig {}
-  storage?: CacheStorage;
-  defaultTTL?: number;
+  storage?: CacheStorage
+  );
+  defaultTTL?: number})
+  );
 }
 
-export interface CacheEntry<T> {}
+export interface CacheEntry<T></T> {}
   value: T,
   timestamp: number,
-  ttl: number;
+  ttl: number,})
+  );
 }
 
 export interface CacheStats {}
@@ -36,620 +42,665 @@ export interface CacheStats {}
   misses: number,
   hitRate: number,
   count: number,
-  entries: number;
+  entries: number,})
+  );
 }
 
-export class CacheManager<T = unknown> {}
-  private cache: Map<string, CacheEntry<T>> = new Map();
-<<<<<<< HEAD
-  private stats: CacheStats = {
-=======
-  private stats: CacheStats = {}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-    hits: 0,
+export class CacheManager<T></T> {}
+  private cache: Map<string></string>> = new Map(
+  );
+  private stats: CacheStats = {,
+  hits: 0,
     misses: 0,
     hitRate: 0,
     count: 0,
-    entries: 0;
-  };
-  private config: Required<CacheConfig>;
+    entries: 0,})
+  );
+}
+  );
+  private config: Required<CacheConfig></CacheConfig>
+  );
 ,
-  constructor(config: CacheConfig = {,}) {
+  constructor(config: CacheConfig = {}); {
     this.config = {
-      storage: config.storage || CacheStorage.Memory;
-      defaultTTL: config.defaultTTL || 5 * 60 * 1000 // 5 minutes;
-  private stats: CacheStats = {,}
+      storage: config.storage || CacheStorage.Memory
+  );
+      defaultTTL: config.defaultTTL || 5 * 60 * 1000 // 5 minutes
+  );
+  private stats: CacheStats = {}
     hits: 0,
     misses: 0,
     hitRate: 0,
     count: 0,
-    entries: 0;
-  };
-  private config: Required<CacheConfig>;
-
-  constructor(config: CacheConfig = {,}) {}
+    entries: 0})
+  );
+}
+  );
+  private config: Required<CacheConfig></CacheConfig>
+  );
+  constructor(config: CacheConfig = {}); {}
     this.config = {}
       storage: config.storage || CacheStorage.Memory,
-<<<<<<< HEAD
-      defaultTTL: config.defaultTTL || 5 * 60 * 1000 // 5 minutes,
-=======
-      defaultTTL: config.defaultTTL || 5 * 60 * 1000 // 5 minutes
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-    };
-  }
+      defaultTTL: config.defaultTTL || 5 * 60 * 1000 // 5 minutes})
+  );
+}})
+  );
+}
 
   /**
-   * Set a value in the cache;
+   * Set a value in the cache
+  );
    */
-<<<<<<< HEAD
   set(key: string, value: T, ttl?: number): void {
-    const entry: CacheEntry<T> = {
-      value;
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+    const entry: CacheEntry<T></T> = {
+      value
+  );
   set(key: string, value: T, ttl?: number): void {}
-    const entry: CacheEntry<T> = {,}
+    const entry: CacheEntry<T></T> = {}
       value,
-      timestamp: Date.now(),
-      ttl: ttl || this.config.defaultTTL;
-    };
-
-    this.cache.set(key, entry);
-    this.stats.entries = this.cache.size;
-
-<<<<<<< HEAD
-    // Save to persistent storage if needed;
+      timestamp: Date.now(,
+      ttl: ttl || this.config.defaultTTL})
+  );
+}
+  );
+    this.cache.set(key, entry)
+  );
+    this.stats.entries = this.cache.size
+  );
+    // Save to persistent storage if needed
+  );
     if (this.config.storage !== CacheStorage.Memory) {
     // Save to persistent storage if needed
+  );
     if (this.config.storage !== CacheStorage.Memory) {}
-      this.saveToStorage();
-export enum CacheStorage {/* TODO: Fix JSX expression */,}
-=======
-    // Save to persistent storage if needed
-    if (this.config.storage !== CacheStorage.Memory) {}
-      this.saveToStorage();
-export enum CacheStorage {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+      this.saveToStorage()
+export enum CacheStorage {/* TODO: Fix JSX expression */});;)
 }
-export interface CacheOptions {/* TODO: Fix JSX expression */,}
+export interface CacheOptions {/* TODO: Fix JSX expression */});;)
 }
-export interface CacheConfig {/* TODO: Fix JSX expression */,}
+export interface CacheConfig {/* TODO: Fix JSX expression */});;)
 }
-export interface CacheEntry<T> {/* TODO: Fix JSX expression */,}
+export interface CacheEntry<T></T> {/* TODO: Fix JSX expression */});;)
 }
-export interface CacheStats {/* TODO: Fix JSX expression */,}
+export interface CacheStats {/* TODO: Fix JSX expression */});;)
 }
-<<<<<<< HEAD
-export class CacheManager {/* TODO: Fix JSX expression */,}
-  s: 0; };
-  constructor(confi)
-  g: CacheConfig = {,}) {/* TODO: Fix JSX expression */,}
-=======
 export class CacheManager {/* TODO: Fix JSX expression */}
-  s: 0 };
+  s: 0 }
+  );
   constructor(confi)
-  g: CacheConfig = {}) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-  }
+  g: CacheConfig = {}); {/* TODO: Fix JSX expression */});;)
+}
   /**
-   * Start periodic cleanup of expired entries;
+   * Start periodic cleanup of expired entries
+  );
    */
-  private startCleanup(): void {/* TODO: Fix JSX expression */,}
-    }, 60 * 1000); // Run every minute;
-  }
+  private startCleanup(): void {/* TODO: Fix JSX expression */});;)
+}, 60 * 1000); // Run every minute})
+  );
+}
   /**
-   * Stop cleanup interval;
+   * Stop cleanup interval
+  );
    */
-  stopCleanup(): void {/* TODO: Fix JSX expression */,}
-    }
-  }
+  stopCleanup(): void {/* TODO: Fix JSX expression */});
+  );
+  )
+  );
+}
   /**
-   * Remove expired entries;
+   * Remove expired entries
+  );
    */
-  private cleanup(): void {/* TODO: Fix JSX expression */,}
-      }
-    }
-    // Clean localStorage;
-    if (typeof window !== 'undefined' && window.localStorage) {/* TODO: Fix JSX expression */,}
-              }
-            }
-          } catch {/* TODO: Fix JSX expression */,}
-          }
-        }
-      }
-      keysToRemove.forEach(key => localStorage.removeItem(key));
-    }
-    logger.debug('Cache cleanup completed');
-  }
+  private cleanup(): void {/* TODO: Fix JSX expression */});
+  );
+  )
+  );
+}
+    // Clean localStorage
+  );
+    if (typeof window !== 'undefined' && window.localStorage) {/* TODO: Fix JSX expression */});;)
+}
+            });;)
+} catch {/* TODO: Fix JSX expression */});;)
+}
+        });;)
+}
+      keysToRemove.forEach(key => localStorage.removeItem(key));)
+}
+    logger.debug('Cache cleanup completed');)
+}
   /**
-   * Check if cache entry is expired;
+   * Check if cache entry is expired
+  );
    */
   private isExpired(entr)
-<<<<<<< HEAD
-  y: CacheEntry<unknown>, now = Date.now()): boolean {/* TODO: Fix JSX expression */,}
-=======
-  y: CacheEntry<unknown>, now = Date.now()): boolean {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-  }
+  y: CacheEntry<unknown></unknown>, now = Date.now()): boolean {/* TODO: Fix JSX expression */});;)
+}
   /**
-   * Get storage key with prefix;
+   * Get storage key with prefix
+  );
    */
   private getStorageKey(ke)
-<<<<<<< HEAD
-  y: string,): string {/* TODO: Fix JSX expression */,}
-=======
-  y: string): string {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-    return `cache_${key}`;
-  }
+  y: string: string {/* TODO: Fix JSX expression */}
+    return `cache_${key}`})
+  );
+}
   /**
-   * Set cache entry;
+   * Set cache entry
+  );
    */
-  set<T>(ke,
+  set<T></T>(ke,
   y: string, valu,
   e: T, option)
-<<<<<<< HEAD
-  s: { ttl?: number ,} = {}): void {/* TODO: Fix JSX expression */,}
-=======
-  s: { ttl?: number } = {}): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-    };`
-    performanceMonitoring.recordCustomMetric(`cache_set_${key}`, 1, 'count');
-    if (this.storage === CacheStorage.Memory) {/* TODO: Fix JSX expression */,}
-    } else if (this.storage === CacheStorage.LocalStorage &&
+  s: { ttl?: number } = {});: void {/* TODO: Fix JSX expression */});;)
+};`
+    performanceMonitoring.recordCustomMetric(`cache_set_${key}`, 1, 'count')
+  );
+    if (this.storage === CacheStorage.Memory) {/* TODO: Fix JSX expression */});;)
+} else if (this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
-      window.localStorage;)
-    ) {/* TODO: Fix JSX expression */,}
-      } catch (error) {/* TODO: Fix JSX expression */,}
-      }
+      window.localStorage}
+    ) {/* TODO: Fix JSX expression */});;)
+} catch (error) {/* TODO: Fix JSX expression */});;)
+}
     } else if (this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
-      window.sessionStorage;)
-    ) {/* TODO: Fix JSX expression */,}
-      } catch (error) {/* TODO: Fix JSX expression */,}
-      }
-    }
-  }
+      window.sessionStorage}
+    ) {/* TODO: Fix JSX expression */});;)
+} catch (error) {/* TODO: Fix JSX expression */});;)
+}
+    });;)
+}
 
   /**
-<<<<<<< HEAD
-   * Get a value from the cache;
+   * Get a value from the cache
+  );
    */
-  get(key: string,): T | null {,}
-    const entry = this.cache.get(key);
-
+  get(key: string: T | null {}
+    const entry = this.cache.get(key)
+  );
     if (!entry) {}
-      this.stats.misses++;
-      this.updateHitRate();
-      return null;
-    }
+      this.stats.misses++
+  );
+      this.updateHitRate()
+  );
+      return null})
+  );
+}
 
-    // Check if entry has expired;
-    if (Date.now() - entry.timestamp > entry.ttl) {
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     // Check if entry has expired
+  );
+    if (Date.now() - entry.timestamp > entry.ttl) {
+    // Check if entry has expired
+  );
     if (Date.now() - entry.timestamp > entry.ttl) {}
-      this.cache.delete(key);
-      this.stats.misses++;
-      this.stats.entries = this.cache.size;
-      this.updateHitRate();
-      return null;
-    }
+      this.cache.delete(key)
+  );
+      this.stats.misses++
+  );
+      this.stats.entries = this.cache.size
+  );
+      this.updateHitRate()
+  );
+      return null})
+  );
+}
 
-    this.stats.hits++;
-    this.updateHitRate();
-   * Get cache entry;
+    this.stats.hits++
+  );
+    this.updateHitRate()
+  );
+   * Get cache entry
+  );
    */
-  get<T>(ke)
-<<<<<<< HEAD
-  y: string,): T | undefined {/* TODO: Fix JSX expression */,}`
-=======
-  y: string): T | undefined {/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-    performanceMonitoring.recordCustomMetric(`cache_get_${key}`, 1, 'count');
+  get<T></T>(ke)
+  y: string: T | undefined {/* TODO: Fix JSX expression */}`
+    performanceMonitoring.recordCustomMetric(`cache_get_${key}`, 1, 'count')
+  );
     let,
-  entry: CacheEntry<T> | null = null;
-    if (this.storage === CacheStorage.Memory) {/* TODO: Fix JSX expression */,}
-    } else if (this.storage === CacheStorage.LocalStorage &&
+  entry: CacheEntry<T></T> | null = null
+  );
+    if (this.storage === CacheStorage.Memory {/* TODO: Fix JSX expression */});;)
+} else if (this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
-      window.localStorage;)
-    ) {/* TODO: Fix JSX expression */,}
-        }
-      } catch (error) {/* TODO: Fix JSX expression */,}
-      }
+      window.localStorage}
+    ) {/* TODO: Fix JSX expression */});;)
+}
+      } catch (error) {/* TODO: Fix JSX expression */});;)
+}
     } else if (this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
-      window.sessionStorage;)
-    ) {/* TODO: Fix JSX expression */,}
-        }
-      } catch (error) {/* TODO: Fix JSX expression */,}
-      }
-    }
-    if (!entry) {/* TODO: Fix JSX expression */,}`
-      performanceMonitoring.recordCustomMetric(`cache_miss_${key}`, 1, 'count');
-      return undefined;
-    }
-    if (this.isExpired(entry)) {/* TODO: Fix JSX expression */,}`
-      performanceMonitoring.recordCustomMetric(`cache_expired_${key}`, 1, 'count');
-      return undefined;
-    }
+      window.sessionStorage}
+    ) {/* TODO: Fix JSX expression */});;)
+}
+      } catch (error) {/* TODO: Fix JSX expression */});
+  );
+  )
+  );
+}
+    if (!entry) {/* TODO: Fix JSX expression */}`
+      performanceMonitoring.recordCustomMetric(`cache_miss_${key}`, 1, 'count')
+  );
+      return undefined})
+  );
+}
+    if (this.isExpired(entry)) {/* TODO: Fix JSX expression */}`
+      performanceMonitoring.recordCustomMetric(`cache_expired_${key}`, 1, 'count')
+  );
+      return undefined})
+  );
+}
     this.stats.hits++;`
-    performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, 'count');
-    return entry.value;
-  }
+    performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, 'count')
+  );
+    return entry.value})
+  );
+}
 
   /**
-<<<<<<< HEAD
-   * Check if a key exists in the cache;
+   * Check if a key exists in the cache
+  );
    */
-  has(key: string,): boolean {,}
-    const entry = this.cache.get(key);
+  has(key: string: boolean {}
+    const entry = this.cache.get(key)
+  );
 ,
     if (!entry) {,
-      return false;
-    }
-
-    // Check if entry has expired;
-    if (Date.now() - entry.timestamp > entry.ttl) {
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-
-    if (!entry) {}
-      return false;
-    }
+      return false})
+  );
+}
 
     // Check if entry has expired
-    if (Date.now() - entry.timestamp > entry.ttl) {}
-      this.cache.delete(key);
-      this.stats.entries = this.cache.size;
-      return false;
-    }
+  );
+    if (Date.now() - entry.timestamp > entry.ttl) {
 
-    return true;
-  }
+    if (!entry) {}
+      return false})
+  );
+}
+
+    // Check if entry has expired
+  );
+    if (Date.now() - entry.timestamp > entry.ttl) {}
+      this.cache.delete(key)
+  );
+      this.stats.entries = this.cache.size
+  );
+      return false})
+  );
+}
+
+    return true})
+  );
+}
 
   /**
-   * Delete a key from the cache;
+   * Delete a key from the cache
+  );
    */
-  delete(key: string,): boolean {,}
-    const deleted = this.cache.delete(key);
+  delete(key: string: boolean {}
+    const deleted = this.cache.delete(key)
+  );
     if (deleted) {}
-      this.stats.entries = this.cache.size;
-
-<<<<<<< HEAD
-      // Save to persistent storage if needed;
-      if (this.config.storage !== CacheStorage.Memory) {,
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+      this.stats.entries = this.cache.size
+  );
       // Save to persistent storage if needed
+  );
+      if (this.config.storage !== CacheStorage.Memory) {,
+      // Save to persistent storage if needed
+  );
       if (this.config.storage !== CacheStorage.Memory) {}
-        this.saveToStorage();
-   * Check if key exists and is not expired;
+        this.saveToStorage()
+  );
+   * Check if key exists and is not expired
+  );
    */
   has(ke)
-<<<<<<< HEAD
-  y: string,): boolean {/* TODO: Fix JSX expression */,}
-=======
-  y: string): boolean {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-  }
+  y: string: boolean {/* TODO: Fix JSX expression */});;)
+}
   /**
-   * Delete a cache entry;
+   * Delete a cache entry
+  );
    */
   delete(ke)
-<<<<<<< HEAD
-  y: string,): void {/* TODO: Fix JSX expression */,}
-=======
-  y: string): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-    } else if (this.storage === CacheStorage.LocalStorage &&
+  y: string: void {/* TODO: Fix JSX expression */});;)
+} else if (this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
-      window.localStorage;)
-    ) {/* TODO: Fix JSX expression */,}
-    } else if (this.storage === CacheStorage.SessionStorage &&
+      window.localStorage}
+    ) {/* TODO: Fix JSX expression */});;)
+} else if (this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
-      window.sessionStorage;)
-    ) {/* TODO: Fix JSX expression */,}
-    }
-  }
+      window.sessionStorage}
+    ) {/* TODO: Fix JSX expression */});
+  );
+  )
+  );
+}
   /**
-   * Clear all cache entries;
+   * Clear all cache entries
+  );
    */
-  clear(): void {/* TODO: Fix JSX expression */,}
-    }
+  clear(): void {/* TODO: Fix JSX expression */});;)
+}
     if (this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
-      window.localStorage;)
-    ) {/* TODO: Fix JSX expression */,}
-        }
-      }
-    }
-<<<<<<< HEAD
-    return deleted;
-  }
+      window.localStorage}
+    ) {/* TODO: Fix JSX expression */});;)
+}
+      });;)
+}
+    return deleted})
+  );
+}
 
   /**
-   * Clear all entries from the cache;
+   * Clear all entries from the cache
+  );
    */
   clear(): void {}
-    this.cache.clear();
-    this.stats.entries = 0;
-
-    // Clear persistent storage if needed;
-    if (this.config.storage !== CacheStorage.Memory) {
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+    this.cache.clear()
+  );
+    this.stats.entries = 0
+  );
     // Clear persistent storage if needed
+  );
+    if (this.config.storage !== CacheStorage.Memory) {
+    // Clear persistent storage if needed
+  );
     if (this.config.storage !== CacheStorage.Memory) {}
-      this.clearStorage();
-    }
-  }
-
+      this.clearStorage()
+  );
+  )
+  );
+}
   /**
-   * Get all keys in the cache;
+   * Get all keys in the cache
+  );
    */
   keys(): string[] {}
-    return Array.from(this.cache.keys());
-  }
+    return Array.from(this.cache.keys());)
+}
 
   /**
-   * Get cache statistics;
+   * Get cache statistics
+  );
    */
   getStats(): CacheStats {}
-    return { ...this.stats };
-  }
+    return { ...this.stats }})
+  );
+}
 
   /**
-   * Get cache size;
+   * Get cache size
+  );
    */
   size(): number {}
-    return this.cache.size;
-  }
+    return this.cache.size})
+  );
+}
 
   /**
-   * Clean expired entries;
+   * Clean expired entries
+  );
    */
   cleanExpired(): number {}
-    const now = Date.now();
-    let cleaned = 0;
-
+    const now = Date.now()
+  );
+    let cleaned = 0
+  );
     for (const [key, entry] of this.cache.entries()) {}
       if (now - entry.timestamp > entry.ttl) {}
-        this.cache.delete(key);
-        cleaned++;
+        this.cache.delete(key)
+  );
+        cleaned++
+  );
     if (this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
-      window.sessionStorage;)
-    ) {/* TODO: Fix JSX expression */,}
-        }
-      }
-    }
-<<<<<<< HEAD
+      window.sessionStorage}
+    ) {/* TODO: Fix JSX expression */});;)
+}
+      });;)
+}
 
-    this.stats.entries = this.cache.size;
-
-    // Save to persistent storage if needed;
-    if (this.config.storage !== CacheStorage.Memory && cleaned > 0) {
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+    this.stats.entries = this.cache.size
+  );
     // Save to persistent storage if needed
+  );
+    if (this.config.storage !== CacheStorage.Memory && cleaned > 0) {
+    // Save to persistent storage if needed
+  );
     if (this.config.storage !== CacheStorage.Memory && cleaned > 0) {}
-      this.saveToStorage();
-    }
+      this.saveToStorage();)
+}
 
-    return cleaned;
-<<<<<<< HEAD
-    logger.info('Cache cleared', 'CacheManager', {/* TODO: Fix JSX expression */,})
-  e: this.storage ,});
-=======
+    return cleaned
+  );
     logger.info('Cache cleared', 'CacheManager', {/* TODO: Fix JSX expression */})
-  e: this.storage });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-  }
+  );
+  e: this.storage });;)
+}
   /**
    * Get or set with function (handles both sync and async)
    */
-  getOrSet<T>(ke,
+  getOrSet<T></T>(ke,
   y: string,
     f)
-  n: () => T | Promise<T>,
+  n: ( => T | Promise<T></T>,
     option,
-  s: { ttl?: number ,} = {}
-  ): T | Promise<T> {/* TODO: Fix JSX expression */,}
-    }
-    const start = performance.now();
-    const value = fn();
+  s: { ttl?: number } = {}
+  ): T | Promise<T></T> {/* TODO: Fix JSX expression */});;)
+}
+    const start = performance.now()
+  );
+    const value = fn()
+  );
     const duration = performance.now() - start;`
-    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');
-    // Handle both sync and async values;
-    if (value instanceof Promise) {/* TODO: Fix JSX expression */,}
-      });
-    }
-    this.set(key, value, options);
-    return value;
-  }
+    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms')
+  );
+    // Handle both sync and async values
+  );
+    if (value instanceof Promise) {/* TODO: Fix JSX expression */});;)
+});;)
+}
+    this.set(key, value, options)
+  );
+    return value})
+  );
+}
 
   /**
-<<<<<<< HEAD
-   * Update hit rate;
+   * Update hit rate
+  );
    */
   private updateHitRate(): void {}
-    const total = this.stats.hits + this.stats.misses;
-    this.stats.hitRate = total > 0 ? this.stats.hits / total : 0;
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-   * Get or set with async function;
+    const total = this.stats.hits + this.stats.misses
+  );
+    this.stats.hitRate = total > 0 ? this.stats.hits / total : 0
+  );
+   * Get or set with async function
+  );
    */
-  async getOrSetAsync<T>(ke,
+  async getOrSetAsync<T></T>(ke,
   y: string,
     f)
-  n: () => Promise<T> | T,
+  n: ( => Promise<T></T> | T,
     option,
-  s: { ttl?: number ,} = {}
-  ): Promise<T> {/* TODO: Fix JSX expression */,}
-    }
-    const start = performance.now();
-    const value = await fn();
+  s: { ttl?: number } = {}
+  ): Promise<T></T> {/* TODO: Fix JSX expression */});;)
+}
+    const start = performance.now()
+  );
+    const value = await fn()
+  );
     const duration = performance.now() - start;`
-    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');
-    this.set(key, value, options);
-    return value;
-  }
+    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms')
+  );
+    this.set(key, value, options)
+  );
+    return value})
+  );
+}
   /**
-   * Memoize a function with caching;
+   * Memoize a function with caching
+  );
    */
-  memoize<TArgs extends unknown[], TResult>(f,
-  n: (...arg)
-<<<<<<< HEAD
-  s: TArgs,) => TResult,
-    option,
-  s: {/* TODO: Fix JSX expression */,}
-  s: TArgs,) => string ,} = {}
-  ): (...arg)
-  s: TArgs,) => TResult {/* TODO: Fix JSX expression */,}
-    const { keyGenerator, ...cacheOptions } = options;
-    return (...arg)
-  s: TArgs,): TResult => {/* TODO: Fix JSX expression */,}`
-=======
-  s: TArgs) => TResult,
+  memoize<TArgs></TArgs>(f,
+  n: (...arg,
+  s: TArgs => TResult,
     option,
   s: {/* TODO: Fix JSX expression */}
-  s: TArgs) => string } = {}
+  s: TArgs => string } = {}
   ): (...arg)
-  s: TArgs) => TResult {/* TODO: Fix JSX expression */}
-    const { keyGenerator, ...cacheOptions } = options;
+  s: TArgs => TResult {/* TODO: Fix JSX expression */}
+    const { keyGenerator, ...cacheOptions } = options
+  );
     return (...arg)
-  s: TArgs): TResult => {/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-        : `memoize_${fn.name}_${JSON.stringify(args)}`;
-      return this.getOrSet(key, () => fn(...args), cacheOptions) as TResult;
-    };
-  }
+  s: TArgs: TResult => {/* TODO: Fix JSX expression */}`
+        : `memoize_${fn.name}_${JSON.stringify(args);`
+  );
+      return this.getOrSet(key, () => fn(...args), cacheOptions) as TResult})
+  );
+}})
+  );
+}
   /**
-   * Get cache statistics;
+   * Get cache statistics
+  );
    */
-  getStatistics(): CacheStats {/* TODO: Fix JSX expression */,}
-    };
-  }
+  getStatistics(): CacheStats {/* TODO: Fix JSX expression */});;)
+}})
+  );
+}
 
   /**
-<<<<<<< HEAD
-   * Save cache to persistent storage;
+   * Save cache to persistent storage
+  );
    */
   private saveToStorage(): void {}
-    if (typeof window === 'undefined') return;
-
+    if (typeof window === 'undefined') return
+  );
     try {}
-      const storage = this.getStorage();
+      const storage = this.getStorage()
+  );
       if (storage) {}
         const data = {}
-          entries: Object.fromEntries(this.cache),
-          stats: this.stats;
-          timestamp: Date.now(),};
-        storage.setItem('cache-manager', JSON.stringify(data));
-      }
-    } catch (error) {}
-      }
-  }
-
+          entries: Object.fromEntries(this.cache,
+          stats: this.stats
+  );
+          timestamp: Date.now(;
+  );
+        storage.setItem('cache-manager', JSON.stringify(data));)
+}
+    } catch (error) {});
+  );
+  )
+  );
+}
   /**
-   * Load cache from persistent storage;
+   * Load cache from persistent storage
+  );
    */
   private loadFromStorage(): void {}
-    if (typeof window === 'undefined') return;
-
+    if (typeof window === 'undefined') return
+  );
     try {}
-      const storage = this.getStorage();
+      const storage = this.getStorage()
+  );
       if (storage) {}
-        const data = storage.getItem('cache-manager');
+        const data = storage.getItem('cache-manager')
+  );
         if (data) {}
-          const parsed = JSON.parse(data);
-          this.cache = new Map(Object.entries(parsed.entries || {}));
-          this.stats = { ...this.stats, ...parsed.stats };
-        }
-      }
-    } catch (error) {}
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-   * Get cache count;
+          const parsed = JSON.parse(data)
+  );
+          this.cache = new Map(Object.entries(parsed.entries || {});)
+  );
+          this.stats = { ...this.stats, ...parsed.stats }})
+  );
+}
+      });;)
+} catch (error) {}
+   * Get cache count
+  );
    */
-  getStats(): {/* TODO: Fix JSX expression */,}
-  } {/* TODO: Fix JSX expression */,}
-          }
-        }
-      }
-      if (window.sessionStorage) {/* TODO: Fix JSX expression */,}
-          }
-        }
-      }
-  }
-
+  getStats(): {/* TODO: Fix JSX expression */});;)
+} {/* TODO: Fix JSX expression */});;)
+}
+        });;)
+}
+      if (window.sessionStorage) {/* TODO: Fix JSX expression */});;)
+}
+        });
+  );
+  )
+  );
+}
   /**
-   * Clear persistent storage;
+   * Clear persistent storage
+  );
    */
   private clearStorage(): void {}
-    if (typeof window === 'undefined') return;
-
+    if (typeof window === 'undefined') return
+  );
     try {}
-      const storage = this.getStorage();
+      const storage = this.getStorage()
+  );
       if (storage) {}
-        storage.removeItem('cache-manager');
-      }
-    } catch (error) {}
-      }
-  }
-
+        storage.removeItem('cache-manager');)
+}
+    } catch (error) {});
+  );
+  )
+  );
+}
   /**
-   * Get the appropriate storage object;
+   * Get the appropriate storage object
+  );
    */
   private getStorage(): Storage | null {}
-    if (typeof window === 'undefined') return null;
-
-<<<<<<< HEAD
+    if (typeof window === 'undefined') return null
+  );
     switch (this.config.storage) {
-      case CacheStorage.LocalStorage: return window.localStorage;
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-    switch (this.config.storage) {}
+      case CacheStorage.LocalStorage: return window.localStorage
+  );
+    switch (this.config.storage {}
       case CacheStorage.LocalStorage:
-        return window.localStorage;
+        return window.localStorage
+  );
       case CacheStorage.SessionStorage:
-        return window.sessionStorage;
+        return window.sessionStorage
+  );
       default:,
-        return null;
-    }
-<<<<<<< HEAD
-  }
+        return null})
+  );
+}
+  });;)
 }
 
-// Create singleton instances for different use cases;
-export const memoryCache = new CacheManager({ storage: CacheStorage.Memory ,});
+// Create singleton instances for different use cases
+export const memoryCache = new CacheManager({ storage: CacheStorage.Memory });
 export const localStorageCache = new CacheManager({)
-  storage: CacheStorage.LocalStorage)
-  defaultTTL: 30 * 60 * 1000 // 30 minutes;
-export const sessionStorageCache = new CacheManager({)
-  storage: CacheStorage.SessionStorage),
-  defaultTTL: 60 * 60 * 1000 // 1 hour;
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-export const localStorageCache = new CacheManager({)}
   storage: CacheStorage.LocalStorage,
   defaultTTL: 30 * 60 * 1000 // 30 minutes
-
-export const sessionStorageCache = new CacheManager({)}
+export const sessionStorageCache = new CacheManager({)
   storage: CacheStorage.SessionStorage,
   defaultTTL: 60 * 60 * 1000 // 1 hour
-
+export const localStorageCache = new CacheManager({
+  );
+  storage: CacheStorage.LocalStorage,
+  defaultTTL: 30 * 60 * 1000 // 30 minutes
+export const sessionStorageCache = new CacheManager({
+  );
+  storage: CacheStorage.SessionStorage,
+  defaultTTL: 60 * 60 * 1000 // 1 hour
 export default CacheManager;
-<<<<<<< HEAD
-    return {/* TODO: Fix JSX expression */,}
-=======
-    return {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-    };
-  }
+  
+    return {/* TODO: Fix JSX expression */});;)
+}})
+  );
 }
-export const cacheManager = new CacheManager();
+}
+export const cacheManager = new CacheManager()
 export default CacheManager;
+  
 `
+}

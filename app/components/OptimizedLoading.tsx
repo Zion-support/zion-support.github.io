@@ -1,100 +1,51 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-import Link from 'next/link';
-=======
-import React  from 'react';
-import { Loader2 } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
+"use client";
+import React from "react";
+import Footer from '../components/Footer';
+import Head from "next/head";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
-export default function OptimizedLoading() {
+export default function ServicePage() {
   return (
     <>
-    
-  </>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>
-          <h1 className="text-4xl font-bold text-white mb-6"></h1>
-            Service</h1>
-          </h1>
-          <p className="text-lg text-gray-300 mb-8"></p>
-            Professional service services coming soon.</p>
-          </p>
-          <Link 
-            href="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hove,
-  r:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          ></Link>
-            Contact Us</Link>
-            <ArrowRight className="w-5 h-5 ml-2" /></ArrowRight>
-          </Link>
+      <Head>
+        <title>OptimizedLoading | Zion Tech Group</title>
+        <meta name="description" content="Professional OptimizedLoading services and solutions for modern businesses." />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="OptimizedLoading | Zion Tech Group" />
+        <meta property="og:description" content="Professional OptimizedLoading services and solutions for modern businesses." />
+        <meta property="og:type" content="website" />
+      </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+              OptimizedLoading
+            </h1>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Professional OptimizedLoading services and solutions for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }
-=======
-
-import {Loader2} from 'lucide-react';
-
-interface OptimizedLoadingProps {size?: 'sm' | 'md' | 'lg' | 'xl'
-  text?: string;
-  fullScreen?: boolean;
-  className?: string;}
-
-const OptimizedLoading: React.FC<OptimizedLoadingProps   /> = ({const size = 'md',
-  text = 'Loading...',
-  fullScreen = false,
-  className = ''}) => {const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-6 h-6',
-    lg: 'w-8 h-8',
-    xl: 'w-12 h-12'}
-
-  const containerClasses = fullScreen;
-    ? 'fixed inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50'
-    : 'flex items-center justify-center p-4'
-
-<<<<<<< HEAD
-export default function OptimizedLoading() {return (
-
-        {text && (
-          <p className="w-5h-5ml-2">{text}
-          </p>
-  )}
-=======
-  return (
-    <div className="{`${containerClasses}" ${className}`} />
-      <div className="flex flex-col items-centerspace-y-4">
-        <Loader2 className="{`${sizeClasses[size]}" text-cyan-500 animate-spin`} / />
-        {text && (
-          <p className="text-gray-300 text-sm font-mediumanimate-pulse">
-              {text}
-          </p>
-        )}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-      </div>
-  )
-
-export default OptimizedLoading;
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
-
-const OptimizedLoading: React.FC<OptimizedLoadingProps> = () => {
-  return (
-    <div className="optimizedloading">
-      <h2>OptimizedLoading</h2>
-      <p>Component content coming soon.</p>
-    </div>
-  );
-};
-
-export default OptimizedLoading;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

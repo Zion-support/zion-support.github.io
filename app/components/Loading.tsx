@@ -1,197 +1,82 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client';
-
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import Footer from '../components/Footer';
+import Head from "next/head";
+import Link from "next/link";
+import Navigation from '../components/Navigation';
+import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
-const LoadingPage: React.FC = () => {
+const Page: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time monitoring', 'Custom dashboards', 'Data visualization', 'Performance metrics']
     },
     {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target the right audience with AI-driven precision and accuracy.',
+      benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
     }
   ];
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-
-const Loading: React.FC = () => {
-=======
-interface LoadingProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-export default function Loading({ className = '', children, ...props }: LoadingProps) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="text-center">
-        <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mb-4"></div>
-        <h2 className="text-xl font-semibold text-gray-900 mb-2">Loading...</h2>
-        <p className="text-gray-600">Please wait while we load the content</p>
-=======
-import { Loader2, Zap } from 'lucide-react';
+    <>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Loading
+            </h1>
+            <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
+              Advanced Loading solutions powered by artificial intelligence and machine learning.
+            </p>
+          </div>
 
-interface LoadingProps {
-  size?: 'sm' | 'md' | 'lg';
-  text?: string;
-  fullScreen?: boolean;
-}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-slate-800 p-6 rounded-lg">
+                <feature.icon className="w-12 h-12 text-emerald-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
 
-const Loading: React.FC<LoadingProps> = ({
-  size = 'md',
-  text = 'Loading...',
-  fullScreen = false;
-=======
-'use client'
-import React from 'react'
-import { Loader2 } from 'lucide-react'
-
-interface LoadingProps {
-  message?: string
-  size?: 'sm' | 'md' | 'lg'
-  fullScreen?: boolean
-  className?: string
-}
-
-const Loading: React.FC<LoadingProps> = ({
-  message = 'Loading...',
-  size = 'md',
-  fullScreen = false,
-  className = ''
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
-}) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-<<<<<<< HEAD
-    lg: 'w-12 h-12'};
-
-  const textSizeClasses = {
-    sm: 'text-sm',
-    md: 'text-base',
-    lg: 'text-lg'};
-</LoadingProps>
-  const content = (</LoadingProps>
-    <div className="flex flex-col items-center justify-center space-y-4"></div>
-      <div className="relative"></div>
-        <div className={`${sizeClasses[size]} animate-spin`}></div>
-          <Loader2 className="w-full h-full text-cyan-400" />
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Transform your business with our cutting-edge AI solutions. Contact us today to learn more.
+            </p>
+            <a
+              href="/contact"
+              className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-3 rounded-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-300"
+            >
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </a>
+          </div>
         </div>
-        <div className="absolute inset-0 flex items-center justify-center"></div>
-          <Zap className={`${size === 'sm' ? 'w-2 h-2' : size === 'md' ? 'w-4 h-4' : 'w-6 h-6'} text-purple-500 animate-pulse`} />
-        </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
-import React  from 'react';
-const Loading: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-centerjustify-center">
-      <div className="text-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-automb-4"></div>
-        <p className="text-whitetext-lg">Loading...</p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
-    </div>
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-  if (fullScreen) {
-    return(<div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">)
-        {content})
-      </div>)
-    );
-  }
-
-  return content;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-};
-
-export default Loading;
-<<<<<<< HEAD
-=======
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
-=======
-import React from 'react';
-import {Helmet} from 'react-helmet-async';
-import {Link} from 'react-router-dom';
-import {ArrowRight} from 'lucide-react';
-
-=======
-import React from 'react';
-
-const Loading: React.FC<LoadingProps> = () => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-  return (
-    <div className="loading">
-      <h2>Loading</h2>
-      <p>Component content coming soon.</p>
-    </div>
+      <Footer />
+    </>
   );
 };
 
-<<<<<<< HEAD
-export default Loading;
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
-    lg: 'w-12 h-12'
-  }
-
-  const containerClasses = fullScreen
-    ? 'fixed inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center z-50'
-    : 'flex items-center justify-center p-8'
-
-  return (
-    <div className={`${containerClasses} ${className}`}>
-      <div className="flex flex-col items-center space-y-4">
-        <Loader2 className={`animate-spin text-blue-500 ${sizeClasses[size]}`} />
-        <p className="text-gray-600 text-sm">{message}</p>
-      </div>
-    </div>
-  )
-}
-
-export default Loading
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
-=======
-export default Loading;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
+export default Page;

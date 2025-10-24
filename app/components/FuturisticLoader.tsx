@@ -1,220 +1,51 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import Link from 'next/link';
+"use client";
+import React from "react";
+import Footer from '../components/Footer';
+import Head from "next/head";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
-export default function FuturisticLoader() {
+export default function ServicePage() {
   return (
     <>
-    
-  </>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>
-          <h1 className="text-4xl font-bold text-white mb-6"></h1>
-            Service</h1>
-          </h1>
-          <p className="text-lg text-gray-300 mb-8"></p>
-            Professional service services coming soon.</p>
-          </p>
-          <Link 
-            href="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hove,
-  r:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          ></Link>
-            Contact Us</Link>
-            <ArrowRight className="w-5 h-5 ml-2" /></ArrowRight>
-          </Link>
+      <Head>
+        <title>FuturisticLoader | Zion Tech Group</title>
+        <meta name="description" content="Professional FuturisticLoader services and solutions for modern businesses." />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="FuturisticLoader | Zion Tech Group" />
+        <meta property="og:description" content="Professional FuturisticLoader services and solutions for modern businesses." />
+        <meta property="og:type" content="website" />
+      </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+              FuturisticLoader
+            </h1>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Professional FuturisticLoader services and solutions for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-=======
-import React from 'react';
-
-import {motion} from 'framer-motion';
-'use client';
-
-interface FuturisticLoaderProps {size?: 'sm' | 'md' | 'lg';
-=======
-import React  from 'react';
-import { motion } from 'framer-motion';
-interface FuturisticLoaderProps {
-  size?: 'sm' | 'md' | 'lg';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-  color?: 'cyan' | 'purple' | 'pink' | 'green';
-  text?: string;}
-
-  const size = 'md',
-  color = 'cyan',
-  text = 'Loading...'
-}: FuturisticLoaderProps) {const getSizeClasses = () => {
-    switch (size) {
-      case 'sm': return 'w-8 h-8';
-      case 'lg': return 'w-16 h-16';
-      default: return 'w-12 h-12';}
-  };
-
-  const getColorClasses = () => {switch (color) {
-      case 'purple': return 'border-purple-500 text-purple-400';
-      case 'pink': return 'border-pink-500 text-pink-400';
-      case 'green': return 'border-green-500 text-green-400';
-      default: return 'border-cyan-500 text-cyan-400';}
-  };
-
-<<<<<<< HEAD
-export default function FuturisticLoader() {return (
-
-        {/* Outer rotating ring */}
-        <motion.div;
-          className="{`"
-            ${getSizeClasses()}
-            border-4 border-transparent;
-            border-t-4 ${getColorClasses().split(' ')[1]}
-            rounded-full;`}
-          animate="{{" rotate: 360}}
-          transition="{{" duration: 1, repeat: Infinity, ease: 'linear'}}
-           /></motion>
-        {/* Inner pulsing ring */}
-        <motion.div;
-          className="{`"
-            absolute inset-2;
-            border-2 border-transparent;
-            border-r-2 ${getColorClasses().split(' ')[1]}
-            rounded-full;`}
-          animate="{{" rotate: -360}}
-          transition="{{" duration: 1.5, repeat: Infinity, ease: 'linear'}}
-           /></motion>
-        {/* Center pulsing dot */}
-        <motion.div;
-          className="{`"
-            absolute top-1/2 left-1/2 w-2 h-2;
-            ${getColorClasses().split(' ')[1]}
-            rounded-full;
-            transform -translate-x-1/2 -translate-y-1/2;`}
-          animate="{{"
-            scale: [1, 1.5, 1],
-            opacity: [0.5, 1, 0.5]}}
-          transition="{{"
-            duration: 1,
-            repeat: Infinity,
-            ease: 'easeInOut'}}
-           /></motion>
-        {/* Glow effect */}
-        <motion.div;
-          className="{`"
-            absolute inset-0;
-            ${getColorClasses().split(' ')[1]}
-            rounded-full;
-            blur-md;
-            opacity-30;`}
-          animate="{{"
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.6, 0.3]}}
-          transition="{{"
-            duration: 2,
-            repeat: Infinity,
-            ease: 'easeInOut'}}
-           /></motion>
-=======
-  return (
-    <div className="flex flex-col items-centerjustify-centerspace-y-4">
-      <div className="relative">
-        {/* Outer rotating ring */}
-        <motion.div className="{`"
-            ${getSizeClasses()} 
-            border-4 border-transparent 
-            border-t-4 ${getColorClasses().split(' ')[1]}
-            rounded-full
-          `}
-          animate={{ rotate: 360 }}
-          transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
-        / >
-        {/* Inner pulsing ring */}
-        <motion.div className="{`"
-            absolute inset-2 
-            border-2 border-transparent 
-            border-r-2 ${getColorClasses().split(' ')[1]}
-            rounded-full
-          `}
-          animate={{ rotate: -360 }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: 'linear' }}
-        / >
-        {/* Center pulsing dot */}
-        <motion.div className="{`"
-            absolute top-1/2 left-1/2 w-2 h-2 
-            ${getColorClasses().split(' ')[1]} 
-            rounded-full
-            transform -translate-x-1/2 -translate-y-1/2
-          `}
-          animate={{ 
-            scale: [1, 1.5, 1],
-            opacity: [0.5, 1, 0.5]
-          }}
-          transition={{ 
-            duration: 1, 
-            repeat: Infinity, 
-            ease: 'easeInOut' 
-          }}
-        / >
-        {/* Glow effect */}
-        <motion.div className="{`"
-            absolute inset-0 
-            ${getColorClasses().split(' ')[1]} 
-            rounded-full
-            blur-md
-            opacity-30
-          `}
-          animate={{ 
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.6, 0.3]
-          }}
-          transition={{ 
-            duration: 2, 
-            repeat: Infinity, 
-            ease: 'easeInOut' 
-          }}
-        / >
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-      </div>
-      {text && (
-        <motion.p;
-          className="{`text-sm" ${getColorClasses().split(' ')[1]} font-medium`}
-<<<<<<< HEAD
-          animate="{{" opacity: [0.5, 1, 0.5]}}
-          transition="{{"
-            duration: 1.5,
-            repeat: Infinity,
-            ease: 'easeInOut'}}   /></motion>
-=======
-          animate={{ opacity: [0.5, 1, 0.5] }}
-          transition={{ 
-            duration: 1.5, 
-            repeat: Infinity, 
-            ease: 'easeInOut' 
-          }} />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-          {text}
-        </motion.p>
-  )}
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
-import React from 'react';
-
-const FuturisticLoader: React.FC<FuturisticLoaderProps> = () => {
-  return (
-    <div className="futuristicloader">
-      <h2>FuturisticLoader</h2>
-      <p>Component content coming soon.</p>
-    </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+      <Footer />
+    </>
   );
-<<<<<<< HEAD
-};
-
-export default FuturisticLoader;
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

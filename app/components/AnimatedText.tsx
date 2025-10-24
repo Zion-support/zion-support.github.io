@@ -1,112 +1,51 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import Link from 'next/link';
+"use client";
+import React from "react";
+import Footer from '../components/Footer';
+import Head from "next/head";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
-export default function AnimatedText() {
+export default function ServicePage() {
   return (
     <>
-    
-  </>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>
-          <h1 className="text-4xl font-bold text-white mb-6"></h1>
-            Service</h1>
-          </h1>
-          <p className="text-lg text-gray-300 mb-8"></p>
-            Professional service services coming soon.</p>
-          </p>
-          <Link 
-            href="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hove,
-  r:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          ></Link>
-            Contact Us</Link>
-            <ArrowRight className="w-5 h-5 ml-2" /></ArrowRight>
-          </Link>
+      <Head>
+        <title>AnimatedText | Zion Tech Group</title>
+        <meta name="description" content="Professional AnimatedText services and solutions for modern businesses." />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="AnimatedText | Zion Tech Group" />
+        <meta property="og:description" content="Professional AnimatedText services and solutions for modern businesses." />
+        <meta property="og:type" content="website" />
+      </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+              AnimatedText
+            </h1>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Professional AnimatedText services and solutions for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }
-=======
-
-
-'use client';
-
-interface AnimatedTextProps {text: string;
-=======
-import { useEffect, useState} from 'react';
-interface AnimatedTextProps {
-  text: string;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-  className?: string;
-  delay?: number;
-  duration?: number;
-  type?: 'fade' | 'slide' | 'glow' | 'typing';}
-
-const AnimatedText: React.FC<AnimatedTextProps >= ({text,
-  const className = '',
-  delay = 0,
-  // duration = 1000,
-  type = 'fade'}) => {const [displayText, setDisplayText] = useState('');
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true);}, delay);
-
-    return () => clearTimeout(timer);
-  }, [delay]);
-
-  useEffect(() => {if (const type = == 'typing' && isVisible) {
-      if (currentIndex </AnimatedTextProps >< text.length) {
-        const timer = setTimeout(() => {
-          setDisplayText(text.slice(0, currentIndex + 1));
-          setCurrentIndex(currentIndex + 1);}, 50);
-        return () => clearTimeout(timer);
-      }
-    } else if (isVisible) {setDisplayText(text);}
-  }, [isVisible, currentIndex, text, type]);
-
-  const getAnimationClasses = () => {const baseClasses = 'transition-all duration-1000';
-    switch (type) {
-      case 'fade':
-        return `${baseClasses} ${isVisible ? 'opacity-100' : 'opacity-0'}`;
-      case 'slide':
-        return `${baseClasses} ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`;
-      case 'glow':
-        return `${baseClasses} ${isVisible ? 'opacity-100' : 'opacity-0'} ${isVisible ? 'drop-shadow-[0 _0 _10 px_rgba(59,130,246,0.5)]' : ''}`;
-      case 'typing':
-        return `${baseClasses} ${isVisible ? 'opacity-100' : 'opacity-0'}`;
-      default: return baseClasses;
-    }
-  };
-
-export default function AnimatedText() {return (
-
-      {type === 'typing' ? displayText : text}
-      {type === 'typing' && currentIndex
-        <span className="animate-pulse">|</span>
-  )}
-  );
-}
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
-import React from 'react';
-
-const AnimatedText: React.FC<AnimatedTextProps> = () => {
-  return (
-    <div className="animatedtext">
-      <h2>AnimatedText</h2>
-      <p>Component content coming soon.</p>
-    </div>
-  );
-};
-
-export default AnimatedText;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

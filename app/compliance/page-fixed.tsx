@@ -1,275 +1,82 @@
-<<<<<<< HEAD
-'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import Head from "next/head";
+import Link from "next/link";
+import Navigation from '../components/Navigation';
+import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
-=======
-import React  from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-const PageFixedPage: React.FC = () => {
+const Page: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Analysis',
-      description: 'Advanced AI algorithms provide intelligent insights and recommendations.',
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
       icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+      benefits: ['Real-time monitoring', 'Custom dashboards', 'Data visualization', 'Performance metrics']
     },
     {
       icon: Target,
       title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-<<<<<<< HEAD
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+      description: 'Target the right audience with AI-driven precision and accuracy.',
+      benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
     }
   ];
 
   return (
-    <React.Fragment>
-=======
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'],
-  }
-    ]
-return (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-      <Helmet>
-        <title>Page Fixed - Zion Tech Group</title>
-        <meta name="description" content="Advanced page fixed solutions powered by AI technology." />
-      </Helmet>
-<<<<<<< HEAD
-
+    <>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Page Fixed
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced page fixed solutions powered by AI technology.
+            <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
+              Advanced page fixed solutions powered by artificial intelligence and machine learning.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Learn More
-=======
-      <Navigation / />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"></div>
-        {/* Hero Section */}
-        <section className="py-20px-4"  > </section><div className="
-           </div><divclassName="text-center mb-16"  > </div><h2 className="text-4xl font-bold text-white mb-4"  >Section Title</h2>
-              <p className="text-xltext-gray-300">Section description</p>
-            </div>
-        </section>
-          <div className="absolute inset-0bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" /></div>
-          <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }} / /></div>
-          <div className="relative max-w-7xlmx-autotext-center"></div>
-            <h1  />Page Fixed
-            </h1>
-            <p /></p>
+          </div>
 
-              Advanced page fixed solutions powered by AI technology.
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-slate-800 p-6 rounded-lg">
+                <feature.icon className="w-12 h-12 text-emerald-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Transform your business with our cutting-edge AI solutions. Contact us today to learn more.
             </p>
-            <div className="flex flex-col sm: flex-rowgap-4justify-center" / / /></div>
-              <button /></button>
-
-                Get Started
-              </button>
-              <button /></button>
-
-                Learn More,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-              </button>
-            </div></div></div></div></div>
+            <a
+              href="/contact"
+              className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-3 rounded-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-300"
+            >
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </a>
           </div>
-        </section>
-<<<<<<< HEAD
-
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI technology that drives results
-              </p>
-            </div></div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div></div></div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-=======
-        <section className="relative py-20px-4overflow-hidden" />
-          <div className="absolute inset-0bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" />
-          <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }} / />
-          <div className="relative max-w-7xlmx-autotext-center">
-            <h1 className="text-5 xl md:text-7 xl font-bold text-white mb-6leading-tight" />Page Fixed
-            <p className="text-xl text-gray-300 mb-8 max-w-3 xlmx-autoleading-relaxed">
-              Advanced page fixed solutions powered by AI technology.
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300transformhover:scale-105" />Get Started
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lgtransition-allduration-300" />Learn More
-
-        {/* Features Section */}
-        <section className="py-20px-4"  > </section><div className="
-           </div><divclassName="text-center mb-16"  > </div><h2 className="text-4xl font-bold text-white mb-4"  >Section Title</h2>
-              <p className="text-xltext-gray-300">Section description</p>
-            </div>
-        </section>
-          <div className="max-w-7xlmx-auto" / / /></div>
-            <div className="text-centermb-16" / / /></div>
-              <h2 /></h2>
-
-                Key Features
-              </h2>
-              <p /></p>
-
-                Powerful AI technology that drives results
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8"></div>
-              {features.map((feature, index) => (
-                <div key="{index}" className="bg-white/5 backdrop-blur-sm rounded-2xll p-8 hover:bg-white/10 transition-allduration-300group" /></div>
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xll flex items-center justify-center mb-6group-hover:scale-110transition-transform"></div>
-                    <feature / />
-                  <h3 className="text-xl font-bold text-white mb-4"  >{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {
-    feature.benefits && (;
-                    <ul>{feature.benefits.map((benefit, idx) => (
-  }
-                        </ul><li> </li><CheckCircle />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-            </div>
-<<<<<<< HEAD
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-=======
-        </section>
-          <div className="max-w-7xlmx-auto">
-            <div className="text-centermb-16">
-              <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />Key Features
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto">Powerful AI technology that drives results
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-              {features.map((feature, index) => (
-                <div key="{index}" className="bg-white/5 backdrop-blur-sm rounded-2xll p-8 hover:bg-white/10 transition-allduration-300group" />
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xll flex items-center justify-center mb-6group-hover:scale-110transition-transform">
-                    <feature.icon className="w-8h-8text-white" />
-                  <h3 className="text-xl font-bold text-white mb-4" />{feature.title}
-                  <p className="text-gray-300 mb-4">{feature.description}
-                  {feature.benefits && (
-                    <ul className="space-y-2" />
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key="{idx}" className="flex items-centertext-smtext-gray-400" />
-                          <CheckCircle className="w-4 h-4text-green-400mr-2" />
-                          {benefit}
-                      ))}
-                  )}
-              ))}
-        {/* CTA Section */}
-        <section className="py-20px-4"  > </section><div className="
-           </div><divclassName="text-center mb-16"  > </div><h2 className="text-4xl font-bold text-white mb-4"  >Section Title</h2>
-              <p className="text-xltext-gray-300">Section description</p>
-            </div>
-        </section>
-          <div className="max-w-4 xlmx-autotext-center" / / /></div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xlp-12" / / /></div>
-              <h2 /></h2>
-
-                Ready to Get Started?
-              </h2>
-              <p /></p>
-
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm: flex-rowgap-4justify-center" / / /></div>
-                <button /></button>
-
-                  Contact Us
-                </button>
-                <button /></button>
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-                  Learn More
-                </button>
-              </div></div></div>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
-<<<<<<< HEAD
       <Footer />
-    </React.Fragment>
+    </>
   );
-=======
-      <Footer /></Footer>
-
-  ),
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 };
 
-export default PageFixedPage;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
+export default Page;

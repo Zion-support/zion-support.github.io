@@ -1,182 +1,82 @@
-'use client';
 import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
 import Footer from '../components/Footer';
-=======
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Package, 
-  BarChart3, 
-  Target, 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Clock, 
-  Zap, 
-  Sparkles,
-  Cpu,
-  Globe,
-  AlertTriangle,
-  ShoppingCart,
-  Truck
-} from 'lucide-react';
+import Head from "next/head";
+import Link from "next/link";
+import Navigation from '../components/Navigation';
+import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
-const ZionAIInventoryOptimizerProPage: React.FC = () => {
+const Page: React.FC = () => {
   const features = [
     {
-      title: "AI-Powered Demand Forecasting",
-      description: "Advanced machine learning algorithms predict demand patterns with 95% accuracy, reducing stockouts and overstock.",
-      icon: <Cpu className="w-6 h-6" />,
-      benefits: ["95% forecast accuracy", "Seasonal pattern recognition", "Real-time adjustments"]
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
-      title: "Smart Reorder Point Optimization",
-      description: "Automatically calculate optimal reorder points based on lead times, demand variability, and service level targets.",
-      icon: <Target className="w-6 h-6" />,
-      benefits: ["Automated reorder points", "Lead time optimization", "Service level targeting"]
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time monitoring', 'Custom dashboards', 'Data visualization', 'Performance metrics']
     },
     {
-      title: "Multi-Location Inventory Management",
-      description: "Centralized control of inventory across multiple warehouses, stores, and distribution centers.",
-      icon: <Globe className="w-6 h-6" />,
-      benefits: ["Centralized visibility", "Cross-location transfers", "Unified reporting"]
-    },
-    {
-      title: "Real-time Analytics & Insights",
-      description: "Comprehensive dashboards with inventory turnover, carrying costs, and performance metrics.",
-      icon: <BarChart3 className="w-6 h-6" />,
-      benefits: ["Real-time dashboards", "Cost analysis", "Performance tracking"]
-    },
-    {
-      title: "Automated Purchase Orders",
-      description: "AI generates and sends purchase orders automatically based on demand forecasts and supplier lead times.",
-      icon: <Zap className="w-6 h-6" />,
-      benefits: ["Automated PO generation", "Supplier integration", "Cost optimization"]
-    },
-    {
-      title: "Dead Stock Prevention",
-      description: "Identify and prevent dead stock through AI analysis of sales velocity and product lifecycle patterns.",
-      icon: <AlertTriangle className="w-6 h-6" />,
-      benefits: ["Dead stock alerts", "Lifecycle analysis", "Liquidation recommendations"]
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target the right audience with AI-driven precision and accuracy.',
+      benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
     }
   ];
 
-  const industries = [
-    { name: "E-commerce", icon: <ShoppingCart className="w-6 h-6" />, color: "from-blue-500 to-blue-600" },
-    { name: "Retail", icon: <Package className="w-6 h-6" />, color: "from-green-500 to-green-600" },
-    { name: "Manufacturing", icon: <Cpu className="w-6 h-6" />, color: "from-orange-500 to-red-600" },
-    { name: "Wholesale", icon: <Truck className="w-6 h-6" />, color: "from-purple-500 to-pink-600" },
-    { name: "Food & Beverage", icon: <Package className="w-6 h-6" />, color: "from-yellow-500 to-orange-600" },
-    { name: "Pharmaceutical", icon: <Package className="w-6 h-6" />, color: "from-cyan-500 to-blue-600" }
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$199",
-      period: "/month",
-      description: "Perfect for small businesses with basic inventory needs",
-      features: [
-        "Up to 1,000 SKUs",
-        "Basic forecasting",
-        "Single location",
-        "Email support",
-        "Standard reports"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$499",
-      period: "/month",
-      description: "Ideal for growing businesses with complex inventory operations",
-      features: [
-        "Up to 10,000 SKUs",
-        "Advanced AI forecasting",
-        "Multi-location support",
-        "Priority support",
-        "Advanced analytics",
-        "API access",
-        "Custom integrations"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$1,299",
-      period: "/month",
-      description: "For large organizations with enterprise-scale inventory management",
-      features: [
-        "Unlimited SKUs",
-        "Enterprise AI features",
-        "Unlimited locations",
-        "Dedicated support",
-        "Custom development",
-        "White-label options",
-        "Advanced security",
-        "On-premise deployment"
-      ],
-      popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "James Rodriguez",
-      company: "RetailMax Inc.",
-      role: "Operations Director",
-      content: "Zion AI Inventory Optimizer Pro reduced our inventory costs by 30% and eliminated stockouts completely. The ROI was immediate!",
-      rating: 5,
-      avatar: "JR",
-    },
-    {
-      name: "Lisa Chen",
-      company: "E-commerce Plus",
-      role: "Supply Chain Manager",
-      content: "The demand forecasting is incredibly accurate. We've reduced overstock by 45% while maintaining 99% service levels.",
-      rating: 5,
-      avatar: "LC",
-    },
-    {
-      name: "Michael Thompson",
-      company: "Manufacturing Corp",
-      role: "Inventory Manager",
-      content: "Managing inventory across 15 locations is now effortless. The AI recommendations have transformed our operations.",
-      rating: 5,
-      avatar: "MT",
-    }
-  ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
-
-export default function ZionaiinventoryoptimizerproPage() {
   return (
-    <div>
-      <Head>
-        <title>Zion Ai Inventory Optimizer Pro - Zion Tech Group</title>
-        <meta name="description" content="Professional services by Zion Tech Group." />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            Zion Ai Inventory Optimizer Pro
-          </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            zion-ai-inventory-optimizer-pro services Transform your business with our expert solutions. services coming soon.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+    <>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Zion Ai Inventory Optimizer Pro
+            </h1>
+            <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
+              Advanced zion ai inventory optimizer pro solutions powered by artificial intelligence and machine learning.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-slate-800 p-6 rounded-lg">
+                <feature.icon className="w-12 h-12 text-emerald-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Transform your business with our cutting-edge AI solutions. Contact us today to learn more.
+            </p>
+            <a
+              href="/contact"
+              className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-3 rounded-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-300"
+            >
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </a>
+          </div>
         </div>
       </div>
       <Footer />
-    </div>
+    </>
   );
-}
+};
+
+export default Page;

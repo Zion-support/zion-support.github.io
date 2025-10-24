@@ -1,363 +1,51 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-export default function Page() {
+"use client";
+import React from "react";
+import Footer from '../../components/Footer';
+import Head from "next/head";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+
+export default function ServicePage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional services coming soon." />
-      </Helmet>
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">
-          Coming Soon
-        </h1>
-        <p className="text-lg text-gray-300 mb-8">
-          Professional services coming soon.
-        </p>
-        <Link
-          to="/contact"
-          className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-        >
-          Contact Us
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Link>
-      </div>
-=======
-    <div>
+    <>
       <Head>
-        <title>Ai Expense Tracker - Zion Tech Group</title>
-        <meta name="description" content="Professional services by Zion Tech Group." />
+        <title>Ai Expense Tracker | Zion Tech Group</title>
+        <meta name="description" content="Professional ai expense tracker services and solutions for modern businesses." />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="Ai Expense Tracker | Zion Tech Group" />
+        <meta property="og:description" content="Professional ai expense tracker services and solutions for modern businesses." />
+        <meta property="og:type" content="website" />
       </Head>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            Ai Expense Tracker
-          </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            ai-expense-tracker services Transform your business with our expert solutions. services coming soon.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+      
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+              Ai Expense Tracker
+            </h1>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Professional ai expense tracker services and solutions for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
-    </div>
+    </>
   );
 }
-=======
-import React from 'react'
-import {Link} from 'react-router-dom'
-=======
-import React from 'react'
-import { Link } from 'react-router-dom'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-
-import React from 'react';
-
-import {Link} from 'react-router-dom';
-import {ArrowRight} from 'lucide-react';
-
-import {ArrowRight, DollarSign, BarChart3, Receipt, CheckCircle, Clock, Target, TrendingUp, Shield, Zap, Bot, CheckSquare} from 'lucide-react';
-
-export default function AIExpenseTrackerPage() {const features = [{
-      icon: <Receipt className="w-5h-5ml-2"   />,
-      title: 'Smart Receipt Scanning',
-      description: 'AI-powered OCR technology automatically extracts data from receipts and invoices'},
-    {icon: <BarChart3 className="w-5h-5ml-2"   />,
-      title: 'Real-time Analytics',
-      description: 'Comprehensive spending insights with predictive analytics and budget forecasting'},
-    {icon: <Bot className="w-5h-5ml-2"   />,
-      title: 'AI Categorization',
-      description: 'Automatically categorizes expenses using machine learning and learns from your patterns'},
-    {icon: <Shield className="w-5h-5ml-2"   />,
-      title: 'Bank-level Security',
-      description: '256-bit encryption and secure cloud storage for all your financial data'},
-    {icon: <Target className="w-5h-5ml-2"   />,
-      title: 'Smart Budgeting',
-      description: 'AI-powered budget recommendations based on your spending patterns and goals'},
-    {icon: <Zap className="w-5h-5ml-2"   />,
-      title: 'Automated Workflows',
-      description: 'Set up rules for automatic expense approval, reimbursement, and reporting'}]
-
-  const pricingPlans = [{name: 'Personal',
-      price: '$9',
-      period: '/month',
-      description: 'Perfect for individuals and freelancers',
-      features: [
-        'Unlimited receipts',
-        'AI categorization',
-        'Basic analytics',
-        'Mobile app access',
-        'Cloud backup',
-        'Email support'],
-      popular: false;},
-    {name: 'Business',
-      price: '$29',
-      period: '/month',
-      description: 'Ideal for small businesses and teams',
-      features: ['Everything in Personal',
-        'Team collaboration',
-        'Advanced analytics',
-        'Custom categories',
-        'API access',
-        'Priority support',
-        'Expense policies',
-        'Multi-currency support'],
-      popular: true;},
-    {name: 'Enterprise',
-      price: '$99',
-      period: '/month',
-      description: 'For large organizations',
-      features: ['Everything in Business',
-        'Unlimited users',
-        'Custom integrations',
-        'Dedicated support',
-        'Advanced reporting',
-        'Compliance tools',
-        'White-label option',
-        'Custom workflows'],
-      popular: false;}
-  ]
-
-  const testimonials = [{name: 'David Kim',
-      company: 'Freelance Designer',
-      content: 'Saves me hours every week. The AI categorization is incredibly accurate and the receipt scanning is flawless.',
-      rating: 5,
-      avatar: 'DK'},
-    {name: 'Lisa Martinez',
-      company: 'Small Business Owner',
-      content: 'Finally found an expense tracker that actually understands my business needs. The analytics are game-changing.',
-      rating: 5,
-      avatar: 'LM'},
-    {name: 'James Wilson',
-      company: 'Finance Manager',
-      content: 'Our team productivity increased by 40% since implementing this. The automated workflows are brilliant.',
-      rating: 5,
-      avatar: 'JW'}]
-
-  const benefits = [{icon: <Clock className="w-5h-5ml-2"   />,
-      title: 'Save 5+ Hours Weekly',
-      description: 'Automated data entry and categorization eliminates manual work'},
-    {icon: <TrendingUp className="w-5h-5ml-2"   />,
-      title: 'Reduce Costs by 15%',
-      description: 'AI insights help identify spending patterns and optimization opportunities'},
-    {icon: <Shield className="w-5h-5ml-2"   />,
-      title: '100% Accurate',
-      description: 'AI-powered validation ensures data accuracy and compliance'},
-    {icon: <Zap className="w-5h-5ml-2"   />,
-      title: 'Real-time Sync',
-      description: 'Instant updates across all devices and team members'}]
-
-  return (
-<<<<<<< HEAD
-    <>
-      <title>5G Data Analytics - Zion Tech Group</title>
-        <title>AI Expense Tracker - Zion Tech Group | Smart Financial Management</title>
-
-                    <span>Start Free Trial</span>
-                    <span>View All Plans</span>
-
-                  <p>✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
-  );
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function AiexpensetrackerPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Ai Expense Tracker - Zion Tech Group</title>
-        <meta name="description" content="Professional ai expense tracker services by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Ai Expense Tracker</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional ai expense tracker services coming soon.</p>
-          
-          <Link
-            to="/contact"
-            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-          >
-            Contact Us
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Link>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
-      <Helmet />
-        <title   />AI Expense Tracker - Zion Tech Group | Smart Financial Management</title>
-        <meta name="description" content="Revolutionary AI-powered expense tracker with smart receipt scanning, automated categorization, and real-time analytics. Save 5+ hours weekly. Starting at $9/month." / / />
-        <meta name="keywords" content="AI expense tracker, receipt scanning, expense management, financial analytics, budget tracking, automated categorization" / / />
-        <meta name="robots" content="index, follow" / / />
-        <link rel="canonical" href="https://ziontechgroup.com/micro-saas/ai-expense-tracker" />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20px-4overflow-hidden" />
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.1)_0%,transparent_50%)]" />
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.1)_0%,transparent_50%)]" />
-        <div className="relative max-w-7xlmx-autotext-center">
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
-            <DollarSign className="w-4 h-4" />
-            <span   />AI-Powered Financial Management</span>
-          </div>
-          
-          <h1 className="text-4xl sm:text-6 xl md:text-7 xl font-bold text-white mb-8leading-tight" />
-            AI Expense
-            <br / />
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent">Tracker
-            </span>
-          </h1>
-          
-          <p className="text-lg sm:text-xl md:text-2 xl text-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">
-              Transform your financial management with AI-powered expense tracking, smart receipt scanning, 
-            and automated categorization. Save time and gain insights like never before.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
-            <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" >
-           
-          <span    />
-        </Link>Start Free Trial</span>
-              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-            </Link>
-            <Link to="#pricing" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
-           
-          <span    />
-        </Link>View Pricing</span>
-              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-            </Link>
-          </div>
-
-          {/* Key Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xlmx-auto">
-            <div className="text-center">
-              <div className="text-3 xl font-boldtext-cyan-400mb-2"   />5+</div>
-              <div className="text-gray-300text-sm"   />Hours Saved Weekly</div>
-            <div className="text-center">
-              <div className="text-3 xl font-boldtext-purple-400mb-2"   />15%</div>
-              <div className="text-gray-300text-sm"   />Average Cost Reduction</div>
-            <div className="text-center">
-              <div className="text-3 xl font-boldtext-pink-400mb-2"   />99.9%</div>
-              <div className="text-gray-300text-sm"   />Accuracy Rate</div>
-            <div className="text-center">
-              <div className="text-3 xl font-boldtext-emerald-400mb-2"   />25 K+</div>
-              <div className="text-gray-300text-sm"   />Active Users</div>
-          </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20px-4relative" />
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5via-cyan-500/5to-pink-500/5" />
-        <div className="relative max-w-7xlmx-auto">
-          <div className="text-centermb-16">
-            <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-              Why Choose Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />AI Expense Tracker?</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-              Experience the future of financial management with cutting-edge AI technology that works for you.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
-        </div>
-            {benefits.map((benefit, index) => (
-              <div key="{index}" className="text-centergroup" />
-                <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xll mb-6 mx-auto group-hover:scale-110transition-transformduration-300">{benefit.icon}
-                </div>
-
-            {features.map((feature, index) => (
-              <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2xll p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xllhover:shadow-cyan-500/10" />
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xll mb-6 group-hover:scale-110transition-transformduration-300">{feature.icon}
-                </div>
-
-            {pricingPlans.map((plan, index) => (
-              <div key="{index}" className="{`relative" bg-white/10 backdrop-blur-lg rounded-2xll p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xll ${
-                plan.popular 
-                  ? 'border-cyan-400/50 shadow-cyan-500/20 bg-gradient-to-br from-cyan-500/10 to-purple-500/10' 
-                  : 'border-white/20 hover: border-cyan-400/30'
-              }`} />
-                {plan.popular && (
-
-            {testimonials.map((testimonial, index) => (
-              <div key="{index}" className="bg-white/10 backdrop-blur-lg rounded-2xll p-8 border border-white/20 hover:bg-white/20transition-allduration-300" />
-                <div className="flex items-centermb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4"  />{testimonial.avatar}
-                  </div>
-                  <div />
-                    <div className="font-semiboldtext-white"   />{testimonial.name}</div>
-                    <div className="text-gray-400text-sm"   />{testimonial.company}</div>
-                </div>
-                <div className="flexmb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <CheckSquare key="{i}" className="w-5 h-5text-yellow-400fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-300italic">
-              "{testimonial.content}"</p>
-              </div>
-            ))}
-          </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20px-4relative" />
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" />
-        <div className="relative max-w-7xlmx-auto">
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8 sm:p-12 lg:p-16relativeoverflow-hidden">
-              <div className="relativez-10">
-                <h2 className="text-4xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6leading-tight" />
-                  Ready to Transform Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent"   />Financial Management?</span>
-                </h2>
-                
-                <p className="text-xl sm:text-2 xl text-white/90 mb-8 sm:mb-12 max-w-4 xlmx-autoleading-relaxed">
-              Join thousands of users already saving time and money with our AI-powered expense tracker. 
-                  Start your free trial today and experience the future of financial management.
-                </p>
-                
-                <div className="flex flex-col sm:flex-row gap-6justify-centermb-8">
-                  <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" >
-           
-          <span    />
-        </Link>Start Free Trial</span>
-                    <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-                  </Link>
-                  <Link to="#pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
-           
-          <span    />
-        </Link>View All Plans</span>
-                    <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-                  </Link>
-                </div>
-                
-                <div className="text-white/80text-sm">
-                  <p />✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
-                </div>
-            </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-        </div>
-      </div>
-    </div>
-  );
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

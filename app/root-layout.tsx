@@ -1,21 +1,22 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
+import type { Metada, t, a } from 'next'
+import { Int, e, r } from "next/font/google"
+import './globals.css'
+export const inter = Inter({ subsets: ['latin'], })
 
-const inter = Inter({ subsets: ['latin'] });
-
-export const metadata: Metadata = {
-  title: 'Zion Tech Group - AI Solutions & IT Services',
-  description: 'Leading provider of AI solutions, IT services, quantum computing, and autonomous systems for enterprise technology',
-  keywords: 'AI solutions, IT services, quantum computing, autonomous systems, enterprise technology'
-};
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export const metadata: Metadata = {title: 'Zion Tech Group - Advanced AI and IT Solutions',
+      description: 'Leading provider of enterprise AI solution,s, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',;
+  keywords: 'AI solution,s, IT services, quantum computing, autonomous systems, enterprise technology',;
+}export default function; RootLayout({
+  children,
+}: {
+  children: React.ReactNode,
+}) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        {children}
+    <html lang='en'></html>
+      <body className={inter.className}></body>
+        { childr, e, n }
       </body>
-    </html>
-  );
+    </html>)
+  )
 }
+  );

@@ -1,181 +1,82 @@
-'use client';
 import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
 import Footer from '../components/Footer';
-=======
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  TrendingDown, 
-  BarChart3, 
-  Target, 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Clock, 
-  Users, 
-  Sparkles,
-  AlertTriangle,
-  Cpu,
-  Globe,
-  Heart,
-  MousePointer
-} from 'lucide-react';
+import Head from "next/head";
+import Link from "next/link";
+import Navigation from '../components/Navigation';
+import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
-const ZionAICustomerChurnPredictorProPage: React.FC = () => {
+const Page: React.FC = () => {
   const features = [
     {
-      title: "AI-Powered Churn Prediction",
-      description: "Advanced machine learning algorithms predict customer churn with 94% accuracy using behavioral patterns and engagement data.",
-      icon: <Cpu className="w-6 h-6" />,
-      benefits: ["94% prediction accuracy", "Real-time risk scoring", "Behavioral pattern analysis"]
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
-      title: "Early Warning System",
-      description: "Get instant alerts when customers show signs of potential churn, allowing proactive intervention strategies.",
-      icon: <AlertTriangle className="w-6 h-6" />,
-      benefits: ["Real-time alerts", "Risk level indicators", "Customizable thresholds"]
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time monitoring', 'Custom dashboards', 'Data visualization', 'Performance metrics']
     },
     {
-      title: "Personalized Retention Campaigns",
-      description: "AI generates personalized retention strategies and campaigns based on individual customer risk profiles.",
-      icon: <Target className="w-6 h-6" />,
-      benefits: ["Personalized strategies", "Automated campaigns", "A/B testing recommendations"]
-    },
-    {
-      title: "Customer Health Scoring",
-      description: "Comprehensive health scores that track customer engagement, satisfaction, and loyalty metrics over time.",
-      icon: <Heart className="w-6 h-6" />,
-      benefits: ["Health score tracking", "Engagement metrics", "Loyalty indicators"]
-    },
-    {
-      title: "Retention Analytics Dashboard",
-      description: "Detailed analytics and insights on churn patterns, retention rates, and the effectiveness of retention efforts.",
-      icon: <BarChart3 className="w-6 h-6" />,
-      benefits: ["Churn analytics", "Retention insights", "ROI measurement"]
-    },
-    {
-      title: "Multi-Channel Integration",
-      description: "Integrate with your CRM, email marketing, support systems, and other tools for comprehensive customer data.",
-      icon: <Globe className="w-6 h-6" />,
-      benefits: ["CRM integration", "Email marketing sync", "Support system connection"]
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target the right audience with AI-driven precision and accuracy.',
+      benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
     }
   ];
 
-  const industries = [
-    { name: "SaaS", icon: <Cpu className="w-6 h-6" />, color: "from-blue-500 to-blue-600" },
-    { name: "E-commerce", icon: <MousePointer className="w-6 h-6" />, color: "from-green-500 to-green-600" },
-    { name: "Subscription", icon: <Heart className="w-6 h-6" />, color: "from-pink-500 to-purple-600" },
-    { name: "Financial Services", icon: <TrendingDown className="w-6 h-6" />, color: "from-yellow-500 to-orange-600" },
-    { name: "Healthcare", icon: <Heart className="w-6 h-6" />, color: "from-cyan-500 to-blue-600" },
-    { name: "Education", icon: <Users className="w-6 h-6" />, color: "from-purple-500 to-pink-600" }
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$149",
-      period: "/month",
-      description: "Perfect for small businesses starting their retention efforts",
-      features: [
-        "Up to 1,000 customers",
-        "Basic churn prediction",
-        "Email alerts",
-        "Standard analytics",
-        "Email support"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$399",
-      period: "/month",
-      description: "Ideal for growing businesses with complex customer bases",
-      features: [
-        "Up to 10,000 customers",
-        "Advanced AI prediction",
-        "Personalized campaigns",
-        "Advanced analytics",
-        "Priority support",
-        "API access",
-        "Custom integrations"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$999",
-      period: "/month",
-      description: "For large organizations with enterprise-scale customer retention needs",
-      features: [
-        "Unlimited customers",
-        "Enterprise AI features",
-        "White-label options",
-        "Dedicated support",
-        "Custom development",
-        "Advanced security",
-        "On-premise deployment"
-      ],
-      popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Jennifer Martinez",
-      company: "SaaS Solutions Inc.",
-      role: "Customer Success Director",
-      content: "Zion AI Churn Predictor Pro helped us reduce churn by 40% and increase customer lifetime value by 60%. The predictions are incredibly accurate!",
-      rating: 5,
-      avatar: "JM",
-    },
-    {
-      name: "Robert Kim",
-      company: "E-commerce Plus",
-      role: "VP of Customer Experience",
-      content: "The early warning system is a game-changer. We can now intervene before customers even think about leaving.",
-      rating: 5,
-      avatar: "RK",
-    },
-    {
-      name: "Sarah Johnson",
-      company: "SubscriptionBox Co.",
-      role: "Retention Manager",
-      content: "The personalized retention campaigns have increased our retention rate by 35%. The AI recommendations are spot-on.",
-      rating: 5,
-      avatar: "SJ",
-    }
-  ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
-
-export default function ZionaicustomerchurnpredictorproPage() {
   return (
-    <div>
-      <Head>
-        <title>Zion Ai Customer Churn Predictor Pro - Zion Tech Group</title>
-        <meta name="description" content="Professional services by Zion Tech Group." />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            Zion Ai Customer Churn Predictor Pro
-          </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            zion-ai-customer-churn-predictor-pro services Transform your business with our expert solutions. services coming soon.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+    <>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Zion Ai Customer Churn Predictor Pro
+            </h1>
+            <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
+              Advanced zion ai customer churn predictor pro solutions powered by artificial intelligence and machine learning.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-slate-800 p-6 rounded-lg">
+                <feature.icon className="w-12 h-12 text-emerald-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Transform your business with our cutting-edge AI solutions. Contact us today to learn more.
+            </p>
+            <a
+              href="/contact"
+              className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-3 rounded-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-300"
+            >
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </a>
+          </div>
         </div>
       </div>
       <Footer />
-    </div>
+    </>
   );
-}
+};
+
+export default Page;

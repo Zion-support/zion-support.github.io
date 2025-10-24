@@ -1,331 +1,82 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from "react";
-import { ArrowRight, CheckCircle, BarChart3, DollarSign } from 'lucide-react';
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-import SEOOptimizer from "../components/SEOOptimizer";
-import { Star } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { DollarSign } from 'lucide-react';
-export default function ZionAnalyticsPro() {
+import React from 'react';
+import Footer from '../components/Footer';
+import Head from "next/head";
+import Link from "next/link";
+import Navigation from '../components/Navigation';
+import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
+const Page: React.FC = () => {
   const features = [
-    "Real-time dashboard analytics",
-    "Predictive business insights",
-    "Automated report generation",
-    "Custom data visualization",
-    "Multi-platform integration",
-    "Advanced filtering & segmentation",
-    "Export to PDF/Excel/CSV",
-    "White-label options",
-    "AI-powered recommendations",
-    "Mobile app access",
-    "API integration",
-    "Custom metrics & KPIs"
-  ];
-
-  const _benefits = [
-    "Increase revenue by 25%",
-    "Reduce reporting time by 80%",
-    "Make data-driven decisions",
-    "Scale with your business",
-    "Improve operational efficiency",
-    "Identify growth opportunities"
-  ];
-
-  const pricing = [
     {
-      name: "Starter",
-      price: "$29",
-      period: "month",
-      description: "Perfect for small businesses",
-      features: ["Up to 5 data sources", "Basic dashboards", "Email support", "1 user"],
-      popular: false
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
-      name: "Professional",
-      price: "$79",
-      period: "month",
-      description: "Ideal for growing companies",
-      features: ["Up to 20 data sources", "Advanced analytics", "Priority support", "5 users", "Custom reports"],
-      popular: true
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time monitoring', 'Custom dashboards', 'Data visualization', 'Performance metrics']
     },
     {
-      name: "Enterprise",
-      price: "$199",
-      period: "month",
-      description: "For large organizations",
-      features: ["Unlimited data sources", "AI insights", "24/7 support", "Unlimited users", "White-label options"],
-      popular: false
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target the right audience with AI-driven precision and accuracy.',
+      benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
+    }
   ];
-
-  return null;
-};
-
-export default function ZionAnalyticsProPage() {
-
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Zion Analytics Pro - Zion Tech Group</title>
-        <meta name="description" content="Zion Analytics Pro solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Zion Analytics Pro</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive zion analytics pro solutions designed to meet your business needs.
-          </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-=======
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-      </div>
-      <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
-    </div>
-  );
-}
-=======
-
 
   return (
     <>
-      <title>ZionAnalyticsPro - Zion Tech Group</title>
-
-            <h1 className="text-4xl font-bold text-white mb-6">ZionAnalyticsPro</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional zionanalyticspro services coming soon.</p>
-
-              Contact Us
-
-      <  />
-  );
-}
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function ZionanalyticsproPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Zion Analytics Pro - Zion Tech Group</title>
-        <meta name="description" content="Professional zion analytics pro services by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Zion Analytics Pro</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional zion analytics pro services coming soon.</p>
-          
-          <Link
-            to="/contact"
-            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-          >
-            Contact Us
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
-import { ArrowRight, ShoppingCart } from 'lucide-react';
-
-        {/* Hero Section */}
-        <section className="relative overflow-hiddenpt-20pb-16" />
-
-                    <div className="{`inline-flex" items-center justify-center w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg mb-4`} />
-                      <feature.icon className="h-6w-6text-white" />
-                    </div>
-                    <h3 className="text-xl font-semiboldtext-white mb-3"   />{feature.title}</h3>
-                    <p className="text-gray-300">
-              {feature.description}</p>
-                  </div>
-              ))}
-            </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-20" />
-          <div className="max-w-7xl mx-auto px-4sm:px-6lg:px-8">
-            <div className="text-centermb-16">
-              <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Choose Your Plan
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Flexible pricing options to fit businesses of all sizes. Start with a free trial, no credit card required.
-              </p>
-            </div>
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-              {pricingPlans.map((plan, index) => (
-                <div
-                  key="{index}"
-                  className="{`relative" bg-gray-800 rounded-xl p-8 ${
-                    plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''
-                  }`} />
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2transform-translate-x-1/2">
-                      <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold"  />Most Popular
-                      </span>
-                    </div>
-
-                  )}
-                  <div className="text-centermb-8">
-                    <h3 className="text-2 xl font-bold text-white mb-2"   />{plan.name}</h3>
-                    <p className="text-gray-400mb-4">
-              {plan.description}</p>
-                    <div className="flex items-baselinejustify-center">
-                      <span className="text-5 xlfont-bold text-white"   />{plan.price}</span>
-                      <span className="text-gray-400ml-1"   />{plan.period}</span>
-                    </div>
-                  <ul className="space-y-4mb-8" />
-
-                    {plan.features.map((feature, idx) => (
-                      <li key="{idx}" className="flex items-center text-gray-300" />
-                        <CheckCircle className="h-5 w-5 text-green-400mr-3flex-shrink-0" />
-                        <span   />{feature}</span>
-                      </li>
-
-                    ))}
-                  </ul>
-                  <Link to="/contact"
-                    className="{`w-full" inline-flex items-center justify-center px-6 py-3 font-semibold rounded-lg transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
-                        : 'border border-gray-600 text-gray-300 hover: bg-gray-700 hover:text-white'
-                    }`} >
-          Get Started
-                    
-          <ArrowRight className="ml-2h-4w-4"  />
-        </Link>
-                </div>
-
-              ))}
-            </div>
-        </section>
-
-        {/* Testimonials Section */}
-        <section className="py-20bg-gray-900/50" />
-          <div className="max-w-7xl mx-auto px-4sm:px-6lg:px-8">
-            <div className="text-centermb-16">
-              <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />What Our Customers Say
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto">
-              Join thousands of businesses already using Zion Analytics Pro to drive growth.
-              </p>
-            </div>
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
-              {testimonials.map((testimonial, index) => (
-                <div key="{index}" className="bg-gray-800 rounded-xl p-6borderborder-gray-700" />
-                  <div className="flex items-centermb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-whitefont-semiboldmr-4"  />{testimonial.avatar}
-                    </div>
-                    <div />
-                      <div className="font-semiboldtext-white"   />{testimonial.name}</div>
-                      <div className="text-smtext-gray-400"   />{testimonial.role}, {testimonial.company}</div>
-                  </div>
-                  <div className="flexmb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key="{i}" className="h-4 w-4text-yellow-400fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-gray-300italic">
-              "{testimonial.content}"</p>
-                </div>
-
-              ))}
-            </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-brfrom-gray-900to-purple-900" />
-          <div className="max-w-7xl mx-auto px-4 sm:px-6lg:px-8text-center">
-            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Ready to Transform Your Analytics?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto">
-              Start your free trial today and see how Zion Analytics Pro can revolutionize your business intelligence.
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Zion Analytics Pro
+            </h1>
+            <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
+              Advanced zion analytics pro solutions powered by artificial intelligence and machine learning.
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
-              <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" >
-          Start Free Trial
-                
-          <ArrowRight className="ml-2h-5w-5"  />
-        </Link>
-              <a
-                href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300transformhover:scale-105" />
-                Call +1 302 464 0950
-              </a>
-            </div>
-            <div className="mt-8text-gray-400">
-              <p />Email: kleber@ziontechgroup.com</p>
-              <p />Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-            </div>
-        </section>
-      </div>
-        </div>
-      </div>
           </div>
-        </div>
-      </div>
-        </div>
-      </div>
-          </div>
-        </div>
-      </div>
-        </div>
-      </div>
-      </div>
 
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-slate-800 p-6 rounded-lg">
+                <feature.icon className="w-12 h-12 text-emerald-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Transform your business with our cutting-edge AI solutions. Contact us today to learn more.
+            </p>
+            <a
+              href="/contact"
+              className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-3 rounded-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-300"
+            >
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </>
   );
 };
 
-export default ZionAnalyticsProPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
+export default Page;

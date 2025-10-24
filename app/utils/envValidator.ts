@@ -1,70 +1,72 @@
-'use client';
+'use client'
+  );
 /**
- * Environment Variables Validator;
- * Ensures all required environment variables are present and valid;
+ * Environment Variables Validator
+  );
+ * Ensures all required environment variables are present and valid
+  );
  */
-<<<<<<< HEAD
 export interface EnvConfig {}
-  NODE_ENV: 'development' | 'production' | 'test';
-  NEXT_PUBLIC_API_URL?: string;
-  NEXT_PUBLIC_GA_ID?: string;
-  NEXT_PUBLIC_SITE_URL?: string;
+  NODE_ENV: 'development' | 'production' | 'test'
+  );
+  NEXT_PUBLIC_API_URL?: string
+  );
+  NEXT_PUBLIC_GA_ID?: string
+  );
+  NEXT_PUBLIC_SITE_URL?: string
+  );
 }
 class EnvValidator {
   private errors: string[] = [],
   private warnings: string[] = [],
   /**,
-   * Validate all environment variables;
+   * Validate all environment variables
+  );
    */,
   validate(): { isValid: boolean; errors: string[]; warnings: string[] } {
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 class EnvValidator {}
-  private errors: string[] = []
-  private warnings: string[] = []
+  private errors: string[] = [];
+  private warnings: string[] = [];
   /**
    * Validate all environment variables
+  );
    */
-  validate(): { isValid: boolean; errors: string[]; warnings: string[] } {}
-    this.errors = []
-    this.warnings = []
-    // Validate NODE_ENV;
+  validate(: { isValid: boolean; errors: string[]; warnings: string[] } {}
+    this.errors = [];
+    this.warnings = [];
+    // Validate NODE_ENV
+  );
     this.validateNodeEnv()
-    // Validate optional but recommended variables;
+    // Validate optional but recommended variables
+  );
     this.validateOptionalVars()
-<<<<<<< HEAD
     return {
-      isValid: this.errors.length === 0;
-      errors: this.errors;
-      warnings: this.warnings;
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+      isValid: this.errors.length === 0
+  );
+      errors: this.errors
+  );
+      warnings: this.warnings
+  );
     return {}
       isValid: this.errors.length === 0,
       errors: this.errors,
       warnings: this.warnings
-<<<<<<< HEAD
-export interface EnvConfig {/* TODO: Fix JSX expression */,}
-}
-class EnvValidator {/* TODO: Fix JSX expression */,}
-  s: string[] ,} {/* TODO: Fix JSX expression */,}
-=======
 export interface EnvConfig {/* TODO: Fix JSX expression */}
 }
 class EnvValidator {/* TODO: Fix JSX expression */}
   s: string[] } {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-    };
+    }
+  );
   }
   /**
-   * Get validated environment configuration;
+   * Get validated environment configuration
+  );
    */
-<<<<<<< HEAD
   getConfig(): EnvConfig {}
     const validation = this.validate()
     if (!validation.isValid) {}
       throw new Error()
-        `Environment validation failed: \n${validation.errors.join('\n'),}`
+        `Environment validation failed: \n${validation.errors.join('\n'}`
       )
     }
     if (validation.warnings.length > 0) {}
@@ -72,33 +74,37 @@ class EnvValidator {/* TODO: Fix JSX expression */}
       )
     }
     return {}
-      NODE_ENV: this.getNodeEnv(),
+      NODE_ENV: this.getNodeEnv(,
       NEXT_PUBLIC_API_URL: process.env['NEXT_PUBLIC_API_URL'],
       NEXT_PUBLIC_GA_ID: process.env['NEXT_PUBLIC_GA_ID'],
-      NEXT_PUBLIC_SITE_URL: process.env['NEXT_PUBLIC_SITE_URL'],};
+      NEXT_PUBLIC_SITE_URL: process.env['NEXT_PUBLIC_SITE_URL']}
+  );
   }
   private validateNodeEnv(): void {}
-    const nodeEnv = process.env['NODE_ENV']
-    const validEnvs = ['development', 'production', 'test']
+    const nodeEnv = process.env['NODE_ENV'];
+    const validEnvs = ['development', 'production', 'test'];
     if (!nodeEnv) {}
-      this.errors.push('NODE_ENV is not set');
-      return;
+      this.errors.push('NODE_ENV is not set')
+  );
+      return
+  );
     }
     if (!validEnvs.includes(nodeEnv)) {}
       this.errors.push()
-        `NODE_ENV must be one of: ${validEnvs.join(', ')}. Got: ${nodeEnv,}`
-      );
+        `NODE_ENV must be one of: ${validEnvs.join(', ')}. Got: ${nodeEnv}`
+      )
+  );
     }
   }
   private validateOptionalVars(): void {}
     const nodeEnv = this.getNodeEnv()
-    // In production, these should be set;
+    // In production, these should be set
+  );
     if (nodeEnv === 'production') {
       if (!process.env['NEXT_PUBLIC_SITE_URL']) {
         this.warnings.push(
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
     // In production, these should be set
+  );
     if (nodeEnv === 'production') {}
       if (!process.env['NEXT_PUBLIC_SITE_URL']) {}
         this.warnings.push()
@@ -108,69 +114,58 @@ class EnvValidator {/* TODO: Fix JSX expression */}
       if (!process.env['NEXT_PUBLIC_GA_ID']) {}
         this.warnings.push()
           'NEXT_PUBLIC_GA_ID is not set (analytics will be disabled)'
-        )
-      }
-    }
+  )
+  );
+}
   }
   private getNodeEnv(): 'development' | 'production' | 'test' {}
     const env = process.env['NODE_ENV'] || 'development'
     return env as 'development' | 'production' | 'test'
-<<<<<<< HEAD
-  getConfig(): EnvConfig {/* TODO: Fix JSX expression */,}
-=======
   getConfig(): EnvConfig {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-  failed:
-${validation.errors.join('
-')}`
+  failed: ${validation.errors.join('
+'}`
       )
     }
-    if (validation.warnings.length > 0) {/* TODO: Fix JSX expression */,}`
+    if (validation.warnings.length > 0) {/* TODO: Fix JSX expression */}`
       }`
       )
     }
-    return {/* TODO: Fix JSX expression */,}
-    };
+    return {/* TODO: Fix JSX expression */}
+    }
+  );
   }
 
-  private validateNodeEnv(): void {/* TODO: Fix JSX expression */,}
+  private validateNodeEnv(): void {/* TODO: Fix JSX expression */}
 
     }
 
     if (!validEnvs.includes(nodeEnv)) {
       this.errors.push(
-        `NODE_ENV must be one of: ${validEnvs.join(', ')}. Got: ${nodeEnv,}`
-      );
-
+        `NODE_ENV must be one of: ${validEnvs.join(', ')}. Got: ${nodeEnv}`
+      )
+  );
     }
   }
-  private validateOptionalVars(): void {/* TODO: Fix JSX expression */,}
+  private validateOptionalVars(): void {/* TODO: Fix JSX expression */}
       }
-      if (!process.env['NEXT_PUBLIC_GA_ID']) {/* TODO: Fix JSX expression */,}
+      if (!process.env['NEXT_PUBLIC_GA_ID']) {/* TODO: Fix JSX expression */}
       }
     }
   }
-<<<<<<< HEAD
-  private getNodeEnv(): 'development' | 'production' | 'test' {/* TODO: Fix JSX expression */,}
-=======
   private getNodeEnv(): 'development' | 'production' | 'test' {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   }
 }
-// Export singleton instance;
+// Export singleton instance
 export const envValidator = new EnvValidator()
-<<<<<<< HEAD
-// Export convenience function;
+// Export convenience function
 export function validateEnv(): EnvConfig {
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 // Export convenience function
 export function validateEnv(): EnvConfig {}
   return envValidator.getConfig()
 }
 export default envValidator;
-// Export convenience function;
-export function validateEnv(): EnvConfig {/* TODO: Fix JSX expression */,}
+  
+// Export convenience function
+export function validateEnv(): EnvConfig {/* TODO: Fix JSX expression */}
 }
 export default envValidator;`
-

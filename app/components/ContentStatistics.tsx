@@ -1,491 +1,363 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+'use client'
+import { ArrowRight, BarChart, Brain, Target, TrendingUp } from 'lucide-react';
 import React from 'react';
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 const ContentStatistics: React.FC = () => {
-<<<<<<< HEAD
-  return (
-    <div className="contentstatistics">
-      <h2>ContentStatistics</h2>
-      <p>ContentStatistics component.</p>
-=======
-  const [counters, setCounters] = useState({
-    clients: 0,
-    projects: 0,
-    satisfaction: 0,
-    years: 0;
-  });
+  const [counter, s, setCounters] = useState({
+    clients:  ,0,
+    projects:  ,0,
+    satisfaction:  ,0,
+    years:  ,0,
+    countries:  ,0,
+    uptime: 0
+ ,;
+});
 
-  const targetCounters = {
-    clients: 500,
-    projects: 1000,
-    satisfaction: 99,
-    years: 10;
-  };
-
-  const statistics = React.useMemo(() => [
-    {
-      icon: Users,
-      value: counters.clients,
-      label: 'Happy Clients',
-      suffix: '+',
-      color: 'text-cyan-400',
-    },
-    {
-      icon: Award,
-      value: counters.projects,
-      label: 'Projects Completed',
-      suffix: '+',
-      color: 'text-purple-400',
-    },
-    {
-<<<<<<< HEAD
-      icon: TrendingUp,
-      value: counters.satisfaction,
-=======
-const ContentStatistics: React.FC = () => {}
-  const [isVisible, setIsVisible] = useState(false);
-  const [counts, setCounts] = useState({)}
-    projects: 0,
-    clients: 0,
-    uptime: 0,
-    satisfaction: 0,
-    countries: 0,
-    years: 0
-  });
-=======
-      icon: Zap,
-      value: 300,
-      suffix: '%',
-      label: 'Efficiency Gain',
-      description: 'Average improvement',
-      color: 'text-purple-400'
-    }
-  ], []);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
-
-  const stats = [
-    {}
-      id: 'projects',
-      label: 'Projects Completed',
-      value: 500,
-      suffix: '+',
-      icon: Award,
-      color: 'text-cyan-400',
-      bgColor: 'bg-cyan-500/10',
-      description: 'Successful AI and IT implementations'},
-    {}
-      id: 'clients',
-      label: 'Happy Clients',
-      value: 200,
-      suffix: '+',
-      icon: Users,
-      color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10',
-      description: 'Satisfied customers worldwide'},
-    {}
-      id: 'uptime',
-      label: 'Uptime Guarantee',
-      value: 99.9,
-      suffix: '%',
-      icon: Shield,
-      color: 'text-green-400',
-      bgColor: 'bg-green-500/10',
-      description: 'Reliable service delivery'},
-    {}
-      id: 'satisfaction',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-      label: 'Client Satisfaction',
-      suffix: '%',
-<<<<<<< HEAD
-      color: 'text-green-400',
-    },
-    {
-      icon: Clock,
-      value: counters.years,
-      label: 'Years Experience',
-      suffix: '+',
-      color: 'text-yellow-400',
-    }
-  ];
-
-  const achievements = [
-    {
-      icon: Brain,
-      title: 'AI Innovation',
-      description: 'Leading the industry in AI-powered solutions',
-    },
-    {
-      icon: Shield,
-      title: 'Security Excellence',
-      description: 'Bank-level security for all our solutions',
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Serving clients across 50+ countries',
-    },
-    {
-      icon: Zap,
-      title: 'Performance',
-      description: '99.9% uptime and lightning-fast response',
-=======
-      icon: Star,
-      color: 'text-yellow-400',
-      bgColor: 'bg-yellow-500/10',
-      description: 'Customer satisfaction rate'},
-    {}
-      id: 'countries',
-      label: 'Countries Served',
-      value: 25,
-      suffix: '+',
-      icon: Globe,
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10',
-      description: 'Global presence and reach'},
-    {}
-      id: 'years',
-      label: 'Years Experience',
-      value: 10,
-      suffix: '+',
-      icon: Clock,
-      color: 'text-orange-400',
-      bgColor: 'bg-orange-500/10',
-      description: 'Industry expertise and knowledge'}
-  ];
-
-  useEffect(() => {}
-    const observer = new IntersectionObserver()
-      ([entry]) => {}
-        if (entry.isIntersecting) {}
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    const element = document.getElementById('statistics-section');
-    if (element) {}
-      observer.observe(element);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-    }
-  ];
+  const targetCounters={clients: 100,
+      0,
+    projects: 50,
+      0,
+    satisfaction: 9,
+      9,
+    years: 1,
+      0,
+    countries: 2,
+      5,
+    uptime: 99.9
+  }
 
   useEffect(() => {
-    const timers = Object.keys(targetCounters).map(key => {
-      const target = targetCounters[key as keyof typeof targetCounters];
-      const duration = 2000; // 2 seconds
-      const increment = target / (duration / 16); // 60fps
-      
-      return setInterval(() => {
-        setCounters(prev => {
-          const current = prev[key as keyof typeof prev];
-          if (current < target) {
-            return {
-              ...prev,
-              [key]: Math.min(current + increment, target)
-            };
+    const animateCounters = () => {
+      Object.keys(targetCounters).forEach(key => {
+        const target = targetCounters[key as keyof typeof targetCounters];
+        const duration = 2000
+        const increment = target / (duration / 16)
+        let current = 0
+
+        const timer = setInterval(() => {
+          current += increment
+          if (current >= target) {
+            current = target
+            clearInterval(timer)
           }
-          return prev;
-        });
-      }, 16);
-    });
-
-    return () => {
-      timers.forEach(timer => clearInterval(timer));
-    };
-  }, [statistics]);
-
-<<<<<<< HEAD
-  return (
-
-<<<<<<< HEAD
-=======
-  useEffect(() => {}
-    if (isVisible) {}
-      const duration = 2000; // 2 seconds
-      const steps = 60;
-      const stepDuration = duration / steps;
-
-      stats.forEach((stat) => {}
-        let currentStep = 0;
-        const increment = stat.value / steps;
-
-        const timer = setInterval(() => {}
-          currentStep++;
-          setCounts((prev) => ({}
+          setCounters(prev => ({
             ...prev,
-            [stat.id]: Math.min(Math.floor(increment * currentStep), stat.value)
-          }));
-
-          if (currentStep >= steps) {}
-            clearInterval(timer);
-            setCounts((prev) => ({}
-              ...prev,
-              [stat.id]: stat.value;
-            }));
-          }
-        }, stepDuration);
-      }
+            [key]: Math.floor(current)
+          }))
+        }, 16)
+      })
     }
-  }, [isVisible, stats]);
 
+    animateCounters()
+  }, [])
+
+const ContentStatistics: React.FC<ContentStatisticsProps> = ({ className = '' }) => {
   return (
-    <section id="statistics-section" className="py-16" aria-labelledby="statistics-heading"></section>
-      <div className="container mx-auto px-4"></div>
-        <h2 id="statistics-heading" className="text-3xl md:text-4xl font-bold text-white text-center mb-4 neon-text"></h2>
-          Our Impact
-        </h2>
-        <p className="text-gray-300 text-center mb-12 max-w-3xl mx-auto"></p>
-          Numbers that speak for themselves. We've been delivering exceptional results for our clients across the globe.
-        </p>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"></div>
-          {stats.map((stat) => (}
-            <div
-        <h2 id="statistics-heading" className="text-3xl md: text-4xl font-bold text-white text-center mb-4 neon-text"></div>
-          Our Impact;
-        </h2>
-        <p className="text-gray-300 text-center mb-12 max-w-3xl mx-auto">)
-          Numbers that speak for themselves. We've been delivering exceptional results for our clients across the globe.)
-        </p>)
-)
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">),
-          {stats.map((stat) => (,
-            <div;
-              key={stat.id}
-              className={`${stat.bgColor} rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 cyber-card`}
-            ></div>
-              <div className="flex justify-center mb-4"></div>
-                <div className={`p-3 rounded-full ${stat.bgColor} ${stat.color}`}></div>
-                  <stat.icon className="w-8 h-8" />
+    <>
+      
+      <Navigation />
+      
+      <main className="pt-20">
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Our <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">Impact</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+              Numbers that tell the story of our success and growth
+            </p>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+                <div className="text-4xl md:text-5xl font-bold text-emerald-400 mb-2">
+                  {counters.clients}+
                 </div>
+                <div className="text-gray-300 text-lg">Happy Clients</div>
               </div>
-
-              <div className={`text-4xl md:text-5xl font-bold ${stat.color} mb-2`}></div>
-                {stat.id === 'uptime' || stat.id === 'satisfaction'}
-                  ? `${counts[stat.id as keyof typeof counts]}${stat.suffix}`
-                  : `${counts[stat.id as keyof typeof counts]}${stat.suffix}`</div>
-                }</div>
-              <h3 className="text-lg font-semibold text-white mb-2">{stat.label}</h3><p className="text-gray-400 text-sm">{stat.description}</p>
-              </p>
+              
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+                <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2">
+                  {counters.projects}+
+                </div>
+                <div className="text-gray-300 text-lg">Projects Completed</div>
+              </div>
+              
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+                <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">
+                  {counters.satisfaction}%
+                </div>
+                <div className="text-gray-300 text-lg">Client Satisfaction</div>
+              </div>
+              
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+                <div className="text-4xl md:text-5xl font-bold text-yellow-400 mb-2">
+                  {counters.years}+
+                </div>
+                <div className="text-gray-300 text-lg">Years Experience</div>
+              </div>
+              
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+                <div className="text-4xl md:text-5xl font-bold text-red-400 mb-2">
+                  {counters.countries}+
+                </div>
+                <div className="text-gray-300 text-lg">Countries Served</div>
+              </div>
+              
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
+                <div className="text-4xl md:text-5xl font-bold text-green-400 mb-2">
+                  {counters.uptime}%
+                </div>
+                <div className="text-gray-300 text-lg">Uptime</div>
+              </div>
             </div>
-          ))}
-        </div>
-
-        {/* Additional achievements */}
-        <div className="mt-16 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl p-8 cyber-card"></div>
-          <h3 className="text-2xl font-bold text-white text-center mb-8 neon-text">Industry Recognition</h3>
-          <h3 className="text-2xl font-bold text-white text-center mb-8 neon-text"></h3>
-            Industry Recognition;
-          </h3>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
-            <div className="text-center"></div>
-              <div className="text-3xl mb-2">🏆</div><h4 className="font-semibold text-white mb-1">Best AI Company 2024<p className="text-gray-400 text-sm">Tech Innovation Awards</p>
-            </div>
-
-            <div className="text-center"></div>
-              <div className="text-3xl mb-2">⭐</div><h4 className="font-semibold text-white mb-1">5-Star Rating<p className="text-gray-400 text-sm">Client Reviews</p>
-            </div>
-
-            <div className="text-center"></div>
-              <div className="text-3xl mb-2">🔒</div><h4 className="font-semibold text-white mb-1">ISO 27001 Certified<p className="text-gray-400 text-sm">Security Standards</p>
-            </div>
-
-            <div className="text-center"></div>
-              <div className="text-3xl mb-2">🚀</div><h4 className="font-semibold text-white mb-1">Fastest Growing<p className="text-gray-400 text-sm">AI Solutions Provider</p>
-            </div>
-          </div>,
-        </div>,
-      </div>,
-    </section>);
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </div>
+  )
 };
-
-export default ContentStatistics;
-import React from 'react';
-import { Users, Award, TrendingUp, Clock } from 'lucide-react';
-
-const ContentStatistics: React.FC = () => {
-  const stats = [
-    {
-      number: '50+',
-      label: 'Successful Projects',
-      icon: Award,
-      color: 'text-cyan-400'
-    },
-    {
-      number: '100+',
-      label: 'Happy Clients',
-      icon: Users,
-      color: 'text-purple-400'
-    },
-    {
-      number: '300%',
-      label: 'Average ROI',
-      icon: TrendingUp,
-      color: 'text-green-400'
-    },
-    {
-      number: '99.9%',
-      label: 'Uptime Guarantee',
-      icon: Clock,
-      color: 'text-yellow-400'
-    }
-  ];
-
-  return (
-    <section className="py-16"></section>
-      <div className="container mx-auto px-4"></div>
-        <div className="text-center mb-12"></div>
-          <h2 className="text-4xl font-bold text-white mb-4">Our Impact</h2>
-          <p className="text-xl text-gray-300">Numbers that speak to our success</p>
-        </div>
-        
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center cyber-card p-6"></div>
-              <stat.icon className={`w-12 h-12 ${stat.color} mx-auto mb-4`} />
-              <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-              <div className="text-gray-300">{stat.label}</div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-            </div>
-          ))}
-        </div>
-      </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
-'use client';
-
-interface StatItem {id: string;,
-=======
-import { useState, useEffect} from 'react';
-interface StatItem {
-  id: string;,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-  value: number;,
-  label: string;,
-  icon: React.ComponentType<{ className?: string}>;
-  suffix?: string;
-  prefix?: string;
+  );
+clients: 0,
+projects: 0,
+satisfaction: 0,
+years: 0,
+countries: 0,
+uptime: 0});"
+consttargetCounters="{clients: " 1000 0,
+projects: 500 0,
+satisfaction: 9 9,
+years: 1 5,}
+countries: 5 0,}
+uptime:99}
+conststatistics="["
+{icon: Users,
+value: counters.clients,
+label: 'Happy Clients',
+suffix: '+',}
+color: 'text-blue-40 0',}
+description: 'Businesses trust our solutions'},
+{icon: Award,
+value: counters.projects,
+label: 'Projects Completed',
+suffix: '+',}
+color: 'text-purple-40 0',}
+description: 'Successful implementations'},
+{icon: TrendingUp,
+value: counters.satisfaction,
+label: 'Client Satisfaction',
+suffix: '%',}
+color: 'text-green-40 0',}
+description: 'Customer satisfaction rate'},
+{icon: Clock,
+value: counters.years,
+label: 'Years Experience',
+suffix: '+',}
+color: 'text-yellow-40 0',}
+description: 'Industry expertise'},
+{icon: Globe,
+value: counters.countries,
+label: 'Countries Served',
+suffix: '+',}
+color: 'text-cyan-40 0',}
+description: 'Global presence'},
+{icon: BarChart3,
+value: counters.uptime,
+label: 'Uptime Guarantee',
+suffix: '%',}
+color: 'text-red-40 0',}
+description: 'Service reliability'}
+];"
+constachievements="["
+{icon: Brain,}
+title: 'AI Innovation',}
+description: 'Leading the industry in AI-powered solutions'},
+{icon: Shield,}
+title: 'Security Excellence',}
+description: 'Bank-level security for all our solutions'},
+{icon: Globe,
+title: 'Global Reach',}
+description: 'Worldwide deployment and support for international businesses',}
+stats: ['5 0+ Countries', '1 5+ Languages', '2 4/7 Support']}
+];"
+constbenefits="["
+'Advanced AI technology integration',
+'Real-time processing and analytics',
+'Enterprise-grade security and compliance',
+'Scalable and flexible solutions',
+'2 4/7 technical support',
+'Easy integration with existing systems',
+'Cost-effective pricing plans',
+'Proven track record of success'
+];"
+constachievements="["
+{icon: Star,
+title: 'Industry Recognition',}
+description: 'Awarded Best AI Solutions Provider2024',}
+value: '2 5+'},
+{icon: Target,
+title: 'Success Rate',}
+description: 'Projects delivered on time and within budget',}
+value: '9 8%'},
+{icon: Rocket,
+title: 'Growth Rate',}
+description: 'Year-over-year business growth',}
+value: '30 0%'}
+];"
+useEffect(() => {constduration="300" 0; // 3secondsconststeps="60conststepDuration=" duration / steps;"
+consttimers="Object.keys(targetCounters).map((key)" => {
+;  "
+consttarget="targetCounters[key" as keyof type of targetCounters];"
+constduration="2000;" // 2secondsconstincrement="target" / (duration /16); //60fps
+  );
+return setInterva l(() => {
+  );
+setCounters(prev=> {
+;  "
+constcurrent="prev[key" as keyof type of prev];}
+if(current< target) {}
+return {...prev,
+[key]: Math.min(current + increment, target
+  );
+}
+return pre v
+  );
+})
+}, 1 6)
+})
+  );
+return () =>{timers.forEach(timer=> clearInterval(timer))}
+}, [])
+return (
+<div className=&quot;bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm:px-6 lg:px-8&quot;></div>
+<div className=&quot;max-w-7xl mx-auto&quot;></div>
+<div className=&quot;text-center mb-16&quot;></div>
+<h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-4&quot;></h2>
+Our Impact in Numbers
+<p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
+See how we've transformed businesses and delivered exceptional results.
+<div className=&quot;bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4&quot;></div>
+<div className=&quot;max-w-7xl mx-auto&quot;>{/* Header */}</div>
+<div className=&quot;text-center mb-16&quot;></div>
+<h2 className=&quot;text-3xl md:text-4xl font-bold text-white mb-6&quot;></h2>
+Our <span className=&quot;text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400&quot;>Impact</span> in Numbers
+</h2>
+<p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>See how we've helped businesses transform with our AI and IT solutions.</p>p>
+</div>
+{/* Statistics Grid */}
+<div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16&quot;>{statistics.map((stat, index) => (</div>
+<div key={index} className=&quot;bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center&quot;></div>
+<div className=&quot;flex justify-center mb-4&quot;></div>
+<div className=&quot;bg-gradient-to-r from-purple-600 to-cyan-600 w-16 h-16 rounded-full flex items-center justify-center&quot;></div>
+<stat.icon className=&quot;h-8 w-8 text-white&quot; />
+</div>
+</div>
+<div className={`text-3xl font-bold ${stat.color} mb-2`}>{Math.floor(stat.value)}{stat.suffix}</div>div>
+<div className=&quot;text-gray-300&quot;>{stat.label}</div>
+</div>
+))}
+</div>
+{/* Achievements */}
+<div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;>{achievements.map((achievement, index) => (</div>
+<div key={index} className=&quot;bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300&quot;></div>
+<div className=&quot;flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4&quot;></div>
+<achievement.icon className=&quot;h-6 w-6 text-white&quot; />
+</div>
+<h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>{achievement.title}</h3>
+<p className=&quot;text-gray-300 text-sm&quot;>{achievement.description}</p>
+</div>
+<h3 className="text-xl font-semibold text-white mb-2" >{achievement.title}</h3>
+<p className="text-gray-300 text-sm" >{achievement.description}</p>
+))}
+<div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16&quot;>{statistics.map((stat, index) => (</div>
+<div key={index} className=&quot;bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/10 transition-all duration-300&quot;></div>
+<div className=&quot;w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4&quot;></div>
+<stat.icon className=&quot;w-8 h-8 text-slate-900&quot; />
+</div>
+<div className={`text-4xl font-bold ${stat.color} mb-2`}>{stat.value}{stat.suffix}</div>div>
+<div className=&quot;text-lg font-semibold text-white mb-2&quot;>{stat.label}</div>
+<div className=&quot;text-gray-400 text-sm&quot;>{stat.description}</div>
+</div>
+))}
+</div>
+{/* Features Section */}
+<div className=&quot;mb-16&quot;></div>
+<div className=&quot;text-center mb-12&quot;></div>
+<h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>Key Features</h3>
+<p className=&quot;text-gray-300 max-w-2xl mx-auto&quot;>Discover the powerful features that make our solutions stand out.</p>p>
+</div>
+<div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;>{features.map((feature, index) => (</div>
+<div key={index} className=&quot;bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300&quot;></div>
+<div className=&quot;w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4&quot;></div>
+<feature.icon className=&quot;w-6 h-6 text-white&quot; />
+</div>
+<h4 className=&quot;text-lg font-semibold text-white mb-3&quot;>{feature.title}</h4>
+<p className=&quot;text-gray-300 text-sm mb-4&quot;>{feature.description}</p>
+<div className=&quot;space-y-2&quot;>{feature.stats.map((stat, statIndex) => (</div>
+<div key={statIndex} className=&quot;flex items-center text-gray-300 text-sm&quot;></div>
+<CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2 flex-shrink-0&quot; />
+<span>{stat}</span>
+))}
+</div>
+</div>
+</div>
+{/* Achievements Section */}
+<div className=&quot;mb-16&quot;></div>
+<div className=&quot;text-center mb-12&quot;></div>
+<h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>Our Achievements</h3>
+<p className=&quot;text-gray-300 max-w-2xl mx-auto&quot;>Recognition and milestones that showcase our commitment to excellence.</p>p>
+</div>
+<div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;>{achievements.map((achievement, index) => (</div>
+<div key={index} className=&quot;bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/10 transition-all duration-300&quot;></div>
+<div className=&quot;w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4&quot;></div>
+<achievement.icon className=&quot;w-8 h-8 text-white&quot; />
+</div>
+<div className=&quot;text-3xl font-bold text-white mb-2&quot;>{achievement.value}</div>
+<h4 className=&quot;text-lg font-semibold text-white mb-2&quot;>{achievement.title}</h4>
+<p className=&quot;text-gray-300 text-sm&quot;>{achievement.description}</p>
+</div>
+<div className="text-3xl font-bold text-white mb-2" >{achievement.value}</div>
+<h4 className="text-lg font-semibold text-white mb-2" >{achievement.title}</h4>
+<p className="text-gray-300 text-sm" >{achievement.description}</p>
+))}
+</div>
+</div>
+{/* Benefits Section */}
+<div className=&quot;mb-16&quot;></div>
+<div className=&quot;text-center mb-12&quot;></div>
+<h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>Why Choose Us?</h3>
+<p className=&quot;text-gray-300 max-w-2xl mx-auto&quot;>Discover the advantages that make our solutions the preferred choice.</p>p>
+</div>
+<div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6&quot;>{benefits.map((benefit, index) => (</div>
+<div key={index} className=&quot;flex items-center gap-3 bg-white/5 backdrop-blur-sm rounded-lg p-4 hover:bg-white/10 transition-all duration-300&quot;></div>
+<CheckCircle className=&quot;w-5 h-5 text-green-400 flex-shrink-0&quot; />
+<span className=&quot;text-gray-300&quot;>{benefit}</span>
+</div>
+))}
+</div>
+</div>
+{/* CTA Section */}
+<div className=&quot;text-center&quot;></div>
+<div className=&quot;bg-white/5 backdrop-blur-sm rounded-2xl p-12&quot;></div>
+<h3 className=&quot;text-3xl font-bold text-white mb-4&quot;>Ready to Get Started?</h3>
+<p className=&quot;text-xl text-gray-300 mb-8 max-w-2xl mx-auto&quot;>Join thousands of satisfied customers and transform your business today.</p>p>
+<div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+<button className=&quot;bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2&quot;></button>
+<Zap className=&quot;w-5 h-5&quot; />
+Get Started Today
+</button>
+<button className=&quot;border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200&quot;></button>
+View Case Studies
+</div>
+</div>
+</div>
+</div>
+</div>
+),
 }
 
-interface ContentStatisticsProps {stats?: StatItem[];
-  animationDuration?: number;
-  className?: string;}
 
-const ContentStatistics: React.FC<ContentStatisticsProps   /> = ({const stats = [{
-      id: 'users',
-      value: 1200,
-      label: 'Active Users',
-      icon: Users,
-      suffix: '+'},
-    {id: 'projects',
-      value: 99.8,
-      label: 'Success Rate',
-      icon: Award,
-      suffix: '%'},
-    {id: 'uptime',
-      value: 99.9,
-      label: 'Uptime',
-      icon: CheckCircle,
-      suffix: '%'},
-    {id: 'performance',
-      value: 300,
-      label: 'Performance Boost',
-      icon: Zap,
-      suffix: '%'}],
-  animationDuration = 2000,
-  className = ''
-}) => {const [animatedValues, setAnimatedValues] = useState<{ [key: string]: number}>({});
-  useEffect(() => {const animateValue = (start: number, end: number, duration: number, key: string) => {
-      const startTime = performance.now();
-      const animate = (currentTime: number) => {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        // Easing function;
-        const easeOutCubic = 1 - Math.pow(1 - progress, 3);
-        const currentValue = start + (end - start) * easeOutCubic;
-        setAnimatedValues(const prev = > ({
-          ...prev,
-          [key]: currentValue;}));
-        if (progress < 1) {requestAnimationFrame(animate);}
-      };
-
-      requestAnimationFrame(animate);
-    };
-
-    stats.forEach(const stat = > {animateValue(0, stat.value, animationDuration, stat.id);});
-  }, [stats, animationDuration]);
-
-export default function ContentStatistics() {return (
-
-        const animatedValue = animatedValues[stat.id] || 0;
-        const IconComponent = stat.icon;
-        return (
-    <div;
-            const key = {stat.id}
-<<<<<<< HEAD
-            className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-white/20transition-all duration-300"   /></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <IconComponent className="w-5h-5ml-2"   /></IconComponent>
-              </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.prefix}
-=======
-            className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-white/20transition-allduration-300" />
-            <div className="flexjustify-centermb-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-centerjustify-center">
-                <IconComponent className="w-6h-6text-white" />
-              </div>
-
-            <div className="text-3 xl font-bold text-white mb-2"  />{stat.prefix}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-              {stat.suffix === '%'
-                ? animatedValue.toFixed(1)
-                : Math.floor(animatedValue).toLocaleString()}
-              {stat.suffix}
-            </div>
-<<<<<<< HEAD
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.label}
-=======
-            <div className="text-gray-300text-sm">{stat.label}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-            </div>
-  );
-      })}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
-import React from 'react';
-
-const ContentStatistics: React.FC<ContentStatisticsProps> = () => {
-  return (
-    <div className="contentstatistics">
-      <h2>ContentStatistics</h2>
-      <p>Component content coming soon.</p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-    </div>
-  );
-};
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default ContentStatistics;
-<<<<<<< HEAD
-=======
-export default ContentStatistics;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
-export default ContentStatistics;
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
-export default ContentStatistics;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
+export default ContentStatistics;"

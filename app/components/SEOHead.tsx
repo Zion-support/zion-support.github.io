@@ -1,440 +1,82 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-interface SeoheadProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-export default function Seohead({ className = '', children, ...props }: SeoheadProps) {
-=======
-'use client';
-import React from "react";
+import Footer from '../components/Footer';
+import Head from "next/head";
+import Link from "next/link";
+import Navigation from '../components/Navigation';
+import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
-const SEOHead: React.FC = () => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
-  return (
-    <div className={`seohead-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
-}
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-
-interface SEOHeadProps {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
-  title?: string
-  description?: string
-  keywords?: string
-  canonicalUrl?: string
-  ogImage?: string
-  ogType?: string
-  twitterCard?: string
-  structuredData?: object
-<<<<<<< HEAD
-  noIndex?: boolean
-  author?: string
-  publishedTime?: string
-  modifiedTime?: string
-  section?: string
-  tags?: string[]
-  locale?: string
-  alternateLanguages?: Array<{ href: string; hreflang: string }>
-  breadcrumbs?: Array<{ name: string; url: string }>
-  faqData?: Array<{ question: string; answer: string }>
-  articleData?: {
-    author: string
-    publishedTime: string
-    modifiedTime: string
-    section: string
-    tags: string[]
-  }
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
-}
-
-const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Advanced AI & IT Solutions',
-  description = 'Transform your business with cutting-edge artificial intelligence, cloud infrastructure, and innovative technology solutions. Expert AI and IT consulting services.',
-  keywords = 'AI solutions, IT consulting, cloud infrastructure, cybersecurity, automation, machine learning, artificial intelligence, business transformation',
-  canonicalUrl,
-  ogImage = '/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData,
-  noIndex = false,
-  author = 'Zion Tech Group',
-  publishedTime,
-  modifiedTime,
-  section,
-  tags = [],
-  locale = 'en_US',
-  alternateLanguages = [],
-  breadcrumbs = [],
-  faqData = [],
-  articleData
-}) => {
-<<<<<<< HEAD
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} - Zion Tech Group`
-  const fullDescription = description || 'Professional AI and IT solutions for modern businesses'
-  const fullKeywords = keywords || 'AI solutions, IT services, technology consulting, software development, artificial intelligence'
-  const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '')
-  const defaultOgImage = ogImage || 'https://ziontechgroup.com/og-image.jpg'
-
-  // Generate structured data
-  const generateStructuredData = () => {
-    const baseStructuredData = {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Zion Tech Group',
-      url: 'https://ziontechgroup.com',
-      logo: 'https://ziontechgroup.com/logo.png',
-      description: fullDescription,
-      sameAs: [
-        'https://linkedin.com/company/zion-tech-group',
-        'https://twitter.com/ziontechgroup',
-        'https://github.com/ziontechgroup'
-      ],
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+1-302-464-0950',
-        contactType: 'customer service',
-        availableLanguage: 'English',
-        email: 'kleber@ziontechgroup.com'
-      },
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '364 E Main St STE 1008',
-        addressLocality: 'Middletown',
-        addressRegion: 'DE',
-        postalCode: '19709',
-        addressCountry: 'US'
-      }
-    }
-
-    // Add article structured data if provided
-    if (articleData) {
-      return {
-        ...baseStructuredData,
-        '@type': 'Article',
-        headline: fullTitle,
-        description: fullDescription,
-        author: {
-          '@type': 'Person',
-          name: articleData.author
-        },
-        publisher: {
-          '@type': 'Organization',
-          name: 'Zion Tech Group',
-          logo: {
-            '@type': 'ImageObject',
-            url: 'https://ziontechgroup.com/logo.png'
-          }
-        },
-        datePublished: articleData.publishedTime,
-        dateModified: articleData.modifiedTime,
-        mainEntityOfPage: {
-          '@type': 'WebPage',
-          '@id': currentUrl
-        },
-        articleSection: articleData.section,
-        keywords: articleData.tags.join(', ')
-      }
-    }
-
-    // Add FAQ structured data if provided
-    if (faqData.length > 0) {
-      return {
-        ...baseStructuredData,
-        '@type': 'FAQPage',
-        mainEntity: faqData.map(faq => ({
-          '@type': 'Question',
-          name: faq.question,
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: faq.answer
-          }
-        }))
-      }
-    }
-
-    return structuredData || baseStructuredData
-  }
-
-  // Generate breadcrumb structured data
-  const generateBreadcrumbStructuredData = () => {
-    if (breadcrumbs.length === 0) return null
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: breadcrumbs.map((crumb, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        name: crumb.name,
-        item: crumb.url
-      }))
-    }
-  }
-
-=======
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
-  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '')
-  
-  const defaultStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-    "description": "Advanced AI and IT Solutions company providing cutting-edge technology services",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
+const Page: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time monitoring', 'Custom dashboards', 'Data visualization', 'Performance metrics']
     },
-    "sameAs": [
-      "https://www.linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup"
-    ]
-  }
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
-  return (
-    <Helmet>
-      <title>{fullTitle}</title>
-<<<<<<< HEAD
-      <meta name="description" content={fullDescription} />
-      <meta name="keywords" content={fullKeywords} />
-      <link rel="canonical" href={currentUrl} />
-      
-      {/* Language and locale */}
-      <html lang={locale.split('_')[0]} />
-      <meta property="og:locale" content={locale} />
-      
-<<<<<<< HEAD
-      {/* Author and publishing info */}
-      {author && <meta name="author" content={author} />}
-      {publishedTime && <meta name="article:published_time" content={publishedTime} />}
-      {modifiedTime && <meta name="article:modified_time" content={modifiedTime} />}
-      {section && <meta name="article:section" content={section} />}
-      {tags.length > 0 && <meta name="article:tag" content={tags.join(', ')} />}
-      
-      {/* Open Graph */}
-=======
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      
-      {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-      
-      {/* Open Graph Meta Tags */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={fullDescription} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={currentUrl} />
-      <meta property="og:image" content={defaultOgImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-=======
-      {/* Open Graph Meta Tags */}
-      <meta property="og: title" content={fullTitle,} />
-      <meta property="og: description" content={description,} />
-      <meta property="og: type" content={ogType,} />
-      <meta property="og: url" content={canonicalUrl,} />
-      <meta property="og: image" content={ogImage,} />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-      <meta property="og:site_name" content="Zion Tech Group" />
-<<<<<<< HEAD
-      
-<<<<<<< HEAD
-      {/* Twitter */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={fullDescription} />
-      <meta name="twitter:image" content={defaultOgImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-=======
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter: card" content={twitterCard,} />
-      <meta name="twitter: title" content={fullTitle,} />
-      <meta name="twitter: description" content={description,} />
-      <meta name="twitter: image" content={ogImage,} />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-      
-      {/* Additional SEO */}
-      <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-      
-      {/* Alternate languages */}
-      {alternateLanguages.map((alt, index) => (
-        <link key={index} rel="alternate" hrefLang={alt.hreflang} href={alt.href} />
-      ))}
-      
-      {/* Performance hints */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-=======
-      <meta property="og:locale" content="en_US" />
-      
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      
-      {/* Additional SEO Meta Tags */}
-      <meta name="theme-color" content="#0f172a" />
-      <meta name="msapplication-TileColor" content="#0f172a" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
-      
-=======
-import React  from 'react';
-
-const SEOHead: React.FC = () => {
-  return (
-    <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." / / />
-      <meta name="keywords" content="AI solutions, IT services, cloud computing, digital transformation, 5 G implementation" / / />
-      <meta name="viewport" content="width="device-width," initial-scale=1.0" / / />
-      <meta name="theme-color" content="#8 b5 cf6" / / />
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" / / />
-      <meta property="og: description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." / / />
-      <meta property="og:type" content="website" / / />
-      <meta property="og:url" content="https://ziontechgroup.com" / / />
-      <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" / / />
-      <meta property="og:site_name" content="Zion Tech Group" / / />
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" / / />
-      <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" / / />
-      <meta name="twitter: description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." / / />
-      <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" / / />
-      <meta name="twitter:site" content="@ziontechgroup" / / />
-      {/* Additional SEO Meta Tags */}
-      <meta name="robots" content="index, follow" / / />
-      <meta name="author" content="Zion Tech Group" / / />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(generateStructuredData())}
-      </script>
-<<<<<<< HEAD
-      
-      {/* Breadcrumb Structured Data */}
-      {breadcrumbs.length > 0 && (
-        <script type="application/ld+json">
-          {JSON.stringify(generateBreadcrumbStructuredData())}
-=======
-  title: string;
-  description: string;
-  structuredData?: any;
-=======
-    </Helmet>
-  )
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
-}
-
-const SEOHead: React.FC<SEOHeadProps> = ({ title, description, structuredData }) => {
-  return (
-    <Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-        </script>
-      )}
-    </Helmet>
-  )
-}
-
-export default SEOHead
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
-=======
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target the right audience with AI-driven precision and accuracy.',
+      benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
+    }
+  ];
 
   return (
-    <title>5G Data Analytics - Zion Tech Group</title>
-      <title>Zion Tech Group - Advanced AI and IT Solutions</title>
+    <>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              SEOHead
+            </h1>
+            <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
+              Advanced SEOHead solutions powered by artificial intelligence and machine learning.
+            </p>
+          </div>
 
-      {/* Open Graph Meta Tags */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-slate-800 p-6 rounded-lg">
+                <feature.icon className="w-12 h-12 text-emerald-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
 
-      {/* Twitter Card Meta Tags */}
-
-      {/* Additional SEO Meta Tags */}
-
-      {/* Structured Data */}
-      <script type="application/ld+json"    />{JSON.stringify({
-          "@context": "https: // schema.org",
-          "@type": "Organization",
-          "name": "Zion Tech Group",
-          "description": "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
-          "url": "https: // ziontechgroup.com",
-          "logo": "https: // ziontechgroup.com/logo.png",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-302-464-0950",
-            "contactType": "customer service",
-            "email": "kleber@ziontechgroup.com"},
-          "address": {"@type": "PostalAddress",
-            "streetAddress": "364 E Main St STE 1008",
-            "addressLocality": "Middletown",
-            "addressRegion": "DE",
-            "postalCode": "19709",
-            "addressCountry": "US"},
-          "sameAs": ["https: // github.com/ziontechgroup",
-            "https: // linkedin.com/company/ziontechgroup",
-            "https:// twitter.com/ziontechgroup"]
-        })}
-<<<<<<< HEAD
-
-  );
-};
-export default SEOHead;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
-
-const SEOHead: React.FC<SEOHeadProps> = () => {
-  return (
-    <div className="seohead">
-      <h2>SEOHead</h2>
-      <p>Component content coming soon.</p>
-    </div>
-=======
-      </script>
-    </Helmet>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Transform your business with our cutting-edge AI solutions. Contact us today to learn more.
+            </p>
+            <a
+              href="/contact"
+              className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-3 rounded-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-300"
+            >
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </>
   );
 };
 
-export default SEOHead;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
+export default Page;

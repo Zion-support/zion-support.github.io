@@ -1,243 +1,51 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import Link from 'next/link';
-=======
-import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+"use client";
+import React from "react";
+import Footer from '../components/Footer';
+import Head from "next/head";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
-const CookieConsent: React.FC<CookieConsentProps> = () => {
+export default function ServicePage() {
   return (
-<<<<<<< HEAD
     <>
-    
-  </>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>
-          <h1 className="text-4xl font-bold text-white mb-6"></h1>
-            Service</h1>
-          </h1>
-          <p className="text-lg text-gray-300 mb-8"></p>
-            Professional service services coming soon.</p>
-          </p>
-          <Link 
-            href="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hove,
-  r:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          ></Link>
-            Contact Us</Link>
-            <ArrowRight className="w-5 h-5 ml-2" /></ArrowRight>
-          </Link>
+      <Head>
+        <title>CookieConsent | Zion Tech Group</title>
+        <meta name="description" content="Professional CookieConsent services and solutions for modern businesses." />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="CookieConsent | Zion Tech Group" />
+        <meta property="og:description" content="Professional CookieConsent services and solutions for modern businesses." />
+        <meta property="og:type" content="website" />
+      </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+              CookieConsent
+            </h1>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Professional CookieConsent services and solutions for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }
-=======
-
-import {useState, useEffect} from 'react';
-import {X, Cookie} from 'lucide-react';
-
-const CookieConsent: React.FC = () => {const [showDetails, setShowDetails] = useState(false);
-=======
-'use client';
-import { useState, useEffect} from 'react';
-import { X, Cookie} from 'lucide-react';
-
-const CookieConsent: React.FC = () => {
-  const [showDetails, setShowDetails] = useState(false);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-  useEffect(() => {
-    const consent = localStorage.getItem('cookie-consent');
-    if (!consent) {
-      setIsVisible(true);}
-  }, []);
-
-  const acceptAll = () => {localStorage.setItem('cookie-consent', 'accepted');
-    localStorage.setItem('analytics-consent', 'accepted');
-    localStorage.setItem('marketing-consent', 'accepted');
-    setIsVisible(false);};
-
-  const acceptNecessary = () => {localStorage.setItem('cookie-consent', 'necessary');
-    localStorage.setItem('analytics-consent', 'declined');
-    localStorage.setItem('marketing-consent', 'declined');
-    setIsVisible(false);};
-
-  const acceptCustom = () => {localStorage.setItem('cookie-consent', 'custom');
-    setIsVisible(false);};
-
-  if (!isVisible) return null;
-
-<<<<<<< HEAD
-export default function CookieConsent() {return (
-
-          {!showDetails ? (
-            // Simple view;
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                  <Cookie className="w-5h-5ml-2"   /></Cookie>
-                </div>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                  <h3 className="w-5h-5ml-2"   />We use cookies;
-                  </h3>
-                  <p className="w-5h-5ml-2">We use cookies to enhance your browsing experience, serve personalized content,
-                    and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
-                  </p>
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                    <button;
-                      onClick="{acceptAll}"
-                      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700transition-all duration-300"
-                        />Accept All;
-                    </button>
-                    <button;
-                      onClick="{acceptNecessary}"
-                      className="border border-slate-600 text-gray-300 px-6 py-2 rounded-lg font-semiboldhover:bg-slate-700 transition-colors"
-                        />Necessary Only;
-=======
-  return (
-
-                    <button
-                      onClick={acceptAll}
-                      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700transition-allduration-300">Accept All
-                    </button>
-                    <button
-                      onClick={acceptNecessary}
-                      className="border border-slate-600 text-gray-300 px-6 py-2 rounded-lg font-semiboldhover:bg-slate-700transition-colors">Necessary Only
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-                    </button>
-                    <button;
-                      onClick="{()" =    />setShowDetails(true)}
-                      className="text-cyan-400 hover:text-cyan-300 px-6 py-2font-semibold transition-colors"
-                    >
-<<<<<<< HEAD
-                      Customize;
-                    </button>
-                  </div>
-                <button;
-                  onClick="{acceptNecessary}"
-                  className="text-gray-400hover:text-white transition-colors"
-                  aria-label="Close"   /></button>
-                  <X className="w-5h-5ml-2"   /></X>
-                </button>
-              </div>
-  ) : (
-            // Detailed view;
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <h3 className="text-xlfont-semibold text-white"  >Cookie Preferences</h3>
-                <button;
-                  onClick="{()" =   /> setShowDetails(false)}
-                  className="text-gray-400hover:text-white transition-colors"
-                  aria-label="Close details"
-                >
-                  <X className="w-5h-5ml-2"   /></X>
-                </button>
-              </div>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                {/* Necessary Cookies */}
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                  <Shield className="w-5h-5ml-2"   /></Shield>
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                      <h4 className="font-semibold text-white"  >Necessary Cookies</h4>
-                      <span className="text-smtext-green-400font-medium"  >Always Active</span>
-                    </div>
-                    <p className="w-5h-5ml-2">These cookies are essential for the website to function properly. They cannot be disabled.
-                    </p>
-                  </div>
-                {/* Analytics Cookies */}
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                  <BarChart3 className="w-5h-5ml-2"   /></BarChart3>
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                      <h4 className="font-semibold text-white"  >Analytics Cookies</h4>
-                      <label className="w-5h-5ml-2"   /></label>
-                        <input type="checkbox" className="sr-onlypeer" defaultChecked    /></input>
-                        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                      </label>
-                    </div>
-                    <p className="w-5h-5ml-2">These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously.
-                    </p>
-                  </div>
-                {/* Marketing Cookies */}
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                  <Settings className="w-5h-5ml-2"   /></Settings>
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                      <h4 className="font-semibold text-white"  >Marketing Cookies</h4>
-                      <label className="w-5h-5ml-2"   /></label>
-                        <input type="checkbox" className="sr-onlypeer"    /></input>
-                        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                      </label>
-                    </div>
-                    <p className="w-5h-5ml-2">These cookies are used to track visitors across websites to display relevant and engaging advertisements.
-                    </p>
-                  </div>
-              </div>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <button;
-                  onClick="{acceptAll}"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700transition-all duration-300"
-                    />Accept All;
-                </button>
-                <button;
-                  onClick="{acceptCustom}"
-                  className="bg-slate-700 text-white px-6 py-2 rounded-lg font-semiboldhover:bg-slate-600 transition-colors"
-                    />Save Preferences;
-                </button>
-                <button;
-                  onClick="{acceptNecessary}"
-                  className="border border-slate-600 text-gray-300 px-6 py-2 rounded-lg font-semiboldhover:bg-slate-700 transition-colors"
-                    />Reject All;
-                </button>
-              </div>
-  )}
-=======
-                      Customize
-                    </button>
-                  </div>
-                <button
-                  onClick={acceptNecessary}
-                  className="text-gray-400hover:text-whitetransition-colors"
-                  aria-label="Close" />
-
-                <button
-                  onClick={acceptAll}
-                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700transition-allduration-300">Accept All
-                </button>
-                <button
-                  onClick={acceptCustom}
-                  className="bg-slate-700 text-white px-6 py-2 rounded-lg font-semiboldhover:bg-slate-600transition-colors">Save Preferences
-                </button>
-                <button
-                  onClick={acceptNecessary}
-                  className="border border-slate-600 text-gray-300 px-6 py-2 rounded-lg font-semiboldhover:bg-slate-700transition-colors"
-                  />Reject All
-                </button>
-              </div>
-          )}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-        </div>
-=======
-    <div className="cookieconsent">
-      <h2>CookieConsent</h2>
-      <p>Component content coming soon.</p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-    </div>
-  );
-};
-
-<<<<<<< HEAD
-export default CookieConsent;
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
-export default CookieConsent;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

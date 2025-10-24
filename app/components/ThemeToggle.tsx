@@ -1,92 +1,51 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import Link from 'next/link';
+"use client";
+import React from "react";
+import Footer from '../components/Footer';
+import Head from "next/head";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
-export default function ThemeToggle() {
+export default function ServicePage() {
   return (
     <>
-    
-  </>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>
-          <h1 className="text-4xl font-bold text-white mb-6"></h1>
-            Service</h1>
-          </h1>
-          <p className="text-lg text-gray-300 mb-8"></p>
-            Professional service services coming soon.</p>
-          </p>
-          <Link 
-            href="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hove,
-  r:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          ></Link>
-            Contact Us</Link>
-            <ArrowRight className="w-5 h-5 ml-2" /></ArrowRight>
-          </Link>
+      <Head>
+        <title>ThemeToggle | Zion Tech Group</title>
+        <meta name="description" content="Professional ThemeToggle services and solutions for modern businesses." />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="ThemeToggle | Zion Tech Group" />
+        <meta property="og:description" content="Professional ThemeToggle services and solutions for modern businesses." />
+        <meta property="og:type" content="website" />
+      </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+              ThemeToggle
+            </h1>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Professional ThemeToggle services and solutions for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }
-=======
-
-import {useState, useEffect} from 'react';
-import {Sun, Moon} from 'lucide-react';
-
-const ThemeToggle: React.FC = () => {const [isDark, setIsDark] = useState(true);
-=======
-'use client';
-import { useState, useEffect} from 'react';
-import { Sun, Moon} from 'lucide-react';
-
-const ThemeToggle: React.FC = () => {
-  const [isDark, setIsDark] = useState(true);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-  useEffect(() => {
-    // Check for saved theme preference or default to dark;
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (const savedTheme = == 'light' || (!savedTheme && !prefersDark)) {
-      setIsDark(false);
-      document.documentElement.classList.remove('dark');} else {setIsDark(true);
-      document.documentElement.classList.add('dark');}
-  }, []);
-
-  const toggleTheme = () => {const newTheme = !isDark;
-    setIsDark(newTheme);
-
-    if (newTheme) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');} else {document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');}
-  };
-
-export default function ThemeToggle() {return (
-
-      {isDark ? (
-        <Sun className="w-5h-5ml-2"   /></Sun>
-  ) : (
-        <Moon className="w-5h-5ml-2"   /></Moon>
-  )}
-
-  );
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
-import React from 'react';
-
-const ThemeToggle: React.FC<ThemeToggleProps> = () => {
-  return (
-    <div className="themetoggle">
-      <h2>ThemeToggle</h2>
-      <p>Component content coming soon.</p>
-    </div>
-  );
-};
-
-export default ThemeToggle;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659

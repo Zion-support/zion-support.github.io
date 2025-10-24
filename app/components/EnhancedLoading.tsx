@@ -1,225 +1,82 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-interface EnhancedloadingProps {
-  className?: string;
-  children?: React.ReactNode;
-=======
-import React  from 'react';
+import Footer from '../components/Footer';
+import Head from "next/head";
+import Link from "next/link";
+import Navigation from '../components/Navigation';
+import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
-interface LoadingProps {
-  size?: 'sm' | 'md' | 'lg'
-  text?: string
-  fullScreen?: boolean
-  color?: string
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-}
-<<<<<<< HEAD
-export default function Enhancedloading({ className = '', children, ...props }: EnhancedloadingProps) {
-  return (
-    <div className={`enhancedloading-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
-}
-=======
-
-const EnhancedLoading: React.FC = () => {
-  return (
-    <div className="enhancedloading">
-      <h2>EnhancedLoading</h2>
-      <p>EnhancedLoading component.</p>
-=======
-
-const EnhancedLoading: React.FC<LoadingProps> = ({
-  message = "Loading...",
-  size = 'md',
-  variant = 'spinner'
-}) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'};
-
-  const textSizeClasses = {
-    sm: 'text-sm',
-    md: 'text-base',
-    lg: 'text-lg'};
-
-  const renderSpinner = () => (
-    <div className={`${sizeClasses[size]} border-2 border-cyan-400/20 border-t-cyan-400 rounded-full animate-spin`} />
-  );
-
-  const renderDots = () => (
-    <div className="flex space-x-1"></div>
-      {[0, 1, 2].map((i) => (
-        <div;
-  const renderDots = () => (<div className="flex space-x-1">{[0, 1, 2].map((i) => (</div><div
-          key={i}
-          className={`w-2 h-2 bg-cyan-400 rounded-full animate-pulse`}
-          style={{ animationDelay: `${i * 0.2}s` }}
-        >))}</div>
-  );
-
-  const renderPulse = () => (
-    <div className={`${sizeClasses[size]} bg-cyan-400 rounded-full animate-pulse`} >);
-</div>
-  const renderSkeleton = () => (</div>
-    </div><div className="space-y-2"></div>
-      <div className="h-4 bg-gray-700 rounded animate-pulse" /></div>
-      <div className="h-4 bg-gray-700 rounded animate-pulse w-3/4" /></div>
-      <div className="h-4 bg-gray-700 rounded animate-pulse w-1/2" >);
-
-  const renderLoader = () => {
-    switch (variant) {
-      case 'dots':
-        return renderDots();
-      case 'pulse':
-        return renderPulse();
-      case 'skeleton':
-        return renderSkeleton();
-      default: return renderSpinner();
+const Page: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time monitoring', 'Custom dashboards', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target the right audience with AI-driven precision and accuracy.',
+      benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
     }
-  };
+  ];
 
-  return(<div className="flex flex-col items-center justify-center space-y-4 p-8">)
-      <div className="relative">)
-        {renderLoader()}
-        {variant === 'spinner' && (
-          <div className="absolute inset-0 border-2 border-transparent border-t-purple-400 rounded-full animate-spin" 
-               style={{ animationDirection: 'reverse', animationDuration: '1.5s' }} />
-        )}
-      </div>
-      {message && (
-        <p className={`text-gray-300 ${textSizeClasses[size]} font-medium animate-pulse`}>{message}</p>
-        </p>
-      )}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
-
-const EnhancedLoading: React.FC<EnhancedLoadingProps> = () => {
   return (
-    <div className="enhancedloading">
-      <h2>EnhancedLoading</h2>
-      <p>Component content coming soon.</p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-    </div>
+    <>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              EnhancedLoading
+            </h1>
+            <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
+              Advanced EnhancedLoading solutions powered by artificial intelligence and machine learning.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-slate-800 p-6 rounded-lg">
+                <feature.icon className="w-12 h-12 text-emerald-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Transform your business with our cutting-edge AI solutions. Contact us today to learn more.
+            </p>
+            <a
+              href="/contact"
+              className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-3 rounded-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-300"
+            >
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </>
   );
 };
 
-<<<<<<< HEAD
-export default EnhancedLoading;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
-=======
-import {Helmet} from 'react-helmet-async';
-import {Link} from 'react-router-dom';
-import {ArrowRight} from 'lucide-react';
-
-interface LoadingProps {size?: 'sm' | 'md' | 'lg'
-  text?: string;
-  fullScreen?: boolean;
-  color?: string;}
-
-const EnhancedLoading: React.FC<LoadingProps   /> = ({const size = 'md',
-  text = 'Loading...',
-  fullScreen = false,
-  color = 'cyan'}) => {const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'}
-
-  const colorClasses = {cyan: 'border-cyan-400',
-    purple: 'border-purple-400',
-    pink: 'border-pink-400',
-    blue: 'border-blue-400',
-    green: 'border-green-400'}
-
-  const spinner = (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <div className="{`${sizeClasses[size]}" ${colorClasses[color as keyof typeof, colorClasses]} border-2 border-t-transparent rounded-full animate-spin`}    /></div>
-      {text && (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{text}
-        </div>
-  )}
-    </div>
-  )
-
-  if (fullScreen) {return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{spinner}
-      </div>
-  )
-  }
-
-  return spinner
-
-export default EnhancedLoading;
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
-'use client'
-import React from 'react'
-import { Loader2 } from 'lucide-react'
-
-interface EnhancedLoadingProps {
-  message?: string
-  size?: 'sm' | 'md' | 'lg'
-}
-
-const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
-  message = 'Loading...',
-  size = 'md'
-}) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
-  }
-
-<<<<<<< HEAD
-  return (
-    <div className="flex flex-col items-center justify-center p-8">
-      <Loader2 className={`animate-spin text-blue-500 ${sizeClasses[size]}`} />
-      <p className="mt-4 text-gray-600">{message}</p>
-    </div>
-  )
-=======
-  const colorClasses = {
-    cyan: 'border-cyan-400',
-    purple: 'border-purple-400',
-    pink: 'border-pink-400',
-    blue: 'border-blue-400',
-    green: 'border-green-400'
-  }
-
-  const spinner = (
-    <div className="flex flex-col items-center justify-centerspace-y-4">
-      <div className="{`${sizeClasses[size]}" ${colorClasses[color as keyof typeof, colorClasses]} border-2 border-t-transparent rounded-full animate-spin`} / />
-      {text && (
-        <div className="text-sm text-gray-300animate-pulse">{text}
-        </div>
-      )}
-    </div>
-  )
-
-  if (fullScreen) {
-    return (
-      <div className="fixed inset-0 bg-gray-900 bg-opacity-90 flex items-center justify-centerz-50">{spinner}
-      </div>
-    )
-  }
-
-  return spinner
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-}
-
-export default EnhancedLoading
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
-=======
-export default EnhancedLoading;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
+export default Page;

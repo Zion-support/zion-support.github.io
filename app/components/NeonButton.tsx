@@ -1,109 +1,400 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import {Helmet} from 'react-helmet-async';
-import {Link} from 'react-router-dom';
-import {ArrowRight} from 'lucide-react';
-
-interface NeonButtonProps {children: React.ReactNode;
-=======
-import React  from 'react';
-import { ArrowRight } from 'lucide-react';
-interface NeonButtonProps {
-  children: React.ReactNode;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-  href?: string;
-  onClick?: () => void;
-  variant?: 'primary' | 'secondary' | 'accent';
-  size?: 'sm' | 'md' | 'lg';
-  className?: string;
-  icon?: React.ReactNode;
-  disabled?: boolean;}
-
-const NeonButton: React.FC<NeonButtonProps   /> = ({children,
-  href,
-  onClick,
-  const variant = 'primary',
-  size = 'md',
-  className = '',
-  icon,
-  disabled = false;}) => {const baseClasses = 'relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover: scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled: hove,
-  r: scale-100';
-  const sizeClasses = {
-    sm: 'px-4 py-2 text-sm',
-    md: 'px-6 py-3 text-base',
-<<<<<<< HEAD
-    lg: 'px-8 py-4 text-lg'};
-  const variantClasses = {primary: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg hover:shadow-blue-500/25 hover:shadow-2 xl',
-    secondary: 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg hover:shadow-purple-500/25 hover:shadow-2 xl',
-    accent: 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg hover:shadow-cyan-500/25 hover:shadow-2 xl'};
-  const neonEffect = 'before: absolute,
-  before: inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover: befor,
-  e:opacity-70 before:-z-10';
-  const buttonClasses = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${neonEffect} ${className}`;
-  const content = (
-    <><  />
-      {icon && <span className="mr-2"  >{icon}</span>}
-      {children}
-      {!icon && <ArrowRight className="w-5h-5ml-2"   />    </ArrowRight></ArrowRight>
-<  /></ArrowRight>
-=======
-    lg: 'px-8 py-4 text-lg'
-  };
-  const variantClasses = {
-    primary: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg hover:shadow-blue-500/25 hover:shadow-2xll',
-    secondary: 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg hover:shadow-purple-500/25 hover:shadow-2xll',
-    accent: 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg hover:shadow-cyan-500/25 hover:shadow-2xll'
-  };
-  const neonEffect = 'before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 before:-z-10';
-  const buttonClasses={`${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${neonEffect} ${className}`};
-  const content = (
-      {icon && <span className="mr-2">{icon}</span>}
-
-      {children}
-      {!icon && <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1transition-transform" />}
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
+import React  from "react";
+import { ArrowRight }  from "lucide-react";interface NeonButtonProps {
+  children?: React.ReactNode
   );
-  if (href) {return (
-    <a;
-        const href = {href}
-        className="{buttonClasses}"
-        style="{{"
-          boxShadow: '0 0 20 px rgba(59, 130, 246, 0.3), 0 0 40 px rgba(147, 51, 234, 0.2)',}}   /></a>
-        {content}
-      </a>
+  className?: string
   );
-  }
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+  title?: string
+  );
+  description?: string
+  );
+  href?: string
+  );
+  onClick?: () => void
+  );
+  variant?: "primary" | "secondary" | "accent"
+  size?: "sm" | "md" | "lg"
+  icon?: React.ReactNode
+  );
+  disabled?: boolean
+  );
+}
 
-const NeonButton: React.FC<NeonButtonProps> = () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
+const NeonButton: React.FC<NeonButtonProps> = ({
+  children
+  href
+  onClick
+  variant="primary"
+  size="md"
+  className=""
+  icon
+  disabled = false
+  );
+}) => {
+  const baseClasses =
+    "relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover: scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+  const benefits = [
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
+    'Gain competitive advantage with advanced technology'
+  ];
+}</NeonButtonProps>
+  return (</NeonButtonProps>
+    <>
+      
+      <Navigation />
+        </Navigation>
+        </Navigation>
+        </Navigation>
+      </Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
+<//div>
+        {/* Hero Section */
+}
+        <section className="relative py-20 px-4 overflow-hidden"></section>
+<//section>
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+<//div>
+          <div className="relative max-w-7xl mx-auto text-center"></div>
+<//div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+        </h1>
+        </h1>
+        </h1>
+        </div>
+        </h1>
+            </h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
+              NeonButton
+  );
+            </h1>
+
+            <//h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+        </p>
+        </p>
+        </p>
+        </div>
+        </p>
+            </p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+        </div>
+              Advanced NeonButton solution for modern businesses.
+            </p>
+
+            <//p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+<//div>
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+        </button>
+        </button>
+        </button>
+        </div>
+        </button>
+              </button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Get Started
+  );
+                <ArrowRight className="ml-2 h-5 w-5" />
+        </ArrowRight>
+        </ArrowRight>
+        </ArrowRight>
+                </ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+
+              <//button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+        </button>
+        </button>
+        </button>
+        </div>
+        </button>
+              </button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More
+  );
+              </button>
+
+              <//button>
+            </div>
+
+            <//div>
+          </div>
+
+          <//div>
+        </section>
+    </>
+
+        <//section>
+        {
+  /* Features Section */
+}
+        <section className="py-20 px-4"></section>
+<//section>
+          <div className="max-w-7xl mx-auto"></div>
+<//div>
+            <div className="text-center mb-16"></div>
+<//div>
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+<//h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        </p>
+        </p>
+        </p>
+        </div>
+        </p>
+              </p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        </div>
+                Powerful AI-driven features designed to transform your business operations
+  );
+              </p>
+
+              <//p>
+            </div>
+
+            <//div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+<//div>)
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
+<//div>
+                  <feature .icon className="h-12 w-12 text-emerald-400 mb-4" />
+        </feature>
+        </feature>
+        </feature>
+                  </feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+<//h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+<//p>
+                  <ul className="space-y-2">
+        </ul>
+        </ul>
+        </ul>
+        </div>
+        </ul>
+                  </ul className="space-y-2">
+        </div>
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
+        </li>
+        </li>
+        </li>
+        </div>
+                      </li key={idx} className="flex items-center text-sm text-gray-300">
+        </div>
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+        </CheckCircle>
+        </CheckCircle>
+        </CheckCircle>
+                        </CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                        {
+  benefit
+}
+                      </li>
+
+                      <//li>
+                    ))}
+                  </ul>
+
+                  <//ul>
+                </div>
+
+                <//div>
+              ))}
+            </div>
+
+            <//div>
+          </div>
+
+          <//div>
+        </section>
+
+        <//section>
+        {
+  /* Benefits Section */
+}
+        <section className="py-20 px-4 bg-white/5"></section>
+<//section>
+          <div className="max-w-7xl mx-auto"></div>
+<//div>
+            <div className="text-center mb-16"></div>
+<//div>
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+<//h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        </p>
+        </p>
+        </p>
+        </div>
+        </p>
+              </p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        </div>
+                Experience the benefits of cutting-edge AI technology
+  );
+              </p>
+
+              <//p>
+            </div>
+
+            <//div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+<//div>
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-4"></div>
+<//div>
+                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+        </CheckCircle>
+        </CheckCircle>
+        </CheckCircle>
+                  </CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                  <p className="text-gray-300 text-lg">{benefit}</p>
+<//p>
+                </div>
+
+                <//div>
+              ))}
+            </div>
+
+            <//div>
+          </div>
+
+          <//div>
+        </section>
+
+        <//section>
+        {
+  /* CTA Section */
+}
+        <section className="py-20 px-4"></section>
+<//section>
+          <div className="max-w-4xl mx-auto text-center"></div>
+<//div>
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+<//h2>
+            <p className="text-xl text-gray-300 mb-8">
+        </p>
+        </p>
+        </p>
+        </div>
+        </p>
+            </p className="text-xl text-gray-300 mb-8">
+        </div>
+              Join thousands of businesses already using our AI solutions
+  );
+            </p>
+
+            <//p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+<//div>
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+        </button>
+        </button>
+        </button>
+        </div>
+        </button>
+              </button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Start Free Trial
+  );
+              </button>
+
+              <//button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+        </button>
+        </button>
+        </button>
+        </div>
+        </button>
+              </button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Contact Sales
+  );
+              </button>
+
+              <//button>
+            </div>
+
+            <//div>
+          </div>
+
+          <//div>
+        </section>
+
+        <//section>
+      </div>
+      <Footer /></Footer>
+    </>
+
+    <//>
+  );
+}
+  );
+  );
+  constvariantClasses= {
+  primary: "bg-gradient-to-r from-blue-600to-purple-600text-white shado w-lghover:shado w-blue-50 0/25 hover:shado w-2 xl"
+    secondary: "bg-gradient-to-r from-purple-600to-pink-600text-white shado w-lghover:shado w-purple-50 0/25 hover:shado w-2 xl"
+    accent:
+      "bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg hover:shadow-cyan-500/25 hover:shadow-2xl"
+}
+  const neonEffect =
+    "before: absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 before:-z-10"
+  const buttonClasses = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${neonEffect} ${className}`
+  constcontent= (
+  <di v>{icon&&<spanclassName="mr-2">{icon}</spa>}
+      {
+  children
+}
+      {
+  !icon && <ArrowRight className="w-5 h-5 ml-2" />
+        </ArrowRight>
+        </ArrowRight>
+        </ArrowRight>
+}
+=======
+const NeonButton: React.FC = () => {
+return (<div>
+      <Helmet />
+
+        <title>NeonButton</title>
+        
+        <meta name="description" content="Advanced NeonButton solution for modern businesses." //>
+        <meta name="keywords" content="AI,artificial, intelligence, NeonButton, AI, solutions, intelligent automation" //>
+
+export const NeonButton: React.FC<NeonButtonProps> = ({ className = '', children }) => {
   return (
-<<<<<<< HEAD
-    <button;
-      const onClick = {onClick}
-      disabled="{disabled}"
-      className="{buttonClasses}"
-      style="{{"
-        boxShadow: '0 0 20 px rgba(59, 130, 246, 0.3), 0 0 40 px rgba(147, 51, 234, 0.2)',}}
-        />{content}
-    </button>
-  );
-};
-
-export default NeonButton;
-<<<<<<< HEAD
-
-=======
-    <div className="neonbutton">
-      <h2>NeonButton</h2>
-      <p>Component content coming soon.</p>
+    <div className="{`neonbutton" ${className}`}>
+      {children}
+>>>>>>> d05312d5d680673ba2e628470e93a08bc6917172
     </div>
-  );
-};
+      <Navigation//> <div className="[^"]*">
+        {/* Hero Section*/} <section className="relative py-20 px-4 overflow-hidden" /> <div className="[^"]*"> <div className="[^"]*"> <h1 className="[^"]*">
+NeonButton</h1>
+            </h1> <p className="[^"]*">
+Advanced NeonButton solution for modern businesses.</p>
+            </p>,<div className="[^"]*"> <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" />
+Get Started</button>
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover: "bg-emerald-400 hove","
+r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
+Learn More</button>
 
-export default NeonButton;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
+  if (href) {}
+    return ("
+      <a href="{href} className="{buttonClasses}></a>
+        {content}</a>
+      </a>
+
+      <//a>)
+    )
+  }
+  );
+  return ("
+    <button onClick="{onClick} disabled="{disabled} className="{buttonClasses}></button>
+      {content}</button>
+    </button>
+
+    <//button>)
+  )
+}
+  );
+  );
+}
+export default NeonButto;n;"

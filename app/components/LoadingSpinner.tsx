@@ -1,177 +1,82 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-interface LoadingspinnerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-export default function Loadingspinner({ className = '', children, ...props }: LoadingspinnerProps) {
-  return (
-    <div className={`loadingspinner-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
-}
-=======
-'use client'
-import React from 'react'
-=======
-'use client';
-import React from "react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
+import Footer from '../components/Footer';
+import Head from "next/head";
+import Link from "next/link";
+import Navigation from '../components/Navigation';
+import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
-=======
-import React  from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg'
-  className?: string
-}
-
-<<<<<<< HEAD
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
-  size = 'md', 
-  className = '' 
-}) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-<<<<<<< HEAD
-<<<<<<< HEAD
-    lg: 'w-12 h-12'
-  }
+const Page: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time monitoring', 'Custom dashboards', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target the right audience with AI-driven precision and accuracy.',
+      benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
+    }
+  ];
 
   return (
-    <div className={`flex items-center justify-center ${className}`}>
-      <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-cyan-500 ${sizeClasses[size]}`}></div>
-=======
-    lg: 'w-12 h-12',
-  };
+    <>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              LoadingSpinner
+            </h1>
+            <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
+              Advanced LoadingSpinner solutions powered by artificial intelligence and machine learning.
+            </p>
+          </div>
 
-  const colorClasses = {
-    primary: 'text-indigo-600',
-    secondary: 'text-gray-600',
-    white: 'text-white',
-  };
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-slate-800 p-6 rounded-lg">
+                <feature.icon className="w-12 h-12 text-emerald-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
 
-  return (
-    <div className="flex flex-col items-center justify-center space-y-2">
-      <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]}`}></div></div>
-      {text && (
-        <p className={`text-sm ${colorClasses[color]} animate-pulse`}>
-          {text}
-        </p>
-=======
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md',
-  text,
-  className = ''
-}) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-6 h-6',
-    lg: 'w-8 h-8',
-const,
-  LoadingSpinner: React.FC<LoadingSpinnerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-  };
-
-  return (<div className={`flex flex-col items-center justify-center gap-3 ${className}`}></div>`
-      <Loader2 className={`${sizeClasses[size]} text-cyan-400 animate-spin`} /></Loader2>
-      {/* TODO: Fix JSX expression */}
-        <p className="text-gray-300 text-sm animate-pulse">{text}</p>)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-      )}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-    </div>
-  )
-}
-
-export default LoadingSpinner
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
-=======
-import {Helmet} from 'react-helmet-async';
-import {Link} from 'react-router-dom';
-import {ArrowRight} from 'lucide-react';
-
-interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg';
-  color?: 'primary' | 'secondary' | 'white';
-  text?: string;}
-
-const LoadingSpinner: React.FC<LoadingSpinnerProps   /> = ({const size = 'md',
-  color = 'primary',
-  text;}) => {const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'};
-  const colorClasses = {primary: 'text-cyan-500',
-    secondary: 'text-purple-500',
-    white: 'text-white'};
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <div className="{`${sizeClasses[size]}" ${colorClasses[color]} animate-spin`}   /></div>
-        <svg;
-=======
-    lg: 'w-12 h-12'
-  };
-  const colorClasses = {
-    primary: 'text-cyan-500',
-    secondary: 'text-purple-500',
-    white: 'text-white'
-  };
-  return (
-    <div className="flex flex-col items-centerjustify-centerspace-y-4">
-      <div className="{`${sizeClasses[size]}" ${colorClasses[color]} animate-spin`} />
-        <svg
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-          className="w-fullh-full"
-          xmlns="http:// www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"   /></svg>
-          <circle;
-            className="opacity-25"
-            cx="12"
-            cy="12"
-            r="10"
-            stroke="currentColor"
-            strokeWidth="4"
-             /></circle>
-          <path;
-            className="opacity-75"
-            fill="currentColor"
-            d="M4 12 a8 8 0 018-8 V0 C5.373 0 0 5.373 0 12 h4 zm2 5.291 A7.962 7.962 0 014 12 H0 c0 3.042 1.135 5.824 3 7.938 l3-2.647 z"
-<<<<<<< HEAD
-             /></path>
-=======
-          / />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-        </svg>
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Transform your business with our cutting-edge AI solutions. Contact us today to learn more.
+            </p>
+            <a
+              href="/contact"
+              className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-3 rounded-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-300"
+            >
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </a>
+          </div>
+        </div>
       </div>
-      {text && (
-        <p className="text-gray-400text-smanimate-pulse">{text}</p>
-  )}
-=======
-
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = () => {
-  return (
-    <div className="loadingspinner">
-      <h2>LoadingSpinner</h2>
-      <p>Component content coming soon.</p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-    </div>
+      <Footer />
+    </>
   );
 };
 
-<<<<<<< HEAD
-export default LoadingSpinner;
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
-export default LoadingSpinner;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
+export default Page;

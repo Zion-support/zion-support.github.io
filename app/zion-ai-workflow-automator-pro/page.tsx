@@ -1,175 +1,82 @@
-'use client';
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
 import Footer from '../components/Footer';
-=======
-=======
-import React from "react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Workflow, 
-  Bot, 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Clock, 
-  BarChart3, 
-  Shield,
-  Sparkles,
-  Target,
-  Cpu,
-  Globe
-} from 'lucide-react';
+import Head from "next/head";
+import Link from "next/link";
+import Navigation from '../components/Navigation';
+import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
-const ZionAIWorkflowAutomatorProPage: React.FC = () => {
+const Page: React.FC = () => {
   const features = [
     {
-      title: "Intelligent Process Automation",
-      description: "AI-powered workflow automation that learns from your business processes and optimizes them automatically.",
-      icon: <Bot className="w-6 h-6" />,
-      benefits: ["Reduce manual work by 80%", "Eliminate human errors", "24/7 automated execution"]
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
-      title: "Visual Workflow Builder",
-      description: "Drag-and-drop interface to create complex workflows without coding knowledge.",
-      icon: <Workflow className="w-6 h-6" />,
-      benefits: ["No-code automation", "Visual process mapping", "Easy customization"]
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time monitoring', 'Custom dashboards', 'Data visualization', 'Performance metrics']
     },
     {
-      title: "Smart Decision Engine",
-      description: "AI makes intelligent decisions based on data patterns and business rules.",
-      icon: <Cpu className="w-6 h-6" />,
-      benefits: ["Context-aware decisions", "Pattern recognition", "Adaptive learning"]
-    },
-    {
-      title: "Real-time Monitoring",
-      description: "Monitor all workflows in real-time with detailed analytics and performance metrics.",
-      icon: <BarChart3 className="w-6 h-6" />,
-      benefits: ["Live workflow status", "Performance analytics", "Instant alerts"]
-    },
-    {
-      title: "Multi-platform Integration",
-      description: "Connect with 500+ applications and services through our extensive integration library.",
-      icon: <Globe className="w-6 h-6" />,
-      benefits: ["500+ integrations", "API connectivity", "Custom connectors"]
-    },
-    {
-      title: "Enterprise Security",
-      description: "Bank-level security with encryption, audit trails, and compliance features.",
-      icon: <Shield className="w-6 h-6" />,
-      benefits: ["End-to-end encryption", "Audit logs", "SOC 2 compliance"]
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target the right audience with AI-driven precision and accuracy.',
+      benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
     }
   ];
 
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$99",
-      period: "/month",
-      description: "Perfect for small teams getting started with automation",
-      features: [
-        "Up to 10 workflows",
-        "Basic integrations",
-        "Email support",
-        "Standard templates",
-        "Basic analytics"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$299",
-      period: "/month",
-      description: "Ideal for growing businesses with complex automation needs",
-      features: [
-        "Up to 50 workflows",
-        "Advanced integrations",
-        "Priority support",
-        "Custom templates",
-        "Advanced analytics",
-        "Team collaboration",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$799",
-      period: "/month",
-      description: "For large organizations with enterprise-scale automation requirements",
-      features: [
-        "Unlimited workflows",
-        "All integrations",
-        "24/7 dedicated support",
-        "Custom development",
-        "Enterprise analytics",
-        "Advanced security",
-        "White-label options",
-        "On-premise deployment"
-      ],
-      popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Chen",
-      company: "TechFlow Solutions",
-      role: "Operations Director",
-      content: "Zion AI Workflow Automator Pro reduced our manual processes by 85%. The ROI was evident within the first month.",
-      rating: 5,
-      avatar: "SC",
-    },
-    {
-      name: "Michael Rodriguez",
-      company: "DataCorp Inc.",
-      role: "CTO",
-      content: "The visual workflow builder is incredibly intuitive. We automated our entire customer onboarding process in just 2 days.",
-      rating: 5,
-      avatar: "MR",
-    },
-    {
-      name: "Emily Watson",
-      company: "GrowthTech",
-      role: "VP of Operations",
-      content: "The AI decision engine has been a game-changer. It handles complex business logic better than our previous solutions.",
-      rating: 5,
-      avatar: "EW",
-    }
-  ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
-
-export default function ZionaiworkflowautomatorproPage() {
   return (
-    <div>
-      <Head>
-        <title>Zion Ai Workflow Automator Pro - Zion Tech Group</title>
-        <meta name="description" content="Professional services by Zion Tech Group." />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            Zion Ai Workflow Automator Pro
-          </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            zion-ai-workflow-automator-pro services Transform your business with our expert solutions. services coming soon.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+    <>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Zion Ai Workflow Automator Pro
+            </h1>
+            <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
+              Advanced zion ai workflow automator pro solutions powered by artificial intelligence and machine learning.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-slate-800 p-6 rounded-lg">
+                <feature.icon className="w-12 h-12 text-emerald-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Transform your business with our cutting-edge AI solutions. Contact us today to learn more.
+            </p>
+            <a
+              href="/contact"
+              className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-3 rounded-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-300"
+            >
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </a>
+          </div>
         </div>
       </div>
       <Footer />
-    </div>
+    </>
   );
-}
+};
+
+export default Page;

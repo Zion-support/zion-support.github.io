@@ -1,150 +1,82 @@
-<<<<<<< HEAD
-import React from "react";
-import { ArrowRight, CheckCircle, Mic, Video, Calendar } from 'lucide-react';
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import SEOOptimizer from "../components/SEOOptimizer";
-import { Search } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Calendar } from 'lucide-react';
-import { Mic } from 'lucide-react';
-export default function ZionAIMeetingTranscriber() {
+import React from 'react';
+import Footer from '../components/Footer';
+import Head from "next/head";
+import Link from "next/link";
+import Navigation from '../components/Navigation';
+import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
+const Page: React.FC = () => {
   const features = [
-    "Real-time meeting transcription with 99.5% accuracy",
-    "Multi-language support (100+ languages)",
-    "Speaker identification and diarization",
-    "Automatic action item extraction",
-    "Meeting summary generation",
-    "Integration with Zoom, Teams, Google Meet",
-    "Custom vocabulary and industry terms",
-    "Timestamp and chapter markers",
-    "Searchable transcript database",
-    "Export to multiple formats (PDF, Word, SRT)",
-    "AI-powered insights and analytics",
-    "Secure cloud storage and backup"
-  ];
-
-  const benefits = [
-    "Save 2+ hours per meeting on note-taking",
-    "Never miss important details again",
-    "Improve meeting productivity by 60%",
-    "Create searchable knowledge base",
-    "Generate actionable follow-ups automatically",
-    "Ensure compliance with meeting records"
-  ];
-
-  const pricing = [
     {
-      name: "Starter",
-      price: "$19",
-      period: "month",
-      description: "Perfect for small teams",
-      features: ["Up to 10 hours/month", "Basic transcription", "Email support", "1 user", "Standard accuracy"],
-      popular: false
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
-      name: "Professional",
-      price: "$49",
-      period: "month",
-      description: "Ideal for growing businesses",
-      features: ["Up to 50 hours/month", "Advanced AI features", "Priority support", "5 users", "Speaker identification", "Action items"],
-      popular: true
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time monitoring', 'Custom dashboards', 'Data visualization', 'Performance metrics']
     },
     {
-      name: "Enterprise",
-      price: "$99",
-      period: "month",
-      description: "For large organizations",
-      features: ["Unlimited hours", "Custom integrations", "Dedicated support", "Unlimited users", "Advanced analytics", "White-labeling"],
-      popular: false
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target the right audience with AI-driven precision and accuracy.',
+      benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
+    }
   ];
-
-  const testimonials = [
-    {
-      name: "Sarah Chen",
-      company: "TechStart Inc.",
-      role: "CEO",
-      content: "Zion AI Meeting Transcriber has revolutionized our team meetings. We never miss important details and our productivity has increased dramatically.",
-      rating: 5
-    },
-    {
-      name: "Michael Rodriguez",
-      company: "Consulting Firm",
-      role: "Partner",
-      content: "The speaker identification feature is incredible. It's like having a professional secretary in every meeting.",
-      rating: 5
-    },
-    {
-      name: "Emily Johnson",
-      company: "Marketing Agency",
-      role: "Director",
-      content: "The automatic action item extraction saves us hours of follow-up work. Highly recommended!",
-      rating: 5
-  ];
-
-  return null;
-};
-
-export default function ZionAiMeetingTranscriberPage() {
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Zion Ai Meeting Transcriber - Zion Tech Group</title>
-        <meta name="description" content="Zion Ai Meeting Transcriber solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Zion Ai Meeting Transcriber</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive zion ai meeting transcriber solutions designed to meet your business needs.
-          </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
+    <>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Zion Ai Meeting Transcriber
+            </h1>
+            <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
+              Advanced zion ai meeting transcriber solutions powered by artificial intelligence and machine learning.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-slate-800 p-6 rounded-lg">
+                <feature.icon className="w-12 h-12 text-emerald-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Transform your business with our cutting-edge AI solutions. Contact us today to learn more.
+            </p>
+            <a
+              href="/contact"
+              className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-3 rounded-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-300"
+            >
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </a>
           </div>
         </div>
       </div>
-=======
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-      </div>
       <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
-    </div>
+    </>
   );
-}
+};
+
+export default Page;

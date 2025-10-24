@@ -1,503 +1,82 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-import { Helmet } from 'react-helmet-async';
-=======
-import { Helmet } from 'react-helmet-async'
-import { Clock, Timer, TrendingUp, BarChart3, Zap, CheckCircle, ArrowRight, Star, Target, Brain, Shield } from 'lucide-react'
-import { Link } from 'react-router-dom'
-import React  from 'react';
-import { ArrowRight, Bot, RotateCcw, RotateCw, Receipt } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import Footer from '../components/Footer';
+import Head from "next/head";
+import Link from "next/link";
+import Navigation from '../components/Navigation';
+import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function AiTimeTrackerZionTechGroup() {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-900 text-white">
-=======
-    <React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
-const AITimeTrackerPage: React.FC = () => {
+const Page: React.FC = () => {
   const features = [
     {
-      icon: <Brain className="w-8h-8text-cyan-400" />,
-      title: 'AI Activity Recognition',
-      description: 'Automatically detect and categorize work activities using AI to eliminate manual time entry.',
-      benefits: ['Auto-detection', 'Smart categorization', 'Context awareness', 'Learning algorithms']
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
-      icon: <Timer className="w-8h-8text-emerald-400" />,
-      title: 'Smart Time Tracking',
-      description: 'AI-powered time tracking that learns your work patterns and suggests optimal time allocation.',
-      benefits: ['Pattern learning', 'Optimal suggestions', 'Focus time detection', 'Break reminders']
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time monitoring', 'Custom dashboards', 'Data visualization', 'Performance metrics']
     },
     {
-      icon: <TrendingUp className="w-8h-8text-purple-400" />,
-      title: 'Productivity Analytics',
-      description: 'Comprehensive analytics with AI insights to improve productivity and work-life balance.',
-      benefits: ['Productivity metrics', 'Efficiency analysis', 'Distraction tracking', 'Goal setting']
-    },
-    {
-      icon: <Zap className="w-8h-8text-red-400" />,
-      title: 'Automated Reporting',
-      description: 'Generate detailed time reports automatically with AI-powered insights and recommendations.',
-      benefits: ['Auto reports', 'Client billing', 'Project insights', 'Team analytics']
-    },
-    {
-      icon: <BarChart3 className="w-8h-8text-orange-400" />,
-      title: 'Project Management',
-      description: 'AI-driven project time estimation and resource allocation for better project planning.',
-      benefits: ['Time estimation', 'Resource planning', 'Deadline tracking', 'Budget monitoring']
-    },
-    {
-      icon: <Shield className="w-8h-8text-pink-400" />,
-      title: 'Privacy Protection',
-      description: 'Advanced privacy controls with local processing to protect sensitive work data.',
-      benefits: ['Local processing', 'Data encryption', 'Privacy controls', 'GDPR compliance']
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target the right audience with AI-driven precision and accuracy.',
+      benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
     }
-  ]
-
-  const pricingPlans = [
-    {
-      name: 'Individual',
-      price: '$19',
-      period: '/month',
-      description: 'Perfect for freelancers and individual professionals',
-      features: [
-        'Unlimited time tracking',
-        'Basic AI features',
-        'Mobile app access',
-        'Standard reports',
-        'Email support'
-      ],
-      popular: false
-    },
-    {
-      name: 'Team',
-      price: '$49',
-      period: '/month',
-      description: 'Ideal for small teams and growing businesses',
-      features: [
-        'Up to 10 team members',
-        'Advanced AI features',
-        'Team collaboration',
-        'Project management',
-        'Priority support',
-        'API access'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$149',
-      period: '/month',
-      description: 'For large organizations with complex needs',
-      features: [
-        'Unlimited team members',
-        'Full AI suite',
-        'Custom integrations',
-        'Dedicated support',
-        'Advanced analytics',
-        'White-label options'
-      ],
-      popular: false
-    }
-  ]
-
-  const testimonials = [
-    {
-      name: 'Alex Johnson',
-      company: 'Freelance Designer',
-      content: 'AI Time Tracker increased my productivity by 40%. The auto-detection feature is a game-changer.',
-      rating: 5,
-      avatar: 'AJ'
-    },
-    {
-      name: 'Maria Rodriguez',
-      company: 'Project Manager',
-      content: 'The project time estimation feature helped us deliver projects 20% faster with better accuracy.',
-      rating: 5,
-      avatar: 'MR'
-    },
-    {
-      name: 'David Kim',
-      company: 'Software Developer',
-      content: 'Finally, a time tracker that actually understands my work patterns. Highly recommended!',
-      rating: 5,
-      avatar: 'DK'
-    }
-  ]
-
-  const stats = [
-    { number: '40%', label: 'Productivity Increase', icon: <TrendingUp className="w-6h-6text-cyan-400" /> },
-    { number: '20%', label: 'Faster Delivery', icon: <Timer className="w-6h-6text-emerald-400" /> },
-    { number: '95%', label: 'Accuracy Rate', icon: <Target className="w-6h-6text-purple-400" /> },
-    { number: '50 K+', label: 'Hours Tracked', icon: <Clock className="w-6h-6text-orange-400" /> }
-  ]
+  ];
 
   return (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-      <Helmet>
-        <title>Ai Time Tracker - Zion Tech Group</title>
-        <meta name="description" content="Ai Time Tracker solutions by Zion Tech Group" />
-      </Helmet>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Ai Time Tracker</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive ai time tracker solutions designed to meet your business needs.
-          </p>
-<<<<<<< HEAD
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-=======
-
+    <>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Ai Time Tracker
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced AI-powered ai time tracker solution for modern businesses.
-=======
-        <title>AI Time Tracker - Smart Productivity Management | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered time tracking with activity recognition, productivity analytics, and automated reporting. Increase productivity by 40% and deliver projects 20% faster." / / />
-        <meta name="keywords" content="AI time tracking, productivity management, activity recognition, time analytics, project management, work optimization" / / />
-        <meta name="robots" content="index, follow" / / />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-time-tracker" />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden bg-gradient-to-br from-slate-900via-indigo-900to-slate-900" />
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(99,102,241,0.3)_0%,transparent_50%)]" />
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(6,182,212,0.3)_0%,transparent_50%)]" />
-        <div className="relative max-w-7xlmx-autotext-center">
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-indigo-500/20 to-cyan-500/20 text-indigo-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-indigo-400/30">
-            <Clock className="w-4 h-4" />
-            <span   />AI-Powered Time Management</span>
+            <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
+              Advanced ai time tracker solutions powered by artificial intelligence and machine learning.
+            </p>
           </div>
 
-          <h1 className="text-4xl sm:text-6 xl md:text-7 xl font-bold text-white mb-8leading-tight" />
-            AI Time
-            <br / />
-            <span className="bg-gradient-to-r from-indigo-400 via-cyan-400 to-blue-400bg-clip-texttext-transparent">Tracker Pro
-            </span>
-          </h1>
-
-          <p className="text-lg sm:text-xl md:text-2 xl text-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">
-              Transform your productivity with AI-powered time tracking, 
-            activity recognition, and intelligent insights that increase efficiency by 40%.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
-            <Link to="/contact" className="group bg-gradient-to-r from-indigo-500 to-cyan-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-indigo-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40transformhover:scale-105" >
-           
-          <span    />
-        </Link>Start Free Trial</span>
-              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-            </Link>
-            <Link to="#demo" className="group border-2 border-indigo-400 text-indigo-400 px-10 py-4 rounded-xl font-semibold hover:bg-indigo-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
-           
-          <span    />
-        </Link>Watch Demo</span>
-              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-            </Link>
-          </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-20px-4bg-gray-900" />
-        <div className="max-w-7xlmx-auto">
-          <div className="grid grid-cols-2md:grid-cols-4gap-8">
-            {stats.map((stat, index) => (
-              <div key="{index}" className="text-center bg-white/5 backdrop-blur-sm rounded-2xll p-6borderborder-white/10" />
-                <div className="flexjustify-centermb-4"  />{stat.icon}
-                </div>
-                <div className="text-3 xl md:text-4xl font-bold text-white mb-2"  />{stat.number}
-                </div>
-                <div className="text-gray-300text-sm"  />{stat.label}
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-slate-800 p-6 rounded-lg">
+                <feature.icon className="w-12 h-12 text-emerald-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
           </div>
-      </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 bg-gradient-to-brfrom-slate-800/50to-indigo-900/50" />
-        <div className="max-w-7xlmx-auto">
-          <div className="text-centermb-16">
-            <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
-              Intelligent <span className="bg-gradient-to-r from-indigo-400 to-cyan-400bg-clip-texttext-transparent"   />Features</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xlmx-auto">
-              Our AI-powered time tracking platform uses machine learning to automatically 
-              track activities, analyze productivity patterns, and provide actionable insights.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Transform your business with our cutting-edge AI solutions. Contact us today to learn more.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Demo
-              </button>
-            </div></div></div></div></div>
+            <a
+              href="/contact"
+              className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-3 rounded-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-300"
+            >
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </a>
           </div>
-<<<<<<< HEAD
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results
-              </p>
-            </div></div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div></div></div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our Solution?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency
-              </p>
-            </div></div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div></div></div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div></div></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-            </div>
-          </div>
-        </div>
-      </div>
-=======
-          <Link
-            href="/contact"
-            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
         </div>
       </div>
       <Footer />
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
-    </div>
-=======
-    </React.Fragment>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
+    </>
   );
-=======
+};
 
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
-        </div>
-            {features.map((feature, index) => (
-              <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2xll p-8 border border-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-indigo-500 to-cyan-600 rounded-2xll mb-6 group-hover:scale-110transition-transformduration-300">{feature.icon}
-                </div>
-                <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-indigo-400transition-colors">{feature.title}
-                </h3>
-
-            ))}
-          </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20px-4bg-gray-900" />
-        <div className="max-w-7xlmx-auto">
-
-            {pricingPlans.map((plan, index) => (
-              <div key="{index}" className="{`relative" bg-white/10 backdrop-blur-lg rounded-2xll p-8 border transition-all duration-300 hover:scale-105 ${
-                plan.popular 
-                  ? 'border-indigo-400/50 shadow-2xll shadow-indigo-500/20' 
-                  : 'border-white/20 hover: border-white/40'
-              }`} />
-                {plan.popular && (
-
-            {testimonials.map((testimonial, index) => (
-              <div key="{index}" className="bg-white/10 backdrop-blur-lg rounded-2xll p-8borderborder-white/20" />
-                <div className="flex items-centermb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-cyan-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4"  />{testimonial.avatar}
-                  </div>
-                  <div>
-            <h4 className="text-whitefont-semibold"   />{testimonial.name}</h4>
-                    <p className="text-gray-400text-sm">
-              {testimonial.company}</p>
-                  </div>
-                <div className="flex items-centermb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key="{i}" className="w-5 h-5text-yellow-400fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-300italic">
-              "{testimonial.content}"</p>
-              </div>
-
-            ))}
-          </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-indigo-600via-cyan-600to-blue-600" />
-        <div className="max-w-7xlmx-autotext-center">
-          <h2 className="text-4xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6" />
-            Ready to Boost Your
-            <br / />
-            <span className="bg-gradient-to-r from-indigo-300 to-cyan-300bg-clip-texttext-transparent">Productivity?
-            </span>
-          </h2>
-          <p className="text-xl sm:text-2 xl text-white/90 mb-8 max-w-4xlmx-auto">
-              Join thousands of professionals already increasing productivity and improving work-life balance with AI Time Tracker. 
-            Start your free trial today - no credit card required.
-          </p>
-          <div className="flex flex-col sm:flex-rowgap-6justify-center">
-            <Link to="/contact" className="group bg-white text-indigo-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" >
-           
-          <span    />
-        </Link>Start Free Trial</span>
-              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-            </Link>
-            <Link to="/pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
-           
-          <span    />
-        </Link>View All Plans</span>
-              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
-            </Link>
-          </div>
-      </section>
-
-  )
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
-}
-=======
-
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
-=======
-export default function AitimetrackerPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Ai Time Tracker - Zion Tech Group</title>
-        <meta name="description" content="Professional ai time tracker services by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Ai Time Tracker</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional ai time tracker services coming soon.</p>
-          
-          <Link
-            to="/contact"
-            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-          >
-            Contact Us
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-=======
-export default AITimeTrackerPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
+export default Page;
