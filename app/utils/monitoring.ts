@@ -110,7 +110,6 @@ class MonitoringService {
           }
         })
         fcpObserver.observe({ entryTypes: ['paint'] })
-<<<<<<< HEAD
 
         // Time to First Byte
         const ttfbObserver = new PerformanceObserver((list) => {
@@ -122,9 +121,6 @@ class MonitoringService {
           }
         })
         ttfbObserver.observe({ entryTypes: ['navigation'] })
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6f50
       } catch (error) {
         console.warn('Web Vitals monitoring failed:', error)
       }
@@ -136,14 +132,9 @@ class MonitoringService {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-<<<<<<< HEAD
             if (entry.duration > 50) {
               this.reportMetric('long_task', entry.duration)
             }
-=======
-            // eslint-disable-next-line no-console
-            console.log('Long task detected:', entry.duration)
->>>>>>> cursor/fix-errors-and-merge-to-main-6f50
           }
         })
         longTaskObserver.observe({ entryTypes: ['longtask'] })
@@ -190,15 +181,10 @@ class MonitoringService {
 
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
-<<<<<<< HEAD
       this.reportError({
         message: event.reason?.message || 'Unhandled promise rejection',
         stack: event.reason?.stack,
         component: 'promise',
-=======
-      this.logError({
-        message: `Unhandled Promise Rejection: ${event.reason}`,
->>>>>>> cursor/fix-errors-and-merge-to-main-6f50
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
         url: window.location.href
@@ -206,23 +192,14 @@ class MonitoringService {
     })
   }
 
-<<<<<<< HEAD
   private reportMetric(name: string, value: number | object): void {
-    if (process.env.NODE_ENV === 'development') {
-      console.log(`[Performance] ${name}:`, value)
-=======
-  private reportMetric(name: string, value: number): void {
     // Sample rate
     if (Math.random() > performanceConfig.monitoring.sampleRate) {
       return
     }
 
-    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
-    if (thresholds) {
-      const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
-      // eslint-disable-next-line no-console
-      console.log(`Web Vital ${name}:`, value, `(${rating})`)
->>>>>>> cursor/fix-errors-and-merge-to-main-6f50
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`[Performance] ${name}:`, value)
     }
 
     // Send to analytics
@@ -261,27 +238,7 @@ class MonitoringService {
   public clearErrors(): void {
     this.errors = []
   }
-}
 
-<<<<<<< HEAD
-// Export singleton instance
-export const monitoringService = new MonitoringService()
-
-// Export utility functions
-export const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
-  if (typeof gtag !== 'undefined') {
-    gtag('event', eventName, parameters)
-  }
-}
-
-export const trackPageView = (pagePath: string) => {
-  if (typeof gtag !== 'undefined') {
-    gtag('config', process.env.NEXT_PUBLIC_GA_ID || '', {
-      page_path: pagePath
-    })
-  }
-}
-=======
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
@@ -315,7 +272,24 @@ export const trackPageView = (pagePath: string) => {
   }
 }
 
+// Export singleton instance
+export const monitoringService = new MonitoringService()
+
+// Export utility functions
+export const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
+  if (typeof gtag !== 'undefined') {
+    gtag('event', eventName, parameters)
+  }
+}
+
+export const trackPageView = (pagePath: string) => {
+  if (typeof gtag !== 'undefined') {
+    gtag('config', process.env.NEXT_PUBLIC_GA_ID || '', {
+      page_path: pagePath
+    })
+  }
+}
+
 // Singleton instance
 const monitoring = new MonitoringService()
 export default monitoring;
->>>>>>> cursor/fix-errors-and-merge-to-main-6f50
