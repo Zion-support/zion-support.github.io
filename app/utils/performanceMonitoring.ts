@@ -13,8 +13,10 @@ export const performanceMonitoring = {
       value,
       timestamp: Date.now()
     };
-    // eslint-disable-next-line no-console
-    console.log('Performance data recorded:', data);
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.log('Performance data recorded:', data);
+    }
   },
   
   getData: (): PerformanceData[] => {
@@ -22,8 +24,10 @@ export const performanceMonitoring = {
   },
   
   clear: () => {
-    // eslint-disable-next-line no-console
-    console.log('Performance data cleared');
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.log('Performance data cleared');
+    }
   }
 };
 

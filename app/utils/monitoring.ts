@@ -127,8 +127,10 @@ class MonitoringService {
       
       this.observer.observe({ entryTypes: ['longtask'] });
     } catch (error) {
-      // eslint-disable-next-line no-console
-      console.warn('Long task monitoring not supported:', error);
+      if (process.env.NODE_ENV === 'development') {
+        // eslint-disable-next-line no-console
+        console.warn('Long task monitoring not supported:', error);
+      }
     }
   }
 

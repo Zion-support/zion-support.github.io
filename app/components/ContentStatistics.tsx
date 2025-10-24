@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Award, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -16,16 +16,16 @@ const Page: React.FC = () => {
     uptime: 0
   });
 
-  useEffect(() => {
-    const targetCounters = {
-      clients: 1000,
-      projects: 500,
-      satisfaction: 99,
-      years: 10,
-      countries: 25,
-      uptime: 99.9
-    };
+  const targetCounters = useMemo(() => ({
+    clients: 1000,
+    projects: 500,
+    satisfaction: 99,
+    years: 10,
+    countries: 25,
+    uptime: 99.9
+  }), []);
 
+  useEffect(() => {
     const duration = 2000;
     const steps = 60;
     const stepDuration = duration / steps;
@@ -58,7 +58,7 @@ const Page: React.FC = () => {
     }, stepDuration);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [targetCounters]);
 
   const features = [
     {
