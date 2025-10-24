@@ -128,8 +128,8 @@ const TestRunner: React.FC<TestRunnerProps> = ({
     // Check for heading structure
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6')
     tests.push({
-      name: 'Proper heading structure'
-      status: headings.length > 0 ? 'passed' : 'failed'
+      name: 'Proper heading structure',
+      status: headings.length > 0 ? 'passed' : 'failed',
       duration: 0,
       error: headings.length === 0 ? 'No headings found' : undefined
     })
