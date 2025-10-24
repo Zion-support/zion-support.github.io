@@ -10,6 +10,12 @@ declare global {
   const PerformanceObserverCallback: any;
 }
 
+// Jest globals
+declare global {
+  const jest: any;
+  const PerformanceObserverCallback: any;
+}
+
 // Polyfill for TextEncoder/TextDecoder
 import { TextEncoder, TextDecoder } from 'util';
 global.TextEncoder = TextEncoder as any;

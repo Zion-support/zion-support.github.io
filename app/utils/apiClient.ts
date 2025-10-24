@@ -2,7 +2,7 @@
 import logger from './logger';
 
 // Extend RequestInit to include our custom options
-interface ExtendedRequestInit extends RequestInit {
+interface ExtendedRequestInit extends globalThis.RequestInit {
   timeout?: number;
   retries?: number;
 }
