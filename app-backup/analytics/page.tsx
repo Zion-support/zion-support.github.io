@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 import React from 'react'
+<<<<<<< HEAD
 import Link from 'next/link'
 import { ArrowRight, BarChart, TrendingUp, CheckCircle, Brain, Settings, Target, Users, Calendar, Zap, Send, BarChart3, Shield, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from from 'lucide-react''use client'
     "title": 'Advanced Analytics'";'
@@ -8,11 +11,26 @@ import { ArrowRight, BarChart, TrendingUp, CheckCircle, Brain, Settings, Target,
     "title": 'AI-Powered Insights'";'
       "description": 'Machine learning algorithms that identify patterns and predict future trends.'";'
     "title": 'Custom Dashboards'";'
+=======
+;import Link from 'next/link";"'
+import { ArrowRight, BarChart, TrendingUp, CheckCircle, Brain, Settings, Target, Users, Calendar, Zap, Send, BarChart3, Shield, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react";"'
+use client';'"
+    "title": 'Advanced Analytics'"
+      "description": 'Comprehensive data analysis and visualization tools for deep business insights.'"
+    "title": 'Performance Tracking'"
+      "description": 'Real-time performance monitoring and trend analysis across all business metrics.'"
+    "title": 'AI-Powered Insights'"
+      "description": 'Machine learning algorithms that identify patterns and predict future trends.'"
+    "title": 'Custom Dashboards'"
+>>>>>>> origin/main
+>>>>>>> origin/main
     "description": 'Personalized dashboards tailored to your specific business needs and KPIs.'
   'Make data-driven decisions with confidence'
     'Identify growth opportunities and trends'
     'Optimize business performance in real-time'
+<<<<<<< HEAD
     'Reduce manual reporting by 80%'
+<<<<<<< HEAD
     'Predict future outcomes with AI';'
     'Custom analytics for your industry'";'
 import React from "react";
@@ -32,3 +50,10 @@ import { ArrowRight, BarChart, TrendingUp, CheckCircle, Brain, Settings, Target,
     "Reduce manual reporting by 80%
     "Predict future outcomes with AI
     "Custom analytics for your industry
+=======
+=======
+    'Reduce manual reporting by 80%'
+    'Predict future outcomes with AI'
+    'Custom analytics for your industry'"
+>>>>>>> origin/main
+>>>>>>> origin/main

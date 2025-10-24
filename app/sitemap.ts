@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { MetadataRoute } from 'next'
 // Import services data safely
@@ -5,9 +6,8 @@ let servicesData: any = null
 try {
   servicesData = require('./data/servicesData').servicesData
 } catch (error) {
-  console.warn('Could not load services data for sitemap:', error)
+  console.warn('Could not load services data for sitemap:', error    )
 }
-
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://zion.app'
   // Static pages
@@ -34,7 +34,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   if (!servicesData) {
     return staticSitemap
   }
-
   // Generate sitemap entries for AI services
   const aiServicesSitemap: MetadataRoute.Sitemap = (servicesData.aiServices || []).map((service: any) => ({
     url: `${baseUrl}/ai-${service.slug}`,
@@ -63,11 +62,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly' as const,
     priority: 0.6,
   }))
+=======
+import { MetadataRoute } from 'next';
+export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = 'https://ziontechgroup.com';
+  
+>>>>>>> origin/main
   return [
-    ...staticSitemap,
-    ...aiServicesSitemap,
-    ...itServicesSitemap,
-    ...g5ServicesSitemap,
-    ...aiServicesSubSitemap,
-  ]
+    {
+      url: baseUrl,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 1,
+    },
+    {
+      url: `${baseUrl}/about`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+  ];
 }

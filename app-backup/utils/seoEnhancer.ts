@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
 'use client''
     { "name": 'title'',";'
     { "name": 'description'',";'
@@ -36,3 +39,10 @@
       "@type": "PostalAddress
       "@type": "ContactPoint
   "changeFrequency": "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never"'
+=======
+'use client';'
+      '@type': "ContactPoint;"
+  "changeFrequency": 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | "never;"
+}}}}}}}}}}}}}}}}'"
+>>>>>>> origin/main
+>>>>>>> origin/main

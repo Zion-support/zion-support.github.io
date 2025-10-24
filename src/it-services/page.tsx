@@ -1,6 +1,9 @@
-import React from "react";
+<<<<<<< HEAD
+=======
+import React from 'react";'
 interface pageProps {
 className?: string
+<<<<<<< HEAD
 }
 }
 }
@@ -35,4 +38,22 @@ return(</>;
 export default page}";'
   )
 export default page
+=======
+  );
+>>>>>>> origin/main
 }
+;}"
+;}"
+""
+const page: "React.FC<pageProps /> = ({ className = '' ",;}) => {
+return(</pageProps>,}
+    <div className="{className,;}" />
+      <h2>"page"</h2>
+      <p>"This component is under construction."</p>
+      </div>
+  );
+}
+;}"
+export default page;"
+};"'"
+>>>>>>> origin/main

@@ -1,5 +1,8 @@
-import React from "react";
+<<<<<<< HEAD
+=======
+import React from 'react";'
 interface MicroSAASCardProps {
+<<<<<<< HEAD
 className?: string
 }
 }
@@ -46,3 +49,21 @@ export default MicroSAASCard}";'
 };
 
 export default MicroSAASCard;
+=======
+className?: string}
+;}
+;}"
+;}"
+""
+const MicroSAASCard: "React.FC<MicroSAASCardProps> = ({ className = '' ",;}) => {
+return(</MicroSAASCardProps>,}
+    <div className="{className,;}" />
+      <h2>"MicroSAASCard"</h2>
+      <p>"This component is under construction."</p>
+      </div>)
+  );
+};"
+export default MicroSAASCard;"
+}"'"
+>>>>>>> origin/main
+>>>>>>> origin/main

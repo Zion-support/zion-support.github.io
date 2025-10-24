@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const ContentPromotionBanner: React.FC = () => {
 return (<div>
       <Helmet />
@@ -11,28 +12,161 @@ export interface ContentPromotionBannerProps {
    className = '', children 
 }
 const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({  className = '', children  }) => {
+=======
+<<<<<<< HEAD
+import Navigation from './Navigation'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f
+const ContentPromotionBanner: React.FC = () => {const benefits: ";"
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ]
+}
+>>>>>>> origin/main
   return (
-    <div className={`contentpromotionbanner ${className}`}>
-      {children}
-    </div>
-      <Navigation//> <div className="[^"]*">
-        {/* Hero Section*/} <section className="relative py-20 px-4 overflow-hidden" /> <div className="[^"]*"> <div className="[^"]*"> <h1 className="[^"]*">
-ContentPromotionBanner</h1>
-            </h1> <p className="[^"]*">
-Advanced ContentPromotionBanner solution for modern businesses.</p>
-            </p>,<div className="[^"]*"> <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" />
-Get Started</button>
+    <>
+      
+      <Navigation />
+      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
+        {/* Hero Section */}
+        <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
+          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
+          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
+            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
+              ContentPromotionBanner
+            </h1>
+            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
+              Advanced ContentPromotionBanner solution for modern businesses.
+            </p>
+          </div>"
+          <div className="hidden md:block w-px h-6 bg-white/30"></div>"
+          <button className="bg-white text-indigo-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">);</button>
+            Learn More</button>"
+            <ArrowRight className="inline-block ml-1 h-4 w-4" /></ArrowRight>
+          </button>
+        </div>
+        {/* Stats Section */}
+        <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 mb-16&quot;>{stats.map((stat, index) => (</div>
+            <div key={index} className=&quot;text-center&quot;></div>
+              <div className=&quot;w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center&quot;></div>
+                <stat.icon className=&quot;w-8 h-8 text-white&quot; />
+              </div>
+              <div className=&quot;text-3xl font-bold text-white mb-2&quot;>{stat.value}</div>
+              <div className=&quot;text-gray-400 text-sm&quot;>{stat.label}</div>
+              <div className=&quot;text-gray-500 text-xs mt-1&quot;>{stat.description}</div>
+            </div>
+          ))}
+        </div>
+<div className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-8&quot;></div>
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;></div>
+            <div></div>
+              <h3 className=&quot;text-2xl font-bold mb-4&quot;>Why Choose Us?</h3>
+              <ul className=&quot;space-y-2&quot;>
+                {benefits.slice(0, 4).map((benefit, index) => (
+                  <li key={index} className=&quot;flex items-center&quot;>
+                    <CheckCircle className=&quot;h-5 w-5 text-green-400 mr-3 flex-shrink-0&quot; />
+                    <span className=&quot;text-purple-100&quot;>{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div></div>
+              <h3 className=&quot;text-2xl font-bold mb-4&quot;>Additional Benefits</h3>
+              <ul className=&quot;space-y-2&quot;>
+                {benefits.slice(4).map((benefit, index) => (
+                  <li key={index} className=&quot;flex items-center&quot;>
+                    <CheckCircle className=&quot;h-5 w-5 text-green-400 mr-3 flex-shrink-0&quot; />
+                    <span className=&quot;text-purple-100&quot;>{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <div className=&quot;text-center mt-8&quot;></div>
+            <button className=&quot;bg-white text-purple-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold&quot;></button>
+              Get Started Today
+          </div>
+        </div>
+        {/* Features Grid */}
+        <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16&quot;>{features.map((feature, index) => (</div>
+            <div key={index} className=&quot;text-center&quot;></div>
+              <div className=&quot;w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4&quot;></div>
+                <feature.icon className=&quot;w-8 h-8 text-white&quot; />
+              </div>
+              <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
+              <p className=&quot;text-gray-300 text-sm&quot;>{feature.description}</p>
+            </div>
+          ))}
+        </div>
+        {/* Benefits Section */}
+        <div className=&quot;bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-16&quot;></div>
+          <div className=&quot;text-center mb-8&quot;></div>
+            <h2 className=&quot;text-3xl font-bold text-white mb-4&quot;>Why Choose Our Solutions?</h2>
+            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>We provide comprehensive AI and IT solutions that deliver real results for your business.</p>p>
+          </div>
+          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6&quot;>{/* Stats Section */}</div>
+        <div className=&quot;grid md:grid-cols-3 gap-8 mb-16&quot;>{stats.map((stat, index) => (</div>
+            <div key={index} className=&quot;text-center&quot;></div>
+              <div className=&quot;flex justify-center mb-4&quot;></div>
+                <stat.icon className=&quot;w-12 h-12 text-blue-400&quot; />
+              </div>
+              <div className=&quot;text-4xl font-bold text-white mb-2&quot;>{stat.value}</div>
+              <div className=&quot;text-lg font-semibold text-gray-300 mb-1&quot;>{stat.label}</div>
+              <div className=&quot;text-sm text-gray-400&quot;>{stat.description}</div>
+            </div>
+          ))}
+        </div>
+        {/* Benefits Section */}
+        <div className=&quot;bg-white/5 backdrop-blur-sm rounded-2xl p-8 mb-16&quot;></div>
+          <h2 className=&quot;text-3xl font-bold text-white text-center mb-8&quot;>Why Choose Our Solutions?</h2>
+          <div className=&quot;grid md:grid-cols-2 gap-4&quot;>{benefits.map((benefit, index) => (</div>
+              <div key={index} className=&quot;flex items-center gap-3&quot;></div>
+                <CheckCircle className=&quot;w-5 h-5 text-green-400 flex-shrink-0&quot; />
+                <span className=&quot;text-gray-300&quot;>{benefit}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        {/* CTA Section */}
+        <div className=&quot;text-center&quot;></div>
+          <div className=&quot;bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12&quot;></div>
+            <h2 className=&quot;text-3xl font-bold text-white mb-4&quot;>Ready to Transform Your Business?</h2>
+            <p className=&quot;text-xl text-white/90 mb-8 max-w-2xl mx-auto&quot;>Join the future of business technology. Get started with our AI solutions today and see the difference.</p>p>
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
+                Get Started
+                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
               </button>
+<<<<<<< HEAD
               <button className="border border-emerald-400 text-emerald-400 hover: "bg-emerald-400 hove",
 r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
 Learn More</button>
 
+=======
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+                Learn More
+>>>>>>> origin/main
               </button>
+            </div>
+          </div>
+        </section>
+    </>
 
-        </section>,{/* Features Section*/} <section className="py-20 px-4" /> <div className="[^"]*"> <div className="[^"]*">
-    <h1 className="text-4 xl font-bold text-white mb-4">Key Features</h2> <p className="[^"]*">
-Discover the powerful features that make ContentPromotionBanner the perfect solution for your business.</p>
+        {/* Features Section */}
+        <section className=&quot;py-20 px-4&quot;></section>
+          <div className=&quot;max-w-7xl mx-auto&quot;></div>
+            <div className=&quot;text-center mb-16&quot;></div>
+              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
+                Powerful AI-driven features designed to transform your business operations
               </p>
+<<<<<<< HEAD
     <divclassName="grid md: "grid-cols-2 l",
 g: grid-cols-4 gap-8" />,<div className="[^"]*">
     <h1 className="text-xl font-semibold text-white mb-3">AI-Powered</h3>
@@ -44,25 +178,156 @@ g: grid-cols-4 gap-8" />,<div className="[^"]*">
                 <p className="text-gray-300">Enterprise-grade security and data protection.</p>
                 </div> <div className="[^"]*">
     <h1 className="text-xl font-semibold text-white mb-3">Efficient</h3>
+=======
+            </div>
+            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+              {features.map((feature, index) => (
+                <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
+                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
+                  <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
+                  <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
+                  <ul className=&quot;space-y-2&quot;>
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;>
+                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+>>>>>>> origin/main
 
-                <p className="text-gray-300">Optimized performance for maximum productivity.</p>
+        {/* Benefits Section */}
+        <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
+          <div className=&quot;max-w-7xl mx-auto&quot;></div>
+            <div className=&quot;text-center mb-16&quot;></div>
+              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
+                Experience the benefits of cutting-edge AI technology
+              </p>
+            </div>
+            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+              {benefits.map((benefit, index) => (
+                <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
+                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
+                  <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
+                </div>
+              )}
+
+        {/* CTA Section */}
+        <section className=&quot;py-20 px-4&quot;></section>
+          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
+            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
+            <p className=&quot;text-xl text-gray-300 mb-8&quot;>
+              Join thousands of businesses already using our AI solutions
+            </p>
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
+                <Zap className=&quot;w-5 h-5&quot; />
+                <span>Start Free Trial</span>
+              </button>
+              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
+                Schedule Demo
+            </div>
+
+            {/* Close button */}
+            <button
+              onClick={handleClose}
+              className={`ml-6 p-2 rounded-full hover:bg-white hover:bg-opacity-20 transition-colors ${banner.textColor}`}
+              aria-label="Close banner"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+=======
+<<<<<<< HEAD
+const ContentPromotionBanner: React.FC = () => {
+return(<div>
+      <Helmet  />
+        <title>ContentPromotionBanner</title>
+        <meta name="description" content="Advanced ContentPromotionBanner solution for modern businesses." / /></section>,{/* Features Section */}
+<section className="py-20 px-4" />,
+    <div className="max-w-7 xl mx-auto" />,
+    <div className="text-center mb-16" />,
+Start Your Free Trial</button>
+>>>>>>> origin/main
+            </button>
+            </div>
+        </section>
+        </div>
+=======
+const ContentPromotionBanner: React.FC = () => {;
+return(<div>
+      <Helmet  />;
+        <title>"ContentPromotionBanner"</title>
+        <meta name="description" content="Advanced ContentPromotionBanner solution for modern businesses." / />
+        <meta name="keywords" content="AI,artificial, intelligence, ContentPromotionBanner, AI, solutions, intelligent automation / /">
+      </Helmet>
+    </div>
+      <Navigation/ />,
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 /">"}
+        {/* Hero Section */,}
+        <section className="relative" py-20 px-4 overflow-hidden />,"
+    <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20 /">,
+    <div className="relative max-w-7 xl mx-auto text-center /">,"
+    <h1 className="text-5 xl md: text-7 xl font-bold text-white mb-6 leading-tight /">
+"ContentPromotionBanner"</h1>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed /">"
+Advanced ContentPromotionBanner solution for modern businesses.</p>
+            </p>,<div className="flex" flex-col sm: flex-row gap-4 justify-center />
+              <button className="bg-emerald-600" hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center />
+"Get Started"</button>
+              </button>
+              <button className="border" border-emerald-400 text-emerald-400 hover: bg-emerald-400 hove","
+r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
+"Learn More"</button>
+              </button>
+        </section>,{/* Features Section */}
+<section className="py-20" px-4 />,"
+    <div className="max-w-7 xl mx-auto /">,
+    <div className="text-center mb-16 /">,"
+    <h1 className="text-4 xl font-bold text-white mb-4">"Key Features"</h2>
+              <p className="text-xl" text-gray-300 max-w-3 xl mx-auto />
+"Discover the powerful features that make ContentPromotionBanner the perfect solution for your business."</p>
+              </p>,
+    <divclassName="grid" md: grid-cols-2 l","
+g: grid-cols-4 gap-8" />,<div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 /">,
+    <h1 className="text-xl font-semibold text-white mb-3">"AI-Powered"</h3>"
+                <p className="text-gray-300">"Advanced AI algorithms for intelligent automation."</p>,
+    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 /">,
+    <h1 className="text-xl font-semibold text-white mb-3">"Scalable"</h3>"
+                <p className="text-gray-300">"Grows with your business needs and requirements."</p>
+                </div>,"
+    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 /">,
+    <h1 className="text-xl font-semibold text-white mb-3">"Secure"</h3>"
+                <p className="text-gray-300">"Enterprise-grade security and data protection."</p>
+                </div>,"
+    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 /">,
+    <h1 className="text-xl font-semibold text-white mb-3">"Efficient"</h3>"
+
+                <p className="text-gray-300">"Optimized performance for maximum productivity."</p>
                 </div>
               </div>
             </div>
-        </section>,{/* CTA Section*/} <section className="py-20 px-4" /> <div className="[^"]*">
-    <h1 className="text-4 xl font-bold text-white mb-6">Ready to Get Started?</h2> <p className="[^"]*">
-Join thousands of businesses already using ContentPromotionBanner to transform their operations.</p>
-            </p> <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
-Start Your Free Trial</button>
+        </section>,{/* CTA Section */;}
+<section className="py-20" px-4 />,"
+    <div className="max-w-4 xl mx-auto text-center /">,
+    <h1 className="text-4 xl font-bold text-white mb-6">"Ready to Get Started?"</h2>"
+            <p className="text-xl" text-gray-300 mb-8 />
+"Join thousands of businesses already using ContentPromotionBanner to transform their operations."</p>
+            </p>
+            <button className="bg-emerald-600" hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 />
+"Start Your Free Trial"</button>
             </button>
             </div>
         </section>
         </div>
       </Footer>
-    </div>
-    </>
-  )
-  )
-
-export default ContentPromotionBanner
-}
+    </div>)
+  );
+,};"
+export default ContentPromotionBanner;"
+}"
+>>>>>>> origin/main

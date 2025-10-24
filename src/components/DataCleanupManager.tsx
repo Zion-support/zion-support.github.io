@@ -1,5 +1,8 @@
-import React from "react";
+<<<<<<< HEAD
+=======
+import React from 'react";'
 interface DataCleanupManagerProps {
+<<<<<<< HEAD
 className?: string
 }
 }
@@ -46,3 +49,21 @@ export default DataCleanupManager}";'
 };
 
 export default DataCleanupManager;
+=======
+className?: string}
+;}
+;}"
+;}"
+""
+const DataCleanupManager: "React.FC<DataCleanupManagerProps> = ({ className = '' ",;}) => {
+return(</DataCleanupManagerProps>,}
+    <div className="{className,;}" />
+      <h2>"DataCleanupManager"</h2>
+      <p>"This component is under construction."</p>
+      </div>)
+  );
+};"
+export default DataCleanupManager;"
+}"'"
+>>>>>>> origin/main
+>>>>>>> origin/main

@@ -4,7 +4,7 @@ const path = require('path");
 // Function to fix malformed strings
 function fixMalformedStrings(content) {
   let fixed = content;
-"
+
   // Fix malformed 'use client" directives"
   fixed = fixed.replace(/^'use client\";\"$/gm, "'use client';");"
   fixed = fixed.replace(/^\"use client\";\"$/gm, "'use client';");"
@@ -63,7 +63,7 @@ function processDirectory(dirPath) {
     for (const item of items) {
       const fullPath = path.join(currentPath, item);
       const stat = fs.statSync(fullPath);
-      "
+
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules") {
         walkDir(fullPath);"
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js"))) {

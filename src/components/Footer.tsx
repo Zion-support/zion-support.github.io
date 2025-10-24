@@ -1,5 +1,8 @@
-import React from "react";
+<<<<<<< HEAD
+=======
+import React from 'react";'
 interface FooterProps {
+<<<<<<< HEAD
 className?: string
 }
 }
@@ -46,3 +49,21 @@ export default Footer}";'
 };
 
 export default Footer;
+=======
+className?: string}
+;}
+;}"
+;}"
+""
+const Footer: "React.FC<FooterProps> = ({ className = '' ",;}) => {
+return(</FooterProps>,}
+    <div className="{className,;}" />
+      <h2>"Footer"</h2>
+      <p>"This component is under construction."</p>
+      </div>)
+  );
+};"
+export default Footer;"
+}"'"
+>>>>>>> origin/main
+>>>>>>> origin/main

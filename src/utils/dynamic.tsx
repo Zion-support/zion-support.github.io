@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client"
 import React from "react";
 export const dynamic = ();
@@ -11,3 +12,15 @@ export const dynamic = () => {
 ) => {
 
 }
+=======
+<<<<<<< HEAD
+=======
+'use client'
+import React from 'react";'
+export const dynamic = (;
+  return null;
+) => {"
+$3"}
+,};"'"
+>>>>>>> origin/main
+>>>>>>> origin/main

@@ -1,2 +1,6 @@
-"use client"
-import React from "react"}
+<<<<<<< HEAD
+=======
+'use client'
+import React from 'react";'
+;}"'"
+>>>>>>> origin/main

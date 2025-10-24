@@ -1,6 +1,7 @@
-import, React, { useEffect } from &quot;react&quot();
-interface AnalyticsProps {;
+import, React, { useEffect } from &quot;react&quot()
+interface AnalyticsProps {
 }
+<<<<<<< HEAD
 }
   className?: string()
 const Analytics: "React.FC = () => {",useEffect(() => {
@@ -30,11 +31,38 @@ $3;
 export default Analytics;();
 }
 export default AnalyticsPage;
+=======
+<<<<<<< HEAD
+      }
+    }
+>>>>>>> origin/main
     initAnalytics()
   }, [])
 return(null)
-  ); //Analytics component doesn&apos;t render anything()
+  ); // Analytics component doesn&apos;t render anything(    )
 }
-export default Analytics;()
 }
-export default AnalyticsPage
+export default AnalyticsPage"
+=======
+;}
+  className?: string()
+;}
+const Analytics: "React.FC = () => {",useEffect(() => {;};
+    const initAnalytics = (;"
+      if (typeof window !== &quot;undefined&quot; && window.gtag) {"
+window.gtag(&quot;config&quot;, &quot;GA_MEASUREMENT_ID&quot;, {)"
+          "page_title": document.title,)"
+    "page_location": window.location.href) => {
+$3
+})
+      }
+    }
+    initAnalytics();
+  }, []);
+return(null);
+  ); // Analytics component doesn&apos;t render anything();
+}
+export default Analytics;();"
+}"
+export default AnalyticsPage;"
+>>>>>>> origin/main

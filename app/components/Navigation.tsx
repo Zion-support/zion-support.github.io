@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client"
 import React from "react";
 import { Link } from "next/link";
@@ -42,9 +43,146 @@ const Navigation = () => {
             </button>
           </div>
         </div>
+=======
+'use client'
+<<<<<<< HEAD
+import React from 'react'
+import Link from 'next/link'
+import { Search } from 'lucide-react'
+const Navigation = () => {
+  return (
+<<<<<<< HEAD
+    <nav className="bg-slate-900 text-white shadow-lg">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center py-4">
+          <Link href="/" className="text-2xl font-bold">
+            Zion Tech Group
+          </Link>
+          
+          <div className="hidden md:flex space-x-8">
+            {menuItems.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="hover:text-emerald-400 transition-colors"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+
+          <div className="hidden md:block">
+            <Link
+              href="/contact"
+              className="bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-6 py-2 rounded-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-300 flex items-center space-x-2"
+            >
+              <span>Get Started</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          <button
+            className="md:hidden"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+
+        {isOpen && (
+          <div className="md:hidden py-4">
+            {menuItems.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                onClick={() => setIsOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
+            <Link
+              href="/contact"
+              className="bg-gradient-to-r from-emerald-500 to-blue-500 text-white block px-3 py-2 rounded-md text-base font-medium hover:from-emerald-600 hover:to-blue-600 transition-all duration-300 mt-4"
+              onClick={() => setIsOpen(false)}
+            >
+              <span>Get Started</span>
+              <ArrowRight className="w-4 h-4 inline ml-2" />
+            </Link>
+          </div>
+        )}
+>>>>>>> origin/main
       </div>
     </nav>
   );
 };
+<<<<<<< HEAD
 
 export default Navigation;
+=======
+
+export default Navigation;
+=======
+    <div>
+      {/* Desktop Navigation */}
+      <div className="hidden md:flex items-center space-x-8">
+        <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
+          About
+        </Link>
+        <Link href="/services" className="text-gray-300 hover:text-white transition-colors">
+          Services
+        </Link>
+        <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
+          Contact
+        </Link>
+        <Link href="/blog" className="text-gray-300 hover:text-white transition-colors">
+          Blog
+        </Link>
+      </div>
+      {/* Mobile Navigation */}
+      <div className="md:hidden">
+        <button className="text-gray-300 hover:text-white transition-colors">
+          <Search className="h-6 w-6" />
+        </button>
+      </div>
+    </div>
+      )
+}
+export default Navigation
+=======
+
+import Link from 'next/link';
+import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react'
+;
+const Navigation = () => {
+  return (}
+    <>
+  );
+      {/* Desktop Navigation */}
+      <div className="hidden md:flex items-center space-x-8">
+        <Link href="/"about className="text-gray-300 hover:text-white transition-colors">
+          "About"
+        </Link>
+        <Link href="/"services className="text-gray-300 hover:text-white transition-colors">
+          "Services"
+        </Link>
+        <Link href="/"solutions className="text-gray-300 hover:text-white transition-colors">
+          "Solutions"
+        </Link>
+        <Link href="/"contact className="text-gray-300 hover:text-white transition-colors">
+          "Contact"
+        </Link>
+        <Link
+          href="/"contact"
+          className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md transition-colors">
+          "Get Started"
+        </Link>
+      </div>
+    </div>
+  )
+}
+
+export default Navigation
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main

@@ -1,7 +1,17 @@
-"use client"
-import React from "react";
-import Link from "next/link";
-import { Home, ArrowLeft, RefreshCw  } from "lucide-react";
+'use client'
+<<<<<<< HEAD
+import React from 'react'
+import Link from 'next/link'
+import { Home, ArrowLeft, RefreshCw } from 'lucide-react'
+
+export const dynamic = 'force-dynamic'
+
+=======
+
+import React from 'react';
+import Link from 'next/link';
+import { Home, ArrowLeft } from 'lucide-react';
+>>>>>>> origin/main
 export default function NotFound() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -14,6 +24,7 @@ export default function NotFound() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/"
+<<<<<<< HEAD
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105"
           ><Home className="w-5 h-5 mr-2" />
             Go Home
@@ -29,8 +40,30 @@ export default function NotFound() {
             className="inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-300 hover:scale-105"
           ><RefreshCw className="w-5 h-5 mr-2" />
             Refresh
+=======
+            className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+            <Home className="w-5 h-5 mr-2" />
+            Go Home
+          </Link>
+<<<<<<< HEAD
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-300 hover:scale-105"
+          >
+            <RefreshCw className="w-5 h-5 mr-2" />
+            Contact Support
+          </Link>
+=======
+          <button
+            onClick={() => window.history.back()}
+            className="bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-all duration-300 flex items-center justify-center">
+            <ArrowLeft className="w-5 h-5 mr-2" />
+            Go Back
+>>>>>>> origin/main
           </button>
+>>>>>>> origin/main
         </div>
+<<<<<<< HEAD
         <Link
           href="/"
           className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200
@@ -41,3 +74,9 @@ export default function NotFound() {
     </div>
   )"
 }"
+=======
+      </div>
+    </div>
+  );
+}
+>>>>>>> origin/main

@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 "use client"
 import React from "react";
+<<<<<<< HEAD
 import Head from "next/head";
 import { Head  } from "next/head
+=======
+import { Head  } from "next/head";
+>>>>>>> origin/main
 import { Link  } from "next/link";
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw   } from "lucide-react";
 const useAnalytics = () => {
@@ -12,6 +17,7 @@ return (<div>
         <meta name="robots" content="noindex, nofollow" />
         <meta property="og: type" content="website" />
 
+<<<<<<< HEAD
       </Head>
     </div>,<div className="[^"]*"> <div className="[^"]*">
           {/* 404 Animation*/) => {
@@ -75,10 +81,306 @@ go wrong! 🤖
               </div>
           {/* Fun Fact*/} <div className="[^"]*"> <p className="[^"]*">
     <span className="text-cyan-400">Fun Fact: </span> Even our AI gets
+=======
+import React, { createContext, useContext, useEffect } from &quot;react&quot;
+&quot;use client&quot;
+
+interface AnalyticsContextType {
+  track: (event: string, properties?: Record<string, unknown>) => void
+  identify: (userId: string, traits?: Record<string, unknown>) => void
+  page: (name: string, properties?: Record<string, unknown>) => void
+}
+
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
+  undefined
+);
+
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext)
+  if (!context) {
+    throw new Error("useAnalytics must be used within an AnalyticsProvider")
+  }
+  return context
+}
+;
+interface AnalyticsProviderProps {}
+  children: React.ReactNode
+}</string>
+</string>;
+exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) => {useEffect(() => {
+  
+    // Initialize analytics
+    if (type of windo w !==&quot;undefined&quot;) {
+      // Google Analytics
+      if (process.env.NODE_ENV === &quot;production&quot;) {
+        const script = document.createElement(&quot;script&quot;)
+        script.async = true
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID}`
+        document.head.appendChild(script)
+"
+        (window as unknown as {dataLayer: unknown[] }).dataLayer="(window" as unknown as {dataLayer: unknown[] }).dataLayer || [];
+        function gtag(...args: unknown[]){ {(window as unknown as { dataLayer: unknown[] }).dataLayer.push(args)
+        }
+        gtag(&quot;js&quot;, new Date())
+        gtag(&quot;config&quot;, process.env.REACT_APP_GA_ID)
+      }
+    }
+  }, [])
+
+  const track = (event: string, properties?: Record<string, unknown>) => {
+    if (typeof window !== "undefined") {
+      // Track event
+      console.log("Analytics Event:", event, properties);
+    }
+  };
+
+  const identify = (userId: string, traits?: Record<string, unknown>) => {
+    if (typeof window !== "undefined") {
+      // Identify user
+      console.log("Analytics Identify:", userId, traits);
+    }
+  };
+
+  constidentify= (userId: string,traits?:Record<string, unknown>) => {if (type of windo w !==&quot;undefined&quot;) {
+      // Google Analytics
+      if ((windo w as unknown as { gtag?: (...args: unknown[]) => void}).gtag) {(windo w as unknown as { gtag: (...args: unknown[]) => void}).gtag(
+         &quot;config&quot;,
+          process.env.REACT_APP_GA_ID,
+          {user_id: userId,});
+            custom_map: traits,
+          },
+        )
+      }
+
+      // Custom analytics
+      }
+  }
+
+  constpage= (name: string,properties?:Record<string, unknown>) => {if (type of windo w !==&quot;undefined&quot;) {
+      // Google Analytics
+      if ((windo w as unknown as { gtag?: (...args: unknown[]) => void}).gtag) {(windo w as unknown as { gtag: (...args: unknown[]) => void}).gtag(
+         &quot;event&quot;,
+         &quot;page_view&quot;,
+          {page_title: name,
+            page_location: windo w.location.href,
+            ...properties,
+          },
+        )
+      }
+
+      // Custom analytics
+      }
+  };
+  constvalue: AnalyticsContextType="{track,";}
+    identify,}
+    page,
+  }
+;</string>
+  return (</string>"
+    <AnalyticsContext.Provider value="{value}></AnalyticsContext>
+      {children}</AnalyticsContext>
+    </AnalyticsContext.Provider>
+  )
+}
+
+// Extend Window interface for TypeScript;
+declare global {interface Window {}
+    dataLayer: unknown[]}
+    gtag: (...args: any[]) => void
+ , }
+}
+'use client'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+;"
+const EnhancedAnalyticsPage: React.FC = () => {const features = [
+      title: 'AI-Powered Intelligence',}
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',}
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {icon: BarChart,
+      title: 'Advanced Analytics',}
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',}
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {icon: Target,
+      title: 'Precision Targeting',}
+      description: 'Target specific goals and objectives with precision and accuracy.',}
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {icon: TrendingUp,
+      title: 'Growth Optimization',}
+      description: 'Optimize your business growth with data-driven strategies.',}
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ];
+"
+  const benefits=";"
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
+  return (
+    <>
+      
+      <Navigation /></Navigation>"
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
+        {/* Hero Section */}</div>"
+        <section className="relative py-20 px-4 overflow-hidden"></section>"
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>"
+          <div className="relative max-w-7xl mx-auto text-center"></div>"
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">;</h1>
+              EnhancedAnalytics</h1>
+            </h1>"
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">;</p>
+              Advanced EnhancedAnalytics solution for modern businesses.</p>
+            </p>"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>"
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">;</button>
+                Get Started</button>"
+                <ArrowRight className="ml-2 h-5 w-5" /></ArrowRight>
+              </button>"
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">;</button>
+                Learn More</button>
+              </button>
+            </div>
+          </div>
+        </section>
+    </>
+
+        {/* Features Section */}
+        <section className="py-20 px-4"></section>"
+          <div className="max-w-7xl mx-auto"></div>"
+            <div className="text-center mb-16"></div>"
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>"
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">);</p>
+                Powerful AI-driven features designed to transform your business operations</p>
+              </p>
+            </div>"
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+              {features.map((feature, index) => (</div>"
+                <div key="{index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>"
+                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" /></feature>"
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
+                  <p className="text-gray-300 mb-4">{feature.description}</p>"
+                  <ul className="space-y-2"></ul>
+                    {feature.benefits.map((benefit, idx) => (</ul>"
+                      <li key="{idx} className="flex items-center text-sm text-gray-300"></li>"
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" /></CheckCircle>
+                        {benefit}</CheckCircle>
+                      </li>
+                    ))}
+                  </ul>
+=======
+<<<<<<< HEAD
+          {/* Search Suggestion */},"
+    <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 mb-8" />,
+    <div className="flex items-center justify-center mb-4" />
+              <Search className="w-6 h-6 text-cyan-400 mr-2" />,
+className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center">
+Send Email
+              </a>
+=======
+'use client'
+import React from 'react';
+import Head from 'next/head';"
+import Link from 'next/link";"'
+import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from lucide-react";
+const useAnalytics = (
+return(<div>
+      <Head>
+        <title>"404 - Page Not Found | Zion Tech Group"</title>
+        <meta name=robots" content="noindex, nofollow /">
+        <meta property="og: type" content="website /">
+      </Head>
+    </div>,<div className="min-h-screen" bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4 />,
+    <div className="max-w-2 xl w-full text-center /">"
+          {/* 404 Animation */,) => {"}
+$3"}
+},"
+    <div className="relative mb-8 /">,
+    <div className="text-9 xl font-bold text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text animate-pulse /">"
+              404,
+    <div className="absolute" -top-4 -right-4 w-8 h-8 bg-red-500/20 rounded-full animate-bounce />
+              <AlertTriangle className="w-6" h-6 text-red-400 />
+>>>>>>> origin/main
+                </div>
+              </div>
+          {/* Error Message */,},
+    <h1 className="text-4" xl md: text-5 xl font-bold text-white mb-6 />
+"Page Not Found"
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 leading-relaxed /">'
+Oops! The page you're looking for seems to have vanished into the digital void. Don't, worry,even our AI cant predict everything!
+          </p>
+          {/* Search Suggestion */},
+    <div className="bg-gradient-to-br" from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 mb-8 />,"
+    <div className="flex items-center justify-center mb-4 /">
+              <Search className="w-6" h-6 text-cyan-400 mr-2 />,
+    <h1 className="text-lg font-semibold text-white">"What were you looking for?"</h2>"
+                </div>
+            <p className="text-gray-300" text-sm mb-4>Try searching for one of these popular pages: "</p>,<div className="flex" flex-wrap gap-2 justify-center />
+              {["}
+                { name: "Home",path: "/" ,}"
+                { name: "About",path: "/about" ,}"
+                { name: "Services",path: "/services" ,}"
+                { name: "Contact",path: "/contact" ,})"
+              ].map((item, index) => ("
+                <Link key = {index,} href = {item.path,} className="px-4 py-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-purple-300 rounded-lg hover: from-purple-600/30 hover:to-blue-600/30 transition-all duration-300">
+                  "{item.name,}"
+                </Link>
+              "))}"
+                </div>
+              </div>
+          {/* Action Buttons */},
+    <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">"
+      <Link href="/" className="bg-gradient-to-r" from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center>
+              <Home className="w-5" h-5 mr-2 />
+"Go Home"
+
+      </Link>
+    </div>
+            <button"
+onClick="{()" => window.history.back(),}"
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+              <ArrowLeft className="w-5" h-5 mr-2 />
+"Go Back"
+            </button>
+              </div>
+          {/* Help Section */,;},
+    <div className="bg-gradient-to-r" from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-lg p-6 />,"
+    <h1 className="text-lg font-semibold text-white mb-3">"Need Help?"</h3>
+            <p className="text-gray-300" text-sm mb-4 />
+Our support team is here to help you navigate our services and find exactly what you"re looking for."
+            </p>,"
+    <div className="flex flex-col sm: flex-row gap-3 justify-center">
+      <Link href="/contact" className="bg-gradient-to-r" from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center>
+                <RefreshCw className="w-4" h-4 mr-2 />
+"Contact Support"
+
+      </Link>
+    </div>
+              <a
+href="mailto:support@ziontechgroup.com"
+className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center">"
+Send Email;
+              </a>
+                </div>
+              </div>
+          {/* Fun Fact */,;},
+    <div className="mt-8 p-4 bg-slate-800/30 rounded-lg /">
+            <p className="text-sm" text-gray-400 />,
+    <span className="text-cyan-400">Fun Fact: "</span> Even our AI gets"
+>>>>>>> origin/main
 confused sometimes. That"s why we have humans to help when things
 go wrong! 🤖
             </p>
               </div>
+<<<<<<< HEAD
     </>
   ) "}
 export default useAnalytics
@@ -92,7 +394,26 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({  className = '', 
     <div className={`enhancedanalytics ${className}`}>
       {children}
     </div>
+=======
+            </div>
+          </div>
+<<<<<<< HEAD
+        </section>
+      </div>
+      <Footer /></Footer>
+    </>
+>>>>>>> origin/main
   );
 };
-
-export default EnhancedAnalytics;
+  ;);,
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+=======
+    </div>
+  )
+",;}
+export default useAnalytics"
+    </div>;"
+};"'"
+>>>>>>> origin/main
+>>>>>>> origin/main

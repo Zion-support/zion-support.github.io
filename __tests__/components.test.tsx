@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { describe, test, expect } from from '@jest/globals'
 import { render, screen } from from '@testing-library/react'
 import { HelmetProvider } from from 'react-helmet-async'
@@ -40,11 +41,39 @@ const SEOHeadWrapper = ({ title, description, keywords }: any) => (
 ;
 describe("Loading Component", () => {
   test("renders loading text", () => {
+=======
+<<<<<<< HEAD
+=======
+import { describe, test, expect } from '@jest/globals";"'
+import { render, screen } from @testing-library/react";"
+import { HelmetProvider } from 'react-helmet-async";'
+
+const TestComponent = () => {
+  return (
+    <HelmetProvider>
+      <div>"Test content"</div>
+    </HelmetProvider>
+  );"}
+};"
+
+describe("Components", () => {"
+  test("should render without errors", () => {
+    expect(true).toBe(true);"}
+  });"
+
+  test("should render test content", () => {"
+    render(<TestComponent />);"
+    expect(screen.getByText("Test content")).toBeInTheDocument();"}
+  });"
+
+  test("should handle SEO head component", () => {
+>>>>>>> origin/main
     render(
       <HelmetProvider>
-        <Loading />
+        <div>"SEO Test"</div>
       </HelmetProvider>
     );
+<<<<<<< HEAD
     expect(screen.getByText("Loading")).toBeTruthy();
   });
 });
@@ -62,3 +91,9 @@ describe("SEOHeadWrapper Component", () => {
     );
     expect(container).toBeTruthy();
   })});;'
+=======
+    expect(screen.getByText("SEO Test")).toBeInTheDocument();"}
+  });"
+});"'"
+>>>>>>> origin/main
+>>>>>>> origin/main

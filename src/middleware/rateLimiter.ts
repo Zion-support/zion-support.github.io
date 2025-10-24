@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   messag",e: "string"}
 }
 }
@@ -22,3 +23,27 @@ maxRequests: "100",message: ""Too many requests from this IP",please try again l
 
 export default rateLimitConfig
 }
+=======
+<<<<<<< HEAD
+interface RateLimitConfig {
+windowMs: "number"
+  maxRequests: number"
+=======
+interface RateLimitConfig {;
+}
+windowMs: "number;"
+  maxRequests: number;"
+  messag",e: "string;",
+}
+}"
+}"
+;"
+const rateLimitConfig: "RateLimitConfig = {;"
+windowM",s: "15 * 60 * 1000",// 15 minutes;"
+maxRequests: "100",message: "'Too many requests from this IP",please try again later."
+;};
+;"
+export default rateLimitConfig;"
+}"'"
+>>>>>>> origin/main
+>>>>>>> origin/main
