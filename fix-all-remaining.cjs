@@ -1,12 +1,35 @@
-'use client';
-export const dynamic = 'force-dynamic';
+const fs = require('fs');
+const path = require('path');
+
+// Get all page files in the app directory
+function getAllPageFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      const pageFile = path.join(fullPath, 'page.tsx');
+      if (fs.existsSync(pageFile)) {
+        files.push(pageFile);
+      }
+    }
+  }
+  
+  return files;
+}
+
+// Template for a basic AI page
+const createBasicPage = (title, description, keywords) => `'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-const AiclimatepredictionenginePage: React.FC = () => {
+const ${title.replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase())}Page: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -45,9 +68,9 @@ const AiclimatepredictionenginePage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Ai Climate Prediction Engine - Zion Tech Group</title>
-        <meta name="description" content="AI-powered ai climate prediction engine solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, ai climate prediction engine, business solutions" />
+        <title>${title.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} - Zion Tech Group</title>
+        <meta name="description" content="${description}" />
+        <meta name="keywords" content="${keywords}" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -59,10 +82,10 @@ const AiclimatepredictionenginePage: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Climate Prediction Engine
+              ${title.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              AI-powered ai climate prediction engine solution for modern businesses.
+              ${description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -88,12 +111,10 @@ const AiclimatepredictionenginePage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => {
-    const IconComponent = feature.icon;
-    return (
-    <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-      <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-        <IconComponent className="h-6 w-6 text-white" />
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                    <feature.icon className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -105,9 +126,8 @@ const AiclimatepredictionenginePage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-      </div>
-      );
-    })}
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -162,4 +182,24 @@ const AiclimatepredictionenginePage: React.FC = () => {
   );
 };
 
-export default AiclimatepredictionenginePage;
+export default ${title.replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase())}Page;`;
+
+// Get all page files
+const pageFiles = getAllPageFiles('app');
+
+// Fix each file
+pageFiles.forEach(filePath => {
+  try {
+    const title = path.basename(path.dirname(filePath));
+    const description = `AI-powered ${title.replace(/-/g, ' ')} solution for modern businesses.`;
+    const keywords = `AI, artificial intelligence, ${title.replace(/-/g, ' ')}, business solutions`;
+    
+    const content = createBasicPage(title, description, keywords);
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+});
+
+console.log(`Fixed ${pageFiles.length} files!`);

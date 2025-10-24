@@ -1,239 +1,165 @@
 'use client';
+export const dynamic = 'force-dynamic';
 import React from 'react';
-import Link from 'next/link';
-import { ArrowRight, CheckCircle, Brain } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-
-const AIProjectManagementProPage: React.FC = () => {
+const AiprojectmanagementproPage: React.FC = () => {
   const features = [
     {
-      icon: 'Brain',
-    title: 'AI Project Planning',
-      description: 'Intelligent project planning with AI-powered task breakdown, resource allocation, and timeline optimization.'
-},
-  {
-    icon: 'Users',
-    title: 'Team Collaboration',
-      description: 'Enhanced team collaboration with AI-powered communication, task assignment, and progress tracking.'
-},
-  {
-    icon: 'BarChart',
-    title: 'Advanced Analytics',
-      description: 'Comprehensive project analytics with AI insights, performance metrics, and predictive forecasting.'
-},
-  {
-    icon: 'Target',
-    title: 'Smart Resource Management',
-    description: 'AI-driven resource allocation and workload balancing for optimal team productivity.'}
-  ]
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom metrics', 'Data visualization', 'Performance tracking']
+    },
+    {
+      icon: Zap,
+      title: 'Real-time Processing',
+      description: 'Process and analyze data in real-time for instant insights.',
+      benefits: ['Live data streams', 'Instant updates', 'Real-time alerts', 'Dynamic dashboards']
+    },
+    {
+      icon: Shield,
+      title: 'Secure & Compliant',
+      description: 'Enterprise-grade security with full compliance standards.',
+      benefits: ['Data encryption', 'Access controls', 'Audit trails', 'GDPR compliance']
+    }
+  ];
+
   const benefits = [
-    'Increase project success rate by 40%',
-    'Reduce project delivery time by 25%',
-    'Improve team productivity by 35%',
-    'Minimize project risks with AI predictions',
-    'Automated progress tracking',
-    'Real-time collaboration tools'
-  ]
-  const pricing = [
-  {
-  name: 'Starter',
-    price: '$29.99',
-      period: '/month',
-    description: 'Perfect for small teams and freelancers',
-      features: [
-        'Up to 5 projects',
-        'Basic AI features',
-        'Team collaboration',
-        'Basic analytics',
-    'Email support'
-      ]
-    },
-    {
-      name: 'Professional',
-    price: '$79.99',
-      period: '/month',
-    description: 'Ideal for growing businesses',
-      features: [
-        'Up to 25 projects',
-        'Advanced AI features',
-        'Advanced analytics',
-        'Priority support',
-        'API access',
-    'Custom integrations'
-      ]
-    },
-    {
-      name: 'Enterprise',
-    price: 'Custom',
-      period: '',
-    description: 'For large organizations',
-      features: [
-        'Unlimited projects',
-        'Full AI suite',
-        'Custom integrations',
-        'Dedicated support',
-        'White-label solution',
-    'SLA guarantee'
-  ]
-}
-  ]
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
-            AI Project Management <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Pro</span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform project management with AI-powered automation. Plan, track, and deliver projects efficiently with our intelligent project management platform.
-          </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
-            >
-              Get Started
-              <ArrowRight className="w-8 h-8" />
-            </Link>
-            <Link
-              href="/ai-services"
-              className="inline-flex items-center px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
-            >
-              View All AI Services
-            </Link>
-          </div>
-        </div>
-      </section>
-      {/* Features Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
-              Smart Project Management Features
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Our AI project management platform provides everything you need to plan, execute, and deliver successful projects.
+    <>
+      <Helmet>
+        <title>Ai Project Management Pro - Zion Tech Group</title>
+        <meta name="description" content="AI-powered ai project management pro solution for modern businesses." />
+        <meta name="keywords" content="AI, artificial intelligence, ai project management pro, business solutions" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Ai Project Management Pro
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              AI-powered ai project management pro solution for modern businesses.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                View Demo
+              </button>
+            </div>
           </div>
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover: border-cyan-400/50 transition-all duration-300 group">
-                <div className="mb-6">
-                  <div className="w-12 h-12 text-cyan-400">{feature.icon}</div>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-black/20">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg: grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
-                Why Choose Our AI Project Management?
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Key Features
               </h2>
-              <p className="text-lg text-gray-300 mb-8">
-                Our AI-powered project management helps you deliver projects on time, within budget, and with higher success rates.
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our AI-powered solution provides comprehensive tools for modern businesses.
               </p>
-              <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-start">
-                    <CheckCircle className="w-8 h-8" />
-                    <span className="text-gray-300">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
             </div>
-            <div className="relative">
-              <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
-                <div className="text-center">
-                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-6">
-                    <Brain className="w-8 h-8" />
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => {
+    const IconComponent = feature.icon;
+    return (
+    <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+      <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+        <IconComponent className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">AI-Powered Intelligence</h3>
-                  <p className="text-gray-300">
-                    Our AI learns from your project patterns and automatically optimizes workflows, resource allocation, and timeline predictions.
-                  </p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-400">
+                        <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+      </div>
+      );
+    })}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Key Benefits
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the power of our AI solution for your business.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-3">
+                  <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                  <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-purple-100 mb-8">
+                Contact our experts to discuss your needs and get a customized solution.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                  Contact Sales
+                </button>
+                <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+                  Schedule Demo
+                </button>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      {/* Pricing Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
-              Simple, Transparent Pricing
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your team size and project needs. All plans include our core AI features with no hidden fees.
-            </p>
-          </div>
-          <div className="grid md: grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover: border-cyan-400/50 transition-all duration-300">
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center mb-2">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-300 ml-1">{plan.period}</span>
-                  </div>
-                  <p className="text-gray-300">{plan.description}</p>
-                </div>
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center">
-                      <CheckCircle className="w-8 h-8" />
-                      <span className="text-gray-300">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  href="/contact"
-                  className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
-                >
-                  {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
-                  <ArrowRight className="w-8 h-8" />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-purple-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Project Management?
-          </h2>
-          <p className="text-xl text-cyan-100 mb-8">
-            Join thousands of teams already using our AI project management to deliver better projects faster.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
-              className="inline-flex items-center px-8 py-3 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
-            >
-              Start Free Trial
-              <ArrowRight className="w-8 h-8" />
-            </Link>
-            <Link 
-              href="/ai-services" 
-              className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-600 transition-colors duration-300"
-            >
-              Explore All AI Services
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
-  )
-}
-export default AIProjectManagementProPage
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default AiprojectmanagementproPage;

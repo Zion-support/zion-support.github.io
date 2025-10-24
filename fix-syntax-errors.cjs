@@ -1,630 +1,194 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
-<<<<<<< HEAD
 const path = require('path');
-<<<<<<< HEAD
-const { execSync } = require('child_process');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Find files with syntax errors
-function findFilesWithSyntaxErrors() {
-  try {
-    const result = execSync('find /workspace -name "*.tsx" -o -name "*.ts" | grep -v node_modules | xargs grep -l "Declaration or statement expected\\|Unexpected token" 2>/dev/null || true', { encoding: 'utf8' });
-    return result.trim().split('\n').filter(line => line.trim());
-  } catch (error) {
-    return [];
-  }
-}
-
-// Fix syntax errors in a file
-function fixSyntaxErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    
-    // Fix extra closing braces at the end
-    content = content.replace(/\n\s*}\s*}\s*}\s*$/g, '\n}');
-    content = content.replace(/\n\s*}\s*}\s*$/g, '\n}');
-    
-    // Fix missing opening braces for useEffect
-    content = content.replace(/useEffect\(\(\) => \{([^}]+)\}, \[\]\);/g, 'useEffect(() => {\n    $1\n  }, []);');
-    
-    // Fix malformed JSX closing tags
-    content = content.replace(/<\s*\/\s*>\s*$/gm, '');
-    
-    // Fix incomplete function declarations
-    content = content.replace(/export default function[^{]*\{[^}]*$/g, (match) => {
-      if (!match.includes('}')) {
-        return match + '\n  return null;\n}';
-=======
-// Function to fix common syntax errors
-=======
-console.log('🔧 Starting syntax error fixes...');
-
-// Function to fix common syntax errors in a file
->>>>>>> cursor/delete-records-30ea
-function fixSyntaxErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
-<<<<<<< HEAD
-    // Remove any remaining merge conflict markers
-    if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
-      console.log(`Removing remaining merge conflict markers from: ${filePath}`);
-      content = content.replace(/<<<<<<<.*?\n/g, '');
-      content = content.replace(/=======.*?\n/g, '');
-      content = content.replace(/>>>>>>>.*?\n/g, '');
-      modified = true;
-    }
-    
-    // Fix common JSX syntax issues
-    // Fix missing closing braces in JSX
-    const openBraces = (content.match(/\{/g) || []).length;
-    const closeBraces = (content.match(/\}/g) || []).length;
-    
-    if (openBraces > closeBraces) {
-      console.log(`Fixing missing closing braces in: ${filePath}`);
-      // Add missing closing braces at the end of the component
-      const lines = content.split('\n');
-      const lastLine = lines[lines.length - 1];
-      if (!lastLine.trim().startsWith('}') && !lastLine.trim().startsWith('export')) {
-        lines.push('}');
-        content = lines.join('\n');
-        modified = true;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
-      }
-      return match;
-    });
-    
-    // Remove any remaining orphaned closing braces at the end
-    const lines = content.split('\n');
-    let fixedLines = [];
-    let braceCount = 0;
-    
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      const openBraces = (line.match(/\{/g) || []).length;
-      const closeBraces = (line.match(/\}/g) || []).length;
-      
-      braceCount += openBraces - closeBraces;
-      
-      // If we have too many closing braces at the end, skip them
-      if (i === lines.length - 1 && braceCount < 0) {
-        // Skip extra closing braces
-        continue;
-      }
-      
-      fixedLines.push(line);
-    }
-    
-<<<<<<< HEAD
-    content = fixedLines.join('\n');
-    
-    // Clean up multiple empty lines
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    
-    if (content !== originalContent) {
-=======
-    // Fix common issues
-    const fixes = [
-      // Fix duplicate className attributes
-      {
-        pattern: /className="[^"]*"\s+className="[^"]*"/g,
-        replacement: (match) => {
-          const classes = match.match(/className="([^"]*)"/g);
-          if (classes && classes.length > 1) {
-            const allClasses = classes.map(c => c.replace('className="', '').replace('"', '')).join(' ');
-            return `className="${allClasses}"`;
-          }
-          return match;
-        }
-      },
-      
-      // Fix missing semicolons in JSX
-      {
-        pattern: /(\w+)\s*=\s*\{[^}]*\}\s*$/gm,
-        replacement: (match) => {
-          if (!match.endsWith(';') && !match.includes('return') && !match.includes('if') && !match.includes('for')) {
-            return match + ';';
-          }
-          return match;
-        }
-      },
-      
-      // Fix malformed JSX closing tags
-      {
-        pattern: /<\/div>\s*<\/div>\s*<\/section>/g,
-        replacement: '</div>\n        </div>\n      </section>'
-      },
-      
-      // Fix missing closing braces in object literals
-      {
-        pattern: /(\w+):\s*'[^']*'\s*$/gm,
-        replacement: (match) => {
-          if (!match.endsWith(',') && !match.endsWith('}')) {
-            return match + ',';
-          }
-          return match;
-        }
-      },
-      
-      // Fix duplicate closing tags
-      {
-        pattern: /<\/li>\s*<\/li>/g,
-        replacement: '</li>'
-      },
-      
-      // Fix malformed interface definitions
-      {
-        pattern: /}\s*children:\s*ReactNode;/g,
-        replacement: '}\n\ninterface Props {\n  children: ReactNode;'
-      }
-    ];
-    
-    fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
-    });
-    
-    if (modified) {
->>>>>>> cursor/delete-records-30ea
-      fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed syntax errors in: ${filePath}`);
-      return true;
-    }
-    
-    return false;
-<<<<<<< HEAD
-  } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
-=======
-
-// Function to fix common TypeScript/JSX syntax errors
-function fixSyntaxErrors(content) {
-  // Fix missing commas in object properties
-  content = content.replace(/(\w+):\s*([^,}\n]+)(\s*)([}\n])/g, (match, key, value, space, end) => {
-    if (value.trim() && !value.includes(',') && !value.includes(';') && end === '}') {
-      return `${key}: ${value},${space}${end}`;
-    }
-    return match;
-  });
-
-  // Fix missing commas in interface properties
-  content = content.replace(/(\w+):\s*(\w+)(\s*)([}\n])/g, (match, key, type, space, end) => {
-    if (end === '}') {
-      return `${key}: ${type};${space}${end}`;
-    }
-    return match;
-  });
-
-  // Fix missing commas in function parameters
-  content = content.replace(/(\w+):\s*(\w+)(\s*)([)\n])/g, (match, param, type, space, end) => {
-    if (end === ')') {
-      return `${param}: ${type},${space}${end}`;
-    }
-    return match;
-  });
-
-  // Fix missing commas in array elements
-  content = content.replace(/(\w+)(\s*)(\n\s*])/g, (match, item, space, end) => {
-    return `${item},${space}${end}`;
-  });
-
-  // Fix missing semicolons in variable declarations
-  content = content.replace(/(\w+):\s*(\w+)(\s*)([}\n])/g, (match, key, value, space, end) => {
-    if (end === '\n' && !value.includes(';')) {
-      return `${key}: ${value};${space}${end}`;
-    }
-    return match;
-  });
-
-  // Fix JSX fragment syntax
-  content = content.replace(/<>([\s\S]*?)<\/>/g, '<React.Fragment>$1</React.Fragment>');
-
-  // Fix missing closing tags
-  content = content.replace(/(<div[^>]*>)([\s\S]*?)(<\/div>)/g, (match, open, content, close) => {
-    const openCount = (content.match(/<div/g) || []).length;
-    const closeCount = (content.match(/<\/div>/g) || []).length;
-    if (openCount > closeCount) {
-      return open + content + '</div>'.repeat(openCount - closeCount) + close;
-    }
-    return match;
-  });
-
-  return content;
-}
-
-// Function to fix merge conflict markers
-function fixMergeConflicts(content) {
-  // Remove merge conflict markers
-  content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-  content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
-  return content;
-}
-
-// Function to fix React component issues
-function fixReactIssues(content) {
-  // Fix missing React import
-  if (content.includes('React.FC') && !content.includes("import React")) {
-    content = "import React from 'react';\n" + content;
-  }
-
-  // Fix missing component wrapper
-  if (content.includes('return (') && !content.includes('const ') && !content.includes('function ')) {
-    content = "const Component: React.FC = () => {\n" + content;
-    content = content.replace(/export default [^;]+;?$/, '};\n\nexport default Component;');
-  }
-
-  return content;
-}
-
-// Main function to process files
-function processFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
-    
-    // Apply fixes
-    content = fixMergeConflicts(content);
-    content = fixSyntaxErrors(content);
-    content = fixReactIssues(content);
-    
-    // Only write if content changed
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
-    
-  } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
->>>>>>> cursor/delete-records-30ea
-    return false;
-  }
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Main function
-function main() {
-  console.log('🔍 Finding files with syntax errors...');
-  
-  // Get files that might have syntax errors by checking specific patterns
-  const files = [
-    '/workspace/App.tsx',
-    '/workspace/App_clean.tsx', 
-    '/workspace/EnhancedFooter.tsx'
-  ];
-  
-  // Add all app pages
-  try {
-    const appFiles = execSync('find /workspace/app -name "*.tsx" -o -name "*.ts" | head -50', { encoding: 'utf8' });
-    files.push(...appFiles.trim().split('\n').filter(line => line.trim()));
-  } catch (error) {
-    console.log('Could not find app files');
-  }
-  
-  console.log(`📁 Checking ${files.length} files for syntax errors...`);
-  
-  let fixed = 0;
-  let failed = 0;
-  
-  files.forEach(file => {
-    if (fs.existsSync(file)) {
-      if (fixSyntaxErrors(file)) {
-        fixed++;
-      } else {
-        // Check if file has syntax issues
-        try {
-          const content = fs.readFileSync(file, 'utf8');
-          if (content.includes('}') && content.split('{').length < content.split('}').length) {
-            console.log(`⚠️  ${file} may have brace mismatch`);
-          }
-        } catch (error) {
-          // File might not exist or be readable
-        }
-=======
-
-// Files with syntax errors
+// List of files with syntax errors
 const filesToFix = [
-  '/workspace/src/ai-crm/page.tsx',
-  '/workspace/src/ai-customer-support-bot/page.tsx',
-  '/workspace/src/ai-email-marketing/page.tsx',
-  '/workspace/src/ai-ml-platform/page.tsx',
-  '/workspace/src/ai-project-manager/page.tsx',
-  '/workspace/src/ai-services/page.tsx',
-  '/workspace/src/it-services/page.tsx',
-  '/workspace/src/page-minimal.tsx',
-  '/workspace/src/services/page.tsx'
+  'app/ai-computer-vision/page.tsx',
+  'app/ai-content-delivery-network/page.tsx',
+  'app/ai-content-generation/page.tsx',
+  'app/ai-content-generation-pro/page.tsx',
+  'app/ai-content-moderation/page.tsx',
+  'app/ai-crm-assistant/page.tsx',
+  'app/ai-content-studio/page.tsx',
+  'app/ai-recruitment-assistant/page.tsx'
 ];
 
-function fixSyntaxErrors(filePath) {
+// Template for a basic AI page
+const createBasicPage = (title, description, keywords, icon = 'Brain') => `'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
+const ${title.replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase())}Page: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom metrics', 'Data visualization', 'Performance tracking']
+    },
+    {
+      icon: Zap,
+      title: 'Real-time Processing',
+      description: 'Process and analyze data in real-time for instant insights.',
+      benefits: ['Live data streams', 'Instant updates', 'Real-time alerts', 'Dynamic dashboards']
+    },
+    {
+      icon: Shield,
+      title: 'Secure & Compliant',
+      description: 'Enterprise-grade security with full compliance standards.',
+      benefits: ['Data encryption', 'Access controls', 'Audit trails', 'GDPR compliance']
+    }
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>${title.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} - Zion Tech Group</title>
+        <meta name="description" content="${description}" />
+        <meta name="keywords" content="${keywords}" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              ${title.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              ${description}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our AI-powered solution provides comprehensive tools for modern businesses.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                    <feature.icon className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-400">
+                        <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Key Benefits
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the power of our AI solution for your business.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-3">
+                  <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                  <p className="text-gray-300 text-lg">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-purple-100 mb-8">
+                Contact our experts to discuss your needs and get a customized solution.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                  Contact Sales
+                </button>
+                <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+                  Schedule Demo
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default ${title.replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase())}Page;`;
+
+// Fix each file
+filesToFix.forEach(filePath => {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    const title = path.basename(path.dirname(filePath));
+    const description = `AI-powered ${title.replace(/-/g, ' ')} solution for modern businesses.`;
+    const keywords = `AI, artificial intelligence, ${title.replace(/-/g, ' ')}, business solutions`;
     
-    console.log(`Fixing ${filePath}...`);
-    
-    // Fix stray ]; characters
-    if (content.includes('};  ];')) {
-      content = content.replace(/};\s*];/g, '}\n  ];');
-      modified = true;
-      console.log(`  Fixed stray ]; characters`);
-    }
-    
-    // Fix missing closing braces in object literals
-    content = content.replace(/(\w+):\s*'([^']*)'\s*(\];)/g, (match, key, value, closing) => {
-      if (!match.includes('}')) {
-        return `${key}: '${value}'\n    }${closing}`;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
-      }
-      return match;
-    });
-    
-    // Fix missing closing braces in array elements
-    content = content.replace(/(\w+):\s*\[([^\]]*)\]\s*(\];)/g, (match, key, value, closing) => {
-      if (!match.includes('}')) {
-        return `${key}: [${value}]\n    }${closing}`;
-      }
-      return match;
-    });
-    
-    // Fix property assignment syntax errors
-    content = content.replace(/(\w+)\s*=\s*(\w+)\s*:/g, '$1: $2,');
-    
-    // Fix missing closing braces in JSX expressions
-    content = content.replace(/\{([^}]*?)(\s*)(<\/[^>]*>)/g, (match, expr, whitespace, closingTag) => {
-      if (!expr.includes('}') && !expr.trim().endsWith(';')) {
-        return `{${expr}}${whitespace}${closingTag}`;
-      }
-      return match;
-    });
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`  Fixed syntax errors in ${filePath}`);
-      return true;
-    } else {
-      console.log(`  No syntax issues found in ${filePath}`);
-      return false;
-    }
-<<<<<<< HEAD
-  });
-  
-  console.log(`\n📊 Summary:`);
-  console.log(`  ✅ Fixed: ${fixed} files`);
-  console.log(`  ❌ Failed: ${failed} files`);
-  
-  if (fixed > 0) {
-    console.log('\n🎉 Syntax errors fixed! Running type check...');
-    try {
-      execSync('cd /workspace && pnpm run type-check 2>&1 | head -20', { stdio: 'inherit' });
-    } catch (error) {
-      console.log('⚠️  Type check completed with some issues remaining');
-    }
-  }
-}
-
-main();
-=======
-// Find all TypeScript/JSX files
-function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        // Skip node_modules and other common directories
-        if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
-          traverse(fullPath);
-        }
-      } else if (extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
-=======
-// Function to find all TypeScript/JavaScript files
-function findSourceFiles(dir) {
-  const sourceFiles = [];
-  
-  function scanDirectory(currentDir) {
-    const files = fs.readdirSync(currentDir);
-    
-    for (const file of files) {
-      const filePath = path.join(currentDir, file);
-      const stat = fs.statSync(filePath);
-      
-      if (stat.isDirectory()) {
-        // Skip node_modules and other common directories
-        if (!['node_modules', '.git', '.next', 'dist', 'out'].includes(file)) {
-          scanDirectory(filePath);
-        }
-      } else if (stat.isFile() && (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js'))) {
-        sourceFiles.push(filePath);
->>>>>>> cursor/delete-records-30ea
-      }
-    }
-  }
-  
-<<<<<<< HEAD
-  traverse(dir);
-  return files;
-}
-
-// Main execution
-const appDir = path.join(__dirname, 'app');
-const files = findFiles(appDir);
-
-console.log(`Found ${files.length} files to process...`);
-
-let fixedCount = 0;
-for (const file of files) {
-  if (processFile(file)) {
-    fixedCount++;
-  }
-}
-
-console.log(`Fixed ${fixedCount} files`);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
-=======
-    
+    const content = createBasicPage(title, description, keywords);
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
-}
+});
 
-console.log('🔧 Fixing syntax errors...\n');
-
-let fixedCount = 0;
-for (const file of filesToFix) {
-  if (fs.existsSync(file)) {
-    if (fixSyntaxErrors(file)) {
-      fixedCount++;
-    }
-  } else {
-    console.log(`File not found: ${file}`);
-  }
-}
-
-console.log(`\n✅ Fixed syntax errors in ${fixedCount} files.`);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
-=======
-    // Fix common React component issues
-    // Ensure proper export default
-    if (!content.includes('export default') && content.includes('const ') && content.includes('= () =>')) {
-      const componentName = content.match(/const (\w+)\s*=\s*\(/)?.[1];
-      if (componentName) {
-        console.log(`Adding missing export default for: ${filePath}`);
-        content += `\n\nexport default ${componentName};`;
-        modified = true;
-      }
-    }
-    
-    // Fix missing semicolons
-    content = content.replace(/(\w+)\s*=\s*\([^)]*\)\s*=>\s*\{([^}]*)\}(?!\s*;)/g, '$1 = ($2) => {$3};');
-    
-    // Remove unused variable assignments that start with underscore
-    content = content.replace(/const\s+_\w+\s*=\s*[^;]+;/g, '');
-    content = content.replace(/let\s+_\w+\s*=\s*[^;]+;/g, '');
-    content = content.replace(/var\s+_\w+\s*=\s*[^;]+;/g, '');
-    
-    // Remove unused imports
-    content = content.replace(/import\s+\{[^}]*\b_\w+\b[^}]*\}\s+from\s+['"][^'"]+['"];?\n?/g, '');
-    
-    // Fix common JSX issues
-    content = content.replace(/\s*<>\s*$/gm, '');
-    content = content.replace(/^\s*<\/>\s*$/gm, '');
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      return true;
-    }
-    
-    return false;
-  } catch (error) {
-    console.error(`Error fixing syntax in ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Function to find all TypeScript/JavaScript files
-function findSourceFiles(dir) {
-  const files = [];
-  
-  function walkDir(currentPath) {
-    const items = fs.readdirSync(currentPath);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentPath, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        if (!['node_modules', '.git', '.next', 'dist', 'out'].includes(item)) {
-          walkDir(fullPath);
-        }
-      } else if (stat.isFile()) {
-        if (item.match(/\.(ts|tsx|js|jsx)$/)) {
-          files.push(fullPath);
-        }
-      }
-    }
-  }
-  
-  walkDir(dir);
-  return files;
-}
-
-// Main execution
-console.log('Starting syntax error fixes...');
-
-const srcDir = path.join(__dirname, 'src');
-const sourceFiles = findSourceFiles(srcDir);
-
-console.log(`Found ${sourceFiles.length} source files`);
-
-let fixedCount = 0;
-for (const filePath of sourceFiles) {
-  if (fixSyntaxErrors(filePath)) {
-    fixedCount++;
-  }
-}
-
-console.log(`Fixed syntax errors in ${fixedCount} files`);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
-=======
-  scanDirectory('.');
-  return sourceFiles;
-}
-
-// Main execution
-try {
-  const sourceFiles = findSourceFiles('.');
-  console.log(`🔍 Found ${sourceFiles.length} source files`);
-  
-  let fixedCount = 0;
-  let errorCount = 0;
-  
-  for (const file of sourceFiles) {
-    if (fixSyntaxErrors(file)) {
-      fixedCount++;
-    } else {
-      errorCount++;
-    }
-  }
-  
-  console.log(`✅ Successfully fixed syntax errors in ${fixedCount} files`);
-  if (errorCount > 0) {
-    console.log(`❌ Failed to fix syntax errors in ${errorCount} files`);
-  }
-  
-  // Try to build the project to check if errors are resolved
-  console.log('🔨 Testing build after syntax fixes...');
-  try {
-    const { execSync } = require('child_process');
-    execSync('npm run build', { stdio: 'inherit' });
-    console.log('✅ Build successful! All syntax errors resolved.');
-  } catch (buildError) {
-    console.log('❌ Build still has issues. Some syntax errors may remain.');
-  }
-  
-} catch (error) {
-  console.error('❌ Error during syntax error fixing:', error.message);
-  process.exit(1);
-}
->>>>>>> cursor/delete-records-30ea
+console.log('All files fixed!');

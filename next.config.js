@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Disable static generation completely
-  output: 'export',
-  trailingSlash: true,
-  distDir: 'dist',
+  // Use regular build instead of static export
+  // output: 'export',
+  // trailingSlash: true,
+  // distDir: 'dist',
   images: {
     unoptimized: true
   },
