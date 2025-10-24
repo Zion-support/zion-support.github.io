@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 
@@ -112,10 +113,17 @@ import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users, ArrowRight 
 >>>>>>> cursor/delete-records-fd55
 =======
 >>>>>>> cursor/delete-records-bf70
+=======
+'use client';
+import React, { memo } from 'react';
+import { Link } from 'react-router-dom';
+import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users, ArrowRight } from 'lucide-react';
+>>>>>>> cursor/delete-records-30ea
 
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -227,6 +235,45 @@ const Footer: React.FC = memo(() => {
 >>>>>>> cursor/delete-records-fd55
 =======
 >>>>>>> cursor/delete-records-bf70
+=======
+  const aiServices = [
+    { name: 'AI Solutions', url: '/ai-services', description: 'Comprehensive AI solutions' },
+    { name: 'AI Marketing Automation', url: '/ai-marketing', description: 'AI-powered marketing automation' },
+    { name: 'AI Customer Support', url: '/ai-customer-support', description: 'AI-powered customer service' },
+    { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
+    { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
+    { name: 'AI Healthcare Solutions', url: '/ai-healthcare', description: 'Medical AI solutions' },
+    { name: 'AI Financial Services', url: '/ai-fintech', description: 'Financial AI applications' },
+    { name: 'AI E-commerce Solutions', url: '/ai-ecommerce-solutions', description: 'E-commerce AI solutions' },
+    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
+    { name: 'AI Mobile Apps', url: '/ai-mobile-app-development', description: 'Mobile AI applications' },
+    { name: 'AI Sales Automation', url: '/ai-sales-automation', description: 'Intelligent sales processes' },
+    { name: 'AI Project Management', url: '/ai-project-management', description: 'AI-powered project management' }
+  ];
+
+  const itServices = [
+    { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', description: 'Scalable cloud solutions' },
+    { name: 'DevOps & CI/CD', url: '/devops', description: 'Automated deployment pipelines' },
+    { name: 'Cybersecurity', url: '/cybersecurity', description: 'Comprehensive security solutions' },
+    { name: 'Data Analytics', url: '/data-analytics', description: 'Business intelligence and analytics' },
+    { name: 'Mobile Development', url: '/mobile-development', description: 'Native and cross-platform apps' },
+    { name: 'Web Development', url: '/web-development', description: 'Modern web applications' },
+    { name: 'Database Management', url: '/database-management', description: 'Database design and optimization' },
+    { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT guidance' }
+  ];
+
+  const microSaas = [
+    { name: 'AI Content Writer', url: '/micro-saas/ai-content-writer', description: 'AI-powered content creation' },
+    { name: 'Analytics Dashboard', url: '/micro-saas/analytics-dashboard', description: 'Business analytics platform' },
+    { name: 'Appointment Scheduler', url: '/micro-saas/appointment-scheduler', description: 'Smart scheduling system' },
+    { name: 'Chat Analytics', url: '/micro-saas/chat-analytics', description: 'Conversation insights' },
+    { name: 'Content Generator', url: '/micro-saas/content-generator', description: 'Automated content creation' },
+    { name: 'Document Processor', url: '/micro-saas/document-processor', description: 'Document automation' },
+    { name: 'Email Marketing', url: '/micro-saas/email-marketing', description: 'Email campaign management' },
+    { name: 'Expense Tracker', url: '/micro-saas/expense-tracker', description: 'Financial tracking tool' }
+  ];
+
+>>>>>>> cursor/delete-records-30ea
   const companyLinks = [
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
@@ -234,12 +281,18 @@ const Footer: React.FC = memo(() => {
     { name: 'Case Studies', url: '/case-studies' },
     { name: 'Blog', url: '/blog' },
 <<<<<<< HEAD
+<<<<<<< HEAD
     { name: 'News', url: '/news' }
   ]
+=======
+    { name: 'News', url: '/news' }
+  ];
+>>>>>>> cursor/delete-records-30ea
 
   const supportLinks = [
     { name: 'Contact Us', url: '/contact' },
     { name: 'Support', url: '/support' },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     { name: 'Careers', url: '/careers' },
@@ -270,22 +323,33 @@ const Footer: React.FC = memo(() => {
   ];
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/delete-records-30ea
     { name: 'Documentation', url: '/docs' },
     { name: 'API Documentation', url: '/api-docs' },
     { name: 'Status', url: '/status' },
     { name: 'Help Center', url: '/help' }
+<<<<<<< HEAD
   ]
+=======
+  ];
+>>>>>>> cursor/delete-records-30ea
 
   const contactInfo = {
     phone: '+1 (302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709',
     hours: 'Mon-Fri: 9AM-6PM EST',
+<<<<<<< HEAD
     emergency: '24/7 Emergency Support Available'
   };
 >>>>>>> cursor/delete-records-fd55
 =======
 >>>>>>> cursor/delete-records-bf70
+=======
+    emergency: '24/7 Emergency Support Available',
+  };
+>>>>>>> cursor/delete-records-30ea
 
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
@@ -337,9 +401,103 @@ const Footer: React.FC = memo(() => {
             </div>
           </div>
 
+<<<<<<< HEAD
+=======
+          {/* AI Services */}
+>>>>>>> cursor/delete-records-30ea
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Company</h3>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+              <Brain className="w-5 h-5 mr-2" />
+              AI Services
+            </h3>
             <ul className="space-y-2">
+<<<<<<< HEAD
+=======
+              {aiServices.slice(0, 8).map((service, index) => (
+                <li key={index}>
+                  <Link 
+                    to={service.url}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                  >
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link 
+                  to="/ai-services"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                >
+                  View All AI Services →
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* IT Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+              <Cloud className="w-5 h-5 mr-2" />
+              IT Services
+            </h3>
+            <ul className="space-y-2">
+              {itServices.slice(0, 8).map((service, index) => (
+                <li key={index}>
+                  <Link 
+                    to={service.url}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                  >
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link 
+                  to="/it-services"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                >
+                  View All IT Services →
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Micro SAAS */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+              <Code className="w-5 h-5 mr-2" />
+              Micro SAAS
+            </h3>
+            <ul className="space-y-2">
+              {microSaas.slice(0, 8).map((service, index) => (
+                <li key={index}>
+                  <Link 
+                    to={service.url}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                  >
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link 
+                  to="/micro-saas"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                >
+                  View All Micro SAAS →
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Company & Support */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+              <Users className="w-5 h-5 mr-2" />
+              Company
+            </h3>
+            <ul className="space-y-2">
+>>>>>>> cursor/delete-records-30ea
               {companyLinks.map((link, index) => (
                 <li key={index}>
                   <Link
@@ -352,6 +510,7 @@ const Footer: React.FC = memo(() => {
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
 
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">Resources</h3>
@@ -409,6 +568,13 @@ const Footer: React.FC = memo(() => {
         <div className="border-t border-gray-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
+=======
+        </div>
+
+        <div className="mt-8 pt-8 border-t border-gray-700">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="text-sm text-gray-400 mb-4 md:mb-0">
+>>>>>>> cursor/delete-records-30ea
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-6">
@@ -428,6 +594,7 @@ const Footer: React.FC = memo(() => {
       </div>
     </footer>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -451,3 +618,9 @@ export default Footer;
 >>>>>>> cursor/delete-records-fd55
 =======
 >>>>>>> cursor/delete-records-bf70
+=======
+});
+
+Footer.displayName = 'Footer';
+export default Footer;
+>>>>>>> cursor/delete-records-30ea

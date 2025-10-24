@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  * Accessibility Enhancement Utilities
  * Provides tools to improve web accessibility
@@ -8,6 +9,17 @@
 =======
 'use client';
 >>>>>>> cursor/fix-errors-and-merge-to-main-d028
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+
+export class AccessibilityEnhancer {private focusableElements: HTMLElement[] = [],}
+  private skipLinks: HTMLElement[] = [],
+  private landmarks: HTMLElement[] = [],
+  private isInitialized = false;
+>>>>>>> cursor/delete-records-30ea
 
 export interface AccessibilityOptions {
   enableKeyboardNavigation?: boolean;
@@ -236,6 +248,7 @@ export class AccessibilityEnhancer {
   /**
    * Handle key down events
    */
+<<<<<<< HEAD
   private handleKeyDown(event: KeyboardEvent): void {
     switch (event.key) {
       case 'Tab':
@@ -275,6 +288,54 @@ export class AccessibilityEnhancer {
     }
 
     focusableElements[this.currentFocusIndex]?.focus();
+=======
+  private handleTabKey(event: KeyboardEvent): void {,}
+    const activeElement = document.activeElement as HTMLElement;
+    const currentIndex = this.focusableElements.indexOf(activeElement);
+    
+    if (currentIndex === -1) return;
+    
+    if (event.shiftKey) {
+      // Shift + Tab (backward)
+      const prevIndex = currentIndex > 0 ? currentIndex - 1 : this.focusableElements.length - 1;
+      this.focusableElements[prevIndex]?.focus();}else {// Tab (forward)}
+      const nextIndex = currentIndex < this.focusableElements.length - 1 ? currentIndex + 1 : 0;
+      this.focusableElements[nextIndex]?.focus();}}
+
+  /**
+   * Handle escape key;
+   */
+  private handleEscapeKey(event: KeyboardEvent): void {,}
+    // Close any open modals or dropdowns;
+const AccessibilityEnhancerPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal results',
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards',
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses',
+    }
+  ];
+
+  const benefits = [
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+focusableElements[nextIndex]?.focus();
+>>>>>>> cursor/delete-records-30ea
     event.preventDefault();
   }
 
@@ -1093,6 +1154,7 @@ Recommendations:
 - Implement proper ARIA labels and roles
 - Test with screen readers regularly
 `;
+<<<<<<< HEAD
   }
 
   /**
@@ -1119,3 +1181,334 @@ Recommendations:
 =======
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-6d59
+=======
+  private handleEscapeKey(event: KeyboardEvent): void {
+    // Close any open modals or dropdowns
+    const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');
+    modals.forEach(modal => {)
+      const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;
+      closeButton?.click();})
+    
+    // Close any open menus;
+    const menus = document.querySelectorAll('[role="menu"][aria-expanded="true"]');
+    menus.forEach(menu => {)
+      const trigger = document.querySelector(`[aria-controls="${menu.id)}"]`) as HTMLElement;
+      trigger?.click();
+
+  private handleEscapeKey(event: KeyboardEvent): void {
+    // Close any open modals or dropdowns
+    const modals = document.querySelectorAll('[role="dialog"], [aria-hidden="false"]')
+    modals.forEach()
+      const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement
+      closeButton?.click()
+    })
+    
+    // Close any open menus
+    const menus = document.querySelectorAll('[role="menu"], [aria-expanded="true"]')
+    menus.forEach()
+      const trigger = document.querySelector(`[aria-controls="${menu.id}"]`) as HTMLElement
+      trigger?.click()
+    })
+  }
+
+  /**
+   * Handle arrow key navigation;
+   */
+  private handleArrowKeys(event: KeyboardEvent): void {,}
+    const activeElement = document.activeElement as HTMLElement;
+    
+    // Handle arrow keys for radio groups, menus, etc.
+    if (activeElement.getAttribute('role') === 'menuitem' || 
+        activeElement.getAttribute('type') === 'radio') {
+      this.handleMenuNavigation(event);}}
+
+  /**
+   * Handle menu navigation with arrow keys;
+   */
+  private handleMenuNavigation(event: KeyboardEvent): void {,}
+    const activeElement = document.activeElement as HTMLElement;
+    const menuItems = Array.from()
+      activeElement.closest('[role="menu"]')?.querySelectorAll('[role="menuitem"]') || []
+    ) as HTMLElement[]
+    const currentIndex = menuItems.indexOf(activeElement)
+    if (currentIndex === -1) return
+    let nextIndex = currentIndex
+    switch (event.key) {
+      case 'ArrowDown':
+        nextIndex = (currentIndex + 1) % menuItems.length
+        break
+      case 'ArrowUp':
+        nextIndex = currentIndex > 0 ? currentIndex - 1 : menuItems.length - 1
+        break
+      case 'ArrowRight':
+        nextIndex = (currentIndex + 1) % menuItems.length
+        break
+      case 'ArrowLeft':
+        nextIndex = currentIndex > 0 ? currentIndex - 1 : menuItems.length - 1;
+        break;}menuItems[nextIndex]?.focus();
+    event.preventDefault();
+  }
+
+  /**
+   * Setup skip links;
+   */
+  private setupSkipLinks(): void {// Create skip to main content link;}
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'Skip to main content';
+    skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';,
+    document.body.insertBefore(skipLink, document.body.firstChild);
+    
+    this.skipLinks.push(skipLink);}/**
+   * Setup landmarks;
+   */
+  private setupLandmarks(): void {// Ensure main content has proper landmark;}
+    const mainContent = document.querySelector('main') || document.querySelector('#main-content');
+    if (mainContent) {
+      mainContent.setAttribute('role', 'main');
+      mainContent.id = 'main-content';}// Setup navigation landmarks;
+    const navs = document.querySelectorAll('nav');
+    navs.forEach((nav, index) => {if (!nav.getAttribute('aria-label') && !nav.getAttribute('aria-labelledby')) {
+        nav.setAttribute('aria-label', `Navigation ${index + 1)}`);
+      }
+    })
+    
+    // Setup banner landmark;
+    const header = document.querySelector('header');
+    if (header) {header.setAttribute('role', 'banner');}// Setup contentinfo landmark;
+    const footer = document.querySelector('footer');
+    if (footer) {footer.setAttribute('role', 'contentinfo');}}
+
+  /**
+   * Setup ARIA labels;
+   */
+  private setupAriaLabels(): void {// Add ARIA labels to buttons without text;}
+    const iconButtons = document.querySelectorAll('button: not([aria-label]):not([aria-labelledby])');,
+    iconButtons.forEach(button => {)
+      const icon = button.querySelector('svg');
+      if (icon) {
+        const iconName = icon.getAttribute('data-icon') || 'button';
+        button.setAttribute('aria-label', iconName);}})
+    
+    // Add ARIA labels to form inputs;
+    const inputs = document.querySelectorAll('input: not([aria-label]):not([aria-labelledby])');,
+    inputs.forEach(input => {)
+      const label = document.querySelector(`label[for="${input.id)}"]`);
+      if (label) {input.setAttribute('aria-labelledby', label.id || `label-${input.id)}`);
+        if (!label.id) {label.id = `label-${input.id}`;
+        }
+      }
+    })
+  }
+
+  /**
+   * Setup color contrast improvements;
+   */
+  private setupColorContrast(): void {// Add high contrast mode support;}
+    const mediaQuery = window.matchMedia('(prefers-contrast: high)');,
+    
+    const handleContrastChange = (e: MediaQueryListEvent) => {,
+      if (e.matches) {
+        document.body.classList.add('high-contrast');}else {document.body.classList.remove('high-contrast');}}}
+    const handleContrastChange = (e: MediaQueryListEvent) => {
+      if (e.matches) {
+        document.body.classList.add('high-contrast')
+      } else {
+        document.body.classList.remove('high-contrast')
+      }
+    }
+    
+    mediaQuery.addEventListener('change', handleContrastChange)
+    handleContrastChange(mediaQuery)
+  }
+
+  /**
+   * Setup screen reader support;
+   */
+  private setupScreenReaderSupport(): void {// Add live region for announcements;}
+    const liveRegion = document.createElement('div');
+    liveRegion.setAttribute('aria-live', 'polite');
+    liveRegion.setAttribute('aria-atomic', 'true');
+    liveRegion.className = 'sr-only';
+    liveRegion.id = 'live-region';
+    document.body.appendChild(liveRegion);
+    
+    // Announce page changes;
+    this.announcePageChange();}/**
+   * Announce page changes to screen readers;
+   */
+  private announcePageChange(): void {const title = document.title;}
+    const liveRegion = document.getElementById('live-region');
+    if (liveRegion) {
+      liveRegion.textContent = `Page loaded: ${title,}`;
+    }
+  }
+
+  /**
+   * Announce messages to screen readers;
+   */
+  public announce(message: string): void {,}
+    const liveRegion = document.getElementById('live-region');
+    if (liveRegion) {
+      liveRegion.textContent = message;}}
+
+  /**
+   * Update focusable elements (call when DOM changes)
+   */
+  public updateFocusableElements(): void {this.updateFocusableElements();}}/**
+   * Get current focusable elements;
+   */
+  public getFocusableElements(): HTMLElement[] {return [...this.focusableElements]}/**
+   * Focus first focusable element;
+   */
+  public focusFirst(): void {this.focusableElements[0]?.focus();}}/**
+   * Focus last focusable element;
+   */
+  public focusLast(): void {this.focusableElements[this.focusableElements.length - 1]?.focus();}}/**
+   * Cleanup and destroy;
+   */
+  public destroy(): void {this.isInitialized = false;}
+    this.focusableElements = []
+    this.skipLinks = []
+    this.landmarks = []}}
+
+// Create global instance;
+export const accessibilityEnhancer = new AccessibilityEnhancer();
+
+// Export utility functions;
+export const announceToScreenReader = (message: string) => {,
+  accessibilityEnhancer.announce(message);}export const updateFocusableElements = () => {accessibilityEnhancer.updateFocusableElements();}export const focusFirstElement = () => {accessibilityEnhancer.focusFirst();}export const focusLastElement = () => {accessibilityEnhancer.focusLast();}
+  }
+}
+
+// Create global instance
+export const accessibilityEnhancer = new AccessibilityEnhancer();
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>AccessibilityEnhancer | Zion Tech Group</title>
+        <meta name="description" content="Professional AccessibilityEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="accessibilityEnhancer, AI solutions, IT services, Zion Tech Group, accessibilityenhancer" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                AccessibilityEnhancer
+              </span>
+              <br />
+              <span className="text-white">Solutions</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with our advanced accessibilityenhancer solutions. 
+              Powered by cutting-edge AI technology and industry expertise.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our AccessibilityEnhancer?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our accessibilityenhancer solutions deliver unmatched performance, security, and scalability.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Key Benefits
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the power of our accessibilityenhancer solutions for your business.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+// Export utility functions
+export const announceToScreenReader = (message: string) => {
+  accessibilityEnhancer.announce(message)
+}
+
+
+// Create global instance
+export const accessibilityEnhancer = new AccessibilityEnhancer()
+// Export utility functions
+export const announceToScreenReader = (message: string) => {
+  accessibilityEnhancer.announce(message)
+}
+export const updateFocusableElements = () => {
+  accessibilityEnhancer.updateFocusableElements()
+}
+export const focusFirstElement = () => {
+  accessibilityEnhancer.focusFirst()
+}
+export const focusLastElement = () => {
+  accessibilityEnhancer.focusLast()
+}
+
+export const updateFocusableElements = () => {
+  accessibilityEnhancer.updateFocusableElements();
+}
+
+export const focusFirstElement = () => {
+  accessibilityEnhancer.focusFirst();
+}
+
+export const focusLastElement = () => {
+  accessibilityEnhancer.focusLast();
+}
+export default AccessibilityEnhancerPage;
+>>>>>>> cursor/delete-records-30ea

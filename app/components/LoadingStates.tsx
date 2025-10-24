@@ -4,11 +4,14 @@ import React from 'react';
 =======
 'use client'
 import React from 'react'
+<<<<<<< HEAD
 import { Loader2 } from 'lucide-react'
 <<<<<<< HEAD
 >>>>>>> cursor/delete-records-fd55
 =======
 >>>>>>> cursor/delete-records-bf70
+=======
+>>>>>>> cursor/delete-records-30ea
 
 export const PageLoader: React.FC = () => {
   return (
@@ -20,6 +23,7 @@ export const PageLoader: React.FC = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export const ComponentLoader: React.FC = () => {
@@ -107,3 +111,5 @@ export default {
 >>>>>>> cursor/delete-records-fd55
 =======
 >>>>>>> cursor/delete-records-bf70
+=======
+>>>>>>> cursor/delete-records-30ea

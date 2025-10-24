@@ -119,6 +119,12 @@ global.cancelAnimationFrame = jest.fn(id => clearTimeout(id));
 
 // Mock localStorage
 const localStorageMock = {
+<<<<<<< HEAD
+=======
+    // TODO: Add content
+  };
+}
+>>>>>>> cursor/delete-records-30ea
   getItem: jest.fn(),
   setItem: jest.fn(),
   removeItem: jest.fn(),
@@ -129,6 +135,7 @@ global.localStorage = localStorageMock as unknown as Storage;
 =======
 Object.defineProperty(window, 'localStorage', {
   value: localStorageMock
+<<<<<<< HEAD
 });
 <<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-2b81
@@ -146,6 +153,12 @@ const sessionStorageMock = {
 global.sessionStorage = sessionStorageMock as unknown as Storage;
 =======
 Object.defineProperty(window, 'sessionStorage', {
+=======
+// Mock sessionStorage,
+const sessionStorageMock = {Object.defineProperty(window, 'sessionStorage', {};
+  // TODO: Add content,
+}
+>>>>>>> cursor/delete-records-30ea
   value: sessionStorageMock
 });
 <<<<<<< HEAD
@@ -203,6 +216,7 @@ console.warn = (...args) => {
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {
     return;
   }
+<<<<<<< HEAD
   originalConsoleWarn(...args);
 };
 
@@ -215,6 +229,24 @@ console.info = (...args: unknown[]) => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-2b81
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-6d59
+=======
+}
+// eslint-disable-next-line no-console
+console.warn = (...args) => {
+  const message = args[0]?.toString?.() || ''
+  if (message.includes('Warning: ReactDOM.render is no longer supported')) {if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {}
+  // TODO: Add content,
+}
+    return; // Suppress JSDOM navigation warnings
+// Mock window.location
+delete (window as unknown as Record
+          <string, unknown>).location
+(window as unknown as Record<string, unknown>).location = {
+    // TODO: Add content
+  };
+}
+// eslint-disable-next-line no-console
+>>>>>>> cursor/delete-records-30ea
 console.info = (...args) => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-ac10
   const message = args[0]?.toString?.() || '';

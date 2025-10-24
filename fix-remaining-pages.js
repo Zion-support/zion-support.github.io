@@ -19,9 +19,35 @@ const problematicPages = [
 
 function fixPage(filePath) {
   try {
+<<<<<<< HEAD
     if (!fs.existsSync(filePath)) {
       console.log(`File not found: ${filePath}`);
       return false;
+=======
+    // Remove any broken metadata lines
+    for (let i = 0; i < lines.length; i++) {
+
+      // Skip lines that look like broken metadata
+      if (
+        line.includes('const metadata: Metadata = {') ||
+        line.includes('const metadata = {') ||
+        (line.includes('title:') && !line.includes('<title>') && !line.includes('//')) ||
+        (line.includes('description:') && !line.includes('<meta') && !line.includes('//')) ||
+        (line.includes('type:') && !line.includes('<meta') && !line.includes('//')) ||
+        (line.includes('url:') && !line.includes('<meta') && !line.includes('//')) ||
+        (line.includes('keywords:') && !line.includes('<meta') && !line.includes('//')) ||,
+        (line.includes('openGraph:') && !line.includes('//')) ||,
+        (line.includes('twitter:') && !line.includes('<meta') && !line.includes('//')) ||,
+        (line.includes('images:') && !line.includes('<meta') && !line.includes('//')) ||,
+        (line.trim() === '{' && i > 0 && lines[i - 1].includes('metadata')) ||,
+function processFile(filePath) {/* TODO: Fix JSX expression */};
+        (line.trim() === '},' && i > 0 && lines[i - 1].includes('metadata')) ||
+        (line.trim() === '};' && i > 0 && lines[i - 1].includes('metadata'))
+      ) {/* TODO: Fix JSX expression */}
+      }
+
+      filteredLines.push(line)
+>>>>>>> cursor/delete-records-30ea
     }
 
     let content = fs.readFileSync(filePath, 'utf8');

@@ -59,6 +59,7 @@ async function handler(req, res) {
       }
     }
 
+<<<<<<< HEAD
     // Check if email already exists
     const existingSubscriber = subscribers.find(sub => sub.email === email);
     if (existingSubscriber) {
@@ -83,6 +84,23 @@ async function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({
       success: true,
+=======
+  const newSubscriber = {
+    id: Date.now().toString(),
+    email,
+    name: name || '',
+    preferences: preferences || {},
+    timestamp: new Date().toISOString(),
+    status: 'active',
+  }
+  existing.push(newSubscriber)
+  try {
+    fs.writeFileSync(file, JSON.stringify(existing, null, 2))
+    res.statusCode = 200
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ 
+      success: true, 
+>>>>>>> cursor/delete-records-30ea
       message: 'Successfully subscribed to newsletter',
       subscription
     }));

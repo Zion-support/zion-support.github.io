@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Mock performance monitoring utilities
 export const measurePerformance = (name: string, fn: () => void): number => {
   const start = performance.now();
@@ -57,3 +58,15 @@ describe('Performance Monitoring Utils', () => {
     });
   });
 });
+=======
+import {describe, it, expect}}from '@jest/globals';
+
+describe('Performance Monitoring', () => {it('should be a placeholder test', () => {
+    expect(true).toBe(true);})
+})
+describe('Performance Monitoring', () => {
+  it('should be a placeholder test', () => {
+    expect(true).toBe(true)
+  })
+})
+>>>>>>> cursor/delete-records-30ea

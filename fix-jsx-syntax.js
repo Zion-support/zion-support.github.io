@@ -21,6 +21,7 @@ function fixJSXSyntax(filePath) {
       );
       modified = true;
     }
+<<<<<<< HEAD
 
     // Fix extra closing div tags
     if (content.includes('    </div>\n    </div>')) {
@@ -34,6 +35,26 @@ function fixJSXSyntax(filePath) {
       modified = true;
     }
 
+=======
+  },
+  // Fix malformed JSX fragments
+  {
+    pattern: /<>\s*<div([^>]*)>([^<]*?)<\/div>\s*<\/>/g,
+    replacement: '<div$1>$2</div>',
+  }
+]
+function fixFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8')
+    let modified = false
+    fixes.forEach(fix => {
+      const newContent = content.replace(fix.pattern, fix.replacement)
+      if (newContent !== content) {
+        content = newContent
+        modified = true
+      }
+    })
+>>>>>>> cursor/delete-records-30ea
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);

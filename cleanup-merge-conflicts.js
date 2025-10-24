@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 
+=======
+>>>>>>> cursor/delete-records-30ea
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -20,11 +23,24 @@ function cleanMergeConflicts(filePath) {
         continue;
       }
       
+<<<<<<< HEAD
       if (!inConflict) {
         cleanedLines.push(line);
       } else if (conflictType === 'main') {
         cleanedLines.push(line);
       }
+=======
+      // Remove merge conflict markers and keep the HEAD version
+      content = content.replace(/<<<<<<< HEAD\n?/g, '');
+      content = content.replace(/=======\n?/g, '');
+      content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
+      
+      // Clean up any extra whitespace
+      content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+      
+      fs.writeFileSync(filePath, content);
+      return true;
+>>>>>>> cursor/delete-records-30ea
     }
     
     // Write cleaned content back
@@ -33,11 +49,16 @@ function cleanMergeConflicts(filePath) {
     
     return true; // Conflicts were cleaned
   } catch (error) {
+<<<<<<< HEAD
     console.error(`Error cleaning ${filePath}:`, error.message);
+=======
+    console.error(`Error processing ${filePath}:`, error.message);
+>>>>>>> cursor/delete-records-30ea
     return false;
   }
 }
 
+<<<<<<< HEAD
 // Function to fix common JSX syntax issues
 function fixJSXIssues(filePath) {
   try {
@@ -130,3 +151,39 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 }
 
 export { cleanMergeConflicts, fixJSXIssues };
+=======
+function findTsxFiles(dir) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath);
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+        files.push(fullPath);
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
+
+// Main execution
+const appDir = '/workspace/app';
+const files = findTsxFiles(appDir);
+
+let cleanedCount = 0;
+for (const file of files) {
+  if (cleanMergeConflicts(file)) {
+    cleanedCount++;
+  }
+}
+
+console.log(`Cleaned merge conflicts in ${cleanedCount} files`);
+>>>>>>> cursor/delete-records-30ea

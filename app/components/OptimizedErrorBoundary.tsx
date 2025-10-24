@@ -27,8 +27,13 @@ class OptimizedErrorBoundary extends Component<
       hasError: false,
       error: null,
       errorInfo: null,
+<<<<<<< HEAD:app/components/OptimizedErrorBoundary.tsx
       errorId: '',
     };
+=======
+      errorId:     ,
+$4};
+>>>>>>> cursor/delete-records-30ea:src/components/OptimizedErrorBoundary.tsx
   }
 
   static getDerivedStateFromError(error: Error): Partial<State> {

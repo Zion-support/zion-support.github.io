@@ -9,7 +9,43 @@ import react from 'eslint-plugin-react';
 export default [
   {ignores: ['dist', 'node_modules', '.next', 'out']},
   {
+<<<<<<< HEAD
     files: ['**/*.{js,jsx,ts,tsx}'],
+=======
+    ignores: [
+      'admin-api-disabled/**',
+      'ai-customer-support-disabled/**',
+      'ai-data-visualization-disabled/**',
+      'ai-sales-automation-disabled/**',
+      'ai-workflow-automation-disabled/**',
+      'api-disabled/**',
+      'api.disabled/**',
+      'api-backup/**',
+      'components-disabled/**',
+      'components.disabled/**',
+      'automation_backup/**',
+      'backup*/**',
+      '*-disabled/**',
+      '*.disabled/**',
+      '*.broken',
+      '*.backup',
+      'temp-files/**',
+      'cache/**',
+      'dist/**',
+      'node_modules/**',
+      'analyze-*.js',
+      'check-*.js',
+      'clean-*.js',
+      'fix-*.js',
+      '*.cjs',
+      '*.js.broken',
+      'jest.setup.js'
+    ],
+  },
+  // Base JavaScript configuration
+  {
+    files: ['**/*.{js,jsx}'],
+>>>>>>> cursor/delete-records-30ea
     languageOptions: {
       ecmaVersion: 2020,
       globals: {

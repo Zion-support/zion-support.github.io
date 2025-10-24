@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 require("@testing-library/jest-dom");
 
 // Polyfill for TextEncoder/TextDecoder
@@ -7,6 +8,27 @@ global.TextDecoder = TextDecoder;
 
 // Mock files that exist
 jest.mock('./app/utils/analytics.ts', () => ({
+=======
+/* eslint-env jest */
+// Learn more: https://github.com/testing-library/jest-dom
+require('@testing-library/jest-dom')
+const React = require('react')
+const { TextEncoder, TextDecoder } = require('util')
+// Polyfills for Node.js environment
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
+
+jest.mock('./src/utils/logger.ts', () => ({
+  logger: {
+    debug: jest.fn(),
+    info: jest.fn(),
+    warn: jest.fn(),
+    error: jest.fn(),
+    log: jest.fn(),
+  },
+}))
+jest.mock('./src/utils/analytics.ts', () => ({
+>>>>>>> cursor/delete-records-30ea
   trackEvent: jest.fn(),
   trackPageView: jest.fn(),
   initAnalytics: jest.fn(),

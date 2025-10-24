@@ -26,8 +26,17 @@ export default async function handler(req, res) {
       country,
       service,
       timestamp: new Date().toISOString(),
+<<<<<<< HEAD
       status: 'pending'
     };
+=======
+      status: 'pending',
+    }
+    // Log quote request for debugging in development
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Quote request received:', quoteData)
+    }
+>>>>>>> cursor/delete-records-30ea
 
     // In a real application, you would save this to a database
     // For now, we'll just log it
@@ -45,6 +54,13 @@ export default async function handler(req, res) {
     console.error('Quote submission error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
+<<<<<<< HEAD
     res.end(JSON.stringify({ error: 'Internal server error' }));
+=======
+    res.end(JSON.stringify({ 
+      error: 'Failed to submit quote request',
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+    }));
+>>>>>>> cursor/delete-records-30ea
   }
 }

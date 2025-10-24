@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+import { describe, test, expect } from '@jest/globals';
+>>>>>>> cursor/delete-records-30ea
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { describe, test, expect } from '@jest/globals';
 import { HelmetProvider } from 'react-helmet-async';
 
+<<<<<<< HEAD
 const TestComponent = () => {
   return (
     <HelmetProvider>
@@ -26,6 +31,14 @@ describe('Components', () => {
   });
   
   test('should handle SEO head component', () => {
+=======
+describe('Component Tests', () => {
+  test('LoadingSpinner renders correctly', () => {
+    render(<LoadingSpinner />)
+    expect(screen.getByRole('status')).toBeInTheDocument()
+  })
+  test('SEOEnhancer renders without crashing', () => {
+>>>>>>> cursor/delete-records-30ea
     render(
       <HelmetProvider>
         <div>SEO Test</div>

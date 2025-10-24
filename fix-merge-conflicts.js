@@ -71,4 +71,85 @@ for (const file of filesWithConflicts) {
   }
 }
 
+<<<<<<< HEAD
 console.log(`Fixed ${fixedCount} files`);
+=======
+// Function to fix specific parsing errors
+function fixParsingErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8')
+    let modified = false
+    // Fix common parsing errors
+    const fixes = [
+      // Fix missing commas in object literals
+      {
+        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:/g,
+        replacement: '$1: [$2],\n    $3:',
+      },
+      // Fix missing closing brackets
+      {
+        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*\]/g,
+        replacement: '$1: [$2]\n  }',
+      },
+      // Fix JSX fragment issues
+      {
+        pattern: /<>([^<]+)<\/>/g,
+        replacement: '<React.Fragment>$1</React.Fragment>',
+      },
+      // Fix missing semicolons
+      {
+        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*$/gm,
+        replacement: '$1: [$2],',
+      }
+    ]
+    for (const fix of fixes) {
+      const newContent = content.replace(fix.pattern, fix.replacement)
+      if (newContent !== content) {
+        content = newContent
+        modified = true
+      }
+    }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8')
+      console.log(`Fixed parsing errors in: ${filePath}`)
+      return true
+    }
+    
+    return false
+  } catch (error) {
+    console.error(`Error fixing parsing errors in ${filePath}:`, error.message)
+    return false
+  }
+}
+
+// Main execution
+console.log('Starting merge conflict and parsing error fixes...')
+const appDir = path.join(__dirname, 'app')
+const files = findFiles(appDir)
+let fixedCount = 0
+let errorCount = 0
+for (const file of files) {
+  try {
+    if (fixMergeConflicts(file)) {
+      fixedCount++
+    }
+    if (fixParsingErrors(file)) {
+      fixedCount++
+    }
+  } catch (error) {
+    console.error(`Failed to process ${file}:`, error.message)
+    errorCount++
+  }
+}
+
+console.log(`\nFixed ${fixedCount} files`)
+console.log(`Errors: ${errorCount} files`)
+// Run linting to check remaining issues
+console.log('\nRunning linting to check remaining issues...')
+try {
+  execSync('pnpm run lint', { stdio: 'inherit' })
+} catch (error) {
+  console.log('Linting completed with some remaining issues to fix manually')
+}
+>>>>>>> cursor/delete-records-30ea

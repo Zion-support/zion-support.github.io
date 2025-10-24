@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "use client";
 import React from "react";
 export default function HomePage() {
@@ -36,6 +37,8 @@ export default function HomePage() {
 >>>>>>> cursor/delete-records-fd55
 =======
 >>>>>>> cursor/delete-records-bf70
+=======
+>>>>>>> cursor/delete-records-30ea
 'use client';
 import React from 'react';
 import Navigation from './components/Navigation';
@@ -43,7 +46,7 @@ import Footer from './components/Footer';
 
 const HomePage: React.FC = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <Navigation />
       <main className="pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -74,6 +77,7 @@ const HomePage: React.FC = () => {
       </main>
       <Footer />
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2682,3 +2686,9 @@ export default HomePage;
 >>>>>>> cursor/delete-records-acd8
 =======
 >>>>>>> cursor/delete-records-bf70
+=======
+  );
+};
+
+export default HomePage;
+>>>>>>> cursor/delete-records-30ea

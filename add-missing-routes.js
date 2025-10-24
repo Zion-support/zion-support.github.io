@@ -8,7 +8,11 @@ const appContent = fs.readFileSync('/workspace/App.tsx', 'utf8');
 const analysisData = JSON.parse(fs.readFileSync('/workspace/navigation-analysis.json', 'utf8'));
 const missingPages = analysisData.missingPagesList;
 
+<<<<<<< HEAD
 // Generate import statements for missing pages
+=======
+// Generate import statements for missing pages;
+>>>>>>> cursor/delete-records-30ea
 const generateImportStatement = (route) => {
   const componentName = route.split('/').pop().replace(/-/g, '').replace(/(^|_)([a-z])/g, (match, p1, p2) => p2.toUpperCase()) + 'Page';
   return `const ${componentName} = React.lazy(() => import('.${route}/page'));`;

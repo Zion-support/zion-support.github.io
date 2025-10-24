@@ -98,4 +98,45 @@ async function handler(req, res) {
   }
 }
 
+<<<<<<< HEAD
 module.exports = withSentry(handler);
+=======
+  // Check if wallet address already exists
+  const existingWallet = existing.find(wallet => wallet.address === address)
+  if (existingWallet) {
+    res.statusCode = 400
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ error: 'Wallet address already exists' }))
+    return
+  }
+
+  const newWallet = {
+    id: Date.now().toString(),
+    address,
+    type,
+    name: name || '',
+    userId: userId || '',
+    timestamp: new Date().toISOString(),
+    status: 'active',
+  };
+  existing.push(newWallet)
+  try {
+    fs.writeFileSync(file, JSON.stringify(existing, null, 2))
+    res.statusCode = 200
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ 
+      success: true, 
+      message: 'Wallet added successfully',
+      id: newWallet.id
+    }))
+  } catch (error) {
+    // Log error for debugging in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error saving wallet:', error)
+    }
+    res.statusCode = 500
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ error: 'Failed to save wallet' }))
+  }
+}
+>>>>>>> cursor/delete-records-30ea
