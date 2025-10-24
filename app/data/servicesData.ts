@@ -1,22 +1,25 @@
 export interface Service {
-  id: string;
-  title: string;
-  description: string;
-  features: string[];
-  benefits: string[];
+  id: string
+  title: string
+  description: string
+  features: string[]
+  benefits: string[]
   pricing: {
-    basic: string;
-    pro: string;
-    enterprise: string};
+    basic: string
+    pro: string
+    enterprise: string
+  }
   contactInfo: {
-    website: string;
-    email: string;
-    phone: string};
-  price?: string;
-  icon?: string;
-  href: string;
-  popular?: boolean;
-  category: "ai" | "it" | "cloud" | "security" | "data" | "automation"}
+    website: string
+    email: string
+    phone: string
+  }
+  price?: string
+  icon?: string
+  href: string
+  popular?: boolean
+  category: "ai" | "it" | "cloud" | "security" | "data" | "automation"
+}
 
 export const aiServices: Service[] = [
   {
@@ -118,7 +121,7 @@ export const aiServices: Service[] = [
     popular: false,
     category: "ai"
   }
-];
+]
 
 export const itServices: Service[] = [
   {
@@ -187,8 +190,8 @@ export const itServices: Service[] = [
     popular: true,
     category: "security"
   }
-];
+]
 
-export const allServices: Service[] = [...aiServices, ...itServices];
+export const allServices: Service[] = [...aiServices, ...itServices]
 
-export default allServices;
+export default allServices

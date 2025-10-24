@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import React, {useState}from 'react';
-=======
-
 import React, { useState } from 'react';
->>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 interface FormData {
@@ -69,7 +64,7 @@ const ContactForm: React.FC = () => {
     <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-8">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>
-        <p className="text-gray-600">We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.</p>
+        <p className="text-gray-600">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">

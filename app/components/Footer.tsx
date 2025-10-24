@@ -1,11 +1,11 @@
-'use client';
+'use client'
 
-import React, { memo } from 'react';
-import Link from 'next/link';
-import { Phone, Mail, MapPin, Brain, Facebook, Github, Linkedin, Twitter } from 'lucide-react';
+import React, { memo } from 'react'
+import Link from 'next/link'
+import { Phone, Mail, MapPin, Brain, Facebook, Github, Linkedin, Twitter } from 'lucide-react'
 
 const Footer: React.FC = memo(() => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear()
   
   const aiServices = [
     { name: 'AI Analytics & BI', url: '/ai-analytics' },
@@ -16,7 +16,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Computer Vision', url: '/computer-vision' },
     { name: 'Predictive Analytics', url: '/predictive-analytics' },
     { name: 'Speech & Voice AI', url: '/ai-voice-assistant' }
-  ];
+  ]
 
   const itServices = [
     { name: 'Web Development', url: '/web-development' },
@@ -27,27 +27,27 @@ const Footer: React.FC = memo(() => {
     { name: 'Data Analytics', url: '/data-analytics' },
     { name: 'IoT Solutions', url: '/iot-solutions' },
     { name: 'Blockchain', url: '/blockchain' }
-  ];
+  ]
 
   const companyLinks = [
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
     { name: 'Careers', url: '/careers' },
     { name: 'Contact', url: '/contact' }
-  ];
+  ]
 
   const resourceLinks = [
     { name: 'Documentation', url: '/docs' },
     { name: 'API Reference', url: '/api' },
     { name: 'Blog', url: '/blog' },
     { name: 'Support', url: '/support' }
-  ];
+  ]
 
   const legalLinks = [
     { name: 'Privacy Policy', url: '/privacy' },
     { name: 'Terms of Service', url: '/terms' },
     { name: 'Cookie Policy', url: '/cookies' }
-  ];
+  ]
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -201,9 +201,9 @@ const Footer: React.FC = memo(() => {
         </div>
       </div>
     </footer>
-  );
-});
+  )
+})
 
-Footer.displayName = 'Footer';
+Footer.displayName = 'Footer'
 
-export default Footer;
+export default Footer

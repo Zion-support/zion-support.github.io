@@ -1,11 +1,11 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { Cloud, Zap, Shield, Globe, Brain, Star } from 'lucide-react';
+'use client'
+import React, { useState, useEffect } from 'react'
+import { Cloud, Zap, Shield, Globe, Brain, Star } from 'lucide-react'
 
 const DynamicContentShowcase: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0)
 
-  const features = [
+  const features = [,
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -30,22 +30,22 @@ const DynamicContentShowcase: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses',
       color: 'from-orange-500 to-red-600'
     }
-  ];
+  ]
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % features.length);
-    }, 3000);
+      setCurrentIndex((prev) => (prev + 1) % features.length)
+    }, 3000)
 
-    return () => clearInterval(timer);
-  }, [features.length]);
+    return () => clearInterval(timer)
+  }, [features.length])
 
-  const currentFeature = features[currentIndex];
+  const currentFeature = features[currentIndex]
 
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16"></div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Dynamic Content Showcase
           </h2>
@@ -54,10 +54,10 @@ const DynamicContentShowcase: React.FC = () => {
           </p>
         </div>
 
-        <div className="relative">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/20">
-            <div className="flex items-center justify-center mb-8">
-              <div className={`bg-gradient-to-r ${currentFeature.color} p-4 rounded-full`}>
+        <div className="relative"></div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/20"></div>
+            <div className="flex items-center justify-center mb-8"></div>
+              <div className={`bg-gradient-to-r ${currentFeature.color} p-4 rounded-full`}></div>
                 <currentFeature.icon className="h-12 w-12 text-white" />
               </div>
             </div>
@@ -70,19 +70,19 @@ const DynamicContentShowcase: React.FC = () => {
               {currentFeature.description}
             </p>
 
-            <div className="flex justify-center space-x-2 mb-8">
+            <div className="flex justify-center space-x-2 mb-8"></div>
               {features.map((_, index) => (
                 <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
+                  key={index
+                  onClick={() => setCurrentIndex(index)
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === currentIndex ? 'bg-white' : 'bg-white/30'
-                  }`}
+                  }`
                 />
-              ))}
+              ))
             </div>
 
-            <div className="text-center">
+            <div className="text-center"></div>
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300">
                 Learn More
               </button>
@@ -91,7 +91,10 @@ const DynamicContentShowcase: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default DynamicContentShowcase;
+}
+
+export default DynamicContentShowcase
+}

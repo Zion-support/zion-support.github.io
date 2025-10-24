@@ -11,11 +11,13 @@ import React from 'react';
       description: 'Lightning-fast processing and real-time analytics for optimal results',},
     {icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',},
-    {icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',}];
-  ];];];
+      description: 'Bank-level security with encryption and compliance standards for your AR/VR data'
+    },
+    {
+      icon: Globe,
+      title: 'Cross-Platform Support',
+      description: 'Deploy across multiple devices and platforms for maximum reach and accessibility'
+    }
   ]
   const benefits = [
     'Advanced AI technology integration',
