@@ -1,13 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
-import { 
-  ChevronDown, 
-  Menu, 
-  X, 
-  Brain, 
-  Code, 
-  Zap
-} from 'lucide-react';
+// import { 
+//   ChevronDown, 
+//   Menu, 
+//   X, 
+//   Brain, 
+//   Code, 
+//   Zap
+// } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   return (

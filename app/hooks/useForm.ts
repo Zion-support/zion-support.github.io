@@ -12,9 +12,9 @@ export const useForm = (initialValues = {}) => {
     }));
   };
 
-  const handleSubmit = (onSubmit: (values: any) => void) => (e: React.FormEvent) => {
+  const handleSubmit = (onSubmit: (_values: any) => void) => (e: React.FormEvent) => {
     e.preventDefault();
-    onSubmit(values);
+    onSubmit(_values);
   };
 
   return {
