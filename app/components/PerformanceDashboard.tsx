@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 =======
@@ -16,6 +17,14 @@ const PerformanceDashboard: React.FC = () => {
 =======
 import React, { useState, useEffect } from 'react';
 
+=======
+'use client';
+import { useState, useEffect} from 'react';
+import { HardDrive } from 'lucide-react';
+
+import { useState, useEffect } from 'react';
+import { HardDrive } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
 interface PerformanceMetrics {
   loadTime: number,
@@ -270,6 +279,14 @@ export default PerformanceDashboard;
 
 export default function PerformanceDashboard() {return (
 
+<<<<<<< HEAD
+=======
+  return (
+    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-lg border border-cyan-500/20 rounded-lg p-4 text-white text-xsmax-w-xsz-50">
+      <div className="flex items-centerjustify-betweenmb-3">
+        <h3 className="font-semibold text-cyan-400flex items-center" />
+          <Activity className="w-4h-4mr-1" />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           Performance
 
 setIsVisible(false)}
@@ -277,8 +294,14 @@ setIsVisible(false)}
           ×
         </button>
       </div>
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+=======
+
+      <div className="space-y-2">
+        <div className="flexjustify-between">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           <span   />LCP:</span>
           <span className="{getScoreColor(metrics.lcp," { good: 2500, poor: 4000})}    />{metrics.lcp.toFixed(0)}ms;
           </span>
@@ -298,6 +321,7 @@ setIsVisible(false)}
           <span className="{getScoreColor(metrics.fcp," { good: 1800, poor: 3000})}    />{metrics.fcp.toFixed(0)}ms;
           </span>
         </div>
+<<<<<<< HEAD
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <span   />TTFB: </span>
           <span className="{getScoreColor(metrics.ttfb," { good: 800, poor: 1800})}    />{metrics.ttfb.toFixed(0)}ms;
@@ -308,6 +332,20 @@ setIsVisible(false)}
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <HardDrive className="w-5h-5ml-2"   /></HardDrive>
               <span className="w-5h-5ml-2"   />Memory</span>
+=======
+        
+        <div className="flexjustify-between">
+          <span   />TTFB:</span>
+          <span className="{getScoreColor(metrics.ttfb," { good: 800, poor: 1800 })}  />{metrics.ttfb.toFixed(0)}ms
+          </span>
+        </div>
+
+        {metrics.memory && (
+          <div className="pt-2border-tborder-gray-600">
+            <div className="flex items-centermb-1">
+              <HardDrive className="w-3h-3mr-1" />
+              <span className="text-gray-300"   />Memory</span>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </div>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <div   />Used: {formatBytes(metrics.memory.usedJSHeapSize)}</div>
@@ -316,22 +354,34 @@ setIsVisible(false)}
   )}
 
         {metrics.connection && (
+<<<<<<< HEAD
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <Wifi className="w-5h-5ml-2"   /></Wifi>
               <span className="w-5h-5ml-2"   />Connection</span>
+=======
+          <div className="pt-2border-tborder-gray-600">
+            <div className="flex items-centermb-1">
+              <Wifi className="w-3h-3mr-1" />
+              <span className="text-gray-300"   />Connection</span>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </div>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <div   />Type: {metrics.connection.effectiveType}</div>
               <div   />Speed: {metrics.connection.downlink}Mbps</div>
               <div   />RTT: {metrics.connection.rtt}ms</div>
           </div>
+<<<<<<< HEAD
   )}
+=======
+        )}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
   );
 };
 
 export default PerformanceDashboard;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 =======
@@ -348,3 +398,5 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = () => {
 
 export default PerformanceDashboard;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

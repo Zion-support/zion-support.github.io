@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
@@ -38,6 +39,13 @@ import {Link} from 'react-router-dom';
 import {ArrowRight} from 'lucide-react';
 
 interface GenericServicePageProps {title: string;,
+=======
+import React  from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Star, Phone, Mail } from 'lucide-react';
+interface GenericServicePageProps {
+  title: string;,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   description: string;,
   icon: React.ComponentType<any   />;,
   features: string[];,
@@ -60,6 +68,7 @@ const GenericServicePage: React.FC<GenericServicePageProps   /> = ({title,
     Emerging: 'from-orange-500 to-red-600'};
   const categoryColor = categoryColors[category] || 'from-cyan-500 to-purple-600';
   return (
+<<<<<<< HEAD
     <><  />
       <Helmet></Helmet>
         <title   />{title} | Zion Tech Group</title>
@@ -73,12 +82,37 @@ const GenericServicePage: React.FC<GenericServicePageProps   /> = ({title,
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                 <Icon className="w-5h-5ml-2"   /></Icon>
+=======
+      <Helmet>
+        <title>5G Data Analytics - Zion Tech Group</title>
+        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+        <title>{title} | Zion Tech Group</title>
+        <meta const name = "description" content="{description}" / / />
+        <meta name="keywords" content="{`${title.toLowerCase()}," AI solutions, IT services, ${category.toLowerCase()}`} / / />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+        <main className="container mx-auto px-4py-16pt-24" />
+
+          {/* Hero Section */}
+          <section className="text-centermb-16" />
+            <div className="max-w-4xlmx-auto">
+              <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-2xll flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300shadow-lgshadow-cyan-500/25">
+                <Icon className="w-10h-10text-white" />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               </div>
               <h1 className="w-5h-5ml-2">{title}
               </h1>
+<<<<<<< HEAD
               <p className="w-5h-5ml-2">{description}
+=======
+              <p className="text-xl text-gray-300 mb-8 max-w-3 xlmx-autoleading-relaxed">
+              {description}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               </p>
               {pricing && (
+<<<<<<< HEAD
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Starting at {pricing}
                 </div>
   )}
@@ -176,16 +210,75 @@ const GenericServicePage: React.FC<GenericServicePageProps   /> = ({title,
                   className="px-8py-4 b order-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-centerjustify-centergroup"   /></a>
                   <Mail className="w-5h-5ml-2"   /></Mail>
                   Email Us;
+=======
+                <div className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-full text-cyan-400font-semiboldmb-8">Starting at {pricing}
+                </div>
+
+              )}
+              
+              <div className="flex flex-col sm:flex-rowgap-4justify-center">
+        </div>
+                <a 
+                  href="/contact" 
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40transformhover:scale-105" />
+                  Get Started Today
+                  <ArrowRight className="w-5 h-5 ml-2group-hover:translate-x-1transition-transform" />
+                </a>
+
+                <a 
+                  href="tel:+13024640950" 
+                  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-centerjustify-centergroup" />
+                  <Phone className="w-5h-5mr-2" />
+                  Call (302) 464-0950
+                </a>
+              </div>
+          </section>
+
+          {/* Features Section */}
+          <section className="mb-16" />
+            <div className="text-centermb-12">
+
+                <a 
+                  href="/contact" 
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40transformhover:scale-105" />
+                  Get Free Consultation
+                  <ArrowRight className="w-5 h-5 ml-2group-hover:translate-x-1transition-transform" />
+                </a>
+
+                <a 
+                  href="mailto:kleber@ziontechgroup.com" 
+                  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-centerjustify-centergroup" />
+                  <Mail className="w-5h-5mr-2" />
+                  Email Us
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                 </a>
               </div>
           </section>
         </main>
       </div>
+<<<<<<< HEAD
     <  />
+=======
+        </div>
+      </div>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+      </div>
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   );
 };
 
 export default GenericServicePage;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 =======
@@ -202,3 +295,5 @@ const GenericServicePage: React.FC<GenericServicePageProps> = () => {
 
 export default GenericServicePage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

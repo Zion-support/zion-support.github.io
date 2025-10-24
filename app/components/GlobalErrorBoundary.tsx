@@ -2,11 +2,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 'use client';
 import React from "react";
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
+=======
+import React, { Component, ReactNode } from 'react';
+import { Link } from 'react-router-dom';
+import { Home, RefreshCw } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
 <<<<<<< HEAD
 const GlobalErrorBoundary: React.FC = () => {
@@ -275,6 +281,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
       }
 
       return (
+<<<<<<< HEAD
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -310,6 +317,18 @@ class GlobalErrorBoundary extends Component<Props, State> {
 
             <div className="space-y-3">
               {this.props.enableRetry && this.state.retryCount < this.maxRetries && (
+=======
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
+          <div className="max-w-md w-full text-center">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xll p-8 border border-white/20">
+              <h1 className="text-4xl font-bold text-white mb-4">
+                Oops! Something went wrong
+              </h1>
+              <p className="text-gray-300 mb-6">
+                We're sorry, but something unexpected happened. Please try refreshing the page.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                 <button
                   onClick={this.handleRetry}
                   className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
@@ -317,6 +336,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
                   <RefreshCw className="w-4 h-4 mr-2" />
                   Try Again ({this.maxRetries - this.state.retryCount} attempts left)
                 </button>
+<<<<<<< HEAD
               )}
               
               <button
@@ -357,6 +377,20 @@ export default GlobalErrorBoundary;
             </div>
           </div>,
         </div>);
+=======
+                
+                <Link
+                  to="/"
+                  className="border border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
+                >
+                  <Home className="w-4 h-4 mr-2" />
+                  Go Home
+                </Link>
+              </div>
+            </div>
+        </div>
+      );
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
     }
 
     return this.props.children;
@@ -405,4 +439,7 @@ const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = () => {
 };
 
 export default GlobalErrorBoundary;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

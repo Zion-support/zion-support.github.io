@@ -4,6 +4,7 @@
 import React from 'react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const SecurityEnhancer: React.FC = () => {
   return (
     <div className="securityenhancer">
@@ -14,6 +15,12 @@ const SecurityEnhancer: React.FC = () => {
 =======
 interface SecurityEnhancerProps {
   children: React.ReactNode;
+=======
+interface SecurityEnhancerProps {
+  children: React.ReactNode;
+    </div>
+  )
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 }
 
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children ,}) => {
@@ -41,9 +48,28 @@ import {useEffect} from 'react';
       cspMeta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';";
       document.head.appendChild(cspMeta);
 
+<<<<<<< HEAD
       // Disable right-click context menu
       document.addEventListener('contextmenu', (e) => {
         e.preventDefault();
+=======
+      // Add HSTS header
+      const hstsMeta = document.createElement('meta');
+      hstsMeta.setAttribute('http-equiv', 'Strict-Transport-Security');
+      hstsMeta.setAttribute('content', 'max-age=31536000; includeSubDomains');
+      document.head.appendChild(hstsMeta);
+
+      // Remove potentially dangerous attributes
+      const dangerousAttributes = ['onload', 'onerror', 'onclick'];
+      const allElements = document.querySelectorAll('*');
+      
+      allElements.forEach((element) => {
+        dangerousAttributes.forEach((attr) => {
+          if (element.hasAttribute(attr)) {
+            element.removeAttribute(attr);
+          }
+        });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       });
 
       // Disable F12 and other dev tools shortcuts
@@ -497,6 +523,7 @@ export default SecurityEnhancer
 };
 
 export default SecurityEnhancer;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 =======
@@ -513,3 +540,5 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = () => {
 
 export default SecurityEnhancer;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

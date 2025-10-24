@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
@@ -176,6 +177,26 @@ const ApiDevelopmentPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Build robust, scalable APIs that power your applications. Our comprehensive API development 
               services include RESTful APIs, GraphQL, microservices, and seamless integrations.
+=======
+import React  from 'react';
+const ApiDevelopmentPage: React.FC = () => {
+  return (
+      <Helmet>
+        <title>Api Development - Zion Tech Group</title>
+        <meta name="description" content="Api Development services by Zion Tech Group. Professional AI and IT solutions." / / />
+        <meta name="keywords" content="api-development, AI solutions, IT services" / / />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+        <div className="container mx-autopx-4py-16">
+          <div className="text-centermb-16">
+            <h1 className="text-4xl md:text-6 xl font-bold text-white mb-6" />
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  />Api Development
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
+              Professional api development services by Zion Tech Group.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {stats.map((stat, index) => (
@@ -202,6 +223,7 @@ const ApiDevelopmentPage: React.FC = () => {
               </Link>
             </div>
           </div>
+<<<<<<< HEAD
         </section>
 
         {/* Features Section */}
@@ -284,6 +306,14 @@ const ApiDevelopmentPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Let us help you create robust, scalable APIs that drive your business forward. 
               Contact us today to discuss your API development needs.
+=======
+
+          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xlp-8text-center">
+            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
+            <p className="text-gray-300 mb-6">
+              We're working on bringing you comprehensive api development solutions. 
+              Contact us to learn more about our services.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -301,6 +331,7 @@ const ApiDevelopmentPage: React.FC = () => {
               </Link>
             </div>
           </div>
+<<<<<<< HEAD
         </section>
       </main>
       
@@ -349,3 +380,24 @@ export default function ApidevelopmentPage() {
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+      </div>
+        </div>
+      </div>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+      </div>
+
+  );
+};
+
+export default ApiDevelopmentPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

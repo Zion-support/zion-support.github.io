@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
@@ -94,6 +95,13 @@ import { ArrowRight } from 'lucide-react';
 export default function FiveGgsmartcitysolutionsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
+
+
+export default function FiveGSmartCitySolutionsPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900pt-20">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>5G Smart City Solutions - Zion Tech Group</title>
         <meta name="description" content="Professional 5g smart city solutions services by Zion Tech Group" />
@@ -104,6 +112,7 @@ export default function FiveGgsmartcitysolutionsPage() {
           <h1 className="text-4xl font-bold text-white mb-6">5G Smart City Solutions</h1>
           <p className="text-lg text-gray-300 mb-8">Professional 5g smart city solutions services coming soon.</p>
           
+<<<<<<< HEAD
           <Link
             to="/contact"
             className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
@@ -126,3 +135,10 @@ export default function FiveGgsmartcitysolutionsPage() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
   );
 }
+=======
+          <ArrowRight className="w-5 h-5 ml-2"  />
+        </Link>
+      </div>
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

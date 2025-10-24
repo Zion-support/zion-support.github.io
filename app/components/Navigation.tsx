@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -63,6 +64,13 @@ interface NavigationProps {
 }
 export default function Navigation({ onSidebarToggle }: NavigationProps) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
+=======
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X, ChevronDown, Zap, Cloud, Globe, Code, Smartphone, Brain, Wifi } from 'lucide-react';
+
+const Navigation: React.FC = () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   const [isOpen, setIsOpen] = useState(false);
 
 <<<<<<< HEAD
@@ -879,6 +887,7 @@ const Navigation = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
               {navigationItems.map((item, index) => (
@@ -965,6 +974,30 @@ const Navigation = () => {
                       )}
                     </div>
                   ) : (
+=======
+          <div className="md:hidden bg-gray-900/95 backdrop-blur-md border-t border-gray-800">
+            <div className="px-2 pt-2 pb-3 space-y-1">
+              <Link
+                to="/"
+                className="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-300"
+                onClick={() => setIsOpen(false)}
+              >
+                Home
+              </Link>
+              <Link
+                to="/about"
+                className="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-300"
+                onClick={() => setIsOpen(false)}
+              >
+                About
+              </Link>
+              
+              {/* Mobile Services */}
+              <div className="px-3 py-2">
+                <div className="text-gray-300 font-medium mb-2">AI Services</div>
+                <div className="ml-4 space-y-1">
+                  {aiServices.map((service, index) => (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                     <Link
                       href={item.href}
                       className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors"
@@ -984,6 +1017,7 @@ const Navigation = () => {
                   onClick={() => setIsOpen(false)}
                 >
                   Get Started
+<<<<<<< HEAD
 =======
           <div className="lg:hidden absolute top-full left-0 right-0 bg-slate-900 border-t border-slate-700 shadow-xl">
             <div className="container mx-auto px-4 py-6 space-y-4">
@@ -1195,6 +1229,10 @@ const Navigation = () => {
                 </Link>
               ))}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+                </Link>
+              </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </div>
           </div>
         )}

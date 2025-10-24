@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
@@ -156,6 +157,26 @@ const DataEngineeringPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Build robust, scalable data infrastructure that transforms raw data into 
               actionable insights. Our data engineering solutions power your analytics and AI initiatives.
+=======
+import React  from 'react';
+const DataEngineeringPage: React.FC = () => {
+  return (
+      <Helmet>
+        <title>Data Engineering - Zion Tech Group</title>
+        <meta name="description" content="Data Engineering services by Zion Tech Group. Professional AI and IT solutions." / / />
+        <meta name="keywords" content="data-engineering, AI solutions, IT services" / / />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+        <div className="container mx-autopx-4py-16">
+          <div className="text-centermb-16">
+            <h1 className="text-4xl md:text-6 xl font-bold text-white mb-6" />
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  />Data Engineering
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
+              Professional data engineering services by Zion Tech Group.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {stats.map((stat, index) => (
@@ -182,6 +203,7 @@ const DataEngineeringPage: React.FC = () => {
               </Link>
             </div>
           </div>
+<<<<<<< HEAD
         </section>
 
         {/* Features Section */}
@@ -291,6 +313,14 @@ const DataEngineeringPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Let's discuss how our data engineering solutions can help you build 
               a robust data infrastructure that powers your analytics and AI initiatives.
+=======
+
+          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xlp-8text-center">
+            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
+            <p className="text-gray-300 mb-6">
+              We're working on bringing you comprehensive data engineering solutions. 
+              Contact us to learn more about our services.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -308,6 +338,7 @@ const DataEngineeringPage: React.FC = () => {
               </Link>
             </div>
           </div>
+<<<<<<< HEAD
         </section>
       </main>
       
@@ -356,3 +387,24 @@ export default function DataengineeringPage() {
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+      </div>
+        </div>
+      </div>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+      </div>
+
+  );
+};
+
+export default DataEngineeringPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 export default function AiTranslationServicePage() {
@@ -242,6 +243,33 @@ export default function AITranslationService() {const features = [{
                     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                       <Star className="w-5h-5ml-2"   /></Star>
                       Most Popular;
+=======
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Languages, ArrowRight, CheckCircle, Brain, Star, Target, Clock, FileText } from 'lucide-react';
+import Layout from '../layout'
+
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4sm:px-6lg:px-8" />
+          <div className="max-w-7xlmx-auto">
+
+              {features.map((feature, index) => (
+                <div key="{index}" className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-amber-500/20 hover:border-amber-400/40transition-allduration-300" />
+
+              {translationFeatures.map((feature, index) => (
+                <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
+
+              {pricingPlans.map((plan, index) => (
+                <div key="{index}" className="{`bg-gradient-to-br" from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
+                  plan.popular 
+                    ? 'border-amber-400/40 scale-105 shadow-2xll shadow-amber-500/20' 
+                    : 'border-amber-500/20 hover: border-amber-400/40'
+                }`} />
+                  {plan.popular && (
+                    <div className="inline-flex items-center px-3 py-1 bg-amber-500/20 rounded-full text-amber-400 text-smfont-mediummb-4">
+                      <Star className="w-4h-4mr-1" />
+                      Most Popular
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                     </div>
   )}
                   <h3 className="w-5h-5ml-2"   />{plan.name}</h3>
@@ -252,8 +280,13 @@ export default function AITranslationService() {const features = [{
                   </div>
                   <ul className="w-5h-5ml-2"   /></ul>
                     {plan.features.map((feature, featureIndex) => (
+<<<<<<< HEAD
                       <li key={featureIndex} className="flex items-center text-gray-300"   /></li>
                         <CheckCircle className="w-5h-5ml-2"   /></CheckCircle>
+=======
+                      <li key="{featureIndex}" className="flex items-center text-gray-300" />
+                        <CheckCircle className="w-5 h-5text-amber-400mr-3" />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                         {feature}
                       </li>
   ))}
@@ -263,22 +296,39 @@ export default function AITranslationService() {const features = [{
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular;
                         ? 'bg-gradient-to-r from-amber-500 to-purple-600 text-white hover:from-amber-600 hover:to-purple-700'
+<<<<<<< HEAD
                         : 'border-2 border-amber-400 text-amber-400 hover: bg-amber-400/10'}`}
                     />Get Started;
                   </Link>
                 </div>
   ))}
+=======
+                        : 'border-2 border-amber-400 text-amber-400 hover: bg-amber-400/10'
+                    }`}
+                    />Get Started
+                  </Link>
+                </div>
+              ))}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </div>
         </section>
         {/* Testimonials */}
+<<<<<<< HEAD
         <section className="w-5h-5ml-2"   /></section>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <h2 className="w-5h-5ml-2"   />Trusted by Global Businesses;
+=======
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-rfrom-slate-800/30to-purple-900/30" />
+          <div className="max-w-7xlmx-auto">
+            <div className="text-centermb-12">
+              <h2 className="text-3 xl font-bold text-white mb-4"  />Trusted by Global Businesses
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               </h2>
               <p className="w-5h-5ml-2">See how our AI Translation Service enables global communication;
               </p>
             </div>
+<<<<<<< HEAD
             <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-slate-800/50rounded-xl p-6 border border-slate-700"   /></div>
@@ -293,18 +343,47 @@ export default function AITranslationService() {const features = [{
                     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.company}</div>
                 </div>
   ))}
+=======
+            <div className="grid grid-cols-1md:grid-cols-3gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
+                  <div className="flex items-centermb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key="{i}" className="w-5 h-5text-yellow-400fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-4">
+              "{testimonial.content}"</p>
+                  <div />
+                    <div className="font-semiboldtext-white"   />{testimonial.name}</div>
+                    <div className="text-smtext-gray-400"   />{testimonial.company}</div>
+                </div>
+              ))}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </div>
         </section>
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="w-5h-5ml-2"   /></section>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <h2 className="w-5h-5ml-2"   />Break Down Language Barriers Today;
+=======
+        <section className="py-16 px-4sm:px-6lg:px-8" />
+          <div className="max-w-4 xlmx-autotext-center">
+            <div className="bg-gradient-to-r from-amber-500/20 to-purple-500/20 rounded-2xll p-8borderborder-amber-500/30">
+              <h2 className="text-3 xl font-bold text-white mb-4"  />Break Down Language Barriers Today
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               </h2>
               <p className="w-5h-5ml-2">Join thousands of businesses using AI Translation Service to reach global audiences;
               </p>
+<<<<<<< HEAD
               <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                 <Link to="/contact" className="bg-gradient-to-rfrom-amber-500to-purple-600text-white px-8 py-4 rounded-lg font-semibold hover:from-amber-600 hover:to-purple-700transition-all duration-300">Start Your Free Trial;
+=======
+              <div className="flex flex-col sm:flex-rowgap-4justify-center">
+                <Link to="/contact" className="bg-gradient-to-r from-amber-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-amber-600 hover:to-purple-700transition-allduration-300">Start Your Free Trial
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                 </Link>
                 <Link to="/about" className="border-2border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Learn More;
                 </Link>
@@ -316,6 +395,7 @@ export default function AITranslationService() {const features = [{
   )
 
 };
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 =======
@@ -350,3 +430,5 @@ export default function AitranslationservicePage() {
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

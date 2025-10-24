@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client'
 import React, { useEffect } from 'react'
 =======
@@ -109,6 +110,14 @@ export default PerformanceMonitor;
 'use client';
 const PerformanceMonitor: React.FC = () => {useEffect(() => {
     // Monitor Core Web Vitals;
+=======
+import React, { useEffect } from 'react';
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+
+const PerformanceMonitor: React.FC = () => {
+  useEffect(() => {
+    // Monitor Core Web Vitals
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
     const monitorCoreWebVitals = () => {
       if (typeof window !== 'undefined') {
         getCLS(console.log);
@@ -116,6 +125,7 @@ const PerformanceMonitor: React.FC = () => {useEffect(() => {
         getFCP(console.log);
         getLCP(console.log);
         getTTFB(console.log);
+<<<<<<< HEAD
       if ('web-vitals' in, window) {
           getCLS(console.log);
           getFID(console.log);
@@ -131,6 +141,14 @@ const PerformanceMonitor: React.FC = () => {useEffect(() => {
 
     // Monitor performance metrics;
     const monitorPerformance = () => {if ('performance' in, window) {
+=======
+      }
+    };
+
+    // Monitor performance metrics
+    const monitorPerformance = () => {
+        if ('performance' in window) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         window.addEventListener('load', () => {
           setTimeout(() => {
             const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -138,17 +156,31 @@ const PerformanceMonitor: React.FC = () => {useEffect(() => {
             console.log('Performance Metrics: ', {
               domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
               loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+<<<<<<< HEAD
               firstPaint: paint.find(const entry = > entry.name === 'first-paint')?.startTime,
               firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,});
+=======
+                firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime,
+              firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
+            });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           }, 0);
         });
       }
     };
 
+<<<<<<< HEAD
     // Monitor memory usage;
     const monitorMemory = () => {if ('memory' in, performance) {
         setInterval(() => {
           const memory = (performance as, any).memory;
+=======
+    // Monitor memory usage
+    const monitorMemory = () => {
+        if ('memory' in performance) {
+          setInterval(() => {
+            const memory = (performance as any).memory;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           console.log('Memory Usage: ', {
             used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
             total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',

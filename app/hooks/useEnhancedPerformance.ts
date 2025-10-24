@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 
 export const useEnhancedPerformance = () => {
@@ -109,6 +110,9 @@ interface PerformanceMetrics {loadTime: number;
   const [metrics, setMetrics] = useState<PerformanceMetrics>({loadTime: 0,
 =======
 import { useState, useEffect, useCallback } from 'react';
+=======
+import { useState, useEffect } from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
 interface PerformanceMetrics {
   loadTime: number;

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 const SkipLink: React.FC = () => (
@@ -27,6 +28,10 @@ const SkipLink: React.FC = () => {return (
 import React from 'react';
 
 const SkipLink: React.FC<SkipLinkProps> = () => {
+=======
+import React from 'react';
+const SkipLink: React.FC = () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   return (
     <div className="skiplink">
       <h2>SkipLink</h2>

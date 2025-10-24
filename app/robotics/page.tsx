@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -233,6 +234,15 @@ export default function GDataAnalyticsZionTechGroupPage() {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
+=======
+import React  from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+
+export default function RoboticsPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>Robotics - Zion Tech Group</title>
         <meta name="description" content="Robotics solutions by Zion Tech Group" />
@@ -246,6 +256,7 @@ export default function GDataAnalyticsZionTechGroupPage() {
           </p>
 <<<<<<< HEAD
           
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
@@ -269,6 +280,10 @@ export default function GDataAnalyticsZionTechGroupPage() {
             </div>
           </div>
         </div>
+=======
+          <ArrowRight className="w-5h-5ml-2"  />
+        </Link>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
 =======
           <Link
@@ -285,6 +300,7 @@ export default function GDataAnalyticsZionTechGroupPage() {
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -727,3 +743,5 @@ export default function RoboticsPage() {
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

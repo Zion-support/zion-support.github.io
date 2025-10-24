@@ -51,8 +51,14 @@ const pageConfigs = {'enterprise-security': {
     description: 'Professional task management solution with advanced features for project planning and team collaboration.',
     keywords: 'task management, project planning, team collaboration, productivity tools'};
 
+<<<<<<< HEAD
 // Rewrite pages;
 for (const page, of, pagesToRewrite) {const pagePath = `/workspace/app/${page}/page.tsx`;
+=======
+// Rewrite pages
+for (const page of pagesToRewrite) {
+  const pagePath={`/workspace/app/${page}/page.tsx`};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   const config = pageConfigs[page];
 
     word.charAt(0).toUpperCase() + word.slice(1)

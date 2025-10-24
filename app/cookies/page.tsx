@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 'use client';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
@@ -12,10 +13,16 @@ export default function CookiesPage() {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
+=======
+import React  from 'react';
+const CookiesPage: React.FC = () => {
+  return (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>Cookies - Zion Tech Group</title>
         <meta name="description" content="Cookies solutions by Zion Tech Group" />
       </Helmet>
+<<<<<<< HEAD
       
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold mb-8">Cookies</h1>
@@ -112,8 +119,29 @@ const CookiePolicyPage: React.FC = () => {
         <section className="mb-16"></section>
           <div className="cyber-card p-8"></section>
             <h2 className="text-2xl font-bold text-white mb-6 neon-text">What Are Cookies?</h2><p className="text-gray-300 mb-4 leading-relaxed">Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently and to provide information to website owners.</p><p className="text-gray-300 leading-relaxed">We use cookies and similar technologies to improve your browsing experience, personalize content and ads, provide social media features, and analyze our traffic. We also share information about your use of our site with our social media, advertising, and analytics partners.</p>
+=======
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+        <div className="container mx-autopx-4py-16">
+          <div className="text-centermb-16">
+            <h1 className="text-4xl md:text-6 xl font-bold text-white mb-6" />
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  />Cookies
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
+              Professional cookies services by Zion Tech Group.
             </p>
           </div>
+
+          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xlp-8text-center">
+            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
+            <p className="text-gray-300 mb-6">
+              We're working on bringing you comprehensive cookies solutions. 
+              Contact us to learn more about our services.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
+            </p>
+          </div>
+<<<<<<< HEAD
         </section>
 
         {/* Cookie Types */})
@@ -147,6 +175,11 @@ const CookiePolicyPage: React.FC = () => {
                 </div>
               </div>
             ))}
+=======
+      </div>
+        </div>
+      </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </div>
         </section>
 
@@ -177,6 +210,7 @@ const CookiePolicyPage: React.FC = () => {
               </table>
             </div>
           </div>
+<<<<<<< HEAD
         </section>
 
         {/* Cookie Management */}
@@ -642,3 +676,15 @@ export default function CookiesPage() {
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+        </div>
+      </div>
+        </div>
+      </div>
+      </div>
+
+  );
+};
+
+export default CookiesPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

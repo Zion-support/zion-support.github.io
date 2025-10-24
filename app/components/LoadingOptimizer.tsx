@@ -59,12 +59,22 @@ const DefaultLoadingSpinner: React.FC = () => (
   </div>
   );
 
+<<<<<<< HEAD
 // Skeleton loaders for different components;
   <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-2xl border border-slate-700/50 animate-pulse"></div>
     <div className="w-16h-16bg-s late-700 rounded-full mb-6"></div>
     <div className="h-6bg-slate-700 rounded mb-4"></div>
     <div className="h-4bg-slate-700 rounded mb-2"></div>
     <div className="h-4bg-slate-700 rounded w-3/4"></div>
+=======
+// Skeleton loaders for different components
+export const ServiceCardSkeleton: React.FC = () => (
+  <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-2xll border border-slate-700/50 animate-pulse">
+    <div className="w-16 h-16 bg-slate-700 rounded-full mb-6"></div>
+    <div className="h-6 bg-slate-700 rounded mb-4"></div>
+    <div className="h-4 bg-slate-700 rounded mb-2"></div>
+    <div className="h-4 bg-slate-700 rounded w-3/4"></div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   </div>
   );
 

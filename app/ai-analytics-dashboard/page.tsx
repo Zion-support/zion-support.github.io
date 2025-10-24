@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
@@ -706,12 +707,19 @@ export default AIAnalyticsDashboard;
 =======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+import React  from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function AianalyticsdashboardPage() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>Ai Analytics Dashboard - Zion Tech Group</title>
         <meta name="description" content="Professional ai analytics dashboard services by Zion Tech Group" />
@@ -722,6 +730,7 @@ export default function AianalyticsdashboardPage() {
           <h1 className="text-4xl font-bold text-white mb-6">Ai Analytics Dashboard</h1>
           <p className="text-lg text-gray-300 mb-8">Professional ai analytics dashboard services coming soon.</p>
           
+<<<<<<< HEAD
           <Link
             to="/contact"
             className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
@@ -730,8 +739,15 @@ export default function AianalyticsdashboardPage() {
             <ArrowRight className="w-4 h-4 ml-2" />
           </Link>
         </div>
+=======
+          <ArrowRight className="w-5h-5ml-2"  />
+        </Link>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

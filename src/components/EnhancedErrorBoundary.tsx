@@ -102,8 +102,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   };
   private getUserId = (): string | null => {/* TODO: Fix JSX expression */}
   };
+<<<<<<< HEAD
   private getSessionId = (): string => {/* TODO: Fix JSX expression */}`
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+=======
+    let sessionId = sessionStorage.getItem('sessionId');
+      sessionId={`session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       sessionStorage.setItem('sessionId', sessionId);
     }
     return sessionId;

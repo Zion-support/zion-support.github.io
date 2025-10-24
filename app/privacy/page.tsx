@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
@@ -13,10 +14,16 @@ export default function PrivacyPage() {
 <<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gray-900 text-white">
+=======
+import React  from 'react';
+const PrivacyPage: React.FC = () => {
+  return (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>Privacy - Zion Tech Group</title>
         <meta name="description" content="Privacy solutions by Zion Tech Group" />
       </Helmet>
+<<<<<<< HEAD
       
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold mb-8">Privacy</h1>
@@ -367,6 +374,26 @@ export default PrivacyPage
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Privacy policy and data protection information.
+=======
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+        <div className="container mx-autopx-4py-16">
+          <div className="text-centermb-16">
+            <h1 className="text-4xl md:text-6 xl font-bold text-white mb-6" />
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  />Privacy
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
+              Professional privacy services by Zion Tech Group.
+            </p>
+          </div>
+
+          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xlp-8text-center">
+            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
+            <p className="text-gray-300 mb-6">
+              We're working on bringing you comprehensive privacy solutions. 
+              Contact us to learn more about our services.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -377,6 +404,7 @@ export default PrivacyPage
               </button>
             </div>
           </div>
+<<<<<<< HEAD
         </section>
 
         {/* Features Section */}
@@ -412,6 +440,11 @@ export default PrivacyPage
                 </div>
               ))}
             </div>
+=======
+      </div>
+        </div>
+      </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </div>
         </section>
 
@@ -462,6 +495,7 @@ export default PrivacyPage
           </div>
         </section>
       </div>
+<<<<<<< HEAD
       <Footer />
     </>
 =======
@@ -590,3 +624,10 @@ export default function PrivacyPage() {
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+
+  );
+};
+
+export default PrivacyPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

@@ -1,11 +1,22 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 interface PerformanceoptimizerProps {
   className?: string;
   children?: React.ReactNode;
+=======
+import React, { useEffect, useState } from 'react';
+
+interface PerformanceMetrics {
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  fcp: number | null;
+  ttfb: number | null;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 }
 <<<<<<< HEAD
 export default function Performanceoptimizer({ className = '', children, ...props }: PerformanceoptimizerProps) {
@@ -15,6 +26,7 @@ export default function Performanceoptimizer({ className = '', children, ...prop
 =======
 
 const PerformanceOptimizer: React.FC = () => {
+<<<<<<< HEAD
   return (
     <div className="performanceoptimizer">
       <h2>PerformanceOptimizer</h2>
@@ -47,6 +59,32 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
         // Trigger garbage collection if available
         if (window.gc) {
           window.gc();
+=======
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    lcp: null,
+    fid: null,
+    cls: null,
+    fcp: null,
+    ttfb: null,
+  });
+
+  useEffect(() => {
+    // Preload critical resources
+    const preloadCriticalResources = () => {
+      const criticalResources = [
+        '/fonts/inter.woff2',
+        '/images/hero-bg.jpg',
+        '/images/logo.png',
+      ];
+
+      criticalResources.forEach((resource) => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = resource;
+        link.as = resource.endsWith('.woff2') ? 'font' : 'image';
+        if (resource.endsWith('.woff2')) {
+          link.crossOrigin = 'anonymous';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         }
       }
     }
@@ -57,6 +95,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
     const newOptimizations: string[] = [];
 
     // Optimize images
+<<<<<<< HEAD
     optimizeImages();
     newOptimizations.push('Images optimized for lazy loading');
 
@@ -247,3 +286,93 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = () => {
 
 export default PerformanceOptimizer;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            img.src = img.dataset.src || '';
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
+          }
+        });
+      });
+
+      images.forEach((img) => imageObserver.observe(img));
+    };
+
+    // Lazy load components
+    const lazyLoadComponents = () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const element = entry.target as HTMLElement;
+            element.classList.add('loaded');
+            observer.unobserve(element);
+          }
+        });
+      });
+
+      const lazyElements = document.querySelectorAll('[data-lazy]');
+      lazyElements.forEach((el) => observer.observe(el));
+    };
+
+    // Monitor Core Web Vitals
+    const monitorWebVitals = () => {
+      import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {
+        onCLS((metric) => setMetrics((prev) => ({ ...prev, cls: metric.value })));
+        onFID((metric) => setMetrics((prev) => ({ ...prev, fid: metric.value })));
+        onFCP((metric) => setMetrics((prev) => ({ ...prev, fcp: metric.value })));
+        onLCP((metric) => setMetrics((prev) => ({ ...prev, lcp: metric.value })));
+        onTTFB((metric) => setMetrics((prev) => ({ ...prev, ttfb: metric.value })));
+      }).catch(() => {
+        // Silently fail if web-vitals is not available
+      });
+    };
+
+    // Optimize scroll performance
+    const optimizeScroll = () => {
+      let ticking = false;
+
+      const updateScrollPosition = () => {
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            // Update scroll position
+            ticking = false;
+          });
+          ticking = true;
+        }
+      };
+
+      window.addEventListener('scroll', updateScrollPosition, { passive: true });
+
+      return () => window.removeEventListener('scroll', updateScrollPosition);
+    };
+
+    // Initialize optimizations
+    preloadCriticalResources();
+    optimizeImages();
+    lazyLoadComponents();
+    monitorWebVitals();
+    const cleanupScroll = optimizeScroll();
+
+    // Cleanup
+    return () => {
+      cleanupScroll();
+    };
+  }, []);
+
+  // Log performance metrics in development
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'development' && Object.values(metrics).some((val) => val !== null)) {
+      console.log('Performance Metrics:', metrics);
+    }
+  }, [metrics]);
+
+  return null;
+};
+
+export default PerformanceOptimizer;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

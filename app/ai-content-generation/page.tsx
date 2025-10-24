@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Helmet } from 'react-helmet-async';
@@ -221,6 +222,34 @@ const AIContentGenerationPage: React.FC = () => {
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">),
               Transform your content strategy with our AI-powered content generation services.),
               Create high-quality blog posts, social media content, and marketing copy 10x faster.
+=======
+import React  from 'react';
+const AiContentGenerationPage: React.FC = () => {
+  return (
+      <Helmet>
+        <title>Ai Content Generation - Zion Tech Group</title>
+        <meta name="description" content="Ai Content Generation services by Zion Tech Group. Professional AI and IT solutions." / / />
+        <meta name="keywords" content="ai-content-generation, AI solutions, IT services" / / />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+        <div className="container mx-autopx-4py-16">
+          <div className="text-centermb-16">
+            <h1 className="text-4xl md:text-6 xl font-bold text-white mb-6" />
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  />Ai Content Generation
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
+              Professional ai content generation services by Zion Tech Group.
+            </p>
+          </div>
+
+          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xlp-8text-center">
+            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
+            <p className="text-gray-300 mb-6">
+              We're working on bringing you comprehensive ai content generation solutions. 
+              Contact us to learn more about our services.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
@@ -507,6 +536,7 @@ const AIContentGenerationPage: React.FC = () => {
               Contact Sales
             </button>
           </div>
+<<<<<<< HEAD
         </div>
       </section>
 
@@ -524,12 +554,30 @@ const AIContentGenerationPage: React.FC = () => {
 =======
     </React.Fragment>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
+=======
+      </div>
+        </div>
+      </div>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+      </div>
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   );
 <<<<<<< HEAD
 }
 =======
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default PagePage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
@@ -575,3 +623,6 @@ export default function AicontentgenerationPage() {
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+export default AiContentGenerationPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

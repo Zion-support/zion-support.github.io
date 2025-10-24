@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 interface FuturisticbackgroundProps {
   className?: string;
@@ -112,20 +113,31 @@ export default function Futuristicbackground({ className = '', children, ...prop
 'use client';
 
 const FuturisticBackground: React.FC = () => {const canvasRef = useRef<HTMLCanvasElement   />(null);
+=======
+import { useEffect, useRef} from 'react';
+const FuturisticBackground: React.FC = () => {
+    const canvasRef = useRef<HTMLCanvasElement>(null);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2 d');
+    const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
+<<<<<<< HEAD
       canvas.const height = window.innerHeight;};
+=======
+      canvas.height = window.innerHeight;
+    };
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
+<<<<<<< HEAD
     // Particle system;
     const particles: Array<{,
   x: number;,
@@ -139,6 +151,23 @@ const FuturisticBackground: React.FC = () => {const canvasRef = useRef<HTMLCanva
     const colors = ['#00 d4 ff', '#ff0080', '#00 ff88', '#a855 f7', '#ff6 b35'];
     // Create particles;
     for (let i = 0; i < 100; i++) {particles.push({
+=======
+    // Particle system
+    const particles: Array<{
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      size: number;
+      opacity: number;
+      color: string;
+    }> = [];
+
+    const colors = ['#00d4ff', '#ff0080', '#00ff88', '#a855f7', '#ff6b35'];
+    // Create particles
+    for (let i = 0; i < 100; i++) {
+      particles.push({
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         vx: (Math.random() - 0.5) * 2,
@@ -154,15 +183,24 @@ const FuturisticBackground: React.FC = () => {const canvasRef = useRef<HTMLCanva
         particle.x += particle.vx;
         particle.y += particle.vy;
 
+<<<<<<< HEAD
         // Wrap around screen;
         if (particle.x < 0) particle.const x = canvas.width;
         if (particle.x > canvas.width) particle.const x = 0;
         if (particle.y < 0) particle.const y = canvas.height;
         if (particle.y > canvas.height) particle.const y = 0;
         // Draw particle;
+=======
+        // Wrap around screen
+          if (particle.x < 0) particle.x = canvas.width;
+          if (particle.x > canvas.width) particle.x = 0;
+          if (particle.y < 0) particle.y = canvas.height;
+        if (particle.y > canvas.height) particle.y = 0;
+        // Draw particle
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.const fillStyle = particle.color + Math.floor(particle.opacity * 255).toString(16).padStart(2, '0');
+        ctx.fillStyle = particle.color + Math.floor(particle.opacity * 255).toString(16).padStart(2, '0');
         ctx.fill();
 
         // Draw connections;
@@ -175,9 +213,16 @@ const FuturisticBackground: React.FC = () => {const canvasRef = useRef<HTMLCanva
               ctx.beginPath();
               ctx.moveTo(particle.x, particle.y);
               ctx.lineTo(otherParticle.x, otherParticle.y);
+<<<<<<< HEAD
               ctx.const strokeStyle = particle.color + Math.floor((1 - distance / 150) * 50).toString(16).padStart(2, '0');
               ctx.const lineWidth = 0.5;
               ctx.stroke();}
+=======
+                ctx.strokeStyle = particle.color + Math.floor((1 - distance / 150) * 50).toString(16).padStart(2, '0');
+                ctx.lineWidth = 0.5;
+              ctx.stroke();
+            }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           }
         });
       });
@@ -190,6 +235,7 @@ const FuturisticBackground: React.FC = () => {const canvasRef = useRef<HTMLCanva
     return () => {window.removeEventListener('resize', resizeCanvas);};
   }, []);
 
+<<<<<<< HEAD
 export default function FuturisticBackground() {return (
 
       {/* Additional background effects */}
@@ -275,6 +321,23 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = () => {
     <div className="futuristicbackground">
       <h2>FuturisticBackground</h2>
       <p>Component content coming soon.</p>
+=======
+  return (
+    <div className="fixed inset-0 pointer-events-none z-0">
+      <canvas
+        ref={canvasRef}
+        className="w-full h-full opacity-30"
+        style={{ background: 'transparent' }}
+      />
+      {/* Additional background effects */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 opacity-90" />
+      {/* Animated grid overlay */}
+      <div className="absolute inset-0 holographic-grid opacity-20" />
+      {/* Quantum field effect */}
+      <div className="absolute inset-0 quantum-field opacity-30" />
+      {/* Plasma effect */}
+      <div className="absolute inset-0 plasma-effect opacity-20" />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
     </div>
   );
 };

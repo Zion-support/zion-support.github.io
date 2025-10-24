@@ -627,11 +627,16 @@ const FiveGSolutionsPage = React.lazy(() => import('./app/5g-solutions/page'));
 
 // Main App Component
 <<<<<<< HEAD
+<<<<<<< HEAD
 function App() {return (
 =======
 function App() {
   return (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+const App: React.FC = () => {
+  return (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
     <ErrorBoundary>
       <HelmetProvider>
         <BrowserRouter>

@@ -3,7 +3,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 'use client';
 import React from "react";
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
@@ -12,6 +15,11 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+=======
+import { Mic, Brain, CheckCircle, ArrowRight, Zap, Settings, Globe, Clock, Link as LinkIcon, Workflow } from 'lucide-react';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 export default function AIVoiceAssistant() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -933,6 +941,7 @@ export default function AIVoiceAssistant() {const features = [{
     <Layout;</Layout></Layout>
       title="AI Voice Assistant - Intelligent Voice Solutions | Zion Tech Group"
       description="Transform user interaction with AI-powered voice assistants. Natural language processing, human-like voice synthesis, and seamless integration. Start your free trial today."
+<<<<<<< HEAD
       keywords="AI voice assistant, voice AI, speech recognition, voice synthesis, conversational AI, voice automation" /></Layout>
       <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         {/* Hero Section */}
@@ -947,6 +956,12 @@ export default function AIVoiceAssistant() {const features = [{
               </p>
               <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                 <Link to="/contact" className="bg-gradient-to-rfrom-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transformhover:scale-105">Start Building;
+=======
+      keywords="AI voice assistant, voice AI, speech recognition, voice synthesis, conversational AI, voice automation" />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900">
+
+                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transformhover:scale-105">Start Building
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                 </Link>
                 <Link to="/ai-services" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transformhover:scale-105">View All AI Services;
                 </Link>
@@ -954,6 +969,7 @@ export default function AIVoiceAssistant() {const features = [{
           </div>
         </section>
         {/* Features Section */}
+<<<<<<< HEAD
         <section className="w-5h-5ml-2"   /></section>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -1141,3 +1157,16 @@ export default function AivoiceassistantPage() {
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+        <section className="py-20" />
+          <div className="container mx-autopx-4">
+
+              {features.map((feature, index) => (
+                <div key="{index}" className="text-centergroup" />
+                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transformduration-300">
+
+              {useCases.map((useCase, index) => (
+                <div key="{index}" className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 group hover:transformhover:scale-105" />
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transformduration-300">
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

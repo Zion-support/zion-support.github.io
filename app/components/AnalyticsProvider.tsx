@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 interface AnalyticsproviderProps {
@@ -18,6 +19,9 @@ export default function Analyticsprovider({ className = '', children, ...props }
 import React, { createContext, useContext, useEffect } from 'react';
 
 <<<<<<< HEAD
+=======
+import { createContext, useContext, useEffect} from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 interface AnalyticsContextType {
 <<<<<<< HEAD
 <<<<<<< HEAD

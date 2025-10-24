@@ -9,6 +9,10 @@ const Component: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 import React from 'react';
 
+<<<<<<< HEAD
+=======
+import { ArrowRight } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 const SEOEnhancer: React.FC = () => {
   return (
 <<<<<<< HEAD

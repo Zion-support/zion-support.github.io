@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 
 import React from 'react';
@@ -114,6 +115,15 @@ const Loading: React.FC<LoadingProps> = ({
           <Zap className={`${size === 'sm' ? 'w-2 h-2' : size === 'md' ? 'w-4 h-4' : 'w-6 h-6'} text-purple-500 animate-pulse`} />
         </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+import React  from 'react';
+const Loading: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-centerjustify-center">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-automb-4"></div>
+        <p className="text-whitetext-lg">Loading...</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
     </div>
   );
@@ -133,6 +143,7 @@ const Loading: React.FC<LoadingProps> = ({
 };
 
 export default Loading;
+<<<<<<< HEAD
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
@@ -182,3 +193,5 @@ export default Loading
 =======
 export default Loading;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

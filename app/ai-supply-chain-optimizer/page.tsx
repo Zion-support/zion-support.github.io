@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -69,6 +70,16 @@ import {Helmet} from 'react-helmet-async';
 import {Truck, Package, TrendingUp, Shield, Clock, CheckCircle, ArrowRight, Star, Globe, Target} from 'lucide-react';
 
   const features = [{title: 'Predictive Demand Forecasting',
+=======
+import React  from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Truck, Package, TrendingUp, Shield, Clock, CheckCircle, ArrowRight, Star, Globe, Target } from 'lucide-react';
+import { Truck, ArrowRight} from 'lucide-react';
+export default function AISupplyChainOptimizerPage() {
+  const features = [
+    {
+      title: 'Predictive Demand Forecasting',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       description: 'AI algorithms analyze historical data, market trends, and external factors to predict demand with 92% accuracy.',
       icon: <TrendingUp className="w-5h-5ml-2"   />,
       benefits: ['Demand prediction', 'Seasonal analysis', 'Market trend insights', 'Inventory optimization']},
@@ -133,6 +144,7 @@ import {Truck, Package, TrendingUp, Shield, Clock, CheckCircle, ArrowRight, Star
       role: 'CEO',
       company: 'Manufacturing Solutions',
       content: 'This AI tool transformed our entire supply chain. We can now predict disruptions before they happen and optimize accordingly.',
+<<<<<<< HEAD
       rating: 5;}];
   const stats = [{number: '35%', label: 'Cost Reduction', icon: <TrendingUp className="w-5h-5ml-2"   />,</TrendingUp></TrendingUp>
     {number: '92%', label: 'Forecast Accuracy', icon: <Target className="w-5h-5ml-2"   />,</Target></Target>
@@ -177,3 +189,125 @@ export default function AisupplychainoptimizerPage() {
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+      rating: 5
+    }
+  ];
+  const stats = [
+    { number: '35%', label: 'Cost Reduction', icon: <TrendingUp className="w-6h-6" /> },
+    { number: '92%', label: 'Forecast Accuracy', icon: <Target className="w-6h-6" /> },
+    { number: '500+', label: 'Companies Using', icon: <Globe className="w-6h-6" /> },
+    { number: '40%', label: 'Delivery Improvement', icon: <Clock className="w-6h-6" /> }
+  ];
+  return (
+      <Helmet>
+        <title>5G Data Analytics - Zion Tech Group</title>
+        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+        <title>AI Supply Chain Optimizer - Smart Logistics & Inventory Management | Zion Tech Group</title>
+        <meta const name = "description" content="Optimize your supply chain with AI-powered demand forecasting, route optimization, and inventory management. Reduce costs by 35% and improve delivery times by 40%." / / />
+        <meta name="keywords" content="AI supply chain, logistics optimization, inventory management, demand forecasting, supply chain AI, logistics technology" / / />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-supply-chain-optimizer" />
+      </Helmet>
+
+      <FuturisticBackground variant="services" />
+        {/* Hero Section */}
+        <section className="pt-20 px-4 py-12sm:py-16lg:py-20" />
+          <div className="max-w-7xlmx-auto">
+            <div className="text-centermb-12">
+              <h1 className="text-3 xl sm:text-4xl md:text-5 xl lg:text-6 xl font-bold text-white mb-6"  />AI Supply Chain Optimizer
+              </h1>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3 xlmx-automb-8">
+              Revolutionize your supply chain with AI-powered demand forecasting, route optimization, 
+                and intelligent inventory management. Reduce costs by 35% and improve efficiency by 40%.
+              </p>
+              <div className="flex flex-col sm:flex-rowgap-4justify-center">
+        </div>
+
+                <FuturisticButton
+                  variant="primary"
+                  size="lg"
+                  onClick="{()" = /> window.open('/contact', '_blank')}
+                >
+                  Start Free Trial
+                  <ArrowRight className="w-5h-5ml-2" />
+                </FuturisticButton>
+
+                <FuturisticButton
+                  variant="ghost"
+                  size="lg"
+                  onClick="{()" =  />window.open('#demo', '_blank')}
+                >
+                  Watch Demo
+                </FuturisticButton>
+              </div>
+
+              {features.map((feature, index) => (
+                <FuturisticCard key="{index}" variant="service" className="h-full" />
+
+              {pricingPlans.map((plan, index) => (
+                <FuturisticCard 
+                  key="{index}" 
+                  variant="{plan.popular" ? "feature" : "service"} 
+                  className="{`h-full" ${plan.popular ? 'ring-2 ring-purple-500' : ''}`} />
+                  {plan.popular && (
+
+              {testimonials.map((testimonial, index) => (
+                <FuturisticCard key="{index}" variant="testimonial" className="h-full" />
+                  <div className="flex items-centermb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key="{i}" className="w-4 h-4text-yellow-400fill-current" />
+                    ))}
+                  </div>
+                  <blockquote className="text-gray-300 mb-6italic"  />"{testimonial.content}"
+                  </blockquote>
+                  <footer />
+                    <p className="font-semiboldtext-white">
+              {testimonial.name}</p>
+                    <p className="text-gray-400text-sm">
+              {testimonial.role}</p>
+                    <p className="text-gray-500text-sm">
+              {testimonial.company}</p>
+                  </footer>
+                </FuturisticCard>
+
+              ))}
+            </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-12 sm:py-16lg:py-20px-4" />
+          <div className="max-w-7xlmx-auto">
+            <FuturisticCard variant="feature" className="text-center" />
+              <h2 className="text-2 xl sm:text-3 xl md:text-4xl font-bold text-white mb-4"  />Ready to Optimize Your Supply Chain?
+              </h2>
+              <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xlmx-auto">
+              Start your free 14-day trial today. No credit card required. Join 500+ companies optimizing their supply chains.
+              </p>
+              <div className="flex flex-col sm:flex-rowgap-4justify-center">
+                <FuturisticButton
+                  variant="primary"
+                  size="lg"
+                  onClick="{()" =>window.open('/contact', '_blank')}
+                >
+                  Start Free Trial
+                </FuturisticButton>
+                <FuturisticButton
+                  variant="secondary"
+                  size="lg"
+                  onClick="{()" =  />window.open('/contact', '_blank')}
+                >
+                  Schedule Demo
+                </FuturisticButton>
+              </div>
+              <div className="mt-8text-white/80text-sm">
+                <p />✓ 14-day free trial • ✓ No setup fees • ✓ Cancel anytime</p>
+              </div>
+            </FuturisticCard>
+          </div>
+        </section>
+      </FuturisticBackground>
+
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

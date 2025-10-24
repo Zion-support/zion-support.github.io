@@ -368,6 +368,7 @@ export default LazyImage;
   }
 
   return (
+<<<<<<< HEAD
     <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
       {!isInView ? (
         <img
@@ -394,6 +395,40 @@ export default LazyImage;
             }`}
           />
         </>
+=======
+    <div ref="{imgRef}" className="{`relative" overflow-hidden ${className}`} />
+      {!isInView && (
+        <div className="absolute inset-0 bg-gray-800 animate-pulse flex items-centerjustify-center">
+          <Loader2 className="w-8 h-8text-gray-400animate-spin" />
+        </div>
+      )}
+      
+      {isInView && !isLoaded && !hasError && (
+        <div className="absolute inset-0 bg-gray-800 flex items-centerjustify-center">
+          <Loader2 className="w-8 h-8text-gray-400animate-spin" />
+        </div>
+      )}
+      
+      {isInView && (
+        <img
+          src="{src}"
+          alt="{alt}"
+          onLoad="{handleLoad}"
+          onError="{handleError}"
+          className="{`w-full" h-full object-cover transition-opacity duration-300 ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+          loading="lazy"
+        / />
+      )}
+      
+      {hasError && (
+        <div className="absolute inset-0 bg-gray-800 flex items-centerjustify-center">
+          <div className="text-centertext-gray-400">
+            <div className="w-8 h-8mx-automb-2"  >📷</div>
+            <p className="text-sm">Image failed to load</p>
+          </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       )}
     </div>
   )
@@ -414,4 +449,7 @@ const LazyImage: React.FC<LazyImageProps> = () => {
 };
 
 export default LazyImage;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 'use client';
 import React from "react";
@@ -321,6 +322,18 @@ const BlockchainPage: React.FC = () => {
           </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
         </div>
+=======
+import React  from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+
+const Page: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
+      <Helmet>
+
+        </Link>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
 =======
           <Link
@@ -336,6 +349,7 @@ const BlockchainPage: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
+<<<<<<< HEAD
 }
 =======
         <title>Blockchain Solutions - Zion Tech Group</title>
@@ -680,3 +694,8 @@ export default function BlockchainPage() {
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+};
+
+export default Page;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

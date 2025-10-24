@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
@@ -37,6 +38,14 @@ import {useState, useEffect} from 'react';
 import {Sun, Moon} from 'lucide-react';
 
 const ThemeToggle: React.FC = () => {const [isDark, setIsDark] = useState(true);
+=======
+'use client';
+import { useState, useEffect} from 'react';
+import { Sun, Moon} from 'lucide-react';
+
+const ThemeToggle: React.FC = () => {
+  const [isDark, setIsDark] = useState(true);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   useEffect(() => {
     // Check for saved theme preference or default to dark;
     const savedTheme = localStorage.getItem('theme');

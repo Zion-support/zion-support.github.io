@@ -773,6 +773,7 @@ function App() {
                 <Route path="/workflow-automation" element={<WorkflowAutomationPage />} />
                 <Route path="/cloud-native-security" element={<CloudNativeSecurityPage />} />
                 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
                 {/* Micro SAAS Routes */}
@@ -819,6 +820,64 @@ function App() {
                 <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
                 <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
                 <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+=======
+                {/* AI Services Dropdown */}
+                <Route path="/ai-content-generator" element={<AiContentGenerationPage />} />
+                <Route path="/ai-chatbot-builder" element={<AiServicesPage />} />
+                <Route path="/ai-analytics-dashboard" element={<AiDataAnalyticsPage />} />
+                <Route path="/ai-email-assistant" element={<AiServicesPage />} />
+                
+                {/* Additional AI Services */}
+                <Route path="/ai-voice-assistant" element={<AiServicesPage />} />
+                <Route path="/ai-crm-assistant" element={<AiServicesPage />} />
+                <Route path="/ai-social-media-manager" element={<AiServicesPage />} />
+                <Route path="/ai-email-marketing-automation" element={<AiServicesPage />} />
+                <Route path="/ai-project-manager" element={<AiServicesPage />} />
+                <Route path="/ai-3 d-generation" element={<AiServicesPage />} />
+                <Route path="/ai-drug-discovery-pro" element={<AiServicesPage />} />
+                <Route path="/ai-automated-reporting" element={<AiServicesPage />} />
+                <Route path="/ai-password-manager" element={<AiServicesPage />} />
+                <Route path="/ai-task-manager" element={<AiServicesPage />} />
+                
+                {/* IT Services Dropdown */}
+                <Route path="/web-development" element={<ItServicesPage />} />
+                <Route path="/mobile-development" element={<ItServicesPage />} />
+                <Route path="/devops" element={<ItServicesPage />} />
+                <Route path="/cloud-migration" element={<ItServicesPage />} />
+                
+                {/* Additional IT Services */}
+                <Route path="/api-development" element={<ItServicesPage />} />
+                <Route path="/database-management" element={<ItServicesPage />} />
+                <Route path="/network-infrastructure" element={<ItServicesPage />} />
+                <Route path="/system-integration" element={<ItServicesPage />} />
+                <Route path="/data-analytics" element={<ItServicesPage />} />
+                <Route path="/iot-solutions" element={<ItServicesPage />} />
+                <Route path="/blockchain-development" element={<ItServicesPage />} />
+                
+                {/* 5 G Services */}
+                <Route path="/5 g-network-infrastructure" element={<ItServicesPage />} />
+                <Route path="/5 g-iot-solutions" element={<ItServicesPage />} />
+                <Route path="/5 g-edge-computing" element={<ItServicesPage />} />
+                <Route path="/5 g-private-networks" element={<ItServicesPage />} />
+                <Route path="/5 g-mobile-applications" element={<ItServicesPage />} />
+                <Route path="/5 g-data-analytics" element={<ItServicesPage />} />
+                
+                {/* Additional Services */}
+                <Route path="/business-intelligence" element={<ItServicesPage />} />
+                <Route path="/5 g-implementation" element={<ItServicesPage />} />
+                
+                {/* Company Pages */}
+                <Route path="/team" element={<TeamPage />} />
+                <Route path="/careers" element={<CareersPage />} />
+                <Route path="/case-studies" element={<CaseStudiesPage />} />
+                <Route path="/blog" element={<BlogPage />} />
+                {/* Support Pages */}
+                <Route path="/docs" element={<DocsPage />} />
+                <Route path="/api-docs" element={<ApiDocsPage />} />
+                <Route path="/support" element={<SupportPage />} />
+                <Route path="/status" element={<StatusPage />} />
+                <Route path="/consultation" element={<ConsultationPage />} />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               </Routes>
             </Suspense>
             <Footer />
@@ -841,7 +900,10 @@ function App() {
 
 <<<<<<< HEAD
 export default App;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 =======
 export default App;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

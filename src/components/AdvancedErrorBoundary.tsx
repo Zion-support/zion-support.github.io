@@ -195,6 +195,7 @@ class AdvancedErrorBoundary extends Component;
       return null;
     }
   };
+<<<<<<< HEAD
   private getSessionId = (): string => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -207,6 +208,11 @@ class AdvancedErrorBoundary extends Component;
   O: Add content;}
 }`
         sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+=======
+    // Generate or retrieve session ID
+      let sessionId = sessionStorage.getItem('sessionId');
+        sessionId={`session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         sessionStorage.setItem('sessionId', sessionId);
       }
       return sessionId;

@@ -40,6 +40,7 @@ interface Props {
 =======
 import {Component, ErrorInfo, ReactNode} from 'react';
 
+<<<<<<< HEAD
 interface Props {children: ReactNode;}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 
@@ -62,6 +63,13 @@ class ErrorBoundary extends Component<Props, State> {
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   static getDerivedStateFromError(error: Error): State {
+=======
+class ErrorBoundary extends Component<Props, State> {
+  public state: State = {
+    hasError: false
+  };
+  public static getDerivedStateFromError(error: Error): State {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
     return { hasError: true, error };
   }
 
@@ -131,6 +139,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       return (
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
@@ -218,6 +227,18 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
               </button>
             </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-6xl font-bold text-white mb-4">Oops!</h1>
+            <p className="text-xl text-gray-300 mb-8">Something went wrong.</p>
+            <button
+              onClick={() => this.setState({ hasError: false, error: undefined })}
+              className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
+            >
+              Try Again
+            </button>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </div>
         </div>
       );
@@ -251,6 +272,7 @@ this.setState({ hasError: false, error: undefined})}
 }
 
 export default ErrorBoundary;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export default function Errorboundary({ className = '', children, ...props }: ErrorboundaryProps) {
@@ -290,3 +312,5 @@ const ErrorBoundary: React.FC<ErrorBoundaryProps> = () => {
 
 export default ErrorBoundary;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+import React  from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Helmet } from 'react-helmet-async';
 
 import React from 'react';
@@ -8,7 +12,11 @@ export default function FiveGgedgecomputingPage() {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900pt-20">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>5G Edge Computing - Zion Tech Group</title>
         <meta name="description" content="Advanced 5G edge computing solutions for ultra-low latency and high performance." />
@@ -22,6 +30,7 @@ export default function FiveGgedgecomputingPage() {
           </p>
 <<<<<<< HEAD
           
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Ultra-Low Latency</h3>
@@ -119,3 +128,10 @@ export default function FiveGgedgecomputingPage() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
   );
 }
+=======
+          <ArrowRight className="w-5 h-5 ml-2"  />
+        </Link>
+      </div>
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

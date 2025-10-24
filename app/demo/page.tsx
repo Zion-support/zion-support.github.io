@@ -2,10 +2,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Helmet } from 'react-helmet-async';
+=======
+import React  from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Star } from 'lucide-react';
@@ -18,6 +22,7 @@ import { Play } from 'lucide-react';
 import { Hand } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
+<<<<<<< HEAD
 import { useState } from 'react';
 import { Play, Pause, SkipForward, SkipBack, Maximize, ArrowRight, CheckCircle, Star, Calendar, Users, Award } from 'lucide-react';
 
@@ -410,10 +415,29 @@ const DemoPage = () => {
       <Footer />
     </ErrorBoundary>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+const DemoPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
+      <Helmet>
+        <title>Demo - Zion Tech Group</title>
+        <meta name="description" content="Professional demo services by Zion Tech Group. Transform your business with our expert solutions." / / />
+      </Helmet>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <h1 className="text-4xl font-bold text-white mb-6"  >Demo</h1>
+        <p className="text-lg text-gray-300 mb-8">Professional demo services coming soon.</p>
+        <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit" >
+          Contact Us
+          
+          <ArrowRight className="w-5h-5ml-2"  />
+        </Link>
+      </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 };
 
+<<<<<<< HEAD
   const handlePlayPause = () => {
     setIsPlaying(!isPlaying);
   };
@@ -546,3 +570,6 @@ export default function Demo() {return (
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+export default DemoPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

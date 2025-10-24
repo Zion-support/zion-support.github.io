@@ -498,7 +498,14 @@ const SEOOptimizer: React.FC<SEOOptimizerProps   /> = ({
           name': 'What services does Zion Tech Group offer?',
           acceptedAnswer: {
             '@type': 'Answer',
+<<<<<<< HEAD
             text': 'Zion Tech Group offers comprehensive AI solutions, IT services, 5 G implementation, cloud migration, cybersecurity, mobile development, and micro SAAS platforms for businesses of all sizes.'},
+=======
+            'text': 'Zion Tech Group offers comprehensive AI solutions, IT services, 5G implementation, cloud migration, cybersecurity, mobile development, and micro SAAS platforms for businesses of all sizes.'
+          }
+        },
+        {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           '@type': 'Question',
           name': 'How can I contact Zion Tech Group?',
           acceptedAnswer: {'@type': 'Answer',
@@ -515,10 +522,14 @@ const SEOOptimizer: React.FC<SEOOptimizerProps   /> = ({
 export default function SEOOptimizer() {return (
     <title>5G Data Analytics - Zion Tech Group</title>
       {/* Basic Meta Tags */}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <title>{title}</title>
       {/* Canonical URL */}
       {/* Open Graph Meta Tags */}
+<<<<<<< HEAD
 
       {/* Twitter Card Meta Tags */}
 
@@ -528,10 +539,47 @@ export default function SEOOptimizer() {return (
 
       {/* Structured Data */}
 
+=======
+      <meta property="og: title" content="{title}" / / />
+      <meta property="og: description" content="{description}" / / />
+      <meta property="og:type" content="website" / / />
+      <meta property="og: url" content="{canonicalUrl}" / / />
+      <meta property="og: image" content="{ogImage}" / / />
+      <meta property="og:image:width" content="1200" / / />
+      <meta property="og:image:height" content="630" / / />
+      <meta property="og: image:alt" content="{title}" / / />
+      <meta property="og:image:type" content="image/jpeg" / / />
+      <meta property="og: image:secure_url" content="{ogImage}" / / />
+      <meta property="og:site_name" content="Zion Tech Group" / / />
+      <meta property="og:locale" content="en_US" / / />
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" / / />
+      <meta name="twitter: title" content="{title}" / / />
+      <meta name="twitter: description" content="{description}" / / />
+      <meta name="twitter: image" content="{ogImage}" / / />
+      <meta name="twitter: image:alt" content="{title}" / / />
+      <meta name="twitter:image:width" content="1200" / / />
+      <meta name="twitter:image:height" content="630" / / />
+      <meta name="twitter:site" content="@ziontechgroup" / / />
+      <meta name="twitter:creator" content="@ziontechgroup" / / />
+      {/* Additional SEO Meta Tags */}
+      <meta name="google-site-verification" content="your-google-verification-code" / / />
+      <meta name="msvalidate.01" content="your-bing-verification-code" / / />
+      <meta name="yandex-verification" content="your-yandex-verification-code" / / />
+      {/* Performance Hints */}
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      {/* Structured Data */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <script type="application/ld+json">{JSON.stringify(breadcrumbData)}
       <script type="application/ld+json">{JSON.stringify(faqData)}
       {structuredData && (
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         <script type="application/ld+json">{JSON.stringify(structuredData)}
 
       )}
@@ -551,4 +599,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = () => {
 };
 
 export default SEOOptimizer;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

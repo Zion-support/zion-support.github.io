@@ -147,8 +147,14 @@ const allLinks = [...new Set([...navigationLinks, ...footerLinks, ...appRoutes])
   return !existingPages.includes(path);
 });
 
+<<<<<<< HEAD
 // Find broken links (pages that exist but have, no, route)
   const link = `/${page}`;
+=======
+// Find broken links (pages that exist but have no route)
+const brokenLinks = existingPages.filter(page => {
+  const link={`/${page}`};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   return !allLinks.includes(link) && page !== 'page.tsx';
 });
 

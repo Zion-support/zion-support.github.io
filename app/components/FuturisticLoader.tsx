@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
@@ -36,6 +37,12 @@ import {motion} from 'framer-motion';
 'use client';
 
 interface FuturisticLoaderProps {size?: 'sm' | 'md' | 'lg';
+=======
+import React  from 'react';
+import { motion } from 'framer-motion';
+interface FuturisticLoaderProps {
+  size?: 'sm' | 'md' | 'lg';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   color?: 'cyan' | 'purple' | 'pink' | 'green';
   text?: string;}
 
@@ -56,6 +63,7 @@ interface FuturisticLoaderProps {size?: 'sm' | 'md' | 'lg';
       default: return 'border-cyan-500 text-cyan-400';}
   };
 
+<<<<<<< HEAD
 export default function FuturisticLoader() {return (
 
         {/* Outer rotating ring */}
@@ -109,15 +117,84 @@ export default function FuturisticLoader() {return (
             repeat: Infinity,
             ease: 'easeInOut'}}
            /></motion>
+=======
+  return (
+    <div className="flex flex-col items-centerjustify-centerspace-y-4">
+      <div className="relative">
+        {/* Outer rotating ring */}
+        <motion.div className="{`"
+            ${getSizeClasses()} 
+            border-4 border-transparent 
+            border-t-4 ${getColorClasses().split(' ')[1]}
+            rounded-full
+          `}
+          animate={{ rotate: 360 }}
+          transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+        / >
+        {/* Inner pulsing ring */}
+        <motion.div className="{`"
+            absolute inset-2 
+            border-2 border-transparent 
+            border-r-2 ${getColorClasses().split(' ')[1]}
+            rounded-full
+          `}
+          animate={{ rotate: -360 }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: 'linear' }}
+        / >
+        {/* Center pulsing dot */}
+        <motion.div className="{`"
+            absolute top-1/2 left-1/2 w-2 h-2 
+            ${getColorClasses().split(' ')[1]} 
+            rounded-full
+            transform -translate-x-1/2 -translate-y-1/2
+          `}
+          animate={{ 
+            scale: [1, 1.5, 1],
+            opacity: [0.5, 1, 0.5]
+          }}
+          transition={{ 
+            duration: 1, 
+            repeat: Infinity, 
+            ease: 'easeInOut' 
+          }}
+        / >
+        {/* Glow effect */}
+        <motion.div className="{`"
+            absolute inset-0 
+            ${getColorClasses().split(' ')[1]} 
+            rounded-full
+            blur-md
+            opacity-30
+          `}
+          animate={{ 
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.6, 0.3]
+          }}
+          transition={{ 
+            duration: 2, 
+            repeat: Infinity, 
+            ease: 'easeInOut' 
+          }}
+        / >
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
       {text && (
         <motion.p;
           className="{`text-sm" ${getColorClasses().split(' ')[1]} font-medium`}
+<<<<<<< HEAD
           animate="{{" opacity: [0.5, 1, 0.5]}}
           transition="{{"
             duration: 1.5,
             repeat: Infinity,
             ease: 'easeInOut'}}   /></motion>
+=======
+          animate={{ opacity: [0.5, 1, 0.5] }}
+          transition={{ 
+            duration: 1.5, 
+            repeat: Infinity, 
+            ease: 'easeInOut' 
+          }} />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           {text}
         </motion.p>
   )}
@@ -134,6 +211,10 @@ const FuturisticLoader: React.FC<FuturisticLoaderProps> = () => {
     </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
   );
+<<<<<<< HEAD
 };
 
 export default FuturisticLoader;
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

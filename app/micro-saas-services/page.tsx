@@ -22,10 +22,13 @@ import { Link } from "react-router-dom";
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { ArrowRight, Shield, Cloud, Globe, Calendar, Phone, CheckCircle, Sparkles, Heart, Receipt, Package, Code } from 'lucide-react';
 =======
 import { ArrowRight, Shield, Cloud, Globe, Calendar, Phone, CheckCircle, Award, Rocket, Sparkles, TrendingUp, Heart, Receipt, Package, Code, Globe as WebIcon, Calendar as ScheduleIcon, Cloud as CloudIcon, Shield as ProtectionIcon, BarChart3 as AnalyticsIcon, Users as TeamIcon, Megaphone as MarketingIcon, Mail as EmailIcon, FileText as DocumentIcon, Settings as ConfigIcon, Headphones as SupportIcon } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0326
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
 export default function Page() {
 
@@ -475,6 +478,7 @@ const MicroSaaSServicesPage: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>Micro SaaS Services - Zion Tech Group</title>
@@ -646,3 +650,7 @@ export default function MicrosaasservicesPage() {
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+      <Helmet>
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

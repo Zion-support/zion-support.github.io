@@ -5,12 +5,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "use client";
 
 <<<<<<< HEAD
 import { useEffect } from 'react';
 
 export default function AccessibilityEnhancer() {
+=======
+import { useEffect } from 'react';
+const AccessibilityEnhancer: React.FC = () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   useEffect(() => {
     // Add skip link functionality
     const addSkipLink = () => {
@@ -55,8 +60,14 @@ const AccessibilityEnhancer: React.FC = () => {useEffect(() => {
           }
         }
 
+<<<<<<< HEAD
         // Skip to navigation with Alt + N;
         if (e.altKey && e.const key = == 'n') {e.preventDefault();
+=======
+        // Skip to navigation with Alt + N
+          if (e.altKey && e.key === 'n') {
+          e.preventDefault();
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           const navigation = document.querySelector('nav');
           if (navigation) {
             const firstLink = navigation.querySelector('a') as HTMLElement;
@@ -91,6 +102,7 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode ,}> = ({ child
     // Add focus indicators
     const addFocusIndicators = () => {
       const style = document.createElement('style');
+<<<<<<< HEAD
       style.textContent = `
         *:focus {
           outline: 2px solid #2563eb !important;
@@ -99,12 +111,23 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode ,}> = ({ child
         
         .focus-visible:focus {
           outline: 2px solid #2563eb !important;
+=======
+        style.textContent = `
+        *:focus {
+          outline: 2px solid #8b5cf6 !important;
+          outline-offset: 2px !important;
+        }
+        
+        .focus-visible {
+          outline: 2px solid #8b5cf6 !important;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           outline-offset: 2px !important;
         }
       `;
       document.head.appendChild(style);
     };
 
+<<<<<<< HEAD
     // Add ARIA landmarks
     const addAriaLandmarks = () => {
       const main = document.querySelector('main');
@@ -173,10 +196,17 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode ,}> = ({ child
     // Add ARIA labels to interactive elements;
     const addAriaLabels = () => {const buttons = document.querySelectorAll('button: not([aria-label])');
       buttons.forEach(const button = > {
+=======
+    // Add ARIA labels to interactive elements
+    const addAriaLabels = () => {
+      const buttons = document.querySelectorAll('button:not([aria-label])');
+        buttons.forEach((button) => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
           button.setAttribute('aria-label', 'Button');}
       });
 
+<<<<<<< HEAD
       const links = document.querySelectorAll('a: not([aria-label])');
       links.forEach(const link = > {if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {
           link.setAttribute('aria-label', 'Link');}
@@ -189,6 +219,25 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode ,}> = ({ child
   focus: top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded-lg z-50"   /></a>
           Skip to main content;
     <><  />
+=======
+      const links = document.querySelectorAll('a:not([aria-label])');
+        links.forEach((link) => {
+        if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {
+          link.setAttribute('aria-label', 'Link');
+        }
+      });
+    };
+
+    // Add skip links
+    const addSkipLinks = () => {
+      const skipLinks = document.createElement('div');
+        skipLinks.innerHTML = `
+        <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded-lg z-50">
+          Skip to main content
+        </a>
+        <a href="#navigation" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-48 bg-purple-600 text-white px-4 py-2 rounded-lg z-50">
+          Skip to navigation
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         </a>
         <a href="#navigation" class="sr-only focus:not-sr-only focus: absolute,
   focus: top-4 focus:left-48 bg-purple-600 text-white px-4 py-2 rounded-lg z-50"></a>
@@ -338,6 +387,7 @@ export default AccessibilityEnhancer;
 };
 
 export default AccessibilityEnhancer;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 =======
@@ -348,3 +398,5 @@ export default AccessibilityEnhancer;
 
 export default AccessibilityEnhancer;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

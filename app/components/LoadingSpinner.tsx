@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22,6 +23,9 @@ import React from 'react'
 import React from "react";
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 
+=======
+import React  from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg'
   className?: string
@@ -35,6 +39,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
+<<<<<<< HEAD
 <<<<<<< HEAD
     lg: 'w-12 h-12'
   }
@@ -109,6 +114,19 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps   /> = ({const size = 'md',
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <div className="{`${sizeClasses[size]}" ${colorClasses[color]} animate-spin`}   /></div>
         <svg;
+=======
+    lg: 'w-12 h-12'
+  };
+  const colorClasses = {
+    primary: 'text-cyan-500',
+    secondary: 'text-purple-500',
+    white: 'text-white'
+  };
+  return (
+    <div className="flex flex-col items-centerjustify-centerspace-y-4">
+      <div className="{`${sizeClasses[size]}" ${colorClasses[color]} animate-spin`} />
+        <svg
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           className="w-fullh-full"
           xmlns="http:// www.w3.org/2000/svg"
           fill="none"
@@ -125,7 +143,11 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps   /> = ({const size = 'md',
             className="opacity-75"
             fill="currentColor"
             d="M4 12 a8 8 0 018-8 V0 C5.373 0 0 5.373 0 12 h4 zm2 5.291 A7.962 7.962 0 014 12 H0 c0 3.042 1.135 5.824 3 7.938 l3-2.647 z"
+<<<<<<< HEAD
              /></path>
+=======
+          / />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         </svg>
       </div>
       {text && (
@@ -145,8 +167,11 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = () => {
 
 <<<<<<< HEAD
 export default LoadingSpinner;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 =======
 export default LoadingSpinner;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

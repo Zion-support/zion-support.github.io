@@ -12,6 +12,7 @@ import React from 'react';
 import { Home, ArrowLeft, Search, Phone, Mail, Brain, Cloud, Shield, Code, BarChart, Users, Zap, Target, CheckCircle, ArrowRight, Globe, Database, Smartphone, Settings, Lock, TrendingUp, Star, Award, Phone as PhoneIcon, Mail as MailIcon } from 'lucide-react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function NotFoundPage() {
   const quickLinks = [
     { name: 'Home', href: '/', icon: Home },
@@ -82,6 +83,26 @@ export default function NotFound() {
             className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors"
           >
             <Home className="w-5 h-5 mr-2" />
+=======
+const NotFound: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-centerp-4">
+      <div className="max-w-md w-full bg-gray-800 rounded-xl shadow-2xll p-8text-center">
+        <div className="flex justify-centermb-6">
+          <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-centerjustify-center">
+            <span className="text-4xl"  >404</span>
+          </div>
+        <h1 className="text-2 xl font-bold text-white mb-4"  />Page Not Found
+        </h1>
+        <p className="text-gray-300 mb-6">
+              Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or doesn't exist.
+        </p>
+        <div className="flex flex-col sm:flex-rowgap-3">
+          <Link to="/" className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lgtransition-colors" >
+           
+          <Home className="w-4 h-4 mr-2" /  />
+        </Link>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             Go Home
           </Link>
           <button
@@ -98,6 +119,7 @@ export default function NotFound() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
             <RefreshCw className="w-5 h-5 mr-2" />
             Refresh
+<<<<<<< HEAD
           </button>
 =======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>
@@ -242,11 +264,14 @@ const NotFound: React.FC = () => {return (
           >
             <RefreshCw className="w-5h-5ml-2"   /></RefreshCw>
             Refresh;
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </button>
         </div>
     </div>
   )
 };
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 =======
@@ -278,3 +303,5 @@ const NotFoundPage: React.FC = () => {
 
 export default NotFoundPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

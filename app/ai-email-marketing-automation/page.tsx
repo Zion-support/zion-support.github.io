@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
@@ -12,6 +13,13 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+=======
+import React  from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+const Page: React.FC = () => {
+import { ArrowRight, Brain } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0458
 export default function AiEmailMarketingAutomationZionTechGroup() {
@@ -193,6 +201,7 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
     }
   ];
 
+<<<<<<< HEAD
   const stats = [
     { icon: Users, value: '15,000+', label: 'Active Users' },
     { icon: Send, value: '50 M+', label: 'Emails Sent' },
@@ -224,6 +233,39 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
               <p className="text-gray-300">
                 Our team of experts delivers tailored solutions for your specific requirements.
               </p>
+=======
+import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code } from 'lucide-react';
+
+export default function Page() {
+  return (
+      <Helmet>
+        <title>5G Data Analytics - Zion Tech Group</title>
+        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+        <title>- Zion Tech Group</title>
+        <meta const name = "description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." / / />
+        <meta name="keywords" content="AI solutions, IT services, Zion Tech Group" / / />
+        <meta property="og:title" content=" - Zion Tech Group" / / />
+        <meta property="og:description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." / / />
+        <meta property="og:type" content="website" / / />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-email-marketing-automation" / / />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-16">
+        </div>
+        {/* Hero Section */}
+
+              Professional  services by Zion Tech Group. Expert solutions tailored to your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4justify-centermb-12">
+              <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup" >
+          Get Started
+                
+          <ArrowRight className="ml-2group-hover:translate-x-1transition-transform"  />
+        </Link>
+              <Link to="/contact" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More
+              </Link>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </div>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -493,15 +535,23 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Get Started?
+=======
+        <section className="py-20" />
+          <div className="containermx-autopx-4">
+            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xllp-12text-center">
+              <h2 className="text-4xl font-bold text-white mb-6"  />Ready to Get Started?
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Contact our experts to discuss your requirements and get started today.
               </p>
+<<<<<<< HEAD
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-violet-500 to-blue-600 hover:from-violet-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Contact Us
@@ -615,3 +665,16 @@ export default function AiemailmarketingautomationPage() {
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+              <div className="flex flex-col sm:flex-rowgap-4justify-center">
+                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25">Contact Us
+                </Link>
+                <Link to="/services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">View All Services
+                </Link>
+              </div>
+          </div>
+        </section>
+      </div>
+
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

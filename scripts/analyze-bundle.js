@@ -209,7 +209,16 @@ font-family: "-apple-system",BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   analysis.recommendations = recommendations;
 
 function generateHTMLReport(analysis) {
+<<<<<<< HEAD
   const html =`
+=======
+  const html={`
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
     <title>Bundle Analysis Report - Zion Tech Group</title>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -489,8 +498,23 @@ const htmlPath = path.join(ANALYSIS_DIR, 'bundle-report.html");
                 <div class="stat-label">Largest File</div>
                         <th>File Path</th>
                         <th>Size</th>
+<<<<<<< HEAD
  `<td>${file.path}</td>
                             <td class="size">${file.sizeFormatted}</td>`).join('')}
+=======
+                    </tr>
+                </thead>
+                <tbody>
+                    ${analysis.files.map(file => `}
+                        <tr>
+                            <td>${file.path}</td>
+                            <td class="size">${file.sizeFormatted}</td>
+                        </tr>
+                    `).join('')}
+                </tbody>
+            </table>
+        </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
             <h3>💡 Optimization Recommendations</h3>
                 ${analysis.recommendations.map(rec => `<li>${rec}</li>`).join('')}

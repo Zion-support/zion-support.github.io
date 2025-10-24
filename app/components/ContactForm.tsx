@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
@@ -9,6 +10,12 @@ const ContactForm: React.FC = () => {
       <h2>ContactForm</h2>
       <p>ContactForm component.</p>
 =======
+=======
+'use client';
+import { useState } from 'react';
+import { MessageSquare } from 'lucide-react';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 interface FormData {
   name: string;
   email: string;
@@ -96,6 +103,7 @@ interface FormData {name: string;,
       [name]: value;}));
   };
 
+<<<<<<< HEAD
     e.preventDefault();
     setIsSubmitting(true);
     // Simulate form submission
@@ -109,6 +117,16 @@ interface FormData {name: string;,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 =======
     }))
+=======
+  if (isSubmitted) {
+    return (
+    <div className="bg-white/10 backdrop-blur-lg rounded-2xll p-8 borderborder-white/20text-center">
+        <CheckCircle className="w-16 h-16 text-green-400mx-automb-4" />
+        <h3 className="text-2 xl font-bold text-white mb-2"  >Message Sent!</h3>
+        <p className="text-gray-300">Thank you for your message. We'll get back to you soon.</p>
+      </div>
+  );
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -170,6 +188,7 @@ interface FormData {name: string;,
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -582,6 +601,17 @@ const ContactForm: React.FC<ContactFormProps> = () => {
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div   /></div>
             <label htmlFor="name" className="block text-sm font-mediumtext-gray-300mb-2"    />Full Name *
+=======
+    <div className="bg-white/10 backdrop-blur-lg rounded-2xll p-8borderborder-white/20">
+      <div className="text-centermb-8">
+        <h2 className="text-3 xl font-bold text-white mb-4"  >Get In Touch</h2>
+        <p className="text-gray-300">Ready to transform your business? Let's discuss your project.</p>
+      </div>
+      <form onSubmit="{handleSubmit}" className="space-y-6" />
+        <div className="grid grid-cols-1md:grid-cols-2gap-6">
+          <div />
+            <label htmlFor="name" className="block text-sm font-mediumtext-gray-300 mb-2"  />Full Name *
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </label>
             <input;
               type="text"
@@ -594,8 +624,13 @@ const ContactForm: React.FC<ContactFormProps> = () => {
               placeholder="Your full name"
                /></input>
           </div>
+<<<<<<< HEAD
           <div   /></div>
             <label htmlFor="email" className="block text-sm font-mediumtext-gray-300mb-2"    />Email Address *
+=======
+          <div />
+            <label htmlFor="email" className="block text-sm font-mediumtext-gray-300 mb-2"  />Email Address *
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </label>
             <input;
               type="email"
@@ -606,11 +641,20 @@ const ContactForm: React.FC<ContactFormProps> = () => {
               required;
               className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-purple-500focus:border-transparent"
               placeholder="your@email.com"
+<<<<<<< HEAD
                /></input>
           </div>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div   /></div>
             <label htmlFor="phone" className="block text-sm font-mediumtext-gray-300mb-2"    />Phone Number;
+=======
+            / />
+          </div>
+
+        <div className="grid grid-cols-1md:grid-cols-2gap-6">
+          <div />
+            <label htmlFor="phone" className="block text-sm font-mediumtext-gray-300 mb-2"  />Phone Number
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </label>
             <input;
               type="tel"
@@ -622,8 +666,13 @@ const ContactForm: React.FC<ContactFormProps> = () => {
               placeholder="+1 (555) 123-4567"
                /></input>
           </div>
+<<<<<<< HEAD
           <div   /></div>
             <label htmlFor="company" className="block text-sm font-mediumtext-gray-300mb-2"    />Company;
+=======
+          <div />
+            <label htmlFor="company" className="block text-sm font-mediumtext-gray-300 mb-2"  />Company
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </label>
             <input;
               type="text"
@@ -633,16 +682,24 @@ const ContactForm: React.FC<ContactFormProps> = () => {
               onChange="{handleChange}"
               className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-purple-500focus:border-transparent"
               placeholder="Your company name"
+<<<<<<< HEAD
                /></input>
           </div>
         <div   /></div>
           <label htmlFor="service" className="block text-sm font-mediumtext-gray-300mb-2"    />Service Interest;
+=======
+            / />
+          </div>
+        <div />
+          <label htmlFor="service" className="block text-sm font-mediumtext-gray-300 mb-2"  />Service Interest
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </label>
           <select;
             id="service"
             name="service"
             value="{formData.service}"
             onChange="{handleChange}"
+<<<<<<< HEAD
             className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2focus:ring-purple-500focus:border-transparent"   /></select>
             <option value=""  >Select a service</option>
             <option value="ai-services"  >AI Services</option>
@@ -654,6 +711,19 @@ const ContactForm: React.FC<ContactFormProps> = () => {
         </div>
         <div   /></div>
           <label htmlFor="message" className="block text-sm font-mediumtext-gray-300mb-2"    />Message *
+=======
+            className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2focus:ring-purple-500focus:border-transparent" />
+            <option value="">Select a service</option>
+            <option value="ai-services">AI Services</option>
+            <option value="it-services">IT Services</option>
+            <option value="5 g-solutions">5 G Solutions</option>
+            <option value="micro-saas">Micro SAAS</option>
+            <option value="consulting">Consulting</option>
+          </select>
+        </div>
+        <div />
+          <label htmlFor="message" className="block text-sm font-mediumtext-gray-300 mb-2"  />Message *
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </label>
           <textarea;
             id="message"
@@ -671,11 +741,16 @@ const ContactForm: React.FC<ContactFormProps> = () => {
           disabled="{isSubmitting}"
           className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-centerdisabled:opacity-50disabled:cursor-not-allowed"   /></button>
           {isSubmitting ? (
+<<<<<<< HEAD
             <><  />
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+=======
+              <div className="animate-spin rounded-full h-5 w-5 border-b-2border-whitemr-2"></div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               Sending...
             <  />
           ) : (
+<<<<<<< HEAD
             <><  />
               <Send className="w-5h-5ml-2"   /></Send>
               Send Message;
@@ -686,6 +761,29 @@ const ContactForm: React.FC<ContactFormProps> = () => {
             <span className="text-gray-300">+1 (302) 464-0950</span>
             <span className="text-gray-300">24/7 Support</span>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+=======
+              <Send className="w-5h-5mr-2" />
+              Send Message
+          )}
+        </button>
+      </form>
+
+      <div className="mt-8 pt-6border-tborder-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-3gap-6text-center">
+          <div className="flex items-centerjustify-center">
+            <Mail className="w-5 h-5text-cyan-400mr-2" />
+            <span className="text-gray-300"  >kleber@ziontechgroup.com</span>
+          </div>
+          <div className="flex items-centerjustify-center">
+            <Phone className="w-5 h-5text-purple-400mr-2" />
+            <span className="text-gray-300"  >+1 (302) 464-0950</span>
+          </div>
+          <div className="flex items-centerjustify-center">
+            <MessageSquare className="w-5 h-5text-green-400mr-2" />
+            <span className="text-gray-300"  >24/7 Support</span>
+          </div>
+    </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   );
 };
 
@@ -833,6 +931,7 @@ export default ContactForm;
     </div>
   )
 }
+<<<<<<< HEAD
 
 export default ContactForm
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
@@ -846,3 +945,5 @@ export default ContactForm
 
 export default ContactForm;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

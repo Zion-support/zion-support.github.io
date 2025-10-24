@@ -1,8 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+'use client';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import React from 'react';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const FuturisticServiceCard: React.FC = () => {
   return (
@@ -277,6 +283,11 @@ export default FuturisticServiceCard;"`
 import {ArrowRight, Brain} from 'lucide-react';
 
   const benefits = ['Advanced AI technology integration',
+=======
+const FuturisticServiceCardPage: React.FC = () => {
+  const benefits = [
+    'Advanced AI technology integration',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
@@ -297,6 +308,7 @@ import {ArrowRight, Brain} from 'lucide-react';
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses',}];
   return (
+<<<<<<< HEAD
     <title>5G Data Analytics - Zion Tech Group</title>
         <title>Futuristic Service Card | Zion Tech Group</title>
 
@@ -306,6 +318,21 @@ import {ArrowRight, Brain} from 'lucide-react';
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <h1 className="w-5h-5ml-2"   /></h1>
               <span className="w-5h-5ml-2"   />FuturisticServiceCard;
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+      <Helmet />
+        <title   />Futuristic Service Card | Zion Tech Group</title>
+        <meta name="description" content="Professional futuristic service card solutions by Zion Tech Group. Advanced AI and IT solutions for your business." / / />
+        <meta name="keywords" content="futuristic service card, AI solutions, IT services, Zion Tech Group" / / />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4sm:px-6lg:px-8" />
+        <div className="max-w-7xlmx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6 xl font-bold text-white mb-6" />
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400bg-clip-texttext-transparent"  />FuturisticServiceCard
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               </span>
               <br   /></br>
               <span className="w-5h-5ml-2"   />Solutions</span>
@@ -313,10 +340,17 @@ import {ArrowRight, Brain} from 'lucide-react';
             <p className="w-5h-5ml-2">Transform your business with our advanced futuristic service card solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
+<<<<<<< HEAD
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <button className="w-5h-5ml-2"   /></button>
                 Get Started;
                 <ArrowRight className="w-5h-5ml-2"   /></ArrowRight>
+=======
+            <div className="flex flex-col sm:flex-rowgap-4justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flex items-center" />
+                Get Started
+                <ArrowRight className="ml-2h-5w-5" />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               </button>
               <button className="w-5h-5ml-2">Learn More;
               </button>
@@ -324,6 +358,7 @@ import {ArrowRight, Brain} from 'lucide-react';
         </div>
       </section>
       {/* Features Section */}
+<<<<<<< HEAD
       <section className="w-5h-5ml-2"   /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -370,6 +405,17 @@ const FuturisticServiceCard: React.FC<ServiceCardProps> = ({
             <Star className="w-4 h-4 mr-1" />
             Popular
           </span>
+=======
+      <section className="py-20 px-4sm:px-6lg:px-8" />
+        <div className="max-w-7xlmx-auto">
+          <div className="text-centermb-16">
+            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Our Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
+              Discover the powerful features that make our futuristic service card solutions stand out.
+            </p>
+          </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         </div>
       )}
 
@@ -423,5 +469,9 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = () => {
   );
 };
 
+<<<<<<< HEAD
 export default FuturisticServiceCard;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+export default FuturisticServiceCardPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

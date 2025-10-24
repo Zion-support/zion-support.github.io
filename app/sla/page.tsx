@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -169,11 +170,15 @@ import {ArrowRight} from 'lucide-react';
 =======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+import React  from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function SlaPage() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Sla - Zion Tech Group</title>
@@ -194,6 +199,12 @@ export default function SlaPage() {
           </Link>
         </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
+      <Helmet>
+
+        </Link>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
       <Footer />
     </React.Fragment>
@@ -202,6 +213,7 @@ export default function SlaPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 }
 
@@ -209,3 +221,5 @@ export default function SlaPage() {
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

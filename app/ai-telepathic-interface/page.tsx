@@ -1,9 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 import { Helmet } from 'react-helmet-async';
+=======
+import React  from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
@@ -11,6 +15,7 @@ import { ArrowRight } from 'lucide-react';
 <<<<<<< HEAD
 export default function GDataAnalyticsZionTechGroupPage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -35,6 +40,20 @@ export default function GDataAnalyticsZionTechGroupPage() {
         >
           Contact Us
           <ArrowRight className="ml-2 h-5 w-5" />
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
+      <Helmet>
+        <title>Ai Telepathic Interface - Zion Tech Group</title>
+        <meta name="description" content="Professional ai telepathic interface services by Zion Tech Group. Transform your business with our expert solutions." / / />
+      </Helmet>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <h1 className="text-4xl font-bold text-white mb-6"  >Ai Telepathic Interface</h1>
+        <p className="text-lg text-gray-300 mb-8">Professional ai telepathic interface services coming soon.</p>
+        <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit" >
+          Contact Us
+          
+          <ArrowRight className="w-5h-5ml-2"  />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         </Link>
       </div>
 =======
@@ -445,6 +464,7 @@ const AITelepathicInterfacePage: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   );
 }
+<<<<<<< HEAD
 =======
 import React from 'react';
 
@@ -490,3 +510,5 @@ export default function AitelepathicinterfacePage() {
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -165,6 +166,28 @@ export default function CasestudiesPage() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Discover how we've helped businesses transform their operations with 
               cutting-edge AI and IT solutions. Real projects, real results.
+=======
+import React  from 'react';
+const CaseStudiesPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Case Studies - Zion Tech Group</title>
+        <meta name="description" content="Case Studies services by Zion Tech Group. Professional AI and IT solutions." />
+        <meta name="keywords" content="case-studies, AI solutions, IT services" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Case Studies
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional case studies services by Zion Tech Group.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {stats.map((stat, index) => (
@@ -238,6 +261,7 @@ export default function CasestudiesPage() {
             ))}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
           </div>
+<<<<<<< HEAD
         </section>
 
 <<<<<<< HEAD
@@ -454,12 +478,29 @@ const CaseStudiesPage = () => {
       <Footer />
     </ErrorBoundary>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+
+          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8 text-center">
+            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
+            <p className="text-gray-300 mb-6">
+              We're working on bringing you comprehensive case studies solutions. 
+              Contact us to learn more about our services.
+            </p>
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
+              Contact Us
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   );
 }
 =======
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="container mx-auto text-center">
@@ -529,3 +570,6 @@ const CaseStudiesPage: React.FC = () => {return (
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+export default CaseStudiesPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

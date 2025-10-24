@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 'use client';
 import React from "react";
@@ -12,6 +13,12 @@ import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 export default function CloudMigration() {
+=======
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { ArrowRight, HardDrive, Laptop, Tablet, Router } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -286,12 +293,16 @@ const CloudMigrationPage: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <>
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>Cloud Migration - Zion Tech Group</title>
         <meta name="description" content="Professional cloud migration solutions." />
         <meta name="keywords" content="cloud migration, AWS, Azure, Google Cloud" />
       </Helmet>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -713,10 +724,79 @@ const CloudMigrationPage: React.FC = () => {
                 View Demo
               </button>
             </div>
+=======
+        <title>Cloud Migration Services - Expert Cloud Transformation | Zion Tech Group</title>
+        <meta name="description" content="Transform your business with our expert cloud migration services. AWS, Azure, Google Cloud migration with zero downtime. Starting at $2,500. Free consultation available." / / />
+        <meta name="keywords" content="cloud migration, AWS migration, Azure migration, Google Cloud migration, cloud transformation, cloud consulting, infrastructure migration" / / />
+        <meta name="robots" content="index, follow" / / />
+        <link rel="canonical" href="https://ziontechgroup.com/cloud-migration" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
+        {/* Hero Section */}
+        <section className="relative py-20px-4overflow-hidden" />
+          {/* Animated Background */}
+          <div className="absolute inset-0bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.3)_0%,transparent_50%)]animate-pulse" />
+          <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }} / />
+
+          {/* Floating Elements */}
+          <div className="absolute top-20 left-10 w-16 h-16 bg-cyan-400/20 rounded-fullblur-xlanimate-bounce" style="{{" animationDelay: '0.5 s' }} / />
+          <div className="absolute top-40 right-20 w-12 h-12 bg-purple-400/20 rounded-fullblur-xlanimate-bounce" style="{{" animationDelay: '1.5 s' }} / />
+          <div className="absolute bottom-20 left-1/4 w-8 h-8 bg-pink-400/20 rounded-fullblur-xlanimate-bounce" style="{{" animationDelay: '2.5 s' }} / />
+          <div className="relative max-w-7xlmx-autotext-center">
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
+              <Sparkles className="w-4 h-4" />
+              <span   />Expert Cloud Transformation</span>
+            </div>
+
+            <h1 className="text-4xl sm:text-6 xl md:text-7 xl font-bold text-white mb-8leading-tight" />
+              Cloud
+              <br / />
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent">Migration
+              </span>
+            </h1>
+
+            <p className="text-lg sm:text-xl md:text-2 xl text-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">
+              Transform your business with expert cloud migration services.
+              <br / />
+              <span className="text-cyan-400font-semibold">Zero downtime • 40% cost reduction • 99.9% uptime • Enterprise security</span>
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
+              <button className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
+                <span>Get Free Assessment</span>
+                <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
+              </button>
+              <button className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
+                <Play className="w-5h-5" />
+                <span   />Watch Case Study</span>
+              </button>
+            </div>
+
+            {/* Trust Indicators */}
+            <div className="flex flex-wrap justify-center items-center gap-8text-gray-400text-sm">
+              <div className="flex items-centerspace-x-2">
+                <CheckCircle className="w-4h-4text-green-400" />
+                <span   />500+ Migrations</span>
+              </div>
+              <div className="flex items-centerspace-x-2">
+                <Star className="w-4h-4text-yellow-400" />
+                <span   />4.9/5 Rating</span>
+              </div>
+              <div className="flex items-centerspace-x-2">
+                <Shield className="w-4h-4text-blue-400" />
+                <span   />Zero Data Loss</span>
+              </div>
+              <div className="flex items-centerspace-x-2">
+                <Clock className="w-4h-4text-purple-400" />
+                <span   />24/7 Support</span>
+              </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </div>
         </section>
 
         {/* Features Section */}
+<<<<<<< HEAD
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -817,6 +897,84 @@ const CloudMigrationPage: React.FC = () => {
                 Proven results that drive business growth and efficiency
               </p>
             </div>
+=======
+        <section className="py-20px-4relative" />
+          <div className="absolute inset-0 bg-gradient-to-rfrom-cyan-500/5to-purple-500/5" />
+          <div className="relative max-w-7xlmx-auto">
+            <div className="text-centermb-16">
+              <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
+                Comprehensive <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Migration Services</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-4xlmx-auto">
+              From assessment to optimization, we handle every aspect of your cloud migration journey.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
+        </div>
+              {features.map((feature, index) => (
+                <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2xll p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xllhover:shadow-cyan-500/10" />
+                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xll mb-6 group-hover:scale-110transition-transformduration-300">{feature.icon}
+                  </div>
+
+              ))}
+            </div>
+        </section>
+
+        {/* Migration Process Section */}
+        <section className="py-20 px-4 bg-gradient-to-br from-slate-800/50to-purple-900/50relative" />
+
+              {migrationSteps.map((step, index) => (
+                <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2xll p-6 border border-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
+                  <div className="flex items-centerjustify-betweenmb-4">
+
+              ))}
+            </div>
+        </section>
+
+        {/* Cloud Providers Section */}
+        <section className="py-20px-4relative" />
+
+              {cloudProviders.map((provider, index) => (
+                <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2xll p-6 border border-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
+                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xll mb-6 group-hover:scale-110transition-transformduration-300">{provider.icon}
+                  </div>
+
+              ))}
+            </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-20px-4relative" />
+
+              {pricingPlans.map((plan, index) => (
+                <div key="{index}" className="{`group" relative bg-white/10 backdrop-blur-lg rounded-2xll p-8 border transition-all duration-300 hover:scale-105 ${
+                  plan.popular 
+                    ? 'border-cyan-400/50 shadow-2xll shadow-cyan-500/20' 
+                    : 'border-white/20 hover: border-cyan-400/30'
+                }`} />
+                  {plan.popular && (
+
+              {testimonials.map((testimonial, index) => (
+                <div key="{index}" className="bg-white/10 backdrop-blur-lg rounded-2xll p-8 border border-white/20 hover:bg-white/20transition-allduration-300" />
+                  <div className="flex items-centermb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key="{i}" className="w-5 h-5text-yellow-400fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-6leading-relaxed">
+              "{testimonial.content}"</p>
+                  <div className="flex items-centerspace-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-centertext-whitefont-bold"  />{testimonial.avatar}
+                    </div>
+                    <div />
+                      <div className="font-semiboldtext-white"   />{testimonial.name}</div>
+                      <div className="text-gray-400text-sm"   />{testimonial.role}, {testimonial.company}</div>
+                  </div>
+              ))}
+            </div>
+        </section>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -833,6 +991,7 @@ const CloudMigrationPage: React.FC = () => {
 
 <<<<<<< HEAD
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
@@ -885,6 +1044,51 @@ const CloudMigrationPage: React.FC = () => {
               <div key={index} className="cyber-card p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
+=======
+        <section className="py-20px-4relative" />
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" />
+          <div className="relative max-w-7xlmx-auto">
+            <div className="text-center">
+              <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8 sm:p-12 lg:p-16relativeoverflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-fullbg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.1)_0%,transparent_50%)]animate-pulse" />
+                <div className="relativez-10">
+                  <h2 className="text-4xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6leading-tight" />
+                    Ready to Transform Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent"   />Infrastructure?</span>
+                  </h2>
+
+                  <p className="text-xl sm:text-2 xl text-white/90 mb-8 sm:mb-12 max-w-4 xlmx-autoleading-relaxed">
+              Join hundreds of companies who have successfully migrated to the cloud with our expert guidance. 
+                    Get your free cloud readiness assessment today.
+                  </p>
+                  
+                  <div className="flex flex-col sm:flex-row gap-6justify-centermb-8">
+                    <button className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
+                      <span>Get Free Assessment</span>
+                      <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
+                    </button>
+                    <Link to="/contact" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
+           
+          <span    />
+        </Link>Contact Expert</span>
+                      <MessageCircle className="w-5 h-5group-hover:scale-110transition-transform" />
+                    </Link>
+                  </div>
+
+                  {/* Contact Information */}
+                  <div className="grid grid-cols-1 md:grid-cols-3gap-6text-white/80">
+                    <div className="flex items-centerjustify-centerspace-x-3">
+                      <Phone className="w-5h-5text-cyan-300" />
+                      <span className="text-sm"   />+1 302 464 0950</span>
+                    </div>
+                    <div className="flex items-centerjustify-centerspace-x-3">
+                      <Mail className="w-5h-5text-purple-300" />
+                      <span className="text-sm"   />kleber@ziontechgroup.com</span>
+                    </div>
+                    <div className="flex items-centerjustify-centerspace-x-3">
+                      <MapPin className="w-5h-5text-pink-300" />
+                      <span className="text-sm"   />Middletown DE 19709</span>
+                    </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
                 <p className="text-gray-300 mb-4">{benefit.description}</p>
@@ -1001,6 +1205,7 @@ const CloudMigrationPage: React.FC = () => {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
       </div>
+<<<<<<< HEAD
       <Footer />
     </>
 <<<<<<< HEAD
@@ -1082,3 +1287,14 @@ export default function CloudmigrationPage() {
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+      </div>
+
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

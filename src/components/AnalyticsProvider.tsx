@@ -40,7 +40,11 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
       // Load Google Analytics script
       const script = document.createElement('script');
       script.async = true;
+<<<<<<< HEAD
       script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
+=======
+      script.src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       document.head.appendChild(script);
 
       // Initialize gtag

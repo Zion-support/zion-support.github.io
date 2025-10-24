@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
@@ -10,6 +11,12 @@ import React from "react";
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
+=======
+import { Helmet } from 'react-helmet-async'
+import { Shield, BarChart3, TrendingUp, Target, Zap, CheckCircle, ArrowRight, Star, Globe, Play, Mail, Phone, MapPin } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import React  from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { ArrowRight } from 'lucide-react';
 export default function AiBlockchainAnalyticsZionTechGroup() {
 =======
@@ -96,7 +103,10 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-900 text-white">
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
 <<<<<<< HEAD
         <title>Ai Blockchain Analytics - Zion Tech Group</title>
@@ -165,6 +175,7 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
         <meta name="keywords" content="AI blockchain analytics, cryptocurrency, DeFi, blockchain, artificial intelligence" />
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
       </Helmet>
+<<<<<<< HEAD
 
       <Navigation />
 <<<<<<< HEAD
@@ -249,9 +260,52 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
           </div>
         </section>
+=======
+
+      {/* Hero Section */}
+      <section className="relative py-20px-4overflow-hidden" />
+        <div className="absolute inset-0bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.3)_0%,transparent_50%)]animate-pulse" />
+        <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }} / />
+        <div className="relative max-w-7xlmx-autotext-center">
+          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
+            <Shield className="w-4 h-4" />
+            <span   />AI-Powered Blockchain Intelligence</span>
+          </div>
+
+          <h1 className="text-6 xl md:text-8 xl font-bold text-white mb-8leading-tight" />
+            AI Blockchain
+            <br / />
+            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-texttext-transparentanimate-pulse">Analytics
+            </span>
+          </h1>
+
+          <p className="text-2 xl text-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">
+              Advanced AI-powered analytics for DeFi, smart contracts, and crypto trading. 
+            Get real-time insights, security analysis, and trading intelligence with 95% accuracy.
+            <br / />
+            <span className="text-cyan-400font-semibold">Navigate the blockchain with confidence and intelligence.</span>
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-6justify-centermb-16">
+            <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" >
+           
+          <span    />
+        </Link>Start Free Trial</span>
+              <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
+            </Link>
+            <Link to="/demo" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
+           
+          <span    />
+        </Link>View Demo</span>
+              <Play className="w-5 h-5group-hover:translate-x-1transition-transform" />
+            </Link>
+          </div>
+      </section>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
 <<<<<<< HEAD
       {/* Features Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -753,12 +807,71 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
                 <span>+1 302 464 0950</span>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               </div>
+=======
+      <section className="py-20px-4relative" />
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5via-cyan-500/5to-pink-500/5" />
+        <div className="relative max-w-7xlmx-auto">
+          <div className="text-centermb-16">
+            <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6" />
+              Advanced <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Blockchain Intelligence</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xlmx-auto">
+              Comprehensive AI-powered analytics that provide deep insights into blockchain networks, 
+              DeFi protocols, and crypto markets for informed decision-making.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
+        </div>
+            {features.map((feature, index) => (
+              <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2xll p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xllhover:shadow-cyan-500/10" />
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xll mb-6 group-hover:scale-110transition-transformduration-300">{feature.icon}
+                </div>
+
+            {analyticsTypes.map((type, index) => (
+              <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2xll p-8 border border-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
+                <div className="flex items-centerspace-x-4mb-6">
+
+            {pricing.map((plan, index) => (
+              <div key="{index}" className="{`relative" group bg-white/10 backdrop-blur-lg rounded-2xll p-8 border transition-all duration-300 hover:scale-105 ${
+                plan.popular 
+                  ? 'border-cyan-400/50 bg-gradient-to-br from-cyan-500/10 to-purple-500/10' 
+                  : 'border-white/20 hover: bg-white/20'
+              }`} />
+                {plan.popular && (
+
+            {testimonials.map((testimonial, index) => (
+              <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2xll p-8 border border-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
+                <div className="flex items-centerspace-x-4mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-centertext-whitefont-bold"  />{testimonial.avatar}
+                  </div>
+                  <div>
+            <h4 className="text-lgfont-semiboldtext-white"   />{testimonial.name}</h4>
+                    <p className="text-gray-400text-sm">
+              {testimonial.role}</p>
+                    <p className="text-gray-500text-sm">
+              {testimonial.company}</p>
+                  </div>
+                
+                <div className="flex items-centerspace-x-1mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key="{i}" className="w-5 h-5text-yellow-400fill-current" />
+                  ))}
+                </div>
+                
+                <p className="text-gray-300leading-relaxeditalic">
+              "{testimonial.content}"
+                </p>
+              </div>
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
@@ -772,10 +885,57 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Contact Sales
             </button>
+=======
+      <section className="py-20px-4relative" />
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" />
+        <div className="relative max-w-7xlmx-auto">
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8 sm:p-12 lg:p-16relativeoverflow-hidden">
+              <div className="relativez-10">
+                <h2 className="text-4xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6leading-tight" />
+                  Ready to Master the <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent"   />Blockchain?</span>
+                </h2>
+
+                <p className="text-xl sm:text-2 xl text-white/90 mb-8 sm:mb-12 max-w-4 xlmx-autoleading-relaxed">
+              Start your free trial today and gain the intelligence you need to navigate 
+                  the complex world of blockchain and DeFi with confidence.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-6justify-centermb-8">
+                  <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" >
+           
+          <span    />
+        </Link>Start Free Trial</span>
+                    <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
+                  </Link>
+                  <Link to="/demo" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
+           
+          <span    />
+        </Link>View Demo</span>
+                    <BarChart3 className="w-5 h-5group-hover:translate-x-1transition-transform" />
+                  </Link>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3gap-6text-white/80">
+                  <div className="flex items-centerjustify-centerspace-x-3">
+                    <Phone className="w-5h-5text-cyan-300" />
+                    <span className="text-sm"   />+1 302 464 0950</span>
+                  </div>
+                  <div className="flex items-centerjustify-centerspace-x-3">
+                    <Mail className="w-5h-5text-purple-300" />
+                    <span className="text-sm"   />kleber@ziontechgroup.com</span>
+                  </div>
+                  <div className="flex items-centerjustify-centerspace-x-3">
+                    <MapPin className="w-5h-5text-pink-300" />
+                    <span className="text-sm"   />Middletown DE 19709</span>
+                  </div>
+              </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       <Footer />
     </div>
   );
@@ -788,10 +948,13 @@ export default PagePage;
       </div>
       <Footer />
     </React.Fragment>
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   );
 };
 
 export default AIBlockchainAnalyticsPage;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
 =======
 
@@ -828,3 +991,5 @@ export default function AiblockchainanalyticsPage() {
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

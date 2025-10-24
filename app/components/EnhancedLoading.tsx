@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -6,6 +7,15 @@ import React from 'react';
 interface EnhancedloadingProps {
   className?: string;
   children?: React.ReactNode;
+=======
+import React  from 'react';
+
+interface LoadingProps {
+  size?: 'sm' | 'md' | 'lg'
+  text?: string
+  fullScreen?: boolean
+  color?: string
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 }
 <<<<<<< HEAD
 export default function Enhancedloading({ className = '', children, ...props }: EnhancedloadingProps) {
@@ -168,16 +178,48 @@ const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
     lg: 'w-12 h-12'
   }
 
+<<<<<<< HEAD
   return (
     <div className="flex flex-col items-center justify-center p-8">
       <Loader2 className={`animate-spin text-blue-500 ${sizeClasses[size]}`} />
       <p className="mt-4 text-gray-600">{message}</p>
     </div>
   )
+=======
+  const colorClasses = {
+    cyan: 'border-cyan-400',
+    purple: 'border-purple-400',
+    pink: 'border-pink-400',
+    blue: 'border-blue-400',
+    green: 'border-green-400'
+  }
+
+  const spinner = (
+    <div className="flex flex-col items-center justify-centerspace-y-4">
+      <div className="{`${sizeClasses[size]}" ${colorClasses[color as keyof typeof, colorClasses]} border-2 border-t-transparent rounded-full animate-spin`} / />
+      {text && (
+        <div className="text-sm text-gray-300animate-pulse">{text}
+        </div>
+      )}
+    </div>
+  )
+
+  if (fullScreen) {
+    return (
+      <div className="fixed inset-0 bg-gray-900 bg-opacity-90 flex items-center justify-centerz-50">{spinner}
+      </div>
+    )
+  }
+
+  return spinner
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 }
 
 export default EnhancedLoading
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
 =======
 export default EnhancedLoading;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

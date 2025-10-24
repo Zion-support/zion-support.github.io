@@ -2,10 +2,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
 import { ArrowRight, X, Brain, BarChart, Target, TrendingUp, Cloud, Shield, Globe, Database, Users, Settings } from 'lucide-react';
+=======
+'use client';
+import { useState, useEffect} from 'react';
+import { ChevronLeft, ChevronRight} from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
 interface Slide {
   id: number;
@@ -197,6 +203,7 @@ const defaultSlides: Slide[] = [{
   };
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -647,6 +654,21 @@ const ContentCarousel: React.FC = () => {
 
  (
 
+=======
+    <div className="relative w-full max-w-4xlmx-auto">
+
+        <button
+          onClick={togglePlayPause}
+          className="bg-white/20 hover:bg-white/30 text-white p-2rounded-fulltransition-colors"
+          aria-label="{isPlaying" ? 'Pause' : 'Play'} />
+          {isPlaying ? <Pause className="w-5h-5" /> : <Play className="w-5h-5" />}
+        </button>
+
+        {/* Slide Indicators */}
+        <div className="flex space-x-2">
+          {slides.map((_, index) => (
+            <button
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               key="{index}"
               onClick="{()" = /> goToSlide(index)}
               className="{`w-3" h-3 rounded-full transition-colors ${
@@ -699,6 +721,7 @@ const ContentCarousel: React.FC = () => {
 <<<<<<< HEAD,
   ),
 }
+<<<<<<< HEAD
  ContentCarouselPage
             <ArrowRight className="w-5 h-5 ml-2" />
           </button>
@@ -735,3 +758,5 @@ export default ContentCarousel;
 =======
 export default ContentCarousel;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

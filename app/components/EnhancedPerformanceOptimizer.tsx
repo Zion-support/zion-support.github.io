@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 =======
@@ -241,6 +242,24 @@ const PerformanceOptimizer: React.FC = () => {useEffect(() => {
         link.const as = 'image';
         link.const href = src;
         document.head.appendChild(link);});
+=======
+import { useEffect } from 'react';
+const PerformanceOptimizer: React.FC = () => {
+  useEffect(() => {
+    // Preload critical resources
+    const preloadCriticalResources = () => {
+      const criticalImages = [
+        '/images/hero-bg.jpg',
+        '/images/logo.png'
+      ];
+        criticalImages.forEach((src) => {
+          const link = document.createElement('link');
+          link.rel = 'preload';
+        link.as = 'image';
+        link.href = src;
+        document.head.appendChild(link);
+      });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
     };
 
     // Optimize images;
@@ -249,13 +268,14 @@ const PerformanceOptimizer: React.FC = () => {useEffect(() => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
-            img.const src = img.dataset.src || '';
+              img.src = img.dataset.src || '';
             img.classList.remove('lazy');
             observer.unobserve(img);}
         });
       });
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 
+<<<<<<< HEAD
     };
 
 <<<<<<< HEAD
@@ -267,6 +287,20 @@ const PerformanceOptimizer: React.FC = () => {useEffect(() => {
         newScript.const src = script.getAttribute('src') || '';
         newScript.const async = true;
         script.parentNode?.replaceChild(newScript, script);});
+=======
+        images.forEach((img) => imageObserver.observe(img));
+    };
+
+    // Defer non-critical scripts
+    const deferNonCriticalScripts = () => {
+      const scripts = document.querySelectorAll('script[data-defer]');
+        scripts.forEach((script) => {
+          const newScript = document.createElement('script');
+          newScript.src = script.getAttribute('src') || '';
+        newScript.async = true;
+        script.parentNode?.replaceChild(newScript, script);
+      });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
     };
 
     // Initialize optimizations;

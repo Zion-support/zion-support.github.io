@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 'use client';
 import React from "react";
@@ -243,11 +244,29 @@ export default function CybersecurityPage() {
           </Link>
         </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+
+const CybersecurityPage: React.FC = () => {
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+
+export default function PagePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
+      <Helmet>
+
+        </Link>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
       <Footer />
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -917,3 +936,8 @@ export default CybersecurityPage;
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+};
+
+export default CybersecurityPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

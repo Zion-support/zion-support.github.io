@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const Component: React.FC = () => {
 'use client';
@@ -27,6 +28,15 @@ export default function GDataAnalyticsZionTechGroupPage() {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
+=======
+import React  from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+
+export default function HelpPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>Help - Zion Tech Group</title>
         <meta name="description" content="Help solutions by Zion Tech Group" />
@@ -40,6 +50,7 @@ export default function GDataAnalyticsZionTechGroupPage() {
           </p>
 <<<<<<< HEAD
           
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
@@ -63,6 +74,10 @@ export default function GDataAnalyticsZionTechGroupPage() {
             </div>
           </div>
         </div>
+=======
+          <ArrowRight className="w-5h-5ml-2"  />
+        </Link>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
 =======
           <Link
@@ -251,6 +266,7 @@ const HelpCenterPage: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
   );
 }
+<<<<<<< HEAD
 =======
 'use client'
 import React from 'react'
@@ -791,3 +807,5 @@ export default function HelpPage() {
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

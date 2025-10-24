@@ -178,16 +178,28 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps   /> = ({co
 
   if (isSubscribed) {
     return (
+<<<<<<< HEAD
       <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/20">
             <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
               <CheckCircle className="w-10 h-10 text-white" />
+=======
+    <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+        <div className="max-w-4 xlmx-autotext-center">
+          <div className="bg-white/5 backdrop-blur-sm rounded-3 xl p-12borderborder-white/20">
+            <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-automb-6">
+              <CheckCircle className="w-10h-10text-white" />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </div>
             <h2 className="text-3xl font-bold text-white mb-4">
               Thank You for Subscribing!
             </h2>
+<<<<<<< HEAD
             <p className="text-xl text-gray-300 mb-8">
+=======
+            <p className="text-xltext-gray-300 mb-8">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               You'll receive our latest insights and updates soon.
             </p>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
@@ -197,8 +209,12 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps   /> = ({co
               className="bg-emerald-600 hover:bg-emerald-700 disable,
   d:bg-emerald-800 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
             >
+<<<<<<< HEAD
               {isLoading ? 'Subscribing...' : buttonText}</button>
               <ArrowRight className="ml-2 h-4 w-4" /></ArrowRight>
+=======
+              Subscribe another email
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </button>
           </div>
 <<<<<<< HEAD
@@ -255,6 +271,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps   /> = ({co
   }
 
   return (
+<<<<<<< HEAD
     <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -262,6 +279,13 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps   /> = ({co
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               {title}
+=======
+    <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+      <div className="max-w-4xlmx-auto">
+        <div className="bg-white/5 backdrop-blur-sm rounded-3 xl p-12borderborder-white/20">
+          <div className="text-centermb-12">
+            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />{title}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </h2>
 <<<<<<< HEAD
             <p className="text-xl text-blue-100 mb-8">
@@ -286,6 +310,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps   /> = ({co
               ))}
             </div>
           </div>
+<<<<<<< HEAD
 
           {/* Newsletter Form */}
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
@@ -295,6 +320,11 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps   /> = ({co
                   Email Address
                 </label>
 <<<<<<< HEAD
+=======
+          <form onSubmit="{handleSubmit}" className="max-w-mdmx-automb-12" />
+            <div className="flex flex-colsm:flex-rowgap-4">
+              <div className="flex-1">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                 <input
                   type="email"
                   id="email"
@@ -587,6 +617,7 @@ export default function ContentNewsletterSignup() {return (
                 disabled="{isSubmitting}"
                 className="bg-gradient-to-rfrom-blue-600to-purple-600 hover: from-blue-700 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2min-w-[140,px]"   /></button>
                 {isSubmitting ? (
+<<<<<<< HEAD
                   <><  />
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                     <span  >Subscribing...</span>
@@ -596,10 +627,20 @@ export default function ContentNewsletterSignup() {return (
                     <span  >{buttonText}</span>
                     <ArrowRight className="w-5h-5ml-2"   />    </ArrowRight>
 <  />
+=======
+                    <div className="animate-spin rounded-full h-5 w-5border-b-2border-white"></div>
+                    <span  >Subscribing...</span>
+
+                ) : (
+                    <span>{buttonText}</span>
+                    <ArrowRight className="h-5w-5" />
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                 )}
               </button>
             </div>
           </form>
+<<<<<<< HEAD
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             {features.map((feature, index) => (
 =======
@@ -626,11 +667,25 @@ export default function ContentNewsletterSignup() {return (
                 <p className="text-gray-300text-sm">{feature.text}</p>
               </div>
   ))}
+=======
+
+          <div className="grid grid-cols-2md:grid-cols-4gap-6">
+        </div>
+            {features.map((feature, index) => (
+                <div key="{index}" className="text-center" />
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-automb-3">
+                  <feature.icon className="h-6w-6text-white" />
+                </div>
+                <p className="text-gray-300text-sm">{feature.text}</p>
+              </div>
+            ))}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </div>
       </div>
   )
 
 export default ContentNewsletterSignup;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 =======
@@ -647,3 +702,5 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = () => {
 
 export default ContentNewsletterSignup;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

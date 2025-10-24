@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
@@ -252,6 +253,26 @@ const AIWorkflowAutomation: React.FC = () => {
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">,
               Transform your business operations with AI-powered workflow automation that learns),
               adapts, and optimizes your processes for maximum efficiency and productivity.
+=======
+import React  from 'react';
+const AiWorkflowAutomationPage: React.FC = () => {
+  return (
+      <Helmet>
+        <title>Ai Workflow Automation - Zion Tech Group</title>
+        <meta name="description" content="Ai Workflow Automation services by Zion Tech Group. Professional AI and IT solutions." / / />
+        <meta name="keywords" content="ai-workflow-automation, AI solutions, IT services" / / />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+        <div className="container mx-autopx-4py-16">
+          <div className="text-centermb-16">
+            <h1 className="text-4xl md:text-6 xl font-bold text-white mb-6" />
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  />Ai Workflow Automation
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
+              Professional ai workflow automation services by Zion Tech Group.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
               <a
@@ -359,6 +380,7 @@ const AIWorkflowAutomation: React.FC = () => {
               ))}
             </div>
           </div>
+<<<<<<< HEAD
         </section>
 
 <<<<<<< HEAD
@@ -399,6 +421,21 @@ const AIWorkflowAutomation: React.FC = () => {
                 </div>
               ))}
             </div>
+=======
+
+          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xlp-8text-center">
+            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
+            <p className="text-gray-300 mb-6">
+              We're working on bringing you comprehensive ai workflow automation solutions. 
+              Contact us to learn more about our services.
+            </p>
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600transition-allduration-300">Contact Us
+            </button>
+          </div>
+      </div>
+        </div>
+      </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </div>
         </section>
 
@@ -454,9 +491,16 @@ const AIWorkflowAutomation: React.FC = () => {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
       <Footer />
     </React.Fragment>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
+=======
+        </div>
+      </div>
+      </div>
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   );
 }
 <<<<<<< HEAD
@@ -509,6 +553,7 @@ const AiWorkflowAutomationPage: React.FC = () => {return (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 =======
 export default AiWorkflowAutomationPage;
+<<<<<<< HEAD
 
 export default AIWorkflowAutomation;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0602
@@ -539,3 +584,5 @@ export default function AiworkflowautomationPage() {
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

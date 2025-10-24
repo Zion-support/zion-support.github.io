@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+=======
+import React  from 'react';
+import { Loader2 } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
 export default function OptimizedLoading() {
   return (
@@ -53,16 +58,29 @@ const OptimizedLoading: React.FC<OptimizedLoadingProps   /> = ({const size = 'md
     ? 'fixed inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50'
     : 'flex items-center justify-center p-4'
 
+<<<<<<< HEAD
 export default function OptimizedLoading() {return (
 
         {text && (
           <p className="w-5h-5ml-2">{text}
           </p>
   )}
+=======
+  return (
+    <div className="{`${containerClasses}" ${className}`} />
+      <div className="flex flex-col items-centerspace-y-4">
+        <Loader2 className="{`${sizeClasses[size]}" text-cyan-500 animate-spin`} / />
+        {text && (
+          <p className="text-gray-300 text-sm font-mediumanimate-pulse">
+              {text}
+          </p>
+        )}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
   )
 
 export default OptimizedLoading;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 =======
@@ -78,3 +96,5 @@ const OptimizedLoading: React.FC<OptimizedLoadingProps> = () => {
 
 export default OptimizedLoading;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

@@ -25,6 +25,7 @@ const InteractiveAIROICalculator: React.FC = () => {
   const roi = calculateROI();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0509
@@ -35,6 +36,18 @@ const InteractiveAIROICalculator: React.FC = () => {
     </div>
 =======
           AI ROI Calculator;
+=======
+    <section className='bg-white py-16 rounded-2xll shadow-lg'>
+      <div className='container mx-auto px-4'>
+        <h2 className='text-4xl font-bold text-center text-gray-900 mb-8'>
+          AI ROI Calculator
+        </h2>
+        <div className='max-w-4xl mx-auto'>
+          <div className='grid md:grid-cols-2 gap-8'>
+            <div className='space-y-6'>
+              <div>
+                <label className='block text-sm font-medium text-gray-700 mb-2'>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                   Current Annual Cost ($)
 
  setCurrentCost(Number(e.target.value))}
@@ -54,7 +67,18 @@ const InteractiveAIROICalculator: React.FC = () => {
                   <option value={12}>12 months</option>
                   <option value={18}>18 months</option>
                   <option value={24}>24 months</option>
+<<<<<<< HEAD
                 Your ROI Projection;
+=======
+                </select>
+              </div>
+            <div className='bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xll'>
+              <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>
+                Your ROI Projection
+              </h3>
+              <div className='text-center'>
+                <div className='text-6xl font-bold text-blue-600 mb-4'>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                   {roi.toFixed(0)}%
                   Expected return on investment over {timeframe} months;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f

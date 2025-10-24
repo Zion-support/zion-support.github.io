@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Home } from 'lucide-react';
 import { AlertTriangle } from 'lucide-react';
@@ -103,6 +104,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
     this.setState({)}
+=======
+'use client';
+import { Component, ErrorInfo, ReactNode} from 'react';
+import { Home } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -232,6 +240,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
 
+<<<<<<< HEAD
       return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>
           <div className="max-w-md w-full bg-slate-800/50 backdrop-blur-sm border border-red-400/20 rounded-xl p-8 text-center"></div>
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6"></div>
@@ -595,3 +604,49 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = () => {
 
 export default EnhancedErrorBoundary;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+      return (
+
+              <button
+                onClick={this.handleRetry}
+                className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105" />
+                <RefreshCw className="h-4w-4mr-2" />
+                Try Again
+              </button>
+              
+              <Link to="/" className="w-full inline-flex items-center justify-center px-6 py-3 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:bg-gray-700 hover:text-whitetransition-allduration-300" >
+           
+          <Home className="h-4w-4mr-2" /  />
+        </Link>
+                Go Home
+              </Link>
+            </div>
+
+            <div className="mt-8 pt-6border-tborder-gray-700">
+              <p className="text-smtext-gray-400mb-4">
+              Still having issues? Contact our support team:
+              </p>
+              <div className="flex flex-col sm:flex-rowgap-2justify-center">
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="inline-flex items-center text-sm text-purple-400hover:text-purple-300transition-colors" />
+                  <Mail className="h-4w-4mr-1" />
+                  kleber@ziontechgroup.com
+                </a>
+                <span className="hiddensm:inlinetext-gray-500">•</span>
+                <a
+                  href="tel:+13024640950"
+                  className="inline-flex items-center text-sm text-purple-400hover:text-purple-300transition-colors" />
+                  <span>+1 302 464 0950</span>
+                </a>
+              </div>
+    </div>
+  );
+    }
+
+    return this.props.children;
+  }
+}
+
+export default EnhancedErrorBoundary;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

@@ -1,7 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+
+const IoTPage: React.FC = () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 export default function Page() {
@@ -13,6 +22,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
+<<<<<<< HEAD
 const IoTSolutionsPage: React.FC = () => {
   const features = [
     {
@@ -87,6 +97,13 @@ const IoTSolutionsPage: React.FC = () => {
         >
           Contact Us
           <ArrowRight className="ml-2 h-5 w-5" />
+=======
+export default function PagePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
+      <Helmet>
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         </Link>
       </div>
 =======
@@ -170,6 +187,7 @@ export default function IotPage() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -505,3 +523,8 @@ export default IoTSolutionsPage;
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+};
+
+export default IoTPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

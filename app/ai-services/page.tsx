@@ -102,7 +102,17 @@ import React from 'react';
 import { CheckCircle, ArrowRight, Brain, Zap, Eye, MessageCircle, BarChart, Shield, Users, Star } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
+=======
+  import {
+  Brain, Zap, Shield, BarChart, MessageCircle, Eye, Mic, 
+  FileText, Users, Heart, DollarSign, Target, Settings, 
+  CheckCircle, ArrowRight, Star, TrendingUp,
+  Cpu
+} from 'lucide-react';
+import { Brain, Zap, Shield, BarChart, MessageCircle, Eye, Mic, FileText, Users, Target, Settings, CheckCircle, ArrowRight, Clock, TrendingUp, Workflow } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
 const AiServicesPage: React.FC = () => {
   const serviceType = 'ai'
@@ -1431,6 +1441,7 @@ const AIServicesPage: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
     }
   ];
+<<<<<<< HEAD
 
 const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI', 'Cognitive AI', 'AI Development', 'Quantum ML', 'Space Technology', 'Scientific AI', 'Data Visualization', 'Quantum Security', 'Neural Interface', 'Quantum Optimization', 'Immersive Learning', 'Quantum AI', 'Immersive Workspace', 'Quantum Finance', 'Immersive Design', 'Immersive Analytics', 'Environmental AI', 'Agricultural AI', 'Legal AI', '3D AI', 'Mobile AI', 'CDN AI', 'BI AI', 'API AI', 'Security AI'];
 
@@ -2207,11 +2218,173 @@ const AIServicesPage: React.FC = () => {
                     Learn More
                   </button>
                 </div>
+=======
+  const categories = [
+    { id: 'overview', name: 'Overview', icon: <BarChart className="w-5h-5" /> },
+    { id: 'analytics', name: 'Analytics', icon: <TrendingUp className="w-5h-5" /> },
+    { id: 'conversational', name: 'Conversational', icon: <MessageCircle className="w-5h-5" /> },
+    { id: 'security', name: 'Security', icon: <Shield className="w-5h-5" /> },
+    { id: 'vision', name: 'Computer Vision', icon: <Eye className="w-5h-5" /> },
+    { id: 'voice', name: 'Voice AI', icon: <Mic className="w-5h-5" /> },
+    { id: 'content', name: 'Content', icon: <FileText className="w-5h-5" /> },
+    { id: 'customer', name: 'Customer Service', icon: <Users className="w-5h-5" /> },
+    { id: 'automation', name: 'Automation', icon: <Workflow className="w-5h-5" /> }
+  ];
+  const stats = [
+    { number: '500+', label: 'AI Models Deployed', icon: <Brain className="w-6h-6text-cyan-400" /> },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-6h-6text-green-400" /> },
+    { number: '24/7', label: 'AI Monitoring', icon: <Clock className="w-6h-6text-blue-400" /> },
+    { number: '150+', label: 'AI Experts', icon: <Users className="w-6h-6text-purple-400" /> }
+  ];
+  const filteredServices = activeTab === 'overview' 
+    ? aiServices 
+    : aiServices.filter(service => service.category === activeTab);
+  return (
+      <Helmet>
+        <title>5G Data Analytics - Zion Tech Group</title>
+        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+        <title>AI Services - Zion Tech Group | Advanced Artificial Intelligence Solutions</title>
+        <meta const name = "description" content="Comprehensive AI services including machine learning, natural language processing, computer vision, and automation. Transform your business with cutting-edge AI technology." / / />
+        <meta name="keywords" content="AI services, artificial intelligence, machine learning, NLP, computer vision, AI automation, AI consulting" / / />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-services" />
+        <script type="application/ld+json"  />{JSON.stringify({
+
+            "@context": "https: //schema.org",
+            "@type": "Service",
+            "name": "AI Services",
+            "description": "Advanced artificial intelligence solutions for businesses",
+            "provider": {
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "url": "https: //ziontechgroup.com"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "999",
+              "priceCurrency": "USD",
+              "availability": "https: //schema.org/InStock"
+            }
+          })}
+        </script>
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4sm:px-6lg:px-8" />
+        <div className="max-w-7xlmx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6" />
+              AI <span className="text-transparent bg-clip-text bg-gradient-to-rfrom-blue-400to-purple-400" />Services</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8max-w-3xlmx-auto">
+              Transform your business with cutting-edge AI solutions designed to drive growth, efficiency, and innovation.
+            </p>
+            <div className="flex flex-wrapjustify-centergap-4">
+              <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-centergap-2" >
+          Get Started 
+          <ArrowRight className="w-5h-5"  />
+        </Link>
+              <Link to="/about" className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300" />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20px-4overflow-hidden" />
+          <div className="absolute inset-0bg-[radial-gradient(circle_at_20%_80%,rgba(34,197,94,0.4)_0%,transparent_50%)]animate-pulse" />
+          <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.4)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }} / />
+          <div className="relative max-w-7xlmx-autotext-center">
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
+              <Brain className="w-4 h-4" />
+              <span   />Advanced AI Solutions</span>
+            </div>
+
+            <h1 className="text-4xl sm:text-6 xl md:text-7 xl font-bold text-white mb-8leading-tight" />
+              Transform Your Business with{' '}
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent">AI Technology
+              </span>
+            </h1>
+
+            <p className="text-lg sm:text-xl md:text-2 xl text-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed">
+              Leverage cutting-edge artificial intelligence to automate processes, gain insights, 
+              and drive innovation across your organization.
+            </p>
+            
+            <div className="flex flex-col sm:flex-rowgap-6justify-center">
+              <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" >
+           
+          <span    />
+        </Link>Get AI Consultation</span>
+                <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
+              </Link>
+              <Link to="/demo" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" >
+           
+          <span    />
+        </Link>View AI Demo</span>
+                <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
+              </Link>
+            </div>
+        </div>
+      </section>
+
+        <meta name="description" content="Transform your business with cutting-edge AI services including machine learning, natural language processing, computer vision, and automation. Expert AI solutions for enterprises." / / />
+        <meta name="keywords" content="AI services, artificial intelligence, machine learning, NLP, computer vision, AI automation, business intelligence, AI consulting" / / />
+        <meta property="og:title" content="AI Services - Zion Tech Group" / / />
+        <meta property="og:description" content="Advanced AI solutions to transform your business operations and drive innovation." / / />
+        <meta property="og:type" content="website" / / />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-services" / / />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
+
+                    {service.features.slice(0, 4).map((feature, idx) => (
+                      <div key="{idx}" className="flex items-centertext-smtext-gray-300" />
+
+              {[
+                {
+                  step: '01',
+                  title: 'Discovery & Analysis',
+                  description: 'We analyze your business processes and identify AI opportunities.',
+                  icon: <Target className="w-8h-8text-cyan-400" />
+                },
+                {
+                  step: '02',
+                  title: 'AI Strategy & Planning',
+                  description: 'Develop a comprehensive AI roadmap tailored to your goals.',
+                  icon: <Settings className="w-8h-8text-purple-400" />
+                },
+                {
+                  step: '03',
+                  title: 'Model Development',
+                  description: 'Build and train custom AI models for your specific use cases.',
+                  icon: <Brain className="w-8h-8text-green-400" />
+                },
+                {
+                  step: '04',
+                  title: 'Deployment & Optimization',
+                  description: 'Deploy AI solutions and continuously optimize performance.',
+                  icon: <Zap className="w-8h-8text-yellow-400" />
+                }
+              ].map((step, index) => (
+                <div key={index} className="text-centergroup" />
+                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
+                    {step.icon}
+                  </div>
+                  <div className="text-cyan-400 font-boldtext-lgmb-2">{step.step}</div>
+                  <h3 className="text-xl font-bold text-white mb-4" />{step.title}</h3>
+                  <p className="text-gray-300leading-relaxed">
+              {step.description}</p>
+                </div>
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-16 bg-white/5"></section>
           <div className="container mx-auto px-4"></div>
@@ -2233,6 +2406,29 @@ const AIServicesPage: React.FC = () => {
                   <div className="text-4xl font-bold text-cyan-400 mb-2">{benefit.stat}</div>
                   <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
                   <p className="text-gray-300">{benefit.description}</p>
+=======
+        {/* CTA Section */}
+        <section className="py-20px-4" />
+          <div className="max-w-7xlmx-auto">
+            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xll p-12 text-centerrelativeoverflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-rfrom-cyan-500/5to-purple-500/5" />
+              <div className="relativez-10">
+                <h2 className="text-4xl font-bold text-white mb-6" />
+                  Ready to Harness the Power of AI?
+                </h2>
+                <p className="text-xl text-gray-300 mb-8max-w-2xlmx-auto">
+              Let's discuss how our AI solutions can transform your business and give you a competitive edge.
+                </p>
+                <div className="flex flex-col sm:flex-rowgap-4justify-center">
+                  <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25" />
+
+                    Start Your AI Journey
+                  </Link>
+                  <Link to="/pricing" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
+
+                    View AI Pricing
+                  </Link>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                 </div>
               ))}
             </div>
@@ -2265,6 +2461,7 @@ const AIServicesPage: React.FC = () => {
 
 <<<<<<< HEAD
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="py-20 px-4">
 <<<<<<< HEAD
           <div className="container mx-auto text-center">
@@ -2307,6 +2504,45 @@ const AIServicesPage: React.FC = () => {
                 </button>
               </div></div></div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
+=======
+        <section className="py-20" />
+          <div className="containermx-autopx-4">
+            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xllp-12text-center">
+              <h2 className="text-4xl font-bold text-white mb-6"  />Ready to Transform Your Business with AI?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-2xlmx-auto">
+              Let's discuss how our AI solutions can automate your processes, enhance customer experiences, and drive growth.
+              </p>
+              <div className="flex flex-col sm:flex-rowgap-4justify-center">
+                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105" >
+          Learn More 
+          <ArrowRight className="w-4 h-4"  />
+        </Link>
+                  />Start Your AI Journey
+                </Link>
+        <section className="py-20 bg-gradient-to-brfrom-slate-900to-gray-900" />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6lg:px-8text-center">
+            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Ready to Transform Your Business with AI?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto">
+              Let our AI experts help you identify opportunities, design solutions, and implement AI that drives real business value.
+            </p>
+            <div className="flex flex-col sm:flex-rowgap-4justify-center">
+              <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" >
+          Start Your AI Journey
+                
+          <ArrowRight className="ml-2h-5w-5"  />
+        </Link>
+              <a
+                href="tel:+13024640950"
+                className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300transformhover:scale-105" />
+                Call +1 302 464 0950
+              </a>
+            </div>
+            <div className="mt-8text-gray-400">
+              <p />Email: kleber@ziontechgroup.com</p>
+              <p />Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </div>
           </div>
         </section>
@@ -2446,6 +2682,7 @@ const AIServicesPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -2475,6 +2712,29 @@ const AIServicesPage: React.FC = () => {
         </section>
       </div>
     </>
+=======
+      <section className="py-20 px-4sm:px-6lg:px-8" />
+        <div className="max-w-4xlmx-autotext-center">
+          <h2 className="text-3xl font-bold text-white mb-6" />
+            Ready to Harness the Power of AI?
+          </h2>
+          <p className="text-gray-300text-lgmb-8">
+              Let our AI experts help you choose the perfect solution for your business needs.
+          </p>
+          <div className="flex flex-col sm:flex-rowgap-4justify-center">
+            <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-centerjustify-centergap-2" >
+          Start Your AI Journey 
+          <ArrowRight className="w-5h-5"  />
+        </Link>
+            <Link to="/about" className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300" />
+
+              Meet Our Team
+            </Link>
+          </div>
+      </section>
+    </div>
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 }
@@ -2542,7 +2802,11 @@ export default AIServicesPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 =======
 export default AiServicesPage;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

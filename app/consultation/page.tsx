@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -239,8 +240,37 @@ import { Helmet } from 'react-helmet-async';
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Get expert guidance on your AI and IT strategy. Our experienced consultants will help you 
               identify opportunities, assess your current technology stack, and create a roadmap for digital transformation.
+=======
+import React  from 'react';
+const ConsultationPage: React.FC = () => {
+  return (
+      <Helmet>
+        <title>Consultation - Zion Tech Group</title>
+        <meta name="description" content="Consultation services by Zion Tech Group. Professional AI and IT solutions." / / />
+        <meta name="keywords" content="consultation, AI solutions, IT services" / / />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+        <div className="container mx-autopx-4py-16">
+          <div className="text-centermb-16">
+            <h1 className="text-4xl md:text-6 xl font-bold text-white mb-6" />
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  />Consultation
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
+              Professional consultation services by Zion Tech Group.
             </p>
           </div>
+
+          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xlp-8text-center">
+            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
+            <p className="text-gray-300 mb-6">
+              We're working on bringing you comprehensive consultation solutions. 
+              Contact us to learn more about our services.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
+            </p>
+          </div>
+<<<<<<< HEAD
         </section>
 
         {/* Benefits Section */}
@@ -627,6 +657,12 @@ import { Helmet } from 'react-helmet-async';
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
+=======
+      </div>
+        </div>
+      </div>
+          </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         </div>
       </div>
       <Footer />
@@ -660,6 +696,7 @@ const ConsultationPage = () => {
           <h1 className="text-4xl font-bold text-white mb-8">Schedule a Consultation</h1>
           <p className="text-gray-300">Contact us to schedule a consultation at kleber@ziontechgroup.com</p>
         </div>
+<<<<<<< HEAD
       </main>
 
       <Footer />
@@ -747,3 +784,17 @@ export default function ConsultationPage() {
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+      </div>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+      </div>
+
+  );
+};
+
+export default ConsultationPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

@@ -71,6 +71,11 @@ export class APIError extends Error {
 export class APIClient {
   private baseURL: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  private defaultHeaders: Record<string, string>;
+  private cache: Map<string, { data: unknown; timestamp: number; ttl: number }> = new Map();
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
   private defaultHeaders: Record<string, string   />;
   private cache: Map<string, {data: unknown; timestamp: number; ttl: number}   /> = new Map();
@@ -113,8 +118,13 @@ export class APIClient {
       cacheTTL;
     } = config;
 
+<<<<<<< HEAD
     const url = `${this.baseURL}${endpoint}`;
     const cacheKey = apiCache.generateKey(url, body);
+=======
+    const url={`${this.baseURL}${endpoint}`};
+    const cacheKey={`${method}:${url}:${JSON.stringify(body || {})}`};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
     // Check cache for GET requests;
     if (method === 'GET' && cache) {
@@ -599,4 +609,7 @@ export default ApiClient;
 export const apiClient = new APIClient(process.env.NEXT_PUBLIC_API_URL || '/api');
 export type { RequestConfig, APIResponse };
 export { APIError };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

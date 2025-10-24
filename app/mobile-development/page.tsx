@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
@@ -73,6 +74,13 @@ import React from 'react';
 import { Smartphone, Code, Zap, CheckCircle, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Smartphone, CheckCircle, ArrowRight, Star, Zap, Shield, Settings, Clock, Link as LinkIcon } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
 const MobileDevelopmentPage: React.FC = () => {
   const features = [
@@ -443,6 +451,7 @@ const MobileDevelopmentPage: React.FC = () => {
   ]
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>Mobile Development | Zion Tech Group</title>
@@ -487,10 +496,22 @@ const MobileDevelopmentPage: React.FC = () => {
                 View Portfolio
               </Link>
             </div>
+=======
+        {/* Hero Section */}
+        <section className="pt-32pb-20" />
+          <div className="containermx-autopx-4">
+
+                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Your Project
+                </Link>
+                <Link to="/it-services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">View All IT Services
+                </Link>
+              </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </div>
         </section>
 
         {/* Services Section */}
+<<<<<<< HEAD
         <section className="py-16 px-4">
           <div className="container mx-auto">
             <div className="text-center mb-16">
@@ -707,3 +728,110 @@ export default function MobiledevelopmentPage() {
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+        <section className="py-20" />
+          <div className="containermx-autopx-4">
+
+              {services.map((service, index) => (
+                <div 
+                  key="{index}"
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300 grouphover:transformhover:scale-105" />
+                  <div className="{`w-16" h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-300`} />
+                    <service.icon className="w-8h-8text-white" />
+                  </div>
+
+              {process.map((step, index) => (
+                <div key="{index}" className="text-centergroup" />
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
+                    <span className="text-2 xlfont-boldtext-cyan-400"  >{step.step}</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4"  >{step.title}</h3>
+                  <p className="text-gray-300text-smleading-relaxed">{step.description}</p>
+                </div>
+
+              ))}
+            </div>
+        </section>
+
+        {/* Why Choose Us */}
+        <section className="py-20" />
+          <div className="containermx-autopx-4">
+            <div className="text-centermb-16">
+              <h2 className="text-4xl font-bold text-white mb-6" />
+                Why Choose <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  >Zion Tech Group</span>?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xlmx-auto">
+              We deliver exceptional mobile solutions through expertise, innovation, and commitment to quality
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1md:grid-cols-3gap-8">
+              <div className="text-centergroup">
+                <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
+                  <Zap className="w-10h-10text-cyan-400" />
+                </div>
+                <h3 className="text-2 xl font-bold text-white mb-4"  >Fast Development</h3>
+                <p className="text-gray-300leading-relaxed">
+              Rapid development cycles with agile methodologies and modern tools for faster time-to-market.
+                </p>
+              </div>
+
+              <div className="text-centergroup">
+                <div className="w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
+                  <Users className="w-10h-10text-purple-400" />
+                </div>
+                <h3 className="text-2 xl font-bold text-white mb-4"  >Expert Team</h3>
+                <p className="text-gray-300leading-relaxed">
+              Certified mobile developers with years of experience in iOS, Android, and cross-platform development.
+                </p>
+              </div>
+
+              <div className="text-centergroup">
+                <div className="w-20 h-20 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300">
+                  <Award className="w-10h-10text-green-400" />
+                </div>
+                <h3 className="text-2 xl font-bold text-white mb-4"  >Quality Assurance</h3>
+                <p className="text-gray-300leading-relaxed">
+              Comprehensive testing and quality assurance to ensure your app works flawlessly across all devices.
+                </p>
+              </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20" />
+          <div className="containermx-autopx-4">
+            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xllp-12text-center">
+              <h2 className="text-4xl font-bold text-white mb-6"  />Ready to Build Your Mobile App?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-2xlmx-auto">
+              Let's discuss your mobile app idea and create a solution that engages your users and drives business growth.
+              </p>
+              <div className="flex flex-col sm:flex-rowgap-4justify-center">
+                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Your Project
+                </Link>
+                <Link to="/about" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More About Us
+                </Link>
+              </div>
+          </div>
+        </section>
+      </div>
+        </div>
+      </div>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+      </div>
+
+  );
+};
+
+export default MobileDevelopmentPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

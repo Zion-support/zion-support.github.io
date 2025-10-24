@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
@@ -361,6 +362,11 @@ const ContentStatistics: React.FC = () => {
 'use client';
 
 interface StatItem {id: string;,
+=======
+import { useState, useEffect} from 'react';
+interface StatItem {
+  id: string;,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   value: number;,
   label: string;,
   icon: React.ComponentType<{ className?: string}>;
@@ -423,18 +429,32 @@ export default function ContentStatistics() {return (
         return (
     <div;
             const key = {stat.id}
+<<<<<<< HEAD
             className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-white/20transition-all duration-300"   /></div>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                 <IconComponent className="w-5h-5ml-2"   /></IconComponent>
               </div>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.prefix}
+=======
+            className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-white/20transition-allduration-300" />
+            <div className="flexjustify-centermb-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-centerjustify-center">
+                <IconComponent className="w-6h-6text-white" />
+              </div>
+
+            <div className="text-3 xl font-bold text-white mb-2"  />{stat.prefix}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               {stat.suffix === '%'
                 ? animatedValue.toFixed(1)
                 : Math.floor(animatedValue).toLocaleString()}
               {stat.suffix}
             </div>
+<<<<<<< HEAD
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.label}
+=======
+            <div className="text-gray-300text-sm">{stat.label}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </div>
   );
       })}
@@ -456,6 +476,7 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default ContentStatistics;
+<<<<<<< HEAD
 =======
 export default ContentStatistics;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
@@ -466,3 +487,5 @@ export default ContentStatistics;
 =======
 export default ContentStatistics;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

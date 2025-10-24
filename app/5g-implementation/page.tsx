@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 import { Helmet } from 'react-helmet-async';
@@ -279,18 +280,26 @@ const FiveGImplementationPage: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 =======
 import React from 'react';
+=======
+import React  from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function FiveGImplementationPage() {
   return (
+<<<<<<< HEAD
     <>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900pt-20">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>5G Implementation - Zion Tech Group</title>
         <meta name="description" content="Complete 5G implementation services for seamless network deployment and optimization." />
         <meta name="keywords" content="5G implementation, network deployment, 5G optimization, Zion Tech Group" />
       </Helmet>
+<<<<<<< HEAD
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -355,3 +364,17 @@ export default function FiveGgimplementationPage() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
   );
 }
+=======
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <h1 className="text-4xl font-bold text-white mb-6">5G Implementation</h1>
+        <p className="text-lg text-gray-300 mb-8">Professional 5G implementation services coming soon.</p>
+        <Link to="/contact"
+          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit" >
+          Contact Us
+          
+          <ArrowRight className="w-5 h-5 ml-2"  />
+        </Link>
+      </div>
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

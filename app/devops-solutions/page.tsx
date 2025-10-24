@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
@@ -36,6 +37,27 @@ export default function GDataAnalyticsZionTechGroupPage() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
+=======
+import React  from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+
+export default function DevopssolutionsPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
+      <Helmet>
+        <title>Devops Solutions - Zion Tech Group</title>
+        <meta name="description" content="Professional devops solutions services by Zion Tech Group. Transform your business with our expert solutions." / / />
+      </Helmet>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <h1 className="text-4xl font-bold text-white mb-6"  >Devops Solutions</h1>
+        <p className="text-lg text-gray-300 mb-8">Professional devops solutions services coming soon.</p>
+        <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit" >
+          Contact Us
+          
+          <ArrowRight className="w-5h-5ml-2"  />
+        </Link>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
 <<<<<<< HEAD
 </div>
@@ -45,6 +67,7 @@ export default function GDataAnalyticsZionTechGroupPage() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
   );
 }
+<<<<<<< HEAD
 =======
 import React from 'react';
 
@@ -90,3 +113,5 @@ export default function DevopssolutionsPage() {
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
@@ -16,6 +17,13 @@ export default function FiveGSolutionsPage() {
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+=======
+
+
+export default function FiveGSolutionsPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900pt-20">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>5G Solutions - Zion Tech Group</title>
         <meta name="description" content="Advanced 5g solutions solutions for next-generation connectivity and performance." />
@@ -29,6 +37,7 @@ export default function FiveGSolutionsPage() {
           </p>
 <<<<<<< HEAD
           
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
@@ -129,3 +138,10 @@ export default function FiveGgsolutionsPage() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
   );
 }
+=======
+          <ArrowRight className="w-5 h-5 ml-2"  />
+        </Link>
+      </div>
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

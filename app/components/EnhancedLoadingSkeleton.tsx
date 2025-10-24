@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
@@ -14,6 +15,12 @@ const EnhancedLoadingSkeleton: React.FC = () => {
   );
 };
 =======
+=======
+import React  from 'react';
+import { ArrowRight } from 'lucide-react';
+'use client'
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 const EnhancedLoadingSkeletonPage: React.FC = () => {
   const features = [
     {
@@ -193,18 +200,31 @@ export default Skeleton;
     'Cost-effective pricing plans',
     'Proven track record of success'];
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <Helmet></Helmet>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+      <Helmet>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         <title>EnhancedLoadingSkeleton | Zion Tech Group</title>
         <meta name="description" content="Professional EnhancedLoadingSkeleton services by Zion Tech Group. Advanced AI and IT solutions for your business."   /></meta>
         <meta name="keywords" content="EnhancedLoadingSkeleton, AI solutions, IT services, Zion Tech Group, enhancedloadingskeleton"   /></meta>
       </Helmet>
       {/* Hero Section */}
+<<<<<<< HEAD
       <section className="w-5h-5ml-2"   /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <h1 className="w-5h-5ml-2"   /></h1>
               <span className="w-5h-5ml-2"   />EnhancedLoadingSkeleton;
+=======
+      <section className="relative py-20 px-4sm:px-6lg:px-8" />
+        <div className="max-w-7xlmx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6 xl font-bold text-white mb-6" />
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400bg-clip-texttext-transparent"  />EnhancedLoadingSkeleton
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               </span>
               <br   /></br>
               <span className="text-white"  >Solutions</span>
@@ -212,8 +232,13 @@ export default Skeleton;
             <p className="w-5h-5ml-2">Transform your business with our advanced enhancedloadingskeleton solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
+<<<<<<< HEAD
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <button className="w-5h-5ml-2">Get Started;
+=======
+            <div className="flex flex-col sm:flex-rowgap-4justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300transformhover:scale-105"  />Get Started
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               </button>
               <button className="w-5h-5ml-2">Learn More;
               </button>
@@ -221,6 +246,7 @@ export default Skeleton;
         </div>
       </section>
       {/* Features Section */}
+<<<<<<< HEAD
       <section className="w-5h-5ml-2"   /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -239,9 +265,33 @@ export default Skeleton;
                 <p className="text-gray-300">{feature.description}</p>
               </div>
   ))}
+=======
+      <section className="py-20 px-4sm:px-6lg:px-8" />
+        <div className="max-w-7xlmx-auto">
+          <div className="text-centermb-16">
+            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Why Choose Our EnhancedLoadingSkeleton Solutions?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
+              Our comprehensive approach ensures maximum efficiency and results for your business.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
+        </div>
+            {features.map((feature, index) => (
+              <div key="{index}" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20transition-allduration-300" />
+                <div className="flex items-centermb-4">
+                  <feature.icon className="h-8 w-8text-purple-400mr-3" />
+                  <h3 className="text-xlfont-semiboldtext-white"  >{feature.title}</h3>
+                </div>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </div>
       </section>
       {/* Benefits Section */}
+<<<<<<< HEAD
       <section className="w-5h-5ml-2"   /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -257,19 +307,51 @@ export default Skeleton;
                 <p className="text-gray-300">{benefit}</p>
               </div>
   ))}
+=======
+      <section className="py-20 px-4 sm:px-6lg:px-8bg-white/5" />
+        <div className="max-w-7xlmx-auto">
+          <div className="text-centermb-16">
+            <h2 className="text-3 xl md:text-4xl font-bold text-white mb-4"  />Key Benefits
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
+              Discover the advantages of our enhancedloadingskeleton solutions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-6">
+            {benefits.map((benefit, index) => (
+              <div key="{index}" className="flex items-startspace-x-3" />
+                <CheckCircle className="h-6 w-6 text-green-400flex-shrink-0mt-1" />
+                <p className="text-gray-300">{benefit}</p>
+              </div>
+            ))}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </div>
       </section>
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="w-5h-5ml-2"   /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <h2 className="w-5h-5ml-2"   />Ready to Get Started?
+=======
+      <section className="py-20 px-4sm:px-6lg:px-8" />
+        <div className="max-w-4 xlmx-autotext-center">
+          <h2 className="text-3 xl md:text-4xl font-bold text-white mb-6"  />Ready to Get Started?
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </h2>
           <p className="w-5h-5ml-2">Join thousands of satisfied customers who trust our enhancedloadingskeleton solutions.
           </p>
+<<<<<<< HEAD
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <button className="w-5h-5ml-2"   /></button>
               Get Started Now;
               <ArrowRight className="w-5h-5ml-2"   /></ArrowRight>
+=======
+          <div className="flex flex-col sm:flex-rowgap-4justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-centerjustify-center" />
+              Get Started Now
+              <ArrowRight className="ml-2h-5w-5" />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </button>
             <button className="w-5h-5ml-2">Contact Sales;
             </button>
@@ -279,6 +361,7 @@ export default Skeleton;
   )
 
 };
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 =======
@@ -377,3 +460,5 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = () => {
 
 export default EnhancedLoadingSkeleton;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

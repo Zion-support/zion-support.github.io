@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
 import { Users } from 'lucide-react';
 import { Award } from 'lucide-react';
@@ -20,6 +21,10 @@ import { Link } from "react-router-dom";
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
+=======
+'use client';
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -29,6 +34,7 @@ import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe } from
 
 export default function AboutPage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen bg-gray-900 text-white">
 =======
@@ -350,6 +356,18 @@ const AboutPage = () => {
             </div></div>
           </div>
         </section>
+=======
+    <>
+      <Helmet>
+        <title>About Us - Zion Tech Group | Leading AI & IT Solutions Company</title>
+        <meta name="description" content="Learn about Zion Tech Group, a leading technology company specializing in AI solutions, cloud infrastructure, cybersecurity, and custom software development. Founded in 2019." />
+        <meta name="keywords" content="about zion tech group, AI company, technology company, cloud solutions, cybersecurity, software development" />
+        <link rel="canonical" href="https://ziontechgroup.com/about" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
     </React.Fragment>
 );

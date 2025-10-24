@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
@@ -160,6 +161,26 @@ const DatabaseManagementPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Optimize your database performance and ensure data reliability with our comprehensive 
               database management services. From design to administration, we've got you covered.
+=======
+import React  from 'react';
+const DatabaseManagementPage: React.FC = () => {
+  return (
+      <Helmet>
+        <title>Database Management - Zion Tech Group</title>
+        <meta name="description" content="Database Management services by Zion Tech Group. Professional AI and IT solutions." / / />
+        <meta name="keywords" content="database-management, AI solutions, IT services" / / />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+        <div className="container mx-autopx-4py-16">
+          <div className="text-centermb-16">
+            <h1 className="text-4xl md:text-6 xl font-bold text-white mb-6" />
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  />Database Management
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
+              Professional database management services by Zion Tech Group.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {stats.map((stat, index) => (
@@ -194,6 +215,7 @@ const DatabaseManagementPage: React.FC = () => {
             </div></div></div></div></div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
           </div>
+<<<<<<< HEAD
         </section>
 
         {/* Services Section */}
@@ -347,6 +369,14 @@ const DatabaseManagementPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Let's discuss how our database management services can help you improve 
               performance, security, and reliability of your data infrastructure.
+=======
+
+          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xlp-8text-center">
+            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
+            <p className="text-gray-300 mb-6">
+              We're working on bringing you comprehensive database management solutions. 
+              Contact us to learn more about our services.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -364,6 +394,7 @@ const DatabaseManagementPage: React.FC = () => {
               </Link>
             </div>
           </div>
+<<<<<<< HEAD
         </section>
       </main>
       
@@ -374,10 +405,28 @@ const DatabaseManagementPage: React.FC = () => {
 }
 =======
     </React.Fragment>
+=======
+      </div>
+        </div>
+      </div>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+      </div>
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   );
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 
+<<<<<<< HEAD
 export default DatabaseManagementPage
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
 =======
@@ -403,3 +452,6 @@ const DatabaseManagementPage: React.FC = () => {return (
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+export default DatabaseManagementPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

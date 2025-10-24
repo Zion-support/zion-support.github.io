@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 =======
 import React from 'react';
@@ -13,6 +14,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 =======
 import { Helmet } from 'react-helmet-async';
+=======
+import React  from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
@@ -80,6 +84,7 @@ import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -245,6 +250,25 @@ const SupportPage = () => {
       <Footer />
     </ErrorBoundary>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <Helmet>
+        <title>Support - Zion Tech Group</title>
+        <meta name="description" content="Professional support services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <h1 className="text-4xl font-bold text-white mb-6">Support</h1>
+        <p className="text-lg text-gray-300 mb-8">Professional support services coming soon.</p>
+        <Link 
+          to="/contact" 
+          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+        >
+          Contact Us
+          <ArrowRight className="w-5 h-5 ml-2" />
+        </Link>
+      </div>
+    </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   );
 
   return (
@@ -325,6 +349,7 @@ const SupportPage = () => {
 
 <<<<<<< HEAD
 export default SupportPage;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
 =======
 export default SupportPage;
@@ -374,3 +399,5 @@ export default function Support() {return (
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

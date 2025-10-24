@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -414,12 +415,19 @@ export default function Blockchainweb3() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 =======
 import { Helmet } from 'react-helmet-async';
+=======
+import React  from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function Blockchainweb3Page() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>Blockchain Web3 - Zion Tech Group</title>
         <meta name="description" content="Professional blockchain web3 services by Zion Tech Group" />
@@ -430,6 +438,7 @@ export default function Blockchainweb3Page() {
           <h1 className="text-4xl font-bold text-white mb-6">Blockchain Web3</h1>
           <p className="text-lg text-gray-300 mb-8">Professional blockchain web3 services coming soon.</p>
           
+<<<<<<< HEAD
           <Link
             to="/contact"
             className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
@@ -438,8 +447,15 @@ export default function Blockchainweb3Page() {
             <ArrowRight className="w-4 h-4 ml-2" />
           </Link>
         </div>
+=======
+          <ArrowRight className="w-5h-5ml-2"  />
+        </Link>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

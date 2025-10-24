@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
@@ -37,6 +38,11 @@ export default function AnimatedText() {
 'use client';
 
 interface AnimatedTextProps {text: string;
+=======
+import { useEffect, useState} from 'react';
+interface AnimatedTextProps {
+  text: string;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   className?: string;
   delay?: number;
   duration?: number;

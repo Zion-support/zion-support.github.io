@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client'
 import React, { useEffect } from 'react'
 =======
@@ -15,6 +16,9 @@ import React, { useEffect } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+import { useEffect } from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 interface AnalyticsProps {
 =======
 interface AnalyticsProps {

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const Component: React.FC = () => {
 'use client';
@@ -13,6 +14,9 @@ import { Link } from 'react-router-dom';
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 import { Helmet } from 'react-helmet-async';
+=======
+import React  from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
@@ -83,11 +87,16 @@ const IoTPlatformPage: React.FC = () => {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-900 text-white">
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       <Helmet>
         <title>Iot Platform - Zion Tech Group</title>
         <meta name="description" content="Iot Platform solutions by Zion Tech Group" />
       </Helmet>
+<<<<<<< HEAD
       
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold mb-8">Iot Platform</h1>
@@ -274,6 +283,16 @@ const IoTPlatformPage: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           </div>
         </div>
+=======
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <h1 className="text-4xl font-bold text-white mb-6"  >Iot Platform</h1>
+        <p className="text-lg text-gray-300 mb-8">Professional iot platform services coming soon.</p>
+        <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit" >
+          Contact Us
+          
+          <ArrowRight className="w-5h-5ml-2"  />
+        </Link>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
 =======
           <Link
@@ -290,6 +309,7 @@ const IoTPlatformPage: React.FC = () => {
     </div>
   );
 }
+<<<<<<< HEAD
 =======
     <>
       <Helmet>
@@ -468,3 +488,5 @@ export default function IotplatformPage() {
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

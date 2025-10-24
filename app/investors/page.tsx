@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import { Link } from 'react-router-dom';
@@ -25,6 +26,22 @@ export default function Page() {
         >
           Contact Us
           <ArrowRight className="ml-2 h-5 w-5" />
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+
+const InvestorsPage: React.FC = () => {
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+
+export default function PagePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
+      <Helmet>
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         </Link>
       </div>
 =======
@@ -108,6 +125,7 @@ export default function InvestorsPage() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -493,3 +511,8 @@ export default InvestorsPage;
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+};
+
+export default InvestorsPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -32,6 +33,20 @@ const ServiceWorkerPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+=======
+import React, { useEffect } from 'react';
+import { useEffect } from 'react';
+const ServiceWorker: React.FC = () => {
+  useEffect(() => {
+    if ('serviceWorker' in, navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('SW registered: ', registration);
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError);
+        });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
     }
   ];
 

@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 <<<<<<< HEAD
+=======
+'use client';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import React from 'react';
 
 export const ServiceCardSkeleton: React.FC = React.memo(() => (
@@ -13,6 +17,7 @@ export const HeroSkeleton: React.FC = React.memo(() => (</div>
     <div className="h-16 bg-gray-700 rounded mb-6 mx-auto max-w-2xl"></div><div className="h-8 bg-gray-700 rounded mb-8 mx-auto max-w-4xl"></div><div className="h-6 bg-gray-700 rounded mb-8 mx-auto max-w-3xl"></div><div className="flex justify-center gap-4"></div>
       <div className="h-12 bg-gray-700 rounded w-48"></div><div className="h-12 bg-gray-700 rounded w-48">);
 
+<<<<<<< HEAD
 export const HeroSkeleton: React.FC = React.memo(() => (
   <div className="text-center mb-16 animate-pulse"></div>
     <div className="h-16 bg-gray-700 rounded mb-6 mx-auto max-w-2xl"></div>
@@ -30,6 +35,13 @@ interface LoadingSkeletonProps {lines?: number;
 
 const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({lines = 3,
   className = ''}) => {return (
+=======
+const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ 
+  lines = 3, 
+  className = '' 
+}) => {
+  return (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
     <div className={`animate-pulse ${className}`}>
       {Array.from({ length: lines}).map((_, index) => (
         <div
@@ -78,4 +90,7 @@ const LoadingSkeleton: React.FC<LoadingSkeletonProps> = () => {
 };
 
 export default LoadingSkeleton;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

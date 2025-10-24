@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 'use client';
 import React from "react";
@@ -347,6 +348,31 @@ const AIBlockchainSolutionsPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Comprehensive AI-powered blockchain solutions for modern enterprises.
+=======
+
+        <title>Ai Blockchain Solutions - Zion Tech Group</title>
+        <meta name="description" content="Ai Blockchain Solutions services by Zion Tech Group. Professional AI and IT solutions." / / />
+        <meta name="keywords" content="ai-blockchain-solutions, AI solutions, IT services" / / />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+        <div className="container mx-autopx-4py-16">
+          <div className="text-centermb-16">
+            <h1 className="text-4xl md:text-6 xl font-bold text-white mb-6" />
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  />Ai Blockchain Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
+              Professional ai blockchain solutions services by Zion Tech Group.
+            </p>
+          </div>
+
+          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xlp-8text-center">
+            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
+            <p className="text-gray-300 mb-6">
+              We're working on bringing you comprehensive ai blockchain solutions solutions. 
+              Contact us to learn more about our services.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -537,6 +563,7 @@ const AIBlockchainSolutionsPage: React.FC = () => {
             </div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
         </div>
       </section>
 
@@ -588,6 +615,11 @@ const AIBlockchainSolutionsPage: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
               </div>
             ))}
+=======
+      </div>
+        </div>
+      </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </div>
         </div>
       </section>
@@ -644,6 +676,7 @@ export default PagePage;
 =======
         </section>
       </div>
+<<<<<<< HEAD
       <Footer />
     </React.Fragment>
   );
@@ -703,3 +736,13 @@ export default function AiblockchainsolutionsPage() {
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+        </div>
+      </div>
+      </div>
+
+  );
+};
+
+export default AiBlockchainSolutionsPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

@@ -13,6 +13,7 @@ import Navigation from './Navigation'
 
 const Header: React.FC = () => {
   return (
+<<<<<<< HEAD
     <React.Fragment>
       <Navigation />
       {/* Spacer to prevent content from going under fixed header */}
@@ -233,10 +234,16 @@ export default Header;
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 =======
+=======
+    <header>
+      <Navigation />
+    </header>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   )
 }
 
 export default Header
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-05cb
 =======
 
@@ -251,3 +258,5 @@ const Header: React.FC<HeaderProps> = () => {
 
 export default Header;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

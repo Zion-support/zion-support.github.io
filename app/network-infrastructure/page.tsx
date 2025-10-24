@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
@@ -218,6 +219,41 @@ export default function NetworkinfrastructurePage() {
               </a>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </div>
+=======
+import React  from 'react';
+const NetworkInfrastructurePage: React.FC = () => {
+  return (
+      <Helmet>
+        <title>Network Infrastructure - Zion Tech Group</title>
+        <meta name="description" content="Network Infrastructure services by Zion Tech Group. Professional AI and IT solutions." / / />
+        <meta name="keywords" content="network-infrastructure, AI solutions, IT services" / / />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+        <div className="container mx-autopx-4py-16">
+          <div className="text-centermb-16">
+            <h1 className="text-4xl md:text-6 xl font-bold text-white mb-6" />
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  />Network Infrastructure
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xlmx-auto">
+              Professional network infrastructure services by Zion Tech Group.
+            </p>
+          </div>
+
+          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xlp-8text-center">
+            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
+            <p className="text-gray-300 mb-6">
+              We're working on bringing you comprehensive network infrastructure solutions. 
+              Contact us to learn more about our services.
+            </p>
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600transition-allduration-300">Contact Us
+            </button>
+          </div>
+      </div>
+        </div>
+      </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
           </div>
         </section>
 
@@ -305,9 +341,13 @@ export default function NetworkinfrastructurePage() {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
       <Footer />
     </>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   );
 }
 =======
@@ -732,6 +772,7 @@ export default NetworkInfrastructurePage;
 };
 
 export default NetworkInfrastructurePage;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 =======
 import React from 'react';
@@ -766,3 +807,5 @@ const NetworkInfrastructurePage: React.FC = () => {return (
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

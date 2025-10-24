@@ -73,6 +73,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
     setIsVisible(false);
   };
   if (!isVisible) return null;
+<<<<<<< HEAD
   const currentContent = content[currentSlide];
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
   return (
@@ -163,6 +164,70 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
   l: '/services/automation',;
       typ,
   e: 'Service',
+=======
+    <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+      {/* Animated Background Effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
+        
+        ></div>
+        
+        ></div>
+      <div className="relative z-10 container mx-auto px-4 py-16">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <span className="text-2xl">🚀</span>
+            <span className="text-cyan-400 font-bold text-xl">
+              BREAKING: ULTIMATE BUSINESS INTELLIGENCE REVOLUTION 2025
+            </span>
+            <span className='text-2xl'>⚡</span>
+          </div>
+          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
+            {currentContent.title}
+          </h1>
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+            {currentContent.description}
+          </p>
+        </div>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+            
+            >
+              Get Started Today
+              <svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                
+                />
+              </svg>
+            </a>
+            
+            >
+              Schedule Consultation
+            </a>
+          </div>
+          {/* Key Benefits Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xll p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xll flex items-center justify-center mb-6 mx-auto">
+                
+                >
+                  
+                  />
+                </svg>
+              </div>
+            {/* Metrics Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+                <div key={key} className="text-center bg-white/5 rounded-xl p-4">
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
+                  <div className="text-sm text-gray-300 capitalize">
+                    {key.replace(/([A-Z])/g, ' $1').trim()}
+                  </div>
+              ))}
+            </div>
+            {/* Tags */}
+            <div className="flex flex-wrap gap-2 mb-8">
+                
+                >
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                   {tag}
             {/* CTA Buttons */}
             

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
@@ -13,6 +14,14 @@ import React from "react";
 import { Brain, Clock, Target, BarChart3 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+=======
+import React  from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+const AiCustomerSupportChatbotPage: React.FC = () => {
+import { ArrowRight, CheckCircle, Star, Brain, Clock, Target, BarChart3 } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
 <<<<<<< HEAD
 export default function AICustomerSupportChatbot() {
@@ -197,6 +206,7 @@ export default function AICustomerSupportChatbot() {const features = [{
   ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   return null;
 =======
   const benefits = [
@@ -238,6 +248,34 @@ export default function AICustomerSupportChatbot() {const features = [{
               </button>
             </div></div></div></div></div>
           </div>
+=======
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-customer-support-chatbot" />
+      </Helmet>
+        <title>AI Customer Support Chatbot - Zion Tech Group</title>
+        <meta name="description" content="Professional AI customer support chatbot services by Zion Tech Group. Expert solutions tailored to your business needs." / / />
+        <meta name="keywords" content="AI chatbot, customer support, AI solutions, IT services, Zion Tech Group" / / />
+        <meta property="og:title" content="AI Customer Support Chatbot - Zion Tech Group" / / />
+        <meta property="og:description" content="Professional AI customer support chatbot services by Zion Tech Group. Expert solutions tailored to your business needs." / / />
+        <meta property="og:type" content="website" / / />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-customer-support-chatbot" / / />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-16">
+        </div>
+        {/* Hero Section */}
+
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4justify-centermb-12">
+              <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup" >
+          Get Started
+                
+          <ArrowRight className="ml-2group-hover:translate-x-1transition-transform"  />
+        </Link>
+              <Link to="/contact" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More
+              </Link>
+            </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         </section>
 
         {/* Features Section */}
@@ -482,6 +520,7 @@ export default function AICustomerSupportChatbot() {const features = [{
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
@@ -695,3 +734,22 @@ export default function AicustomersupportchatbotPage() {
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+        <section className="py-20" />
+          <div className="containermx-autopx-4">
+            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xllp-12text-center">
+              <h2 className="text-4xl font-bold text-white mb-6"  />Ready to Get Started?
+              </h2>
+
+                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25">Contact Us
+                </Link>
+                <Link to="/services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">View All Services
+                </Link>
+              </div>
+          </div>
+        </section>
+      </div>
+
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

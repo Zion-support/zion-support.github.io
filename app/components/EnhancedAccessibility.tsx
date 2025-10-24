@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -38,6 +39,9 @@ import React, { useEffect } from 'react';
 <<<<<<< HEAD
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode ,}> = ({ children }) => {
 =======
+=======
+import { useEffect } from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
@@ -178,9 +182,16 @@ const EnhancedAccessibility: React.FC<{children: React.ReactNode}> = ({children}
     const addScreenReaderAnnouncements = () => {const announcement = document.createElement('div');
       announcement.setAttribute('aria-live', 'polite');
       announcement.setAttribute('aria-atomic', 'true');
+<<<<<<< HEAD
       announcement.const className = 'sr-only';
       announcement.const id = 'announcements';
       document.body.appendChild(announcement);};
+=======
+      announcement.className = 'sr-only';
+      announcement.id = 'announcements';
+      document.body.appendChild(announcement);
+    };
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
     // Initialize accessibility features;
     const cleanupContrast = addHighContrastSupport();
@@ -192,7 +203,11 @@ const EnhancedAccessibility: React.FC<{children: React.ReactNode}> = ({children}
       cleanupMotion?.();};
   }, []);
 
+<<<<<<< HEAD
   return <React.Fragment >{children}</React.Fragment ></React.Fragment>;
+=======
+    return <React.Fragment>{children}</React.Fragment>;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 };
 
 export default EnhancedAccessibility;

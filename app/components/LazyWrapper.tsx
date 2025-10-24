@@ -1,12 +1,27 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+=======
+import { Suspense, lazy, ComponentType} from 'react';
+
+interface LazyWrapperProps {
+  children: React.ReactNode
+  fallback?: React.ReactNode
+}
+
+const DefaultFallback = () => (
+  <div className="flex items-center justify-centermin-h-screen">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2border-cyan-400"></div>
+)
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
 export default function LazyWrapper() {
   return (
+<<<<<<< HEAD
     <>
     
   </>
@@ -49,10 +64,14 @@ const DefaultFallback = () => (
   fallback = <DefaultFallback   /></DefaultFallback&gt;
 }) => {return (
     <Suspense fallback="{fallback}"    />{children}
+=======
+    <Suspense fallback="{fallback}">{children}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
     </Suspense>
   )
 }
 
+<<<<<<< HEAD
 // Higher-order component for lazy loading pages;
   Component: ComponentType<P   />,
   fallback?: React.ReactNode;
@@ -61,6 +80,18 @@ const DefaultFallback = () => (
   return (props: P) => (
     <LazyWrapper fallback="{fallback}"   /></LazyWrapper>
       <LazyComponent {...props}    /></LazyComponent>
+=======
+// Higher-order component for lazy loading pages
+export const withLazyLoading = <P extends object />(
+  Component: ComponentType<P />,
+  fallback?: React.ReactNode
+) => {
+  const LazyComponent = lazy(() => Promise.resolve({ default: Component }))
+  
+  return (props: P) => (
+    <LazyWrapper fallback="{fallback}" />
+      <LazyComponent {...props} / />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
     </LazyWrapper>
   )
 }
@@ -72,6 +103,7 @@ const DefaultFallback = () => (
  importFn(), 0)
 
 export default LazyWrapper;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 =======
@@ -88,3 +120,5 @@ const LazyWrapper: React.FC<LazyWrapperProps> = () => {
 
 export default LazyWrapper;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

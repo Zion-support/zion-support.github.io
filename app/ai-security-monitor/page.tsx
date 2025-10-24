@@ -1,9 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 import { Helmet } from 'react-helmet-async';
+=======
+import React  from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Monitor } from 'lucide-react';
@@ -53,6 +57,7 @@ import {ArrowRight} from 'lucide-react';
 
 export default function AisecuritymonitorPage() {
   return (
+<<<<<<< HEAD
     <>
       <title>5G Data Analytics - Zion Tech Group</title>
         <title>Ai Security Monitor - Zion Tech Group</title>
@@ -85,8 +90,26 @@ export default function AisecuritymonitorPage() {
             <ArrowRight className="w-4 h-4 ml-2" />
           </Link>
         </div>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
+      <Helmet>
+        <title>Ai Security Monitor - Zion Tech Group</title>
+        <meta name="description" content="Professional ai security monitor services by Zion Tech Group. Transform your business with our expert solutions." / / />
+      </Helmet>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <h1 className="text-4xl font-bold text-white mb-6"  >Ai Security Monitor</h1>
+        <p className="text-lg text-gray-300 mb-8">Professional ai security monitor services coming soon.</p>
+        <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit" >
+          Contact Us
+          
+          <ArrowRight className="w-5h-5ml-2"  />
+        </Link>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </div>
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

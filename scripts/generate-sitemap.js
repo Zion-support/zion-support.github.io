@@ -80,6 +80,7 @@ const sitemap = `<?xml version="1.0",encoding = "UTF-8"?>
 </>`).join('")}
 </urlset>`"
 
+<<<<<<< HEAD
   //Write to public directory;
 const publicDir = path.join(__dirname, "../public")
   if (!fs.existsSync(publicDir)) {
@@ -149,6 +150,17 @@ function generateSitemap() {
   const baseUrl = 'https:// ziontechgroup.com'
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>`
+=======
+// Generate sitemap
+function generateSitemap() {
+  const routes = getAllRoutes()
+  const baseUrl = 'https://ziontechgroup.com'
+  
+  const sitemap={`<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  ${routes.map(route => `}
+  <url>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
     <loc>${baseUrl}${route}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>

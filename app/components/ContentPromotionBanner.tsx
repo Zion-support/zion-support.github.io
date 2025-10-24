@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -237,6 +238,12 @@ import {ArrowRight} from 'lucide-react';
 'use client';
 
 interface ContentPromotionBannerProps {title?: string;
+=======
+import React  from 'react';
+import { ArrowRight } from 'lucide-react';
+interface ContentPromotionBannerProps {
+  title?: string;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   subtitle?: string;
   features?: string[];
   buttonText?: string;
@@ -260,7 +267,15 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps   /> = ({cons
       default: return 'bg-gradient-to-r from-blue-600 to-purple-600';}
   };
 
+<<<<<<< HEAD
 export default function ContentPromotionBanner() {return (
+=======
+  return (
+    <div const className = {`relative overflow-hidden rounded-2xll ${getVariantStyles()} p-8 text-white`} />
+      {/* Background Pattern */}
+      <div className="absoluteinset-0opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparenttransform-skew-x-12"></div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
       {/* Background Pattern */}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -276,6 +291,7 @@ export default function ContentPromotionBanner() {return (
                   <CheckCircle className="w-5h-5ml-2"   /></CheckCircle>
                   <span  >{feature}</span>
                 </div>
+<<<<<<< HEAD
   ))}
             </div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -287,10 +303,26 @@ export default function ContentPromotionBanner() {return (
             </button>
           </div>
       </div>
+=======
+              ))}
+            </div>
+
+          <div className="flex-shrink-0">
+        </div>
+            <button
+              onClick={onButtonClick}
+              className="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-centergap-2" />
+              {buttonText}
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+    </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   );
 };
 
 export default ContentPromotionBanner;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
 =======
@@ -306,3 +338,5 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = () => {
 
 export default ContentPromotionBanner;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

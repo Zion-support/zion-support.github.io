@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 
 'use client';
 
 const EnhancedSkipLink: React.FC = () => {const handleSkipToMain = () => {
+=======
+import React  from 'react';
+const EnhancedSkipLink: React.FC = () => {
+  const handleSkipToMain = () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
     const mainContent = document.getElementById('main-content');
     if (mainContent) {
       mainContent.focus();
@@ -21,18 +27,33 @@ const EnhancedSkipLink: React.FC = () => {const handleSkipToMain = () => {
     }
   };
 
+<<<<<<< HEAD
 export default function EnhancedSkipLink() {return (
 
         onClick="{handleSkipToMain}"
+=======
+  return (
+    <div className="skip-links">
+      <button
+        onClick={handleSkipToMain}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         className="skip-link"
         aria-label="Skip to main content"
         />Skip to main content;
       </button>
+<<<<<<< HEAD
       <button;
         onClick="{handleSkipToNavigation}"
         className="skip-link"
         aria-label="Skip to navigation"
           />Skip to navigation;
+=======
+      <button
+        onClick={handleSkipToNavigation}
+        className="skip-link"
+        aria-label="Skip to navigation"
+        />Skip to navigation
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
       </button>
       <style jsx    />{`.skip-links {;
           position: absolute;,
@@ -59,6 +80,7 @@ export default function EnhancedSkipLink() {return (
 
         .skip-link: hover {,
   background: #00 ffff;,
+<<<<<<< HEAD
   color: #000;}`}</style>
 =======
 
@@ -68,13 +90,21 @@ const EnhancedSkipLink: React.FC<EnhancedSkipLinkProps> = () => {
       <h2>EnhancedSkipLink</h2>
       <p>Component content coming soon.</p>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+  color: #000;
+        }
+      `}</style>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
     </div>
   );
 };
 
 <<<<<<< HEAD
 export default EnhancedSkipLink;
+<<<<<<< HEAD
 
 =======
 export default EnhancedSkipLink;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+'use client';
+import React from 'react';
+import { ArrowRight, Brain, Cloud, Shield, Globe } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+'use client'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -46,6 +54,7 @@ const EnhancedServicesShowcase: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <section className="py-16"></section>
       <div className="container mx-auto px-4"></div>
         <div className="text-center mb-16"></div>
@@ -137,12 +146,32 @@ import {ArrowRight} from 'lucide-react';
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                 <service.icon className="h-12w-12tex t-cyan-400mr-4"    /></service>
                 <h3 className="w-5h-5ml-2"   />{service.title}
+=======
+    <div className="py-20 px-4sm:px-6lg:px-8">
+      <div className="max-w-7xlmx-auto">
+        <div className="text-centermb-16">
+          <h2 className="text-4xl md:text-5 xl font-bold text-white mb-6"  />Our Core Services
+          </h2>
+          <p className="text-xl text-cyan-400 max-w-3xlmx-auto">
+              Comprehensive AI and IT solutions designed to transform your business and drive innovation
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
+        </div>
+          {services.map((service, index) => (
+              <div key="{index}" className="cyber-card p-8 grouphover:scale-105transition-transform" />
+              <div className="flex items-centermb-6">
+                <service.icon className="h-12 w-12text-cyan-400mr-4" />
+                <h3 className="text-2 xl font-bold text-whitegroup-hover:text-cyan-400 transition-colors"  />{service.title}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                 </h3>
               </div>
               <p className="w-5h-5ml-2">{service.description}
               </p>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                 <h4 className="text-sm font-semiboldtext-cyan-400mb-3"  >Key Features</h4>
+<<<<<<< HEAD
                 <ul className="w-5h-5ml-2"   /></ul>
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-centertext-sm text-gray-300"   /></li>
@@ -155,9 +184,25 @@ import {ArrowRight} from 'lucide-react';
               <button className="w-5h-5ml-2"   /></button>
                 Learn More;
                 <ArrowRight className="w-5h-5ml-2"   /></ArrowRight>
+=======
+                <ul className="space-y-2" />
+                  {service.features.map((feature, featureIndex) => (
+                    <li key="{featureIndex}" className="flex items-centertext-smtext-gray-300" />
+                      <CheckCircle className="h-4 w-4 text-green-400mr-2flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <button className="cyber-button w-full py-3 text-center inline-flex items-center justify-centergroup-hover:scale-105transition-transform" />
+                Learn More
+                <ArrowRight className="ml-2h-4w-4" />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
               </button>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
             </div>
+<<<<<<< HEAD
   ))}
         </div>
 <<<<<<< HEAD
@@ -173,10 +218,16 @@ import {ArrowRight} from 'lucide-react';
         </div>
     </section>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
+=======
+          ))}
+        </div>
+    </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
   );
 };
 
 export default EnhancedServicesShowcase;
+<<<<<<< HEAD
 =======
     </div>
   )
@@ -196,3 +247,5 @@ const EnhancedServicesShowcase: React.FC<EnhancedServicesShowcaseProps> = () => 
 
 export default EnhancedServicesShowcase;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796

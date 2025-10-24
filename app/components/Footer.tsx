@@ -11,6 +11,7 @@ import Link from 'next/link';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight } from 'lucide-react';
 =======
 import React from 'react';
+<<<<<<< HEAD
 =======
 'use client';
 import React from "react";
@@ -18,6 +19,10 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import { Brain, Mail, Phone, MapPin, Twitter, Linkedin, Github } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-04df
+=======
+import { Link } from 'react-router-dom';
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Globe, Database, Sparkles, Star } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 
 const Footer: React.FC = memo(function Footer() {
   const aiServices = [
@@ -274,6 +279,7 @@ export default function Footer({ className = '', children, ...props }: FooterPro
               {aiServices.map((service, index) => (
                 <li key={index}>
                   <Link
+<<<<<<< HEAD
                     href={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
 =======
@@ -544,10 +550,45 @@ const Footer = () => {
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
                   >
                     {tech.name}
+=======
+                    to={service.url}
+                    className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-2 group"
+                  >
+                    <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <span className="text-sm">{service.name}</span>
                   </Link>
                 </li>
               ))}
             </ul>
+            <Link
+              to="/ai-services"
+              className="text-blue-400 hover:text-blue-300 text-sm font-medium mt-4 inline-flex items-center gap-1"
+            >
+              View All AI Services <ArrowRight className="w-3 h-3" />
+            </Link>
+          </div>
+
+          {/* IT Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Cloud className="w-5 h-5 text-green-400" />
+              IT Services
+            </h3>
+            <ul className="space-y-3">
+              {itServices.slice(0, 6).map((service, index) => (
+                <li key={index}>
+                  <Link
+                    to={service.url}
+                    className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-2 group"
+                  >
+                    <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <span className="text-sm">{service.name}</span>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
+                  </Link>
+                </li>
+              ))}
+            </ul>
+<<<<<<< HEAD
           </div>
 
           {/* Company & Resources */}
@@ -561,10 +602,36 @@ const Footer = () => {
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
                   >
                     {item.name}
+=======
+            <Link
+              to="/it-services"
+              className="text-green-400 hover:text-green-300 text-sm font-medium mt-4 inline-flex items-center gap-1"
+            >
+              View All IT Services <ArrowRight className="w-3 h-3" />
+            </Link>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Globe className="w-5 h-5 text-purple-400" />
+              Company
+            </h3>
+            <ul className="space-y-3">
+              {company.map((item, index) => (
+                <li key={index}>
+                  <Link
+                    to={item.url}
+                    className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-2 group"
+                  >
+                    <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <span className="text-sm">{item.name}</span>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
                   </Link>
                 </li>
               ))}
             </ul>
+<<<<<<< HEAD
             
             <h4 className="text-lg font-semibold mb-4 text-cyan-400">Resources</h4>
             <ul className="space-y-2">
@@ -813,6 +880,120 @@ const Footer: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             </div>
           </div>
+=======
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <Database className="w-5 h-5 text-yellow-400" />
+              Resources
+            </h3>
+            <ul className="space-y-3">
+              {resources.map((item, index) => (
+                <li key={index}>
+                  <Link
+                    to={item.url}
+                    className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-2 group"
+                  >
+                    <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <span className="text-sm">{item.name}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Newsletter Signup */}
+      <div className="border-t border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-blue-500/30">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-2">Stay Updated</h3>
+                <p className="text-gray-300 text-sm">
+                  Get the latest AI and IT insights delivered to your inbox.
+                </p>
+              </div>
+              <div className="flex w-full md:w-auto gap-2">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 md:w-64 px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+                <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center gap-2">
+                  Subscribe <ArrowRight className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Contact Info */}
+      <div className="border-t border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="flex items-center gap-3">
+              <Mail className="w-5 h-5 text-blue-400" />
+              <div>
+                <p className="text-sm text-gray-400">Email</p>
+                <p className="text-white">info@ziontechgroup.com</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <Phone className="w-5 h-5 text-green-400" />
+              <div>
+                <p className="text-sm text-gray-400">Phone</p>
+                <p className="text-white">+1 (555) 123-4567</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <MapPin className="w-5 h-5 text-red-400" />
+              <div>
+                <p className="text-sm text-gray-400">Address</p>
+                <p className="text-white">123 Tech Street, San Francisco, CA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-6 text-sm text-gray-400">
+              <p>&copy; {currentYear} Zion Tech Group. All rights reserved.</p>
+              <div className="flex items-center gap-4">
+                <Link to="/privacy" className="hover:text-white transition-colors duration-300">
+                  Privacy Policy
+                </Link>
+                <Link to="/terms" className="hover:text-white transition-colors duration-300">
+                  Terms of Service
+                </Link>
+                <Link to="/cookies" className="hover:text-white transition-colors duration-300">
+                  Cookie Policy
+                </Link>
+              </div>
+            </div>
+            <div className="flex items-center gap-2 text-sm text-gray-400">
+              <span>Powered by</span>
+              <div className="flex items-center gap-1">
+                <Star className="w-4 h-4 text-yellow-400" />
+                <span className="text-white font-medium">Zion Tech Group</span>
+              </div>
+            </div>
+          </div>
+          <p className="text-gray-400 mb-4">
+            Advanced AI & IT Solutions
+          </p>
+          <p className="text-gray-500 text-sm">
+            © {currentYear} Zion Tech Group. All rights reserved.
+          </p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
         </div>
       </div>
     </footer>

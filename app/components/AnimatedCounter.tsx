@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 'use client';
@@ -9,6 +10,9 @@ import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
 import React, { useState, useEffect } from 'react';
 
+=======
+import { useState, useEffect} from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
 interface AnimatedCounterProps {
   end: number;
 =======
@@ -156,6 +160,7 @@ const AnimatedCounter: React.FC = () => {
   }, [end, duration]);
 
   return (
+<<<<<<< HEAD
     <span className={className}>
       {prefix}{count.toLocaleString()}{suffix}
     </span>
@@ -175,3 +180,9 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = () => {
 };
 
 export default AnimatedCounter;
+=======
+    <span className={className}>{prefix}{count.toLocaleString()}{suffix}
+    </span>
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
