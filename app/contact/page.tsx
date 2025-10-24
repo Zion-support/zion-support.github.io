@@ -1,35 +1,22 @@
 'use client'
-import React, { useState } from 'react'
-import { ArrowRight, Mail, Phone, MapPin, Clock } from 'lucide-react'
+import React from 'react'
+import Head from 'next/head'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react'
 
-export const metadata: Metadata = {
-  title: 'Page - Zion Tech Group',
-  description: 'Professional page services by Zion Tech Group.',
-  keywords: 'page, services, technology, AI, IT solutions'
-};
-
-const PagePage = () => {
+const ContactPage = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-white">
-      <Navigation />
+    <>
+      <Head>
+        <title>Contact Us - Zion Tech Group | Get Expert Technology Advice</title>
+        <meta name="description" content="Get in touch with Zion Tech Group for expert AI and IT solutions. Contact us for consultation, support, and technology transformation services." />
+        <meta name="keywords" content="contact, technology consultation, AI solutions, IT support, Zion Tech Group" />
+      </Head>
       
-      <section className="pt-20 pb-16 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Professional page services by Zion Tech Group.
-          </p>
-          <div className="space-y-4">
-            <p className="text-gray-400">
-              Our page solutions are designed to help your business grow and succeed.
-            </p>
-            <p className="text-gray-400">
-              Contact us to learn more about how we can help you achieve your goals.
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -39,24 +26,18 @@ const PagePage = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Ready to transform your business? Let's discuss how our AI and IT solutions can help you achieve your goals.
->>>>>>> cursor/fix-errors-and-merge-to-main-155f
             </p>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <Footer />
-    </div>
-  );
-};
-
-<<<<<<< HEAD
-export default PagePage;
-=======
+        {/* Contact Information Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Contact Information */}
               <div className="space-y-8">
                 <div>
-                  <h2 className="text-2xl font-bold text-white mb-6">Get in touch</h2>
+                  <h2 className="text-3xl font-bold text-white mb-6">Get in touch</h2>
                   <p className="text-gray-300 mb-8">
                     We're here to help you transform your business with cutting-edge AI and IT solutions. 
                     Reach out to us and let's start your digital transformation journey.
@@ -94,12 +75,90 @@ export default PagePage;
                   </div>
                 </div>
               </div>
+
+              {/* Contact Form */}
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-white mb-6">Send us a message</h3>
+                <form className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-2">
+                        First Name
+                      </label>
+                      <input
+                        type="text"
+                        id="firstName"
+                        name="firstName"
+                        className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        placeholder="John"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="lastName" className="block text-sm font-medium text-gray-300 mb-2">
+                        Last Name
+                      </label>
+                      <input
+                        type="text"
+                        id="lastName"
+                        name="lastName"
+                        className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        placeholder="Doe"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      placeholder="john@example.com"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                      Company
+                    </label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      placeholder="Your Company"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                      Message
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows={4}
+                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      placeholder="Tell us about your project..."
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+                  >
+                    <Send className="w-5 h-5 mr-2" />
+                    Send Message
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </section>
       </div>
+      
+      <Footer />
+    </>
   )
 }
 
 export default ContactPage
->>>>>>> cursor/fix-errors-and-merge-to-main-155f

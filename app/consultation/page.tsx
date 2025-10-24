@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from 'react'
+import Head from 'next/head'
 import { ArrowRight, Calendar, Clock, User, Mail, Phone, Building, CheckCircle } from 'lucide-react'
 
 const ConsultationPage: React.FC = () => {
@@ -61,7 +62,6 @@ const ConsultationPage: React.FC = () => {
   ]
 
   return (
-<<<<<<< HEAD
     <>
       <Head>
         <title>Free Consultation - Zion Tech Group | Expert Technology Advice</title>
@@ -70,9 +70,6 @@ const ConsultationPage: React.FC = () => {
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> cursor/fix-errors-and-merge-to-main-155f
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -302,6 +299,7 @@ const ConsultationPage: React.FC = () => {
           </div>
         </section>
       </div>
+    </>
   )
 }
 
