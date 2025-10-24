@@ -1,50 +1,25 @@
 import React, { memo } from 'react';
-import EnhancedSEOHead from '../components/EnhancedSEOHead';
-import { useForm } from '../hooks/useForm';
+import ContactForm from './ContactForm';
+import { Metadata } from 'next';
+
+export const dynamic = 'force-dynamic';
+
+export const metadata: Metadata = {
+  title: 'Contact Us - Zion Tech Group',
+  description: 'Get in touch with Zion Tech Group for your AI and IT solution needs. We\'re here to help.',
+  openGraph: {
+    title: 'Contact Us - Zion Tech Group',
+    description: 'Get in touch with Zion Tech Group for your AI and IT solution needs. We\'re here to help.',
+    url: 'https://ziontechgroup.com/contact',
+    siteName: 'Zion Tech Group',
+    type: 'website',
+  },
+};
 
 const ContactPage: React.FC = memo(() => {
-  const {
-    data: formData,
-    isSubmitting,
-    submitStatus,
-    errors,
-    handleInputChange,
-    handleSubmit,
-  } = useForm({
-    initialData: {
-      name: '',
-      email: '',
-      message: ''
-    },
-    onSubmit: async (data) => {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Here you would typically send the data to your backend
-      // Example: await fetch('/api/contact', { method: 'POST', body: JSON.stringify(data) });
-      
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Form submitted:', data);
-      }
-    },
-    validate: (data) => {
-      const errors: Record<string, string> = {};
-      if (!data.name.trim()) errors.name = 'Name is required';
-      if (!data.email.trim()) errors.email = 'Email is required';
-      else if (!/\S+@\S+\.\S+/.test(data.email)) errors.email = 'Email is invalid';
-      if (!data.message.trim()) errors.message = 'Message is required';
-      return errors;
-    },
-  });
 
   return (
     <>
-      <EnhancedSEOHead
-        title="Contact Us"
-        description="Get in touch with Zion Tech Group for your AI and IT solution needs. We're here to help."
-        canonicalUrl="https://ziontechgroup.com/contact"
-      />
-      
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center mb-16">
@@ -131,6 +106,7 @@ const ContactPage: React.FC = memo(() => {
               </div>
             </div>
             
+<<<<<<< HEAD
             <div>
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">Send us a Message</h2>
               
@@ -216,6 +192,9 @@ const ContactPage: React.FC = memo(() => {
                 </button>
               </form>
             </div>
+=======
+            <ContactForm />
+>>>>>>> 36b018b2c6b3d9694f459ee8efc09b4df34dcda5
           </div>
 
           {/* Services Overview */}
@@ -326,4 +305,8 @@ const ContactPage: React.FC = memo(() => {
 
 ContactPage.displayName = 'ContactPage';
 
+<<<<<<< HEAD
 export default ContactPage;
+=======
+export default ContactPage;
+>>>>>>> 36b018b2c6b3d9694f459ee8efc09b4df34dcda5
