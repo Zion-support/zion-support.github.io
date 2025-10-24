@@ -36,6 +36,7 @@
     "ai-pages-backup/**/*",
     "all-pages-backup/**/*",
     "problematic-files-backup/**/*",
+    "temp-problematic-pages/**/*",
     "src/**/*",
     "components/**/*",
     "hooks/**/*",
