@@ -1,6 +1,8 @@
 'use client';
+
 import React, { useEffect } from 'react';
 
+<<<<<<< HEAD
 // Extend Window interface for gtag
 declare global {
   interface Window {
@@ -8,13 +10,13 @@ declare global {
   }
 }
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6f11
 interface AnalyticsProps {
-  enableGoogleAnalytics?: boolean;
-  enablePerformanceMonitoring?: boolean;
-  enableErrorTracking?: boolean;
-  enableUserBehaviorTracking?: boolean;
+  children: React.ReactNode;
 }
 
+<<<<<<< HEAD
 const Analytics: React.FC<AnalyticsProps> = ({
   enableGoogleAnalytics = true,
   enablePerformanceMonitoring = true,
@@ -73,3 +75,29 @@ const Analytics: React.FC<AnalyticsProps> = ({
 }
 
 export default Analytics
+=======
+const Analytics: React.FC<AnalyticsProps> = ({ children }) => {
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // Initialize gtag
+      (window as any).gtag = (window as any).gtag || function() {
+        ((window as any).gtag.q = (window as any).gtag.q || []).push(arguments);
+      };
+
+      // Load GA script
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
+      document.head.appendChild(script);
+
+      // Initialize GA
+      (window as any).gtag('js', new Date());
+      (window as any).gtag('config', 'GA_MEASUREMENT_ID');
+    }
+  }, []);
+
+  return <>{children}</>;
+};
+
+export default Analytics;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6f11
