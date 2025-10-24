@@ -1,33 +1,31 @@
-'use client';
+'use client'
 /**
  * SEO Component
  * Provides comprehensive SEO meta tags and structured data
  */
-import React from 'react';
-import { Helmet } from 'lucide-react';
-
+import React from 'react'
+import { Helmet } from 'lucide-react'
 
 export interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'product' | 'profile';
-  author?: string;
-  publishDate?: string;
-  modifiedDate?: string;
-  canonical?: string;
-  noIndex?: boolean;
-  structuredData?: Record<string, unknown>;
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
-  locale?: string;
-  alternateLocales?: { locale: string; url: string }[];
+  title?: string
+  description?: string
+  keywords?: string[]
+  image?: string
+  url?: string
+  type?: 'website' | 'article' | 'product' | 'profile'
+  author?: string
+  publishDate?: string
+  modifiedDate?: string
+  canonical?: string
+  noIndex?: boolean
+  structuredData?: Record<string, unknown>
+  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player'
+  locale?: string
+  alternateLocales?: { locale: string; url: string }[]
 }
-const defaultSEO = {
-  title: 'Zion Tech Group - AI & IT Solutions',
+const defaultSEO= {title: 'Zion Tech Group - AI & IT Solutions',
   description:
-    'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
+    'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve300% ROI with cutting-edge AI technology.',
   keywords: [
     'AI',
     'artificial intelligence',
@@ -35,43 +33,41 @@ const defaultSEO = {
     'digital transformation',
     'IT services',
   ],
-  image: 'https://ziontechgroup.com/og-image.jpg',
-  url: 'https://ziontechgroup.com',
+  image: 'https:// ziontechgroup.com/og-image.jpg',
+  url: 'https:// ziontechgroup.com',
   type: 'website' as const,
   locale: 'en_US',
   twitterCard: 'summary_large_image' as const
-};
+}
 export const SEO: React.FC<SEOProps> = ({
   title,
   description,
   keywords,
   image,
   url,
-  type = defaultSEO.type,
+  type= default SEO.type,
   author,
   publishDate,
   modifiedDate,
   canonical,
-  noIndex = false,
+  noIndex= false,
   structuredData,
-  twitterCard = defaultSEO.twitterCard,
-  locale = defaultSEO.locale,
-  alternateLocales = []
-}) => {
-  const seo = {
-    title: title ? `${title} | Zion Tech Group` : defaultSEO.title,
-    description: description || defaultSEO.description,
-    keywords: keywords || defaultSEO.keywords,
-    image: image || defaultSEO.image,
-    url: url || defaultSEO.url,
+  twitterCard= default SEO.twitterCard,
+  locale= default SEO.locale,
+  alternateLocales= []}) => {constseo= {
+    title: title ?`${title} | Zion TechGroup` : default SEO.title,
+    description: description || default SEO.description,
+    keywords: keywords || default SEO.keywords,
+    image: image || default SEO.image,
+    url: url || default SEO.url,
     type,
     twitterCard,
     locale
-  };
+  }
   // Generate structured data
   const generateStructuredData = () => {
     if (structuredData) {
-      return structuredData;
+      return structuredData
     }
     const baseStructuredData: Record<string, unknown> = {
       '@context': 'https://schema.org',
@@ -80,21 +76,21 @@ export const SEO: React.FC<SEOProps> = ({
       description: seo.description,
       url: seo.url,
       image: seo.image
-    };
+    }
     if (author) {
       baseStructuredData.author = {
         '@type': 'Person',
         name: author
-      };
+      }
     }
     if (publishDate) {
-      baseStructuredData.datePublished = publishDate;
+      baseStructuredData.datePublished = publishDate
     }
     if (modifiedDate) {
-      baseStructuredData.dateModified = modifiedDate;
+      baseStructuredData.dateModified = modifiedDate
     }
-    return baseStructuredData;
-  };
+    return baseStructuredData
+  }
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -149,6 +145,6 @@ export const SEO: React.FC<SEOProps> = ({
         as="style"
       />
     </Helmet>
-  );
-};
-export default SEO;
+  )
+}
+export default SEO

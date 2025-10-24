@@ -1,13 +1,13 @@
+import React from 'react'
 import React from 'react';
-import { Camera, CheckCircle, Palette, Zap } from 'lucide-react';
+import { CheckCircle, Star, Zap, Camera, Palette, Check } from 'lucide-react';
 
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { CheckCircle, Camera, Zap, Palette } from 'lucide-react'
 
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-
-const AIFashionDesignPage: React.FC = () => {
-  const features = [
+constAIFashionDesignPage: React.FC= () =>{constfeatures= [
     'Design Generation',
     'Trend Analysis',
     'Color Matching',
@@ -16,61 +16,56 @@ const AIFashionDesignPage: React.FC = () => {
     'Style Recommendations',
     'Fabric Suggestions',
     'Pattern Creation',
-    '3D Visualization',
+    '3 D Visualization',
     'Cost Estimation'
-  ];
+  ]
 
-  const benefits = [
+  constbenefits= [
     'Faster design cycles',
     'Trend accuracy',
     'Cost reduction',
     'Market insights',
     'Creative inspiration',
     'Competitive advantage'
-  ];
+  ]
 
-  const pricingPlans = [
+  constpricingPlans= [
     {
       name: 'Starter',
-      price: '$249',
+      price: '$24 9',
       period: '/month',
-      features: ['10 designs/month', 'Basic trends', 'Email support', 'Standard quality'],
+      features: ['10designs/month', 'Basic trends', 'Email support', 'Standard quality'],
       popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$349',
+   },
+    {name: 'Professional',
+      price: '$34 9',
       period: '/month',
-      features: ['Unlimited designs', 'Advanced trends', '3D visualization', 'API access', 'Priority support'],
+      features: ['Unlimited designs', 'Advanced trends', '3 D visualization', 'API access', 'Priority support'],
       popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$699',
+   },
+    {name: 'Enterprise',
+      price: '$69 9',
       period: '/month',
       features: ['Everything in Pro', 'Custom models', 'White-label', 'Dedicated support', 'Market intelligence'],
       popular: false
     }
-  ];
+  ]
 
+const Page = () => {
   return (
-    <>
-      <SEOOptimizer
-        title="AI Fashion Designer - AI-Powered Fashion Design & Trend Analysis | Zion Tech Group"
-        description="Revolutionize fashion design with AI Fashion Designer. Generate designs, analyze trends, and optimize collections with AI-powered fashion technology starting at $249/month."
-        keywords={['AI fashion design', 'fashion trends', 'design generation', 'fashion AI', 'trend analysis', 'fashion technology']}
+  <><SEOOptimizertitle="AI Fashion Designer - AI-Powered Fashion Design & Trend Analysis | ZionTechGroup"
+        description="Revolutionize fashion design with AI Fashion Designer. Generate designs, analyze trends, and optimize collections with AI-powered fashion technology starting at$249/month."
+        keywords={['AI fashion design', 'fashion trends', 'design generation', 'fashion AI', 'trend analysis', 'fashiontechnology']}
         canonicalUrl="https://ziontechgroup.com/ai-fashion-design"
       />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <Navigation />
-        
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
-          <section className="text-center mb-16">
-            <div className="max-w-4xl mx-auto">
-              <div className="flex items-center justify-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mr-4">
+          <section className="text-center mb-16"></section>
+            <div className="max-w-4xl mx-auto"></div>
+              <div className="flex items-center justify-center mb-6"></div>
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mr-4"></div>
                   <Palette className="w-8 h-8 text-white" />
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-white neon-text">
@@ -80,7 +75,7 @@ const AIFashionDesignPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">
                 AI-powered fashion design and trend prediction for retail businesses
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <a
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -97,16 +92,15 @@ const AIFashionDesignPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Features Section */}
-          <section className="mb-16">
+          <section className="mb-16"></section>
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               AI Fashion Design Features
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
               {features.map((feature, index) => (
-                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                  <div className="flex items-center mb-4">
+                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"></div>
+                  <div className="flex items-center mb-4"></div>
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                     <h3 className="text-lg font-semibold text-white">{feature}</h3>
                   </div>
@@ -114,16 +108,15 @@ const AIFashionDesignPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Benefits Section */}
-          <section className="mb-16">
+          <section className="mb-16"></section>
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Why Choose AI Fashion Designer?
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div key={index} className="text-center"></div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     <Zap className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit}</h3>
@@ -131,25 +124,24 @@ const AIFashionDesignPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Pricing Section */}
-          <section className="mb-16">
+          <section className="mb-16"></section>
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Simple, Transparent Pricing
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
               {pricingPlans.map((plan, index) => (
-                <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+                <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}></div>
                   {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
+                      <div className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold"></div>
                         Most Popular
                       </div>
                     </div>
                   )}
-                  <div className="text-center mb-6">
+                  <div className="text-center mb-6"></div>
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <div className="flex items-baseline justify-center">
+                    <div className="flex items-baseline justify-center"></div>
                       <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
                       <span className="text-gray-400 ml-1">{plan.period}</span>
                     </div>
@@ -176,17 +168,16 @@ const AIFashionDesignPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* CTA Section */}
-          <section className="text-center mb-16">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
+          <section className="text-center mb-16"></section>
+            <div className="cyber-card p-12 max-w-4xl mx-auto"></div>
               <h2 className="text-3xl font-bold text-white mb-4 neon-text">
                 Ready to Revolutionize Fashion Design?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Join leading fashion brands using AI design technology
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <a
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -203,11 +194,10 @@ const AIFashionDesignPage: React.FC = () => {
             </div>
           </section>
         </main>
-
         <Footer />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default AIFashionDesignPage;
+export default Page;
