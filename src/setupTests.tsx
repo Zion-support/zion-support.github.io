@@ -4,17 +4,8 @@
 
 import '@testing-library/jest-dom';
 
-// Jest globals
-declare global {
-  const jest: any;
-  const PerformanceObserverCallback: any;
-}
-
-// Jest globals
-declare global {
-  const jest: any;
-  const PerformanceObserverCallback: any;
-}
+// Jest globals are available in test environment
+declare const jest: any;
 
 // Polyfill for TextEncoder/TextDecoder
 import { TextEncoder, TextDecoder } from 'util';
@@ -99,7 +90,7 @@ console.info = (...args) => {
 // Mock PerformanceObserver
 global.PerformanceObserver = class MockPerformanceObserver {
   static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
-  constructor(public _callback: PerformanceObserverCallback) {}
+  constructor(public _callback: any) {}
   observe() {}
   disconnect() {}
   takeRecords() {
