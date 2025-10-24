@@ -27,7 +27,6 @@ export default function AboutPage() {
           </Link>
         </div>
       </div>
+    </>
   );
-};
-
-export default AboutPage;
+}

@@ -1,89 +1,75 @@
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-// Function to fix corrupted files
-function fixFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    
-    // Fix double quotes in import statements
-    content = content.replace(/from '([^']+)''/g, "from '$1'");
-    content = content.replace(/import '([^']+)''/g, "import '$1'");
-    
-    // Fix double quotes in string literals
-    content = content.replace(/'([^']+)''/g, "'$1'");
-    content = content.replace(/"([^"]+)""/g, '"$1"');
-    
-    // Fix malformed object properties
-    content = content.replace(/"([^"]+)": '([^']+)''/g, '"$1": "$2"');
-    content = content.replace(/'([^']+)': "([^"]+)""/g, "'$1': '$2'");
-    
-    // Fix array syntax issues
-    content = content.replace(/\[([^\]]+)\]''/g, '[$1]');
-    
-    // Fix function parameter syntax
-    content = content.replace(/= '([^']+)''/g, "= '$1'");
-    
-    // Fix semicolon issues
-    content = content.replace(/;''/g, ';');
-    content = content.replace(/'';/g, ';');
-    
-    // Fix malformed React component declarations
-    content = content.replace(/const "([^"]+)": React\.FC/g, 'const $1: React.FC');
-    
-    // Fix malformed JSX attributes
-    content = content.replace(/className = '([^']+)''/g, "className='$1'");
-    
-    // Fix specific patterns that are causing issues
-    content = content.replace(/'use client''/g, "'use client'");
-    content = content.replace(/import React from 'react''/g, "import React from 'react'");
-    content = content.replace(/import { ([^}]+) } from '([^']+)''/g, "import { $1 } from '$2'");
-    
-    // Only write if content changed
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+// List of files that need comprehensive fixes
+const filesToFix = [
+  'app/ai-ecommerce-optimizer-pro/page.tsx',
+  'app/ai-email-automation/page.tsx',
+  'app/ai-financial-analytics-pro/page.tsx',
+  'app/ai-project-management-pro/page.tsx',
+  'app/ai-services/page.tsx',
+  'app/analytics/page.tsx',
+  'app/api/page.tsx',
+  'app/automation/page.tsx',
+  'app/blockchain/page.tsx',
+  'app/cloud-migration-pro/page.tsx'
+];
+
+console.log(`Fixing ${filesToFix.length} files comprehensively...`);
+
+filesToFix.forEach(filePath => {
+  if (!fs.existsSync(filePath)) {
+    console.log(`File not found: ${filePath}`);
+    return;
   }
-}
-
-// Get all .tsx files with parsing errors
-function getAllCorruptedFiles() {
-  try {
-    const result = execSync('find ./app ./components ./src -name "*.tsx" -exec grep -l "\\'\\'" {} \\;', { encoding: 'utf8' });
-    return result.trim().split('\n').filter(file => file.trim());
-  } catch (error) {
-    console.error('Error finding corrupted files:', error.message);
-    return [];
-  }
-}
-
-console.log('Starting comprehensive fix of corrupted files...');
-const corruptedFiles = getAllCorruptedFiles();
-console.log(`Found ${corruptedFiles.length} corrupted files`);
-
-let fixedCount = 0;
-let processedCount = 0;
-
-for (const file of corruptedFiles) {
-  if (fs.existsSync(file)) {
-    processedCount++;
-    if (fixFile(file)) {
-      fixedCount++;
-    }
-    
-    // Progress indicator
-    if (processedCount % 50 === 0) {
-      console.log(`Processed ${processedCount}/${corruptedFiles.length} files...`);
+  
+  let content = fs.readFileSync(filePath, 'utf8');
+  
+  // Add comprehensive imports
+  const allImports = [
+    'ArrowRight', 'CheckCircle', 'Star', 'Cpu', 'BarChart3', 'Zap', 'Shield', 
+    'Users', 'TrendingUp', 'Bot', 'Database', 'Settings', 'Target', 'MessageCircle',
+    'Clock', 'Globe', 'Smartphone', 'FileText', 'PenTool'
+  ];
+  
+  // Replace the lucide-react import
+  content = content.replace(
+    /import\s*{\s*[^}]+\s*}\s*from\s*['"]lucide-react['"]/,
+    `import { ${allImports.join(', ')} } from 'lucide-react'`
+  );
+  
+  // Add Footer import if not present
+  if (!content.includes('import Footer')) {
+    const importMatch = content.match(/import.*from.*['"];?\s*\n/);
+    if (importMatch) {
+      const insertPoint = importMatch.index + importMatch[0].length;
+      const footerImport = "import Footer from '../components/Footer';\n";
+      content = content.slice(0, insertPoint) + footerImport + content.slice(insertPoint);
     }
   }
-}
+  
+  // Fix JSX structure issues
+  if (content.includes('</section>') && content.includes('<div className="min-h-screen')) {
+    content = content.replace('</section>', '</div>');
+  }
+  
+  // Add Footer component before closing
+  if (!content.includes('<Footer') && content.includes('</>')) {
+    content = content.replace('</>', '      <Footer />\n    </>');
+  }
+  
+  // Ensure proper JSX structure
+  if (content.includes('</div>') && !content.includes('</>') && content.includes('<>')) {
+    content = content.replace('</div>', '</div>\n    </>');
+  }
+  
+  // Fix any remaining parsing issues
+  if (content.includes('export default') && !content.includes('export default function')) {
+    content = content.replace(/export default\s+(\w+)/, 'export default function $1()');
+  }
+  
+  fs.writeFileSync(filePath, content);
+  console.log(`Fixed: ${filePath}`);
+});
 
-console.log(`\nFixed ${fixedCount} out of ${processedCount} processed files.`);
+console.log('All files comprehensively fixed!');
