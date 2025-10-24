@@ -1,3 +1,6 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Brain, Globe, Shield, Zap } from 'lucide-react';
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";

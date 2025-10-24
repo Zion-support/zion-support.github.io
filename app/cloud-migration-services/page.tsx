@@ -1,3 +1,6 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, Cloud, Database, Mail, Phone, Server, Shield } from 'lucide-react';
 import React from "react";
 import Footer from '../components/Footer';
 import Head from "next/head";

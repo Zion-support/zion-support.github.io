@@ -1,3 +1,5 @@
+import { Helmet } from 'react-helmet-async';
+import { Brain, Shield, Cloud, BarChart3, Globe, Zap } from 'lucide-react';
 import React from "react";
 import Footer from '../components/Footer';
 import Head from "next/head";

@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import React from "react";
 import Footer from '../components/Footer';
 import Head from "next/head";
