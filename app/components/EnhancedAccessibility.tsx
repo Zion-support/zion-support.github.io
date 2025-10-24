@@ -1,7 +1,7 @@
 'use client';
 import { Settings } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
-import { AccessibilitySettings } from '../types/accessibility';
+import { AccessibilitySettings, AccessibilityContextType } from '../types/accessibility';
 import { AccessibilityContext, useAccessibility } from '../contexts/AccessibilityContext';
 
 interface EnhancedAccessibilityProps {
