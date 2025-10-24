@@ -1,4 +1,16 @@
 
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+  title = 'ZionTechGroup - AI Solutions & Technology Services',
+  description = 'Leading provider of AI solutions, technology services, and digital transformation for businesses worldwide.',
+  keywords = 'AI solutions, technology services, digital transformation, machine learning, artificial intelligence',
+  ogImage = '/og-image.jpg',
+  canonicalUrl = 'https://ziontechgroup.com',
+  className = '',
+}) => {
+  const fullTitle = title.includes('ZionTechGroup') ? title : `${title} | ZionTechGroup`;
+  const keywordsString = keywords.split(', ').join(', ');
+
+  return (
     <Head>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
