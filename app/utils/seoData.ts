@@ -1,10 +1,14 @@
-interface StructuredData {
+export interface StructuredData {
   '@context': string;
   '@type': string;
-  [key: string]: any;
+  name: string;
+  description: string;
+  url: string;
+  logo?: string;
+  sameAs?: string[];
 }
 
-interface SEOData {
+export interface SEOData {
   title: string;
   description: string;
   keywords: string[];
@@ -47,29 +51,13 @@ export const defaultSEOData: SEOData = {
   }
 };
 
-export const getPageSEO = (page: string): SEOData => {
-  const pageSEOData: Record<string, SEOData> = {
-    home: {
-      ...defaultSEOData,
-      title: 'Home - Zion Tech Group',
-      description: 'Welcome to Zion Tech Group - Your trusted partner for AI and technology solutions.'
-    },
-    about: {
-      ...defaultSEOData,
-      title: 'About Us - Zion Tech Group',
-      description: 'Learn about our mission to revolutionize technology and provide cutting-edge AI solutions.'
-    },
-    services: {
-      ...defaultSEOData,
-      title: 'Services - Zion Tech Group',
-      description: 'Explore our comprehensive range of AI and technology services designed to accelerate your business growth.'
-    },
-    contact: {
-      ...defaultSEOData,
-      title: 'Contact Us - Zion Tech Group',
-      description: 'Get in touch with our team to discuss your AI and technology needs.'
+export const generateSEOData = (customData: Partial<SEOData> = {}): SEOData => {
+  return {
+    ...defaultSEOData,
+    ...customData,
+    structuredData: {
+      ...defaultSEOData.structuredData,
+      ...customData.structuredData
     }
   };
-
-  return pageSEOData[page] || defaultSEOData;
 };

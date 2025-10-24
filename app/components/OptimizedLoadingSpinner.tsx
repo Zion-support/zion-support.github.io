@@ -1,33 +1,41 @@
-import React from 'react';
+'use client'
+import React from 'react'
 
 interface OptimizedLoadingSpinnerProps {
-  type?: 'spinner' | 'dots' | 'pulse' | 'skeleton' | 'bars';
-  size?: 'sm' | 'md' | 'lg';
-  color?: 'primary' | 'secondary' | 'white' | 'gray';
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+  variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';
+  text?: string;
   className?: string;
+  color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
+  fullScreen?: boolean;
 }
 
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({
-  type = 'spinner',
   size = 'md',
-  color = 'primary',
-  className = ''
+  variant = 'spinner',
+  text,
+  className = '',
+  color = 'blue',
+  fullScreen = false
 }) => {
   const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
+    xs: 'h-3 w-3',
+    sm: 'h-4 w-4',
+    md: 'h-6 w-6',
+    lg: 'h-8 w-8',
+    xl: 'h-12 w-12'
   };
 
   const colorClasses = {
-    primary: 'text-blue-600',
-    secondary: 'text-purple-600',
-    white: 'text-white',
-    gray: 'text-gray-600'
+    blue: 'border-blue-500',
+    gray: 'border-gray-500',
+    green: 'border-green-500',
+    red: 'border-red-500',
+    purple: 'border-purple-500'
   };
 
   const renderSpinner = () => {
-    switch (type) {
+    switch (variant) {
       case 'dots':
         return (
           <div className="flex space-x-1" role="status" aria-label="Loading">
@@ -80,7 +88,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({
       default: // spinner
         return (
           <div
-            className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin rounded-full border-2 border-current border-t-transparent`}
+            className={`${sizeClasses[size]} border-2 border-gray-300 border-t-current rounded-full animate-spin`}
             role="status"
             aria-label="Loading"
           />
@@ -88,11 +96,28 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({
     }
   };
 
-  return (
-    <div className={`flex items-center justify-center ${className}`}>
-      {renderSpinner()}
+  const content = (
+    <div className={`flex flex-col items-center justify-center ${className}`}>
+      <div className={`${colorClasses[color].split(' ')[1]}`}>
+        {renderSpinner()}
+      </div>
+      {text && (
+        <p className="mt-2 text-sm text-gray-600 font-medium">
+          {text}
+        </p>
+      )}
     </div>
   );
+
+  if (fullScreen) {
+    return (
+      <div className="fixed inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center z-50">
+        {content}
+      </div>
+    );
+  }
+
+  return content;
 };
 
 export default OptimizedLoadingSpinner;

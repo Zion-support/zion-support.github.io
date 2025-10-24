@@ -1,41 +1,42 @@
-import React from 'react';
-import { ArrowRight, Brain, Zap, Shield, Globe } from 'lucide-react';
+'use client'
+import React from 'react'
+import { ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react'
 
 interface FuturisticHeroProps {
-  title?: string;
-  subtitle?: string;
-  ctaText?: string;
-  ctaLink?: string;
+  title?: string
+  subtitle?: string
+  ctaText?: string
+  _ctaLink?: string
 }
 
 const FuturisticHero: React.FC<FuturisticHeroProps> = ({
-  title = 'Futuristic Hero',
-  subtitle = 'Experience the future of technology with our cutting-edge solutions',
-  ctaText = 'Get Started',
-  ctaLink = '#'
+  title = "Transform Your Business with AI",
+  subtitle = "Cutting-edge artificial intelligence solutions that revolutionize how you work, think, and grow.",
+  ctaText = "Get Started",
+  _ctaLink = "/contact"
 }) => {
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
     },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',
+      description: 'Bank-level security with encryption and compliance standards'
     },
     {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
-  ];
+  ]
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
@@ -59,7 +60,7 @@ const FuturisticHero: React.FC<FuturisticHeroProps> = ({
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href={ctaLink}
+                href={_ctaLink}
                 className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center group"
               >
                 {ctaText}
@@ -78,11 +79,15 @@ const FuturisticHero: React.FC<FuturisticHeroProps> = ({
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
               >
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4 group-hover:scale-110 transition-transform">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300 text-sm">{feature.description}</p>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300 text-sm">
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>

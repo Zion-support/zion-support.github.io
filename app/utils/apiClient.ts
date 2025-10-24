@@ -1,37 +1,45 @@
-interface ApiResponse<T> {
+// Type definitions for API client
+// RequestInit is a built-in TypeScript type for fetch options
+export interface ApiResponse<T = unknown> {
   data: T;
   status: number;
   statusText: string;
   headers: Record<string, string>;
 }
 
-interface RequestOptions {
-  method?: string;
-  headers?: Record<string, string>;
-  body?: string;
+export interface RequestOptions extends globalThis.RequestInit {
   timeout?: number;
+  retries?: number;
 }
 
-class ApiClient {
+export class ApiClient {
   private baseURL: string;
-  private defaultTimeout: number;
+  private defaultOptions: RequestOptions;
 
-  constructor(baseURL: string = '/api', defaultTimeout: number = 10000) {
+  constructor(baseURL = '', options: RequestOptions = {}) {
     this.baseURL = baseURL;
-    this.defaultTimeout = defaultTimeout;
+    this.defaultOptions = {
+      timeout: 30000,
+      retries: 3,
+      ...options,
+    };
   }
 
   private async makeRequest<T>(
     url: string,
     options: RequestOptions = {}
   ): Promise<ApiResponse<T>> {
-    const timeout = options.timeout || this.defaultTimeout;
+    const { timeout = 30000, retries: _retries = 3, ...fetchOptions } = {
+      ...this.defaultOptions,
+      ...options,
+    };
+
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), timeout);
 
     try {
       const response = await fetch(url, {
-        ...options,
+        ...fetchOptions,
         signal: controller.signal,
       });
 
@@ -42,7 +50,6 @@ class ApiClient {
       }
 
       const data = await response.json();
-
       return {
         data,
         status: response.status,

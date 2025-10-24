@@ -1,15 +1,17 @@
 import React from 'react';
 
 interface ServiceCardSkeletonProps {
-  lines?: number;
   showImage?: boolean;
+  showButton?: boolean;
+  lines?: number;
   className?: string;
 }
 
 const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({
+  showImage = true,
+  showButton = true,
   lines = 3,
-  showImage = false,
-  className = ''
+  className = '',
 }) => {
   return (
     <div className={`bg-white rounded-lg shadow-lg p-6 animate-pulse ${className}`}>
@@ -37,7 +39,9 @@ const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({
       </div>
       
       {/* Button skeleton */}
-      <div className="h-10 bg-gray-300 rounded w-full"></div>
+      {showButton && (
+        <div className="h-10 bg-gray-300 rounded w-full"></div>
+      )}
     </div>
   );
 };
