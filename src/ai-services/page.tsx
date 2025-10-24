@@ -1,44 +1,73 @@
-'use client''
-import { ArrowRight, Brain, BarChart, Target } from 'lucide-react''
-import React from 'react''
-import Navigation from '../components/Navigation''
-import Footer from '../components/Footer''
-import { CheckCircle, ArrowRight } from 'lucide-react''
-      "title": 'Machine Learning Solutions'',
-      "n": 'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.''
-      "features": ['Predictive Analytics', 'Pattern Recognition', 'Custom Model Training', 'Real-time Processing''
-      "price": 'Starting at $2,50 0/month''
-      "color": 'text-purple-40 0'',
-      "title": 'AI Marketing Automation'',
-      "n": 'Intelligent marketing campaigns with AI-powered targeting, content generation, and optimization.''
-      "features": ['Smart Targeting', 'Content Generation', 'Campaign Optimization', 'ROI Tracking''
-      "price": 'Starting at $1,20 0/month''
-      "color": 'text-pink-40 0'',
-      "title": 'Process Automation'',
-      "n": 'Automate complex business processes with AI decision-making and exception handling.''
-      "s": ['Workflow Automation', 'Exception Handling', 'Smart Routing', 'Performance Monitoring''
-      "price": 'Starting at $80 0/month'',
-      "r": 'text-blue-40 0''
-      "title": 'AI Cybersecurity'',
-      "n": 'Advanced threat detection and response using AI-powered security monitoring.''
-      "s": ['Threat Detection', 'Automated Response', 'Behavioral Analysis', 'Compliance Reporting''
-      "price": 'Starting at $1,50 0/month''
-      "color": 'text-red-40 0'',
-      "title": 'Data Analytics & Insights'',
-      "n": 'Transform raw data into actionable insights with AI-powered analytics and visualization.''
-      "s": ['Data Processing', 'Predictive Insights', 'Visualization', 'Automated Reports''
-      "price": 'Starting at $90 0/month'',
-      "r": 'text-teal-40 0''
-      "title": 'Customer Experience AI'',
-      "n": 'Enhance customer interactions with AI chatbots, sentiment analysis, and personalized experiences.''
-      "features": ['AI Chatbots', 'Sentiment Analysis', 'Personalization', '24/7 Support''
-      "price": 'Starting at $600/month'',
-      "r": 'text-green-400''
-      "title": 'Proven ROI'',
-      "n": 'Average300% ROI within6months of implementation''
-      "title": 'Rapid Deployment'',
-      "n": 'Get your AI solutions up and running in 2-4 weeks''
-      "title": 'Enterprise Security'',
-      "n": 'Bank-level security and compliance for all AI solutions''
-      "title": 'Global Support'';,
-      "n": '24/7 support across all time zones with dedicated success managers''
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, Star, ArrowRight } from 'lucide-react'
+
+export default function pagetsxPage() {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <Navigation />
+      
+      <main>
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              page
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+              Professional page services to help your business grow
+            </p>
+            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              Get Started
+            </button>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="flex items-center mb-4">
+                  <CheckCircle className="text-green-500 mr-3" size={24} />
+                  <h3 className="text-xl font-semibold">Professional Service</h3>
+                </div>
+                <p>High-quality page solutions tailored to your needs</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="flex items-center mb-4">
+                  <CheckCircle className="text-green-500 mr-3" size={24} />
+                  <h3 className="text-xl font-semibold">Expert Support</h3>
+                </div>
+                <p>24/7 support from our experienced team</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="flex items-center mb-4">
+                  <CheckCircle className="text-green-500 mr-3" size={24} />
+                  <h3 className="text-xl font-semibold">Scalable Solutions</h3>
+                </div>
+                <p>Solutions that grow with your business</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="bg-gray-100 py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
+            <p className="text-xl mb-8">Contact us today to learn more about our page services</p>
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              Contact Us
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
+  )
+}

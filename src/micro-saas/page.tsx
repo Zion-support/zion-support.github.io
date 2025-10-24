@@ -1,69 +1,73 @@
-import { Brain, BarChart } from 'lucide-react''
-import React from 'react''
-import { BookOpen, ShieldCheck, Wifi, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2 } from 'lucide-react''
-import Navigation from '../components/Navigation''
-import Footer from '../components/Footer''
-import { CheckCircle } from 'lucide-react''
-'use client''
-      "title": 'AI-Powered Tools'',
-      "color": 'text-purple-40 0'',
-      "bgColor": 'bg-purple-50 0/2 0'',
-      "e": 'AI Writing Assistant', "price": '$1 9/month', "description": 'AI-powered content creation and editing'',
-        {"name": 'AI Code Generator', "price": '$4 9/month', "description": 'AI-assisted coding and development'',
-        {"name": 'AI Design Studio', "price": '$3 9/month', "description": 'AI-powered graphic design tools'',
-        {"name": 'AI Analytics Dashboard', "price": '$7 9/month', "description": 'Real-time business intelligence'',
-        {"name": 'AI Chatbot Builder', "price": '$2 9/month', "description": 'No-code chatbot creation'',
-        {"name": 'AI SEO Optimizer', "price": '$4 9/month', "description": 'Automated SEO analysis and optimization'',
-    {"title": 'Business Applications'',
-      "color": 'text-blue-40 0'',
-      "bgColor": 'bg-blue-50 0/2 0'',
-      "e": 'AI-Powered CRM', "price": '$4 9/month', "description": 'Intelligent customer relationship management'',
-        {"name": 'AI Invoice Generator', "price": '$1 9/month', "description": 'Automated invoicing and billing'',
-        {"name": 'AI Lead Scoring', "price": '$3 9/month', "description": 'Intelligent lead qualification'',
-        {"name": 'AI Social Media Manager', "price": '$5 9/month', "description": 'Social media automation'',
-        {"name": 'AI Email Marketing', "price": '$5 9/month', "description": 'Automated email campaigns'',
-        {"name": 'AI Financial Planner', "price": '$6 9/month', "description": 'Financial planning and analysis'',
-    {"title": 'Productivity Tools'',
-      "color": 'text-green-40 0'',
-      "bgColor": 'bg-green-50 0/2 0'',
-      "e": 'AI Task Manager Pro', "price": '$2 9/month', "description": 'Intelligent task management'',
-        {"name": 'AI Expense Tracker', "price": '$1 9/month', "description": 'Smart expense management'',
-        {"name": 'AI Scheduler', "price": '$3 9/month', "description": 'Intelligent scheduling'',
-        {"name": 'AI Document Processor', "price": '$4 9/month', "description": 'Intelligent do cument processing'',
-        {"name": 'AI Password Manager', "price": '$9/month', "description": 'Secure password management'',
-        {"name": 'AI Voice Assistant', "price": '$3 9/month', "description": 'Custom voice assistants'',
-    {"title": 'Creative & Media'',
-      "color": 'text-pink-40 0'',
-      "bgColor": 'bg-pink-50 0/2 0'',
-      "e": 'AI Video Creator', "price": '$7 9/month', "description": 'Automated video production'',
-        {"name": 'AI Music Composer', "price": '$4 9/month', "description": 'AI music generation'',
-        {"name": 'AI3D Generator', "price": '$8 9/month', "description": 'AI3D modeling and design'',
-        {"name": 'AI Fashion Design', "price": '$6 9/month', "description": 'AI fashion solutions'',
-        {"name": 'AI Photo Editor', "price": '$2 9/month', "description": 'AI-powered photo editing'',
-        {"name": 'AI Content Studio', "price": '$5 9/month', "description": 'Complete content creation suite'',
-    {"title": 'E-commerce & Marketing'',
-      "color": 'text-orange-40 0'',
-      "bgColor": 'bg-orange-50 0/2 0'',
-      "e": 'AI E-commerce Assistant', "price": '$7 9/month', "description": 'E-commerce optimization'',
-        {"name": 'AI Store Optimizer', "price": '$5 9/month', "description": 'Store performance optimization'',
-        {"name": 'AI Market Research', "price": '$8 9/month', "description": 'Automated market analysis'',
-        {"name": 'AI A/B Testing', "price": '$4 9/month', "description": 'Intelligent testing platform'',
-        {"name": 'AI Growth Hacker', "price": '$9 9/month', "description": 'Automated growth strategies'',
-        {"name": 'AI Website Builder', "price": '$3 9/month', "description": 'AI website creation'',
-    {"title": 'Security & Monitoring'',
-      "color": 'text-red-40 0'',
-      "bgColor": 'bg-red-50 0/2 0'',
-      "e": 'AI Security Monitor', "price": '$9 9/month', "description": 'Real-time security monitoring'',
-        {"name": 'AI Performance Tracker', "price": '$4 9/month', "description": 'Comprehensive performance tracking'',
-        {"name": 'AI Predictive Analytics', "price": '$7 9/month', "description": 'Future outcome predictions'',
-        {"name": 'AI Health Tracker', "price": '$2 9/month', "description": 'Personal health monitoring'',
-        {"name": 'AI Learning Platform', "price": '$5 9/month', "description": 'Personalized learning'',
-        {"name": 'AI Data Pipeline', "price": '$6 9/month', "description": 'Automated data processing'',
-      "title": 'Instant Deployment'',
-      "n": 'Get started in minutes with our ready-to-use applications''
-      "title": 'Proven Results'',
-      "n": 'Average200% productivity increase within 30days''
-      "title": 'Enterprise Security'',
-      "n": 'Bank-level security and compliance for all applications''
-      "title": 'Scalable Solutions'';,
-      "n": 'Grow from startup to enterprise with flexible pricing''
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, Star, ArrowRight } from 'lucide-react'
+
+export default function pagetsxPage() {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <Navigation />
+      
+      <main>
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              page
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+              Professional page services to help your business grow
+            </p>
+            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              Get Started
+            </button>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="flex items-center mb-4">
+                  <CheckCircle className="text-green-500 mr-3" size={24} />
+                  <h3 className="text-xl font-semibold">Professional Service</h3>
+                </div>
+                <p>High-quality page solutions tailored to your needs</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="flex items-center mb-4">
+                  <CheckCircle className="text-green-500 mr-3" size={24} />
+                  <h3 className="text-xl font-semibold">Expert Support</h3>
+                </div>
+                <p>24/7 support from our experienced team</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="flex items-center mb-4">
+                  <CheckCircle className="text-green-500 mr-3" size={24} />
+                  <h3 className="text-xl font-semibold">Scalable Solutions</h3>
+                </div>
+                <p>Solutions that grow with your business</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="bg-gray-100 py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
+            <p className="text-xl mb-8">Contact us today to learn more about our page services</p>
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              Contact Us
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
+  )
+}

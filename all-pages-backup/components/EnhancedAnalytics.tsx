@@ -92,46 +92,46 @@ interface AnalyticsProviderProps {
     identify()
     page()
   }
-'use client''
-import { createContext, useContext, useEffect } from 'react''
-    throw new Error('useAnalytics must be used within an AnalyticsProvider''
-    if (typeof window !== 'undefined''
-      if (process.env.NODE_ENV === 'production''
-    if (typeof window !== 'undefined''
-      if (process.env.NODE_ENV === 'production''
-        const script = document.createElement('script''
-        gtag('js''
-        gtag('config''
-    if (typeof window !== 'undefined''
-        window.gtag('event''
-      if (process.env.NODE_ENV === 'development''
-        console.log('Analytics "Event": '',
-    if (typeof window !== 'undefined''
-        window.gtag('event''
-      console.log('Analytics "Event": '',
-    if (typeof window !== 'undefined''
-        window.gtag('config''
-      if (process.env.NODE_ENV === 'development''
-        console.log('Analytics "Identify": '',
-      console.log('Analytics "Identify": '',
-    if (typeof window !== 'undefined''
-        window.gtag('event', 'page_view''
-      if (process.env.NODE_ENV === 'development''
-        console.log('Analytics "Page": '',
-      console.log('Analytics "Page": '',
-'use client''
-import React from 'react''
-import Navigation from '../components/Navigation''
-import Footer from '../components/Footer''
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react''
-  "benefits": ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis''
-  "benefits": ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics''
-  "benefits": ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics''
-  "benefits": ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization''
-    'Increase efficiency by up to 50%''
-    'Reduce costs by 30% with automation''
-    'Improve decision-making with AI insights''
-    'Scale operations without proportional staff increases''
-    'Gain competitive advantage with advanced technology''
-import Link from 'next/link'';
-import { ArrowRight } from 'lucide-react''
+'use client'
+import { createContext, useContext, useEffect } from 'react'
+    throw new Error('useAnalytics must be used within an AnalyticsProvider'
+    if (typeof window !== 'undefined'
+      if (process.env.NODE_ENV === 'production'
+    if (typeof window !== 'undefined'
+      if (process.env.NODE_ENV === 'production'
+        const script = document.createElement('script'
+        gtag('js'
+        gtag('config'
+    if (typeof window !== 'undefined'
+        window.gtag('event'
+      if (process.env.NODE_ENV === 'development'
+        console.log('Analytics "Event": ',
+    if (typeof window !== 'undefined'
+        window.gtag('event'
+      console.log('Analytics "Event": ',
+    if (typeof window !== 'undefined'
+        window.gtag('config'
+      if (process.env.NODE_ENV === 'development'
+        console.log('Analytics "Identify": ',
+      console.log('Analytics "Identify": ',
+    if (typeof window !== 'undefined'
+        window.gtag('event', 'page_view'
+      if (process.env.NODE_ENV === 'development'
+        console.log('Analytics "Page": ',
+      console.log('Analytics "Page": ',
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+  "benefits": ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'
+  "benefits": ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'
+  "benefits": ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics'
+  "benefits": ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
+    'Gain competitive advantage with advanced technology'
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react'

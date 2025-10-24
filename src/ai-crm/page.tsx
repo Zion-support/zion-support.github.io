@@ -1,76 +1,73 @@
-'use client''
-import { Brain, BarChart, Target, TrendingUp } from 'lucide-react''
-import React from 'react''
-import Navigation from '../components/Navigation''
-import Footer from '../components/Footer''
-import { CheckCircle, Star } from 'lucide-react''
-      "title": 'AI-Powered Lead Scoring'',
-      "n": 'Automatically score and prioritize leads using machine learning algorithms that analyze behavior patterns.''
-      "s": ['Behavioral analysis', 'Predictive scoring', 'Lead prioritization', 'Conversion optimization''
-      "title": 'Intelligent Customer Segmentation'',
-      "n": 'AI automatically segments customers based on behavior, preferences, and value potential.''
-      "benefits": ['Dynamic segmentation', 'Behavioral insights', 'Personalization', 'Targeted campaigns''
-      "title": 'Predictive Sales Forecasting'',
-      "n": 'Accurate sales predictions using AI that analyzes historical data and market trends.''
-      "s": ['Revenue forecasting', 'Pipeline analysis', 'Risk assessment', 'Goal tracking''
-      "title": 'Automated Follow-ups'',
-      "n": 'AI schedules and personalizes follow-up communications based on customer engagement patterns.''
-      "s": ['Smart scheduling', 'Personalized content', 'Engagement tracking', 'Response optimization''
-    {"title": 'Smart Contact Management'',
-      "n": 'AI automatically enriches contact data and maintains up-to-date information.''
-      "stats": '9 5% data accuracy'',
-    {"title": 'Intelligent Email Automation'',
-      "n": 'Send personalized emails at the perfect time with AI-optimized content.''
-      "stats": '4 0% higher open rates'',
-    {"title": 'Advanced Analytics'',
-      "n": 'Comprehensive insights into customer behavior and sales performance.''
-      "stats": 'Real-time insights'',
-    {"title": 'Mobile-First Design'',
-      "n": 'Access your CRM anywhere with our responsive mobile application.''
-      "stats": '100% mobile optimized'',
-    {"name": 'Starter'',
-      "price": '$4 9'',
-      "period": '/$1/month'',
-      "n": 'Perfect for small teams getting started''
-        'Up to 1,000contacts''
-        'Basic AI lead scoring''
-        'Email automation''
-        'Mobile app access''
-        'Standard support''
-        'Basic analytics''
-    {"name": 'Professional'',
-      "price": '$9 9'',
-      "period": '/$1/month'',
-      "n": 'Ideal for growing businesses''
-        'Up to 1 0,000contacts''
-        'Advanced AI features''
-        'Custom workflows''
-        'Advanced analytics''
-        'Priority support''
-        'API access''
-        'Custom fields''
-        'Team collaboration tools''
-    {"name": 'Enterprise'',
-      "price": '$19 9'',
-      "period": '/$1/month'',
-      "description": 'Comprehensive solution for large organizations'',
-        'Unlimited contacts''
-        'Full AI suite''
-        'Custom integrations''
-        'Advanced reporting''
-        '2 4/7 dedicated support''
-        'White-label options''
-        'Custom development''
-        'Dedicated account manager''
-    {"name": 'Sarah Johnson'',
-      "company": 'TechStart Inc.'',
-      "role": 'Sales Director'',
-      "t": 'AI CRM increased our lead conversion by65% and saved us 20hours per week on manual tasks.''
-    {"name": 'Michael Chen'',
-      "company": 'GrowthCorp'',
-      "role": 'VP of Sales'',
-      "t": 'The predictive analytics helped us identify high-value prospects we would have missed otherwise.''
-    {"name": 'Emily Rodriguez'',
-      "company": 'ScaleUp Solutions'',
-      "role": 'Marketing Manager'';,
-      "t": 'Automated follow-ups and personalized content have dramatically improved our customer engagement.''
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, Star, ArrowRight } from 'lucide-react'
+
+export default function pagetsxPage() {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <Navigation />
+      
+      <main>
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              page
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+              Professional page services to help your business grow
+            </p>
+            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              Get Started
+            </button>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="flex items-center mb-4">
+                  <CheckCircle className="text-green-500 mr-3" size={24} />
+                  <h3 className="text-xl font-semibold">Professional Service</h3>
+                </div>
+                <p>High-quality page solutions tailored to your needs</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="flex items-center mb-4">
+                  <CheckCircle className="text-green-500 mr-3" size={24} />
+                  <h3 className="text-xl font-semibold">Expert Support</h3>
+                </div>
+                <p>24/7 support from our experienced team</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="flex items-center mb-4">
+                  <CheckCircle className="text-green-500 mr-3" size={24} />
+                  <h3 className="text-xl font-semibold">Scalable Solutions</h3>
+                </div>
+                <p>Solutions that grow with your business</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="bg-gray-100 py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
+            <p className="text-xl mb-8">Contact us today to learn more about our page services</p>
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              Contact Us
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
+  )
+}

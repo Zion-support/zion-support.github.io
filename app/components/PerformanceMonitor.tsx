@@ -8,11 +8,32 @@ const PerformanceMonitor: React.FC = () => {
         const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
         
         if (typeof window !== 'undefined') {
-          getCLS(console.log);
-          getFID(console.log);
-          getFCP(console.log);
-          getLCP(console.log);
-          getTTFB(console.log);
+          getCLS((metric) => {
+            // Log performance metrics in development
+            if (process.env.NODE_ENV === 'development') {
+              console.log('CLS:', metric);
+            }
+          });
+          getFID((metric) => {
+            if (process.env.NODE_ENV === 'development') {
+              console.log('FID:', metric);
+            }
+          });
+          getFCP((metric) => {
+            if (process.env.NODE_ENV === 'development') {
+              console.log('FCP:', metric);
+            }
+          });
+          getLCP((metric) => {
+            if (process.env.NODE_ENV === 'development') {
+              console.log('LCP:', metric);
+            }
+          });
+          getTTFB((metric) => {
+            if (process.env.NODE_ENV === 'development') {
+              console.log('TTFB:', metric);
+            }
+          });
         }
       } catch (error) {
         if (process.env.NODE_ENV === 'development') {

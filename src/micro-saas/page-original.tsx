@@ -1,4 +1,15 @@
-import React from 'react''
-import { CheckCircle, Phone, Mail, TrendingUp, Helmet } from 'lucide-react''
-import { MapPin } from 'lucide-react'';
-    { "name": 'Game Development', "count": microSAASServices.filter(s => s.category === 'Game Development''
+import React from 'react'
+
+interface pageoriginaltsxProps {
+  className?: string
+}
+
+const pageoriginaltsx: React.FC<pageoriginaltsxProps> = ({ className = '' }) => {
+  return (
+    <div className={`pageoriginaltsx ${className}`}>
+      {/* pageoriginaltsx component content */}
+    </div>
+  )
+}
+
+export default pageoriginaltsx

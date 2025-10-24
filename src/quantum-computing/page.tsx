@@ -1,29 +1,73 @@
-import { Brain } from 'lucide-react''
-import React from 'react''
-import { Atom, Lock } from 'lucide-react''
-import { CheckCircle, Star, Brain, Shield } from 'lucide-react''
-'use client''
-    '"id": 'quantum-algorithms''',
-    '"title": 'Quantum Algorithm Development''',
-    '"description": 'Custom quantum algorithms designed to solve your specific computational challenges.''',
-    '"features": ['Custom algorithm design', 'Quantum circuit optimization', 'Performance benchmarking', 'Implementation support'''
-      "benefits": ['Exponential speedup', 'Complex problem solving', 'Competitive advantage', 'Future-proof technology''
-      "marketPrice": '$5,00 0-1 5,00 0/month''
-      "category": 'Algorithm Development'',
-      "s": ['Qiskit', 'Cirq', 'Q#', 'PennyLane', 'Quantum Hardware''
-    {"id": 'quantum-cryptography'',
-      "title": 'Quantum Cryptography Solutions'',
-      "n": 'Ultra-secure communication systems using quantum key distribution and quantum encryption.''
-      "s": ['Quantum key distribution', 'Quantum encryption', 'Security protocols', 'Implementation support''
-      "benefits": ['Unbreakable security', 'Future-proof encryption', 'Regulatory compliance', 'Peace of mind''
-      "marketPrice": '$8,00 0-2 0,00 0/month''
-      "category": 'Security Solutions'',
-      "s": ['BB84Protocol', 'Quantum Networks', 'Hardware Integration', 'Security Auditing''
-    {"id": 'quantum-optimization'',
-      "title": 'Quantum Optimization Services'',
-      "n": 'Solve complex optimization problems using quantum annealing and variational algorithms.''
-      "s": ['Problem modeling', 'Quantum annealing', 'Variational algorithms', 'Performance analysis''
-      "benefits": ['Optimal solutions', 'Faster convergence', 'Cost reduction', 'Improved efficiency''
-      "marketPrice": '$3,00 0-1 0,00 0/month''
-      "category": 'Optimization'';,
-      "s": ['D-Wave', 'IBM Qiskit', 'Rigetti', 'IonQ', 'Custom Algorithms''
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, Star, ArrowRight } from 'lucide-react'
+
+export default function pagetsxPage() {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <Navigation />
+      
+      <main>
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              page
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+              Professional page services to help your business grow
+            </p>
+            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              Get Started
+            </button>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="flex items-center mb-4">
+                  <CheckCircle className="text-green-500 mr-3" size={24} />
+                  <h3 className="text-xl font-semibold">Professional Service</h3>
+                </div>
+                <p>High-quality page solutions tailored to your needs</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="flex items-center mb-4">
+                  <CheckCircle className="text-green-500 mr-3" size={24} />
+                  <h3 className="text-xl font-semibold">Expert Support</h3>
+                </div>
+                <p>24/7 support from our experienced team</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="flex items-center mb-4">
+                  <CheckCircle className="text-green-500 mr-3" size={24} />
+                  <h3 className="text-xl font-semibold">Scalable Solutions</h3>
+                </div>
+                <p>Solutions that grow with your business</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="bg-gray-100 py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
+            <p className="text-xl mb-8">Contact us today to learn more about our page services</p>
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              Contact Us
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
+  )
+}
