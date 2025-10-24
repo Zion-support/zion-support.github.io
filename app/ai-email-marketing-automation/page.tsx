@@ -33,4 +33,5 @@ export default function AiEmailMarketingAutomationPage() {
   );
 };
 
-export default AIEmailMarketingAutomationPage;
+
+export default AiEmailMarketingAutomationPage;

@@ -33,4 +33,5 @@ export default function AiVoiceAssistantPage() {
   );
 };
 
-export default AIVoiceAssistantPage;
+
+export default AiVoiceAssistantPage;

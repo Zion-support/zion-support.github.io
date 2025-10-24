@@ -33,4 +33,5 @@ export default function AiVideoEditorPage() {
   );
 };
 
-export default AIVideoEditorPage;
+
+export default AiVideoEditorPage;

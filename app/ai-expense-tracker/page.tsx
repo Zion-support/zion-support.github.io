@@ -33,4 +33,5 @@ export default function AiExpenseTrackerPage() {
   );
 };
 
-export default AIExpenseTrackerPage;
+
+export default AiExpenseTrackerPage;

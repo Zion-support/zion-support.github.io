@@ -33,4 +33,5 @@ export default function AiInvoiceGeneratorPage() {
   );
 };
 
-export default AIInvoiceGeneratorPage;
+
+export default AiInvoiceGeneratorPage;

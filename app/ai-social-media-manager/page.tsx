@@ -33,4 +33,5 @@ export default function AiSocialMediaManagerPage() {
   );
 };
 
-export default AISocialMediaManagerPage;
+
+export default AiSocialMediaManagerPage;
