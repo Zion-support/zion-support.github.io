@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
 interface UserExperienceEnhancerProps {
-  children: React.ReactNode
-  enableAnimations?: boolean
-  enableHoverEffects?: boolean
-  enableFocusManagement?: boolean
-  enableKeyboardNavigation?: boolean
-  enableAccessibility?: boolean
+  children: React.ReactNode;
+  enableAnimations?: boolean;
+  enableHoverEffects?: boolean;
+  enableFocusManagement?: boolean;
+  enableKeyboardNavigation?: boolean;
+  enableAccessibility?: boolean;
 }
 
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
@@ -17,28 +17,28 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
   enableKeyboardNavigation = true,
   enableAccessibility = true,
 }) => {
-  const [isReducedMotion, setIsReducedMotion] = useState(false)
-  const [isHighContrast, setIsHighContrast] = useState(false)
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
+  const [isHighContrast, setIsHighContrast] = useState(false);
 
   useEffect(() => {
     // Check for user's motion preferences
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
-    setIsReducedMotion(mediaQuery.matches)
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setIsReducedMotion(mediaQuery.matches);
 
     // Check for high contrast preference
-    const highContrastQuery = window.matchMedia('(prefers-contrast: high)')
-    setIsHighContrast(highContrastQuery.matches)
+    const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
+    setIsHighContrast(highContrastQuery.matches);
 
     // Apply accessibility enhancements
     if (enableAccessibility) {
-      document.documentElement.setAttribute('data-accessibility-enhanced', 'true')
+      document.documentElement.setAttribute('data-accessibility-enhanced', 'true');
       
       if (isHighContrast) {
-        document.documentElement.classList.add('high-contrast')
+        document.documentElement.classList.add('high-contrast');
       }
       
       if (isReducedMotion) {
-        document.documentElement.classList.add('reduced-motion')
+        document.documentElement.classList.add('reduced-motion');
       }
     }
 
@@ -46,27 +46,27 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
     if (enableKeyboardNavigation) {
       const handleKeyDown = (event: KeyboardEvent) => {
         if (event.key === 'Tab') {
-          document.body.classList.add('keyboard-navigation')
+          document.body.classList.add('keyboard-navigation');
         }
-      }
+      };
 
       const handleMouseDown = () => {
-        document.body.classList.remove('keyboard-navigation')
-      }
+        document.body.classList.remove('keyboard-navigation');
+      };
 
-      document.addEventListener('keydown', handleKeyDown)
-      document.addEventListener('mousedown', handleMouseDown)
+      document.addEventListener('keydown', handleKeyDown);
+      document.addEventListener('mousedown', handleMouseDown);
 
       return () => {
-        document.removeEventListener('keydown', handleKeyDown)
-        document.removeEventListener('mousedown', handleMouseDown)
-      }
+        document.removeEventListener('keydown', handleKeyDown);
+        document.removeEventListener('mousedown', handleMouseDown);
+      };
     }
-  }, [enableAccessibility, enableKeyboardNavigation, isHighContrast, isReducedMotion])
+  }, [enableAccessibility, enableKeyboardNavigation, isHighContrast, isReducedMotion]);
 
   // Add CSS classes for enhanced UX
   useEffect(() => {
-    const style = document.createElement('style')
+    const style = document.createElement('style');
     style.textContent = `
       .ux-enhanced {
         ${enableAnimations && !isReducedMotion ? 'transition: all 0.3s ease;' : ''}
@@ -98,19 +98,19 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
       }
-    `
-    document.head.appendChild(style)
+    `;
+    document.head.appendChild(style);
 
     return () => {
-      document.head.removeChild(style)
-    }
-  }, [enableAnimations, enableHoverEffects, enableFocusManagement, enableKeyboardNavigation, isReducedMotion])
+      document.head.removeChild(style);
+    };
+  }, [enableAnimations, enableHoverEffects, enableFocusManagement, enableKeyboardNavigation, isReducedMotion]);
 
   return (
     <div className="ux-enhanced">
       {children}
     </div>
-  )
-}
+  );
+};
 
 export default UserExperienceEnhancer;

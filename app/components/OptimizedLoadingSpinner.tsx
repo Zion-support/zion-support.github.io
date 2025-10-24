@@ -2,12 +2,12 @@
 import React from 'react'
 
 interface OptimizedLoadingSpinnerProps {
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-  variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars'
-  text?: string
-  className?: string
-  color?: 'blue' | 'gray' | 'green' | 'red' | 'purple'
-  fullScreen?: boolean
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+  variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';
+  text?: string;
+  className?: string;
+  color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
+  fullScreen?: boolean;
 }
 
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({
@@ -24,7 +24,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({
     md: 'h-6 w-6',
     lg: 'h-8 w-8',
     xl: 'h-12 w-12'
-  }
+  };
 
   const colorClasses = {
     blue: 'border-blue-500',
@@ -32,7 +32,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({
     green: 'border-green-500',
     red: 'border-red-500',
     purple: 'border-purple-500'
-  }
+  };
 
   const renderSpinner = () => {
     switch (variant) {
@@ -47,12 +47,12 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({
               />
             ))}
           </div>
-        )
+        );
 
       case 'pulse':
         return (
           <div className={`${sizeClasses[size]} bg-current rounded-full animate-pulse`} />
-        )
+        );
 
       case 'skeleton':
         return (
@@ -67,7 +67,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({
               style={{ width: '50%' }}
             />
           </div>
-        )
+        );
 
       case 'bars':
         return (
@@ -83,7 +83,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({
               />
             ))}
           </div>
-        )
+        );
 
       default: // spinner
         return (
@@ -92,9 +92,9 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({
             role="status"
             aria-label="Loading"
           />
-        )
+        );
     }
-  }
+  };
 
   const content = (
     <div className={`flex flex-col items-center justify-center ${className}`}>
@@ -107,17 +107,17 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({
         </p>
       )}
     </div>
-  )
+  );
 
   if (fullScreen) {
     return (
       <div className="fixed inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center z-50">
         {content}
       </div>
-    )
+    );
   }
 
-  return content
-}
+  return content;
+};
 
-export default OptimizedLoadingSpinner
+export default OptimizedLoadingSpinner;

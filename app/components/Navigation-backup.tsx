@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { X, Menu } from 'lucide-react';
 
 interface NavigationBackupProps {
-  logo?: string
-  logoText?: string
+  logo?: string;
+  logoText?: string;
   menuItems?: Array<{
-    label: string
-    href: string
+    label: string;
+    href: string;
     submenu?: Array<{
-      label: string
-      href: string
-    }>
-  }>
-  ctaText?: string
-  ctaHref?: string
+      label: string;
+      href: string;
+    }>;
+  }>;
+  ctaText?: string;
+  ctaHref?: string;
 }
 
 const NavigationBackup: React.FC<NavigationBackupProps> = ({
@@ -28,16 +28,16 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
   ctaText = 'Get Started',
   ctaHref = '/contact',
 }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   const _toggleSubmenu = (label: string) => {
-    setActiveSubmenu(activeSubmenu === label ? null : label)
-  }
+    setActiveSubmenu(activeSubmenu === label ? null : label);
+  };
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
@@ -142,7 +142,7 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
         )}
       </div>
     </nav>
-  )
-}
+  );
+};
 
 export default NavigationBackup;

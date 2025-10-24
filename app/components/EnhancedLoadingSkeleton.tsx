@@ -1,11 +1,11 @@
 import React from 'react';
 
 interface EnhancedLoadingSkeletonProps {
-  lines?: number
-  showAvatar?: boolean
-  showImage?: boolean
-  height?: string
-  className?: string
+  lines?: number;
+  showAvatar?: boolean;
+  showImage?: boolean;
+  height?: string;
+  className?: string;
 }
 
 const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
@@ -44,7 +44,7 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default EnhancedLoadingSkeleton;

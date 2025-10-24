@@ -1,10 +1,10 @@
 import React from 'react';
 
 interface ServiceCardSkeletonProps {
-  showImage?: boolean
-  showButton?: boolean
-  lines?: number
-  className?: string
+  showImage?: boolean;
+  showButton?: boolean;
+  lines?: number;
+  className?: string;
 }
 
 const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({
@@ -43,7 +43,7 @@ const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({
         <div className="h-10 bg-gray-300 rounded w-full"></div>
       )}
     </div>
-  )
-}
+  );
+};
 
 export default ServiceCardSkeleton;
