@@ -105,7 +105,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       description: 'Track sales metrics and forecast revenue',
       icon: '🎯',
     }
-  ],
+  ];
 
   return (
     <>
