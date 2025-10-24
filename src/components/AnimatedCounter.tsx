@@ -1,30 +1,25 @@
-import, React, { useEffect, useState, useRef } from "react"
+import, React, { useEffect, useState, useRef } from "react
 import { useIntersectionObserver  } from "../hooks/useIntersectionObserver";
-interface AnimatedCounterProps {
-  className?: string;
-  children?: React.ReactNode;
+interface AnimatedCounterProps { className?: string;
+  children?: React.ReactNode; }
 }
 
-const AnimatedCounter: "React.FC<AnimatedCounterProps> = ({
-  className?: string
+const AnimatedCounter: "React.FC<AnimatedCounterProps> = ({ className?: string" }
 "}
 </AnimatedCounterProps>
-const AnimatedCounter: "React.FC<AnimatedCounterProps> = ({
-end
+const AnimatedCounter: "React.FC<AnimatedCounterProps> = ({ end
 duration = 2000
-suffix = ""
-prefix = """,className=""
-}) => {
-const [count, setCount ] = useState(0)
+suffix = 
+prefix = "",className=" }
+}) => { const [count, setCount ] = useState(0)
   const [isVisible, setIsVisible ] = useState(false)
   const [setNode, entry ] = useIntersectionObserver({)
-    threshold: "0.5)
+    threshold: "0.5)" }
   "})
-useEffect(() => {
-if(entry?.isIntersecting && !isVisible) {  
-setIsVisible(true)
+useEffect(() => { if(entry?.isIntersecting && !isVisible) {  
+setIsVisible(true) }
   }, [entry, isVisible ])
-useEffect(() => {
+useEffect(() => { 
 if (!isVisible) return let startTime: "number
 let animationFrame: number
 const animate = () => {
@@ -37,40 +32,40 @@ setCount(currentCount)
 </AnimatedCounterProps>
 if(progress < 1) {  
 animationFrame = requestAnimationFrame(animate)
-      ) => {
+      ) => { }
 import, React, { useEffect, useState, useRef } from 'react'
-import { useIntersectionObserver } from from '../hooks/useIntersectionObserver'
-interface AnimatedCounterProps {;
+import { useIntersectionObserver } from from '../hooks/useIntersectionObserver';
+interface AnimatedCounterProps { ;
 :all-pages-backup/components/AnimatedCounter.tsx;
-className?: string;
+className?: string; }
 }
 }
 }
-const AnimatedCounter: "React.FC<AnimatedCounterProps> = ({;"
-  className?: string"
-"}"
-</AnimatedCounterProps>"
-const AnimatedCounter: "React.FC<AnimatedCounterProps> = ({;
+const AnimatedCounter: "React.FC<AnimatedCounterProps> = ({ ;
+  className?: string" }
+"}
+</AnimatedCounterProps>
+const AnimatedCounter: "React.FC<AnimatedCounterProps> = ({ ;
 end;
-duration = 2000;'"
-suffix = ''";'"
-prefix = ''",className = '');
-}) => {;
+duration = 2000;'
+suffix = ''";'
+prefix = ''",className = ''); }
+}) => { ;
 const [count, setCount] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);"
-  const [setNode, entry] = useIntersectionObserver({)"
-    threshold: "0.5)"
+  const [isVisible, setIsVisible] = useState(false);
+  const [setNode, entry] = useIntersectionObserver({)
+    threshold: "0.5)" }
   "});
-useEffect(() => {;
+useEffect(() => { ;
 if(entry?.isIntersecting && !isVisible) {;
-setIsVisible(true);
+setIsVisible(true); }
     }
-  }, [entry, isVisible]);"
-useEffect(() => {"
+  }, [entry, isVisible]);
+useEffect(() => { 
 if (!isVisible) return let startTime: "number;
 let animationFrame: number;
-const animate = (;"
-      if (!startTime) startTime = currentTime"
+const animate = (;
+      if (!startTime) startTime = currentTime
 const progress = Math.min((currentTime - startTime) / duration",1);
       // Easing function for smooth animation;
 const easeOutQuart = 1 - Math.pow(1 - progress, 4);
@@ -80,29 +75,27 @@ setCount(currentCount);
 if(progress < 1) {;
 animationFrame = requestAnimationFrame(animate);
       ) => {;
-$3;
+$3; }
 ,}
     }
 animationFrame = requestAnimationFrame(animate);
-    return () => {;
+    return () => { ;
 if(animationFrame) {;
-cancelAnimationFrame(animationFrame);
+cancelAnimationFrame(animationFrame); }
       ,}
     }
   }, [isVisible, end, duration]);
 return(<spanref = {setNode} className={className} />);
       {prefix}{count.toLocaleString()}{suffix}</span>
     </span>
-  )}"
-export default AnimatedCounter}";'"
-
+  )}
+export default AnimatedCounter}";'
 ,}
     }
 
 animationFrame = requestAnimationFrame(animate)
-    return () => {
-if(animationFrame) {  
-cancelAnimationFrame(animationFrame)
+    return () => { if(animationFrame) {  
+cancelAnimationFrame(animationFrame) }
       ,}
     }
   }, [isVisible, end, duration,])

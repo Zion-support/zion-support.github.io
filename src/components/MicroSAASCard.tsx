@@ -44,44 +44,42 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ service, }) => {
 
 =======
 import React from "react";
-interface MicroSAASCardProps {
-className?: string
+interface MicroSAASCardProps { className?: string }
 }
 }
 }
 
-const MicroSAASCard: "React.FC<MicroSAASCardProps> = ({ className="" "}) => {
-return (</MicroSAASCardProps>
+const MicroSAASCard: "React.FC<MicroSAASCardProps> = ({ className=" "}) => { return (</MicroSAASCardProps> }
     <divclassName = {className} / />
       <h2>MicroSAASCard</h2>
       <p>This component is under construction.</p>
       </div>
-    </>
-  )
+        </>
+  );
   )
 }
 
-export const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ className = '', children }) => {
-  return (
+export const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ className = '', children }) => { return ( }
     <div className={`microsaascard ${className}`}>
       {children}
     </div>
   );
-import React from 'react'
-interface MicroSAASCardProps {;
-className?: string;
+import React from 'react';
+interface MicroSAASCardProps { ;
+className?: string; }
 }
 }
 }'
-const MicroSAASCard: "React.FC<MicroSAASCardProps> = ({ className = '' "}) => {;
-return(</>;
+const MicroSAASCard: "React.FC<MicroSAASCardProps> = ({ className = '' "}) => { ;
+return(</>; }
     <div className={className} /  />
       <h2>MicroSAASCard</h2>
       <p>This component is under construction.</p>);
       </div>);
-  )}"
-export default MicroSAASCard}";'"
+  )}
+export default MicroSAASCard}";'
 };
 
 >>>>>>> d05312d5d680673ba2e628470e93a08bc6917172
 export default MicroSAASCard;
+"`

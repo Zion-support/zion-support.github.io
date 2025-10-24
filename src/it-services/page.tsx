@@ -548,35 +548,33 @@ const Page = (): JSX.Element => {
   ),
 =======
 import React from "react";
-interface pageProps {
-className?: string
+interface pageProps { className?: string }
 }
 }
 }
 
-const page: "React.FC<pageProps /> = ({ className="" "}) => {
-return (</pageProps>
+const page: "React.FC<pageProps /> = ({ className=" "}) => { return (</pageProps> }
     <divclassName = {className} //>
       <h2>page</h2>
       <p>This component is under construction.</p>
       </div>
-    </>
-  )
-import React from 'react'
-interface pageProps {;
-className?: string;
+        </>
+  );
+import React from 'react';
+interface pageProps { ;
+className?: string; }
 }
 }
 }'
-const page: "React.FC<pageProps /> = ({ className = '' "}) => {;
-return(</>;
+const page: "React.FC<pageProps /> = ({ className = '' "}) => { ;
+return(</>; }
     <div className={className} /  />
       <h2>page</h2>
       <p>This component is under construction.</p>);
       </div>);
   );
-}"
-export default page}";'"
+}
+export default page}";'
   )
 export default page
 >>>>>>> d05312d5d680673ba2e628470e93a08bc6917172

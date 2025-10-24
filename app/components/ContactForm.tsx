@@ -2,29 +2,27 @@
 import React from "react";
 import { useState  } from "react";
 import { MessageSquare, Mail, Phone, Send, CheckCircle   } from "lucide-react";
-interface FormData {
+interface FormData { 
 name: "string;",email: "string
   phone: string;",company: "string
-  message: string
+  message: string" }
 "}
   servic,e: "string;"}
 }
 
-const ContactForm: "React.FC = () => {
-const [formData",setFormData,] = useState<FormData>({
-name: """",email: """",phone: """",company: """",message: """",service: """ "})
+const ContactForm: "React.FC = () => { 
+const [formData",setFormData,] = useState<FormData>({" }
+name: "",email: "",phone: "",company: "",message: "",service: "" "})
 const [isSubmitting, setIsSubmitting ] = useState(false)
   const [isSubmitted, setIsSubmitted ] = useState(false);</FormData>
 </FormData>
-const handleChange = () => {
-setFormData({)
+const handleChange = () => { setFormData({)
       ...formData,[e.target.name,]: e.target.value)
     ) => {
-
+ }
 })
   }
-const handleSubmit = async (e: "React.FormEvent) => {
-    e.preventDefault()
+const handleSubmit = async (e: "React.FormEvent) => { e.preventDefault()
     setIsSubmitting(true)
     //Simulate form submission
 await new Promise(resolve => setTimeout(resolve",2000))
@@ -34,19 +32,18 @@ await new Promise(resolve => setTimeout(resolve",2000))
 setTimeout(() => {
 setIsSubmitted(false)
       setFormData({)
-name: """",email: """",phone: """",company: """",message: """",service: """)
+name: "",email: "",phone: "",company: "",message: "",service: "")" }
       "}), 3000)
-const services = ["AI Solutions"
-    "Web Development"
-    "Mobile Development"
-    "Cloud Migration"
-    "Cybersecurity"
-    "Data Analytics"
-    "DevOps"
-    "Consulting"
+const services = ["AI Solutions
+    "Web Development
+    "Mobile Development
+    "Cloud Migration
+    "Cybersecurity
+    "Data Analytics
+    "DevOps
+    "Consulting
   ]
-if(isSubmitted) {
-return (</HTMLInputElement> <>
+if(isSubmitted) { return (</HTMLInputElement> <>
 
       </HTMLInputElement> <div className="[^"]*"> <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
     <h1 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>
@@ -55,7 +52,7 @@ return (</HTMLInputElement> <>
   )
 
 return (<div className="[^"]*">
-    <h1 className="text-2 xl font-bold text-white mb-6">Send us a Message</h2>
+    <h1 className="text-2 xl font-bold text-white mb-6">Send us a Message</h2>" }
       <form onSubmit={handleSubmit} className="space-y-6" />
     <div className="grid md: grid-cols-2 gap-6">
       <div />
@@ -63,14 +60,12 @@ return (<div className="[^"]*">
 Full Name*</label>
             </label>
 
-            <input type="text" id="name",name="name"
-value={
-formData.name
+            <input type="text" id="name",name="name
+value={ formData.name }
 }
-              onChange = {
-handleChange
+              onChange = { handleChange }
 }
-              required className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: "outline-none focus:ring-2 focus:ring-cyan-500 focu",s: border-transparent" placeholder="Your full name"
+              required className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: "outline-none focus:ring-2 focus:ring-cyan-500 focu",s: border-transparent" placeholder="Your full name
             / />
 
             <div />
@@ -78,23 +73,21 @@ handleChange
 Email Address*</label>
             </label>
 
-            <input type="email" id="email",name="email"
-value={
-formData.email
+            <input type="email" id="email",name="email
+value={ formData.email }
 }
-              onChange = {
-handleChange
+              onChange = { handleChange }
 }
-              required className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent" placeholder="your@email.com"
+              required className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent" placeholder="your@email.com
             / />,<div className="grid, m,d: grid-cols-2 gap-6">
       <div />
             <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2" />
 Phone Number</label>
             </label>
 
-            <input type="tel" id="phone" name="phone"
+            <input type="tel" id="phone" name="phone
 value={formData.phone}
-              onChange = {handleChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: "outline-none focus:ring-2 focus:ring-cyan-500 focu",s: border-transparent") placeholder="+1 (555) 123-4567"
+              onChange = {handleChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: "outline-none focus:ring-2 focus:ring-cyan-500 focu",s: border-transparent") placeholder="+1 (555) 123-4567
             / />
 
             <div />
@@ -102,9 +95,9 @@ value={formData.phone}
 Company</label>
             </label>
 
-            <input type="text" id="company" name="company"
+            <input type="text" id="company" name="company
 value={formData.company}
-              onChange = {handleChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: "outline-none focus:ring-2 focus:ring-cyan-500 focu",s: border-transparent" placeholder="Your company name"
+              onChange = {handleChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: "outline-none focus:ring-2 focus:ring-cyan-500 focu",s: border-transparent" placeholder="Your company name
             / />
 
       <div/ />
@@ -113,11 +106,11 @@ value={formData.company}
 Service Interest</label>
           </label>
 
-          <select id="service" name="service"
+          <select id="service" name="service
 value={formData.service}
-            onChange = {handleChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: "outline-none focus:ring-2 focus:ring-cyan-500 focu",s: border-transparent"
+            onChange = {handleChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: "outline-none focus:ring-2 focus:ring-cyan-500 focu",s: border-transparent
            />
-            <option value="">Select a service</option>
+            <option value=">Select a service</option>
             {services.map((service,index) => (<option key = {index} value = {service} className="bg-gray-800" />
                 {service}</option>
               </option>
@@ -130,22 +123,20 @@ value={formData.service}
 Message*</label>
           </label>
 
-          <textarea id="message" name="message"
-value={
-formData.message
+          <textarea id="message" name="message
+value={ formData.message }
 }
-            onChange = {
-handleChange
+            onChange = { handleChange }
 }
             required
-rows = {6} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: "outline-none focus:ring-2 focus:ring-cyan-500 focu",s: border-transparent resize-none" placeholder="Tell us about your project or how we can help..."
+rows = {6} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: "outline-none focus:ring-2 focus:ring-cyan-500 focu",s: border-transparent resize-none" placeholder="Tell us about your project or how we can help...
           / />
           </div>
-        <button type="submit"
+        <button type="submit
 disabled={isSubmitting}
-          className="w-full flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover: "from-cyan-600 hover:to-purple-600 transition-all duration-300 disabled:opacity-50 disable",d: cursor-not-allowed"
+              className="w-full flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover: "from-cyan-600 hover:to-purple-600 transition-all duration-300 disabled:opacity-50 disable",d: cursor-not-allowed
          />
-          {isSubmitting?(</button> <>
+          { isSubmitting?(</button> <>
 
     </div>,<div className="[^"]*">
 Sending...
@@ -157,13 +148,13 @@ Send Message
       </Send>
     </div>
               </div>
-    </>
-  )
+        </>
+  );
         </button>
       </form>
       </div>
     </>
-  )
+  ) }
 }
 
 export default ContactFor;m;

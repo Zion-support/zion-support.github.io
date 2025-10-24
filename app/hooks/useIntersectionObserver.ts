@@ -1,14 +1,11 @@
 import { useEffect, useState, useRef   } from "react";
-interface UseIntersectionObserverOptions {
-
-threshold?: number
+interface UseIntersectionObserverOptions { threshold?: number
   root?: Element|null
-  rootMargin?: string
+  rootMargin?: string }
 }
 }
 
-export const useIntersectionObserver = () => {
-const [entry, setEntry ] = useState<IntersectionObserverEntry|null>(null)
+export const useIntersectionObserver = () => { const [entry, setEntry ] = useState<IntersectionObserverEntry|null>(null)
   const [node, setNode ] = useState<Element|null>(null)
   const observer = useRef<IntersectionObserver|null>(null)
 
@@ -29,7 +26,7 @@ observer.current.disconnect()
 
 interface UseIntersectionObserverOptions {
 threshold?: number
-  root?: Element | null
+  root?: Element | null }
   rootMargin?: string}
 }
     }

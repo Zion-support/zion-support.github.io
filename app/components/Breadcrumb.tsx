@@ -8,12 +8,11 @@ interface BreadcrumbItem {
   icon?: React.ComponentType<{ className?: string }>
 }
 
-const Breadcrumb: React.FC = () => {
-  const pathname = usePathname();
+const Breadcrumb: React.FC = () => { const pathname = usePathname();
   const pathnames = pathname.split("/").filter((x) => x);
   
   if (pathnames.length === 0) {
-    return null;
+    return null; }
   }
 
   const pathSegments = location.pathname.split('/').filter(segment => segment !== '')
@@ -37,7 +36,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ className = '' }) => {
               Home
             </Link>
           </li>
-          {pathnames.map((name, index) => {
+          { pathnames.map((name, index) => {" }
             const routeTo = `/${pathnames.slice(0, index + 1).join("/")}`;
             const isLast = index === pathnames.length - 1;
             return (
@@ -45,8 +44,8 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ className = '' }) => {
                 <svg className="flex-shrink-0 h-4 w-4 text-gray-400 mx-2" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                 </svg>
-                {isLast ? (
-                  <span className="text-white font-medium">
+                { isLast ? (
+                  <span className="text-white font-medium">" }
                     {name.charAt(0).toUpperCase() + name.slice(1).replace(/-/g, " ")}
                   </span>
                 ) : (
@@ -64,3 +63,4 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ className = '' }) => {
 };
 
 export default Breadcrumb;
+"`
