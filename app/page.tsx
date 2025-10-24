@@ -1,5 +1,7 @@
 'use client'
 import React from 'react'
+
+export const dynamic = 'force-dynamic'
 import { HelmetProvider } from 'react-helmet-async'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'

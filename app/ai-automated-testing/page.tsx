@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
-const PagePage: React.FC = () => {
+const AiAutomatedTestingPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -47,7 +47,7 @@ const PagePage: React.FC = () => {
         <title>
           Ai Automated Testing - Zion Tech Group | Advanced AI and IT Solutions
         </title>
-        <meta name="description" content="Advanced Page solution for modern businesses." />
+        <meta name="description" content="Advanced Ai Automated Testing solution for modern businesses." />
         <meta name="keywords" content="AI, artificial intelligence, Page, AI solutions, intelligent automation" />
       </Helmet>
       <Navigation />
@@ -57,7 +57,7 @@ const PagePage: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Page
+              Ai Automated Testing
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced Page solution for modern businesses.
@@ -146,4 +146,4 @@ const PagePage: React.FC = () => {
   );
 };
 
-export default PagePage;
+export default AiAutomatedTestingPage;

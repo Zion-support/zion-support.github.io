@@ -1,11 +1,13 @@
 'use client'
 import React from 'react'
+
+export const dynamic = 'force-dynamic'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
-const PagePage: React.FC = () => {
+const AboutPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -55,7 +57,7 @@ const PagePage: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Page
+              About Us
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Learn about Zion Tech Group's mission, values, and team. We're passionate about AI and IT solutions that transform businesses.
@@ -144,4 +146,4 @@ const PagePage: React.FC = () => {
   );
 };
 
-export default PagePage;
+export default AboutPage;
