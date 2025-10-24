@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1c3bcb5bf864
 import React from &quot;react&quot
 import { Helmet } from &quot;react-helmet-async&quot
 &quot;use client&quot
@@ -55,6 +58,7 @@ const ImageOptimizerPage: React.FC = () => {
   )
 }
 export default ImageOptimizerPage
+<<<<<<< HEAD
 export default ImageOptimizerPage
 =======
 <<<<<<< HEAD
@@ -205,3 +209,6 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
 export default ImageOptimizer;
 >>>>>>> cursor/analyze-improve-and-deploy-application-a84d
 >>>>>>> main
+=======
+export default ImageOptimizerPage
+>>>>>>> 1c3bcb5bf864

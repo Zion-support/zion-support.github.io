@@ -6,6 +6,7 @@ interface LogLevel {
   DEBUG: 'debug';
 }
 
+<<<<<<< HEAD
 const LOG_LEVELS: LogLevel = {
   ERROR: 'error';
   WARN: 'warn';
@@ -121,3 +122,7 @@ class Logger {
 // Export singleton instance
 export const logger = new Logger();
 export default logger;
+=======
+export {}
+}
+>>>>>>> 1c3bcb5bf864

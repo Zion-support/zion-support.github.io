@@ -6,6 +6,7 @@ import React, { useEffect } from 'react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-e66e
 
 interface StructuredDataProps {
+<<<<<<< HEAD
   type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'LocalBusiness' | 'BreadcrumbList';
 }
 
@@ -183,5 +184,20 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type }) => {
 
   return null;
 };
+=======
+  // Add props here
 
-export default StructuredData;
+
+const StructuredData: React.FC<StructuredDataProps> = (_props) => {
+  return (
+    <div>
+      {/* Component content */
+    </div>
+  )
+}
+>>>>>>> 1c3bcb5bf864
+
+}
+
+export default StructuredData
+}

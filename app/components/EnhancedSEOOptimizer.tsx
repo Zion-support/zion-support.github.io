@@ -1,4 +1,27 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+'use client';
+import React from 'react'
+
+interface EnhancedSEOOptimizerProps {
+  // Add props here
+
+
+const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = (_props) => {
+  return (
+    <div>
+      {/* Component content */
+    </div>
+  )
+}
+
+}
+
+export default EnhancedSEOOptimizer
+}
+=======
+>>>>>>> 1c3bcb5bf864
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -45,6 +68,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
             <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
             </div>
           </div>
+<<<<<<< HEAD
 =======
 "use client";
 import React from 'react';
@@ -60,3 +84,6 @@ const EnhancedSEOOptimizer = () => {
 
 export default EnhancedSEOOptimizer;
 >>>>>>> main
+=======
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
+>>>>>>> 1c3bcb5bf864

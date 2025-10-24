@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 export const useIntersectionObserver = () => {
   // Add hook logic here
+<<<<<<< HEAD
   return {};
 };
 =======
@@ -65,3 +66,8 @@ export function useIntersectionObserver(
 
 export default useIntersectionObserver;
 >>>>>>> cursor/fix-errors-and-merge-to-main-e66e
+=======
+  return {}
+}
+}
+>>>>>>> 1c3bcb5bf864

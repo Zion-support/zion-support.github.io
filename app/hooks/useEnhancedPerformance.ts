@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 export const useEnhancedPerformance = () => {
   // Add hook logic here
+<<<<<<< HEAD
   return {};
 };
 =======
@@ -172,3 +173,8 @@ export const useEnhancedPerformance = () => {}
 
 export default useEnhancedPerformance;
 >>>>>>> cursor/fix-errors-and-merge-to-main-e66e
+=======
+  return {}
+}
+}
+>>>>>>> 1c3bcb5bf864

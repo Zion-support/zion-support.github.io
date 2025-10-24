@@ -126,6 +126,7 @@ const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ className = '
 export default ResponsiveContainerPage
   )
 }
+<<<<<<< HEAD
 export default ResponsiveContainer
 =======
 "use client";
@@ -142,3 +143,6 @@ const ResponsiveContainer = () => {
 
 export default ResponsiveContainer;
 >>>>>>> main
+=======
+export default ResponsiveContainer
+>>>>>>> 1c3bcb5bf864

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client'
 import {Helmet} from 'lucide-react'
 import React from 'react'
@@ -12,6 +13,42 @@ interface EnhancedSEOHeadProps {
 }
 const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ className = '' }) => {
   return (
+=======
+'use client';
+
+import React from 'react'
+
+interface EnhancedSEOHeadProps {
+  // Add props here
+
+
+const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = (_props) => {
+  return (
+    <div>
+      {/* Component content */
+    </div>
+  )
+}
+
+}
+
+export default EnhancedSEOHead
+}
+=======
+'use client'
+import {Helmet} from 'lucide-react'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+interface EnhancedSEOHeadProps {
+  className?: string
+}
+const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ className = '' }) => {
+  return (
+>>>>>>> 1c3bcb5bf864
     <>
       <Helmet>
         <title>{title}</title>
@@ -114,5 +151,9 @@ export default EnhancedSEOHeadPage
   )
 }
 export default EnhancedSEOHead
+<<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
+>>>>>>> 1c3bcb5bf864

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1c3bcb5bf864
 import React from &quot;react&quot
 import { Helmet } from &quot;react-helmet-async&quot
 &quot;use client&quot
@@ -55,6 +58,7 @@ const NotFoundPagePage: React.FC = () => {
   )
 }
 export default NotFoundPagePage
+<<<<<<< HEAD
 export default NotFoundPagePage
 =======
 "use client";
@@ -71,3 +75,6 @@ const NotFoundPage = () => {
 
 export default NotFoundPage;
 >>>>>>> main
+=======
+export default NotFoundPagePage
+>>>>>>> 1c3bcb5bf864

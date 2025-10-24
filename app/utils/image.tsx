@@ -1,5 +1,8 @@
 'use client'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1c3bcb5bf864
 import React from 'react'
 import React, { useState, useCallback } from 'react'
 'use client'
@@ -135,6 +138,7 @@ onError={handleError},
     {...props}
 >)</img>
 }</img>
+<<<<<<< HEAD
 export default Image</img>
 =======
 import React from 'react';
@@ -273,3 +277,6 @@ export default Image
   </ImageProps>
 "`
 >>>>>>> main
+=======
+export default Image</img>
+>>>>>>> 1c3bcb5bf864

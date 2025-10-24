@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect } from &quot;react&quot
 interface AnalyticsProps {
   className?: string
@@ -21,8 +22,17 @@ export default Analytics
 export default AnalyticsPage
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 1c3bcb5bf864
 'use client';
+
 import React, { useEffect } from 'react';
+
+declare global {
+  interface Window {
+    gtag: (...args: unknown[]) => void;
+  }
+}
 
 interface AnalyticsProps {
   enableGoogleAnalytics?: boolean;
@@ -35,57 +45,92 @@ const Analytics: React.FC<AnalyticsProps> = ({
   enableGoogleAnalytics = true,
   enablePerformanceMonitoring = true,
   enableErrorTracking = true,
-  enableUserBehaviorTracking = true,
+  enableUserBehaviorTracking = true
 }) => {
   useEffect(() => {
-    if (enableGoogleAnalytics) {
-      initializeGoogleAnalytics();
+    // Initialize Google Analytics
+    if (enableGoogleAnalytics && typeof window !== 'undefined') {
+      if (process.env.NODE_ENV === 'production') {
+        const script = document.createElement('script');
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`;
+        script.async = true;
+        document.head.appendChild(script);
+
+        window.gtag = function() {
+          (window as any).dataLayer = (window as any).dataLayer || [];
+          (window as any).dataLayer.push(arguments);
+        };
+
+        window.gtag('js', new Date());
+        window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX');
+      }
     }
-    if (enablePerformanceMonitoring) {
-      initializePerformanceMonitoring();
+
+    // Performance monitoring
+    if (enablePerformanceMonitoring && typeof window !== 'undefined') {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'navigation') {
+            console.log('Navigation timing:', entry);
+          }
+        }
+      });
+      observer.observe({ entryTypes: ['navigation'] });
     }
-    if (enableErrorTracking) {
-      initializeErrorTracking();
+
+    // Error tracking
+    if (enableErrorTracking && typeof window !== 'undefined') {
+      window.addEventListener('error', (event) => {
+        console.error('Global error:', event.error);
+      });
+
+      window.addEventListener('unhandledrejection', (event) => {
+        console.error('Unhandled promise rejection:', event.reason);
+      });
     }
-    if (enableUserBehaviorTracking) {
-      initializeUserBehaviorTracking();
+
+    // User behavior tracking
+    if (enableUserBehaviorTracking && typeof window !== 'undefined') {
+      const trackClick = (event: Event) => {
+        const target = event.target as HTMLElement;
+        if (target.tagName === 'BUTTON' || target.tagName === 'A') {
+          console.log('User clicked:', target.textContent);
+        }
+      };
+
+      document.addEventListener('click', trackClick);
+      return () => document.removeEventListener('click', trackClick);
     }
   }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]);
 
-  const initializeGoogleAnalytics = () => {
-    // Load Google Analytics
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID');
-    }
-  };
-
-  const initializePerformanceMonitoring = () => {
-    // Initialize performance monitoring
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Performance monitoring logic
-    }
-  };
-
-  const initializeErrorTracking = () => {
-    // Initialize error tracking
-    if (typeof window !== 'undefined') {
-      window.addEventListener('error', (event) => {
-        console.error('Error tracked:', event.error);
-      });
-    }
-  };
-
-  const initializeUserBehaviorTracking = () => {
-    // Initialize user behavior tracking
-    if (typeof window !== 'undefined') {
-      // User behavior tracking logic
-    }
-  };
-
-  return null; // This component doesn't render anything visible
+  return null;
 };
 
 export default Analytics;
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-e66e
 >>>>>>> main
+=======
+import React, { useEffect } from &quot;react&quot
+interface AnalyticsProps {
+  className?: string
+}
+const Analytics: React.FC = () => {
+  useEffect(() => {
+    const initAnalytics = () => {
+      if (typeof window !== &quot;undefined&quot; && window.gtag) {
+        window.gtag(&quot;config&quot;, &quot;GA_MEASUREMENT_ID&quot;, {
+          page_title: document.title,
+    page_location: window.location.href})
+      }
+    }
+    initAnalytics()
+  }, [])
+  return null; // Analytics component doesn&apos;t render anything
+}
+export default Analytics
+}
+export default AnalyticsPage
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
+>>>>>>> 1c3bcb5bf864

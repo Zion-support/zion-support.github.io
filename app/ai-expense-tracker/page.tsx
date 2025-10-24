@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 'use client';
@@ -53,3 +54,6 @@ const AiExpenseTrackerPage: React.FC = () => {
 
 export default AiExpenseTrackerPage;
 >>>>>>> main
+=======
+
+>>>>>>> 1c3bcb5bf864

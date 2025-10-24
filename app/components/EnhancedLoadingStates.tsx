@@ -195,6 +195,7 @@ export const ContentSkeleton: React.FC = () => (
 <div className=&quot;h-4 bg-gray-600 rounded w-2/3&quot;></div>
 </div>
 </div>
+<<<<<<< HEAD
 )
 =======
 "use client";
@@ -211,3 +212,6 @@ const EnhancedLoadingStates = () => {
 
 export default EnhancedLoadingStates;
 >>>>>>> main
+=======
+)
+>>>>>>> 1c3bcb5bf864

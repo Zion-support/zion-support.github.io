@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 'use client';
@@ -53,3 +54,6 @@ const AiEmailMarketingAutomationPage: React.FC = () => {
 
 export default AiEmailMarketingAutomationPage;
 >>>>>>> main
+=======
+
+>>>>>>> 1c3bcb5bf864

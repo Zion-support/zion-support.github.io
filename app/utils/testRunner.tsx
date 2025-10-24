@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 "use client"
 const testRunner = () => {
@@ -7,6 +8,73 @@ const testRunner = () => {
 export default testRunner
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+'use client'
+
+/**
+ * Comprehensive Test Runner and Testing Utilities
+ * Provides advanced testing capabilities, mocking, and test automation
+ */
+import React, { ReactElement, useCallback } from 'react'
+
+export interface PerformanceMetrics {
+  renderTime: number
+  memoryUsage: number
+  timestamp: string
+
+
+export interface CoverageMetrics {
+  statements: number
+  branches: number
+  functions: number
+  lines: number
+
+
+// Test configuration interface
+export interface TestConfig {
+  enableMocking: boolean
+  enableCoverage: boolean
+  enablePerformance: boolean
+  enableAccessibility: boolean
+
+
+// Test result types
+export interface TestResult {
+  name: string
+  status: 'passed' | 'failed' | 'skipped'
+  duration: number
+  error?: string
+
+
+export interface TestSuite {
+  name: string
+  tests: TestResult[]
+  duration: number
+  status: 'passed' | 'failed' | 'partial'
+
+
+// Mock utilities
+export const createMock = <T,>(defaultValue: T): jest.Mocked<T> => {
+  return defaultValue as jest.Mocked<T>
+}
+
+export const mockFunction = <T extends (...args: any[]) => any>(
+  implementation?: T
+): jest.MockedFunction<T> => {
+  return jest.fn(implementation) as jest.MockedFunction<T>
+}
+
+// Test runner component
+interface TestRunnerProps {
+  config: TestConfig
+  onTestComplete?: (results: TestSuite[]) => void
+  onPerformanceUpdate?: (metrics: PerformanceMetrics) => void
+  onCoverageUpdate?: (metrics: CoverageMetrics) => void
+
+
+=======
+>>>>>>> 1c3bcb5bf864
 'use client';
 
 =======
@@ -16,8 +84,12 @@ export default testRunner
  * Comprehensive Test Runner and Testing Utilities
  * Provides advanced testing capabilities, mocking, and test automation
  */
+<<<<<<< HEAD
 import React, { ReactElement, useCallback } from 'react';
 <<<<<<< HEAD
+=======
+import React, { useCallback } from 'react';
+>>>>>>> 1c3bcb5bf864
 
 export interface PerformanceMetrics {
   renderTime: number;
@@ -64,24 +136,25 @@ export interface TestSuite {
 }
 
 // Mock utilities
-export const createMock = <T,>(defaultValue: T): jest.Mocked<T> => {
-  return defaultValue as jest.Mocked<T>;
+export const createMock = <T,>(defaultValue: T): any => {
+  return defaultValue as any;
 };
 
-export const mockFunction = <T extends (...args: any[]) => any>(
+export const mockFunction = <T extends (..._args: any[]) => any,>(
   implementation?: T
-): jest.MockedFunction<T> => {
-  return jest.fn(implementation) as jest.MockedFunction<T>;
+): any => {
+  return (() => {}) as any;
 };
 
 // Test runner component
 interface TestRunnerProps {
   config: TestConfig;
-  onTestComplete?: (results: TestSuite[]) => void;
-  onPerformanceUpdate?: (metrics: PerformanceMetrics) => void;
-  onCoverageUpdate?: (metrics: CoverageMetrics) => void;
+  onTestComplete?: (_results: TestSuite[]) => void;
+  onPerformanceUpdate?: (_metrics: PerformanceMetrics) => void;
+  onCoverageUpdate?: (_metrics: CoverageMetrics) => void;
 }
 
+>>>>>>> 883b2f1837ad94df26f75676952a53319ed72f1c
 const TestRunner: React.FC<TestRunnerProps> = ({
   config,
   onTestComplete,
@@ -89,11 +162,48 @@ const TestRunner: React.FC<TestRunnerProps> = ({
   onCoverageUpdate,
 }) => {
   const runTests = useCallback(async () => {
+<<<<<<< HEAD
+    const results: TestSuite[] = []
+=======
     const results: TestSuite[] = [];
+>>>>>>> 883b2f1837ad94df26f75676952a53319ed72f1c
     
     try {
       // Run performance tests
       if (config.enablePerformance) {
+<<<<<<< HEAD
+        const performanceMetrics = await measurePerformance()
+        onPerformanceUpdate?.(performanceMetrics)
+      
+
+      // Run coverage tests
+      if (config.enableCoverage) {
+        const coverageMetrics = await measureCoverage()
+        onCoverageUpdate?.(coverageMetrics)
+      
+
+      // Run accessibility tests
+      if (config.enableAccessibility) {
+        const accessibilityResults = await runAccessibilityTests()
+        results.push(accessibilityResults)
+      
+
+      onTestComplete?.(results)
+    } catch (error) {
+      console.error('Test execution failed:', error)
+    
+  }, [config, onTestComplete, onPerformanceUpdate, onCoverageUpdate])
+
+  const measurePerformance = async (): Promise<PerformanceMetrics> => {
+    const startTime = performance.now()
+    const startMemory = (performance as any).memory?.usedJSHeapSize || 0
+    
+    // Simulate some work
+    await new Promise(resolve => setTimeout(resolve, 100))
+    
+    const endTime = performance.now()
+    const endMemory = (performance as any).memory?.usedJSHeapSize || 0
+=======
         const performanceMetrics = await measurePerformance();
         onPerformanceUpdate?.(performanceMetrics);
       }
@@ -125,13 +235,19 @@ const TestRunner: React.FC<TestRunnerProps> = ({
     
     const endTime = performance.now();
     const endMemory = (performance as any).memory?.usedJSHeapSize || 0;
+>>>>>>> 883b2f1837ad94df26f75676952a53319ed72f1c
     
     return {
       renderTime: endTime - startTime,
       memoryUsage: endMemory - startMemory,
       timestamp: new Date().toISOString(),
+<<<<<<< HEAD
+    }
+  }
+=======
     };
   };
+>>>>>>> 883b2f1837ad94df26f75676952a53319ed72f1c
 
   const measureCoverage = async (): Promise<CoverageMetrics> => {
     // Simulate coverage measurement
@@ -140,6 +256,66 @@ const TestRunner: React.FC<TestRunnerProps> = ({
       branches: Math.floor(Math.random() * 100),
       functions: Math.floor(Math.random() * 100),
       lines: Math.floor(Math.random() * 100),
+<<<<<<< HEAD
+    }
+  }
+
+  const runAccessibilityTests = async (): Promise<TestSuite> => {
+    const tests: TestResult[] = []
+    
+    // Check for alt text on images
+    const images = document.querySelectorAll('img')
+    const imagesWithAlt = document.querySelectorAll('img[alt]')
+    
+    tests.push({
+      name: 'Images have alt text',
+      status: images.length === imagesWithAlt.length ? 'passed' : 'failed',
+      duration: 0,
+      error: images.length !== imagesWithAlt.length ? 'Some images are missing alt text' : undefined,
+    })
+
+    // Check for heading structure
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6')
+    tests.push({
+      name: 'Proper heading structure',
+      status: headings.length > 0 ? 'passed' : 'failed',
+      duration: 0,
+      error: headings.length === 0 ? 'No headings found' : undefined,
+    })
+
+    // Check for keyboard navigation
+    const focusableElements = document.querySelectorAll('button, input, select, textarea, a[href]')
+    tests.push({
+      name: 'Focusable elements present',
+      status: focusableElements.length > 0 ? 'passed' : 'failed',
+      duration: 0,
+      error: focusableElements.length === 0 ? 'No focusable elements found' : undefined,
+    })
+
+    const passedTests = tests.filter(test => test.status === 'passed').length
+    const totalTests = tests.length
+
+    return {
+      name: 'Accessibility Tests',
+      tests,
+      duration: 0,
+      status: passedTests === totalTests ? 'passed' : passedTests > 0 ? 'partial' : 'failed',
+    }
+  }
+
+  React.useEffect(() => {
+    if (config.enablePerformance || config.enableCoverage || config.enableAccessibility) {
+      runTests()
+    
+  }, [runTests, config])
+
+  return null
+}
+
+}
+
+export default TestRunner;}
+=======
     };
   };
 
@@ -196,6 +372,7 @@ const TestRunner: React.FC<TestRunnerProps> = ({
 };
 
 export default TestRunner;
+<<<<<<< HEAD
 =======
     statements: number,
     branches: number,
@@ -2266,3 +2443,14 @@ export * from '@testing-library/react'
 export { customRender as render }
 >>>>>>> cursor/fix-errors-and-merge-to-main-e66e
 >>>>>>> main
+=======
+>>>>>>> 883b2f1837ad94df26f75676952a53319ed72f1c
+=======
+import React from 'react'
+"use client"
+const testRunner = () => {
+  return null
+}
+export default testRunner
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
+>>>>>>> 1c3bcb5bf864

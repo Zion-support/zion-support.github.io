@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1c3bcb5bf864
 
 // Type definitions for Next.js compatibility
 export interface Metadata {
@@ -128,6 +131,7 @@ declare module 'next' {
 }
   }
 }
+<<<<<<< HEAD
 export {}
 =======
 // Type definitions for Next.js
@@ -199,3 +203,6 @@ declare module '*.tiff' {}
 
 export {};
 >>>>>>> main
+=======
+export {}
+>>>>>>> 1c3bcb5bf864

@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1c3bcb5bf864
 import React from 'react'
 "use client"
 const errorHandler = () => {
   return null
 }
+<<<<<<< HEAD
 export default errorHandler
 =======
 'use client'
@@ -916,3 +920,6 @@ export default ErrorHandler
   </strin>
 "`
 >>>>>>> main
+=======
+export default errorHandler
+>>>>>>> 1c3bcb5bf864

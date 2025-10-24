@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1c3bcb5bf864
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Link from 'next/link'
@@ -58,6 +61,7 @@ export default function AboutPage() {
     role: 'Lead AI Engineer',
     description: 'Machine learning expert focused on developing cutting-edge AI solutions.'}
   ]
+<<<<<<< HEAD
 =======
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -132,11 +136,16 @@ export default function AboutPage() {
   ];
 
 >>>>>>> main
+=======
+>>>>>>> 1c3bcb5bf864
   return (
     <>
       <Helmet>
         <title>About Us - Zion Tech Group</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1c3bcb5bf864
         <meta name="description" content="Learn about Zion Tech Group&apos;s mission, values, and expertise in AI and IT solutions. Discover our team and company culture." />
         <meta name="keywords" content="about us, company, team, mission, values, AI solutions, IT services" />
       </Helmet>
@@ -217,6 +226,7 @@ export default function AboutPage() {
                   <h3 className="text-lg font-semibold text-white mb-2">{member.name}</h3>
                   <p className="text-cyan-400 text-sm mb-3">{member.role}</p>
                   <p className="text-gray-300 text-sm">{member.description}</p>
+<<<<<<< HEAD
 =======
         <meta name="description" content="Learn about Zion Tech Group's mission and team" />
       </Helmet>
@@ -255,11 +265,16 @@ export default function AboutPage() {
                     {stat.label}
                   </div>
 >>>>>>> main
+=======
+>>>>>>> 1c3bcb5bf864
                 </div>
               ))}
             </div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1c3bcb5bf864
           {/* Stats Section */}
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
             <h2 className="text-3xl font-bold text-white text-center mb-8">By the Numbers</h2>
@@ -493,6 +508,7 @@ export default function AboutPage() {
       </section>
 </>
   )
+<<<<<<< HEAD
 }
 =======
         </section>
@@ -618,3 +634,6 @@ export default function AboutPage() {
 
 export default AboutPage;
 >>>>>>> main
+=======
+}
+>>>>>>> 1c3bcb5bf864

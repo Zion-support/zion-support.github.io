@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client'
 import { ArrowRight, TrendingUp } from 'lucide-react'
 import React from 'react'
@@ -11,42 +12,48 @@ const EnhancedServicesShowcase: React.FC = () => {
 'use client';
 import React from 'react';
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react';
+=======
+'use client'
+<<<<<<< HEAD
+import React from 'react'
+import { Brain, Zap, Shield, Globe, ArrowRight, CheckCircle } from 'lucide-react'
+>>>>>>> 1c3bcb5bf864
 
 const EnhancedServicesShowcase: React.FC = () => {
   const services = [
     {
-      title: 'AI Solutions',
-      description: 'Transform your business with cutting-edge artificial intelligence',
       icon: Brain,
+      title: 'AI Solutions',
+      description: 'Cutting-edge artificial intelligence solutions for modern businesses',
       color: 'text-purple-400',
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      stats: '300% ROI',
+      stats: '95% Accuracy'
     },
     {
-      title: 'IT Infrastructure',
-      description: 'Build and maintain robust technology foundations',
-      icon: Cloud,
-      color: 'text-blue-400',
-      features: ['Cloud Migration', 'Server Management', 'Network Security', 'Data Backup'],
-      stats: '99.9% Uptime',
-    },
-    {
-      title: 'Cybersecurity',
-      description: 'Protect your business with enterprise-grade security',
-      icon: Shield,
-      color: 'text-green-400',
-      features: ['Threat Detection', 'Security Audits', 'Compliance', 'Incident Response'],
-      stats: 'Zero Breaches',
-    },
-    {
-      title: 'Performance Optimization',
-      description: 'Maximize efficiency and speed across all systems',
       icon: Zap,
+      title: 'Performance Optimization',
+      description: 'Boost your application performance with our expert optimization services',
       color: 'text-yellow-400',
       features: ['Code Optimization', 'Database Tuning', 'Caching Strategies', 'Load Balancing'],
-      stats: '10x Faster',
+      stats: '10x Faster'
+    },
+    {
+      icon: Shield,
+      title: 'Security Services',
+      description: 'Comprehensive security solutions to protect your digital assets',
+      color: 'text-green-400',
+      features: ['Penetration Testing', 'Security Audits', 'Compliance', 'Threat Monitoring'],
+      stats: '99.9% Uptime'
+    },
+    {
+      icon: Globe,
+      title: 'Cloud Solutions',
+      description: 'Scalable cloud infrastructure and migration services',
+      color: 'text-blue-400',
+      features: ['Cloud Migration', 'Infrastructure Setup', 'Auto-scaling', 'Monitoring'],
+      stats: '50% Cost Savings'
     }
-  ];
+  ]
 
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
@@ -70,39 +77,40 @@ const EnhancedServicesShowcase: React.FC = () => {
                 <service.icon className="h-8 w-8 text-white" />
               </div>
               
-              <h3 className="text-xl font-bold text-white mb-3 text-center">
+              <h3 className="text-xl font-semibold text-white text-center mb-3">
                 {service.title}
               </h3>
               
-              <p className="text-gray-300 text-center mb-4">
+              <p className="text-gray-300 text-center mb-4 text-sm">
                 {service.description}
               </p>
 
               <div className="mb-4">
-                <div className="text-2xl font-bold text-purple-400 text-center mb-2">
+                <div className={`text-2xl font-bold ${service.color} text-center mb-2`}>
                   {service.stats}
                 </div>
-                <div className="text-sm text-gray-400 text-center">
-                  Average Improvement
+                <div className="text-xs text-gray-400 text-center">
+                  Performance Metric
                 </div>
               </div>
 
               <ul className="space-y-2 mb-6">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4 text-green-400 flex-shrink-0" />
-                    <span className="text-gray-300 text-sm">{feature}</span>
+                {service.features.map((feature, idx) => (
+                  <li key={idx} className="flex items-center text-gray-300 text-sm">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                    {feature}
                   </li>
                 ))}
               </ul>
 
-              <button className="w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+              <button className="w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
                 Learn More
-                <ArrowRight className="h-4 w-4 ml-2" />
+                <ArrowRight className="ml-2 h-4 w-4" />
               </button>
             </div>
           ))}
         </div>
+<<<<<<< HEAD
       </div>
 =======
 "use client";
@@ -120,3 +128,31 @@ const EnhancedServicesShowcase = () => {
 
 export default EnhancedServicesShowcase;
 >>>>>>> main
+=======
+
+        <div className="text-center mt-16">
+          <h3 className="text-2xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          </h3>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Let's discuss how our services can help you achieve your goals and drive innovation.
+          </p>
+          <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            Get Started Today
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default EnhancedServicesShowcase
+=======
+import { ArrowRight, TrendingUp } from 'lucide-react'
+import React from 'react'
+import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react'
+import { CheckCircle, ArrowRight } from 'lucide-react'
+const EnhancedServicesShowcase: React.FC = () => {
+  const services = [
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
+>>>>>>> 1c3bcb5bf864

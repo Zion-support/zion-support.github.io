@@ -1,4 +1,5 @@
 'use client';
+
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -20,15 +21,15 @@ const AIAnalyticsPage: React.FC = () => {
     },
     {
       icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+      title: 'Custom Dashboards',
+      description: 'Create personalized dashboards tailored to your business needs.',
+      benefits: ['Drag-and-drop builder', 'Custom widgets', 'Role-based views', 'Mobile responsive']
     },
     {
       icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+      title: 'Performance Tracking',
+      description: 'Monitor key metrics and track performance across all channels.',
+      benefits: ['KPI monitoring', 'Trend analysis', 'Performance alerts', 'Growth tracking']
     },
     {
       icon: Zap,
@@ -38,9 +39,9 @@ const AIAnalyticsPage: React.FC = () => {
     },
     {
       icon: Eye,
-      title: 'Visual Analytics',
-      description: 'Beautiful, interactive dashboards that make data easy to understand.',
-      benefits: ['Interactive charts', 'Custom dashboards', 'Data exploration', 'Visual storytelling']
+      title: 'Data Visualization',
+      description: 'Transform complex data into clear, actionable visualizations.',
+      benefits: ['Interactive charts', 'Multiple chart types', 'Real-time updates', 'Export capabilities']
     }
   ];
 

@@ -48,4 +48,4 @@ const ApiDevelopmentPage: React.FC = () => {
   );
 };
 
-export default ApiDevelopmentPage;
+export default ApiDevelopmentPage

@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+'use client';
+
+import React from 'react';
+
+const ServiceWorker: React.FC = () => {
+  return null; // This component doesn't render anything
+};
+
+export default ServiceWorker;
+=======
+>>>>>>> 1c3bcb5bf864
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -154,4 +168,9 @@ export default ServiceWorkerPage
   }, [])
   return nul l
 }
+<<<<<<< HEAD
 export default ServiceWorker
+=======
+export default ServiceWorker
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
+>>>>>>> 1c3bcb5bf864

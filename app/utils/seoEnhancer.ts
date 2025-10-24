@@ -121,6 +121,7 @@ export default {
   generateSitemap,
   generateRobotsTxt
 }
+<<<<<<< HEAD
 =======
 interface EnhancedSEOData {
   title: string
@@ -183,3 +184,5 @@ export const seoEnhancer = {
 
 export default seoEnhancer;
 >>>>>>> main
+=======
+>>>>>>> 1c3bcb5bf864

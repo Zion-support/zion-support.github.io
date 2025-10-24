@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1c3bcb5bf864
 
 // link utility
 export const link = () => {
   // Utility function implementation
   return null
 }
+<<<<<<< HEAD
 export default link
 =======
 interface LinkProps {
@@ -95,3 +99,6 @@ export default Link;
 };
 export default Link;
 >>>>>>> main
+=======
+export default link
+>>>>>>> 1c3bcb5bf864

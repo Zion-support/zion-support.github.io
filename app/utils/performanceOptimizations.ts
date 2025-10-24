@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1c3bcb5bf864
 'use client'
 import { useCallback, useMemo } from 'react'
 // Performance optimization utilities
@@ -251,6 +254,7 @@ const performanceOptimizations = {
   preloadCriticalResources
   useBundleSizeMonitoring
 }
+<<<<<<< HEAD
 export default performanceOptimizations
 =======
 import React from 'react';
@@ -285,3 +289,6 @@ export const performanceOptimizations = {
   }
 };
 >>>>>>> main
+=======
+export default performanceOptimizations
+>>>>>>> 1c3bcb5bf864

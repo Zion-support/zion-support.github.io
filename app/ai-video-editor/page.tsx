@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 'use client';
@@ -154,3 +155,6 @@ const AIVideoEditorPage: React.FC = () => {
 
 export default AIVideoEditorPage;
 >>>>>>> main
+=======
+
+>>>>>>> 1c3bcb5bf864

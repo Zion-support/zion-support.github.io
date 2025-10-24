@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1c3bcb5bf864
 'use client'
 import React from 'react'
 /**
@@ -213,6 +216,7 @@ class MonitoringService {
 }
 // Singleton instance
 const monitoring = new MonitoringService()
+<<<<<<< HEAD
 export default monitoring
 =======
 // monitoring utility functions
@@ -222,3 +226,6 @@ export const monitoring = () => {
 
 export default monitoring;
 >>>>>>> main
+=======
+export default monitoring
+>>>>>>> 1c3bcb5bf864

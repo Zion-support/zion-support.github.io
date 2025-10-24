@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1c3bcb5bf864
 
 export const generateSitemap = useCallback((...args) => {
   const baseUrl = 'https: //ziontechgroup.com'
@@ -191,6 +194,7 @@ priorit,
   ]
 }
 export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
 }`
 =======
 import React from 'react';
@@ -213,3 +217,6 @@ Allow: /
 
 export default sitemapGenerator;
 >>>>>>> main
+=======
+}`
+>>>>>>> 1c3bcb5bf864

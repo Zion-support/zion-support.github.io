@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1c3bcb5bf864
 import React from &quot;react&quot
 import { Helmet } from &quot;react-helmet-async&quot
 &quot;use client&quot
@@ -55,6 +58,7 @@ const PerformanceImagePage: React.FC = () => {
   )
 }
 export default PerformanceImagePage
+<<<<<<< HEAD
 export default PerformanceImagePage
 =======
 "use client";
@@ -71,3 +75,6 @@ const PerformanceImage = () => {
 
 export default PerformanceImage;
 >>>>>>> main
+=======
+export default PerformanceImagePage
+>>>>>>> 1c3bcb5bf864

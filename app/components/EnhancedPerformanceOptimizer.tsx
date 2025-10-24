@@ -244,6 +244,7 @@ ttfb: number | null}
 const EnhancedPerformanceOptimizer: React.FC = () => {
 const { trackEvent } = useAnalytics()
 const optimizeImages = useCallback(() => {
+<<<<<<< HEAD
 const images = document.querySelectorAll('img')
 =======
 "use client";
@@ -260,3 +261,6 @@ const EnhancedPerformanceOptimizer = () => {
 
 export default EnhancedPerformanceOptimizer;
 >>>>>>> main
+=======
+const images = document.querySelectorAll('img')
+>>>>>>> 1c3bcb5bf864

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1c3bcb5bf864
 import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react',
     }
   ]
@@ -10,6 +13,7 @@ import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react',
     'Gain competitive advantage with advanced technology'
             <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
             </div>
+<<<<<<< HEAD
           </div>
 =======
 import React from 'react';
@@ -115,3 +119,6 @@ class GlobalErrorBoundary extends Component<Props, State> {
 
 export default GlobalErrorBoundary;
 >>>>>>> main
+=======
+          </div>
+>>>>>>> 1c3bcb5bf864

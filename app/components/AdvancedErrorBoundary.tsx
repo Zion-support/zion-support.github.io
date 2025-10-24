@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react'
 import { Mail } from 'lucide-react'
@@ -50,47 +51,68 @@ class AdvancedErrorBoundary extends Component<Props, State> {
 import React from 'react';
 
 <<<<<<< HEAD
+=======
+import React, { Component, ReactNode, ErrorInfo } from 'react'
+import { AlertTriangle, Home, RefreshCw } from 'lucide-react'
+
+>>>>>>> 1c3bcb5bf864
 interface AdvancedErrorBoundaryProps {
-  children: ReactNode;
-  className?: string;
-  onError?: (_error: Error, _errorInfo: ErrorInfo) => void}
+  children: ReactNode
+  className?: string
+  onError?: (_error: Error, _errorInfo: ErrorInfo) => void
+}
 
-
+=======
+import React, { Component, ErrorInfo, ReactNode } from 'react'
+import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react'
+import { Mail } from 'lucide-react'
+import { Home } from 'lucide-react'
+interface AdvancedErrorBoundaryProps {
+  className?: string
+}
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
 interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
-  errorId?: string}
+  hasError: boolean
+  error?: Error
+  errorInfo?: ErrorInfo
+  errorId?: string
+}
+<<<<<<< HEAD
 
 class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State> {
   constructor(props: AdvancedErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false }}
+    super(props)
+    this.state = { hasError: false }
+  }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error Boundary caught an error:', error, errorInfo)}
-  };
+      console.error('Error Boundary caught an error:', error, errorInfo)
+    }
+  }
 
   componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
     this.setState({
       hasError: true,
       error: _error,
       errorInfo: _errorInfo
-    });
+    })
     
     // Call custom error handler if provided
     if (this.props.onError) {
-      this.props.onError(_error, _errorInfo)}
+      this.props.onError(_error, _errorInfo)
+    }
     
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', _error, _errorInfo)}
+      console.error('Error caught by boundary:', _error, _errorInfo)
+    }
     
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(_error, _errorInfo)}
+      this.logErrorToService(_error, _errorInfo)
+    }
   }
 
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
@@ -101,50 +123,56 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
       stack: error.stack,
       componentStack: errorInfo.componentStack,
       timestamp: new Date().toISOString()
-    };
+    }
     
     // Send to external service (implement as needed)
-    console.error('Error logged to service:', errorData)};
+    console.error('Error logged to service:', errorData)
+  }
 
   generateErrorId = (): string => {
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`};
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+  }
 
   handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined })};
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined })
+  }
 
   render() {
     if (this.state.hasError) {
       return (
         <div className={`min-h-screen flex items-center justify-center bg-gray-50 ${this.props.className || ''}`}>
-          <div className="max-w-mdw-fullbg-whiteshadow-lg rounded-lg p-6 text-center">
-            <AlertTriangle className="h-16w-16text-red-500mx-auto mb-4" />
-            <h1 className="text-2xlfont-boldtext-gray-900mb-2">Something went wrong</h1>
-            <p className="text-gray-600mb-6">
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">
+            <AlertTriangle className="h-16 w-16 text-red-500 mx-auto mb-4" />
+            <h1 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong</h1>
+            <p className="text-gray-600 mb-6">
               We&apos;re sorry, but something unexpected happened. Please try again.
             </p>
             <div className="space-y-3">
               <button
                 onClick={this.handleRetry}
-                className="w-fullbg-blue-600hover:bg-blue-700text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 flex items-center justify-center"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 flex items-center justify-center"
               >
-                <RefreshCw className="h-4w-4mr-2" />
+                <RefreshCw className="h-4 w-4 mr-2" />
                 Try Again
               </button>
               <button 
                 onClick={() => window.location.href = "/"}
-                className="w-fullbg-gray-600hover:bg-gray-700text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 flex items-center justify-center"
+                className="w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 flex items-center justify-center"
               >
-                <Home className="h-4w-4mr-2" />
+                <Home className="h-4 w-4 mr-2" />
                 Go Home
               </button>
             </div>
           </div>
         </div>
-      )}
+      )
+    }
 
-    return this.props.children}
+    return this.props.children
+  }
 }
 
+<<<<<<< HEAD
 export default AdvancedErrorBoundary;
   
 =======
@@ -198,3 +226,42 @@ const SitemapPage: React.FC = () => {
 export default SitemapPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-e66e
 >>>>>>> main
+=======
+export default AdvancedErrorBoundary
+=======
+class AdvancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props)
+    this.state = { hasError: false }
+  }
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+    const errorReport: ErrorReport = {,
+    errorId: this.state.errorId || this.generateErrorId()
+      error
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    }
+  }
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  this.setState({
+      error
+      errorInfo
+})
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo)
+    }
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      // // // eslint-disable-next-line no-console
+    console.error('Error caught by boundary:', error, errorInfo)
+    }
+    // Log error to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      this.logErrorToService(error, errorInfo)
+    }
+  }
+  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+    // You can integrate with services like Sentry, LogRocket, etc.
+    const errorData = {
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
+>>>>>>> 1c3bcb5bf864

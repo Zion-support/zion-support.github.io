@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1c3bcb5bf864
 
 &quot;use client&quot
 const PerformanceOptimizationsPage: React.FC = () => {
@@ -134,6 +137,7 @@ const PerformanceOptimizationsPage: React.FC = () => {
 </>
   )
 }
+<<<<<<< HEAD
 export default PerformanceOptimizationsPage
 =======
 "use client";
@@ -150,3 +154,6 @@ const PerformanceOptimizations = () => {
 
 export default PerformanceOptimizations;
 >>>>>>> main
+=======
+export default PerformanceOptimizationsPage
+>>>>>>> 1c3bcb5bf864

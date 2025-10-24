@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1c3bcb5bf864
 import React from &quot;react&quot
 import { ArrowRight } from &quot;lucide-react&quot
 interface NeonButtonProps {
@@ -163,6 +166,7 @@ export default NeonButtonPage
 export default NeonButton
   )
 }
+<<<<<<< HEAD
 export default NeonButton
 =======
 "use client";
@@ -179,3 +183,6 @@ const NeonButton = () => {
 
 export default NeonButton;
 >>>>>>> main
+=======
+export default NeonButton
+>>>>>>> 1c3bcb5bf864

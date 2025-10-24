@@ -151,6 +151,7 @@ main.scrollIntoView({ behavior: 'smooth'})
 Skip to maincontent</a>
 )
 }
+<<<<<<< HEAD
 export default EnhancedSkipLink
 =======
 "use client";
@@ -167,3 +168,6 @@ const EnhancedSkipLink = () => {
 
 export default EnhancedSkipLink;
 >>>>>>> main
+=======
+export default EnhancedSkipLink
+>>>>>>> 1c3bcb5bf864

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 "use client"
 =======
@@ -9,3 +10,7 @@ export const accessibilityUtils = () => {
 
 export default accessibilityUtils;
 >>>>>>> main
+=======
+
+"use client"
+>>>>>>> 1c3bcb5bf864

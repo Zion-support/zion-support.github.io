@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1c3bcb5bf864
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Link from 'next/link'
@@ -14,6 +17,7 @@ import {
   MapPinIcon
 } from '@heroicons/react/24/outline'
 export default function HomePage() {  return (
+<<<<<<< HEAD
 =======
 import React from "react";
 import { Link } from "react-router-dom";
@@ -63,12 +67,17 @@ export default function HomePage() {
 
   return (
 >>>>>>> main
+=======
+>>>>>>> 1c3bcb5bf864
     <>
       <Helmet>
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
         <meta name="description" content="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide." />
         <meta name="keywords" content="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1c3bcb5bf864
       </Helmet>
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
@@ -290,6 +299,7 @@ export default function HomePage() {
       </section>
 </>
   )
+<<<<<<< HEAD
 =======
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
@@ -432,4 +442,6 @@ export default function HomePage() {
     </>
   );
 >>>>>>> main
+=======
+>>>>>>> 1c3bcb5bf864
 }

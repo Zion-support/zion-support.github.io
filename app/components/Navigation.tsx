@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -39,10 +40,84 @@ const Navigation = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
+=======
+'use client'
+
+import React, { useState, useEffect, useCallback } from 'react'
+import Link from 'next/link'
+import { 
+  ChevronDown, 
+  Mail, 
+  Menu, 
+  X, 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Code, 
+  BarChart, 
+  ArrowRight, 
+  Target, 
+  Smartphone, 
+  TrendingUp, 
+  Settings, 
+  FileText, 
+  MessageCircle, 
+  DollarSign, 
+  Box, 
+  Link as LinkIcon, 
+  Mic, 
+  Workflow, 
+  Eye, 
+  Wifi
+} from 'lucide-react'
+
+const Navigation: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [aiServicesOpen, setAiServicesOpen] = useState(false)
+  const [itServicesOpen, setItServicesOpen] = useState(false)
+  const [_microSaasOpen, setMicroSaasOpen] = useState(false)
+
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10)
+=======
+import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import {
+  Bars3Icon,
+  XMarkIcon,
+  HomeIcon,
+  InformationCircleIcon,
+  BriefcaseIcon,
+  PhoneIcon,
+  DocumentTextIcon,
+  AcademicCapIcon,
+  PlayIcon,
+  QuestionMarkCircleIcon,
+  ShieldCheckIcon,
+  CurrencyDollarIcon,
+  CogIcon,
+  ChevronDownIcon
+} from '@heroicons/react/24/outline'
+const Navigation = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const pathname = usePathname()
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
+>>>>>>> 1c3bcb5bf864
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+<<<<<<< HEAD
   const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },
     { name: 'About', href: '/about', icon: InformationCircleIcon },
@@ -70,6 +145,46 @@ const Navigation = () => {
   const isActive = (path: string) => {
     return pathname === path
   }
+=======
+<<<<<<< HEAD
+
+  const closeAllMenus = useCallback(() => {
+    setIsOpen(false)
+    setAiServicesOpen(false)
+    setItServicesOpen(false)
+    setMicroSaasOpen(false)
+  }, [])
+
+  const aiServices = [
+    { name: 'AI Analytics & BI', url: '/ai-analytics', icon: BarChart, description: 'Business intelligence' },
+    { name: 'AI Automation', url: '/ai-automation', icon: Workflow, description: 'Process automation' },
+    { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder', icon: MessageCircle, description: 'Conversational AI' },
+    { name: 'AI Content Generation', url: '/ai-content-generation', icon: FileText, description: 'Automated content' },
+    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', icon: Shield, description: 'AI security' },
+    { name: 'Computer Vision', url: '/computer-vision', icon: Eye, description: 'Image recognition' },
+    { name: 'Predictive Analytics', url: '/predictive-analytics', icon: TrendingUp, description: 'Forecasting' },
+    { name: 'Speech & Voice AI', url: '/ai-voice-assistant', icon: Mic, description: 'Voice technology' }
+  ]
+
+  const itServices = [
+    { name: 'Web Development', url: '/web-development', icon: Code, description: 'Custom websites' },
+    { name: 'Mobile Development', url: '/mobile-development', icon: Smartphone, description: 'iOS & Android apps' },
+    { name: 'Cloud Migration', url: '/cloud-migration', icon: Cloud, description: 'Cloud solutions' },
+    { name: 'Cybersecurity', url: '/cybersecurity', icon: Shield, description: 'Security services' },
+    { name: 'DevOps', url: '/devops', icon: Settings, description: 'Development operations' },
+    { name: 'Data Analytics', url: '/data-analytics', icon: BarChart, description: 'Data insights' },
+    { name: 'IoT Solutions', url: '/iot-solutions', icon: Wifi, description: 'Internet of Things' },
+    { name: 'Blockchain', url: '/blockchain', icon: LinkIcon, description: 'Blockchain technology' }
+  ]
+
+  const _microSaasServices = [
+    { name: 'AI Project Management Pro', url: '/ai-project-management-pro', icon: Target, description: 'AI-powered project management' },
+    { name: 'AI Financial Analytics Pro', url: '/ai-financial-analytics-pro', icon: DollarSign, description: 'Advanced financial analytics' },
+    { name: 'AI Email Automation', url: '/ai-email-automation', icon: Mail, description: 'Automated email marketing' },
+    { name: 'AI 3D Model Generator', url: '/ai-3d-model-generator', icon: Box, description: '3D model generation' }
+  ]
+
+>>>>>>> 1c3bcb5bf864
   return (
     <nav className={
   `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -305,8 +420,151 @@ const Navigation = React.memo(() => {
               <div className="pt-4 border-t border-slate-700">
                 <Link
                   href="/contact"
+<<<<<<< HEAD
                   onClick={() => setIsOpen(false)}
                   className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center"
+=======
+                  className="block w-full bg-blue-600 text-white text-center px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                  onClick={closeAllMenus}
+=======
+  const navigation = [
+    { name: 'Home', href: '/', icon: HomeIcon },
+    { name: 'About', href: '/about', icon: InformationCircleIcon },
+    {
+      name: 'Services',
+      href: '/services',
+      icon: BriefcaseIcon,
+    submenu: [
+        { name: 'AI Solutions', href: '/ai-solutions' },
+    { name: 'Cybersecurity', href: '/cybersecurity' },
+    { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
+    { name: 'Digital Transformation', href: '/digital-transformation' },
+    { name: '5G Solutions', href: '/5g-solutions' },
+    { name: 'Micro SaaS', href: '/micro-saas' }
+      ]
+    },
+    { name: 'Solutions', href: '/solutions', icon: CogIcon },
+    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
+    { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
+    { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
+    { name: 'Demo', href: '/demo', icon: PlayIcon },
+    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
+    { name: 'Contact', href: '/contact', icon: PhoneIcon }
+  ]
+  const isActive = (path: string) => {
+    return pathname === path
+  }
+  return (
+    <nav className={
+  `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+}`}>
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">Z</span>
+            </div>
+            <span className="text-white font-bold text-xl">Zion Tech Group</span>
+          </Link>
+          {/* Desktop Navigation */}
+          <div className="hidden lg: flex items-center space-x-8">
+            {navigation.map((item) => {
+              const Icon = item.icon
+              return (
+                <div key={item.name} className="relative group">
+                  <Link
+                    href={item.href}
+                    className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                      isActive(item.href)
+                        ? 'bg-purple-600 text-white'
+                        : 'text-gray-300 hover: text-white hover:bg-slate-800'}`}
+                    onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
+                    onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
+                  >
+                    <Icon className="w-4 h-4" />
+                    <span>{item.name}</span>
+                    {item.submenu && <ChevronDownIcon className="w-4 h-4 ml-1" />}
+                  </Link>
+                  {/* Dropdown Menu */},
+    {item.submenu && isServicesOpen && (
+                    <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
+                      {item.submenu.map((subItem) => (
+                        <Link key={subItem.name}
+                          href={subItem.href}
+                          className="block px-4 py-2 text-sm text-gray-300 hover: text-white hover:bg-slate-700"
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )
+            })}
+          </div>
+          {/* CTA Button */}
+          <div className="hidden lg: flex items-center space-x-4">
+            <Link
+              href="/contact"
+              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover: from-purple-700 hover:to-cyan-700 transition-all duration-300"
+            >
+              Get Started
+            </Link>
+          </div>
+          {/* Mobile menu button */}
+          <div className="lg: hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-300 hover: text-white p-2"
+            >
+              {isOpen ? <XMarkIcon className="w-6 h-6" /> : <Bars3Icon className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+        {/* Mobile Navigation */},
+    {isOpen && (
+          <div className="lg: hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg mt-2">
+              {navigation.map((item) => {
+                const Icon = item.icon
+                return (
+                  <div key={item.name}>
+                    <Link
+                      href={item.href}
+                      onClick={() => setIsOpen(false)}
+                      className={`flex items-center space-x-3 px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                        isActive(item.href)
+                          ? 'bg-purple-600 text-white'
+                          : 'text-gray-300 hover: text-white hover:bg-slate-700'}`}
+                    >
+                      <Icon className="w-5 h-5" />
+                      <span>{item.name}</span>
+                    </Link>
+                    {item.submenu && (
+                      <div className="ml-8 space-y-1">
+                        {item.submenu.map((subItem) => (
+                          <Link key={subItem.name}
+                            href={subItem.href}
+                            className="text-gray-400 hover: text-white block px-3 py-2 rounded-md text-sm"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {subItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )
+              })}
+              <div className="pt-4 border-t border-slate-700">
+                <Link
+                  href="/contact"
+                  onClick={() => setIsOpen(false)}
+                  className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center"
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
+>>>>>>> 1c3bcb5bf864
                 >
                   Get Started
                 </Link>
@@ -379,8 +637,18 @@ export default Navigation
         </div>
       )}
     </nav>
+<<<<<<< HEAD
   );
 });
 
 export default Navigation;
 >>>>>>> main
+=======
+  )
+}
+<<<<<<< HEAD
+
+=======
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
+export default Navigation
+>>>>>>> 1c3bcb5bf864

@@ -1,4 +1,27 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+'use client';
+import React from 'react'
+
+interface EnhancedPerformanceMonitorProps {
+  // Add props here
+
+
+const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = (_props) => {
+  return (
+    <div>
+      {/* Component content */
+    </div>
+  )
+}
+
+}
+
+export default EnhancedPerformanceMonitor
+}
+=======
+>>>>>>> 1c3bcb5bf864
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -17,6 +40,7 @@ import { Phone, Mail } from 'lucide-react'
             <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
             </div>
           </div>
+<<<<<<< HEAD
 =======
 "use client";
 import React from 'react';
@@ -32,3 +56,6 @@ const EnhancedPerformanceMonitor = () => {
 
 export default EnhancedPerformanceMonitor;
 >>>>>>> main
+=======
+>>>>>>> 0a8d6a0455c0 (Fix TypeScript syntax errors and component export issues)
+>>>>>>> 1c3bcb5bf864

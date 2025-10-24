@@ -112,6 +112,7 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
 export default HeaderPage
   )
 }
+<<<<<<< HEAD
 export default Header
 =======
 import React, { useState, useEffect } from 'react';
@@ -611,3 +612,6 @@ const Header = () => {
 
 export default Header;
 >>>>>>> main
+=======
+export default Header
+>>>>>>> 1c3bcb5bf864

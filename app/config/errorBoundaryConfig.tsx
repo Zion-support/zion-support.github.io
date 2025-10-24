@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1c3bcb5bf864
 import React from 'react'
 /**
 * Error Boundary Configuration
@@ -206,6 +209,7 @@ timestamp: new Date().toISOString(),
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'
 url: typeof window !== 'undefined' ? window.location.href : 'unknown'}
 }
+<<<<<<< HEAD
 =======
 /**
  * Error Boundary Configuration
@@ -553,4 +557,6 @@ export function formatErrorForLogging(error: Error): Record<string, unknown> {re
   }}
 
 >>>>>>> main
+=======
+>>>>>>> 1c3bcb5bf864
 export default getErrorBoundaryConfig

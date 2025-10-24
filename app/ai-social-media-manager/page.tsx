@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 'use client';
@@ -85,3 +86,6 @@ export default function AISocialMediaManagerPage() {
   );
 }
 >>>>>>> main
+=======
+
+>>>>>>> 1c3bcb5bf864
