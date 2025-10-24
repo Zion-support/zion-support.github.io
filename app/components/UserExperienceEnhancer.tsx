@@ -2,69 +2,28 @@ import React, { useState, useEffect } from 'react';
 
 interface UserExperienceEnhancerProps {
   children: React.ReactNode;
-  enableAnimations?: boolean;
-  enableHoverEffects?: boolean;
-  enableFocusManagement?: boolean;
-  enableKeyboardNavigation?: boolean;
-  enableAccessibility?: boolean;
 }
 
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
-  children,
-  enableAnimations = true,
-  enableHoverEffects = true,
-  enableFocusManagement = true,
-  enableKeyboardNavigation = true,
-  enableAccessibility = true,
-}) => {
-  const [isReducedMotion, setIsReducedMotion] = useState(false);
-  const [isHighContrast, setIsHighContrast] = useState(false);
+const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ children }) => {
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Check for user's motion preferences
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    setIsReducedMotion(mediaQuery.matches);
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
 
-    // Check for high contrast preference
-    const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
-    setIsHighContrast(highContrastQuery.matches);
+    return () => clearTimeout(timer);
+  }, []);
 
-    // Apply accessibility enhancements
-    if (enableAccessibility) {
-      document.documentElement.setAttribute('data-accessibility-enhanced', 'true');
-      
-      if (isHighContrast) {
-        document.documentElement.classList.add('high-contrast');
-      }
-      
-      if (isReducedMotion) {
-        document.documentElement.classList.add('reduced-motion');
-      }
-    }
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+      </div>
+    );
+  }
 
-    // Add keyboard navigation support
-    if (enableKeyboardNavigation) {
-      const handleKeyDown = (event: KeyboardEvent) => {
-        if (event.key === 'Tab') {
-          document.body.classList.add('keyboard-navigation');
-        }
-      };
+  return <>{children}</>;
+};
 
-      const handleMouseDown = () => {
-        document.body.classList.remove('keyboard-navigation');
-      };
-
-      document.addEventListener('keydown', handleKeyDown);
-      document.addEventListener('mousedown', handleMouseDown);
-
-      return () => {
-        document.removeEventListener('keydown', handleKeyDown);
-        document.removeEventListener('mousedown', handleMouseDown);
-      };
-    }
-  }, [enableAccessibility, enableKeyboardNavigation, isHighContrast, isReducedMotion]);
-
-  // Add CSS classes for enhanced UX
-  useEffect(() => {
-    const style = document.createElement('style');
-    style.textContent = `
+export default UserExperienceEnhancer;

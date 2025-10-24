@@ -1,49 +1,27 @@
-'use client'
-import React from 'react'
+import React from 'react';
 
 interface OptimizedLoadingSpinnerProps {
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-  variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';
-  text?: string;
+  size?: 'sm' | 'md' | 'lg';
   className?: string;
-  color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
-  fullScreen?: boolean;
 }
 
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({
   size = 'md',
-  variant = 'spinner',
-  text,
-  className = '',
-  color = 'blue',
-  fullScreen = false
+  className = ''
 }) => {
   const sizeClasses = {
-    xs: 'h-3 w-3',
-    sm: 'h-4 w-4',
-    md: 'h-6 w-6',
-    lg: 'h-8 w-8',
-    xl: 'h-12 w-12'
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
   };
 
-  const colorClasses = {
-    blue: 'border-blue-500',
-    gray: 'border-gray-500',
-    green: 'border-green-500',
-    red: 'border-red-500',
-    purple: 'border-purple-500'
-  };
+  return (
+    <div className={`flex justify-center items-center ${className}`}>
+      <div
+        className={`${sizeClasses[size]} border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin`}
+      ></div>
+    </div>
+  );
+};
 
-  const renderSpinner = () => {
-    switch (variant) {
-      case 'dots':
-        return (
-          <div className="flex space-x-1" role="status" aria-label="Loading">
-            {[0, 1, 2].map(i => (
-              <div
-                key={i}
-                className={`w-2 h-2 bg-current rounded-full animate-pulse`}
-                style={{ animationDelay: `${i * 0.2}s` }}
-              />
-            ))}
-          </div>
+export default OptimizedLoadingSpinner;

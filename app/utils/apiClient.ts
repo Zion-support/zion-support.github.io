@@ -1,48 +1,39 @@
-// Type definitions for API client
-// RequestInit is a built-in TypeScript type for fetch options
-export interface ApiResponse<T = unknown> {
+interface ApiResponse<T> {
   data: T;
-  status: number;
-  statusText: string;
-  headers: Record<string, string>;
+  success: boolean;
+  message?: string;
 }
 
-export interface RequestOptions extends globalThis.RequestInit {
-  timeout?: number;
-  retries?: number;
-}
-
-export class ApiClient {
+class ApiClient {
   private baseURL: string;
-  private defaultOptions: RequestOptions;
 
-  constructor(baseURL = '', options: RequestOptions = {}) {
+  constructor(baseURL: string = '/api') {
     this.baseURL = baseURL;
-    this.defaultOptions = {
-      timeout: 30000,
-      retries: 3,
-      ...options,
-    };
   }
 
-  private async makeRequest<T>(
-    url: string,
-    options: RequestOptions = {}
-  ): Promise<ApiResponse<T>> {
-    const { timeout = 30000, retries: _retries = 3, ...fetchOptions } = {
-      ...this.defaultOptions,
-      ...options,
-    };
-
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), timeout);
-
+  async get<T>(endpoint: string): Promise<ApiResponse<T>> {
     try {
-      const response = await fetch(url, {
-        ...fetchOptions,
-        signal: controller.signal,
+      const response = await fetch(`${this.baseURL}${endpoint}`);
+      const data = await response.json();
+      return { data, success: true };
+    } catch (_error) {
+      return { data: null as T, success: false, message: 'Request failed' };
+    }
+  }
+
+  async post<T>(endpoint: string, data: unknown): Promise<ApiResponse<T>> {
+    try {
+      const response = await fetch(`${this.baseURL}${endpoint}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
       });
+      const result = await response.json();
+      return { data: result, success: true };
+    } catch (_error) {
+      return { data: null as T, success: false, message: 'Request failed' };
+    }
+  }
+}
 
-      clearTimeout(timeoutId);
-
-      if (!response.ok) {
+export const apiClient = new ApiClient();

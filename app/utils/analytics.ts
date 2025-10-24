@@ -1,32 +1,13 @@
-// Analytics utilities for tracking user interactions and performance
-import React from "react";
-
-interface AnalyticsEvent {
-  category: string;
-  action: string;
-  label?: string;
-  value?: number;
-  timestamp?: number;
-  custom_parameters?: Record<string, unknown>;
-}
-
-class Analytics {
-  private static instance: Analytics;
-  private events: AnalyticsEvent[] = [];
-
-  static getInstance(): Analytics {
-    if (!Analytics.instance) {
-      Analytics.instance = new Analytics();
-    }
-    return Analytics.instance;
+export const trackEvent = (eventName: string, properties: Record<string, unknown> = {}) => {
+  if (typeof window !== 'undefined' && (window as Window & { gtag: Function }).gtag) {
+    (window as Window & { gtag: Function }).gtag('event', eventName, properties);
   }
+};
 
-  // Track custom events
-  track(event: AnalyticsEvent): void {
-    this.events.push({
-      ...event,
-      timestamp: Date.now()
+export const trackPageView = (pagePath: string) => {
+  if (typeof window !== 'undefined' && (window as Window & { gtag: Function }).gtag) {
+    (window as Window & { gtag: Function }).gtag('config', 'GA_MEASUREMENT_ID', {
+      page_path: pagePath,
     });
-
-    // In production, you would send this to your analytics service
-    if (process.env.NODE_ENV === "production") {
+  }
+};

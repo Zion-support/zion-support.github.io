@@ -1,33 +1,27 @@
-"use client"
-
 export interface User {
   id: string;
-  email: string;
   name: string;
-  role: "admin" | "user" | "guest";
+  email: string;
+  avatar?: string;
 }
 
 export interface Service {
   id: string;
   title: string;
   description: string;
-  shortDescription: string;
   icon: string;
-  features: string[];
-  pricing: {
-    basic: number;
-    pro: number;
-    enterprise: number;
-  };
-  benefits: string[];
-  useCases: string[];
-  marketPrice: string;
-  contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-  };
-  link: string;
+  price?: number;
 }
 
-export interface ContactFormData {
+export interface ContactForm {
+  name: string;
+  email: string;
+  message: string;
+}
+
+export interface SEOData {
+  title: string;
+  description: string;
+  keywords: string[];
+  canonical?: string;
+}
