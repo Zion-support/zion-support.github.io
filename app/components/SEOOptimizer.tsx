@@ -7,7 +7,7 @@ interface SEOOptimizerProps {;
   className?: string;
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+const SEOOptimizer: React.FC<SEOOptimizerProps>= ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
@@ -53,8 +53,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
 
     // Update Open Graph tags;
-    const updateOGTag = (property: string, content: string) => {
-      let ogTag = document.querySelector(`meta[property="${property, }"]`)
+    const updateOGTag = (property: string, content: string) => {let ogTag = document.querySelector(`meta[property="${property}"]`)
       if (ogTag) {
         ogTag.setAttribute('content', content)
       } else {
@@ -72,8 +71,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     updateOGTag('og:type', 'website')
 
     // Update Twitter Card tags;
-    const updateTwitterTag = (name: string, content: string) => {
-      let twitterTag = document.querySelector(`meta[name="${name, }"]`)
+    const updateTwitterTag = (name: string, content: string) =</ {let twitterTag = document.querySelector(`meta[name="${name}"]`)
       if (twitterTag) {
         twitterTag.setAttribute('content', content)
       } else {
@@ -122,35 +120,5 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="description" content={description} / />
       <meta name="keywords" content={keywords.join(', ')} / />
       <link rel="canonical" href={canonicalUrl} / />
-      {/* Open Graph */}
-      <meta property="og: title" content={title, } / />
-      <meta property="og: description" content={description, } / />
-      <meta property="og: image" content={ogImage, } / />
-      <meta property="og: url" content={canonicalUrl, } / />
-      <meta property="og: type" content="website" /></meta property="og:type" content="website" />
-      {/* Twitter Card */, }
-      <meta name="twitter: card" content="summary_large_image" /></meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title, } /></meta name="twitter: title" content={title, } />
-      <meta name="twitter: description" content={description, } / />
-      <meta name="twitter: image" content={ogImage, } / />
-      {/* Additional SEO meta tags */}
-      <meta name="robots" content="index, follow" / />
-      <meta name="author" content="Zion Tech Group" / />
-      <meta name="viewport" content="width=device-width, initial-scale=1" / />
-      <meta charSet="UTF-8" / />
-      {/* Structured Data */}
-      {structuredData && (
-        <script;
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) , }}
-        / />
-      )}
-    </Head />
-  )
-}
-
-export default SEOOptimizer;
-  );
-};
 
 export default SEOOptimizerPage;

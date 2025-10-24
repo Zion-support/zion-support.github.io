@@ -28,7 +28,7 @@ const NotFoundPagePage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
+  ];
 
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -36,7 +36,7 @@ const NotFoundPagePage: React.FC = () => {
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]
+  ];
 
   return (
     <>
@@ -49,7 +49,7 @@ const NotFoundPagePage: React.FC = () => {
         <div className="container mx-auto max-w-6xl"></div />
           <div className="text-center mb-16"></div />
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">NotFoundPage</h1 />
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">Professional NotFoundPage services tailored to your business needs.</p>p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">Professional NotFoundPage services tailored to your business needs.</p>p</
           </div />
         </div />
       </section />

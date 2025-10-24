@@ -31,7 +31,7 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
+  ];
 
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -44,7 +44,7 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
             </div />
           </div />
           </div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (</div />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{benefits.map((benefit, index) =</ (</div />
               <div key={index} className="flex items-start space-x-3"></div />
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" / />
                 <p className="text-gray-300 text-lg">{benefit}</p />

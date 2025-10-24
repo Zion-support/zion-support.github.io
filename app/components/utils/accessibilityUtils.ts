@@ -8,20 +8,18 @@
 /**
  * Check if an element is visible to screen readers;
  */
-export const isVisibleToScreenReader = (element: HTMLElement): boolean => {
-  const style = window.getComputedStyle(element);
+export const isVisibleToScreenReader = (element: HTMLElement): boolean =>{const style = window.getComputedStyle(element);
   return (
     style.display !== 'none' &&
     style.visibility !== 'hidden' &&
     element.getAttribute('aria-hidden') !== 'true'
   );
-, };
+};
 
 /**
  * Get accessible name for an element;
  */
-export const getAccessibleName = (element: HTMLElement): string => {
-  // Check aria-label first;
+export const getAccessibleName = (element: HTMLElement): string => {// Check aria-label first;
   const ariaLabel = element.getAttribute('aria-label');
   if (ariaLabel) return ariaLabel;
 
@@ -30,7 +28,7 @@ export const getAccessibleName = (element: HTMLElement): string => {
   if (ariaLabelledBy) {
     const labelElement = document.getElementById(ariaLabelledBy);
     if (labelElement) return labelElement.textContent || '';
-  , }
+  }
 
   // Check for associated label;
   if (element.id) {
@@ -45,9 +43,8 @@ export const getAccessibleName = (element: HTMLElement): string => {
 /**
  * Check if element has proper focus management;
  */
-export const hasProperFocus = (element: HTMLElement): boolean => {
-  return element.tabIndex >= 0 || element.getAttribute('tabindex') !== null;
-, };
+export const hasProperFocus = (element: HTMLElement): boolean => {return element.tabIndex >= 0 || element.getAttribute('tabindex') !== null;
+};
 
 /**
  * Get color contrast ratio between two colors;
@@ -57,7 +54,7 @@ export const getContrastRatio = (color1: string, color2: string): number => {
     const rgb = color.match(/\d+/g);
     if (!rgb || rgb.length !== 3) return 0;
     
-    const [r, g, b] = rgb.map(c => {
+    const [r, g, b] = rgb.map(c =</ {
       const val = parseInt(c) / 255;
       return val <= 0.03928 ? val / 12.92 : Math.pow((val + 0.055) / 1.055, 2.4);
     });
@@ -76,7 +73,7 @@ export const getContrastRatio = (color1: string, color2: string): number => {
 /**
  * Check if color combination meets WCAG standards;
  */
-export const meetsWCAGStandards = (foreground: string, background: string): boolean => {
+export const meetsWCAGStandards = (foreground: string, background: string): boolean =>{
   const ratio = getContrastRatio(foreground, background);
   return ratio >= 4.5; // AA standard;
 };
@@ -84,14 +81,13 @@ export const meetsWCAGStandards = (foreground: string, background: string): bool
 /**
  * Generate ARIA attributes for better accessibility;
  */
-export const generateARIA = (element: HTMLElement, options: {
-  role?: string;
+export const generateARIA = (element: HTMLElement, options: {role?: string;
   label?: string;
   describedBy?: string;
   expanded?: boolean;
   selected?: boolean;
   hidden?: boolean;
-, }) => {
+}) => {
   if (options.role) element.setAttribute('role', options.role);
   if (options.label) element.setAttribute('aria-label', options.label);
   if (options.describedBy) element.setAttribute('aria-describedby', options.describedBy);
@@ -134,8 +130,7 @@ export const isKeyboardAccessible = (element: HTMLElement): boolean => {
 /**
  * Focus management utilities;
  */
-export const focusManagement = {
-  trap: (container: HTMLElement): (() => void) => {
+export const focusManagement = {trap: (container: HTMLElement): (() => void) => {
     const focusableElements = container.querySelectorAll(
       'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select'
     );
@@ -149,7 +144,7 @@ export const focusManagement = {
         if (document.activeElement === firstElement) {
           lastElement.focus();
           e.preventDefault();
-        , }
+        }
       } else {
         if (document.activeElement === lastElement) {
           firstElement.focus();
@@ -166,9 +161,8 @@ export const focusManagement = {
     };
   },
 
-  restore: (element: HTMLElement | null): void => {
-    if (element) element.focus();
-  , }
+  restore: (element: HTMLElement | null): void =</ {if (element) element.focus();
+  }
 };
 
 export default {

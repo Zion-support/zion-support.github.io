@@ -1,8 +1,7 @@
 "use client";
 import React from 'react';
 
-const AdminPage = () => {
-  return;
+const AdminPage = () => {return;
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="$1"></div>
@@ -17,7 +16,6 @@ const AdminPage = () => {
       </div />
     </div />
   );
-, 
 };
 
 export default AdminPage;

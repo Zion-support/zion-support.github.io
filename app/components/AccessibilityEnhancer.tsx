@@ -10,7 +10,7 @@ interface AccessibilityEnhancerProps {
   enableFocusManagement?: boolean;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>= ({
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
   enableHighContrast = true,
@@ -66,18 +66,16 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   }, [enableScreenReaderSupport]);
 
-  useEffect(() => {
-    // Add high contrast support;
+  useEffect(() => {// Add high contrast support;
     if (enableHighContrast) {
       const style = document.createElement('style');
       style.textContent = `
         @media (prefers-contrast: high) {
           * {
             border-color: currentColor !important;
-          , }
-          button, a {
-            border: 2px solid currentColor !important;
-          , }
+          }
+          button, a {border: 2px solid currentColor !important;
+          }
         }
       `;
       document.head.appendChild(style);
@@ -94,7 +92,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         const firstFocusableElement = focusableContent[0] as HTMLElement;
         const lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement;
 
-        element.addEventListener('keydown', (e) => {
+        element.addEventListener('keydown', (e) =</ {
           if (e.key === 'Tab') {
             if (e.shiftKey) {
               if (document.activeElement === firstFocusableElement) {

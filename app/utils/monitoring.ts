@@ -5,19 +5,17 @@
  * Real-time application monitoring, performance tracking, and error reporting;
  */
 
-const performanceConfig = {
-  monitoring: {
+const performanceConfig = {monitoring: {
     enableLongTaskDetection: true,
     enableMemoryMonitoring: true,
     sampleRate: 0.1;
-  , },
-  webVitals: {
-    lcp: { good: 2500, needsImprovement: 4000 , },
-    fid: { good: 100, needsImprovement: 300 , },
-    cls: { good: 0.1, needsImprovement: 0.25 , },
-    fcp: { good: 1800, needsImprovement: 3000 , },
-    ttfb: { good: 800, needsImprovement: 1800 , },
-    inp: { good: 200, needsImprovement: 500 , }
+  },
+  webVitals: {lcp: { good: 2500, needsImprovement: 4000 },
+    fid: {good: 100, needsImprovement: 300 },
+    cls: {good: 0.1, needsImprovement: 0.25 },
+    fcp: {good: 1800, needsImprovement: 3000 },
+    ttfb: {good: 800, needsImprovement: 1800 },
+    inp: {good: 200, needsImprovement: 500 }
   }
 };
 
@@ -28,10 +26,9 @@ export interface PerformanceMetrics {
   fcp?: number;
   ttfb?: number;
   inp?: number;
-}
+};
 
-export interface ErrorReport {
-  message: string;
+  export interface ErrorReport {message: string;
   stack?: string;
   url: string;
   line?: number;
@@ -39,25 +36,22 @@ export interface ErrorReport {
   timestamp: number;
   userAgent: string;
   userId?: string;
-, }
+}
 
-export interface MonitoringConfig {
-  enablePerformanceMonitoring: boolean;
+export interface MonitoringConfig {enablePerformanceMonitoring: boolean;
   enableErrorReporting: boolean;
   enableUserTracking: boolean;
   sampleRate: number;
   endpoint: string;
-, }
+}
 
-class PerformanceMonitor {
-  private config: MonitoringConfig;
-  private metrics: PerformanceMetrics = {, };
+class PerformanceMonitor {private config: MonitoringConfig;
+  private metrics: PerformanceMetrics = {};
   private observers: PerformanceObserver[] = [];
 
-  constructor(config: MonitoringConfig) {
-    this.config = config;
+  constructor(config: MonitoringConfig) {this.config = config;
     this.initializeMonitoring();
-  , }
+  }
 
   private initializeMonitoring(): void {
     if (typeof window === 'undefined') return;
@@ -77,13 +71,13 @@ class PerformanceMonitor {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 
     // LCP - Largest Contentful Paint;
-    const lcpObserver = new PerformanceObserver((list) => {
+    const lcpObserver = new PerformanceObserver((list) =>{
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1] as PerformanceEntry;
       this.metrics.lcp = lastEntry.startTime;
       this.reportMetric('lcp', lastEntry.startTime);
     });
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] , });
+    lcpObserver.observe({entryTypes: ['largest-contentful-paint'] });
     this.observers.push(lcpObserver);
 
     // FID - First Input Delay;
@@ -94,7 +88,7 @@ class PerformanceMonitor {
         this.reportMetric('fid', this.metrics.fid);
       });
     });
-    fidObserver.observe({ entryTypes: ['first-input'] , });
+    fidObserver.observe({entryTypes: ['first-input'] });
     this.observers.push(fidObserver);
 
     // CLS - Cumulative Layout Shift;
@@ -109,7 +103,7 @@ class PerformanceMonitor {
         }
       });
     });
-    clsObserver.observe({ entryTypes: ['layout-shift'] , });
+    clsObserver.observe({entryTypes: ['layout-shift'] });
     this.observers.push(clsObserver);
 
     // FCP - First Contentful Paint;
@@ -122,7 +116,7 @@ class PerformanceMonitor {
         }
       });
     });
-    fcpObserver.observe({ entryTypes: ['paint'] , });
+    fcpObserver.observe({entryTypes: ['paint'] });
     this.observers.push(fcpObserver);
 
     // TTFB - Time to First Byte;
@@ -135,7 +129,7 @@ class PerformanceMonitor {
         }
       });
     });
-    ttfbObserver.observe({ entryTypes: ['navigation'] , });
+    ttfbObserver.observe({entryTypes: ['navigation'] });
     this.observers.push(ttfbObserver);
   }
 
@@ -151,8 +145,7 @@ class PerformanceMonitor {
       });
     });
 
-    try {
-      longTaskObserver.observe({ entryTypes: ['longtask'] , });
+    try {longTaskObserver.observe({ entryTypes: ['longtask'] });
       this.observers.push(longTaskObserver);
     } catch (error) {
       console.warn('Long task observation not supported:', error);
@@ -177,8 +170,7 @@ class PerformanceMonitor {
     setInterval(checkMemory, 30000); // Check every 30 seconds;
   }
 
-  private setupErrorHandling(): void {
-    if (typeof window === 'undefined') return;
+  private setupErrorHandling(): void {if (typeof window === 'undefined') return;
 
     // Global error handler;
     window.addEventListener('error', (event) => {
@@ -190,13 +182,12 @@ class PerformanceMonitor {
         column: event.colno,
         timestamp: Date.now(),
         userAgent: navigator.userAgent;
-      , });
+      });
     });
 
     // Unhandled promise rejection handler;
-    window.addEventListener('unhandledrejection', (event) => {
-      this.reportError({
-        message: `Unhandled Promise Rejection: ${event.reason, }`,
+    window.addEventListener('unhandledrejection', (event) => {this.reportError({
+        message: `Unhandled Promise Rejection: ${event.reason}`,
         stack: event.reason?.stack,
         url: window.location.href,
         timestamp: Date.now(),
@@ -205,8 +196,7 @@ class PerformanceMonitor {
     });
   }
 
-  private reportMetric(name: string, value: number): void {
-    if (Math.random() > this.config.sampleRate) return;
+  private reportMetric(name: string, value: number): void {if (Math.random() </ this.config.sampleRate) return;
 
     const metric = {
       name,
@@ -214,7 +204,7 @@ class PerformanceMonitor {
       timestamp: Date.now(),
       url: window.location.href,
       userAgent: navigator.userAgent;
-    , };
+    };
 
     this.sendToEndpoint('/api/metrics', metric);
   }
@@ -223,13 +213,10 @@ class PerformanceMonitor {
     this.sendToEndpoint('/api/errors', error);
   }
 
-  private async sendToEndpoint(endpoint: string, data: any): Promise<void> {
-    try {
-      await fetch(`${this.config.endpoint, }${endpoint}`, {
-        method: 'POST',
+  private async sendToEndpoint(endpoint: string, data: any): Promise<void>{try {
+      await fetch(`${this.config.endpoint}${endpoint}`, {method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        },
+          'Content-Type': 'application/json'},
         body: JSON.stringify(data)
       , });
     } catch (error) {
@@ -242,27 +229,26 @@ class PerformanceMonitor {
   }
 
   public disconnect(): void {
-    this.observers.forEach(observer => observer.disconnect());
+    this.observers.forEach(observer =</ observer.disconnect());
     this.observers = [];
   }
 }
 
 // Default configuration;
-const defaultConfig: MonitoringConfig = {
-  enablePerformanceMonitoring: true,
+const defaultConfig: MonitoringConfig = {enablePerformanceMonitoring: true,
   enableErrorReporting: true,
   enableUserTracking: false,
   sampleRate: 0.1,
   endpoint: ''
-, };
+};
 
 // Create singleton instance;
 let monitor: PerformanceMonitor | null = null;
 
-export const initializeMonitoring = (config: Partial<MonitoringConfig> = {, }): PerformanceMonitor => {
+export const initializeMonitoring = (config: Partial<MonitoringConfig>= {, }): PerformanceMonitor => {
   if (monitor) {
     return monitor;
-  }
+  };
 
   const finalConfig = { ...defaultConfig, ...config };
   monitor = new PerformanceMonitor(finalConfig);
@@ -273,7 +259,7 @@ export const getPerformanceMetrics = (): PerformanceMetrics => {
   return monitor?.getMetrics() || {};
 };
 
-export const disconnectMonitoring = (): void => {
+export const disconnectMonitoring = (): void =</ {
   monitor?.disconnect();
   monitor = null;
 };

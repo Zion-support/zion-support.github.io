@@ -3,13 +3,10 @@ import React, { useState, useEffect } from 'react'
 import { X } from 'lucide-react'
 import { Download } from 'lucide-react'
 
-interface BeforeInstallPromptEvent extends Event {
-  prompt(): Promise<void />
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' , } />
-}
+interface BeforeInstallPromptEvent extends Event {prompt(): Promise<void />
+  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' } />}
 
-const PWAInstaller: React.FC = () => {
-  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null)
+const PWAInstaller: React.FC = () =</ {const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null)
   const [showInstallPrompt, setShowInstallPrompt] = useState(false)
   const [isInstalled, setIsInstalled] = useState(false)
 
@@ -19,17 +16,15 @@ const PWAInstaller: React.FC = () => {
   return;
       if (window.matchMedia('(display-mode: standalone)').matches) {
         setIsInstalled(true)
-      , 
-}
+      }
     }
     checkInstalled()
 
     // Listen for beforeinstallprompt event;
-    const handleBeforeInstallPrompt = (e: Event) => {
-      e.preventDefault()
+    const handleBeforeInstallPrompt = (e: Event) => {e.preventDefault()
       setDeferredPrompt(e as BeforeInstallPromptEvent)
       setShowInstallPrompt(true)
-    , }
+    }
 
     // Listen for appinstalled event;
     const handleAppInstalled = () => {
@@ -66,7 +61,7 @@ const PWAInstaller: React.FC = () => {
     }
   }
 
-  const handleDismiss = () => {
+  const handleDismiss = () =</ {
   return;
     setShowInstallPrompt(false);
     // Don&apos;t show again for this session;
@@ -92,12 +87,11 @@ const PWAInstaller: React.FC = () => {
               <p className="text-gray-300 text-xs">Get quick access to Zion Tech Group</p />
             </div />
           </div />
-          <button;
-            onClick={handleDismiss}
+          <button onClick={handleDismiss}
             className="text-gray-400 hover: text-white transition-colors"
             aria-label="Dismiss install prompt"
           ></button;
-            onClick={handleDismiss, }
+            onClick={handleDismiss}
             className="text-gray-400 hover: text-white transition-colors"
             aria-label="Dismiss install prompt"
           >
@@ -105,18 +99,10 @@ const PWAInstaller: React.FC = () => {
           </button />
         </div />
         <div className="space-y-2"></div />
-          <button;
-            onClick={handleInstallClick, }
-            className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 text-sm font-medium"
-           />
-            Install Now;
-          </button />
-          <button;
-            onClick={handleDismiss, }
-            className="w-full bg-transparent border border-gray-600 text-gray-300 px-4 py-2 rounded-lg hover: bg-slate-700 hover:text-white transition-all duration-300 text-sm"
-           />
-            Not Now;
-          </button />
+          <button onClick={handleInstallClick}
+            className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 text-sm font-medium" />Install Now</button />
+          <button onClick={handleDismiss}
+            className="w-full bg-transparent border border-gray-600 text-gray-300 px-4 py-2 rounded-lg hover: bg-slate-700 hover:text-white transition-all duration-300 text-sm" />Not Now</button />
         </div />
         <div className="mt-3 text-xs text-gray-400"></div />
           <p>• Faster loading</p />

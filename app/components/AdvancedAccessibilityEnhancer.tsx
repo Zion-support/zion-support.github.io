@@ -16,7 +16,7 @@ interface AdvancedAccessibilityEnhancerProps {
   enableVoiceNavigation?: boolean;
 }
 
-const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({
+const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps>= ({
   enableKeyboardNavigation = true,
   enableScreenReader = true,
   enableHighContrast = true,
@@ -27,18 +27,16 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
   enableMotionReduction = true,
   enableFontScaling = true,
   enableVoiceNavigation = true;
-}) => {
-  const [accessibilitySettings, setAccessibilitySettings] = useState({
+}) => {const [accessibilitySettings, setAccessibilitySettings] = useState({
     highContrast: false,
     reducedMotion: false,
     fontSize: 'normal',
     screenReader: false,
     keyboardNavigation: false;
-  , })
+  })
 
   // Detect user preferences;
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
+  useEffect(() => {if (typeof window === 'undefined') return;
     // Check for reduced motion preference;
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     // Check for high contrast preference;
@@ -49,7 +47,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
       ...prev,
       reducedMotion: prefersReducedMotion,
       highContrast: prefersHighContrast;
-    , }))
+    }))
   }, [])
 
   // Apply accessibility settings;
@@ -75,15 +73,14 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
   }, [accessibilitySettings])
 
   // Keyboard navigation handler;
-  const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if (!enableKeyboardNavigation) return;
+  const handleKeyDown = useCallback((event: KeyboardEvent) => {if (!enableKeyboardNavigation) return;
     // Skip to main content;
     if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
       const mainContent = document.querySelector('main')
       if (mainContent) {
         (mainContent as HTMLElement).focus()
         event.preventDefault()
-      , }
+      }
     }
 
     // Escape key to close modals;
@@ -187,43 +184,35 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     }
 
     window.addEventListener('voiceCommand', handleVoiceCommand)
-    return () => window.removeEventListener('voiceCommand', handleVoiceCommand)
+    return () =</ window.removeEventListener('voiceCommand', handleVoiceCommand)
   }, [enableVoiceNavigation])
 
   return (
     <div className="accessibility-enhancer">
       {/* Accessibility Controls */}
-      <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 , }} />
-        <button;
-          onClick={() => setAccessibilitySettings(prev => ({ ...prev, highContrast: !prev.highContrast , }))}
+      <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }} />
+        <button onClick={() =>setAccessibilitySettings(prev => ({ ...prev, highContrast: !prev.highContrast }))}
           className="accessibility-toggle"
           aria-label="Toggle high contrast"
-        >
-          High Contrast;
-        </button />
-        <button;
-          onClick={() => setAccessibilitySettings(prev => ({ ...prev, reducedMotion: !prev.reducedMotion , }))}
+        </
+          High Contrast</button />
+        <button onClick={() =>setAccessibilitySettings(prev => ({ ...prev, reducedMotion: !prev.reducedMotion }))}
           className="accessibility-toggle"
           aria-label="Toggle reduced motion"
-        >
-          Reduced Motion;
-        </button />
-        <button;
-          onClick={() => setAccessibilitySettings(prev => ({ 
+        </
+          Reduced Motion</button />
+        <button onClick={() =>setAccessibilitySettings(prev => ({ 
             ...prev, 
             fontSize: prev.fontSize === 'normal' ? 'large' : 'normal' 
-          , }))}
+          }))}
           className="accessibility-toggle"
           aria-label="Toggle font size"
-        >
-          Large Text;
-        </button />
+        </
+          Large Text</button />
       </div />
       {/* Skip Link */}
       {enableSkipLinks && (
-        <a href="#main-content" className="skip-link" />
-          Skip to main content;
-        </a />
+        <a href="#main-content" className="skip-link" />Skip to main content</a />
       )}
     </div />
   )

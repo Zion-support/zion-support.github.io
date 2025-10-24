@@ -4,16 +4,13 @@ interface AnalyticsProps {
   className?: string;
 }
 
-const Analytics: React.FC = () => {
-  useEffect(() => {
-    const initAnalytics = () => {
+const Analytics: React.FC = () =>{useEffect(() => {
+    const initAnalytics = () =</ {
   return;
       if (typeof window !== "undefined" && window.gtag) {
         window.gtag("config", "GA_MEASUREMENT_ID", {
           page_title: document.title,
-          page_location: window.location.href,
-        
-})
+          page_location: window.location.href})
       }
     }
     initAnalytics()

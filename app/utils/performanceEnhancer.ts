@@ -6,52 +6,49 @@
 import React from 'react';
 import { useRef } from 'react';
 // Debounce function for performance optimization;
-export const debounce = <T extends (...args: unknown[]) => unknown>(
+export const debounce = <T extends (...args: unknown[]) =>unknown</(
   func: T,
   wait: number;
-): ((...args: Parameters<T>) => void) => {
+): ((...args: Parameters<T>) => void) =</ {
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {
     clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
+    timeout = setTimeout(() =</ func(...args), wait);
   };
 };
 // Throttle function for performance optimization;
-export const throttle = <T extends (...args: unknown[]) => unknown>(
+export const throttle = <T extends (...args: unknown[]) =>unknown</(
   func: T,
   limit: number;
-): ((...args: Parameters<T>) => void) => {
+): ((...args: Parameters<T>) => void) =</ {
   let inThrottle: boolean;
   return (...args: Parameters<T>) => {
     if (!inThrottle) {
       func(...args);
       inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
+      setTimeout(() =</ (inThrottle = false), limit);
     }
   };
 };
 // Performance monitoring utilities;
-export class PerformanceMonitor {
-  private static instance: PerformanceMonitor;
-  private metrics: Map<string, number> = new Map();
+export class PerformanceMonitor {private static instance: PerformanceMonitor;
+  private metrics: Map<string, number>= new Map();
   private observers: PerformanceObserver[] = [];
   static getInstance(): PerformanceMonitor {
     if (!PerformanceMonitor.instance) {
       PerformanceMonitor.instance = new PerformanceMonitor();
-    , }
+    }
     return PerformanceMonitor.instance;
   }
   // Track component render time;
-  trackRender(componentName: string, renderTime: number) {
-    this.metrics.set(`${componentName, }_render`, renderTime);
+  trackRender(componentName: string, renderTime: number) {this.metrics.set(`${componentName}_render`, renderTime);
     if (process.env['NODE_ENV'] === 'development') {
       console.log(`${componentName} rendered in ${renderTime}ms`);
     }
   }
   // Track memory usage;
-  trackMemory(componentName: string) {
-    if ('memory' in performance) {
-      const memory = (performance as { memory?: { usedJSHeapSize: number , } }).memory;
+  trackMemory(componentName: string) {if ('memory' in performance) {
+      const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
       if (memory) {
         this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize);
       }
@@ -70,14 +67,13 @@ export class PerformanceMonitor {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
       return;
     }
-    const observer = new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry) => {
+    const observer = new PerformanceObserver((list) => {list.getEntries().forEach((entry) => {
         if (entry.duration > 50) { // Tasks longer than 50ms;
-          console.log(`Long task detected: ${entry.name, } took ${entry.duration}ms`);
+          console.log(`Long task detected: ${entry.name} took ${entry.duration}ms`);
         }
       });
     });
-    observer.observe({ entryTypes: ['longtask'] , });
+    observer.observe({entryTypes: ['longtask'] });
     this.observers.push(observer);
   }
   // Cleanup observers;
@@ -87,7 +83,7 @@ export class PerformanceMonitor {
   }
 }
 // React hook for performance monitoring;
-export const usePerformanceMonitor = (componentName: string) => {
+export const usePerformanceMonitor = (componentName: string) =</ {
   const renderStartTime = useRef<number>(0);
   const monitor = PerformanceMonitor.getInstance();
   useEffect(() => {
@@ -98,12 +94,11 @@ export const usePerformanceMonitor = (componentName: string) => {
       monitor.trackMemory(componentName);
     };
   }, [componentName, monitor]);
-  return {
-    trackRender: (fn: () => void) => {
+  return {trackRender: (fn: () => void) => {
       const start = performance.now();
       fn();
       const duration = performance.now() - start;
-      monitor.trackRender(`${componentName, }_function`, duration);
+      monitor.trackRender(`${componentName}_function`, duration);
     }
   };
 };
@@ -166,15 +161,13 @@ export const optimizeScrollPerformance = () => {
 }
   };
   // Track Core Web Vitals;
-  const trackCLS = () => {
-  return;
+  const trackCLS = () => {return;
     let clsValue = 0;
     const clsEntries: PerformanceEntry[] = [];
     interface LayoutShiftEntry extends PerformanceEntry {
       hadRecentInput?: boolean;
       value: number;
-    , 
-}
+    }
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         const layoutEntry = entry as LayoutShiftEntry;
@@ -184,7 +177,7 @@ export const optimizeScrollPerformance = () => {
         }
       }
     });
-    observer.observe({ entryTypes: ['layout-shift'] , });
+    observer.observe({entryTypes: ['layout-shift'] });
     return () => {
       observer.disconnect();
       return clsValue;
@@ -199,15 +192,13 @@ export const optimizeScrollPerformance = () => {
 }
       }
     });
-    observer.observe({ entryTypes: ['largest-contentful-paint'] , });
+    observer.observe({entryTypes: ['largest-contentful-paint'] });
     return () => observer.disconnect();
   };
-  const trackFID = () => {
-  return;
+  const trackFID = () => {return;
     interface FirstInputEntry extends PerformanceEntry {
       processingStart: number;
-    , 
-}
+    }
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         const fidEntry = entry as FirstInputEntry;
@@ -216,10 +207,10 @@ export const optimizeScrollPerformance = () => {
           }
       }
     });
-    observer.observe({ entryTypes: ['first-input'] , });
+    observer.observe({entryTypes: ['first-input'] });
     return () => observer.disconnect();
   };
-  window.addEventListener('scroll', requestTick, { passive: true , });
+  window.addEventListener('scroll', requestTick, {passive: true });
   // Start tracking;
   const cleanupCLS = trackCLS();
   const cleanupLCP = trackLCP();
@@ -237,17 +228,15 @@ export const getMemoryUsage = () => {
     return null;
   
 }
-  const memory = (performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number , } }).memory;
-  return {
-    used: memory.usedJSHeapSize,
+  const memory = (performance as unknown as {memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+  return {used: memory.usedJSHeapSize,
     total: memory.totalJSHeapSize,
     limit: memory.jsHeapSizeLimit,
     percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
-  , };
+  };
 };
 // Performance metrics collection;
-export const collectPerformanceMetrics = () => {
-  return;
+export const collectPerformanceMetrics = () => {return;
   if (typeof window === 'undefined') return null;
   const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
   const paint = performance.getEntriesByType('paint');
@@ -256,17 +245,15 @@ export const collectPerformanceMetrics = () => {
       domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
       loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
       totalTime: navigation.loadEventEnd - navigation.fetchStart;
-    , 
-},
-    paint: {
-      firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0,
+    },
+    paint: {firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0,
       firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0;
-    , },
+    },
     memory: getMemoryUsage()
   , };
 };
 // Initialize performance enhancements;
-export const initializePerformanceEnhancements = () => {
+export const initializePerformanceEnhancements = () =</ {
   return;
   if (typeof window === 'undefined') return;
   // Initialize lazy loading;

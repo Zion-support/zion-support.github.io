@@ -1,13 +1,12 @@
+'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { 
-  Bars3Icon, 
+import {
+  Bars3Icon,
   XMarkIcon,
   HomeIcon,
-  InformationCircleIcon,
-  BriefcaseIcon,
-  PhoneIcon,
+  UserGroupIcon,
   DocumentTextIcon,
   AcademicCapIcon,
   PlayIcon,
@@ -15,177 +14,166 @@ import {
   ShieldCheckIcon,
   CurrencyDollarIcon,
   CogIcon,
-  ChevronDownIcon;
+  ChevronDownIcon
 } from '@heroicons/react/24/outline';
 
 const Navigation = () => {
-  return;
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
 
-  // Handle scroll effect;
+  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-    
-};
+    };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const navigation = [
-    { name: 'Home', href: '/', icon: HomeIcon , },
-    { name: 'About', href: '/about', icon: InformationCircleIcon , },
-    { 
-      name: 'Services', 
-      href: '/services', 
-      icon: BriefcaseIcon,
-      submenu: [
-        { name: 'AI Solutions', href: '/ai-solutions' , },
-        { name: 'Cybersecurity', href: '/cybersecurity' , },
-        { name: 'Cloud Infrastructure', href: '/cloud-solutions' , },
-        { name: 'Digital Transformation', href: '/digital-transformation' , },
-        { name: '5G Solutions', href: '/5g-solutions' , },
-        { name: 'Micro SaaS', href: '/micro-saas' , }
-      ]
-    },
-    { name: 'Solutions', href: '/solutions', icon: CogIcon , },
-    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon , },
-    { name: 'Blog', href: '/blog', icon: DocumentTextIcon , },
-    { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon , },
-    { name: 'Demo', href: '/demo', icon: PlayIcon , },
-    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon , },
-    { name: 'Contact', href: '/contact', icon: PhoneIcon , }
+    { name: 'Home', href: '/', icon: HomeIcon },
+    { name: 'About', href: '/about', icon: UserGroupIcon },
+    { name: 'Services', href: '/services', icon: CogIcon },
+    { name: 'Contact', href: '/contact', icon: DocumentTextIcon },
   ];
 
-  const isActive = (path: string) => {
-    return router.pathname === path;
-  , };
+  const services = [
+    { name: 'AI Services', href: '/ai-services', icon: AcademicCapIcon },
+    { name: 'Blockchain', href: '/blockchain', icon: ShieldCheckIcon },
+    { name: 'Cloud Solutions', href: '/cloud-migration-pro', icon: CurrencyDollarIcon },
+    { name: 'Cybersecurity', href: '/security', icon: ShieldCheckIcon },
+  ];
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-    }`} />
-      <div className="$1"></div>
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */, }
-          <Link href="/" className="flex items-center space-x-2" />
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">Z</span />
-            </div />
-            <span className="text-white font-bold text-xl">Zion Tech Group</span />
-          </Link />
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md border-b border-gray-700/50' : 'bg-transparent'
+    }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Link href="/" className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">Z</span>
+              </div>
+              <span className="text-white font-bold text-xl">Zion Tech Group</span>
+            </Link>
+          </div>
+
           {/* Desktop Navigation */}
-          <div className="$1"></div>
-            {navigation.map((item) => {
-              const Icon = item.icon;
-              return (
-                <div key={item.name, } className="relative group"></div key={item.name} className="relative group">
-                  <Link;
-                    href={item.href}
-                    className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                      isActive(item.href)
-                        ? 'bg-purple-600 text-white'
-                        : 'text-gray-300 hover: text-white hover:bg-slate-800'
-                    , }`}
-                    onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
-                    onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
-                  >
-                    <Icon className="w-4 h-4" / />
-                    <span>{item.name}</span />
-                    {item.submenu && <ChevronDownIcon className="w-4 h-4 ml-1" />}
-                  </Link />
-                  {/* Dropdown Menu */}
-                  {item.submenu && isServicesOpen && (
-                    <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
-                      {item.submenu.map((subItem) => (
-                        <Link key={subItem.name}
-                          href={subItem.href}
-                          className="block px-4 py-2 text-sm text-gray-300 hover: text-white hover:bg-slate-700"
-                        ></Link key={subItem.name, }
-                          href={subItem.href}
-                          className="block px-4 py-2 text-sm text-gray-300 hover: text-white hover:bg-slate-700"
-                        >
-                          {subItem.name, }
-                        </Link />
-                      ))}
-                    </div />
-                  )}
-                </div />
-              );
-            })}
-          </div />
-          {/* CTA Button */}
-          <div className="$1"></div>
-            <Link;
-              href="/contact"
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
-             />
-              Get Started;
-            </Link />
-          </div />
-          {/* Mobile menu button */, }
-          <div className="$1"></div>
-            <button;
-              onClick={() => setIsOpen(!isOpen), }
-              className="text-gray-300 hover: text-white p-2"
-            >
-              {isOpen ? <XMarkIcon className="w-6 h-6" /> : <Bars3Icon className="w-6 h-6" />, }
-            </button />
-          </div />
-        </div />
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="$1"></div>
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg mt-2">
-              {navigation.map((item) => {
-                const Icon = item.icon;
-                return (
-                  <div key={item.name, }></div key={item.name}>
-                    <Link;
-                      href={item.href}
-                      onClick={() => setIsOpen(false)}
-                      className={`flex items-center space-x-3 px-3 py-2 rounded-md text-base font-medium transition-colors ${
-                        isActive(item.href)
-                          ? 'bg-purple-600 text-white'
-                          : 'text-gray-300 hover: text-white hover:bg-slate-700'
-                      , }`}
-                    >
-                      <Icon className="w-5 h-5" / />
-                      <span>{item.name}</span />
-                    </Link />
-                    {item.submenu && (
-                      <div className="ml-8 space-y-1">
-                        {item.submenu.map((subItem) => (
-                          <Link key={subItem.name}
-                            href={subItem.href}
-                            className="text-gray-400 hover: text-white block px-3 py-2 rounded-md text-sm"
-                            onClick={() => setIsOpen(false), }
-                          >
-                            {subItem.name}
-                          </Link />
-                        ))}
-                      </div />
-                    )}
-                  </div />
-                );
-              })}
-              <div className="pt-4 border-t border-slate-700">
-                <Link;
-                  href="/contact"
-                  onClick={() => setIsOpen(false)}
-                  className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center"
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-8">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
                 >
-                  Get Started;
-                </Link />
-              </div />
-            </div />
-          </div />
-        )}
-      </div />
-    </nav />
+                  {item.name}
+                </Link>
+              ))}
+              
+              {/* Services Dropdown */}
+              <div className="relative">
+                <button
+                  onClick={() => setIsServicesOpen(!isServicesOpen)}
+                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 flex items-center"
+                >
+                  Services
+                  <ChevronDownIcon className="ml-1 h-4 w-4" />
+                </button>
+                
+                {isServicesOpen && (
+                  <div className="absolute top-full left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
+                    {services.map((service) => (
+                      <Link
+                        key={service.name}
+                        href={service.href}
+                        className="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-slate-700 hover:text-white transition-colors duration-200"
+                        onClick={() => setIsServicesOpen(false)}
+                      >
+                        <service.icon className="mr-3 h-4 w-4" />
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <div className="hidden md:block">
+            <Link
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
+            >
+              Get Started
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-300 hover:text-white p-2 rounded-md"
+            >
+              {isOpen ? (
+                <XMarkIcon className="h-6 w-6" />
+              ) : (
+                <Bars3Icon className="h-6 w-6" />
+              )}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Navigation */}
+      {isOpen && (
+        <div className="md:hidden">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-900/95 backdrop-blur-md border-t border-gray-700/50">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                onClick={() => setIsOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
+            
+            {/* Mobile Services */}
+            <div className="pt-4 pb-3 border-t border-gray-700">
+              <div className="px-3 text-sm font-medium text-white mb-2">Services</div>
+              {services.map((service) => (
+                <Link
+                  key={service.name}
+                  href={service.href}
+                  className="flex items-center px-3 py-2 text-gray-300 hover:text-white text-base font-medium transition-colors duration-200"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <service.icon className="mr-3 h-5 w-5" />
+                  {service.name}
+                </Link>
+              ))}
+            </div>
+            
+            <div className="pt-4">
+              <Link
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white block px-3 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 text-center"
+                onClick={() => setIsOpen(false)}
+              >
+                Get Started
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+    </nav>
   );
 };
 
