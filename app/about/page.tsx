@@ -139,8 +139,4 @@ const AboutPage = () => {
   );
 };
 
-<<<<<<< HEAD
 export default AboutPage;
-=======
-export default AboutPage;
->>>>>>> 3bbbb316823654fcf319acd81f26c406bbae20e6
