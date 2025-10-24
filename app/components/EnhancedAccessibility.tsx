@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import {AccessibilityContextType} from '../types/accessibility';
+import { AccessibilityContextType } from '../types/accessibility';
 import { AccessibilityContext } from '../contexts/AccessibilityContext';
 import { useAccessibility } from '../hooks/useAccessibility';
 
