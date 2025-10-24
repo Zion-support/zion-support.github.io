@@ -3,9 +3,13 @@ import React from 'react'
 export const dynamic = 'force-dynamic'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check, Send, BarChart3, DollarSign, Activity, Lock, FileText, CreditCard, Building2, Sparkles, PieChart } from 'lucide-react'
 
+<<<<<<< HEAD
 const AccessibilityPage: React.FC = () => {
+=======
+const AccessibilityPagePage: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-04fb
   const features = [
     {
       icon: Brain,
@@ -58,7 +62,7 @@ const AccessibilityPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="w-8 h-8" />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Learn More
@@ -85,7 +89,7 @@ const AccessibilityPage: React.FC = () => {
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-8 h-8" />
                         {benefit}
                       </li>
                     ))}
@@ -108,7 +112,7 @@ const AccessibilityPage: React.FC = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-4">
-                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                  <CheckCircle className="w-8 h-8" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
               ))}
@@ -139,4 +143,8 @@ const AccessibilityPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default AccessibilityPage;
+=======
+export default AccessibilityPagePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-04fb
