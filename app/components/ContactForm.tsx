@@ -2,12 +2,14 @@
 import { useState } from 'react';
 import { MessageSquare, Mail, Phone, Send, CheckCircle } from 'lucide-react';
 interface FormData {
-  name: string;,
-    email: string;
-  phone: string;,
-    company: string;
-  message: string;,
-    service: string
+  name: string;
+  email: string;
+  phone: string;
+  company: string;
+  message: string;
+  service: string;
+}
+
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -15,20 +17,23 @@ const ContactForm: React.FC = () => {
     phone: '',
     company: '',
     message: '',
-    service: ''})
-  const [isSubmitting, setIsSubmitting] = useState(false)
+    service: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false)
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
   setFormData({
-      ...formData
+      ...formData,
       [e.target.name]: e.target.value
-})
+    });
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+    e.preventDefault();
+    setIsSubmitting(true);
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000)
-    setIsSubmitting(false)
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    setIsSubmitting(false);
     setIsSubmitted(true)
     // Reset form after 3 seconds
     setTimeout(() => {
@@ -58,6 +63,9 @@ const ContactForm: React.FC = () => {
         <h3 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>
         <p className="text-gray-300">Thank you for reaching out. We&apos;ll get back to you soon.</p>
       </div>
+    );
+  }
+
   return (
     <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
       <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>

@@ -1,12 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Link from 'next/link';
-import { CheckCircleIcon;
-  UserGroupIcon
-  LightBulbIcon
-  ShieldCheckIcon
-  RocketLaunchIcon
-  HeartIcon
+import { 
+  CheckCircleIcon,
+  UserGroupIcon,
+  LightBulbIcon,
+  ShieldCheckIcon,
+  RocketLaunchIcon,
+  HeartIcon,
   ArrowRightIcon
   StarIcon
 } from '@heroicons/react/24/outline'  );

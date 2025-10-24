@@ -1,10 +1,15 @@
-import React, { createContext, useContext, useEffect, ReactNode } from &quot;react&quot;
+import React, { createContext, useContext, useEffect, ReactNode } from "react";
+
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void}
+    gtag: (...args: any[]) => void;
+  }
+}
+
 interface AnalyticsContextType {
-  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void
-  trackPageView: (pageName: string) => void}
+  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void;
+  trackPageView: (pageName: string) => void;
+}
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined
 export const useAnalytics = () => {
@@ -13,8 +18,11 @@ export const useAnalytics = () => {
     throw new Error(&quot;useAnalytics must be used within an AnalyticsProvider&quot;)
   return context
 interface AnalyticsProviderProps {
-  children: ReactNode}
-exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => {useEffect(() => {
+  children: ReactNode;
+}
+
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  useEffect(() => {
     if (type of windo w !==&quot;undefined&quot;) {
       // Google Analytics
       if (process.env.NODE_ENV === &quot;production&quot;) {
@@ -46,12 +54,7 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children}) => 
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
-<<<<<<< HEAD
-  )
-}
- AnalyticsProvider
-  )
-}
-=======
-export default AnalyticsProvider
->>>>>>> cursor/fix-errors-and-merge-to-main-996d
+  );
+};
+
+export default AnalyticsProvider;

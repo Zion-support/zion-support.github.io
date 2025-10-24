@@ -13,22 +13,24 @@ interface ContentNewsletterSignupProps {
   features?: Array<{
     icon: React.ComponentType<{ className?: string }>
     text: string}>
-  onSubscribe?: (email: string) => void}constContentNewsletterSignup:React.FC<ContentNewsletterSignupProp s>= ({
-  title= &quot;Stay Updated with Our LatestInsights&quot;
-  subtitle= &quot;Get exclusive content, industry insights, and early access to new features delivered to yourinbox.&quot;
-  placeholder= &quot;Enter your emailaddress&quot;
-  buttonText= &quot;Subscribe&quot;
-  features= [
-    { icon: Star, text: &quot;Exclusive content&quot
+  onSubscribe?: (email: string) => void;
+}
+
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
+  title = "Stay Updated with Our Latest Insights",
+  subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
+  placeholder = "Enter your email address",
+  buttonText = "Subscribe",
+  features = [
+    { icon: Star, text: "Exclusive content" },
+    {
+      icon: Users, text: "Industry insights"
   },
   {
-    icon: Users, text: &quot;Industry insights&quot
+    icon: Globe, text: "Global updates&quot
   },
   {
-    icon: Globe, text: &quot;Global updates&quot
-  },
-  {
-    icon: Zap, text: &quot;Early access&quot,
+    icon: Zap, text: "Early access&quot,
   ]
   onSubscribe
 }) => {
@@ -97,5 +99,7 @@ interface ContentNewsletterSignupProps {
         </div>
       </div>
     </div>
+  );
+};
 
-export default ContentNewsletterSignup
+export default ContentNewsletterSignup;

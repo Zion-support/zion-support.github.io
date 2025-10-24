@@ -1,30 +1,35 @@
 'use client';
 import React, { useEffect, useCallback, useState } from 'react';
 interface PerformanceMetrics {
-  lcp: number,
-    fid: number
-  cls: number,
-    fcp: number
-  ttfb: number}
+  lcp: number;
+  fid: number;
+  cls: number;
+  fcp: number;
+  ttfb: number;
+}
+
 interface AdvancedPerformanceOptimizerProps {
-  enableWebVitals?: boolean
-  enableAdvancedCaching?: boolean
-  enableImageOptimization?: boolean
-  enablePreloading?: boolean
-  enableServiceWorker?: boolean
+  enableWebVitals?: boolean;
+  enableAdvancedCaching?: boolean;
+  enableImageOptimization?: boolean;
+  enablePreloading?: boolean;
+  enableServiceWorker?: boolean;
+}
+
 const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({
-  enableWebVitals = true
-  enableAdvancedCaching = true
-  enableImageOptimization = true
-  enablePreloading = true
+  enableWebVitals = true,
+  enableAdvancedCaching = true,
+  enableImageOptimization = true,
+  enablePreloading = true,
   enableServiceWorker = true
 }) => {
   const [performanceMetrics, setPerformanceMetrics] = useState<PerformanceMetrics>({
     lcp: 0,
-    fid: 0
+    fid: 0,
     cls: 0,
-    fcp: 0
-    ttfb: 0})
+    fcp: 0,
+    ttfb: 0
+  });
   // Web Vitals monitoring
   const measureWebVitals = useCallback(() => {
     if (enableWebVitals && typeof window !== 'undefined') {
@@ -33,39 +38,41 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         const entries = list.getEntries()
         const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
         setPerformanceMetrics(prev => ({
-          ...prev
-          lcp: lastEntry.renderTime || lastEntry.loadTime || 0})
-      })
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
+          ...prev,
+          lcp: lastEntry.renderTime || lastEntry.loadTime || 0
+        }));
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
       // Measure First Input Delay
       const fidObserver = new PerformanceObserver((list) => {
-  const entries = list.getEntries()
+        const entries = list.getEntries();
         entries.forEach((entry: PerformanceEntry) => {
-          const fid = (entry as any).processingStart - entry.startTime
+          const fid = (entry as any).processingStart - entry.startTime;
           setPerformanceMetrics(prev => ({
-            ...prev
+            ...prev,
             fid
-})
-        })
-      })
-      fidObserver.observe({ entryTypes: ['first-input'] })
+          }));
+        });
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
       // Measure Cumulative Layout Shift
-      let clsValue = 0
+      let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
         entries.forEach((entry: PerformanceEntry) => {
           if (!(entry as any).hadRecentInput) {
             clsValue += entry.value
             setPerformanceMetrics(prev => ({
-              ...prev
-              cls: clsValue})
-        })
-      })
-      clsObserver.observe({ entryTypes: ['layout-shift'] })
-      // Measure First Contentful Paint
-      const fcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
-        entries.forEach(entry => {
+              ...prev,
+              cls: clsValue
+            }));
+          });
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+        // Measure First Contentful Paint
+        const fcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach(entry => {
           setPerformanceMetrics(prev => ({
             ...prev
             fcp: entry.startTime})

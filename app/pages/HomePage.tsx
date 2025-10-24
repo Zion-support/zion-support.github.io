@@ -1,12 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Link from 'next/link';
-import { ArrowRightIcon;
-  ShieldCheckIcon
-  CloudIcon
-  CpuChipIcon
-  ChartBarIcon
-  GlobeAltIcon
+import { 
+  ArrowRightIcon,
+  ShieldCheckIcon,
+  CloudIcon,
+  CpuChipIcon,
+  ChartBarIcon,
+  GlobeAltIcon,
   PhoneIcon
   EnvelopeIcon
   MapPinIcon
