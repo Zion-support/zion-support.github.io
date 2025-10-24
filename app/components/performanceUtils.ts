@@ -5,7 +5,7 @@ export const measurePerformance = (name: string, fn: () => void) => {
   console.log(`${name} took ${end - start} milliseconds`);
 };
 
-export const debounce = <T extends (..._args: any[]) => any>(
+export const debounce = <T extends (..._args: unknown[]) => unknown>(
   func: T,
   wait: number
 ): ((..._args: Parameters<T>) => void) => {
@@ -16,7 +16,7 @@ export const debounce = <T extends (..._args: any[]) => any>(
   };
 };
 
-export const throttle = <T extends (..._args: any[]) => any>(
+export const throttle = <T extends (..._args: unknown[]) => unknown>(
   func: T,
   limit: number
 ): ((..._args: Parameters<T>) => void) => {

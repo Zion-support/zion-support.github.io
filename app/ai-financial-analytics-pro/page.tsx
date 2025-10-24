@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, Calculator, Building2, Wallet, PiggyBank, BarChart, TrendingUp, CheckCircle, Brain, Settings, BarChart3, Shield, Target, Zap, Globe, DollarSign, Activity, Lock, FileText, CreditCard, Database, Star, Sparkles, PieChart, Send, Clock } from 'lucide-react';
+import { ArrowRight, Calculator, Building2, Wallet, TrendingUp, CheckCircle, Brain, BarChart3, Shield, Target, Zap, Globe, DollarSign, Activity, Lock, FileText, CreditCard, Database, Star, Sparkles, PieChart } from 'lucide-react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
