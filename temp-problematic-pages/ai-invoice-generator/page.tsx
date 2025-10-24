@@ -3,28 +3,35 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, FileText, Calculator, CheckCircle, Brain, Settings, Target, Users, Calendar, Zap, DollarSign, PieChart, Activity, FileText as Invoice, CreditCard, Wallet, Lock, Sparkles, Upload, Download, Send, Edit, Building2, ShoppingCart, Clock, Shield } from 'lucide-react';
 
+export const dynamic = 'force-dynamic';
+
+
 const AiInvoiceGeneratorPage: React.FC = () => {
   const features = [
     {
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
+      icon: Brain,
+      iconProps: { className: "w-8 h-8 text-cyan-400" },
       title: 'AI-Powered Generation',
       description: 'Automatically generate professional invoices using AI that understands your business patterns and client preferences.',
       benefits: ['Smart templates', 'Auto-population', 'Brand consistency', 'Learning algorithms']
     },
     {
-      icon: <Calculator className="w-8 h-8 text-purple-400" />,
+      icon: Calculator,
+      iconProps: { className: "w-8 h-8 text-purple-400" },
       title: 'Automatic Calculations',
       description: 'AI handles all calculations including taxes, discounts, and currency conversions automatically.',
       benefits: ['Tax calculations', 'Discount management', 'Multi-currency', 'Error prevention']
     },
     {
-      icon: <Target className="w-8 h-8 text-green-400" />,
+      icon: Target,
+      iconProps: { className: "w-8 h-8 text-green-400" },
       title: 'Smart Categorization',
       description: 'Intelligent categorization of expenses and services for better financial tracking and reporting.',
       benefits: ['Auto-categorization', 'Expense tracking', 'Financial insights', 'Reporting']
     },
     {
-      icon: <Zap className="w-8 h-8 text-orange-400" />,
+      icon: Zap,
+      iconProps: { className: "w-8 h-8 text-orange-400" },
       title: 'Workflow Automation',
       description: 'Streamline your invoicing process with automated workflows and follow-up reminders.',
       benefits: ['Auto-reminders', 'Payment tracking', 'Workflow automation', 'Time savings']
@@ -35,25 +42,29 @@ const AiInvoiceGeneratorPage: React.FC = () => {
     {
       title: 'Freelancers',
       description: 'Perfect for freelancers who need to create professional invoices quickly',
-      icon: <Users className="w-6 h-6 text-blue-400" />,
+      icon: Users,
+      iconProps: { className: "w-6 h-6 text-blue-400" },
       benefits: ['Quick generation', 'Professional templates', 'Time tracking', 'Client management']
     },
     {
       title: 'Small Business',
       description: 'Ideal for small businesses managing multiple clients and projects',
-      icon: <Building2 className="w-6 h-6 text-green-400" />,
+      icon: Building2,
+      iconProps: { className: "w-6 h-6 text-green-400" },
       benefits: ['Multi-client support', 'Project tracking', 'Team collaboration', 'Scalable pricing']
     },
     {
       title: 'Service Providers',
       description: 'Great for service-based businesses with recurring billing needs',
-      icon: <Settings className="w-6 h-6 text-purple-400" />,
+      icon: Settings,
+      iconProps: { className: "w-6 h-6 text-purple-400" },
       benefits: ['Recurring billing', 'Service templates', 'Automated reminders', 'Payment integration']
     },
     {
       title: 'E-commerce',
       description: 'Perfect for online stores with complex product catalogs and pricing',
-      icon: <ShoppingCart className="w-6 h-6 text-yellow-400" />,
+      icon: ShoppingCart,
+      iconProps: { className: "w-6 h-6 text-yellow-400" },
       benefits: ['Product integration', 'Inventory sync', 'Bulk invoicing', 'Order management']
     }
   ];
@@ -106,10 +117,14 @@ const AiInvoiceGeneratorPage: React.FC = () => {
   ];
 
   const stats = [
-    { number: '95%', label: 'Time Saved', icon: <Clock className="w-6 h-6" /> },
-    { number: '10K+', label: 'Invoices Generated', icon: <FileText className="w-6 h-6" /> },
-    { number: '99.9%', label: 'Accuracy Rate', icon: <Target className="w-6 h-6" /> },
-    { number: '24/7', label: 'Customer Support', icon: <Shield className="w-6 h-6" /> }
+    { number: '95%', label: 'Time Saved', icon: Clock,
+      iconProps: { className: "w-6 h-6" } },
+    { number: '10K+', label: 'Invoices Generated', icon: FileText,
+      iconProps: { className: "w-6 h-6" } },
+    { number: '99.9%', label: 'Accuracy Rate', icon: Target,
+      iconProps: { className: "w-6 h-6" } },
+    { number: '24/7', label: 'Customer Support', icon: Shield,
+      iconProps: { className: "w-6 h-6" } }
   ];
 
   return (

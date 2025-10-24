@@ -1,39 +1,43 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Code, Zap, CheckCircle, Brain, Settings, Target, Users, Calendar, BarChart } from 'lucide-react';
+import { ArrowRight, Cloud, Zap, CheckCircle, Brain, Settings, Target, Users, Calendar, BarChart, Shield } from 'lucide-react';
 
-const APIPage: React.FC = () => {
+const CloudMigrationProPage: React.FC = () => {
   const features = [
     {
-      icon: <Code className="w-8 h-8 text-cyan-400" />,
-      title: 'RESTful API Design',
-      description: 'Well-designed RESTful APIs that are intuitive, scalable, and easy to integrate.'
+      icon: Cloud,
+      iconProps: { className: "w-8 h-8 text-cyan-400" },
+      title: 'Seamless Cloud Migration',
+      description: 'Migrate your applications and data to the cloud with zero downtime and minimal disruption.'
     },
     {
-      icon: <Zap className="w-8 h-8 text-purple-400" />,
-      title: 'High Performance',
-      description: 'Optimized APIs with fast response times and efficient data processing capabilities.'
+      icon: Shield,
+      iconProps: { className: "w-8 h-8 text-purple-400" },
+      title: 'Security & Compliance',
+      description: 'Ensure your cloud infrastructure meets the highest security standards and compliance requirements.'
     },
     {
-      icon: <Brain className="w-8 h-8 text-green-400" />,
-      title: 'AI-Powered Features',
-      description: 'APIs enhanced with AI capabilities for intelligent data processing and automation.'
+      icon: Brain,
+      iconProps: { className: "w-8 h-8 text-green-400" },
+      title: 'AI-Powered Optimization',
+      description: 'Leverage AI to optimize your cloud resources and reduce costs while improving performance.'
     },
     {
-      icon: <Settings className="w-8 h-8 text-orange-400" />,
-      title: 'Easy Integration',
-      description: 'Comprehensive documentation and SDKs for seamless integration with any platform.'
+      icon: Settings,
+      iconProps: { className: "w-8 h-8 text-orange-400" },
+      title: 'Custom Solutions',
+      description: 'Tailored cloud migration strategies that fit your specific business needs and requirements.'
     }
   ];
 
   const benefits = [
-    'Accelerate development with pre-built APIs',
-    'Reduce integration time by 70%',
-    'Ensure security and compliance',
-    'Scale automatically with your business',
-    'Get 24/7 monitoring and support',
-    'Access comprehensive documentation'
+    'Reduce infrastructure costs by 40%',
+    'Improve scalability and flexibility',
+    'Enhance security and compliance',
+    'Increase system reliability',
+    'Enable remote work capabilities',
+    'Future-proof your technology stack'
   ];
 
   return (
@@ -43,10 +47,10 @@ const APIPage: React.FC = () => {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">API Services</span>
+            Cloud Migration <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Pro</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional API development and integration services. Build scalable, secure, and high-performance APIs for your business needs.
+            Transform your business with professional cloud migration services. Seamlessly migrate to the cloud with zero downtime and enhanced security.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -71,17 +75,17 @@ const APIPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Comprehensive API Solutions
+              Professional Cloud Migration Services
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Our API services provide everything you need to build, deploy, and maintain robust APIs for your business.
+              Our cloud migration experts provide comprehensive solutions to move your business to the cloud safely and efficiently.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
                 <div className="mb-6">
-                  <feature.icon className="w-8 h-8 text-cyan-400" />
+                  <feature.icon {...feature.iconProps} />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -97,10 +101,10 @@ const APIPage: React.FC = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Why Choose Our API Services?
+                Why Choose Our Cloud Migration Services?
               </h2>
               <p className="text-lg text-gray-300 mb-8">
-                Our professional API development services help you build robust, scalable, and secure APIs that power your business growth.
+                Our cloud migration experts help you leverage the power of cloud computing to reduce costs, improve scalability, and enhance security.
               </p>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -117,9 +121,9 @@ const APIPage: React.FC = () => {
                   <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-6">
                     <Brain className="w-10 h-10 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">Expert Development</h3>
+                  <h3 className="text-2xl font-bold text-white mb-4">Expert Migration</h3>
                   <p className="text-gray-300">
-                    Our experienced developers use the latest technologies and best practices to build APIs that meet your specific requirements.
+                    Our experienced team ensures a smooth, secure, and cost-effective migration to the cloud with minimal business disruption.
                   </p>
                 </div>
               </div>
@@ -132,17 +136,17 @@ const APIPage: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Build Powerful APIs?
+            Ready to Move to the Cloud?
           </h2>
           <p className="text-xl text-cyan-100 mb-8">
-            Join thousands of businesses already using our API services to accelerate their development and growth.
+            Join thousands of businesses already using our cloud migration services to transform their infrastructure.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact" 
               className="inline-flex items-center px-8 py-3 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
             >
-              Start Your API Project
+              Start Your Cloud Migration
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link 
@@ -158,4 +162,4 @@ const APIPage: React.FC = () => {
   );
 };
 
-export default APIPage;
+export default CloudMigrationProPage;

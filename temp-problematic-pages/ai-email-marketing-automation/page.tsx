@@ -1,90 +1,101 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Calculator, Receipt, BarChart, Target, CheckCircle, Zap, Brain, Settings, Globe, Clock, Shield, TrendingUp, Star, DollarSign, PieChart, Activity, FileText, Database, Building2, CreditCard, Wallet, Lock, Sparkles, Smartphone, Camera, Upload } from 'lucide-react';
+import { ArrowRight, Mail, Target, BarChart, Users, CheckCircle, Zap, Brain, Settings, Globe, Clock, Shield, TrendingUp, Star, MessageCircle, Send, PieChart, Activity, DollarSign, FileText, Database, Building2, CreditCard, Wallet, Lock, Sparkles, ShoppingCart } from 'lucide-react';
 
-const AiExpenseTrackerPage: React.FC = () => {
+export const dynamic = 'force-dynamic';
+
+
+const AiEmailMarketingAutomationPage: React.FC = () => {
   const features = [
     {
-      icon: <Camera className="w-8 h-8 text-cyan-400" />,
-      title: 'Smart Receipt Scanning',
-      description: 'Automatically extract expense data from receipts using advanced OCR and AI technology.',
-      benefits: ['Instant data extraction', 'Multi-language support', 'Automatic categorization', 'Duplicate detection']
+      icon: Brain,
+      iconProps: { className: "w-8 h-8 text-cyan-400" },
+      title: 'AI-Powered Campaigns',
+      description: 'Create intelligent email campaigns that adapt to user behavior and preferences automatically.',
+      benefits: ['Smart segmentation', 'Predictive content', 'Optimal send times', 'Personalization engine']
     },
     {
-      icon: <Brain className="w-8 h-8 text-purple-400" />,
-      title: 'AI-Powered Categorization',
-      description: 'Intelligent expense categorization that learns from your spending patterns and preferences.',
-      benefits: ['Smart categorization', 'Learning algorithms', 'Custom rules', 'Pattern recognition']
+      icon: Target,
+      iconProps: { className: "w-8 h-8 text-purple-400" },
+      title: 'Advanced Segmentation',
+      description: 'Segment your audience with precision using AI-driven behavioral and demographic analysis.',
+      benefits: ['Behavioral triggers', 'Demographic targeting', 'Engagement scoring', 'Lifecycle stages']
     },
     {
-      icon: <BarChart className="w-8 h-8 text-green-400" />,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive spending analytics with insights and recommendations to optimize your budget.',
-      benefits: ['Spending trends', 'Budget alerts', 'Cost optimization', 'ROI analysis']
+      icon: BarChart,
+      iconProps: { className: "w-8 h-8 text-green-400" },
+      title: 'Analytics & Insights',
+      description: 'Comprehensive analytics dashboard with AI-powered insights and recommendations.',
+      benefits: ['Real-time metrics', 'Predictive analytics', 'A/B testing', 'ROI tracking']
     },
     {
-      icon: <Zap className="w-8 h-8 text-orange-400" />,
-      title: 'Automated Workflows',
-      description: 'Streamline expense management with automated approval workflows and policy compliance.',
-      benefits: ['Auto-approval rules', 'Policy compliance', 'Workflow automation', 'Exception handling']
+      icon: Zap,
+      iconProps: { className: "w-8 h-8 text-orange-400" },
+      title: 'Automation Workflows',
+      description: 'Build complex email automation workflows with drag-and-drop visual builder.',
+      benefits: ['Visual workflow builder', 'Multi-step sequences', 'Conditional logic', 'Trigger-based actions']
     }
   ];
 
   const useCases = [
     {
-      title: 'Business Travel',
-      description: 'Track and manage business travel expenses with automatic categorization',
-      icon: <Globe className="w-6 h-6 text-blue-400" />,
-      benefits: ['Per diem tracking', 'Mileage logging', 'Receipt management', 'Policy compliance']
+      title: 'Welcome Series',
+      description: 'Automated welcome email sequences for new subscribers',
+      icon: Mail,
+      iconProps: { className: "w-6 h-6 text-blue-400" },
+      benefits: ['Increase engagement by 40%', 'Build brand awareness', 'Set expectations']
     },
     {
-      title: 'Team Expenses',
-      description: 'Manage team expenses with approval workflows and budget controls',
-      icon: <Building2 className="w-6 h-6 text-green-400" />,
-      benefits: ['Team budgets', 'Approval workflows', 'Expense policies', 'Reporting']
+      title: 'Abandoned Cart Recovery',
+      description: 'Re-engage customers who left items in their cart',
+      icon: ShoppingCart,
+      iconProps: { className: "w-6 h-6 text-green-400" },
+      benefits: ['Recover 15-25% of lost sales', 'Personalized offers', 'Multi-touch sequences']
     },
     {
-      title: 'Project Costs',
-      description: 'Track project-specific expenses and allocate costs accurately',
-      icon: <Target className="w-6 h-6 text-purple-400" />,
-      benefits: ['Project allocation', 'Cost tracking', 'Budget monitoring', 'Client billing']
+      title: 'Re-engagement Campaigns',
+      description: 'Win back inactive subscribers with targeted campaigns',
+      icon: Users,
+      iconProps: { className: "w-6 h-6 text-purple-400" },
+      benefits: ['Reduce churn by 30%', 'Identify at-risk subscribers', 'Personalized content']
     },
     {
-      title: 'Personal Finance',
-      description: 'Manage personal expenses and budget with AI-powered insights',
-      icon: <Wallet className="w-6 h-6 text-yellow-400" />,
-      benefits: ['Personal budgets', 'Spending insights', 'Goal tracking', 'Financial planning']
+      title: 'Post-Purchase Follow-up',
+      description: 'Nurture customers after purchase with relevant content',
+      icon: Star,
+      iconProps: { className: "w-6 h-6 text-yellow-400" },
+      benefits: ['Increase customer lifetime value', 'Gather feedback', 'Cross-sell opportunities']
     }
   ];
 
   const pricing = [
     {
-      name: 'Individual',
-      price: '$9',
+      name: 'Starter',
+      price: '$49',
       period: '/month',
-      description: 'Perfect for freelancers and small businesses',
+      description: 'Perfect for small businesses',
       features: [
-        'Up to 100 receipts/month',
-        'Basic categorization',
-        'Mobile app access',
-        'Basic reporting',
+        'Up to 10,000 contacts',
+        'Basic automation',
+        'Email templates',
+        'Analytics dashboard',
         'Email support'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$29',
+      price: '$149',
       period: '/month',
       description: 'Ideal for growing businesses',
       features: [
-        'Up to 1,000 receipts/month',
-        'AI-powered categorization',
-        'Advanced analytics',
-        'Team collaboration',
+        'Up to 50,000 contacts',
+        'Advanced automation',
+        'AI-powered insights',
+        'A/B testing',
         'Priority support',
-        'API access'
+        'Custom integrations'
       ],
       popular: true
     },
@@ -94,11 +105,11 @@ const AiExpenseTrackerPage: React.FC = () => {
       period: '',
       description: 'For large organizations',
       features: [
-        'Unlimited receipts',
-        'Custom AI models',
-        'Advanced workflows',
+        'Unlimited contacts',
+        'Advanced AI features',
         'Dedicated support',
-        'Custom integrations',
+        'Custom development',
+        'White-label options',
         'SLA guarantee'
       ],
       popular: false
@@ -106,10 +117,14 @@ const AiExpenseTrackerPage: React.FC = () => {
   ];
 
   const stats = [
-    { number: '95%', label: 'Accuracy Rate', icon: <Target className="w-6 h-6" /> },
-    { number: '80%', label: 'Time Saved', icon: <Clock className="w-6 h-6" /> },
-    { number: '50K+', label: 'Receipts Processed', icon: <Receipt className="w-6 h-6" /> },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6" /> }
+    { number: '2.5M+', label: 'Emails Sent Daily', icon: Send,
+      iconProps: { className: "w-6 h-6" } },
+    { number: '40%', label: 'Higher Open Rates', icon: TrendingUp,
+      iconProps: { className: "w-6 h-6" } },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield,
+      iconProps: { className: "w-6 h-6" } },
+    { number: '24/7', label: 'Customer Support', icon: Clock,
+      iconProps: { className: "w-6 h-6" } }
   ];
 
   return (
@@ -118,10 +133,10 @@ const AiExpenseTrackerPage: React.FC = () => {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Expense <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Tracker</span>
+            AI Email Marketing <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Automation</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Revolutionize expense management with AI-powered automation, smart categorization, and intelligent insights.
+            Transform your email marketing with AI-powered automation that delivers personalized, engaging campaigns at scale.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -166,7 +181,7 @@ const AiExpenseTrackerPage: React.FC = () => {
               Powerful AI Features
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Our AI expense tracker comes with everything you need to manage expenses efficiently and gain valuable insights.
+              Our AI email marketing automation platform comes with everything you need to create, send, and optimize email campaigns.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -196,10 +211,10 @@ const AiExpenseTrackerPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Perfect for Every Use Case
+              Popular Use Cases
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Whether you're managing personal finances or corporate expenses, our AI expense tracker adapts to your needs.
+              See how businesses are using our AI email marketing automation to drive growth and engagement.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -232,7 +247,7 @@ const AiExpenseTrackerPage: React.FC = () => {
               Simple, Transparent Pricing
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your expense management needs. All plans include our core AI features.
+              Choose the plan that fits your business needs. All plans include our core AI features.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -284,10 +299,10 @@ const AiExpenseTrackerPage: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Expense Management?
+            Ready to Transform Your Email Marketing?
           </h2>
           <p className="text-xl text-cyan-100 mb-8">
-            Start your free trial today and experience the power of AI-driven expense tracking.
+            Start your free trial today and experience the power of AI-driven email marketing automation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
@@ -310,4 +325,4 @@ const AiExpenseTrackerPage: React.FC = () => {
   );
 };
 
-export default AiExpenseTrackerPage;
+export default AiEmailMarketingAutomationPage;

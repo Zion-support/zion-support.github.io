@@ -6,22 +6,26 @@ import { ArrowRight, BarChart, TrendingUp, CheckCircle, Brain, Settings, Target,
 const AnalyticsPage: React.FC = () => {
   const features = [
     {
-      icon: <BarChart className="w-8 h-8 text-cyan-400" />,
+      icon: BarChart,
+      iconProps: { className: "w-8 h-8 text-cyan-400" },
       title: 'Advanced Analytics',
       description: 'Comprehensive data analysis and visualization tools for deep business insights.'
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-purple-400" />,
+      icon: TrendingUp,
+      iconProps: { className: "w-8 h-8 text-purple-400" },
       title: 'Performance Tracking',
       description: 'Real-time performance monitoring and trend analysis across all business metrics.'
     },
     {
-      icon: <Brain className="w-8 h-8 text-green-400" />,
+      icon: Brain,
+      iconProps: { className: "w-8 h-8 text-green-400" },
       title: 'AI-Powered Insights',
       description: 'Machine learning algorithms that identify patterns and predict future trends.'
     },
     {
-      icon: <Target className="w-8 h-8 text-orange-400" />,
+      icon: Target,
+      iconProps: { className: "w-8 h-8 text-orange-400" },
       title: 'Custom Dashboards',
       description: 'Personalized dashboards tailored to your specific business needs and KPIs.'
     }
@@ -81,7 +85,7 @@ const AnalyticsPage: React.FC = () => {
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
                 <div className="mb-6">
-                  <feature.icon className="w-8 h-8 text-cyan-400" />
+                  <feature.icon {...feature.iconProps} />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>

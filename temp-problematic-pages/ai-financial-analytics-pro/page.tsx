@@ -3,41 +3,50 @@
 import Link from 'next/link';
 import { ArrowRight, Calculator, Building2, Wallet, PiggyBank, BarChart, TrendingUp, CheckCircle, Brain, Settings, BarChart3, Shield, Target, Zap, Globe, DollarSign, Activity, Lock, Database, FileText, CreditCard, Star, Sparkles, PieChart } from 'lucide-react';
 
+export const dynamic = 'force-dynamic';
+
+
 export default function AiFinancialAnalyticsProPage() {
 
   const features = [
     {
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
+      icon: Brain,
+      iconProps: { className: "w-8 h-8 text-cyan-400" },
       title: 'AI-Powered Insights',
       description: 'Advanced machine learning algorithms analyze your financial data to provide actionable insights',
       benefits: ['Predictive analytics', 'Risk assessment', 'Trend identification', 'Anomaly detection']
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-purple-400" />,
+      icon: BarChart3,
+      iconProps: { className: "w-8 h-8 text-purple-400" },
       title: 'Real-Time Analytics',
       description: 'Monitor your financial performance with live dashboards and instant reporting',
       benefits: ['Live data feeds', 'Instant alerts', 'Real-time KPIs', 'Dynamic reporting']
     },
     {
-      icon: <Shield className="w-8 h-8 text-green-400" />,
+      icon: Shield,
+      iconProps: { className: "w-8 h-8 text-green-400" },
       title: 'Enterprise Security',
       description: 'Bank-grade security with end-to-end encryption and compliance standards',
       benefits: ['256-bit encryption', 'SOC 2 compliance', 'GDPR ready', 'Audit trails']
     },
     {
-      icon: <Target className="w-8 h-8 text-orange-400" />,
+      icon: Target,
+      iconProps: { className: "w-8 h-8 text-orange-400" },
       title: 'Custom Dashboards',
       description: 'Create personalized financial dashboards tailored to your business needs',
       benefits: ['Drag-and-drop builder', 'Custom widgets', 'Role-based views', 'Mobile optimization']
     },
     {
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
+      icon: Zap,
+      iconProps: { className: "w-8 h-8 text-yellow-400" },
       title: 'Automated Reporting',
       description: 'Generate comprehensive financial reports automatically with AI-driven insights',
       benefits: ['Scheduled reports', 'Custom templates', 'Multi-format export', 'Email delivery']
     },
     {
-      icon: <Globe className="w-8 h-8 text-blue-400" />,
+      icon: Globe,
+      iconProps: { className: "w-8 h-8 text-blue-400" },
       title: 'Multi-Currency Support',
       description: 'Handle multiple currencies and global financial operations seamlessly',
       benefits: ['Real-time exchange rates', 'Currency conversion', 'Global compliance', 'Tax calculations']
@@ -47,7 +56,8 @@ export default function AiFinancialAnalyticsProPage() {
   const analyticsTypes = [
     {
       category: 'Revenue Analytics',
-      icon: <DollarSign className="w-6 h-6 text-green-400" />,
+      icon: DollarSign,
+      iconProps: { className: "w-6 h-6 text-green-400" },
       items: [
         'Revenue forecasting',
         'Sales performance tracking',
@@ -58,7 +68,8 @@ export default function AiFinancialAnalyticsProPage() {
     },
     {
       category: 'Expense Management',
-      icon: <Calculator className="w-6 h-6 text-blue-400" />,
+      icon: Calculator,
+      iconProps: { className: "w-6 h-6 text-blue-400" },
       items: [
         'Cost center analysis',
         'Budget variance tracking',
@@ -69,7 +80,8 @@ export default function AiFinancialAnalyticsProPage() {
     },
     {
       category: 'Cash Flow Analysis',
-      icon: <Activity className="w-6 h-6 text-purple-400" />,
+      icon: Activity,
+      iconProps: { className: "w-6 h-6 text-purple-400" },
       items: [
         'Cash flow forecasting',
         'Working capital analysis',
@@ -80,7 +92,8 @@ export default function AiFinancialAnalyticsProPage() {
     },
     {
       category: 'Investment Analytics',
-      icon: <TrendingUp className="w-6 h-6 text-yellow-400" />,
+      icon: TrendingUp,
+      iconProps: { className: "w-6 h-6 text-yellow-400" },
       items: [
         'Portfolio performance',
         'Risk-return analysis',
@@ -91,7 +104,8 @@ export default function AiFinancialAnalyticsProPage() {
     },
     {
       category: 'Compliance & Audit',
-      icon: <Lock className="w-6 h-6 text-red-400" />,
+      icon: Lock,
+      iconProps: { className: "w-6 h-6 text-red-400" },
       items: [
         'Regulatory compliance',
         'Audit trail management',
@@ -102,7 +116,8 @@ export default function AiFinancialAnalyticsProPage() {
     },
     {
       category: 'Predictive Modeling',
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
+      icon: Brain,
+      iconProps: { className: "w-6 h-6 text-cyan-400" },
       items: [
         'Financial forecasting',
         'Scenario planning',
@@ -199,21 +214,21 @@ export default function AiFinancialAnalyticsProPage() {
   ];
 
   const stats = [
-    { number: '500+', label: 'Financial Institutions', icon: <Building2 className="w-6 h-6" /> },
-    { number: '1M+', label: 'Transactions Analyzed', icon: <Database className="w-6 h-6" /> },
-    { number: '99.9%', label: 'Data Accuracy', icon: <Shield className="w-6 h-6" /> },
-    { number: '50%', label: 'Faster Reporting', icon: <Zap className="w-6 h-6" /> }
+    { number: '500+', label: 'Financial Institutions', icon: Building2, iconProps: { className: "w-6 h-6" } },
+    { number: '1M+', label: 'Transactions Analyzed', icon: Database, iconProps: { className: "w-6 h-6" } },
+    { number: '99.9%', label: 'Data Accuracy', icon: Shield, iconProps: { className: "w-6 h-6" } },
+    { number: '50%', label: 'Faster Reporting', icon: Zap, iconProps: { className: "w-6 h-6" } }
   ];
 
   const integrations = [
-    { name: 'QuickBooks', icon: <Calculator className="w-6 h-6" />, category: 'Accounting' },
-    { name: 'Xero', icon: <FileText className="w-6 h-6" />, category: 'Accounting' },
-    { name: 'SAP', icon: <Database className="w-6 h-6" />, category: 'ERP' },
-    { name: 'Oracle', icon: <Building2 className="w-6 h-6" />, category: 'ERP' },
-    { name: 'Salesforce', icon: <TrendingUp className="w-6 h-6" />, category: 'CRM' },
-    { name: 'HubSpot', icon: <Target className="w-6 h-6" />, category: 'CRM' },
-    { name: 'Stripe', icon: <CreditCard className="w-6 h-6" />, category: 'Payments' },
-    { name: 'PayPal', icon: <Wallet className="w-6 h-6" />, category: 'Payments' }
+    { name: 'QuickBooks', icon: Calculator, iconProps: { className: "w-6 h-6" }, category: 'Accounting' },
+    { name: 'Xero', icon: FileText, iconProps: { className: "w-6 h-6" }, category: 'Accounting' },
+    { name: 'SAP', icon: Database, iconProps: { className: "w-6 h-6" }, category: 'ERP' },
+    { name: 'Oracle', icon: Building2, iconProps: { className: "w-6 h-6" }, category: 'ERP' },
+    { name: 'Salesforce', icon: TrendingUp, iconProps: { className: "w-6 h-6" }, category: 'CRM' },
+    { name: 'HubSpot', icon: Target, iconProps: { className: "w-6 h-6" }, category: 'CRM' },
+    { name: 'Stripe', icon: CreditCard, iconProps: { className: "w-6 h-6" }, category: 'Payments' },
+    { name: 'PayPal', icon: Wallet, iconProps: { className: "w-6 h-6" }, category: 'Payments' }
   ];
 
   return (
@@ -312,7 +327,7 @@ export default function AiFinancialAnalyticsProPage() {
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4">
-                    <stat.icon className="w-8 h-8 text-white" />
+                    <stat.icon {...stat.iconProps} />
                   </div>
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-300">{stat.label}</div>
@@ -337,7 +352,7 @@ export default function AiFinancialAnalyticsProPage() {
               <div key={index} className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 group">
                 <div className="mb-6">
                   <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl mx-auto mb-4 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
+                    <feature.icon {...feature.iconProps} />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 text-center">{feature.title}</h3>
                   <p className="text-gray-300 mb-4 text-center">{feature.description}</p>
@@ -368,7 +383,7 @@ export default function AiFinancialAnalyticsProPage() {
             {analyticsTypes.map((type, index) => (
               <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300">
                 <div className="flex items-center mb-4">
-                  <type.icon className="w-6 h-6 text-cyan-400" />
+                  <type.icon {...type.iconProps} />
                   <h3 className="text-lg font-semibold text-white ml-3">{type.category}</h3>
                 </div>
                 <ul className="space-y-2">
@@ -397,7 +412,7 @@ export default function AiFinancialAnalyticsProPage() {
             {integrations.map((integration, index) => (
               <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 text-center group">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mx-auto mb-3 group-hover:scale-110 transition-transform">
-                  <integration.icon className="w-6 h-6 text-white" />
+                  <integration.icon {...integration.iconProps} />
                 </div>
                 <h3 className="text-white font-semibold mb-1">{integration.name}</h3>
                 <p className="text-gray-400 text-sm">{integration.category}</p>

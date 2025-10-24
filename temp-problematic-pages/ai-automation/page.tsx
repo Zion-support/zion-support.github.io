@@ -9,22 +9,26 @@ import {
 const AIAutomationPage: React.FC = () => {
   const features = [
     {
-      icon: <Zap className="w-8 h-8 text-cyan-400" />,
+      icon: Zap,
+      iconProps: { className: "w-8 h-8 text-cyan-400" },
       title: 'Workflow Automation',
       description: 'Automate complex business processes with intelligent workflow management.'
     },
     {
-      icon: <Brain className="w-8 h-8 text-purple-400" />,
+      icon: Brain,
+      iconProps: { className: "w-8 h-8 text-purple-400" },
       title: 'Intelligent Decision Making',
       description: 'AI-powered decision making based on data analysis and business rules.'
     },
     {
-      icon: <Settings className="w-8 h-8 text-green-400" />,
+      icon: Settings,
+      iconProps: { className: "w-8 h-8 text-green-400" },
       title: 'Custom Integrations',
       description: 'Seamlessly integrate with your existing systems and third-party applications.'
     },
     {
-      icon: <Globe className="w-8 h-8 text-orange-400" />,
+      icon: Globe,
+      iconProps: { className: "w-8 h-8 text-orange-400" },
       title: 'Scalable Solutions',
       description: 'Automation solutions that grow with your business and adapt to changing needs.'
     }
@@ -34,22 +38,26 @@ const AIAutomationPage: React.FC = () => {
     {
       title: 'Customer Service',
       description: 'Automate ticket routing, response generation, and issue resolution.',
-      icon: <Users className="w-6 h-6 text-blue-400" />
+      icon: Users,
+      iconProps: { className: "w-6 h-6 text-blue-400" }
     },
     {
       title: 'Data Processing',
       description: 'Automate data collection, validation, and analysis workflows.',
-      icon: <BarChart className="w-6 h-6 text-green-400" />
+      icon: BarChart,
+      iconProps: { className: "w-6 h-6 text-green-400" }
     },
     {
       title: 'Marketing Automation',
       description: 'Automate email campaigns, lead scoring, and customer segmentation.',
-      icon: <MessageCircle className="w-6 h-6 text-purple-400" />
+      icon: MessageCircle,
+      iconProps: { className: "w-6 h-6 text-purple-400" }
     },
     {
       title: 'Financial Operations',
       description: 'Automate invoice processing, expense management, and financial reporting.',
-      icon: <FileText className="w-6 h-6 text-orange-400" />
+      icon: FileText,
+      iconProps: { className: "w-6 h-6 text-orange-400" }
     }
   ];
 
@@ -63,10 +71,10 @@ const AIAutomationPage: React.FC = () => {
   ];
 
   const stats = [
-    { number: '70%', label: 'Cost Reduction', icon: <TrendingUp className="w-6 h-6" /> },
-    { number: '24/7', label: 'Automated Operations', icon: <Clock className="w-6 h-6" /> },
-    { number: '99.9%', label: 'Accuracy Rate', icon: <Shield className="w-6 h-6" /> },
-    { number: '3-6', label: 'Months ROI', icon: <Star className="w-6 h-6" /> }
+    { number: '70%', label: 'Cost Reduction', icon: TrendingUp, iconProps: { className: "w-6 h-6" } },
+    { number: '24/7', label: 'Automated Operations', icon: Clock, iconProps: { className: "w-6 h-6" } },
+    { number: '99.9%', label: 'Accuracy Rate', icon: Shield, iconProps: { className: "w-6 h-6" } },
+    { number: '3-6', label: 'Months ROI', icon: Star, iconProps: { className: "w-6 h-6" } }
   ];
 
   return (
@@ -106,7 +114,7 @@ const AIAutomationPage: React.FC = () => {
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-4">
-                  <stat.icon className="w-8 h-8 text-white" />
+                  <stat.icon {...stat.iconProps} />
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300">{stat.label}</div>
@@ -131,7 +139,7 @@ const AIAutomationPage: React.FC = () => {
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
                 <div className="mb-6">
-                  <feature.icon className="w-8 h-8 text-cyan-400" />
+                  <feature.icon {...feature.iconProps} />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -156,7 +164,7 @@ const AIAutomationPage: React.FC = () => {
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-400/50 transition-all duration-300 group">
                 <div className="mb-6">
-                  <useCase.icon className="w-8 h-8 text-purple-400" />
+                  <useCase.icon {...useCase.iconProps} />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
                 <p className="text-gray-300">{useCase.description}</p>

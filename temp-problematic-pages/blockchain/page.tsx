@@ -6,22 +6,26 @@ import { ArrowRight, Shield, Zap, CheckCircle, Brain, Settings, Target, Users, C
 const BlockchainPage: React.FC = () => {
   const features = [
     {
-      icon: <Shield className="w-8 h-8 text-cyan-400" />,
+      icon: Shield,
+      iconProps: { className: "w-8 h-8 text-cyan-400" },
       title: 'Secure Blockchain Development',
       description: 'Build secure, scalable blockchain solutions with advanced cryptography and smart contract development.'
     },
     {
-      icon: <Lock className="w-8 h-8 text-purple-400" />,
+      icon: Lock,
+      iconProps: { className: "w-8 h-8 text-purple-400" },
       title: 'Smart Contracts',
       description: 'Develop and deploy smart contracts that automate business processes with trust and transparency.'
     },
     {
-      icon: <Brain className="w-8 h-8 text-green-400" />,
+      icon: Brain,
+      iconProps: { className: "w-8 h-8 text-green-400" },
       title: 'DeFi Solutions',
       description: 'Create decentralized finance applications that revolutionize traditional financial services.'
     },
     {
-      icon: <Settings className="w-8 h-8 text-orange-400" />,
+      icon: Settings,
+      iconProps: { className: "w-8 h-8 text-orange-400" },
       title: 'Custom Integration',
       description: 'Integrate blockchain technology with your existing systems for enhanced security and transparency.'
     }
@@ -81,7 +85,7 @@ const BlockchainPage: React.FC = () => {
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
                 <div className="mb-6">
-                  <feature.icon className="w-8 h-8 text-cyan-400" />
+                  <feature.icon {...feature.iconProps} />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>

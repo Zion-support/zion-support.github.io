@@ -21,22 +21,26 @@ const AboutPage: React.FC = () => {
 
   const values = [
     {
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
+      icon: Brain,
+      iconProps: { className: "w-8 h-8 text-cyan-400" },
       title: 'Innovation',
       description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions.'
     },
     {
-      icon: <Shield className="w-8 h-8 text-purple-400" />,
+      icon: Shield,
+      iconProps: { className: "w-8 h-8 text-purple-400" },
       title: 'Security',
       description: 'Your data and systems are protected with enterprise-grade security measures.'
     },
     {
-      icon: <Globe className="w-8 h-8 text-green-400" />,
+      icon: Globe,
+      iconProps: { className: "w-8 h-8 text-green-400" },
       title: 'Global Reach',
       description: 'Serving clients worldwide with localized support and expertise.'
     },
     {
-      icon: <Users className="w-8 h-8 text-orange-400" />,
+      icon: Users,
+      iconProps: { className: "w-8 h-8 text-orange-400" },
       title: 'Collaboration',
       description: 'We work closely with our clients to understand their unique needs.'
     }
@@ -115,7 +119,7 @@ const AboutPage: React.FC = () => {
               {values.map((value, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
                   <div className="flex justify-center mb-4">
-                    <value.icon className="w-8 h-8 text-cyan-400" />
+                    <value.icon {...value.iconProps} />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
                   <p className="text-gray-300">{value.description}</p>

@@ -88,7 +88,7 @@ const ServicesPage: React.FC = () => {
             {serviceCategories.map((category, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300">
                 <div className="flex items-center mb-6">
-                  <category.icon className="w-8 h-8 text-cyan-400" />
+                  <category.icon {...category.iconProps} />
                   <h3 className="text-2xl font-bold text-white ml-4">{category.title}</h3>
                 </div>
                 <p className="text-gray-300 mb-6">{category.description}</p>

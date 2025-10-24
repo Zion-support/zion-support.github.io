@@ -108,7 +108,7 @@ const MicroSaasPage: React.FC = () => {
             {services.map((service, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg mb-4">
-                  <service.icon className="h-6 w-6 text-white" />
+                  <service.icon {...service.iconProps} />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>

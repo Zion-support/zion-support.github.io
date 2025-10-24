@@ -1,39 +1,43 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Zap, Settings, CheckCircle, Brain, Target, Users, Calendar, BarChart, Workflow } from 'lucide-react';
+import { ArrowRight, Code, Zap, CheckCircle, Brain, Settings, Target, Users, Calendar, BarChart } from 'lucide-react';
 
-const AutomationPage: React.FC = () => {
+const APIPage: React.FC = () => {
   const features = [
     {
-      icon: <Zap className="w-8 h-8 text-cyan-400" />,
-      title: 'Process Automation',
-      description: 'Automate repetitive business processes to increase efficiency and reduce human error.'
+      icon: Code,
+      iconProps: { className: "w-8 h-8 text-cyan-400" },
+      title: 'RESTful API Design',
+      description: 'Well-designed RESTful APIs that are intuitive, scalable, and easy to integrate.'
     },
     {
-      icon: <Workflow className="w-8 h-8 text-purple-400" />,
-      title: 'Workflow Optimization',
-      description: 'Design and implement optimized workflows that streamline your business operations.'
+      icon: Zap,
+      iconProps: { className: "w-8 h-8 text-purple-400" },
+      title: 'High Performance',
+      description: 'Optimized APIs with fast response times and efficient data processing capabilities.'
     },
     {
-      icon: <Brain className="w-8 h-8 text-green-400" />,
-      title: 'AI-Powered Automation',
-      description: 'Leverage AI and machine learning to create intelligent automation solutions.'
+      icon: Brain,
+      iconProps: { className: "w-8 h-8 text-green-400" },
+      title: 'AI-Powered Features',
+      description: 'APIs enhanced with AI capabilities for intelligent data processing and automation.'
     },
     {
-      icon: <Settings className="w-8 h-8 text-orange-400" />,
-      title: 'Custom Integration',
-      description: 'Seamlessly integrate automation solutions with your existing systems and tools.'
+      icon: Settings,
+      iconProps: { className: "w-8 h-8 text-orange-400" },
+      title: 'Easy Integration',
+      description: 'Comprehensive documentation and SDKs for seamless integration with any platform.'
     }
   ];
 
   const benefits = [
-    'Reduce operational costs by 60%',
-    'Increase productivity by 40%',
-    'Eliminate human errors in repetitive tasks',
-    'Enable 24/7 automated operations',
-    'Improve process consistency and quality',
-    'Free up staff for higher-value activities'
+    'Accelerate development with pre-built APIs',
+    'Reduce integration time by 70%',
+    'Ensure security and compliance',
+    'Scale automatically with your business',
+    'Get 24/7 monitoring and support',
+    'Access comprehensive documentation'
   ];
 
   return (
@@ -43,10 +47,10 @@ const AutomationPage: React.FC = () => {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Business Process <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Automation</span>
+            Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">API Services</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your business with intelligent automation solutions. Streamline processes, reduce costs, and increase efficiency with our automation services.
+            Professional API development and integration services. Build scalable, secure, and high-performance APIs for your business needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -71,17 +75,17 @@ const AutomationPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Comprehensive Automation Solutions
+              Comprehensive API Solutions
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Our automation services provide end-to-end solutions to streamline your business processes and boost productivity.
+              Our API services provide everything you need to build, deploy, and maintain robust APIs for your business.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
                 <div className="mb-6">
-                  <feature.icon className="w-8 h-8 text-cyan-400" />
+                  <feature.icon {...feature.iconProps} />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -97,10 +101,10 @@ const AutomationPage: React.FC = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Why Choose Our Automation Services?
+                Why Choose Our API Services?
               </h2>
               <p className="text-lg text-gray-300 mb-8">
-                Our automation solutions help you eliminate manual processes, reduce errors, and focus on what matters most for your business growth.
+                Our professional API development services help you build robust, scalable, and secure APIs that power your business growth.
               </p>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -117,9 +121,9 @@ const AutomationPage: React.FC = () => {
                   <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-6">
                     <Brain className="w-10 h-10 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">Intelligent Automation</h3>
+                  <h3 className="text-2xl font-bold text-white mb-4">Expert Development</h3>
                   <p className="text-gray-300">
-                    Our AI-powered automation solutions learn and adapt to your business processes, continuously improving efficiency and accuracy.
+                    Our experienced developers use the latest technologies and best practices to build APIs that meet your specific requirements.
                   </p>
                 </div>
               </div>
@@ -132,17 +136,17 @@ const AutomationPage: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Automate Your Business?
+            Ready to Build Powerful APIs?
           </h2>
           <p className="text-xl text-cyan-100 mb-8">
-            Join thousands of businesses already using our automation services to streamline operations and drive growth.
+            Join thousands of businesses already using our API services to accelerate their development and growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact" 
               className="inline-flex items-center px-8 py-3 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
             >
-              Start Your Automation Journey
+              Start Your API Project
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link 
@@ -158,4 +162,4 @@ const AutomationPage: React.FC = () => {
   );
 };
 
-export default AutomationPage;
+export default APIPage;

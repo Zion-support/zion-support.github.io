@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: 'export', // Disable static export to avoid prerendering issues
+  // Use standalone output for better compatibility
+  output: 'standalone',
   trailingSlash: true,
   images: {
     unoptimized: true
@@ -20,14 +21,7 @@ const nextConfig = {
     missingSuspenseWithCSRBailout: false,
   },
   // Disable static generation to avoid prerendering errors
-  // generateStaticParams: false, // This is not a valid Next.js config option
-  // Disable static optimization
   staticPageGenerationTimeout: 1000,
-  // Skip static generation for problematic pages
-  // async generateStaticParams() {
-  //   return []
-  // },
-  // Skip problematic pages during build
 }
 
 module.exports = nextConfig

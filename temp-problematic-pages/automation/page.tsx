@@ -1,39 +1,43 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Cloud, Zap, CheckCircle, Brain, Settings, Target, Users, Calendar, BarChart, Shield } from 'lucide-react';
+import { ArrowRight, Zap, Settings, CheckCircle, Brain, Target, Users, Calendar, BarChart, Workflow } from 'lucide-react';
 
-const CloudMigrationProPage: React.FC = () => {
+const AutomationPage: React.FC = () => {
   const features = [
     {
-      icon: <Cloud className="w-8 h-8 text-cyan-400" />,
-      title: 'Seamless Cloud Migration',
-      description: 'Migrate your applications and data to the cloud with zero downtime and minimal disruption.'
+      icon: Zap,
+      iconProps: { className: "w-8 h-8 text-cyan-400" },
+      title: 'Process Automation',
+      description: 'Automate repetitive business processes to increase efficiency and reduce human error.'
     },
     {
-      icon: <Shield className="w-8 h-8 text-purple-400" />,
-      title: 'Security & Compliance',
-      description: 'Ensure your cloud infrastructure meets the highest security standards and compliance requirements.'
+      icon: Workflow,
+      iconProps: { className: "w-8 h-8 text-purple-400" },
+      title: 'Workflow Optimization',
+      description: 'Design and implement optimized workflows that streamline your business operations.'
     },
     {
-      icon: <Brain className="w-8 h-8 text-green-400" />,
-      title: 'AI-Powered Optimization',
-      description: 'Leverage AI to optimize your cloud resources and reduce costs while improving performance.'
+      icon: Brain,
+      iconProps: { className: "w-8 h-8 text-green-400" },
+      title: 'AI-Powered Automation',
+      description: 'Leverage AI and machine learning to create intelligent automation solutions.'
     },
     {
-      icon: <Settings className="w-8 h-8 text-orange-400" />,
-      title: 'Custom Solutions',
-      description: 'Tailored cloud migration strategies that fit your specific business needs and requirements.'
+      icon: Settings,
+      iconProps: { className: "w-8 h-8 text-orange-400" },
+      title: 'Custom Integration',
+      description: 'Seamlessly integrate automation solutions with your existing systems and tools.'
     }
   ];
 
   const benefits = [
-    'Reduce infrastructure costs by 40%',
-    'Improve scalability and flexibility',
-    'Enhance security and compliance',
-    'Increase system reliability',
-    'Enable remote work capabilities',
-    'Future-proof your technology stack'
+    'Reduce operational costs by 60%',
+    'Increase productivity by 40%',
+    'Eliminate human errors in repetitive tasks',
+    'Enable 24/7 automated operations',
+    'Improve process consistency and quality',
+    'Free up staff for higher-value activities'
   ];
 
   return (
@@ -43,10 +47,10 @@ const CloudMigrationProPage: React.FC = () => {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Cloud Migration <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Pro</span>
+            Business Process <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Automation</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your business with professional cloud migration services. Seamlessly migrate to the cloud with zero downtime and enhanced security.
+            Transform your business with intelligent automation solutions. Streamline processes, reduce costs, and increase efficiency with our automation services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -71,17 +75,17 @@ const CloudMigrationProPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Professional Cloud Migration Services
+              Comprehensive Automation Solutions
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Our cloud migration experts provide comprehensive solutions to move your business to the cloud safely and efficiently.
+              Our automation services provide end-to-end solutions to streamline your business processes and boost productivity.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
                 <div className="mb-6">
-                  <feature.icon className="w-8 h-8 text-cyan-400" />
+                  <feature.icon {...feature.iconProps} />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -97,10 +101,10 @@ const CloudMigrationProPage: React.FC = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Why Choose Our Cloud Migration Services?
+                Why Choose Our Automation Services?
               </h2>
               <p className="text-lg text-gray-300 mb-8">
-                Our cloud migration experts help you leverage the power of cloud computing to reduce costs, improve scalability, and enhance security.
+                Our automation solutions help you eliminate manual processes, reduce errors, and focus on what matters most for your business growth.
               </p>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -117,9 +121,9 @@ const CloudMigrationProPage: React.FC = () => {
                   <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-6">
                     <Brain className="w-10 h-10 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">Expert Migration</h3>
+                  <h3 className="text-2xl font-bold text-white mb-4">Intelligent Automation</h3>
                   <p className="text-gray-300">
-                    Our experienced team ensures a smooth, secure, and cost-effective migration to the cloud with minimal business disruption.
+                    Our AI-powered automation solutions learn and adapt to your business processes, continuously improving efficiency and accuracy.
                   </p>
                 </div>
               </div>
@@ -132,17 +136,17 @@ const CloudMigrationProPage: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Move to the Cloud?
+            Ready to Automate Your Business?
           </h2>
           <p className="text-xl text-cyan-100 mb-8">
-            Join thousands of businesses already using our cloud migration services to transform their infrastructure.
+            Join thousands of businesses already using our automation services to streamline operations and drive growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact" 
               className="inline-flex items-center px-8 py-3 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
             >
-              Start Your Cloud Migration
+              Start Your Automation Journey
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link 
@@ -158,4 +162,4 @@ const CloudMigrationProPage: React.FC = () => {
   );
 };
 
-export default CloudMigrationProPage;
+export default AutomationPage;

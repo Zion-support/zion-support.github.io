@@ -53,19 +53,22 @@ const DynamicContentShowcase: React.FC = () => {
 
   const features = [
     {
-      icon: <Brain className="h-8 w-8" />,
+      icon: Brain,
+      iconProps: { className: "h-8 w-8" },
       title: "AI-Powered Solutions",
       description: "Advanced artificial intelligence to transform your business operations",
       color: "from-blue-500 to-cyan-500"
     },
     {
-      icon: <Shield className="h-8 w-8" />,
+      icon: Shield,
+      iconProps: { className: "h-8 w-8" },
       title: "Cybersecurity",
       description: "Comprehensive security solutions to protect your digital assets",
       color: "from-green-500 to-emerald-500"
     },
     {
-      icon: <Zap className="h-8 w-8" />,
+      icon: Zap,
+      iconProps: { className: "h-8 w-8" },
       title: "Automation",
       description: "Streamline processes and increase efficiency with smart automation",
       color: "from-purple-500 to-pink-500"
@@ -100,7 +103,7 @@ const DynamicContentShowcase: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">{features.map((feature, index) => (</div>
             <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-cyan-400/50 transition-all duration-300"></div>
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-4"></div>
-                <feature.icon className="w-6 h-6 text-white" />
+                <feature.icon {...feature.iconProps} />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
@@ -124,7 +127,7 @@ const DynamicContentShowcase: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
               <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10"></div>
                 <div className="flex justify-center mb-4"></div>
-                  <stat.icon className="w-8 h-8 text-blue-400" />
+                  <stat.icon {...stat.iconProps} />
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-300">{stat.label}</div>
@@ -145,7 +148,7 @@ const DynamicContentShowcase: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mb-4"></div>
-                  <feature.icon className="w-8 h-8 text-white" />
+                  <feature.icon {...feature.iconProps} />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">$3</h3>
                 <p className="text-gray-300 mb-6">{feature.description}</p>
@@ -274,7 +277,7 @@ const DynamicContentShowcase: React.FC = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
-                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                  <feature.icon {...feature.iconProps} />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">

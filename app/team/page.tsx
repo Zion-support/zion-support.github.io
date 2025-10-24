@@ -177,7 +177,7 @@ const TeamPage: React.FC = () => {
             {values.map((value, index) => (
               <div key={index} className="text-center">
                 <div className="bg-gradient-to-r from-purple-500 to-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <value.icon className="h-8 w-8 text-white" />
+                  <value.icon {...value.iconProps} />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {value.title}

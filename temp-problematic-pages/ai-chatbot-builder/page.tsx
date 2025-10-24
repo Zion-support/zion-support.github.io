@@ -1,90 +1,116 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Mail, Target, BarChart, Users, CheckCircle, Zap, Brain, Settings, Globe, Clock, Shield, TrendingUp, Star, MessageCircle, Send, PieChart, Activity, DollarSign, FileText, Database, Building2, CreditCard, Wallet, Lock, Sparkles, ShoppingCart } from 'lucide-react';
+import { ArrowRight, Zap, Brain, CheckCircle, Users, BarChart, MessageCircle, Target, Settings, Workflow, Globe, Server, Clock, ShoppingCart } from 'lucide-react';
 
-const AiEmailMarketingAutomationPage: React.FC = () => {
+export const dynamic = 'force-dynamic';
+
+
+const AiChatbotBuilderPage: React.FC = () => {
   const features = [
     {
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      title: 'AI-Powered Campaigns',
-      description: 'Create intelligent email campaigns that adapt to user behavior and preferences automatically.',
-      benefits: ['Smart segmentation', 'Predictive content', 'Optimal send times', 'Personalization engine']
+      title: 'No-Code Builder',
+      description: 'Create sophisticated chatbots without any programming knowledge using our visual interface',
+      icon: Zap,
+      iconProps: { className: "w-8 h-8 text-cyan-400" },
+      color: 'from-cyan-500 to-blue-500'
     },
     {
-      icon: <Target className="w-8 h-8 text-purple-400" />,
-      title: 'Advanced Segmentation',
-      description: 'Segment your audience with precision using AI-driven behavioral and demographic analysis.',
-      benefits: ['Behavioral triggers', 'Demographic targeting', 'Engagement scoring', 'Lifecycle stages']
+      title: 'Multi-Language Support',
+      description: 'Deploy chatbots in 50+ languages with automatic translation and localization',
+      icon: Globe,
+      iconProps: { className: "w-8 h-8 text-green-400" },
+      color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: <BarChart className="w-8 h-8 text-green-400" />,
-      title: 'Analytics & Insights',
-      description: 'Comprehensive analytics dashboard with AI-powered insights and recommendations.',
-      benefits: ['Real-time metrics', 'Predictive analytics', 'A/B testing', 'ROI tracking']
+      title: 'Advanced Analytics',
+      description: 'Track performance with detailed analytics, conversation insights, and user behavior data',
+      icon: BarChart,
+      iconProps: { className: "w-8 h-8 text-purple-400" },
+      color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: <Zap className="w-8 h-8 text-orange-400" />,
-      title: 'Automation Workflows',
-      description: 'Build complex email automation workflows with drag-and-drop visual builder.',
-      benefits: ['Visual workflow builder', 'Multi-step sequences', 'Conditional logic', 'Trigger-based actions']
+      title: 'AI-Powered Responses',
+      description: 'Leverage advanced NLP and machine learning for intelligent, context-aware conversations',
+      icon: Brain,
+      iconProps: { className: "w-8 h-8 text-orange-400" },
+      color: 'from-orange-500 to-red-500'
+    },
+    {
+      title: 'Easy Integration',
+      description: 'Seamlessly integrate with your existing systems, websites, and messaging platforms',
+      icon: Workflow,
+      iconProps: { className: "w-8 h-8 text-blue-400" },
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      title: 'Custom Branding',
+      description: 'Customize the chatbot appearance to match your brand identity and design guidelines',
+      icon: Settings,
+      iconProps: { className: "w-8 h-8 text-indigo-400" },
+      color: 'from-indigo-500 to-purple-500'
     }
   ];
 
   const useCases = [
     {
-      title: 'Welcome Series',
-      description: 'Automated welcome email sequences for new subscribers',
-      icon: <Mail className="w-6 h-6 text-blue-400" />,
-      benefits: ['Increase engagement by 40%', 'Build brand awareness', 'Set expectations']
+      title: 'Customer Support',
+      description: 'Provide 24/7 customer support with instant responses to common queries',
+      icon: MessageCircle,
+      iconProps: { className: "w-6 h-6 text-blue-400" },
+      benefits: ['Reduce support tickets by 60%', '24/7 availability', 'Instant responses']
     },
     {
-      title: 'Abandoned Cart Recovery',
-      description: 'Re-engage customers who left items in their cart',
-      icon: <ShoppingCart className="w-6 h-6 text-green-400" />,
-      benefits: ['Recover 15-25% of lost sales', 'Personalized offers', 'Multi-touch sequences']
+      title: 'Lead Generation',
+      description: 'Qualify leads and capture contact information through engaging conversations',
+      icon: Target,
+      iconProps: { className: "w-6 h-6 text-green-400" },
+      benefits: ['Increase lead quality by 40%', 'Automated qualification', 'Higher conversion rates']
     },
     {
-      title: 'Re-engagement Campaigns',
-      description: 'Win back inactive subscribers with targeted campaigns',
-      icon: <Users className="w-6 h-6 text-purple-400" />,
-      benefits: ['Reduce churn by 30%', 'Identify at-risk subscribers', 'Personalized content']
+      title: 'E-commerce Assistant',
+      description: 'Help customers find products, answer questions, and guide them through purchases',
+      icon: ShoppingCart,
+      iconProps: { className: "w-6 h-6 text-purple-400" },
+      benefits: ['Boost sales by 25%', 'Reduce cart abandonment', 'Personalized recommendations']
     },
     {
-      title: 'Post-Purchase Follow-up',
-      description: 'Nurture customers after purchase with relevant content',
-      icon: <Star className="w-6 h-6 text-yellow-400" />,
-      benefits: ['Increase customer lifetime value', 'Gather feedback', 'Cross-sell opportunities']
+      title: 'Internal HR Bot',
+      description: 'Answer employee questions about policies, benefits, and company information',
+      icon: Users,
+      iconProps: { className: "w-6 h-6 text-orange-400" },
+      benefits: ['Reduce HR workload', 'Consistent information', 'Employee satisfaction']
     }
   ];
 
   const pricing = [
     {
       name: 'Starter',
-      price: '$49',
+      price: '$29',
       period: '/month',
-      description: 'Perfect for small businesses',
+      description: 'Perfect for small businesses getting started',
       features: [
-        'Up to 10,000 contacts',
-        'Basic automation',
-        'Email templates',
-        'Analytics dashboard',
-        'Email support'
+        'Up to 1,000 conversations/month',
+        'Basic AI responses',
+        'Email support',
+        'Standard templates',
+        'Basic analytics'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$149',
+      price: '$99',
       period: '/month',
-      description: 'Ideal for growing businesses',
+      description: 'Ideal for growing businesses with more needs',
       features: [
-        'Up to 50,000 contacts',
-        'Advanced automation',
-        'AI-powered insights',
-        'A/B testing',
+        'Up to 10,000 conversations/month',
+        'Advanced AI with custom training',
         'Priority support',
-        'Custom integrations'
+        'Custom branding',
+        'Advanced analytics',
+        'Multi-language support',
+        'API access'
       ],
       popular: true
     },
@@ -92,13 +118,14 @@ const AiEmailMarketingAutomationPage: React.FC = () => {
       name: 'Enterprise',
       price: 'Custom',
       period: '',
-      description: 'For large organizations',
+      description: 'For large organizations with complex requirements',
       features: [
-        'Unlimited contacts',
-        'Advanced AI features',
+        'Unlimited conversations',
+        'Custom AI models',
         'Dedicated support',
+        'White-label solution',
+        'Advanced integrations',
         'Custom development',
-        'White-label options',
         'SLA guarantee'
       ],
       popular: false
@@ -106,29 +133,30 @@ const AiEmailMarketingAutomationPage: React.FC = () => {
   ];
 
   const stats = [
-    { number: '2.5M+', label: 'Emails Sent Daily', icon: <Send className="w-6 h-6" /> },
-    { number: '40%', label: 'Higher Open Rates', icon: <TrendingUp className="w-6 h-6" /> },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6" /> },
-    { number: '24/7', label: 'Customer Support', icon: <Clock className="w-6 h-6" /> }
+    { number: '10,000+', label: 'Chatbots Created', icon: MessageCircle, iconProps: { className: "w-6 h-6" } },
+    { number: '50+', label: 'Languages Supported', icon: Globe, iconProps: { className: "w-6 h-6" } },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: Server, iconProps: { className: "w-6 h-6" } },
+    { number: '24/7', label: 'Customer Support', icon: Clock, iconProps: { className: "w-6 h-6" } }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Email Marketing <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Automation</span>
+            AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Chatbot Builder</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your email marketing with AI-powered automation that delivers personalized, engaging campaigns at scale.
+            Create intelligent, conversational chatbots without any coding knowledge. Our no-code platform makes it easy to build, deploy, and manage AI-powered chatbots for your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
             >
-              Start Free Trial
+              Start Building Free
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link
@@ -148,7 +176,7 @@ const AiEmailMarketingAutomationPage: React.FC = () => {
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-4">
-                  {stat.icon}
+                  <stat.icon {...stat.iconProps} />
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300">{stat.label}</div>
@@ -163,28 +191,20 @@ const AiEmailMarketingAutomationPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Powerful AI Features
+              Powerful Features for Every Business
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Our AI email marketing automation platform comes with everything you need to create, send, and optimize email campaigns.
+              Our AI chatbot builder comes with everything you need to create sophisticated, intelligent chatbots that engage your customers and drive results.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
                 <div className="mb-6">
-                  {feature.icon}
+                  <feature.icon {...feature.iconProps} />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -196,17 +216,17 @@ const AiEmailMarketingAutomationPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Popular Use Cases
+              Real-World Use Cases
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              See how businesses are using our AI email marketing automation to drive growth and engagement.
+              See how businesses across industries are using our chatbot builder to improve customer experience and drive growth.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-400/50 transition-all duration-300 group">
                 <div className="mb-6">
-                  {useCase.icon}
+                  <useCase.icon {...useCase.iconProps} />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
                 <p className="text-gray-300 mb-4">{useCase.description}</p>
@@ -232,7 +252,7 @@ const AiEmailMarketingAutomationPage: React.FC = () => {
               Simple, Transparent Pricing
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your business needs. All plans include our core AI features.
+              Choose the plan that fits your business needs. All plans include our core features with no hidden fees.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -284,17 +304,17 @@ const AiEmailMarketingAutomationPage: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Email Marketing?
+            Ready to Build Your First Chatbot?
           </h2>
           <p className="text-xl text-cyan-100 mb-8">
-            Start your free trial today and experience the power of AI-driven email marketing automation.
+            Join thousands of businesses already using our platform to create intelligent, engaging chatbots that drive results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/contact" 
               className="inline-flex items-center px-8 py-3 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
             >
-              Start Free Trial
+              Start Building Today
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link 
@@ -310,4 +330,4 @@ const AiEmailMarketingAutomationPage: React.FC = () => {
   );
 };
 
-export default AiEmailMarketingAutomationPage;
+export default AiChatbotBuilderPage;

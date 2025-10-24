@@ -90,7 +90,7 @@ const ContactPage: React.FC = () => {
             {contactInfo.map((info, index) => (
               <div key={index} className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
                 <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full mb-4 mx-auto">
-                  <info.icon className="h-8 w-8 text-white" />
+                  <info.icon {...info.iconProps} />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{info.title}</h3>
                 <p className="text-emerald-600 font-medium mb-2">{info.details}</p>
