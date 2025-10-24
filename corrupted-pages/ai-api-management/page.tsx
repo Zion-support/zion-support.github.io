@@ -1,11 +1,7 @@
-
-<<<<<<< HEAD:app/ai-api-management/page.tsx
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, Zap, Shield, Brain, BarChart, Users, Settings } from 'lucide-react'
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-21fe:corrupted-pages/ai-api-management/page.tsx
 
 const AIApiManagementPage: React.FC = () => {
   const features = [
@@ -32,9 +28,6 @@ const AIApiManagementPage: React.FC = () => {
       title: 'Developer Portal',
       description: 'Self-service developer portal with documentation, testing tools, and API keys.',
       benefits: ['Interactive docs', 'API testing', 'SDK generation', 'Developer support']
-    },
-    {
-
     },
     {
       icon: Brain,
