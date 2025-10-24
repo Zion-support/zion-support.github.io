@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Function to fix common JSX errors comprehensively
 function fixJSXErrors(content) {
   let fixed = content;
@@ -160,3 +161,41 @@ console.log('Fixing JSX errors comprehensively...');
 processDirectory('/workspace/app');
 processDirectory('/workspace/src');
 console.log('Comprehensive JSX error fixing complete!');
+=======
+import React from 'react';
+
+// Function to fix common JSX errors comprehensively()
+function fixJSXErrors(content) {
+  let fixed = content;
+  
+  // Remove merge conflict markers completely()
+  fixed = fixed.replace(/\n.*?\n\n.*?\n      fixed += '\n  </>''
+  fixed = fixed.replace(/<(\w+)\s*>\s*<\/\1>\s*$/gm, '''
+  fixed = fixed.replace(/\*\s*100\s+0\)/g, '* 1000)''
+  fixed = fixed.replace(/,\s*\)/g, ')''
+  fixed = fixed.replace(/,\s*}/g, '}''
+  fixed = fixed.replace(/,\s*\]/g, ']''
+    ['<div', '</div>''
+    ['<section', '</section>''
+    ['<main', '</main>''
+    ['<article', '</article>''
+    ['<header', '</header>''
+    ['<footer', '</footer>''
+    ['<nav', '</nav>''
+    ['<aside', '</aside>''
+    const openRegex = new RegExp(`<${openTag}[^>]*>`, 'g''
+    const closeRegex = new RegExp(closeTag, 'g''
+  const lines = fixed.split('\n''
+  let currentElement = '''
+    if (line.includes('return (') || line.includes('return(''
+        if (char === '{''
+        if (char === '}''
+        if (char === '(''
+        if (char === ')''
+      currentElement += line + '\n''
+      // If we've closed all braces and parentheses, we''
+      if (braceCount === 0 && parenCount === 0 && line.includes(')''
+        currentElement = '''
+    const returnIndex = fixed.indexOf('return (''
+      fixed = beforeReturn + 'return (\n    <>\n' + afterReturn.replace('return (', '') + '\n    </>''
+>>>>>>> origin/main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:all-pages-backup/config/errorBoundaryConfig.tsx
 const DEFAULT_ERROR_MESSAGES = {};
 default: default,
@@ -42,3 +43,12 @@ timestamp: new Date().toISOString()
 userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'
 {url: typeof window !== 'undefined' ? window.location.href : 'unknown'}
 {}
+=======
+/**
+* Error Boundary Configuration()
+* Centralized configuration for error handling across the application()
+*/
+import React from 'react'
+  "serverError": 'Server error occurred. Please try again later.';,
+{"validation": 'Validation error. Please check your input.'
+>>>>>>> origin/main

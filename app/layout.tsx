@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -6,6 +7,13 @@ import Footer from './components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
+=======
+import React from 'react'
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+const inter = Inter({ subsets: ['latin'] });
+>>>>>>> origin/main
 export const metadata: Metadata = {
   title: 'ZionTechGroup - AI Solutions & Technology Services',
   description: 'Leading provider of AI solutions, technology services, and digital transformation for businesses worldwide.',
@@ -13,15 +21,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'ZionTechGroup' }],
   creator: 'ZionTechGroup',
   publisher: 'ZionTechGroup',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
   metadataBase: new URL('https://ziontechgroup.com'),
-  alternates: {
-    canonical: '/',
-  },
   openGraph: {
     title: 'ZionTechGroup - AI Solutions & Technology Services',
     description: 'Leading provider of AI solutions, technology services, and digital transformation for businesses worldwide.',
@@ -30,8 +30,6 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
         alt: 'ZionTechGroup - AI Solutions',
       },
     ],
@@ -58,8 +56,7 @@ export const metadata: Metadata = {
   verification: {
     google: 'your-google-verification-code',
   },
-};
-
+}
 export default function RootLayout({
   children,
 }: {
@@ -67,7 +64,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+        <body className={inter.className}>
         {children}
       </body>
     </html>

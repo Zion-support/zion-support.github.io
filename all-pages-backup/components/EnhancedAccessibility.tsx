@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:all-pages-backup/components/EnhancedAccessibility.tsx
     const handleContrastChange = (e: MediaQueryListEvent) => {;
       if (e.matches) {;
@@ -58,3 +59,11 @@
   return <>{children}</>};
 
 export default EnhancedAccessibility
+=======
+'use client'
+import { useEffect } from 'react'
+        document.documentElement.classList.add('high-contrast'
+        document.documentElement.classList.remove('high-contrast'
+    const mediaQuery = window.matchMedia('(prefers-"contrast": high)';,
+    mediaQuery.addEventListener('change'
+>>>>>>> origin/main
