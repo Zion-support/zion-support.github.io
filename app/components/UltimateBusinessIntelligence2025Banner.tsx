@@ -4,7 +4,7 @@ import Link from 'next/link';
   
 const UltimateBusinessIntelligence2025Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(true);
   
   const content = [
     {
@@ -61,16 +61,9 @@ const UltimateBusinessIntelligence2025Banner = () => {
   const handleClose = () => {
     setIsVisible(false);
   };
-  if (!isVisible) return null;
-  const currentContent = content[currentSlide];
-=======
-  const handleClose = () => {
-    setIsVisible(false);
-  };
 
   if (!isVisible) return null;
   const _currentContent = content[currentSlide];
->>>>>>> cursor/fix-errors-and-merge-to-main-72d6
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
