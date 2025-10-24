@@ -16,5 +16,12 @@ return (</MetaTagsProps>
   )
 }
 
+export const MetaTags: React.FC<MetaTagsProps> = ({ className = '', children }) => {
+  return (
+    <div className={`metatags ${className}`}>
+      {children}
+    </div>
+  );
+};
 
-export default MetaTags
+export default MetaTags;

@@ -161,5 +161,13 @@ Contact Sales</button>
 export default SecurityEnhancerPage
   )
 }
-export default SecurityEnhancerPage
-}
+
+export const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`securityenhancer ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default SecurityEnhancer;

@@ -33,3 +33,13 @@ declare global{interface Window {
     gtag: "(...arg",s: "any[]) => void;"}
 export default Analytics
 }
+
+export const Analytics: React.FC<AnalyticsProps> = ({ className = '', children }) => {
+  return (
+    <div className={`analytics ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default Analytics;

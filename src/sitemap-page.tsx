@@ -24,7 +24,17 @@ This page is under development. Please check back soon for more information abou
   )
   )
 
+interface SitemapPageProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default Page
-}
+export const SitemapPage: React.FC<SitemapPageProps> = ({ className = '', children }) => {
+  return (
+    <div className={`sitemappage ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default SitemapPage;

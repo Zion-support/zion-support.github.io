@@ -80,3 +80,13 @@ go wrong! 🤖
   ) "}
 export default handleScroll
 }
+
+export const Navigation: React.FC<NavigationProps> = ({ className = '', children }) => {
+  return (
+    <div className={`navigation ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default Navigation;

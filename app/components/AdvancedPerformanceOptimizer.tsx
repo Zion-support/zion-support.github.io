@@ -10,13 +10,8 @@ lcp: "number
 }
 
 interface AdvancedPerformanceOptimizerProps {
-className?: string
-  enableWebVitals?: boolean
-  enableAdvancedCaching?: boolean
-  enableImageOptimization?: boolean
-  enablePreloading?: boolean
-  enableServiceWorker?: boolean
-}
+  className?: string;
+  children?: React.ReactNode;
 }
 
 const AdvancedPerformanceOptimizer: "React.FC<AdvancedPerformanceOptimizerProps> = ({
@@ -63,4 +58,4 @@ const AdvancedPerformanceOptimizer: "React.FC<AdvancedPerformanceOptimizerProps>
   )
 }
 
-export default AdvancedPerformanceOptimizer
+export default AdvancedPerformanceOptimizer;

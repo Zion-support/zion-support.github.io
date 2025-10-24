@@ -33,3 +33,4 @@ export default EnhancedSEOPage
             </div>
 }
 
+export default EnhancedSEO;

@@ -1,12 +1,10 @@
-export interface User {
+// Type definitions for app types
 
 id: "string
   email: string
   name: string
   role: "admin" | "user" | "guest" "
 }
-}
-export interface Service {
 
 id: "string
   title: string

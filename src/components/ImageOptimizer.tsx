@@ -39,6 +39,12 @@ return (<Helmet>;</Helmet>
   )
 }
 
-export default ImageOptimizerPage
-export default ImageOptimizerPage
-}
+export const ImageOptimizer: React.FC<ImageOptimizerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`ImageOptimizer ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default ImageOptimizer;

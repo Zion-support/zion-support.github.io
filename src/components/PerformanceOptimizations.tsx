@@ -145,5 +145,13 @@ export default PerformanceOptimizationsPage
     </>
   )
 }
-export default PerformanceOptimizationsPage
-}
+
+export const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = ({ className = '', children }) => {
+  return (
+    <div className={`performanceoptimizations ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default PerformanceOptimizations;

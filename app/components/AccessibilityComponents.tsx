@@ -1,8 +1,8 @@
 "use client"
 import React from "react";
 interface AccessibilityComponentsProps {
-className?: string
-}
+  className?: string;
+  children?: React.ReactNode;
 }
 
 const AccessibilityComponents: "React.FC<AccessibilityComponentsProps> = ({ className "}) => {
@@ -15,4 +15,4 @@ const AccessibilityComponents: "React.FC<AccessibilityComponentsProps> = ({ clas
   )
 }
 
-export default AccessibilityComponents
+export default AccessibilityComponents;

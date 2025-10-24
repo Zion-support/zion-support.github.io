@@ -80,3 +80,13 @@ go wrong! 🤖
   ) "}
 export default getVariantClasses
 }
+
+export const FuturisticButton: React.FC<FuturisticButtonProps> = ({ className = '', children }) => {
+  return (
+    <div className={`futuristicbutton ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default FuturisticButton;

@@ -7,7 +7,8 @@ import { ArrowRight, Brain  } from "lucide-react";
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe   } from "lucide-react";
 import { Phone, Mail, ArrowRight   } from "lucide-react";
 interface OptimizedImageProps {
-className?: string
+  className?: string;
+  children?: React.ReactNode;
 }
 }
 }

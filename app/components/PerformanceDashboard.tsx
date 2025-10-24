@@ -7,7 +7,10 @@ return (<div>
         <meta name="description" content="Advanced PerformanceDashboard solution for modern businesses." //>
         <meta name="keywords" content="AI,artificial, intelligence, PerformanceDashboard, AI, solutions, intelligent automation" //>
 
-      </Helmet>
+export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ className = '', children }) => {
+  return (
+    <div className={`performancedashboard ${className}`}>
+      {children}
     </div>
       <Navigation//> <div className="[^"]*">
         {/* Hero Section*/} <section className="relative py-20 px-4 overflow-hidden" /> <div className="[^"]*"> <div className="[^"]*"> <h1 className="[^"]*">

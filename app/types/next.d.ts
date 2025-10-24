@@ -1,6 +1,6 @@
 //Type definitions for Next.js compatibility
 
-export interface Metadata {
+import { NextRequest, NextResponse } from 'next/server';
 
 title?: string
 description?: string

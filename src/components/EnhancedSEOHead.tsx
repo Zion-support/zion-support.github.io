@@ -225,5 +225,13 @@ export default SEOHead
     </>
   )
 }
-export default SEOHead
-}
+
+export const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ className = '', children }) => {
+  return (
+    <div className={`enhancedseohead ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default EnhancedSEOHead;

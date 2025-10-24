@@ -16,5 +16,12 @@ return (</AdvancedSEOOptimizerProps>
   )
 }
 
-export default AdvancedSEOOptimizer
-}
+export const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`advancedseooptimizer ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default AdvancedSEOOptimizer;

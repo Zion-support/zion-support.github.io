@@ -73,3 +73,13 @@ Email Us
 
 export default EnhancedPerformanceMonitorPage
 }
+
+export const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({ className = '', children }) => {
+  return (
+    <div className={`enhancedperformancemonitor ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default EnhancedPerformanceMonitor;

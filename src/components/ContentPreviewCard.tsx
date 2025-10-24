@@ -161,5 +161,13 @@ Contact Sales</button>
 export default ContentPreviewCardPage
   )
 }
-export default ContentPreviewCardPage
-}
+
+export const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({ className = '', children }) => {
+  return (
+    <div className={`contentpreviewcard ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default ContentPreviewCard;

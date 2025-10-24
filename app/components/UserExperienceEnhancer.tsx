@@ -84,3 +84,4 @@ export default enhanceUserExperience
     </div>
 }
 
+export default UserExperienceEnhancer;

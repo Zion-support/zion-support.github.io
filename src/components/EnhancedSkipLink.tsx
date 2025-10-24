@@ -174,5 +174,12 @@ Skip to maincontent</a>
 )
 {}
 
-export default EnhancedSkipLink
-}
+export const EnhancedSkipLink: React.FC<EnhancedSkipLinkProps> = ({ className = '', children }) => {
+  return (
+    <div className={`enhancedskiplink ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default EnhancedSkipLink;

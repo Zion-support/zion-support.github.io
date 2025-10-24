@@ -16,5 +16,12 @@ return (</DataCleanupManagerProps>
   )
 }
 
-export default DataCleanupManager
-}
+export const DataCleanupManager: React.FC<DataCleanupManagerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`datacleanupmanager ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default DataCleanupManager;

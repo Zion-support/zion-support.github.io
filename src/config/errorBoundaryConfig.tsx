@@ -2,6 +2,10 @@
 * Error Boundary Configuration*Centralized configuration for error handling across the application*/import React from "react";
 export interface ErrorBoundaryConfig {
 
+interface ErrorBoundaryConfigProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
 }
 }

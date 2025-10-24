@@ -99,3 +99,13 @@ export default EnhancedAccessibilityEnhancerPage; <section className="py-20 px-4
 export default EnhancedAccessibilityEnhancerPage}
 </ul>
 }
+
+export const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`enhancedaccessibilityenhancer ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default EnhancedAccessibilityEnhancer;

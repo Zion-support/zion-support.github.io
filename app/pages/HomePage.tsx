@@ -31,11 +31,11 @@ Get Started Today
       </Link>
     </div> <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Linkhref="/services" className="group border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center gap-2" />
-Explore Services</Link>
-                <ArrowRightIconclassName="w-5 h-5 group-hove,"
-r: translate-x-1 transition-transform" / />
-
+              <Link 
+                href="/about" 
+                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
+              >
+                Learn More
               </Link>
                       ,{/* Floating Elements*/} <div className="[^"]*"> <div className="[^"]*"> <div className="[^"]*">
       </section>

@@ -10,6 +10,9 @@ return(<> <div className="flex items-center justify-center" />
 
 }
 
+interface LoadingSpinnerProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
 import React from "react";
@@ -214,7 +217,4 @@ return (<divclassName=&quot;flex flex-col items-center justify-center space-y-2&
   )
 {}
 
-export default LoadingSpinner
-</divclassName>
-</divclassName>
-}
+export default LoadingSpinner;

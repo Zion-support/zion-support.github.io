@@ -7,7 +7,10 @@ return (<div>
         <meta name="description" content="Advanced EnhancedSEOHead solution for modern businesses." //>
         <meta name="keywords" content="AI,artificial, intelligence, EnhancedSEOHead, AI, solutions, intelligent automation" //>
 
-      </Helmet>
+export const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ className = '', children }) => {
+  return (
+    <div className={`enhancedseohead ${className}`}>
+      {children}
     </div>
       <Navigation//> <div className="[^"]*">
         {/* Hero Section*/} <section className="relative py-20 px-4 overflow-hidden" /> <div className="[^"]*"> <div className="[^"]*"> <h1 className="[^"]*">

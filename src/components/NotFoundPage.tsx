@@ -39,6 +39,12 @@ return (<Helmet>;</Helmet>
   )
 }
 
-export default NotFoundPagePage
-export default NotFoundPagePage
-}
+export const NotFoundPage: React.FC<NotFoundPageProps> = ({ className = '', children }) => {
+  return (
+    <div className={`NotFoundPage ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default NotFoundPage;

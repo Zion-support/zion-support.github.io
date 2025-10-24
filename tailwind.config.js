@@ -90,9 +90,7 @@
           "800": "#1f2937"
           "900": "#111827"
         }
-
-      }
-
+      },
       fontFamily: {
         "sans": ["Inter", "system-ui", "sans-serif"]
       }

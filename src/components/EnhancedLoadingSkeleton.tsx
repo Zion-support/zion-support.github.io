@@ -19,7 +19,17 @@ icon: "Target",title: "title",description: "description",benefits: "["Goal track
 icon: "TrendingUp",title: "title",description: "description",benefits: "["Growth strategies"","Market analysis", "Competitive insights", "ROI optimization"]
     }
 
-  ]}
-
-export default EnhancedLoadingSkeletonPage
+interface EnhancedLoadingSkeletonProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+
+export const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({ className = '', children }) => {
+  return (
+    <div className={`enhancedloadingskeleton ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default EnhancedLoadingSkeleton;

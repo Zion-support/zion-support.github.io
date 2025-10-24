@@ -20,3 +20,13 @@ Contact Us</Link> <ArrowRight className="w-5 h-5 ml-2" />
     </div>
     </div>
 }
+
+export const SearchModal: React.FC<SearchModalProps> = ({ className = '', children }) => {
+  return (
+    <div className={`searchmodal ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default SearchModal;

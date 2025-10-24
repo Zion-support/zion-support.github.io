@@ -24,7 +24,17 @@ This page is under development. Please check back soon for more information abou
   )
   )
 
+interface PageOriginalProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default MicroSAASPage
-}
+export const PageOriginal: React.FC<PageOriginalProps> = ({ className = '', children }) => {
+  return (
+    <div className={`pageoriginal ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default PageOriginal;

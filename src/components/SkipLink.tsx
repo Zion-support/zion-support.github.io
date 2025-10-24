@@ -161,5 +161,13 @@ Contact Sales</button>
 export default SkipLinkPage
   )
 }
-export default SkipLinkPage
-}
+
+export const SkipLink: React.FC<SkipLinkProps> = ({ className = '', children }) => {
+  return (
+    <div className={`skiplink ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default SkipLink;

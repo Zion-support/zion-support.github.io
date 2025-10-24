@@ -23,6 +23,8 @@ return (:all-pages-backup/micro-saas/ai-social-media-scheduler/page.tsx
 Contact Us</Link> <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
             </div>
+          </div>
+        </div>
       </div>
 </div>
     </>

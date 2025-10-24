@@ -56,5 +56,4 @@ return (<spanclassName={className} />
   )
 }
 
-export default AnimatedCounter
-}
+export default AnimatedCounter;

@@ -88,6 +88,9 @@ export default SystemMonitorPage
       </Footer>
 </div>
 
+interface SystemMonitorProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 export default benefits
 </div>

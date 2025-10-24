@@ -101,3 +101,13 @@ Email Us
 export default EnhancedSEOOptimizerPage
 </div>
 }
+
+export const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`enhancedseooptimizer ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default EnhancedSEOOptimizer;

@@ -28,5 +28,12 @@ return (</OptimizedImageProps>
   )
 }
 
+export const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '', children }) => {
+  return (
+    <div className={`optimizedimage ${className}`}>
+      {children}
+    </div>
+  );
+};
 
-export default OptimizedImage;</Image>
+export default OptimizedImage;

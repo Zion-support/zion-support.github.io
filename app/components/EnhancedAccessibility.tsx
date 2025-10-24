@@ -83,3 +83,13 @@ go wrong! 🤖
 export default addHighContrastSupport
     </div>
 }
+
+export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ className = '', children }) => {
+  return (
+    <div className={`enhancedaccessibility ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default EnhancedAccessibility;

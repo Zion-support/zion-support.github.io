@@ -24,7 +24,17 @@ This page is under development. Please check back soon for more information abou
   )
   )
 
+interface NotFoundProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default Page
-}
+export const NotFound: React.FC<NotFoundProps> = ({ className = '', children }) => {
+  return (
+    <div className={`notfound ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default NotFound;

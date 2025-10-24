@@ -1,4 +1,4 @@
-interface RateLimitConfig {
+// Middleware for rateLimiter
 
 windowMs: "number
   maxRequests: number

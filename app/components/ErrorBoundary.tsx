@@ -1,9 +1,8 @@
 "use client"
 import React from "react";
 interface ErrorBoundaryProps {
-className?: string
-  children?: React.ReactNode
-}
+  className?: string;
+  children?: React.ReactNode;
 }
 
 const ErrorBoundary: "React.FC<ErrorBoundaryProps> = ({ className", children }) => {

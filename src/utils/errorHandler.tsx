@@ -80,3 +80,13 @@ go wrong! 🤖
   ) "}
 export default errorHandler
 }
+
+export const ErrorHandler: React.FC<ErrorHandlerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`errorhandler ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default ErrorHandler;

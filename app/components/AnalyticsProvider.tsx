@@ -61,7 +61,8 @@ page_title: "pageName",page_location: "window.location.href"})}
 
   return (<AnalyticsContext.Provider value = {value}; />
       {children}
-    </AnalyticsContext.Provider>
-export default AnalyticsProvider
-}}}}}}}}
-)
+    </div>
+  );
+};
+
+export default AnalyticsProvider;
