@@ -28,6 +28,6 @@ export default function ZionchataiPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

@@ -28,6 +28,6 @@ export default function ProductivityPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

@@ -28,6 +28,6 @@ export default function AiautomationPage() {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }

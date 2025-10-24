@@ -28,6 +28,6 @@ export default function AifashiondesignPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

@@ -109,7 +109,7 @@ const checkInstalled = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -28,6 +28,6 @@ export default function AiquantumcomputingPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

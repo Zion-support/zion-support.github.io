@@ -109,7 +109,7 @@ const enhanceUserExperience = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

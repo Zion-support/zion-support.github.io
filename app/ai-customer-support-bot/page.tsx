@@ -28,6 +28,6 @@ export default function AicustomersupportbotPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

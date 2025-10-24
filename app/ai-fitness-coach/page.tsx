@@ -28,6 +28,6 @@ export default function AifitnesscoachPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

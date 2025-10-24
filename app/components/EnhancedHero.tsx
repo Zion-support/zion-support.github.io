@@ -50,7 +50,7 @@ const EnhancedHero: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

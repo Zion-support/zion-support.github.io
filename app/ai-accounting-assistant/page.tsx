@@ -28,6 +28,6 @@ export default function AiaccountingassistantPage() {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }

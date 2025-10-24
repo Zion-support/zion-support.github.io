@@ -109,7 +109,7 @@ const monitorCoreWebVitals = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

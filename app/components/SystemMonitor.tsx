@@ -18,7 +18,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</S
   return (</SystemMonitorProps>
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>SystemMonitor</title>
         <meta name="description" content="Advanced SystemMonitor solution for modern businesses." /></meta>
@@ -117,7 +117,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</S
         </section>
       </div>
       <Footer /></Footer>
-</>
+</div>
 <<<<<<< HEAD
   )
 }

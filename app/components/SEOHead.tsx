@@ -17,7 +17,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({ ,
   return (</SEOHeadProps>
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>{title}</title>
         <meta name="description" content={description} /></meta>
@@ -96,7 +96,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({ ,
         </section>
       </div>
       <Footer /></Footer>
-    </>
+    </div>
 
   );
 }  )}

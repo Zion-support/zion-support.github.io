@@ -28,6 +28,6 @@ export default function AicodeassistantPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

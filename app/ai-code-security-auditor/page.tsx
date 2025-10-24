@@ -28,6 +28,6 @@ export default function AicodesecurityauditorPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

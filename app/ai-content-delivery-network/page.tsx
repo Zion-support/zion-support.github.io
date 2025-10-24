@@ -28,6 +28,6 @@ export default function AicontentdeliverynetworkPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

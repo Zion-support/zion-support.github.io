@@ -28,6 +28,6 @@ export default function AiholographicworkspacePage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

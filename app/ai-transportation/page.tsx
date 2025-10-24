@@ -28,6 +28,6 @@ export default function AitransportationPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

@@ -28,6 +28,6 @@ export default function AiautomatedreportingPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

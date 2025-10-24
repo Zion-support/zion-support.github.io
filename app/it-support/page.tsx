@@ -28,6 +28,6 @@ export default function ItsupportPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

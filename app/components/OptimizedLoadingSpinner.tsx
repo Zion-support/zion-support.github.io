@@ -8,7 +8,7 @@ const OptimizedLoadingSpinner: React.FC = () => {
   return (
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>OptimizedLoadingSpinner</title>
         <meta name="description" content="Advanced OptimizedLoadingSpinner solution for modern businesses." /></meta>
@@ -83,7 +83,7 @@ const OptimizedLoadingSpinner: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-    </>
+    </div>
 
   );
 }  )}

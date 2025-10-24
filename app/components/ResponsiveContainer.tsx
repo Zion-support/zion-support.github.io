@@ -8,7 +8,7 @@ const ResponsiveContainer: React.FC = () => {
   return (
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>ResponsiveContainer</title>
         <meta name="description" content="Advanced ResponsiveContainer solution for modern businesses." /></meta>
@@ -83,7 +83,7 @@ const ResponsiveContainer: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-    </>
+    </div>
 
   );
 }  )}

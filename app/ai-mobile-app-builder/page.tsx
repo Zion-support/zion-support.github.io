@@ -28,6 +28,6 @@ export default function AimobileappbuilderPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

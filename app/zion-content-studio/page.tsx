@@ -28,6 +28,6 @@ export default function ZioncontentstudioPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

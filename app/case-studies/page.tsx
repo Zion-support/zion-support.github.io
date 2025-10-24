@@ -28,6 +28,6 @@ export default function CasestudiesPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

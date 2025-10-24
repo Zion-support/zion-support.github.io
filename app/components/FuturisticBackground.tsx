@@ -8,7 +8,7 @@ const FuturisticBackground: React.FC = () => {
   return (
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>FuturisticBackground</title>
         <meta name="description" content="Advanced FuturisticBackground solution for modern businesses." /></meta>
@@ -83,7 +83,7 @@ const FuturisticBackground: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-    </>
+    </div>
 
   );
 };

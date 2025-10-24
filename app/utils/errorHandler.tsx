@@ -108,7 +108,7 @@ const errorHandler = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

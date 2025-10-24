@@ -28,6 +28,6 @@ export default function AifinancialcrimedetectionproPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

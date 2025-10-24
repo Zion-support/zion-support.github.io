@@ -28,6 +28,6 @@ export default function AidocumentscannerPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

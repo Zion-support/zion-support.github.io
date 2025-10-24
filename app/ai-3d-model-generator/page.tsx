@@ -28,6 +28,6 @@ export default function Ai3dmodelgeneratorPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

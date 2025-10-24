@@ -28,6 +28,6 @@ export default function ZionblockchainsolutionsPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

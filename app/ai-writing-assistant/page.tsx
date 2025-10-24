@@ -28,6 +28,6 @@ export default function AiwritingassistantPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

@@ -109,7 +109,7 @@ const useAnalytics = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

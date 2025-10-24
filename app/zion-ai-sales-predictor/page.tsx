@@ -28,6 +28,6 @@ export default function ZionaisalespredictorPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

@@ -1,4 +1,5 @@
 'use client';
+import React from 'react';
 import { useState } from 'react';
 import { MessageSquare, Mail, Phone, Send, CheckCircle } from 'lucide-react';
 
@@ -73,7 +74,7 @@ const ContactForm: React.FC = () => {
         <h3 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>
         <p className="text-gray-300">Thank you for reaching out. We&apos;ll get back to you soon.</p>
       </div>
-    </>
+    </div>
   );
   }
 
@@ -204,17 +205,17 @@ handleChange
           {isSubmitting ? (</button>
             <>
     
-  </>
+  </div>
               <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
               Sending...
-            </>
+            </div>
           ) : (
             <>
     
-  </>
+  </div>
               <Send className="w-5 h-5 mr-2" /></Send>
               Send Message</Send>
-            </>
+            </div>
           )}
         </button>
       </form>

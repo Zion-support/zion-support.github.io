@@ -28,6 +28,6 @@ export default function TrainingPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

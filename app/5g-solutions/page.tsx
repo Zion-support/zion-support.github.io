@@ -28,6 +28,6 @@ export default function GsolutionsPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

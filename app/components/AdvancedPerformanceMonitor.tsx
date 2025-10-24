@@ -41,7 +41,7 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
   return (
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>Advanced Performance Monitor</title>
         <meta name="description" content="Advanced Performance Monitor solution for modern businesses." /></meta>
@@ -143,7 +143,7 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-</>;
+</div>;
   );
 };
 

@@ -28,6 +28,6 @@ export default function AiaudioprocessorimprovedPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

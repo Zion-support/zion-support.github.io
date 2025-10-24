@@ -49,7 +49,7 @@ const ContentStatistics: React.FC = () => {
     return (
     <>
     ) => clearInterval(interval)
-  </>
+  </div>
   }, []
     </div>
 <<<<<<< HEAD
@@ -93,7 +93,7 @@ const ContentStatistics: React.FC = () => {
   return (</Zap>
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>ContentStatistics</title>
         <meta name="description" content="Advanced ContentStatistics solution for modern businesses." /></meta>

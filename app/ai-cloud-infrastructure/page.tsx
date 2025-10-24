@@ -28,6 +28,6 @@ export default function AicloudinfrastructurePage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

@@ -28,6 +28,6 @@ export default function ZioninvoicegeniusPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

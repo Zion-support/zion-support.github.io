@@ -8,7 +8,7 @@ const LoadingSpinner: React.FC = () => {
   return (
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>LoadingSpinner</title>
         <meta name="description" content="Advanced LoadingSpinner solution for modern businesses." /></meta>
@@ -83,7 +83,7 @@ const LoadingSpinner: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-    </>
+    </div>
 
   );
 }  )}

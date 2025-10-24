@@ -8,7 +8,7 @@ const ContentPreviewCard: React.FC = () => {
   return (
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>ContentPreviewCard</title>
         <meta name="description" content="Advanced ContentPreviewCard solution for modern businesses." /></meta>
@@ -83,7 +83,7 @@ const ContentPreviewCard: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-    </>
+    </div>
   );
 };
 

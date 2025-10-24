@@ -28,6 +28,6 @@ export default function NetworksolutionsPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

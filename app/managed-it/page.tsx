@@ -28,6 +28,6 @@ export default function ManageditPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

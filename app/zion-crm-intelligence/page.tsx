@@ -28,6 +28,6 @@ export default function ZioncrmintelligencePage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

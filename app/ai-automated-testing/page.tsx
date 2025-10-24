@@ -28,6 +28,6 @@ export default function AiautomatedtestingPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

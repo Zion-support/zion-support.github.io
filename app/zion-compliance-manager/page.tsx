@@ -28,6 +28,6 @@ export default function ZioncompliancemanagerPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

@@ -28,6 +28,6 @@ export default function ZionsmartcrmautomationPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

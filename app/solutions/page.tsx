@@ -28,6 +28,6 @@ export default function SolutionsPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

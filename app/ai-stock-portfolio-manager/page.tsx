@@ -28,6 +28,6 @@ export default function AistockportfoliomanagerPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

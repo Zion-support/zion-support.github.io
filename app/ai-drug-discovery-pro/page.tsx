@@ -28,6 +28,6 @@ export default function AidrugdiscoveryproPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

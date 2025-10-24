@@ -28,6 +28,6 @@ export default function ZionaiwebsiteanalyzerPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

@@ -28,6 +28,6 @@ export default function AicrmPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

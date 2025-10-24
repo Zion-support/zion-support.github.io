@@ -28,6 +28,6 @@ export default function ZionaitranslationservicePage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

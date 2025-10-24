@@ -8,7 +8,7 @@ const SkipLink: React.FC = () => {
   return (
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>SkipLink</title>
         <meta name="description" content="Advanced SkipLink solution for modern businesses." /></meta>
@@ -83,7 +83,7 @@ const SkipLink: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-    </>
+    </div>
 
   );
 }  )}

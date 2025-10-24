@@ -28,6 +28,6 @@ export default function AiapimanagementPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

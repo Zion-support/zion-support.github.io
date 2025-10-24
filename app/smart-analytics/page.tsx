@@ -28,6 +28,6 @@ export default function SmartanalyticsPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

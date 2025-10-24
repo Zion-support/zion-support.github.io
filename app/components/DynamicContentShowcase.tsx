@@ -8,7 +8,7 @@ const DynamicContentShowcase: React.FC = () => {
   return (
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>DynamicContentShowcase</title>
         <meta name="description" content="Advanced DynamicContentShowcase solution for modern businesses." /></meta>
@@ -83,7 +83,7 @@ const DynamicContentShowcase: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-    </>
+    </div>
   );
 };
 

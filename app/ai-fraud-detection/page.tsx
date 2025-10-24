@@ -28,6 +28,6 @@ export default function AifrauddetectionPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

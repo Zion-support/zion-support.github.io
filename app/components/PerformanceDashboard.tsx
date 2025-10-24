@@ -8,7 +8,7 @@ const PerformanceDashboard: React.FC = () => {
   return (
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>PerformanceDashboard</title>
         <meta name="description" content="Advanced PerformanceDashboard solution for modern businesses." /></meta>
@@ -83,7 +83,7 @@ const PerformanceDashboard: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-    </>
+    </div>
 
   );
 }  )}

@@ -133,7 +133,7 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

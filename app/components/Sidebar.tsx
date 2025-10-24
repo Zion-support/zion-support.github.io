@@ -8,7 +8,7 @@ const Sidebar: React.FC = () => {
   return (
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>Sidebar</title>
         <meta name="description" content="Advanced Sidebar solution for modern businesses." /></meta>
@@ -83,7 +83,7 @@ const Sidebar: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-    </>
+    </div>
 
   );
 }  )}

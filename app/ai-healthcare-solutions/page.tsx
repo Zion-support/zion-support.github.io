@@ -28,6 +28,6 @@ export default function AihealthcaresolutionsPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

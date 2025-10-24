@@ -8,7 +8,7 @@ const ServiceWorker: React.FC = () => {
   return (
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>ServiceWorker</title>
         <meta name="description" content="Advanced ServiceWorker solution for modern businesses." /></meta>
@@ -83,7 +83,7 @@ const ServiceWorker: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-    </>
+    </div>
 
   );
 }  )}

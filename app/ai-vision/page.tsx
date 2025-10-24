@@ -28,6 +28,6 @@ export default function AivisionPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

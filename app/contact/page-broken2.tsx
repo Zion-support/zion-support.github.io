@@ -109,7 +109,7 @@ const ContactPageBroken2 = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

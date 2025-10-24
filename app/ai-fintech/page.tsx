@@ -28,6 +28,6 @@ export default function AifintechPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

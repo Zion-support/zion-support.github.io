@@ -37,7 +37,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
   return (
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>Advanced SEO Optimizer</title>
         <meta name="description" content="Advanced SEO Optimizer solution for modern businesses." /></meta>
@@ -139,7 +139,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-</>;
+</div>;
   );
 };
 

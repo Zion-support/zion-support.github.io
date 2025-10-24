@@ -8,7 +8,7 @@ const SecurityEnhancer: React.FC = () => {
   return (
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>SecurityEnhancer</title>
         <meta name="description" content="Advanced SecurityEnhancer solution for modern businesses." /></meta>
@@ -83,7 +83,7 @@ const SecurityEnhancer: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-    </>
+    </div>
 
   );
 }  )}

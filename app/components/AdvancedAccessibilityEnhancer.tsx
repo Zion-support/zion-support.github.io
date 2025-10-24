@@ -167,7 +167,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     const trapFocus = (element: HTMLElement) => {
       const focusableElements = element.querySelectorAll(
         'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
-    </>
+    </div>
 <<<<<<< HEAD
   ) as NodeListOf<HTMLElement></HTMLElement>
       const firstElement = focusableElements[0]

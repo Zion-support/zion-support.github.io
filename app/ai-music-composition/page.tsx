@@ -28,6 +28,6 @@ export default function AimusiccompositionPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

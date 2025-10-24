@@ -10,7 +10,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {</SEOEn
   return (</SEOEnhancerProps>
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>SEOEnhancer | Zion Tech Group</title>
         <meta name="description" content="Professional SEOEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." /></meta>
@@ -158,7 +158,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {</SEOEn
         </section>
       </div>
       <Footer /></Footer>
-</>
+</div>
   );
 };
 

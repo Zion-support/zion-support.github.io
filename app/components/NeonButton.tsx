@@ -8,7 +8,7 @@ const NeonButton: React.FC = () => {
   return (
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>NeonButton</title>
         <meta name="description" content="Advanced NeonButton solution for modern businesses." /></meta>
@@ -83,7 +83,7 @@ const NeonButton: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-    </>
+    </div>
 
   );
 }  )}

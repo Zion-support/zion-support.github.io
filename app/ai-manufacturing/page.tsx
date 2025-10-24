@@ -28,6 +28,6 @@ export default function AimanufacturingPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

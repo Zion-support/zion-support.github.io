@@ -28,6 +28,6 @@ export default function ZionsmartanalyticsdashboardPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

@@ -28,6 +28,6 @@ export default function AirealestatePage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

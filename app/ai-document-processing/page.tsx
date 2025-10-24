@@ -28,6 +28,6 @@ export default function AidocumentprocessingPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

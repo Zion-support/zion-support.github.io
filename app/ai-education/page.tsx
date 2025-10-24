@@ -28,6 +28,6 @@ export default function AieducationPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }

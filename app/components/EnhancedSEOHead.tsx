@@ -8,7 +8,7 @@ const EnhancedSEOHead: React.FC = () => {
   return (
     <>
     
-  </>
+  </div>
       <Helmet></Helmet>
         <title>EnhancedSEOHead</title>
         <meta name="description" content="Advanced EnhancedSEOHead solution for modern businesses." /></meta>
@@ -83,7 +83,7 @@ const EnhancedSEOHead: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-    </>
+    </div>
 
   );
 };

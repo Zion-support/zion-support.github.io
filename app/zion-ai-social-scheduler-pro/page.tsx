@@ -28,6 +28,6 @@ export default function ZionaisocialschedulerproPage() {
         </div>
       </div>
       <Footer />
-</>
+</div>
   )
 }
