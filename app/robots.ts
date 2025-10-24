@@ -1,19 +1,12 @@
-import React from 'react'
 import { MetadataRoute } from 'next'
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: [
-        '/api/',
-        '/_next/',
-        '/admin/',
-        '/private/',
-        '*.json',
-        '*.xml',
-      ],
+      disallow: ['/private/', '/admin/'],
     },
-    sitemap: 'https://zion.app/sitemap.xml',
+    sitemap: 'https://ziontechgroup.com/sitemap.xml',
   }
 }

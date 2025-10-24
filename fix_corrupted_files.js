@@ -1,12 +1,12 @@
-const fs = require('fs');
-const path = require('path');
-
-// Template for a basic page component
-const pageTemplate = (pageName) => `'use client';
-
 import React from 'react';
 import Link from 'next/link';
 import SEOHead from '../components/SEOHead';
+const fs = require('fs');
+const path = require('path');
+
+// Template for a basic page component;
+const pageTemplate = (pageName) => `'use client';
+;
 
 export default function ${pageName}Page() {
   return (
@@ -27,8 +27,7 @@ export default function ${pageName}Page() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700"
-            >
+              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700">
               Get Started
             </Link>
           </div>
@@ -47,19 +46,19 @@ function isCorrupted(content) {
 }
 
 function fixFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
     
     if (isCorrupted(content)) {
       console.log(`Fixing corrupted file: ${filePath}`);
       
-      // Extract page name from file path
-      const pathParts = filePath.split('/');
+      // Extract page name from file path;
+const pathParts = filePath.split('/');
       const fileName = pathParts[pathParts.length - 1];
       const pageName = fileName.replace('.tsx', '').replace('page', '');
       
-      // Generate new content
-      const newContent = pageTemplate(pageName);
+      // Generate new content;
+const newContent = pageTemplate(pageName);
       
       fs.writeFileSync(filePath, newContent);
       return true;
@@ -72,12 +71,12 @@ function fixFile(filePath) {
   }
 }
 
-function walkDirectory(dir) {
-  const files = fs.readdirSync(dir);
+function walkDirectory(dir) {;
+const files = fs.readdirSync(dir);
   let fixedCount = 0;
   
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
+  files.forEach(file => {;
+const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     
     if (stat.isDirectory()) {

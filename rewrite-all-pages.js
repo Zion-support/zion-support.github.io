@@ -1,16 +1,17 @@
-const fs = require("fs")
+import React from "react";
+import React from 'react'
+const fs = require("fs");
 const path = require("path")
 //Function to create a clean page component
-function createCleanPage(fileName) {
-  const baseName = fileName.replace("page.tsx", "").replace(".tsx", "")
-  const displayName = baseName
+function createCleanPage(fileName) {;
+const baseName = fileName.replace("page.tsx", "").replace(".tsx", "");
+const displayName = baseName
     .split("/")
     .pop()
     .split("-")
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ")
-  return`"use client"
-import React from "react";
+  return`"use client";
 export default function${baseName.split("/").pop().replace(/-/g, "")}() {
   return (<div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,14 +19,14 @@ export default function${baseName.split("/").pop().replace(/-/g, "")}() {
           <h1 className="text-4xl font-bold text-gray-900 mb-8">
             ${displayName}
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional${displayName.toLowerCase()} services and solutions.
+          <p className=text-xl text-gray-600 max-w-3xl mx-auto>
+            Professional ${displayName.toLowerCase()} services and solutions.
           </p>
         </div>
       </div>
     </div>
-    </>
-  ) }`
+  );
+}`;
 }
 const fs = require('fs');
 const path = require('path');
@@ -40,8 +41,7 @@ function createCleanPage(fileName) {;
     .map(word => word.charAt(0).toUpperCase() + word.slice(1));
     .join(' ');
 ;
-  return `'use client'
-import React from 'react'
+  return `'use client';
 ;
 export default function ${baseName.split('/').pop().replace(/-/g, '')}() {;
   return (<div className="min-h-screen bg-gray-50 py-12">
@@ -59,8 +59,7 @@ export default function ${baseName.split('/').pop().replace(/-/g, '')}() {;
   )}`}
 // Function to create a clean 404 page;
 function createClean404() {`'
-  return `'use client'
-import React from 'react'
+  return `'use client';
 ;
 export default function NotFound() {"
   return ("
@@ -69,8 +68,7 @@ export default function NotFound() {"
 //Function to create a clean 404 page
 function createClean404() {
 
-  return`"use client"
-import React from "react";
+  return`"use client";
 export default function NotFound() {
 
   return (<div className="min-h-screen bg-gray-50 flex items-center justify-center">
@@ -84,8 +82,8 @@ export default function NotFound() {
     </div>);`
   )}`}
 // Main processing function;
-function rewriteAllPages() {
-  const appDir = path.join(__dirname, 'app');
+function rewriteAllPages() {;
+const appDir = path.join(__dirname, 'app');
   const srcDir = path.join(__dirname, 'src');
 ;
   let processedCount = 0;
@@ -102,13 +100,14 @@ function rewriteAllPages() {
     files.forEach(file => {);
       const filePath = path.join(dir, file);
       const stat = fs.statSync(filePath);
-;
-      if (stat.isDirectory()) {;
-        processDirectory(filePath)} else if (file.endsWith('page.tsx') || file === '404.tsx') {;
-        try {;
-          let newContent = ''
-;
-          if (file === '404.tsx') {;
+
+      if (stat.isDirectory()) {"
+        processDirectory(filePath);"'"
+      } else if (file.endsWith('page.tsx') || file === '404.tsx") {"
+        try {"'"
+          let newContent = ;"
+          "'"
+          if (file === '404.tsx") {
             newContent = createClean404();
           } else {;
             newContent = createCleanPage(file)}'
@@ -124,11 +123,10 @@ function rewriteAllPages() {
 rewriteAllPages()";`'"
 
 //Main processing function
-function rewriteAllPages() {
-
-  const appDir = path.join(__dirname, "app")
-  const srcDir = path.join(__dirname, "src")
-  let processedCount = 0
+function rewriteAllPages() {;
+const appDir = path.join(__dirname, "app");
+const srcDir = path.join(__dirname, "src");
+let processedCount = 0
   //Process app directory
   if (fs.existsSync(appDir)) {
     processDirectory(appDir)
@@ -139,35 +137,36 @@ function rewriteAllPages() {
     processDirectory(srcDir)
   }
   
-  function processDirectory(dir) {
-    const files = fs.readdirSync(dir)
-    files.forEach(file => {
-      const filePath = path.join(dir, file)
-      const stat = fs.statSync(filePath)
+  function processDirectory(dir) {;
+const files = fs.readdirSync(dir)
+    files.forEach(file => {;
+const filePath = path.join(dir, file);
+const stat = fs.statSync(filePath)
       if (stat.isDirectory()) {
         processDirectory(filePath)
       } else if (file.endsWith("page.tsx") || file === "404.tsx") {
-        try {
-          let newContent = ""
+        try {;
+let newContent = ""
           if (file === "404.tsx") {
             newContent = createClean404()
           } else {
-            newContent = createCleanPage(file)
-          }
-          
-          fs.writeFileSync(filePath, newContent, "utf8")
-          console.log("Rewritten: " + filePath)
-          processedCount++
-        } catch (error) {
-          console.error("Error processing " + filePath+":", error.message)
+            newContent = createCleanPage(file);"
+          }"
+          "'"
+          fs.writeFileSync(filePath, newContent, 'utf8");"'"
+          console.log('Rewritten: " + filePath);"
+          processedCount++;"
+        } catch (error) {"'"
+          console.error('Error processing ' + filePath + ':", error.message);
         }
       }
-    })
-  }
-  
-  console.log("Page rewrite complete!")
-  console.log("Processed files: " + processedCount)
+    });"
+  }"
+  "'"
+  console.log('Page rewrite complete!");"'"
+  console.log('Processed files: " + processedCount);
 }
 
 //Run the script
 rewriteAllPages()
+}}

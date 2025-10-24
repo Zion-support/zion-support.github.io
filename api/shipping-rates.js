@@ -1,1 +1,1 @@
-//API endpoint for shipping rates
+// API endpoint for shipping rates;

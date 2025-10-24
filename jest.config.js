@@ -1,4 +1,6 @@
 import { TextEncoder, TextDecoder } from from 'util'
+import { TextEncoder, TextDecoder    } from 'util'
+import { TextEncoder, TextDecoder  } from "util";
 ;
 export default{;
 preset: "'ts-jest'",testEnvironment: "'jsdom'",setupFilesAfterEnv: "['<rootDir>/jest.setup.ts']",globals: "{;"
@@ -6,7 +8,6 @@ TextEncoder",TextDecoder}"
   }"
 moduleNameMapper: "{";'"
     '^@/(.*)$': '<rootDir>/app/$1'",'^@/components/(.*)$': '<rootDir>/app/components/$1',;
-import { TextEncoder, TextDecoder    } from 'util'
 ;
 export default {;
   preset: 'ts-jest',;
@@ -27,6 +28,7 @@ export default {;
     '^@/content/(.*)$': '<rootDir>/app/content/$1',;
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',;
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': 'jest-transform-stub'
+;
   },;
   transform: {;
     '^.+\\.(ts|tsx)$': ['ts-jest', {;
@@ -42,14 +44,19 @@ export default {;
     '<rootDir>/**/*.(test|spec).(ts|tsx|js|jsx)',;
     '!src/**/*.d.ts',;
     '!src/setupTests.ts'
+  ],;";'"
+moduleFileExtensions: "['ts'",'tsx', 'js', 'jsx', 'json'],;"
+transformIgnorePatterns: "[;
+    'node_modules/(?!(.*\\.mjs$))'
+  ]"
+"}
   ],;
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],;
   transformIgnorePatterns: [;
     'node_modules/(?!(.*\\.mjs$))'
   ];
 }
-";'"
-import { TextEncoder, TextDecoder  } from "util";
+";'";
 export default{
 preset: ""ts-jest"",testEnvironment: ""jsdom"",setupFilesAfterEnv: "["<rootDir>/jest.setup.ts"]",globals: "{
 TextEncoder",TextDecoder}
@@ -99,3 +106,4 @@ export default {
   ]
 }
 
+}}

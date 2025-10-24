@@ -1,6 +1,9 @@
-import fs from 'fs'
-import path from 'path'
+import fs from 'fs';
+import path from 'path';
 import React from 'react'
+import { { fs   } from "fs";
+import { path  } from "path";
+import { React  } from "react";
 export default ${title}Page;`;
 ;
 // List of pages that need to be created based on App.tsx imports;
@@ -58,11 +61,8 @@ fs.mkdirSync(pageDir, { recursive: "true "});
 fs.writeFileSync(pageFile, pageTemplate(pageName, title));";`"
     console.log(`Created: "${pageFile"}`)});
 ;'"
-console.log('Missing pages creation completed!');";`'"
-import { { fs   } from "fs";
-import { path  } from "path";
-import { React  } from "react";
-export default${title}Page;`//List of pages that need to be created based on App.tsx imports
+console.log('Missing pages creation completed!');";`'";
+export default${title}Page;`//List of pages that need to be created based on App.tsx imports;
 const missingPages = ["pricing", "blog", "case-studies", "careers", "ai-services", "it-services"
   "micro-saas", "consultation", "support", "privacy", "terms", "cookies"
   "sitemap", "ai-analytics", "ai-automation", "ai-chatbot-builder"
@@ -92,21 +92,22 @@ const missingPages = ["pricing", "blog", "case-studies", "careers", "ai-services
 ]
 //Template for page components`"use client"
   return()
-        <title>${title} - Zion Tech Group</title>
-${title})
-Professional${title.toLowerCase() services by Zion Tech Group.
+        <title>${title} - Zion Tech Group</title>;
+${title});"
+Professional ${title.toLowerCase();} services by Zion Tech Group."
 
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2> We"re working on bringing you comprehensive${title.toLowerCase() solutions.
-Contact us to learn more about our services.
-Contact Us
-  ) }
+            <h2 className = "text-2xl font-bold text-white mb-4">Coming Soon</h2>;"
+We"re working on bringing you comprehensive ${title.toLowerCase(),} solutions.;
+Contact us to learn more about our services.;
+Contact Us;
+  );
+};
 
 //Create missing pages
     word.charAt(0).toUpperCase() + word.slice(1)
-  ).join(" ")
-
-const pageDir = path.join("/workspace/app", pageName)
-  const pageFile = path.join(pageDir, "page.tsx")
+  ).join(" ");
+const pageDir = path.join("/workspace/app", pageName);
+const pageFile = path.join(pageDir, "page.tsx")
   //Create directory if it doesn"t exist
   if (!fs.existsSync(pageDir)) {
 fs.mkdirSync(pageDir, { recursive: "true "})
@@ -116,3 +117,4 @@ fs.writeFileSync(pageFile, pageTemplate(pageName, title))
     console.log(`Created: "${pageFile"}`)
 })
  console.log("Missing pages creation completed!')
+}}}

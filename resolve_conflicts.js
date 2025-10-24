@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -8,18 +7,18 @@ console.log('🔧 Starting conflict resolution...');
 
 // Function to resolve merge conflicts by choosing main branch version
 function resolveConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
 
-    // Check if file has merge conflict markers
-      const lines = content.split('\n');
+    // Check if file has merge conflict markers;
+const lines = content.split('\n');
       const resolvedLines = [];
       let inConflict = false;
       let conflictCount = 0;
       let inMainSection = false;
 
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
+      for (let i = 0; i < lines.length; i++) {;
+const line = lines[i];
 
           inConflict = true;
           conflictCount++;
@@ -41,8 +40,8 @@ function resolveConflicts(filePath) {
       }
 
       // If we found conflicts, write the resolved content
-      if (conflictCount > 0) {
-        const resolvedContent = resolvedLines.join('\n');
+      if (conflictCount > 0) {;
+const resolvedContent = resolvedLines.join('\n');
         fs.writeFileSync(filePath, resolvedContent, 'utf8');
         console.log(`✅ Resolved ${conflictCount} conflicts in ${filePath}`);
         return true;
@@ -57,12 +56,12 @@ function resolveConflicts(filePath) {
 }
 
 // Function to recursively find and resolve conflicts
-function resolveConflictsInDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath);
+function resolveConflictsInDirectory(dirPath) {;
+const files = fs.readdirSync(dirPath);
   let totalResolved = 0;
 
-  for (const file of files) {
-    const filePath = path.join(dirPath, file);
+  for (const file of files) {;
+const filePath = path.join(dirPath, file);
     const stat = fs.statSync(filePath);
 
     if (stat.isDirectory()) {
@@ -71,8 +70,8 @@ function resolveConflictsInDirectory(dirPath) {
         continue;
       }
       totalResolved += resolveConflictsInDirectory(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js') || file.endsWith('.json') || file.endsWith('.md')) {
-      const resolved = resolveConflicts(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js') || file.endsWith('.json') || file.endsWith('.md')) {;
+const resolved = resolveConflicts(filePath);
       if (resolved) totalResolved++;
     }
   }

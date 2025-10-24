@@ -1,7 +1,3 @@
-//link utility()
-export const link = () => {}
-  //Utility function implementation()
-return null()
-{}
-
-export default link
+'use client';
+// link utility()
+// Conflict resolved: taking HEAD version

@@ -1,53 +1,56 @@
-"use client"
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-export default function ServicePage() {
+import React from 'react'
+import Link from 'next/link'
+
+export default function FiveGDataAnalyticsPage() {
   return (
-    <>
-      <Head>
-        <title>5g Data Analytics | Zion Tech Group</title>
-        
-        <meta name="description" content="Professional 5g data analytics services and solutions for modern businesses." />
-        
-        <meta name="robots" content="index, follow" />
-        
-        <meta property="og:type" content="website" />
-        
-        <meta property="og:title" content="5g Data Analytics|Zion Tech Group" />
-        
-        <meta property="og:description" content="Professional 5g data analytics services and solutions for modern businesses." />
-      
-      </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-              Professional Page services designed to help your business grow and succeed.
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">5G Data Analytics Solutions</h1>
+          
+          <div className="prose prose-lg max-w-none">
+            <p className="text-xl text-gray-600 mb-6">
+              Leverage the power of 5G networks for advanced data analytics. Our solutions 
+              enable real-time data processing, machine learning, and predictive analytics 
+              at unprecedented speeds and scale.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
-                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link 
-                href="/about" 
-                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
-              >
-                Learn More
-              </Link>
+            
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Features</h2>
+            <ul className="list-disc list-inside text-gray-600 space-y-2 mb-6">
+              <li>Real-time data streaming and processing</li>
+              <li>Advanced machine learning algorithms</li>
+              <li>Predictive analytics and forecasting</li>
+              <li>Interactive dashboards and visualizations</li>
+              <li>Automated reporting and alerts</li>
+            </ul>
+            
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Use Cases</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Smart Cities</h3>
+                <p className="text-gray-600">
+                  Analyze traffic patterns, energy usage, and citizen behavior in real-time.
+                </p>
+              </div>
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Industrial IoT</h3>
+                <p className="text-gray-600">
+                  Monitor equipment performance and predict maintenance needs.
+                </p>
+              </div>
             </div>
+          </div>
+          
+          <div className="mt-12 text-center">
+            <Link 
+              href="/contact" 
+              className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Get Started
+            </Link>
           </div>
         </div>
       </div>
-    </>
-  );
+    </div>
+  )
 }

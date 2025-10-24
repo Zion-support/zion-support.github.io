@@ -1,10 +1,9 @@
-#!/usr/bin/env node
-
-const fs = require("fs")
+#!/usr/bin/env node;
+const fs = require("fs");
 const path = require("path")
 //Function to fix import statement errors;
-function fixImportErrors(content) {
-  let fixed = content
+function fixImportErrors(content) {;
+let fixed = content
   //Fix import statements missing semicolons;
   fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""]([^""]+)[""]\s*$/gm, "import { $1 } from \"$2\";")
   //Fix import statements with missing from keyword;
@@ -26,9 +25,9 @@ const cleanImports = imports.trim()
 
 //Function to process a single file
 function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, "utf8")
-    const fixed = fixImportErrors(content)
+  try {;
+const content = fs.readFileSync(filePath, "utf8");
+const fixed = fixImportErrors(content)
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed)
       console.log(`Fixed: ${filePath}`)
@@ -42,13 +41,13 @@ function processFile(filePath) {
 }
 
 //Function to recursively find and process files
-function processDirectory(dirPath) {
-  let fixedCount = 0
-  try {
-    const items = fs.readdirSync(dirPath)
-    for (const item of items) {
-      const fullPath = path.join(dirPath, item)
-      const stat = fs.statSync(fullPath)
+function processDirectory(dirPath) {;
+let fixedCount = 0
+  try {;
+const items = fs.readdirSync(dirPath)
+    for (const item of items) {;
+const fullPath = path.join(dirPath, item);
+const stat = fs.statSync(fullPath)
       if (stat.isDirectory()) {
         //Skip node_modules and other directories
         if (item !== "node_modules" && item !== ".git" && item !== ".next") {

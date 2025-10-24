@@ -2,14 +2,14 @@ const fs = require('fs');
 const path = require('path');
 
 function fixImportPaths(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     
-    // Calculate the correct relative path to components
-    const pathParts = filePath.split('/');
-    const depth = pathParts.filter(part => part !== 'app').length - 1; // -1 for the file itself
-    const relativePath = '../'.repeat(depth) + 'components/SEOHead';
+    // Calculate the correct relative path to components;
+const pathParts = filePath.split('/');
+    const depth = pathParts.filter(part => part !== 'app').length - 1; // -1 for the file itself;
+const relativePath = '../'.repeat(depth) + 'components/SEOHead';
     
     // Fix the import path
     content = content.replace(
@@ -30,12 +30,12 @@ function fixImportPaths(filePath) {
   }
 }
 
-function walkDirectory(dir) {
-  const files = fs.readdirSync(dir);
+function walkDirectory(dir) {;
+const files = fs.readdirSync(dir);
   let fixedCount = 0;
   
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
+  files.forEach(file => {;
+const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     
     if (stat.isDirectory()) {

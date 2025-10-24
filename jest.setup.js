@@ -1,19 +1,20 @@
-require("@testing-library/jest-dom");
-;
-// Polyfill for TextEncoder/TextDecoder;
-const { TextEncoder, TextDecoder } = require('util');
+require("@testing-library/jest-dom");"
+
+// Polyfill for TextEncoder/TextDecoder;"
+const { TextEncoder, TextDecoder ;} = require('util");
 global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
-;
-// Mock window.matchMedia;'"
-Object.defineProperty(window, 'matchMedia', {)"
+global.TextDecoder = TextDecoder;"
+
+// Mock window.matchMedia;"'"
+Object.defineProperty(window, 'matchMedia", {;)"
 writable: "true",);"
-value: "jest.fn().mockImplementation(query => ({)"
+value: "jest.fn().mockImplementation(query => ({;)"
 matches: false",media: "query",onchange: "null",);"
 addListener: "jest.fn()",// deprecated;"
 removeListener: "jest.fn()",// deprecated;"
-addEventListener: "jest.fn()",removeEventListener: "jest.fn()",dispatchEvent: "jest.fn()"}))});
-;
+addEventListener: "jest.fn()",removeEventListener: "jest.fn()",dispatchEvent: "jest.fn()",})),
+});
+
 // Mock IntersectionObserver;
 global.IntersectionObserver = class IntersectionObserver{;
 // Mock window.matchMedia}
@@ -42,7 +43,7 @@ global.dataLayer = [];
 // Mock window.dataLayer});"
 ";'"
 require("@testing-library/jest-dom")
-//Polyfill for TextEncoder/TextDecoder
+//Polyfill for TextEncoder/TextDecoder;
 const { TextEncoder, TextDecoder } = require("util")
 global.TextEncoder = TextEncoder
 global.TextDecoder = TextDecoder
@@ -60,8 +61,8 @@ addEventListener: "jest.fn()",removeEventListener: "jest.fn()",dispatchEvent: "j
 global.IntersectionObserver = class IntersectionObserver{
 //Mock window.matchMedia}
 })
-//Mock IntersectionObserver
-  constructor() {}
+//Mock IntersectionObserver;
+constructor() {}
 
   disconnect() {}
   observe() {}

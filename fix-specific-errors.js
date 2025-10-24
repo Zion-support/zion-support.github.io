@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-// Fix contact page
+// Fix contact page;
 const contactContent = fs.readFileSync('./app/contact/page.tsx', 'utf8');
 const fixedContact = contactContent.replace(
   /url="https:\/\/ziontechgroup\.com\/contact\n/g,
@@ -9,7 +9,7 @@ const fixedContact = contactContent.replace(
 fs.writeFileSync('./app/contact/page.tsx', fixedContact);
 console.log('Fixed contact page');
 
-// Fix page.tsx
+// Fix page.tsx;
 const pageContent = fs.readFileSync('./app/page.tsx', 'utf8');
 const fixedPage = pageContent
   .replace(/url="https:\/\/ zion\.app\n/g, 'url="https://zion.app"\n')
@@ -18,4 +18,4 @@ const fixedPage = pageContent
 fs.writeFileSync('./app/page.tsx', fixedPage);
 console.log('Fixed page.tsx');
 
-console.log('Fixed specific errors');
+console.log('Fixed specific errors');}}

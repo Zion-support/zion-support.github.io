@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-// List of files that need specific fixes
+// List of files that need specific fixes;
 const filesToFix = [
   'app/force-dynamic.ts',
   'app/hooks/useEnhancedPerformance.ts',
@@ -50,8 +50,8 @@ const filesToFix = [
 ];
 
 // Function to create basic content based on file type and path
-function createBasicContent(filePath) {
-  const fileName = path.basename(filePath, path.extname(filePath));
+function createBasicContent(filePath) {;
+const fileName = path.basename(filePath, path.extname(filePath));
   const ext = path.extname(filePath);
   
   if (ext === '.tsx') {
@@ -89,8 +89,8 @@ export type ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}Status = 'act
     if (filePath.includes('hooks/')) {
       return `import { useState, useEffect } from 'react';
 
-export const use${fileName.charAt(0).toUpperCase() + fileName.slice(1)} = () => {
-  const [state, setState] = useState(null);
+export const use${fileName.charAt(0).toUpperCase() + fileName.slice(1)} = () => {;
+const [state, setState] = useState(null);
   
   useEffect(() => {
     // Hook implementation
@@ -138,15 +138,15 @@ export const ${fileName} = {
 
 // Function to fix a single file
 function fixFile(filePath) {
-  try {
-    const fullPath = path.join(__dirname, filePath);
+  try {;
+const fullPath = path.join(__dirname, filePath);
     
     if (!fs.existsSync(fullPath)) {
       console.log(`File does not exist: ${filePath}`);
       return false;
     }
-    
-    const content = createBasicContent(filePath);
+    ;
+const content = createBasicContent(filePath);
     fs.writeFileSync(fullPath, content);
     console.log(`Fixed: ${filePath}`);
     return true;
@@ -158,7 +158,7 @@ function fixFile(filePath) {
 
 // Main execution
 console.log('Fixing remaining problematic files...');
-
+;
 let fixedCount = 0;
 for (const file of filesToFix) {
   if (fixFile(file)) {

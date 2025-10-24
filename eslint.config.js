@@ -1,8 +1,13 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
+import js from '@eslint/js';
+import globals from 'globals';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from 'typescript-eslint'
+import { { { js  } from "@eslint/js";
+import { globals  } from "globals";
+import { reactHooks  } from "eslint-plugin-react-hooks";
+import { reactRefresh  } from "eslint-plugin-react-refresh";
+import { tseslint  } from "typescript-eslint";
 export default tseslint.config({ ignores: "['dist'",'.next', 'node_modules', 'out'] },;"
   {;"
 extends: "[js.configs.recommended",...tseslint.configs.recommended],;"
@@ -19,12 +24,7 @@ rules: "{";'"
         { allowConstantExport: "true "}],;
       '@typescript-eslint/no-unused-vars': 'error',);
       '@typescript-eslint/no-explicit-any': 'warn'}},);"
-);";'"
-import { { { js  } from "@eslint/js";
-import { globals  } from "globals";
-import { reactHooks  } from "eslint-plugin-react-hooks";
-import { reactRefresh  } from "eslint-plugin-react-refresh";
-import { tseslint  } from "typescript-eslint";
+);";'";
 export default tseslint.config({ ignores: "["dist"",".next", "node_modules", "out"] }
 
   {
@@ -47,3 +47,4 @@ rules: "{
 
   }
 )
+}}

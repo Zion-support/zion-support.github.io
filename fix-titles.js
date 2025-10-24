@@ -3,8 +3,8 @@ const path = require('path');
 
 // Function to fix page titles
 function fixPageTitles(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');
     
     // Fix extra spaces in titles
     content = content.replace(/<title>([^|]+)\s+\|\s+([^<]+)<\/title>/g, '<title>$1 | $2</title>');
@@ -17,12 +17,12 @@ function fixPageTitles(filePath) {
 }
 
 // Function to find all page.tsx files
-function findPageFiles(dir) {
-  const files = [];
+function findPageFiles(dir) {;
+const files = [];
   const items = fs.readdirSync(dir);
   
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
+  for (const item of items) {;
+const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory()) {
@@ -35,7 +35,7 @@ function findPageFiles(dir) {
   return files;
 }
 
-// Find and fix all page files
+// Find and fix all page files;
 const appDir = path.join(__dirname, 'app');
 const pageFiles = findPageFiles(appDir);
 

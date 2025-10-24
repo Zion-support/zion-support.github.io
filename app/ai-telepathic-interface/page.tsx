@@ -1,53 +1,55 @@
-"use client"
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-export default function ServicePage() {
+import React from 'react'
+import Link from 'next/link'
+
+export default function Page() {
   return (
-    <>
-      <Head>
-        <title>Ai Telepathic Interface | Zion Tech Group</title>
-        
-        <meta name="description" content="Professional ai telepathic interface services and solutions for modern businesses." />
-        
-        <meta name="robots" content="index, follow" />
-        
-        <meta property="og:type" content="website" />
-        
-        <meta property="og:title" content="Ai Telepathic Interface|Zion Tech Group" />
-        
-        <meta property="og:description" content="Professional ai telepathic interface services and solutions for modern businesses." />
-      
-      </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-              Professional Page services designed to help your business grow and succeed.
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Professional Technology Solutions</h1>
+          
+          <div className="prose prose-lg max-w-none">
+            <p className="text-xl text-gray-600 mb-6">
+              Leading provider of professional technology solutions and services for modern businesses.
+              We specialize in AI, 5G, cybersecurity, and digital transformation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
-                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link 
-                href="/about" 
-                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
-              >
-                Learn More
-              </Link>
+            
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Key Features</h2>
+            <ul className="list-disc list-inside text-gray-600 space-y-2 mb-6">
+              <li>Advanced technology implementation</li>
+              <li>Scalable and secure solutions</li>
+              <li>24/7 support and maintenance</li>
+              <li>Custom solutions tailored to your needs</li>
+              <li>Proven track record of success</li>
+            </ul>
+            
+            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Benefits</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Performance</h3>
+                <p className="text-gray-600">
+                  Optimized solutions designed for maximum performance and efficiency.
+                </p>
+              </div>
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Reliability</h3>
+                <p className="text-gray-600">
+                  Built with enterprise-grade reliability and security standards.
+                </p>
+              </div>
             </div>
+          </div>
+          
+          <div className="mt-12 text-center">
+            <Link 
+              href="/contact" 
+              className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Learn More
+            </Link>
           </div>
         </div>
       </div>
-    </>
-  );
+    </div>
+  )
 }
