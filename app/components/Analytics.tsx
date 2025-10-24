@@ -1,18 +1,10 @@
 'use client';
 import React, { useEffect } from 'react';
 
-<<<<<<< HEAD
 declare global {
   interface Window {
     gtag: (..._args: unknown[]) => void;
   }
-=======
-interface AnalyticsProps {
-  enableGoogleAnalytics?: boolean
-  enablePerformanceMonitoring?: boolean
-  enableErrorTracking?: boolean
-  enableUserBehaviorTracking?: boolean
->>>>>>> 565082f4af95f25101578a95e87917e85c6148f6
 }
 
 interface AnalyticsProps {

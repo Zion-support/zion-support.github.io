@@ -1,14 +1,9 @@
-<<<<<<< HEAD
 'use client';
-import React, { useEffect } from 'react';
-=======
-'use client'
 
-import React, { useEffect } from 'react'
->>>>>>> 565082f4af95f25101578a95e87917e85c6148f6
+import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
-  children?: React.ReactNode;
+  children: React.ReactNode;
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
@@ -23,7 +18,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableFocusManagement: _enableFocusManagement = true
 }) => {
   useEffect(() => {
-<<<<<<< HEAD
     // Add skip links
     const addSkipLinks = () => {
       const skipLinks = document.createElement('div');
@@ -169,6 +163,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     // Add high contrast mode support
     const addHighContrastSupport = () => {
+      if (_enableHighContrast) {
+        document.body.classList.add('high-contrast');
+      } else {
+        document.body.classList.remove('high-contrast');
+      }
+
       const style = document.createElement('style');
       style.textContent = `
         @media (prefers-contrast: high) {
@@ -226,28 +226,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     return () => {
       observer.disconnect();
+      document.body.classList.remove('high-contrast');
     };
-  }, []);
+  }, [_enableHighContrast]);
 
-  return children ? <>{children}</> : null;
+  return <>{children}</>;
 };
 
 export default AccessibilityEnhancer;
-=======
-    // Add accessibility enhancements here
-    if (_enableHighContrast) {
-      document.body.classList.add('high-contrast')
-    } else {
-      document.body.classList.remove('high-contrast')
-    }
-
-    return () => {
-      document.body.classList.remove('high-contrast')
-    }
-  }, [_enableHighContrast])
-
-  return <>{children}</>
-}
-
-export default AccessibilityEnhancer
->>>>>>> 565082f4af95f25101578a95e87917e85c6148f6
