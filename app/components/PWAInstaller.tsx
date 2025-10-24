@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Download, X, CheckCircle } from 'lucide-react';
+import { Download, X, _CheckCircle } from 'lucide-react';
 
 interface PWAInstallerProps {
   onInstall?: () => void;

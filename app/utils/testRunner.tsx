@@ -43,7 +43,7 @@ export interface TestSuite {
 }
 
 // Mock utilities
-export const createMock = <T>(defaultValue: T): jest.Mocked<T> => {
+export const createMock = <T,>(defaultValue: T): jest.Mocked<T> => {
   return defaultValue as jest.Mocked<T>;
 };
 
@@ -165,7 +165,7 @@ const TestRunner: React.FC<TestRunnerProps> = ({
     };
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (config.enablePerformance || config.enableCoverage || config.enableAccessibility) {
       runTests();
     }
