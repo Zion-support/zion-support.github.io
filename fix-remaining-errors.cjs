@@ -3,154 +3,173 @@
 const fs = require('fs');
 const path = require('path');
 
-// More specific fixes for remaining errors
-const fixes = [
-  // Fix malformed JSX closing tags
-  {
-    pattern: /<\/(\w+)\s*>\s*}\s*\/>/g,
-    replacement: '</$1>'
-  },
+function fixFile(filePath) {
+  const fullPath = path.join(process.cwd(), filePath);
   
-  // Fix object properties with missing opening brace
-  {
-    pattern: /{\s*,\s*(\w+):/g,
-    replacement: '{\n    $1:'
-  },
-  
-  // Fix malformed import statements with missing closing parenthesis
-  {
-    pattern: /import\s*{\s*([^}]+)\s*,\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*;\s*$/gm,
-    replacement: (match, p1, p2, p3) => {
-      const cleanImports = p1.replace(/,\s*$/, '').trim();
-      return `import { ${cleanImports} } from '${p3}';`;
-    }
-  },
-  
-  // Fix malformed JSX expressions
-  {
-    pattern: /{\s*([^}]*)\s*>\s*([^<]+)\s*<\s*\/\s*([^>]+)\s*>/g,
-    replacement: '{$1}>\n          $2\n        </$3>'
-  },
-  
-  // Fix missing semicolons in object properties
-  {
-    pattern: /(\w+):\s*([^,;]+)\s*\n\s*(\w+):/g,
-    replacement: '$1: $2;\n    $3:'
-  },
-  
-  // Fix malformed function declarations
-  {
-    pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*{\s*\/\/[^}]*}\s*\/\/[^}]*}\s*:\s*{\s*\/\/[^}]*};\s*([^}]+)\s*}\s*\)/g,
-    replacement: 'export default function $1({\n  $2\n}: {\n  $2: React.ReactNode;\n})'
-  },
-  
-  // Fix incomplete JSX elements
-  {
-    pattern: /<(\w+)([^>]*)>\s*([^<]+)\s*<\s*\/\s*(\w+)\s*>/g,
-    replacement: '<$1$2>$3</$4>'
-  },
-  
-  // Fix malformed object literals
-  {
-    pattern: /{\s*,\s*(\w+):\s*([^,}]+)\s*,/g,
-    replacement: '{\n    $1: $2,'
-  },
-  
-  // Fix missing commas in import statements
-  {
-    pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*;\s*$/gm,
-    replacement: (match, imports, module) => {
-      const cleanImports = imports.replace(/,\s*$/, '').trim();
-      return `import { ${cleanImports} } from '${module}';`;
-    }
-  },
-  
-  // Fix malformed JSX attributes
-  {
-    pattern: /<(\w+)([^>]*)\s*>\s*([^<]+)\s*<\s*\/\s*(\w+)\s*>/g,
-    replacement: '<$1$2>$3</$4>'
-  },
-  
-  // Fix incomplete function parameters
-  {
-    pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*{\s*\/\/[^}]*}\s*\/\/[^}]*}\s*:\s*{\s*\/\/[^}]*};\s*([^}]+)\s*}\s*\)/g,
-    replacement: 'export default function $1({\n  $2\n}: {\n  $2: React.ReactNode;\n})'
-  },
-  
-  // Fix malformed object properties
-  {
-    pattern: /{\s*,\s*(\w+):\s*([^,}]+)\s*,/g,
-    replacement: '{\n    $1: $2,'
-  },
-  
-  // Fix incomplete JSX closing tags
-  {
-    pattern: /<h2([^>]*)>\s*([^<]+)\s*<\/h2>\s*<h2/g,
-    replacement: '<h2$1>$2</h2>\n        <h2'
-  },
-  
-  // Fix malformed JSX expressions with missing closing tags
-  {
-    pattern: /{\s*([^}]*)\s*>\s*([^<]+)\s*<\s*\/\s*([^>]+)\s*>/g,
-    replacement: '{$1}>\n          $2\n        </$3>'
-  },
-  
-  // Fix missing semicolons in object properties
-  {
-    pattern: /(\w+):\s*([^,;]+)\s*\n\s*(\w+):/g,
-    replacement: '$1: $2;\n    $3:'
-  },
-  
-  // Fix malformed import statements
-  {
-    pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*;\s*$/gm,
-    replacement: (match, imports, module) => {
-      const cleanImports = imports.replace(/,\s*$/, '').trim();
-      return `import { ${cleanImports} } from '${module}';`;
+  if (!fs.existsSync(fullPath)) {
+    console.log(`File not found: ${filePath}`);
+    return;
+  }
+
+  let content = fs.readFileSync(fullPath, 'utf8');
+  let modified = false;
+
+  // Fix missing imports
+  if (filePath.includes('ai-automation/page.tsx')) {
+    if (content.includes('Settings') && !content.includes("import { Settings")) {
+      content = content.replace(
+        "import { Zap, Brain, Globe, Users, BarChart, MessageCircle, FileText, TrendingUp, Clock, Star, ArrowRight, CheckCircle, Cpu } from 'lucide-react';",
+        "import { Zap, Brain, Settings, Globe, Users, BarChart, MessageCircle, FileText, TrendingUp, Clock, Shield, Star, ArrowRight, CheckCircle, Cpu } from 'lucide-react';"
+      );
+      modified = true;
     }
   }
-];
 
-function fixFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
-    fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
-    });
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      fixedCount++;
+  if (filePath.includes('ai-invoice-generator/page.tsx')) {
+    if (content.includes('Settings') && !content.includes("import { Settings")) {
+      content = content.replace(
+        "import { FileText, DollarSign, Zap, CheckCircle, ArrowRight, Clock, Shield, Star, Users, BarChart, TrendingUp, Globe, MessageCircle, Cpu } from 'lucide-react';",
+        "import { FileText, DollarSign, Zap, CheckCircle, ArrowRight, Clock, Settings, Shield, Star, Users, BarChart, TrendingUp, Globe, MessageCircle, Cpu } from 'lucide-react';"
+      );
+      modified = true;
     }
-  } catch (error) {
-    console.error(`Failed to fix ${filePath}:`, error.message);
-    errorCount++;
+  }
+
+  if (filePath.includes('ContentStatistics.tsx')) {
+    if (content.includes('Shield') && !content.includes("import { Shield")) {
+      content = content.replace(
+        "import { BarChart, TrendingUp, Users, Globe, Zap, Star, ArrowRight, CheckCircle, Clock, Cpu, MessageCircle, FileText } from 'lucide-react';",
+        "import { BarChart, TrendingUp, Users, Globe, Zap, Star, ArrowRight, CheckCircle, Clock, Cpu, MessageCircle, FileText, Shield, Database } from 'lucide-react';"
+      );
+      modified = true;
+    }
+  }
+
+  if (filePath.includes('EnhancedAccessibility.tsx')) {
+    // Add missing import
+    if (content.includes('AccessibilitySettings') && !content.includes("import { AccessibilitySettings")) {
+      content = content.replace(
+        "import { Settings, Eye, Volume2, MousePointer, Type, Contrast, ZoomIn, Zap, CheckCircle, ArrowRight, Star, Users, Globe, BarChart, MessageCircle, FileText, TrendingUp, Clock, Cpu } from 'lucide-react';",
+        "import { Settings, Eye, Volume2, MousePointer, Type, Contrast, ZoomIn, Zap, CheckCircle, ArrowRight, Star, Users, Globe, BarChart, MessageCircle, FileText, TrendingUp, Clock, Cpu } from 'lucide-react';\nimport { AccessibilitySettings } from '../contexts/AccessibilityContext';"
+      );
+      modified = true;
+    }
+    
+    // Fix parameter types
+    content = content.replace(/\(prev: any\)/g, '(prev: any)');
+    content = content.replace(/\(prev\)/g, '(prev: any)');
+    modified = true;
+  }
+
+  if (filePath.includes('EnhancedServicesShowcase.tsx')) {
+    if (content.includes('Cloud') && !content.includes("import { Cloud")) {
+      content = content.replace(
+        "import { Zap, Star, ArrowRight, CheckCircle, Clock, Cpu, MessageCircle, FileText, TrendingUp, BarChart, Users, Globe, Shield, Database } from 'lucide-react';",
+        "import { Zap, Star, ArrowRight, CheckCircle, Clock, Cpu, MessageCircle, FileText, TrendingUp, BarChart, Users, Globe, Cloud, Shield, Database } from 'lucide-react';"
+      );
+      modified = true;
+    }
+  }
+
+  if (filePath.includes('database-services/page.tsx')) {
+    if (content.includes('Footer') && !content.includes("import Footer")) {
+      content = content.replace(
+        "import { Database, Server, Cloud, Shield, Zap, CheckCircle, ArrowRight, Star, Users, Globe, BarChart, MessageCircle, FileText, TrendingUp, Clock, Cpu } from 'lucide-react';",
+        "import { Database, Server, Cloud, Shield, Zap, CheckCircle, ArrowRight, Star, Users, Globe, BarChart, MessageCircle, FileText, TrendingUp, Clock, Cpu } from 'lucide-react';\nimport Footer from '../components/Footer';"
+      );
+      modified = true;
+    }
+  }
+
+  if (filePath.includes('demo/page.tsx')) {
+    if (content.includes('Shield') && !content.includes("import { Shield")) {
+      content = content.replace(
+        "import { Play, Zap, CheckCircle, ArrowRight, Star, Users, Globe, BarChart, MessageCircle, FileText, TrendingUp, Clock, Cpu, Workflow } from 'lucide-react';",
+        "import { Play, Zap, CheckCircle, ArrowRight, Star, Users, Globe, BarChart, MessageCircle, FileText, TrendingUp, Clock, Cpu, Workflow, Shield } from 'lucide-react';"
+      );
+      modified = true;
+    }
+  }
+
+  if (filePath.includes('services/page.tsx')) {
+    if (content.includes('Cloud') && !content.includes("import { Cloud")) {
+      content = content.replace(
+        "import { Zap, Star, ArrowRight, CheckCircle, Clock, Cpu, MessageCircle, FileText, TrendingUp, BarChart, Users, Globe, Shield, Database } from 'lucide-react';",
+        "import { Zap, Star, ArrowRight, CheckCircle, Clock, Cpu, MessageCircle, FileText, TrendingUp, BarChart, Users, Globe, Cloud, Shield, Database } from 'lucide-react';"
+      );
+      modified = true;
+    }
+  }
+
+  // Fix error.tsx and global-error.tsx
+  if (filePath.includes('error.tsx') || filePath.includes('global-error.tsx')) {
+    content = content.replace(/error: Error/g, '_error: Error');
+    content = content.replace(/error\.message/g, '_error.message');
+    modified = true;
+  }
+
+  // Remove unused React imports
+  if (content.includes("import React from 'react';") && !content.includes('React.')) {
+    content = content.replace("import React from 'react';\n", '');
+    modified = true;
+  }
+
+  // Remove unused useEffect imports
+  if (content.includes("import { useEffect }") && !content.includes('useEffect(')) {
+    content = content.replace("import { useEffect } from 'react';\n", '');
+    content = content.replace("import { useState, useCallback, useEffect } from 'react';", "import { useState, useCallback } from 'react';");
+    modified = true;
+  }
+
+  // Remove unused Navigation and Footer imports from layout.tsx
+  if (filePath.includes('layout.tsx')) {
+    if (content.includes("import Navigation from './components/Navigation';") && !content.includes('<Navigation')) {
+      content = content.replace("import Navigation from './components/Navigation';\n", '');
+      modified = true;
+    }
+    if (content.includes("import Footer from './components/Footer';") && !content.includes('<Footer')) {
+      content = content.replace("import Footer from './components/Footer';\n", '');
+      modified = true;
+    }
+  }
+
+  // Remove unused Footer import from micro-saas/page.tsx
+  if (filePath.includes('micro-saas/page.tsx')) {
+    if (content.includes("import Footer from '../components/Footer';") && !content.includes('<Footer')) {
+      content = content.replace("import Footer from '../components/Footer';\n", '');
+      modified = true;
+    }
+  }
+
+  if (modified) {
+    fs.writeFileSync(fullPath, content);
+    console.log(`Fixed: ${filePath}`);
+  } else {
+    console.log(`No changes needed: ${filePath}`);
   }
 }
 
-// Find all TSX/TS files in src directory
-const files = glob.sync('/workspace/src/**/*.{ts,tsx}', {
-  ignore: [
-    '/workspace/src/**/node_modules/**',
-    '/workspace/src/**/dist/**',
-    '/workspace/src/**/.next/**'
-  ]
-});
+const filesToFix = [
+  'app/ai-automation/page.tsx',
+  'app/ai-invoice-generator/page.tsx',
+  'app/components/ContentStatistics.tsx',
+  'app/components/CookieConsent.tsx',
+  'app/components/EnhancedAccessibility.tsx',
+  'app/components/EnhancedServicesShowcase.tsx',
+  'app/components/LoadingOptimizer.tsx',
+  'app/components/Navigation.tsx',
+  'app/contexts/AccessibilityContext.tsx',
+  'app/database-services/page.tsx',
+  'app/demo/page.tsx',
+  'app/error.tsx',
+  'app/global-error.tsx',
+  'app/layout.tsx',
+  'app/micro-saas/page.tsx',
+  'app/services/page.tsx'
+];
 
-console.log(`Found ${files.length} files to check...`);
+console.log('Fixing remaining TypeScript errors...');
 
-let fixedCount = 0;
-files.forEach(file => {
-  if (fixFile(file)) {
-    fixedCount++;
-  }
-});
+filesToFix.forEach(fixFile);
 
-console.log(`Fixed ${fixedCount} files`);
+console.log('Done!');

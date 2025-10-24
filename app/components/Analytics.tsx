@@ -6,7 +6,7 @@ interface AnalyticsProps {
   className?: string;
 }
 
-const Analytics: React.FC<AnalyticsProps> = ({ className }) => {
+const Analytics: React.FC<AnalyticsProps> = () => {
   useEffect(() => {
     const initAnalytics = () => {
       if (typeof window !== "undefined" && window.gtag) {
