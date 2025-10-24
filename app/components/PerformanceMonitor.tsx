@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
 interface PerformanceMonitorProps {
   performanceData?: any;
@@ -10,18 +9,19 @@ interface PerformanceMonitorProps {
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData }) => {
   useEffect(() => {
     // Monitor Core Web Vitals
-    const logMetric = (metric: any) => {
-      if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console
-        console.log(metric);
-      }
-    };
-
-    getCLS(logMetric);
-    getFID(logMetric);
-    getFCP(logMetric);
-    getLCP(logMetric);
-    getTTFB(logMetric);
+    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+      const logMetric = (metric: any) => {
+        if (process.env.NODE_ENV === 'development') {
+          // eslint-disable-next-line no-console
+          console.log(metric);
+        }
+      };
+      getCLS(logMetric);
+      getFID(logMetric);
+      getFCP(logMetric);
+      getLCP(logMetric);
+      getTTFB(logMetric);
+    });
 
     // Monitor performance metrics
     if ('performance' in window) {

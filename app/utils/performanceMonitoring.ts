@@ -13,6 +13,7 @@ export const performanceMonitoring = {
       value,
       timestamp: Date.now()
     };
+    // eslint-disable-next-line no-console
     console.log('Performance data recorded:', data);
   },
   
@@ -21,6 +22,7 @@ export const performanceMonitoring = {
   },
   
   clear: () => {
+    // eslint-disable-next-line no-console
     console.log('Performance data cleared');
   }
 };

@@ -13,6 +13,7 @@ export const performanceMetrics = {
       value,
       timestamp: Date.now()
     };
+    // eslint-disable-next-line no-console
     console.log('Performance metric recorded:', metric);
   },
   
@@ -21,6 +22,7 @@ export const performanceMetrics = {
   },
   
   clear: () => {
+    // eslint-disable-next-line no-console
     console.log('Performance metrics cleared');
   }
 };
