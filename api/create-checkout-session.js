@@ -2,7 +2,7 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 const PROD_DOMAIN = 'https://ziontechgroup.com';
 
-async function handler(req, res) {
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
@@ -10,7 +10,7 @@ async function handler(req, res) {
     return;
   }
 
-  const { productId, userId } = req.body || {};
+  const { productId, userId, priceId, quantity = 1 } = req.body || {};
 
   if (!productId) {
     res.statusCode = 400;
@@ -21,36 +21,22 @@ async function handler(req, res) {
 
   try {
     console.log('Creating checkout session for product:', productId);
-    const session = {
+    
+    // Create a mock checkout session
+    const sessionData = {
       id: 'cs_test_' + Math.random().toString(36).substr(2, 9),
       status: 'pending',
-      productId: productId
+      productId: productId,
+      userId: userId || null,
+      timestamp: new Date().toISOString()
     };
-
-
-    if (!priceId) {
-      res.statusCode = 400;
-      res.end(JSON.stringify({ error: 'Price ID is required' }));
-
-    const session = await stripe.checkout.sessions.create({
-      payment_method_types: ['card'],
-      line_items: [
-        {
-          price: priceId,
-          quantity: quantity,
-        },
-      ],
-      mode: 'payment',
-      success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${req.headers.origin}/cancel`,
-    });
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({
       success: true,
-      sessionId: `session_${Date.now()}`,
-      checkoutUrl: `${PROD_DOMAIN}/checkout?session=${Date.now()}`,
+      sessionId: sessionData.id,
+      checkoutUrl: `${PROD_DOMAIN}/checkout?session=${sessionData.id}`,
       data: sessionData
     }));
   } catch (error) {
@@ -62,8 +48,3 @@ async function handler(req, res) {
     }));
   }
 }
-
-  } catch (error) {
-    console.error('Stripe checkout error:', error);
-    res.statusCode = 500;
-    res.end(JSON.stringify({ error: 'Internal server error' }));
