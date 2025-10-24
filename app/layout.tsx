@@ -8,12 +8,10 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Leading Technology Solutions Provider',
   description: 'Transform your business with cutting-edge AI, cloud architecture, and innovative development services from Zion Tech Group.',
-  keywords: 'AI solutions, cloud architecture, web development, mobile apps, data analytics, cybersecurity',
-}
+  keywords: 'AI solutions, cloud architecture, web development, mobile apps, data analytics, cybersecurity'}
 
 export default function RootLayout({
-  children,
-}: {
+  children}: {
   children: React.ReactNode
 }) {
   return (

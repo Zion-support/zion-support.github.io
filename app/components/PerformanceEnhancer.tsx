@@ -11,7 +11,6 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default PerformanceEnhancer;

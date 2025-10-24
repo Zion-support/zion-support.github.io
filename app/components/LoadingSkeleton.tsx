@@ -11,7 +11,6 @@ const LoadingSkeleton: React.FC<LoadingSkeletonProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default LoadingSkeleton;

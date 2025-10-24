@@ -11,7 +11,6 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default SecurityEnhancer;

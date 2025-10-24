@@ -11,7 +11,6 @@ const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = (_props) => 
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default EnhancedErrorBoundary;

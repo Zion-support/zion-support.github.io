@@ -11,7 +11,6 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default AnimatedCounter;

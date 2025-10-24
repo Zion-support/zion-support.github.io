@@ -11,7 +11,6 @@ const FuturisticHero: React.FC<FuturisticHeroProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default FuturisticHero;

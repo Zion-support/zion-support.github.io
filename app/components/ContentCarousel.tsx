@@ -11,7 +11,6 @@ const ContentCarousel: React.FC<ContentCarouselProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default ContentCarousel;

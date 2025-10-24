@@ -11,7 +11,6 @@ const SEOHead: React.FC<SEOHeadProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default SEOHead;

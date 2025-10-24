@@ -11,7 +11,6 @@ const LazyImage: React.FC<LazyImageProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default LazyImage;

@@ -11,7 +11,6 @@ const EnhancedServicesShowcase: React.FC<EnhancedServicesShowcaseProps> = (_prop
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default EnhancedServicesShowcase;

@@ -11,7 +11,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default SystemMonitor;

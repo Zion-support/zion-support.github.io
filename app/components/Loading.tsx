@@ -11,7 +11,6 @@ const Loading: React.FC<LoadingProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default Loading;

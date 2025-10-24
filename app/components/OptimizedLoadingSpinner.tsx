@@ -11,7 +11,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = (_props)
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default OptimizedLoadingSpinner;

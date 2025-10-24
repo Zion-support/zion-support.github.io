@@ -11,7 +11,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default PerformanceOptimizer;

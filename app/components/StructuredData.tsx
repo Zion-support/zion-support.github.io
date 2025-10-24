@@ -11,7 +11,6 @@ const StructuredData: React.FC<StructuredDataProps> = (_props) => {
     <div>
       {/* Component content */}
     </div>
-  );
-};
+  )};
 
 export default StructuredData;
