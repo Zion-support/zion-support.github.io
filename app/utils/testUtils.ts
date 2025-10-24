@@ -248,12 +248,12 @@ export class ConsoleSpy {
  */
 export interface Deferred<T> {
   promise: Promise<T>
-  resolve: (value: T) => void
+  resolve: (_value: T) => void
   reject: (_reason?: unknown) => void
 }
 
 export const createDeferred = <T>(): Deferred<T> => {
-  let resolve: (value: T) => void
+  let resolve: (_value: T) => void
   let reject: (_reason?: unknown) => void
   const promise = new Promise<T>((res, rej) => {
     resolve = res
