@@ -183,3 +183,6 @@ export default {
   focusManagement
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+"use client"
+>>>>>>> cursor/fix-errors-and-merge-to-main-4b1f
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f20

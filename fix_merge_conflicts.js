@@ -12,6 +12,24 @@ function fixMergeConflicts(content) {
   fixedContent = fixedContent.replace(/=======\n/g, '');
   fixedContent = fixedContent.replace(/  
   return fixedContent;
+    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [a-f0-9]+\n/g, '$1')
+    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [a-f0-9]+\n/g, '$1')
+    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [a-f0-9]+\n/g, '$1')
+    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [a-f0-9]+\n/g, '$1')
+    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [a-f0-9]+\n/g, '$1')
+    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [a-f0-9]+\n/g, '$1')
+    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [a-f0-9]+\n/g, '$1')
+    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [a-f0-9]+\n/g, '$1')
+    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [a-f0-9]+\n/g, '$1');
+  
+  // Clean up any remaining merge conflict markers
+  resolved = resolved
+    .replace(/<<<<<<< HEAD\n/g, '')
+    .replace(/=======\n/g, '')
+    .replace(/>>>>>>> [a-f0-9]+\n/g, '');
+  
+  return resolved;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f20
 }
 
 // Function to process a single file

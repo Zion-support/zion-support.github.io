@@ -1,5 +1,7 @@
-"use client";
 import React from 'react';
+import { Wifi } from 'lucide-react'
+
+"use client";
 import { Wi, f, i } from "lucide-react";
 import { CheckCircle, Star, Zap, BarChart, Shield, Database, Helmet  } from "lucide-react";
 import { Cpu, Globe  } from "lucide-react";

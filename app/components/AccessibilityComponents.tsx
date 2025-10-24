@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 
+&quot;use client&quot;
 interface AccessibilityComponentsProps {
   className?: string;
 }

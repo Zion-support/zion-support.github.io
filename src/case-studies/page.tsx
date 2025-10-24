@@ -1,5 +1,7 @@
-"use client";
 import React from 'react';
+import { ArrowLeft } from 'lucide-react'
+
+"use client";
 import { ArrowLe, f, t } from "lucide-react";
 import { CheckCircle, TrendingUp, Helmet } from "lucide-react";
 const CaseStudiesPage: React.FC = () => {

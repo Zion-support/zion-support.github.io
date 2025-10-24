@@ -1,4 +1,5 @@
 import React from 'react'
+import { CheckCircle, Phone, Star, TrendingUp, Check } from 'lucide-react';
 import React from 'react';
 import { CheckCircle, Phone, Star, TrendingUp, Check  } from "lucide-react";
 import Navigation from '../components/Navigation'
@@ -55,6 +56,7 @@ constMachineLearningPage: React.FC= () => {
 const Page = (): JSX.Element => {
   return (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f20
       </div>
     </>
   ),

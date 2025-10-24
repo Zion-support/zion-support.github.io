@@ -1,6 +1,8 @@
 import React from 'react'
-'use client'
 import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback } from 'react'
+'use client'
+'use client'
 interface ImageProps {
 src: strin,
       g,

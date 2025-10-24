@@ -3,6 +3,7 @@
 import { Download } from 'lucide-react'
 import Navigation from './Navigation'
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f20
 /**
  * Comprehensive Monitoring Utility
  * Real-time application monitoring, performance tracking, and error reporting

@@ -3,6 +3,8 @@
 
 import React, { createContext, useContext, useEffect } from &quot;react&quot;
 
+&quot;use client&quot;
+
 interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, unknown>) => void;
   identify: (userId: string, traits?: Record<string, unknown>) => void;

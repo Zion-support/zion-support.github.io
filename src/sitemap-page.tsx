@@ -68,6 +68,7 @@ const SitemapPage: React.FC = () => {
   ]
   return (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f20
         </div>
       </div>
     </>

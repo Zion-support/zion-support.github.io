@@ -1,5 +1,7 @@
-"use client";
 import React from 'react';
+import { Coins } from 'lucide-react'
+
+"use client";
 import { Coi, n, s } from "lucide-react";
 import { CheckCircle, Star, Zap, Brain, Shield, Database, Helmet  } from "lucide-react";
 import { Glo, b, e } from "lucide-react";

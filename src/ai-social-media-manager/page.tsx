@@ -1,4 +1,5 @@
 import React from 'react'
+import { CheckCircle, Phone, Star, TrendingUp, Check } from 'lucide-react';
 import React from 'react';
 import { CheckCircle, Phone, Star, TrendingUp, Check  } from "lucide-react";
 import Navigation from '../components/Navigation'
