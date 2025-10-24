@@ -1,146 +1,124 @@
 /**
- * Performance optimization utilities for the Zion Tech Group application*/
+ * Performance optimization utilities for the Zion Tech Group application
  */
 
 // Debounce function for performance optimization
-export function debounce<T extends (...args: "any[]) => any>("
-  func: T","
-  wait: "number
-): (...args: Parameters<T>) => void{let timeout: NodeJS.Timeout;"
-  return (...args: Parameters<T>) => {"
-    clearTimeout(timeout);"}
-    timeout = setTimeout(() => func(...args)", wait);}
-  };
-}"
-
-// Throttle function for performance optimization"
-export function throttle<T extends (...args: "any[]) => any>("
-  func: T","
-  limit: "number
-): (...args: Parameters<T>) => void{let inThrottle: boolean;
+export function debounce<T extends (...args: any[]) => any>(
+  func: T,
+  wait: number
+): (...args: Parameters<T>) => void {
+  let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {
-    if(!inThrottle) {  "
-      func(...args);"
-      inThrottle = true;"}
-      setTimeout(() => (inThrottle = false)", limit);, , }
-    }
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(...args), wait);
   };
-}"
-
-// Intersection Observer for lazy loading"
-export function createIntersectionObserver(callback: "IntersectionObserverCallback","
-  options?: IntersectionObserverInit)"
-): IntersectionObserver | null{if (typeof window = == 'undefined' || !('IntersectionObserver" in, window)) {;}
-    return null;}
-  }"
-
-  return new IntersectionObserver(callback, {"'"
-    rootMargin: "'50px'","
-    threshold: "0.1",
-    ...options,)}
-  ;});
-}"
-
-// Memory usage monitoring"'"
-export function getMemoryUsage(): any{if(typeof window !== 'undefined' && 'memory" in, performance) {  }
-    return (performance, as, any).memory;, , }
-  }
-  return null;
-}"
-
-// Preload critical resources"'"
-export function preloadCriticalResources(): void{if (typeof window === 'undefined") return;"
-
-  const criticalResources = ["'"
-    '/fonts/inter-var.woff2",;"'"
-    '/images/hero-bg.jpg",;
-  ];"
-
-  criticalResources.forEach(resource = > {;)"'"
-    const link = document.createElement('link");"'"
-    link.rel = 'preload";"
-    link.href = resource;"'"
-    link.as = resource.endsWith('.woff2') ? 'font' : 'image";"'"
-    if (resource.endsWith('.woff2")) {"'"}
-      link.crossOrigin = 'anonymous";,}
-    }
-    document.head.appendChild(link);
-  });
-}"
-
-// Image optimization"
-export function optimizeImage(src: "string","
-  width?: number,"
-  height?: number)"'"
-): string{if (typeof window === 'undefined") return src;"
-
-  const url = new URL(src, window.location.origin);"'"
-  if (width) url.searchParams.set('w", width.toString());"'"
-  if (height) url.searchParams.set('h", height.toString());"'"
-  url.searchParams.set('q', '80");"'"
-  url.searchParams.set('f', 'auto");
-  }
-  return url.toString();}
 }
-// Lazy image observer
-export function createLazyImageObserver(): IntersectionObserver | null{return createIntersectionObserver((entries) => {;
-    entries.forEach(entry = > {);
-      if(entry.isIntersecting) {  ;
-        const img = entry.target as HTMLImageElement;"
-        if (img.dataset.src) {"
-          img.src = img.dataset.src;"'"}
-          img.removeAttribute('data-src");,, , }
-        }
-      }
-    });
-  });
-}"
 
-// Performance budget check"'"
-export function checkPerformanceBudget(): void{if (typeof window === 'undefined") return;"
-  "'"
-  const navigation = performance.getEntriesByType('navigation")[0,] as PerformanceNavigationTiming;"'"
-  const paint = performance.getEntriesByType('paint");"
-
-  const metrics = {"'"
-    fcp: "paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0","
-    lcp: "0", // Would need LCP observer"
-    fid: "0", // Would need FID observer;"}
-    cls: "0", // Would need CLS observer;}
-  };"
-
-  // Log performance metrics"'"
-  console.log('Performance Metrics: "'", metrics);
-
-  // Check against budget"
-  const budget = {"
-    fcp: "1800", // 1.8s"
-    lcp: "2500", // 2.5s"
-    fid: "100",  // 100ms;"
-    cls: "0.1",  // 0.1;}
+// Throttle function for performance optimization
+export function throttle<T extends (...args: any[]) => any>(
+  func: T,
+  limit: number
+): (...args: Parameters<T>) => void {
+  let inThrottle: boolean;
+  return (...args: Parameters<T>) => {
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
   };
+}
+
+// Memoization function for expensive calculations
+export function memoize<T extends (...args: any[]) => any>(
+  func: T,
+  keyGenerator?: (...args: Parameters<T>) => string
+): T {
+  const cache = new Map<string, ReturnType<T>>();
   
-  Object.entries(metrics).forEach(([key, value,]) => {
-    if (value > budget[key as keyof, typeof, budget,]) {}
-      console.warn(`Performance budget exceeded for ${key}: ${value;}ms`);
+  return ((...args: Parameters<T>): ReturnType<T> => {
+    const key = keyGenerator ? keyGenerator(...args) : JSON.stringify(args);
+    
+    if (cache.has(key)) {
+      return cache.get(key)!;
+    }
+    
+    const result = func(...args);
+    cache.set(key, result);
+    return result;
+  }) as T;
+}
+
+// Performance monitoring utilities
+export interface PerformanceMetrics {
+  loadTime: number;
+  domContentLoaded: number;
+  firstPaint: number;
+  firstContentfulPaint: number;
+}
+
+export function measurePerformance(): PerformanceMetrics | null {
+  if (typeof window === 'undefined' || !window.performance) {
+    return null;
+  }
+
+  try {
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const paint = performance.getEntriesByType('paint');
+    
+    return {
+      loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+      domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+      firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
+      firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+    };
+  } catch (error) {
+    console.warn('Performance measurement failed:', error);
+    return null;
+  }
+}
+
+// Image lazy loading utility
+export function createIntersectionObserver(
+  callback: (entries: IntersectionObserverEntry[]) => void,
+  options?: IntersectionObserverInit
+): IntersectionObserver | null {
+  if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
+    return null;
+  }
+
+  return new IntersectionObserver(callback, {
+    rootMargin: '50px',
+    threshold: 0.1,
+    ...options,
+  });
+}
+
+// Resource preloading utility
+export function preloadResource(href: string, as: string): void {
+  if (typeof document === 'undefined') return;
+
+  const link = document.createElement('link');
+  link.rel = 'preload';
+  link.href = href;
+  link.as = as;
+  document.head.appendChild(link);
+}
+
+// Bundle size monitoring
+export function logBundleSize(): void {
+  if (typeof window === 'undefined') return;
+
+  const scripts = document.querySelectorAll('script[src]');
+  let totalSize = 0;
+
+  scripts.forEach(script => {
+    const src = script.getAttribute('src');
+    if (src && src.includes('_next/static')) {
+      // This is a simplified check - in reality you'd need to fetch and measure
+      console.log(`Script loaded: ${src}`);
     }
   });
-}"
 
-// Add resource hints"'"
-export function addResourceHints(): void{if (typeof window = == 'undefined") return;"
+  console.log(`Total scripts loaded: ${scripts.length}`);
 }
-  const hints = [,}"'"
-    { rel: "'dns-prefetch'", href: "'//fonts.googleapis.com' ",;},;"'"
-    { rel: "'preconnect'", href: "'https://fonts.gstatic.com'", crossOrigin: "'anonymous' ",},;
-  ];"
-
-  hints.forEach(hint = > {;)"'"
-    const link = document.createElement('link");
-    Object.entries(hint).forEach(([key, value,]) => {
-      (link, as, any)[key,] = value;}
-    });
-    document.head.appendChild(link);"
-  });"
-}"'"
-`

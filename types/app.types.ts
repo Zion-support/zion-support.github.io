@@ -1,11 +1,10 @@
 /**
  * Application Type Definitions
- * Core types used across the application*/
+ * Core types used across the application
  */
-
 /**
  * Performance Metrics Interface
- * Web Vitals and performance measurement types*/
+ * Web Vitals and performance measurement types
  */
 export interface PerformanceMetrics {
   /** First Contentful Paint */
@@ -17,11 +16,10 @@ export interface PerformanceMetrics {
   /** Cumulative Layout Shift */
   cls?: number;
   /** Time to First Byte */
-  ttfb?: number;}
+  ttfb?: number;
 }
-
 /**
- * Navigation Performance Metrics*/
+ * Navigation Performance Metrics
  */
 export interface NavigationMetrics {
   /** Time to First Byte */
@@ -37,11 +35,10 @@ export interface NavigationMetrics {
   /** Total Blocking Time */
   tbt: number;
   /** Speed Index */
-  si: number;}
+  si: number;
 }
-
 /**
- * Resource Performance Metrics*/
+ * Resource Performance Metrics
  */
 export interface ResourceMetrics {
   /** Total number of resources */
@@ -57,11 +54,10 @@ export interface ResourceMetrics {
   /** Total transfer size in bytes */
   transferSize: number;
   /** Total decoded size in bytes */
-  decodedSize: number;}
+  decodedSize: number;
 }
-
 /**
- * Memory Performance Metrics*/
+ * Memory Performance Metrics
  */
 export interface MemoryMetrics {
   /** Used JavaScript heap size in bytes */
@@ -69,11 +65,10 @@ export interface MemoryMetrics {
   /** Total JavaScript heap size in bytes */
   totalJSHeapSize: number;
   /** JavaScript heap size limit in bytes */
-  jsHeapSizeLimit: number;}
+  jsHeapSizeLimit: number;
 }
-
 /**
- * Performance Report Interface*/
+ * Performance Report Interface
  */
 export interface PerformanceReport {
   /** Web Vitals metrics */
@@ -90,15 +85,14 @@ export interface PerformanceReport {
   connection?: {
     effectiveType: string;
     downlink: number;
-    rtt: number;}
+    rtt: number;
   };
 }
-
 /**
- * Performance Thresholds*/
+ * Performance Thresholds
  */
 export interface PerformanceThresholds {
-  /** Good performance threshold for FCP (ms) */}
+  /** Good performance threshold for FCP (ms) */
   fcp: { good: number; needsImprovement: number };
   /** Good performance threshold for LCP (ms) */
   lcp: { good: number; needsImprovement: number };
@@ -109,11 +103,10 @@ export interface PerformanceThresholds {
   /** Good performance threshold for TTFB (ms) */
   ttfb: { good: number; needsImprovement: number };
 }
-
 /**
- * Performance Observer Entry Types*/
+ * Performance Observer Entry Types
  */
-export type PerformanceEntryType = 
+export type PerformanceEntryType =
   | 'navigation'
   | 'resource'
   | 'paint'
@@ -122,9 +115,8 @@ export type PerformanceEntryType =
   | 'layout-shift'
   | 'measure'
   | 'mark';
-
 /**
- * Performance Measurement Options*/
+ * Performance Measurement Options
  */
 export interface PerformanceMeasurementOptions {
   /** Whether to include resource timing */
@@ -134,16 +126,14 @@ export interface PerformanceMeasurementOptions {
   /** Whether to include connection information */
   includeConnection?: boolean;
   /** Custom thresholds */
-  thresholds?: Partial<PerformanceThresholds>;}
+  thresholds?: Partial<PerformanceThresholds>;
 }
-
 /**
- * Performance Event Callback*/
+ * Performance Event Callback
  */
 export type PerformanceEventCallback = (report: PerformanceReport) => void;
-
 /**
- * Performance Monitor Configuration*/
+ * Performance Monitor Configuration
  */
 export interface PerformanceMonitorConfig {
   /** Whether to automatically start monitoring */
@@ -153,11 +143,10 @@ export interface PerformanceMonitorConfig {
   /** Event callback */
   onReport?: PerformanceEventCallback;
   /** Report interval in milliseconds */
-  reportInterval?: number;}
+  reportInterval?: number;
 }
-
 /**
- * Error Types*/
+ * Error Types
  */
 export interface AppError {
   /** Error message */
@@ -169,11 +158,10 @@ export interface AppError {
   /** Additional error context */
   context?: Record<string, unknown>;
   /** Error timestamp */
-  timestamp: number;}
+  timestamp: number;
 }
-
 /**
- * API Response Types*/
+ * API Response Types
  */
 export interface ApiResponse<T = unknown> {
   /** Response data */
@@ -183,11 +171,10 @@ export interface ApiResponse<T = unknown> {
   /** Error message if any */
   error?: string;
   /** Response timestamp */
-  timestamp: number;}
+  timestamp: number;
 }
-
 /**
- * Component Props Base Interface*/
+ * Component Props Base Interface
  */
 export interface BaseComponentProps {
   /** CSS class name */
@@ -197,22 +184,20 @@ export interface BaseComponentProps {
   /** Test ID for testing */
   'data-testid'?: string;
   /** Children elements */
-  children?: React.ReactNode;}
+  children?: React.ReactNode;
 }
-
 /**
- * Theme Types*/
+ * Theme Types
  */
-export type Theme = 'light' | 'dark' | 'system'
+export type Theme = 'light' | 'dark' | 'system';
 export interface ThemeConfig {
   /** Current theme */
   theme: Theme;
   /** Whether to use system preference */
-  useSystemPreference: boolean;}
+  useSystemPreference: boolean;
 }
-
 /**
- * SEO Types*/
+ * SEO Types
  */
 export interface SEOConfig {
   /** Page title */
@@ -230,11 +215,10 @@ export interface SEOConfig {
   /** Keywords */
   keywords?: string[];
   /** Robots directive */
-  robots?: string;}
+  robots?: string;
 }
-
 /**
- * Analytics Types*/
+ * Analytics Types
  */
 export interface AnalyticsEvent {
   /** Event name */
@@ -246,11 +230,10 @@ export interface AnalyticsEvent {
   /** User ID */
   userId?: string;
   /** Session ID */
-  sessionId?: string;}
+  sessionId?: string;
 }
-
 /**
- * Feature Flag Types*/
+ * Feature Flag Types
  */
 export interface FeatureFlag {
   /** Flag name */
@@ -262,11 +245,10 @@ export interface FeatureFlag {
   /** Flag value */
   value?: unknown;
   /** Flag conditions */
-  conditions?: Record<string, unknown>;}
+  conditions?: Record<string, unknown>;
 }
-
 /**
- * Configuration Types*/
+ * Configuration Types
  */
 export interface AppConfig {
   /** Application name */
@@ -280,27 +262,24 @@ export interface AppConfig {
   /** Feature flags */
   featureFlags: FeatureFlag[];
   /** Performance thresholds */
-  performanceThresholds: PerformanceThresholds;}
+  performanceThresholds: PerformanceThresholds;
 }
-
 /**
- * Utility Types*/
+ * Utility Types
  */
-export type Optional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>
-export type RequiredFields<T, K extends keyof T> = T & Required<Pick<T, K>>
+export type Optional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
+export type RequiredFields<T, K extends keyof T> = T & Required<Pick<T, K>>;
 export type DeepPartial<T> = {
-  [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];}
+  [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
 };
-
 /**
- * Event Types*/
+ * Event Types
  */
 export interface CustomEvent<T = unknown> extends Event {
-  detail: T;}
+  detail: T;
 }
-
 /**
- * Storage Types*/
+ * Storage Types
  */
 export interface StorageItem<T = unknown> {
   /** Item value */
@@ -308,11 +287,10 @@ export interface StorageItem<T = unknown> {
   /** Expiration timestamp */
   expires?: number;
   /** Creation timestamp */
-  createdAt: number;}
+  createdAt: number;
 }
-
 /**
- * Cache Types*/
+ * Cache Types
  */
 export interface CacheConfig {
   /** Cache key */
@@ -324,5 +302,5 @@ export interface CacheConfig {
   /** Whether to use localStorage */
   useLocalStorage: boolean;
   /** Cache version */
-  version?: string;}
+  version?: string;
 }
