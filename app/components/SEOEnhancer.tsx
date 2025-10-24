@@ -1,25 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 
 interface SEOEnhancerProps {
   title?: string
   description?: string
   keywords?: string
   canonicalUrl?: string
-  ogImage?: string
-  twitterCard?: string
-  structuredData?: object
-  children: React.ReactNode
 }
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
-  keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group',
-  canonicalUrl,
-  ogImage = '/images/og-image.jpg',
-  twitterCard = 'summary_large_image',
-  structuredData,
-  children,
+  title = 'Zion Tech Group - AI & Technology Solutions',
+  description = 'Leading provider of AI-powered solutions, 5G technology, and innovative software development services.',
+  keywords = 'AI, Artificial Intelligence, 5G, Technology, Software Development, Machine Learning',
+  canonicalUrl
 }) => {
   useEffect(() => {
     // Update document title
@@ -34,7 +27,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       meta.name = 'description'
       meta.content = description
       document.head.appendChild(meta)
-    
+    }
 
     // Update meta keywords
     const metaKeywords = document.querySelector('meta[name="keywords"]')
@@ -45,53 +38,30 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       meta.name = 'keywords'
       meta.content = keywords
       document.head.appendChild(meta)
-    
+    }
 
     // Update canonical URL
     if (canonicalUrl) {
-      const canonical = document.querySelector('link[rel="canonical"]')
-      if (canonical) {
-        canonical.setAttribute('href', canonicalUrl)
+      const existingCanonical = document.querySelector('link[rel="canonical"]')
+      if (existingCanonical) {
+        existingCanonical.setAttribute('href', canonicalUrl)
       } else {
         const link = document.createElement('link')
         link.rel = 'canonical'
         link.href = canonicalUrl
         document.head.appendChild(link)
-      
-    
+      }
+    }
   }, [title, description, keywords, canonicalUrl])
 
   return (
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />
-        
-        {/* Open Graph */
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:type" content="website" />
-        {canonicalUrl && <meta property="og:url" content={canonicalUrl} />
-        
-        {/* Twitter Card */
-        <meta name="twitter:card" content={twitterCard} />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
-        
-        {/* Structured Data */
-        {structuredData && (
-          <script type="application/ld+json">
-            {JSON.stringify(structuredData)
-          </script>
-        )
-      </Helmet>
-      {children}
-  );
-};
-
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+    </Helmet>
+  )
 }
 
-export default SEOEnhancer;}
+export default SEOEnhancer

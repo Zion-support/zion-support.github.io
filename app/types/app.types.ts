@@ -1,4 +1,5 @@
 "use client"
+
 export interface User {
   id: string
   email: string
@@ -18,48 +19,139 @@ export interface Service {
     pro: number
     enterprise: number
   }
-  benefits: string[]
-  useCases: string[]
-  marketPrice: string
-  contactInfo: {
-    phone: string
-    email: string
-    website: string
-  }
-  link: string
+  category: string
+  tags: string[]
+  isPopular?: boolean
+  isNew?: boolean
 }
 
-export interface ContactFormData {
+export interface ContactForm {
   name: string
   email: string
-  company: string
+  company?: string
+  phone?: string
   message: string
-  service: string
-export interface AnalyticsEvent {
-  name: string
-  timestamp: number
-  properties?: Record<string, string | number | boolean | null>
-export interface PerformanceMetrics {
-  loadTime: number
-  firstContentfulPaint: number
-  largestContentfulPaint: number
-  cumulativeLayoutShift: number
-  firstInputDelay: number
-export interface ErrorContext {
-  url?: string
-  userAgent?: string
-  timestamp?: string
-  userId?: string
-  sessionId?: string
-  component?: string
-  action?: string
-export interface ErrorReport {
+  service?: string
+  budget?: string
+  timeline?: string
+}
+
+export interface BlogPost {
   id: string
-  message: string
-  stack?: string
-  context: ErrorContext
-  severity: ErrorSeverity
-  resolved: boolean
-  createdAt: string
-export type ErrorSeverity = "low" | "medium" | "high" | "critical"
+  title: string
+  excerpt: string
+  content: string
+  author: string
+  publishedAt: string
+  tags: string[]
+  category: string
+  featuredImage?: string
+  readTime: number
+}
+
+export interface Testimonial {
+  id: string
+  name: string
+  company: string
+  position: string
+  content: string
+  rating: number
+  avatar?: string
+  featured?: boolean
+}
+
+export interface CaseStudy {
+  id: string
+  title: string
+  client: string
+  industry: string
+  challenge: string
+  solution: string
+  results: string[]
+  technologies: string[]
+  duration: string
+  teamSize: number
+  featuredImage?: string
+  gallery?: string[]
+}
+
+export interface TeamMember {
+  id: string
+  name: string
+  position: string
+  bio: string
+  avatar: string
+  social: {
+    linkedin?: string
+    twitter?: string
+    github?: string
+  }
+  skills: string[]
+  experience: number
+}
+
+export interface FAQ {
+  id: string
+  question: string
+  answer: string
+  category: string
+  order: number
+}
+
+export interface PricingPlan {
+  id: string
+  name: string
+  description: string
+  price: number
+  period: "monthly" | "yearly"
+  features: string[]
+  limitations?: string[]
+  isPopular?: boolean
+  cta: string
+  ctaLink: string
+}
+
+export interface NavigationItem {
+  label: string
+  href: string
+  submenu?: NavigationItem[]
+}
+
+export interface SEOData {
+  title: string
+  description: string
+  keywords: string
+  canonical?: string
+  ogTitle?: string
+  ogDescription?: string
+  ogImage?: string
+  ogUrl?: string
+  twitterCard?: string
+  twitterTitle?: string
+  twitterDescription?: string
+  twitterImage?: string
+}
+
+export interface ApiResponse<T> {
+  data: T
+  success: boolean
+  message?: string
+  errors?: string[]
+}
+
+export interface PaginationParams {
+  page: number
+  limit: number
+  sort?: string
+  order?: "asc" | "desc"
+}
+
+export interface PaginatedResponse<T> {
+  data: T[]
+  pagination: {
+    page: number
+    limit: number
+    total: number
+    pages: number
+  }
 }

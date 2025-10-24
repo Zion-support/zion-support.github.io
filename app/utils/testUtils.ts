@@ -20,77 +20,79 @@ export const waitFor = async (
   interval = 100
 ): Promise<void> => {
   const startTime = Date.now();
-  while (!condition()) {
-    if (Date.now() - startTime > timeout) {
-      throw new Error(`Timeout waiting for condition after ${timeout}ms`);
+  
+  while (Date.now() - startTime < timeout) {
+    if (condition()) {
+      return;
     }
     await wait(interval);
   }
+  
+  throw new Error(`Condition not met within ${timeout}ms`);
 };
 
 /**
- * Mock fetch for testing
+ * Wait for an element to appear in the DOM
  */
-export const mockFetch = (
-  response: unknown,
-  status = 200,
-  headers: Record<string, string> = {}
-): void => {
-  if (typeof global !== 'undefined') {
-    (global as typeof global & { fetch: typeof fetch }).fetch = (() =>
-      Promise.resolve({
-        ok: status >= 200 && status < 300,
-        status,
-        headers: new Headers(headers),
-        json: async () => response,
-        text: async () => JSON.stringify(response)
-      } as Response)
-    ) as typeof fetch;
-  }
-};
-
-/**
- * Create a mock function
- */
-export const createMockFunction = <T extends (..._args: unknown[]) => unknown>(
-  implementation?: T
-): T => {
-  return (implementation || (() => {})) as T;
-};
-
-/**
- * Mock console methods for testing
- */
-export const mockConsole = {
-  log: createMockFunction<typeof console.log>(),
-  error: createMockFunction<typeof console.error>(),
-  warn: createMockFunction<typeof console.warn>(),
-  info: createMockFunction<typeof console.info>(),
-};
-
-/**
- * Restore console methods
- */
-export const restoreConsole = (): void => {
-  // In a real test environment, you would restore the original console methods
-  // This is a placeholder for the actual implementation
-};
-
-/**
- * Create a mock element for testing
- */
-export const createMockElement = (tagName: string, attributes: Record<string, string> = {}): HTMLElement => {
-  const element = document.createElement(tagName);
-  Object.entries(attributes).forEach(([key, value]) => {
-    element.setAttribute(key, value);
+export const waitForElement = async (
+  selector: string,
+  timeout = 5000
+): Promise<Element> => {
+  return new Promise((resolve, reject) => {
+    const startTime = Date.now();
+    
+    const checkElement = () => {
+      const element = document.querySelector(selector);
+      if (element) {
+        resolve(element);
+        return;
+      }
+      
+      if (Date.now() - startTime > timeout) {
+        reject(new Error(`Element ${selector} not found within ${timeout}ms`));
+        return;
+      }
+      
+      setTimeout(checkElement, 100);
+    };
+    
+    checkElement();
   });
-  return element;
+};
+
+/**
+ * Wait for an element to disappear from the DOM
+ */
+export const waitForElementToDisappear = async (
+  selector: string,
+  timeout = 5000
+): Promise<void> => {
+  return new Promise((resolve, reject) => {
+    const startTime = Date.now();
+    
+    const checkElement = () => {
+      const element = document.querySelector(selector);
+      if (!element) {
+        resolve();
+        return;
+      }
+      
+      if (Date.now() - startTime > timeout) {
+        reject(new Error(`Element ${selector} still present after ${timeout}ms`));
+        return;
+      }
+      
+      setTimeout(checkElement, 100);
+    };
+    
+    checkElement();
+  });
 };
 
 /**
  * Simulate user interaction
  */
-export const simulateClick = (element: HTMLElement): void => {
+export const simulateClick = (element: Element): void => {
   const event = new MouseEvent('click', {
     bubbles: true,
     cancelable: true,
@@ -99,10 +101,13 @@ export const simulateClick = (element: HTMLElement): void => {
   element.dispatchEvent(event);
 };
 
-/**
- * Simulate keyboard input
- */
-export const simulateKeyPress = (element: HTMLElement, key: string): void => {
+export const simulateInput = (element: HTMLInputElement, value: string): void => {
+  element.value = value;
+  const event = new Event('input', { bubbles: true });
+  element.dispatchEvent(event);
+};
+
+export const simulateKeyPress = (element: Element, key: string): void => {
   const event = new KeyboardEvent('keydown', {
     key,
     bubbles: true,
@@ -112,93 +117,17 @@ export const simulateKeyPress = (element: HTMLElement, key: string): void => {
 };
 
 /**
- * Simulate form input
+ * Mock fetch for testing
  */
-export const simulateInput = (element: HTMLInputElement, value: string): void => {
-  element.value = value;
-  const event = new Event('input', { bubbles: true });
-  element.dispatchEvent(event);
-};
-
-/**
- * Get element by test id
- */
-export const getByTestId = (testId: string): HTMLElement | null => {
-  return document.querySelector(`[data-testid="${testId}"]`);
-};
-
-/**
- * Get all elements by test id
- */
-export const getAllByTestId = (testId: string): HTMLElement[] => {
-  return Array.from(document.querySelectorAll(`[data-testid="${testId}"]`));
-};
-
-/**
- * Check if element is visible
- */
-export const isVisible = (element: HTMLElement): boolean => {
-  const style = window.getComputedStyle(element);
-  return style.display !== 'none' && style.visibility !== 'hidden' && style.opacity !== '0';
-};
-
-/**
- * Check if element is in viewport
- */
-export const isInViewport = (element: HTMLElement): boolean => {
-  const rect = element.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-};
-
-/**
- * Wait for element to appear
- */
-export const waitForElement = async (
-  selector: string,
-  timeout = 5000
-): Promise<HTMLElement> => {
-  return new Promise((resolve, reject) => {
-    const startTime = Date.now();
-    const checkElement = () => {
-      const element = document.querySelector(selector) as HTMLElement;
-      if (element) {
-        resolve(element);
-      } else if (Date.now() - startTime > timeout) {
-        reject(new Error(`Element with selector "${selector}" not found within ${timeout}ms`));
-      } else {
-        setTimeout(checkElement, 100);
-      }
-    };
-    checkElement();
-  });
-};
-
-/**
- * Wait for element to disappear
- */
-export const waitForElementToDisappear = async (
-  selector: string,
-  timeout = 5000
-): Promise<void> => {
-  return new Promise((resolve, reject) => {
-    const startTime = Date.now();
-    const checkElement = () => {
-      const element = document.querySelector(selector);
-      if (!element) {
-        resolve();
-      } else if (Date.now() - startTime > timeout) {
-        reject(new Error(`Element with selector "${selector}" still present after ${timeout}ms`));
-      } else {
-        setTimeout(checkElement, 100);
-      }
-    };
-    checkElement();
-  });
+export const mockFetch = (response: unknown, status = 200): void => {
+  global.fetch = (() =>
+    Promise.resolve({
+      ok: status >= 200 && status < 300,
+      status,
+      json: () => Promise.resolve(response),
+      text: () => Promise.resolve(JSON.stringify(response))
+    })
+  ) as unknown as typeof fetch;
 };
 
 /**
@@ -218,11 +147,8 @@ export const mockLocalStorage = (): void => {
       },
       clear: () => {
         Object.keys(store).forEach(key => delete store[key]);
-      },
-      length: Object.keys(store).length,
-      key: (index: number) => Object.keys(store)[index] || null
-    },
-    writable: true
+      }
+    }
   });
 };
 
@@ -243,54 +169,8 @@ export const mockSessionStorage = (): void => {
       },
       clear: () => {
         Object.keys(store).forEach(key => delete store[key]);
-      },
-      length: Object.keys(store).length,
-      key: (index: number) => Object.keys(store)[index] || null
-    },
-    writable: true
-  });
-};
-
-/**
- * Mock window.location for testing
- */
-export const mockLocation = (url: string): void => {
-  Object.defineProperty(window, 'location', {
-    value: {
-      href: url,
-      origin: new URL(url).origin,
-      pathname: new URL(url).pathname,
-      search: new URL(url).search,
-      hash: new URL(url).hash,
-      assign: () => {},
-      replace: () => {},
-      reload: () => {}
-    },
-    writable: true
-  });
-};
-
-/**
- * Create a mock promise that resolves after a delay
- */
-export const createDelayedPromise = <T>(
-  value: T,
-  delay = 100
-): Promise<T> => {
-  return new Promise(resolve => {
-    setTimeout(() => resolve(value), delay);
-  });
-};
-
-/**
- * Create a mock promise that rejects after a delay
- */
-export const createRejectedPromise = (
-  error: Error,
-  delay = 100
-): Promise<never> => {
-  return new Promise((_, reject) => {
-    setTimeout(() => reject(error), delay);
+      }
+    }
   });
 };
 
@@ -298,40 +178,6 @@ export const createRejectedPromise = (
  * Generate random test data
  */
 export const generateTestData = {
-<<<<<<< HEAD
-  string: (length = 10) => {
-    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let result = '';
-    for (let i = 0; i < length; i++) {
-      result += chars.charAt(Math.floor(Math.random() * chars.length));
-    }
-    return result;
-  },
-  
-  number: (min = 0, max = 100) => {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  },
-  
-  email: () => {
-    return `${generateTestData.string(8)}@example.com`;
-  },
-  
-  url: () => {
-    return `https://example.com/${generateTestData.string(8)}`;
-  }
-};
-
-/**
- * Clean up after tests
- */
-export const cleanup = (): void => {
-  // Clear all timers
-  if (typeof global !== 'undefined') {
-    const timers = (global as typeof global & { timers: Set<number> }).timers;
-    if (timers) {
-      timers.forEach(timer => clearTimeout(timer));
-      timers.clear();
-=======
   string: (length = 10): string => {
     return Math.random()
       .toString(36)
@@ -358,34 +204,14 @@ export const cleanup = (): void => {
 }
 
 /**
- * Deep clone an object
+ * Mock console methods for testing
  */
-export const deepClone = <T>(obj: T): T => {
-  return JSON.parse(JSON.stringify(obj))
-}
-
-/**
- * Compare objects for equality
- */
-export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {
-  return JSON.stringify(obj1) === JSON.stringify(obj2)
-}
-
-/**
- * Spy on console methods
- */
-export class ConsoleSpy {
-  private originalConsole: Console
-  private logs: string[] = []
-  private errors: string[] = []
-  private warnings: string[] = []
-
-  constructor() {
-    this.originalConsole = { ...console }
-    this.mock()
-  }
-
-  private mock(): void {
+export const mockConsole = {
+  logs: [] as string[],
+  errors: [] as string[],
+  warnings: [] as string[],
+  
+  setup() {
     console.log = (...args: unknown[]) => {
       this.logs.push(args.map(String).join(' '))
     }
@@ -394,8 +220,32 @@ export class ConsoleSpy {
     }
     console.warn = (...args: unknown[]) => {
       this.warnings.push(args.map(String).join(' '))
->>>>>>> 25adb2f5c6bac8e2e9c4ea63f8e65ad0a7ecbbec
     }
+  },
+  
+  restore() {
+    // Restore original console methods
+    console.log = (..._args: unknown[]) => {
+      // Original console.log behavior
+    };
+    console.error = (..._args: unknown[]) => {
+      // Original console.error behavior
+    };
+    console.warn = (..._args: unknown[]) => {
+      // Original console.warn behavior
+    };
+  }
+};
+
+/**
+ * Clean up after tests
+ */
+export const cleanup = () => {
+  // Clear timers
+  const timers = (global as typeof global & { timers: Set<number> }).timers;
+  if (timers) {
+    timers.forEach(timer => clearTimeout(timer));
+    timers.clear();
   }
   
   // Clear DOM

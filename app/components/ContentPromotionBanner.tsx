@@ -37,8 +37,4 @@ const ContentPromotionBanner: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default ContentPromotionBanner;
-=======
-export default ContentPromotionBanner;
->>>>>>> 565082f4af95f25101578a95e87917e85c6148f6
