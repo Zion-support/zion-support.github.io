@@ -80,7 +80,7 @@ const LoadingStates: React.FC = () => {
       </div>
       <Footer />
     </>
-  )
-}
 
+  );
+}  )}
 export default LoadingStates

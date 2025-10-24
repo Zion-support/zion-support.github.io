@@ -80,7 +80,7 @@ const Loading: React.FC = () => {
       </div>
       <Footer />
     </>
-  )
-}
 
+  );
+}  )}
 export default Loading

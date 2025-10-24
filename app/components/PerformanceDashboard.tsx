@@ -80,7 +80,7 @@ const PerformanceDashboard: React.FC = () => {
       </div>
       <Footer />
     </>
-  )
-}
 
+  );
+}  )}
 export default PerformanceDashboard

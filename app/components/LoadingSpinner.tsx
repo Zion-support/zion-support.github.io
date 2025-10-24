@@ -80,7 +80,7 @@ const LoadingSpinner: React.FC = () => {
       </div>
       <Footer />
     </>
-  )
-}
 
+  );
+}  )}
 export default LoadingSpinner

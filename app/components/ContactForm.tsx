@@ -8,7 +8,6 @@ interface FormData {
     company: string;
   message: string;,
     service: string
-  }
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -24,12 +23,11 @@ const ContactForm: React.FC = () => {
       ...formData
       [e.target.name]: e.target.value
 })
-  }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000))
+    await new Promise(resolve => setTimeout(resolve, 2000)
     setIsSubmitting(false)
     setIsSubmitted(true)
     // Reset form after 3 seconds
@@ -43,7 +41,6 @@ const ContactForm: React.FC = () => {
         message: '',
     service: ''})
     }, 3000)
-  }
   const services = [
   'AI Solutions',
     'Web Development',
@@ -61,8 +58,6 @@ const ContactForm: React.FC = () => {
         <h3 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>
         <p className="text-gray-300">Thank you for reaching out. We&apos;ll get back to you soon.</p>
       </div>
-    )
-  }
   return (
     <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
       <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
@@ -173,32 +168,5 @@ const ContactForm: React.FC = () => {
               <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
               Sending...
 </>
-          ) : (
-            <>
-              <Send className="w-5 h-5 mr-2" />
-              Send Message
-</>
-          )}
-        </button>
-      </form>
-      <div className="mt-8 pt-8 border-t border-white/10">
-        <h3 className="text-lg font-semibold text-white mb-4">Contact Information</h3>
-        <div className="space-y-3">
-          <div className="flex items-center justify-center">
-            <Mail className="w-5 h-5 text-cyan-400 mr-2" />
-            <span className="text-gray-300">kleber@ziontechgroup.com</span>
-          </div>
-          <div className="flex items-center justify-center">
-            <Phone className="w-5 h-5 text-purple-400 mr-2" />
-            <span className="text-gray-300">+1 (302) 464-0950</span>
-          </div>
-          <div className="flex items-center justify-center">
-            <MessageSquare className="w-5 h-5 text-green-400 mr-2" />
-            <span className="text-gray-300">24/7 Support</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
+  );
 }
-export default ContactForm

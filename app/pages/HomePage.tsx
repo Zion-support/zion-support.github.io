@@ -10,7 +10,8 @@ import { ArrowRightIcon;
   PhoneIcon
   EnvelopeIcon
   MapPinIcon
-} from '@heroicons/react/24/outline'
+} from '@heroicons/react/24/outline'  );
+
 export default function HomePage() {  return (
     <>
       <Helmet>
@@ -237,5 +238,5 @@ export default function HomePage() {  return (
         </div>
       </section>
 </>
-  )
+  );
 }

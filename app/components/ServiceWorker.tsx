@@ -80,7 +80,7 @@ const ServiceWorker: React.FC = () => {
       </div>
       <Footer />
     </>
-  )
-}
 
+  );
+}  )}
 export default ServiceWorker

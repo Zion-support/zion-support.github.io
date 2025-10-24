@@ -80,7 +80,7 @@ const PerformanceOptimizations: React.FC = () => {
       </div>
       <Footer />
     </>
-  )
-}
 
+  );
+}  )}
 export default PerformanceOptimizations

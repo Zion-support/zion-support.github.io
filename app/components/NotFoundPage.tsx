@@ -26,7 +26,6 @@ const NotFoundPagePage: React.FC = () => {
     title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
     benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-}
   ]
   const benefits = [
   'Increase efficiency by up to 50%',
@@ -51,7 +50,4 @@ const NotFoundPagePage: React.FC = () => {
         </div>
       </section>
     </div>
-  )
-}
-export default NotFoundPagePage
 export default NotFoundPagePage

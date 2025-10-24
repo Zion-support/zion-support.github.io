@@ -23,7 +23,6 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
     title: 'Growth Optimization',
       description: 'Optimize your website for maximum growth and visibility.',
     benefits: ['Growth strategies', 'Traffic optimization', 'Conversion tracking', 'ROI analysis']
-}
   ]
   const benefits = [
   'Increase organic traffic by up to 300%',
@@ -132,6 +131,5 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
       </div>
       <Footer />
 </>
-  )
+  );
 }
-export default AdvancedSEOOptimizerPage

@@ -6,7 +6,6 @@ interface SEOHeadProps {
   title: string
   description: string
   keywords: string[]
-}
 
 const SEOHeadWrapper: React.FC<SEOHeadProps> = ({ title, description, keywords }) => {
   return (
@@ -15,7 +14,5 @@ const SEOHeadWrapper: React.FC<SEOHeadProps> = ({ title, description, keywords }
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
     </Helmet>
-  )
-}
 
 export default SEOHeadWrapper

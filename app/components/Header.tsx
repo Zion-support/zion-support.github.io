@@ -94,9 +94,5 @@ const Header: React.FC = () => {
       </div>
       <Footer />
 </>
-  )
+  );
 }
-export default HeaderPage
-  )
-}
-export default Header

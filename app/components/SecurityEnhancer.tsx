@@ -80,7 +80,7 @@ const SecurityEnhancer: React.FC = () => {
       </div>
       <Footer />
     </>
-  )
-}
 
+  );
+}  )}
 export default SecurityEnhancer

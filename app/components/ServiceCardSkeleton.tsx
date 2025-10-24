@@ -80,7 +80,7 @@ const ServiceCardSkeleton: React.FC = () => {
       </div>
       <Footer />
     </>
-  )
-}
 
+  );
+}  )}
 export default ServiceCardSkeleton

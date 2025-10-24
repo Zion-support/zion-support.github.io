@@ -80,7 +80,7 @@ const EnhancedSkipLink: React.FC = () => {
       </div>
       <Footer />
     </>
-  )
-}
 
+  );
+}  )}
 export default EnhancedSkipLink

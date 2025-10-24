@@ -80,7 +80,7 @@ const ResponsiveContainer: React.FC = () => {
       </div>
       <Footer />
     </>
-  )
-}
 
+  );
+}  )}
 export default ResponsiveContainer

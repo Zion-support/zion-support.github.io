@@ -28,7 +28,6 @@ const Navigation = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
-    }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -58,7 +57,6 @@ const Navigation = () => {
   ]
   const isActive = (path: string) => {
     return pathname === path
-  }
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
@@ -105,7 +103,6 @@ const Navigation = () => {
                     </div>
                   )}
                 </div>
-              )
             })}
           </div>
           {/* CTA Button */}
@@ -160,7 +157,6 @@ const Navigation = () => {
                       </div>
                     )}
                   </div>
-                )
               })}
               <div className="pt-4 border-t border-slate-700">
                 <Link
@@ -176,6 +172,4 @@ const Navigation = () => {
         )}
       </div>
     </nav>
-  )
-}
 export default Navigation

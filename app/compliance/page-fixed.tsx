@@ -28,7 +28,6 @@ const PageFixedPage: React.FC = () => {
     title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
     benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-}
   ]
   return (
     <>
@@ -95,6 +94,5 @@ const PageFixedPage: React.FC = () => {
       </div>
       <Footer />
 </>
-  )
+  );
 }
-export default PageFixedPage

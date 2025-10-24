@@ -3,6 +3,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import Footer from '../components/Footer';
 
 export default function ContactPage() {
   return (
@@ -27,8 +28,8 @@ export default function ContactPage() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </main>
+      </div>
       <Footer />
-    </div>
-  )
+    </>
+  );
 }

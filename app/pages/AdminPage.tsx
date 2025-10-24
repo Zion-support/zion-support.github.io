@@ -14,6 +14,4 @@ const AdminPage = () => {
         </div>
       </div>
     </div>
-  )
-}
 export default AdminPage

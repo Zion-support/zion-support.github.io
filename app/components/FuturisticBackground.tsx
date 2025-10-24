@@ -80,7 +80,7 @@ const FuturisticBackground: React.FC = () => {
       </div>
       <Footer />
     </>
-  )
-}
 
+  );
+}  )}
 export default FuturisticBackground
