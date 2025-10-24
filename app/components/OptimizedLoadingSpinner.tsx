@@ -1,6 +1,7 @@
-'use client';
+
 
 import React from 'react';
+
 
 interface OptimizedLoadingSpinnerProps {
   // Add props here

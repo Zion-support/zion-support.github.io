@@ -63,10 +63,10 @@ describe('/api/reviews API Endpoint', () => {
 
   beforeEach(() => {
     prismaMock = new PrismaClient()
-    (prismaMock.productReview.create as jest.Mock).mockReset()
-    (prismaMock.productReview.findMany as jest.Mock).mockReset()
-    (prismaMock.user.findUnique as jest.Mock).mockReset()
-    (prismaMock.$disconnect as jest.Mock).mockReset()
+    ;(prismaMock.productReview.create as jest.Mock).mockReset()
+    ;(prismaMock.productReview.findMany as jest.Mock).mockReset()
+    ;(prismaMock.user.findUnique as jest.Mock).mockReset()
+    ;(prismaMock.$disconnect as jest.Mock).mockReset()
     ;(supabase.auth.getSession as jest.Mock).mockReset()
   })
 

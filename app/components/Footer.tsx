@@ -32,7 +32,18 @@ const Footer: React.FC = () => {
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
     { name: 'Careers', url: '/careers' },
+<<<<<<< HEAD
     { name: 'Contact', url: '/contact' },
+=======
+    { name: 'News', url: '/news' },
+    { name: 'Contact', url: '/contact' }
+  ]
+
+  const resources = [
+    { name: 'Documentation', url: '/docs' },
+    { name: 'API Reference', url: '/api' },
+    { name: 'Tutorials', url: '/tutorials' },
+>>>>>>> 6ff1a4f2fe1a5fd41dbeb6ed8148ca267e5cb8f1
     { name: 'Blog', url: '/blog' },
     { name: 'News', url: '/news' }
   ]
@@ -46,8 +57,13 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-gray-900 text-white">
+<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+=======
+        <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+>>>>>>> 6ff1a4f2fe1a5fd41dbeb6ed8148ca267e5cb8f1
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
@@ -90,7 +106,13 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {aiServices.slice(0, 6).map(service => (
                 <li key={service.name}>
+<<<<<<< HEAD
                   <Link href={service.url} className="text-gray-300 hover:text-white transition-colors">
+=======
+                  <Link
+                    href={service.url}
+                    className="text-gray-300 hover:text-white transition-colors block">
+>>>>>>> 6ff1a4f2fe1a5fd41dbeb6ed8148ca267e5cb8f1
                     {service.name}
                   </Link>
                 </li>
@@ -112,7 +134,11 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
+<<<<<<< HEAD
           {/* Company & Legal */}
+=======
+          {/* Company */}
+>>>>>>> 6ff1a4f2fe1a5fd41dbeb6ed8148ca267e5cb8f1
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2 mb-6">
@@ -188,4 +214,8 @@ const Footer: React.FC = () => {
   )
 }
 
+<<<<<<< HEAD
 export default Footer
+=======
+export default Footer
+>>>>>>> 6ff1a4f2fe1a5fd41dbeb6ed8148ca267e5cb8f1

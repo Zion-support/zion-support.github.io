@@ -1,4 +1,3 @@
-'use client';
 
 import React from 'react';
 
@@ -15,3 +14,4 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = (_props) => {
 };
 
 export default AnimatedCounter;
+

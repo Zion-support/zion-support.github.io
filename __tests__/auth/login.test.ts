@@ -1,201 +1,157 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest'
-import { NextApiRequest, NextApiResponse } from 'next'
+import { describe, it, expect, beforeEach, vi } from 'vitest'
+import { render, screen, fireEvent, waitFor } from '@testing-library/react'
+import { useRouter } from 'next/navigation'
+import LoginPage from '@/app/login/page'
 
-const mockSignInWithPassword = vi.fn()
+// Mock Next.js router
+vi.mock('next/navigation', () => ({
+  useRouter: vi.fn()
+}))
 
-vi.mock('@supabase/supabase-js', () => ({
-  createClient: vi.fn(() => ({
+// Mock Supabase client
+vi.mock('@/integrations/supabase/client', () => ({
+  supabase: {
     auth: {
-      signInWithPassword: mockSignInWithPassword,
+      signInWithPassword: vi.fn(),
       signUp: vi.fn(),
-      onAuthStateChange: vi.fn(() => ({ data: { subscription: { unsubscribe: vi.fn() } } })),
-      getSession: vi.fn().mockResolvedValue({ data: { session: null }, error: null })
-    },
-    from: vi.fn().mockReturnThis()
-  }))
-})
+      signOut: vi.fn(),
+      onAuthStateChange: vi.fn(() => ({
+        data: { subscription: { unsubscribe: vi.fn() } }
+      }))
+    }
+  }
+}))
 
-// Import the handler AFTER setting up the mock
-import loginHandler from '../../pages/api/auth/login'
+// Mock Analytics context
+vi.mock('@/app/contexts/AnalyticsContext', () => ({
+  useAnalytics: () => ({
+    trackEvent: vi.fn(),
+    trackPageView: vi.fn(),
+    isLoaded: true
+  })
+}))
 
-// Helper to create mock NextApiRequest
-const mockApiReq = (body: unknown, method: string = 'POST') => ({
-  method,
-  body
-} as NextApiRequest)
+describe('LoginPage', () => {
+  const mockPush = vi.fn()
+  const mockRouter = { push: mockPush }
 
-// Helper to create mock NextApiResponse
-const mockApiRes = () => {
-  const res = {
-    status: vi.fn().mockReturnThis(),
-    json: vi.fn().mockReturnThis(),
-    setHeader: vi.fn().mockReturnThis(),
-    end: vi.fn().mockReturnThis()
-  } as unknown as NextApiResponse
-  return res
-}
-
-describe('Login API Handler', () => {
   beforeEach(() => {
     vi.clearAllMocks()
+    ;(useRouter as any).mockReturnValue(mockRouter)
   })
 
-  it('should return 400 for non-POST requests', async () => {
-    const req = mockApiReq({}, 'GET')
-    const res = mockApiRes()
-
-    await loginHandler(req, res)
-
-    expect(res.status).toHaveBeenCalledWith(400)
-    expect(res.json).toHaveBeenCalledWith({
-      error: 'Method not allowed'
-    })
+  it('renders login form correctly', () => {
+    render(<LoginPage />)
+    
+    expect(screen.getByText('Welcome Back')).toBeInTheDocument()
+    expect(screen.getByLabelText(/email/i)).toBeInTheDocument()
+    expect(screen.getByLabelText(/password/i)).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /sign in/i })).toBeInTheDocument()
   })
 
-  it('should return 400 for missing email', async () => {
-    const req = mockApiReq({ password: 'password123' })
-    const res = mockApiRes()
+  it('shows validation errors for empty fields', async () => {
+    render(<LoginPage />)
+    
+    const submitButton = screen.getByRole('button', { name: /sign in/i })
+    fireEvent.click(submitButton)
 
-    await loginHandler(req, res)
-
-    expect(res.status).toHaveBeenCalledWith(400)
-    expect(res.json).toHaveBeenCalledWith({
-      error: 'Email and password are required'
-    })
-  })
-
-  it('should return 400 for missing password', async () => {
-    const req = mockApiReq({ email: 'test@example.com' })
-    const res = mockApiRes()
-
-    await loginHandler(req, res)
-
-    expect(res.status).toHaveBeenCalledWith(400)
-    expect(res.json).toHaveBeenCalledWith({
-      error: 'Email and password are required'
+    await waitFor(() => {
+      expect(screen.getByText('Email is required')).toBeInTheDocument()
+      expect(screen.getByText('Password is required')).toBeInTheDocument()
     })
   })
 
-  it('should return 400 for invalid email format', async () => {
-    const req = mockApiReq({ 
-      email: 'invalid-email', 
-      password: 'password123' 
-    })
-    const res = mockApiRes()
+  it('shows validation error for invalid email', async () => {
+    render(<LoginPage />)
+    
+    const emailInput = screen.getByLabelText(/email/i)
+    const submitButton = screen.getByRole('button', { name: /sign in/i })
+    
+    fireEvent.change(emailInput, { target: { value: 'invalid-email' } })
+    fireEvent.click(submitButton)
 
-    await loginHandler(req, res)
-
-    expect(res.status).toHaveBeenCalledWith(400)
-    expect(res.json).toHaveBeenCalledWith({
-      error: 'Invalid email format'
-    })
-  })
-
-  it('should return 400 for short password', async () => {
-    const req = mockApiReq({ 
-      email: 'test@example.com', 
-      password: '123' 
-    })
-    const res = mockApiRes()
-
-    await loginHandler(req, res)
-
-    expect(res.status).toHaveBeenCalledWith(400)
-    expect(res.json).toHaveBeenCalledWith({
-      error: 'Password must be at least 6 characters'
+    await waitFor(() => {
+      expect(screen.getByText('Please enter a valid email address')).toBeInTheDocument()
     })
   })
 
-  it('should return 401 for invalid credentials', async () => {
-    const req = mockApiReq({ 
-      email: 'test@example.com', 
-      password: 'wrongpassword' 
-    })
-    const res = mockApiRes()
-
-    mockSignInWithPassword.mockResolvedValueOnce({
-      data: { user: null, session: null },
-      error: { message: 'Invalid login credentials' }
-    })
-
-    await loginHandler(req, res)
-
-    expect(res.status).toHaveBeenCalledWith(401)
-    expect(res.json).toHaveBeenCalledWith({
-      error: 'Invalid login credentials'
-    })
-  })
-
-  it('should return 200 for successful login', async () => {
-    const req = mockApiReq({ 
-      email: 'test@example.com', 
-      password: 'password123' 
-    })
-    const res = mockApiRes()
-
-    const mockUser = {
-      id: 'user-123',
-      email: 'test@example.com',
-      created_at: '2023-01-01T00:00:00Z'
-    }
-
-    const mockSession = {
-      access_token: 'access-token',
-      refresh_token: 'refresh-token',
-      expires_at: 1234567890
-    }
-
-    mockSignInWithPassword.mockResolvedValueOnce({
-      data: { user: mockUser, session: mockSession },
+  it('handles successful login', async () => {
+    const { supabase } = await import('@/integrations/supabase/client')
+    ;(supabase.auth.signInWithPassword as any).mockResolvedValue({
+      data: { user: { id: '123', email: 'test@example.com' } },
       error: null
     })
 
-    await loginHandler(req, res)
+    render(<LoginPage />)
+    
+    const emailInput = screen.getByLabelText(/email/i)
+    const passwordInput = screen.getByLabelText(/password/i)
+    const submitButton = screen.getByRole('button', { name: /sign in/i })
+    
+    fireEvent.change(emailInput, { target: { value: 'test@example.com' } })
+    fireEvent.change(passwordInput, { target: { value: 'password123' } })
+    fireEvent.click(submitButton)
 
-    expect(res.status).toHaveBeenCalledWith(200)
-    expect(res.json).toHaveBeenCalledWith({
-      message: 'Login successful',
-      user: {
-        id: mockUser.id,
-        email: mockUser.email
-      }
+    await waitFor(() => {
+      expect(supabase.auth.signInWithPassword).toHaveBeenCalledWith({
+        email: 'test@example.com',
+        password: 'password123'
+      })
     })
   })
 
-  it('should return 500 for server errors', async () => {
-    const req = mockApiReq({ 
-      email: 'test@example.com', 
-      password: 'password123' 
+  it('handles login error', async () => {
+    const { supabase } = await import('@/integrations/supabase/client')
+    ;(supabase.auth.signInWithPassword as any).mockResolvedValue({
+      data: null,
+      error: { message: 'Invalid credentials' }
     })
-    const res = mockApiRes()
 
-    mockSignInWithPassword.mockRejectedValueOnce(new Error('Database connection failed'))
+    render(<LoginPage />)
+    
+    const emailInput = screen.getByLabelText(/email/i)
+    const passwordInput = screen.getByLabelText(/password/i)
+    const submitButton = screen.getByRole('button', { name: /sign in/i })
+    
+    fireEvent.change(emailInput, { target: { value: 'test@example.com' } })
+    fireEvent.change(passwordInput, { target: { value: 'wrongpassword' } })
+    fireEvent.click(submitButton)
 
-    await loginHandler(req, res)
-
-    expect(res.status).toHaveBeenCalledWith(500)
-    expect(res.json).toHaveBeenCalledWith({
-      error: 'Internal server error'
+    await waitFor(() => {
+      expect(screen.getByText('Invalid credentials')).toBeInTheDocument()
     })
   })
 
-  it('should handle Supabase auth errors', async () => {
-    const req = mockApiReq({ 
-      email: 'test@example.com', 
-      password: 'password123' 
-    })
-    const res = mockApiRes()
+  it('toggles password visibility', () => {
+    render(<LoginPage />)
+    
+    const passwordInput = screen.getByLabelText(/password/i)
+    const toggleButton = screen.getByRole('button', { name: /toggle password visibility/i })
+    
+    expect(passwordInput).toHaveAttribute('type', 'password')
+    
+    fireEvent.click(toggleButton)
+    expect(passwordInput).toHaveAttribute('type', 'text')
+    
+    fireEvent.click(toggleButton)
+    expect(passwordInput).toHaveAttribute('type', 'password')
+  })
 
-    mockSignInWithPassword.mockResolvedValueOnce({
-      data: { user: null, session: null },
-      error: { message: 'Too many requests' }
-    })
+  it('navigates to sign up page', () => {
+    render(<LoginPage />)
+    
+    const signUpLink = screen.getByText(/don't have an account/i)
+    fireEvent.click(signUpLink)
+    
+    expect(mockPush).toHaveBeenCalledWith('/signup')
+  })
 
-    await loginHandler(req, res)
-
-    expect(res.status).toHaveBeenCalledWith(401)
-    expect(res.json).toHaveBeenCalledWith({
-      error: 'Too many requests'
-    })
+  it('navigates to forgot password page', () => {
+    render(<LoginPage />)
+    
+    const forgotPasswordLink = screen.getByText(/forgot your password/i)
+    fireEvent.click(forgotPasswordLink)
+    
+    expect(mockPush).toHaveBeenCalledWith('/forgot-password')
   })
 })

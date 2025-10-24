@@ -1,152 +1,140 @@
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
+import { describe, it, expect, beforeEach, vi } from 'vitest'
+import { validateEnv } from '@/app/utils/validateEnv'
 
-// Mock process.env
-const originalEnv = process.env
-
-beforeEach(() => {
-  vi.resetModules()
-  process.env = { ...originalEnv }
-})
-
-afterEach(() => {
-  process.env = originalEnv
-})
+// Mock console methods
+const mockConsoleError = vi.spyOn(console, 'error').mockImplementation(() => {})
+const mockConsoleWarn = vi.spyOn(console, 'warn').mockImplementation(() => {})
 
 describe('validateEnv', () => {
-  it('should validate required environment variables', async () => {
-    // Set up required environment variables
-    process.env.NEXT_PUBLIC_SUPABASE_URL = 'https://test.supabase.co'
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'test-anon-key'
-    process.env.SUPABASE_SERVICE_ROLE_KEY = 'test-service-key'
-    process.env.DATABASE_URL = 'postgresql://test:test@localhost:5432/test'
-    process.env.NEXTAUTH_SECRET = 'test-secret'
-    process.env.NEXTAUTH_URL = 'http://localhost:3000'
+  const originalEnv = process.env
 
-    const { validateEnv } = await import('@/utils/validateEnv')
-    
-    expect(() => validateEnv()).not.toThrow()
+  beforeEach(() => {
+    vi.clearAllMocks()
+    process.env = { ...originalEnv }
   })
 
-  it('should throw error for missing required variables', async () => {
-    // Clear all environment variables
-    process.env = {}
-
-    const { validateEnv } = await import('@/utils/validateEnv')
-    
-    expect(() => validateEnv()).toThrow('Missing required environment variables')
+  afterEach(() => {
+    process.env = originalEnv
   })
 
-  it('should throw error for missing NEXT_PUBLIC_SUPABASE_URL', async () => {
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'test-anon-key'
-    process.env.SUPABASE_SERVICE_ROLE_KEY = 'test-service-key'
-    process.env.DATABASE_URL = 'postgresql://test:test@localhost:5432/test'
-    process.env.NEXTAUTH_SECRET = 'test-secret'
-    process.env.NEXTAUTH_URL = 'http://localhost:3000'
-
-    const { validateEnv } = await import('@/utils/validateEnv')
-    
-    expect(() => validateEnv()).toThrow('Missing required environment variables')
-  })
-
-  it('should throw error for missing NEXT_PUBLIC_SUPABASE_ANON_KEY', async () => {
-    process.env.NEXT_PUBLIC_SUPABASE_URL = 'https://test.supabase.co'
-    process.env.SUPABASE_SERVICE_ROLE_KEY = 'test-service-key'
-    process.env.DATABASE_URL = 'postgresql://test:test@localhost:5432/test'
-    process.env.NEXTAUTH_SECRET = 'test-secret'
-    process.env.NEXTAUTH_URL = 'http://localhost:3000'
-
-    const { validateEnv } = await import('@/utils/validateEnv')
-    
-    expect(() => validateEnv()).toThrow('Missing required environment variables')
-  })
-
-  it('should throw error for missing SUPABASE_SERVICE_ROLE_KEY', async () => {
+  it('should validate required environment variables', () => {
     process.env.NEXT_PUBLIC_SUPABASE_URL = 'https://test.supabase.co'
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'test-anon-key'
     process.env.DATABASE_URL = 'postgresql://test:test@localhost:5432/test'
-    process.env.NEXTAUTH_SECRET = 'test-secret'
-    process.env.NEXTAUTH_URL = 'http://localhost:3000'
 
-    const { validateEnv } = await import('@/utils/validateEnv')
-    
-    expect(() => validateEnv()).toThrow('Missing required environment variables')
+    const result = validateEnv()
+
+    expect(result.isValid).toBe(true)
+    expect(result.errors).toHaveLength(0)
   })
 
-  it('should throw error for missing DATABASE_URL', async () => {
-    process.env.NEXT_PUBLIC_SUPABASE_URL = 'https://test.supabase.co'
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'test-anon-key'
-    process.env.SUPABASE_SERVICE_ROLE_KEY = 'test-service-key'
-    process.env.NEXTAUTH_SECRET = 'test-secret'
-    process.env.NEXTAUTH_URL = 'http://localhost:3000'
-
-    const { validateEnv } = await import('@/utils/validateEnv')
-    
-    expect(() => validateEnv()).toThrow('Missing required environment variables')
-  })
-
-  it('should throw error for missing NEXTAUTH_SECRET', async () => {
-    process.env.NEXT_PUBLIC_SUPABASE_URL = 'https://test.supabase.co'
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'test-anon-key'
-    process.env.SUPABASE_SERVICE_ROLE_KEY = 'test-service-key'
-    process.env.DATABASE_URL = 'postgresql://test:test@localhost:5432/test'
-    process.env.NEXTAUTH_URL = 'http://localhost:3000'
-
-    const { validateEnv } = await import('@/utils/validateEnv')
-    
-    expect(() => validateEnv()).toThrow('Missing required environment variables')
-  })
-
-  it('should throw error for missing NEXTAUTH_URL', async () => {
-    process.env.NEXT_PUBLIC_SUPABASE_URL = 'https://test.supabase.co'
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'test-anon-key'
-    process.env.SUPABASE_SERVICE_ROLE_KEY = 'test-service-key'
-    process.env.DATABASE_URL = 'postgresql://test:test@localhost:5432/test'
-    process.env.NEXTAUTH_SECRET = 'test-secret'
-
-    const { validateEnv } = await import('@/utils/validateEnv')
-    
-    expect(() => validateEnv()).toThrow('Missing required environment variables')
-  })
-
-  it('should validate optional environment variables when present', async () => {
-    process.env.NEXT_PUBLIC_SUPABASE_URL = 'https://test.supabase.co'
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'test-anon-key'
-    process.env.SUPABASE_SERVICE_ROLE_KEY = 'test-service-key'
-    process.env.DATABASE_URL = 'postgresql://test:test@localhost:5432/test'
-    process.env.NEXTAUTH_SECRET = 'test-secret'
-    process.env.NEXTAUTH_URL = 'http://localhost:3000'
-    process.env.REDIS_URL = 'redis://localhost:6379'
-    process.env.STRIPE_SECRET_KEY = 'sk_test_123'
-    process.env.STRIPE_PUBLISHABLE_KEY = 'pk_test_123'
-
-    const { validateEnv } = await import('@/utils/validateEnv')
-    
-    expect(() => validateEnv()).not.toThrow()
-  })
-
-  it('should handle empty string values as missing', async () => {
+  it('should return errors for missing required variables', () => {
     process.env.NEXT_PUBLIC_SUPABASE_URL = ''
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'test-anon-key'
-    process.env.SUPABASE_SERVICE_ROLE_KEY = 'test-service-key'
-    process.env.DATABASE_URL = 'postgresql://test:test@localhost:5432/test'
-    process.env.NEXTAUTH_SECRET = 'test-secret'
-    process.env.NEXTAUTH_URL = 'http://localhost:3000'
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = ''
+    process.env.DATABASE_URL = ''
 
-    const { validateEnv } = await import('@/utils/validateEnv')
-    
-    expect(() => validateEnv()).toThrow('Missing required environment variables')
+    const result = validateEnv()
+
+    expect(result.isValid).toBe(false)
+    expect(result.errors).toContain('NEXT_PUBLIC_SUPABASE_URL is required')
+    expect(result.errors).toContain('NEXT_PUBLIC_SUPABASE_ANON_KEY is required')
+    expect(result.errors).toContain('DATABASE_URL is required')
   })
 
-  it('should handle undefined values as missing', async () => {
-    process.env.NEXT_PUBLIC_SUPABASE_URL = undefined as any
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'test-anon-key'
-    process.env.SUPABASE_SERVICE_ROLE_KEY = 'test-service-key'
+  it('should validate URL format for Supabase URL', () => {
+    process.env.NEXT_PUBLIC_SUPABASE_URL = 'invalid-url'
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'test-key'
     process.env.DATABASE_URL = 'postgresql://test:test@localhost:5432/test'
-    process.env.NEXTAUTH_SECRET = 'test-secret'
-    process.env.NEXTAUTH_URL = 'http://localhost:3000'
 
-    const { validateEnv } = await import('@/utils/validateEnv')
-    
-    expect(() => validateEnv()).toThrow('Missing required environment variables')
+    const result = validateEnv()
+
+    expect(result.isValid).toBe(false)
+    expect(result.errors).toContain('NEXT_PUBLIC_SUPABASE_URL must be a valid URL')
+  })
+
+  it('should validate URL format for Database URL', () => {
+    process.env.NEXT_PUBLIC_SUPABASE_URL = 'https://test.supabase.co'
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'test-key'
+    process.env.DATABASE_URL = 'invalid-db-url'
+
+    const result = validateEnv()
+
+    expect(result.isValid).toBe(false)
+    expect(result.errors).toContain('DATABASE_URL must be a valid PostgreSQL URL')
+  })
+
+  it('should validate optional environment variables when present', () => {
+    process.env.NEXT_PUBLIC_SUPABASE_URL = 'https://test.supabase.co'
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'test-key'
+    process.env.DATABASE_URL = 'postgresql://test:test@localhost:5432/test'
+    process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'
+    process.env.NEXT_PUBLIC_SENTRY_DSN = 'https://test@sentry.io/test'
+
+    const result = validateEnv()
+
+    expect(result.isValid).toBe(true)
+    expect(result.errors).toHaveLength(0)
+  })
+
+  it('should warn about missing optional variables', () => {
+    process.env.NEXT_PUBLIC_SUPABASE_URL = 'https://test.supabase.co'
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'test-key'
+    process.env.DATABASE_URL = 'postgresql://test:test@localhost:5432/test'
+    // Optional variables not set
+
+    const result = validateEnv()
+
+    expect(result.isValid).toBe(true)
+    expect(mockConsoleWarn).toHaveBeenCalledWith(
+      expect.stringContaining('NEXT_PUBLIC_GA_MEASUREMENT_ID is not set')
+    )
+  })
+
+  it('should validate Google Analytics ID format', () => {
+    process.env.NEXT_PUBLIC_SUPABASE_URL = 'https://test.supabase.co'
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'test-key'
+    process.env.DATABASE_URL = 'postgresql://test:test@localhost:5432/test'
+    process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID = 'invalid-ga-id'
+
+    const result = validateEnv()
+
+    expect(result.isValid).toBe(false)
+    expect(result.errors).toContain('NEXT_PUBLIC_GA_MEASUREMENT_ID must be a valid Google Analytics ID')
+  })
+
+  it('should validate Sentry DSN format', () => {
+    process.env.NEXT_PUBLIC_SUPABASE_URL = 'https://test.supabase.co'
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'test-key'
+    process.env.DATABASE_URL = 'postgresql://test:test@localhost:5432/test'
+    process.env.NEXT_PUBLIC_SENTRY_DSN = 'invalid-sentry-dsn'
+
+    const result = validateEnv()
+
+    expect(result.isValid).toBe(false)
+    expect(result.errors).toContain('NEXT_PUBLIC_SENTRY_DSN must be a valid Sentry DSN')
+  })
+
+  it('should handle multiple validation errors', () => {
+    process.env.NEXT_PUBLIC_SUPABASE_URL = 'invalid-url'
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = ''
+    process.env.DATABASE_URL = 'invalid-db-url'
+    process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID = 'invalid-ga-id'
+
+    const result = validateEnv()
+
+    expect(result.isValid).toBe(false)
+    expect(result.errors.length).toBeGreaterThan(3)
+  })
+
+  it('should log errors to console when validation fails', () => {
+    process.env.NEXT_PUBLIC_SUPABASE_URL = ''
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = ''
+    process.env.DATABASE_URL = ''
+
+    validateEnv()
+
+    expect(mockConsoleError).toHaveBeenCalledWith(
+      expect.stringContaining('Environment validation failed')
+    )
   })
 })
