@@ -1,129 +1,325 @@
 'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
-interface EnhancedAccessibilityEnhancerProps {;
-  children: React.ReactNode,
-  enableKeyboardNavigation?: boolean
-  enableScreenReaderSupport?: boolean
-  enableHighContrast?: boolean
-  enableFocusManagement?: boolean
-  enableVoiceNavigation?: boolean
+import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Eye, EyeOff, Volume2, VolumeX, Type, MousePointer, Keyboard, Headphones } from 'lucide-react';
+
+interface EnhancedAccessibilityEnhancerProps {
+  children: React.ReactNode;
+  enableKeyboardNavigation?: boolean;
+  enableScreenReaderSupport?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
+  enableVoiceNavigation?: boolean;
 }
 
-  const features = [
-    {;
-      icon: Brain,;
-      title: 'AI-Powered Intelligence',;
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',;
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {;
-      icon: BarChart,;
-      title: 'Advanced Analytics',;
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',;
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {;
-      icon: Target,;
-      title: 'Precision Targeting',;
-      description: 'Target specific goals and objectives with precision and accuracy.',;
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {;
-      icon: TrendingUp,;
-      title: 'Growth Optimization',;
-      description: 'Optimize your business growth with data-driven strategies.',;
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({
+  children,
+  enableKeyboardNavigation = true,
+  enableScreenReaderSupport = true,
+  enableHighContrast = true,
+  enableFocusManagement = true,
+  enableVoiceNavigation = true
+}) => {
+  const [accessibilitySettings, setAccessibilitySettings] = useState({
+    highContrast: false,
+    reducedMotion: false,
+    fontSize: 16,
+    screenReaderMode: false,
+    voiceNavigation: false,
+    keyboardNavigation: true
+  });
 
-    // Add keyboard navigation support
-    const handleKeyDown = (event: KeyboardEvent) => {
+  const [announcements, setAnnouncements] = useState<string[]>([]);
 
-      if (event.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation')
-      }
-      
-      // Add skip links functionality
-      if (event.key === 'Enter' && event.target instanceof HTMLElement) {
-        if (event.target.getAttribute('data-skip-link')) {
-          const targetId = event.target.getAttribute('data-skip-link')
-          const target = document.getElementById(targetId || '')
-          if (target) {
-            target.focus()
-            target.scrollIntoView({ behavior: 'smooth' })
-          }
+  useEffect(() => {
+    // Initialize accessibility features
+    const initializeAccessibility = () => {
+      // Check for system preferences
+      if (typeof window !== 'undefined') {
+        const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        
+        setAccessibilitySettings(prev => ({
+          ...prev,
+          highContrast: prefersHighContrast,
+          reducedMotion: prefersReducedMotion
+        }));
+
+        // Apply initial settings
+        if (prefersHighContrast) {
+          document.documentElement.classList.add('high-contrast');
+        }
+        if (prefersReducedMotion) {
+          document.documentElement.classList.add('reduced-motion');
         }
       }
+    };
+
+    initializeAccessibility();
+
+    // Set up keyboard navigation
+    if (enableKeyboardNavigation) {
+      const handleKeyDown = (e: KeyboardEvent) => {
+        // Skip to main content
+        if (e.key === 'Tab' && e.shiftKey && e.altKey) {
+          e.preventDefault();
+          const mainContent = document.getElementById('main-content');
+          if (mainContent) {
+            mainContent.focus();
+            announce('Skipped to main content');
+          }
+        }
+        
+        // Toggle high contrast
+        if (e.key === 'c' && e.ctrlKey && e.altKey) {
+          e.preventDefault();
+          toggleHighContrast();
+        }
+        
+        // Toggle reduced motion
+        if (e.key === 'm' && e.ctrlKey && e.altKey) {
+          e.preventDefault();
+          toggleReducedMotion();
+        }
+      };
+
+      document.addEventListener('keydown', handleKeyDown);
+      return () => document.removeEventListener('keydown', handleKeyDown);
     }
+  }, [enableKeyboardNavigation]);
 
-    const handleMouseDown = () => {
-
-      document.body.classList.remove('keyboard-navigation')
-    }
-
-    document.addEventListener('keydown', handleKeyDown)
-    document.addEventListener('mousedown', handleMouseDown)
-
-    return () => {
-
-      document.removeEventListener('keydown', handleKeyDown)
-      document.removeEventListener('mousedown', handleMouseDown)
-    }
-  }, [isHighContrast, isReducedMotion])
+  const announce = (message: string) => {
+    setAnnouncements(prev => [...prev, message]);
+    setTimeout(() => {
+      setAnnouncements(prev => prev.slice(1));
+    }, 3000);
+  };
 
   const toggleHighContrast = () => {
+    const newValue = !accessibilitySettings.highContrast;
+    setAccessibilitySettings(prev => ({ ...prev, highContrast: newValue }));
+    document.documentElement.classList.toggle('high-contrast');
+    announce(newValue ? 'High contrast enabled' : 'High contrast disabled');
+  };
 
-    setIsHighContrast(!isHighContrast)
-    document.documentElement.classList.toggle('high-contrast')
-  }
+  const toggleReducedMotion = () => {
+    const newValue = !accessibilitySettings.reducedMotion;
+    setAccessibilitySettings(prev => ({ ...prev, reducedMotion: newValue }));
+    document.documentElement.classList.toggle('reduced-motion');
+    announce(newValue ? 'Reduced motion enabled' : 'Reduced motion disabled');
+  };
 
-  const changeFontSize = (size: string) => {
+  const adjustFontSize = (size: number) => {
+    setAccessibilitySettings(prev => ({ ...prev, fontSize: size }));
+    document.documentElement.style.fontSize = `${size}px`;
+    announce(`Font size set to ${size} pixels`);
+  };
 
-    setFontSize(size)
-    document.documentElement.setAttribute('data-font-size', size)
-  }
+  const toggleScreenReaderMode = () => {
+    const newValue = !accessibilitySettings.screenReaderMode;
+    setAccessibilitySettings(prev => ({ ...prev, screenReaderMode: newValue }));
+    announce(newValue ? 'Screen reader mode enabled' : 'Screen reader mode disabled');
+  };
 
   const toggleVoiceNavigation = () => {
-
-    if (enableVoiceNavigation && 'speechSynthesis' in window) {
-      setIsVoiceEnabled(!isVoiceEnabled)
-    }
-  }
+    const newValue = !accessibilitySettings.voiceNavigation;
+    setAccessibilitySettings(prev => ({ ...prev, voiceNavigation: newValue }));
+    announce(newValue ? 'Voice navigation enabled' : 'Voice navigation disabled');
+  };
 
   return (
-    
-        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto"></div>
-        <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p>Powerful AI-driven features designed to transform your business operations
-</p>
-            </div>
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
-              {features.map((feature, index) => (
+    <>
+      <Helmet>
+        <title>Enhanced Accessibility | Zion Tech Group</title>
+        <meta name="description" content="Advanced accessibility features for inclusive web experiences." />
+      </Helmet>
 
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"> </div><feature.icon className="h-12 w-12 text-emerald-400 mb-4" /> </feature><h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">{feature.benefits.map((benefit, idx) => (
-                      </ul><li key={idx} className="flex items-center text-sm text-gray-300"> </li><CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />{benefit}
-                      </CheckCircle></li>
-
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
+      {/* Accessibility Controls */}
+      <div className="fixed top-4 right-4 z-50 flex flex-col gap-2 bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-4">
+        <h3 className="text-sm font-semibold text-gray-900 mb-2">Accessibility</h3>
+        
+        <div className="flex flex-col gap-2">
+          <button
+            onClick={toggleHighContrast}
+            className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors ${
+              accessibilitySettings.highContrast 
+                ? 'bg-blue-100 text-blue-700' 
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+            }`}
+            aria-label="Toggle high contrast mode"
+          >
+            {accessibilitySettings.highContrast ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+            High Contrast
+          </button>
+          
+          <button
+            onClick={toggleReducedMotion}
+            className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors ${
+              accessibilitySettings.reducedMotion 
+                ? 'bg-blue-100 text-blue-700' 
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+            }`}
+            aria-label="Toggle reduced motion"
+          >
+            {accessibilitySettings.reducedMotion ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
+            Reduced Motion
+          </button>
+          
+          <div className="flex items-center gap-2">
+            <Type className="w-4 h-4 text-gray-600" />
+            <button
+              onClick={() => adjustFontSize(Math.max(12, accessibilitySettings.fontSize - 2))}
+              className="px-2 py-1 text-xs bg-gray-200 rounded hover:bg-gray-300 transition-colors"
+              aria-label="Decrease font size"
+            >
+              A-
+            </button>
+            <span className="text-xs font-medium min-w-[2rem] text-center">
+              {accessibilitySettings.fontSize}px
+            </span>
+            <button
+              onClick={() => adjustFontSize(Math.min(24, accessibilitySettings.fontSize + 2))}
+              className="px-2 py-1 text-xs bg-gray-200 rounded hover:bg-gray-300 transition-colors"
+              aria-label="Increase font size"
+            >
+              A+
+            </button>
+          </div>
+          
+          {enableScreenReaderSupport && (
+            <button
+              onClick={toggleScreenReaderMode}
+              className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors ${
+                accessibilitySettings.screenReaderMode 
+                  ? 'bg-blue-100 text-blue-700' 
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              }`}
+              aria-label="Toggle screen reader mode"
+            >
+              <MousePointer className="w-4 h-4" />
+              Screen Reader
+            </button>
+          )}
+          
+          {enableVoiceNavigation && (
+            <button
+              onClick={toggleVoiceNavigation}
+              className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors ${
+                accessibilitySettings.voiceNavigation 
+                  ? 'bg-blue-100 text-blue-700' 
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              }`}
+              aria-label="Toggle voice navigation"
+            >
+              <Headphones className="w-4 h-4" />
+              Voice Nav
+            </button>
+          )}
         </div>
-      </section>
+      </div>
 
-        {/* Benefits Section */}
+      {/* Skip to content link */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-lg z-50"
+      >
+        Skip to main content
+      </a>
 
-        <section className="py-20 px-4 bg-white/5"> </section><div className="max-w-7xl mx-auto"></div>
-        <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
-              <p>Experience the benefits of cutting-edge AI technology</p>
-            </div>
-        </div>
-      </section>
+      {/* Screen reader announcements */}
+      <div
+        id="screen-reader-announcements"
+        className="sr-only"
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        {announcements.map((announcement, index) => (
+          <div key={index}>{announcement}</div>
+        ))}
+      </div>
 
-  </>
-export default EnhancedAccessibilityEnhancerPage
-;
+      {/* Main content */}
+      <div id="main-content" tabIndex={-1}>
+        {children}
+      </div>
+
+      {/* Accessibility styles */}
+      <style jsx global>{`
+        .high-contrast {
+          --tw-bg-opacity: 1;
+          --tw-text-opacity: 1;
+        }
+        
+        .high-contrast * {
+          background-color: white !important;
+          color: black !important;
+          border-color: black !important;
+        }
+        
+        .reduced-motion * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+        
+        .reduced-motion *::before,
+        .reduced-motion *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+        
+        /* Enhanced focus styles */
+        *:focus {
+          outline: 3px solid #3b82f6 !important;
+          outline-offset: 2px !important;
+          box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3) !important;
+        }
+        
+        /* Skip link styles */
+        .skip-link {
+          position: absolute;
+          top: -40px;
+          left: 6px;
+          background: #000;
+          color: #fff;
+          padding: 8px;
+          text-decoration: none;
+          z-index: 1000;
+          border-radius: 4px;
+        }
+        
+        .skip-link:focus {
+          top: 6px;
+        }
+        
+        /* Screen reader only content */
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
+        
+        .focus\:not-sr-only:focus {
+          position: static;
+          width: auto;
+          height: auto;
+          padding: inherit;
+          margin: inherit;
+          overflow: visible;
+          clip: auto;
+          white-space: normal;
+        }
+      `}</style>
+    </>
+  );
+};
+
+export default EnhancedAccessibilityEnhancer;

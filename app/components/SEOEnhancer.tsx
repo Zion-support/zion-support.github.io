@@ -55,19 +55,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       } else {
         const link = document.createElement('link')
         link.rel = 'canonical'
-<<<<<<< HEAD
-        link.href = canonicalUrl
-        document.head.appendChild(link)
-      }
-    }
-  }, [title, description, keywords, canonicalUrl])
-    return (
-    <>
-      <Helmet>
-        <title>Page Title</title>
-        <meta name="description" content="Page description" />
-      </Helmet>
-=======
         link.href = canonicalUrl;
         document.head.appendChild(link);
       }
@@ -76,7 +63,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
 
   return (
     <Helmet>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />

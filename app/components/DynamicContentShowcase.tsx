@@ -1,149 +1,220 @@
-import React from 'react';
-'use client'
-import React, { useState, useEffect } from 'react'
-import { Zap, Shield, Globe, Brain } from 'lucide-react'
+'use client';
 
-const DynamicContentShowcase: React.FC = ($2) => {
+import React, { useState, useEffect } from 'react';
+import { Zap, Shield, Globe, Brain, ArrowRight, Star, Users, Target } from 'lucide-react';
 
-$3};
-        <section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-        <div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
-              DynamicContentShowcase
-            </h1>
-            <p>Advanced DynamicContentShowcase solution for modern businesses.</p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">,
-                Get Started
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">,
-                Learn More
-              </button>
-            
-          
-        </section>,
-,
-        {/* Features Section */}
-        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto"></div>
-        <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p>Discover the powerful features that make DynamicContentShowcase the perfect solution for your business.</p>
-            </div>
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"> </div><h3 className="text-xl font-semibold text-white mb-3">AI-Powered</h3>
-                <p className="text-gray-300">Advanced AI algorithms for intelligent automation.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"> </div><h3 className="text-xl font-semibold text-white mb-3">Scalable</h3>
-                <p className="text-gray-300">Grows with your business needs and requirements.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"> </div><h3 className="text-xl font-semibold text-white mb-3">Secure</h3>
-                <p className="text-gray-300">Enterprise-grade security and data protection.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"> </div><h3 className="text-xl font-semibold text-white mb-3">Efficient</h3>
-                <p className="text-gray-300">Optimized performance for maximum productivity.</p>
-                </div>
-              </div>
-        </div>
-      </section>,
-,
-        {/* CTA Section */}
-        <section className="py-20 px-4"> </section><div className="max-w-4xl mx-auto text-center"> </div><h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-            <p>Join thousands of businesses already using DynamicContentShowcase to transform their operations.</p>
-            <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-              Start Your Free Trial
-            
-            </button>
-          </div>
-        </section>
-        </div>
-      </Footer>
-      </div>
+interface DynamicContentShowcaseProps {
+  className?: string;
+}
+
+const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({ className = '' }) => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const features = [
-    {;
-      icon: Brain,;
-      title: 'AI-Powered Solutions',;
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',;
-      color: 'from-purple-500 to-pink-600'},
-    {;
-      icon: Zap,;
-      title: 'High Performance',;
-      description: 'Lightning-fast processing and real-time analytics for optimal results',;
-      color: 'from-blue-500 to-cyan-600'},
-    {;
-      icon: Shield,;
-      title: 'Enterprise Security',;
-      description: 'Bank-level security with encryption and compliance standards',;
-      color: 'from-green-500 to-emerald-600'},
-    {;
-      icon: Globe,;
-      title: 'Global Reach',;
-      description: 'Worldwide deployment and support for international businesses',;
-      color: 'from-orange-500 to-red-600'}
-  ]
+    {
+      icon: Brain,
+      title: 'AI-Powered Content',
+      description: 'Intelligent content generation and optimization using advanced AI algorithms.',
+      color: 'text-blue-400'
+    },
+    {
+      icon: Zap,
+      title: 'Real-time Updates',
+      description: 'Dynamic content that updates instantly based on user behavior and preferences.',
+      color: 'text-yellow-400'
+    },
+    {
+      icon: Shield,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security with 99.9% uptime guarantee for your content.',
+      color: 'text-green-400'
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Multi-language support and global CDN for lightning-fast content delivery.',
+      color: 'text-purple-400'
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      role: 'Marketing Director',
+      company: 'TechCorp',
+      content: 'DynamicContentShowcase has revolutionized our content strategy. The AI-powered insights are incredible.',
+      rating: 5
+    },
+    {
+      name: 'Michael Chen',
+      role: 'CEO',
+      company: 'StartupXYZ',
+      content: 'The real-time updates and personalization features have increased our engagement by 300%.',
+      rating: 5
+    },
+    {
+      name: 'Emily Rodriguez',
+      role: 'Content Manager',
+      company: 'MediaGroup',
+      content: 'Easy to use, powerful features, and excellent support. Highly recommended!',
+      rating: 5
+    }
+  ];
 
   useEffect(() => {
+    const interval = setInterval(() => {
+      setIsAnimating(true);
+      setTimeout(() => {
+        setCurrentSlide((prev) => (prev + 1) % testimonials.length);
+        setIsAnimating(false);
+      }, 300);
+    }, 5000);
 
-    const timer = setInterval(() => {
-
-      setCurrentIndex((prev) => (prev + 1) % features.length)
-    }, 3000)
-
-    return () => clearInterval(timer)
-  }, [features.length])
-
-  const currentFeature = features[currentIndex]
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
 
   return (
-    
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4"></div>
-      <div className="max-w-7xl mx-auto"></div>
-        <div className="text-center mb-16"></div>
-          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,
+    <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 ${className}`}>
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Dynamic Content Showcase
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Experience our cutting-edge solutions through interactive demonstrations and real-time updates.
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Advanced dynamic content solution for modern businesses. Create, manage, and optimize content that adapts to your audience in real-time.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
+            <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Learn More
+            </button>
+          </div>
         </div>
+      </section>
 
-        <div className="relative"></div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md: p-12 border border-white/20"></div>,
-            <div className="flex items-center justify-center mb-8"></div>
-              <div className={`bg-gradient-to-r ${currentFeature.color} p-4 rounded-full`}></div>
-                <currentFeature.icon className="h-12 w-12 text-white" />
+      {/* Features Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+            <p className="text-gray-300 text-lg">
+              Discover the powerful features that make our dynamic content platform perfect for your business.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300">
+                <feature.icon className={`w-12 h-12 mb-6 ${feature.color}`} />
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
+            <p className="text-gray-300 text-lg">
+              Join thousands of satisfied customers who trust our platform.
+            </p>
+          </div>
+          
+          <div className="relative">
+            <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 transform scale-95' : 'opacity-100 transform scale-100'}`}>
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center">
+                <div className="flex justify-center mb-4">
+                  {[...Array(testimonials[currentSlide].rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <blockquote className="text-xl text-gray-300 mb-6 italic">
+                  "{testimonials[currentSlide].content}"
+                </blockquote>
+                <div className="text-white font-semibold">
+                  {testimonials[currentSlide].name}
+                </div>
+                <div className="text-gray-400 text-sm">
+                  {testimonials[currentSlide].role} at {testimonials[currentSlide].company}
+                </div>
               </div>
             </div>
             
-            <h3 className="text-2xl md: text-3xl font-bold text-white text-center mb-4">,
-              {currentFeature.title}
-            </h3>
-            
-            <p className="text-lg text-gray-300 text-center mb-8 max-w-2xl mx-auto">
-              {currentFeature.description}
-            </p>
-
-            <div className="flex justify-center space-x-2 mb-8"></div>
-              {features.map((_, index) => (
-                <button;
+            <div className="flex justify-center mt-8 gap-2">
+              {testimonials.map((_, index) => (
+                <button
                   key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${;
-                    index === currentIndex ? 'bg-white' : 'bg-white/30'
+                  onClick={() => {
+                    setIsAnimating(true);
+                    setTimeout(() => {
+                      setCurrentSlide(index);
+                      setIsAnimating(false);
+                    }, 300);
+                  }}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentSlide ? 'bg-emerald-400' : 'bg-gray-600'
                   }`}
                 />
               ))}
             </div>
-
-            <div className="text-center"></div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: from-purple-600 hover:to-blue-700 transition-all duration-300">
-              Learn More
-              
-            </button>
-          </div>
           </div>
         </div>
-      </div>
-    </div>
-  )
-}
+      </section>
 
-export default DynamicContentShowcase}
+      {/* Stats Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-white mb-2">10K+</div>
+              <div className="text-gray-400">Active Users</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-white mb-2">99.9%</div>
+              <div className="text-gray-400">Uptime</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-white mb-2">50+</div>
+              <div className="text-gray-400">Countries</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-white mb-2">24/7</div>
+              <div className="text-gray-400">Support</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-gray-300 text-lg mb-8">
+            Join thousands of businesses already using our dynamic content platform to transform their digital presence.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+              Start Free Trial
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
+            <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              Schedule Demo
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default DynamicContentShowcase;
