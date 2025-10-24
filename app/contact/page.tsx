@@ -1,56 +1,51 @@
-'use client'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { Mail, Phone, MapPin } from 'lucide-react'
+'use client';
+
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 const ContactPage: React.FC = () => {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
-      <main className="pt-16">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-rfrom-blue-600to-purple-600text-white py-20">
-          <div className="containermx-autopx-4">
-            <div className="max-w-4xlmx-autotext-center">
-              <h1 className="text-5xlfont-boldmb-6">Contact Us</h1>
-              <p className="text-xltext-blue-100">
-                Ready to transform your business? Let's discuss your project
-              </p>
-            </div>
+      <main>
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Contact</h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Advanced AI solutions for modern businesses.</p>
           </div>
         </section>
 
-        {/* Contact Info Section */}
-        <section className="py-20">
-          <div className="containermx-autopx-4">
-            <div className="max-w-6xlmx-auto">
-              <div className="gridgrid-cols-1md:grid-cols-3gap-8">
-                <div className="text-center">
-                  <Mail className="w-12h-12text-blue-600mx-auto mb-4" />
-                  <h3 className="text-xlfont-semiboldtext-gray-900mb-2">Email</h3>
-                  <p className="text-gray-600">info@ziontechgroup.com</p>
-                </div>
-                <div className="text-center">
-                  <Phone className="w-12h-12text-blue-600mx-auto mb-4" />
-                  <h3 className="text-xlfont-semiboldtext-gray-900mb-2">Phone</h3>
-                  <p className="text-gray-600">+1 (555) 123-4567</p>
-                </div>
-                <div className="text-center">
-                  <MapPin className="w-12h-12text-blue-600mx-auto mb-4" />
-                  <h3 className="text-xlfont-semiboldtext-gray-900mb-2">Address</h3>
-                  <p className="text-gray-600">123 Tech Street, Innovation City</p>
-                </div>
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Features</h2>
+              <p className="text-xl text-gray-300">Advanced AI solutions</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">AI-Powered</h3>
+                <p className="text-gray-300">Leverage artificial intelligence for enhanced performance and insights.</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Scalable</h3>
+                <p className="text-gray-300">Built to scale with your business needs and growth.</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Secure</h3>
+                <p className="text-gray-300">Enterprise-grade security and compliance features.</p>
               </div>
             </div>
           </div>
         </section>
       </main>
-      
-      <Footer />
-    </>
-  )
-}
 
-export default ContactPage
+      <Footer />
+    </div>
+  );
+};
+
+export default ContactPage;

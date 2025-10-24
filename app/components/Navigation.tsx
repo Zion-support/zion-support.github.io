@@ -1,57 +1,122 @@
 'use client';
+
 import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { 
   ChevronDown, 
+  Mail, 
   Menu, 
   X, 
   Cloud, 
   BarChart, 
-  Zap, 
+  ArrowRight, 
+  Target, 
   Globe, 
   Smartphone, 
-  Lock, 
   TrendingUp, 
-  Settings, 
+  FileText, 
   MessageCircle, 
-  Mic, 
-  Eye
+  Box, 
+  Link as LinkIcon, 
+  Workflow, 
+  Eye, 
+  Mic,
+  Brain,
+  Share,
+  Video,
+  Code,
+  CheckCircle,
+  Users,
+  Shield
 } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
+      setIsScrolled(window.scrollY > 10);
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const closeAllMenus = useCallback(() => {
+  const closeMenu = useCallback(() => {
     setIsOpen(false);
   }, []);
 
-  // Service data
-  const aiServices = [
-    { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' },
-    { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Process automation' },
-    { name: 'AI Chatbots', href: '/ai-chatbot-builder', icon: MessageCircle, description: 'Conversational AI' },
-    { name: 'Computer Vision', href: '/ai-computer-vision', icon: Eye, description: 'Image recognition' },
-    { name: 'Predictive Analytics', href: '/ai-predictive-analytics', icon: TrendingUp, description: 'Forecasting' },
-    { name: 'Voice AI', href: '/ai-voice-assistant', icon: Mic, description: 'Voice technology' }
-  ];
-
-  const itServices = [
-    { name: 'Cloud Infrastructure', href: '/cloud-architecture', icon: Cloud, description: 'Scalable cloud solutions' },
-    { name: 'Cybersecurity Solutions', href: '/cybersecurity', icon: Lock, description: 'Security solutions' },
-    { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Modern web applications' },
-    { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'iOS & Android apps' },
-    { name: 'DevOps', href: '/devops', icon: Settings, description: 'Development operations' },
-    { name: 'Data Analytics', href: '/data-analytics', icon: BarChart, description: 'Data insights' }
+  const navigationItems = [
+    {
+      title: 'AI Solutions',
+      href: '/ai-solutions',
+      icon: Brain,
+      children: [
+        { title: 'AI Analytics', href: '/ai-analytics', icon: BarChart },
+        { title: 'AI Customer Support', href: '/ai-customer-support', icon: MessageCircle },
+        { title: 'AI Content Generation', href: '/ai-content-generation', icon: FileText },
+        { title: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart },
+        { title: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail },
+        { title: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Target },
+        { title: 'AI Inventory Management', href: '/ai-inventory-management', icon: Box },
+        { title: 'AI Invoice Generator', href: '/ai-invoice-generator', icon: FileText },
+        { title: 'AI Project Management', href: '/ai-project-management', icon: Workflow },
+        { title: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: Share },
+        { title: 'AI Video Generation', href: '/ai-video-generation', icon: Video },
+        { title: 'AI Voice Cloning', href: '/ai-voice-cloning', icon: Mic }
+      ]
+    },
+    {
+      title: 'Cloud Services',
+      href: '/cloud-services',
+      icon: Cloud,
+      children: [
+        { title: 'Cloud Architecture', href: '/cloud-architecture', icon: Cloud },
+        { title: 'Cloud Migration', href: '/cloud-migration', icon: ArrowRight },
+        { title: 'Cloud Security', href: '/cloud-security', icon: Shield }
+      ]
+    },
+    {
+      title: 'Development',
+      href: '/development',
+      icon: Code,
+      children: [
+        { title: 'Web Development', href: '/web-development', icon: Globe },
+        { title: 'Mobile Development', href: '/mobile-development', icon: Smartphone },
+        { title: 'API Development', href: '/api-development', icon: LinkIcon }
+      ]
+    },
+    {
+      title: 'Analytics',
+      href: '/analytics',
+      icon: BarChart,
+      children: [
+        { title: 'Data Analytics', href: '/data-analytics', icon: BarChart },
+        { title: 'Business Intelligence', href: '/business-intelligence', icon: TrendingUp },
+        { title: 'Performance Monitoring', href: '/performance-monitoring', icon: Eye }
+      ]
+    },
+    {
+      title: 'Security',
+      href: '/security',
+      icon: Shield,
+      children: [
+        { title: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
+        { title: 'Security Audit', href: '/security-audit', icon: Eye },
+        { title: 'Compliance', href: '/compliance', icon: CheckCircle }
+      ]
+    },
+    {
+      title: 'About',
+      href: '/about',
+      icon: Users
+    },
+    {
+      title: 'Contact',
+      href: '/contact',
+      icon: Mail
+    }
   ];
 
   return (
@@ -62,95 +127,51 @@ const Navigation: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">Z</span>
+            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">Z</span>
             </div>
             <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors">
-              Home
-            </Link>
-            
-            {/* AI Services Dropdown */}
-            <div className="relative group">
-              <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors">
-                <span>AI Services</span>
-                <ChevronDown className="w-4 h-4" />
-              </button>
-              <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold mb-4">AI Services</h3>
-                  <div className="grid grid-cols-1 gap-3">
-                    {aiServices.map(service => (
-                      <Link
-                        key={service.name}
-                        href={service.href}
-                        className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 transition-colors"
-                        onClick={closeAllMenus}>
-                        <service.icon className="w-5 h-5 text-blue-600" />
-                        <div>
-                          <div className="font-medium text-gray-900">{service.name}</div>
-                          <div className="text-sm text-gray-500">{service.description}</div>
-                        </div>
-                      </Link>
-                    ))}
+            {navigationItems.map((item) => (
+              <div key={item.title} className="relative group">
+                <Link
+                  href={item.href}
+                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors"
+                >
+                  <item.icon className="w-4 h-4" />
+                  <span>{item.title}</span>
+                  {item.children && <ChevronDown className="w-4 h-4" />}
+                </Link>
+
+                {/* Dropdown Menu */}
+                {item.children && (
+                  <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <div className="py-2">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.title}
+                          href={child.href}
+                          className="flex items-center space-x-3 px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors"
+                        >
+                          <child.icon className="w-4 h-4" />
+                          <span>{child.title}</span>
+                        </Link>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
-            </div>
-
-            {/* IT Services Dropdown */}
-            <div className="relative group">
-              <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors">
-                <span>IT Services</span>
-                <ChevronDown className="w-4 h-4" />
-              </button>
-              <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold mb-4">IT Services</h3>
-                  <div className="grid grid-cols-1 gap-3">
-                    {itServices.map(service => (
-                      <Link
-                        key={service.name}
-                        href={service.href}
-                        className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 transition-colors"
-                        onClick={closeAllMenus}>
-                        <service.icon className="w-5 h-5 text-blue-600" />
-                        <div>
-                          <div className="font-medium text-gray-900">{service.name}</div>
-                          <div className="text-sm text-gray-500">{service.description}</div>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
-              About
-            </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">
-              Contact
-            </Link>
-          </div>
-
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Link
-              href="/contact"
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-              Get Started
-            </Link>
+            ))}
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2"
-            onClick={() => setIsOpen(!isOpen)}>
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
+          >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
@@ -158,33 +179,36 @@ const Navigation: React.FC = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden bg-white border-t border-gray-200">
-            <div className="px-4 py-6 space-y-4">
-              <Link
-                href="/"
-                className="block text-gray-700 hover:text-blue-600 transition-colors"
-                onClick={closeAllMenus}>
-                Home
-              </Link>
-              <Link
-                href="/about"
-                className="block text-gray-700 hover:text-blue-600 transition-colors"
-                onClick={closeAllMenus}>
-                About
-              </Link>
-              <Link
-                href="/contact"
-                className="block text-gray-700 hover:text-blue-600 transition-colors"
-                onClick={closeAllMenus}>
-                Contact
-              </Link>
-              <div className="pt-4">
-                <Link
-                  href="/contact"
-                  className="block bg-blue-600 text-white px-6 py-2 rounded-lg text-center hover:bg-blue-700 transition-colors"
-                  onClick={closeAllMenus}>
-                  Get Started
-                </Link>
-              </div>
+            <div className="py-4 space-y-2">
+              {navigationItems.map((item) => (
+                <div key={item.title}>
+                  <Link
+                    href={item.href}
+                    onClick={closeMenu}
+                    className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors"
+                  >
+                    <item.icon className="w-4 h-4" />
+                    <span>{item.title}</span>
+                  </Link>
+                  
+                  {/* Mobile Submenu */}
+                  {item.children && (
+                    <div className="ml-6 space-y-1">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.title}
+                          href={child.href}
+                          onClick={closeMenu}
+                          className="flex items-center space-x-2 px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-colors"
+                        >
+                          <child.icon className="w-3 h-3" />
+                          <span>{child.title}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         )}

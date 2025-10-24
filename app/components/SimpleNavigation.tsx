@@ -1,13 +1,13 @@
-'use client';
+'use client'
 
-import React from 'react';
-import Link from 'next/link';
+import React from 'react'
+import Link from 'next/link'
 
 const SimpleNavigation: React.FC = () => {
   return (
-    <nav className="bg-gray-900text-whitep-4">
-      <div className="max-w-7xl mx-autoflexjustify-between items-center">
-        <Link href="/" className="text-xlfont-bold">
+    <nav className="bg-gray-900 text-white p-4">
+      <div className="max-w-7xl mx-auto flex justify-between items-center">
+        <Link href="/" className="text-xl font-bold">
           Zion Tech Group
         </Link>
         <div className="space-x-4">
@@ -23,6 +23,7 @@ const SimpleNavigation: React.FC = () => {
         </div>
       </div>
     </nav>
-  )};
+  )
+}
 
-export default SimpleNavigation;
+export default SimpleNavigation
