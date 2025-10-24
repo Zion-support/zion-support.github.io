@@ -1,25 +1,25 @@
-<<<<<<< HEAD:src/utils/monitoring.ts
-// monitoring utility
-export const monitoring = () => {
-  // Utility implementation
-  return null;
-};
-
-export default monitoring;
-=======
-<<<<<<< HEAD:app/utils/monitoring.ts
 'use client';
-=======
-'use client'
-import { Download } from 'lucide-react'
-import Navigation from './Navigation'
->>>>>>> cursor/fix-errors-and-merge-to-main-7068:src/utils/monitoring.ts
 /**
  * Comprehensive Monitoring Utility
  * Real-time application monitoring, performance tracking, and error reporting
  */
 import React from 'react'
-import { performanceConfig } from '../../performance.config'
+
+const performanceConfig = {
+  monitoring: {
+    enableLongTaskDetection: true,
+    enableMemoryMonitoring: true,
+    sampleRate: 0.1
+  },
+  webVitals: {
+    lcp: { good: 2500, needsImprovement: 4000 },
+    fid: { good: 100, needsImprovement: 300 },
+    cls: { good: 0.1, needsImprovement: 0.25 },
+    fcp: { good: 1800, needsImprovement: 3000 },
+    ttfb: { good: 800, needsImprovement: 1800 },
+    inp: { good: 200, needsImprovement: 500 }
+  }
+};
 export interface PerformanceMetrics {
   lcp?: number;
   fid?: number;
