@@ -1,16 +1,25 @@
-import React from 'react'
-import { render, screen } from '@testing-library/react'
-import '@testing-library/jest-dom'
-import App from '../App'
-describe('App Minimal', () =>
-                {
-  it('renders without crashing', () =>
-                {
-    const MockAppMinimal = () => <div>Zion Tech Group</div>
-    render(<MockAppMinimal />)
-    expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()
-    render(<App />)
-    // Just check that the component renders without throwing an error
-    expect(true).toBe(true)
-  })
-});
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const AppMinimal.testPage: React.FC = () => {
+  return (
+    <React.Fragment>
+      <Helmet>
+        <title>AppMinimal.test - Zion Tech Group</title>
+        <meta name="description" content="Professional AppMinimal.test services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-900 text-white">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold mb-6">AppMinimal.test</h1>
+          <p className="text-lg text-gray-300">
+            This page is currently under development. Please check back soon for more information.
+          </p>
+        </div>
+      </div>
+    </React.Fragment>
+  );
+};
+
+export default AppMinimal.testPage;

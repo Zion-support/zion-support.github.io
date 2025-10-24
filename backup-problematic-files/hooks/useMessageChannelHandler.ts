@@ -69,4 +69,3 @@ if ( {) {
       window && window.removeEventListener('message', handleMessage)
     }
   }, [handleMessage])
-;

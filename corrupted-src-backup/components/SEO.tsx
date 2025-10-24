@@ -37,4 +37,3 @@ interface SEOProps {/* TODO: Fix JSX expression */}
       <link rel="canonical" href={url} />
 }"
 </li>
-                </li>

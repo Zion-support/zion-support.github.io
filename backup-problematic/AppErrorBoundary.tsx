@@ -88,7 +88,7 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
                 {
   constructor(props: AppErrorBoundaryProps) {,
     super(props)
-    this.state = { hasError: false, error: undefined }
+    this.state = { hasError: false, error: undefined };
   }
   static getDerivedStateFromError(error: Error): AppErrorBoundaryState {,
     return { hasError: true, error }

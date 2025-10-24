@@ -72,7 +72,7 @@ const summary = {
   conflictedBranches: conflictCount
   totalProcessed: prBranches.length,
   status: mergedCount > 0 ? 'success' : 'no-changes',
-const summary = {/* TODO: Fix JSX expression */}
+const summary = {/* TODO: Fix JSX expression */};
 }
 
 fs.writeFileSync('merge-summary.json', JSON.stringify(summary, null, 2))

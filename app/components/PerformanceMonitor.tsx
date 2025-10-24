@@ -1,68 +1,44 @@
 'use client'
-import React, { useEffect, useState } from 'react'
-
-interface PerformanceMetrics {
-  loadTime: number
-  domContentLoaded: number
-  firstContentfulPaint: number
-  largestContentfulPaint: number
-  cumulativeLayoutShift: number
-}
+import React, { useEffect } from 'react'
 
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null)
-
   useEffect(() => {
-    const measurePerformance = () => {
-      if (typeof window === 'undefined' || !('performance' in window)) return
+    // Performance monitoring logic
+    if (typeof window !== 'undefined') {
+      // Monitor Core Web Vitals
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (process.env.NODE_ENV === 'development') {
+            console.log('Performance Entry:', entry.name, (entry as PerformanceEntry & { value?: number }).value || 'N/A')
+          }
+        }
+      })
 
-      const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-      if (!perfData) return
-
-      const newMetrics: PerformanceMetrics = {
-        loadTime: perfData.loadEventEnd - perfData.fetchStart,
-        domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
-        firstContentfulPaint: 0,
-        largestContentfulPaint: 0,
-        cumulativeLayoutShift: 0
+      try {
+        observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] })
+      } catch (e) {
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('Performance Observer not supported')
+        }
       }
 
-      // Get FCP if available
-      const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0]
-      if (fcpEntry) {
-        newMetrics.firstContentfulPaint = fcpEntry.startTime
-      }
+      // Monitor resource loading
+      window.addEventListener('load', () => {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+        if (navigation && process.env.NODE_ENV === 'development') {
+          console.log('Page Load Time:', navigation.loadEventEnd - navigation.loadEventStart)
+        }
+      })
 
-      // Get LCP if available
-      const lcpEntry = performance.getEntriesByName('largest-contentful-paint')[0]
-      if (lcpEntry) {
-        newMetrics.largestContentfulPaint = lcpEntry.startTime
+      return () => {
+        observer.disconnect()
       }
-
-      // Get CLS if available
-      const clsEntry = performance.getEntriesByName('layout-shift')[0]
-      if (clsEntry) {
-        newMetrics.cumulativeLayoutShift = clsEntry.value
-      }
-
-      setMetrics(newMetrics)
     }
 
-    // Measure performance after page load
-    if (document.readyState === 'complete') {
-      measurePerformance()
-    } else {
-      window.addEventListener('load', measurePerformance)
-      return () => window.removeEventListener('load', measurePerformance)
+    return () => {
+      // Cleanup function
     }
   }, [])
-
-  // Log metrics for debugging (remove in production)
-  useEffect(() => {
-    if (metrics) {
-      console.log('Performance Metrics:', metrics)
-    }
-  }, [metrics])
 
   return null
 }

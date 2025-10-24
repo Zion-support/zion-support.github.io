@@ -19,7 +19,7 @@ const analysisResults = {
   workingLinks: 0
   brokenLinks: 0
   missingPages: 0
-  errors: []}
+  errors: []};
 // Helper function to make HTTP requests
 function makeRequest(url, options = {}) {
   return new Promise((resolve, reject) =>
@@ -206,7 +206,7 @@ async function analyzeWebsite() {
       brokenLinks: brokenLinks
       missingPages: missingPages
       errors: analysisResults.errors
-    }
+    };
     // Save detailed report
     fs.writeFileSync('website-analysis-report.json', JSON.stringify(report, null, 2))
     // Generate summary report
@@ -325,7 +325,7 @@ class WebsiteAnalyzer {
         path: urlObj.pathname + urlObj.search,
         method: 'GET',
         timeout: 10000
-      }
+      };
       const protocol = urlObj.protocol === 'https:' ? https : http
       const req = protocol.request(options, (res) =>
                 {

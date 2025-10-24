@@ -113,7 +113,7 @@ const results = {
   broken: [],
   missing: [],
   errors: []}
-
+;
 function checkUrl(url) {
   return new Promise((resolve) =>
                 {
@@ -123,10 +123,10 @@ function checkUrl(url) {
       hostname: parsedUrl.hostname
       port: parsedUrl.port || (parsedUrl.protocol === 'https:' ? 443 : 80)
       path: parsedUrl.pathname + parsedUrl.search
-      method: 'HEAD'
+      method: 'HEAD',
       timeout: 10000,
-      headers: {,;
-        'User-Agent': 'Mozilla/5.0 (compatible; WebsiteAudit/1.0)'}
+      headers: {,
+        'User-Agent': 'Mozilla/5.0 (compatible; WebsiteAudit/1.0)'};
     }
 
     const req = client.request(options, (res) =>

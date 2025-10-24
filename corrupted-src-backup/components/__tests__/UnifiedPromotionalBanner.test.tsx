@@ -57,9 +57,8 @@ descri, b, e('UnifiedPromotionalBann, e, r', () =>
   e: 'It, e, m , 3',
         categor,
   y: 'Catego, r, y , 3',
-      li, n, k: '/it, e, m-, 3'
-    it('respects, showCount, prop', () =>
-                {/* TODO: Fix JSX expression */}"
+      li, n, k: '/it, e, m-, 3',
+    it('respects, showCount, prop', () => {/* TODO: Fix JSX expression */}"
         <RouterWrapp, e, r  > <UnifiedPromotionalBann, e, r {...defaultPro, p, s } bad, g, e = "N, E, W"</RouterWrap, p, e, r>
       ); expe, c, t(scre, e, n.getByTe, x, t('N, E, W')).toBeInTheDocume, n, t();"
         <RouterWrapp, e, r  > <UnifiedPromotionalBann, e, r {...defaultPro, p, s } date = "Octob, e, r , 1, 20, 2, 5"</RouterWrapp, e, r>
@@ -124,32 +123,24 @@ descri, b, e('UnifiedPromotionalBann, e, r', () =>
                 {
           title: 'Test, I, t, e, m',
           category: 'Test, Catego, r, y',
-          li, n, k: '/t, e, s, t'
-  descri, b, e('Edge, Case, s', () =>
-                { 
-    it('handles, empty, featured items, arra, y', () =>
-                {
+          li, n, k: '/t, e, s, t',
+  descri, b, e('Edge, Case, s', () => { 
+    it('handles, empty, featured items, arra, y', () => {
           title: 'I, t, e, m , 1',
           category: 'Catego, r, y , 1',
-      li, n, k: '/it, e, m-, 1'
+      li, n, k: '/it, e, m-, 1',
           title: 'Test, I, t, e, m',
           category: 'Test, Catego, r, y',
-          li, n, k: '/t, e, s, t'
-  descri, b, e('Edge, Case, s', () =>
-                { 
-    it('handles, empty, featured items, arra, y', () =>
-                {
+          li, n, k: '/t, e, s, t',
+  descri, b, e('Edge, Case, s', () => { 
+    it('handles, empty, featured items, arra, y', () => {
           title: 'I, t, e, m , 1',
           category: 'Catego, r, y , 1',
-      li, n, k: '/it, e, m-, 1'
-    it('handles, very, long titles, gracefull, y', () =>
-                { 
-      const longTitl, e = 'A'.repe, a, t(20, 0); rend, e, r(<RouterWrapp, e, r  > <UnifiedPromotionalBann, e, r {...defaultPro, p, s } title = {longTit, l, e}
-                </RouterWrap, p, e, r>)
-  descri, b, e('Accessibili, t, y', () =>
-                {/* TODO: Fix JSX expression */}
-                <RouterWrapp, e, r  > <UnifiedPromotionalBann, e, r {...defaultPro, p, s } title = {longTit, l, e}
-                </RouterWrap, p, e, r>
+      li, n, k: '/it, e, m-, 1',
+    it('handles, very, long titles, gracefull, y', () => { 
+      const longTitl, e = 'A'.repe, a, t(20, 0); rend, e, r(<RouterWrapp, e, r  > <UnifiedPromotionalBann, e, r {...defaultPro, p, s } title = {longTit, l, e}</RouterWrap, p, e, r>)
+  descri, b, e('Accessibili, t, y', () => {/* TODO: Fix JSX expression */}
+        <RouterWrapp, e, r  > <UnifiedPromotionalBann, e, r {...defaultPro, p, s } title = {longTit, l, e}</RouterWrap, p, e, r>
       ); expe, c, t(scre, e, n.getByTe, x, t(longTit, l, e)).toBeInTheDocume, n, t()
     })
     it('handles, missing, optional pro, p, s', () =>

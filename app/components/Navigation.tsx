@@ -1,200 +1,133 @@
-'use client'
-import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import { 
-  Brain, 
-  ChevronDown, 
-  Menu, 
-  X, 
-  Home, 
-  Users, 
-  Briefcase, 
-  Phone, 
-  Mail,
-  Wifi,
-  Monitor,
-  Shield,
-  Database,
-  Cloud,
-  Zap,
-  Settings,
-  MessageCircle,
-  Smartphone,
-  Target,
-  BarChart,
-  Search,
-  FileText,
-  Calendar,
-  Bot,
-  Atom,
-  Link
-} from 'lucide-react'
+'use client';
+import { Home, Info, Briefcase, Phone, GraduationCap, X, Menu } from 'lucide-react';
 
-const Navigation: React.FC = () => {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+const Navigation = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
+      setIsScrolled(window.scrollY > 50);
+    };
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-  const aiServices = [
-    { name: 'AI Customer Support', href: '/ai-customer-support', icon: Phone, description: 'Intelligent support solutions' },
-    { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: Database, description: 'Advanced data insights' },
-    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings, description: 'Automated workflows' },
-    { name: 'AI Content Generator', href: '/ai-content-generator', icon: Brain, description: 'AI-powered content creation' },
-    { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: MessageCircle, description: 'Custom chatbots' },
-    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield, description: 'AI security solutions' }
-  ]
+  const closeAllMenus = () => {
+    setIsOpen(false);
+  };
 
-  const itServices = [
-    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud, description: 'Seamless cloud transition' },
-    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Advanced security solutions' },
-    { name: 'Data Analytics', href: '/data-analytics', icon: Database, description: 'Business intelligence' },
-    { name: 'Web Development', href: '/web-development', icon: Monitor, description: 'Modern web solutions' },
-    { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'Mobile app development' },
-    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud, description: 'Scalable infrastructure' }
-  ]
-
-  const microSaasServices = [
-    { name: 'Lead Scoring', href: '/micro-saas/lead-scoring', icon: Target, description: 'AI-powered lead analysis' },
-    { name: 'Analytics Dashboard', href: '/micro-saas/analytics-dashboard', icon: BarChart, description: 'Business analytics' },
-    { name: 'SEO Optimizer', href: '/micro-saas/seo-optimizer', icon: Search, description: 'SEO optimization tools' },
-    { name: 'Document Processor', href: '/micro-saas/document-processor', icon: FileText, description: 'Document automation' },
-    { name: 'Appointment Scheduler', href: '/micro-saas/appointment-scheduler', icon: Calendar, description: 'Smart scheduling' },
-    { name: 'Support Bot', href: '/micro-saas/support-bot', icon: Bot, description: 'Automated support' }
-  ]
-
-  const emergingTechServices = [
-    { name: 'Quantum Computing', href: '/quantum-computing', icon: Atom, description: 'Quantum solutions' },
-    { name: 'Blockchain', href: '/blockchain', icon: Link, description: 'Blockchain technology' },
-    { name: 'AR/VR Solutions', href: '/ar-vr-solutions', icon: Monitor, description: 'Immersive experiences' },
-    { name: 'IoT Integration', href: '/iot-integration', icon: Wifi, description: 'Internet of Things' },
-    { name: 'Machine Learning', href: '/machine-learning', icon: Brain, description: 'Advanced ML algorithms' }
-  ]
+  const navigation = [
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'About', href: '/about', icon: Info },
+    { name: 'Services', href: '/services', icon: Briefcase },
+    { name: 'Contact', href: '/contact', icon: Phone },
+    { name: 'Team', href: '/team', icon: GraduationCap }
+  ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-2xl border-b border-cyan-500/20' : 'bg-transparent'
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center space-x-3 group">
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25">
-                <Brain className="w-6 h-6 text-white" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-2xl font-bold text-white neon-text-enhanced group-hover:glow">Zion Tech Group</span>
-                <span className="text-xs text-cyan-400 font-medium tracking-wider">AI & IT SOLUTIONS</span>
-              </div>
-            </Link>
-          </div>
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
+            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-xl">Z</span>
+            </div>
+            <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Home
-            </Link>
-            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              About
-            </Link>
-            
-            {/* Services Dropdown */}
-            <div className="relative group">
-              <button className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium flex items-center">
-                Services
-                <ChevronDown className="w-4 h-4 ml-1" />
-              </button>
-              <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                <div className="py-2">
-                  <Link href="/services" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
-                    All Services
+            {navigation.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div key={item.name} className="relative group">
+                  <Link
+                    href={item.href}
+                    className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                      pathname === item.href
+                        ? 'bg-purple-600 text-white'
+                        : 'text-gray-300 hover:text-white hover:bg-slate-800'}`}
+                  >
+                    <Icon className="w-4 h-4" />
+                    <span>{item.name}</span>
                   </Link>
-                  <div className="border-t border-gray-700 my-2"></div>
-                  
-                  <div className="px-4 py-2 text-cyan-400 text-sm font-semibold">AI Services</div>
-                  {aiServices.map((service, index) => (
-                    <Link key={index} href={service.href} className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
-                      {service.name}
-                    </Link>
-                  ))}
-                  
-                  <div className="border-t border-gray-700 my-2"></div>
-                  <div className="px-4 py-2 text-cyan-400 text-sm font-semibold">IT Services</div>
-                  {itServices.map((service, index) => (
-                    <Link key={index} href={service.href} className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
-                      {service.name}
-                    </Link>
-                  ))}
-                  
-                  <div className="border-t border-gray-700 my-2"></div>
-                  <div className="px-4 py-2 text-cyan-400 text-sm font-semibold">Micro SaaS</div>
-                  {microSaasServices.map((service, index) => (
-                    <Link key={index} href={service.href} className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
-                      {service.name}
-                    </Link>
-                  ))}
                 </div>
-              </div>
-            </div>
+              );
+            })}
+          </div>
 
-            <Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Pricing
-            </Link>
-            <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Contact
-            </Link>
-            
-            <Link to="/demo" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-              Get Demo
+          {/* CTA Button */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <Link
+              href="/contact"
+              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
+            >
+              Get Started
             </Link>
           </div>
 
           {/* Mobile menu button */}
           <div className="lg:hidden">
             <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-300 hover:text-white p-2"
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              <span className="sr-only">Open main menu</span>
+              {isOpen ? (
+                <X className="block h-6 w-6" aria-hidden="true" />
+              ) : (
+                <Menu className="block h-6 w-6" aria-hidden="true" />
+              )}
             </button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-500/20">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              <Link to="/" className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300">
-                Home
-              </Link>
-              <Link to="/about" className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300">
-                About
-              </Link>
-              <Link to="/services" className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300">
-                Services
-              </Link>
-              <Link to="/pricing" className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300">
-                Pricing
-              </Link>
-              <Link to="/contact" className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300">
-                Contact
-              </Link>
-              <Link to="/demo" className="block px-3 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold text-center">
-                Get Demo
-              </Link>
+        {isOpen && (
+          <div className="lg:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg mt-2">
+              {navigation.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <div key={item.name}>
+                    <Link
+                      href={item.href}
+                      onClick={() => setIsOpen(false)}
+                      className={`flex items-center space-x-3 px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                        pathname === item.href
+                          ? 'bg-purple-600 text-white'
+                          : 'text-gray-300 hover:text-white hover:bg-slate-700'}`}
+                    >
+                      <Icon className="w-5 h-5" />
+                      <span>{item.name}</span>
+                    </Link>
+                  </div>
+                );
+              })}
+              <div className="pt-4 border-t border-slate-700">
+                <Link
+                  href="/contact"
+                  onClick={() => setIsOpen(false)}
+                  className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center"
+                >
+                  Get Started
+                </Link>
+              </div>
             </div>
           </div>
         )}
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;

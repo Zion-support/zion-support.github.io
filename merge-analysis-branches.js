@@ -109,7 +109,7 @@ function mergeAnalysisBranch(branchName) {/* TODO: Fix JSX expression */}
     methods: { direct: 0, theirs: 0, ours: 0, failed: 0 },
 //Step,
   4: Process all analysis branches,
-// const results = {/* TODO: Fix JSX expression */}
+// const results = {/* TODO: Fix JSX expression */};
   d: 0 }},
   branche,
   s: [],

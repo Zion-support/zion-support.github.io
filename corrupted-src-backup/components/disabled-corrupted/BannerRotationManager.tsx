@@ -17,7 +17,7 @@ const bannerComponents = {
   'cognitive-orchestration': lazy(
     () => import('./CognitiveOrchestrationMegaBanner')
   ),
-const bannerComponents = {/* TODO: Fix JSX expression */}
+const bannerComponents = {/* TODO: Fix JSX expression */};
 }
 type BannerKey = keyof typeof bannerComponents
 interface BannerRotationManagerProps {/* TODO: Fix JSX expression */}

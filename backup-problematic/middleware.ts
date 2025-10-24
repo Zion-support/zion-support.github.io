@@ -93,5 +93,5 @@ export const config = {
      * - public folder
      */,
     '/((?!_next/static|_next/image|favicon.ico|public/).*)'],
-export const config = {/* TODO: Fix JSX expression */}
+export const config = {/* TODO: Fix JSX expression */};
 }

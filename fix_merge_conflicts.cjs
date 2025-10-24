@@ -1,53 +1,53 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-console.log('🔧 Starting merge conflict resolution...');
-
-// Find all files with merge conflicts
-const findConflictedFiles = () => {
-  try {
-    const result = execSync('grep -r ")
-const resolveConflicts = (filePath) => {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+function fixMergeConflicts(filePath) {
+  const content = fs.readFileSync(filePath, 'utf8');
+  
+  // Remove merge conflict markers and keep the HEAD version
+  const lines = content.split('\n');
+  const fixedLines = [];
+  let inConflict = false;
+  let keepLines = false;
+  
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
     
-    // Pattern to match merge conflicts
-    const conflictPattern = /<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)
-    
-    let resolvedContent = content.replace(conflictPattern, (match, newerContent) => {
-      console.log(`  ✅ Resolving conflict in ${filePath}`);
-      return newerContent.trim();
-    });
-    
-    // Also handle simple conflicts without the full pattern
-    resolvedContent = resolvedContent.replace(/([\s\S]*?)
-    
-    if (resolvedContent !== content) {
-      fs.writeFileSync(filePath, resolvedContent);
-      console.log(`  ✅ Fixed conflicts in ${filePath}`);
-      return true;
+    if (line.includes('<<<<<<< HEAD')) {
+      inConflict = true;
+      keepLines = true;
+      continue;
+    } else if (line.includes('=======')) {
+      keepLines = false;
+      continue;
+    } else if (line.includes('>>>>>>>')) {
+      inConflict = false;
+      keepLines = false;
+      continue;
     }
     
-    return false;
-  } catch (error) {
-    console.error(`  ❌ Error processing ${filePath}:`, error.message);
-    return false;
+    if (!inConflict || keepLines) {
+      fixedLines.push(line);
+    }
   }
-};
+  
+  const fixedContent = fixedLines.join('\n');
+  fs.writeFileSync(filePath, fixedContent);
+  console.log(`Fixed merge conflicts in ${filePath}`);
+}
 
-// Main execution
-const conflictedFiles = findConflictedFiles();
-console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
-
-let fixedCount = 0;
-conflictedFiles.forEach(file => {
-  if (resolveConflicts(file)) {
-    fixedCount++;
-  }
-});
-
-console.log(`\n🎉 Resolved conflicts in ${fixedCount} files`);
-console.log('✅ Merge conflict resolution complete!');
+// Find all files with merge conflicts
+const { execSync } = require('child_process');
+try {
+  const files = execSync('find app/ -name "*.tsx" -o -name "*.ts" | xargs grep -l "<<<<<<< HEAD\\|=======\\|>>>>>>>"', { encoding: 'utf8' }).trim().split('\n');
+  
+  files.forEach(file => {
+    if (file && fs.existsSync(file)) {
+      fixMergeConflicts(file);
+    }
+  });
+  
+  console.log('All merge conflicts fixed!');
+} catch (error) {
+  console.log('No merge conflicts found or error occurred:', error.message);
+}

@@ -59,7 +59,7 @@ const mergeStrategy = {
       branch.includes('disabled') ||
       branch.includes('backup') ||,
       branch.includes('old'))}
-
+;
 // // // // // //Step 4: Enhanced conflict resolution function,
 function resolveConflictsAndMerge(branchName) {,
 //   try {,
@@ -84,7 +84,7 @@ function resolveConflictsAndMerge(branchName) {,
           execSync(
 // //Step,
   3: Create merge strategy with conflict resolution,
-const mergeStrategy = {/* TODO: Fix JSX expression */}
+const mergeStrategy = {/* TODO: Fix JSX expression */};
 }
 
 // // // // // //Step,
@@ -210,7 +210,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
     methods: { direct: 0, theirs: 0, ours: 0, manual: 0, failed: 0 },
 //Step,
   5: Execute merge strategy,
-// const results = {/* TODO: Fix JSX expression */}
+// const results = {/* TODO: Fix JSX expression */};
   d: 0 }}}
 
 //Merge priority branches first
@@ -255,7 +255,7 @@ results.branchCounts = {
   content: mergeStrategy.content.length,
   skipped: mergeStrategy.skip.length
   }
-
+;
 fs.writeFileSync('comprehensive-merge-report.json')
   JSON.stringify(results, null, 2)
 )
@@ -271,7 +271,7 @@ fs.writeFileSync('comprehensive-merge-report.json')
 //Step,
   6: Generate comprehensive report
 // results.timestamp = new Date().toISOString(),
-results.branchCounts = {/* TODO: Fix JSX expression */}
+results.branchCounts = {/* TODO: Fix JSX expression */};
 }
 
 fs.writeFileSync('comprehensive-merge-report.json')

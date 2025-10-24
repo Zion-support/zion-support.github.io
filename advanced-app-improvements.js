@@ -51,4 +51,4 @@ if (require.main === module) {
 module.exports = {
   createAdvancedMonitoring,
   createAdvancedCaching
-}
+};

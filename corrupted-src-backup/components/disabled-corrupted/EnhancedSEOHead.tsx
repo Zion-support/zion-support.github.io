@@ -152,7 +152,4 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
                 </Helm, e, t>
   )
 }
-export default EnhancedSEOHead</$1>
-                </li></li>
-                </li></li>
-                </li>
+export default EnhancedSEOHead</$1></li></li></li>

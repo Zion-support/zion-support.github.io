@@ -45,7 +45,7 @@ export const breakthroughContent2027 = [
     readTime: '11 min read'}]
 export const caseStudies2027 = [
   {
-    id: 'ai-2027-ultimate-consciousness-847-billion-success'
+    id: 'ai-2027-ultimate-consciousness-847-billion-success',
     title: 'AI 2027 Ultimate Consciousness: $847B Success Story',
     description: 'How a Fortune 100 global conglomerate achieved $847B ROI through AI Ultimate Consciousness Breakthrough with 99.999% accuracy and infinite processing power.',
     content: `,
@@ -58,7 +58,7 @@ export const caseStudies2027 = [
     featured: true,
     readTime: '18 min read'},
   {
-    id: 'ai-2027-quantum-consciousness-singularity-1-trillion-success'
+    id: 'ai-2027-quantum-consciousness-singularity-1-trillion-success',
     title: 'AI 2027 Quantum Consciousness Singularity: $1 Trillion Success Story',
     description: 'How a global technology leader achieved $1 trillion valuation through AI Quantum Consciousness Singularity with infinite processing power and universal intelligence.',
     content: `,

@@ -1,120 +1,139 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix comprehensive JSX syntax issues
-function fixComprehensiveJsx(filePath) {
+// Function to recursively find all .tsx files
+function findTsxFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      files.push(...findTsxFiles(fullPath));
+    } else if (item.endsWith('.tsx')) {
+      files.push(fullPath);
+    }
+  }
+  
+  return files;
+}
+
+// Function to fix JSX structure issues
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Fix specific patterns that are causing errors
-    const fixes = [
-      // Fix unclosed sections by adding proper closing tags
-      {
-        pattern: /<section([^>]*)>\s*$/gm,
-        replacement: (match, attrs) => {
-          return match;
-        }
+    // Fix self-closing div tags that should be opening tags with content
+    const patterns = [
+      // Fix div tags with content inside - more comprehensive patterns
+      { 
+        pattern: /<div([^>]*?)><\/div>\s*([^<]+?)\s*<\/div>/g, 
+        replacement: '<div$1>$2</div>' 
       },
-      
-      // Fix JSX fragments that are not properly closed
-      {
-        pattern: /<>\s*$/gm,
-        replacement: '<>'
+      // Fix div tags with nested JSX content
+      { 
+        pattern: /<div([^>]*?)><\/div>\s*<([^>]+?)><\/\2>/g, 
+        replacement: '<div$1><$2></$2></div>' 
       },
-      
-      // Fix unclosed ul elements
-      {
-        pattern: /<ul([^>]*)>\s*$/gm,
-        replacement: (match, attrs) => {
-          return match;
-        }
+      // Fix div tags with mapped content
+      { 
+        pattern: /<div([^>]*?)><\/div>\s*\{[^}]+\.map\([^)]+\)\s*=>\s*\(/g, 
+        replacement: '<div$1>{' 
       },
-      
-      // Fix unclosed div elements
-      {
-        pattern: /<div([^>]*)>\s*$/gm,
-        replacement: (match, attrs) => {
-          return match;
-        }
+      // Fix button tags with content
+      { 
+        pattern: /<button([^>]*?)><\/button>\s*([^<]+?)\s*<\/button>/g, 
+        replacement: '<button$1>$2</button>' 
       },
-      
-      // Remove orphaned closing fragments
-      {
-        pattern: /^\s*<\/>\s*$/gm,
-        replacement: ''
+      // Fix p tags with content
+      { 
+        pattern: /<p([^>]*?)><\/p>\s*([^<]+?)\s*<\/p>/g, 
+        replacement: '<p$1>$2</p>' 
       },
-      
-      // Fix JSX expressions that are not properly closed
-      {
-        pattern: /(\{[^}]*\})\s*$/gm,
-        replacement: (match, expr) => {
-          return match;
-        }
+      // Fix h1, h2, h3, h4, h5, h6 tags with content
+      { 
+        pattern: /<(h[1-6])([^>]*?)><\/\1>\s*([^<]+?)\s*<\/\1>/g, 
+        replacement: '<$1$2>$3</$1>' 
       },
-      
-      // Fix misplaced )} that should be </div>
-      {
-        pattern: /(\s*)\)\}\s*$/gm,
-        replacement: (match, spaces) => {
-          return spaces + '</div>';
-        }
+      // Fix ul tags with content
+      { 
+        pattern: /<ul([^>]*?)><\/ul>\s*([^<]+?)\s*<\/ul>/g, 
+        replacement: '<ul$1>$2</ul>' 
       },
-      
-      // Fix missing closing tags for common elements
-      {
-        pattern: /<section([^>]*)>\s*$/gm,
-        replacement: (match, attrs) => {
-          return match;
-        }
+      // Fix li tags with content
+      { 
+        pattern: /<li([^>]*?)><\/li>\s*([^<]+?)\s*<\/li>/g, 
+        replacement: '<li$1>$2</li>' 
+      },
+      // Fix section tags with content
+      { 
+        pattern: /<section([^>]*?)><\/section>\s*([^<]+?)\s*<\/section>/g, 
+        replacement: '<section$1>$2</section>' 
+      },
+      // Fix main tags with content
+      { 
+        pattern: /<main([^>]*?)><\/main>\s*([^<]+?)\s*<\/main>/g, 
+        replacement: '<main$1>$2</main>' 
+      },
+      // Fix article tags with content
+      { 
+        pattern: /<article([^>]*?)><\/article>\s*([^<]+?)\s*<\/article>/g, 
+        replacement: '<article$1>$2</article>' 
+      },
+      // Fix header tags with content
+      { 
+        pattern: /<header([^>]*?)><\/header>\s*([^<]+?)\s*<\/header>/g, 
+        replacement: '<header$1>$2</header>' 
+      },
+      // Fix aside tags with content
+      { 
+        pattern: /<aside([^>]*?)><\/aside>\s*([^<]+?)\s*<\/aside>/g, 
+        replacement: '<aside$1>$2</aside>' 
+      },
+      // Fix nav tags with content
+      { 
+        pattern: /<nav([^>]*?)><\/nav>\s*([^<]+?)\s*<\/nav>/g, 
+        replacement: '<nav$1>$2</nav>' 
+      },
+      // Fix footer tags with content
+      { 
+        pattern: /<footer([^>]*?)><\/footer>\s*([^<]+?)\s*<\/footer>/g, 
+        replacement: '<footer$1>$2</footer>' 
       }
     ];
     
-    // Apply fixes
-    for (const fix of fixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
+    for (const { pattern, replacement } of patterns) {
+      const newContent = content.replace(pattern, replacement);
       if (newContent !== content) {
         content = newContent;
         modified = true;
       }
     }
     
-    // More specific fixes for common patterns
+    // Fix specific malformed patterns
     const specificFixes = [
-      // Fix unclosed div tags by adding closing tags
-      {
-        pattern: /<div([^>]*)>\s*$/gm,
-        replacement: (match, attrs) => {
-          // This is a complex fix - we need to find the matching closing tag
-          return match;
-        }
+      // Fix malformed JSX with strange characters
+      { 
+        pattern: /,\s*-\s*>\s*([^<]+?)\s*`\s*-\s*>\s*([^<]+?)\s*`/g, 
+        replacement: '$1$2' 
       },
-      
-      // Remove duplicate closing tags
-      {
-        pattern: /<\/div>\s*<\/div>/g,
-        replacement: '</div>'
+      // Fix malformed closing tags
+      { 
+        pattern: /,\s*-\s*>\s*([^<]+?)\s*`\s*-\s*>\s*([^<]+?)\s*`\s*-\s*>\s*([^<]+?)\s*`/g, 
+        replacement: '$1$2$3' 
       },
-      
-      // Fix JSX fragments
-      {
-        pattern: /<>\s*<\/>/g,
-        replacement: '<></>'
-      },
-      
-      // Fix unclosed sections
-      {
-        pattern: /<section([^>]*)>\s*$/gm,
-        replacement: (match, attrs) => {
-          return match;
-        }
+      // Fix malformed JSX structure
+      { 
+        pattern: /,\s*-\s*>\s*([^<]+?)\s*`\s*-\s*>\s*([^<]+?)\s*`\s*-\s*>\s*([^<]+?)\s*`\s*-\s*>\s*([^<]+?)\s*`/g, 
+        replacement: '$1$2$3$4' 
       }
     ];
     
-    for (const fix of specificFixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
+    for (const { pattern, replacement } of specificFixes) {
+      const newContent = content.replace(pattern, replacement);
       if (newContent !== content) {
         content = newContent;
         modified = true;
@@ -123,60 +142,27 @@ function fixComprehensiveJsx(filePath) {
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed comprehensive JSX syntax in ${filePath}`);
-      return true;
+      console.log(`Fixed JSX structure: ${filePath}`);
     }
-    
-    return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
-}
-
-// Function to find all TypeScript/JSX files
-function findTsxFiles(dir) {
-  const files = [];
-  
-  function searchDirectory(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        searchDirectory(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-        files.push(fullPath);
-      }
-    }
-  }
-  
-  searchDirectory(dir);
-  return files;
 }
 
 // Main execution
-console.log('Starting comprehensive JSX syntax fixes...');
+const appDir = path.join(__dirname, 'app');
+const tsxFiles = findTsxFiles(appDir);
 
-const files = findTsxFiles('./app');
-console.log(`Found ${files.length} TypeScript/JSX files`);
+console.log(`Found ${tsxFiles.length} .tsx files to check`);
 
 let fixedCount = 0;
-let errorCount = 0;
-
-for (const file of files) {
-  try {
-    if (fixComprehensiveJsx(file)) {
-      fixedCount++;
-    }
-  } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
-    errorCount++;
+for (const file of tsxFiles) {
+  const originalContent = fs.readFileSync(file, 'utf8');
+  fixFile(file);
+  const newContent = fs.readFileSync(file, 'utf8');
+  if (originalContent !== newContent) {
+    fixedCount++;
   }
 }
 
-console.log(`\nComprehensive JSX syntax fixes complete:`);
-console.log(`  - Files modified: ${fixedCount}`);
-console.log(`  - Errors: ${errorCount}`);
+console.log(`Fixed ${fixedCount} files`);

@@ -1,60 +1,31 @@
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
-'use client'
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';}
-  ]
-const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
+'use client';
 
-    '24/7 technical support',
+import Head from 'next/head';
+import Link from 'next/link';
+import { ArrowRight, } from 'lucide-react';
+import Footer from '../components/Footer';
 
-    'Easy integration with existing systems',
-
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]</div>
-                </div>
-      </section>
-                {/* Features Section */}
-                <section className="py-20 px-4"></section>
-          </section>< className="$2 />
-            </div><div className="text-center mb-16"></div>
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-                </div>
+export default function GdprPage() {
+  
+  return (
+        <div>
+      <Head>
+        <title>Gdpr - Zion Tech Group</title>
+        <meta name="description" content="Professional services by Zion Tech Group." />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1>Gdpr - Zion Tech Group</h1>
+          <p>Professional gdpr - zion tech group services coming soon.</p>
+          <Link href="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+            </div>
           </div>
-                </section>
-        <div className="max-w-7xl mx-auto" / /></div>
-          <div className="text-center mb-16" / /></div>
-            <h2></h2>
-              Why Choose Our Page?,
-            </h2>
-            <p></p>
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]
-      {/* Features Section */}
-                <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
-        </section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
-              Why Choose Our Page?
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              Our page solutions deliver unmatched performance, security, and scalability.
-                <h3 className="text-xl font-semibold text-white mb-3"></h3>
-                {feature.title}
-                <p className="text-gray-300"></p>
-                {feature.description}
-            ))}
-                </div>
-                </div>
-      </section>
-};]
-export default PagePage</$1>
-                </p></h3>
+      <Footer />
+        </div>
+  );
+}

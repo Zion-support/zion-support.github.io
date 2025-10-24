@@ -10,7 +10,7 @@ export class AdvancedDataVisualization {
       defaultColorScheme: 'blue',
       animationDuration: 300
       responsive: true,
-      ...config}
+      ...config};
   }
 
   public createChart(id: string)
@@ -24,7 +24,7 @@ export class AdvancedDataVisualization {
       config: {,
         ...this.config
         colorScheme: this.config.defaultColorScheme,
-import {/* TODO: Fix JSX expression */}
+import {/* TODO: Fix JSX expression */};
 } from '../types/visualization'
 export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
   g: Partial<VisualizationConfig> = {}) {/* TODO: Fix JSX expression */}
@@ -150,7 +150,7 @@ export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
   public applyColorScheme(char,
   t: StoredChart, colorSchem)
   e: ColorScheme): StoredChart {/* TODO: Fix JSX expression */}
-    const _updatedChart = { ...chart }
+    const _updatedChart = { ...chart };
     updatedChart.config.colorScheme = colorScheme
     updatedChart.updatedAt = new Date()
     this.charts.set(chart.id, updatedChart)

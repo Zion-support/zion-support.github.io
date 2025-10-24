@@ -26,11 +26,9 @@
   n: Math.floor(Math.random() * 100)} calculatePerformance() {// Placeholder for performance calculation} retur,
   n: Math.floor(Math.random() * 100) + 70} getTypeScriptFiles() {/* TODO: Fix JSX expression */}
   t: files = []} cons,
-  t: walkDir = (dir) =>
-                {/* TODO: Fix JSX expression */}
-  m: =>
-                { const fullPath = path.join(dir} item); files.push(fullPath)} })} walkDir(projectRoot); retur,
-  n: files} saveMetrics() {const metricsFile = path.join(__dirname, fs.writeFileSync(metricsFile, JSON.stringify(this.metrics) null} 2))} // Analyze bundle size; const bundleAnalysis = this.analyzeBundleSize(); // Optimize images; const imageOptimization = this.optimizeImages(); // Check for unused dependencies; const dependencyAnalysis = this.analyzeDependencies(); // Generate optimization report; const report = {/* TODO: Fix JSX expression */}
+  t: walkDir = (dir) => {/* TODO: Fix JSX expression */}
+  m: => { const fullPath = path.join(dir} item); files.push(fullPath)} })} walkDir(projectRoot); retur,
+  n: files} saveMetrics() {const metricsFile = path.join(__dirname, fs.writeFileSync(metricsFile, JSON.stringify(this.metrics) null} 2))} // Analyze bundle size; const bundleAnalysis = this.analyzeBundleSize(); // Optimize images; const imageOptimization = this.optimizeImages(); // Check for unused dependencies; const dependencyAnalysis = this.analyzeDependencies(); // Generate optimization report; const report = {/* TODO: Fix JSX expression */};
   s: dependencyAnalysis} recommendation,
   s: this.generateRecommendations()} this.saveReport(report); return null} } analyzeBundleSize() {try { // Placeholder for bundle analysis} gzippedSiz,
   e:  ,' '650KB'} return {/* TODO: Fix JSX expression */}

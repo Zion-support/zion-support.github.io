@@ -1,47 +1,45 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts by keeping the newer version (after =======)
+# Script to resolve merge conflicts by accepting incoming changes
+# This will merge the branch and resolve conflicts automatically
 
-echo "Resolving merge conflicts in all files..."
+echo "Starting merge conflict resolution..."
 
-# Find all files with merge conflicts
-files=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
+# Merge the branch
+git merge origin/cursor/fix-errors-and-merge-to-main-8aeb --no-commit
 
-for file in $files; do
-    echo "Processing: $file"
+# Check if there are conflicts
+if [ $? -ne 0 ]; then
+    echo "Merge conflicts detected. Resolving automatically..."
     
-    # Create a temporary file
-    temp_file="${file}.tmp"
+    # Get list of conflicted files
+    conflicted_files=$(git diff --name-only --diff-filter=U)
     
-    # Process the file to resolve conflicts
-    awk '
-    /<<<<<<< HEAD/ {
-        in_conflict = 1
-        next
-    }
-    /=======/ {
-        if (in_conflict) {
-            in_conflict = 2
-            next
-        }
-    }
-    />>>>>>> / {
-        if (in_conflict == 2) {
-            in_conflict = 0
-            next
-        }
-    }
-    {
-        if (in_conflict == 0) {
-            print
-        } else if (in_conflict == 2) {
-            print
-        }
-    }
-    ' "$file" > "$temp_file"
+    echo "Conflicted files:"
+    echo "$conflicted_files"
     
-    # Replace original file with processed version
-    mv "$temp_file" "$file"
-done
+    # For each conflicted file, accept the incoming version (theirs)
+    for file in $conflicted_files; do
+        echo "Resolving conflicts in $file..."
+        git checkout --theirs "$file"
+        git add "$file"
+    done
+    
+    # Handle deleted files - remove them if they were deleted in the incoming branch
+    deleted_files=$(git diff --name-only --diff-filter=D)
+    for file in $deleted_files; do
+        echo "Removing deleted file: $file"
+        git rm "$file"
+    done
+    
+    echo "All conflicts resolved. Committing merge..."
+    git commit -m "Merge branch 'cursor/fix-errors-and-merge-to-main-8aeb' with automatic conflict resolution
 
-echo "Merge conflicts resolved in all files."
+- Resolved merge conflicts by accepting incoming changes
+- Applied fixes from the branch to main
+- Removed deleted files as per branch changes"
+    
+    echo "Merge completed successfully!"
+else
+    echo "No conflicts detected. Merge completed successfully!"
+fi

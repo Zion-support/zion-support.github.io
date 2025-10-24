@@ -1,16 +1,38 @@
 'use client';
 import React from 'react';
 
-const SkipLink: React.FC  = () => {
+interface SkipLinkProps {
+  href: string;
+  children: React.ReactNode;
+  className?: string;
+}
+
+const EnhancedSkipLink: React.FC<SkipLinkProps> = ({
+  href,
+  children,
+  className = ''
+}) => {
   return (
     <a
-      href="#main-content"
-      className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded-md z-50"
-    ></a
->
-      Skip to main content
+      href={href}
+      className={`
+        sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4
+        bg-cyan-600 text-white px-4 py-2 rounded-lg font-semibold
+        hover:bg-cyan-700 transition-colors duration-200 z-50
+        ${className}
+      `}
+      onClick={(e) => {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+          (target as HTMLElement).focus();
+        }
+      }}
+    >
+      {children}
     </a>
   );
 };
 
-export default SkipLink;
+export default EnhancedSkipLink;

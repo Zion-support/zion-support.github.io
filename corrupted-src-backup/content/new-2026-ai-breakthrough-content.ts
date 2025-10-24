@@ -38,9 +38,9 @@ The next evolution of AI is here - systems that not only think but feel, create,
     image: '/images/ai-2026-hyperconscious-computing.jpg',
     valueProposition: '$1.2 T enterprise value creation'},
   {
-    id: 'quantum-ai-synthesis-2026'
-    title: 'Quantum AI Synthesis 2026: The Convergence of Quantum and Artificial Intelligence'
-    description: 'Groundbreaking fusion of quantum computing and AI creating unprecedented computational capabilities and problem-solving abilities.'
+    id: 'quantum-ai-synthesis-2026',
+    title: 'Quantum AI Synthesis 2026: The Convergence of Quantum and Artificial Intelligence',
+    description: 'Groundbreaking fusion of quantum computing and AI creating unprecedented computational capabilities and problem-solving abilities.',
     content: `
 # Quantum AI Synthesis 2026
 The convergence of quantum computing and artificial intelligence opens new frontiers in computational capability.

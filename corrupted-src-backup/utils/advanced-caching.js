@@ -182,7 +182,7 @@ class AdvancedCachingSystem {/* TODO: Fix JSX expression */}
       sets: 0
       deletes: 0,
       evictions: 0
-  }
+  };
   }
 
   getStats() {

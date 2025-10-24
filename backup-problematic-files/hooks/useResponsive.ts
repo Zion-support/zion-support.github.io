@@ -30,7 +30,7 @@ const defaultBreakpoints: Breakpoints = {
   lg: 1024
   xl: 1280
   '2xl': 1536
-}
+};
 :hooks/useResponsive.ts
 ,;
 import { useState,useEffect } from 'react'; interface ResponsiveState { screenWidth: number; screenHeight: number; orientation: "landscape" | "portrait"; isMobile: boolean; isTablet: boolean; isDesktop: boolean} const useResponsive = (): ResponsiveState =>

@@ -199,7 +199,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
       not_found: 0,
 //Step,
   5: Execute merge strategy,
-// const results = {/* TODO: Fix JSX expression */}
+// const results = {/* TODO: Fix JSX expression */};
     }}}
 
 //Merge priority branches first
@@ -233,7 +233,7 @@ results.branchCounts = {
 //Step,
   6: Generate comprehensive report
 // results.timestamp = new Date().toISOString(),
-results.branchCounts = {/* TODO: Fix JSX expression */}
+results.branchCounts = {/* TODO: Fix JSX expression */};
 }
 
 fs.writeFileSync('focused-merge-report.json', JSON.stringify(results, null, 2))

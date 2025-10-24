@@ -12,7 +12,7 @@ export default function EnterprisePage() {return(<div className="min-h-screen bg
         <div className="absolute inset-0"></div>
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
           <$2 />
-export const metadata = {/* TODO: Fix JSX expression */}
+export const metadata = {/* TODO: Fix JSX expression */};
 }
 export default function EnterprisePage() {/* TODO: Fix JSX expression */}
 }
@@ -252,26 +252,4 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
 `
 // Write the fixed content
 fs.writeFileSync('app/enterprise/page.tsx', fixedContent)
-// "`</div>
-                </div></div>
-                </div></div>
-                </div></div>
-                </div></div>
-                </div></div>
-                </span></span>
-                </span></p>
-                </p></p>
-                </p></p>
-                </p></p>
-                </p></p>
-                </h1></h2>
-                </h2></h2>
-                </h3></h3>
-                </h3></h3>
-                </h3></h3>
-                </ul></ul>
-                </ul></li>
-                </li></li>
-                </li></li>
-                </li></li>
-                </li></li>;
+// "`</div></div></div></div></div></div></div></div></div></div></div></span></span></span></p></p></p></p></p></p></p></p></p></h1></h2></h2></h2></h3></h3></h3></h3></h3></h3></ul></ul></ul></li></li></li></li></li>

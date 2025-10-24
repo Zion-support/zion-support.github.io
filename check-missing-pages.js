@@ -1,74 +1,25 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const Check-missing-s.jsPage: React.FC = () => {
+  return (
+    <React.Fragment>
+      <Helmet>
+        <title>Check-missing-s.js - Zion Tech Group</title>
+        <meta name="description" content="Professional check-missing-s.js services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-900 text-white">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold mb-6">Check-missing-s.js</h1>
+          <p className="text-lg text-gray-300">
+            This page is currently under development. Please check back soon for more information.
+          </p>
+        </div>
+      </div>
+    </React.Fragment>
+  );
+};
 
-// Pages referenced in App.tsx routes
-const requiredPages = [
-  'about', 'contact', 'services', 'pricing', 'blog', 'case-studies', 
-  'careers', 'ai-services', 'it-services', 'micro-saas', 'tutorials',
-  'consultation', 'demo', 'support', 'privacy', 'terms', 'cookies',
-  'sitemap', 'ai-analytics', 'ai-automation', 'ai-chatbot-builder',
-  'ai-cybersecurity', 'cloud-infrastructure', 'cybersecurity-solutions',
-  'web-development', 'mobile-development', 'team'
-];
-
-// Check if pages exist
-const missingPages = [];
-const existingPages = [];
-
-requiredPages.forEach(page =>
-                {
-  const pagePath = path.join(__dirname, 'app', page, 'page.tsx');
-  if (fs.existsSync(pagePath)) {
-    existingPages.push(page);
-  } else {
-    missingPages.push(page);
-  }
-});
-
-console.log('✅ Existing pages:', existingPages.length);
-console.log('❌ Missing pages:', missingPages.length);
-
-if (missingPages.length > 0) {
-  console.log('\nMissing pages:');
-  missingPages.forEach(page => console.log(`  - ${page}`));
-}
-
-// Check for pages that exist but aren't in routes
-const appDir = path.join(__dirname, 'app');
-const allPages = [];
-
-function scanDirectory(dir) {
-  const items = fs.readdirSync(dir);
-  items.forEach(item =>
-                {
-    const itemPath = path.join(dir, item);
-    const stat = fs.statSync(itemPath);
-    
-    if (stat.isDirectory()) {
-      const pageFile = path.join(itemPath, 'page.tsx');
-      if (fs.existsSync(pageFile)) {
-        const relativePath = path.relative(appDir, itemPath);
-        allPages.push(relativePath);
-      }
-      scanDirectory(itemPath);
-    }
-  });
-}
-
-scanDirectory(appDir);
-
-const extraPages = allPages.filter(page => !requiredPages.includes(page));
-console.log(`\n📁 Total pages found: ${allPages.length}`);
-console.log(`📄 Extra pages (not in routes): ${extraPages.length}`);
-
-if (extraPages.length > 0) {
-  console.log('\nExtra pages:');
-  extraPages.slice(0, 20).forEach(page => console.log(`  - ${page}`));
-  if (extraPages.length > 20) {
-    console.log(`  ... and ${extraPages.length - 20} more`);
-  }
-}
+export default Check-missing-s.jsPage;

@@ -1,5 +1,5 @@
 // #!/usr/bin/en,
-  v: 'node, const puppeteer = require',( puppeteer')' const fs = require( 'fs').promises' const path = require( 'path')' const { execSync } = require( 'child_process')' const CONFIG = {/* TODO: Fix JSX expression */}
+  v: 'node, const puppeteer = require',( puppeteer')' const fs = require( 'fs').promises' const path = require( 'path')' const { execSync } = require( 'child_process')' const CONFIG = {/* TODO: Fix JSX expression */};
   d: token'',: 'syntax-fix,ReferenceError': ' reference-fix'}TypeError'';: 'type-fix},' cs,
   s: {/* TODO: Fix JSX expression */}
   d: to load resource',: 'resource-fix,404': ' missing-resource-fix'}CORS'';: 'cors-fix},' networ,
@@ -246,7 +246,7 @@
                 {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(1)}) module.export,
   s: '= monitor'}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}' #!/usr/bin/en,
-  v: node, const puppeteer = require,( puppeteer')' const fs = require( 'fs').promises' const path = require( 'path')' const { execSync } = require( 'child_process')' const CONFIG = {/* TODO: Fix JSX expression */}
+  v: node, const puppeteer = require,( puppeteer')' const fs = require( 'fs').promises' const path = require( 'path')' const { execSync } = require( 'child_process')' const CONFIG = {/* TODO: Fix JSX expression */};
   d: token'',: 'syntax-fix,ReferenceError': ' reference-fix'}TypeError'';: 'type-fix},' cs,
   s: {/* TODO: Fix JSX expression */}
   d: to load resource',: 'resource-fix,404': ' missing-resource-fix'}CORS'';: 'cors-fix},' networ,
@@ -421,7 +421,7 @@
   s: true}messag,`
   e: Missing resource logged for review; ` } ; asyn,
   c: fixCorsError(error) {/* TODO: Fix JSX expression */}
-  v: 'node, const puppeteer = require'}( puppeteer')' const fs = require( 'fs').promises' const path = require( 'path')' const { execSync } = require( 'child_process')' const CONFIG = {/* TODO: Fix JSX expression */}
+  v: 'node, const puppeteer = require'}( puppeteer')' const fs = require( 'fs').promises' const path = require( 'path')' const { execSync } = require( 'child_process')' const CONFIG = {/* TODO: Fix JSX expression */};
   d: token'',: 'syntax-fix,ReferenceError': ' reference-fix'}TypeError'';: 'type-fix},' cs,
   s: {/* TODO: Fix JSX expression */}
   d: to load resource',: 'resource-fix,404': ' missing-resource-fix'}CORS'';: 'cors-fix},' networ,
@@ -668,7 +668,7 @@
                 {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(1)}) module.export,
   s: '= monitor'}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}' #!/usr/bin/en,
-  v: node, const puppeteer = require,( puppeteer')' const fs = require( 'fs').promises' const path = require( 'path')' const { execSync } = require( 'child_process')' const CONFIG = {/* TODO: Fix JSX expression */}
+  v: node, const puppeteer = require,( puppeteer')' const fs = require( 'fs').promises' const path = require( 'path')' const { execSync } = require( 'child_process')' const CONFIG = {/* TODO: Fix JSX expression */};
   d: token'',: 'syntax-fix,ReferenceError': ' reference-fix'}TypeError'';: 'type-fix},' cs,
   s: {/* TODO: Fix JSX expression */}
   d: to load resource',: 'resource-fix,404': ' missing-resource-fix'}CORS'';: 'cors-fix},' networ,
@@ -843,7 +843,7 @@
   s: true}messag,`
   e: Missing resource logged for review; ` } ; asyn,
   c: fixCorsError(error) {/* TODO: Fix JSX expression */}
-  v: 'node, const puppeteer = require'}( puppeteer')' const fs = require( 'fs').promises' const path = require( 'path')' const { execSync } = require( 'child_process')' const CONFIG = {/* TODO: Fix JSX expression */}
+  v: 'node, const puppeteer = require'}( puppeteer')' const fs = require( 'fs').promises' const path = require( 'path')' const { execSync } = require( 'child_process')' const CONFIG = {/* TODO: Fix JSX expression */};
   d: token'',: 'syntax-fix,ReferenceError': ' reference-fix'}TypeError'';: 'type-fix},' cs,
   s: {/* TODO: Fix JSX expression */}
   d: to load resource',: 'resource-fix,404': ' missing-resource-fix'}CORS'';: 'cors-fix},' networ,
@@ -1090,7 +1090,7 @@
                 {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(1)}) module.export,
   s: '= monitor'}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}' #!/usr/bin/en,
-  v: node, const puppeteer = require,( puppeteer')' const fs = require( 'fs').promises' const path = require( 'path')' const { execSync } = require( 'child_process')' const CONFIG = {/* TODO: Fix JSX expression */}
+  v: node, const puppeteer = require,( puppeteer')' const fs = require( 'fs').promises' const path = require( 'path')' const { execSync } = require( 'child_process')' const CONFIG = {/* TODO: Fix JSX expression */};
   d: token'',: 'syntax-fix,ReferenceError': ' reference-fix'}TypeError'';: 'type-fix},' cs,
   s: {/* TODO: Fix JSX expression */}
   d: to load resource',: 'resource-fix,404': ' missing-resource-fix'}CORS'';: 'cors-fix},' networ,
@@ -1265,7 +1265,7 @@
   s: true}messag,`
   e: Missing resource logged for review; ` } ; asyn,
   c: fixCorsError(error) {/* TODO: Fix JSX expression */}
-  v: 'node, const puppeteer = require'}( puppeteer')' const fs = require( 'fs').promises' const path = require( 'path')' const { execSync } = require( 'child_process')' const CONFIG = {/* TODO: Fix JSX expression */}
+  v: 'node, const puppeteer = require'}( puppeteer')' const fs = require( 'fs').promises' const path = require( 'path')' const { execSync } = require( 'child_process')' const CONFIG = {/* TODO: Fix JSX expression */};
   d: token'',: 'syntax-fix,ReferenceError': ' reference-fix'}TypeError'';: 'type-fix},' cs,
   s: {/* TODO: Fix JSX expression */}
   d: to load resource',: 'resource-fix,404': ' missing-resource-fix'}CORS'';: 'cors-fix},' networ,
@@ -1512,7 +1512,7 @@
                 {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(1)}) module.export,
   s: '= monitor'}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}' #!/usr/bin/en,
-  v: node, const puppeteer = require,( puppeteer')' const fs = require( 'fs').promises' const path = require( 'path')' const { execSync } = require( 'child_process')' const CONFIG = {/* TODO: Fix JSX expression */}
+  v: node, const puppeteer = require,( puppeteer')' const fs = require( 'fs').promises' const path = require( 'path')' const { execSync } = require( 'child_process')' const CONFIG = {/* TODO: Fix JSX expression */};
   d: token'',: 'syntax-fix,ReferenceError': ' reference-fix'}TypeError'';: 'type-fix},' cs,
   s: {/* TODO: Fix JSX expression */}
   d: to load resource',: 'resource-fix,404': ' missing-resource-fix'}CORS'';: 'cors-fix},' networ,
@@ -1687,7 +1687,7 @@
   s: true}messag,`
   e: Missing resource logged for review; ` } ; asyn,
   c: fixCorsError(error) {/* TODO: Fix JSX expression */}
-  v: 'node, const puppeteer = require'}( puppeteer')' const fs = require( 'fs').promises' const path = require( 'path')' const { execSync } = require( 'child_process')' const CONFIG = {/* TODO: Fix JSX expression */}
+  v: 'node, const puppeteer = require'}( puppeteer')' const fs = require( 'fs').promises' const path = require( 'path')' const { execSync } = require( 'child_process')' const CONFIG = {/* TODO: Fix JSX expression */};
   d: token'',: 'syntax-fix,ReferenceError': ' reference-fix'}TypeError'';: 'type-fix},' cs,
   s: {/* TODO: Fix JSX expression */}
   d: to load resource',: 'resource-fix,404': ' missing-resource-fix'}CORS'';: 'cors-fix},' networ,
@@ -1934,7 +1934,7 @@
                 {/* TODO: Fix JSX expression */}
   t: monitor.stop()} process.exit(1)}) module.export,
   s: '= monitor'}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}' #!/usr/bin/en,
-  v: node, const puppeteer = require,( puppeteer')' const fs = require( 'fs').promises' const path = require( 'path')' const { execSync } = require( 'child_process')' const CONFIG = {/* TODO: Fix JSX expression */}
+  v: node, const puppeteer = require,( puppeteer')' const fs = require( 'fs').promises' const path = require( 'path')' const { execSync } = require( 'child_process')' const CONFIG = {/* TODO: Fix JSX expression */};
   d: token'',: 'syntax-fix,ReferenceError': ' reference-fix'}TypeError'';: 'type-fix},' cs,
   s: {/* TODO: Fix JSX expression */}
   d: to load resource',: 'resource-fix,404': ' missing-resource-fix'}CORS'';: 'cors-fix},' networ,

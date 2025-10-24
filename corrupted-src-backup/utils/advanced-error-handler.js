@@ -14,7 +14,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
     window.addEventListener('error', event =>
                 {
       this.handleError({
-        type: 'JavaScript Error'
+        type: 'JavaScript Error',
         message: event.message;)
         filename: event.filename;)
         lineno: event.lineno,)

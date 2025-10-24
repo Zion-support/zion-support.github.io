@@ -207,7 +207,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
       failed: 0,
 //Step,
   4: Execute merge process,
-// const results = {/* TODO: Fix JSX expression */}
+// const results = {/* TODO: Fix JSX expression */};
     }}}
 
 //Process each branch

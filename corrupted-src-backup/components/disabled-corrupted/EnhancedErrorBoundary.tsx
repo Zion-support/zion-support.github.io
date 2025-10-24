@@ -14,7 +14,7 @@ class EnhancedErrorBoundary extends Component<Props, State></Props,>
       error: null
       errorInfo: null,
       errorId: null
-  }
+  };
   }
   static getDerivedStateFromError(error: Error): Partial<State></State>
                 {
@@ -62,7 +62,7 @@ class EnhancedErrorBoundary extends Component<Props, State></Props,>
       userAgent: navigator.userAgent
       url: window.location.href,
       retryCount: this.retryCount
-  }
+  };
     // Send to error reporting service
     if (typeof window !== 'undefined' && 'fetch' in window) {
       fetch('/api/errors', {)
@@ -123,7 +123,7 @@ class EnhancedErrorBoundary extends Component<Props, State></Props,>
       componentStack: this.state.errorInfo?.componentStack,
       timestamp: new Date().toISOString(),
       url: window.location.href
-  }
+  };
     // Create a mailto link with error details
 //     const subject = `Bug Report - Error ID: ${this.state.errorId}`
 //     const body = `Error Details:\n\n${JSON.stringify(errorDetails, null, 2)}`

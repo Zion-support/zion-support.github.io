@@ -1,8 +1,8 @@
 var n,
   e,
-  t = {/* TODO: Fix JSX expression */}
+  t = {/* TODO: Fix JSX expression */};
   s: {} },
-  r = {}
+  r = {};
 function u() {return(n ||)
       ((n = 1),
       (function (n) {
@@ -204,8 +204,8 @@ function u() {/* TODO: Fix JSX expression */}
                 callback: u),
   priorityLevel: r, startTime: a),
                 expirationTime: (f = a + f),
-                sortIndex: -1}
-            return ((r = {/* TODO: Fix JSX expression */}
+                sortIndex: -1};
+            return ((r = {/* TODO: Fix JSX expression */};
   x: -1})
               }),
               a > i

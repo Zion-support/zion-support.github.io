@@ -1,233 +1,149 @@
-'use client'
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';const EnhancedAccessibilityEnhancerPage: React.FC  = () => {
-    const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',},
-    {icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',},
-    {icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',},
-    {icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-  }
+'use client';
+
+
+import React, { useState, useEffect } from 'react';
+
+interface EnhancedAccessibilityEnhancerProps {
+  children: React.ReactNode
+  enableKeyboardNavigation?: boolean
+  enableScreenReaderSupport?: boolean
+  enableHighContrast?: boolean
+  enableFocusManagement?: boolean
+  enableVoiceNavigation?: boolean
+}
+
+const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({
+  children,
+  enableKeyboardNavigation: _enableKeyboardNavigation = true,
+  enableScreenReaderSupport: _enableScreenReaderSupport = true,
+  enableHighContrast: _enableHighContrast = false,
+  enableFocusManagement: _enableFocusManagement = true,
+  enableVoiceNavigation: _enableVoiceNavigation = false,
+}) => {
+  const [isHighContrast, setIsHighContrast] = useState(false)
+  const [_fontSize, setFontSize] = useState('medium')
+  const [isReducedMotion, setIsReducedMotion] = useState(false)
+  const [isVoiceEnabled, setIsVoiceEnabled] = useState(false)
+
+  useEffect(() => {
+    // Check for user's motion preferences
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+    setIsReducedMotion(mediaQuery.matches)
+
+    // Check for high contrast preference
+    const highContrastQuery = window.matchMedia('(prefers-contrast: high)')
+    setIsHighContrast(highContrastQuery.matches)
+
+    // Apply accessibility enhancements
+    document.documentElement.setAttribute('data-accessibility-enhanced', 'true')
+    
+    if (isHighContrast) {
+      document.documentElement.classList.add('high-contrast')
     }
-const benefits = [
-  ]
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
+    
+    if (isReducedMotion) {
+      document.documentElement.classList.add('reduced-motion')
+    }
 
-    '24/7 technical support',
+    // Add keyboard navigation support
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation')
+      }
+      
+      // Add skip links functionality
+      if (event.key === 'Enter' && event.target instanceof HTMLElement) {
+        if (event.target.getAttribute('data-skip-link')) {
+          const targetId = event.target.getAttribute('data-skip-link')
+          const target = document.getElementById(targetId || '')
+          if (target) {
+            target.focus()
+            target.scrollIntoView({ behavior: 'smooth' })
+          }
+        }
+      }
+    }
 
-    'Easy integration with existing systems',
+    const handleMouseDown = () => {
+      document.body.classList.remove('keyboard-navigation')
+    }
 
-    'Cost-effective pricing plans',
+    document.addEventListener('keydown', handleKeyDown)
+    document.addEventListener('mousedown', handleMouseDown)
 
-    'Proven track record of success';
-  ];
-return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet></Helmet>
-        <title>EnhancedAccessibilityEnhancer | Zion Tech Group</title>
-        <meta name="description" content="AI-powered solution" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      </Helmet>
-                {/* Hero Section */}
-                <section className="py-20 px-4"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-    'Proven track record of success'
-  ]
-return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet></Helmet>
-        </Helmet><title>EnhancedAccessibilityEnhancer | Zion Tech Group</title>
-        <meta name="description" content="AI-powered solution" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      </Helmet>
-                {/* Hero Section */}
-                <section className="py-20 px-4"></section>
-          </section>< className="$2 />
-            </div><div className="text-center mb-16"></div>
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-                </div>
-          </div>
-                </section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center"></div>
-            <h1></h1>
-              </h1><span></span>
-                EnhancedAccessibilityEnhancer
-              </span>
-              <br></br>
-              <span className="text-white">Solutions</span>
-                </h1>
-            <p></p>
-              Transform your business with our advanced enhancedaccessibilityenhancer solutions.
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button></button>
-                Get Started
-                </button><ArrowRight></ArrowRight>
-              </button>
-              <button>Learn More,</button>
-                </button>
-            </div>
-                </div>
-        </div>
-                </section>
-                {/* Features Section */}
-                <section className="py-20 px-4"></section>
-          </section>< className="$2 />
-            </div><div className="text-center mb-16"></div>
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-                </div>
-          </div>
-                </section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2>Why Choose Our EnhancedAccessibilityEnhancer?,</h2>
-                </h2>
-            <p>Our enhancedaccessibilityenhancer solutions deliver unmatched performance, security, and scalability.</p>
-                </p>
-          </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
-            {features.map((feature, index) => (
-                <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300"></div>,
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
-                  <feature />
-                <h3 className="text-xl font-semibold text-white mb-3"></h3>
-                {feature.title}
-                </h3>
-                <p className="text-gray-300"></p>
-                {feature.description</p>}
-                </p>
-                </div>
-            ))}
-                </div>
-                </div>
-      </section>
-                {/* Benefits Section */}
-                <section className="py-20 px-4"></section>
-          </section>< className="$2 />
-            </div><div className="text-center mb-16"></div>
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-                </div>
-          </div>
-                </section>
-        <div className="max-w-7xl mx-auto" / /></div>
-          <div className="text-center mb-16" / /></div>
-            <h2></h2>
-              Key Benefits
-            </h2>
-            <p></p>
-              Experience the power of our enhancedaccessibilityenhancer solutions for your business.,
-            </p>
-                </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>,
-            {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3"></div>
-                <CheckCircle></CheckCircle>
-                </CheckCircle><p className="text-gray-300 text-lg"></p>
-                {benefit}
-                </p>
-                </div>
-            ))}
-                </div>
-                </div>
-      </section>
-}
-export default EnhancedAccessibilityEnhancerPage
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown)
+      document.removeEventListener('mousedown', handleMouseDown)
+    }
+  }, [isHighContrast, isReducedMotion])
+
+  const toggleHighContrast = () => {
+    setIsHighContrast(!isHighContrast)
+    document.documentElement.classList.toggle('high-contrast')
+  }
+
+  const changeFontSize = (size: string) => {
+    setFontSize(size)
+    document.documentElement.setAttribute('data-font-size', size)
+  }
+
+  const toggleVoiceNavigation = () => {
+    if (_enableVoiceNavigation && 'speechSynthesis' in window) {
+      setIsVoiceEnabled(!isVoiceEnabled)
+    }
+  }
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet></Helmet>
-        <title>EnhancedAccessibilityEnhancer | Zion Tech Group
-        <meta name="description" content="Professional EnhancedAccessibilityEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="EnhancedAccessibilityEnhancer, AI solutions, IT services, Zion Tech Group, enhancedaccessibilityenhancer" />
-                {/* Hero Section */}
-                <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center"></div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">EnhancedAccessibilityEnhancer
-              <br />
-              <span className="text-white">Solutions
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
-              Transform your business with our advanced enhancedaccessibilityenhancer solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"></button>
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">Learn More
-      {/* Features Section */}
-                <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
-        </section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
-              Why Choose Our EnhancedAccessibilityEnhancer?
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              Our enhancedaccessibilityenhancer solutions deliver unmatched performance, security, and scalability.
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-                {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
-                  <feature.icon className="h-6 w-6 text-white" />
-                <h3 className="text-xl font-semibold text-white mb-3"></h3>
-                {feature.title}
-                <p className="text-gray-300"></p>
-                {feature.description}
-            ))}
-      {/* Benefits Section */}
-                <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
-        </section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              Experience the power of our enhancedaccessibilityenhancer solutions for your business.
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-                {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3"></div>
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg"></p>
-                {benefit}
-            ))}
-                </div>
-        ))
-      </section>
+    <div className="accessibility-enhanced">
+      <div 
+        className="accessibility-controls" 
+        style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }}
+      >
+        <button
+          onClick={toggleHighContrast}
+          className="accessibility-button"
+          aria-label="Toggle high contrast"
+        >
+          {isHighContrast ? 'Normal Contrast' : 'High Contrast'}
+        </button>
+        
+        <div className="font-size-controls">
+          <button
+            onClick={() => changeFontSize('small')}
+            className="accessibility-button"
+            aria-label="Small font size"
+          >
+            A
+          </button>
+          <button
+            onClick={() => changeFontSize('medium')}
+            className="accessibility-button"
+            aria-label="Medium font size"
+          >
+            A
+          </button>
+          <button
+            onClick={() => changeFontSize('large')}
+            className="accessibility-button"
+            aria-label="Large font size"
+          >
+            A
+          </button>
+        </div>
 
-};
-
-export default EnhancedAccessibilityEnhancerPage;
+        {_enableVoiceNavigation && (
+          <button
+            onClick={toggleVoiceNavigation}
+            className="accessibility-button"
+            aria-label="Toggle voice navigation"
+          >
+            {isVoiceEnabled ? '🔊' : '🔇'}
+          </button>
+        )}
+      </div>
+      {children}
+    </div>
+  )
 }
-export default EnhancedAccessibilityEnhancerPage</div>
-                </div></div>
-                </div></div>
-                </div></div>
-                </div></div>
-                </div></div>
-                </div></div>
-                </span></span>
-                </button></button>
-                </p></p>
-                </p></p>
-                </p></h1>
-                </h2></h2>
-                </h3></section>
-                </section></section>
+
+export default EnhancedAccessibilityEnhancer;

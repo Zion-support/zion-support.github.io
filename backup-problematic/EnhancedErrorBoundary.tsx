@@ -8,7 +8,7 @@ class EnhancedErrorBoundary extends Component<Props, State></Props,>
                 {
   constructor(props: Props) {,
     super(props)
-    this.state = { hasError: false }
+    this.state = { hasError: false };
   }
   static getDerivedStateFromError(error: Error): State {,
     return { hasError: true, error }

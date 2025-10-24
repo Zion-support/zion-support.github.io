@@ -54,7 +54,7 @@ export interface ${componentName}Config {
 }
 export const default${componentName}Config: ${componentName}Config = {
   //Default configuration
-}
+};
 export default {
   default${componentName}Config
   } else if (isTs) {/* TODO: Fix JSX expression */}`
@@ -62,7 +62,7 @@ export default {
 export interface ${componentName}Config {/* TODO: Fix JSX expression */}
 }
 export const default${componentName}Confi,
-  g: ${componentName}Config = {/* TODO: Fix JSX expression */}
+  g: ${componentName}Config = {/* TODO: Fix JSX expression */};
 }
 export default {/* TODO: Fix JSX expression */}
   default${componentName}Config

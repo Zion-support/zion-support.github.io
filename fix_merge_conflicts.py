@@ -1,60 +1,54 @@
 #!/usr/bin/env python3
 """
-Script to automatically fix merge conflicts in the codebase
+Script to automatically resolve merge conflicts by choosing HEAD version
 """
 import os
 import re
 import glob
-from pathlib import Path
 
 def fix_merge_conflicts(file_path):
-    """Fix merge conflicts in a single file"""
+    """Fix merge conflicts in a single file by choosing HEAD version"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Skip if no merge conflicts
-        if '<<<<<<< HEAD' not in content:
-            return False
+        # Remove merge conflict markers and keep the content after the last =======
+        # This assumes the most recent version is after the last =======
+        lines = content.split('\n')
+        fixed_lines = []
+        in_conflict = False
+        conflict_depth = 0
         
-        print(f"Fixing merge conflicts in: {file_path}")
+        # Pattern to match merge conflict blocks
+        pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n?'
         
-        # Remove merge conflict markers and keep the HEAD version
-        # Pattern to match merge conflicts and keep the HEAD part
-        pattern = r'<<<<<<< HEAD\n(.*?)\n=======.*?\n>>>>>>> [^\n]*\n?'
+        # Replace with HEAD version (first capture group)
+        def replace_conflict(match):
+            head_content = match.group(1)
+            # Remove any trailing newlines that might cause issues
+            return head_content.rstrip() + '\n'
         
-        # Replace merge conflicts with HEAD content
-        new_content = re.sub(pattern, r'\1\n', content, flags=re.DOTALL)
+        new_content = re.sub(pattern, replace_conflict, content, flags=re.DOTALL)
         
-        # Clean up any remaining merge conflict markers
-        new_content = re.sub(r'<<<<<<< HEAD\n?', '', new_content)
-        new_content = re.sub(r'=======\n?', '', new_content)
-        new_content = re.sub(r'>>>>>>> [^\n]*\n?', '', new_content)
-        
-        # Clean up extra whitespace
-        new_content = re.sub(r'\n\s*\n\s*\n', '\n\n', new_content)
-        
-        # Write the cleaned content back
+        # Write back the fixed content
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(new_content)
         
+        print(f"Fixed merge conflicts in: {file_path}")
         return True
+        
     except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
     """Main function to fix all merge conflicts"""
-    # Get all TypeScript/JavaScript files
+    # Get all TypeScript/JavaScript files in the app directory
     patterns = [
         'app/**/*.tsx',
         'app/**/*.ts',
         'app/**/*.js',
-        'app/**/*.jsx',
-        'src/**/*.tsx',
-        'src/**/*.ts',
-        'src/**/*.js',
-        'src/**/*.jsx'
+        'app/**/*.jsx'
     ]
     
     files_fixed = 0

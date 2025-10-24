@@ -49,7 +49,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
     window.addEventListener('error', event =>
                 {
       this.handleError({
-        type: 'javascript'
+        type: 'javascript',
         message: event.message;)
         filename: event.filename;)
         lineno: event.lineno,)
@@ -148,7 +148,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
       componentStack: errorData.componentStack
       props: errorData.props
       state: errorData.state,
-  private setupReactErrorBoundary(): void {/* TODO: Fix JSX expression */}
+  private setupReactErrorBoundary(): void {/* TODO: Fix JSX expression */};
     //     }
 
   handleError(errorDat,

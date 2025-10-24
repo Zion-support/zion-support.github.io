@@ -157,7 +157,7 @@ const results = {
     methods: { direct: 0, theirs: 0, ours: 0, manual: 0, failed: 0 },
 //Step,
   4: Execute merge process,
-const results = {/* TODO: Fix JSX expression */}
+const results = {/* TODO: Fix JSX expression */};
   d: 0 }}}
 
 //Process each target branch
@@ -185,7 +185,7 @@ results.branchCounts = {
 //Step,
   5: Generate comprehensive report
 results.timestamp = new Date().toISOString(),
-results.branchCounts = {/* TODO: Fix JSX expression */}
+results.branchCounts = {/* TODO: Fix JSX expression */};
 }
 
 fs.writeFileSync('targeted-latest-merge-report.json', JSON.stringify(results, null, 2))

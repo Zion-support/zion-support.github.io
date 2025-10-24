@@ -5,10 +5,10 @@ const makeGitHubRequest = (path) =>
   return new Promise((resolve, reject) =>
                 {
     const options = {
-      hostname: 'api.github.com'
+      hostname: 'api.github.com',
       path: path,
-      method: 'GET'
-      headers: {,
+      method: 'GET',
+      headers: {
         'User-Agent': 'Zion-App-Automation',
         Accept: 'application/vnd.github.v3+json'}}
 

@@ -1,238 +1,306 @@
-import {Helmet}}from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
-const AiExpenseTrackerPage: React.FC  = () => {,
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
-const AiExpenseTrackerPage: React.FC  = () => {
-    const features = [
+'use client';
+import { Zap, Brain, Settings, Globe, Users, BarChart, MessageCircle, Clock, ArrowRight, CheckCircle, Workflow, Target, ShoppingCart, Server } from 'lucide-react';
+import React from 'react';
+import Link from 'next/link';
+const AiChatbotBuilderPage: React.FC = () => {
+  const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',;
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'],
-  },
+      title: 'No-Code Builder',
+      description: 'Create sophisticated chatbots without any programming knowledge using our visual interface',
+      icon: Zap,
+      color: 'from-cyan-500 to-blue-500'
+    },
     {
-    icon: BarChart,
+      title: 'Multi-Language Support',
+      description: 'Deploy chatbots in 50+ languages with automatic translation and localization',
+      icon: Globe,
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
       title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-  },
-  ];];
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'],
-  },
+      description: 'Track performance with detailed analytics, conversation insights, and user behavior data',
+      icon: BarChart,
+      color: 'from-purple-500 to-pink-500'
+    },
     {
-    icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics'],
-  },
+      title: 'AI-Powered Responses',
+      description: 'Leverage advanced NLP and machine learning for intelligent, context-aware conversations',
+      icon: Brain,
+      color: 'from-orange-500 to-red-500'
+    },
     {
-    icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'],
-  }
-    ]
-const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-  ];
-return (
-    <>
-  </>
-      <Helmet></Helmet>
-        <title>Ai Expense Tracker - Zion Tech Group</title>
-    'Gain competitive advantage with advanced technology'
+      title: 'Easy Integration',
+      description: 'Seamlessly integrate with your existing systems, websites, and messaging platforms',
+      icon: Workflow,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      title: 'Custom Branding',
+      description: 'Customize the chatbot appearance to match your brand identity and design guidelines',
+      icon: Settings,
+      color: 'from-indigo-500 to-purple-500'
+    }
   ]
-return (
-    <>
-      <Helmet></Helmet>
-        </Helmet><title>Ai Expense Tracker - Zion Tech Group</title>
-        <meta name="description" content="AI-powered solution" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      </Helmet>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900"></div>
-                {/* Hero Section */}
-                <section className="py-20 px-4"></section>
-          </section>< className="$2 />
-            </div><div className="text-center mb-16"></div>
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-                </div>
+  const useCases = [
+    {
+      title: 'Customer Support',
+      description: 'Provide 24/7 customer support with instant responses to common queries',
+      icon: MessageCircle,
+      benefits: ['Reduce support tickets by 60%', '24/7 availability', 'Instant responses']
+    },
+    {
+      title: 'Lead Generation',
+      description: 'Qualify leads and capture contact information through engaging conversations',
+      icon: Target,
+      benefits: ['Increase lead quality by 40%', 'Automated qualification', 'Higher conversion rates']
+    },
+    {
+      title: 'E-commerce Assistant',
+      description: 'Help customers find products, answer questions, and guide them through purchases',
+      icon: ShoppingCart,
+      benefits: ['Boost sales by 25%', 'Reduce cart abandonment', 'Personalized recommendations']
+    },
+    {
+      title: 'Internal HR Bot',
+      description: 'Answer employee questions about policies, benefits, and company information',
+      icon: Users,
+      benefits: ['Reduce HR workload', 'Consistent information', 'Employee satisfaction']
+    }
+  ]
+  const pricing = [
+    {
+      name: 'Starter',
+      price: '$29',
+      period: '/month',
+      description: 'Perfect for small businesses getting started',
+      features: [
+        'Up to 1,000 conversations/month',
+        'Basic AI responses',
+        'Email support',
+        'Standard templates',
+        'Basic analytics'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$99',
+      period: '/month',
+      description: 'Ideal for growing businesses with more needs',
+      features: [
+        'Up to 10,000 conversations/month',
+        'Advanced AI with custom training',
+        'Priority support',
+        'Custom branding',
+        'Advanced analytics',
+        'Multi-language support',
+        'API access'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: 'Custom',
+      period: '',
+      description: 'For large organizations with complex requirements',
+      features: [
+        'Unlimited conversations',
+        'Custom AI models',
+        'Dedicated support',
+        'White-label solution',
+        'Advanced integrations',
+        'Custom development',
+        'SLA guarantee'
+      ],
+      popular: false
+    }
+  ]
+  const stats = [
+    { number: '10,000+', label: 'Chatbots Created', icon: MessageCircle },
+    { number: '50+', label: 'Languages Supported', icon: Globe },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: Server },
+    { number: '24/7', label: 'Customer Support', icon: Clock }
+  ]
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
+            AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Chatbot Builder</span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Create intelligent, conversational chatbots without any coding knowledge. Our no-code platform makes it easy to build, deploy, and manage AI-powered chatbots for your business.
+          </p>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
+            >
+              Start Building Free
+              <ArrowRight className="w-8 h-8" />
+            </Link>
+            <Link
+              href="/ai-services"
+              className="inline-flex items-center px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
+            >
+              View All AI Services
+            </Link>
           </div>
-                </section>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>
-          <div className="relative max-w-7xl mx-auto text-center"></div>
-            <h1>Ai Expense Tracker;</h1>
-                </h1>
-            <p></p>
-              Advanced AI-powered ai expense tracker solution for modern businesses.
+        </div>
+      </section>
+      {/* Stats Section */}
+      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-black/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-4">
+                  <stat.icon className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-300">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Features Section */}
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
+              Powerful Features for Every Business
+            </h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              Our AI chatbot builder comes with everything you need to create sophisticated, intelligent chatbots that engage your customers and drive results.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
-              <button></button>
-                Get Started
-              </button>
-              <button></button>
-                View Demo,
-              </button>
-                </div>
           </div>
-                </section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-        <section className="relative py-20 px-4 overflow-hidden"></section>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center"></div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Ai Expense Tracker
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>
-              Advanced AI-powered ai expense tracker solution for modern businesses.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-gradient-to-r from-orange-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Get Started
-              <button className="border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">View Demo
-        {/* Features Section */}
-                <section className="py-20 px-4"></section>
-          </section>< className="$2 />
-            </div><div className="text-center mb-16"></div>
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover: border-cyan-400/50 transition-all duration-300 group">
+                <div className="mb-6">
+                  <feature.icon className="w-12 h-12 text-cyan-400" />
                 </div>
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
           </div>
-                </section>
-          <div className="max-w-7xl mx-auto" / /></div>
-            <div className="text-center mb-16" / /></div>
-              <h2></h2>
-                Key Features
-              </h2>
-              <p></p>
-                Advanced AI technology that drives results
-              </p>
+        </div>
+      </section>
+      {/* Use Cases Section */}
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-black/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
+              Real-World Use Cases
+            </h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              See how businesses across industries are using our chatbot builder to improve customer experience and drive growth.
+            </p>
+          </div>
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover: border-purple-400/50 transition-all duration-300 group">
+                <div className="mb-6">
+                  <useCase.icon className="w-12 h-12 text-purple-400" />
                 </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
-              {features.map((feature, index) => (
-                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
-                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
-                    <feature />
-                  <h3 className="text-xl font-bold text-white mb-4"></h3>
-                {feature.title}
-                </h3>
-                  <p className="text-gray-300 mb-4"></p>
-                {feature.description}
-                </p>
-                {feature.benefits && (
-                    <ul></ul>
-                {feature.benefits.map((benefit, idx) => (
-  }
-                </ul><li></li>
-                          </li><CheckCircle></CheckCircle>
-                {benefit}
-                </li>
-                      ))}
+                <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
+                <p className="text-gray-300 mb-4">{useCase.description}</p>
+                <ul className="space-y-2">
+                  {useCase.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-8 h-8" />
+                      {benefit}
+                    </li>
+                  ))}
                 </ul>
-                  )}
-                </div>
-              ))}
-                </div>
-                </div>
-        </section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Key Features
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Advanced AI technology that drives results
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-                {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div>
-                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>
-                    <feature.icon className="w-8 h-8 text-white" />
-                  <h3 className="text-xl font-bold text-white mb-4"></h3>
-                {feature.title}
-                <p className="text-gray-300 mb-4"></p>
-                {feature.description}
-                  {feature.benefits && (
-                    <ul className="space-y-2"></ul>
-                {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400"></li>
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                {benefit}
-                      ))}
-                  )}
-              ))}
-        {/* Benefits Section */}
-                <section className="py-20 px-4"></section>
-          </section>< className="$2 />
-            </div><div className="text-center mb-16"></div>
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-                </div>
+              </div>
+            ))}
           </div>
-                </section>
+        </div>
+      </section>
+      {/* Pricing Section */}
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
+              Simple, Transparent Pricing
+            </h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              Choose the plan that fits your business needs. All plans include our core features with no hidden fees.
+            </p>
+          </div>
+          <div className="grid md: grid-cols-3 gap-8">
+            {pricing.map((plan, index) => (
+              <div key={index} className={`bg-white/5 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 ${
+                plan.popular
+                  ? 'border-cyan-400/50 ring-2 ring-cyan-400/20'
+                  : 'border-white/10 hover: border-cyan-400/50'}`}>
+                {plan.popular && (
+                  <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-semibold px-4 py-2 rounded-full text-center mb-6">
+                    Most Popular
+                  </div>
+                )}
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="flex items-baseline justify-center mb-2">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-300 ml-1">{plan.period}</span>
+                  </div>
+                  <p className="text-gray-300">{plan.description}</p>
                 </div>
-              ))}
-                </div>
-                </div>
-        </section>
-                {/* CTA Section */}
-                <section className="py-20 px-4"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-          <div className="max-w-7xl mx-auto" / /></div>
-            <div className="text-center mb-16" / /></div>
-              <h2></h2>
-                Why Choose Our Solution?
-              </h2>
-              <p></p>
-                Proven results that drive business growth and efficiency
-              </p>
-                </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
-                {benefits.map((benefit, index) => ()
-              ))}
-        {/* CTA Section */}
-                <section className="py-20 px-4"></section>
-          </section>< className="$2 />
-            </div><div className="text-center mb-16"></div>
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-                </div>
-          ))
-        </section>
-          <div className="max-w-4xl mx-auto text-center" / /></div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12" / /></div>
-              <h2></h2>
-                Ready to Get Started?
-              </h2>
-              <p></p>
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
-                <button></button>
-                  Contact Us
-                </button>
-                <button></button>
-                  Learn More
-                </button>
-                </div>
-            </div>
-          ))
-        </section>
-                </div>
-export default AiExpenseTrackerPage;
-      <Footer></Footer>
-    </>
-  ),
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center">
+                      <CheckCircle className="w-8 h-8" />
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href="/contact"
+                  className={`w-full inline-flex items-center justify-center px-6 py-3 font-semibold rounded-lg transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover: from-cyan-600 hover:to-purple-600'
+                      : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-white'}`}
+                >
+                  {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
+                  <ArrowRight className="w-8 h-8" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-purple-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
+            Ready to Build Your First Chatbot?
+          </h2>
+          <p className="text-xl text-cyan-100 mb-8">
+            Join thousands of businesses already using our platform to create intelligent, engaging chatbots that drive results.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center px-8 py-3 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
+            >
+              Start Building Today
+              <ArrowRight className="w-8 h-8" />
+            </Link>
+            <Link 
+              href="/ai-services" 
+              className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-600 transition-colors duration-300"
+            >
+              Explore All AI Services
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
 }
-export default AiExpenseTrackerPage</$1>
-                </h3>
+export default AiChatbotBuilderPage

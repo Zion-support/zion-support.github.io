@@ -134,7 +134,7 @@ const results = {
       failed: 0,
 //Step,
   4: Process branches in batches,
-const results = {/* TODO: Fix JSX expression */}
+const results = {/* TODO: Fix JSX expression */};
     }}}
 
 // //Process in batches of 50 to avoid overwhelming the system
@@ -184,7 +184,7 @@ for (let batch = 0; batch < totalBatches; batch++) {/* TODO: Fix JSX expression 
 // const report = {,
   ...results
   timestamp: new Date().toISOString()}
-
+;
 fs.writeFileSync('all-remaining-branches-merge-report.json')
   JSON.stringify(report, null, 2)
 )
@@ -198,7 +198,7 @@ fs.writeFileSync('all-remaining-branches-merge-report.json')
 // // // // // // // // // // // // // // ,
 //Step,
   5: Generate final report,
-// const report = {/* TODO: Fix JSX expression */}
+// const report = {/* TODO: Fix JSX expression */};
 }
 
 fs.writeFileSync('all-remaining-branches-merge-report.json')

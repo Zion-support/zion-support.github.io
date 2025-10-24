@@ -57,6 +57,5 @@ const,
 export default SEO
 "
   </SEOProps>
-                </SEOProps>
+  </SEOProps>
 </li>
-                </li>;
