@@ -1,63 +1,97 @@
+'use client';
 import React from 'react';
-'use client'
-import React from 'react'
-import { Helmet} from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import { motion } from 'framer-motion';
 
-const FuturisticBackground: React.FC = ($2) => {
+interface FuturisticBackgroundProps {
+  children: React.ReactNode;
+  variant?: 'gradient' | 'particles' | 'grid' | 'waves';
+  className?: string;
+}
 
-$3};
-        <section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"><div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
-              FuturisticBackground
-            </h1>
-            <p>Advanced FuturisticBackground solution for modern businesses.</p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">,
-                Get Started
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">,
-                Learn More
-              </button>
-            
-          
-        </section>,
-,
-        {/* Features Section */}
-        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto"><div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p>Discover the powerful features that make FuturisticBackground the perfect solution for your business.</p>
-            </div>
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"> </div><h3 className="text-xl font-semibold text-white mb-3">AI-Powered</h3>
-                <p className="text-gray-300">Advanced AI algorithms for intelligent automation.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"> </div><h3 className="text-xl font-semibold text-white mb-3">Scalable</h3>
-                <p className="text-gray-300">Grows with your business needs and requirements.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"> </div><h3 className="text-xl font-semibold text-white mb-3">Secure</h3>
-                <p className="text-gray-300">Enterprise-grade security and data protection.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"> </div><h3 className="text-xl font-semibold text-white mb-3">Efficient</h3>
-                <p className="text-gray-300">Optimized performance for maximum productivity.</p>
-                </div>
-              </div>
-        </div>
-      </section>,
-,
-        {/* CTA Section */}
-        <section className="py-20 px-4"> </section><div className="max-w-4xl mx-auto text-center"> </div><h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-            <p>Join thousands of businesses already using FuturisticBackground to transform their operations.</p>
-            <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-              Start Your Free Trial
-            
-            </button>
+const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({
+  children,
+  variant = 'gradient',
+  className = ''
+}) => {
+  const renderBackground = () => {
+    switch (variant) {
+      case 'particles':
+        return (
+          <div className="absolute inset-0 overflow-hidden">
+            {[...Array(50)].map((_, i) => (
+              <motion.div
+                key={i}
+                className="absolute w-1 h-1 bg-cyan-400 rounded-full"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                }}
+                animate={{
+                  y: [0, -100, 0],
+                  opacity: [0, 1, 0],
+                }}
+                transition={{
+                  duration: Math.random() * 3 + 2,
+                  repeat: Infinity,
+                  delay: Math.random() * 2,
+                }}
+              />
+            ))}
           </div>
-        </section>
-        </div>
-      </Footer>
-      </div>
+        );
+      case 'grid':
+        return (
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-purple-500/10"></div>
+          </div>
+        );
+      case 'waves':
+        return (
+          <div className="absolute inset-0 overflow-hidden">
+            <motion.div
+              className="absolute -top-40 -left-40 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl"
+              animate={{
+                x: [0, 100, 0],
+                y: [0, 50, 0],
+              }}
+              transition={{
+                duration: 8,
+                repeat: Infinity,
+                ease: 'easeInOut',
+              }}
+            />
+            <motion.div
+              className="absolute -bottom-40 -right-40 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl"
+              animate={{
+                x: [0, -100, 0],
+                y: [0, -50, 0],
+              }}
+              transition={{
+                duration: 10,
+                repeat: Infinity,
+                ease: 'easeInOut',
+              }}
+            />
+          </div>
+        );
+      default:
+        return (
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div>
+          </div>
+        );
+    }
+  };
 
-  )};
+  return (
+    <div className={`relative min-h-screen overflow-hidden ${className}`}>
+      {renderBackground()}
+      <div className="relative z-10">
+        {children}
+      </div>
+    </div>
+  );
+};
 
 export default FuturisticBackground;
-}

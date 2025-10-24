@@ -1,61 +1,87 @@
+'use client';
 import React from 'react';
-'use client'
-import React from 'react'
-import { Helmet} from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import { motion } from 'framer-motion';
+import LoadingSpinner from './LoadingSpinner';
 
-const LoadingStates: React.FC = ($2) => {
+interface LoadingStatesProps {
+  type?: 'spinner' | 'dots' | 'pulse' | 'skeleton';
+  size?: 'sm' | 'md' | 'lg';
+  text?: string;
+  className?: string;
+}
 
-$3};
-        <section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"><div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
-              LoadingStates
-            </h1>
-            <p>Advanced LoadingStates solution for modern businesses.</p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">,
-                Get Started
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">,
-                Learn More
-              </button>
-            
-          
-        </section>,
-,
-        {/* Features Section */}
-        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto"><div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p>Discover the powerful features that make LoadingStates the perfect solution for your business.</p>
-            </div>
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"> </div><h3 className="text-xl font-semibold text-white mb-3">AI-Powered</h3>
-                <p className="text-gray-300">Advanced AI algorithms for intelligent automation.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"> </div><h3 className="text-xl font-semibold text-white mb-3">Scalable</h3>
-                <p className="text-gray-300">Grows with your business needs and requirements.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"> </div><h3 className="text-xl font-semibold text-white mb-3">Secure</h3>
-                <p className="text-gray-300">Enterprise-grade security and data protection.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"> </div><h3 className="text-xl font-semibold text-white mb-3">Efficient</h3>
-                <p className="text-gray-300">Optimized performance for maximum productivity.</p>
-                </div>
-              </div>
-        </div>
-      </section>,
-,
-        {/* CTA Section */}
-        <section className="py-20 px-4"> </section><div className="max-w-4xl mx-auto text-center"> </div><h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-            <p>Join thousands of businesses already using LoadingStates to transform their operations.</p>
-            <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-              Start Your Free Trial
-            
-            </button>
+const LoadingStates: React.FC<LoadingStatesProps> = ({
+  type = 'spinner',
+  size = 'md',
+  text,
+  className = ''
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+  };
+
+  const textSizeClasses = {
+    sm: 'text-sm',
+    md: 'text-base',
+    lg: 'text-lg'
+  };
+
+  const renderLoadingAnimation = () => {
+    switch (type) {
+      case 'dots':
+        return (
+          <div className="flex space-x-1">
+            {[0, 1, 2].map((i) => (
+              <motion.div
+                key={i}
+                className="w-2 h-2 bg-cyan-400 rounded-full"
+                animate={{ y: [0, -10, 0] }}
+                transition={{
+                  duration: 0.6,
+                  repeat: Infinity,
+                  delay: i * 0.2
+                }}
+              />
+            ))}
           </div>
-        </section>
-        </div>
-      </Footer>
-      </div>
+        );
+      case 'pulse':
+        return (
+          <motion.div
+            className={`${sizeClasses[size]} bg-cyan-400 rounded-full`}
+            animate={{ scale: [1, 1.2, 1] }}
+            transition={{ duration: 1, repeat: Infinity }}
+          />
+        );
+      case 'skeleton':
+        return (
+          <div className="space-y-2">
+            <div className="h-4 bg-slate-700 rounded animate-pulse"></div>
+            <div className="h-4 bg-slate-700 rounded animate-pulse w-3/4"></div>
+            <div className="h-4 bg-slate-700 rounded animate-pulse w-1/2"></div>
+          </div>
+        );
+      default:
+        return <LoadingSpinner size={size} />;
+    }
+  };
 
-  )}  )}
-export default LoadingStates};
+  return (
+    <div className={`flex flex-col items-center justify-center space-y-3 ${className}`}>
+      {renderLoadingAnimation()}
+      {text && (
+        <motion.p
+          className={`text-gray-300 ${textSizeClasses[size]} font-medium`}
+          animate={{ opacity: [0.5, 1, 0.5] }}
+          transition={{ duration: 1.5, repeat: Infinity }}
+        >
+          {text}
+        </motion.p>
+      )}
+    </div>
+  );
+};
+
+export default LoadingStates;
