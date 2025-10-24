@@ -40,7 +40,10 @@ const PerformanceMonitor = () => {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry) => {
-            reportMetric('fid', entry.processingStart - entry.startTime);
+            const fidEntry = entry as PerformanceEventTiming;
+            if (fidEntry.processingStart) {
+              reportMetric('fid', fidEntry.processingStart - fidEntry.startTime);
+            }
           });
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
@@ -54,8 +57,9 @@ const PerformanceMonitor = () => {
         const clsObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry) => {
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value;
+            const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+            if (!clsEntry.hadRecentInput && clsEntry.value) {
+              clsValue += clsEntry.value;
             }
           });
           reportMetric('cls', clsValue);
