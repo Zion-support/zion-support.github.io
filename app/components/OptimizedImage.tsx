@@ -53,12 +53,12 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
   const handleLoad = () => {
     setIsLoaded(true);
     onLoad?.();
-  };
+  }
 
   const handleError = () => {
     setHasError(true);
     onError?.();
-  };
+  }
 
   if (hasError) {
     return (

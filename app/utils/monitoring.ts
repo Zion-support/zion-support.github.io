@@ -45,7 +45,7 @@ export interface ErrorReport {
 }
 
 class MonitoringService {
-  private metrics: PerformanceMetrics = {};
+  private metrics: PerformanceMetrics = {}
   private errors: ErrorReport[] = [];
   private observer: PerformanceObserver | null = null;
 
@@ -127,6 +127,7 @@ class MonitoringService {
       
       this.observer.observe({ entryTypes: ['longtask'] });
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.warn('Long task monitoring not supported:', error);
     }
   }
@@ -189,7 +190,7 @@ class MonitoringService {
   }
 
   public getMetrics(): PerformanceMetrics {
-    return { ...this.metrics };
+    return { ...this.metrics }
   }
 
   public getErrors(): ErrorReport[] {

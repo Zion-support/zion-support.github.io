@@ -36,7 +36,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         window.dataLayer = window.dataLayer || [];
         window.gtag = function() {
           window.dataLayer.push(arguments);
-        };
+        }
         window.gtag('js', new Date());
         window.gtag('config', process.env.NEXT_PUBLIC_GA_ID);
         setIsLoaded(true);
@@ -63,7 +63,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   const value = {
     trackEvent,
     trackPageView
-  };
+  }
 
   return (
     <AnalyticsContext.Provider value={value}>

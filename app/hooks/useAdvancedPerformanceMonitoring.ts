@@ -48,7 +48,7 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const updateMetrics = useCallback((newMetrics: Partial<PerformanceMetrics>) => {
-    metricsRef.current = { ...metricsRef.current, ...newMetrics };
+    metricsRef.current = { ...metricsRef.current, ...newMetrics }
     onMetricsUpdate?.(metricsRef.current);
   }, [onMetricsUpdate]);
 
@@ -94,7 +94,7 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
         domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
         firstPaint: 0,
         firstContentfulPaint: 0
-      };
+      }
 
       // Get paint timing
       const paintEntries = performance.getEntriesByType('paint');
@@ -119,7 +119,7 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
       totalSize: 0,
       slowResources: 0,
       failedResources: 0
-    };
+    }
 
     resources.forEach((resource) => {
       const resourceTiming = resource as PerformanceResourceTiming;
@@ -148,7 +148,7 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
       usedJSHeapSize: memory.usedJSHeapSize,
       totalJSHeapSize: memory.totalJSHeapSize,
       jsHeapSizeLimit: memory.jsHeapSizeLimit
-    };
+    }
 
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
@@ -165,7 +165,7 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
       downlink: connection.downlink,
       rtt: connection.rtt,
       saveData: connection.saveData
-    };
+    }
 
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
@@ -259,5 +259,5 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
     getCurrentMetrics,
     markPerformance,
     measurePerformance
-  };
+  }
 };

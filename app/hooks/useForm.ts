@@ -44,7 +44,7 @@ export function useForm<T extends Record<string, any>>({
     e.preventDefault();
     
     // Validate form
-    const validationErrors = validate ? validate(formState.data) : {};
+    const validationErrors = validate ? validate(formState.data) : {}
     if (Object.keys(validationErrors).length > 0) {
       setFormState(prev => ({
         ...prev,
@@ -102,5 +102,5 @@ export function useForm<T extends Record<string, any>>({
     handleInputChange,
     handleSubmit,
     resetForm,
-  };
+  }
 }

@@ -61,12 +61,11 @@ const Page: React.FC = () => {
 
   return (
     <>
-      <SEOOptimizer
-        title="Pricing - ZionTechGroup"
+      <SEOOptimizer title="Pricing - ZionTechGroup"
         description="Transparent pricing for AI solutions and technology services. Choose the plan that fits your business needs."
         keywords={['pricing', 'AI solutions pricing', 'technology services', 'plans']}
         canonicalUrl="https://ziontechgroup.com/pricing"
-      />
+       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         <main className="pt-24 pb-16 px-4">

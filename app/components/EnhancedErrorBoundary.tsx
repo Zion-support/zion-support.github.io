@@ -20,7 +20,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null
-    };
+    }
   }
 
   static getDerivedStateFromError(error: Error): State {
@@ -28,7 +28,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       hasError: true,
       error,
       errorInfo: null
-    };
+    }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {

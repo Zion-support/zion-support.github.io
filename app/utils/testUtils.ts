@@ -10,7 +10,7 @@
  */
 export const wait = (ms: number): Promise<void> => {
   return new Promise(resolve => setTimeout(resolve, ms));
-};
+}
 
 /**
  * Wait for a condition to be true
@@ -173,14 +173,14 @@ export const mockConsole = () => {
     warn: jest.fn(),
     info: jest.fn(),
     debug: jest.fn()
-  };
+  }
 
   Object.assign(console, mockConsole);
 
   return {
     restore: () => Object.assign(console, originalConsole),
     ...mockConsole
-  };
+  }
 };
 
 /**
@@ -190,7 +190,7 @@ export const createMockComponent = (displayName: string) => {
   const MockComponent = () => null;
   MockComponent.displayName = displayName;
   return MockComponent;
-};
+}
 
 /**
  * Mock IntersectionObserver
@@ -244,4 +244,4 @@ export const mockMatchMedia = (matches = true) => {
 export const cleanupMocks = () => {
   jest.clearAllMocks();
   jest.restoreAllMocks();
-};
+}
