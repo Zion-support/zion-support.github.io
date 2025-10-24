@@ -3,28 +3,28 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { 
-  ChevronDown, 
-  Mail, 
-  Menu, 
-  X, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Code, 
-  BarChart, 
-  ArrowRight, 
-  Target, 
-  Smartphone, 
-  TrendingUp, 
-  Settings, 
-  FileText, 
-  MessageCircle, 
-  DollarSign, 
-  Box, 
-  Link as LinkIcon, 
-  Mic, 
-  Workflow, 
-  Eye, 
+  ChevronDown,
+  Mail,
+  Menu,
+  X,
+  Brain,
+  Cloud,
+  Shield,
+  Code
+  BarChart
+  ArrowRight
+  Target
+  Smartphone
+  TrendingUp
+  Settings
+  FileText
+  MessageCircle
+  DollarSign
+  Box
+  Link as LinkIcon
+  Mic
+  Workflow
+  Eye
   Wifi
 } from 'lucide-react';
 
@@ -52,31 +52,48 @@ const Navigation: React.FC = () => {
   }, []);
 
   const aiServices = [
-    { name: 'AI Analytics & BI', url: '/ai-analytics', icon: BarChart, description: 'Business intelligence' },
-    { name: 'AI Automation', url: '/ai-automation', icon: Workflow, description: 'Process automation' },
-    { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder', icon: MessageCircle, description: 'Conversational AI' },
-    { name: 'AI Content Generation', url: '/ai-content-generation', icon: FileText, description: 'Automated content' },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', icon: Shield, description: 'AI security' },
-    { name: 'Computer Vision', url: '/computer-vision', icon: Eye, description: 'Image recognition' },
-    { name: 'Predictive Analytics', url: '/predictive-analytics', icon: TrendingUp, description: 'Forecasting' },
+    { name: 'AI Analytics & BI', url: '/ai-analytics', icon: BarChart, description: 'Business intelligence' }
+    ,
+    { name: 'AI Automation', url: '/ai-automation', icon: Workflow, description: 'Process automation' }
+    ,
+    { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder', icon: MessageCircle, description: 'Conversational AI' }
+    ,
+    { name: 'AI Content Generation', url: '/ai-content-generation', icon: FileText, description: 'Automated content' }
+    ,
+    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', icon: Shield, description: 'AI security' }
+    ,
+    { name: 'Computer Vision', url: '/computer-vision', icon: Eye, description: 'Image recognition' }
+    ,
+    { name: 'Predictive Analytics', url: '/predictive-analytics', icon: TrendingUp, description: 'Forecasting' }
+    ,
     { name: 'Speech & Voice AI', url: '/ai-voice-assistant', icon: Mic, description: 'Voice technology' }
   ];
 
   const itServices = [
-    { name: 'Web Development', url: '/web-development', icon: Code, description: 'Custom websites' },
-    { name: 'Mobile Development', url: '/mobile-development', icon: Smartphone, description: 'iOS & Android apps' },
-    { name: 'Cloud Migration', url: '/cloud-migration', icon: Cloud, description: 'Cloud solutions' },
-    { name: 'Cybersecurity', url: '/cybersecurity', icon: Shield, description: 'Security services' },
-    { name: 'DevOps', url: '/devops', icon: Settings, description: 'Development operations' },
-    { name: 'Data Analytics', url: '/data-analytics', icon: BarChart, description: 'Data insights' },
-    { name: 'IoT Solutions', url: '/iot-solutions', icon: Wifi, description: 'Internet of Things' },
+    { name: 'Web Development', url: '/web-development', icon: Code, description: 'Custom websites' }
+    ,
+    { name: 'Mobile Development', url: '/mobile-development', icon: Smartphone, description: 'iOS & Android apps' }
+    ,
+    { name: 'Cloud Migration', url: '/cloud-migration', icon: Cloud, description: 'Cloud solutions' }
+    ,
+    { name: 'Cybersecurity', url: '/cybersecurity', icon: Shield, description: 'Security services' }
+    ,
+    { name: 'DevOps', url: '/devops', icon: Settings, description: 'Development operations' }
+    ,
+    { name: 'Data Analytics', url: '/data-analytics', icon: BarChart, description: 'Data insights' }
+    ,
+    { name: 'IoT Solutions', url: '/iot-solutions', icon: Wifi, description: 'Internet of Things' }
+    ,
     { name: 'Blockchain', url: '/blockchain', icon: LinkIcon, description: 'Blockchain technology' }
   ];
 
   const microSaasServices = [
-    { name: 'AI Project Management Pro', url: '/ai-project-management-pro', icon: Target, description: 'AI-powered project management' },
-    { name: 'AI Financial Analytics Pro', url: '/ai-financial-analytics-pro', icon: DollarSign, description: 'Advanced financial analytics' },
-    { name: 'AI Email Automation', url: '/ai-email-automation', icon: Mail, description: 'Automated email marketing' },
+    { name: 'AI Project Management Pro', url: '/ai-project-management-pro', icon: Target, description: 'AI-powered project management' }
+    ,
+    { name: 'AI Financial Analytics Pro', url: '/ai-financial-analytics-pro', icon: DollarSign, description: 'Advanced financial analytics' }
+    ,
+    { name: 'AI Email Automation', url: '/ai-email-automation', icon: Mail, description: 'Automated email marketing' }
+    ,
     { name: 'AI 3D Model Generator', url: '/ai-3d-model-generator', icon: Box, description: '3D model generation' }
   ];
 
@@ -205,7 +222,8 @@ const Navigation: React.FC = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {isOpen && (
+        ,
+    { isOpen && (
           <div className="lg:hidden bg-white border-t border-gray-200 py-4">
             <div className="space-y-4">
               <Link

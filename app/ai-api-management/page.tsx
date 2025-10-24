@@ -8,16 +8,19 @@ import { CheckCircle, ArrowRight, Zap, Shield, Users, BarChart3 } from 'lucide-r
 const AIApiManagementPage: React.FC = () => {
   const features = [
     {
-      icon: Shield,
-      title: 'API Security',
-      description: 'Comprehensive API security with authentication, authorization, and threat protection.',
+      icon: Shield
+      ,
+      title: 'API Security'
+      ,
+      description: 'Comprehensive API security with authentication, authorization, and threat protection.'
       benefits: ['OAuth 2.0', 'API keys', 'Rate limiting', 'Threat detection']
-    },
-    {
-      icon: BarChart3,
-      title: 'Analytics & Monitoring',
-      description: 'Real-time API analytics and performance monitoring.',
-  
+    }
+    ,
+    { icon: BarChart3
+      ,
+      title: 'Analytics & Monitoring'
+      ,
+      description: 'Real-time API analytics and performance monitoring.'
     }
   ];
 
@@ -27,7 +30,7 @@ const AIApiManagementPage: React.FC = () => {
         <title>AI API Management - Zion Tech Group | Intelligent API Solutions</title>
         <meta name="description" content="Manage your APIs with AI-powered tools. Security, monitoring, rate limiting, and developer portal solutions." />
         <meta name="keywords" content="API management, API security, API monitoring, rate limiting, developer portal" />
-      
+      </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />

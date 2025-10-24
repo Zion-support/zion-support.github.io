@@ -79,9 +79,9 @@ export default class ErrorBoundary extends React.Component<ErrorBoundaryProps, E
     if (typeof window !== 'undefined') {
       // You can integrate with error monitoring services like Sentry here
       console.error('Error details:', {
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
+        message: error.message
+        stack: error.stack
+        componentStack: errorInfo.componentStack
         timestamp: new Date().toISOString()
       })
     }

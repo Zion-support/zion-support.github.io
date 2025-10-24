@@ -7,27 +7,35 @@ import { CheckCircle, Shield, Brain, BarChart, Target } from 'lucide-react';
 const CompliancePage: React.FC = () => {
   const features = [
     {
-      icon: Shield,
-      title: 'Regulatory Compliance',
-      description: 'Ensure your business meets all regulatory requirements with our comprehensive compliance solutions.',
+      icon: Shield
+      ,
+      title: 'Regulatory Compliance'
+      ,
+      description: 'Ensure your business meets all regulatory requirements with our comprehensive compliance solutions.'
       benefits: ['GDPR compliance', 'SOX compliance', 'HIPAA compliance', 'Industry standards']
-    },
-    {
-      icon: Brain,
-      title: 'AI-Powered Analysis',
-      description: 'Advanced AI algorithms provide intelligent insights and recommendations for compliance monitoring.',
+    }
+    ,
+    { icon: Brain
+      ,
+      title: 'AI-Powered Analysis'
+      ,
+      description: 'Advanced AI algorithms provide intelligent insights and recommendations for compliance monitoring.'
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time compliance data visualization.',
+    }
+    ,
+    { icon: BarChart
+      ,
+      title: 'Advanced Analytics'
+      ,
+      description: 'Comprehensive analytics dashboard with real-time compliance data visualization.'
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific compliance goals and objectives with precision and accuracy.',
+    }
+    ,
+    { icon: Target
+      ,
+      title: 'Precision Targeting'
+      ,
+      description: 'Target specific compliance goals and objectives with precision and accuracy.'
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     }
   ];

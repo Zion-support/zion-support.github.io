@@ -62,14 +62,13 @@ interface TestRunnerProps {
 }
 
 const TestRunner: React.FC<TestRunnerProps> = ({
-  config,
-  onTestComplete,
-  onPerformanceUpdate,
-  onCoverageUpdate,
+  config
+  onTestComplete
+  onPerformanceUpdate
+  onCoverageUpdate
 }) => {
   const runTests = useCallback(async () => {
     const results: TestSuite[] = [];
-    
     try {
       // Run performance tests
       if (config.enablePerformance) {
@@ -106,62 +105,61 @@ const TestRunner: React.FC<TestRunnerProps> = ({
     const endMemory = (performance as any).memory?.usedJSHeapSize || 0;
     
     return {
-      renderTime: endTime - startTime,
-      memoryUsage: endMemory - startMemory,
-      timestamp: new Date().toISOString(),
+      renderTime: endTime - startTime
+      memoryUsage: endMemory - startMemory
+      timestamp: new Date().toISOString()
     };
   };
 
   const measureCoverage = async (): Promise<CoverageMetrics> => {
     // Simulate coverage measurement
     return {
-      statements: Math.floor(Math.random() * 100),
-      branches: Math.floor(Math.random() * 100),
-      functions: Math.floor(Math.random() * 100),
-      lines: Math.floor(Math.random() * 100),
+      statements: Math.floor(Math.random() * 100)
+      branches: Math.floor(Math.random() * 100)
+      functions: Math.floor(Math.random() * 100)
+      lines: Math.floor(Math.random() * 100)
     };
   };
 
   const runAccessibilityTests = async (): Promise<TestSuite> => {
     const tests: TestResult[] = [];
-    
     // Check for alt text on images
     const images = document.querySelectorAll('img');
     const imagesWithAlt = document.querySelectorAll('img[alt]');
     
     tests.push({
-      name: 'Images have alt text',
-      status: images.length === imagesWithAlt.length ? 'passed' : 'failed',
-      duration: 0,
-      error: images.length !== imagesWithAlt.length ? 'Some images are missing alt text' : undefined,
+      name: 'Images have alt text'
+      status: images.length === imagesWithAlt.length ? 'passed' : 'failed'
+      duration: 0
+      error: images.length !== imagesWithAlt.length ? 'Some images are missing alt text' : undefined
     });
 
     // Check for heading structure
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     tests.push({
-      name: 'Proper heading structure',
-      status: headings.length > 0 ? 'passed' : 'failed',
-      duration: 0,
-      error: headings.length === 0 ? 'No headings found' : undefined,
+      name: 'Proper heading structure'
+      status: headings.length > 0 ? 'passed' : 'failed'
+      duration: 0
+      error: headings.length === 0 ? 'No headings found' : undefined
     });
 
     // Check for keyboard navigation
     const focusableElements = document.querySelectorAll('button, input, select, textarea, a[href]');
     tests.push({
-      name: 'Focusable elements present',
-      status: focusableElements.length > 0 ? 'passed' : 'failed',
-      duration: 0,
-      error: focusableElements.length === 0 ? 'No focusable elements found' : undefined,
+      name: 'Focusable elements present'
+      status: focusableElements.length > 0 ? 'passed' : 'failed'
+      duration: 0
+      error: focusableElements.length === 0 ? 'No focusable elements found' : undefined
     });
 
     const passedTests = tests.filter(test => test.status === 'passed').length;
     const totalTests = tests.length;
 
     return {
-      name: 'Accessibility Tests',
-      tests,
-      duration: 0,
-      status: passedTests === totalTests ? 'passed' : passedTests > 0 ? 'partial' : 'failed',
+      name: 'Accessibility Tests'
+      tests
+      duration: 0
+      status: passedTests === totalTests ? 'passed' : passedTests > 0 ? 'partial' : 'failed'
     };
   };
 

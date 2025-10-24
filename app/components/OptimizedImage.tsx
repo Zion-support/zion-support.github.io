@@ -16,14 +16,14 @@ interface OptimizedImageProps {
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
-  alt,
-  width = 800,
-  height = 600,
-  className = '',
-  priority = false,
-  quality = 75,
-  placeholder = 'empty',
+  src
+  alt
+  width = 800
+  height = 600
+  className = ''
+  priority = false
+  quality = 75
+  placeholder = 'empty'
   blurDataURL
 }) => {
   return (

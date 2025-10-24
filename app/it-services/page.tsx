@@ -6,64 +6,68 @@ import { CheckCircle, ArrowRight } from "lucide-react";
 const ITServicesPage: React.FC = () => {
   const services = [
   {
-      icon: 'Cloud',
-    title: "Cloud Solutions",
-      description: "Scalable cloud infrastructure for modern businesses",
+      icon: 'Cloud'
+    title: "Cloud Solutions"
+      ,
+      description: "Scalable cloud infrastructure for modern businesses"
     features: [
-        "AWS/Azure/GCP Migration",
-        "Cloud Architecture Design",
-        "Cost Optimization",
+        "AWS/Azure/GCP Migration"
+        "Cloud Architecture Design"
+        "Cost Optimization"
     "24/7 Monitoring"
-      ],
+      ]
       price: "Starting at $2,000"
-},
-  {
-    icon: 'Shield',
-    title: "Cybersecurity",
-      description: "Protect your business from evolving threats",
+}
+  ,
+    { icon: 'Shield'
+    title: "Cybersecurity"
+      ,
+      description: "Protect your business from evolving threats"
     features: [
-        "Security Audits",
-        "Threat Detection",
-        "Compliance Management",
+        "Security Audits"
+        "Threat Detection"
+        "Compliance Management"
     "Incident Response"
-      ],
+      ]
       price: "Starting at $3,500"
-},
-  {
-    icon: 'Server',
-    title: "DevOps Services",
-      description: "Streamline development and deployment processes",
+}
+  ,
+    { icon: 'Server'
+    title: "DevOps Services"
+      ,
+      description: "Streamline development and deployment processes"
     features: [
-        "CI/CD Pipeline Setup",
-        "Infrastructure as Code",
-        "Container Orchestration",
+        "CI/CD Pipeline Setup"
+        "Infrastructure as Code"
+        "Container Orchestration"
     "Performance Monitoring"
-      ],
+      ]
       price: "Starting at $4,000"
-},
-  {
-    icon: 'Database',
-    title: "Data Analytics",
-      description: "Turn your data into actionable insights",
+}
+  ,
+    { icon: 'Database'
+    title: "Data Analytics"
+      ,
+      description: "Turn your data into actionable insights"
     features: [
-        "Data Warehousing",
-        "Business Intelligence",
-        "Real-time Dashboards",
+        "Data Warehousing"
+        "Business Intelligence"
+        "Real-time Dashboards"
     "Predictive Analytics"
-      ],
+      ]
       price: "Starting at $5,000"
     }
   ]
   const technologies = [
-    "AWS", "Azure", "Google Cloud", "Docker", "Kubernetes", "Terraform",
-    "Jenkins", "GitLab CI", "Prometheus", "Grafana", "Elasticsearch",
-    "PostgreSQL", "MongoDB", "Redis", "Apache Kafka", "React", "Node.js",
+    "AWS", "Azure", "Google Cloud", "Docker", "Kubernetes", "Terraform"
+    "Jenkins", "GitLab CI", "Prometheus", "Grafana", "Elasticsearch"
+    "PostgreSQL", "MongoDB", "Redis", "Apache Kafka", "React", "Node.js"
     "Python", "Go", "Rust", "TypeScript"
   ]
   return (
     <div className="min-h-screenbg-gradient-to-brfrom-gray-50to-blue-50">
       {/* Hero Section */}
-      <section className="relativepy-20px-4overflow-hidden">
+        <section className="relativepy-20px-4overflow-hidden">
         <div className="absoluteinset-0bg-gradient-to-rfrom-emerald-600/20 to-blue-600/20"></div>
         <div className="relativemax-w-7xl mx-autotext-center">
           <h1 className="text-4xlmd:text-6xlfont-bold text-gray-900 mb-6">
@@ -84,7 +88,7 @@ const ITServicesPage: React.FC = () => {
         </div>
       </section>
       {/* Services Grid */}
-      <section className="py-20px-4">
+        <section className="py-20px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xlmd:text-4xl font-bold text-gray-900 mb-4">
@@ -120,7 +124,7 @@ const ITServicesPage: React.FC = () => {
         </div>
       </section>
       {/* Technologies Section */}
-      <section className="py-20px-4bg-white/5">
+        <section className="py-20px-4bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xlmd:text-4xl font-bold text-gray-900 mb-4">
@@ -140,7 +144,7 @@ const ITServicesPage: React.FC = () => {
         </div>
       </section>
       {/* Why Choose Us Section */}
-      <section className="py-20px-4">
+        <section className="py-20px-4">
         <div className="max-w-7xl mx-auto">
           <div className="gridgrid-cols-1lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -203,7 +207,7 @@ const ITServicesPage: React.FC = () => {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20px-4bg-gradient-to-rfrom-emerald-600 to-blue-600">
+        <section className="py-20px-4bg-gradient-to-rfrom-emerald-600 to-blue-600">
         <div className="max-w-4xlmx-autotext-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Transform Your IT Infrastructure Today

@@ -8,11 +8,16 @@ import { Calculator, BarChart, FileText, Shield, Zap, CheckCircle } from 'lucide
 
 const AIAccountingAssistantPage: React.FC = () => {
   const features = [
-    { icon: Calculator, title: 'Automated Bookkeeping', description: 'AI-powered automated bookkeeping and transaction categorization.' },
-    { icon: BarChart, title: 'Financial Analytics', description: 'Advanced financial reporting and analytics with AI insights.' },
-    { icon: FileText, title: 'Tax Preparation', description: 'Automated tax preparation and compliance management.' },
-    { icon: Shield, title: 'Audit Trail', description: 'Complete audit trail and compliance tracking for financial records.' },
-    { icon: Zap, title: 'Invoice Processing', description: 'Automated invoice processing and payment tracking.' },
+    { icon: Calculator, title: 'Automated Bookkeeping', description: 'AI-powered automated bookkeeping and transaction categorization.' }
+    ,
+    { icon: BarChart, title: 'Financial Analytics', description: 'Advanced financial reporting and analytics with AI insights.' }
+    ,
+    { icon: FileText, title: 'Tax Preparation', description: 'Automated tax preparation and compliance management.' }
+    ,
+    { icon: Shield, title: 'Audit Trail', description: 'Complete audit trail and compliance tracking for financial records.' }
+    ,
+    { icon: Zap, title: 'Invoice Processing', description: 'Automated invoice processing and payment tracking.' }
+    ,
     { icon: CheckCircle, title: 'Compliance', description: 'Ensure compliance with accounting standards and regulations.' }
   ];
 

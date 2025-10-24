@@ -7,24 +7,32 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const FuturisticServiceCardPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
+      icon: Brain
+      ,
+      title: 'AI-Powered Solutions'
+      ,
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+    }
+    ,
+    { icon: Zap
+      ,
+      title: 'High Performance'
+      ,
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
+    }
+    ,
+    { icon: Shield
+      ,
+      title: 'Enterprise Security'
+      ,
+      description: 'Bank-level security with encryption and compliance standards'
+    }
+    ,
+    { icon: Globe
+      ,
+      title: 'Global Reach'
+      ,
+      description: 'Worldwide deployment and support for international businesses'
     }
   ];
 
@@ -41,7 +49,8 @@ import { ArrowRight, CheckCircle } from 'lucide-react';
 
 interface FuturisticServiceCardProps {
   title: string;
-  description: string;
+  ,
+      description: string;
   features: string[];
 <<<<<<< HEAD
   price: string;
@@ -53,17 +62,13 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-
-    '24/7 technical support',
-
-    'Easy integration with existing systems',
-
-    'Cost-effective pricing plans',
-
+    'Advanced AI technology integration'
+    'Real-time processing and analytics'
+    'Enterprise-grade security and compliance'
+    'Scalable and flexible solutions'
+    '24/7 technical support'
+    'Easy integration with existing systems'
+    'Cost-effective pricing plans'
     'Proven track record of success'
   ]
 return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
@@ -72,7 +77,8 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
-      {/* Hero Section */} <section className="py-20 px-4">
+      {/* Hero Section */}
+        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
@@ -86,7 +92,7 @@ return (
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       {/* Hero Section */}
-      <section className="py-20 px-4">
+        <section className="py-20 px-4">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
@@ -105,7 +111,7 @@ return (
             <p>Transform your business with our advanced futuristicservicecard solutions.;</p>
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button>Get Started;</button>
                 <ArrowRight>
               </button>
@@ -114,7 +120,7 @@ return (
             </div>
           </div>
         </div>
-  ),
+  )
 =======
   price?: string;
   priceDescription?: string;
@@ -126,15 +132,15 @@ return (
 }
 
 const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
-  title,
-  description,
-  features,
-  price,
-  priceDescription,
-  icon,
-  gradient = 'from-purple-500 to-blue-600',
-  onClick,
-  isPopular = false,
+  title
+  description
+  features
+  price
+  priceDescription
+  icon
+  gradient = 'from-purple-500 to-blue-600'
+  onClick
+  isPopular = false
 }) => {
   return (
     <div className={`relative group ${isPopular ? 'scale-105' : ''}`}>
@@ -153,13 +159,15 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
         {/* Content */}
         <div className="relative z-10">
           {/* Icon */}
-          {icon && (
+          ,
+    { icon && (
             <div className={`w-16 h-16 bg-gradient-to-r ${gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
               {icon}
             </div>
           )}
           
-          {/* Title */}
+          ,
+    { /* Title */}
           <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-blue-400 group-hover:bg-clip-text transition-all">
             {title}
           </h3>
@@ -180,7 +188,8 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
           </ul>
           
           {/* Price */}
-          {price && (
+          ,
+    { price && (
             <div className="mb-6">
               <div className="text-3xl font-bold text-white mb-1">
                 {price}
@@ -193,7 +202,8 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
             </div>
           )}
           
-          {/* Button */}
+          ,
+    { /* Button */}
           <button
             onClick={onClick}
             className={`w-full bg-gradient-to-r ${gradient} text-white font-semibold py-3 px-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center group`}

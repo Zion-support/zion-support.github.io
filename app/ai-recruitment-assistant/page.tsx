@@ -5,25 +5,46 @@ import {Users, Search, Brain, Target, CheckCircle, ArrowRight, Zap, Shield, BarC
 const AIRecruitmentAssistantPage: React.FC = () => {
   const features = [
     {
-      icon: Search,
-      title: 'Smart Candidate Matching',
-      description: 'AI-powered matching algorithm that finds the best candidates based on skills, experience, and cultural fit.'},
-    {icon: Brain,
-      title: 'Resume Analysis',
-      description: 'Automated resume screening and analysis to identify top talent quickly and efficiently.',},
-    {icon: Target,
-      title: 'Job Description Optimization',
-      description: 'AI-generated job descriptions that attract the right candidates and improve application quality.',},
-    {icon: Users,
-      title: 'Interview Scheduling',
-      description: 'Automated interview scheduling and coordination to streamline the hiring process.',},
-    {icon: BarChart,
-      title: 'Analytics & Insights',
-      description: 'Comprehensive analytics on hiring metrics, candidate pipeline, and recruitment performance.'},
-    {icon: Zap,
-      title: 'Automated Screening',
+      icon: Search
+      ,
+      title: 'Smart Candidate Matching'
+      ,
+      description: 'AI-powered matching algorithm that finds the best candidates based on skills, experience, and cultural fit.'}
+    ,
+    { icon: Brain
+      ,
+      title: 'Resume Analysis'
+      ,
+      description: 'Automated resume screening and analysis to identify top talent quickly and efficiently.',}
+    ,
+    { icon: Target
+      ,
+      title: 'Job Description Optimization'
+      ,
+      description: 'AI-generated job descriptions that attract the right candidates and improve application quality.',}
+    ,
+    { icon: Users
+      ,
+      title: 'Interview Scheduling'
+      ,
+      description: 'Automated interview scheduling and coordination to streamline the hiring process.',}
+    ,
+    { icon: BarChart
+      ,
+      title: 'Analytics & Insights'
+      ,
+      description: 'Comprehensive analytics on hiring metrics, candidate pipeline, and recruitment performance.'}
+    ,
+    { icon: Zap
+      ,
+      title: 'Automated Screening'
+      ,
       description: 'AI-powered initial screening questions and assessments to filter candidates effectively.',}]
-  return(<React.Fragment>)</React.Fragment>
+  return (
+    <>
+      <div>Content</div>
+    </>
+  );
       
     <>
       <Helmet>
@@ -38,7 +59,7 @@ const AIRecruitmentAssistantPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">,</h1>
-                AI Recruitment Assistant,
+                AI Recruitment Assistant
   </
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your hiring process with AI-powered recruitment tools that find, screen, and hire the best candidates faster and more efficiently.</p>
               </p>

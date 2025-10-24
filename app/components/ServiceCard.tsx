@@ -5,35 +5,43 @@ import React from 'react';
 const ServiceCardPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
+      icon: Brain
+      ,
+      title: 'AI-Powered Solutions'
+      ,
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+    }
+    ,
+    { icon: Zap
+      ,
+      title: 'High Performance'
+      ,
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
+    }
+    ,
+    { icon: Shield
+      ,
+      title: 'Enterprise Security'
+      ,
+      description: 'Bank-level security with encryption and compliance standards'
+    }
+    ,
+    { icon: Globe
+      ,
+      title: 'Global Reach'
+      ,
+      description: 'Worldwide deployment and support for international businesses'
     }
   ];
 
   const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
+    'Advanced AI technology integration'
+    'Real-time processing and analytics'
+    'Enterprise-grade security and compliance'
+    'Scalable and flexible solutions'
+    '24/7 technical support'
+    'Easy integration with existing systems'
+    'Cost-effective pricing plans'
     'Proven track record of success'
   ];
 
@@ -46,7 +54,7 @@ const ServiceCardPage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -74,7 +82,7 @@ const ServiceCardPage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section$1>
+        <section$1>
         <div$2>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -100,7 +108,7 @@ const ServiceCardPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section$1>
+        <section$1>
         <div$2>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -123,7 +131,7 @@ const ServiceCardPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section$1>
+        <section$1>
         <div$2>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -147,25 +155,25 @@ const ServiceCardPage: React.FC = () => {
       </section>
 import { ArrowRight, CheckCircle } from 'lucide-react';
 interface ServiceCardProps {title: string;,}
-  description: string;,
-  features: string[],
+  description: string;
+  features: string[]
   price?: string;
   popular?: boolean;
-  onSelect?: () => void,
-  className?: string;}const ServiceCard: React.FC<ServiceCardProps> = ({,
-  title,
-  description,
-  features,
-  price,
-  popular = false,
-  onSelect,
+  onSelect?: () => void
+  className?: string;}const ServiceCard: React.FC<ServiceCardProps> = ({
+  title
+  description
+  features
+  price
+  popular = false
+  onSelect
   className = ''}) => {return(<div className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: bg-white/10 transition-all duration-300 group ${className,)}${popular ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : ''}`}>{popular && (</div>
         <div className="flex items-center gap-2 mb-4">
           <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
           <span className="text-purple-400 text-sm font-semibold">Most Popular</span>
         </div>
       )} <div className="mb-4">
-        <h3 className="text-xl font-bold text-white mb-2 group-hover: text-purple-400 transition-colors">,
+        <h3 className="text-xl font-bold text-white mb-2 group-hover: text-purple-400 transition-colors">
           {title} </h3>
         <p className="text-gray-300 text-sm">{description</p>}</p>
       </div>

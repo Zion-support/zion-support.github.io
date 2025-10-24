@@ -8,15 +8,15 @@ interface PerformanceOptimizerProps {
 }
 
 const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  children,
-  enableOptimizations = true,
+  children
+  enableOptimizations = true
 }) => {
   const [isOptimized, setIsOptimized] = useState(false);
   const [optimizationMetrics, setOptimizationMetrics] = useState({
-    imagesOptimized: 0,
-    scriptsOptimized: 0,
-    cssOptimized: 0,
-    totalSavings: 0,
+    imagesOptimized: 0
+    scriptsOptimized: 0
+    cssOptimized: 0
+    totalSavings: 0
   });
 
   const optimizeImages = useCallback(() => {
@@ -85,10 +85,10 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     const cssOptimized = optimizeCSS();
 
     setOptimizationMetrics({
-      imagesOptimized,
-      scriptsOptimized,
-      cssOptimized,
-      totalSavings: imagesOptimized + scriptsOptimized + cssOptimized,
+      imagesOptimized
+      scriptsOptimized
+      cssOptimized
+      totalSavings: imagesOptimized + scriptsOptimized + cssOptimized
     });
 
     setIsOptimized(true);
@@ -124,19 +124,20 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   return (
     <div className="performance-optimized" data-optimized={isOptimized}>
       {children}
-      {process.env.NODE_ENV === 'development' && (
+      ,
+    { process.env.NODE_ENV === 'development' && (
         <div
           className="optimization-debug"
           style={{
-            position: 'fixed',
-            bottom: '10px',
-            right: '10px',
-            background: 'rgba(0,0,0,0.8)',
-            color: 'white',
-            padding: '10px',
-            borderRadius: '5px',
-            fontSize: '12px',
-            zIndex: 1000,
+            position: 'fixed'
+            bottom: '10px'
+            right: '10px'
+            background: 'rgba(0,0,0,0.8)'
+            color: 'white'
+            padding: '10px'
+            borderRadius: '5px'
+            fontSize: '12px'
+            zIndex: 1000
           }}
         >
           <div>Images: {optimizationMetrics.imagesOptimized}</div>
@@ -161,15 +162,15 @@ interface PerformanceOptimizerProps {
 }
 
 const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  children,
-  enableOptimizations = true,
+  children
+  enableOptimizations = true
 }) => {
   const [isOptimized, setIsOptimized] = useState(false);
   const [optimizationMetrics, setOptimizationMetrics] = useState({
-    imagesOptimized: 0,
-    scriptsOptimized: 0,
-    cssOptimized: 0,
-    totalSavings: 0,
+    imagesOptimized: 0
+    scriptsOptimized: 0
+    cssOptimized: 0
+    totalSavings: 0
   });
 
   const optimizeImages = useCallback(() => {
@@ -238,10 +239,10 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     const cssOptimized = optimizeCSS();
 
     setOptimizationMetrics({
-      imagesOptimized,
-      scriptsOptimized,
-      cssOptimized,
-      totalSavings: imagesOptimized + scriptsOptimized + cssOptimized,
+      imagesOptimized
+      scriptsOptimized
+      cssOptimized
+      totalSavings: imagesOptimized + scriptsOptimized + cssOptimized
     });
 
     setIsOptimized(true);
@@ -277,19 +278,20 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   return (
     <div className="performance-optimized" data-optimized={isOptimized}>
       {children}
-      {process.env.NODE_ENV === 'development' && (
+      ,
+    { process.env.NODE_ENV === 'development' && (
         <div
           className="optimization-debug"
           style={{
-            position: 'fixed',
-            bottom: '10px',
-            right: '10px',
-            background: 'rgba(0,0,0,0.8)',
-            color: 'white',
-            padding: '10px',
-            borderRadius: '5px',
-            fontSize: '12px',
-            zIndex: 1000,
+            position: 'fixed'
+            bottom: '10px'
+            right: '10px'
+            background: 'rgba(0,0,0,0.8)'
+            color: 'white'
+            padding: '10px'
+            borderRadius: '5px'
+            fontSize: '12px'
+            zIndex: 1000
           }}
         >
           <div>Images: {optimizationMetrics.imagesOptimized}</div>

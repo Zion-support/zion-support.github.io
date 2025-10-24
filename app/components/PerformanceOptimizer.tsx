@@ -40,9 +40,9 @@ const PerformanceOptimizer: React.FC = () => {
       const isSlowConnection = connection ? connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g' : false
 
       setMetrics({
-        loadTime,
-        renderTime,
-        memoryUsage,
+        loadTime
+        renderTime
+        memoryUsage
         isSlowConnection
       })
 
@@ -66,7 +66,7 @@ const PerformanceOptimizer: React.FC = () => {
 
       // Preload critical resources
       const criticalResources = [
-        '/fonts/inter.woff2',
+        '/fonts/inter.woff2'
         '/css/critical.css'
       ]
 

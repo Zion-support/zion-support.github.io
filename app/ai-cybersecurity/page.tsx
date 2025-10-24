@@ -5,10 +5,12 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings} from 'lucide-react';
 const AiCybersecurityPage: React.FC = () => {
-,
-    {icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+
+    {icon: BarChart
+      ,
+      title: 'Advanced Analytics'
+      ,
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
   ]
 return (
     <>)
@@ -29,7 +31,7 @@ return (
             </h1>
             <p>Advanced AI-powered ai cybersecurity solution for modern businesses.</p>
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button>Get Started;</button>
               </button>
               <button>View Demo,</button>
@@ -55,10 +57,10 @@ return (
               <p>Advanced AI technology that drives results;</p>
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
-                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
-                  <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
+                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>
                     <feature />
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description</p>}</p>
@@ -95,10 +97,10 @@ return (
               <p>Proven results that drive business growth and efficiency;</p>
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => (
-                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
+                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>
                     <CheckCircle />
                   <p className="text-lg text-white font-medium">{benefit</p>}</p>
                 </div>
@@ -137,35 +139,43 @@ return (
 const AICybersecurityPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
+      icon: Brain
+      ,
+      title: 'AI-Powered Solutions'
+      ,
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+    }
+    ,
+    { icon: Zap
+      ,
+      title: 'High Performance'
+      ,
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
+    }
+    ,
+    { icon: Shield
+      ,
+      title: 'Enterprise Security'
+      ,
+      description: 'Bank-level security with encryption and compliance standards'
+    }
+    ,
+    { icon: Globe
+      ,
+      title: 'Global Reach'
+      ,
+      description: 'Worldwide deployment and support for international businesses'
     }
   ];
 
   const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
+    'Advanced AI technology integration'
+    'Real-time processing and analytics'
+    'Enterprise-grade security and compliance'
+    'Scalable and flexible solutions'
+    '24/7 technical support'
+    'Easy integration with existing systems'
+    'Cost-effective pricing plans'
     'Proven track record of success'
   ];
 
@@ -174,7 +184,7 @@ const AICybersecurityPage: React.FC = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -188,7 +198,7 @@ const AICybersecurityPage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -214,7 +224,7 @@ const AICybersecurityPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -237,7 +247,7 @@ const AICybersecurityPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Secure Your Business

@@ -11,26 +11,26 @@ interface OptimizedLoadingSpinnerProps {
 }
 
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({
-  size = 'md',
-  variant = 'spinner',
-  text,
-  className = '',
-  color = 'blue',
+  size = 'md'
+  variant = 'spinner'
+  text
+  className = ''
+  color = 'blue'
   fullScreen = false
 }) => {
   const sizeClasses = {
-    xs: 'h-3 w-3',
-    sm: 'h-4 w-4',
-    md: 'h-6 w-6',
-    lg: 'h-8 w-8',
+    xs: 'h-3 w-3'
+    sm: 'h-4 w-4'
+    md: 'h-6 w-6'
+    lg: 'h-8 w-8'
     xl: 'h-12 w-12'
   };
 
   const colorClasses = {
-    blue: 'border-blue-500',
-    gray: 'border-gray-500',
-    green: 'border-green-500',
-    red: 'border-red-500',
+    blue: 'border-blue-500'
+    gray: 'border-gray-500'
+    green: 'border-green-500'
+    red: 'border-red-500'
     purple: 'border-purple-500'
   };
 
@@ -77,7 +77,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({
                 key={i}
                 className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
                 style={{
-                  height: `${12 + i * 4}px`,
+                  height: `${12 + i * 4}px`
                   animationDelay: `${i * 0.1}s`
                 }}
               />

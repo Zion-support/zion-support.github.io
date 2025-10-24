@@ -8,32 +8,39 @@ import { CheckCircle, Star, ArrowRight, FileText, Image, Video, Music, Globe, Za
 const AIContentGenerationPage: React.FC = () => {
   const features = [
     {
-      icon: FileText,
-      title: 'AI Blog Content Generator',
-      description: 'Advanced AI-powered blog content creation with SEO optimization and brand voice consistency.',
+      icon: FileText
+      ,
+      title: 'AI Blog Content Generator'
+      ,
+      description: 'Advanced AI-powered blog content creation with SEO optimization and brand voice consistency.'
       benefits: ['SEO-optimized content', 'Brand voice consistency', 'Multi-language support', 'Content calendar automation']
-    },
-    {
-      icon: Image,
-      title: 'Visual Content Creation',
-      description: 'Generate stunning images, graphics, and visual content using AI-powered design tools.',
-  
+    }
+    ,
+    { icon: Image
+      ,
+      title: 'Visual Content Creation'
+      ,
+      description: 'Generate stunning images, graphics, and visual content using AI-powered design tools.'
     }
   ]
-  return(<React.Fragment>)</React.Fragment>
+  return (
+    <>
+      <div>Content</div>
+    </>
+  );
       
     }
   ];
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ];
 
-    },
+    }
   ]
   return (
     <>
@@ -42,7 +49,7 @@ const AIContentGenerationPage: React.FC = () => {
         <title>Ai Content Generation - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai content generation solution for modern businesses." />
         <meta name="keywords" content="AI ai content generation, artificial intelligence, ai content generation, AI solutions, intelligent automation" />
-      
+      </Helmet>
 
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">
@@ -69,7 +76,7 @@ const AIContentGenerationPage: React.FC = () => {
       </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -188,7 +195,8 @@ const AIContentGenerationPage: React.FC = () => {
         <meta name="description" content="Advanced content generation powered by AI technology." />
         <meta name="keywords" content="AI content generation, artificial intelligence, content creation, AI solutions, intelligent writing" />
       <Navigation />
-      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">{/* Hero Section */</main>} <section className="relative py-20 px-4 sm: px-6 lg:px-8">,</section>
+      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">{/* Hero Section */</main>}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">,</section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">,</h1>
@@ -201,26 +209,25 @@ const AIContentGenerationPage: React.FC = () => {
                   Get Started;
   </
                 <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover: bg-blue-50 transition-colors">,</button>
-                  Learn More,
-  
+                  Learn More
               </div>
             </div>
         </div>
       </section>
-        {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,<section>
+        {/* Features Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">,<section>
         <div>
           <div>
             <h2>,</h2>
-                Powerful AI Features,
+                Powerful AI Features
   </
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">Discover how our AI platform can revolutionize your business operations.</p>
         {/* Features Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Powerful AI Features,
-  
+                Powerful AI Features
               <p className="text-xl text-gray-600 max-w-3xl mx-auto" /></p>
                 Discover how our AI platform can revolutionize your business operations.
               </p>
@@ -243,7 +250,8 @@ const AIContentGenerationPage: React.FC = () => {
             </div>
         </div>
       </section>
-        {/* CTA Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">,</section>
+        {/* CTA Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">,</section>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,</h2>
               Ready to Transform Your Business?
@@ -251,8 +259,7 @@ const AIContentGenerationPage: React.FC = () => {
             <p className="text-xl text-blue-100 mb-8">Join thousands of businesses already using our AI platform.</p>
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover: bg-gray-100 transition-colors font-semibold">,</button>
-              Start Your Free Trial,
-  
+              Start Your Free Trial
           </div>
             {features.map((feature, index) => (
               <div key={index}className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover: border-blue-400/50 transition-all duration-300 group">,</div>
@@ -271,7 +278,8 @@ const AIContentGenerationPage: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* Benefits Section */} <section className="py-20 px-4">
+      {/* Benefits Section */}
+        <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Page?</h2>
@@ -288,7 +296,8 @@ const AIContentGenerationPage: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* CTA Section */} <section className="py-20 px-4">
+      {/* CTA Section */}
+        <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-gray-300 mb-8">Transform your business with our page solutions today;</p>
@@ -305,7 +314,7 @@ const AIContentGenerationPage: React.FC = () => {
       </section>
       <Footer />
     </React.Fragment>
-  ),
+  )
 };
 
 export default AiContentGenerationPage;
@@ -320,7 +329,7 @@ export default AiContentGenerationPage;
   </h1>
   </main>
       {/* CTA Section */}
-      <section className="py-20 px-4">
+        <section className="py-20 px-4">
         </section>< className="$2 />
           </div><h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-gray-300 mb-8">

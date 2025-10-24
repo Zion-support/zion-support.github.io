@@ -8,33 +8,41 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 const AiComputerVisionPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
-    {icon: BarChart,
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-  
+      icon: Brain
+      ,
+      title: 'AI-Powered Intelligence'
+      ,
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']}
+    ,
+    { icon: BarChart
+    }
+    ,
+    { icon: BarChart
+      ,
+      title: 'Advanced Analytics'
+      ,
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
     }
   ]
-  return(<React.Fragment>)</React.Fragment>
+  return (
+    <>
+      <div>Content</div>
+    </>
+  );
       
     }
   ];
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ];
 
-    },
+    }
   ]
   return (
     <>
@@ -42,7 +50,7 @@ const AiComputerVisionPage: React.FC = () => {
         <title>AI Computer Vision - Zion Tech Group</title>
         <meta name="description" content="Transform your business with our AI Computer Vision solutions. Advanced object detection, image analysis, and real-time processing for better insights." />
         <meta name="keywords" content="AI computer vision, object detection, image analysis, deep learning, computer vision AI, visual recognition" />
-      
+      </Helmet>
 
 <title>Ai Computer Vision - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai computer vision solution for modern businesses." />
@@ -164,7 +172,8 @@ const AiComputerVisionPage: React.FC = () => {
         <meta name="description" content="Advanced computer vision solutions powered by AI technology." />
         <meta name="keywords" content="AI computer vision, artificial intelligence, image recognition, AI solutions, intelligent vision" />
       <Navigation />
-      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">{/* Hero Section */</main>} <section className="relative py-20 px-4 sm: px-6 lg:px-8">,</section>
+      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">{/* Hero Section */</main>}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">,</section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">,</h1>
@@ -177,26 +186,25 @@ const AiComputerVisionPage: React.FC = () => {
                   Get Started;
   </
                 <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover: bg-blue-50 transition-colors">,</button>
-                  Learn More,
-  
+                  Learn More
               </div>
             </div>
         </div>
       </section>
-        {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,<section>
+        {/* Features Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">,<section>
         <div>
           <div>
             <h2>,</h2>
-                Powerful AI Features,
+                Powerful AI Features
   </
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">Discover how our AI platform can revolutionize your business operations.</p>
         {/* Features Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
               </div><h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Powerful AI Features,
-  
+                Powerful AI Features
               <p className="text-xl text-gray-600 max-w-3xl mx-auto" /></p>
                 Discover how our AI platform can revolutionize your business operations.
               </p>
@@ -219,7 +227,8 @@ const AiComputerVisionPage: React.FC = () => {
             </div>
         </div>
       </section>
-        {/* CTA Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">,</section>
+        {/* CTA Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">,</section>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,</h2>
               Ready to Transform Your Business?
@@ -227,8 +236,7 @@ const AiComputerVisionPage: React.FC = () => {
             <p className="text-xl text-blue-100 mb-8">Join thousands of businesses already using our AI platform.</p>
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover: bg-gray-100 transition-colors font-semibold">,</button>
-              Start Your Free Trial,
-  
+              Start Your Free Trial
           </div>
             {features.map((feature, index) => (
               <div key={index}className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover: border-blue-400/50 transition-all duration-300 group">,</div>
@@ -247,7 +255,8 @@ const AiComputerVisionPage: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* Benefits Section */} <section className="py-20 px-4">
+      {/* Benefits Section */}
+        <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Page?</h2>
@@ -264,7 +273,8 @@ const AiComputerVisionPage: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* CTA Section */} <section className="py-20 px-4">
+      {/* CTA Section */}
+        <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-gray-300 mb-8">Transform your business with our page solutions today;</p>
@@ -281,7 +291,7 @@ const AiComputerVisionPage: React.FC = () => {
       </section>
       <Footer />
     </React.Fragment>
-  ),
+  )
 };
 
 export default AiComputerVisionPage;
@@ -296,7 +306,7 @@ export default AiComputerVisionPage;
   </h1>
   </main>
       {/* CTA Section */}
-      <section className="py-20 px-4">
+        <section className="py-20 px-4">
         </section>< className="$2 />
           </div><h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-gray-300 mb-8">

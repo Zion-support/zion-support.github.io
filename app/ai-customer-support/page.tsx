@@ -8,96 +8,117 @@ import { MessageCircle, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, S
 const AICustomerSupportPage: React.FC = () => {
   const features = [
     {
-      icon: Bot,
-      title: 'AI-Powered Chatbots',
-      description: 'Intelligent chatbots that understand context, handle complex queries, and provide instant responses 24/7.',
+      icon: Bot
+      ,
+      title: 'AI-Powered Chatbots'
+      ,
+      description: 'Intelligent chatbots that understand context, handle complex queries, and provide instant responses 24/7.'
       benefits: ['99.9% uptime', 'Instant responses', 'Multi-language support', 'Context understanding']
-    },
-    {
-      icon: MessageCircle,
-      title: 'Omnichannel Communication',
-      description: 'Seamless integration across email, chat, phone, and social media platforms.',
-  
+    }
+    ,
+    { icon: MessageCircle
+      ,
+      title: 'Omnichannel Communication'
+      ,
+      description: 'Seamless integration across email, chat, phone, and social media platforms.'
     }
   ];
 
   const benefits = [
-    'Increase customer satisfaction by 95%',
-    'Reduce response time by 90%',
-    'Lower support costs by 70%',
-    'Handle 10x more inquiries',
-    'Enable 24/7 support',
-    'Improve resolution rates',
-    'Scale support operations',
+    'Increase customer satisfaction by 95%'
+    'Reduce response time by 90%'
+    'Lower support costs by 70%'
+    'Handle 10x more inquiries'
+    'Enable 24/7 support'
+    'Improve resolution rates'
+    'Scale support operations'
     'Enhance customer experience'
   ];
 
   const useCases = [
     {
-      title: 'E-commerce Support',
-      description: 'Handle product inquiries, order tracking, and returns with AI assistance',
-      icon: '🛒',
-    },
-    {
-      title: 'Technical Support',
-      description: 'Provide technical assistance and troubleshooting for software and hardware',
-      icon: '🔧',
-    },
-    {
-      title: 'Billing & Payments',
-      description: 'Assist with billing questions, payment issues, and account management',
-      icon: '💳',
-    },
-    {
-      title: 'Product Information',
-      description: 'Answer questions about products, features, and specifications',
-      icon: '📋',
-    },
-    {
-      title: 'Appointment Scheduling',
-      description: 'Help customers schedule appointments and manage bookings',
-      icon: '📅',
-    },
-    {
-      title: 'General Inquiries',
-      description: 'Handle general questions and provide information about services',
-      icon: '❓',
+      title: 'E-commerce Support'
+      ,
+      description: 'Handle product inquiries, order tracking, and returns with AI assistance'
+      icon: '🛒'
+    }
+    ,
+    { title: 'Technical Support'
+      ,
+      description: 'Provide technical assistance and troubleshooting for software and hardware'
+      icon: '🔧'
+    }
+    ,
+    { title: 'Billing & Payments'
+      ,
+      description: 'Assist with billing questions, payment issues, and account management'
+      icon: '💳'
+    }
+    ,
+    { title: 'Product Information'
+      ,
+      description: 'Answer questions about products, features, and specifications'
+      icon: '📋'
+    }
+    ,
+    { title: 'Appointment Scheduling'
+      ,
+      description: 'Help customers schedule appointments and manage bookings'
+      icon: '📅'
+    }
+    ,
+    { title: 'General Inquiries'
+      ,
+      description: 'Handle general questions and provide information about services'
+      icon: '❓'
     }
     const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-    {icon: BarChart,
-  },
-    {
-    icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-    {icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-    {icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-  },
-    {
-    icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-  },
-    {
-    icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+      icon: Brain
+      ,
+      title: 'AI-Powered Intelligence'
+      ,
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
+    {icon: BarChart
+  }
+    ,
+    { icon: BarChart
+      ,
+      title: 'Advanced Analytics'
+      ,
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
+    {icon: Target
+      ,
+      title: 'Precision Targeting'
+      ,
+      description: 'Target specific goals and objectives with precision and accuracy.'
+    {icon: TrendingUp
+      ,
+      title: 'Growth Optimization'
+      ,
+      description: 'Optimize your business growth with data-driven strategies.'
+  }
+    ,
+    { icon: Target
+      ,
+      title: 'Precision Targeting'
+      ,
+      description: 'Target specific goals and objectives with precision and accuracy.'
+  }
+    ,
+    { icon: TrendingUp
+      ,
+      title: 'Growth Optimization'
+      ,
+      description: 'Optimize your business growth with data-driven strategies.'
   }
     ]
 const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology',
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
+    'Gain competitive advantage with advanced technology'
   ]
 return (
     <>)
@@ -116,13 +137,13 @@ return (
         <title>Ai Customer Support - Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      
+      </Helmet>
 
       <Navigation />
 
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full mb-8">
               <MessageCircle className="w-10 h-10 text-white" />
@@ -131,14 +152,15 @@ return (
               AI Customer Support
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your customer support with our AI Customer Support solutions. Intelligent automation, 
+              Transform your customer support with our AI Customer Support solutions. Intelligent automation
               omnichannel communication, and human-AI collaboration for better customer experience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center">
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
-        {/* Hero Section */} <section className="py-20 px-4">
+        {/* Hero Section */}
+        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
@@ -159,7 +181,7 @@ return (
             </h1>
             <p>Advanced AI-powered ai customer support solution for modern businesses.</p>
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button>Get Started;</button>
               </button>
               <button>View Demo,</button>
@@ -171,7 +193,7 @@ return (
                 Get Started
               </button>
               <button></button>
-                View Demo,
+                View Demo
               </button>
             </div>
         </div>
@@ -180,7 +202,8 @@ return (
         {/* Features Section */}
         <section className="py-20 px-4">
         </section>
-        {/* Features Section */} <section className="py-20 px-4">
+        {/* Features Section */}
+        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
@@ -210,7 +233,7 @@ return (
               <p>Advanced AI technology that drives results;</p>
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg mb-4">
@@ -232,7 +255,7 @@ return (
                           </li><CheckCircle>
 
         {/* Use Cases Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -250,119 +273,134 @@ return (
                   <p className="text-gray-300">{useCase.description}</p>
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Chatbots',
-      description: 'Intelligent conversational AI that understands context and provides accurate responses',
+      icon: Brain
+      ,
+      title: 'AI-Powered Chatbots'
+      ,
+      description: 'Intelligent conversational AI that understands context and provides accurate responses'
       details: ['Natural Language Processing', 'Context Awareness', 'Multi-language Support', 'Learning Capabilities']
-    },
-    {
-      icon: MessageCircle,
-      title: 'Multi-Channel Support',
-      description: 'Seamless integration across all customer touchpoints',
+    }
+    ,
+    { icon: MessageCircle
+      ,
+      title: 'Multi-Channel Support'
+      ,
+      description: 'Seamless integration across all customer touchpoints'
       details: ['Live Chat', 'Email Support', 'Social Media', 'Phone Integration']
-    },
-    {
-      icon: Zap,
-      title: 'Instant Response',
-      description: '24/7 automated support with sub-second response times',
+    }
+    ,
+    { icon: Zap
+      ,
+      title: 'Instant Response'
+      ,
+      description: '24/7 automated support with sub-second response times'
       details: ['Real-time Processing', 'Auto-escalation', 'Priority Queuing', 'Smart Routing']
-    },
-    {
-      icon: Shield,
-      title: 'Secure & Compliant',
-      description: 'Enterprise-grade security with full compliance support',
+    }
+    ,
+    { icon: Shield
+      ,
+      title: 'Secure & Compliant'
+      ,
+      description: 'Enterprise-grade security with full compliance support'
       details: ['GDPR Compliant', 'SOC 2 Type II', 'End-to-end Encryption', 'Data Privacy']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive insights into customer interactions and satisfaction',
+    }
+    ,
+    { icon: BarChart
+      ,
+      title: 'Advanced Analytics'
+      ,
+      description: 'Comprehensive insights into customer interactions and satisfaction'
       details: ['Sentiment Analysis', 'Performance Metrics', 'Customer Journey Mapping', 'Predictive Analytics']
-    },
-    {
-      icon: Clock,
-      title: 'Always Available',
-      description: 'Round-the-clock support without human limitations',
+    }
+    ,
+    { icon: Clock
+      ,
+      title: 'Always Available'
+      ,
+      description: 'Round-the-clock support without human limitations'
       details: ['24/7 Operation', 'Holiday Coverage', 'Scalable Infrastructure', 'Zero Downtime']
     }
   ]
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$99',
-      period: '/month',
-      description: 'Perfect for small businesses',
+      name: 'Starter'
+      price: '$99'
+      period: '/month'
+      description: 'Perfect for small businesses'
       features: [
-        'Up to 1,000 conversations/month',
-        'Basic AI chatbot',
-        'Email support',
-        'Standard analytics',
+        'Up to 1,000 conversations/month'
+        'Basic AI chatbot'
+        'Email support'
+        'Standard analytics'
         '1 integration'
-      ],
+      ]
       popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$299',
-      period: '/month',
-      description: 'Ideal for growing companies',
+    }
+    ,
+    { name: 'Professional'
+      price: '$299'
+      period: '/month'
+      description: 'Ideal for growing companies'
       features: [
-        'Up to 10,000 conversations/month',
-        'Advanced AI with learning',
-        'Multi-channel support',
-        'Advanced analytics',
-        '5 integrations',
+        'Up to 10,000 conversations/month'
+        'Advanced AI with learning'
+        'Multi-channel support'
+        'Advanced analytics'
+        '5 integrations'
         'Priority support'
-      ],
+      ]
       popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$799',
-      period: '/month',
-      description: 'For large organizations',
+    }
+    ,
+    { name: 'Enterprise'
+      price: '$799'
+      period: '/month'
+      description: 'For large organizations'
       features: [
-        'Unlimited conversations',
-        'Custom AI training',
-        'All channels included',
-        'Custom analytics dashboard',
-        'Unlimited integrations',
-        'Dedicated support',
+        'Unlimited conversations'
+        'Custom AI training'
+        'All channels included'
+        'Custom analytics dashboard'
+        'Unlimited integrations'
+        'Dedicated support'
         'Custom deployment'
-      ],
+      ]
       popular: false
     }
   ]
 
   const stats = [
-    { value: '95%', label: 'Customer Satisfaction', icon: <Star className="w-8 h-8 text-yellow-400" /> },
-    { value: '2.3s', label: 'Average Response Time', icon: <Clock className="w-8 h-8 text-green-400" /> },
-    { value: '24/7', label: 'Availability', icon: <Zap className="w-8 h-8 text-blue-400" /> },
+    { value: '95%', label: 'Customer Satisfaction', icon: <Star className="w-8 h-8 text-yellow-400" /> }
+    ,
+    { value: '2.3s', label: 'Average Response Time', icon: <Clock className="w-8 h-8 text-green-400" /> }
+    ,
+    { value: '24/7', label: 'Availability', icon: <Zap className="w-8 h-8 text-blue-400" /> }
+    ,
     { value: '50%', label: 'Cost Reduction', icon: <BarChart className="w-8 h-8 text-purple-400" /> }
   ]
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      role: 'Customer Success Manager, TechCorp',
-      content: 'Our AI customer support reduced response time by 80% and increased customer satisfaction to 95%.',
-      rating: 5,
-      company: 'TechCorp',
-    },
-    {
-      name: 'Michael Chen',
-      role: 'VP Operations, DataFlow Inc',
-      content: 'The AI system handles 90% of our customer inquiries automatically, allowing our team to focus on complex issues.',
-      rating: 5,
-      company: 'DataFlow Inc',
-    },
-    {
-      name: 'Emily Rodriguez',
-      role: 'Head of Support, InnovateLab',
-      content: 'Implementation was seamless and the results exceeded our expectations. Highly recommended!',
-      rating: 5,
-      company: 'InnovateLab',
+      name: 'Sarah Johnson'
+      role: 'Customer Success Manager, TechCorp'
+      content: 'Our AI customer support reduced response time by 80% and increased customer satisfaction to 95%.'
+      rating: 5
+      company: 'TechCorp'
+    }
+    ,
+    { name: 'Michael Chen'
+      role: 'VP Operations, DataFlow Inc'
+      content: 'The AI system handles 90% of our customer inquiries automatically, allowing our team to focus on complex issues.'
+      rating: 5
+      company: 'DataFlow Inc'
+    }
+    ,
+    { name: 'Emily Rodriguez'
+      role: 'Head of Support, InnovateLab'
+      content: 'Implementation was seamless and the results exceeded our expectations. Highly recommended!'
+      rating: 5
+      company: 'InnovateLab'
     }
   ]
 
@@ -371,7 +409,7 @@ return (
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -394,7 +432,7 @@ return (
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -415,7 +453,7 @@ return (
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -428,8 +466,9 @@ return (
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-        {/* Benefits Section */} <section className="py-20 px-4">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Benefits Section */}
+        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Key Features
@@ -441,7 +480,8 @@ return (
                     <feature.icon className="w-8 h-8 text-white" />
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}
                   <p className="text-gray-300 mb-4">{feature.description}
-                  {feature.benefits && (
+                  ,
+    { feature.benefits && (
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-400">
@@ -457,7 +497,7 @@ return (
               <p>Proven results that drive business growth and efficiency;</p>
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg mb-4">
@@ -471,7 +511,7 @@ return (
       </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-teal-500 to-cyan-500 rounded-2xl p-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -494,7 +534,8 @@ return (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
               {benefits.map((benefit, index) => ()
               ))}
-        {/* CTA Section */}
+        ,
+    { /* CTA Section */}
         <section className="py-20 px-4">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
@@ -515,7 +556,7 @@ return (
               </h2>
               <p>Contact our experts to discuss your requirements and get started today.</p>
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button>Contact Us;</button>
                 </button>
                 <button>Learn More;</button>
@@ -568,7 +609,7 @@ export default AiCustomerSupportPage;
       </section>
 
       {/* Pricing Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -621,7 +662,7 @@ export default AiCustomerSupportPage;
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -653,7 +694,7 @@ export default AiCustomerSupportPage;
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Customer Support?

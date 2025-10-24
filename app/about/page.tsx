@@ -8,31 +8,42 @@ import { CheckCircle, Users, Target, Shield, Globe, ArrowRight } from 'lucide-re
 const AboutPage: React.FC = () => {
   const values = [
     {
-      icon: Target,
-      title: 'Innovation',
+      icon: Target
+      ,
+      title: 'Innovation'
+      ,
       description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions.'
-    },
-    {
-      icon: Shield,
-      title: 'Security',
+    }
+    ,
+    { icon: Shield
+      ,
+      title: 'Security'
+      ,
       description: 'Your data and systems are protected with enterprise-grade security measures.'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
+    }
+    ,
+    { icon: Globe
+      ,
+      title: 'Global Reach'
+      ,
       description: 'Serving clients worldwide with localized support and expertise.'
-    },
-    {
-      icon: Users,
-      title: 'Collaboration',
+    }
+    ,
+    { icon: Users
+      ,
+      title: 'Collaboration'
+      ,
       description: 'We work closely with your team to understand and achieve your goals.'
     }
   ];
 
   const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '5+', label: 'Years Experience' },
+    { number: '500+', label: 'Projects Completed' }
+    ,
+    { number: '50+', label: 'Happy Clients' }
+    ,
+    { number: '5+', label: 'Years Experience' }
+    ,
     { number: '24/7', label: 'Support Available' }
   ];
 
@@ -42,23 +53,23 @@ const AboutPage: React.FC = () => {
       role: 'CEO & Founder',
       image: '/team/john-smith.jpg',
       description: 'Visionary leader with 15+ years in tech'
-    },
-    {
-      name: 'Sarah Johnson',
-      role: 'CTO',
-      image: '/team/sarah-johnson.jpg',
+    }
+    ,
+    { name: 'Sarah Johnson'
+      role: 'CTO'
+      image: '/team/sarah-johnson.jpg'
       description: 'AI and machine learning expert'
-    },
-    {
-      name: 'Mike Chen',
-      role: 'Lead Developer',
-      image: '/team/mike-chen.jpg',
+    }
+    ,
+    { name: 'Mike Chen'
+      role: 'Lead Developer'
+      image: '/team/mike-chen.jpg'
       description: 'Full-stack development specialist'
-    },
-    {
-      name: 'Emily Davis',
-      role: 'Design Director',
-      image: '/team/emily-davis.jpg',
+    }
+    ,
+    { name: 'Emily Davis'
+      role: 'Design Director'
+      image: '/team/emily-davis.jpg'
       description: 'UX/UI design and user experience'
     }
   ];
@@ -68,7 +79,7 @@ const AboutPage: React.FC = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-blue-50 to-purple-50">
+        <section className="pt-20 pb-16 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -98,7 +109,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white">
+        <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -114,7 +125,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12">
@@ -125,7 +136,7 @@ const AboutPage: React.FC = () => {
                 </div>
                 <p className="text-lg text-gray-600 leading-relaxed">
                   To democratize access to advanced AI and IT technologies, enabling businesses of all sizes 
-                  to compete and thrive in the digital economy. We believe technology should be accessible, 
+                  to compete and thrive in the digital economy. We believe technology should be accessible
                   reliable, and transformative.
                 </p>
               </div>
@@ -146,7 +157,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-16 bg-white">
+        <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -173,7 +184,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -201,7 +212,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-blue-600">
+        <section className="py-16 bg-blue-600">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

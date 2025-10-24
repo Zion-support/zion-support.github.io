@@ -7,27 +7,35 @@ const DynamicContentShowcase: React.FC = () => {
 
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
+      icon: Brain
+      ,
+      title: 'AI-Powered Solutions'
+      ,
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
       color: 'from-purple-500 to-pink-600'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
+    }
+    ,
+    { icon: Zap
+      ,
+      title: 'High Performance'
+      ,
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
       color: 'from-blue-500 to-cyan-600'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',
+    }
+    ,
+    { icon: Shield
+      ,
+      title: 'Enterprise Security'
+      ,
+      description: 'Bank-level security with encryption and compliance standards'
       color: 'from-green-500 to-emerald-600'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
+    }
+    ,
+    { icon: Globe
+      ,
+      title: 'Global Reach'
+      ,
+      description: 'Worldwide deployment and support for international businesses'
       color: 'from-orange-500 to-red-600'
     }
   ];

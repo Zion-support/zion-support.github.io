@@ -9,8 +9,8 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({children ,}) => {use
     const enhanceSecurity = (;
       // Add security headers;
       const securityHeaders = {
-        'X-Content-Type-Options': 'nosniff',
-        'X-Frame-Options': 'DENY',
+        'X-Content-Type-Options': 'nosniff'
+        'X-Frame-Options': 'DENY'
         'X-XSS-Protection': '1; mode=block',) => {
   return($3;)
   )}'Referrer-Policy': 'strict-origin-when-cross-origin';}

@@ -7,144 +7,163 @@ import { PenTool, Brain, Zap, Target, CheckCircle, Star, ArrowRight, Users, BarC
 const AiContentGeneratorPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Writing',
-      description: 'Advanced AI that creates high-quality content in any style or tone',
+      icon: Brain
+      ,
+      title: 'AI-Powered Writing'
+      ,
+      description: 'Advanced AI that creates high-quality content in any style or tone'
       details: ['Natural Language Generation', 'Style Adaptation', 'Tone Matching', 'Brand Voice']
-    },
-    {
-      icon: FileText,
-      title: 'Multiple Content Types',
-      description: 'Generate blogs, articles, social media posts, emails, and more',
+    }
+    ,
+    { icon: FileText
+      ,
+      title: 'Multiple Content Types'
+      ,
+      description: 'Generate blogs, articles, social media posts, emails, and more'
       details: ['Blog Posts', 'Social Media', 'Email Campaigns', 'Product Descriptions']
-    },
-    {
-      icon: Image,
-      title: 'Visual Content',
-      description: 'Create stunning images and graphics to accompany your content',
+    }
+    ,
+    { icon: Image
+      ,
+      title: 'Visual Content'
+      ,
+      description: 'Create stunning images and graphics to accompany your content'
       details: ['AI Image Generation', 'Custom Graphics', 'Brand Templates', 'Stock Photos']
-    },
-    {
-      icon: Video,
-      title: 'Video Scripts',
-      description: 'Generate engaging video scripts and storyboards',
+    }
+    ,
+    { icon: Video
+      ,
+      title: 'Video Scripts'
+      ,
+      description: 'Generate engaging video scripts and storyboards'
       details: ['YouTube Scripts', 'Tutorial Videos', 'Marketing Videos', 'Storyboards']
-    },
-    {
-      icon: Target,
-      title: 'SEO Optimization',
-      description: 'Automatically optimize content for search engines',
+    }
+    ,
+    { icon: Target
+      ,
+      title: 'SEO Optimization'
+      ,
+      description: 'Automatically optimize content for search engines'
       details: ['Keyword Integration', 'Meta Descriptions', 'Title Optimization', 'SEO Scoring']
-    },
-    {
-      icon: Zap,
-      title: 'Bulk Generation',
-      description: 'Create hundreds of pieces of content in minutes',
+    }
+    ,
+    { icon: Zap
+      ,
+      title: 'Bulk Generation'
+      ,
+      description: 'Create hundreds of pieces of content in minutes'
       details: ['Batch Processing', 'Template System', 'Auto-scheduling', 'Content Calendar']
     }
   ]
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$29',
-      period: '/month',
-      description: 'Perfect for individuals and small businesses',
+      name: 'Starter'
+      price: '$29'
+      period: '/month'
+      description: 'Perfect for individuals and small businesses'
       features: [
-        '1,000 words/month',
-        'Basic AI models',
-        '5 content types',
-        'Standard templates',
-        'Email support',
+        '1,000 words/month'
+        'Basic AI models'
+        '5 content types'
+        'Standard templates'
+        'Email support'
         '1 user'
-      ],
+      ]
       popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$79',
-      period: '/month',
-      description: 'Ideal for content creators and agencies',
+    }
+    ,
+    { name: 'Professional'
+      price: '$79'
+      period: '/month'
+      description: 'Ideal for content creators and agencies'
       features: [
-        '10,000 words/month',
-        'Advanced AI models',
-        'All content types',
-        'Custom templates',
-        'Priority support',
-        '3 users',
+        '10,000 words/month'
+        'Advanced AI models'
+        'All content types'
+        'Custom templates'
+        'Priority support'
+        '3 users'
         'API access'
-      ],
+      ]
       popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$199',
-      period: '/month',
-      description: 'For large teams and organizations',
+    }
+    ,
+    { name: 'Enterprise'
+      price: '$199'
+      period: '/month'
+      description: 'For large teams and organizations'
       features: [
-        'Unlimited words',
-        'Premium AI models',
-        'All features included',
-        'White-label solution',
-        'Dedicated support',
-        'Unlimited users',
+        'Unlimited words'
+        'Premium AI models'
+        'All features included'
+        'White-label solution'
+        'Dedicated support'
+        'Unlimited users'
         'Custom integrations'
-      ],
+      ]
       popular: false
     }
   ]
 
   const stats = [
-    { value: '10x', label: 'Faster Content Creation', icon: <Clock className="w-8 h-8 text-green-400" /> },
-    { value: '95%', label: 'Content Quality Score', icon: <Star className="w-8 h-8 text-blue-400" /> },
-    { value: '80%', label: 'Time Savings', icon: <Zap className="w-8 h-8 text-purple-400" /> },
+    { value: '10x', label: 'Faster Content Creation', icon: <Clock className="w-8 h-8 text-green-400" /> }
+    ,
+    { value: '95%', label: 'Content Quality Score', icon: <Star className="w-8 h-8 text-blue-400" /> }
+    ,
+    { value: '80%', label: 'Time Savings', icon: <Zap className="w-8 h-8 text-purple-400" /> }
+    ,
     { value: '50+', label: 'Content Types', icon: <FileText className="w-8 h-8 text-cyan-400" /> }
   ]
 
   const contentTypes = [
     {
-      title: 'Blog Posts',
-      description: 'Long-form articles optimized for SEO and engagement',
+      title: 'Blog Posts'
+      ,
+      description: 'Long-form articles optimized for SEO and engagement'
       icon: <FileText className="w-8 h-8 text-green-400" />
-    },
-    {
-      title: 'Social Media',
-      description: 'Captions, posts, and stories for all platforms',
+    }
+    ,
+    { title: 'Social Media'
+      ,
+      description: 'Captions, posts, and stories for all platforms'
       icon: <Users className="w-8 h-8 text-blue-400" />
-    },
-    {
-      title: 'Email Marketing',
-      description: 'Newsletters, campaigns, and automated sequences',
+    }
+    ,
+    { title: 'Email Marketing'
+      ,
+      description: 'Newsletters, campaigns, and automated sequences'
       icon: <Target className="w-8 h-8 text-yellow-400" />
-    },
-    {
-      title: 'Product Descriptions',
-      description: 'Compelling product copy that converts',
+    }
+    ,
+    { title: 'Product Descriptions'
+      ,
+      description: 'Compelling product copy that converts'
       icon: <BarChart className="w-8 h-8 text-purple-400" />
     }
   ]
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      role: 'Content Manager, TechBlog',
-      content: 'AI Content Generator increased our content output by 500% while maintaining quality.',
-      rating: 5,
-      company: 'TechBlog',
-    },
-    {
-      name: 'Mike Chen',
-      role: 'Marketing Director, E-commerce Plus',
-      content: 'The SEO optimization feature improved our organic traffic by 200% in 3 months.',
-      rating: 5,
-      company: 'E-commerce Plus',
-    },
-    {
-      name: 'Lisa Rodriguez',
-      role: 'Founder, Creative Agency',
-      content: 'We can now serve 3x more clients with the same team. Game-changing tool!',
-      rating: 5,
-      company: 'Creative Agency',
+      name: 'Sarah Johnson'
+      role: 'Content Manager, TechBlog'
+      content: 'AI Content Generator increased our content output by 500% while maintaining quality.'
+      rating: 5
+      company: 'TechBlog'
+    }
+    ,
+    { name: 'Mike Chen'
+      role: 'Marketing Director, E-commerce Plus'
+      content: 'The SEO optimization feature improved our organic traffic by 200% in 3 months.'
+      rating: 5
+      company: 'E-commerce Plus'
+    }
+    ,
+    { name: 'Lisa Rodriguez'
+      role: 'Founder, Creative Agency'
+      content: 'We can now serve 3x more clients with the same team. Game-changing tool!'
+      rating: 5
+      company: 'Creative Agency'
     }
   ]
 
@@ -153,14 +172,14 @@ const AiContentGeneratorPage: React.FC = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Content Generator</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Create high-quality content 10x faster with AI. Generate blogs, social media posts, 
+              Create high-quality content 10x faster with AI. Generate blogs, social media posts
               emails, and more with just a few clicks.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -176,7 +195,7 @@ const AiContentGeneratorPage: React.FC = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -197,7 +216,7 @@ const AiContentGeneratorPage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -233,7 +252,7 @@ const AiContentGeneratorPage: React.FC = () => {
       </section>
 
       {/* Content Types Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -259,7 +278,7 @@ const AiContentGeneratorPage: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -312,7 +331,7 @@ const AiContentGeneratorPage: React.FC = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -344,7 +363,7 @@ const AiContentGeneratorPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Create Amazing Content?

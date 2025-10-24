@@ -10,11 +10,11 @@ const AIChatbotEnterprisePage: React.FC = () => {
         <title>AI Enterprise Chatbot | Zion Tech Group</title>
         <meta name="description" content="Deploy enterprise-grade AI chatbots with advanced natural language processing, multi-channel support, and seamless integration for large-scale customer service operations." />
         <meta name="keywords" content="enterprise chatbot, AI customer service, conversational AI, enterprise automation, AI support" />
-      
+      </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-8">
@@ -30,7 +30,7 @@ const AIChatbotEnterprisePage: React.FC = () => {
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Deploy enterprise-grade AI chatbots with advanced natural language processing, 
+                Deploy enterprise-grade AI chatbots with advanced natural language processing
                 multi-channel support, and seamless integration for large-scale customer 
                 service operations and internal automation.
               </p>
@@ -49,14 +49,14 @@ const AIChatbotEnterprisePage: React.FC = () => {
       </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
                 Enterprise-Grade Capabilities
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Built for large organizations with advanced security, scalability, 
+                Built for large organizations with advanced security, scalability
                 and integration capabilities to handle millions of conversations.
               </p>
             </div>
@@ -68,7 +68,7 @@ const AIChatbotEnterprisePage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Advanced NLP</h3>
                 <p className="text-gray-300 mb-4">
-                  State-of-the-art natural language processing with context understanding, 
+                  State-of-the-art natural language processing with context understanding
                   sentiment analysis, and multi-language support for global enterprises.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
@@ -93,7 +93,7 @@ const AIChatbotEnterprisePage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Enterprise Security</h3>
                 <p className="text-gray-300 mb-4">
-                  Bank-level security with end-to-end encryption, compliance certifications, 
+                  Bank-level security with end-to-end encryption, compliance certifications
                   and advanced access controls for sensitive enterprise data.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
@@ -118,7 +118,7 @@ const AIChatbotEnterprisePage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Multi-Channel Support</h3>
                 <p className="text-gray-300 mb-4">
-                  Deploy across all customer touchpoints including web, mobile, 
+                  Deploy across all customer touchpoints including web, mobile
                   social media, and messaging platforms with unified management.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
@@ -168,7 +168,7 @@ const AIChatbotEnterprisePage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Team Collaboration</h3>
                 <p className="text-gray-300 mb-4">
-                  Advanced team management with agent handoff, supervisor oversight, 
+                  Advanced team management with agent handoff, supervisor oversight
                   and collaborative training tools for continuous improvement.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
@@ -193,7 +193,7 @@ const AIChatbotEnterprisePage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Advanced Analytics</h3>
                 <p className="text-gray-300 mb-4">
-                  Comprehensive analytics and reporting with real-time insights, 
+                  Comprehensive analytics and reporting with real-time insights
                   conversation analytics, and performance metrics for optimization.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
@@ -216,7 +216,7 @@ const AIChatbotEnterprisePage: React.FC = () => {
       </section>
 
         {/* Integration Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -304,7 +304,7 @@ const AIChatbotEnterprisePage: React.FC = () => {
       </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready for Enterprise AI?

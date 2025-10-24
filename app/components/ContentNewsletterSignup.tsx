@@ -11,10 +11,10 @@ interface ContentNewsletterSignupProps {
 }
 
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
-  title = "Stay Updated",
-  subtitle = "Get the latest insights and updates delivered to your inbox.",
-  placeholder = "Enter your email address",
-  buttonText = "Subscribe",
+  title = "Stay Updated"
+  subtitle = "Get the latest insights and updates delivered to your inbox."
+  placeholder = "Enter your email address"
+  buttonText = "Subscribe"
   onSubscribe
 }) => {
   const [email, setEmail] = useState('');

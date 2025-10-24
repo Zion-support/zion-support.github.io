@@ -8,53 +8,70 @@ import { ArrowRight, Users, Zap, Shield, Brain, Cloud, Code, BarChart, CheckCirc
 const HomePage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
+      icon: Brain
+      ,
+      title: 'AI-Powered Solutions'
+      ,
       description: 'Cutting-edge artificial intelligence to transform your business operations and drive innovation.'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
+    }
+    ,
+    { icon: Shield
+      ,
+      title: 'Enterprise Security'
+      ,
       description: 'Bank-level security measures to protect your data and ensure compliance with industry standards.'
-    },
-    {
-      icon: Users,
-      title: 'Expert Team',
+    }
+    ,
+    { icon: Users
+      ,
+      title: 'Expert Team'
+      ,
       description: 'Experienced developers and consultants dedicated to delivering exceptional results for your projects.'
     }
   ];
 
   const services = [
     {
-      icon: Brain,
-      title: 'AI Solutions',
-      description: 'Machine learning, natural language processing, and computer vision applications.',
+      icon: Brain
+      ,
+      title: 'AI Solutions'
+      ,
+      description: 'Machine learning, natural language processing, and computer vision applications.'
       features: ['Predictive Analytics', 'Chatbots & NLP', 'Computer Vision', 'Automation']
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Services',
-      description: 'Scalable cloud infrastructure and migration services for modern businesses.',
+    }
+    ,
+    { icon: Cloud
+      ,
+      title: 'Cloud Services'
+      ,
+      description: 'Scalable cloud infrastructure and migration services for modern businesses.'
       features: ['AWS/Azure/GCP', 'Migration', 'DevOps', 'Monitoring']
-    },
-    {
-      icon: Code,
-      title: 'Development',
-      description: 'Custom web and mobile applications built with the latest technologies.',
+    }
+    ,
+    { icon: Code
+      ,
+      title: 'Development'
+      ,
+      description: 'Custom web and mobile applications built with the latest technologies.'
       features: ['Web Apps', 'Mobile Apps', 'APIs', 'Integration']
-    },
-    {
-      icon: BarChart,
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with advanced analytics.',
+    }
+    ,
+    { icon: BarChart
+      ,
+      title: 'Data Analytics'
+      ,
+      description: 'Transform your data into actionable insights with advanced analytics.'
       features: ['Business Intelligence', 'Data Visualization', 'Reporting', 'Insights']
     }
   ];
 
   const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '99%', label: 'Client Satisfaction' },
+    { number: '500+', label: 'Projects Completed' }
+    ,
+    { number: '50+', label: 'Happy Clients' }
+    ,
+    { number: '99%', label: 'Client Satisfaction' }
+    ,
     { number: '24/7', label: 'Support Available' }
   ];
 
@@ -63,7 +80,7 @@ const HomePage: React.FC = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-blue-50 to-purple-50">
+        <section className="pt-20 pb-16 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -72,7 +89,7 @@ const HomePage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               Leading provider of AI and IT solutions for modern businesses. 
-              We help you leverage cutting-edge technology to drive growth, 
+              We help you leverage cutting-edge technology to drive growth
               efficiency, and innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -95,7 +112,7 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white">
+        <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -111,7 +128,7 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -146,7 +163,7 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-white">
+        <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -173,7 +190,7 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-blue-600">
+        <section className="py-16 bg-blue-600">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

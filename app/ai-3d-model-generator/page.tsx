@@ -8,21 +8,23 @@ import { CheckCircle, ArrowRight } from 'lucide-react';
 const Ai3dModelGeneratorPage: React.FC = () => {
   const features = [
     {
-      icon: 'Brain',
-    title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      icon: 'Brain'
+    title: 'AI-Powered Intelligence'
+      ,
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
     benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-},
-  {
-    icon: 'BarChart',
-    title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+}
+  ,
+    { icon: 'BarChart'
+    title: 'Advanced Analytics'
+      ,
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
   ]
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ]
   return (

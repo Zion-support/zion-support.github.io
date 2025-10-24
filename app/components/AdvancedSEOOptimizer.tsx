@@ -15,14 +15,14 @@ interface SEOOptimizerProps {
 }
 
 const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
-  keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group',
-  canonicalUrl,
-  ogImage = '/images/og-image.jpg',
-  twitterCard = 'summary_large_image',
-  structuredData,
-  children,
+  title = 'Zion Tech Group - Advanced AI and IT Solutions'
+  description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.'
+  keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group'
+  canonicalUrl
+  ogImage = '/images/og-image.jpg'
+  twitterCard = 'summary_large_image'
+  structuredData
+  children
 }) => {
   const [seoScore, setSeoScore] = useState(0);
   const [recommendations, setRecommendations] = useState<string[]>([]);
@@ -32,7 +32,6 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
     let score = 0;
     const newRecommendations: string[] = [];
-
     // Check title length
     if (title.length >= 30 && title.length <= 60) {
       score += 20;
@@ -96,15 +95,15 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
   const generateStructuredData = () => {
     const defaultStructuredData = {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "description": description,
-      "url": canonicalUrl || (typeof window !== 'undefined' ? window.location.origin : ''),
-      "logo": ogImage,
+      "@context": "https://schema.org"
+      "@type": "Organization"
+      "name": "Zion Tech Group"
+      "description": description
+      "url": canonicalUrl || (typeof window !== 'undefined' ? window.location.origin : '')
+      "logo": ogImage
       "sameAs": [
-        "https://twitter.com/ziontechgroup",
-        "https://linkedin.com/company/ziontechgroup",
+        "https://twitter.com/ziontechgroup"
+        "https://linkedin.com/company/ziontechgroup"
       ]
     };
     return structuredData || defaultStructuredData;
@@ -118,14 +117,16 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
         <meta name="keywords" content={keywords} />
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
         
-        {/* Open Graph */}
+        ,
+    { /* Open Graph */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={ogImage} />
         <meta property="og:type" content="website" />
         {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
         
-        {/* Twitter Card */}
+        ,
+    { /* Twitter Card */}
         <meta name="twitter:card" content={twitterCard} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
@@ -156,20 +157,21 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
       {children}
 
-      {process.env.NODE_ENV === 'development' && (
+      ,
+    { process.env.NODE_ENV === 'development' && (
         <div
           className="seo-debug"
           style={{
-            position: 'fixed',
-            top: '10px',
-            left: '10px',
-            background: 'rgba(0,0,0,0.8)',
-            color: 'white',
-            padding: '10px',
-            borderRadius: '5px',
-            fontSize: '12px',
-            zIndex: 1000,
-            maxWidth: '300px',
+            position: 'fixed'
+            top: '10px'
+            left: '10px'
+            background: 'rgba(0,0,0,0.8)'
+            color: 'white'
+            padding: '10px'
+            borderRadius: '5px'
+            fontSize: '12px'
+            zIndex: 1000
+            maxWidth: '300px'
           }}
         >
           <div>SEO Score: {seoScore}/100</div>
@@ -208,14 +210,14 @@ interface SEOOptimizerProps {
 }
 
 const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
-  keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group',
-  canonicalUrl,
-  ogImage = '/images/og-image.jpg',
-  twitterCard = 'summary_large_image',
-  structuredData,
-  children,
+  title = 'Zion Tech Group - Advanced AI and IT Solutions'
+  description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.'
+  keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group'
+  canonicalUrl
+  ogImage = '/images/og-image.jpg'
+  twitterCard = 'summary_large_image'
+  structuredData
+  children
 }) => {
   const [seoScore, setSeoScore] = useState(0);
   const [recommendations, setRecommendations] = useState<string[]>([]);
@@ -225,7 +227,6 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
     let score = 0;
     const newRecommendations: string[] = [];
-
     // Check title length
     if (title.length >= 30 && title.length <= 60) {
       score += 20;
@@ -289,15 +290,15 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
   const generateStructuredData = () => {
     const defaultStructuredData = {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "description": description,
-      "url": canonicalUrl || (typeof window !== 'undefined' ? window.location.origin : ''),
-      "logo": ogImage,
+      "@context": "https://schema.org"
+      "@type": "Organization"
+      "name": "Zion Tech Group"
+      "description": description
+      "url": canonicalUrl || (typeof window !== 'undefined' ? window.location.origin : '')
+      "logo": ogImage
       "sameAs": [
-        "https://twitter.com/ziontechgroup",
-        "https://linkedin.com/company/ziontechgroup",
+        "https://twitter.com/ziontechgroup"
+        "https://linkedin.com/company/ziontechgroup"
       ]
     };
     return structuredData || defaultStructuredData;
@@ -311,14 +312,16 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
         <meta name="keywords" content={keywords} />
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
         
-        {/* Open Graph */}
+        ,
+    { /* Open Graph */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={ogImage} />
         <meta property="og:type" content="website" />
         {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
         
-        {/* Twitter Card */}
+        ,
+    { /* Twitter Card */}
         <meta name="twitter:card" content={twitterCard} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
@@ -349,20 +352,21 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
       {children}
 
-      {process.env.NODE_ENV === 'development' && (
+      ,
+    { process.env.NODE_ENV === 'development' && (
         <div
           className="seo-debug"
           style={{
-            position: 'fixed',
-            top: '10px',
-            left: '10px',
-            background: 'rgba(0,0,0,0.8)',
-            color: 'white',
-            padding: '10px',
-            borderRadius: '5px',
-            fontSize: '12px',
-            zIndex: 1000,
-            maxWidth: '300px',
+            position: 'fixed'
+            top: '10px'
+            left: '10px'
+            background: 'rgba(0,0,0,0.8)'
+            color: 'white'
+            padding: '10px'
+            borderRadius: '5px'
+            fontSize: '12px'
+            zIndex: 1000
+            maxWidth: '300px'
           }}
         >
           <div>SEO Score: {seoScore}/100</div>

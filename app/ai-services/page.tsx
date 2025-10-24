@@ -6,84 +6,93 @@ import { CheckCircle, ArrowRight } from "lucide-react";
 const AIServicesPage: React.FC = () => {
   const services = [
   {
-      icon: 'Brain',
-    title: "Machine Learning Solutions",
-      description: "Custom ML models tailored to your business needs",
+      icon: 'Brain'
+    title: "Machine Learning Solutions"
+      ,
+      description: "Custom ML models tailored to your business needs"
     features: [
-        "Predictive Analytics",
-        "Pattern Recognition",
-        "Automated Decision Making",
+        "Predictive Analytics"
+        "Pattern Recognition"
+        "Automated Decision Making"
     "Real-time Processing"
-      ],
+      ]
       price: "Starting at $5,000"
-},
-  {
-    icon: 'Zap',
-    title: "AI Automation",
-      description: "Streamline operations with intelligent automation",
+}
+  ,
+    { icon: 'Zap'
+    title: "AI Automation"
+      ,
+      description: "Streamline operations with intelligent automation"
     features: [
-        "Process Automation",
-        "Workflow Optimization",
-        "Intelligent Routing",
+        "Process Automation"
+        "Workflow Optimization"
+        "Intelligent Routing"
     "Error Reduction"
-      ],
+      ]
       price: "Starting at $3,000"
-},
-  {
-    icon: 'Target',
-    title: "Natural Language Processing",
-      description: "Understand and process human language at scale",
+}
+  ,
+    { icon: 'Target'
+    title: "Natural Language Processing"
+      ,
+      description: "Understand and process human language at scale"
     features: [
-        "Text Analysis",
-        "Sentiment Analysis",
-        "Language Translation",
+        "Text Analysis"
+        "Sentiment Analysis"
+        "Language Translation"
     "Chatbot Development"
-      ],
+      ]
       price: "Starting at $4,000"
-},
-  {
-    icon: 'BarChart',
-    title: "Computer Vision",
-      description: "Extract insights from images and videos",
+}
+  ,
+    { icon: 'BarChart'
+    title: "Computer Vision"
+      ,
+      description: "Extract insights from images and videos"
     features: [
-        "Image Recognition",
-        "Object Detection",
-        "Video Analysis",
+        "Image Recognition"
+        "Object Detection"
+        "Video Analysis"
     "Quality Control"
-      ],
+      ]
       price: "Starting at $6,000"
     }
   ]
   const process = [
     {
-      step: "1",
-      title: "Discovery & Analysis",
+      step: "1"
+      title: "Discovery & Analysis"
+      ,
       description: "We analyze your business needs and data to understand the best AI approach."
-    },
-    {
-      step: "2",
-      title: "Solution Design",
+    }
+    ,
+    { step: "2"
+      title: "Solution Design"
+      ,
       description: "Our team designs a custom AI solution tailored to your specific requirements."
-    },
-    {
-      step: "3",
-      title: "Development & Training",
+    }
+    ,
+    { step: "3"
+      title: "Development & Training"
+      ,
       description: "We develop and train your AI models using the latest technologies and best practices."
-    },
-    {
-      step: "4",
-      title: "Integration & Deployment",
+    }
+    ,
+    { step: "4"
+      title: "Integration & Deployment"
+      ,
       description: "We integrate the solution into your existing systems and deploy it securely."
-    },
-    {
-      step: "5",
-    title: "Monitoring & Optimization",
-    description: "We continuously monitor performance and optimize the solution for better results."}
+    }
+    ,
+    { step: "5"
+    title: "Monitoring & Optimization"
+    ,
+      description: "We continuously monitor performance and optimize the solution for better results."}
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
+        <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">
@@ -104,7 +113,7 @@ const AIServicesPage: React.FC = () => {
         </div>
       </section>
       {/* Services Grid */}
-      <section className="py-20 px-4">
+        <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
@@ -140,7 +149,7 @@ const AIServicesPage: React.FC = () => {
         </div>
       </section>
       {/* Process Section */}
-      <section className="py-20 px-4 bg-white/5">
+        <section className="py-20 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
@@ -164,7 +173,7 @@ const AIServicesPage: React.FC = () => {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4">
+        <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
             Ready to Harness the Power of AI?

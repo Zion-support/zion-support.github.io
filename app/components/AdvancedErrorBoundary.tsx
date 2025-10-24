@@ -26,8 +26,8 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
 
   componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
     this.setState({
-      hasError: true,
-      error: _error,
+      hasError: true
+      error: _error
       errorInfo: _errorInfo
     });
     
@@ -47,10 +47,10 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     // You can integrate with services like Sentry, LogRocket, etc.
     const errorData = {
-      errorId: this.state.errorId,
-      error: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
+      errorId: this.state.errorId
+      error: error.message
+      stack: error.stack
+      componentStack: errorInfo.componentStack
       timestamp: new Date().toISOString()
     };
     

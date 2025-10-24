@@ -8,44 +8,66 @@ const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
-    { name: 'AI Analytics & BI', url: '/ai-analytics' },
-    { name: 'AI Automation', url: '/ai-automation' },
-    { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder' },
-    { name: 'AI Content Generation', url: '/ai-content-generation' },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity' },
-    { name: 'Computer Vision', url: '/computer-vision' },
-    { name: 'Predictive Analytics', url: '/predictive-analytics' },
+    { name: 'AI Analytics & BI', url: '/ai-analytics' }
+    ,
+    { name: 'AI Automation', url: '/ai-automation' }
+    ,
+    { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder' }
+    ,
+    { name: 'AI Content Generation', url: '/ai-content-generation' }
+    ,
+    { name: 'AI Cybersecurity', url: '/ai-cybersecurity' }
+    ,
+    { name: 'Computer Vision', url: '/computer-vision' }
+    ,
+    { name: 'Predictive Analytics', url: '/predictive-analytics' }
+    ,
     { name: 'Speech & Voice AI', url: '/ai-voice-assistant' }
   ];
 
   const itServices = [
-    { name: 'Web Development', url: '/web-development' },
-    { name: 'Mobile Development', url: '/mobile-development' },
-    { name: 'Cloud Migration', url: '/cloud-migration' },
-    { name: 'Cybersecurity', url: '/cybersecurity' },
-    { name: 'DevOps', url: '/devops' },
-    { name: 'Data Analytics', url: '/data-analytics' },
-    { name: 'IoT Solutions', url: '/iot-solutions' },
+    { name: 'Web Development', url: '/web-development' }
+    ,
+    { name: 'Mobile Development', url: '/mobile-development' }
+    ,
+    { name: 'Cloud Migration', url: '/cloud-migration' }
+    ,
+    { name: 'Cybersecurity', url: '/cybersecurity' }
+    ,
+    { name: 'DevOps', url: '/devops' }
+    ,
+    { name: 'Data Analytics', url: '/data-analytics' }
+    ,
+    { name: 'IoT Solutions', url: '/iot-solutions' }
+    ,
     { name: 'Blockchain', url: '/blockchain' }
   ];
 
   const companyLinks = [
-    { name: 'About Us', url: '/about' },
-    { name: 'Our Team', url: '/team' },
-    { name: 'Careers', url: '/careers' },
+    { name: 'About Us', url: '/about' }
+    ,
+    { name: 'Our Team', url: '/team' }
+    ,
+    { name: 'Careers', url: '/careers' }
+    ,
     { name: 'Contact', url: '/contact' }
   ];
 
   const resourceLinks = [
-    { name: 'Documentation', url: '/docs' },
-    { name: 'API Reference', url: '/api' },
-    { name: 'Blog', url: '/blog' },
+    { name: 'Documentation', url: '/docs' }
+    ,
+    { name: 'API Reference', url: '/api' }
+    ,
+    { name: 'Blog', url: '/blog' }
+    ,
     { name: 'Support', url: '/support' }
   ];
 
   const legalLinks = [
-    { name: 'Privacy Policy', url: '/privacy' },
-    { name: 'Terms of Service', url: '/terms' },
+    { name: 'Privacy Policy', url: '/privacy' }
+    ,
+    { name: 'Terms of Service', url: '/terms' }
+    ,
     { name: 'Cookie Policy', url: '/cookies' }
   ];
 

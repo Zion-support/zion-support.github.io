@@ -22,16 +22,16 @@ interface PerformanceMonitorProps {
 }
 
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  onMetricsUpdate,
-  enableRealTimeMonitoring = true,
+  onMetricsUpdate
+  enableRealTimeMonitoring = true
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-    memory: null,
+    fcp: null
+    lcp: null
+    fid: null
+    cls: null
+    ttfb: null
+    memory: null
   });
 
   const measureWebVitals = useCallback(() => {
@@ -39,7 +39,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (typeof PerformanceObserver === 'undefined') return;
 
     const observers: PerformanceObserver[] = [];
-
     // Measure First Contentful Paint (FCP)
 <<<<<<< HEAD
     try {
@@ -100,8 +99,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             ) {
               const fidEntry = entry as PerformanceEventTiming;
               setMetrics(prev => ({
-                ...prev,
-                fid: fidEntry.processingStart - fidEntry.startTime,
+                ...prev
+                fid: fidEntry.processingStart - fidEntry.startTime
               }));
             }
           });
@@ -153,10 +152,10 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           .memory?.usedJSHeapSize || null;
 
       setMetrics(prev => ({
-        ...prev,
-        fcp,
-        ttfb,
-        memory,
+        ...prev
+        fcp
+        ttfb
+        memory
       }));
     } catch (error) {
       // Ignore errors
@@ -183,11 +182,11 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     );
 
     if (slowResources.length > 0) {
-      console.log('Slow resources detected:',
+      console.log('Slow resources detected:'
         slowResources.map((r: PerformanceResourceTiming) => ({
-          name: r.name,
-          duration: r.duration,
-          size: r.transferSize,
+          name: r.name
+          duration: r.duration
+          size: r.transferSize
         }))
       );
     }
@@ -312,10 +311,10 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   }, [measureWebVitals, enableRealTimeMonitoring]);
 =======
   }, [
-    enableRealTimeMonitoring,
-    measureWebVitals,
-    measureResourceTiming,
-    measureCoreWebVitals,
+    enableRealTimeMonitoring
+    measureWebVitals
+    measureResourceTiming
+    measureCoreWebVitals
   ]);
 >>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
 
@@ -335,7 +334,6 @@ export default AdvancedPerformanceMonitor;
   // Performance recommendations
   const getPerformanceRecommendations = useCallback(() => {
     const recommendations: string[] = [];
-
     if (metrics.fcp && metrics.fcp > 1800) {
       recommendations.push(
         'First Contentful Paint is slow. Consider optimizing critical rendering path.'
@@ -385,7 +383,8 @@ export default AdvancedPerformanceMonitor;
           </div>
           <div>
             Memory:{' '}
-            {metrics.memory
+            ,
+    { metrics.memory
               ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
               : 'N/A'}
           </div>
@@ -430,16 +429,16 @@ interface PerformanceMonitorProps {
 }
 
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  onMetricsUpdate,
-  enableRealTimeMonitoring = true,
+  onMetricsUpdate
+  enableRealTimeMonitoring = true
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-    memory: null,
+    fcp: null
+    lcp: null
+    fid: null
+    cls: null
+    ttfb: null
+    memory: null
   });
 
   const measureWebVitals = useCallback(() => {
@@ -447,7 +446,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (typeof PerformanceObserver === 'undefined') return;
 
     const observers: PerformanceObserver[] = [];
-
     // Measure First Contentful Paint (FCP)
     const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
     const fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null;
@@ -479,8 +477,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             ) {
               const fidEntry = entry as PerformanceEventTiming;
               setMetrics(prev => ({
-                ...prev,
-                fid: fidEntry.processingStart - fidEntry.startTime,
+                ...prev
+                fid: fidEntry.processingStart - fidEntry.startTime
               }));
             }
           });
@@ -532,10 +530,10 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           .memory?.usedJSHeapSize || null;
 
       setMetrics(prev => ({
-        ...prev,
-        fcp,
-        ttfb,
-        memory,
+        ...prev
+        fcp
+        ttfb
+        memory
       }));
     } catch (error) {
        
@@ -563,11 +561,11 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     if (slowResources.length > 0) {
        
-      console.log('Slow resources detected:',
+      console.log('Slow resources detected:'
         slowResources.map((r: PerformanceResourceTiming) => ({
-          name: r.name,
-          duration: r.duration,
-          size: r.transferSize,
+          name: r.name
+          duration: r.duration
+          size: r.transferSize
         }))
       );
     }
@@ -631,10 +629,10 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       clearInterval(interval);
     };
   }, [
-    enableRealTimeMonitoring,
-    measureWebVitals,
-    measureResourceTiming,
-    measureCoreWebVitals,
+    enableRealTimeMonitoring
+    measureWebVitals
+    measureResourceTiming
+    measureCoreWebVitals
   ]);
 
   useEffect(() => {
@@ -646,7 +644,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   // Performance recommendations
   const getPerformanceRecommendations = useCallback(() => {
     const recommendations: string[] = [];
-
     if (metrics.fcp && metrics.fcp > 1800) {
       recommendations.push(
         'First Contentful Paint is slow. Consider optimizing critical rendering path.'
@@ -696,7 +693,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           </div>
           <div>
             Memory:{' '}
-            {metrics.memory
+            ,
+    { metrics.memory
               ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
               : 'N/A'}
           </div>

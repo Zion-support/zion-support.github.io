@@ -22,23 +22,23 @@ interface FormStatus {
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
+    name: ''
+    email: ''
+    company: ''
+    phone: ''
+    service: ''
     message: ''
   });
 
   const [status, setStatus] = useState<FormStatus>({
-    type: 'idle',
+    type: 'idle'
     message: ''
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
-      ...prev,
+      ...prev
       [name]: value
     }));
   };
@@ -53,11 +53,11 @@ const ContactForm: React.FC = () => {
       
       setStatus({ type: 'success', message: 'Message sent successfully!' });
       setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
+        name: ''
+        email: ''
+        company: ''
+        phone: ''
+        service: ''
         message: ''
       });
     } catch (_error) {
@@ -181,7 +181,8 @@ const ContactForm: React.FC = () => {
             'bg-blue-50 text-blue-800'
           }`}>
             {status.type === 'success' && <CheckCircle className="w-5 h-5" />}
-            {status.type === 'error' && <AlertCircle className="w-5 h-5" />}
+            ,
+    { status.type === 'error' && <AlertCircle className="w-5 h-5" />}
             <span>{status.message}</span>
           </div>
         )}

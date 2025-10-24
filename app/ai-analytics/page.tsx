@@ -8,16 +8,19 @@ import { CheckCircle, Brain, BarChart, Target, TrendingUp, Zap, Eye, Users } fro
 const AIAnalyticsPage: React.FC = () => {
   const features = [
     {
-      icon: BarChart,
-      title: 'Real-time Analytics',
-      description: 'Get instant insights with real-time data processing and visualization.',
+      icon: BarChart
+      ,
+      title: 'Real-time Analytics'
+      ,
+      description: 'Get instant insights with real-time data processing and visualization.'
       benefits: ['Live dashboards', 'Real-time alerts', 'Instant reporting', 'Dynamic updates']
-    },
-    {
-      icon: Brain,
-      title: 'AI-Powered Insights',
-      description: 'Leverage machine learning to uncover hidden patterns and predictions.',
-  
+    }
+    ,
+    { icon: Brain
+      ,
+      title: 'AI-Powered Insights'
+      ,
+      description: 'Leverage machine learning to uncover hidden patterns and predictions.'
     }
   ];
 
@@ -27,7 +30,7 @@ const AIAnalyticsPage: React.FC = () => {
         <title>AI Analytics - Zion Tech Group | Advanced Data Intelligence</title>
         <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics platform. Real-time dashboards, predictive analytics, and automated reporting." />
         <meta name="keywords" content="AI analytics, data intelligence, business intelligence, predictive analytics, data visualization, real-time dashboards" />
-      
+      </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />

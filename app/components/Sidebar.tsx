@@ -3,17 +3,17 @@
 import React, {Suspense, lazy}from 'react';
 import {Link, useLocation}}from 'react-router-dom';
 import {X,}
-  Menu,
-  Home,
-  Users,
-  Settings,
-  Brain,
-  Cloud,
-  Shield,
-  Code,
-  BarChart,
-  ChevronDown,
-  ChevronRight,
+  Menu
+  Home
+  Users
+  Settings
+  Brain
+  Cloud
+  Shield
+  Code
+  BarChart
+  ChevronDown
+  ChevronRight
 =======
 'use client';
 >>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
@@ -42,15 +42,17 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({
-  isOpen,
-  onClose,
+  isOpen
+  onClose
   menuItems = [
-    { label: 'Dashboard', href: '/dashboard', icon: <Home className="w-5 h-5" /> },
-    { label: 'Profile', href: '/profile', icon: <User className="w-5 h-5" /> },
-    { label: 'Settings', href: '/settings', icon: <Settings className="w-5 h-5" /> },
-  ],
-  user,
-  onLogout,
+    { label: 'Dashboard', href: '/dashboard', icon: <Home className="w-5 h-5" /> }
+    ,
+    { label: 'Profile', href: '/profile', icon: <User className="w-5 h-5" /> }
+    ,
+    { label: 'Settings', href: '/settings', icon: <Settings className="w-5 h-5" /> }
+  ]
+  user
+  onLogout
 }) => {
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
 
@@ -83,7 +85,8 @@ const Sidebar: React.FC<SidebarProps> = ({
           </div>
 
           {/* User Info */}
-          {user && (
+          ,
+    { user && (
             <div className="p-4 border-b">
               <div className="flex items-center space-x-3">
                 {user.avatar ? (
@@ -105,7 +108,8 @@ const Sidebar: React.FC<SidebarProps> = ({
             </div>
           )}
 
-          {/* Menu Items */}
+          ,
+    { /* Menu Items */}
           <nav className="flex-1 p-4 space-y-2">
             {menuItems.map((item, index) => (
               <div key={index}>
@@ -115,7 +119,8 @@ const Sidebar: React.FC<SidebarProps> = ({
                 >
                   <div className="flex items-center">
                     {item.icon && <span className="mr-3">{item.icon}</span>}
-                    {item.label}
+                    ,
+    { item.label}
                   </div>
                   {item.submenu && (
                     <button
@@ -150,7 +155,8 @@ const Sidebar: React.FC<SidebarProps> = ({
 <<<<<<< HEAD
 =======
           {/* Logout */}
-          {onLogout && (
+          ,
+    { onLogout && (
             <div className="p-4 border-t">
               <button
                 onClick={onLogout}

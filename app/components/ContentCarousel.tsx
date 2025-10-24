@@ -5,7 +5,8 @@ import { ChevronLeft, ChevronRight, Zap, Shield, Brain, Cloud } from 'lucide-rea
 interface Slide {
   id: number;
   title: string;
-  description: string;
+  ,
+      description: string;
   features: string[];
   icon: React.ComponentType<any>;
   color: string;
@@ -20,56 +21,60 @@ const ContentCarousel: React.FC = () => {
 
   const slides: Slide[] = [
     {
-      id: 1,
-      title: 'AI Solutions',
-      description: 'Transform your business with cutting-edge artificial intelligence solutions.',
+      id: 1
+      title: 'AI Solutions'
+      ,
+      description: 'Transform your business with cutting-edge artificial intelligence solutions.'
       features: [
-        'Machine Learning Models',
-        'Natural Language Processing',
-        'Computer Vision',
+        'Machine Learning Models'
+        'Natural Language Processing'
+        'Computer Vision'
         'Predictive Analytics'
-      ],
-      icon: Zap,
-      color: 'from-purple-500 to-pink-600',
-    },
-    {
-      id: 2,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions that grow with your business needs.',
+      ]
+      icon: Zap
+      color: 'from-purple-500 to-pink-600'
+    }
+    ,
+    { id: 2
+      title: 'Cloud Infrastructure'
+      ,
+      description: 'Scalable and secure cloud solutions that grow with your business needs.'
       features: [
-        'Auto-scaling capabilities',
-        '99.9% uptime guarantee',
-        'Advanced security',
+        'Auto-scaling capabilities'
+        '99.9% uptime guarantee'
+        'Advanced security'
         'Cost optimization'
-      ],
-      icon: Cloud,
-      color: 'from-green-500 to-blue-600',
-    },
-    {
-      id: 3,
-      title: 'AI Automation',
-      description: 'Automate complex business processes with intelligent AI systems.',
+      ]
+      icon: Cloud
+      color: 'from-green-500 to-blue-600'
+    }
+    ,
+    { id: 3
+      title: 'AI Automation'
+      ,
+      description: 'Automate complex business processes with intelligent AI systems.'
       features: [
-        'Process automation',
-        'Workflow optimization',
-        'Smart decision making',
+        'Process automation'
+        'Workflow optimization'
+        'Smart decision making'
         'Performance monitoring'
-      ],
-      icon: Brain,
-      color: 'from-orange-500 to-red-600',
-    },
-    {
-      id: 4,
-      title: 'Cybersecurity Solutions',
-      description: 'Protect your business with comprehensive AI-powered security solutions.',
+      ]
+      icon: Brain
+      color: 'from-orange-500 to-red-600'
+    }
+    ,
+    { id: 4
+      title: 'Cybersecurity Solutions'
+      ,
+      description: 'Protect your business with comprehensive AI-powered security solutions.'
       features: [
-        'Threat detection',
-        'Real-time monitoring',
-        'Automated response',
+        'Threat detection'
+        'Real-time monitoring'
+        'Automated response'
         'Compliance management'
-      ],
-      icon: Shield,
-      color: 'from-red-500 to-pink-600',
+      ]
+      icon: Shield
+      color: 'from-red-500 to-pink-600'
     }
   ];
 

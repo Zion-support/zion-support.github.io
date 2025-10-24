@@ -7,72 +7,76 @@ import { ArrowRight, CheckCircle, Brain } from 'lucide-react';
 const AIProjectManagementProPage: React.FC = () => {
   const features = [
     {
-      icon: 'Brain',
-    title: 'AI Project Planning',
+      icon: 'Brain'
+    title: 'AI Project Planning'
+      ,
       description: 'Intelligent project planning with AI-powered task breakdown, resource allocation, and timeline optimization.'
-},
-  {
-    icon: 'Users',
-    title: 'Team Collaboration',
+}
+  ,
+    { icon: 'Users'
+    title: 'Team Collaboration'
+      ,
       description: 'Enhanced team collaboration with AI-powered communication, task assignment, and progress tracking.'
-},
-  {
-    icon: 'BarChart',
-    title: 'Advanced Analytics',
+}
+  ,
+    { icon: 'BarChart'
+    title: 'Advanced Analytics'
+      ,
       description: 'Comprehensive project analytics with AI insights, performance metrics, and predictive forecasting.'
-},
-  {
-    icon: 'Target',
-    title: 'Smart Resource Management',
+}
+  ,
+    { icon: 'Target'
+    title: 'Smart Resource Management'
     description: 'AI-driven resource allocation and workload balancing for optimal team productivity.'}
   ]
   const benefits = [
-    'Increase project success rate by 40%',
-    'Reduce project delivery time by 25%',
-    'Improve team productivity by 35%',
-    'Minimize project risks with AI predictions',
-    'Automated progress tracking',
+    'Increase project success rate by 40%'
+    'Reduce project delivery time by 25%'
+    'Improve team productivity by 35%'
+    'Minimize project risks with AI predictions'
+    'Automated progress tracking'
     'Real-time collaboration tools'
   ]
   const pricing = [
   {
-  name: 'Starter',
-    price: '$29.99',
-      period: '/month',
-    description: 'Perfect for small teams and freelancers',
+  name: 'Starter'
+    price: '$29.99'
+      period: '/month'
+    ,
+      description: 'Perfect for small teams and freelancers'
       features: [
-        'Up to 5 projects',
-        'Basic AI features',
-        'Team collaboration',
-        'Basic analytics',
+        'Up to 5 projects'
+        'Basic AI features'
+        'Team collaboration'
+        'Basic analytics'
     'Email support'
       ]
-    },
-    {
-      name: 'Professional',
-    price: '$79.99',
-      period: '/month',
-    description: 'Ideal for growing businesses',
+    }
+    ,
+    { name: 'Professional'
+    price: '$79.99'
+      period: '/month'
+    description: 'Ideal for growing businesses'
       features: [
-        'Up to 25 projects',
-        'Advanced AI features',
-        'Advanced analytics',
-        'Priority support',
-        'API access',
+        'Up to 25 projects'
+        'Advanced AI features'
+        'Advanced analytics'
+        'Priority support'
+        'API access'
     'Custom integrations'
       ]
-    },
-    {
-      name: 'Enterprise',
-    price: 'Custom',
-      period: '',
-    description: 'For large organizations',
+    }
+    ,
+    { name: 'Enterprise'
+    price: 'Custom'
+      period: ''
+    description: 'For large organizations'
       features: [
-        'Unlimited projects',
-        'Full AI suite',
-        'Custom integrations',
-        'Dedicated support',
-        'White-label solution',
+        'Unlimited projects'
+        'Full AI suite'
+        'Custom integrations'
+        'Dedicated support'
+        'White-label solution'
     'SLA guarantee'
   ]
 }
@@ -80,7 +84,7 @@ const AIProjectManagementProPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
             AI Project Management <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Pro</span>
@@ -106,7 +110,7 @@ const AIProjectManagementProPage: React.FC = () => {
         </div>
       </section>
       {/* Features Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
@@ -130,7 +134,7 @@ const AIProjectManagementProPage: React.FC = () => {
         </div>
       </section>
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-black/20">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg: grid-cols-2 gap-12 items-center">
             <div>
@@ -166,7 +170,7 @@ const AIProjectManagementProPage: React.FC = () => {
         </div>
       </section>
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
@@ -208,7 +212,7 @@ const AIProjectManagementProPage: React.FC = () => {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-purple-600">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
             Ready to Transform Your Project Management?

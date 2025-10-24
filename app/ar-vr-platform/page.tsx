@@ -3,42 +3,51 @@ import React from 'react';
 
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',},
-    {icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',},
-    {icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',},
-    {icon: Globe,
-      title: 'Global Reach',
+      icon: Brain
+      ,
+      title: 'AI-Powered Solutions'
+      ,
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',}
+    ,
+    { icon: Zap
+      ,
+      title: 'High Performance'
+      ,
+      description: 'Lightning-fast processing and real-time analytics for optimal results',}
+    ,
+    { icon: Shield
+      ,
+      title: 'Enterprise Security'
+      ,
+      description: 'Bank-level security with encryption and compliance standards',}
+    ,
+    { icon: Globe
+      ,
+      title: 'Global Reach'
+      ,
       description: 'Worldwide deployment and support for international businesses',}];
   ];];];
   ]
   const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
+    'Advanced AI technology integration'
+    'Real-time processing and analytics'
+    'Enterprise-grade security and compliance'
+    'Scalable and flexible solutions'
+    '24/7 technical support'
+    'Easy integration with existing systems'
+    'Cost-effective pricing plans'
     'Proven track record of success'
   ];
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
       
-    'Proven track record of success',
-  
-  
+    'Proven track record of success'
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 
       {/* Hero Section */}
-      <section$1>
+        <section$1>
         <div$2>
           <div className="text-center">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">,</h1>
@@ -61,7 +70,7 @@ import React from 'react';
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         </section>< className="$2 />
           </div><div className="text-center">
             </div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -87,9 +96,10 @@ import React from 'react';
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         </section>
-      {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,<section>
+      {/* Features Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">,<section>
         <div>
           <div>
             <h2>,</h2>
@@ -104,7 +114,7 @@ import React from 'react';
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         </section>< className="$2 />
           </div><div className="text-center mb-16">
             </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -129,7 +139,8 @@ import React from 'react';
           </div>
         </div>
       </section>
-      {/* Benefits Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">,<section>
+      {/* Benefits Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">,<section>
         <div>
           <div>
             <h2>,</h2>
@@ -161,7 +172,7 @@ import React from 'react';
       </section>
 
       {/* CTA Section */}
-      <section$1>
+        <section$1>
         <div$2>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12">,</div>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
@@ -178,7 +189,7 @@ import React from 'react';
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us;
       {/* CTA Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         </section>< className="$2 />
           </div><div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">

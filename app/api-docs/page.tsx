@@ -9,20 +9,20 @@ export default function APIDocsPage() {
 
   const apiEndpoints = [
     {
-      name: 'AI Chat',
-      method: 'POST',
-      path: '/api/ai/chat',
-      description: 'AI-powered chat completion',
-      parameters: ['message', 'model', 'temperature'],
+      name: 'AI Chat'
+      method: 'POST'
+      path: '/api/ai/chat'
+      description: 'AI-powered chat completion'
+      parameters: ['message', 'model', 'temperature']
       example: {
         request: {
-          message: "Hello, how can I help you?",
-          model: "gpt-4",
+          message: "Hello, how can I help you?"
+          model: "gpt-4"
           temperature: 0.7
-        },
+        }
         response: {
-          response: "Hello! I'm here to help you with any questions or tasks you might have.",
-          confidence: 0.95,
+          response: "Hello! I'm here to help you with any questions or tasks you might have."
+          confidence: 0.95
           tokens_used: 25
         }
       }

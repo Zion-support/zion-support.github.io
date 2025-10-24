@@ -27,18 +27,18 @@ interface _PerformanceEventTiming extends PerformanceEntry {
   processingStart: number}
 export default function PerformanceMonitor({
 >>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
-  onMetricsUpdate,
-  enableRealTimeMonitoring = true,
+  onMetricsUpdate
+  enableRealTimeMonitoring = true
   logToConsole = false
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: null,
-    firstContentfulPaint: null,
-    largestContentfulPaint: null,
-    firstInputDelay: null,
-    cumulativeLayoutShift: null,
-    timeToInteractive: null,
-    totalBlockingTime: null,
+    loadTime: null
+    firstContentfulPaint: null
+    largestContentfulPaint: null
+    firstInputDelay: null
+    cumulativeLayoutShift: null
+    timeToInteractive: null
+    totalBlockingTime: null
   });
 
   useEffect(() => {

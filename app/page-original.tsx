@@ -55,8 +55,8 @@ const HomePage: React.FC = memo(() => {
   const _handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
-        event_category: 'engagement',
-        event_label: 'header_phone',
+        event_category: 'engagement'
+        event_label: 'header_phone'
       });
     }
   }, []);
@@ -65,34 +65,40 @@ const HomePage: React.FC = memo(() => {
   const _handleEmailClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'email_click', {
-        event_category: 'engagement',
-        event_label: 'header_email',
+        event_category: 'engagement'
+        event_label: 'header_email'
       });
     }
   }, []);
 
   const features = [
     {
-      icon: '🤖',
-      title: 'AI-Powered Solutions',
-      description: 'Cutting-edge artificial intelligence to transform your business operations and drive innovation.',
-    },
-    {
-      icon: '🛡️',
-      title: 'Enterprise Security',
-      description: 'Bank-level security measures to protect your data and ensure compliance with industry standards.',
-    },
-    {
-      icon: '👥',
-      title: 'Expert Team',
-      description: 'Experienced developers and consultants dedicated to delivering exceptional results for your projects.',
+      icon: '🤖'
+      title: 'AI-Powered Solutions'
+      ,
+      description: 'Cutting-edge artificial intelligence to transform your business operations and drive innovation.'
+    }
+    ,
+    { icon: '🛡️'
+      title: 'Enterprise Security'
+      ,
+      description: 'Bank-level security measures to protect your data and ensure compliance with industry standards.'
+    }
+    ,
+    { icon: '👥'
+      title: 'Expert Team'
+      ,
+      description: 'Experienced developers and consultants dedicated to delivering exceptional results for your projects.'
     }
   ];
 
   const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '99%', label: 'Client Satisfaction' },
+    { number: '500+', label: 'Projects Completed' }
+    ,
+    { number: '50+', label: 'Happy Clients' }
+    ,
+    { number: '99%', label: 'Client Satisfaction' }
+    ,
     { number: '24/7', label: 'Support Available' }
   ];
 
@@ -110,7 +116,7 @@ const HomePage: React.FC = memo(() => {
               
               <main className="pt-16">
                 {/* Hero Section */}
-                <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
                   <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto text-center">
                       <h1 className="text-5xl font-bold mb-6">
@@ -134,7 +140,7 @@ const HomePage: React.FC = memo(() => {
                 </section>
 
                 {/* Stats Section */}
-                <section className="py-16 bg-white">
+        <section className="py-16 bg-white">
                   <div className="container mx-auto px-4">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                       {stats.map((stat, index) => (
@@ -152,7 +158,7 @@ const HomePage: React.FC = memo(() => {
                 </section>
 
                 {/* Features Section */}
-                <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-gray-50">
                   <div className="container mx-auto px-4">
                     <div className="max-w-6xl mx-auto">
                       <div className="text-center mb-16">
@@ -182,7 +188,7 @@ const HomePage: React.FC = memo(() => {
                 </section>
 
                 {/* CTA Section */}
-                <section className="py-16 bg-blue-600">
+        <section className="py-16 bg-blue-600">
                   <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto text-center">
                       <h2 className="text-4xl font-bold text-white mb-6">

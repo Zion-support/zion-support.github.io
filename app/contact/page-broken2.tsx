@@ -5,14 +5,14 @@ import { Phone, Mail, MapPin, Clock, Send, CheckCircle, User, Building, Globe, M
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    budget: '',
-    timeline: '',
-    message: '',
+    name: ''
+    email: ''
+    company: ''
+    phone: ''
+    service: ''
+    budget: ''
+    timeline: ''
+    message: ''
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -21,7 +21,7 @@ const ContactPage: React.FC = () => {
   const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
-      ...prev,
+      ...prev
       [name]: value
     }));
   }, []);
@@ -36,14 +36,14 @@ const ContactPage: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 1000));
       setSubmitStatus('success');
       setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        budget: '',
-        timeline: '',
-        message: '',
+        name: ''
+        email: ''
+        company: ''
+        phone: ''
+        service: ''
+        budget: ''
+        timeline: ''
+        message: ''
       });
     } catch (_error) {
       setSubmitStatus('error');
@@ -53,41 +53,48 @@ const ContactPage: React.FC = () => {
   };
 
   const services = [
-    'AI Solutions',
-    'Cloud Computing',
-    'Mobile App Development',
-    'Web Development',
-    'Data Analytics',
-    'Cybersecurity',
-    'DevOps',
-    'Consulting',
+    'AI Solutions'
+    'Cloud Computing'
+    'Mobile App Development'
+    'Web Development'
+    'Data Analytics'
+    'Cybersecurity'
+    'DevOps'
+    'Consulting'
     'Other'
   ];
 
   const contactInfo = [
     {
-      icon: Phone,
-      title: 'Phone',
-      details: '+1 (302) 464-0950',
-      description: 'Mon-Fri 9AM-6PM EST',
-    },
-    {
-      icon: Mail,
-      title: 'Email',
-      details: 'kleber@ziontechgroup.com',
-      description: 'We respond within 24 hours',
-    },
-    {
-      icon: MapPin,
-      title: 'Address',
-      details: '123 Tech Street, Suite 100\nWilmington, DE 19801',
-      description: 'Visit our office',
-    },
-    {
-      icon: Clock,
-      title: 'Business Hours',
-      details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
-      description: 'Eastern Time',
+      icon: Phone
+      ,
+      title: 'Phone'
+      details: '+1 (302) 464-0950'
+      ,
+      description: 'Mon-Fri 9AM-6PM EST'
+    }
+    ,
+    { icon: Mail
+      ,
+      title: 'Email'
+      details: 'kleber@ziontechgroup.com'
+      ,
+      description: 'We respond within 24 hours'
+    }
+    ,
+    { icon: MapPin
+      ,
+      title: 'Address'
+      details: '123 Tech Street, Suite 100\nWilmington, DE 19801'
+      description: 'Visit our office'
+    }
+    ,
+    { icon: Clock
+      ,
+      title: 'Business Hours'
+      details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM'
+      ,
+      description: 'Eastern Time'
     }
   ];
 
@@ -120,7 +127,8 @@ const ContactPage: React.FC = () => {
               </div>
             )}
             
-            {submitStatus === 'error' && (
+            ,
+    { submitStatus === 'error' && (
               <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3">
                 <span className="text-red-400">Failed to send message. Please try again.</span>
               </div>

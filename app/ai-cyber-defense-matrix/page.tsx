@@ -10,83 +10,95 @@ const AICyberDefenseMatrix: React.FC = () => {
     setIsVisible(true);}, []);
 
   const features = [
-    {icon: Shield,
-      title: 'AI Threat Detection',
-      description: 'Advanced AI algorithms for real-time threat detection and automated response',
-      benefits: ['99.9% threat detection rate', 'Real-time monitoring', 'Automated response']},
-    {icon: Zap,
-    },
-    {
-      icon: Zap,
-      title: 'Zero-Trust Architecture',
-      description: 'Comprehensive zero-trust security framework with continuous verification',
-  
+    {icon: Shield
+      ,
+      title: 'AI Threat Detection'
+      ,
+      description: 'Advanced AI algorithms for real-time threat detection and automated response'
+      benefits: ['99.9% threat detection rate', 'Real-time monitoring', 'Automated response']}
+    ,
+    { icon: Zap
+    }
+    ,
+    { icon: Zap
+      ,
+      title: 'Zero-Trust Architecture'
+      description: 'Comprehensive zero-trust security framework with continuous verification'
     }
   ]
   const pricingPlans = [
-    {name: 'Essential',
-      price: '$499',
-      period: '/month',
-      description: 'Perfect for small businesses and startups',
-      features: [,
-        'Basic threat detection',
-        'Email security',
-        'Firewall management',
-        'Email support',
-        'Basic reporting',
+    {name: 'Essential'
+      price: '$499'
+      period: '/month'
+      ,
+      description: 'Perfect for small businesses and startups'
+      features: [
+        'Basic threat detection'
+        'Email security'
+        'Firewall management'
+        'Email support'
+        'Basic reporting'
         'Standard monitoring'
-      ],
+      ]
       popular: false
-    },
-    {
-    {name: 'Professional',
-      price: '$1,299',
-      period: '/month',
-      description: 'Ideal for mid-size companies and enterprises',
-      features: [,
-        'Advanced threat detection',
-        'Zero-trust architecture',
-        'Behavioral analytics',
-        'Priority support',
-        'Advanced reporting',
-        'Real-time monitoring',
-        'Incident response',
+    }
+    ,
+    { {name: 'Professional'
+      price: '$1,299'
+      period: '/month'
+      description: 'Ideal for mid-size companies and enterprises'
+      features: [
+        'Advanced threat detection'
+        'Zero-trust architecture'
+        'Behavioral analytics'
+        'Priority support'
+        'Advanced reporting'
+        'Real-time monitoring'
+        'Incident response'
         'API integration'
-      ],
-      popular: true;,},
-    {name: 'Enterprise',
-      price: '$3,999',
-      period: '/month',
-      description: 'For large organizations and critical infrastructure',
-      features: [,
-        'Full cyber defense suite',
-        'Custom security policies',
-        '24/7 dedicated support',
-        'White-label solutions',
-        'On-premise deployment',
-        'Custom integrations',
-        'Advanced analytics',
-        'Compliance management',
+      ]
+      popular: true;,}
+    ,
+    { name: 'Enterprise'
+      price: '$3,999'
+      period: '/month'
+      description: 'For large organizations and critical infrastructure'
+      features: [
+        'Full cyber defense suite'
+        'Custom security policies'
+        '24/7 dedicated support'
+        'White-label solutions'
+        'On-premise deployment'
+        'Custom integrations'
+        'Advanced analytics'
+        'Compliance management'
         'Training programs'
-      ],
+      ]
       popular: false;,}];
 
   const useCases = [
-    {title: 'Financial Services',
-      description: 'Advanced cyber defense for banks and financial institutions',
-      icon: DollarSign,
-      results: '99.9% security uptime',},
-    {title: 'Healthcare Protection',
-      description: 'HIPAA-compliant cyber defense for healthcare organizations',
-      icon: Shield,
-      results: 'Zero data breaches',},
-    {title: 'Government Security',
-      description: 'National-level cyber defense for government agencies',
-      icon: Globe,
-      results: 'Enhanced national security',},
-    {title: 'Critical Infrastructure',
-      description: 'Industrial cyber defense for power grids and utilities',
-      icon: Zap,
+    {title: 'Financial Services'
+      ,
+      description: 'Advanced cyber defense for banks and financial institutions'
+      icon: DollarSign
+      results: '99.9% security uptime',}
+    ,
+    { title: 'Healthcare Protection'
+      ,
+      description: 'HIPAA-compliant cyber defense for healthcare organizations'
+      icon: Shield
+      results: 'Zero data breaches',}
+    ,
+    { title: 'Government Security'
+      ,
+      description: 'National-level cyber defense for government agencies'
+      icon: Globe
+      results: 'Enhanced national security',}
+    ,
+    { title: 'Critical Infrastructure'
+      ,
+      description: 'Industrial cyber defense for power grids and utilities'
+      icon: Zap
       results: '100% infrastructure protection',}];
 
   return (
@@ -96,14 +108,13 @@ const AICyberDefenseMatrix: React.FC = () => {
         <title>AI Cyber Defense Matrix - Advanced Cybersecurity Platform | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered cyber defense platform with 99.9% threat detection, zero-trust architecture, and automated incident response for enterprise security." />
         <meta name="keywords" content="cyber defense, cybersecurity, threat detection, zero-trust, incident response, security AI, enterprise security, cyber protection" />
-        <meta property="og: title" content="AI Cyber Defense Matrix - Advanced Cybersecurity Platform" />,
+        <meta property="og: title" content="AI Cyber Defense Matrix - Advanced Cybersecurity Platform" />
         <meta property="og:description" content="Revolutionary AI-powered cyber defense platform with 99.9% threat detection, zero-trust architecture, and automated incident response." />
-        <meta property="og: type" content="website" />,
-        <meta property="og: url" content="https://ziontechgroup.com/ai-cyber-defense-matrix" />,
-        <link rel="canonical" href="https: //ziontechgroup.com/ai-cyber-defense-matrix" />,
-      
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 text-white">{/* Hero Section */</div>} <section className="relative py-20 px-4 sm: px-6 lg:px-8 overflow-hidden">,</section>
+        <meta property="og: type" content="website" />
+        <meta property="og: url" content="https://ziontechgroup.com/ai-cyber-defense-matrix" />
+        <link rel="canonical" href="https: //ziontechgroup.com/ai-cyber-defense-matrix" />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 text-white">{/* Hero Section */</div>}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">,</section>
           <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-yellow-500/10"></div>
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-red-500/20 via-transparent to-transparent"></div>
           
@@ -119,7 +130,7 @@ const AICyberDefenseMatrix: React.FC = () => {
               </h1>
               
               <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">,</p>
-                Revolutionary AI-powered cyber defense platform with 99.9% threat detection, 
+                Revolutionary AI-powered cyber defense platform with 99.9% threat detection
                 zero-trust architecture, and automated incident response for enterprise security.
               </p>
               
@@ -140,15 +151,15 @@ const AICyberDefenseMatrix: React.FC = () => {
               
               <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
                 <a;
-                  href="tel: +13024640950",
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-xl hover: from-red-600 hover:to-orange-700 transition-all duration-300 shadow-lg shadow-red-500/25 hover:shadow-red-500/40 hover:scale-105",
+                  href="tel: +13024640950"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-xl hover: from-red-600 hover:to-orange-700 transition-all duration-300 shadow-lg shadow-red-500/25 hover:shadow-red-500/40 hover:scale-105"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call (302) 464-0950;
                 </a>
                 <a;
-                  href="mailto: kleber@ziontechgroup.com",
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-yellow-600 text-white font-semibold rounded-xl hover: from-orange-600 hover:to-yellow-700 transition-all duration-300 shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 hover:scale-105",
+                  href="mailto: kleber@ziontechgroup.com"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-yellow-600 text-white font-semibold rounded-xl hover: from-orange-600 hover:to-yellow-700 transition-all duration-300 shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 hover:scale-105"
                 >
                   <Mail className="w-5 h-5 mr-2" />
                   Get Quote;
@@ -158,7 +169,8 @@ const AICyberDefenseMatrix: React.FC = () => {
         </div>
       </section>
 
-        {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,<section>
+        {/* Features Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">,<section>
         <div>
           <div>
             <h2>,</h2>
@@ -172,7 +184,7 @@ const AICyberDefenseMatrix: React.FC = () => {
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
               {features.map((feature, index) => (
                 <div;
-                  key={index}className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-red-500/20 hover: border-red-500/40 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-red-500/10",
+                  key={index}className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-red-500/20 hover: border-red-500/40 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-red-500/10"
                 >
                   </div><div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-600 rounded-xl flex items-center justify-center mb-6">
                     </div><feature.icon className="w-8 h-8 text-white" />
@@ -192,7 +204,8 @@ const AICyberDefenseMatrix: React.FC = () => {
         </div>
       </section>
 
-        {/* Use Cases Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-slate-900/30">,<section>
+        {/* Use Cases Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">,<section>
         <div>
           <div>
             <h2>,</h2>
@@ -206,7 +219,7 @@ const AICyberDefenseMatrix: React.FC = () => {
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
               {useCases.map((useCase, index) => (
                 <div;
-                  key={index}className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-orange-500/20 hover: border-orange-500/40 transition-all duration-300 hover:scale-105",
+                  key={index}className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-orange-500/20 hover: border-orange-500/40 transition-all duration-300 hover:scale-105"
                 >
                   </div><div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-yellow-600 rounded-xl flex items-center justify-center mb-6">
                     </div><useCase.icon className="w-8 h-8 text-white" />
@@ -220,7 +233,8 @@ const AICyberDefenseMatrix: React.FC = () => {
         </div>
       </section>
 
-        {/* Pricing Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,<section>
+        {/* Pricing Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">,<section>
         <div>
           <div>
             <h2>,</h2>
@@ -234,7 +248,7 @@ const AICyberDefenseMatrix: React.FC = () => {
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,</div>
               {pricingPlans.map((plan, index) => (
                 <div;
-                  key={index}className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border transition-all duration-300 hover: scale-105 hover:shadow-xl ${,
+                  key={index}className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border transition-all duration-300 hover: scale-105 hover:shadow-xl ${
                     plan.popular;
                       ? 'border-red-500/50 shadow-red-500/20' 
                       : 'border-gray-700/50 hover: border-red-500/30',}`}
@@ -261,10 +275,10 @@ const AICyberDefenseMatrix: React.FC = () => {
                   </ul>
                   
                   <a;
-                    href="tel: +13024640950",
+                    href="tel: +13024640950"
                     className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 ${
                       plan.popular;
-                        ? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover: from-red-600 hover:to-orange-700',
+                        ? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover: from-red-600 hover:to-orange-700'
                         : 'bg-gradient-to-r from-gray-700 to-gray-600 text-white hover: from-gray-600 hover:to-gray-500',}`}
                   >
                     Get Started;
@@ -275,7 +289,8 @@ const AICyberDefenseMatrix: React.FC = () => {
         </div>
       </section>
 
-        {/* CTA Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-yellow-500/10">,</section>
+        {/* CTA Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">,</section>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-red-400 to-yellow-400 bg-clip-text text-transparent">,</h2>
               Secure Your Digital Future;
@@ -285,15 +300,15 @@ const AICyberDefenseMatrix: React.FC = () => {
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
               <a;
-                href="tel: +13024640950",
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-xl hover: from-red-600 hover:to-orange-700 transition-all duration-300 shadow-lg shadow-red-500/25 hover:shadow-red-500/40 hover:scale-105",
+                href="tel: +13024640950"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-xl hover: from-red-600 hover:to-orange-700 transition-all duration-300 shadow-lg shadow-red-500/25 hover:shadow-red-500/40 hover:scale-105"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call (302) 464-0950;
               </a>
               <a;
-                href="mailto: kleber@ziontechgroup.com",
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-yellow-600 text-white font-semibold rounded-xl hover: from-orange-600 hover:to-yellow-700 transition-all duration-300 shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 hover:scale-105",
+                href="mailto: kleber@ziontechgroup.com"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-yellow-600 text-white font-semibold rounded-xl hover: from-orange-600 hover:to-yellow-700 transition-all duration-300 shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 hover:scale-105"
               >
                 <Mail className="w-5 h-5 mr-2" />
                 Get Free Quote;

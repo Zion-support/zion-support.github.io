@@ -10,11 +10,11 @@ const AIAutomatedReportingPage: React.FC = () => {
         <title>AI Automated Reporting | Zion Tech Group</title>
         <meta name="description" content="Transform your business intelligence with AI-powered automated reporting. Generate insights, analytics, and reports automatically with our advanced AI reporting solutions." />
         <meta name="keywords" content="AI reporting, automated reports, business intelligence, data analytics, smart reporting, AI insights" />
-      
+      </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-8">
@@ -49,7 +49,7 @@ const AIAutomatedReportingPage: React.FC = () => {
       </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -93,7 +93,7 @@ const AIAutomatedReportingPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Automated Report Generation</h3>
                 <p className="text-gray-300 mb-4">
-                  AI automatically generates comprehensive reports based on your data, 
+                  AI automatically generates comprehensive reports based on your data
                   saving hours of manual work and ensuring consistency.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
@@ -143,7 +143,7 @@ const AIAutomatedReportingPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Smart Automation</h3>
                 <p className="text-gray-300 mb-4">
-                  Automate complex reporting workflows with intelligent scheduling, 
+                  Automate complex reporting workflows with intelligent scheduling
                   data processing, and distribution to stakeholders.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
@@ -216,7 +216,7 @@ const AIAutomatedReportingPage: React.FC = () => {
       </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -251,7 +251,7 @@ const AIAutomatedReportingPage: React.FC = () => {
                     <div>
                       <h3 className="text-xl font-semibold text-white mb-2">Enhanced Collaboration</h3>
                       <p className="text-gray-300">
-                        Share insights across teams with automated distribution, 
+                        Share insights across teams with automated distribution
                         real-time collaboration, and role-based access controls.
                       </p>
                     </div>
@@ -298,7 +298,7 @@ const AIAutomatedReportingPage: React.FC = () => {
       </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Reporting?

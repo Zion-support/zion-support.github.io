@@ -8,16 +8,19 @@ import { CheckCircle, ArrowRight, Settings, Zap, Shield, Users, BarChart3 } from
 const AIApiManagerPage: React.FC = () => {
   const features = [
     {
-      icon: Settings,
-      title: 'API Configuration',
-      description: 'Centralized API configuration and management with AI-powered optimization.',
+      icon: Settings
+      ,
+      title: 'API Configuration'
+      ,
+      description: 'Centralized API configuration and management with AI-powered optimization.'
       benefits: ['Auto-configuration', 'Performance tuning', 'Load balancing', 'Failover setup']
-    },
-    {
-      icon: BarChart3,
-      title: 'Performance Analytics',
-      description: 'Advanced analytics and insights for API performance optimization.',
-  
+    }
+    ,
+    { icon: BarChart3
+      ,
+      title: 'Performance Analytics'
+      ,
+      description: 'Advanced analytics and insights for API performance optimization.'
     }
   ];
 
@@ -27,7 +30,7 @@ const AIApiManagerPage: React.FC = () => {
         <title>AI API Manager - Zion Tech Group | Intelligent API Administration</title>
         <meta name="description" content="Manage and optimize your APIs with AI-powered administration tools. Configuration, analytics, auto-scaling, and team management." />
         <meta name="keywords" content="API manager, API administration, API optimization, auto-scaling, team management" />
-      
+      </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />

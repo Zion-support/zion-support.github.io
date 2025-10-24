@@ -7,69 +7,86 @@ import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Targ
 const AiDataAnalyticsPage: React.FC = () => {
     const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
+      icon: Brain
+      ,
+      title: 'AI-Powered Solutions'
+      ,
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+    }
+    ,
+    { icon: Zap
+      ,
+      title: 'High Performance'
+      ,
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
+    }
+    ,
+    { icon: Shield
+      ,
+      title: 'Enterprise Security'
+      ,
+      description: 'Bank-level security with encryption and compliance standards'
+    }
+    ,
+    { icon: Globe
+      ,
+      title: 'Global Reach'
+      ,
+      description: 'Worldwide deployment and support for international businesses'
     }
   ];
 
   const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
+    'Advanced AI technology integration'
+    'Real-time processing and analytics'
+    'Enterprise-grade security and compliance'
+    'Scalable and flexible solutions'
+    '24/7 technical support'
+    'Easy integration with existing systems'
+    'Cost-effective pricing plans'
     'Proven track record of success'
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
-    {icon: BarChart,
-  },
-    {
-    icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']}
+    ,
+    { icon: BarChart
+  }
+    ,
+    { icon: BarChart
+      ,
+      title: 'Advanced Analytics'
+      ,
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
       details: ['Predictive Analytics', 'Anomaly Detection', 'Pattern Recognition', 'Automated Insights']
-    },
-    {
-      icon: BarChart,
-      title: 'Real-Time Dashboards',
-      description: 'Interactive visualizations that update in real-time with your business data',
+    }
+    ,
+    { icon: BarChart
+      ,
+      title: 'Real-Time Dashboards'
+      ,
+      description: 'Interactive visualizations that update in real-time with your business data'
       details: ['Live Data Streaming', 'Custom Dashboards', 'Interactive Charts', 'Mobile Responsive']
-    },
-    {
-      icon: Target,
-      title: 'Predictive Modeling',
-      description: 'Forecast future trends and outcomes with advanced statistical models',
+    }
+    ,
+    { icon: Target
+      ,
+      title: 'Predictive Modeling'
+      ,
+      description: 'Forecast future trends and outcomes with advanced statistical models'
       details: ['Sales Forecasting', 'Demand Planning', 'Risk Assessment', 'Trend Analysis']
-    },
-    {
-    icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+    }
+    ,
+    { icon: TrendingUp
+      ,
+      title: 'Growth Optimization'
+      ,
+      description: 'Optimize your business growth with data-driven strategies.'
   }
     ]
 const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology',
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
+    'Gain competitive advantage with advanced technology'
   ]
 return (
     <>)
@@ -88,10 +105,10 @@ return (
         <title>Ai Data Analytics - Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      
+      </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -107,7 +124,8 @@ return (
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-        {/* Hero Section */} <section className="py-20 px-4">
+        {/* Hero Section */}
+        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
@@ -128,14 +146,14 @@ return (
             </h1>
             <p>Advanced AI-powered ai data analytics solution for modern businesses.</p>
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button>Get Started;</button>
               </button>
               <button>View Demo,</button>
                 Get Started
               </button>
               <button></button>
-                View Demo,
+                View Demo
               </button>
             </div>
           </div>
@@ -143,7 +161,7 @@ return (
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -169,7 +187,7 @@ return (
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -192,7 +210,7 @@ return (
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -205,7 +223,8 @@ return (
         {/* Features Section */}
         <section className="py-20 px-4">
         </section>
-        {/* Features Section */} <section className="py-20 px-4">
+        {/* Features Section */}
+        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
@@ -242,10 +261,10 @@ export default PagePage;
               <p>Advanced AI technology that drives results;</p>
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
-                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
+                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>
                     <feature />
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description</p>}</p>
@@ -258,127 +277,140 @@ export default PagePage;
                       ))}
                     </ul>
                   )}
-      icon: Database,
-      title: 'Data Integration',
-      description: 'Connect and analyze data from multiple sources seamlessly',
+      icon: Database
+      ,
+      title: 'Data Integration'
+      ,
+      description: 'Connect and analyze data from multiple sources seamlessly'
       details: ['API Integrations', 'Database Connections', 'File Uploads', 'Cloud Storage']
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with full compliance and data protection',
+    }
+    ,
+    { icon: Shield
+      ,
+      title: 'Enterprise Security'
+      ,
+      description: 'Bank-level security with full compliance and data protection'
       details: ['End-to-End Encryption', 'GDPR Compliance', 'SOC 2 Certified', 'Role-Based Access']
-    },
-    {
-      icon: Zap,
-      title: 'Automated Reports',
-      description: 'Generate comprehensive reports automatically on your schedule',
+    }
+    ,
+    { icon: Zap
+      ,
+      title: 'Automated Reports'
+      ,
+      description: 'Generate comprehensive reports automatically on your schedule'
       details: ['Scheduled Reports', 'Custom Templates', 'Email Delivery', 'PDF Export']
     }
   ]
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$199',
-      period: '/month',
-      description: 'Perfect for small teams',
+      name: 'Starter'
+      price: '$199'
+      period: '/month'
+      description: 'Perfect for small teams'
       features: [
-        'Up to 1M data points',
-        '5 data sources',
-        'Basic AI insights',
-        'Standard dashboards',
-        'Email support',
+        'Up to 1M data points'
+        '5 data sources'
+        'Basic AI insights'
+        'Standard dashboards'
+        'Email support'
         '1 user'
-      ],
+      ]
       popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$499',
-      period: '/month',
-      description: 'Ideal for growing businesses',
+    }
+    ,
+    { name: 'Professional'
+      price: '$499'
+      period: '/month'
+      description: 'Ideal for growing businesses'
       features: [
-        'Up to 10M data points',
-        'Unlimited data sources',
-        'Advanced AI analytics',
-        'Custom dashboards',
-        'Priority support',
-        '5 users',
+        'Up to 10M data points'
+        'Unlimited data sources'
+        'Advanced AI analytics'
+        'Custom dashboards'
+        'Priority support'
+        '5 users'
         'API access'
-      ],
+      ]
       popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$1,299',
-      period: '/month',
-      description: 'For large organizations',
+    }
+    ,
+    { name: 'Enterprise'
+      price: '$1,299'
+      period: '/month'
+      description: 'For large organizations'
       features: [
-        'Unlimited data points',
-        'Unlimited data sources',
-        'Custom AI models',
-        'White-label solution',
-        'Dedicated support',
-        'Unlimited users',
-        'Custom integrations',
+        'Unlimited data points'
+        'Unlimited data sources'
+        'Custom AI models'
+        'White-label solution'
+        'Dedicated support'
+        'Unlimited users'
+        'Custom integrations'
         'On-premise deployment'
-      ],
+      ]
       popular: false
     }
   ]
 
   const stats = [
-    { value: '40%', label: 'Faster Decision Making', icon: <Clock className="w-8 h-8 text-green-400" /> },
-    { value: '85%', label: 'Accuracy Improvement', icon: <Target className="w-8 h-8 text-blue-400" /> },
-    { value: '60%', label: 'Cost Reduction', icon: <DollarSign className="w-8 h-8 text-purple-400" /> },
+    { value: '40%', label: 'Faster Decision Making', icon: <Clock className="w-8 h-8 text-green-400" /> }
+    ,
+    { value: '85%', label: 'Accuracy Improvement', icon: <Target className="w-8 h-8 text-blue-400" /> }
+    ,
+    { value: '60%', label: 'Cost Reduction', icon: <DollarSign className="w-8 h-8 text-purple-400" /> }
+    ,
     { value: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-8 h-8 text-cyan-400" /> }
   ]
 
   const useCases = [
     {
-      title: 'Sales Analytics',
-      description: 'Track sales performance, identify top performers, and predict future revenue',
+      title: 'Sales Analytics'
+      ,
+      description: 'Track sales performance, identify top performers, and predict future revenue'
       icon: <TrendingUp className="w-8 h-8 text-green-400" />
-    },
-    {
-      title: 'Customer Insights',
-      description: 'Understand customer behavior, preferences, and lifetime value',
+    }
+    ,
+    { title: 'Customer Insights'
+      ,
+      description: 'Understand customer behavior, preferences, and lifetime value'
       icon: <Users className="w-8 h-8 text-blue-400" />
-    },
-    {
-      title: 'Operational Efficiency',
-      description: 'Optimize processes, reduce waste, and improve productivity',
+    }
+    ,
+    { title: 'Operational Efficiency'
+      ,
+      description: 'Optimize processes, reduce waste, and improve productivity'
       icon: <Zap className="w-8 h-8 text-yellow-400" />
-    },
-    {
-      title: 'Financial Forecasting',
-      description: 'Predict cash flow, budget planning, and financial performance',
+    }
+    ,
+    { title: 'Financial Forecasting'
+      ,
+      description: 'Predict cash flow, budget planning, and financial performance'
       icon: <DollarSign className="w-8 h-8 text-purple-400" />
     }
   ]
 
   const testimonials = [
     {
-      name: 'David Kim',
-      role: 'Chief Data Officer, FinanceFlow',
-      content: 'AI Data Analytics helped us identify $2M in cost savings opportunities within the first month.',
-      rating: 5,
-      company: 'FinanceFlow',
-    },
-    {
-      name: 'Lisa Wang',
-      role: 'VP Analytics, RetailMax',
-      content: 'The predictive models are incredibly accurate. We can now forecast demand with 95% accuracy.',
-      rating: 5,
-      company: 'RetailMax',
-    },
-    {
-      name: 'James Rodriguez',
-      role: 'Head of BI, TechStart',
-      content: 'Implementation was smooth and the insights are game-changing. ROI was achieved in 3 months.',
-      rating: 5,
-      company: 'TechStart',
+      name: 'David Kim'
+      role: 'Chief Data Officer, FinanceFlow'
+      content: 'AI Data Analytics helped us identify $2M in cost savings opportunities within the first month.'
+      rating: 5
+      company: 'FinanceFlow'
+    }
+    ,
+    { name: 'Lisa Wang'
+      role: 'VP Analytics, RetailMax'
+      content: 'The predictive models are incredibly accurate. We can now forecast demand with 95% accuracy.'
+      rating: 5
+      company: 'RetailMax'
+    }
+    ,
+    { name: 'James Rodriguez'
+      role: 'Head of BI, TechStart'
+      content: 'Implementation was smooth and the insights are game-changing. ROI was achieved in 3 months.'
+      rating: 5
+      company: 'TechStart'
     }
   ]
 
@@ -387,7 +419,7 @@ export default PagePage;
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -410,7 +442,7 @@ export default PagePage;
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -431,7 +463,7 @@ export default PagePage;
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -442,7 +474,8 @@ export default PagePage;
             </p>
           </div>
         </section>
-        {/* Benefits Section */} <section className="py-20 px-4">
+        {/* Benefits Section */}
+        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Key Features
@@ -454,7 +487,8 @@ export default PagePage;
                     <feature.icon className="w-8 h-8 text-white" />
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}
                   <p className="text-gray-300 mb-4">{feature.description}
-                  {feature.benefits && (
+                  ,
+    { feature.benefits && (
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-400">
@@ -470,10 +504,10 @@ export default PagePage;
               <p>Proven results that drive business growth and efficiency;</p>
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => (
-                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
+                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>
                     <CheckCircle />
                   <p className="text-lg text-white font-medium">{benefit</p>}</p>
                 </div>
@@ -499,7 +533,8 @@ export default PagePage;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
               {benefits.map((benefit, index) => ()
               ))}
-        {/* CTA Section */}
+        ,
+    { /* CTA Section */}
         <section className="py-20 px-4">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
@@ -520,7 +555,7 @@ export default PagePage;
               </h2>
               <p>Contact our experts to discuss your requirements and get started today.</p>
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button>Contact Us;</button>
                 </button>
                 <button>Learn More;</button>
@@ -573,7 +608,7 @@ export default AiDataAnalyticsPage;
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -599,7 +634,7 @@ export default AiDataAnalyticsPage;
       </section>
 
       {/* Pricing Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -652,7 +687,7 @@ export default AiDataAnalyticsPage;
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -684,7 +719,7 @@ export default AiDataAnalyticsPage;
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Unlock Your Data's Potential?

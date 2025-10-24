@@ -6,18 +6,29 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const EnhancedLoadingSkeletonPage: React.FC = () => {
     const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',},
-    {icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',},
-    {icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',},
-    {icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
+      icon: Brain
+      ,
+      title: 'AI-Powered Solutions'
+      ,
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',}
+    ,
+    { icon: Zap
+      ,
+      title: 'High Performance'
+      ,
+      description: 'Lightning-fast processing and real-time analytics for optimal results',}
+    ,
+    { icon: Shield
+      ,
+      title: 'Enterprise Security'
+      ,
+      description: 'Bank-level security with encryption and compliance standards',}
+    ,
+    { icon: Globe
+      ,
+      title: 'Global Reach'
+      ,
+      description: 'Worldwide deployment and support for international businesses'
     }
   ];
 =======
@@ -35,11 +46,11 @@ interface EnhancedLoadingSkeletonProps {
 }
 
 const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
-  lines = 3,
-  showAvatar = false,
-  showImage = false,
-  height = 'auto',
-  className = '',
+  lines = 3
+  showAvatar = false
+  showImage = false
+  height = 'auto'
+  className = ''
 }) => {
   return (
     <div className={`animate-pulse ${className}`} style={{ height }}>
@@ -54,7 +65,8 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
           </div>
         )}
         
-        {showImage && (
+        ,
+    { showImage && (
           <div className="w-full h-48 bg-gray-300 rounded-lg"></div>
         )}
         

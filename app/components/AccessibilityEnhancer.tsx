@@ -15,10 +15,10 @@ interface AccessibilityEnhancerProps {
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
-  children,
-  enableKeyboardNavigation: _enableKeyboardNavigation = true,
-  enableScreenReaderSupport: _enableScreenReaderSupport = true,
-  enableHighContrast: _enableHighContrast = false,
+  children
+  enableKeyboardNavigation: _enableKeyboardNavigation = true
+  enableScreenReaderSupport: _enableScreenReaderSupport = true
+  enableHighContrast: _enableHighContrast = false
   enableFocusManagement: _enableFocusManagement = true
 }) => {
 <<<<<<< HEAD

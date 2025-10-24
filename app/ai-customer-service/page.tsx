@@ -7,95 +7,113 @@ import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Targ
 const AiCustomerServicePage: React.FC = () => {
     const features = [
     {
-      icon: Brain,
-      title: 'Intelligent Problem Solving',
-      description: 'AI agents that understand context and provide accurate solutions to complex customer issues.',
+      icon: Brain
+      ,
+      title: 'Intelligent Problem Solving'
+      ,
+      description: 'AI agents that understand context and provide accurate solutions to complex customer issues.'
       benefits: ['Context understanding', 'Problem resolution', 'Learning capabilities', 'Escalation management']
-    },
-    {
-      icon: Globe,
-      title: 'Multilingual Support',
-      description: 'Support customers in 50+ languages with natural language processing and translation.',
-  
+    }
+    ,
+    { icon: Globe
+      ,
+      title: 'Multilingual Support'
+      description: 'Support customers in 50+ languages with natural language processing and translation.'
     }
   ];
 
   const benefits = [
-    'Increase customer satisfaction by 95%',
-    'Reduce response time by 90%',
-    'Lower support costs by 70%',
-    'Handle 10x more inquiries',
-    'Enable 24/7 support',
-    'Improve resolution rates',
-    'Scale support operations',
+    'Increase customer satisfaction by 95%'
+    'Reduce response time by 90%'
+    'Lower support costs by 70%'
+    'Handle 10x more inquiries'
+    'Enable 24/7 support'
+    'Improve resolution rates'
+    'Scale support operations'
     'Enhance customer experience'
   ];
 
   const useCases = [
     {
-      title: 'E-commerce Support',
-      description: 'Handle product inquiries, order issues, and returns with AI assistance',
-      icon: '🛒',
-    },
-    {
-      title: 'Technical Support',
-      description: 'Provide technical assistance and troubleshooting for software and hardware',
-      icon: '🔧',
-    },
-    {
-      title: 'Billing & Payments',
-      description: 'Assist with billing questions, payment issues, and account management',
-      icon: '💳',
-    },
-    {
-      title: 'Product Information',
-      description: 'Answer questions about products, features, and specifications',
-      icon: '📋',
-    },
-    {
-      title: 'Appointment Scheduling',
-      description: 'Help customers schedule appointments and manage bookings',
-      icon: '📅',
-    },
-    {
-      title: 'General Inquiries',
-      description: 'Handle general questions and provide information about services',
-      icon: '❓',
+      title: 'E-commerce Support'
+      ,
+      description: 'Handle product inquiries, order issues, and returns with AI assistance'
+      icon: '🛒'
+    }
+    ,
+    { title: 'Technical Support'
+      ,
+      description: 'Provide technical assistance and troubleshooting for software and hardware'
+      icon: '🔧'
+    }
+    ,
+    { title: 'Billing & Payments'
+      ,
+      description: 'Assist with billing questions, payment issues, and account management'
+      icon: '💳'
+    }
+    ,
+    { title: 'Product Information'
+      ,
+      description: 'Answer questions about products, features, and specifications'
+      icon: '📋'
+    }
+    ,
+    { title: 'Appointment Scheduling'
+      ,
+      description: 'Help customers schedule appointments and manage bookings'
+      icon: '📅'
+    }
+    ,
+    { title: 'General Inquiries'
+      ,
+      description: 'Handle general questions and provide information about services'
+      icon: '❓'
     }
   ];
 
   return (
     <>
-    {icon: BarChart,
-  },
-    {
-    icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-    {icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-    {icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-  },
-    {
-    icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-  },
-    {
-    icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+    {icon: BarChart
+  }
+    ,
+    { icon: BarChart
+      ,
+      title: 'Advanced Analytics'
+      ,
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
+    {icon: Target
+      ,
+      title: 'Precision Targeting'
+      ,
+      description: 'Target specific goals and objectives with precision and accuracy.'
+    {icon: TrendingUp
+      ,
+      title: 'Growth Optimization'
+      ,
+      description: 'Optimize your business growth with data-driven strategies.'
+  }
+    ,
+    { icon: Target
+      ,
+      title: 'Precision Targeting'
+      ,
+      description: 'Target specific goals and objectives with precision and accuracy.'
+  }
+    ,
+    { icon: TrendingUp
+      ,
+      title: 'Growth Optimization'
+      ,
+      description: 'Optimize your business growth with data-driven strategies.'
   }
     ]
 const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology',
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
+    'Gain competitive advantage with advanced technology'
   ]
 return (
     <>)
@@ -110,15 +128,16 @@ return (
         <title>Ai Customer Service - Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      
+      </Helmet>
 
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900"></div>
-        {/* Hero Section */} <section className="py-20 px-4">
+        {/* Hero Section */}
+        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mb-8">
               <MessageSquare className="w-10 h-10 text-white" />
@@ -127,7 +146,7 @@ return (
               AI Customer Service
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your customer service with our AI Customer Service solutions. 24/7 support, 
+              Transform your customer service with our AI Customer Service solutions. 24/7 support
               multilingual capabilities, and intelligent problem solving for better customer experience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -149,21 +168,21 @@ return (
             </h1>
             <p>Advanced AI-powered ai customer service solution for modern businesses.</p>
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button>Get Started;</button>
               </button>
               <button>View Demo,</button>
                 Get Started
               </button>
               <button></button>
-                View Demo,
+                View Demo
               </button>
             </div>
         </div>
       </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -198,7 +217,8 @@ return (
         {/* Features Section */}
         <section className="py-20 px-4">
         </section>
-        {/* Features Section */} <section className="py-20 px-4">
+        {/* Features Section */}
+        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
@@ -228,10 +248,10 @@ return (
               <p>Advanced AI technology that drives results;</p>
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
-                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
-                  <div className="w-16 h-16 bg-gradient-to-br from-sky-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
+                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-sky-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>
                     <feature />
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description</p>}</p>
@@ -250,7 +270,8 @@ return (
             </div>
         </div>
       </section>
-        {/* Benefits Section */} <section className="py-20 px-4">
+        {/* Benefits Section */}
+        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Key Features
@@ -262,7 +283,8 @@ return (
                     <feature.icon className="w-8 h-8 text-white" />
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}
                   <p className="text-gray-300 mb-4">{feature.description}
-                  {feature.benefits && (
+                  ,
+    { feature.benefits && (
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-400">
@@ -278,10 +300,10 @@ return (
               <p>Proven results that drive business growth and efficiency;</p>
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => (
-                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
+                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>
                     <CheckCircle />
                   <p className="text-lg text-white font-medium">{benefit</p>}</p>
                 </div>
@@ -307,7 +329,8 @@ return (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
               {benefits.map((benefit, index) => ()
               ))}
-        {/* CTA Section */}
+        ,
+    { /* CTA Section */}
         <section className="py-20 px-4">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
@@ -347,7 +370,7 @@ return (
               </h2>
               <p>Contact our experts to discuss your requirements and get started today.</p>
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button>Contact Us;</button>
                 </button>
                 <button>Learn More;</button>
@@ -376,7 +399,7 @@ return (
 export default AiCustomerServicePage;
       <Footer></Footer>
     </>
-  ),
+  )
 }
 export default AiCustomerServicePage</$1></h3>
 

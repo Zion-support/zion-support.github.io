@@ -57,7 +57,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       // Google Analytics
       if ((window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag) {
         (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
-          user_id: _userId,
+          user_id: _userId
           custom_map: _traits
         })}
       
@@ -72,8 +72,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       // Google Analytics
       if ((window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag) {
         (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', 'page_view', {
-          page_title: _name,
-          page_location: window.location.href,
+          page_title: _name
+          page_location: window.location.href
           ..._properties
         })}
       
@@ -84,8 +84,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   };
 
   const value: AnalyticsContextType = {
-    track,
-    identify,
+    track
+    identify
     page
   };
 

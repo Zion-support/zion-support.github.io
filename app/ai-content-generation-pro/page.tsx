@@ -10,11 +10,11 @@ const AIContentGenerationProPage: React.FC = () => {
         <title>AI Content Generation Pro | Zion Tech Group</title>
         <meta name="description" content="Advanced AI content generation platform with enterprise-grade features, multi-format support, and intelligent content optimization for professional content creation." />
         <meta name="keywords" content="AI content generation, content creation, AI writing, content automation, enterprise content" />
-      
-      
+      </Helmet>
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-8">
@@ -30,7 +30,7 @@ const AIContentGenerationProPage: React.FC = () => {
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Advanced AI content generation platform with enterprise-grade features, 
+                Advanced AI content generation platform with enterprise-grade features
                 multi-format support, and intelligent content optimization for professional 
                 content creation at scale.
               </p>
@@ -49,7 +49,7 @@ const AIContentGenerationProPage: React.FC = () => {
       </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -68,7 +68,7 @@ const AIContentGenerationProPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Multi-Format Content</h3>
                 <p className="text-gray-300 mb-4">
-                  Generate content in multiple formats including articles, blogs, 
+                  Generate content in multiple formats including articles, blogs
                   social media posts, emails, and technical documentation.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
@@ -93,7 +93,7 @@ const AIContentGenerationProPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Advanced AI Models</h3>
                 <p className="text-gray-300 mb-4">
-                  Powered by state-of-the-art language models with context understanding, 
+                  Powered by state-of-the-art language models with context understanding
                   tone adaptation, and industry-specific knowledge.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
@@ -118,7 +118,7 @@ const AIContentGenerationProPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">SEO Optimization</h3>
                 <p className="text-gray-300 mb-4">
-                  Automatically optimize content for search engines with keyword integration, 
+                  Automatically optimize content for search engines with keyword integration
                   meta descriptions, and content structure optimization.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
@@ -143,7 +143,7 @@ const AIContentGenerationProPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Batch Processing</h3>
                 <p className="text-gray-300 mb-4">
-                  Generate large volumes of content efficiently with batch processing, 
+                  Generate large volumes of content efficiently with batch processing
                   templates, and automated workflows for content production.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
@@ -168,7 +168,7 @@ const AIContentGenerationProPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Content Editing</h3>
                 <p className="text-gray-300 mb-4">
-                  Advanced editing tools with AI-powered suggestions, grammar checking, 
+                  Advanced editing tools with AI-powered suggestions, grammar checking
                   and style improvements for professional content refinement.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
@@ -193,7 +193,7 @@ const AIContentGenerationProPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Analytics & Insights</h3>
                 <p className="text-gray-300 mb-4">
-                  Track content performance with detailed analytics, engagement metrics, 
+                  Track content performance with detailed analytics, engagement metrics
                   and optimization recommendations for better results.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
@@ -216,7 +216,7 @@ const AIContentGenerationProPage: React.FC = () => {
       </section>
 
         {/* Content Types Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -265,7 +265,7 @@ const AIContentGenerationProPage: React.FC = () => {
       </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Scale Your Content?

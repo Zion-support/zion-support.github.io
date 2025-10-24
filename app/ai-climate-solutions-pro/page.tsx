@@ -14,74 +14,92 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 const AiClimateSolutionsProPage: React.FC = () => {
-,
+  const features = [
     {
-      title: 'Weather Prediction & Modeling',
-      description: 'Advanced weather forecasting with AI-powered climate modeling and extreme weather prediction',
-      icon: Cloud,
-        '95% accuracy in weather predictions',
-        'Extreme weather early warning',
-        'Climate trend analysis',
+      title: 'Weather Prediction & Modeling'
+      ,
+      description: 'Advanced weather forecasting with AI-powered climate modeling and extreme weather prediction'
+      icon: Cloud
+      benefits: [
+        '95% accuracy in weather predictions'
+        'Extreme weather early warning'
+        'Climate trend analysis'
         'Long-term forecasting'
       ]
-    },
-    {
-      title: 'Sustainability Planning',
-      description: 'AI-driven sustainability roadmaps and environmental impact optimization strategies',
-      icon: Target,
-        'Custom sustainability roadmaps',
-        'ROI analysis for green initiatives',
-        'Resource optimization',
+    }
+    ,
+    { title: 'Sustainability Planning'
+      ,
+      description: 'AI-driven sustainability roadmaps and environmental impact optimization strategies'
+      icon: Target
+      benefits: [
+        'Custom sustainability roadmaps'
+        'ROI analysis for green initiatives'
+        'Resource optimization'
         'Progress tracking & reporting'
       ]
-    },
-    {
-      title: 'Emission Tracking & Monitoring',
-      description: 'Real-time emission monitoring and automated compliance reporting for environmental regulations',
-      icon: Activity,
-        'Real-time emission monitoring',
-        'Automated compliance reporting',
-        'Predictive emission modeling',
+    }
+    ,
+    { title: 'Emission Tracking & Monitoring'
+      ,
+      description: 'Real-time emission monitoring and automated compliance reporting for environmental regulations'
+      icon: Activity
+        'Real-time emission monitoring'
+        'Automated compliance reporting'
+        'Predictive emission modeling'
         'Regulatory compliance tracking'
       ]
-    },
-    {
-      title: 'Renewable Energy Optimization',
-      description: 'AI-powered optimization of renewable energy systems and smart grid management',
-      icon: Globe,
-        'Energy efficiency optimization',
-        'Smart grid management',
-        'Renewable energy forecasting',
+    }
+    ,
+    { title: 'Renewable Energy Optimization'
+      ,
+      description: 'AI-powered optimization of renewable energy systems and smart grid management'
+      icon: Globe
+        'Energy efficiency optimization'
+        'Smart grid management'
+        'Renewable energy forecasting'
         'Cost reduction strategies'
       ]
-    },
-    {
-      title: 'Environmental Risk Assessment',
-      description: 'Comprehensive environmental risk analysis and mitigation strategies using AI',
-      icon: CheckCircle,
-        'Risk identification & analysis',
-        'Mitigation strategy recommendations',
-        'Environmental impact assessment',
+    }
+    ,
+    { title: 'Environmental Risk Assessment'
+      ,
+      description: 'Comprehensive environmental risk analysis and mitigation strategies using AI'
+      icon: CheckCircle
+        'Risk identification & analysis'
+        'Mitigation strategy recommendations'
+        'Environmental impact assessment'
         'Compliance risk monitoring'
       ]
-    {icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-    {icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-    {icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+    {icon: BarChart
+      ,
+      title: 'Advanced Analytics'
+      ,
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
+    {icon: Target
+      ,
+      title: 'Precision Targeting'
+      ,
+      description: 'Target specific goals and objectives with precision and accuracy.'
+    {icon: TrendingUp
+      ,
+      title: 'Growth Optimization'
+      ,
+      description: 'Optimize your business growth with data-driven strategies.'
   ]
-  return(<React.Fragment>)</React.Fragment>
+  return (
+    <>
+      <div>Content</div>
+    </>
+  );
       
         <title>AI Climate Solutions Pro - Zion Tech Group</title>
         <meta name="description" content="Professional climate solutions powered by advanced AI technology." />
         <meta name="keywords" content="AI climate solutions, artificial intelligence, climate technology, AI solutions, environmental AI" />
       
       <Navigation />
-      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">{/* Hero Section */</main>} <section className="relative py-20 px-4 sm: px-6 lg:px-8">,</section>
+      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">{/* Hero Section */</main>}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">,</section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">,</h1>
@@ -94,17 +112,18 @@ const AiClimateSolutionsProPage: React.FC = () => {
                   Get Started;
   </
                 <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover: bg-blue-50 transition-colors">,</button>
-                  Learn More,
+                  Learn More
   </
               </div>
             </div>
         </div>
       </section>
-        {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,<section>
+        {/* Features Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">,<section>
         <div>
           <div>
             <h2>,</h2>
-                Powerful AI Features,
+                Powerful AI Features
   </
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">Discover how our AI platform can revolutionize your business operations.</p>
               </p>
@@ -129,7 +148,8 @@ const AiClimateSolutionsProPage: React.FC = () => {
             </div>
         </div>
       </section>
-        {/* CTA Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">,</section>
+        {/* CTA Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">,</section>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,</h2>
               Ready to Transform Your Business?
@@ -144,7 +164,7 @@ const AiClimateSolutionsProPage: React.FC = () => {
       </main>
       <Footer />
     </React.Fragment>
-  ),
+  )
 };
 
 export default AiClimateSolutionsProPage;
@@ -153,65 +173,76 @@ export default AiClimateSolutionsProPage;
   </button>
   </button>
   </h1>
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+    }
+    ,
+    { icon: BarChart
+      ,
+      title: 'Advanced Analytics'
+      ,
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
+    }
+    ,
+    { icon: Target
+      ,
+      title: 'Precision Targeting'
+      ,
+      description: 'Target specific goals and objectives with precision and accuracy.'
+    }
+    ,
+    { icon: TrendingUp
+      ,
+      title: 'Growth Optimization'
+      description: 'Optimize your business growth with data-driven strategies.'
     }
   ];
 
   const benefits = [
-    'Reduce carbon emissions by 40%',
-    'Lower energy costs by 35%',
-    'Improve sustainability compliance by 90%',
-    'Increase operational efficiency by 50%',
-    'Enable data-driven climate decisions',
-    'Automate environmental reporting',
-    'Scale sustainability initiatives',
+    'Reduce carbon emissions by 40%'
+    'Lower energy costs by 35%'
+    'Improve sustainability compliance by 90%'
+    'Increase operational efficiency by 50%'
+    'Enable data-driven climate decisions'
+    'Automate environmental reporting'
+    'Scale sustainability initiatives'
     'Enhance environmental reputation'
   ];
 
   const useCases = [
     {
-      title: 'Corporate Sustainability',
-      description: 'Help corporations achieve their sustainability goals and reduce environmental impact',
-      icon: '🏢',
-    },
-    {
-      title: 'Smart Cities',
-      description: 'Build sustainable smart cities with AI-powered environmental management',
-      icon: '🏙️',
-    },
-    {
-      title: 'Agriculture',
-      description: 'Optimize agricultural practices for climate resilience and sustainability',
-      icon: '🌾',
-    },
-    {
-      title: 'Energy Sector',
-      description: 'Optimize renewable energy systems and reduce carbon footprint',
-      icon: '⚡',
-    },
-    {
-      title: 'Transportation',
-      description: 'Develop sustainable transportation solutions and reduce emissions',
-      icon: '🚗',
-    },
-    {
-      title: 'Manufacturing',
-      description: 'Optimize manufacturing processes for environmental sustainability',
-      icon: '🏭',
+      title: 'Corporate Sustainability'
+      ,
+      description: 'Help corporations achieve their sustainability goals and reduce environmental impact'
+      icon: '🏢'
+    }
+    ,
+    { title: 'Smart Cities'
+      ,
+      description: 'Build sustainable smart cities with AI-powered environmental management'
+      icon: '🏙️'
+    }
+    ,
+    { title: 'Agriculture'
+      ,
+      description: 'Optimize agricultural practices for climate resilience and sustainability'
+      icon: '🌾'
+    }
+    ,
+    { title: 'Energy Sector'
+      ,
+      description: 'Optimize renewable energy systems and reduce carbon footprint'
+      icon: '⚡'
+    }
+    ,
+    { title: 'Transportation'
+      ,
+      description: 'Develop sustainable transportation solutions and reduce emissions'
+      icon: '🚗'
+    }
+    ,
+    { title: 'Manufacturing'
+      ,
+      description: 'Optimize manufacturing processes for environmental sustainability'
+      icon: '🏭'
     }
   ];
 
@@ -250,7 +281,7 @@ export default AiClimateSolutionsProPage;
       </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -281,7 +312,7 @@ export default AiClimateSolutionsProPage;
             </div>
         </div>
       </section>
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">AI Climate Solutions Pro
@@ -291,7 +322,7 @@ export default AiClimateSolutionsProPage;
                 <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">Get Started
                 <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">Learn More
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Powerful AI Features
@@ -386,8 +417,9 @@ export default AiClimateSolutionsProPage;
                         {benefit}
                     ))}
               ))}
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
+        ,
+    { /* CTA Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?

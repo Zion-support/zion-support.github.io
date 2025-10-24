@@ -6,27 +6,38 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const EnhancedAccessibilityEnhancerPage: React.FC = () => {
     const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',},
-    {icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',},
-    {icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',},
-    {icon: Globe,
-      title: 'Global Reach',
+      icon: Brain
+      ,
+      title: 'AI-Powered Solutions'
+      ,
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',}
+    ,
+    { icon: Zap
+      ,
+      title: 'High Performance'
+      ,
+      description: 'Lightning-fast processing and real-time analytics for optimal results',}
+    ,
+    { icon: Shield
+      ,
+      title: 'Enterprise Security'
+      ,
+      description: 'Bank-level security with encryption and compliance standards',}
+    ,
+    { icon: Globe
+      ,
+      title: 'Global Reach'
+      ,
       description: 'Worldwide deployment and support for international businesses',}}
   ]
   ];];];
 const benefits = [
   ]
   const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
+    'Advanced AI technology integration'
+    'Real-time processing and analytics'
+    'Enterprise-grade security and compliance'
+    'Scalable and flexible solutions'
 =======
 'use client';
 
@@ -43,12 +54,12 @@ interface EnhancedAccessibilityEnhancerProps {
 }
 
 const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({
-  children,
-  enableKeyboardNavigation: _enableKeyboardNavigation = true,
-  enableScreenReaderSupport: _enableScreenReaderSupport = true,
-  enableHighContrast: _enableHighContrast = false,
-  enableFocusManagement: _enableFocusManagement = true,
-  enableVoiceNavigation = false,
+  children
+  enableKeyboardNavigation: _enableKeyboardNavigation = true
+  enableScreenReaderSupport: _enableScreenReaderSupport = true
+  enableHighContrast: _enableHighContrast = false
+  enableFocusManagement: _enableFocusManagement = true
+  enableVoiceNavigation = false
 }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [_fontSize, setFontSize] = useState('medium');

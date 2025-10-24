@@ -9,36 +9,42 @@ import { CheckCircle, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 const AIAgriculturalIntelligenceProPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
+      icon: Brain
+      ,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Machine learning models', 'Predictive analytics', 'Automated decision making', 'Real-time insights']
     },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization and reporting.',
+    { icon: BarChart
+      ,
+      title: 'Advanced Analytics'
+      ,
+      description: 'Comprehensive analytics dashboard with real-time data visualization and reporting.'
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
+    }
+    ,
+    { icon: Target
+      ,
+      title: 'Precision Targeting'
+      ,
+      description: 'Target specific goals and objectives with precision and accuracy.'
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+    }
+    ,
+    { icon: TrendingUp
+      ,
+      title: 'Growth Optimization'
+      ,
+      description: 'Optimize your business growth with data-driven strategies.'
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ];
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce operational costs by 30%',
-    'Improve decision-making accuracy',
-    'Scale analytics across departments',
+    'Increase efficiency by up to 50%'
+    'Reduce operational costs by 30%'
+    'Improve decision-making accuracy'
+    'Scale analytics across departments'
     'Enhance competitive advantage'
   ];
 

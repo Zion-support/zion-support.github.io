@@ -4,30 +4,41 @@ import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}
 const AnalyticsToolsPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Analytics',
+      icon: Brain
+      ,
+      title: 'AI-Powered Analytics'
+      ,
       description: 'Advanced AI technology to transform your data analysis and business intelligence'
-    },
-    {icon: Zap,
-      title: 'Real-Time Processing',
+    }
+    ,
+    { icon: Zap
+      ,
+      title: 'Real-Time Processing'
+      ,
       description: 'Lightning-fast data processing and real-time analytics for optimal insights'
-    },
-    {icon: Shield,
-      title: 'Enterprise Security',
+    }
+    ,
+    { icon: Shield
+      ,
+      title: 'Enterprise Security'
+      ,
       description: 'Bank-level security with encryption and compliance standards for your data'
-    },
-    {icon: Globe,
-      title: 'Global Scalability',
+    }
+    ,
+    { icon: Globe
+      ,
+      title: 'Global Scalability'
+      ,
       description: 'Worldwide deployment and support for international business analytics',}
   ]
   const benefits = [
-    'Advanced AI-powered data analysis',
-    'Real-time processing and insights',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible analytics solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
+    'Advanced AI-powered data analysis'
+    'Real-time processing and insights'
+    'Enterprise-grade security and compliance'
+    'Scalable and flexible analytics solutions'
+    '24/7 technical support'
+    'Easy integration with existing systems'
+    'Cost-effective pricing plans'
     'Proven track record of success'
   ];
 
@@ -43,7 +54,7 @@ const AnalyticsToolsPage: React.FC = () => {
       
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -74,7 +85,8 @@ const AnalyticsToolsPage: React.FC = () => {
             Powered by cutting-edge AI technology and industry expertise.
           </p>
       </section>
-      {/* Features Section */} <section className="py-16 px-4">
+      {/* Features Section */}
+        <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -97,7 +109,7 @@ const AnalyticsToolsPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -111,7 +123,7 @@ const AnalyticsToolsPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
-              Key Benefits,
+              Key Benefits
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of our analytics tools for your business.</p>
             </p>
@@ -127,8 +139,9 @@ const AnalyticsToolsPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}
                 <p className="text-gray-300">{feature.description}
             ))}
-{/* Benefits Section */}
-      <section className="py-16 px-4 bg-white/5">
+,
+    { /* Benefits Section */}
+        <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits
@@ -145,7 +158,7 @@ const AnalyticsToolsPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -167,7 +180,8 @@ const AnalyticsToolsPage: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* CTA Section */} <section className="py-16 px-4">
+      {/* CTA Section */}
+        <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
             Ready to Get Started?
@@ -206,7 +220,7 @@ const AnalyticsToolsPage: React.FC = () => {
         </div>
       </div>
     </div>
-  ),
+  )
 };
 
 export default PagePage;

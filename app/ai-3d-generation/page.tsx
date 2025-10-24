@@ -10,63 +10,68 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 const Ai3dGenerationPage: React.FC = () => {
-,
+
     {
-      icon: Zap,
-      title: 'Real-time Generation',
-      description: 'Create 3D models in seconds with our optimized AI processing pipeline.',
-  
-  
-  
+      icon: Zap
+      ,
+      title: 'Real-time Generation'
+      description: 'Create 3D models in seconds with our optimized AI processing pipeline.'
     }
   ];
 
   const applications = [
     {
-      title: 'Game Development',
-      description: 'Create game assets, characters, and environments',
-      icon: '🎮',
-    },
-    {
-      title: 'Architecture',
-      description: 'Generate building models and architectural visualizations',
-      icon: '🏗️',
-    },
-    {
-      title: 'Product Design',
-      description: 'Design and prototype products with 3D models',
-      icon: '📱',
-    },
-    {
-      title: '3D Printing',
-      description: 'Create printable 3D models for manufacturing',
-      icon: '🖨️',
-    },
-    {
-      title: 'VR/AR Content',
-      description: 'Generate immersive 3D content for virtual and augmented reality',
-      icon: '🥽',
-    },
-    {
-      title: 'Marketing & Advertising',
-      description: 'Create compelling 3D visuals for marketing campaigns',
-      icon: '📢',
-},
-    {
-      title: 'VR/AR',
-      description: 'Create immersive experiences and virtual environments',
-      icon: '🥽',
+      title: 'Game Development'
+      ,
+      description: 'Create game assets, characters, and environments'
+      icon: '🎮'
+    }
+    ,
+    { title: 'Architecture'
+      ,
+      description: 'Generate building models and architectural visualizations'
+      icon: '🏗️'
+    }
+    ,
+    { title: 'Product Design'
+      ,
+      description: 'Design and prototype products with 3D models'
+      icon: '📱'
+    }
+    ,
+    { title: '3D Printing'
+      ,
+      description: 'Create printable 3D models for manufacturing'
+      icon: '🖨️'
+    }
+    ,
+    { title: 'VR/AR Content'
+      ,
+      description: 'Generate immersive 3D content for virtual and augmented reality'
+      icon: '🥽'
+    }
+    ,
+    { title: 'Marketing & Advertising'
+      ,
+      description: 'Create compelling 3D visuals for marketing campaigns'
+      icon: '📢'
+}
+    ,
+    { title: 'VR/AR'
+      ,
+      description: 'Create immersive experiences and virtual environments'
+      icon: '🥽'
     }
   ];
 
   const benefits = [
-    'Reduce 3D content creation time by 90%',
-    'Lower production costs by 80%',
-    'Create unlimited unique 3D assets',
-    'Accelerate game and app development',
-    'Enable rapid prototyping',
-    'Improve visual quality and consistency',
-    'Scale content production instantly',
+    'Reduce 3D content creation time by 90%'
+    'Lower production costs by 80%'
+    'Create unlimited unique 3D assets'
+    'Accelerate game and app development'
+    'Enable rapid prototyping'
+    'Improve visual quality and consistency'
+    'Scale content production instantly'
     'Reduce dependency on 3D artists'
   ];
 
@@ -75,31 +80,37 @@ const Ai3dGenerationPage: React.FC = () => {
       <Helmet>
         <title>AI 3D Generation - Zion Tech Group</title>
         <meta name="description" content="Transform text into stunning 3D models with our AI-powered 3D generation technology. Create game assets, architectural models, and more in seconds." />
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-    {icon: BarChart,
-    },
-    {
-    icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-    {icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-    {icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+      icon: Brain
+      ,
+      title: 'AI-Powered Intelligence'
+      ,
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
+    {icon: BarChart
+    }
+    ,
+    { icon: BarChart
+      ,
+      title: 'Advanced Analytics'
+      ,
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
+    {icon: Target
+      ,
+      title: 'Precision Targeting'
+      ,
+      description: 'Target specific goals and objectives with precision and accuracy.'
+    {icon: TrendingUp
+      ,
+      title: 'Growth Optimization'
+      ,
+      description: 'Optimize your business growth with data-driven strategies.'
   ]
 ]
 const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology',
-  
-  
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
+    'Gain competitive advantage with advanced technology'
   ];
 return (
     <>)
@@ -110,8 +121,9 @@ return (
       
       <Navigation />
       {/* Hero Section */}
-{/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
+,
+    { /* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
@@ -137,7 +149,7 @@ return (
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4">
+        <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -161,7 +173,7 @@ return (
       </section>
 
       {/* Applications Section */}
-      <section className="py-20 px-4">
+        <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -186,7 +198,7 @@ return (
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
+        <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -220,7 +232,7 @@ return (
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
+        <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Generate 3D Models with AI?
@@ -243,7 +255,8 @@ return (
 
       <Footer />
     </div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">{/* Hero Section */</div>} <section className="relative py-20 px-4 overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">{/* Hero Section */</div>}
+        <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
@@ -282,7 +295,8 @@ return (
         {/* Features Section */}
         <section className="py-20 px-4">
         </section>
-        {/* Features Section */} <section className="py-20 px-4">
+        {/* Features Section */}
+        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features;</h2>
@@ -331,7 +345,8 @@ return (
         {/* Benefits Section */}
         <section className="py-20 px-4">
         </section>
-        {/* Benefits Section */} <section className="py-20 px-4">
+        {/* Benefits Section */}
+        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution?</h2>
@@ -368,7 +383,8 @@ return (
         {/* CTA Section */}
         <section className="py-20 px-4">
         </section>
-        {/* CTA Section */} <section className="py-20 px-4">
+        {/* CTA Section */}
+        <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
               <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>

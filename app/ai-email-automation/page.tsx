@@ -6,110 +6,117 @@ import type { Metadata } from 'next';
 
 
 export const metadata: Metadata = {
-  title: 'AI Email Automation - Smart Email Marketing | Zion Tech Group',
-      description: 'Revolutionary AI-powered email automation with content generation, smart segmentation, and performance analytics. Increase revenue by 300% and save 20+ hours per week.',
-  keywords: 'AI email automation, email marketing, email generation, lead scoring, email analytics, marketing automation, AI content creation',
-  robots: 'index, follow',
+  title: 'AI Email Automation - Smart Email Marketing | Zion Tech Group'
+      ,
+      description: 'Revolutionary AI-powered email automation with content generation, smart segmentation, and performance analytics. Increase revenue by 300% and save 20+ hours per week.'
+  keywords: 'AI email automation, email marketing, email generation, lead scoring, email analytics, marketing automation, AI content creation'
+  robots: 'index, follow'
   openGraph: {
-    title: 'AI Email Automation - Smart Email Marketing | Zion Tech Group',
-      description: 'Revolutionary AI-powered email automation with content generation, smart segmentation, and performance analytics.',
-    type: 'website',
-    url: 'https://ziontechgroup.com/ai-email-automation',
-  },
+    title: 'AI Email Automation - Smart Email Marketing | Zion Tech Group'
+      ,
+      description: 'Revolutionary AI-powered email automation with content generation, smart segmentation, and performance analytics.'
+    type: 'website'
+    url: 'https://ziontechgroup.com/ai-email-automation'
+  }
 }
 
 const AIEmailAutomationPage: React.FC = () => {
   const features = [
     {
-      icon: 'Brain',
-    title: 'AI Email Generation',
-      description: 'Generate personalized, high-converting emails using AI that understands your audience and brand voice.',
+      icon: 'Brain'
+    title: 'AI Email Generation'
+      ,
+      description: 'Generate personalized, high-converting emails using AI that understands your audience and brand voice.'
       benefits: ['Personalized content', 'A/B testing', 'Brand voice training', 'Multi-language support']
-},
-  {
-    icon: 'Send',
-    title: 'Smart Automation',
-      description: 'Create complex email workflows with AI-powered triggers, segmentation, and behavioral targeting.',
+}
+  ,
+    { icon: 'Send'
+    title: 'Smart Automation'
+      ,
+      description: 'Create complex email workflows with AI-powered triggers, segmentation, and behavioral targeting.'
   ]
   const pricingPlans = [
   {
-      name: 'Starter',
-    price: '$59',
-      period: '/month',
-    description: 'Perfect for small businesses and startups',
+      name: 'Starter'
+    price: '$59'
+      period: '/month'
+    description: 'Perfect for small businesses and startups'
       features: [
-        'Up to 5,000 contacts',
-        '10,000 emails/month',
-        'Basic AI features',
-        'Email templates',
+        'Up to 5,000 contacts'
+        '10,000 emails/month'
+        'Basic AI features'
+        'Email templates'
         'Email support'
-      ],
+      ]
       popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$149',
-      period: '/month',
-      description: 'Ideal for growing businesses and agencies',
+    }
+    ,
+    { name: 'Professional'
+      price: '$149'
+      period: '/month'
+      description: 'Ideal for growing businesses and agencies'
       features: [
-        'Up to 25,000 contacts',
-        '50,000 emails/month',
-        'Advanced AI features',
-        'A/B testing',
-        'Priority support',
+        'Up to 25,000 contacts'
+        '50,000 emails/month'
+        'Advanced AI features'
+        'A/B testing'
+        'Priority support'
         'API access'
-      ],
+      ]
       popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$399',
-      period: '/month',
-      description: 'For large organizations with high volume needs',
+    }
+    ,
+    { name: 'Enterprise'
+      price: '$399'
+      period: '/month'
+      description: 'For large organizations with high volume needs'
       features: [
-        'Unlimited contacts',
-        'Unlimited emails',
-        'Full AI suite',
-        'Custom integrations',
-        'Dedicated support',
+        'Unlimited contacts'
+        'Unlimited emails'
+        'Full AI suite'
+        'Custom integrations'
+        'Dedicated support'
         'White-label options'
-      ],
+      ]
       popular: false
     }
   ]
   const testimonials = [
     {
-      name: 'Jennifer Lee',
-    company: 'E-commerce Store',
-      content: 'AI Email Automation increased our email revenue by 300%. The AI-generated content is incredibly effective.',
-    rating: 5,
+      name: 'Jennifer Lee'
+    company: 'E-commerce Store'
+      content: 'AI Email Automation increased our email revenue by 300%. The AI-generated content is incredibly effective.'
+    rating: 5
     avatar: 'JL'
-  },
-    {
-      name: 'Mark Thompson',
-    company: 'SaaS Company',
-      content: 'The lead scoring feature helped us identify high-value prospects and increased our conversion rate by 150%.',
-    rating: 5,
+  }
+    ,
+    { name: 'Mark Thompson'
+    company: 'SaaS Company'
+      content: 'The lead scoring feature helped us identify high-value prospects and increased our conversion rate by 150%.'
+    rating: 5
     avatar: 'MT'
-  },
-    {
-      name: 'Lisa Chen',
-    company: 'Marketing Agency',
-      content: 'Saves us 20+ hours per week on email campaigns. The automation features are incredibly powerful.',
-    rating: 5,
+  }
+    ,
+    { name: 'Lisa Chen'
+    company: 'Marketing Agency'
+      content: 'Saves us 20+ hours per week on email campaigns. The automation features are incredibly powerful.'
+    rating: 5
     avatar: 'LC'}
   ]
   const stats = [
-    { number: '300%', label: 'Revenue Increase', icon: 'DollarSign' },
-    { number: '150%', label: 'Conversion Boost', icon: 'TrendingUp' },
-    { number: '20hrs', label: 'Time Saved/Week', icon: 'Clock' },
+    { number: '300%', label: 'Revenue Increase', icon: 'DollarSign' }
+    ,
+    { number: '150%', label: 'Conversion Boost', icon: 'TrendingUp' }
+    ,
+    { number: '20hrs', label: 'Time Saved/Week', icon: 'Clock' }
+    ,
     { number: '95%', label: 'Deliverability Rate', icon: 'Shield' }
   ]
   return (
     <>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <section className="relative py-20 px-4 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(6,182,212,0.3)_0%,transparent_50%)]" />
         <div className="relative max-w-7xl mx-auto text-center">
@@ -148,7 +155,7 @@ const AIEmailAutomationPage: React.FC = () => {
         </div>
       </section>
       {/* Stats Section */}
-      <section className="py-20 px-4 bg-gray-900">
+        <section className="py-20 px-4 bg-gray-900">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -168,7 +175,7 @@ const AIEmailAutomationPage: React.FC = () => {
         </div>
       </section>
       {/* Features Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-slate-800/50 to-blue-900/50">
+        <section className="py-20 px-4 bg-gradient-to-br from-slate-800/50 to-blue-900/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
@@ -205,7 +212,7 @@ const AIEmailAutomationPage: React.FC = () => {
         </div>
       </section>
       {/* Pricing Section */}
-      <section className="py-20 px-4 bg-gray-900">
+        <section className="py-20 px-4 bg-gray-900">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
@@ -261,7 +268,7 @@ const AIEmailAutomationPage: React.FC = () => {
         </div>
       </section>
       {/* Testimonials Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-blue-900/50 to-purple-900/50">
+        <section className="py-20 px-4 bg-gradient-to-br from-blue-900/50 to-purple-900/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
@@ -295,7 +302,7 @@ const AIEmailAutomationPage: React.FC = () => {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-blue-600 via-cyan-600 to-purple-600">
+        <section className="py-20 px-4 bg-gradient-to-r from-blue-600 via-cyan-600 to-purple-600">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6">
             Ready to Revolutionize Your

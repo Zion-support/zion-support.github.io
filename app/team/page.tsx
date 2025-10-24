@@ -5,84 +5,91 @@ import Link from 'next/link';
 
 const teamMembers = [
   {
-    id: 1,
-    name: "Dr. Sarah Chen",
-    role: "Chief Executive Officer",
-    bio: "Leading AI research and strategic vision with 15+ years in enterprise technology.",
-    expertise: ["AI Strategy", "Leadership", "Innovation"],
+    id: 1
+    name: "Dr. Sarah Chen"
+    role: "Chief Executive Officer"
+    bio: "Leading AI research and strategic vision with 15+ years in enterprise technology."
+    expertise: ["AI Strategy", "Leadership", "Innovation"]
     image: "/api/placeholder/300/300"
-  },
-  {
-    id: 2,
-    name: "Michael Rodriguez",
-    role: "Chief Technology Officer",
-    bio: "Expert in scalable architecture and cutting-edge AI implementation.",
-    expertise: ["System Architecture", "AI Development", "Cloud Computing"],
+  }
+  ,
+    { id: 2
+    name: "Michael Rodriguez"
+    role: "Chief Technology Officer"
+    bio: "Expert in scalable architecture and cutting-edge AI implementation."
+    expertise: ["System Architecture", "AI Development", "Cloud Computing"]
     image: "/api/placeholder/300/300"
-  },
-  {
-    id: 3,
-    name: "Dr. Emily Watson",
-    role: "Head of AI Research",
-    bio: "Pioneering machine learning algorithms and neural network optimization.",
-    expertise: ["Machine Learning", "Deep Learning", "Research"],
+  }
+  ,
+    { id: 3
+    name: "Dr. Emily Watson"
+    role: "Head of AI Research"
+    bio: "Pioneering machine learning algorithms and neural network optimization."
+    expertise: ["Machine Learning", "Deep Learning", "Research"]
     image: "/api/placeholder/300/300"
-  },
-  {
-    id: 4,
-    name: "James Thompson",
-    role: "VP of Engineering",
-    bio: "Building robust, scalable solutions that power the future of business.",
-    expertise: ["Software Engineering", "DevOps", "Team Leadership"],
+  }
+  ,
+    { id: 4
+    name: "James Thompson"
+    role: "VP of Engineering"
+    bio: "Building robust, scalable solutions that power the future of business."
+    expertise: ["Software Engineering", "DevOps", "Team Leadership"]
     image: "/api/placeholder/300/300"
-  },
-  {
-    id: 5,
-    name: "Lisa Park",
-    role: "Head of Data Science",
-    bio: "Transforming raw data into actionable insights and business intelligence.",
-    expertise: ["Data Analytics", "Business Intelligence", "Statistics"],
+  }
+  ,
+    { id: 5
+    name: "Lisa Park"
+    role: "Head of Data Science"
+    bio: "Transforming raw data into actionable insights and business intelligence."
+    expertise: ["Data Analytics", "Business Intelligence", "Statistics"]
     image: "/api/placeholder/300/300"
-  },
-  {
-    id: 6,
-    name: "David Kumar",
-    role: "Lead AI Engineer",
-    bio: "Specializing in natural language processing and computer vision applications.",
-    expertise: ["NLP", "Computer Vision", "AI Implementation"],
+  }
+  ,
+    { id: 6
+    name: "David Kumar"
+    role: "Lead AI Engineer"
+    bio: "Specializing in natural language processing and computer vision applications."
+    expertise: ["NLP", "Computer Vision", "AI Implementation"]
     image: "/api/placeholder/300/300"
   }
 ]
 const values = [
   {
-    icon: '🧠',
-    title: "Innovation",
-      description: "We constantly push the boundaries of what's possible with AI and technology."},
-  {
-    icon: '🌍',
-    title: "Global Impact",
-      description: "Our solutions create positive change for businesses and communities worldwide."},
-  {
-    icon: '🛡️',
-    title: "Trust & Security",
-      description: "We prioritize data security and ethical AI practices in everything we do."},
-  {
-    icon: '⚡',
-    title: "Excellence",
-    description: "We deliver exceptional results through meticulous attention to detail."}
+    icon: '🧠'
+    title: "Innovation"
+      ,
+      description: "We constantly push the boundaries of what's possible with AI and technology."}
+  ,
+    { icon: '🌍'
+    title: "Global Impact"
+      ,
+      description: "Our solutions create positive change for businesses and communities worldwide."}
+  ,
+    { icon: '🛡️'
+    title: "Trust & Security"
+      ,
+      description: "We prioritize data security and ethical AI practices in everything we do."}
+  ,
+    { icon: '⚡'
+    title: "Excellence"
+    ,
+      description: "We deliver exceptional results through meticulous attention to detail."}
   ]
 const stats = [
-  { label: "Years Combined Experience", value: "150+" },
-  { label: "AI Projects Delivered", value: "1000+" },
-  { label: "Team Members", value: "25+" },
-  { label: "Client Satisfaction", value: "99%" }
+  { label: "Years Combined Experience", value: "150+" }
+  ,
+    { label: "AI Projects Delivered", value: "1000+" }
+  ,
+    { label: "Team Members", value: "25+" }
+  ,
+    { label: "Client Satisfaction", value: "99%" }
 ]
 const TeamPage: React.FC = () => {
   return (
     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="relativeoverflow-hidden">
         <div className="absoluteinset-0bg-gradient-to-rfrom-blue-600/20 to-purple-600/20"></div>
-        <div className="relativemax-w-7xl mx-autopx-4 sm: px-6 lg:px-8 py-24">
+        <div className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="text-center">
             <h1 className="text-4xlmd:text-6xlfont-bold text-white mb-6">
               Our Team

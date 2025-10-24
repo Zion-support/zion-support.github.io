@@ -4,16 +4,16 @@ import { TrendingUp, Users, Award, Clock } from 'lucide-react';
 
 const ContentStatistics: React.FC = () => {
   const [counters, setCounters] = useState({
-    clients: 0,
-    projects: 0,
-    satisfaction: 0,
+    clients: 0
+    projects: 0
+    satisfaction: 0
     years: 0
   });
 
   const targetCounters = {
-    clients: 500,
-    projects: 1000,
-    satisfaction: 99,
+    clients: 500
+    projects: 1000
+    satisfaction: 99
     years: 10
   };
 
@@ -29,9 +29,9 @@ const ContentStatistics: React.FC = () => {
         const progress = step / steps;
         
         setCounters({
-          clients: Math.floor(targetCounters.clients * progress),
-          projects: Math.floor(targetCounters.projects * progress),
-          satisfaction: Math.floor(targetCounters.satisfaction * progress),
+          clients: Math.floor(targetCounters.clients * progress)
+          projects: Math.floor(targetCounters.projects * progress)
+          satisfaction: Math.floor(targetCounters.satisfaction * progress)
           years: Math.floor(targetCounters.years * progress)
         });
 
@@ -47,27 +47,27 @@ const ContentStatistics: React.FC = () => {
 
   const stats = [
     {
-      icon: Users,
-      value: counters.clients,
-      label: 'Happy Clients',
+      icon: Users
+      value: counters.clients
+      label: 'Happy Clients'
       suffix: '+'
-    },
-    {
-      icon: TrendingUp,
-      value: counters.projects,
-      label: 'Projects Completed',
+    }
+    ,
+    { icon: TrendingUp
+      value: counters.projects
+      label: 'Projects Completed'
       suffix: '+'
-    },
-    {
-      icon: Award,
-      value: counters.satisfaction,
-      label: 'Client Satisfaction',
+    }
+    ,
+    { icon: Award
+      value: counters.satisfaction
+      label: 'Client Satisfaction'
       suffix: '%'
-    },
-    {
-      icon: Clock,
-      value: counters.years,
-      label: 'Years Experience',
+    }
+    ,
+    { icon: Clock
+      value: counters.years
+      label: 'Years Experience'
       suffix: '+'
     }
   ];
@@ -94,7 +94,8 @@ const ContentStatistics: React.FC = () => {
                 <stat.icon className="h-8 w-8 text-white" />
               </div>
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">
-                {stat.value}{stat.suffix}
+                {stat.value},
+    { stat.suffix}
               </div>
               <div className="text-gray-300 text-sm font-medium">
                 {stat.label}

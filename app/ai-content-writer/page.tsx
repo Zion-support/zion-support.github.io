@@ -9,81 +9,85 @@ import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const AIContentWriterPage: React.FC = () => {
-,
+
     {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-  
-  
+      icon: BarChart
+      ,
+      title: 'Advanced Analytics'
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
     }
   ];
 
-,
+
     {
-      title: 'Content Optimization',
-      description: 'Automatically optimize content for SEO, readability, and engagement with intelligent suggestions.',
-    {title: 'Multi-Format Support',
-      description: 'Create content in various formats including blogs, social media, emails, and marketing copy.',
-  
-  
-  
-  
+      title: 'Content Optimization'
+      ,
+      description: 'Automatically optimize content for SEO, readability, and engagement with intelligent suggestions.'
+    {title: 'Multi-Format Support'
+      ,
+      description: 'Create content in various formats including blogs, social media, emails, and marketing copy.'
   ];
-    },
+    }
   ];];];
-    },
-    {
-      title: 'Multi-Format Support',
-      description: 'Create content in various formats including blogs, social media, emails, and marketing copy.',
-    },
+    }
+    ,
+    { title: 'Multi-Format Support'
+      ,
+      description: 'Create content in various formats including blogs, social media, emails, and marketing copy.'
+    }
   ]
   const benefits = [
-    'Increase content output by 10x',
-    'Improve SEO rankings by 150%',
-    'Save 80% of content creation time',
-    'Increase engagement by 200%',
-    'Enable consistent brand voice',
-    'Automate content workflows',
-    'Scale content across channels',
+    'Increase content output by 10x'
+    'Improve SEO rankings by 150%'
+    'Save 80% of content creation time'
+    'Increase engagement by 200%'
+    'Enable consistent brand voice'
+    'Automate content workflows'
+    'Scale content across channels'
     'Enhance content quality'
   ];
 
   const useCases = [
     {
-      title: 'Blog Writing',
-      description: 'High-quality blog posts that engage readers and rank well in search engines',
-      icon: '📝',
-    },
-    {
-      title: 'Social Media',
-      description: 'Engaging social media content that drives engagement and conversions',
-      icon: '📱',
-    },
-    {
-      title: 'Marketing Copy',
-      description: 'Compelling marketing copy that converts visitors into customers',
-      icon: '📢',
-    },
-    {
-      title: 'E-commerce Content',
-      description: 'Product descriptions and e-commerce content that drives sales',
-      icon: '🛒',
-    },
-    {
-      title: 'Email Campaigns',
-      description: 'Personalized email campaigns that improve open and click rates',
-      icon: '📧',
-    },
-    {
-      title: 'Technical Writing',
-      description: 'Clear and concise technical documentation and user guides',
-      icon: '📋',
+      title: 'Blog Writing'
+      ,
+      description: 'High-quality blog posts that engage readers and rank well in search engines'
+      icon: '📝'
     }
-'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    ,
+    { title: 'Social Media'
+      ,
+      description: 'Engaging social media content that drives engagement and conversions'
+      icon: '📱'
+    }
+    ,
+    { title: 'Marketing Copy'
+      ,
+      description: 'Compelling marketing copy that converts visitors into customers'
+      icon: '📢'
+    }
+    ,
+    { title: 'E-commerce Content'
+      ,
+      description: 'Product descriptions and e-commerce content that drives sales'
+      icon: '🛒'
+    }
+    ,
+    { title: 'Email Campaigns'
+      ,
+      description: 'Personalized email campaigns that improve open and click rates'
+      icon: '📧'
+    }
+    ,
+    { title: 'Technical Writing'
+      ,
+      description: 'Clear and concise technical documentation and user guides'
+      icon: '📋'
+    }
+'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ];
 
@@ -94,7 +98,7 @@ const AIContentWriterPage: React.FC = () => {
         <title>Ai Content Writer - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai content writer solution for modern businesses." />
         <meta name="keywords" content="AI ai content writer, artificial intelligence, ai content writer, AI solutions, intelligent automation" />
-      
+      </Helmet>
 
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
@@ -119,18 +123,21 @@ const AIContentWriterPage: React.FC = () => {
             </div>
         </div>
       </section>
-    '10x faster content creation',
-    'Improved SEO performance',
-    'Consistent brand voice',
-    'Multi-language support',
-    'Content analytics',
+    '10x faster content creation'
+    'Improved SEO performance'
+    'Consistent brand voice'
+    'Multi-language support'
+    'Content analytics'
     'Team collaboration'
   ]
   const stats = [
-    {icon: <PenTool className="w-8 h-8 text-blue-500" />, value: '10K+', label: 'Articles Created' ,},
-    {icon: <Zap className="w-8 h-8 text-green-500" />, value: '90%', label: 'Time Saved' ,},
-    {icon: <Users className="w-8 h-8 text-purple-500" />, value: '500+', label: 'Happy Users' ,},
-    {icon: <BarChart3 className="w-8 h-8 text-orange-500" />, value: '300%', label: 'Engagement Boost' ,}]
+    {icon: <PenTool className="w-8 h-8 text-blue-500" />, value: '10K+', label: 'Articles Created' ,}
+    ,
+    { icon: <Zap className="w-8 h-8 text-green-500" />, value: '90%', label: 'Time Saved' ,}
+    ,
+    { icon: <Users className="w-8 h-8 text-purple-500" />, value: '500+', label: 'Happy Users' ,}
+    ,
+    { icon: <BarChart3 className="w-8 h-8 text-orange-500" />, value: '300%', label: 'Engagement Boost' ,}]
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">)</div>
       
       <Helmet>
@@ -140,7 +147,8 @@ const AIContentWriterPage: React.FC = () => {
         <meta name="description" content="Advanced AI-powered content writing tool by Zion Tech Group. Generate high-quality, SEO-optimized content at scale." />
         <meta name="keywords" content="AI content writer, content generation, SEO writing, content marketing, AI writing tool, Zion Tech Group" />
       <Navigation />
-      {/* Hero Section */} <section className="relative py-20 px-4 overflow-hidden">
+      {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
@@ -161,7 +169,8 @@ const AIContentWriterPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Stats Section */} <section className="py-16 px-4">
+      {/* Stats Section */}
+        <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8">,</div>
             {stats.map((stat, index) => (
@@ -175,7 +184,8 @@ const AIContentWriterPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Features Section */} <section className="py-20 px-4">
+      {/* Features Section */}
+        <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,</h2>
@@ -201,7 +211,8 @@ const AIContentWriterPage: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* Benefits Section */} <section className="py-20 px-4">
+      {/* Benefits Section */}
+        <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Writer?</h2>
@@ -232,7 +243,8 @@ const AIContentWriterPage: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* CTA Section */} <section className="py-20 px-4">
+      {/* CTA Section */}
+        <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
 </div>
           <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
@@ -257,7 +269,7 @@ const AIContentWriterPage: React.FC = () => {
     </div>
   )
 }
-      <section className="py-20 px-4">
+        <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?
           <p className="text-xl text-gray-300 mb-8">Transform your content creation with our AI Content Writer solutions today
@@ -356,7 +368,7 @@ const AIContentWriterPage: React.FC = () => {
 
 export default AiContentWriterPage;
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?

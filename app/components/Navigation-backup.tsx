@@ -34,16 +34,19 @@ interface NavigationBackupProps {
 }
 
 const NavigationBackup: React.FC<NavigationBackupProps> = ({
-  logo,
-  logoText = 'Zion Tech Group',
+  logo
+  logoText = 'Zion Tech Group'
   menuItems = [
-    { label: 'Home', href: '/' },
-    { label: 'About', href: '/about' },
-    { label: 'Services', href: '/services' },
-    { label: 'Contact', href: '/contact' },
-  ],
-  ctaText = 'Get Started',
-  ctaHref = '/contact',
+    { label: 'Home', href: '/' }
+    ,
+    { label: 'About', href: '/about' }
+    ,
+    { label: 'Services', href: '/services' }
+    ,
+    { label: 'Contact', href: '/contact' }
+  ]
+  ctaText = 'Get Started'
+  ctaHref = '/contact'
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
@@ -58,7 +61,7 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
@@ -120,7 +123,8 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
         </div>
 
         {/* Mobile Menu */}
-        {isMenuOpen && (
+        ,
+    { isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
               {menuItems.map((item, index) => (

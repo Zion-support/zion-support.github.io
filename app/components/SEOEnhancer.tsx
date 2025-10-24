@@ -22,14 +22,14 @@ interface SEOEnhancerProps {
 }
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
-  keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group',
-  canonicalUrl,
-  ogImage = '/images/og-image.jpg',
-  twitterCard = 'summary_large_image',
-  structuredData,
-  children,
+  title = 'Zion Tech Group - Advanced AI and IT Solutions'
+  description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.'
+  keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group'
+  canonicalUrl
+  ogImage = '/images/og-image.jpg'
+  twitterCard = 'summary_large_image'
+  structuredData
+  children
 }) => {
   useEffect(() => {
     // Update document title
@@ -79,21 +79,24 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         <meta name="keywords" content={keywords} />
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
         
-        {/* Open Graph */}
+        ,
+    { /* Open Graph */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={ogImage} />
         <meta property="og:type" content="website" />
         {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
         
-        {/* Twitter Card */}
+        ,
+    { /* Twitter Card */}
         <meta name="twitter:card" content={twitterCard} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={ogImage} />
         
         {/* Structured Data */}
-        {structuredData && (
+        ,
+    { structuredData && (
           <script type="application/ld+json">
             {JSON.stringify(structuredData)}
           </script>

@@ -10,9 +10,9 @@ interface PWAInstallerProps {
 }
 
 const PWAInstaller: React.FC<PWAInstallerProps> = ({
-  onInstall,
-  onDismiss,
-  showInstallPrompt = true,
+  onInstall
+  onDismiss
+  showInstallPrompt = true
 }) => {
   const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
   const [isInstalled, setIsInstalled] = useState(false);

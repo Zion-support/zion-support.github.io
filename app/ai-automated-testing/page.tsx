@@ -10,11 +10,11 @@ const AIAutomatedTestingPage: React.FC = () => {
         <title>AI Automated Testing | Zion Tech Group</title>
         <meta name="description" content="Revolutionize your testing process with AI-powered automated testing solutions. Intelligent test generation, execution, and maintenance for faster, more reliable software delivery." />
         <meta name="keywords" content="AI testing, automated testing, intelligent testing, test automation, QA automation, AI QA" />
-      
+      </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-8">
@@ -49,7 +49,7 @@ const AIAutomatedTestingPage: React.FC = () => {
       </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -68,7 +68,7 @@ const AIAutomatedTestingPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Smart Test Generation</h3>
                 <p className="text-gray-300 mb-4">
-                  AI automatically generates comprehensive test cases based on code analysis, 
+                  AI automatically generates comprehensive test cases based on code analysis
                   user behavior patterns, and business requirements.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
@@ -143,7 +143,7 @@ const AIAutomatedTestingPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Test Coverage Optimization</h3>
                 <p className="text-gray-300 mb-4">
-                  Maximize test coverage with intelligent analysis of code paths, 
+                  Maximize test coverage with intelligent analysis of code paths
                   user scenarios, and risk assessment for comprehensive testing.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
@@ -168,7 +168,7 @@ const AIAutomatedTestingPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Security Testing</h3>
                 <p className="text-gray-300 mb-4">
-                  Automated security testing with vulnerability scanning, 
+                  Automated security testing with vulnerability scanning
                   penetration testing, and compliance validation.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
@@ -193,7 +193,7 @@ const AIAutomatedTestingPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Analytics & Reporting</h3>
                 <p className="text-gray-300 mb-4">
-                  Comprehensive testing analytics with detailed reports, 
+                  Comprehensive testing analytics with detailed reports
                   trend analysis, and performance metrics for continuous improvement.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
@@ -216,7 +216,7 @@ const AIAutomatedTestingPage: React.FC = () => {
       </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -238,7 +238,7 @@ const AIAutomatedTestingPage: React.FC = () => {
                     <div>
                       <h3 className="text-xl font-semibold text-white mb-2">90% Faster Test Creation</h3>
                       <p className="text-gray-300">
-                        AI automatically generates comprehensive test cases, 
+                        AI automatically generates comprehensive test cases
                         reducing manual effort and accelerating test development.
                       </p>
                     </div>
@@ -298,7 +298,7 @@ const AIAutomatedTestingPage: React.FC = () => {
       </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Automate Your Testing?

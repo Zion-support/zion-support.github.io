@@ -6,21 +6,27 @@ import { CheckCircle, Brain, BarChart, Target, ArrowRight } from 'lucide-react';
 const Page: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      icon: Brain
+      ,
+      title: 'AI-Powered Intelligence'
+      ,
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+    }
+    ,
+    { icon: BarChart
+      ,
+      title: 'Advanced Analytics'
+      ,
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
       benefits: ['Real-time monitoring', 'Custom dashboards', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target the right audience with AI-driven precision and accuracy.',
+    }
+    ,
+    { icon: Target
+      ,
+      title: 'Precision Targeting'
+      ,
+      description: 'Target the right audience with AI-driven precision and accuracy.'
       benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
     }
   ];

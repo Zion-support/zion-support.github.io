@@ -10,11 +10,11 @@ const AISupplyChainAIPage: React.FC = () => {
         <title>AI Supply Chain Intelligence | Zion Tech Group</title>
         <meta name="description" content="Intelligent supply chain optimization with AI-powered analytics, demand forecasting, and automated logistics management." />
         <meta name="keywords" content="supply chain AI, logistics optimization, demand forecasting, supply chain analytics, intelligent logistics" />
-      
-      
+      </Helmet>
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-8">
@@ -44,7 +44,7 @@ const AISupplyChainAIPage: React.FC = () => {
       </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -113,7 +113,7 @@ const AISupplyChainAIPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Enterprise Security</h3>
                 <p className="text-gray-300 mb-4">
-                  Bank-level security with advanced encryption, compliance certifications, 
+                  Bank-level security with advanced encryption, compliance certifications
                   and enterprise-grade access controls for sensitive operations.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">
@@ -136,7 +136,7 @@ const AISupplyChainAIPage: React.FC = () => {
       </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?

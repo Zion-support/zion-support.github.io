@@ -8,48 +8,54 @@ import { CheckCircle, Zap, Settings, Clock, Users, Shield, BarChart, ArrowRight 
 const AIOpsPage: React.FC = () => {
   const features = [
     {
-      icon: Settings,
-      title: 'Intelligent IT Operations',
-      description: 'AI-powered IT operations that automatically detect, diagnose, and resolve issues before they impact your business.',
+      icon: Settings
+      ,
+      title: 'Intelligent IT Operations'
+      ,
+      description: 'AI-powered IT operations that automatically detect, diagnose, and resolve issues before they impact your business.'
       benefits: ['Proactive monitoring', 'Automated remediation', 'Predictive analytics']
-    },
-    {
-      icon: Zap,
-      title: 'Automated Incident Response',
-      description: 'Automatically respond to incidents with intelligent root cause analysis and resolution recommendations.',
-  
+    }
+    ,
+    { icon: Zap
+      ,
+      title: 'Automated Incident Response'
+      description: 'Automatically respond to incidents with intelligent root cause analysis and resolution recommendations.'
     }
   ];
 
   const benefits = [
-    'Reduce IT downtime by up to 90%',
-    'Cut operational costs by 60%',
-    'Improve system reliability by 95%',
-    'Faster incident resolution',
-    'Proactive issue prevention',
+    'Reduce IT downtime by up to 90%'
+    'Cut operational costs by 60%'
+    'Improve system reliability by 95%'
+    'Faster incident resolution'
+    'Proactive issue prevention'
     'Enhanced security posture'
   ];
 
   const useCases = [
     {
-      title: 'Enterprise IT',
-      description: 'Manage complex enterprise IT environments with AI-powered automation',
-      icon: '🏢',
-    },
-    {
-      title: 'Cloud Operations',
-      description: 'Optimize cloud infrastructure and services with intelligent monitoring',
-      icon: '☁️',
-    },
-    {
-      title: 'DevOps Teams',
-      description: 'Accelerate DevOps workflows with automated testing and deployment',
-      icon: '⚙️',
-    },
-    {
-      title: 'Security Teams',
-      description: 'Enhance security operations with AI-driven threat detection and response',
-      icon: '🔒',
+      title: 'Enterprise IT'
+      ,
+      description: 'Manage complex enterprise IT environments with AI-powered automation'
+      icon: '🏢'
+    }
+    ,
+    { title: 'Cloud Operations'
+      ,
+      description: 'Optimize cloud infrastructure and services with intelligent monitoring'
+      icon: '☁️'
+    }
+    ,
+    { title: 'DevOps Teams'
+      ,
+      description: 'Accelerate DevOps workflows with automated testing and deployment'
+      icon: '⚙️'
+    }
+    ,
+    { title: 'Security Teams'
+      ,
+      description: 'Enhance security operations with AI-driven threat detection and response'
+      icon: '🔒'
     }
   ];
 
@@ -57,39 +63,51 @@ const AIOpsPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
     const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-    {icon: BarChart,
-  },
-    {
-    icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-    {icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-    {icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-  },
-    {
-    icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-  },
-    {
-    icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+      icon: Brain
+      ,
+      title: 'AI-Powered Intelligence'
+      ,
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
+    {icon: BarChart
+  }
+    ,
+    { icon: BarChart
+      ,
+      title: 'Advanced Analytics'
+      ,
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
+    {icon: Target
+      ,
+      title: 'Precision Targeting'
+      ,
+      description: 'Target specific goals and objectives with precision and accuracy.'
+    {icon: TrendingUp
+      ,
+      title: 'Growth Optimization'
+      ,
+      description: 'Optimize your business growth with data-driven strategies.'
+  }
+    ,
+    { icon: Target
+      ,
+      title: 'Precision Targeting'
+      ,
+      description: 'Target specific goals and objectives with precision and accuracy.'
+  }
+    ,
+    { icon: TrendingUp
+      ,
+      title: 'Growth Optimization'
+      ,
+      description: 'Optimize your business growth with data-driven strategies.'
   }
     ]
 const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology',
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
+    'Gain competitive advantage with advanced technology'
   ]
 return (
     <>)
@@ -104,11 +122,12 @@ return (
         <title>Ai Ops - Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      
+      </Helmet>
+
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
+        <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
@@ -134,7 +153,7 @@ return (
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4">
+        <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -163,7 +182,9 @@ return (
                 </ul>
 </div>
             ))}
-        {/* Hero Section */} <section className="py-20 px-4">
+        ,
+    { /* Hero Section */}
+        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
@@ -184,7 +205,7 @@ return (
             </h1>
             <p>Advanced AI-powered ai ops solution for modern businesses.</p>
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button>Get Started;</button>
               </button>
               <button>View Demo,</button>
@@ -196,7 +217,8 @@ return (
         {/* Features Section */}
         <section className="py-20 px-4">
         </section>
-        {/* Features Section */} <section className="py-20 px-4">
+        {/* Features Section */}
+        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
@@ -226,10 +248,10 @@ return (
               <p>Advanced AI technology that drives results;</p>
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
-                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
-                  <div className="w-16 h-16 bg-gradient-to-br from-sky-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
+                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-sky-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>
                     <feature />
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description</p>}</p>
@@ -248,7 +270,8 @@ return (
             </div>
         </div>
       </section>
-        {/* Benefits Section */} <section className="py-20 px-4">
+        {/* Benefits Section */}
+        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Key Features
@@ -260,7 +283,8 @@ return (
                     <feature.icon className="w-8 h-8 text-white" />
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}
                   <p className="text-gray-300 mb-4">{feature.description}
-                  {feature.benefits && (
+                  ,
+    { feature.benefits && (
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-400">
@@ -278,10 +302,10 @@ return (
               <p>Proven results that drive business growth and efficiency;</p>
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => (
-                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
+                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>
                     <CheckCircle />
                   <p className="text-lg text-white font-medium">{benefit</p>}</p>
                 </div>
@@ -292,7 +316,7 @@ return (
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4">
+        <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -316,7 +340,7 @@ return (
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
+        <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Transform Your IT Operations?
@@ -346,7 +370,8 @@ return (
         {/* Benefits Section */}
         <section className="py-20 px-4">
         </section>
-        {/* CTA Section */} <section className="py-20 px-4">
+        {/* CTA Section */}
+        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
@@ -362,7 +387,8 @@ return (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
               {benefits.map((benefit, index) => ()
               ))}
-        {/* CTA Section */}
+        ,
+    { /* CTA Section */}
         <section className="py-20 px-4">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
@@ -383,7 +409,7 @@ return (
               </h2>
               <p>Contact our experts to discuss your requirements and get started today.</p>
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button>Contact Us;</button>
                 </button>
                 <button>Learn More;</button>

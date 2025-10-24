@@ -23,26 +23,26 @@ interface SystemStats {
 }
 
 const SystemMonitor: React.FC<SystemMonitorProps> = ({
-  _showDetails = true,
-  refreshInterval = 1000,
-  className = '',
+  _showDetails = true
+  refreshInterval = 1000
+  className = ''
 }) => {
   const [stats, setStats] = useState<SystemStats>({
-    cpu: 0,
-    memory: 0,
-    disk: 0,
-    network: 0,
+    cpu: 0
+    memory: 0
+    disk: 0
+    network: 0
   });
 
   useEffect(() => {
     const updateStats = () => {
       // Simulate system stats (in a real app, you'd get these from an API)
       setStats({
-        cpu: Math.random() * 100,
-        memory: Math.random() * 100,
-        disk: Math.random() * 100,
-        network: Math.random() * 100,
-        battery: Math.random() * 100,
+        cpu: Math.random() * 100
+        memory: Math.random() * 100
+        disk: Math.random() * 100
+        network: Math.random() * 100
+        battery: Math.random() * 100
       });
     };
 
@@ -156,7 +156,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       </div>
 
       {/* Battery (if available) */}
-      {stats.battery !== undefined && (
+      ,
+    { stats.battery !== undefined && (
         <div className="mt-4 pt-4 border-t">
           <div className="flex items-center justify-between">
             <div className="flex items-center">

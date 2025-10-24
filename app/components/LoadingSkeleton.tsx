@@ -14,9 +14,9 @@ interface LoadingSkeletonProps {
 }
 
 const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
-  className = '',
-  lines = 1,
-  height = 'h-4',
+  className = ''
+  lines = 1
+  height = 'h-4'
   width = 'w-full'
 }) => {
   return (

@@ -26,12 +26,12 @@ interface UserExperienceEnhancerProps {
 }
 
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
-  children,
-  enableAnimations = true,
-  enableHoverEffects = true,
-  enableFocusManagement = true,
-  enableKeyboardNavigation = true,
-  enableAccessibility = true,
+  children
+  enableAnimations = true
+  enableHoverEffects = true
+  enableFocusManagement = true
+  enableKeyboardNavigation = true
+  enableAccessibility = true
 }) => {
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [isHighContrast, setIsHighContrast] = useState(false);
@@ -93,8 +93,8 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
         ${enableHoverEffects ? 'box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);' : ''}
       }
       
-      .ux-enhanced input:focus,
-      .ux-enhanced textarea:focus,
+      .ux-enhanced input:focus
+      .ux-enhanced textarea:focus
       .ux-enhanced select:focus {
         ${enableFocusManagement ? 'outline: 2px solid #3b82f6;' : ''}
         ${enableFocusManagement ? 'outline-offset: 2px;' : ''}
