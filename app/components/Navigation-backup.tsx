@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 interface NavigationBackupProps {
   logo?: string;
@@ -37,7 +37,7 @@ const NavigationBackup: React.FC<NavigationBackupProps> = ({
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const toggleSubmenu = (label: string) => {
+  const _toggleSubmenu = (label: string) => {
     setActiveSubmenu(activeSubmenu === label ? null : label);
   };
 

@@ -56,7 +56,7 @@ const ContentCarousel: React.FC<ContentCarouselProps> = ({
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
-          {items.map((item, index) => (
+          {items.map((item) => (
             <div key={item.id} className="w-full flex-shrink-0">
               <div className="bg-white rounded-lg shadow-lg p-6">
                 {item.image && (

@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-
-import React from 'react';
-
-interface AdvancedPerformanceMonitorProps {
-  // Add props here
-}
-
-const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = (_props) => {
-  return (
-    <div>
-      {/* Component content */}
-    </div>
-  )};
-
-export default AdvancedPerformanceMonitor;
-=======
 'use client';
 
 import React, { useEffect, useState, useCallback } from 'react';
@@ -66,8 +49,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         observers.push(lcpObserver);
-      } catch (error) {
-         
+      } catch (_error) {
+        // Continue without LCP monitoring
       }
     }
 
@@ -91,8 +74,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
         observers.push(fidObserver);
-      } catch (error) {
-         
+      } catch (_error) {
+        // Continue without FID monitoring
       }
     }
 
@@ -117,8 +100,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         observers.push(clsObserver);
-      } catch (error) {
-         
+      } catch (_error) {
+        // Continue without CLS monitoring
       }
     }
 
@@ -141,8 +124,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         ttfb,
         memory,
       }));
-    } catch (error) {
-       
+    } catch (_error) {
+      // Continue without TTFB monitoring
     }
 
     // Cleanup observers
@@ -150,8 +133,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       observers.forEach(observer => {
         try {
           observer.disconnect();
-        } catch (error) {
-           
+        } catch (_error) {
+          // Continue cleanup
         }
       });
     };
@@ -166,7 +149,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     );
 
     if (slowResources.length > 0) {
-       
       console.log('Slow resources detected:',
         slowResources.map((r: PerformanceResourceTiming) => ({
           name: r.name,
@@ -325,4 +307,3 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 };
 
 export default AdvancedPerformanceMonitor;
->>>>>>> cursor/fix-errors-and-merge-to-main-21fe

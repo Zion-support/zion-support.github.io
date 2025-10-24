@@ -43,7 +43,7 @@ export interface TestSuite {
 }
 
 // Mock utilities
-export const createMock = <T>(defaultValue: T): jest.Mocked<T> => {
+export const createMock = <T,>(defaultValue: T): jest.Mocked<T> => {
   return defaultValue as jest.Mocked<T>;
 };
 

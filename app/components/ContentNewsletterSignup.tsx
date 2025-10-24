@@ -8,7 +8,7 @@ interface ContentNewsletterSignupProps {
   description?: string;
   placeholder?: string;
   buttonText?: string;
-  onSubscribe?: (email: string) => Promise<void>;
+  onSubscribe?: (_email: string) => Promise<void>;
 }
 
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
@@ -45,7 +45,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
       setStatus('success');
       setMessage('Successfully subscribed!');
       setEmail('');
-    } catch (error) {
+    } catch (_error) {
       setStatus('error');
       setMessage('Failed to subscribe. Please try again.');
     }
