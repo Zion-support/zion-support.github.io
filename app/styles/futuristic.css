@@ -1,19 +1,3 @@
-/* Futuristic CSS Styles */
-
-:root {
-  --primary-color: #6366f1;
-  --secondary-color: #8b5cf6;
-  --accent-color: #06b6d4;
-  --background-color: #0f172a;
-  --surface-color: #1e293b;
-  --text-color: #f8fafc;
-  --text-muted: #94a3b8;
-  --border-color: #334155;
-  --success-color: #10b981;
-  --warning-color: #f59e0b;
-  --error-color: #ef4444;
-}
-
 /* Futuristic CSS Styles for Zion Tech Group */
 
 /* Import accessibility styles */
@@ -61,7 +45,6 @@
 }
 
 /* Global Futuristic Styles */
-=======
 * {
   box-sizing: border-box;
 }
@@ -74,14 +57,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--background-color);
-  color: var(--text-color);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   line-height: 1.6;
 }
 
 /* Futuristic gradient backgrounds */
 .gradient-bg {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+  background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));
 }
 
 .glass-effect {
@@ -92,11 +75,11 @@ body {
 
 /* Neon effects */
 .neon-glow {
-  box-shadow: 0 0 20px var(--primary-color), 0 0 40px var(--primary-color), 0 0 60px var(--primary-color);
+  box-shadow: 0 0 20px var(--neon-cyan), 0 0 40px var(--neon-cyan), 0 0 60px var(--neon-cyan);
 }
 
 .neon-text {
-  text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color), 0 0 30px var(--primary-color);
+  text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan), 0 0 30px var(--neon-cyan);
 }
 
 /* Animations */
@@ -106,8 +89,8 @@ body {
 }
 
 @keyframes glow {
-  0%, 100% { box-shadow: 0 0 20px var(--primary-color); }
-  50% { box-shadow: 0 0 30px var(--primary-color), 0 0 40px var(--primary-color); }
+  0%, 100% { box-shadow: 0 0 20px var(--neon-cyan); }
+  50% { box-shadow: 0 0 30px var(--neon-cyan), 0 0 40px var(--neon-cyan); }
 }
 
 @keyframes float {
@@ -130,7 +113,7 @@ body {
 /* Responsive design */
 @media (max-width: 768px) {
   .gradient-bg {
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple));
   }
 }
 
@@ -217,7 +200,6 @@ body {
 
 /* Neural Network Background */
 .neural-network-bg {
-=======
   position: relative;
   overflow: hidden;
 }
@@ -314,8 +296,6 @@ body {
 }
 
 .cyber-button::before {
-=======
-.loading::after {
   content: '';
   position: absolute;
   top: 0;
@@ -329,25 +309,6 @@ body {
 @keyframes loading {
   0% { left: -100%; }
   100% { left: 100%; }
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--surface-color);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--primary-color);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--secondary-color);
-  transition: left 0.5s ease;
 }
 
 .cyber-button:hover::before {
@@ -487,181 +448,6 @@ body {
   }
 }
 
-/* Advanced Cyber Effects */
-.cyber-matrix {
-  position: relative;
-  background: var(--bg-card);
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-.cyber-matrix::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: 
-    linear-gradient(90deg, transparent 50%, rgba(0, 255, 255, 0.1) 50%),
-    linear-gradient(0deg, transparent 50%, rgba(0, 255, 255, 0.1) 50%);
-  background-size: 20px 20px;
-  animation: matrixScan 3s linear infinite;
-}
-
-@keyframes matrixScan {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(20px, 20px); }
-}
-
-/* Holographic Card Advanced */
-.holographic-card-advanced {
-  position: relative;
-  background: linear-gradient(135deg, 
-    rgba(0, 255, 255, 0.1) 0%, 
-    rgba(139, 92, 246, 0.1) 25%,
-    rgba(236, 72, 153, 0.1) 50%,
-    rgba(16, 185, 129, 0.1) 75%,
-    rgba(0, 255, 255, 0.1) 100%
-  );
-  border: 1px solid rgba(0, 255, 255, 0.3);
-  border-radius: 20px;
-  backdrop-filter: blur(20px);
-  overflow: hidden;
-  animation: holographicShift 4s ease-in-out infinite;
-}
-
-.holographic-card-advanced::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: conic-gradient(
-    from 0deg,
-    transparent,
-    rgba(0, 255, 255, 0.1),
-    transparent,
-    rgba(139, 92, 246, 0.1),
-    transparent,
-    rgba(236, 72, 153, 0.1),
-    transparent
-  );
-  animation: holographicRotate 6s linear infinite;
-  z-index: -1;
-}
-
-@keyframes holographicRotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Quantum Particle System */
-.quantum-particles {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: -1;
-  overflow: hidden;
-}
-
-.quantum-particle {
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  background: radial-gradient(circle, var(--neon-cyan) 0%, transparent 70%);
-  border-radius: 50%;
-  animation: quantumFloat 15s linear infinite;
-}
-
-@keyframes quantumFloat {
-  0% {
-    transform: translateY(100vh) translateX(0) scale(0);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  90% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  100% {
-    transform: translateY(-100vh) translateX(100px) scale(0);
-    opacity: 0;
-  }
-}
-
-/* Neural Network Visualization */
-.neural-network-advanced {
-  position: relative;
-  background: var(--bg-card);
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-.neural-network-advanced::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    radial-gradient(circle at 20% 30%, rgba(0, 255, 255, 0.3) 2px, transparent 2px),
-    radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.3) 2px, transparent 2px),
-    radial-gradient(circle at 50% 20%, rgba(236, 72, 153, 0.3) 2px, transparent 2px),
-    radial-gradient(circle at 30% 80%, rgba(16, 185, 129, 0.3) 2px, transparent 2px),
-    radial-gradient(circle at 70% 20%, rgba(245, 158, 11, 0.3) 2px, transparent 2px);
-  background-size: 80px 80px, 100px 100px, 120px 120px, 90px 90px, 110px 110px;
-  animation: neuralPulseAdvanced 4s ease-in-out infinite;
-}
-
-@keyframes neuralPulseAdvanced {
-  0%, 100% { 
-    opacity: 0.2;
-    transform: scale(1);
-  }
-  50% { 
-    opacity: 0.8;
-    transform: scale(1.1);
-  }
-}
-
-/* Cyber Grid Advanced */
-.cyber-grid-advanced {
-  position: relative;
-  background: var(--bg-card);
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-.cyber-grid-advanced::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px);
-  background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
-  animation: cyberGridMove 8s linear infinite;
-}
-
-@keyframes cyberGridMove {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(50px, 50px); }
-}
-
 /* Performance Optimizations */
 @media (prefers-reduced-motion: reduce) {
   .quantum-field::before,
@@ -779,5 +565,4 @@ body {
   .animate-gradient {
     animation: none;
   }
-=======
 }
