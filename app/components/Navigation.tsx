@@ -56,31 +56,49 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
-                    pathname === item.href
-                      ? 'text-blue-600 bg-blue-50'
-                      : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-                  }`}
-                  onClick={closeAllMenus}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
+          <div className="hidden lg: flex items-center space-x-8">,
+            {navigation.map((item) => {
+              const Icon = item.icon
+              return (
+                <div key={item.name} className="relative group"> </div><Link
+                    href={item.href}
+                    className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                      isActive(item.href)
+                        ? 'bg-purple-600 text-white'
+                        : 'text-gray-300 hover:text-white hover:bg-slate-800'}`}
+                    onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
+                    onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
+                  >
+                    <Icon className="w-4 h-4" /> </Icon><span>{item.name}</span>
+                    {item.submenu && <ChevronDownIcon className="w-4 h-4 ml-1" />}
+                  </Link>
+                  {/* Dropdown Menu */}
+                  {item.submenu && isServicesOpen && (
+                    <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">{item.submenu.map((subItem) => (
+                        </div><Link key={subItem.name}
+                          href={subItem.href}
+                          className="block px-4 py-2 text-sm text-gray-300 hover: text-white hover:bg-slate-700",
+                        >{subItem.name}
+                        </Link></Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+            })}
           </div>
-
+          {/* CTA Button */}
+          <div className="hidden lg: flex items-center space-x-4">,
+            <Link
+              href="/contact"
+              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover: from-purple-700 hover:to-cyan-700 transition-all duration-300",
+            >Get Started
+            </Link></Link>
+          </div>
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg: hidden">,
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
-              aria-expanded="false"
+              className="text-gray-300 hover: text-white p-2",
             >
               <span className="sr-only">Open main menu</span>
               {isOpen ? (
@@ -89,6 +107,57 @@ const Navigation = () => {
                 <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
               )}
             </button>
+          </div>
+        </div>
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <div className="lg: hidden">,
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg mt-2">{navigation.map((item) => {
+                const Icon = item.icon
+                return (
+                  </div><div key={item.name}> </div><Link
+                      href={item.href}
+                      onClick={() => setIsOpen(false)}
+                      className={`flex items-center space-x-3 px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                        isActive(item.href)
+                          ? 'bg-purple-600 text-white'
+                          : 'text-gray-300 hover:text-white hover:bg-slate-700'}`}
+                    >
+                      <Icon className="w-5 h-5" /> </Icon><span>{item.name}</span>
+                    </Link>
+                    {item.submenu && (
+                      <div className="ml-8 space-y-1">{item.submenu.map((subItem) => (
+                          </div><Link key={subItem.name}
+                            href={subItem.href}
+                            className="text-gray-400 hover: text-white block px-3 py-2 rounded-md text-sm",
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {subItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+              })}
+              <div className="pt-4 border-t border-slate-700"> </div><Link
+                  href="/contact"
+                  onClick={() => setIsOpen(false)}
+                  className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center"
+                >
+                  Get Started
+                </Link>
+              </div>
+            </div>
+          </div>
+          {/* Fun Fact */}
+          <div className="mt-8 p-4 bg-slate-800/30 rounded-lg">
+            <p className="text-sm text-gray-400">
+              <span className="text-cyan-400">Fun Fact: </span> Even our AI gets
+              confused sometimes. That's why we have humans to help when things
+              go wrong! 🤖
+            </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -115,7 +184,9 @@ const Navigation = () => {
         </div>
       )}
     </nav>
-  );
-};
 
-export default Navigation;
+  )
+}
+
+
+export default Navigation

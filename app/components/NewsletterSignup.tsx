@@ -4,18 +4,14 @@ import React, { useState } from 'react';
 import { AlertCircle, Mail, Send, CheckCircle } from 'lucide-react';
 
 interface NewsletterSignupProps {
-  variant?: 'inline' | 'modal';
-  onClose?: () => void;
-}
-
-const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline', onClose }) => {
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-  const [message, setMessage] = useState('');
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
+  variant?: 'inline' | 'modal'
+  onClose?: () => void}
+const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline', onClose }) => {</NewsletterSignupProps>
+  const [email, setEmail] = useState('')</NewsletterSignupProps>
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+  const [message, setMessage] = useState('')
+  const handleSubmit = async (e: React.FormEvent) => {,
+    e.preventDefault()
     if (!email) {
       setStatus('error');
       setMessage('Please enter your email address');
@@ -39,68 +35,11 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
       }
     } catch (_error) {
       setStatus('error');
-      setMessage('Something went wrong. Please try again.');
-    }
-  };
-
-  if (variant === 'modal') {
-    return (
-      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-        <div className="bg-white rounded-lg p-6 max-w-md w-full mx-4">
-          <div className="flex justify-between items-center mb-4">
-            <h3 className="text-lg font-semibold">Subscribe to Newsletter</h3>
-            {onClose && (
-              <button
-                onClick={onClose}
-                className="text-gray-500 hover:text-gray-700"
-              >
-                ×
-              </button>
-            )}
-          </div>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                Email Address
-              </label>
-              <input
-                type="email"
-                id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Enter your email"
-                required
-              />
-            </div>
-            <button
-              type="submit"
-              disabled={status === 'loading'}
-              className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50"
-            >
-              {status === 'loading' ? (
-                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
-              ) : (
-                <>
-                  <Send className="w-4 h-4 mr-2" />
-                  Subscribe
-                </>
-              )}
-            </button>
-            {message && (
-              <div className={`flex items-center text-sm ${
-                status === 'success' ? 'text-green-600' : 'text-red-600'
-              }`}>
-                {status === 'success' ? (
-                  <CheckCircle className="w-4 h-4 mr-2" />
-                ) : (
-                  <AlertCircle className="w-4 h-4 mr-2" />
-                )}
-                {message}
-              </div>
-            )}
-          </form>
-        </div>
+      setMessage('Something went wrong. Please try again.')}
+  const content = (
+    <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
+        <div className="text-center mb-6"> </div><Mail className="w-12 h-12 mx-auto mb-4 text-white/90" /> </Mail><h3 className="text-2xl font-bold mb-2">Stay Updated</h3>
+        <p>Get the latest updates on AI technology, IT solutions, and industry insights.</p>
       </div>
     );
   }
@@ -143,14 +82,40 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
             {status === 'success' ? (
               <CheckCircle className="w-4 h-4 mr-2" />
             ) : (
-              <AlertCircle className="w-4 h-4 mr-2" />
+              <>
+      
+    </>
+      <Send className="w-4 h-4 mr-2" />Subscribe
+</Send></>
             )}
-            {message}
+          </button>
+        
+        {
+  message && (
+          <div className={`flex items-center space-x-2 text-sm ${
+            status === 'success' ? 'text-green-200' : 'text-red-200'
+}`}>{status === 'success' ? (
+              </div><CheckCircle className="w-4 h-4" />) : (
+              </CheckCircle><AlertCircle className="w-4 h-4" />)}
+            </AlertCircle><span>{message}</span>
           </div>
         )}
       </form>
+      <div className="mt-6 text-center text-sm text-white/80"> </div><p>✓ No spam, unsubscribe anytime</p><br />✓ Weekly updates on latest tech trends</br><br />✓ Exclusive content and early access
+        </br></p>
+      </div>
     </div>
-  );
-};
+  if (variant === 'modal') {
+    return (
+      <div className="fixed inset-0 z-50 overflow-y-auto">
+        <div className="flex min-h-screen items-center justify-center px-4 py-6"> </div><div className="fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
+        <div className="relative w-full max-w-md">{content}
+          </div></div>
+        </div>
+      </div>
+  return content
 
-export default NewsletterSignup;
+}
+
+
+export default NewsletterSignup

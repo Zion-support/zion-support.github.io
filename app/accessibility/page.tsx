@@ -1,91 +1,9 @@
-'use client'
-
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Users, Settings, BarChart3, FileText } from 'lucide-react'
-
-const AccessibilityPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Accessibility',
-      description: 'Advanced AI algorithms automatically detect and fix accessibility issues in real-time.',
-      benefits: [
-        'Automated WCAG 2.1 AA compliance checking',
-        'Real-time accessibility monitoring',
-        'Intelligent content optimization',
-        'Voice navigation enhancement'
-      ]
-    },
-    {
-      icon: Shield,
-      title: 'Compliance Assurance',
-      description: 'Ensure your digital assets meet international accessibility standards and legal requirements.',
-      benefits: [
-        'ADA compliance verification',
-        'Section 508 compliance',
-        'WCAG 2.1 AA/AAA standards',
-        'Legal compliance reporting'
-      ]
-    },
-    {
-      icon: Users,
-      title: 'Inclusive Design',
-      description: 'Create experiences that work for everyone, regardless of ability or assistive technology.',
-      benefits: [
-        'Screen reader optimization',
-        'Keyboard navigation support',
-        'High contrast mode support',
-        'Text scaling compatibility'
-      ]
-    },
-    {
-      icon: Zap,
-      title: 'Performance Optimization',
-      description: 'Accessibility improvements that also enhance overall site performance and user experience.',
-      benefits: [
-        'Faster page load times',
-        'Improved SEO rankings',
-        'Better user engagement',
-        'Reduced bounce rates'
-      ]
-    }
-  ]
-
-  const services = [
-    {
-      icon: CheckCircle,
-      title: 'Accessibility Audits',
-      description: 'Comprehensive evaluation of your digital assets for accessibility compliance.',
-      price: 'Starting at $2,500'
-    },
-    {
-      icon: Settings,
-      title: 'Implementation',
-      description: 'Full implementation of accessibility improvements and fixes.',
-      price: 'Starting at $5,000'
-    },
-    {
-      icon: BarChart3,
-      title: 'Monitoring',
-      description: 'Ongoing monitoring and maintenance of accessibility standards.',
-      price: 'Starting at $500/month'
-    },
-    {
-      icon: FileText,
-      title: 'Training',
-      description: 'Team training on accessibility best practices and standards.',
-      price: 'Starting at $1,500'
-    }
-  ]
-
-  const stats = [
-    { number: '15%', label: 'of the global population has a disability' },
-    { number: '71%', label: 'of users with disabilities leave sites that are not accessible' },
-    { number: '98%', label: 'of websites fail basic accessibility tests' },
-    { number: '200%', label: 'increase in legal accessibility lawsuits since 2018' }
-  ]
+'use client';
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
+import Footer from '@/components/Footer';
 
   return (
     <>

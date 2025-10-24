@@ -1,20 +1,9 @@
 'use client';
 import React from 'react';
-import { ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
-
-interface FuturisticHeroProps {
-  title?: string;
-  subtitle?: string;
-  ctaText?: string;
-  ctaLink?: string;
-}
-
-const FuturisticHero: React.FC<FuturisticHeroProps> = ({
-  title = "Transform Your Business with AI",
-  subtitle = "Cutting-edge artificial intelligence solutions that revolutionize how you work, think, and grow.",
-  ctaText = "Get Started",
-  ctaLink = "/contact"
-}) => {
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react';
+const FuturisticHeroPage: React.FC = () => {,
   const features = [
     {
       icon: Brain,

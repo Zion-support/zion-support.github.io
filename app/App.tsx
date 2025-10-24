@@ -1,5 +1,8 @@
+'use client';
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 const ErrorBoundary: React.FC<{ children: React.ReactNode }> = ({ children }) => {

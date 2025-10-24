@@ -1,76 +1,26 @@
-import Link from 'next/link'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
-import { ArrowRight, Brain, Cloud, Shield, Zap } from 'lucide-react'
-
-export default function HomePage() {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI Solutions',
-      description: 'Cutting-edge artificial intelligence solutions for your business needs.',
-      href: '/ai-solutions'
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Services',
-      description: 'Scalable cloud infrastructure and migration services.',
-      href: '/cloud-services'
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets.',
-      href: '/cybersecurity'
-    },
-    {
-      icon: Zap,
-      title: 'Automation',
-      description: 'Streamline your processes with intelligent automation.',
-      href: '/automation'
-    }
-  ]
-
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '100+', label: 'Happy Clients' },
-    { number: '50+', label: 'Team Members' },
-    { number: '5+', label: 'Years Experience' }
-  ]
+'use client';
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
+import Footer from '@/components/Footer';
 
   return (
     <>
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Transform Your Business with
-            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              AI & Technology
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            We provide cutting-edge AI solutions, cloud services, and digital transformation 
-            services to help your business thrive in the digital age.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
-              className="inline-flex items-center px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
-            >
-              Get Started
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-            <Link 
-              href="/about" 
-              className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
-            >
-              Learn More
-            </Link>
-          </div>
+      <Head>
+        <title>Zion Tech Group - AI & IT Solutions</title>
+        <meta name="description" content="Professional services by Zion Tech Group." />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1>Zion Tech Group - AI & IT Solutions</h1>
+          <p>Professional zion tech group - ai & it solutions services coming soon.</p>
+          <Link href="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+          >
+            Contact Us
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
         </div>
       </section>
 
@@ -139,5 +89,5 @@ export default function HomePage() {
 
       <Footer />
     </>
-  )
+  );
 }

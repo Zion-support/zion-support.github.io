@@ -1,5 +1,7 @@
-'use client'
-import React, { createContext, useContext, useEffect } from 'react'
+"use client";
+
+import React, { createContext, useContext, useEffect } from 'react';
+
 interface AnalyticsContextType {
   track: (_event: string, _properties?: Record<string, unknown>) => void;
   identify: (_userId: string, _traits?: Record<string, unknown>) => void;
@@ -96,18 +98,12 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     page
   }
   return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
-    </AnalyticsContext.Provider>
-  );
-};
 
-// Extend Window interface for TypeScript
-declare global {
-  interface Window {
-    dataLayer: unknown[];
-    gtag: (..._args: unknown[]) => void;
-  }
+    <AnalyticsContext.Provider value={value}>{children}
+    </AnalyticsContext></AnalyticsContext.Provider>
+  )
 }
 
-export default AnalyticsProvider;
+export default useAnalytics;
+    </div>
+}
