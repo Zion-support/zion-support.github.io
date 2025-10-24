@@ -5,7 +5,7 @@ const TestComponent = () => {
   return <div>Test content</div>;
 };
 
-describe("Advanced Components", () => {
+describe("Loading Spinner Component", () => {
   it("should render without errors", () => {
     expect(true).toBe(true);
   });
