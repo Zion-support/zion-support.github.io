@@ -8,9 +8,8 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true,
     "noEmitOnError": false,
-    "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -20,41 +19,15 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "jsxImportSource": "react",
-    "strict": true,
     "strictNullChecks": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
       "@/*": [
-        "src/*"
-      ],
-      "@/components/*": [
-        "src/components/*"
-      ],
-      "@/pages/*": [
-        "src/pages/*"
-      ],
-      "@/utils/*": [
-        "src/utils/*"
-      ],
-      "@/types/*": [
-        "src/types/*"
-      ],
-      "@/hooks/*": [
-        "src/hooks/*"
-      ],
-      "@/config/*": [
-        "src/config/*"
-      ],
-      "@/data/*": [
-        "src/data/*"
-      ],
-      "@/content/*": [
-        "src/content/*"
+        "./*"
       ]
     },
     "incremental": true,
@@ -62,21 +35,16 @@
       {
         "name": "next"
       }
-    ],
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./*"
-      ]
-    }
+    ]
   },
   "include": [
-    "next-env.d.ts",
-    "app/page.tsx",
-    "app/layout.tsx",
-    "app/team/page.tsx",
+    ".next/types/**/*.ts",
     "app/_not-found.tsx",
-    ".next/types/**/*.ts"
+    "app/layout.tsx",
+    "app/page.tsx",
+    "app/team/page.tsx",
+    "next-env.d.ts",
+    "dist/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
