@@ -16,7 +16,6 @@ loadTime: number;
   memoryUsage: number;
   networkLatenc,y: number;,
 }
-
 }
 ;
 export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {,}) => {;
@@ -32,14 +31,12 @@ const mountTimeRef = useRef<number>(0);
 useEffect(() => {;
 mountTimeRef.current = performance.now();
     renderCountRef.current += 1;
-
 // Measure load time;
 const measureLoadTime = () => {;
 ;
 const loadTime = performance.now();
       setMetrics(prev => ({ ...prev, loadTime }));
     };
-
 // Measure render time;
 const measureRenderTime = () => {;
 ;
@@ -49,7 +46,6 @@ const renderTime = performance.now() - renderStart;
         setMetrics(prev => ({ ...prev, renderTime }));
       });
     };
-
 // Measure memory usage;
 const measureMemoryUsage = () => {;
 return;
@@ -60,7 +56,6 @@ const memory = (performance as any).memory;
 setMetrics(prev => ({ ...prev, memoryUsage }));
       }
     };
-
 // Measure network latency;
 const measureNetworkLatency = () => {;
 ;
@@ -75,13 +70,11 @@ const latency = performance.now() - start;
 setMetrics(prev => ({ ...prev, networkLatency: 0 ,}));
         });
     };
-
     // Run measurements;
 measureLoadTime();
     measureRenderTime();
     measureMemoryUsage();
     measureNetworkLatency();
-
 // Check if performance is optimized;
 const checkOptimization = () => {;
 return;
@@ -92,7 +85,6 @@ metrics.memoryUsage < 100 && // Memory usage under 100MB;
         metrics.networkLatency < 200; // Network latency under 200ms;
 setIsOptimized(isOptimized);
     };
-
     // Check optimization after metrics are updated;
 ;
 const timeoutId = setTimeout(checkOptimization, 1000);
@@ -108,7 +100,6 @@ return (
 ;
 const optimizePerformance = useCallback(() => {;
     if (typeof document === 'undefined') return;
-
     // Preload critical resources;
 ;
 const criticalResources = [
@@ -127,7 +118,6 @@ link.crossOrigin = 'anonymous';
       }
       document.head.appendChild(link);
     });
-
     // Optimize images;
 ;
 const images = document.querySelectorAll('img[data-src]');

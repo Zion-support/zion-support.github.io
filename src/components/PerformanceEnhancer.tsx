@@ -22,22 +22,14 @@ const benefits = [
 {              ))}
               </div>
 :all-pages-backup/components/PerformanceEnhancer.tsx
-            </div>
-            </div>
-            </div>,
+            </div>/div>/div>,
     <div className=&quot;grid grid-cols-1 md: grid-cols-2 gap-6&quot;>
       {benefits.map((benefit,index) => (  
       <div key={index} className=&quot;flex items-start space-x-3&quot; />
-
-      </div>
-    </div>
-                <CheckCircleclassName=&quot;h-6 w-6 text-purple-400 mt-1 flex-shrink-0&quot; / />
-                <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
-                </div>
+      </div>/div>CheckCircleclassNam e=&quot;h-6 w-6 text-purple-400 mt-1 flex-shrink-0&quot; / />
+                <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>/div>
             ))}
-            </div>
-          </div>
-      </section>
+            </div>/div>/section>
 {}
 export default PerformanceEnhancerPage;
 }

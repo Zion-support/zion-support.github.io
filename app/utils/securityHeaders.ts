@@ -13,7 +13,6 @@ permissionsPolicy?: string
 }
 };
 export const defaultSecurityHeaders: SecurityHeadersConfig = {
-
 // Content Security Policy;
 contentSecurityPolicy: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' http,s: ; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';",}
 // Content Security Policy;
@@ -48,7 +47,6 @@ customConfig?: Partial<SecurityHeadersConfig />
 ): Record<string, string> {}
 const config = { ...defaultSecurityHeaders, ...customConfig }</string>;
 const headers: Record<string,string> = {};
-
 'X-XSS-Protection': '1; mode=block'
 'X-DNS-Prefetch-Control': 'on'}
 }
@@ -82,7 +80,7 @@ defaultSecurityHeaders: SecurityHeadersConfig = {/* TOD,O: Fix JSX expression */
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />)
 ): Record<string, string> {/* TODO: Fix JSX expression */,}
 ;
-const config = { ...defaultSecurityHeaders, ...customConfig }
+const config = { ...defaultSecurityHeaders, ...customConfig};
 const</string>;
 headers: Record<string,string> = {/* TODO: Fix JSX expression */,}
 }

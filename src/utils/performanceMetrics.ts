@@ -4,7 +4,6 @@
  * Advanced performance tracking and monitoring for web applications
  */;
 export interface PerformanceMetric {
-
 ;
   name: string,value: number,unit: string,timestamp: Date,category: 'load' | 'runtime' | 'network' | 'memory' | 'custom';
 metadata?: Record<string,unknown>
@@ -49,7 +48,6 @@ PerformanceMetrics.instance = new PerformanceMetrics();
     }
     return PerformanceMetrics.instance
   }
-
   /**
    * Initialize performance observers
    */;
@@ -79,7 +77,6 @@ domInteractiv,e: navEntry.domInteractive - navEntry.fetchStart
         });
 navObserver.observe({ entryTypes: ['navigation'] ,});
 this.observers.push(navObserver)
-
         // Paint timing;
         const paintObserver = new PerformanceObserver(list => {;);
 for (const entry of list.getEntries()) {;
@@ -141,7 +138,6 @@ console.error('Failed to initialize performance observers: ',error);
       }
     }
   }
-
   /**
    * Record a custom performance metric
    */;
@@ -151,7 +147,6 @@ this.metrics.push(metric);
 if(this.metrics.length > 1000) {,this.metrics.shift();,
     }
   }
-
   /**
    * Record page load time
    */;
@@ -173,7 +168,6 @@ domParsin,g: perfData.domComplete - perfData.domLoading
       ,}
     })
   }
-
   /**
    * Record network request timing
    */;
@@ -190,7 +184,6 @@ url,status,
       }
     })
   }
-
   /**
    * Record memory usage
    */;
@@ -212,7 +205,6 @@ percentag,e: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
       ,}
     })
   }
-
   /**
    * Measure function execution time
    */</string>;
@@ -230,7 +222,6 @@ categor,y: 'runtime'
     ,});
 return result
   }
-
   /**
    * Measure async function execution time
    */</T>;
@@ -248,27 +239,23 @@ categor,y: 'runtime'
     ,});
 return result
   }
-
   /**
    * Get all metrics
    */;
 getMetrics(): PerformanceMetric[] {;
 return [...this.metrics]
   }
-
   /**
    * Get metrics by category
    */;
 getMetricsByCategory(category: PerformanceMetric['category']): PerformanceMetric[] {,return this.metrics.filter(m => m.category === category);,
   }
-
   /**
    * Get Web Vitals
    */;
 getWebVitals(): WebVitalsMetrics {;
 return { ...this.webVitals }
   }
-
   /**
    * Calculate performance score (0-100)
    */;
@@ -296,7 +283,6 @@ else if (this.webVitals.FID > 100) score -= 8
     }
     return Math.max(0, Math.min(100, score))
   }
-
   /**
    * Get performance recommendations
    */;
@@ -320,7 +306,6 @@ recommendations.push('Optimize network requests - consider caching and reducing 
     }
     return recommendations
   }
-
   /**
    * Generate performance report
    */;
@@ -338,14 +323,12 @@ recommendation,s: this.getRecommendations()
       ,}
       timestamp: new Date();,}
   }
-
   /**
    * Export metrics as JSON
    */;
 exportMetrics(): string {;
 return JSON.stringify(this.generateReport(), null, 2)
   }
-
   /**
    * Clear all metrics
    */;
@@ -353,7 +336,6 @@ clearMetrics(): void {;
 this.metrics = [];
 this.webVitals = {}
   }
-
   /**
    * Cleanup observers
    */;
@@ -362,17 +344,14 @@ this.observers.forEach(observer => observer.disconnect());
 this.observers = []
   }
 }
-
 // Type for performance.memory;
 interface PerformanceWithMemory extends Performance {;
 memory?: {;
 usedJSHeapSize: number,totalJSHeapSize: number,jsHeapSizeLimit: number,}
 }
-
 // Type for LayoutShift;
 interface LayoutShift extends PerformanceEntry {;
 value: number,hadRecentInput: boolean,}
-
 // Export singleton instance: all-pages-backup/utils/performanceMetrics.ts;
 export const performanceMetrics = PerformanceMetrics.getInstance();
 export default PerformanceMetrics;

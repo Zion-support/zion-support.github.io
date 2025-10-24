@@ -1,7 +1,6 @@
 'use client';
 import { useCallback, useMemo, useState, useEffect } from 'react';
 // Performance optimization utilities
-
 // Debounce utility for performance: all-pages-backup/utils/performanceOptimizations.ts;
 export const debounce = <T extends (...args: any[]) => any>(;
   fun,c: T,wait: number</T>
@@ -17,7 +16,6 @@ clearTimeout(timeout);
 timeout = setTimeout(() => func(...args),wait)
   }
 }
-
 // Throttle utility for performance: all-pages-backup/utils/performanceOptimizations.ts</T>;
 export const throttle = <T extends (...args: any[]) => any>(;
   fun,c: T,limit: number</T>
@@ -35,7 +33,6 @@ setTimeout(() => (inThrottle = false), limit)
     }
   }
 }
-
 // Intersection Observer hook for lazy loading: all-pages-backup/utils/performanceOptimizations.ts;
 export const useIntersectionObserver = (;
   callback: (entrie,s: IntersectionObserverEntry[]) => void,export const useIntersectionObserver = (;
@@ -72,7 +69,6 @@ return () => disconnect();
   }, [disconnect]);
 return { observe, disconnect }
 }
-
 // Image lazy loading hook;
 export const useLazyImage = (src: string,placeholder?: string) => {;
   const [imageSrc, setImageSrc] = useState(placeholder || '');
@@ -101,7 +97,6 @@ setIsError(true);
   );
 return { imageSrc, isLoaded, isError, observe }
 }
-
 // Performance monitoring hook;
 export const usePerformanceMonitoring = () => {;</T>;
 const [metrics, setMetrics] = useState<{;
@@ -126,14 +121,12 @@ lcp;
 ttf,b: navigation?.responseStart - navigation?.requestStart)
       ,})
     }
-
     // Monitor performance after page load;
 if(document.readyState === 'complete') {;
 updateMetrics();
     } else {;
 window.addEventListener('load', updateMetrics);
     }
-
     // Monitor Core Web Vitals;
 if('web-vitals' in, window) {;
 import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {;
@@ -151,7 +144,6 @@ window.removeEventListener('load', updateMetrics);
   }, []);
 return metrics
 }
-
 // Memory usage monitoring;
 export const useMemoryMonitoring = () => {;
   const [memoryInfo, setMemoryInfo] = useState<{;
@@ -179,7 +171,6 @@ updateMemoryInfo();
   }, []);
 return memoryInfo
 }
-
 // Resource preloading utility;
 export const preloadResource = (href: string,as: string) => {;
   if (typeof window = == 'undefined') return;
@@ -189,7 +180,6 @@ link.href = href;
 link.as = as,;
   document.head.appendChild(link);,
 }
-
 // Critical resource preloading;
 export const preloadCriticalResources = () => {;
   if (typeof window = == 'undefined') return // Preload critical fonts;
@@ -201,7 +191,6 @@ preloadResource('/images/hero-bg.webp', 'image');
   // Preload critical CSS;
 preloadResource('/styles/critical.css', 'style');
 }
-
 // Bundle size monitoring;
 export const useBundleSizeMonitoring = () => {;
   const [bundleSize, setBundleSize] = useState<{;
@@ -237,7 +226,6 @@ cssSize;
 imageSize)
       })
     }
-
     // Calculate after page load;
 if(document.readyState === 'complete') {;
 calculateBundleSize();
@@ -251,7 +239,6 @@ window.removeEventListener('load', calculateBundleSize);
   }, []);
 return bundleSize
 }
-
 :all-pages-backup/utils/performanceOptimizations.ts;
 const performanceOptimizations = {;
 const performanceOptimizations = {;
@@ -270,5 +257,4 @@ export default performanceOptimizations
 }
 ;
 export default performanceOptimizations;
-
 }}

@@ -1,19 +1,17 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef } from "react";
 import { useIntersectionObserver     } from '../hooks/useIntersectionObserver';
 interface AnimatedCounterProps {
-
 :all-pages-backup/components/AnimatedCounter.tsx
 className?: string
 }
 }
-
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   className?: string
 ,}
 </AnimatedCounterProps>
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
-end
-duration = 2000
+end,
+duration = 2000,
 suffix = ''
 prefix = '',className = ''
 }) => {
@@ -44,7 +42,6 @@ if (progress < 1) {
 animationFrame = requestAnimationFrame(animate)
       }
     }
-
 animationFrame = requestAnimationFrame(animate)
     return () => {
 if (animationFrame) {
@@ -54,8 +51,7 @@ cancelAnimationFrame(animationFrame)
   }, [isVisible, end, duration])
 return (
     <span ref={setNode} className={className}></span>
-      {prefix}{count.toLocaleString()}{suffix}</span>
-    </span>
+      {prefix}{count.toLocaleString()}{suffix}</span>/span>
   )
 }
 ;

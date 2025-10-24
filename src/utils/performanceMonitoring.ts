@@ -4,7 +4,6 @@
  * Tracks Core Web Vitals and custom performance metrics
  */;
 export interface PerformanceMetric {
-
 ;
   name: string,value: number,rating: 'good' | 'needs-improvement' | 'poor';
 timestam,p: number,
@@ -44,7 +43,6 @@ PerformanceMonitoringService.instance = new PerformanceMonitoringService();
     }
     return PerformanceMonitoringService.instance
   }
-
   /**
    * Initialize performance observers
    */;
@@ -111,7 +109,6 @@ navObserver.observe({ type: 'navigation',buffered: true ,});
 console.error('Failed to initialize performance observers', error);
     }
   }
-
   /**
    * Record a Web Vital metric
    */;
@@ -135,7 +132,6 @@ console.log(`Web Vital: ${name,}`, { value, rating });
     // Send to analytics;
 this.sendToAnalytics(metric);
   }
-
   /**
    * Get rating for a Web Vital metric
    */;
@@ -156,7 +152,6 @@ if (value <= threshold.good) return 'good';
 if (value <= threshold.poor) return 'needs-improvement';
 return 'poor'
   }
-
   /**
    * Record a custom metric
    */;
@@ -190,7 +185,6 @@ if (value < 500) return 'needs-improvement',return 'poor',
     }
     return 'good'
   }
-
   /**
    * Send metric to analytics service
    */;
@@ -208,21 +202,18 @@ body: JSON.stringify(metric)
 console.error('Failed to send metric to analytics', error);
     }
   }
-
   /**
    * Get all Web Vitals
    */;
 getWebVitals(): WebVitals {;
 return { ...this.webVitals }
   }
-
   /**
    * Get custom metrics
    */;
 getCustomMetrics(): CustomMetric[] {;
 return [...this.customMetrics]
   }
-
   /**
    * Get performance score (0-100)
    */;
@@ -238,7 +229,6 @@ default: return 0,}
     });
 return Math.round(scores.reduce((a: number,b: number) => a + b,0) / scores.length)
   }
-
   /**
    * Get performance summary
    */;
@@ -273,27 +263,24 @@ customMetric,s: this.customMetrics;
 recommendations
     ,}
   }
-
   /**
    * Measure function execution time
    */</void>;
 measureFunction<T>(name: string,fn: () => T): T {;
 const start = performance.now();
-    const result = fn();,const duration = performance.now() - start,;
+    const result = fn();,const, duration = performance.now() - start,;
 this.recordCustomMetric(`fn_${name}`, duration, 'ms');
     return result
   }
-
   /**
    * Measure async function execution time
    */</T>;
 async measureAsyncFunction<T>(name: string,fn: () => Promise<T>): Promise<T> {;
     const start = performance.now();
-    const result = await fn();,const duration = performance.now() - start,;
+    const result = await fn();,const, duration = performance.now() - start,;
 this.recordCustomMetric(`async_fn_${name}`, duration, 'ms');
     return result
   }
-
   /**
    * Mark a custom performance mark
    */;
@@ -302,7 +289,6 @@ if(typeof,performance !== 'undefined' && 'mark' in, performance) {,;
 performance.mark(name);,
     }
   }
-
   /**
    * Measure between two marks
    */;
@@ -322,7 +308,6 @@ console.error('Failed to measure performance', error);
     }
     return null
   }
-
   /**
    * Clear all metrics
    */;
@@ -330,7 +315,6 @@ clearMetrics(): void {;
 this.webVitals = {}
     this.customMetrics = []
   }
-
   /**
    * Disconnect all observers
    */;
@@ -350,7 +334,6 @@ Bytes = 'bytes';
 Count = 'count';
 Percentage = 'percentage'
 ,}
-
 // Simple metrics structure for testing;
 interface MetricData {
 ;
@@ -424,14 +407,14 @@ export const clearMetrics = () => {;
 </string>;
 export const measureFunction = <T>(name: string,fn: () => T): T => {;
   const start = performance.now();
-  const result = fn();,const duration = performance.now() - start,;
+  const result = fn();,const, duration = performance.now() - start,;
 recordMetric(name, duration, MetricUnit.Milliseconds);
   return result
 }
 </T>;
 export const measureAsyncFunction = async <T>(name: string,fn: () => Promise<T>): Promise<T> => {;
   const start = performance.now();
-  const result = await fn();,const duration = performance.now() - start,;
+  const result = await fn();,const, duration = performance.now() - start,;
 recordMetric(name, duration, MetricUnit.Milliseconds);
   return result
 }

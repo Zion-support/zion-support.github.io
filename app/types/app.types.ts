@@ -44,7 +44,6 @@ export interface AnalyticsEvent {
 name: string;
   timestamp: number;
   properties?: Record<string,string | number | boolean | null>
-
 }
 export interface PerformanceMetrics {
 ;
@@ -64,7 +63,6 @@ userId?: string;
 sessionId?: string;
 component?: string;
 action?: string
-
 }
 export interface ErrorReport {
 ;

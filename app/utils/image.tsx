@@ -2,10 +2,8 @@
 import React from 'react';
 import React, { useState, useCallback } from 'react'
 interface ImageProps {
-
 src: string,alt: string,}
 interface ImageProps {
-
 }
 src: string,alt: string
 width?: number
@@ -70,8 +68,7 @@ lef,t: 0,};const imageStyle: React.CSSProperties={,}
 position: 'absolute',top: 0
 lef,t: 0,width: '100%',height: '100%',objectFit: 'cover',}
 })
-if (hasError) {</ImageProps>
-  </ImageProps>
+if (hasError) {</ImageProps>/ImageProps>
 return (
     </ImageProps>
   )
@@ -83,7 +80,7 @@ return(<div}
 interface ImageProps {
 /* TODO: Fix JSX expression */,}
 export const
-Image: React.FC<ImageProps></div>= ({/* TOD,)
+Image: React.FC<ImageProps>/div>= ({/* TOD,)
 O: Fix JSX expression */,})
 }) => {/* TODO: Fix JSX expression */,}
 }, [onLoad])
@@ -98,10 +95,9 @@ imageStyle
 }
 {...props}),
     <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>),</div>)
-
 {...props}
 ></div>,
-    <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>,</div>
+    <span className="text-gray-500 text-sm"></span>span className="sr-only">Screen reader: </span>Failed to load image</span>,</div>
 return(<img
 return (<img>src={src}
 alt={alt}
@@ -114,20 +110,17 @@ loading={priority ? 'eager' : 'lazy'}
 onLoad={handleLoad}
 onError={handleError}
 {...props}
->)</img></img>
+>)</img>/img>
 =======
 >),
     <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
-
 {...props,}
 >  </div>,
-    <span className="text-gray-500 text-sm" /><span className="sr-only">Screen reader: </span>Failed to load image</span>
-  </div>
+    <span className="text-gray-500 text-sm" /><span className="sr-only">Screen reader: </span>Failed to load image</span>/div>
 return(<img
 return (<img />
 src={src,};alt={alt};width={width};height={height};className={className};style={imageStyle};sizes={sizes};loading={priority ? 'eager' : 'lazy'};onLoad={handleLoad};onError={handleError};{...props})
 >)</img>
-
 }</img>;
 export default Image;</img>
 }

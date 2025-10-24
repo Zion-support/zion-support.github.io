@@ -27,7 +27,6 @@ const memory = (performance as any).memory;
 setMetrics(prev => ({
         ...prev,;
 memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB)
-
       ,}))
     }
   }, []);

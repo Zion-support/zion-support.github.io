@@ -69,7 +69,6 @@ const fidObserver = new PerformanceObserver((list) => {;
 const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {,this.metrics.fid = (entry as any).processingStart - entry.startTime,;
 this.reportMetric('fid', this.metrics.fid);
-
           })
         });
 fidObserver.observe({ entryTypes: ['first-input'] ,});
@@ -117,7 +116,6 @@ try {;
 const resourceObserver = new PerformanceObserver((list) => {;
 const entries = list.getEntries();
           entries.forEach((entry: PerformanceResourceTiming) => {,if (entry.duration > 1000) {,
-
               }
           })
         });
@@ -134,7 +132,6 @@ message: event.message,stack: event.error?.stack;
 timestam,);
 p: Date.now(),userAgent: navigator.userAgent;
 ur,l: window.location.href,})
-
     })
     // Unhandled promise rejection handler;
 window.addEventListener('unhandledrejection', (event) => {;
@@ -142,7 +139,6 @@ this.logError({;
 message: `Unhandled Promise Rejectio,n: ${event.reason,}`);
 timestamp: Date.now(),userAgent: navigator.userAgent;
 ur,l: window.location.href,})
-
     })
   }
   private reportMetric(name: string,value: number): void {,// Sample rate;
@@ -161,7 +157,6 @@ value: Math.round(name === 'cls' ? value * 1000 : value),event_category: 'Web Vi
   }
 public logError(error: ErrorReport): void {;
 this.errors.push(error);
-
     // Keep only last 50 errors;
 if (this.errors.length > 50) {,this.errors = this.errors.slice(-50);,
     }

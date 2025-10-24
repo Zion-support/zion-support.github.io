@@ -1,88 +1,82 @@
 const fs = require('fs');
 const path = require('path');
-;
-function fixSpecificJSX(filePath) {;
-try {;
-let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
 
-    // Fix malformed Head tags;
-content = content.replace(/<Head><\/Head>\s*<title>([^<]+)<\/title>\s*<meta[^>]*\/><\/meta>\s*<\/Head>/g, 
-      '<Head>\n        <title>$1</title>\n        <meta name="description" content="Professional services by Zion Tech Group." />\n      </Head>');
+// Function to fix specific JSX syntax errors
+function fixSpecificJSX(content) {
+  let fixed = content;
 
-    // Fix malformed className attributes with spaces;
-content = content.replace(/className="([^"]*)\s+([^"]*)"/g, 'className="$1$2"');
-
-    // Fix malformed div tags;
-content = content.replace(/<div className="([^"]*)"[^></div>]*><\/div>\s*<div className="([^"]*)"[^></div>]*><\/div>/g, 
-      '<div className="$1"></div>\n        <div className="$2"></div>');
-
-    // Fix missing closing tags for common patterns;
-const patterns = [
-      // Fix h1 tags
-      {;
-pattern: /<h1 className="([^"]*)"[^></h1>]*><\/h1>\s*([^<]+)\s*<\/h1>/g,replacement: '<h1 className="$1">\n            $2\n          </h1>'
-      ,},
-      // Fix p tags
-      {;
-pattern: /<p className="([^"]*)"[^></p>]*><\/p>\s*([^<]+)\s*<\/p>/g,replacement: '<p className="$1">\n            $2\n          </p>'
-      ,}
-    ];
-;
-patterns.forEach(({ pattern, replacement }) => {;
-const newContent = content.replace(pattern, replacement);
-      if (newContent !== content) {;
-content = newContent;
-        modified = true;
-      }
-    });
-
-    // Fix missing closing fragments;
-if (content.includes('return (') && content.includes('<>') && !content.includes('</>')) {
-      // Find the last line before the closing parenthesis;
-const lines = content.split('\n');
-      let lastContentLine = -1;
-;
-for (let i = lines.length - 1; i >= 0; i--) {;
-if (lines[i].includes(');') || lines[i].includes('}')) {;
-lastContentLine = i;
-          break;
-        }
-      }
-;
-if (lastContentLine > 0) {;
-lines.splice(lastContentLine, 0, '    </>');
-        content = lines.join('\n');
-        modified = true;
-      }
+  // Fix malformed Head tags with title and meta
+  fixed = fixed.replace(/<Head>title>([^<]*)<\/title>meta name="([^"]*)" content="([^"]*)" \/>/g, 
+    '<Head>\n        <title>$1</title>\n        <meta name="$2" content="$3" />');
+  
+  // Fix malformed closing Head tag followed by div
+  fixed = fixed.replace(/<\/Head>div className="([^"]*)"\s*>/g, 
+    '</Head>\n      <div className="$1">');
+  
+  // Fix malformed JSX elements with missing spaces
+  fixed = fixed.replace(/(\w+)><(\w+)/g, '$1> <$2');
+  fixed = fixed.replace(/(\w+)><\/(\w+)/g, '$1></$2');
+  
+  // Fix missing opening tags
+  fixed = fixed.replace(/(<div className="[^"]*">)/g, (match) => {
+    if (!match.includes('<div')) {
+      return '<div ' + match;
     }
-;
-if (modified) {;
-fs.writeFileSync(filePath, content);
-      console.log(`Fixed specific JSX in: ${filePath,}`);
-    }
-  } catch (error) {;
-console.error(`Error fixing ${filePath}:`, error.message);
-  }
+    return match;
+  });
+  
+  // Fix malformed closing tags
+  fixed = fixed.replace(/(\w+)>\s*<\/(\w+)>/g, '$1></$2>');
+  
+  // Fix missing spaces in JSX attributes
+  fixed = fixed.replace(/(\w+)="([^"]*)"(\w+)/g, '$1="$2" $3');
+  
+  // Fix malformed JSX fragments
+  fixed = fixed.replace(/<>\s*<Head>/g, '<>\n      <Head>');
+  fixed = fixed.replace(/<\/Head>\s*<div/g, '</Head>\n      <div');
+  
+  // Fix missing closing brackets
+  fixed = fixed.replace(/(\w+)\s*}\s*$/g, '$1}');
+  
+  return fixed;
 }
-;
-function walkDir(dir) {;
-const files = fs.readdirSync(dir);
-;
-files.forEach(file => {;
-const filePath = path.join(dir, file);
+
+// Function to process all TypeScript/TSX files
+function processFiles(dir) {
+  const files = fs.readdirSync(dir);
+  
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-;
-if (stat.isDirectory()) {;
-walkDir(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {;
-fixSpecificJSX(filePath);
+    
+    if (stat.isDirectory()) {
+      processFiles(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+      try {
+        const content = fs.readFileSync(filePath, 'utf8');
+        const fixed = fixSpecificJSX(content);
+        
+        if (content !== fixed) {
+          fs.writeFileSync(filePath, fixed);
+          console.log(`Fixed specific JSX: ${filePath}`);
+        }
+      } catch (error) {
+        console.error(`Error processing ${filePath}:`, error.message);
+      }
     }
   });
 }
 
-// Start fixing from the app directory;
-console.log('Starting specific JSX fixes...');
-walkDir('./app');
-walkDir('./src');
-console.log('Specific JSX fixes completed!');
+// Process app directory
+console.log('Fixing specific JSX syntax errors in app directory...');
+processFiles('./app');
+
+// Process src directory
+console.log('Fixing specific JSX syntax errors in src directory...');
+processFiles('./src');
+
+// Process components directory
+console.log('Fixing specific JSX syntax errors in components directory...');
+processFiles('./components');
+
+console.log('Specific JSX syntax fixes completed!');

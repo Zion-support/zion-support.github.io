@@ -1,11 +1,9 @@
 'use client';
 import React from 'react';
-
 interface ServicePageTemplateProps {
   className?: string;
   children?: React.ReactNode;
 }
-
 const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ className, children }) => {
   return (
     <div className={className}>
@@ -13,5 +11,4 @@ const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ className, ch
     </div>
   );
 };
-
 export default ServicePageTemplate;

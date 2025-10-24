@@ -19,7 +19,6 @@ s: Record<string,string>;
 ;
 constructor(baseURL: string = '/api') {;
 this.baseURL = baseURL;,this.defaultHeaders = {,
-
       'Content-Type': 'application/json',
     };
   }

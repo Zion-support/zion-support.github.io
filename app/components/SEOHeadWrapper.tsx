@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-
 interface SEOHeadWrapperProps {
   className?: string;
   title?: string;
@@ -8,7 +7,6 @@ interface SEOHeadWrapperProps {
   keywords?: string[];
   children?: React.ReactNode;
 }
-
 const SEOHeadWrapper: React.FC<SEOHeadWrapperProps> = ({ className, title, description, keywords, children }) => {
   return (
     <div className={className}>
@@ -16,5 +14,4 @@ const SEOHeadWrapper: React.FC<SEOHeadWrapperProps> = ({ className, title, descr
     </div>
   );
 };
-
 export default SEOHeadWrapper;

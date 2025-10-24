@@ -1,11 +1,9 @@
 'use client';
 import React from 'react';
-
 interface AdvancedPerformanceMonitorProps {
   className?: string;
   children?: React.ReactNode;
 }
-
 const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({ className, children }) => {
   return (
     <div className={className}>
@@ -13,5 +11,4 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
     </div>
   );
 };
-
 export default AdvancedPerformanceMonitor;

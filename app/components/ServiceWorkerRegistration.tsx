@@ -1,11 +1,9 @@
 'use client';
 import React from 'react';
-
 interface ServiceWorkerRegistrationProps {
   className?: string;
   children?: React.ReactNode;
 }
-
 const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({ className, children }) => {
   return (
     <div className={className}>
@@ -13,5 +11,4 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({ c
     </div>
   );
 };
-
 export default ServiceWorkerRegistration;

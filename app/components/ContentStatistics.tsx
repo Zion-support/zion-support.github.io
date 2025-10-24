@@ -1,11 +1,9 @@
 'use client';
 import React from 'react';
-
 interface ContentStatisticsProps {
   className?: string;
   children?: React.ReactNode;
 }
-
 const ContentStatistics: React.FC<ContentStatisticsProps> = ({ className, children }) => {
   return (
     <div className={className}>
@@ -13,5 +11,4 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = ({ className, childr
     </div>
   );
 };
-
 export default ContentStatistics;

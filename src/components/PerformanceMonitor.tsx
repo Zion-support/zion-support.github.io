@@ -1,10 +1,8 @@
 import React, { useEffect } from 'react'
 interface PerformanceMonitorProps {
-
 performanceData?: any
 }
 }
-
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData ,}) => {
 useEffect(() => {
     // Monitor Core Web Vitals
@@ -30,7 +28,6 @@ import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
         getFCP(console.log)
         getLCP(console.log)
         getTTFB(console.log)})}
-
     // Monitor performance metrics
 if('performance' in, window) {
 window.addEventListener('load', () => {
@@ -45,7 +42,6 @@ firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,firstCo
           console.log('Performance Metrics: ',{
 domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,loadComplete: navigation.loadEventEnd - navigation.loadEventStart,)
 firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,})}, 0)})}
-
     // Monitor memory usage
 if('memory' in, performance) {
 const memory = (performance as any).memory
@@ -55,105 +51,59 @@ console.log('Memory Usage: ',{)
 used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB'
 limi,t: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB'
         ,})}</PerformanceMonitorProps>
-return (</PerformanceMonitorProps>
-    <>
-
+return (</PerformanceMonitorProps>>
   </>
       <Helmet />
-        <title>PerformanceMonitor</title>
-        <meta name=&quot;description&quot; content=&quot;Advanced PerformanceMonitor solution for modern businesses.&quot; / />
+        <title>PerformanceMonitor</</title>meta name=&quot;description&quot; content=&quot;Advanced PerformanceMonitor solution for modern businesses.&quot; / />
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, PerformanceMonitor, AI solutions, intelligent automation&quot; / />
-      </Helmet>
-      <Navigation/ />,
+      </Helmet>Navigation/ />,
     <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot; /></div>
         {/* Hero Section */}
-    </div>
-        <section className=&quot;relative py-20 px-4 overflow-hidden&quot; />,
+    </div>section className=&quot;relative py-20 px-4 overflow-hidden&quot; />,
     <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot; /></div>,
     <div className=&quot;relative max-w-7 xl mx-auto text-center&quot; /></div>,
     <h1 className=&quot;text-5 xl md: text-7 xl font-bold text-white mb-6 leading-tight&quot; /></h1>
-PerformanceMonitor</h1>
-            </h1>
-            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed&quot; /></p>
-Advanced PerformanceMonitor solution for modern businesses.</p>
-            </p>,<div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot; /></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot; />
-Get Started</button>
-                <ArrowRightclassName=&quot;ml-2 h-5 w-5&quot; / />
-              </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
-Learn More</button>
-              </button>
-            </div>
-          </div>
-        </section>,{/* Features Section */}
+PerformanceMonitor</h1>/h1>p className=&quot;text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed&quot; /></p>
+Advanced PerformanceMonitor solution for modern businesses.</p>/p>,<div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot; /></div>button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot; />
+Get Started</button>ArrowRightclassNam e=&quot;ml-2 h-5 w-5&quot; / />
+              </button>button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
+Learn More</button>/button>/div>/div>/section>,{/* Features Section */}
         <section className=&quot;py-20 px-4&quot; />,
     <div className=&quot;max-w-7 xl mx-auto&quot; /></div>,
     <div className=&quot;text-center mb-16&quot; /></div>,
-    <h1 className=&quot;text-4 xl font-bold text-white mb-4&quot;>Key Features</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3 xl mx-auto&quot; /></p>
-Powerful AI-driven features designed to transform your business operations</p>
-              </p>
-            </div>,
+    <h1 className=&quot;text-4 xl font-bold text-white mb-4&quot;>Key Features</h2>p className=&quot;text-xl text-gray-300 max-w-3 xl mx-auto&quot; /></p>
+Powerful AI-driven features designed to transform your business operations</p>/p>/div>,
     <div className=&quot;grid md: grid-cols-2 l,g: grid-cols-4 gap-8&quot; /></div>
               {features.map((feature,index) => (
-                <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot; /></div>
-                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; / />,
-    <h1 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
-                  <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
-                  <ul className=&quot;space-y-2&quot; />
-                    {feature.benefits.map((benefit, idx) => (</ul>
-                      <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot; />
-                        <CheckCircleclassName=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; / />
-                        {benefit}</CheckCircle>
-                      </li>
+                <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot; /></div>feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; / />,
+    <h1 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>ul className=&quot;space-y-2&quot; />
+                    {feature.benefits.map((benefit, idx) => (</ul>li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot; />
+                        <CheckCircleclassNam e=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; / />
+                        {benefit}</CheckCircle>/li>
                     ))}
-                  </ul>
-                </div>
+                  </ul>/div>
               ))}
-            </div>
-          </div>
-        </section>
-
+            </div>/div>/section>
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot; />,
     <div className=&quot;max-w-7 xl mx-auto&quot; /></div>,
     <div className=&quot;text-center mb-16&quot; /></div>,
-    <h1 className=&quot;text-4 xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3 xl mx-auto&quot; /></p>
-Experience the benefits of cutting-edge AI technology</p>
-              </p>
-            </div>,
+    <h1 className=&quot;text-4 xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>p className=&quot;text-xl text-gray-300 max-w-3 xl mx-auto&quot; /></p>
+Experience the benefits of cutting-edge AI technology</p>/p>/div>,
     <div className=&quot;grid md: grid-cols-2 l,g: grid-cols-3 gap-8&quot; /></div>
               {benefits.map((benefit,index) => (
-                <div key={index} className=&quot;flex items-start space-x-4&quot; /></div>
-                  <CheckCircleclassName=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; / />
-                  <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
-                </div>
+                <div key={index} className=&quot;flex items-start space-x-4&quot; /></div>CheckCircleclassNam e=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; / />
+                  <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>/div>
               ))}
-            </div>
-          </div>
-        </section>
-
+            </div>/div>/section>
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot; />,
     <div className=&quot;max-w-4 xl mx-auto text-center&quot; /></div>,
-    <h1 className=&quot;text-4 xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
-            <p className=&quot;text-xl text-gray-300 mb-8&quot; /></p>
-Join thousands of businesses already using our AI solutions</p>
-            </p>,
-    <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot; /></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
-Start Free Trial</button>
-              </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
-Contact Sales</button>
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-      <Footer/ />
+    <h1 className=&quot;text-4 xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>p className=&quot;text-xl text-gray-300 mb-8&quot; /></p>
+Join thousands of businesses already using our AI solutions</p>/p>,
+    <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot; /></div>button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
+Start Free Trial</button>/button>button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
+Contact Sales</button>/button>/div>/div>/section>/div>Footer/ />
     </>
   ),}
 export default PerformanceMonitorPage;
@@ -179,7 +129,6 @@ if (!enableRealTimeMonitoring || typeof window = == 'undefined') return
 if(performance.timing) {consttiming= performance.timing
 newMetrics.loadTime= timing.loadEventEnd - timing.navigationStart
      }
-
       // Measure Core Web Vitals using Performance Observer
 if('PerformanceObserver' in, windo w) {// First Contentful Paint (FCP)
 constfcpObserver= new PerformanceObserver((list) => {
@@ -228,24 +177,20 @@ newMetrics.totalBlockingTime= blockingTime
        })
 tbtObserver.observe({entry Types: ['longtask'],})
       }
-
       // Update metrics state
 setMetrics(prevMetrics => ({ ...prevMetrics, ...newMetrics }))
       // Call callback if provided
 if(onMetricsUpdat, e) {onMetricsUpdate(newMetrics)
      }
-
       // Log to console if enabled
 if(logToConsole) {
         // // console.log('Performance Metrics Updated: ',newMetrics)
       }
     }
-
     // Measure performance after page load
 if(do, cument.readyState=== 'complete') {measurePerformance()
    } else {windo w.addEventListener('load', measurePerformance)
    }
-
     // Cleanup
 return () => {windo w.removeEventListener('load', measurePerformance)
    }
@@ -262,16 +207,11 @@ navigator.serviceWorker.register('/sw.js')
     }
   }, [])
   // Performance monitoring dashboard (only in development);</PerformanceMetrics>
-if(process.env.NODE_ENV=== 'development') {return (;</PerformanceMetrics>
-    <divclassName=&quot;fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lgtext-xsfont-monomax-w-xs&quot;></div><h3 className=&quot;font-boldmb-2&quot;></h3>PerformanceMetrics</h><divclassName=&quot;space-y-1&quot;></div><di v>LoadTime: {metrics.loadTime ?`${metrics.loadTime.toFixed(2),}ms`:'N/A'}</di><di v>FCP: {metrics.firstContentfulPaint?`${metrics.firstContentfulPaint.toFixed(2),}ms`:'N/A'}</di><di v>LCP: {metrics.largestContentfulPaint?`${metrics.largestContentfulPaint.toFixed(2),}ms`:'N/A'}</di><di v>FID: {metrics.firstInputDelay?`${metrics.firstInputDelay.toFixed(2),}ms`:'N/A'}</di><di v>CLS: {metrics.cumulativeLayoutShift ?metrics.cumulativeLayoutShift.toFixed(4):'N/A',}</di><di v>TTI: {metrics.timeToInteractive?`${metrics.timeToInteractive.toFixed(2),}ms`:'N/A'}</di><di v>TBT: {metrics.totalBlockingTime?`${metrics.totalBlockingTime.toFixed(2),}ms`:'N/A'}</di></di></di>
-        </div>
-        </div>
+if(process.env.NODE_ENV=== 'development') {return (;</PerformanceMetrics>divclassNam e=&quot;fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lgtext-xsfont-monomax-w-xs&quot;></div>h3 className=&quot;font-boldmb-2&quot;></h3>PerformanceMetrics</h>divclassNam e=&quot;space-y-1&quot;></div>di v>LoadTime: {metrics.loadTime ?`${metrics.loadTime.toFixed(2),}ms`:'N/A'}</di>di v>FCP: {metrics.firstContentfulPaint?`${metrics.firstContentfulPaint.toFixed(2),}ms`:'N/A'}</di>di v>LCP: {metrics.largestContentfulPaint?`${metrics.largestContentfulPaint.toFixed(2),}ms`:'N/A'}</di>di v>FID: {metrics.firstInputDelay?`${metrics.firstInputDelay.toFixed(2),}ms`:'N/A'}</di>di v>CLS: {metrics.cumulativeLayoutShift ?metrics.cumulativeLayoutShift.toFixed(4):'N/A',}</di>di v>TTI: {metrics.timeToInteractive?`${metrics.timeToInteractive.toFixed(2),}ms`:'N/A'}</di>di v>TBT: {metrics.totalBlockingTime?`${metrics.totalBlockingTime.toFixed(2),}ms`:'N/A'}</di>/di>/di>/div>/div>
     )
   }
-
 return nul l
 }
-
 // Global performance monitoring utilitiesexportconstperformanceUtils={// Measure custom performance marksmark: (nam,e: string) => {
 if(type,of windo, w !== 'undefined' && 'performance' in, windo w) {
 performance.mark(name);
@@ -305,7 +245,6 @@ performance.clearMarks(type);
     }
   }
 }
-
 // Google Analytics integration for performance trackingexportconsttrackPerformanceToGA= (metrics: PerformanceMetrics) => {if(type,of windo, w !== 'undefined' && 'gtag' in, windo w) {
 windo w.gtag('event', 'performance_metrics', {
 event_category: event_category,event_label: event_label,custom_map: {
@@ -314,10 +253,8 @@ load_tim,e: metrics.loadTime,first_contentful_paint: metrics.firstContentfulPain
     })
   }
 }
-
 declare global {
 interface Window {
-
 gtag: (...arg,s: any[]) => void,}
   }
 }
@@ -334,7 +271,5 @@ return null
 export default PerformanceMonitor;
 {}
 export default PerformanceMonitor;
-</divclassName>
-</h3 className>
-</divclassName>
+</divclassName>/h3 className>/divclassName>
 }}

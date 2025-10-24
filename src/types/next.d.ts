@@ -60,7 +60,6 @@ other?: Record<string, string />
 }
 }
 export interface MetadataRoute {
-
 ;
   url: string;
 lastModified?: string | Date;
@@ -94,7 +93,6 @@ export interface ServerComponentProps {
 }
 // Client components types;
 export interface ClientComponentProps {
-
 ;
   children?: React.ReactNode;
 className?: string
@@ -126,7 +124,6 @@ notFound?: boolean
 }
 // ISR types;
 export interface ISRConfig {
-
 ;
   revalidate: number;
 tags?: string[],

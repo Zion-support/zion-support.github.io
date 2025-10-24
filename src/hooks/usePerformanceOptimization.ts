@@ -20,7 +20,6 @@ enableCodeSplitting = true;
 enableCaching = true
   } = options;
 const observerRef = useRef<IntersectionObserver | null>(null)
-
   // Lazy loading for images;
 const setupLazyLoading = useCallback(() => {;
 if (!enableLazyLoading || typeof window === 'undefined') return // Preload critical resources;
@@ -34,12 +33,10 @@ const link = document.createElement('link');
           document.head.appendChild(link);
         });
       }
-
       // Enable compression;
 if (options.enableCompression) {
         // This would typically be handled by the server
       }
-
       // Enable caching;
 if (options.enableCaching) {
         // This would typically be handled by the server
@@ -70,7 +67,6 @@ images.forEach((img) => {;
 observerRef.current?.observe(img);
     })
   }, [enableLazyLoading])
-
   // Preload critical resources;
 const preloadCriticalResources = useCallback(() => {;
 if (!enablePreloading || typeof window === 'undefined') return;
@@ -94,7 +90,6 @@ link.as = 'image'
 document.head.appendChild(link);
     })
   }, [enablePreloading])
-
   // Image optimization;
 const optimizeImages = useCallback(() => {;
 if (!enableImageOptimization || typeof window === 'undefined') return;
@@ -114,7 +109,6 @@ img.setAttribute('alt', '');
       }
     })
   }, [enableImageOptimization])
-
   // Code splitting optimization;
 const optimizeCodeSplitting = useCallback(() => {;
 if (!enableCodeSplitting || typeof window === 'undefined') return // Preload critical chunks;
@@ -130,7 +124,6 @@ link.as = chunk.endsWith('.js') ? 'script' : 'style';
 document.head.appendChild(link);
     })
   }, [enableCodeSplitting])
-
   // Service Worker registration for caching;
 const registerServiceWorker = useCallback(() => {;
 if (!enableCaching || typeof window === 'undefined' || !('serviceWorker' in navigator)) return;
@@ -146,7 +139,6 @@ navigator.serviceWorker.register('/sw.js');
       })
     }
   }, [enableCaching])
-
   // Performance monitoring;
 const setupPerformanceMonitoring = useCallback(() => {;
 if (typeof window === 'undefined') return // Monitor long tasks;
@@ -164,7 +156,6 @@ observer.observe({ entryTypes: ['longtask'] ,});
         // Long task observer not supported
       }
     }
-
     // Monitor memory usage;
 if ('memory' in performance) {;
 const checkMemory = () => {;
@@ -179,7 +170,6 @@ const usedMB = Math.round(memory.usedJSHeapSize / 1048576);
       setInterval(checkMemory, 30000) // Check every 30 seconds
     }
   }, [])
-
   // Resource hints;
 const addResourceHints = useCallback(() => {;
 if (typeof window === 'undefined') return;

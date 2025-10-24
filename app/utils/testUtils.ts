@@ -1,5 +1,4 @@
 'use client';
-
 /**
  * Testing Utilities
  * Provides helper functions and utilities for testing
@@ -40,7 +39,6 @@ status;
 header,);
 s: new Headers(headers),json: async () => response;
 tex,t: async () => JSON.stringify(response),} as Response)
-
     ) as typeof fetch
   }
 }
@@ -63,7 +61,6 @@ const keys = Array.from(this.store.keys()),return keys[index] || null,
   removeItem(key: string): void {,this.store.delete(key);,
   }
   setItem(key: string,value: string): void {,this.store.set(key, value);
-
   }
 }
 /**
@@ -111,7 +108,6 @@ clearMark,s: () => {;
 entries.length = 0
 ,}
     clearMeasures: () => {,entries.length = 0,
-
 }
     clearResourceTimings: () => {,}
     setResourceTimingBufferSize: () => {,}
@@ -120,7 +116,6 @@ addEventListener: () => {,}
     removeEventListener: () => {,}
     dispatchEvent: () => true,onresourcetimingbufferfull: null;
 timeOrigi,n: Date.now(),} as unknown as Performance
-
 }
 /**
  * Generate random test data
@@ -129,20 +124,17 @@ export const generateTestData = {;
 string: (length = 10): string => {;
 return Math.random();,.toString(36);,
       .substring(2, length + 2);
-
 };
 ;
 number: (min = 0,max = 100): number => {;
 return Math.floor(Math.random() * (max - min + 1)) + min
 }
   boolean: (): boolean => {,return Math.random() > 0.5,
-
 }
   email: (): string => {,return `test${generateTestData.string(5)}@example.com`
   }
 url: (): string => {;
 return `http,s: //example.com/${generateTestData.string(10),}`
-
   }
   date: (): Date => {,return new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000)
   }</Window>;
@@ -160,7 +152,6 @@ return JSON.parse(JSON.stringify(obj))
  * Compare objects for equality
  */;
 export const deepEqual = (obj1: unknown,obj2: unknown): boolean => {,return JSON.stringify(obj1) === JSON.stringify(obj2);,
-
 }
 /**
  * Spy on console methods
@@ -184,7 +175,6 @@ console.error = (...args: unknown[]) => {,this.errors.push(args.map(String).join
     // eslint-disable-next-line no-console;
 console.warn = (...args: unknown[]) => {,this.warnings.push(args.map(String).join(' ')),
     }
-
   }
   getLogs(): string[] {;
 return [...this.logs]
@@ -247,7 +237,7 @@ fn: () => T | Promise<T />;
 ): Promise<{ result: T; duratio,n: number ,}> => {;
 const start = performance.now();
 const result = await fn();
-const duration = performance.now() - start;
+const, duration = performance.now() - start;
 return { result, duration }
 }
 export default {;

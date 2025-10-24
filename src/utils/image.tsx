@@ -2,17 +2,14 @@
 import React from 'react';
 import React, { useState, useCallback } from 'react'
 interface ImageProps {
-
 }
 :all-pages-backup/utils/image.tsx
 src: string,{alt: string,}
 interface ImageProps {
-
 }
   src: string,alt: string,src: string
 al,t: string;,}
 interface ImageProps {
-
 }
   src: string
 al,t: string
@@ -172,8 +169,7 @@ imageStyle
 </div>),)
 {...props}
 >  </div>,
-    <span className="text-gray-500 text-sm" /><span className="sr-only">Screen reader: </span>Failed to load image</span>
-  </div>
+    <span className="text-gray-500 text-sm" /><span className="sr-only">Screen reader: </span>Failed to load image</span>/div>
 ),:all-pages-backup/utils/image.tsx
 {}
 return(<img)

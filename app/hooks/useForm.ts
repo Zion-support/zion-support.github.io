@@ -46,7 +46,6 @@ const validationErrors = validate ? validate(formState.data) : {};
 setFormState(prev => ({
         ...prev,;
 errors: validationErrors,)
-
       }));
       return;
     }
@@ -54,7 +53,6 @@ errors: validationErrors,)
 setFormState(prev => ({
       ...prev,;
 isSubmitting: true,submitStatus: "idle",errors: {,},)
-
     }));
 ;
 try {;
@@ -62,7 +60,6 @@ await onSubmit(formState.data);
       setFormState(prev => ({
         ...prev,;
 submitStatus: "success",data: initialData,// Reset form)
-
       }));
     } catch (error) {
       // Log error in development, send to error service in production;
@@ -75,13 +72,11 @@ console.error("Form submission error: ",error);
 setFormState(prev => ({
         ...prev,;
 submitStatus: "error",)
-
       }));
     } finally {;
 setFormState(prev => ({
         ...prev,;
 isSubmitting: false,)
-
       }));
     }
   }, [formState.data, onSubmit, validate, initialData]);
@@ -89,7 +84,6 @@ isSubmitting: false,)
 const resetForm = useCallback(() => {;
 setFormState({;
 data: initialData,isSubmitting: false,submitStatus: "idle",errors: {,},);
-
     });
   }, [initialData]);
 ;
@@ -100,5 +94,4 @@ handleSubmit,;
 resetForm,
   };
 }</HTMLInputElement>
-
 }

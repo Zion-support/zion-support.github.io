@@ -32,7 +32,6 @@ const measurePerformance = useCallback(() => {;
 const renderTime = performance.now();
 ;
 const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
-
     // Simple FPS calculation;
 let fps = 60;
     let lastTime = performance.now();

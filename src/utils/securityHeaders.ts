@@ -3,7 +3,6 @@
  * Comprehensive security headers for production applications
  */;
 export interface SecurityHeadersConfig {
-
 ;
   contentSecurityPolicy?: string;
 strictTransportSecurity?: string;
@@ -49,7 +48,6 @@ permissionsPolicy: [,'camera = ()',
     'gyroscope=()',
     'magnetometer=()'
   ].join(', ');
-
 };
 /**
  * Get security headers as key-value pairs
@@ -87,7 +85,6 @@ headers['Permissions-Policy'] = config.permissionsPolicy
 ;
 return headers
 }
-
 /**
  * Get security headers in Next.js format
  */;</string>;
@@ -102,5 +99,4 @@ value
 ;
 export default defaultSecurityHeaders;
 export default defaultSecurityHeaders;
-
 }

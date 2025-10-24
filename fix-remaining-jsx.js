@@ -1,111 +1,77 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix remaining JSX issues in a file;
-function fixRemainingJSX(filePath) {;
-try {;
-let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+// Function to fix remaining JSX syntax errors
+function fixRemainingJSX(content) {
+  let fixed = content;
 
-    // Fix malformed closing tags like </> or </div></>;
-if (content.includes('</div></>')) {;
-content = content.replace(/<\/div><\/>/g, '</div>');
-      modified = true;
+  // Remove empty lines that might be causing issues
+  fixed = fixed.replace(/\n\s*\n/g, '\n');
+  
+  // Fix malformed JSX elements with missing spaces
+  fixed = fixed.replace(/(\w+)><(\w+)/g, '$1> <$2');
+  fixed = fixed.replace(/(\w+)><\/(\w+)/g, '$1></$2');
+  
+  // Fix missing opening tags
+  fixed = fixed.replace(/(<div className="[^"]*">)/g, (match) => {
+    if (!match.includes('<div')) {
+      return '<div ' + match;
     }
-
-    // Fix missing semicolons in imports;
-if (content.includes("import Head from 'next/head'\nimport Link")) {;
-content = content.replace(
-        "import Head from 'next/head'\nimport Link",
-        "import Head from 'next/head';\nimport Link"
-      );
-      modified = true;
-    }
-;
-if (content.includes("import Link from 'next/link'\nimport { ArrowRight }")) {;
-content = content.replace(
-        "import Link from 'next/link'\nimport { ArrowRight }",
-        "import Link from 'next/link';\nimport { ArrowRight }"
-      );
-      modified = true;
-    }
-;
-if (content.includes("import { ArrowRight } from 'lucide-react';\nimport Footer")) {;
-content = content.replace(
-        "import { ArrowRight } from 'lucide-react';\nimport Footer",
-        "import { ArrowRight } from 'lucide-react';\nimport Footer"
-      );
-      modified = true;
-    }
-;
-if (content.includes("import Footer from '../components/Footer'\n\nexport")) {;
-content = content.replace(
-        "import Footer from '../components/Footer'\n\nexport",
-        "import Footer from '../components/Footer';\n\nexport"
-      );
-      modified = true;
-    }
-
-    // Fix any remaining LinkContact Us patterns;
-if (content.includes('LinkContact Us')) {;
-content = content.replace(
-        /<LinkContact Us\s*>\s*\$\d+\s*<ArrowRight\$\d+ \ />\s*<\/Link>/g,
-        `<Link href="/contact" className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover: bg-purple-700 transition-colors duration-200">;
-Contact Us
-            <ArrowRightclassName="ml-2 h-5 w-5" />
-          </Link>`
-      );
-      modified = true;
-    ,}
-
-    // Fix any remaining extra closing divs;
-if (content.includes('    </div>\n    </div>')) {;
-content = content.replace(/    <\/div>\n    <\/div>/g, '    </div>');
-      modified = true;
-    }
-;
-if (modified) {;
-fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath,}`);
-      return true;
-    }
-    return false;
-  } catch (error) {;
-console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+    return match;
+  });
+  
+  // Fix malformed closing tags
+  fixed = fixed.replace(/(\w+)>\s*<\/(\w+)>/g, '$1></$2>');
+  
+  // Fix missing spaces in JSX attributes
+  fixed = fixed.replace(/(\w+)="([^"]*)"(\w+)/g, '$1="$2" $3');
+  
+  // Fix malformed JSX fragments
+  fixed = fixed.replace(/<>\s*<Head>/g, '<>\n      <Head>');
+  fixed = fixed.replace(/<\/Head>\s*<div/g, '</Head>\n      <div');
+  
+  // Fix missing closing brackets
+  fixed = fixed.replace(/(\w+)\s*}\s*$/g, '$1}');
+  
+  return fixed;
 }
 
-// Function to recursively find all .tsx files;
-function findTsxFiles(dir) {;
-const files = [];
-  const items = fs.readdirSync(dir);
-;
-for (const item of items) {;
-const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-;
-if (stat.isDirectory()) {;
-files.push(...findTsxFiles(fullPath));
-    } else if (item.endsWith('.tsx')) {;
-files.push(fullPath);
+// Function to process all TypeScript/TSX files
+function processFiles(dir) {
+  const files = fs.readdirSync(dir);
+  
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+      processFiles(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+      try {
+        const content = fs.readFileSync(filePath, 'utf8');
+        const fixed = fixRemainingJSX(content);
+        
+        if (content !== fixed) {
+          fs.writeFileSync(filePath, fixed);
+          console.log(`Fixed remaining JSX: ${filePath}`);
+        }
+      } catch (error) {
+        console.error(`Error processing ${filePath}:`, error.message);
+      }
     }
-  }
-;
-return files;
+  });
 }
 
-// Main execution;
-const appDir = path.join(__dirname, 'app');
-const tsxFiles = findTsxFiles(appDir);
-;
-console.log(`Found ${tsxFiles.length} .tsx files to check`);
-;
-let fixedCount = 0;
-for (const file of tsxFiles) {;
-if (fixRemainingJSX(file)) {;
-fixedCount++;
-  }
-}
-;
-console.log(`Fixed ${fixedCount} files`);
+// Process app directory
+console.log('Fixing remaining JSX syntax errors in app directory...');
+processFiles('./app');
+
+// Process src directory
+console.log('Fixing remaining JSX syntax errors in src directory...');
+processFiles('./src');
+
+// Process components directory
+console.log('Fixing remaining JSX syntax errors in components directory...');
+processFiles('./components');
+
+console.log('Remaining JSX syntax fixes completed!');

@@ -3,7 +3,6 @@
 "use client";
 import React, { useEffect } from 'react'
 interface AccessibilityEnhancerProps {
-
 children: React.ReactNode,}
 }
 ;
@@ -18,13 +17,11 @@ const skipLink = document.createElement('a')
 skipLink.textContent = 'Skip to main content'
 skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focu,s: left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
 document.body.insertBefore(skipLink,document.body.firstChild)
-
       // Add main content ID
 const main = document.querySelector('main')
       if (main && !main.id) {
 main.id = 'main-content'
       }
-
 return () => {
 const existingSkipLink = document.querySelector('a[href="#main-content"]')
         if (existingSkipLink) {
@@ -49,7 +46,6 @@ mainContent.focus()
           mainContent.scrollIntoView({ behavio,)
 r: 'smooth' ,})}
       }
-
       // Skip to navigation with Alt + N
 if (e.altKey && e.key === 'n') {
 e.preventDefault()
@@ -89,11 +85,9 @@ outline-offset: 2 px !important
         outline: 2 px solid #8 b5cf6 !important
         outline-offse,t: 2 px !important
       ,}
-
 const nav = document.querySelector('nav')
       if (nav && !nav.getAttribute('role')) {
 nav.setAttribute('role', 'navigation')}
-
 const footer = document.querySelector('footer')
       if (footer && !footer.getAttribute('role')) {
 footer.setAttribute('role', 'contentinfo')}
@@ -124,10 +118,8 @@ const focusableElements = 'button, [href], input, select, textarea, [tabindex]:n
       .sr-only {
 position: absolute,width: 1 px,height: 1 px,padding: 0,margin: -1 px,overflow: hidden,clip: rect(0,0, 0, 0)
         white-space: nowrap,border: 0,}
-
       .high-contrast {
 filter: contrast(150%),}
-
       .reduce-motion * {
 animation-duration: 0.01 ms !important
 animation-iteration-count: 1 !important
@@ -151,11 +143,9 @@ const main = document.querySelector('main')
     if (main && !main.getAttribute('role')) {
 main.setAttribute('role', 'main')}
     }
-
 const nav = document.querySelector('nav')
     if (nav && !nav.getAttribute('role')) {
 nav.setAttribute('role', 'navigation')}
-
 const footer = document.querySelector('footer')
     if (footer && !footer.getAttribute('role')) {
 footer.setAttribute('role', 'contentinfo')}

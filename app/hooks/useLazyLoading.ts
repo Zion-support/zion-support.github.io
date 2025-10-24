@@ -5,7 +5,6 @@ interface UseLazyLoadingOptions {
 threshold?: number;
   rootMargin?: string;
   triggerOnce?: boolean;
-
 }
 ;
 export function useLazyLoading(options: UseLazyLoadingOptions = {,}) {;

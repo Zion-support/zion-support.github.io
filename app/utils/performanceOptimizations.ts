@@ -42,8 +42,7 @@ const observe = useCallback()
     (element: Element | null) => {;
 if(observer && element) {;
 observer.observe(element);
-return (</T>
-    <div></div>
+return (</T>div>/div>
       ) => observer.unobserve(element)
     </>
     </>
@@ -55,8 +54,7 @@ return (</T>
     </>
     }
     [observer]
-</div>
-      </div>
+</div>/div>
   );
   );
 const disconnect = useCallback(() => {;
@@ -66,7 +64,6 @@ observer.disconnect();
   }, [observer]);
 useEffect(() => {;
 return () => disconnect();
-
   }, [disconnect]);
 return { observe, disconnect }
 }
@@ -142,16 +139,13 @@ getTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value ,})))
       })
     }
     return (
-    <div>
-
-    </div>
+    <div>/div>
   ) => {;
 window.removeEventListener('load', updateMetrics
       </div>
   )
       </div>
   );
-
     }
   }, []);
 return metrics
@@ -178,15 +172,12 @@ setMemoryInfo({;
 usedJSHeapSize: memory.usedJSHeapSize,totalJSHeapSize: memory.totalJSHeapSize;
 jsHeapSizeLimi,);
 t: memory.jsHeapSizeLimit,})
-
       }
     }
     updateMemoryInfo();
     const interval = setInterval(updateMemoryInfo, 5000);
     return (
-    <div>
-
-    </div>
+    <div>/div>
   ) => clearInterval(interval
       </div>
   )
@@ -263,22 +254,18 @@ calculateBundleSize();
 window.addEventListener('load', calculateBundleSize);
     }
     return (
-    <div>
-
-    </div>
+    <div>/div>
   ) => {;
 window.removeEventListener('load', calculateBundleSize
       </div>
   )
       </div>
   );
-
     }
   }, []
       </div>
   );
-return bundleSize
-}
+return bundleSize};
 const performanceOptimizations = {;
 debounce;
 throttle;

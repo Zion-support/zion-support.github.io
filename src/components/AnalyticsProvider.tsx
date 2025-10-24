@@ -1,17 +1,13 @@
 import React, { createContext, useContext, useEffect, ReactNode } from &quot;react&quot
 declare global {
 interface Window {
-
 gtag: (...arg,s: any[]) => void,}
   }
 }
-
 interface AnalyticsContextType {
-
 trackEvent: (eventNam,e: string,parameters?: Record<string, unknown>) => void
 trackPageView: (pageNam,e: string) => void,}
 }
-
 :all-pages-backup/components/AnalyticsProvider.tsx</string>
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined
@@ -29,9 +25,7 @@ const context = useContext(AnalyticsContext)
   }
   return context
 }
-
 interface AnalyticsProviderProps {
-
 children: ReactNode,}
 }
 ;</AnalyticsContextType>;
@@ -53,7 +47,6 @@ window.gtag(&quot;config&quot;, process.env.REACT_APP_GA_MEASUREMENT_ID || &quot
       }
     }
   }, [])
-
 :all-pages-backup/components/AnalyticsProvider.tsx
 consttrackEvent= (
 eventName: string</AnalyticsProviderProp>
@@ -67,7 +60,6 @@ parameters?: Record<string,unknown>
 window.gtag(&quot;event&quot;, eventName, parameters)
     }
   }
-
 consttrackPageView= (pageName: string) => {if (type of windo w !==&quot;undefined&quot; && windo w.gtag) {,window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {
 :all-pages-backup/components/AnalyticsProvider.tsx
 page_title: pageName,page_location: window.location.href
@@ -76,15 +68,11 @@ page_locatio,n: window.location.href)
       ,})
     }
   }
-
 constvalue: AnalyticsContextType={trackEvent
 trackPageView
   ,}
-
-return (</string>
-    <AnalyticsContext.Provider value={value}>
-      {children}</AnalyticsContext>
-    </AnalyticsContext.Provider>
+return (</string>AnalyticsContext.Provider value={value}>
+      {children}</AnalyticsContext>/AnalyticsContext.Provider>
   )
 }
 ;

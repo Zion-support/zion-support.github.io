@@ -5,7 +5,6 @@ interface UseIntersectionObserverOptions {
 threshold?: number;
   root?: Element | null;
   rootMargin?: string;
-
 }
 ;
 export const useIntersectionObserver = (options: UseIntersectionObserverOptions = {,}) => {;

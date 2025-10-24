@@ -1,11 +1,9 @@
 'use client';
 import React from 'react';
-
 interface GlobalErrorBoundaryProps {
   className?: string;
   children?: React.ReactNode;
 }
-
 const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = ({ className, children }) => {
   return (
     <div className={className}>
@@ -13,5 +11,4 @@ const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = ({ className, ch
     </div>
   );
 };
-
 export default GlobalErrorBoundary;

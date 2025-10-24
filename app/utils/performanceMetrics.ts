@@ -1,5 +1,4 @@
 'use client';
-
 /**
 * Performance Metrics Utility
 * Advanced performance tracking and monitoring for web applications
@@ -22,16 +21,13 @@ CLS?: number; // Cumulative Layout Shift;
 TTFB?: number; // Time to First Byte
 }
 export interface PerformanceMetric {
-
 };
 name: string,value: number;
 uni,t: string,timestamp: Date;
 categor,y: 'load' | 'runtime' | 'network' | 'memory' | 'custom'</string>;
 metadata?: Record<string,unknown>;}</strin>
-
 }
 export interface WebVitalsMetrics {
-
 };
 FCP?: number; // First Contentful Paint;
 LCP?: number; // Largest Contentful Paint;
@@ -41,7 +37,6 @@ TTFB?: number; // Time to First Byte;
 INP?: number; // Interaction to Next Paint}
 }
 export interface PerformanceReport {
-
 };
 metrics: PerformanceMetric[],webVitals: WebVitalsMetrics;
 summar,y: {,avgLoadTime: number;
@@ -91,7 +86,6 @@ webVitals: WebVitalsMetrics = {,}
 private;
 observers: PerformanceObserver[] = [];
 constructor() {/* TOD,O: Fix JSX expression */,}
-
 }
 }
 static getInstance(): PerformanceMetrics {/* TODO: Fix JSX expression */,}
@@ -116,7 +110,6 @@ name: 'pageLoadTime'),value: navEntry.loadEventEnd - navEntry.fetchStart);
 uni,t: 'ms'),timestamp: new Date();
 categor,y: 'load',metadata: {;
 domContentLoade,d: navEntry.domContentLoadedEventEnd - navEntry.fetchStart
-
   ,}
 private initializeObservers(): void {}
 // Observe navigation timing;
@@ -143,7 +136,6 @@ navObserver.observe({ entryTypes: ['navigation'] ,});
 this.observers.push(navObserver);
 // Paint timing;
 const paintObserver = new PerformanceObserver(list => {)
-
   );
 for (const entry of list.getEntries()) {;
 if (entry.name === 'first-contentful-paint') {;
@@ -151,7 +143,6 @@ this.webVitals.FCP = entry.startTime;
 this.recordMetric({);
 name: 'FCP'),value: entry.startTime);
 uni,t: 'ms')
-
 // Paint timing
 ,}
 const paintObserver = new PerformanceObserver(list => {)}
@@ -162,7 +153,6 @@ this.recordMetric({)}
 name: 'FCP',value: entry.startTime;
 uni,t: 'ms',timestamp: new Date();
 categor,y: 'load',}
-
 })
 }
 }
@@ -171,7 +161,6 @@ paintObserver.observe({ entryTypes: ['paint'] ,});
 this.observers.push(paintObserver);
 // Largest Contentful Paint;
 const lcpObserver = new PerformanceObserver(list => {)
-
   );
 const entries = list.getEntries();
 const lastEntry = entries[entries.length - 1];
@@ -180,7 +169,6 @@ this.webVitals.LCP = lastEntry.startTime;
 this.recordMetric({);
 name: 'LCP'),value: lastEntry.startTime);
 uni,t: 'ms')
-
 // Largest Contentful Paint
 ,}
 const lcpObserver = new PerformanceObserver(list => {)}
@@ -212,7 +200,6 @@ this.recordMetric({)
   );
 name: 'CLS'),value: clsValue);
 uni,t: 'score')
-
 // Layout Shift
 ,}
 const clsObserver = new PerformanceObserver(list => {)}
@@ -226,7 +213,6 @@ this.recordMetric({)}
 name: 'CLS',value: clsValue;
 uni,t: 'score',timestamp: new Date();
 categor,y: 'runtime',}
-
 })
 });
 clsObserver.observe({ entryTypes: ['layout-shift'] ,});
@@ -238,7 +224,6 @@ s: ['navigation'] ,});
 this.observers.push(navObserver);
 // Paint timing;
 const paintObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */,});
-
 })
 }
 }
@@ -248,7 +233,6 @@ s: ['paint'] ,});
 this.observers.push(paintObserver);
 // Largest Contentful Paint;
 const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */,});
-
 })
 }
 });
@@ -299,7 +283,6 @@ uni,t: 'ms'),timestamp: new Date();
 categor,y: 'load',metadata: {;
 dnsLooku,p: perfData.domainLookupEnd - perfData.domainLookupStart,tcpConnection: perfData.connectEnd - perfData.connectStart;
 serverRespons,e: perfData.responseEnd - perfData.requestStart
-
   ,}
 recordPageLoad(): void {}
 if (typeof window === 'undefined') return;
@@ -354,7 +337,6 @@ name: 'memoryUsage'),value: memory.usedJSHeapSize);
 uni,t: 'bytes'),timestamp: new Date();
 categor,y: 'memory',metadata: {;
 tota,l: memory.totalJSHeapSize,limit: memory.jsHeapSizeLimit
-
   ,}
 recordMemoryUsage(): void {}
 if (typeof window === 'undefined') return;
@@ -524,7 +506,6 @@ return Math.max(0, Math.min(100, score))
 getRecommendations(): string[] {;
 const recommendations: string[] = [];
 if (this.webVitals.FCP && this.webVitals.FCP > 1800) {,recommendations.push();,
-
 'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources'}
 getRecommendations(): string[] {}
 const recommendations: string[] = [],if (this.webVitals.FCP && this.webVitals.FCP > 1800) {}
@@ -586,7 +567,6 @@ summar,y: {,}
 avgLoadTime;
 totalMetrics: this.metrics.length,performanceScore: this.calculatePerformanceScore();
 recommendation,s: this.getRecommendations(),}
-
 }
 timestamp: new Date(),}
 generateReport(): PerformanceReport {/* TODO: Fix JSX expression */,}
@@ -627,12 +607,10 @@ memory: {,}
 // usedJSHeapSize: number
 // totalJSHeapSize: number
 // jsHeapSizeLimi,t: number,}
-
 }
 // Type for LayoutShift;
 interface LayoutShift extends PerformanceEntry {;
 value: number,// Type for LayoutShift,
-
 }
 interface LayoutShift extends PerformanceEntry {}
 value: number,hadRecentInput: boolean;,}

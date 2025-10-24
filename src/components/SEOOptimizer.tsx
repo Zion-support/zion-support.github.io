@@ -4,7 +4,6 @@ import React, { useEffect } from 'react';
 import { Helmet     } from 'react-helmet-async';
 :all-pages-backup/components/SEOOptimizer.tsx
 interface SEOOptimizerProps {
-
 children: React.ReactNode,}
 }
 ;
@@ -16,13 +15,11 @@ useEffect(() => {
 if(typeof, window !== 'undefined') {
       // Add structured data
 const structuredData={
-
         "@context": "https: //schema.org"
         "@type": "Organization"
         "name": "Zion Tech Group"
-        "description": "Professional AI and IT solutions for modern businesses","url": window.location.origin
-}
-      const script = document.createElement('script')
+        "description": "Professional AI and IT solutions for modern businesses","url": window.location.origin};
+const script = document.createElement('script')
       script.type = 'application/ld+json'
       script.textContent = JSON.stringify(structuredData)
       document.head.appendChild(script)
@@ -36,7 +33,6 @@ existingScript.remove()
   }, [])
 return (
     <>
-
   </>
       <Helmet />
         <meta name="viewport" content="width=device-width, initial-scale=1" / />
@@ -50,14 +46,11 @@ return (
 import React, { useEffect } from 'react';
 import Head from 'next/head'
 interface SEOOptimizerProps {
-
   className?: string
 }
 }
-
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 interface SEOOptimizerProps {
-
   className?: string;,}
 }</SEOOptimizerProps>
 ;</SEOOptimizerProps>
@@ -85,7 +78,6 @@ meta.content = description
       document.head.appendChild(meta)
     }
   ]
-
 :all-pages-backup/components/SEOOptimizer.tsx
     // Update keywords
 const metaKeywords = document.querySelector('meta[name=&quot;keywords&quot;]')
@@ -99,7 +91,6 @@ const meta = document.createElement('meta')
       meta.content = keywords.join(', ')
       document.head.appendChild(meta)
     }
-
 :all-pages-backup/components/SEOOptimizer.tsx
     // Update canonical URL
 let canonicalLink = document.querySelector('link[rel=&quot;canonical&quot;]')
@@ -113,7 +104,6 @@ canonicalLink = document.createElement('link')
 canonicalLink.href = canonicalUrl
       document.head.appendChild(canonicalLink)
     }
-
     // Update Open Graph tags
 const updateOGTag = (property: string,content: string) => {;,:all-pages-backup/components/SEOOptimizer.tsx
 let ogTag = document.querySelector(`meta[property=&quot;${property}&quot;]`)
@@ -127,7 +117,6 @@ ogTag = document.createElement('meta')
         document.head.appendChild(ogTag)
       }
     }
-
 updateOGTag('og: title',title)
     updateOGTag('og: description',description)
     updateOGTag('og: image',ogImage)
@@ -146,7 +135,6 @@ twitterTag = document.createElement('meta')
         document.head.appendChild(twitterTag)
       }
     }
-
 updateTwitterTag('twitter: card','summary_large_image')
     updateTwitterTag('twitter: title',title)
     updateTwitterTag('twitter: description',description)
@@ -158,7 +146,6 @@ const script = document.createElement('script')
       script.textContent = JSON.stringify(structuredData)
       document.head.appendChild(script)
     }
-
 :all-pages-backup/components/SEOOptimizer.tsx
     // Add viewport meta tag if not present
 let viewport = document.querySelector('meta[name=&quot;viewport&quot;]')
@@ -170,7 +157,6 @@ viewport = document.createElement('meta')
       viewport.setAttribute('content', 'width=device-width, initial-scale=1')
       document.head.appendChild(viewport)
     }
-
     // Add charset if not present
 let charset = document.querySelector('meta[charset]')
     if(!charset) {
@@ -178,47 +164,28 @@ charset = document.createElement('meta')
       charset.setAttribute('charset', 'UTF-8')
       document.head.insertBefore(charset, document.head.firstChild)
     }
-
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData])
 </SEOOptimizerProps>
-return (</SEOOptimizerProps>
-    <Head />
-:all-pages-backup/components/SEOOptimizer.tsx</Head>
-      <title>{title}</title>
-      <meta name=&quot;description&quot; content={description} / />
+return (</SEOOptimizerProps>Head />
+:all-pages-backup/components/SEOOptimizer.tsx</Head>title>{title}</</title>meta name=&quot;description&quot; content={description} / />
       <meta name=&quot;keywords&quot; content={keywords.join(', ')} / />
       <link rel=&quot;canonical&quot; href={canonicalUrl} / />
-        <title>{title}</title>
-      <meta name=&quot;description&quot; content={description} />;</meta>
-      <meta name=&quot;keywords&quot; content={keywords.join(', ')} />;</meta>
-      <link rel=&quot;canonical&quot; href={canonicalUrl} / />
-      {/* Open Graph */}</link>
-      <meta property=&quot;og: title&quot; content={title,} />;</meta>
-      <meta property=&quot;og: description&quot; content={description,} />;</meta>
-      <meta property=&quot;og: image&quot; content={ogImage,} />;</meta>
-      <meta property=&quot;og: url&quot; content={canonicalUrl,} />;</meta>
-      <meta property=&quot;og: type&quot; content=&quot;website&quot; / />
-      {/* Twitter Card */,}</meta>
-      <meta name=&quot;twitter: card&quot; content=&quot;summary_large_image&quot; / />
-      <meta name=&quot;twitte,r: title&quot; content={title,} />;</meta>
-      <meta name=&quot;twitter: description&quot; content={description,} />;</meta>
-      <meta name=&quot;twitter: image&quot; content={ogImage,} / />
-      {/* Additional SEO meta tags */}</meta>
-      <meta name=&quot;robots&quot; content=&quot;index, follow&quot; / />
+        <title>{title}</</title>meta name=&quot;description&quot; content={description} />;</meta>meta name=&quot;keywords&quot; content={keywords.join(', ')} />;</meta>link rel=&quot;canonical&quot; href={canonicalUrl} / />
+      {/* Open Graph */}</link>meta property=&quot;og: title&quot; content={title,} />;</meta>meta property=&quot;og: description&quot; content={description,} />;</meta>meta property=&quot;og: image&quot; content={ogImage,} />;</meta>meta property=&quot;og: url&quot; content={canonicalUrl,} />;</meta>meta property=&quot;og: type&quot; content=&quot;website&quot; / />
+      {/* Twitter Card */,}</meta>meta name=&quot;twitter: card&quot; content=&quot;summary_large_image&quot; / />
+      <meta name=&quot;twitte,r: title&quot; content={title,} />;</meta>meta name=&quot;twitter: description&quot; content={description,} />;</meta>meta name=&quot;twitter: image&quot; content={ogImage,} / />
+      {/* Additional SEO meta tags */}</meta>meta name=&quot;robots&quot; content=&quot;index, follow&quot; / />
       <meta name=&quot;author&quot; content=&quot;Zion Tech Group&quot; / />
       <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; / />
       <meta charSet=&quot;UTF-8&quot; />
       {/* Structured Data */}
       {structuredData && (</meta>
-:all-pages-backup/components/SEOOptimizer.tsx</meta>
-        <script
-type=&quot;application/ld+json&quot
+:all-pages-backup/components/SEOOptimizer.tsx</meta>script type=&quot;application/ld+json&quot
 dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) ,}}
         <script type=&quot;application/ld+json&quot; />
 dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) ,}}
         /></script>
-      )}</script>
-    </Head>
+      )}</script>/Head>
   )
 }
 ;
