@@ -1,17 +1,18 @@
 'use client'
 
 import { useRef, useEffect } from 'react'
+
 /**
  * Performance Enhancement Utilities
  * Advanced performance optimization tools for the application
  */
 
 // Debounce function for performance optimization
-export const debounce = <T extends (...args: unknown[]) => unknown>(
+export const debounce = <T extends (..._args: unknown[]) => unknown>(
   func: T,
   wait: number
-): ((...args: Parameters<T>) => void) => {
-  let timeout: ReturnType<typeof setTimeout>;
+): ((..._args: Parameters<T>) => void) => {
+  let timeout: ReturnType<typeof setTimeout>
   return (..._args: Parameters<T>) => {
     clearTimeout(timeout)
     timeout = setTimeout(() => func(..._args), wait)
@@ -19,11 +20,11 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(
 }
 
 // Throttle function for performance optimization
-export const throttle = <T extends (...args: unknown[]) => unknown>(
+export const throttle = <T extends (..._args: unknown[]) => unknown>(
   func: T,
   limit: number
-): ((...args: Parameters<T>) => void) => {
-  let inThrottle: boolean;
+): ((..._args: Parameters<T>) => void) => {
+  let inThrottle: boolean
   return (..._args: Parameters<T>) => {
     if (!inThrottle) {
       func(..._args)
@@ -35,9 +36,9 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(
 
 // Performance monitoring utilities
 export class PerformanceMonitor {
-  private static instance: PerformanceMonitor;
+  private static instance: PerformanceMonitor
   private metrics: Map<string, number> = new Map()
-  private observers: PerformanceObserver[] = [];
+  private observers: PerformanceObserver[] = []
 
   static getInstance(): PerformanceMonitor {
     if (!PerformanceMonitor.instance) {
@@ -49,9 +50,9 @@ export class PerformanceMonitor {
   // Track component render time
   trackRender(componentName: string, renderTime: number) {
     this.metrics.set(`${componentName}_render`, renderTime)
-  if (process.env['NODE_ENV'] === 'development') {
-    console.log(`${componentName} rendered in ${renderTime}ms`)
-  }
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`${componentName} rendered in ${renderTime}ms`)
+    }
   }
 
   // Track memory usage
@@ -177,7 +178,7 @@ export const optimizeScrollPerformance = () => {
   // Track Core Web Vitals
   const trackCLS = () => {
     let clsValue = 0
-    const clsEntries: PerformanceEntry[] = [];
+    const clsEntries: PerformanceEntry[] = []
     interface LayoutShiftEntry extends PerformanceEntry {
       hadRecentInput?: boolean
       value: number
@@ -201,7 +202,7 @@ export const optimizeScrollPerformance = () => {
   const trackLCP = () => {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
-        if (process.env['NODE_ENV'] === 'development') {
+        if (process.env.NODE_ENV === 'development') {
           console.log('LCP:', entry.startTime)
         }
       }
@@ -218,7 +219,7 @@ export const optimizeScrollPerformance = () => {
       for (const entry of list.getEntries()) {
         const fidEntry = entry as FirstInputEntry
         const fid = fidEntry.processingStart - entry.startTime
-        if (process.env['NODE_ENV'] === 'development') {
+        if (process.env.NODE_ENV === 'development') {
           console.log('FID:', fid)
         }
       }
@@ -285,7 +286,7 @@ export const initializePerformanceEnhancements = () => {
   optimizeScrollPerformance()
   // Collect performance metrics
   const metrics = collectPerformanceMetrics()
-  if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
+  if (metrics && (process.env.NODE_ENV === 'development' || import.meta.env.DEV)) {
     console.log('Performance metrics:', metrics)
   }
 }

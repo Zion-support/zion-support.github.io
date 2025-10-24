@@ -206,13 +206,16 @@ export class ConsoleSpy {
   }
 
   private mock(): void {
-    console.log = (...args: unknown[]) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (console as any).log = (...args: unknown[]) => {
       this.logs.push(args.map(String).join(' '))
     }
-    console.error = (...args: unknown[]) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (console as any).error = (...args: unknown[]) => {
       this.errors.push(args.map(String).join(' '))
     }
-    console.warn = (...args: unknown[]) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (console as any).warn = (...args: unknown[]) => {
       this.warnings.push(args.map(String).join(' '))
     }
   }
@@ -245,16 +248,16 @@ export class ConsoleSpy {
  */
 export interface Deferred<T> {
   promise: Promise<T>
-  resolve: (_value: T) => void
+  resolve: (value: T) => void
   reject: (_reason?: unknown) => void
 }
 
 export const createDeferred = <T>(): Deferred<T> => {
-  let resolve: (_value: T) => void
+  let resolve: (value: T) => void
   let reject: (_reason?: unknown) => void
-  const promise = new Promise<T>((_res, _rej) => {
-    resolve = _res
-    reject = _rej
+  const promise = new Promise<T>((res, rej) => {
+    resolve = res
+    reject = rej
   })
   return { promise, resolve: resolve!, reject: reject! }
 }

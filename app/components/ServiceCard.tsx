@@ -1,23 +1,13 @@
 import React from 'react'
 
 interface ServiceCardProps {
-  title?: string
-  description?: string
-  icon?: React.ReactNode
-  className?: string
+  // Add props here
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ 
-  title = 'Service',
-  description = 'Service description',
-  icon,
-  className = ''
-}) => {
+const ServiceCard: React.FC<ServiceCardProps> = (_props) => {
   return (
-    <div className={`bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow ${className}`}>
-      {icon && <div className="mb-4">{icon}</div>}
-      <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+    <div>
+      {/* Component content */}
     </div>
   )
 }
