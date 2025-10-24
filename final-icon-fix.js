@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 const fs = require('fs')
 const path = require('path')
 // Function to fix icon rendering issues properly
@@ -51,3 +52,8 @@ const appDir = path.join(__dirname, 'app')
 const totalFixed = fixAllIconRendering(appDir)
 // eslint-disable-next-line no-console
     console.log(`Fixed icon rendering in ${totalFixed} page files`)
+=======
+const fs = require('fs''
+const path = require('path''
+    let content = fs.readFileSync(filePath, 'utf8''
+>>>>>>> origin/main

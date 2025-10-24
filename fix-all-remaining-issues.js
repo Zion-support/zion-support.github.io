@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
@@ -192,3 +193,21 @@ problematicFiles.forEach(file => {
 })
 // eslint-disable-next-line no-console
     console.log(`Rewrote ${fixedCount} out of ${problematicFiles.length} files`)
+=======
+import React from 'react''
+import { Helmet } from 'react-helmet-async''
+import Navigation from '../components/Navigation''
+import Footer from '../components/Footer''
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react''
+const fs = require('fs''
+const path = require('path''
+    let content = fs.readFileSync(filePath, 'utf8''
+    const fileName = path.basename(filePath, '.tsx''
+      .replace(/-/g, ' ''
+      .replace(/\s/g, '') + 'Page''
+    // Check if it''
+    const isPageFile = filePath.includes('/page.tsx''
+    const title = titleMatch ? titleMatch[1] : componentName.replace('Page', '''
+        <meta name="keywords" content="AI, artificial intelligence, ${componentName.replace('Page', ''';}
+const problematicFiles = execSync(''
+>>>>>>> origin/main

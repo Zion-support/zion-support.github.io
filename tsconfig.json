@@ -36,6 +36,7 @@
     "app-backup/**/*",
     "ai-pages-backup/**/*",
     "all-pages-backup/**/*",
+<<<<<<< HEAD
     "backup-problematic/**/*",
     "backup/**/*",
     "corrupted-src-backup/**/*",
@@ -46,5 +47,18 @@
     "backup/**/*",
     "corrupted-src-backup/**/*",
     "jest.setup.tsx"
+=======
+    "problematic-files-backup/**/*",
+    "src/**/*",
+    "components/**/*",
+    "hooks/**/*",
+    "types/**/*",
+    "utils/**/*",
+    "jest.d.ts",
+    "jest.setup.ts",
+    "setupTests.ts",
+    "app/App.tsx",
+    "app/root-layout.tsx"
+>>>>>>> origin/main
   ]
 }

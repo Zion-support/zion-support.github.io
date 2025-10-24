@@ -1,4 +1,5 @@
 module.exports = {
+<<<<<<< HEAD
   env: {
     browser: true,
     es2021: true,
@@ -38,6 +39,11 @@ module.exports = {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "jsx-a11y/anchor-is-valid": "warn",
+=======
+  extends: ["next"],
+  rules: {
+    "no-console": "off",
+>>>>>>> origin/main
     "prefer-const": "error",
     "no-var": "error",
     "react/no-unescaped-entities": "off"

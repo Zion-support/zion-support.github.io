@@ -1,17 +1,13 @@
 // Service Worker for Zion Tech Group
 const CACHE_NAME = 'zion-tech-group-v1';
-const STATIC_CACHE = 'static-v1';
-const DYNAMIC_CACHE = 'dynamic-v1';
-
-// Files to cache immediately
-const STATIC_FILES = [
+const urlsToCache = [
   '/',
-  '/index.html',
   '/static/js/bundle.js',
   '/static/css/main.css',
   '/manifest.json'
 ];
 
+<<<<<<< HEAD
 // Install event - cache static files
 self.addEventListener('install', (event) => {
   console.log('Service Worker installing...');
@@ -25,9 +21,31 @@ self.addEventListener('install', (event) => {
         console.log('Service Worker installed');
         return self.skipWaiting();
       })
+=======
+const Sw.jsPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Sw.Js
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            This page is under construction and will be available soon.
+          </p>
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <p className="text-gray-700">
+              We are working hard to bring you the best experience. Please check back later.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+>>>>>>> origin/main
   );
-});
+};
 
+<<<<<<< HEAD
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
   console.log('Service Worker activating...');
@@ -46,10 +64,20 @@ self.addEventListener('activate', (event) => {
       .then(() => {
         console.log('Service Worker activated');
         return self.clients.claim();
+=======
+// Fetch event
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then((response) => {
+        // Return cached version or fetch from network
+        return response || fetch(event.request);
+>>>>>>> origin/main
       })
   );
 });
 
+<<<<<<< HEAD
 // Fetch event - serve from cache, fallback to network
 self.addEventListener('fetch', (event) => {
   const { request } = event;
@@ -113,11 +141,42 @@ self.addEventListener('sync', (event) => {
     event.waitUntil(
       // Process offline form submissions
       processOfflineSubmissions()
+=======
+// Activate event
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (cacheName !== CACHE_NAME) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+    .catch((error) => {
+      // Handle cache activation errors silently
+      console.error('Cache activation failed:', error);
+    })
+  );
+});
+
+// Background sync for analytics
+self.addEventListener('sync', (event) => {
+  if (event.tag === 'analytics-sync') {
+    event.waitUntil(
+      // Send queued analytics data
+      sendQueuedAnalytics()
+>>>>>>> origin/main
     );
   }
 });
 
+<<<<<<< HEAD
 // Push notifications
+=======
+// Push notifications (if needed in future)
+>>>>>>> origin/main
 self.addEventListener('push', (event) => {
   if (event.data) {
     const data = event.data.json();
@@ -129,6 +188,7 @@ self.addEventListener('push', (event) => {
       data: {
         dateOfArrival: Date.now(),
         primaryKey: data.primaryKey
+<<<<<<< HEAD
       },
       actions: [
         {
@@ -142,6 +202,9 @@ self.addEventListener('push', (event) => {
           icon: '/icon-192x192.png'
         }
       ]
+=======
+      }
+>>>>>>> origin/main
     };
 
     event.waitUntil(
@@ -150,6 +213,7 @@ self.addEventListener('push', (event) => {
   }
 });
 
+<<<<<<< HEAD
 // Notification click handler
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
@@ -224,3 +288,14 @@ async function removeOfflineSubmission(id) {
     };
   });
 }
+=======
+// Helper function to send queued analytics
+async function sendQueuedAnalytics() {
+  try {
+    // Implementation would depend on your analytics service
+    console.log('Sending queued analytics data...');
+  } catch (error) {
+    console.error('Failed to send analytics data:', error);
+  }
+}
+>>>>>>> origin/main
