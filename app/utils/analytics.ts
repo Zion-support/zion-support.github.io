@@ -110,8 +110,8 @@ class Analytics {
   // Send to analytics service (implement based on your analytics provider)
   private sendToAnalytics(event: AnalyticsEvent): void {
     // Example implementation for Google Analytics
-    if (typeof window !== "undefined" && (window as unknown as { gtag: Function }).gtag) {
-      (window as unknown as { gtag: Function }).gtag("event", event.action, {
+    if (typeof window !== "undefined" && (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag) {
+      (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag("event", event.action, {
         event_category: event.category,
         event_label: event.label,
         value: event.value,
@@ -136,8 +136,8 @@ export function useAnalytics() {
 }
 
 // Higher-order component for automatic page view tracking
-export function withAnalytics<T extends React.ComponentType<Record<string, unknown>>>(WrappedComponent: T): T {
-  return ((props: Record<string, unknown>) => {
+export function withAnalytics<T extends React.ComponentType<unknown>>(WrappedComponent: T): T {
+  return ((props: unknown) => {
     const { trackPageView } = useAnalytics();
     React.useEffect(() => {
       trackPageView(window.location.pathname, document.title);

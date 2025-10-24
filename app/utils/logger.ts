@@ -54,8 +54,8 @@ class Logger {
   private sendToLoggingService(level: string, message: string, context?: LogContext): void {
     // Implement your logging service integration here
     // Examples: Sentry, LogRocket, DataDog, etc.
-    if (typeof window !== 'undefined' && (window as unknown as { gtag: Function }).gtag) {
-      (window as unknown as { gtag: Function }).gtag('event', 'log', {
+    if (typeof window !== 'undefined' && (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag) {
+      (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', 'log', {
         event_category: 'logging',
         event_label: level,
         value: 1,
