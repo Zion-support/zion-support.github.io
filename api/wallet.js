@@ -8,11 +8,12 @@ async function handler(req, res) {
     return;
   }
 
-  const { action, amount, currency = 'USD' } = req.body || {};
-
-  if (!action) {
-    res.statusCode = 400;
-    res.end(JSON.stringify({ error: 'Action is required' }));
+  const { address, type, name, userId } = req.body;
+  if (!address || !type) {
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Address and type are required' }));
+    return;
+  }
 
   try {
     switch (action) {
@@ -31,9 +32,23 @@ async function handler(req, res) {
           created: Math.floor(Date.now() / 1000)
         };
 
-        res.statusCode = 200;
-        res.end(JSON.stringify({ paymentIntent }));
-        break;
+    // Check if wallet address already exists
+    if (data.find(wallet => wallet.address === address)) {
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Wallet address already exists' }));
+      return;
+    }
+
+    // Add new wallet
+    const newWallet = {
+      id: Date.now(),
+      address,
+      type,
+      name: name || '',
+      userId: userId || null,
+      status: 'active',
+      createdAt: new Date().toISOString()
+    };
 
       case 'get_balance': {
         // Mock balance retrieval
@@ -43,90 +58,15 @@ async function handler(req, res) {
           lastUpdated: new Date().toISOString()
         };
 
-        res.end(JSON.stringify({ balance }));
-
-      case 'get_transactions': {
-        // Mock transaction history
-        const transactions = [
-          {
-            id: 'tx_1',
-            amount: 100.00,
-            currency: currency.toUpperCase(),
-            type: 'credit',
-            description: 'Payment received',
-            timestamp: new Date().toISOString()
-          },
-            id: 'tx_2',
-            amount: -50.00,
-            type: 'debit',
-            description: 'Service fee',
-            timestamp: new Date(Date.now() - 86400000).toISOString()
-        ];
-
-        res.end(JSON.stringify({ transactions }));
-
-      case 'add_funds': {
-        if (!amount) {
-          res.statusCode = 400;
-          res.setHeader('Content-Type', 'application/json');
-          res.end(JSON.stringify({ error: 'Amount is required for adding funds' }));
-          return;
-        }
-
-        // In a real app, this would update the database
-        const transaction = {
-          id: 'tx_' + Math.random().toString(36).substr(2, 9),
-          amount: Math.round(amount * 100),
-          currency,
-          type: 'credit',
-          status: 'completed',
-          created: Math.floor(Date.now() / 1000)
-        };
-
-        res.statusCode = 200;
-        res.setHeader('Content-Type', 'application/json');
-        res.end(JSON.stringify({
-          message: 'Funds added successfully',
-          transaction
-        }));
-        break;
-      }
-
-      case 'withdraw_funds': {
-        if (!amount) {
-          res.statusCode = 400;
-          res.setHeader('Content-Type', 'application/json');
-          res.end(JSON.stringify({ error: 'Amount is required for withdrawal' }));
-          return;
-        }
-
-        // In a real app, this would check balance and update the database
-        const transaction = {
-          id: 'tx_' + Math.random().toString(36).substr(2, 9),
-          amount: Math.round(amount * 100),
-          currency,
-          type: 'debit',
-          status: 'completed',
-          created: Math.floor(Date.now() / 1000)
-        };
-
-        res.statusCode = 200;
-        res.setHeader('Content-Type', 'application/json');
-        res.end(JSON.stringify({
-          message: 'Funds withdrawn successfully',
-          transaction
-        }));
-        break;
-      }
-
-      default: {
-        res.end(JSON.stringify({ error: 'Invalid action' }));
-  } catch (error) {
-    console.error('Wallet API error:', error);
-    res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Internal server error' }));
+    res.end(JSON.stringify({ 
+      success: true, 
+      message: 'Wallet added successfully',
+      walletId: newWallet.id
+    }));
+  } catch (error) {
+    console.error('Error:', error);
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to add wallet' }));
   }
 }
-
-module.exports = withSentry(handler);

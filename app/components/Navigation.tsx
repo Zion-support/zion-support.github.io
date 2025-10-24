@@ -140,11 +140,18 @@ const Navigation = React.memo(() => {
         { name: 'Cybersecurity', href: '/cybersecurity' }
       ]
     },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' }
-  ]
+    { name: 'Solutions', href: '/solutions', icon: CogIcon },
+    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
+    { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
+    { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
+    { name: 'Demo', href: '/demo', icon: PlayIcon },
+    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
+    { name: 'Contact', href: '/contact', icon: PhoneIcon }
+  ];
+
+  const isActive = (path: string) => {
+    return location.pathname === path;
+  };
 
 const NavigationPage: React.FC = () => {
   return (
@@ -158,47 +165,46 @@ const NavigationPage: React.FC = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navigation.map((item) => (
-              <div key={item.name} className="relative">
-                {item.children ? (
-                  <div className="relative group">
-                    <button
-                      className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium flex items-center"
-                      onMouseEnter={() => setIsServicesOpen(true)}
-                      onMouseLeave={() => setIsServicesOpen(false)}
-                    >
-                      {item.name}
-                      <ChevronDown className="ml-1 h-4 w-4" />
-                    </button>
-                    {isServicesOpen && (
-                      <div
-                        className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg py-1 z-50"
-                        onMouseEnter={() => setIsServicesOpen(true)}
-                        onMouseLeave={() => setIsServicesOpen(false)}
-                      >
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.name}
-                            to={child.href}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                          >
-                            {child.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ) : (
+          <div className="hidden lg:flex items-center space-x-8">
+            {navigation.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div key={item.name} className="relative group">
                   <Link
                     to={item.href}
-                    className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium"
+                    className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                      isActive(item.href)
+                        ? 'bg-purple-600 text-white'
+                        : 'text-gray-300 hover:text-white hover:bg-slate-800'
+                    }`}
+                    onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
+                    onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
                   >
-                    {item.name}
+                    <Icon className="w-4 h-4" />
+                    <span>{item.name}</span>
+                    {item.submenu && <ChevronDownIcon className="w-4 h-4 ml-1" />}
                   </Link>
-                )}
-              </div>
-            ))}
+                  
+                  {/* Dropdown Menu */}
+                  {item.submenu && isServicesOpen && (
+                    <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
+                      {item.submenu.map((subItem) => (
+                        <Link key={subItem.name}
+                          to={subItem.href}
+                          className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700"
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+
+          {/* CTA Button */}
+          <div className="hidden lg:flex items-center space-x-4">
             <Link
               to="/contact"
               className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"

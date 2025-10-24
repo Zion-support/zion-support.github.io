@@ -10,8 +10,7 @@ async function handler(req, res) {
     return;
   }
 
-  const { email, name, source = 'website' } = req.body || {};
-
+  const { email, name, interests } = req.body;
   if (!email) {
     res.statusCode = 400;
     res.end(JSON.stringify({ error: 'Email is required' }));
@@ -37,20 +36,16 @@ async function handler(req, res) {
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({
-      message: 'Successfully subscribed to newsletter',
-      subscriber: {
-        id: subscriber.id,
-        email: subscriber.email,
-        subscribedAt: subscriber.subscribedAt
-      }
+    res.end(JSON.stringify({ 
+      success: true, 
+      message: 'Successfully subscribed to newsletter' 
     }));
 
   } catch (error) {
     console.error('Subscription error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to subscribe to newsletter' }));
+    res.end(JSON.stringify({ error: 'Failed to process subscription' }));
   }
 }
 

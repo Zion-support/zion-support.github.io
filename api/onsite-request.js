@@ -13,7 +13,13 @@ export default function handler(req, res) {
     return;
   }
 
-
+  const { name, email, phone, company, address, service, details } = req.body;
+  
+  if (!name || !email || !phone || !address) {
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Name, email, phone, and address are required' }));
+    return;
+  }
 
   try {
     const request = {
@@ -39,10 +45,9 @@ export default function handler(req, res) {
       requestId: request.id
     }));
   } catch (error) {
-    console.error('Onsite request error:', error);
-    res.statusCode = 500;
+    console.error('Error saving onsite request:', error);
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to submit onsite request' }));
+    res.end(JSON.stringify({ error: 'Failed to save request' }));
   }
 }
 

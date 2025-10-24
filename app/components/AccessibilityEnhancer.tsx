@@ -52,14 +52,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({}
       return () => document.removeEventListener('keydown', handleKeyDown);
     }
 
-    // Focus management
-    if (enableFocusManagement && typeof window !== 'undefined') {}
-      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-      
-      const trapFocus = (container: HTMLElement) => {}
-        const focusableContent = container.querySelectorAll(focusableElements);
-        const firstFocusableElement = focusableContent[0] as HTMLElement;
-        const lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement;
+      const nav = document.querySelector('nav');
+      if (nav && !nav.getAttribute('role')) {
+        nav.setAttribute('role', 'navigation');
+      }
 
         const handleTabKey = (e: KeyboardEvent) => {}
           if (e.key !== 'Tab') return;
@@ -104,50 +100,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({}
         if (liveRegion) {}
           liveRegion.textContent = message;
         }
-      };
-
-      // Listen for route changes (if using React Router)
-      const originalPushState = history.pushState;
-      const originalReplaceState = history.replaceState;
-
-      history.pushState = function(...args) {}
-        originalPushState.apply(history, args);
-        announcePageChange('Page changed');
-      };
-
-      history.replaceState = function(...args) {}
-        originalReplaceState.apply(history, args);
-        announcePageChange('Page updated');
-      };
-
-      return () => {}
-        document.body.removeChild(liveRegion);
-        history.pushState = originalPushState;
-        history.replaceState = originalReplaceState;
-      };
-    }
-
-    // High contrast mode support
-    if (enableHighContrast && typeof window !== 'undefined') {}
-      const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
-      
-      const updateHighContrast = (e: MediaQueryListEvent | MediaQueryList) => {}
-        if (e.matches) {}
-          document.documentElement.classList.add('high-contrast');
-        } else {}
-          document.documentElement.classList.remove('high-contrast');
-        }
-      };
-
-      const handleChange = (e: MediaQueryListEvent) => updateHighContrast(e);
-      prefersHighContrast.addEventListener('change', handleChange);
-      updateHighContrast(prefersHighContrast);
-
-      return () => prefersHighContrast.removeEventListener('change', handleChange);
-    }
-    
-    return () => {}
-      // No cleanup needed
+      });
     };
   }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement]);
 

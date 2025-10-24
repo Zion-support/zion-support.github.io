@@ -8,9 +8,7 @@ export default async function handler(req, res) {
     return;
   }
 
-<<<<<<< HEAD
-  const { amount, currency = 'usd' } = req.body || {};
-
+  const { amount, currency = 'usd' } = req.body;
   if (!amount) {
     res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
@@ -27,7 +25,6 @@ export default async function handler(req, res) {
   }
 
   try {
-<<<<<<< HEAD
     const paymentIntent = {
       id: 'pi_' + Math.random().toString(36).substr(2, 9),
       amount: Math.round(amount * 100), // Convert to cents
@@ -52,7 +49,10 @@ export default async function handler(req, res) {
     // console.error("Error:", err);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-<<<<<<< HEAD
+    res.end(JSON.stringify(paymentIntent));
+  } catch (error) {
+    console.error('Payment intent creation error:', error);
+    res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to create payment intent' }));
 =======
     res.end(JSON.stringify({ 

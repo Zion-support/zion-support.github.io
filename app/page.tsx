@@ -1,4 +1,7 @@
-import React, { memo, useState, useEffect } from 'react';
+'use client';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import SEO from './components/SEO';
 import { 
   Phone,
   Mail,

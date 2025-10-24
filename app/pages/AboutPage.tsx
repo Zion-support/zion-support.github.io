@@ -1,15 +1,31 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-import { CheckCircleIcon, UserGroupIcon, LightBulbIcon, ShieldCheckIcon, RocketLaunchIcon, HeartIcon, ArrowRightIcon, StarIcon, PhoneIcon, EnvelopeIcon, MapPinIcon } from "@heroicons/react/24/outline";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
+import { 
+  CheckCircleIcon,
+  UserGroupIcon,
+  LightBulbIcon,
+  ShieldCheckIcon,
+  RocketLaunchIcon,
+  HeartIcon,
+  ArrowRightIcon,
+  StarIcon,
+  PhoneIcon,
+  EnvelopeIcon,
+  MapPinIcon
+} from '@heroicons/react/24/outline';
 
-const AboutPage: React.FC = () => {
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '99.9%', label: 'Uptime Guarantee' },
-    { number: '4+', label: 'Years Experience' }
-  ];
-
+export default function AboutPage() {
+  return (
+    <>
+      <SEO 
+        title="About Us - Zion Tech Group"
+        description="Learn about Zion Tech Group's mission, values, and expertise in AI and IT solutions. Discover our team and company culture."
+        keywords="about us, company, team, mission, values, AI solutions, IT services"
+        url="/about"
+      />
+      
+=======
   const values = [
     {
       icon: LightBulbIcon,

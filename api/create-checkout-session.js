@@ -23,18 +23,11 @@ async function handler(req, res) {
   }
 
   try {
-    // Basic checkout session creation logic
-    const sessionData = {
-      productId,
-      userId: userId || null,
-      timestamp: new Date().toISOString(),
-      status: 'pending'
-<<<<<<< HEAD
-    res.setHeader('Content-Type', 'application/json');
-    }));
-  } catch (_error) { // eslint-disable-line no-unused-vars
-    // console.error('Checkout session creation error:', error);
-=======
+    console.log('Creating checkout session for product:', productId);
+    const session = {
+      id: 'cs_test_' + Math.random().toString(36).substr(2, 9),
+      status: 'pending',
+      productId: productId
     };
 
 
@@ -64,9 +57,7 @@ async function handler(req, res) {
       data: sessionData
     }));
   } catch (error) {
-    // console.error removed for production
->>>>>>> cursor/fix-errors-and-merge-to-main-fe66
-    res.statusCode = 500;
+    console.error('Checkout session creation error:', error);
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       error: 'Failed to create checkout session',
