@@ -1,7 +1,6 @@
 'use client'
-import React from 'react'
-import { useRouter    } from 'next/navigation'
-import, React, { Suspense, lazy } from 'react'
+import React, { Suspense, lazy } from 'react'
+import { useRouter } from 'next/navigation'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import ErrorBoundary from './components/ErrorBoundary'
@@ -253,7 +252,7 @@ function App() {
               <Route path = "/zion-ai-accounting-assistant" element={<ZionAIAccountingAssistantPage />} />
               <Route path = "/zion-ai-seo-optimizer" element={<ZionAISEOOptimizerPage />} />
               <Route path = "/zion-ai-data-cleaner" element={<ZionAIDataCleanerPage />} />
-              <Route path = "/zion-customer-insights" element={<ZionCustomerInsightsPage />} />"
+              <Route path = "/zion-customer-insights" element={<ZionCustomerInsightsPage />} />
               {/* 5G Solutions Pages */}
               <Route path = "/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />
               <Route path = "/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
@@ -267,6 +266,7 @@ function App() {
             </Routes>
           </Suspense>
         </BrowserRouter>
-      </>)
-    </HelmetProvider>)"
-  )}";'
+      </>
+    </HelmetProvider>
+  )
+}'

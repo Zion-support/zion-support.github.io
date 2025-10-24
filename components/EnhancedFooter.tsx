@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { ArrowRight, Mail, Phone, MapPin    } from 'lucide-react'
+import { ArrowRight, Mail, Phone, MapPin } from 'lucide-react'
 const EnhancedFooter: React.FC = () => {
   return (<footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 py-12">
@@ -8,8 +8,9 @@ const EnhancedFooter: React.FC = () => {
           <div>
             <h1 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h1>
             <p className="text-gray-300 mb-4">Leading provider of AI and IT solutions for businesses worldwide.</p>
-            <Link href="/contact" className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">Get Started
-              <ArrowRight className="w-4 h-4 ml-2"  />
+            <Link href="/contact" className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
+              Get Started
+              <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
           </div>
           <div>
@@ -70,7 +71,7 @@ const EnhancedFooter: React.FC = () => {
                 <span className="text-gray-300">info@ziontechgroup.com</span>
               </div>
               <div className="flex items-center">
-                <Phone className="w-5 h-5 text-cyan-400 mr-3" />")
+                <Phone className="w-5 h-5 text-cyan-400 mr-3" />
                 <span className="text-gray-300">+1 (555) 123-4567</span>
               </div>
               <div className="flex items-center">
@@ -86,6 +87,8 @@ const EnhancedFooter: React.FC = () => {
           </p>
         </div>
       </div>
-    </footer>)
+    </footer>
+  )
 }
-export default EnhancedFooter";'
+
+export default EnhancedFooter
