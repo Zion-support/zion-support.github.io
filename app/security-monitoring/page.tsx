@@ -1,78 +1,38 @@
 'use client';
 
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { Shield, Brain, Globe, Zap } from 'lucide-react';
+
 const PagePage: React.FC = () => {
-  return (
-=======
-import { Helmet } from 'react-helmet-async';
-import {Shield}
-  Eye,
-  AlertTriangle,
-  CheckCircle,
-  BarChart,
-  Clock,
-  Users,
-  Zap,
-  Phone,
-  Mail,
-  MapPin,
-  ArrowRight,
-  Brain,
-  Globe,
-  Lock,
-
-  Activity,
-
-  TrendingUp,
-
-  Settings,
-
-  Database}} from 'lucide-react'
-const SecurityMonitoringPage: React.FC = () => {
-    const features = [
+  const features = [
     {
-      icon: Eye,
-      title: '24/7 Real-time Monitoring',
-      description: 'Continuous surveillance of your entire IT infrastructure with instant threat detection and response.'},
-    {icon: AlertTriangle,
-      title: 'Advanced Threat Detection',
-      description: 'AI-powered analysis to identify sophisticated cyber threats before they impact your business.'},
-    {icon: BarChart,
-      title: 'Comprehensive Analytics',
-      description: 'Detailed security reports and insights to help you understand and improve your security posture.'},
-    {icon: Zap,
-      title: 'Instant Response',
-      description: 'Automated incident response and immediate notification systems to minimize security breaches.'}}
-  ]
-  ];;
-const benefits = [
-  ]
-  const benefits = [
-    '24/7 continuous security monitoring',
-    'AI-powered threat detection and analysis',
-    'Real-time alerts and notifications',
-    'Comprehensive security reporting',
+      icon: Shield,
+      title: 'Professional Service',
+      description: 'High-quality professional services tailored to your business needs'
+    },
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI solutions to enhance your business operations'
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses'
+    },
+    {
+      icon: Zap,
+      title: 'Fast Delivery',
+      description: 'Quick and efficient delivery of solutions and services'
+    }
+  ];
 
-    'Automated incident response',
 
-    'Compliance monitoring and reporting',
 
-    'Expert security team support',
-
-    'Customizable monitoring rules'
-  ]
-return(<>)
-      <Helmet><title>Security Monitoring Services - Zion Tech Group | 24/7 Cybersecurity</title>
-    'Customizable monitoring rules'
-  ]
-return (
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5
+  return (
     <>
-
-<<<<<<< HEAD
       <Navigation />
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -82,7 +42,8 @@ return (
               Page
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business.
+              Professional page services by Zion Tech Group. 
+              Advanced AI and IT solutions for your business.
             </p>
           </div>
 
@@ -90,204 +51,25 @@ return (
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
               <h2 className="text-2xl font-bold text-white mb-4">Our Services</h2>
               <p className="text-gray-300 mb-6">
-                We provide comprehensive Page solutions tailored to your business needs.
+                We provide comprehensive page solutions tailored to your business needs.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 1</h3>
-                  <p className="text-gray-300">Description of service 1</p>
-                </div>
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 2</h3>
-                  <p className="text-gray-300">Description of service 2</p>
-                </div>
-=======
-      <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="pt-20pb-16px-4">
-        </section>
-        {/* Hero Section */} <section className="py-20px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
-        {/* Hero Section */}
-        <section className="py-20px-4">
-          </section>< className="$2/><divclassName="text-center mb-16">
-              </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
-              <p className="text-xltext-gray-300">Section description</p>
-            </div>
-        </div>
-      </section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h1>Security Monitoring Services;</h1>
-              </h1>
-              <p>Protect your business with our advanced 24/7 security monitoring solutions.;</p>
-                Real-time threat detection, instant alerts, and expert response to keep your data safe.
-              </p>
-              <div className="flexflex-colsm:flex-row gap-4 justify-center"></div>,
-                <button>
-                  <Shield>
-                  Get Protected Now;
-                </button>
-                <button>
-                  </button><Phone>
-                  Call (302) 464-0950,
-                </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5
+                {features.map((feature, index) => (
+                  <div key={index} className="bg-white/5 rounded-lg p-4">
+                    <feature.icon className="w-8 h-8 text-blue-400 mb-3" />
+                    <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </main>
 
       <Footer />
     </>
   );
 };
-=======
-      </section>
-
-        {/* Features Section */}
-        <section className="py-20px-4sm:px-6lg:px-8">
-        </section>
-        {/* Features Section */} <section className="py-20px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-5xlmd:text-6xlfont-boldtext-white mb-6">Security Monitoring Services
-              <p className="text-xltext-gray-300mb-8max-w-3xl mx-auto">
-                Protect your business with our advanced 24/7 security monitoring solutions. 
-                Real-time threat detection, instant alerts, and expert response to keep your data safe.
-              <div className="flexflex-colsm:flex-rowgap-4 justify-center">
-                <button className="bg-gradient-to-rfrom-cyan-500to-purple-600text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
-                  <Shield className="mr-2h-5w-5" />
-                  Get Protected Now
-                <button className="borderborder-white/20text-whitepx-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center">
-                  <Phone className="mr-2h-5w-5" />
-                  Call (302) 464-0950
-        {/* Features Section */}
-        <section className="py-20px-4">
-          </section>< className="$2/><divclassName="text-center mb-16">
-              </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
-              <p className="text-xltext-gray-300">Section description</p>
-            </div>
-        </div>
-      </section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2>Why Choose Our Security Monitoring?</h2>
-              </h2>
-              <p>Our security monitoring solutions deliver unmatched protection with cutting-edge technology and expert oversight.,</p>
-              </p>
-            </div>
-            <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8"></div>,
-              {features.map((feature, index) => (
-                <div key={index}className="bg-white/10backdrop-blur-smrounded-xlp-6 border border-white/20 hover: bg-white/20 transition-all duration-300"></div>,
-                  <div className="flexitems-centerjustify-centerw-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
-                    <feature />
-                  <h3 className="text-xlfont-semiboldtext-whitemb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description</p>}</p>
-                </div>
-              ))}
-            </div>
-        </div>
-      </section>
-
-        {/* Benefits Section */}
-        <section$1>
-        <div$2>
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
-          <div className="max-w-7xl mx-auto" / /></div>
-            <div className="text-center mb-16" / /></div>
-              <h2></h2>
-                Why Choose Our Security Monitoring?
-              </h2>
-              <p></p>
-                Our security monitoring solutions deliver unmatched protection with cutting-edge technology and expert oversight.,
-              </p>
-            </div>
-            <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-8" / /></div>
-              {features.map((feature, index) => ()
-              ))}
-        {/* Benefits Section */}
-        <section className="py-20px-4">
-          </section>< className="$2/><divclassName="text-center mb-16">
-              </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
-              <p className="text-xltext-gray-300">Section description</p>
-            </div>
-        </div>
-      </section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2>Key Benefits;</h2>
-              </h2>
-              <p>Experience comprehensive security protection with our advanced monitoring services.,</p>
-              </p>
-            </div>
-            <div className="gridgrid-cols-1md:grid-cols-2gap-6"></div>,
-              {benefits.map((benefit, index) => (
-                <div key={index}className="flexitems-startspace-x-3"></div>
-                  <CheckCircle />
-                  <p className="text-gray-300text-lg">{benefit</p>}</p>
-                </div>
-              ))}
-            </div>
-        </div>
-      </section>
-        {/* CTA Section */} <section className="py-20px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">Key Benefits
-              <p className="text-xltext-gray-300max-w-3xlmx-auto">
-                Experience comprehensive security protection with our advanced monitoring services.
-            <div className="gridgrid-cols-1md:grid-cols-2gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flexitems-startspace-x-3">
-                  <CheckCircle className="h-6w-6text-purple-400mt-1 flex-shrink-0" />
-                  <p className="text-gray-300text-lg">{benefit}
-              ))}
-        {/* CTA Section */}
-        <section className="py-20px-4">
-          </section>< className="$2/><divclassName="text-center mb-16">
-              </div><h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
-              <p className="text-xltext-gray-300">Section description</p>
-            </div>
-          ))
-        </section>
-
-        {/* CTA Section */}
-        <section$1>
-        <div$2>
-            <div className="bg-gradient-to-rfrom-purple-600to-blue-600rounded-2xl p-8 md:p-12">
-              <h2 className="text-3xlmd:text-4xl font-boldtext-white mb-4">
-          <div className="max-w-4xlmx-autotext-center"></div>
-            <div className="bg-gradient-to-rfrom-purple-600to-blue-600rounded-2xl p-8 md: p-12"></div>,
-              <h2>Ready to Secure Your Business?</h2>
-              </h2>
-              <p>Contact our security experts to discuss your monitoring needs and get a customized protection plan.</p>
-                Ready to Secure Your Business?
-              </h2>
-              <p></p>
-                Contact our security experts to discuss your monitoring needs and get a customized protection plan.
-              </p>
-              <div className="flexflex-colsm:flex-row gap-4 justify-center"></div>,
-                <button>
-                  <Phone>
-                  Call (302) 464-0950;
-                </button>
-                <button>
-                  <Mail>
-                  Email Us;
-                </button>
-              </div>
-            </div>
-          ))
-        </section>
-      </div>
-
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5
 
 export default PagePage;

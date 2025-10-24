@@ -3,11 +3,36 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
+import { Shield, Brain, Globe, Zap } from 'lucide-react';
+
 const PagePage: React.FC = () => {
+  const features = [
+    {
+      icon: Shield,
+      title: 'Professional Service',
+      description: 'High-quality professional services tailored to your business needs'
+    },
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI solutions to enhance your business operations'
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses'
+    },
+    {
+      icon: Zap,
+      title: 'Fast Delivery',
+      description: 'Quick and efficient delivery of solutions and services'
+    }
+  ];
+
+
+
   return (
     <>
-
       <Navigation />
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -17,7 +42,8 @@ const PagePage: React.FC = () => {
               Page
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business.
+              Professional page services by Zion Tech Group. 
+              Advanced AI and IT solutions for your business.
             </p>
           </div>
 
@@ -25,17 +51,16 @@ const PagePage: React.FC = () => {
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
               <h2 className="text-2xl font-bold text-white mb-4">Our Services</h2>
               <p className="text-gray-300 mb-6">
-                We provide comprehensive Page solutions tailored to your business needs.
+                We provide comprehensive page solutions tailored to your business needs.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 1</h3>
-                  <p className="text-gray-300">Description of service 1</p>
-                </div>
-                <div className="bg-white/5 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Service 2</h3>
-                  <p className="text-gray-300">Description of service 2</p>
-                </div>
+                {features.map((feature, index) => (
+                  <div key={index} className="bg-white/5 rounded-lg p-4">
+                    <feature.icon className="w-8 h-8 text-blue-400 mb-3" />
+                    <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -48,473 +73,3 @@ const PagePage: React.FC = () => {
 };
 
 export default PagePage;
-=======
-import SEOOptimizer from '../components/SEOOptimizer';
-export default function StatusPage() {const [lastUpdated, setLastUpdated] = useState(new Date());
-  const [isRefreshing, setIsRefreshing] = useState(false);
-const refreshStatus = async () => {
-;
-    setIsRefreshing(true);
-    // Simulate API call;
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    setLastUpdated(new Date());
-    setIsRefreshing(false)}}
-const services = [
-    {name: 'API Services',
-      status: 'operational',
-      uptime: '99.9%',
-      responseTime: '45ms',
-      lastIncident: '2024-01-15',
-      description: 'Core API endpoints and authentication'},
-    {name: 'AI Services',
-      status: 'operational',
-      uptime: '99.8%',
-      responseTime: '120ms',
-      lastIncident: '2024-01-10',
-      description: 'Machine learning and AI processing'},
-    {name: 'Cloud Infrastructure',
-      status: 'operational',
-      uptime: '99.95%',
-      responseTime: '25ms',
-      lastIncident: '2024-01-05',
-      description: 'Cloud hosting and storage services'},
-    {name: 'Database',
-      status: 'operational',
-      uptime: '99.9%',
-      responseTime: '15ms',
-      lastIncident: '2024-01-12',
-      description: 'Primary and backup databases'},
-    {name: 'CDN',
-      status: 'operational',
-      uptime: '99.99%',
-      responseTime: '8ms',
-      lastIncident: '2024-01-08',
-      description: 'Content delivery network'},
-    {name: 'Monitoring',
-      status: 'operational',
-      uptime: '100%',
-      responseTime: '5ms',
-      lastIncident: 'Never',
-      description: 'System monitoring and alerts'}}
-  ]
-  ];;
-const incidents = [
-    {id: 1]
-  const incidents = [
-    {
-    id: 1,
-      title: 'API Response Time Degradation',
-      status: 'resolved',
-      severity: 'minor',
-      startTime: '2024-01-15T10:30:00Z',
-      endTime: '2024-01-15T11:45:00Z',
-      description: 'Some API endpoints experienced increased response times due to high traffic load.',
-      affectedServices: ['API Services', 'AI Services']},
-    {id: 2},
-    {
-    id: 2,
-      title: 'Database Connection Issues',
-      status: 'resolved',
-      severity: 'major',
-      startTime: '2024-01-12T14:20:00Z',
-      endTime: '2024-01-12T16:30:00Z',
-      description: 'Intermittent database connection issues affecting some user operations.',
-      affectedServices: ['Database', 'API Services']}}
-  ]
-const getStatusIcon = (;
-    switch (status) {case 'operational':;
-
-        return <CheckCircle />
-      case 'degraded':;
-        return <AlertTriangle>
-      case 'outage':;
-        return <XCircle>
-
-      default: ;) => {,
-  return($3;)
-  )}return <Clock>}
-    }
-  }
-const getStatusColor = (;
-    switch (status) {case 'operational':;
-        return 'text-green-400';
-      case 'degraded':;
-        return 'text-yellow-400';
-      case 'outage':;
-        return 'text-red-400';
-      default: ;) => {,
-  return($3;)
-  )}return 'text-gray-400'}
-    }
-  }
-const getSeverityColor = (;
-    switch (severity) {case 'critical':;
-        return 'bg-red-500/20 text-red-400 border-red-500/50';
-      case 'major':;
-        return 'bg-orange-500/20 text-orange-400 border-orange-500/50';
-      case 'minor':;
-        return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50';
-      default: ;) => {,
-  return($3;)
-  )}return 'bg-gray-500/20 text-gray-400 border-gray-500/50'}
-    }
-  }
-const overallStatus = services.every(service => service.status === 'operational');
-    ? 'operational';
-    : services.some(service => service.status === 'outage');
-      ? 'outage';
-      : 'degraded';
-
-  return (
-    <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900 to-slate-900">
-      <SEOOptimizer 
-        title="System Status - Zion Tech Group"
-        description="Real-time status of Zion Tech Group's AI and IT services. Check uptime, performance, and incident reports."
-        keywords="system status, uptime, service status, incidents, monitoring, API status"
-      />
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="relativepy-20px-4overflow-hidden">
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" />
-        <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relativemax-w-7xl mx-autotext-center">
-          <h1 className="text-5xlmd:text-7xlfont-boldtext-white mb-6 leading-tight">
-            System
-            <span className="blockbg-gradient-to-rfrom-purple-400via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Status
-            </span>
-          </h1>
-          <p className="text-xltext-gray-300mb-8max-w-3xl mx-auto leading-relaxed">
-            Real-time status of all our services. We're committed to providing reliable, 
-            high-performance AI and IT solutions.
-          </p>
-          
-          <div className="flexitems-centerjustify-centergap-4 mb-8">
-            <div className="flexitems-centergap-2">
-              {getStatusIcon(overallStatus</div>
-              <span className={`text-2xl font-bold ${getStatusColor(overallStatus)}`}>
-                {overallStatus === 'operational' ? 'All Systems Operational' : 
-                 overallStatus === 'degraded' ? 'Degraded Performance' : 'Service Outage'}
-              </span>
-            </div>
-            <button>
-              </button><RefreshCw>
-              Refresh
-            </button>
-          </div>
-          
-          <p className="text-gray-400text-sm">
-            Last updated: {lastUpdated.toLocaleString(</div>
-          </p>
-        </div>
-      </section>
-
-      {/* Services Status */}
-      <section$1>
-        <div$2>
-          <h2 className="text-3xlfont-boldtext-whitemb-12 text-center">Service Status</h2>
-          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-6">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white/5backdrop-blur-smrounded-xlp-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
-                <div className="flexitems-centerjustify-betweenmb-4">
-                  <div className="flexitems-centergap-3">
-                    {getStatusIcon(service.status</div>
-              <p className="text-xltext-gray-300">Section description</p>
-            </div>
-        </div>
-      </section>
-        <div className="max-w-7xl mx-auto" / /></div>
-          <h2 className="text-3xlfont-boldtext-whitemb-12 text-center">Service Status</h2>
-          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-6"></div>,
-            {services.map((service, index) => (} <div key={index}className="bg-white/5backdrop-blur-smrounded-xlp-6 border border-white/10 hover: border-purple-500/50 transition-all duration-300"></div>,
-                <div className="flexitems-centerjustify-betweenmb-4"></div>
-                  <div className="flexitems-centergap-3"></div>
-                    {getStatusIcon(service.status)} <h3 className="text-lgfont-semiboldtext-white">{service.name}</h3>
-                  </div>
-                  <span>{service.status</span>} </span>
-                </div>
-                <p className="text-gray-300text-smmb-4">{service.description</p>}</p>
-                <div className="space-y-2text-sm"></div>
-                  <div className="flexjustify-between"></div>
-                    <span className="text-gray-400">Uptime: </span>,
-                    <span className="text-white">{service.uptime</span>}</span>
-                  </div>
-                  <div className="flexjustify-between"></div>
-                    <span className="text-gray-400">Response Time: </span>,
-                    <span className="text-white">{service.responseTime</span>}</span>
-                  </div>
-                  <div className="flexjustify-between"></div>
-                    <span className="text-gray-400">Last Incident: </span>,
-                    <span className="text-white">{service.lastIncident</span>}</span>
-                    <h3 className="text-lgfont-semiboldtext-white">{service.name}</h3>
-                  </div>
-                  <span></span>
-                    {service.status}
-
-                  </span>
-                ))
-                
-                <p className="text-gray-300text-smmb-4">{service.description}</p>
-                <div className="space-y-2text-sm" / /></div>
-                  <div className="flexjustify-between" / /></div>
-                    <span className="text-gray-400">Uptime:</span>
-                    <span className="text-white">{service.uptime}</span>
-                  </div>
-                  <div className="flexjustify-between" / /></div>
-                    <span className="text-gray-400">Response Time:</span>
-                    <span className="text-white">{service.responseTime}</span>
-                  </div>
-                  <div className="flexjustify-between" / /></div>
-                    <span className="text-gray-400">Last Incident:</span>
-                    <span className="text-white">{service.lastIncident}</span>
-                  </div>
-                ))
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Recent Incidents */} <section className="py-20px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
-      <section$1>
-        <div$2>
-              <p className="text-xltext-gray-300">Section description</p>
-            </div>
-        </div>
-      </section>
-        <div className="max-w-7xl mx-auto" / /></div>
-          <h2 className="text-3xlfont-boldtext-whitemb-12 text-center">Recent Incidents</h2>
-          <div className="space-y-6"></div>
-            {incidents.map((incident) => (} <div key={incident.id}className="bg-white/5backdrop-blur-smrounded-xlp-6 border border-white/10"></div>
-                <div className="flexitems-startjustify-betweenmb-4"></div>
-                  <div />
-                    <h3 className="text-xlfont-semiboldtext-whitemb-2">{incident.title}</h3>
-                    <div className="flexitems-centergap-4text-sm text-gray-400"></div>
-                      <span>Started: {new Date(incident.startTime).toLocaleString(),</span>}</span>
-                      <span>Ended: {new Date(incident.endTime).toLocaleString(),</span>}</span>
-                    </div>
-                  </div>
-                  <div className="flexitems-centergap-2"></div>
-                    <span>{incident.severity</span>} </span>
-                    <span>{incident.status</span>} </span>
-                  </div>
-                </div>
-                <p className="text-gray-300mb-4">{incident.description</p>}</p>
-                <div />
-                  <span className="text-gray-400text-sm">Affected Services: </span>,
-                  <span className="text-whitetext-sm">{incident.affectedServices.join(', ')</span>}</span>
-                  ))
-                  <div className="flexitems-centergap-2">
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium border ${getSeverityColor(incident.severity)}`}>
-                      {incident.severity}
-                    </span>
-                    <span></span>
-                      {incident.status}
-
-                    </span>
-                  ))
-                </div>
-                <p className="text-gray-300mb-4">{incident.description}</p>
-                <div /></div>
-                  <span className="text-gray-400text-sm">Affected Services: </span>
-                  <span className="text-whitetext-sm">{incident.affectedServices.join(', ')}</span>
-                </div>
-              </div>
-  ]
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'operational':
-        return <CheckCircle className="w-5h-5text-green-400" />
-      case 'degraded':
-        return <AlertTriangle className="w-5h-5text-yellow-400" />
-      case 'outage':
-        return <XCircle className="w-5h-5text-red-400" />
-      default:
-        return <Clock className="w-5h-5text-gray-400" />
-    }
-  }
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'operational':
-        return 'text-green-400'
-      case 'degraded':
-        return 'text-yellow-400'
-      case 'outage':
-        return 'text-red-400'
-      default:
-        return 'text-gray-400'
-    }
-  }
-  const getSeverityColor = (severity: string) => {
-    switch (severity) {
-      case 'critical':
-        return 'bg-red-500/20 text-red-400 border-red-500/50'
-      case 'major':
-        return 'bg-orange-500/20 text-orange-400 border-orange-500/50'
-      case 'minor':
-        return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50'
-      default:
-        return 'bg-gray-500/20 text-gray-400 border-gray-500/50'
-    }
-  }
-  const overallStatus = services.every(service => service.status === 'operational') 
-    ? 'operational' 
-    : services.some(service => service.status === 'outage') 
-      ? 'outage' 
-      : 'degraded'
-  return (
-          <p className="text-xltext-gray-300mb-8max-w-3xl mx-auto leading-relaxed">
-            Real-time status of all our services. We're committed to providing reliable, 
-            high-performance AI and IT solutions.
-          <div className="flexitems-centerjustify-centergap-4 mb-8">
-            <div className="flexitems-centergap-2">
-              {getStatusIcon(overallStatus)}
-              <span className={`text-2xl font-bold ${getStatusColor(overallStatus)}`}>
-                {overallStatus === 'operational' ? 'All Systems Operational' :}
-                 overallStatus === 'degraded' ? 'Degraded Performance' : 'Service Outage'}
-            <$2 />
-              onClick={refreshStatus}
-              disabled={isRefreshing}
-              className="flexitems-centergap-2text-gray-400 hover:text-white transition-colors disabled:opacity-50">
-              <RefreshCw className={`w-5 h-5 ${isRefreshing ? 'animate-spin' : ''}`} />
-              Refresh
-          <p className="text-gray-400text-sm">
-            Last updated: {lastUpdated.toLocaleString()}
-      {/* Services Status */}
-      <section className="py-16px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xlfont-boldtext-whitemb-12 text-center">Service Status
-          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-6">
-            {services.map((service, index) => (}
-              <div key={index} className="bg-white/5backdrop-blur-smrounded-xlp-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
-                <div className="flexitems-centerjustify-betweenmb-4">
-                  <div className="flexitems-centergap-3">
-                    {getStatusIcon(service.status)}
-                    <h3 className="text-lgfont-semiboldtext-white">{service.name}
-                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(service.status)}`}>
-                    {service.status}
-                <p className="text-gray-300text-smmb-4">{service.description}
-                <div className="space-y-2text-sm">
-                  <div className="flexjustify-between">
-                    <span className="text-gray-400">Uptime:
-                    <span className="text-white">{service.uptime}
-                  <div className="flexjustify-between">
-                    <span className="text-gray-400">Response Time:
-                    <span className="text-white">{service.responseTime}
-                  <div className="flexjustify-between">
-                    <span className="text-gray-400">Last Incident:
-                    <span className="text-white">{service.lastIncident}
-            ))}
-      {/* Recent Incidents */}
-      <section className="py-16px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xlfont-boldtext-whitemb-12 text-center">Recent Incidents
-          <div className="space-y-6">
-            {incidents.map((incident) => (}
-              <div key={incident.id} className="bg-white/5backdrop-blur-smrounded-xlp-6 border border-white/10">
-                <div className="flexitems-startjustify-betweenmb-4">
-                  <div>
-                    <h3 className="text-xlfont-semiboldtext-whitemb-2">{incident.title}
-                    <div className="flexitems-centergap-4text-sm text-gray-400">
-                      <span>Started: {new Date(incident.startTime).toLocaleString()}
-                      <span>Ended: {new Date(incident.endTime).toLocaleString()}
-                  <div className="flexitems-centergap-2">
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium border ${getSeverityColor(incident.severity)}`}>
-                      {incident.severity}
-                    < className={`px-3 py-1 rounded-full text-sm font-medium ${$2 />
-                      incident.status === 'resolved'
-                        ? 'bg-green-500/20 text-green-400'
-                        : 'bg-yellow-500/20 text-yellow-400'}
-                    }`}>
-                      {incident.status}
-                <p className="text-gray-300mb-4">{incident.description}
-                <div>
-                  <span className="text-gray-400text-sm">Affected Services:
-                  <span className="text-whitetext-sm">{incident.affectedServices.join(', ')}
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Performance Metrics */} <section className="py-20px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
-      <section$1>
-        <div$2>
-              <p className="text-xltext-gray-300">Section description</p>
-            </div>
-        </div>
-      </section>
-        <div className="max-w-7xl mx-auto" / /></div>
-          <h2 className="text-3xlfont-boldtext-whitemb-12 text-center">Performance Metrics</h2>
-          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-4 gap-6"></div>,
-            <div className="bg-white/5backdrop-blur-smrounded-xlp-6 border border-white/10 text-center"></div>
-              <div className="w-12h-12bg-gradient-to-rfrom-green-500 to-green-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
-                <TrendingUp />
-              <div className="text-3xlfont-boldtext-whitemb-2">99.9%</div>
-              <div className="text-gray-400">Overall Uptime</div>
-            </div>
-            <div className="bg-white/5backdrop-blur-smrounded-xlp-6 border border-white/10 text-center" / /></div>
-              <div className="w-12h-12bg-gradient-to-rfrom-blue-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4" / /></div>
-                <Zap /></Zap>
-              <div className="text-3xlfont-boldtext-whitemb-2">45ms</div>
-              <div className="text-gray-400">Avg Response Time</div>
-            </div>
-            <div className="bg-white/5backdrop-blur-smrounded-xlp-6 border border-white/10 text-center" / /></div>
-              <div className="w-12h-12bg-gradient-to-rfrom-purple-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4" / /></div>
-                <Users /></Users>
-              <div className="text-3xlfont-boldtext-whitemb-2">50K+</div>
-              <div className="text-gray-400">Active Users</div>
-            </div>
-            <div className="bg-white/5backdrop-blur-smrounded-xlp-6 border border-white/10 text-center" / /></div>
-              <div className="w-12h-12bg-gradient-to-rfrom-orange-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4" / /></div>
-                <Activity /></Activity>
-              <div className="text-3xlfont-boldtext-whitemb-2">1.2M</div>
-              <div className="text-gray-400">Requests Today</div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */} <section className="py-20px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-boldtext-whitemb-4">Section Title</h2>
-      <section$1>
-        <div$2>
-          <h2 className="text-4xlmd:text-5xlfont-boldtext-white mb-6">
-              <p className="text-xltext-gray-300">Section description</p>
-            </div>
-        </div>
-      </section>
-        <div className="max-w-4xlmx-autotext-center"></div>
-          <h2>Need More Information?</h2>
-          </h2>
-          <p>Subscribe to status updates or contact our support team for more details.</p>
-          </p>
-          <div className="flexflex-colsm:flex-row gap-4 justify-center"></div>,
-            <button>Subscribe to Updates;</button>
-            </button>
-            <button>Contact Support;</button>
-            Need More Information?
-          </h2>
-          <p></p>
-            Subscribe to status updates or contact our support team for more details.
-          </p>
-          <div className="flexflex-colsm:flex-row gap-4 justify-center" / /></div>
-            <button></button>
-              Subscribe to Updates
-            </button>
-            <button></button>
-              Contact Support
-            </button>
-          </div>
-        </div>
-      </section>
-      <Footer /></Footer>
-  )
-}</$1></span></span></span></span></span></span></span></span></p></p></h2></h2></h3></h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-28a5

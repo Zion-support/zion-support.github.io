@@ -5,7 +5,7 @@ export interface ApiResponse<T = unknown> {
   headers: Record<string, string>;
 }
 
-export interface RequestOptions extends RequestInit {
+export interface RequestOptions {
   timeout?: number;
   retries?: number;
 }
@@ -27,7 +27,7 @@ export class ApiClient {
     url: string,
     options: RequestOptions = {}
   ): Promise<ApiResponse<T>> {
-    const { timeout = 30000, retries = 3, ...fetchOptions } = {
+    const { timeout = 30000, ...fetchOptions } = {
       ...this.defaultOptions,
       ...options,
     };
