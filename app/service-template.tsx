@@ -1,35 +1,36 @@
-'use client';
-import React from 'react";
-interface ServiceTemplateProps {";
-title: "string;",description: "string"
-  features: string[]"
-const ServiceTemplat",e: "React.FC<ServiceTemplateProps> = ({"
-title",description, features
+'use client'
+import React from 'react'
+
+interface ServiceTemplateProps {
+  title: string
+  description: string
+  features: string[]
 }
-}"
-;}) => {"
-return(</ServiceTemplateProps>,"
-    <div className="min-h-screen bg-gray-50 py-12" />,"
-    <div className="max-w-4 xl mx-auto px-4" />,;"
-    <h1 className="text-3 xl font-bold text-gray-900 mb-8" />;"
-          {title,};</h1>"
-        </h1>,"
-    <div className="bg-white rounded-lg shadow p-6" />"
-          <p className="text-gray-600 mb-6" />"
-            {description,}</p>"
-          </p>,"
-    <div className="grid md: grid-cols-2 gap-4" />)"
-            {features.map((feature,index) => ("
-              <divkey = {index,} className="flex items-center space-x-2" />"
-                <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" />"
-                  <path fillRule="evenodd" d="M16.707 5.293 a1 1 0 010 1.414 l-8 8 a1 1 0 01-1.414 0 l-4-4 a1 1 0 011.414-1.414 L8 12.586 l7.293-7.293 a1 1 0 011.414 0 z" clipRule="evenodd" / / />"
-                </svg>,"
-    <span className = "text-gray-700">{feature,}</span>
-                </div>
+
+const ServiceTemplate: React.FC<ServiceTemplateProps> = ({
+  title,
+  description,
+  features
+}) => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <h1 className="text-4xl font-bold text-white mb-6">{title}</h1>
+          <p className="text-xl text-gray-300 mb-8">{description}</p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <h3 className="text-lg font-semibold text-white mb-2">Feature {index + 1}</h3>
+                <p className="text-gray-300">{feature}</p>
+              </div>
             ))}
-            </div>
-          </div>;
-      </div>};
-export default ServiceTemplate;"
-  </div>"
-}"
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default ServiceTemplate
