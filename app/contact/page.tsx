@@ -24,6 +24,7 @@ export default function ContactPage() {
 =======
     <>
       
+<<<<<<< HEAD
         <Head>
         <title>Contact - Zion Tech Group</title>
         <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
@@ -70,6 +71,14 @@ const ContactPage = () => {
       title: 'Email',
       details: 'info@ziontechgroup.com',
       description: 'Send us an email anytime'
+=======
+      // Here you would typically send the data to your backend
+      // Example: await fetch('/api/contact', { method: 'POST', body: JSON.stringify(data) });
+      
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Form submitted:', data);
+      }
+>>>>>>> origin/app-improvements-20251015-174030
     },
     {
       icon: Phone,
