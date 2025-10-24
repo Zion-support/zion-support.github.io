@@ -56,7 +56,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
     }
 
     return () => {
-      window.removeEventListener('load', measurePageLoad);
+      // Cleanup function
     };
   }, []);
 
