@@ -1,168 +1,60 @@
-<<<<<<< HEAD
-const fs = require('fs");"'"
-const path = require('path");"
-"
-// Working page template"'"
-const workingTemplate = `'use client";"
-"'"
-import React from 'react";"
-import Head from 'next/head";"
-import Link from 'next/link";
-
-const WorkingPage = (
-  return(<>
-      <Head>
-        <title>{title) => {"
-$3"
-,} | Zion Tech Group</title>"
-        <meta name = "description" content={description,} />"
-        <meta name="robots" content="index, follow" />"
-        <meta property="og: type" content="website" />"
-        <meta property="og:title" content={\`\${title,} | Zion Tech Group\`} />"
-        <meta property="og: description" content={description,} />"
-      </Head>"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">"
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16 text-center">"
-          <h1 className="text-4xl font-bold text-white mb-6">{title,}</h1>"
-          <p className = "text-lg text-gray-300 mb-8">{description,;}</p>"
-=======
 const fs = require('fs');
 const path = require('path');
-;
-// Working page template;
-const workingTemplate = `'use client'
-;
-import React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
-;
-const WorkingPage = (return (<>;
-      <Head>);
-        <title>{title) => {;</title>
-$3;</title>
-} | Zion Tech Group</title>;
-        <meta name = "description" content={description} />"
-        <meta name="robots" content="index, follow" />"
-        <meta property="og: type" content="website" />";`"
-        <meta property="og:title" content={\`\${title} | Zion Tech Group\`} />"
-        <meta property="og: description" content={description}  />"
-      </Head>"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">{title}</h1>
-          <p className="text-lg text-gray-300 mb-8">{description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
-          <Link "
-            href="/contact" "
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us;
-          </Link>
-        </div>
-      </>;
-    </>);
-  )}`
-export default WorkingPage;`;
-<<<<<<< HEAD
 
-// Function to generate page content"
-function generatePageContent(filePath) {"
-"'"
-  const fileName = path.basename(filePath, '.tsx");"'"
-  const title = fileName.replace(/-/g, ' ").replace(/\b\w/g, l = > l.toUpperCase());
-  const description = `Professional ${title.toLowerCase();"
-,} services by Zion Tech Group.`;"
-  "'"
-  return workingTemplate.replace('{ title, description }', `{ title: "${title,}", description: "${description,}" ;}`);
-}
+// Read the template
+const template = fs.readFileSync('page-template.tsx', 'utf8');
 
-// Function to process a single file
-function processFile(filePath) {
-
-  try{const content = generatePageContent(filePath);"
-    fs.writeFileSync(filePath, content);"
-}"
-    console.log(`Replaced: "${filePath",}`);
+// Function to replace page content with template
+function replacePageFile(filePath) {
+  try {
+    // Extract the service name from the file path
+    const pathParts = filePath.split('/');
+    const serviceName = pathParts[pathParts.length - 2]; // Get the directory name
+    
+    // Replace "Service" with the actual service name
+    let content = template.replace(/Service/g, serviceName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()));
+    
+    // Replace the description
+    content = content.replace(
+      'Professional services and solutions for modern businesses.',
+      `Professional ${serviceName.replace(/-/g, ' ')} services and solutions for modern businesses.`
+    );
+    
+    fs.writeFileSync(filePath, content, 'utf8');
+    console.log(`Replaced: ${filePath}`);
     return true;
   } catch (error) {
-=======
-;
-// Function to generate page content;
-function generatePageContent(filePath) {;
-  const fileName = path.basename(filePath, '.tsx');
-  const title = fileName.replace(/-/g, ' ').replace(/\b\w/g, l = > l.toUpperCase());`
-  const description = `Professional ${title.toLowerCase();`
-} services by Zion Tech Group.`;"
-  ";`'"
-  return workingTemplate.replace('{ title, description }', `{ title: "${title}", description: "${description}" }`)}
-// Function to process a single file;
-function processFile(filePath) {;
-  try{const content = generatePageContent(filePath);"
-    fs.writeFileSync(filePath, content)}";`"
-    console.log(`Replaced: "${filePath"}`);
-    return true} catch (error) {;`
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false}
-}
-// Function to recursively find and process files;
-function processDirectory(dirPath) {;
-  let processedCount = 0;
-;
-  try { const items = fs.readdirSync(dirPath);
-;
-    for (const item, of, items) {;
-      const fullPath = path.join(dirPath, item);
-      const stat = fs.statSync(fullPath);
-<<<<<<< HEAD
-      "
-      if (stat.isDirectory()) {"
-        // Skip node_modules and other common directories"'"
-        if (!['node_modules', '.git', '.next', 'dist', 'build"].includes(item)) {
-          processedCount += processDirectory(fullPath);"
-, , }"
-        }"'"
-      } else if (item.endsWith('.tsx') && item.startsWith('page")) {
-        if (processFile(fullPath)) {
-          processedCount++;
-        }
-      }
-    }
-  } catch (error) {
-    console.error(`Error processing directory ${dirPath}:`, error.message);
+    console.error(`Error replacing ${filePath}:`, error.message);
+    return false;
   }
+}
+
+// Function to recursively find and replace all page.tsx files
+function replaceAllPages(dir) {
+  const files = fs.readdirSync(dir);
+  let replacedCount = 0;
   
-  return processedCount;
-}"
-"
-// Main execution"'"
-console.log('Starting page replacement...");"
-const startTime = Date.now();"
-"'"
-const processedCount = processDirectory('/workspace/app");
-"
-const endTime = Date.now();"
-console.log(`\nCompleted! Processed ${processedCount,} files in ${endTime - startTime;}ms`);"'"
-=======
-;
-      if (stat.isDirectory()) {;
-        // Skip node_modules and other common directories;
-        if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {;
-          processedCount += processDirectory(fullPath)}
-        }'
-      } else if (item.endsWith('.tsx') && item.startsWith('page')) {;
-        if (processFile(fullPath)) {;
-          processedCount++}
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+      // Skip node_modules and other non-page directories
+      if (!['node_modules', '.next', '.git', 'components', 'utils', 'api'].includes(file)) {
+        replacedCount += replaceAllPages(filePath);
+      }
+    } else if (file === 'page.tsx') {
+      if (replacePageFile(filePath)) {
+        replacedCount++;
       }
     }
-  } catch (error) {;`
-    console.error(`Error processing directory ${dirPath}:`, error.message)}
-  return processedCount}
-// Main execution;
+  });
+  
+  return replacedCount;
+}
+
+// Main execution
 console.log('Starting page replacement...');
-const startTime = Date.now();
-const processedCount = processDirectory('/workspace/app');
-;
-const endTime = Date.now();`"
-console.log(`\nCompleted! Processed ${processedCount} files in ${endTime - startTime}ms`);";`'"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
+const appDir = path.join(__dirname, 'app');
+const replacedCount = replaceAllPages(appDir);
+console.log(`Replaced ${replacedCount} files`);

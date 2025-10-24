@@ -14,15 +14,6 @@ const nextConfig = {
   
   // Build optimizations
   eslint: {
-<<<<<<< HEAD
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  
-  // Performance optimizations
-=======
     // Warning: This allows production builds to successfully complete even if
     // your project has ESLint errors.
     ignoreDuringBuilds: true
@@ -32,12 +23,6 @@ const nextConfig = {
     // your project has type errors.
     ignoreBuildErrors: true
   },
-  // Skip problematic pages for now
-  experimental: {
-    missingSuspenseWithCSRBailout: false
-  },
-  // Optimize static generation
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
   staticPageGenerationTimeout: 60,
   swcMinify: true,
   compress: true,
@@ -86,12 +71,8 @@ const nextConfig = {
   // Experimental features for better performance
   experimental: {
     missingSuspenseWithCSRBailout: false,
-<<<<<<< HEAD
     optimizePackageImports: ['@heroicons/react', 'lucide-react', 'framer-motion'],
-    webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
-=======
-    optimizePackageImports: ['@heroicons/react', 'lucide-react']
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
+    webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB']
   },
   
   // Webpack optimizations
@@ -113,21 +94,13 @@ const nextConfig = {
     if (!isServer) {
       config.resolve.fallback = {
         ...config.resolve.fallback,
-<<<<<<< HEAD
         fs: false,
         net: false,
-        tls: false,
+        tls: false
       };
     }
     
     return config;
   },
-=======
-        fs: false
-      }
-    }
-    return config
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 }
 module.exports = nextConfig;

@@ -1,95 +1,57 @@
-<<<<<<< HEAD
-const fs = require('fs");"'"
-const path = require('path");
-
-// Function to fix Footer import paths;
-function fixFooterImports(filePath) { "
-;"
-try { ;"'"
-let content = fs.readFileSync(filePath, 'utf8");
-    let modified = false;"
-"
-    // Fix incorrect Footer import paths;"'"
-if (content.includes("import Footer from '../components/Footer'")) {;"'"
-content = content.replace("import Footer from '../components/Footer'",;"'"
-        "import Footer from '../../components/Footer'";)
-      );
-      modified = true;
-,, , }
-    }"
-;"
-if (modified) {;"'"
-fs.writeFileSync(filePath, content, 'utf8");"
-      console.log(`Fixed Footer import in: "${filePath",;}`);
-      return true;
-    }
-    return false;
-  } catch (error) {;
-=======
 const fs = require('fs');
 const path = require('path');
-;
-// Function to fix Footer import paths;
-function fixFooterImports(filePath) {;
-;
-try { ;
-let content = fs.readFileSync(filePath, 'utf8');
+
+// Function to fix Footer import paths
+function fixPageFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-;
-    // Fix incorrect Footer import paths;
-if (content.includes("import Footer from '../components/Footer'")) {;";'"
-content = content.replace("import Footer from '../components/Footer'","import Footer from '../../components/Footer'");
-      );
+
+    // Fix Footer import path - should be ../components/Footer for subdirectories
+    if (content.includes("import Footer from './components/Footer'")) {
+      content = content.replace("import Footer from './components/Footer'", "import Footer from '../components/Footer'");
       modified = true;
-,}
     }
-if (modified) {;'"
-fs.writeFileSync(filePath, content, 'utf8');"
-      console.log(`Fixed Footer import in: "${filePath"}`);
-      return true}
-    return false} catch (error) {;`
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
-console.error(`Error processing ${filePath}:`, error.message);
-    return false}
-}
-// Function to recursively find and fix all .tsx files;
-function fixAllFooterImports(dir) {;
-;
-const files = fs.readdirSync(dir);
-  let fixedCount = 0;
-;
-for (const file, of, files) {;
-const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-;
-<<<<<<< HEAD
-if (stat.isDirectory()) {;"
-fixedCount += fixAllFooterImports(filePath);"
-    "'"
-,} else if (file.endsWith('.tsx")) {;
-=======
-if (stat.isDirectory()) {;
-fixedCount += fixAllFooterImports(filePath)} else if (file.endsWith('.tsx')) {;
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
-if (fixFooterImports(filePath)) {;
-fixedCount++}
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
     }
+    
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
-<<<<<<< HEAD
-;
-return fixedCount;
-}"
-"
-// Start fixing from the app directory;"'"
-const appDir = path.join(__dirname, 'app");"'"
-console.log('Starting Footer import fixes...");"
-const totalFixed = fixAllFooterImports(appDir);"
-console.log(`Fixed ${totalFixed,} files`);"'"
-=======
-return fixedCount}
-// Start fixing from the app directory;
-const appDir = path.join(__dirname, 'app');
+}
+
+// Function to recursively find and fix all page.tsx files
+function fixAllPages(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+  
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+      // Skip node_modules and other non-page directories
+      if (!['node_modules', '.next', '.git', 'components', 'utils', 'api'].includes(file)) {
+        fixedCount += fixAllPages(filePath);
+      }
+    } else if (file === 'page.tsx') {
+      if (fixPageFile(filePath)) {
+        fixedCount++;
+      }
+    }
+  });
+  
+  return fixedCount;
+}
+
+// Main execution
 console.log('Starting Footer import fixes...');
-const totalFixed = fixAllFooterImports(appDir);`"
-console.log(`Fixed ${totalFixed} files`);";`'"
->>>>>>> cursor/fix-errors-and-merge-to-main-eb70
+const appDir = path.join(__dirname, 'app');
+const fixedCount = fixAllPages(appDir);
+console.log(`Fixed ${fixedCount} files`);
