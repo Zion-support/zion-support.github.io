@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface MicroSAASCardProps {
   className?: string;}
 }
@@ -12,5 +11,4 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ className = '' }) => {
     </div>
   );
 };
-
 export default MicroSAASCard;

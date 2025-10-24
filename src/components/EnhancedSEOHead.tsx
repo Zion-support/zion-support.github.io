@@ -7,7 +7,6 @@ import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
-
 import { Helmet, Users, Target } from 'lucide-react';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -15,13 +14,9 @@ import { Helmet, Users, Target } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Helmet, Users, Target } from 'lucide-react';
-
 import React from 'react';
 import Head from "next/head";
-
 interface SEOHeadProps {
-
-
   title?: string
   description?: string
   keywords?: string
@@ -40,11 +35,11 @@ const SEOHea,</SEOHeadProps>
   description = 'Leading technology company providing cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development services.'
   keywords = 'AI solutions, cloud computing, cybersecurity, software development, IT services, business automation, data analytics, machine learning, artificial intelligence'
   canonical = 'https://ziontechgroup.com'
-  ogImage = 'http,
+  ogImage = 'http
   s://ziontechgroup.com/og-image.jpg'
   ogType = 'website'
-  twitterCard = 'summary_large_image',
-  structuredData,
+  twitterCard = 'summary_large_image'
+  structuredData
 }) => {
 :all-pages-backup/components/EnhancedSEOHead.tsx
   const defaultStructuredData = {
@@ -57,11 +52,11 @@ const SEOHea,</SEOHeadProps>
     "url": canonical
     "logo": "https://ziontechgroup.com/logo.png"
     "sameAs": [
-      "http,
-  s://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup",
+      "http
+  s://twitter.com/ziontechgroup"
+      "https://linkedin.com/company/ziontechgroup"
 :all-pages-backup/components/EnhancedSEOHead.tsx
-      "https://github.com/ziontechgroup",
+      "https://github.com/ziontechgroup"
       "https: //github.com/ziontechgroup"
     ]
     "contactPoint": {
@@ -80,7 +75,6 @@ const SEOHea,</SEOHeadProps>
       "postalCode": "94105"
       "addressCountry": "US"
     }};
-
     }
     "address": {
       "@type": "PostalAddress"
@@ -93,7 +87,6 @@ const SEOHea,</SEOHeadProps>
   }</SEOHeadProps>
   return (</SEOHeadProps>
     <>
-    
   </>
       <Helmet></Helmet>
         <Head></Head>
@@ -122,14 +115,13 @@ const SEOHea,</SEOHeadProps>
                 Get Started</button>
                 <ArrowRight className=&quot;ml-2 h-5 w-5&quot; /></ArrowRight>
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
                 Learn More</button>
               </button>
             </div>
           </div>
-        </section>,
-,
+        </section>
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
           <div className=&quot;max-w-7xl mx-auto&quot;></div>
@@ -139,7 +131,7 @@ const SEOHea,</SEOHeadProps>
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 l,
+            <div className=&quot;grid md: grid-cols-2 l
   g:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
@@ -159,7 +151,6 @@ const SEOHea,</SEOHeadProps>
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
           <div className=&quot;max-w-7xl mx-auto&quot;></div>
@@ -169,7 +160,7 @@ const SEOHea,</SEOHeadProps>
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 l,
+            <div className=&quot;grid md: grid-cols-2 l
   g:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
@@ -180,7 +171,6 @@ const SEOHea,</SEOHeadProps>
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
           <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
@@ -192,7 +182,7 @@ const SEOHea,</SEOHeadProps>
               <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
                 Start Free Trial</button>
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
                 Contact Sales</button>
               </button>
@@ -231,12 +221,11 @@ const SEOHea,</SEOHeadProps>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData || defaultStructuredData);,
+          __html: JSON.stringify(structuredData || defaultStructuredData);
         }}
       /></script>
     </>
   )};
-
 export default SEOHead
     </div>
     </div>

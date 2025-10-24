@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface PWAInstallerProps {
   className?: string;}
 }
@@ -12,5 +11,4 @@ const PWAInstaller: React.FC<PWAInstallerProps> = ({ className = '' }) => {
     </div>
   );
 };
-
 export default PWAInstaller;

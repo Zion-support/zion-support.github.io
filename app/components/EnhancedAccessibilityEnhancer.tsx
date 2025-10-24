@@ -2,46 +2,42 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Globe } from 'lucide-react';
-
 const EnhancedAccessibilityEnhancerPage: React.FC = () => {
-  const features = [,
-    {,
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+  const features = [
+    {
+      icon: Brain
+      title: 'AI-Powered Intelligence'
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
+    }
     {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      icon: BarChart
+      title: 'Advanced Analytics'
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
+    }
     {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
+      icon: Target
+      title: 'Precision Targeting'
+      description: 'Target specific goals and objectives with precision and accuracy.'
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
+    }
     {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+      icon: TrendingUp
+      title: 'Growth Optimization'
+      description: 'Optimize your business growth with data-driven strategies.'
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ];
-
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ];
-
   return (
     <div>
-
       <Helmet></Helmet>
         <title>Enhanced Accessibility Enhancer - Zion Tech Group</title>
         <meta name="description" content="Advanced Enhanced Accessibility Enhancer solution for modern businesses." /></meta>
@@ -49,7 +45,6 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-emerald-900to-slate-900">
         {/* Hero Section */}
-    
         <section className="relativepy-20px-4overflow-hidden"></section>
           <div className="absolute inset-0bg-gradient-to-rfrom-emerald-600/20to-blue-600/20">
         <div className="relativemax-w-7xlmx-autotext-center">
@@ -69,8 +64,7 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
               </button>
             </div>
           </div>
-        </section>,
-,
+        </section>
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -80,7 +74,7 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
                 Discover the powerful features that make Enhanced Accessibility Enhancer the perfect solution for your business.
               </p>
             </div>
-            <div className="gridmd:grid-cols-2lg:grid-cols-4gap-8">,
+            <div className="gridmd:grid-cols-2lg:grid-cols-4gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                   <div className="flex items-center mb-4">
@@ -89,12 +83,12 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
                   </div>
           <p className="text-gray-300 mb-4">featuredescription</p></p>
                   <ul className="space-y-2">
-                    featurebenefitsmapbenefit benefitIndex => 
+                    featurebenefitsmapbenefit benefitIndex =>
                       <li key=benefitIndex className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
                         benefit</li>                <div key=index className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"> </div></div><featureicon className="h-12 w-12 text-emerald-400 mb-4" /> </feature><h3 className="text-xl font-semibold text-white mb-3">featuretitle</h3>
                   <p className="text-gray-300 mb-4">featuredescription</p></p>
-                  <ul className="space-y-2">featurebenefitsmapbenefit idx => 
+                  <ul className="space-y-2">featurebenefitsmapbenefit idx =>
                       </ul><li key=idx className="flex items-center text-sm text-gray-300"> </li><CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />benefit</CheckCircle></li>        <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
             </div>
@@ -106,7 +100,6 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         / CTA Section /
         <section className="py-20 px-4">
           <><div className="max-w-4xl mx-auto text-center">
@@ -118,25 +111,20 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
           </div>
         </section>
       </div>
-
     </div>
   );
 };
-
-
 export default EnhancedAccessibilityEnhancerPage        <section className="py-20 px-4 bg-white/5"> </section><div className="max-w-7xl mx-auto">
         </div>
         <div className="text-center mb-16"> </div></div><h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <pExperience the benefits of cutting-edge AI technology</p>
             </p></div>
-        <div className="grid grid-cols-1 mdgrid-cols-2 gap-6">benefitsmapbenefit index => 
+        <div className="grid grid-cols-1 mdgrid-cols-2 gap-6">benefitsmapbenefit index =>
               </div>
         <div key=index className=quotflex items-start space-x-3quot> </div></div><CheckCircle className=quoth-6 w-6 text-purple-400 mt-1 flex-shrink-0quot /> </CheckCircle><p className=quottext-gray-300 text-lgquot>benefit</p></p>
               </div>
-            
           </div>
         </div>
       </section>
-
   </>
 export default EnhancedAccessibilityEnhancerPage }

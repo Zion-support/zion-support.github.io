@@ -1,8 +1,6 @@
 import React from &quot;react&quot;
 import { ArrowRight } from &quot;lucide-react&quot;
 interface NeonButtonProps {
-
-
   children?: React.ReactNode
   className?: string
   title?: string
@@ -27,20 +25,19 @@ const NeonButton: React.FC<NeonButtonProps> = ({
   variant=&quot;primary&quot;
   size=&quot;md&quot;
   className=&quot;&quot;
-  icon,
-  disabled = false,
+  icon
+  disabled = false
 }) => {
   const baseClasses =;
 :all-pages-backup/components/NeonButton.tsx
     &quot;relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100&quot
-    &quot;relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover: scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hove,
+    &quot;relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover: scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hove
   r:scale-100&quot;
-
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ]
 </NeonButtonProps>
@@ -76,14 +73,13 @@ const NeonButton: React.FC<NeonButtonProps> = ({
                 Get Started</button>
                 <ArrowRight className=&quot;ml-2 h-5 w-5&quot; /></ArrowRight>
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
                 Learn More</button>
               </button>
             </div>
           </div>
-        </section>,
-,
+        </section>
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
           <div className=&quot;max-w-7xl mx-auto&quot;></div>
@@ -93,7 +89,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 l,
+            <div className=&quot;grid md: grid-cols-2 l
   g:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
@@ -113,7 +109,6 @@ const NeonButton: React.FC<NeonButtonProps> = ({
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
           <div className=&quot;max-w-7xl mx-auto&quot;></div>
@@ -123,7 +118,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 l,
+            <div className=&quot;grid md: grid-cols-2 l
   g:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
@@ -134,7 +129,6 @@ const NeonButton: React.FC<NeonButtonProps> = ({
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
           <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
@@ -146,7 +140,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({
               <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
                 Start Free Trial</button>
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
                 Contact Sales</button>
               </button>
@@ -158,7 +152,6 @@ const NeonButton: React.FC<NeonButtonProps> = ({
     </>
 :all-pages-backup/components/NeonButton.tsx
   )};
-
 export default NeonButtonPage
   constvariantClasses = {
 primary:
@@ -166,40 +159,36 @@ primary:
     secondary:
      &quot;bg-gradient-to-r from-purple-600to-pink-600text-white shado w-lghover:shado w-purple-50 0/25 hover:shado w-2 xl&quot;
     accent:
-      &quot;bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg hover:shadow-cyan-500/25 hove,
+      &quot;bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg hover:shadow-cyan-500/25 hove
   r:shadow-2xl&quot
   }
-
   const neonEffect =;
-    &quot;before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 befor,
+    &quot;before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 befor
   e:-z-10&quot
   const buttonClasses = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${neonEffect} ${className}`;
     </div>
   );
 }
 export default NeonButtonPage;
-
   constvariantClasses = {
-primary: 
+primary:
      &quot;bg-gradient-to-r from-blue-600to-purple-600text-white shado w-lghover:shado w-blue-50 0/25 hover:shado w-2 xl&quot;
     secondary:
      &quot;bg-gradient-to-r from-purple-600to-pink-600text-white shado w-lghover:shado w-purple-50 0/25 hover:shado w-2 xl&quot;
-    accent: &quot;bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg hover:shadow-cyan-500/25 hove,
+    accent: &quot;bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg hover:shadow-cyan-500/25 hove
   r:shadow-2xl&quot;
   }
-
   const neonEffect =
-    &quot;before: absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 befor,
+    &quot;before: absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 befor
   e:-z-10&quot;
   const buttonClasses = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${neonEffect} ${className}`
 ;
   constcontent= (;
   <di v>{icon&&<spanclassName=&quot;mr-2&quot;>{icon}</spa>}
-      {children},
+      {children}
       {!icon && <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />}</ArrowRight>
     </div>
   )
-
   if (href) {
     return (
     <>
@@ -209,7 +198,6 @@ primary:
     </>
   );
   }
-
   return (
     <>
       <button onClick={onClick} disabled={disabled} className={buttonClasses}></button>
@@ -218,12 +206,10 @@ primary:
     </>
   );
 {}
-
 :all-pages-backup/components/NeonButton.tsx
 export default NeonButton
   );
 {};
-
 export default NeonButton
 export default NeonButton;
   );

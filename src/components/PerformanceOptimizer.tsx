@@ -2,14 +2,11 @@
 import Navigation from './Navigation';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
-
 import React, { useEffect, useState, useCallback } from 'react';
 import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { AlertTriangle } from 'lucide-react';
-
 interface PerformanceOptimizerProps {
-
 ;
 :all-pages-backup/components/PerformanceOptimizer.tsx
   className?: string}
@@ -27,34 +24,30 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 }) => {</PerformanceOptimizerProps>
   const [isOptimizing, setIsOptimizing] = useState(false);</PerformanceOptimizerProps>
   const [optimizationStatus, setOptimizationStatus] = useState<{;
-    images: boolean,
-  lazyLoading: boolean,
-  preloading: boolean,
-  codeSplitting: boolean,
+    images: boolean
+  lazyLoading: boolean
+  preloading: boolean
+  codeSplitting: boolean
   }>({
 :all-pages-backup/components/PerformanceOptimizer.tsx
-    images: false,
-  lazyLoading: false,
-  preloading: false,
+    images: false
+  lazyLoading: false
+  preloading: false
   codeSplitting: false
     images: false
     lazyLoading: false
     preloading: false
-    codeSplittin,
+    codeSplittin
   g: false
   })
-
   const optimizeImages = useCallback(() => {;
     if (!enableImageOptimization) return
-
     // Optimize images
     const images = document.querySelectorAll('img');
     images.forEach((img) => {
-  
       if (img.loading !== 'lazy') {
         img.loading = 'lazy'
       }
-
       // Add WebP support detection
       if (!img.src.includes('.webp') && img.src.includes('.jpg')) {
         const webpSrc = img.src.replace('.jpg', '.webp');
@@ -65,18 +58,13 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         webpImg.src = webpSrc
       }
     })
-
     setOptimizationStatus(prev => ({ ...prev, images: true }))
   }, [enableImageOptimization])
-
   const enableLazyLoadingOptimization = useCallback(() => {;
     if (!enableLazyLoading) return
-
     // Intersection Observer for lazyloadingconstobserver= new IntersectionObserver()
       (entries) => {
-  
         entries.forEach((entry) => {
-  
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement
             if (img.dataset.src) {
@@ -92,16 +80,13 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 ;
     const lazyImages = document.querySelectorAll('img[data-src]');
     lazyImages.forEach((img) => observer.observe(img))
-
     setOptimizationStatus(prev => ({ ...prev, lazyLoading: true }))
   }, [enableLazyLoading])
-
   const enablePreloadingOptimization = useCallback(() => {;
     if (!enablePreloading) return
-
     // Preload critical resources
     const criticalResources = [
-      '/fonts/main.woff2',
+      '/fonts/main.woff2'
       '/css/critical.css'
     ]
 ;
@@ -115,16 +100,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       }
       document.head.appendChild(link);
     })
-
     setOptimizationStatus(prev => ({ ...prev, preloading: true }))
   }, [enablePreloading])
-
   const enableCodeSplittingOptimization = useCallback(() => {;
     if (!enableCodeSplitting) return
-
     // Dynamic imports for codesplittingconstloadComponent= async (componentName: string) => {
-  ,
-      try {,
+      try {
         const module = await import(`../components/${componentName}.tsx`);
         return module.default
       } catch (error) {
@@ -132,13 +113,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         return null
       }
     }
-
     // Store the function globally for use in other components
     (window as any).loadComponent = loadComponent
-
     setOptimizationStatus(prev => ({ ...prev, codeSplitting: true }))
   }, [enableCodeSplitting])
-
   const runOptimizations = useCallback(async () => {;
     setIsOptimizing(true);
     try {
@@ -154,16 +132,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       setIsOptimizing(false);
     }
   }, [optimizeImages, enableLazyLoadingOptimization, enablePreloadingOptimization, enableCodeSplittingOptimization])
-
   useEffect(() => {
     runOptimizations();
   }, [runOptimizations])
-
   const allOptimizationsComplete = Object.values(optimizationStatus).every(Boolean);
-
   return (
     <>
-    
   </>
       <Helmet></Helmet>
 :all-pages-backup/components/PerformanceOptimizer.tsx</Helmet>
@@ -194,14 +168,13 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
                 Get Started</button>
                 <ArrowRight className=&quot;ml-2 h-5 w-5&quot; /></ArrowRight>
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
                 Learn More</button>
               </button>
             </div>
           </div>
-        </section>,
-,
+        </section>
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
           <div className=&quot;max-w-7xl mx-auto&quot;></div>
@@ -211,7 +184,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 l,
+            <div className=&quot;grid md: grid-cols-2 l
   g:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
@@ -231,7 +204,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
           <div className=&quot;max-w-7xl mx-auto&quot;></div>
@@ -241,7 +213,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 l,
+            <div className=&quot;grid md: grid-cols-2 l
   g:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
@@ -252,7 +224,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
           <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
@@ -264,7 +235,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
               <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
                 Start Free Trial</button>
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
                 Contact Sales</button>
               </button>
@@ -272,10 +243,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           </div>
         </section>
       </div>
-    </div>,
-  ),
+    </div>
+  )
 }
-
 export default PerformanceOptimizer
     </div>
     </div>
@@ -283,7 +253,6 @@ export default PerformanceOptimizer
   );
 :all-pages-backup/components/PerformanceOptimizer.tsx
 {};
-
 export default PerformanceOptimizerPage
 }
 export default PerformanceOptimizerPage;

@@ -2,43 +2,40 @@
 import React from 'react';
 import Navigation from './Navigation';
 import { ArrowRight, CheckCircle } from 'lucide-react';
-
 const features = [
   {
-    icon: CheckCircle,
-    title: "Advanced AI",
-    description: "Cutting-edge artificial intelligence solutions",
+    icon: CheckCircle
+    title: "Advanced AI"
+    description: "Cutting-edge artificial intelligence solutions"
     benefits: ["Machine Learning", "Natural Language Processing", "Computer Vision"]
-  },
+  }
   {
-    icon: CheckCircle,
-    title: "Cloud Infrastructure",
-    description: "Scalable and secure cloud solutions",
+    icon: CheckCircle
+    title: "Cloud Infrastructure"
+    description: "Scalable and secure cloud solutions"
     benefits: ["Auto-scaling", "High Availability", "Security"]
-  },
+  }
   {
-    icon: CheckCircle,
-    title: "Data Analytics",
-    description: "Powerful data analysis and visualization",
+    icon: CheckCircle
+    title: "Data Analytics"
+    description: "Powerful data analysis and visualization"
     benefits: ["Real-time Analytics", "Predictive Modeling", "Business Intelligence"]
-  },
+  }
   {
-    icon: CheckCircle,
-    title: "Automation",
-    description: "Streamline your business processes",
+    icon: CheckCircle
+    title: "Automation"
+    description: "Streamline your business processes"
     benefits: ["Workflow Automation", "Process Optimization", "Efficiency Gains"]
   }
 ];
-
 const benefits = [
-  "Reduce operational costs by up to 40%",
-  "Increase productivity with AI automation",
-  "Scale your business with cloud solutions",
-  "Make data-driven decisions with analytics",
-  "Enhance security with advanced monitoring",
+  "Reduce operational costs by up to 40%"
+  "Increase productivity with AI automation"
+  "Scale your business with cloud solutions"
+  "Make data-driven decisions with analytics"
+  "Enhance security with advanced monitoring"
   "Improve customer experience with AI"
 ];
-
 const Header: React.FC = () => {
   return (
     <header className="bg-white shadow-sm border-b">
@@ -62,10 +59,9 @@ const Header: React.FC = () => {
                 <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                   Learn More
                 </button>
-              
             </div>
-          </div>,
-        </section>,
+          </div>
+        </section>
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -90,7 +86,6 @@ const Header: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-              
             </div>
           </div>
         </section>
@@ -111,7 +106,6 @@ const Header: React.FC = () => {
                 </div>
         <div key=index className="flex items-start space-x-4"> </div></div><CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /> </CheckCircle><p className="text-gray-300 text-lg">benefit</p></p>
                 </div>
-              
             </div>
           </div>
         </section>
@@ -133,7 +127,6 @@ const Header: React.FC = () => {
           </div>
         </section>
       </div>
-      
     </header>
   );
 };

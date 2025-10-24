@@ -12,7 +12,6 @@ import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-r
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react';
-
 interface PerformanceDashboardProps {
   className?: string;}
 }
@@ -25,5 +24,4 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ className =
     </div>
   );
 };
-
 export default PerformanceDashboard;

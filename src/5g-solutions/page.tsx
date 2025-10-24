@@ -1,9 +1,7 @@
 "use client"
-
 import React from "react";
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 export default function FiveGSolutionsPage() {
   return (
     <>
@@ -22,84 +20,81 @@ export default function FiveGSolutionsPage() {
     </>
   );
 import React from 'react';
-
 import { Network, Zap, Shield, Globe, BarChart3, CheckCircle, ArrowRight, Cpu, Smartphone } from 'lucide-react';
 import Link from 'next/link';
-
 export default function FiveGSolutions() {
   const solutions = [
     {
       icon: <Network className="w-8 h-8 text-cyan-400" />
-      titl,
-  e: title,
-  description: description,
-  features: features,
+      titl
+  e: title
+  description: description
+  features: features
   link: '/5g-network-infrastructure'
     },</Network>
   {</Network>
     icon: <Zap className="w-8 h-8 text-emerald-400" />
-      titl,
-  e: title,
-  description: description,
-  features: features,
+      titl
+  e: title
+  description: description
+  features: features
   link: '/5g-iot-solutions'
     },</Zap>
   {</Zap>
     icon: <Cpu className="w-8 h-8 text-purple-400" />
-      titl,
-  e: title,
-  description: description,
-  features: features,
+      titl
+  e: title
+  description: description
+  features: features
   link: '/5g-edge-computing'
     },</Cpu>
   {</Cpu>
     icon: <Shield className="w-8 h-8 text-red-400" />
-      titl,
-  e: title,
-  description: description,
-  features: features,
+      titl
+  e: title
+  description: description
+  features: features
   link: '/5g-private-networks'
     },</Shield>
   {</Shield>
     icon: <Smartphone className="w-8 h-8 text-orange-400" />
-      titl,
-  e: title,
-  description: description,
-  features: features,
+      titl
+  e: title
+  description: description
+  features: features
   link: '/5g-mobile-applications'
     },</Smartphone>
   {</Smartphone>
     icon: <BarChart3 className="w-8 h-8 text-pink-400" />
-      titl,
-  e: title,
-  description: description,
+      titl
+  e: title
+  description: description
   features: features,;
   link: '/5g-data-analytics'};
   ];
-
   const benefits = [</BarChart3>
     {</BarChart3>
       icon: <Zap className="w-6 h-6 text-cyan-400" />
-      titl,
-  e: title,
+      titl
+  e: title
   description: 'Up to 100x faster than 4G with speeds reaching 10 Gbps'
     },</Zap>
   {</Zap>
     icon: <Globe className="w-6 h-6 text-emerald-400" />
-      titl,
-  e: title,
+      titl
+  e: title
   description: 'Support for up to 1 million devices per square kilometer'
     },</Globe>
   {</Globe>
     icon: <Cpu className="w-6 h-6 text-purple-400" />
-      titl,
-  e: title,
+      titl
+  e: title
   description: 'Latency as low as 1ms for real-time applications'
     },</Cpu>
   {</Cpu>
     icon: <Shield className="w-6 h-6 text-red-400" />
-      titl,
-  e: title,
+      titl
+  e: title
   description: 'Advanced encryption and security protocols built-in';
     };
   ];
@@ -113,7 +108,6 @@ export default function FiveGSolutions() {
 </Shield>
   return (</Shield>
     <>
-    
   </>
       <title>5G Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive 5G solutions by Zion Tech Group. Transform your business with our expert solutions." />
@@ -123,15 +117,14 @@ export default function FiveGSolutions() {
         <div className="container mx-auto px-4 py-16"></div>
           <h1 className="text-4xl font-bold text-white mb-6">5G Solutions</h1>
           <p className="text-lg text-gray-300 mb-8">Comprehensive 5G solutions by Zion Tech Group. Transform your business with our expert solutions.</p>
-          
-          <Link 
-            href="/contact" 
+          <Link
+            href="/contact"
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
           ></Link>
             Contact Us</Link>
             <ArrowRight className="ml-2 h-4 w-4" /></ArrowRight>
           </Link>
         </div>
-      </div>,
-    </div>,
+      </div>
+    </div>
   )}

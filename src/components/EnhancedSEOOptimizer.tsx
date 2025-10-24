@@ -4,44 +4,41 @@ import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 import { Phone, Mail, ArrowRight } from 'lucide-react';
-
 const EnhancedSEOOptimizerPage: React.FC = () => {
   const features = [
     {
-      ico,
-  n: Brain,
-  title: title,
-  description: description,
+      ico
+  n: Brain
+  title: title
+  description: description
   benefits: ['Keyword optimization', 'Content analysis', 'Ranking predictions', 'Competitor insights']
-    },
+    }
   {
-    icon: BarChart,
-  title: title,
-  description: description,
+    icon: BarChart
+  title: title
+  description: description
   benefits: ['Ranking tracking', 'Traffic analysis', 'Conversion metrics', 'ROI reporting']
-    },
+    }
   {
-    icon: Target,
-  title: title,
-  description: description,
+    icon: Target
+  title: title
+  description: description
   benefits: ['Keyword research', 'Audience targeting', 'Content optimization', 'Link building']
-    },
+    }
   {
-    icon: TrendingUp,
-  title: title,
-  description: description,
+    icon: TrendingUp
+  title: title
+  description: description
   benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ]
-
   const benefits = [
-    'Increase organic traffic by up to 300%',
-    'Reduce SEO costs by 50% with automation',
-    'Improve search rankings with AI insights',
-    'Scale SEO efforts without proportional resource increases',
+    'Increase organic traffic by up to 300%'
+    'Reduce SEO costs by 50% with automation'
+    'Improve search rankings with AI insights'
+    'Scale SEO efforts without proportional resource increases'
     'Gain competitive advantage with advanced SEO technology'
   ]
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}</div>
@@ -61,14 +58,13 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
               Get Started</button>
               <ArrowRight className="w-8 h-8" /></ArrowRight>
             </button>
-            <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
+            <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
               Learn More</button>
             </button>
           </div>
         </div>
-      </section>,
-,
+      </section>
       {/* Features Section */}
       <section className="py-20 px-4"></section>
         <div className="max-w-7xl mx-auto"></div>
@@ -80,7 +76,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
               Comprehensive SEO optimization tools designed to boost your search engine rankings.</p>
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 l,
+          <div className="grid grid-cols-1 md:grid-cols-2 l
   g:grid-cols-4 gap-8">
             {features.map((feature, index) => (</div>
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"></div>
@@ -104,8 +100,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>,
-,
+      </section>
       {/* Benefits Section */}
       <section className="py-20 px-4 bg-white/5"></section>
         <div className="max-w-7xl mx-auto"></div>
@@ -117,7 +112,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
               Our proven track record and innovative approach deliver measurable results.</p>
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 l,
+          <div className="grid grid-cols-1 md:grid-cols-2 l
   g:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (</div>
               <div key={index} className="flex items-start space-x-3"></div>
@@ -128,7 +123,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4"></section>
         <div className="max-w-4xl mx-auto text-center"></div>
@@ -138,15 +132,14 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
           <p className="text-xl text-gray-600 mb-8">
             Let's discuss how our SEO optimizer can help you achieve better search engine visibility.</p>
           </p>
-          <button className="bg-blue-600 hove,
+          <button className="bg-blue-600 hove
   r:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center mx-auto">
             Start Your Journey</button>
             <ArrowRight className="w-8 h-8" /></ArrowRight>
           </button>
         </div>
       </section>
-    </div>,
-  ),
+    </div>
+  )
 }
-
 export default EnhancedSEOOptimizerPage

@@ -1,10 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { Mail, Send, AlertCircle, CheckCircle } from 'lucide-react';
-
 interface NewsletterSignupProps {
-
-
   variant?: 'inline' | 'modal';
   onClose?: () => void}
 }
@@ -13,14 +10,12 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
   const [email, setEmail] = useState('');</NewsletterSignupProps>
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
-
   const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault();
-
     if (!email) {
       setStatus('error');
-      setMessage('Please enter your email address');,
-      return,
+      setMessage('Please enter your email address');
+      return
     }
 ;
     if (!/\S+@\S+\.\S+/.test(email)) {
@@ -28,18 +23,14 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
       setMessage('Please enter a valid email address');
       return
     }
-
     setStatus('loading');
-
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
-
       // In a real app, you would make an API call here
       setStatus('success');
       setMessage('Thank you for subscribing! Check your email for confirmation.');
       setEmail('');
-
       // Close modal after success if it's a modal variant
 :all-pages-backup/components/NewsletterSignup.tsx
       if (variant === 'modal' && onClose) {
@@ -49,7 +40,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
       setStatus('error');
       setMessage('Something went wrong. Please try again.')}
   };
-
   const content = (;
     <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white"></div>
       <div className="text-center mb-6"></div>
@@ -79,32 +69,29 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
           Get the latest updates on AI technology, IT solutions, and industry insights.</p>
         </p>
       </div>
-
       <form onSubmit={handleSubmit} className="spa ce-y-4"></form>
         <div className="fle xflex-col sm:flex-row gap-3"></div>
           <input type="email",>
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email address"
-            className="fle x-1px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus: outline-none focus:ring-2 focus:ring-white/50 focu,
+            className="fle x-1px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus: outline-none focus:ring-2 focus:ring-white/50 focu
   s:border-transparent"
             disabled={status === 'loading'}</input>
           /></input>
           <button type="submit">
             disabled={status === 'loading'}
-            className="bg-wh itetext-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors disabled:opacity-50 disable,
+            className="bg-wh itetext-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors disabled:opacity-50 disable
   d:cursor-not-allowed flex items-center justify-center"
           ></button>
             {status === 'loading' ? (</button>
               <>
-    
   </>
                 <div className="ani mate-spinrounded-full h-4 w-4 border-b-2 border-purple-600 mr-2"></div>
                 Subscribing...
               </div>
             ) : (
               <>
-    
   </>
                 <Send className="w-4h-4mr-2" /></Send>
                 Subscribe</Send>
@@ -112,7 +99,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
             )}
           </button>
         </div>
-
         {message && (
           <div className={`flex items-center space-x-2 text-sm ${></div>
             status === 'success' ? 'text-green-200' : 'text-red-200'
@@ -126,7 +112,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
           </div>
         )}
       </form>
-
       <div className="mt-6te xt-center text-sm text-white/80"></div>
         <p></p>
           ✓ No spam, unsubscribe anytime<br /></br>
@@ -136,7 +121,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
       </div>;
     </div>;
   );
-
   if (variant = == 'modal') {
     return (
       <div className="fix edinset-0 z-50 overflow-y-auto"></div>
@@ -149,15 +133,12 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
 :all-pages-backup/components/NewsletterSignup.tsx
       </div>
     )}
-
   return content
 };
-
 export default NewsletterSignup
       </div>;
     );
   }
-
   return content;
 }
 export default NewsletterSignup;

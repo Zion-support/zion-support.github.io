@@ -4,8 +4,6 @@
 * Comprehensive security headers for production applications
 */
 export interface SecurityHeadersConfig {
-
-
   contentSecurityPolicy?: string
 strictTransportSecurity?: string
 xFrameOptions?: string
@@ -15,39 +13,39 @@ permissionsPolicy?: string}
 };
 export const defaultSecurityHeaders: SecurityHeadersConfig = {
 // Content Security Policy
-contentSecurityPolicy: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' http,
+contentSecurityPolicy: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' http
   s:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';"}
 // Content Security Policy
-contentSecurityPolicy: [,
+contentSecurityPolicy: [
 "default-src 'self'"
-"script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com",
+"script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com"
 "style-src 'self' 'unsafe-inline'"
-"img-src 'self' data: https: blob:",
-"font-src 'self' data: ",
-"connect-src 'self' https: //www.google-analytics.com https://analytics.google.com",
+"img-src 'self' data: https: blob:"
+"font-src 'self' data: "
+"connect-src 'self' https: //www.google-analytics.com https://analytics.google.com"
 "frame-ancestors 'none'"
 "base-uri 'self'"
 "form-action 'self'"
 'upgrade-insecure-requests'].join('; ')
 // HTTP Strict Transport Security (HSTS)
-strictTransportSecurit,
-  y: 'max-age=63072000; includeSubDomains; preload',
+strictTransportSecurit
+  y: 'max-age=63072000; includeSubDomains; preload'
 // Prevent clickjacking
-xFrameOptions: 'DENY',
+xFrameOptions: 'DENY'
 // Prevent MIME type sniffing
-xContentTypeOptions: 'nosniff',
+xContentTypeOptions: 'nosniff'
 // Referrer Policy
-referrerPolicy: 'strict-origin-when-cross-origin',
+referrerPolicy: 'strict-origin-when-cross-origin'
 // Permissions Policy (formerly Feature Policy)
-permissionsPolicy: [,
-'camera=()',
-'microphone=()',
-'geolocation=()',
-'payment=()',
-'usb=()',
-'interest-cohort=()',
-'accelerometer=()',
-'gyroscope=()',
+permissionsPolicy: [
+'camera=()'
+'microphone=()'
+'geolocation=()'
+'payment=()'
+'usb=()'
+'interest-cohort=()'
+'accelerometer=()'
+'gyroscope=()'
 'magnetometer=()'].join(', ')}
 }
 /**
@@ -82,7 +80,7 @@ headers['Permissions-Policy'] = config.permissionsPolicy;}
 export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */};
 }
 export const
-defaultSecurityHeaders: SecurityHeadersConfig = {/* TOD,
+defaultSecurityHeaders: SecurityHeadersConfig = {/* TOD
   O: Fix JSX expression */}
 }
 /**
@@ -112,12 +110,12 @@ return headers
 * Get security headers in Next.js format
 */</string>
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>)</SecurityHeadersConfig>;
-): Array<{ key: string; valu,
+): Array<{ key: string; valu
   e: string }> {
   export function getNextSecurityHeaders()
 customConfig?: Partial<SecurityHeadersConfig>
 }</SecurityHeadersConfig>
-): Array<{ key: string; valu,
+): Array<{ key: string; valu
   e: string }> {}
 const headers = getSecurityHeaders(customConfig)
 return Object.entries(headers).map(([key, value]) => ({}

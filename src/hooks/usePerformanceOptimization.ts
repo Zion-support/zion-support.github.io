@@ -1,10 +1,6 @@
 "use client"
-
 import { useEffect, useCallback, useRef } from 'react';
-
 interface PerformanceOptimizationOptions {
-
-
   enableLazyLoading?: boolean
   enablePreloading?: boolean
   enableImageOptimization?: boolean
@@ -20,13 +16,10 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     enableCodeSplitting = true
     enableCaching = true
   } = options
-
   const observerRef = useRef<IntersectionObserver | null>(null)
-
   // Lazy loading for images
   const setupLazyLoading = useCallback(() => {
     if (!enableLazyLoading || typeof window === 'undefined') return
-
       // Preload critical resources
       if (options.enablePreloading) {;
         const criticalResources = document.querySelectorAll('[data-preload]');
@@ -38,20 +31,16 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
           document.head.appendChild(link);
         });
       }
-
       // Enable compression
       if (options.enableCompression) {
         // This would typically be handled by the server
       }
-
       // Enable caching
       if (options.enableCaching) {
         // This would typically be handled by the server
       }
-
       setIsOptimized(true);
     }
-
     observerRef.current = new IntersectionObserver()
       (entries) => {
         entries.forEach((entry) => {
@@ -68,31 +57,26 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
         })
       }
       {
-        rootMargin: rootMargin,
-  threshold: 0.01,
+        rootMargin: rootMargin
+  threshold: 0.01
       }
     )
-
     images.forEach((img) => {
       observerRef.current?.observe(img);
     })
   }, [enableLazyLoading])
-
   // Preload critical resources
   const preloadCriticalResources = useCallback(() => {
     if (!enablePreloading || typeof window === 'undefined') return
-
     const criticalResources = [
-      '/fonts/inter.woff2',
-      '/images/hero-bg.jpg',
+      '/fonts/inter.woff2'
+      '/images/hero-bg.jpg'
       '/images/logo.svg'
     ]
-
     criticalResources.forEach((resource) => {
       const link = document.createElement('link');
       link.rel = 'preload'
       link.href = resource
-
       if (resource.endsWith('.woff2')) {
         link.as = 'font'
         link.type = 'font/woff2'
@@ -100,15 +84,12 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       } else if (resource.endsWith('.jpg') || resource.endsWith('.png')) {
         link.as = 'image'
       }
-
       document.head.appendChild(link);
     })
   }, [enablePreloading])
-
   // Image optimization
   const optimizeImages = useCallback(() => {
     if (!enableImageOptimization || typeof window === 'undefined') return
-
     const images = document.querySelectorAll('img');
     images.forEach((img) => {
       // Add loading="lazy" for non-critical images
@@ -125,17 +106,14 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       }
     })
   }, [enableImageOptimization])
-
   // Code splitting optimization
   const optimizeCodeSplitting = useCallback(() => {
     if (!enableCodeSplitting || typeof window === 'undefined') return
-
     // Preload critical chunks
     const criticalChunks = [
-      '/static/js/main.js',
+      '/static/js/main.js'
       '/static/css/main.css'
     ]
-
     criticalChunks.forEach((chunk) => {
       const link = document.createElement('link');
       link.rel = 'preload'
@@ -144,11 +122,9 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       document.head.appendChild(link);
     })
   }, [enableCodeSplitting])
-
   // Service Worker registration for caching
   const registerServiceWorker = useCallback(() => {
     if (!enableCaching || typeof window === 'undefined' || !('serviceWorker' in navigator)) return
-
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js');
@@ -161,11 +137,9 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       })
     }
   }, [enableCaching])
-
   // Performance monitoring
   const setupPerformanceMonitoring = useCallback(() => {
     if (typeof window === 'undefined') return
-
     // Monitor long tasks
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
@@ -175,14 +149,12 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
           }
         }
       })
-
       try {
         observer.observe({ entryTypes: ['longtask'] });
       } catch {
         // Long task observer not supported
       }
     }
-
     // Monitor memory usage
     if ('memory' in performance) {
       const checkMemory = () => {
@@ -196,20 +168,17 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       setInterval(checkMemory, 30000) // Check every 30 seconds
     }
   }, [])
-
   // Resource hints
   const addResourceHints = useCallback(() => {
     if (typeof window === 'undefined') return
-
     const hints = [
-      { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: '//www.google-analytics.com' },
-      { rel: 'preconnect', href: 'http,
-  s://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'http,
+      { rel: 'dns-prefetch', href: '//fonts.googleapis.com' }
+      { rel: 'dns-prefetch', href: '//www.google-analytics.com' }
+      { rel: 'preconnect', href: 'http
+  s://fonts.googleapis.com' }
+      { rel: 'preconnect', href: 'http
   s://fonts.gstatic.com', crossOrigin: 'anonymous' }
     ]
-
     hints.forEach((hint) => {
       const link = document.createElement('link');
       Object.entries(hint).forEach(([key, value]) => {
@@ -222,7 +191,6 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       document.head.appendChild(link);
     })
   }, [])
-
   useEffect(() => {
     // Initialize all optimizations
     setupLazyLoading();
@@ -247,11 +215,10 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     setupPerformanceMonitoring
     addResourceHints
   ])
-
   return {
     setupLazyLoading
     preloadCriticalResources
     optimizeImages
-    registerServiceWorker,
+    registerServiceWorker
     setupPerformanceMonitoring
   }}</IntersectionObserver>;

@@ -14,22 +14,19 @@ import { Helmet } from 'react-helmet-async';
 import { Brain, ArrowRight, Mail } from 'lucide-react';
 import { Brain, ArrowRight, Mail } from 'lucide-react';
 import { Brain, ArrowRight, Mail } from 'lucide-react';
-
 {    }
   ]
-
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ];
 ;
 const LazyImage: React.FC<LazyImageProps> = ({ className = '' }) => {;</LazyImageProps>
   return (</LazyImageProps>
     <>
-    
   </>
       <Helmet>;</Helmet>
 :all-pages-backup/components/LazyImage.tsx</Helmet>
@@ -59,14 +56,13 @@ const LazyImage: React.FC<LazyImageProps> = ({ className = '' }) => {;</LazyImag
                 Get Started</button>
                 <ArrowRight className=&quot;ml-2 h-5 w-5&quot; /></ArrowRight>
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
                 Learn More</button>
               </button>
             </div>
           </div>
-        </section>,
-,
+        </section>
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
           <div className=&quot;max-w-7xl mx-auto&quot;></div>
@@ -76,7 +72,7 @@ const LazyImage: React.FC<LazyImageProps> = ({ className = '' }) => {;</LazyImag
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 l,
+            <div className=&quot;grid md: grid-cols-2 l
   g:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
@@ -96,7 +92,6 @@ const LazyImage: React.FC<LazyImageProps> = ({ className = '' }) => {;</LazyImag
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
           <div className=&quot;max-w-7xl mx-auto&quot;></div>
@@ -106,7 +101,7 @@ const LazyImage: React.FC<LazyImageProps> = ({ className = '' }) => {;</LazyImag
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
             </div>
-            <div className=&quot;grid md: grid-cols-2 l,
+            <div className=&quot;grid md: grid-cols-2 l
   g:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
@@ -117,7 +112,6 @@ const LazyImage: React.FC<LazyImageProps> = ({ className = '' }) => {;</LazyImag
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
           <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
@@ -135,7 +129,7 @@ const LazyImage: React.FC<LazyImageProps> = ({ className = '' }) => {;</LazyImag
               <button className=&quot;bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center&quot;>Get Started</button>
                 <ArrowRight className=&quot;ml-2 h-5 w-5&quot; /></ArrowRight>
               </button>
-              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hove,
+              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hove
   r:scale-105&quot;></button>
                 Learn More</button>
               </button>
@@ -143,8 +137,8 @@ const LazyImage: React.FC<LazyImageProps> = ({ className = '' }) => {;</LazyImag
           </div>
         </div>
       </section>
-        </div>,
-      </section>,
+        </div>
+      </section>
       {/* Benefits Section */}
       <section className=&quot;py-20 px-4 sm: px-6 lg:px-8 bg-white/5&quot;></section>
         <div className=&quot;max-w-7xl mx-auto&quot;></div>
@@ -155,7 +149,7 @@ const LazyImage: React.FC<LazyImageProps> = ({ className = '' }) => {;</LazyImag
               Experience the power of our lazyimage solutions for your business.</p>
             </p>
           </div>
-          <div className=&quot;grid grid-cols-1 m,
+          <div className=&quot;grid grid-cols-1 m
   d:grid-cols-2 gap-6&quot;>{benefits.map((benefit, index) => (</div>
               <div key={index} className=&quot;flex items-start space-x-3&quot;></div>
                 <CheckCircle className=&quot;h-6 w-6 text-purple-400 mt-1 flex-shrink-0&quot; /></CheckCircle>
@@ -175,7 +169,7 @@ const LazyImage: React.FC<LazyImageProps> = ({ className = '' }) => {;</LazyImag
               <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
                 <Phone className=&quot;mr-2 h-5 w-5&quot; /></Phone>
                 Call Now</Phone>
-              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hove,
+              <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hove
   r:scale-105&quot;></button>
                 <Mail className=&quot;mr-2 h-5 w-5&quot; /></Mail>
                 Email Us</Mail>
@@ -187,7 +181,6 @@ const LazyImage: React.FC<LazyImageProps> = ({ className = '' }) => {;</LazyImag
     </>
 :all-pages-backup/components/LazyImage.tsx
   )};
-
 export default LazyImagePage
     </div>
   );

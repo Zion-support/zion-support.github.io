@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface pageProps {
   className?: string;}
 }
@@ -12,5 +11,4 @@ const page: React.FC<pageProps> = ({ className = '' }) => {
     </div>
   );
 };
-
 export default page;

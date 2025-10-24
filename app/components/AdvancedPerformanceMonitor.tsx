@@ -6,42 +6,39 @@ import Navigation from '../components/Navigation';
 const AdvancedPerformanceMonitorPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      icon: Brain
+      title: 'AI-Powered Intelligence'
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
+    }
     {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      icon: BarChart
+      title: 'Advanced Analytics'
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
+    }
     {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
+      icon: Target
+      title: 'Precision Targeting'
+      description: 'Target specific goals and objectives with precision and accuracy.'
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
+    }
     {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+      icon: TrendingUp
+      title: 'Growth Optimization'
+      description: 'Optimize your business growth with data-driven strategies.'
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ];
-  
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ];
   return (
     <div>
-    
-  
       <Helmet></Helmet>
         <title>Advanced Performance Monitor</title>
         <meta name="description" content="Advanced Performance Monitor solution for modern businesses." /></meta>
@@ -64,13 +61,11 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
                 Get Started</button>
                 <ArrowRight className="ml-2 h-5 w-5" /></ArrowRight>
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hove,
+              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hove
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
                 Learn More</button>
               </button>
-            
-          ,
-        </section>,
+        </section>
         {/* Features Section */}
         <section className="py-20 px-4"></section>
           <div className="max-w-7xl mx-auto">
@@ -79,8 +74,7 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
-            
-            <div className="grid md: grid-cols-2 l,
+            <div className="grid md: grid-cols-2 l
   g:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
@@ -95,10 +89,7 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                
               ))}
-            
-          
         </section>
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5"></section>
@@ -109,7 +100,7 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
                 Experience the power of AI-driven performance monitoring</p>
               </p>
             </div>
-            <div className="grid md: grid-cols-2 l,
+            <div className="grid md: grid-cols-2 l
   g:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => (</div>
                 <div key={index} className="flex items-start space-x-3"></div>
@@ -134,7 +125,7 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
                 Start Free Trial</button>
                 <ArrowRight className="ml-2 h-5 w-5" /></ArrowRight>
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hove,
+              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hove
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
                 Contact Sales</button>
               </button>
@@ -146,5 +137,4 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
 </div>;
   );
 };
-
 export default AdvancedPerformanceMonitorPage;

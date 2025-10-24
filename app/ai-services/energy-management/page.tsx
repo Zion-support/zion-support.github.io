@@ -4,7 +4,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Footer from '../../components/Footer';
-
 export default function EnergymanagementPage() {
   return (
     <>
@@ -30,7 +29,6 @@ export default function EnergymanagementPage() {
         </div>
       </div>
       <Footer />
-
 </>
   );
 }

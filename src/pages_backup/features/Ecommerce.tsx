@@ -1,10 +1,8 @@
 "use client";
-
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react';
-
 const EcommercePage = () => {
   return (
     <>
@@ -24,7 +22,6 @@ const EcommercePage = () => {
               <AlertTriangle className="w-6 h-6 text-red-400" />
             </div>
           </div>
-          
           {/* Error Message */}
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Page Not Found
@@ -32,7 +29,6 @@ const EcommercePage = () => {
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
             Oops! The page you're looking for seems to have vanished into the digital void. Don't worry, even our AI can't predict everything!
           </p>
-          
           {/* Search Suggestion */}
           <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 mb-8">
             <div className="flex items-center justify-center mb-4">
@@ -42,9 +38,9 @@ const EcommercePage = () => {
             <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages:</p>
             <div className="flex flex-wrap gap-2 justify-center">
               {[
-                { name: "Home", path: "/" },
-                { name: "About", path: "/about" },
-                { name: "Services", path: "/services" },
+                { name: "Home", path: "/" }
+                { name: "About", path: "/about" }
+                { name: "Services", path: "/services" }
                 { name: "Contact", path: "/contact" }
               ].map((item, index) => (
                 <Link
@@ -57,7 +53,6 @@ const EcommercePage = () => {
               ))}
             </div>
           </div>
-          
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link
@@ -75,7 +70,6 @@ const EcommercePage = () => {
               Go Back
             </button>
           </div>
-          
           {/* Help Section */}
           <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-lg p-6">
             <h3 className="text-lg font-semibold text-white mb-3">Need Help?</h3>
@@ -98,7 +92,6 @@ const EcommercePage = () => {
               </a>
             </div>
           </div>
-          
           {/* Fun Fact */}
           <div className="mt-8 p-4 bg-slate-800/30 rounded-lg">
             <p className="text-sm text-gray-400">
@@ -112,5 +105,4 @@ const EcommercePage = () => {
     </>
   );
 };
-
 export default EcommercePage;

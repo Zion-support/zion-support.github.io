@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Mail, Phone, MapPin } from 'lucide-react';
-
 const EnhancedFooter: React.FC = () => {
   return (
     <footer className="bg-slate-900 text-white"></footer>
@@ -20,7 +19,6 @@ const EnhancedFooter: React.FC = () => {
               <ArrowRight className="w-4 h-4 ml-2" /></ArrowRight>
             </Link>
           </div>
-          
           <div></div>
             <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
             <ul className="space-y-2"></ul>
@@ -46,7 +44,6 @@ const EnhancedFooter: React.FC = () => {
               </li>
             </ul>
           </div>
-
           <div></div>
             <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
             <ul className="space-y-2"></ul>
@@ -66,14 +63,13 @@ const EnhancedFooter: React.FC = () => {
                 </Link>
               </li>
               <li></li>
-                <Link href="/contact" className="text-gray-300 hove,
+                <Link href="/contact" className="text-gray-300 hove
   r:text-cyan-400 transition-colors">
                   Contact</Link>
                 </Link>
               </li>
             </ul>
           </div>
-
           <div></div>
             <h4 className="text-lg font-semibold text-white mb-4">Contact Info</h4>
             <div className="space-y-3"></div>
@@ -92,7 +88,6 @@ const EnhancedFooter: React.FC = () => {
             </div>
           </div>
         </div>
-        
         <div className="border-t border-gray-700 mt-8 pt-8 text-center"></div>
           <p className="text-gray-400">
             © 2024 Zion Tech Group. All rights reserved.</p>
@@ -102,5 +97,4 @@ const EnhancedFooter: React.FC = () => {
     </footer>
   );
 };
-
 export default EnhancedFooter;

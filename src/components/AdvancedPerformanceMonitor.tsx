@@ -10,83 +10,78 @@ import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Target, CheckCircle, BarChart, Brain, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 const Ai3dGenerationPage: React.FC = () => {
 const AdvancedPerformanceMonitorPage: React.FC = () => {
   const features = [
     {
 :all-pages-backup/components/AdvancedPerformanceMonitor.tsx
-      ico,
-  n: Brain,
-  title: title,
-  description: description,
+      ico
+  n: Brain
+  title: title
+  description: description
   benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-  {
-    icon: BarChart,
-  title: title,
-  description: description,
-  benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-  {
-    icon: Target,
-  title: title,
-  description: description,
-  benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-  {
-    icon: TrendingUp,
-  title: title,
-  description: description,
-  benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-      icon: Brain
-      titl,
-  e: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
+    }
   {
     icon: BarChart
-      titl,
-  e: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
+  title: title
+  description: description
+  benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    }
   {
     icon: Target
-      titl,
-  e: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
+  title: title
+  description: description
+  benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    }
   {
     icon: TrendingUp
-      titl,
-  e: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+  title: title
+  description: description
+  benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+      icon: Brain
+      titl
+  e: 'AI-Powered Intelligence'
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    }
+  {
+    icon: BarChart
+      titl
+  e: 'Advanced Analytics'
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    }
+  {
+    icon: Target
+      titl
+  e: 'Precision Targeting'
+      description: 'Target specific goals and objectives with precision and accuracy.'
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    }
+  {
+    icon: TrendingUp
+      titl
+  e: 'Growth Optimization'
+      description: 'Optimize your business growth with data-driven strategies.'
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ]
-
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
 :all-pages-backup/components/AdvancedPerformanceMonitor.tsx
     'Scale operations without proportional staff increases',;
     'Gain competitive advantage with advanced technology';
   ];
-
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-    'Scale operations without proportional staff increases',
+    'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ]
-
 export default function Implementation5GPage() {
   return (
     <>
-    
   </>
       <Helmet></Helmet>
         <Head></Head>
@@ -120,14 +115,13 @@ export default function Implementation5GPage() {
                 Get Started</button>
                 <ArrowRight className="ml-2h-5w-5" /></ArrowRight>
               </button>
-              <button className="bor derborder-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
+              <button className="bor derborder-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
                 Learn More</button>
               </button>
             </div>
           </div>
-        </section>,
-,
+        </section>
         {/* Features Section */}
         <section className="py-20px-4"></section>
           <div className="max-w-7x lmx-auto"></div>
@@ -137,7 +131,7 @@ export default function Implementation5GPage() {
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
             </div>
-            <div className="gri dmd: grid-cols-2 l,
+            <div className="gri dmd: grid-cols-2 l
   g:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (</div>
                 <div key={index} className="bg-wh ite/10backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
@@ -157,7 +151,6 @@ export default function Implementation5GPage() {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20px-4 b g-white/5"></section>
           <div className="max-w-7x lmx-auto"></div>
@@ -167,7 +160,7 @@ export default function Implementation5GPage() {
                 Experience the power of AI-driven performance monitoring</p>
               </p>
             </div>
-            <div className="gri dmd: grid-cols-2 l,
+            <div className="gri dmd: grid-cols-2 l
   g:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => (</div>
                 <div key={index} className="fle xitems-start space-x-3"></div>
@@ -178,7 +171,6 @@ export default function Implementation5GPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20px-4"></section>
           <div className="max-w-4x lmx-auto text-center"></div>
@@ -200,7 +192,6 @@ export default function Implementation5GPage() {
           </div>
         </section>
 :all-pages-backup/components/AdvancedPerformanceMonitor.tsx
-      
         <title>5G Implementation - Zion Tech Group</title>
         <meta name="description" content="Professional 5G implementation services for enterprise solutions." />
       </meta>
@@ -209,10 +200,9 @@ export default function Implementation5GPage() {
         <div className="container mx-auto px-4 py-16"></div>
           <h1 className="text-4xl font-bold text-white mb-6">5G Implementation</h1>
           <p className="text-lg text-gray-300 mb-8">Professional 5G implementation services for enterprise solutions.</p>
-          
-          <Link 
-            href="/contact" 
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hove,
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hove
   r:bg-blue-700 transition-colors"
           ></Link>
             Contact Us</Link>
@@ -220,14 +210,12 @@ export default function Implementation5GPage() {
           </Link>
         </div>
       </div>
-    </div>,
-  ),
+    </div>
+  )
 }
 :all-pages-backup/components/AdvancedPerformanceMonitor.tsx
 ;
 export default AdvancedPerformanceMonitorPage
   )}
-
 export default Ai3dGenerationPage
-
 export default AdvancedPerformanceMonitorPage;

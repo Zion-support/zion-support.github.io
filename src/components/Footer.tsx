@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface FooterProps {
   className?: string;}
 }
@@ -12,5 +11,4 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
     </div>
   );
 };
-
 export default Footer;

@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface ContentNewsletterSignupProps {
   className?: string;}
 }
@@ -12,5 +11,4 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ class
     </div>
   );
 };
-
 export default ContentNewsletterSignup;

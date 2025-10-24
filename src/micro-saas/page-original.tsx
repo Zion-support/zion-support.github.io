@@ -2,15 +2,13 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-
 const MicroSAASPage: React.FC = () => {
   return (
     <>
-    
   </>
       <SEOOptimizer
-        title="Micro SAAS Solutions - Zion Tech Group",
-        description="Professional micro SAAS solutions and services for your business needs.",
+        title="Micro SAAS Solutions - Zion Tech Group"
+        description="Professional micro SAAS solutions and services for your business needs."
         keywords = {
 ['micro saas', 'AI solutions', 'business automation', 'technology services']
 };
@@ -21,7 +19,7 @@ const MicroSAASPage: React.FC = () => {
         <Navigation /></Navigation>
         <main className="container mx-auto px-4 py-16 pt-24"></main>
           <div className="text-center"></div>
-            <h1 className="text-4xl m,
+            <h1 className="text-4xl m
   d:text-5xl font-bold text-white mb-8 neon-text"></h1>
               Micro SAAS Solutions</h1>
             </h1>
@@ -41,5 +39,4 @@ const MicroSAASPage: React.FC = () => {
     </div>
   );
 };
-
 export default MicroSAASPage;

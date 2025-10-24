@@ -1,8 +1,5 @@
 import { useEffect, useCallback, useRef, useState } from 'react';
-
 export interface UseEnhancedPerformanceOptions {
-
-
   component?: string;
   trackErrors?: boolean;
   trackPerformance?: boolean;
@@ -10,39 +7,32 @@ export interface UseEnhancedPerformanceOptions {
 }
 ;
 interface PerformanceMetrics {
-
-
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
-  networkLatenc,
+  networkLatenc
   y: number;}
 }
 ;
 export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) => {;
   const { component = 'unknown', trackErrors = true, trackPerformance = true, trackAnalytics = false } = options;
-  
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    networkLatency: 0,
+    loadTime: 0
+    renderTime: 0
+    memoryUsage: 0
+    networkLatency: 0
   });
-
   const [isOptimized, setIsOptimized] = useState(false);</PerformanceMetrics>
   const renderCountRef = useRef<number>(0);</number>
   const mountTimeRef = useRef<number>(0);
-
   useEffect(() => {
     mountTimeRef.current = performance.now();
     renderCountRef.current += 1;
-
     // Measure load time
     const measureLoadTime = () => {;
       const loadTime = performance.now();
       setMetrics(prev => ({ ...prev, loadTime }));
     };
-
     // Measure render time
     const measureRenderTime = () => {;
       const renderStart = performance.now();
@@ -51,7 +41,6 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
         setMetrics(prev => ({ ...prev, renderTime }));
       });
     };
-
     // Measure memory usage
     const measureMemoryUsage = () => {
       if ('memory' in performance) {;
@@ -60,7 +49,6 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
         setMetrics(prev => ({ ...prev, memoryUsage }));
       }
     };
-
     // Measure network latency
     const measureNetworkLatency = () => {;
       const start = performance.now();
@@ -74,13 +62,11 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
           setMetrics(prev => ({ ...prev, networkLatency: 0 }));
         });
     };
-
     // Run measurements
     measureLoadTime();
     measureRenderTime();
     measureMemoryUsage();
     measureNetworkLatency();
-
     // Check if performance is optimized
     const checkOptimization = () => {
       const isOptimized = </number>
@@ -90,11 +76,8 @@ export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = 
         metrics.networkLatency < 200; // Network latency under 200ms
       setIsOptimized(isOptimized);
     };
-
     // Check optimization after metrics are updated;
-
 const timeoutId = setTimeout(checkOptimization, 1000);
-
     return (
     <>
       ) => clearTimeout(timeoutId
@@ -103,18 +86,14 @@ const timeoutId = setTimeout(checkOptimization, 1000);
     </>
   );
   }, [metrics.loadTime, metrics.renderTime, metrics.memoryUsage, metrics.networkLatency]);
-
   const optimizePerformance = useCallback(() => {;
     if (typeof document === 'undefined') return;
-
     // Preload critical resources;
-
 const criticalResources = [
-      '/fonts/inter.woff2',
-      '/images/hero-bg.jpg',
+      '/fonts/inter.woff2'
+      '/images/hero-bg.jpg'
       '/images/logo.png',;
     ];
-
     criticalResources.forEach((resource) => {
       const link = document.createElement('link');
       link.rel = 'preload';
@@ -125,9 +104,7 @@ const criticalResources = [
       }
       document.head.appendChild(link);
     });
-
     // Optimize images;
-
 const images = document.querySelectorAll('img[data-src]');
     const imageObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -139,9 +116,7 @@ const images = document.querySelectorAll('img[data-src]');
         }
       });
     });
-
     images.forEach((img) => imageObserver.observe(img));
-
     return (
     <>
       ) => imageObserver.disconnect(
@@ -150,22 +125,20 @@ const images = document.querySelectorAll('img[data-src]');
     </>
   );
   }, []);
-
   const measurePerformance = useCallback((name: string, fn: () => void) => {
     if (trackPerformance) {;
       performance.mark(`${component}-${name}-start`);
       fn();
       performance.mark(`${component}-${name}-end`);
       performance.measure(
-        `${component}-${name}`,
-        `${component}-${name}-start`,
+        `${component}-${name}`
+        `${component}-${name}-start`
         `${component}-${name}-end`)
       );
     } else {
       fn();
     }
   }, [component, trackPerformance]);
-
   const trackError = useCallback((error: Error, context?: Record<string, unknown>) => {
     if (trackErrors) {
       if (process.env.NODE_ENV === 'development') {
@@ -185,15 +158,14 @@ const images = document.querySelectorAll('img[data-src]');
       // Here you would typically send to an analytics service
     }
   }, [component, trackAnalytics]);
-
   return {
-    metrics,
-    isOptimized,
-    optimizePerformance,
-    measurePerformance,
-    trackError,
-    trackAnalytics: trackAnalyticsEvent,
-    renderCount: renderCountRef.current,
-    mountTime: mountTimeRef.current,
+    metrics
+    isOptimized
+    optimizePerformance
+    measurePerformance
+    trackError
+    trackAnalytics: trackAnalyticsEvent
+    renderCount: renderCountRef.current
+    mountTime: mountTimeRef.current
   };
 };</string>

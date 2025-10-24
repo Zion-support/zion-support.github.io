@@ -3,14 +3,12 @@
  * Performance Metrics Utility
  * Advanced performance tracking and monitoring for web applications
  */
-
 export interface PerformanceMetric {
-
 ;
-  name: string,
-  value: number,
-  unit: string,
-  timestamp: Date,
+  name: string
+  value: number
+  unit: string
+  timestamp: Date
   category: 'load' | 'runtime' | 'network' | 'memory' | 'custom'
   metadata?: Record<string, unknown>}
 }
@@ -26,38 +24,34 @@ export interface WebVitalsMetrics {;
 ;
 export interface PerformanceReport {;
   metrics: PerformanceMetric[]
-  webVital,
-  s: WebVitalsMetrics,
+  webVital
+  s: WebVitalsMetrics
   summary: {
-    avgLoadTim,
-  e: number,
-  totalMetrics: number,
-  performanceScore: number,
+    avgLoadTim
+  e: number
+  totalMetrics: number
+  performanceScore: number
   recommendations: string[]}
   };
   timestamp: Date
 }
-
 export class PerformanceMetrics {;
   private static instance: PerformanceMetrics
   private metrics: PerformanceMetric[] = []
-  private webVital,
+  private webVital
   s: WebVitalsMetrics = {}
   private observers: PerformanceObserver[] = []
-
   constructor() {
-    if (typeof window !== 'undefined') {,
-      this.initializeObservers();,
+    if (typeof window !== 'undefined') {
+      this.initializeObservers();
     }
   }
-
   static getInstance(): PerformanceMetrics {
     if (!PerformanceMetrics.instance) {
       PerformanceMetrics.instance = new PerformanceMetrics();
     }
     return PerformanceMetrics.instance
   }
-
   /**
    * Initialize performance observers
    */
@@ -72,27 +66,27 @@ export class PerformanceMetrics {;
               const navEntry = entry as PerformanceNavigationTiming
               this.recordMetric({
 :all-pages-backup/utils/performanceMetrics.ts
-                name: name,
-  value: navEntry.loadEventEnd - navEntry.fetchStart,
+                name: name
+  value: navEntry.loadEventEnd - navEntry.fetchStart
   unit: unit,)
   timestamp: new Date()
-                categor,
-  y: category,
+                categor
+  y: category
   metadata: {
-                  domContentLoade,
-  d: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+                  domContentLoade
+  d: navEntry.domContentLoadedEventEnd - navEntry.fetchStart
   domInteractive: navEntry.domInteractive - navEntry.fetchStart
-                nam,
-  e: 'pageLoadTime',
+                nam
+  e: 'pageLoadTime'
                 value: navEntry.loadEventEnd - navEntry.fetchStart
-                uni,
-  t: 'ms',
+                uni
+  t: 'ms'
                 timestamp: new Date()
-                categor,
-  y: 'load',
+                categor
+  y: 'load'
                 metadata: {
                   domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart
-                  domInteractiv,
+                  domInteractiv
   e: navEntry.domInteractive - navEntry.fetchStart
                 }
               })
@@ -101,7 +95,6 @@ export class PerformanceMetrics {;
         })
         navObserver.observe({ entryTypes: ['navigation'] })
         this.observers.push(navObserver)
-
         // Paint timing;
         const paintObserver = new PerformanceObserver(list => {;)
           for (const entry of list.getEntries()) {
@@ -109,17 +102,17 @@ export class PerformanceMetrics {;
               this.webVitals.FCP = entry.startTime
               this.recordMetric({
 :all-pages-backup/utils/performanceMetrics.ts
-                name: name,
-  value: entry.startTime,
+                name: name
+  value: entry.startTime
   unit: unit,)
   timestamp: new Date()
-                nam,
-  e: 'FCP',
+                nam
+  e: 'FCP'
                 value: entry.startTime
-                uni,
-  t: 'ms',
+                uni
+  t: 'ms'
                 timestamp: new Date()
-                categor,
+                categor
   y: 'load'
               })
             }
@@ -135,17 +128,17 @@ export class PerformanceMetrics {;
             this.webVitals.LCP = lastEntry.startTime
             this.recordMetric({
 :all-pages-backup/utils/performanceMetrics.ts
-              name: name,
-  value: lastEntry.startTime,
+              name: name
+  value: lastEntry.startTime
   unit: unit,)
   timestamp: new Date()
-              nam,
-  e: 'LCP',
+              nam
+  e: 'LCP'
               value: lastEntry.startTime
-              uni,
-  t: 'ms',
+              uni
+  t: 'ms'
               timestamp: new Date()
-              categor,
+              categor
   y: 'load'
             })
           }
@@ -162,17 +155,17 @@ export class PerformanceMetrics {;
           this.webVitals.CLS = clsValue
           this.recordMetric({
 :all-pages-backup/utils/performanceMetrics.ts
-            name: name,
-  value: clsValue,
+            name: name
+  value: clsValue
   unit: unit,)
   timestamp: new Date()
-            nam,
-  e: 'CLS',
+            nam
+  e: 'CLS'
             value: clsValue
-            uni,
-  t: 'score',
+            uni
+  t: 'score'
             timestamp: new Date()
-            categor,
+            categor
   y: 'runtime'
           })
         })
@@ -184,18 +177,16 @@ export class PerformanceMetrics {;
       }
     }
   }
-
   /**
    * Record a custom performance metric
    */
   recordMetric(metric: PerformanceMetric): void {
     this.metrics.push(metric);
     // Keep only last 1000 metrics
-    if (this.metrics.length > 1000) {,
-      this.metrics.shift();,
+    if (this.metrics.length > 1000) {
+      this.metrics.shift();
     }
   }
-
   /**
    * Record page load time
    */
@@ -205,65 +196,63 @@ export class PerformanceMetrics {;
     const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart
     this.recordMetric({
 :all-pages-backup/utils/performanceMetrics.ts
-      name: name,
-  value: pageLoadTime,
+      name: name
+  value: pageLoadTime
   unit: unit,)
   timestamp: new Date()
-      categor,
-  y: category,
+      categor
+  y: category
   metadata: {
-        dnsLooku,
-  p: perfData.domainLookupEnd - perfData.domainLookupStart,
-  tcpConnection: perfData.connectEnd - perfData.connectStart,
-  serverResponse: perfData.responseEnd - perfData.requestStart,
+        dnsLooku
+  p: perfData.domainLookupEnd - perfData.domainLookupStart
+  tcpConnection: perfData.connectEnd - perfData.connectStart
+  serverResponse: perfData.responseEnd - perfData.requestStart
   domParsing: perfData.domComplete - perfData.domLoading
-      nam,
-  e: 'pageLoad',
+      nam
+  e: 'pageLoad'
       value: pageLoadTime
-      uni,
-  t: 'ms',
+      uni
+  t: 'ms'
       timestamp: new Date()
-      categor,
-  y: 'load',
+      categor
+  y: 'load'
       metadata: {
         dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart
         tcpConnection: perfData.connectEnd - perfData.connectStart
         serverResponse: perfData.responseEnd - perfData.requestStart
-        domParsin,
+        domParsin
   g: perfData.domComplete - perfData.domLoading
       }
     })
   }
-
   /**
    * Record network request timing
    */
   recordNetworkRequest(url: string, duration: number, status: number): void {
     this.recordMetric({
 :all-pages-backup/utils/performanceMetrics.ts
-      nam,
-  e: name,
-  value: duration,
+      nam
+  e: name
+  value: duration
   unit: unit,)
   timestamp: new Date()
-      categor,
-  y: category,
+      categor
+  y: category
   metadata: {
-      nam,
-  e: 'networkRequest',
+      nam
+  e: 'networkRequest'
       value: duration
-      uni,
-  t: 'ms',
+      uni
+  t: 'ms'
       timestamp: new Date()
-      categor,
-  y: 'network',
+      categor
+  y: 'network'
       metadata: {
-        url,
-        status,
+        url
+        status
       }
     })
   }
-
   /**
    * Record memory usage
    */
@@ -273,34 +262,33 @@ export class PerformanceMetrics {;
     const memory = (performance as PerformanceWithMemory).memory
     this.recordMetric({
 :all-pages-backup/utils/performanceMetrics.ts
-      name: name,
-  value: memory.usedJSHeapSize,
+      name: name
+  value: memory.usedJSHeapSize
   unit: unit,)
   timestamp: new Date()
-      categor,
-  y: category,
+      categor
+  y: category
   metadata: {
-        tota,
-  l: memory.totalJSHeapSize,
-  limit: memory.jsHeapSizeLimit,
+        tota
+  l: memory.totalJSHeapSize
+  limit: memory.jsHeapSizeLimit
   percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
-      nam,
-  e: 'memoryUsage',
+      nam
+  e: 'memoryUsage'
       value: memory.usedJSHeapSize
-      uni,
-  t: 'bytes',
+      uni
+  t: 'bytes'
       timestamp: new Date()
-      categor,
-  y: 'memory',
+      categor
+  y: 'memory'
       metadata: {
         total: memory.totalJSHeapSize
         limit: memory.jsHeapSizeLimit
-        percentag,
+        percentag
   e: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
       }
     })
   }
-
   /**
    * Measure function execution time
    */</string>
@@ -310,23 +298,22 @@ export class PerformanceMetrics {;
     const endTime = performance.now();
     this.recordMetric({
 :all-pages-backup/utils/performanceMetrics.ts
-      nam,
-  e: name,
-  value: endTime - startTime,
+      nam
+  e: name
+  value: endTime - startTime
   unit: unit,)
   timestamp: new Date()
-      name: `functio,
+      name: `functio
   n:${name}`
       value: endTime - startTime
-      uni,
-  t: 'ms',
+      uni
+  t: 'ms'
       timestamp: new Date()
-      categor,
+      categor
   y: 'runtime'
     })
     return result
   }
-
   /**
    * Measure async function execution time
    */</T>
@@ -336,44 +323,40 @@ export class PerformanceMetrics {;
     const endTime = performance.now();
     this.recordMetric({
 :all-pages-backup/utils/performanceMetrics.ts
-      nam,
-  e: name,
-  value: endTime - startTime,
+      nam
+  e: name
+  value: endTime - startTime
   unit: unit,)
   timestamp: new Date()
-      name: `asyn,
+      name: `asyn
   c:${name}`
       value: endTime - startTime
-      uni,
-  t: 'ms',
+      uni
+  t: 'ms'
       timestamp: new Date()
-      categor,
+      categor
   y: 'runtime'
     })
     return result
   }
-
   /**
    * Get all metrics
    */
   getMetrics(): PerformanceMetric[] {
     return [...this.metrics]
   }
-
   /**
    * Get metrics by category
    */
-  getMetricsByCategory(category: PerformanceMetric['category']): PerformanceMetric[] {,
-    return this.metrics.filter(m => m.category === category);,
+  getMetricsByCategory(category: PerformanceMetric['category']): PerformanceMetric[] {
+    return this.metrics.filter(m => m.category === category);
   }
-
   /**
    * Get Web Vitals
    */
   getWebVitals(): WebVitalsMetrics {
     return { ...this.webVitals }
   }
-
   /**
    * Calculate performance score (0-100)
    */
@@ -401,14 +384,13 @@ export class PerformanceMetrics {;
     }
     return Math.max(0, Math.min(100, score))
   }
-
   /**
    * Get performance recommendations
    */
   getRecommendations(): string[] {;
     const recommendations: string[] = [];
-    if (this.webVitals.FCP && this.webVitals.FCP > 1800) {,
-      recommendations.push('Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources'),
+    if (this.webVitals.FCP && this.webVitals.FCP > 1800) {
+      recommendations.push('Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources')
     }
     if (this.webVitals.LCP && this.webVitals.LCP > 2500) {
       recommendations.push('Improve Largest Contentful Paint (LCP) - optimize largest element loading')
@@ -426,7 +408,6 @@ export class PerformanceMetrics {;
     }
     return recommendations
   }
-
   /**
    * Generate performance report
    */
@@ -436,29 +417,27 @@ export class PerformanceMetrics {;
     return {
       metrics: this.getMetrics()
       webVitals: this.getWebVitals()
-      summar,
+      summar
   y: {
 :all-pages-backup/utils/performanceMetrics.ts
-        avgLoadTime,
-  totalMetrics: this.metrics.length,
+        avgLoadTime
+  totalMetrics: this.metrics.length
   performanceScore: this.calculatePerformanceScore();
         avgLoadTime
         totalMetrics: this.metrics.length
         performanceScore: this.calculatePerformanceScore()
-        recommendation,
+        recommendation
   s: this.getRecommendations()
       }
-      timestamp: new Date();,
+      timestamp: new Date();
     }
   }
-
   /**
    * Export metrics as JSON
    */
   exportMetrics(): string {
     return JSON.stringify(this.generateReport(), null, 2)
   }
-
   /**
    * Clear all metrics
    */
@@ -466,7 +445,6 @@ export class PerformanceMetrics {;
     this.metrics = []
     this.webVitals = {}
   }
-
   /**
    * Cleanup observers
    */
@@ -475,22 +453,19 @@ export class PerformanceMetrics {;
     this.observers = []
   }
 }
-
 // Type for performance.memory
 interface PerformanceWithMemory extends Performance {
   memory?: {
-    usedJSHeapSize: number,
-  totalJSHeapSize: number,
-  jsHeapSizeLimit: number,
+    usedJSHeapSize: number
+  totalJSHeapSize: number
+  jsHeapSizeLimit: number
   }
 }
-
 // Type for LayoutShift
 interface LayoutShift extends PerformanceEntry {
-  value: number,
-  hadRecentInput: boolean,
+  value: number
+  hadRecentInput: boolean
 }
-
 // Export singleton instance
 :all-pages-backup/utils/performanceMetrics.ts;
 export const performanceMetrics = PerformanceMetrics.getInstance();

@@ -1,12 +1,10 @@
 'use client';
 import React, { useEffect, useCallback, useState } from 'react';
 interface PerformanceMetrics {
-
-
-  lcp: number,
+  lcp: number
     fid: number
-  cl,
-  s: number,
+  cl
+  s: number
     fcp: number}
   ttfb: number};
 interface AdvancedPerformanceOptimizerProps {
@@ -23,12 +21,12 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   enableServiceWorker = true}
 }) => {</AdvancedPerformanceOptimizerProps>
   const [performanceMetrics, setPerformanceMetrics] = useState<PerformanceMetrics>({
-    lcp: 0,
+    lcp: 0
     fid: 0
-    cl,
-  s: 0,
+    cl
+  s: 0
     fcp: 0
-    ttf,
+    ttf
   b: 0})
   // Web Vitals monitoring
   const measureWebVitals = useCallback(() => {
@@ -121,7 +119,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   const preloadCriticalResources = useCallback(() => {
   if (typeof window === 'undefined') return
     const criticalResources = [
-  '/fonts/inter-var.woff2',
+  '/fonts/inter-var.woff2'
     '/css/critical.css'
   ]
     criticalResources.forEach(resource => {)
@@ -140,15 +138,15 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     // Report to analytics
     if ('gtag' in window) {
       (window as any).gtag('event', 'web_vitals', {
-        event_category: 'Performance',
+        event_category: 'Performance'
     event_label: 'Core Web Vitals',)
-        value: Math.round(performanceMetrics.lcp),
+        value: Math.round(performanceMetrics.lcp)
     custom_map: {
-          fc,
-  p: Math.round(performanceMetrics.fcp),
+          fc
+  p: Math.round(performanceMetrics.fcp)
     lcp: Math.round(performanceMetrics.lcp)
-          fi,
-  d: Math.round(performanceMetrics.fid),
+          fi
+  d: Math.round(performanceMetrics.fid)
     cls: Math.round(performanceMetrics.cls * 1000) / 1000}
       })
   }, [performanceMetrics])

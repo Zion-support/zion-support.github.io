@@ -1,9 +1,7 @@
 'use client';
 :all-pages-backup/components/AccessibilityEnhancer.tsx
 "use client"
-
 import React, { useEffect } from 'react';
-
 interface AccessibilityEnhancerProps {
   children: React.ReactNode}
 }
@@ -16,16 +14,14 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content'
       skipLink.textContent = 'Skip to main content'
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focu,
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focu
   s:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
       document.body.insertBefore(skipLink, document.body.firstChild)
-
       // Add main content ID
       const main = document.querySelector('main');
       if (main && !main.id) {
         main.id = 'main-content'
       }
-
       return () => {
         const existingSkipLink = document.querySelector('a[href="#main-content"]');
         if (existingSkipLink) {
@@ -38,8 +34,7 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
   return <div>{children}</div>};
 import { useEffect } from 'react';
 import Navigation from './Navigation';
-
-const AccessibilityEnhancer: React.FC<{ childre,
+const AccessibilityEnhancer: React.FC<{ childre
   n: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Add keyboard navigation support
@@ -54,7 +49,6 @@ const AccessibilityEnhancer: React.FC<{ childre,
           mainContent.scrollIntoView({ behavio,)
   r: 'smooth' })}
       }
-
       // Skip to navigation with Alt + N
       if (e.altKey && e.key === 'n') {
         e.preventDefault();
@@ -76,14 +70,12 @@ const AccessibilityEnhancer: React.FC<{ childre,
       }
     }
     document.addEventListener('keydown', handleKeyDown);
-
     return () => {
 :all-pages-backup/components/AccessibilityEnhancer.tsx
       document.removeEventListener('keydown', handleKeyDown)}}, []);
       document.removeEventListener('keydown', handleKeyDown);
     }
   }, []);
-
   useEffect(() => {
     // Add focus indicators
     const style = document.createElement('style');
@@ -94,20 +86,17 @@ const AccessibilityEnhancer: React.FC<{ childre,
         outline-offset: 2px !important
       *:focus {;
         outline: 2px solid #8b5cf6 !important;
-        outline-offse,
+        outline-offse
   t: 2px !important;
       }
-
       const nav = document.querySelector('nav');
       if (nav && !nav.getAttribute('role')) {
         nav.setAttribute('role', 'navigation')}
-
       const footer = document.querySelector('footer');
       if (footer && !footer.getAttribute('role')) {
         footer.setAttribute('role', 'contentinfo')}
     }
   }, [enableScreenReaderSupport]);
-
   useEffect(() => {
     // Add high contrast support
     if (enableHighContrast) {
@@ -118,53 +107,47 @@ const AccessibilityEnhancer: React.FC<{ childre,
           * {
             border-color: currentColor !important
           * {;
-            border-colo,
+            border-colo
   r: currentColor !important;
           }
           button, a {
-            border: 2px solid currentColor !important,
+            border: 2px solid currentColor !important
           }
         }
       `;
       document.head.appendChild(style)}
   }, [enableHighContrast]);
-
   useEffect(() => {
     // Add focus management
     if (enableFocusManagement) {
       const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])';
-      
       .sr-only {
-        position: absolute,
-  width: 1px,
-  height: 1px,
-  padding: 0,
-  margin: -1px,
-  overflow: hidden,
+        position: absolute
+  width: 1px
+  height: 1px
+  padding: 0
+  margin: -1px
+  overflow: hidden
   clip: rect(0, 0, 0, 0);
-        white-space: nowrap,
-  border: 0,
+        white-space: nowrap
+  border: 0
       }
-      
       .high-contrast {
         filter: contrast(150%)}
-      
       .reduce-motion * {
         animation-duration: 0.01ms !important
         animation-iteration-count: 1 !important
-        transition-duratio,
+        transition-duratio
   n: 0.01ms !important
       }
     `;
     document.head.appendChild(style);
-
     return () => {
 :all-pages-backup/components/AccessibilityEnhancer.tsx
       document.head.removeChild(style)}}, []);
       document.head.removeChild(style);
     }
   }, []);
-
       // Apply focus trapping to modals
       const modals = document.querySelectorAll('[role=&quot;dialog&quot;]');
       modals.forEach(trapFocus);
@@ -175,19 +158,15 @@ const AccessibilityEnhancer: React.FC<{ childre,
     if (main && !main.getAttribute('role')) {
       main.setAttribute('role', 'main')}
     }
-
     const nav = document.querySelector('nav');
     if (nav && !nav.getAttribute('role')) {
       nav.setAttribute('role', 'navigation')}
-
     const footer = document.querySelector('footer');
     if (footer && !footer.getAttribute('role')) {
       footer.setAttribute('role', 'contentinfo')}
   }, []);
-
 :all-pages-backup/components/AccessibilityEnhancer.tsx
   return <div>{children}</div>};
-
 export default AccessibilityEnhancer
   return <div>{children}</div>
 }

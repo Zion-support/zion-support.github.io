@@ -4,7 +4,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Footer from '../components/Footer';
-
 export default function SitemapPage() {
   return (
     <div>
@@ -30,7 +29,6 @@ export default function SitemapPage() {
         </div>
       </div>
       <Footer />
-  
 </div>
 );
 }

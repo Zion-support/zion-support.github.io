@@ -20,8 +20,8 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
       setMessage('Please enter a valid email address');
       return
     setStatus('loading');
-    try {,
-      // Simulate API call,
+    try {
+      // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000);
       // In a real app, you would make an API call here
       setStatus('success');
@@ -43,7 +43,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
         <p className="text-white/90"></p>
           Get the latest updates on AI technology, IT solutions, and industry insights.</p>
         </p>
-      
       <form onSubmit={handleSubmit} className="space-y-4"></form>
         <div className="flex flex-col sm: flex-row gap-3">
           <input
@@ -51,33 +50,26 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email address"
-            className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus: outline-none focus:ring-2 focus:ring-white/50 focu,
+            className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus: outline-none focus:ring-2 focus:ring-white/50 focu
   s:border-transparent"
             disabled={status === 'loading'}</input>
           /></input>
           <button
             type="submit"
             disabled={status === 'loading'}
-            className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover: bg-white/90 transition-colors disabled:opacity-50 disable,
+            className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover: bg-white/90 transition-colors disabled:opacity-50 disable
   d:cursor-not-allowed flex items-center justify-center"
           ></button>
             {status === 'loading' ? (</button>
               <>
-    
-  
                 <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-purple-600 mr-2">
                 Subscribing...
-
             ) : (
               <>
-    
-  
                 <Send className="w-4 h-4 mr-2" /></Send>
                 Subscribe</Send>
-
             )}
           </button>
-        
         {
   message && (
           <div className={`flex items-center space-x-2 text-sm ${
@@ -89,13 +81,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
               <AlertCircle className="w-4 h-4" /></AlertCircle>
             )}</AlertCircle>
             <span>{message}</span>
-<<<<<<< HEAD
-          
-        )}
-=======
-          </div>
-        
->>>>>>> cursor/fix-errors-and-merge-to-main-da11
       </form>
       <div className="mt-6 text-center text-sm text-white/80">
         <p></p>
@@ -103,15 +88,8 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
           ✓ Weekly updates on latest tech trends<br /></br>
           ✓ Exclusive content and early access</br>
         </p>
-<<<<<<< HEAD
-      
-    </div>
-=======
-      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-da11
   if (variant === 'modal') {
     return (
-    
       <div className="fixed inset-0 z-50 overflow-y-auto"></div>
         <div className="flex min-h-screen items-center justify-center px-4 py-6"></div>
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} /></div>

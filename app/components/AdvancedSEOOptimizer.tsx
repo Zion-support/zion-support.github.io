@@ -1,52 +1,36 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Search, Target, TrendingUp, CheckCircle } from 'lucide-react';
-import Navigation from '../components/Navigation';
-=======
-import  Helmet  from 'react-helmet-async';
-import  ArrowRight Search Target TrendingUp CheckCircle CheckCircle  from 'lucide-react';
-import Navigation  } from '/components/Navigation';
-import Footer from '../components/Footer';
-const AdvancedSEOOptimizerPage ReactFC =  => </>
-  
-</Footer></>
->>>>>>> cursor/fix-errors-and-merge-to-main-da11
-
 const AdvancedSEOOptimizerPage: React.FC = () => {
   const features = [
     {
-      ico,
-  n: Search,
-    title: 'Advanced SEO Analysis',
-      description: 'Comprehensive SEO analysis and optimization recommendations.',
+      ico
+  n: Search
+    title: 'Advanced SEO Analysis'
+      description: 'Comprehensive SEO analysis and optimization recommendations.'
       benefits: ['Keyword research', 'Content optimization', 'Technical SEO', 'Performance insights']
-    },
+    }
     {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific keywords and audiences with precision.',
+      icon: Target
+      title: 'Precision Targeting'
+      description: 'Target specific keywords and audiences with precision.'
       benefits: ['Keyword targeting', 'Audience analysis', 'Competitor research', 'Market insights']
-    },
+    }
     {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your website for maximum growth and visibility.',
+      icon: TrendingUp
+      title: 'Growth Optimization'
+      description: 'Optimize your website for maximum growth and visibility.'
       benefits: ['Growth strategies', 'Traffic optimization', 'Conversion tracking', 'ROI analysis']
     }
   ]
   const benefits = [
-  'Increase organic traffic by up to 300%',
-    'Improve search rankings with AI-powered insights',
-    'Optimize content for better visibility',
-    'Track performance with detailed analytics',
+  'Increase organic traffic by up to 300%'
+    'Improve search rankings with AI-powered insights'
+    'Optimize content for better visibility'
+    'Track performance with detailed analytics'
     'Stay ahead of SEO trends and updates'
   ]
   return (
     <div>
-    
-  
       <Helmet></Helmet>
         <title>Advanced SEO Optimizer</title>
         <meta name="description" content="Advanced SEO Optimizer solution for modern businesses." /></meta>
@@ -69,13 +53,11 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
                 Get Started</button>
                 <ArrowRight className="ml-2 h-5 w-5" /></ArrowRight>
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hove,
+              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hove
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
                 Learn More</button>
               </button>
-            
-          ,
-        </section>,
+        </section>
         {/* Features Section */}
         <section className="py-20 px-4"></section>
           <div className="max-w-7xl mx-auto">
@@ -84,8 +66,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Powerful AI-driven SEO features designed to transform your online presence</p>
               </p>
-            
-            <div className="grid md: grid-cols-2 l,
+            <div className="grid md: grid-cols-2 l
   g:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
@@ -100,10 +81,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                
               ))}
-            
-          
         </section>
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5"></section>
@@ -114,7 +92,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
                 Experience the power of AI-driven SEO optimization</p>
               </p>
             </div>
-            <div className="grid md: grid-cols-2 l,
+            <div className="grid md: grid-cols-2 l
   g:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => (</div>
                 <div key={index} className="flex items-start space-x-3"></div>
@@ -139,7 +117,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
                 Start Free Trial</button>
                 <ArrowRight className="ml-2 h-5 w-5" /></ArrowRight>
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hove,
+              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hove
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
                 Contact Sales</button>
               </button>
@@ -151,5 +129,4 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
 </div>;
   );
 };
-
 export default AdvancedSEOOptimizerPage;

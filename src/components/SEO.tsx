@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface SEOProps {
   className?: string;}
 }
@@ -12,5 +11,4 @@ const SEO: React.FC<SEOProps> = ({ className = '' }) => {
     </div>
   );
 };
-
 export default SEO;

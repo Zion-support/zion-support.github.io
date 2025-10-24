@@ -1,38 +1,26 @@
 
 'use client';
 import React, { Component, ReactNode, ErrorInfo } from 'react';
-
-
 interface Props {
   children: ReactNode;
 }
-
-
-  children: ReactNode;,
-,
-
+  children: ReactNode;
 }
 interface State {
   hasError: boolean;
   error: Error | undefined;
 }
-
-
   hasError: boolean;
-  error: Error | undefined;,
-,
-
+  error: Error | undefined;
 }
 class ErrorBoundary extends Component<Props, State> {
-  public state: State = {,
-    hasError: false,
-    error: undefined,
+  public state: State = {
+    hasError: false
+    error: undefined
   };
-
   public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
-
   public componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     // Log error to console in development only
     if (process.env.NODE_ENV === 'development') {
@@ -40,7 +28,6 @@ class ErrorBoundary extends Component<Props, State> {
       console.error('Error caught by boundary:', error, errorInfo);
     }
   }
-
   public render() {
     if (this.state.hasError) {
       return (
@@ -60,14 +47,9 @@ class ErrorBoundary extends Component<Props, State> {
                     strokeWidth = {
 2
 };
-        
-        
-        
-        
                     d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
                   /></path>
                 </svg>
-              
               <h3 className="text-lg font-medium text-white mb-2">
                 Something went wrong
               </h3>
@@ -87,19 +69,16 @@ class ErrorBoundary extends Component<Props, State> {
                 >
                   Try Again
                 </button>
-              
               {process.env.NODE_ENV === 'development' && this.state.error && (
                 <details className="mt-4 text-left">
                   <summary className="text-sm text-gray-400 cursor-pointer hover:text-gray-300">
                     Error Details (Development)
-                  </summary>,
-                  <pre className="mt-2 text-xs text-red-400 bg-gray-900p-2roundedoverflow-auto">,
+                  </summary>
+                  <pre className="mt-2 text-xs text-red-400 bg-gray-900p-2roundedoverflow-auto">
                     {this.state.error.toString()}
                   </pre>
                 </details>
               )}
-            
-          
         </section>
         {/* Features Section */}
         <section className="py-20 px-4"></section>
@@ -109,7 +88,6 @@ class ErrorBoundary extends Component<Props, State> {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Powerful AI-driven features designed to transform your business operations
               </p>
-            
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
@@ -124,10 +102,7 @@ class ErrorBoundary extends Component<Props, State> {
                       </li>
                     ))}
                   </ul>
-                
               ))}
-            
-          
         </section>
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5"></section>
@@ -137,7 +112,6 @@ class ErrorBoundary extends Component<Props, State> {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the benefits of cutting-edge AI technology
               </p>
-            
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-4"></div>
@@ -166,23 +140,21 @@ class ErrorBoundary extends Component<Props, State> {
           </div>
         </section>
       </div>
-      
 </div>
-
     return this.props.children;
   }
 }
 }export default ErrorBoundaryPage
 error?: Error
 errorInfo?: ErrorInfo}
-class ErrorBoundary extends Component<Props, State>{constructor(props: Props) {,
-super(props);,
+class ErrorBoundary extends Component<Props, State>{constructor(props: Props) {
+super(props);
 this.state = {
- hasError: false,
+ hasError: false
 };
 static getDerivedStateFromError(error: Error): State {return { hasError: true, error}
-componentDidCatch(error: Error, errorInfo: ErrorInfo) {// Log error for monitoring in production,
-if (process.env.NODE_ENV=== 'production') {,
+componentDidCatch(error: Error, errorInfo: ErrorInfo) {// Log error for monitoring in production
+if (process.env.NODE_ENV=== 'production') {
 // In production, you would send this to an error reporting service
 // Example: errorReportingService.captureException(error, { extra: errorInfo});
 this.setState({errorerrorInfo});
@@ -206,7 +178,7 @@ return (
 Error Details (Development)
 </summary>
 <pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto"></p>
-{this.state.error.toString()},
+{this.state.error.toString()}
 {this.state.errorInfo?.componentStack}
 </pre>
 </details>
@@ -236,5 +208,5 @@ className="inline-flex items-center text-cyan-400 hover: text-cyan-300 transitio
 kleber@ziontechgroup.com
 </a>
 </div>
-</div>,
-</div>,
+</div>
+</div>

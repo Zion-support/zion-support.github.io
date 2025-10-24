@@ -3,7 +3,6 @@
 import Footer from './Footer';
 import Navigation from './Navigation';
 import React from 'react';
-
 interface SEOEnhancerProps {
   className?: string;}
 }
@@ -16,5 +15,4 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {
     </div>
   );
 };
-
 export default SEOEnhancer;

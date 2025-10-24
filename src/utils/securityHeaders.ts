@@ -2,9 +2,7 @@
  * Security Headers Configuration
  * Comprehensive security headers for production applications
  */
-
 export interface SecurityHeadersConfig {
-
 ;
   contentSecurityPolicy?: string
   strictTransportSecurity?: string
@@ -15,53 +13,52 @@ export interface SecurityHeadersConfig {
 }
 ;
 export const defaultSecurityHeaders: SecurityHeadersConfig = {;
-  // Content Security Policy,
+  // Content Security Policy
   contentSecurityPolicy: [
     "default-src 'self'"
     "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com"
     "style-src 'self' 'unsafe-inline'"
     "img-src 'self' data: https: blob:"
     "font-src 'self' data: "
-    "connect-src 'self' https://www.google-analytics.com http,
+    "connect-src 'self' https://www.google-analytics.com http
   s://analytics.google.com"
     "frame-ancestors 'none'"
-    "base-uri 'self'",
-:all-pages-backup/utils/securityHeaders.ts,
-    "form-action 'self'",
+    "base-uri 'self'"
+:all-pages-backup/utils/securityHeaders.ts
+    "form-action 'self'"
     "form-action 'self'"
     'upgrade-insecure-requests';
   ].join('; ');
   // HTTP Strict Transport Security (HSTS)
-  strictTransportSecurity: 'max-age=63072000; includeSubDomains; preload',
+  strictTransportSecurity: 'max-age=63072000; includeSubDomains; preload'
 :all-pages-backup/utils/securityHeaders.ts
-  // Prevent clickjacking,
-  xFrameOptions: 'DENY',
-  // Prevent MIME type sniffing,
-  xContentTypeOptions: 'nosniff',
-  // Referrer Policy,
-  referrerPolicy: 'strict-origin-when-cross-origin',
-  // Permissions Policy (formerly Feature Policy)
-  permissionsPolicy: [,
-    'camera=()',
   // Prevent clickjacking
-  xFrameOptions: 'DENY',
+  xFrameOptions: 'DENY'
   // Prevent MIME type sniffing
-  xContentTypeOptions: 'nosniff',
+  xContentTypeOptions: 'nosniff'
   // Referrer Policy
-  referrerPolicy: 'strict-origin-when-cross-origin',
+  referrerPolicy: 'strict-origin-when-cross-origin'
   // Permissions Policy (formerly Feature Policy)
-  permissionsPolicy: [,
-    'camera = ()',
-    'microphone=()',
-    'geolocation=()',
-    'payment=()',
-    'usb=()',
-    'interest-cohort=()',
-    'accelerometer=()',
-    'gyroscope=()',
+  permissionsPolicy: [
+    'camera=()'
+  // Prevent clickjacking
+  xFrameOptions: 'DENY'
+  // Prevent MIME type sniffing
+  xContentTypeOptions: 'nosniff'
+  // Referrer Policy
+  referrerPolicy: 'strict-origin-when-cross-origin'
+  // Permissions Policy (formerly Feature Policy)
+  permissionsPolicy: [
+    'camera = ()'
+    'microphone=()'
+    'geolocation=()'
+    'payment=()'
+    'usb=()'
+    'interest-cohort=()'
+    'accelerometer=()'
+    'gyroscope=()'
     'magnetometer=()'
   ].join(', ');
-
 };
 /**
  * Get security headers as key-value pairs
@@ -77,7 +74,6 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
     'X-XSS-Protection': '1; mode = block'
     'X-DNS-Prefetch-Control': 'on'
   }
-
   if (config.contentSecurityPolicy) {
     headers['Content-Security-Policy'] = config.contentSecurityPolicy
   }
@@ -96,14 +92,12 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
   if (config.permissionsPolicy) {
     headers['Permissions-Policy'] = config.permissionsPolicy
   }
-
   return headers
 }
-
 /**
  * Get security headers in Next.js format
  */;</string>
-export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Array<{ key: string; valu,
+export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Array<{ key: string; valu
   e: string }> {
   const headers = getSecurityHeaders(customConfig);
   return Object.entries(headers).map(([key, value]) => ({
@@ -114,5 +108,4 @@ export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersCon
 :all-pages-backup/utils/securityHeaders.ts
 ;
 export default defaultSecurityHeaders
-
 export default defaultSecurityHeaders;

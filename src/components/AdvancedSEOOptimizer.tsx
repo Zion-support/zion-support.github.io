@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface AdvancedSEOOptimizerProps {
   className?: string;}
 }
@@ -12,5 +11,4 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({ className =
     </div>
   );
 };
-
 export default AdvancedSEOOptimizer;

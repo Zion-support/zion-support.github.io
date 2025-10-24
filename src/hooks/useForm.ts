@@ -6,11 +6,11 @@
 import { useState, useCallback, ChangeEvent } from 'react';
 // import { logger } from '../utils/logger';
 import {
-  ValidationRule,
-  validateField,
-  validateForm,
-  isFormValid,
-  getFormErrors,
+  ValidationRule
+  validateField
+  validateForm
+  isFormValid
+  getFormErrors
   // ValidationResult as _ValidationResult
 } from '../utils/formValidation';
 export interface UseFormConfig<T extends Record<string, unknown>> {
@@ -31,15 +31,15 @@ export interface UseFormReturn<T extends Record<string, unknown>> {
   handleChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;</HTMLInputElement>
   handleBlur: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;</HTMLInputElement>
   handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
-  setFieldValue: (fiel,
+  setFieldValue: (fiel
   d: keyof T, value: T[keyof T]) => void;
-  setFieldError: (fiel,
+  setFieldError: (fiel
   d: keyof T, errors: string[]) => void;
-  setFieldTouched: (fiel,
+  setFieldTouched: (fiel
   d: keyof T, touched: boolean) => void;
   resetForm: () => void;
   validateField: (field: keyof T) => void;
-  validateAllField,
+  validateAllField
   s: () => boolean;
 }</HTMLFormElement>
 export function useForm<T extends Record<string, unknown>>({
@@ -53,14 +53,14 @@ export function useForm<T extends Record<string, unknown>>({
   const validateSingleField = useCallback()
     (field: keyof T): void => {;
       if (!validationSchema[field]) return;
-      const fieldValue = values[field];,
-      const rules = validationSchema[field];,
+      const fieldValue = values[field];
+      const rules = validationSchema[field];
       const result = validateField(fieldValue, rules);
       setErrors(prev => ({
-        ...prev,
+        ...prev
         [field]: result.errors)
       }));
-    },
+    }
     [values, validationSchema]
   );
   // Validate all fields
@@ -78,18 +78,18 @@ export function useForm<T extends Record<string, unknown>>({
       const fieldName = name as keyof T;
       // Handle checkbox inputs
       let fieldValue: unknown = value;
-      if (type === 'checkbox' && 'checked' in e.target) {,
-        fieldValue = (e.target as HTMLInputElement).checked;,
+      if (type === 'checkbox' && 'checked' in e.target) {
+        fieldValue = (e.target as HTMLInputElement).checked;
       }
       setValues(prev => ({
-        ...prev,
+        ...prev
         [fieldName]: fieldValue)
       }));
       // Validate on change if enabled
       if (validateOnChange && touched[fieldName]) {
         setTimeout(() => validateSingleField(fieldName), 0);
       }
-    },
+    }
     [validateOnChange, touched, validateSingleField]
   );
   // Handle input blur
@@ -97,14 +97,14 @@ export function useForm<T extends Record<string, unknown>>({
     (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
       const fieldName = e.target.name as keyof T;
       setTouched(prev => ({
-        ...prev,
+        ...prev
         [fieldName]: true)
       }));
       // Validate on blur if enabled
       if (validateOnBlur) {
         validateSingleField(fieldName);
       }
-    },
+    }
     [validateOnBlur, validateSingleField]
   );
   // Handle form submission
@@ -131,13 +131,13 @@ export function useForm<T extends Record<string, unknown>>({
       } finally {
         setIsSubmitting(false);
       }
-    },
+    }
     [values, validateAllFields, onSubmit]
   );
   // Set field value programmatically
-  const setFieldValue = useCallback((field: keyof T, value: T[keyof T]) => {,
-    setValues(prev => ({,
-      ...prev,
+  const setFieldValue = useCallback((field: keyof T, value: T[keyof T]) => {
+    setValues(prev => ({
+      ...prev
       [field]: value);
     }));
     if (validateOnChange && touched[field]) {
@@ -145,16 +145,16 @@ export function useForm<T extends Record<string, unknown>>({
     }
   }, [validateOnChange, touched, validateSingleField]);
   // Set field error programmatically
-  const setFieldError = useCallback((field: keyof T, fieldErrors: string[]) => {,
-    setErrors(prev => ({,
-      ...prev,
+  const setFieldError = useCallback((field: keyof T, fieldErrors: string[]) => {
+    setErrors(prev => ({
+      ...prev
       [field]: fieldErrors);
     }));
   }, []);
   // Set field touched programmatically
-  const setFieldTouched = useCallback((field: keyof T, isTouched: boolean) => {,
-    setTouched(prev => ({,
-      ...prev,
+  const setFieldTouched = useCallback((field: keyof T, isTouched: boolean) => {
+    setTouched(prev => ({
+      ...prev
       [field]: isTouched);
     }));
   }, []);
@@ -169,19 +169,19 @@ export function useForm<T extends Record<string, unknown>>({
   const isValid = Object.keys(errors).length === 0 || ;
     Object.values(errors).every(errorArray => errorArray.length === 0);
   return {
-    values,
-    errors,
-    touched,
-    isSubmitting,
-    isValid,
-    handleChange,
-    handleBlur,
-    handleSubmit,
-    setFieldValue,
-    setFieldError,
-    setFieldTouched,
-    resetForm,
-    validateField: validateSingleField,
+    values
+    errors
+    touched
+    isSubmitting
+    isValid
+    handleChange
+    handleBlur
+    handleSubmit
+    setFieldValue
+    setFieldError
+    setFieldTouched
+    resetForm
+    validateField: validateSingleField
     validateAllFields
   };
 }</keyof>

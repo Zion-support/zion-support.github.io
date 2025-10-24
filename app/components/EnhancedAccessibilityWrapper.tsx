@@ -1,6 +1,5 @@
 'use client'
 import { React  ReactNode     } from 'react';
-
 interface Props {
   children: ReactNode
 }
@@ -11,5 +10,4 @@ const EnhancedAccessibilityWrapper: React.FC<Props> = ({ children }) => {
     </div>
   );
 };
-
 export default EnhancedAccessibilityWrapper;

@@ -1,30 +1,15 @@
-<<<<<<< HEAD
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-=======
-'use client';
-import React from 'react';
-import  Helmet  from 'react-helmet-async';
-import Navigation  } from '/components/Navigation';
-import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-da11
 
 interface SEOHeadProps {
   title?: string;
   description?: string;
   keywords?: string;
-
-const SEOHead: React.FC<SEOHeadProps> = ({ ,
-  title = "Zion Tech Group - AI Solutions", 
-  description = "Advanced AI solutions for modern businesses", 
+const SEOHead: React.FC<SEOHeadProps> = ({
+  title = "Zion Tech Group - AI Solutions"
+  description = "Advanced AI solutions for modern businesses"
   keywords = "AI, artificial intelligence, technology solutions, business automation" }
 }) => {</SEOHeadProps>
   return (</SEOHeadProps>
     <>
-    
-  
       <Helmet></Helmet>
         <title>{title}</title>
         <meta name="description" content={description} /></meta>
@@ -50,14 +35,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({ ,
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"></button>
                 Get Started</button>
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
                 Learn More</button>
               </button>
-            
-          
-        </section>,
-,
+        </section>
         {/* Features Section */}
         <section className="py-20 px-4"></section>
           <div className="max-w-7xl mx-auto">
@@ -66,13 +48,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({ ,
               <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Discover the powerful features that make SEOHead the perfect solution for your business.</p>
               </p>
-            
-            <div className="grid md:grid-cols-2 l,
+            <div className="grid md:grid-cols-2 l
   g:grid-cols-4 gap-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <h3 className="text-xl font-semibold text-white mb-3">AI-Powered</h3>
                 <p className="text-gray-300">Advanced AI algorithms for intelligent automation.</p>
-              
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"></div>
                 <h3 className="text-xl font-semibold text-white mb-3">Scalable</h3>
                 <p className="text-gray-300">Grows with your business needs and requirements.</p>
@@ -87,8 +67,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({ ,
               </div>
             </div>
           </div>
-        </section>,
-,
+        </section>
         {/* CTA Section */}
         <section className="py-20 px-4"></section>
           <div className="max-w-4xl mx-auto text-center"></div>
@@ -104,7 +83,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({ ,
       </div>
       </Footer>
     </div>
-
   );
 }  )}
 export default SEOHead

@@ -2,15 +2,13 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-
 const Page: React.FC = () => {
   return (
     <>
-    
   </>
       <SEOOptimizer
-        title="Page",
-        description="Professional page services and solutions for your business needs.",
+        title="Page"
+        description="Professional page services and solutions for your business needs."
         keywords = {
 ["page","AI solutions","business automation","technology services"]
 };
@@ -21,7 +19,7 @@ const Page: React.FC = () => {
         <Navigation /></Navigation>
         <main className="container mx-auto px-4 py-16 pt-24"></main>
           <div className="text-center"></div>
-            <h1 className="text-4xl m,
+            <h1 className="text-4xl m
   d:text-5xl font-bold text-white mb-8 neon-text"></h1>
               Page</h1>
             </h1>
@@ -41,5 +39,4 @@ const Page: React.FC = () => {
     </div>
   );
 };
-
 export default Page;

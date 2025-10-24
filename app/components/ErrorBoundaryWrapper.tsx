@@ -1,21 +1,18 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-
 interface Props {
   children: ReactNode;
 }
-
 interface State {
-  hasErro,
+  hasErro
   r: boolean
   error?: Error
-
 class ErrorBoundaryWrapper extends Component<Props, State> {
   constructor(props: Props) {
     super(props)}
     this.state = { hasError: false};
   static getDerivedStateFromError(error: Error): State {
-    return { hasErro,
+    return { hasErro
   r: true, error}
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Log error for debugging in development
@@ -42,9 +39,7 @@ class ErrorBoundaryWrapper extends Component<Props, State> {
         </div>
       );
     }
-
     return this.props.children;
   }
 }
-
 export default ErrorBoundaryWrapper;
