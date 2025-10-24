@@ -11,15 +11,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'ZionTechGroup' }],
   creator: 'ZionTechGroup',
   publisher: 'ZionTechGroup',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
   metadataBase: new URL('https://ziontechgroup.com'),
-  alternates: {
-    canonical: '/',
-  },
   openGraph: {
     title: 'ZionTechGroup - AI Solutions & Technology Services',
     description: 'Leading provider of AI solutions, technology services, and digital transformation for businesses worldwide.',
@@ -28,8 +20,6 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
         alt: 'ZionTechGroup - AI Solutions',
       },
     ],

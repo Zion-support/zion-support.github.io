@@ -1,4 +1,4 @@
-// Performance utility functions
+// Performance utility functions()
 export const performanceUtils = {
-  // Add performance utility functions here
+  // Add performance utility functions here()
 }
