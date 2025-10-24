@@ -10,10 +10,10 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
   wait: number
 ): ((...args: Parameters<T>) => void) => {
-  let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {
+  let timeout: ReturnType<typeof setTimeout>;
+  return (..._args: Parameters<T>) => {
     clearTimeout(timeout)
-    timeout = setTimeout(() => func(...args), wait)
+    timeout = setTimeout(() => func(..._args), wait)
   }
 }
 
@@ -23,9 +23,9 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(
   limit: number
 ): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean;
-  return (...args: Parameters<T>) => {
+  return (..._args: Parameters<T>) => {
     if (!inThrottle) {
-      func(...args)
+      func(..._args)
       inThrottle = true
       setTimeout(() => (inThrottle = false), limit)
     }
@@ -49,7 +49,6 @@ export class PerformanceMonitor {
   trackRender(componentName: string, renderTime: number) {
     this.metrics.set(`${componentName}_render`, renderTime)
     if (process.env['NODE_ENV'] === 'development') {
-       
       console.log(`${componentName} rendered in ${renderTime}ms`)
     }
   }
@@ -203,7 +202,6 @@ export const optimizeScrollPerformance = () => {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         if (process.env['NODE_ENV'] === 'development') {
-           
           console.log('LCP:', entry.startTime)
         }
       }
@@ -289,7 +287,6 @@ export const initializePerformanceEnhancements = () => {
   // Collect performance metrics
   const metrics = collectPerformanceMetrics()
   if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
-     
     console.log('Performance metrics:', metrics)
   }
 }
