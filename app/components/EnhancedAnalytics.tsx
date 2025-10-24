@@ -35,8 +35,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         document.head.appendChild(script);
 
         // Initialize gtag
-        window.gtag = window.gtag || function() {
-          (window.gtag.q = window.gtag.q || []).push(arguments);
+        (window as any).gtag = (window as any).gtag || function() {
+          ((window as any).gtag.q = (window as any).gtag.q || []).push(arguments);
         };
         window.gtag('js', new Date());
         window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX');
