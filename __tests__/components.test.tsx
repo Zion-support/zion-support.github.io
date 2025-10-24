@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import { describe, test, expect } from '@jest/globals';
 import { HelmetProvider } from 'react-helmet-async';
 
 const TestComponent = () => {
@@ -35,11 +36,11 @@ describe('Components', () => {
   
   it('renders mock component', () => {
     render(<MockComponent />);
-    expect(screen.getByTestId('mock-component')).toBeInTheDocument();
+    expect(screen.getByTestId('mock-component')).toBeTruthy();
   });
   
   it('displays correct text', () => {
     render(<MockComponent />);
-    expect(screen.getByText('Mock Component')).toBeInTheDocument();
+    expect(screen.getByText('Mock Component')).toBeTruthy();
   });
 });

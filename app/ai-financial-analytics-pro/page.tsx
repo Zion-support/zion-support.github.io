@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 import { ArrowRight, Calculator, Building2, Wallet, TrendingUp, CheckCircle, Brain, BarChart3, Shield, Target, Zap, Globe, DollarSign, Activity, Lock, FileText, CreditCard, Database, Star, Sparkles, PieChart } from 'lucide-react';
 import { Metadata } from 'next';

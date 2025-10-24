@@ -4,7 +4,7 @@ import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
 interface OptimizedErrorBoundaryProps {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (_error: Error, _errorInfo: ErrorInfo) => void;
   resetOnPropsChange?: boolean;
   resetKeys?: Array<string | number>;
 }
@@ -47,7 +47,7 @@ class OptimizedErrorBoundary extends Component<
     });
     // Log error to console in development
     if (process.env['NODE_ENV'] === 'development') {
-
+      console.error('Error caught by boundary:', error, errorInfo);
     }
 
     // Call custom error handler if provided
@@ -96,9 +96,9 @@ class OptimizedErrorBoundary extends Component<
       const gtag = (
         window as unknown as {
           gtag: (
-            command: string,
-            action: string,
-            parameters: Record<string, unknown>
+            _command: string,
+            _action: string,
+            _parameters: Record<string, unknown>
           ) => void
         }
       ).gtag;
@@ -159,7 +159,7 @@ interface ErrorFallbackProps {
   onRetry: () => void;
 }
 
-const ErrorFallback = memo<ErrorFallbackProps>(
+const ErrorFallback = React.memo<ErrorFallbackProps>(
   ({ error, errorInfo, errorId, onRetry }) => (
     <div className='min-h-screen flex items-center justify-center bg-gray-50 px-4'>
       <div className='max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center'>

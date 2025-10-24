@@ -1,183 +1,111 @@
 #!/usr/bin/env python3
 """
-Comprehensive merge conflict resolution script for Zion Tech Group website.
-This script will systematically resolve merge conflicts by accepting the current version
-and removing deleted files as specified in the user requirements.
+Script to resolve merge conflicts systematically by:
+1. Identifying files that were deleted in main but modified in feature branches
+2. Deciding whether to keep, delete, or merge these files
+3. Resolving content conflicts in files that exist in both branches
 """
 
 import subprocess
 import os
 import sys
-import re
 from pathlib import Path
 
 def run_command(cmd, cwd=None):
-    """Run a shell command and return the result."""
+    """Run a shell command and return the output"""
     try:
-        result = subprocess.run(cmd, shell=True, cwd=cwd, capture_output=True, text=True)
-        return result.returncode == 0, result.stdout, result.stderr
+        result = subprocess.run(cmd, shell=True, capture_output=True, text=True, cwd=cwd)
+        return result.returncode, result.stdout, result.stderr
     except Exception as e:
-        return False, "", str(e)
+        print(f"Error running command '{cmd}': {e}")
+        return -1, "", str(e)
 
 def get_conflicted_files():
-    """Get list of files with merge conflicts."""
-    success, stdout, stderr = run_command("git status --porcelain")
-    if not success:
-        print(f"Error getting git status: {stderr}")
-        return []
-    
+    """Get list of files with merge conflicts"""
+    _, stdout, _ = run_command("git status --porcelain")
     conflicted_files = []
     for line in stdout.split('\n'):
-        if line.startswith('UU') or line.startswith('AA') or line.startswith('DD'):
+        if line.startswith('UU') or line.startswith('AU') or line.startswith('UA') or line.startswith('DD') or line.startswith('DU') or line.startswith('UD'):
             file_path = line[3:].strip()
             conflicted_files.append(file_path)
-    
     return conflicted_files
 
-def resolve_merge_conflicts():
-    """Resolve all merge conflicts by accepting current version and removing deleted files."""
-    print("🔍 Checking for merge conflicts...")
+def resolve_modify_delete_conflicts():
+    """Resolve modify/delete conflicts by keeping the modified version"""
+    print("Resolving modify/delete conflicts...")
     
-    # Get list of conflicted files
-    conflicted_files = get_conflicted_files()
+    # Get all conflicted files
+    _, stdout, _ = run_command("git status --porcelain")
+    modify_delete_files = []
     
-    if not conflicted_files:
-        print("✅ No merge conflicts found.")
-        return True
-    
-    print(f"📋 Found {len(conflicted_files)} files with conflicts:")
-    for file_path in conflicted_files:
-        print(f"  - {file_path}")
-    
-    print("\n🔧 Resolving conflicts...")
-    
-    # Strategy: Accept current version for all conflicts
-    for file_path in conflicted_files:
-        print(f"  Processing: {file_path}")
-        
-        # Check if file exists in current branch
-        if os.path.exists(file_path):
-            # Add the file to resolve the conflict
-            success, stdout, stderr = run_command(f"git add {file_path}")
-            if success:
-                print(f"    ✅ Added {file_path}")
-            else:
-                print(f"    ❌ Failed to add {file_path}: {stderr}")
-        else:
-            # File was deleted in current branch, remove it
-            success, stdout, stderr = run_command(f"git rm {file_path}")
-            if success:
-                print(f"    ✅ Removed deleted file {file_path}")
-            else:
-                print(f"    ❌ Failed to remove {file_path}: {stderr}")
-    
-    # Check if all conflicts are resolved
-    remaining_conflicts = get_conflicted_files()
-    if remaining_conflicts:
-        print(f"⚠️  Still {len(remaining_conflicts)} files with conflicts:")
-        for file_path in remaining_conflicts:
-            print(f"  - {file_path}")
-        return False
-    
-    print("✅ All merge conflicts resolved!")
-    return True
-
-def merge_branch(branch_name):
-    """Merge a specific branch into main."""
-    print(f"\n🔄 Attempting to merge {branch_name}...")
-    
-    # Try to merge the branch
-    success, stdout, stderr = run_command(f"git merge origin/{branch_name} --no-commit")
-    
-    if success:
-        print(f"✅ {branch_name} merged successfully (no conflicts)")
-        return True
-    else:
-        if "CONFLICT" in stderr or "conflict" in stderr:
-            print(f"⚠️  {branch_name} has merge conflicts, resolving...")
-            if resolve_merge_conflicts():
-                print(f"✅ {branch_name} conflicts resolved")
-                return True
-            else:
-                print(f"❌ Failed to resolve conflicts for {branch_name}")
-                return False
-        else:
-            print(f"❌ Failed to merge {branch_name}: {stderr}")
-            return False
-
-def get_recent_branches():
-    """Get list of recent branches to merge."""
-    success, stdout, stderr = run_command("git branch -r --sort=-committerdate | head -20")
-    if not success:
-        print(f"Error getting branches: {stderr}")
-        return []
-    
-    branches = []
     for line in stdout.split('\n'):
-        line = line.strip()
-        if line and not line.startswith('origin/HEAD') and not line.startswith('origin/main'):
-            branch_name = line.replace('origin/', '')
-            if 'cursor/fix-errors-and-merge-to-main' in branch_name or 'cursor/delete-old-data-records' in branch_name:
-                branches.append(branch_name)
+        if line.startswith('DU') or line.startswith('UD'):  # Deleted in one branch, modified in other
+            file_path = line[3:].strip()
+            modify_delete_files.append(file_path)
+            print(f"  - {file_path} (modify/delete conflict)")
     
-    return branches
+    # For modify/delete conflicts, we'll keep the modified version
+    for file_path in modify_delete_files:
+        print(f"  Keeping modified version of {file_path}")
+        run_command(f"git add {file_path}")
+    
+    return modify_delete_files
+
+def resolve_content_conflicts():
+    """Resolve content conflicts by choosing the main branch version"""
+    print("Resolving content conflicts...")
+    
+    # Get files with content conflicts
+    _, stdout, _ = run_command("git status --porcelain")
+    content_conflict_files = []
+    
+    for line in stdout.split('\n'):
+        if line.startswith('UU'):  # Both modified
+            file_path = line[3:].strip()
+            content_conflict_files.append(file_path)
+            print(f"  - {file_path} (content conflict)")
+    
+    # For content conflicts, we'll use the main branch version
+    for file_path in content_conflict_files:
+        print(f"  Using main branch version of {file_path}")
+        run_command(f"git checkout --ours {file_path}")
+        run_command(f"git add {file_path}")
+    
+    return content_conflict_files
 
 def main():
-    """Main function to resolve all merge conflicts and merge branches."""
-    print("🚀 Starting comprehensive merge conflict resolution...")
+    print("Starting merge conflict resolution...")
     
-    # Ensure we're on main branch
-    success, stdout, stderr = run_command("git checkout main")
-    if not success:
-        print(f"❌ Failed to checkout main: {stderr}")
-        return False
+    # Check if we're in a merge state
+    _, stdout, _ = run_command("git status")
+    if "You have unmerged paths" not in stdout:
+        print("No merge conflicts detected.")
+        return
     
-    # Pull latest changes
-    print("📥 Pulling latest changes...")
-    success, stdout, stderr = run_command("git pull origin main")
-    if not success:
-        print(f"❌ Failed to pull latest changes: {stderr}")
-        return False
+    print("Merge conflicts detected. Starting resolution...")
     
-    # Get recent branches
-    branches = get_recent_branches()
-    print(f"📋 Found {len(branches)} recent branches to process:")
-    for branch in branches[:10]:  # Show first 10
-        print(f"  - {branch}")
+    # Resolve modify/delete conflicts
+    modify_delete_files = resolve_modify_delete_conflicts()
     
-    # Process each branch
-    successful_merges = 0
-    failed_merges = 0
+    # Resolve content conflicts
+    content_conflict_files = resolve_content_conflicts()
     
-    for branch in branches:
-        if merge_branch(branch):
-            successful_merges += 1
-            # Commit the merge
-            success, stdout, stderr = run_command(f"git commit -m 'Merge {branch} - conflicts resolved'")
-            if success:
-                print(f"✅ Committed merge for {branch}")
-            else:
-                print(f"⚠️  Merge successful but commit failed for {branch}: {stderr}")
-        else:
-            failed_merges += 1
-            # Abort the merge
-            run_command("git merge --abort")
-    
-    print(f"\n📊 Merge Summary:")
-    print(f"  ✅ Successful merges: {successful_merges}")
-    print(f"  ❌ Failed merges: {failed_merges}")
-    
-    # Push changes
-    if successful_merges > 0:
-        print("\n📤 Pushing changes to main...")
-        success, stdout, stderr = run_command("git push origin main")
-        if success:
-            print("✅ Changes pushed successfully")
-        else:
-            print(f"❌ Failed to push changes: {stderr}")
-    
-    return successful_merges > 0
+    # Check remaining conflicts
+    conflicted_files = get_conflicted_files()
+    if conflicted_files:
+        print(f"Remaining conflicts: {conflicted_files}")
+        print("Manual resolution may be required for these files.")
+    else:
+        print("All conflicts resolved!")
+        
+        # Commit the merge
+        print("Committing merge...")
+        run_command("git commit -m 'Resolve merge conflicts: keep main branch structure, integrate useful features'")
+        
+        # Verify the merge
+        print("Verifying merge...")
+        run_command("npm run build")
+        run_command("npm test")
 
 if __name__ == "__main__":
-    success = main()
-    sys.exit(0 if success else 1)
+    main()

@@ -1,26 +1,28 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Users, BarChart, CheckCircle, Brain, Target } from 'lucide-react';
+import { ArrowRight, CheckCircle, Brain } from 'lucide-react';
+
+
 const AIProjectManagementProPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
+      icon: 'Brain',
     title: 'AI Project Planning',
       description: 'Intelligent project planning with AI-powered task breakdown, resource allocation, and timeline optimization.'
 },
   {
-    icon: Users,
+    icon: 'Users',
     title: 'Team Collaboration',
       description: 'Enhanced team collaboration with AI-powered communication, task assignment, and progress tracking.'
 },
   {
-    icon: BarChart,
+    icon: 'BarChart',
     title: 'Advanced Analytics',
       description: 'Comprehensive project analytics with AI insights, performance metrics, and predictive forecasting.'
 },
   {
-    icon: Target,
+    icon: 'Target',
     title: 'Smart Resource Management',
     description: 'AI-driven resource allocation and workload balancing for optimal team productivity.'}
   ]

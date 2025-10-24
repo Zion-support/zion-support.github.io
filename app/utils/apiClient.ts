@@ -1,86 +1,137 @@
 // API Client for making HTTP requests
-import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
+import logger from './logger';
 
-interface ApiClientConfig {
-  baseURL?: string;
+// Type declaration for RequestInit if not available
+declare global {
+  interface RequestInit {
+    timeout?: number;
+    retries?: number;
+  }
+}
+
+export interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  statusText: string;
+  headers: Record<string, string>;
+}
+
+export interface RequestOptions {
   timeout?: number;
   retries?: number;
+  headers?: Record<string, string>;
 }
 
 class ApiClient {
-  private client: AxiosInstance;
-  private retries: number;
+  private baseURL: string;
+  private defaultOptions: RequestOptions;
 
-  constructor(config: ApiClientConfig = {}) {
-    this.retries = config.retries || 3;
-    
-    this.client = axios.create({
-      baseURL: config.baseURL || process.env.NEXT_PUBLIC_API_URL || '/api',
-      timeout: config.timeout || 30000,
+  constructor(baseURL = '', options: RequestOptions = {}) {
+    this.baseURL = baseURL;
+    this.defaultOptions = {
+      timeout: 30000,
+      retries: 3,
+      ...options,
+    };
+  }
+
+  private async makeRequest<T>(
+    url: string,
+    options: RequestInit & RequestOptions = {}
+  ): Promise<ApiResponse<T>> {
+    const {
+      timeout = this.defaultOptions.timeout,
+      retries = this.defaultOptions.retries,
+      ...fetchOptions
+    } = options;
+
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), timeout);
+
+    try {
+      const response = await fetch(url, {
+        ...fetchOptions,
+        signal: controller.signal,
+      });
+
+      clearTimeout(timeoutId);
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      return {
+        data,
+        status: response.status,
+        statusText: response.statusText,
+        headers: Object.fromEntries(response.headers.entries()),
+      };
+    } catch (error) {
+      clearTimeout(timeoutId);
+      
+      if (retries > 0 && error instanceof Error && error.name === 'AbortError') {
+        logger.warn(`Request failed, retrying... (${retries} retries left)`, {
+          url,
+          error: error.message,
+        });
+        return this.makeRequest<T>(url, { ...options, retries: retries - 1 });
+      }
+
+      throw error;
+    }
+  }
+
+  async get<T>(url: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
+    return this.makeRequest<T>(`${this.baseURL}${url}`, {
+      method: 'GET',
+      ...options,
+    });
+  }
+
+  async post<T>(url: string, data?: unknown, options: RequestOptions = {}): Promise<ApiResponse<T>> {
+    return this.makeRequest<T>(`${this.baseURL}${url}`, {
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        ...options.headers,
       },
+      body: data ? JSON.stringify(data) : undefined,
+      ...options,
     });
-
-    this.setupInterceptors();
   }
 
-  private setupInterceptors() {
-    // Request interceptor
-    this.client.interceptors.request.use(
-      (config) => {
-        // Add auth token if available
-        if (typeof window !== 'undefined') {
-          const token = localStorage.getItem('authToken');
-          if (token) {
-            config.headers.Authorization = `Bearer ${token}`;
-          }
-        }
-        return config;
+  async put<T>(url: string, data?: unknown, options: RequestOptions = {}): Promise<ApiResponse<T>> {
+    return this.makeRequest<T>(`${this.baseURL}${url}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        ...options.headers,
       },
-      (error) => {
-        return Promise.reject(error);
-      }
-    );
-
-    // Response interceptor
-    this.client.interceptors.response.use(
-      (response) => response,
-      async (error) => {
-        const originalRequest = error.config;
-
-        // Retry logic for network errors
-        if (error.code === 'NETWORK_ERROR' && originalRequest && !originalRequest._retry) {
-          originalRequest._retry = true;
-          return this.client(originalRequest);
-        }
-
-        return Promise.reject(error);
-      }
-    );
+      body: data ? JSON.stringify(data) : undefined,
+      ...options,
+    });
   }
 
-  async get<T>(url: string, config?: AxiosRequestConfig): Promise<AxiosResponse<T>> {
-    return this.client.get<T>(url, config);
+  async patch<T>(url: string, data?: unknown, options: RequestOptions = {}): Promise<ApiResponse<T>> {
+    return this.makeRequest<T>(`${this.baseURL}${url}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+        ...options.headers,
+      },
+      body: data ? JSON.stringify(data) : undefined,
+      ...options,
+    });
   }
 
-  async post<T>(url: string, data?: any, config?: AxiosRequestConfig): Promise<AxiosResponse<T>> {
-    return this.client.post<T>(url, data, config);
-  }
-
-  async put<T>(url: string, data?: any, config?: AxiosRequestConfig): Promise<AxiosResponse<T>> {
-    return this.client.put<T>(url, data, config);
-  }
-
-  async patch<T>(url: string, data?: any, config?: AxiosRequestConfig): Promise<AxiosResponse<T>> {
-    return this.client.patch<T>(url, data, config);
-  }
-
-  async delete<T>(url: string, config?: AxiosRequestConfig): Promise<AxiosResponse<T>> {
-    return this.client.delete<T>(url, config);
+  async delete<T>(url: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
+    return this.makeRequest<T>(`${this.baseURL}${url}`, {
+      method: 'DELETE',
+      ...options,
+    });
   }
 }
 
-// Create and export a singleton instance
 export const apiClient = new ApiClient();
 export default apiClient;

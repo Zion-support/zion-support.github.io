@@ -1,7 +1,9 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { Brain, Globe, Shield, Zap } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+
+
 const teamMembers = [
   {
     id: 1,
@@ -54,19 +56,19 @@ const teamMembers = [
 ]
 const values = [
   {
-    icon: Brain,
+    icon: 'Brain',
     title: "Innovation",
       description: "We constantly push the boundaries of what's possible with AI and technology."},
   {
-    icon: Globe,
+    icon: 'Globe',
     title: "Global Impact",
       description: "Our solutions create positive change for businesses and communities worldwide."},
   {
-    icon: Shield,
+    icon: 'Shield',
     title: "Trust & Security",
       description: "We prioritize data security and ethical AI practices in everything we do."},
   {
-    icon: Zap,
+    icon: 'Zap',
     title: "Excellence",
     description: "We deliver exceptional results through meticulous attention to detail."}
   ]

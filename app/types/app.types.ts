@@ -1,13 +1,11 @@
-// Type definitions for app types
-
+"use client";
 export interface User {
   id: string;
   email: string;
   name: string;
-  role: 'admin' | 'user' | 'guest';
+  role: "admin" | "user" | "guest";
 }
-
-export interface Product {
+export interface Service {
   id: string;
   title: string;
   description: string;
@@ -19,12 +17,6 @@ export interface Product {
     pro: number;
     enterprise: number;
   };
-}
-
-export interface Service {
-  id: string;
-  name: string;
-  description: string;
   benefits: string[];
   useCases: string[];
   marketPrice: string;
@@ -35,7 +27,6 @@ export interface Service {
   };
   link: string;
 }
-
 export interface ContactFormData {
   name: string;
   email: string;
@@ -43,13 +34,11 @@ export interface ContactFormData {
   message: string;
   service: string;
 }
-
 export interface AnalyticsEvent {
   name: string;
   timestamp: number;
   properties?: Record<string, string | number | boolean | null>;
 }
-
 export interface PerformanceMetrics {
   loadTime: number;
   firstContentfulPaint: number;
@@ -57,7 +46,6 @@ export interface PerformanceMetrics {
   cumulativeLayoutShift: number;
   firstInputDelay: number;
 }
-
 export interface ErrorContext {
   url?: string;
   userAgent?: string;
@@ -67,7 +55,6 @@ export interface ErrorContext {
   component?: string;
   action?: string;
 }
-
 export interface ErrorReport {
   id: string;
   message: string;
@@ -77,5 +64,4 @@ export interface ErrorReport {
   resolved: boolean;
   createdAt: string;
 }
-
-export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical';
+export type ErrorSeverity = "low" | "medium" | "high" | "critical";

@@ -7,14 +7,6 @@ interface AdvancedErrorBoundaryProps {
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
-interface ErrorReport {
-  errorId: string;
-  error: Error;
-  errorInfo: ErrorInfo;
-  timestamp: string;
-  userAgent: string;
-  url: string;
-}
 
 interface State {
   hasError: boolean;
