@@ -79,7 +79,10 @@ const PerformanceMonitor: React.FC = () => {
         const observer = new PerformanceObserver((list) => {
           list.getEntries().forEach((entry) => {
             if (entry.entryType === 'resource' && process.env.NODE_ENV === 'development') {
+<<<<<<< HEAD
               // eslint-disable-next-line no-console
+=======
+>>>>>>> 54464176d1328ffcbd6f798a35c8ffb481d623c3
               console.log('Resource loaded:', entry.name, entry.duration);
             }
           });
