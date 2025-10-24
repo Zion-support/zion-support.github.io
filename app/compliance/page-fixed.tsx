@@ -60,7 +60,11 @@ const CompliancePageFixed: React.FC = () => {
               </button>
             </div>
           </div>
+<<<<<<< HEAD
+      </section>
+=======
         </section>
+>>>>>>> origin/main
 
 <<<<<<< HEAD
       {/* Stats Section */}
