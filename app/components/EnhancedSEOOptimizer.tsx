@@ -1,158 +1,111 @@
-'use client'
-import React from 'react'
-<<<<<<< HEAD
-import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe } from 'lucide-react'
-=======
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Target, Mail, BarChart, Brain, TrendingUp } from 'lucide-react'
-import { ArrowRight, Target, Mail, BarChart, Brain, TrendingUp } from 'lucide-react'
-import { ArrowRight, Target, Mail, BarChart, Brain, TrendingUp } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
+'use client';
+import React from 'react';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe } from 'lucide-react';
 
 const EnhancedSEOOptimizerPage: React.FC = () => {
   const features = [
     {
-      icon: Brain
-      title: 'AI-Powered SEO'
-      description: 'Advanced AI algorithms that optimize your content for search engines automatically.'
-      benefits: ['Keyword optimization', 'Content analysis', 'Ranking predictions', 'Competitor insights']
-    }
+      icon: Target,
+      title: 'Keyword Research',
+      description: 'Advanced AI-powered keyword research and analysis tools'
+    },
     {
-      icon: BarChart
-      title: 'Performance Analytics'
-      description: 'Comprehensive SEO analytics dashboard with real-time performance metrics.'
-      benefits: ['Ranking tracking', 'Traffic analysis', 'Conversion metrics', 'ROI reporting']
-    }
+      icon: BarChart,
+      title: 'Analytics Dashboard',
+      description: 'Comprehensive SEO performance tracking and reporting'
+    },
     {
-      icon: Target
-      title: 'Precision Targeting'
-      description: 'Target specific keywords and audiences with precision and accuracy.'
-      benefits: ['Keyword research', 'Audience targeting', 'Content optimization', 'Link building']
-    }
+      icon: Brain,
+      title: 'AI Optimization',
+      description: 'Machine learning algorithms for content optimization'
+    },
     {
-      icon: TrendingUp
-      title: 'Growth Optimization'
-      description: 'Optimize your SEO strategy for maximum growth and visibility.'
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+      icon: TrendingUp,
+      title: 'Rank Tracking',
+      description: 'Monitor your search engine rankings in real-time'
     }
-  ]
+  ];
 
   const benefits = [
-    'Increase organic traffic by up to 300%'
-    'Reduce SEO costs by 50% with automation'
-    'Improve search rankings with AI insights'
-    'Scale SEO efforts without proportional resource increases'
-    'Gain competitive advantage with advanced SEO technology'
-  ]
+    'Increase organic traffic by up to 300%',
+    'Improve search engine rankings',
+    'AI-powered content optimization',
+    'Real-time performance monitoring',
+    'Competitor analysis tools',
+    'Automated SEO reports'
+  ];
 
   return (
-    <div className="min-h-s creenbg-gradient-to-br from-gray-50 to-blue-50">
-      {/* Hero Section */}
-      <section className="rel ativepy-20 px-4 overflow-hidden">
-        <div className="abs oluteinset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-        <div className="rel ativemax-w-7xl mx-auto text-center">
-          <h1 className="tex t-4xlmd: text-6xl font-bold text-gray-900 mb-6">
-            <span className="tex t-transparentbg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">
-              Enhanced SEO Optimizer
-            </span>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Enhanced SEO Optimizer
           </h1>
-          <p className="tex t-xltext-gray-600 mb-8 max-w-3xl mx-auto">
-            Boost your search engine rankings with our AI-powered SEO optimization tools and strategies.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Boost your website's search engine visibility with our advanced AI-powered SEO optimization tools.
           </p>
-          <div className="fle xflex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-em erald-600hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-              Get Started
-              <ArrowRight className="w-8h-8" />
-            </button>
-            <button className="bor derborder-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-              Learn More
-            </button>
-          </div>
         </div>
-      </section>
 
-      {/* Features Section */}
-      <section className="py-20px-4">
-        <div className="max-w-7x lmx-auto">
-          <div className="tex t-centermb-16">
-            <h2 className="tex t-3xlmd: text-4xl font-bold text-gray-900 mb-4">
-              Our SEO Features
-            </h2>
-            <p className="tex t-xltext-gray-600 max-w-2xl mx-auto">
-              Comprehensive SEO optimization tools designed to boost your search engine rankings.
-            </p>
-          </div>
-          <div className="gri dgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-wh itep-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow duration-300">
-                <div className="fle xitems-center justify-center w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg mb-4">
-                  <feature.icon className="h-6w-6te x t-white" />
-                </div>
-                <h3 className="tex t-xlfont-semibold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="tex t-gray-600mb-4">{feature.description}</p>
-                <ul className="spa ce-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="fle xitems-center text-sm text-gray-600">
-                      <CheckCircle className="w-4h-4mr-2 t e xt-emerald-500" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
+        {/* Features Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {features.map((feature, index) => (
+            <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+              <div className="inline-flex p-3 rounded-lg bg-blue-600/20 mb-4">
+                <feature.icon className="w-8 h-8 text-blue-400" />
               </div>
-            ))}
-<<<<<<< HEAD
-=======
-          </div>;
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+              <h3 className="text-xl font-semibold text-white mb-3">
+                {feature.title}
+              </h3>
+              <p className="text-gray-300">
+                {feature.description}
+              </p>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
-          </div>
+          ))}
         </div>
-      </section>
 
-      {/* Benefits Section */}
-      <section className = "py-20 px-4 bg-white/5">
-        <div className="max-w-7x lmx-auto">
-          <div className="tex t-centermb-16">
-            <h2 className="tex t-3xlmd: text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Our SEO Optimizer?
-            </h2>
-            <p className="tex t-xltext-gray-600 max-w-2xl mx-auto">
-              Our proven track record and innovative approach deliver measurable results.
-            </p>
-          </div>
-          <div className="gri dgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Benefits Section */}
+        <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 mb-16">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">
+            Why Choose Our SEO Optimizer?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="fle xitems-start space-x-3">
-                <CheckCircle className="w-6h-6te x t-emerald-500 mt-1" />
-                <p className="tex t-gray-700text-lg">{benefit}</p>
+              <div key={index} className="flex items-center">
+                <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                <span className="text-gray-300">{benefit}</span>
               </div>
             ))}
           </div>
         </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-20px-4">
-        <div className="max-w-4x lmx-auto text-center">
-          <h2 className="tex t-3xlmd: text-4xl font-bold text-gray-900 mb-4">
-            Ready to Boost Your SEO Rankings?
+        {/* CTA Section */}
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Boost Your SEO?
           </h2>
-          <p className="tex t-xltext-gray-600 mb-8">
-            Let's discuss how our SEO optimizer can help you achieve better search engine visibility.
+          <p className="text-xl text-gray-300 mb-8">
+            Get started with our AI-powered SEO optimization tools today.
           </p>
-          <button className="bg-bl ue-600hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center mx-auto">
-            Start Your Journey
-            <ArrowRight className="w-8h-8" />
-          </button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center"
+            >
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </a>
+            <a
+              href="/pricing"
+              className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors"
+            >
+              View Pricing
+            </a>
+          </div>
         </div>
-      </section>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-<<<<<<< HEAD
-export default EnhancedSEOOptimizerPage
-=======
-export default EnhancedSEOOptimizerPage
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
+export default EnhancedSEOOptimizerPage;
