@@ -4,5 +4,3 @@ export const accessibilityUtils = () => {
 };
 
 export default accessibilityUtils;
-
-"use client"

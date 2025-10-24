@@ -1,5 +1,4 @@
 import { useRef, useEffect } from 'react'
-'use client'
 /**
  * Performance Enhancement Utilities
  * Advanced performance optimization tools for the application
