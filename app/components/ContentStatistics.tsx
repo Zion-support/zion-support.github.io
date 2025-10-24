@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
 const ContentStatistics: React.FC = () => {
@@ -12,14 +12,14 @@ const ContentStatistics: React.FC = () => {
     uptime: 0
   })
 
-  const targetCounters = {
+  const targetCounters = useMemo(() => ({
     clients: 1000,
     projects: 500,
     satisfaction: 99,
     years: 10,
     countries: 25,
     uptime: 99.9
-  }
+  }), [])
 
   useEffect(() => {
     const duration = 2000
@@ -45,7 +45,7 @@ const ContentStatistics: React.FC = () => {
       })
     }, stepDuration)
     return () => clearInterval(interval)
-  }, [])
+  }, [targetCounters])
 
   const statistics = [
     {

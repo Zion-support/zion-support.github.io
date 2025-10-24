@@ -1,39 +1,12 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 
 const AccessibilityEnhancer: React.FC = () => {
   const [isHighContrast, setIsHighContrast] = useState(false)
   const [isReducedMotion, setIsReducedMotion] = useState(false)
   const [fontSize, setFontSize] = useState(16)
 
-  useEffect(() => {
-    // Check for user preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches
-    
-    setIsReducedMotion(prefersReducedMotion)
-    setIsHighContrast(prefersHighContrast)
-
-    // Apply accessibility enhancements
-    applyAccessibilityEnhancements()
-
-    // Listen for preference changes
-    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
-    const contrastQuery = window.matchMedia('(prefers-contrast: high)')
-    
-    const handleMotionChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches)
-    const handleContrastChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches)
-    
-    motionQuery.addEventListener('change', handleMotionChange)
-    contrastQuery.addEventListener('change', handleContrastChange)
-
-    return () => {
-      motionQuery.removeEventListener('change', handleMotionChange)
-      contrastQuery.removeEventListener('change', handleContrastChange)
-    }
-  }, [])
-
-  const applyAccessibilityEnhancements = () => {
+  const applyAccessibilityEnhancements = useCallback(() => {
     // Add focus indicators
     const style = document.createElement('style')
     style.textContent = `
@@ -103,7 +76,34 @@ const AccessibilityEnhancer: React.FC = () => {
     
     // Enhance keyboard navigation
     enhanceKeyboardNavigation()
-  }
+  }, [])
+
+  useEffect(() => {
+    // Check for user preferences
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches
+    
+    setIsReducedMotion(prefersReducedMotion)
+    setIsHighContrast(prefersHighContrast)
+
+    // Apply accessibility enhancements
+    applyAccessibilityEnhancements()
+
+    // Listen for preference changes
+    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const contrastQuery = window.matchMedia('(prefers-contrast: high)')
+    
+    const handleMotionChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches)
+    const handleContrastChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches)
+    
+    motionQuery.addEventListener('change', handleMotionChange)
+    contrastQuery.addEventListener('change', handleContrastChange)
+
+    return () => {
+      motionQuery.removeEventListener('change', handleMotionChange)
+      contrastQuery.removeEventListener('change', handleContrastChange)
+    }
+  }, [applyAccessibilityEnhancements])
 
   const addSkipLinks = () => {
     const skipLinks = document.createElement('div')

@@ -8,13 +8,31 @@ export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      company: "TechCorp Inc.",
+      content: "Zion Tech transformed our entire digital infrastructure. The AI solutions they implemented increased our efficiency by 300%."
+    },
+    {
+      name: "Michael Chen",
+      company: "Global Finance Ltd.",
+      content: "Outstanding cybersecurity implementation. We've had zero security incidents since partnering with Zion Tech."
+    },
+    {
+      name: "Emily Rodriguez",
+      company: "InnovateStart",
+      content: "The cloud migration was seamless. Our applications now run 5x faster with 99.9% uptime."
+    }
+  ];
+
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [testimonials.length]);
 
   const features = [
     {
@@ -46,24 +64,6 @@ export default function HomePage() {
     "Digital Transformation",
     "Data Analytics",
     "Blockchain Technology"
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "TechCorp Inc.",
-      content: "Zion Tech transformed our entire digital infrastructure. The AI solutions they implemented increased our efficiency by 300%."
-    },
-    {
-      name: "Michael Chen",
-      company: "Global Finance Ltd.",
-      content: "Outstanding cybersecurity implementation. We've had zero security incidents since partnering with Zion Tech."
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "InnovateStart",
-      content: "The cloud migration was seamless. Our applications now run 5x faster with 99.9% uptime."
-    }
   ];
 
   return (

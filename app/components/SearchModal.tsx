@@ -195,7 +195,7 @@ const SearchModal: React.FC<SearchModalProps> = ({
                 ) : (
                   <div className="text-center py-8">
                     <Search className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                    <p className="text-gray-400">No results found for "{query}"</p>
+                    <p className="text-gray-400">No results found for &quot;{query}&quot;</p>
                   </div>
                 )}
               </div>

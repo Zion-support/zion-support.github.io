@@ -22,8 +22,8 @@ const PerformanceMonitor: React.FC = () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       const paintEntries = performance.getEntriesByType('paint')
       
-      const loadTime = navigation.loadEventEnd - navigation.navigationStart
-      const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.navigationStart
+      const loadTime = navigation.loadEventEnd - navigation.fetchStart
+      const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.fetchStart
       
       const firstPaint = paintEntries.find(entry => entry.name === 'first-paint')?.startTime || 0
       const firstContentfulPaint = paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0

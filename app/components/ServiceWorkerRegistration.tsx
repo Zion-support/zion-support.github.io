@@ -7,7 +7,7 @@ const ServiceWorkerRegistration: React.FC = () => {
       const registerSW = async () => {
         try {
           const registration = await navigator.serviceWorker.register('/sw.js')
-          console.log('Service Worker registered successfully:', registration)
+          // Service Worker registered successfully
           
           // Handle updates
           registration.addEventListener('updatefound', () => {
