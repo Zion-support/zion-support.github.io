@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect} from 'react';
 
 /**
  * Performance Enhancement Utilities
@@ -36,17 +36,18 @@ export const throttle = <T extends (..._args: unknown[]) => unknown>(
 
 // Performance monitoring utilities
 export class PerformanceMonitor {
+
   private static instance: PerformanceMonitor;
   private metrics: Map<string, number> = new Map()
   private observers: PerformanceObserver[] = [];
 
   static getInstance(): PerformanceMonitor {
+
     if (!PerformanceMonitor.instance) {
       PerformanceMonitor.instance = new PerformanceMonitor()
     }
-    return PerformanceMonitor.instance
-  }
-
+    return PerformanceMonitor.instance;
+}
   // Track component render time
   trackRender(componentName: string, renderTime: number) {
     this.metrics.set(`${componentName}_render`, renderTime);
@@ -58,7 +59,7 @@ export class PerformanceMonitor {
   // Track memory usage
   trackMemory(componentName: string) {
     if ('memory' in performance) {
-      const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory
+      const memory = (performance as { memory?: { usedJSHeapSize: number} }).memory
       if (memory) {
         this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize)
       }
@@ -78,8 +79,8 @@ export class PerformanceMonitor {
   // Monitor long tasks
   startLongTaskMonitoring() {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
-      return
-    }
+      return;
+}
     const observer = new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {
         if (entry.duration > 50) { // Tasks longer than 50ms
@@ -113,6 +114,7 @@ export const usePerformanceMonitor = (componentName: string) => {
   }, [componentName, monitor])
 
   return {
+
     trackRender: (fn: () => void) => {
       const start = performance.now()
       fn()
@@ -166,13 +168,13 @@ export const optimizeScrollPerformance = () => {
     // Update scroll position indicators
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop
     document.documentElement.style.setProperty('--scroll-top', `${scrollTop}px`)
-    ticking = false
-  }
+    ticking = false;
+}
   const requestTick = () => {
     if (!ticking) {
       requestAnimationFrame(updateScrollPosition)
-      ticking = true
-    }
+      ticking = true;
+}
   }
 
   // Track Core Web Vitals
@@ -180,23 +182,24 @@ export const optimizeScrollPerformance = () => {
     let clsValue = 0
     const clsEntries: PerformanceEntry[] = [];
     interface LayoutShiftEntry extends PerformanceEntry {
+
       hadRecentInput?: boolean
-      value: number
-    }
+      value: number;
+}
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         const layoutEntry = entry as LayoutShiftEntry
         if (!layoutEntry.hadRecentInput) {
           clsEntries.push(entry)
-          clsValue += layoutEntry.value
-        }
+          clsValue += layoutEntry.value;
+}
       }
     })
     observer.observe({ entryTypes: ['layout-shift'] })
     return () => {
       observer.disconnect()
-      return clsValue
-    }
+      return clsValue;
+}
   }
 
   const trackLCP = () => {
@@ -213,8 +216,8 @@ export const optimizeScrollPerformance = () => {
 
   const trackFID = () => {
     interface FirstInputEntry extends PerformanceEntry {
-      processingStart: number
-    }
+
+  processingStart: number}
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         const fidEntry = entry as FirstInputEntry
@@ -228,7 +231,7 @@ export const optimizeScrollPerformance = () => {
     return () => observer.disconnect()
   }
 
-  window.addEventListener('scroll', requestTick, { passive: true })
+  window.addEventListener('scroll', requestTick, { passive: true})
 
   // Start tracking
   const cleanupCLS = trackCLS()
@@ -245,15 +248,16 @@ export const optimizeScrollPerformance = () => {
 // Memory usage monitoring
 export const getMemoryUsage = () => {
   if (typeof window === 'undefined' || !('memory' in performance)) {
-    return null
-  }
-  const memory = (performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
+    return null;
+}
+  const memory = (performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number} }).memory
   return {
+
     used: memory.usedJSHeapSize,
     total: memory.totalJSHeapSize,
     limit: memory.jsHeapSizeLimit,
-    percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
-  }
+    percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
+}
 }
 
 // Performance metrics collection
@@ -262,15 +266,14 @@ export const collectPerformanceMetrics = () => {
   const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
   const paint = performance.getEntriesByType('paint')
   return {
+
     navigation: {
       domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
       loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-      totalTime: navigation.loadEventEnd - navigation.fetchStart
-    },
+      totalTime: navigation.loadEventEnd - navigation.fetchStart},
     paint: {
       firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0,
-      firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0
-    },
+      firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0},
     memory: getMemoryUsage()
   }
 }

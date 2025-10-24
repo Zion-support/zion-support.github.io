@@ -2,6 +2,7 @@
 import React from 'react';
 
 interface EnhancedPerformanceMonitorProps {
+
   enableMonitoring?: boolean;
   onMetricsUpdate?: (metrics: any) => void;
 }

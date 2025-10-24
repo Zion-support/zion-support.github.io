@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useEffect} from 'react';
+import { Helmet} from 'react-helmet-async';
 
 interface SEOEnhancerProps {
+
   title?: string
   description?: string
   keywords?: string
@@ -9,9 +10,8 @@ interface SEOEnhancerProps {
   ogImage?: string
   twitterCard?: string
   structuredData?: object
-  children: React.ReactNode
+  children: React.ReactNode;
 }
-
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
@@ -20,8 +20,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   ogImage = '/images/og-image.jpg',
   twitterCard = 'summary_large_image',
   structuredData,
-  children
-}) => {
+  children}) => {
   useEffect(() => {
     // Update document title
     document.title = title
@@ -30,6 +29,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     if (metaDescription) {
       metaDescription.setAttribute('content', description)
     } else {
+
       const meta = document.createElement('meta')
       meta.name = 'description'
       meta.content = description
@@ -41,6 +41,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     if (metaKeywords) {
       metaKeywords.setAttribute('content', keywords)
     } else {
+
       const meta = document.createElement('meta')
       meta.name = 'keywords'
       meta.content = keywords
@@ -53,21 +54,9 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       if (canonical) {
         canonical.setAttribute('href', canonicalUrl)
       } else {
+
         const link = document.createElement('link')
-        link.rel = 'canonical'
-<<<<<<< HEAD
-        link.href = canonicalUrl
-        document.head.appendChild(link)
-      }
-    }
-  }, [title, description, keywords, canonicalUrl])
-    return (
-    <>
-      <Helmet>
-        <title>Page Title</title>
-        <meta name="description" content="Page description" />
-      </Helmet>
-=======
+        link.rel = 'canonical';
         link.href = canonicalUrl;
         document.head.appendChild(link);
       }
@@ -76,7 +65,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
 
   return (
     <Helmet>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-778a
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
@@ -102,7 +90,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
           </script>
         )}
       </Helmet>
-      {children}
+      {children;
+}
     </>
   );
 };

@@ -1,13 +1,12 @@
 import React from 'react';
 'use client'
-import React, { useState, useEffect } from 'react'
-import { Zap, Shield, Globe, Brain } from 'lucide-react'
+import React, { useState, useEffect} from 'react'
+import { Zap, Shield, Globe, Brain} from 'lucide-react'
 
 const DynamicContentShowcase: React.FC = ($2) => {
 
 $3};
-        <section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-        <div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
+        <section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"><div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
               DynamicContentShowcase
             </h1>
             <p>Advanced DynamicContentShowcase solution for modern businesses.</p>
@@ -23,8 +22,7 @@ $3};
         </section>,
 ,
         {/* Features Section */}
-        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto"></div>
-        <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto"><div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p>Discover the powerful features that make DynamicContentShowcase the perfect solution for your business.</p>
             </div>
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
@@ -94,8 +92,7 @@ $3};
 
   return (
     
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4"></div>
-      <div className="max-w-7xl mx-auto"></div>
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4"><div className="max-w-7xl mx-auto"></div>
         <div className="text-center mb-16"></div>
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,
             Dynamic Content Showcase
@@ -105,26 +102,27 @@ $3};
           </p>
         </div>
 
-        <div className="relative"></div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md: p-12 border border-white/20"></div>,
-            <div className="flex items-center justify-center mb-8"></div>
-              <div className={`bg-gradient-to-r ${currentFeature.color} p-4 rounded-full`}></div>
+        <div className="relative"><div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md: p-12 border border-white/20"></div>,
+            <div className="flex items-center justify-center mb-8"><div className={`bg-gradient-to-r ${currentFeature.color} p-4 rounded-full`}></div>
                 <currentFeature.icon className="h-12 w-12 text-white" />
               </div>
             </div>
             
             <h3 className="text-2xl md: text-3xl font-bold text-white text-center mb-4">,
-              {currentFeature.title}
+              {currentFeature.title;
+}
             </h3>
             
             <p className="text-lg text-gray-300 text-center mb-8 max-w-2xl mx-auto">
-              {currentFeature.description}
+              {currentFeature.description;
+}
             </p>
 
             <div className="flex justify-center space-x-2 mb-8"></div>
               {features.map((_, index) => (
-                <button;
-                  key={index}
+                <button
+                  key={index;
+}
                   onClick={() => setCurrentIndex(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${;
                     index === currentIndex ? 'bg-white' : 'bg-white/30'
@@ -146,4 +144,5 @@ $3};
   )
 }
 
-export default DynamicContentShowcase}
+export default DynamicContentShowcase;
+}

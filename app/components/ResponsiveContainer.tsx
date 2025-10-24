@@ -1,15 +1,14 @@
 import React from 'react';
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import { Helmet} from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
 const ResponsiveContainer: React.FC = ($2) => {
 
 $3};
-        <section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-        <div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
+        <section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"><div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
               ResponsiveContainer
             </h1>
             <p>Advanced ResponsiveContainer solution for modern businesses.</p>
@@ -25,8 +24,7 @@ $3};
         </section>,
 ,
         {/* Features Section */}
-        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto"></div>
-        <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto"><div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p>Discover the powerful features that make ResponsiveContainer the perfect solution for your business.</p>
             </div>
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
@@ -60,5 +58,4 @@ $3};
       </div>
 
   )}  )}
-export default ResponsiveContainer
-};
+export default ResponsiveContainer};

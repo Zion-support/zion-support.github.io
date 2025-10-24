@@ -1,44 +1,43 @@
 "use client";
-
 import React from 'react';
-import { motion } from 'framer-motion';
-interface FuturisticCardProps {;
-  children: React.ReactNode,
+import { motion} from 'framer-motion';
+interface FuturisticCardProps {
+children: React.ReactNode,
   variant?: 'default' | 'service' | 'testimonial' | 'feature'
   className?: string;
-  onClick?: () => void
-
+  onClick?: () => void;
 }
 const FuturisticCard: React.FC<FuturisticCardProps> = ({
 
   children;
   variant = 'default';
   className = ''
-  onClick
-}) => {
+  onClick}) => {
 
   const getVariantStyles = ($2) => {
 
-$3
-}}
+$3}}
 
   const baseClasses = `
     relative overflow-hidden rounded-2xl p-6 transition-all duration-300;
     hover: scale-105 hover:-translate-y-1,
     ${getVariantStyles()}
-    ${className}
+    ${className;
+}
   `.trim()
   return (
     
     <motion.div;
-      className={baseClasses}
-      onClick={onClick}
+      className={baseClasses;
+}
+      onClick={onClick;
+}
 ;
-      whileHover={{ scale: 1.05, y: -4 }}
-      whileTap={{ scale: 0.95 }}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+      whileHover={{ scale: 1.05, y: -4}}
+      whileTap={{ scale: 0.95}}
+      initial={{ opacity: 0, y: 20}}
+      animate={{ opacity: 1, y: 0}}
+      transition={{ duration: 0.5}}
     >{/* Animated background gradient */}
       </motion><motion.div;
 ;
@@ -54,7 +53,8 @@ $3
     repeat: Infinity,;
           ease: 'easeInOut'}}
       />{/* Content */}
-      </motion><div className="relative z-10">{children}
+      </motion><div className="relative z-10">{children;
+}
       </div></div>
 
       {/* Glow effect */}

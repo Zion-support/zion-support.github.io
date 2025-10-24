@@ -1,9 +1,10 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname} from 'next/navigation';
 import {
+
   Bars3Icon,
   XMarkIcon,
   HomeIcon,
@@ -12,8 +13,7 @@ import {
   PhoneIcon,
   DocumentTextIcon,
   AcademicCapIcon,
-  ChevronDownIcon
-} from '@heroicons/react/24/outline';
+  ChevronDownIcon} from '@heroicons/react/24/outline';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,8 +40,8 @@ const Navigation = () => {
   };
 
   const navigation = [
-    { name: 'Home', href: '/', icon: HomeIcon },
-    { name: 'About', href: '/about', icon: InformationCircleIcon },
+    { name: 'Home', href: '/', icon: HomeIcon},
+    { name: 'About', href: '/about', icon: InformationCircleIcon},
     { 
       name: 'Services', 
       href: '/services', 
@@ -53,7 +53,7 @@ const Navigation = () => {
         { name: 'Cloud Services', href: '/services/cloud-services' }
       ]
     },
-    { name: 'Contact', href: '/contact', icon: PhoneIcon },
+    { name: 'Contact', href: '/contact', icon: PhoneIcon},
     { name: 'Team', href: '/team', icon: AcademicCapIcon }
   ];
 

@@ -1,12 +1,12 @@
 import React from 'react'
 
 interface OptimizedLoadingSpinnerProps {
+
   variant?: 'dots' | 'pulse' | 'skeleton' | 'spinner'
   size?: 'sm' | 'md' | 'lg'
   color?: string
-  className?: string
+  className?: string;
 }
-
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({
   variant = 'dots',
   size = 'md',
@@ -26,7 +26,8 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({
           <div className="flex space-x-1" role="status" aria-label="Loading">
             {[0, 1, 2].map(i => (
               <div
-                key={i}
+                key={i;
+}
                 className={`w-2 h-2 bg-current rounded-full animate-pulse`}
                 style={{ animationDelay: `${i * 0.2}s` }}
               />
@@ -60,8 +61,8 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({
         )
 
       default:
-        return null
-    }
+        return null;
+}
   }
 
   return (
@@ -71,4 +72,4 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({
   )
 }
 
-export default OptimizedLoadingSpinner
+export default OptimizedLoadingSpinner</div></div></div></div></div>

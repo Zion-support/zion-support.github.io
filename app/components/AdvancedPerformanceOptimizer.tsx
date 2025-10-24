@@ -1,23 +1,20 @@
 'use client';
 
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback} from 'react';
 
 interface PerformanceOptimizerProps {
-  children: React.ReactNode
-  enableOptimizations?: boolean
-}
 
+  children: React.ReactNode
+  enableOptimizations?: boolean}
 const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children,
-  enableOptimizations = true
-}) => {
+  enableOptimizations = true}) => {
   const [isOptimized, setIsOptimized] = useState(false);
   const [optimizationMetrics, setOptimizationMetrics] = useState({
     imagesOptimized: 0,
     scriptsOptimized: 0,
     cssOptimized: 0,
-    totalSavings: 0
-  });
+    totalSavings: 0});
   const optimizeImages = useCallback(() => {
     if (typeof window === 'undefined') return
     const images = document.querySelectorAll('img')
@@ -35,8 +32,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         optimizedCount++
       }
     })
-    return optimizedCount
-  }, [])
+    return optimizedCount}, [])
   const optimizeScripts = useCallback(() => {
     if (typeof window === 'undefined') return
     const scripts = document.querySelectorAll('script[src]')
@@ -48,8 +44,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         optimizedCount++
       }
     })
-    return optimizedCount
-  }, [])
+    return optimizedCount}, [])
   const optimizeCSS = useCallback(() => {
     if (typeof window === 'undefined') return
     const stylesheets = document.querySelectorAll('link[rel="stylesheet"]')
@@ -62,8 +57,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         optimizedCount++
       }
     })
-    return optimizedCount
-  }, [])
+    return optimizedCount}, [])
   const runOptimizations = useCallback(() => {
     if (!enableOptimizations) return
     const imagesOptimized = optimizeImages()
@@ -73,8 +67,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       imagesOptimized,
       scriptsOptimized,
       cssOptimized,
-      totalSavings: imagesOptimized + scriptsOptimized + cssOptimized
-    });
+      totalSavings: imagesOptimized + scriptsOptimized + cssOptimized});
     setIsOptimized(true)
   }, [enableOptimizations, optimizeImages, optimizeScripts, optimizeCSS])
   useEffect(() => {
@@ -101,7 +94,8 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, [])
   return (
     <div className="performance-optimized" data-optimized={isOptimized}>
-      {children}
+      {children;
+}
       {process.env.NODE_ENV === 'development' && (
         <div
           className="optimization-debug"
@@ -114,8 +108,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             padding: '10px',
             borderRadius: '5px',
             fontSize: '12px',
-            zIndex: 1000
-          }}
+            zIndex: 1000}}
         >
           <div>Images: {optimizationMetrics.imagesOptimized}</div>
           <div>Scripts: {optimizationMetrics.scriptsOptimized}</div>

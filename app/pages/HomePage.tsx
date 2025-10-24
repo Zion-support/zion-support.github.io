@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { 
+import {
+
   ArrowRightIcon, 
   ShieldCheckIcon, 
   CloudIcon, 
@@ -12,17 +13,13 @@ import {
 
 export default function HomePage() {  return (
     
-    <>
-      
-    </>
+    <></>
       <Helmet> </Helmet><title>Zion Tech Group - Advanced AI and IT Solutions</title>
         <meta name="description" content="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide." /> </meta><meta name="keywords" content="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions" /> </meta></Helmet>
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">{/* Animated Background */}
-        </section><div className="absolute inset-0 opacity-20"></div>
-        <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"> </div></div>
-        <div className="relative z-10 container mx-auto px-4 text-center"></div>
-        <div className="max-w-4xl mx-auto"> </div><h1 className="text-6xl md: text-7xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">,
+        </section><div className="absolute inset-0 opacity-20"><div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"> </div></div>
+        <div className="relative z-10 container mx-auto px-4 text-center"><div className="max-w-4xl mx-auto"> </div><h1 className="text-6xl md: text-7xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">,
               Zion Tech Group
             </h1>
             <p className="text-xl md: text-2xl text-gray-300 mb-8 leading-relaxed">,
@@ -33,13 +30,13 @@ export default function HomePage() {  return (
             
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">,
               <Link ;
-                href="/contact" ;
+                href="/contact";
                 className="group bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2",
               >Get Started Today
                 </Link><ArrowRightIcon className="w-5 h-5 group-hover: translate-x-1 transition-transform" />,
               </Link>
               <Link ;
-                href="/services" ;
+                href="/services";
                 className="group border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-purple-400 hover:text-white transition-all duration-300 flex items-center gap-2",
               >Explore Services
                 </Link><ArrowRightIcon className="w-5 h-5 group-hover: translate-x-1 transition-transform" />,
@@ -48,12 +45,10 @@ export default function HomePage() {  return (
         </div>
         
         {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-purple-500 rounded-full opacity-20 animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-cyan-500 rounded-full opacity-20 animate-pulse delay-1000"> </div><div className="absolute top-1/2 left-20 w-16 h-16 bg-pink-500 rounded-full opacity-20 animate-pulse delay-500"> </div></section>
+        <div className="absolute top-20 left-10 w-20 h-20 bg-purple-500 rounded-full opacity-20 animate-pulse"><div className="absolute bottom-20 right-10 w-32 h-32 bg-cyan-500 rounded-full opacity-20 animate-pulse delay-1000"> </div><div className="absolute top-1/2 left-20 w-16 h-16 bg-pink-500 rounded-full opacity-20 animate-pulse delay-500"> </div></section>
       {/* Services Section */}
       <section className="py-20 bg-slate-900"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="text-center mb-16"></div>
+        <div className="container mx-auto px-4"><div className="text-center mb-16"></div>
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
               Our Core Services
             </h2>
@@ -158,8 +153,7 @@ export default function HomePage() {  return (
 
       {/* About Section */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="max-w-4xl mx-auto text-center"></div>
+        <div className="container mx-auto px-4"><div className="max-w-4xl mx-auto text-center"></div>
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-8">,
               Why Choose Zion Tech Group?
             </h2>
@@ -170,22 +164,19 @@ export default function HomePage() {  return (
             </p>
             
             <div className="grid md: grid-cols-3 gap-8 mb-12"></div>,
-              <div className="text-center"></div>
-                <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
+              <div className="text-center"><div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
                 <div className="text-gray-300">Projects Completed</div>
               </div>
-              <div className="text-center"></div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">25+</div>
+              <div className="text-center"><div className="text-4xl font-bold text-cyan-400 mb-2">25+</div>
                 <div className="text-gray-300">Happy Clients</div>
               </div>
-              <div className="text-center"></div>
-                <div className="text-4xl font-bold text-green-400 mb-2">99%</div>
+              <div className="text-center"><div className="text-4xl font-bold text-green-400 mb-2">99%</div>
                 <div className="text-gray-300">Success Rate</div>
               </div>
             </div>
             
             <Link ;
-              href="/about" ;
+              href="/about";
               className="inline-flex items-center gap-2 bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-gray-100 transition-colors",
             ></Link>
               Learn More About Us <ArrowRightIcon className="w-5 h-5" />
@@ -196,8 +187,7 @@ export default function HomePage() {  return (
 
       {/* Contact Section */}
       <section className="py-20 bg-slate-900"></section>
-        <div className="container mx-auto px-4"></div>
-          <div className="max-w-4xl mx-auto text-center"></div>
+        <div className="container mx-auto px-4"><div className="max-w-4xl mx-auto text-center"></div>
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-8">,
               Ready to Transform Your Business?
             </h2>
@@ -222,12 +212,12 @@ export default function HomePage() {  return (
             
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
               <Link ;
-                href="/contact" ;
+                href="/contact";
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-purple-700 hover:to-cyan-700 transition-all duration-300",
               >Get In Touch
               </Link></Link>
               <Link ;
-                href="/demo" ;
+                href="/demo";
                 className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-purple-400 hover:text-white transition-all duration-300",
               >Schedule Demo
               </Link></Link>

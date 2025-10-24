@@ -8,37 +8,48 @@ const performanceConfig = {;
   monitoring: {;
     enableLongTaskDetection: true,;
     enableMemoryMonitoring: true,;
-    sampleRate: 0.1}
+    sampleRate: 0.1;
+}
   webVitals: {;
     lcp: { goo,;
-  d: 2500, needsImprovement: 4000 }
+  d: 2500, needsImprovement: 4000;
+}
     fid: { goo,;
-  d: 100, needsImprovement: 300 }
+  d: 100, needsImprovement: 300;
+}
     cls: { goo,;
-  d: 0.1, needsImprovement: 0.25 }
+  d: 0.1, needsImprovement: 0.25;
+}
     fcp: { goo,;
-  d: 1800, needsImprovement: 3000 }
+  d: 1800, needsImprovement: 3000;
+}
     ttfb: { goo,;
-  d: 800, needsImprovement: 1800 }
+  d: 800, needsImprovement: 1800;
+}
     inp: { goo,;
-  d: 200, needsImprovement: 500 }
+  d: 200, needsImprovement: 500;
+}
   }
 }
 export interface PerformanceMetrics {
+
   lcp?: number;
   fid?: number;
   cls?: number;
   fcp?: number;
   ttfb?: number;
-  inp?: number}
-export interface ErrorReport {;
-  message: string;,
+  inp?: number;
+}
+export interface ErrorReport {
+message: string,
   stack?: string;
   component?: string;
-  timestamp: number;,;
-    userAgent: string;,;
-  url: string}
+  timestamp: number,;
+    userAgent: string,;
+  url: string;
+}
 class MonitoringService {
+
   private metrics: PerformanceMetrics = {}
   private errors: ErrorReport[] = [],
   private observer: PerformanceObserver | null = null,
@@ -47,6 +58,7 @@ class MonitoringService {
       this.initializeMonitoring()}
   }
   private initializeMonitoring(): void {
+
     // Monitor Web Vitals
     this.monitorWebVitals();
     // Monitor Long Tasks
@@ -56,14 +68,17 @@ class MonitoringService {
     // Global Error Handler
     this.setupErrorHandling()}
   private monitorWebVitals(): void {
+
     if ('PerformanceObserver' in window) {
       try {
+
         // Largest Contentful Paint;
 
 const lcpObserver = new PerformanceObserver((list) => {
 
           const entries = list.getEntries()
-          const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
+          const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number;
+}
           this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0
           this.reportMetric('lcp', this.metrics.lcp)})
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
@@ -107,21 +122,25 @@ const fcpObserver = new PerformanceObserver(list => {
     }
   }
   private monitorLongTasks(): void {
+
     if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {
       try {
+
         const longTaskObserver = new PerformanceObserver((list) => {
 
           for (const entry of list.getEntries()) {
             }
         })
         longTaskObserver.observe({ entryTypes: ['longtask'] })} catch (error) {
-  // Long task API might not be available
+  // Long task API might not be available;
 }
     }
   }
   private monitorResourceTiming(): void {
+
     if ('PerformanceObserver' in window) {
       try {
+
         const resourceObserver = new PerformanceObserver((list) => {
 
           const entries = list.getEntries()
@@ -136,6 +155,7 @@ const fcpObserver = new PerformanceObserver(list => {
     }
   }
   private setupErrorHandling(): void {
+
     // Global error handler
     window.addEventListener('error', (event) => {
 
@@ -158,9 +178,11 @@ const fcpObserver = new PerformanceObserver(list => {
     })
   }
   private reportMetric(name: string, value: number): void {
+
   // Sample rate
     if (Math.random() > performanceConfig.monitoring.sampleRate) {
-      return}
+      return;
+}
     const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
     if (thresholds) {
   const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
@@ -173,6 +195,7 @@ const fcpObserver = new PerformanceObserver(list => {
     }
   }
   public logError(error: ErrorReport): void {
+
     this.errors.push(error)
     // Keep only last 50 errors
     if (this.errors.length > 50) {
@@ -180,18 +203,22 @@ const fcpObserver = new PerformanceObserver(list => {
     // Send to error tracking service (if configured)
   }
   public getMetrics(): PerformanceMetrics {
-    return { ...this.metrics }
+
+    return { ...this.metrics;
+}
   }
   public getErrors(): ErrorReport[] {
   return [...this.errors]
 }
   public clearErrors(): void {
+
   this.errors = []
 }
   public measureMemory(): void {
+
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimi,;
-  t: number } }).memory
+  t: number} }).memory
       if (memory) {
         this.metrics.memory = {;
           used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`;
@@ -202,6 +229,7 @@ const fcpObserver = new PerformanceObserver(list => {
     }
   }
   public measureNavigationTiming(): void {
+
     if ('performance' in window && 'getEntriesByType' in performance) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       if (navigation) {
@@ -223,4 +251,5 @@ const fcpObserver = new PerformanceObserver(list => {
 // Singleton instance;
 
 const monitoring = new MonitoringService()
-export default monitoring}
+export default monitoring;
+}

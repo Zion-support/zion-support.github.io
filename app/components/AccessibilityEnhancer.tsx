@@ -1,12 +1,12 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useEffect} from 'react';
 
 interface Props {
-  children: React.ReactNode;
-}
 
-const AccessibilityEnhancer: React.FC<Props> = ({ children }) => {
+  children: React.ReactNode}
+
+const AccessibilityEnhancer: React.FC<Props> = ({ children}) => {
   useEffect(() => {
     // Initialize accessibility enhancements
     const initAccessibility = () => {

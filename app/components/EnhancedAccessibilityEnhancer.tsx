@@ -1,16 +1,15 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet} from 'react-helmet-async';
 
-interface EnhancedAccessibilityEnhancerProps {;
-  children: React.ReactNode,
+interface EnhancedAccessibilityEnhancerProps {
+children: React.ReactNode,
   enableKeyboardNavigation?: boolean
   enableScreenReaderSupport?: boolean
   enableHighContrast?: boolean
   enableFocusManagement?: boolean
-  enableVoiceNavigation?: boolean
+  enableVoiceNavigation?: boolean;
 }
-
   const features = [
     {;
       icon: Brain,;
@@ -93,8 +92,7 @@ interface EnhancedAccessibilityEnhancerProps {;
 
   return (
     
-        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto"></div>
-        <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto"><div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p>Powerful AI-driven features designed to transform your business operations
 </p>
             </div>
@@ -104,7 +102,8 @@ interface EnhancedAccessibilityEnhancerProps {;
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"> </div><feature.icon className="h-12 w-12 text-emerald-400 mb-4" /> </feature><h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">{feature.benefits.map((benefit, idx) => (
-                      </ul><li key={idx} className="flex items-center text-sm text-gray-300"> </li><CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />{benefit}
+                      </ul><li key={idx} className="flex items-center text-sm text-gray-300"> </li><CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />{benefit;
+}
                       </CheckCircle></li>
 
                     ))}
@@ -117,8 +116,7 @@ interface EnhancedAccessibilityEnhancerProps {;
 
         {/* Benefits Section */}
 
-        <section className="py-20 px-4 bg-white/5"> </section><div className="max-w-7xl mx-auto"></div>
-        <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+        <section className="py-20 px-4 bg-white/5"> </section><div className="max-w-7xl mx-auto"><div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p>Experience the benefits of cutting-edge AI technology</p>
             </div>
         </div>

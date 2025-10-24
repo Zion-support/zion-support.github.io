@@ -2,25 +2,27 @@
 
 import React from 'react';
 
-interface ServiceTemplateProps {;
-  title: string;,;
-  description: string;,;
+interface ServiceTemplateProps {
+title: string,;
+  description: string,;
   features: string[]}
 
 
 const ServiceTemplate: React.FC<ServiceTemplateProps> = ({
   title,
   description,
-  features}
+  features;
+}
 }) => {
 
   return (
     
-    <div className="min-h-screen bg-gray-50 py-12"></div>
-        <div className="max-w-4xl mx-auto px-4"> </div><h1{title}
+    <div className="min-h-screen bg-gray-50 py-12"><div className="max-w-4xl mx-auto px-4"> </div><h1{title;
+}
         </h1>
         
-        <div className="bg-white rounded-lg shadow p-6"> </div><p{description}
+        <div className="bg-white rounded-lg shadow p-6"> </div><p{description;
+}
           </p>
           
           <div className="grid md: grid-cols-2 gap-4">,

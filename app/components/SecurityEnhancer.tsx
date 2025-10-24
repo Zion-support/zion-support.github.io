@@ -2,6 +2,7 @@
 import React from 'react';
 
 interface SecurityEnhancerProps {
+
   enableSecurityChecks?: boolean;
   onSecurityUpdate?: () => void;
 }

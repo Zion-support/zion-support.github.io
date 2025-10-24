@@ -1,12 +1,12 @@
 import React from 'react';
 
 interface ServiceCardSkeletonProps {
+
   showImage?: boolean
   showButton?: boolean
   lines?: number
-  className?: string
+  className?: string;
 }
-
 const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({
   showImage = true,
   showButton = true,
@@ -28,9 +28,10 @@ const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({
       
       {/* Description skeleton */}
       <div className="...">
-        {Array.from({ length: lines }).map((_, index) => (
+        {Array.from({ length: lines}).map((_, index) => (
           <div
-            key={index}
+            key={index;
+}
             className={`h-4 bg-gray-300 rounded ${
               index === lines - 1 ? 'w-2/3' : 'w-full'
             }`}

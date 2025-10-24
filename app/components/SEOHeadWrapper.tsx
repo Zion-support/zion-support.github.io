@@ -1,14 +1,14 @@
 import React from 'react';
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import { Helmet} from 'react-helmet-async'
 ;
-interface SEOHeadProps {;
-  title: string,;
+interface SEOHeadProps {
+title: string,;
   description: string,;
   keywords: string[]}
 
-const SEOHeadWrapper: React.FC<SEOHeadProps> = ({ title, description, keywords }) => {
+const SEOHeadWrapper: React.FC<SEOHeadProps> = ({ title, description, keywords}) => {
 
   return (
     
