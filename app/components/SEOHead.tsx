@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import Head from 'next/head';
 
 interface SEOHeadProps {
@@ -9,13 +8,14 @@ interface SEOHeadProps {
   keywords?: string;
   ogImage?: string;
   canonical?: string;
+  structuredData?: any;
 }
 
-const SEOHead: React.FC<SEOHeadProps> = ({ 
-  title = "Zion Tech Group - AI Solutions",
-  description = "Advanced AI solutions for modern businesses",
-  keywords = "AI, artificial intelligence, technology solutions, business automation",
-  ogImage = "/og-image.jpg",
+const SEOHead: React.FC<SEOHeadProps> = ({
+  title = 'Zion Tech Group - AI Solutions & Technology Services',
+  description = 'Leading provider of AI solutions, technology services, and digital transformation for businesses worldwide.',
+  keywords = 'AI, artificial intelligence, technology, digital transformation, business solutions',
+  ogImage = '/og-image.jpg',
   canonical
 }) => {
   return (
@@ -27,13 +27,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:type" content="website" />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:card" content="summary_large_image" />
       {canonical && <link rel="canonical" href={canonical} />}
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="robots" content="index, follow" />
     </Head>
   );
 };
