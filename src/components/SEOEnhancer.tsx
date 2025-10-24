@@ -9,8 +9,8 @@ interface SEOEnhancerProps {
 }
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {
-  return (<div className={className}></div>
-      <h2>SEOEnhancer</h2>
+  return (<div className={className}>
+          <h2>SEOEnhancer</h2>
       <p>This component is under construction.</p>
     </div>)
   );

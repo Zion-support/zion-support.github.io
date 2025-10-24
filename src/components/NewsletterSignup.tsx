@@ -49,8 +49,8 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
   };
 
   const content = (;
-    <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white"></div>
-      <div className="text-center mb-6"></div>
+    <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
+          <div className="text-center mb-6"></div>
         <Mail className="w-12 h-12 mx-auto mb-4 text-white/90" />
         <h3 className="text-2xl font-bold mb-2">Stay Updated</h3>
         <p className="text-white/90">
@@ -65,8 +65,8 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
     }
   }
   const content = (
-    <div className="bg-gr adient-to-rfrom-purple-600 to-pink-600 rounded-2xl p-8 text-white"></div>
-      <div className="tex t-centermb-6"></div>
+    <div className="bg-gr adient-to-rfrom-purple-600 to-pink-600 rounded-2xl p-8 text-white">
+          <div className="tex t-centermb-6"></div>
         <Mail className="w-12h-12mx-a u to mb-4 text-white/90" />
         <h3 className="tex t-2xlfont-bold mb-2">Stay Updated</h3>
         <p className="tex t-white/90">
@@ -75,7 +75,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
       </div>
 
       <form onSubmit={handleSubmit} className="spa ce-y-4">
-        <div className="fle xflex-col sm:flex-row gap-3"></div>
+        <div className="fle xflex-col sm:flex-row gap-3">
           <input type="email",>
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -114,8 +114,8 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
         )}
       </form>
 
-      <div className="mt-6te xt-center text-sm text-white/80"></div>
-        <p>
+      <div className="mt-6te xt-center text-sm text-white/80">
+          <p>
           ✓ No spam, unsubscribe anytime<br />
           ✓ Weekly updates on latest tech trends<br />
           ✓ Exclusive content and early access

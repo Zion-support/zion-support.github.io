@@ -43,8 +43,8 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
 
   return (<div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">{/* Hero Section */}</div>
       <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-        <div className="relative max-w-7xl mx-auto text-center"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20">
+          <div className="relative max-w-7xl mx-auto text-center"></div>
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">
               Enhanced SEO Optimizer
@@ -53,8 +53,8 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Boost your search engine rankings with our AI-powered SEO optimization tools and strategies.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
               Get Started
               <ArrowRight className="w-8 h-8" />
             </button>
@@ -67,7 +67,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto"></div>
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our SEO Features
@@ -77,8 +77,8 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
             </p>
           </div>)
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
-              <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"></div>
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg mb-4"></div>
+              <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg mb-4"></div>
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
@@ -94,15 +94,15 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
               </div>;
             ))};
           </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </div>
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
       <section className="py-20 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto"></div>
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Our SEO Optimizer?
@@ -112,8 +112,8 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, index) => (</div>
-              <div key={index} className="flex items-start space-x-3"></div>
-                <CheckCircle className="w-6 h-6 text-emerald-500 mt-1" />
+              <div key={index} className="flex items-start space-x-3">
+          <CheckCircle className="w-6 h-6 text-emerald-500 mt-1" />
                 <p className="text-gray-700 text-lg">{benefit}</p>
               </div>
             ))}
@@ -123,7 +123,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center"></div>
+        <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Ready to Boost Your SEO Rankings?
           </h2>

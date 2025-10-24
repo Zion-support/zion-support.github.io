@@ -55,14 +55,14 @@ interface ContentNewsletterSignupProps {
     }
   }
 
-  return (<div className="bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 py-16 px-4"></div>
-      <div className="max-w-4xl mx-auto text-center"></div>
+  return (<div className="bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 py-16 px-4">
+          <div className="max-w-4xl mx-auto text-center"></div>
         <h2 className="text-4xl font-bold text-white mb-4">{title}</h2>
         <p className="text-xl text-gray-300 mb-8">{subtitle}</p>
         
         <form onSubmit={handleSubmit} className="max-w-md mx-auto mb-8">
-          <div className="flex flex-col sm:flex-row gap-4"></div>
-            <input
+          <div className="flex flex-col sm:flex-row gap-4">
+          <input
               type="email"
               value={email})
               onChange={(e) => setEmail(e.target.value)}
@@ -82,8 +82,8 @@ interface ContentNewsletterSignupProps {
         </form>
         
         {isSubscribed && (
-          <div className="mt-4 p-4 bg-emerald-600/20 border border-emerald-500/50 rounded-lg"></div>
-            <p className="text-emerald-400 flex items-center justify-center">
+          <div className="mt-4 p-4 bg-emerald-600/20 border border-emerald-500/50 rounded-lg">
+          <p className="text-emerald-400 flex items-center justify-center">
               <CheckCircle className="h-5 w-5 mr-2" />
               Thank you for subscribing!
             </p>
@@ -91,8 +91,8 @@ interface ContentNewsletterSignupProps {
         )}
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">{features.map((feature, index) => (</div>
-            <div key={index} className="flex items-center space-x-2 text-gray-300"></div>
-              <feature.icon className="h-5 w-5 text-emerald-400" />
+            <div key={index} className="flex items-center space-x-2 text-gray-300">
+          <feature.icon className="h-5 w-5 text-emerald-400" />
               <span className="text-sm">{feature.text}</span>
             </div>
           ))}

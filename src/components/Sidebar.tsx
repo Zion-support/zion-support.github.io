@@ -99,8 +99,8 @@ const SidebarPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced Sidebar solution for modern businesses.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
@@ -113,8 +113,8 @@ const SidebarPage: React.FC = () => {
 
         {/* Features Section */}
         <section className="py-20 px-4"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+          <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Powerful AI-driven features designed to transform your business operations
@@ -122,8 +122,8 @@ const SidebarPage: React.FC = () => {
             </div>
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8"></div>)
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
-                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+          <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
@@ -142,8 +142,8 @@ const SidebarPage: React.FC = () => {
 
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+          <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the benefits of cutting-edge AI technology
@@ -151,8 +151,8 @@ const SidebarPage: React.FC = () => {
             </div>
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4"></div>
-                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                <div key={index} className="flex items-start space-x-4">
+          <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
               ))}
@@ -162,13 +162,13 @@ const SidebarPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+          <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of businesses already using our AI solutions
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Start Free Trial
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
@@ -369,13 +369,13 @@ isOpen ? 'translate-x-0' : '-translate-x-full'
 } lg:translate-x-0 lg:static lg:z-auto`}>;
 <div className="flex flex-col h-full"></div>
 {/* Header */}</div>
-<div className="flex items-center justify-between p-6 border-b border-slate-700/50"></div>
-<Link to="/" className="flex items-center space-x-3" onClick = {() => setIsOpen(false)}>;
-<div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center"></div>
-<Brain className="w-6 h-6 text-white" />
+<div className="flex items-center justify-between p-6 border-b border-slate-700/50">
+          <Link to="/" className="flex items-center space-x-3" onClick = {() => setIsOpen(false)}>;
+<div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center">
+          <Brain className="w-6 h-6 text-white" />
 </div>
-<div></div>
-<h2 className="text-xl font-bold text-white cyber-text">Zion Tech Group</h2>
+<div>
+          <h2 className="text-xl font-bold text-white cyber-text">Zion Tech Group</h2>
 <p className="text-xs text-cyan-400">AI & IT Solutions</p>
 </div>
 </Link>
@@ -393,11 +393,11 @@ aria-label="Close sidebar"
 </button>
 </div>
 {/* Navigation */}
-<div className="flex-1 overflow-y-auto py-6"></div>
-<nav className="space-y-2 px-4">
+<div className="flex-1 overflow-y-auto py-6">
+          <nav className="space-y-2 px-4">
 {navigationSections.map((section, sectionIndex) => (}
-<div key={sectionIndex} className="space-y-1"></div>
-<button >
+<div key={sectionIndex} className="space-y-1">
+          <button >
 onClick = {() =></button> section.key && toggleSection(section.key)}
 className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover: text-cyan-300 transition-colors">
 <span>{section.title}</span>

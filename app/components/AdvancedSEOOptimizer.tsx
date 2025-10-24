@@ -47,8 +47,8 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced SEO Optimizer solution for modern businesses.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+          <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
@@ -60,16 +60,16 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
         </section>
         {/* Features Section */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+          <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Powerful AI-driven SEO features designed to transform your online presence
               </p>
             </div>)
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
-                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+          <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
@@ -87,16 +87,16 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
         </section>
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+          <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our SEO Solution?</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the power of AI-driven SEO optimization
               </p>
             </div>
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, index) => (</div>
-                <div key={index} className="flex items-start space-x-3"></div>
-                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                <div key={index} className="flex items-start space-x-3">
+          <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
               ))}
@@ -105,15 +105,15 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
         </section>
         {/* CTA Section */}
         <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <h2 className="text-4xl font-bold text-white mb-6">
+          <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Boost Your SEO?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of businesses already using our AI-powered SEO solutions
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+          <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
                 Start Free Trial
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>

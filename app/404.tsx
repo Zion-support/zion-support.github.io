@@ -27,8 +27,8 @@ const NotFound = () => {
             Oops! The page you&apos;re looking for seems to have vanished into the digital void. Don&apos;t worry, even our AI can&apos;t predict everything!
           </p>
           {/* Search Suggestion */}
-          <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 mb-8"></div>
-            <div className="flex items-center justify-center mb-4"></div>
+          <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 mb-8">
+          <div className="flex items-center justify-center mb-4"></div>
               <Search className="w-6 h-6 text-cyan-400 mr-2" />
               <h2 className="text-lg font-semibold text-white">What were you looking for?</h2>
             </div>
@@ -68,13 +68,13 @@ const NotFound = () => {
             </button>
           </div>
           {/* Help Section */}
-          <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-lg p-6"></div>
-            <h3 className="text-lg font-semibold text-white mb-3">Need Help?</h3>
+          <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-lg p-6">
+          <h3 className="text-lg font-semibold text-white mb-3">Need Help?</h3>
             <p className="text-gray-300 text-sm mb-4">
               Our support team is here to help you navigate our services and find exactly what you&apos;re looking for.
             </p>
-            <div className="flex flex-col sm: flex-row gap-3 justify-center"></div>
-              <Link
+            <div className="flex flex-col sm: flex-row gap-3 justify-center">
+          <Link
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover: from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
@@ -90,8 +90,8 @@ const NotFound = () => {
             </div>
           </div>
           {/* Fun Fact */}
-          <div className="mt-8 p-4 bg-slate-800/30 rounded-lg"></div>
-            <p className="text-sm text-gray-400">
+          <div className="mt-8 p-4 bg-slate-800/30 rounded-lg">
+          <p className="text-sm text-gray-400">
               <span className="text-cyan-400">Fun Fact: </span> Even our AI gets
               confused sometimes. That&apos;s why we have humans to help when things
               go wrong! 🤖

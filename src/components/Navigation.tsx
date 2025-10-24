@@ -79,8 +79,8 @@ const Navigation: React.FC = () => {;
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">{/* Logo */}</div>
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center"></div>
-              <span className="text-white font-bold text-lg">Z</span>
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
+          <span className="text-white font-bold text-lg">Z</span>
             </div>
             <span className="text-white font-bold text-xl">Zion Tech Group</span>
           </Link>
@@ -89,8 +89,8 @@ const Navigation: React.FC = () => {;
           <div className="hidden lg:flex items-center space-x-8">{navigation.map((item) => {
               const Icon = item.icon</div>
               return(</div>
-                <div key={item.name} className="relative group"></div>
-                  <Link
+                <div key={item.name} className="relative group">
+          <Link
                     href={item.href}
                     className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${)
                       isActive(item.href)
@@ -122,8 +122,8 @@ const Navigation: React.FC = () => {;
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4"></div>
-            <Link
+          <div className="hidden lg:flex items-center space-x-4">
+          <Link
               href="/contact"
               className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
             >
@@ -132,8 +132,8 @@ const Navigation: React.FC = () => {;
           </div>
 
           {/* Contact Info */}
-          <div className="hidden lg:flex items-center space-x-4"></div>
-            <a
+          <div className="hidden lg:flex items-center space-x-4">
+          <a
               href="tel:+13024640950"
               className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
             >
@@ -150,13 +150,13 @@ const Navigation: React.FC = () => {;
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden"></div>
-            <button
+          <div className="lg:hidden">
+          <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white p-2"
           {/* Mobile menu button */}
-          <div className="lg:hidden"></div>
-            <button
+          <div className="lg:hidden">
+          <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-400 hover:text-white hover:bg-gray-700 p-2 rounded-md transition-colors duration-200"
             >
@@ -170,8 +170,8 @@ const Navigation: React.FC = () => {;
           <div className="lg:hidden">{navigation.map((item) => {
                 const Icon = item.icon</div>
                 return(</div>
-                  <div key={item.name}></div>
-                    <Link
+                  <div key={item.name}>
+          <Link
                       href={item.href})
                       onClick={() => setIsOpen(false)}
                       className={`flex items-center space-x-3 px-3 py-2 rounded-md text-base font-medium transition-colors ${
@@ -197,8 +197,8 @@ const Navigation: React.FC = () => {;
                     )}
                   </div>
                 )})}
-              <div className="pt-4 border-t border-slate-700"></div>
-                <Link
+              <div className="pt-4 border-t border-slate-700">
+          <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}
                   className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center"

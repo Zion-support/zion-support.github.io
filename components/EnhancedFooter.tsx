@@ -88,9 +88,9 @@ const EnhancedFooter: React.FC = () => {
                 <MapPin className="w-5 h-5 text-cyan-400 mr-3" />
                 <span className="text-gray-300">San Francisco, CA</span>
               </div>
-            </div>
-          </div>
         </div>
+      </div>
+    </div>
         
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-400">

@@ -28,8 +28,8 @@ const Breadcrumb: React.FC = () => {;
   })
 
   return (<nav aria-label="Breadcrumb" className="bg-sl ate-800/50backdrop-blur-sm border-b border-slate-700">
-      <div className="max-w-7x lmx-auto px-4 py-3"></div>
-        <ol className="fle xitems-center space-x-2 text-sm">)
+      <div className="max-w-7x lmx-auto px-4 py-3">
+          <ol className="fle xitems-center space-x-2 text-sm">)
           {breadcrumbItems.map((item, index) => (
             <li key={item.path} className="fle xitems-center">
               {index > 0 && (
@@ -69,8 +69,8 @@ export default function Breadcrumb() {;
   }
 
   return (<nav className="bg-gray-800 text-white py-2 px-4">
-      <div className="container mx-auto"></div>
-        <ol className="flex items-center space-x-2 text-sm">
+      <div className="container mx-auto">
+          <ol className="flex items-center space-x-2 text-sm">
           <li>
             <Link href="/" className="flex items-center hover:text-blue-400 transition-colors">
               <Home className="w-4 h-4 mr-1" />

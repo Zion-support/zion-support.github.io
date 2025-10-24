@@ -98,10 +98,10 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
 return ()
     <>
 
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
-<div className="max-w-m dw-full bg-white rounded-lg shadow-lg p-6"></div>
-<div className="fle xitems-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full"></div>
-<svg className="w-6h-6te x t-red-600">
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+          <div className="max-w-m dw-full bg-white rounded-lg shadow-lg p-6"></div>
+<div className="fle xitems-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
+          <svg className="w-6h-6te x t-red-600">
 fill="none"
 stroke="currentColor"
 viewBox="0 0 24 24"
@@ -119,8 +119,8 @@ d="M6 18L18 6M6 6l12 12"
 {process.env['NODE_ENV'] === 'development' && (}
 <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack}</pre>
 {)}
-<div className="mt-6 flex gap-4"></div>
-<button
+<div className="mt-6 flex gap-4">
+          <button
 onClick={resetError}
 className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Try Again</button>
 <button
@@ -129,8 +129,8 @@ className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 
 {process.env['NODE_ENV'] === 'development' && (;}
 <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack}</pre>
 )}
-<div className="mt-6fl ex gap-4"></div>
-<button onClick={resetError}>
+<div className="mt-6fl ex gap-4">
+          <button onClick={resetError}>
 className="fle x-1bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Try Again</button>
 <button ,>
 onClick={() =>(window.location.href = '/')}</button>
@@ -148,10 +148,10 @@ Go Home
 */;
 function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {}
 return ()
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
-<div className="max-w-m dw-full bg-white rounded-lg shadow-lg p-6"></div>
-<div className="fle xitems-center justify-center w-12 h-12 mx-auto bg-yellow-100 rounded-full"></div>
-<svg className="w-6h-6te x t-yellow-600">
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+          <div className="max-w-m dw-full bg-white rounded-lg shadow-lg p-6"></div>
+<div className="fle xitems-center justify-center w-12 h-12 mx-auto bg-yellow-100 rounded-full">
+          <svg className="w-6h-6te x t-yellow-600">
 fill="none"
 stroke="currentColor"
 viewBox="0 0 24 24"
@@ -165,8 +165,8 @@ d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.46
 </div>
 <h2 className="mt-4te xt-2xl font-bold text-center text-gray-900">Connection Issue</h2>
 <p className="mt-2te xt-center text-gray-600">Unable to connect to the server. Please check your internet connection and try again.</p>
-<div className="mt-6"></div>
-<button onClick={resetError}>
+<div className="mt-6">
+          <button onClick={resetError}>
 className="w-ful lbg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Retry Connection</button>
 </div>
 </div>
@@ -182,8 +182,8 @@ return ()
           <h1 className="tex t-6xlfont-bold text-gray-900">404</h1>
 <h2 className="mt-4te xt-2xl font-bold text-gray-900">Page Not Found</h2>;
 <p className="mt-2te xt-gray-600">The page you&apos;re looking for doesn't exist or has been moved.</p>
-<div className="mt-6 flex gap-4 justify-center"></div>
-<button >
+<div className="mt-6 flex gap-4 justify-center">
+          <button >
 onClick={() =>(window.location.href = '/')}</button>
 className="bg-bl ue-600text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
         </div>

@@ -8,7 +8,7 @@ const ContactPageBroken2 = () => {
           Contact Us
         </h1>
         
-        <div className="bg-white rounded-lg shadow p-6"></div>
+        <div className="bg-white rounded-lg shadow p-6">
           <p className="text-gray-600">
             This is a backup contact page. Please refer to the main contact page for current information.
           </p>

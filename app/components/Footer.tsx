@@ -51,20 +51,23 @@ const Footer: React.FC = () => {
     { name: 'Terms of Service', url: '/terms' },
     { name: 'Cookie Policy', url: '/cookies' },
     { name: 'GDPR Compliance', url: '/gdpr' }
-  ]
-  return (<footer className="bg-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">{/* Company Info */}</div>
-          <div className="space-y-4"></div>
-            <div className="flex items-center space-x-2"></div>
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center"></div>
-                <span className="text-white font-bold text-lg">Z</span>
-              </div>
-              <span className="text-xl font-bold">Zion Tech Group</span>
+  ];
+
+  return (
+    <footer className="bg-slate-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Company Info */}
+        <div className="space-y-4">
+          <div className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">Z</span>
             </div>
+            <span className="text-xl font-bold">Zion Tech Group</span>
+          </div>
             <p className="text-gray-400 text-sm">
               Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology and innovative digital transformation services.
             </p>
-            <div className="flex space-x-4"></div>
+            <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Github className="w-5 h-5" />
               </a>
@@ -77,7 +80,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
           {/* AI Services */}
-          <div className="space-y-4"></div>
+          <div className="space-y-4">
             <h3 className="text-lg font-semibold flex items-center">
               <Brain className="w-5 h-5 mr-2 text-cyan-400" />
               AI Services
@@ -97,7 +100,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
           {/* IT Services */}
-          <div className="space-y-4"></div>
+          <div className="space-y-4">
             <h3 className="text-lg font-semibold flex items-center">
               <Cloud className="w-5 h-5 mr-2 text-purple-400" />
               IT Services
@@ -117,9 +120,9 @@ const Footer: React.FC = () => {
             </ul>
           </div>
           {/* Company & Resources */}
-          <div className="space-y-6"></div>
-            <div></div>
-              <h3 className="text-lg font-semibold mb-4">Company</h3>
+          <div className="space-y-6">
+            <div>
+          <h3 className="text-lg font-semibold mb-4">Company</h3>
               <ul className="space-y-2">
                 {company.map((item, index) => (
                   <li key={index}>
@@ -133,8 +136,8 @@ const Footer: React.FC = () => {
                 ))}
               </ul>
             </div>
-            <div></div>
-              <h3 className="text-lg font-semibold mb-4">Resources</h3>
+            <div>
+            <h3 className="text-lg font-semibold mb-4">Resources</h3>
               <ul className="space-y-2">
                 {resources.map((item, index) => (
                   <li key={index}>
@@ -151,31 +154,31 @@ const Footer: React.FC = () => {
           </div>
         </div>
         {/* Contact Info */}
-        <div className="border-t border-slate-800 mt-12 pt-8"></div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
-            <div className="flex items-center space-x-3"></div>
-              <Mail className="w-5 h-5 text-cyan-400" />
-              <div></div>
-                <p className="text-sm text-gray-400">Email</p>
+        <div className="border-t border-slate-800 mt-12 pt-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="flex items-center space-x-3">
+            <Mail className="w-5 h-5 text-cyan-400" />
+              <div>
+            <p className="text-sm text-gray-400">Email</p>
                 <p className="text-white">contact@ziontechgroup.com</p>
               </div>
             </div>
-            <div className="flex items-center space-x-3"></div>
-              <Phone className="w-5 h-5 text-purple-400" />
-              <div></div>
-                <p className="text-sm text-gray-400">Phone</p>
+            <div className="flex items-center space-x-3">
+            <Phone className="w-5 h-5 text-purple-400" />
+              <div>
+            <p className="text-sm text-gray-400">Phone</p>
                 <p className="text-white">+1 (555) 123-4567</p>
               </div>
             </div>
-            <div className="flex items-center space-x-3"></div>
-              <MapPin className="w-5 h-5 text-green-400" />
-              <div></div>
-                <p className="text-sm text-gray-400">Location</p>
+            <div className="flex items-center space-x-3">
+            <MapPin className="w-5 h-5 text-green-400" />
+              <div>
+            <p className="text-sm text-gray-400">Location</p>
                 <p className="text-white">San Francisco, CA</p>
               </div>
-            </div>
-          </div>
         </div>
+      </div>
+    </div>
         {/* Bottom Bar */}
         <div className="border-t border-slate-800 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">{legal.map((item, index) => (</div>
               <Link

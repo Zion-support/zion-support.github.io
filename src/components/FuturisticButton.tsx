@@ -104,8 +104,8 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
-          <div className="w-5h-5bo r der-2 border-white/30 border-t-white rounded-full animate-spin" /></div>
-        </motion.div>
+          <div className="w-5h-5bo r der-2 border-white/30 border-t-white rounded-full animate-spin" />
+          </motion.div>
       )}
       
       {/* Button content */}

@@ -12,8 +12,8 @@ const AdManagementPage: React.FC = () => {
         <meta name="description" content="Advanced AI-powered ad management solutions for digital marketing success" />
         <meta name="keywords" content="ad management, digital marketing, AI advertising, campaign optimization" />
       </Helmet>
-      <div className="min-h-screen bg-gray-50"></div>
-        <div className="container mx-auto px-4 py-16">
+      <div className="min-h-screen bg-gray-50">
+          <div className="container mx-auto px-4 py-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
               AI-Powered Ad Management
             </h1>

@@ -39,15 +39,15 @@ const InteractiveAIROICalculator = () => {
     }));
   };
 
-  return (<div className="bg-white rounded-lg shadow p-6"></div>
-      <h2 className="text-2xl font-bold text-gray-900 mb-6">AI ROI Calculator</h2>
+  return (<div className="bg-white rounded-lg shadow p-6">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">AI ROI Calculator</h2>
       
-      <div className="grid md:grid-cols-2 gap-8"></div>
-        <div></div>
+      <div className="grid md:grid-cols-2 gap-8">
+          <div></div>
           <h3 className="text-lg font-semibold text-gray-700 mb-4">Input Parameters</h3>
           
-          <div className="space-y-4"></div>
-            <div></div>
+          <div className="space-y-4">
+          <div></div>
               <label className="block text-sm font-medium text-gray-700 mb-2">)
                 Current Monthly Cost ($)
               </label>
@@ -59,8 +59,8 @@ const InteractiveAIROICalculator = () => {
               />
             </div>
             
-            <div></div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+            <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
                 Expected Monthly Savings ($)
               </label>
               <input
@@ -71,8 +71,8 @@ const InteractiveAIROICalculator = () => {
               />
             </div>
             
-            <div></div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+            <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
                 Implementation Cost ($)
               </label>
               <input
@@ -83,8 +83,8 @@ const InteractiveAIROICalculator = () => {
               />
             </div>
             
-            <div></div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+            <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
                 Time Frame (months)
               </label>
               <input
@@ -104,27 +104,27 @@ const InteractiveAIROICalculator = () => {
           </div>
         </div>
         
-        <div></div>
+        <div>
           <h3 className="text-lg font-semibold text-gray-700 mb-4">Results</h3>
           
-          <div className="space-y-4"></div>
-            <div className="bg-green-50 p-4 rounded-lg"></div>
+          <div className="space-y-4">
+          <div className="bg-green-50 p-4 rounded-lg"></div>
               <h4 className="text-sm font-medium text-green-900">ROI</h4>
               <p className="text-2xl font-bold text-green-600">{results.roi.toFixed(1)}%</p>
             </div>
             
-            <div className="bg-blue-50 p-4 rounded-lg"></div>
-              <h4 className="text-sm font-medium text-blue-900">Payback Period</h4>
+            <div className="bg-blue-50 p-4 rounded-lg">
+          <h4 className="text-sm font-medium text-blue-900">Payback Period</h4>
               <p className="text-2xl font-bold text-blue-600">{results.paybackPeriod.toFixed(1)} months</p>
             </div>
             
-            <div className="bg-purple-50 p-4 rounded-lg"></div>
-              <h4 className="text-sm font-medium text-purple-900">Net Benefit</h4>
+            <div className="bg-purple-50 p-4 rounded-lg">
+          <h4 className="text-sm font-medium text-purple-900">Net Benefit</h4>
               <p className="text-2xl font-bold text-purple-600">${results.netBenefit.toLocaleString()}</p>
             </div>
-          </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

@@ -85,38 +85,38 @@ const PerformanceMonitor: React.FC = () => {
       // Cleanup if needed}
   }, []);
 
-  return (<div className="fixed bottom-4 right-4 bg-white shadow-lg rounded-lg p-4 max-w-sm z-50"></div>
-      <h3 className="text-sm font-semibold text-gray-900 mb-2">Performance Monitor</h3>
-      <div className="space-y-1 text-xs"></div>
-        <div className="flex justify-between"></div>
+  return (<div className="fixed bottom-4 right-4 bg-white shadow-lg rounded-lg p-4 max-w-sm z-50">
+          <h3 className="text-sm font-semibold text-gray-900 mb-2">Performance Monitor</h3>
+      <div className="space-y-1 text-xs">
+          <div className="flex justify-between"></div>
           <span>FCP:</span>
           <span className={metrics.fcp && metrics.fcp > 1800 ? 'text-red-600' : 'text-green-600'}>)
             {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : '...'}
           </span>
         </div>
         
-        <div className="flex justify-between"></div>
+        <div className="flex justify-between">
           <span>LCP:</span>
           <span className={metrics.lcp && metrics.lcp > 2500 ? 'text-red-600' : 'text-green-600'}>
             {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : '...'}
           </span>
         </div>
         
-        <div className="flex justify-between"></div>
+        <div className="flex justify-between">
           <span>FID:</span>
           <span className={metrics.fid && metrics.fid > 100 ? 'text-red-600' : 'text-green-600'}>
             {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : '...'}
           </span>
         </div>
         
-        <div className="flex justify-between"></div>
+        <div className="flex justify-between">
           <span>CLS:</span>
           <span className={metrics.cls && metrics.cls > 0.1 ? 'text-red-600' : 'text-green-600'}>
             {metrics.cls ? metrics.cls.toFixed(3) : '...'}
           </span>
         </div>
         
-        <div className="flex justify-between"></div>
+        <div className="flex justify-between">
           <span>TTFB:</span>
           <span className={metrics.ttfb && metrics.ttfb > 600 ? 'text-red-600' : 'text-green-600'}>
             {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : '...'}

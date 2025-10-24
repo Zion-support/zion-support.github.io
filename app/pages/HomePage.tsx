@@ -20,7 +20,7 @@ export default function HomePage() {  return (<>
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0 opacity-20"></div>
+        <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">
@@ -35,8 +35,8 @@ export default function HomePage() {  return (<>
               cloud infrastructure, and digital transformation services to drive innovation and growth.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
-              <Link 
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <Link 
                 href="/contact" 
                 className="group bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
               >
@@ -53,13 +53,13 @@ export default function HomePage() {  return (<>
             </div>          </div>
         </div>
         {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-purple-500 rounded-full opacity-20 animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-cyan-500 rounded-full opacity-20 animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-20 w-16 h-16 bg-pink-500 rounded-full opacity-20 animate-pulse delay-500"></div>
-      </section>
+        <div className="absolute top-20 left-10 w-20 h-20 bg-purple-500 rounded-full opacity-20 animate-pulse">
+          <div className="absolute bottom-20 right-10 w-32 h-32 bg-cyan-500 rounded-full opacity-20 animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-20 w-16 h-16 bg-pink-500 rounded-full opacity-20 animate-pulse delay-500">
+          </section>
       {/* Services Section */}
       <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4"></div>
+        <div className="container mx-auto px-4">
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Our Core Services
@@ -69,8 +69,8 @@ export default function HomePage() {  return (<>
             </p>
           </div>
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">{/* AI Solutions */}</div>
-            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover: border-purple-500 transition-all duration-300 hover:transform hover:scale-105"></div>
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>
+            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover: border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
+          <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>
                 <CpuChipIcon className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">AI Solutions</h3>
@@ -83,8 +83,8 @@ export default function HomePage() {  return (<>
               </Link>
             </div>
             {/* Cybersecurity */}
-            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover: border-cyan-500 transition-all duration-300 hover:transform hover:scale-105"></div>
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>
+            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover: border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
+          <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>
                 <ShieldCheckIcon className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Cybersecurity</h3>
@@ -97,8 +97,8 @@ export default function HomePage() {  return (<>
               </Link>
             </div>
             {/* Cloud Infrastructure */}
-            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover: border-green-500 transition-all duration-300 hover:transform hover:scale-105"></div>
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>
+            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover: border-green-500 transition-all duration-300 hover:transform hover:scale-105">
+          <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>
                 <CloudIcon className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Cloud Infrastructure</h3>
@@ -111,8 +111,8 @@ export default function HomePage() {  return (<>
               </Link>
             </div>
             {/* Digital Transformation */}
-            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover: border-yellow-500 transition-all duration-300 hover:transform hover:scale-105"></div>
-              <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>
+            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover: border-yellow-500 transition-all duration-300 hover:transform hover:scale-105">
+          <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>
                 <ChartBarIcon className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Digital Transformation</h3>
@@ -125,8 +125,8 @@ export default function HomePage() {  return (<>
               </Link>
             </div>
             {/* Micro SaaS */}
-            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover: border-pink-500 transition-all duration-300 hover:transform hover:scale-105"></div>
-              <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>
+            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover: border-pink-500 transition-all duration-300 hover:transform hover:scale-105">
+          <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>
                 <GlobeAltIcon className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Micro SaaS</h3>
@@ -139,8 +139,8 @@ export default function HomePage() {  return (<>
               </Link>
             </div>
             {/* 5G Solutions */}
-            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover: border-indigo-500 transition-all duration-300 hover:transform hover:scale-105"></div>
-              <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>
+            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover: border-indigo-500 transition-all duration-300 hover:transform hover:scale-105">
+          <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>
                 <GlobeAltIcon className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">5G Solutions</h3>
@@ -157,7 +157,7 @@ export default function HomePage() {  return (<>
       </section>
       {/* About Section */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
-        <div className="container mx-auto px-4"></div>
+        <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center"></div>
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-8">
               Why Choose Zion Tech Group?
@@ -189,7 +189,7 @@ export default function HomePage() {  return (<>
       </section>
       {/* Contact Section */}
       <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4"></div>
+        <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center"></div>
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-8">
               Ready to Transform Your Business?
@@ -197,23 +197,23 @@ export default function HomePage() {  return (<>
             <p className="text-xl text-gray-300 mb-12">
               Let&apos;s discuss how our technology solutions can drive your business forward
             </p>
-            <div className="grid md: grid-cols-3 gap-8 mb-12"></div>
-              <div className="flex items-center justify-center gap-4 text-gray-300"></div>
+            <div className="grid md: grid-cols-3 gap-8 mb-12">
+          <div className="flex items-center justify-center gap-4 text-gray-300"></div>
                 <PhoneIcon className="w-6 h-6 text-purple-400" />
                 <span>+1-302-464-0950</span>
               </div>
-              <div className="flex items-center justify-center gap-4 text-gray-300"></div>
-                <EnvelopeIcon className="w-6 h-6 text-purple-400" />
+              <div className="flex items-center justify-center gap-4 text-gray-300">
+          <EnvelopeIcon className="w-6 h-6 text-purple-400" />
                 <span>kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center justify-center gap-4 text-gray-300"></div>
-                <MapPinIcon className="w-6 h-6 text-purple-400" />
+              <div className="flex items-center justify-center gap-4 text-gray-300">
+          <MapPinIcon className="w-6 h-6 text-purple-400" />
                 <span>Middletown, DE</span>
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <Link 
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link 
                 href="/contact" 
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
               >
