@@ -1,17 +1,17 @@
 import {;
-    Eye,;
-    EyeOff,;
-    Mail,;
-    Lock,;
-    User,;
-    Building,;
-    Phone,;
-    CheckCircle,;
-    Shield,;
-    Award,;
-    Globe,;
-    Shield,;
-    Award,;
+    Eye,
+    EyeOff,
+    Mail,
+    Lock,
+    User,
+    Building,
+    Phone,
+    CheckCircle,
+    Shield,
+    Award,
+    Globe,
+    Shield,
+    Award,
     Globe from 'lucide-react';
 'use client';
   }
@@ -109,11 +109,11 @@ icon: Awar,;
       description: '24/7 support and services across multiple time zones',;
   ];
   const benefits = [;
-    'Free 14-day trial',;
-    'No setup fees',;
-    '24/7 expert support',;
-    'Custom integrations',;
-    'Scalable solutions',;
+    'Free 14-day trial',
+    'No setup fees',
+    '24/7 expert support',
+    'Custom integrations',
+    'Scalable solutions',
     'Regular updates';
   return (;
           <div>Coming Soon</div>
@@ -281,7 +281,7 @@ Join thousands of businesses already using our AI and IT solutions;
                   to achieve unprecedented growth and efficiency.;
               <div className='space-y-6'></div>
                 {;
-    features.map((feature,;
+    features.map((feature,
     index) => ();
   }
   }
@@ -318,5 +318,5 @@ Join thousands of businesses already using our AI and IT solutions;
       <Footer /></Footer>
     </>
   );
-export default SignupPage,;
+export default SignupPage,
   ];

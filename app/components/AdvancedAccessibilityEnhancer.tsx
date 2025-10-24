@@ -3,16 +3,17 @@ import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from './Navigation'
 import React, { useEffect, useState, useCallback } from 'react'
 
-interface AdvancedAccessibilityEnhancerProps {enableKeyboardNavigation?: boolean;
+interface AdvancedAccessibilityEnhancerProps {
+  enableKeyboardNavigation?: boolean;
   enableScreenReader?: boolean;
   enableHighContrast?: boolean;
   enableFocusManagement?: boolean;
   enableARIALabels?: boolean;
   enableSkipLinks?: boolean;
   enableColorContrast?: boolean;
-  enableMotionReduction?: boolean;}
-  enableFontScaling?: boolean}
-  enableVoiceNavigation?: boolean
+  enableMotionReduction?: boolean;
+  enableFontScaling?: boolean;
+  enableVoiceNavigation?: boolean;
 }
 
 const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({

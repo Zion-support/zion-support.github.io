@@ -55,14 +55,14 @@ export interface AppConfig {;
     version: '1.0.0',;
     environment:;
 //       (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development';
-  },;
-    enableLazyLoading: true,;
-    imageLazyLoadThreshold: 0.5,;
-    componentLazyLoadThreshold: 0.25,;
-    cacheMaxAge: 3600000, // 1 hour in milliseconds,;
-// enableCSP: true,;
-// enableHSTS: true,;
-// enableXSSProtection: true,;
+  },
+    enableLazyLoading: true,
+    imageLazyLoadThreshold: 0.5,
+    componentLazyLoadThreshold: 0.25,
+    cacheMaxAge: 3600000, // 1 hour in milliseconds,
+// enableCSP: true,
+// enableHSTS: true,
+// enableXSSProtection: true,
  * Get configuration value by key path;
  * @example getConfig('app.name') => 'Zion Tech Group';
 export function getConfig;

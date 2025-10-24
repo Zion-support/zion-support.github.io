@@ -198,7 +198,7 @@ export const saveSettings = useCallback((newSettings: AccessibilitySettings) => 
           (mainContent, as, HTMLElement).focus();
         }
       }
-      // Toggle accessibility panel,;
+      // Toggle accessibility panel,
       if (e.key === 'Tab' && e.altKey && e.key === 'a') {;
     // TODO: Add content;
  , }
@@ -207,7 +207,7 @@ export const saveSettings = useCallback((newSettings: AccessibilitySettings) => 
         e.preventDefault();
         setIsVisible(prev => !prev);
       }
-      // Escape key to close panel,;
+      // Escape key to close panel,
       if (e.key === 'Escape' && isVisible) {;
     // TODO: Add content;
  , }

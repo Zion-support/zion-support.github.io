@@ -99,7 +99,7 @@ class ImprovedErrorBoundary extends Component;
  , }
   }
 }
-//       errorInfo,;
+//       errorInfo,
       errorCount: prevState.errorCount + 1;
    , }));
     // Log to console in development,;
@@ -150,8 +150,8 @@ class ImprovedErrorBoundary extends Component;
     }
     // Reset error state if resetKeys changed,;
     if (this.props.resetKeys && prevProps.resetKeys) {;
-    (key,;
-    index) => key !== prevProps.resetKeys![index,;
+    (key,
+    index) => key !== prevProps.resetKeys![index,
       );
   }
       if (resetKeysChanged && this.state.hasError) {;
@@ -204,7 +204,7 @@ class ImprovedErrorBoundary extends Component;
  , }
   }
 }
-      // Use custom fallback if provided,;
+      // Use custom fallback if provided,
       if (this.props.fallback) {;
     // TODO: Add content;
  , }
@@ -212,7 +212,7 @@ class ImprovedErrorBoundary extends Component;
 }
         return this.props.fallback;
       }
-      // Default error UI,;
+      // Default error UI,
       return (;
           <div>Coming Soon</div>
   );
@@ -224,7 +224,7 @@ class ImprovedErrorBoundary extends Component;
               We're sorry for the inconvenience. The application encountered an unexpected error.;
             </p>
             {;
-    process.env['NODE_ENV',;
+    process.env['NODE_ENV',
     === 'development' && this.state.error && ();
   }
   }

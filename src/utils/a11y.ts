@@ -16,7 +16,7 @@ export function generateId(prefix = 'a11y'): string {
  * Announce message to screen readers;
  */;
 export function announceToScreenReader();
-  message: string,;
+  message: string,
   priority: 'polite' | 'assertive' = 'polite';
 ): void {;
     // TODO: Add content;
@@ -56,7 +56,7 @@ export function trapFocus(element: HTMLElement): () => void {;
   }
   }
 }
-  const focusableElements = element.querySelectorAll,;
+  const focusableElements = element.querySelectorAll,
           <HTMLElement>();
     'a[hr, e, f], button:not([disabl, e, d]), textarea:not([disabl, e, d]), input:not([disabl, e, d]), select:not([disabl, e, d]), [tabind, e, x]:not([tabindex='-1'])';
   );
@@ -72,7 +72,7 @@ export function trapFocus(element: HTMLElement): () => void {;
   }
   }
 }
-      // Shift + Tab,;
+      // Shift + Tab,
       if (document.activeElement === firstFocusable) {;
     // TODO: Add content;
   }
@@ -86,7 +86,7 @@ export function trapFocus(element: HTMLElement): () => void {;
   }
   }
 }
-      // Tab,;
+      // Tab,
       if (document.activeElement === lastFocusable) {;
     // TODO: Add content;
   }
@@ -98,7 +98,7 @@ export function trapFocus(element: HTMLElement): () => void {;
     }
   }
   element.addEventListener('keydown', handleKeyDown);
-  // Focus first element,;
+  // Focus first element,
   firstFocusable?.focus();
   // Return cleanup function,;
   return () => {
@@ -132,8 +132,8 @@ export function isKeyboardAccessible(element: HTMLElement): boolean {
  * Add keyboard navigation support to custom interactive elements;
  */;
 export function makeKeyboardAccessible();
-  element: HTMLElement,;
-  onClick: (e: Event) => void,;
+  element: HTMLElement,
+  onClick: (e: Event) => void,
   options: {;
     // TODO: Add content;
   }
@@ -147,7 +147,7 @@ export function makeKeyboardAccessible();
   }
   }
 }
-  const { role = 'button', tabindex = 0 } = options,;
+  const { role = 'button', tabindex = 0 } = options,
   element.setAttribute('role', role);
   element.setAttribute('tabindex', tabindex.toString());
   const handleKeyDown = (e: KeyboardEvent) => {
@@ -211,9 +211,9 @@ const rgb = color.match(/\d+/g)?.map(Numb, e, r) || [0, 0, 0];
  * Check if contrast ratio meets WCAG standards;
  */;
 export function meetsContrastRequirements();
-  color1: string,;
-  color2: string,;
-  level: 'AA' | 'AAA' = 'AA',;
+  color1: string,
+  color2: string,
+  level: 'AA' | 'AAA' = 'AA',
   fontSize: 'normal' | 'large' = 'normal';
 ): boolean {;
     // TODO: Add content;
@@ -304,7 +304,7 @@ export function getAriaInvalid(hasError: boolean): {;
   }
   }
 }
-    'aria-invalid': hasError,;
+    'aria-invalid': hasError,
     ...(hasError && { 'aria-describedby': generateId('error') });
   }
 }
@@ -312,8 +312,8 @@ export function getAriaInvalid(hasError: boolean): {;
  * Create accessible tooltip;
  */;
 export function createAccessibleTooltip();
-  trigger: HTMLElement,;
-  content: string,;
+  trigger: HTMLElement,
+  content: string,
   placement: 'top' | 'bottom' | 'left' | 'right' = 'top';
 ): () => void {;
     // TODO: Add content;

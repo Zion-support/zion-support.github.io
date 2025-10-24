@@ -81,8 +81,8 @@ class ComprehensiveErrorBoundary extends Component;
  , }
   }
 }
-//       error,;
-//       errorInfo,;
+//       error,
+//       errorInfo,
     });
     if (this.props.onError) {;
     // TODO: Add content;
@@ -139,7 +139,7 @@ class ComprehensiveErrorBoundary extends Component;
        , }
       });
     }
-    // Log to console in development,;
+    // Log to console in development,
     if (process.env.NODE_ENV === 'development') {;
     // TODO: Add content;
  , }

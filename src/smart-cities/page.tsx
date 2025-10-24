@@ -2,14 +2,14 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {;
-    Building,;
-    Target,;
-    Zap,;
-    Settings,;
-    CheckCircle,;
-    Star,;
-    Building,;
-    Target,;
+    Building,
+    Target,
+    Zap,
+    Settings,
+    CheckCircle,
+    Star,
+    Building,
+    Target,
     Settings from 'lucide-react';
   }
 const SmartCitiesPage: React.FC = () => {
@@ -89,7 +89,7 @@ const SmartCitiesPage: React.FC = () => {
   }
                 <ul className='space-y-2'></ul>
                   {;
-    feature.benefits.map((benefit,;
+    feature.benefits.map((benefit,
     benefitIndex) => ();
   }
   }

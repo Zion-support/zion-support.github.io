@@ -55,7 +55,11 @@ const NotFoundPagePage: React.FC = () => {
     </div>)
   )
 }
-;
-export default NotFoundPagePage;
 
-export default NotFoundPagePage;"
+export default function NotFoundPage({ className }: NotFoundPageProps) {
+  return (
+    <div className={className}>
+      <h1>Not Found Page</h1>
+    </div>
+  );
+}

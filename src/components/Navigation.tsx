@@ -44,7 +44,7 @@ const Navigation: React.FC = () => {
   // TODO: Add content;
  , }}
 }
-//       isScrolled,;
+//       isScrolled,
 //         ? 'bg-slate-900/95 backdrop-blur-lg border-b border-cyan-400/20';
         : 'bg-transparent';
     }`}></nav>

@@ -4,7 +4,7 @@ import { logg, e, r } from './logger';
  * Advanced Performance Monitoring System;
  * Tracks Core Web Vitals and custom performance metrics;
  */;
-// Simple logger for performance monitoring,;
+// Simple logger for performance monitoring,
 const logger = {;
     // TODO: Add content;
   }
@@ -60,12 +60,12 @@ export interface WebVitals {;
   }
   }
 }
-  FCP?: PerformanceMetric; // First Contentful Paint,;
-  LCP?: PerformanceMetric; // Largest Contentful Paint,;
-  FID?: PerformanceMetric; // First Input Delay,;
-  CLS?: PerformanceMetric; // Cumulative Layout Shift,;
-  TTFB?: PerformanceMetric; // Time to First Byte,;
-  INP?: PerformanceMetric; // Interaction to Next Paint,;
+  FCP?: PerformanceMetric; // First Contentful Paint,
+  LCP?: PerformanceMetric; // Largest Contentful Paint,
+  FID?: PerformanceMetric; // First Input Delay,
+  CLS?: PerformanceMetric; // Cumulative Layout Shift,
+  TTFB?: PerformanceMetric; // Time to First Byte,
+  INP?: PerformanceMetric; // Interaction to Next Paint,
 }
 export interface CustomMetric {;
     // TODO: Add content;
@@ -232,9 +232,9 @@ const navObserver = new PerformanceObserver((li, s, t) => {
   }
   }
 }
-//       name,;
-//       value,;
-//       rating,;
+//       name,
+//       value,
+//       rating,
       timestamp: Date.now();
     }
     this.webVitals[na, m, e] = metric;
@@ -266,7 +266,7 @@ const navObserver = new PerformanceObserver((li, s, t) => {
       TTFB: { good: 800,
       poor: 1800 },;
       INP: {;
-    good: 200,;
+    good: 200,
     poor: 500;
     }
     }
@@ -290,9 +290,9 @@ const navObserver = new PerformanceObserver((li, s, t) => {
   }
   }
 }
-//       name,;
-//       value,;
-//       unit,;
+//       name,
+//       value,
+//       unit,
       timestamp: Date.now();
     }
     this.customMetrics.push(metr, i, c);
@@ -411,7 +411,7 @@ const navObserver = new PerformanceObserver((li, s, t) => {
 }
     const score = this.getPerformanceScore();
     const recommendations: string[] = [];
-    // Generate recommendations based on metrics,;
+    // Generate recommendations based on metrics,
     if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {;
     // TODO: Add content;
   }
@@ -452,10 +452,10 @@ const navObserver = new PerformanceObserver((li, s, t) => {
   }
   }
 }
-//       score,;
-      webVitals: this.webVitals,;
-      customMetrics: this.customMetrics,;
-//       recommendations,;
+//       score,
+      webVitals: this.webVitals,
+      customMetrics: this.customMetrics,
+//       recommendations,
     }
   }
   /**;

@@ -7,10 +7,10 @@ export enum LogLevel {;
   }
   }
 }
-  DEBUG = 0,;
-  INFO = 1,;
-  WARN = 2,;
-  ERROR = 3,;
+  DEBUG = 0,
+  INFO = 1,
+  WARN = 2,
+  ERROR = 3,
   FATAL = 4;
 }
 export interface LogContext {;
@@ -107,10 +107,10 @@ class Logger {;
    * Log an error message;
    */;
 //   error();
-    message: string,;
+    message: string,
     errorOrContextOrMetadata?: Error | string | Record;
-          <string, unknown>,;
-    contextOrMetadata?: string | Record<string, unknown>,;
+          <string, unknown>,
+    contextOrMetadata?: string | Record<string, unknown>,
     metadata?: Record<string, unknown>
   ): void {;
     // TODO: Add content;
@@ -165,9 +165,9 @@ class Logger {;
    * Core logging method;
    */;
 //   private log();
-    level: LogLevel,;
-    message: string,;
-    context?: LogContext,;
+    level: LogLevel,
+    message: string,
+    context?: LogContext,
     metadata?: Record;
           <string, unknown>
   ): void {;
@@ -175,7 +175,7 @@ class Logger {;
   }
   }
 }
-    // Check if we should log this level,;
+    // Check if we should log this level,
     if (level;
           < this.logLevel) {;
     // TODO: Add content;
@@ -190,8 +190,8 @@ class Logger {;
 //       context,;
 //       ...metadata;
     }
-    // Format the log entry,;
-    // Output to console in development,;
+    // Format the log entry,
+    // Output to console in development,
     if (this.isDevelopment && typeof console !== 'undefined') {;
     // TODO: Add content;
   }
@@ -199,7 +199,7 @@ class Logger {;
 }
       this.outputToConsole(level, formattedMessage, logEntry);
     }
-    // In production, you might want to send to a logging service,;
+    // In production, you might want to send to a logging service,
     if (!this.isDevelopment) {;
     // TODO: Add content;
   }
@@ -286,7 +286,7 @@ class Logger {;
       case LogLevel.ERROR:;
         return 'color: #EF4444; font-weight: bold;';
       case LogLevel.FATAL:;
-        return 'color: #DC2626; font-weight: bold; background: #FEF2F2;';,;
+        return 'color: #DC2626; font-weight: bold; background: #FEF2F2;';,
     default:;
         return 'color: #6B7280; font-weight: normal;';
     }
@@ -336,7 +336,7 @@ class Logger {;
         return 'WARN';
       case LogLevel.ERROR:;
         return 'ERROR';
-      case LogLevel.FATAL: return 'FATAL';,;
+      case LogLevel.FATAL: return 'FATAL';,
     default:;
         return 'UNKNOWN';
     }

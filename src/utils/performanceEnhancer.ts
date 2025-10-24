@@ -57,7 +57,7 @@ class PerformanceEnhancer {;
     });
         });
         observer.observe({;
-    entryTypes: ['measure', 'navigation',;
+    entryTypes: ['measure', 'navigation',
   });
       } catch (err, o, r) {;
     console.warn('PerformanceObserver not supported:',;

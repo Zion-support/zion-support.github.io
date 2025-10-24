@@ -2,14 +2,14 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {;
-    Globe,;
-    Headphones,;
-    Shield,;
-    Zap,;
-    CheckCircle,;
-    Star,;
-    Globe,;
-    Headphones,;
+    Globe,
+    Headphones,
+    Shield,
+    Zap,
+    CheckCircle,
+    Star,
+    Globe,
+    Headphones,
     Zap from 'lucide-react';
   }
 const GlobalITSupportPage: React.FC = () => {
@@ -89,7 +89,7 @@ const GlobalITSupportPage: React.FC = () => {
   }
                 <ul className='space-y-2'></ul>
                   {;
-    feature.benefits.map((benefit,;
+    feature.benefits.map((benefit,
     benefitIndex) => ();
   }
   }

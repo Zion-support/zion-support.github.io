@@ -2,15 +2,15 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {;
-    Smartphone,;
-    Target,;
-    Zap,;
-    Settings,;
-    CheckCircle,;
-    Star,;
-    Code,;
-    Smartphone,;
-    Target,;
+    Smartphone,
+    Target,
+    Zap,
+    Settings,
+    CheckCircle,
+    Star,
+    Code,
+    Smartphone,
+    Target,
     Settings from 'lucide-react';
   }
 const AIMobileBuilderPage: React.FC = () => {
@@ -90,7 +90,7 @@ const AIMobileBuilderPage: React.FC = () => {
   }
                 <ul className='space-y-2'></ul>
                   {;
-    feature.benefits.map((benefit,;
+    feature.benefits.map((benefit,
     benefitIndex) => ();
   }
   }

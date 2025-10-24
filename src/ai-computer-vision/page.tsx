@@ -2,12 +2,12 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {;
-    Target,;
-    Shield,;
-    Eye,;
-    Camera,;
-    Target,;
-    Shield,;
+    Target,
+    Shield,
+    Eye,
+    Camera,
+    Target,
+    Shield,
     Settings from 'lucide-react';
   }
 const AIComputerVisionPage: React.FC = () => {
@@ -51,9 +51,9 @@ const AIComputerVisionPage: React.FC = () => {
       features: [;
   // TODO: Add item,s,;
 ];
-//         'Up to 1,000 images/month',;
-//         'Basic models',;
-//         'Email support',;
+//         'Up to 1,000 images/month',
+//         'Basic models',
+//         'Email support',
 //         'Standard API';
 //       ],;
       popular: fals,
@@ -136,7 +136,7 @@ Transform your business with cutting-edge computer vision technology. From objec
   }
                 <ul className='space-y-2'></ul>
                   {;
-    feature.benefits.map((benefit,;
+    feature.benefits.map((benefit,
     benefitIndex) => ();
   }
   }
@@ -213,7 +213,7 @@ Most Popular;
                   <p className='text-gray-400 text-sm'>{plan.description}</p>
                 <ul className='space-y-3 mb-8'></ul>
                   {;
-    plan.features.map((feature,;
+    plan.features.map((feature,
     featureIndex) => ();
   }
   }
@@ -228,7 +228,7 @@ Most Popular;
   // TODO: Add content;
  , }}
 }
-//                     plan.popular,;
+//                     plan.popular,
 //                       ? 'cyber-button';
                       : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-slate-900';
                  , }`}

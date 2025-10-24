@@ -16,10 +16,10 @@ const UserExperienceEnhancer: React.FC;
  , }
   }
 }
-  enableSmoothScrolling = true,;
-  enableLoadingStates = true,;
-  enableErrorBoundaries = true,;
-  enableAnalytics = true,;
+  enableSmoothScrolling = true,
+  enableLoadingStates = true,
+  enableErrorBoundaries = true,
+  enableAnalytics = true,
   enableNotifications = true;
 }) => {
   ;
@@ -35,7 +35,7 @@ const UserExperienceEnhancer: React.FC;
     const handleOffline = () => setIsOnline(fal, s, e);
     window.addEventListener('online',;
     handleOnline);
-    window.addEventListener('offline',;
+    window.addEventListener('offline',
     handleOffline);
 }
     return () => {
@@ -146,7 +146,7 @@ export const links = document.querySelectorAll('a[hr, e, f]');
   ;
     // console.error('Global error caught:,',;
     event.error);
-        // Send error to analytics if available,;
+        // Send error to analytics if available,
     if (typeof window !== 'undefined' && 'gtag' in window) {;
   // TODO: Add content;
  ,
@@ -253,7 +253,7 @@ export const handleVisibilityChange = (): JSX.Element => {;
   }
 }
         const scrollDepth = Math.round();
-//           (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100,;
+//           (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100,
 );
         if (scrollDepth > maxScrollDepth) {;
     // TODO: Add content;
@@ -261,7 +261,7 @@ export const handleVisibilityChange = (): JSX.Element => {;
   }
 }
           maxScrollDepth = scrollDepth;
-          // Track milestone scroll depths,;
+          // Track milestone scroll depths,
           if (maxScrollDepth >= 25 && maxScrollDepth;
           < 50) {;
     // TODO: Add content;

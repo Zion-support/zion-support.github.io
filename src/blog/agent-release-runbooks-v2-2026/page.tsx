@@ -16,6 +16,7 @@ Page.displayName = "Page"() {
           </h1>
           <p className='text-lg md:text-xl text-white/80 max-w-3xl'>
             Ship autonomous agents with budgeted actions, KPI
+import {ListChecks, FileWarning, RefreshCw, Calendar} from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
           </p>
         </div>

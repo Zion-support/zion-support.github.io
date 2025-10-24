@@ -109,7 +109,6 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({className="''" }) => {
     </>
   );,
 };
-;
 export default EnhancedSEOHeadPage;
   )
 }

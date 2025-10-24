@@ -121,65 +121,65 @@ const ContentStatistics: React.FC = () => {
 }
 ;
 export default ContentStatisticsPage;
-clients: 0,;
-projects: 0,;
-satisfaction: 0,;
-years: 0,;
-countries: 0,;
+clients: 0,
+projects: 0,
+satisfaction: 0,
+years: 0,
+countries: 0,
 uptime: 0});"
-consttargetCounters="{clients: " 1000 0,;
-projects: 500 0,;
-satisfaction: 9 9,;
-years: 1 5,;}
+consttargetCounters="{clients: " 1000 0,
+projects: 500 0,
+satisfaction: 9 9,
+years: 1 5,}
 countries: 5 0,}
-uptime:99}"
+uptime:99}
 conststatistics="["
-{icon: Users,;
-value: counters.clients,;
-label: 'Happy Clients',;
-suffix: '+',;}
+{icon: Users,
+value: counters.clients,
+label: 'Happy Clients',
+suffix: '+',}
 color: 'text-blue-40 0',}
 description: 'Businesses trust our solutions'},
-{icon: Award,;
-value: counters.projects,;
-label: 'Projects Completed',;
-suffix: '+',;}
+{icon: Award,
+value: counters.projects,
+label: 'Projects Completed',
+suffix: '+',}
 color: 'text-purple-40 0',}
 description: 'Successful implementations'},
-{icon: TrendingUp,;
-value: counters.satisfaction,;
-label: 'Client Satisfaction',;
-suffix: '%',;}
+{icon: TrendingUp,
+value: counters.satisfaction,
+label: 'Client Satisfaction',
+suffix: '%',}
 color: 'text-green-40 0',}
 description: 'Customer satisfaction rate'},
-{icon: Clock,;
-value: counters.years,;
-label: 'Years Experience',;
-suffix: '+',;}
+{icon: Clock,
+value: counters.years,
+label: 'Years Experience',
+suffix: '+',}
 color: 'text-yellow-40 0',}
 description: 'Industry expertise'},
-{icon: Globe,;
-value: counters.countries,;
-label: 'Countries Served',;
-suffix: '+',;}
+{icon: Globe,
+value: counters.countries,
+label: 'Countries Served',
+suffix: '+',}
 color: 'text-cyan-40 0',}
 description: 'Global presence'},
-{icon: BarChart3,;
-value: counters.uptime,;
-label: 'Uptime Guarantee',;
-suffix: '%',;}
+{icon: BarChart3,
+value: counters.uptime,
+label: 'Uptime Guarantee',
+suffix: '%',}
 color: 'text-red-40 0',}
 description: 'Service reliability'}
 ];"
 constachievements="["
-{icon: Brain,;}
+{icon: Brain,}
 title: 'AI Innovation',}
 description: 'Leading the industry in AI-powered solutions'},
-{icon: Shield,;}
+{icon: Shield,}
 title: 'Security Excellence',}
 description: 'Bank-level security for all our solutions'},
-{icon: Globe,;
-title: 'Global Reach',;}
+{icon: Globe,
+title: 'Global Reach',}
 description: 'Worldwide deployment and support for international businesses',}
 stats: ['5 0+ Countries', '1 5+ Languages', '2 4/7 Support']}
 ];"
@@ -194,16 +194,16 @@ constbenefits="["
 'Proven track record of success'
 ];"
 constachievements="["
-{icon: Star,;
-title: 'Industry Recognition',;}
+{icon: Star,
+title: 'Industry Recognition',}
 description: 'Awarded Best AI Solutions Provider2024',}
 value: '2 5+'},
-{icon: Target,;
-title: 'Success Rate',;}
+{icon: Target,
+title: 'Success Rate',}
 description: 'Projects delivered on time and within budget',}
 value: '9 8%'},
-{icon: Rocket,;
-title: 'Growth Rate',;}
+{icon: Rocket,
+title: 'Growth Rate',}
 description: 'Year-over-year business growth',}
 value: '30 0%'}
 ];"

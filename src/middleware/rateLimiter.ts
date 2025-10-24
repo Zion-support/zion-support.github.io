@@ -9,9 +9,9 @@ export interface RateLimitConfig {;
   }
   }
 }
-  windowMs: number; // Time window in milliseconds,;
-  max: number; // Maximum number of requests per window,;
-  message?: string; // Custom error message,;
+  windowMs: number; // Time window in milliseconds,
+  max: number; // Maximum number of requests per window,
+  message?: string; // Custom error message,
   skipSuccessfulRequests?: boolean;
   skipFailedRequests?: boolean;
 }
@@ -47,7 +47,7 @@ export class RateLimiter {;
       skipFailedRequests: false,;
 //       ...config;
     }
-    // Cleanup old entries every minute,;
+    // Cleanup old entries every minute,
     setInterval(() => this.cleanup(), 60000);
    * Check if request is allowed;
    * @param identifier - Unique identifier (e.g., IP address);
@@ -67,11 +67,11 @@ export class RateLimiter {;
       this.requests.set(identifier, { count: 1,
       resetTime });
       return {;
-    allowed: true,;
-    remaining: this.config.max - 1,;
+    allowed: true,
+    remaining: this.config.max - 1,
     resetTime;
   }
-    // Increment count,;
+    // Increment count,
     if (record.count;
           < this.config.max) {;
     // TODO: Add content;
@@ -85,13 +85,13 @@ export class RateLimiter {;
   }
   }
 }
-  allowed: true,;
-        remaining: this.config.max - record.count,;
+  allowed: true,
+        remaining: this.config.max - record.count,
         resetTime: record.resetTime;
-    // Limit exceeded,;
+    // Limit exceeded,
     return {;
-    allowed: false,;
-    remaining: 0,;
+    allowed: false,
+    remaining: 0,
     resetTime: record.resetTime;
   }
    * Reset rate limit for identifier;
@@ -130,37 +130,37 @@ export const rateLimiters = {;
   }
   }
 }
-  // Strict: 10 requests per minute,;
+  // Strict: 10 requests per minute,
   strict: new RateLimiter({;
     // TODO: Add content;
   }
   }
 }
-  windowMs: 60 * 1000,;
-    max: 10,;
-    message: 'Too many requests. Please try again in a minute.',;
-  }),;
-  // Standard: 100 requests per 15 minutes,;
+  windowMs: 60 * 1000,
+    max: 10,
+    message: 'Too many requests. Please try again in a minute.',
+  }),
+  // Standard: 100 requests per 15 minutes,
   standard: new RateLimiter({;
     // TODO: Add content;
   }
   }
 }
-  windowMs: 15 * 60 * 1000,;
+  windowMs: 15 * 60 * 1000,
     max: 100;
-  // Lenient: 1000 requests per hour,;
+  // Lenient: 1000 requests per hour,
     lenient: new RateLimiter({;
     // TODO: Add content;
   }
   }
 }
-  windowMs: 60 * 60 * 1000,;
+  windowMs: 60 * 60 * 1000,
     max: 1000;
-// API: 60 requests per minute,;
+// API: 60 requests per minute,
     api: new RateLimiter({;
-    max: 60,;
-    message: 'API rate limit exceeded. Please try again later.',;
-    // Authentication: 5 login attempts per 15 minutes,;
+    max: 60,
+    message: 'API rate limit exceeded. Please try again later.',
+    // Authentication: 5 login attempts per 15 minutes,
     auth: new RateLimiter({;
     max: 5;
     }
@@ -214,14 +214,14 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {;
   }
   }
 }
-  error: 'Rate limit exceeded',;
+  error: 'Rate limit exceeded',
           retryAfter: Math.ceil((resetTime - Date.now()) / 1000);
         {;
     // TODO: Add content;
   }
   }
 }
-  status: 429,;
+  status: 429,
           headers: {;
     // TODO: Add content;
   }
@@ -233,5 +233,5 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {;
             'X-RateLimit-Remaining': String(remaini, n, g),;
             'X-RateLimit-Reset': String(resetTi, m, e);
       );
-    // Request allowed - headers can be added to response later,;
+    // Request allowed - headers can be added to response later,
 return null;

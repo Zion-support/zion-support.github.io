@@ -31,42 +31,42 @@ const RequestQuotePage: React.FC = () => {
   const _serviceTypes = [;
   // TODO: Add item,s,;
 ];
-//     'AI Services',;
-//     'IT Infrastructure',;
-//     'Cybersecurity',;
-//     'Cloud Migration',;
-//     'Micro SAAS Solutions',;
-//     'Digital Transformation',;
-//     'Custom Development',;
-//     'Consulting Services',;
+//     'AI Services',
+//     'IT Infrastructure',
+//     'Cybersecurity',
+//     'Cloud Migration',
+//     'Micro SAAS Solutions',
+//     'Digital Transformation',
+//     'Custom Development',
+//     'Consulting Services',
 //     'Other';
   ];
   const projectSizes = [;
   // TODO: Add item,s,;
 ];
-//     'Small (1-10 employees)',;
-//     'Medium (11-100 employees)',;
-//     'Large (101-1000 employees)',;
+//     'Small (1-10 employees)',
+//     'Medium (11-100 employees)',
+//     'Large (101-1000 employees)',
 //     'Enterprise (1000+ employees)';
   ];
   const timelines = [;
   // TODO: Add item,s,;
 ];
-//     'ASAP',;
-//     '1-3 months',;
-//     '3-6 months',;
-//     '6-12 months',;
-//     '12+ months',;
+//     'ASAP',
+//     '1-3 months',
+//     '3-6 months',
+//     '6-12 months',
+//     '12+ months',
 //     'Flexible';
   ];
   const budgetRanges = [;
   // TODO: Add item,s,;
 ];
-//     'Under $10,000',;
-//     '$10,000 - $50,000',;
-//     '$50,000 - $100,000',;
-//     '$100,000 - $500,000',;
-//     '$500,000+',;
+//     'Under $10,000',
+//     '$10,000 - $50,000',
+//     '$50,000 - $100,000',
+//     '$100,000 - $500,000',
+//     '$500,000+',
 //     'To be discussed';
   ];
   const handleInputChange = (e: React.ChangeEven,t,;
@@ -447,7 +447,7 @@ className='w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
   }onChange={;
     handleInputChange;
   }
-// required,;
+// required,
                       rows={;
     4;
   }
@@ -504,7 +504,7 @@ type='submit';
                 <h3 className='text-xl font-bold text-white mb-6'>Why Request a Quote?</h3>
                 <div className='space-y-4'></div>
                   {;
-    benefits.map((benefit,;
+    benefits.map((benefit,
     index) => ();
   }
   }
@@ -528,7 +528,7 @@ type='submit';
                 <h3 className='text-xl font-bold text-white mb-6'>Why Choose Us?</h3>
                 <div className='space-y-4'></div>
                   {;
-    whyChooseUs.map((item,;
+    whyChooseUs.map((item,
     index) => ();
   }
   }

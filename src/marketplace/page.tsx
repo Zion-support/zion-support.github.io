@@ -1,17 +1,17 @@
 import {;
-    ShoppingCart,;
-    Users,;
-    Wrench,;
-    Search,;
-    Filter,;
-    Star,;
-    Clock,;
-    CheckCircle,;
-    ArrowRight,;
-    Phone,;
-    Mail,;
-    Award,;
-    ShoppingCart,;
+    ShoppingCart,
+    Users,
+    Wrench,
+    Search,
+    Filter,
+    Star,
+    Clock,
+    CheckCircle,
+    ArrowRight,
+    Phone,
+    Mail,
+    Award,
+    ShoppingCart,
     Users from 'lucide-react';
 'use client';
   }

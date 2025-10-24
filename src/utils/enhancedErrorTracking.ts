@@ -68,8 +68,8 @@ class EnhancedErrorTracker {;
   }
   }
 }
-  component: 'Global',;
-          action: 'Uncaught Error',;
+  component: 'Global',
+          action: 'Uncaught Error',
         });
       });
       window.addEventListener('unhandledrejection', event => {;
@@ -82,8 +82,8 @@ class EnhancedErrorTracker {;
   }
   }
 }
-  component: 'Global',;
-          action: 'Unhandled Promise Rejection',;
+  component: 'Global',
+          action: 'Unhandled Promise Rejection',
         });
       });
     }
@@ -101,8 +101,8 @@ class EnhancedErrorTracker {;
   }
   }
 }
-  message: error.message,;
-      stack: error.stack,;
+  message: error.message,
+      stack: error.stack,
       context: {;
     // TODO: Add content;
   }
@@ -110,9 +110,9 @@ class EnhancedErrorTracker {;
 }
 //         ...context;
         sessionId: this.sessionId;
-      },;
-      timestamp: new Date().toISOString(),;
-      userAgent: navigator.userAgent,;
+      },
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
       url: window.location.href;
     }
     this.errors.push(trackedErr, o, r);
@@ -124,7 +124,7 @@ class EnhancedErrorTracker {;
 }
       this.errors.shift();
     }
-    // Log to console in development,;
+    // Log to console in development,
     if (process.env['NODE_ENV'] === 'development') {;
     // // console.error('Tracked Error: ',;
     trackedError);
@@ -150,7 +150,7 @@ class EnhancedErrorTracker {;
       action: string, parameters: Record;
           <string, unknown>) => void;
         }
-// ).gtag,;
+// ).gtag,
 ) {;
     // TODO: Add content;
   }
@@ -171,8 +171,8 @@ class EnhancedErrorTracker {;
   }
   }
 }
-  description: error.message,;
-        fatal: false,;
+  description: error.message,
+        fatal: false,
         component: error.context.component;
       });
     }
@@ -218,12 +218,12 @@ class EnhancedErrorTracker {;
   }
   }
 }
-  total: this.errors.length,;
-//       byComponent,;
+  total: this.errors.length,
+//       byComponent,
       recent: this.errors.slice(-10);
     }
   }
 }
-// Export singleton instance,;
+// Export singleton instance,
 export const errorTracker = new EnhancedErrorTracker();
 export default errorTracker;

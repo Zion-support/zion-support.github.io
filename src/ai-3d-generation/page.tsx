@@ -1,3 +1,9 @@
+import React from 'react';
+import { Play } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { CheckCircle, Camera, Zap } from 'lucide-react';
 import React from 'react'
 import { Pl, a, y } from "lucide-react";
 import Navigation from '../components/Navigation'
@@ -7,15 +13,9 @@ import { CheckCircle, Camera, Zap } from "lucide-react";
 constAI3 DGenerationPage: React.FC= () => {
   constfeatures= ['3 D Model Generation,',
     'Animation Creation',
-    'Texture Mapping',
-    'Rendering',
-    'VR/AR Support',
-    'Export Formats',
-    'AI Texturing',
-    'Lighting Setup',
-    'Material Library',
-    'Scene Composition'
-  ]
+    'Real-time Rendering',
+    'AI-Powered Design',
+  ];
 
   constbenefits= ['Professional3D content',
     'Time savings',
@@ -195,4 +195,4 @@ export const Page = (): JSX.Element => {
   ),
 }
 
-export default AI3DGenerationPage
+export default AI3DGenerationPage;

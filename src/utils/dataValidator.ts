@@ -8,7 +8,7 @@ export interface ValidationRule<T = unknown> {;
   }
   }
 }
-  validate: (value: T) => boolean;,;
+  validate: (value: T) => boolean;,
     message: string;
     }
 export interface FieldRule {;
@@ -16,7 +16,7 @@ export interface FieldRule {;
   }
   }
 }
-  type: 'required' | 'email' | 'url' | 'number' | 'string' | 'custom';,;
+  type: 'required' | 'email' | 'url' | 'number' | 'string' | 'custom';,
     message: string;
   min?: number;
   max?: number;
@@ -41,8 +41,8 @@ export class ValidationError extends Error {;
   }
 }
 //   constructor();
-  message: string,;
-    public field: string,;
+  message: string,
+    public field: string,
     public errors: string[];
   ) {;
     // TODO: Add content;
@@ -202,7 +202,7 @@ export function sanitizeHTML(html: string): string {
   // Remove script tags,;
 let clean = html.replace(/;
           <script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
-  // Remove event handlers,;
+  // Remove event handlers,
   clean = clean.replace(/on\w+="[^"]*"/gi, '');
   clean = clean.replace(/on\w+='[^']*'/gi, '');
   return clean;
@@ -280,8 +280,8 @@ function validateFieldRule(value: unknown,
  * Validate form data;
  */;
 export function validateForm<T extends Record<string, unknown>>();
-  data: T,;
-  rules: ValidationRules,;
+  data: T,
+  rules: ValidationRules,
 ): ValidationResult {;
     // TODO: Add content;
   }
@@ -324,14 +324,14 @@ export function validateForm<T extends Record<string, unknown>>();
   }
   }
 }
-  category: ErrorCategory.Validation,;
-          severity: ErrorSeverity.Low,;
+  category: ErrorCategory.Validation,
+          severity: ErrorSeverity.Low,
           context: {;
     // TODO: Add content;
   }
   }
 }
-//             field,;
+//             field,
             errors: fieldErrors;
     }
         }
@@ -369,9 +369,9 @@ export const ValidationRulesBuilder = {;
       if (typeof value === 'string' && value.trim() === '') return false;
       if (Array.isArray(val, u, e) && value.length === 0) return false;
       return true;
-    },;
-    message: 'This field is required',;
-  }),;
+    },
+    message: 'This field is required',
+  }),
   email: (): ValidationRule;
           <string> => ({;
     // TODO: Add content;
@@ -434,11 +434,11 @@ export const ValidationRulesBuilder = {;
   }
   }
 }
-  validate: validator,;
-//     message,;
+  validate: validator,
+//     message,
   });
 }
-// Legacy class-based API for backward compatibility,;
+// Legacy class-based API for backward compatibility,
 class DataValidator {;
     // TODO: Add content;
   }

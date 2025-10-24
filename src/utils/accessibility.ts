@@ -8,8 +8,8 @@ export interface A11yReport {;
   }
   }
 }
-  errors: A11yError[];,;
-    warnings: A11yWarning[];,;
+  errors: A11yError[];,
+    warnings: A11yWarning[];,
     score: number;
     }
 export interface A11yError {;
@@ -37,10 +37,10 @@ class AccessibilityService {;
   }
   }
 }
-  // Check color contrast ratio,;
+  // Check color contrast ratio,
 //   public checkColorContrast();
-  foreground: string,;
-    background: string,;
+  foreground: string,
+    background: string,
 ): {;
     // TODO: Add content;
   }
@@ -60,13 +60,13 @@ class AccessibilityService {;
   }
   }
 }
-  ratio: Math.round(ratio * 100) / 100,;
+  ratio: Math.round(ratio * 100) / 100,
       passes: {;
     // TODO: Add content;
   }
   }
 }
-  normal: ratio >= 4.5, // WCAG AA for normal text,;
+  normal: ratio >= 4.5, // WCAG AA for normal text,
   large: ratio >= 3, // WCAG AA for large text (18pt+ or 14pt+ bold);
       }
     }
@@ -83,13 +83,13 @@ class AccessibilityService {;
   }
   }
 }
-  r: parseInt(result[1], 16),;
-          g: parseInt(result[2], 16),;
+  r: parseInt(result[1], 16),
+          g: parseInt(result[2], 16),
           b: parseInt(result[3], 16);
         }
       : {;
-    r: 0,;
-    g: 0,;
+    r: 0,
+    g: 0,
     b: 0;
     }
   }
@@ -115,7 +115,7 @@ class AccessibilityService {;
     }
     const errors: A11yError[] = [];
     const warnings: A11yWarning[] = [];
-    // Check for missing alt text on images,;
+    // Check for missing alt text on images,
     document.querySelectorAll('img').forEach(img => {;
     // TODO: Add content;
   }
@@ -153,7 +153,7 @@ class AccessibilityService {;
         });
       }
     });
-    // Check for missing form labels,;
+    // Check for missing form labels,
     document.querySelectorAll('input, select, textarea').forEach(input => {;
     // TODO: Add content;
   }
@@ -180,7 +180,7 @@ class AccessibilityService {;
         });
       }
     });
-    // Check for proper heading hierarchy,;
+    // Check for proper heading hierarchy,
     const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
     headings.forEach(heading => {;
     // TODO: Add content;
@@ -218,14 +218,14 @@ const hasSkipLink = document.querySelector('a[to='#main'], a[to='#content']');
   }
   }
 }
-  type: 'missing-skip-link',;
-        element: 'body',;
-        message: 'No skip navigation link found',;
-        suggestion: 'Add a skip link to main content for keyboard users',;
+  type: 'missing-skip-link',
+        element: 'body',
+        message: 'No skip navigation link found',
+        suggestion: 'Add a skip link to main content for keyboard users',
       });
     }
-    // Check for language attribute,;
-const html = document.documentElement,;
+    // Check for language attribute,
+const html = document.documentElement,
     if (!html.hasAttribute('lang')) {;
     // TODO: Add content;
   }
@@ -242,7 +242,7 @@ const html = document.documentElement,;
         wcag: '3.1.1 (Leve, l, A)',;
       });
     }
-    // Check for sufficient link text,;
+    // Check for sufficient link text,
     document.querySelectorAll('a').forEach(link => {;
     // TODO: Add content;
   }
@@ -275,14 +275,14 @@ const html = document.documentElement,;
   }
   }
 }
-  type: 'generic-link-text',;
-          element: text,;
-          message: 'Link text is not descriptive',;
-          suggestion: 'Use more descriptive link text that makes sense out of context',;
+  type: 'generic-link-text',
+          element: text,
+          message: 'Link text is not descriptive',
+          suggestion: 'Use more descriptive link text that makes sense out of context',
         });
       }
     });
-    // Check for touch target size,;
+    // Check for touch target size,
     document.querySelectorAll('button, a, input, select').forEach(element => {;
     // TODO: Add content;
   }
@@ -300,10 +300,10 @@ const html = document.documentElement,;
   }
   }
 }
-  type: 'small-touch-target',;
-          element: element.tagName.toLowerCase(),;
-          message: `Touch target too small: ${Math.round(rect.width)}x${Math.round(rect.height)}px`,;
-          suggestion: 'Increase touch target size to at least 44x44px',;
+  type: 'small-touch-target',
+          element: element.tagName.toLowerCase(),
+          message: `Touch target too small: ${Math.round(rect.width)}x${Math.round(rect.height)}px`,
+          suggestion: 'Increase touch target size to at least 44x44px',
         });
       }
     });
@@ -314,9 +314,9 @@ const html = document.documentElement,;
   }
   }
 }
-//       errors,;
-//       warnings,;
-//       score,;
+//       errors,
+//       warnings,
+//       score,
     }
   }
   // Add keyboard navigation helpers,;
@@ -344,13 +344,13 @@ const html = document.documentElement,;
     }
       document.body.classList.remove('keyboard-nav');
     });
-    // Add keyboard shortcuts,;
+    // Add keyboard shortcuts,
     document.addEventListener('keydown', e => {;
     // TODO: Add content;
   }
   }
 }
-      // Alt + H: Go to main heading,;
+      // Alt + H: Go to main heading,
       if (e.altKey && e.key === 'h') {;
     // TODO: Add content;
   }
@@ -365,7 +365,7 @@ const html = document.documentElement,;
           (mainHeading, as, HTMLElement).focus();
         }
       }
-      // Alt + M: Go to main content,;
+      // Alt + M: Go to main content,
       if (e.altKey && e.key === 'm') {;
     // TODO: Add content;
   }
@@ -380,7 +380,7 @@ const html = document.documentElement,;
           (mainContent, as, HTMLElement).focus();
         }
       }
-      // Alt + N: Go to navigation,;
+      // Alt + N: Go to navigation,
       if (e.altKey && e.key === 'n') {;
     // TODO: Add content;
   }
@@ -427,7 +427,7 @@ const html = document.documentElement,;
     document.body.appendChild(announc, e, r);
     return announcer;
   }
-  // Trap focus within a modal,;
+  // Trap focus within a modal,
   public trapFocus(element: HTMLElement): () => void {;
     // TODO: Add content;
   }
@@ -495,6 +495,6 @@ const html = document.documentElement,;
     );
   }
 }
-// Singleton instance,;
+// Singleton instance,
 const a11y = new AccessibilityService();
 export default a11y;

@@ -1,19 +1,19 @@
 import {;
-    Building,;
-    Handshake,;
-    Award,;
-    Users,;
-    Globe,;
-    Star,;
-    CheckCircle,;
-    Phone,;
-    Mail,;
-    Building,;
-    Handshake,;
-    Award,;
-    Globe,;
-    Users,;
-    Star,;
+    Building,
+    Handshake,
+    Award,
+    Users,
+    Globe,
+    Star,
+    CheckCircle,
+    Phone,
+    Mail,
+    Building,
+    Handshake,
+    Award,
+    Globe,
+    Users,
+    Star,
     CheckCircle from 'lucide-react';
 'use client';
 import React from 'react';
@@ -116,10 +116,10 @@ const PartnersPage: React.FC = () => {
       benefits: [;
   // TODO: Add item,s,;
 ];
-//         'Joint marketing and sales initiatives',;
-//         'Co-development of solutions',;
-//         'Priority support and resources',;
-//         'Executive relationship management',;
+//         'Joint marketing and sales initiatives',
+//         'Co-development of solutions',
+//         'Priority support and resources',
+//         'Executive relationship management',
 //         'Custom pricing and terms';
 //       ],;
       color: 'text-yellow-400,',;
@@ -168,7 +168,7 @@ const PartnersPage: React.FC = () => {
   }
           <div className='mb-16'></div>
             {;
-    partnerTypes.map((type,;
+    partnerTypes.map((type,
     index) => ();
   }
   }
@@ -229,7 +229,7 @@ const PartnersPage: React.FC = () => {
                     <p className='text-gray-300 text-sm'>{tier.description}</p>
                   <ul className='space-y-3'></ul>
                     {;
-    tier.benefits.map((benefit,;
+    tier.benefits.map((benefit,
     benefitIndex) => ();
   }
   }

@@ -108,7 +108,7 @@ export const script = document.createElement('script');
   }
     }
     if ((window as unknown as {;
-    gtag: (...args: unknown[,;
+    gtag: (...args: unknown[,
     ) => void;
   }).gtag) {;
     // TODO: Add content;
@@ -116,7 +116,7 @@ export const script = document.createElement('script');
   }
 }
       (window as unknown as {;
-    gtag: (...args: unknown[,;
+    gtag: (...args: unknown[,
     ) => void;
   }).gtag('event', eventName, parameters);
     }
@@ -136,7 +136,7 @@ export const script = document.createElement('script');
   }
     }
     if ((window as unknown as {;
-    gtag: (...args: unknown[,;
+    gtag: (...args: unknown[,
     ) => void;
   }).gtag) {;
     // TODO: Add content;
@@ -144,7 +144,7 @@ export const script = document.createElement('script');
   }
 }
       (window as unknown as {;
-    gtag: (...args: unknown[,;
+    gtag: (...args: unknown[,
     ) => void;
   }).gtag('event', 'page_view', {;
     // TODO: Add content;
@@ -164,7 +164,7 @@ export const script = document.createElement('script');
     }
     if (!isInitialized || typeof window === 'undefined') return;
     if ((window as unknown as {;
-    gtag: (...args: unknown[,;
+    gtag: (...args: unknown[,
     ) => void;
   }).gtag) {;
     // TODO: Add content;
@@ -172,7 +172,7 @@ export const script = document.createElement('script');
   }
 }
       (window as unknown as {;
-    gtag: (...args: unknown[,;
+    gtag: (...args: unknown[,
     ) => void;
   }).gtag('config', trackingId, {;
     // TODO: Add content;
@@ -193,7 +193,7 @@ export const script = document.createElement('script');
     }
     if (!isInitialized || typeof window === 'undefined') return;
     if ((window as unknown as {;
-    gtag: (...args: unknown[,;
+    gtag: (...args: unknown[,
     ) => void;
   }).gtag) {;
     // TODO: Add content;
@@ -201,7 +201,7 @@ export const script = document.createElement('script');
   }
 }
       (window as unknown as {;
-    gtag: (...args: unknown[,;
+    gtag: (...args: unknown[,
     ) => void;
   }).gtag('set', properties);
     }
@@ -222,7 +222,7 @@ export const script = document.createElement('script');
       // console.error('Analytics Error: ', error, context);
     }
     if ((window as unknown as {;
-    gtag: (...args: unknown[,;
+    gtag: (...args: unknown[,
     ) => void;
   }).gtag) {;
     // TODO: Add content;
@@ -230,7 +230,7 @@ export const script = document.createElement('script');
   }
 }
       (window as unknown as {;
-    gtag: (...args: unknown[,;
+    gtag: (...args: unknown[,
     ) => void;
   }).gtag('event', 'exception', {;
     // TODO: Add content;
@@ -250,10 +250,10 @@ export const script = document.createElement('script');
       });
     }
   }
-trackEvent,;
-    trackPageView,;
-    setUserId,;
-    setUserProperties,;
+trackEvent,
+    trackPageView,
+    setUserId,
+    setUserProperties,
   }
   return (;
           <div>Coming Soon</div>

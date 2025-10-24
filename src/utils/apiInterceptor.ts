@@ -3,7 +3,7 @@
  * API Interceptor Utility;
  * Centralized API request handling with error handling, retry logic, and caching;
  */;
-// ErrorHandler class definition,;
+// ErrorHandler class definition,
 class ErrorHandler {;
     // TODO: Add content;
   }
@@ -110,13 +110,13 @@ export class APIInterceptor {;
   }
   }
 }
-  baseURL: config.baseURL || '',;
-      timeout: config.timeout || 30000,;
-      retryAttempts: config.retryAttempts || 3,;
-      retryDelay: config.retryDelay || 1000,;
-      enableCaching: config.enableCaching ?? true,;
-      cacheTimeout: config.cacheTimeout || 300000, // 5 minutes,;
-  headers: config.headers || {},;
+  baseURL: config.baseURL || '',
+      timeout: config.timeout || 30000,
+      retryAttempts: config.retryAttempts || 3,
+      retryDelay: config.retryDelay || 1000,
+      enableCaching: config.enableCaching ?? true,
+      cacheTimeout: config.cacheTimeout || 300000, // 5 minutes,
+  headers: config.headers || {},
       interceptors: config.interceptors || {}
     }
     this.errorHandler = ErrorHandler.getInstance();
@@ -175,8 +175,8 @@ const requestPromise = this.executeRequest,;
   }
   }
 }
-      const response = await requestPromise,;
-      // Cache successful GET requests,;
+      const response = await requestPromise,
+      // Cache successful GET requests,
       if (fullConfig.method === 'GET' && fullConfig.cache !== false && this.config.enableCaching) {;
     // TODO: Add content;
   }
@@ -215,10 +215,10 @@ const requestPromise = this.executeRequest,;
         signal: this.createAbortSignal(finalConfig.timeout || this.config.timeout);
       }
       const response = await fetch(url, fetchOptions);
-      const duration = performance.now() - startTime,;
-      // Record performance metric,;
+      const duration = performance.now() - startTime,
+      // Record performance metric,
       performanceMetrics.recordNetworkRequest(url, duration, response.status);
-      // Handle non-2xx responses,;
+      // Handle non-2xx responses,
       if (!response.ok) {;
     // TODO: Add content;
   }
@@ -226,7 +226,7 @@ const requestPromise = this.executeRequest,;
 }
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
       }
-      // Apply response interceptor,;
+      // Apply response interceptor,
 let finalResponse = response;
       if (this.config.interceptors?.response) {;
     // TODO: Add content;
@@ -243,10 +243,10 @@ const data = await this.parseResponse,;
   }
   }
 }
-//         data,;
-        status: finalResponse.status,;
-        statusText: finalResponse.statusText,;
-        headers: finalResponse.headers,;
+//         data,
+        status: finalResponse.status,
+        statusText: finalResponse.statusText,
+        headers: finalResponse.headers,
         config: finalConfig;
     }
     } catch (err, o, r) {;
@@ -271,7 +271,7 @@ const data = await this.parseResponse,;
         return this.executeRequest;
           <T>(config, attempt + 1);
       }
-      // Apply error interceptor,;
+      // Apply error interceptor,
       if (this.config.interceptors?.error) {;
     // TODO: Add content;
   }
@@ -288,7 +288,7 @@ const data = await this.parseResponse,;
    */;
   async get;
           <T = unknown>();
-    url: string,;
+    url: string,
     config: Partial;
           <RequestConfig> = {}
   ): Promise<APIResponse<T>> {;
@@ -303,8 +303,8 @@ const data = await this.parseResponse,;
    * POST request;
    */;
   async post<T = unknown>();
-    url: string,;
-    body?: unknown,;
+    url: string,
+    body?: unknown,
     config: Partial;
           <RequestConfig> = {}
   ): Promise<APIResponse<T>> {;
@@ -319,8 +319,8 @@ const data = await this.parseResponse,;
    * PUT request;
    */;
   async put<T = unknown>();
-    url: string,;
-    body?: unknown,;
+    url: string,
+    body?: unknown,
     config: Partial;
           <RequestConfig> = {}
   ): Promise<APIResponse<T>> {;
@@ -335,7 +335,7 @@ const data = await this.parseResponse,;
    * DELETE request;
    */;
   async delete<T = unknown>();
-    url: string,;
+    url: string,
     config: Partial;
           <RequestConfig> = {}
   ): Promise<APIResponse<T>> {;
@@ -350,8 +350,8 @@ const data = await this.parseResponse,;
    * PATCH request;
    */;
   async patch<T = unknown>();
-    url: string,;
-    body?: unknown,;
+    url: string,
+    body?: unknown,
     config: Partial;
           <RequestConfig> = {}
   ): Promise<APIResponse<T>> {;
@@ -380,11 +380,11 @@ const data = await this.parseResponse,;
   }
   }
 }
-//         ...this.config.headers,;
-//         ...config.headers,;
-      },;
-      timeout: config.timeout || this.config.timeout,;
-      retryAttempts: config.retryAttempts ?? this.config.retryAttempts,;
+//         ...this.config.headers,
+//         ...config.headers,
+      },
+      timeout: config.timeout || this.config.timeout,
+      retryAttempts: config.retryAttempts ?? this.config.retryAttempts,
       cache: config.cache ?? this.config.enableCaching;
     }
   }
@@ -420,7 +420,7 @@ const data = await this.parseResponse,;
     // TODO: Add content;
     }
     const headers = new Headers();
-    // Add default headers,;
+    // Add default headers,
     headers.set('Content-Type', 'application/json');
     // Add config headers,;
     Object.entries(config.headers || {}).forEach(([key, value]) => {
@@ -511,8 +511,8 @@ const data = await this.parseResponse,;
   }
   }
 }
-  data: response,;
-      timestamp: Date.now(),;
+  data: response,
+      timestamp: Date.now(),
       expiresAt: Date.now() + this.config.cacheTimeout;
     });
   }
@@ -557,17 +557,17 @@ const data = await this.parseResponse,;
 }
     const entries = Array.from(this.cache.values());
     const now = Date.now();
-    const valid = entries.filter(e => now,;
+    const valid = entries.filter(e => now,
           <= e.expiresAt).length;
-    const expired = entries.length - valid,;
+    const expired = entries.length - valid,
     return {;
     // TODO: Add content;
   }
   }
 }
-  total: entries.length,;
-//       valid,;
-//       expired,;
+  total: entries.length,
+//       valid,
+//       expired,
       size: entries.reduce((sum, e) => sum + JSON.stringify(e.data).length, 0);
     }
   }
@@ -591,7 +591,7 @@ const data = await this.parseResponse,;
     // TODO: Add content;
     }
     this.config = {;
-    ...this.config,;
+    ...this.config,
     ...config;
   }
   }
@@ -607,5 +607,5 @@ const data = await this.parseResponse,;
   }
   }
 }
-// Export singleton instance,;
+// Export singleton instance,
 export const apiInterceptor = APIInterceptor.getInstance();

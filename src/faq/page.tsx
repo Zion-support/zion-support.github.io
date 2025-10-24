@@ -20,8 +20,8 @@ export const toggleItem = (index: number) => {
     setOpenItems(prev =>;
       prev.includes(ind, e, x);
         ? prev.filter(i => i !== index);
-        : [...prev,;
-    index,;
+        : [...prev,
+    index,
     );
     }
   }
@@ -144,7 +144,7 @@ type='text';
  , }
           <div className='max-w-4xl mx-auto'></div>
             {;
-    filteredData.map((category,;
+    filteredData.map((category,
     categoryIndex) => ();
   }
   }

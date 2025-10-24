@@ -72,7 +72,7 @@ const OptimizedImage: React.FC;
             observer.disconnect();
           }
         });
-      },;
+      },
       {;
     // TODO: Add content;
  , }

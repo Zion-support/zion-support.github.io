@@ -5,23 +5,23 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
-const PerformanceMonitorPage: React.FC="()" => {const features: ";",;
-      title: 'AI-Powered Intelligence',;}
+const PerformanceMonitorPage: React.FC = () => {const features = [
+      title: 'AI-Powered Intelligence',}
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',}
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    {icon: BarChart,;
-      title: 'Advanced Analytics',;}
+    {icon: BarChart,
+      title: 'Advanced Analytics',}
       description: 'Comprehensive analytics dashboard with real-time data visualization.',}
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
-    {icon: Target,;
-      title: 'Precision Targeting',;}
+    {icon: Target,
+      title: 'Precision Targeting',}
       description: 'Target specific goals and objectives with precision and accuracy.',}
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
-    {icon: TrendingUp,;
-      title: 'Growth Optimization',;}
+    {icon: TrendingUp,
+      title: 'Growth Optimization',}
       description: 'Optimize your business growth with data-driven strategies.',}
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
@@ -134,24 +134,22 @@ const PerformanceMonitorPage: React.FC="()" => {const features: ";",;
     </>
   );,
 };
-;
 export default PerformanceMonitorPage;
-;
 interface PerformanceMonitorProp s {onMetricsUpdate?: (metrics: PerformanceMetrics) =>void;}
   enableRealTimeMonitoring?: boolean}
   logToConsole?: boolean}
 ;
 import React from 'react';
 export default function PerformanceMonitor;"
-PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,;"}
-  enableRealTimeMonitoring: "true,}";"
+PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,"}
+  enableRealTimeMonitoring: "true,};
   logToConsole="true"
 }: PerformanceMonitorProps) {const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: null,;
-    firstContentfulPaint: null,;
-    largestContentfulPaint: null,;
-    firstInputDelay: null,;
-    cumulativeLayoutShift: null,;}
+    loadTime: null,
+    firstContentfulPaint: null,
+    largestContentfulPaint: null,
+    firstInputDelay: null,
+    cumulativeLayoutShift: null,}
     timeToInteractive: null,}
     totalBlockingTime: null
   });"
@@ -162,7 +160,7 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,;"}
 ;  "
           constentries="list.getEntries()";"
           constfcpEntry="entries.find(entry="> entry.name="==" 'first-contentful-paint');}
-          if (fcpEntr y) {}"
+          if (fcpEntr y) {}
             newMetrics.firstContentfulPaint="fcpEntry.startTime"
          }
         });
@@ -173,7 +171,7 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,;"}
         // First Input Delay (FID);"
         constfidObserver="new" PerformanceObserver((list) => {constentries="list.getEntries()";}
           entries.forEach((entry: any) => {
-  }"
+  }
             newMetrics.firstInputDelay="entry.processingStart" - entry.startTime
          })
         });
@@ -192,7 +190,7 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,;"}
         // Time to Interactive (TTI) - approximation;"
         constttiObserver="new" PerformanceObserver((list) => {constentries="list.getEntries()";"
           constlongTasks="entries.filter((entry:" any) => entry.duration >50);"}
-          if (longTasks.length="==" 0) {}"
+          if (longTasks.length="==" 0) {}
             newMetrics.timeToInteractive="performance.now()"
          }
         });
@@ -201,7 +199,7 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,;"}
         consttbtObserver="new" PerformanceObserver((list) => {constentries: "list.getEntries()";"}
           constblockingTime="entries"
             .filter((entry: any) => entry.duration >50)
-            .reduce((total, entry: any) => total + (entry.duration -50), 0)}"
+            .reduce((total, entry: any) => total + (entry.duration -50), 0)}
           newMetrics.totalBlockingTime="blockingTime"
        });
         tbtObserver.observe({entry Types: ['longtask']})
@@ -244,7 +242,6 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,;"}
 ;
   return nul l
 }
-"
 // Global performance monitoring utilitiesexportconstperformanceUtils="{//" Measure custom performance marksmark: (name: string) => {
 ;  }
     if (type of windo w !== 'undefined' && 'performance' in windo w) {}
@@ -274,17 +271,16 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,;"}
         performance.clearMarks()
     }
 }
-"
 // Google Analytics integration for performance trackingexportconsttrackPerformanceToGA="(metrics:" PerformanceMetrics) => {if (type of windo w !== 'undefined' && 'gtag' in windo w) {
     windo w.gtag('event', 'performance_metrics', {
-      event_category: 'Performance',;
-      event_label: 'Core Web Vitals',;
-      custom_map: {,;
-        load_time: metrics.loadTime,;
-        first_contentful_paint: metrics.firstContentfulPaint,;
-        largest_contentful_paint: metrics.largestContentfulPaint,;
-        first_input_delay: metrics.firstInputDelay,;
-        cumulative_layout_shift: metrics.cumulativeLayoutShift,;}
+      event_category: 'Performance',
+      event_label: 'Core Web Vitals',
+      custom_map: {,
+        load_time: metrics.loadTime,
+        first_contentful_paint: metrics.firstContentfulPaint,
+        largest_contentful_paint: metrics.largestContentfulPaint,
+        first_input_delay: metrics.firstInputDelay,
+        cumulative_layout_shift: metrics.cumulativeLayoutShift,}
         time_to_interactive: metrics.timeToInteractive,});
         total_blocking_time: metrics.totalBlockingTime
     ,
@@ -295,4 +291,4 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,;"}
 declare global {interface Window {}
     gtag: (...args: any[]) => void
   }
-}"
+}

@@ -31,7 +31,7 @@ export default function BlogPage() {;
  , }
   }
 }
-  const [posts, setPosts] = useState,;
+  const [posts, setPosts] = useState,
           <BlogPost[]>([]);
   const [loading, setLoading] = useState(tr, u, e);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');

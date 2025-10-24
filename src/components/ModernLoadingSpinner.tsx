@@ -15,9 +15,9 @@ const ModernLoadingSpinner: React.FC;
  , }
   }
 }
-  size = 'md',;
-  color = 'primary',;
-  text = 'Loading...',;
+  size = 'md',
+  color = 'primary',
+  text = 'Loading...',
   fullScreen = false;
 }) => {
   ;
@@ -46,13 +46,13 @@ const ModernLoadingSpinner: React.FC;
     ${;
     colorClasses[col, o, r];
   }
-//     animate-spin,;
+//     animate-spin,
 //     border-2;
-//     border-current,;
-//     border-t-transparent,;
-//     rounded-full,;
+//     border-current,
+//     border-t-transparent,
+//     rounded-full,
   `;
-  const containerClasses = fullScreen,;
+  const containerClasses = fullScreen,
 //     ? 'fixed inset-0 bg-slate-900 bg-opacity-90 flex items-center justify-center z-50';
     : 'flex items-center justify-center p-4';
   return (;

@@ -37,7 +37,7 @@ class EnhancedAnalytics {;
   private sessionId: string;
   private isInitialized = false;
   private batchSize = 10;
-  private flushInterval = 30000; // 30 seconds,;
+  private flushInterval = 30000; // 30 seconds,
   private offlineQueue: AnalyticsEvent[] = [];
   constructor() {;
     // TODO: Add content;
@@ -109,20 +109,20 @@ class EnhancedAnalytics {;
       sessionId: this.sessionId,;
 //       ...config;
     }
-    // Track initialization,;
+    // Track initialization,
     this.trackEvent({;
     // TODO: Add content;
   }
   }
 }
-  category: 'System',;
-      action: 'Analytics Initialized',;
+  category: 'System',
+      action: 'Analytics Initialized',
       metadata: {;
     // TODO: Add content;
   }
   }
 }
-  timestamp: new Date().toISOString(),;
+  timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent;
       }
     });
@@ -155,9 +155,9 @@ class EnhancedAnalytics {;
   }
   }
 }
-//         ...event.metadata,;
-        sessionId: this.sessionId,;
-        timestamp: new Date().toISOString(),;
+//         ...event.metadata,
+        sessionId: this.sessionId,
+        timestamp: new Date().toISOString(),
         url: typeof window !== 'undefined' ? window.location.href : '';
       }
     }
@@ -190,7 +190,7 @@ class EnhancedAnalytics {;
       action: string, parameters: Record;
           <string, unknown>) => void;
         }
-// ).gtag,;
+// ).gtag,
 ) {;
     // TODO: Add content;
   }
@@ -211,10 +211,10 @@ class EnhancedAnalytics {;
   }
   }
 }
-  event_category: event.category,;
-        event_label: event.label,;
-        value: event.value,;
-//         ...event.metadata,;
+  event_category: event.category,
+        event_label: event.label,
+        value: event.value,
+//         ...event.metadata,
       });
     }
   }
@@ -228,15 +228,15 @@ class EnhancedAnalytics {;
   }
   }
 }
-  category: 'Navigation',;
-      action: 'Page View',;
-      label: pagePath,;
+  category: 'Navigation',
+      action: 'Page View',
+      label: pagePath,
       metadata: {;
     // TODO: Add content;
   }
   }
 }
-  pageTitle: pageTitle || document.title,;
+  pageTitle: pageTitle || document.title,
         referrer: document.referrer;
       }
     });
@@ -251,10 +251,10 @@ class EnhancedAnalytics {;
   }
   }
 }
-  category: 'User Interaction',;
-//       action,;
-//       label,;
-//       value,;
+  category: 'User Interaction',
+//       action,
+//       label,
+//       value,
     });
   }
   public trackError(error: Error,
@@ -268,9 +268,9 @@ class EnhancedAnalytics {;
   }
   }
 }
-  category: 'Error',;
-      action: 'Error Occurred',;
-      label: error.message,;
+  category: 'Error',
+      action: 'Error Occurred',
+      label: error.message,
       metadata: {;
     // TODO: Add content;
   }
@@ -299,7 +299,7 @@ class EnhancedAnalytics {;
   }
   }
 }
-//         rating,;
+//         rating,
       }
     });
   }
@@ -313,9 +313,9 @@ class EnhancedAnalytics {;
   }
   }
 }
-  category: 'Conversion',;
-      action: conversionType,;
-//       value,;
+  category: 'Conversion',
+      action: conversionType,
+//       value,
       metadata: {;
     // TODO: Add content;
   }
@@ -326,10 +326,10 @@ class EnhancedAnalytics {;
     });
   }
 //   public trackCustomEvent();
-    category: string,;
-    action: string,;
-    label?: string,;
-    value?: number,;
+    category: string,
+    action: string,
+    label?: string,
+    value?: number,
     metadata?: Record;
           <string, unknown>
   ): void {;
@@ -342,11 +342,11 @@ class EnhancedAnalytics {;
   }
   }
 }
-//       category,;
-//       action,;
-//       label,;
-//       value,;
-//       metadata,;
+//       category,
+//       action,
+//       label,
+//       value,
+//       metadata,
     });
   }
   private flush(): void {
@@ -354,7 +354,7 @@ class EnhancedAnalytics {;
     // TODO: Add content;
     }
     if (this.queue.length === 0) return;
-    // Check if online,;
+    // Check if online,
     if (typeof navigator !== 'undefined' && !navigator.onLine) {;
     // TODO: Add content;
   }
@@ -364,14 +364,14 @@ class EnhancedAnalytics {;
       this.queue = [];
       return;
     }
-    // In a real implementation, send to analytics backend,;
+    // In a real implementation, send to analytics backend,
     if (process.env['NODE_ENV'] === 'development') {;
     // TODO: Add content;
   }
   }
 }
       }
-    // Clear queue,;
+    // Clear queue,
     this.queue = [];
   }
   private flushOfflineQueue(): void {
@@ -379,10 +379,10 @@ class EnhancedAnalytics {;
     // TODO: Add content;
     }
     if (this.offlineQueue.length === 0) return;
-    // Merge offline queue into main queue,;
+    // Merge offline queue into main queue,
     this.queue.push(...this.offlineQueue);
     this.offlineQueue = [];
-    // Flush,;
+    // Flush,
     this.flush();
   }
   public getQueueSize(): number {
@@ -424,12 +424,12 @@ class EnhancedAnalytics {;
   }
   }
 }
-  queueSize: this.queue.length,;
-      offlineQueueSize: this.offlineQueue.length,;
-      sessionId: this.sessionId,;
+  queueSize: this.queue.length,
+      offlineQueueSize: this.offlineQueue.length,
+      sessionId: this.sessionId,
       userProperties: this.getUserProperties();
     }
   }
 }
-// Export singleton instance,;
+// Export singleton instance,
 export default analytics;

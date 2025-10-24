@@ -14,44 +14,44 @@ interface Slide {
   color: string,
 }
 ;
-const ContentCarousel: React.FC="()" => {const [currentSlide, setCurrentSlide] = useState(0);
+const ContentCarousel: React.FC = () => {const [currentSlide, setCurrentSlide] = useState(0);
   
   const slides: Slide[] = [
-    {,;
-      id: 1,;"
-      title: "AI-Powered Analytics",;"
-      description: "Transform your data into actionable insights with our advanced AI analytics platform.",;
+    {,
+      id: 1,"
+      title: "AI-Powered Analytics","
+      description: "Transform your data into actionable insights with our advanced AI analytics platform.",
       features: ["
         "Real-time data processing","
         "Predictive analytics","
         "Custom dashboards","
         "Automated reporting"
-      ],;"}
-      icon: <BarChart className: "h-12 w-12" />,}"
+      ],"}
+      icon: <BarChart className: "h-12 w-12" />,}
       color: "from-blue-500 to-cyan-500"
     },
-    {id: 2,;"
-      title: "Cloud Infrastructure",;"
-      description: "Scalable, secure, and reliable cloud solutions for your business needs.",;
+    {id: 2,"
+      title: "Cloud Infrastructure","
+      description: "Scalable, secure, and reliable cloud solutions for your business needs.",
       features: ["
         "99.9% uptime guarantee","
         "Auto-scaling capabilities","
         "Advanced security","
         "24/7 monitoring"</BarChart>
       ],</BarChart>;"}
-      icon: <Cloud className: "h-12 w-12" />,}"
+      icon: <Cloud className: "h-12 w-12" />,}
       color: "from-green-500 to-emerald-500"
     },
-    {id: 3,;"
-      title: "Cybersecurity Solutions",;"
-      description: "Protect your business with our comprehensive cybersecurity services.",;
+    {id: 3,"
+      title: "Cybersecurity Solutions","
+      description: "Protect your business with our comprehensive cybersecurity services.",
       features: ["
         "Threat detection","
         "Vulnerability assessment","
         "Incident response","
         "Security training"</Cloud>
       ],</Cloud>;"}
-      icon: <Shield className: "h-12 w-12" />,}"
+      icon: <Shield className: "h-12 w-12" />,}
       color: "from-red-500 to-pink-500"
     }
   ]
@@ -156,7 +156,7 @@ const ContentCarousel: React.FC="()" => {const [currentSlide, setCurrentSlide] =
                         <p className="text-gray-600 mb-6">{slide.description}</p>"
                         <ul className="space-y-2"></ul>
                           {slide.features.map((feature, index) => (</ul>"
-                            <li key="{index}" className="flex items-center text-gray-700"></li>"
+                            <li key="{index} className="flex items-center text-gray-700"></li>"
                               <CheckCircle className="h-5 w-5 text-green-500 mr-2" /></CheckCircle>
                               {feature}</CheckCircle>
                             </li>

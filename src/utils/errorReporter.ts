@@ -79,8 +79,8 @@ export class ErrorReporter {;
    * Report an error with full context;
    */;
 //   reportError();
-    error: Error,;
-    severity: ErrorReport['severity'] = 'medium',;
+    error: Error,
+    severity: ErrorReport['severity'] = 'medium',
     context?: Record;
           <string, unknown>
   ): void {;
@@ -93,12 +93,12 @@ export class ErrorReporter {;
   }
   }
 }
-  message: error.message,;
-      stack: error.stack,;
-      timestamp: new Date().toISOString(),;
-      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',;
-      url: typeof window !== 'undefined' ? window.location.href : 'unknown',;
-//       severity,;
+  message: error.message,
+      stack: error.stack,
+      timestamp: new Date().toISOString(),
+      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
+      url: typeof window !== 'undefined' ? window.location.href : 'unknown',
+//       severity,
       context: this.config.captureContext ? context : undefined;
     }
     // Track error frequency,;
@@ -112,7 +112,7 @@ export class ErrorReporter {;
 }
       this.errorQueue.shift();
     }
-    // Console logging,;
+    // Console logging,
     if (this.config.enableConsoleLogging) {;
     // TODO: Add content;
   }
@@ -120,7 +120,7 @@ export class ErrorReporter {;
 }
       this.logToConsole(errorRepo, r, t);
     }
-    // Remote logging,;
+    // Remote logging,
     if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {;
     // TODO: Add content;
   }
@@ -194,10 +194,10 @@ export class ErrorReporter {;
   }
   }
 }
-  low: 'color: #2196F3; font-weight: bold',;
-      medium: 'color: #FF9800; font-weight: bold',;
-      high: 'color: #F44336; font-weight: bold',;
-      critical: 'color: #D32F2F; font-weight: bold; font-size: 14px',;
+  low: 'color: #2196F3; font-weight: bold',
+      medium: 'color: #FF9800; font-weight: bold',
+      high: 'color: #F44336; font-weight: bold',
+      critical: 'color: #D32F2F; font-weight: bold; font-size: 14px',
     }
     return styles[severi, t, y];
   }
@@ -221,7 +221,7 @@ export class ErrorReporter {;
   }
   }
 }
-  method: 'POST',;
+  method: 'POST',
         headers: {;
     // TODO: Add content;
   }
@@ -236,7 +236,7 @@ export class ErrorReporter {;
   }
   }
 }
-      // Silently fail to avoid infinite loop,;
+      // Silently fail to avoid infinite loop,
       if (this.config.enableConsoleLogging) {;
     // TODO: Add content;
   }
@@ -278,8 +278,8 @@ export class ErrorReporter {;
   }
   }
 }
-  totalErrors: this.errorQueue.length,;
-      uniqueErrors: this.errorCount.size,;
+  totalErrors: this.errorQueue.length,
+      uniqueErrors: this.errorCount.size,
       errorsByType: Object.fromEntries(this.errorCount);
     }
   }
@@ -306,12 +306,12 @@ export class ErrorReporter {;
   }
   }
 }
-  timestamp: new Date().toISOString(),;
-        stats: this.getErrorStats(),;
+  timestamp: new Date().toISOString(),
+        stats: this.getErrorStats(),
         errors: this.errorQueue;
-      },;
-//       null,;
-//       2,;
+      },
+//       null,
+//       2,
 );
   }
 }
@@ -319,8 +319,8 @@ export class ErrorReporter {;
  * Convenience function to report errors;
  */;
 export const reportError = ();
-  error: Error,;
-  severity?: ErrorReport['severity'],;
+  error: Error,
+  severity?: ErrorReport['severity'],
   context?: Record;
           <string, unknown>
 ): void => {;
@@ -334,9 +334,9 @@ export const reportError = ();
  * React error boundary helper;
  */;
 export const captureComponentError = ();
-  error: Error,;
-  errorInfo: { componentStack: string },;
-  componentName: string,;
+  error: Error,
+  errorInfo: { componentStack: string },
+  componentName: string,
 ): void => {;
     // TODO: Add content;
   }
@@ -348,7 +348,7 @@ export const captureComponentError = ();
   }
   }
 }
-//     componentName,;
+//     componentName,
     componentStack: errorInfo.componentStack;
   });
 }

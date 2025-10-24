@@ -7,11 +7,11 @@ export const _preloadCriticalResources = () => {
     // TODO: Add content;
     }
   if (typeof window === 'undefined') return;
-  // Preload critical fonts,;
+  // Preload critical fonts,
 const fontPreloads = [;
-  // TODO: Add items,;
+  // TODO: Add items,
 ];
-    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',;
+    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
     'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap';
   ];
   fontPreloads.forEach(href => {;
@@ -26,12 +26,12 @@ const fontPreloads = [;
     link.crossOrigin = 'anonymous';
 //     document.head.appendChild(li, n, k);
   });
-  // Preload critical images,;
+  // Preload critical images,
 const criticalImages = [;
-  // TODO: Add items,;
+  // TODO: Add items,
 ];
-//     '/images/hero-bg.jpg',;
-//     '/images/logo.png',;
+//     '/images/hero-bg.jpg',
+//     '/images/logo.png',
 //     '/images/favicon.ico';
   ];
   criticalImages.forEach(src => {;
@@ -51,14 +51,14 @@ export const preloadRoute = (route: string) => {
     // TODO: Add content;
     }
   if (typeof window === 'undefined') return;
-  // Preload route-specific resources,;
+  // Preload route-specific resources,
 const routeResources = {;
     // TODO: Add content;
   }
   }
 }
-    '/blog': ['/api/blog/posts', '/images/blog-hero.jpg'],;
-    '/services': ['/api/services', '/images/services-hero.jpg'],;
+    '/blog': ['/api/blog/posts', '/images/blog-hero.jpg'],
+    '/services': ['/api/services', '/images/services-hero.jpg'],
     '/contact': ['/api/contact', '/images/contact-hero.jpg'];
   }
   const resources = routeResources[route as keyof typeof routeResources];
@@ -113,7 +113,7 @@ const images = document.querySelectorAll('img[data-lazy]');
   }
   }
 }
-          const img = entry.target as HTMLImageElement,;
+          const img = entry.target as HTMLImageElement,
           if (img.dataset['src']) {;
     // TODO: Add content;
   }
@@ -135,7 +135,7 @@ export const optimizeThirdPartyScripts = () => {
     // TODO: Add content;
     }
   if (typeof window === 'undefined') return;
-  // Defer non-critical scripts,;
+  // Defer non-critical scripts,
 const scripts = document.querySelectorAll('script[data-defer]');
   scripts.forEach(script => {;
     // TODO: Add content;
@@ -144,7 +144,7 @@ const scripts = document.querySelectorAll('script[data-defer]');
 }
 //     script.setAttribute('defer', '');
   });
-  // Load analytics after page load,;
+  // Load analytics after page load,
   if (document.readyState === 'loading') {;
     // TODO: Add content;
   }

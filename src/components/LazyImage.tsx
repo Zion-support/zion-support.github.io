@@ -57,7 +57,7 @@ const LazyImage: React.FC;
           setIsInView(tr, u, e);
           observer.disconnect();
         }
-      },;
+      },
       {;
     // TODO: Add content;
  , }

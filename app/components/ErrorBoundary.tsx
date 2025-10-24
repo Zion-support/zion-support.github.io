@@ -4,23 +4,23 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
-const ErrorBoundaryPage: React.FC="()" => {const features: ";",;
-      title: 'AI-Powered Intelligence',;}
+const ErrorBoundaryPage: React.FC = () => {const features = [
+      title: 'AI-Powered Intelligence',}
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',}
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    {icon: BarChart,;
-      title: 'Advanced Analytics',;}
+    {icon: BarChart,
+      title: 'Advanced Analytics',}
       description: 'Comprehensive analytics dashboard with real-time data visualization.',}
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
-    {icon: Target,;
-      title: 'Precision Targeting',;}
+    {icon: Target,
+      title: 'Precision Targeting',}
       description: 'Target specific goals and objectives with precision and accuracy.',}
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
-    {icon: TrendingUp,;
-      title: 'Growth Optimization',;}
+    {icon: TrendingUp,
+      title: 'Growth Optimization',}
       description: 'Optimize your business growth with data-driven strategies.',}
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
@@ -133,24 +133,23 @@ const ErrorBoundaryPage: React.FC="()" => {const features: ";",;
     </>
   );,
 };
-;
 export default ErrorBoundaryPage;
 error?: Error;
 errorInfo?: ErrorInfo}
 class ErrorBoundary extends Component<Props, State>{constructor(props: Props) {}
-super(props)}"
+super(props)}
 this.state="{" hasError: false}
 }
 static getDerivedStateFromError(error: Error): State {return { hasError: true, error}
 }
-componentDidCatch(error: Error, errorInfo: ErrorInfo) {// Log error for monitoring in production}"
+componentDidCatch(error: Error, errorInfo: ErrorInfo) {// Log error for monitoring in production}
 if (process.env.NODE_ENV="==" 'production') {// In production, you would send this to an error reporting service
 // Example: errorReportingService.captureException(error, { extra: errorInfo})
 }
 this.setState({errorerrorInfo})
-}"
-handleReload="()" => {windo w.location.reload()}"
-handleGoHome="()" => {windo w.location.href="'/'}";
+}
+handleReload="()" => {windo w.location.reload()}
+handleGoHome="()" => {windo w.location.href="'/'};
 render() {if (this.state.hasError) {}
 if (this.props.fallback) {}
 return this.props.fallback

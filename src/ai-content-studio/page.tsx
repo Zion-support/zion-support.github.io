@@ -2,13 +2,13 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {;
-    FileText,;
-    Target,;
-    Zap,;
-    Settings,;
-    CheckCircle,;
-    FileText,;
-    Target,;
+    FileText,
+    Target,
+    Zap,
+    Settings,
+    CheckCircle,
+    FileText,
+    Target,
     Settings from 'lucide-react';
   }
 const AIContentStudioPage: React.FC = () => {
@@ -88,7 +88,7 @@ const AIContentStudioPage: React.FC = () => {
   }
                 <ul className='space-y-2'></ul>
                   {;
-    feature.benefits.map((benefit,;
+    feature.benefits.map((benefit,
     benefitIndex) => ();
   }
   }

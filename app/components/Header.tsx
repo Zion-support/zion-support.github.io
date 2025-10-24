@@ -109,7 +109,6 @@ const Header: React.FC<HeaderProps> = ({className="''" }) => {}</HeaderProps>
     </>
   );,
 };
-;
 export default HeaderPage;
   )
 }

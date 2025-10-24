@@ -1,26 +1,26 @@
 import {;
-    Leaf,;
-    Recycle,;
-    Zap,;
-    Globe,;
-    Target,;
-    CheckCircle,;
-    ArrowRight,;
-    Phone,;
-    Mail,;
-    Award,;
-    Users,;
-    TrendingUp,;
-    Leaf,;
-    Target,;
-    Zap,;
-    Cloud,;
-    Recycle,;
-    Code,;
-    Users,;
-    Globe,;
-    TrendingUp,;
-    Factory,;
+    Leaf,
+    Recycle,
+    Zap,
+    Globe,
+    Target,
+    CheckCircle,
+    ArrowRight,
+    Phone,
+    Mail,
+    Award,
+    Users,
+    TrendingUp,
+    Leaf,
+    Target,
+    Zap,
+    Cloud,
+    Recycle,
+    Code,
+    Users,
+    Globe,
+    TrendingUp,
+    Factory,
     Building from 'lucide-react';
 'use client';
   }
@@ -336,7 +336,7 @@ Benefits of Green IT;
                         <p className='text-gray-300 mb-4'>{benefit.description}</p>
                     <ul className='space-y-2'></ul>
                       {;
-    benefit.details.map((detail,;
+    benefit.details.map((detail,
     detailIndex) => ();
   }
   }
@@ -413,5 +413,5 @@ Get Free Assessment;
     </>
   );,
 }
-export default GreenITPage,;
+export default GreenITPage,
   ];

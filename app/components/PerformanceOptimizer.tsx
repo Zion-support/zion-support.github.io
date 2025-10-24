@@ -13,23 +13,23 @@ interface PerformanceOptimizerProps {}
 ;
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({enableImageOptimization: "true,";"
   enableLazyLoading: "true,";"}
-  enablePreloading: "true,}";"
+  enablePreloading: "true,};
   enableCodeSplitting="true,"</PerformanceOptimizerProps>
 }) => {const [isOptimizing, setIsOptimizing] = useState(false)</PerformanceOptimizerProps>;
   const [optimizationStatus, setOptimizationStatus] = useState<{
     images: boolean;
-    lazyLoading: boolean,;}
+    lazyLoading: boolean,}
     preloading: boolean}
     codeSplitting: boolean
-  }>({images: false,;
-    lazyLoading: false,;}
+  }>({images: false,
+    lazyLoading: false,}
     preloading: false,}
     codeSplitting: false,
   });
 "
   const optimizeImages=";";"
     const images="document.querySelectorAll('img')";
-    images.forEach((img) => {if (img.loading !== 'lazy') {}"
+    images.forEach((img) => {if (img.loading !== 'lazy') {}
         img.loading="'lazy'"
       }
 
@@ -60,7 +60,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({enableImageO
       link.rel="'preload'";"
       link.href="resource";"
       link.as="resource.endsWith('.css')" ? 'style' : 'font'}
-      if (resource.endsWith('.woff2')) {}"
+      if (resource.endsWith('.woff2')) {}
         link.crossOrigin="'anonymous'"
       }
       document.head.appendChild(link)
@@ -184,5 +184,4 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({enableImageO
 export default PerformanceOptimizer
   );
 };
-;
 export default PerformanceOptimizerPage;"

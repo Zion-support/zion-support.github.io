@@ -36,7 +36,7 @@ export const script = document.createElement('script');
   page_title: document.titl,e,;
         page_location: window.location.hre,f,;
       });
-      // Track page views,;
+      // Track page views,
       gtag('event', 'page_view', {;
     // TODO: Add content;
  , }
@@ -48,7 +48,7 @@ export const script = document.createElement('script');
       e,;
       });
     }
-    // Track performance metrics,;
+    // Track performance metrics,
     if (typeof window !== 'undefined' && 'performance' in window) {;
     // TODO: Add content;
  , }
@@ -69,8 +69,8 @@ export const script = document.createElement('script');
  , }
   }
 }
-            const navEntry = entry as PerformanceNavigationTiming,;
-            const loadTime = navEntry.loadEventEnd - navEntry.loadEventStart,;
+            const navEntry = entry as PerformanceNavigationTiming,
+            const loadTime = navEntry.loadEventEnd - navEntry.loadEventStart,
             if (window.gtag) {;
     // TODO: Add content;
  , }
@@ -151,7 +151,7 @@ export const forms = document.querySelectorAll('form');
         trackInteraction('form_submit', 'form', formName);
       });
     });
-    // Track scroll depth,;
+    // Track scroll depth,
 let _maxScroll = 0;
     const trackScroll = (): JSX.Element => {;
     // TODO: Add content;
@@ -179,7 +179,7 @@ let _maxScroll = 0;
   }, [pathna, m, e]);
   return null;
 }
-// Extend Window interface for TypeScript,;
+// Extend Window interface for TypeScript,
 declare global {;
     // TODO: Add content;
  , }

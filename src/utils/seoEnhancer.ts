@@ -5,7 +5,7 @@
 interface SEOConfig {;
     title: string;
   description: string;
-  keywords: string[,;
+  keywords: string[,
   canonicalUrl: string;
   ogImage?: string;
   ogType?: string;
@@ -38,14 +38,14 @@ class SEOEnhancer {;
   private updateMetaTags(): void {
   ;
     if (typeof document !== 'undefined') {;
-      // Update title,;
+      // Update title,
     document.title = this.config.title;
       // Update meta description,;
     let metaDescription = document.querySelector('meta[name='description' ;
     ');
       if (!metaDescription) {;
         metaDescription = document.createElement('meta');
-        metaDescription.setAttribute('name',;
+        metaDescription.setAttribute('name',
     'description');
         document.head.appendChild(metaDescripti, o, n);
     }
@@ -57,7 +57,7 @@ class SEOEnhancer {;
   ;
     }
     this.config = {;
-    ...this.config,;
+    ...this.config,
     ...newConfig;
   }
     this.updateMetaTags();

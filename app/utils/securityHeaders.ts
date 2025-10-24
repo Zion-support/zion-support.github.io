@@ -10,7 +10,7 @@ referrerPolicy?: string}
 permissionsPolicy?: string
 }
 export const defaultSecurityHeaders: SecurityHeadersConfig="{"
-// Content Security Policy}"
+// Content Security Policy}
 contentSecurityPolicy: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';"
 }
 // Content Security Policy;
@@ -31,9 +31,9 @@ strictTransportSecurity: 'max-age="63072000;" includeSubDomains; preload'
 xFrameOptions: 'DENY'
 // Prevent MIME type sniffing;
 xContentTypeOptions: 'nosniff'
-// Referrer Policy,;
+// Referrer Policy,
 referrerPolicy: 'strict-origin-when-cross-origin'
-// Permissions Policy (formerly Feature Policy),;
+// Permissions Policy (formerly Feature Policy),
 permissionsPolicy: [,
 'camera=()',
 'microphone=()',
@@ -51,7 +51,7 @@ permissionsPolicy: [,
 export function getSecurityHeaders() {
 {export function getSecurityHeaders() {</SecurityHeadersConfig>
 {customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>
-): Record<string, string> {}"
+): Record<string, string> {}
 export const config=";""
 'X-XSS-Protection': '1; mode="block',"
 'X-DNS-Prefetch-Control': 'on'}
@@ -93,17 +93,17 @@ export const
 defaultSecurityHeaders: SecurityHeadersConfig = {
   /* TODO: Fix JSX expression */
 }
-export const,;"
+export const,"
 defaultSecurityHeaders: SecurityHeadersConfig="{/*" TODO: Fix JSX expression */}
 }
 /**
 * Get security headers as key-value pairs</string>
 */</string>;
 export function getSecurityHeaders() {
-{): Record<string, string> {/* TODO: Fix JSX expression */}"</string>
+{): Record<string, string> {/* TODO: Fix JSX expression */}</string>
 export const config=";"</string>
 ): Array<{key: string; value: string }> {export function getNextSecurityHeaders(){}
 customConfig?: Partial<SecurityHeadersConfig>;}</SecurityHeadersConfig>
-): Array<{key: string; value: string }> {}"
+): Array<{key: string; value: string }> {}
 export const headers=";";"
 export default defaultSecurityHeaders

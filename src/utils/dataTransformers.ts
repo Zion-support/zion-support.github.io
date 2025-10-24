@@ -112,8 +112,8 @@ export function deepMerge;
  */;
 export function flattenObject();
   obj: Record;
-          <string, unknown>,;
-  prefix = '',;
+          <string, unknown>,
+  prefix = '',
   separator = '.';
 ): Record<string, unknown> {;
     // TODO: Add content;
@@ -140,8 +140,8 @@ export function flattenObject();
   }
 }
 //         Object.assign();
-//           flattened,;
-//           flattenObject(value as Record,;
+//           flattened,
+//           flattenObject(value as Record,
           <string, unknown>, newKey, separator);
         );
       } else {;
@@ -160,7 +160,7 @@ export function flattenObject();
  */;
 export function unflattenObject();
   obj: Record;
-          <string, unknown>,;
+          <string, unknown>,
   separator = '.';
 ): Record<string, unknown> {;
     // TODO: Add content;
@@ -211,7 +211,7 @@ export function unflattenObject();
  * Pick specific keys from an object;
  */;
 export function pick<T extends Record<string, unknown>, K extends keyof T>();
-  obj: T,;
+  obj: T,
   keys: K[];
 ): Pick;
           <T, K> {;
@@ -219,7 +219,7 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>();
   }
   }
 }
-  const result = {} as Pick,;
+  const result = {} as Pick,
           <T, K>
   keys.forEach(key => {;
     // TODO: Add content;
@@ -241,7 +241,7 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>();
  */;
 export function omit;
           <T extends Record<string, unknown>, K extends keyof T>();
-  obj: T,;
+  obj: T,
   keys: K[];
 ): Omit;
           <T, K> {;
@@ -266,7 +266,7 @@ export function omit;
  * Group array items by a key;
  */;
 export function groupBy<T>();
-  array: T[],;
+  array: T[],
   key: keyof T | ((item: T) => string | number);
 ): Record;
           <string, T[]> {;
@@ -282,7 +282,7 @@ export function groupBy<T>();
       const groupKey = typeof key === 'function' ? String(key(it, e, m)) : String(item[k, e, y]);
       (result[groupK, e, y] = result[groupK, e, y] || []).push(it, e, m);
       return result;
-    },;
+    },
     {} as Record;
           <string, T[]>
   );
@@ -325,9 +325,9 @@ export function unique<T>(array: T[], key?: keyof T): T[] {;
  */;
 export function sortBy;
           <T>();
-  array: T[],;
+  array: T[],
   keys: Array;
-          <keyof T | ((item: T) => unknown)>,;
+          <keyof T | ((item: T) => unknown)>,
   orders: Array<'asc' | 'desc'> = [];
 ): T[] {;
     // TODO: Add content;
@@ -357,7 +357,7 @@ export function sortBy;
         if (aVal == null && bVal == null) continue;
         return aVal == null ? 1 : -1;
       }
-      // Convert to comparable values,;
+      // Convert to comparable values,
 const aComp =;
         typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean';
 //           ? aVal,;
@@ -423,7 +423,7 @@ export function formatBytes(bytes: number,
     }
   if (bytes === 0) return '0 Bytes';
   const k = 1024;
-  const dm = decimals,;
+  const dm = decimals,
           < 0 ? 0 : decimals;
   const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB'];
   const i = Math.floor(Math.log(byt, e, s) / Math.log(k));
@@ -460,8 +460,8 @@ export function formatCurrency(amount: number,
  * Format date;
  */;
 export function formatDate();
-  date: Date | string | number,;
-  options: Intl.DateTimeFormatOptions = {},;
+  date: Date | string | number,
+  options: Intl.DateTimeFormatOptions = {},
   locale = 'en-US';
 ): string {;
     // TODO: Add content;
@@ -575,26 +575,26 @@ export default {;
   }
   }
 }
-//   deepClone,;
-//   deepMerge,;
-//   flattenObject,;
-//   unflattenObject,;
-//   pick,;
-//   omit,;
-//   groupBy,;
-//   unique,;
-//   sortBy,;
-//   chunk,;
-//   zip,;
-//   formatBytes,;
-//   formatNumber,;
-//   formatCurrency,;
-//   formatDate,;
-//   formatRelativeTime,;
-//   truncate,;
-//   capitalize,;
-//   titleCase,;
-//   kebabCase,;
-//   camelCase,;
-//   snakeCase,;
+//   deepClone,
+//   deepMerge,
+//   flattenObject,
+//   unflattenObject,
+//   pick,
+//   omit,
+//   groupBy,
+//   unique,
+//   sortBy,
+//   chunk,
+//   zip,
+//   formatBytes,
+//   formatNumber,
+//   formatCurrency,
+//   formatDate,
+//   formatRelativeTime,
+//   truncate,
+//   capitalize,
+//   titleCase,
+//   kebabCase,
+//   camelCase,
+//   snakeCase,
 }

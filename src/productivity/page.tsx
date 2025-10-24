@@ -58,7 +58,7 @@ const ProductivityPage: React.FC = () => {
             <div>{;
     productivityTools;
                 .filter(tool => tool.category === category);
-                .map((tool,;
+                .map((tool,
     index) => (;
   }
   }

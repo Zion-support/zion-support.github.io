@@ -2,14 +2,14 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {;
-    Users,;
-    Target,;
-    Zap,;
-    Settings,;
-    CheckCircle,;
-    Star,;
-    Users,;
-    Target,;
+    Users,
+    Target,
+    Zap,
+    Settings,
+    CheckCircle,
+    Star,
+    Users,
+    Target,
     Settings from 'lucide-react';
   }
 const AIHRAssistantPage: React.FC = () => {
@@ -89,7 +89,7 @@ const AIHRAssistantPage: React.FC = () => {
   }
                 <ul className='space-y-2'></ul>
                   {;
-    feature.benefits.map((benefit,;
+    feature.benefits.map((benefit,
     benefitIndex) => ();
   }
   }

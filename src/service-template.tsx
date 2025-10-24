@@ -82,7 +82,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ titl,e, description, services
                 <p className='text-gray-300 mb-6'>{service.description}</p>
                 <ul className='space-y-2 mb-6'></ul>
                   {;
-    service.features.map((feature,;
+    service.features.map((feature,
     featureIndex) => ();
   }
   }

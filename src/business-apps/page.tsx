@@ -58,7 +58,7 @@ const BusinessAppsPage: React.FC = () => {
             <div>{;
     businessApps;
                 .filter(app => app.category === category);
-                .map((app,;
+                .map((app,
     index) => (;
   }
   }

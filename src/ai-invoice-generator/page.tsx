@@ -1,32 +1,32 @@
 import {;
-    Phone,;
-    Star,;
-    Zap,;
-    Shield,;
-    Globe,;
-    Brain,;
-    BarChart,;
-    Eye,;
-    CheckCircle,;
-    Smartphone,;
-    Settings,;
-    ShoppingCart,;
-    Building,;
-    Car,;
-    Briefcase,;
-    Calculator,;
-    Zap as Lightning,;
-    Shield as Security,;
-    Star as StarIcon,;
-    CheckCircle as Check,;
-    Phone as PhoneIcon,;
-    Receipt,;
-    Calculator as CalculatorIcon,;
-    Brain,;
-    Zap,;
-    BarChart,;
-    Smartphone,;
-    ShoppingCart,;
+    Phone,
+    Star,
+    Zap,
+    Shield,
+    Globe,
+    Brain,
+    BarChart,
+    Eye,
+    CheckCircle,
+    Smartphone,
+    Settings,
+    ShoppingCart,
+    Building,
+    Car,
+    Briefcase,
+    Calculator,
+    Zap as Lightning,
+    Shield as Security,
+    Star as StarIcon,
+    CheckCircle as Check,
+    Phone as PhoneIcon,
+    Receipt,
+    Calculator as CalculatorIcon,
+    Brain,
+    Zap,
+    BarChart,
+    Smartphone,
+    ShoppingCart,
     Building from 'lucide-react';
 'use client';
   }
@@ -84,12 +84,12 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
         title='AI Invoice Generator - Automated Invoice Creation | Zion Tech Group';
         description='Generate professional invoices instantly with AI-powered automation. Save time, reduce errors, and improve cash flow with our intelligent invoice generation platform.';
         keywords={;
-    ['AI invoice generator',;
-    'automated invoicing',;
-    'invoice automation',;
-    'AI billing',;
-    'smart invoicing',;
-    'invoice management',;
+    ['AI invoice generator',
+    'automated invoicing',
+    'invoice automation',
+    'AI billing',
+    'smart invoicing',
+    'invoice management',
     'business automation'];
   }canonicalUrl='https: // ziontechgroup.com/ai-invoice-generator';
 //       /></SEOOptimizer>
@@ -168,7 +168,7 @@ Our AI invoice generator combines cutting-edge technology with user-friendly des
                     <p className='text-gray-300 mb-4'>{feature.description}</p>
                     <ul className='space-y-2'></ul>
                       {;
-    feature.benefits.map((benefit,;
+    feature.benefits.map((benefit,
     benefitIndex) => ();
   }
   }
@@ -202,7 +202,7 @@ Whether you're a freelancer or a large enterprise, our AI invoice generator;
                     <p className='text-gray-300 mb-4'>{useCase.description}</p>
                     <ul className='space-y-2 text-left'></ul>
                       {;
-    useCase.benefits.map((benefit,;
+    useCase.benefits.map((benefit,
     benefitIndex) => (;
   }
   }
@@ -227,7 +227,7 @@ Whether you're a freelancer or a large enterprise, our AI invoice generator;
  , }
   }
 }
-//                     plan.popular,;
+//                     plan.popular,
 //                       ? 'bg-gradient-to-br from-purple-500/20 to-pink-500/20 border-2 border-purple-400';
                       : 'bg-slate-800/50 border border-slate-700';
                   }`}></div>
@@ -248,7 +248,7 @@ Most Popular;
                         <span className='text-gray-400 ml-1'>{plan.period}</span>
                     <ul className='space-y-4 mb-8'></ul>
                       {;
-    plan.features.map((feature,;
+    plan.features.map((feature,
     featureIndex) => ();
   }
   }
@@ -284,8 +284,8 @@ Most Popular;
                         <div className='text-sm text-gray-400'>{testimonial.role}, {testimonial.company}</div>
                     <div className='flex mb-4'></div>
                       {;
-    [...Array(testimonial.rating),;
-    .map((_,;
+    [...Array(testimonial.rating),
+    .map((_,
     i) => ();
   }
   }

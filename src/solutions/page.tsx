@@ -118,7 +118,7 @@ const SolutionsPage: React.FC = () => {
         icon: Za,;
         color: 'text-yellow-400,',;
       }
-//     ],;
+//     ],
     it: [;
   // TODO: Add item,s,;
 ];
@@ -170,7 +170,7 @@ const SolutionsPage: React.FC = () => {
         icon: BarChar,;
         color: 'text-orange-400,',;
       }
-//     ],;
+//     ],
     security: [;
   // TODO: Add item,s,;
 ];
@@ -222,7 +222,7 @@ const SolutionsPage: React.FC = () => {
         icon: User,;
         color: 'text-blue-400,',;
       }
-//     ],;
+//     ],
     automation: [;
   // TODO: Add item,s,;
 ];

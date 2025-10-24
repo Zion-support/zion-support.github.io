@@ -2,14 +2,14 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {;
-    BarChart,;
-    Zap,;
-    Shield,;
-    Settings,;
-    CheckCircle,;
-    Star,;
-    BarChart,;
-    Zap,;
+    BarChart,
+    Zap,
+    Shield,
+    Settings,
+    CheckCircle,
+    Star,
+    BarChart,
+    Zap,
     Settings from 'lucide-react';
   }
 const ITPerformanceMonitoringPage: React.FC = () => {
@@ -89,7 +89,7 @@ const ITPerformanceMonitoringPage: React.FC = () => {
   }
                 <ul className='space-y-2'></ul>
                   {;
-    feature.benefits.map((benefit,;
+    feature.benefits.map((benefit,
     benefitIndex) => ();
   }
   }

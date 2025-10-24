@@ -1,12 +1,12 @@
-// Mock functions for sitemap generation,;
+// Mock functions for sitemap generation,
 export const getAllPages = () => [;
-  // TODO: Add items,;
+  // TODO: Add items,
 ];
-  { path: '/', priority: 1.0 },;
-  { path: '/services', priority: 0.8 },;
-  { path: '/contact', priority: 0.7 },;
+  { path: '/', priority: 1.0 },
+  { path: '/services', priority: 0.8 },
+  { path: '/contact', priority: 0.7 },
   {;
-    path: '/about',;
+    path: '/about',
     priority: 0.6;
   }
 ];

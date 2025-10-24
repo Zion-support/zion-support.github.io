@@ -7,29 +7,29 @@ interface SEOOptimizerProps {}
   className?: string;
 }
 ;
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({title: "'Zion" Tech Group - Advanced AI and IT Solutions',;"
-  description: "'Leading" provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',;"
-  keywords: "['AI" solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],;"
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({title: "'Zion" Tech Group - Advanced AI and IT Solutions',"
+  description: "'Leading" provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',"
+  keywords: "['AI" solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],"
   canonicalUrl: "'https://ziontechgroup.com',";"}
-  ogImage: "'https://ziontechgroup.com/og-image.jpg',}";
+  ogImage: "'https://ziontechgroup.com/og-image.jpg',};
   structuredData
 }) => {useEffect(() => {
     // Update page title;"
     document.title="title"
 
     // Update meta description;"
-    const metaDescription="document.querySelector('meta[name=&quot;description&quot;]')";}
+    const metaDescription="document.querySelector('meta[name="description"]')";}
     if (metaDescription) {}
       metaDescription.setAttribute('content', description)"
     } else {const meta="document.createElement('meta')";"
       meta.name="'description'";"}
-      meta.content="description}";
+      meta.content="description};
       document.head.appendChild(meta)
     }
   ]
 
     // Update keywords;"
-    const metaKeywords="document.querySelector('meta[name=&quot;keywords&quot;]')";
+    const metaKeywords="document.querySelector('meta[name="keywords"]')";
     if (metaKeywords) {}
       metaKeywords.setAttribute('content', keywords.join(', '))"
     } else {const meta: "document.createElement('meta')";"
@@ -39,18 +39,18 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({title: "'Zion" Tech Group - 
     }
 
     // Update canonical URL;"
-    let canonicalLink="document.querySelector('link[rel=&quot;canonical&quot;]')";
+    let canonicalLink="document.querySelector('link[rel="canonical"]')";
     if (canonicalLink) {}
       canonicalLink.setAttribute('href', canonicalUrl)"
     } else {canonicalLink="document.createElement('link')";"
       canonicalLink.rel="'canonical'";"}
-      canonicalLink.href="canonicalUrl}";
+      canonicalLink.href="canonicalUrl};
       document.head.appendChild(canonicalLink)
     }
 
     // Update Open Graph tags;"
     const updateOGTag=";";"
-      let ogTag="document.querySelector(`meta[property=&quot;${property}&quot;]`)";
+      let ogTag="document.querySelector(`meta[property="${property}]`)";
       if (ogTag) {}
         ogTag.setAttribute('content', content)"
       } else {ogTag: "document.createElement('meta')";
@@ -68,7 +68,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({title: "'Zion" Tech Group - 
 
     // Update Twitter Card tags;"
     const updateTwitterTag=";";"
-      let twitterTag="document.querySelector(`meta[name=&quot;${name}&quot;]`)";
+      let twitterTag="document.querySelector(`meta[name="${name}]`)";
       if (twitterTag) {}
         twitterTag.setAttribute('content', content)"
       } else {twitterTag: "document.createElement('meta')";
@@ -86,15 +86,15 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({title: "'Zion" Tech Group - 
     // Add structured data;"
     if (structuredData) {const script="document.createElement('script')";"
       script.type="'application/ld+json'";"}
-      script.textContent="JSON.stringify(structuredData)}";
+      script.textContent="JSON.stringify(structuredData)};
       document.head.appendChild(script)
     }
 
     // Add viewport meta tag if not present;"
-    let viewport="document.querySelector('meta[name=&quot;viewport&quot;]')";"
+    let viewport="document.querySelector('meta[name="viewport"]')";"
     if (!viewport) {viewport: "document.createElement('meta')";
       viewport.setAttribute('name', 'viewport');"}
-      viewport.setAttribute('content', 'width: "device-width," initial-scale="1')}";
+      viewport.setAttribute('content', 'width: "device-width," initial-scale="1')};
       document.head.appendChild(viewport)
     }
 
@@ -110,29 +110,29 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({title: "'Zion" Tech Group - 
   return (</SEOOptimizerProps>
     <Head></Head>
       <title>{title}</title>"
-      <meta name="&quot;description&quot;" content="{description}" /></meta>"
-      <meta name="&quot;keywords&quot;" content="{keywords.join('," ')} /></meta>"
-      <link rel="&quot;canonical&quot;" href="{canonicalUrl}" /></link>
+      <meta name=""description"" content="{description} /></meta>"
+      <meta name=""keywords"" content="{keywords.join('," ')} /></meta>"
+      <link rel=""canonical"" href="{canonicalUrl} /></link>
       {/* Open Graph */}</link>"
-      <meta property="&quot;og:title&quot;" content="{title}" /></meta>"
-      <meta property="&quot;og:description&quot;" content="{description}" /></meta>"
-      <meta property="&quot;og:image&quot;" content="{ogImage}" /></meta>"
-      <meta property="&quot;og:url&quot;" content="{canonicalUrl}" /></meta>"
-      <meta property="&quot;og:type&quot;" content="&quot;website&quot;" /></meta>
+      <meta property=""og:title"" content="{title} /></meta>"
+      <meta property=""og:description"" content="{description} /></meta>"
+      <meta property=""og:image"" content="{ogImage} /></meta>"
+      <meta property=""og:url"" content="{canonicalUrl} /></meta>"
+      <meta property=""og:type"" content=""website"" /></meta>
       {/* Twitter Card */}</meta>"
-      <meta name="&quot;twitter:card&quot;" content="&quot;summary_large_image&quot;" /></meta>"
-      <meta name="&quot;twitter:title&quot;" content="{title}" /></meta>"
-      <meta name="&quot;twitter:description&quot;" content="{description}" /></meta>"
-      <meta name="&quot;twitter:image&quot;" content="{ogImage}" /></meta>
+      <meta name=""twitter:card"" content=""summary_large_image"" /></meta>"
+      <meta name=""twitter:title"" content="{title} /></meta>"
+      <meta name=""twitter:description"" content="{description} /></meta>"
+      <meta name=""twitter:image"" content="{ogImage} /></meta>
       {/* Additional SEO meta tags */}</meta>"
-      <meta name="&quot;robots&quot;" content="&quot;index," follow&quot; /></meta>"
-      <meta name="&quot;author&quot;" content="&quot;Zion" Tech Group&quot; /></meta>"
-      <meta name="&quot;viewport&quot;" content="&quot;width=device-width," initial-scale="1&quot;" /></meta>"
-      <meta charSet="&quot;UTF-8&quot;" />
+      <meta name=""robots"" content=""index," follow" /></meta>"
+      <meta name=""author"" content=""Zion" Tech Group" /></meta>"
+      <meta name=""viewport"" content=""width=device-width," initial-scale="1"" /></meta>"
+      <meta charSet=""UTF-8"" />
       {/* Structured Data */}</meta>
       {structuredData && (</meta>
         <script;"}
-          type="&quot;application/ld+json&quot;}";"
+          type=""application/ld+json"};
           dangerouslySetInnerHTML="{{" __html: JSON.stringify(structuredData) }}
         /></script>
       )}</script>
@@ -143,5 +143,4 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({title: "'Zion" Tech Group - 
 export default SEOOptimizer
   );
 };
-;
 export default SEOOptimizerPage;"

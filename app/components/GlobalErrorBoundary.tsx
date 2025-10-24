@@ -4,7 +4,7 @@ import ErrorBoundary from './ErrorBoundary'
 
   const benefits=";"
     'Gain competitive advantage with advanced technology'"
-            <div className="&quot;flex" flex-col sm:flex-row gap-4 justify-center&quot;></div>
+            <div className=""flex" flex-col sm:flex-row gap-4 justify-center"></div>
             </div>
             <h1 className="text-xl font-semibold text-gray-900 mb-2">Oops! Something went wrong</h1>
             <p className="text-gray-600 mb-4">

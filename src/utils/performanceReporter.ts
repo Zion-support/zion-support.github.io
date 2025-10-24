@@ -45,7 +45,7 @@ class PerformanceReporter {;
   }
   }
 }
-//       return,;
+//       return,
     }
     this.isEnabled = config?.enabled ?? process.env['NODE_ENV'] === 'production';
     if (!this.isEnabled) {;
@@ -53,15 +53,15 @@ class PerformanceReporter {;
   }
   }
 }
-//       return,;
+//       return,
     }
-    // Monitor Core Web Vitals,;
+    // Monitor Core Web Vitals,
 //     this.monitorWebVitals();
-    // Monitor navigation timing,;
+    // Monitor navigation timing,
 //     this.monitorNavigationTiming();
-    // Monitor resource timing,;
+    // Monitor resource timing,
 //     this.monitorResourceTiming();
-    // Setup periodic reporting,;
+    // Setup periodic reporting,
     if (config?.reportInterval) {;
     // TODO: Add content;
   }
@@ -94,7 +94,7 @@ class PerformanceReporter {;
   }
   }
 }
-//       return,;
+//       return,
     }
     try {;
     // TODO: Add content;
@@ -201,7 +201,7 @@ const clsObserver = new PerformanceObserver((entryLi, s, t) => {
   }
   }
 }
-//       return,;
+//       return,
     }
     window.addEventListener('load', () => {
   ;
@@ -220,11 +220,11 @@ const clsObserver = new PerformanceObserver((entryLi, s, t) => {
           // Time to First Byte (TT, F, B);
           const ttfb = navigation.responseStart - navigation.requestStart,;
 //           this.addMetric('TTFB', ttfb, this.getRating('ttfb', ttfb));
-          // DOM Content Loaded,;
-const dcl = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,;
+          // DOM Content Loaded,
+const dcl = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
 //           this.addMetric('DCL', dcl, this.getRating('dcl', dcl));
-          // Load Complete,;
-const loadComplete = navigation.loadEventEnd - navigation.loadEventStart,;
+          // Load Complete,
+const loadComplete = navigation.loadEventEnd - navigation.loadEventStart,
 //           this.addMetric('Load', loadComplete, this.getRating('load', loadComplete));
         }
       }, 0);
@@ -242,7 +242,7 @@ const loadComplete = navigation.loadEventEnd - navigation.loadEventStart,;
   }
   }
 }
-//       return,;
+//       return,
     }
     window.addEventListener('load', () => {
   ;
@@ -267,8 +267,8 @@ const slowResources = resources,;
   }
   }
 }
-  name: resource.name,;
-            duration: resource.duration,;
+  name: resource.name,
+            duration: resource.duration,
             type: resource.initiatorType;
           });
         });
@@ -288,9 +288,9 @@ const slowResources = resources,;
   }
   }
 }
-//       name,;
-//       value,;
-//       rating,;
+//       name,
+//       value,
+//       rating,
       timestamp: Date.now();
     }
 //     this.metrics.push(metr, i, c);
@@ -332,7 +332,7 @@ const slowResources = resources,;
       dcl: { good: 1000,
       poor: 3000 },;
       load: {;
-    good: 2000,;
+    good: 2000,
     poor: 4000;
     }
     }
@@ -374,9 +374,9 @@ const slowResources = resources,;
   }
   }
 }
-//       return,;
+//       return,
     }
-    // Google Analytics,;
+    // Google Analytics,
     if (typeof gtag === 'function') {;
     // TODO: Add content;
   }
@@ -387,9 +387,9 @@ const slowResources = resources,;
   }
   }
 }
-  event_category: 'Web Vitals',;
-        value: Math.round(metric.value),;
-        event_label: metric.rating,;
+  event_category: 'Web Vitals',
+        value: Math.round(metric.value),
+        event_label: metric.rating,
         non_interaction: true;
     });
     }
@@ -409,18 +409,18 @@ const slowResources = resources,;
 }
       return null;
     }
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,;
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
 const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
     return {;
     // TODO: Add content;
   }
   }
 }
-  metrics: this.metrics,;
-//       navigation,;
-      resources: resources.slice(0, 50), // Limit to 50 resources,;
-  timestamp: Date.now(),;
-      userAgent: navigator.userAgent,;
+  metrics: this.metrics,
+//       navigation,
+      resources: resources.slice(0, 50), // Limit to 50 resources,
+  timestamp: Date.now(),
+      userAgent: navigator.userAgent,
       url: window.location.href;
     }
   }
@@ -436,7 +436,7 @@ const resources = performance.getEntriesByType('resource') as PerformanceResourc
   }
   }
 }
-//       return,;
+//       return,
     }
     const report = this.generateReport();
     if (!report) {;
@@ -444,21 +444,21 @@ const resources = performance.getEntriesByType('resource') as PerformanceResourc
   }
   }
 }
-//       return,;
+//       return,
     }
     logger.info('Performance Report', {;
     // TODO: Add content;
   }
   }
 }
-  metrics: report.metrics,;
+  metrics: report.metrics,
       navigation: {;
     // TODO: Add content;
   }
   }
 }
   ttfb: report.navigation?.responseStart ?;
-          report.navigation.responseStart - report.navigation.requestStart : null,;
+          report.navigation.responseStart - report.navigation.requestStart : null,
         domContentLoaded: report.navigation?.domContentLoadedEventEnd ?;
           report.navigation.domContentLoadedEventEnd - report.navigation.domContentLoadedEventStart : null;
       }
@@ -483,9 +483,9 @@ const resources = performance.getEntriesByType('resource') as PerformanceResourc
     this.metrics = [];
   }
 }
-// Export singleton instance,;
+// Export singleton instance,
 export const performanceReporter = new PerformanceReporter();
-// Auto-initialize in browser,;
+// Auto-initialize in browser,
 if (typeof window !== 'undefined') {;
     // TODO: Add content;
   }
@@ -496,8 +496,8 @@ if (typeof window !== 'undefined') {;
   }
   }
 }
-  enabled: process.env['NODE_ENV'] === 'production',;
-    reportInterval: 60000, // Report every minute,;
+  enabled: process.env['NODE_ENV'] === 'production',
+    reportInterval: 60000, // Report every minute,
   });
 }
 export default performanceReporter;

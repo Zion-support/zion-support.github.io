@@ -54,11 +54,11 @@ class PerformanceOptimizer {;
   }
   }
 }
-  loadTime: 0,;
-    renderTime: 0,;
-    memoryUsage: 0,;
-    bundleSize: 0,;
-    cacheHitRate: 0,;
+  loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    cacheHitRate: 0,
     lazyLoading: false;
     }
   private config: OptimizationConfig = {;
@@ -66,10 +66,10 @@ class PerformanceOptimizer {;
   }
   }
 }
-  enableLazyLoading: true,;
-    enableCodeSplitting: true,;
-    enableImageOptimization: true,;
-    enableCaching: true,;
+  enableLazyLoading: true,
+    enableCodeSplitting: true,
+    enableImageOptimization: true,
+    enableCaching: true,
     enableCompression: true;
     }
   private observers: PerformanceObserver[] = [];
@@ -81,7 +81,7 @@ class PerformanceOptimizer {;
   }
 }
     this.config = {;
-    ...this.config,;
+    ...this.config,
     ...config;
   }
     this.initializePerformanceMonitoring();
@@ -102,7 +102,7 @@ class PerformanceOptimizer {;
       this.measureLoadTime();
       this.measureMemoryUsage();
     });
-    // Monitor render performance,;
+    // Monitor render performance,
     this.measureRenderTime();
   }
   /**;
@@ -176,7 +176,7 @@ class PerformanceOptimizer {;
         });
       });
       observer.observe({;
-    entryTypes: ['measure',;
+    entryTypes: ['measure',
   });
       this.observers.push(observ, e, r);
     } catch (err, o, r) {;
@@ -184,7 +184,7 @@ class PerformanceOptimizer {;
   }
   }
 }
-      // PerformanceObserver may not support 'measure' entryType in some environments,;
+      // PerformanceObserver may not support 'measure' entryType in some environments,
       }
   }
   private observeLCP() {;
@@ -206,7 +206,7 @@ class PerformanceOptimizer {;
         this.metrics.lcp = lastEntry.startTime;
       });
       observer.observe({;
-    entryTypes: ['largest-contentful-paint',;
+    entryTypes: ['largest-contentful-paint',
   });
 //       this.observers.push(observ, e, r);
     } catch {;
@@ -214,7 +214,7 @@ class PerformanceOptimizer {;
   }
   }
 }
-      // Ignore if not supported,;
+      // Ignore if not supported,
     }
   }
   private observeFID() {;
@@ -243,7 +243,7 @@ class PerformanceOptimizer {;
         });
       });
       observer.observe({;
-    entryTypes: ['first-input',;
+    entryTypes: ['first-input',
   });
 //       this.observers.push(observ, e, r);
     } catch {;
@@ -251,7 +251,7 @@ class PerformanceOptimizer {;
   }
   }
 }
-      // Ignore if not supported,;
+      // Ignore if not supported,
     }
   }
   private observeCLS() {;
@@ -280,7 +280,7 @@ class PerformanceOptimizer {;
         this.metrics.cls = clsValue;
       });
       observer.observe({;
-    entryTypes: ['layout-shift',;
+    entryTypes: ['layout-shift',
   });
 //       this.observers.push(observ, e, r);
     } catch {;
@@ -288,7 +288,7 @@ class PerformanceOptimizer {;
   }
   }
 }
-      // Ignore if not supported,;
+      // Ignore if not supported,
     }
   }
   private observeFCP() {;
@@ -320,7 +320,7 @@ class PerformanceOptimizer {;
         });
       });
       observer.observe({;
-    entryTypes: ['paint',;
+    entryTypes: ['paint',
   });
 //       this.observers.push(observ, e, r);
     } catch {;
@@ -328,7 +328,7 @@ class PerformanceOptimizer {;
   }
   }
 }
-      // Ignore if not supported,;
+      // Ignore if not supported,
     }
   }
   private observeTTFB() {;
@@ -363,7 +363,7 @@ class PerformanceOptimizer {;
         });
       });
       observer.observe({;
-    entryTypes: ['navigation',;
+    entryTypes: ['navigation',
   });
 //       this.observers.push(observ, e, r);
     } catch {;
@@ -371,7 +371,7 @@ class PerformanceOptimizer {;
   }
   }
 }
-      // Ignore if not supported,;
+      // Ignore if not supported,
     }
   }
   private observeMemory() {;
@@ -447,7 +447,7 @@ class PerformanceOptimizer {;
 }
         img.setAttribute('loading', 'lazy');
       }
-      // Add proper alt text if missing,;
+      // Add proper alt text if missing,
       if (!img.hasAttribute('alt')) {;
     // TODO: Add content;
   }
@@ -455,13 +455,13 @@ class PerformanceOptimizer {;
 }
         img.setAttribute('alt', 'Zion Tech Group content');
       }
-      // Optimize image format,;
+      // Optimize image format,
       if (img.src.includes('.jpg') || img.src.includes('.jpeg')) {;
     // TODO: Add content;
   }
   }
 }
-        // Convert to WebP if supported,;
+        // Convert to WebP if supported,
         if (this.supportsWebP()) {;
     // TODO: Add content;
   }
@@ -514,7 +514,7 @@ class PerformanceOptimizer {;
   }
   }
 }
-            const element = entry.target as HTMLElement,;
+            const element = entry.target as HTMLElement,
             const src = element.getAttribute('data-lazy');
             if (s, r, c) {;
     // TODO: Add content;
@@ -558,7 +558,7 @@ class PerformanceOptimizer {;
     }
     if (!this.config.enableCodeSplitting) return;
     // This would typically be handled by the bundler (Vite/Webpack);
-    // Here we can add runtime optimizations,;
+    // Here we can add runtime optimizations,
     if (process.env.NODE_ENV === 'development') { }
   }
   /**;
@@ -570,7 +570,7 @@ class PerformanceOptimizer {;
     }
     if (!this.config.enableCaching) return;
     if (typeof window === 'undefined' || !('serviceWorker' in navigator)) return;
-    // Register service worker for caching,;
+    // Register service worker for caching,
 //     navigator.serviceWorker.register('/sw.js');
       .then((registrati, o, n) => {
   ;
@@ -604,15 +604,15 @@ class PerformanceOptimizer {;
     // TODO: Add content;
     }
     let score = 100;
-    // Deduct points for slow load times,;
+    // Deduct points for slow load times,
     if (this.metrics.loadTime > 3000) score -= 20;
     else if (this.metrics.loadTime > 2000) score -= 10;
-    // Deduct points for slow render times,;
+    // Deduct points for slow render times,
     if (this.metrics.renderTime > 100) score -= 15;
     else if (this.metrics.renderTime > 50) score -= 5;
-    // Deduct points for high memory usage,;
-    if (this.metrics.memoryUsage > 50 * 1024 * 1024) score -= 15; // 50MB,;
-    else if (this.metrics.memoryUsage > 30 * 1024 * 1024) score -= 5; // 30MB,;
+    // Deduct points for high memory usage,
+    if (this.metrics.memoryUsage > 50 * 1024 * 1024) score -= 15; // 50MB,
+    else if (this.metrics.memoryUsage > 30 * 1024 * 1024) score -= 5; // 30MB,
     return Math.max(0, score);
   }
   /**;
@@ -648,7 +648,7 @@ class PerformanceOptimizer {;
   }
   }
 }
-          const img = entry.target as HTMLImageElement,;
+          const img = entry.target as HTMLImageElement,
           img.src = img.dataset.src || '';
           img.removeAttribute('data-src');
           imageObserver.unobserve(i, m, g);
@@ -667,7 +667,7 @@ class PerformanceOptimizer {;
     }
     if (typeof window === 'undefined') return;
     const criticalResources = [;
-  // TODO: Add items,;
+  // TODO: Add items,
 ];
       { href: '/fonts/inter.woff2',
       as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },;
@@ -697,24 +697,24 @@ class PerformanceOptimizer {;
   }
 }
     if (typeof window === 'undefined' || !('performance' in window)) return null;
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,;
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
     if (!navigation) return null;
     return {;
     // TODO: Add content;
   }
   }
 }
-  loadTime: this.metrics.loadTime,;
-      renderTime: this.metrics.renderTime,;
-      memoryUsage: this.metrics.memoryUsage,;
-      bundleSize: this.metrics.bundleSize,;
-      cacheHitRate: this.metrics.cacheHitRate,;
-      lazyLoading: this.metrics.lazyLoading,;
-      ttfb: navigation.responseStart - navigation.requestStart,;
-      fcp: this.metrics.fcp || 0,;
-      lcp: this.metrics.lcp || 0,;
-      fid: this.metrics.fid || 0,;
-      cls: this.metrics.cls || 0,;
+  loadTime: this.metrics.loadTime,
+      renderTime: this.metrics.renderTime,
+      memoryUsage: this.metrics.memoryUsage,
+      bundleSize: this.metrics.bundleSize,
+      cacheHitRate: this.metrics.cacheHitRate,
+      lazyLoading: this.metrics.lazyLoading,
+      ttfb: navigation.responseStart - navigation.requestStart,
+      fcp: this.metrics.fcp || 0,
+      lcp: this.metrics.lcp || 0,
+      fid: this.metrics.fid || 0,
+      cls: this.metrics.cls || 0,
       fmp: this.metrics.fmp || 0;
     }
   }
@@ -727,7 +727,7 @@ class PerformanceOptimizer {;
     }
     logger.performance('Web Vitals reported', metrics as unknown as Record;
           <string, unknown>, 'PerformanceOptimizer');
-    // Send to analytics if available,;
+    // Send to analytics if available,
     if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {;
     // TODO: Add content;
   }
@@ -747,8 +747,8 @@ class PerformanceOptimizer {;
   }
   }
 }
-  metric_name: key,;
-            metric_value: value,;
+  metric_name: key,
+            metric_value: value,
             metric_rating: value;
           < 100 ? 'good' : value < 300 ? 'needs-improvement' : 'poor';
           });
@@ -819,6 +819,6 @@ ${;
     }
   }
 }
-// Export singleton instance,;
+// Export singleton instance,
 export const performanceOptimizer = new PerformanceOptimizer();
 export default PerformanceOptimizer;

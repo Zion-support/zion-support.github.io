@@ -2,14 +2,14 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {;
-    GraduationCap,;
-    BookOpen,;
-    Users,;
-    Award,;
-    CheckCircle,;
-    Star,;
-    GraduationCap,;
-    BookOpen,;
+    GraduationCap,
+    BookOpen,
+    Users,
+    Award,
+    CheckCircle,
+    Star,
+    GraduationCap,
+    BookOpen,
     Award from 'lucide-react';
   }
 const ITTrainingPage: React.FC = () => {
@@ -89,7 +89,7 @@ const ITTrainingPage: React.FC = () => {
   }
                 <ul className='space-y-2'></ul>
                   {;
-    feature.benefits.map((benefit,;
+    feature.benefits.map((benefit,
     benefitIndex) => ();
   }
   }

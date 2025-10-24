@@ -60,7 +60,7 @@ class SEOOptimizer {;
     }
     this.setupStructuredData();
     this.setupCanonicalUrls();
-    // Meta tags are set individually,;
+    // Meta tags are set individually,
     this.setupPerformanceMonitoring();
   }
   /**;
@@ -117,23 +117,23 @@ class SEOOptimizer {;
     const title = this.generateTitle();
     const description = this.generateDescription();
     const keywords = this.generateKeywords();
-    const image = this.currentPageData.image || this.config.defaultImage,;
-    const url = this.currentPageData.url || window.location.href,;
-    // Update title,;
+    const image = this.currentPageData.image || this.config.defaultImage,
+    const url = this.currentPageData.url || window.location.href,
+    // Update title,
     document.title = title;
-    // Update or create meta tags,;
+    // Update or create meta tags,
     this.setMetaTag('description', description);
     this.setMetaTag('keywords', keywords);
     this.setMetaTag('author', this.currentPageData.author || this.config.siteName);
     this.setMetaTag('robots', this.getRobotsContent());
-    // Open Graph tags,;
+    // Open Graph tags,
     this.setMetaTag('og:title', title, 'property');
     this.setMetaTag('og:description', description, 'property');
     this.setMetaTag('og:image', image, 'property');
     this.setMetaTag('og:url', url, 'property');
     this.setMetaTag('og:type', this.currentPageData.type || 'website', 'property');
     this.setMetaTag('og:site_name', this.config.siteName, 'property');
-    // Twitter Card tags,;
+    // Twitter Card tags,
     if (this.config.twitterHandle) {;
     // TODO: Add content;
   }
@@ -145,7 +145,7 @@ class SEOOptimizer {;
       this.setMetaTag('twitter:description', description);
       this.setMetaTag('twitter:image', image);
     }
-    // Additional meta tags,;
+    // Additional meta tags,
     this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0');
     this.setMetaTag('theme-color', '#1e40af');
     this.setMetaTag('msapplication-TileColor', '#1e40af');
@@ -208,10 +208,10 @@ class SEOOptimizer {;
   }
   }
 }
-      '@context': 'https://schema.org',;
-      '@type': 'WebSite',;
-      name: this.config.siteName,;
-      url: this.config.siteUrl,;
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: this.config.siteName,
+      url: this.config.siteUrl,
       potentialAction: {;
     // TODO: Add content;
   }
@@ -237,23 +237,23 @@ class SEOOptimizer {;
   }
   }
 }
-      '@context': 'https://schema.org',;
-      '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',;
-      headline: this.generateTitle(),;
-      description: this.generateDescription(),;
-      url: this.currentPageData.url || window.location.href,;
-      image: this.currentPageData.image || this.config.defaultImage,;
+      '@context': 'https://schema.org',
+      '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
+      headline: this.generateTitle(),
+      description: this.generateDescription(),
+      url: this.currentPageData.url || window.location.href,
+      image: this.currentPageData.image || this.config.defaultImage,
       publisher: {;
     // TODO: Add content;
   }
   }
 }
-        '@type': 'Organization',;
-        name: this.config.siteName,;
+        '@type': 'Organization',
+        name: this.config.siteName,
         url: this.config.siteUrl;
       }
     }
-    // Add article-specific properties,;
+    // Add article-specific properties,
     if (this.currentPageData.type === 'article') {;
     // TODO: Add content;
   }
@@ -269,11 +269,11 @@ class SEOOptimizer {;
   }
   }
   }
-// name: this.currentPageData.author || this.config.siteName,;
-        },;
-        datePublished: this.currentPageData.publishedTime,;
-        dateModified: this.currentPageData.modifiedTime,;
-        articleSection: this.currentPageData.section,;
+// name: this.currentPageData.author || this.config.siteName,
+        },
+        datePublished: this.currentPageData.publishedTime,
+        dateModified: this.currentPageData.modifiedTime,
+        articleSection: this.currentPageData.section,
         keywords: this.generateKeywords();
       });
     }
@@ -323,15 +323,15 @@ private addStructuredData(data: unknown): void {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         if (lastEntry.startTime > 4000) {;
-    // Poor LCP,;
-    this.trackSEOMetric('poor_lcp',;
+    // Poor LCP,
+    this.trackSEOMetric('poor_lcp',
     lastEntry.startTime);
   }
   }
   }
         }
       }).observe({;
-    entryTypes: ['largest-contentful-paint',;
+    entryTypes: ['largest-contentful-paint',
   });
       // Monitor CLS (Cumulative, Layout, Shift);
       let clsValue = 0;
@@ -353,15 +353,15 @@ private addStructuredData(data: unknown): void {
           }
         }
         if (clsValue > 0.25) {;
-    // Poor CLS,;
-    this.trackSEOMetric('poor_cls',;
+    // Poor CLS,
+    this.trackSEOMetric('poor_cls',
     clsValue);
   }
   }
   }
         }
       }).observe({;
-    entryTypes: ['layout-shift',;
+    entryTypes: ['layout-shift',
   });
     }
   }
@@ -398,19 +398,19 @@ private addStructuredData(data: unknown): void {
   }
   }
 }
-    // This would typically come from your CMS or routing system,;
+    // This would typically come from your CMS or routing system,
     return [;
-  // TODO: Add items,;
+  // TODO: Add items,
 ];
       {;
     // TODO: Add content;
   }
   }
 }
-  url: this.config.siteUrl,;
-        lastmod: new Date().toISOString(),;
-        changefreq: 'daily',;
-        priority: '1.0',;
+  url: this.config.siteUrl,
+        lastmod: new Date().toISOString(),
+        changefreq: 'daily',
+        priority: '1.0',
       }
     ];
   }
@@ -424,11 +424,11 @@ private addStructuredData(data: unknown): void {
     return `User-agent: *,;
 Allow: /,;
 Sitemap: ${this.config.siteUrl}/sitemap.xml;
-// # Disallow admin and private areas,;
-  Disallow: /admin/,;
-    Disallow: /private/,;
-    Disallow: /api/,;
-  Disallow: /_next/,;
+// # Disallow admin and private areas,
+  Disallow: /admin/,
+    Disallow: /private/,
+    Disallow: /api/,
+  Disallow: /_next/,
   Disallow: /static/`;
   }
   /**;
@@ -440,8 +440,8 @@ Sitemap: ${this.config.siteUrl}/sitemap.xml;
   }
 }
     const issues: string[] = [];
-    // Check title length,;
-const title = document.title,;
+    // Check title length,
+const title = document.title,
     if (title.length;
           < 30) {;
     // TODO: Add content;
@@ -478,7 +478,7 @@ const description = document.querySelector('meta[name='description']')?.getAttri
 }
       issues.push('Description is too long (more than 160 characters)');
     }
-    // Check for images without alt text,;
+    // Check for images without alt text,
 const images = document.querySelectorAll('img');
     images.forEach((img, index) => {
   ;
@@ -492,7 +492,7 @@ const images = document.querySelectorAll('img');
         issues.push(`Image ${index + 1} is missing alt text`);
       }
     });
-    // Check for heading structure,;
+    // Check for heading structure,
 const h1s = document.querySelectorAll('h1');
     if (h1s.length === 0) {;
     // TODO: Add content;
@@ -517,24 +517,24 @@ const h1s = document.querySelectorAll('h1');
     // TODO: Add content;
     }
     const issues = this.checkSEOIssues();
-    const maxIssues = 10; // Maximum possible issues,;
+    const maxIssues = 10; // Maximum possible issues,
 const score = Math.max(0, 100 - (issues.length / maxIssues) * 100);
     return Math.round(sco, r, e);
   }
 }
-// Default configuration,;
+// Default configuration,
 const defaultConfig: SEOConfig = {;
     // TODO: Add content;
   }
   }
 }
-  siteName: 'Zion Tech Group',;
-  siteUrl: 'https://zion.app',;
-  defaultTitle: 'Advanced AI and IT Solutions',;
-  defaultDescription: 'Zion Tech Group provides cutting-edge AI and IT solutions for businesses. Transform your operations with our innovative technology and expert consulting services.',;
-  defaultImage: 'https://zion.app/og-image.jpg',;
-  twitterHandle: 'ZionTechGroup',;
-  googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,;
+  siteName: 'Zion Tech Group',
+  siteUrl: 'https://zion.app',
+  defaultTitle: 'Advanced AI and IT Solutions',
+  defaultDescription: 'Zion Tech Group provides cutting-edge AI and IT solutions for businesses. Transform your operations with our innovative technology and expert consulting services.',
+  defaultImage: 'https://zion.app/og-image.jpg',
+  twitterHandle: 'ZionTechGroup',
+  googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
   googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID;
 }
 export const seoOptimizer = new SEOOptimizer(defaultConf, i, g);

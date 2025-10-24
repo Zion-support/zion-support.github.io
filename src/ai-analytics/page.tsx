@@ -1,6 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { Target, BarChart, Settings } from 'lucide-react';
 import {;
     Target,;
     BarChart,;
@@ -100,5 +101,6 @@ const AIAnalyticsPage: React.FC = () => {
       </main>
       <Footer /></Footer>
   );
-}
+};
+
 export default AIAnalyticsPage;

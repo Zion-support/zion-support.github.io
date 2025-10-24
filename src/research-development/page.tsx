@@ -84,8 +84,8 @@ const ResearchDevelopmentPage: React.FC = () => {
         outcomes: [;
   // TODO: Add item,s,;
 ];
-//           'Improved decision accuracy by 40%',;
-//           'Reduced computational overhead by 30%',;
+//           'Improved decision accuracy by 40%',
+//           'Reduced computational overhead by 30%',
 //           'Published 3 papers in top-tier conferences';
 //         ],;
         icon: Brai,;
@@ -105,8 +105,8 @@ const ResearchDevelopmentPage: React.FC = () => {
         outcomes: [;
   // TODO: Add item,s,;
 ];
-//           '95% automation of business processes',;
-//           '300% improvement in decision speed',;
+//           '95% automation of business processes',
+//           '300% improvement in decision speed',
           'Patent filed for core algorithms';
 //         ],;
         icon: Targe,;
@@ -126,14 +126,14 @@ const ResearchDevelopmentPage: React.FC = () => {
         outcomes: [;
   // TODO: Add item,s,;
 ];
-//           '50% reduction in model development time',;
-//           '25% improvement in model performance',;
+//           '50% reduction in model development time',
+//           '25% improvement in model performance',
 //           'Open-source framework released';
 //         ],;
         icon: Microscop,;
         color: 'text-blue-400,',;
       }
-//     ],;
+//     ],
     quantum: [;
   // TODO: Add item,s,;
 ];
@@ -151,8 +151,8 @@ const ResearchDevelopmentPage: React.FC = () => {
         outcomes: [;
   // TODO: Add item,s,;
 ];
-          'Quantum speedup demonstrated for specific problems',;
-//           'Novel quantum ML algorithms developed',;
+          'Quantum speedup demonstrated for specific problems',
+//           'Novel quantum ML algorithms developed',
 //           'Partnership with leading quantum hardware companies';
 //         ],;
         icon: Ato,;
@@ -172,14 +172,14 @@ const ResearchDevelopmentPage: React.FC = () => {
         outcomes: [;
   // TODO: Add item,s,;
 ];
-//           'Improved quantum error rates',;
-//           'Practical implementation strategies',;
+//           'Improved quantum error rates',
+//           'Practical implementation strategies',
           'Industry collaboration established';
 //         ],;
         icon: Za,;
         color: 'text-yellow-400,',;
       }
-//     ],;
+//     ],
     autonomous: [;
   // TODO: Add item,s,;
 ];
@@ -197,8 +197,8 @@ const ResearchDevelopmentPage: React.FC = () => {
         outcomes: [;
   // TODO: Add item,s,;
 ];
-//           '90% reduction in manual operations',;
-//           'Self-healing system capabilities',;
+//           '90% reduction in manual operations',
+//           'Self-healing system capabilities',
 //           'Real-world deployment in 5 enterprises';
 //         ],;
         icon: Rocke,;
@@ -218,14 +218,14 @@ const ResearchDevelopmentPage: React.FC = () => {
         outcomes: [;
   // TODO: Add item,s,;
 ];
-//           'Novel coordination algorithms developed',;
-//           'Scalability demonstrated up to 1000 agents',;
+//           'Novel coordination algorithms developed',
+//           'Scalability demonstrated up to 1000 agents',
 //           'Published in Nature Communications';
 //         ],;
         icon: User,;
         color: 'text-purple-400,',;
       }
-//     ],;
+//     ],
     emerging: [;
   // TODO: Add item,s,;
 ];
@@ -243,8 +243,8 @@ const ResearchDevelopmentPage: React.FC = () => {
         outcomes: [;
   // TODO: Add item,s,;
 ];
-//           'Novel neuromorphic algorithms',;
-//           'Hardware-software co-design',;
+//           'Novel neuromorphic algorithms',
+//           'Hardware-software co-design',
           'Industry partnerships established';
 //         ],;
         icon: Lightbul,;
@@ -264,8 +264,8 @@ const ResearchDevelopmentPage: React.FC = () => {
         outcomes: [;
   // TODO: Add item,s,;
 ];
-//           '10x reduction in power consumption',;
-//           'Real-time processing capabilities',;
+//           '10x reduction in power consumption',
+//           'Real-time processing capabilities',
 //           'Commercial product launched';
 //         ],;
         icon: Glob,;
@@ -510,7 +510,7 @@ const ResearchDevelopmentPage: React.FC = () => {
             <div className='max-w-4xl mx-auto'></div>
               <div className='space-y-6'></div>
                 {;
-    publications.map((pub,;
+    publications.map((pub,
     index) => ();
   }
   }

@@ -188,7 +188,7 @@ export const tbtObserver = new PerformanceObserver((li, s, t) => {
  , }
   }
 }
-          totalBlockingTime += entry.duration - 50; // Tasks over 50ms contribute to TBT,;
+          totalBlockingTime += entry.duration - 50; // Tasks over 50ms contribute to TBT,
         }
       }
       setMetrics(prev => ({ ...prev tbt: totalBlockingTime, }));
@@ -406,7 +406,7 @@ export const reportMetrics = useCallback(() => {
  ,
     }
     const cleanup = measureWebVitals();
-// Report metrics periodically,;
+// Report metrics periodically,
     const interval = setInterval(reportMetrics, reportInterval);
     // Report metrics on page unload,;
     const handleBeforeUnload = (): JSX.Element => {;

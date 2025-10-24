@@ -5,23 +5,23 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
-const EnhancedPerformanceOptimizerPage: React.FC="()" => {const features: ";",;
-      title: 'AI-Powered Intelligence',;}
+const EnhancedPerformanceOptimizerPage: React.FC = () => {const features = [
+      title: 'AI-Powered Intelligence',}
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',}
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    {icon: BarChart,;
-      title: 'Advanced Analytics',;}
+    {icon: BarChart,
+      title: 'Advanced Analytics',}
       description: 'Comprehensive analytics dashboard with real-time data visualization.',}
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
-    {icon: Target,;
-      title: 'Precision Targeting',;}
+    {icon: Target,
+      title: 'Precision Targeting',}
       description: 'Target specific goals and objectives with precision and accuracy.',}
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
-    {icon: TrendingUp,;
-      title: 'Growth Optimization',;}
+    {icon: TrendingUp,
+      title: 'Growth Optimization',}
       description: 'Optimize your business growth with data-driven strategies.',}
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
@@ -134,18 +134,17 @@ const EnhancedPerformanceOptimizerPage: React.FC="()" => {const features: ";",;
     </>
   );,
 };
-;
 export default EnhancedPerformanceOptimizerPage;
-{icon: Brain,;}
+{icon: Brain,}
 title: 'AI-Powered Solutions',}
 description: 'Advanced AI technology to transform your business operations and improve efficiency'},
-{icon: Zap,;}
+{icon: Zap,}
 title: 'High Performance',}
 description: 'Lightning-fast processing and real-time analytics for optimal results'},
-{icon: Shield,;}
+{icon: Shield,}
 title: 'Enterprise Security',}
 description: 'Bank-level security with encryption and compliance standards'},
-{icon: Globe,;}
+{icon: Globe,}
 title: 'Global Reach',}
 description: 'Worldwide deployment and support for international businesses'}
 ];"
@@ -229,11 +228,11 @@ import {Phone, Mail } from 'lucide-react'
 ;
 interface PerformanceMetrics {lcp: number | null;
 fid: number | null;
-cls: number | null,;}
+cls: number | null,}
 fcp: number | null}
 ttfb: number | null
-}"
-const EnhancedPerformanceOptimizer: React.FC="()" => {}
+}
+const EnhancedPerformanceOptimizer: React.FC = () => {}
 const {trackEvent } = useAnalytics();"
 export const optimizeImages=";";"
 export const images="document.querySelectorAll('img')""

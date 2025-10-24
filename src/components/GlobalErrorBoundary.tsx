@@ -53,10 +53,10 @@ class GlobalErrorBoundary extends Component;
  , }
   }
 }
-//       error,;
-//       errorInfo,;
+//       error,
+//       errorInfo,
     });
-    // Log error to console in development,;
+    // Log error to console in development,
     if (process.env.NODE_ENV === 'development') {;
     // TODO: Add content;
  , }

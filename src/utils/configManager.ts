@@ -71,15 +71,15 @@ export interface AppConfig {;
     enableNetwork: boolean;
     }
 }
-  environment: 'development',;
+  environment: 'development',
   api: {;
     // TODO: Add content;
   }
   }
 }
-  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',;
-    timeout: 30000,;
-    retryAttempts: 3,;
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
     enableCaching: true;
     },;
   features: {;
@@ -87,11 +87,11 @@ export interface AppConfig {;
   }
   }
 }
-  enableAnalytics: false,;
-    enableErrorReporting: true,;
-    enablePerformanceMonitoring: true,;
-    enableAccessibility: true,;
-    enableSEO: true,;
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
     enablePWA: true;
     },;
   performance: {;
@@ -99,9 +99,9 @@ export interface AppConfig {;
   }
   }
 }
-  enableCodeSplitting: true,;
-    enableLazyLoading: true,;
-    enableImageOptimization: true,;
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
     enableCaching: true;
     },;
   security: {;
@@ -109,9 +109,9 @@ export interface AppConfig {;
   }
   }
 }
-  enableCSP: true,;
-    enableCORS: true,;
-    enableRateLimiting: true,;
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
     maxRequestsPerMinute: 100;
     },;
   ui: {;
@@ -119,17 +119,17 @@ export interface AppConfig {;
   }
   }
 }
-  theme: 'auto',;
-    language: 'en',;
-    timezone: 'UTC',;
-  },;
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC',
+  },
   logging: {;
     // TODO: Add content;
   }
   }
 }
-  level: 'info',;
-    enableConsole: true,;
+  level: 'info',
+    enableConsole: true,
     enableNetwork: false;
     }
 }
@@ -139,15 +139,15 @@ const developmentConfig: Partial;
   }
   }
 }
-  environment: 'development',;
+  environment: 'development',
   api: {;
     // TODO: Add content;
   }
   }
 }
-  baseURL: 'http://localhost:3000/api',;
-    timeout: 30000,;
-    retryAttempts: 1,;
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
     enableCaching: false;
     },;
   features: {;
@@ -155,11 +155,11 @@ const developmentConfig: Partial;
   }
   }
 }
-  enableAnalytics: false,;
-    enableErrorReporting: true,;
-    enablePerformanceMonitoring: true,;
-    enableAccessibility: true,;
-    enableSEO: false,;
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
     enablePWA: false;
     },;
   logging: {;
@@ -167,8 +167,8 @@ const developmentConfig: Partial;
   }
   }
 }
-  level: 'debug',;
-    enableConsole: true,;
+  level: 'debug',
+    enableConsole: true,
     enableNetwork: false;
     }
 }
@@ -178,15 +178,15 @@ const stagingConfig: Partial;
   }
   }
 }
-  environment: 'staging',;
+  environment: 'staging',
   api: {;
     // TODO: Add content;
   }
   }
 }
-  baseURL: 'https://staging-api.ziontech.com',;
-    timeout: 30000,;
-    retryAttempts: 3,;
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
     enableCaching: true;
     },;
   features: {;
@@ -194,11 +194,11 @@ const stagingConfig: Partial;
   }
   }
 }
-  enableAnalytics: true,;
-    enableErrorReporting: true,;
-    enablePerformanceMonitoring: true,;
-    enableAccessibility: true,;
-    enableSEO: true,;
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
     enablePWA: true;
     },;
   logging: {;
@@ -206,8 +206,8 @@ const stagingConfig: Partial;
   }
   }
 }
-  level: 'info',;
-    enableConsole: true,;
+  level: 'info',
+    enableConsole: true,
     enableNetwork: true;
     }
 }
@@ -217,15 +217,15 @@ const productionConfig: Partial;
   }
   }
 }
-  environment: 'production',;
+  environment: 'production',
   api: {;
     // TODO: Add content;
   }
   }
 }
-  baseURL: 'https://api.ziontech.com',;
-    timeout: 30000,;
-    retryAttempts: 3,;
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
     enableCaching: true;
     },;
   features: {;
@@ -233,11 +233,11 @@ const productionConfig: Partial;
   }
   }
 }
-  enableAnalytics: true,;
-    enableErrorReporting: true,;
-    enablePerformanceMonitoring: true,;
-    enableAccessibility: true,;
-    enableSEO: true,;
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
     enablePWA: true;
     },;
   logging: {;
@@ -245,8 +245,8 @@ const productionConfig: Partial;
   }
   }
 }
-  level: 'error',;
-    enableConsole: false,;
+  level: 'error',
+    enableConsole: false,
     enableNetwork: true;
     },;
   security: {;
@@ -254,9 +254,9 @@ const productionConfig: Partial;
   }
   }
 }
-  enableCSP: true,;
-    enableCORS: true,;
-    enableRateLimiting: true,;
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
     maxRequestsPerMinute: 60;
     }
 }
@@ -266,15 +266,15 @@ const testConfig: Partial;
   }
   }
 }
-  environment: 'test',;
+  environment: 'test',
   api: {;
     // TODO: Add content;
   }
   }
 }
-  baseURL: 'http://localhost:3000/api',;
-    timeout: 5000,;
-    retryAttempts: 0,;
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
     enableCaching: false;
     },;
   features: {;
@@ -282,11 +282,11 @@ const testConfig: Partial;
   }
   }
 }
-  enableAnalytics: false,;
-    enableErrorReporting: false,;
-    enablePerformanceMonitoring: false,;
-    enableAccessibility: true,;
-    enableSEO: false,;
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
     enablePWA: false;
     },;
   logging: {;
@@ -294,8 +294,8 @@ const testConfig: Partial;
   }
   }
 }
-  level: 'error',;
-    enableConsole: false,;
+  level: 'error',
+    enableConsole: false,
     enableNetwork: false;
     }
 }
@@ -356,7 +356,7 @@ export class ConfigManager {;
         config = this.mergeConfig(config, testConfig);
         break;
     }
-    // Apply overrides,;
+    // Apply overrides,
     config = this.mergeConfig(config, this.overrides);
     return config;
   }
@@ -414,15 +414,15 @@ export class ConfigManager {;
    */;
   get;
           <K extends keyof AppConfig>(key: K): AppConfig[K];
-// get,;
+// get,
           <K extends keyof AppConfig, NK extends keyof AppConfig[K]>();
-    key: K,;
-    nestedKey: NK,;
+    key: K,
+    nestedKey: NK,
 ): AppConfig[K][NK];
-// get,;
+// get,
           <K extends keyof AppConfig, NK extends keyof AppConfig[K]>();
-    key: K,;
-    nestedKey?: NK,;
+    key: K,
+    nestedKey?: NK,
 ): AppConfig[K] | AppConfig[K][NK] {;
     // TODO: Add content;
   }
@@ -445,14 +445,14 @@ export class ConfigManager {;
       value: AppConfig[K]): void;
 // set,;
           <K extends keyof AppConfig, NK extends keyof AppConfig[K]>();
-    key: K,;
-    nestedKey: NK,;
+    key: K,
+    nestedKey: NK,
     value: AppConfig[K][NK];
   ): void;
-// set,;
+// set,
           <K extends keyof AppConfig, NK extends keyof AppConfig[K]>();
-    key: K,;
-    nestedKeyOrValue: NK | AppConfig[K],;
+    key: K,
+    nestedKeyOrValue: NK | AppConfig[K],
     value?: AppConfig[K][NK];
   ): void {;
     // TODO: Add content;
@@ -518,15 +518,15 @@ const defaultValue = this.getDefaultForKey(k, e, y);
   }
   }
 }
-  environment: 'development',;
+  environment: 'development',
       api: {;
     // TODO: Add content;
   }
   }
 }
-  baseURL: '',;
-        timeout: 30000,;
-        retryAttempts: 3,;
+  baseURL: '',
+        timeout: 30000,
+        retryAttempts: 3,
         enableCaching: true;
     },;
       features: {;
@@ -534,11 +534,11 @@ const defaultValue = this.getDefaultForKey(k, e, y);
   }
   }
 }
-  enableAnalytics: false,;
-        enableErrorReporting: true,;
-        enablePerformanceMonitoring: false,;
-        enableAccessibility: true,;
-        enableSEO: true,;
+  enableAnalytics: false,
+        enableErrorReporting: true,
+        enablePerformanceMonitoring: false,
+        enableAccessibility: true,
+        enableSEO: true,
         enablePWA: false;
     },;
       performance: {;
@@ -546,9 +546,9 @@ const defaultValue = this.getDefaultForKey(k, e, y);
   }
   }
 }
-  enableCodeSplitting: true,;
-        enableLazyLoading: true,;
-        enableImageOptimization: true,;
+  enableCodeSplitting: true,
+        enableLazyLoading: true,
+        enableImageOptimization: true,
         enableCaching: true;
     },;
       security: {;
@@ -556,9 +556,9 @@ const defaultValue = this.getDefaultForKey(k, e, y);
   }
   }
 }
-  enableCSP: true,;
-        enableCORS: false,;
-        enableRateLimiting: true,;
+  enableCSP: true,
+        enableCORS: false,
+        enableRateLimiting: true,
         maxRequestsPerMinute: 100;
     },;
       ui: {;
@@ -566,17 +566,17 @@ const defaultValue = this.getDefaultForKey(k, e, y);
   }
   }
 }
-  theme: 'light',;
-        language: 'en',;
-        timezone: 'UTC',;
-      },;
+  theme: 'light',
+        language: 'en',
+        timezone: 'UTC',
+      },
       logging: {;
     // TODO: Add content;
   }
   }
 }
-  level: 'info',;
-        enableConsole: true,;
+  level: 'info',
+        enableConsole: true,
         enableNetwork: false;
     }
     }
@@ -650,7 +650,7 @@ const defaultValue = this.getDefaultForKey(k, e, y);
     // TODO: Add content;
     }
     this.config.api = {;
-    ...this.config.api,;
+    ...this.config.api,
     ...config;
   }
   }
@@ -724,14 +724,14 @@ const defaultValue = this.getDefaultForKey(k, e, y);
    * Validate configuration;
    */;
   validate(): {;
-    valid: boolean; errors: string[,;
+    valid: boolean; errors: string[,
   } {;
     // TODO: Add content;
   }
   }
 }
     const errors: string[] = [];
-    // Validate API configuration,;
+    // Validate API configuration,
     if (!this.config.api.baseURL) {;
     // TODO: Add content;
   }
@@ -755,7 +755,7 @@ const defaultValue = this.getDefaultForKey(k, e, y);
 }
       errors.push('API retryAttempts must be non-negative');
     }
-    // Validate security configuration,;
+    // Validate security configuration,
     if (this.config.security.maxRequestsPerMinute;
           < 1) {;
     // TODO: Add content;
@@ -769,10 +769,10 @@ const defaultValue = this.getDefaultForKey(k, e, y);
   }
   }
 }
-  valid: errors.length === 0,;
-//       errors,;
+  valid: errors.length === 0,
+//       errors,
     }
   }
 }
-// Export singleton instance,;
+// Export singleton instance,
 export const configManager = ConfigManager.getInstance();

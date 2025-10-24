@@ -5,23 +5,23 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
-const PerformanceDashboardPage: React.FC="()" => {const features: ";",;
-      title: 'AI-Powered Intelligence',;}
+const PerformanceDashboardPage: React.FC = () => {const features = [
+      title: 'AI-Powered Intelligence',}
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',}
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    {icon: BarChart,;
-      title: 'Advanced Analytics',;}
+    {icon: BarChart,
+      title: 'Advanced Analytics',}
       description: 'Comprehensive analytics dashboard with real-time data visualization.',}
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
-    {icon: Target,;
-      title: 'Precision Targeting',;}
+    {icon: Target,
+      title: 'Precision Targeting',}
       description: 'Target specific goals and objectives with precision and accuracy.',}
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
-    {icon: TrendingUp,;
-      title: 'Growth Optimization',;}
+    {icon: TrendingUp,
+      title: 'Growth Optimization',}
       description: 'Optimize your business growth with data-driven strategies.',}
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
@@ -134,11 +134,10 @@ const PerformanceDashboardPage: React.FC="()" => {const features: ";",;
     </>
   );,
 };
-;
 export default PerformanceDashboardPage;
-loadTime: 0,;
-renderTime: 0,;
-memoryUsage: 0,;
+loadTime: 0,
+renderTime: 0,
+memoryUsage: 0,
 fps: 0});
 const [isMonitoringsetIsMonitoring] = useState(false);
 const [alertssetAlerts]=useState<string[]>([]);"
@@ -149,7 +148,7 @@ constnavigation="performance.getEntriesByType("
 )[0] asPerformanceNavigationTimingconstloadTime="navigation" ? navigation.loadEventEnd - navigation.fetchStart: 0"
 // Measure rendertimeconstrenderStart="performance.now()";"}
 constrenderTime="performance.now()" - renderStart"
-// Measure memoryusageletmemoryUsage="0if" ('memory' in performance) {}"
+// Measure memoryusageletmemoryUsage="0if" ('memory' in performance) {}
 constmemory="(performance" as {memory?: { usedJSHeapSize : number} }).memorymemoryUsage="memory?.usedJSHeapSize" || 0
 }
 // Measure FPS (simplified);"
@@ -161,14 +160,14 @@ constmeasureFPS="()" => {
 constcurrentTime="performance.now()";
 frameCount++;
 if (currentTime - lastTime >= 100 0) {"}
-fps="Math.round((frameCount" * 100 0) / (currentTime - lastTime))}"
+fps="Math.round((frameCount" * 100 0) / (currentTime - lastTime))}
 frameCount="0lastTime=" currentTime}
 if (isMonitorin g) {requestAnimationFrame(measureFPS)}
 }
 requestAnimationFrame(measureFPS)
-}"
+}
 constnewMetrics: PerformanceMetrics="{loadTime,";
-renderTime,;}
+renderTime,}
 memoryUsage,}
 fps}
 setMetrics(newMetrics);
@@ -187,12 +186,12 @@ if (currentMetrics.memoryUsage > 5 0 * 1024*1024) {//50MB}</string>
 newAlerts.push('Memory usage is high')}</string>;
 if(currentMetrics.fps< 3 0) {newAlerts.push('FPS is below30')}
 setAlerts(newAlerts)
-}"
-consttoggleMonitoring="()" =>{setIsMonitoring(!isMonitoring)}"
+}
+consttoggleMonitoring="()" =>{setIsMonitoring(!isMonitoring)}
 constformatBytes="(bytes:" number) => {if (bytes: "==" 0) return '0 Bytes'"
 constk="1024constsizes=" ['Bytes', 'KB', 'MB', 'GB'];"}
 consti="Math.floor(Math.log(bytes)" / Math.log(k))}
-return parseFloa t((bytes / Math.pow(ki)).toFixed(2)) + ' ' + sizes[i]}"
+return parseFloa t((bytes / Math.pow(ki)).toFixed(2)) + ' ' + sizes[i]}
 constgetPerformanceColor="(value:" number, thresholds: {good: numberwarning: number}) => {if(value<= thresholds.good) return 'text-green-40 0'}
 if (value <= thresholds.warning) return 'text-yellow-40 0'}
 return 'text-red-40 0'}
@@ -241,17 +240,17 @@ isMonitoring ? 'bg-red-600 text-white hover: bg-red-700' : 'bg-green-600 text-wh
       6, warning: 33, })}`}></div>
 {metrics.renderTime.toFixed(2)}ms
 </div>"
-<div className="&quot;bg-white/5" rounded-lg p-4&quot;></div>"
-<div className="&quot;flex" items-center gap-2 mb-2&quot;></div>"
-<MemoryStick className="&quot;w-4" h-4 text-purple-400&quot; /></MemoryStick>"
-<span className="&quot;text-gray-300" text-sm&quot;>Memory Usage</span>
+<div className=""bg-white/5" rounded-lg p-4"></div>"
+<div className=""flex" items-center gap-2 mb-2"></div>"
+<MemoryStick className=""w-4" h-4 text-purple-400" /></MemoryStick>"
+<span className=""text-gray-300" text-sm">Memory Usage</span>
 </div>"
 <div className="{`text-2xl" font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 10 * 1024 * 1024, warning: 30 * 1024 * 1024 })}`}>{formatBytes(metrics.memoryUsage)}</div>div>
 </div>"
-<div className="&quot;bg-white/5" rounded-lg p-4&quot;></div>"
-<div className="&quot;flex" items-center gap-2 mb-2&quot;></div>"
-<TrendingUp className="&quot;w-4" h-4 text-orange-400&quot; /></TrendingUp>"
-<span className="&quot;text-gray-300" text-sm&quot;>FPS</span>
+<div className=""bg-white/5" rounded-lg p-4"></div>"
+<div className=""flex" items-center gap-2 mb-2"></div>"
+<TrendingUp className=""w-4" h-4 text-orange-400" /></TrendingUp>"
+<span className=""text-gray-300" text-sm">FPS</span>
 </div>"
 <div className="{`text-2xl" font-bold ${getPerformanceColor(60 - metrics.fps, { good: 10, warning: 20 })}`}>{metrics.fps}</div>div>
 </div>

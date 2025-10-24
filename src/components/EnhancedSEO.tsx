@@ -83,7 +83,7 @@ const EnhancedSEO: React.FC;
       {modifiedTime && <meta property='article: modified_time' content={modifiedTim,e}/>}
       {section && <meta property='article: section' content={sectio,n}/>}
       {;
-    tags.length > 0 && tags.map((tag,;
+    tags.length > 0 && tags.map((tag,
     index) => ();
   }
   }

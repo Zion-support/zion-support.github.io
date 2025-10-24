@@ -1,5 +1,5 @@
 'use client';
-// Enhanced Error Handler,;
+// Enhanced Error Handler,
 export class AppError extends Error {;
     // TODO: Add content;
   }
@@ -28,8 +28,8 @@ export const _errorHandler = (error: AppError | Error) => {
   const isDevelopment = process.env.NODE_ENV === 'development';
   const appError = error instanceof AppError ? error : new AppError(error.message);
 // console.error({;
-    message: appError.message,;
-    stack: isDevelopment ? appError.stack : undefined,;
+    message: appError.message,
+    stack: isDevelopment ? appError.stack : undefined,
     timestamp: new Date().toISOString();
   }
   }
@@ -42,7 +42,7 @@ export const _errorHandler = (error: AppError | Error) => {
   }
   }
 }
-  message: appError.isOperational ? appError.message : 'An unexpected error occurred',;
+  message: appError.isOperational ? appError.message : 'An unexpected error occurred',
     statusCode: appError.statusCode || 500;
   }
 }

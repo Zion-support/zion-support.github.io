@@ -10,7 +10,7 @@ interface LazyComponentProps {;
   threshold?: number;
   rootMargin?: string;,
 }
-// Higher-order component for lazy loading,;
+// Higher-order component for lazy loading,
 export const _withLazyLoading =;
           <P extends object>();
   Component: ComponentType;
@@ -28,14 +28,14 @@ export const _withLazyLoading =;
     </Suspense>
   );
 }
-// Lazy component wrapper with intersection observer,;
+// Lazy component wrapper with intersection observer,
 const LazyComponent: React.FC;
           <LazyComponentProps> = ({;
     // TODO: Add content;
  , }
   }
 }
-//   children,;
+//   children,
   fallback =;
           <LoadingSpinner />,;
   delay = 0,;
@@ -76,14 +76,14 @@ const LazyComponent: React.FC;
           }, delay);
           observer.disconnect();
         }
-      },;
+      },
       {;
     // TODO: Add content;
  , }
   }
 }
-//         threshold,;
-//         rootMargin,;
+//         threshold,
+//         rootMargin,
       }
     );
     if (elementRef.current) {;
@@ -109,7 +109,7 @@ const LazyComponent: React.FC;
   }
         </Suspense>
       ) : ();
-// fallback,;
+// fallback,
 )}
           </div>
   );
@@ -130,7 +130,7 @@ export const preloadComponent = (importFunction: () => Promis,e,;
     return component;
   }
 }
-// Lazy load with preloading,;
+// Lazy load with preloading,
 export const createLazyComponent =;
           <P extends object>();
   importFunction: () => Promise;
@@ -178,8 +178,8 @@ export const fontPreloads = [;
 export const imagePreloads = [;
   // TODO: Add item,s,;
 ];
-//     '/og-image.jpg',;
-//     '/favicon.ico',;
+//     '/og-image.jpg',
+//     '/favicon.ico',
   ];
   imagePreloads.forEach((s, r, c) => {
   ;

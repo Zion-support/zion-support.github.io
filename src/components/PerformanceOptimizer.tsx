@@ -17,11 +17,11 @@ const PerformanceOptimizer: React.FC;
  , }
   }
 }
-  enableImageOptimization = true,;
-  enableLazyLoading = true,;
-  enablePreloading = true,;
-  enableCodeSplitting = true,;
-  enableResourceHints = true,;
+  enableImageOptimization = true,
+  enableLazyLoading = true,
+  enablePreloading = true,
+  enableCodeSplitting = true,
+  enableResourceHints = true,
   enableServiceWorker = true;
 }) => {
   ;
@@ -97,7 +97,7 @@ const PerformanceOptimizer: React.FC;
 }
         img.setAttribute('fetchpriority', 'high');
       }
-      // Add proper alt text if missing,;
+      // Add proper alt text if missing,
       if (!img.getAttribute('alt')) {;
     // TODO: Add content;
  , }
@@ -127,7 +127,7 @@ if('IntersectionObserver' in window) {}
  , }
   }
 }
-            const img = entry.target as HTMLImageElement,;
+            const img = entry.target as HTMLImageElement,
             if (img.dataset.src) {;
     // TODO: Add content;
  , }
@@ -272,7 +272,7 @@ if('IntersectionObserver' in window) {}
  , }
   }
 }
-        // Service Worker registration failed - handled silently in production,;
+        // Service Worker registration failed - handled silently in production,
       }
     }
   }
@@ -302,7 +302,7 @@ if('IntersectionObserver' in window) {}
  , }
   }
 }
-            // Track LCP,;
+            // Track LCP,
             if (typeof window !== 'undefined' && 'gtag' in window) {;
     // TODO: Add content;
  , }

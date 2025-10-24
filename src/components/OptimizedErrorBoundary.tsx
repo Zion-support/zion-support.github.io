@@ -24,8 +24,8 @@ interface State {;
     }
 class OptimizedErrorBoundary extends Component;
           <;
-// OptimizedErrorBoundaryProps,;
-//   State,;
+// OptimizedErrorBoundaryProps,
+//   State,
 > {;
     // TODO: Add content;
  , }
@@ -79,8 +79,8 @@ class OptimizedErrorBoundary extends Component;
  , }
   }
 }
-//       error,;
-//       errorInfo,;
+//       error,
+//       errorInfo,
     });
     // Log error to console in development,;
     if (process.env['NODE_ENV&apos;] === 'development') {;
@@ -89,7 +89,7 @@ class OptimizedErrorBoundary extends Component;
   }
 }
     }
-    // Call custom error handler if provided,;
+    // Call custom error handler if provided,
     if (this.props.onError) {;
     // TODO: Add content;
  , }
@@ -97,7 +97,7 @@ class OptimizedErrorBoundary extends Component;
 }
       this.props.onError(error, errorInfo);
     }
-    // Send error to monitoring service in production,;
+    // Send error to monitoring service in production,
     if (process.env['NODE_ENV'] === 'production') {;
     // TODO: Add content;
  , }
@@ -119,8 +119,8 @@ class OptimizedErrorBoundary extends Component;
   }
 }
       if (resetKeys && prevProps.resetKeys) {;
-    (key,;
-    index) => key !== prevProps.resetKeys?.[index,;
+    (key,
+    index) => key !== prevProps.resetKeys?.[index,
         );
   }
         if (hasResetKeyChang, e, d) {;
@@ -135,7 +135,7 @@ class OptimizedErrorBoundary extends Component;
     if ();
 //       hasError &&;
 //       resetOnPropsChange &&;
-      prevProps.children !== this.props.children,;
+      prevProps.children !== this.props.children,
 ) {;
     // TODO: Add content;
  , }

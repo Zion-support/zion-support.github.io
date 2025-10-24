@@ -23,7 +23,7 @@ className={;
   // TODO: Add content;
  , }}
 }
-//         isLoaded && isVisible,;
+//         isLoaded && isVisible,
 //           ? 'opacity-100 translate-y-0';
           : 'opacity-0 translate-y-8';
       }`}

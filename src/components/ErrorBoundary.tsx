@@ -59,10 +59,10 @@ class ErrorBoundary extends Component;
  , }
   }
 }
-//       error,;
-//       errorInfo,;
+//       error,
+//       errorInfo,
     });
-    // Log error to console in development,;
+    // Log error to console in development,
     if (process.env.NODE_ENV === 'development') {;
     // console.error('ErrorBoundary caught an error: ',;
     error,;
@@ -70,7 +70,7 @@ class ErrorBoundary extends Component;
   }
   }
     }
-    // Report error to analytics,;
+    // Report error to analytics,
     if (typeof window !== 'undefined' && 'gtag' in window) {;
     // TODO: Add content;
  , }
@@ -85,7 +85,7 @@ class ErrorBoundary extends Component;
         fatal: true;
      , });
     }
-    // Call custom error handler,;
+    // Call custom error handler,
     if (this.props.onError) {;
     // TODO: Add content;
  , }
@@ -93,7 +93,7 @@ class ErrorBoundary extends Component;
 }
       this.props.onError(error, errorInfo);
     }
-    // Report error to error tracking service,;
+    // Report error to error tracking service,
     this.reportError(error, errorInfo);
   }
   private reportError = (error: Erro,
@@ -122,11 +122,11 @@ class ErrorBoundary extends Component;
  , }
   }
 }
-    // Get user ID from localStorage, session, or authentication context,;
+    // Get user ID from localStorage, session, or authentication context,
     return localStorage.getItem('userId');
   }
   private getSessionId = (): string => {;
-    // Get or create session ID,;
+    // Get or create session ID,
     if (!sessionId) {;
   // TODO: Add content;
  , }
@@ -194,7 +194,7 @@ class ErrorBoundary extends Component;
  , }
   }
 }
-      // Custom fallback UI,;
+      // Custom fallback UI,
       if (this.props.fallback) {;
     // TODO: Add content;
  , }
@@ -202,7 +202,7 @@ class ErrorBoundary extends Component;
 }
         return this.props.fallback;
       }
-      // Default error UI,;
+      // Default error UI,
       return (;
           <div>Coming Soon</div>
   );

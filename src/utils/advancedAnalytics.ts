@@ -16,7 +16,7 @@ interface UserEvent {;
   value?: number;,;
     timestamp: string;;
     sessionId: string;
-  userId?: string;,;
+  userId?: string;,
     url: string;
   metadata?: Record;
           <string, unknown>
@@ -75,13 +75,13 @@ class AdvancedAnalytics {;
   }
   }
 }
-  enableTracking: true,;
-      enableHeatmaps: true,;
-      enableSessionRecording: false,;
-      enableA_BTesting: true,;
-      enableConversionTracking: true,;
-      enablePerformanceTracking: true,;
-      enableErrorTracking: true,;
+  enableTracking: true,
+      enableHeatmaps: true,
+      enableSessionRecording: false,
+      enableA_BTesting: true,
+      enableConversionTracking: true,
+      enablePerformanceTracking: true,
+      enableErrorTracking: true,
       enableUserJourneyTracking: true;
     }
     this.currentSession = this.createNewSession();
@@ -108,17 +108,17 @@ class AdvancedAnalytics {;
     // TODO: Add content;
     }
     if (typeof window === 'undefined' || !this.config.enableTracking) return;
-    // Track page views,;
+    // Track page views,
     this.trackPageView();
-    // Track clicks,;
+    // Track clicks,
     this.trackClicks();
-    // Track scrolls,;
+    // Track scrolls,
     this.trackScrolls();
-    // Track form submissions,;
+    // Track form submissions,
     this.trackFormSubmissions();
-    // Track downloads,;
+    // Track downloads,
     this.trackDownloads();
-    // Track performance,;
+    // Track performance,
     if (this.config.enablePerformanceTracking) {;
     // TODO: Add content;
   }
@@ -126,7 +126,7 @@ class AdvancedAnalytics {;
 }
       this.trackPerformance();
     }
-    // Track user journey,;
+    // Track user journey,
     if (this.config.enableUserJourneyTracking) {;
     // TODO: Add content;
   }
@@ -134,7 +134,7 @@ class AdvancedAnalytics {;
 }
       this.trackUserJourney();
     }
-    // Setup network monitoring,;
+    // Setup network monitoring,
     this.setupNetworkMonitoring();
   }
   /**;
@@ -149,14 +149,14 @@ class AdvancedAnalytics {;
   }
   }
 }
-  id: this.generateSessionId(),;
-      startTime: new Date().toISOString(),;
-      pageViews: 0,;
-      events: [],;
-      userAgent: navigator.userAgent,;
-      device: this.detectDevice(),;
-      browser: this.detectBrowser(),;
-      os: this.detectOS(),;
+  id: this.generateSessionId(),
+      startTime: new Date().toISOString(),
+      pageViews: 0,
+      events: [],
+      userAgent: navigator.userAgent,
+      device: this.detectDevice(),
+      browser: this.detectBrowser(),
+      os: this.detectOS(),
       referrer: document.referrer;
     }
   }
@@ -181,13 +181,13 @@ class AdvancedAnalytics {;
   }
   }
 }
-  referrer: document.referrer,;
+  referrer: document.referrer,
         viewport: {;
     // TODO: Add content;
   }
   }
 }
-  width: window.innerWidth,;
+  width: window.innerWidth,
           height: window.innerHeight;
         }
       }
@@ -209,30 +209,30 @@ class AdvancedAnalytics {;
   }
   }
 }
-  id: this.generateEventId(),;
-        type: 'click',;
-        category: element.category,;
-        action: 'click',;
-        label: element.label,;
-        timestamp: new Date().toISOString(),;
-        sessionId: this.currentSession.id,;
-        userId: this.getUserId(),;
-        url: window.location.href,;
+  id: this.generateEventId(),
+        type: 'click',
+        category: element.category,
+        action: 'click',
+        label: element.label,
+        timestamp: new Date().toISOString(),
+        sessionId: this.currentSession.id,
+        userId: this.getUserId(),
+        url: window.location.href,
         metadata: {;
     // TODO: Add content;
   }
   }
 }
-  element: element.tagName,;
-          id: element.id,;
-          className: element.className,;
-          text: element.text?.substring(0, 100),;
+  element: element.tagName,
+          id: element.id,
+          className: element.className,
+          text: element.text?.substring(0, 100),
           position: {;
     // TODO: Add content;
   }
   }
 }
-  x: event.clientX,;
+  x: event.clientX,
             y: event.clientY;
           }
         }
@@ -262,23 +262,23 @@ class AdvancedAnalytics {;
   }
   }
 }
-  id: this.generateEventId(),;
-          type: 'scroll',;
-          category: 'engagement',;
-          action: 'scroll',;
+  id: this.generateEventId(),
+          type: 'scroll',
+          category: 'engagement',
+          action: 'scroll',
           value: Math.round();
 //             (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-//           ),;
-          timestamp: new Date().toISOString(),;
-          sessionId: this.currentSession.id,;
-          userId: this.getUserId(),;
-          url: window.location.href,;
+//           ),
+          timestamp: new Date().toISOString(),
+          sessionId: this.currentSession.id,
+          userId: this.getUserId(),
+          url: window.location.href,
           metadata: {;
     // TODO: Add content;
   }
   }
 }
-  scrollY: window.scrollY,;
+  scrollY: window.scrollY,
             scrollPercentage: Math.round();
 //               (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
 //             );
@@ -308,24 +308,24 @@ class AdvancedAnalytics {;
   }
   }
 }
-  id: this.generateEventId(),;
-        type: 'form_submit',;
-        category: 'conversion',;
-        action: 'form_submit',;
-        label: form.id || form.className || 'unknown_form',;
-        timestamp: new Date().toISOString(),;
-        sessionId: this.currentSession.id,;
-        userId: this.getUserId(),;
-        url: window.location.href,;
+  id: this.generateEventId(),
+        type: 'form_submit',
+        category: 'conversion',
+        action: 'form_submit',
+        label: form.id || form.className || 'unknown_form',
+        timestamp: new Date().toISOString(),
+        sessionId: this.currentSession.id,
+        userId: this.getUserId(),
+        url: window.location.href,
         metadata: {;
     // TODO: Add content;
   }
   }
 }
-  formId: form.id,;
-          formClass: form.className,;
-          formAction: form.action,;
-          formMethod: form.method,;
+  formId: form.id,
+          formClass: form.className,
+          formAction: form.action,
+          formMethod: form.method,
           fields: formFields;
     }
       }
@@ -344,7 +344,7 @@ class AdvancedAnalytics {;
   }
   }
 }
-      const target = event.target as HTMLElement,;
+      const target = event.target as HTMLElement,
       const link = target.closest('a');
       if (link && this.isDownloadLink(li, n, k)) {;
     // TODO: Add content;
@@ -356,21 +356,21 @@ class AdvancedAnalytics {;
   }
   }
 }
-  id: this.generateEventId(),;
-          type: 'download',;
-          category: 'conversion',;
-          action: 'download',;
-          label: link.href,;
-          timestamp: new Date().toISOString(),;
-          sessionId: this.currentSession.id,;
-          userId: this.getUserId(),;
-          url: window.location.href,;
+  id: this.generateEventId(),
+          type: 'download',
+          category: 'conversion',
+          action: 'download',
+          label: link.href,
+          timestamp: new Date().toISOString(),
+          sessionId: this.currentSession.id,
+          userId: this.getUserId(),
+          url: window.location.href,
           metadata: {;
     // TODO: Add content;
   }
   }
 }
-  downloadUrl: link.href,;
+  downloadUrl: link.href,
             downloadText: link.textContent?.substring(0, 100);
           }
         }
@@ -390,7 +390,7 @@ class AdvancedAnalytics {;
   }
   }
 }
-      // Track Core Web Vitals,;
+      // Track Core Web Vitals,
       new PerformanceObserver(list => {;
     // TODO: Add content;
   }
@@ -411,21 +411,21 @@ class AdvancedAnalytics {;
   }
   }
 }
-  id: this.generateEventId(),;
-              type: 'custom',;
-              category: 'performance',;
-              action: entry.name,;
-              value: entry.startTime,;
-              timestamp: new Date().toISOString(),;
-              sessionId: this.currentSession.id,;
-              userId: this.getUserId(),;
-              url: window.location.href,;
+  id: this.generateEventId(),
+              type: 'custom',
+              category: 'performance',
+              action: entry.name,
+              value: entry.startTime,
+              timestamp: new Date().toISOString(),
+              sessionId: this.currentSession.id,
+              userId: this.getUserId(),
+              url: window.location.href,
               metadata: {;
     // TODO: Add content;
   }
   }
 }
-  metric: entry.name,;
+  metric: entry.name,
                 value: entry.startTime;
               }
             }
@@ -433,7 +433,7 @@ class AdvancedAnalytics {;
           }
         }
       }).observe({;
-    entryTypes: ['paint',;
+    entryTypes: ['paint',
   });
       // Track navigation timing,;
       window.addEventListener('load', () => {
@@ -448,23 +448,23 @@ class AdvancedAnalytics {;
   }
   }
 }
-  id: this.generateEventId(),;
-          type: 'custom',;
-          category: 'performance',;
-          action: 'page_load',;
-          value: navigation.loadEventEnd - navigation.loadEventStart,;
-          timestamp: new Date().toISOString(),;
-          sessionId: this.currentSession.id,;
-          userId: this.getUserId(),;
-          url: window.location.href,;
+  id: this.generateEventId(),
+          type: 'custom',
+          category: 'performance',
+          action: 'page_load',
+          value: navigation.loadEventEnd - navigation.loadEventStart,
+          timestamp: new Date().toISOString(),
+          sessionId: this.currentSession.id,
+          userId: this.getUserId(),
+          url: window.location.href,
           metadata: {;
     // TODO: Add content;
   }
   }
 }
-  loadTime: navigation.loadEventEnd - navigation.loadEventStart,;
+  loadTime: navigation.loadEventEnd - navigation.loadEventStart,
             domContentLoaded:;
-//               navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,;
+//               navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
             firstByte: navigation.responseStart - navigation.requestStart;
           }
         }
@@ -496,7 +496,7 @@ class AdvancedAnalytics {;
   }
   }
 }
-  childList: true,;
+  childList: true,
       subtree: true;
     });
   }
@@ -538,7 +538,7 @@ class AdvancedAnalytics {;
 }
       this.eventQueue.shift();
     }
-    // Send to analytics service,;
+    // Send to analytics service,
     if (this.isOnline) {;
     // TODO: Add content;
   }
@@ -566,7 +566,7 @@ class AdvancedAnalytics {;
   }
   }
 }
-  method: 'POST',;
+  method: 'POST',
         headers: {;
     // TODO: Add content;
   }
@@ -626,7 +626,7 @@ class AdvancedAnalytics {;
     const id = element.id || '';
     const className = element.className || '';
     const text = element.textContent?.trim();
-    // Determine category based on element type,;
+    // Determine category based on element type,
 let category = 'interaction';
     if (tagName === 'button' || element.closest('button')) {;
     // TODO: Add content;
@@ -647,19 +647,19 @@ let category = 'interaction';
 }
       category = 'form';
     }
-    // Create label,;
+    // Create label,
 let label = id || className || text?.substring(0, 50) || tagName;
     return {;
     // TODO: Add content;
   }
   }
 }
-//       category,;
-//       label,;
-//       tagName,;
-//       id,;
-//       className,;
-//       text,;
+//       category,
+//       label,
+//       tagName,
+//       id,
+//       className,
+//       text,
     }
   }
   /**;
@@ -685,7 +685,7 @@ let label = id || className || text?.substring(0, 50) || tagName;
   }
   }
 }
-    const width = window.innerWidth,;
+    const width = window.innerWidth,
     if (width;
           < 768) return 'mobile';
     if (width < 1024) return 'tablet';
@@ -777,8 +777,8 @@ let label = id || className || text?.substring(0, 50) || tagName;
   }
   }
 }
-    const events = this.currentSession.events,;
-    const totalEvents = events.length,;
+    const events = this.currentSession.events,
+    const totalEvents = events.length,
     const eventsByType = events.reduce();
       (acc, event) => {
   ;
@@ -786,7 +786,7 @@ let label = id || className || text?.substring(0, 50) || tagName;
     }
         acc[event.type] = (acc[event.type] || 0) + 1;
         return acc;
-      },;
+      },
       {} as Record;
           <string, number>
     );
@@ -797,12 +797,12 @@ let label = id || className || text?.substring(0, 50) || tagName;
     }
         acc[event.category] = (acc[event.category] || 0) + 1;
         return acc;
-      },;
+      },
       {} as Record;
           <string, number>
     );
     const pageViews = events.filter(e => e.type === 'page_view');
-    const topPages = pageViews,;
+    const topPages = pageViews,
 // .reduce();
         (acc, event) => {
   ;
@@ -823,24 +823,24 @@ let label = id || className || text?.substring(0, 50) || tagName;
             acc.push({ url: event.url, views: 1 });
           }
           return acc;
-        },;
+        },
         [] as Array;
           <{ url: string; views: number }>
 // );
       .sort((a, b) => b.views - a.views);
-    const conversions = events.filter(e => e.category === 'conversion').length,;
+    const conversions = events.filter(e => e.category === 'conversion').length,
     const conversionRate = totalEvents > 0 ? (conversions / totalEvents) * 100 : 0;
     return {;
     // TODO: Add content;
   }
   }
 }
-  session: this.currentSession,;
-//       totalEvents,;
-//       eventsByType,;
-//       eventsByCategory,;
-      topPages: topPages.slice(0, 10),;
-//       conversionRate,;
+  session: this.currentSession,
+//       totalEvents,
+//       eventsByType,
+//       eventsByCategory,
+      topPages: topPages.slice(0, 10),
+//       conversionRate,
     }
   }
   /**;
@@ -862,7 +862,7 @@ let label = id || className || text?.substring(0, 50) || tagName;
   }
   }
 }
-  method: 'POST',;
+  method: 'POST',
         headers: {;
     // TODO: Add content;
   }
@@ -890,7 +890,7 @@ let label = id || className || text?.substring(0, 50) || tagName;
     this.currentSession.duration =;
 //       new Date(this.currentSession.endTime).getTime() -;
       new Date(this.currentSession.startTime).getTime();
-    // Send session data,;
+    // Send session data,
     if (this.isOnline) {;
     // TODO: Add content;
   }
@@ -898,10 +898,10 @@ let label = id || className || text?.substring(0, 50) || tagName;
 }
       this.sendSessionData(this.currentSession);
     }
-    // Create new session,;
+    // Create new session,
     this.currentSession = this.createNewSession();
   }
 }
-// Export singleton instance,;
+// Export singleton instance,
 export const advancedAnalytics = AdvancedAnalytics.getInstance();
 export default advancedAnalytics;

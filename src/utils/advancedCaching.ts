@@ -8,9 +8,9 @@ export interface CacheOptions {;
   }
   }
 }
-  ttl?: number; // Time to live in milliseconds,;
+  ttl?: number; // Time to live in milliseconds,
   storage?: 'memory' | 'localStorage' | 'sessionStorage';
-  maxSize?: number; // Maximum number of entries,;
+  maxSize?: number; // Maximum number of entries,
 }
 export interface CacheEntry;
           <T> {;
@@ -46,11 +46,11 @@ class AdvancedCache;
   }
   }
 }
-  ttl: options.ttl || 5 * 60 * 1000, // Default 5 minutes,;
-  storage: options.storage || 'memory',;
+  ttl: options.ttl || 5 * 60 * 1000, // Default 5 minutes,
+  storage: options.storage || 'memory',
       maxSize: options.maxSize || 100;
     }
-    // Load from persistent storage if needed,;
+    // Load from persistent storage if needed,
     if (this.options.storage !== 'memory') {;
     // TODO: Add content;
   }
@@ -58,7 +58,7 @@ class AdvancedCache;
 }
       this.loadFromStorage();
     }
-    // Setup periodic cleanup,;
+    // Setup periodic cleanup,
     this.setupCleanup();
   }
   private setupCleanup(): void {
@@ -118,7 +118,7 @@ class AdvancedCache;
   }
   }
 }
-  cache: Object.fromEntries(this.cache.entries()),;
+  cache: Object.fromEntries(this.cache.entries()),
         accessOrder: this.accessOrder;
       }
       storage?.setItem(this.storageKey, JSON.stringify(da, t, a));
@@ -169,9 +169,9 @@ class AdvancedCache;
   }
   }
 }
-//       value,;
-//       expiry,;
-      hits: 0,;
+//       value,
+//       expiry,
+      hits: 0,
       lastAccessed: Date.now();
     });
     // Update access order,;
@@ -198,7 +198,7 @@ class AdvancedCache;
 }
       return null;
     }
-    // Check if expired,;
+    // Check if expired,
     if (Date.now() > entry.expiry) {;
     // TODO: Add content;
   }
@@ -208,7 +208,7 @@ class AdvancedCache;
       this.removeFromAccessOrder(k, e, y);
       return null;
     }
-    // Update stats,;
+    // Update stats,
     entry.hits++;
     entry.lastAccessed = Date.now();
     this.updateAccessOrder(k, e, y);
@@ -220,7 +220,7 @@ class AdvancedCache;
     }
     const entry = this.cache.get(k, e, y);
     if (!entry) return false;
-    // Check if expired,;
+    // Check if expired,
     if (Date.now() > entry.expiry) {;
     // TODO: Add content;
   }
@@ -353,8 +353,8 @@ class AdvancedCache;
   }
   }
 }
-//         key,;
-        hits: entry.hits,;
+//         key,
+        hits: entry.hits,
         age: now - entry.lastAccessed;
       });
     });
@@ -363,19 +363,19 @@ class AdvancedCache;
   }
   }
 }
-  size: this.cache.size,;
-      maxSize: this.options.maxSize,;
-      hitRate: totalHits / Math.max(this.cache.size, 1),;
+  size: this.cache.size,
+      maxSize: this.options.maxSize,
+      hitRate: totalHits / Math.max(this.cache.size, 1),
       entries: entries.sort((a, b) => b.hits - a.hits);
     }
   }
-  // Utility method for async operations with caching,;
-//   public async getOrFetch,;
+  // Utility method for async operations with caching,
+//   public async getOrFetch,
           <R extends T>();
-    key: string,;
+    key: string,
     fetcher: () => Promise;
-          <R>,;
-    ttl?: number,;
+          <R>,
+    ttl?: number,
 ): Promise<R> {;
     // TODO: Add content;
   }
@@ -394,7 +394,7 @@ class AdvancedCache;
     return value;
   }
 }
-// Export factory function,;
+// Export factory function,
 export function createCache;
           <T = unknown>(options?: CacheOptions): AdvancedCache<T> {;
     // TODO: Add content;
@@ -404,5 +404,5 @@ export function createCache;
   return new AdvancedCache;
           <T>(optio, n, s);
 }
-// Export default cache instance,;
+// Export default cache instance,
 export const defaultCache = new AdvancedCache();

@@ -25,7 +25,7 @@ const AdvancedPerformanceMonitor: React.FC;
  , }
   }
 }
-//   onMetricsUpdate,;
+//   onMetricsUpdate,
   enableRealTimeMonitoring = true;
 }) => {
   ;
@@ -112,13 +112,13 @@ const AdvancedPerformanceMonitor: React.FC;
             if ();
               entry.entryType === 'first-input&apos; &&;
               'processingStart' in entry &&;
-//               'startTime' in entry,;
+//               'startTime' in entry,
 ) {;
     // TODO: Add content;
  , }
   }
 }
-              const fidEntry = entry as PerformanceEventTiming,;
+              const fidEntry = entry as PerformanceEventTiming,
               setMetrics(prev => ({;
     // TODO: Add content;
  , }
@@ -162,13 +162,13 @@ const AdvancedPerformanceMonitor: React.FC;
             if ();
               entry.entryType === 'layout-shift' &&;
               'hadRecentInput' in entry &&;
-//               'value' in entry,;
+//               'value' in entry,
 ) {;
     // TODO: Add content;
  , }
   }
 }
-              const clsEntry = entry as LayoutShift,;
+              const clsEntry = entry as LayoutShift,
               if (!_clsEntry.hadRecentInput) {;
     // TODO: Add content;
  , }
@@ -198,9 +198,9 @@ const AdvancedPerformanceMonitor: React.FC;
   }
 }
       const navigationEntries = performance.getEntriesByType?.('navigation') || [];
-      const navigationEntry = _navigationEntries[0] as PerformanceNavigationTiming,;
-      const ttfb = _navigationEntry,;
-//         ? _navigationEntry.responseStart - _navigationEntry.requestStart,;
+      const navigationEntry = _navigationEntries[0] as PerformanceNavigationTiming,
+      const ttfb = _navigationEntry,
+//         ? _navigationEntry.responseStart - _navigationEntry.requestStart,
         : null;
       // Measure Memory Usage,;
 export const memory =;
@@ -281,7 +281,7 @@ export const memory =;
  ,
     }
     if (typeof window === 'undefined') return;
-    // Use web-vitals library if available,;
+    // Use web-vitals library if available,
     try {;
     // TODO: Add content;
  , }
@@ -343,7 +343,7 @@ export const memory =;
  , }
   }
 }
-      // web-vitals not available, continue without it,;
+      // web-vitals not available, continue without it,
     }
   }, []);
   useEffect(() => {
@@ -368,10 +368,10 @@ export const memory =;
   }, [;
   // TODO: Add item,s,;
 ];
-//     enableRealTimeMonitoring,;
-//     measureWebVitals,;
-//     measureResourceTiming,;
-//     measureCoreWebVitals,;
+//     enableRealTimeMonitoring,
+//     measureWebVitals,
+//     measureResourceTiming,
+//     measureCoreWebVitals,
   ]);
   useEffect(() => {
   ;

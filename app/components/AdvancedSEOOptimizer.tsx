@@ -5,23 +5,23 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
-const AdvancedSEOOptimizerPage: React.FC="()" => {const features: ";",;
-      title: 'AI-Powered Intelligence',;}
+const AdvancedSEOOptimizerPage: React.FC = () => {const features = [
+      title: 'AI-Powered Intelligence',}
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',}
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    {icon: BarChart,;
-      title: 'Advanced Analytics',;}
+    {icon: BarChart,
+      title: 'Advanced Analytics',}
       description: 'Comprehensive analytics dashboard with real-time data visualization.',}
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
-    {icon: Target,;
-      title: 'Precision Targeting',;}
+    {icon: Target,
+      title: 'Precision Targeting',}
       description: 'Target specific goals and objectives with precision and accuracy.',}
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
-    {icon: TrendingUp,;
-      title: 'Growth Optimization',;}
+    {icon: TrendingUp,
+      title: 'Growth Optimization',}
       description: 'Optimize your business growth with data-driven strategies.',}
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
@@ -134,18 +134,17 @@ const AdvancedSEOOptimizerPage: React.FC="()" => {const features: ";",;
     </>
   );,
 };
-;
 export default AdvancedSEOOptimizerPage;
 description?: string;
 keywords?: string;
 canonicalUrl?: string;
 ogImage?: string;
 twitterCard?: string;
-structuredData?: objectchildren: React.ReactNode}"
-constAdvancedSEOOptimizer: React.FC<SEOOptimizerProp s>= ({title: "'Zion" Tech Group - Advanced AI and IT Solutions',;"
-description: "'Professional" AI and IT solutions for your business. Advanced technology, expert support, and proven results.',;"
-keywords: "'AI" solutions, IT services, technology, business solutions, Zion Tech Group',;
-canonicalUrl,;"
+structuredData?: objectchildren: React.ReactNode}
+constAdvancedSEOOptimizer: React.FC<SEOOptimizerProp s>= ({title: "'Zion" Tech Group - Advanced AI and IT Solutions',"
+description: "'Professional" AI and IT solutions for your business. Advanced technology, expert support, and proven results.',"
+keywords: "'AI" solutions, IT services, technology, business solutions, Zion Tech Group',
+canonicalUrl,"
 ogImage: "'/$1/og-image.jpg',";"
 twitterCard: "'summary_large_image',";}
 structuredData,}</SEOOptimizerProp>

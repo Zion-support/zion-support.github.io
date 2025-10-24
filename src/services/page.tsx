@@ -96,7 +96,7 @@ const ServicesPage: React.FC = () => {
       icon: Cloc,;
       title: 'value,',;
   ];
-      description: 'Quick implementation with minimal downtime',;
+      description: 'Quick implementation with minimal downtime',
   const stats = [;
   // TODO: Add item,s,;
 ];

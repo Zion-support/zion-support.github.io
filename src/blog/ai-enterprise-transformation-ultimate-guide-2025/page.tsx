@@ -1,4 +1,4 @@
-// Metadata removed for Vite compatibility,;
+// Metadata removed for Vite compatibility,
 export default function AIEnterpriseTransformationUltimateGuide2025() {;
     // TODO: Add content;
  , }

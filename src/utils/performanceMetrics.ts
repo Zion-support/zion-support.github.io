@@ -21,12 +21,12 @@ export interface WebVitalsMetrics {;
   }
   }
 }
-  FCP?: number; // First Contentful Paint,;
-  LCP?: number; // Largest Contentful Paint,;
-  FID?: number; // First Input Delay,;
-  CLS?: number; // Cumulative Layout Shift,;
-  TTFB?: number; // Time to First Byte,;
-  INP?: number; // Interaction to Next Paint,;
+  FCP?: number; // First Contentful Paint,
+  LCP?: number; // Largest Contentful Paint,
+  FID?: number; // First Input Delay,
+  CLS?: number; // Cumulative Layout Shift,
+  TTFB?: number; // Time to First Byte,
+  INP?: number; // Interaction to Next Paint,
 }
 export interface PerformanceReport {;
     // TODO: Add content;
@@ -98,7 +98,7 @@ export class PerformanceMetrics {;
   }
 }
       try {;
-    // Navigation timing,;
+    // Navigation timing,
     for (const entry of list.getEntries()) {;
   // TODO: Add content;
   }
@@ -109,23 +109,23 @@ export class PerformanceMetrics {;
   }
   }
 }
-              const navEntry = entry as PerformanceNavigationTiming,;
+              const navEntry = entry as PerformanceNavigationTiming,
               this.recordMetric({;
     // TODO: Add content;
   }
   }
 }
-  name: 'pageLoadTime',;
-                value: navEntry.loadEventEnd - navEntry.fetchStart,;
-                unit: 'ms',;
-                timestamp: new Date(),;
-                category: 'load',;
+  name: 'pageLoadTime',
+                value: navEntry.loadEventEnd - navEntry.fetchStart,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load',
                 metadata: {;
     // TODO: Add content;
   }
   }
 }
-  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,;
+  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
                   domInteractive: navEntry.domInteractive - navEntry.fetchStart;
                 }
               });
@@ -133,7 +133,7 @@ export class PerformanceMetrics {;
           }
         });
         navObserver.observe({;
-    entryTypes: ['navigation',;
+    entryTypes: ['navigation',
   });
         this.observers.push(navObserv, e, r);
         // Paint timing,;
@@ -158,17 +158,17 @@ const paintObserver = new PerformanceObserver(list => {;
   }
   }
 }
-  name: 'FCP',;
-                value: entry.startTime,;
-                unit: 'ms',;
-                timestamp: new Date(),;
-                category: 'load',;
+  name: 'FCP',
+                value: entry.startTime,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load',
               });
             }
           }
         });
         paintObserver.observe({;
-    entryTypes: ['paint',;
+    entryTypes: ['paint',
   });
         this.observers.push(paintObserv, e, r);
         // Largest Contentful Paint,;
@@ -190,16 +190,16 @@ const lcpObserver = new PerformanceObserver(list => {;
   }
   }
 }
-  name: 'LCP',;
-              value: lastEntry.startTime,;
-              unit: 'ms',;
-              timestamp: new Date(),;
-              category: 'load',;
+  name: 'LCP',
+              value: lastEntry.startTime,
+              unit: 'ms',
+              timestamp: new Date(),
+              category: 'load',
             });
           }
         });
         lcpObserver.observe({;
-    entryTypes: ['largest-contentful-paint',;
+    entryTypes: ['largest-contentful-paint',
   });
         this.observers.push(lcpObserv, e, r);
 // Layout Shift,;
@@ -218,15 +218,15 @@ const lcpObserver = new PerformanceObserver(list => {;
   }
   }
 }
-  name: 'CLS',;
-            value: clsValue,;
-            unit: 'score',;
-            timestamp: new Date(),;
-            category: 'runtime',;
+  name: 'CLS',
+            value: clsValue,
+            unit: 'score',
+            timestamp: new Date(),
+            category: 'runtime',
           });
         });
         clsObserver.observe({;
-    entryTypes: ['layout-shift',;
+    entryTypes: ['layout-shift',
   });
         this.observers.push(clsObserv, e, r);
       } catch (err, o, r) {;
@@ -262,26 +262,26 @@ const lcpObserver = new PerformanceObserver(list => {;
     // TODO: Add content;
     }
     if (typeof window === 'undefined') return;
-    const perfData = window.performance.timing,;
-    const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart,;
+    const perfData = window.performance.timing,
+    const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart,
     this.recordMetric({;
     // TODO: Add content;
   }
   }
 }
-  name: 'pageLoad',;
-      value: pageLoadTime,;
-      unit: 'ms',;
-      timestamp: new Date(),;
-      category: 'load',;
+  name: 'pageLoad',
+      value: pageLoadTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'load',
       metadata: {;
     // TODO: Add content;
   }
   }
 }
-  dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,;
-        tcpConnection: perfData.connectEnd - perfData.connectStart,;
-        serverResponse: perfData.responseEnd - perfData.requestStart,;
+  dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
+        tcpConnection: perfData.connectEnd - perfData.connectStart,
+        serverResponse: perfData.responseEnd - perfData.requestStart,
         domParsing: perfData.domComplete - perfData.domLoading;
       }
     });
@@ -299,18 +299,18 @@ const lcpObserver = new PerformanceObserver(list => {;
   }
   }
 }
-  name: 'networkRequest',;
-      value: duration,;
-      unit: 'ms',;
-      timestamp: new Date(),;
-      category: 'network',;
+  name: 'networkRequest',
+      value: duration,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'network',
       metadata: {;
     // TODO: Add content;
   }
   }
 }
-//         url,;
-//         status,;
+//         url,
+//         status,
       }
     });
   }
@@ -329,18 +329,18 @@ const lcpObserver = new PerformanceObserver(list => {;
   }
   }
 }
-  name: 'memoryUsage',;
-      value: memory.usedJSHeapSize,;
-      unit: 'bytes',;
-      timestamp: new Date(),;
-      category: 'memory',;
+  name: 'memoryUsage',
+      value: memory.usedJSHeapSize,
+      unit: 'bytes',
+      timestamp: new Date(),
+      category: 'memory',
       metadata: {;
     // TODO: Add content;
   }
   }
 }
-  total: memory.totalJSHeapSize,;
-        limit: memory.jsHeapSizeLimit,;
+  total: memory.totalJSHeapSize,
+        limit: memory.jsHeapSizeLimit,
         percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
       }
     });
@@ -436,7 +436,7 @@ const lcpObserver = new PerformanceObserver(list => {;
     // TODO: Add content;
     }
     let score = 100;
-    // FCP scoring,;
+    // FCP scoring,
     if (this.webVitals.FCP) {;
     // TODO: Add content;
   }
@@ -445,7 +445,7 @@ const lcpObserver = new PerformanceObserver(list => {;
       if (this.webVitals.FCP > 3000) score -= 20;
       else if (this.webVitals.FCP > 1800) score -= 10;
     }
-    // LCP scoring,;
+    // LCP scoring,
     if (this.webVitals.LCP) {;
     // TODO: Add content;
   }
@@ -454,7 +454,7 @@ const lcpObserver = new PerformanceObserver(list => {;
       if (this.webVitals.LCP > 4000) score -= 25;
       else if (this.webVitals.LCP > 2500) score -= 12;
     }
-    // CLS scoring,;
+    // CLS scoring,
     if (this.webVitals.CLS) {;
     // TODO: Add content;
   }
@@ -463,7 +463,7 @@ const lcpObserver = new PerformanceObserver(list => {;
       if (this.webVitals.CLS > 0.25) score -= 20;
       else if (this.webVitals.CLS > 0.1) score -= 10;
     }
-    // FID scoring,;
+    // FID scoring,
     if (this.webVitals.FID) {;
     // TODO: Add content;
   }
@@ -545,18 +545,18 @@ const lcpObserver = new PerformanceObserver(list => {;
   }
   }
 }
-  metrics: this.getMetrics(),;
-      webVitals: this.getWebVitals(),;
+  metrics: this.getMetrics(),
+      webVitals: this.getWebVitals(),
       summary: {;
     // TODO: Add content;
   }
   }
 }
-//         avgLoadTime,;
-        totalMetrics: this.metrics.length,;
-        performanceScore: this.calculatePerformanceScore(),;
+//         avgLoadTime,
+        totalMetrics: this.metrics.length,
+        performanceScore: this.calculatePerformanceScore(),
         recommendations: this.getRecommendations();
-      },;
+      },
       timestamp: new Date();
     }
   }
@@ -590,21 +590,21 @@ const lcpObserver = new PerformanceObserver(list => {;
     this.observers = [];
   }
 }
-// Type for performance.memory,;
+// Type for performance.memory,
 interface PerformanceWithMemory extends Performance {;
     // TODO: Add content;
   }
   }
 }
   memory: {;
-    // usedJSHeapSize: number,;
-    // totalJSHeapSize: number,;
+    // usedJSHeapSize: number,
+    // totalJSHeapSize: number,
     // jsHeapSizeLimit: number;
     }
   }
   }
 }
-// Type for LayoutShift,;
+// Type for LayoutShift,
 interface LayoutShift extends PerformanceEntry {;
     // TODO: Add content;
   }

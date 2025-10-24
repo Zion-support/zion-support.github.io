@@ -1,17 +1,17 @@
 import React from 'react';
 import { Helm, e, t } from "react-helmet-async";
 import {;
-    CheckCircle,;
-    Star,;
-    Users,;
-    TrendingUp,;
-    Clock,;
-    Shield,;
-    Zap,;
-    Settings,;
-    Phone,;
-    Users,;
-    TrendingUp,;
+    CheckCircle,
+    Star,
+    Users,
+    TrendingUp,
+    Clock,
+    Shield,
+    Zap,
+    Settings,
+    Phone,
+    Users,
+    TrendingUp,
     Shield from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -98,7 +98,7 @@ const Pagetsx: React.FC = () => {
                   <p className='text-gray-300 mb-4'>{feature.description}</p>
                   <ul className='text-sm text-gray-400 space-y-1'></ul>
                     {;
-    feature.benefits.map((benefit,;
+    feature.benefits.map((benefit,
     idx) => (;
   }
   }

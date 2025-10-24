@@ -12,7 +12,7 @@ const Analytics: React.FC = () => {
         window.gtag(&quot;config&quot;, &quot;GA_MEASUREMENT_ID&quot;, {
           page_title: document.title,
           page_location: window.location.href,
-        })
+        });
       }
           page_location: window.location.href,
         });

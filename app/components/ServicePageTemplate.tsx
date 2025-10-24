@@ -55,7 +55,11 @@ const ServicePageTemplatePage: React.FC = () => {
     </div>)
   )
 }
-;
-export default ServicePageTemplatePage;
 
-export default ServicePageTemplatePage;"
+export default function ServicePageTemplate({ className }: ServicePageTemplateProps) {
+  return (
+    <div className={className}>
+      <h1>Service Page Template</h1>
+    </div>
+  );
+}

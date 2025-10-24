@@ -2,14 +2,14 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {;
-    Leaf,;
-    Target,;
-    Zap,;
-    Settings,;
-    CheckCircle,;
-    Star,;
-    Leaf,;
-    Target,;
+    Leaf,
+    Target,
+    Zap,
+    Settings,
+    CheckCircle,
+    Star,
+    Leaf,
+    Target,
     Settings from 'lucide-react';
   }
 const SustainabilityTechPage: React.FC = () => {
@@ -89,7 +89,7 @@ const SustainabilityTechPage: React.FC = () => {
   }
                 <ul className='space-y-2'></ul>
                   {;
-    feature.benefits.map((benefit,;
+    feature.benefits.map((benefit,
     benefitIndex) => ();
   }
   }

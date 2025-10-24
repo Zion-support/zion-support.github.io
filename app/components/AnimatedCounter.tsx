@@ -67,12 +67,18 @@ export default AnimatedCounter;
     threshold: 0.5
   });
 
-  useEffect(() => {if (entry?.isIntersecting && !isVisible) {}
-      setIsVisible(true)
-    }
-  }, [entry, isVisible]);
+const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
+  end,
+  duration = 2000,
+  suffix = '',
+  className,
+}) => {
+  const [count, setCount] = useState(0);
+  const counterRef = useRef<HTMLSpanElement>(null);
 
-  useEffect(() => {if (!isVisible) return;
+  useEffect(() => {
+    const startTime = Date.now();
+    const startValue = 0;
 
     let startTime: number;}
     let animationFrame: number

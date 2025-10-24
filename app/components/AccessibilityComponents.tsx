@@ -12,4 +12,4 @@ const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({ class
       <p>Accessibility components for enhanced user experience.</p>
     </div>
   );
-}"
+}

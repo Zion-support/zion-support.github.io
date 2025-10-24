@@ -3,7 +3,7 @@ import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import React from 'react'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
-const ContentPromotionBanner: React.FC="()" => {const benefits: ";"
+const ContentPromotionBanner: React.FC = () => {const benefits: ";"
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',

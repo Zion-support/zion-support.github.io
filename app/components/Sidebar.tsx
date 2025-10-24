@@ -6,23 +6,23 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
-const SidebarPage: React.FC="()" => {const features: ";",;
-      title: 'AI-Powered Intelligence',;}
+const SidebarPage: React.FC = () => {const features = [
+      title: 'AI-Powered Intelligence',}
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',}
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    {icon: BarChart,;
-      title: 'Advanced Analytics',;}
+    {icon: BarChart,
+      title: 'Advanced Analytics',}
       description: 'Comprehensive analytics dashboard with real-time data visualization.',}
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
-    {icon: Target,;
-      title: 'Precision Targeting',;}
+    {icon: Target,
+      title: 'Precision Targeting',}
       description: 'Target specific goals and objectives with precision and accuracy.',}
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
-    {icon: TrendingUp,;
-      title: 'Growth Optimization',;}
+    {icon: TrendingUp,
+      title: 'Growth Optimization',}
       description: 'Optimize your business growth with data-driven strategies.',}
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
@@ -136,21 +136,20 @@ const Sidebar: React.FC<SidebarProps> = ({ onSidebarToggle }) => {
     </>
   );,
 };
-;
 export default SidebarPage;
-Menu,;
-Home,;
-Users,;
-Settings,;
-Brain,;
-Cloud,;
-Shield,;
-Code,;
-BarChart,;
-ChevronDown,;
-ChevronRight,;
-Phone,;
-Mail,;
+Menu,
+Home,
+Users,
+Settings,
+Brain,
+Cloud,
+Shield,
+Code,
+BarChart,
+ChevronDown,
+ChevronRight,
+Phone,
+Mail,
 MapPin,Clock;}
 } from 'lucide-react'"
 constSidebar: React.FC="()" =>{const [isOpensetIsOpen] = useState(false);
@@ -174,7 +173,7 @@ $3
 ,)
 }
 setExpandedSections(newExpanded)
-}"
+}
 constnavigationSections="["
 {title: 'Main',}
 items: [
@@ -186,7 +185,7 @@ items: [
 {name: 'Case Studies', path: '/case-studies', icon: BarChart},
 ]
 },
-{title: 'AI Services',;}
+{title: 'AI Services',}
 key: 'ai-services',}
 items: [
 {name: 'AI Services Overview', path: '/ai-services', icon: Brain},
@@ -204,7 +203,7 @@ items: [
 {name: 'Energy Management', path: '/ai-services/energy-management', icon: Settings},
 ]
 },
-{title: 'Micro SaaS',;}
+{title: 'Micro SaaS',}
 key: 'micro-saas',}
 items: [
 {name: 'Micro SaaS Overview', path: '/micro-saas', icon: Settings},
@@ -222,7 +221,7 @@ items: [
 {name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings},
 ]
 },
-{title: 'IT Services',;}
+{title: 'IT Services',}
 key: 'it-services',}
 items: [
 {name: 'IT Services Overview', path: '/it-services', icon: Code},
@@ -253,8 +252,8 @@ items: [
 ]
 }
 ];"
-constcontactInfo="{phone: " '(30 2) 46 4-095 0',;
-email: 'kleber@ziontechgroup.com',;}
+constcontactInfo="{phone: " '(30 2) 46 4-095 0',
+email: 'kleber@ziontechgroup.com',}
 address: '364 E Main St STE 1008 Middletown, DE 19709',}
 hours: 'Mon-Fri 9AM-6PM EST'
 }</Set>
@@ -317,5 +316,5 @@ expandedSections.has(section.key) ?
 {(!section.key || expandedSections.has(section.key)) && (
 <div className=&quot;ml-4 space-y-1&quot;></div>
 {section.items.map((item, itemIndex) => (</div>
-<Link}"
-key="{itemIndex}""
+<Link}
+key="{itemIndex}"

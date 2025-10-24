@@ -2,14 +2,14 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {;
-    Package,;
-    Target,;
-    Zap,;
-    Settings,;
-    CheckCircle,;
-    Star,;
-    Package,;
-    Target,;
+    Package,
+    Target,
+    Zap,
+    Settings,
+    CheckCircle,
+    Star,
+    Package,
+    Target,
     Settings from 'lucide-react';
   }
 const AIInventoryManagerPage: React.FC = () => {
@@ -89,7 +89,7 @@ const AIInventoryManagerPage: React.FC = () => {
   }
                 <ul className='space-y-2'></ul>
                   {;
-    feature.benefits.map((benefit,;
+    feature.benefits.map((benefit,
     benefitIndex) => ();
   }
   }

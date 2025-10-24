@@ -2,14 +2,14 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {;
-    Rocket,;
-    Target,;
-    Zap,;
-    Settings,;
-    CheckCircle,;
-    Star,;
-    Rocket,;
-    Target,;
+    Rocket,
+    Target,
+    Zap,
+    Settings,
+    CheckCircle,
+    Star,
+    Rocket,
+    Target,
     Settings from 'lucide-react';
   }
 const FutureTechnologiesPage: React.FC = () => {
@@ -89,7 +89,7 @@ const FutureTechnologiesPage: React.FC = () => {
   }
                 <ul className='space-y-2'></ul>
                   {;
-    feature.benefits.map((benefit,;
+    feature.benefits.map((benefit,
     benefitIndex) => ();
   }
   }

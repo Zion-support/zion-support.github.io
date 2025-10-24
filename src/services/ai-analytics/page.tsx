@@ -1,21 +1,21 @@
 import {;
-    BarChart,;
-    TrendingUp,;
-    Target,;
-    Zap,;
-    Brain,;
-    CheckCircle,;
-    Phone,;
-    Mail,;
-    Star,;
-    Users,;
-    Award,;
-    Brain,;
-    BarChart,;
-    Target,;
-    Zap,;
-    TrendingUp,;
-    Star,;
+    BarChart,
+    TrendingUp,
+    Target,
+    Zap,
+    Brain,
+    CheckCircle,
+    Phone,
+    Mail,
+    Star,
+    Users,
+    Award,
+    Brain,
+    BarChart,
+    Target,
+    Zap,
+    TrendingUp,
+    Star,
     Award from 'lucide-react';
 'use client';
 import React from 'react';
@@ -36,9 +36,9 @@ const AIAnalyticsPage: React.FC = () => {
       benefits: [;
   // TODO: Add item,s,;
 ];
-//         '95% accuracy in predictions',;
-//         'Real-time data processing',;
-//         'Automated trend detection',;
+//         '95% accuracy in predictions',
+//         'Real-time data processing',
+//         'Automated trend detection',
 //         'Custom prediction models';
 //       ];
     },;
@@ -162,7 +162,7 @@ icon: BarChar,;
                       <p className='text-gray-300 mb-4'>{feature.description}</p>
                   <ul className='space-y-2'></ul>
                     {;
-    feature.benefits.map((benefit,;
+    feature.benefits.map((benefit,
     benefitIndex) => ();
   }
   }
@@ -222,7 +222,7 @@ icon: BarChar,;
                     <p className='text-gray-300 text-sm mt-2'>{tier.description}</p>
                   <ul className='space-y-3 mb-6'></ul>
                     {;
-    tier.features.map((feature,;
+    tier.features.map((feature,
     featureIndex) => ();
   }
   }
@@ -244,14 +244,14 @@ icon: BarChar,;
                         : 'bg-slate-700 text-white hover:bg-slate-600';
                    , }`}
 //                   >
-//                     Get Started,;
+//                     Get Started,
           </a>
 {;
     /* Benefits */;
   }
               Why Choose Our AI Analytics?;
               {;
-    benefits.map((benefit,;
+    benefits.map((benefit,
     index) => ();
   }
   }
@@ -285,5 +285,5 @@ Get Free Consultation;
     </>
   );,
 }
-export default AIAnalyticsPage,;
+export default AIAnalyticsPage,
   ];

@@ -3,23 +3,34 @@
 /**
  * Performance Enhancement Utilities
  * Advanced performance optimization tools for the application
- */;
+ */
+
 import React from 'react';
-import {useRef } from 'react'
-// Debounce function for performance optimization;
-export const debounce=";";
+import { useRef } from 'react';
+
+// Debounce function for performance optimization
+export const debounce = <T extends (...args: any[]) => any>(
+  func: T,
+  wait: number
+): ((...args: Parameters<T>) => void) => {
   let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {clearTimeout(timeout);}"
-    timeout="setTimeout(()" => func(...args), wait);
+  return (...args: Parameters<T>) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(...args), wait);
   };
 };
-// Throttle function for performance optimization;"
-export const throttle=";";</T>
-  let inThrottle: boolean;</T>;
-  return (...args: Parameters<T>) => {if (!inThrottle) {
-      func(...args);"}
-      inThrottle="true;}";"
-      setTimeout(() => (inThrottle="false)," limit);
+
+// Throttle function for performance optimization
+export const throttle = <T extends (...args: any[]) => any>(
+  func: T,
+  limit: number
+): ((...args: Parameters<T>) => void) => {
+  let inThrottle: boolean;
+  return (...args: Parameters<T>) => {
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
     }
   };
 };

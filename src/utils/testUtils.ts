@@ -17,9 +17,9 @@ export const _wait = (ms: number): Promise<void> => {;
  * Wait for a condition to be true;
  */;
 export const waitFor = async ();
-  condition: () => boolean,;
-  timeout = 5000,;
-  interval = 100,;
+  condition: () => boolean,
+  timeout = 5000,
+  interval = 100,
 ): Promise;
           <void> => {;
     // TODO: Add content;
@@ -46,8 +46,8 @@ export const waitFor = async ();
  * Mock fetch for testing;
  */;
 export const mockFetch = ();
-  response: unknown,;
-  status = 200,;
+  response: unknown,
+  status = 200,
   headers: Record;
           <string, string> = {}
 ): void => {;
@@ -140,7 +140,7 @@ export const createMockStorage = (): MockStorage => {;
 /**;
  * Mock window object;
  */;
-export const mockWindow = (overrides: Partial,;
+export const mockWindow = (overrides: Partial,
           <Window> = {}): void => {;
     // TODO: Add content;
   }
@@ -192,10 +192,10 @@ export const createMockPerformance = (): Performance => {;
   }
   }
 }
-//         name,;
-        entryType: 'mark',;
-        startTime: Date.now(),;
-        duration: 0,;
+//         name,
+        entryType: 'mark',
+        startTime: Date.now(),
+        duration: 0,
         toJSON: () => ({});
       } as PerformanceEntry);
     },;
@@ -261,42 +261,42 @@ export const generateTestData = {;
     return Math.random();
 //       .toString(36);
       .substring(2, length + 2);
-  },;
+  },
   number: (min = 0, max = 100): number => {;
     // TODO: Add content;
   }
   }
 }
     return Math.floor(Math.random() * (max - min + 1)) + min;
-  },;
+  },
   boolean: (): boolean => {;
     // TODO: Add content;
   }
   }
 }
     return Math.random() > 0.5;
-  },;
+  },
   email: (): string => {;
     // TODO: Add content;
   }
   }
 }
     return `test${generateTestData.string(5)}@example.com`;
-  },;
+  },
   url: (): string => {;
     // TODO: Add content;
   }
   }
 }
     return `https://example.com/${generateTestData.string(10)}`;
-  },;
+  },
   date: (): Date => {;
     // TODO: Add content;
   }
   }
 }
     return new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000);
-  },;
+  },
   array:;
           <T>(generator: () => T, length = 5): T[] => {;
     // TODO: Add content;
@@ -421,8 +421,8 @@ export interface Deferred;
   }
 }
   promise: Promise;
-          <T>;,;
-    resolve: (value: T) => void;,;
+          <T>;,
+    resolve: (value: T) => void;,
     reject: (reason?: unknown) => void;
 }
 export const createDeferred = <T>(): Deferred<T> => {;
@@ -441,20 +441,20 @@ export const createDeferred = <T>(): Deferred<T> => {;
     reject = rej;
   });
   return {;
-    promise,;
-    resolve,;
+    promise,
+    resolve,
     reject;
   }
 }
 /**;
  * Retry a function with exponential backoff;
  */;
-export const retryWithBackoff = async,;
+export const retryWithBackoff = async,
           <T>();
   fn: () => Promise;
-          <T>,;
-  maxRetries = 3,;
-  initialDelay = 1000,;
+          <T>,
+  maxRetries = 3,
+  initialDelay = 1000,
 ): Promise<T> => {;
     // TODO: Add content;
   }
@@ -494,7 +494,7 @@ export const retryWithBackoff = async,;
 /**;
  * Measure execution time of a function;
  */;
-export const measureExecutionTime = async,;
+export const measureExecutionTime = async,
           <T>();
   fn: () => T | Promise;
           <T>
@@ -505,9 +505,9 @@ export const measureExecutionTime = async,;
 }
   const start = performance.now();
   const result = await fn();
-  const duration = performance.now() - start,;
+  const duration = performance.now() - start,
   return {;
-    result,;
+    result,
     duration;
   }
 }
@@ -516,17 +516,17 @@ export default {;
   }
   }
 }
-//   wait,;
-//   waitFor,;
-//   mockFetch,;
-//   createMockStorage,;
-//   mockWindow,;
-//   createMockPerformance,;
-//   generateTestData,;
-//   deepClone,;
-//   deepEqual,;
-//   ConsoleSpy,;
-//   createDeferred,;
-//   retryWithBackoff,;
-//   measureExecutionTime,;
+//   wait,
+//   waitFor,
+//   mockFetch,
+//   createMockStorage,
+//   mockWindow,
+//   createMockPerformance,
+//   generateTestData,
+//   deepClone,
+//   deepEqual,
+//   ConsoleSpy,
+//   createDeferred,
+//   retryWithBackoff,
+//   measureExecutionTime,
 }

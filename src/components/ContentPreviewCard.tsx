@@ -62,13 +62,13 @@ const ContentPreviewCard: React.FC;
  , }
   }
 }
-      'Success Story': 'from-green-500 to-emerald-600',;
-      'Mega Trends': 'from-blue-500 to-cyan-600',;
-      'Architecture': 'from-purple-500 to-pink-600',;
-      'AI Agents': 'from-orange-500 to-red-600',;
-      'Cost Optimization': 'from-yellow-500 to-orange-600',;
-      'Intelligence': 'from-indigo-500 to-purple-600',;
-      'Transformation': 'from-teal-500 to-blue-600',;
+      'Success Story': 'from-green-500 to-emerald-600',
+      'Mega Trends': 'from-blue-500 to-cyan-600',
+      'Architecture': 'from-purple-500 to-pink-600',
+      'AI Agents': 'from-orange-500 to-red-600',
+      'Cost Optimization': 'from-yellow-500 to-orange-600',
+      'Intelligence': 'from-indigo-500 to-purple-600',
+      'Transformation': 'from-teal-500 to-blue-600',
       'default': 'from-gray-500 to-gray-600';
     }
     return colors[catego, r, y] || colors.default;

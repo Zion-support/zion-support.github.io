@@ -47,7 +47,7 @@ class MonitoringService {;
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
         clsObserver.observe({;
-    entryTypes: ['layout-shift',;
+    entryTypes: ['layout-shift',
   });
         // First Contentful Paint,;
         message: `Unhandled Promise Rejection: ${event.reason}`,;
@@ -120,8 +120,8 @@ const _memory = (performance as Performance & { memory?: { usedJSHeapSize: numbe
   }
   }
 }
-  used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,;
-          total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,;
+  used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
+          total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
           limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`;
   public measureNavigationTiming(): void {
   ;
@@ -131,7 +131,7 @@ const _memory = (performance as Performance & { memory?: { usedJSHeapSize: numbe
     // Singleton instance,;
     const _monitoring = new MonitoringService();
 export default monitoring;
-// Singleton instance,;
+// Singleton instance,
     const monitoring = new MonitoringService();
 export default monitoring;
   }

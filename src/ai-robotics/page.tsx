@@ -2,14 +2,14 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {;
-    Bot,;
-    Cpu,;
-    Settings,;
-    Shield,;
-    CheckCircle,;
-    Star,;
-    Bot,;
-    Cpu,;
+    Bot,
+    Cpu,
+    Settings,
+    Shield,
+    CheckCircle,
+    Star,
+    Bot,
+    Cpu,
     Shield from 'lucide-react';
   }
 const AIRoboticsPage: React.FC = () => {
@@ -89,7 +89,7 @@ const AIRoboticsPage: React.FC = () => {
   }
                 <ul className='space-y-2'></ul>
                   {;
-    feature.benefits.map((benefit,;
+    feature.benefits.map((benefit,
     benefitIndex) => ();
   }
   }

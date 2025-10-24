@@ -2,14 +2,14 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {;
-    MessageSquare,;
-    Brain,;
-    FileText,;
-    Globe,;
-    CheckCircle,;
-    Star,;
-    MessageSquare,;
-    Brain,;
+    MessageSquare,
+    Brain,
+    FileText,
+    Globe,
+    CheckCircle,
+    Star,
+    MessageSquare,
+    Brain,
     Globe from 'lucide-react';
   }
 const AINLPPage: React.FC = () => {
@@ -89,7 +89,7 @@ const AINLPPage: React.FC = () => {
   }
                 <ul className='space-y-2'></ul>
                   {;
-    feature.benefits.map((benefit,;
+    feature.benefits.map((benefit,
     benefitIndex) => ();
   }
   }

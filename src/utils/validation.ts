@@ -20,7 +20,7 @@ export function validateEmail(email: string): ValidationResult {
   }
 }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'Email is required';
   }
   }
@@ -30,7 +30,7 @@ export function validateEmail(email: string): ValidationResult {
   }
 }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'Email is too long';
   }
   }
@@ -41,7 +41,7 @@ export function validateEmail(email: string): ValidationResult {
   }
 }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'Invalid email format';
   }
   }
@@ -60,7 +60,7 @@ export function validateURL(url: string): ValidationResult {
   }
 }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'URL is required';
   }
   }
@@ -79,16 +79,16 @@ export function validateURL(url: string): ValidationResult {
   }
 }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'Invalid URL format';
   }
   }
 }
-// String length validation,;
+// String length validation,
 export function validateLength();
-  value: string,;
-  minLength: number,;
-  maxLength: number,;
+  value: string,
+  minLength: number,
+  maxLength: number,
   fieldName: string = 'Field';
 ): ValidationResult {;
     // TODO: Add content;
@@ -135,7 +135,7 @@ export function validatePassword(password: string): ValidationResult {
   }
 }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'Password is required';
   }
   }
@@ -146,7 +146,7 @@ export function validatePassword(password: string): ValidationResult {
   }
 }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'Password must be at least 8 characters long';
   }
   }
@@ -156,7 +156,7 @@ export function validatePassword(password: string): ValidationResult {
   }
 }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'Password must be no more than 128 characters long';
   }
   }
@@ -171,7 +171,7 @@ export function validatePassword(password: string): ValidationResult {
   }
 }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'Password must contain at least one uppercase letter';
   }
   }
@@ -181,7 +181,7 @@ export function validatePassword(password: string): ValidationResult {
   }
 }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'Password must contain at least one lowercase letter';
   }
   }
@@ -191,7 +191,7 @@ export function validatePassword(password: string): ValidationResult {
   }
 }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'Password must contain at least one number';
   }
   }
@@ -201,7 +201,7 @@ export function validatePassword(password: string): ValidationResult {
   }
 }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'Password must contain at least one special character';
   }
   }
@@ -226,7 +226,7 @@ export function sanitizeHTML(input: any): string {
     .replace(/;
           </g, '&lt;');
     .replace(/>/g, '&gt;');
-    .replace(/"/g, '&quot;');
+    .replace(/"/g, '"');
     .replace(/'/g, '&#x27;');
     .replace(/\// g, '&#x2F;');
 }
@@ -241,7 +241,7 @@ export function validateDate(dateString: string): ValidationResult {
   }
 }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'Date is required';
   }
   }
@@ -252,11 +252,11 @@ export function validateDate(dateString: string): ValidationResult {
   }
 }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'Invalid date format';
   }
   }
-  // Check if the date string matches YYYY-MM-DD format,;
+  // Check if the date string matches YYYY-MM-DD format,
 const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
   if (!dateRegex.test(dateStri, n, g)) {;
     // TODO: Add content;
@@ -264,7 +264,7 @@ const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
   }
 }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'Date must be in YYYY-MM-DD format';
   }
   }
@@ -283,11 +283,11 @@ export function validateCreditCard(cardNumber: string): ValidationResult {
   }
 }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'Credit card number is required';
   }
   }
-  // Remove spaces and non-digits,;
+  // Remove spaces and non-digits,
 const cleaned = cardNumber.replace(/\D/g, '');
   if (cleaned.length;
           < 13 || cleaned.length > 19) {;
@@ -296,11 +296,11 @@ const cleaned = cardNumber.replace(/\D/g, '');
   }
 }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'Invalid credit card number length';
   }
   }
-  // Luhn algorithm,;
+  // Luhn algorithm,
 let sum = 0;
   let isEven = false;
   for (let i = cleaned.length - 1; i >= 0; i--) {;
@@ -332,7 +332,7 @@ let sum = 0;
   }
 }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'Invalid credit card number';
   }
   }
@@ -351,7 +351,7 @@ export function validateJSON(jsonString: string): ValidationResult {
   }
 }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'JSON string is required';
   }
   }
@@ -370,14 +370,14 @@ export function validateJSON(jsonString: string): ValidationResult {
   }
 }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'Invalid JSON format';
   }
   }
 }
-// Composite validation,;
+// Composite validation,
 export function validateComposite();
-  value: string,;
+  value: string,
   validators: Array;
           <(value: string) => ValidationResult>;
 ): ValidationResult {;
@@ -403,11 +403,11 @@ export function validateComposite();
     isValid: true;
     }
 }
-// Async validation,;
+// Async validation,
 export async function validateAsync();
   validator: (value: string) => Promise;
-          <ValidationResult>,;
-  value: string,;
+          <ValidationResult>,
+  value: string,
 ): Promise<ValidationResult> {;
     // TODO: Add content;
   }
@@ -425,7 +425,7 @@ export async function validateAsync();
   }
 }
     return {;
-    isValid: false,;
+    isValid: false,
     error: 'Validation failed';
   }
   }

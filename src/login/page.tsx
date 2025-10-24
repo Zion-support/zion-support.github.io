@@ -248,7 +248,7 @@ type='submit';
               </div>
               <div className='space-y-6'></div>
                 {;
-    features.map((feature,;
+    features.map((feature,
     index) => ();
   }
   }

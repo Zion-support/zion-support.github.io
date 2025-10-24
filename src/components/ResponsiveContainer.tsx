@@ -106,7 +106,7 @@ const ResponsiveContainer: React.FC;
     </div>
   );
 }
-// Hook for responsive values,;
+// Hook for responsive values,
 export const useResponsiveValue =;
           <T,>(values: {;
     // sm?: ,T,;

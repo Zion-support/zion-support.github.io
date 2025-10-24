@@ -1,10 +1,10 @@
 'use client';
-// Performance optimization utilities,;
-// Debounce utility for performance,;
+// Performance optimization utilities,
+// Debounce utility for performance,
 export const _debounce =;
-          <T extends (...args: any[]) => any>(),;
-    func: T,;
-  wait: number,;
+          <T extends (...args: any[]) => any>(),
+    func: T,
+  wait: number,
 ): ((...args: Parameters;
           <T>) => void) => {;
     // TODO: Add content;
@@ -21,11 +21,11 @@ export const _debounce =;
     timeout = setTimeout(() => func(...args), wait);
   }
 }
-// Throttle utility for performance,;
+// Throttle utility for performance,
 export const throttle =;
-          <T extends (...args: any[]) => any>(),;
-    func: T,;
-  limit: number,;
+          <T extends (...args: any[]) => any>(),
+    func: T,
+  limit: number,
 ): ((...args: Parameters;
           <T>) => void) => {;
     // TODO: Add content;
@@ -49,7 +49,7 @@ export const throttle =;
     }
   }
 }
-// Intersection Observer hook for lazy loading,;
+// Intersection Observer hook for lazy loading,
 export const useIntersectionObserver = ();
   callback: (entries: IntersectionObserverEntry[]) => void,;
   _options: IntersectionObserverInit = {
@@ -72,7 +72,7 @@ export const useIntersectionObserver = ();
             rootMargin: '50px',;
 //             ...options;
           });
-        : null,;
+        : null,
 //     [callback, options];
   );
   const observe = useCallback();
@@ -112,7 +112,7 @@ export const useIntersectionObserver = ();
     return () => disconnect();
   }, [disconne, c, t]);
   return {;
-    observe,;
+    observe,
     disconnect;
   }
 }
@@ -157,14 +157,14 @@ export const useLazyImage = (src: string,
             img.src = src;
           }
         });
-      },;
+      },
 //       [src, isLoaded, isError];
 //     );
   );
   return {;
-    imageSrc,;
-    isLoaded,;
-    isError,;
+    imageSrc,
+    isLoaded,
+    isError,
     observe;
   }
 }
@@ -196,19 +196,19 @@ export const usePerformanceMonitoring = () => {
     }
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,;
       const paint = performance.getEntriesByType('paint');
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,;
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime,;
+      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
+      const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime,
       setMetrics({;
     // TODO: Add content;
   }
   }
 }
-//         fcp,;
-//         lcp,;
+//         fcp,
+//         lcp,
         ttfb: navigation?.responseStart - navigation?.requestStart;
       });
     }
-    // Monitor performance after page load,;
+    // Monitor performance after page load,
     if (document.readyState === 'complete') {;
   }
   }
@@ -280,8 +280,8 @@ export const useMemoryMonitoring = () => {
   }
   }
 }
-  usedJSHeapSize: memory.usedJSHeapSize,;
-          totalJSHeapSize: memory.totalJSHeapSize,;
+  usedJSHeapSize: memory.usedJSHeapSize,
+          totalJSHeapSize: memory.totalJSHeapSize,
           jsHeapSizeLimit: memory.jsHeapSizeLimit;
         });
       }
@@ -310,13 +310,13 @@ export const preloadCriticalResources = () => {
     // TODO: Add content;
     }
   if (typeof window === 'undefined') return;
-  // Preload critical fonts,;
+  // Preload critical fonts,
   preloadResource('/fonts/inter-var.woff2', 'font');
   preloadResource('/fonts/inter-var.woff', 'font');
-  // Preload critical images,;
+  // Preload critical images,
   preloadResource('/images/hero-bg.webp', 'image');
   preloadResource('/images/logo.svg', 'image');
-  // Preload critical CSS,;
+  // Preload critical CSS,
   preloadResource('/styles/critical.css', 'style');
 }
 // Bundle size monitoring,;
@@ -379,13 +379,13 @@ export const useBundleSizeMonitoring = () => {
   }
   }
 }
-//         totalSize,;
-//         jsSize,;
-//         cssSize,;
-//         imageSize,;
+//         totalSize,
+//         jsSize,
+//         cssSize,
+//         imageSize,
       });
     }
-    // Calculate after page load,;
+    // Calculate after page load,
     if (document.readyState === 'complete') {;
   }
   }
@@ -410,13 +410,13 @@ export default {;
   }
   }
 }
-//   debounce,;
-//   throttle,;
-//   useIntersectionObserver,;
-//   useLazyImage,;
-//   usePerformanceMonitoring,;
-//   useMemoryMonitoring,;
-//   preloadResource,;
-//   preloadCriticalResources,;
-//   useBundleSizeMonitoring,;
+//   debounce,
+//   throttle,
+//   useIntersectionObserver,
+//   useLazyImage,
+//   usePerformanceMonitoring,
+//   useMemoryMonitoring,
+//   preloadResource,
+//   preloadCriticalResources,
+//   useBundleSizeMonitoring,
 }

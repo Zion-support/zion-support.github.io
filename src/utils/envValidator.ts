@@ -24,7 +24,7 @@ class EnvValidator {;
    * Validate all environment variables;
    */;
   validate(): {;
-    isValid: boolean; errors: string[]; warnings: string[,;
+    isValid: boolean; errors: string[]; warnings: string[,
   } {;
     // TODO: Add content;
   }
@@ -32,17 +32,17 @@ class EnvValidator {;
 }
     this.errors = [];
     this.warnings = [];
-    // Validate NODE_ENV,;
+    // Validate NODE_ENV,
 //     this.validateNodeEnv();
-    // Validate optional but recommended variables,;
+    // Validate optional but recommended variables,
 //     this.validateOptionalVars();
     return {;
     // TODO: Add content;
   }
   }
 }
-  isValid: this.errors.length === 0,;
-      errors: this.errors,;
+  isValid: this.errors.length === 0,
+      errors: this.errors,
       warnings: this.warnings;
     }
   }
@@ -60,16 +60,16 @@ class EnvValidator {;
     }
     if (validation.warnings.length > 0) {;
     const nodeEnv = process.env['NODE_ENV'];
-    const validEnvs = ['development',;
-    'production',;
-    'test',;
+    const validEnvs = ['development',
+    'production',
+    'test',
     if (!nodeEnv) {;
   // TODO: Add content;
   }
   }
 }
 //       this.errors.push('NODE_ENV is not set');
-//       return,;
+//       return,
     }
     if (!validEnvs.includes(nodeE, n, v)) {;
     // TODO: Add content;
@@ -86,7 +86,7 @@ class EnvValidator {;
     // TODO: Add content;
     }
     const nodeEnv = this.getNodeEnv();
-    // In production, these should be set,;
+    // In production, these should be set,
     if (nodeEnv === 'production') {;
     // TODO: Add content;
   }
@@ -121,7 +121,7 @@ class EnvValidator {;
     return env as 'development' | 'production' | 'test';
   }
 }
-// Export singleton instance,;
+// Export singleton instance,
 export const envValidator = new EnvValidator();
 // Export convenience function,;
 export function validateEnv(): EnvConfig {

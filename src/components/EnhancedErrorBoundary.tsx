@@ -75,10 +75,10 @@ class EnhancedErrorBoundary extends Component;
  , }
   }
 }
-//       error,;
-//       errorInfo,;
+//       error,
+//       errorInfo,
     });
-    // Log error to console in development,;
+    // Log error to console in development,
     if (process.env.NODE_ENV === 'development') {;
     // console.error('Error Boundary caught an error: ',;
     error,;
@@ -86,7 +86,7 @@ class EnhancedErrorBoundary extends Component;
   }
   }
     }
-    // Report error to monitoring service,;
+    // Report error to monitoring service,
     if (this.props.enableReporting !== false) {;
     // TODO: Add content;
  , }
@@ -94,7 +94,7 @@ class EnhancedErrorBoundary extends Component;
 }
       this.reportError(error, errorInfo);
     }
-    // Call custom error handler,;
+    // Call custom error handler,
     this.props.onError?.(error, errorInfo);
   }
   private reportError = (error: Erro,
@@ -231,7 +231,7 @@ class EnhancedErrorBoundary extends Component;
  , }
   }
 }
-      // Use custom fallback if provided,;
+      // Use custom fallback if provided,
       if (this.props.fallback) {;
     // TODO: Add content;
  , }
@@ -239,8 +239,8 @@ class EnhancedErrorBoundary extends Component;
 }
         return this.props.fallback;
       }
-      const { retryCount, error, errorId } = this.state,;
-      const canRetry = retryCount,;
+      const { retryCount, error, errorId } = this.state,
+      const canRetry = retryCount,
           < this.maxRetries;
       return (;
     <div>Coming Soon</div>

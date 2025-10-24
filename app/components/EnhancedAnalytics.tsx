@@ -88,15 +88,14 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
 
       // Custom analytics
       }
-  }
-;"
+  };
   constvalue: AnalyticsContextType="{track,";}
     identify,}
     page,
   }
 ;</string>
   return (</string>"
-    <AnalyticsContext.Provider value="{value}"></AnalyticsContext>
+    <AnalyticsContext.Provider value="{value}></AnalyticsContext>
       {children}</AnalyticsContext>
     </AnalyticsContext.Provider>
   )
@@ -114,23 +113,23 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 ;"
-const EnhancedAnalyticsPage: React.FC="()" => {const features: ";",;
-      title: 'AI-Powered Intelligence',;}
+const EnhancedAnalyticsPage: React.FC = () => {const features = [
+      title: 'AI-Powered Intelligence',}
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',}
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    {icon: BarChart,;
-      title: 'Advanced Analytics',;}
+    {icon: BarChart,
+      title: 'Advanced Analytics',}
       description: 'Comprehensive analytics dashboard with real-time data visualization.',}
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
-    {icon: Target,;
-      title: 'Precision Targeting',;}
+    {icon: Target,
+      title: 'Precision Targeting',}
       description: 'Target specific goals and objectives with precision and accuracy.',}
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
-    {icon: TrendingUp,;
-      title: 'Growth Optimization',;}
+    {icon: TrendingUp,
+      title: 'Growth Optimization',}
       description: 'Optimize your business growth with data-driven strategies.',}
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
@@ -172,7 +171,7 @@ const EnhancedAnalyticsPage: React.FC="()" => {const features: ";",;
         </section>
     </>
 
-        {/* Features Section */}"
+        {/* Features Section */}
         <section className="py-20 px-4"></section>"
           <div className="max-w-7xl mx-auto"></div>"
             <div className="text-center mb-16"></div>"
@@ -183,13 +182,13 @@ const EnhancedAnalyticsPage: React.FC="()" => {const features: ";",;
             </div>"
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (</div>"
-                <div key="{index}" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>"
+                <div key="{index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>"
                   <feature.icon className="h-12 w-12 text-emerald-400 mb-4" /></feature>"
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
                   <p className="text-gray-300 mb-4">{feature.description}</p>"
                   <ul className="space-y-2"></ul>
                     {feature.benefits.map((benefit, idx) => (</ul>"
-                      <li key="{idx}" className="flex items-center text-sm text-gray-300"></li>"
+                      <li key="{idx} className="flex items-center text-sm text-gray-300"></li>"
                         <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" /></CheckCircle>
                         {benefit}</CheckCircle>
                       </li>
@@ -201,7 +200,7 @@ const EnhancedAnalyticsPage: React.FC="()" => {const features: ";",;
           </div>
         </section>
 
-        {/* Benefits Section */}"
+        {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5"></section>"
           <div className="max-w-7xl mx-auto"></div>"
             <div className="text-center mb-16"></div>"
@@ -212,7 +211,7 @@ const EnhancedAnalyticsPage: React.FC="()" => {const features: ";",;
             </div>"
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => (</div>"
-                <div key="{index}" className="flex items-start space-x-4"></div>"
+                <div key="{index} className="flex items-start space-x-4"></div>"
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /></CheckCircle>"
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
@@ -221,7 +220,7 @@ const EnhancedAnalyticsPage: React.FC="()" => {const features: ";",;
           </div>
         </section>
 
-        {/* CTA Section */}"
+        {/* CTA Section */}
         <section className="py-20 px-4"></section>"
           <div className="max-w-4xl mx-auto text-center"></div>"
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>"
@@ -243,6 +242,5 @@ const EnhancedAnalyticsPage: React.FC="()" => {const features: ";",;
     </>
   ;);,
 };
-;
 export default EnhancedAnalyticsPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80

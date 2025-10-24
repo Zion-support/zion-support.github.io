@@ -2,14 +2,14 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {;
-    FlaskConical,;
-    Target,;
-    Zap,;
-    Settings,;
-    CheckCircle,;
-    Star,;
-    FlaskConical,;
-    Target,;
+    FlaskConical,
+    Target,
+    Zap,
+    Settings,
+    CheckCircle,
+    Star,
+    FlaskConical,
+    Target,
     Settings from 'lucide-react';
   }
 const InnovationLabsPage: React.FC = () => {
@@ -89,7 +89,7 @@ const InnovationLabsPage: React.FC = () => {
   }
                 <ul className='space-y-2'></ul>
                   {;
-    feature.benefits.map((benefit,;
+    feature.benefits.map((benefit,
     benefitIndex) => ();
   }
   }

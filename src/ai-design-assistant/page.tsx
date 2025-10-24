@@ -2,14 +2,14 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {;
-    Palette,;
-    Target,;
-    Zap,;
-    Settings,;
-    CheckCircle,;
-    Star,;
-    Palette,;
-    Target,;
+    Palette,
+    Target,
+    Zap,
+    Settings,
+    CheckCircle,
+    Star,
+    Palette,
+    Target,
     Settings from 'lucide-react';
   }
 const AIDesignAssistantPage: React.FC = () => {
@@ -89,7 +89,7 @@ const AIDesignAssistantPage: React.FC = () => {
   }
                 <ul className='space-y-2'></ul>
                   {;
-    feature.benefits.map((benefit,;
+    feature.benefits.map((benefit,
     benefitIndex) => ();
   }
   }

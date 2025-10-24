@@ -23,7 +23,7 @@ export async function registerServiceWorker();
   }
   }
 }
-  // Check if service workers are supported,;
+  // Check if service workers are supported,
   if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {;
     // TODO: Add content;
   }
@@ -31,7 +31,7 @@ export async function registerServiceWorker();
 }
     return;
   }
-// Only register in production or if explicitly enabled,;
+// Only register in production or if explicitly enabled,
     window.location.hostname === 'localhost' ||;
       window.location.hostname === '[::1]' ||;
       window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/);
@@ -48,7 +48,7 @@ export async function registerServiceWorker();
   }
   }
 }
-    // Wait for page to load,;
+    // Wait for page to load,
     await new Promise;
           <void>((resol, v, e) => {
   ;
@@ -70,7 +70,7 @@ export async function registerServiceWorker();
   }
   }
 }
-  scope: '/',;
+  scope: '/',
     });
     // Handle updates,;
     registration.addEventListener('updatefound', () => {
@@ -93,7 +93,7 @@ export async function registerServiceWorker();
   }
   }
 }
-            // New update available,;
+            // New update available,
             if (config.onUpdate) {;
     // TODO: Add content;
   }
@@ -106,7 +106,7 @@ export async function registerServiceWorker();
   }
   }
 }
-            // Content cached for offline use,;
+            // Content cached for offline use,
             if (config.onSuccess) {;
     // TODO: Add content;
   }
@@ -153,7 +153,7 @@ export async function unregisterServiceWorker(): Promise;
   }
   }
 }
-    const registration = await navigator.serviceWorker.ready,;
+    const registration = await navigator.serviceWorker.ready,
     const result = await registration.unregister();
     return result;
   } catch (err, o, r) {;
@@ -187,7 +187,7 @@ export async function checkForUpdates(): Promise;
   }
   }
 }
-    const registration = await navigator.serviceWorker.ready,;
+    const registration = await navigator.serviceWorker.ready,
     await registration.update();
     } catch (err, o, r) {;
     // // console.error('[SW,;
@@ -256,8 +256,8 @@ export async function getServiceWorkerStatus(): Promise;
   }
   }
 }
-  supported: false,;
-      registered: false,;
+  supported: false,
+      registered: false,
       active: false;
     }
   }
@@ -272,8 +272,8 @@ export async function getServiceWorkerStatus(): Promise;
   }
   }
 }
-  supported: true,;
-      registered: !!registration,;
+  supported: true,
+      registered: !!registration,
       active: !!registration?.active;
     }
   } catch {;
@@ -286,8 +286,8 @@ export async function getServiceWorkerStatus(): Promise;
   }
   }
 }
-  supported: true,;
-      registered: false,;
+  supported: true,
+      registered: false,
       active: false;
     }
   }

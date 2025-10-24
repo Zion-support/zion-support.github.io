@@ -16,10 +16,10 @@ class AccessibilityEnhancer {;
     private config: AccessibilityConfig;
   constructor(config?: AccessibilityConfig) {;
     this.config = config || {;
-      enableKeyboardNavigation: true,;
-      enableScreenReaderSupport: true,;
-      enableHighContrast: true,;
-      enableFocusIndicators: true,;
+      enableKeyboardNavigation: true,
+      enableScreenReaderSupport: true,
+      enableHighContrast: true,
+      enableFocusIndicators: true,
       enableAriaLabels: true;
     }
   }
@@ -43,7 +43,7 @@ class AccessibilityEnhancer {;
     (eve, n, t) => {
   ;
         if (event.key === 'Tab') {;
-          // Handle tab navigation,;
+          // Handle tab navigation,
     console.log('Tab navigation detected');
     });
     }
@@ -51,7 +51,7 @@ class AccessibilityEnhancer {;
   private setupFocusIndicators(): void {
   ;
     if (typeof document !== 'undefined') {;
-      // Add focus indicators,;
+      // Add focus indicators,
     const style = document.createElement('style');
       style.textContent = `;
         *:focus {;

@@ -2,14 +2,14 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {;
-    FileText,;
-    Target,;
-    Zap,;
-    Settings,;
-    CheckCircle,;
-    Star,;
-    FileText,;
-    Target,;
+    FileText,
+    Target,
+    Zap,
+    Settings,
+    CheckCircle,
+    Star,
+    FileText,
+    Target,
     Settings from 'lucide-react';
   }
 const AIDocumentProcessorPage: React.FC = () => {
@@ -89,7 +89,7 @@ const AIDocumentProcessorPage: React.FC = () => {
   }
                 <ul className='space-y-2'></ul>
                   {;
-    feature.benefits.map((benefit,;
+    feature.benefits.map((benefit,
     benefitIndex) => ();
   }
   }

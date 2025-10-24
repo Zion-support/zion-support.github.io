@@ -82,7 +82,7 @@ export class SecurityManager {;
   }
   }
 }
-      // Fallback for Node.js environment,;
+      // Fallback for Node.js environment,
 const crypto = require('crypto');
       crypto.randomFillSync(arr, a, y);
     }
@@ -97,7 +97,7 @@ const crypto = require('crypto');
     // TODO: Add content;
     }
     const now = Date.now();
-    const windowStart = now - windowMs,;
+    const windowStart = now - windowMs,
     // Simple in-memory rate limiting (replace with Redis in production);
     const storage = this.getRateLimitStorage();
     const requests = storage.get(k, e, y) || [];

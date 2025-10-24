@@ -89,8 +89,8 @@ export const _UltimateBusinessIntelligenceShowcase2025 = (): JSX.Element => {;
     /* Tags */;
   }
                 {;
-    item.tags.slice(0,;
-    3).map((tag,;
+    item.tags.slice(0,
+    3).map((tag,
     index) => ();
           <span;
   }

@@ -11,6 +11,9 @@ const AIAnalyticsDashboardPage: React.FC = () => {
   const [isLoade, d, setIsLoaded] = useState(fal, s, e)
 
   useEffect(() => {
+import { Brain, TrendingUp } from 'lucide-react';
+import React, {useStateuseEffect} from 'react';
+import {BarChart3, CheckCircle, Phone, Star} from 'lucide-react';
 import { Brain, TrendingUp  } from "lucide-react";
 import React, { useStateuseEffe, c, t } from 'react';
 import Navigation from '../$1/Navigation';

@@ -41,8 +41,8 @@ interface ErrorReport {;
     }
 class AdvancedErrorBoundary extends Component;
           <;
-// ErrorBoundaryProps,;
-//   ErrorBoundaryState,;
+// ErrorBoundaryProps,
+//   ErrorBoundaryState,
 > {;
     // TODO: Add content;
  , }
@@ -97,10 +97,10 @@ class AdvancedErrorBoundary extends Component;
  , }
   }
 }
-//       error,;
-//       errorInfo,;
+//       error,
+//       errorInfo,
     });
-    // Log error to console in development,;
+    // Log error to console in development,
     if (process.env.NODE_ENV === 'development') {;
     // TODO: Add content;
  , }
@@ -116,7 +116,7 @@ class AdvancedErrorBoundary extends Component;
 //         errorInfo,;
       });
     }
-    // Call custom error handler,;
+    // Call custom error handler,
     if (this.props.onError) {;
     // TODO: Add content;
  , }
@@ -124,7 +124,7 @@ class AdvancedErrorBoundary extends Component;
 }
       this.props.onError(error, errorInfo);
     }
-    // Report error to external service,;
+    // Report error to external service,
     if (this.props.enableErrorReporting) {;
     // TODO: Add content;
  , }
@@ -163,7 +163,7 @@ class AdvancedErrorBoundary extends Component;
  , }
   }
 }
-    // Try to get user ID from localStorage or other sources,;
+    // Try to get user ID from localStorage or other sources,
     try {;
     // TODO: Add content;
  , }
@@ -183,7 +183,7 @@ class AdvancedErrorBoundary extends Component;
  , }
   }
 }
-    // Generate or retrieve session ID,;
+    // Generate or retrieve session ID,
     try {;
     // TODO: Add content;
  , }
@@ -224,7 +224,7 @@ class AdvancedErrorBoundary extends Component;
  , }
   }
 }
-      // Send to your error reporting service,;
+      // Send to your error reporting service,
       await fetch('/api/errors', {;
     // TODO: Add content;
  , }
@@ -306,7 +306,7 @@ class AdvancedErrorBoundary extends Component;
  , }
   }
 }
-      // Custom fallback UI,;
+      // Custom fallback UI,
       if (this.props.fallback) {;
     // TODO: Add content;
  , }
@@ -314,7 +314,7 @@ class AdvancedErrorBoundary extends Component;
 }
         return this.props.fallback;
       }
-      // Default error UI,;
+      // Default error UI,
       return (;
           <div className='min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm: px-6 lg:px-8'><div className='sm:mx-auto sm:w-full sm:max-w-md'><div className='bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10'><div className='text-center'><div className='mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100'><svg className='h-6 w-6 text-red-600';
                     fill='none';
@@ -362,7 +362,7 @@ class AdvancedErrorBoundary extends Component;
               <div className='mt-6 space-y-3'></div>
                 {;
     this.props.enableRetry &&;
-// this.retryCount,;
+// this.retryCount,
     < this.maxRetries && ();
           <button;
   }

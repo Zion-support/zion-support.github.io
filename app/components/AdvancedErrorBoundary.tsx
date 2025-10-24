@@ -1,9 +1,7 @@
-import React, {Component, ErrorInfo, ReactNode } from 'react';
-import {AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
-import {Mail } from 'lucide-react';
-import {Home } from 'lucide-react';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 
-interface AdvancedErrorBoundaryProps {}
+interface AdvancedErrorBoundaryProps {
   className?: string;
   children: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
@@ -13,11 +11,12 @@ interface ErrorReport {
   errorId: string;
   error: Error;
 }
-;
-interface State {hasError: boolean;
-  error?: Error;}
-  errorInfo?: ErrorInfo}
-  errorId?: string
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+  errorId?: string;
 }
 
 class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State> {

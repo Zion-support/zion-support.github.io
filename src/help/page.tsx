@@ -1,20 +1,20 @@
 import {;
-    HelpCircle,;
-    Search,;
-    Phone,;
-    Mail,;
-    MessageSquare,;
-    BookOpen,;
-    Video,;
-    Download,;
-    CheckCircle,;
-    ArrowRight,;
-    Users,;
-    BookOpen,;
-    HelpCircle,;
-    MessageSquare,;
-    Video,;
-    Mail,;
+    HelpCircle,
+    Search,
+    Phone,
+    Mail,
+    MessageSquare,
+    BookOpen,
+    Video,
+    Download,
+    CheckCircle,
+    ArrowRight,
+    Users,
+    BookOpen,
+    HelpCircle,
+    MessageSquare,
+    Video,
+    Mail,
     Users from 'lucide-react';
 'use client';
   }

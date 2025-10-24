@@ -19,11 +19,11 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
   enableCodeSplitting: "true,";"
   enableResourceHints: "true,";"
   enableServiceWorker: "true,";"}
-  enableCriticalCSS: "true,}";"
+  enableCriticalCSS: "true,};
   enableWebVitals="true})" => {const [performanceMetricssetPerformanceMetrics] = useState({
-    fcp: 0,;
-    lcp: 0,;
-    fid: 0,;}
+    fcp: 0,
+    lcp: 0,
+    fid: 0,}
     cls: 0,});
     ttfb: 0
  ,
@@ -44,7 +44,7 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
         }).observe({entryTypes: ['paint'] })
 
         // Largest Contentful Paint;
-        new PerformanceObserver((list) => {}"
+        new PerformanceObserver((list) => {}
           const entries=";"
         }).observe({entryTypes: ['largest-contentful-paint'] })
 
@@ -89,9 +89,9 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
             const canvas="document.createElement('canvas')";"
             const webpSupported="canvas.toDataURL('image/webp').indexOf('data:image/webp')" === 0;
 
-            if (webpSupported && !src.includes('.webp')) {}"
+            if (webpSupported && !src.includes('.webp')) {}
               img.src="src.replace(/\.(jpg|jpeg|png)$/i," '.webp')
-            } else {}"
+            } else {}
               img.src="src"
             }
 ;
@@ -135,7 +135,7 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
     hints.forEach((hint) => {const link="document.createElement('link')";"
       link.rel="hint.rel";"
       link.href="hint.href";"}
-      if (hint.rel="==" 'preconnect') {}"
+      if (hint.rel="==" 'preconnect') {}
         link.crossOrigin="'anonymous'"
       }
       document.head.appendChild(link)
@@ -204,6 +204,5 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
 ;
 export default AdvancedPerformanceOptimizer
 }}}}}
-};
-;</AdvancedPerformanceOptimizerProp>
+};</AdvancedPerformanceOptimizerProp>
 export default AdvancedPerformanceOptimizerPage;</AdvancedPerformanceOptimizerProp>"

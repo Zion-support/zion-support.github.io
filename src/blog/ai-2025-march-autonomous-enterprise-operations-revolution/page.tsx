@@ -1,4 +1,4 @@
-// Metadata removed for Vite compatibility,;
+// Metadata removed for Vite compatibility,
 export default function March2025AutonomousEnterpriseOperationsRevolution() {;
     // TODO: Add content;
  , }

@@ -334,7 +334,7 @@ export default NeonButtonPage;
 
   if (href) {}
     return ("
-      <a href="{href}" className="{buttonClasses}"></a>
+      <a href="{href} className="{buttonClasses}></a>
         {content}</a>
       </a>
 
@@ -343,7 +343,7 @@ export default NeonButtonPage;
   }
 ;
   return ("
-    <button onClick="{onClick}" disabled="{disabled}" className="{buttonClasses}"></button>
+    <button onClick="{onClick} disabled="{disabled} className="{buttonClasses}></button>
       {content}</button>
     </button>
 
@@ -354,5 +354,4 @@ export default NeonButtonPage;
 export default NeonButton
   );
 };
-;
 export default NeonButton;"

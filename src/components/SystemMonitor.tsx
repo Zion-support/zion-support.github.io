@@ -15,7 +15,7 @@ export const __collectPerformanceMetrics = (): JSX.Element => {;
   }
 }
   if (typeof window === 'undefined' || !window.performance) return null;
-  const navigation = window.performance.timing,;
+  const navigation = window.performance.timing,
   const paint = window.performance.getEntriesByType('paint');
   return {;
     // TODO: Add content;
@@ -34,14 +34,14 @@ export const calculatePerformanceScore = (): JSX.Element => {;
   const metrics = performanceOptimizer.getMetrics();
   if (!metrics) return 0;
   let __score = 100;
-  // Deduct points for slow load times,;
+  // Deduct points for slow load times,
   if (metrics.loadTime > 3000) score -= 20;
   if (metrics.loadTime > 5000) score -= 30;
-  // Deduct points for slow paint times,;
+  // Deduct points for slow paint times,
   if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 2000) score -= 15;
   if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 3000) score -= 25;
   return Math.max(0, score);
-// Network connection interface,;
+// Network connection interface,
 interface NetworkConnection {;
     // TODO: Add content;
  , }
@@ -156,9 +156,9 @@ export const updateMetrics = useCallback(() => {
       const performanceMetrics = performanceOptimizer.getMetrics();
       const performanceScore = calculatePerformanceScore();
       const errorStats = errorHandler.getErrorStatistics();
-// Get memory info,;
+// Get memory info,
       const memoryInfo = getMemoryInfo();
-      // Get network info,;
+      // Get network info,
       const networkInfo = getNetworkInfo();
       const newMetrics: SystemMetrics = {;
     const _networkInfo = getNetworkInfo();
@@ -196,7 +196,7 @@ export const updateMetrics = useCallback(() => {
       setLastUpdate(new Date());
    , } catch (err, o, r) {;
     if (!isMonitoring) return;
-    const interval = setInterval(updateMetrics,;
+    const interval = setInterval(updateMetrics,
     refreshInterval);
     return () => clearInterval(interv, a, l);
   }
@@ -355,8 +355,8 @@ className={;
                     <span>{ cou, n, t }</span>
               <h4 className='text-sm font-medium text-gray-600 mb-2'>By Category</h4>
                 {;
-    Object.entries(metrics.errors.byCategory).map(([category,;
-    count,;
+    Object.entries(metrics.errors.byCategory).map(([category,
+    count,
     ) => ();
   }
   }
