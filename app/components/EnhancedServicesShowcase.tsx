@@ -14,4 +14,5 @@ const EnhancedServicesShowcase: React.FC<EnhancedServicesShowcaseProps> = ({ cla
   );
 };
 
-export default EnhancedServicesShowcase;
+export default EnhancedServicesShowcase
+}]

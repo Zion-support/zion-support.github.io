@@ -1,23 +1,33 @@
-'use client';
 import React from 'react';
+import Head from "next/head";
 
-function Pages00nsjdi9() {
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
+
+export default function SecurityMonitoringSuitePage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional  services and solutions.
-          </p>
+    <>
+    :all-pages-backup/security-monitoring-suite/page.tsx
+</>
+      <title>SecurityMonitoringSuite - Zion Tech Group</title>
+        <meta name="description" content="Professional securitymonitoringsuite services by Zion Tech Group." /></meta>
+      </meta>
+        <Head></Head>
+        <title>SecurityMonitoringSuite - Zion Tech Group</title>
+        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
+      </Head>
+      
+      
+      <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="con tainermx-auto px-4 py-16"></div>
+          <h1 className="tex t-4xlfont-bold text-white mb-6">SecurityMonitoringSuite</h1>
+          <p className="tex t-lgtext-gray-300 mb-8">Professional securitymonitoringsuite services by Zion Tech Group.</p>
+          
+          <Link href="/contact" className="inl ine-flexitems-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"></Link>
+            Contact Us</Link>
+            <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
+          </Link>
         </div>
       </div>
-    </div>
-  );
-}
-
-Pages00nsjdi9.displayName = '';
-
-export default Pages00nsjdi9;
+</div>;
+  )}

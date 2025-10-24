@@ -1,82 +1,42 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-// Function to fix merge conflicts in a file
 function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Check if file has merge conflicts
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {
-      return false; // No conflicts
-    }
+    // Remove merge conflict markers
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
     
-    console.log(`Fixing merge conflicts in: ${filePath}`);
+    // Fix common syntax issues
+    content = content.replace(/,\s*$/gm, ''); // Remove trailing commas
+    content = content.replace(/,\s*}/g, '}'); // Remove commas before closing braces
+    content = content.replace(/,\s*]/g, ']'); // Remove commas before closing brackets
+    content = content.replace(/,\s*\)/g, ')'); // Remove commas before closing parentheses
     
-    // Split by conflict markers
-    const lines = content.split('\n');
-    const result = [];
-    let inConflict = false;
-    let conflictType = null;
-    let headContent = [];
-    let otherContent = [];
+    // Fix JSX syntax issues
+    content = content.replace(/<(\w+)\s*\/>\s*<\/\1>/g, '<$1 />'); // Fix self-closing tags
+    content = content.replace(/(\w+)\s*=\s*{([^}]+)}\s*\/>/g, '$1={$2} />'); // Fix props syntax
     
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      if (line.startsWith('<<<<<<< HEAD')) {
-        inConflict = true;
-        conflictType = 'head';
-        continue;
-      } else if (line.startsWith('=======')) {
-        conflictType = 'other';
-        continue;
-      } else if (line.startsWith('>>>>>>>')) {
-        // End of conflict - choose the better content
-        if (headContent.length > 0 && otherContent.length > 0) {
-          // Choose the longer content or the one with more meaningful content
-          const headText = headContent.join('\n');
-          const otherText = otherContent.join('\n');
-          
-          // Prefer content with more lines or more meaningful content
-          if (otherContent.length > headContent.length || 
-              otherText.includes('export') || 
-              otherText.includes('function') ||
-              otherText.includes('const') ||
-              otherText.includes('import')) {
-            result.push(...otherContent);
-          } else {
-            result.push(...headContent);
-          }
-        } else if (headContent.length > 0) {
-          result.push(...headContent);
-        } else if (otherContent.length > 0) {
-          result.push(...otherContent);
-        }
-        
-        inConflict = false;
-        conflictType = null;
-        headContent = [];
-        otherContent = [];
-        continue;
-      }
-      
-      if (inConflict) {
-        if (conflictType === 'head') {
-          headContent.push(line);
-        } else if (conflictType === 'other') {
-          otherContent.push(line);
-        }
-      } else {
-        result.push(line);
-      }
-    }
+    // Fix missing closing tags
+    content = content.replace(/<div([^>]*)>\s*$/gm, '<div$1>');
     
-    // Write the fixed content
-    fs.writeFileSync(filePath, result.join('\n'));
+    // Fix import statements
+    content = content.replace(/import\s+{\s*([^}]+)\s*}\s*from\s+['"]([^'"]+)['"];?/g, (match, imports, module) => {
+      const cleanImports = imports.replace(/\s+/g, ' ').trim();
+      return `import { ${cleanImports} } from '${module}';`;
+    });
+    
+    // Fix function declarations
+    content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{/g, 'const $1: React.FC = () => {');
+    
+    // Fix JSX fragments
+    content = content.replace(/<>\s*$/gm, '<>');
+    content = content.replace(/^\s*<\/>/gm, '</>');
+    
+    // Write the fixed content back
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
     return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -84,34 +44,24 @@ function fixMergeConflicts(filePath) {
   }
 }
 
-// Function to recursively find and fix merge conflicts
-function fixAllMergeConflicts(dir) {
+function findAndFixFiles(dir) {
   const files = fs.readdirSync(dir);
-  let fixedCount = 0;
   
   for (const file of files) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      fixedCount += fixAllMergeConflicts(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {
-      if (fixMergeConflicts(filePath)) {
-        fixedCount++;
-      }
+      findAndFixFiles(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js')) {
+      fixMergeConflicts(filePath);
     }
   }
-  
-  return fixedCount;
 }
 
-// Main execution
-console.log('Starting merge conflict resolution...');
-const fixedCount = fixAllMergeConflicts('./app');
-console.log(`Fixed merge conflicts in ${fixedCount} files`);
+// Start fixing from the app directory
+findAndFixFiles('./app');
+findAndFixFiles('./components');
+findAndFixFiles('./src');
 
-// Also check components directory
-const componentsFixed = fixAllMergeConflicts('./components');
-console.log(`Fixed merge conflicts in ${componentsFixed} components files`);
-
-console.log('Merge conflict resolution complete!');
+console.log('Merge conflict fixing completed!');

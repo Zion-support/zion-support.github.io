@@ -1,11 +1,9 @@
 'use client';
 import React from 'react';
 
-export default function link() {
-  return (
-    <div>
-      <h1>link</h1>
-      <p>link content.</p>
-    </div>
-  );
+// link utility
+export const link = () => {
+  // Utility function implementation
+  return null
+export default link
 }

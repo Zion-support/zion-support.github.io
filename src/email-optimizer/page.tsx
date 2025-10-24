@@ -1,23 +1,33 @@
-'use client';
 import React from 'react';
+import Head from "next/head";
 
-function Pageiyeh58a21() {
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
+
+export default function EmailOptimizerPage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional  services and solutions.
-          </p>
+    <>
+    :all-pages-backup/email-optimizer/page.tsx
+</>
+      <title>EmailOptimizer - Zion Tech Group</title>
+        <meta name="description" content="Professional emailoptimizer services by Zion Tech Group." /></meta>
+      </meta>
+        <Head></Head>
+        <title>EmailOptimizer - Zion Tech Group</title>
+        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
+      </Head>
+      
+      
+      <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="con tainermx-auto px-4 py-16"></div>
+          <h1 className="tex t-4xlfont-bold text-white mb-6">EmailOptimizer</h1>
+          <p className="tex t-lgtext-gray-300 mb-8">Professional emailoptimizer services by Zion Tech Group.</p>
+          
+          <Link href="/contact" className="inl ine-flexitems-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"></Link>
+            Contact Us</Link>
+            <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
+          </Link>
         </div>
       </div>
-    </div>
-  );
-}
-
-Pageiyeh58a21.displayName = '';
-
-export default Pageiyeh58a21;
+</div>;
+  )}
