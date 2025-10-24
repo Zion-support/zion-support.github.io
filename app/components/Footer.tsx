@@ -1,11 +1,9 @@
-'use client'
+'use client';
+import {Facebook, Twitter, Linkedin, Github, Phone, Mail, MapPin} from 'lucide-react';
+import Link from 'next/link';
+const Footer: React.FC = () => {
 
-import React, { memo } from 'react'
-import Link from 'next/link'
-import { Phone, Mail, MapPin, Brain, Facebook, Github, Linkedin, Twitter } from 'lucide-react'
-
-const Footer: React.FC = memo(() => {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
   
   const aiServices = [
     { name: 'AI Analytics & BI', url: '/ai-analytics' },
@@ -13,10 +11,10 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder' },
     { name: 'AI Content Generation', url: '/ai-content-generation' },
     { name: 'AI Cybersecurity', url: '/ai-cybersecurity' },
-    { name: 'Computer Vision', url: '/computer-vision' },
-    { name: 'Predictive Analytics', url: '/predictive-analytics' },
+    { name: 'Computer Vision', url: '/ai-computer-vision' },
+    { name: 'Predictive Analytics', url: '/ai-predictive-analytics' },
     { name: 'Speech & Voice AI', url: '/ai-voice-assistant' }
-  ]
+  ];
 
   const itServices = [
     { name: 'Web Development', url: '/web-development' },
@@ -27,73 +25,64 @@ const Footer: React.FC = memo(() => {
     { name: 'Data Analytics', url: '/data-analytics' },
     { name: 'IoT Solutions', url: '/iot-solutions' },
     { name: 'Blockchain', url: '/blockchain' }
-  ]
+  ];
 
-  const companyLinks = [
+  const company = [
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
     { name: 'Careers', url: '/careers' },
-    { name: 'Contact', url: '/contact' }
-  ]
+    { name: 'Contact', url: '/contact' },
+    { name: 'Blog', url: '/blog' },
+    { name: 'Privacy Policy', url: '/privacy' },
+    { name: 'Terms of Service', url: '/terms' }
+  ];
 
-  const resourceLinks = [
+  const support = [
+    { name: 'Help Center', url: '/help' },
     { name: 'Documentation', url: '/docs' },
     { name: 'API Reference', url: '/api' },
-    { name: 'Blog', url: '/blog' },
-    { name: 'Support', url: '/support' }
-  ]
-
-  const legalLinks = [
-    { name: 'Privacy Policy', url: '/privacy' },
-    { name: 'Terms of Service', url: '/terms' },
-    { name: 'Cookie Policy', url: '/cookies' }
-  ]
+    { name: 'Status', url: '/status' },
+    { name: 'Community', url: '/community' }
+  ];
 
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Z</span>
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg">Z</span>
               </div>
-              <div className="text-xl font-bold">Zion Tech Group</div>
+              <span className="text-white font-bold text-xl">Zion Tech Group</span>
             </div>
-            <p className="text-gray-300 mb-6 max-w-md">
-              Leading technology solutions provider helping businesses transform their digital
-              infrastructure with cutting-edge AI and IT services.
+            <p className="text-gray-300">
+              Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology and innovative digital transformation services.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Facebook className="w-5 h-5" />
+                <Facebook className="h-5 w-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter className="w-5 h-5" />
+                <Twitter className="h-5 w-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="h-5 w-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Github className="w-5 h-5" />
+                <Github className="h-5 w-5" />
               </a>
             </div>
           </div>
-
+          
           {/* AI Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 flex items-center">
-              <Brain className="w-5 h-5 mr-2 text-blue-400" />
-              AI Services
-            </h3>
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">AI Services</h3>
             <ul className="space-y-2">
               {aiServices.map((service) => (
                 <li key={service.name}>
-                  <Link
-                    href={service.url}
-                    className="text-gray-300 hover:text-white transition-colors block"
-                  >
+                  <Link href={service.url} className="text-gray-300 hover:text-white transition-colors">
                     {service.name}
                   </Link>
                 </li>
@@ -102,15 +91,12 @@ const Footer: React.FC = memo(() => {
           </div>
 
           {/* IT Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">IT Services</h3>
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">IT Services</h3>
             <ul className="space-y-2">
               {itServices.map((service) => (
                 <li key={service.name}>
-                  <Link
-                    href={service.url}
-                    className="text-gray-300 hover:text-white transition-colors block"
-                  >
+                  <Link href={service.url} className="text-gray-300 hover:text-white transition-colors">
                     {service.name}
                   </Link>
                 </li>
@@ -118,34 +104,34 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
 
-          {/* Company */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
+          {/* Company & Resources */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Company</h3>
             <ul className="space-y-2">
-              {companyLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.url}
-                    className="text-gray-300 hover:text-white transition-colors block"
+              {company.map((item) => (
+                <li key={item.name}>
+                  <Link 
+                    href={item.url}
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
                   >
-                    {link.name}
+                    {item.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Support */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+            <h3 className="text-white font-semibold mb-4">Support</h3>
             <ul className="space-y-2">
-              {resourceLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.url}
-                    className="text-gray-300 hover:text-white transition-colors block"
+              {support.map((item) => (
+                <li key={item.name}>
+                  <Link 
+                    href={item.url}
+                    className="text-gray-300 hover:text-white transition-colors text-sm"
                   >
-                    {link.name}
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -154,56 +140,32 @@ const Footer: React.FC = memo(() => {
         </div>
 
         {/* Contact Info */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex items-center space-x-3">
-              <Phone className="w-5 h-5 text-blue-400" />
-              <div>
-                <p className="text-sm text-gray-400">Phone</p>
-                <p className="text-white">+1 (555) 123-4567</p>
-              </div>
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-300">
+            <div className="flex items-center space-x-2">
+              <Phone className="h-4 w-4" />
+              <span>+1 (555) 123-4567</span>
             </div>
-            <div className="flex items-center space-x-3">
-              <Mail className="w-5 h-5 text-blue-400" />
-              <div>
-                <p className="text-sm text-gray-400">Email</p>
-                <p className="text-white">info@ziontechgroup.com</p>
-              </div>
+            <div className="flex items-center space-x-2">
+              <Mail className="h-4 w-4" />
+              <span>info@ziontechgroup.com</span>
             </div>
-            <div className="flex items-center space-x-3">
-              <MapPin className="w-5 h-5 text-blue-400" />
-              <div>
-                <p className="text-sm text-gray-400">Address</p>
-                <p className="text-white">123 Tech Street, Silicon Valley, CA 94000</p>
-              </div>
+            <div className="flex items-center space-x-2">
+              <MapPin className="h-4 w-4" />
+              <span>San Francisco, CA</span>
             </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <div className="flex items-center space-x-4 mb-4 md:mb-0">
-            <p className="text-gray-400 text-sm">
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </p>
-          </div>
-          <div className="flex space-x-6">
-            {legalLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.url}
-                className="text-gray-400 hover:text-white text-sm transition-colors"
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
+        {/* Copyright */}
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+          <p>&copy; {currentYear} Zion Tech Group. All rights reserved.</p>
         </div>
       </div>
     </footer>
-  )
-})
+  );
+};
 
-Footer.displayName = 'Footer'
+Footer.displayName = 'Footer';
 
-export default Footer
+export default Footer;

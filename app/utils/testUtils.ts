@@ -98,7 +98,7 @@ export const mockWindow = (overrides: Partial<Window> = {}): void => {
         ...global.window,
         ...overrides
       },
-      writable: true
+      writable: true,
     })
   }
 }
@@ -119,7 +119,7 @@ export const createMockPerformance = (): Performance => {
         toJSON: () => ({})
       } as PerformanceEntry)
     },
-    measure: (name: string, _startMark?: string, _endMark?: string) => {
+    measure: (name: string, startMark?: string, endMark?: string) => {
       entries.push({
         name,
         entryType: 'measure',
@@ -206,15 +206,12 @@ export class ConsoleSpy {
   }
 
   private mock(): void {
-     
     console.log = (...args: unknown[]) => {
       this.logs.push(args.map(String).join(' '))
     }
-     
     console.error = (...args: unknown[]) => {
       this.errors.push(args.map(String).join(' '))
     }
-     
     console.warn = (...args: unknown[]) => {
       this.warnings.push(args.map(String).join(' '))
     }
@@ -233,7 +230,9 @@ export class ConsoleSpy {
   }
 
   restore(): void {
-    Object.assign(console, this.originalConsole)
+    console.log = this.originalConsole.log
+    console.error = this.originalConsole.error
+    console.warn = this.originalConsole.warn
   }
 
   clear(): void {
@@ -296,7 +295,7 @@ export const measureExecutionTime = async <T>(
   return { result, duration }
 }
 
-const testUtils = {
+export default {
   wait,
   waitFor,
   mockFetch,
@@ -311,5 +310,3 @@ const testUtils = {
   retryWithBackoff,
   measureExecutionTime
 }
-
-export default testUtils

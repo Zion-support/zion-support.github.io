@@ -122,7 +122,7 @@ export function sanitizeInput(inpu)
           )
           <>]/g, '') // Remove
           < and >
-
+</>
     .replace(/javascript:/gi, '') // Remove javascript: protocol,
 
     .replace(/on\w+\s*=/gi, '') // Remove event handlers

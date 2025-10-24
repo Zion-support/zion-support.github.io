@@ -3,7 +3,8 @@
  * Data Validation Utility
  * Provides comprehensive data validation with type safety
  */
-export interface ValidationRule<T = unknown> {
+export interface ValidationRule<T = unknown></T>
+                {
     validate: (value: T) => boolean,
   message: string
   }
@@ -16,10 +17,10 @@ export interface FieldRule {
   maxLength?: number,
   custom?: (value: unknown) => boolean
   }
-export type ValidationRules = Record<string>
+export type ValidationRules = Record<string></string>
 export interface ValidationResult {
     isValid: boolean,
-  errors: Record<string, string[]>
+  errors: Record<string, string[]></string,>
   }
 export class ValidationError extends Error {
     constructor(
@@ -34,7 +35,8 @@ export class ValidationError extends Error {
  * Provides comprehensive data validation with type safety,
  */
 
-export interface ValidationRule<T = unknown> {// TODO: Add content
+export interface ValidationRule<T = unknown></T>
+                {// TODO: Add content
   }
 }
   validate: (value: T) => boolean,,
@@ -54,7 +56,7 @@ export interface FieldRule {
 
 }
 export type ValidationRules = Record
-          <string>
+          <string></string>
 export interface ValidationResult {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -62,7 +64,7 @@ export interface ValidationResult {/* TODO: Fix JSX expression */}
   d: boolean,,
     error,
   s: Record,
-          <string>
+          <string></string>
 }
 export class ValidationError extends Error {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -304,8 +306,10 @@ let clean = html.replace(/
 export function createCustomValidator<T>(
   validator: (value: T) => boolean,
   message: string
-): (value: T) => { isValid: boolean, errors: string[] } {
-  return (value: T) => {
+): (value: T) =>
+                { isValid: boolean, errors: string[] } {
+  return (value: T) =>
+                {
     const isValid = validator(value),
     return {
       isValid,
@@ -324,13 +328,15 @@ export function createCustomValidator,
           <T>()
 
   validator: (value: T) => boolean,
-  message: string): (value: T) => { isValid: boolean, errors: string[] } {
+  message: string): (value: T) =>
+                { isValid: boolean, errors: string[] } {
     // TODO: Add content
   }
 
 }
   return (valu)
-  e: T) => {/* TODO: Fix JSX expression */}
+  e: T) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     const isValid = validator(value)
@@ -431,7 +437,8 @@ export function validateForm<T extends Record<string, unknown>>(
  */
 export const ValidationRulesBuilder = {
     required: <T>(): ValidationRule<T> => ({
-    validate: (value: T) => {
+    validate: (value: T) =>
+                {
  * Validate form data,
  */
 export function validateForm<T extends Record<string, unknown>>()
@@ -514,7 +521,8 @@ export const ValidationRulesBuilder = {
 }
   validat,
   e: (valu)
-  e: T) => {/* TODO: Fix JSX expression */}
+  e: T) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       if (value === null || value === undefined) return false
@@ -688,7 +696,8 @@ class DataValidator {/* TODO: Fix JSX expression */}
   isArray(value: unknown): value is unknown[] {
     return Array.isArray(value)
   }
-  isObject(value: unknown): value is Record<string, unknown> {
+  isObject(value: unknown): value is Record<string, unknown></string,>
+                {
     return typeof value === 'object' && value !== null && !Array.isArray(value)
   }
   matchesPattern(value: string, pattern: RegExp): boolean {
@@ -705,7 +714,8 @@ export const dataValidator = DataValidator.getInstance()
   }
   isObject(valu)
   e: unknown): value is Record,
-          <string, unknown> {/* TODO: Fix JSX expression */}
+          <string, unknown></string,>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     return typeof value === 'object' && value !== null && !Array.isArray(value)

@@ -35,7 +35,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         document.head.appendChild(script);
 
         // Initialize gtag
-        const gtagFunction = function(..._args: unknown[]) {
+        const gtagFunction = function(...args: unknown[]) {
           ((window as unknown as { gtag: { q?: unknown[] } }).gtag.q = (window as unknown as { gtag: { q?: unknown[] } }).gtag.q || []).push(args);
         };
         (window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag = (window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag || gtagFunction;
@@ -63,8 +63,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   const identify = (_userId: string, _traits?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
-      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
-        (window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
+      const gtag = (window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag;
+      if (gtag) {
+        gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
           user_id: _userId,
           custom_map: _traits
         });
@@ -80,8 +81,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   const page = (_name: string, _properties?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
-      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
-        (window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag('event', 'page_view', {
+      const gtag = (window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag;
+      if (gtag) {
+        gtag('event', 'page_view', {
           page_title: _name,
           page_location: window.location.href,
           ..._properties
