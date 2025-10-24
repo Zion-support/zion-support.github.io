@@ -1,44 +1,54 @@
 import React from 'react';
-import { Helmet } from "react-helmet-async";
+import { ArrowRight, Mail, MapPin } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-const AiAutomationPage = () => {
+const AIAutomationPage: React.FC = () => {
   return (
-    <>
-      <Helmet>
-        <title>AI Automation - Zion Tech Group</title>
-        <meta name="description" content="AI Automation services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="ai-automation, AI solutions, IT services" />
-      </Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                AI Automation
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional AI automation services by Zion Tech Group.
-            </p>
-          </div>
+      <main className="container mx-auto px-4 py-16 pt-24">
+        <section className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
+            AI Automation
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Revolutionary AI-powered automation solutions for modern businesses
+          </p>
+        </section>
 
-          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300 mb-6">
-              We're working on bringing you comprehensive AI automation solutions. 
-              Contact us to learn more about our services.
+        <section className="mb-16">
+          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Contact us today for a free consultation and discover how our solutions can help your business.
             </p>
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-              Contact Us
-            </button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
+              >
+                <Mail className="w-5 h-5 mr-2" />
+                Get Free Consultation
+              </a>
+              <a
+                href="tel:+13024640950"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+              >
+                <MapPin className="w-4 h-4 mr-2" />
+                (302) 464-0950
+              </a>
+            </div>
           </div>
-        </div>
+        </section>
       </main>
-      
-      <Footer /></Footer>
+
+      <Footer />
     </div>
   );
 };
 
-export default Page;
+export default AIAutomationPage;

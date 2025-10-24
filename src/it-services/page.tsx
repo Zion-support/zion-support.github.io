@@ -1,4 +1,8 @@
 import React from 'react';
+import { Cloud, Shield, Server, Database, Smartphone, Lock, BarChart, Users, Phone, ArrowRight, CheckCircle } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
 
 const pagePage = () => {
   return (
@@ -203,35 +207,41 @@ const pagePage = () => {
                 Contact Sales
               </a>
             </div>
+          </section>
+
+        {/* Contact Section */}
+        <section className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Transform Your IT Infrastructure?
+          </h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Get a free consultation and discover how our IT services can optimize your business operations.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="/contact"
+              className="bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors inline-flex items-center"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Get Free Consultation
+            </a>
+            <a
+              href="tel:+13024640950"
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+            >
+              <Phone className="w-4 h-4 mr-2" />
+              (302) 464-0950
+            </a>
+          </div>
+          <div className="mt-8 text-sm text-gray-400">
+            <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
         </section>
+      </main>
 
-        {/* CTA Section */}
-        <section className="text-center">
-          <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-2xl p-8">
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to Optimize Your IT Infrastructure?</h2>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Get a free IT assessment and discover how our services can improve your technology infrastructure and reduce costs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
-              >
-                Get Free IT Assessment
-              </a>
-              <a
-                href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                (302) 464-0950
-              </a>
-            </div>
-          </div>
-          </section>
-        </main>
-        <Footer />
-      </div>
+      <Footer />
+    </div>
+    </>
   );
 };
 
