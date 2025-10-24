@@ -16,6 +16,7 @@
   }
 }
 
+<<<<<<< HEAD
 @keyframes neon-pulse {
   0%, 100% {
     box-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor, 0 0 20px currentColor;
@@ -2115,3 +2116,14 @@ button:focus-visible {
     height: auto !important;
   }
 }
+=======
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-57e4
