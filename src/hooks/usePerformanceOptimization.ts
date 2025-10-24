@@ -1,4 +1,4 @@
-"use client"
+import { useState, useEffect } from 'react';
 
 import { useEffect"", useCallback, useRef } from 'react''',
 

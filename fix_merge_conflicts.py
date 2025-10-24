@@ -19,9 +19,11 @@ def fix_merge_conflicts_in_file(file_path):
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Check if file has merge conflicts
-        if '<<<<<<< HEAD' not in content:
+        # Skip if file is too small or doesn't contain merge conflicts
+        if len(content) < 50 or '<<<<<<< HEAD' not in content:
             return False
+            
+        print(f"Fixing merge conflicts in: {file_path}")
         
         print(f"Fixing merge conflicts in: {file_path}")
         

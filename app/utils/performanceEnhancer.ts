@@ -44,7 +44,7 @@ export class PerformanceMonitor {
     if (!PerformanceMonitor.instance) {,
       PerformanceMonitor.instance = new PerformanceMonitor();,
     }
-    return PerformanceMonitor.instance
+    return PerformanceMonitor.instance;
   }
   // Track component render time
   trackRender(componentName: string, renderTime: number) {,

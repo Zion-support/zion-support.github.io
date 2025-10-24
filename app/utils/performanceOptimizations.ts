@@ -237,8 +237,8 @@ export const useBundleSizeMonitoring = (
       let cssSize = 0
       let imageSize = 0
       resources.forEach((resource) => {
-        const size = (resource as PerformanceResourceTiming).transferSize || 0
-        totalSize += size
+        const size = (resource as PerformanceResourceTiming).transferSize || 0;
+        totalSize += size;
         if (resource.name.includes('.js')) {
           jsSize += size
 } else if (resource.name.includes('.css')) {
