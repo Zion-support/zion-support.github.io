@@ -2,8 +2,59 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
-import Footer from '@/components/Footer';
+import { ArrowRight, CheckCircle, Search, Users, Wrench, BarChart3 } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer.tsx';
+
+export default function AccessibilityPage() {
+  const stats = [
+    { number: '1B+', label: 'People with disabilities worldwide' },
+    { number: '71%', label: 'Leave sites with poor accessibility' },
+    { number: '$6.9B', label: 'Lost revenue from accessibility issues' },
+    { number: '15%', label: 'Of the global population has disabilities' }
+  ];
+
+  const features = [
+    {
+      title: 'Automated Testing',
+      description: 'AI-powered accessibility testing that identifies issues in real-time.',
+      icon: Search,
+      benefits: ['WCAG 2.1 compliance', 'Real-time monitoring', 'Automated reports']
+    },
+    {
+      title: 'Manual Audits',
+      description: 'Expert accessibility audits by certified professionals.',
+      icon: Users,
+      benefits: ['Expert analysis', 'Detailed recommendations', 'Compliance certification']
+    }
+  ];
+
+  const services = [
+    {
+      title: 'Basic Audit',
+      description: 'Essential accessibility check',
+      price: '$299',
+      icon: CheckCircle
+    },
+    {
+      title: 'Comprehensive Audit',
+      description: 'Full accessibility assessment',
+      price: '$799',
+      icon: Search
+    },
+    {
+      title: 'Implementation',
+      description: 'Fix accessibility issues',
+      price: '$1,999',
+      icon: Wrench
+    },
+    {
+      title: 'Ongoing Support',
+      description: 'Continuous accessibility monitoring',
+      price: '$199/mo',
+      icon: BarChart3
+    }
+  ];
 
   return (
     <>
@@ -132,7 +183,5 @@ import Footer from '@/components/Footer';
 
       <Footer />
     </>
-  )
+  );
 }
-
-export default AccessibilityPage

@@ -1,5 +1,5 @@
 import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import Footer from '../components/Footer.tsx'
 
 export default function ContactPage() {
   return (

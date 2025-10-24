@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer from '../components/Footer.tsx';
 import { BarChart, TrendingUp, FileText, Brain, CheckCircle, ArrowRight } from 'lucide-react';
 
 const AIAutomatedReportingPage: React.FC = () => {

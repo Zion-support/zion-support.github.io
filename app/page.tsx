@@ -3,8 +3,9 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-import Footer from '@/components/Footer';
+import Footer from './components/Footer';
 
+export default function HomePage() {
   return (
     <>
       <Head>
@@ -12,82 +13,56 @@ import Footer from '@/components/Footer';
         <meta name="description" content="Professional services by Zion Tech Group." />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1>Zion Tech Group - AI & IT Solutions</h1>
-          <p>Professional zion tech group - ai & it solutions services coming soon.</p>
-          <Link href="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
-            <p className="text-xl text-gray-600">
-              Comprehensive solutions to accelerate your digital transformation
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              AI & IT Solutions
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with cutting-edge AI, cloud architecture, cybersecurity, and innovative development services.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+              >
+                Contact Us
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <feature.icon className="h-8 w-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                <p className="text-gray-600 mb-4">{feature.description}</p>
-                <Link 
-                  href={feature.href}
-                  className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
-                >
-                  Learn More
-                  <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+              <p className="text-xl text-gray-600">
+                Comprehensive solutions to accelerate your digital transformation
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white rounded-lg p-6 shadow-lg">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">AI Solutions</h3>
+                <p className="text-gray-600">Advanced artificial intelligence solutions for modern businesses.</p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
-                <div className="text-gray-600">{stat.label}</div>
+              <div className="bg-white rounded-lg p-6 shadow-lg">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Web Development</h3>
+                <p className="text-gray-600">Custom web applications built with modern technologies.</p>
               </div>
-            ))}
+              <div className="bg-white rounded-lg p-6 shadow-lg">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Cloud Services</h3>
+                <p className="text-gray-600">Scalable cloud infrastructure and migration services.</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-blue-600">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our solutions can help you achieve your goals.
-          </p>
-          <Link 
-            href="/contact" 
-            className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
-          >
-            Start Your Project
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-      </section>
-
-      <Footer />
+        <Footer />
+      </div>
     </>
   );
 }

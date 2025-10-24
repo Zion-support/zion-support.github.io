@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer from '../components/Footer.tsx';
 import { Shield, Zap, Globe, BarChart } from 'lucide-react';
 
 const AIApiManagerPage: React.FC = () => {

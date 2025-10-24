@@ -5,7 +5,7 @@ import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle   } from "
 import Navigation from '../components/Navigation';
 
 <<<<<<< HEAD
-import Footer from '../components/Footer';
+import Footer from '../components/Footer.tsx';
 const AdvancedPerformanceMonitorPage: React.FC = () => {,
   const features = [
     {

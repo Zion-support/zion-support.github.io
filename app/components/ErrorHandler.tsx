@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from '../components/Footer';
+import Footer from '../components/Footer.tsx';
 import Navigation from '../components/Navigation';
 import { CheckCircle, Brain, BarChart, Target, ArrowRight } from 'lucide-react';
 

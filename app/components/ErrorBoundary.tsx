@@ -5,7 +5,7 @@ import React, { Component, ReactNode, ErrorInfo } from 'react';
 
 
 
-import Footer from '@/components/Footer';interface Props {
+import Footer from '../components/Footer.tsx';interface Props {
   children: ReactNode;,
 }
 

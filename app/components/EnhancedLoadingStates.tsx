@@ -3,7 +3,7 @@ import React from 'react';
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import Footer from '../components/Footer.tsx'
 
 const EnhancedLoadingStates: React.FC = ($2) => {
 $3
