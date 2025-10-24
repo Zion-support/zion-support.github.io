@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import Link from 'next/link;
+import Link from 'next/link';
 export default function AboutPage() {
   const values = [
     {
@@ -308,35 +308,21 @@ We strive for excellence in, every, project,delivering solutions that exceed exp
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 bg-slate-900"></section>
-        <h2 className="text-4xl md: text-5xl font-bold text-white mb-8"></;h;2;>;
-              Ready to Work With Us?</h2>
-            </h2>
-            <p className="text-xl text-gray-300 mb-12"></p>
-              Let&apos;s discuss how we can help transform your business with our technology solutions</p>
-            </p>
-            
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></d;i;v;>;
-              <Link ;
-                href="/contact" 
-                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2";
-              ></Link>
-                Get In Touch</Link>
-                <ArrowRightIcon className="w-5 h-5" /></ArrowRightIcon>
-              </Link>
-              <Link ;
-                href="/services" 
-                className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-purple-400 h;o;v;e;
-  r: text-white transition-all duration-300 flex items-center justify-center gap-2";
-              ></Link>
-                View Our Services</Link>
-                <ArrowRightIcon className="w-5 h-5" /></ArrowRightIcon>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-</div>
+<section className="py-20 bg-slate-900" />,
+    <div className="container mx-auto px-4" /></div>,
+    <div className="max-w-4 xl mx-auto text-center" /></div>,
+    <h1 className="text-4 xl md: text-5 xl font-bold text-white mb-8" /></h2>
+Ready to Work With Us?</h2>/h2>p className="text-xl text-gray-300 mb-12" /></p>
+Let&apos;s discuss how we can help transform your business with our technology solutions</p>/p>,<div className="flex flex-col sm: flex-row gap-4 justify-center" />
+      <Linkhre f="/contact"
+className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2" />
+Get In Touch
+      </Link>/div>ArrowRightIconclassNam e="w-5 h-5" / />
+              </Link>Linkhre f="/services"
+className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hove,"
+r: text-white transition-all duration-300 flex items-center justify-center gap-2" />
+View Our Services</Link>ArrowRightIconclassNam e="w-5 h-5" / />
+              </Link>/div>/div>/div>/section>/div>
   );
 }
 <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900" />,"

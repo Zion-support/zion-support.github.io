@@ -1,7 +1,7 @@
-'use client';
-'use client';
-import React, { useEffect } from "react;
-import { Helmet } from 'react-helmet-async;
+'use client'
+"use client";
+import React, { useEffect } from 'react';
+import { Helmet     } from 'react-helmet-async';
 :all-pages-backup/components/SEOOptimizer.tsx
 interface SEOOptimizerProps {
 "
@@ -231,4 +231,4 @@ export default SEOOptimizer;
 export default SEOOptimizerPage;
 }
 export default SEOOptimizerPage;
-}"'"
+}

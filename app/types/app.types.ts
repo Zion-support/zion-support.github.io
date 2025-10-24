@@ -6,9 +6,7 @@ id: "string;
   role: 'admin' | 'user' | 'guest'"
 ",
 }
-}"
-export interface Service  {
-  "
+export interface AnalyticsEvent {
 ;
 id: "string;
   title: string;
@@ -66,7 +64,7 @@ timestamp?: string;
 userId?: string;
 sessionId?: string;
 component?: string;
-action?: string;
+action?: string
 }
 }"
 export interface ErrorReport {"

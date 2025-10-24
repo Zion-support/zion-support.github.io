@@ -25,9 +25,9 @@ return(</OptimizedImageProps>
       width = {width,;}
       height = {height,;}
       className={className}
-      data-testid = {testId,;}
-      {...props;} />)
-  );
-};
+      data-testid={testId}
+      {...props} />
+  )
+}
 ;
-export default OptimizedImage;</Image>"
+export default OptimizedImage;</Image>

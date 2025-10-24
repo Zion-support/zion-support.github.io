@@ -1,10 +1,10 @@
 'use client"
 :all-pages-backup/components/AdvancedPerformanceMonitor.tsx;
 import React from 'react';
-import { Helmet } from 'react-helmet-async;
-import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react;
-import Navigation from '../components/Navigation;
-import Footer from '../components/Footer;
+import { Helmet     } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle     } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 import React from 'react';
 import { Helmet } from 'react-helmet-async;
 import { ArrowRight, Target, CheckCircle, BarChart, Brain, TrendingUp } from 'lucide-react;
@@ -121,32 +121,38 @@ Powerful AI-driven features designed to transform your business operations</p>"
                   </ul>
                     </div>
               ))}
-                </div>
-              </div>
-        </section>"
-"
-        {/* Benefits Section */}"
-        <section className="py-20 px-4 b g-white/5" />,"
-    <div className="max-w-7 x lmx-auto" />,"
-    <div className="tex t-centermb-16" />,"
-    <h1 className="tex t-4 xlfont-bold text-white mb-4">Why Choose Our Solution?</h2>"
-              <p className="tex t-xltext-gray-300 max-w-3 xl mx-auto" />
-Experience the power of AI-driven performance monitoring</p>"
-              </p>"
-                </div>,"
-    <divclassName="gri dmd: "grid-cols-2 l",g: grid-cols-3 gap-8" / />"
-              {benefits.map((benefit,index) => (    "
-      <divkey = {index,;} className = "fle xitems-start space-x-3" / />"
-    </div>"
-                  <CheckCircle className="h-6 w-6 te x t-emerald-400 mt-1 flex-shrink-0" />"
-                  <p className="tex t-gray-300 text-lg">{benefit,;}</p>
-                    </div>
-              ));}
-                </div>
-              </div>
-        </section>"
-"
-        {/* CTA Section */;
+                </div>/div>/section>
+        {/* Benefits Section */}
+        <section className="py-20 px-4 b g-white/5" />,
+    <div className="max-w-7 x lmx-auto" />
+      </div>,
+    <div className="tex t-centermb-16" /></div>,
+    <h1 className="tex t-4 xlfont-bold text-white mb-4">Why Choose Our Solution?</h2>p className="tex t-xltext-gray-300 max-w-3 xl mx-auto" /></p>
+Experience the power of AI-driven performance monitoring</p>/p>/div>,
+    <div className="gri dmd: grid-cols-2 l,g: grid-cols-3 gap-8" /></div>
+              {benefits.map((benefit,index) => (    
+      <div key={index} className="fle xitems-start space-x-3" />
+      </div>/div>CheckCircleclassNam e="h-6 w-6 te x t-emerald-400 mt-1 flex-shrink-0" / />
+                  <p className="tex t-gray-300 text-lg">{benefit}</p>/div>
+              ))}
+                </div>/div>/section>
+        {/* CTA Section */}
+        <section className="py-20 px-4" />,
+    <div className="max-w-4 x lmx-auto text-center" /></div>,
+    <h1 className="tex t-4 xlfont-bold text-white mb-6" /></h2>
+Ready to Transform Your Business?</h2>/h2>p className="tex t-xltext-gray-300 mb-8" /></p>
+Join thousands of businesses already using our AI-powered solutions</p>/p>,
+    <div className="fle xflex-col sm: flex-row gap-4 justify-center" /></div>button className="bg-em erald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" />
+Start Free Trial</button>ArrowRightclassNam e="ml-2 h-5 w-5" / />
+              </button>button className="bor derborder-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
+Contact Sales</button>/button>/div>/div>/section>
+:all-pages-backup/components/AdvancedPerformanceMonitor.tsx
+        <title>5 G Implementation - Zion Tech Group</</title>meta name="description" content="Professional 5 G implementation services for enterprise solutions." / / />,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /></div>,
+    <div className="container mx-auto px-4 py-16" /></div>,
+    <h1 className="text-4 xl font-bold text-white mb-6">5 G Implementation</h1>p className="text-lg text-gray-300 mb-8">Professional 5 G implementation services for enterprise solutions.</p>Linkhre f="/contact"
+className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hove,r: bg-blue-700 transition-colors" />
+Contact Us</Link>ArrowRightclassNam e="ml-2 h-4 w-4" / />
+          </Link>/div>/div>/div>,)
 }
         <section className="py-20 px-4" />,"
     <div className="max-w-4 x lmx-auto text-center" />,"

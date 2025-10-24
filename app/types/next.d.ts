@@ -1,5 +1,5 @@
-
-// Type definitions for Next.js compatibility
+// Type definitions for Next.js compatibility;
+;
 export interface Metadata {
   title?: string
   description?: string
@@ -85,13 +85,90 @@ changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly
 priority?: number",
 }
 export interface MetadataRoute {
-  url:  ; ;s;t;r;i;n;g;
-  lastModified?: string | Date
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
-  priority?: number
-
-
-
+;
+url: string;
+lastModified?: string | Date;
+changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+priority?: number,
+}
+};
+export interface MetadataRouteSitemap extends MetadataRoute {;
+url: string,lastModified?: string | Date;
+changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never',;
+priority?: number,
+}
+// Custom Next.js types;
+export interface NextPageProps {
+}
+  params: { [ke,y: string]: string ,};
+  searchParams: { [ke,y: string]: string | string[] | undefined ,}
+}
+// API route types;
+export interface ApiRouteHandler {
+}</string>
+  (req: Request): Promise<Response>,};
+// Server components types;
+export interface ServerComponentProps {
+}
+  params: { [ke,y: string]: string ,};
+  searchParams: { [ke,y: string]: string | string[] | undefined ,}
+}
+// Client components types;
+;
+export interface ClientComponentProps {
+;
+children?: React.ReactNode;
+className?: string
+}
+};
+// Route handlers;
+export interface RouteHandler {
+</Response>;
+GET?: (req: Request) => Promise<Response />;
+POST?: (req: Request) => Promise<Response />;
+PUT?: (req: Request) => Promise<Response>;
+DELETE?: (re,</Response>;
+q: Request) => Promise<Response>,
+}</Response>;
+PATCH?: (req: Request) => Promise<Response>,};
+// Dynamic route types;
+export interface DynamicRoute {
+}
+  params: { [ke,y: string]: string ,};
+}
+// Static generation types;
+export interface StaticProps {
+}
+  props: { [ke,y: string]: any ,};
+  revalidate?: number;
+notFound?: boolean
+}
+// ISR types;
+;
+export interface ISRConfig {
+;
+revalidate: number;
+tags?: string[],
+}
+};
+// Edge runtime types;
+export interface EdgeRuntime {
+}
+  runtime: 'edge',};
+// Node.js runtime types;
+export interface NodeRuntime {
+}
+  runtime: 'nodejs',};
+// Extend Next.js types;
+declare module 'next' {;
+interface NextApiRequest {
+;
+user?: {;
+id: string,email: string;
+name?: string,
+}
+};
+  }
 }
 };
 export interface MetadataRouteSitemap extends MetadataRoute {

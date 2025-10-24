@@ -1,27 +1,42 @@
-import { useEffect } from 'react';
-
-export interface PerformanceMetrics {
-  loadTime:  ; ; ;n;u;m;b;e;r;
-  domContentLoaded:  ; ; ;n;u;m;b;e;r;
-  firstPaint:  ; ; ;n;u;m;b;e;r;
-  firstContentfulPaint:  ; ; ;n;u;m;b;e;r;
-  largestContentfulPaint:  ; ; ;n;u;m;b;e;r;
-  cumulativeLayoutShift:  ; ; ;n;u;m;b;e;r;
-  firstInputDelay:  ; ; ;n;u;m;b;e;r;
-
-
-
-
+// Performance monitoring utilities;
+export interface PerformanceMetric {
+;
+name: string;
+  value: number;
+  timestamp: number;
+  ur,l: string;,
 }
-
-export class PerformanceMonitor {
-  private static instance: PerformanceMon;i;t;o;r;
-  private metrics: PerformanceMetrics | null = ;n;u;l;l;
-  private observers: ((metrics: PerformanceMetrics) => void)[] ;=; ;[;];
-
-  static getInstance(): PerformanceMonitor {
-    if (!PerformanceMonitor.instance) {
-      PerformanceMonitor.instance = new PerformanceMonitor();
+}
+;
+class PerformanceMonitor {;
+private metrics: PerformanceMetric[] = [];
+  private isEnable,d: boolean;
+;
+constructor() {,this.isEnabled = typeof window !== "undefined" && "performance" in window;,
+  }
+  // Measure page load time;
+measurePageLoad(): number | null {;
+if (!this.isEnabled) return null;
+;
+const navigation = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming;
+    if (!navigation) return null;
+;
+const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+    this.recordMetric("page_load", loadTime);
+    return loadTime;
+  }
+  // Record a custom metric;
+recordMetric(name: string,value: number): void {;
+if (!this.isEnabled) return;
+;
+const metri,c: PerformanceMetric = {;
+name,value,;
+timestamp: Date.now(),url: window.location.href,};
+;
+this.metrics.push(metric);
+    // Send to analytics in production;
+if (process.env.NODE_ENV === "production") {;
+this.sendToAnalytics(metric);
     }
     return PerformanceMonitor.instance;
   }
@@ -94,38 +109,6 @@ value: "Math.round(metric.value)",});
     };
   }
 }
-
-export const usePerformanceMetrics = () => {
-  const monitor = PerformanceMonitor.getInstance();
-  
-  useEffect(() => {
-    monitor.measurePerformance();
-  }, [monitor]);
-
-  return monitor;
-};
-
-export const debounce = <T extends (...args: any[]) => an;y;>;(;
-  func:  ; ; ; ;T,
-  wait: num;b;e;r;
-): ((...args: Parameters<T>) => void) =;>; ;{;
-  let timeout: NodeJS.Tim;e;o;u;t;
-  return (...args: Parameters<T>) =;>; ;{;
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
-  };
-};
-
-export const throttle = <T extends (...args: any[]) => an;y;>;(;
-  func:  ; ; ; ;T,
-  limit: num;b;e;r;
-): ((...args: Parameters<T>) => void) =;>; ;{;
-  let inThrottle: boo;l;e;a;n;
-  return (...args: Parameters<T>) =;>; ;{;
-    if (!inThrottle) {
-      func(...args);
-      inThrottle = true;
-      setTimeout(() => inThrottle = false, limit);
-    }
-  };
-};
+// Export singleton instance;
+export const performanceMonitor = new PerformanceMonitor();
+}

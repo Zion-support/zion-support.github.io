@@ -270,3 +270,4 @@ console.log('Performance metrics: "'",{)}"'"
 // Singleton instance
 const monitoring = new MonitoringService()
 export default monitoring;
+}

@@ -1,11 +1,11 @@
 import { useState, useCallback } from 'react';
-
-interface FormState<T /> {
-  data:  ; ; ;T;
-  isSubmitting: bool;e;a;n;
-  submitStatus: "idle" | "success" | "er;r;o;r;";
-  error,</T>
-  s: Partial<Record<key;o;f; ;T, string />>;
+;
+interface FormState<T /> {;
+data: T;
+  isSubmitting: boolean;
+  submitStatus: "idle" | "success" | "error";
+  error,</T>;
+s: Partial<Record<keyof T,string />>;
 }
 </Record>
 interface UseFormOptions<T /> {
@@ -103,6 +103,5 @@ handleInputChange,;
 handleSubmit,;
 resetForm,}
   };
-}</HTMLInputElement>"
-"
-}"'"
+}</HTMLInputElement>
+}

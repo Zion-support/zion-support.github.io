@@ -1,4 +1,4 @@
-'use client;
+'use client';
 /**
 * SEO Enhancement Utilities
 * Tools to improve search engine optimization
@@ -139,20 +139,5 @@ export const generateRobotsTxt = (;
 return `User-agent: "*;
 ${allowAll ? 'Allow: /' : 'Disallo",w: "/'",) => {
 $3
-}
-;
-export const generateRobotsTxt = (;
-$3
-) => {"
-$3"
-,};
-Sitemap: "${sitemapUrl",}`
-}
-;
-export default{;
-generateMetaTags,;
-generateStructuredData,;
-generateSitemap,;
-generateRobotsTxt}"
 };
 }"'"

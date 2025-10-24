@@ -1,13 +1,11 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe } from 'lucide-react';
-import Navigation from '../components/Navigation';
-
-const EnhancedPerformanceMonitorPage: React.FC = () =;>; ;{;
-  const benefits = [
-    'Increase efficiency by up to 50%'
-    'Reduce costs by 30% with automation'
+import { Helmet     } from 'react-helmet-async';
+import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe     } from 'lucide-react';
+import Navigation from '../components/Navigation'
+const EnhancedPerformanceMonitorPage: React.FC = () => {
+const benefits = [
+    'Increase efficiency by up to 50%','Reduce costs by 30% with automation'
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
@@ -64,47 +62,21 @@ const EnhancedPerformanceMonitorPage: React.FC = () =;>; ;{;
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8"></secti;o;n;>;
-          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4";>;
-                Ready to Optimize Your Performance?
-              </h2>
-              <p className="text-xl text-purple-100 mb-8">
-                Get started with our enhanced performance monitoring solution today.
-              </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></d;i;v;>;
-                <button className="bg-white text-purple-600 hover: bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105";>
-        <Phone className="mr-2 h-5 w-5 inline" />
-                  Call Now
-                </button>
-                <button className="bg-white text-purple-600 hover: bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105";>
-        <Mail className="mr-2 h-5 w-5 inline" />
-                  Email Us
-                </button>
-              </div>
-            </div>
-        </section>"
-"
-        {/* Benefits Section */}"
-        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gray-800">,<div className="max-w-7 xl mx-auto" />,"
-    <div className="text-center mb-16" />,"
-    <h1 className="text-3 xl md: text-4 xl font-bold text-white mb-4"></h2>"
-Why Choose Our Performance Monitor?"
-              </h2>"
-              <p className="text-xl text-gray-300 max-w-3 xl mx-auto" />"
-Experience the benefits of advanced performance monitoring with our comprehensive solution."
-              </p>"
-              </div>,<div className="grid grid-cols-1 md: grid-cols-2 gap-6" />"
-              {benefits.map((benefit,index) => (;
-                <divkey = {index,;} className = "flex items-start space-x-3" />"
-                  <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />"
-                  <p className="text-gray-300 text-lg">{benefit,;}</p>
-                  </div>
-              ));}
-              </div>
-            </div>
-        </section>"
-"
-        {/* CTA Section */;
+        <section className="py-20 px-4 sm: px-6 lg:px-8">,<div className="max-w-4 xl mx-auto text-center"></div>,
+    <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2 xl p-8 md: p-12"></div>,<h1 className="text-3 xl md: text-4 xl font-bold text-white mb-4"></h2>
+Ready to Optimize Your Performance?
+              </h2>p className="text-xl text-purple-100 mb-8"></p>
+Get started with our enhanced performance monitoring solution today.
+              </p>,<div className="flex flex-col sm: flex-row gap-4 justify-center"></div>button className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  <PhoneclassNam e="mr-2 h-5 w-5 inline" />
+Call Now
+                </button>button className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  <MailclassNam e="mr-2 h-5 w-5 inline" />
+Email Us
+                </button>/div>/div>/div>/section>/div>/div>
+  )
+,}
+export default EnhancedPerformanceMonitorPage;
 }
         <section className="py-20 px-4 sm: px-6 lg:px-8">,<div className="max-w-4 xl mx-auto text-center" />,"
     <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2 xl p-8 md: p-12" />,<h1 className="text-3 xl md: text-4 xl font-bold text-white mb-4"></h2>"

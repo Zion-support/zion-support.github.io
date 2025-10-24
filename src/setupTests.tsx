@@ -32,4 +32,4 @@ This page is under development. Please check back soon for more information abou
 ,};
 };
 export default Page;
-}"'"
+}

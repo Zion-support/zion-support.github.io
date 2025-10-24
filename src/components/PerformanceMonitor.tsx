@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react"
+import React, { useEffect } from 'react'
 interface PerformanceMonitorProps {
 performanceData?: any
 ;}
@@ -337,7 +337,5 @@ return null;
 export default PerformanceMonitor;
 {}
 export default PerformanceMonitor;
-</divclassName>
-</h3 className>"
-</divclassName>"
-}}"'"
+</divclassName>/h3 className>/divclassName>
+}}

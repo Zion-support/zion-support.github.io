@@ -1,25 +1,25 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async;
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react;
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react;
-import { Phone, Mail, ArrowRight } from 'lucide-react;
-const EnhancedSEOOptimizerPage: "React.FC = () => {"
-const features = ["
-    {"'"
-ico",n: "Brain",title: "title",description: "description",benefits: "['Keyword optimization'",'Content analysis', 'Ranking predictions', 'Competitor insights"]"
-    }"
-  {"'"
-icon: "BarChart",title: "title",description: "description",benefits: "['Ranking tracking'",'Traffic analysis', 'Conversion metrics', 'ROI reporting"]"
-    }"
-  {"'"
-icon: "Target",title: "title",description: "description",benefits: "['Keyword research'",'Audience targeting', 'Content optimization', 'Link building"]"
-    }"
-  {"'"
-icon: "TrendingUp",title: "title",description: "description",benefits: "['Growth strategies'",'Market analysis', 'Competitive insights', 'ROI optimization"]
-    }"
-  ]"
-const benefits = ["'
+import { Helmet     } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp     } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe     } from 'lucide-react';
+import { Phone, Mail, ArrowRight     } from 'lucide-react';
+const EnhancedSEOOptimizerPage: React.FC = () => {
+const features = [
+    {
+icon: Brain, title: title, description: description, benefits: ['Keyword optimization','Content analysis', 'Ranking predictions', 'Competitor insights']
+    }
+  {
+icon: BarChart, title: title, description: description, benefits: ['Ranking tracking','Traffic analysis', 'Conversion metrics', 'ROI reporting']
+    }
+  {
+icon: Target, title: title, description: description, benefits: ['Keyword research','Audience targeting', 'Content optimization', 'Link building']
+    }
+  {
+icon: TrendingUp, title: title, description: description, benefits: ['Growth strategies','Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ]
+const benefits = [
     'Increase organic traffic by up to 300%'
     'Reduce SEO costs by 50% with automation'
     'Improve search rankings with AI insights'
@@ -99,26 +99,36 @@ Our proven track record and innovative approach deliver measurable results.</p>"
                 <p className="text-gray-700 text-lg">{benefit,}</p>
                 </div>
             ))}
-            </div>
-          </div>
-      </section>"
-"
-      {/* CTA Section */}"
-      <section className="py-20 px-4" />,"
-    <div className="max-w-4 xl mx-auto text-center" />,"
-    <h1 className="text-3 xl md: text-4 xl font-bold text-gray-900 mb-4"></h2>"
-Ready to Boost Your SEO Rankings?</h2>"
-          </h2>"
-          <p className="text-xl text-gray-600 mb-8" />"
-Let"s discuss how our SEO optimizer can help you achieve better search engine visibility.</p>"
-          </p>"
-          <button className="bg-blue-600, hove,r: bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center mx-auto">"
-Start Your Journey</button>"
-            <ArrowRight className="w-8 h-8" />
-          </button>
-          </div>
-      </section>
-    </div>,);
+            </div>,
+    <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot; / /></div>/div>/div>/section>,{/* Benefits Section */}
+      <section className="py-20 px-4 bg-white/5" />,
+    <div className="max-w-7 xl mx-auto" /></div>,
+    <div className="text-center mb-16" /></div>,
+    <h1 className="text-3 xl md: text-4 xl font-bold text-gray-900 mb-4"></h2>
+Why Choose Our SEO Optimizer?</h2>/h2>p className="text-xl text-gray-600 max-w-2 xl mx-auto"></p>
+Our proven track record and innovative approach deliver measurable results.</p>/p>/div>,<div className="grid grid-cols-1 md: grid-cols-2 l,g: grid-cols-3 gap-8"></div>
+            {benefits.map((benefit,index) => (  
+      <div key={index} className="flex items-start space-x-3" />
+      </div>/div>CheckCircleclassNam e="w-6 h-6 text-emerald-500 mt-1" / />
+                <p className="text-gray-700 text-lg">{benefit}</p>/div>
+            ))}
+            </div>/div>/section>
+      {/* CTA Section */}
+      <section className="py-20 px-4" />,
+    <div className="max-w-4 xl mx-auto text-center" /></div>,
+    <h1 className="text-3 xl md: text-4 xl font-bold text-gray-900 mb-4"></h2>
+Ready to Boost Your SEO Rankings?</h2>/h2>p className="text-xl text-gray-600 mb-8"></p>
+Let's discuss how our SEO optimizer can help you achieve better search engine visibility.</p>/p>button className="bg-blue-600 hove,r: bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center mx-auto">
+Start Your Journey</button>ArrowRightclassNam e="w-8 h-8" / />
+          </button>/div>/section>/div>,)
+}
+
+const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
 };
 ;
 export default EnhancedSEOOptimizerPage;

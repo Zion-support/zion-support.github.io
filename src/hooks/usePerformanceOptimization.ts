@@ -1,5 +1,5 @@
-'use client';
-import { useEffect, useCallback, useRef } from 'react;
+"use client";
+import { useEffect, useCallback, useRef } from 'react';
 ;
 interface PerformanceOptimizationOptions {;
 ;
@@ -196,7 +196,8 @@ link.setAttribute('crossorigin", value, as, string);
 link.setAttribute(key, value, as, string);, }
         }
       });
-document.head.appendChild(link)});
+document.head.appendChild(link);
+    })
   }, []);
 useEffect(() => {;
     // Initialize all optimizations;

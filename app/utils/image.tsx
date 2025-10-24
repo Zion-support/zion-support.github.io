@@ -1,5 +1,5 @@
-'use client'
-import React from 'react'
+'use client';
+import React from 'react';
 import React, { useState, useCallback } from 'react'
 interface ImageProps {
   src:  ; ;s;t;r;i;n;g;
@@ -118,39 +118,23 @@ if (hasError) {/* TODO: Fix JSX expression ;*;/;};
 className={`bg-gray-200 flex items-center justify-center ${className}`}
 style = {
 imageStyle
-};
-{...props})
->)
-<span className="text-gray-500text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</spa;n;>;);
-
+}
+{...props}),
+    <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>),</div>)
 {...props}
-></div>
-<span className="text-gray-500text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</sp;a;n;>;
-</div>
+></div>,
+    <span className="text-gray-500 text-sm"></span>span className="sr-only">Screen reader: </span>Failed to load image</span>,</div>
 return(<img
-return (<img>src = {src}
-alt = {alt}
-width = {width}
-height = {height}
+return (<img>src={src}
+alt={alt}
+width={width}
+height={height}
 className={className}
-style = {imageStyle}
-sizes = {sizes}'
-loading = {priority ? 'eager' : 'lazy'}
-onLoad = {handleLoad}
-onError = {handleError})
-{...props})
->)</img></img>"
->),"
-    <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: "</span>Failed to load image</span>)"
-"
-{...props"}"
->  </>
-    <span className="text-gray-500 text-sm" /><span className="sr-only">Screen reader: "</span>Failed to load image</span>
-  </div>
-return(<img)"
-return (<img />)";'"
-src={src"};alt = {alt};width = {width};height = {height};className={className};style = {imageStyle};sizes = {sizes};loading = {priority ? 'eager' : 'lazy'};onLoad = {handleLoad};onError = {handleError};{...props})
->)</img>
-}</>
-export default Image;</img>"
-}";`'"
+style={imageStyle}
+sizes={sizes}
+loading={priority ? 'eager' : 'lazy'}
+onLoad={handleLoad}
+onError={handleError}
+{...props}
+>)</img>/img>
+}

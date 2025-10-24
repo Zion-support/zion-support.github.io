@@ -90,13 +90,7 @@ Send Email;
     <span className="text-cyan-400">Fun Fact: "</span> Even our AI gets"
 confused sometimes. That"s why we have humans to help when things
 go wrong! 🤖
-            </p>
-              </div>
-            </div>
-          </div>"
-      </>"
-  )"
-",;
-}
-export default useAnalytics;
-};
+            </p>/div>/div>/div>/>
+  )
+,}
+export default useAnalytics}

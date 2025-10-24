@@ -1,11 +1,11 @@
 'use client';
-import Navigation from './Navigation;
-import { Helmet } from 'react-helmet-async;
-import { ArrowRight } from 'lucide-react;
-import React, { useEffect, useState, useCallback } from "react;
-import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react;
-import { CheckCircle } from 'lucide-react;
-import { AlertTriangle } from 'lucide-react;
+import Navigation from './Navigation';
+import { Helmet     } from 'react-helmet-async';
+import { ArrowRight     } from 'lucide-react';
+import React, { useEffect, useState, useCallback } from 'react';
+import { Settings, Zap, CheckCircle, AlertTriangle     } from 'lucide-react';
+import { CheckCircle     } from 'lucide-react';
+import { AlertTriangle     } from 'lucide-react';
 interface PerformanceOptimizerProps {
 :all-pages-backup/components/PerformanceOptimizer.tsx
 className?: string
@@ -250,4 +250,4 @@ export default PerformanceOptimizer;
 export default PerformanceOptimizerPage;
 }
 export default PerformanceOptimizerPage;
-}"'"
+}

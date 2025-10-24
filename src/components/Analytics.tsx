@@ -1,6 +1,6 @@
-import React, { useEffect } from &quot;react&quot;
-interface AnalyticsProps {;
-className?: string;
+import React, { useEffect } from "react"
+interface AnalyticsProps {
+className?: string
 }
 ;}
 ;}
@@ -31,4 +31,4 @@ export default Analytics;: all-pages-backup/components/Analytics.tsx
 export default AnalyticsPage;
 }
 export default AnalyticsPage;
-}}"
+}}

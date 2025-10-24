@@ -42,6 +42,14 @@ return(<>
       </section>)"
     </div>",)
       </div>
+  )
+}
+
+const ImageOptimizer: React.FC<ImageOptimizerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
   );
 }
 ;

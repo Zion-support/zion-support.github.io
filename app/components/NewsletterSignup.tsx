@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { useState } from 'react';
-import { AlertCircle } from 'lucide-react';
+import { useState     } from 'react';
+import { AlertCircle     } from 'lucide-react';
 interface NewsletterSignupProps {
   variant?: 'inline' | 'modal'
   onClose?: () => void
@@ -73,43 +73,33 @@ const content = (
 
             ) : (
               <>
-                <Send className="w-4 h-4 mr-2" /></Send>
-                Subscribe</Send>
-
-            )}
+                <SendclassNam e="w-4 h-4 mr-2" / />
+Subscribe</Send>
+            ),}
           </button>
-        {"
-message && (,"
-    <divclassName={`flex items-center space-x-2 text-sm ${;
-status === 'success' ? 'text-green-200' : 'text-red-200;
-};`} />"'"
-            {status = == 'success" ? ("
-              <CheckCircle className="w-4 h-4" />"
-            ) : (</CheckCircle>"
-              <AlertCircle className="w-4 h-4" />
-            ),}</AlertCircle>
-            <span>{message}</span>"
-"
-      </form>,"
-    <div className="mt-6 text-center text-sm text-white/80" />
-        <p/ />
-          ✓ No, spam, unsubscribe anytime<br / />
-          ✓ Weekly updates on latest tech trends<br / />"
-          ✓ Exclusive content and early access</br>"
-        </p>"'"
-if(variant === 'modal") {"
-return(,"
-    <div className="fixed inset-0 z-50 overflow-y-auto" />,;
-    <div className="flex min-h-screen items-center justify-center px-4 py-6" />,;
-    <divclassName = "fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose,};/ / />,"
-    <div className="relative w-full max-w-md" />
-            {content,}</div>
-          </div>
-        </div>
-      </div>
-return, content;
-});
-    </div>);
+        {
+message && (,
+    <div className={`flex items-center space-x-2 text-sm ${
+status === 'success' ? 'text-green-200' : 'text-red-200'
+};`}></div>
+            {status === 'success' ? (
+              <CheckCircleclassNam e="w-4 h-4" / />
+            ) : (</CheckCircle>AlertCircleclassNam e="w-4 h-4" / />
+            )}</AlertCircle>span>{message}</span>/form>,
+    <div className="mt-6 text-center text-sm text-white/80"></div>p /></p>
+          ✓ No spam, unsubscribe anytime<br / />
+          ✓ Weekly updates on latest tech trends<br / />
+          ✓ Exclusive content and early access</br>/p>
+if(variant === 'modal') {
+return (,
+    <div className="fixed inset-0 z-50 overflow-y-auto" /></div>,
+    <div className="flex min-h-screen items-center justify-center px-4 py-6" /></div>,
+    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose};/ /></div>,
+    <div className="relative w-full max-w-md" /></div>
+            {content}</div>/div>/div>/div>
+return content
+}
+    </div>
   );
 export default NewsletterSignup;
 })))

@@ -42,6 +42,14 @@ return(<>
       </section>)"
     </div>",)
       </div>
+  )
+}
+
+const NotFoundPage: React.FC<NotFoundPageProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
   );
 }
 ;

@@ -1,10 +1,10 @@
-interface ApiResponse<T = any> {
-  data:  ; ; ;T;
-  statu
-  s: num;b;e;r;
-  message?: string
-}
-
+interface ApiResponse<T = any> {;
+data: T;
+  statu,s: number;
+;
+message?: string;
+,}
+;
 interface ApiError {
   message:  ; ;s;t;r;i;n;g;
   statu
@@ -61,11 +61,10 @@ class ApiClient {
       } as ApiError
     }
   }
-</ApiResponse>
-  async get<T>(endpoint: st;r;i;n;g, headers?: Record<string, string>): Promise<ApiResponse<T>> {</ApiResponse>
-    return this.request<T>(endpoint, {
-      method: 'G;E;T;';
-      headers
+</ApiResponse>;
+async get<T>(endpoint: string,headers?: Record<string, string>): Promise<ApiResponse<T>> {</ApiResponse>;
+return this.request<T>(endpoint, {;
+method: 'GET',headers,
     });
   }
 </T>

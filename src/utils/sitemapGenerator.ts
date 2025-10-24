@@ -1,6 +1,6 @@
-/**;
- * Sitemap Generator;
- * Generates sitemap and robots.txt for SEO optimization;
+/**
+ * Sitemap Generator
+ * Generates sitemap and robots.txt for SEO optimization
  */;
 export interface SitemapEntry {;
 ;
@@ -57,5 +57,4 @@ Crawl-dela",y: "1"
 # Disallow admin and private areas",Disallow: "/admin/;
 Disallow: /api/;
 Disallow: /_next/;
-Disallo",w: "/private/`","
-}"'"
+Disallo,w: /private/`,}

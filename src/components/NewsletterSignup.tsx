@@ -1,10 +1,9 @@
 'use client';
-import { useState } from 'react;
-import { Mail, Send, AlertCircle, CheckCircle } from 'lucide-react;
-interface NewsletterSignupProps {"'"
-variant?: 'inline' | 'modal"
-  onClose?: () => void ;}
-;
+import { useState     } from 'react';
+import { Mail, S,end, AlertCircle, CheckCircle     } from 'lucide-react';
+interface NewsletterSignupProps {
+variant?: 'inline' | 'modal'
+  onClose?: () => void
 }
 ;
 }
@@ -144,4 +143,4 @@ export default NewsletterSignup;
 return, content
 }"
 export default NewsletterSignup;
-}"'"
+}

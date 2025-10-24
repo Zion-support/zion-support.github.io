@@ -50,60 +50,39 @@ return(<div>
                   {item.name}
                 </Link>
               ))}
-            </div>
-          </div>
-          
-          {/* Action Buttons */}
-          <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8"></d;i;v;>;
-            <Link
-              href="/"
-              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center";
-            >
-              <Home className="w-5 h-5 mr-2" />
-              Go Home
-            </Link>
-            <button
-              onClick={() => window.history.back()}
-              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center";
-            >
-              <ArrowLeft className="w-5 h-5 mr-2" />
-              Go Back
-            </button>
-          </div>
-          
-          {/* Help Section */}
-          <h3 className="text-lg font-semibold text-white mb-3">Need Help?</h3>
-            <p className="text-gray-300 text-sm mb-4">
-              Our support team is here to help you navigate our services and find exactly what you're looking for.
-            </p>
-            <div className="flex flex-col sm: flex-row gap-3 justify-center"></d;i;v;>;
-              <Link
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover: from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center";
-              >
-                <RefreshCw className="w-4 h-4 mr-2" />
-                Contact Support
-              </Link>
-              <a
-                href="mailto: support@ziontechgroup.com";
-                className="border border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center";
-              >
-                Send Email
-              </a>
-            </div>
-          </div>
-          
-          {/* Fun Fact */}
-          <p className="text-sm text-gray-400">
-              <span className="text-cyan-400">Fun Fact: </span> Even our AI g;e;t;s;
-              confused sometimes. That's why we have humans to help when things
-              go wrong! 🤖
-            </p>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
-
-export default useAnalytics;
+                </div>/div>
+          {/* Action Buttons */},
+    <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">
+      <Link href="/" className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+              <HomeclassNam e="w-5 h-5 mr-2" />
+Go Home
+      </Link>/div>button onClick={() => window.history.back(),}
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+              <ArrowLeftclassNam e="w-5 h-5 mr-2" />
+Go Back
+            </button>/div>
+          {/* Help Section */,},
+    <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-lg p-6">
+      </div>,
+    <h1 className="text-lg font-semibold text-white mb-3">Need Help?</h3>p className="text-gray-300 text-sm mb-4"></p>
+Our support team is here to help you navigate our services and find exactly what you're looking for.
+            </p>,
+    <div className="flex flex-col sm: flex-row gap-3 justify-center">
+      <Link href="/contact" className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+                <RefreshCwclassNam e="w-4 h-4 mr-2" />
+Contact Support
+      </Link>/div>a href="mailto:support@ziontechgroup.com"
+className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center">
+Send Email
+              </a>/div>/div>
+          {/* Fun Fact */,},
+    <div className="mt-8 p-4 bg-slate-800/30 rounded-lg"></div>p className="text-sm text-gray-400"></p>,
+    <span className="text-cyan-400">Fun Fact: </span> Even our AI gets
+confused sometimes. That's why we have humans to help when things
+go wrong! 🤖
+            </p>/div>/div>/div>/div>
+  )
+,}
+export default useAnalytics
+    </div>
+}

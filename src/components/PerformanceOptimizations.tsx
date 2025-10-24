@@ -148,6 +148,14 @@ Contact Sales</button>
 export default PerformanceOptimizationsPage;
       </div>
   )
-}"
-export default PerformanceOptimizationsPage;
-}"'"
+}
+
+const PerformanceOptimizations: React.FC<PerformanceOptimizationsProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default PerformanceOptimizations;

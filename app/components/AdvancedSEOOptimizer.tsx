@@ -109,28 +109,27 @@ const AdvancedSEOOptimizerPage: React.FC = () =;>; ;{;
           </div>
         </section>
         {/* CTA Section */}
-        <section className="py-20 px-4"></section>
-          <h2 className="text-4xl font-bold text-white mb-6"></h2>
-              Ready to Boost Your SEO?</h2>
-            </h2>
-            <p className="text-xl text-gray-300 mb-8"></p>
-              Join thousands of businesses already using our AI-powered SEO solutions</p>
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></d;i;v;>;
-              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"></butt;o;n;>;
-                Start Free Trial</button>
-                <ArrowRight className="ml-2 h-5 w-5" /></ArrowRight>
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 h;o;v;e;
-  r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></butt;o;n;>;
-                Contact Sales</button>
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-      </Footer>
-</div>;
+<section className="py-20 px-4" />,
+    <div className="max-w-4 xl mx-auto text-center" /></div>,
+    <h1 className="text-4 xl font-bold text-white mb-6" /></h2>
+Ready to Boost Your SEO?</h2>/h2>p className="text-xl text-gray-300 mb-8" /></p>
+Join thousands of businesses already using our AI-powered SEO solutions</p>/p>,
+    <div className="flex flex-col sm: flex-row gap-4 justify-center" /></div>button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" />
+Start Free Trial</button>ArrowRightclassNam e="ml-2 h-5 w-5" / />
+              </button>button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hove,"
+r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
+Contact Sales</button>/button>/div>/div>/section>/div>/Footer>/div>
+  )
+,}
+}
+export default AdvancedSEOOptimizerPage;
+}
+
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
   );
 };
 

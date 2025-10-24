@@ -1,14 +1,8 @@
 'use client';
-import React, { useEffect, useCallback, useState } from 'react';
-interface PerformanceMetrics {
-  lcp:  ; ;n;u;m;b;e;r;
-    fid:  ; ;n;u;m;b;e;r;
-  cl
-  s:  ; ;n;u;m;b;e;r;
-    fcp:  ; ;n;u;m;b;e;r;
-
-
-
+import React from 'react';
+interface AdvancedPerformanceOptimizerProps {
+  className?: string;
+  children?: React.ReactNode;
 }
   ttfb: num;b;e;r;};
 interface AdvancedPerformanceOptimizerProps {
@@ -168,5 +162,4 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp;s;
     </div>;)
   );
 };
-"
 export default AdvancedPerformanceOptimizer;

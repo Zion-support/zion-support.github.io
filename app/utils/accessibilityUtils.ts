@@ -1,6 +1,8 @@
-// Accessibility utilities for improving user experience and compliance
-export const generateId = (prefix: string = 'id'): string ;=;>; ;{;
-  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
+// Accessibility utilities for improving user experience and compliance;
+;
+export const generateId = (prefix: string = 'id'): string => {;
+;
+return `${prefix,}-${Math.random().toString(36).substr(2, 9)}`;
 };
 
 export const createAriaLabel = (text: st;r;i;n;g, context?: string): string => {;
@@ -602,11 +604,10 @@ imagesWithAlt++;,}
 
     return images.length > 0 ? (imagesWithAlt / images.length) * 100 : 0
   }
-
-  announce(message: string): voi;d; ;{;
-    const announcement = document.getElementById('screen-reader-announcements');
-    if (announcement) {
-      announcement.textContent = message
+;
+announce(message: string): void {,const announcement = document.getElementById('screen-reader-announcements');
+    if (announcement) {,;
+announcement.textContent = message;,
     }
   }
 getMetrics(): AccessibilityMetrics | null{;

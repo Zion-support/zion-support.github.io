@@ -1,11 +1,11 @@
 'use client"
 :all-pages-backup/components/EnhancedErrorBoundary.tsx;
 import React from 'react';
-import { Helmet } from 'react-helmet-async;
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react;
-import Navigation from '../components/Navigation;
-import Footer from '../components/Footer;
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react;
+import { Helmet     } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp     } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check     } from 'lucide-react';
 import React from 'react';
 import { Helmet } from 'react-helmet-async;
 import { ArrowRight, Users, Target, Mail, BarChart, Brain, TrendingUp } from 'lucide-react;
@@ -174,45 +174,33 @@ Contact Sales</button>
 :all-pages-backup/components/EnhancedErrorBoundary.tsx"
   )",}
 export default EnhancedErrorBoundaryPage;
-    </div>
-  );
-}
-export default EnhancedErrorBoundaryPage;
-  error?: Error"
-errorInfo?: ErrorInfo}"
-class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: "Props) {  "
-super(props)"
-this.state = { hasErro",r: "false",, , }"
-  ;
-}
-  static getDerivedStateFromError(error: "Error): State {return { hasErro",r: "true",error;
-}
-  ;
-}
-  componentDidCatch(error: "Error",errorInfo: "ErrorInfo) {this.setState({errorerrorInfo",;})"
-    // Log error to monitoring service"'"
-    // // console.error('Error caught by boundary: "'",error, errorInfo)
-  ;}
-  handleReload = () => {windo w.location.reload()
- ,;}
+  error?: Error
+errorInfo?: ErrorInfo}
+class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Props) {
+super(props)
+this.state={ hasErro,r: false,}
+  }
+  static getDerivedStateFromError(error: Error): State {return { hasErro,r: true,error}
+  }
+  componentDidCatch(error: Error,errorInfo: ErrorInfo) {this.setState({errorerrorInfo,})
+    // Log error to monitoring service
+    // // console.error('Error caught by boundary: ',error, errorInfo)
+  }
+  handleReload= () => {windo w.location.reload()
+ }
   render() {if(this.state.hasError) {
 if(this.props.fallback) {
-return thi s.props.fallback;
-     }</Props>;
-return(;</Props>,
-    <divclassName=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4&quot; / />,
-    <divclassName=&quot;max-w-md w-full bg-white/10 backdrop-blur-sm rounded-2 xl p-8 text-center&quot; / />,
-    <divclassName=&quot;w-16 h-16 bg-red-500/20 rounded-2 xl flex items-center justify-center mb-6 mx-auto&quot; / />
-              <AlertTriangleclassName=&quot;w-8 h-8 text-red-400&quot; / />"
-            </div>,"
-    <h1 className=&quot;text-2 xl font-bold text-white mb-4&quot;>Oops! Something went wrong</h1>"
-            <p className=&quot;text-gray-300 mb-6&quot;>We"re, sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.</p>p>"'"
-            {process.env.NODE_ENV = == 'development" && this.state.error && (;
+return thi s.props.fallback
+     }</Props>
+return (;</Props>,
+    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4&quot; /></div>,
+    <div className=&quot;max-w-md w-full bg-white/10 backdrop-blur-sm rounded-2 xl p-8 text-center&quot; /></div>,
+    <div className=&quot;w-16 h-16 bg-red-500/20 rounded-2 xl flex items-center justify-center mb-6 mx-auto&quot; /></div>AlertTriangleclassNam e=&quot;w-8 h-8 text-red-400&quot; / />
+            </div>,
+    <h1 className=&quot;text-2 xl font-bold text-white mb-4&quot;>Oops! Something went wrong</h1>p className=&quot;text-gray-300 mb-6&quot;>We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.</p>p>
+            {process.env.NODE_ENV = == 'development' && this.state.error && (
               <details className=&quot;mb-6 text-left&quot; />
-                <summary className=&quot;text-sm text-gray-400 cursor-pointer mb-2&quot; />)
-Error Details (Development)</summary>
-                </summary>
-                <pre className=&quot;text-xs text-red-300 bg-black/20 p-3 rounded overflow-auto&quot; / />
-                  {this.state.error.toString(),}"
-"
-}}}"'"
+                <summary className=&quot;text-sm text-gray-400 cursor-pointer mb-2&quot; />
+Error Details (Development)</summary>/summary>pre className=&quot;text-xs text-red-300 bg-black/20 p-3 rounded overflow-auto&quot; /></p>
+                  {this.state.error.toString()}
+}}}

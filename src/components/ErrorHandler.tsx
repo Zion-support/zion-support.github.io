@@ -1,4 +1,4 @@
-'use client"
+'use client'
 :all-pages-backup/components/ErrorHandler.tsx;
 import Footer from './Footer;
 import Navigation from './Navigation;
@@ -281,4 +281,4 @@ Contact Sales</button>
 export default ErrorHandlerPage;
 }
 export default ErrorHandlerPage;
-}"'"
+}

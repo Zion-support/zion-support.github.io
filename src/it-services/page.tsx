@@ -1,4 +1,4 @@
-import React from 'react"
+import React from 'react'
 interface pageProps {
 className?: string
 }
@@ -16,5 +16,4 @@ return(</pageProps>,
   )
 ;
 }
-export default page;
-};
+export default page}

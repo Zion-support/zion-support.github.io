@@ -1,21 +1,11 @@
 'use client"
 :all-pages-backup/components/Header.tsx;
 import React from 'react';
-import { Helmet } from 'react-helmet-async;
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react;
-import Navigation from '../components/Navigation;
-import Footer from '../components/Footer;
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react;
-interface HeaderProps {"
-className?: string;
-import React from 'react"
-}"
-;}"'"
-import { Helmet } from 'react-helmet-async;
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react;
-import Navigation from '../components/Navigation;
-import Footer from '../components/Footer;
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react;
+import { Helmet     } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp     } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check     } from 'lucide-react';
 interface HeaderProps {
 className?: string
 }
@@ -111,27 +101,16 @@ Experience the benefits of cutting-edge AI technology</p>"
             </div>
         </section>
         {/* CTA Section */}
-        <section className=&quot;py-20 px-4&quot; />,;
-    <div className=&quot;max-w-4 xl mx-auto text-center&quot; / />,;
-    <h1 className=&quot;text-4 xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
-            <pclassName=&quot;text-xl text-gray-300 mb-8&quot; / />"
-Join thousands of businesses already using our AI solutions</p>"
-            </p>,"
-    <divclassName=&quot;flex flex-col sm: "flex-row gap-4 justify-center&quot; / />
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />"
-Start Free Trial</button>"
-              </button>"
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove",r: "text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
-Contact Sales</button>
-              </button>
-              </div>
-            </div>
-        </section>
-        </div>
-      <Footer/ />"
-    </>"
-:all-pages-backup/components/Header.tsx"
-  )",}
+        <section className=&quot;py-20 px-4&quot; />,
+    <div className=&quot;max-w-4 xl mx-auto text-center&quot; /></div>,
+    <h1 className=&quot;text-4 xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>p className=&quot;text-xl text-gray-300 mb-8&quot; /></p>
+Join thousands of businesses already using our AI solutions</p>/p>,
+    <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot; /></div>button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
+Start Free Trial</button>/button>button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
+Contact Sales</button>/button>/div>/div>/section>/div>Footer/ />
+    </>
+:all-pages-backup/components/Header.tsx
+  ),}
 export default HeaderPage;
       </div>
   );

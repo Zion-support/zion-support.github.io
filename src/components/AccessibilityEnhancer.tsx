@@ -1,7 +1,7 @@
-'use client"
-:all-pages-backup/components/AccessibilityEnhancer.tsx"
-'use client';
-import React, { useEffect } from 'react"
+'use client'
+:all-pages-backup/components/AccessibilityEnhancer.tsx
+"use client";
+import React, { useEffect } from 'react'
 interface AccessibilityEnhancerProps {
 "
 "
@@ -255,4 +255,4 @@ return <div>{children}  </div>
 ;
 }
 export default AccessibilityEnhancer;
-}"'"
+}

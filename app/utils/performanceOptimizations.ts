@@ -273,3 +273,4 @@ const performanceOptimizations = {
   useBundleSizeMonitoring
 }
 export default performanceOptimizations;
+}

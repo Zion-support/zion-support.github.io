@@ -1,11 +1,11 @@
 'use client"
 :all-pages-backup/components/EnhancedLoadingStates.tsx;
 import React from 'react';
-import { Helmet } from 'react-helmet-async;
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react;
-import Navigation from '../components/Navigation;
-import Footer from '../components/Footer;
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react;
+import { Helmet     } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp     } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check     } from 'lucide-react';
 import React from 'react';
 import { Helmet } from 'react-helmet-async;
 import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react;
@@ -216,13 +216,11 @@ h: "4 ",}).map((_, index) => (
 )),}"
   </div>"
 );
-export const ContentSkeleton: "React.FC = () => (",<divclassName=&quot;space-y-6 animate-pulse&quot; / />,
-    <divclassName=&quot;h-8 bg-gray-600 rounded w-3/4&quot; / />,
-    <divclassName=&quot;space-y-2&quot; / />,
-    <divclassName=&quot;h-4 bg-gray-600 rounded&quot; / />,
-    <divclassName=&quot;h-4 bg-gray-600 rounded&quot; / />,
-    <divclassName=&quot;h-4 bg-gray-600 rounded w-2/3&quot; / / />
-</div>,)
-</pclassName>"
-</divclassName>"
-}"'"
+export const ContentSkeleton: React.FC = () => (,<div className=&quot;space-y-6 animate-pulse&quot; /></div>,
+    <div className=&quot;h-8 bg-gray-600 rounded w-3/4&quot; /></div>,
+    <div className=&quot;space-y-2&quot; /></div>,
+    <div className=&quot;h-4 bg-gray-600 rounded&quot; /></div>,
+    <div className=&quot;h-4 bg-gray-600 rounded&quot; /></div>,
+    <div className=&quot;h-4 bg-gray-600 rounded w-2/3&quot; / /></div>/div>,)
+</pclassName>/divclassName>
+}

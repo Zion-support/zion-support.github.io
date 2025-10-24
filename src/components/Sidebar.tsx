@@ -2,12 +2,12 @@
 :all-pages-backup/components/Sidebar.tsx;
 import { Phone, Mail, Brain } from 'lucide-react;
 import React from 'react';
-import { Helmet } from 'react-helmet-async;
-import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react;
-import Navigation from '../components/Navigation;
-import Footer from '../components/Footer;
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react;
-import { Phone, Target, Mail, Users, Brain } from 'lucide-react;
+import { Helmet     } from 'react-helmet-async';
+import { ArrowRight, X, Brain, BarChart, Target, TrendingUp     } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check     } from 'lucide-react';
+import { Phone, Target, Mail, Users, Brain     } from 'lucide-react';
 import React from 'react';
 import { Helmet } from 'react-helmet-async;
 import { Phone, Target, Mail, Users, Brain } from 'lucide-react;
@@ -367,7 +367,6 @@ expandedSections.has(section.key) ?
 ),}</ChevronRight>
 </button>
 {(!section.key || expandedSections.has(section.key)) && (,
-    <divclassName=&quot;ml-4 space-y-1&quot; / />
-{section.items.map((item, itemIndex) => (</div>"
-<Linkkey = {itemIndex,} / />;
-}}}}};")'"
+    <div className=&quot;ml-4 space-y-1&quot; /></div>
+{section.items.map((item, itemIndex) => (</div>Linkke y={itemIndex} / />
+}}}}}

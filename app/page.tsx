@@ -1,8 +1,9 @@
 'use client';
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 
-const HomePage: React.FC = () => {
+const HomePage = () => {
   return (
     <>
       <Head>
@@ -10,31 +11,6 @@ const HomePage: React.FC = () => {
         <meta name="description" content="Leading provider of AI services, IT solutions, and 5G technology implementations." />
         <meta name="keywords" content="AI services, IT solutions, 5G technology, cloud computing, cybersecurity" />
       </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Welcome to <span className="text-cyan-400">Zion Tech Group</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Leading provider of AI services, IT solutions, and 5G technology implementations
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <button className="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors">
-                Get Started
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  )
-}
-=======
 
 import React, { useState, useEffect, useCallback, memo, Suspense, lazy } from 'react'
 import { Phone, Mail, MapPin, CheckCircle, TrendingUp, Brain, MessageSquare, Eye, Zap, Cloud, Shield, Settings, Database } from 'lucide-react'
@@ -471,4 +447,20 @@ const HomePage: React.FC = () => {
 }
 
 export default HomePage
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e353
+=======
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Welcome to Zion Tech Group</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional AI and technology solutions for your business.</p>
+          <Link href="/contact" 
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit">
+            Contact Us
+          </Link>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default HomePage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-687c

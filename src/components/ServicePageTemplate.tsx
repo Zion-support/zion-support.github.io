@@ -42,6 +42,14 @@ return(<>
       </section>)"
     </div>",)
       </div>
+  )
+}
+
+const ServicePageTemplate: React.FC<ServicePageTemplateProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
   );
 }
 ;

@@ -1,4 +1,4 @@
-'use client;
+'use client';
 /**
 * Performance Metrics Utility
 * Advanced performance tracking and monitoring for web applications
@@ -886,3 +886,4 @@ interface LayoutShift extends PerformanceEntry {/* TODO: Fix JSX expression ;*;/
 // Export singleton instance
 export const performanceMetrics = PerformanceMetrics.getInstance()
 `</T>;
+}

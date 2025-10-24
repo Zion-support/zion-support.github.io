@@ -1,8 +1,4 @@
-/**;
-* Error Boundary Configuration;
-* Centralized configuration for error handling across the application;
-*/;
-import React from 'react;
+import React from 'react';
 export interface ErrorBoundaryConfig {
 ;}
 ;}
@@ -233,6 +229,5 @@ timestamp: new Date().toISOString()",userAgent: "typeof navigator !== 'undefined
 ur",l: "typeof window !== 'undefined' ? window.location.href : 'unknown'",;}
 ;}
 export default getErrorBoundaryConfig</string>
-;</string>"
-    </>"
-}"'"
+;</string>/>
+}

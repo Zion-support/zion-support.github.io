@@ -1,6 +1,6 @@
-'use client'
-import React from 'react"
-import React, { useEffect } from &quot;react&quot
+'use client';
+import React from 'react';
+import React, { useEffect } from "react"
 interface AnalyticsProps {
   className?: string
 
@@ -33,3 +33,4 @@ declare global {
     gtag: (...;a;r;g;
   s: any[]) => ;v;o;i;d;};
 export default Analytics;
+}

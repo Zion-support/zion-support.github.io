@@ -1,10 +1,9 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import ErrorBoundary from './components/ErrorBoundary'
-const inter = Inter({ subsets: ['latin'] })
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+
+const inter = Inter({ subsets: ['latin'] });
+
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
@@ -100,5 +99,5 @@ export default function RootLayout({
         {children}
       </body>
     </html>
-  )
+  );
 }

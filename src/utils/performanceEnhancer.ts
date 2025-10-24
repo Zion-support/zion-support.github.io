@@ -302,7 +302,5 @@ optimizeScrollPerformance();
 const metrics = collectPerformanceMetrics();
   if (metrics && (process.env['NODE_ENV'] === 'development" || import.meta.env.DEV)) {"
     // eslint-disable-next-line no-console;
-console.log('Performance metrics: "'",metrics)) => {
-$3"
-}}</number>"
-}}}"'"
+console.log('Performance metrics: ',metrics)}}</number>
+}}}

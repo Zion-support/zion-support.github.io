@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import Link from 'next/link;
+import Link from 'next/link';
 export default function HomePage() {
 return(<div>
       <Helmet />"
@@ -181,45 +181,26 @@ return(<div>
         </div>
       </section>
       {/* Contact Section */}
-      <section className="py-20 bg-slate-900"></section>
-        <h2 className="text-4xl md: text-5xl font-bold text-white mb-8"></;h;2;>;
-              Ready to Transform Your Business?</h2>
-            </h2>
-            <p className="text-xl text-gray-300 mb-12"></p>
-              Let&apos;s discuss how our technology solutions can drive your business forward</p>
-            </p>
-            <div className="flex items-center justify-center gap-4 text-gray-300"></div>
-                <PhoneIcon className="w-6 h-6 text-purple-400" /></PhoneIcon>
-                <span>+1-302-464-0950</span>
-              </div>
-              <div className="flex items-center justify-center gap-4 text-gray-300"></div>
-                <EnvelopeIcon className="w-6 h-6 text-purple-400" /></EnvelopeIcon>
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center justify-center gap-4 text-gray-300"></div>
-                <MapPinIcon className="w-6 h-6 text-purple-400" /></MapPinIcon>
-                <span>Middletown, DE</span>
-              </div>
-            </div>
-            
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></d;i;v;>;
-              <Link ;
-                href="/contact" 
-                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-purple-700 hover:to-cyan-700 transition-all duration-300";
-              ></Link>
-                Get In Touch</Link>
-              </Link>
-              <Link ;
-                href="/demo" 
-                className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-purple-400 h;o;v;e;
-  r: text-white transition-all duration-300";
-              ></Link>
-                Schedule Demo</Link>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-</div>
+      <section className="py-20 bg-slate-900" />,
+    <div className="container mx-auto px-4" />
+      </div>,
+    <div className="max-w-4 xl mx-auto text-center" /></div>,
+    <h1 className="text-4 xl md: text-5 xl font-bold text-white mb-8" /></h2>
+Ready to Transform Your Business?</h2>/h2>p className="text-xl text-gray-300 mb-12" /></p>
+Let&apos;s discuss how our technology solutions can drive your business forward</p>/p>,<div className="grid m,"
+d: grid-cols-3 gap-8 mb-12" /></div>,<div className="flex items-center justify-center gap-4 text-gray-300" /></div>PhoneIconclassNam e="w-6 h-6 text-purple-400" / />
+                <span>+1-302-464-0950</span>/div>,
+    <div className="flex items-center justify-center gap-4 text-gray-300" /></div>EnvelopeIconclassNam e="w-6 h-6 text-purple-400" / />
+                <span>kleber@ziontechgroup.com</span>/div>,
+    <div className="flex items-center justify-center gap-4 text-gray-300" /></div>MapPinIconclassNam e="w-6 h-6 text-purple-400" / />
+                <span>Middletown,DE</span>/div>/div>,
+    <div className="flex flex-col sm: flex-row gap-4 justify-center" />
+      <Linkhre f="/contact"
+className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300" />
+Get In Touch
+      </Link>/div>/Link>Linkhre f="/demo"
+className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hove,"
+r: text-white transition-all duration-300" />
+Schedule Demo</Link>/Link>/div>/div>/div>/section>/div>
   );
 ,}"

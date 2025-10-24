@@ -1,11 +1,10 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Star, Clock, Zap, Shield, Globe, Database, Users, Settings, Check } from 'lucide-react';
-import Navigation from '../components/Navigation';
-
-const EnhancedLoadingSkeletonPage: React.FC = () =;>; ;{;
-  const features = [
+import { Helmet     } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Star, Clock, Zap, Shield, Globe, Database, Users, Settings, Check     } from 'lucide-react';
+import Navigation from '../components/Navigation'
+const EnhancedLoadingSkeletonPage: React.FC = () => {
+const features = [
     {
       ico
   n: Br;a;i;n;
@@ -46,4 +45,4 @@ icon: "Target",title: "'Precision Targeting'",description: "'Target specific goa
 icon: "TrendingUp",title: "'Growth Optimization'",description: "'Optimize your business growth with data-driven strategies.'",benefits: "['Growth strategies'",'Market analysis', 'Competitive insights', 'ROI optimization"];
   ];
 export default EnhancedLoadingSkeletonPage;
-}}"'"
+}}

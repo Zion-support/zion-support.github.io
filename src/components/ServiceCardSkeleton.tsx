@@ -1,11 +1,11 @@
 'use client"
 :all-pages-backup/components/ServiceCardSkeleton.tsx;
 import React from 'react';
-import { Helmet } from 'react-helmet-async;
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react;
-import Navigation from '../components/Navigation;
-import Footer from '../components/Footer;
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react;
+import { Helmet     } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp     } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings     } from 'lucide-react';
 import React from 'react';
 import { Helmet } from 'react-helmet-async;
 import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react;
@@ -165,6 +165,14 @@ Contact Sales</button>
   )",}
 export default ServiceCardSkeletonPage;
   )
-}"
-export default ServiceCardSkeletonPage;
-}"'"
+}
+
+const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default ServiceCardSkeleton;

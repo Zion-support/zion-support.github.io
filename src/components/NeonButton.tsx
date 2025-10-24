@@ -156,45 +156,41 @@ const neonEffect ="
     &quot;before: "absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 befor",e: "-z-10&quot"
 const buttonClasses = `${baseClasses",} ${sizeClasses[size,]} ${variantClasses[variant,]} ${neonEffect} ${className;}`
       </div>
-  );
-};
+  )
+}
 export default NeonButtonPage;
-constvariantClasses = {;
-primary: "&quot;bg-gradient-to-r from-blue-600 to-purple-600 text-white shado w-lghover:shado w-blue-50 0/25 hover:shado w-2 xl&quot;",secondary: "&quot;bg-gradient-to-r from-purple-600 to-pink-600 text-white shado w-lghover: shado w-purple-50 0/25 hover:shado w-2 xl&quot;",accent: "&quot;bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg hover:shadow-cyan-500/25 hove",r: "shadow-2 xl&quot"
-  ",}"
-"
-const neonEffect ="
-    &quot;before: "absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 befor",e: "-z-10&quot"
-  const buttonClasses = `${baseClasses",} ${sizeClasses[size,]} ${variantClasses[variant,]} ${neonEffect} ${className;}`
-;
-  constcontent = (;
-  <di v>{icon&&<span className=&quot;mr-2&quot; />{icon}</spa>}
+constvariantClasses={
+primary: &quot;bg-gradient-to-r from-blue-600 to-purple-600 text-white shado w-lghover:shado w-blue-50 0/25 hover:shado w-2 xl&quot;,secondary: &quot;bg-gradient-to-r from-purple-600 to-pink-600 text-white shado w-lghover: shado w-purple-50 0/25 hover:shado w-2 xl&quot;,accent: &quot;bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg hover:shadow-cyan-500/25 hove,r: shadow-2 xl&quot
+  ,}
+const neonEffect =
+    &quot;before: absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 befor,e: -z-10&quot
+  const buttonClasses = `${baseClasses,} ${sizeClasses[size]} ${variantClasses[variant]} ${neonEffect} ${className}`
+  constcontent= (
+  <di v>{icon&&<spanclassNam e=&quot;mr-2&quot;></span>{icon}</spa>}
       {children}
-      {!icon && <ArrowRight className = &quot;w-5 h-5 ml-2&quot; />}</ArrowRight>;
-      </div>);
-  );
-if(href) {;
-return (<>;
-      <a href = {href} className={buttonClasses}  />
-        {content}</a>
-      </a>);
-    </>);
-  );
+      {!icon && <ArrowRightclassNam e=&quot;w-5 h-5 ml-2&quot; />}</ArrowRight>/div>
+  )
+if(href) {
+return (
+    <>
+      <a href={href} className={buttonClasses} />
+        {content}</a>/a>/>
+  )
   }
-return (<>;
-      <button onClick = {onClick} disabled = {disabled} className={buttonClasses}  />
-      {content}</button>
-    </button>);
-    </>);
-  );
+return (
+    <>
+      <button onClick={onClick} disabled={disabled} className={buttonClasses} />
+      {content}</button>/button>/>
+  )
 {}
 :all-pages-backup/components/NeonButton.tsx;
-export default NeonButton);
+export default NeonButton;
+  )
 {}
 export default NeonButton;
-export default NeonButton);
+export default NeonButton;
+  )
 }
 export default NeonButton;
-</spanclassName>"
-</di>"
-}"'"
+</spanclassName>/di>
+}

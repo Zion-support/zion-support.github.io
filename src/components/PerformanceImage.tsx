@@ -42,6 +42,14 @@ return(<>
       </section>)"
     </div>",)
       </div>
+  )
+}
+
+const PerformanceImage: React.FC<PerformanceImageProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
   );
 }
 ;

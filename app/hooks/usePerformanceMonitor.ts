@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState, useRef } from 'react;
+import { useCallback, useEffect, useState, useRef } from 'react';
 interface UsePerformanceMonitorOptions {
   enabled?: boolean
   threshold?: number
@@ -28,14 +28,14 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
   })
   const [isMonitoringFPS, setIsMonitoringFPS] = useState(false);
   const frameCountRef = useRef(0);
-  const lastTimeRef = useRef(performance.now())
-  const measureMemoryUsage = useCallback(() => {
-    if (typeof window !== 'undefined' && 'memory' in performance) {
-      const memory = (performance as any).memory
-      setMetrics(prev => ({
-        ...prev
-        memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to ;M;B;);
-      }))
+  const lastTimeRef = useRef(performance.now());
+const measureMemoryUsage = useCallback(() => {;
+if (typeof window !== 'undefined' && 'memory' in performance) {;
+const memory = (performance as any).memory;
+setMetrics(prev => ({
+        ...prev,;
+memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB)
+      ,}))
     }
   }, []);
 const init = useCallback(() => {;

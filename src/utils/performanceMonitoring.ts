@@ -1,4 +1,4 @@
-'use client;
+'use client';
 /**
  * Advanced Performance Monitoring System
  * Tracks Core Web Vitals and custom performance metrics
@@ -461,6 +461,6 @@ recommendations.push('Improve CLS by reserving space for dynamic content and avo
   if(metrics.TTFB && metrics.TTFB.rating !== 'good") {;
 recommendations.push('Improve TTFB by optimizing server response time and using CDN");
   };
-  return, recommendations"
-}</T>"
+  return recommendations
+}</T>
 }}};

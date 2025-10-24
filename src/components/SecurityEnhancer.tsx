@@ -1,11 +1,11 @@
 'use client"
 :all-pages-backup/components/SecurityEnhancer.tsx;
 import React from 'react';
-import { Helmet } from 'react-helmet-async;
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react;
-import Navigation from '../components/Navigation;
-import Footer from '../components/Footer;
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react;
+import { Helmet     } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp     } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check     } from 'lucide-react';
 import React from 'react';
 import { Helmet } from 'react-helmet-async;
 import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react;
@@ -164,6 +164,14 @@ Contact Sales</button>
   )",}
 export default SecurityEnhancerPage;
   )
-}"
-export default SecurityEnhancerPage;
-}"'"
+}
+
+const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default SecurityEnhancer;

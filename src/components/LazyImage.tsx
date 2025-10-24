@@ -3,12 +3,12 @@
 import Footer from './Footer;
 import Navigation from './Navigation;
 import React from 'react';
-import { Helmet } from 'react-helmet-async;
-import { ArrowRight, Brain } from 'lucide-react;
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react;
-import { Phone, Mail, ArrowRight } from 'lucide-react;
-import Footer from './Footer;
-import Navigation from './Navigation;
+import { Helmet     } from 'react-helmet-async';
+import { ArrowRight, Brain     } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe     } from 'lucide-react';
+import { Phone, Mail, ArrowRight     } from 'lucide-react';
+import Footer from './Footer';
+import Navigation from './Navigation';
 import React from 'react';
 import { Helmet } from 'react-helmet-async;
 import { Brain, ArrowRight, Mail } from 'lucide-react;
@@ -173,6 +173,14 @@ Email Us</Mail>
 export default LazyImagePage;
       </div>
   )
-}"
-export default LazyImagePage;
-}"'"
+}
+
+const LazyImage: React.FC<LazyImageProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default LazyImage;

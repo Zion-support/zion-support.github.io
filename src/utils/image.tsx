@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import React, { useState, useCallback } from 'react"
-interface ImageProps  {
+import React, { useState, useCallback } from 'react'
+interface ImageProps {
 }
 :all-pages-backup/utils/image.tsx"
 src: "string",{alt: "string",;}
@@ -223,5 +223,5 @@ handleError
 {;}</img>;
 >)</img>;
 }</img>;
-export default Image;</img>"
-}"'"
+export default Image;</img>
+}

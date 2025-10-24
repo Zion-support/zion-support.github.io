@@ -1,7 +1,7 @@
 import React from 'react';
-import Navigation from '../components/Navigation;
-import Footer from '../components/Footer;
-import SEOOptimizer from '../components/SEOOptimizer"
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer'
 const MicroSAASPage: React.FC = () => {
 return(<>"
 ;
@@ -29,7 +29,7 @@ This page is under development. Please check back soon for more information abou
       </div>
       </div>)
   )
-,};
-};
+,}
+}
 export default MicroSAASPage;
-}"'"
+}

@@ -6,14 +6,10 @@ className?: string
 }
 ;
 }
-"'"
-const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ className = '' ",;}) => {
-return(</MicroSAASCardProps>,
-    <div className={className} />
-      <h2>MicroSAASCard</h2>
-      <p>This component is under construction.</p>
-      </div>)
-  );
-};
+const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ className = '' ,}) => {
+return (</MicroSAASCardProps>,
+    <div className={className} /></div>h2>MicroSAASCard</h2>p>This component is under construction.</p>/div>
+  )
+}
 export default MicroSAASCard;
 }"'"

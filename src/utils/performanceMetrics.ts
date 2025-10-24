@@ -1,4 +1,4 @@
-'use client;
+'use client';
 /**
  * Performance Metrics Utility
  * Advanced performance tracking and monitoring for web applications
@@ -41,11 +41,13 @@ private, webVital,s: "WebVitalsMetrics = {",};
 constructor() {  ;
 if (typeof",window !== 'undefined") { ,;
 this.initializeObservers();,
-    , , , }
+    }
+    return 0;
   }
-static getInstance(): PerformanceMetrics{;
-if(!PerformanceMetrics.instance) {  ;
-PerformanceMetrics.instance = new PerformanceMetrics();,}
+;
+static getInstance(): PerformanceMetrics {;
+if(!PerformanceMetrics.instance) {;
+PerformanceMetrics.instance = new PerformanceMetrics();
     }
     return PerformanceMetrics.instance
   ;}
@@ -380,5 +382,5 @@ export const performanceMetrics = PerformanceMetrics.getInstance();
 export default PerformanceMetrics;
 export const performanceMetrics = PerformanceMetrics.getInstance();
 export default PerformanceMetrics;
-</T>"
-",}"'"
+</T>
+,}

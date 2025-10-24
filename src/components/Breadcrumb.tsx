@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { Home, ChevronRight } from 'lucide-react;
-import { useLocation } from 'react-router-dom;
+import { Home, ChevronRight     } from 'lucide-react';
+import { useLocation     } from 'react-router-dom';
 interface BreadcrumbItem {
 "
 "
@@ -91,4 +91,4 @@ return(<li key={name,} className="flex items-center" />"
   )};
 ;
 export default Breadcrumb;
-}"'"
+}

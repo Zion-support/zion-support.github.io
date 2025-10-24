@@ -15,19 +15,13 @@ permissionsPolicy?: string
 
 }
 };
-export const defaultSecurityHeaders: SecurityHeadersConfig ;=; ;{;
-// Content Security Policy
-contentSecurityPolicy: "default-src 's;e;l;f;'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: ht;t;p;s;:; font-src 'self' data:; connect-src 'self' http
-  s:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';"}
-// Content Security Policy
-contentSecurityPolicy:  ; ; ;[;
-"default-src 'self'"
-"script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.c;o;m;";
-"style-src 'self' 'unsafe-inline'"
-"img-src 'self' data: https: blo;b;:;";
-"font-src 'self' data:  ; ; ;";
-"connect-src 'self' https: //www.google-analytics.com https://analytics.google.c;o;m;";
-"frame-ancestors 'none'"
+export const defaultSecurityHeaders: SecurityHeadersConfig = {
+// Content Security Policy;
+contentSecurityPolicy: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' http,s: ; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';",}
+// Content Security Policy;
+contentSecurityPolicy: [,"default-src 'self'"
+"script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com","style-src 'self' 'unsafe-inline'"
+"img-src 'self' data: https: blob:","font-src 'self' data: ","connect-src 'self' https: //www.google-analytics.com https://analytics.google.com","frame-ancestors 'none'"
 "base-uri 'self'"
 "form-action 'self'"
 'upgrade-insecure-requests'].join('; ')
@@ -142,3 +136,4 @@ e: string }> {/* TODO: Fix JSX expression ;*;/;};
 }))
 }
 export default defaultSecurityHeaders;
+}

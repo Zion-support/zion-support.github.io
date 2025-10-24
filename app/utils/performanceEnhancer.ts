@@ -1,20 +1,16 @@
-'use client'
-import React from 'react'
-import { useRef } from 'react"
-/**
- * Performance Enhancement Utilities
- * Advanced performance optimization tools for the application
- */
-// Debounce function for performance optimization
-export const debounce = <T extends (...args: unknown[]) => unknow;n;>;(;
-    func:  ; ; ;T;
-  wait: number<;/;T;>;
-): ((...args: Parameters<T>) => void) ;=;>; ;{;
-  let timeout: NodeJS.Time;o;u;t;
-  return (...arg,</T>
-  s: Parameters<T>) =;>; ;{;
-    clearTimeout(timeout)
-    timeout = setTimeout(() => func(...args), wait)
+export const performanceEnhancer = {
+  preloadImage: (src: string) => {
+    const img = new Image();
+    img.src = src;
+  },
+  
+  preloadRoute: (route: string) => {
+    if (typeof window !== 'undefined') {
+      const link = document.createElement('link');
+      link.rel = 'prefetch';
+      link.href = route;
+      document.head.appendChild(link);
+    }
   }
 }
 // Throttle function for performance optimization</T>
@@ -204,7 +200,17 @@ observer.disconnect()
 return, clsValue
 }
   }
-  const trackLCP = (
+};
+      }
+    });
+observer.observe({ entryTypes: ['largest-contentful-paint'] ,});
+    return () => observer.disconnect();
+  }
+  const trackFID = () => {;
+return;
+interface FirstInputEntry extends PerformanceEntry {;
+processingStart: number,}
+  const trackFID = ($2) => {;
 $3
 };
       }
@@ -291,6 +297,3 @@ console.log('Performance metrics: "'",metrics)
   ) => {
 $3
 }
-"
-}"
-}"

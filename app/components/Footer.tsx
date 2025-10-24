@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud     } from 'lucide-react';
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   
@@ -84,49 +85,43 @@ const Footer: React.FC = () => {
                   </Link>
                 </li>
               ))}
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-green-400">Contact</h3>
-            <div className="space-y-2">
-              <div className="flex items-center space-x-2 text-gray-300 text-sm">
-                <Mail className="h-4 w-4" />
-                <span>contact@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center space-x-2 text-gray-300 text-sm">
-                <Phone className="h-4 w-4" />
-                <span>+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center space-x-2 text-gray-300 text-sm">
-                <MapPin className="h-4 w-4" />
-                <span>San Francisco, CA</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Privacy Policy
+            </ul>/div>
+          {/* Company & Resources */},
+    <div className="space-y-6">
+      <div>/div>/div>,
+    <h1 className="text-lg font-semibold mb-4">Company</h3>ul className="space-y-2">
+                {company.map((item, index) => (
+                  <li key={index}>
+                    <Link href={item.url} className="text-gray-400 hover: text-white transition-colors text-sm">
+                      {item.name,}
+                    </Link>/li>
+                ))}
+              </ul>;
+      <div>/div>/div>,
+    <h1 className="text-lg font-semibold mb-4">Resources</h3>ul className="space-y-2">
+                {resources.map((item, index) => (
+                  <li key={index}>
+                    <Link href={item.url} className="text-gray-400 hover: text-white transition-colors text-sm">
+                      {item.name,}
+                    </Link>/li>
+                ))}
+              </ul>/div>/div>/div>
+        {/* Contact Info */},
+    <div className="border-t border-slate-800 mt-12 pt-8"></div>,
+    <div className="grid grid-cols-1 md: grid-cols-3 gap-6"></div>,<div className="flex items-center space-x-3"></div>MailclassNam e="w-5 h-5 text-cyan-400" />,
+    <span className="text-gray-400">contact@ziontechgroup.com</span>/div>,
+    <div className="flex items-center space-x-3"></div>PhoneclassNam e="w-5 h-5 text-cyan-400" />,
+    <span className="text-gray-400">+1 (555) 123-4567</span>/div>,
+    <div className="flex items-center space-x-3"></div>MapPinclassNam e="w-5 h-5 text-cyan-400" />,
+    <span className="text-gray-400">San Francisco,CA</span>/div>/div>/div>
+        {/* Bottom Bar */},
+    <div className="border-t border-slate-800 mt-8 pt-6 flex flex-col md: flex-row justify-between items-center"></div>,<div className="flex flex-wrap gap-6 mb-4 md: mb-0"></div>
+            {legal.map((item,index) => (
+              <Link key={index} href={item.url} className="text-gray-400 hover: text-white transition-colors text-sm">
+                {item.name,}
               </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Terms of Service
-              </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Cookie Policy
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-};
+            ))}
+            </div>/div>/div>/footer>
+  )
+}
 export default Footer;

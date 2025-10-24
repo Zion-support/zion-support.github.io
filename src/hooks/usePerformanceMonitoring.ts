@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react;
+import { useState, useEffect, useCallback } from 'react';
 ;
 interface PerformanceMetrics {"
 ;
@@ -64,15 +64,11 @@ const stopMonitoring = useCallback(() => {;
 useEffect(() => {;
 if(isMonitoring) {  ;
 const interval = setInterval(measurePerformance, 1000);
-      return () => clearInterval(interval)}
-  }, [isMonitoring, measurePerformance]);
-;
-return{;
-metrics,;
-isMonitoring,;
-startMonitoring,;
-stopMonitoring}
-  };
+      return () => clearInterval(interval);
+    }
+  }, []);
+
+  return metrics;
 };
 ;
 export default usePerformanceMonitoring;</PerformanceMetrics>"

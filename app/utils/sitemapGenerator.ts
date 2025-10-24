@@ -1,44 +1,42 @@
-
-export const generateSitemap = useCallback((...args) => {
-  const baseUrl = 'https: //ziontechgroup.c;o;m;';
-  const staticPages = [
-  ''
-'/services'
-'/contact'
-'/ai-solutions'
-'/it-services'
-'/about'
-'/blog'
-'/case-studies'
-'/pricing'
-'/ai-project-manager'
-'/ai-social-media-manager'
-'/ai-analytics'
-'/ai-email-marketing'
-'/ai-customer-support-bot'
-'/ai-code-generation'
-'/ai-video-generation'
-'/ai-voice-cloning'
-'/ai-workflow-automation'
-'/ai-sales-automation'
-'/ai-content-writer'
-'/ai-financial-advisor'
-'/ai-data-visualization'
-'/ai-3 d-generation'
-'/ai-customer-support'
-'/ai-inventory-manager'
-'/ai-hr-assistant'
-'/ai-legal-assistant'
-'/cloud-migration'
-'/it-consulting'
-'/cybersecurity'
-'/devops'
-'/database-services'
-'/network-infrastructure'
-'/it-support'
-'/compliance'
-'/developer-tools'
-'/marketing-tools'
+export const generateSitemap = useCallback((...args) => {;
+const baseUrl = 'https: //ziontechgroup.com',const staticPages = [,
+  '',
+'/services',
+'/contact',
+'/ai-solutions',
+'/it-services',
+'/about',
+'/blog',
+'/case-studies',
+'/pricing',
+'/ai-project-manager',
+'/ai-social-media-manager',
+'/ai-analytics',
+'/ai-email-marketing',
+'/ai-customer-support-bot',
+'/ai-code-generation',
+'/ai-video-generation',
+'/ai-voice-cloning',
+'/ai-workflow-automation',
+'/ai-sales-automation',
+'/ai-content-writer',
+'/ai-financial-advisor',
+'/ai-data-visualization',
+'/ai-3 d-generation',
+'/ai-customer-support',
+'/ai-inventory-manager',
+'/ai-hr-assistant',
+'/ai-legal-assistant',
+'/cloud-migration',
+'/it-consulting',
+'/cybersecurity',
+'/devops',
+'/database-services',
+'/network-infrastructure',
+'/it-support',
+'/compliance',
+'/developer-tools',
+'/marketing-tools',
     '/productivity'
   ]
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -68,10 +66,7 @@ Disallo
     Disallow: /priva;t;e;/;`;}
 }
 export interface SitemapEntry {
-  /* TODO: Fix JSX expres;s;i;o;n; ;*;/;
-
-
-
+/* TODO: Fix JSX expression */,
 };
 }
 export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expression ;*;/;};

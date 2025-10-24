@@ -282,5 +282,4 @@ export default, performanceOptimizations
 ;}
 ;
 export default performanceOptimizations;
-"
-}}"'"
+}}

@@ -1,6 +1,6 @@
-'use client';
-'use client';
-import React from "react"
+'use client'
+"use client";
+import React from 'react'
 :all-pages-backup/components/LoadingSpinner.tsx;
 export default function LoadingSpinner() {"
 "
@@ -174,22 +174,45 @@ Contact Sales</button>
 :all-pages-backup/components/LoadingSpinner.tsx"
   )",}"
 export default LoadingSpinnerPage;
-color?: 'primary' | 'secondary' | 'white"
-{text?: string}"'"
-constLoadingSpinner: React.FC<LoadingSpinnerProp s> = ({size = 'md'",color = 'primary"
-text,}) => {constsizeClasses={"'"
-sm: "sm",md: "md",lg: "'w-12 h-1 2'",}"
-constcolorClasses={primary: "primary",secondary: "secondary",</LoadingSpinnerProp>;
-white: "'text-white'",}</LoadingSpinnerProp>;
-return(<divclassName=&quot;flex flex-colitems-centerjustify-centerspace-y-2&quot; role=&quot;status&quot;aria-label=&quot;Loading&quot;>
-      <divclassName = {`animate-spin rounded-full border-2 border-gray-300 border-t-transparent${sizeClasses[size,]}${colorClasses[color,]}`} / />)
-    </div>{text &&(< className={`text-sm${colorClasses[color,]}animate-pulse`}></ className={`text-sm${colorClasses[color,]}animate-pulse`}>{text}</p>)}</di>)
-            </div>
-            </div>
-}"
-const colorClasses={"
-"'"
-primary: "primary",secondary: "secondary",white: "'text-white'",);
+color?: 'primary' | 'secondary' | 'white'
+{text?: string};
+constLoadingSpinner: React.FC<LoadingSpinnerProp s>= ({size= 'md',color= 'primary'
+text}) => {constsizeClasses={
+sm: sm,md: md,lg: 'w-12 h-1 2',}
+constcolorClasses={primary: primary,secondary: secondary,</LoadingSpinnerProp>
+white: 'text-white',}</LoadingSpinnerProp>
+return(<divclassNam e=&quot;flex flex-colitems-centerjustify-centerspace-y-2&quot; role=&quot;status&quot;aria-label=&quot;Loading&quot;>
+      <divclassNam e={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent${sizeClasses[size]}${colorClasses[color]}`} />
+      </div>/div>{text &&(< className={`text-sm${colorClasses[color]}animate-pulse`}></ className={`text-sm${colorClasses[color]}animate-pulse`}>{text}</p>)}</di>)
+            </div>/div>
+}
+const colorClasses={
+primary: primary,secondary: secondary,white: 'text-white',)
+}
+export default LoadingSpinnerPage;
+color?: 'primary' | 'secondary' | 'white'
+text?: string};
+constLoadingSpinner: React.FC<LoadingSpinnerProp s>= ({size = 'md',color= 'primary'
+text}) => {constsizeClasses={
+sm: 'w-4 h-4',md: 'w-8 h-8',lg: 'w-12 h-1 2',}
+constcolorClasses={primary: 'text-indigo-60 0'
+secondar,y: 'text-gray-60 0',</LoadingSpinnerProp>
+white: 'text-white',}</LoadingSpinnerProp>
+return(<divclassNam e=&quot;flex flex-colitems-centerjustify-centerspace-y-2&quot; role=&quot;status&quot;aria-label=&quot;Loading&quot;>
+      <divclassNam e={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent${sizeClasses[size]}${colorClasses[color]}`} />
+      </div>/div>{text &&(< className={`text-sm${colorClasses[color]}animate-pulse`}></ className={`text-sm${colorClasses[color]}animate-pulse`}>{text}</p>)}</di>)
+}
+const colorClasses={
+primary: 'text-indigo-600',secondary: 'text-gray-600',white: 'text-white'
+,}
+return (,
+    <div className=&quot;flex flex-col items-center justify-center space-y-2&quot; role=&quot;status&quot; aria-label=&quot;Loading&quot; /></div>,
+    <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]}`} /></div>
+{text && (
+<p className={`text-sm ${colorClasses[color]} animate-pulse`}>{text}</p>p>
+)}
+    </div>
+  );
 };
 export default LoadingSpinnerPage;
 color?: 'primary' | 'secondary' | 'white"
@@ -217,6 +240,5 @@ return(,;
 );
 {}
 export default LoadingSpinner;
-</divclassName>"
-</divclassName>"
-}"'"
+</divclassName>/divclassName>
+}

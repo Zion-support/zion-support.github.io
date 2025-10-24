@@ -1,4 +1,4 @@
-'use client"
+'use client'
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx;
 import { Brain, BarChart, Target, TrendingUp } from 'lucide-react;
 import Navigation from './Navigation;
@@ -384,5 +384,5 @@ export default AdvancedAccessibilityEnhancer;: all-pages-backup/components/Advan
 export default AdvancedAccessibilityEnhancerPage}}}}}
 }
 export default AdvancedAccessibilityEnhancerPage;
-</HTMLElement>"
-}"'"
+</HTMLElement>
+}

@@ -1,4 +1,4 @@
-'use client;
+'use client';
 /**
  * Enhanced Performance Hook"
  * Combines, performance, monitoring, error, tracking, and analytics"
@@ -107,5 +107,5 @@ trackUserAction,;
 measureOperation}
   };
 }
-export default useEnhancedPerformance;</string>"
-}"'"
+export default useEnhancedPerformance;</string>
+}

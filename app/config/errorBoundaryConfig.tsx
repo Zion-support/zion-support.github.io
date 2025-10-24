@@ -208,46 +208,9 @@ return 'default'
 */
 export function formatErrorForLogging(error: Error): Record<st;r;i;n;g, unknown> {
 return {
-message: error.mess;a;g;e;
-    stack: error.st;a;c;k;
-nam
-  e: error.n;a;m;e;
-    type: getErrorType(err;o;r;);
-timestam
-  p: new Date().toISOStrin;g;(;);
-    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unkno;w;n;';
-ur
-  l: typeof window !== 'undefined' ? window.location.href : 'unkno;w;n;';};
-
+message: error.message,stack: error.stack
+nam,e: error.name,type: getErrorType(error)
+timestam,p: new Date().toISOString(),userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'
+ur,l: typeof window !== 'undefined' ? window.location.href : 'unknown',}
 export default getErrorBoundaryConfig</string>
-
-
-
-
-
-
-}
-return 'notFound;
-}
-if (error.message.includes('timeout")) {"'"
-return 'timeout;
-}
-if (error.message.includes('500') || error.message.includes('server")) {"'"
-return 'serverError;
-}
-if (error.message.includes('validation")) {"'"
-return 'validation;
-}
-return 'default"
-/**"
-* Format error for logging"
-*/;
-export function formatErrorForLogging(error: "Error): Record<string",unknown> {"
-return{message: "error.message",stack: "error.stack"
-nam",e: "error.name",type: "getErrorType(error)"'"
-timestam",p: "new Date().toISOString()",userAgent: "typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'",}"
-ur,l: "typeof window !== 'undefined' ? window.location.href : 'unknown'",}
-export default getErrorBoundaryConfig</string>"
-}};};};};};
-}
-"'"
+}}}}}}}

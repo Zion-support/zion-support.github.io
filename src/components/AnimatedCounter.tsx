@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useRef } from "react;
-import { useIntersectionObserver } from '../hooks/useIntersectionObserver;
+import React, { useEffect, useState, useRef } from "react";
+import { useIntersectionObserver     } from '../hooks/useIntersectionObserver';
 interface AnimatedCounterProps {
 :all-pages-backup/components/AnimatedCounter.tsx
 className?: string
@@ -76,4 +76,4 @@ return(<spanref = {setNode} className={className} />);
 };
 ;
 export default AnimatedCounter;
-}"'"
+}

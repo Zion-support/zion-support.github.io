@@ -1,23 +1,20 @@
 'use client';
-import { useEffect } from 'react;
-const EnhancedAccessibility: React.FC<{ childre",n: "React.ReactNode ",}> = ({ children ;}) => {"
-  useEffect(() => {"
-    // Add high contrast mode support: "all-pages-backup/components/EnhancedAccessibility.tsx"
-const handleContrastChange = (;",if(e.matches) {;
-document.documentElement.classList.add('high-contrast")) => {"
-$3"
-} else { "'"
-document.documentElement.classList.remove('high-contrast"), }
-    }"
-const handleContrastChange = ("
-      if(e.matches) {"'"
-        document.documentElement.classList.add('high-contrast")"
-      ,) => {"
-$3"'"
-} else { document.documentElement.classList.remove('high-contrast"), }"
-      ;};
-    };
-    const mediaQuery = window.matchMedia('(prefers-contrast: "high)');",mediaQuery.addEventListener('change", handleContrastChange)
+import { useEffect     } from 'react';
+const EnhancedAccessibility: React.FC<{ childre,n: React.ReactNode ,}> = ({ children }) => {
+  useEffect(() => {
+    // Add high contrast mode support: all-pages-backup/components/EnhancedAccessibility.tsx
+const handleContrastChange = (e: MediaQueryListEvent) => {;,if(e.matches) {;
+document.documentElement.classList.add('high-contrast')} else {
+document.documentElement.classList.remove('high-contrast')}
+    }
+const handleContrastChange = (e: MediaQueryListEvent) => {
+      if(e.matches) {
+        document.documentElement.classList.add('high-contrast')
+      ,} else {
+document.documentElement.classList.remove('high-contrast')
+      }
+    }
+    const mediaQuery = window.matchMedia('(prefers-contrast: high)');,mediaQuery.addEventListener('change', handleContrastChange)
     // Call with the MediaQueryList directly
 handleContrastChange(mediaQuery, as, any)
 return(<>
@@ -171,4 +168,4 @@ return <div>{children}</div>;}
 export default EnhancedAccessibility;
 }
 export default EnhancedAccessibility;
-}"'"
+}

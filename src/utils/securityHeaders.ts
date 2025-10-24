@@ -1,6 +1,6 @@
-/**;
- * Security Headers Configuration;
- * Comprehensive security headers for production applications;
+/**
+ * Security Headers Configuration
+ * Comprehensive security headers for production applications
  */;
 export interface SecurityHeadersConfig {;
 ;
@@ -99,5 +99,4 @@ value);
 ;
 export default defaultSecurityHeaders;
 export default defaultSecurityHeaders;
-"
-}"'"
+}

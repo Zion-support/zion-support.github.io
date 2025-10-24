@@ -1,8 +1,8 @@
-'use client'
-import React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
-import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react'
+'use client';
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react';
 const NotFound = () => {
   return (
     <>
@@ -76,43 +76,32 @@ const NotFound = () => {
             >
               <RefreshCw className="w-5 h-5 mr-2" />
               Refresh
-            </button>
-          </div>
-          
-          {/* Help Section */}
-          <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-lg p-6">
-            <h3 className="text-lg font-semibold text-white mb-3">Need Help?</h3>
-            <p className="text-gray-300 text-sm mb-4">
-              Our support team is here to help you navigate our services and find exactly what you're looking for.
-            </p>
-            <div className="flex flex-col sm: flex-row gap-3 justify-center">;
-        <Link
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover: from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center";
-              >
-                <RefreshCw className="w-4 h-4 mr-2" />
-                Contact Support
-              </Link>
-              <a
-                href="mailto: support@ziontechgroup.com";
-                className="border border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center";
-              >
-                Send Email
-              </a>
-            </div>
-          </div>
-          
-          {/* Fun Fact */}
-          <div className="mt-8 p-4 bg-slate-800/30 rounded-lg">
-            <p className="text-sm text-gray-400">
-              <span className="text-cyan-400">Fun Fact: </span> Even our AI g;e;t;s;
-              confused sometimes. That's why we have humans to help when things
-              go wrong! 🤖
-            </p>
-          </div>
-        </div>
-      </div>
-    </>
-  )
-}
-export default NotFound
+            </button>/div>div className="mt-12">
+            <p className="text-gray-400 mb-4">Looking for something specific?</p>div className="relative max-w-md mx-auto">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input type="text"
+                placeholder="Search our services..."
+                className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                onKeyPress={(e) => {
+                  if (e.key === 'Enter') {
+                    const query = (e.target as HTMLInputElement).value;
+                    if (query.trim()) {
+                      window.location.href = `/search?q=${encodeURIComponent(query.trim())}`;
+                    }
+                  }
+                }}
+              />
+            </div>/div>div className="mt-12">
+            <p className="text-gray-400 mb-6">Popular pages:</p>div className="flex flex-wrap justify-center gap-4">
+              <Link href="/services" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                Services
+              </Link>Link href="/about" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                About Us
+              </Link>Link href="/contact" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                Contact
+              </Link>Link href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                Blog
+              </Link>/div>/div>/div>/div>/>
+  );
+};
+export default NotFound;
