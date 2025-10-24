@@ -21,9 +21,8 @@ export default function RootLayout({
           <main className="pt-16">
             {children}
           </main>
-          <Footer />
-        </ErrorBoundary>
+          </ErrorBoundary>
       </body>
     </html>
-  )
+  );
 }

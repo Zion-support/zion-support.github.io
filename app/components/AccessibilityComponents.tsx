@@ -12,7 +12,7 @@ const AccessibilityComponents: "React.FC<AccessibilityComponentsProps> = ({ clas
     </div>
     </>
   )
-  )
+  );
 }
 
 export default AccessibilityComponents;

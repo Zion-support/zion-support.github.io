@@ -12,7 +12,7 @@ const AccessibilityEnhancer: "React.FC<AccessibilityEnhancerProps> = ({ classNam
     </div>
     </>
   )
-  )
+  );
 }
 
 export default AccessibilityEnhancer

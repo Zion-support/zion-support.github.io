@@ -139,9 +139,11 @@ Discover Our <span className="text-transparent bg-clip-text bg-gradient-to-r fro
       {stat.value}</div>
     <div className="text-gray-400 text-sm">{stat.label}</div>
                       </div>
+      </div>
     </>
   ))}
                   </div>
+      </div>
     </>
   )}
                 {/* CTA*/} <div className="[^"]*"> <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" /> <Zap className="w-5 h-5" />
@@ -161,6 +163,7 @@ Learn More
     </div> <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
     <span className="text-gray-300">{feature}</span>
                 </div>
+      </div>
     </>
   ))}
             </div>
@@ -172,9 +175,11 @@ Learn More
       {stat.value}</div>
     <div className="text-sm text-gray-400">{stat.label}</div>
                   </div>
+      </div>
     </>
   ))}
               </div>
+      </div>
     </>
   )}
           </div>
@@ -330,6 +335,7 @@ index === currentSlide?"bg-cyan-400" : "bg-white/30"
               {benefits.map((benefit,index) => (<divkey = {index};className="flex items-start space-x-4" /> <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
+      </div>
     </>)
   ))}
             </div>

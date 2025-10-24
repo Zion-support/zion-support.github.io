@@ -74,6 +74,7 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
             </div>
           </div>
         </div>
+      </div>
     </>
   )
 

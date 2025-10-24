@@ -49,5 +49,5 @@ export default function ServicePage() {
         </div>
       </div>
     </>
-  )
+  );
 }

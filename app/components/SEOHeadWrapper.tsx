@@ -12,7 +12,7 @@ const SEOHeadWrapper: "React.FC<SEOHeadWrapperProps> = ({ className", title, des
     </div>
     </>
   )
-  )
+  );
 }
 
 export default SEOHeadWrapper

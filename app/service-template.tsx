@@ -19,6 +19,7 @@ return(</ServiceTemplateProps> <div className="[^"]*"> <div className="[^"]*"> <
                 </svg>
     <span className="text-gray-700">{feature}</span>
                 </div>
+      </div>
     </>
   ))}
             </div>

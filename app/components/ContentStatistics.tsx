@@ -224,7 +224,7 @@ View Case Studies
   </div>
     </>
   )
-  )
+  );
 }
         <><div className="[^"]*"> <div className="[^"]*"><h3 className="text-2 xl font-bold text-white mb-4" />
 Ready to Join Our Success Stories</h3> <p className="[^"]*">

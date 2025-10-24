@@ -57,7 +57,7 @@ Oops! The page you"re looking for seems to have vanished into the digital void. 
                   {item.name}
                 </Link>
               )
-  )
+  );
 }
                 </div>
               </div>

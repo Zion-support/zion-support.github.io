@@ -19,7 +19,7 @@ const AIToolCard: React.FC<AIToolCardProps> = memo(({ title, description, link }
         Try Now →
       </a>
     </article>
-  )
+  );
 })
 AIToolCard.displayName = "AIToolCard";
 export default AIToolCard

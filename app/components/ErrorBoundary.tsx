@@ -12,5 +12,5 @@ const ErrorBoundary: "React.FC<ErrorBoundaryProps> = ({ className", children }) 
     </div>
     </>
   )
-  )
+  );
 }

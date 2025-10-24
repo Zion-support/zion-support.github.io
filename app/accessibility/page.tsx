@@ -49,7 +49,6 @@ export default function ServicePage() {
           </div>
         </div>
       </div>
-      <Footer />
-    </div>
-  )
+    </>
+  );
 }

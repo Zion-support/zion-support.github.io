@@ -12,7 +12,7 @@ const AdvancedSEOOptimizer: "React.FC<AdvancedSEOOptimizerProps> = ({ className 
     </div>
     </>
   )
-  )
+  );
 }
 
 export default AdvancedSEOOptimizer;

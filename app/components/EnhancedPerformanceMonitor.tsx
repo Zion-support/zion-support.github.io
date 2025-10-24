@@ -52,6 +52,7 @@ Our enhanced performance monitoring system provides comprehensive insights and o
                     ))}
                   </ul>
                   </div>
+      </div>
     </>
   ))}
               </div>
@@ -68,6 +69,7 @@ Experience the benefits of advanced performance monitoring with our comprehensiv
               {benefits.map((benefit,index) => (<divkey = {index} className="flex items-start space-x-3" /> <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                   </div>
+      </div>
     </>
   ))
               </div>

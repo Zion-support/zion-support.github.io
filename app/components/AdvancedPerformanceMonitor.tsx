@@ -12,7 +12,7 @@ const AdvancedPerformanceMonitor: "React.FC<AdvancedPerformanceMonitorProps> = (
     </div>
     </>
   )
-  )
+  );
 }
 
 export default AdvancedPerformanceMonitor;

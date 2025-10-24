@@ -66,7 +66,7 @@ cancelAnimationFrame(animationFrame)
 return (<spanclassName={className} />
       {prefix}{count}{suffix}</span>
     </span>)
-  )
+  );
 }
 
 export default AnimatedCounter;

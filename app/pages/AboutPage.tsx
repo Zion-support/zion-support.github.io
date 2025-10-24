@@ -294,5 +294,5 @@ View Our Services</Link> <ArrowRightIcon className="w-5 h-5" />
       </section>
 </div>
     </>
-  )
+  );
 }

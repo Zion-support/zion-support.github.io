@@ -68,7 +68,7 @@ const AdvancedAccessibilityEnhancer: "React.FC<AdvancedAccessibilityEnhancerProp
     </div>
     </>
   )
-  )
+  );
 }
 
 export default AdvancedAccessibilityEnhancer;

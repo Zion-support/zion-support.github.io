@@ -75,13 +75,14 @@ Thank you for subscribing!</CheckCircle>
               <feature.icon className="h-5 w-5 text-emerald-400" />
     <span className="text-sm">{feature.text}</span>
             </div>
+      </div>
     </>
   ))
 
         </div>
       </div>
     </>
-  )
+  );
 }
 
 export default ContentNewsletterSignup

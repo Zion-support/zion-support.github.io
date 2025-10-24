@@ -49,6 +49,7 @@ Learn More
 Discover the powerful features that make Enhanced Accessibility Enhancer the perfect solution for your business.
               </p>
               </div>
+      </div>
     </>
   ) <div className="[^"]*">,{features.map((feature, index) => (<divkey = {index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20" /> <div className="[^"]*">
                     <feature.icon className="w-8 h-8 text-emerald-400 mr-3" />

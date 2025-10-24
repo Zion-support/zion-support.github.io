@@ -55,7 +55,7 @@ const AdvancedPerformanceOptimizer: "React.FC<AdvancedPerformanceOptimizerProps>
     </div>
     </>
   )
-  )
+  );
 }
 
 export default AdvancedPerformanceOptimizer;

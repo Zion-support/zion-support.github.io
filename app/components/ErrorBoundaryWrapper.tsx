@@ -12,7 +12,7 @@ const ErrorBoundaryWrapper: "React.FC<ErrorBoundaryWrapperProps> = ({ className"
     </div>
     </>
   )
-  )
+  );
 }
 
 export default ErrorBoundaryWrapper

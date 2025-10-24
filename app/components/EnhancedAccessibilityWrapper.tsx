@@ -12,7 +12,7 @@ const EnhancedAccessibilityWrapper: "React.FC<EnhancedAccessibilityWrapperProps>
     </div>
     </>
   )
-  )
+  );
 }
 
 export default EnhancedAccessibilityWrapper
