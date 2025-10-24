@@ -1,12 +1,8 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Header from './components/Header'
+import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-import ErrorBoundary from './components/ErrorBoundary'
-import Analytics from './components/Analytics'
-import PerformanceMonitor from './components/PerformanceMonitor'
-import AccessibilityEnhancer from './components/AccessibilityEnhancer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -85,16 +81,11 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <Analytics />
-        <PerformanceMonitor />
-        <AccessibilityEnhancer />
-        <ErrorBoundary>
-          <Header />
-          <main className="pt-16">
-            {children}
-          </main>
-          <Footer />
-        </ErrorBoundary>
+        <Navigation />
+        <main className="pt-16">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   )

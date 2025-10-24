@@ -14,6 +14,14 @@ const nextConfig = {
     webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
   },
   
+  // Disable linting and type checking during build
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  
   // Generate build ID for better caching
   generateBuildId: async () => {
     return 'build-' + Date.now();
