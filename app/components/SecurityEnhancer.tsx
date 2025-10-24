@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-'use client';
-=======
 'use client';;
 import React from 'react';
 'use client';;
@@ -18,20 +15,21 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({children ,}) => {use
   )}'Referrer-Policy': 'strict-origin-when-cross-origin';}
       }
 // Add CSP meta tag;
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
 
-import React from 'react';
-
-interface SecurityEnhancerProps {
-  // Add props here
-}
-
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = (_props) => {
-  return (
-    <div>
-      {/* Component content */}
-    </div>
-  );
+      const cspMeta = document.createElement('meta');
+      cspMeta.httpEquiv = 'Content-Security-Policy';
+      cspMeta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';";
+      document.head.appendChild(cspMeta);
+// Disable right-click context menu;
+      document.addEventListener('contextmenu', (e) => {e.preventDefault()}})
+// Disable F12 and other dev tools shortcuts;
+      document.addEventListener('keydown', (e) => {if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+          e.preventDefault()}}
+      })
+    }
+enhanceSecurity();
+  }, []);
+return <React.Fragment>{children</React.Fragment>}</React.Fragment>
 };
 
 export default SecurityEnhancer;

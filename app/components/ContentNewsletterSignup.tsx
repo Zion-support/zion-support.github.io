@@ -1,6 +1,4 @@
 'use client';
-<<<<<<< HEAD
-=======
 import React from 'react';
 
 const ContentNewsletterSignup: React.FC = React.memo((props) => {
@@ -8,20 +6,57 @@ const ContentNewsletterSignup: React.FC = React.memo((props) => {
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
 
-import React from 'react';
-
+const ContentNewsletterSignupPage: React.FC = () => {
+  const features = [
 interface ContentNewsletterSignupProps {
-  // Add props here
+  title?: string;
+  subtitle?: string;
+  placeholder?: string;
+  buttonText?: string;
+  features?: Array<{
+    icon: React.ComponentType<{ className?: string }>;
+    text: string;
+  }>;
+  onSubscribe?: (email: string) => void;
 }
 
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = (_props) => {
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
+  title = "Stay Updated with Our Latest Insights",
+  subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
+  placeholder = "Enter your email address",
+  buttonText = "Subscribe Now",
+  features = [
+    {
+      icon: CheckCircle,
+      text: "Weekly industry insights"
+    },
+    {
+      icon: Star,
+      text: "Exclusive content and tips"
+    },
+    {
+      icon: Users,
+      text: "Join 10,000+ subscribers"
+    },
+    {
+      icon: Globe,
+      text: "Global community access"
+    }
+  ];
+
+  const benefits = [
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ];
+
   return (
-<<<<<<< HEAD
-    <div>
-      {/* Component content */}
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>ContentNewsletterSignup | Zion Tech Group</title>
@@ -266,9 +301,55 @@ const ContentNewsletterSignup: React.FC = () => {
           ))
         </div>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
     </div>
   );
 };
+
+export default ContentNewsletterSignupPage;
+        </div>
+        <h3 className="text-2xl font-bold text-white mb-2">Stay Updated</h3>
+        <p className="text-gray-300">Get the latest insights on AI, IT, and technology trends delivered to your inbox.</p>
+        </p>
+      </div>
+
+      <form onSubmit={handleSubmit}className="max-w-md mx-auto">
+        <div className="flex flex-col sm: flex-row gap-3">,</div>
+          <input;
+            type="email"
+            value={email}onChange={(e) => setEmail(e.target.value)}placeholder="Enter your email address"
+            required;
+            className="flex-1 px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent",
+          />
+          <button;
+            type="submit"
+            disabled={isSubmitting || !email}className="bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-600 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center",
+          >{isLoading ? (</button>
+              <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+            ) : (
+              'Subscribe'
+            )} </button>
+        </div>
+        
+        <p className="text-xs text-gray-400 text-center mt-3">We respect your privacy. Unsubscribe at any time.</p>
+        </p>
+      </form>
+
+      <div className="mt-6 grid grid-cols-1 sm: grid-cols-3 gap-4 text-center">,</div>
+        <div className="text-sm">
+          <div className="text-2xl font-bold text-blue-400">10K+</div>
+          <div className="text-gray-400">Subscribers</div>
+        </div>
+        <div className="text-sm">
+          </div><div className="text-2xl font-bold text-purple-400">Weekly</div>
+          <div className="text-gray-400">Updates</div>
+        </div>
+        <div className="text-sm">
+          </div><div className="text-2xl font-bold text-green-400">Free</div>
+          <div className="text-gray-400">Forever</div>
+        </div>
+      </div>
+    </div>
+  );
+});
 
 export default ContentNewsletterSignup;

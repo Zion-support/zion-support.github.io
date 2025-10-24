@@ -1,21 +1,19 @@
-<<<<<<< HEAD
-'use client';
-
-=======
 'use client';;
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
 import React from 'react';
 
+
 interface SkipLinkProps {
-  // Add props here
+  to: string;
+  children: React.ReactNode;
 }
 
-const SkipLink: React.FC<SkipLinkProps> = (_props) => {
+const SkipLink: React.FC<SkipLinkProps> = ({ to, children }) => {
   return (
-    <div>
-      {/* Component content */}
-    </div>
+    <a
+      href={to}
+
+    </a>
   );
 };
 
-export default SkipLink;
+

@@ -1,20 +1,18 @@
-<<<<<<< HEAD
-'use client';
-
-=======
 'use client';;
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
 import React from 'react';
-
-<<<<<<< HEAD
-interface ServiceWorkerRegistrationProps {
-  // Add props here
+<<<<<<< HEAD:app/page-optimized.tsx
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe} from 'lucide-react';
+const PageOptimizedPage: React.FC = () => {
 =======
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+
 'use client';;
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const ServiceWorkerRegistrationPage: React.FC = () => {
 const ServiceWorkerRegistrationPage: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-328b:working-pages/components/ServiceWorkerRegistration.tsx
     const features = [
     {
       icon: Brain,
@@ -61,8 +59,12 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
   ]
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+<<<<<<< HEAD:app/page-optimized.tsx
+      <title>Page Optimized | Zion Tech Group</title>
+=======
       <Helmet>
         </Helmet><title>ServiceWorkerRegistration | Zion Tech Group</title>
+>>>>>>> cursor/fix-errors-and-merge-to-main-328b:working-pages/components/ServiceWorkerRegistration.tsx
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
@@ -237,15 +239,24 @@ return (
       </section>
     </div>
   ),
->>>>>>> cursor/fix-errors-and-merge-to-main-328b
 }
-
-const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = (_props) => {
-  return (
-    <div>
-      {/* Component content */}
+export default ServiceWorkerRegistrationPage
+            <p className="text-xl text-purple-100 mb-8">
+              Contact our experts to discuss your serviceworkerregistration needs and get a customized solution.
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                <Phone className="mr-2 h-5 w-5" />
+                Call Now
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+                <Mail className="mr-2 h-5 w-5" />
+                Email Us
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
 
-export default ServiceWorkerRegistration;
+export default ServiceWorkerRegistrationPage;

@@ -1,18 +1,6 @@
 'use client';;
 import React from 'react';
 
-interface OptimizedImageProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  quality?: number;
-  placeholder?: 'blur' | 'empty';
-  blurDataURL?: string;
-}
-
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
@@ -44,8 +32,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     </div>
   );
 };
-
-export default OptimizedImage;
 
 
 

@@ -1,10 +1,9 @@
-'use client';
+'use client';;
 import React from 'react';
-
-export const dynamic = 'force-dynamic';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Eye, Volume2, Keyboard, Mouse, CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+import { Eye, Volume2, Keyboard, Mouse, CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Code } from 'lucide-react';
 
 const AccessibilityPage: React.FC = () => {
   const accessibilityFeatures = [
@@ -74,7 +73,14 @@ const AccessibilityPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
+      <Helmet>
+        <title>Accessibility Solutions - Zion Tech Group | Inclusive Digital Experiences</title>
+        <meta name="description" content="Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure your applications are usable by people of all abilities and comply with international standards." />
+        <meta name="keywords" content="accessibility, inclusive design, WCAG compliance, screen reader, keyboard navigation, digital accessibility" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         {/* Hero Section */}
@@ -174,6 +180,7 @@ const AccessibilityPage: React.FC = () => {
 
         <Footer />
       </div>
+    </>
   );
 };
 
