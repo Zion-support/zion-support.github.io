@@ -77,7 +77,7 @@ export default function PerformanceMonitor({
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            const fidEntry = entry as any;
+            const fidEntry = entry as PerformanceEntry & { processingStart: number };
             newMetrics.firstInputDelay = fidEntry.processingStart - fidEntry.startTime;
           });
         });
@@ -88,9 +88,9 @@ export default function PerformanceMonitor({
         const clsObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            const _clsEntry = entry as any;
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value;
+            const clsEntry = entry as PerformanceEntry & { hadRecentInput: boolean; value: number };
+            if (!clsEntry.hadRecentInput) {
+              clsValue += clsEntry.value;
             }
           });
           newMetrics.cumulativeLayoutShift = clsValue;
@@ -100,7 +100,7 @@ export default function PerformanceMonitor({
         // Time to Interactive (TTI) - approximation
         const ttiObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          const longTasks = entries.filter((entry: PerformanceEntry) => (entry as any).duration > 50);
+          const longTasks = entries.filter((entry: PerformanceEntry) => (entry as PerformanceEntry & { duration: number }).duration > 50);
           if (longTasks.length === 0) {
             newMetrics.timeToInteractive = performance.now();
           }
@@ -111,8 +111,8 @@ export default function PerformanceMonitor({
         const tbtObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const blockingTime = entries
-            .filter((entry: PerformanceEntry) => (entry as any).duration > 50)
-            .reduce((total, entry: PerformanceEntry) => total + ((entry as any).duration - 50), 0);
+            .filter((entry: PerformanceEntry) => (entry as PerformanceEntry & { duration: number }).duration > 50)
+            .reduce((total, entry: PerformanceEntry) => total + ((entry as PerformanceEntry & { duration: number }).duration - 50), 0);
           newMetrics.totalBlockingTime = blockingTime;
         });
         tbtObserver.observe({ entryTypes: ['longtask'] });
@@ -224,7 +224,7 @@ export const performanceUtils = {
 // Google Analytics integration for performance tracking
 export const trackPerformanceToGA = (metrics: PerformanceMetrics) => {
   if (typeof window !== 'undefined' && 'gtag' in window) {
-    (window as any).gtag('event', 'performance_metrics', {
+    (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', 'performance_metrics', {
       event_category: 'Performance',
       event_label: 'Core Web Vitals',
       custom_map: {
