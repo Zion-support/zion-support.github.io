@@ -119,8 +119,6 @@ Crawl-delay: 1
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /api/
-Disallo,
-      w: /_next/
-Disallo,
-      w: /private/`
+Disallow: /_next/
+Disallow: /private/`
 }

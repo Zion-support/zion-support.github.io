@@ -1,0 +1,13 @@
+// Security headers utility
+
+export const securityHeaders = {
+  getHeaders: () => {
+    return {
+      'X-Frame-Options': 'DENY',
+      'X-Content-Type-Options': 'nosniff',
+      'Referrer-Policy': 'strict-origin-when-cross-origin'
+    };
+  }
+};
+
+export default securityHeaders;
