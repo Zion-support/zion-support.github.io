@@ -1,28 +1,26 @@
-'use client';
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import Link from 'next/link';
-
-export default function PerformanceEnhancer() {
-  return (
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            PerformanceEnhancer | Zion Tech Group
-          </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional performanceenhancer | zion tech group services coming soon.
-          </p>
-          <Link 
-            href="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
+'use client'
+import React from 'react'
+import  Helmet  from 'react-helmet-async'
+import  Brain  CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain Globe        } from 'lucide-react'
+import { { ArrowRight     } from 'lucide-react'
+  
+  const benefits="'Increase" efficiency by up to 50'
+    'Reduce costs by 30 with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
+    'Gain competitive advantage with advanced technology'
+                </div>
+              
+            </div>
+          </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (</div>
+              <div key={index} className="flex items-start space-x-3"></div>
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
+              </div>
+            
+          </div>
         </div>
-      </div>
-    </>
-  );
-}
+      </section>
+export default PerformanceEnhancerPage }

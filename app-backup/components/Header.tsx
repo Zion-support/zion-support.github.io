@@ -7,6 +7,10 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 'use client';
 <<<<<<< HEAD
 const Header: React.FC<HeaderProps> = ({ className = '''
-=======
-const Header: React.FC<HeaderProps> = ({ className = ''
->>>>>>> cursor/fix-errors-and-merge-to-main-d1ed
+=======</HeaderProps>
+const Heade,</HeaderProps>
+  r: React.FC<HeaderProps> = ({ className = ''
+>>>>>>> cursor/fix-errors-and-merge-to-main-d1ed</HeaderProps>
+</HeaderProps>
+
+export default Header;

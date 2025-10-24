@@ -1,13 +1,16 @@
 import React from 'react'
 
-interface DefaultSEOProps {
-  className?: string
-}
+"use client"
 
+interface DefaultSEOProps {
+  className?: string}
+}
+;
 const DefaultSEO: React.FC<DefaultSEOProps> = ({ className = '' }) => {
-  return (
-    <div className={`default-seo ${className}`}>
-      {/* Default SEO component content */}
+  return (</DefaultSEOProps>
+    <div className={className}></div>
+      <h2>DefaultSEO</h2>
+      <p>This component is under construction.</p>
     </div>
   )
 }

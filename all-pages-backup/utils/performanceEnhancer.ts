@@ -12,7 +12,7 @@ import React, { useRef, useEffect } from 'react''
     '/fonts/inter-var.woff2''
     '/css/critical.css''
     const link = document.createElement('link''
-    link.rel = 'preload''
+    link.rel = 'preload'')
     link.as = resource.endsWith('.woff2') ? 'font' : 'style''
     if (resource.endsWith('.woff2''
       link.crossOrigin = 'anonymous''
@@ -29,9 +29,9 @@ import React, { useRef, useEffect } from 'react''
   if (typeof window === 'undefined' || !('memory''
   if (typeof window === 'undefined''
   const navigation = performance.getEntriesByType('navigation''}
-  const paint = performance.getEntriesByType('paint''
+  const paint = performance.getEntriesByType('paint'')
       "firstPaint": paint.find((entry) => entry.name === 'first-paint'',
   "firstContentfulPaint": paint.find((entry) => entry.name === 'first-contentful-paint'',
-  if (typeof window === 'undefined''
+  if (typeof window === 'undefined'';
   if (metrics && (process.env['NODE_ENV'] === 'development'';
-    console.log('Performance "metrics": ''
+    console.log('Performance "metrics": '')

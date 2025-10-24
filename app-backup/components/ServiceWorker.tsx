@@ -23,11 +23,13 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
     'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
 <<<<<<< HEAD
-const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = ''',
-=======
+const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = ''',</ServiceWorkerProps>
+=======</ServiceWorkerProps>
 const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '',
 >>>>>>> cursor/fix-errors-and-merge-to-main-d1ed
     if ('serviceWorker'
         .register('/sw.js'
-    console.log('SW "registered": ';,
-    console.log('SW registration "failed": '
+    console.log('SW "registered": ';,</ServiceWorkerProps>
+    console.log('SW registration "failed": ')</ServiceWorkerProps>
+
+export default ServiceWorker;

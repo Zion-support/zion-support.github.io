@@ -73,7 +73,7 @@ if (typeof window === 'undefined''
 "y": 'runtime'',
 getMetricsByCategory("category": PerformanceMetric['category'',
 getMetricsByCategory("category": PerformanceMetric['category'',
-"y": PerformanceMetric['category''
+"y": PerformanceMetric['category'')
 'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources''
 'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources''
 'Improve Largest Contentful Paint (LCP) - optimize largest element loading''
@@ -82,4 +82,4 @@ recommendations.push('Reduce First Input Delay (FID) - optimize JavaScript execu
 const networkMetrics = this.getMetricsByCategory('network''
   recommendations.push('Optimize network requests - consider caching and reducing payload sizes''
 'Optimize network requests - consider caching and reducing payload sizes''}
-const loadMetrics = this.getMetricsByCategory('load''
+const loadMetrics = this.getMetricsByCategory('load'');

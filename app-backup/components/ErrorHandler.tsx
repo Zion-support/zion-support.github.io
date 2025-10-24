@@ -32,4 +32,4 @@ import { Home } from 'lucide-react'
 =======
               We'';
 >>>>>>> cursor/fix-errors-and-merge-to-main-d1ed
-            {process.env.NODE_ENV === 'development'
+            {process.env.NODE_ENV === 'development')

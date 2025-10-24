@@ -1,32 +1,34 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
+import { type  Metadata  from 'next'
+import  Inter     } from 'next/font/google'
+import '/globalscss'
 
-const inter = Inter({ subsets: ['latin'] });
+const inter="Inter" subsets 'latin' 
 
 export const metadata: Metadata = {
-  title: 'ZionTechGroup - AI Solutions & Technology Services',
+  titl,
+  e: 'ZionTechGroup - AI Solutions & Technology Services',
   description: 'Leading provider of AI solutions, technology services, and digital transformation for businesses worldwide.',
   keywords: ['AI solutions', 'technology services', 'digital transformation', 'machine learning', 'artificial intelligence'],
-  authors: [{ name: 'ZionTechGroup' }],
+  authors: [{ nam,
+  e: 'ZionTechGroup' }],
   creator: 'ZionTechGroup',
   publisher: 'ZionTechGroup',
-  formatDetection: {
+  formatDetection: {,
     email: false,
     address: false,
     telephone: false,
   },
   metadataBase: new URL('https://ziontechgroup.com'),
-  alternates: {
+  alternates: {,
     canonical: '/',
   },
-  openGraph: {
+  openGraph: {,
     title: 'ZionTechGroup - AI Solutions & Technology Services',
     description: 'Leading provider of AI solutions, technology services, and digital transformation for businesses worldwide.',
     url: 'https://ziontechgroup.com',
     siteName: 'ZionTechGroup',
-    images: [
-      {
+    images: [,
+      {,
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
@@ -36,16 +38,16 @@ export const metadata: Metadata = {
     locale: 'en_US',
     type: 'website',
   },
-  twitter: {
+  twitter: {,
     card: 'summary_large_image',
     title: 'ZionTechGroup - AI Solutions & Technology Services',
     description: 'Leading provider of AI solutions, technology services, and digital transformation for businesses worldwide.',
     images: ['/og-image.jpg'],
   },
-  robots: {
+  robots: {,
     index: true,
     follow: true,
-    googleBot: {
+    googleBot: {,
       index: true,
       follow: true,
       'max-video-preview': -1,
@@ -53,7 +55,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
+  verification: {,
     google: 'your-google-verification-code',
   },
 };
@@ -61,13 +63,12 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode;,
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en"></html>
+      <body className={inter.className}></body>
         {children}
       </body>
     </html>
-  );
 }

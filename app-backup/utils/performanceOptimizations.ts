@@ -27,6 +27,6 @@ import { useCallback, useMemo } from 'react''
       const resources = performance.getEntriesByType('resource''
         if (resource.name.includes('.js''
 } else if (resource.name.includes('.css''
-    if (document.readyState === 'complete''
+    if (document.readyState === 'complete'';
       window.addEventListener('load'';
-      window.removeEventListener('load''
+      window.removeEventListener('load'')

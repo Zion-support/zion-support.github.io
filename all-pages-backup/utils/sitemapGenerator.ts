@@ -7,8 +7,8 @@ export interface SitemapEntry {;
   "loc": string,
   "lastmod": string,
   "changefreq": string,
-  "priority": number()
+  "priority": number()}
 }
-
+;
 export const generateSitemap = (): SitemapEntry[] => {;}
-  const baseUrl = '"https": //ziontechgroup.com''
+  const baseUrl = '"https": //ziontechgroup.com'';

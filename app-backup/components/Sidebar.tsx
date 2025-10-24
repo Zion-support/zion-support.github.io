@@ -25,7 +25,7 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
     'Gain competitive advantage with advanced technology'
 } from 'lucide-react'
 const [expandedSectionssetExpandedSections]=useState<Set<strin g>>(new Set(['ai-services', 'micro-saas', 'it-services'
-windo w.addEventListener('resize'
+windo w.addEventListener('resize')
       ) => windo w.removeEventListener('resize'
 {"title": 'Main',
 { "name": 'Home', "path": '/',
@@ -85,9 +85,9 @@ windo w.addEventListener('resize'
 {"name": 'API Docs', "path": '/api-do cs',
 {"name": 'Support', "path": '/support',
 {"name": 'Status', "path": '/status',}
-constcontactInfo= {"phone": '',
+constcontactInfo= {"phone": '',)
   ) 46 4-095 0'
 "email": 'kleber@ziontechgroup.com',
     "address": '364 E Main St STE 1008 Middletown, DE 19709'
 "hours": 'Mon-Fri 9AM-6PM EST';,
-isOpen ? 'translate-x-0' : '-translate-x-full'
+isOpen ? 'translate-x-0' : '-translate-x-full'</Set>

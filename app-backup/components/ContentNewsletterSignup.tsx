@@ -10,4 +10,4 @@ import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-r
 =======
       setEmail('';
 >>>>>>> cursor/fix-errors-and-merge-to-main-d1ed
-      // console.error('Subscription "error": '
+      // console.error('Subscription "error": ')

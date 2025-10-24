@@ -43,13 +43,6 @@
     "all-pages-backup/**/*",
     "backup-problematic/**/*",
     "corrupted-src-backup/**/*",
-    "problematic-files-backup/**/*",
-    "src/**/*",
-    "components/**/*",
-    "hooks/**/*",
-    "types/**/*",
-    "utils/**/*",
-    "app/App.tsx",
-    "app/root-layout.tsx"
+    "problematic-files-backup/**/*"
   ]
 }

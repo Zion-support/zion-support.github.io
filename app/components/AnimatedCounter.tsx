@@ -1,56 +1,65 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
+import { React  useEffect useState useRef  from 'react'
+import  useIntersectionObserver     } from '/hooks/useIntersectionObserver'
 
 interface AnimatedCounterProps {
-  start: number;
   end: number;
   duration?: number;
-  className?: string;
-  prefix?: string;
   suffix?: string;
+  prefix?: string;
+  className?: string;}
 }
-
+;
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
-  start,
   end,
   duration = 2000,
-  className = '',
+  suffix = '',
   prefix = '',
-  suffix = ''
+  className = ''
 }) => {
-  const [count, setCount] = useState(start);
+  const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const [setNode, entry] = useIntersectionObserver({
+    threshold: 0.5)
+  });
 
   useEffect(() => {
+    if (entry?.isIntersecting && !isVisible) {
+      setIsVisible(true);
+    }
+  }, [entry, isVisible]);
+
+  useEffect(() => {
+    if (!isVisible) return;
+    
     let startTime: number;
     let animationFrame: number;
-
-    const animate = (currentTime: number) => {
+    
+    const animate = (currentTim,
+  e: number) => {;
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
-      
+      // Easing function for smooth animation
       const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-      const currentCount = Math.floor(start + (end - start) * easeOutQuart);
-      
+      const currentCount = Math.floor(easeOutQuart * end);
       setCount(currentCount);
-
+      </AnimatedCounterProps>
       if (progress < 1) {
         animationFrame = requestAnimationFrame(animate);
       }
     };
-
+    
     animationFrame = requestAnimationFrame(animate);
-
+    
     return () => {
       if (animationFrame) {
         cancelAnimationFrame(animationFrame);
       }
     };
-  }, [start, end, duration]);
+  }, [isVisible, end, duration]);
 
   return (
     <span className={className}>
-      {prefix}{count.toLocaleString()}{suffix}
+      {prefix}{count}{suffix}</span>
     </span>
   );
 };

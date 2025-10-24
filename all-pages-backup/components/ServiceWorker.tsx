@@ -16,6 +16,10 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
     'Gain competitive advantage with advanced technology';
 <<<<<<< HEAD
 const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '''
-=======
-const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = ''
->>>>>>> cursor/fix-errors-and-merge-to-main-d1ed
+=======</ServiceWorkerProps>
+const ServiceWorke,</ServiceWorkerProps>
+  r: React.FC<ServiceWorkerProps> = ({ className = ''
+>>>>>>> cursor/fix-errors-and-merge-to-main-d1ed</ServiceWorkerProps>
+</ServiceWorkerProps>
+
+export default ServiceWorker;
