@@ -1,193 +1,128 @@
 #!/usr/bin/env python3
 """
-Script to fix syntax errors in TypeScript/JavaScript files
+Script to fix common syntax errors after merge conflict cleanup.
 """
+
 import os
 import re
 import glob
 
-def fix_hook_file(file_path):
-    """Fix hook files that have incorrect syntax"""
+def fix_syntax_errors(file_path):
+    """Fix syntax errors in a single file."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Check if this is a hook file that was incorrectly converted to a component
-        if 'useAdvancedPerformanceMonitoring' in content or 'useEnhancedPerformance' in content or 'usePerformanceMonitoring' in content:
-            # This should be a hook, not a component
-            hook_name = None
-            if 'useAdvancedPerformanceMonitoring' in content:
-                hook_name = 'useAdvancedPerformanceMonitoring'
-            elif 'useEnhancedPerformance' in content:
-                hook_name = 'useEnhancedPerformance'
-            elif 'usePerformanceMonitoring' in content:
-                hook_name = 'usePerformanceMonitoring'
-            
-            if hook_name:
-                # Create a proper hook file
-                new_content = f"""import {{ useState, useEffect, useCallback }} from 'react';
-
-interface {hook_name}Options {{
-  enabled?: boolean;
-  threshold?: number;
-}}
-
-export const {hook_name} = (options: {hook_name}Options = {{}}) => {{
-  const [isVisible, setIsVisible] = useState(false);
-  const [performance, setPerformance] = useState<number>(0);
-
-  useEffect(() => {{
-    if (options.enabled !== false) {{
-      const observer = new PerformanceObserver((list) => {{
-        const entries = list.getEntries();
-        if (entries.length > 0) {{
-          setPerformance(entries[0].duration);
-        }}
-      }});
-      
-      observer.observe({{ entryTypes: ['measure'] }});
-      
-      return () => observer.disconnect();
-    }}
-  }}, [options.enabled]);
-
-  const measurePerformance = useCallback((name: string, fn: () => void) => {{
-    performance.mark(name + '-start');
-    fn();
-    performance.mark(name + '-end');
-    performance.measure(name, name + '-start', name + '-end');
-  }}, []);
-
-  return {{
-    isVisible,
-    performance,
-    measurePerformance
-  }};
-}};
-"""
-                with open(file_path, 'w', encoding='utf-8') as f:
-                    f.write(new_content)
-                return True
+        original_content = content
         
-        return False
-    except Exception as e:
-        print(f"Error fixing hook file {file_path}: {e}")
-        return False
-
-def fix_page_file(file_path):
-    """Fix page files with syntax errors"""
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
+        # Fix const className = {className} -> className={className}
+        content = re.sub(r'const className\s*=\s*\{className\}', 'className={className}', content)
         
-        # Fix common syntax issues
-        # Fix malformed JSX closing tags
-        content = re.sub(r'</\s*>\s*$', '', content)
+        # Fix const className = `...` -> className={`...`}
+        content = re.sub(r'const className\s*=\s*`([^`]+)`', r'className={`\1`}', content)
         
-        # Fix missing closing braces
-        if content.strip().endswith('}'):
-            # Already has closing brace
-            pass
-        elif content.strip().endswith('</>'):
-            # Add closing brace
-            content = content.rstrip() + '\n}'
-        elif content.strip().endswith('</div>'):
-            # Add closing brace
-            content = content.rstrip() + '\n}'
+        # Fix onClick="{onClick}" -> onClick={onClick}
+        content = re.sub(r'onClick="\{([^}]+)\}"', r'onClick={\1}', content)
         
-        # Fix malformed JSX
-        content = re.sub(r'<>\s*$', '', content)
+        # Fix whileHover="{{" -> whileHover={{
+        content = re.sub(r'whileHover="\{\{\s*"', 'whileHover={{', content)
+        content = re.sub(r'whileTap="\{\{\s*"', 'whileTap={{', content)
+        content = re.sub(r'initial="\{\{\s*"', 'initial={{', content)
+        content = re.sub(r'animate="\{\{\s*"', 'animate={{', content)
+        content = re.sub(r'transition="\{\{\s*"', 'transition={{', content)
         
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(content)
+        # Fix }} -> }}
+        content = re.sub(r'\s*\}\}\s*"', '}}', content)
         
-        return True
-    except Exception as e:
-        print(f"Error fixing page file {file_path}: {e}")
-        return False
-
-def fix_utils_file(file_path):
-    """Fix utility files with syntax errors"""
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
+        # Fix standalone <></> fragments
+        content = re.sub(r'\s*<>\s*$', '', content, flags=re.MULTILINE)
+        content = re.sub(r'^\s*</>\s*$', '', content, flags=re.MULTILINE)
         
-        # Check if this is a utility file that was incorrectly converted to a component
-        if 'errorHandler' in content or 'performanceUtils' in content:
-            # This should be a utility file, not a component
-            if 'errorHandler' in content:
-                new_content = """export const errorHandler = {
-  log: (error: Error, context?: string) => {
-    console.error('Error:', error.message, context ? `Context: ${context}` : '');
-  },
-  
-  handle: (error: Error, fallback?: () => void) => {
-    console.error('Handled error:', error.message);
-    if (fallback) {
-      fallback();
-    }
-  }
-};
-"""
-            elif 'performanceUtils' in content:
-                new_content = """export const performanceUtils = {
-  measure: (name: string, fn: () => void) => {
-    performance.mark(name + '-start');
-    fn();
-    performance.mark(name + '-end');
-    performance.measure(name, name + '-start', name + '-end');
-  },
-  
-  getMetrics: () => {
-    return performance.getEntriesByType('measure');
-  }
-};
-"""
-            
+        # Fix missing closing tags
+        content = re.sub(r'<motion\.div\s+([^>]+)\s*/>', r'<motion.div \1>', content)
+        
+        # Fix broken JSX attributes
+        content = re.sub(r'(\w+)\s*=\s*`([^`]+)`', r'\1={`\2`}', content)
+        
+        # Fix broken className patterns
+        content = re.sub(r'className="w-4h-4"', 'className="w-4 h-4"', content)
+        
+        # Fix broken rounded classes
+        content = re.sub(r'rounded-2\s*xl', 'rounded-2xl', content)
+        content = re.sub(r'rounded-2\s*x', 'rounded-2xl', content)
+        
+        # Fix broken shadow classes
+        content = re.sub(r'shadow-2\s*xl', 'shadow-2xl', content)
+        content = re.sub(r'shadow-2\s*x', 'shadow-2xl', content)
+        
+        # Fix broken transition classes
+        content = re.sub(r'transition-opacityduration-500', 'transition-opacity duration-500', content)
+        content = re.sub(r'transition-opacityduration-500blur-sm', 'transition-opacity duration-500 blur-sm', content)
+        
+        # Fix broken gradient classes
+        content = re.sub(r'from-cyan-500/5\s*via-purple-500/5\s*to-cyan-500/5', 'from-cyan-500/5 via-purple-500/5 to-cyan-500/5', content)
+        content = re.sub(r'from-cyan-500/20\s*via-purple-500/20\s*to-cyan-500/20', 'from-cyan-500/20 via-purple-500/20 to-cyan-500/20', content)
+        
+        # Fix broken border classes
+        content = re.sub(r'hover:\s*border-indigo-400/50', 'hover:border-indigo-400/50', content)
+        
+        # Fix broken return statements
+        content = re.sub(r'return\s*\'([^\']+)\';\s*,', r'return \'\1\';', content)
+        
+        # Fix broken function syntax
+        content = re.sub(r'}\s*,\s*default:', '}\n  default:', content)
+        
+        # Fix broken JSX closing tags
+        content = re.sub(r'</>\s*$', '', content, flags=re.MULTILINE)
+        
+        # Fix broken JSX fragments
+        content = re.sub(r'^\s*<>\s*$', '', content, flags=re.MULTILINE)
+        
+        # Clean up extra whitespace
+        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
+        
+        # Only write if content changed
+        if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(new_content)
+                f.write(content)
             return True
         
         return False
+        
     except Exception as e:
-        print(f"Error fixing utils file {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to fix syntax errors"""
-    # Fix hook files
-    hook_files = glob.glob('/workspace/app/hooks/*.ts')
-    for file_path in hook_files:
-        if fix_hook_file(file_path):
-            print(f"Fixed hook file: {file_path}")
-    
-    # Fix page files with syntax errors
-    problematic_pages = [
-        '/workspace/app/ai-content-generator/page.tsx',
-        '/workspace/app/ai-solutions/page.tsx',
-        '/workspace/app/case-studies/page.tsx',
-        '/workspace/app/cloud-infrastructure/page.tsx',
-        '/workspace/app/contact/page.tsx',
-        '/workspace/app/micro-saas-solutions/page.tsx',
-        '/workspace/app/pricing/page.tsx',
-        '/workspace/app/services/page.tsx'
+    """Main function to fix syntax errors in all files."""
+    patterns = [
+        '**/*.tsx',
+        '**/*.ts', 
+        '**/*.js',
+        '**/*.jsx'
     ]
     
-    for file_path in problematic_pages:
-        if os.path.exists(file_path):
-            if fix_page_file(file_path):
-                print(f"Fixed page file: {file_path}")
+    files_processed = 0
+    files_fixed = 0
     
-    # Fix utils files
-    utils_files = [
-        '/workspace/app/utils/errorHandler.ts',
-        '/workspace/app/utils/performanceUtils.ts'
-    ]
+    for pattern in patterns:
+        for file_path in glob.glob(pattern, recursive=True):
+            # Skip node_modules and other directories
+            if 'node_modules' in file_path or '.git' in file_path:
+                continue
+                
+            try:
+                if fix_syntax_errors(file_path):
+                    files_fixed += 1
+                    print(f"✓ Fixed: {file_path}")
+                files_processed += 1
+                        
+            except Exception as e:
+                print(f"Error reading {file_path}: {e}")
     
-    for file_path in utils_files:
-        if os.path.exists(file_path):
-            if fix_utils_file(file_path):
-                print(f"Fixed utils file: {file_path}")
+    print(f"\nSummary:")
+    print(f"Files processed: {files_processed}")
+    print(f"Files fixed: {files_fixed}")
 
 if __name__ == "__main__":
     main()

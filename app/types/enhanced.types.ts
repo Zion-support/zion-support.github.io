@@ -1,5 +1,5 @@
 import React from 'react';
-
+  
 // Enhanced type definitions for better type safety
 export interface PerformanceMetrics {
   loadTime: number
@@ -37,14 +37,14 @@ export interface Service {
   description: string
   shortDescription: string
   icon: string
-  features: string[]
+  features: string[];
   pricing: {
     basic: number
     pro: number
     enterprise: number
   }
-  benefits: string[]
-  useCases: string[]
+  benefits: string[];
+  useCases: string[];
   marketPrice: string
   contactInfo: {
     phone: string
@@ -53,7 +53,7 @@ export interface Service {
   }
   link: string
   category: 'ai' | 'it' | '5g' | 'blockchain' | 'iot'
-  tags: string[]
+  tags: string[];
 }
 export interface User {
   id: string
@@ -90,7 +90,7 @@ export interface AnalyticsEvent {
 export interface SEOData {
   title: string
   description: string
-  keywords: string[]
+  keywords: string[];
   canonical?: string
   ogTitle?: string
   ogDescription?: string
@@ -102,7 +102,7 @@ export interface NavigationItem {
   name: string
   href: string
   icon?: React.ComponentType<{ className?: string }>
-  submenu?: NavigationItem[]
+  submenu?: NavigationItem[];
   external?: boolean
 }
 export interface PerformanceConfig {
@@ -124,7 +124,7 @@ export interface AccessibilityConfig {
 export type Optional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>
 export type RequiredFields<T, K extends keyof T> = T & Required<Pick<T, K>>
 export type DeepPartial<T> = {
-  [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P]
+  [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
 }
 // API Response types
 export interface ApiResponse<T = unknown> {
@@ -150,7 +150,7 @@ export interface ValidationError {
 }
 export interface FormState<T = Record<string, unknown>> {
   values: T
-  errors: ValidationError[]
+  errors: ValidationError[];
   touched: Record<keyof T, boolean>
   isSubmitting: boolean
   isValid: boolean
@@ -179,7 +179,7 @@ export interface InputProps extends BaseComponentProps {
   type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'search'
   placeholder?: string
   value?: string
-  onChange?: (value: string) => void
+  onChange?: (_value: string) => void
   onBlur?: () => void
   onFocus?: () => void
   disabled?: boolean

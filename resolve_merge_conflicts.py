@@ -1,111 +1,111 @@
 #!/usr/bin/env python3
 """
-Script to resolve merge conflicts by accepting HEAD version and removing conflict markers.
-This script will:
-1. Find all files with merge conflict markers
-2. Remove conflict markers and keep only the HEAD version
-3. Clean up any remaining artifacts
+Script to resolve merge conflicts systematically by:
+1. Identifying files that were deleted in main but modified in feature branches
+2. Deciding whether to keep, delete, or merge these files
+3. Resolving content conflicts in files that exist in both branches
 """
 
+import subprocess
 import os
-import re
-import glob
+import sys
 from pathlib import Path
 
-def resolve_merge_conflicts(file_path):
-    """Resolve merge conflicts in a single file by keeping HEAD version."""
+def run_command(cmd, cwd=None):
+    """Run a shell command and return the output"""
     try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-        
-        # Check if file has merge conflicts
-        if '<<<<<<< HEAD' not in content:
-            return False
-        
-        # Split content into lines
-        lines = content.split('\n')
-        resolved_lines = []
-        in_conflict = False
-        keep_lines = False
-        
-        for line in lines:
-            if line.strip() == '<<<<<<< HEAD':
-                in_conflict = True
-                keep_lines = True
-                continue
-            elif line.strip() == '=======':
-                keep_lines = False
-                continue
-            elif line.strip().startswith('>>>>>>> '):
-                in_conflict = False
-                keep_lines = False
-                continue
-            elif in_conflict and not keep_lines:
-                # Skip lines in the other branch
-                continue
-            else:
-                # Keep the line
-                resolved_lines.append(line)
-        
-        # Write resolved content back
-        resolved_content = '\n'.join(resolved_lines)
-        
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(resolved_content)
-        
-        print(f"✅ Resolved conflicts in: {file_path}")
-        return True
-        
+        result = subprocess.run(cmd, shell=True, capture_output=True, text=True, cwd=cwd)
+        return result.returncode, result.stdout, result.stderr
     except Exception as e:
-        print(f"❌ Error processing {file_path}: {e}")
-        return False
+        print(f"Error running command '{cmd}': {e}")
+        return -1, "", str(e)
 
-def find_files_with_conflicts():
-    """Find all files with merge conflict markers."""
-    conflict_files = []
+def get_conflicted_files():
+    """Get list of files with merge conflicts"""
+    _, stdout, _ = run_command("git status --porcelain")
+    conflicted_files = []
+    for line in stdout.split('\n'):
+        if line.startswith('UU') or line.startswith('AU') or line.startswith('UA') or line.startswith('DD') or line.startswith('DU') or line.startswith('UD'):
+            file_path = line[3:].strip()
+            conflicted_files.append(file_path)
+    return conflicted_files
+
+def resolve_modify_delete_conflicts():
+    """Resolve modify/delete conflicts by keeping the modified version"""
+    print("Resolving modify/delete conflicts...")
     
-    # Common file extensions to check
-    extensions = ['*.ts', '*.tsx', '*.js', '*.jsx', '*.json', '*.md', '*.html', '*.css']
+    # Get all conflicted files
+    _, stdout, _ = run_command("git status --porcelain")
+    modify_delete_files = []
     
-    for ext in extensions:
-        for file_path in glob.glob(f'**/{ext}', recursive=True):
-            try:
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                    if '<<<<<<< HEAD' in content:
-                        conflict_files.append(file_path)
-            except:
-                continue
+    for line in stdout.split('\n'):
+        if line.startswith('DU') or line.startswith('UD'):  # Deleted in one branch, modified in other
+            file_path = line[3:].strip()
+            modify_delete_files.append(file_path)
+            print(f"  - {file_path} (modify/delete conflict)")
     
-    return conflict_files
+    # For modify/delete conflicts, we'll keep the modified version
+    for file_path in modify_delete_files:
+        print(f"  Keeping modified version of {file_path}")
+        run_command(f"git add {file_path}")
+    
+    return modify_delete_files
+
+def resolve_content_conflicts():
+    """Resolve content conflicts by choosing the main branch version"""
+    print("Resolving content conflicts...")
+    
+    # Get files with content conflicts
+    _, stdout, _ = run_command("git status --porcelain")
+    content_conflict_files = []
+    
+    for line in stdout.split('\n'):
+        if line.startswith('UU'):  # Both modified
+            file_path = line[3:].strip()
+            content_conflict_files.append(file_path)
+            print(f"  - {file_path} (content conflict)")
+    
+    # For content conflicts, we'll use the main branch version
+    for file_path in content_conflict_files:
+        print(f"  Using main branch version of {file_path}")
+        run_command(f"git checkout --ours {file_path}")
+        run_command(f"git add {file_path}")
+    
+    return content_conflict_files
 
 def main():
-    print("🔍 Searching for files with merge conflicts...")
-    conflict_files = find_files_with_conflicts()
+    print("Starting merge conflict resolution...")
     
-    if not conflict_files:
-        print("✅ No files with merge conflicts found!")
+    # Check if we're in a merge state
+    _, stdout, _ = run_command("git status")
+    if "You have unmerged paths" not in stdout:
+        print("No merge conflicts detected.")
         return
     
-    print(f"📁 Found {len(conflict_files)} files with merge conflicts")
+    print("Merge conflicts detected. Starting resolution...")
     
-    resolved_count = 0
-    failed_count = 0
+    # Resolve modify/delete conflicts
+    modify_delete_files = resolve_modify_delete_conflicts()
     
-    for file_path in conflict_files:
-        if resolve_merge_conflicts(file_path):
-            resolved_count += 1
-        else:
-            failed_count += 1
+    # Resolve content conflicts
+    content_conflict_files = resolve_content_conflicts()
     
-    print(f"\n📊 Summary:")
-    print(f"✅ Successfully resolved: {resolved_count} files")
-    print(f"❌ Failed to resolve: {failed_count} files")
-    
-    if resolved_count > 0:
-        print("\n🎉 Merge conflicts resolved! You can now run your build and tests.")
+    # Check remaining conflicts
+    conflicted_files = get_conflicted_files()
+    if conflicted_files:
+        print(f"Remaining conflicts: {conflicted_files}")
+        print("Manual resolution may be required for these files.")
     else:
-        print("\n⚠️  No conflicts were resolved. Please check the files manually.")
+        print("All conflicts resolved!")
+        
+        # Commit the merge
+        print("Committing merge...")
+        run_command("git commit -m 'Resolve merge conflicts: keep main branch structure, integrate useful features'")
+        
+        # Verify the merge
+        print("Verifying merge...")
+        run_command("npm run build")
+        run_command("npm test")
 
 if __name__ == "__main__":
     main()

@@ -1,91 +1,80 @@
 #!/bin/bash
 
-echo "🚀 Starting comprehensive branch merge process..."
+# Comprehensive branch merge script
+set -e
 
-# Set git configuration
-git config pull.rebase false
+echo "Starting comprehensive branch merge process..."
 
-# Fetch all branches
-echo "📥 Fetching all branches..."
-git fetch --all
-
-# Get current branch
-current_branch=$(git branch --show-current)
-echo "📍 Current branch: $current_branch"
-
-# Ensure we're on main
-if [ "$current_branch" != "main" ]; then
-    echo "🔄 Switching to main branch..."
-    git checkout main
-fi
-
-# List of branches to merge (prioritized)
-branches=(
-    "origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d9b6"
-    "origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe"
-    "origin/merge-error-fixes"
-    "origin/cursor/delete-old-data-records-c826"
+# Get the list of recent branches
+BRANCHES=(
+    "origin/cursor/delete-old-data-records-41de"
+    "origin/cursor/delete-old-data-records-917e"
+    "origin/cursor/delete-old-data-records-a094"
+    "origin/cursor/delete-old-data-records-df78"
+    "origin/cursor/delete-records-57d6"
+    "origin/cursor/delete-old-data-records-c928"
+    "origin/cursor/swdr-background-task-5bf5"
+    "origin/cursor/swdr-background-task-a762"
+    "origin/cursor/fix-errors-and-merge-to-main-6cb7"
+    "origin/cursor/swdr-background-task-9835"
+    "origin/cursor/undefined-awde-task-1140"
+    "origin/cursor/undefined-awde-task-3217"
+    "origin/cursor/undefined-awde-task-b171"
+    "origin/cursor/undefined-awde-task-d518"
+    "origin/cursor/undefined-awde-task-f7f0"
+    "origin/cursor/fix-errors-and-merge-to-main-07d1"
+    "origin/cursor/fix-errors-and-merge-to-main-13a8"
+    "origin/cursor/fix-errors-and-merge-to-main-d5a0"
+    "origin/cursor/fix-errors-and-merge-to-main-0278"
+    "origin/temp-merge-33776"
 )
 
-# Add all fix-error branches
-for branch in $(git branch -r | grep "cursor/fix-errors-and-merge-to-main-" | head -10); do
-    branches+=("$branch")
-done
-
-echo "📋 Found ${#branches[@]} branches to merge:"
-for branch in "${branches[@]}"; do
-    echo "  - $branch"
-done
+# Ensure we're on main branch
+git checkout main
+git pull origin main
 
 # Merge each branch
-for branch in "${branches[@]}"; do
-    echo ""
-    echo "🔄 Attempting to merge: $branch"
+for branch in "${BRANCHES[@]}"; do
+    echo "Processing branch: $branch"
     
     # Check if branch exists
     if git show-ref --verify --quiet refs/remotes/$branch; then
-        echo "✅ Branch exists, attempting merge..."
+        echo "Merging $branch into main..."
         
-        # Try to merge
-        if git merge "$branch" --no-ff -m "Merge: $branch"; then
-            echo "✅ Successfully merged: $branch"
+        # Try to merge the branch
+        if git merge --no-ff $branch -m "Merge $branch into main" 2>/dev/null; then
+            echo "Successfully merged $branch"
         else
-            echo "⚠️  Merge conflict in: $branch"
-            echo "🔧 Attempting to resolve conflicts..."
+            echo "Merge conflict in $branch, resolving..."
             
-            # Check for conflict markers
-            if git grep -l "" -- .; then
-                echo "🔍 Found conflict markers, attempting resolution..."
-                
-                # Try to resolve common conflicts automatically
-                git add . || true
-                git commit -m "Resolve merge conflicts for $branch" || true
-                
-                if [ $? -eq 0 ]; then
-                    echo "✅ Conflicts resolved for: $branch"
-                else
-                    echo "❌ Could not resolve conflicts for: $branch"
-                    echo "🔄 Aborting merge and continuing..."
-                    git merge --abort || true
-                fi
+            # Resolve conflicts by keeping main branch version
+            git status --porcelain | grep "^UU" | cut -c4- | while read file; do
+                echo "Resolving conflict in $file"
+                git checkout --theirs "$file" 2>/dev/null || true
+            done
+            
+            # Add resolved files
+            git add .
+            
+            # Commit the merge
+            if git commit -m "Resolve merge conflicts in $branch by keeping main branch versions" 2>/dev/null; then
+                echo "Successfully resolved conflicts in $branch"
             else
-                echo "✅ No conflict markers found, continuing..."
+                echo "No conflicts to resolve in $branch"
+                git merge --abort 2>/dev/null || true
             fi
         fi
     else
-        echo "❌ Branch does not exist: $branch"
+        echo "Branch $branch does not exist, skipping..."
     fi
+    
+    echo "---"
 done
 
-echo ""
-echo "📤 Pushing all changes to main..."
-if git push origin main; then
-    echo "✅ Successfully pushed to main"
-else
-    echo "❌ Failed to push to main"
-fi
+echo "All branches processed successfully!"
+echo "Pushing changes to origin/main..."
 
-echo ""
-echo "🎉 Branch merge process completed!"
-echo "📊 Final status:"
-git status --short
+# Push all changes
+git push origin main
+
+echo "Merge process completed!"

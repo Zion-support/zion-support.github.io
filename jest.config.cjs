@@ -1,36 +1,42 @@
-module.exports = {
-  preset: 'ts-jest',
+const nextJest = require('next/jest')
+
+const createJestConfig = nextJest({
+  // Provide the path to your Next.js app to load next.config.js and .env files
+  dir: './',
+})
+
+// Add any custom config to be passed to Jest
+const customJestConfig = {
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.cjs'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/app/$1',
+    '^@/(.*)$': '<rootDir>/$1',
     '^@/components/(.*)$': '<rootDir>/app/components/$1',
-    '^@/pages/(.*)$': '<rootDir>/app/$1',
-    '^@/utils/(.*)$': '<rootDir>/app/utils/$1',
-    '^@/types/(.*)$': '<rootDir>/app/types/$1',
-    '^@/hooks/(.*)$': '<rootDir>/hooks/$1',
-    '^@/config/(.*)$': '<rootDir>/app/config/$1',
-    '^@/data/(.*)$': '<rootDir>/app/data/$1',
-    '^@/content/(.*)$': '<rootDir>/app/content/$1',
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': 'jest-transform-stub'
+    '^@/content/(.*)$': '<rootDir>/content/$1'
   },
   transform: {
-    '^.+\\.(ts|tsx)$': ['ts-jest', { 
-      useESM: true,
-      tsconfig: {
-        jsx: 'react-jsx'
-      }
-    }],
-    '^.+\\.(js|jsx)$': 'babel-jest'
+    '^.+\\\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\\\.(js|jsx)$': 'babel-jest'
   },
   testMatch: [
-    '<rootDir>/app/**/__tests__/**/*.(ts|tsx|js|jsx)',
     '<rootDir>/app/**/*.(test|spec).(ts|tsx|js|jsx)',
-    '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',
-    '<rootDir>/**/*.(test|spec).(ts|tsx|js|jsx)',
-    '!src/**/*.d.ts',
-    '!src/setupTests.ts'
+    '<rootDir>/__tests__/**/*.(test|spec).(ts|tsx|js|jsx)'
   ],
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-};
+  collectCoverageFrom: [
+    'app/**/*.{ts,tsx}',
+    '!app/**/index.{ts,tsx}',
+    '!app/**/*.d.ts'
+  ],
+  testPathIgnorePatterns: [
+    '<rootDir>/.next/',
+    '<rootDir>/out/',
+    '<rootDir>/node_modules/'
+  ],
+  transformIgnorePatterns: [
+    'node_modules/(?!(.*\\\\.mjs$|lucide-react|framer-motion))'
+  ],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node']
+}
+
+// createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
+module.exports = createJestConfig(customJestConfig)

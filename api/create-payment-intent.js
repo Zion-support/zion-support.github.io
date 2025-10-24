@@ -1,50 +1,36 @@
-import { withErrorLogging } from './withErrorLogging.cjs'
-async function handler(req, res) {
-  if (req.method !== 'POST') {
-    res.statusCode = 405
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Method not allowed' }))
-    return
-  }
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
-  const { amount, currency = 'usd' } = req.body || {}
-  if (!amount) {
-    res.statusCode = 400
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Amount is required' }))
-    return
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    res.statusCode = 405;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
   }
 
   try {
-    const paymentIntent = {
-      id: 'pi_' + Math.random().toString(36).substr(2, 9),
+    const { amount, currency = 'usd' } = req.body;
+
+    if (!amount) {
+      res.statusCode = 400;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Amount is required' }));
+      return;
+    }
+
+    const paymentIntent = await stripe.paymentIntents.create({
       amount: Math.round(amount * 100), // Convert to cents
       currency,
-      status: 'requires_payment_method',
-      client_secret: 'pi_' + Date.now() + '_secret_' + Math.random().toString(36).substr(2, 9),
-      created: Math.floor(Date.now() / 1000)
-    };
-
-    // In a real implementation, you would:
-    // 1. Create a payment intent with Stripe
-    // 2. Store the payment intent in your database
-    // 3. Return the client secret for frontend confirmation
+    });
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({
-      success: true,
-      paymentIntent
-    }));
+    res.end(JSON.stringify({ clientSecret: paymentIntent.client_secret }));
+
   } catch (error) {
-    console.error('Payment intent creation error:', error);
+    console.error('Stripe payment intent error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      error: 'Failed to create payment intent',
-      details: process.env.NODE_ENV === 'development' ? error.message : undefined
-    }));
+    res.end(JSON.stringify({ error: 'Internal server error' }));
   }
 }
-
-export default withErrorLogging(handler)
