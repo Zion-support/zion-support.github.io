@@ -1,4 +1,4 @@
-'use client'
+import { Metadata } from 'next'
+
 import React from 'react'
-import Head from 'next/head'
 // Conflict resolved: taking HEAD version
