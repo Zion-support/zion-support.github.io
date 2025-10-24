@@ -30,23 +30,4 @@ conflictedFiles.forEach((filePath) => {
   try {
     let content = fs.readFileSync(filePath, "utf8");
 
-    // Remove all merge conflict markers and keep our version (the one after =======)
     content = content.replace(
-      /<<<<<<< HEAD[\s\S]*?=======\n([\s\S]*?)>>>>>>> cursor\/fix-errors-and-merge-to-main-9f4a/g,
-      "$1",
-    );
-
-    // Also handle the case where there might be other conflict markers
-    content = content.replace(
-      /<<<<<<< HEAD[\s\S]*?=======\n([\s\S]*?)>>>>>>> [^\n]+/g,
-      "$1",
-    );
-
-    fs.writeFileSync(filePath, content);
-    console.log(`Resolved conflicts in ${filePath}`);
-  } catch (error) {
-    console.error(`Error resolving ${filePath}:`, error.message);
-  }
-});
-
-console.log("All merge conflicts resolved!");

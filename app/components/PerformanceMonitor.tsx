@@ -1,31 +1,62 @@
-"use client"
+import React, { useEffect } from 'react';
 
-import React, { useEffect } from 'react'
+interface PerformanceMonitorProps {
+  performanceData?: any;
+}
 
-export default function PerformanceMonitor() {
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData }) => {
   useEffect(() => {
-    // Performance monitoring logic
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Monitor Core Web Vitals
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          // Performance monitoring can be implemented here
-          // console.log('Performance entry:', entry)
-        }
-      })
+    // Monitor Core Web Vitals
+    if ('web-vitals' in window) {
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+        const logMetric = (metric: any) => {
+          if (process.env.NODE_ENV === 'development') {
+            // eslint-disable-next-line no-console
+            console.log(metric);
+          }
+        };
+        getCLS(logMetric);
+        getFID(logMetric);
+        getFCP(logMetric);
+        getLCP(logMetric);
+        getTTFB(logMetric);
+      });
+    }
 
-      try {
-        observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] })
-      } catch (error) {
-        // Performance observer not supported in this environment
-        // console.warn('Performance observer not supported:', error)
-      }
+    // Monitor performance metrics
+    if ('performance' in window) {
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+          const paint = performance.getEntriesByType('paint');
+          if (process.env.NODE_ENV === 'development') {
+            // eslint-disable-next-line no-console
+            console.log('Performance Metrics: ', {
+              domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+              loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+              firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
+              firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
+            });
+          }
+        }, 0);
+      });
+    }
 
-      return () => {
-        observer.disconnect()
+    // Monitor memory usage
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      if (process.env.NODE_ENV === 'development') {
+        // eslint-disable-next-line no-console
+        console.log('Memory Usage: ', {
+          used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
+          total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
+          limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB',
+        });
       }
     }
-  }, [])
+  }, []);
 
-  return null
-}
+  return null;
+};
+
+export default PerformanceMonitor;
