@@ -1,24 +1,25 @@
 'use client';
+
 import { useEffect } from 'react';
 
-const ServiceWorkerRegistration: React.FC = () => {
+export default function ServiceWorkerRegistration() {
   useEffect(() => {
-    if ('serviceWorker' in navigator) {
+    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
           .then((registration) => {
-            // eslint-disable-next-line no-console
-            console.log('SW registered: ', registration);
+            if (process.env.NODE_ENV === 'development') {
+              console.log('SW registered: ', registration);
+            }
           })
           .catch((registrationError) => {
-            // eslint-disable-next-line no-console
-            console.log('SW registration failed: ', registrationError);
+            if (process.env.NODE_ENV === 'development') {
+              console.log('SW registration failed: ', registrationError);
+            }
           });
       });
     }
   }, []);
 
   return null;
-};
-
-export default ServiceWorkerRegistration;
+}

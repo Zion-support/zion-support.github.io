@@ -1,103 +1,58 @@
 'use client';
+
 import React, { useState } from 'react';
-import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react';
+import { ArrowRight, CheckCircle } from 'lucide-react';
 
-interface ContentNewsletterSignupProps {
-  title?: string;
-  subtitle?: string;
-  placeholder?: string;
-  buttonText?: string;
-  features?: Array<{
-    icon: React.ComponentType<{ className?: string }>;
-    text: string;
-  }>;
-  onSubscribe?: (email: string) => void;
-}
-
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
-  title = "Stay Updated with Our Latest Insights",
-  subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
-  placeholder = "Enter your email address",
-  buttonText = "Subscribe",
-  features = [
-    { icon: Star, text: "Exclusive content" },
-    { icon: Users, text: "Industry insights" },
-    { icon: Globe, text: "Global updates" },
-    { icon: Zap, text: "Early access" }
-  ],
-  onSubscribe
-}) => {
+export default function ContentNewsletterSignup() {
   const [email, setEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email) return;
-    
-    setIsSubmitting(true);
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      if (onSubscribe) {
-        onSubscribe(email);
-      }
-      setIsSubscribed(true);
-      setEmail('');
-    } catch (error) {
-      console.error('Subscription failed:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
+    // Handle newsletter subscription
+    setIsSubscribed(true);
+    setEmail('');
   };
 
-  return (
-    <div className="bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 py-16 px-4">
-      <div className="max-w-4xl mx-auto text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">{title}</h1>
-        <p className="text-xl text-gray-300 mb-8">{subtitle}</p>
-
-        <form onSubmit={handleSubmit} className="max-w-md mx-auto mb-8">
-          <div className="flex flex-col sm:flex-row gap-4">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder={placeholder}
-              className="flex-1 px-4 py-3 rounded-lg bg-slate-800 border border-slate-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
-              required
-            />
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="bg-emerald-600 hover:bg-emerald-700 disabled:bg-emerald-800 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
-            >
-              {isSubmitting ? 'Subscribing...' : buttonText}
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </button>
-          </div>
-        </form>
-
-        {isSubscribed && (
-          <div className="mt-4 p-4 bg-emerald-600/20 border border-emerald-500/50 rounded-lg">
-            <p className="text-emerald-400 flex items-center justify-center">
-              <CheckCircle className="h-5 w-5 mr-2" />
-              Thank you for subscribing!
-            </p>
-          </div>
-        )}
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-          {features.map((feature, index) => (
-            <div key={index} className="flex items-center space-x-2 text-gray-300">
-              <feature.icon className="h-5 w-5 text-emerald-400" />
-              <span className="text-sm">{feature.text}</span>
-            </div>
-          ))}
-        </div>
+  if (isSubscribed) {
+    return (
+      <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
+        <CheckCircle className="h-8 w-8 text-green-600 mx-auto mb-2" />
+        <h3 className="text-lg font-semibold text-green-800 mb-2">
+          Successfully Subscribed!
+        </h3>
+        <p className="text-green-600">
+          Thank you for subscribing to our newsletter.
+        </p>
       </div>
+    );
+  }
+
+  return (
+    <div className="bg-gray-50 rounded-lg p-6">
+      <h3 className="text-xl font-semibold text-gray-900 mb-4">
+        Stay Updated
+      </h3>
+      <p className="text-gray-600 mb-4">
+        Get the latest insights and updates from Zion Tech Group.
+      </p>
+      <form onSubmit={handleSubmit} className="flex gap-2">
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Enter your email"
+          className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          required
+        />
+        <button
+          type="submit"
+          className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center"
+        >
+          Subscribe
+          <ArrowRight className="ml-2 h-4 w-4" />
+        </button>
+      </form>
     </div>
   );
-};
-
-export default ContentNewsletterSignup;
+}

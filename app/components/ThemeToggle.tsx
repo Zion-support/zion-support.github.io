@@ -1,84 +1,41 @@
 'use client';
+
 import React, { useState, useEffect } from 'react';
-import { Sun, Moon, Monitor } from 'lucide-react';
+import { Sun, Moon } from 'lucide-react';
 
-type Theme = 'light' | 'dark' | 'system';
-
-const ThemeToggle: React.FC = () => {
-  const [theme, setTheme] = useState<Theme>('system');
-  const [mounted, setMounted] = useState(false);
+export default function ThemeToggle() {
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
-    const savedTheme = localStorage.getItem('theme') as Theme;
-    if (savedTheme) {
-      setTheme(savedTheme);
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      setIsDark(true);
+      document.documentElement.classList.add('dark');
     }
   }, []);
 
-  useEffect(() => {
-    if (!mounted) return;
-
-    const root = window.document.documentElement;
-    root.classList.remove('light', 'dark');
-
-    if (theme === 'system') {
-      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      root.classList.add(systemTheme);
+  const toggleTheme = () => {
+    const newTheme = !isDark;
+    setIsDark(newTheme);
+    
+    if (newTheme) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
     } else {
-      root.classList.add(theme);
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
     }
-
-    localStorage.setItem('theme', theme);
-  }, [theme, mounted]);
-
-  const handleThemeChange = (newTheme: Theme) => {
-    setTheme(newTheme);
   };
 
-  if (!mounted) {
-    return (
-      <div className="w-10 h-10 rounded-lg bg-gray-200 animate-pulse"></div>
-    );
-  }
-
   return (
-    <div className="flex items-center space-x-1 bg-gray-100 dark:bg-gray-800 rounded-lg p-1">
-      <button
-        onClick={() => handleThemeChange('light')}
-        className={`p-2 rounded-md transition-colors ${
-          theme === 'light'
-            ? 'bg-white text-yellow-600 shadow-sm'
-            : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100'
-        }`}
-        title="Light theme"
-      >
-        <Sun className="h-4 w-4" />
-      </button>
-      <button
-        onClick={() => handleThemeChange('dark')}
-        className={`p-2 rounded-md transition-colors ${
-          theme === 'dark'
-            ? 'bg-gray-800 text-blue-400 shadow-sm'
-            : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100'
-        }`}
-        title="Dark theme"
-      >
-        <Moon className="h-4 w-4" />
-      </button>
-      <button
-        onClick={() => handleThemeChange('system')}
-        className={`p-2 rounded-md transition-colors ${
-          theme === 'system'
-            ? 'bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 shadow-sm'
-            : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100'
-        }`}
-        title="System theme"
-      >
-        <Monitor className="h-4 w-4" />
-      </button>
-    </div>
+    <button
+      onClick={toggleTheme}
+      className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+      aria-label="Toggle theme"
+    >
+      {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+    </button>
   );
-};
-
-export default ThemeToggle;
+}

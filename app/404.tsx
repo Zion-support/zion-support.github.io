@@ -58,6 +58,7 @@ const NotFound = () => {
               Refresh
             </button>
           </div>
+          
           <div className="mt-12">
             <p className="text-gray-400 mb-4">Looking for something specific?</p>
             <div className="relative max-w-md mx-auto">
