@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { useLocation, Link } from 'react-router-dom';
 
 const Breadcrumb: React.FC = () => {
@@ -17,7 +17,7 @@ const Breadcrumb: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ol className="flex items-center space-x-2 text-sm">
           <li>
-            <Link to="/" className="text-gray-400 hover:text-white transition-colors">
+            <Link href="/" className="text-gray-400 hover:text-white transition-colors">
               Home
             </Link>
           </li>
