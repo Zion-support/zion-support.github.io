@@ -1,11 +1,15 @@
 // API Client for making HTTP requests
 import logger from './logger';
 
-// Extend RequestInit to include our custom options
-interface ExtendedRequestInit extends RequestInit {
-  timeout?: number;
-  retries?: number;
+// Extend the global RequestInit type
+declare global {
+  interface RequestInit {
+    timeout?: number;
+    retries?: number;
+  }
 }
+
+// ExtendedRequestInit is now defined globally
 
 export interface ApiResponse<T = unknown> {
   data: T;
@@ -35,7 +39,7 @@ class ApiClient {
 
   private async makeRequest<T>(
     url: string,
-    options: ExtendedRequestInit & RequestOptions = {}
+    options: RequestInit & RequestOptions = {}
   ): Promise<ApiResponse<T>> {
     const {
       timeout = this.defaultOptions.timeout,
