@@ -74,6 +74,8 @@ const LoadingFallback = () => (
 );
 
 function App() {
+  const [sidebarOpen, setSidebarOpen] = React.useState(false);
+
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
@@ -101,7 +103,7 @@ function App() {
         <Router>
           <div className="min-h-screen bg-gray-50">
             <Navigation />
-            <Sidebar />
+            <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
             
             <main className="flex-1">
               <ErrorBoundary>
