@@ -41,72 +41,72 @@ constAIContentGenerationPage: React.FC= () =>{constcontentServices= [
       step: '1',
       title: 'Input Your Requirements',
       description: 'Tell us about your brand, target audience, and content goals.',
-     icon:<BrainclassName=&quot;w-6h-6&quot; />},
+     icon:<BrainclassName="w-6h-6" />},
     {step: '2',
       title: 'AI Content Generation',
       description: 'Our AI creates high-quality, engaging content tailored to your needs.',
-     icon:<ZapclassName=&quot;w-6h-6&quot; />},
+     icon:<ZapclassName="w-6h-6" />},
     {step: '3',
       title: 'Review & Refine',
       description: 'Review the generated content and make any necessary adjustments.',
-     icon:<EyeclassName=&quot;w-6h-6&quot; />},
+     icon:<EyeclassName="w-6h-6" />},
     {step: '4',
       title: 'Publish & Monitor',
       description: 'Publish your content and monitor performance with detailed analytics.',
-      icon: <BarChart className=&quot;w-6 h-6&quot; />
+      icon: <BarChart className="w-6 h-6" />
     }
   ]
   return (
-    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
-      <main className=&quot;container mx-auto px-4 py-16 pt-24&quot;>
+      <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
-        <section className=&quot;text-center mb-16&quot;></section>
-          <h1 className=&quot;text-4xl md:text-6xl font-bold text-white mb-6&quot;>
+        <section className="text-center mb-16"></section>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Content Generation
           </h1>
-          <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your content strategy with our AI-powered content generation services.
             Create blog posts, social media content, and marketing copy 10x faster.
           </p>
-          <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
-              href=&quot;/contact&quot;
-              className=&quot;cyber-button&quot;
+              href="/contact"
+              className="cyber-button"
             >
               Get Started
             </a>
             <a
-              href=&quot;tel:+13024640950&quot;
-              className=&quot;cyber-button&quot;
+              href="tel:+13024640950"
+              className="cyber-button"
             >
               Call (302) 464-0950
             </a>
           </div>
         </section>
         {/* Services Section */}
-        <section className=&quot;mb-16&quot;></section>
-          <h2 className=&quot;text-3xl font-bold text-white mb-8 text-center&quot;>
+        <section className="mb-16"></section>
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">
             Content Generation Services
           </h2>
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8&quot;></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"></div>
             {contentServices.map((service, index) => (
-              <div key={index} className=&quot;cyber-card hologram-card p-6&quot;></div>
-                <div className=&quot;text-4xl mb-4&quot;>{service.icon}</div>
-                <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{service.title}</h3>
-                <p className=&quot;text-gray-300 mb-4&quot;>{service.description}</p>
-                <ul className=&quot;text-sm text-gray-400 mb-4&quot;>
+              <div key={index} className="cyber-card hologram-card p-6"></div>
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <ul className="text-sm text-gray-400 mb-4">
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className=&quot;flex items-center mb-1&quot;>
-                      <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2&quot; />
+                    <li key={idx} className="flex items-center mb-1">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <div className=&quot;text-cyan-400 font-bold mb-4&quot;>{service.price}</div>
+                <div className="text-cyan-400 font-bold mb-4">{service.price}</div>
                 <a
-                  href=&quot;/contact&quot;
-                  className=&quot;cyber-button w-full text-center block&quot;
+                  href="/contact"
+                  className="cyber-button w-full text-center block"
                 >
                   Get Started
                 </a>
@@ -115,42 +115,42 @@ constAIContentGenerationPage: React.FC= () =>{constcontentServices= [
           </div>
         </section>
         {/* Process Section */}
-        <section className=&quot;mb-16&quot;></section>
-          <h2 className=&quot;text-3xl font-bold text-white mb-8 text-center&quot;>
+        <section className="mb-16"></section>
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">
             How It Works
           </h2>
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {processSteps.map((step, index) => (
-              <div key={index} className=&quot;text-center&quot;></div>
-                <div className=&quot;bg-cyan-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4&quot;></div>
+              <div key={index} className="text-center"></div>
+                <div className="bg-cyan-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   {step.step}
                 </div>
-                <div className=&quot;text-cyan-400 mb-2&quot;>{step.icon}</div>
-                <h3 className=&quot;text-lg font-bold text-white mb-2&quot;>{step.title}</h3>
-                <p className=&quot;text-gray-300 text-sm&quot;>{step.description}</p>
+                <div className="text-cyan-400 mb-2">{step.icon}</div>
+                <h3 className="text-lg font-bold text-white mb-2">{step.title}</h3>
+                <p className="text-gray-300 text-sm">{step.description}</p>
               </div>
             ))}
           </div>
         </section>
         {/* CTA Section */}
-        <section className=&quot;text-center&quot;></section>
-          <h2 className=&quot;text-3xl font-bold text-white mb-8&quot;>
+        <section className="text-center"></section>
+          <h2 className="text-3xl font-bold text-white mb-8">
             Ready to Transform Your Content?
           </h2>
-          <p className=&quot;text-gray-300 mb-8 max-w-2xl mx-auto&quot;>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of businesses using our AI content generation services to create
             engaging, high-quality content at scale.
           </p>
-          <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
-              href=&quot;/contact&quot;
-              className=&quot;cyber-button&quot;
+              href="/contact"
+              className="cyber-button"
             >
               Start Free Trial
             </a>
             <a
-              href=&quot;tel:+13024640950&quot;
-              className=&quot;cyber-button&quot;
+              href="tel:+13024640950"
+              className="cyber-button"
             >
               Call (302) 464-0950
             </a>

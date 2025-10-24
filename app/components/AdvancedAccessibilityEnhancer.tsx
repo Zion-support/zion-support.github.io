@@ -16,16 +16,19 @@ interface AdvancedAccessibilityEnhancerProps {
   enableVoiceNavigation?: boolean
 }
 
-constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s>= ({enableKeyboardNavigation= true,
-  enableScreenReader= true,
-  enableHighContrast= true,
-  enableFocusManagement= true,
-  enableARIALabels= true,
-  enableSkipLinks= true,
-  enableColorContrast= true,
-  enableMotionReduction= true,
-  enableFontScaling= true,
-  enableVoiceNavigation= true}) => {const [accessibilitySettingssetAccessibilitySettings] = useState({
+const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({
+  enableKeyboardNavigation = true,
+  enableScreenReader = true,
+  enableHighContrast = true,
+  enableFocusManagement = true,
+  enableARIALabels = true,
+  enableSkipLinks = true,
+  enableColorContrast = true,
+  enableMotionReduction = true,
+  enableFontScaling = true,
+  enableVoiceNavigation = true
+}) => {
+  const [accessibilitySettings, setAccessibilitySettings] = useState({
     highContrast: false,
     reducedMotion: false,
     fontSize: 'normal',
@@ -113,6 +116,10 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     }
   ]
 
+  // Apply accessibility settings
+  useEffect(() => {
+    const root = document.documentElement
+
     // Apply reduced motion
     if (accessibilitySettings.reducedMotion) {
       root.classList.add('reduced-motion')
@@ -128,7 +135,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   const setupKeyboardNavigation = useCallback(() => {
     if (typeof window === 'undefined') return
 
-    consthandleKeyDown= (event: KeyboardEvent) => {
+    const handleKeyDown = (event: KeyboardEvent) => {
   
       // Skip to main content
       if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
@@ -149,10 +156,10 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 
       // Arrow keys for menu navigation
       if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-        const menu = document.querySelector('[role=&quot;menu&quot;]') as HTMLElement
+        const menu = document.querySelector('[role="menu"]') as HTMLElement
         if (menu && menu.contains(event.target as Node)) {
           event.preventDefault()
-          const menuItems = Array.from(menu.querySelectorAll('[role=&quot;menuitem&quot;]')) as HTMLElement[]
+          const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"]')) as HTMLElement[]
           const currentIndex = menuItems.indexOf(event.target as HTMLElement)
           const nextIndex = event.key === 'ArrowDown'
             ? (currentIndex + 1) % menuItems.length
@@ -208,7 +215,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     // Trap focus in modals
     const trapFocus = (element: HTMLElement) => {
       const focusableElements = element.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])'
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
       ) as NodeListOf<HTMLElement>
 
       const firstElement = focusableElements[0]
@@ -238,7 +245,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     }
 
     // Apply focus trap to modals
-    const modals = document.querySelectorAll('[role=&quot;dialog&quot;]')
+    const modals = document.querySelectorAll('[role="dialog"]')
     modals.forEach(modal => {
       const cleanup = trapFocus(modal as HTMLElement)
       // Store cleanup function for later use
@@ -395,7 +402,4 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 }
 
 export default AdvancedAccessibilityEnhancer
-}}}}}
-};
 
-export default AdvancedAccessibilityEnhancerPage;

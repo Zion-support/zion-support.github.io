@@ -1,1 +1,1 @@
-&quot;use client&quot;
+"use client"

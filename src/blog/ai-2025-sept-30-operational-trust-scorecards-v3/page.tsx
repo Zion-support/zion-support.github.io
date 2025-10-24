@@ -3,25 +3,25 @@ import { Helmet } from 'lucide-react'
 import React from 'react';
 
 constOperationalTrustScorecardsPage: React.FC= () =>{return (
-  <><Helme t><titl e>Operational TrustScorecardsv3</titl><metaname=&quot;description&quot;content=&quot;Measure reliability, cost, safety, and value with live AIscorecards.&quot; /><metaproperty=&quot;og:type&quot;content=&quot;article&quot; /></Helme><mainclassName=&quot;min-h-screen bg-slate-950text-white&quot;><sectionclassName=&quot;py-16border-bborder-white/10&quot;><divclassName=&quot;max-w-3 xlmx-autopx-4&quot;><divclassName=&quot;mb-6 inline-flexitems-centergap-2&quot;><spanclassName=&quot;px-3 py-1 rounded-full bg-emerald-50 0/20text-emerald-300text-xs font-semibold border border-emerald-500/30&quot;></className=&quot;px-3 py-1 rounded-full bg-emerald-50 0/20text-emerald-300text-xs font-semibold border border-emerald-500/30&quot;>GUIDE
-          </spa><spanclassName=&quot;px-3 py-1 rounded-full bg-white/10text-white/80text-xs&quot;></className=&quot;px-3 py-1 rounded-full bg-white/10text-white/80text-xs&quot;>Sep  30,2025</spa></di><spanclassName=&quot;text-4 xlmd:text-5 xlfont-extraboldmb-4&quot;></spa></className=&quot;text-4 xlmd:text-5 xlfont-extraboldmb-4&quot;>Operational Trust    Scorecards    v3
-        </h><spanclassName=&quot;text-gray-300text-lg&quot;></spa></className=&quot;text-gray-300text-lg&quot;>A practical blueprint to ship reliable, safe, and cost‑effective AI
+  <><Helme t><titl e>Operational TrustScorecardsv3</titl><metaname="description"content="Measure reliability, cost, safety, and value with live AIscorecards." /><metaproperty="og:type"content="article" /></Helme><mainclassName="min-h-screen bg-slate-950text-white"><sectionclassName="py-16border-bborder-white/10"><divclassName="max-w-3 xlmx-autopx-4"><divclassName="mb-6 inline-flexitems-centergap-2"><spanclassName="px-3 py-1 rounded-full bg-emerald-50 0/20text-emerald-300text-xs font-semibold border border-emerald-500/30"></className="px-3 py-1 rounded-full bg-emerald-50 0/20text-emerald-300text-xs font-semibold border border-emerald-500/30">GUIDE
+          </spa><spanclassName="px-3 py-1 rounded-full bg-white/10text-white/80text-xs"></className="px-3 py-1 rounded-full bg-white/10text-white/80text-xs">Sep  30,2025</spa></di><spanclassName="text-4 xlmd:text-5 xlfont-extraboldmb-4"></spa></className="text-4 xlmd:text-5 xlfont-extraboldmb-4">Operational Trust    Scorecards    v3
+        </h><spanclassName="text-gray-300text-lg"></spa></className="text-gray-300text-lg">A practical blueprint to ship reliable, safe, and cost‑effective AI
             by tracking reliability, safety, cost, and value in a single live
             scorecard.    Prevent    regressions with budgets, gates, and instant
             rollback.
-        </p></di></sectio><sectionclassName=&quot;py-12&quot;><divclassName=&quot;max-w-3 xl mx-auto px-4space-y-10&quot;><di v><h2className=&quot;text-2 xlfont-boldmb-3&quot;>Why Operational  Trust</h><spanclassName=&quot;text-gray-300&quot;></spa></className=&quot;text-gray-300&quot;>Enterprise AI fails without measurable trust. Scorecards unify
+        </p></di></sectio><sectionclassName="py-12"><divclassName="max-w-3 xl mx-auto px-4space-y-10"><di v><h2className="text-2 xlfont-boldmb-3">Why Operational  Trust</h><spanclassName="text-gray-300"></spa></className="text-gray-300">Enterprise AI fails without measurable trust. Scorecards unify
               KP    Is    across reliability (accuracy, grounding, latency), safety
               (policy adherence), cost (per task, per user), and value (business
               outcomes) so leaders can make tradeoffs responsibly.
-          </p></di><di v><h2className=&quot;text-2 xlfont-boldmb-3&quot;>Scorecard  Structure</h><ulclassName=&quot;list-disc pl-6 text-gray-300space-y-2&quot;><l i><strongclassName=&quot;text-white&quot;>Reliability:</stron>pass rates,
+          </p></di><di v><h2className="text-2 xlfont-boldmb-3">Scorecard  Structure</h><ulclassName="list-disc pl-6 text-gray-300space-y-2"><l i><strongclassName="text-white">Reliability:</stron>pass rates,
                 hallucination rate, grounding success, latency SLO.
-            </l><l i><strongclassName=&quot;text-white&quot;>Safety:</stron>policy blocks,
+            </l><l i><strongclassName="text-white">Safety:</stron>policy blocks,
                 red‑team strikes, jailbreak resistance, PII leaks.
-            </l><l i><strongclassName=&quot;text-white&quot;>Cost:</stron>per‑task spend,
+            </l><l i><strongclassName="text-white">Cost:</stron>per‑task spend,
                 model tier mix, cache hit rate, budget headroom.
-            </l><l i><strongclassName=&quot;text-white&quot;>Value:</stron>conversion
+            </l><l i><strongclassName="text-white">Value:</stron>conversion
                 uplift, time saved, NPS changes, $ ROI.
-            </l></u></di><di v><h2className=&quot;text-2 xlfont-boldmb-3&quot;>Operational  Guardrails</h><spanclassName=&quot;text-gray-300&quot;></spa></className=&quot;text-gray-300&quot;>Tie each KPI to budgets and routing rules. If reliability falls,
+            </l></u></di><di v><h2className="text-2 xlfont-boldmb-3">Operational  Guardrails</h><spanclassName="text-gray-300"></spa></className="text-gray-300">Tie each KPI to budgets and routing rules. If reliability falls,
               route to safer tier; if cost exceeds budget, throttle usage; if
               safety violations spike, auto-rollback to last known good state.
             </p>

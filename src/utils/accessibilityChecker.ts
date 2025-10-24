@@ -45,7 +45,7 @@ export interface A11yIssue {
   severity: A11ySeverity
   /** WCAG level this issue violates */
   wcagLevel: WCAGLevel
-  /** WCAG success criterion (e.g., &quot;1.1.1&quot;, &quot;2.4.7&quot;) */
+  /** WCAG success criterion (e.g., "1.1.1", "2.4.7") */
   wcagCriterion: string
   /** Description of the issue */
   message: string
@@ -150,9 +150,9 @@ export class AccessibilityChecker {
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '1.1.1',
           message: `Image ${index + 1} is missing alt text`,
-          element: `img[src=&quot;${img['src']}&quot;]`,
+          element: `img[src="${img['src']}"]`,
           fix: 'Add descriptive alt text to the image',
-          codeExample: '<img src=&quot;...&quot; alt=&quot;Description of image&quot; />'
+          codeExample: '<img src="..." alt="Description of image" />'
         })
       }
       // Check for empty alt on decorative images without role
@@ -162,10 +162,10 @@ export class AccessibilityChecker {
           severity: A11ySeverity.MODERATE,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '1.1.1',
-          message: `Image ${index + 1} has empty alt without role=&quot;presentation&quot;`,
-          element: `img[src=&quot;${img['src']}&quot;]`,
-          fix: 'Add role=&quot;presentation&quot; to decorative images',
-          codeExample: '<img src=&quot;...&quot; alt=&quot;&quot; role=&quot;presentation&quot; />'
+          message: `Image ${index + 1} has empty alt without role="presentation"`,
+          element: `img[src="${img['src']}"]`,
+          fix: 'Add role="presentation" to decorative images',
+          codeExample: '<img src="..." alt="" role="presentation" />'
         })
       }
     })
@@ -244,9 +244,9 @@ export class AccessibilityChecker {
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '2.4.4',
           message: `Link ${index + 1} has no accessible text`,
-          element: `a[href=&quot;${link.getAttribute('href')}&quot;]`,
+          element: `a[href="${link.getAttribute('href')}"]`,
           fix: 'Add descriptive text or aria-label to the link',
-          codeExample: '<a href=&quot;...&quot; aria-label=&quot;Description&quot;>...</a>'
+          codeExample: '<a href="..." aria-label="Description">...</a>'
         })
       }
       // Check for generic link text
@@ -256,10 +256,10 @@ export class AccessibilityChecker {
           severity: A11ySeverity.MODERATE,
           wcagLevel: WCAGLevel.AA,
           wcagCriterion: '2.4.4',
-          message: `Link ${index + 1} has generic text: &quot;${text}&quot;`,
-          element: `a[href=&quot;${link.getAttribute('href')}&quot;]`,
+          message: `Link ${index + 1} has generic text: "${text}"`,
+          element: `a[href="${link.getAttribute('href')}"]`,
           fix: 'Use descriptive link text that explains the destination',
-          codeExample: 'Use &quot;Read full article&quot; instead of &quot;Read more&quot;'
+          codeExample: 'Use "Read full article" instead of "Read more"'
         })
       }
       // Check for links opening in new window without warning
@@ -275,10 +275,10 @@ export class AccessibilityChecker {
           wcagLevel: WCAGLevel.AAA,
           wcagCriterion: '3.2.5',
           message: `Link ${index + 1} opens in new window without warning`,
-          element: `a[href=&quot;${link.getAttribute('href')}&quot;]`,
+          element: `a[href="${link.getAttribute('href')}"]`,
           fix: 'Add indication that link opens in new window',
           codeExample:
-            '<a href=&quot;...&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>Link text (opens in new window)</a>'
+            '<a href="..." target="_blank" rel="noopener noreferrer">Link text (opens in new window)</a>'
         })
       }
     })
@@ -305,7 +305,7 @@ export class AccessibilityChecker {
           message: `Button ${index + 1} has no accessible text`,
           element: 'button',
           fix: 'Add text content or aria-label to the button',
-          codeExample: '<button aria-label=&quot;Close dialog&quot;>×</button>'
+          codeExample: '<button aria-label="Close dialog">×</button>'
         })
       }
     })
@@ -322,7 +322,7 @@ export class AccessibilityChecker {
       const id = input.getAttribute('id')
       const ariaLabel = input.getAttribute('aria-label')
       const ariaLabelledBy = input.getAttribute('aria-labelledby')
-      const label = id ? element.querySelector(`label[for=&quot;${id}&quot;]`) : null
+      const label = id ? element.querySelector(`label[for="${id}"]`) : null
       const type = input.getAttribute('type')
       // Skip hidden and submit inputs
       if (type === 'hidden' || type === 'submit' || type === 'button') return
@@ -334,9 +334,9 @@ export class AccessibilityChecker {
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '1.3.1',
           message: `Form control ${index + 1} (${input.tagName.toLowerCase()}) has no label`,
-          element: `${input.tagName.toLowerCase()}[name=&quot;${input.getAttribute('name')}&quot;]`,
+          element: `${input.tagName.toLowerCase()}[name="${input.getAttribute('name')}"]`,
           fix: 'Associate a label with the form control',
-          codeExample: '<label for=&quot;email&quot;>Email:</label><input id=&quot;email&quot; name=&quot;email&quot; />'
+          codeExample: '<label for="email">Email:</label><input id="email" name="email" />'
         })
       }
     })
@@ -350,7 +350,7 @@ export class AccessibilityChecker {
   private checkColors(element: Element): void {
     // This is a simplified check - full color contrast checking requires
     // computing actual rendered colors which is complex
-    const elementsWithColor = element.querySelectorAll('[style*=&quot;color&quot;]')
+    const elementsWithColor = element.querySelectorAll('[style*="color"]')
     elementsWithColor.forEach(el => {
       const style = el.getAttribute('style')
       if (style?.includes('color:') && !style.includes('background')) {
@@ -373,7 +373,7 @@ export class AccessibilityChecker {
    * @param element - Root element to check
    */
   private checkKeyboardAccess(element: Element): void {
-    // Check for interactive elements with tabindex=&quot;-1&quot;
+    // Check for interactive elements with tabindex="-1"
     const interactiveElements = element.querySelectorAll('a, button, input, select, textarea')
     interactiveElements.forEach(el => {
       const tabindex = el.getAttribute('tabindex')
@@ -385,8 +385,8 @@ export class AccessibilityChecker {
           wcagCriterion: '2.1.1',
           message: `Interactive ${el.tagName.toLowerCase()} is not keyboard focusable`,
           element: el.tagName.toLowerCase(),
-          fix: 'Remove tabindex=&quot;-1&quot; or use tabindex=&quot;0&quot;',
-          codeExample: '<button tabindex=&quot;0&quot;>Accessible button</button>'
+          fix: 'Remove tabindex="-1" or use tabindex="0"',
+          codeExample: '<button tabindex="0">Accessible button</button>'
         })
       }
     })
@@ -448,7 +448,7 @@ export class AccessibilityChecker {
           severity: A11ySeverity.MODERATE,
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '4.1.2',
-          message: `Invalid ARIA role: &quot;${role}&quot;`,
+          message: `Invalid ARIA role: "${role}"`,
           element: el.tagName.toLowerCase(),
           fix: 'Use a valid ARIA role or remove the role attribute'
         })
@@ -463,7 +463,7 @@ export class AccessibilityChecker {
             severity: A11ySeverity.SERIOUS,
             wcagLevel: WCAGLevel.A,
             wcagCriterion: '4.1.2',
-            message: `aria-labelledby references non-existent element: &quot;${labelledBy}&quot;`,
+            message: `aria-labelledby references non-existent element: "${labelledBy}"`,
             element: el.tagName.toLowerCase(),
             fix: 'Ensure the referenced element exists'
           })
@@ -478,8 +478,8 @@ export class AccessibilityChecker {
    * @param element - Root element to check
    */
   private checkLandmarks(element: Element): void {
-    const hasMain = element.querySelector('main, [role=&quot;main&quot;]')
-    // const _hasNav = element.querySelector('nav, [role=&quot;navigation&quot;]')
+    const hasMain = element.querySelector('main, [role="main"]')
+    // const _hasNav = element.querySelector('nav, [role="navigation"]')
     if (!hasMain) {
       this.addIssue({
         type: 'missing-main-landmark',
@@ -487,7 +487,7 @@ export class AccessibilityChecker {
         wcagLevel: WCAGLevel.AA,
         wcagCriterion: '2.4.1',
         message: 'Page is missing a main landmark',
-        fix: 'Add a <main> element or role=&quot;main&quot;',
+        fix: 'Add a <main> element or role="main"',
         codeExample: '<main><!-- Main content --></main>'
       })
     }

@@ -33,7 +33,7 @@ class AnalyticsService {
   initialize(): void {
     if (this.isInitialized) return
     try {
-      // Check if we&apos;re in a browser environment
+      // Check if we're in a browser environment
       if (typeof window === 'undefined') return
       // Process queued events
       this.processQueue()

@@ -157,7 +157,7 @@ export default function AboutPage() {
             Ready to Work With Us?
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            Let's discuss how we can help transform your business with our AI and IT solutions.
+            Let&apos;s discuss how we can help transform your business with our AI and IT solutions.
           </p>
           <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center mx-auto">
             Get In Touch

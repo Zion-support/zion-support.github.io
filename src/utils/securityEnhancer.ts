@@ -54,15 +54,15 @@ class SecurityEnhancer {
   private setupContentSecurityPolicy(): void {
     if (!this.config.enableContentSecurityPolicy) return
     const csp = [
-      &quot;default-src 'self'&quot;,
-      &quot;script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net&quot;,
-      &quot;style-src 'self' 'unsafe-inline' https://fonts.googleapis.com&quot;,
-      &quot;font-src 'self' https://fonts.gstatic.com&quot;,
-      &quot;img-src 'self' data: https:&quot;,
-      &quot;connect-src 'self' https://api.zion.app&quot;,
-      &quot;frame-ancestors 'none'&quot;,
-      &quot;base-uri 'self'&quot;,
-      &quot;form-action 'self'&quot;
+      "default-src 'self'",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net",
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+      "font-src 'self' https://fonts.gstatic.com",
+      "img-src 'self' data: https:",
+      "connect-src 'self' https://api.zion.app",
+      "frame-ancestors 'none'",
+      "base-uri 'self'",
+      "form-action 'self'"
     ].join('; ')
     const meta = document.createElement('meta')
     meta.httpEquiv = 'Content-Security-Policy'

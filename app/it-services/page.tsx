@@ -145,7 +145,7 @@ export default function ITServicesPage() {
             Ready to Modernize Your IT Infrastructure?
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            Let's discuss how our IT services can optimize your technology stack.
+            Let&apos;s discuss how our IT services can optimize your technology stack.
           </p>
           <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center mx-auto">
             Start Your IT Transformation
