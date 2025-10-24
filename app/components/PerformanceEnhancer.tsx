@@ -57,7 +57,7 @@ const PerformanceEnhancer: React.FC = () => {
             ))}
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };
