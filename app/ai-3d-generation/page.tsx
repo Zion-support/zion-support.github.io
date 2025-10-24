@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 export default function Ai3DGenerationZionTechGroup() {
@@ -7,6 +8,179 @@ export default function Ai3DGenerationZionTechGroup() {
 =======
     <React.Fragment>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
+=======
+import React from 'react';
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight, Cube, Palette, Camera, Layers } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+const AI3DGenerationPage: React.FC = () => {
+  const features = [
+    'Generate high-quality 3D models from text descriptions',
+    'Create photorealistic textures and materials',
+    'Automated animation and rigging',
+    'LOD (Level of Detail) optimization',
+    'VR/AR integration ready',
+    'Real-time rendering capabilities',
+    'Batch processing for multiple models',
+    'Custom style transfer and adaptation',
+    'Physics simulation integration',
+    'Export to all major 3D formats'
+  ];
+
+  const benefits = [
+    'Reduce 3D content creation time by 90%',
+    'Lower production costs by 80%',
+    'Create unlimited unique 3D assets',
+    'Accelerate game and app development',
+    'Enable rapid prototyping',
+    'Improve visual quality and consistency',
+    'Scale content production instantly',
+    'Reduce dependency on 3D artists'
+  ];
+
+  const applications = [
+    {
+      title: 'Game Development',
+      description: 'Generate characters, environments, and props for games',
+      icon: '🎮',
+      examples: ['Character models', 'Environment assets', 'Weapon designs', 'Vehicle models']
+    },
+    {
+      title: 'Architecture & Real Estate',
+      description: 'Create 3D visualizations and virtual tours',
+      icon: '🏗️',
+      examples: ['Building models', 'Interior designs', 'Furniture layouts', 'Landscape designs']
+    },
+    {
+      title: 'E-commerce',
+      description: 'Generate product visualizations and AR experiences',
+      icon: '🛒',
+      examples: ['Product models', 'AR try-ons', 'Virtual showrooms', 'Packaging designs']
+    },
+    {
+      title: 'Education & Training',
+      description: 'Create interactive 3D learning materials',
+      icon: '📚',
+      examples: ['Anatomical models', 'Historical reconstructions', 'Scientific visualizations', 'Training simulations']
+    },
+    {
+      title: 'Entertainment & Media',
+      description: 'Produce 3D content for films and animations',
+      icon: '🎬',
+      examples: ['Character designs', 'Set pieces', 'Props and objects', 'Special effects']
+    },
+    {
+      title: 'Manufacturing',
+      description: 'Design and prototype products in 3D',
+      icon: '🏭',
+      examples: ['Product prototypes', 'Assembly instructions', 'Quality control models', 'Packaging designs']
+    }
+  ];
+
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight, Cube, Palette, Camera, Layers } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+const AI3DGenerationPage: React.FC = () => {
+  const features = [
+    'AI-powered 3D model generation',
+    'Automatic texture synthesis',
+    'Real-time 3D rendering',
+    'Multiple format support',
+    'Custom model training',
+    'Batch processing',
+    'API integration',
+    'Cloud-based processing',
+    'High-resolution output',
+    'Animation support',
+    'Lighting optimization',
+    'Material generation',
+    'Shape optimization',
+    'Color palette generation',
+    'Marketing materials',
+    'Educational content'
+  ];
+
+  const benefits = [
+    'Faster 3D asset creation',
+    'Reduced production costs',
+    'Consistent quality output',
+    'Scalable generation process',
+    'Custom model training',
+    'Real-time preview',
+    'Multiple format export',
+    'Cloud-based processing',
+    'API integration',
+    'Batch processing capabilities'
+  ];
+
+  const useCases = [
+    {
+      title: 'Gaming',
+      description: 'Create 3D assets for games and virtual worlds',
+      icon: '🎮',
+      examples: ['Character models', 'Environment assets', 'Weapons and tools', 'Vehicles and props']
+    },
+    {
+      title: 'Architecture',
+      description: 'Generate 3D models for architectural visualization',
+      icon: '🏗️',
+      examples: ['Building designs', 'Interior layouts', 'Landscape models', 'Furniture pieces']
+    },
+    {
+      title: 'Entertainment & Media',
+      description: 'Produce 3D content for films and animations',
+      icon: '🎬',
+      examples: ['Character designs', 'Set pieces', 'Props and objects', 'Special effects']
+    },
+    {
+      title: 'Manufacturing',
+      description: 'Design and prototype products in 3D',
+      icon: '🏭',
+      examples: ['Product prototypes', 'Assembly instructions', 'Quality control models', 'Packaging designs']
+    }
+  ];
+
+  const pricing = [
+    {
+      plan: 'Starter',
+      price: '$199/month',
+      features: ['Up to 10 models/month', 'Basic textures', 'Standard quality', 'Email support'],
+      popular: false
+    },
+    {
+      plan: 'Professional',
+      price: '$599/month',
+      features: ['Up to 50 models/month', 'Advanced textures', 'High quality', 'Animation support', 'API access'],
+      popular: true
+    },
+    {
+      plan: 'Enterprise',
+      price: '$1,999/month',
+      features: ['Unlimited models', 'Premium textures', 'Custom training', 'Priority support', 'White-label'],
+      popular: false
+    }
+  ];
+
+  const technologies = [
+    'Neural Radiance Fields',
+    'Generative Adversarial Networks',
+    '3D Convolutional Networks',
+    'Point Cloud Processing',
+    'Mesh Generation',
+    'Texture Synthesis',
+    'Real-time Rendering',
+    'Cloud Computing',
+    'GPU Acceleration',
+    'Machine Learning'
+  ];
+
+  return (
+    <>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
       <Helmet>
         <title>Ai 3D Generation - Zion Tech Group</title>
         <meta name="description" content="Ai 3D Generation solutions by Zion Tech Group" />
@@ -96,6 +270,7 @@ export default function Ai3DGenerationZionTechGroup() {
                         </li>
                       ))}
                     </ul>
+<<<<<<< HEAD
                   )}
                 </div>
               ))}
@@ -168,5 +343,43 @@ export default function Ai3DGenerationZionTechGroup() {
 =======
     </React.Fragment>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
+=======
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className="text-center">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-12 border border-white/20">
+                <h2 className="text-3xl font-bold text-white mb-6">
+                  Ready to Create Amazing 3D Models?
+                </h2>
+                <p className="text-xl text-gray-300 mb-8">
+                  Get started with our AI 3D generation platform today.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a
+                    href="tel:+13024640950"
+                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                  >
+                    Call (302) 464-0950
+                  </a>
+                  <a
+                    href="mailto:kleber@ziontechgroup.com"
+                    className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
+                  >
+                    Email Us
+                  </a>
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+        
+        <Footer />
+      </div>
+    </>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
   );
 }

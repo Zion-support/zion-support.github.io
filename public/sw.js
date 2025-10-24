@@ -22,6 +22,7 @@ return response}
   );
 });
 
+<<<<<<< HEAD
 <<<<<<< HEAD"
 // Notification click;"
   event.notification.close();"'"
@@ -33,6 +34,44 @@ clients.openWindow('/")
 ======="
 // Fetch event - serve from cache when offline"'"
 self.addEventListener('fetch", (event) => {
+=======
+// Activate event - clean up old caches
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys()
+      .then((cacheNames) => {
+        return Promise.all(
+          cacheNames
+            .filter((cacheName) => {
+              return cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE;
+            })
+            .map((cacheName) => {
+              return caches.delete(cacheName);
+            })
+        );
+      })
+      .then(() => {
+        return self.clients.claim();
+      })
+  );
+});
+
+// Fetch event - serve from cache or network
+self.addEventListener('fetch', (event) => {
+  const { request } = event;
+  const url = new URL(request.url);
+
+  // Skip non-GET requests
+  if (request.method !== 'GET') {
+    return;
+  }
+
+  // Skip chrome-extension and other non-http requests
+  if (!url.protocol.startsWith('http')) {
+    return;
+  }
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
   event.respondWith(
     caches.match(event.request)
       .then((response) => {"
