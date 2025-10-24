@@ -25,9 +25,7 @@ Object.defineProperty(window, 'matchMedia', {
     matches: false,
     media: query,
     onchange: null,
-    addListener: jest.fn(), // deprecated
-    removeListener: jest.fn(), // deprecated
-    addEventListener: jest.fn(),
+    addListener: jest.fn(), // deprecatedremoveListener: jest.fn(), // deprecatedaddEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn()
   }))
@@ -61,18 +59,12 @@ global.fetch = jest.fn()
 const originalConsoleWarn = console.warn
 const originalConsoleInfo = console.info
 console.warn = (...args) => {
-const _message = args[0]?.toString?.() || '';
-  if (_message.includes('Warning: ReactDOM.render is no longer supported')) {
-    return;
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
+    return
   }
   _originalConsoleWarn(...args)
 }
 console.info = (...args) => {
-const _message = args[0]?.toString?.() || '';
-  if (_message.includes('ReactDOM.render is no longer supported')) {
-    return;
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
+    return
   }
   _originalConsoleInfo(...args)
 }
@@ -86,9 +78,43 @@ global.PerformanceObserver = class MockPerformanceObserver {
     return []
   }
 }
+ }))
+});
+// Mock requestAnimationFrame
+global.requestAnimationFrame= jest.fn(cb=> setTimeout(cb0));
+global.cancelAnimationFrame= jest.fn(id=> clearTimeout(id));
+// MocklocalStorageconstlocalStorageMock= {getItem: jest.fn(),
+  setItem: jest.fn(),
+  removeItem: jest.fn(),
+  clear: jest.fn()};
+Object.defineProperty(windo w, 'localStorage', {value: localStorageMock});
+// MocksessionStorageconstsessionStorageMock= {getItem: jest.fn(),
+  setItem: jest.fn(),
+  removeItem: jest.fn(),
+  clear: jest.fn()};
+Object.defineProperty(windo w, 'sessionStorage', {value: sessionStorageMock});
+// Mock fetch
+global.fetch= jest.fn();
+// Mock console methods for cleaner testoutputconstoriginalConsoleWarn= console.warn;
+constoriginalConsoleInfo= console.info;
+console.warn= (...args) => {return;
+ }
+  _originalConsoleWarn(...args);
+};
+console.info= (...args) => {return;
+ }
+  _originalConsoleInfo(...args);
+};
+// Mock PerformanceObserver
+global.PerformanceObserver= class MockPerformanceObserve r {static reado nlysupportedEntry Types: reado nly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
+  constructor(publiccallback: PerformanceObserverCallback){}
+  observe() {}
+  disconnect() {}
+  takeRecords() {return [];
+ }
+};
 // Suppress JSDOM navigation warnings
-console.error = (...args) => {
-  if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
+console.error= (...args) => {if (args[0] && args[0].type=== 'not implemented' && args[0].message?.includes('navigation')) {
     return; // Suppress JSDOM navigation warnings
   }
   _originalConsoleError.apply(console, args)
@@ -99,9 +125,9 @@ delete (window as unknown as Record<string, unknown>).location
   href: 'http://localhost:3000',
   origin: 'http://localhost:3000',
   protocol: 'http:',
-  host: 'localhost:3000',
+  host: 'localhost:300 0',
   hostname: 'localhost',
-  port: '3000',
+  port: '300 0',
   pathname: '/',
   search: '',
   hash: '',
@@ -109,3 +135,4 @@ delete (window as unknown as Record<string, unknown>).location
   assign: jest.fn(),
   replace: jest.fn()
 }
+>>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d

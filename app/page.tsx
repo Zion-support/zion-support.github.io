@@ -114,8 +114,6 @@ const benefits = [
         </section>
       
       <Footer />
-    </>
-  );
-};
-
-export default PagePage;
+    </div>
+  )
+}

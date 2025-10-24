@@ -1,9 +1,8 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
 const PagePage: React.FC = () => {
   const features = [
@@ -34,22 +33,16 @@ const PagePage: React.FC = () => {
   ]
 
   const benefits = [
-    
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  
-  ];
+  ]
 
   return (
     <>
-      <Helmet>
-        <title>Page</title>
-        <meta name="description" content="Advanced Page solution for modern businesses." />
-        <meta name="keywords" content="AI, artificial intelligence, Page, AI solutions, intelligent automation" />
-      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -141,6 +134,7 @@ const PagePage: React.FC = () => {
           </div>
         </section>
       </div>
+      <Footer />
     </>
   );
 };

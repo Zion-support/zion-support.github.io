@@ -1,7 +1,7 @@
-import { Mail, ArrowRight } from 'lucide-react';
-'use client';
-import React, { useState } from 'react';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
+'use client'
+import { ArrowRight } from 'lucide-react'
+import React, { useState } from 'react'
+import { Mail, ArrowRight } from 'lucide-react'
 
 const ContentNewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState('')
@@ -20,8 +20,8 @@ const ContentNewsletterSignup: React.FC = () => {
   }
   if (isSubmitted) {
     return (
-      <section className="mb-16" aria-labelledby="newsletter-heading">
-        <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white p-8 rounded-xl text-center">
+      <section className="mb-16" aria-labelledby="newsletter-heading"></section>
+        <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white p-8 rounded-xl text-center"></div>
           <div className="text-4xl mb-4">✅</div>
           <h2 className="text-2xl font-bold mb-2">Thank You!</h2>
           <p className="text-green-100">You've been successfully subscribed to our newsletter.</p>
@@ -30,30 +30,18 @@ const ContentNewsletterSignup: React.FC = () => {
     )
   }
   return (
-    <section className="mb-16" aria-labelledby="newsletter-heading">
-      <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-8 rounded-xl">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 id="newsletter-heading" className="text-2xl sm:text-3xl font-bold mb-4">
-            Stay Updated with AI Innovation
-          </h2>
-          <p className="text-purple-100 mb-6">
-            Get the latest insights on AI technology, industry trends, and exclusive offers delivered to your inbox.
-          </p>
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <div className="flex-1 relative">
-              <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
-                type="email"
+  <sectionclassName="mb-16"aria-labelledby="newsletter-heading"><divclassName="bg-gradient-to-r from-purple-600to-blue-600text-whitep-8rounded-xl"><divclassName="max-w-2 xlmx-autotext-center"><id="newsletter-heading"className="text-2 xlsm:text-3 xlfont-boldmb-4"></id="newsletter-heading"className="text-2 xlsm:text-3 xlfont-boldmb-4">Stay Updated with AI Innovation
+        </h><spanclassName="text-purple-100mb-6"></spa></className="text-purple-100mb-6">Get the latest insights on AI technology, industry trends, and exclusive offers delivered to your inbox.
+        </p><formonSubmit={handleSubmit}className="flex flex-colsm:flex-row gap-4max-w-mdmx-auto"><divclassName="flex-1relative"><MailclassName="absolute left-3 top-1/2 transform -translate-y-1/2text-gray-400w-5h-5" /><inputtype="email"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email address"
-                className="w-full pl-10 pr-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-300"
+                onChange={(e) =>setEmail(e.target.value)}
+               placeholder="Enter your emailaddress"
+               className="w-full pl-10pr-4 py-3 rounded-lg text-gray-900placeholder-gray-500 focus:outline-nonefocus:ring-2focus:ring-purple-300"
                 required
-                aria-label="Email address"
+               aria-label="Emailaddress"
               />
-            </div>
-            <button
-              type="submit"
+          </di><
+             type="submit"
               disabled={isSubmitting}
               className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
             ></button>

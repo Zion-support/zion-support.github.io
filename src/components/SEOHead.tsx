@@ -1,6 +1,7 @@
-import { Helmet } from 'lucide-react';
+import React from 'react'
+import { Helmet } from 'lucide-react'
 import React from 'react';
->>>>>>> cde52f2fe8728de91fd270eb444a2268f737a3f4
+import { Helmet } from 'lucide-react';
 
 interface SEOHeadProps {
   title?: string
@@ -38,74 +39,43 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   const canonicalUrl = canonical || url
   const robotsContent = `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`
   return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content={author} />
-      <meta name="robots" content={robotsContent} />
-      <link rel="canonical" href={canonicalUrl} />
-      {/* Open Graph Meta Tags */}
-      <meta property="og:type" content={type} />
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-      {/* Article specific meta tags */}
-      {type === 'article' && (
-        <>
-          {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-          {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-          {author && <meta property="article:author" content={author} />}
-          {section && <meta property="article:section" content={section} />}
-          {tags.map((tag, index) => (
-            <meta key={index} property="article:tag" content={tag} />
-          ))}
-        </>
-      )}
-      {/* Additional SEO Meta Tags */}
-      <meta name="theme-color" content="#4f46e5" />
-      <meta name="msapplication-TileColor" content="#4f46e5" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      <meta name="application-name" content="Zion Tech Group" />
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': type === 'article' ? 'Article' : 'WebPage',
+  <Helme t>{/* Basic MetaTags */}
+    <titl e>{fullTitle}</titl><metaname="description" content={description} /><metaname="keywords" content={keywords} /><metaname="author" content={author} /><metaname="robots" content={robotsContent} /><linkrel="canonical" href={canonicalUrl} />{/* Open Graph MetaTags */}
+   <metaproperty="og:type" content={type} /><metaproperty="og:title" content={fullTitle} /><metaproperty="og:description" content={description} /><metaproperty="og:image" content={image} /><metaproperty="og:url" content={url} /><metaproperty="og:site_name"content="Zion TechGroup" /><metaproperty="og:locale"content="en_US" />{/* Twitter Card MetaTags */}
+   <metaname="twitter:card"content="summary_large_image" /><metaname="twitter:title" content={fullTitle} /><metaname="twitter:description" content={description} /><metaname="twitter:image" content={image} /><metaname="twitter:site"content="@ziontechgroup" /><metaname="twitter:creator"content="@ziontechgroup" />{/* Article specific metatags */}
+      {type=== 'article' && (
+      <>{publishedTime&&<metaproperty="article:published_time"content={publishedTime} />}
+         {modifiedTime&&<metaproperty="article:modified_time"content={modifiedTime} />}
+         {author&&<metaproperty="article:author"content={author} />}
+         {section&&<metaproperty="article:section"content={section} />}
+          {tags.map((tagindex) => (
+         <metakey={index}property="article:tag" content={tag} />))}
+      </>)}
+      {/* Additional SEO MetaTags */}
+   <metaname="theme-color"content="#4f46e5" /><metaname="msapplication-TileColor"content="#4f46e5" /><metaname="apple-mobile-web-app-title"content="Zion TechGroup" /><metaname="application-name"content="Zion TechGroup" />{/* StructuredData */}
+    <scripttype="application/ld+json">{JSON.stringify({
+          '@context': 'https:// schema.org',
+          '@type': type=== 'article' ? 'Article' : 'WebPage',
           name: fullTitle,
           description: description,
           url: url,
           image: image,
           author: {
             '@type': 'Organization',
-            name: author
-          },
-          publisher: {
-            '@type': 'Organization',
+            name : author
+         },
+          publisher: {'@type': 'Organization',
             name: 'Zion Tech Group',
             logo: {
               '@type': 'ImageObject',
-              url: 'https://ziontechgroup.com/logo.png'
-            }
+              url: 'https:// ziontechgroup.com/logo.png'
+           }
           },
-          ...(type === 'article' && {
-            datePublished: publishedTime,
-            dateModified: modifiedTime || publishedTime,
-            mainEntityOfPage: {
+          ...(type=== 'article' && {datePublished: publishedTime,
+            dateModified: modifiedTime || publishedTimemainEntityOfPage: {
               '@type': 'WebPage',
               '@id': url
-            }
+           }
           })
         })}
       </script>

@@ -1,61 +1,76 @@
 const fs = require('fs');
 const path = require('path');
 
-function resolveMergeConflicts(filePath) {
+function resolveMergeConflicts(content) {
+  // Remove all merge conflict markers and keep the HEAD version
+  return content
+    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)    .replace(/<<<<<<< HEAD\n([\s\S]*?)    .replace(/<<<<<<< HEAD\n/g, '')
+    .replace(/=======\n([\s\S]*?)    .replace(/}
+
+function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, 'utf8');
     
-    // Skip if no merge conflicts
-    if (!content.includes('<<<<<<< HEAD')) {
-      return;
+    if (content.includes('<<<<<<< HEAD')) {
+      console.log(`Processing: ${filePath}`);
+      const resolvedContent = resolveMergeConflicts(content);
+      fs.writeFileSync(filePath, resolvedContent, 'utf8');
+      return true;
     }
-    
-    console.log(`Resolving conflicts in: ${filePath}`);
-    
-    // For React/JSX files, prefer the Next.js version (after =======)
-    if (filePath.endsWith('.tsx') || filePath.endsWith('.jsx') || filePath.endsWith('.ts') || filePath.endsWith('.js')) {
-      // Remove everything between <<<<<<< HEAD and =======
-      content = content.replace(/<<<<<<< HEAD[\s\S]*?=======\s*\n?/g, '');
-      // Remove everything between ======= and >>>>>>> 
-      content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]*\n?/g, '');
-      // Remove any remaining merge conflict markers
-      content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]*\n?/g, '');
-    } else {
-      // For other files, prefer the HEAD version
-      content = content.replace(/<<<<<<< HEAD\n?([\s\S]*?)=======[\s\S]*?>>>>>>> [^\n]*\n?/g, '$1');
-    }
-    
-    // Clean up any remaining merge conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]*\n?/g, '');
-    content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]*\n?/g, '');
-    
-    fs.writeFileSync(filePath, content);
-    console.log(`✓ Resolved conflicts in: ${filePath}`);
+    return false;
   } catch (error) {
-    console.error(`Error resolving conflicts in ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-function walkDirectory(dir) {
-  const files = fs.readdirSync(dir);
+function findFilesWithConflicts(dir) {
+  const files = [];
   
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
     
-    if (stat.isDirectory()) {
-      // Skip node_modules and other directories
-      if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(file)) {
-        walkDirectory(filePath);
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        // Skip node_modules and .git directories
+        if (item !== 'node_modules' && item !== '.git' && item !== 'app-broken') {
+          traverse(fullPath);
+        }
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
+        files.push(fullPath);
       }
     } else if (file.endsWith('.tsx') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.json')) {
       resolveMergeConflicts(filePath);
     }
   }
+  
+  traverse(dir);
+  return files;
 }
 
-console.log('Starting to resolve merge conflicts...');
-walkDirectory('./app');
-walkDirectory('./src');
-walkDirectory('./components');
-console.log('Merge conflict resolution completed!');
+function main() {
+  const workspaceDir = '/workspace';
+  console.log('Starting merge conflict resolution...');
+  
+  const files = findFilesWithConflicts(workspaceDir);
+  console.log(`Found ${files.length} files to check`);
+  
+  let processedCount = 0;
+  let conflictCount = 0;
+  
+  for (const file of files) {
+    if (processFile(file)) {
+      conflictCount++;
+    }
+    processedCount++;
+  }
+  
+  console.log(`\nResolution complete!`);
+  console.log(`Processed ${processedCount} files`);
+  console.log(`Resolved conflicts in ${conflictCount} files`);
+}
+
+main();
