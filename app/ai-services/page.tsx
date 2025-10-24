@@ -51,8 +51,12 @@ const AIServicesPage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {servicesData.aiServices.map((service) => (
-                <div key={service.id} className="card-cyber hover-lift group">
+              {servicesData.aiServices.map((service, index) => (
+                <div 
+                  key={service.id} 
+                  className="card-cyber hover-lift group animate-fade-in-up"
+                  style={{animationDelay: `${index * 0.1}s`}}
+                >
                   <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
                     {service.icon}
                   </div>
@@ -62,8 +66,8 @@ const AIServicesPage: React.FC = () => {
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-cyan-400 mb-3">Key Features</h4>
                     <ul className="space-y-2">
-                      {service.features.slice(0, 4).map((feature, index) => (
-                        <li key={index} className="text-gray-300 text-sm flex items-center">
+                      {service.features.slice(0, 4).map((feature, featureIndex) => (
+                        <li key={featureIndex} className="text-gray-300 text-sm flex items-center">
                           <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                           {feature}
                         </li>
@@ -74,8 +78,8 @@ const AIServicesPage: React.FC = () => {
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-purple-400 mb-3">Benefits</h4>
                     <ul className="space-y-2">
-                      {service.benefits?.slice(0, 3).map((benefit, index) => (
-                        <li key={index} className="text-gray-300 text-sm flex items-center">
+                      {service.benefits?.slice(0, 3).map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="text-gray-300 text-sm flex items-center">
                           <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
                           {benefit}
                         </li>
