@@ -13,11 +13,13 @@ const ARVRPlatformPage: React.FC = () => {
       description: 'Lightning-fast 3D rendering and real-time interaction for optimal user experience',},
     {icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards for your AR/VR data',},
-    {icon: Globe,
+      description: 'Bank-level security with encryption and compliance standards for your AR/VR data'
+    },
+    {
+      icon: Globe,
       title: 'Cross-Platform Support',
-      description: 'Deploy across multiple devices and platforms for maximum reach and accessibility',}];
-  ];];];
+      description: 'Deploy across multiple devices and platforms for maximum reach and accessibility'
+    }
   ]
   const benefits = [
     'Advanced AR/VR technology integration',

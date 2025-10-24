@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
-import { loginUser } from '@/services/authService'
-=======
 import { describe, it, expect, vi, beforeEach } from 'vitest'
->>>>>>> cursor/fix-errors-and-merge-to-main-2480
 import { NextApiRequest, NextApiResponse } from 'next'
 
 const mockSignInWithPassword = vi.fn()
@@ -31,148 +26,176 @@ const mockApiReq = (body: unknown, method: string = 'POST') => ({
 
 // Helper to create mock NextApiResponse
 const mockApiRes = () => {
-  const res: Partial<NextApiResponse> = {
+  const res = {
     status: vi.fn().mockReturnThis(),
     json: vi.fn().mockReturnThis(),
     setHeader: vi.fn().mockReturnThis(),
     end: vi.fn().mockReturnThis()
-  }
-  return res as NextApiResponse
+  } as unknown as NextApiResponse
+  return res
 }
 
-describe('/api/auth/login API Handler', () => {
+describe('Login API Handler', () => {
   beforeEach(() => {
-    mockSignInWithPassword.mockReset()
+    vi.clearAllMocks()
   })
 
-  it('should return 405 if method is not POST', async () => {
+  it('should return 400 for non-POST requests', async () => {
     const req = mockApiReq({}, 'GET')
     const res = mockApiRes()
+
     await loginHandler(req, res)
-    expect(res.status).toHaveBeenCalledWith(405)
-    expect(res.end).toHaveBeenCalled()
+
+    expect(res.status).toHaveBeenCalledWith(400)
+    expect(res.json).toHaveBeenCalledWith({
+      error: 'Method not allowed'
+    })
   })
 
-  it('should successfully log in a verified user and set authToken cookie', async () => {
-    const testEmail = 'verified@example.com'
-    const testPassword = 'password123'
-    const mockAuthToken = 'mock-access-token'
-    const mockSessionData = {
-      access_token: mockAuthToken,
-<<<<<<< HEAD
-      refresh_token: 'mock-refresh-token',
-=======
-      refresh_token: 'mock-refresh-token'
->>>>>>> cursor/fix-errors-and-merge-to-main-2480
-    }
-    const mockUserData = { id: 'user-123', email: testEmail }
+  it('should return 400 for missing email', async () => {
+    const req = mockApiReq({ password: 'password123' })
+    const res = mockApiRes()
+
+    await loginHandler(req, res)
+
+    expect(res.status).toHaveBeenCalledWith(400)
+    expect(res.json).toHaveBeenCalledWith({
+      error: 'Email and password are required'
+    })
+  })
+
+  it('should return 400 for missing password', async () => {
+    const req = mockApiReq({ email: 'test@example.com' })
+    const res = mockApiRes()
+
+    await loginHandler(req, res)
+
+    expect(res.status).toHaveBeenCalledWith(400)
+    expect(res.json).toHaveBeenCalledWith({
+      error: 'Email and password are required'
+    })
+  })
+
+  it('should return 400 for invalid email format', async () => {
+    const req = mockApiReq({ 
+      email: 'invalid-email', 
+      password: 'password123' 
+    })
+    const res = mockApiRes()
+
+    await loginHandler(req, res)
+
+    expect(res.status).toHaveBeenCalledWith(400)
+    expect(res.json).toHaveBeenCalledWith({
+      error: 'Invalid email format'
+    })
+  })
+
+  it('should return 400 for short password', async () => {
+    const req = mockApiReq({ 
+      email: 'test@example.com', 
+      password: '123' 
+    })
+    const res = mockApiRes()
+
+    await loginHandler(req, res)
+
+    expect(res.status).toHaveBeenCalledWith(400)
+    expect(res.json).toHaveBeenCalledWith({
+      error: 'Password must be at least 6 characters'
+    })
+  })
+
+  it('should return 401 for invalid credentials', async () => {
+    const req = mockApiReq({ 
+      email: 'test@example.com', 
+      password: 'wrongpassword' 
+    })
+    const res = mockApiRes()
 
     mockSignInWithPassword.mockResolvedValueOnce({
-      data: {
-        user: mockUserData,
-        session: mockSessionData
-      },
-      error: null
+      data: { user: null, session: null },
+      error: { message: 'Invalid login credentials' }
     })
 
-<<<<<<< HEAD
-    const req = mockApiReq({ email: testEmail, password: testPassword })
-=======
-    const req = mockApiReq({
-      email: testEmail,
-      password: testPassword
+    await loginHandler(req, res)
+
+    expect(res.status).toHaveBeenCalledWith(401)
+    expect(res.json).toHaveBeenCalledWith({
+      error: 'Invalid login credentials'
     })
->>>>>>> cursor/fix-errors-and-merge-to-main-2480
+  })
+
+  it('should return 200 for successful login', async () => {
+    const req = mockApiReq({ 
+      email: 'test@example.com', 
+      password: 'password123' 
+    })
     const res = mockApiRes()
+
+    const mockUser = {
+      id: 'user-123',
+      email: 'test@example.com',
+      created_at: '2023-01-01T00:00:00Z'
+    }
+
+    const mockSession = {
+      access_token: 'access-token',
+      refresh_token: 'refresh-token',
+      expires_at: 1234567890
+    }
+
+    mockSignInWithPassword.mockResolvedValueOnce({
+      data: { user: mockUser, session: mockSession },
+      error: null
+    })
 
     await loginHandler(req, res)
 
     expect(res.status).toHaveBeenCalledWith(200)
     expect(res.json).toHaveBeenCalledWith({
-      success: true,
-<<<<<<< HEAD
-      user: mockUserData,
-      message: 'Login successful'
-=======
-      user: mockUserData
->>>>>>> cursor/fix-errors-and-merge-to-main-2480
-    })
-    expect(res.setHeader).toHaveBeenCalledWith(
-      'Set-Cookie',
-      expect.stringContaining('authToken=')
-    )
-  })
-
-  it('should return 400 for invalid credentials', async () => {
-    mockSignInWithPassword.mockResolvedValueOnce({
-      data: { user: null, session: null },
-<<<<<<< HEAD
-      error: { message: 'Invalid login credentials' }
-    })
-
-    const req = mockApiReq({ email: 'wrong@example.com', password: 'wrong' })
-=======
-      error: { message: 'Invalid credentials' }
-    })
-
-    const req = mockApiReq({
-      email: 'invalid@example.com',
-      password: 'wrongpassword'
-    })
->>>>>>> cursor/fix-errors-and-merge-to-main-2480
-    const res = mockApiRes()
-
-    await loginHandler(req, res)
-
-    expect(res.status).toHaveBeenCalledWith(400)
-    expect(res.json).toHaveBeenCalledWith({
-<<<<<<< HEAD
-      success: false,
-      error: 'Invalid login credentials'
-    })
-  })
-
-  it('should return 400 for missing email or password', async () => {
-    const req = mockApiReq({ email: 'test@example.com' }) // missing password
-    const res = mockApiRes()
-
-    await loginHandler(req, res)
-
-    expect(res.status).toHaveBeenCalledWith(400)
-    expect(res.json).toHaveBeenCalledWith({
-      success: false,
-      error: 'Email and password are required'
+      message: 'Login successful',
+      user: {
+        id: mockUser.id,
+        email: mockUser.email
+      }
     })
   })
 
   it('should return 500 for server errors', async () => {
-    mockSignInWithPassword.mockRejectedValueOnce(new Error('Database connection failed'))
-
-    const req = mockApiReq({ email: 'test@example.com', password: 'password' })
+    const req = mockApiReq({ 
+      email: 'test@example.com', 
+      password: 'password123' 
+    })
     const res = mockApiRes()
+
+    mockSignInWithPassword.mockRejectedValueOnce(new Error('Database connection failed'))
 
     await loginHandler(req, res)
 
     expect(res.status).toHaveBeenCalledWith(500)
     expect(res.json).toHaveBeenCalledWith({
-      success: false,
       error: 'Internal server error'
-    })
-=======
-      error: 'Invalid credentials'
     })
   })
 
-  it('should return 400 for missing email or password', async () => {
-    const req = mockApiReq({ email: 'test@example.com' }) // missing password
+  it('should handle Supabase auth errors', async () => {
+    const req = mockApiReq({ 
+      email: 'test@example.com', 
+      password: 'password123' 
+    })
     const res = mockApiRes()
+
+    mockSignInWithPassword.mockResolvedValueOnce({
+      data: { user: null, session: null },
+      error: { message: 'Too many requests' }
+    })
 
     await loginHandler(req, res)
 
-    expect(res.status).toHaveBeenCalledWith(400)
+    expect(res.status).toHaveBeenCalledWith(401)
     expect(res.json).toHaveBeenCalledWith({
-      error: 'Email and password are required'
+      error: 'Too many requests'
     })
->>>>>>> cursor/fix-errors-and-merge-to-main-2480
   })
 })

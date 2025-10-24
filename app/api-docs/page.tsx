@@ -4,16 +4,21 @@ import {Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, Sh
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-export default function APIDocsPage() {const [copiedCode, setCopiedCode] = useState<string | null>(null);
+export default function APIDocsPage() {
+  const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-  const copyToClipboard = (code: string, id: string) => {,
-    navigator.clipboard.writeText(code)
-    setCopiedCode(id),
-    setTimeout(() => setCopiedCode(null), 2000)}const apiEndpoints = [
+  
+  const copyToClipboard = (code: string, id: string) => {
+    navigator.clipboard.writeText(code);
+    setCopiedCode(id);
+    setTimeout(() => setCopiedCode(null), 2000);
+  };
+  
+  const apiEndpoints = [
     {title: 'AI Services',
       description: 'Artificial Intelligence and Machine Learning APIs',
       icon: Brain,
-      endpoints: [,
+      endpoints: [
         {
           name: 'Text Analysis',
           method: 'POST',

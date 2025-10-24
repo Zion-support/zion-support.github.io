@@ -13,11 +13,13 @@ const AnalyticsToolsPage: React.FC = () => {
       description: 'Lightning-fast data processing and real-time analytics for optimal insights',},
     {icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards for your data',},
-    {icon: Globe,
+      description: 'Bank-level security with encryption and compliance standards for your data'
+    },
+    {
+      icon: Globe,
       title: 'Global Scalability',
-      description: 'Worldwide deployment and support for international business analytics',}];
-  ];];];
+      description: 'Worldwide deployment and support for international business analytics'
+    }
   ]
   const benefits = [
     'Advanced AI-powered data analysis',
