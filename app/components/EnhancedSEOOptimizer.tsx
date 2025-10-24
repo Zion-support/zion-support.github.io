@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-import { Phone, Mail, ArrowRight } from 'lucide-react'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe } from 'lucide-react'
 
 const EnhancedSEOOptimizerPage: React.FC = () => {
   const features = [
@@ -46,5 +43,3 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             </div>
           </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4da8

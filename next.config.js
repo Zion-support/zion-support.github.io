@@ -24,9 +24,9 @@ const nextConfig = {
   // Disable static optimization
   staticPageGenerationTimeout: 1000,
   // Skip static generation for problematic pages
-  async generateStaticParams() {
-    return []
-  },
+  // async generateStaticParams() {
+  //   return []
+  // },
   // Skip problematic pages during build
 }
 
