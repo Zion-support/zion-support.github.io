@@ -1,37 +1,89 @@
+<<<<<<< HEAD
+'use client';;
+import React from 'react';
+=======
 'use client'
-import Footer from './Footer'
-import Navigation from './Navigation'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain } from 'lucide-react'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-import { Phone, Mail, ArrowRight } from 'lucide-react'
+import React, { useState, useRef, useEffect } from 'react'
+>>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
 
+interface LazyImageProps {
+  src: string
+  alt: string
+  className?: string
+  placeholder?: string
+  onLoad?: () => void
+  onError?: () => void
+}
+
+const LazyImage: React.FC<LazyImageProps> = ({
+  src,
+  alt,
+  className = '',
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PC9zdmc+',
+  onLoad,
+  onError
+}) => {
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [isInView, setIsInView] = useState(false)
+  const [hasError, setHasError] = useState(false)
+  const imgRef = useRef<HTMLImageElement>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true)
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    if (imgRef.current) {
+      observer.observe(imgRef.current)
     }
-  ]
 
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ];
+    return () => observer.disconnect()
+  }, [])
 
-  const LazyImage: React.FC<LazyImageProps>= ({className = '' }) =</ {];
+  const handleLoad = () => {
+    setIsLoaded(true)
+    onLoad?.()
+  }
+
+  const handleError = () => {
+    setHasError(true)
+    onError?.()
+  }
+
   return (
-    <>
-    <Helmet /></Helmet>
-  </>
-);
-        <title>LazyImage</title>;
-        <meta name="description" content="Advanced LazyImage solution for modern businesses."    /></meta>
-        <meta name="keywords" content="AI, artificial intelligence, LazyImage, AI solutions, intelligent automation"    /></meta>
-      </Helmet>
-      <Navigation /></Navigation>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
-  </>
-  </>
-);
+    <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
+      {!isLoaded && !hasError && (
+        <img
+          src={placeholder}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover blur-sm"
+        />
+      )}
+      {isInView && (
+        <img
+          src={src}
+          alt={alt}
+          onLoad={handleLoad}
+          onError={handleError}
+          className={`w-full h-full object-cover transition-opacity duration-300 ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+          loading="lazy"
+        />
+      )}
+      {hasError && (
+        <div className="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-500">
+          Failed to load
+        </div>
+      )}
+    </div>
+  )
+}
 
-export default LazyImagePage;
+export default LazyImage

@@ -1,190 +1,392 @@
-'use client'
-import {Phone, Mail, Brain} from 'lucide-react';
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+<<<<<<< HEAD
+'use client';
+
+import Link from 'next/link';
+import { Phone, Mail, Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Globe, Database, Users, Settings, Check, ChevronRight, ChevronDown } from 'lucide-react';
+import React, { useState } from 'react';
+import Navigation from './Navigation';
+import Footer from './Footer';
 
 const SidebarPage: React.FC = () => {
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
+
+  const toggleSection = (sectionKey: string) => {
+    const newExpanded = new Set(expandedSections);
+    if (newExpanded.has(sectionKey)) {
+      newExpanded.delete(sectionKey);
+    } else {
+      newExpanded.add(sectionKey);
+    }
+    setExpandedSections(newExpanded);
+  };
+
   const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies and insights.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive intelligence', 'ROI optimization']
+    }
+  ];
+
+  const navigationSections = [
+    {
+      title: 'AI Solutions',
+      key: 'ai-solutions',
+      items: [
+        { name: 'AI Analytics', href: '/ai-analytics' },
+        { name: 'AI Automation', href: '/ai-automation' },
+        { name: 'AI Content Generator', href: '/ai-content-generator' },
+        { name: 'AI Financial Analytics', href: '/ai-financial-analytics-pro' }
+      ]
+    },
+    {
+      title: 'Services',
+      key: 'services',
+      items: [
+        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
+        { name: 'Cybersecurity', href: '/cybersecurity' },
+        { name: 'Digital Transformation', href: '/digital-transformation' },
+        { name: 'IT Services', href: '/it-services' }
+      ]
+    },
+    {
+      title: 'Company',
+      key: 'company',
+      items: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Team', href: '/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Contact', href: '/contact' }
+      ]
+    }
+  ];
+
+  return (
+    <>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Advanced
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">
+                {" "}Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Discover our comprehensive suite of technology solutions designed to transform your business
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <div className="max-w-7xl mx-auto px-4 py-12">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            {/* Sidebar Navigation */}
+            <div className="lg:col-span-1">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 sticky top-8">
+                <h3 className="text-xl font-bold text-white mb-6">Navigation</h3>
+                <div className="flex-1 overflow-y-auto py-6">
+                  <nav className="space-y-2 px-4">
+                    {navigationSections.map((section, sectionIndex) => (
+                      <div key={sectionIndex} className="space-y-1">
+                        <button
+                          onClick={() => section.key && toggleSection(section.key)}
+                          className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"
+                        >
+                          <span>{section.title}</span>
+                          {section.key && (
+                            expandedSections.has(section.key) ?
+                            <ChevronDown className="w-4 h-4" /> :
+                            <ChevronRight className="w-4 h-4" />
+                          )}
+                        </button>
+                        {(!section.key || expandedSections.has(section.key)) && (
+                          <div className="ml-4 space-y-1">
+                            {section.items.map((item, itemIndex) => (
+                              <Link
+                                key={itemIndex}
+                                href={item.href}
+                                className="block px-3 py-2 text-sm text-gray-300 hover:text-white transition-colors"
+                              >
+                                {item.name}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </nav>
+                </div>
+              </div>
+            </div>
+
+            {/* Main Content */}
+            <div className="lg:col-span-3">
+              <div className="space-y-12">
+                {/* Features Section */}
+                <section>
+                  <div className="text-center mb-12">
+                    <h2 className="text-4xl font-bold text-white mb-4">Our Features</h2>
+                    <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                      Discover the powerful features that make our solutions stand out
+                    </p>
+                  </div>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {features.map((feature, index) => {
+                      const IconComponent = feature.icon;
+                      return (
+                        <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
+                          <div className="flex items-center mb-4">
+                            <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center mr-4">
+                              <IconComponent className="w-6 h-6 text-white" />
+                            </div>
+                            <h3 className="text-xl font-bold text-white">{feature.title}</h3>
+                          </div>
+                          <p className="text-gray-300 mb-4">{feature.description}</p>
+                          <ul className="space-y-2">
+                            {feature.benefits.map((benefit, benefitIndex) => (
+                              <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                                <Check className="w-4 h-4 text-emerald-400 mr-2" />
+                                {benefit}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </section>
+
+                {/* CTA Section */}
+                <section className="text-center">
+                  <div className="bg-gradient-to-r from-emerald-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-12">
+                    <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+                    <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                      Contact us today to learn more about our solutions and how they can help your business grow.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                      <button className="bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                        Contact Us
+                        <ArrowRight className="w-5 h-5 ml-2" />
+                      </button>
+                      <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center">
+                        View All Solutions
+                      </button>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </>
+  );
+};
 
 export default SidebarPage;
-Menu,
-Home,
-Users,
-Settings,
-Brain,
-Cloud,
-Shield,
-Code,
-BarChart,
-ChevronDown,
-ChevronRight,
-Phone,
-Mail,
-MapPin,Clock;}
-} from 'lucide-react'
-constSidebar: React.FC= () => (/{const [isOpensetIsOpen] = useState(false)
-const [expandedSectionssetExpandedSections]=useState<Set<strin g>>(new Set(['ai-services', 'micro-saas', 'it-services']))
-constlocation= useLocation()
-useEffect(() => {
-  
-consthandleResize= () => {
-  
-if (windo w.innerWidth >=1024) {
-setIsOpen(false)}
+=======
+<<<<<<< HEAD
+'use client';;
+import React, {Suspense, lazy}from 'react';
+import {Link, useLocation}}from 'react-router-dom';
+import {X,}
+  Menu,
+  Home,
+  Users,
+  Settings,
+  Brain,
+  Cloud,
+  Shield,
+  Code,
+  BarChart,
+  ChevronDown,
+  ChevronRight,
+=======
+'use client';
+>>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
+
+import React, { useState } from 'react';
+import { _Menu, X, Home, User, Settings, LogOut, ChevronRight } from 'lucide-react';
+
+interface SidebarProps {
+  isOpen: boolean;
+  onClose: () => void;
+  menuItems?: Array<{
+    label: string;
+    href: string;
+    icon?: React.ReactNode;
+    submenu?: Array<{
+      label: string;
+      href: string;
+    }>;
+  }>;
+  user?: {
+    name: string;
+    email: string;
+    avatar?: string;
+  };
+  onLogout?: () => void;
 }
-windo w.addEventListener('resize', handleResize)
-return () => windo w.removeEventListener('resize', handleResize)
-}, [])
-consttoggleSection= (section: string) => {constnewExpanded= new Set(expandedSections)
-if (newExpanded.has(section)) {;) =</ {
-  
-return (
-$3;
-)}
-newExpanded.delete(section);}
-} else {newExpanded.add(section);}
-}
-setExpandedSections(newExpanded)
-}
-constnavigationSections= [
-{title: 'Main',
-items: [
-{ name: 'Home', path: '/', icon: Home},
-{name: 'About', path: '/about', icon: Users},
-{name: 'Services', path: '/services', icon: Settings},
-{name: 'Contact', path: '/contact', icon: Phone},
-{name: 'Blog', path: '/blog', icon: BarChart},
-{name: 'Case Studies', path: '/case-studies', icon: BarChart},
-]
-},
-{title: 'AI Services',
-key: 'ai-services',
-items: [
-{ name: 'AI Services Overview', path: '/ai-services', icon: Brain},
-{name: 'Business Intelligence', path: '/ai-services/business-intelligence', icon: BarChart},
-{name: 'Document Processing', path: '/ai-services/do cument-processing', icon: Settings},
-{name: 'Customer Experience', path: '/ai-services/customer-experience', icon: Users},
-{name: 'Marketing Automation', path: '/ai-services/marketing-automation', icon: Settings},
-{name: 'Predictive Maintenance', path: '/ai-services/predictive-maintenance', icon: Settings},
-{name: 'Supply Chain', path: '/ai-services/supply-chain', icon: Settings},
-{name: 'Fraud Detection', path: '/ai-services/fraud-detection', icon: Shield},
-{name: 'Content Generation', path: '/ai-services/content-generation', icon: Settings},
-{name: 'HR Analytics', path: '/ai-services/hr-analytics', icon: BarChart},
-{name: 'Process Automation', path: '/ai-services/process-automation', icon: Settings},
-{name: 'Quality Assurance', path: '/ai-services/quality-assurance', icon: Shield},
-{name: 'Energy Management', path: '/ai-services/energy-management', icon: Settings},
-]
-},
-{title: 'Micro SaaS',
-key: 'micro-saas',
-items: [
-{ name: 'Micro SaaS Overview', path: '/micro-saas', icon: Settings},
-{name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard', icon: BarChart},
-{name: 'Support Bot', path: '/micro-saas/support-bot', icon: Users},
-{name: 'Social Manager', path: '/micro-saas/social-manager', icon: Settings},
-{name: 'Email Marketing', path: '/micro-saas/email-marketing', icon: Mail},
-{name: 'Inventory Management', path: '/micro-saas/inventory-management', icon: Settings},
-{name: 'Lead Scoring', path: '/micro-saas/lead-scoring', icon: BarChart},
-{name: 'Document Processor', path: '/micro-saas/do cument-processor', icon: Settings},
-{name: 'SEO Optimizer', path: '/micro-saas/seo-optimizer', icon: Settings},
-{name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler', icon: Clock},
-{name: 'Chat Analytics', path: '/micro-saas/chat-analytics', icon: BarChart},
-{name: 'Expense Tracker', path: '/micro-saas/expense-tracker', icon: BarChart},
-{name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings},
-]
-},
-{title: 'IT Services',
-key: 'it-services',
-items: [
-{ name: 'IT Services Overview', path: '/it-services', icon: Code},
-{name: 'IT Consulting', path: '/it-consulting', icon: Users},
-{name: 'IT Infrastructure', path: '/it-infrastructure', icon: Settings},
-{name: 'IT Support', path: '/it-support', icon: Users},
-{name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: Cloud},
-{name: 'Cloud Migration', path: '/cloud-migration', icon: Cloud},
-{name: 'Cybersecurity', path: '/cybersecurity', icon: Shield},
-{name: 'Database Management', path: '/database-management', icon: Settings},
-{name: 'Managed IT', path: '/managed-it', icon: Settings},
-]
-},
-{title: 'Company',
-items: [
-{ name: 'Team', path: '/team', icon: Users},
-{name: 'Careers', path: '/careers', icon: Users},
-{name: 'Consultation', path: '/consultation', icon: Phone},
-{name: 'Pricing', path: '/pricing', icon: BarChart},
-]
-},
-{title: 'Resources',
-items: [
-{ name: 'Documentation', path: '/do cs', icon: Settings},
-{name: 'API Docs', path: '/api-do cs', icon: Code},
-{name: 'Support', path: '/support', icon: Users},
-{name: 'Status', path: '/status', icon: Settings},
-]
-}
-]
-constcontactInfo= {phone: '(30 2) 46 4-095 0',
-email: 'kleber@ziontechgroup.com',
-address: '364 E Main St STE 1008 Middletown, DE 19709',
-hours: 'Mon-Fri 9AM-6PM EST'
-}
-return (
-<>
-    {/* Mobile Menu Button */}
-  </>
-);
-<button onClick={() =></button>setIsOpen(true)}
-className="lg: hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
-aria-label="Open sidebar"
-</
-<Menu className="w-6 h-6"    /></Menu>
-</button>
-{/* Sidebar Overlay  */
-{isOpen && (
-<div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg: hidden" }
-onClick={() =>setIsOpen(false)}</div>/</
-)}
-{/* Sidebar */}</div>
-<aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${
-isOpen ? 'translate-x-0' : '-translate-x-full'
-} lg: translate-x-0 lg:static lg:z-auto`, }   /></aside>
-<div className="flex flex-col h-full"></div>
-{/* Header */}</div>
-<div className="flex items-center justify-between p-6 border-b border-slate-700/50"></div>
-<Link to="/" className="flex items-center space-x-3" onClick={() =>setIsOpen(false)}</
-<div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center"></div>
-<Brain className="w-6 h-6 text-white"    /></Brain>
-</div>
-<div  /><//div>
-<h2 className="text-xl font-bold text-white cyber-text">Zion Tech Group</h2>
-<p className="text-xs text-cyan-400">AI & IT Solutions</p>
-</div>
-</Link>
-<button onClick={() =></button>setIsOpen(false)}
-className="lg: hidden text-gray-400 hover:text-white transition-colors"
-aria-label="Close sidebar"
-</
-<X className="w-6 h-6"    /></X>
-</button>
-</div>
-{/* Navigation  */
-<div className="flex-1 overflow-y-auto py-6"></div>
-<nav className="space-y-2 px-4">{navigationSections.map((section, sectionIndex => (/ (;}
-<div key={sectionIndex} className="space-y-1"></div>
-<button onClick={() =></button>section.key && toggleSection(section.key)}
-className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover: text-cyan-300 transition-colors"</
-<span>{section.title}</span>
-{section.key && (
-expandedSections.has(section.key) ?
-<ChevronDown className="w-4 h-4"   /> :
-<ChevronRight className="w-4 h-4"    /></ChevronRight>
-)}
-</button>
-{(!section.key || expandedSections.has(section.key)) && (
-<div className="ml-4 space-y-1"></div>{section.items.map((item, itemIndex) =</ (</div>
-<Link key={itemIndex}
+
+const Sidebar: React.FC<SidebarProps> = ({
+  isOpen,
+  onClose,
+  menuItems = [
+    { label: 'Dashboard', href: '/dashboard', icon: <Home className="w-5 h-5" /> },
+    { label: 'Profile', href: '/profile', icon: <User className="w-5 h-5" /> },
+    { label: 'Settings', href: '/settings', icon: <Settings className="w-5 h-5" /> },
+  ],
+  user,
+  onLogout,
+}) => {
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+
+  const toggleSubmenu = (label: string) => {
+    setActiveSubmenu(activeSubmenu === label ? null : label);
+  };
+
+  if (!isOpen) return null;
+
+  return (
+    <>
+      {/* Overlay */}
+      <div
+        className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+        onClick={onClose}
+      />
+      
+      {/* Sidebar */}
+      <div className="fixed inset-y-0 left-0 w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out">
+        <div className="flex flex-col h-full">
+          {/* Header */}
+          <div className="flex items-center justify-between p-4 border-b">
+            <h2 className="text-lg font-semibold text-gray-900">Menu</h2>
+            <button
+              onClick={onClose}
+              className="p-2 rounded-md hover:bg-gray-100"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
+
+          {/* User Info */}
+          {user && (
+            <div className="p-4 border-b">
+              <div className="flex items-center space-x-3">
+                {user.avatar ? (
+                  <img
+                    src={user.avatar}
+                    alt={user.name}
+                    className="w-10 h-10 rounded-full"
+                  />
+                ) : (
+                  <div className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
+                    <User className="w-5 h-5 text-gray-600" />
+                  </div>
+                )}
+                <div>
+                  <p className="text-sm font-medium text-gray-900">{user.name}</p>
+                  <p className="text-xs text-gray-500">{user.email}</p>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Menu Items */}
+          <nav className="flex-1 p-4 space-y-2">
+            {menuItems.map((item, index) => (
+              <div key={index}>
+                <a
+                  href={item.href}
+                  className="flex items-center justify-between px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-100 hover:text-gray-900"
+                >
+                  <div className="flex items-center">
+                    {item.icon && <span className="mr-3">{item.icon}</span>}
+                    {item.label}
+                  </div>
+                  {item.submenu && (
+                    <button
+                      onClick={() => toggleSubmenu(item.label)}
+                      className="p-1 hover:bg-gray-200 rounded"
+                    >
+                      <ChevronRight
+                        className={`w-4 h-4 transition-transform ${
+                          activeSubmenu === item.label ? 'rotate-90' : ''
+                        }`}
+                      />
+                    </button>
+                  )}
+                </a>
+                {item.submenu && activeSubmenu === item.label && (
+                  <div className="ml-6 mt-2 space-y-1">
+                    {item.submenu.map((subItem, subIndex) => (
+                      <a
+                        key={subIndex}
+                        href={subItem.href}
+                        className="block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-gray-100 hover:text-gray-900"
+                      >
+                        {subItem.label}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </nav>
+
+<<<<<<< HEAD
+=======
+          {/* Logout */}
+          {onLogout && (
+            <div className="p-4 border-t">
+              <button
+                onClick={onLogout}
+                className="flex items-center w-full px-3 py-2 text-sm font-medium text-red-600 rounded-md hover:bg-red-50"
+              >
+                <LogOut className="w-5 h-5 mr-3" />
+                Logout
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
+    </>
+>>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
+  );
+};
+
+export default Sidebar;
+>>>>>>> 29d49925dca88a534c75f2643000c6a1ecf43fea

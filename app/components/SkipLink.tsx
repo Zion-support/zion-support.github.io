@@ -1,12 +1,20 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+<<<<<<< HEAD
+'use client';;
+=======
 
-const SkipLinkPage: React.FC = () => {
-  const features = [
+>>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
+import React from 'react';
 
-export default SkipLinkPage;
+interface SkipLinkProps {
+  // Add props here
+}
+
+const SkipLink: React.FC<SkipLinkProps> = (_props) => {
+  return (
+    <div>
+      {/* Component content */}
+    </div>
+  );
+};
+
+export default SkipLink;

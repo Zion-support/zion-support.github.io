@@ -1,34 +1,17 @@
-'use client'
-import {Helmet} from 'lucide-react';
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+'use client';;
+
+import React from 'react';
 
 interface EnhancedSEOHeadProps {
-  ;
-  className?: string
+  // Add props here
 }
 
-const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps>= ({className = '' }) =</ {
+const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = (_props) => {
   return (
-    <>
-    <Helmet /></Helmet>
-  </>
-);
-        <title>{title}</title>
-        <meta name="description" content="Zion Tech Group"    /></meta>
-        <meta name="keywords" content="AI, artificial intelligence, EnhancedSEOHead, AI solutions, intelligent automation"    /></meta>
-      </Helmet>
-      <Navigation /></Navigation>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
-  </>
-  </>
-);
+    <div>
+      {/* Component content */}
+    </div>
+  );
+};
 
-export default EnhancedSEOHeadPage;
-  )
-}
 export default EnhancedSEOHead;

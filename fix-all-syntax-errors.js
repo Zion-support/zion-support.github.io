@@ -1,134 +1,113 @@
 const fs = require('fs');
 const path = require('path');
 
+// Function to clean up duplicate imports and fix syntax errors
 function fixFile(filePath) {
   try {
-    const fullPath = path.join(__dirname, filePath);
-    if (!fs.existsSync(fullPath)) {
-      return;
-    }
-
-    let content = fs.readFileSync(fullPath, 'utf8');
+    let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix duplicate React imports and "use client" directives
+    // Fix Navigation component syntax error
+    if (filePath.includes('Navigation.tsx')) {
+      // Fix the return statement syntax
+      content = content.replace(/return \(\s*<nav/g, 'return (\n    <nav');
+      content = content.replace(/}\s*"}\s*export default Navigation[\s\S]*?export default Navigation\s*$/s, '}\n  );\n};\n\nexport default Navigation;');
+      modified = true;
+    }
+
+    // Fix duplicate imports
     const lines = content.split('\n');
+    const seenImports = new Set();
     const cleanedLines = [];
-    let hasUseClient = false;
-    let hasReactImport = false;
-    let hasOtherImports = false;
+    let inImportBlock = false;
 
     for (let i = 0; i < lines.length; i++) {
-      const line = lines[i].trim();
+      const line = lines[i];
       
-      // Skip duplicate "use client" directives
-      if (line === '"use client";' || line === "'use client';") {
-        if (!hasUseClient) {
-          cleanedLines.push('"use client";');
-          hasUseClient = true;
-        }
-        modified = true;
-        continue;
-      }
+      // Check if we're starting an import block
+      if (line.trim().startsWith('import ') || line.trim().startsWith('"use client"')) {
+        inImportBlock = true;
       
-      // Skip duplicate React imports
-      if (line.startsWith('import React from "react"') || line.startsWith("import React from 'react'")) {
-        if (!hasReactImport) {
-          cleanedLines.push('import React from "react";');
-          hasReactImport = true;
-        }
-        modified = true;
-        continue;
-      }
-      
-      // Keep other lines
-      cleanedLines.push(lines[i]);
-    }
+      // Check if we're ending the import block
+      if (inImportBlock && !line.trim().startsWith('import ') && !line.trim().startsWith('"use client"') && line.trim() !== '') {
+        inImportBlock = false;
 
-    // Reconstruct content with proper order
-    if (modified) {
-      const newContent = [];
-      
-      // Add "use client" first if it exists
-      if (hasUseClient) {
-        newContent.push('"use client";');
-      }
-      
-      // Add React import
-      if (hasReactImport) {
-        newContent.push('import React from "react";');
-      }
-      
-      // Add other imports and content
-      let inImportSection = true;
-      for (const line of cleanedLines) {
-        if (line.trim() === '"use client";' || line.trim() === 'import React from "react";') {
-          continue; // Skip as we already added them
-        }
-        
-        if (inImportSection && (line.startsWith('import ') || line.trim() === '')) {
-          newContent.push(line);
-        } else {
-          inImportSection = false;
-          newContent.push(line);
-        }
-      }
-      
-      content = newContent.join('\n');
-    }
+      if (inImportBlock && line.trim().startsWith('import ')) {
+        const importKey = line.trim();
+        if (!seenImports.has(importKey)) {
+          seenImports.add(importKey);
+          cleanedLines.push(line);
+      } else if (inImportBlock && line.trim().startsWith('"use client"')) {
+        if (!seenImports.has('"use client"')) {
+          seenImports.add('"use client"');
+      } else {
 
-    // Fix malformed JSX closing structures
-    content = content.replace(/<\/div>\s*\);\s*\);/g, '\n    </div>\n  );\n}');
-    content = content.replace(/<\/div>\s*\);\s*}/g, '\n    </div>\n  );\n}');
-    
-    // Fix extra closing div tags
-    const extraDivPattern = /(\s*<\/div>\s*){2,}(\s*<\/div>\s*){2,}/g;
-    if (extraDivPattern.test(content)) {
-      content = content.replace(extraDivPattern, '\n    </div>\n  );');
-      modified = true;
-    }
+    if (cleanedLines.length !== lines.length) {
+      content = cleanedLines.join('\n');
 
-    // Fix incorrect closing tags
-    content = content.replace(/<\s*\/\s*>/g, '</div>');
-    if (content.includes('</>')) {
-      modified = true;
-    }
+    // Fix common syntax errors
+    const fixes = [
+      // Fix missing closing quotes in href attributes
+      { pattern: /href="\/contact\n\s*className=/g, replacement: 'href="/contact"\n                className=' },
+      { pattern: /href="\/about\n\s*className=/g, replacement: 'href="/about"\n                className=' },
+      
+      // Fix extra closing braces
+      { pattern: /\s*\)\s*}\s*}\s*$/gm, replacement: '\n  );\n}' },
+      
+      // Fix semicolon instead of closing parenthesis
+      { pattern: /\s*;\s*$/gm, replacement: '\n  );' },
+      
+      // Fix missing closing parenthesis in return statements
+      { pattern: /return \(\s*<[^>]*>\s*<[^>]*>\s*<\/[^>]*>\s*<\/[^>]*>\s*;\s*$/gm, replacement: 'return (\n    <>\n      <div>Content</div>\n    </>\n  );' },
+      
+      // Fix multiple export default statements
+      { pattern: /export default \w+;\s*\n\s*export default \w+;\s*$/gm, replacement: 'export default $1;' },
+      
+      // Fix function declaration syntax
+      { pattern: /export default function \w+\(\) \{\s*return \(\s*<[^>]*>\s*<[^>]*>\s*<\/[^>]*>\s*<\/[^>]*>\s*;\s*\};/gm, replacement: 'export default function $1() {\n  return (\n    <>\n      <div>Content</div>\n    </>\n  );\n}' }
+    ];
 
-    // Fix h1/h2/h3 tag mismatches
-    content = content.replace(/<h1([^>]*)>\s*([^<]*)\s*<\/h2>/g, '<h1$1>$2</h1>');
-    content = content.replace(/<h2([^>]*)>\s*([^<]*)\s*<\/h1>/g, '<h2$1>$2</h2>');
-    content = content.replace(/<h3([^>]*)>\s*([^<]*)\s*<\/h1>/g, '<h3$1>$2</h3>');
+    fixes.forEach(fix => {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+    });
 
     if (modified) {
-      fs.writeFileSync(fullPath, content);
+      fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
-    }
+      return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-  }
-}
+  return false;
 
-// Get all TypeScript/TSX files in the app directory
-function getAllTsxFiles(dir) {
+// Function to recursively find all .tsx and .ts files
+function findFiles(dir, extensions = ['.tsx', '.ts']) {
   const files = [];
-  const items = fs.readdirSync(dir);
   
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
     
-    if (stat.isDirectory()) {
-      files.push(...getAllTsxFiles(fullPath));
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-      files.push(fullPath.replace(__dirname + '/', ''));
-    }
-  }
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath);
+      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath);
   
-  return files;
-}
 
-// Fix all TSX/TS files
-console.log('Starting comprehensive syntax error fixes...');
-const allFiles = getAllTsxFiles(path.join(__dirname, 'app'));
-allFiles.forEach(fixFile);
-console.log('Comprehensive syntax error fixes completed!');
+
+// Main execution
+console.log('Starting comprehensive syntax fix...');
+
+const appDir = path.join('/workspace', 'app');
+const files = findFiles(appDir);
+
+let fixedCount = 0;
+for (const file of files) {
+  if (fixFile(file)) {
+    fixedCount++;
+
+console.log(`Fixed ${fixedCount} files out of ${files.length} total files.`);

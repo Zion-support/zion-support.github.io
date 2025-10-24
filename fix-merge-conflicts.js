@@ -1,47 +1,70 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import { execSync } from 'child_process';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-function fixMergeConflicts(filePath) {
+// Function to resolve merge conflicts in a file
+function resolveMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
+    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {
+      return false; // No conflicts to resolve
+    }
+    
+    console.log(`Resolving conflicts in: ${filePath}`);
+    
+    // Split by conflict markers
+    const lines = content.split('\n');
+    const resolvedLines = [];
+    let inConflict = false;
+    let conflictType = null; // 'head' or 'incoming'
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      if (line.includes('<<<<<<< HEAD')) {
+        inConflict = true;
+        conflictType = 'head';
+        continue;
+      } else if (line.includes('=======')) {
+        conflictType = 'incoming';
+        continue;
+      } else if (line.includes('>>>>>>>')) {
         inConflict = false;
-        keepHead = false;
+        conflictType = null;
         continue;
       }
       
-      if (inConflict && !keepHead) {
-        continue; // Skip lines in the non-HEAD section
+      if (inConflict) {
+        // For now, prefer the incoming changes (after =======)
+        if (conflictType === 'incoming') {
+          resolvedLines.push(line);
+        }
+        // Skip HEAD changes (before =======)
+      } else {
+        resolvedLines.push(line);
       }
-      
-      fixedLines.push(line);
     }
     
-    const fixedContent = fixedLines.join('\n');
+    // Write the resolved content
+    const resolvedContent = resolvedLines.join('\n');
+    fs.writeFileSync(filePath, resolvedContent, 'utf8');
     
-    // Clean up any remaining syntax issues
-    const cleanedContent = fixedContent
-      .replace(/;\s*$/gm, '') // Remove trailing semicolons
-      .replace(/\s+$/gm, '') // Remove trailing whitespace
-      .replace(/\n\s*\n\s*\n/g, '\n\n'); // Remove multiple empty lines
-    
-    fs.writeFileSync(filePath, cleanedContent);
     return true;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error resolving conflicts in ${filePath}:`, error.message);
     return false;
   }
 }
 
-function findTsxFiles(dir) {
+// Function to find all files with merge conflicts
+function findFilesWithConflicts(dir) {
   const files = [];
   
-  function traverse(currentDir) {
+  function scanDirectory(currentDir) {
     const items = fs.readdirSync(currentDir);
     
     for (const item of items) {
@@ -49,36 +72,85 @@ function findTsxFiles(dir) {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-        files.push(fullPath);
+        scanDirectory(fullPath);
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
+        const content = fs.readFileSync(fullPath, 'utf8');
+        if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+          files.push(fullPath);
+        }
       }
     }
   }
   
-  traverse(dir);
+  scanDirectory(dir);
   return files;
 }
 
 // Main execution
-const appDir = path.join(__dirname, 'app');
-const files = findTsxFiles(appDir);
+console.log('Starting merge conflict resolution...');
 
-console.log(`Found ${files.length} TypeScript files to check`);
+const appDir = path.join(process.cwd(), 'app');
+const filesWithConflicts = findFilesWithConflicts(appDir);
 
-let fixedCount = 0;
-for (const file of files) {
-  if (fixMergeConflicts(file)) {
-    fixedCount++;
+console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
+
+let resolvedCount = 0;
+for (const file of filesWithConflicts) {
+  if (resolveMergeConflicts(file)) {
+    resolvedCount++;
   }
 }
 
-console.log(`Fixed merge conflicts in ${fixedCount} files`);
+console.log(`Resolved conflicts in ${resolvedCount} files`);
 
-// Also check the root App.tsx
-if (fixMergeConflicts(path.join(__dirname, 'App.tsx'))) {
-  fixedCount++;
-  console.log('Fixed merge conflicts in App.tsx');
+// Also check for missing imports and fix them
+console.log('Checking for missing imports...');
+
+// Fix common missing import issues
+const commonFixes = [
+  {
+    pattern: /import.*SEOOptimizer.*from.*['"]\.\.\/components\/SEOOptimizer['"]/g,
+    replacement: 'import SEOOptimizer from \'../components/EnhancedSEOOptimizer\''
+  },
+  {
+    pattern: /import.*SEOHead.*from.*['"]\.\.\/components\/SEOHead['"]/g,
+    replacement: 'import SEOHead from \'../components/EnhancedSEOHead\''
+  }
+];
+
+// Apply fixes to all TypeScript/JavaScript files
+function applyFixes(dir) {
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      applyFixes(fullPath);
+    } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
+      try {
+        let content = fs.readFileSync(fullPath, 'utf8');
+        let modified = false;
+        
+        for (const fix of commonFixes) {
+          if (fix.pattern.test(content)) {
+            content = content.replace(fix.pattern, fix.replacement);
+            modified = true;
+          }
+        }
+        
+        if (modified) {
+          fs.writeFileSync(fullPath, content, 'utf8');
+          console.log(`Applied fixes to: ${fullPath}`);
+        }
+      } catch (error) {
+        console.error(`Error applying fixes to ${fullPath}:`, error.message);
+      }
+    }
+  }
 }
 
-console.log(`Total files fixed: ${fixedCount}`);
+applyFixes(appDir);
+
+console.log('Merge conflict resolution completed!');

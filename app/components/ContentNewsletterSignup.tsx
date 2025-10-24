@@ -1,204 +1,132 @@
-'use client'
-import Footer from './Footer'
-import Navigation from './Navigation'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight } from 'lucide-react'
-import React, { useState } from 'react'
-import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react'
-import { CheckCircle, ArrowRight } from 'lucide-react'
+'use client';
+import React, { useState } from 'react';
+import { CheckCircle, ArrowRight, Mail } from 'lucide-react';
 
 interface ContentNewsletterSignupProps {
   title?: string;
   subtitle?: string;
   placeholder?: string;
-  buttonText?: string
-  features?: Array (
-    icon: React.ComponentType ( className?: string)
-    text: string)
-  onSubscribe?: (email: string) => void
+  buttonText?: string;
+  onSubscribe?: (email: string) => Promise<void>;
 }
 
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
-  title = "Stay Updated with Our Latest Insights",
-  subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
+  title = "Stay Updated",
+  subtitle = "Get the latest insights and updates delivered to your inbox.",
   placeholder = "Enter your email address",
   buttonText = "Subscribe",
-  features = [
-    { icon: Star, text: "Exclusive content" },
-    { icon: Users, text: "Industry insights" },
-    { icon: Globe, text: "Global updates" },
-    { icon: Zap, text: "Early access" }
-  ],
   onSubscribe
 }) => {
-  const [email, setEmail] = useState('')
-  const [isSubmittingsetIsSubmitting] = useState(false)
-  const [isSubscribedsetIsSubscribed] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
-  
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubscribed, setIsSubscribed] = useState(false);
+
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!email) return
-    setIsLoading(true)
+    e.preventDefault();
+    if (!email) return;
+
+    setIsSubmitting(true);
+    
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000))
       if (onSubscribe) {
-        onSubscribe(email)
-     }
-      setIsSubscribed(true)
-      setEmail('')
+        await onSubscribe(email);
+      } else {
+        // Simulate API call
+        await new Promise(resolve => setTimeout(resolve, 1000));
+      }
+      
+      setIsSubscribed(true);
+      setEmail('');
     } catch (error) {
-      // // console.error('Subscription error:', error)
+      console.error('Subscription failed:', error);
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
+  };
+
+  if (isSubscribed) {
+    return (
+      <div className="bg-gradient-to-r from-green-500 to-blue-600 py-16 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <CheckCircle className="w-8 h-8 text-white" />
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Welcome to Our Community!
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Thank you for subscribing. You'll receive our latest insights and updates soon.
+          </p>
+          <button
+            onClick={() => setIsSubscribed(false)}
+            className="text-white underline hover:text-blue-200 transition-colors"
+          >
+            Subscribe another email
+          </button>
+        </div>
+      </div>
+    );
   }
 
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
-
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({  className = ''  }) => {
   return (
-    <>
-    <Helmet ></Helmet>
-  </>
-);
-        <title>ContentNewsletterSignup</title>
-        <meta name="description" content="Advanced ContentNewsletterSignup solution for modern businesses."   /></meta>
-        <meta name="keywords" content="AI, artificial intelligence, ContentNewsletterSignup, AI solutions, intelligent automation"   /></meta>
-      </Helmet>
-      <Navigation /></Navigation>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden"></section>
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center"></div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
-              ContentNewsletterSignup
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>
-              Advanced ContentNewsletterSignup solution for modern businesses.
+    <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 px-4">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Content */}
+          <div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              {title}
+            </h2>
+            <p className="text-xl text-blue-100 mb-8">
+              {subtitle}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"></button>
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5"   /></ArrowRight>
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
-                Learn More
-              </button>
-            </div>
           </div>
-    );
-            </div>
-          </div>
-        </section>
 
-        {/* Features Section */}
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;></p>
-                Powerful AI-driven features designed to transform your business operations
-              </p>
-            </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
-              {features.map((feature, index) => (
-                <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
-                  <feature .icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot  /></feature>
-                  <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
-                  <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
-                  <ul className=&quot;space-y-2&quot;></ul>
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;></li>
-                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot  /></CheckCircle>
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
           {/* Newsletter Form */}
-          <div className=&quot;bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8&quot;></div>
-            <form onSubmit={handleSubmit} className=&quot;space-y-6&quot;></form>
-              <div></div>
-                <label htmlFor=&quot;email&quot; className=&quot;block text-sm font-medium text-white mb-2&quot;></label>
+          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                   Email Address
+                </label>
                 <input
-                  type=&quot;email&quot;
+                  type="email"
+                  id="email"
                   value={email}
-                  onChange={(e) =>setEmail(e.target.value)}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder={placeholder}
-                 requiredclassName=&quot;w-full pl-10pr-4 py-4 bg-white/10border border-white/20rounded-lg text-white placeholder-gray-400 focus:outline-nonefocus:ring-2focus:ring-blue-500focus:border-transparent&quot />
+                  required
+                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent"
+                />
               </div>
+              
               <button
-                type=&quot;submit&quot;
-                disabled={isLoading || !email}
-                className=&quot;w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center&quot;></button>
-                {isLoading ? (
+                type="submit"
+                disabled={isSubmitting || !email}
+                className="w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center"
+              >
+                {isSubmitting ? (
                   <>
-    <div className=&quot;animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2&quot;></div>
-  </>
-);
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2"></div>
                     Subscribing...
                   < />
                 ) : (
                   <>
-    {buttonText}
-  </>
-);
-                    <ArrowRight className=&quot;w-5 h-5 ml-2&quot  /></ArrowRight>
-                  < />
+                    {buttonText}
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </>
                 )}
               </button>
-              <p className=&quot;text-sm text-blue-200 text-center&quot;></p>
+              
+              <p className="text-sm text-blue-200 text-center">
                 We respect your privacy. Unsubscribe at any time.
               </p>
-            </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
-              {benefits.map((benefit, index) => (
-                <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
-                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot  /></CheckCircle>
-                  <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
-                </div>
-              ))}
-            </div>
+            </form>
           </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
-            <p className=&quot;text-xl text-gray-300 mb-8&quot;></p>
-              Join thousands of businesses already using our AI solutions
-            </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
-                Start Free Trial
-              </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;></button>
-                Contact Sales
-              </button>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
-      <Footer /></Footer>
-    < />
-  </>
-);
-  </>
-);
+    </div>
+  );
 };
 
-export default ContentNewsletterSignupPage;
+export default ContentNewsletterSignup;

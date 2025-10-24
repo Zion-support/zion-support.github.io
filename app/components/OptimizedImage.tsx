@@ -1,23 +1,47 @@
-'use client'
-import Footer from './Footer'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain } from 'lucide-react'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-import { Phone, Mail, ArrowRight } from 'lucide-react'
+'use client';
+
+import React from 'react';
+import Image from 'next/image';
 
 interface OptimizedImageProps {
-  ;
-  className?: string
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  priority?: boolean;
+  quality?: number;
+  placeholder?: 'empty' | 'blur';
+  blurDataURL?: string;
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps>= ({className = '' }) =</ {
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
+  src,
+  alt,
+  width = 800,
+  height = 600,
+  className = '',
+  priority = false,
+  quality = 75,
+  placeholder = 'empty',
+  blurDataURL
+}) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet /></Helmet>
-        <title>OptimizedImage | Zion Tech Group</title>
-        <meta name="description" content="Professional OptimizedImage services by Zion Tech Group. Advanced AI and IT solutions for your business."    /></meta>
-        <meta name="keywords" content="OptimizedImage, AI solutions, IT services, Zion Tech Group, optimizedimage"    /></meta>
-      </Helmet>
+    <div className={`relative overflow-hidden ${className}`}>
+      <Image
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        priority={priority}
+        quality={quality}
+        placeholder={placeholder}
+        blurDataURL={blurDataURL}
+        className="w-full h-auto object-cover transition-transform duration-300 hover:scale-105"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      />
+    </div>
+  );
+};
 
-export default OptimizedImagePage;
+export default OptimizedImage;

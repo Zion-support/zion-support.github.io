@@ -1,47 +1,56 @@
-"use client";
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { AlertTriangle, Home, ArrowLeft, Brain, Zap, Shield, Target, TrendingUp, CheckCircle, Star, Clock, Globe, Database, Users, Settings } from 'lucide-react';
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { Mail, Phone, MapPin } from 'lucide-react'
 
-const Page = () => {
+const ContactPage: React.FC = () => {
   return (
     <>
-      <Head>
-        <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Advanced page solution for modern businesses" />
-        <meta name="keywords" content="AI, artificial intelligence, page, AI solutions, intelligent automation" />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our cutting-edge page technology and AI-powered solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/"
-                className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
-              >
-                <Home className="w-5 h-5 mr-2" />
-                Go Home
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-medium rounded-lg transition-colors"
-              >
-                <ArrowLeft className="w-5 h-5 mr-2" />
-                Contact Us
-              </Link>
+      <Navigation />
+      
+      <main className="pt-16">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-5xl font-bold mb-6">Contact Us</h1>
+              <p className="text-xl text-blue-100">
+                Ready to transform your business? Let's discuss your project
+              </p>
             </div>
           </div>
-        </div>
-      </div>
-    </>
-  );
-};
+        </section>
 
-export default Page;
+        {/* Contact Info Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <Mail className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Email</h3>
+                  <p className="text-gray-600">info@ziontechgroup.com</p>
+                </div>
+                <div className="text-center">
+                  <Phone className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Phone</h3>
+                  <p className="text-gray-600">+1 (555) 123-4567</p>
+                </div>
+                <div className="text-center">
+                  <MapPin className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Address</h3>
+                  <p className="text-gray-600">123 Tech Street, Innovation City</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
+}
+
+export default ContactPage

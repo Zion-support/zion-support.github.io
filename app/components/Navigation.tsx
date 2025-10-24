@@ -1,176 +1,305 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import {
-  Bars3Icon,
-  XMarkIcon,
-  HomeIcon,
-  UserGroupIcon,
-  DocumentTextIcon,
-  AcademicCapIcon,
-  PlayIcon,
-  QuestionMarkCircleIcon,
-  ShieldCheckIcon,
-  CurrencyDollarIcon,
-  CogIcon,
-  ChevronDownIcon
-} from '@heroicons/react/24/outline';
 
-const Navigation = () => {
+import React, { useState, useEffect, useCallback } from 'react';
+import Link from 'next/link';
+import { 
+  ChevronDown, 
+  Mail, 
+  Menu, 
+  X, 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Code, 
+  BarChart, 
+  ArrowRight, 
+  Target, 
+  Smartphone, 
+  TrendingUp, 
+  Settings, 
+  FileText, 
+  MessageCircle, 
+  DollarSign, 
+  Box, 
+  Link as LinkIcon, 
+  Mic, 
+  Workflow, 
+  Eye, 
+  Wifi
+} from 'lucide-react';
+
+const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const router = useRouter();
+  const [aiServicesOpen, setAiServicesOpen] = useState(false);
+  const [itServicesOpen, setItServicesOpen] = useState(false);
+  const [microSaasOpen, setMicroSaasOpen] = useState(false);
 
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 10);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navigation = [
-    { name: 'Home', href: '/', icon: HomeIcon },
-    { name: 'About', href: '/about', icon: UserGroupIcon },
-    { name: 'Services', href: '/services', icon: CogIcon },
-    { name: 'Contact', href: '/contact', icon: DocumentTextIcon },
+  const closeAllMenus = useCallback(() => {
+    setIsOpen(false);
+    setAiServicesOpen(false);
+    setItServicesOpen(false);
+    setMicroSaasOpen(false);
+  }, []);
+
+  const aiServices = [
+    { name: 'AI Analytics & BI', url: '/ai-analytics', icon: BarChart, description: 'Business intelligence' },
+    { name: 'AI Automation', url: '/ai-automation', icon: Workflow, description: 'Process automation' },
+    { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder', icon: MessageCircle, description: 'Conversational AI' },
+    { name: 'AI Content Generation', url: '/ai-content-generation', icon: FileText, description: 'Automated content' },
+    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', icon: Shield, description: 'AI security' },
+    { name: 'Computer Vision', url: '/computer-vision', icon: Eye, description: 'Image recognition' },
+    { name: 'Predictive Analytics', url: '/predictive-analytics', icon: TrendingUp, description: 'Forecasting' },
+    { name: 'Speech & Voice AI', url: '/ai-voice-assistant', icon: Mic, description: 'Voice technology' }
   ];
 
-  const services = [
-    { name: 'AI Services', href: '/ai-services', icon: AcademicCapIcon },
-    { name: 'Blockchain', href: '/blockchain', icon: ShieldCheckIcon },
-    { name: 'Cloud Solutions', href: '/cloud-migration-pro', icon: CurrencyDollarIcon },
-    { name: 'Cybersecurity', href: '/security', icon: ShieldCheckIcon },
+  const itServices = [
+    { name: 'Web Development', url: '/web-development', icon: Code, description: 'Custom websites' },
+    { name: 'Mobile Development', url: '/mobile-development', icon: Smartphone, description: 'iOS & Android apps' },
+    { name: 'Cloud Migration', url: '/cloud-migration', icon: Cloud, description: 'Cloud solutions' },
+    { name: 'Cybersecurity', url: '/cybersecurity', icon: Shield, description: 'Security services' },
+    { name: 'DevOps', url: '/devops', icon: Settings, description: 'Development operations' },
+    { name: 'Data Analytics', url: '/data-analytics', icon: BarChart, description: 'Data insights' },
+    { name: 'IoT Solutions', url: '/iot-solutions', icon: Wifi, description: 'Internet of Things' },
+    { name: 'Blockchain', url: '/blockchain', icon: LinkIcon, description: 'Blockchain technology' }
+  ];
+
+  const microSaasServices = [
+    { name: 'AI Project Management Pro', url: '/ai-project-management-pro', icon: Target, description: 'AI-powered project management' },
+    { name: 'AI Financial Analytics Pro', url: '/ai-financial-analytics-pro', icon: DollarSign, description: 'Advanced financial analytics' },
+    { name: 'AI Email Automation', url: '/ai-email-automation', icon: Mail, description: 'Automated email marketing' },
+    { name: 'AI 3D Model Generator', url: '/ai-3d-model-generator', icon: Box, description: '3D model generation' }
   ];
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md border-b border-gray-700/50' : 'bg-transparent'
-    }`}></nav>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-        <div className="flex justify-between items-center h-16"></div>
+      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+    }`}>
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex-shrink-0"></div>
-            <Link href="/" className="flex items-center space-x-2"></Link>
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center"></div>
-                <span className="text-white font-bold text-sm">Z</span>
-              </div>
-              <span className="text-white font-bold text-xl">Zion Tech Group</span>
+          <Link href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
+            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-xl">Z</span>
+            </div>
+            <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-8">
+            <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
+              About
+            </Link>
+            
+            {/* AI Services Dropdown */}
+            <div className="relative group">
+              <button
+                className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors"
+                onMouseEnter={() => setAiServicesOpen(true)}
+                onMouseLeave={() => setAiServicesOpen(false)}
+              >
+                <Brain className="w-4 h-4" />
+                <span>AI Services</span>
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              
+              {aiServicesOpen && (
+                <div
+                  className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50"
+                  onMouseEnter={() => setAiServicesOpen(true)}
+                  onMouseLeave={() => setAiServicesOpen(false)}
+                >
+                  <div className="grid grid-cols-1 gap-2">
+                    {aiServices.map((service) => (
+                      <Link
+                        key={service.name}
+                        href={service.url}
+                        className="flex items-center space-x-3 px-4 py-2 hover:bg-gray-50 transition-colors"
+                        onClick={closeAllMenus}
+                      >
+                        <service.icon className="w-5 h-5 text-blue-600" />
+                        <div>
+                          <div className="font-medium text-gray-900">{service.name}</div>
+                          <div className="text-sm text-gray-500">{service.description}</div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* IT Services Dropdown */}
+            <div className="relative group">
+              <button
+                className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors"
+                onMouseEnter={() => setItServicesOpen(true)}
+                onMouseLeave={() => setItServicesOpen(false)}
+              >
+                <Code className="w-4 h-4" />
+                <span>IT Services</span>
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              
+              {itServicesOpen && (
+                <div
+                  className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50"
+                  onMouseEnter={() => setItServicesOpen(true)}
+                  onMouseLeave={() => setItServicesOpen(false)}
+                >
+                  <div className="grid grid-cols-1 gap-2">
+                    {itServices.map((service) => (
+                      <Link
+                        key={service.name}
+                        href={service.url}
+                        className="flex items-center space-x-3 px-4 py-2 hover:bg-gray-50 transition-colors"
+                        onClick={closeAllMenus}
+                      >
+                        <service.icon className="w-5 h-5 text-blue-600" />
+                        <div>
+                          <div className="font-medium text-gray-900">{service.name}</div>
+                          <div className="text-sm text-gray-500">{service.description}</div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <Link href="/team" className="text-gray-700 hover:text-blue-600 transition-colors">
+              Team
+            </Link>
+            <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">
+              Contact
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:block"></div>
-            <div className="ml-10 flex items-baseline space-x-8"></div>
-              {navigation.map((item) => (
-                <Link key={item.name}
-                  href={item.href}
-                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
-                ></Link>
-                  {item.name}
-                </Link>
-              ))}
+          {/* CTA Button */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <Link
+              href="/contact"
+              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center space-x-2"
+            >
+              <span>Get Started</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <div className="lg:hidden bg-white border-t border-gray-200 py-4">
+            <div className="space-y-4">
+              <Link
+                href="/about"
+                className="block px-4 py-2 text-gray-700 hover:text-blue-600 transition-colors"
+                onClick={closeAllMenus}
+              >
+                About
+              </Link>
               
-              {/* Services Dropdown */}
-              <div className="relative"></div>
+              {/* Mobile AI Services */}
+              <div className="px-4">
                 <button
-                  onClick={() => setIsServicesOpen(!isServicesOpen)}
-                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 flex items-center"
+                  className="flex items-center justify-between w-full py-2 text-gray-700 hover:text-blue-600 transition-colors"
+                  onClick={() => setAiServicesOpen(!aiServicesOpen)}
                 >
-                  Services
-                  <ChevronDownIcon className="ml-1 h-4 w-4"   /></ChevronDownIcon>
+                  <span className="flex items-center space-x-2">
+                    <Brain className="w-4 h-4" />
+                    <span>AI Services</span>
+                  </span>
+                  <ChevronDown className={`w-4 h-4 transition-transform ${aiServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
-                
-                {isServicesOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50"></div>
-                    {services.map((service) => (
+                {aiServicesOpen && (
+                  <div className="ml-4 mt-2 space-y-2">
+                    {aiServices.map((service) => (
                       <Link
                         key={service.name}
-                        href={service.href}
-                        className="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-slate-700 hover:text-white transition-colors duration-200"
-                        onClick={() => setIsServicesOpen(false)}
+                        href={service.url}
+                        className="block py-2 text-sm text-gray-600 hover:text-blue-600 transition-colors"
+                        onClick={closeAllMenus}
                       >
-                        <service .icon className="mr-3 h-4 w-4"   /></service>
                         {service.name}
                       </Link>
                     ))}
                   </div>
                 )}
               </div>
-            </div>
-          </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block"></div>
-            <Link href="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
-            ></Link>
-              Get Started
-            </Link>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden"></div>
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white p-2 rounded-md"
-            >
-              {isOpen ? (
-                <XMarkIcon className="h-6 w-6"   /></XMarkIcon>
-              ) : (
-                <Bars3Icon className="h-6 w-6"   /></Bars3Icon>
-              )}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Navigation */}
-      {isOpen && (
-        <div className="md:hidden"></div>
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-900/95 backdrop-blur-md border-t border-gray-700/50"></div>
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
-            
-            {/* Mobile Services */}
-            <div className="pt-4 pb-3 border-t border-gray-700"></div>
-              <div className="px-3 text-sm font-medium text-white mb-2">Services</div>
-              {services.map((service) => (
-                <Link
-                  key={service.name}
-                  href={service.href}
-                  className="flex items-center px-3 py-2 text-gray-300 hover:text-white text-base font-medium transition-colors duration-200"
-                  onClick={() => setIsOpen(false)}
+              {/* Mobile IT Services */}
+              <div className="px-4">
+                <button
+                  className="flex items-center justify-between w-full py-2 text-gray-700 hover:text-blue-600 transition-colors"
+                  onClick={() => setItServicesOpen(!itServicesOpen)}
                 >
-                  <service .icon className="mr-3 h-5 w-5"   /></service>
-                  {service.name}
-                </Link>
-              ))}
-            </div>
-            
-            <div className="pt-4"></div>
+                  <span className="flex items-center space-x-2">
+                    <Code className="w-4 h-4" />
+                    <span>IT Services</span>
+                  </span>
+                  <ChevronDown className={`w-4 h-4 transition-transform ${itServicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {itServicesOpen && (
+                  <div className="ml-4 mt-2 space-y-2">
+                    {itServices.map((service) => (
+                      <Link
+                        key={service.name}
+                        href={service.url}
+                        className="block py-2 text-sm text-gray-600 hover:text-blue-600 transition-colors"
+                        onClick={closeAllMenus}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <Link
+                href="/team"
+                className="block px-4 py-2 text-gray-700 hover:text-blue-600 transition-colors"
+                onClick={closeAllMenus}
+              >
+                Team
+              </Link>
               <Link
                 href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white block px-3 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 text-center"
-                onClick={() => setIsOpen(false)}
+                className="block px-4 py-2 text-gray-700 hover:text-blue-600 transition-colors"
+                onClick={closeAllMenus}
               >
-                Get Started
+                Contact
               </Link>
+              
+              <div className="px-4 pt-4">
+                <Link
+                  href="/contact"
+                  className="block w-full bg-blue-600 text-white text-center px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                  onClick={closeAllMenus}
+                >
+                  Get Started
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </nav>
   );
 };
