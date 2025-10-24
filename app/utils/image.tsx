@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import NextImage from 'next/image';
 
 interface ImageProps {
   src: string;
@@ -57,15 +58,15 @@ const Image: React.FC<ImageProps> = ({
   }
 
   return (
-    <img
+    <NextImage
       src={src}
       alt={alt}
-      width={width}
-      height={height}
+      width={width || 0}
+      height={height || 0}
       className={className}
       style={imageStyle}
       sizes={sizes}
-      loading={priority ? 'eager' : 'lazy'}
+      priority={priority}
       onLoad={handleLoad}
       onError={handleError}
       {...props}
