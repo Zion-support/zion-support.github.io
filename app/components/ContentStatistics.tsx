@@ -1,6 +1,6 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { TrendingUp, Users, Award, Clock } from 'lucide-react';
+'use client'
+import React, { useState, useEffect } from 'react'
+import { TrendingUp, Users, Award, Clock } from 'lucide-react'
 
 const ContentStatistics: React.FC = () => {
   const [counters, setCounters] = useState({
@@ -8,41 +8,42 @@ const ContentStatistics: React.FC = () => {
     projects: 0,
     satisfaction: 0,
     years: 0
-  });
+  })
+
+  const targetCounters = {
+    clients: 500,
+    projects: 1000,
+    satisfaction: 99,
+    years: 10
+  }
 
   useEffect(() => {
-    const targetCounters = {
-      clients: 500,
-      projects: 1000,
-      satisfaction: 99,
-      years: 10
-    };
     const duration = 2000; // 2 seconds
-    const steps = 60;
-    const stepDuration = duration / steps;
+    const steps = 60
+    const stepDuration = duration / steps
 
     const animateCounters = () => {
-      let step = 0;
+      let step = 0
       const timer = setInterval(() => {
-        step++;
-        const progress = step / steps;
+        step++
+        const progress = step / steps
         
         setCounters({
           clients: Math.floor(targetCounters.clients * progress),
           projects: Math.floor(targetCounters.projects * progress),
           satisfaction: Math.floor(targetCounters.satisfaction * progress),
           years: Math.floor(targetCounters.years * progress)
-        });
+        })
 
         if (step >= steps) {
-          clearInterval(timer);
-          setCounters(targetCounters);
+          clearInterval(timer)
+          setCounters(targetCounters)
         }
-      }, stepDuration);
-    };
+      }, stepDuration)
+    }
 
-    animateCounters();
-  }, []);
+    animateCounters()
+  }, [])
 
   const stats = [
     {
@@ -69,12 +70,12 @@ const ContentStatistics: React.FC = () => {
       label: 'Years Experience',
       suffix: '+'
     }
-  ];
+  ]
 
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16"></div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Our Impact in Numbers
           </h2>
@@ -83,7 +84,7 @@ const ContentStatistics: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
           {stats.map((stat, index) => (
             <div
               key={index}
@@ -99,7 +100,7 @@ const ContentStatistics: React.FC = () => {
                 {stat.label}
               </div>
             </div>
-          ))}
+          ))
         </div>
       </div>
     </div>

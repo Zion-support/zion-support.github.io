@@ -1,6 +1,6 @@
-'use client';
-import React from 'react';
-import { Star, ArrowRight } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Star, ArrowRight } from 'lucide-react'
 
 const ContentPromotionBanner: React.FC = () => {
   return (
@@ -34,7 +34,7 @@ const ContentPromotionBanner: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ContentPromotionBanner;
+export default ContentPromotionBanner

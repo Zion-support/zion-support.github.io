@@ -5,13 +5,13 @@ import React, { useEffect } from 'react';
 interface ServiceWorkerRegistrationProps {
   onUpdateAvailable?: () => void;
   onUpdateInstalled?: () => void;
-  onError?: (_error: Error) => void;
+  onError?: (error: Error) => void;
 }
 
 const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
   onUpdateAvailable,
   onUpdateInstalled,
-  onError,
+  onError: _onError,
 }) => {
   useEffect(() => {
     if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
@@ -46,7 +46,7 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
         });
 
       } catch (_error) {
-        onError?.(_error as Error);
+        onError?.(error as Error);
       }
     };
 
