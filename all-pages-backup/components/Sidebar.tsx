@@ -1,4 +1,5 @@
 'use client'
+<<<<<<< HEAD:all-pages-backup/components/Sidebar.tsx
 import {Phone, Mail, Brain} from 'lucide-react';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -6,10 +7,20 @@ import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
+=======
+import { Phone, Target, Mail, Users, Brain } from 'lucide-react';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Phone, Target, Mail, Users, Brain } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { Phone, Target, Mail, Users, Brain } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Sidebar.tsx
 
 const SidebarPage: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD:all-pages-backup/components/Sidebar.tsx
       icon: Brain,
   title: title,
   description: description,
@@ -32,6 +43,30 @@ const SidebarPage: React.FC = () => {
   title: title,
   description: description,
   benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+=======
+      icon: Brain
+      title: 'AI-Powered Intelligence'
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    }
+    {
+      icon: BarChart
+      title: 'Advanced Analytics'
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    }
+    {
+      icon: Target
+      title: 'Precision Targeting'
+      description: 'Target specific goals and objectives with precision and accuracy.'
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    }
+    {
+      icon: TrendingUp
+      title: 'Growth Optimization'
+      description: 'Optimize your business growth with data-driven strategies.'
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Sidebar.tsx
     }
   ]
 
@@ -44,11 +79,21 @@ const SidebarPage: React.FC = () => {
   ]
 
   return (
+<<<<<<< HEAD:all-pages-backup/components/Sidebar.tsx
     <>;
       <Helmet>;
+=======
+    <>
+      <Helmet>;
+        <Head>
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Sidebar.tsx
         <title>Sidebar</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced Sidebar solution for modern businesses.&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, Sidebar, AI solutions, intelligent automation&quot; />
+<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
       </Helmet>
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
@@ -56,7 +101,7 @@ const SidebarPage: React.FC = () => {
         <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
           <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
           <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
+            <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;>
               Sidebar
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
@@ -83,7 +128,7 @@ const SidebarPage: React.FC = () => {
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
                 <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
                   <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
@@ -112,7 +157,7 @@ const SidebarPage: React.FC = () => {
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
+            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
                   <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
@@ -143,9 +188,15 @@ const SidebarPage: React.FC = () => {
       </div>
       <Footer />
     </>
+<<<<<<< HEAD:all-pages-backup/components/Sidebar.tsx
   )};
 
 export default SidebarPage
+=======
+  );
+}
+export default SidebarPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Sidebar.tsx
 Menu
 Home
 Users
@@ -159,10 +210,17 @@ ChevronDown
 ChevronRight
 Phone
 Mail
+<<<<<<< HEAD:all-pages-backup/components/Sidebar.tsx
 {MapPin,Clock}
 {} from 'lucide-react'
 constSidebar: React.FC= () =>{const [isOpensetIsOpen] = useState(false);
 const [expandedSectionssetExpandedSections]=useState<Set<strin g>>(new Set(['ai-services', 'micro-saas', 'it-services']));
+=======
+MapPin,Clock;}
+} from 'lucide-react'
+constSidebar: React.FC = () =>{const [isOpensetIsOpen] = useState(false)
+const [expandedSectionssetExpandedSections]=useState<Set<strin g>>(new Set(['ai-services', 'micro-saas', 'it-services']))
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Sidebar.tsx
 constlocation= useLocation()
 useEffect(() => {
   
@@ -184,10 +242,17 @@ newExpanded.delete(section)}
 } else {newExpanded.add(section)}
 }
 setExpandedSections(newExpanded)
+<<<<<<< HEAD:all-pages-backup/components/Sidebar.tsx
 {}
 constnavigationSections= [
 {title: title,
   items: [
+=======
+}
+constnavigationSections = [
+{title: 'Main'
+items: [
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Sidebar.tsx
 { name: 'Home', path: '/', icon: Home}
 {name: 'About', path: '/about', icon: Users}
 {name: 'Services', path: '/services', icon: Settings}
@@ -196,9 +261,15 @@ constnavigationSections= [
 {name: 'Case Studies', path: '/case-studies', icon: BarChart}
 ]
 }
+<<<<<<< HEAD:all-pages-backup/components/Sidebar.tsx
 {title: title,
   key: key,
   items: [
+=======
+{title: 'AI Services'
+key: 'ai-services'
+items: [
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Sidebar.tsx
 { name: 'AI Services Overview', path: '/ai-services', icon: Brain}
 {name: 'Business Intelligence', path: '/ai-services/business-intelligence', icon: BarChart}
 {name: 'Document Processing', path: '/ai-services/do cument-processing', icon: Settings}
@@ -214,9 +285,15 @@ constnavigationSections= [
 {name: 'Energy Management', path: '/ai-services/energy-management', icon: Settings}
 ]
 }
+<<<<<<< HEAD:all-pages-backup/components/Sidebar.tsx
 {title: title,
   key: key,
   items: [
+=======
+{title: 'Micro SaaS'
+key: 'micro-saas'
+items: [
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Sidebar.tsx
 { name: 'Micro SaaS Overview', path: '/micro-saas', icon: Settings}
 {name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard', icon: BarChart}
 {name: 'Support Bot', path: '/micro-saas/support-bot', icon: Users}
@@ -232,9 +309,15 @@ constnavigationSections= [
 {name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings}
 ]
 }
+<<<<<<< HEAD:all-pages-backup/components/Sidebar.tsx
 {title: title,
   key: key,
   items: [
+=======
+{title: 'IT Services'
+key: 'it-services'
+items: [
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Sidebar.tsx
 { name: 'IT Services Overview', path: '/it-services', icon: Code}
 {name: 'IT Consulting', path: '/it-consulting', icon: Users}
 {name: 'IT Infrastructure', path: '/it-infrastructure', icon: Settings}
@@ -246,16 +329,26 @@ constnavigationSections= [
 {name: 'Managed IT', path: '/managed-it', icon: Settings}
 ]
 }
+<<<<<<< HEAD:all-pages-backup/components/Sidebar.tsx
 {title: title,
   items: [
+=======
+{title: 'Company'
+items: [
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Sidebar.tsx
 { name: 'Team', path: '/team', icon: Users}
 {name: 'Careers', path: '/careers', icon: Users}
 {name: 'Consultation', path: '/consultation', icon: Phone}
 {name: 'Pricing', path: '/pricing', icon: BarChart}
 ]
 }
+<<<<<<< HEAD:all-pages-backup/components/Sidebar.tsx
 {title: title,
   items: [
+=======
+{title: 'Resources'
+items: [
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Sidebar.tsx
 { name: 'Documentation', path: '/do cs', icon: Settings}
 {name: 'API Docs', path: '/api-do cs', icon: Code}
 {name: 'Support', path: '/support', icon: Users}
@@ -263,36 +356,53 @@ constnavigationSections= [
 ]
 }
 ]
+<<<<<<< HEAD:all-pages-backup/components/Sidebar.tsx
 constcontactInfo= {phone: phone,
   email: email,
   address: address,
   hours: 'Mon-Fri 9AM-6PM EST'
+=======
+constcontactInfo= {phone: '(30 2) 46 4-095 0'
+email: 'kleber@ziontechgroup.com'
+address: '364 E Main St STE 1008 Middletown, DE 19709'
+hours: 'Mon-Fri 9AM-6PM EST'
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Sidebar.tsx
 }
 return (
 <>
 {/* Mobile Menu Button */}
-<button
+<button >
 onClick={() =></button> setIsOpen(true)}
+<<<<<<< HEAD:all-pages-backup/components/Sidebar.tsx
 className=&quot;lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all&quot
 aria-label=&quot;Open sidebar&quot
+=======
+className=&quot;lg: hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all&quot;
+aria-label=&quot;Open sidebar&quot;
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Sidebar.tsx
 >
 <Menu className=&quot;w-6 h-6&quot; />
 </button>
 {/* Sidebar Overlay */}
 {isOpen && (
+<<<<<<< HEAD:all-pages-backup/components/Sidebar.tsx
 <div
 className=&quot;fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden&quot;}
 onClick={() =>setIsOpen(false)}</div>
+=======
+<div className=&quot;fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden&quot;;}>
+onClick = {() =>setIsOpen(false)}</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Sidebar.tsx
 />
 {)}
 {/* Sidebar */}</div>
-<aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${
+<aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${>
 isOpen ? 'translate-x-0' : '-translate-x-full'
-} lg:translate-x-0 lg:static lg:z-auto`}>
+} lg:translate-x-0 lg:static lg:z-auto`}>;
 <div className=&quot;flex flex-col h-full&quot;></div>
 {/* Header */}</div>
 <div className=&quot;flex items-center justify-between p-6 border-b border-slate-700/50&quot;></div>
-<Link to=&quot;/&quot; className=&quot;flex items-center space-x-3&quot; onClick={() => setIsOpen(false)}>
+<Link to=&quot;/&quot; className=&quot;flex items-center space-x-3&quot; onClick = {() => setIsOpen(false)}>;
 <div className=&quot;w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center&quot;></div>
 <Brain className=&quot;w-6 h-6 text-white&quot; />
 </div>
@@ -301,10 +411,17 @@ isOpen ? 'translate-x-0' : '-translate-x-full'
 <p className=&quot;text-xs text-cyan-400&quot;>AI & IT Solutions</p>
 </div>
 </Link>
+<<<<<<< HEAD:all-pages-backup/components/Sidebar.tsx
 <button
 onClick={() =></button> setIsOpen(false)}
 className=&quot;lg:hidden text-gray-400 hover:text-white transition-colors&quot
 aria-label=&quot;Close sidebar&quot
+=======
+<button >
+onClick = {() =></button> setIsOpen(false)}
+className=&quot;lg: hidden text-gray-400 hover:text-white transition-colors&quot;
+aria-label=&quot;Close sidebar&quot;
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Sidebar.tsx
 >
 <X className=&quot;w-6 h-6&quot; />
 </button>
@@ -314,9 +431,9 @@ aria-label=&quot;Close sidebar&quot
 <nav className=&quot;space-y-2 px-4&quot;>
 {navigationSections.map((section, sectionIndex) => (}
 <div key={sectionIndex} className=&quot;space-y-1&quot;></div>
-<button
-onClick={() =></button> section.key && toggleSection(section.key)}
-className=&quot;flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors&quot;>
+<button >
+onClick = {() =></button> section.key && toggleSection(section.key)}
+className=&quot;flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover: text-cyan-300 transition-colors&quot;>
 <span>{section.title}</span>
 {section.key && (
 expandedSections.has(section.key) ?
@@ -327,5 +444,4 @@ expandedSections.has(section.key) ?
 {(!section.key || expandedSections.has(section.key)) && (
 <div className=&quot;ml-4 space-y-1&quot;></div>
 {section.items.map((item, itemIndex) => (</div>
-<Link
-key={itemIndex}
+<Link key = {itemIndex}>

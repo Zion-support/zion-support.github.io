@@ -20,13 +20,13 @@ console.error = (...args) => {}
 {}
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {}
-  writable: true,
+  writable: true
   value: jest.fn().mockImplementation(query => ({}
-    matches: false,
-    media: query,
-    onchange: null,
-    addListener: jest.fn(), // deprecatedremoveListener: jest.fn(), // deprecatedaddEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
+    matches: false
+    media: query
+    onchange: null
+    addListener: jest.fn(), // deprecatedremoveListener: jest.fn(), // deprecatedaddEventListener: jest.fn()
+    removeEventListener: jest.fn()
     dispatchEvent: jest.fn()
 {  }))
 {})
@@ -34,20 +34,34 @@ Object.defineProperty(window, 'matchMedia', {}
 global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0))
 global.cancelAnimationFrame = jest.fn(id => clearTimeout(id))
 // Mock localStorage
+<<<<<<< HEAD
 const localStorageMock = {};
   getItem: jest.fn(),
   setItem: jest.fn(),
   removeItem: jest.fn(),
+=======
+const localStorageMock = {}
+  getItem: jest.fn()
+  setItem: jest.fn()
+  removeItem: jest.fn()
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4
   clear: jest.fn()
 {}
 Object.defineProperty(window, 'localStorage', {}
   value: localStorageMock
 {})
 // Mock sessionStorage
+<<<<<<< HEAD
 const sessionStorageMock = {};
   getItem: jest.fn(),
   setItem: jest.fn(),
   removeItem: jest.fn(),
+=======
+const sessionStorageMock = {}
+  getItem: jest.fn()
+  setItem: jest.fn()
+  removeItem: jest.fn()
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4
   clear: jest.fn()
 {}
 Object.defineProperty(window, 'sessionStorage', {}
@@ -76,5 +90,10 @@ global.PerformanceObserver = class MockPerformanceObserver {}
   disconnect() {}
   takeRecords() {}
     return []
+<<<<<<< HEAD
 {  };
 {};
+=======
+  }
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-92e4
