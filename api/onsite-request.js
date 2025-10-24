@@ -1,10 +1,4 @@
 
-<<<<<<< HEAD
-// API endpoint for onsite requests
-export default function handler(req, res) {
-  res.status(200).json({ message: 'Onsite request endpoint' })
-}
-=======
 // Simple wrapper function to replace withSentry
 function withSentry(handler) {
   return handler;
@@ -71,4 +65,3 @@ function handler(req, res) {
 }
 
 module.exports = withSentry(handler);
->>>>>>> 0037f0079afd7c1df869836a2655008c935027f4

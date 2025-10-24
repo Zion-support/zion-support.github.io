@@ -213,4 +213,3 @@ class MonitoringService {
 // Singleton instance
 const monitoring = new MonitoringService()
 export default monitoring
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d: app/utils/monitoring.ts

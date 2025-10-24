@@ -75,13 +75,8 @@ export default function AboutPage() {
               Empowering businesses through innovative technology solutions and cutting-edge AI applications
             </p>
             <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-<<<<<<< HEAD:app-backup/pages/AboutPage.tsx
-              Founded in 2020, we've been at the forefront of digital transformation
-              helping companies leverage the power of artificial intelligence, cybersecurity
-=======
               Founded in 2020, we&apos;ve been at the forefront of digital transformation, 
               helping companies leverage the power of artificial intelligence, cybersecurity, 
->>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/pages/AboutPage.tsx
               and cloud technologies to achieve unprecedented growth.            </p>
           </div>
           {/* Company Story */}
@@ -96,13 +91,8 @@ export default function AboutPage() {
                   and practical business implementation.
                 </p>
                 <p className="text-gray-300 mb-4">
-<<<<<<< HEAD:app-backup/pages/AboutPage.tsx
-                  Today, we've grown into a trusted partner for organizations worldwide, helping them
-                  navigate the complex landscape of digital transformation while maintaining focus on
-=======
                   Today, we&apos;ve grown into a trusted partner for organizations worldwide, helping them 
                   navigate the complex landscape of digital transformation while maintaining focus on 
->>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/pages/AboutPage.tsx
                   security, scalability, and innovation.
                 </p>
               </div>
@@ -366,31 +356,18 @@ export default function AboutPage() {
             <p className="text-xl text-gray-300 mb-12">
               Let&apos;s discuss how we can help transform your business with our technology solutions
             </p>
-<<<<<<< HEAD:app-backup/pages/AboutPage.tsx
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
-=======
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact" 
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
->>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/pages/AboutPage.tsx
               >
                 Get In Touch
                 <ArrowRightIcon className="w-5 h-5" />
               </Link>
-<<<<<<< HEAD:app-backup/pages/AboutPage.tsx
-              <Link
-                to="/services"
-                className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
-=======
               <Link 
                 href="/services" 
                 className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
->>>>>>> cursor/fix-errors-and-merge-to-main-50f0:app/pages/AboutPage.tsx
               >
                 View Our Services
                 <ArrowRightIcon className="w-5 h-5" />

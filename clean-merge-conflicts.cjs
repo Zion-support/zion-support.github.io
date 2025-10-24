@@ -8,9 +8,6 @@ function cleanMergeConflicts(filePath) {
 
     // Remove merge conflict markers and keep the HEAD version
     content = content
-      .replace(/<<<<<<< HEAD\n?/g, "")
-      .replace(/=======\n?/g, "")
-      .replace(/>>>>>>> [^\n]+\n?/g, "")
       // Clean up any extra whitespace
       .replace(/\n\s*\n\s*\n/g, "\n\n")
       .replace(/\s+$/gm, "");
@@ -41,9 +38,6 @@ function findFilesWithConflicts(dir) {
       try {
         const content = fs.readFileSync(filePath, "utf8");
         if (
-          content.includes("<<<<<<< HEAD") ||
-          content.includes("=======") ||
-          content.includes(">>>>>>>")
         ) {
           filesWithConflicts.push(filePath);
         }
