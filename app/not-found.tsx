@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-import Link from 'next/link';
-=======
 import Link from 'next/link'
->>>>>>> cursor/fix-errors-and-merge-to-main-2503
 
 export default function NotFound() {
   return (
@@ -18,15 +13,6 @@ export default function NotFound() {
         </div>
         <Link
           href="/"
-<<<<<<< HEAD
-          className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-        >
-          Go Back Home
-        </Link>
-      </div>
-    </div>
-  );
-=======
           className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
         >
           Go back home
@@ -34,5 +20,4 @@ export default function NotFound() {
       </div>
     </div>
   )
->>>>>>> cursor/fix-errors-and-merge-to-main-2503
 }
