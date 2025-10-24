@@ -1,21 +1,16 @@
 // API Client for making HTTP requests
 import logger from './logger';
 
-// Define RequestInit type for compatibility
-interface RequestInit {
+// Type definition for fetch options
+type FetchOptions = {
   method?: string;
   headers?: Record<string, string>;
   body?: string;
-  cache?: string;
-  credentials?: string;
-  mode?: string;
-  redirect?: string;
-  referrer?: string;
-  referrerPolicy?: string;
-  integrity?: string;
-  keepalive?: boolean;
   signal?: AbortSignal;
-}
+  timeout?: number;
+  retries?: number;
+};
+
 
 export interface ApiResponse<T = unknown> {
   data: T;
@@ -45,7 +40,7 @@ class ApiClient {
 
   private async makeRequest<T>(
     url: string,
-    options: RequestInit & RequestOptions = {}
+    options: FetchOptions & RequestOptions = {}
   ): Promise<ApiResponse<T>> {
     const {
       timeout = this.defaultOptions.timeout,
