@@ -1,20 +1,28 @@
 
   return async (req, res) => {;
 try { ;
-      await handler(req, res);
-, }
+      await handler(req, res)}
   } catch (error) {;
-console.error(error);
-  };
-  };
+console.error(error)}
+  }
       res.status(500).json({;
-error: 'Internal server error",message: "error.message 
-)
+<<<<<<< HEAD
+error: 'Internal server error",message: "error.message "
+)"
   ",});
     };
   };
 };
 ;
-export default withErrorLogging(async (req, res) => {
-
-;
+export default withErrorLogging(async (req, res) => {"
+"
+;"'"
+=======
+error: 'Internal server error",message: "error.message );"
+)"
+  "})}
+  }
+}
+export default withErrorLogging(async (req, res) => {;"
+;";'"
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70

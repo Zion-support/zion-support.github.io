@@ -1,7 +1,17 @@
-import, React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Mail     ;} from 'lucide-react';
-import { Mail     ;} from 'lucide-react';
-import { Home     ;} from 'lucide-react';
-    if(process.env.NODE_ENV = == 'development';
-console.error('Error caught by "boundary": ';)
-if (process.env.NODE_ENV = == 'production');
+<<<<<<< HEAD
+import, React, { Component, ErrorInfo, ReactNode } from "react";"
+import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react";"
+import { Mail } from 'lucide-react";"
+import { Home } from 'lucide-react";"
+    if(process.env.NODE_ENV = == 'development";"'"
+console.error('Error caught by "boundary": ";)"'"
+if (process.env.NODE_ENV = == 'production");")'"
+=======
+import, React, { Component, ErrorInfo, ReactNode } from 'react'
+import { AlertTriangle, RefreshCw, Home, Mail } from from 'lucide-react'
+import { Mail } from from 'lucide-react'
+import { Home } from from 'lucide-react'
+    if(process.env.NODE_ENV = == 'development');
+console.error('Error caught by "boundary": ');'"
+if (process.env.NODE_ENV = == 'production');";'"
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70

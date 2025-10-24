@@ -1,6 +1,11 @@
 
+<<<<<<< HEAD
 export const generateSitemap = useCallback((...args) => {,;}
-  const baseUrl = '"https": //ziontechgroup.com'',
+  const baseUrl = '"https": //ziontechgroup.com'","'
+=======
+export const generateSitemap = useCallback((...args) => {}
+  const baseUrl = '"https": //ziontechgroup.com'',;
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70
   '''
 '/services''
 '/contact''
@@ -35,7 +40,12 @@ export const generateSitemap = useCallback((...args) => {,;}
 '/database-services''
 '/network-infrastructure''
 '/it-support''
-'/compliance''
-'/developer-tools'';
-'/marketing-tools'';
-    '/productivity'';
+<<<<<<< HEAD
+'/compliance''"
+"/developer-tools;"
+"/marketing-tools;"
+    '/productivity'";")'"
+=======
+'/compliance'';'"
+'/developer-tools'''/marketing-tools'''/productivity'';";'"
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70

@@ -1,5 +1,6 @@
-"use client";
-import React from 'react';
+<<<<<<< HEAD
+'use client";"
+import React from 'react";
 
 const ContactPage = (
   return(<div>
@@ -9,6 +10,19 @@ const ContactPage = (
   );
 ) => {
 $3
-,};
-
-export default ContactPage;
+,};"
+"
+export default ContactPage;"'"
+=======
+"use client"
+import React from 'react'
+;
+const ContactPage = (return(<div>
+      <h1>Contact Page</h1>
+      <p>Contact information coming soon.</>);
+    </div>);
+  )) => {;
+$3;
+}"
+export default ContactPage;";'"
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70

@@ -1,5 +1,10 @@
-const fs = require('fs'';
-const path = require('path'';
+<<<<<<< HEAD
+const fs = require("fs;"
+const path = require("path;"
+=======
+const fs = require('fs''
+const path = require('path''
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 const backupDir = './ai-pages-backup''
   'app/ai-analytics-dashboard-pro''
   'app/ai-analytics-dashboard''
@@ -183,9 +188,16 @@ const backupDir = './ai-pages-backup''
   'app/ai-voice-cloning-studio''
   'app/ai-voice-processing''
   'app/ai-voice-solutions''
+<<<<<<< HEAD
+  'app/ai-voice-synthesis''"
+  "app/ai-website-builder;"
+  "app/ai-workflow-automation;"
+  "app/ai-writing-assistant;"
+console.log("Moving all AI pages to backup...;"
+console.log('Cleanup completed!'")")))'"
+=======
   'app/ai-voice-synthesis''
-  'app/ai-website-builder'';
-  'app/ai-workflow-automation'';
-  'app/ai-writing-assistant'';
-console.log('Moving all AI pages to backup...'';
-console.log('Cleanup completed!'')
+  'app/ai-website-builder'''app/ai-workflow-automation'''app/ai-writing-assistant''
+console.log('Moving all AI pages to backup...'');
+console.log('Cleanup completed!'');
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70

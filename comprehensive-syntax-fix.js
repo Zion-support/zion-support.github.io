@@ -1,90 +1,203 @@
-const fs = require('fs');
-const path = require('path');
+<<<<<<< HEAD
+const fs = require('fs");"'"
+const path = require('path");
 
 // Function to fix common syntax errors;
 function fixSyntaxErrors(content) {
 ;
 let fixed = content;
 
-  // Fix merge conflict markers;
-fixed = fixed.replace(/;
-fixed = fixed.replace(/;)
-fixed = fixed.replace(//g, '');
-
-  // Fix JSX syntax issues;
-fixed = fixed.replace(/<([A-Z,][a-zA-Z0-9,]*)\s*([^>]*?)\s*\/>/g, '<$1$2 />');
-  fixed = fixed.replace(/<([A-Z,][a-zA-Z0-9,]*)\s*([^>]*?)\s*\/\s*>/g, '<$1$2 />');
-
-  // Fix missing closing tags;
-fixed = fixed.replace(/<div([^>]*)>(?!.*<\/div>)/g, '<div$1 />');
-  fixed = fixed.replace(/<span([^>]*)>(?!.*<\/span>)/g, '<span$1 />');
-  fixed = fixed.replace(/<p([^>]*)>(?!.*<\/p>)/g, '<p$1 />');
+  // Fix merge conflict markers;"
+fixed = fixed.replace(/;"
+fixed = fixed.replace(/;)"'"
+fixed = fixed.replace(//g, '");"
+"
+  // Fix JSX syntax issues;"'"
+fixed = fixed.replace(/<([A-Z,][a-zA-Z0-9,]*)\s*([^>]*?)\s*\/>/g, '<$1$2 />");"'"
+  fixed = fixed.replace(/<([A-Z,][a-zA-Z0-9,]*)\s*([^>]*?)\s*\/\s*>/g, '<$1$2 />");"
+"
+  // Fix missing closing tags;"'"
+fixed = fixed.replace(/<div([^>]*)>(?!.*<\/div>)/g, '<div$1 />");"'"
+  fixed = fixed.replace(/<span([^>]*)>(?!.*<\/span>)/g, '<span$1 />");"'"
+  fixed = fixed.replace(/<p([^>]*)>(?!.*<\/p>)/g, '<p$1 />");
   fixed = fixed.replace(/<h[1-6,]([^>]*)>(?!.*<\/h[1-6,]>)/g, (match, attrs) => {;
 const level = match.match(/<h([1-6,])/)[1,];
     return `<h${level
 }${attrs}></h${level;}>`;
-  });
-
-  // Fix import statements;
-fixed = fixed.replace(/import\s+{\s*([^,}]+)\s*}\s+from\s+['"]([^'"]+)['"];?/g, (match, imports, module) => {;
-const cleanImports = imports.replace(/,\s*$/, '').trim();
-    return `import { ${cleanImports} ;} from '${module;}';`;
-  });
-
-  // Fix export statements;
-fixed = fixed.replace(/export\s+default\s+([^;]+);?/g, 'export default $1;');
-  fixed = fixed.replace(/export\s+{\s*([^,}]+)\s*};?/g, 'export { $1  ;};');
-
-  // Fix function declarations;
-fixed = fixed.replace(/function\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(\s*\)\s*{/g, 'function $1() {');
-  fixed = fixed.replace(/const\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*\(\s*\)\s*=>\s*{/g, 'const $1 = () => {');
-
-  // Fix object property syntax;
-fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*([^,}]+),?\s*/g, '$1: "$2",');
-  fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*([^,}]+)\s*}/g, '$1: "$2 ",}');
-
-  // Fix JSX attribute syntax;
-fixed = fixed.replace(/<([A-Z,][a-zA-Z0-9,]*)\s+([^>]*?)\s*>/g, (match, tag, attrs) => {;
-const cleanAttrs = attrs.replace(/\s+/g, ' ').trim();
+  });"
+"
+  // Fix import statements;"'"
+fixed = fixed.replace(/import\s+{\s*([^,}]+)\s*}\s+from\s+['"]([^'"]+)['"];?/g, (match, imports, module) => {;"'"
+const cleanImports = imports.replace(/,\s*$/, '").trim();"
+    return `import { ${cleanImports}  } from "${module;}";`;
+  });"
+"
+  // Fix export statements;"'"
+fixed = fixed.replace(/export\s+default\s+([^;]+);?/g, 'export default $1;");"'"
+  fixed = fixed.replace(/export\s+{\s*([^,}]+)\s*};?/g, 'export { $1  ;};");"
+"
+  // Fix function declarations;"'"
+fixed = fixed.replace(/function\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(\s*\)\s*{/g, 'function $1() {");"'"
+  fixed = fixed.replace(/const\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*\(\s*\)\s*=>\s*{/g, 'const $1 = () => {");"
+"
+  // Fix object property syntax;"'"
+fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*([^,}]+),?\s*/g, '$1: "$2",");"'"
+  fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*([^,}]+)\s*}/g, '$1: "$2 ",}");
+"
+  // Fix JSX attribute syntax;"
+fixed = fixed.replace(/<([A-Z,][a-zA-Z0-9,]*)\s+([^>]*?)\s*>/g, (match, tag, attrs) => {;"'"
+const cleanAttrs = attrs.replace(/\s+/g, ' ").trim();
     return `<${tag} ${cleanAttrs;}>`;
-  });
-
-  // Fix missing semicolons;
-fixed = fixed.replace(/([^;,}])\s*\n\s*([a-zA-Z_$])/g, '$1;\n$2');
-  fixed = fixed.replace(/([^;,}])\s*\n\s*export/g, '$1;\nexport');
-  fixed = fixed.replace(/([^;,}])\s*\n\s*import/g, '$1;\nimport');
-
-  // Fix TypeScript interface syntax;
-fixed = fixed.replace(/interface\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*{([^,}]*)}/g, 'interface $1{\n$2\n;}
-}');
-
-  // Fix React component syntax;
-fixed = fixed.replace(/const\s+([A-Z,][a-zA-Z0-9,]*)\s*=\s*\(\s*\)\s*=>\s*{/g, 'const $1 = () => {');
-  fixed = fixed.replace(/const\s+([A-Z,][a-zA-Z0-9,]*)\s*=\s*\(\s*props\s*\)\s*=>\s*{/g, 'const $1 = (props) => {');
-
+  });"
+"
+  // Fix missing semicolons;"'"
+fixed = fixed.replace(/([^;,}])\s*\n\s*([a-zA-Z_$])/g, '$1;\n$2");"'"
+  fixed = fixed.replace(/([^;,}])\s*\n\s*export/g, '$1;\nexport");"'"
+  fixed = fixed.replace(/([^;,}])\s*\n\s*import/g, '$1;\nimport");"
+"
+  // Fix TypeScript interface syntax;"
+fixed = fixed.replace(/interface\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*{([^,}]*)}/g, "interface $1{\n$2\n;}"
+}");"
+"
+  // Fix React component syntax;"'"
+fixed = fixed.replace(/const\s+([A-Z,][a-zA-Z0-9,]*)\s*=\s*\(\s*\)\s*=>\s*{/g, 'const $1 = () => {");"'"
+  fixed = fixed.replace(/const\s+([A-Z,][a-zA-Z0-9,]*)\s*=\s*\(\s*props\s*\)\s*=>\s*{/g, 'const $1 = (props) => {");"
+"
+  // Fix return statements;"'"
+fixed = fixed.replace(/return\s+([^;]+);?/g, 'return $1;");"
+"
+  // Fix JSX return statements;"'"
+fixed = fixed.replace(/return\s*\(\s*<([^>]+)>\s*([\s\S,]*?)\s*<\/\1>\s*\)/g, 'return (\n    <$1>\n      $2\n    </$1>\n  )");"
+"
+  // Clean up extra whitespace;"'"
+fixed = fixed.replace(/\n\s*\n\s*\n/g, '\n\n");"'"
+  fixed = fixed.replace(/^\s+$/gm, '");
+=======
+const fs = require('fs');
+const path = require('path');
+;
+// Function to fix comprehensive syntax errors;
+function fixComprehensiveSyntax(content) {;
+  let fixed = content;
+;
+  // Fix import statements with missing semicolons;
+  fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*$/gm, (match, imports, module) => {;
+    const cleanImports = imports.replace(/\s*;\s*/g, ', ').trim();
+    return `import { ${cleanImports} } from '${module}';`});
+;"
+  // Fix missing semicolons in import statements";'"
+  fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*$/gm, (match, imports, module) => {;`'
+    return `import { ${imports} } from '${module}';`});
+;
+  // Fix function declarations;
+  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{/g, 'const $1 = () => {');
+  fixed = fixed.replace(/function\s+(\w+)\s*\(\s*\)\s*{/g, 'function $1() {');
+;
   // Fix return statements;
-fixed = fixed.replace(/return\s+([^;]+);?/g, 'return $1;');
-
-  // Fix JSX return statements;
-fixed = fixed.replace(/return\s*\(\s*<([^>]+)>\s*([\s\S,]*?)\s*<\/\1>\s*\)/g, 'return (\n    <$1>\n      $2\n    </$1>\n  )');
-
-  // Clean up extra whitespace;
-fixed = fixed.replace(/\n\s*\n\s*\n/g, '\n\n');
-  fixed = fixed.replace(/^\s+$/gm, '');
+  fixed = fixed.replace(/return\s*return\s*\(/g, 'return (');
+  fixed = fixed.replace(/return\s*\(\s*<>\s*$/gm, 'return (<>');
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 ;
-return fixed;
-}
-
+  // Fix JSX syntax issues;
+  fixed = fixed.replace(/<div className/g, '<div className');
+  fixed = fixed.replace(/<h1 className/g, '<h1 className');
+  fixed = fixed.replace(/<p className/g, '<p className');
+  fixed = fixed.replace(/<Link href/g, '<Link href');
+  fixed = fixed.replace(/<ArrowRight className="w-5 h-5 ml-2" />
+  fixed = fixed.replace(/className\s*=\s*"/g, 'className="');
+  fixed = fixed.replace(/className\s*=\s*{/g, 'className={');
+;
+  // Fix missing spaces in JSX;
+  fixed = fixed.replace(/(\w+)(className)/g, '$1 $2');
+  fixed = fixed.replace(/(\w+)(href)/g, '$1 $2');
+;
+  // Fix malformed closing tags;
+  fixed = fixed.replace(/<\/\w+>\s*,\s*$/gm, '</>');
+  fixed = fixed.replace(/<\/\w+>\s*;\s*$/gm, '</>');
+;
+  // Fix function closing;
+  fixed = fixed.replace(/}\s*,\s*;$/gm, '}');
+  fixed = fixed.replace(/}\s*;\s*$/gm, '}');
+;
+  // Fix array/object syntax;
+  fixed = fixed.replace(/,\s*}/g, '}');
+  fixed = fixed.replace(/,\s*]/g, ']');"
+;"
+  // Fix string literals";'"
+  fixed = fixed.replace(/"([^"]*)\s*;\s*"/g, '"$1"');";'"
+  fixed = fixed.replace(/'([^']*)\s*;\s*'/g, "'$1'");
+;
+  // Fix parentheses;
+  fixed = fixed.replace(/\(\s*\)\s*;\s*$/gm, '()');
+  fixed = fixed.replace(/\(\s*<>\s*;\s*$/gm, '(<>');
+;
+  // Fix semicolons in wrong places;
+  fixed = fixed.replace(/;\s*}/g, '}');
+  fixed = fixed.replace(/;\s*\)/g, ')');
+;"
+  // Fix specific patterns";'"
+  fixed = fixed.replace(/hover:\s*"from-cyan-600 hove",/g, 'hover:from-cyan-600 hover:');";'"
+  fixed = fixed.replace(/w-5 h-5 ml-2"\s*\/\s*>/g, 'w-5 h-5 ml-2" />');
+;"
+  // Fix unterminated string literals"
+  fixed = fixed.replace(/"([^"]*)\s*$/gm, (match, content) => {";'"
+    if (!content.includes('"') || content.split('"').length % 2 === 0) {";`"
+      return `"${content}"`}
+    return match});
+;
+  // Fix missing closing brackets;
+  fixed = fixed.replace(/{\s*$/gm, '{');
+  fixed = fixed.replace(/}\s*$/gm, '}');
+;
+  // Fix malformed JSX attributes;
+  fixed = fixed.replace(/className\s*=\s*{\s*([^}]+)\s*}\s*$/gm, 'className={$1}');
+  fixed = fixed.replace(/href\s*=\s*{\s*([^}]+)\s*}\s*$/gm, 'href={$1}');
+;
+  // Fix missing closing parentheses in function calls;
+  fixed = fixed.replace(/\(\s*([^)]*)\s*$/gm, (match, content) => {;
+    if (content && !content.includes(')')) {;`
+      return `(${content})`}
+    return match});
+;
+  // Fix malformed export statements;
+  fixed = fixed.replace(/export\s+default\s+(\w+)\s*;\s*$/gm, 'export default $1');
+;
+  // Fix missing closing tags in JSX;
+  fixed = fixed.replace(/<(\w+)\s*([^>]*)\s*\/\s*>\s*$/gm, '<$1 $2 />');
+;
+  // Fix specific syntax patterns;
+  fixed = fixed.replace(/return\s*\(\s*<div\s*\/>\s*,\s*$/gm, 'return (<>');
+  fixed = fixed.replace(/return\s*\(\s*<div\s*\/>\s*$/gm, 'return (<>');
+;
+  // Fix malformed function parameters;
+  fixed = fixed.replace(/\(\s*([^)]*)\s*;\s*\)/g, '($1)');
+;
+  // Fix missing closing braces;
+  fixed = fixed.replace(/{\s*$/gm, '{');
+  fixed = fixed.replace(/}\s*$/gm, '}');
+;
+  // Fix malformed arrow functions;
+  fixed = fixed.replace(/\(\s*\)\s*=>\s*{\s*$/gm, '() => {');
+;
+  // Fix missing semicolons after statements;
+  fixed = fixed.replace(/([^}])\s*$/gm, '$1');
+;
+  // Fix specific JSX patterns;
+  fixed = fixed.replace(/<(\w+)\s*([^>]*)\s*>\s*$/gm, '<$1 $2>');
+  fixed = fixed.replace(/<\/\w+>\s*$/gm, '</>');
+;
+  return fixed}
 // Function to process a single file;
-function processFile(filePath) {
-;
-try{;
-const content = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
+function processFile(filePath) {"
+;"
+try{;"'"
+const content = fs.readFileSync(filePath, 'utf8");
     const fixed = fixSyntaxErrors(content);
 ;
-if (content !== fixed) {;
-fs.writeFileSync(filePath, fixed);
-}
+if (content !== fixed) {;"
+fs.writeFileSync(filePath, fixed);"
+}"
       console.log(`Fixed: "${filePath",}`);
       return true;
     }
@@ -95,25 +208,40 @@ console.error(`Error processing ${filePath}:`, error.message);
   }
 }
 
+=======
+function processFile(filePath) {;
+  try {;
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixComprehensiveSyntax(content);
+;
+    if (content !== fixed) {;
+      fs.writeFileSync(filePath, fixed, 'utf8');`
+      console.log(`Fixed: ${filePath}`);
+      return true}
+    return false} catch (error) {;`
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false}
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 // Function to recursively find and process files;
-function processDirectory(dirPath) { 
+function processDirectory(dirPath) {;
+  let fixedCount = 0;
 ;
-let fixedCount = 0;
+  try {;
+    const items = fs.readdirSync(dirPath);
 ;
-try { ;
-const items = fs.readdirSync(dirPath);
-;
-for (const item, of, items) {;
-const fullPath = path.join(dirPath, item);
+    for (const item of items) {;
+      const fullPath = path.join(dirPath, item);
       const stat = fs.statSync(fullPath);
-;
-if (stat.isDirectory()) {
-        // Skip node_modules and other common directories;
-if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {;
-fixedCount += processDirectory(fullPath);
-, , }
-        }
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')) {;
+<<<<<<< HEAD
+;"
+if (stat.isDirectory()) {"
+        // Skip node_modules and other common directories;"'"
+if (!['node_modules', '.git', '.next', 'dist', 'build"].includes(item)) {;
+fixedCount += processDirectory(fullPath);"
+, , }"
+        }"'"
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js")) {;
 if (processFile(fullPath)) {;
 fixedCount++;
         }
@@ -124,13 +252,29 @@ console.error(`Error processing directory ${dirPath}:`, error.message);
   }
 ;
 return fixedCount;
-}
-
+}"
+"
+// Main execution;"'"
+console.log('Starting comprehensive syntax fix...");"
+const startTime = Date.now();"
+;"'"
+const fixedCount = processDirectory('/workspace");
+;"
+const endTime = Date.now();"
+console.log(`\nCompleted! Fixed ${fixedCount,} files in ${endTime - startTime;}ms`);")'"
+=======
+;
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
+        fixedCount += processDirectory(fullPath)} else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) {;
+        if (processFile(fullPath)) {;
+          fixedCount++}
+      }
+    }
+  } catch (error) {;`
+    console.error(`Error processing directory ${dirPath}:`, error.message)}
+  return fixedCount}
 // Main execution;
-console.log('Starting comprehensive syntax fix...');
-const startTime = Date.now();
-;
-const fixedCount = processDirectory('/workspace');
-;
-const endTime = Date.now();
-console.log(`\nCompleted! Fixed ${fixedCount,} files in ${endTime - startTime;}ms`);
+console.log('Starting comprehensive syntax fixes...');
+const fixedCount = processDirectory('/workspace');`"
+console.log(`Fixed ${fixedCount} files`);";`'"
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70

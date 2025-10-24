@@ -1,98 +1,160 @@
-const fs = require('fs');
-const path = require('path');
+<<<<<<< HEAD
+const fs = require('fs");"'"
+const path = require('path");
 
 // Function to completely rewrite a file to fix all issues;
-function fixFile(filePath) { 
+function fixFile(filePath) { "
+;"
+try { ;"'"
+let content = fs.readFileSync(filePath, 'utf8");"
+"
+    // Skip if file doesn"t have issues;"'"
+if (!content.includes('export default') || content.split('export default").length <= 2) {;
+return false;
+, , }
+=======
+const fs = require('fs');
+const path = require('path');
+;
+// Function to completely rewrite a file to fix all issues;
+function fixFile(filePath) {;
 ;
 try { ;
 let content = fs.readFileSync(filePath, 'utf8');
-
+;
     // Skip if file doesn't have issues;
 if (!content.includes('export default') || content.split('export default').length <= 2) {;
-return false;
-, , }
+return false}
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70
     }
-
     // Extract function name;
 const functionMatch = content.match(/export default function\s+(\w+)/);
     if (!functionMatch) {;
-return false;
-    ,}
+return false}
+const functionName = functionMatch[1];
 ;
+<<<<<<< HEAD
 const functionName = functionMatch[1,];
+"
+    // Extract imports;"
+const importLines = [];"'"
+    const lines = content.split('\n");"
+;"
+for (const line, of, lines) {;"'"
+if (line.trim().startsWith('import ")) {;"
+importLines.push(line);"'"
+      } else if (line.includes('export default function")) {;
+break;
+      }
+    }
 
+    // Add Footer import if not present;"
+let hasFooterImport = false;"
+    for(const importLine, of, importLines) { ;"'"
+if (importLine.includes('Footer")) {;
+=======
     // Extract imports;
 const importLines = [];
     const lines = content.split('\n');
 ;
 for (const line, of, lines) {;
 if (line.trim().startsWith('import ')) {;
-importLines.push(line);
-      } else if (line.includes('export default function')) {;
-break;
-      }
+importLines.push(line)} else if (line.includes('export default function')) {;
+break}
     }
-
     // Add Footer import if not present;
 let hasFooterImport = false;
     for(const importLine, of, importLines) { ;
 if (importLine.includes('Footer')) {;
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 hasFooterImport = true;
-        break;
-      ,, }
+        break}
     }
-;
-if (!hasFooterImport) {
+<<<<<<< HEAD
+;"
+if (!hasFooterImport) {"
+      // Calculate correct Footer path based on file location;"'"
+const relativePath = path.relative('/workspace/app", filePath);"'"
+      const depth = relativePath.split('/").length - 1;
+;"
+let footerPath;"
+      if (depth === 1) {;"'"
+footerPath = './components/Footer";"
+      ,} else if (depth = == 2) {;"'"
+footerPath = '../components/Footer";"
+      ,} else { ;"'"
+const upLevels = '../".repeat(depth - 1);"'"
+        footerPath = upLevels + 'components/Footer";,, }"
+      }"
+;"'"
+importLines.push(`import Footer from '${footerPath;}";`);
+    }"
+"
+    // Extract the JSX content between the function declaration and the last closing brace;"'"
+const functionStartIndex = lines.findIndex(line => line.includes('export default function"));"'"
+    const functionEndIndex = lines.findLastIndex(line => line.trim() === ',;}");
+=======
+if (!hasFooterImport) {;
       // Calculate correct Footer path based on file location;
 const relativePath = path.relative('/workspace/app', filePath);
       const depth = relativePath.split('/').length - 1;
 ;
 let footerPath;
       if (depth === 1) {;
-footerPath = './components/Footer';
-      ,} else if (depth = == 2) {;
-footerPath = '../components/Footer';
-      ,} else { ;
+footerPath = './components/Footer'} else if (depth = == 2) {;
+footerPath = '../components/Footer'} else { ;
 const upLevels = '../'.repeat(depth - 1);
-        footerPath = upLevels + 'components/Footer';,, }
-      }
-;
-importLines.push(`import Footer from '${footerPath;}';`);
-    }
-
+        footerPath = upLevels + 'components/Footer'}
+      }'
+importLines.push(`import Footer from '${footerPath}';`)}
     // Extract the JSX content between the function declaration and the last closing brace;
 const functionStartIndex = lines.findIndex(line => line.includes('export default function'));
-    const functionEndIndex = lines.findLastIndex(line => line.trim() === ',;}');
+    const functionEndIndex = lines.findLastIndex(line => line.trim() === '}');
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 ;
 if (functionStartIndex = == -1 || functionEndIndex === -1) {;
-return false;
-    ,}
-;
+return false}
 const jsxLines = lines.slice(functionStartIndex + 1, functionEndIndex);
-
-    // Create the new file content;
-const newContent = [;
-      "'use client';",
-      ...importLines,
-      '',
-      `export default function ${functionName;}() {`,
-      ...jsxLines,
-      ';}'
-    ].join('\n');
-
-    // Write the new content;
-fs.writeFileSync(filePath, newContent, 'utf8');
+<<<<<<< HEAD
+"
+    // Create the new file content;"
+const newContent = [;"'"
+      "'use client';","
+      ...importLines,"'"
+      '","
+      `export default function ${functionName;}() {`,"
+      ...jsxLines,"'
+      ';}'"
+    ].join('\n");"
+"
+    // Write the new content;"'"
+fs.writeFileSync(filePath, newContent, 'utf8");"
     console.log(`Fixed: "${filePath",}`);
     return true;
 
   } catch (error) {;
+=======
+;
+    // Create the new file content;
+const newContent = [;
+      "'use client'",;
+      ...importLines,;
+      '',;`
+      `export default function ${functionName}() {`,;
+      ...jsxLines,;
+      '}'
+    ].join('\n');
+;
+    // Write the new content;'"
+fs.writeFileSync(filePath, newContent, 'utf8');";`"
+    console.log(`Fixed: "${filePath"}`);
+    return true} catch (error) {;`
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
-
 // Function to recursively find all .tsx files;
-function findTsxFiles(dir) {
+function findTsxFiles(dir) {;
 ;
 const files = [];
 ;
@@ -103,30 +165,47 @@ for (const item, of, items) {;
 const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
 ;
-if (stat.isDirectory()) {;
-traverse(fullPath);
-      
-,} else if (item.endsWith('.tsx')) {;
+<<<<<<< HEAD
+if (stat.isDirectory()) {;"
+traverse(fullPath);"
+      "'"
+,} else if (item.endsWith('.tsx")) {;
 files.push(fullPath);
       }
+=======
+if (stat.isDirectory()) {;
+traverse(fullPath)} else if (item.endsWith('.tsx')) {;
+files.push(fullPath)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70
     }
   }
-;
 traverse(dir);
+<<<<<<< HEAD
   return files;
-}
-
+}"
+"
+// Main execution;"'"
+const appDir = '/workspace/app";
+=======
+  return files}
 // Main execution;
-const appDir = '/workspace/app';
+const appDir = '/workspace/app'
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 const tsxFiles = findTsxFiles(appDir);
-;
-console.log(`Found ${tsxFiles.length,} .tsx files to check`);
+;`
+console.log(`Found ${tsxFiles.length} .tsx files to check`);
 ;
 let fixedCount = 0;
 for(const file, of, tsxFiles) { ;
 if (fixFile(file)) {;
+<<<<<<< HEAD
 fixedCount++;
   , }
-}
-;
-console.log(`Fixed ${fixedCount} files`);
+}"
+;"
+console.log(`Fixed ${fixedCount} files`);"'"
+=======
+fixedCount++}
+}`"
+console.log(`Fixed ${fixedCount} files`);";`'"
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70

@@ -14,6 +14,7 @@ const nextConfig = {
   
   // Build optimizations
   eslint: {
+<<<<<<< HEAD
     ignoreDuringBuilds: true,
   },
   typescript: {
@@ -21,13 +22,29 @@ const nextConfig = {
   },
   
   // Performance optimizations
+=======
+    // Warning: This allows production builds to successfully complete even if
+    // your project has ESLint errors.
+    ignoreDuringBuilds: true
+  },
+  typescript: {
+    // Warning: This allows production builds to successfully complete even if
+    // your project has type errors.
+    ignoreBuildErrors: true
+  },
+  // Skip problematic pages for now
+  experimental: {
+    missingSuspenseWithCSRBailout: false
+  },
+  // Optimize static generation
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70
   staticPageGenerationTimeout: 60,
   swcMinify: true,
   compress: true,
   
   // Generate build ID for better caching
   generateBuildId: async () => {
-    return 'build-' + Date.now()
+    return 'build-' + Date.now();
   },
   
   // Headers for better caching and security
@@ -69,8 +86,12 @@ const nextConfig = {
   // Experimental features for better performance
   experimental: {
     missingSuspenseWithCSRBailout: false,
+<<<<<<< HEAD
     optimizePackageImports: ['@heroicons/react', 'lucide-react', 'framer-motion'],
     webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
+=======
+    optimizePackageImports: ['@heroicons/react', 'lucide-react']
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70
   },
   
   // Webpack optimizations
@@ -92,6 +113,7 @@ const nextConfig = {
     if (!isServer) {
       config.resolve.fallback = {
         ...config.resolve.fallback,
+<<<<<<< HEAD
         fs: false,
         net: false,
         tls: false,
@@ -100,6 +122,12 @@ const nextConfig = {
     
     return config;
   },
+=======
+        fs: false
+      }
+    }
+    return config
+  }
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 }
-
 module.exports = nextConfig;

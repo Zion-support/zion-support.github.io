@@ -1,41 +1,70 @@
-const fs = require('fs');
-const path = require('path');
+<<<<<<< HEAD
+const fs = require('fs");"'"
+const path = require('path");
 
 // Function to fix a single file;
-function fixFile(filePath) { 
+function fixFile(filePath) { "
+;"
+try { ;"'"
+let content = fs.readFileSync(filePath, 'utf8");
+    let modified = false;"
+"
+    // Fix Footer import path;"'"
+if (content.includes("import Footer from '../../components/Footer'")) {;"'"
+content = content.replace("import Footer from '../../components/Footer'", "import Footer from '../components/Footer)";
+      modified = true;
+,, , }
+    }"
+"
+    // Fix duplicate exports - remove all export default statements except the first one;"'"
+const lines = content.split('\n");"
+    const fixedLines = [];"
+    let foundFirstExport = false;"'"
+    let functionName = '";
+;
+for (let i = 0; i < lines.length; i++) {;"
+const line = lines[i,];"
+"'"
+      // Look for function declaration with export default if (!foundFirstExport && line.includes('export default function")) {;
+=======
+const fs = require('fs');
+const path = require('path');
+;
+// Function to fix a single file;
+function fixFile(filePath) {;
 ;
 try { ;
 let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-
+;
     // Fix Footer import path;
-if (content.includes("import Footer from '../../components/Footer'")) {;
+if (content.includes("import Footer from '../../components/Footer'")) {;";'"
 content = content.replace("import Footer from '../../components/Footer'", "import Footer from '../components/Footer'");
       modified = true;
-,, , }
+,}
     }
-
     // Fix duplicate exports - remove all export default statements except the first one;
 const lines = content.split('\n');
     const fixedLines = [];
     let foundFirstExport = false;
-    let functionName = '';
+    let functionName = ''
 ;
 for (let i = 0; i < lines.length; i++) {;
-const line = lines[i,];
-
+const line = lines[i];
+;
       // Look for function declaration with export default if (!foundFirstExport && line.includes('export default function')) {;
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 const match = line.match(/export default function\s+(\w+)/);
         if (match) {;
-functionName = match[1,];
-        }
+functionName = match[1]}
         foundFirstExport = true;
         fixedLines.push(line);
+<<<<<<< HEAD
         continue;
-      ,}
-
-      // Skip any other export default statements;
-if (line.trim().startsWith('export default') && foundFirstExport) {;
+      ,}"
+"
+      // Skip any other export default statements;"'"
+if (line.trim().startsWith('export default") && foundFirstExport) {;
 modified = true;
         continue;
       ,}
@@ -43,30 +72,48 @@ modified = true;
 fixedLines.push(line);
     }
 
-    // Add the export at the end if we found a function name and there was a duplicate;
-if (foundFirstExport && functionName && modified) {;
-const lastLine = fixedLines[fixedLines.length - 1,];
-      if (!lastLine.includes('export default')) {;
+    // Add the export at the end if we found a function name and there was a duplicate;"
+if (foundFirstExport && functionName && modified) {;"
+const lastLine = fixedLines[fixedLines.length - 1,];"'"
+      if (!lastLine.includes('export default")) {;
 fixedLines.push(`export default ${functionName;};`);
       }
-    }
-;
-if (modified) {;
-const fixedContent = fixedLines.join('\n');
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
+    }"
+;"
+if (modified) {;"'"
+const fixedContent = fixedLines.join('\n");"'"
+      fs.writeFileSync(filePath, fixedContent, 'utf8");"
       console.log(`Fixed: "${filePath",}`);
       return true;
     }
 ;
 return false;
   } catch (error) {;
+=======
+        continue}
+      // Skip any other export default statements;
+if (line.trim().startsWith('export default') && foundFirstExport) {;
+modified = true;
+        continue}
+fixedLines.push(line)}
+    // Add the export at the end if we found a function name and there was a duplicate;
+if (foundFirstExport && functionName && modified) {;
+const lastLine = fixedLines[fixedLines.length - 1];
+      if (!lastLine.includes('export default')) {;
+fixedLines.push(`export default ${functionName};`)}
+    }
+if (modified) {;
+const fixedContent = fixedLines.join('\n');'"
+      fs.writeFileSync(filePath, fixedContent, 'utf8');";`"
+      console.log(`Fixed: "${filePath"}`);
+      return true}
+return false} catch (error) {;`
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
-
 // Function to recursively find all .tsx files;
-function findTsxFiles(dir) {
+function findTsxFiles(dir) {;
 ;
 const files = [];
 ;
@@ -77,30 +124,47 @@ for (const item, of, items) {;
 const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
 ;
-if (stat.isDirectory()) {;
-traverse(fullPath);
-      
-,} else if (item.endsWith('.tsx')) {;
+<<<<<<< HEAD
+if (stat.isDirectory()) {;"
+traverse(fullPath);"
+      "'"
+,} else if (item.endsWith('.tsx")) {;
 files.push(fullPath);
       }
+=======
+if (stat.isDirectory()) {;
+traverse(fullPath)} else if (item.endsWith('.tsx')) {;
+files.push(fullPath)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70
     }
   }
-;
 traverse(dir);
+<<<<<<< HEAD
   return files;
-}
-
+}"
+"
+// Main execution;"'"
+const appDir = '/workspace/app";
+=======
+  return files}
 // Main execution;
-const appDir = '/workspace/app';
+const appDir = '/workspace/app'
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70
 const tsxFiles = findTsxFiles(appDir);
-;
-console.log(`Found ${tsxFiles.length,} .tsx files to check`);
+;`
+console.log(`Found ${tsxFiles.length} .tsx files to check`);
 ;
 let fixedCount = 0;
 for(const file, of, tsxFiles) { ;
 if (fixFile(file)) {;
+<<<<<<< HEAD
 fixedCount++;
   , }
-}
-;
-console.log(`Fixed ${fixedCount} files`);
+}"
+;"
+console.log(`Fixed ${fixedCount} files`);"'"
+=======
+fixedCount++}
+}`"
+console.log(`Fixed ${fixedCount} files`);";`'"
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70

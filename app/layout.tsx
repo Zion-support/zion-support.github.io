@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -93,3 +94,26 @@ export default function RootLayout({
     </html>
   );
 }
+=======
+import type { Metadata } from 'next'
+import { Inter    } from 'next/font/google'
+import './globals.css'
+;
+const inter = Inter({ subsets: ['latin'] });
+;
+export const metadata: Metadata = {;
+  title: 'Zion Tech Group - Advanced AI & IT Solutions',;
+  description: 'Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.'}
+export default function RootLayout({;
+  children}: {);
+  children: React.ReactNode}) {;
+  return (<html lang="en">;"
+      <body className={inter.className}>"
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          {children}
+        </div>
+      </body>;
+    </html>);
+  )}"
+";'"
+>>>>>>> cursor/fix-errors-and-merge-to-main-eb70
