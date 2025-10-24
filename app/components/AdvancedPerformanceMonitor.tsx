@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
 
 interface PerformanceMetrics {
@@ -324,3 +325,17 @@ export default function Advancedperformancemonitor({ className = '', children, .
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
+=======
+import React from 'react';
+
+const AdvancedPerformanceMonitor: React.FC = () => {
+  return (
+    <div className="advancedperformancemonitor">
+      <h2>AdvancedPerformanceMonitor</h2>
+      <p>AdvancedPerformanceMonitor component.</p>
+    </div>
+  );
+};
+
+export default AdvancedPerformanceMonitor;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6

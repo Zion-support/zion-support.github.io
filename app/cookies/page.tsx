@@ -45,6 +45,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { Cookie, Shield, Settings, Eye, Database, CheckCircle, AlertTriangle, Info } from 'lucide-react'
 
+<<<<<<< HEAD
 const CookiesPage: React.FC = () => {
   const lastUpdated = 'January 1, 2024'
 
@@ -75,10 +76,14 @@ const CookiesPage: React.FC = () => {
     }
   ]
 
+=======
+const CookiePolicyPage: React.FC = () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
   return (
     <>
       <Helmet>
         <title>Cookie Policy - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Learn about how we use cookies on our website and your options for managing them." />
       </Helmet>
       
@@ -185,6 +190,35 @@ const CookiesPage: React.FC = () => {
       <Footer />
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
+=======
+        <meta name="description" content="Information about our use of cookies and tracking technologies." />
+        <meta name="keywords" content="cookies, privacy, tracking, policy" />
+      </Helmet>
+
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Cookie Policy
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Information about our use of cookies and tracking technologies.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
   );
 }
 =======
@@ -195,5 +229,9 @@ const CookiesPage: React.FC = () => {
   )
 }
 
+<<<<<<< HEAD
 export default CookiesPage
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
+=======
+export default CookiePolicyPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6

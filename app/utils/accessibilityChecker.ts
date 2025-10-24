@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Accessibilitychecker utility functions
 export function accessibilitychecker() {
   // Implementation here
@@ -158,3 +159,9 @@ const AccessibilityCheckerPage: React.FC = () => {
 
 export default AccessibilityCheckerPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
+=======
+// Utility functions
+export const utilityFunction = () => {
+  // Implementation
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6

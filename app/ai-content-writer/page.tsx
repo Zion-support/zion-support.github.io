@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -16,27 +17,66 @@ import { FileText, PenTool, Globe, BarChart, Zap, Users, Target, TrendingUp, Pho
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight } from 'lucide-react';
+=======
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
 
 const AIContentWriterPage: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD
       title: 'AI Writing Assistant',
       description: 'Generate high-quality content using advanced AI algorithms',
       benefits: ['Automated writing', 'Content optimization', 'Multi-language support']
+=======
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
-      title: 'Content Templates',
-      description: 'Professional templates for various content types',
-      benefits: ['Blog posts', 'Social media', 'Marketing copy']
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
+    },
+    {
+      icon: Zap,
+      title: 'Fast Processing',
+      description: 'Process large datasets in seconds with our optimized AI analytics engine.',
+      benefits: ['High-speed processing', 'Scalable infrastructure', 'Real-time analysis', 'Batch processing']
+    },
+    {
+<<<<<<< HEAD
       title: 'SEO Optimization',
       description: 'Optimize content for search engines automatically',
       benefits: ['Keyword research', 'SEO scoring', 'Content suggestions']
+=======
+      icon: Shield,
+      title: 'Secure Analytics',
+      description: 'Enterprise-grade security for your sensitive data and analytics.',
+      benefits: ['Data encryption', 'Access controls', 'Audit trails', 'Compliance ready']
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
     }
   ];
 
   const benefits = [
+<<<<<<< HEAD
     'Increase content production by 10x',
     'Improve engagement by 200%',
     'Save 50+ hours per week',
@@ -98,6 +138,46 @@ const AIContentWriterPage: React.FC = () => {
         </div>
 =======
       </section>
+=======
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>AI Content Writer - Zion Tech Group</title>
+        <meta name="description" content="Intelligent AI-powered content writing assistant for enhanced productivity." />
+        <meta name="keywords" content="AI content writer, artificial intelligence, content writing, automated writing, AI assistant" />
+      </Helmet>
+
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              AI Content Writer
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Intelligent AI-powered content writing assistant for enhanced productivity.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
 
         {/* Features Section */}
         <section className="py-20 px-4">
@@ -111,10 +191,10 @@ const AIContentWriterPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
@@ -171,10 +251,10 @@ const AIContentWriterPage: React.FC = () => {
                 Contact our experts to discuss your requirements and get started today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Contact Us
                 </button>
-                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
                 </button>
               </div>
@@ -184,13 +264,21 @@ const AIContentWriterPage: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
       </div>
       <Footer />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
+=======
+    </>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
   );
 <<<<<<< HEAD
 }
 =======
 };
 
+<<<<<<< HEAD
 export default AIContentWriterPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
+=======
+export default AIContentWriterPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6

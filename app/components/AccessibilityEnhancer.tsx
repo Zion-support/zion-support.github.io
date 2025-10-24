@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "use client";
 
 import { useEffect } from 'react';
@@ -152,6 +153,18 @@ export default function Accessibilityenhancer({ className = '', children, ...pro
 =======
 'use client'
 import React, { useEffect } from 'react'
+=======
+import React from 'react';
+
+const AccessibilityEnhancer: React.FC = () => {
+  return (
+    <div className="accessibilityenhancer">
+      <h2>AccessibilityEnhancer</h2>
+      <p>AccessibilityEnhancer component.</p>
+    </div>
+  );
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
 
 interface AccessibilityEnhancerProps {
   enableKeyboardNavigation?: boolean

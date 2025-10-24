@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Code } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 import React from 'react';
@@ -55,3 +56,17 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
 export default SEOOptimizer
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
+=======
+import React from 'react';
+
+const SEOOptimizer: React.FC = () => {
+  return (
+    <div className="seooptimizer">
+      <h2>SEOOptimizer</h2>
+      <p>SEOOptimizer component.</p>
+    </div>
+  );
+};
+
+export default SEOOptimizer;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Home } from 'lucide-react';
@@ -159,6 +160,15 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
           </nav>
         </div>
       </div>
+=======
+import React from 'react';
+
+const Sidebar: React.FC = () => {
+  return (
+    <div className="sidebar">
+      <h2>Sidebar</h2>
+      <p>Sidebar component.</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
     </div>
   );
 }
@@ -182,6 +192,7 @@ import {
   ChevronRight
 } from 'lucide-react'
 
+<<<<<<< HEAD
 const Sidebar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [expandedSections, setExpandedSections] = useState<string[]>([])
@@ -351,3 +362,6 @@ const Sidebar: React.FC = () => {
 
 export default Sidebar
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
+=======
+export default Sidebar;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6

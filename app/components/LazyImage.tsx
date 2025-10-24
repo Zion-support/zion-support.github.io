@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react';
 import { lazy } from 'react';
 import React from 'react';
@@ -16,3 +17,17 @@ export default function Lazyimage({ className = '', children, ...props }: Lazyim
     </div>
   );
 }
+=======
+import React from 'react';
+
+const LazyImage: React.FC = () => {
+  return (
+    <div className="lazyimage">
+      <h2>LazyImage</h2>
+      <p>LazyImage component.</p>
+    </div>
+  );
+};
+
+export default LazyImage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6

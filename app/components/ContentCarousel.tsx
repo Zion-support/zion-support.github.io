@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, X, Brain, BarChart, Target, TrendingUp, Cloud, Shield, Globe, Database, Users, Settings } from 'lucide-react';
@@ -359,6 +360,16 @@ const ContentCarousel: React.FC = () => {
           </button>
         </div>
       </div>
+=======
+import React from 'react';
+
+const ContentCarousel: React.FC = () => {
+  return (
+    <div className="contentcarousel">
+      <h2>ContentCarousel</h2>
+      <p>ContentCarousel component.</p>
+    </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
   );
 };
 

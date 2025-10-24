@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Next.js type definitions
 =======
 'use client';
@@ -210,3 +211,12 @@ export {};
 
 export {};
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
+=======
+/// <reference types="next" />
+/// <reference types="next/image-types/global" />
+
+declare module '*.svg' {
+  const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
+  export default content;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6

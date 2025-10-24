@@ -1,6 +1,7 @@
 import React from 'react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -65,3 +66,15 @@ export default PerformanceDashboard;
 
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
+=======
+const PerformanceDashboard: React.FC = () => {
+  return (
+    <div className="performance-dashboard">
+      <h2>Performance Dashboard</h2>
+      <p>Performance monitoring dashboard component.</p>
+    </div>
+  );
+};
+
+export default PerformanceDashboard;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6

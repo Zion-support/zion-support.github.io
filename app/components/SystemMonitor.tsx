@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import Footer from 'Footer';
 import Navigation from './Navigation';
@@ -124,6 +125,15 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</S
  SystemMonitorPage
             </div>
         </div>
+=======
+import React from 'react';
+
+const SystemMonitor: React.FC = () => {
+  return (
+    <div className="systemmonitor">
+      <h2>SystemMonitor</h2>
+      <p>SystemMonitor component.</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
     </div>
   );
 =======
@@ -131,4 +141,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</S
 >>>>>>> cursor/fix-errors-and-merge-to-main-996d
 };
 
+<<<<<<< HEAD
 export default benefits;
+=======
+export default SystemMonitor;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
