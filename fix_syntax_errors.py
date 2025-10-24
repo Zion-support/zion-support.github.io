@@ -67,7 +67,7 @@ def fix_syntax_errors_in_file(file_path):
         return content != original_content
         
     except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
