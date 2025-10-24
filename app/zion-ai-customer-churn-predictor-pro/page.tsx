@@ -1,128 +1,62 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { Metadata } from 'next';
+import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'AI Customer Churn Predictor Pro - Zion Tech Group',
+  description: 'Advanced AI-powered customer churn prediction with enterprise features. Real-time analytics, custom models, and dedicated support for large organizations.',
+  keywords: 'AI solutions, IT services, technology services',
+  openGraph: {
+    title: 'AI Customer Churn Predictor Pro - Zion Tech Group',
+    description: 'Advanced AI-powered customer churn prediction with enterprise features. Real-time analytics, custom models, and dedicated support for large organizations.',
+    type: 'website',
+    url: 'https://ziontechgroup.com/',
+  },
+};
 
 export default function ZionaicustomerchurnpredictorproPage() {
   return (
-    <>
-      <Helmet>
-        <title>AI Customer Churn Predictor Pro - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered customer churn prediction with enterprise features. Real-time analytics, custom models, and dedicated support for large organizations." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-blue-100 text-blue-800 mb-4">
-              Pro Version
-            </div>
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
-              AI Customer Churn Predictor Pro
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Advanced enterprise-grade churn prediction with real-time analytics, custom AI models, and dedicated support for large organizations.
-            </p>
+    <div className="min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-blue-100 text-blue-800 mb-4">
+            Pro Version
           </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-            <div>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Pro Features</h2>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <div className="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3 mt-0.5">
-                    <svg className="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-medium text-gray-900">Custom AI Models</h3>
-                    <p className="text-gray-600">Tailored machine learning models trained specifically on your data</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3 mt-0.5">
-                    <svg className="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-medium text-gray-900">Real-time Dashboard</h3>
-                    <p className="text-gray-600">Advanced analytics dashboard with live churn monitoring and alerts</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3 mt-0.5">
-                    <svg className="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-medium text-gray-900">Multi-Channel Integration</h3>
-                    <p className="text-gray-600">Connect with CRM, email, support, and marketing platforms</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3 mt-0.5">
-                    <svg className="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-medium text-gray-900">Dedicated Support</h3>
-                    <p className="text-gray-600">24/7 dedicated support with AI specialists and data scientists</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <div className="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3 mt-0.5">
-                    <svg className="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-medium text-gray-900">Advanced Analytics</h3>
-                    <p className="text-gray-600">Deep insights into churn patterns, customer segments, and retention strategies</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            
-            <div>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Enterprise Benefits</h2>
-              <div className="space-y-6">
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="font-semibold text-gray-900 mb-2">Scalable Infrastructure</h3>
-                  <p className="text-gray-600">Handle millions of customers with enterprise-grade performance and reliability</p>
-                </div>
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="font-semibold text-gray-900 mb-2">Custom Workflows</h3>
-                  <p className="text-gray-600">Automated retention campaigns triggered by churn risk predictions</p>
-                </div>
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="font-semibold text-gray-900 mb-2">Compliance & Security</h3>
-                  <p className="text-gray-600">SOC 2 compliant with enterprise-grade security and data protection</p>
-                </div>
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="font-semibold text-gray-900 mb-2">ROI Tracking</h3>
-                  <p className="text-gray-600">Detailed ROI analysis and impact measurement for your retention efforts</p>
-                </div>
-              </div>
-            </div>
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            AI Customer Churn Predictor Pro
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Advanced AI-powered customer churn prediction with enterprise features. Real-time analytics, custom models, and dedicated support for large organizations.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">Key Features</h3>
+            <ul className="space-y-2 text-gray-600">
+              <li>• Advanced ML algorithms</li>
+              <li>• Real-time predictions</li>
+              <li>• Custom model training</li>
+              <li>• Enterprise integration</li>
+            </ul>
           </div>
-          
-          <div className="bg-blue-50 rounded-lg p-8 text-center">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Ready for Enterprise Churn Prediction?</h2>
-            <p className="text-gray-600 mb-6">Get the advanced features and support your enterprise needs to reduce churn and increase retention.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                Contact Enterprise Sales
-              </Link>
-              <Link to="/pricing" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
-                View Enterprise Pricing
-              </Link>
-            </div>
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">Benefits</h3>
+            <ul className="space-y-2 text-gray-600">
+              <li>• Reduce churn by up to 40%</li>
+              <li>• Increase retention rates</li>
+              <li>• Improve customer lifetime value</li>
+              <li>• Data-driven insights</li>
+            </ul>
           </div>
         </div>
+
+        <div className="text-center">
+          <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+            Get Started
+          </Link>
+        </div>
       </div>
-    </>
+    </div>
   );
 }
