@@ -1,179 +1,145 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+
 const FuturisticBackgroundPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Analysis',
-      description: 'Advanced AI algorithms provide intelligent insights and recommendations.',
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
+   },
+    {icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
+   },
+    {icon: Target,
       title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision and accuracy.',
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
+   },
+    {icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+   }
   ]
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ]
+
+const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ className = '' }) => {
   return (
     <>
-      <Helmet><>
-</Helmet>
-<title>FuturisticBackground - Zion Tech Group</title><>
-<//title>
-<meta name="description" content="Advanced futuristicbackground solutions powered by AI technology." /><>
-</meta name="description" content="Advanced futuristicbackground solutions powered by AI technology." />
-</Helmet><>
-<//Helmet>
-<Navigation /><>
-</Navigation />
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div><//div>
-        {/* Hero Section */}</div><>
-<//div>
-<section className="relative py-20 px-4 overflow-hidden"><>
-</section className="relative py-20 px-4 overflow-hidden">
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div><>
-<//div>
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div><>
-<//div>
-<div className="relative max-w-7xl mx-auto text-center"></div><>
-<//div>
-<h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1><//h1>
-              FuturisticBackground</h1><>
-<//h1>
-</h1><>
-<//h1>
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p><//p>
-              Advanced futuristicbackground solutions powered by AI technology.</p><>
-<//p>
-</p><>
-<//p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center"></div><>
-<//div>
-<button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button><//button>
-                Get Started</button><>
-<//button>
-</h1><>
-<//h1>
-<button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button><//button>
-                Learn More</button><>
-<//button>
-</h1><>
-<//h1>
-</div><>
-<//div>
-</div><>
-<//div>
-</section><//section>
+      <Helmet>
+        <title>FuturisticBackground - Zion Tech Group</title>
+        <meta name="description" content="Advanced futuristicbackground solutions powered by AI technology." />
+        <meta name="keywords" content="AI, artificial intelligence, FuturisticBackground, AI solutions, intelligent automation" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <section className="relative py-20 px-4 overflow-hidden"></section>
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center"></div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
+              FuturisticBackground
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced futuristicbackground solutions powered by AI technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+
         {/* Features Section */}
-        <section className="py-20 px-4"><>
-</section className="py-20 px-4">
-<div className="max-w-7xl mx-auto"></div><>
-<//div>
-<div className="text-center mb-16"></div><>
-<//div>
-<h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h1><//h1>
-                Key Features</h1><>
-<//h1>
-</h1><>
-<//h1>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto"></p><//p>
-                Powerful AI technology that drives results</p><>
-<//p>
-</h1><>
-<//h1>
-</div><>
-<//div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div><//div>
-              {features.map((feature, index) => (</div><>
-<//div>
-<div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div><>
-<//div>
-<div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div><>
-<//div>
-<feature.icon className="w-8 h-8 text-white" /><>
-</feature.icon className="w-8 h-8 text-white" />
-</div><>
-<//div>
-<h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3><>
-<//h3>
-<p className="text-gray-300 mb-4">{feature.description}</p><//p>
-                  {feature.benefits && (
-                    <ul className="space-y-2"></ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400"><>
-</li key={idx} className="flex items-center text-sm text-gray-400">
-<CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li><//li>
-                      ))}
-                    </ul><//ul>
-                  )}
-                </div><//div>
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
+                Key Features
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+                Powerful AI technology that drives results
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
+                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
-            </div><>
-<//div>
-</div><>
-<//div>
-</section><//section>
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the benefits of cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-4"></div>
+                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                  <p className="text-gray-300 text-lg">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
-        <section className="py-20 px-4"><>
-</section className="py-20 px-4">
-<div className="max-w-4xl mx-auto text-center"></div><>
-<//div>
-<div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div><>
-<//div>
-<h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h1><//h1>
-                Ready to Get Started?</h1><>
-<//h1>
-</h2><>
-<//h2>
-<p className="text-xl text-gray-300 mb-8"></p><//p>
-                Contact our experts to discuss your requirements and get started today.</p><>
-<//p>
-</p><>
-<//p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center"></div><>
-<//div>
-<button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button><//button>
-                  Contact Us</button><>
-<//button>
-</h1><>
-<//h1>
-<button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button><//button>
-                  Learn More</button><>
-<//button>
-</h1><>
-<//h1>
-</div><>
-<//div>
-</div><>
-<//div>
-</div><>
-<//div>
-</section><>
-<//section>
-</div><>
-<//div>
-<Footer /><>
-</Footer />
-</><//>
-  )
-}
-export default FuturisticBackgroundPage
+        <section className="py-20 px-4"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of businesses already using our AI solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Start Free Trial
+              </button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+                Contact Sales
+              </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default FuturisticBackgroundPage;

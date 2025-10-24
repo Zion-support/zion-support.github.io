@@ -1,4 +1,7 @@
+import React from 'react'
+import { Helmet } from 'lucide-react'
 import React from 'react';
+import { Helmet } from 'lucide-react';
 
 const SitemapPage: React.FC = () => {
   const pages = [
@@ -32,94 +35,58 @@ const SitemapPage: React.FC = () => {
     { url: '/guides', title: 'Technical Guides', priority: '0.6' },
     { url: '/privacy', title: 'Privacy Policy', priority: '0.3' },
     { url: '/terms', title: 'Terms of Service', priority: '0.3' },
-  ];
+  ]
   return (
     <>
-      <Helmet><>
-</Helmet>
-<title>Sitemap | Zion Tech Group</title><>
-<//title>
-<meta
-          name="description"
-          content="Complete sitemap of Zion Tech Group website. Find all our AI services, IT solutions, and technology resources."
-        /><>
-</meta
+      <Helmet>
+        <title>Sitemap | Zion Tech Group</title>
+        <meta
           name="description"
           content="Complete sitemap of Zion Tech Group website. Find all our AI services, IT solutions, and technology resources."
         />
-<meta name="robots" content="index, follow" /><>
-</meta name="robots" content="index, follow" />
-</Helmet><>
-<//Helmet>
-<div className="min-h-screen bg-gray-900 text-white"></div><>
-<//div>
-<div className="container mx-auto px-4 py-8"></div><>
-<//div>
-<header className="text-center mb-12"><>
-</header className="text-center mb-12">
-<h1 className="text-4xl font-bold mb-4">Sitemap</h1><>
-<//h1>
-<p className="text-xl text-gray-300"></p><//p>
-              Complete directory of all pages on our website</p><>
-<//p>
-</p><>
-<//p>
-</header><>
-<//header>
-<div className="max-w-4xl mx-auto"></div><>
-<//div>
-<div className="bg-gray-800 rounded-lg p-8"></div><>
-<//div>
-<h2 className="text-2xl font-semibold mb-6">All Pages</h2><>
-<//h2>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div><//div>
-                {pages.map((page, index) => (</div><>
-<//div>
-<div key={index} className="bg-gray-700 rounded-lg p-4"></div><>
-<//div>
-<a href={page.url}
-                      className="text-blue-400 hover:text-blue-300 font-medium block mb-2"
-                    ></a href={page.url}
+        <meta name="robots" content="index, follow" />
+      </Helmet>
+      <div className="min-h-screen bg-gray-900 text-white"></div>
+        <div className="container mx-auto px-4 py-8"></div>
+          <header className="text-center mb-12">
+            <h1 className="text-4xl font-bold mb-4">Sitemap</h1>
+            <p className="text-xl text-gray-300">
+              Complete directory of all pages on our website
+            </p>
+          </header>
+          <div className="max-w-4xl mx-auto"></div>
+            <div className="bg-gray-800 rounded-lg p-8"></div>
+              <h2 className="text-2xl font-semibold mb-6">All Pages</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+                {pages.map((page, index) => (
+                  <div key={index} className="bg-gray-700 rounded-lg p-4"></div>
+                    <a href={page.url}
                       className="text-blue-400 hover:text-blue-300 font-medium block mb-2"
                     >
                       {page.title}
-                    </a><>
-<//a>
-<div className="text-sm text-gray-400"></div><//div>
-                      Priority: {page.priority}</div><>
-<//div>
-</div><>
-<//div>
-<div className="text-sm text-gray-500"></div><//div>
-                      {page.url}</div><>
-<//div>
-</div><>
-<//div>
-</div><//div>
+                    </a>
+                    <div className="text-sm text-gray-400"></div>
+                      Priority: {page.priority}
+                    </div>
+                    <div className="text-sm text-gray-500"></div>
+                      {page.url}
+                    </div>
+                  </div>
                 ))}
-              </div><>
-<//div>
-<div className="mt-8 text-center"></div><>
-<//div>
-<a href="/"
-                  className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors"
-                ></a href="/"
+              </div>
+              <div className="mt-8 text-center"></div>
+                <a href="/"
                   className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors"
                 >
                   Back to Home
-                </a><>
-<//a>
-</div><>
-<//div>
-</div><>
-<//div>
-</div><>
-<//div>
-</div><>
-<//div>
-</div><>
-<//div>
-</><//>
-  );
-};
-export default SitemapPage;
+                </a>
+              </div>
+            </div>
+          </div>
+>>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d
+        </div>
+      </div>
+    </>
+  )
+}
+export default SitemapPage

@@ -8,22 +8,22 @@ name: string,
 value: number,
 unit: string,
 timestamp: Date,
-category: 'load' | 'runtime' | 'network' | 'memory' | 'custom',;}
-metadata?: Record<string, unknown>;}
+category: 'load' | 'runtime' | 'network' | 'memory' | 'custom'
+metadata?: Record<string, unknown>
 }
 export interface WebVitalsMetrics {
 FCP?: number; // First Contentful Paint
 LCP?: number; // Largest Contentful Paint
 FID?: number; // First Input Delay
 CLS?: number; // Cumulative Layout Shift
-TTFB?: number; // Time to First Byte;}
+TTFB?: number; // Time to First Byte
 export interface PerformanceMetric {}
 name: string
 value: number
 unit: string
 timestamp: Date
 category: 'load' | 'runtime' | 'network' | 'memory' | 'custom'
-metadata?: Record<string, unknown>;}</strin><//strin>
+metadata?: Record<string, unknown>;}</strin>
 }
 export interface WebVitalsMetrics {}
 FCP?: number; // First Contentful Paint

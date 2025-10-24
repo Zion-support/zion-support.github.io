@@ -1,38 +1,20 @@
 "use client";
-import React from "react";
-import Head from "next/head";
-import PerformanceMonitor from "./components/PerformanceMonitor";
-import Navigation from "./components/Navigation";
-import Footer from "./components/Footer";
+import React from 'react';
 
-const App: React.FC = () => {
+const App = () => {
   return (
-    <>
-      <Head><>
-</Head>
-<title>Zion Tech Group - AI & IT Solutions</title><>
-<//title>
-<meta name="description" content="Leading provider of AI and IT solutions for businesses worldwide." /><>
-</meta name="description" content="Leading provider of AI and IT solutions for businesses worldwide." />
-<meta property="og:type" content="website" /><>
-</meta property="og:type" content="website" />
-</Head><>
-<//Head>
-<div className="App"><>
-</div className="App">
-<PerformanceMonitor /><>
-</PerformanceMonitor />
-<Navigation /><>
-</Navigation />
-<main></main>
-          {/* Main content will be handled by Next.js routing */}
-        </main><>
-<//main>
-<Footer /><>
-</Footer />
-</div><>
-<//div>
-</><//>
+    <div className="min-h-screen bg-gray-100 py-8">
+      <div className="max-w-4xl mx-auto px-4">
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">
+          App
+        </h1>
+        <div className="bg-white rounded-lg shadow-md p-6">
+          <p className="text-gray-600">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
   );
 };
 

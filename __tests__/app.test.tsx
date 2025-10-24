@@ -3,11 +3,9 @@ import '@testing-library/jest-dom';
 
 // Mock the App component to avoid PerformanceObserver issues
 const MockApp = () => (
-  <div role="main"></div><>
-<//div>
-<h1>Test App</h1><>
-<//h1>
-</div><//div>
+  <div role=&quot;main&quot;></div>
+    <h1>Test App</h1>
+  </div>
 );
 
 describe('App Component', () => {

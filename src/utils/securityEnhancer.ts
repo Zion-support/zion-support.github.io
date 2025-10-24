@@ -1,28 +1,29 @@
-'use client';
+'use client'
+import { X } from 'lucide-react'
 import React from 'react'
 /**
  * Security Enhancer
  * Provides comprehensive security utilities and monitoring
  */
 interface SecurityConfig {
-  enableCSP: boolean;
-  enableHSTS: boolean;
-  enableXSSProtection: boolean;
-  enableCSRFProtection: boolean;
-  enableContentSecurityPolicy: boolean;
-  allowedOrigins: string[];
-  trustedDomains: string[];
+  enableCSP: boolean
+  enableHSTS: boolean
+  enableXSSProtection: boolean
+  enableCSRFProtection: boolean
+  enableContentSecurityPolicy: boolean
+  allowedOrigins: string[]
+  trustedDomains: string[]
 }
 interface SecurityMetrics {
-  blockedRequests: number;
-  suspiciousActivity: number;
-  securityViolations: number;
-  lastScanTime: number;
+  blockedRequests: number
+  suspiciousActivity: number
+  securityViolations: number
+  lastScanTime: number
 }
 class SecurityEnhancer {
-  private config: SecurityConfig;
-  private metrics: SecurityMetrics;
-  private eventListeners: Array<() => void> = [];
+  private config: SecurityConfig
+  private metrics: SecurityMetrics
+  private eventListeners: Array<() => void> = []
   constructor(config: Partial<SecurityConfig> = {}) {
     this.config = {
       enableCSP: true,
@@ -33,7 +34,7 @@ class SecurityEnhancer {
       allowedOrigins: ['https://zion.app', 'https://www.zion.app'],
       trustedDomains: ['zion.app', 'www.zion.app'],
       ...config
-    };
+    }
     this.metrics = {
       blockedRequests: 0,
       suspiciousActivity: 0,
@@ -105,15 +106,15 @@ class SecurityEnhancer {
     this.monitorNetworkRequests()
   }
   private monitorConsoleAccess(): void {
-    const originalConsole = { ...console } as any;
+    const originalConsole = { ...console } as any
     // Override console methods to detect debugging
-    const methods = ['log', 'warn', 'error', 'info'] as const;
+    const methods = ['log', 'warn', 'error', 'info'] as const
     methods.forEach(method => {
       (console as any)[method] = (...args: unknown[]) => {
-        this.metrics.suspiciousActivity++;
-        (originalConsole as any)[method](...args);
+        this.metrics.suspiciousActivity++
+        (originalConsole as any)[method](...args)
       }
-    });
+    })
   }
   private monitorDOMManipulation(): void {
     const observer = new MutationObserver((mutations) => {
@@ -151,7 +152,7 @@ class SecurityEnhancer {
   private isAllowedOrigin(url: string): boolean {
     try {
       const urlObj = new URL(url)
-      return this.config.allowedOrigins.some(origin => 
+      return this.config.allowedOrigins.some(origin =>
         urlObj.origin === origin || urlObj.hostname.endsWith(origin.replace('https://', ''))
       )
     } catch {
@@ -191,7 +192,7 @@ class SecurityEnhancer {
         } catch {
           return false
         }
-      case 'text':</><//>
+      case 'text':
         return input.length > 0 && input.length < 1000
       default:
         return false
@@ -235,3 +236,4 @@ Security Report:
 export const securityEnhancer = new SecurityEnhancer()
 // Export class for custom instances
 export { SecurityEnhancer, type SecurityConfig, type SecurityMetrics }
+>>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d

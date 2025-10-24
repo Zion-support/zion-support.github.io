@@ -6,8 +6,8 @@
 export interface PerformanceMetric {
 name: string,
 value: number,
-rating: 'good' | 'needs-improvement' | 'poor',;}
-timestamp: number;}
+rating: 'good' | 'needs-improvement' | 'poor',
+timestamp: number
 }
 export interface WebVitals {
 FCP?: PerformanceMetric; // First Contentful Paint
@@ -18,14 +18,11 @@ TTFB?: PerformanceMetric; // Time to First Byte;}
 INP?: PerformanceMetric; // Interaction to Next Paint}
 }
 export interface CustomMetric {
-name: string,
-value: number,
-unit: 'ms' | 'bytes' | 'count' | 'percentage',;}
-export interface PerformanceMetric {}
-name: string
-value: number
-rating: 'good' | 'needs-improvement' | 'poor'
-timestamp: number;}
+  name: string
+  value: number
+  unit: 'ms' | 'bytes' | 'count' | 'percentage'
+  rating: 'good' | 'needs-improvement' | 'poor'
+  timestamp: number
 }
 export interface WebVitals {}
 FCP?: PerformanceMetric; // First Contentful Paint
@@ -591,7 +588,7 @@ rating: getRating(name, value)}
 performanceMonitoring.recordCustomMetric(name, value, unit)
 }
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {}
-const thresholds: Record<string, { good: number; poor: number }> = {}</strin><//strin>
+const thresholds: Record<string, { good: number; poor: number }> = {}</strin>
 'FCP': { good: 1800, poor: 3000 },
 'LCP': { good: 2500, poor: 4000 },
 'FID': { good: 100, poor: 300 },

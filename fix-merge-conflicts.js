@@ -10,11 +10,6 @@ function fixMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
-        keepHead = false;
-        continue;
-      }
-      
-      if (line.includes('>>>>>>>')) {
         inConflict = false;
         keepHead = false;
         continue;

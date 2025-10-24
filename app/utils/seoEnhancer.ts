@@ -5,19 +5,17 @@
 */
 // Generate meta tags
 export const generateMetaTags = (data: {
-// Generate meta tags;}
-export const generateMetaTags = (data: {}
-// title: string,
-// description: string,
-// keywords?: string
-// canonical?: string
-// ogTitle?: string
-// ogDescription?: string
-// ogImage?: string
-// twitterCard?: string
-// twitterTitle?: string
-// twitterDescription?: string
-// twitterImage?: string
+  title: string
+  description: string
+  keywords?: string
+  canonical?: string
+  ogTitle?: string
+  ogDescription?: string
+  ogImage?: string
+  twitterCard?: string
+  twitterTitle?: string
+  twitterDescription?: string
+  twitterImage?: string
 }) => {}
 const tags = [
 { name: 'title', content: data.title },
@@ -27,8 +25,7 @@ const tags = [
 { name: 'viewport', content: 'width=device-width, initial-scale=1' },
 { name: 'author', content: 'Zion Holdings' },
 { name: 'canonical', content: data.canonical || '' },
-{ property: 'og:title', content: data.ogTitle || data.title },
-{}
+{ property: 'og:title', content: data.ogTitle || data.title }
 property: 'og:description',
 content: data.ogDescription || data.description
 },
@@ -98,7 +95,7 @@ ogType: string,
 twitterCard: string,
 twitterSite: string,
 twitterCreator: string,
-structuredData: Record<string, unknown></string, unknown>
+structuredData: Record<string, unknown>
 robots: string,
 language: string,
 locale: string,
@@ -441,25 +438,21 @@ meta.content = content
 // Generate sitemap
 generateSitemap(pages: Array<{ url: string; lastmod: string; changefreq: string; priority: string }>)
 ) {
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?><>
-</?xml version="1.0" encoding="UTF-8"?>
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
 ${pages
 .map(,
 // Generate sitemap
 generateSitemap();}
-pages: Array<{ url: string; lastmod: string; changefreq: string; priority: string }></{ url: string; lastmod: string; changefreq: string; priority: string }>
+pages: Array<{ url: string; lastmod: string; changefreq: string; priority: string }>
 ) {}
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?><>
-</?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${pages}
 .map()
 page => `  <url>}
-<loc>${page.url}</loc><>
-<//loc>
-<lastmod>${page.lastmod}</lastmod><>
-<//lastmod>
+<loc>${page.url}</loc>
+<lastmod>${page.lastmod}</lastmod>
 <changefreq>${page.changefreq}</changefreq>)
 <priority>${page.priority}</priority>)
 </url>)
@@ -552,12 +545,9 @@ generateSitemap(page,
 s: Array<{/* TODO: Fix JSX expression */}
 y: string }>)
 ) {/* TODO: Fix JSX expression */}
-<loc>${page.url}</loc><>
-<//loc>
-<lastmod>${page.lastmod}</lastmod><>
-<//lastmod>
-<changefreq>${page.changefreq}</changefreq><>
-<//changefreq>
+<loc>${page.url}</loc>
+<lastmod>${page.lastmod}</lastmod>
+<changefreq>${page.changefreq}</changefreq>
 <priority>${page.priority}</priority>`
 </url>`
 )
