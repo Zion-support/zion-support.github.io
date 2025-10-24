@@ -182,6 +182,7 @@ export default function Footer() {
               </Link>
             ))}
           </div>
+>>>>>>> origin/main
         </div>
       </div>
     </footer>
