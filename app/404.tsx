@@ -1,8 +1,8 @@
+"use client"
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react'
-"use client"
 const NotFound = () => {
   return (
     <>
@@ -21,7 +21,7 @@ const NotFound = () => {
             </div>
           </div>
           {/* Error Message */}
-          <h1 className="text-4xl md: text-5xl font-bold text-white mb-6">Page Not Found</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Page Not Found</h1>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
             Oops! The page you're looking for seems to have vanished into the digital void. Don't worry, even our AI can't predict everything!
           </p>
@@ -34,9 +34,9 @@ const NotFound = () => {
             <p className="text-gray-300 text-sm mb-4">Try searching for one of these popular pages: </p>
             <div className="flex flex-wrap gap-2 justify-center">
               {[
-                { name: "Home", path: "/" }
-                { name: "About", path: "/about" }
-                { name: "Services", path: "/services" }
+                { name: "Home", path: "/" },
+                { name: "About", path: "/about" },
+                { name: "Services", path: "/services" },
                 { name: "Contact", path: "/contact" }
               ].map((item, index) => (
                 <Link
