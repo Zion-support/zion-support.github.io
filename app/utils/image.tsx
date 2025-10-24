@@ -6,7 +6,9 @@ interface ImageProps {
 
   src: string,
 alt: string}
-interface ImageProps {};
+interface ImageProps {
+  // Add properties here
+}
 src: string,
     alt: string
 width?: number
@@ -141,10 +143,10 @@ onError={handleError}
 
 {...props}
 >  </div>
-<span className="text-gray-500text-sm" /><span className="sr-only">Screen reader: </span>Failed to load image</span>
+<span className="text-gray-500text-sm"   /><span className="sr-only">Screen reader: </span>Failed to load image</span>
   </div>
 return(<img
-return (<img />
+return (<img  />
 src={src};alt={alt};width={width};height={height};className={className};style={imageStyle};sizes={sizes};loading={priority ? 'eager' : 'lazy'};onLoad={handleLoad};onError={handleError};{...props})
 >)</img>
 

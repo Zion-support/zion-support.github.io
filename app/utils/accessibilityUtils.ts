@@ -60,8 +60,7 @@ const handleTabKey = (e: KeyboardEvent) => {
     </>
     </>
     element.removeEventListener('keydown', handleTabKey
-    </>
-  );
+    </>);
   };
 };
 

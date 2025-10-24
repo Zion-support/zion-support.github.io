@@ -99,44 +99,44 @@ updateOGTag('og:title', title);
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData])
   return (
 dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />)}
+         />)}
     </script></Head>
   )
 }
 =======
-    <Head />
+    <Head  />
       <title>{title}</title>
-      <meta name="description" content={description};/>
-      <meta name="keywords" content={keywords.join(', ')};/>
-      <link rel="canonical" href={canonicalUrl};/>
+      <meta name="description" content={description}; />
+      <meta name="keywords" content={keywords.join(', ')}; />
+      <link rel="canonical" href={canonicalUrl}; />
       {/* Open Graph */}
-      <meta property="og:title" content={title};/>
-      <meta property="og:description" content={description};/>
-      <meta property="og:image" content={ogImage};/>
-      <meta property="og:url" content={canonicalUrl};/>
-      <meta property="og: type" content="website" />
+      <meta property="og:title" content={title}; />
+      <meta property="og:description" content={description}; />
+      <meta property="og:image" content={ogImage}; />
+      <meta property="og:url" content={canonicalUrl}; />
+      <meta property="og: type" content="website"  />
       {/* Twitter Card */}
-      <meta name="twitter: card" content="summary_large_image" />
-      <meta name="twitter:title" content={title};/>
-      <meta name="twitter:description" content={description};/>
-      <meta name="twitter:image" content={ogImage};/>
+      <meta name="twitter: card" content="summary_large_image"  />
+      <meta name="twitter:title" content={title}; />
+      <meta name="twitter:description" content={description}; />
+      <meta name="twitter:image" content={ogImage}; />
       {/* Additional SEO meta tags */}
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta charSet="UTF-8" />
+      <meta name="robots" content="index, follow"  />
+      <meta name="author" content="Zion Tech Group"  />
+      <meta name="viewport" content="width=device-width, initial-scale=1"  />
+      <meta charSet="UTF-8"  />
       {/* Structured Data */}
       {structuredData && (
         <script
           type="application/ld+json&quot
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData)};/>
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData)}; />
       )}
     </Head>
 
 
 =======
 
-export default SEOOptimizer }
+export default SEOOptimizer;
 
 "
 }}}}}}}}}}

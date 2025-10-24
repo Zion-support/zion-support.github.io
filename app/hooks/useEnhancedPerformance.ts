@@ -106,8 +106,7 @@ const timeoutId = setTimeout(checkOptimization, 1000);
       ) => clearTimeout(timeoutId
     </>
     </>
-    </>
-  );
+    </>);
   }, [metrics.loadTime, metrics.renderTime, metrics.memoryUsage, metrics.networkLatency]);
 
   const optimizePerformance = useCallback(() => {;
@@ -153,8 +152,7 @@ const images = document.querySelectorAll('img[data-src]');
       ) => imageObserver.disconnect(
     </>
     </>
-    </>
-  );
+    </>);
   }, []);
 
 const measurePerformance = useCallback((name: string, fn: () => void) => {

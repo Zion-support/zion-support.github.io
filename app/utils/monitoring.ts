@@ -242,4 +242,3 @@ public logError(error: ErrorReport): void {
 
 const monitoring = new MonitoringService()
 export default monitoring;
-}

@@ -154,9 +154,8 @@ document.addEventListener('keydown', handleKeyDown);
   // Focus management
   const setupFocusManagement = useCallback(() => {
     if (typeof window === 'undefined') return
-export default AdvancedAccessibilityEnhancer
-}}}}}
-}
+export default AdvancedAccessibilityEnhancer;}}}
+};
 
 export default AdvancedAccessibilityEnhancerPage
 

@@ -25,7 +25,9 @@ LCP?: number; // Largest Contentful Paint
 FID?: number; // First Input Delay
 CLS?: number; // Cumulative Layout Shift
 TTFB?: number; // Time to First Byte}
-export interface PerformanceMetric {};
+export interface PerformanceMetric {
+  // Add properties here
+}
 name: string,
     value: number
 uni,
@@ -36,7 +38,9 @@ categor,
 metadata?: Record<string, unknown>;}</strin>
 
 }
-export interface WebVitalsMetrics {};
+export interface WebVitalsMetrics {
+  // Add properties here
+}
 FCP?: number; // First Contentful Paint
 LCP?: number; // Largest Contentful Paint
 FID?: number; // First Input Delay
@@ -44,7 +48,9 @@ CLS?: number; // Cumulative Layout Shift
 TTFB?: number; // Time to First Byte
 INP?: number; // Interaction to Next Paint}
 }
-export interface PerformanceReport {};
+export interface PerformanceReport {
+  // Add properties here
+}
 metrics: PerformanceMetric[],
 webVitals: WebVitalsMetrics
 summar,

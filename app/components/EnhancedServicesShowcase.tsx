@@ -7,5 +7,4 @@ const EnhancedServicesShowcase: React.FC = () => {
   const services = [;
 
 export default EnhancedServicesShowcase;
-}
 

@@ -71,4 +71,3 @@ if (!isVisible) return;
 
 
 export default AnimatedCounter;
-}

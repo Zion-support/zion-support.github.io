@@ -10,12 +10,11 @@ interface SEOHeadProps {
 }
 const SEOHeadWrapper: React.FC<SEOHeadProps> = ({ title, description, keywords }) => {
   return (</SEOHeadProps>
-    <Helmet />
+    <Helmet  />
       <title>{title}</title>
-      <meta name="description" content={description} / />
-      <meta name="keywords" content={keywords.join(', ')} / />
+      <meta name="description" content={description}      />
+      <meta name="keywords" content={keywords.join(', ')}      />
     </Helmet>
 
-export default SEOHeadWrapper
-}
+export default SEOHeadWrapper;
 

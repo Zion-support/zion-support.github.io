@@ -32,6 +32,5 @@ const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({ class
       <h2>Accessibility Components</h2>
       <p>Accessibility components for enhanced user experience.</p>
     </div>
-export default AccessibilityComponents
-}
+export default AccessibilityComponents;
 

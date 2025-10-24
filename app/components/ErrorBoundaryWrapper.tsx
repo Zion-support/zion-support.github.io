@@ -2,9 +2,7 @@
 import React from 'react';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-interface Props {
-children: ReactNode;
-}
+interface Props { children: ReactNode }
 
 interface State {
   hasErro,
@@ -48,7 +46,6 @@ if(this.state.hasError) {
 
     return this.props.children;
   }
-}
+};
 
-export default ErrorBoundaryWrapper;
-}}}
+export default ErrorBoundaryWrapper;}

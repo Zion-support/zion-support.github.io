@@ -68,7 +68,7 @@ $3
 =======
   consttrackEvent= (
     eventName: string,
-    parameters?: Record<string, unknown />
+    parameters?: Record<string, unknown  />
   ) => {
     if(typeof, window !== "undefined" && window.gtag) {
       window.gtag("event", eventName, parameters)}
@@ -81,12 +81,10 @@ trackEvent,
     trackPageView
 };
   return (
-    <AnalyticsContext.Provider value={value}; />
+    <AnalyticsContext.Provider value={value};  />
       {children}
     </AnalyticsContext.Provider>
 
 
-export default AnalyticsProvider
-
-}}}}}}}}
+export default AnalyticsProvider;}}}}}}
 

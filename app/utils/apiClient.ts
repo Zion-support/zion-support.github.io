@@ -70,7 +70,7 @@ class ApiClient {
   async post<T>(
     endpoint: string,
 data?: any,</T>
-    headers?: Record<string, string />
+    headers?: Record<string, string  />
   ): Promise<ApiResponse<T>> {</ApiResponse>
 
     return this.request<T>(endpoint, {
@@ -83,7 +83,7 @@ data?: any,</T>
   async put<T>(
     endpoint: string,
 data?: any,</T>
-    headers?: Record<string, string />
+    headers?: Record<string, string  />
   ): Promise<ApiResponse<T>> {</ApiResponse>
 
     return this.request<T>(endpoint, {

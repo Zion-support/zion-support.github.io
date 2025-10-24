@@ -62,8 +62,7 @@ const observe = useCallback()
       }
       return (
     <>
-      ) => {}
-    </>
+      ) => </>
     </>
     }
     [observer]
@@ -301,6 +300,6 @@ const performanceOptimizations = {
   preloadResource
   preloadCriticalResources
   useBundleSizeMonitoring
-}
+};
+
 export default performanceOptimizations;
-}

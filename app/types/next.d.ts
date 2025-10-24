@@ -16,7 +16,7 @@ title?: string
   metadataBase?: URL;
   alternates?: {
 canonical?: string
-    languages?: Record<string, string />
+    languages?: Record<string, string  />
 }
   openGraph?: {
   title?: string
@@ -58,7 +58,7 @@ canonical?: string
 google?: string
     yandex?: string
     yahoo?: string
-    other?: Record<string, string />
+    other?: Record<string, string  />
 }
 }
 export interface MetadataRoute {
@@ -76,18 +76,22 @@ export interface MetadataRouteSitemap extends MetadataRoute {
   priority?: number,
 }
 // Custom Next.js types
-export interface NextPageProps {}
-  params: { [ke,
+export interface NextPageProps {
+  // Add properties here
+}params: { [ke,
   y: string]: string };
   searchParams: { [ke,
   y: string]: string | string[] | undefined }
 }
 // API route types
-export interface ApiRouteHandler {}</string>
+export interface ApiRouteHandler {
+  // Add properties here
+}</string>
   (req: Request): Promise<Response>};
 // Server components types
-export interface ServerComponentProps {}
-  params: { [ke,
+export interface ServerComponentProps {
+  // Add properties here
+}params: { [ke,
   y: string]: string };
   searchParams: { [ke,
   y: string]: string | string[] | undefined }
@@ -103,20 +107,22 @@ className?: string}
 };
 // Route handlers
 export interface RouteHandler {</Response>
-  GET?: (req: Request) => Promise<Response />
-  POST?: (req: Request) => Promise<Response />
+  GET?: (req: Request) => Promise<Response  />
+  POST?: (req: Request) => Promise<Response  />
   PUT?: (req: Request) => Promise<Response>
   DELETE?: (re,</Response>
   q: Request) => Promise<Response>}</Response>
   PATCH?: (req: Request) => Promise<Response>};
 // Dynamic route types
-export interface DynamicRoute {}
-  params: { [ke,
+export interface DynamicRoute {
+  // Add properties here
+}params: { [ke,
   y: string]: string };
 }
 // Static generation types
-export interface StaticProps {}
-  props: { [ke,
+export interface StaticProps {
+  // Add properties here
+}props: { [ke,
   y: string]: any };
   revalidate?: number
   notFound?: boolean
@@ -129,11 +135,13 @@ revalidate: number
   tags?: string[]}
 };
 // Edge runtime types
-export interface EdgeRuntime {}
-  runtime: 'edge'};
+export interface EdgeRuntime {
+  // Add properties here
+}runtime: 'edge'};
 // Node.js runtime types
-export interface NodeRuntime {}
-  runtime: 'nodejs'};
+export interface NodeRuntime {
+  // Add properties here
+}runtime: 'nodejs'};
 
 // Extend Next.js types
 declare module 'next' {

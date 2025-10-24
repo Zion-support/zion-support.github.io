@@ -92,7 +92,7 @@ className="w-6h-6text-red-600"
 fill="none"
 stroke="currentColor"
 viewBox="0 0 24 24"
- />
+  />
 <path
 
 strokeLinecap="round"
@@ -101,7 +101,7 @@ strokeWidth = {
 2
 };
 d="M6 18L18 6M6 6l12 12"
-/ />
+  />
 </svg>
 
 
@@ -142,7 +142,7 @@ className="w-6h-6text-yellow-600"
 fill="none"
 stroke="currentColor"
 viewBox="0 0 24 24"
- />
+  />
 <path
 
 strokeLinecap="round"
@@ -151,14 +151,14 @@ strokeWidth = {
 2
 };
 d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414"
-/ />
+  />
 </svg>
 </div>
 <h2 className="mt-4 text-2xl font-boldtext-centertext-gray-900">Connection Issue</h2>
 <p className="mt-2text-centertext-gray-600">
             Unable to connect to the server. Please check your internet connection and try again.
           </p>
-<div className="mt-6" />
+<div className="mt-6"   />
 <button
 onClick = {
 resetError
@@ -173,8 +173,8 @@ className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700t
 */
 function NotFoundFallback(): JSX.Element {
 return (
-<div className="min-h-screen flex items-center justify-centerbg-gray-50px-4" />
-<div className="max-w-mdw-fulltext-center" />
+<div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"   />
+<div className="max-w-mdw-fulltext-center"   />
 <h1 className="text-6xlfont-boldtext-gray-900">
             404
           </h1>
@@ -182,7 +182,7 @@ return (
 <p className="mt-2text-gray-600">
             The page you're looking for doesn't exist or has been moved.
           </p>
-<div className="mt-6 flexgap-4justify-center" />,
+<div className="mt-6 flexgap-4justify-center"   />,
 <button,
 onClick={() =>(window.location.href = '/')}</button>
 className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700transition-colors">
@@ -229,7 +229,8 @@ timestam,
   p: new Date().toISOString(),
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'
 ur,
-  l: typeof window !== 'undefined' ? window.location.href : 'unknown'}
+  l: typeof window !== 'undefined' ? window.location.href : 'unknown'};
+
 export default getErrorBoundaryConfig</string>
 }}}}}}}
 

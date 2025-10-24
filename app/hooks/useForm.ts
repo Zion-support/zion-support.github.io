@@ -1,34 +1,34 @@
 import { useState, useCallback } from "react";
 
-interface FormState<T /> {
+interface FormState<T  /> {
 data: T;
   isSubmitting: boolean;
   submitStatus: "idle" | "success" | "error";
   error,</T>
-  s: Partial<Record<keyof T, string />>;
+  s: Partial<Record<keyof T, string  />>;
 }
 </Record>
-interface UseFormOptions<T /> {
+interface UseFormOptions<T  /> {
   initialData: T;</T>
-  onSubmit: (data: T) => Promise<void />
+  onSubmit: (data: T) => Promise<void  />
   validate?: (dat,</void>
-  a: T) => Partial<Record<keyof T, string />>;
+  a: T) => Partial<Record<keyof T, string  />>;
 }
 </Record>
-export function useForm<T extends Record<string, any />>({
+export function useForm<T extends Record<string, any  />>({
   initialData,
   onSubmit,
   validate,</T>
-}: UseFormOptions<T />) {</T>
+}: UseFormOptions<T  />) {</T>
 
-  const [formState, setFormState] = useState<FormState<T />>({
+  const [formState, setFormState] = useState<FormState<T  />>({
     data: initialData,
     isSubmitting: false,
     submitStatus: "idle",
     errors: {},
   });
 </FormState>
-  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement />) => {;
+  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement  />) => {;
 
     const { name, value } = e.target;
     setFormState(prev => ({

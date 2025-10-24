@@ -28,9 +28,9 @@ page_location: window.location.href});
   );}
 // Extend Window interface for gtag
 declare global {
-interface Window {}
-    gtag: (...arg,
+interface Window {
+  // Add properties here
+}gtag: (...arg,
   s: any[]) => void;};
 export default Analytics;
-}
 

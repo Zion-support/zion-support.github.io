@@ -3,5 +3,5 @@ import React from 'react';
 </div>
         </div>
       </section>
-export default PerformanceEnhancerPage }
+export default PerformanceEnhancerPage;
 

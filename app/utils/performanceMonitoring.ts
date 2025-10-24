@@ -33,7 +33,9 @@ value: number
   t: 'ms' | 'bytes' | 'count' | 'percentage',
     rating: 'good' | 'needs-improvement' | 'poor'}
   timestamp: number};
-export interface WebVitals {};
+export interface WebVitals {
+  // Add properties here
+}
 
 FCP?: PerformanceMetric; // First Contentful Paint
 LCP?: PerformanceMetric; // Largest Contentful Paint
@@ -42,7 +44,9 @@ CLS?: PerformanceMetric; // Cumulative Layout Shift
 TTFB?: PerformanceMetric; // Time to First Byte
 INP?: PerformanceMetric; // Interaction to Next Paint}
 }
-export interface CustomMetric {};
+export interface CustomMetric {
+  // Add properties here
+}
 name: string,
 value: number
 uni,
@@ -615,7 +619,9 @@ Percentage = 'percentage'}
 interface MetricData {
   // Simple metrics structure for testing};
 };
-interface MetricData {};
+interface MetricData {
+  // Add properties here
+}
 values: number[],
 count: number
 averag,

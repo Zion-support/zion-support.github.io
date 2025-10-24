@@ -42,4 +42,3 @@ const FuturisticHeroPage: React.FC = () => {
     'Gain competitive advantage with advanced technology';
 
 export default FuturisticHeroPage;
-}

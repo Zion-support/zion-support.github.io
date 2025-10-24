@@ -76,13 +76,13 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Github className="w-5 h-5" />
+                <Github className="w-5 h-5"   />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="w-5 h-5"   />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter className="w-5 h-5" />
+                <Twitter className="w-5 h-5"   />
               </a>
 </div>
 
@@ -90,7 +90,7 @@ const Footer: React.FC = () => {
           {/* AI Services */}
           <div className="space-y-4">
 <h3 className="text-lg font-semibold flex items-center">
-              <Brain className="w-5 h-5 mr-2 text-cyan-400" />
+              <Brain className="w-5 h-5 mr-2 text-cyan-400"   />
               AI Services
             </h3>
             <ul className="space-y-2">
@@ -100,7 +100,7 @@ const Footer: React.FC = () => {
                     href={service.url}
                     className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
                   >
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"   />
 
                     {service.name}
                   </Link>
@@ -111,7 +111,7 @@ const Footer: React.FC = () => {
           {/* IT Services */}
           <div className="space-y-4">
 <h3 className="text-lg font-semibold flex items-center">
-              <Cloud className="w-5 h-5 mr-2 text-purple-400" />
+              <Cloud className="w-5 h-5 mr-2 text-purple-400"   />
               IT Services
             </h3>
             <ul className="space-y-2">
@@ -121,7 +121,7 @@ const Footer: React.FC = () => {
                     href={service.url}
                     className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
                   >
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"   />
 
                     {service.name}
                   </Link>
@@ -167,15 +167,15 @@ const Footer: React.FC = () => {
         <div className="border-t border-slate-800 mt-12 pt-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex items-center space-x-3">
-              <Mail className="w-5 h-5 text-cyan-400" />
+              <Mail className="w-5 h-5 text-cyan-400"   />
               <span className="text-gray-400">contact@ziontechgroup.com</span>
               </div>
             <div className="flex items-center space-x-3">
-              <Phone className="w-5 h-5 text-cyan-400" />
+              <Phone className="w-5 h-5 text-cyan-400"   />
               <span className="text-gray-400">+1 (555) 123-4567</span>
               </div>
             <div className="flex items-center space-x-3">
-              <MapPin className="w-5 h-5 text-cyan-400" />
+              <MapPin className="w-5 h-5 text-cyan-400"   />
               <span className="text-gray-400">San Francisco, CA</span>
               </div>
             </div>
