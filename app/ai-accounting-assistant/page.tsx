@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+
+export const dynamic = 'force-dynamic';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Calculator, BarChart, FileText, Shield, Zap, CheckCircle } from 'lucide-react';
@@ -16,14 +17,7 @@ const AIAccountingAssistantPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
-        <title>AI Accounting Assistant | Zion Tech Group - Intelligent Financial Management</title>
-        <meta name="description" content="Streamline your accounting with AI-powered financial management tools. Automated bookkeeping, tax preparation, and financial analytics." />
-        <meta name="keywords" content="AI accounting, financial management, bookkeeping automation, tax preparation, accounting software" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         {/* Hero Section */}
@@ -74,7 +68,6 @@ const AIAccountingAssistantPage: React.FC = () => {
 
         <Footer />
       </div>
-    </>
   );
 };
 

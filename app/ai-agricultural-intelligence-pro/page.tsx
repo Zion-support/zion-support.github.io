@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+
+export const dynamic = 'force-dynamic';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
@@ -42,14 +43,7 @@ const AIAgriculturalIntelligenceProPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
-        <title>AI Agricultural Intelligence Pro - Zion Tech Group | Smart Farming Solutions</title>
-        <meta name="description" content="Revolutionize your agricultural operations with AI-powered intelligence. Advanced analytics, predictive modeling, and smart farming solutions for modern agriculture." />
-        <meta name="keywords" content="AI agriculture, smart farming, agricultural intelligence, precision farming, crop analytics, farm management" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         {/* Hero Section */}
@@ -140,7 +134,6 @@ const AIAgriculturalIntelligenceProPage: React.FC = () => {
 
         <Footer />
       </div>
-    </>
   );
 };
 

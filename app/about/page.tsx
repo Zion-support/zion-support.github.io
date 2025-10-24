@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+
+export const dynamic = 'force-dynamic';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Brain, Shield, Globe, Users } from 'lucide-react';
@@ -38,14 +39,7 @@ const AboutPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
-        <title>About Us - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and team. We're dedicated to delivering cutting-edge AI and IT solutions that transform businesses." />
-        <meta name="keywords" content="about us, AI solutions, IT services, technology company, digital transformation" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         {/* Hero Section */}
@@ -100,7 +94,6 @@ const AboutPage: React.FC = () => {
 
         <Footer />
       </div>
-    </>
   );
 };
 
