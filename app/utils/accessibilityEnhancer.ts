@@ -1,46 +1,260 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+/**
+ * Accessibility Enhancement Utilities
+ * Provides tools to improve web accessibility
+ */
 
-const AccessibilityEnhancerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-    
-    focusableElements[nextIndex]?.focus();
-    event.preventDefault();
+export interface AccessibilityOptions {
+  enableKeyboardNavigation?: boolean;
+  enableScreenReaderSupport?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
+  enableAriaLabels?: boolean;
+}
+
+export class AccessibilityEnhancer {
+  private options: AccessibilityOptions;
+  private focusableElements: HTMLElement[] = [];
+  private currentFocusIndex = 0;
+
+  constructor(options: AccessibilityOptions = {}) {
+    this.options = {
+      enableKeyboardNavigation: true,
+      enableScreenReaderSupport: true,
+      enableHighContrast: false,
+      enableFocusManagement: true,
+      enableAriaLabels: true,
+      ...options
+    };
+
+    this.initialize();
   }
-  
-  /**
-   * Handle escape key
-   */
+
+  private initialize(): void {
+    if (typeof window === 'undefined') return;
+
+    if (this.options.enableKeyboardNavigation) {
+      this.setupKeyboardNavigation();
+    }
+
+    if (this.options.enableScreenReaderSupport) {
+      this.setupScreenReaderSupport();
+    }
+
+    if (this.options.enableHighContrast) {
+      this.setupHighContrast();
+    }
+
+    if (this.options.enableFocusManagement) {
+      this.setupFocusManagement();
+    }
+
+    if (this.options.enableAriaLabels) {
+      this.setupAriaLabels();
+    }
+  }
+
+  private setupKeyboardNavigation(): void {
+    document.addEventListener('keydown', this.handleKeyDown.bind(this));
+  }
+
+  private setupScreenReaderSupport(): void {
+    // Add screen reader announcements
+    this.announceToScreenReader('Page loaded successfully');
+  }
+
+  private setupHighContrast(): void {
+    // Add high contrast styles
+    const style = document.createElement('style');
+    style.textContent = `
+      .high-contrast {
+        filter: contrast(150%) brightness(120%);
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
+  private setupFocusManagement(): void {
+    this.updateFocusableElements();
+    
+    // Update focusable elements when DOM changes
+    const observer = new MutationObserver(() => {
+      this.updateFocusableElements();
+    });
+    
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+  }
+
+  private setupAriaLabels(): void {
+    // Add ARIA labels to interactive elements
+    const interactiveElements = document.querySelectorAll('button, input, select, textarea, a');
+    interactiveElements.forEach(element => {
+      if (!element.getAttribute('aria-label') && !element.textContent?.trim()) {
+        element.setAttribute('aria-label', 'Interactive element');
+      }
+    });
+  }
+
+  private updateFocusableElements(): void {
+    this.focusableElements = Array.from(
+      document.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      )
+    ).filter(element => {
+      const style = window.getComputedStyle(element);
+      return style.display !== 'none' && style.visibility !== 'hidden';
+    }) as HTMLElement[];
+  }
+
+  private handleKeyDown(event: KeyboardEvent): void {
+    if (!this.options.enableKeyboardNavigation) return;
+
+    switch (event.key) {
+      case 'Tab':
+        this.handleTabNavigation(event);
+        break;
+      case 'Escape':
+        this.handleEscapeKey(event);
+        break;
+      case 'Enter':
+      case ' ':
+        this.handleActivation(event);
+        break;
+    }
+  }
+
+  private handleTabNavigation(event: KeyboardEvent): void {
+    if (event.shiftKey) {
+      this.focusPreviousElement();
+    } else {
+      this.focusNextElement();
+    }
+  }
+
+  private focusNextElement(): void {
+    this.currentFocusIndex = (this.currentFocusIndex + 1) % this.focusableElements.length;
+    this.focusableElements[this.currentFocusIndex]?.focus();
+  }
+
+  private focusPreviousElement(): void {
+    this.currentFocusIndex = this.currentFocusIndex === 0 
+      ? this.focusableElements.length - 1 
+      : this.currentFocusIndex - 1;
+    this.focusableElements[this.currentFocusIndex]?.focus();
+  }
+
   private handleEscapeKey(event: KeyboardEvent): void {
     // Close any open modals or dropdowns
-    const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');
-    modals.forEach(modal => {
-      const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;
-      closeButton?.click();
-    });
-    // Close any open menus
+    const activeElement = document.activeElement as HTMLElement;
+    if (activeElement && activeElement.getAttribute('aria-expanded') === 'true') {
+      activeElement.click();
+    }
+  }
+
+  private handleActivation(event: KeyboardEvent): void {
+    const activeElement = document.activeElement as HTMLElement;
+    if (activeElement && activeElement.tagName === 'BUTTON') {
+      activeElement.click();
+    }
+  }
+
+  private announceToScreenReader(message: string): void {
+    const announcement = document.createElement('div');
+    announcement.setAttribute('aria-live', 'polite');
+    announcement.setAttribute('aria-atomic', 'true');
+    announcement.className = 'sr-only';
+    announcement.textContent = message;
+    
+    document.body.appendChild(announcement);
+    
+    setTimeout(() => {
+      document.body.removeChild(announcement);
+    }, 1000);
+  }
+
+  public enhanceElement(element: HTMLElement): void {
+    if (!element) return;
+
+    // Add ARIA attributes
+    if (this.options.enableAriaLabels) {
+      this.addAriaAttributes(element);
+    }
+
+    // Add keyboard support
+    if (this.options.enableKeyboardNavigation) {
+      this.addKeyboardSupport(element);
+    }
+  }
+
+  private addAriaAttributes(element: HTMLElement): void {
+    if (element.tagName === 'BUTTON' && !element.getAttribute('aria-label')) {
+      element.setAttribute('aria-label', element.textContent || 'Button');
+    }
+
+    if (element.tagName === 'INPUT' && !element.getAttribute('aria-label')) {
+      const placeholder = element.getAttribute('placeholder');
+      if (placeholder) {
+        element.setAttribute('aria-label', placeholder);
+      }
+    }
+  }
+
+  private addKeyboardSupport(element: HTMLElement): void {
+    element.setAttribute('tabindex', '0');
+  }
+
+  public destroy(): void {
+    // Cleanup event listeners and observers
+    document.removeEventListener('keydown', this.handleKeyDown.bind(this));
+  }
+}
+
+// Utility functions
+export const accessibilityUtils = {
+  /**
+   * Check if element is visible to screen readers
+   */
+  isVisibleToScreenReader: (element: HTMLElement): boolean => {
+    const style = window.getComputedStyle(element);
+    return style.display !== 'none' && 
+           style.visibility !== 'hidden' && 
+           element.getAttribute('aria-hidden') !== 'true';
+  },
+
+  /**
+   * Get accessible name for element
+   */
+  getAccessibleName: (element: HTMLElement): string => {
+    return element.getAttribute('aria-label') || 
+           element.getAttribute('aria-labelledby') ||
+           element.textContent?.trim() ||
+           element.getAttribute('alt') ||
+           element.getAttribute('title') ||
+           'Unlabeled element';
+  },
+
+  /**
+   * Check if element is focusable
+   */
+  isFocusable: (element: HTMLElement): boolean => {
+    const tabIndex = element.getAttribute('tabindex');
+    if (tabIndex === '-1') return false;
+    
+    const style = window.getComputedStyle(element);
+    return style.display !== 'none' && 
+           style.visibility !== 'hidden' &&
+           (element.tagName === 'BUTTON' ||
+            element.tagName === 'A' ||
+            element.tagName === 'INPUT' ||
+            element.tagName === 'SELECT' ||
+            element.tagName === 'TEXTAREA' ||
+            tabIndex !== null);
+  }
+};
+
+export default AccessibilityEnhancer;
     const menus = document.querySelectorAll('[role="menu"][aria-expanded="true"]');
     menus.forEach(menu => {
       const trigger = document.querySelector(`[aria-controls="${menu.id}"]`) as HTMLElement;

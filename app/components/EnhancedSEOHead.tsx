@@ -1,28 +1,36 @@
 'use client';
-import {Helmet} from 'lucide-react';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
+
 interface EnhancedSEOHeadProps {
-  className?: string
+  title?: string;
+  description?: string;
+  keywords?: string;
+  className?: string;
 }
-const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ className = '' }) => {
+
+const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ 
+  title = 'Zion Tech Group',
+  description = 'Advanced AI and IT solutions for modern businesses',
+  keywords = 'AI, artificial intelligence, IT solutions, technology',
+  className = '' 
+}) => {
   return (
-    <>
-      <Helmet>
-        <title>{title}</title>
-        <meta name=&quot;description&quot; content=&quot;Zion Tech Group&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, EnhancedSEOHead, AI solutions, intelligent automation&quot; />
-      </Helmet>
-      <Navigation />
-      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
-        {/* Hero Section */}
-        <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
-          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
-          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content="website" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+    </Helmet>
+  );
+};
+
+export default EnhancedSEOHead;
             <h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;>
               EnhancedSEOHead
             </h1>

@@ -1,25 +1,17 @@
-'use client';
 /**
  * Jest setup file for testing environment
  */
- 
+
 import '@testing-library/jest-dom';
+
 // Polyfill for TextEncoder/TextDecoder
 import { TextEncoder, TextDecoder } from 'util';
 global.TextEncoder = TextEncoder as any;
 global.TextDecoder = TextDecoder as any;
+
 // Suppress jsdom navigation warnings
 const originalConsoleError = console.error;
-const originalConsoleError = console.error;
- 
-const originalConsoleError = console.error;
-const __originalConsoleError = console.error;
-import { TextEncoder, TextDecoder } from 'util';
-global.TextEncoder = TextEncoder as any;
-global.TextDecoder = TextDecoder as any;
-// Suppress jsdom navigation warnings
-const originalConsoleError = console.error;
-console.error = (...args) => {
+console.error = (...args: any[]) => {
   const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 
       message.includes('navigation (except hash changes)')) {
@@ -27,10 +19,11 @@ console.error = (...args) => {
   }
   originalConsoleError(...args);
 };
+
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
-  value: jest.fn().mockImplementation(query => ({
+  value: jest.fn().mockImplementation((query: string) => ({
     matches: false,
     media: query,
     onchange: null,
@@ -41,9 +34,11 @@ Object.defineProperty(window, 'matchMedia', {
     dispatchEvent: jest.fn()
   }))
 });
+
 // Mock requestAnimationFrame
-global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0));
-global.cancelAnimationFrame = jest.fn(id => clearTimeout(id));
+global.requestAnimationFrame = jest.fn((cb: FrameRequestCallback) => setTimeout(cb, 0));
+global.cancelAnimationFrame = jest.fn((id: number) => clearTimeout(id));
+
 // Mock localStorage
 const localStorageMock = {
   getItem: jest.fn(),
@@ -54,6 +49,7 @@ const localStorageMock = {
 Object.defineProperty(window, 'localStorage', {
   value: localStorageMock
 });
+
 // Mock sessionStorage
 const sessionStorageMock = {
   getItem: jest.fn(),
@@ -64,39 +60,30 @@ const sessionStorageMock = {
 Object.defineProperty(window, 'sessionStorage', {
   value: sessionStorageMock
 });
+
 // Mock fetch
 global.fetch = jest.fn();
+
 // Mock console methods for cleaner test output
- 
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
- 
-const originalConsoleWarn = console.warn;
-const originalConsoleInfo = console.info;
-const originalConsoleWarn = console.warn;
-const originalConsoleInfo = console.info;
-const originalConsoleWarn = console.warn;
-const originalConsoleInfo = console.info;
- 
-const originalConsoleWarn = console.warn;
-const originalConsoleInfo = console.info;
-const originalConsoleWarn = console.warn;
-const originalConsoleInfo = console.info;
-console.warn = (...args) => {
+
+console.warn = (...args: any[]) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {
     return;
   }
   originalConsoleWarn(...args);
 };
- 
-console.info = (...args) => {
+
+console.info = (...args: any[]) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('ReactDOM.render is no longer supported')) {
     return;
   }
   originalConsoleInfo(...args);
 };
+
 // Mock PerformanceObserver
 global.PerformanceObserver = class MockPerformanceObserver {
   static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
@@ -108,12 +95,13 @@ global.PerformanceObserver = class MockPerformanceObserver {
   }
 };
 // Suppress JSDOM navigation warnings
-console.error = (...args) => {
+console.error = (...args: any[]) => {
   if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
-    return; // Suppress JSDOM navigation warnings
+    return;
   }
   originalConsoleError(...args);
 };
+
 // Mock window.location
 delete (window as unknown as Record<string, unknown>).location;
 (window as unknown as Record<string, unknown>).location = {

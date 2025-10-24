@@ -1,28 +1,90 @@
 'use client';
-import Footer from './Footer';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain } from 'lucide-react';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-import { Phone, Mail, ArrowRight } from 'lucide-react';
+import React, { useState, useCallback } from 'react';
+import Image from 'next/image';
+
 interface OptimizedImageProps {
-  className?: string
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  priority?: boolean;
+  quality?: number;
+  placeholder?: 'blur' | 'empty';
+  blurDataURL?: string;
+  sizes?: string;
+  fill?: boolean;
+  style?: React.CSSProperties;
+  onLoad?: () => void;
+  onError?: () => void;
 }
-const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
+
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
+  src,
+  alt,
+  width,
+  height,
+  className = '',
+  priority = false,
+  quality = 75,
+  placeholder = 'empty',
+  blurDataURL,
+  sizes,
+  fill = false,
+  style,
+  onLoad,
+  onError
+}) => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
+
+  const handleLoad = useCallback(() => {
+    setIsLoading(false);
+    onLoad?.();
+  }, [onLoad]);
+
+  const handleError = useCallback(() => {
+    setHasError(true);
+    setIsLoading(false);
+    onError?.();
+  }, [onError]);
+
+  if (hasError) {
+    return (
+      <div 
+        className={`bg-gray-200 flex items-center justify-center ${className}`}
+        style={style}
+      >
+        <span className="text-gray-500 text-sm">Failed to load image</span>
+      </div>
+    );
+  }
+
   return (
-    <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
-      <Helmet>
-        <title>OptimizedImage | Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Professional OptimizedImage services by Zion Tech Group. Advanced AI and IT solutions for your business.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;OptimizedImage, AI solutions, IT services, Zion Tech Group, optimizedimage&quot; />
-      </Helmet>
-      {/* Hero Section */}
-      <section className=&quot;relative py-20 px-4 sm: px-6 lg:px-8&quot;></section>
-        <div className=&quot;max-w-7xl mx-auto&quot;></div>
-          <div className=&quot;text-center&quot;></div>
-            <h1 className=&quot;text-4xl md: text-6xl font-bold text-white mb-6&quot;></h1>
-              <span className=&quot;bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent&quot;></span>
-                OptimizedImage
+    <div className={`relative ${className}`} style={style}>
+      {isLoading && (
+        <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />
+      )}
+      <Image
+        src={src}
+        alt={alt}
+        width={fill ? undefined : width}
+        height={fill ? undefined : height}
+        fill={fill}
+        priority={priority}
+        quality={quality}
+        placeholder={placeholder}
+        blurDataURL={blurDataURL}
+        sizes={sizes}
+        onLoad={handleLoad}
+        onError={handleError}
+        className={`transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
+      />
+    </div>
+  );
+};
+
+export default OptimizedImage;
               <br />
               <span className=&quot;text-white&quot;>Solutions</span>
             </h1>
