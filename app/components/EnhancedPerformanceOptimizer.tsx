@@ -35,11 +35,11 @@ const PerformanceOptimizer: React.FC = () => {
     const registerServiceWorker = () => {
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js')
-          .then((registration) => {
+          .then(() => {
             // Service worker registered successfully
           })
-          .catch((registrationError) => {
-            // Service worker registration failed - handled silently
+          .catch(() => {
+            // Service worker registration failed - silently handle
           });
       }
     };

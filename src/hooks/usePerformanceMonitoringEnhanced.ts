@@ -7,7 +7,7 @@ export const usePerformanceMonitoring = () => {
       navigator.sendBeacon(url, body);
     } else {
       fetch(url, { body, method: 'POST', keepalive: true }).catch(() => {
-        // Analytics data sending failed - handled silently
+        // Failed to send analytics - handle silently
       });
     }
   }, []);
