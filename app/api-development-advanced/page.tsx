@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe } from 'lucide-react';
 
-export default function Api Development AdvancedPage() {
+export default function ApiDevelopmentAdvancedPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-20">
