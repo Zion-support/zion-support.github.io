@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud } from 'lucide-react';
-
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud  } from "lucide-react";
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   
@@ -58,9 +57,9 @@ const Footer: React.FC = () => {
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
-              </div>
+                </div>
               <span className="text-xl font-bold">Zion Tech Group</span>
-            </div>
+              </div>
             <p className="text-gray-400 text-sm">
               Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology and innovative digital transformation services.
             </p>
@@ -74,9 +73,8 @@ const Footer: React.FC = () => {
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
+              </div>
             </div>
-          </div>
-
           {/* AI Services */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold flex items-center">
@@ -96,8 +94,7 @@ const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
-          </div>
-
+            </div>
           {/* IT Services */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold flex items-center">
@@ -117,11 +114,10 @@ const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
-          </div>
-
+            </div>
           {/* Company & Resources */}
           <div className="space-y-6">
-            <div>
+              <div>
               <h3 className="text-lg font-semibold mb-4">Company</h3>
               <ul className="space-y-2">
                 {company.map((item, index) => (
@@ -135,8 +131,8 @@ const Footer: React.FC = () => {
                   </li>
                 ))}
               </ul>
-            </div>
-            <div>
+              </div>
+              <div>
               <h3 className="text-lg font-semibold mb-4">Resources</h3>
               <ul className="space-y-2">
                 {resources.map((item, index) => (
@@ -150,28 +146,26 @@ const Footer: React.FC = () => {
                   </li>
                 ))}
               </ul>
+              </div>
             </div>
           </div>
-        </div>
-
         {/* Contact Info */}
         <div className="border-t border-slate-800 mt-12 pt-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex items-center space-x-3">
               <Mail className="w-5 h-5 text-cyan-400" />
               <span className="text-gray-400">contact@ziontechgroup.com</span>
-            </div>
+              </div>
             <div className="flex items-center space-x-3">
               <Phone className="w-5 h-5 text-cyan-400" />
               <span className="text-gray-400">+1 (555) 123-4567</span>
-            </div>
+              </div>
             <div className="flex items-center space-x-3">
               <MapPin className="w-5 h-5 text-cyan-400" />
               <span className="text-gray-400">San Francisco, CA</span>
+              </div>
             </div>
           </div>
-        </div>
-
         {/* Bottom Bar */}
         <div className="border-t border-slate-800 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
           <div className="flex flex-wrap gap-6 mb-4 md:mb-0">
@@ -184,9 +178,9 @@ const Footer: React.FC = () => {
                 {item.name}
               </Link>
             ))}
+            </div>
           </div>
         </div>
-      </div>
     </footer>
   );
 };

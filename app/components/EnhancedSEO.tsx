@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe } from 'lucide-react';
+import { Helmet  } from "react-helmet-async";
+import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe  } from "lucide-react";
 import Navigation from '../components/Navigation';
 
 const EnhancedSEOPage: React.FC = () => {
@@ -15,10 +15,10 @@ const EnhancedSEOPage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success',
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover: from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
+              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover: from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105" />
                 <Phone className="mr-2 h-5 w-5" />
                 Call Now
-              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover: from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
+              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover: from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105" />
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
             
@@ -43,14 +43,14 @@ export default EnhancedSEOPage
               
             ))}
           
-        </div>
+          </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>
+      <section className="py-20 px-4 sm: px-6 lg:px-8" />
+        <div className="max-w-4xl mx-auto text-center" />
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12" />
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>h2>
             <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your enhancedseo needs and get a customized solution.</p>p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center" / />
             </div>
-          </div>
+}

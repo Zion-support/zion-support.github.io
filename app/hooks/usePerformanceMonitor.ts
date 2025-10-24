@@ -44,6 +44,7 @@ export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}
     if (!isMonitoringFPS) return;
 
 const countFrames = () => {
+  return 
       frameCountRef.current++
       const currentTime = performance.now();
       if (currentTime - lastTimeRef.current >= 1000) {
@@ -74,3 +75,4 @@ const countFrames = () => {
   }
 };
 export default usePerformanceMonitor;</PerformanceData>
+}

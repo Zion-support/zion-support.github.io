@@ -1,10 +1,9 @@
 'use client';
 import Navigation from './Navigation';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight } from 'lucide-react';
+import { Helmet  } from "react-helmet-async";
+import { ArrowRight  } from "lucide-react";
 import React, { useState } from 'react';
-import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react';
-
+import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap  } from "lucide-react";
 interface ContentNewsletterSignupProps {
   title?: string
   subtitle?: string
@@ -44,12 +43,12 @@ interface ContentNewsletterSignupProps {
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
-      if (onSubscribe) {
+      if(onSubscribe) {
         onSubscribe(email);
       }
       setIsSubscribed(true);
       setEmail('');
-    } catch (error) {
+    } catch(error) {
       console.error('Subscription failed:', error);
     } finally {
       setIsSubmitting(false),}
@@ -59,7 +58,7 @@ interface ContentNewsletterSignupProps {
         <h2 className="text-4xl font-bold text-white mb-4">{title}</h2>
         <p className="text-xl text-gray-300 mb-8">{subtitle}</p>
         
-        <form onSubmit={handleSubmit} className="max-w-md mx-auto mb-8"></form>
+        <form onSubmit={handleSubmit} className="max-w-md mx-auto mb-8" />
           <div className="flex flex-col sm:flex-row gap-4">
             <input
               type="email"
@@ -77,14 +76,14 @@ interface ContentNewsletterSignupProps {
   d:bg-emerald-800 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
             >
               {isLoading ? 'Subscribing...' : buttonText}</button>
-              <ArrowRight className="ml-2 h-4 w-4" /></ArrowRight>
+              <ArrowRight className="ml-2 h-4 w-4" / />
             </button>
           
         </form>
         
         {isSubscribed && (
           <div className="mt-4 p-4 bg-emerald-600/20 border border-emerald-500/50 rounded-lg">
-            <p className="text-emerald-400 flex items-center justify-center"></p>
+            <p className="text-emerald-400 flex items-center justify-center" />
               <CheckCircle className="h-5 w-5 mr-2" />
               Thank you for subscribing!</CheckCircle>
             </p>
@@ -93,8 +92,8 @@ interface ContentNewsletterSignupProps {
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
           {features.map((feature, index) => (</div>
-            <div key={index} className="flex items-center space-x-2 text-gray-300"></div>
-              <feature.icon className="h-5 w-5 text-emerald-400" /></feature>
+            <div key={index} className="flex items-center space-x-2 text-gray-300" />
+              <feature.icon className="h-5 w-5 text-emerald-400" / />
               <span className="text-sm">{feature.text}</span>
             </div>
           ))}
@@ -105,3 +104,5 @@ interface ContentNewsletterSignupProps {
 
 export default ContentNewsletterSignup
 ;
+</div>
+}

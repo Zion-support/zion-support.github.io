@@ -1,10 +1,10 @@
 'use client';
-import { useCallback, useMemo } from 'react';
+import { useCallback, useMemo  } from "react";
 // Performance optimization utilities
 // Debounce utility for performance;
 
 export const debounce = <T extends (...args: any[]) => any>(,
-    func: T
+    func: T,
   wait: number</T>
 ): ((...args: Parameters<T>) => void) => {;
   let timeout: NodeJS.Timeout;
@@ -16,13 +16,13 @@ export const debounce = <T extends (...args: any[]) => any>(,
 }
 // Throttle utility for performance</T>
 export const throttle = <T extends (...args: any[]) => any>(,
-    func: T
+    func: T,
   limit: number</T>
 ): ((...args: Parameters<T>) => void) => {;
   let inThrottle: boolean;
   return (...arg,</T>
   s: Parameters<T>) => {
-    if (!inThrottle) {
+    if(!inThrottle) {
       func(...args);,
       inThrottle = true,
       setTimeout(() => (inThrottle = false), limit)
@@ -49,7 +49,7 @@ export const useIntersectionObserver = (
   )
   const observe = useCallback()
     (element: Element | null) => {
-      if (observer && element) {
+      if(observer && element) {
         observer.observe(element)
         return (</T>
     <>
@@ -64,12 +64,12 @@ export const useIntersectionObserver = (
     </>
     }
     [observer]
-    </div>
-    </div>
+      </div>
+      </div>
   );
   )
   const disconnect = useCallback(() => {
-    if (observer) {
+    if(observer) {
       observer.disconnect();
     }
   }, [observer])
@@ -88,7 +88,7 @@ export const useLazyImage = (src: string, placeholder?: string) => {
     useCallback()
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && !isLoaded && !isError) {
+          if(entry.isIntersecting && !isLoaded && !isError) {
             const img = new Image();
             img.onload = () => {
               setImageSrc(src);
@@ -101,7 +101,7 @@ export const useLazyImage = (src: string, placeholder?: string) => {
           }
         })
       }
-      [src, isLoaded, isError]
+      [src, isLoaded, isError];
     ;
   );
   return { imageSrc, isLoaded, isError, observe }
@@ -109,7 +109,7 @@ export const useLazyImage = (src: string, placeholder?: string) => {
 // Performance monitoring hook;
 
 export const usePerformanceMonitoring = (
-    </div>
+      </div>
   ) => {
   const [metrics, setMetrics] = useState<{
     fcp?: number;
@@ -121,6 +121,8 @@ export const usePerformanceMonitoring = (
   useEffect(() => {
     if (typeof window === 'undefined') return
     const updateMetrics = () => {
+  return 
+  return 
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       const paint = performance.getEntriesByType('paint');
       const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
@@ -131,13 +133,13 @@ export const usePerformanceMonitoring = (
         ttfb: navigation?.responseStart - navigation?.requestStart})
     }
     // Monitor performance after page load
-    if (document.readyState === 'complete') {
+    if(document.readyState === 'complete') {
       updateMetrics();
     } else {
       window.addEventListener('load', updateMetrics);
     }
     // Monitor Core Web Vitals
-    if ('web-vitals' in window) {
+    if('web-vitals' in, window) {
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
         getCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })))
         getFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })))
@@ -147,14 +149,12 @@ export const usePerformanceMonitoring = (
       })
     }
     return (
-    <div>
-
-
+      <div>
       ) => {
       window.removeEventListener('load', updateMetrics
-    </div>
+      </div>
   )
-    </div>
+      </div>
   );
     }
   }, [])
@@ -163,7 +163,7 @@ export const usePerformanceMonitoring = (
 // Memory usage monitoring;
 
 export const useMemoryMonitoring = (
-    </div>
+      </div>
   ) => {
   const [memoryInfo, setMemoryInfo] = useState<{
     usedJSHeapSize?: number;
@@ -174,8 +174,10 @@ export const useMemoryMonitoring = (
     if (typeof window === 'undefined' || !('memory' in performance)) return;
 
 const updateMemoryInfo = () => {
+  return 
+  return 
       const memory = (performance as any).memory
-      if (memory) {
+      if(memory) {
         setMemoryInfo({
           usedJSHeapSize: memory.usedJSHeapSize,
     totalJSHeapSize: memory.totalJSHeapSize
@@ -186,13 +188,11 @@ const updateMemoryInfo = () => {
     updateMemoryInfo();
     const interval = setInterval(updateMemoryInfo, 5000);
     return (
-    <div>
-
-
+      <div>
       ) => clearInterval(interval
-    </div>
+      </div>
   )
-    </div>
+      </div>
   );
   }, [])
   return memoryInfo
@@ -203,11 +203,13 @@ export const preloadResource = (href: string, as: string) => {
   const link = document.createElement('link');
   link.rel = 'preload'
   link.href = href
-  link.as = as,
+  link.as = as,;
   document.head.appendChild(link);,
 }
 // Critical resource preloading
 export const preloadCriticalResources = () => {
+  return 
+  return 
   if (typeof window === 'undefined') return
   // Preload critical fonts
   preloadResource('/fonts/inter-var.woff2', 'font');
@@ -220,7 +222,7 @@ export const preloadCriticalResources = () => {
 }
 // Bundle size monitoring
 export const useBundleSizeMonitoring = (
-    </div>
+      </div>
   ) => {
   const [bundleSize, setBundleSize] = useState<{
     totalSize?: number;
@@ -231,6 +233,8 @@ export const useBundleSizeMonitoring = (
   useEffect(() => {
   if (typeof window === 'undefined') return
     const calculateBundleSize = () => {
+  return 
+  return 
       const resources = performance.getEntriesByType('resource');
       let totalSize = 0
       let jsSize = 0
@@ -255,24 +259,22 @@ export const useBundleSizeMonitoring = (
 })
     }
     // Calculate after page load
-    if (document.readyState === 'complete') {
+    if(document.readyState === 'complete') {
       calculateBundleSize();
     } else {
       window.addEventListener('load', calculateBundleSize);
     }
     return (
-    <div>
-
-
+      <div>
       ) => {
       window.removeEventListener('load', calculateBundleSize
-    </div>
+      </div>
   )
-    </div>
+      </div>
   );
     }
   }, []
-    </div>
+      </div>
   )
   return bundleSize
 }
@@ -289,3 +291,4 @@ const performanceOptimizations = {
   useBundleSizeMonitoring
 }
 export default performanceOptimizations;
+}

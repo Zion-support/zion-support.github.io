@@ -608,3 +608,4 @@ const announcement = document.getElementById('screen-reader-announcements');
 }
 
 export const accessibilityEnhancer = new AccessibilityEnhancer();
+}

@@ -2,7 +2,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight } from "lucide-react";
 import Footer from '../components/Footer';
 
 export default function AiaccountingassistantPage() {
@@ -15,19 +15,21 @@ export default function AiaccountingassistantPage() {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
+            
             AI Accounting Assistant
+          
           </h1>
           <p className="text-lg text-gray-300 mb-8">
+            
             Professional services by Zion Tech Group.
+          
           </p>
           <Link
             href="/contact"
-
-            className="inline-flex items-center bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
-
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
           >
             Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
+            <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>

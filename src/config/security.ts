@@ -20,3 +20,4 @@ const securityConfig: SecurityConfig = {
 };
 
 export default securityConfig;
+}

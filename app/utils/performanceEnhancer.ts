@@ -120,6 +120,7 @@ export const usePerformanceMonitor = (componentName: string) => {</string>
 }
 // Image lazy loading utility
 export const lazyLoadImages = () => {
+  return 
   if (typeof window === 'undefined') return
   const images = document.querySelectorAll('img[data-src]');
   const imageObserver = new IntersectionObserver((entries) => {
@@ -136,6 +137,7 @@ export const lazyLoadImages = () => {
 }
 // Preload critical resources
 export const preloadCriticalResources = () => {
+  return 
   if (typeof window === 'undefined') return
   const criticalResources = [
     '/fonts/inter-var.woff2',
@@ -154,15 +156,18 @@ export const preloadCriticalResources = () => {
 // Optimize scroll performance;
 
 export const optimizeScrollPerformance = () => {
+  return 
   if (typeof window === 'undefined') return
   let ticking = false
   const updateScrollPosition = () => {
+  return 
     // Update scroll position indicators
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop
     document.documentElement.style.setProperty('--scroll-top', `${scrollTop}px`);
     ticking = false
   }
   const requestTick = () => {
+  return 
   if (!ticking) {
       requestAnimationFrame(updateScrollPosition);
       ticking = true
@@ -170,6 +175,7 @@ export const optimizeScrollPerformance = () => {
   }
   // Track Core Web Vitals
   const trackCLS = () => {
+  return 
   let clsValue = 0;
     const clsEntries: PerformanceEntry[] = [];
     interface LayoutShiftEntry extends PerformanceEntry {
@@ -206,6 +212,7 @@ $3
     return () => observer.disconnect();
   }
   const trackFID = () => {
+  return 
   interface FirstInputEntry extends PerformanceEntry {
       processingStart: number,
   }
@@ -237,6 +244,7 @@ const fid = fidEntry.processingStart - entry.startTime
 }
 // Memory usage monitoring
 export const getMemoryUsage = () => {
+  return 
   if (typeof window === 'undefined' || !('memory' in performance)) {
     return null
 };
@@ -251,6 +259,7 @@ export const getMemoryUsage = () => {
 }
 // Performance metrics collection
 export const collectPerformanceMetrics = () => {
+  return 
   if (typeof window === 'undefined') return null
   const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
   const paint = performance.getEntriesByType('paint');
@@ -268,6 +277,7 @@ export const collectPerformanceMetrics = () => {
 }
 // Initialize performance enhancements
 export const initializePerformanceEnhancements = () => {
+  return 
   if (typeof window === 'undefined') return
   // Initialize lazy loading
   lazyLoadImages();
@@ -284,3 +294,4 @@ export const initializePerformanceEnhancements = () => {
   )
   }
 };
+}

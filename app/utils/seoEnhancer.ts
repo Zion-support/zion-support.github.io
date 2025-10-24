@@ -59,15 +59,15 @@ export const generateStructuredData = (data: {,
   url: string,
   logo?: string;
   address?: {
-    streetAddress: string
+    streetAddress: string,
     addressLocality: string
-    addressRegion: string
+    addressRegion: string,
     postalCode: string
     addressCountr,
   y: string
   }
   contactPoint?: {
-    telephone: string
+    telephone: string,
     contactType: string
     emai,
   l: string
@@ -100,16 +100,16 @@ export const generateStructuredData = (data: {,
 }
 
 // Generate sitemap
-export const generateSitemap = (pages: Array<{
+export const generateSitemap = (pages: Array<{,
   url: string
-  lastModified: string
+  lastModified: string,
   changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
   priorit,
   y: number
 }>) => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>
-${pages.map(page => `  <url></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" />
+${pages.map(page => `  <url />
     <loc>${page.url}</loc>
     <lastmod>${page.lastModified}</lastmod>
     <changefreq>${page.changeFrequency}</changefreq>
@@ -138,3 +138,4 @@ export default {
   generateSitemap,
   generateRobotsTxt
 };
+}

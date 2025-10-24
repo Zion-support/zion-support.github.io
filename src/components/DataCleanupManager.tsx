@@ -6,11 +6,12 @@ interface DataCleanupManagerProps {
 ;
 const DataCleanupManager: React.FC<DataCleanupManagerProps> = ({ className = '' }) => {
   return (</DataCleanupManagerProps>
-    <div className={className}></div>
+    <div className={className} />
       <h2>DataCleanupManager</h2>
       <p>This component is under construction.</p>
-    </div>
+      </div>
   );
 };
 
 export default DataCleanupManager;
+}

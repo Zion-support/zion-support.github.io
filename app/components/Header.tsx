@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
 import Navigation from './Navigation';
-import { ArrowRight, CheckCircle } from 'lucide-react';
-
+import { ArrowRight, CheckCircle  } from "lucide-react";
 const features = [
   {
     icon: CheckCircle,
@@ -36,7 +35,7 @@ const benefits = [
   "Scale your business with cloud solutions",
   "Make data-driven decisions with analytics",
   "Enhance security with advanced monitoring",
-  "Improve customer experience with AI"
+  "Improve customer experience with AI";
 ];
 
 const Header: React.FC = () => {
@@ -83,8 +82,8 @@ const Header: React.FC = () => {
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flexitems-centertext-smtext-gray-300"></li>
-                        <CheckCircle className="h-4 w-4text-emerald-400mr-2flex-shrink-0" /></CheckCircle>
+                      <li key={idx} className="flexitems-centertext-smtext-gray-300" />
+                        <CheckCircle className="h-4 w-4text-emerald-400mr-2flex-shrink-0" / />
                         {benefit}
                       </li>
                     ))}
@@ -109,15 +108,15 @@ const Header: React.FC = () => {
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
-        <div key=index className="flex items-start space-x-4"> </div></div><CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /> </CheckCircle><p className="text-gray-300 text-lg">benefit</p></p>
+        <div key=index className="flex items-start space-x-4" / /><CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" / /><p className="text-gray-300 text-lg">benefit</p></p>
                 </div>
               
             </div>
           </div>
         </section>
         {/* CTA Section */}
-        <section className="py-20px-4"></section>
-          <div className="max-w-4xlmx-autotext-center"></div>
+        <section className="py-20px-4" />
+          <div className="max-w-4xlmx-autotext-center" />
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xltext-gray-300mb-8">
             Join thousands of businesses already using our AI solutions
@@ -126,7 +125,7 @@ const Header: React.FC = () => {
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Start Free Trial
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semiboldtransition-colorsduration-200"></button>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semiboldtransition-colorsduration-200" />
                 Contact Sales
               </button>
             </div>
@@ -137,3 +136,4 @@ const Header: React.FC = () => {
     </header>
   );
 };
+}}

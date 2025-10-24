@@ -1,4 +1,3 @@
-
 'use client';
 import React, { useEffect } from &quot;react&quot;
 
@@ -13,6 +12,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ children }) => {
   useEffect(() => {
     // Initialize analytics tracking
     const initAnalytics = () => {
+  return 
       // Google Analytics initialization
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('config', 'GA_MEASUREMENT_ID', {
@@ -31,3 +31,4 @@ declare global {
     gtag: (...arg,
   s: any[]) => void;};
 export default Analytics;
+}

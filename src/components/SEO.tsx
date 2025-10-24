@@ -6,11 +6,12 @@ interface SEOProps {
 ;
 const SEO: React.FC<SEOProps> = ({ className = '' }) => {
   return (</SEOProps>
-    <div className={className}></div>
+    <div className={className} />
       <h2>SEO</h2>
       <p>This component is under construction.</p>
-    </div>
+      </div>
   );
 };
 
 export default SEO;
+}

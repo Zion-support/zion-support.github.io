@@ -825,3 +825,4 @@ if (metrics.TTFB && metrics.TTFB.rating !== 'good') {/* TODO: Fix JSX expression
 return recommendations
 }
 `</T>;
+}

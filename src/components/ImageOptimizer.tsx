@@ -44,23 +44,24 @@ const ImageOptimizerPage: React.FC = () => {
   </>
       <Helmet>;</Helmet>
         <title>ImageOptimizer | Zion Tech Group</title>;
-        <meta name=&quot;description&quot; content=&quot;Professional ImageOptimizer services by Zion Tech Group.&quot; /></meta>
-        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ImageOptimizer, AI solutions, intelligent automation&quot; /></meta>
+        <meta name=&quot;description&quot; content=&quot;Professional ImageOptimizer services by Zion Tech Group.&quot; / />
+        <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ImageOptimizer, AI solutions, intelligent automation&quot; / />
       </Helmet>
-      <section className=&quot;py-20 px-4&quot;></section>
-        <div className=&quot;container mx-auto max-w-6xl&quot;></div>
-          <div className=&quot;text-center mb-16&quot;></div>
+      <section className=&quot;py-20 px-4&quot; />
+        <div className=&quot;container mx-auto max-w-6xl&quot; />
+          <div className=&quot;text-center mb-16&quot; />
             <h1 className=&quot;text-5xl md:text-6xl font-bold text-white mb-6&quot;>ImageOptimizer</h1>
             <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed&quot;>Professional ImageOptimizer services tailored to your business needs.</p>p>
+            </div>
           </div>
-        </div>
       </section>
     </div>,
   ),
-    </div>
+      </div>
   );
 }
 
 export default ImageOptimizerPage
 ;
 export default ImageOptimizerPage
+}

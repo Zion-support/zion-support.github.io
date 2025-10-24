@@ -748,3 +748,4 @@ interface LayoutShift extends PerformanceEntry {/* TODO: Fix JSX expression */}
 
 export const performanceMetrics = PerformanceMetrics.getInstance()
 `</T>;
+}

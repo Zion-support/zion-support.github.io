@@ -2,14 +2,14 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
-
+import { ArrowRight  } from "lucide-react";
 export default function DemoPage() {
+  
   return (
-    <>
+      <>
       <Head>
         <title>Demo - Zion Tech Group</title>
-        <meta name="description" content="Professional services by Zion Tech Group." />
+        <meta name = "description" content="Professional services by Zion Tech Group." />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
@@ -26,9 +26,8 @@ export default function DemoPage() {
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
-        </div>
-      </div>
-
-</>
+            </div>
+          </div>
+  </>
   );
 }

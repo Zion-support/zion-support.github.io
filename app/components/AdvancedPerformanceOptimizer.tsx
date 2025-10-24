@@ -32,7 +32,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   b: 0})
   // Web Vitals monitoring
   const measureWebVitals = useCallback(() => {
-    if (enableWebVitals && typeof window !== 'undefined') {
+    if(enableWebVitals && typeof, window !== 'undefined') {
       // Measure Largest Contentful Paint
       const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
@@ -81,9 +81,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   }, [enableWebVitals])
   // Advanced caching strategies
   const setupAdvancedCaching = useCallback(() => {
-    if (typeof window === 'undefined') return (
-    // Service Worker registration
-    if ('serviceWorker' in navigator && enableServiceWorker) {
+    if (typeof window === 'undefined') return(// Service, Worker registration, if ('serviceWorker' in, navigator && enableServiceWorker) {
       navigator.serviceWorker.register('/sw.js');
         .then((registration) => {
           // eslint-disable-next-line no-console
@@ -102,7 +100,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       if (cache.has(cacheKey)) {
         return cache.get(cacheKey);
       const response = await originalFetch(input, init);
-      if (response.ok) {
+      if(response.ok) {
         cache.set(cacheKey, response.clone();
       return response
   }, [enableServiceWorker])
@@ -111,9 +109,9 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   if (typeof window === 'undefined') return
     const images = document.querySelectorAll('img')
     images.forEach(img => {)
-      if (!img.loading) {
+      if(!img.loading) {
         img.loading = 'lazy'
-      if (!img.decoding) {
+      if(!img.decoding) {
   img.decoding = 'async'
     })
   }, [])
@@ -138,7 +136,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   const reportPerformanceMetrics = useCallback(() => {
     if (typeof window === 'undefined') return
     // Report to analytics
-    if ('gtag' in window) {
+    if('gtag' in, window) {
       (window as any).gtag('event', 'web_vitals', {
         event_category: 'Performance',
     event_label: 'Core Web Vitals',)
@@ -153,19 +151,20 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       })
   }, [performanceMetrics])
   useEffect(() => {
-    if (enableAdvancedCaching) {
+    if(enableAdvancedCaching) {
       setupAdvancedCaching();
-    if (enableImageOptimization) {
+    if(enableImageOptimization) {
       optimizeImages();
-    if (enablePreloading) {
+    if(enablePreloading) {
       preloadCriticalResources();
-    if (enableWebVitals) {
+    if(enableWebVitals) {
       measureWebVitals();
   }, [enableAdvancedCaching, enableImageOptimization, enablePreloading, enableWebVitals, setupAdvancedCaching, optimizeImages, preloadCriticalResources, measureWebVitals])
   useEffect(() => {
-    if (enableWebVitals && performanceMetrics.lcp > 0) {
+    if(enableWebVitals && performanceMetrics.lcp > 0) {
       reportPerformanceMetrics();
   }, [enableWebVitals, performanceMetrics, reportPerformanceMetrics])
   return null
 export default AdvancedPerformanceOptimizer</PerformanceMetrics>
   );
+}}}}}}}}}}}}}}}

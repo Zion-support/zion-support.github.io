@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Phone, Mail, Zap, Shield, Globe } from 'lucide-react';
+import { Helmet  } from "react-helmet-async";
+import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Phone, Mail, Zap, Shield, Globe  } from "lucide-react";
 import Navigation from '../components/Navigation';
 
 const EnhancedSEOOptimizerPage: React.FC = () => {
@@ -37,7 +37,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
+    'Gain competitive advantage with advanced technology';
   ];
 
   return (
@@ -101,8 +101,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
               
             </div>
           </div>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-            </div>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center" / />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
@@ -144,3 +143,5 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
 };
 
 export default EnhancedSEOOptimizerPage;
+</div>
+}

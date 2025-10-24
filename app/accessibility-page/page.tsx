@@ -2,7 +2,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight } from "lucide-react";
 import Footer from '../components/Footer';
 
 export default function AccessibilitypagePage() {
@@ -22,9 +22,7 @@ export default function AccessibilitypagePage() {
           </p>
           <Link
             href="/contact"
-
             className="inline-flex items-center bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
-
           >
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />

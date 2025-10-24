@@ -64,3 +64,4 @@ export interface ErrorReport {
   createdAt: string
 }
 export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical'
+}

@@ -6,11 +6,12 @@ interface FooterProps {
 ;
 const Footer: React.FC<FooterProps> = ({ className = '' }) => {
   return (</FooterProps>
-    <div className={className}></div>
+    <div className={className} />
       <h2>Footer</h2>
       <p>This component is under construction.</p>
-    </div>
+      </div>
   );
 };
 
 export default Footer;
+}

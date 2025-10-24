@@ -1,4 +1,3 @@
-
 // Type definitions for Next.js compatibility;
 
 export interface Metadata {
@@ -16,7 +15,7 @@ export interface Metadata {
   metadataBase?: URL;
   alternates?: {
   canonical?: string
-    languages?: Record<string, string></string>
+    languages?: Record<string, string />
 }
   openGraph?: {
   title?: string
@@ -57,7 +56,7 @@ export interface Metadata {
   google?: string
     yandex?: string
     yahoo?: string
-    other?: Record<string, string></string>
+    other?: Record<string, string />
 }
 }
 export interface MetadataRoute {
@@ -101,8 +100,8 @@ export interface ClientComponentProps {
 };
 // Route handlers
 export interface RouteHandler {</Response>
-  GET?: (req: Request) => Promise<Response></Response>
-  POST?: (req: Request) => Promise<Response></Response>
+  GET?: (req: Request) => Promise<Response />
+  POST?: (req: Request) => Promise<Response />
   PUT?: (req: Request) => Promise<Response>
   DELETE?: (re,</Response>
   q: Request) => Promise<Response>}</Response>
@@ -146,3 +145,4 @@ declare module 'next' {
   }
 }
 export {}</Response>
+}

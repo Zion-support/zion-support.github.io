@@ -1,14 +1,11 @@
-
 'use client';
 import React from 'react';
-import { useState } from 'react';
-import { MessageSquare, Mail, Phone, Send, CheckCircle } from 'lucide-react';
-
-
+import { useState  } from "react";
+import { MessageSquare, Mail, Phone, Send, CheckCircle  } from "lucide-react";
 interface FormData {
-  name: string;
+  name: string;,
   email: string;
-  phone: string;
+  phone: string;,
   company: string;
   message: string;
   servic,
@@ -63,17 +60,17 @@ const ContactForm: React.FC = () => {
     'Cloud Migration',
     'Cybersecurity',
     'Data Analytics',
-    'DevOps',
+    'DevOps',;
     'Consulting';
   ];
 
-  if (isSubmitted) {
+  if(isSubmitted) {
     return (</HTMLInputElement>
     <>
       </HTMLInputElement>
-      <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center">
-        <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" /></CheckCircle>
-        <h3 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>
+      <div className = "bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center">
+        <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" / />
+        <h3 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>;
         <p className="text-gray-300">Thank you for reaching out. We&apos;ll get back to you soon.</p>
       
     
@@ -83,10 +80,10 @@ const ContactForm: React.FC = () => {
   return (
     <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
       <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
-      <form onSubmit={handleSubmit} className="space-y-6"></form>
+      <form onSubmit={handleSubmit} className="space-y-6" />
         <div className="grid md:grid-cols-2 gap-6">
-          <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2"></label>
+            <div>
+            <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2" />
               Full Name *</label>
             </label>
             <input
@@ -103,10 +100,10 @@ handleChange
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focu,
   s:border-transparent"
               placeholder="Your full name"
-            /></input>
+            / />
           
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2"></label>
+            <div>
+            <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2" />
               Email Address *</label>
             </label>
             <input
@@ -122,13 +119,13 @@ handleChange
               required
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               placeholder="your@email.com"
-            /></input>
+            / />
           
         
         <div className="grid m,
   d:grid-cols-2 gap-6">
-          <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2"></label>
+            <div>
+            <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2" />
               Phone Number</label>
             </label>
             <input
@@ -140,10 +137,10 @@ handleChange
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focu,
   s:border-transparent"
               placeholder="+1 (555) 123-4567"
-            /></input>
+            / />
           
-          <div>
-            <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2"></label>
+            <div>
+            <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2" />
               Company</label>
             </label>
             <input
@@ -155,11 +152,11 @@ handleChange
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focu,
   s:border-transparent"
               placeholder="Your company name"
-            /></input>
+            / />
           
-        </div>
-        <div></div>
-          <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2"></label>
+          </div>
+        <div />
+          <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2" />
             Service Interest</label>
           </label>
           <select
@@ -169,17 +166,17 @@ handleChange
             onChange={handleChange}
             className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focu,
   s:border-transparent"
-          ></select>
+           />
             <option value="">Select a service</option>
             {services.map((service, index) => (
-              <option key={index} value={service} className="bg-gray-800"></option>
+              <option key={index} value={service} className="bg-gray-800" />
                 {service}</option>
               </option>
             ))}
           </select>
-        </div>
-        <div></div>
-          <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2"></label>
+          </div>
+        <div />
+          <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2" />
             Message *</label>
           </label>
           <textarea
@@ -196,33 +193,34 @@ handleChange
             className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focu,
   s:border-transparent resize-none"
             placeholder="Tell us about your project or how we can help..."
-          /></textarea>
-        </div>
+          / />
+          </div>
         <button
           type="submit"
           disabled={isSubmitting}
           className="w-full flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 disabled:opacity-50 disable,
   d:cursor-not-allowed"
-        ></button>
+         />
           {isSubmitting ? (</button>
             <>
     
-  </div>
-              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+    </div>
+              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />
               Sending...
-            </div>
+              </div>
           ) : (
             <>
     
-  </div>
-              <Send className="w-5 h-5 mr-2" /></Send>
+    </div>
+              <Send className="w-5 h-5 mr-2" / />
               Send Message</Send>
-            </div>
+              </div>
           )}
         </button>
       </form>
-    </div>
+      </div>
   );
 };
 
 export default ContactForm;
+}

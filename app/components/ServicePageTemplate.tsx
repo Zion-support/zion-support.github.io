@@ -39,12 +39,12 @@ const ServicePageTemplatePage: React.FC = () => {
   ]
   return (
     <div>
-      <Helmet></Helmet>
+      <Helmet />
         <title>ServicePageTemplate | Zion Tech Group</title>
         <meta name="description" content="Professional ServicePageTemplate services by Zion Tech Group." />
         <meta name="keywords" content="AI, artificial intelligence, ServiceTemplatePage, AI solutions, intelligent automation" />
       </Helmet>
-      <section className="py-20 px-4"></section>
+      <section className="py-20 px-4" />
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">ServicePageTemplate</h1>
@@ -56,3 +56,6 @@ const ServicePageTemplatePage: React.FC = () => {
 
 export default ServicePageTemplatePage
 
+
+</div>
+}}

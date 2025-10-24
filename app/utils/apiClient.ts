@@ -40,7 +40,7 @@ class ApiClient {
     try {
       const response = await fetch(url, config);
       
-      if (!response.ok) {
+      if(!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
@@ -50,7 +50,7 @@ class ApiClient {
         data,
         status: response.status,
       };
-    } catch (error) {
+    } catch(error) {
       throw {
         message: error instanceof Error ? error.message : 'Unknown error',
         status: 500,
@@ -68,7 +68,7 @@ class ApiClient {
   async post<T>(
     endpoint: string,
     data?: any,</T>
-    headers?: Record<string, string></string>
+    headers?: Record<string, string />
   ): Promise<ApiResponse<T>> {</ApiResponse>
     return this.request<T>(endpoint, {
       method: 'POST',
@@ -80,7 +80,7 @@ class ApiClient {
   async put<T>(
     endpoint: string,
     data?: any,</T>
-    headers?: Record<string, string></string>
+    headers?: Record<string, string />
   ): Promise<ApiResponse<T>> {</ApiResponse>
     return this.request<T>(endpoint, {
       method: 'PUT',
@@ -101,3 +101,4 @@ const apiClient = new ApiClient();
 
 export default apiClient;
 export { ApiClient, type ApiResponse, type ApiError };</T>
+}

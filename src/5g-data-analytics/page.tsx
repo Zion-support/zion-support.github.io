@@ -1,34 +1,35 @@
+'use client';
 import React from 'react';
-import Head from "next/head";
-
+import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight } from "lucide-react";
+import Footer from '../components/Footer';
 
 export default function DataAnalytics5GPage() {
   return (
-    <>
-    :all-pages-backup/5g-data-analytics/page.tsx
-  </>
-      <title>5G Data Analytics - Zion Tech Group</title>
-      
-        <Head></Head>
+    <div>
+      <Head>
         <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." /></meta>
+        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
       </Head>
-      
-      
-      <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <div className="con tainermx-auto px-4 py-16"></div>
-          <h1 className="tex t-4xlfont-bold text-white mb-6">5G Data Analytics</h1>
-          <p className="tex t-lgtext-gray-300 mb-8">Advanced 5G data analytics solutions for real-time insights and business intelligence.</p>
-          
-          <Link href="/contact" className="inl ine-flexitems-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"></Link>
-            Contact Us</Link>
-            <ArrowRight className="ml-2h-4w-4" /></ArrowRight>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">
+            5G Data Analytics
+          </h1>
+          <p className="text-lg text-gray-300 mb-8">
+            Advanced 5G data analytics solutions for real-time insights and business intelligence.
+          </p>
+          <Link
+            href="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+          >
+            Contact Us
+            <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-    </div>
+      <Footer />
     </div>
   );
 }

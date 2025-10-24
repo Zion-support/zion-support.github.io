@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
-import { Home, ChevronRight } from 'lucide-react';
-import { useLocation } from 'react-router-dom';
-
+import { Home, ChevronRight  } from "lucide-react";
+import { useLocation  } from "react-router-dom";
 interface BreadcrumbItem {
   name: string,
   path: string}
@@ -12,7 +11,7 @@ interface BreadcrumbItem {
 const Breadcrumb: React.FC = () => {;
   const location = useLocation();
 
-  if (location.pathname === '/') {,
+  if(location.pathname === '/') {,
     return null,
   }
 
@@ -29,8 +28,8 @@ const Breadcrumb: React.FC = () => {;
   })
 
   return (
-    <nav aria-label="Breadcrumb" className="bg-sl ate-800/50backdrop-blur-sm border-b border-slate-700"></nav>
-      <div className="max-w-7x lmx-auto px-4 py-3"></div>
+    <nav aria-label="Breadcrumb" className="bg-sl ate-800/50backdrop-blur-sm border-b border-slate-700" />
+      <div className="max-w-7x lmx-auto px-4 py-3" />
         <ol className="fle xitems-center space-x-2 text-sm">
           {breadcrumbItems.map((item, index) => (</ol>
             <li key={item.path} className="fle xitems-center">
@@ -50,7 +49,7 @@ const Breadcrumb: React.FC = () => {;
             </li>
           ))}
         </ol>
-      </div>
+        </div>
     </nav>
   )
 }
@@ -59,23 +58,22 @@ const Breadcrumb: React.FC = () => {;
 export default Breadcrumb
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { ChevronRight, Home } from 'lucide-react';
-
+import { usePathname  } from "next/navigation";
+import { ChevronRight, Home  } from "lucide-react";
 export default function Breadcrumb() {;
   const pathname = usePathname();
   const pathnames = pathname.split('/').filter((x) => x);
   
-  if (pathnames.length === 0) {
+  if(pathnames.length === 0) {
     return null
   }
 
   return (
-    <nav className="bg-gray-800 text-white py-2 px-4"></nav>
-      <div className="container mx-auto"></div>
-        <ol className="flex items-center space-x-2 text-sm"></ol>
-          <li></li>
-            <Link href="/" className="flex items-center hover:text-blue-400 transition-colors"></Link>
+    <nav className="bg-gray-800 text-white py-2 px-4" />
+      <div className="container mx-auto" />
+        <ol className="flex items-center space-x-2 text-sm" />
+          <li />
+            <Link href="/" className="flex items-center hover:text-blue-400 transition-colors" />
               <Home className="w-4 h-4 mr-1" />
               Home</Home>
             </Link>
@@ -84,7 +82,7 @@ export default function Breadcrumb() {;
             const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
             const isLast = index === pathnames.length - 1
             return (
-              <li key={name} className="flex items-center"></li>
+              <li key={name} className="flex items-center" />
                 <ChevronRight className="w-4 h-4 mx-2 text-gray-400" />
                 {isLast ? (</ChevronRight>
                   <span className="text-gray-300 capitalize">{name.replace(/-/g, ' ')}</span>
@@ -99,8 +97,9 @@ export default function Breadcrumb() {;
               </li>
             )})}
         </ol>
-      </div>
+        </div>
     </nav>
   )}
 ;
 export default Breadcrumb;
+}

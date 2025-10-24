@@ -67,15 +67,14 @@ const handleError = useCallback(() => {}
 setHasError(true);
 if (onError) onError()}
 }, [onError])
-const imageStyle: React.CSSProperties = {
+const imageStyle: React.CSSProperties={
 ...style
 ...(fill && {
 positio,
   n: 'absolute',
     top: 0
 lef,
-  t: 0}
-const imageStyle: React.CSSProperties = {}
+  t: 0};const imageStyle: React.CSSProperties = {}
 ...style
 ...(fill && {}
 position: 'absolute',
@@ -105,40 +104,25 @@ Image: React.FC<ImageProps>= ({/* TOD,)
 const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
 }, [onError])
 const
-imageStyle: React.CSSProperties = {/* TOD,
-  O: Fix JSX expression */}
-})
+imageStyle: React.CSSProperties={/* TOD,
+  O: Fix JSX expression */};})
 if (hasError) {/* TODO: Fix JSX expression */}
-className={`bg-gray-200 flex items-center justify-center ${className}`}
+className={`bg-gray-200 flex items-center justify-center ${className};`}
 style = {
 imageStyle
 };
 {...props})
 >)
 <span className="text-gray-500text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
-<<<<<<< HEAD
-;
-  );
-=======
-),
->>>>>>> cursor/fix-errors-and-merge-to-main-996d,
+
 {...props}
-></div>
-<span className="text-gray-500text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
-</div>
+>  </div>
+<span className="text-gray-500text-sm" /><span className="sr-only">Screen reader: </span>Failed to load image</span>
+  </div>
 return(<img
-return (<img></img>
-src={src}
-alt={alt}
-width={width}
-height={height}
-className={className}
-style={imageStyle}
-sizes={sizes}
-loading={priority ? 'eager' : 'lazy'}
-onLoad={handleLoad}
-onError={handleError}
-{...props})
+return (<img />
+src={src};alt={alt};width={width};height={height};className={className};style={imageStyle};sizes={sizes};loading={priority ? 'eager' : 'lazy'};onLoad={handleLoad};onError={handleError};{...props})
 >)</img>
 }</img>
 export default Image</img>
+}

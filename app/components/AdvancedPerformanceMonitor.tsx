@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react';
+import { Helmet   } from "react-helmet-async";
+import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle   } from "lucide-react";
 import Navigation from '../components/Navigation';
 const AdvancedPerformanceMonitorPage: React.FC = () => {
   const features = [
@@ -35,48 +35,46 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
+    'Scale operations without proportional staff increases',;
+    'Gain competitive advantage with advanced technology';
   ];
   return (
-    <div>
-    
-  
-      <Helmet></Helmet>
+      <div>
+      <Helmet />
         <title>Advanced Performance Monitor</title>
-        <meta name="description" content="Advanced Performance Monitor solution for modern businesses." /></meta>
-        <meta name="keywords" content="AI, artificial intelligence, performance monitoring, AI solutions, intelligent automation" /></meta>
+        <meta name="description" content="Advanced Performance Monitor solution for modern businesses." / />
+        <meta name="keywords" content="AI, artificial intelligence, performance monitoring, AI solutions, intelligent automation" / />
       </Helmet>
-      <Navigation /></Navigation>
+      <Navigation / />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden"></section>
+        <section className="relative py-20 px-4 overflow-hidden" />
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20">
             <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight" />
               Advanced SEO Optimizer New</h1>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed" />
               Advanced Performance Monitor solution for modern businesses.</p>
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"></button>
+              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" />
                 Get Started</button>
-                <ArrowRight className="ml-2 h-5 w-5" /></ArrowRight>
+                <ArrowRight className="ml-2 h-5 w-5" / />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hove,
-  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
+  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
                 Learn More</button>
               </button>
             
           ,
         </section>,
         {/* Features Section */}
-        <section className="py-20 px-4"></section>
+        <section className="py-20 px-4" />
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto" />
                 Powerful AI-driven features designed to transform your business operations</p>
               </p>
             
@@ -84,13 +82,13 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
   g:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" /></feature>
+                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" / />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2"></ul>
+                  <ul className="space-y-2" />
                     {feature.benefits.map((benefit, idx) => (</ul>
-                      <li key={idx} className="flex items-center text-sm text-gray-300"></li>
-                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" /></CheckCircle>
+                      <li key={idx} className="flex items-center text-sm text-gray-300" />
+                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" / />
                         {benefit}</CheckCircle>
                       </li>
                     ))}
@@ -101,50 +99,52 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
           
         </section>
         {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5"></section>
+        <section className="py-20 px-4 bg-white/5" />
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16"></div>
+            <div className="text-center mb-16" />
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution?</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto" />
                 Experience the power of AI-driven performance monitoring</p>
               </p>
-            </div>
+              </div>
             <div className="grid md: grid-cols-2 l,
-  g:grid-cols-3 gap-8"></div>
-              {benefits.map((benefit, index) => (</div>
-                <div key={index} className="flex items-start space-x-3"></div>
-                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /></CheckCircle>
+  g:grid-cols-3 gap-8" />
+              {benefits.map((benefit, index) => (  </div>
+                <div key={index} className="flex items-start space-x-3" />
+                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" / />
                   <p className="text-gray-300 text-lg">{benefit}</p>
-                </div>
+                  </div>
               ))}
+              </div>
             </div>
-          </div>
         </section>
         {/* CTA Section */}
-        <section className="py-20 px-4"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <h2 className="text-4xl font-bold text-white mb-6"></h2>
+        <section className="py-20 px-4" />
+          <div className="max-w-4xl mx-auto text-center" />
+            <h2 className="text-4xl font-bold text-white mb-6" />
               Ready to Transform Your Business?</h2>
             </h2>
-            <p className="text-xl text-gray-300 mb-8"></p>
+            <p className="text-xl text-gray-300 mb-8" />
               Join thousands of businesses already using our AI-powered solutions</p>
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"></button>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center" />
+              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" />
                 Start Free Trial</button>
-                <ArrowRight className="ml-2 h-5 w-5" /></ArrowRight>
+                <ArrowRight className="ml-2 h-5 w-5" / />
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hove,
-  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
+  r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
                 Contact Sales</button>
               </button>
+              </div>
             </div>
-          </div>
         </section>
-      </div>
+        </div>
       </Footer>
-</div>;
+  </div>
   );
+}
 };
 
 export default AdvancedPerformanceMonitorPage;
+}

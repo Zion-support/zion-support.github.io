@@ -147,6 +147,7 @@ const TestPage = lazy(() => import('./test/page'));
 
 // Main App Component
 function App() {
+  
   return (
     <HelmetProvider>
       <ErrorBoundary>
@@ -285,3 +286,4 @@ function App() {
 }
 
 export default App;
+}

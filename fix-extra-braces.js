@@ -1,112 +1,69 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix extra braces and syntax issues
+// Function to fix extra closing braces
 function fixExtraBraces(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix 1: Remove extra closing braces at the end
-    const lines = content.split('\n');
-    const cleanedLines = [];
+    // Fix extra closing braces at the end of files
+    content = content.replace(/\}\s*\}\s*$/gm, '}');
+    content = content.replace(/\}\s*export default Footer;\s*\}\s*$/gm, '};\n\nexport default Footer;');
     
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i].trim();
-      
-      // Skip extra closing braces that appear after the main function
-      if (line === '}' && i > 0) {
-        // Check if this is the last line or if the next line is empty
-        if (i === lines.length - 1 || (i + 1 < lines.length && lines[i + 1].trim() === '')) {
-          // Check if we already have a proper function closing
-          const hasProperClosing = content.includes(');\n}') || content.includes('  );\n}');
-          if (hasProperClosing) {
-            continue; // Skip this extra brace
-          }
-        }
-      }
-      
-      cleanedLines.push(lines[i]);
-    }
+    // Fix malformed JSX structure
+    content = content.replace(/(\s*)<\/div>\s*$/gm, '$1  </div>');
+    content = content.replace(/(\s*)<\/>\s*$/gm, '$1  </>');
     
-    const cleanedContent = cleanedLines.join('\n');
-    if (cleanedContent !== content) {
-      content = cleanedContent;
-      modified = true;
-    }
-
-    // Fix 2: Fix missing semicolons after closing parentheses
-    if (content.includes('  );\n}') && !content.includes('  );\n}\n')) {
-      content = content.replace('  );\n}', '  );\n}\n');
-      modified = true;
-    }
-
-    // Fix 3: Remove duplicate function declarations
-    const functionMatches = content.match(/export default function \w+/g);
-    if (functionMatches && functionMatches.length > 1) {
-      // Keep only the first function declaration
-      const firstFunctionIndex = content.indexOf('export default function');
-      const secondFunctionIndex = content.indexOf('export default function', firstFunctionIndex + 1);
-      
-      if (secondFunctionIndex > firstFunctionIndex) {
-        content = content.substring(0, secondFunctionIndex).trim();
-        modified = true;
-      }
-    }
-
-    // Fix 4: Ensure proper JSX structure
-    if (content.includes('</>') && !content.includes('  );\n}')) {
-      content = content.replace(/(\s*)(<\/>)/, '$1$2\n  );\n}');
-      modified = true;
-    }
+    // Fix missing opening tags
+    content = content.replace(/(\s*)<div>\s*$/gm, '$1  <div>');
+    content = content.replace(/(\s*)<>\s*$/gm, '$1  <>');
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed extra braces: ${filePath}`);
+      console.log(`Fixed extra braces in ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to recursively find all .tsx files
-function findTsxFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
-  
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory()) {
-      files.push(...findTsxFiles(fullPath));
-    } else if (item.endsWith('.tsx')) {
-      files.push(fullPath);
+// Function to find and fix all files
+function fixAllFiles(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      fixedCount += fixAllFiles(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      if (fixExtraBraces(filePath)) {
+        fixedCount++;
+      }
     }
-  }
-  
-  return files;
+  });
+
+  return fixedCount;
 }
 
 // Main execution
-console.log('Starting extra braces fix...');
+console.log('Starting extra braces fixes...');
 
-const appDir = 'app';
-const tsxFiles = findTsxFiles(appDir);
+// Fix files in app directory
+const appFixed = fixAllFiles('./app');
+console.log(`Fixed ${appFixed} files in app directory.`);
 
-let fixedCount = 0;
-let totalFiles = tsxFiles.length;
-
-console.log(`Found ${totalFiles} .tsx files to check`);
-
-for (const file of tsxFiles) {
-  if (fixExtraBraces(file)) {
-    fixedCount++;
-  }
+// Fix files in src directory if it exists
+let srcFixed = 0;
+if (fs.existsSync('./src')) {
+  srcFixed = fixAllFiles('./src');
+  console.log(`Fixed ${srcFixed} files in src directory.`);
 }
 
-console.log(`\nFixed ${fixedCount} out of ${totalFiles} files`);
-console.log('Extra braces fixing completed!');
+console.log(`Extra braces fixes completed. Total files fixed: ${appFixed + srcFixed}`);

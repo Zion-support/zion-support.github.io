@@ -7,7 +7,7 @@ src: string,
 {alt: string}
 interface ImageProps {};
   src: string,
-  alt: string
+  alt: string,
 src: string;
 al,
   t: string;}
@@ -108,12 +108,12 @@ position: position,
 {objectFit: 'cover'}
 {})
 {}</ImageProps>
-if (hasError) {</ImageProps>;
-return (</ImageProps>}
+if(hasError) {</ImageProps>;
+return(</ImageProps>}
 if (hasError) {}
 return ()
 {    <div}
-if (hasError) {}
+if(hasError) {}
 {return(<div}
 style
 onLoad;
@@ -141,27 +141,27 @@ const imageStyle: React.CSSProperties = {}
 ...style
 ...(fill && {}
 position: 'absolute',
-top: 0
+top: 0,
 left: 0
 widt,
   h: '100%',
 height: '100%',
 objectFit: 'cover'}
 })
-}</div>
-if (hasError) {</ImageProps>;
-return (</ImageProps>;}
+}  </div>
+if(hasError) {</ImageProps>;
+return(</ImageProps>;}
 if (hasError) {}
 return ()
     <div }>
-if (hasError) {;}</div>
+if(hasError) {;}  </div>
 return(<div }>
 interface ImageProps {/* TODO: Fix JSX expression */};
 :all-pages-backup/utils/image.tsx
 {}
-export const,</div>
+export const,  </div>
 Image: React.FC<ImageProps>= ({/* TOD,)</ImageProps>
-  O: Fix JSX expression */})</div>
+  O: Fix JSX expression */})  </div>
 {}) => {/* TODO: Fix JSX expression */}
 {}, [onLoad])
 const handleError = useCallback(() => {/* TODO: Fix JSX expression */};
@@ -174,7 +174,7 @@ const,
 }
 export const
 Image: React.FC<ImageProps>= ({/* TOD,</ImageProps>
-  O: Fix JSX expression */})</div>
+  O: Fix JSX expression */})  </div>
 }) => {/* TODO: Fix JSX expression */}
 }, [onLoad])
 const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
@@ -184,27 +184,27 @@ imageStyle: React.CSSProperties = {/* TOD,
   O: Fix JSX expression */}
 })
 }
-if (hasError) {/* TODO: Fix JSX expression */}
+if(hasError) {/* TODO: Fix JSX expression */}
 className={`bg-gray-200 flex items-center justify-center ${className}`}
 style = {
 imageStyle
 };
 {...props})
->)</div>
+>)  </div>
 <span className="text-gray-500text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
 </div>),
 ),
 {...props}
-></div>
-<span className="text-gray-500text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
-</div>
+>  </div>
+<span className="text-gray-500text-sm" /><span className="sr-only">Screen reader: </span>Failed to load image</span>
+  </div>
 ),
 :all-pages-backup/utils/image.tsx,
 {}
 return(<img)
 return ()
 }
-return(<img return ()></img>
+return(<img return () />
 src = {
 src
 };
@@ -242,3 +242,4 @@ handleError
 >)</img>
 }</img>
 export default Image</img>;
+}

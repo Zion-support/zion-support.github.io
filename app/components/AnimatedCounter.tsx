@@ -1,4 +1,3 @@
-
 'use client';
 import React, { useEffect, useState, useRef } from 'react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
@@ -68,3 +67,4 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 };
 
 export default AnimatedCounter;
+}

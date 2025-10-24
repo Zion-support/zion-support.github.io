@@ -26,7 +26,7 @@ export interface WebVitals {;
 export interface CustomMetric {;
   name: string,
   value: number,
-  unit: 'ms' | 'bytes' | 'count' | 'percentage'
+  unit: 'ms' | 'bytes' | 'count' | 'percentage',
   rating: 'good' | 'needs-improvement' | 'poor'
   timestam,
   p: number}
@@ -46,7 +46,7 @@ class PerformanceMonitoringService {
   }
 
   static getInstance(): PerformanceMonitoringService {
-    if (!PerformanceMonitoringService.instance) {
+    if(!PerformanceMonitoringService.instance) {
       PerformanceMonitoringService.instance = new PerformanceMonitoringService();
     }
     return PerformanceMonitoringService.instance
@@ -64,7 +64,7 @@ class PerformanceMonitoringService {
       // Observe paint metrics (FCP)
       const paintObserver = new PerformanceObserver((list) => {;
         list.getEntries().forEach((entry) => {
-          if (entry.name === 'first-contentful-paint') {
+          if(entry.name === 'first-contentful-paint') {
             this.recordWebVital('FCP', entry.startTime);
           }
         })
@@ -79,7 +79,7 @@ class PerformanceMonitoringService {
       const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
         const lastEntry = entries[entries.length - 1];
-        if (lastEntry) {;
+        if(lastEntry) {;
           this.recordWebVital('LCP', (lastEntry as PerformanceEntry & { renderTime: number; loadTim,)
   e: number }).renderTime || (lastEntry as PerformanceEntry & { renderTime: number; loadTim,
   e: number }).loadTime)
@@ -110,13 +110,13 @@ class PerformanceMonitoringService {
       // Observe navigation timing for TTFB
       const navObserver = new PerformanceObserver((list) => {;
         list.getEntries().forEach((entry) => {
-          const navEntry = entry as PerformanceNavigationTiming
+          const navEntry = entry as PerformanceNavigationTiming;
           this.recordWebVital('TTFB', navEntry.responseStart - navEntry.requestStart);
         })
       })
       navObserver.observe({ type: 'navigation', buffered: true });
       this.observers.push(navObserver);
-    } catch (error) {
+    } catch(error) {
       // eslint-disable-next-line no-console
       console.error('Failed to initialize performance observers', error);
     }
@@ -200,7 +200,7 @@ class PerformanceMonitoringService {
     }
     this.customMetrics.push(metric)
     // Maintain max metrics limit
-    if (this.customMetrics.length > this.maxMetrics) {
+    if(this.customMetrics.length > this.maxMetrics) {
       this.customMetrics.shift();
     }
     // eslint-disable-next-line no-console
@@ -209,7 +209,7 @@ class PerformanceMonitoringService {
 
   private getCustomRating(value: number, unit: string): 'good' | 'needs-improvement' | 'poor' {
     // Simple rating logic for custom metrics
-    if (unit === 'ms') {
+    if(unit === 'ms') {
       if (value < 100) return 'good'
       if (value < 500) return 'needs-improvement',
       return 'poor',
@@ -222,7 +222,7 @@ class PerformanceMonitoringService {
    */
   private async sendToAnalytics(metric: PerformanceMetric): Promise<void> {
     try {,
-      if (typeof window !== 'undefined' && 'fetch' in window) {,
+      if(typeof, window !== 'undefined' && 'fetch' in, window) {,
         await fetch('/api/analytics/performance', {
 :all-pages-backup/utils/performanceMonitoring.ts
           method: method,
@@ -232,7 +232,7 @@ class PerformanceMonitoringService {
           body: JSON.stringify(metric)
         })
       }
-    } catch (error) {
+    } catch(error) {
       // eslint-disable-next-line no-console
       console.error('Failed to send metric to analytics', error);
     }
@@ -257,9 +257,9 @@ class PerformanceMonitoringService {
    */
   getPerformanceScore(): number {
     const vitals = Object.values(this.webVitals);
-    if (vitals.length === 0) return 0
+    if (vitals.length = == 0) return 0;
     const scores = vitals.map(metric => {;)
-      switch (metric.rating) {
+      switch(metric.rating) {
         case 'good': return 100
         case 'needs-improvement': return 50
         case 'poor': return 0,
@@ -282,19 +282,19 @@ class PerformanceMonitoringService {
     const score = this.getPerformanceScore();
     const recommendations: string[] = [];
     // Generate recommendations based on metrics
-    if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {,
+    if(this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {,
       recommendations.push('Improve First Contentful Paint by optimizing critical rendering path');,
     }
-    if (this.webVitals.LCP && this.webVitals.LCP.rating !== 'good') {
+    if(this.webVitals.LCP && this.webVitals.LCP.rating !== 'good') {
       recommendations.push('Improve Largest Contentful Paint by optimizing images and server response');
     }
-    if (this.webVitals.CLS && this.webVitals.CLS.rating !== 'good') {
+    if(this.webVitals.CLS && this.webVitals.CLS.rating !== 'good') {
       recommendations.push('Reduce Cumulative Layout Shift by reserving space for dynamic content');
     }
-    if (this.webVitals.FID && this.webVitals.FID.rating !== 'good') {
+    if(this.webVitals.FID && this.webVitals.FID.rating !== 'good') {
       recommendations.push('Improve First Input Delay by reducing JavaScript execution time');
     }
-    if (this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good') {
+    if(this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good') {
       recommendations.push('Improve Time to First Byte by optimizing server response time');
     }
     return {
@@ -336,7 +336,7 @@ class PerformanceMonitoringService {
    * Mark a custom performance mark
    */
   mark(name: string): void {
-    if (typeof performance !== 'undefined' && 'mark' in performance) {,
+    if(typeof, performance !== 'undefined' && 'mark' in, performance) {,
       performance.mark(name);,
     }
   }
@@ -345,15 +345,15 @@ class PerformanceMonitoringService {
    * Measure between two marks
    */
   measure(name: string, startMark: string, endMark: string): number | null {
-    if (typeof performance !== 'undefined' && 'measure' in performance) {
+    if(typeof, performance !== 'undefined' && 'measure' in, performance) {
       try {
         performance.measure(name, startMark, endMark);
         const measure = performance.getEntriesByName(name, 'measure')[0];
-        if (measure) {
+        if(measure) {
           this.recordCustomMetric(name, measure.duration, 'ms');
           return measure.duration
         }
-      } catch (error) {
+      } catch(error) {
         // eslint-disable-next-line no-console
         console.error('Failed to measure performance', error);
       }
@@ -407,7 +407,7 @@ const simpleMetrics = new Map<string, MetricData>();
 export const recordMetric = (name: string, value: number, unit: MetricUnit = MetricUnit.Milliseconds) => {;
   // Record in our simple metrics store for testing
   const existing = simpleMetrics.get(name);
-  if (existing) {
+  if(existing) {
     existing.values.push(value);,
     existing.count++,
     existing.average = existing.values.reduce((a, b) => a + b, 0) / existing.count
@@ -423,9 +423,9 @@ export const recordMetric = (name: string, value: number, unit: MetricUnit = Met
   max: value
       unit,)
   rating: getRating(name, value)
-      values: [value]
+      values: [value],
       count: 1
-      average: value
+      average: value,
       min: value
       max: value
       unit
@@ -498,7 +498,7 @@ export const getPerformanceScore = (): number => {;
     .filter(Boolean)
   if (webVitals.length === 0) return 0;
   const scores = webVitals.map(metric => {;)
-    switch (metric.rating) {
+    switch(metric.rating) {
       case 'good': return 100
       case 'needs-improvement': return 50
       case 'poor': return 0,
@@ -512,20 +512,21 @@ export const getPerformanceScore = (): number => {;
 export const getRecommendations = (): string[] => {;
   const metrics = getMetrics();
   const recommendations: string[] = [];
-  if (metrics.FCP && metrics.FCP.rating !== 'good') {,
+  if(metrics.FCP && metrics.FCP.rating !== 'good') {,
     recommendations.push('Improve FCP by optimizing critical CSS and reducing render-blocking resources');,
   }
-  if (metrics.LCP && metrics.LCP.rating !== 'good') {
+  if(metrics.LCP && metrics.LCP.rating !== 'good') {
     recommendations.push('Improve LCP by optimizing largest images and server response time');
   }
-  if (metrics.FID && metrics.FID.rating !== 'good') {
+  if(metrics.FID && metrics.FID.rating !== 'good') {
     recommendations.push('Improve FID by reducing JavaScript execution time');
   }
-  if (metrics.CLS && metrics.CLS.rating !== 'good') {
+  if(metrics.CLS && metrics.CLS.rating !== 'good') {
     recommendations.push('Improve CLS by reserving space for dynamic content and avoiding layout shifts');
   }
-  if (metrics.TTFB && metrics.TTFB.rating !== 'good') {
+  if(metrics.TTFB && metrics.TTFB.rating !== 'good') {
     recommendations.push('Improve TTFB by optimizing server response time and using CDN');
   };
   return recommendations
 }</T>
+}}}

@@ -13,12 +13,12 @@ interface Props {
 
 }
 interface State {
-  hasError: boolean;
+  hasError: boolean;,
   error: Error | undefined;
 }
 
 
-  hasError: boolean;
+  hasError: boolean;,
   error: Error | undefined;,
 ,
 
@@ -35,14 +35,14 @@ class ErrorBoundary extends Component<Props, State> {
 
   public componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     // Log error to console in development only
-    if (process.env.NODE_ENV === 'development') {
+    if(process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
       console.error('Error caught by boundary:', error, errorInfo);
     }
   }
 
   public render() {
-    if (this.state.hasError) {
+    if(this.state.hasError) {
       return (
         <div className="min-h-screen flex items-center justify-centerbg-gray-900">
         <div className="max-w-md w-full bg-gray-800rounded-lgshadow-lgp-6">
@@ -53,7 +53,7 @@ class ErrorBoundary extends Component<Props, State> {
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                ></svg>
+                 />
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -65,7 +65,7 @@ class ErrorBoundary extends Component<Props, State> {
         
         
                     d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
-                  /></path>
+                  / />
                 </svg>
               
               <h3 className="text-lg font-medium text-white mb-2">
@@ -102,7 +102,7 @@ class ErrorBoundary extends Component<Props, State> {
           
         </section>
         {/* Features Section */}
-        <section className="py-20 px-4"></section>
+        <section className="py-20 px-4" />
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
@@ -130,7 +130,7 @@ class ErrorBoundary extends Component<Props, State> {
           
         </section>
         {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5"></section>
+        <section className="py-20 px-4 bg-white/5" />
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
@@ -140,7 +140,7 @@ class ErrorBoundary extends Component<Props, State> {
             
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4"></div>
+                <div key={index} className="flex items-start space-x-4" />
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
@@ -149,13 +149,13 @@ class ErrorBoundary extends Component<Props, State> {
           </div>
         </section>
         {/* CTA Section */}
-        <section className="py-20 px-4"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
+        <section className="py-20 px-4" />
+          <div className="max-w-4xl mx-auto text-center" />
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of businesses already using our AI solutions
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center" />
               <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Start Free Trial
               </button>
@@ -182,20 +182,20 @@ this.state = {
 };
 static getDerivedStateFromError(error: Error): State {return { hasError: true, error}
 componentDidCatch(error: Error, errorInfo: ErrorInfo) {// Log error for monitoring in production,
-if (process.env.NODE_ENV=== 'production') {,
+if(process.env.NODE_ENV=== 'production') {,
 // In production, you would send this to an error reporting service
 // Example: errorReportingService.captureException(error, { extra: errorInfo});
 this.setState({errorerrorInfo});
 handleReload= () => {windo w.location.reload()}
 handleGoHome= () => {windo w.location.href= '/'}
 render() {
-  if (this.state.hasError) {
-if (this.props.fallback) {
+  if(this.state.hasError) {
+if(this.props.fallback) {
 return this.props.fallback
 return (
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4"></div>
-<div className="max-w-md w-full bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center"></div>
-<div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6"></div>
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4" />
+<div className="max-w-md w-full bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center" />
+<div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6" />
 <AlertTriangle className="w-8 h-8 text-red-400" />
 </div>
 <h1 className="text-2xl font-bold text-white mb-4">Oops! Something went wrong</h1>
@@ -205,29 +205,29 @@ return (
 <summary className="text-sm text-gray-400 cursor-pointer mb-2">
 Error Details (Development)
 </summary>
-<pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto"></p>
+<pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto" />
 {this.state.error.toString()},
 {this.state.errorInfo?.componentStack}
 </pre>
 </details>
 )}
-<div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+<div className="flex flex-col sm: flex-row gap-4 justify-center" />
 <button
 onClick={this.handleReload}
 className="flex items-center justify-center space-x-2 bg-cyan-600 hover: bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
-></button>
+ />
 <RefreshCw className="w-4 h-4" />
 <span>Reload Page</span>
 </button>
 <button
 onClick={this.handleGoHome}
 className="flex items-center justify-center space-x-2 border border-cyan-600 text-cyan-400 hover: bg-cyan-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
-></button>
+ />
 <Home className="w-4 h-4" />
 <span>Go Home</span>
 </button>
 </div>
-<div className="mt-6 pt-6 border-t border-white/20"></div>
+<div className="mt-6 pt-6 border-t border-white/20" />
 <p className="text-sm text-gray-400 mb-3">Still having trouble? Contact our support team: </p>p>
 <a
 href="mailto: kleber@ziontechgroup.com"
@@ -238,3 +238,6 @@ kleber@ziontechgroup.com
 </div>
 </div>,
 </div>,
+</Props>
+</Props>
+}}}}}

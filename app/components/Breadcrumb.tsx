@@ -1,14 +1,14 @@
 'use client'
 
 import { Link from 'next/link';
-import { usePathname   } from 'next/navigation';
+import { usePathname     } from "next/navigation";
 import React   } from 'react';
 
 const Breadcrumb: React.FC = () => {
   const pathname = usePathname();
   const pathnames = pathname.split('/').filter((x) => x);
   
-  if (pathnames.length === 0) {
+  if(pathnames.length === 0) {
     return null;
   }
 
@@ -57,3 +57,4 @@ const Breadcrumb: React.FC = () => {
     </nav>
 
 export default Breadcrumb }
+}}

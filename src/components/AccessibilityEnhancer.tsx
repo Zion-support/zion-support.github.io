@@ -8,7 +8,8 @@ interface AccessibilityEnhancerProps {
   children: React.ReactNode}
 }
 ;
-export default function AccessibilityEnhancer({ children }: AccessibilityEnhancerProps) {
+export default function AccessibilityEnhancer() {
+  return 
   useEffect(() => {
     // Accessibility enhancements
     if (typeof window !== 'undefined') {
@@ -189,6 +190,7 @@ const AccessibilityEnhancer: React.FC<{ childre,
   return <div>{children}</div>};
 
 export default AccessibilityEnhancer
-  return <div>{children}</div>
+  return <div>{children}  </div>
 }
 export default AccessibilityEnhancer;
+}
