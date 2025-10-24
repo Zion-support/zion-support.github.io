@@ -1,6 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import Head from 'next/head';
 interface EnhancedSEOHeadProps {
   title: string;
   description: string;
@@ -20,7 +19,6 @@ interface EnhancedSEOHeadProps {
   alternateUrls?: { hreflang: string; href: string }[];
   breadcrumbs?: Array<{ name: string; url: string }>;
 }
-
 const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
   title,
   description,
@@ -45,7 +43,6 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
   const fullKeywords = keywords || 'AI solutions, IT services, artificial intelligence, cloud infrastructure, digital transformation, machine learning, data analytics, business automation';
   const siteUrl = 'https://ziontechgroup.com';
   const currentUrl = canonicalUrl || siteUrl;
-
   // Enhanced structured data
   const enhancedStructuredData = {
     "@context": "https://schema.org",
@@ -74,7 +71,6 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
     ],
     ...structuredData
   };
-
   // Breadcrumb structured data
   const breadcrumbStructuredData = breadcrumbs.length > 0 ? {
     "@context": "https://schema.org",
@@ -86,9 +82,8 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
       "item": item.url
     }))
   } : null;
-
   return (
-    <Helmet>
+    <Head>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={fullDescription} />
@@ -96,11 +91,9 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
       <meta name="author" content={author} />
       <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow'} />
       <link rel="canonical" href={currentUrl} />
-      
       {/* Language and Locale */}
       <meta name="language" content="English" />
       <meta property="og:locale" content={locale} />
-      
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={currentUrl} />
@@ -110,7 +103,6 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="Zion Tech Group" />
-      
       {/* Article specific meta tags */}
       {ogType === 'article' && (
         <>
@@ -123,7 +115,6 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
           ))}
         </>
       )}
-      
       {/* Twitter */}
       <meta property="twitter:card" content={twitterCard} />
       <meta property="twitter:url" content={currentUrl} />
@@ -132,7 +123,6 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
       <meta property="twitter:image" content={ogImage} />
       <meta property="twitter:site" content="@ziontechgroup" />
       <meta property="twitter:creator" content="@ziontechgroup" />
-      
       {/* Additional SEO meta tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
@@ -140,35 +130,29 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
       <meta name="distribution" content="global" />
       <meta name="rating" content="general" />
       <meta name="theme-color" content="#3b82f6" />
-      
       {/* Alternate URLs for internationalization */}
       {alternateUrls.map((alt, index) => (
         <link key={index} rel="alternate" hrefLang={alt.hreflang} href={alt.href} />
       ))}
-      
       {/* Preconnect to external domains for performance */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      
       {/* Favicon and app icons */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="manifest" href="/site.webmanifest" />
-      
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(enhancedStructuredData)}
       </script>
-      
       {breadcrumbStructuredData && (
         <script type="application/ld+json">
           {JSON.stringify(breadcrumbStructuredData)}
         </script>
       )}
-    </Helmet>
+    </Head>
   );
 };
-
 export default EnhancedSEOHead;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:all-pages-backup/utils/image.tsx
 src: string,
 {alt: string}
@@ -79,3 +80,13 @@ return ()
 <<<<<<< HEAD:all-pages-backup/utils/image.tsx
 >)</img>;
 {}</img>;
+=======
+import React from 'react'
+'use client'
+import React, { useState, useCallback } from 'react'
+_placeholder?: 'blur' | 'empty'
+placeholder = 'empty'
+  "height": '100%',
+{"objectFit": 'cover';,
+'use client'
+>>>>>>> origin/main

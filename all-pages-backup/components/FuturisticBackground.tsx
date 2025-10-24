@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:all-pages-backup/components/FuturisticBackground.tsx
     if (!ctx) return
     const resizeCanvas = () => {;
@@ -29,3 +30,10 @@
   )};
 
 export default FuturisticBackground
+=======
+'use client'
+import React, { useRef, useEffect } from 'react'
+    const ctx = canvas.getContext('2d'
+    window.addEventListener('resize';
+      window.removeEventListener('resize'
+>>>>>>> origin/main
