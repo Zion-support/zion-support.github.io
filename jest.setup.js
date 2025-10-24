@@ -4,45 +4,44 @@ import '@testing-library/jest-dom'
 jest.mock('react-router-dom', () => {
   const actual = jest.requireActual('react-router-dom')
   return {
-    ...actual
+    ...actual,
     useNavigate: () => jest.fn(),
     useLocation: () => ({
       pathname: '/',
-    search: ''
+      search: '',
       hash: '',
-    state: null
-      key: 'default'})
+      state: null,
+      key: 'default'
+    }),
     Link: ({ to, children, ...props }) => {
       const mockReact = jest.requireActual('react')
       return mockReact.createElement('a', { href: to, ...props }, children)
-    }
-    BrowserRouter: ({ children }) => children
-    MemoryRouter: ({ children }) => children
-    Routes: ({ children }) => children
-    Route: ({ element }) => element
-    useParams: () => ({})
-    useSearchParams: () => [new URLSearchParams(), jest.fn()]
+    },
+    BrowserRouter: ({ children }) => children,
+    MemoryRouter: ({ children }) => children,
+    Routes: ({ children }) => children,
+    Route: ({ element }) => element,
+    useParams: () => ({}),
+    useSearchParams: () => [new URLSearchParams(), jest.fn()],
     createBrowserRouter: () => {
       const mockReact = jest.requireActual('react')
       return {
         path: '/',
-    element: mockReact.createElement('div')}
+        element: mockReact.createElement('div')
+      }
     }
   }
 })
 // Suppress console warnings for tests
-const originalError = // eslint-disable-next-line no-console
-    console.error
+const originalError = console.error
 beforeAll(() => {
-  // eslint-disable-next-line no-console
-    console.error = (...args) => {
+  console.error = (...args) => {
     if (typeof args[0] === 'string' && args[0].includes('Warning: ReactDOM.render is no longer supported')) {
       return
-}
+    }
     originalError.call(console, ...args)
   }
 })
 afterAll(() => {
-  // eslint-disable-next-line no-console
-    console.error = originalError
+  console.error = originalError
 })
