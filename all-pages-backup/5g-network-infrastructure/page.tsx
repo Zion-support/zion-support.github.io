@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from "next/head";
 
@@ -27,3 +28,6 @@ export default function NetworkInfrastructure5GPage() {
 </>;
   )}
 
+=======
+import React from 'react'
+>>>>>>> origin/main

@@ -1,4 +1,5 @@
 'use client'
+<<<<<<< HEAD
 <<<<<<< HEAD:all-pages-backup/components/SystemMonitor.tsx
 import Footer from './Footer';
 import Navigation from './Navigation';
@@ -13,10 +14,20 @@ import { ArrowRight } from 'lucide-react';
   ]
 
   const benefits = [
+=======
+import Footer from './Footer'
+import Navigation from './Navigation'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Brain } from 'lucide-react'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
+>>>>>>> origin/main
     'Increase efficiency by up to 50%'
     'Reduce costs by 30% with automation'
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases'
+<<<<<<< HEAD
     'Gain competitive advantage with advanced technology'
   ]
 ;
@@ -138,3 +149,7 @@ export default SystemMonitorPage
   )
 {}
 export default SystemMonitorPage
+=======
+    'Gain competitive advantage with advanced technology';
+const "SystemMonitor": React.FC<SystemMonitorProps> = ({ className = ' }) => {
+>>>>>>> origin/main

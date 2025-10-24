@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 import React, { useRef, useEffect } from 'react';
@@ -200,3 +201,10 @@ const FuturisticBackground: React.FC = () => {;
 
 export default FuturisticBackground
 :app/components/FuturisticBackground.tsx
+=======
+'use client'
+import React, { useRef, useEffect } from 'react'
+    const ctx = canvas.getContext('2d'
+    window.addEventListener('resize';
+      window.removeEventListener('resize'
+>>>>>>> origin/main

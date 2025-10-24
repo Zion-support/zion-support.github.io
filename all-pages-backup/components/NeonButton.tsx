@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from &quot;react&quot
 import { ArrowRight } from &quot;lucide-react&quot
 interface NeonButtonProps {
@@ -36,8 +37,13 @@ const NeonButton: React.FC<NeonButtonProps> = ({;
     'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ]
+=======
+import React from 'react';
+>>>>>>> origin/main
 
+const NeonButtonPage: React.FC = () => {
   return (
+<<<<<<< HEAD
     <>
 <<<<<<< HEAD:all-pages-backup/components/NeonButton.tsx
       <Helmet>;
@@ -61,86 +67,25 @@ const NeonButton: React.FC<NeonButtonProps> = ({;
             </h1>
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
               Advanced NeonButton solution for modern businesses.
+=======
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            NeonButton
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            This page is under construction and will be available soon.
+          </p>
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <p className="text-gray-700">
+              We are working hard to bring you the best experience. Please check back later.
+>>>>>>> origin/main
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
-                Get Started
-                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
-              </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
-                Learn More
-              </button>
-            </div>
           </div>
-        </section>
-
-        {/* Features Section */}
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
-                Powerful AI-driven features designed to transform your business operations
-              </p>
-            </div>
-            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
-              {features.map((feature, index) => (
-                <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
-                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
-                  <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
-                  <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
-                  <ul className=&quot;space-y-2&quot;>
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;>
-                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
-                Experience the benefits of cutting-edge AI technology
-              </p>
-            </div>
-            <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
-              {benefits.map((benefit, index) => (
-                <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
-                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
-                  <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
-            <p className=&quot;text-xl text-gray-300 mb-8&quot;>
-              Join thousands of businesses already using our AI solutions
-            </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
-                Start Free Trial
-              </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
-                Contact Sales
-              </button>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
+<<<<<<< HEAD
       <Footer />
     </>
 <<<<<<< HEAD:all-pages-backup/components/NeonButton.tsx
@@ -164,28 +109,15 @@ export default NeonButtonPage
   <di v>{icon&&<spanclassName=&quot;mr-2&quot;>{icon}</spa>}
       {children}
       {!icon && <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />}
+=======
+>>>>>>> origin/main
     </div>
-  )
-
-  if (href) {
-    return (
-      <a href = {href} className={buttonClasses}>
-        {content}
-      </a>
-    )
-  }
-
-  return (
-    <button onClick={onClick} disabled={disabled} className={buttonClasses}>
-      {content}
-    </button>
-  )
-{}
-
-<<<<<<< HEAD:all-pages-backup/components/NeonButton.tsx
-export default NeonButton
   );
-{};
+};
 
+<<<<<<< HEAD
 export default NeonButton
 :app/components/NeonButton.tsx
+=======
+export default NeonButtonPage;
+>>>>>>> origin/main

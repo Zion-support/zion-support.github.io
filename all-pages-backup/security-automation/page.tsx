@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from "next/head";
 
@@ -26,3 +27,6 @@ export default function SecurityAutomationPage() {
       </div>
 </>;
   )}
+=======
+import React from 'react'
+>>>>>>> origin/main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from "next/head";
 
@@ -26,3 +27,6 @@ export default function AiEmailMarketingAutomationPage() {
       </div>
 </>;
   )}
+=======
+import React from 'react'
+>>>>>>> origin/main

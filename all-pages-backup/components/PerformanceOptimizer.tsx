@@ -1,4 +1,5 @@
 'use client'
+<<<<<<< HEAD
 import Navigation from './Navigation';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
@@ -43,64 +44,29 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
     images.forEach((img) => {
   
       if (img.loading !== 'lazy') {
+=======
+import Navigation from './Navigation'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight } from 'lucide-react'
+import React, { useEffect, useState, useCallback } from 'react'
+import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react'
+import { CheckCircle } from 'lucide-react'
+import { AlertTriangle } from 'lucide-react'
+    const images = document.querySelectorAll('img';
+      if (img.loading !== 'lazy'
+>>>>>>> origin/main
         img.loading = 'lazy'
-      }
-
-      // Add WebP support detection
-      if (!img.src.includes('.webp') && img.src.includes('.jpg')) {
-        const webpSrc = img.src.replace('.jpg', '.webp');
-        const webpImg = new Image();
-        webpImg.onload = () => {
-          img.src = webpSrc
-        }
-        webpImg.src = webpSrc
-      }
-    })
-
-    setOptimizationStatus(prev => ({ ...prev, images: true }))
-  }, [enableImageOptimization])
-
-  const enableLazyLoadingOptimization = useCallback(() => {;
-    if (!enableLazyLoading) return
-
-    // Intersection Observer for lazyloadingconstobserver= new IntersectionObserver(
-      (entries) => {
-  
-        entries.forEach((entry) => {
-  
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement
-            if (img.dataset.src) {
-              img.src = img.dataset.src
-              img.removeAttribute('data-src')
-              observer.unobserve(img)
-            }
-          }
-        })
-      }
-      { rootMargin: '50px' }
-    )
-
-    const lazyImages = document.querySelectorAll('img[data-src]');
-    lazyImages.forEach((img) => observer.observe(img))
-
-    setOptimizationStatus(prev => ({ ...prev, lazyLoading: true }))
-  }, [enableLazyLoading])
-
-  const enablePreloadingOptimization = useCallback(() => {;
-    if (!enablePreloading) return
-
-    // Preload critical resources
-    const criticalResources = [
+      if (!img.src.includes('.webp') && img.src.includes('.jpg'
+        const webpSrc = img.src.replace('.jpg', '.webp'
+              img.removeAttribute('data-src'
+      { "rootMargin": '50px',
+    const lazyImages = document.querySelectorAll('img[data-src]'
       '/fonts/main.woff2'
-      '/css/critical.css'
-    ]
-
-    criticalResources.forEach((resource) => {;
-      const link = document.createElement('link');
+      '/css/critical.css'}
+      const link = document.createElement('link'
       link.rel = 'preload'
-      link.href = resource
       link.as = resource.endsWith('.css') ? 'style' : 'font'
+<<<<<<< HEAD
       if (resource.endsWith('.woff2')) {
         link.crossOrigin = 'anonymous'
       }
@@ -268,3 +234,8 @@ export default PerformanceOptimizer
 
 export default PerformanceOptimizerPage
 :app/components/PerformanceOptimizer.tsx
+=======
+      if (resource.endsWith('.woff2'
+        link.crossOrigin = 'anonymous';
+      // // console.error('Optimization "failed": '
+>>>>>>> origin/main

@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+<<<<<<< HEAD
 import { MessageSquare, Mail, Phone, Send, CheckCircle } from 'lucide-react';
 'use client';
 
@@ -88,6 +89,14 @@ const ContactForm: React.FC = () => {;
 
 :app/components/ContactForm.tsx
   const services = [
+=======
+import { MessageSquare, Mail, Phone, Send, CheckCircle } from 'lucide-react'
+'use client'
+import { useState } from 'react'
+  "service": ',
+    "service": '',
+  "service": ',
+>>>>>>> origin/main
     'AI Solutions'
     'Web Development'
     'Mobile Development'
@@ -95,6 +104,7 @@ const ContactForm: React.FC = () => {;
     'Cybersecurity'
     'Data Analytics'
     'DevOps'
+<<<<<<< HEAD
 <<<<<<< HEAD:all-pages-backup/components/ContactForm.tsx
     'Consulting'
 :app/components/ContactForm.tsx
@@ -297,3 +307,7 @@ export default ContactForm
 
 export default ContactForm
 :app/components/ContactForm.tsx
+=======
+    'Consulting';
+    'Consulting'
+>>>>>>> origin/main

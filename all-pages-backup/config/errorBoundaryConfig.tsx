@@ -1,7 +1,8 @@
 /**
-* Error Boundary Configuration
-* Centralized configuration for error handling across the application
+* Error Boundary Configuration()
+* Centralized configuration for error handling across the application()
 */
+<<<<<<< HEAD
 import React from 'react';
 export interface ErrorBoundaryConfig {};
 /**
@@ -210,3 +211,8 @@ userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'
 export default getErrorBoundaryConfig
 ;
     </>
+=======
+import React from 'react'
+  "serverError": 'Server error occurred. Please try again later.';,
+{"validation": 'Validation error. Please check your input.'
+>>>>>>> origin/main

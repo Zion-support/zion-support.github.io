@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, ReactNode } from &quot;react&quot
 declare global {
   interface Window {
@@ -74,18 +75,35 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
   constvalue: AnalyticsContextType = {trackEvent
     trackPageView
   }
+=======
+import React from 'react';
+>>>>>>> origin/main
 
+const AnalyticsProviderPage: React.FC = () => {
   return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
-    </AnalyticsContext.Provider>
-  )
-}
-
-export default AnalyticsProvider;
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            AnalyticsProvider
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            This page is under construction and will be available soon.
+          </p>
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <p className="text-gray-700">
+              We are working hard to bring you the best experience. Please check back later.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   );
-<<<<<<< HEAD:all-pages-backup/components/AnalyticsProvider.tsx
-{};
+};
 
+<<<<<<< HEAD
 export default AnalyticsProviderPage
 :app/components/AnalyticsProvider.tsx
+=======
+export default AnalyticsProviderPage;
+>>>>>>> origin/main

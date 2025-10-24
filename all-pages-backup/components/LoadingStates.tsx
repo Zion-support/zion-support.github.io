@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 import React from 'react';
@@ -193,3 +194,7 @@ export const LoadingCard: React.FC = () => {;
     </div>
   )};
 :app/components/LoadingStates.tsx
+=======
+'use client'
+import React from 'react'
+>>>>>>> origin/main

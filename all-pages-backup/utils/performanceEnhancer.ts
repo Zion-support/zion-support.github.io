@@ -1,5 +1,6 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react'
 'use client'
+<<<<<<< HEAD
 /**
  * Performance Enhancement Utilities
  * Advanced performance optimization tools for the application
@@ -136,29 +137,25 @@ export const lazyLoadImages = () => {;
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement
+=======
+    if (process.env['NODE_ENV'] === 'development'
+    if ('memory'
+    if (typeof window === 'undefined' || !('PerformanceObserver'
+    observer.observe({ "entryTypes": ['longtask');
+  if (typeof window === 'undefined'
+  const images = document.querySelectorAll('img[data-src]'
+>>>>>>> origin/main
         img.src = img.dataset.src || ''
-        img.classList.remove('lazy')
-        imageObserver.unobserve(img)
-      }
-    })
-  })
-  images.forEach((img) => imageObserver.observe(img))
-}
-
-// Preload critical resources
-export const preloadCriticalResources = () => {;
-  if (typeof window === 'undefined') return
-  const criticalResources = [
+        img.classList.remove('lazy'
+  if (typeof window === 'undefined'
     '/fonts/inter-var.woff2'
     '/css/critical.css'
-  ]
-  criticalResources.forEach((resource) => {;
-    const link = document.createElement('link');
+    const link = document.createElement('link'
     link.rel = 'preload'
-    link.href = resource
     link.as = resource.endsWith('.woff2') ? 'font' : 'style'
-    if (resource.endsWith('.woff2')) {
+    if (resource.endsWith('.woff2'
       link.crossOrigin = 'anonymous'
+<<<<<<< HEAD
     }
     document.head.appendChild(link)
   })
@@ -303,3 +300,24 @@ export const initializePerformanceEnhancements = () => {;
   if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
     // eslint-disable-next-line no-console
     console.log('Performance metrics:', metrics)}}
+=======
+  if (typeof window === 'undefined'
+    document.documentElement.style.setProperty('--scroll-top'
+    observer.observe({ "entryTypes": ['layout-shift');
+        if (process.env['NODE_ENV'] === 'development'
+          console.log('"LCP": ');
+    observer.observe({ "entryTypes": ['largest-contentful-paint');
+        if (process.env['NODE_ENV'] === 'development'
+          console.log('"FID": ');
+    observer.observe({ "entryTypes": ['first-input');
+  window.addEventListener('scroll'
+  if (typeof window === 'undefined' || !('memory'
+  if (typeof window === 'undefined'
+  const navigation = performance.getEntriesByType('navigation'}
+  const paint = performance.getEntriesByType('paint'
+      "firstPaint": paint.find((entry) => entry.name === 'first-paint',
+  "firstContentfulPaint": paint.find((entry) => entry.name === 'first-contentful-paint',
+  if (typeof window === 'undefined'
+  if (metrics && (process.env['NODE_ENV'] === 'development';
+    console.log('Performance "metrics": '
+>>>>>>> origin/main

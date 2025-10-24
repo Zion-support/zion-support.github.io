@@ -1,5 +1,6 @@
-import React from 'react';
+import React from 'react'
 'use client'
+<<<<<<< HEAD
 import React, { useState, useCallback } from 'react';
 interface ImageProps {}
 <<<<<<< HEAD:all-pages-backup/utils/image.tsx
@@ -147,3 +148,11 @@ onError={handleError}
 {}</img>;
 :app/utils/image.tsx
 export default Image</img>;
+=======
+import React, { useState, useCallback } from 'react'
+_placeholder?: 'blur' | 'empty'
+placeholder = 'empty'
+  "height": '100%',
+{"objectFit": 'cover';,
+'use client'
+>>>>>>> origin/main

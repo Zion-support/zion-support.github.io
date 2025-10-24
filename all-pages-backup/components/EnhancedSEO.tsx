@@ -1,4 +1,5 @@
 'use client'
+<<<<<<< HEAD
 <<<<<<< HEAD:all-pages-backup/components/EnhancedSEO.tsx
 import Footer from './Footer';
 import React from 'react';
@@ -9,11 +10,20 @@ import { Phone, Mail, ArrowRight } from 'lucide-react';
 :app/components/EnhancedSEO.tsx
 
   const benefits = [
+=======
+import Footer from './Footer'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, Brain } from 'lucide-react'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { Phone, Mail, ArrowRight } from 'lucide-react'
+>>>>>>> origin/main
     'Advanced AI technology integration'
     'Real-time processing and analytics'
     'Enterprise-grade security and compliance'
     'Scalable and flexible solutions'
     '2 4/7 technical support'
+<<<<<<< HEAD
 <<<<<<< HEAD:all-pages-backup/components/EnhancedSEO.tsx
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
@@ -61,3 +71,8 @@ export default EnhancedSEOPage
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
             </div>
           </div>
+=======
+    'Easy integration with existing systems'
+    'Cost-effective pricing plans';
+    'Proven track record of success'
+>>>>>>> origin/main

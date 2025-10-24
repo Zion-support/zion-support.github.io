@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 import { Mail } from 'lucide-react';
@@ -53,3 +54,12 @@ class AdvancedErrorBoundary extends Component<Props, State> {
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     // You can integrate with services like Sentry, LogRocket, etc.
     const errorData = {;
+=======
+import React, { Component, ErrorInfo, ReactNode } from 'react'
+import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react'
+import { Mail } from 'lucide-react'
+import { Home } from 'lucide-react'
+    if (process.env.NODE_ENV === 'development'
+      // // console.error('Error caught by "boundary": ';);
+    if (process.env.NODE_ENV === 'production'
+>>>>>>> origin/main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import { useEffect } from 'react';
 
@@ -177,3 +178,11 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 
 export default EnhancedAccessibility
 :app/components/EnhancedAccessibility.tsx
+=======
+'use client'
+import { useEffect } from 'react'
+        document.documentElement.classList.add('high-contrast'
+        document.documentElement.classList.remove('high-contrast'
+    const mediaQuery = window.matchMedia('(prefers-"contrast": high)';,
+    mediaQuery.addEventListener('change'
+>>>>>>> origin/main
