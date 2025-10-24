@@ -1,17 +1,17 @@
 // API Client for making HTTP requests
 import logger from './logger';
 
-// Define RequestInit type for compatibility
-interface RequestInit {
+// Define custom request options type
+interface CustomRequestOptions {
   method?: string;
   headers?: Record<string, string>;
   body?: string;
-  cache?: string;
-  credentials?: string;
-  mode?: string;
-  redirect?: string;
+  cache?: RequestCache;
+  credentials?: RequestCredentials;
+  mode?: RequestMode;
+  redirect?: RequestRedirect;
   referrer?: string;
-  referrerPolicy?: string;
+  referrerPolicy?: ReferrerPolicy;
   integrity?: string;
   keepalive?: boolean;
   signal?: AbortSignal;
@@ -45,7 +45,7 @@ class ApiClient {
 
   private async makeRequest<T>(
     url: string,
-    options: RequestInit & RequestOptions = {}
+    options: CustomRequestOptions & RequestOptions = {}
   ): Promise<ApiResponse<T>> {
     const {
       timeout = this.defaultOptions.timeout,
