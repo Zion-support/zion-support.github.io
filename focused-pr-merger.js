@@ -33,7 +33,7 @@ const priorityBranches = [
   '0 nylrk-codex-fix-footer-contact-link-resolved',
   '0 parff-codex-centralize-api-error-handling-resolved',
   '0 smfo8-codex-fix-404-error-resolved']
-//Step 3: Get cursor branches (limit to most recent),
+//Step 3: Get cursor branches (limit to most recent),;
 // let cursorBranches = [];,
 try {,
   const branchOutput = execSync('git branch -r | grep "cursor/" | tail -20', {)

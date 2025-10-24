@@ -174,7 +174,7 @@ const ApiPage: React.FC = () => {
               >
                 View Endpoints;
               </a>
-            </div>
+                </div>
           </div>
 
           {/* Quick Stats */} <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-16">,</div>
@@ -182,22 +182,22 @@ const ApiPage: React.FC = () => {
               <Code className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
               <div className="text-2xl font-bold text-white mb-2">50+</div>
               <div className="text-gray-300">API Endpoints</div>
-            </div>
-            <div className="cyber-card-enhanced p-6 text-center">
+                </div>
+            <div className="cyber-card-enhanced p-6 text-center"></div>
               </div><Zap className="w-8 h-8 text-green-400 mx-auto mb-4" />
               <div className="text-2xl font-bold text-white mb-2">99.9%</div>
               <div className="text-gray-300">Uptime SLA</div>
-            </div>
-            <div className="cyber-card-enhanced p-6 text-center">
+                </div>
+            <div className="cyber-card-enhanced p-6 text-center"></div>
               </div><Shield className="w-8 h-8 text-purple-400 mx-auto mb-4" />
               <div className="text-2xl font-bold text-white mb-2">256-bit</div>
               <div className="text-gray-300">SSL Encryption</div>
-            </div>
-            <div className="cyber-card-enhanced p-6 text-center">
+                </div>
+            <div className="cyber-card-enhanced p-6 text-center"></div>
               </div><Globe className="w-8 h-8 text-orange-400 mx-auto mb-4" />
               <div className="text-2xl font-bold text-white mb-2">24/7</div>
               <div className="text-gray-300">Support</div>
-            </div>
+                </div>
           </div>
 
           {/* Getting Started */} <section id="getting-started" className="mb-16">
@@ -216,11 +216,11 @@ const ApiPage: React.FC = () => {
     "message": "Hello, world!",
     "model": "gpt-4"}'`}
                 </pre>
-              </div>
+                </div>
 
               <h3 className="text-xl font-semibold text-white mb-4">3. Explore the Documentation</h3>
               <p className="text-gray-300">Browse our comprehensive API documentation to discover all available endpoints and features.</p>
-              </p>
+                </p>
             </div>
           </section>
 
@@ -254,7 +254,7 @@ const ApiPage: React.FC = () => {
                       </tr><th className="text-left text-white py-3 px-4">Tier</th>
                       <th className="text-left text-white py-3 px-4">Monthly Requests</th>
                       <th className="text-left text-white py-3 px-4">Burst Limit</th>
-                    </tr>
+                </tr>
                   </thead>
                   <tbody>
                     {rateLimits.map((limit, index) => (
@@ -264,7 +264,7 @@ const ApiPage: React.FC = () => {
                         <td className="py-3 px-4 text-gray-300">{limit.burst}</td>
                       </tr>
                     ))}
-                  </tbody>
+                </tbody>
                 </table>
               </div>
         </div>
@@ -284,11 +284,17 @@ const ApiPage: React.FC = () => {
                             <span className={`px-3 py-1 rounded text-sm font-semibold ${
                               endpoint.method === 'GET' 
                                 ? 'bg-green-600 text-white' 
-                                : 'bg-blue-600 text-white'}`}>{endpoint.method</span>} </span>
-                            <code className="text-cyan-400 font-mono">{endpoint.path}</code>
-                          </div>
+                                : 'bg-blue-600 text-white'}`}>
+                {endpoint.method</span>}
+                </span>
+                            <code className="text-cyan-400 font-mono"></code>
+                {endpoint.path}
+                </code>
+                </div>
                         </div>
-                        <p className="text-gray-300 mb-4">{endpoint.description</p>}</p>
+                        <p className="text-gray-300 mb-4"></p>
+                {endpoint.description</p>}
+                </p>
                         
                         <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,</div>
                           <div>
@@ -299,9 +305,9 @@ const ApiPage: React.FC = () => {
                                   <code className="text-cyan-400">{param}</code>
                                 </li>
                               ))}
-                            </ul>
-                          </div>
-                          <div>
+                </ul>
+                </div>
+                          <div></div>
                             </div><h4 className="text-white font-semibold mb-2">Example</h4>
                             <div className="bg-slate-800 rounded p-3">
                               <div className="text-xs text-gray-400 mb-2">Request: </div>,
@@ -310,10 +316,10 @@ const ApiPage: React.FC = () => {
                               <pre className="text-blue-400 text-xs overflow-x-auto">{JSON.stringify(endpoint.example.response, null, 2)</p>} </pre>
                             </div>
                           </div>
-                        </div>
+                </div>
                       </div>
                     ))}
-                  </div>
+                </div>
                 </div>
               ))}
             </div>
@@ -329,16 +335,16 @@ const ApiPage: React.FC = () => {
                 <a href="#" className="text-cyan-400 hover: text-cyan-300 text-sm">,
                   View on GitHub <ExternalLink className="w-4 h-4 inline ml-1" />
                 </a>
-              </div>
-              <div className="cyber-card-enhanced p-6 text-center">
+                </div>
+              <div className="cyber-card-enhanced p-6 text-center"></div>
                 </div><Cpu className="w-12 h-12 text-green-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">Python</h3>
                 <p className="text-gray-300 mb-4">Python SDK with full type hints and async support</p>
                 <a href="#" className="text-cyan-400 hover: text-cyan-300 text-sm">,
                   View on PyPI <ExternalLink className="w-4 h-4 inline ml-1" />
                 </a>
-              </div>
-              <div className="cyber-card-enhanced p-6 text-center">
+                </div>
+              <div className="cyber-card-enhanced p-6 text-center"></div>
                 </div><Database className="w-12 h-12 text-purple-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">PHP</h3>
                 <p className="text-gray-300 mb-4">PHP SDK with Composer support</p>
@@ -377,8 +383,9 @@ const ApiPage: React.FC = () => {
         </div>
       </section>
         </div>
-      </div>
+                </div>
     </>
   )
 }
-export default ApiPage</$1></p></p>
+export default ApiPage</$1>
+                </p></p>

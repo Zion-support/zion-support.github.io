@@ -8,18 +8,18 @@ import HomePage from './app/page';
 
 const App_minimalPage: React.FC = () => {
   return (
-    <HelmetProvider>
-      <Router>
-        <div className="min-h-screen bg-white">
+    <HelmetProvider></HelmetProvider>
+                <Router></Router>
+        <div className="min-h-screen bg-white"></div>
           <Navigation />
-          <main>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-            </Routes>
-          </main>
+          <main></main>
+                <Routes></Routes>
+                <Route path="/" element={<HomePage / / />} />
+                </Routes>
+                </main>
           <Footer />
         </div>
-      </Router>
+                </Router>
     </HelmetProvider>
   );
 };

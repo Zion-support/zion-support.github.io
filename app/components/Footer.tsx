@@ -1,10 +1,9 @@
 'use client';
-
-import React, { memo } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { Phone, Mail, MapPin, Brain, Facebook, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Facebook} from 'lucide-react';
+const Footer: React.FC = () => {
 
-const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
@@ -52,15 +51,15 @@ const Footer: React.FC = memo(() => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-2 rounded-lg">
-                <Brain className="h-6 w-6 text-white" />
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg">Z</span>
               </div>
               <span className="text-white font-bold text-xl">Zion Tech Group</span>
             </div>
-            <p className="text-gray-300 mb-4 max-w-md">
-              Leading provider of AI-powered solutions, 5G technology, and innovative software development services.
+            <p className="text-gray-300">
+              Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology and innovative digital transformation services.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -77,17 +76,14 @@ const Footer: React.FC = memo(() => {
               </a>
             </div>
           </div>
-
+          
           {/* AI Services */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">AI Services</h3>
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">AI Services</h3>
             <ul className="space-y-2">
               {aiServices.map((service) => (
                 <li key={service.name}>
-                  <Link 
-                    href={service.url} 
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
+                  <Link href={service.url} className="text-gray-300 hover:text-white transition-colors">
                     {service.name}
                   </Link>
                 </li>
@@ -96,15 +92,12 @@ const Footer: React.FC = memo(() => {
           </div>
 
           {/* IT Services */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">IT Services</h3>
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">IT Services</h3>
             <ul className="space-y-2">
               {itServices.map((service) => (
                 <li key={service.name}>
-                  <Link 
-                    href={service.url} 
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-                  >
+                  <Link href={service.url} className="text-gray-300 hover:text-white transition-colors">
                     {service.name}
                   </Link>
                 </li>
@@ -112,14 +105,14 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
 
-          {/* Company */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">Company</h3>
+          {/* Company & Resources */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Company</h3>
             <ul className="space-y-2">
               {company.map((item) => (
                 <li key={item.name}>
                   <Link 
-                    href={item.url} 
+                    href={item.url}
                     className="text-gray-300 hover:text-white transition-colors text-sm"
                   >
                     {item.name}
@@ -136,7 +129,7 @@ const Footer: React.FC = memo(() => {
               {support.map((item) => (
                 <li key={item.name}>
                   <Link 
-                    href={item.url} 
+                    href={item.url}
                     className="text-gray-300 hover:text-white transition-colors text-sm"
                   >
                     {item.name}
@@ -172,7 +165,7 @@ const Footer: React.FC = memo(() => {
       </div>
     </footer>
   );
-});
+};
 
 Footer.displayName = 'Footer';
 

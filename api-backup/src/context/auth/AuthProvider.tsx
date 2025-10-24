@@ -18,7 +18,7 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-export const useAuth = () => {
+export const useAuth  = () => {
   const context = useContext(AuthContext);
   if (context === undefined) {
     throw new Error('useAuth must be used within an AuthProvider');
@@ -30,13 +30,16 @@ interface AuthProviderProps {
   children: ReactNode;
 }
 
-export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
+export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) =>
+                {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
+  useEffect(() =>
+                {
     // Check for existing session on mount
-    const checkAuth = async () => {
+    const checkAuth = async () =>
+                {
       try {
         const token = localStorage.getItem('authToken');
         if (token) {
@@ -56,7 +59,8 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     checkAuth();
   }, []);
 
-  const login = async (email: string, password: string) => {
+  const login = async (email: string, password: string) =>
+                {
     setIsLoading(true);
     try {
       // Mock login - in a real app, this would call your API
@@ -80,7 +84,8 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     }
   };
 
-  const register = async (email: string, password: string, name: string) => {
+  const register = async (email: string, password: string, name: string) =>
+                {
     setIsLoading(true);
     try {
       // Mock registration - in a real app, this would call your API
@@ -104,7 +109,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     }
   };
 
-  const logout = () => {
+  const logout  = () => {
     setUser(null);
     localStorage.removeItem('authToken');
     localStorage.removeItem('userData');
@@ -120,8 +125,8 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={value}>
-      {children}
-    </AuthContext.Provider>
+    <AuthContext.Provider value={value}></AuthContext.Provider>
+                {children}
+                </AuthContext.Provider>
   );
 };

@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-console.log('🔧 Starting merge conflict resolution...')
-// Function to resolve merge conflicts in a file
-function resolveMergeConflicts(filePath) {
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+
+// Function to fix merge conflicts in a file
+function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8')
     // Check if file has merge conflicts
@@ -13,21 +13,10 @@ function resolveMergeConflicts(filePath) {
       return false; // No conflicts
     }
     
-    console.log(`📝 Resolving conflicts in: ${filePath}`)
-    // Split content by conflict markers
-    const lines = content.split('\n')
-    const resolvedLines = []
-    let inConflict = false
-    let conflictType = ''
-    let headContent = []
-    let separatorFound = false
-    let branchContent = []
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
-      if (line.startsWith('')) {
-        separatorFound = true;
-        conflictType = 'separator';
+        keepContent = true;
         continue;
       
       if (line.startsWith('>>>>>>>')) {
@@ -55,10 +44,9 @@ function resolveMergeConflicts(filePath) {
           branchContent.push(line)
         resolvedLines.push(line)
     
-    // Write resolved content
-    const resolvedContent = resolvedLines.join('\n')
-    fs.writeFileSync(filePath, resolvedContent, 'utf8')
-    return true; // Conflicts resolved
+    // Write the cleaned content back
+    fs.writeFileSync(filePath, result.join('\n'));
+    return true;
   } catch (error) {
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message)
     return false

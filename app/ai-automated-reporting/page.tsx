@@ -1,167 +1,41 @@
-'use client';
-
 import React from 'react';
+import { Metadata} from 'next';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { BarChart, TrendingUp, FileText, Brain, CheckCircle, ArrowRight } from 'lucide-react';
 
-const AIAutomatedReportingPage: React.FC = () => {
-    return (
-    <>
+export const metadata: Metadata = {
+  title: 'Page - Zion Tech Group',
+  description: 'Professional page services by Zion Tech Group.',
+  keywords: 'page, services, technology, AI, IT solutions'
+};
+
+const PagePage = () => {
+  return (
+    <div className="min-h-screen bg-white">
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="...">
-          <div className="...">
-            <div className="...">
-              <div className="...">
-                <Brain className="w-5 h-5 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 font-medium">AI-Powered Intelligence</span>
-              </div>
-              
-              <h1 className="...">
-                AI Automated
-                <span className="...">
-                  Reporting
-                </span>
-              </h1>
-              
-              <p className="...">
-                Transform your business intelligence with AI-powered automated reporting. 
-                Generate comprehensive insights, analytics, and reports automatically 
-                with our advanced AI reporting solutions.
-              </p>
-              
-              <div className="...">
-                <button className="...">
-                  Get Started Free
-                  <ArrowRight className="w-5 h-5 ml-2 inline" />
-                </button>
-                <button className="...">
-                  View Demo
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="...">
-          <div className="...">
-            <div className="...">
-              <h2 className="...">
-                Intelligent Reporting Features
-              </h2>
-              <p className="...">
-                Our AI-powered reporting platform delivers comprehensive insights 
-                and automated analytics for data-driven decision making.
-              </p>
-            </div>
-
-            <div className="...">
-              <div className="...">
-                <div className="...">
-                  <BarChart className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Real-time Analytics</h3>
-                <p className="...">
-                  Generate real-time reports and analytics with live data integration 
-                  and instant insights for immediate decision making.
-                </p>
-                <ul className="...">
-                  <li className="...">
-                    <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
-                    Live data streaming
-                  </li>
-                  <li className="...">
-                    <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
-                    Instant report generation
-                  </li>
-                  <li className="...">
-                    <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
-                    Real-time dashboards
-                  </li>
-                </ul>
-              </div>
-
-              <div className="...">
-                <div className="...">
-                  <FileText className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Automated Report Generation</h3>
-                <p className="...">
-                  AI automatically generates comprehensive reports based on your data
-                  saving hours of manual work and ensuring consistency.
-                </p>
-                <ul className="...">
-                  <li className="...">
-                    <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
-                    Scheduled reporting
-                  </li>
-                  <li className="...">
-                    <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
-                    Custom templates
-                  </li>
-                  <li className="...">
-                    <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
-                    Multi-format export
-                  </li>
-                </ul>
-              </div>
-
-              <div className="...">
-                <div className="...">
-                  <TrendingUp className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Predictive Insights</h3>
-                <p className="...">
-                  Leverage AI to predict trends, identify patterns, and forecast 
-                  future performance with advanced machine learning algorithms.
-                </p>
-                <ul className="...">
-                  <li className="...">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    Trend forecasting
-                  </li>
-                  <li className="...">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    Anomaly detection
-                  </li>
-                  <li className="...">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    Performance predictions
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="...">
-          <div className="...">
-            <h2 className="...">
-              Ready to Transform Your Reporting?
-            </h2>
-            <p className="...">
-              Join thousands of businesses already using AI-powered automated reporting 
-              to drive better decisions and accelerate growth.
+      
+      <section className="pt-20 pb-16 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Page
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Professional page services by Zion Tech Group.
+          </p>
+          <div className="space-y-4">
+            <p className="text-gray-400">
+              Our page solutions are designed to help your business grow and succeed.
             </p>
-            <div className="...">
-              <button className="...">
-                Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
-              </button>
-              <button className="...">
-                Schedule Demo
-              </button>
-            </div>
+            <p className="text-gray-400">
+              Contact us to learn more about how we can help you achieve your goals.
+            </p>
           </div>
-        </section>
-      </div>
+                </div>
+      </section>
+
       <Footer />
-    </>
+    </div>
   );
 };
 
-export default AIAutomatedReportingPage;
+export default PagePage;

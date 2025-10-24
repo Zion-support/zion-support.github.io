@@ -1,92 +1,71 @@
-'use client'
+'use client';
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { ArrowRight, CheckCircle } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Users, Settings, BarChart3, FileText } from 'lucide-react'
+const stats = [
+  { number: '1B+', label: 'People with disabilities worldwide' },
+  { number: '15%', label: 'Of global population' },
+  { number: '$13T', label: 'Annual spending power' },
+  { number: '71%', label: 'Leave sites due to accessibility issues' }
+];
 
-const AccessibilityPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Accessibility',
-      description: 'Advanced AI algorithms automatically detect and fix accessibility issues in real-time.',
-      benefits: [
-        'Automated WCAG 2.1 AA compliance checking',
-        'Real-time accessibility monitoring',
-        'Intelligent content optimization',
-        'Voice navigation enhancement'
-      ]
-    },
-    {
-      icon: Shield,
-      title: 'Compliance Assurance',
-      description: 'Ensure your digital assets meet international accessibility standards and legal requirements.',
-      benefits: [
-        'ADA compliance verification',
-        'Section 508 compliance',
-        'WCAG 2.1 AA/AAA standards',
-        'Legal compliance reporting'
-      ]
-    },
-    {
-      icon: Users,
-      title: 'Inclusive Design',
-      description: 'Create experiences that work for everyone, regardless of ability or assistive technology.',
-      benefits: [
-        'Screen reader optimization',
-        'Keyboard navigation support',
-        'High contrast mode support',
-        'Text scaling compatibility'
-      ]
-    },
-    {
-      icon: Zap,
-      title: 'Performance Optimization',
-      description: 'Accessibility improvements that also enhance overall site performance and user experience.',
-      benefits: [
-        'Faster page load times',
-        'Improved SEO rankings',
-        'Better user engagement',
-        'Reduced bounce rates'
-      ]
-    }
-  ]
+const features = [
+  {
+    title: 'AI-Powered Audits',
+    description: 'Automated accessibility testing using advanced AI algorithms to identify issues quickly and accurately.',
+    icon: () => <div className="w-6 h-6 bg-emerald-600 rounded" />,
+    benefits: [
+      'Comprehensive WCAG 2.1 AA compliance checking',
+      'Real-time issue detection and reporting',
+      'Automated remediation suggestions',
+      'Detailed accessibility score and recommendations'
+    ]
+  },
+  {
+    title: 'Manual Testing',
+    description: 'Expert human testing to catch issues that automated tools might miss.',
+    icon: () => <div className="w-6 h-6 bg-emerald-600 rounded" />,
+    benefits: [
+      'Screen reader compatibility testing',
+      'Keyboard navigation verification',
+      'Color contrast and visual accessibility',
+      'User experience evaluation'
+    ]
+  }
+];
 
-  const services = [
-    {
-      icon: CheckCircle,
-      title: 'Accessibility Audits',
-      description: 'Comprehensive evaluation of your digital assets for accessibility compliance.',
-      price: 'Starting at $2,500'
-    },
-    {
-      icon: Settings,
-      title: 'Implementation',
-      description: 'Full implementation of accessibility improvements and fixes.',
-      price: 'Starting at $5,000'
-    },
-    {
-      icon: BarChart3,
-      title: 'Monitoring',
-      description: 'Ongoing monitoring and maintenance of accessibility standards.',
-      price: 'Starting at $500/month'
-    },
-    {
-      icon: FileText,
-      title: 'Training',
-      description: 'Team training on accessibility best practices and standards.',
-      price: 'Starting at $1,500'
-    }
-  ]
+const services = [
+  {
+    title: 'Accessibility Audit',
+    description: 'Comprehensive evaluation of your digital assets',
+    icon: () => <div className="w-8 h-8 bg-emerald-600 rounded" />,
+    price: 'Starting at $500'
+  },
+  {
+    title: 'Implementation',
+    description: 'Fix identified accessibility issues',
+    icon: () => <div className="w-8 h-8 bg-emerald-600 rounded" />,
+    price: 'Starting at $1,000'
+  },
+  {
+    title: 'Training',
+    description: 'Team training on accessibility best practices',
+    icon: () => <div className="w-8 h-8 bg-emerald-600 rounded" />,
+    price: 'Starting at $300'
+  },
+  {
+    title: 'Ongoing Support',
+    description: 'Continuous monitoring and maintenance',
+    icon: () => <div className="w-8 h-8 bg-emerald-600 rounded" />,
+    price: 'Starting at $200/mo'
+  }
+];
 
-  const stats = [
-    { number: '15%', label: 'of the global population has a disability' },
-    { number: '71%', label: 'of users with disabilities leave sites that are not accessible' },
-    { number: '98%', label: 'of websites fail basic accessibility tests' },
-    { number: '200%', label: 'increase in legal accessibility lawsuits since 2018' }
-  ]
-
+export default function AccessibilityPage() {
   return (
     <>
       <Navigation />
@@ -214,7 +193,5 @@ const AccessibilityPage: React.FC = () => {
 
       <Footer />
     </>
-  )
+  );
 }
-
-export default AccessibilityPage
