@@ -1,64 +1,78 @@
 'use client'
 
-import React from 'react';
-import Head from 'next/head';
+import { Helmet } from 'react-helmet-async'
 
 interface SEOOptimizerProps {
-  title: string;
-  description: string;
-  keywords?: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  className?: string;
-  children?: React.ReactNode;
+  title?: string
+  description?: string
+  keywords?: string[]
+  image?: string
+  url?: string
+  type?: string
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title,
-  description,
-  keywords = [],
-  canonicalUrl,
-  ogImage = '/og-image.jpg',
-  className = '',
-  children
+  title = 'Zion Tech Group - AI Solutions & Technology Services',
+  description = 'Leading provider of AI solutions, technology services, and digital transformation for businesses worldwide.',
+  keywords = ['AI solutions', 'technology services', 'digital transformation'],
+  image = '/og-image.jpg',
+  url = 'https://ziontechgroup.com',
+  type = 'website'
 }) => {
-  const fullTitle = title.includes('ZionTechGroup') ? title : `${title} | ZionTechGroup`;
-  const keywordsString = keywords.join(', ');
+  const canonicalUrl = url
+  const fullImageUrl = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`
 
   return (
-    <>
-      <Head>
-        <title>{fullTitle}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywordsString} />
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content={fullTitle} />
-        <meta property="og:description" content={description} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:site_name" content="ZionTechGroup" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={fullTitle} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
-        
-        {/* Canonical URL */}
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-        
-        {/* Additional SEO */}
-        <meta name="author" content="ZionTechGroup" />
-        <meta name="theme-color" content="#0f172a" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      {children}
-    </>
-  );
-};
+    <Helmet>
+      {/* Basic Meta Tags */}
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords.join(', ')} />
+      <link rel="canonical" href={canonicalUrl} />
+      
+      {/* Open Graph Tags */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={fullImageUrl} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:type" content={type} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      
+      {/* Twitter Card Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={fullImageUrl} />
+      
+      {/* Additional SEO Tags */}
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Zion Tech Group",
+          "description": description,
+          "url": "https://ziontechgroup.com",
+          "logo": "https://ziontechgroup.com/logo.png",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-555-123-4567",
+            "contactType": "customer service",
+            "email": "contact@ziontechgroup.com"
+          },
+          "sameAs": [
+            "https://linkedin.com/company/ziontechgroup",
+            "https://twitter.com/ziontechgroup"
+          ]
+        })}
+      </script>
+    </Helmet>
+  )
+}
 
-export default SEOOptimizer;
+export default SEOOptimizer

@@ -3,7 +3,6 @@
 import React from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import SEOOptimizer from './components/SEOOptimizer';
 import { Brain, Zap, Shield, Target, ArrowRight, CheckCircle } from 'lucide-react';
 
 const Page: React.FC = () => {
@@ -40,15 +39,9 @@ const Page: React.FC = () => {
   ];
 
   return (
-    <>
-      <SEOOptimizer title="ZionTechGroup - AI Solutions & Technology Services"
-        description="Leading provider of AI solutions, technology services, and digital transformation for businesses worldwide. Transform your business with cutting-edge technology."
-        keywords={['AI solutions', 'technology services', 'digital transformation', 'machine learning', 'artificial intelligence', 'business automation']}
-        canonicalUrl="https://ziontechgroup.com"
-       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        <main className="pt-24 pb-16 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+        <main className="pt-24 pb-16 px-4" id="main-content">
           <div className="max-w-7xl mx-auto">
             {/* Hero Section */}
             <section className="text-center mb-16">
@@ -125,9 +118,8 @@ const Page: React.FC = () => {
             </section>
           </div>
         </main>
-        <Footer />
-      </div>
-    </>
+      <Footer />
+    </div>
   );
 };
 

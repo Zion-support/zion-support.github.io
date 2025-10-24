@@ -1,47 +1,46 @@
-"use client"
+'use client'
 
-import React, { ReactNode, useEffect } from 'react';
+import { useEffect } from 'react'
 
 interface AccessibilityEnhancerProps {
-  children: ReactNode;
-  className?: string;
+  children: React.ReactNode
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children, className }) => {
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   useEffect(() => {
-    // Enhance accessibility features
-    const enhanceAccessibility = () => {
-      // Add skip links
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50';
-      document.body.insertBefore(skipLink, document.body.firstChild);
-
-      // Add main content landmark
-      const mainContent = document.querySelector('main');
-      if (mainContent && !mainContent.id) {
-        mainContent.id = 'main-content';
+    // Add focus management
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation')
       }
+    }
 
-      // Enhance focus management
-      const focusableElements = document.querySelectorAll(
-        'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
-      );
-      
-      focusableElements.forEach((element) => {
-        element.setAttribute('tabindex', '0');
-      });
-    };
+    const handleMouseDown = () => {
+      document.body.classList.remove('keyboard-navigation')
+    }
 
-    enhanceAccessibility();
-  }, []);
+    document.addEventListener('keydown', handleKeyDown)
+    document.addEventListener('mousedown', handleMouseDown)
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown)
+      document.removeEventListener('mousedown', handleMouseDown)
+    }
+  }, [])
 
   return (
-    <div className={className}>
+    <>
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          .keyboard-navigation *:focus {
+            outline: 2px solid #2563eb !important;
+            outline-offset: 2px !important;
+          }
+        `
+      }} />
       {children}
-    </div>
-  );
-};
+    </>
+  )
+}
 
-export default AccessibilityEnhancer;
+export default AccessibilityEnhancer

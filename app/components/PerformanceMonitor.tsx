@@ -1,87 +1,69 @@
-import React, { useEffect } from 'react';
+'use client'
 
-interface PerformanceMonitorProps {
-  performanceData?: any;
+import { useEffect } from 'react'
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals'
+
+const PerformanceMonitor: React.FC = () => {
+  useEffect(() => {
+    // Track Core Web Vitals
+    getCLS((metric) => {
+      console.log('CLS:', metric)
+      // Send to analytics service
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'web_vitals', {
+          metric_name: 'CLS',
+          metric_value: Math.round(metric.value * 1000) / 1000,
+          metric_rating: metric.rating,
+        })
+      }
+    })
+
+    getFID((metric) => {
+      console.log('FID:', metric)
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'web_vitals', {
+          metric_name: 'FID',
+          metric_value: Math.round(metric.value * 1000) / 1000,
+          metric_rating: metric.rating,
+        })
+      }
+    })
+
+    getFCP((metric) => {
+      console.log('FCP:', metric)
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'web_vitals', {
+          metric_name: 'FCP',
+          metric_value: Math.round(metric.value * 1000) / 1000,
+          metric_rating: metric.rating,
+        })
+      }
+    })
+
+    getLCP((metric) => {
+      console.log('LCP:', metric)
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'web_vitals', {
+          metric_name: 'LCP',
+          metric_value: Math.round(metric.value * 1000) / 1000,
+          metric_rating: metric.rating,
+        })
+      }
+    })
+
+    getTTFB((metric) => {
+      console.log('TTFB:', metric)
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'web_vitals', {
+          metric_name: 'TTFB',
+          metric_value: Math.round(metric.value * 1000) / 1000,
+          metric_rating: metric.rating,
+        })
+      }
+    })
+  }, [])
+
+  return null
 }
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData }) => {
-  useEffect(() => {
-    // Monitor Core Web Vitals
-    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-      const logMetric = (metric: any) => {
-        if (process.env.NODE_ENV === 'development') {
-          // eslint-disable-next-line no-console
-          console.log(metric);
-        }
-      };
-      getCLS(logMetric);
-      getFID(logMetric);
-      getFCP(logMetric);
-      getLCP(logMetric);
-      getTTFB(logMetric);
-    });
-
-    // Monitor performance metrics
-    if ('performance' in window) {
-      window.addEventListener('load', () => {
-        setTimeout(() => {
-          const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-          const paint = performance.getEntriesByType('paint');
-          
-          if (process.env.NODE_ENV === 'development') {
-            // eslint-disable-next-line no-console
-            console.log('Performance Metrics: ', {
-              domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-              loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-              firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
-              firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
-            });
-          }
-        }, 0);
-      });
-    }
-
-    // Monitor memory usage
-    if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console
-        console.log('Memory Usage: ', {
-          used: Math.round(memory.usedJSHeapSize / 1048576),
-          total: Math.round(memory.totalJSHeapSize / 1048576),
-          limit: Math.round(memory.jsHeapSizeLimit / 1048576),
-        });
-      }
-    }
-  }, []);
-
-  if (!performanceData) {
-    return null;
-  }
-
-  return (
-    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-      <h3 className="text-xl font-semibold text-white mb-4">Performance Monitor</h3>
-      <div className="space-y-2">
-        <div className="flex justify-between">
-          <span className="text-gray-300">DOM Content Loaded:</span>
-          <span className="text-emerald-400">{performanceData.domContentLoaded}ms</span>
-        </div>
-        <div className="flex justify-between">
-          <span className="text-gray-300">Load Complete:</span>
-          <span className="text-emerald-400">{performanceData.loadComplete}ms</span>
-        </div>
-        <div className="flex justify-between">
-          <span className="text-gray-300">First Paint:</span>
-          <span className="text-emerald-400">{performanceData.firstPaint}ms</span>
-        </div>
-        <div className="flex justify-between">
-          <span className="text-gray-300">First Contentful Paint:</span>
-          <span className="text-emerald-400">{performanceData.firstContentfulPaint}ms</span>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default PerformanceMonitor;
+export default PerformanceMonitor
