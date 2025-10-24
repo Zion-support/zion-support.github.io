@@ -1,4 +1,18 @@
 'use client';
+<<<<<<< HEAD
+import React, { useEffect } from 'react';
+
+const PerformanceOptimizer: React.FC = () => {
+  useEffect(() => {
+    // Preload critical resources
+    const preloadCriticalResources = () => {
+      // Preload critical fonts
+      const fontLink = document.createElement('link');
+      fontLink.rel = 'preload';
+      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
+      fontLink.as = 'style';
+      document.head.appendChild(fontLink);
+=======
 
 import React, { useState, useEffect } from 'react';
 
@@ -56,6 +70,7 @@ const PerformanceOptimizer: React.FC = () => {
           imageElement.removeAttribute('data-src');
         }
       });
+>>>>>>> 565082f4af95f25101578a95e87917e85c6148f6
 
       // Preload critical resources
       const criticalResources = [
@@ -63,6 +78,78 @@ const PerformanceOptimizer: React.FC = () => {
         '/css/critical.css'
       ];
 
+<<<<<<< HEAD
+      // Preload critical images
+      const criticalImages = [
+        '/images/hero-bg.jpg',
+        '/images/logo.png'
+      ];
+
+      criticalResources.forEach(href => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = href;
+        link.as = href.endsWith('.css') ? 'style' : 'font';
+        document.head.appendChild(link);
+      });
+
+      criticalImages.forEach(src => {
+        const img = new Image();
+        img.src = src;
+      });
+    };
+
+    // Optimize images
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img');
+      images.forEach(img => {
+        // Add loading="lazy" to non-critical images
+        if (!img.hasAttribute('loading')) {
+          img.setAttribute('loading', 'lazy');
+        }
+        
+        // Add decoding="async" for better performance
+        if (!img.hasAttribute('decoding')) {
+          img.setAttribute('decoding', 'async');
+        }
+      });
+    };
+
+    // Optimize scroll performance
+    const optimizeScroll = () => {
+      let ticking = false;
+      
+      const updateScrollPosition = () => {
+        // Throttle scroll events
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            // Update scroll-dependent elements
+            ticking = false;
+          });
+          ticking = true;
+        }
+      };
+
+      window.addEventListener('scroll', updateScrollPosition, { passive: true });
+      
+      return () => {
+        window.removeEventListener('scroll', updateScrollPosition);
+      };
+    };
+
+    // Initialize optimizations
+    preloadCriticalResources();
+    optimizeImages();
+    const cleanupScroll = optimizeScroll();
+
+    // Cleanup on unmount
+    return () => {
+      cleanupScroll();
+    };
+  }, []);
+
+  return null; // This component doesn't render anything
+=======
       criticalResources.forEach(resource => {
         const link = document.createElement('link');
         link.rel = 'preload';
@@ -97,6 +184,7 @@ const PerformanceOptimizer: React.FC = () => {
       )}
     </div>
   );
+>>>>>>> 565082f4af95f25101578a95e87917e85c6148f6
 };
 
 export default PerformanceOptimizer;

@@ -1,7 +1,7 @@
-import React from 'react'
-import Footer from '../components/Footer'
-import Navigation from '../components/Navigation'
-import { CheckCircle, Brain, BarChart, Target, ArrowRight } from 'lucide-react'
+import React from 'react';
+import Footer from '../components/Footer';
+import Navigation from '../components/Navigation';
+import { CheckCircle, Brain, BarChart, Target, ArrowRight } from 'lucide-react';
 
 const ErrorHandler: React.FC = () => {
   const features = [
@@ -23,7 +23,7 @@ const ErrorHandler: React.FC = () => {
       description: 'Target the right audience with AI-driven precision and accuracy.',
       benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
     }
-  ]
+  ];
 
   return (
     <>
@@ -43,12 +43,12 @@ const ErrorHandler: React.FC = () => {
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800 p-6 rounded-lg">
                 <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <h2 className="text-2xl font-bold text-white mb-4">{feature.title}</h2>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
                       {benefit}
                     </li>
                   ))}
@@ -74,7 +74,7 @@ const ErrorHandler: React.FC = () => {
       </div>
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default ErrorHandler
+export default ErrorHandler;
