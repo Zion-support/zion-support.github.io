@@ -1,13 +1,49 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Star, Clock, Zap, Shield, Globe, Database, Users, Settings, Check } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
 interface HeaderProps {
-  className?: string
+  className?: string;
 }
+
+const features = [
+  {
+    icon: Brain,
+    title: "AI-Powered Intelligence",
+    description: "Leverage advanced AI algorithms for smarter decision making",
+    benefits: ["Real-time analysis", "Predictive insights", "Automated optimization"]
+  },
+  {
+    icon: BarChart,
+    title: "Advanced Analytics",
+    description: "Comprehensive data visualization and reporting tools",
+    benefits: ["Custom dashboards", "Real-time metrics", "Trend analysis"]
+  },
+  {
+    icon: Target,
+    title: "Precision Targeting",
+    description: "Target the right audience with laser-sharp accuracy",
+    benefits: ["Audience segmentation", "Behavioral analysis", "ROI optimization"]
+  },
+  {
+    icon: TrendingUp,
+    title: "Growth Optimization",
+    description: "Scale your business with data-driven strategies",
+    benefits: ["Performance tracking", "Growth metrics", "Success indicators"]
+  }
+];
+
+const benefits = [
+  "Increase efficiency by up to 300%",
+  "Reduce operational costs by 40%",
+  "Improve customer satisfaction scores",
+  "Accelerate time-to-market",
+  "Enhance data security and compliance",
+  "Streamline workflow processes"
+];
+
 const Header: React.FC<HeaderProps> = ({ className = '' }) => {
   return (
     <>
@@ -18,10 +54,10 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
       </Helmet>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-            {/* Hero Section */}
+        {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20">
-            <div className="relative max-w-7xl mx-auto text-center"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Header
             </h1>
@@ -29,7 +65,7 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
               Advanced Header solution for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
@@ -42,15 +78,15 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16"></div>
+            <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                   <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -70,15 +106,15 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16"></div>
+            <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4"></div>
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-4">
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
@@ -94,7 +130,7 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
               Join thousands of businesses already using our AI solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Start Free Trial
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
@@ -105,10 +141,8 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {
         </section>
       </div>
       <Footer />
-</>
-  )
-}
-export default HeaderPage
-  )
-}
-export default Header
+    </>
+  );
+};
+
+export default Header;

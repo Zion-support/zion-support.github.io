@@ -367,7 +367,7 @@ class AccessibilityEnhancer {
 
   private setupFocusManagement(): void {
     // Manage focus for modals and dynamic content
-    let focusHistory: HTMLElement[] = [];
+    const focusHistory: HTMLElement[] = [];
 
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') {

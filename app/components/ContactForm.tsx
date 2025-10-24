@@ -2,13 +2,13 @@
 import { useState } from 'react';
 import { MessageSquare, Mail, Phone, Send, CheckCircle } from 'lucide-react';
 interface FormData {
-  name: string;,
-    email: string;
-  phone: string;,
-    company: string;
-  message: string;,
-    service: string
-  }
+  name: string;
+  email: string;
+  phone: string;
+  company: string;
+  message: string;
+  service: string;
+}
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -20,11 +20,11 @@ const ContactForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-  setFormData({
-      ...formData
+    setFormData({
+      ...formData,
       [e.target.name]: e.target.value
-})
-  }
+    });
+  };
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
@@ -34,18 +34,19 @@ const ContactForm: React.FC = () => {
     setIsSubmitted(true)
     // Reset form after 3 seconds
     setTimeout(() => {
-      setIsSubmitted(false)
+      setIsSubmitted(false);
       setFormData({
         name: '',
-    email: '',
+        email: '',
         phone: '',
-    company: '',
+        company: '',
         message: '',
-    service: ''})
-    }, 3000)
+        service: ''
+      });
+    }, 3000);
   }
   const services = [
-  'AI Solutions',
+    'AI Solutions',
     'Web Development',
     'Mobile Development',
     'Cloud Migration',
@@ -53,7 +54,7 @@ const ContactForm: React.FC = () => {
     'Data Analytics',
     'DevOps',
     'Consulting'
-  ]
+  ];
   if (isSubmitted) {
     return (
       <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center">

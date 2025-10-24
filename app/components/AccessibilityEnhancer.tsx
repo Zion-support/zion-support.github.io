@@ -8,9 +8,9 @@ interface AccessibilityEnhancerProps {
   enableFocusManagement?: boolean
 }
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  enableKeyboardNavigation = true
-  enableScreenReaderSupport = true
-  enableHighContrast = true
+  enableKeyboardNavigation = true,
+  enableScreenReaderSupport = true,
+  enableHighContrast = true,
   enableFocusManagement = true
 }) => {
   useEffect(() => {
@@ -21,17 +21,15 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       const handleKeyDown = (event: KeyboardEvent) => {
         // Skip to main content
         if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-          const mainContent = document.querySelector('main, [role=&quot;main&quot;]')
+          const mainContent = document.querySelector('main, [role="main"]');
           if (mainContent) {
-            (mainContent as HTMLElement).focus()
-            event.preventDefault()
+            (mainContent as HTMLElement).focus();
+            event.preventDefault();
           }
         }
       }
-      document.addEventListener('keydown', handleKeyDown)
-      return (
-    <>
-      ) => document.removeEventListener('keydown', handleKeyDown)
+      document.addEventListener('keydown', handleKeyDown);
+      return () => document.removeEventListener('keydown', handleKeyDown);
     }
   }, [enableKeyboardNavigation])
   useEffect(() => {
@@ -41,7 +39,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       const skipLink = document.createElement('a')
       skipLink.href = '#main-content'
       skipLink.textContent = 'Skip to main content'
-      skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
       document.body.insertBefore(skipLink, document.body.firstChild)
       // Add ARIA landmarks
       const main = document.querySelector('main')
@@ -78,7 +76,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   useEffect(() => {
     // Add focus management
     if (enableFocusManagement) {
-      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])'
+      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
       const trapFocus = (element: HTMLElement) => {
         const focusableContent = element.querySelectorAll(focusableElements)
         const firstFocusableElement = focusableContent[0] as HTMLElement
@@ -100,12 +98,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         })
       }
       // Apply focus trapping to modals
-      const modals = document.querySelectorAll('[role=&quot;dialog&quot;]')
-      modals.forEach(trapFocus)
+      const modals = document.querySelectorAll('[role="dialog"]');
+      modals.forEach(trapFocus);
     }
-  }, [enableFocusManagement]
-    </>
-  )
-  return null
+  }, [enableFocusManagement]);
+
+  return null;
 }
 export default AccessibilityEnhancer

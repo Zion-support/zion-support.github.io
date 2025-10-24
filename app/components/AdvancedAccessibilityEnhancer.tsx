@@ -22,14 +22,17 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
   enableARIALabels= true,
   enableSkipLinks= true,
   enableColorContrast= true,
-  enableMotionReduction= true,
-  enableFontScaling= true,
-  enableVoiceNavigation= true}) => {const [accessibilitySettingssetAccessibilitySettings] = useState({
+  enableMotionReduction = true,
+  enableFontScaling = true,
+  enableVoiceNavigation = true
+}) => {
+  const [accessibilitySettings, setAccessibilitySettings] = useState({
     highContrast: false,
-    reducedMotion: false
+    reducedMotion: false,
     fontSize: 'normal',
-    screenReader: false
-    keyboardNavigation: false})
+    screenReader: false,
+    keyboardNavigation: false
+  });
   // Detect user preferences
   useEffect(() => {
     if (typeof window === 'undefined') return
