@@ -36,11 +36,11 @@ describe('Components', () => {
   
   it('renders mock component', () => {
     render(<MockComponent />);
-    expect(screen.getByTestId('mock-component')).toBeInTheDocument();
+    expect(screen.getByTestId('mock-component')).toBeTruthy();
   });
   
   it('displays correct text', () => {
     render(<MockComponent />);
-    expect(screen.getByText('Mock Component')).toBeInTheDocument();
+    expect(screen.getByText('Mock Component')).toBeTruthy();
   });
 });
