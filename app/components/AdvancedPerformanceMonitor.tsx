@@ -3,12 +3,12 @@
 import React, { useState, useCallback, useEffect } from 'react';
 
 interface PerformanceMetrics {
-  fcp: number | null
-  lcp: number | null
-  fid: number | null
-  cls: number | null
-  ttfb: number | null
-  memory: number | null
+  fcp: number | null;
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  ttfb: number | null;
+  memory: number | null;
 }
 
 interface PerformanceMonitorProps {

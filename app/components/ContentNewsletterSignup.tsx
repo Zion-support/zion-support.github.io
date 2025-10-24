@@ -126,7 +126,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default ContentNewsletterSignup

@@ -8,22 +8,33 @@ export default async function handler(req, res) {
     return;
   }
 
+  const { amount, currency = 'usd' } = req.body;
+  if (!amount) {
+    res.statusCode = 400;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Amount is required' }));
+    return;
+  }
+
   try {
-    const { amount, currency = 'usd' } = req.body;
-
-    if (!amount) {
-      res.statusCode = 400;
-      res.end(JSON.stringify({ error: 'Amount is required' }));
-
-    const paymentIntent = await stripe.paymentIntents.create({
+    const paymentIntent = {
+      id: 'pi_' + Math.random().toString(36).substr(2, 9),
       amount: Math.round(amount * 100), // Convert to cents
       currency,
-
+      status: 'requires_payment_method',
+      created: Math.floor(Date.now() / 1000)
+    };
 
     res.statusCode = 200;
-    res.end(JSON.stringify({ clientSecret: paymentIntent.client_secret }));
-
-  } catch (error) {
-    console.error('Stripe payment intent error:', error);
+    res.json({ paymentIntent });
+  } catch (_err) { // eslint-disable-line no-unused-vars
+    // console.error("Error:", err);
     res.statusCode = 500;
-
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify(paymentIntent));
+  } catch (error) {
+    console.error('Payment intent creation error:', error);
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to create payment intent' }));
+  }
+}
