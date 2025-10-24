@@ -10,4 +10,8 @@ export const metadata: Metadata = {
     description: 'Advanced AI and IT Solutions',
     type: 'website',
   },
+<<<<<<< HEAD
 };
+=======
+}
+>>>>>>> 79ff074aca88cbd43268c9359877c6302df704f0

@@ -85,7 +85,11 @@ export function getConfig<T = unknown>(keyPath: string): T {
 /**
  * Check if a feature is enabled
  */
+<<<<<<< HEAD
 export function isFeatureEnabled(feature: keyof typeof config.features): boolean {
+=======
+export function isFeatureEnabled(feature: string): boolean {
+>>>>>>> 79ff074aca88cbd43268c9359877c6302df704f0
   return config.features[feature];
 }
 

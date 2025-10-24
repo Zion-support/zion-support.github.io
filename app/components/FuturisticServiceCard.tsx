@@ -1,1 +1,3 @@
-// Conflict resolved: taking HEAD version
+'use client'
+import React from 'react"
+;}"'"

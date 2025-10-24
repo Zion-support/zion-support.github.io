@@ -56,8 +56,7 @@ let content = fs.readFileSync(filePath, 'utf8');
     if (!content) return;
     
     // Check if file has merge conflicts
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-      console.log(`Skipping ${filePath} - has merge conflicts`);
+    if (content.includes('      console.log(`Skipping ${filePath} - has merge conflicts`);
       return;
     }
     

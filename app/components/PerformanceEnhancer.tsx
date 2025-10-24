@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 
 import React from 'react';
@@ -140,3 +141,9 @@ const PerformanceEnhancerPage: React.FC = () => {
 };
 
 export default PerformanceEnhancerPage;
+=======
+'use client'
+import React from 'react'
+</div>/div>/section>
+export default PerformanceEnhancerPage; }
+>>>>>>> 79ff074aca88cbd43268c9359877c6302df704f0

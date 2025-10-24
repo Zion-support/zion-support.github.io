@@ -171,7 +171,11 @@ export const focusManagement = {
   }
 };
 
+<<<<<<< HEAD
 export default {
+=======
+const accessibilityUtils = {
+>>>>>>> 79ff074aca88cbd43268c9359877c6302df704f0
   isVisibleToScreenReader,
   getAccessibleName,
   hasProperFocus,
@@ -182,3 +186,8 @@ export default {
   isKeyboardAccessible,
   focusManagement
 };
+<<<<<<< HEAD
+=======
+
+export default accessibilityUtils;
+>>>>>>> 79ff074aca88cbd43268c9359877c6302df704f0

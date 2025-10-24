@@ -1,10 +1,8 @@
 'use client';
-
-import React, { Suspense } from "react";
+import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import './app/styles/futuristic.css';
-
 // Components
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
@@ -17,7 +15,6 @@ import HomePage from './app/page';
 import PerformanceOptimizer from './app/components/EnhancedPerformanceOptimizer';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import EnhancedAccessibilityWrapper from './app/components/EnhancedAccessibilityWrapper';
-
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
@@ -37,7 +34,6 @@ const PrivacyPage = React.lazy(() => import('./app/privacy/page'));
 const TermsPage = React.lazy(() => import('./app/terms/page'));
 const CookiesPage = React.lazy(() => import('./app/cookies/page'));
 const SitemapPage = React.lazy(() => import('./app/sitemap/page'));
-
 // AI Service Pages
 const AiAnalyticsPage = React.lazy(() => import('./app/ai-analytics/page'));
 const AiAutomationPage = React.lazy(() => import('./app/ai-automation/page'));
@@ -66,7 +62,6 @@ const AiDocumentIntelligencePage = React.lazy(() => import('./app/ai-document-in
 const AiConversationAnalyticsPage = React.lazy(() => import('./app/ai-conversation-analytics/page'));
 const AiSupplyChainAiPage = React.lazy(() => import('./app/ai-supply-chain-ai/page'));
 const AiHealthcareDiagnosticsPage = React.lazy(() => import('./app/ai-healthcare-diagnostics/page'));
-
 // 5G Service Pages
 const FiveGDataAnalyticsPage = React.lazy(() => import('./app/5g-data-analytics/page'));
 const FiveGEdgeComputingPage = React.lazy(() => import('./app/5g-edge-computing/page'));
@@ -77,7 +72,6 @@ const FiveGNetworkInfrastructurePage = React.lazy(() => import('./app/5g-network
 const FiveGPrivateNetworksPage = React.lazy(() => import('./app/5g-private-networks/page'));
 const FiveGSmartCitySolutionsPage = React.lazy(() => import('./app/5g-smart-city-solutions/page'));
 const FiveGSolutionsPage = React.lazy(() => import('./app/5g-solutions/page'));
-
 // Main App Component
 function App() {
   return (
@@ -163,5 +157,4 @@ function App() {
     </HelmetProvider>
   );
 }
-
 export default App;
