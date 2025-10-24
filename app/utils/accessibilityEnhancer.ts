@@ -127,8 +127,8 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     )
     
-    focusableElements.forEach((el, index) => {
-      el.setAttribute('tabindex', index.toString())
+    focusableElements.forEach((el, _index) => {
+      el.setAttribute('tabindex', _index.toString())
     })
   }, [])
 
@@ -195,8 +195,8 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
     // Enhance touch accessibility
     const touchElements = document.querySelectorAll('[data-touch]')
     touchElements.forEach(el => {
-      el.addEventListener('touchstart', handleTouchStart as EventListener)
-      el.addEventListener('touchend', handleTouchEnd as EventListener)
+      el.addEventListener('touchstart', handleTouchStart as (event: Event) => void)
+      el.addEventListener('touchend', handleTouchEnd as (event: Event) => void)
     })
   }, [handleTouchStart, handleTouchEnd])
 
@@ -215,8 +215,8 @@ export function useAccessibilityEnhancer(options: AccessibilityEnhancerOptions =
     
     const touchElements = document.querySelectorAll('[data-touch]')
     touchElements.forEach(el => {
-      el.removeEventListener('touchstart', handleTouchStart as EventListener)
-      el.removeEventListener('touchend', handleTouchEnd as EventListener)
+      el.removeEventListener('touchstart', handleTouchStart as (event: Event) => void)
+      el.removeEventListener('touchend', handleTouchEnd as (event: Event) => void)
     })
   }, [handleKeyboardNavigation, handleTouchStart, handleTouchEnd])
 
