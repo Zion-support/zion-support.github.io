@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary'
+import AccessibilityEnhancer from './components/AccessibilityEnhancer'
+import PerformanceMonitor from './components/PerformanceMonitor'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -34,7 +37,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {children}
+        <EnhancedErrorBoundary>
+          <AccessibilityEnhancer />
+          <PerformanceMonitor />
+          {children}
+        </EnhancedErrorBoundary>
       </body>
     </html>
   )
