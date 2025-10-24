@@ -1,5 +1,3 @@
-'use client';
-
 import React, { useEffect, useState, useCallback } from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -17,7 +15,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   children,
   enableSkipLinks = true,
   enableKeyboardNav = true,
-  enableFocusIndicators = true
+  enableFocusIndicators = true,
 }) => {
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [isHighContrast, setIsHighContrast] = useState(false);

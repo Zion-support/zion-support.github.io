@@ -198,7 +198,7 @@ const PerformanceMonitor: React.FC = () => {
     return () => {
       clearInterval(interval);
     };
-  }, [metrics.cls, metrics.fid, metrics.lcp]);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
   return null;
 };
 

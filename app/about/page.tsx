@@ -1,116 +1,148 @@
-'use client'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+import React from 'react';
+import { Metadata } from 'next';
+import { Brain, Cloud, Shield, Code, BarChart, Zap } from 'lucide-react';
 
-const Page: React.FC = () => {
-  const features = [
+export const metadata: Metadata = {
+  title: 'About Us - Zion Tech Group',
+  description: 'Learn about Zion Tech Group\'s mission, team, and expertise in AI, quantum computing, and enterprise technology solutions.',
+  keywords: 'about us, team, AI experts, quantum computing, enterprise technology, Zion Tech Group',
+};
+
+const AboutPage: React.FC = () => {
+  const teamMembers = [
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+      name: 'Dr. Kleber Santos',
+      role: 'CEO & Founder',
+      bio: 'AI and quantum computing expert with 15+ years of experience in enterprise technology solutions.',
+      image: '/api/placeholder/300/300'
     },
     {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+      name: 'Sarah Johnson',
+      role: 'CTO',
+      bio: 'Full-stack developer and cloud architecture specialist with expertise in scalable systems.',
+      image: '/api/placeholder/300/300'
     },
     {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+      name: 'Michael Chen',
+      role: 'Lead AI Engineer',
+      bio: 'Machine learning researcher and AI implementation specialist with PhD in Computer Science.',
+      image: '/api/placeholder/300/300'
     }
   ];
 
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
+  const values = [
+    {
+      icon: Brain,
+      title: 'Innovation First',
+      description: 'We push the boundaries of what\'s possible with cutting-edge technology and creative solutions.'
+    },
+    {
+      icon: Shield,
+      title: 'Security & Trust',
+      description: 'Enterprise-grade security and compliance are built into every solution we deliver.'
+    },
+    {
+      icon: Zap,
+      title: 'Performance',
+      description: 'We optimize for speed, scalability, and reliability in every project we undertake.'
+    },
+    {
+      icon: Code,
+      title: 'Quality Code',
+      description: 'Clean, maintainable, and well-documented code that stands the test of time.'
+    }
   ];
 
   return (
-    <>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced solutions designed to transform your business operations and drive innovation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20"></div>
+          <div className="container mx-auto px-4 py-20 relative z-10">
+            <div className="text-center">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+                About Zion Tech Group
+              </h1>
+              <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Pioneering the future of enterprise technology with AI, quantum computing, and autonomous systems
+              </p>
             </div>
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful features designed to transform your business operations
+        {/* Mission Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl font-bold text-white mb-8">Our Mission</h2>
+              <p className="text-lg text-gray-300 mb-8">
+                To transform businesses through innovative AI solutions, cutting-edge cloud infrastructure, 
+                and autonomous systems that drive growth, efficiency, and competitive advantage in the digital age.
               </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Brain className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">AI Innovation</h3>
+                  <p className="text-gray-300">Leading the charge in artificial intelligence and machine learning applications</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Cloud className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">Cloud Excellence</h3>
+                  <p className="text-gray-300">Building scalable, secure, and efficient cloud infrastructure solutions</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Zap className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">Performance</h3>
+                  <p className="text-gray-300">Delivering high-performance solutions that exceed expectations</p>
+                </div>
+              </div>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
+          </div>
+        </section>
+
+        {/* Values Section */}
+        <section className="py-16 bg-gray-800/50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">Our Values</h2>
+              <p className="text-lg text-gray-300">The principles that guide everything we do</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {values.map((value, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <value.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">{value.title}</h3>
+                  <p className="text-gray-300">{value.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-20 px-4 bg-black/20">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solutions?</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of intelligent automation and advanced technology
-              </p>
+        {/* Team Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">Meet Our Team</h2>
+              <p className="text-lg text-gray-300">The experts behind our innovative solutions</p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <div className="flex items-center mb-4">
-                    <CheckCircle className="h-6 w-6 text-emerald-400 mr-3" />
-                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {teamMembers.map((member, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-48 h-48 bg-gray-700 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-4xl">👤</span>
                   </div>
+                  <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
+                  <p className="text-purple-400 mb-2">{member.role}</p>
+                  <p className="text-gray-300">{member.bio}</p>
                 </div>
               ))}
             </div>
@@ -118,27 +150,24 @@ const Page: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let's work together to create intelligent solutions that work for your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Start Your Project
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Us
-              </button>
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-center">
+              <h2 className="text-3xl font-bold text-white mb-4">Ready to Work With Us?</h2>
+              <p className="text-xl text-gray-200 mb-8">
+                Let's discuss how we can help transform your business with cutting-edge technology.
+              </p>
+              <a
+                href="/contact"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
+              >
+                Get In Touch
+              </a>
             </div>
           </div>
         </section>
       </div>
-      <Footer />
-    </>
   );
 };
 
-export default Page;
+export default AboutPage;

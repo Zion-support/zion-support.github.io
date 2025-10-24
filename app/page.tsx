@@ -1,144 +1,198 @@
-'use client'
-import React from 'react'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+"use client";
 
-const Page: React.FC = () => {
-  const features = [
+import React, { Suspense } from 'react';
+import Link from 'next/link';
+import { ArrowRight, Brain, Cloud, Shield, Code, BarChart, Zap, CheckCircle } from 'lucide-react';
+
+const ServiceCardSkeleton = () => (
+  <div className="cyber-card hologram-card p-4 sm:p-6 animate-pulse">
+    <div className="h-12 bg-gray-700 rounded mb-4"></div>
+    <div className="h-6 bg-gray-700 rounded mb-2"></div>
+    <div className="h-4 bg-gray-700 rounded mb-4"></div>
+    <div className="h-4 bg-gray-700 rounded"></div>
+  </div>
+);
+
+export default function AppPage() {
+  const services = [
     {
+      title: "AI-Powered Applications",
+      description: "Intelligent mobile and web apps with machine learning capabilities",
       icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+      features: ["Machine Learning Integration", "Natural Language Processing", "Predictive Analytics", "Automated Decision Making"],
+      href: "/ai-services"
     },
     {
+      title: "Cloud-Native Solutions",
+      description: "Scalable applications built for modern cloud infrastructure",
+      icon: Cloud,
+      features: ["Microservices Architecture", "Auto-scaling", "Container Orchestration", "Multi-cloud Deployment"],
+      href: "/cloud-solutions"
+    },
+    {
+      title: "Security-First Development",
+      description: "Applications with enterprise-grade security built-in",
+      icon: Shield,
+      features: ["End-to-end Encryption", "Zero-trust Architecture", "Compliance Ready", "Threat Detection"],
+      href: "/security-solutions"
+    },
+    {
+      title: "Custom Development",
+      description: "Tailored solutions for your specific business needs",
+      icon: Code,
+      features: ["Full-stack Development", "API Integration", "Database Design", "Performance Optimization"],
+      href: "/custom-development"
+    },
+    {
+      title: "Analytics & Insights",
+      description: "Data-driven applications with real-time analytics",
       icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+      features: ["Real-time Dashboards", "Business Intelligence", "Data Visualization", "Custom Reporting"],
+      href: "/analytics-solutions"
     },
     {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+      title: "Mobile Excellence",
+      description: "Native and cross-platform mobile applications",
+      icon: Zap,
+      features: ["iOS & Android Native", "React Native", "Progressive Web Apps", "Offline Capabilities"],
+      href: "/mobile-solutions"
     }
   ];
 
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ];
-
   return (
-    <>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-cyan-600/20"></div>
+        <div className="container mx-auto px-4 py-20 relative z-10">
+          <div className="text-center">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+              Advanced App Solutions
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced solutions designed to transform your business operations and drive innovation.
+            <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Cutting-edge mobile and web applications powered by AI and modern technology
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+              <Link
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              >
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
+              </Link>
+              <Link
+                href="/demo"
+                className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
+              >
+                View Demo
+              </Link>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful features designed to transform your business operations
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4 bg-black/20">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solutions?</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of intelligent automation and advanced technology
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <div className="flex items-center mb-4">
-                    <CheckCircle className="h-6 w-6 text-emerald-400 mr-3" />
-                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+      {/* Services Section */}
+      <section className="mb-16" aria-labelledby="services-heading">
+        <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+          Our Services
+        </h2>
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service, index) => (
+              <div key={index} className="cyber-card hologram-card p-4 sm:p-6 group hover:scale-105 transition-transform duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
+                    <service.icon className="w-6 h-6 text-white" />
                   </div>
+                  <h3 className="text-xl font-bold text-white">{service.title}</h3>
                 </div>
-              ))}
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href={service.href}
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:translate-x-1 transition-transform"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-8">
+            <Link 
+              href="/services"
+              className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+            >
+              View All Services
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="mb-16">
+        <div className="container mx-auto px-4">
+          <div className="cyber-card hologram-card p-8">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Why Choose Zion Tech Group?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Zap className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Lightning Fast</h3>
+                <p className="text-gray-300">Optimized performance and rapid deployment</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Secure & Reliable</h3>
+                <p className="text-gray-300">Enterprise-grade security and 99.9% uptime</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Brain className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">AI-Powered</h3>
+                <p className="text-gray-300">Cutting-edge AI and machine learning integration</p>
+              </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let's work together to create intelligent solutions that work for your business.
+      {/* CTA Section */}
+      <section className="mb-16">
+        <div className="container mx-auto px-4">
+          <div className="cyber-card hologram-card p-8 text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Let's build the next generation of applications together. Contact us today for a free consultation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+              <Link
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              >
                 Start Your Project
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Contact Us
-              </button>
+              </Link>
+              <Link
+                href="/about"
+                className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
+              >
+                Learn More About Us
+              </Link>
             </div>
           </div>
-        </section>
-      </div>
-      <Footer />
-    </>
+        </div>
+      </section>
+    </div>
   );
-};
-
-export default Page;
+}
