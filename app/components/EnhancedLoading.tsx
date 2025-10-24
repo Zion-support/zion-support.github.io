@@ -1,14 +1,16 @@
-'use client'
+import React from 'react';
 
-import React from 'react'
-
-const EnhancedLoading: React.FC = () => {
-  return (
-    <div className="loading-container">
-      <div className="spinner"></div>
-      <p>Loading...</p>
-    </div>
-  )
+interface EnhancedLoadingProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default EnhancedLoading
+const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default EnhancedLoading;

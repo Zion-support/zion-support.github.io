@@ -1,14 +1,16 @@
-'use client'
+import React from 'react';
 
-import React, { useEffect } from 'react'
-
-const EnhancedAnalytics: React.FC = () => {
-  useEffect(() => {
-    // Analytics initialization
-    console.log('Analytics initialized')
-  }, [])
-
-  return null
+interface EnhancedAnalyticsProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default EnhancedAnalytics
+const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default EnhancedAnalytics;

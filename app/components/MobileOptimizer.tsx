@@ -1,14 +1,16 @@
-'use client'
+import React from 'react';
 
-import React, { useEffect } from 'react'
-
-const MobileOptimizer: React.FC = () => {
-  useEffect(() => {
-    // Mobile optimization logic
-    console.log('Mobile optimizer initialized')
-  }, [])
-
-  return null
+interface MobileOptimizerProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default MobileOptimizer
+const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default MobileOptimizer;

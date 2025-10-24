@@ -1,25 +1,16 @@
-'use client'
-
-import React from 'react'
-import Image from 'next/image'
+import React from 'react';
 
 interface OptimizedImageProps {
-  src: string
-  alt: string
-  className?: string
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({ src, alt, className = '' }) => {
+const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '', children }) => {
   return (
-    <Image
-      src={src}
-      alt={alt}
-      width={400}
-      height={300}
-      className={`optimized-image ${className}`}
-      loading="lazy"
-    />
-  )
-}
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
 
-export default OptimizedImage
+export default OptimizedImage;

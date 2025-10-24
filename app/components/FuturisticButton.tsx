@@ -1,26 +1,16 @@
-'use client'
-
-import React from 'react'
+import React from 'react';
 
 interface FuturisticButtonProps {
-  children: React.ReactNode
-  onClick?: () => void
-  variant?: 'primary' | 'secondary'
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const FuturisticButton: React.FC<FuturisticButtonProps> = ({ 
-  children, 
-  onClick, 
-  variant = 'primary' 
-}) => {
+const FuturisticButton: React.FC<FuturisticButtonProps> = ({ className = '', children }) => {
   return (
-    <button 
-      className={`futuristic-button ${variant}`}
-      onClick={onClick}
-    >
+    <div className={`${className}`}>
       {children}
-    </button>
-  )
-}
+    </div>
+  );
+};
 
-export default FuturisticButton
+export default FuturisticButton;

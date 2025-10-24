@@ -1,20 +1,16 @@
-'use client'
-
-import React from 'react'
-import Head from 'next/head'
+import React from 'react';
 
 interface SEOHeadProps {
-  title?: string
-  description?: string
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const SEOHead: React.FC<SEOHeadProps> = ({ title, description }) => {
+const SEOHead: React.FC<SEOHeadProps> = ({ className = '', children }) => {
   return (
-    <Head>
-      {title && <title>{title}</title>}
-      {description && <meta name="description" content={description} />}
-    </Head>
-  )
-}
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
 
-export default SEOHead
+export default SEOHead;

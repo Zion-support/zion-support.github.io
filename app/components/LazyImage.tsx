@@ -1,27 +1,16 @@
-'use client'
-
-import React, { useState } from 'react'
-import Image from 'next/image'
+import React from 'react';
 
 interface LazyImageProps {
-  src: string
-  alt: string
-  className?: string
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const LazyImage: React.FC<LazyImageProps> = ({ src, alt, className = '' }) => {
-  const [loaded, setLoaded] = useState(false)
-
+const LazyImage: React.FC<LazyImageProps> = ({ className = '', children }) => {
   return (
-    <Image
-      src={src}
-      alt={alt}
-      width={400}
-      height={300}
-      className={`lazy-image ${className} ${loaded ? 'loaded' : ''}`}
-      onLoad={() => setLoaded(true)}
-    />
-  )
-}
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
 
-export default LazyImage
+export default LazyImage;

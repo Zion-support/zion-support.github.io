@@ -1,14 +1,16 @@
-'use client'
+import React from 'react';
 
-import React, { useEffect } from 'react'
-
-const EnhancedSEOOptimizer: React.FC = () => {
-  useEffect(() => {
-    // SEO optimization logic
-    console.log('SEO optimizer initialized')
-  }, [])
-
-  return null
+interface EnhancedSEOOptimizerProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default EnhancedSEOOptimizer
+const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default EnhancedSEOOptimizer;

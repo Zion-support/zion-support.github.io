@@ -1,19 +1,16 @@
-'use client'
+import React from 'react';
 
-import React from 'react'
-
-interface SEOProps {
-  title?: string
-  description?: string
+interface EnhancedSEOProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const EnhancedSEO: React.FC<SEOProps> = ({ title, description }) => {
+const EnhancedSEO: React.FC<EnhancedSEOProps> = ({ className = '', children }) => {
   return (
-    <>
-      {title && <title>{title}</title>}
-      {description && <meta name="description" content={description} />}
-    </>
-  )
-}
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
 
-export default EnhancedSEO
+export default EnhancedSEO;

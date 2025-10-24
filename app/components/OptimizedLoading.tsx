@@ -1,13 +1,16 @@
-'use client'
+import React from 'react';
 
-import React from 'react'
-
-const OptimizedLoading: React.FC = () => {
-  return (
-    <div className="optimized-loading">
-      <div className="spinner"></div>
-    </div>
-  )
+interface OptimizedLoadingProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default OptimizedLoading
+const OptimizedLoading: React.FC<OptimizedLoadingProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default OptimizedLoading;

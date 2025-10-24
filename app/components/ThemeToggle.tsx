@@ -1,28 +1,16 @@
-'use client'
+import React from 'react';
 
-import React, { useState, useEffect } from 'react'
-
-const ThemeToggle: React.FC = () => {
-  const [theme, setTheme] = useState('light')
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme')
-    if (savedTheme) {
-      setTheme(savedTheme)
-    }
-  }, [])
-
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light'
-    setTheme(newTheme)
-    localStorage.setItem('theme', newTheme)
-  }
-
-  return (
-    <button onClick={toggleTheme} className="theme-toggle">
-      {theme === 'light' ? '🌙' : '☀️'}
-    </button>
-  )
+interface ThemeToggleProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default ThemeToggle
+const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default ThemeToggle;

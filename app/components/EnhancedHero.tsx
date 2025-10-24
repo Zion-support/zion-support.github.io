@@ -1,21 +1,16 @@
-'use client'
-
-import React from 'react'
+import React from 'react';
 
 interface EnhancedHeroProps {
-  title: string
-  subtitle?: string
-  children?: React.ReactNode
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const EnhancedHero: React.FC<EnhancedHeroProps> = ({ title, subtitle, children }) => {
+const EnhancedHero: React.FC<EnhancedHeroProps> = ({ className = '', children }) => {
   return (
-    <section className="hero-section">
-      <h1>{title}</h1>
-      {subtitle && <p>{subtitle}</p>}
+    <div className={`${className}`}>
       {children}
-    </section>
-  )
-}
+    </div>
+  );
+};
 
-export default EnhancedHero
+export default EnhancedHero;

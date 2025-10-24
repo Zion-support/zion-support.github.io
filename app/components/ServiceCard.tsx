@@ -1,21 +1,16 @@
-'use client'
-
-import React from 'react'
+import React from 'react';
 
 interface ServiceCardProps {
-  title: string
-  description: string
-  icon?: string
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon }) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ className = '', children }) => {
   return (
-    <div className="service-card">
-      {icon && <div className="service-icon">{icon}</div>}
-      <h3>{title}</h3>
-      <p>{description}</p>
+    <div className={`${className}`}>
+      {children}
     </div>
-  )
-}
+  );
+};
 
-export default ServiceCard
+export default ServiceCard;

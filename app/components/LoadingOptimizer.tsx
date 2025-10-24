@@ -1,13 +1,16 @@
-'use client'
+import React from 'react';
 
-import React from 'react'
-
-const LoadingOptimizer: React.FC = () => {
-  return (
-    <div className="loading-optimizer">
-      <div className="optimized-spinner"></div>
-    </div>
-  )
+interface LoadingOptimizerProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default LoadingOptimizer
+const LoadingOptimizer: React.FC<LoadingOptimizerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default LoadingOptimizer;

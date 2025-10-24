@@ -1,25 +1,16 @@
-'use client'
-
-import React from 'react'
+import React from 'react';
 
 interface GenericServicePageProps {
-  title: string
-  description: string
-  children?: React.ReactNode
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const GenericServicePage: React.FC<GenericServicePageProps> = ({ 
-  title, 
-  description, 
-  children 
-}) => {
+const GenericServicePage: React.FC<GenericServicePageProps> = ({ className = '', children }) => {
   return (
-    <div className="service-page">
-      <h1>{title}</h1>
-      <p>{description}</p>
+    <div className={`${className}`}>
       {children}
     </div>
-  )
-}
+  );
+};
 
-export default GenericServicePage
+export default GenericServicePage;

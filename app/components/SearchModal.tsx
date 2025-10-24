@@ -1,24 +1,16 @@
-'use client'
-
-import React, { useState } from 'react'
+import React from 'react';
 
 interface SearchModalProps {
-  isOpen: boolean
-  onClose: () => void
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
-  if (!isOpen) return null
-
+const SearchModal: React.FC<SearchModalProps> = ({ className = '', children }) => {
   return (
-    <div className="search-modal-overlay" onClick={onClose}>
-      <div className="search-modal" onClick={(e) => e.stopPropagation()}>
-        <h2>Search</h2>
-        <input type="text" placeholder="Search..." />
-        <button onClick={onClose}>Close</button>
-      </div>
+    <div className={`${className}`}>
+      {children}
     </div>
-  )
-}
+  );
+};
 
-export default SearchModal
+export default SearchModal;

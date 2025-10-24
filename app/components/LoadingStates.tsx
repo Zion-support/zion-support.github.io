@@ -1,22 +1,16 @@
-'use client'
-
-import React from 'react'
+import React from 'react';
 
 interface LoadingStatesProps {
-  isLoading: boolean
-  children: React.ReactNode
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const LoadingStates: React.FC<LoadingStatesProps> = ({ isLoading, children }) => {
-  if (isLoading) {
-    return (
-      <div className="loading-states">
-        <div className="spinner"></div>
-      </div>
-    )
-  }
+const LoadingStates: React.FC<LoadingStatesProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
 
-  return <>{children}</>
-}
-
-export default LoadingStates
+export default LoadingStates;

@@ -1,14 +1,16 @@
-'use client'
+import React from 'react';
 
-import React, { useEffect } from 'react'
-
-const EnhancedPerformanceOptimizer: React.FC = () => {
-  useEffect(() => {
-    // Performance optimization logic
-    console.log('Performance optimizer initialized')
-  }, [])
-
-  return null
+interface EnhancedPerformanceOptimizerProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default EnhancedPerformanceOptimizer
+const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default EnhancedPerformanceOptimizer;

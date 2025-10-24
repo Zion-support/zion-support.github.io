@@ -1,13 +1,16 @@
-'use client'
+import React from 'react';
 
-import React from 'react'
-
-const EnhancedSkipLink: React.FC = () => {
-  return (
-    <a href="#main-content" className="enhanced-skip-link">
-      Skip to main content
-    </a>
-  )
+interface EnhancedSkipLinkProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default EnhancedSkipLink
+const EnhancedSkipLink: React.FC<EnhancedSkipLinkProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default EnhancedSkipLink;

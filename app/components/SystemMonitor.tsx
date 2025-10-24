@@ -1,16 +1,16 @@
-'use client'
+import React from 'react';
 
-import React, { useEffect, useState } from 'react'
-
-const SystemMonitor: React.FC = () => {
-  const [systemInfo, setSystemInfo] = useState<any>(null)
-
-  useEffect(() => {
-    // System monitoring logic
-    console.log('System monitor initialized')
-  }, [])
-
-  return null
+interface SystemMonitorProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default SystemMonitor
+const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default SystemMonitor;

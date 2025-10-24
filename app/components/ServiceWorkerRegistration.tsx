@@ -1,21 +1,16 @@
-'use client'
+import React from 'react';
 
-import React, { useEffect } from 'react'
-
-const ServiceWorkerRegistration: React.FC = () => {
-  useEffect(() => {
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
-          console.log('SW registered: ', registration)
-        })
-        .catch((registrationError) => {
-          console.log('SW registration failed: ', registrationError)
-        })
-    }
-  }, [])
-
-  return null
+interface ServiceWorkerRegistrationProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default ServiceWorkerRegistration
+const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default ServiceWorkerRegistration;

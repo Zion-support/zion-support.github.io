@@ -1,14 +1,16 @@
-'use client'
+import React from 'react';
 
-import React, { useEffect } from 'react'
-
-const SEOEnhancer: React.FC = () => {
-  useEffect(() => {
-    // SEO enhancement logic
-    console.log('SEO enhancer initialized')
-  }, [])
-
-  return null
+interface SEOEnhancerProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default SEOEnhancer
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default SEOEnhancer;

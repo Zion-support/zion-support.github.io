@@ -1,13 +1,16 @@
-'use client'
+import React from 'react';
 
-import React from 'react'
-
-const FuturisticBackground: React.FC = () => {
-  return (
-    <div className="futuristic-background">
-      <div className="grid-overlay"></div>
-    </div>
-  )
+interface FuturisticBackgroundProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default FuturisticBackground
+const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default FuturisticBackground;

@@ -1,14 +1,16 @@
-'use client'
+import React from 'react';
 
-import React, { useEffect } from 'react'
-
-const UserExperienceEnhancer: React.FC = () => {
-  useEffect(() => {
-    // UX enhancement logic
-    console.log('UX enhancer initialized')
-  }, [])
-
-  return null
+interface UserExperienceEnhancerProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default UserExperienceEnhancer
+const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default UserExperienceEnhancer;

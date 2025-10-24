@@ -1,23 +1,16 @@
-'use client'
-
-import React from 'react'
+import React from 'react';
 
 interface SidebarProps {
-  isOpen: boolean
-  onClose: () => void
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+const Sidebar: React.FC<SidebarProps> = ({ className = '', children }) => {
   return (
-    <div className={`sidebar ${isOpen ? 'open' : ''}`}>
-      <button onClick={onClose} className="close-btn">×</button>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/services">Services</a>
-        <a href="/about">About</a>
-      </nav>
+    <div className={`${className}`}>
+      {children}
     </div>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;

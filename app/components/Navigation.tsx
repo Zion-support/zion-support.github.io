@@ -1,17 +1,16 @@
-'use client'
+import React from 'react';
 
-import React from 'react'
-import Link from 'next/link'
-
-const Navigation: React.FC = () => {
-  return (
-    <nav className="navigation">
-      <Link href="/">Home</Link>
-      <Link href="/services">Services</Link>
-      <Link href="/about">About</Link>
-      <Link href="/contact">Contact</Link>
-    </nav>
-  )
+interface NavigationProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default Navigation
+const Navigation: React.FC<NavigationProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default Navigation;

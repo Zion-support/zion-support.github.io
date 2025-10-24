@@ -1,16 +1,16 @@
-'use client'
+import React from 'react';
 
-import React, { useEffect, useState } from 'react'
-
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<any>(null)
-
-  useEffect(() => {
-    // Performance monitoring logic
-    console.log('Performance monitor initialized')
-  }, [])
-
-  return null
+interface PerformanceMonitorProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default PerformanceMonitor
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default PerformanceMonitor;

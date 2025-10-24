@@ -1,13 +1,16 @@
-'use client'
+import React from 'react';
 
-import React from 'react'
-
-const FuturisticLoader: React.FC = () => {
-  return (
-    <div className="futuristic-loader">
-      <div className="loader-ring"></div>
-    </div>
-  )
+interface FuturisticLoaderProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default FuturisticLoader
+const FuturisticLoader: React.FC<FuturisticLoaderProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default FuturisticLoader;

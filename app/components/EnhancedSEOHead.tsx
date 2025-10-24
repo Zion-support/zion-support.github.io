@@ -1,22 +1,16 @@
-'use client'
+import React from 'react';
 
-import React from 'react'
-import Head from 'next/head'
-
-interface SEOHeadProps {
-  title?: string
-  description?: string
-  keywords?: string
+interface EnhancedSEOHeadProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const EnhancedSEOHead: React.FC<SEOHeadProps> = ({ title, description, keywords }) => {
+const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ className = '', children }) => {
   return (
-    <Head>
-      {title && <title>{title}</title>}
-      {description && <meta name="description" content={description} />}
-      {keywords && <meta name="keywords" content={keywords} />}
-    </Head>
-  )
-}
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
 
-export default EnhancedSEOHead
+export default EnhancedSEOHead;

@@ -33,15 +33,13 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       return this.props.fallback || (
         <div className="error-boundary">
           <h2>Something went wrong.</h2>
-          <details>
-            {this.state.error && this.state.error.toString()}
-          </details>
+          <p>Please refresh the page and try again.</p>
         </div>
-      )
+      );
     }
 
-    return this.props.children
+    return this.props.children;
   }
 }
 
-export default AdvancedErrorBoundary
+export default AdvancedErrorBoundary;

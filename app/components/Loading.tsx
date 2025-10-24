@@ -1,13 +1,16 @@
-'use client'
+import React from 'react';
 
-import React from 'react'
-
-const Loading: React.FC = () => {
-  return (
-    <div className="loading">
-      <div className="spinner"></div>
-    </div>
-  )
+interface LoadingProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default Loading
+const Loading: React.FC<LoadingProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default Loading;

@@ -1,18 +1,16 @@
-'use client'
-
-import React from 'react'
+import React from 'react';
 
 interface NeonButtonProps {
-  children: React.ReactNode
-  onClick?: () => void
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const NeonButton: React.FC<NeonButtonProps> = ({ children, onClick }) => {
+const NeonButton: React.FC<NeonButtonProps> = ({ className = '', children }) => {
   return (
-    <button className="neon-button" onClick={onClick}>
+    <div className={`${className}`}>
       {children}
-    </button>
-  )
-}
+    </div>
+  );
+};
 
-export default NeonButton
+export default NeonButton;

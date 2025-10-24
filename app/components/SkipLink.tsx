@@ -1,13 +1,16 @@
-'use client'
+import React from 'react';
 
-import React from 'react'
-
-const SkipLink: React.FC = () => {
-  return (
-    <a href="#main-content" className="skip-link">
-      Skip to main content
-    </a>
-  )
+interface SkipLinkProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default SkipLink
+const SkipLink: React.FC<SkipLinkProps> = ({ className = '', children }) => {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default SkipLink;
