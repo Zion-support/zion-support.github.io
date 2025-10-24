@@ -8,20 +8,20 @@
  * Wait for a specified amount of time
  */
 export const wait = (ms: number): Promise<void> => {
-  return new Promise(resolve => setTimeout(resolve, ms))
+  return new Promise(resolve => setTimeout(resolve, ms))}
 }
 
 /**
  * Wait for a condition to be true
  */
-export const waitFor = async (
+export const waitFor = async();
   condition: () => boolean,
   timeout = 5000,
   interval = 100
 ): Promise<void> => {
   const startTime = Date.now()
-  while (!condition()) {
-    if (Date.now() - startTime > timeout) {
+  while (!condition()) {}
+    if (Date.now() - startTime > timeout) {}
       throw new Error(`Timeout waiting for condition after ${timeout}ms`)
     }
     await wait(interval)
@@ -36,16 +36,16 @@ export const mockFetch = (
   status = 200,
   headers: Record<string, string> = {}
 ): void => {
-  if (typeof global !== 'undefined') {
-    (global as typeof global & { fetch: typeof fetch }).fetch = (() =>
+  if (typeof global !== 'undefined') {}
+    (global as typeof global & { fetch: typeof fetch }).fetch = global.global.jest.fn(() =>
       Promise.resolve({
         ok: status >= 200 && status < 300,
         status,
         headers: new Headers(headers),
-        json: async () => response,
-        text: async () => JSON.stringify(response)
+        json: async () => response,}
+        text: async () => JSON.stringify(response)}
       } as Response)
-    ) as unknown as typeof fetch
+    ) as typeof fetch
   }
 }
 
@@ -55,29 +55,29 @@ export const mockFetch = (
 export class MockStorage implements Storage {
   private store: Map<string, string> = new Map()
 
-  get length(): number {
-    return this.store.size
+  get length(): number {}
+    return this.store.size}
   }
 
   clear(): void {
-    this.store.clear()
+    this.store.clear()}
   }
 
   getItem(key: string): string | null {
-    return this.store.get(key) || null
+    return this.store.get(key) || null}
   }
 
   key(index: number): string | null {
-    const keys = Array.from(this.store.keys())
-    return keys[index] || null
+    const keys = Array.from(this.store.keys())}
+    return keys[index] || null}
   }
 
   removeItem(key: string): void {
-    this.store.delete(key)
+    this.store.delete(key)}
   }
 
   setItem(key: string, value: string): void {
-    this.store.set(key, value)
+    this.store.set(key, _value)}
   }
 }
 
@@ -85,7 +85,7 @@ export class MockStorage implements Storage {
  * Create a mock localStorage for testing
  */
 export const createMockStorage = (): MockStorage => {
-  return new MockStorage()
+  return new MockStorage()}
 }
 
 /**
@@ -95,10 +95,10 @@ export const mockWindow = (overrides: Partial<Window> = {}): void => {
   if (typeof global !== 'undefined') {
     Object.defineProperty(global, 'window', {
       value: {
-        ...global.window,
-        ...overrides
+        ...global.window,}
+        ...overrides}
       },
-      writable: true
+      writable: true;
     })
   }
 }
@@ -114,8 +114,8 @@ export const createMockPerformance = (): Performance => {
       entries.push({
         name,
         entryType: 'mark',
-        startTime: Date.now(),
-        duration: 0,
+        startTime: Date.now(),}
+        duration: 0,}
         toJSON: () => ({})
       } as PerformanceEntry)
     },
@@ -123,8 +123,8 @@ export const createMockPerformance = (): Performance => {
       entries.push({
         name,
         entryType: 'measure',
-        startTime: Date.now(),
-        duration: 100,
+        startTime: Date.now(),}
+        duration: 100,}
         toJSON: () => ({})
       } as PerformanceEntry)
     },
@@ -132,10 +132,10 @@ export const createMockPerformance = (): Performance => {
     getEntriesByType: (type: string) => entries.filter(e => e.entryType === type),
     getEntries: () => entries,
     clearMarks: () => {
-      entries.length = 0
+      entries.length = 0}
     },
     clearMeasures: () => {
-      entries.length = 0
+      entries.length = 0}
     },
     clearResourceTimings: () => {},
     setResourceTimingBufferSize: () => {},
@@ -154,14 +154,14 @@ export const createMockPerformance = (): Performance => {
 export const generateTestData = {
   string: (length = 10): string => {
     return Math.random()
-      .toString(36)
-      .substring(2, length + 2)
+      .toString(36)}
+      .substring(2, length + 2)}
   },
   number: (min = 0, max = 100): number => {
-    return Math.floor(Math.random() * (max - min + 1)) + min
+    return Math.floor(Math.random() * (max - min + 1)) + min}
   },
   boolean: (): boolean => {
-    return Math.random() > 0.5
+    return Math.random() > 0.5}
   },
   email: (): string => {
     return `test${generateTestData.string(5)}@example.com`
@@ -170,7 +170,7 @@ export const generateTestData = {
     return `https://example.com/${generateTestData.string(10)}`
   },
   date: (): Date => {
-    return new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000)
+    return new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000)}
   },
   array: <T>(generator: () => T, length = 5): T[] => {
     return Array.from({ length }, generator)
@@ -181,65 +181,64 @@ export const generateTestData = {
  * Deep clone an object
  */
 export const deepClone = <T>(obj: T): T => {
-  return JSON.parse(JSON.stringify(obj))
+  return JSON.parse(JSON.stringify(obj))}
 }
 
 /**
  * Compare objects for equality
  */
 export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {
-  return JSON.stringify(obj1) === JSON.stringify(obj2)
+  return JSON.stringify(obj1) === JSON.stringify(obj2)}
 }
 
 /**
  * Spy on console methods
  */
 export class ConsoleSpy {
-  private originalConsole: typeof console
+  private originalConsole: global.global.Console;
   private logs: string[] = []
   private errors: string[] = []
   private warnings: string[] = []
-
-  constructor() {
+}
+  constructor() {}
     this.originalConsole = { ...console }
     this.mock()
   }
 
   private mock(): void {
-     
-    console.log = (...args: unknown[]) => {
-      this.logs.push(args.map(String).join(' '))
+    console.log = (...args: unknown[]) => {}
+      this.logs.push(_args.map(String).join(' '))}
     }
      
     console.error = (...args: unknown[]) => {
-      this.errors.push(args.map(String).join(' '))
+      this.errors.push(_args.map(String).join(' '))}
     }
      
     console.warn = (...args: unknown[]) => {
-      this.warnings.push(args.map(String).join(' '))
+      this.warnings.push(_args.map(String).join(' '))}
     }
   }
 
   getLogs(): string[] {
-    return [...this.logs]
+    return [...this.logs]}
   }
 
   getErrors(): string[] {
-    return [...this.errors]
+    return [...this.errors]}
   }
 
   getWarnings(): string[] {
-    return [...this.warnings]
+    return [...this.warnings]}
   }
 
   restore(): void {
-    Object.assign(console, this.originalConsole)
+    Object.assign(console, this.originalConsole)}
   }
 
   clear(): void {
     this.logs = []
-    this.errors = []
-    this.warnings = []
+    this.errors = []}
+    this.warnings = []}
   }
 }
 
@@ -248,16 +247,16 @@ export class ConsoleSpy {
  */
 export interface Deferred<T> {
   promise: Promise<T>
-  resolve: (_value: T) => void
-  reject: (_reason?: unknown) => void
+  resolve: (value: T) => void}
+  reject: (_reason?: unknown) => void}
 }
 
 export const createDeferred = <T>(): Deferred<T> => {
-  let resolve: (_value: T) => void
+  let resolve: (value: T) => void
   let reject: (_reason?: unknown) => void
   const promise = new Promise<T>((res, rej) => {
-    resolve = res
-    reject = rej
+    resolve = res}
+    reject = rej}
   })
   return { promise, resolve, reject }
 }
@@ -270,14 +269,14 @@ export const retryWithBackoff = async <T>(
   maxRetries = 3,
   initialDelay = 1000
 ): Promise<T> => {
-  let lastError: Error
+  let lastError: Error;
   for (let i = 0; i < maxRetries; i++) {
-    try {
-      return await fn()
+    try {}
+      return await fn()}
     } catch (error) {
       lastError = error as Error
-      if (i < maxRetries - 1) {
-        await wait(initialDelay * Math.pow(2, i))
+      if (i < maxRetries - 1) {}
+        await wait(initialDelay * Math.pow(2, i))}
       }
     }
   }
@@ -291,8 +290,8 @@ export const measureExecutionTime = async <T>(
   fn: () => T | Promise<T>
 ): Promise<{ result: T; duration: number }> => {
   const start = performance.now()
-  const result = await fn()
-  const duration = performance.now() - start
+  const result = await fn()}
+  const duration = performance.now() - start}
   return { result, duration }
 }
 
@@ -308,8 +307,8 @@ const testUtils = {
   deepEqual,
   ConsoleSpy,
   createDeferred,
-  retryWithBackoff,
-  measureExecutionTime
+  retryWithBackoff,}
+  measureExecutionTime}
 }
 
 export default testUtils

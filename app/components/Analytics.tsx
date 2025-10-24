@@ -1,5 +1,6 @@
 'use client'
 
+<<<<<<< HEAD
 import React, { useEffect } from 'react'
 import Script from 'next/script'
 
@@ -10,6 +11,13 @@ declare global {
       q?: unknown[]
     }
   }
+=======
+interface AnalyticsProps {
+  enableGoogleAnalytics?: boolean
+  enablePerformanceMonitoring?: boolean
+  enableErrorTracking?: boolean
+  enableUserBehaviorTracking?: boolean
+>>>>>>> cursor/fix-errors-and-merge-to-main-70e6
 }
 
 const Analytics: React.FC = () => {

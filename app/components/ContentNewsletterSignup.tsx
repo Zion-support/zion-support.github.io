@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import React, { useState } from 'react'
 import { CheckCircle, ArrowRight } from 'lucide-react'
@@ -8,6 +9,18 @@ interface ContentNewsletterSignupProps {
   placeholder?: string
   buttonText?: string
   onSubscribe?: (_email: string) => Promise<void>
+=======
+'use client';
+import React, { useState } from 'react';
+import { CheckCircle, ArrowRight } from 'lucide-react';
+
+interface ContentNewsletterSignupProps {
+  title?: string;
+  subtitle?: string;
+  placeholder?: string;
+  buttonText?: string;
+  onSubscribe?: (_email: string) => Promise<void>;
+>>>>>>> cursor/fix-errors-and-merge-to-main-70e6
 }
 
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
@@ -17,6 +30,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
   buttonText = "Subscribe",
   onSubscribe
 }) => {
+<<<<<<< HEAD
   const [email, setEmail] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubscribed, setIsSubscribed] = useState(false)
@@ -43,6 +57,34 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
       setIsSubmitting(false)
     }
   }
+=======
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubscribed, setIsSubscribed] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+
+    setIsSubmitting(true);
+    
+    try {
+      if (onSubscribe) {
+        await onSubscribe(email);
+      } else {
+        // Simulate API call
+        await new Promise(resolve => setTimeout(resolve, 1000));
+      }
+      
+      setIsSubscribed(true);
+      setEmail('');
+    } catch (error) {
+      console.error('Subscription failed:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+>>>>>>> cursor/fix-errors-and-merge-to-main-70e6
 
   if (isSubscribed) {
     return (
@@ -65,7 +107,11 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
           </button>
         </div>
       </div>
+<<<<<<< HEAD
     )
+=======
+    );
+>>>>>>> cursor/fix-errors-and-merge-to-main-70e6
   }
 
   return (
@@ -126,7 +172,11 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
+<<<<<<< HEAD
 export default ContentNewsletterSignup
+=======
+export default ContentNewsletterSignup;
+>>>>>>> cursor/fix-errors-and-merge-to-main-70e6

@@ -56,10 +56,17 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
       )
     }
 
     return this.props.children
+=======
+      );
+    }
+
+    return this.props.children;
+>>>>>>> cursor/fix-errors-and-merge-to-main-70e6
   }
 }
 

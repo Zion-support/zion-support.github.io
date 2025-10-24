@@ -11,7 +11,11 @@ interface ServiceWorkerRegistrationProps {
 const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
   onUpdateAvailable,
   onUpdateInstalled,
+<<<<<<< HEAD
   onError: _onError,
+=======
+  onError,
+>>>>>>> cursor/fix-errors-and-merge-to-main-70e6
 }) => {
   useEffect(() => {
     if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
@@ -45,13 +49,22 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
           window.location.reload();
         });
 
+<<<<<<< HEAD
       } catch (error) {
         _onError?.(error as Error);
+=======
+      } catch (_error) {
+        onError?.(_error as Error);
+>>>>>>> cursor/fix-errors-and-merge-to-main-70e6
       }
     };
 
     registerServiceWorker();
+<<<<<<< HEAD
   }, [onUpdateAvailable, onUpdateInstalled, _onError]);
+=======
+  }, [onUpdateAvailable, onUpdateInstalled, onError]);
+>>>>>>> cursor/fix-errors-and-merge-to-main-70e6
 
   return null;
 };
