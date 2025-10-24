@@ -11,8 +11,6 @@ export const metadata: Metadata = {
   keywords: 'AI solutions, cloud architecture, web development, mobile apps, data analytics, cybersecurity',
 }
 
-}
-
 export default function RootLayout({
   children,
 }: {
@@ -21,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {children
+        {children}
       </body>
     </html>
   )
