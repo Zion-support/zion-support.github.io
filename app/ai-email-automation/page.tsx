@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Mail, CheckCircle, Star, Brain, Send, Zap, BarChart3, DollarSign, Clock, TrendingUp, Shield } from 'lucide-react';
+import { ArrowRight, Mail, CheckCircle, Star, Brain, Send, Zap, Shield, BarChart3, DollarSign, Clock, TrendingUp } from 'lucide-react';
 
 
 import Link from 'next/link';
