@@ -5,9 +5,9 @@ import Loading from '../app/components/Loading';
 import SEOHead from '../app/components/SEOHead';
 
 describe('Loading Component', () => {
-  test('renders loading text', () => {
+  test('renders service text', () => {
     render(<Loading />);
-    expect(screen.getByText('Loading...')).toBeTruthy();
+    expect(screen.getByText('Service')).toBeTruthy();
   });
 });
 
