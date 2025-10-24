@@ -1,6 +1,7 @@
 import '@testing-library/jest-dom';
 
 // Polyfill for TextEncoder/TextDecoder
+const { TextEncoder, TextDecoder } = require('util');
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
@@ -11,5 +12,16 @@ jest.mock('react-router-dom', () => ({
     pathname: '/',
     search: '',
     hash: '',
+  }),
+  useNavigate: () => jest.fn(),
+}));
+
+// Mock Next.js router
+jest.mock('next/router', () => ({
+  useRouter: () => ({
+    pathname: '/',
+    query: {},
+    push: jest.fn(),
+    replace: jest.fn(),
   }),
 }));

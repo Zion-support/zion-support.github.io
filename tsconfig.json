@@ -37,6 +37,10 @@
     "all-pages-backup/**/*",
     "src/**/*",
     "factories/**/*",
-    "problematic-files-backup/**/*"
+    "problematic-files-backup/**/*",
+    "backup-problematic/**/*",
+    "backup/**/*",
+    "corrupted-src-backup/**/*",
+    "jest.setup.tsx"
   ]
 }
