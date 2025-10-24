@@ -1,16 +1,14 @@
-'use client'
-import React from 'react';
+"use client"
+import React from "react";
 export default function RootLayout({
 children
 }: {
 children: "React.ReactNode)
-",}) {
-return (
-    <html lang = "en">
-      <body className={inter.className,;} >
-        {children;}
+"}) {
+return (<html lang = "en">
+      <body className={inter.className} >
+        {children}
       </body>
     </html>)
   )
-;}
 

@@ -1,20 +1,21 @@
-const fs = require('fs')
-const path = require('path')
+const fs = require("fs")
+const path = require("path")
 function createProperPage(filePath) {
-  const fileName = path.basename(filePath, '.tsx')
-  const pageName = fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
-  const content = `'use client'
-import React from 'react';
-import Head } from 'next/head'
-import Link } from 'next/link';
-import { ArrowRight   } from 'lucide-react';
-import { Footer  } from '../components/Footer';
-export default function ${fileName.replace(/-/g, '')}Page() {
-  return (
-    <div>
+  const fileName = path.basename(filePath, ".tsx")
+  const pageName = fileName.replace(/-/g, " ").replace(/\b\w/g, l => l.toUpperCase())
+  const content = `"use client"
+import React from "react";
+import { Head  } from "next/head"
+import { Link  } from "next/link";
+import { ArrowRight  } from "lucide-react";
+import { Footer  } from "../components/Footer";
+export default function${fileName.replace(/-/g, "")}Page() {
+  return (<div>
       <Head>
         <title>${pageName} - Zion Tech Group</title>
+        
         <meta name="description" content="Professional services by Zion Tech Group." />
+      
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
@@ -34,8 +35,8 @@ export default function ${fileName.replace(/-/g, '')}Page() {
       </div>
       <Footer />
     </div>
-  )
-}`
+    </>
+  ) }`
   fs.writeFileSync(filePath, content)
   console.log(`Rewrote: ${filePath}`)
 }
@@ -45,14 +46,12 @@ function findAndRewritePages(dir) {
   for (const file of files) {
     const filePath = path.join(dir, file)
     const stat = fs.statSync(filePath)
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+    if (stat.isDirectory() && !file.startsWith(".") && file !== "node_modules") {
       findAndRewritePages(filePath)
-    } else if (file.endsWith('page.tsx') && !file.includes('layout') && !file.includes('404')) {
+    } else if (file.endsWith("page.tsx") && !file.includes("layout") && !file.includes("404")) {
       createProperPage(filePath)
     }
   }
 }
 
-// Start rewriting from the app directory
-findAndRewritePages('./app')
-console.log('Page rewriting completed!')
+//Start rewriting from the app directory findAndRewritePages("./app") console.log("Page rewriting completed!")

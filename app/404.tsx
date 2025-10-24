@@ -1,19 +1,21 @@
-'use client'
-import React from 'react';
-import Head } from 'next/head'
-import Link } from 'next/link';
-import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw  } from 'lucide-react';
-const NotFound = (
-  return(<>
-
+"use client"
+import React from "react";
+import { Head  } from "next/head"
+import { Link  } from "next/link";
+import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw   } from "lucide-react";
+const NotFound = () => {
+  return (<>
       <Head>
-        <title>404 - Page Not Found | Zion Tech Group</title>
+        <title>404 - Page Not Found|Zion Tech Group</title>
+        
         <meta name="robots" content="noindex, nofollow" />
+        
         <meta property="og:type" content="website" />
+      
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
         <div className="max-w-2xl w-full text-center">
-          {/* 404 Animation */}
+          {/* 404 Animation*/}
           <div className="relative mb-8">
             <div className="text-9xl font-bold text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text animate-pulse">
               404
@@ -22,14 +24,14 @@ const NotFound = (
             </div>
           </div>
           
-          {/* Error Message */}
+          {/* Error Message*/}
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Page Not Found
           </h1>
           
           <p className="text-lg text-gray-300 mb-8">
-            Oops! The page you're looking for seems to have vanished into the digital void. 
-            Don't, worry, even our AI can't predict everything!
+            Oops! The page you"re looking for seems to have vanished into the digital void. 
+            Don"t, worry, even our AI can"t predict everything!
           </p>
           
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
@@ -41,17 +43,16 @@ const NotFound = (
             </Link>
             
             <button)
-              onClick={() => window.history.back(),) => {
-$3
+              onClick={() => window.history.back() => {
 }
-              className="bg-gray-700 text-white px-8 py-4 rounded-lg font-semibold hover: bg-gray-600 transition-all duration-300 flex items-center justify-center"
+              className="bg-gray-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-600 transition-all duration-300 flex items-center justify-center"
             > <ArrowLeft className="w-5 h-5 mr-2" />
               Go Back
             </button>
             
             <button
-              onClick={() => window.location.reload(),;}
-              className="bg-gray-700 text-white px-8 py-4 rounded-lg font-semibold hover: bg-gray-600 transition-all duration-300 flex items-center justify-center"
+              onClick={() => window.location.reload()}
+              className="bg-gray-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-600 transition-all duration-300 flex items-center justify-center"
             > <RefreshCw className="w-5 h-5 mr-2" />
               Refresh
             </button>
@@ -65,10 +66,10 @@ $3
                 placeholder="Search our services..."
                 className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 onKeyPress={(e) => {
-                  if (e.key === 'Enter') {
+                  if (e.key === "Enter") {
                     const query = (e.target, as, HTMLInputElement).value
                     if (query.trim()) {
-                      window.location.href = `/search?q=${encodeURIComponent(query.trim()),}`
+                      window.location.href = `/search?q=${encodeURIComponent(query.trim())`
                     }
                   }
                 }}
@@ -76,7 +77,7 @@ $3
             </div>
           </div>
           
-          <div className = "mt-12">
+          <div className="mt-12">
             <p className="text-gray-400 mb-6">Popular pages: </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/services" className="text-cyan-400 hover:text-cyan-300 transition-colors">
@@ -98,6 +99,5 @@ $3
     </>
 
   )
-,}
 
 export default NotFound

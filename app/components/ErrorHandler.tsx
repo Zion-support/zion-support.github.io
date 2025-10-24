@@ -1,16 +1,16 @@
 const ErrorHandler: React.FC = () => {
-return (
-    <div>
+return (<div>
       <Helmet />
 
         <title>ErrorHandler</title>
-        <meta name="description" content="Advanced ErrorHandler solution for modern businesses." / />
-        <meta name="keywords" content="AI,artificial, intelligence, ErrorHandler, AI, solutions, intelligent automation" / />
+        
+        <meta name="description" content="Advanced ErrorHandler solution for modern businesses." //>
+        <meta name="keywords" content="AI,artificial, intelligence, ErrorHandler, AI, solutions, intelligent automation" //>
 
       </Helmet>
     </div>
-      <Navigation/ /> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900" />
-        {/* Hero Section */,} <section className="relative py-20 px-4 overflow-hidden" /> <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20" /> <div className="relative max-w-7 xl mx-auto text-center" /> <h1 className="text-5 xl md: text-7 xl font-bold text-white mb-6 leading-tight" />
+      <Navigation//> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900" />
+        {/* Hero Section*/} <section className="relative py-20 px-4 overflow-hidden" /> <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20" /> <div className="relative max-w-7 xl mx-auto text-center" /> <h1 className="text-5 xl md: text-7 xl font-bold text-white mb-6 leading-tight" />
 ErrorHandler</h1>
             </h1> <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed" />
 Advanced ErrorHandler solution for modern businesses.</p>
@@ -23,7 +23,7 @@ Learn More</button>
 
               </button>
 
-        </section>,{/* Features Section */} <section className="py-20 px-4" /> <div className="max-w-7 xl mx-auto" /> <div className="text-center mb-16" />
+        </section>,{/* Features Section*/} <section className="py-20 px-4" /> <div className="max-w-7 xl mx-auto" /> <div className="text-center mb-16" />
     <h1 className="text-4 xl font-bold text-white mb-4">Key Features</h2> <p className="text-xl text-gray-300 max-w-3 xl mx-auto" />
 Discover the powerful features that make ErrorHandler the perfect solution for your business.</p>
               </p>
@@ -43,10 +43,10 @@ g: grid-cols-4 gap-8" />,<div className="bg-white/10 backdrop-blur-sm rounded-lg
                 </div>
               </div>
             </div>
-        </section>,{/* CTA Section */;} <section className="py-20 px-4" /> <div className="max-w-4 xl mx-auto text-center" />
+        </section>,{/* CTA Section*/} <section className="py-20 px-4" /> <div className="max-w-4 xl mx-auto text-center" />
     <h1 className="text-4 xl font-bold text-white mb-6">Ready to Get Started?</h2> <p className="text-xl text-gray-300 mb-8" />
 Join thousands of businesses already using ErrorHandler to transform their operations.</p>
-            </p> <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
+            </p> <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
 Start Your Free Trial</button>
 
             </button>
@@ -54,9 +54,10 @@ Start Your Free Trial</button>
         </section>
         </div>
       </Footer>
-    </div>)
+    </div>
+    </>
   )
-,}
+  )
 
 export default ErrorHandler
 }

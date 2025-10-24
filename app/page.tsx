@@ -1,20 +1,25 @@
-import React from 'react';
-import Link from 'next/link';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import SEOHead from './components/SEOHead';
-import Head from 'next/head';
+import React from "react";
+import Link from "next/link";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
+import SEOHead from "./components/SEOHead";
+import Head from "next/head";
 export default function ServicePage() {
 
-  return ( <>
-
+  return (<>
       <Head>
-        <title>App | Zion Tech Group</title>
+        <title>App|Zion Tech Group</title>
+        
         <meta name="description" content="Professional app services and solutions for modern businesses." />
+        
         <meta name="robots" content="index, follow" />
+        
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="App | Zion Tech Group" />
+        
+        <meta property="og:title" content="App|Zion Tech Group" />
+        
         <meta property="og:description" content="Professional app services and solutions for modern businesses." />
+      
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
@@ -40,7 +45,7 @@ export default function ServicePage() {
           </div>
         </div>
 
-        {/* Services Preview */}
+        {/* Services Preview*/}
         <div className="py-24 bg-white/5 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -107,7 +112,7 @@ export default function ServicePage() {
           </div>
         </div>
 
-        {/* Stats Section */}
+        {/* Stats Section*/}
         <div className="py-24 bg-gradient-to-r from-purple-900/50 to-cyan-900/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -139,13 +144,12 @@ export default function ServicePage() {
           </div>
         </div>
 
-        {/* CTA Section */}
+        {/* CTA Section*/}
         <div className="py-24 bg-white/5 backdrop-blur-sm">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
-              </h2>
+                Ready to Transform Your Business?</h2>
               <p className="text-xl text-gray-300 mb-8">
                 Join hundreds of companies that trust us with their digital transformation journey.
               </p>

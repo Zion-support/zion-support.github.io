@@ -1,9 +1,9 @@
-'use client'
-import React, { useState, useCallback, useMemo } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import SEOHead from '../components/SEOHead';
-import { generateStructuredData   } from '../utils/seoData';
+"use client"
+import React, { useState, useCallback, useMemo } from "react";
+import Head from "next/head";
+import Link from "next/link";
+import SEOHead from "../components/SEOHead";
+import { generateStructuredData  } from "../utils/seoData";
 interface FormData {
   name: string
   email: string
@@ -17,44 +17,44 @@ interface FormErrors {
 }
 
 const ContactPage: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    message: ''
+  const [formData, setFormData ] = useState<FormData>({
+    name: "",
+    email: "",
+    message: ""
   })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
-  const [errors, setErrors] = useState<FormErrors>({})
+  const [isSubmitting, setIsSubmitting ] = useState(false)
+  const [submitStatus, setSubmitStatus ] = useState<"idle" | "success" | "error">("idle")
+  const [errors, setErrors ] = useState<FormErrors>({})
   const validateForm = useCallback((data: FormData): FormErrors => {
     const newErrors: FormErrors = {}
 
     if (!data.name.trim()) {
-      newErrors.name = 'Name is required'
+      newErrors.name="Name is required"
     } else if (data.name.trim().length < 2) {
-      newErrors.name = 'Name must be at least 2 characters'
+      newErrors.name="Name must be at least 2 characters"
     }
     
     if (!data.email.trim()) {
-      newErrors.email = 'Email is required'
+      newErrors.email = "Email is required"
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
-      newErrors.email = 'Please enter a valid email address'
+      newErrors.email = "Please enter a valid email address"
     }
     
     if (!data.message.trim()) {
-      newErrors.message = 'Message is required'
+      newErrors.message = "Message is required"
     } else if (data.message.trim().length < 10) {
-      newErrors.message = 'Message must be at least 10 characters'
+      newErrors.message = "Message must be at least 10 characters"
     }
     
     return newErrors
   }, [])
-  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement|HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
       [name]: value
     }))
-    // Clear error when user starts typing
+    //Clear error when user starts typing
     if (errors[name as keyof FormErrors]) {
       setErrors(prev => ({
         ...prev,
@@ -71,49 +71,54 @@ const ContactPage: React.FC = () => {
     }
     
     setIsSubmitting(true)
-    setSubmitStatus('idle')
+    setSubmitStatus("idle")
     setErrors({})
     try {
-      // Simulate API call
+      //Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000))
-      // Here you would typically send the data to your backend
-      console.log('Form submitted:', formData)
-      setSubmitStatus('success')
-      setFormData({ name: '', email: '', message: '' })
+      //Here you would typically send the data to your backend
+      console.log("Form submitted:", formData)
+      setSubmitStatus("success")
+      setFormData({ name: "", email: "", message: "" })
     } catch (error) {
-      console.error('Error submitting form:', error)
-      setSubmitStatus('error')
+      console.error("Error submitting form:", error)
+      setSubmitStatus("error")
     } finally {
       setIsSubmitting(false)
     }
   }, [formData, validateForm])
   const structuredData = useMemo(() => generateStructuredData({
-    '@type': 'LocalBusiness',
-    name: 'Zion Tech Group',
-    description: 'Leading provider of AI and IT solutions for modern businesses',
-    url: 'https://ziontechgroup.com/contact',
-    telephone: '+1-555-ZION-TECH',
-    email: 'contact@ziontechgroup.com',
+    "@type": "LocalBusiness",
+    name: "Zion Tech Group",
+    description: "Leading provider of AI and IT solutions for modern businesses",
+    url: "https://ziontechgroup.com/contact",
+    telephone: "+1-555-ZION-TECH",
+    email: "contact@ziontechgroup.com",
     address: {
-      '@type': 'PostalAddress',
-      streetAddress: '123 Tech Street',
-      addressLocality: 'Innovation City',
-      addressRegion: 'IC',
-      postalCode: '12345',
-      addressCountry: 'US'
+      "@type": "PostalAddress",
+      streetAddress: "123 Tech Street",
+      addressLocality: "Innovation City",
+      addressRegion: "IC",
+      postalCode: "12345",
+      addressCountry: "US"
     },
-    openingHours: ['Mo-Fr 09:00-17:00'],
-    priceRange: '$$'
+    openingHours: ["Mo-Fr 09:00-17:00"],
+    priceRange: "$$"
   }), [])
-  return ( <>
-
+  return (<>
       <Head>
-        <title>Contact | Zion Tech Group</title>
+        <title>Contact|Zion Tech Group</title>
+        
         <meta name="description" content="Professional contact services and solutions for modern businesses." />
+        
         <meta name="robots" content="index, follow" />
+        
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Contact | Zion Tech Group" />
+        
+        <meta property="og:title" content="Contact|Zion Tech Group" />
+        
         <meta property="og:description" content="Professional contact services and solutions for modern businesses." />
+      
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">

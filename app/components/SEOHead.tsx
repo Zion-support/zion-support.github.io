@@ -1,30 +1,27 @@
-import { Head  } from 'next/head';
+import { Head  } from "next/head";
 interface SEOHeadProps {
 title?: string
   description?: string
   keywords?: string
-const SEOHead: "React.FC<SEOHeadProps> = ({ ",title = "Zion Tech Group - AI Solutions"
-description="Advanced AI solutions for modern businesses"
-keywords="AI, artificial, intelligence, technology, solutions, business automation" 
+const SEOHead: "React.FC<SEOHeadProps> = ({ ",title="Zion Tech Group - AI Solutions" description="Advanced AI solutions for modern businesses" keywords="AI, artificial, intelligence, technology, solutions, business automation" 
 
-;}
-;}) => {
-return(<>
-
-<Helmet />
+}
+}) => {
+return (<Helmet />
         <title>{title}</title>
-        <meta name = "description" content={description,};/ />
-        <meta name = "keywords" content={keywords,};/ />
-        <meta property="og: title" content={title,};/ />
-        <meta property="og: description" content={description,};/ />
-        <meta name="twitter: title" content={title,};/ />
-        <meta name="twitter: description" content={description,};/ />
+        
+        <meta name="description" content={description};/ />
+        <meta name="keywords" content={keywords};/ />
+        <meta property="og: title" content={title};/ />
+        <meta property="og: description" content={description};/ />
+        <meta name="twitter: title" content={title};/ />
+        <meta name="twitter: description" content={description};/ />
       </Helmet>
-      <Navigation/ /> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900" />
-        {/* Hero Section */,} <section className="relative py-20 px-4 overflow-hidden" /> <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20" /> <div className="relative max-w-7 xl mx-auto text-center" /> <h1 className="text-5 xl md: text-7 xl font-bold text-white mb-6 leading-tight" />)
-              {title.replace(' - Zion Tech Group','')}</h1>
+      <Navigation//> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900" />
+        {/* Hero Section*/} <section className="relative py-20 px-4 overflow-hidden" /> <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20" /> <div className="relative max-w-7 xl mx-auto text-center" /> <h1 className="text-5 xl md: text-7 xl font-bold text-white mb-6 leading-tight" />)
+              {title.replace(" - Zion Tech Group","")}</h1>
             </h1> <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed" />
-              {description,}</p>
+              {description}</p>
             </p> <div className="flex flex-col sm: flex-row gap-4 justify-center" /> <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" />
 Get Started</button>
               </button>
@@ -32,16 +29,19 @@ Get Started</button>
 r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
 Learn More</button>
 
-      {/* Open Graph Meta Tags */}
-      <meta property="og:type" content={type} />
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
+      {/* Open Graph Meta Tags*/}
+      
+        <meta property="og:type" content={type} />
+      
+        <meta property="og:title" content={fullTitle} />
+      
+        <meta property="og:description" content={description} />
       <meta property="og:image" content={fullImage} />
       <meta property="og:url" content={fullUrl} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
 
-        </section>,{/* Features Section */} <section className="py-20 px-4" /> <div className="max-w-7 xl mx-auto" /> <div className="text-center mb-16" />
+        </section>,{/* Features Section*/} <section className="py-20 px-4" /> <div className="max-w-7 xl mx-auto" /> <div className="text-center mb-16" />
     <h1 className="text-4 xl font-bold text-white mb-4">Key Features</h2> <p className="text-xl text-gray-300 max-w-3 xl mx-auto" />
 Discover the powerful features that make SEOHead the perfect solution for your business.</p>
               </p>
@@ -61,17 +61,16 @@ g: grid-cols-4 gap-8" />,<div className="bg-white/10 backdrop-blur-sm rounded-lg
                 </div>
               </div>
             </div>
-        </section>,{/* CTA Section */} <section className="py-20 px-4" /> <div className="max-w-4 xl mx-auto text-center" />
+        </section>,{/* CTA Section*/} <section className="py-20 px-4" /> <div className="max-w-4 xl mx-auto text-center" />
     <h1 className="text-4 xl font-bold text-white mb-6">Ready to Get Started?</h2> <p className="text-xl text-gray-300 mb-8" />
 Join thousands of businesses already using SEOHead to transform their operations.</p>
-            </p> <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
+            </p> <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
 Start Your Free Trial</button>
 
-      {/* Canonical URL */}
+      {/* Canonical URL*/}
       <link rel="canonical" href={canonical || fullUrl} />
 
-  )
-,}  )}
+  )  )}
 
 export default SEOHead
 }

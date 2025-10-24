@@ -1,13 +1,9 @@
-import { React from 'react';
-import Navigation } from '../components/Navigation';
-import Footer } from '../components/Footer';
-import SEOOptimizer } from '../components/SEOOptimizer';
+import { React from "react";
+import { Navigation  } from "../components/Navigation";
+import { Footer  } from "../components/Footer";
+import { SEOOptimizer  } from "../components/SEOOptimizer";
 const Page: React.FC = () => {
-return(<>
-
-  </>
-
-      <SEOOptimizer title="Page Optimized",description="Professional page optimized services and solutions for your business needs.", keywords={ ["page optimized","AI solutions","business automation","technology services"] }; </div>
+return (<SEOOptimizer title="Page Optimized",description="Professional page optimized services and solutions for your business needs.", keywords={ ["page optimized","AI solutions","business automation","technology services"] }; </div>
 canonicalUrl = "https: //ziontechgroup.com/page-optimized"
       /></SEOOptimizer>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
         <Navigation/ /> <main className="container mx-auto px-4 py-16 pt-24" /> <div className="text-center" /> <h1 className="text-4, xl, m,d: text-5 xl font-bold text-white mb-8 neon-text" />
@@ -20,12 +16,13 @@ This page is under development. Please check back soon for more information abou
               </div>
             </div>
         </main>
-        <Footer/ />
+        <Footer//>
         </div>
       </div>
-      </div>)
+      </div>
+    </>
   )
-,}
+  )
 
 }
 

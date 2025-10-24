@@ -1,14 +1,11 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
-import { ArrowRight  } from 'lucide-react';
-// Note: These components are not available in this context export default function AdvertisingBannerPage() {
+import React from "react";
+import { Helmet  } from "react-helmet-async";
+import { ArrowRight  } from "lucide-react";
+//Note: These components are not available in this context export default function AdvertisingBannerPage() {
 
-return(<>
-
-  </>
-      <Helmet />
+return (<Helmet />
         <title>Advertising Banner - Zion Tech Group</title>
-        <metaname = "description" content="Create effective advertising banners with our AI-powered tools." / />
+        <metaname="description" content="Create effective advertising banners with our AI-powered tools." //>
       </Helmet> <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white py-20" />,<div className="max-w-7 xl mx-auto px-4" /> <div className="text-center" /> <h1 className="text-4 xl font-bold text-white mb-4" />
 Advertising Banner</h1>
             </h1> <p className="text-gray-300 mb-8" />

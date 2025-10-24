@@ -1,12 +1,12 @@
-import { render, screen  } from '@testing-library/react';
-import '@testing-library/jest-dom';
-const TestComponent = (
+import { render, screen  } from "@testing-library/react";
+import "@testing-library/jest-dom";
+const TestComponent = () => {
   return <div>Test content</div>
-) => {
-$3
-,}
+    </>
+  ) => {
 
-describe("Advanced Components", () => {
+}
+ describe("Advanced Components", () => {
   it("should render without errors", () => {
     expect(true).toBe(true)
   })
@@ -19,7 +19,7 @@ describe("Advanced Components", () => {
 const consoleSpy = jest
       .spyOn(console, "error")
       .mockImplementation(() => {})
-    // Test implementation
+    //Test implementation
     consoleSpy.mockRestore()
   })
 })

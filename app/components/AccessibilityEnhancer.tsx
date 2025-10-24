@@ -1,5 +1,5 @@
-'use client'
-import React from 'react';
+"use client"
+import React from "react";
 interface AccessibilityEnhancerProps {
 className?: string
   children?: React.ReactNode
@@ -7,11 +7,12 @@ className?: string
 }
 
 const AccessibilityEnhancer: "React.FC<AccessibilityEnhancerProps> = ({ className", children }) => {
-  return (
-    <div className = {className,}>
-      {children;}
+  return (<div className = {className}>
+      {children}
 
-    </div>;)
+    </div>
+    </>
+  )
   )
 }
 

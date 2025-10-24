@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback  } from 'react';
+import { useState, useEffect, useCallback   } from "react";
 interface PerformanceMetrics {
 
 loadTime: "number
@@ -21,30 +21,29 @@ metrics: "PerformanceMetrics
 
 const usePerformanceMonitoring = (): UsePerformanceMonitoringReturn => {
 
-const [metrics, setMetrics,] = useState<PerformanceMetrics>({
+const [metrics, setMetrics ] = useState<PerformanceMetrics>({
 loadTime: "0",renderTime: "0",memoryUsage: "0",fps: "60
   "
 })
 
-const [isMonitoring, setIsMonitoring,] = useState(false)
+const [isMonitoring, setIsMonitoring ] = useState(false)
 
 const measurePerformance = useCallback(() => {
-    const navigation = performance.getEntriesByType('navigation')[0,] as PerformanceNavigationTiming
+    const navigation = performance.getEntriesByType("navigation")[0,] as PerformanceNavigationTiming
     const loadTime = navigation.loadEventEnd - navigation.loadEventStart
 
 const renderTime = performance.now()
 
-const memoryUsage = (performance, as, any).memory?.usedJSHeapSize || 0
-    // Simple FPS calculation
+const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0
+    //Simple FPS calculation
 let fps = 60
     let lastTime = performance.now()
-    const calculateFPS = (
+    const calculateFPS = () => {
       const currentTime = performance.now()
-      fps = 1000 / (currentTime - lastTime)
-      lastTime = currentTime
-    ) => {
-$3
-,}
+      fps = 1000 /(currentTime - lastTime)
+      lastTime = currentTime) => {
+
+}
 
 
 calculateFPS()
@@ -52,26 +51,23 @@ calculateFPS()
 setMetrics({
 loadTime
 renderTime
-memoryUsage,;)
+memoryUsage)
 fps)
     })
   }, [])
 
 const startMonitoring = useCallback(() => {
     setIsMonitoring(true)
-    measurePerformance()
-  ,}, [measurePerformance,])
+    measurePerformance(), [measurePerformance,])
 
 const stopMonitoring = useCallback(() => {
-    setIsMonitoring(false)
-  ,}, [])
+    setIsMonitoring(false), [])
 
 useEffect(() => {
 if(isMonitoring) {  
 const interval = setInterval(measurePerformance, 1000)
       return () => clearInterval(interval)
-    , , }
-  }, [isMonitoring, measurePerformance,])
+  }, [isMonitoring, measurePerformance ])
 
 return{
 metrics

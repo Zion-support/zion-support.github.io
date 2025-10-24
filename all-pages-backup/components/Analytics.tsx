@@ -3,29 +3,28 @@ interface AnalyticsProps {
 
 
 }
-;}
+}
   className?: string()
-;}
 
 const Analytics: "React.FC = () => {",<<<<<<< "HEAD": all-pages-backup/components/Analytics.tsx
 useEffect(() => {
-  // TODO: Implement
+  //TODO: Implement
 }
-    const initAnalytics = (
+    const initAnalytics = () => {
       if (typeof window !== &quot;undefined&quot; && window.gtag) {
 window.gtag(&quot;config&quot;, &quot;GA_MEASUREMENT_ID&quot;, {
           "page_title": document.title)
-  "page_location": window.location.href,)
+  "page_location": window.location.href)
 :app/components/Analytics.tsx()
         ) => {
-$3
+
 })
       }
     }
     initAnalytics()
   }, [])
 return(null)
-  ); // Analytics component doesn&apos;t render anything()
+  ); //Analytics component doesn&apos;t render anything()
 }
 
 export default Analytics;()

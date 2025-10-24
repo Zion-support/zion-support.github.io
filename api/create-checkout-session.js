@@ -1,9 +1,9 @@
 
-  return async (req, res) => {
+  return async(req, res) => {
 try { 
-await handler(req, res), }
+await handler(req, res)
     } catch (error) {
 
   }
   try{
-;}
+}

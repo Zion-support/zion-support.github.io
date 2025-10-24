@@ -9,6 +9,6 @@ gtag: "(...arg",s: "any[]) => void;"
 
 }
 
-export {;}
+export {}
 
 }

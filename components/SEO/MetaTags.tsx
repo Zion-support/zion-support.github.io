@@ -1,18 +1,18 @@
-import React from 'react';
-"use client"
+import React from "react"; "use client"
 interface MetaTagsProps {
 className?: string
-;}
-;}
-;}
+}
+}
+}
 
-const MetaTags: "React.FC<MetaTagsProps> = ({ className = '' ",;}) => {
-return (
-    </MetaTagsProps>
-    <divclassName = {className,;} />
+const MetaTags: "React.FC<MetaTagsProps> = ({ className="" "}) => {
+return (</MetaTagsProps>
+    <divclassName={className} />
       <h2>MetaTags</h2>
       <p>This component is under construction.</p>
-    </div>)
+    </div>
+    </>
+  )
   )
 }
 

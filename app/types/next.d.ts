@@ -1,4 +1,4 @@
-// Type definitions for Next.js compatibility
+//Type definitions for Next.js compatibility
 
 export interface Metadata {
 
@@ -8,7 +8,7 @@ keywords?: string[]
 }
 }
 
-authors?: Array<{ name: "string; url?: string ",}> | string[]
+authors?: Array<{ name: "string; url?: string "}> | string[]
 creator?: string
   publisher?: string
   formatDetection?: {
@@ -33,11 +33,11 @@ height?: number",alt?: string
 }>
 locale?: string
     type?: string
-    authors?: Array<{ name: "string; url?: string ",}> | string[]
+    authors?: Array<{ name: "string; url?: string "}> | string[]
 publishedTime?: string
   }
   twitter?: {
-card?: 'summary' | 'summary_large_image' | 'app' | 'player'
+card?: "summary" | "summary_large_image" | "app" | "player"
 site?: string
     creator?: string
     title?: string
@@ -50,9 +50,9 @@ index?: boolean
     googleBot?: {
 index?: boolean
       follow?: boolean
-      'max-video-preview'?: number
-      'max-image-preview'?: 'none' | 'standard' | 'large'
-      'max-snippet'?: number
+      "max-video-preview"?: number
+      "max-image-preview"?: "none" | "standard" | "large"
+      "max-snippet"?: number
 }
   }
   verification?: {
@@ -65,48 +65,48 @@ other?: Record<string, string />
 export interface MetadataRoute {
 
 url: "string
-lastModified?: string | Date
-changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
+lastModified?: string|Date
+changeFrequency?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never"
 priority?: number"
 }
 }
 }
 
 export interface MetadataRouteSitemap extends MetadataRoute{
-url: "string",lastModified?: string | Date
-changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
-priority?: number,}
+url: "string",lastModified?: string|Date
+changeFrequency?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never"
+priority?: number}
 }
-// Custom Next.js types
+//Custom Next.js types
 export interface NextPageProps {
 
 
-;}
-;}
-  params: "{ [ke",y: "string,]: string ",;}
-
-  searchParams: "{ [ke",y: "string,]: string | string[] | undefined ",}
 }
-// API route types
+}
+  params: "{ [ke",y: "string,]: string "}
+
+  searchParams: "{ [ke",y: "string,]: string|string[] | undefined "}
+}
+//API route types
 export interface ApiRouteHandler {
 
 
-;}
-;}</string>
-  (req: "Request): Promise<Response>",;}
+}
+}</string>
+  (req: "Request): Promise<Response>"}
 
-// Server components types
+//Server components types
 export interface ServerComponentProps {
 
 
-;}
-;}
-  params: "{ [ke",y: "string,]: string ",;}
+}
+}
+  params: "{ [ke",y: "string,]: string "}
 
-  searchParams: "{ [ke",y: "string,]: string | string[] | undefined ",}
+  searchParams: "{ [ke",y: "string,]: string|string[] | undefined "}
 
 }
-// Client components types
+//Client components types
 
 export interface ClientComponentProps {
 
@@ -116,7 +116,7 @@ className?: string
 }
 }
 
-// Route handlers
+//Route handlers
 export interface RouteHandler {
 </Response>
 GET?: (req: "Request) => Promise<Response />
@@ -126,30 +126,30 @@ DELETE?: (re",</Response>
 q: "Request) => Promise<Response>"
 }
 }</Response>
-PATCH?: (req: "Request) => Promise<Response>",}
+PATCH?: (req: "Request) => Promise<Response>"}
 
-// Dynamic route types
+//Dynamic route types
 export interface DynamicRoute {
 
 
-;}
-;}
-  params: "{ [ke",y: "string,]: string ",;}
+}
+}
+  params: "{ [ke",y: "string,]: string "}
 
 }
-// Static generation types
+//Static generation types
 export interface StaticProps {
 
 
-;}
-;}
-  props: "{ [ke",y: "string,]: any ",;}
+}
+}
+  props: "{ [ke",y: "string,]: any "}
 
   revalidate?: number
 notFound?: boolean
 
 }
-// ISR types
+//ISR types
 
 export interface ISRConfig {
 
@@ -159,24 +159,24 @@ tags?: string[]"
 }
 }
 
-// Edge runtime types
+//Edge runtime types
 export interface EdgeRuntime {
 
 
-;}
-;}
-  runtime: "'edge'",;}
+}
+}
+  runtime: ""edge""}
 
-// Node.js runtime types
+//Node.js runtime types
 export interface NodeRuntime {
 
 
-;}
-;}
-  runtime: "'nodejs'",;}
+}
+}
+  runtime: ""nodejs""}
 
-// Extend Next.js types
-declare module 'next' {
+//Extend Next.js types
+declare module "next" {
 interface NextApiRequest {
 
 user?: {
@@ -189,4 +189,4 @@ name?: string"
   }
 }
 export {}</Response>
-;}
+}

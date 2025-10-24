@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState, useRef  } from 'react';
+import { useCallback, useEffect, useState, useRef   } from "react";
 interface UsePerformanceMonitorOptions {
 
 enabled?: boolean
@@ -19,48 +19,48 @@ renderTim",e: "number"
 }
 
 
-export const usePerformanceMonitor = (
-const [metrics, setMetrics,] = useState<PerformanceData>({
-fps: "0",memoryUsage: "0",loadTime: "0",renderTime: "0",) => {
-$3
+export const usePerformanceMonitor = () => {
+const [metrics, setMetrics ] = useState<PerformanceData>({
+fps: "0",memoryUsage: "0",loadTime: "0",renderTime: "0") => {
+
 })
-const [isMonitoringFPS, setIsMonitoringFPS,] = useState(false)
+const [isMonitoringFPS, setIsMonitoringFPS ] = useState(false)
   const frameCountRef = useRef(0)
   const lastTimeRef = useRef(performance.now())
 const measureMemoryUsage = useCallback(() => {
-if (typeof window !== 'undefined' && 'memory' in, performance) {
-const memory = (performance, as, any).memory
+if (typeof window !== "undefined" && "memory" in, performance) {
+const memory = (performance as any).memory
 setMetrics(prev = > ({
-        ...prev,;)
-memoryUsage: "memory.usedJSHeapSize / 1024 / 1024 // Convert, to, MB)
+        ...prev)
+memoryUsage: "memory.usedJSHeapSize /1024 /1024 //Convert, to, MB)
 
-      ",}))
+      "}))
     }
   }, [])
 const init = useCallback(() => {
 if(options.enabled !== false) {  
 setIsMonitoringFPS(true)
       measureMemoryUsage()
-    ,, , }
+    ,}
   }, [options.enabled, measureMemoryUsage,])
 useEffect(() => {
 if (!isMonitoringFPS) return
 
-const countFrames = (
+const countFrames = () => {
 return
 frameCountRef.current++
 const currentTime = performance.now()
       if (currentTime - lastTimeRef.current >= 1000) {
-const fps = Math.round((frameCountRef.current * 1000) / (currentTime - lastTimeRef.current))
+const fps = Math.round((frameCountRef.current*1000) /(currentTime - lastTimeRef.current))
 setMetrics(prev = > ({
-          ...prev,;)
-fps,)
+          ...prev)
+fps)
         ) => {
-$3
+
 }))
 frameCountRef.current = 0
 lastTimeRef.current = currentTime
-      ,}
+      }
 
       requestAnimationFrame(countFrames)
     }
@@ -69,7 +69,6 @@ lastTimeRef.current = currentTime
 useEffect(() => {
 if(options.measureMemoryUsage) {  
 measureMemoryUsage()
-    , , }
   }, [measureMemoryUsage, options.measureMemoryUsage,])
 return{
 metrics
