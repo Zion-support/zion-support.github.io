@@ -1,12 +1,12 @@
 import { TextEncoder, TextDecoder } from 'util';
 import '@testing-library/jest-dom';
 
-// Mock environment variables
-process.env['VITE_REOWN_PROJECT_ID'] = 'test_project_id_from_jest_setup';
-process.env['NEXT_PUBLIC_SUPABASE_URL'] = 'http://localhost:54321';
-process.env['NEXT_PUBLIC_SUPABASE_ANON_KEY'] = 'test_anon_key';
+// Polyfill for TextEncoder/TextDecoder
+import { TextEncoder, TextDecoder } from 'util';
+(global as any).TextEncoder = TextEncoder;
+(global as any).TextDecoder = TextDecoder;
 
-// Mock matchMedia
+// Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation(query => ({

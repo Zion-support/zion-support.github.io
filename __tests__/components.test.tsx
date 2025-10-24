@@ -1,25 +1,11 @@
-import { render, screen } from "@testing-library/react";
-import '@testing-library/jest-dom';
-
-const TestComponent = () => {
-  return <div>Test content</div>;
-};
-
-describe("Advanced Components", () => {
-  it("should render without errors", () => {
-    expect(true).toBe(true);
-  });
-  
-  it("should render test content", () => {
-    render(<TestComponent />);
-    expect(screen.getByText("Test content")).toBeInTheDocument();
-  });
-  
-  it("should handle console errors", () => {
-    const consoleSpy = jest
-      .spyOn(console, "error")
-      .mockImplementation(() => {});
-    // Test implementation
-    consoleSpy.mockRestore();
-  });
-});
+import { describe, test, expect } from '@jest/globals'
+import { render, screen } from '@testing-library/react'
+import { HelmetProvider } from 'react-helmet-async'
+import Loading from '../app/components/Loading'
+import SEOHead from '../app/components/SEOHead'
+    render(<Loading />)
+    expect(screen.getByText('Loading...')).toBeInTheDocument()
+  })
+    render()
+    )
+    expect(document.head).toBeInTheDocument()})})
