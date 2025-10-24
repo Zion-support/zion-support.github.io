@@ -1,17 +1,17 @@
-'use client''
-import { Brain, BarChart, Target } from 'lucide-react''
-import React from 'react''
-import { CheckCircle, Star, Phone, BarChart } from 'lucide-react''
-    { "name": 'Slack', "icon": '💬', "description": 'Team communication'',
-    {"name": 'Alex Thompson'',
-      "company": 'GrowthCo'',
-      "role": 'CEO'',
-      "t": 'Smart Analytics helped us identify a 3 0% revenue opportunity we never knew existed. The AI insights are game-changing.''
-    {"name": 'Maria Garcia'',
-      "company": 'Digital Marketing Pro'',
-      "role": 'Marketing Director'',
-      "t": 'We can now track ROI across all channels in real-time. Our marketing efficiency improved by 5 0% in just2months.''
-    {"name": 'James Wilson'',
-      "company": 'E-commerce Solutions'',
-      "role": 'Operations Manager'';,
-      "t": 'The automated alerts saved us from a potential crisis. We caught a 40% drop in conversions within minutes.''
+'use client'
+import { Brain, BarChart, Target } from 'lucide-react'
+import React from 'react'
+import { CheckCircle, Star, Phone, BarChart } from 'lucide-react'
+    { "name": 'Slack', "icon": '💬', "description": 'Team communication',
+    {"name": 'Alex Thompson',
+      "company": 'GrowthCo',
+      "role": 'CEO',
+      "t": 'Smart Analytics helped us identify a 3 0% revenue opportunity we never knew existed. The AI insights are game-changing.'
+    {"name": 'Maria Garcia',
+      "company": 'Digital Marketing Pro',
+      "role": 'Marketing Director',
+      "t": 'We can now track ROI across all channels in real-time. Our marketing efficiency improved by 5 0% in just2months.'
+    {"name": 'James Wilson',
+      "company": 'E-commerce Solutions',
+      "role": 'Operations Manager';,
+      "t": 'The automated alerts saved us from a potential crisis. We caught a 40% drop in conversions within minutes.'

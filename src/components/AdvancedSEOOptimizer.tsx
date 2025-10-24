@@ -1,55 +1,55 @@
-import Navigation from './Navigation''
-import React, { useEffect, useCallback, useRef } from 'react''
-import { Helmet } from 'lucide-react''
-'use client''
-      '@context': '"https": //schema.org'',
-      '@type': 'Organization''
-      "name": 'Zion Tech Group'',
-      "url": 'https:// ziontechgroup.com'',
-      "logo": 'https:// ziontechgroup.com/logo.png'',
-      "description": 'Advanced AI and IT Solutions'',
-        '@type': 'PostalAddress''
-        "addressCountry": 'US'',
-        '"https": // www.linkedin.com/$1/zion-tech-group'',
+import Navigation from './Navigation'
+import React, { useEffect, useCallback, useRef } from 'react'
+import { Helmet } from 'lucide-react'
+'use client'
+      '@context': '"https": //schema.org',
+      '@type': 'Organization'
+      "name": 'Zion Tech Group',
+      "url": 'https:// ziontechgroup.com',
+      "logo": 'https:// ziontechgroup.com/logo.png',
+      "description": 'Advanced AI and IT Solutions',
+        '@type': 'PostalAddress'
+        "addressCountry": 'US',
+        '"https": // www.linkedin.com/$1/zion-tech-group',
         ''
-      "s": // twitter.com/ziontechgroup'',
+      "s": // twitter.com/ziontechgroup',
         ''
-      "s": // github.com/Zion-Holdings'',
-      '@context': '"https": //schema.org'',
-      '@type': 'BreadcrumbList''
-          '@type': 'ListItem''
-          "name": 'Home'',
-          "item": 'https:// ziontechgroup.com'',
-        {'@type': 'ListItem''
-      '@context': '"https": //schema.org'',
-      '@type': 'FAQPage''
-          '@type': 'Question''
-          "name": 'What services do es Zion Tech Group offer?'',
-            '@type': 'Answer''
-            "text": 'Zion Tech Group offers advanced AI and IT solutions including custom software development, AI integration, cloud solutions, and digital transformation services.''
-        {'@type': 'Question''
-          "name": 'How can I contact Zion Tech Group?'',
-            '@type': 'Answer''
-            "text": 'You can contact us through our website contact form, email, or phone. Visit our contact page for more information.'';
-    const metaDescription = document.querySelector('meta[name=&quot;description&quot;]''
-      metaDescription.setAttribute('content''
-  const newMetaDescription = document.createElement('meta''
-      newMetaDescription.setAttribute('name', 'description''
-      newMetaDescription.setAttribute('content''
-    const canonicalLink = document.querySelector('link[rel=&quot;canonical&quot;]''
-      canonicalLink.setAttribute('href''
-  const newCanonicalLink = document.createElement('link''
-      newCanonicalLink.setAttribute('rel', 'canonical''
-      newCanonicalLink.setAttribute('href''
-    const script = document.createElement('script''
-    script.type = 'application/ld+json''
-    script.id = 'structured-data''
-    if (typeof window !== 'undefined''
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID''
-    if (typeof window !== 'undefined''
-      window.addEventListener('load''}
-  const _perfData = performance.getEntriesByType('navigation''
-          (window as any).gtag('event', 'page_load_performance''
-            "event_category": 'Performance'',
-      "label": 'Page Load'',
-    <titl e>{seoData.title}</titl><metaname=&quot;description&quot; content={seoData.description} /><metaname=&quot;keywords&quot; content={seoData.keywords.join(',''
+      "s": // github.com/Zion-Holdings',
+      '@context': '"https": //schema.org',
+      '@type': 'BreadcrumbList'
+          '@type': 'ListItem'
+          "name": 'Home',
+          "item": 'https:// ziontechgroup.com',
+        {'@type': 'ListItem'
+      '@context': '"https": //schema.org',
+      '@type': 'FAQPage'
+          '@type': 'Question'
+          "name": 'What services do es Zion Tech Group offer?',
+            '@type': 'Answer'
+            "text": 'Zion Tech Group offers advanced AI and IT solutions including custom software development, AI integration, cloud solutions, and digital transformation services.'
+        {'@type': 'Question'
+          "name": 'How can I contact Zion Tech Group?',
+            '@type': 'Answer'
+            "text": 'You can contact us through our website contact form, email, or phone. Visit our contact page for more information.';
+    const metaDescription = document.querySelector('meta[name=&quot;description&quot;]'
+      metaDescription.setAttribute('content'
+  const newMetaDescription = document.createElement('meta'
+      newMetaDescription.setAttribute('name', 'description'
+      newMetaDescription.setAttribute('content'
+    const canonicalLink = document.querySelector('link[rel=&quot;canonical&quot;]'
+      canonicalLink.setAttribute('href'
+  const newCanonicalLink = document.createElement('link'
+      newCanonicalLink.setAttribute('rel', 'canonical'
+      newCanonicalLink.setAttribute('href'
+    const script = document.createElement('script'
+    script.type = 'application/ld+json'
+    script.id = 'structured-data'
+    if (typeof window !== 'undefined'
+      (window as any).gtag('config', 'GA_MEASUREMENT_ID'
+    if (typeof window !== 'undefined'
+      window.addEventListener('load'}
+  const _perfData = performance.getEntriesByType('navigation'
+          (window as any).gtag('event', 'page_load_performance'
+            "event_category": 'Performance',
+      "label": 'Page Load',
+    <titl e>{seoData.title}</titl><metaname=&quot;description&quot; content={seoData.description} /><metaname=&quot;keywords&quot; content={seoData.keywords.join(','

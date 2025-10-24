@@ -134,7 +134,7 @@ export const mockWindow = (overrides: Partial<Window> = {}): Window => {
       href: 'http://localhost:3000',
       origin: 'http://localhost:3000',
       pathname: '/',
-      search: '',
+      search: ',
       hash: '',
       assign: jest.fn(),
       replace: jest.fn(),

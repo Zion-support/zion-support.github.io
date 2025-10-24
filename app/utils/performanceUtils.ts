@@ -14,7 +14,7 @@ class PerformanceMonitor {
   // Measure page load time
   measurePageLoad(): number | null {
     if (!this.isEnabled) return null
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (!navigation) return null
     const loadTime = navigation.loadEventEnd - navigation.loadEventStart
     this.recordMetric('page_load', loadTime)

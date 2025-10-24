@@ -1,44 +1,44 @@
-'use client''
-import { ArrowRight, Brain, BarChart, Target } from 'lucide-react''
-import React from 'react''
-import Navigation from '../components/Navigation''
-import Footer from '../components/Footer''
-import { CheckCircle, ArrowRight } from 'lucide-react''
-      "title": 'Machine Learning Solutions'',
-      "n": 'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.''
-      "features": ['Predictive Analytics', 'Pattern Recognition', 'Custom Model Training', 'Real-time Processing''
-      "price": 'Starting at $2,50 0/month''
-      "color": 'text-purple-40 0'',
-      "title": 'AI Marketing Automation'',
-      "n": 'Intelligent marketing campaigns with AI-powered targeting, content generation, and optimization.''
-      "features": ['Smart Targeting', 'Content Generation', 'Campaign Optimization', 'ROI Tracking''
-      "price": 'Starting at $1,20 0/month''
-      "color": 'text-pink-40 0'',
-      "title": 'Process Automation'',
-      "n": 'Automate complex business processes with AI decision-making and exception handling.''
-      "s": ['Workflow Automation', 'Exception Handling', 'Smart Routing', 'Performance Monitoring''
-      "price": 'Starting at $80 0/month'',
-      "r": 'text-blue-40 0''
-      "title": 'AI Cybersecurity'',
-      "n": 'Advanced threat detection and response using AI-powered security monitoring.''
-      "s": ['Threat Detection', 'Automated Response', 'Behavioral Analysis', 'Compliance Reporting''
-      "price": 'Starting at $1,50 0/month''
-      "color": 'text-red-40 0'',
-      "title": 'Data Analytics & Insights'',
-      "n": 'Transform raw data into actionable insights with AI-powered analytics and visualization.''
-      "s": ['Data Processing', 'Predictive Insights', 'Visualization', 'Automated Reports''
-      "price": 'Starting at $90 0/month'',
-      "r": 'text-teal-40 0''
-      "title": 'Customer Experience AI'',
-      "n": 'Enhance customer interactions with AI chatbots, sentiment analysis, and personalized experiences.''
-      "features": ['AI Chatbots', 'Sentiment Analysis', 'Personalization', '24/7 Support''
-      "price": 'Starting at $600/month'',
-      "r": 'text-green-400''
-      "title": 'Proven ROI'',
-      "n": 'Average300% ROI within6months of implementation''
-      "title": 'Rapid Deployment'',
-      "n": 'Get your AI solutions up and running in 2-4 weeks''
-      "title": 'Enterprise Security'',
-      "n": 'Bank-level security and compliance for all AI solutions''
-      "title": 'Global Support'';,
-      "n": '24/7 support across all time zones with dedicated success managers''
+'use client'
+import { ArrowRight, Brain, BarChart, Target } from 'lucide-react'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight } from 'lucide-react'
+      "title": 'Machine Learning Solutions',
+      "n": 'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.'
+      "features": ['Predictive Analytics', 'Pattern Recognition', 'Custom Model Training', 'Real-time Processing'
+      "price": 'Starting at $2,50 0/month'
+      "color": 'text-purple-40 0',
+      "title": 'AI Marketing Automation',
+      "n": 'Intelligent marketing campaigns with AI-powered targeting, content generation, and optimization.'
+      "features": ['Smart Targeting', 'Content Generation', 'Campaign Optimization', 'ROI Tracking'
+      "price": 'Starting at $1,20 0/month'
+      "color": 'text-pink-40 0',
+      "title": 'Process Automation',
+      "n": 'Automate complex business processes with AI decision-making and exception handling.'
+      "s": ['Workflow Automation', 'Exception Handling', 'Smart Routing', 'Performance Monitoring'
+      "price": 'Starting at $80 0/month',
+      "r": 'text-blue-40 0'
+      "title": 'AI Cybersecurity',
+      "n": 'Advanced threat detection and response using AI-powered security monitoring.'
+      "s": ['Threat Detection', 'Automated Response', 'Behavioral Analysis', 'Compliance Reporting'
+      "price": 'Starting at $1,50 0/month'
+      "color": 'text-red-40 0',
+      "title": 'Data Analytics & Insights',
+      "n": 'Transform raw data into actionable insights with AI-powered analytics and visualization.'
+      "s": ['Data Processing', 'Predictive Insights', 'Visualization', 'Automated Reports'
+      "price": 'Starting at $90 0/month',
+      "r": 'text-teal-40 0'
+      "title": 'Customer Experience AI',
+      "n": 'Enhance customer interactions with AI chatbots, sentiment analysis, and personalized experiences.'
+      "features": ['AI Chatbots', 'Sentiment Analysis', 'Personalization', '24/7 Support'
+      "price": 'Starting at $600/month',
+      "r": 'text-green-400'
+      "title": 'Proven ROI',
+      "n": 'Average300% ROI within6months of implementation'
+      "title": 'Rapid Deployment',
+      "n": 'Get your AI solutions up and running in 2-4 weeks'
+      "title": 'Enterprise Security',
+      "n": 'Bank-level security and compliance for all AI solutions'
+      "title": 'Global Support';,
+      "n": '24/7 support across all time zones with dedicated success managers'
