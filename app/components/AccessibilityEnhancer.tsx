@@ -1,14 +1,48 @@
 'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useEffect } from 'react';
 
-const AccessibilityEnhancerPage: React.FC = () => {
-  return (
-    <React.Fragment>
-      <Helmet>
-        <title>AccessibilityEnhancer - Zion Tech Group</title>
-        <meta name="description" content="Professional AccessibilityEnhancer services by Zion Tech Group" />
-      </Helmet>
+interface AccessibilityEnhancerProps {
+  enableKeyboardNavigation?: boolean;
+  enableScreenReaderSupport?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
+}
+
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+  enableKeyboardNavigation = true,
+  enableScreenReaderSupport = true,
+  enableHighContrast = true,
+  enableFocusManagement = true
+}) => {
+  useEffect(() => {
+    // Keyboard navigation enhancements
+    if (enableKeyboardNavigation && typeof window !== 'undefined') {
+      const handleKeyDown = (event: KeyboardEvent) => {
+        // Skip to main content
+        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
+          const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
+          if (skipLink) {
+            skipLink.focus();
+            event.preventDefault();
+          }
+        }
+
+        // Close dropdowns with Escape key
+        if (event.key === 'Escape') {
+          const openDropdowns = document.querySelectorAll('[aria-expanded="true"]');
+          openDropdowns.forEach(dropdown => {
+            (dropdown as HTMLElement).setAttribute('aria-expanded', 'false');
+          });
+        }
+      };
+
+      document.addEventListener('keydown', handleKeyDown);
+      return () => document.removeEventListener('keydown', handleKeyDown);
+    }
+
+    // Focus management
+    if (enableFocusManagement && typeof window !== 'undefined') {
+      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
       
       <div className="min-h-screen bg-gray-900 text-white">
         <div className="container mx-auto px-4 py-8">
