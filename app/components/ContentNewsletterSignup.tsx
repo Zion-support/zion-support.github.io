@@ -1,101 +1,103 @@
 'use client'
-import { ArrowRight } from 'lucide-react';
 import Footer from './Footer'
-import Navigation from './Navigation';
-import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+import Navigation from './Navigation'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight } from 'lucide-react'
+import React, { useState } from 'react'
+import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react'
+import { CheckCircle, ArrowRight } from 'lucide-react'
 
-interface ContentNewsletterSignupProps {
-  title?: string
-  subtitle?: string
-  placeholder?: string
-  buttonText?: string
+interface ContentNewsletterSignupProps {title?: string;
+  subtitle?: string;
+  placeholder?: string;
+  buttonText?: string;
   features?: Array<{
+<<<<<<< HEAD
     icon: React.ComponentType<{ className?: string }>
     text: string
-  }>;
-  onSubscribe?: (email: string) => void;
-}constContentNewsletterSignup:React.FC<ContentNewsletterSignupProp s>= ({title= &quot;Stay Updated with Our LatestInsights&quot;,
-  subtitle= &quot;Get exclusive content, industry insights, and early access to new features delivered to yourinbox.&quot;,
-  placeholder= &quot;Enter your emailaddress&quot;,
-  buttonText= &quot;Subscribe&quot;,
-  features= [
-    { icon: Star, text:&quot;Exclusive content&quot;},
-    {icon: Users, text:&quot;Industry insights&quot;},
-    {icon: Globe, text:&quot;Global updates&quot;},
-    {icon: Zap, text:&quot;Early access&quot;}
+  }>
+  onSubscribe?: (email: string) => void
+}
+
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
+  title = "Stay Updated with Our Latest Insights",
+  subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
+  placeholder = "Enter your email address",
+  buttonText = "Subscribe",
+  features = [
+    { icon: Star, text: "Exclusive content" },
+    { icon: Users, text: "Industry insights" },
+    { icon: Globe, text: "Global updates" },
+    { icon: Zap, text: "Early access" }
   ],
   onSubscribe
-}) => {const [emailsetEmail] = useState('');
+}) => {
+  const [email, setEmail] = useState('')
+  const [isSubmittingsetIsSubmitting] = useState(false)
+  const [isSubscribedsetIsSubscribed] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
   
-  const [isSubmittingsetIsSubmitting] = useState(false);
-  
-  const [isSubscribedsetIsSubscribed] = useState(false);
-  
-  const [isLoadingsetIsLoading] = useState(false);"
-  consthandleSubmit="async" (e: React.FormEvent) => {
-  );
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-  );
-    if (!email) return setIsLoadin g(true)
-  );
+    if (!email) return
+    setIsLoading(true)
     try {
       // Simulate API call
-  );
-      await new Promise(resolve=> setTimeout(resolve100 0));}
-      if (onSubscrib e) {}
+      await new Promise(resolve => setTimeout(resolve, 1000))
+      if (onSubscribe) {
         onSubscribe(email)
      }
       setIsSubscribed(true)
-  );
       setEmail('')
-    } catch (error) {// // console.error('Subscription error: ', error)
-    } finally {}
+    } catch (error) {
+      // // console.error('Subscription error:', error)
+    } finally {
       setIsSubmitting(false)
-      setIsLoading(false)
     }
-  ];
-"
-  const benefits=";"
+  }
+
+  const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ]</ContentNewsletterSignupProp>
-</ContentNewsletterSignupProp>;"
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({className="''" }) => {}</ContentNewsletterSignupProps>
-  return (</ContentNewsletterSignupProps>
+  ]
+
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ className = '' }) => {
+  return (
     <>
-      
+      <Helmet>
+        <title>ContentNewsletterSignup</title>
+        <meta name="description" content="Advanced ContentNewsletterSignup solution for modern businesses." />
+        <meta name="keywords" content="AI, artificial intelligence, ContentNewsletterSignup, AI solutions, intelligent automation" />
+      </Helmet>
       <Navigation />
-      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
-        <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
-          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
-          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               ContentNewsletterSignup
             </h1>
-            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced ContentNewsletterSignup solution for modern businesses.
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
                 Get Started
-                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
+                <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Learn More
               </button>
-        </div>
-    )
-  );
+            </div>
+          </div>
+    );
             </div>
           </div>
         </section>
-    </>
 
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -131,27 +133,23 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({classN
                 <label htmlFor=&quot;email&quot; className=&quot;block text-sm font-medium text-white mb-2&quot;>
                   Email Address
                 <input
-                  type=&quot;email&quot
-  );
+                  type=&quot;email&quot;
                   value={email}
                   onChange={(e) =>setEmail(e.target.value)}
                   placeholder={placeholder}
-                 requiredclassName=&quot;w-full pl-10pr-4 py-4 bg-white/10border border-white/20rounded-lg text-white placeholder-gray-400 focus:outline-nonefocus:ring-2focus:ring-blue-500focus:border-transparent&quot
-  );
+                 requiredclassName=&quot;w-full pl-10pr-4 py-4 bg-white/10border border-white/20rounded-lg text-white placeholder-gray-400 focus:outline-nonefocus:ring-2focus:ring-blue-500focus:border-transparent&quot;
                 />
               </div>
               <button
-                type=&quot;submit&quot
-  );
+                type=&quot;submit&quot;
                 disabled={isLoading || !email}
                 className=&quot;w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center&quot;></button>
                 {isLoading ? (
                   <>
                     <div className=&quot;animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2&quot;></div>
                     Subscribing...
-    </>
                   </>
-                 : (
+                ) : (
                   <>
                     {buttonText}
                     <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
@@ -191,8 +189,19 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({classN
           </div>
         </section>
       </div>
-      <Footer /></Footer>
+      <Footer />
     </>
-  );,
-}
-export default ContentNewsletterSignupPag;e;"
+  );
+};
+=======
+    icon: React.ComponentType<{ className?: string } />text: string;
+  , }>
+  onSubscribe?: (email: string) =</ void;
+, }constContentNewsletterSignup:React.FC<ContentNewsletterSignupProp s>= ({title= "Stay Updated with Our LatestInsights",
+  subtitle= "Get exclusive content, industry insights, and early access to new features delivered to yourinbox.",
+  placeholder= "Enter your emailaddress",
+  buttonText= "Subscribe",
+  features= [
+>>>>>>> cursor/fix-errors-and-merge-to-main-737c
+
+export default ContentNewsletterSignupPage;

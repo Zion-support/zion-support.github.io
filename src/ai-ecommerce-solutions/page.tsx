@@ -1,26 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-'use client';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
+"use client";
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
-const AiEcommerceSolutionsPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">Ai Ecommerce Solutions</h1>
-        <p className="text-gray-300 mb-8">Coming Soon - Advanced ai ecommerce solutions solutions</p>
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-          Contact Us
-        </a>
+import { BarChart3 } from 'lucide-react'
+import { CheckCircle, Zap, Shield, Users, Helmet } from 'lucide-react'
+
+const AIEcommerceSolutionsPage: React.FC = () => {
+  const ecommerceServices = [
+        </div>
       </div>
     </div>
-  );
-};
-
-export default AiEcommerceSolutionsPage;
+  )
+}
+export default AIEcommerceSolutionsPage

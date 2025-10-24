@@ -1,82 +1,45 @@
-import React from 'react';
-import Footer from '../components/Footer';
-import Head from "next/head";
-import Link from "next/link";
-import Navigation from '../components/Navigation';
-import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
-const Page: React.FC = () => {
+const EnhancedErrorBoundaryPage: React.FC = () => {
   const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time monitoring', 'Custom dashboards', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target the right audience with AI-driven precision and accuracy.',
-      benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
-    }
-  ];
 
-  return (
-    <>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              EnhancedErrorBoundary
-            </h1>
-            <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
-              Advanced EnhancedErrorBoundary solutions powered by artificial intelligence and machine learning.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800 p-6 rounded-lg">
-                <feature.icon className="w-12 h-12 text-emerald-400 mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Transform your business with our cutting-edge AI solutions. Contact us today to learn more.
-            </p>
-            <a
-              href="/contact"
-              className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-3 rounded-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-300"
-            >
-              Get Started
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </a>
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </>
-  );
-};
-
-export default Page;
+export default EnhancedErrorBoundaryPage;
+  error?: Error;
+  errorInfo?: ErrorInfo}
+class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Props) {
+    super(props)
+    this.state= { hasError: false}
+  }
+  static getDerivedStateFromError(error: Error): State {return { hasError: true, error}
+  }
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {this.setState({errorerrorInfo})
+    // Log error to monitoring service;
+    // // console.error('Error caught by boundary:', error, errorInfo)
+  }
+  handleReload= () =</ {windo w.location.reload()
+ }
+  render() {if (this.state.hasError) {
+      if (this.props.fallback) {
+        return thi s.props.fallback;
+     }
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div />
+          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center"></div />
+            <div className="w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center mb-6 mx-auto"></div />
+              <AlertTriangle className="w-8 h-8 text-red-400" / />
+            </div />
+            <h1 className="text-2xl font-bold text-white mb-4">Oops! Something went wrong</h1 />
+            <p className="text-gray-300 mb-6">We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.</p>p</
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="mb-6 text-left" />
+                <summary className="text-sm text-gray-400 cursor-pointer mb-2" />
+                  Error Details (Development)
+                </summary />
+                <pre className="text-xs text-red-300 bg-black/20 p-3 rounded overflow-auto"></p />
+                  {this.state.error.toString()}

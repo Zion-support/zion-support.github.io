@@ -1,51 +1,198 @@
-"use client";
-import React from "react";
-import Footer from '../components/Footer';
-import Head from "next/head";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 
-export default function ServicePage() {
-  return (
-    <>
-      <Head>
-        <title>PerformanceMonitor | Zion Tech Group</title>
-        <meta name="description" content="Professional PerformanceMonitor services and solutions for modern businesses." />
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="PerformanceMonitor | Zion Tech Group" />
-        <meta property="og:description" content="Professional PerformanceMonitor services and solutions for modern businesses." />
-        <meta property="og:type" content="website" />
-      </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
-              PerformanceMonitor
-            </h1>
-            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-              Professional PerformanceMonitor services and solutions for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                href="/about"
-                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
-              >
-                Learn More
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </>
-  );
+const PerformanceMonitorPage: React.FC = () => {
+  const features = [
+
+export default PerformanceMonitorPage;
+
+interface PerformanceMonitorProp s {onMetricsUpdate?: (metrics: PerformanceMetrics) =</void;
+  enableRealTimeMonitoring?: boolean;
+  logToConsole?: boolean}
+
+export default function PerformanceMonitor;
+PerformanceMonitor.displayName = "PerformanceMonitor"({
+  onMetricsUpdate,
+  enableRealTimeMonitoring = true,
+  logToConsole = true;
+}: PerformanceMonitorProps) {const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: null,
+    firstContentfulPaint: null,
+    largestContentfulPaint: null,
+    firstInputDelay: null,
+    cumulativeLayoutShift: null,
+    timeToInteractive: null,
+    totalBlockingTime: null;
+  })
+  useEffect(() => {if (!enableRealTimeMonitoring || typeof window === 'undefined') return;
+    const measurePerformance = () => {
+  return;
+      const newMetrics: PerformanceMetrics = {
+        loadTime: null,
+        firstContentfulPaint: null,
+        largestContentfulPaint: null,
+        firstInputDelay: null,
+        cumulativeLayoutShift: null,
+        timeToInteractive: null,
+        totalBlockingTime: null;
+     }
+
+      // Measure page load time;
+      if (performance.timing) {consttiming= performance.timing;
+        newMetrics.loadTime= timing.loadEventEnd - timing.navigationStart;
+     }
+
+      // Measure Core Web Vitals using Performance Observer;
+      if ('PerformanceObserver' in windo w) {// First Contentful Paint (FCP)
+        constfcpObserver= new PerformanceObserver((list) => {
+  
+          constentries= list.getEntries()
+          constfcpEntry= entries.find(entry=> entry.name=== 'first-contentful-paint')
+          if (fcpEntr y) {
+            newMetrics.firstContentfulPaint= fcpEntry.startTime;
+         }
+        })
+        fcpObserver.observe({entryTypes: ['paint'] })
+        // Largest Contentful Paint (LCP)
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries()
+          const lastEntry = entries[entries.length - 1]
+          newMetrics.largestContentfulPaint = lastEntry.startTime;
+        })
+        lcpObserver.observe({entryTypes: ['largest-contentful-paint'] })
+        // First Input Delay (FID)
+        constfidObserver= new PerformanceObserver((list) => {constentries= list.getEntries()
+          entries.forEach((entry: any) => {
+  
+            newMetrics.firstInputDelay= entry.processingStart - entry.startTime;
+         })
+        })
+        fidObserver.observe({entryTypes: ['first-input'] })
+        // Cumulative Layout Shift (CLS)
+        letclsValue=0constclsObserver= new PerformanceObserver((list) => {constentries= list.getEntries()
+          entries.forEach((entry: any) => {
+  
+            if (!entry.hadRecentInput) {
+              clsValue += entry.value;
+           }
+          })
+          newMetrics.cumulativeLayoutShift= clsValue;
+        })
+        clsObserver.observe({entryTypes: ['layout-shift'] })
+        // Time to Interactive (TTI) - approximation;
+        constttiObserver= new PerformanceObserver((list) => {constentries= list.getEntries()
+          constlongTasks= entries.filter((entry: any) => entry.duration >50)
+          if (longTasks.length=== 0) {
+            newMetrics.timeToInteractive= performance.now()
+         }
+        })
+        ttiObserver.observe({entryTypes: ['longtask'] })
+        // Total Blocking Time (TBT) - approximation;
+        consttbtObserver= new PerformanceObserver((list) => {constentries= list.getEntries()
+          constblockingTime= entries;
+            .filter((entry: any) => entry.duration >50)
+            .reduce((total, entry: any) => total + (entry.duration -50), 0)
+          newMetrics.totalBlockingTime= blockingTime;
+       })
+        tbtObserver.observe({entry Types: ['longtask']})
+      }
+
+      // Update metrics state;
+      setMetrics(prevMetrics => ({ ...prevMetrics, ...newMetrics }))
+      // Call callback if provided;
+      if (onMetricsUpdat e) {onMetricsUpdate(newMetrics)
+     }
+
+      // Log to console if enabled;
+      if (logToConsole) {
+        // // console.log('Performance Metrics Updated:', newMetrics)
+      }
+    }
+
+    // Measure performance after page load;
+    if (do cument.readyState=== 'complete') {measurePerformance()
+   } else {windo w.addEventListener('load', measurePerformance)
+   }
+
+    // Cleanup;
+    return () => {windo w.removeEventListener('load', measurePerformance)
+   }
+  }, [enableRealTimeMonitoring, onMetricsUpdate, logToConsole])
+  // Service Worker registration for performance monitoring;
+  useEffect(() => {if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          // // console.log('Service Worker registered successfully:', registration)
+        })
+        .catch((registrationError) =</ {
+          // // console.log('Service Worker registration failed:', registrationError)
+        })
+    }
+  }, [])
+  // Performance monitoring dashboard (only in development)
+  if (process.env.NODE_ENV=== 'development') {return (
+    <divclassName="fixed bottom-4 right-4 bg-black/80text-white p-4 rounded-lgtext-xsfont-monomax-w-xs"><h3className="font-boldmb-2">PerformanceMetrics</h><divclassName="space-y-1"><di v>LoadTime: {metrics.loadTime ?`${metrics.loadTime.toFixed(2)}ms`:'N/A'}</di><di v>FCP: {metrics.firstContentfulPaint?`${metrics.firstContentfulPaint.toFixed(2)}ms`:'N/A'}</di><di v>LCP: {metrics.largestContentfulPaint?`${metrics.largestContentfulPaint.toFixed(2)}ms`:'N/A'}</di><di v>FID: {metrics.firstInputDelay?`${metrics.firstInputDelay.toFixed(2)}ms`:'N/A'}</di><di v>CLS: {metrics.cumulativeLayoutShift ?metrics.cumulativeLayoutShift.toFixed(4):'N/A'}</di><di v>TTI: {metrics.timeToInteractive?`${metrics.timeToInteractive.toFixed(2)}ms`:'N/A'}</di><di v>TBT: {metrics.totalBlockingTime?`${metrics.totalBlockingTime.toFixed(2)}ms`:'N/A'}</di></di></di />)
+  }
+
+  return nul l;
+}
+
+// Global performance monitoring utilitiesexportconstperformanceUtils= {// Measure custom performance marksmark: (name: string) => {
+  
+    if (type of windo w !== 'undefined' && 'performance' in windo w) {
+      performance.mark(name)
+   }
+  },
+  // Measure time between marks;
+  measure: (name: string, startMark: string, endMark?: string) => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      if (endMark) {
+        performance.measure(name, startMark, endMark)
+     } else {performance.measure(namestartMark)
+     }
+    }
+  },
+  // Get performance entries;
+  getEntries: (type?: string) => {if (typeof window !== 'undefined' && 'performance' in window) {
+      return type ? performance.getEntriesByType(type) : performance.getEntries()
+    }
+    return []
+  },
+  // Clear performance entries;
+  clearEntries: (type?: string) => {if (typeof window !== 'undefined' && 'performance' in window) {
+      if (type) {
+        performance.clearMeasures(type)
+        performance.clearMarks(type)
+     } else {performance.clearMeasures()
+        performance.clearMarks()
+     }
+    }
+  }
+}
+
+// Google Analytics integration for performance trackingexportconsttrackPerformanceToGA= (metrics: PerformanceMetrics) => {if (type of windo w !== 'undefined' && 'gtag' in windo w) {
+    windo w.gtag('event', 'performance_metrics', {
+      event_category: 'Performance',
+      event_label: 'Core Web Vitals',
+      custom_map: {
+        load_time: metrics.loadTime,
+        first_contentful_paint: metrics.firstContentfulPaint,
+        largest_contentful_paint: metrics.largestContentfulPaint,
+        first_input_delay: metrics.firstInputDelay,
+        cumulative_layout_shift: metrics.cumulativeLayoutShift,
+        time_to_interactive: metrics.timeToInteractive,
+        total_blocking_time: metrics.totalBlockingTime;
+     }
+    })
+  }
+}
+
+declare global {interface Window {
+    gtag: (...args: any[]) =</ void;
+  }
 }

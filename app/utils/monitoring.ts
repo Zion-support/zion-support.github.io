@@ -1,432 +1,267 @@
-<<<<<<< HEAD:src/utils/monitoring.ts
-// monitoring utility
-export const monitoring = () => {
-  // Utility implementation
-  return null
-  );
-}
-  );
-<<<<<<< HEAD:app/utils/monitoring.ts
-'use client'
-  );
-'use client'
-import { Download } from 'lucide-react'
-import Navigation from './Navigation'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f20
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
-/**;
- * Comprehensive Monitoring Utility;
-  
- * Real-time application monitoring, performance tracking, and error reporting
-  );
- */
-import React from 'react'
+'use client';
 
-const performanceConfig = {
-  monitoring: {
+/**
+ * Comprehensive Monitoring Utility;
+ * Real-time application monitoring, performance tracking, and error reporting;
+ */
+
+const performanceConfig = {monitoring: {
     enableLongTaskDetection: true,
     enableMemoryMonitoring: true,
-    sampleRate: 0.1
+    sampleRate: 0.1;
   },
-  webVitals: {
-    lcp: { good: 2500, needsImprovement: 4000 },
-    fid: { good: 100, needsImprovement: 300 },
-    cls: { good: 0.1, needsImprovement: 0.25 },
-    fcp: { good: 1800, needsImprovement: 3000 },
-    ttfb: { good: 800, needsImprovement: 1800 },
-    inp: { good: 200, needsImprovement: 500 }
+  webVitals: {lcp: { good: 2500, needsImprovement: 4000 },
+    fid: {good: 100, needsImprovement: 300 },
+    cls: {good: 0.1, needsImprovement: 0.25 },
+    fcp: {good: 1800, needsImprovement: 3000 },
+    ttfb: {good: 800, needsImprovement: 1800 },
+    inp: {good: 200, needsImprovement: 500 }
   }
-}
+};
+
 export interface PerformanceMetrics {
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fcp?: number;
+  ttfb?: number;
+  inp?: number;
+};
 
-lcp?: number
-fid?: number
-cls?: number
-fcp?: number
-ttfb?: number
-inp?: number
+  export interface ErrorReport {message: string;
+  stack?: string;
+  url: string;
+  line?: number;
+  column?: number;
+  timestamp: number;
+  userAgent: string;
+  userId?: string;
 }
 
-export interface ErrorReport {;
-  message: string;
-  
-  stack?: string
-  );
-  component?: string
-  );
-  timestamp: number
-  );
-  userAgent: string
-  );
-  url: string
-  );
-    }
+export interface MonitoringConfig {enablePerformanceMonitoring: boolean;
+  enableErrorReporting: boolean;
+  enableUserTracking: boolean;
+  sampleRate: number;
+  endpoint: string;
+}
 
-class MonitoringService {
-  private metrics: PerformanceMetrics = {
-    
-    }
-  );
-  private errors: ErrorReport[] = [];
-  private observer: PerformanceObserver | null = null
-  );
-  constructor() {
-    if (typeof window !== 'undefined') {
-      this.initializeMonitoring()
-  );
-    }
+class PerformanceMonitor {private config: MonitoringConfig;
+  private metrics: PerformanceMetrics = {};
+  private observers: PerformanceObserver[] = [];
+
+  constructor(config: MonitoringConfig) {this.config = config;
+    this.initializeMonitoring();
   }
 
   private initializeMonitoring(): void {
-  // Monitor Web Vitals
-    this.monitorWebVitals()
-  );
-    // Monitor Long Tasks
-    this.monitorLongTasks()
-  );
-    // Monitor Resource Loading
-    this.monitorResourceTiming()
-  );
-    // Global Error Handler
-    this.setupErrorHandling()
-  );
-}
+    if (typeof window === 'undefined') return;
 
-  private monitorWebVitals(): void {
-  if('PerformanceObserver' in window) {
-      try {
-        // Largest Contentful Paint
-        const lcpObserver = new PerformanceObserver((li, s, t) => {
-  const entries = list.getEntries()
-  );
-          const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number
-}
-  );
-          this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0
-  );
-          this.reportMetric('lcp', this.metrics.lcp)
-  );
-        })
-  );
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
-  );
-        // First Input Delay
-        const fidObserver = new PerformanceObserver((li, s, t) => {
-  const entries = list.getEntries()
-  );
-          entries.forEach((entry: PerformanceEntry) => {
-            this.metrics.fid = (entry, as, any).processingStart - entry.startTime
-  );
-            this.reportMetric('fid', this.metrics.fid)
-  );
-})
-  );
-        })
-  );
-        fidObserver.observe({ entryTypes: ['first-input'] })
-  );
-        // Cumulative Layout Shift
-        let clsValue = 0
-  );
-        const clsObserver = new PerformanceObserver(list => {
-          const entries = list.getEntries()
-  );
-          entries.forEach((entry: PerformanceEntry) => {
-  if (!(entry, as, any).hadRecentInput) {
-              clsValue += entry.value
-  );
-              this.metrics.cls = clsValue
-  );
-              this.reportMetric('cls', clsValue)
-  );
-    })
-  );
-        })
-  );
-        clsObserver.observe({ entryTypes: ['layout-shift'] })
-  );
-        // First Contentful Paint
-        const fcpObserver = new PerformanceObserver(list => {
-          const entries = list.getEntries()
-  );
-          entries.forEach(entry => {
-            this.metrics.fcp = entry.startTime
-  );
-            this.reportMetric('fcp', entry.startTime)
-  );
-          })
-  );
-        })
-  );
-        fcpObserver.observe({ entryTypes: ['paint'] })
-  );
-      } catch (error) {
-<<<<<<< HEAD:app/utils/monitoring.ts
+    if (this.config.enablePerformanceMonitoring) {
+      this.observeWebVitals();
+      this.observeLongTasks();
+      this.observeMemoryUsage();
+    }
+
+    if (this.config.enableErrorReporting) {
+      this.setupErrorHandling();
+    }
+  }
+
+  private observeWebVitals(): void {
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
+
+    // LCP - Largest Contentful Paint;
+    const lcpObserver = new PerformanceObserver((list) =>{
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1] as PerformanceEntry;
+      this.metrics.lcp = lastEntry.startTime;
+      this.reportMetric('lcp', lastEntry.startTime);
+    });
+    lcpObserver.observe({entryTypes: ['largest-contentful-paint'] });
+    this.observers.push(lcpObserver);
+
+    // FID - First Input Delay;
+    const fidObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry: any) => {
+        this.metrics.fid = entry.processingStart - entry.startTime;
+        this.reportMetric('fid', this.metrics.fid);
+      });
+    });
+    fidObserver.observe({entryTypes: ['first-input'] });
+    this.observers.push(fidObserver);
+
+    // CLS - Cumulative Layout Shift;
+    let clsValue = 0;
+    const clsObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry: any) => {
+        if (!entry.hadRecentInput) {
+          clsValue += entry.value;
+          this.metrics.cls = clsValue;
+          this.reportMetric('cls', clsValue);
         }
-        // // // console.error('Error setting up performance observers:', error)
-      }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
-    }
-  }
+      });
+    });
+    clsObserver.observe({entryTypes: ['layout-shift'] });
+    this.observers.push(clsObserver);
 
-  private monitorLongTasks(): void {
-  if('PerformanceObserver' in window) {
-      try {
-        const longTaskObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-<<<<<<< HEAD:app/utils/monitoring.ts
-            }
-            // // // console.warn('Long task detected:', {
-            //   duration: entry.duration,
-            //   startTime: entry.startTime
-            // })
-          }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
-        })
-clsObserver.observe({ entryTypes: "["layout-shift"] "})
-        //First Contentful Paint
-const fcpObserver = new PerformanceObserver(list => {
-)
-const entries = list.getEntries()
-entries.forEach(entry => {)
-this.metrics.fcp = entry.startTime)
-this.reportMetric("fcp", entry.startTime)
-          
-})
-        })
-fcpObserver.observe({ entryTypes: "["paint"] "})
-      } catch(error) {   
-        , }
-    }
-  }
-
-  private monitorResourceTiming(): void {
-  if('PerformanceObserver' in window) {
-      try {
-        const resourceObserver = new PerformanceObserver((li, s, t) => {
-  const entries = list.getEntries()
-  );
-          entries.forEach((entry: PerformanceEntry) => {
-            const resourceEntry = entry as PerformanceResourceTiming
-  );
-            if (resourceEntry.duration > 1000) {
-              // Slow resource detected
-    })
-  );
-        })
-  );
-        resourceObserver.observe({ entryTypes: ['resource'] })
-  );
-      } catch (_error) {
+    // FCP - First Contentful Paint;
+    const fcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.name === 'first-contentful-paint') {
+          this.metrics.fcp = entry.startTime;
+          this.reportMetric('fcp', entry.startTime);
         }
-          const entries = list.getEntries()
-          entries.forEach((entry: PerformanceEntry) => {
-            const resourceEntry = entry as PerformanceResourceTiming
-            if (resourceEntry.duration > 1000) {
-              // // // console.warn('Slow resource detected:', {
-              //   name: resourceEntry.name,
-              //   duration: resourceEntry.duration,
-              //   type: resourceEntry.initiatorType
-              // })
-            }
-          })
-        })
-        resourceObserver.observe({ entryTypes: ['resource'] })
-      } catch (_error) {
-        // // // console.error('Error monitoring resources:', _error)
-      }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
+      });
+    });
+    fcpObserver.observe({entryTypes: ['paint'] });
+    this.observers.push(fcpObserver);
+
+    // TTFB - Time to First Byte;
+    const ttfbObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry: any) => {
+        if (entry.responseStart > 0) {
+          this.metrics.ttfb = entry.responseStart - entry.requestStart;
+          this.reportMetric('ttfb', this.metrics.ttfb);
+        }
+      });
+    });
+    ttfbObserver.observe({entryTypes: ['navigation'] });
+    this.observers.push(ttfbObserver);
+  }
+
+  private observeLongTasks(): void {
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
+
+    const longTaskObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.duration > 50) {
+          this.reportMetric('long-task', entry.duration);
+        }
+      });
+    });
+
+    try {longTaskObserver.observe({ entryTypes: ['longtask'] });
+      this.observers.push(longTaskObserver);
+    } catch (error) {
+      console.warn('Long task observation not supported:', error);
     }
   }
 
-  private setupErrorHandling(): void {
-  // Global error handler
-    window.addEventListener('error', (eve, n, t) => {
-  this.logError({
-        message: event.message,
-        stack: event.error?.stack
-        timestamp: Date.now(),
-        userAgent: navigator.userAgent,
-        url: window.location.href
-})
-  );
-    })
-  );
-    // Unhandled promise rejection handler
-    window.addEventListener('unhandledrejection', (eve, n, t) => {
-  this.logError({
-        message: `Unhandled Promise Rejection: ${event.reason
-}`,
-        timestamp: Date.now(),
-        userAgent: navigator.userAgent,
-        url: window.location.href
-      })
-  );
-    })
-  );
-  }
-  private reportMetric(name: string, value: number): void {
-    // Sample rate
-  );
-    if (Math.random() > performanceConfig.monitoring.sampleRate {
-      return
-  );
-    }
-    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals];
-    if (thresholds) {
-      const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
-<<<<<<< HEAD:app/utils/monitoring.ts
-      }
-      // // // console.log(`[Performance] ${name}:`, {
-      //   value,
-      //   rating,
-      //   unit: name === 'cls' ? 'score' : 'ms'
-      // })
-    }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
-    // Send to analytics (if configured)
-    if (typeof gtag === 'function') {
-      gtag('event', name, {
-        value: Math.round(name === 'cls' ? value * 1000 : value),
-        event_category: 'Web Vitals'
-      })
-  );
-    }
+  private observeMemoryUsage(): void {
+    if (typeof window === 'undefined' || !('memory' in performance)) return;
 
-  }
-
-  public logError(error: ErrorReport): void {
-  this.errors.push(err, o, r)
-  );
-    // Keep only last 50 errors
-    if (this.errors.length > 50) {
-      this.errors = this.errors.slice(-50
-  );
-    }
-<<<<<<< HEAD:app/utils/monitoring.ts
-    // // // console.error('[Error]', error)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
-    // Send to error tracking service (if configured)
-  }
-  public getMetrics(): PerformanceMetrics{}
-return { ...this.metrics }
-  }
-  public getErrors(): ErrorReport[] {
-    return [...this.errors];
-  }
-  public clearErrors(): void {
-    this.errors = [];
-  }
-  public measureMemory(): void {
-    if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
-  );
+    const checkMemory = () => {
+  return;
+      const memory = (performance as any).memory;
       if (memory) {
-<<<<<<< HEAD:app/utils/monitoring.ts
-        this.metrics.memory = {
-          used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
-          total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
-          limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
-        }
-        // // // console.log('[Memory]', {
-        //   used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
-        //   total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
-        //   limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
-        // })
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
-      }
-    }
-  }
-  public measureNavigationTiming(): void {
-    if ('performance' in window && 'getEntriesByType' in performance) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-  );
-      if (navigation) {
-<<<<<<< HEAD:app/utils/monitoring.ts
-        console.log('Performance metrics:', {
-          'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,
-          'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,
-          'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`,
-          'Download': `${Math.round(navigation.responseEnd - navigation.responseStart)}ms`,
-          'DOM Interactive': `${Math.round(navigation.domInteractive - navigation.fetchStart)}ms`,
-          'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`,
-          'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
-        })
-  );
-        })
-        // // // console.log('[Navigation Timing]', {
-        //   'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,
-        //   'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,
-        //   'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`,
-        //   'Download': `${Math.round(navigation.responseEnd - navigation.responseStart)}ms`,
-        //   'DOM Interactive': `${Math.round(navigation.domInteractive - navigation.fetchStart)}ms`,
-        //   'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`,
-        //   'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
-        // })
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
-      }
-    }
-  }
+        this.reportMetric('memory-used', memory.usedJSHeapSize);
+        this.reportMetric('memory-total', memory.totalJSHeapSize);
+        this.reportMetric('memory-limit', memory.jsHeapSizeLimit);
+      
 }
+    };
 
-    // Send to error tracking service (if, configure, d)
+    checkMemory();
+    setInterval(checkMemory, 30000); // Check every 30 seconds;
+  }
+
+  private setupErrorHandling(): void {if (typeof window === 'undefined') return;
+
+    // Global error handler;
+    window.addEventListener('error', (event) => {
+      this.reportError({
+        message: event.message,
+        stack: event.error?.stack,
+        url: event.filename,
+        line: event.lineno,
+        column: event.colno,
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent;
+      });
+    });
+
+    // Unhandled promise rejection handler;
+    window.addEventListener('unhandledrejection', (event) => {this.reportError({
+        message: `Unhandled Promise Rejection: ${event.reason}`,
+        stack: event.reason?.stack,
+        url: window.location.href,
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent;
+      , });
+    });
+  }
+
+  private reportMetric(name: string, value: number): void {if (Math.random() </ this.config.sampleRate) return;
+
+    const metric = {
+      name,
+      value,
+      timestamp: Date.now(),
+      url: window.location.href,
+      userAgent: navigator.userAgent;
+    };
+
+    this.sendToEndpoint('/api/metrics', metric);
+  }
+
+  private reportError(error: ErrorReport): void {
+    this.sendToEndpoint('/api/errors', error);
+  }
+
+  private async sendToEndpoint(endpoint: string, data: any): Promise<void>{try {
+      await fetch(`${this.config.endpoint}${endpoint}`, {method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+      , });
+    } catch (error) {
+      console.warn('Failed to send monitoring data:', error);
+    }
   }
 
   public getMetrics(): PerformanceMetrics {
-  return { ...this.metrics
-}
-  );
+    return { ...this.metrics };
   }
 
-  public getErrors(): ErrorReport[] {
-    return [...this.errors];
+  public disconnect(): void {
+    this.observers.forEach(observer =</ observer.disconnect());
+    this.observers = [];
   }
-
-  public clearErrors(): void {
-  this.errors = [];
 }
 
-  public measureMemory(): void {
-  if('memory' in performance) {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number
-    }).memory
-  );
-      if (memo, r, y) {
-        // Memory usage logged
-      }
-    }
-  }
+// Default configuration;
+const defaultConfig: MonitoringConfig = {enablePerformanceMonitoring: true,
+  enableErrorReporting: true,
+  enableUserTracking: false,
+  sampleRate: 0.1,
+  endpoint: ''
+};
 
-  public measureNavigationTiming(): void {
-  if('performance' in window && 'getEntriesByType' in performance) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-  );
-      if (navigati, o, n) {
-        // Navigation timing logged
-    }
-}
+// Create singleton instance;
+let monitor: PerformanceMonitor | null = null;
 
-// Singleton instance
-const monitoring = new MonitoringService()
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d:app/utils/monitoring.ts
+export const initializeMonitoring = (config: Partial<MonitoringConfig>= {, }): PerformanceMonitor => {
+  if (monitor) {
+    return monitor;
+  };
 
+  const finalConfig = { ...defaultConfig, ...config };
+  monitor = new PerformanceMonitor(finalConfig);
+  return monitor;
+};
 
-export default monitoring;
-  
+export const getPerformanceMetrics = (): PerformanceMetrics => {
+  return monitor?.getMetrics() || {};
+};
+
+export const disconnectMonitoring = (): void =</ {
+  monitor?.disconnect();
+  monitor = null;
+};
+
+export default PerformanceMonitor;

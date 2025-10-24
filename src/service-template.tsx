@@ -1,51 +1,27 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Phone, CheckCircle, Star } from 'lucide-react';
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import { Link } from 'react-router-dom';
+import { Phone, CheckCircle, Star } from 'lucide-react';
 
-<<<<<<< HEAD
 interface ServicePageProps {
   title: string;
   description: string;
-<<<<<<< HEAD
   icon: React.ComponentType<{ className?: string }>;
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0522
   services: Array<{
     title: string;
     description: string;
     icon: React.ComponentType<{ className?: string }>;
     features: string[];
     price: string;
-=======
-interface ServicePageProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  titl,
-  e: string;,
-    descriptio,
-  n: string;,
-    ico,
-  n: React.ComponentType;
-          <{ className?: string }>;
-  service,
-  s: Array<{/* TODO: Fix JSX expression */}
-  s: string[];}
-    pric,
-  e: string;
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
   }>;
   benefits: string[];
 }
 
 const ServicePage: React.FC<ServicePageProps> = ({ title, description, services, benefits }) => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
@@ -57,46 +33,15 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             {description}
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24"></main>
-        <section className="text-center mb-16"></section>
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1>
-            Service Template
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
-            Blog Post
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-<<<<<<< HEAD
               to="/contact"
               className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
             >
               <Phone className="w-5 h-5 mr-2" />
               Get Free Consultation
             </Link>
-=======
-              to="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
-
-// ></Link>
-              
-          
-          
-          
-          
-          
-          
-          
-          "
-          <Phone className="w-5 h-5 mr-2" /></Phone>
-// Get Free Consultation;
-          </Link>
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             <a
               href="tel:+13024640950"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
@@ -138,13 +83,8 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
         </section>
 
         {/* Benefits Section */}
-<<<<<<< HEAD
         <section className="container mx-auto px-4 py-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-=======
-          <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
             Why Choose Our {title}?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

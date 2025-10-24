@@ -1,45 +1,15 @@
+"use client";
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+
+import { Coins } from 'lucide-react'
+import { CheckCircle, Star, Zap, Brain, Shield, Database, Helmet } from 'lucide-react'
+import { Globe } from 'lucide-react'
 
 const BlockchainWeb3Page: React.FC = () => {
+  const blockchainServices = [
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">Blockchain Web3</h1>
-        <p className="text-gray-300 mb-8">Coming Soon - Advanced blockchain web3 solutions</p>
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-          Contact Us
-        </a>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <div className="container mx-auto px-4 py-20"></div>
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6"></h1>
-            Blockchain & Web3
-          </h1>
-          <p className="text-xl text-gray-300 mb-8"></p>
-            Decentralized solutions and blockchain technology for the future of the web.
-          </p>
-          <div className="bg-slate-800/50 rounded-lg p-8"></div>
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300 mb-6"></p>
-              We're developing innovative blockchain and Web3 solutions. Contact us to learn more.
-            </p>
-            <a
-              href="/contact"
-              className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center"
-            ></a>
-              <ArrowRight className="w-5 h-5 mr-2" />
-              Contact Us
-            </a>
-          </div>
-        </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03fc
       </div>
-    </div>
-  );
-};
-
-export default BlockchainWeb3Page;
+    </>
+  )
+}
+export default BlockchainWeb3Page

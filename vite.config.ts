@@ -1,110 +1,102 @@
-<<<<<<< HEAD
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import path from 'path';
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react({
+      // Optimize JSX runtime
+      jsxRuntime: 'automatic',
+    })
+  ],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './app'),
+      '@components': path.resolve(__dirname, './app/components'),
+      '@pages': path.resolve(__dirname, './app/pages'),
+      '@utils': path.resolve(__dirname, './utils'),
+      '@types': path.resolve(__dirname, './types'),
+    },
+  },
   build: {
     outDir: 'dist',
-  },
-});
-=======
-import {defineConfig} from 'vite'
-import react from '@vitejs/plugin-react'
-import {resolve} from 'path'
-
-export default defineConfig({// https: //vitejs.dev/config/
-  plugins: [react({
-      // Enable React Fast Refresh
-      fastRefresh: true,
-      // Enable JSX runtime
-      jsxRuntime: 'automatic',})],
-  resolve: {alias: {
-      '@': resolve(__dirname, './app'),
-      '@/components': resolve(__dirname, './app/components'),
-      '@/pages': resolve(__dirname, './app'),
-      '@/utils': resolve(__dirname, './utils'),
-      '@/types': resolve(__dirname, './types'),
-      '@/hooks': resolve(__dirname, './hooks'),
-      '@/config': resolve(__dirname, './config'),
-      '@/data': resolve(__dirname, './data'),
-      '@/content': resolve(__dirname, './content'),},
-  },
-  build: {outDir: 'dist',
     sourcemap: false,
     minify: 'esbuild',
     target: 'es2020',
     cssCodeSplit: true,
-
     rollupOptions: {
       output: {
-        chunkFileNames: 'assets/[name]-[hash].js',
         manualChunks: (id) => {
-          // Core React libraries
-          if (id.includes('react') || id.includes('react-dom')) {
-            return 'react-vendor'}
-          // Router
-          if (id.includes('react-router')) {return 'router'}
-          // UI libraries
-<<<<<<< HEAD
-          if (id.includes('framer-motion')) {return 'animations'}
-          if (id.includes('lucide-react')) {return 'icons'}
-=======
-          if (id.includes('framer-motion')) {
-            return 'animations'
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'react';
+            }
+            if (id.includes('react-router')) {
+              return 'router';
+            }
+            if (id.includes('@heroicons') || id.includes('lucide-react')) {
+              return 'icons';
+            }
+            if (id.includes('framer-motion')) {
+              return 'motion';
+            }
+            if (id.includes('clsx') || id.includes('tailwind-merge')) {
+              return 'utils';
+            }
+            if (id.includes('web-vitals')) {
+              return 'analytics';
+            }
+            if (id.includes('react-helmet-async')) {
+              return 'seo';
+            }
+            return 'vendor';
           }
-          if (id.includes('lucide-react')) {
-            return 'icons'
+          // Split app code by feature
+          if (id.includes('/app/components/')) {
+            return 'components';
           }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
-          // SEO and meta
-          if (id.includes('react-helmet')) {return 'seo'}
-          // Charts and data visualization
-          if (id.includes('recharts')) {return 'charts'}
-          // Utility libraries
-          if (id.includes('clsx') || id.includes('tailwind-merge')) {return 'utils'}
-          // Performance monitoring
-          if (id.includes('web-vitals')) {return 'performance'}
-          // AI service pages
-          if (id.includes('/app/ai-') && id.includes('/page.tsx')) {return 'ai-pages'}
-          // IT service pages
-          if (id.includes('/app/') && (id.includes('cloud-') || id.includes('cybersecurity-') || id.includes('web-development') || id.includes('mobile-development')) && id.includes('/page.tsx')) {return 'it-pages'}
-          // Micro SAAS pages
-          if (id.includes('/app/zion-') && id.includes('/page.tsx')) {return 'saas-pages'}
-          // Other pages
-          if (id.includes('/app/') && id.includes('/page.tsx')) {return 'pages'}
-          // Default chunk for other modules
-          return 'vendor'
+          if (id.includes('/app/hooks/')) {
+            return 'hooks';
+          }
+          if (id.includes('/app/utils/')) {
+            return 'utils';
+          }
+          return undefined;
         },
+        chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
-    // Optimize bundle size
+    // Optimize chunk size
     chunkSizeWarningLimit: 1000,
-    // Enable tree shaking
-    treeshake: true,
-    // Enable compression
-    reportCompressedSize: true,
+    reportCompressedSize: false,
   },
-  server: {port: 3000,
+  server: {
+    port: 3000,
     open: true,
     host: true,
-    // Enable HMR
-    hmr: {
-      overlay: true,},
+    cors: true,
   },
-  preview: {port: 4173,
+  preview: {
+    port: 4173,
     open: true,
-    host: true,},
+    host: true,
+  },
   // Optimize dependencies
-  optimizeDeps: {include: ['react',
+  optimizeDeps: {
+    include: [
+      'react',
       'react-dom',
       'react-router-dom',
-      'react-helmet-async',
+      '@heroicons/react/24/outline',
       'framer-motion',
-      'lucide-react',],},
+      'clsx',
+      'tailwind-merge'
+    ],
+  },
   // CSS optimization
-  css: {devSourcemap: true,},
-})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+  css: {
+    devSourcemap: true,
+  },
+});

@@ -1,82 +1,118 @@
-import React from 'react';
-import Footer from '../components/Footer';
-import Head from "next/head";
-import Link from "next/link";
-import Navigation from '../components/Navigation';
-import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import Link from 'next/link';
 
-const Page: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time monitoring', 'Custom dashboards', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target the right audience with AI-driven precision and accuracy.',
-      benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
-    }
-  ];
-
+export default function ZionaicontentmoderatorPage() {
   return (
     <>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Zion Ai Content Moderator
+      <Helmet>
+        <title>AI Content Moderator - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered content moderation solution that automatically detects and filters inappropriate content across multiple platforms." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              AI Content Moderator
             </h1>
-            <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
-              Advanced zion ai content moderator solutions powered by artificial intelligence and machine learning.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Advanced AI-powered content moderation that automatically detects and filters inappropriate content across multiple platforms.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800 p-6 rounded-lg">
-                <feature.icon className="w-12 h-12 text-emerald-400 mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+            <div>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Features</h2>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3 mt-0.5">
+                    <svg className="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-gray-900">Real-time Content Analysis</h3>
+                    <p className="text-gray-600">Instantly analyze text, images, and videos for inappropriate content</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3 mt-0.5">
+                    <svg className="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-gray-900">Multi-language Support</h3>
+                    <p className="text-gray-600">Detect inappropriate content in over 50 languages</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3 mt-0.5">
+                    <svg className="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-gray-900">Customizable Rules</h3>
+                    <p className="text-gray-600">Set custom moderation rules based on your community guidelines</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3 mt-0.5">
+                    <svg className="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-gray-900">API Integration</h3>
+                    <p className="text-gray-600">Easy integration with your existing platforms and workflows</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-6">How It Works</h2>
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-semibold mr-4">1</div>
+                  <div>
+                    <h3 className="font-medium text-gray-900">Content Submission</h3>
+                    <p className="text-gray-600">Submit content through our API or web interface</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-semibold mr-4">2</div>
+                  <div>
+                    <h3 className="font-medium text-gray-900">AI Analysis</h3>
+                    <p className="text-gray-600">Our AI models analyze content for various types of inappropriate material</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-semibold mr-4">3</div>
+                  <div>
+                    <h3 className="font-medium text-gray-900">Action & Reporting</h3>
+                    <p className="text-gray-600">Receive moderation decisions and detailed reports</p>
+                  </div>
+                </div>
               </div>
-            ))}
+            </div>
           </div>
-
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Transform your business with our cutting-edge AI solutions. Contact us today to learn more.
-            </p>
-            <a
-              href="/contact"
-              className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-3 rounded-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-300"
-            >
-              Get Started
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </a>
+          
+          <div className="bg-gray-50 rounded-lg p-8 text-center">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Ready to Get Started?</h2>
+            <p className="text-gray-600 mb-6">Protect your community with our advanced AI content moderation solution.</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                Contact Sales
+              </Link>
+              <Link to="/pricing" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
+                View Pricing
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
-};
-
-export default Page;
+}
