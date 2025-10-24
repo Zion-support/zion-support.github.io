@@ -1,8 +1,12 @@
 "use client";
 import React from 'react';
 
-const testRunner = ($2) => {
-$3
+const testRunner = (test: () => void) => {
+  try {
+    test();
+  } catch (error) {
+    console.error('Test failed:', error);
+  }
 };
 
-export default testRunner
+export default testRunner;

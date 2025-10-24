@@ -3,13 +3,13 @@ import React from 'react';
 
 interface AccessibilityEnhancerProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ className }) => {
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ className, children }) => {
   return (
     <div className={className}>
-      <h2>AccessibilityEnhancer</h2>
-      <p>This component is being rebuilt.</p>
+      {children}
     </div>
   );
 };

@@ -1,135 +1,139 @@
-export function debounce<T extends (...args: any[]) => any>()</T>
-export function throttle<T extends (...args: any[]) => any>(
-export function createIntersectionObserver()
-export function getMemoryUsage(): any {
-export function preloadCriticalResources(): void {
-export function optimizeImage(sr,)
-  c: string, width?: number, height?: number): string {
-export function createLazyImageObserver(): IntersectionObserver | null {
-export function checkPerformanceBudget(): void {
-export function addResourceHints(): void {
 /**
- * Performance optimization utilities for the Zion Tech Group application;
+ * Performance optimization utilities for the Zion Tech Group application
  */
 
-// Debounce function for performance optimization;
+// Debounce function for performance optimization
+export function debounce<T extends (...args: any[]) => any>(
   func: T,
-  wait: number;</T>
+  wait: number
 ): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout;
-  return (...arg,</T>
-  s: Parameters<T>) => {
+  return (...args: Parameters<T>) => {
     clearTimeout(timeout);
- func(...args), wait);
+    timeout = setTimeout(() => func(...args), wait);
   };
+}
 
-// Throttle function for performance optimization;
+// Throttle function for performance optimization
+export function throttle<T extends (...args: any[]) => any>(
   func: T,
-  limit: number;</T>
+  limit: number
 ): (...args: Parameters<T>) => void {
   let inThrottle: boolean;
-  return (...arg,</T>
-  s: Parameters<T>) => {
+  return (...args: Parameters<T>) => {
     if (!inThrottle) {
       func(...args);
       inThrottle = true;
- (inThrottle = false), limit);
+      setTimeout(() => (inThrottle = false), limit);
+    }
   };
+}
 
-// Intersection Observer for lazy loading;
+// Intersection Observer for lazy loading
+export function createIntersectionObserver(
   callback: IntersectionObserverCallback,
-  options?: IntersectionObserverInit;
+  options?: IntersectionObserverInit
 ): IntersectionObserver | null {
   if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
     return null;
-  
-  return new IntersectionObserver(callback, {
-    rootMargin: '50px',
-    threshold: 0.1,)
-    ...options,)
-  });
+  }
+  return new IntersectionObserver(callback, options);
+}
 
-// Performance monitoring utilities;
- void): void {
-  if (typeof window === 'undefined' || !('performance' in window)) {
-    fn();
-    return;
-
-  const start = performance.now();
-  fn();
-  const end = performance.now();
-  
-  if (process.env.NODE_ENV === 'development') {
-    console.log(`${name} took ${end - start} milliseconds`);
-
-// Memory usage monitoring;
+// Memory usage monitoring
+export function getMemoryUsage(): any {
   if (typeof window === 'undefined' || !('memory' in performance)) {
     return null;
-  
-  return (performance, as, any).memory;
+  }
+  return (performance as any).memory;
+}
 
-// Bundle size optimization - preload critical resources;
+// Preload critical resources
+export function preloadCriticalResources(): void {
   if (typeof window === 'undefined') return;
   
-  const criticalResources = [;
+  const criticalResources = [
     '/fonts/inter.woff2',
-    '/images/logo.png',
-    '/images/og-image.jpg'
+    '/css/critical.css'
   ];
   
+  criticalResources.forEach(resource => {
     const link = document.createElement('link');
     link.rel = 'preload';
     link.href = resource;
-    link.as = resource.endsWith('.woff2') ? 'font' : 'image';
-    if (resource.endsWith('.woff2')) {
-      link.crossOrigin = 'anonymous';
+    link.as = resource.endsWith('.css') ? 'style' : 'font';
     document.head.appendChild(link);
   });
+}
 
-// Image optimization utility;
-  // Add image optimization parameters if needed;
-  const url = new URL(src, window.location.origin);
-  if (width) url.searchParams.set('w', width.toString());
-  if (height) url.searchParams.set('h', height.toString());
-  url.searchParams.set('q', '80'); // Quality;
-  url.searchParams.set('f', 'webp'); // Format;
-  return url.toString();
+// Image optimization
+export function optimizeImage(
+  src: string, 
+  width?: number, 
+  height?: number
+): string {
+  if (!src) return '';
+  
+  // Add optimization parameters for external images
+  if (src.startsWith('http')) {
+    const url = new URL(src);
+    if (width) url.searchParams.set('w', width.toString());
+    if (height) url.searchParams.set('h', height.toString());
+    url.searchParams.set('q', '80'); // Quality
+    return url.toString();
+  }
+  
+  return src;
+}
 
-// Lazy loading utility for images;
-      if (entry.isIntersecting) {
-        const img = entry.target as HTMLImageElement;
-        const src = img.dataset.src;
-        if (src) {
-          img.src = src;
-          img.classList.remove('lazy');
-          img.classList.add('loaded');
-    });
-  });
+// Lazy image observer
+export function createLazyImageObserver(): IntersectionObserver | null {
+  return createIntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          const src = img.dataset.src;
+          if (src) {
+            img.src = src;
+            img.classList.remove('lazy');
+          }
+        }
+      });
+    },
+    { rootMargin: '50px' }
+  );
+}
 
-// Performance budget monitoring;
+// Performance budget checker
+export function checkPerformanceBudget(): void {
   if (typeof window === 'undefined') return;
   
   const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
   if (!navigation) return;
   
   const loadTime = navigation.loadEventEnd - navigation.fetchStart;
-  const budget = 3000; // 3 seconds;
- budget) {
- ${budget}ms`);
+  const budget = 3000; // 3 seconds
+  
+  if (loadTime > budget) {
+    console.warn(`Performance budget exceeded: ${loadTime}ms > ${budget}ms`);
+  }
+}
 
-// Resource hints for better performance;
+// Add resource hints
+export function addResourceHints(): void {
   if (typeof window === 'undefined') return;
   
-  const hints = [;
+  const hints = [
     { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
-    { rel: 'dns-prefetch', href: '//fonts.gstatic.com' },
-    { rel: 'preconnect', href: 'http,
-  s://fonts.googleapis.com' },
-    { rel: 'preconnect', href: 'http,
-  s://fonts.gstatic.com', crossorigin: 'anonymous' },
+    { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+    { rel: 'preconnect', href: 'https://api.ziontechgroup.com' }
   ];
   
+  hints.forEach(hint => {
     const link = document.createElement('link');
-    Object.assign(link, hint);
+    link.rel = hint.rel;
+    link.href = hint.href;
     document.head.appendChild(link);
-  });</T>
+  });
+}
