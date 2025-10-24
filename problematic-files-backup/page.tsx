@@ -1,11 +1,10 @@
 'use client';
 import React from 'react';
-import Head from 'next/head';"
-import Link from 'next/link";"
-import { ArrowRight } from 'lucide-react";"
-import Footer from '../components/Footer";
+import Head from 'next/head';
+import Link from 'next/link;
+import { ArrowRight } from 'lucide-react;
+import Footer from '../components/Footer;
 export default function GsolutionsPage() {
-
 return(<>"
       <Head>"
         <title>5 g Solutions - Zion Tech Group</title>"
@@ -27,5 +26,5 @@ Contact Us"
       <Footer />
 </div>)
   )"
-,;"
-};"'"
+,;
+};

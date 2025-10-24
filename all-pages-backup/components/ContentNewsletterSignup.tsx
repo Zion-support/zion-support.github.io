@@ -1,11 +1,11 @@
 'use client';
-import Footer from './Footer";"
-import Navigation from './Navigation";"
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight } from 'lucide-react";"
-import, React, { useState } from "react";"
-import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react";"
-import { CheckCircle, ArrowRight } from 'lucide-react";"
+import Footer from './Footer;
+import Navigation from './Navigation;
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight } from 'lucide-react;
+import React, { useState } from "react;
+import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react;
+import { CheckCircle, ArrowRight } from 'lucide-react;
 }) => {const [emailsetEmail,] = useState(''
 setEmail(''"
       // // console.error('Subscription "error": '
@@ -13,5 +13,6 @@ setEmail(''"
     'Reduce costs by 30% with automation'
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases'"
-    'Gain competitive advantage with advanced technology";}"
+    'Gain competitive advantage with advanced technology;
+}
 export default ContentNewsletterSignup;)")'"

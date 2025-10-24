@@ -12,8 +12,8 @@ function fixComponentSyntax(content) {
   content = content.replace(/return \(<div/g, 'return (\n    <div');
   
   // Fix malformed JSX attributes
-  content = content.replace(/className="([^"]*)" \/>"/g, 'className="$1" />');
-  content = content.replace(/\/>"/g, '/>');
+  content = content.replace(/className="([^]*) \/">/g, 'className=$1 />');
+  content = content.replace(/\/>/g, '/>');
   
   // Fix malformed JSX closing tags
   content = content.replace(/    <\/footer>/g, '    </footer>');
@@ -21,7 +21,7 @@ function fixComponentSyntax(content) {
   content = content.replace(/    <\/div>/g, '    </div>');
   
   // Fix unterminated strings
-  content = content.replace(/import { MetadataRoute } from 'next";/g, "import { MetadataRoute } from 'next';");
+  content = content.replace(/import { MetadataRoute } from 'next";/g, "import { MetadataRoute } from next';");
   content = content.replace(/export default function robots\(\): MetadataRoute\.Robots {"/g, 'export default function robots(): MetadataRoute.Robots {');
   content = content.replace(/  return {"/g, '  return {');
   content = content.replace(/    rules: {"/g, '    rules: {');

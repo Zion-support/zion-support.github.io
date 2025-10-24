@@ -29,7 +29,7 @@ function processFile(filePath) {
       // Extract title from the file path
       const pathParts = filePath.split('/');
       const fileName = pathParts[pathParts.length - 2]; // Get the directory name
-      const title = fileName.split('-').map(word => 
+      const title = fileName.split('-').map(word =>
         word.charAt(0).toUpperCase() + word.slice(1)
       ).join(' ');
       

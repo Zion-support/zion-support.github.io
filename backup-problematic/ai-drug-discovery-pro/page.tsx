@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async";
+import { Helmet } from 'react-helmet-async;
 export default function AiDrugDiscoveryProPage() {
 "
 const features = ["
@@ -26,7 +26,6 @@ const applications = ["
     "Autoimmune Conditions"
   ]
 return(<>
-
   </>"
       <Helmet />"
         <title>AI Drug Discovery Pro - Zion Tech Group</title>"
@@ -80,7 +79,8 @@ Cutting-edge AI technology to accelerate pharmaceutical research and development
         </div>
       </section>"
 "
-      {/* Applications Section */;}"
+      {/* Applications Section */;
+}
       <section className="py-20 bg-white" />,"
     <div className="max-w-7 xl mx-auto px-4" />,"
     <div className="text-center mb-16" />,"
@@ -99,7 +99,8 @@ Our AI drug discovery platform supports research across multiple therapeutic are
         </div>
       </section>"
 "
-      {/* CTA Section */;}"
+      {/* CTA Section */;
+}
       <section className="py-20 bg-gradient-to-r from-green-900 to-blue-900 text-white" />,"
     <div className="max-w-7 xl mx-auto px-4 text-center" />,"
     <h1 className="text-4 xl font-bold mb-6">Ready to Accelerate Drug Discovery?</h2>"
@@ -117,5 +118,5 @@ View All AI Services</button>
         </div>
       </section>
     </>"
-  );"
-,};"'"
+  );
+,};

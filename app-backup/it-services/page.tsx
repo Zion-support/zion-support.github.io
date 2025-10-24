@@ -1,6 +1,6 @@
 import React from 'react';
-import { Cloud, Shield, Server, Database, CheckCircle, ArrowRight } from 'lucide-react";"
-'use client';"
+import { Cloud, Shield, Server, Database, CheckCircle, ArrowRight } from 'lucide-react;
+'use client';
     "title": "Cloud Solutions"
       "description": "Scalable cloud infrastructure for modern businesses"
         "AWS/Azure/GCP Migration"
@@ -104,5 +104,5 @@ className="bg-white text-emerald-600 px-6 py-3 rounded-lg font-semibold "hover":
 href="/contact"
 className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold "hover": bg-gray-100 transition-colors duration-200 flex items-center justify-center"
               <ArrowRight className="ml-2 h-5 w-5"
-href="/ai-services";"
-              className="border border-white text-white px-8 py-4 rounded-lg font-semibold "hover": bg-white/10 transition-colors duration-200";"'"
+href="/ai-services;
+              className="border border-white text-white px-8 py-4 rounded-lg font-semibold "hover": bg-white/10 transition-colors duration-200";'"

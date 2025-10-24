@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 
 // Function to fix all remaining syntax issues comprehensively
-function fixAllSyntax(content) {
-  let fixed = content;
+function fixAllSyntax(content) {;
+let fixed = content;
 
   // Fix semicolons in wrong places in JSX
   fixed = fixed.replace(/return\s*\(\s*<div[^>]*>;/gm, (match) => match.replace(/;/, ''));
@@ -68,39 +68,39 @@ function fixAllSyntax(content) {
   fixed = fixed.replace(/';$/gm, "'");
 
   // Fix specific patterns
-  fixed = fixed.replace(/<div className="([^"]*)"$/gm, '<div className="$1"');
-  fixed = fixed.replace(/<p className="([^"]*)"$/gm, '<p className="$1"');
-  fixed = fixed.replace(/<h1 className="([^"]*)"$/gm, '<h1 className="$1"');
-  fixed = fixed.replace(/<h2 className="([^"]*)"$/gm, '<h2 className="$1"');
-  fixed = fixed.replace(/<h3 className="([^"]*)"$/gm, '<h3 className="$1"');
+  fixed = fixed.replace(/<div className="([^]*)$/gm, '<div className="$1');"
+  fixed = fixed.replace(/<p className="([^]*)"$/gm, '<p className="$1');
+  fixed = fixed.replace(/<h1 className="([^"]*)"$/gm, '<h1 className="$1');
+  fixed = fixed.replace(/<h2 className="([^"]*)"$/gm, '<h2 className="$1');
+  fixed = fixed.replace(/<h3 className="([^"]*)"$/gm, '<h3 className="$1');
 
   // Fix closing tags
-  fixed = fixed.replace(/<\/Link>"$/gm, '</Link>');
-  fixed = fixed.replace(/<\/div>"$/gm, '</div>');
-  fixed = fixed.replace(/<\/p>"$/gm, '</p>');
-  fixed = fixed.replace(/<\/h1>"$/gm, '</h1>');
-  fixed = fixed.replace(/<\/h2>"$/gm, '</h2>');
-  fixed = fixed.replace(/<\/h3>"$/gm, '</h3>');
+  fixed = fixed.replace(/<\/Link">$/gm, '</Link>');
+  fixed = fixed.replace(/<\/div>$/gm, '</div>');
+  fixed = fixed.replace(/<\/p>$/gm, '</p>');
+  fixed = fixed.replace(/<\/h1>$/gm, '</h1>');
+  fixed = fixed.replace(/<\/h2>$/gm, '</h2>');
+  fixed = fixed.replace(/<\/h3>$/gm, '</h3>');
 
   // Fix self-closing tags
   fixed = fixed.replace(/<meta[^>]*"$/gm, (match) => match.replace(/"$/, ' />'));
   fixed = fixed.replace(/<link[^>]*"$/gm, (match) => match.replace(/"$/, ' />'));
 
   // Fix ArrowRight component
-  fixed = fixed.replace(/<ArrowRight[^>]*"$/gm, '<ArrowRight className="w-5 h-5 ml-2" />');
+  fixed = fixed.replace(/<ArrowRight[^>]*"$/gm, '<ArrowRight className="w-5 h-5 ml-2 /">');"
 
   // Fix specific patterns
-  fixed = fixed.replace(/Contact Us<\/Link>"$/gm, 'Contact Us</Link>');
-  fixed = fixed.replace(/Learn More<\/Link>"$/gm, 'Learn More</Link>');
-  fixed = fixed.replace(/Get Started<\/Link>"$/gm, 'Get Started</Link>');
+  fixed = fixed.replace(/Contact Us<\/Link>$/gm, 'Contact Us</Link>');
+  fixed = fixed.replace(/Learn More<\/Link>$/gm, 'Learn More</Link>');
+  fixed = fixed.replace(/Get Started<\/Link>$/gm, 'Get Started</Link>');
 
   return fixed;
 }
 
 // Function to process a single file
 function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
+  try {;
+const content = fs.readFileSync(filePath, 'utf8');
     const fixed = fixAllSyntax(content);
     
     if (content !== fixed) {
@@ -116,14 +116,14 @@ function processFile(filePath) {
 }
 
 // Function to recursively find and process files
-function processDirectory(dirPath) {
-  let fixedCount = 0;
+function processDirectory(dirPath) {;
+let fixedCount = 0;
   
-  try {
-    const items = fs.readdirSync(dirPath);
+  try {;
+const items = fs.readdirSync(dirPath);
     
-    for (const item of items) {
-      const fullPath = path.join(dirPath, item);
+    for (const item of items) {;
+const fullPath = path.join(dirPath, item);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
@@ -144,4 +144,4 @@ function processDirectory(dirPath) {
 // Main execution
 console.log('Starting final comprehensive syntax fixes...');
 const fixedCount = processDirectory('/workspace');
-console.log(`Fixed ${fixedCount} files`);
+console.log(`Fixed ${fixedCount} files`);}}}}})

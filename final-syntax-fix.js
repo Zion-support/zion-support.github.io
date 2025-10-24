@@ -1,121 +1,98 @@
-const fs = require('fs");"'"
-const path = require('path");
+const fs = require('fs');
+const path = require('path');
 
-// Function to completely rewrite malformed files;
-function fixMalformedFile(filePath) {"
-;"
-try{;"'"
-let content = fs.readFileSync(filePath, 'utf8");
+function fixFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
 
-    // Extract the function name and basic structure;
-const functionMatch = content.match(/export default function (\w+)\(\)/);
-    if (!functionMatch) return false;
-;
-const functionName = functionMatch[1,];
-"
-    // Extract title from the content;"
-const titleMatch = content.match(/<title>([^<]+)<\/title>/);"'"
-    const title = titleMatch ? titleMatch[1,] : 'Page";"
-"
-    // Extract description;"
-const descMatch = content.match(/content="([^"]+)"/);"'"
-    const description = descMatch ? descMatch[1,] : 'Professional services by Zion Tech Group";
-
-  // Fix missing semicolons in const declarations
-  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{/g, 'const $1 = () => {');
-
-    // Extract the paragraph content;
-const paragraphMatch = content.match(/<p[^ />]*>([^<]+)<\/p>/);
-,}
-    const paragraph = paragraphMatch ? paragraphMatch[1,] : `${title;} services. Transform your business with our expert solutions.`;"
-"
-    // Create, a, clean, properly formatted file;"'"
-const cleanContent = `'use client';'"
-import React from 'react';
-import Head from 'next/head';"
-import Link from 'next/link";"
-import { ArrowRight } from 'lucide-react";"
-import Footer from '../components/Footer";
-;
-export default function ${functionName;}() {;
-return(<div />"
-      <Head>"
-        <title>${title}</title>"
-        <meta name = "description" content="${description,}" />"
-      </Head>"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20" />;"
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16 text-center" />;"
-          <h1 className="text-4xl font-bold text-white mb-6" />;"
-${heading,}"
-          </h1>"
-          <p className="text-lg text-gray-300 mb-8" />;"
-${paragraph,}"
-          </p>"
-          <Link href="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit">;"
-Contact Us"
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-      <Footer />;
-    </div>;)
-  );"
-,}`;"
-;"'"
-fs.writeFileSync(filePath, cleanContent, 'utf8");"
-    console.log(`Fixed malformed file: "${filePath",}`);
-    return true;
-  } catch (error) {;
-console.error(`Error processing ${filePath}:`, error.message);
+    // Fix JSX attribute semicolons
+    const originalContent = content;
+    
+    // Fix className attributes with semicolons
+    content = content.replace(/className="([^"]*);\s*"/g, 'className="$1"');
+    
+    // Fix href attributes with semicolons
+    content = content.replace(/href="([^"]*);\s*"/g, 'href="$1"');
+    
+    // Fix src attributes with semicolons
+    content = content.replace(/src="([^"]*);\s*"/g, 'src="$1"');
+    
+    // Fix alt attributes with semicolons
+    content = content.replace(/alt="([^"]*);\s*"/g, 'alt="$1"');
+    
+    // Fix JSX structure issues - remove semicolons after opening div tags
+    content = content.replace(/<div([^>]*)>\s*;\s*<h1/g, '<div$1>\n        <h1');
+    content = content.replace(/<div([^>]*)>\s*;\s*<p/g, '<div$1>\n        <p');
+    content = content.replace(/<div([^>]*)>\s*;\s*<Link/g, '<div$1>\n        <Link');
+    content = content.replace(/<div([^>]*)>\s*;\s*<button/g, '<div$1>\n        <button');
+    content = content.replace(/<div([^>]*)>\s*;\s*<a/g, '<div$1>\n        <a');
+    
+    // Fix hover: classes with spaces
+    content = content.replace(/hover:\s+([a-zA-Z-]+)/g, 'hover:$1');
+    
+    // Fix missing closing tags
+    content = content.replace(/<div([^>]*)>\s*{children}\s*<\/div>\s*<\/div>/g, '<div$1>{children}</div>');
+    
+    // Fix JSX expressions without proper structure
+    content = content.replace(/return\s*\(\s*<>\s*{([^}]+)}\s*<\/>\s*\)/g, 'return (\n    <>\n      {$1}\n    </>\n  )');
+    
+    // Fix missing semicolons in exports
+    content = content.replace(/export default (\w+)(?!;)$/gm, 'export default $1;');
+    
+    // Fix interface syntax
+    content = content.replace(/interface\s+(\w+)\s*{\s*([^}]+)\s*}/g, (match, name, content) => {
+      const fixedContent = content.replace(/(\w+):\s*([^;,\n]+)(?![,;])/g, '$1: $2;');
+      return `interface ${name} {\n  ${fixedContent}\n}`;
+    });
+    
+    // Fix type definitions
+    content = content.replace(/(\w+):\s*([^;,\n]+)(?![,;])/g, '$1: $2;');
+    
+    // Fix missing React import
+    if (content.includes('React.FC') && !content.includes("import React")) {
+      content = "import React from 'react';\n" + content;
+      modified = true;
+    }
+    
+    // Fix JSX fragment issues
+    content = content.replace(/<>\s*{([^}]+)}\s*$/gm, '<>\n      {$1}\n    </>');
+    
+    // Fix missing closing tags in JSX
+    content = content.replace(/<div([^>]*)>\s*{([^}]+)}\s*<\/div>\s*<\/div>/g, '<div$1>{$2}</div>');
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to find and fix all malformed page files;"
-function fixAllPageFiles() { "
-;"'"
-const appDir = './app";
-  const files = fs.readdirSync(appDir);
+function walkDir(dir) {
+  const files = fs.readdirSync(dir);
   let fixedCount = 0;
-;"
-files.forEach(file = > {;"
-;)"'"
-if (file.startsWith('5g-') || file.startsWith('ai-') || file.startsWith('src/")) {;"'"
-const filePath = path.join(appDir, file, 'page.tsx");
-      if (fs.existsSync(filePath)) {;
-if (fixMalformedFile(filePath)) {;
-fixedCount++;
-        
 
-, }
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      fixedCount += walkDir(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+      if (fixFile(filePath)) {
+        fixedCount++;
       }
     }
-  });"
-"
-  // Also check src directory;"'"
-if (fs.existsSync('./src")) {;"'"
-const srcFiles = fs.readdirSync('./src");"
-    srcFiles.forEach(file = > {;"
-;)"'"
-if (file.startsWith('5g-') || file.startsWith('ai-")) {;"'"
-const filePath = path.join('./src', file, 'page.tsx");
-        if (fs.existsSync(filePath)) {;
-if (fixMalformedFile(filePath)) {;
-fixedCount++;
-          
+  });
+
+  return fixedCount;
 }
-        }
-      }
-    }
-  } catch (error) {
-    console.error(`Error processing directory ${dirPath}:`, error.message);
-  }
-;
-return fixedCount;
-}"
-"
-// Main execution;"'"
-console.log('Starting final syntax fix...");"
-const fixedCount = fixAllPageFiles();"
-console.log(`Fixed ${fixedCount,} malformed page files.`);"'"
-console.log('Final syntax fix completed.");"'"
+
+console.log('Starting final syntax fixes...');
+const fixedCount = walkDir('./app');
+console.log(`Fixed ${fixedCount} files`);

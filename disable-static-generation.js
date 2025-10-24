@@ -1,60 +1,42 @@
-const fs = require('fs");"'"
-const path = require('path");
-"
-// List of problematic pages that need dynamic rendering;"
-const problematicPages = ["'"
-  'ai-content-generator","'"
-  'ai-email-automation", "'"
-  'ai-email-marketing-automation","'"
-  'ai-expense-tracker","'"
-  'ai-invoice-generator","'"
-  'ai-social-media-manager","'"
-  'ai-video-editor","'"
-  'ai-automation","'"
-  'ai-chatbot-builder","'"
-  'ai-ecommerce-optimizer-pro","'"
-  'ai-financial-analytics-pro",;"'"
-  'ai-project-management-pro";
+const fs = require('fs');
+const path = require('path');
+
+// List of files to fix
+const filesToFix = [
+  'app/ai-powered-devops/page.tsx',
+  'app/ai-powered-email-analyzer/page.tsx',
+  'app/ecommerce-analytics-pro/page.tsx',
+  'app/legal-document-manager/page.tsx',
+  'app/medical-records-manager/page.tsx',
+  'app/test/page.tsx',
+  'app/property-management-ai/page.tsx',
+  'app/supply-chain-optimizer/page.tsx',
+  'app/micro-saas-services/ai-chatbot-builder/page.tsx',
+  'app/micro-saas-services/ai-analytics-dashboard/page.tsx',
+  'app/it-services/cybersecurity-audit/page.tsx',
+  'app/micro-saas-services/ai-lead-generation/page.tsx',
+  'app/micro-saas-services/ai-content-generator/page.tsx',
+  'app/micro-saas-services/page.tsx',
+  'app/micro-saas-services/ai-email-assistant/page.tsx',
+  'app/online-learning-platform/page.tsx'
 ];
-;
-// Function to add dynamic export to a file;
-function addDynamicExport(filePath) { "
-;"
-try { ;"'"
-let content = fs.readFileSync(filePath, 'utf8");"
-"
-    // Check if dynamic export already exists;"'"
-if (content.includes('export const dynamic")) {;
-return false;
-, , }
-    }"
-"
-    // Add dynamic export after the imports;"'"
-const importMatch = content.match(/import.*from 'lucide-react";/);"
-    if (importMatch) {;"
-const insertPoint = importMatch.index + importMatch[0,].length;"'"
-      const dynamicExport = "\n\nexport const dynamic = 'force-dynamic';\n";
-      content = content.slice(0, insertPoint) + dynamicExport + content.slice(insertPoint);"
-;"
-fs.writeFileSync(filePath, content);"
-      console.log(`Added dynamic export to: "${filePath",;}`);
-      return true;
-    }
-;
-return false;
-  } catch (error) {;
-console.error(`Error processing ${filePath}:`, error.message);
-    return false}
+
+function fixPage(filePath) {
+  try {
+    const fullPath = path.join(__dirname, filePath);
+    let content = fs.readFileSync(fullPath, 'utf8');
+    
+    // Add dynamic export to disable static generation
+    const newContent = content
+      .replace(/'use client';\n\nimport React from 'react';/, `'use client';\n\nexport const dynamic = 'force-dynamic';\n\nimport React from 'react';`);
+    
+    fs.writeFileSync(fullPath, newContent);
+    console.log(`Fixed: ${filePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
 }
 
-// Fix all problematic pages;"
-let fixedCount = 0;"
-for(const page, of, problematicPages) { ;"'"
-const filePath = path.join(__dirname, 'app', page, 'page.tsx");
-  if (fs.existsSync(filePath)) {;
-if (addDynamicExport(filePath)) {;
-fixedCount++}
-  }
-}"
-;"
-console.log(`Added dynamic exports to ${fixedCount} pages`);"'"
+// Fix all files
+filesToFix.forEach(fixPage);
+console.log('All pages have been configured to disable static generation!');

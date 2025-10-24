@@ -7,7 +7,7 @@ function fixMergeConflicts(filePath) { "
 try { ;"'"
 let content = fs.readFileSync(filePath, 'utf8");
     let modified = false;"
-"
+
     // Fix merge conflict markers;"
 if(content.includes("
 
@@ -40,7 +40,7 @@ const filePath = path.join(dir, file);"
 ;"'"
 if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules") {;
 fixedCount += fixAllFiles(filePath);"
-    "
+
 "'"
 ,} else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js")) {;
 if (fixMergeConflicts(filePath)) {;
@@ -48,21 +48,65 @@ fixedCount++}
     }
   });
 ;
-return fixedCount;
-}"
-"
-// Main execution;"'"
-console.log('Starting merge conflict fixes...");"
-"
+return fixedCount}
+// Main execution;
+console.log('Starting merge conflict fixes...');
+;
+// Fix files in app directory;
+const appFixed = fixAllFiles('./app');`
+console.log(`Fixed ${appFixed} files in app directory.`);
+;
+// Fix files in src directory if it exists;
+let srcFixed = 0;
+if (fs.existsSync('./src')) {;
+srcFixed = fixAllFiles('./src');`
+  console.log(`Fixed ${srcFixed} files in src directory.`)}`
+console.log(`Merge conflict fixes completed. Total files fixed: "${appFixed + srcFixed"}`);";`'";
+const fs = require("fs");
+const path = require("path")
+//Function to fix remaining merge conflicts
+function fixMergeConflicts(filePath) { 
+
+try { ;
+let content = fs.readFileSync(filePath, "utf8");
+let modified = false
+    //Fix merge conflict markers if(content.includes("
+
 // Fix files in app directory;"'"
 const appFixed = fixAllFiles('./app");
 console.log(`Fixed ${appFixed,} files in app directory.`);
-"
-// Fix files in src directory if it exists;"
-let srcFixed = 0;"'"
-if (fs.existsSync('./src")) {;"'"
-srcFixed = fixAllFiles('./src");
-  console.log(`Fixed ${srcFixed,} files in src directory.`);"
-}"
-;"
-console.log(`Merge conflict fixes completed. Total files fixed: "${appFixed + srcFixed",}`);")'"
+
+//Function to find and fix all files with merge conflicts
+function fixAllFiles(dir) {;
+const files = fs.readdirSync(dir);
+let fixedCount = 0
+
+files.forEach(file = > {
+);
+const filePath = path.join(dir, file);
+const stat = fs.statSync(filePath)
+
+if (stat.isDirectory() && !file.startsWith(".") && file !== "node_modules") {
+fixedCount+= fixAllFiles(filePath) else if (file.endsWith(".tsx") || file.endsWith(".ts") || file.endsWith(".jsx") || file.endsWith(".js")) {
+if (fixMergeConflicts(filePath)) {
+fixedCount++
+      }
+    }
+  })
+
+return fixedCount
+}
+
+//Main execution console.log("Starting merge conflict fixes...")
+//Fix files in app directory;
+const appFixed = fixAllFiles("./app")
+console.log(`Fixed${appFixed} files in app directory.`)
+//Fix files in src directory if it exists;
+let srcFixed = 0
+if (fs.existsSync("./src")) {
+srcFixed = fixAllFiles("./src")
+  console.log(`Fixed${srcFixed} files in src directory.`)
+}
+
+console.log(`Merge conflict fixes completed. Total files fixed: "${appFixed+srcFixed"}`)
+))

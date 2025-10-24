@@ -1,6 +1,6 @@
 import React from 'react';
-import { ArrowRight, Brain, Mail, CheckCircle, Zap, TrendingUp, Send, BarChart3, Shield, DollarSign, Clock, Star } from 'lucide-react";"
-import Link from 'next/link";"
+import { ArrowRight, Brain, Mail, CheckCircle, Zap, TrendingUp, Send, BarChart3, Shield, DollarSign, Clock, Star } from 'lucide-react;
+import Link from 'next/link;
 import type { Metadata  } from "next";'"
   "title": 'AI Email Automation - Smart Email Marketing | Zion Tech Group'"
   "description": 'Revolutionary AI-powered email automation with, content, generation, smart, segmentation, and performance analytics. Increase revenue by 300% and save 20+ hours per week.'"
@@ -70,6 +70,6 @@ import type { Metadata  } from "next";'"
     "avatar": 'LC'"
     { "number": '300%', "label": 'Revenue Increase'"
     { "number": '150%', "label": 'Conversion Boost'"
-    { "number": '20 hrs', "label": 'Time Saved/Week";"'"
+    { "number": '20 hrs', "label": 'Time Saved/Week";'"
     { "number": '95%', "label": 'Deliverability Rate'
 }}}}'"

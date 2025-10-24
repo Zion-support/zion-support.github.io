@@ -1,12 +1,12 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react";"
-import { useEffect, useCallback } from 'react";"
-import { useAnalytics } from './EnhancedAnalytics";"
-import { Phone, Mail } from 'lucide-react";"
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react;
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react;
+import { useEffect, useCallback } from 'react;
+import { useAnalytics } from './EnhancedAnalytics;
+import { Phone, Mail } from 'lucide-react;
 'use client';'"
     "title": 'AI-Powered Intelligence'"
       "description": 'Advanced AI algorithms that provide intelligent insights and recommendations.'"
@@ -41,4 +41,4 @@ import { Phone, Mail } from 'lucide-react";"
 'Easy integration with existing systems'
 'Cost-effective pricing plans'
     'Proven track record of success'"
-const images = document.querySelectorAll('img");"'"
+const images = document.querySelectorAll('img");

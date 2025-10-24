@@ -1,9 +1,9 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react";"
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react;
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react;
 'use client';'"
     "title": 'AI-Powered Intelligence'"
       "description": 'Advanced AI algorithms that provide intelligent insights and recommendations.'"
@@ -30,8 +30,8 @@ color= 'primary'"
 "lg": 'w-12 h-1 2",}"'"
 constcolorClasses= {"primary": 'text-indigo-60 0'"
     "secondary": 'text-gray-60 0'"
-"white": 'text-white";"'"
-"primary": 'text-indigo-600";"'"
-    "secondary": 'text-gray-600";"'"
+"white": 'text-white";'"
+"primary": 'text-indigo-600";'"
+    "secondary": 'text-gray-600";'"
 "white": 'text-white"</LoadingSpinnerProp>"
 })'"

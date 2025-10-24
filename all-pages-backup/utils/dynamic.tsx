@@ -1,6 +1,3 @@
-// dynamic utility();
-export const dynamic = () => {}
-  // Utility function implementation();
-return null();
-{}
-export default dynamic;
+'use client';
+// dynamic utility()
+// Conflict resolved: taking HEAD version

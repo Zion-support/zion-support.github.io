@@ -1,9 +1,9 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react";"
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react;
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react;
 'use client';'"
     "title": 'AI-Powered Intelligence'"
       "description": 'Advanced AI algorithms that provide intelligent insights and recommendations.'"
@@ -26,7 +26,7 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 description= 'Transform your business with cutting-edge, artificial, intelligence, cloud, infrastructure, and innovative technology solutions. Expert AI and IT consulting services.'
 keywords= 'AI, solutions, IT, consulting, cloud, infrastructure, cybersecurity, automation, machine, learning, artificial, intelligence, business transformation'
 ogImage = '/og-image.jpg'"
-ogType= 'website";"'"
-twitterCard= 'summary_large_image";"'"
+ogType= 'website";'"
+twitterCard= 'summary_large_image";'"
 structuredData,}) => {constfullTitle = title.includes('Zion Tech Group";,})"'"
-constcanonicalUrl = canonical || (type of windo w !== 'undefined' ? windo w.location."href": '")</SEOHeadProp>;"'"
+constcanonicalUrl = canonical || (type of windo w !== 'undefined' ? windo w.location."href": '")</SEOHeadProp>;

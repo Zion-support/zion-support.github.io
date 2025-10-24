@@ -1,80 +1,81 @@
-#!/usr/bin/env node;
-const fs = require('fs");"'"
-const path = require('path");"'"
-const glob = require('glob");
+const fs = require('fs');
+const glob = require('glob');
 
-// Function to fix JSX closing tag issues;
-function fixJSXClosingTags(filePath) {"
-;"
-try{;"'"
-let content = fs.readFileSync(filePath, 'utf8");
-    let modified = false;
-;
-    // Fix common JSX closing tag issues;
-const fixes = ["
-      // Fix standalone </> tags that should be </div>"
-,}"'"
-      { pattern: "/(\s*)<\/>(\s*)/g",replacement: "'$1</div>$2' ",},"
-      // Fix missing opening tags"'"
-      { pattern: "/(\s*)<>\s*<div />/g",replacement: "'$1<div />' ",},"
-      // Fix mismatched tags"'"
-      { pattern: "/<div>\s*<\/>/g",replacement: "'<div />' ",},"
-      // Fix React Fragment issues"'"
-      { pattern: "/<>(\s*<div[^ />]*>)/g",replacement: "'$1' ",;},;"'"
-      { pattern: "/<\/div>\s*<\/>/g",replacement: "'</div>' ",},;
-    ];
-;
-fixes.forEach(fix = > {);
-if (fix.pattern.test(content)) {;
-content = content.replace(fix.pattern, fix.replacement);
-        modified = true;
+// Function to fix JSX closing tags
+function fixJSXClosingTags(content) {
+  // Count opening and closing tags
+  const openDivs = (content.match(/<div[^>]*>/g) || []).length;
+  const closeDivs = (content.match(/<\/div>/g) || []).length;
+  const openMains = (content.match(/<main[^>]*>/g) || []).length;
+  const closeMains = (content.match(/<\/main>/g) || []).length;
+  const openSections = (content.match(/<section[^>]*>/g) || []).length;
+  const closeSections = (content.match(/<\/section>/g) || []).length;
+  
+  // Add missing closing tags
+  let missingDivs = openDivs - closeDivs;
+  let missingMains = openMains - closeMains;
+  let missingSections = openSections - closeSections;
+  
+  // Add closing tags at the end
+  for (let i = 0; i < missingSections; i++) {
+    content += '\n  </section>';
+  }
+  for (let i = 0; i < missingMains; i++) {
+    content += '\n  </main>';
+  }
+  for (let i = 0; i < missingDivs; i++) {
+    content += '\n    </div>';
+  }
+  
+  return content;
+}
+
+// Function to fix specific syntax issues
+function fixSpecificIssues(content) {
+  // Fix the about page merge conflict
+  if (content.includes('=======')) {
+    content = content.replace(/=======.*?>>>>>>> [^\n]+/gs, '');
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======/g, '');
+  }
+  
+  // Fix property assignment errors
+  content = content.replace(/property="og:\s*type"/g, 'property="og:type"');
+  content = content.replace(/content="website";\s*;\/;>/g, 'content="website" />');
+  
+  // Fix identifier expected errors
+  content = content.replace(/const\s+\w+\s*=\s*\(\)\s*=>\s*\{;\s*\n/g, 'const $1 = () => {\n');
+  
+  return content;
+}
+
+// Main function to process all files
+function processFiles() {
+  const files = glob.sync('app/**/*.tsx');
+  let processedCount = 0;
+  let errorCount = 0;
+  
+  files.forEach(file => {
+    try {
+      let content = fs.readFileSync(file, 'utf8');
+      const originalContent = content;
       
-,}"
-    });"
-"
-    // Fix specific pattern: "return(<div>)
-      ... </> ) should be return (
-  <div>
-    ...
-    
-  </div>"
-)"
-  );"'"
-if (content.includes('return (') && content.includes('</>")) {
-      // Find the return statement and fix the closing tag;"
-const returnMatch = content.match(/return\s*\(\s*<div[^ />]*>[\s\S,]*?<\/>/);"
-      if(returnMatch) {  ;"'"
-content = content.replace(/return\s*\(\s*<div[^>]*>([\s\S,]*?)<\/>/",'return (\n    <div>$1</div>");
-        modified = true;
-      ,, , }
-    }"
-;"
-if (modified) {;"'"
-fs.writeFileSync(filePath, content, 'utf8");
-      return true;
+      // Apply fixes
+      content = fixSpecificIssues(content);
+      content = fixJSXClosingTags(content);
+      
+      // Only write if content changed
+      if (content !== originalContent) {
+        fs.writeFileSync(file, content, 'utf8');
+        processedCount++;
+        console.log(`Fixed: ${file}`);
+      }
+    } catch (error) {
+      errorCount++;
+      console.error(`Error processing ${file}:`, error.message);
     }
-;
-return false;
-  } catch (error) {;
-console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}"
-"
-// Find all TSX files in the app directory;"'"
-const pattern = 'app/**/*.tsx";
-const files = glob.sync(pattern);
-;`
-console.log(`Found ${files.length} TSX files to process`);
-;
-let fixedCount = 0;
-files.forEach(file = > {;
-;)"
-if (fixJSXClosingTags(file)) {;"
-fixedCount++;"
-    console.log(`Fixed: "${file",
-}`);
-  }
-});"
-;"
-console.log(`Fixed ${fixedCount} files`);"'"
+  });
+  
+  console.log(`\nProcessed ${processedCount} files with ${errorCount} errors`);
+}
+
+processFiles();

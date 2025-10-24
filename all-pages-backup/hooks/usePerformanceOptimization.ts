@@ -1,3 +1,3 @@
 'use client';
-      // Add loading = "lazy;"
-      // Add decoding="async;"
+      // Add loading = "lazy;
+      // Add decoding="async;

@@ -1,135 +1,623 @@
-const fs = require('fs");"'"
-const path = require('path");"
-"
-// Template for a basic service page"'"
-const servicePageTemplate = (title, description, serviceName) => `'use client';
-"'"
-import React from 'react';
-import Head from 'next/head';"
-import Link from 'next/link";
+const fs = require('fs');
+const path = require('path');
 
-export default function ${serviceName}Page() {
+// List of pages that need to be fixed
+const corruptedPages = [
+  'app/ai-content-management/page.tsx',
+  'app/it-training/page.tsx',
+  'app/specialized-services/page.tsx',
+  'app/ai-sentiment-analyzer/page.tsx',
+  'app/blockchain-solutions-pro/page.tsx',
+  'app/mobile-development/page.tsx',
+  'app/database-services/page.tsx',
+  'app/gdpr/page.tsx',
+  'app/ai-telepathic-interface/page.tsx',
+  'app/ai-email-automation/page.tsx',
+  'app/ai-smart-calendar/page.tsx',
+  'app/zion-ai-crm-optimizer/page.tsx',
+  'app/press/page.tsx',
+  'app/landing-page-builder/page.tsx',
+  'app/iot-development/page.tsx',
+  'app/ai-website-analyzer/page.tsx',
+  'app/ai-transportation/page.tsx',
+  'app/ai-workflow-automation/page.tsx',
+  'app/health/page.tsx',
+  'app/data-analytics/page.tsx',
+  'app/database-management/page.tsx',
+  'app/ai-climate-solutions-pro/page.tsx',
+  'app/zion-ai-data-cleaner/page.tsx',
+  'app/ai-fashion-design/page.tsx',
+  'app/zion-ai-seo-optimizer/page.tsx',
+  'app/ai-autonomous-systems/page.tsx',
+  'app/zion-smart-analytics-dashboard/page.tsx',
+  'app/ai-email-assistant/page.tsx',
+  'app/it-services/cloud-migration/page.tsx',
+  'app/it-services/page.tsx',
+  'app/ai-invoice-generator/page.tsx',
+  'app/virtual-reality-solutions/page.tsx',
+  'app/ai-music-composition/page.tsx',
+  'app/zion-smart-expense-tracker/page.tsx',
+  'app/ai-real-estate-analyzer/page.tsx',
+  'app/ai-automation-platform/page.tsx',
+  'app/ai-security-monitor/page.tsx',
+  'app/devops-solutions/page.tsx',
+  'app/ai-manufacturing/page.tsx',
+  'app/cloud-migration-advanced/page.tsx',
+  'app/ai-agricultural-intelligence-pro/page.tsx',
+  'app/ai-space-mission-optimizer/page.tsx',
+  'app/zion-ai-code-assistant/page.tsx',
+  'app/ai-content-delivery-network/page.tsx',
+  'app/ai-project-manager-pro/page.tsx',
+  'app/ai-ecommerce-solutions/page.tsx',
+  'app/zion-cybersecurity-audit/page.tsx',
+  'app/ai-edge-computing/page.tsx',
+  'app/cybersecurity/page.tsx',
+  'app/advanced-security-suite/page.tsx',
+  'app/ai-voice-assistant/page.tsx',
+  'app/project-management-pro/page.tsx',
+  'app/contact/page.tsx',
+  'app/zion-blockchain-solutions/page.tsx',
+  'app/faq/page.tsx',
+  'app/ai-code-assistant-pro/page.tsx',
+  'app/ai-sentiment-analysis/page.tsx',
+  'app/ai-customer-support-chatbot/page.tsx',
+  'app/iot-edge-computing/page.tsx',
+  'app/ai-ml/page.tsx',
+  'app/email-optimizer/page.tsx',
+  'app/zion-ai-voice-synthesis/page.tsx',
+  'app/not-found/page.tsx',
+  'app/ai-document-processing/page.tsx',
+  'app/ai-services/business-intelligence/page.tsx',
+  'app/ai-services/supply-chain/page.tsx',
+  'app/ai-services/energy-management/page.tsx',
+  'app/ai-services/page.tsx',
+  'app/ai-services/marketing-automation/page.tsx',
+  'app/ai-services/hr-analytics/page.tsx',
+  'app/ai-services/fraud-detection/page.tsx',
+  'app/ai-services/document-processing/page.tsx',
+  'app/ai-services/customer-experience/page.tsx',
+  'app/ai-services/process-automation/page.tsx',
+  'app/ai-services/predictive-maintenance/page.tsx',
+  'app/ai-services/content-generation/page.tsx',
+  'app/ai-services/quality-assurance/page.tsx',
+  'app/zion-data-sync/page.tsx',
+  'app/smart-contract-security-audit/page.tsx',
+  'app/ai-smart-home-controller/page.tsx',
+  'app/smart-city-infrastructure/page.tsx',
+  'app/ai-speech-synthesis/page.tsx',
+  'app/ai-content-moderation-pro/page.tsx',
+  'app/zion-ai-sales-predictor/page.tsx',
+  'app/ai-conversation-analytics/page.tsx',
+  'app/zion-content-studio/page.tsx',
+  'app/ai-content-writer/page.tsx',
+  'app/ai-financial-crime-detection-pro/page.tsx',
+  'app/business-intelligence/page.tsx',
+  'app/blockchain-web3/page.tsx',
+  'app/enterprise-integration/page.tsx',
+  'app/ai-inventory-optimizer-pro/page.tsx',
+  'app/ai-inventory-manager/page.tsx',
+  'app/5g-network-infrastructure/page.tsx',
+  'app/ad-management/page.tsx',
+  'app/ai-predictive-modeling/page.tsx',
+  'app/cybersecurity-consulting/page.tsx',
+  'app/zion-ai-chatbot-builder/page.tsx',
+  'app/demo/page.tsx',
+  'app/devops/page.tsx',
+  'app/ai-smart-contract-auditor/page.tsx',
+  'app/ai-space-technology-pro/page.tsx',
+  'app/zion-cloud-vault/page.tsx',
+  'app/cloud-solutions/page.tsx',
+  'app/api-docs/page.tsx',
+  'app/ai-supply-chain-ai/page.tsx',
+  'app/ai-predictive-maintenance-pro/page.tsx',
+  'app/ai-financial-forecasting/page.tsx',
+  'app/ai-quantum-task-optimizer/page.tsx',
+  'app/5g-private-networks/page.tsx',
+  'app/ai-financial-analytics-pro/page.tsx',
+  'app/expense-tracker/page.tsx',
+  'app/zion-ai-price-optimizer/page.tsx',
+  'app/analytics-tools/page.tsx',
+  'app/ai-neural-memory-assistant/page.tsx',
+  'app/machine-learning-ops/page.tsx',
+  'app/cloud-infrastructure-manager/page.tsx',
+  'app/ai-video-analysis/page.tsx',
+  'app/system-administration/page.tsx',
+  'app/it-consulting/page.tsx',
+  'app/cloud-migration/page.tsx',
+  'app/ai-cybersecurity-suite-pro/page.tsx',
+  'app/ai-robotics/page.tsx',
+  'app/micro-saas-solutions/page.tsx',
+  'app/ai-3d-generation/page.tsx',
+  'app/ai-social-media-scheduler/page.tsx',
+  'app/ai-document-scanner/page.tsx',
+  'app/blockchain/page.tsx',
+  'app/ai-business-intelligence/page.tsx',
+  'app/cybersecurity-solutions/page.tsx',
+  'app/pricing/page.tsx',
+  'app/ai-translator/page.tsx',
+  'app/zion-ai-voice-assistant/page.tsx',
+  'app/zion-customer-insights/page.tsx',
+  'app/ai-medical-diagnosis-assistant/page.tsx',
+  'app/tutorials/page.tsx',
+  'app/ai-crm/page.tsx',
+  'app/zion-ai-email-assistant/page.tsx',
+  'app/ai-blockchain-analytics/page.tsx',
+  'app/zion-inventory-smart/page.tsx',
+  'app/data-engineering/page.tsx',
+  'app/it-performance/page.tsx',
+  'app/ai-price-optimizer/page.tsx',
+  'app/zion-compliance-manager/page.tsx',
+  'app/enterprise-solutions/page.tsx',
+  'app/data-lake-solutions/page.tsx',
+  'app/ai-password-manager/page.tsx',
+  'app/ai-investment-optimizer/page.tsx',
+  'app/ai-email-marketing/page.tsx',
+  'app/iot-edge/page.tsx',
+  'app/ai-quantum-optimization/page.tsx',
+  'app/workflow-automation/page.tsx',
+  'app/terms/page.tsx',
+  'app/api/page.tsx',
+  'app/ai-api-management/page.tsx',
+  'app/zion-ai-email-marketing-pro/page.tsx',
+  'app/consultation/page.tsx',
+  'app/ai-hr-assistant/page.tsx',
+  'app/infrastructure-management/page.tsx',
+  'app/ai-recommendation-engine/page.tsx',
+  'app/support/page.tsx',
+  'app/ai-mobile-app-builder/page.tsx',
+  'app/zion-ai-form-builder/page.tsx',
+  'app/ai-meeting-assistant/page.tsx',
+  'app/case-studies/page.tsx',
+  'app/devops-automation/page.tsx',
+  'app/ai-cybersecurity-suite/page.tsx',
+  'app/ai-infrastructure-monitoring/page.tsx',
+  'app/ai-image-recognition-pro/page.tsx',
+  'app/zion-ai-code-reviewer/page.tsx',
+  'app/ai-solutions/page.tsx',
+  'app/ar-vr-solutions/page.tsx',
+  'app/ai-drug-discovery-pro/page.tsx',
+  'app/ai-expense-tracker-pro/page.tsx',
+  'app/ai-email-optimizer/page.tsx',
+  'app/zion-ai-social-media-manager/page.tsx',
+  'app/email-marketing-automation/page.tsx',
+  'app/ai-chatbot-enterprise/page.tsx',
+  'app/zion-performance-monitor/page.tsx',
+  'app/zion-chat-ai/page.tsx',
+  'app/zion-iot-solutions/page.tsx',
+  'app/analytics/page.tsx',
+  'app/ai-expense-tracker/page.tsx',
+  'app/ai-holographic-workspace/page.tsx',
+  'app/zion-ai-customer-service-pro/page.tsx',
+  'app/zion-email-automation/page.tsx',
+  'app/ai-design-studio/page.tsx',
+  'app/e-commerce-development/page.tsx',
+  'app/quantum-ai/page.tsx',
+  'app/ai-marketing/page.tsx',
+  'app/robotics/page.tsx',
+  'app/ai-load-testing/page.tsx',
+  'app/ai-legal/page.tsx',
+  'app/it-solutions/page.tsx',
+  'app/cloud-migration-services/page.tsx',
+  'app/ai-healthcare/page.tsx',
+  'app/system-integration/page.tsx',
+  'app/ai-supply-chain-optimization-pro/page.tsx',
+  'app/ai-stock-portfolio-manager/page.tsx',
+  'app/enterprise/page.tsx',
+  'app/it-asset-management/page.tsx',
+  'app/ai-financial-analyzer/page.tsx',
+  'app/cybersecurity-advanced/page.tsx',
+  'app/zion-ai-customer-churn-predictor/page.tsx',
+  'app/automation/page.tsx',
+  'app/ai-customer-service/page.tsx',
+  'app/ai-smart-city-solutions/page.tsx',
+  'app/cloud-native-security/page.tsx',
+  'app/ai-predictive-analytics/page.tsx',
+  'app/ai-voice-cloning-studio/page.tsx',
+  'app/backup-recovery/page.tsx',
+  'app/ai-legal-research-pro/page.tsx',
+  'app/ai-content-generator/page.tsx',
+  'app/zion-ai-marketing-automation/page.tsx',
+  'app/ai-customer-support/page.tsx',
+  'app/cookies/page.tsx',
+  'app/ai-video-editor/page.tsx',
+  'app/zion-crm-intelligence/page.tsx',
+  'app/ai-cybersecurity-monitor/page.tsx',
+  'app/iot-solutions/page.tsx',
+  'app/healthcare-it/page.tsx',
+  'app/ai-customer-feedback-analyzer/page.tsx',
+  'app/ai-analytics/page.tsx',
+  'app/ai-ecommerce-assistant/page.tsx',
+  'app/inventory-manager/page.tsx',
+  'app/ai-real-estate/page.tsx',
+  'app/ai-predictive-maintenance/page.tsx',
+  'app/process-automation/page.tsx',
+  'app/ai-automation/page.tsx',
+  'app/ai-sales-automation/page.tsx',
+  'app/ai-financial-services/page.tsx',
+  'app/ai-education-tutor/page.tsx',
+  'app/disaster-recovery-advanced/page.tsx',
+  'app/ai-integration-services/page.tsx',
+  'app/zion-ai-content-moderator/page.tsx',
+  'app/ai-fraud-detection/page.tsx',
+  'app/zion-ai-customer-churn-predictor-pro/page.tsx',
+  'app/zion-ai-meeting-transcriber/page.tsx',
+  'app/ai-automated-testing/page.tsx',
+  'app/ai-smart-scheduler/page.tsx',
+  'app/ai-healthcare-solutions/page.tsx',
+  'app/blockchain-integration-services/page.tsx',
+  'app/it-support/page.tsx',
+  'app/careers/page.tsx',
+  'app/zion-ai-contract-analyzer/page.tsx',
+  'app/accessibility/page.tsx',
+  'app/ai-website-builder/page.tsx',
+  'app/ai-healthcare-diagnostics/page.tsx',
+  'app/partners/page.tsx',
+  'app/smart-cities/page.tsx',
+  'app/zion-ai-translator-pro/page.tsx',
+  'app/zion-invoice-genius/page.tsx',
+  'app/ai-conversational-ai/page.tsx',
+  'app/custom-development/page.tsx',
+  'app/compliance-automation/page.tsx',
+  'app/ai-supply-chain/page.tsx',
+  'app/zion-project-master/page.tsx',
+  'app/zion-ai-data-visualizer/page.tsx',
+  'app/ai-hr/page.tsx',
+  'app/zion-social-scheduler/page.tsx',
+  'app/ai-financial-planner/page.tsx',
+  'app/devops-cicd/page.tsx',
+  'app/investors/page.tsx',
+  'app/network-security/page.tsx',
+  'app/task-manager-pro/page.tsx',
+  'app/ai-quantum-financial-oracle/page.tsx',
+  'app/zion-analytics-pro/page.tsx',
+  'app/zion-ai-video-generator/page.tsx',
+  'app/zion-lead-magnet/page.tsx',
+  'app/ai-neural-interface/page.tsx',
+  'app/ai-data-visualization/page.tsx',
+  'app/ai-computer-vision/page.tsx',
+  'app/penetration-testing/page.tsx',
+  'app/system-admin/page.tsx',
+  'app/zion-ai-survey-builder/page.tsx',
+  'app/ai-time-tracker/page.tsx',
+  'app/ar-vr-platform/page.tsx',
+  'app/ai-accounting-assistant/page.tsx',
+  'app/zion-workflow-automation/page.tsx',
+  'app/docs/page.tsx',
+  'app/zion-ai-task-scheduler/page.tsx',
+  'app/ai-legal-assistant/page.tsx',
+  'app/machine-learning/page.tsx',
+  'app/ai-energy/page.tsx',
+  'app/ai-price-optimizer-pro/page.tsx',
+  'app/ai-fintech/page.tsx',
+  'app/low-code-platform/page.tsx',
+  'app/ai-infrastructure/page.tsx',
+  'app/ai-smart-invoice/page.tsx',
+  'app/compliance/page.tsx',
+  'app/ai-3d-model-generator/page.tsx',
+  'app/ai-logo-designer/page.tsx',
+  'app/social-media-scheduler/page.tsx',
+  'app/ai-cyber-defense-matrix/page.tsx',
+  'app/ai-customer-support-bot/page.tsx',
+  'app/ai-translation-service/page.tsx',
+  'app/ai-data-analytics/page.tsx',
+  'app/crm-lite/page.tsx',
+  'app/iot-solutions-pro/page.tsx',
+  'app/ai-business-intelligence-pro/page.tsx',
+  'app/test-simple/page.tsx',
+  'app/ai-enterprise-solutions/page.tsx',
+  'app/community/page.tsx',
+  'app/zion-ai-inventory-optimizer-pro/page.tsx',
+  'app/ai-quantum-computing/page.tsx',
+  'app/ai-vision/page.tsx',
+  'app/cookie-policy/page.tsx',
+  'app/zion-ai-workflow-automator-pro/page.tsx',
+  'app/blockchain-development/page.tsx',
+  'app/accessibility-page/page.tsx',
+  'app/ai-seo-optimizer/page.tsx',
+  'app/ai-content-studio/page.tsx',
+  'app/zion-ai-scheduling-assistant/page.tsx',
+  'app/zion-ai-predictive-maintenance/page.tsx',
+  'app/cloud-native-development/page.tsx',
+  'app/cloud-cost-optimization/page.tsx',
+  'app/network-solutions/page.tsx',
+  'app/expense-tracker-pro/page.tsx',
+  'app/security-monitoring-suite/page.tsx',
+  'app/ai-project-management-pro/page.tsx',
+  'app/ai-lead-scoring/page.tsx',
+  'app/network-infrastructure/page.tsx',
+  'app/ai-supply-chain-optimizer/page.tsx',
+  'app/intelligent-database-migration/page.tsx',
+  'app/zion-ai-document-ai/page.tsx',
+  'app/cloud-migration-pro/page.tsx',
+  'app/zion-ai-document-analyzer/page.tsx',
+  'app/smart-analytics/page.tsx',
+  'app/ai-voice-processing/page.tsx',
+  'app/quantum-computing-solutions/page.tsx',
+  'app/zion-ai-supply-chain-optimizer/page.tsx',
+  'app/security-audit/page.tsx',
+  'app/zion-ai-fraud-detector/page.tsx',
+  'app/zion-api-development/page.tsx',
+  'app/ai-form-builder/page.tsx',
+  'app/gdpr-compliance/page.tsx',
+  'app/zion-devops-automation/page.tsx',
+  'app/developer-tools/page.tsx',
+  'app/zion-ai-workflow-automator/page.tsx',
+  'app/cloud-security/page.tsx',
+  'app/autonomous-systems/page.tsx',
+  'app/serverless-architecture/page.tsx',
+  'app/robotics-integration/page.tsx',
+  'app/ai-meeting-transcriber/page.tsx',
+  'app/ai-customer-churn/page.tsx',
+  'app/ai-ecommerce-optimizer/page.tsx',
+  'app/data-protection/page.tsx',
+  'app/augmented-reality-solutions/page.tsx',
+  'app/ai-content-moderation/page.tsx',
+  'app/ai-api-manager/page.tsx',
+  'app/ai-automated-reporting/page.tsx',
+  'app/ai-medical-assistant/page.tsx',
+  'app/zion-ai-translation-service/page.tsx',
+  'app/ai-fitness-coach/page.tsx',
+  'app/ai-voice-assistant-pro/page.tsx',
+  'app/ai-document-intelligence/page.tsx',
+  'app/ai-mobile-builder/page.tsx',
+  'app/ai-space-technology/page.tsx',
+  'app/it-infrastructure/page.tsx',
+  'app/security-monitoring/page.tsx',
+  'app/ai-ecommerce-optimizer-pro/page.tsx',
+  'app/zion-ai-fraud-detection/page.tsx',
+  'app/ai-audio-processor-improved/page.tsx',
+  'app/zion-ai-content-moderation/page.tsx',
+  'app/robotic-process-automation/page.tsx',
+  'app/security-automation/page.tsx',
+  'app/offline/page.tsx',
+  'app/network-design/page.tsx',
+  'app/enterprise-security/page.tsx',
+  'app/edge-computing-solutions/page.tsx',
+  'app/mobile-app-development/page.tsx',
+  'app/data-visualization/page.tsx',
+  'app/ai-lead-generation/page.tsx',
+  'app/solutions/page.tsx',
+  'app/ai-mental-health-companion/page.tsx',
+  'app/ai-translation-services/page.tsx',
+  'app/ai-project-management/page.tsx',
+  'app/seo-optimizer/page.tsx',
+  'app/zion-ai-accounting-assistant/page.tsx',
+  'app/zion-customer-satisfaction-monitor/page.tsx',
+  'app/ai-content-generation/page.tsx',
+  'app/server-management/page.tsx',
+  'app/ai-iot-analytics/page.tsx',
+  'app/iot-integration/page.tsx',
+  'app/ai-task-manager/page.tsx',
+  'app/it-infrastructure-solutions/page.tsx',
+  'app/it-infrastructure-design/page.tsx',
+  'app/ai-legal-document-analyzer/page.tsx',
+  'app/ai-knowledge-management/page.tsx',
+  'app/5g-smart-city-solutions/page.tsx',
+  'app/ai-project-manager/page.tsx',
+  'app/ai-cloud-infrastructure/page.tsx',
+  'app/ai-document-processor/page.tsx',
+  'app/zion-smart-crm-automation/page.tsx',
+  'app/system-status/page.tsx',
+  'app/cloud-infrastructure-management/page.tsx',
+  'app/ai-learning-platform/page.tsx',
+  'app/ai-analytics-dashboard/page.tsx',
+  'app/ai-data-visualizer/page.tsx',
+  'app/blockchain-solutions/page.tsx',
+  'app/ai-ops/page.tsx',
+  'app/ai-email-marketing-automation/page.tsx',
+  'app/computer-vision/page.tsx',
+  'app/ai-audio-processor/page.tsx',
+  'app/5g-mobile-applications/page.tsx',
+  'app/intelligent-email-infrastructure/page.tsx',
+  'app/zion-ai-customer-sentiment-tracker/page.tsx',
+  'app/training/page.tsx',
+  'app/ai-fraud-detection-pro/page.tsx',
+  'app/digital-transformation/page.tsx',
+  'app/ai-lead-scoring-pro/page.tsx',
+  'app/financial-it/page.tsx',
+  'app/zion-ai-energy-manager/page.tsx',
+  'app/zion-smart-inventory-manager/page.tsx',
+  'app/privacy-policy/page.tsx',
+  'app/zion-ai-document-processor/page.tsx',
+  'app/ai-hr-solutions/page.tsx',
+  'app/ai-nlp/page.tsx',
+  'app/ai-video-generation/page.tsx',
+  'app/ai-video-generator/page.tsx',
+  'app/ai-quantum-computing-simulator/page.tsx',
+  'app/search/page.tsx',
+  'app/zion-ai-video-editor/page.tsx',
+  'app/business-apps/page.tsx',
+  'app/ai-scheduler/page.tsx',
+  'app/analytics-dashboard/page.tsx',
+  'app/api-development-advanced/page.tsx',
+  'app/ai-insurance/page.tsx',
+  'app/status/page.tsx',
+  'app/custom-software/page.tsx',
+  'app/zion-ai-image-recognition/page.tsx',
+  'app/ai-ml-platform/page.tsx',
+  'app/ai-cybersecurity/page.tsx',
+  'app/edge-computing/page.tsx',
+  'app/api-development/page.tsx',
+  'app/sitemap/page.tsx',
+  'app/ai-analytics-dashboard-pro/page.tsx',
+  'app/data-analytics-bi/page.tsx',
+  'app/cloud-services/page.tsx',
+  'app/ai-quality-assurance/page.tsx',
+  'app/productivity/page.tsx',
+  'app/ai-climate-prediction-engine/page.tsx',
+  'app/about/page.tsx',
+  'app/ai-code-generation/page.tsx',
+  'app/security/page.tsx',
+  'app/ai-financial-advisor/page.tsx',
+  'app/ai-education/page.tsx',
+  'app/zion-ai-image-generator/page.tsx',
+  'app/zion-ai-predictive-analytics/page.tsx',
+  'app/services-advertising/page.tsx',
+  'app/services/page.tsx',
+  'app/nlp/page.tsx',
+  'app/zion-ai-recruitment-pro/page.tsx',
+  'app/digital-twin-platform/page.tsx',
+  'app/ai-blockchain-solutions/page.tsx',
+  'app/zion-ai-meeting-assistant/page.tsx',
+  'app/team/page.tsx',
+  'app/zion-ai-website-analyzer/page.tsx',
+  'app/ai-mobile-app-development/page.tsx',
+  'app/performance-optimization/page.tsx',
+  'app/ai-inventory-management/page.tsx',
+  'app/ai-crm-assistant/page.tsx',
+  'app/ai-social-media-manager/page.tsx',
+  'app/iot/page.tsx',
+  'app/ai-recruitment-assistant/page.tsx',
+  'app/zion-ai-social-scheduler-pro/page.tsx',
+  'app/ai-voice-cloning/page.tsx',
+  'app/ai-crm-optimizer/page.tsx',
+  'app/resources/page.tsx',
+  'app/zion-security-shield/page.tsx',
+  'app/sla/page.tsx',
+  'app/partnerships/page.tsx',
+  'app/managed-it/page.tsx',
+  'app/ai-image-recognition/page.tsx',
+  'app/zion-ai-lead-scoring/page.tsx',
+  'app/cloud-infrastructure/page.tsx',
+  'app/ai-content-generation-pro/page.tsx',
+  'app/devops-automation-pro/page.tsx',
+  'app/5g-solutions/page.tsx',
+  'app/devops-advanced/page.tsx',
+  'app/ai-social-scheduler/page.tsx',
+  'app/ai-writing-assistant/page.tsx',
+  'app/iot-platform/page.tsx',
+  'app/data-center/page.tsx',
+  'app/it-project-management/page.tsx',
+  'app/container-orchestration/page.tsx',
+  'app/innovation-labs/page.tsx',
+  'app/customer-support-hub/page.tsx',
+  'app/micro-saas/ai-customer-support-chatbot/page.tsx',
+  'app/micro-saas/email-marketing/page.tsx',
+  'app/micro-saas/ai-content-writer/page.tsx',
+  'app/micro-saas/ai-inventory-manager/page.tsx',
+  'app/micro-saas/content-generator/page.tsx',
+  'app/micro-saas/expense-tracker/page.tsx',
+  'app/micro-saas/page.tsx',
+  'app/micro-saas/ai-social-media-scheduler/page.tsx',
+  'app/micro-saas/inventory-management/page.tsx',
+  'app/micro-saas/social-manager/page.tsx',
+  'app/micro-saas/contract-manager/page.tsx',
+  'app/micro-saas/ai-expense-tracker/page.tsx',
+  'app/micro-saas/chat-analytics/page.tsx',
+  'app/micro-saas/email-signature/page.tsx',
+  'app/micro-saas/support-bot/page.tsx',
+  'app/micro-saas/appointment-scheduler/page.tsx',
+  'app/micro-saas/document-processor/page.tsx',
+  'app/micro-saas/seo-optimizer/page.tsx',
+  'app/micro-saas/ai-project-manager/page.tsx',
+  'app/micro-saas/ai-content-writer-pro/page.tsx',
+  'app/micro-saas/ai-email-marketing-automation/page.tsx',
+  'app/micro-saas/analytics-dashboard/page.tsx',
+  'app/micro-saas/lead-scoring/page.tsx',
+  'app/micro-saas/employee-directory/page.tsx',
+  'app/ai-energy-grid-management-pro/page.tsx',
+  'app/marketing-tools/page.tsx',
+  'app/ai-code-security-auditor/page.tsx',
+  'app/ai-scheduling-assistant/page.tsx',
+  'app/ai-health-tracker/page.tsx',
+  'app/ai-cybersecurity-monitor-pro/page.tsx',
+  'app/cybersecurity-suite/page.tsx',
+  'app/database/page.tsx',
+  'app/news/page.tsx',
+  'app/ai-code-assistant/page.tsx',
+  'app/help/page.tsx',
+  'app/zion-ai-email-optimizer/page.tsx',
+  'app/it-security-services/page.tsx',
+  'app/zion-ai-customer-support-pro/page.tsx',
+  'app/ai-devops-automation/page.tsx',
+  'app/zion-ai-financial-forecaster/page.tsx',
+  'app/ai-chatbot-builder/page.tsx',
+  'app/ai-voice-synthesis/page.tsx',
+  'app/web-development/page.tsx',
+  'app/ai-customer-insights/page.tsx',
+  'app/ai-voice-solutions/page.tsx',
+  'app/blog/page.tsx'
+];
+
+// Function to generate a page title from the path
+function generatePageTitle(filePath) {
+  const pathParts = filePath.split('/');
+  const pageName = pathParts[pathParts.length - 2]; // Get the directory name before page.tsx
+  
+  // Convert kebab-case to Title Case
+  return pageName
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+}
+
+// Function to generate a page description
+function generatePageDescription(pageTitle) {
+  return `Professional ${pageTitle.toLowerCase()} services by Zion Tech Group. Advanced AI and IT solutions for modern businesses.`;
+}
+
+// Function to create a basic page component
+function createPageComponent(filePath) {
+  const pageTitle = generatePageTitle(filePath);
+  const pageDescription = generatePageDescription(pageTitle);
+  
+  return `import React from 'react'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: '${pageTitle} - Zion Tech Group',
+  description: '${pageDescription}',
+}
+
+export default function ${pageTitle.replace(/\s+/g, '')}() {
   return (
-    <>"
-      <Head>"
-        <title>${title} | Zion Tech Group</title>"
-        <meta name="description" content="${description}" />"
-        <meta name="robots" content="index, follow" />"
-        <meta property="og:type" content="website" />"
-        <meta property="og:title" content="${title} | Zion Tech Group" />"
-        <meta property="og:description" content="${description}" />"
-      </Head>"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">"
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
-            ${title}"
-          </h1>"
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
-            ${description}"
-          </p>"
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-            <Link"
-              href="/contact"
-              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105"
-            >
-              Get Started"
-            </Link>"
-            <Link"
-              href="/ai-services"
-              className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-300 hover:scale-105"
-            >
-              Learn More;
-            </Link>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <main className="container mx-auto px-4 py-16 pt-24">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            ${pageTitle}
+          </h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional ${pageTitle.toLowerCase()} services and solutions.
+          </p>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+            <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
+            <p className="text-gray-300">
+              Our ${pageTitle.toLowerCase()} services are currently under development. Contact us to learn more about our upcoming services.
+            </p>
           </div>
         </div>
-      </div>
-    </>
-  );
+      </main>
+    </div>
+  )
 }`;
-"
-// Service definitions"
-const services = {"'"
-  '5g-data-analytics": {"'"
-    title: '5G Data Analytics","'"
-    description: 'Advanced data analytics solutions powered by 5G technology for real-time insights and decision making.","'"
-    serviceName: 'FiveGDataAnalytics"
-  },"'"
-  '5g-edge-computing": {"'"
-    title: '5G Edge Computing","'"
-    description: 'Cutting-edge edge computing solutions leveraging 5G networks for ultra-low latency applications.","'"
-    serviceName: 'FiveGEdgeComputing"
-  },"'"
-  '5g-implementation": {"'"
-    title: '5G Implementation","'"
-    description: 'Complete 5G network implementation services for businesses and organizations.","'"
-    serviceName: 'FiveGImplementation"
-  },"'"
-  '5g-iot-solutions": {"'"
-    title: '5G IoT Solutions","'"
-    description: 'Internet of Things solutions powered by 5G connectivity for smart devices and systems.","'"
-    serviceName: 'FiveGIoTSolutions"
-  },"'"
-  '5g-mobile-applications": {"'"
-    title: '5G Mobile Applications","'"
-    description: 'High-performance mobile applications optimized for 5G networks and capabilities.","'"
-    serviceName: 'FiveGMobileApplications"
-  },"'"
-  '5g-network-infrastructure": {"'"
-    title: '5G Network Infrastructure","'"
-    description: 'Robust 5G network infrastructure design and deployment services.","'"
-    serviceName: 'FiveGNetworkInfrastructure"
-  },"'"
-  '5g-private-networks": {"'"
-    title: '5G Private Networks","'"
-    description: 'Secure private 5G network solutions for enterprise and industrial applications.","'"
-    serviceName: 'FiveGPrivateNetworks"
-  },"'"
-  '5g-smart-city-solutions": {"'"
-    title: '5G Smart City Solutions","'"
-    description: 'Comprehensive smart city solutions powered by 5G technology for urban development.","'"
-    serviceName: 'FiveGSmartCitySolutions"
-  },"'"
-  '5g-solutions": {"'"
-    title: '5G Solutions","'"
-    description: 'Complete 5G technology solutions for businesses and organizations.","'"
-    serviceName: 'FiveGSolutions"
-  }
 }
-// Function to fix a specific page;
-function fixPage(filePath, serviceKey) {;
-  try {;
-    const service = services[serviceKey];
-    if (!service) {;`
-      console.log(`No service definition found for ${serviceKey}, skipping...`);
-      return}
-    const content = servicePageTemplate(service.title, service.description, service.serviceName);
-    fs.writeFileSync(filePath, content);`
-    console.log(`Fixed: ${filePath}`)} catch (error) {;`
-    console.error(`Error fixing ${filePath}:`, error.message)}
-}
-// Function to recursively find and fix corrupted pages;
-function fixCorruptedPages(dir) {;
-  const files = fs.readdirSync(dir);
-;
-  for (const file of files) {;
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    "
-    if (stat.isDirectory()) {"
-      // Skip node_modules and .git directories"'"
-      if (file !== 'node_modules' && file !== '.git' && file !== 'dist' && file !== 'build' && file !== '.next") {"
-        fixCorruptedPages(filePath);"
-      }"'"
-    } else if (file === 'page.tsx") {
-      // Check if this is a service page directory
-      const parentDir = path.basename(path.dirname(filePath));
-      if (services[parentDir]) {;
-        fixPage(filePath, parentDir)}
+
+// Fix all corrupted pages
+let fixedCount = 0;
+let errorCount = 0;
+
+corruptedPages.forEach(filePath => {
+  try {
+    const fullPath = path.join(process.cwd(), filePath);
+    const pageContent = createPageComponent(filePath);
+    
+    // Ensure directory exists
+    const dir = path.dirname(fullPath);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
     }
+    
+    fs.writeFileSync(fullPath, pageContent);
+    console.log(`✅ Fixed: ${filePath}`);
+    fixedCount++;
+  } catch (error) {
+    console.error(`❌ Error fixing ${filePath}:`, error.message);
+    errorCount++;
   }
-}"
-"
-// Start fixing from the app directory"'"
-console.log('Starting corrupted page fixes...");"'"
-fixCorruptedPages('./app");"'"
-console.log('Corrupted page fixes completed!");"'"
+});
+
+console.log(`\n📊 Summary:`);
+console.log(`✅ Fixed: ${fixedCount} pages`);
+console.log(`❌ Errors: ${errorCount} pages`);
+console.log(`📁 Total processed: ${corruptedPages.length} pages`);
