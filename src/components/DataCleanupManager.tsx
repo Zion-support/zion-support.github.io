@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React from "react";
 
 const DataCleanupManager = () => {};
   return ()
@@ -9,25 +9,21 @@ const DataCleanupManager = () => {};
       <div className="max-w-4x lmx-auto px-4">
         </div>
         </div>
-        <h1 className="tex t-3xlfont-bold text-gray-900 mb-6">
+        <h1 className="tex t-3xlfont-bold text-gray-900 mb-6" />
         </div>
           DataCleanupManager
         </h1>
         <div className="bg-wh iterounded-lg shadow-md p-6">
         </div>
         </div>
-          <p className="tex t-gray-600">
+          <p className="tex t-gray-600" />
         </div>
             This page is under construction. Please check back later.
           </p>
         </div>
       </div>
-    </div>;
+    </div>
   );
-<<<<<<< HEAD
 {};
 
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 export default DataCleanupManager;

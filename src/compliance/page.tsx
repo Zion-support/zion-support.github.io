@@ -1,46 +1,32 @@
-'use client'
-<<<<<<< HEAD
 import React from 'react';
-import { ArrowLeft, FileText, Lock } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, Shield, Users } from 'lucide-react';
-import { Award } from 'lucide-react';
+import Head from "next/head";
 
-const $1: React.FC = () => {;
-  const certifications = [];
-    { name: 'SOC 2 Type II', status: 'Certified' },
-    { name: 'ISO 27001', status: 'Certified' },
-    { name: 'GDPR', status: 'Compliant' },
-    { name: 'HIPAA', status: 'Compliant' },
-=======
-import React from 'react'
-import { Users, FileText, Lock, ArrowLeft } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { Users, FileText, Lock, ArrowLeft } from 'lucide-react'
-import { Users, FileText, Lock, ArrowLeft } from 'lucide-react'
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
-const $1: React.FC = () => {
-  const certifications = []
-    { name: 'SOC 2 Type II', status: 'Certified' }
-    { name: 'ISO 27001', status: 'Certified' }
-    { name: 'GDPR', status: 'Compliant' }
-    { name: 'HIPAA', status: 'Compliant' }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
-    { name: 'PCI DSS', status: 'Compliant' }
-  ]
-
-const Page = () => {};
-  return ()
+export default function CompliancePage() {
+  return (
+    <>
+:all-pages-backup/compliance/page.tsx
+      <title>Compliance - Zion Tech Group</title>
+        <meta name="description" content="Professional compliance services by Zion Tech Group." />
+      
+        <Head>
+        <title>Compliance - Zion Tech Group</title>
+        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
+      
+      
+      <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="con tainermx-auto px-4 py-16">
+          <h1 className="tex t-4xlfont-bold text-white mb-6">Compliance</h1>
+          <p className="tex t-lgtext-gray-300 mb-8">Professional compliance services by Zion Tech Group.</p>
+          
+          <Link href="/contact" className="inl ine-flexitems-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+            Contact Us
+            <ArrowRight className="ml-2h-4w-4" />
+          </Link>
+        </div>
       </div>
-      <Footer />
-</>
-  )
-<<<<<<< HEAD
-};
-;
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
-export default Page;
+</>;
+  )}

@@ -1,25 +1,32 @@
-"use client";
 import React from 'react';
+import Head from "next/head";
 
-<<<<<<< HEAD
-import { Wifi } from 'lucide-react';
-import { CheckCircle, Star, Zap, Brain, BarChart, Shield, Target, Helmet } from 'lucide-react';
-import { Globe, Settings } from 'lucide-react';
-=======
-import { Wifi, Target } from 'lucide-react'
-import { Wifi, Target } from 'lucide-react'
-import { Wifi, Target } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
-const $1: React.FC = () => {;
-  const iotServices = [];
-  return ()
+export default function IotEdgePage() {
+  return (
+    <>
+:all-pages-backup/iot-edge/page.tsx
+      <title>IotEdge - Zion Tech Group</title>
+        <meta name="description" content="Professional iotedge services by Zion Tech Group." />
+      
+        <Head>
+        <title>IotEdge - Zion Tech Group</title>
+        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
+      
+      
+      <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="con tainermx-auto px-4 py-16">
+          <h1 className="tex t-4xlfont-bold text-white mb-6">IotEdge</h1>
+          <p className="tex t-lgtext-gray-300 mb-8">Professional iotedge services by Zion Tech Group.</p>
+          
+          <Link href="/contact" className="inl ine-flexitems-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+            Contact Us
+            <ArrowRight className="ml-2h-4w-4" />
+          </Link>
+        </div>
       </div>
-</>
-  )
-<<<<<<< HEAD
-};
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
-export default IoTEdgePage;
+</>;
+  )}

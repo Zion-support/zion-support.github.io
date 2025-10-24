@@ -1,7 +1,6 @@
-"use client";
 import React from 'react';
-
-const testRunner = () => {}
-  return null;
+"use client",
+const testRunner = () => {
+  return null
 }
-export default testRunner;
+export default testRunner

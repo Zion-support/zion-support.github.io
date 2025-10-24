@@ -1,77 +1,50 @@
-import { Component, ErrorInfo, ReactNode } from 'react';
-
-interface Props {
-  children: ReactNode;
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
+const ErrorBoundaryPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+    title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+    benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+},
+  {
+    icon: BarChart,
+    title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+    benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+},
+  {
+    icon: Target,
+    title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+    benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+},
+  {
+    icon: TrendingUp,
+    title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+    benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
 }
-
-interface State {
-  hasError: boolean;
-  error?: Error;
-}
-
-class ErrorBoundary extends Component<Props, State> {
-  public state: State = {
-    hasError: false;
-  }
-  public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error }
-  }
-
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log error in development, send to error reporting service in production
-    if (process.env.NODE_ENV === 'development') {
-      // eslint-disable-next-line no-console
-      console.error('ErrorBoundary caught an error: ', error, errorInfo);
-    }
-    // TODO: Send error to error reporting service in production
-  }
-
-  public render() {
-    if (this.state.hasError) {
-      return (
-        <div className = "min-h-screen flex items-center justify-center bg-gray-900">
-          <div className="tex t-center">
-            <h1 className="tex t-4xlfont-bold text-white mb-4">Something went wrong</h1>
-            <p className="tex t-gray-300mb-8">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
-            </p>
-            <button >
-              onClick={() => window.location.reload()}
-              className="px-6py-3 b g-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Refresh Page
-            </button>
-          </div>
-        </div>;
-      );
-    }
-
-<<<<<<< HEAD
-    return this.props.children;
-  }
-}
-
-export default ErrorBoundary;
-=======
+  ]
   const benefits = [
-    'Increase efficiency by up to 50%'
-    'Reduce costs by 30% with automation'
-    'Improve decision-making with AI insights'
-    'Scale operations without proportional staff increases'
+  'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
-
   return (
     <>
       <Helmet>
-        <Head>
-        <title>ErrorBoundary</title>;
+        <title>ErrorBoundary</title>
         <meta name=&quot;description&quot; content=&quot;Advanced ErrorBoundary solution for modern businesses.&quot; />
-<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ErrorBoundary, AI solutions, intelligent automation&quot; />
-<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
       </Helmet>
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
@@ -85,18 +58,17 @@ export default ErrorBoundary;
             <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
               Advanced ErrorBoundary solution for modern businesses.
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
+            <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
+              <button className=&quot;bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
                 Get Started
                 <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
                 Learn More
               </button>
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;></section>
           <div className=&quot;max-w-7xl mx-auto&quot;></div>
@@ -125,7 +97,6 @@ export default ErrorBoundary;
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
           <div className=&quot;max-w-7xl mx-auto&quot;></div>
@@ -145,7 +116,6 @@ export default ErrorBoundary;
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
           <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
@@ -153,11 +123,11 @@ export default ErrorBoundary;
             <p className=&quot;text-xl text-gray-300 mb-8&quot;>
               Join thousands of businesses already using our AI solutions
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+            <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
+              <button className=&quot;bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
                 Start Free Trial
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
                 Contact Sales
               </button>
             </div>
@@ -165,15 +135,15 @@ export default ErrorBoundary;
         </section>
       </div>
       <Footer />
-    </>
-  );
+</>
+  )
 }
-export default ErrorBoundaryPage;
+export default ErrorBoundaryPage
 error?: Error
 errorInfo?: ErrorInfo}
 class ErrorBoundary extends Component<Props, State>{constructor(props: Props) {
 super(props)
-this.state = { hasError: false}
+this.state= { hasError: false}
 }
 static getDerivedStateFromError(error: Error): State {return { hasError: true, error}
 }
@@ -186,11 +156,12 @@ this.setState({errorerrorInfo})
 }
 handleReload= () => {windo w.location.reload()}
 handleGoHome= () => {windo w.location.href= '/'}
-render() {if (this.state.hasError) {
+render() {
+  if (this.state.hasError) {
 if (this.props.fallback) {
 return this.props.fallback
 }
-return (;
+return (
 <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4&quot;></div>
 <div className=&quot;max-w-md w-full bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center&quot;></div>
 <div className=&quot;w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6&quot;></div>
@@ -198,41 +169,41 @@ return (;
 </div>
 <h1 className=&quot;text-2xl font-bold text-white mb-4&quot;>Oops! Something went wrong</h1>
 <p className=&quot;text-gray-300 mb-6&quot;>We're sorry, but something unexpected happened. Please try refreshing the page or go back to the home page.</p>p>
-{process.env.NODE_ENV = == 'development' && this.state.error && (;
+{process.env.NODE_ENV === 'development' && this.state.error && (
 <details className=&quot;mb-6 text-left&quot;>
 <summary className=&quot;text-sm text-gray-400 cursor-pointer mb-2&quot;>
 Error Details (Development)
 </summary>
 <pre className=&quot;text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto&quot;></p>
-{this.state.error.toString()}
+{this.state.error.toString()},
 {this.state.errorInfo?.componentStack}
 </pre>
 </details>
 )}
-<div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-<button ,>
-onClick = {this.handleReload}
-className=&quot;flex items-center justify-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200&quot;
+<div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
+<button
+onClick={this.handleReload}
+className=&quot;flex items-center justify-center space-x-2 bg-cyan-600 hover: bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200&quot;
 ></button>
 <RefreshCw className=&quot;w-4 h-4&quot; />
 <span>Reload Page</span>
 </button>
-<button ,>
-onClick = {this.handleGoHome}
-className=&quot;flex items-center justify-center space-x-2 border border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200&quot;
+<button
+onClick={this.handleGoHome}
+className=&quot;flex items-center justify-center space-x-2 border border-cyan-600 text-cyan-400 hover: bg-cyan-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200&quot;
 ></button>
 <Home className=&quot;w-4 h-4&quot; />
 <span>Go Home</span>
 </button>
 </div>
 <div className=&quot;mt-6 pt-6 border-t border-white/20&quot;></div>
-<p className=&quot;text-sm text-gray-400 mb-3&quot;>Still having trouble? Contact our support team:</p>p>
-<a href=&quot;mailto:kleber@ziontechgroup.com&quot;>
-className=&quot;inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors&quot;>
+<p className=&quot;text-sm text-gray-400 mb-3&quot;>Still having trouble? Contact our support team: </p>p>
+<a
+href=&quot;mailto: kleber@ziontechgroup.com&quot;
+className=&quot;inline-flex items-center text-cyan-400 hover: text-cyan-300 transition-colors&quot;>
 <Phone className=&quot;w-4 h-4 mr-2&quot; />
 kleber@ziontechgroup.com
 </a>
 </div>
 </div>
 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4

@@ -1,77 +1,32 @@
 import React from 'react';
-import React from 'react';
-import { CheckCircle, Phone, Star, TrendingUp, Check } from 'lucide-react';
+import Head from "next/head";
 
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, Phone, TrendingUp } from 'lucide-react';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
-constMachineLearningPage: React.FC = () =>{constfeatures= []
-    'Custom ML model development and training'
-    'Predictive analytics and forecasting'
-    'Data preprocessing and feature engineering'
-    'Model optimization and hyperparameter tuning'
-    'Real-time inference and deployment'
-    'A/B testing and performance monitoring'
-    'Integration with existing systems'
-    'Continuous learning and model updates'
-  ]
-
-<<<<<<< HEAD
-  const benefits = [];
-    '40% better prediction accuracy',
-    '60% faster insights generation',
-    '50% reduction in manual analysis',
-    '30% improvement in decision making',
-    '95% model reliability',
-=======
-  const benefits = []
-    '40% better prediction accuracy'
-    '60% faster insights generation'
-    '50% reduction in manual analysis'
-    '30% improvement in decision making'
-    '95% model reliability'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
-    '80% cost savings on analytics'
-  ]
-
-  constuseCases= [
-    {
-      title: 'Predictive Analytics'
-      description: 'Forecast sales, demand, and market trends with high accuracy'
-      icon: '📈'
-   }
-    {title: 'Customer Segmentation'
-      description: 'Identify and target customer groups for personalized marketing'
-      icon: '👥'
-   }
-    {title: 'Fraud Detection'
-      description: 'Detect and prevent fraudulent activities in real-time'
-      icon: '🛡️'
-   }
-    {title: 'Recommendation Systems'
-      description: 'Provide personalized recommendations to increase engagement'
-      icon: '🎯'
-   }
-    {title: 'Process Optimization'
-      description: 'Optimize business processes and reduce operational costs'
-      icon: '⚙️'
-   }
-    {title: 'Risk Assessment'
-      description: 'Evaluate and mitigate business risks with data-driven insights'
-      icon: '⚠️'
-    }
-  ]
-
-const Page = () => {};
-  return ()
+export default function MachineLearningPage() {
+  return (
+    <>
+:all-pages-backup/machine-learning/page.tsx
+      <title>MachineLearning - Zion Tech Group</title>
+        <meta name="description" content="Professional machinelearning services by Zion Tech Group." />
+      
+        <Head>
+        <title>MachineLearning - Zion Tech Group</title>
+        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Head>
+      
+      
+      <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="con tainermx-auto px-4 py-16">
+          <h1 className="tex t-4xlfont-bold text-white mb-6">MachineLearning</h1>
+          <p className="tex t-lgtext-gray-300 mb-8">Professional machinelearning services by Zion Tech Group.</p>
+          
+          <Link href="/contact" className="inl ine-flexitems-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+            Contact Us
+            <ArrowRight className="ml-2h-4w-4" />
+          </Link>
+        </div>
       </div>
-</>
-  )
-<<<<<<< HEAD
-};
-;
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
-export default Page;
+</>;
+  )}

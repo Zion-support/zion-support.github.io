@@ -1,8 +1,5 @@
-import React from 'react'
-<<<<<<< HEAD
-import Image from 'next/image'
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
+import React from "react";
+import Image from "next/image";
 
 interface OptimizedImageProps {
   src: string
@@ -10,17 +7,17 @@ interface OptimizedImageProps {
   width?: number
   height?: number
   className?: string
-  'data-testid'?: string
+  "data-testid"?: string
   [key: string]: any
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
+const OptimizedImage: React.FC<OptimizedImageProps /> = ({
   src,
   alt,
   width = 800,
   height = 600,
-  className = '',
-  'data-testid': testId,
+  className = "",
+  "data-testid": testId,
   ...props
 }) => {
   return (
