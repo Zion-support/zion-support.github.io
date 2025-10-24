@@ -15,8 +15,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   alt,
   width,
   height,
-  className,
-  'data-testid': dataTestId,
+  className = '',
+  'data-testid': testId,
   ...props
 }) => {
   return (
@@ -26,7 +26,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       width={width}
       height={height}
       className={className}
-      data-testid={dataTestId}
+      data-testid={testId}
       {...props}
     />
   )
