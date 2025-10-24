@@ -1,10 +1,18 @@
 'use client';
 
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useEffect } from 'react';
+
+declare global {
+  interface Window {
+    gtag: (..._args: unknown[]) => void;
+    dataLayer: unknown[];
+  }
+}
 
 interface AnalyticsContextType {
-  trackEvent: (_eventName: string, _parameters?: Record<string, unknown>) => void;
-  trackPageView: (_pageName: string, _pagePath: string) => void;
+  track: (_event: string, _properties?: Record<string, unknown>) => void;
+  identify: (_userId: string, _traits?: Record<string, unknown>) => void;
+  page: (_name: string, _properties?: Record<string, unknown>) => void;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
@@ -18,10 +26,10 @@ export const useAnalytics = () => {
 };
 
 interface AnalyticsProviderProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
-const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   useEffect(() => {
     // Initialize analytics
     if (typeof window !== 'undefined') {
@@ -34,13 +42,13 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
         document.head.appendChild(script);
 
         // Initialize gtag
-        const gtagFunction = function(...args: unknown[]) {
+        const gtagFunction = function(..._args: unknown[]) {
           const gtag = window as { gtag?: { q?: unknown[] } };
           gtag.gtag = gtag.gtag || { q: [] };
           gtag.gtag.q = gtag.gtag.q || [];
-          gtag.gtag.q.push(args);
+          gtag.gtag.q.push(_args);
         };
-        (window as { gtag?: unknown }).gtag = (window as { gtag?: unknown }).gtag || gtagFunction;
+        window.gtag = window.gtag || gtagFunction;
         window.gtag = window.gtag || gtagFunction;
         window.gtag('js', new Date());
         window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX');
@@ -48,41 +56,59 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
     }
   }, []);
 
-  const trackEvent = (_eventName: string, _parameters?: Record<string, unknown>) => {
+  const track = (event: string, properties?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
       if (window.gtag) {
-        window.gtag('event', _eventName, _parameters);
+        window.gtag('event', event, properties);
       }
       
       // Custom analytics - only log in development
       if (process.env.NODE_ENV === 'development') {
-        console.log('Analytics Event:', _eventName, _parameters);
+        console.log('Analytics Event:', event, properties);
       }
     }
   };
 
-  const trackPageView = (_pageName: string, _pagePath: string) => {
+  const identify = (userId: string, traits?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
       if (window.gtag) {
-        window.gtag('event', 'page_view', {
-          page_title: _pageName,
-          page_location: window.location.href,
-          page_path: _pagePath
+        window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
+          user_id: userId,
+          custom_map: traits
         });
       }
       
       // Custom analytics - only log in development
       if (process.env.NODE_ENV === 'development') {
-        console.log('Analytics Page View:', _pageName, _pagePath);
+        console.log('Analytics Identify:', userId, traits);
+      }
+    }
+  };
+
+  const page = (name: string, properties?: Record<string, unknown>) => {
+    if (typeof window !== 'undefined') {
+      // Google Analytics
+      if (window.gtag) {
+        window.gtag('event', 'page_view', {
+          page_title: name,
+          page_location: window.location.href,
+          ...properties
+        });
+      }
+      
+      // Custom analytics - only log in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Analytics Page:', name, properties);
       }
     }
   };
 
   const value: AnalyticsContextType = {
-    trackEvent,
-    trackPageView
+    track,
+    identify,
+    page
   };
 
   return (
@@ -93,11 +119,5 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
 };
 
 // Extend Window interface for TypeScript
-declare global {
-  interface Window {
-    dataLayer: unknown[];
-    gtag: (..._args: unknown[]) => void;
-  }
-}
 
 export default AnalyticsProvider;
