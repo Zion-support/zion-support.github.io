@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client"
 
 import React from "react"
@@ -19,11 +18,6 @@ export default function ContactPage() {
             Get in touch with our team to discuss your project requirements and how we can help your business grow.
           </p>
         </div>
-=======
-import React from 'react';
-import { Metadata } from 'next';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
->>>>>>> e20c8f3deeeec918a2c8d9f41b300a271dcc999c
 
         <div className="grid md:grid-cols-2 gap-12">
           <div>
@@ -129,12 +123,5 @@ import { Mail, Phone, MapPin, Send } from 'lucide-react';
       
       <Footer />
     </div>
-<<<<<<< HEAD
   )
 }
-=======
-  );
-};
-
-export default ContactPage;
->>>>>>> e20c8f3deeeec918a2c8d9f41b300a271dcc999c
