@@ -1,5 +1,4 @@
 'use client';
-
 import React, { useState, useEffect } from 'react';
 
 // Extend interfaces for browser APIs
@@ -91,16 +90,21 @@ const PerformanceOptimizer: React.FC = () => {
         link.as = resource.endsWith('.woff2') ? 'font' : 'style';
         document.head.appendChild(link);
       });
+<<<<<<< HEAD
     };
 
     // Preload critical resources
     const preloadCriticalResources = () => {
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-03ab
       // Preload critical fonts
       const fontLink = document.createElement('link');
       fontLink.rel = 'preload';
       fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
       fontLink.as = 'style';
       document.head.appendChild(fontLink);
+<<<<<<< HEAD
 
       // Preload critical images
       const criticalImages = [
@@ -112,6 +116,8 @@ const PerformanceOptimizer: React.FC = () => {
         const img = new Image();
         img.src = src;
       });
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-03ab
     };
 
     // Optimize images
@@ -153,7 +159,7 @@ const PerformanceOptimizer: React.FC = () => {
     };
 
     // Initialize optimizations
-    preloadCriticalResources();
+    applyOptimizations();
     optimizeImages();
     const cleanupScroll = optimizeScroll();
 
