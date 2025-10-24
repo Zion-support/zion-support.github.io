@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
+const fs = require('fs');
+const path = require('path');
+const glob = require('glob');
 
 // Function to fix merge conflict markers
 function fixMergeConflicts(content) {
@@ -116,15 +116,15 @@ const patterns = [
 let totalFiles = 0;
 let fixedFiles = 0;
 
-for (const pattern of patterns) {
-  const files = await glob(pattern, { cwd: process.cwd() });
+patterns.forEach(pattern => {
+  const files = glob.sync(pattern, { cwd: process.cwd() });
   totalFiles += files.length;
   
-  for (const file of files) {
+  files.forEach(file => {
     if (processFile(file)) {
       fixedFiles++;
     }
-  }
-}
+  });
+});
 
 console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files.`);
