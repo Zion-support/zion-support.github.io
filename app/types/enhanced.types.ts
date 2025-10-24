@@ -32,7 +32,6 @@ export interface ErrorReport {
   createdAt: string;
   updatedAt?: string;
 }
-
 export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical';
 export interface Service {
   id: string;
@@ -83,9 +82,14 @@ export interface ContactFormData {
   message: string;
   service: string;
   phone?: string;
+<<<<<<< HEAD
+  budget?: string
+  timeline?: string
+=======
   budget?: string;
   timeline?: string;
 }
+>>>>>>> origin/main
 
 export interface AnalyticsEvent {
   name: string;
@@ -206,4 +210,8 @@ export interface InputProps extends BaseComponentProps {
   required?: boolean;
   error?: string;
   label?: string;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/main
