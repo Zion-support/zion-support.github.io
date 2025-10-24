@@ -88,29 +88,28 @@ class MonitoringService {
         fidObserver.observe({ entryTypes: ['first-input'] })
 
         // Cumulative Layout Shift
-        const clsObserver = new PerformanceObserver((list) => {
-          let clsValue = 0
-          for (const entry of list.getEntries()) {
+        let clsValue = 0
+        const clsObserver = new PerformanceObserver(list => {
+          const entries = list.getEntries()
+          entries.forEach((entry: PerformanceEntry) => {
             if (!(entry as any).hadRecentInput) {
               clsValue += (entry as any).value
+              this.metrics.cls = clsValue
+              this.reportMetric('cls', clsValue)
             }
-          }
-          this.metrics.cls = clsValue
-          this.reportMetric('cls', this.metrics.cls)
+          })
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] })
 
         // First Contentful Paint
-        const fcpObserver = new PerformanceObserver((list) => {
+        const fcpObserver = new PerformanceObserver(list => {
           const entries = list.getEntries()
-          const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint')
-          if (fcpEntry) {
-            this.metrics.fcp = fcpEntry.startTime
-            this.reportMetric('fcp', this.metrics.fcp)
-          }
+          entries.forEach(entry => {
+            this.metrics.fcp = entry.startTime
+            this.reportMetric('fcp', entry.startTime)
+          })
         })
         fcpObserver.observe({ entryTypes: ['paint'] })
-<<<<<<< HEAD
 
         // Time to First Byte
         const ttfbObserver = new PerformanceObserver((list) => {
@@ -123,10 +122,9 @@ class MonitoringService {
         })
         ttfbObserver.observe({ entryTypes: ['navigation'] })
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6f50
       } catch (error) {
-        console.warn('Web Vitals monitoring failed:', error)
+        // eslint-disable-next-line no-console
+        console.error('Error setting up Web Vitals monitoring:', error)
       }
     }
   }
@@ -136,19 +134,15 @@ class MonitoringService {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-<<<<<<< HEAD
-            if (entry.duration > 50) {
-              this.reportMetric('long_task', entry.duration)
-            }
-=======
             // eslint-disable-next-line no-console
             console.log('Long task detected:', entry.duration)
->>>>>>> cursor/fix-errors-and-merge-to-main-6f50
           }
         })
         longTaskObserver.observe({ entryTypes: ['longtask'] })
       } catch (error) {
-        console.warn('Long task monitoring failed:', error)
+        // Long task API might not be available
+        // eslint-disable-next-line no-console
+        console.warn('Long task monitoring not available:', error)
       }
     }
   }
@@ -157,20 +151,18 @@ class MonitoringService {
     if ('PerformanceObserver' in window) {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            const resourceEntry = entry as PerformanceResourceTiming
-            if (resourceEntry.duration > 1000) {
-              this.reportMetric('slow_resource', {
-                name: resourceEntry.name,
-                duration: resourceEntry.duration,
-                size: resourceEntry.transferSize
-              })
+          const entries = list.getEntries()
+          entries.forEach((entry: PerformanceResourceTiming) => {
+            if (entry.duration > 1000) {
+              // eslint-disable-next-line no-console
+              console.log('Slow resource:', entry.name, entry.duration)
             }
-          }
+          })
         })
         resourceObserver.observe({ entryTypes: ['resource'] })
       } catch (error) {
-        console.warn('Resource timing monitoring failed:', error)
+        // eslint-disable-next-line no-console
+        console.warn('Resource timing monitoring not available:', error)
       }
     }
   }
@@ -178,10 +170,9 @@ class MonitoringService {
   private setupErrorHandling(): void {
     // Global error handler
     window.addEventListener('error', (event) => {
-      this.reportError({
+      this.logError({
         message: event.message,
         stack: event.error?.stack,
-        component: 'global',
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
         url: window.location.href
@@ -190,15 +181,8 @@ class MonitoringService {
 
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
-<<<<<<< HEAD
-      this.reportError({
-        message: event.reason?.message || 'Unhandled promise rejection',
-        stack: event.reason?.stack,
-        component: 'promise',
-=======
       this.logError({
         message: `Unhandled Promise Rejection: ${event.reason}`,
->>>>>>> cursor/fix-errors-and-merge-to-main-6f50
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
         url: window.location.href
@@ -206,11 +190,6 @@ class MonitoringService {
     })
   }
 
-<<<<<<< HEAD
-  private reportMetric(name: string, value: number | object): void {
-    if (process.env.NODE_ENV === 'development') {
-      console.log(`[Performance] ${name}:`, value)
-=======
   private reportMetric(name: string, value: number): void {
     // Sample rate
     if (Math.random() > performanceConfig.monitoring.sampleRate) {
@@ -222,27 +201,29 @@ class MonitoringService {
       const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
       // eslint-disable-next-line no-console
       console.log(`Web Vital ${name}:`, value, `(${rating})`)
->>>>>>> cursor/fix-errors-and-merge-to-main-6f50
     }
 
-    // Send to analytics
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'performance_metric', {
-        metric_name: name,
-        metric_value: typeof value === 'number' ? value : JSON.stringify(value)
+    // Send to analytics (if configured)
+    if (typeof gtag === 'function') {
+      gtag('event', name, {
+        value: Math.round(name === 'cls' ? value * 100 : value),
+        event_category: 'Web Vitals'
       })
     }
   }
 
-  private reportError(error: ErrorReport): void {
+  public logError(error: ErrorReport): void {
     this.errors.push(error)
-    
-    if (process.env.NODE_ENV === 'development') {
-      console.error('[Error]', error)
+    // Keep only last 50 errors
+    if (this.errors.length > 50) {
+      this.errors = this.errors.slice(-50)
     }
 
-    // Send to analytics
-    if (typeof gtag !== 'undefined') {
+    // eslint-disable-next-line no-console
+    console.error('Error logged:', error)
+
+    // Send to error tracking service (if configured)
+    if (typeof gtag === 'function') {
       gtag('event', 'exception', {
         description: error.message,
         fatal: false
@@ -261,27 +242,7 @@ class MonitoringService {
   public clearErrors(): void {
     this.errors = []
   }
-}
 
-<<<<<<< HEAD
-// Export singleton instance
-export const monitoringService = new MonitoringService()
-
-// Export utility functions
-export const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
-  if (typeof gtag !== 'undefined') {
-    gtag('event', eventName, parameters)
-  }
-}
-
-export const trackPageView = (pagePath: string) => {
-  if (typeof gtag !== 'undefined') {
-    gtag('config', process.env.NEXT_PUBLIC_GA_ID || '', {
-      page_path: pagePath
-    })
-  }
-}
-=======
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
@@ -318,4 +279,3 @@ export const trackPageView = (pagePath: string) => {
 // Singleton instance
 const monitoring = new MonitoringService()
 export default monitoring;
->>>>>>> cursor/fix-errors-and-merge-to-main-6f50
