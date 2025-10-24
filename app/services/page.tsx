@@ -85,14 +85,14 @@ const ServicesPage: React.FC = () => {
             {serviceCategories.map((category, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover: bg-white/20 transition-all duration-300">
                 <div className="flex items-center mb-6">
-                  {category.icon}
+                  <category.icon className="w-8 h-8 text-cyan-400" />
                   <h3 className="text-2xl font-bold text-white ml-4">{category.title}</h3>
                 </div>
                 <p className="text-gray-300 mb-6">{category.description}</p>
                 <ul className="space-y-3">
                   {category.services.map((service, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
-                      <Circle className="w-8 h-8" />
+                      <Circle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
                       {service}
                     </li>
                   ))}
