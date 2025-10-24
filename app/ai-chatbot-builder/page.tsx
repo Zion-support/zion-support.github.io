@@ -2,8 +2,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0738
+=======
+'use client';
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-022b
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 export default function AiChatbotBuilder() {
@@ -34,6 +39,7 @@ export default function AiChatbotBuilder() {
                 Our team of experts delivers tailored solutions for your specific requirements.
               </p>
             </div>
+<<<<<<< HEAD
             
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
@@ -48,6 +54,30 @@ export default function AiChatbotBuilder() {
                 Get round-the-clock support from our dedicated team of professionals.
               </p>
 =======
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+              {
+    features.map((feature, index) => (
+  }
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>
+                    <feature>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {
+    feature.benefits && (;
+                    <ul>
+                      {feature.benefits.map((benefit, idx) => (
+  }
+                        <li>
+                          <CheckCircle>
+
+import React, { useState, useEffect } from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { MessageCircle, Bot, Zap, Shield, CheckCircle, Star, ArrowRight, Brain, Globe, Users, Settings, BarChart } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-022b
 
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -157,6 +187,7 @@ export default function AiChatbotBuilder() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 =======
           <Link
             href="/contact"
@@ -283,6 +314,15 @@ import { Link } from 'react-router-dom';
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-400/50transition-allduration-300" />
                 <div className="{`w-16" h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4`} />
                   {feature.icon}
+=======
+      <Footer>
+    </>
+  ),
+}
+export default AiChatbotBuilderPage;
+
+                  </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-022b
                 </div>
                 <h3 className="text-xl font-semiboldtext-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -402,5 +442,9 @@ export default function AichatbotbuilderPage() {
   );
 };
 
+<<<<<<< HEAD
 export default AiChatbotBuilderPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
+=======
+export default AIChatbotBuilder;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-022b

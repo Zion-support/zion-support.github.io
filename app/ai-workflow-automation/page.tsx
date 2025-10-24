@@ -3,7 +3,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+'use client';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-022b
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 =======
@@ -94,6 +98,7 @@ export default function AiWorkflowAutomationZionTechGroup() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -111,6 +116,8 @@ export default function AiWorkflowAutomationZionTechGroup() {
 const AIWorkflowAutomationPage: React.FC = () => {
 =======
 'use client';
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-022b
 import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -330,7 +337,56 @@ const AiWorkflowAutomationPage: React.FC = () => {
                   </ul>
                 </div>
               ))}
+<<<<<<< HEAD
 =======
+=======
+
+            </div>
+          </div>
+        </section>
+        {/* Benefits Section */}
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2>
+                Why Choose Our Solution?;
+              </h2>
+              <p>
+                Proven results that drive business growth and efficiency;
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+              {
+    benefits.map((benefit, index) => (
+  }
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>
+                    <CheckCircle>
+                  </div>
+                  <p className="text-lg text-white font-medium">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* CTA Section */}
+        <section className="py-20 px-4"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>
+              <h2>
+                Ready to Get Started?;
+              </h2>
+              <p>
+                Contact our experts to discuss your requirements and get started today.;
+              </p>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+                <button>
+                  Contact Us;
+                </button>
+                <button>
+                  Learn More
+                </button>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-022b
                   </div>
                 ))}
               </div>
@@ -504,6 +560,7 @@ const AiWorkflowAutomationPage: React.FC = () => {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           {/* CTA Section */}
           <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl p-12 border border-cyan-500/20"></section>
@@ -586,3 +643,6 @@ export default function AiworkflowautomationPage() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0659
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0796
+=======
+export default AIWorkflowAutomation;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-022b

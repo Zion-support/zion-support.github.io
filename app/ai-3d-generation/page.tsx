@@ -78,6 +78,7 @@ const AI3DGenerationPage: React.FC = () => {
       benefits: ['Ray tracing', 'Global illumination', 'Material physics', 'Lighting simulation']
     },
     {
+<<<<<<< HEAD
       icon: Palette,
       title: 'Custom Materials & Textures',
       description: 'Apply custom materials and textures to your 3D models with AI assistance.',
@@ -290,11 +291,33 @@ const AI3DGenerationPage: React.FC = () => {
   ];
 
   return (
+=======
+    icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+  }
+  ]
+const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ]
+return (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-022b
     <>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-03b1
       <Helmet>
+<<<<<<< HEAD
         <title>Ai 3D Generation - Zion Tech Group</title>
         <meta name="description" content="Ai 3D Generation solutions by Zion Tech Group" />
+=======
+        <title>Ai 3d Generation - Zion Tech Group</title>
+        <meta name="description" content="AI-powered 3D generation solutions for businesses" />
+        <meta name="keywords" content="AI, 3D generation, artificial intelligence, business solutions" />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-022b
       </Helmet>
 <<<<<<< HEAD
       
