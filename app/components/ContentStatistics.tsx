@@ -10,14 +10,14 @@ const ContentStatistics: React.FC = () => {
     years: 0
   })
 
-  const targetCounters = {
-    clients: 500,
-    projects: 1000,
-    satisfaction: 99,
-    years: 10
-  }
-
   useEffect(() => {
+    const targetCounters = {
+      clients: 500,
+      projects: 1000,
+      satisfaction: 99,
+      years: 10
+    }
+
     const duration = 2000; // 2 seconds
     const steps = 60
     const stepDuration = duration / steps
@@ -43,7 +43,7 @@ const ContentStatistics: React.FC = () => {
     }
 
     animateCounters()
-  }, [targetCounters])
+  }, [])
 
   const stats = [
     {
