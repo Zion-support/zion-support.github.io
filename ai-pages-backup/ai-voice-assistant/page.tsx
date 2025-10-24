@@ -1,3 +1,7 @@
+'use client'
+import React from 'react'
+import Link from 'next/link'
+import { ArrowRight, Mic, Brain, CheckCircle } from from 'lucide-react'
 "use client"
 import React from "react";
 import { Link  } from "next/link";

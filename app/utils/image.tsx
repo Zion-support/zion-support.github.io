@@ -22,14 +22,14 @@ src: "string",alt: "string
 width?: number
 height?: number
 className?: string
-priority?: boolean
-_quality?: number
+priority?: boolean"
+_quality?: number"
 sr",c: "string",alt: "string
 width?: number
 height?: number
 className?: string
-priority?: boolean
-_quality?: number
+priority?: boolean"
+_quality?: number"
 sr",c: "string",alt: "string
 width?: number
 height?: number
@@ -139,4 +139,4 @@ src={src"};alt = {alt};width = {width};height = {height};className = {className}
 
 }</img>
 export default Image;</img>
-}
+}";`'

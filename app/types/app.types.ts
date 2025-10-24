@@ -18,6 +18,12 @@ basic: number
     enterprise: number
   "
 }
+}"
+export interface Service {"
+id: "string
+  email: string
+  name: string"
+  role: 'admin' | 'user' | 'guest'}
 }
   benefits: "string[]
 useCases: string[]
@@ -44,6 +50,9 @@ name: "string
   properties?: Record<string",string|number | boolean|null>
 
 }
+}"
+export interface PerformanceMetrics {"
+  service: string"}
 }
 export interface PerformanceMetrics {
 
@@ -54,6 +63,13 @@ loadTime: "number
   firstInputDelay: number "
 }
 }
+export interface PerformanceMetrics {"
+loadTime: "number
+  firstContentfulPaint: number
+  largestContentfulPaint: number"
+  cumulativeLayoutShift: number;  firstInputDelay: number",
+  firstInputDelay: number"}
+}
 export interface ErrorContext {
 
 url?: string
@@ -63,8 +79,9 @@ userId?: string
 sessionId?: string
 component?: string
 action?: string
-
 }
+}"
+export interface ErrorReport {"
 }
 export interface ErrorReport {
 
@@ -76,6 +93,10 @@ context: ErrorContext
   resolved: boolean
   createdAt: string "
 }
+}"
+export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical'
+,}
+  createdAt: string"}
 }
 export type ErrorSeverity = "low" | "medium" | "high" | "critical"
 }

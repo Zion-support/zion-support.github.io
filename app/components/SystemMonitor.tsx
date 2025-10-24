@@ -44,10 +44,10 @@ g: grid-cols-4 gap-8" />)
                       <li key = {idx};className="flex items-center text-sm text-gray-300" /> <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
                         {benefit}</CheckCircle>
                       </li>
-
+)
                     ))}
                   </ul>
-
+</section>
         </section>
         {/* Benefits Section*/} <section className="py-20 px-4 bg-white/5" /> <div className="[^"]*"> <div className="[^"]*">
     <h1 className="text-4 xl font-bold text-white mb-4">Why Choose Our Solution</h2> <p className="[^"]*">
@@ -62,8 +62,12 @@ g: grid-cols-3 gap-8" />
       <divkey = index className="flex items-start space-x-4" />
     </div><CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /><p className="text-gray-300 text-lg">benefit</p>
                 </div>
-
             </div>
+          </div></section>
+        {/* CTA Section */,}<section className="py-20 px-4" />,<div className="max-w-4 xl mx-auto text-center" />,<h1 className="text-4 xl font-bold text-white mb-6">Ready to Transform Your Business?</h2><p className="text-xl text-gray-300 mb-8" />
+Join thousands of businesses already using our AI solutions</p></p>,<div className="flex flex-col sm: flex-row gap-4 justify-center" /><button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
+Start Free Trial</button></button><button className="border border-emerald-400 text-emerald-400 hover: "bg-emerald-400 hove","
+r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
           </div>
         </section>
         {/* CTA Section*/} <section className="py-20 px-4" /> <div className="[^"]*">
@@ -73,9 +77,8 @@ Join thousands of businesses already using our AI solutions</p>
 Start Free Trial</button>
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover: "bg-emerald-400 hove","
-r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
+r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"  />
 Contact Sales</button>
-
               </button>
             </div>
           </div>

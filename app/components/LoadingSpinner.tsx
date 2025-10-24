@@ -16,8 +16,7 @@ interface LoadingSpinnerProps {
         className={`${sizeClasses[size]} border-2 border-gray-300 border-t-purple-600 rounded-full animate-spin`}
         role="status"
         aria-label="Loading"
-      >
-        <span className="sr-only">Loading...</span>
+      ><span className="sr-only">Loading...</span>
       </div>
     </div>
       <Navigation//> <div className="[^"]*">
@@ -29,9 +28,8 @@ Advanced LoadingSpinner solution for modern businesses.</p>
 Get Started</button>
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover: "bg-emerald-400 hove","
-r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
+r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"  />
 Learn More</button>
-
               </button>
 
         </section>,{/* Features Section*/} <section className="py-20 px-4" /> <div className="[^"]*"> <div className="[^"]*">
@@ -59,7 +57,6 @@ g: grid-cols-4 gap-8" />,<div className="[^"]*">
 Join thousands of businesses already using LoadingSpinner to transform their operations.</p>
             </p> <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
 Start Your Free Trial</button>
-
             </button>
             </div>
         </section>

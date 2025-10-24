@@ -63,7 +63,10 @@ const Footer: React.FC = () => {
 
           {/* AI Services*/}
           <div>
-            <h3 className="text-lg font-semibold mb-4">AI Services</h3>
+            <h3 className="text-lg font-semibold mb-4 flex items-center">
+              <Brain className="w-5 h-5 mr-2 text-purple-400" />
+              AI Services
+            </h3>
             <ul className="space-y-2">
               {aiServices.map((service, index) => (<li key={index}>
                   <Link 
@@ -79,7 +82,10 @@ const Footer: React.FC = () => {
 
           {/* IT Services*/}
           <div>
-            <h3 className="text-lg font-semibold mb-4">IT Services</h3>
+            <h3 className="text-lg font-semibold mb-4 flex items-center">
+              <Cloud className="w-5 h-5 mr-2 text-blue-400" />
+              IT Services
+            </h3>
             <ul className="space-y-2">
               {itServices.map((service, index) => (<li key={index}>
                   <Link 

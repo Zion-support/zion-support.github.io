@@ -157,20 +157,23 @@ export default function ServicePage() {
                 <Link
                   href="/contact"
                   className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105"
+                  onClick={() => trackClick('cta', 'get-started')}
                 >
-                  Start Your Journey
+                  Get Started
                 </Link>
                 <Link
                   href="/ai-services"
-                  className="inline-flex items-center px-8 py-3 border border-green-400 text-base font-medium rounded-md text-green-400 bg-transparent hover:bg-green-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-400 transition-all duration-300 hover:scale-105"
+                  className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-300 hover:scale-105"
+                  onClick={() => trackClick('cta', 'learn-more')}
                 >
-                  Explore AI Solutions
+                  Learn More
                 </Link>
               </div>
             </div>
+            
+            <PerformanceDashboard />
           </div>
-        </div>
-
+        </main>
         <Footer />
       </div>
     </>

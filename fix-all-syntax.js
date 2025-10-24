@@ -14,6 +14,8 @@ function getAllTsxFiles(dir) {
         } else if (item.endsWith(".tsx") || item.endsWith(".ts")) {
           files.push(fullPath)
         }
+      } else if (extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath);
       }
     } catch (error) {
       //Skip directories that can"t be read

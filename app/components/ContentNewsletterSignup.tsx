@@ -63,7 +63,6 @@ disabled={isLoading}
               className="bg-emerald-600 hover: "bg-emerald-700 disable",d: bg-emerald-800 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
               {isLoading?"Subscribing..." : buttonText}</button> <ArrowRight className="ml-2 h-4 w-4" />
             </button>
-
         </form>
 
         {isSubscribed && (<div className="[^"]*"> <p className="[^"]*"> <CheckCircle className="h-5 w-5 mr-2" />
@@ -87,4 +86,4 @@ Thank you for subscribing!</CheckCircle>
 
 export default ContentNewsletterSignup
 </div>
-}
+}"

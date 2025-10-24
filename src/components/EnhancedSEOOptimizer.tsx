@@ -1,3 +1,48 @@
+'use client'
+import React from 'react'
+import { Helmet } from from 'react-helmet-async'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from from 'lucide-react'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from from 'lucide-react'
+import { Phone, Mail, ArrowRight } from from 'lucide-react'
+const EnhancedSEOOptimizerPage: "React.FC = () => {;
+const features = [;"
+    {";'"
+ico",n: "Brain",title: "title",description: "description",benefits: "['Keyword optimization'",'Content analysis', 'Ranking predictions', 'Competitor insights'];
+    }"
+  {";'"
+icon: "BarChart",title: "title",description: "description",benefits: "['Ranking tracking'",'Traffic analysis', 'Conversion metrics', 'ROI reporting'];
+    }"
+  {";'"
+icon: "Target",title: "title",description: "description",benefits: "['Keyword research'",'Audience targeting', 'Content optimization', 'Link building'];
+    }"
+  {";'"
+icon: "TrendingUp",title: "title",description: "description",benefits: "['Growth strategies'",'Market analysis', 'Competitive insights', 'ROI optimization'];
+    }
+  ];
+const benefits = [;
+    'Increase organic traffic by up to 300%'
+    'Reduce SEO costs by 50% with automation'
+    'Improve search rankings with AI insights'
+    'Scale SEO efforts without proportional resource increases'
+    'Gain competitive advantage with advanced SEO technology'
+  ];"
+return(,"
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50"  />"
+      {/* Hero Section */}  </div>
+      <section className="relative py-20 px-4 overflow-hidden" />,"
+    <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20" / />,"
+    <div className="relative max-w-7 xl mx-auto text-center" / />,"
+    <h1 className="text-4 xl md: text-6 xl font-bold text-gray-900 mb-6" / />,<span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600"  />
+Enhanced SEO Optimizer</span>
+            </span>
+          </h1>
+          <p className="text-xl text-gray-600 mb-8 max-w-3 xl mx-auto"  />
+Boost your search engine rankings with our AI-powered SEO optimization tools and strategies.</p>
+          </>"
+    <div className="flex flex-col sm: flex-row gap-4 justify-center" / />"
+            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+Get Started</button>
+              <ArrowRight className="w-8 h-8" /  />;"
 "use client"
 import React from "react";
 import { Helmet  } from "react-helmet-async";

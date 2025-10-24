@@ -17,7 +17,7 @@ import CheckCircle ArrowRight Star Clock Zap Shield Brain BarChart Target Trendi
 const ContentStatistics ReactFC = =>     const steps = 60 const stepDuration = duration /steps const interval = setInterval =>
 const steps = 60 const stepDuration = duration /steps const interval = setInterval =>
 return newCounters stepDuration return  => clearIntervalinterval const statistics="icon" Users label "Happy Clients"
-value Mathroundcountersclients suffix ""
+value Mathroundcountersclients suffix "
 color "from-blue-500 to-cyan-500"
 const ContentStatistics: "React.FC = () => {
 const [counters",setCounters,] = useState({
@@ -105,9 +105,9 @@ consttimers= Object.keys(targetCounters).map((key) => {
 consttarget= targetCounters[key as keyof type, of, targetCounters,]
 constduration= 2000; //2 secondsconstincrement = target /(duration /16) //60 fps
 return setInterva l(() => {
-setCounters(prev => {
+setCounters(prev => {)
 )
-constcurrent= prev[key as keyof type, of, prev,])
+constcurrent= prev[key as keyof type, of, prev])
 if(current< target) {
 return{...prev }
 [key,]: Math.min(current+increment, target)}
@@ -215,7 +215,7 @@ g: grid-cols-4 gap-6">{benefits.map((benefit,index) => (<divkey = {index};classN
 Get Started Today</Zap>
 </button>
 <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold, hove,"
-r: bg-white/10 transition-colors duration-200" />
+r: bg-white/10 transition-colors duration-200"  />
 View Case Studies
   </div>
   </div>
@@ -363,5 +363,5 @@ View Case Studies  </div>
   </div>
 export default ContentStatistics}
 </button>
-}
-)
+})
+)";`'

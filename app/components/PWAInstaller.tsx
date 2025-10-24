@@ -61,13 +61,16 @@ Our support team is here to help you navigate our services and find exactly what
     <div className="flex flex-col sm: flex-row gap-3 justify-center">
       <Link href="/contact" className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"> <RefreshCw className="w-4 h-4 mr-2" />
 Contact Support
-
       </Link>
     </div>
               <a href="mailto:support@ziontechgroup.com" className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center">
 Send Email
               </a>
-                </div>
+                </div></div>
+          {/* Fun Fact */,},<div className="mt-8 p-4 bg-slate-800/30 rounded-lg" /><p className="text-sm text-gray-400" />,<span className="text-cyan-400">Fun Fact: </span> Even our AI gets"
+confused sometimes. That"s why we have humans to help when things
+go wrong! 🤖
+            </p>
               </div>
           {/* Fun Fact*/} <div className="[^"]*"> <p className="[^"]*">
     <span className="text-cyan-400">Fun Fact: "</span> Even our AI gets

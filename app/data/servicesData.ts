@@ -1,14 +1,14 @@
 export interface Service {
-  id: string;
-  title: string;
-  description: string;
-  features: string[];
-  benefits: string[];
+  id: string
+  title: string
+  description: string
+  features: string[]
+  benefits: string[]
   pricing: {
-    basic: string;
-    pro: string;
-    enterprise: string;
-  };
+    basic: string
+    pro: string
+    enterprise: string
+  }
   contactInfo: {
     website: string
     email: string

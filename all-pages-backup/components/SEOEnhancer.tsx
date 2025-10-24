@@ -1,3 +1,13 @@
+'use client'
+import Footer from './Footer'
+import Navigation from './Navigation'
+import React from 'react'
+import { Helmet } from from 'react-helmet-async'
+import { ArrowRight, Brain } from from 'lucide-react'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from from 'lucide-react'
+import { Phone, Mail, ArrowRight } from from 'lucide-react'
+const SEOEnhancer: "React.FC<SEOEnhancerProps> = ({ className = ''</>"
+export default SEOEnhancer",");'"
 "use client"
 import { { Footer   } from "./Footer";
 import { Navigation  } from "./Navigation"

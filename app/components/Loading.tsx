@@ -18,7 +18,7 @@ Advanced Loading solution for modern businesses.</p>
 Get Started</button>
               </button>
               <button className="border border-emerald-400 text-emerald-400 hover: "bg-emerald-400 hove","
-r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
+r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"  />
 Learn More</button>
               </button>
 </section>,{/* Features Section*/} <section className="py-20 px-4" /> <div className="[^"]*"> <div className="[^"]*">

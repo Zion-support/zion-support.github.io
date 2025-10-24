@@ -199,4 +199,10 @@ trackError}
 trackAnalytics: "trackAnalyticsEvent",renderCount: "renderCountRef.current",mountTime: "mountTimeRef.current"}
 
 };</string>
-}
+}"
+optimizePerformance,
+measurePerformance,"
+trackError}"
+trackAnalytics: "trackAnalyticsEvent",renderCount: "renderCountRef.current",mountTime: "mountTimeRef.current"}
+};</string>
+}";`'

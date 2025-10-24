@@ -51,7 +51,6 @@ g: grid-cols-4 gap-8" />,<div className="[^"]*">
 Join thousands of businesses already using OptimizedImage to transform their operations.</p>
             </p> <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
 Start Your Free Trial</button>
-
             </button>
             </div>
         </section>

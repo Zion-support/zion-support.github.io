@@ -1,3 +1,7 @@
+'use client';
+import React, { useState, useEffect } from 'react';
+import { usePerformanceMonitor } from '../utils/performance';
+
 const PerformanceDashboard: React.FC = () => {
 return (<div>
       <Helmet />

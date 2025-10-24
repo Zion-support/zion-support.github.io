@@ -6,6 +6,11 @@ name: "string
   timestamp: number
   ur",l: "string;"
 }
+}"
+class PerformanceMonitor{"
+private metrics: "PerformanceMetric[] = []
+  private isEnable",d: "boolean"
+constructor() {  ",this.isEnabled = typeof window !== "undefined" && "performance" in window;,
 }
 }
 

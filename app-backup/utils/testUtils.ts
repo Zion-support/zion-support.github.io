@@ -1,4 +1,13 @@
 
+'use client''
+if(typeof global !== 'undefined''
+if (typeof global !== 'undefined''
+Object.defineProperty(global, 'window'');
+        "entryType": 'mark'',)";'"
+        "entryType": 'measure'',);
+this.logs.push(args.map(String).join(' '');
+this.errors.push(args.map(String).join(' '');'"
+this.warnings.push(args.map(String).join(' '')";'"
 "use client""
 if(typeof global !== "undefined""
 if (typeof global !== "undefined""

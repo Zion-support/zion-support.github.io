@@ -15,7 +15,6 @@ const benefits = [
     "Proven track record of success" <div className="[^"]*"> <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105" /> <Phone className="mr-2 h-5 w-5" />
 Call Now <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105" /> <Mail className="mr-2 h-5 w-5" />
 Email Us
-
         </section>
 
   )
@@ -25,7 +24,6 @@ export default EnhancedSEOPage
                 <p className="text-gray-300 text-lg">{benefit}</p>
 
             ))}
-
           </div>
       </section>
       {/* CTA Section*/} <section className="py-20 px-4 sm: px-6 lg:px-8" />,<div className="[^"]*"> <div className="[^"]*"> <section className="py-20 px-4 sm: px-6 lg:px-8" />,<div className="[^"]*"> <div className="[^"]*">,<h1 className="text-3 xl md: text-4 xl font-bold text-white mb-4">Ready to Get Started?</h2>h2>

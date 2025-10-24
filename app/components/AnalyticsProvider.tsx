@@ -18,8 +18,6 @@ return const context = useContext(AnalyticsContext)
 throw new Error("useAnalytics must be used within an AnalyticsProvider")
 return context
 interface AnalyticsProviderProps {
-
-
 ) => {
 
 }

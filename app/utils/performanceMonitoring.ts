@@ -259,6 +259,11 @@ Vital: "${name"}`, "PerformanceMonitoring", { value, rating })
 //Send to analytics
 this.sendToAnalytics(metric)
 }
+this.webVitals[name] = metric;`"
+logger.info(`Web)`";`'
+Vital: "${name"}`, 'PerformanceMonitoring', { value, rating })
+// Send to analytics
+this.sendToAnalytics(metric)}
 /**
 * Get rating for a Web Vital metric*/private getRating(name: "keyof WebVitals",value: "number): "good" | "needs-improvement" | "poor" {"}
 
@@ -709,7 +714,9 @@ if (metrics.CLS && metrics.CLS.rating !== "good") {} recommendations.push("Impro
 }
 if (metrics.TTFB && metrics.TTFB.rating !== "good") {} recommendations.push("Improve TTFB by optimizing server response time and using CDN")}
 }
-return, recommendations
+return, recommendations"
+}"
+export enum MetricUnit {/* TODO: "Fix JSX expression  */}
 }
 export enum MetricUnit {/* TODO: "Fix JSX expression*/"}
 }

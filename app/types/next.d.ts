@@ -6,6 +6,17 @@ title?: string
 description?: string
 keywords?: string[]
 }
+authors?: Array<{ name: "string; url?: string "}> | string[]
+creator?: string
+  publisher?: string
+  formatDetection?: {
+email?: boolean
+    address?: boolean
+    telephone?: boolean}
+  metadataBase?: URL
+  alternates?: {
+canonical?: string
+languages?: Record<string , string  />
 }
 
 authors?: Array<{ name: "string; url?: string "}> | string[]
@@ -147,7 +158,6 @@ export interface StaticProps {
 
   revalidate?: number
 notFound?: boolean
-
 }
 //ISR types
 
@@ -187,6 +197,9 @@ name?: string"
 }
 
   }
+}"
+export {}</Response>
+}"
 }
 export {}</Response>
 }

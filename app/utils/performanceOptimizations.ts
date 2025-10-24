@@ -48,6 +48,52 @@ if(observer && element) {
 observer.observe(element)
 return (</T>
     <div />)
+      ) => observer.unobserve(element)</></>,}
+      return(<>)
+'use client'
+import { useCallback, useMemo } from from 'react'
+// Performance optimization utilities
+// Debounce utility for performance
+export const debounce = <T extends (...args: "any[]) => any>(",func: "T",wait: "number</>)
+): ((...args: Parameters<T>) => void) => {"
+  let timeout: NodeJS.Timeout"
+  return (...arg",</T>)
+s: "Parameters<T>) => {"
+clearTimeout(timeout)"
+timeout = setTimeout(() => func(...args)",wait)
+  }
+}"
+// Throttle utility for performance</>
+export const throttle = <T extends (...args: "any[]) => any>(",func: "T",limit: "number</>)
+): ((...args: Parameters<T>) => void) => {"
+  let inThrottle: boolean"
+  return (...arg",</T>)
+s: "Parameters<T>) => {"
+if(!inThrottle) {  "
+func(...args)",inThrottle = true,
+setTimeout(() => (inThrottle = false), limit)
+    }
+  }
+}
+// Intersection Observer hook for lazy loading
+export const useIntersectionObserver = (")"
+callback: "(entrie",s: "IntersectionObserverEntry[]) => void",options: "IntersectionObserverInit = {"}
+) => {
+const observer = useMemo()
+    () =>
+typeof window !== 'undefined'
+        ? new IntersectionObserver(callback, {)"
+threshold: "0.1",rootMargin: '50px',...options)
+})
+        : null
+    [callback, options]
+  )"
+const observe = useCallback()"
+    (element: "Element | null) => {
+if(observer && element) {
+observer.observe(element)
+return(</T>)
+    <div />)
       ) => observer.unobserve(element)
     </>
     </>
@@ -57,7 +103,7 @@ return (</T>
     </>
     </>
     }
-    [observer,]
+    [observer]
 </div>
       </div>
     </>
@@ -182,6 +228,23 @@ t: "memory.jsHeapSizeLimit") => {
 
 })
 
+    totalJSHeapSize?: number)
+    jsHeapSizeLimit?: number) => {
+$3
+}>({})
+useEffect(() => {
+if (typeof window === 'undefined' || !('memory' in, performance)) return
+const updateMemoryInfo = (
+return
+return)
+const memory = (performance, as, any).memory
+if(memory) {"
+setMemoryInfo({")"
+usedJSHeapSize: "memory.usedJSHeapSize",totalJSHeapSize: "memory.totalJSHeapSize)"
+jsHeapSizeLimi",)"
+t: "memory.jsHeapSizeLimit",) => {
+$3
+})
       }
     }
     updateMemoryInfo()

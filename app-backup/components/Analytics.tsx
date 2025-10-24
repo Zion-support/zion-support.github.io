@@ -1,7 +1,5 @@
-import, React, { useEffect } from &quot;react&quot()
-interface AnalyticsProps {
-
-
+import, React, { useEffect } from &quot;react&quot();
+interface AnalyticsProps {;
 }
 }
   className?: string()
@@ -16,8 +14,22 @@ window.gtag(&quot;config&quot;, &quot;GA_MEASUREMENT_ID&quot;, {)
     "page_location": window.location.href) => {
 
 })
+}
+  className?: string();
+}
+const Analytics: "React.FC = () => {",useEffect(() => {}
+    const initAnalytics = ();
+      if (typeof window !== &quot;undefined&quot; && window.gtag) {;"
+window.gtag(&quot;config&quot;, &quot;GA_MEASUREMENT_ID&quot;, {)"
+          "page_title": document.title,)"
+    "page_location": window.location.href) => {;
+$3;
+});
       }
     }
+export default Analytics;();
+}"
+export default AnalyticsPage;"
     initAnalytics()
   }, [])
 return(null)

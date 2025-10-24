@@ -89,7 +89,6 @@ export default EnhancedAccessibilityEnhancerPage; <section className="py-20 px-4
       <divkey= index className= quotflex items-start space-x-3 quot ///>
     </div><CheckCircleclassName= quoth-6 w-6 text-purple-400 mt-1 flex-shrink-0 quot //><p className= quottext-gray-300 text-lgquot>benefit</p></p>
                 </div>
-
             </div>
           </div>
       </section>

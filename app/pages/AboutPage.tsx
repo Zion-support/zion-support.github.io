@@ -111,7 +111,6 @@ To be the global leader in AI-powered, business, solutions, creating a world whe
 technology seamlessly integrates with human potential to solve complex challenges</p>
 and drive sustainable growth.</p>
               </p>
-
       </section>
       {/* Values*/} <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900" /> <div className="[^"]*"> <div className="[^"]*"> <h1 className="[^"]*"></h2>
 Our Core Values</h2>
@@ -150,9 +149,20 @@ We strive for excellence in, every, project,delivering solutions that exceed exp
     <h1 className="text-2 xl font-bold text-white mb-4">Growth</h3> <p className="[^"]*">
                 We&apos;re committed to continuous learning and helping our clients achieve sustainable growth.</p>
               </p>
-
             </div>
           </div>
+        </div></section>
+      {/* Team Section */,}<section className = "py-20 bg-slate-900" />,<div className="container mx-auto px-4" />,<div className="text-center mb-16" />,<h1 className="text-4 xl md: text-5 xl font-bold text-white mb-6" /></h2>
+Meet Our Team</h2></h2><p className="text-xl text-gray-300 max-w-3 xl mx-auto" />
+A diverse group of talented professionals passionate about technology and innovation</p></p></div>,<divclassName="grid md: "grid-cols-2 l","
+g: grid-cols-3 gap-8 max-w-6 xl mx-auto" / />,<div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 text-center" />,<div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6" />,<span className="text-white font-bold text-2 xl">K</span></div>,<h1 className="text-2 xlfont-boldtext-whitemb-2">Kleber</h3><p className="text-purple-400 font-semiboldmb-4" />
+CEO & Founder</p><p className="text-gray-300" />
+Visionary leader with over 4 years of experience in AI and technology solutions.</p>
+Passionate about digital transformation and business growth.</p></p></div>,<div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 text-center" />,<div className="w-24 h-24 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6" />,<span className="text-white font-bold text-2 xl">A</span></div>,<h1 className="text-2 xlfont-boldtext-whitemb-2">AI Team</h3><p className="text-cyan-400 font-semiboldmb-4" />
+Machine Learning Engineers</p>,<p className="text-gray-300" />
+Expert team specializing in, artificial, intelligence, machine learning</p>
+and data science solutions for complex business challenges.</p></p></div>,<div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 text-center" />,<div className="w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6" />,<span className="text-white font-bold text-2 xl">D</span></div>,<h1 className="text-2 xlfont-boldtext-whitemb-2">DevOps Team</h3><p className="text-green-400 font-semiboldmb-4" />
+Cloud & Infrastructure</p><p className="text-gray-300" />
         </div>
       </section>
       {/* Team Section*/} <section className="py-20 bg-slate-900" /> <div className="[^"]*"> <div className="[^"]*"> <h1 className="[^"]*"></h2>
@@ -188,7 +198,56 @@ Cloud & Infrastructure
 Specialists in, cloud, infrastructure, cybersecurity, and DevOps practices</p>
 ensuring scalable and secure technology solutions.</p>
               </p>
+            </div>
+          </div>
+        </div></section>
+      {/* Stats Section */}<section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900" />,<div className="container mx-auto px-4" />,<div className="text-center mb-16" />,<h1 className="text-4 xl md: text-5 xl font-bold text-white mb-6" /></h2>
+Our Impact</h2></h2><p className="text-xl text-gray-300 max-w-3 xl mx-auto" />
+Numbers that reflect our commitment to excellence and client success</p></p></div>,<divclassName="grid md: "grid-cols-2 l","
+g: grid-cols-4 gap-8 max-w-6 xl mx-auto" / />,<div className="text-center" />,<div className="text-5 xl font-bold text-purple-400 mb-2">50+</div>,<div className="text-gray-300 text-lg">Projects Completed</div></div>,<div className="text-center" />,<div className="text-5 xl font-bold text-cyan-400 mb-2">25+</div>,<div className="text-gray-300 text-lg">Happy Clients</div></div>,<div className="text-center" />,<div className="text-5 xl font-bold text-green-400 mb-2">99%</div>,<div className="text-gray-300 text-lg">Success Rate</div></div>,<div className="text-center" />,<div className="text-5 xl font-bold text-yellow-400 mb-2">4+</div>,<div className="text-gray-300 text-lg">Years Experience</div>
+            </div>
+          </div></div>,</section>
+      {/* CTA Section */}<section className="py-20 bg-slate-900" />,<div className="container mx-auto px-4" />,<div className="max-w-4 xl mx-auto text-center" />,<h1 className="text-4 xl md: text-5 xl font-bold text-white mb-8" /></h2>
+Ready to Work With Us?</h2></h2>;<p className="text-xl text-gray-300 mb-12" />
+Let&apos;s discuss how we can help transform your business with our technology solutions</p></p>,<div className = "flex flex-col sm: flex-row gap-4 justify-center" /><Linkhref="/contact"
+className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2" />
 
+Get In Touch</Link></div><ArrowRightIcon className="w-5 h-5" /></Link><Linkhref="/services"
+className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover: "bg-purple-400 hove","
+r: text-white transition-all duration-300 flex items-center justify-center gap-2" />
+View Our Services</Link><ArrowRightIcon className="w-5 h-5" />
+        </div>
+      </section>
+      {/* Stats Section */}<section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900" />,<div className="container mx-auto px-4" / />,<div className="text-center mb-16" / />,<h1 className="text-4 xl md: text-5 xl font-bold text-white mb-6" /></h2>
+Our Impact</h2>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto" /  />
+Numbers that reflect our commitment to excellence and client success</p>
+            </p>
+          </div>,<div className="grid md: "grid-cols-2 l","
+g: grid-cols-4 gap-8 max-w-6 xl mx-auto" / />,<div className="text-center" / />,<div className="text-5 xl font-bold text-purple-400 mb-2">50+</><div className="text-gray-300 text-lg">Projects Completed</div>
+            </><div className="text-center" / />,<div className="text-5 xl font-bold text-cyan-400 mb-2">25+</><div className="text-gray-300 text-lg">Happy Clients</div>
+            </><div className="text-center" / />,<div className="text-5 xl font-bold text-green-400 mb-2">99%</><div className="text-gray-300 text-lg">Success Rate</div>
+            </><div className="text-center" / />,<div className="text-5 xl font-bold text-yellow-400 mb-2">4+</><div className="text-gray-300 text-lg">Years Experience</div>
+            </div>
+          </div>
+        </div>,</section>
+      {/* CTA Section */}<section className="py-20 bg-slate-900" />,<div className="container mx-auto px-4" / />,<div className="max-w-4 xl mx-auto text-center" / />,<h1 className="text-4 xl md: text-5 xl font-bold text-white mb-8" /></h2>
+Ready to Work With Us?</h2>
+            </><p className="text-xl text-gray-300 mb-12" / />
+Let&apos;s discuss how we can help transform your business with our technology solutions</p>
+            </p>,<div className="flex flex-col sm: flex-row gap-4 justify-center" /><Link href="/contact"
+className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"  />
+Get In Touch
+      </Link>
+    </div>
+                <ArrowRightIcon className="w-5 h-5" /  />;</Link>
+              <Link href="/services"
+className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover: "bg-purple-400 hove","
+r: text-white transition-all duration-300 flex items-center justify-center gap-2"  />
+View Our Services</Link>
+                <ArrowRightIcon className="w-5 h-5" /  />
+              </Link>
             </div>
           </div>
         </div>

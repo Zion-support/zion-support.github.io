@@ -62,6 +62,25 @@ ${pages.map(page = > `  <url />
     <loc>${page.url) => {
  }</loc>
 
+    <lastmod>${page.lastModified}</lastmod><changefreq>${page.changeFrequency}</changefreq>)<priority />${page.priority}</priority>);</url>`).join('\n")}
+// Generate structured data
+export const generateStructuredData = ("
+return{'@context': 'https: "// schema.org','@type': 'Organization',)
+name: "data.name",description: "data.description",url: "data.url",logo: "data.logo || '/logo.png',address: "data.address ? {",'@type': 'PostalAddress',) => {
+$3"
+}
+streetAddress: "data.address.streetAddress",addressLocality: "data.address.addressLocality",addressRegion: "data.address.addressRegion",postalCode: "data.address.postalCode",addressCountry: "data.address.addressCountry"} : undefined,"
+contactPoint: "data.contactPoint ? {",'@type': 'ContactPoint',"
+telephone: "data.contactPoint.telephone",contactType: "data.contactPoint.contactType",email: "data.contactPoint.email"} : undefined,"
+sameAs: "data.sameAs || []}
+}
+// Generate sitemap
+export const generateSitemap = ("
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;<urlset xmlns="http: // www.sitemaps.org/schemas/sitemap/0.9 />;`
+${pages.map(page = > `  <url />)
+    <loc>${page.url,) => {
+$3
+}</loc>
     <lastmod>${page.lastModified}</lastmod>
     <changefreq>${page.changeFrequency}</changefreq>)
     <priority />${page.priority}</priority>)

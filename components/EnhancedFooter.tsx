@@ -15,20 +15,20 @@ Get Started</Link> <ArrowRight className="w-4 h-4 ml-2" />
                 <Link href="/ai-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">
 AI Solutions</Link>
                 </Link>
-              </li>
-              <li />
+              </li>"
+              <li>"
                 <Link href="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors">
-IT Services</Link>
+                  IT Services;
                 </Link>
-              </li>
-              <li />
+              </li>"
+              <li>"
                 <Link href="/cloud-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">
-Cloud Solutions</Link>
+                  Cloud Solutions;
                 </Link>
-              </li>
-              <li />
+              </li>"
+              <li>"
                 <Link href="/cybersecurity" className="text-gray-300 hover:text-cyan-400 transition-colors">
-Cybersecurity</Link>
+                  Cybersecurity;
                 </Link>
               </li>
             </ul>
@@ -38,15 +38,20 @@ Cybersecurity</Link>
                 <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">
 About Us</Link>
                 </Link>
-              </li>
-              <li />
+              </li>"
+              <li>"
                 <Link href="/team" className="text-gray-300 hover:text-cyan-400 transition-colors">
-Our Team</Link>
+                  Our Team;
                 </Link>
-              </li>
-              <li />
+              </li>"
+              <li>"
                 <Link href="/careers" className="text-gray-300 hover:text-cyan-400 transition-colors">
-Careers</Link>
+                  Careers;
+                </Link>
+              </li>"
+              <li>"
+                <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                  Contact;
                 </Link>
               </li>
               <li />

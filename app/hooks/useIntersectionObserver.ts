@@ -27,6 +27,10 @@ if(observer.current) {
 observer.current.disconnect()
       ) => {
 
+interface UseIntersectionObserverOptions {
+threshold?: number
+  root?: Element | null
+  rootMargin?: string}
 }
     }
 

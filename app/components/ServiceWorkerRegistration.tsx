@@ -34,7 +34,6 @@ export default ServiceWorkerRegistrationPage
                 <p className="text-gray-300 text-lg">{benefit}</p>
 
             ))}
-
           </div>
       </section>
       {/* CTA Section*/} <section className="py-20 px-4 sm: px-6 lg:px-8" />,<div className="[^"]*"> <div className="[^"]*"> <section className="py-20 px-4 sm: px-6 lg:px-8" />,<div className="[^"]*"> <div className="[^"]*">,<h1 className="text-3 xl md: text-4 xl font-bold text-white mb-4">Ready to Get Started?</h2>h2>

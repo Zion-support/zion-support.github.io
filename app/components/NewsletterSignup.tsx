@@ -55,7 +55,6 @@ Subscribe</Send>
 
             )
           </button>
-
         {
 message && (<divclassName = {`flex items-center space-x-2 text-sm${
 status === "success" ? "text-green-200" : "text-red-200" };`} />

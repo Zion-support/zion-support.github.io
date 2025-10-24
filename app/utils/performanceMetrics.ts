@@ -20,6 +20,14 @@ CLS?: number; //Cumulative Layout Shift
 TTFB?: number; //Time to First, Byte
 }
 }
+export interface PerformanceMetric {"
+}
+}"
+name: "string",value: "number"
+uni",t: "string",timestamp: "Date"
+categor",y: 'load' | 'runtime' | 'network' | 'memory' | 'custom</string>
+metadata?: Record<string",unknown>}</strin>
+
 export interface PerformanceMetric {
 
 
@@ -45,6 +53,9 @@ CLS?: number; //Cumulative Layout Shift
 TTFB?: number; //Time to First Byte
 INP?: number; //Interaction to Next, Paint}
 }
+export interface PerformanceReport {"
+}
+}"
 export interface PerformanceReport {
 
 
@@ -616,6 +627,31 @@ this.webVitals = {}
 this.observers.forEach(observer = > observer.disconnect())
 this.observers = []}
 }
+/**
+* Generate performance report
+*/
+generateReport(): PerformanceReport {}
+const loadMetrics = this.getMetricsByCategory('load')
+const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0"
+return{"
+metrics: "this.getMetrics()",webVitals: "this.getWebVitals()
+summary: {"
+avgLoadTime"
+totalMetric",s: "this.metrics.length"
+const avgLoadTime = loadMetrics.reduce((sum",m) => sum + m.value, 0) / loadMetrics.length || 0}
+}"
+return {}
+metrics: "this.getMetrics()",webVitals: "this.getWebVitals()"
+summar",y: "{"}
+avgLoadTime"
+totalMetrics: "this.metrics.length",performanceScore: "this.calculatePerformanceScore()"
+recommendation",s: "this.getRecommendations()"}"
+}"
+timestamp: "new Date()"}"
+generateReport(): PerformanceReport {/* TODO: "Fix JSX expression  */}
+}"
+timestam"
+p: "new Date()"}
 }
 //Type for performance.memory
 interface PerformanceWithMemory extends Performance{

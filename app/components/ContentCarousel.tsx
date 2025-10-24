@@ -15,10 +15,7 @@ icon: <BarChart className="h-12 w-12" />,color: "from-blue-500 to-cyan-500"
   }
     {
 id: "2",title: "Cloud Infrastructure",description: "Scalable,secure, and reliable cloud solutions for your business needs."
-features: "[","99.9% uptime guarantee"
-        "Auto-scaling capabilities"
-        "Advanced security"
-        "24/7 monitoring"
+features: "[","99.9% uptime guarantee"Auto-scaling capabilities"Advanced security"24/7 monitoring"
       ]
 icon: <Cloud className="h-12 w-12" />,color: "from-green-500 to-emerald-500"
     }
@@ -79,7 +76,6 @@ Get Started <ArrowRight className="ml-2 h-5 w-5" />
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
 Learn More
               </button>
-
           ,</section>
         {/* Features Section*/} <section className="py-20 px-4" /> <div className="[^"]*"> <div className="[^"]*">
     <h1 className="text-4 xl font-bold text-white mb-4">Key Features</h2> <p className="[^"]*">
@@ -95,9 +91,7 @@ Powerful AI-driven features designed to transform your business operations
                       </li>
                     ))}
                   </ul>
-
               ))}
-
         </section>
         {/* Benefits Section*/} <section className="py-20 px-4 bg-white/5" /> <div className="[^"]*"> <div className="[^"]*">
     <h1 className="text-4 xl font-bold text-white mb-4">Why Choose Our Solution</h2> <p className="[^"]*">
@@ -222,7 +216,6 @@ featuresmapfeature index =>
 
                   </ul>
                 </div>
-
             </div>
           </div>
         </section>
@@ -274,7 +267,6 @@ Discover Our </h2><span className= quottext-transparent bg-clip-text bg-gradient
       <divkey= index className= quotflex items-center space-x-3 quot //>
     </div><CheckCircleclassName= quotw-5 h-5 text-green-400 flex-shrink-0 quot / /><span className= quottext-gray-300 quot>feature</span>
                       </div>
-
                   </div>
                 </div>
                 /Stats /currentSlideDatastats  <><div className= quotgrid grid-cols-3 gap-6 quot>
@@ -284,7 +276,6 @@ Discover Our </h2><span className= quottext-transparent bg-clip-text bg-gradient
     <div className= quottext-gray-400 text-smquot>
       statlabel</div>
                       </div>
-
                   </div>
 
                 /CTA /
@@ -305,16 +296,13 @@ Learn More</div>
     <div className= quotgrid grid-cols-1 mdgrid-cols-2 lggrid-cols-4 gap-6 quot>currentSlideDatafeaturesmapfeature index => </div>
                 <><divkey= index className= quotflex items-center gap-3 quot //><CheckCircleclassName= quotw-5 h-5 text-cyan-400 flex-shrink-0 quot //><span className= quottext-gray-300 quot>feature</span>
                 </div>
-
             </div>
             /Stats /currentSlideDatastats  <div className= quotgrid grid-cols-1 mdgrid-cols-3 gap-6 mt-8 pt-8 border-t border-slate-700 quot>currentSlideDatastatsmapstat index => 
       <divstatvalue</div //>
     </div>
     <div className= quottext-sm text-gray-400 quot>statlabel</div>
                   </div>
-
               </div>
-
           </div>
 <button onClick= prevSlide className= quotabsolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20 quot /><ChevronLeftclassName= quoth-6 w-6 quot /> </button>
           <button onClick= nextSlide className= quotabsolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20 quot /><ChevronRightclassName= quoth-6 w-6 quot /> </button>
@@ -342,7 +330,7 @@ index === currentSlide?"bg-cyan-400" : "bg-white/30"
               {benefits.map((benefit,index) => (<divkey = {index};className="flex items-start space-x-4" /> <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
-    </>
+    </>)
   ))}
             </div>
           </div>
@@ -361,7 +349,6 @@ Contact Sales
           </div>
         </section>
       </div>
-
 </div>
 }
  ContentCarouselPage <ArrowRight className="w-5 h-5 ml-2" />
@@ -371,4 +358,4 @@ Contact Sales
 export default ContentCarousel}
 </pExperience>
 </pPowerful>
-}}}}
+}}}}";`'

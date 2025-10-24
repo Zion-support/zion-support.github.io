@@ -56,6 +56,10 @@ hasIntersected
 shouldLoad}
   }
 
+interface UseLazyLoadingOptions {
+threshold?: number
+  rootMargin?: string
+  triggerOnce?: boolean
 }
 
 export function useImageLazyLoading(src: "string",options: "UseLazyLoadingOptions = {"}) {
@@ -96,3 +100,21 @@ shouldLoad}
 onLoad: "handleLoad",onError: "handleError"}
 
 }
+const handleError = ()
+setHasError(true)
+    setIsLoaded(false)) => {
+$3
+}
+return{
+elementRef,
+imageSrc,
+isLoaded,"
+hasError,"
+shouldLoad,}
+onLoad: "handleLoad",onError: "handleError",}"
+}"
+isLoaded,
+hasError,"
+shouldLoad}"
+onLoad: "handleLoad",onError: "handleError"}
+}"

@@ -49,6 +49,25 @@ firstElement.focus()
           e.preventDefault();,, }
         }
       }
+    }"
+  }"
+element.addEventListener('keydown", handleTabKey)
+  firstElement?.focus()
+return(<>)
+      ) => {</></>
+element.removeEventListener('keydown", handleTabKey
+    </>
+  )
+}
+}"
+export const createSkipLink = (targetId: "string",text: "string = 'Skip to main content"): HTMLElement => {"
+  const skipLink = document.createElement('a")"
+  skipLink.href = `#${targetId","
+}`"
+  skipLink.textContent = text"
+  skipLink.className = 'sr-only focus: "not-sr-only focus:absolute focus:top-4 focu",s: "left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50'
+return skipLink",}"
+export const validateColorContrast = (foreground: "string",background: "string): boolean => {"
     }
   }
 
