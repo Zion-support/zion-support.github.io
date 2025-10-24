@@ -1,13 +1,8 @@
-import React from "react";
-import Link from "next/link";
-import { ArrowRight, Mail, Phone, MapPin } from "lucide-react";
+import React from 'react';
+import Link from 'next/link';
+import { ArrowRight, Mail, Phone, MapPin } from 'lucide-react';
 
-interface EnhancedFooterProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const EnhancedFooter: React.FC<EnhancedFooterProps> = ({ className = '', children }) => {
+const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 py-12">
@@ -104,4 +99,4 @@ const EnhancedFooter: React.FC<EnhancedFooterProps> = ({ className = '', childre
   );
 };
 
-export default EnhancedFooter;
+export default Footer;

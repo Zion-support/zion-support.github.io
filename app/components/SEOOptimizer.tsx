@@ -1,8 +1,7 @@
 "use client"
-import React from "react";
-import Head from "next/head";
-import React, { useEffect } from "react"
-import { Head  } from "next/head";
+import React, { useEffect } from "react";
+
+
 interface SEOOptimizerProps {
 className?: string
 const SEOOptimizer: "React.FC<SEOOptimizerProps> = ({",title="Zion Tech Group - Advanced AI and IT Solutions"

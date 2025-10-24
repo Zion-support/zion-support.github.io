@@ -1,8 +1,18 @@
-"use client"
 import React from "react";
-import Head from "next/head";
 import Navigation from "./Navigation";
 import { ArrowRight, CheckCircle } from "lucide-react";
+
+export const metadata = {
+  title: "Zion Tech Group - AI & IT Solutions",
+  description: "Leading provider of AI and IT solutions for modern businesses.",
+  robots: "index, follow",
+  openGraph: {
+    type: "website",
+    title: "Zion Tech Group - AI & IT Solutions",
+    description: "Leading provider of AI and IT solutions for modern businesses.",
+  },
+};
+
 
 const features = [
   {
@@ -41,10 +51,7 @@ const benefits = [
 const Header = () => {
   return (
     <>
-      <Head>
-        <title>Zion Tech Group - AI & IT Solutions</title>
-        <meta name="description" content="Leading provider of AI and IT solutions for modern businesses." />
-      </Head>
+      
       
       <header className="bg-slate-900/95 backdrop-blur-sm fixed w-full top-0 z-50 border-b border-gray-800">
         <Navigation />

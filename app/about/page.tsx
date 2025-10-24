@@ -1,25 +1,22 @@
-"use client"
 import React from "react";
-import Head from "next/head";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+
+export const metadata = {
+  title: "About|Zion Tech Group",
+  description: "Professional about services and solutions for modern businesses.",
+  robots: "index, follow",
+  openGraph: {
+    type: "website",
+    title: "About|Zion Tech Group",
+    description: "Professional about services and solutions for modern businesses.",
+  },
+};
+
 export default function ServicePage() {
 
   return (<>
-      <Head>
-        <title>About|Zion Tech Group</title>
-        
-        <meta name="description" content="Professional about services and solutions for modern businesses." />
-        
-        <meta name="robots" content="index, follow" />
-        
-        <meta property="og:type" content="website" />
-        
-        <meta property="og:title" content="About|Zion Tech Group" />
-        
-        <meta property="og:description" content="Professional about services and solutions for modern businesses." />
       
-      </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         <div className="container mx-auto px-4 py-16">

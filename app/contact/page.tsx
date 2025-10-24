@@ -1,10 +1,11 @@
 "use client"
 import React, { useState, useCallback, useMemo } from "react";
-import Head from "next/head";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import SEOHead from "../components/SEOHead";
 import { generateStructuredData  } from "../utils/seoData";
+
+
 interface FormData {
   name: string
   email: string
@@ -107,20 +108,7 @@ const ContactPage: React.FC = () => {
     priceRange: "$$"
   }), [])
   return (<>
-      <Head>
-        <title>Contact|Zion Tech Group</title>
-        
-        <meta name="description" content="Professional contact services and solutions for modern businesses." />
-        
-        <meta name="robots" content="index, follow" />
-        
-        <meta property="og:type" content="website" />
-        
-        <meta property="og:title" content="Contact|Zion Tech Group" />
-        
-        <meta property="og:description" content="Professional contact services and solutions for modern businesses." />
       
-      </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         <div className="container mx-auto px-4 py-16">

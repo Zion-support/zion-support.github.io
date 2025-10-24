@@ -1,26 +1,23 @@
-"use client"
 import React from "react";
 import Footer from "@/components/Footer";
-import Head from "next/head";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+
+export const metadata = {
+  title: "Container Orchestration|Zion Tech Group",
+  description: "Professional container orchestration services and solutions for modern businesses.",
+  robots: "index, follow",
+  openGraph: {
+    type: "website",
+    title: "Container Orchestration|Zion Tech Group",
+    description: "Professional container orchestration services and solutions for modern businesses.",
+  },
+};
+
 export default function ServicePage() {
 
   return (<>
-      <Head>
-        <title>Container Orchestration|Zion Tech Group</title>
-        
-        <meta name="description" content="Professional container orchestration services and solutions for modern businesses." />
-        
-        <meta name="robots" content="index, follow" />
-        
-        <meta property="og:type" content="website" />
-        
-        <meta property="og:title" content="Container Orchestration|Zion Tech Group" />
-        
-        <meta property="og:description" content="Professional container orchestration services and solutions for modern businesses." />
       
-      </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         <div className="container mx-auto px-4 py-16">

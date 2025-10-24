@@ -1,21 +1,27 @@
 import React from "react";
 import Link from "next/link";
 import Navigation from "./components/Navigation";
-import Footer from "./components/Footer";
+import Footer from "@/components/Footer";
 import SEOHead from "./components/SEOHead";
-import Head from "next/head";
+
+export const metadata = {
+  title: "Zion Tech Group - AI & IT Solutions",
+  description: "Leading provider of AI and IT solutions for modern businesses. Transform your operations with cutting-edge technology.",
+  robots: "index, follow",
+  openGraph: {
+    type: "website",
+    title: "Zion Tech Group - AI & IT Solutions",
+    description: "Leading provider of AI and IT solutions for modern businesses. Transform your operations with cutting-edge technology.",
+  },
+};
+
+export const dynamic = 'force-dynamic';
+
 
 export default function HomePage() {
   return (
     <>
-      <Head>
-        <title>Zion Tech Group - AI & IT Solutions</title>
-        <meta name="description" content="Leading provider of AI and IT solutions for modern businesses. Transform your operations with cutting-edge technology." />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Zion Tech Group - AI & IT Solutions" />
-        <meta property="og:description" content="Leading provider of AI and IT solutions for modern businesses. Transform your operations with cutting-edge technology." />
-      </Head>
+      
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <Navigation />

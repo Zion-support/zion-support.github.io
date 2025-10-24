@@ -1,6 +1,16 @@
-"use client"
 import React from "react";
-import Head from "next/head";
+
+export const metadata = {
+  title: "AdminPage | Zion Tech Group",
+  description: "Professional AdminPage services by Zion Tech Group",
+  robots: "index, follow",
+  openGraph: {
+    type: "website",
+    title: "AdminPage | Zion Tech Group",
+    description: "Professional AdminPage services by Zion Tech Group",
+  },
+};
+
 const AdminPage = () => {
   return (<div>
       <h1>Admin Page</h1>
@@ -16,10 +26,7 @@ const AdminPage = () => {
 export default function AdminPagePage() {
   return (
     <>
-      <Head>
-        <title>AdminPage | Zion Tech Group</title>
-        <meta name="description" content="Professional AdminPage services by Zion Tech Group" />
-      </Head>
+      
       
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         <div className="container mx-auto px-4 py-16">

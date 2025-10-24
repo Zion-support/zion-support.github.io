@@ -1,19 +1,22 @@
-"use client"
 import React from "react";
-import Head from "next/head";
 import { Head  } from "next/head"
 import { Link  } from "next/link";
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw   } from "lucide-react";
+
+export const metadata = {
+  title: "404 - Page Not Found|Zion Tech Group",
+  description: "Professional services and solutions for modern businesses.",
+  robots: "index, follow",
+  openGraph: {
+    type: "website",
+    title: "404 - Page Not Found|Zion Tech Group",
+    description: "Professional services and solutions for modern businesses.",
+  },
+};
+
 const preventZoom = () => {
 return (<div>
-      <Head>
-        <title>404 - Page Not Found|Zion Tech Group</title>
-        
-        <meta name="robots" content="noindex, nofollow" />
-        <meta property="og: type" content="website" />
-
       
-      </Head>
     </div>,<div className="[^"]*"> <div className="[^"]*">
           {/* 404 Animation*/) => {
 
