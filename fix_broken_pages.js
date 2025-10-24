@@ -1,34 +1,44 @@
-'use client'
+const fs = require('fs');
+const path = require('path');
+
+function createBasicPage(filePath) {
+  const fileName = path.basename(filePath, '.tsx');
+  const dirName = path.basename(path.dirname(filePath));
+  
+  // Extract service name from directory name
+  const serviceName = dirName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+  
+  const content = `'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const AiMobileAppDevelopmentPage: React.FC = () => {
+const ${serviceName.replace(/\s+/g, '')}Page: React.FC = () => {
   const features = [
     {
       icon: CheckCircle,
-      title: 'Advanced Ai Mobile App Development',
-      description: 'Cutting-edge ai mobile app development solutions for modern businesses.',
+      title: 'Advanced ${serviceName}',
+      description: 'Cutting-edge ${serviceName.toLowerCase()} solutions for modern businesses.',
       benefits: ['High performance', 'Scalable architecture', 'Secure implementation', '24/7 support']
     },
     {
       icon: Star,
       title: 'Premium Quality',
-      description: 'Top-tier ai mobile app development services with guaranteed results.',
+      description: 'Top-tier ${serviceName.toLowerCase()} services with guaranteed results.',
       benefits: ['Expert team', 'Proven track record', 'Quality assurance', 'Customer satisfaction']
     },
     {
       icon: Users,
       title: 'Expert Team',
-      description: 'Professional ai mobile app development specialists at your service.',
+      description: 'Professional ${serviceName.toLowerCase()} specialists at your service.',
       benefits: ['Certified experts', 'Industry experience', 'Continuous learning', 'Best practices']
     },
     {
       icon: Zap,
       title: 'Fast Delivery',
-      description: 'Quick turnaround times for all ai mobile app development projects.',
+      description: 'Quick turnaround times for all ${serviceName.toLowerCase()} projects.',
       benefits: ['Rapid development', 'Efficient processes', 'Timely delivery', 'Agile methodology']
     }
   ]
@@ -44,9 +54,9 @@ const AiMobileAppDevelopmentPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Ai Mobile App Development - Professional Services</title>
-        <meta name="description" content="Professional ai mobile app development services for modern businesses. Expert solutions with guaranteed results." />
-        <meta name="keywords" content="ai mobile app development, professional services, business solutions, technology" />
+        <title>${serviceName} - Professional Services</title>
+        <meta name="description" content="Professional ${serviceName.toLowerCase()} services for modern businesses. Expert solutions with guaranteed results." />
+        <meta name="keywords" content="${serviceName.toLowerCase()}, professional services, business solutions, technology" />
       </Helmet>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
@@ -55,10 +65,10 @@ const AiMobileAppDevelopmentPage: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Mobile App Development
+              ${serviceName}
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Professional ai mobile app development services for modern businesses. Expert solutions with guaranteed results.
+              Professional ${serviceName.toLowerCase()} services for modern businesses. Expert solutions with guaranteed results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
@@ -78,7 +88,7 @@ const AiMobileAppDevelopmentPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover the powerful features that make our ai mobile app development solution the best choice for your business.
+                Discover the powerful features that make our ${serviceName.toLowerCase()} solution the best choice for your business.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -107,9 +117,9 @@ const AiMobileAppDevelopmentPage: React.FC = () => {
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Ai Mobile App Development?</h2>
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our ${serviceName}?</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of our advanced ai mobile app development solution.
+                Experience the benefits of our advanced ${serviceName.toLowerCase()} solution.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -128,4 +138,59 @@ const AiMobileAppDevelopmentPage: React.FC = () => {
   )
 }
 
-export default AiMobileAppDevelopmentPage
+export default ${serviceName.replace(/\s+/g, '')}Page
+`;
+
+  return content;
+}
+
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const lines = content.split('\n').length;
+    
+    // If file is too short or broken, replace it
+    if (lines < 20 || content.includes('</div>') && !content.includes('<div')) {
+      const newContent = createBasicPage(filePath);
+      fs.writeFileSync(filePath, newContent);
+      console.log(`Fixed: ${filePath}`);
+    }
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+  }
+}
+
+// Process all broken page files
+const brokenFiles = [
+  'src/database-services/page.tsx',
+  'src/ai-ecommerce-solutions/page.tsx',
+  'src/cybersecurity/page.tsx',
+  'src/iot-edge-computing/page.tsx',
+  'src/blockchain-web3/page.tsx',
+  'src/blockchain/page.tsx',
+  'src/ai-email-marketing/page.tsx',
+  'src/iot-edge/page.tsx',
+  'src/case-studies/page.tsx',
+  'src/page-minimal.tsx',
+  'src/quantum-ai/page.tsx',
+  'src/robotics/page.tsx',
+  'src/ai-automation/page.tsx',
+  'src/it-support/page.tsx',
+  'src/ai-customer-support-bot/page.tsx',
+  'src/ai-seo-optimizer/page.tsx',
+  'src/network-infrastructure/page.tsx',
+  'src/it-infrastructure/page.tsx',
+  'src/computer-vision/page.tsx',
+  'src/nlp/page.tsx',
+  'src/ai-mobile-app-development/page.tsx',
+  'src/blog/ai-enterprise-transformation-2025/page.tsx'
+];
+
+brokenFiles.forEach(file => {
+  const fullPath = path.join(__dirname, file);
+  if (fs.existsSync(fullPath)) {
+    processFile(fullPath);
+  }
+});
+
+console.log('Broken pages fixed');

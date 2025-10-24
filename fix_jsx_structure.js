@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-function fixJSXComprehensive(content) {
-  // Fix self-closing divs that should be opening divs (with className)
+function fixJSXStructure(content) {
+  // Fix self-closing divs that should be opening divs
   content = content.replace(/<div className="[^"]*"><\/div>\s*{/g, (match) => {
     const className = match.match(/className="([^"]*)"/)[1];
     return `<div className="${className}">\n            {`;
@@ -17,31 +17,15 @@ function fixJSXComprehensive(content) {
   // Fix self-closing divs that should be opening divs (without className)
   content = content.replace(/<div><\/div>\s*{/g, '<div>\n            {');
   
-  // Fix self-closing divs that should be opening divs (with className, no braces after)
-  content = content.replace(/<div className="[^"]*"><\/div>\s*<[^>]*>/g, (match) => {
-    const className = match.match(/className="([^"]*)"/)[1];
-    const rest = match.replace(/<div className="[^"]*"><\/div>\s*/, '');
-    return `<div className="${className}">\n            ${rest}`;
-  });
-  
-  // Fix self-closing sections that should be opening sections (with className, no braces after)
-  content = content.replace(/<section className="[^"]*"><\/section>\s*<[^>]*>/g, (match) => {
-    const className = match.match(/className="([^"]*)"/)[1];
-    const rest = match.replace(/<section className="[^"]*"><\/section>\s*/, '');
-    return `<section className="${className}">\n          ${rest}`;
-  });
-  
   return content;
 }
 
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixedContent = fixJSXComprehensive(content);
-    if (content !== fixedContent) {
-      fs.writeFileSync(filePath, fixedContent);
-      console.log(`Fixed: ${filePath}`);
-    }
+    const fixedContent = fixJSXStructure(content);
+    fs.writeFileSync(filePath, fixedContent);
+    console.log(`Fixed: ${filePath}`);
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
   }
@@ -55,4 +39,4 @@ files.forEach(file => {
   processFile(path.join(componentsDir, file));
 });
 
-console.log('Comprehensive JSX fixes completed');
+console.log('JSX structure fixes completed');
