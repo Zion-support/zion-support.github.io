@@ -1,33 +1,17 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Mail, Phone, MapPin, Send, CheckCircle, Clock, MessageCircle } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Circle, Send, Phone, Mail, MapPin, Clock } from 'lucide-react';
-
-export default function ContactPage() {
->>>>>>> origin/main
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     phone: '',
-<<<<<<< HEAD
     service: '',
     message: ''
   });
-=======
-    subject: '',
-    message: ''
-  });
-
->>>>>>> origin/main
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -43,51 +27,15 @@ export default function ContactPage() {
     setIsSubmitting(true);
     
     // Simulate form submission
-<<<<<<< HEAD
     await new Promise(resolve => setTimeout(resolve, 2000));
     
     setIsSubmitting(false);
     setIsSubmitted(true);
     
-=======
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    setIsSubmitted(true);
-    setIsSubmitting(false);
-=======
-"use client";
-import React, { useState } from "react";
-import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
-
-const ContactPage: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    service: "",
-    message: ""
-  });
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Here you would typically send the form data to your backend
-    // Form submitted successfully
-    setIsSubmitted(true);
->>>>>>> origin/main
     // Reset form after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({
-<<<<<<< HEAD
         name: '',
         email: '',
         company: '',
@@ -96,21 +44,10 @@ const ContactPage: React.FC = () => {
         message: ''
       });
     }, 3000);
-=======
-        name: "",
-        email: "",
-        company: "",
-        service: "",
-        message: ""
-      });
-    }, 3000);
->>>>>>> origin/main
->>>>>>> origin/main
   };
 
   const contactInfo = [
     {
-<<<<<<< HEAD
       icon: <Mail className="w-6 h-6 text-cyan-400" />,
       title: 'Email Us',
       details: ['info@ziontechgroup.com', 'support@ziontechgroup.com'],
@@ -133,84 +70,10 @@ const ContactPage: React.FC = () => {
       title: 'Business Hours',
       details: ['Monday - Friday: 9:00 AM - 6:00 PM', 'Saturday: 10:00 AM - 4:00 PM'],
       description: 'We\'re here to help during these hours'
-=======
-<<<<<<< HEAD
-      icon: title: '',
-      value: '+1 (555) 123-4567',
-      description: 'Mon-Fri 9AM-6PM EST'
-    },
-    {
-      icon: title: 'Email',
-      value: 'contact@ziontechgroup.com',
-      description: 'We respond within 24 hours'
-    },
-    {
-      icon: title: 'Address',
-      value: '123 Tech Street, Suite 100',
-      description: 'San Francisco, CA 94105'
-    },
-    {
-      icon: title: 'Business Hours',
-      value: &apos;Monday - Friday&apos;,      title: 'Business Hours',
-      value: 'Monday - Friday',
-      value: 'Monday - Friday',
-      description: '9:00 AM - 6:00 PM EST'
-    }
-  ];
-
-  const subjects = [
-    'AI Services',
-    'IT Services',
-    'Services',
-    'Micro SAAS',
-    'Digital Transformation',
-    '5G Implementation',
-    'Other'
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Contact Us - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for AI solutions, IT services, and digital transformation. Contact our experts today." />
-        <meta name="keywords" content="contact, AI services, IT solutions, digital transformation, business consultation" />
-      </Helmet>
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            Contact
-            <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Us
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Ready to transform your business with AI and IT solutions? 
-            Get in touch with our experts today.
-=======
-      icon: Mail,
-      title: "Email Us",
-      details: "hello@ziontechgroup.com",
-      description: "Send us an email and we&apos;ll respond within 24 hours"
-    },
-    {
-      icon: Phone,
-      title: "Call Us",
-      details: "+1 (555) 123-4567",
-      description: "Mon-Fri from 9am to 6pm EST"
-    },
-    {
-      icon: MapPin,
-      title: "Visit Us",
-      details: "123 Tech Street, Silicon Valley, CA 94000",
-      description: "Come say hello at our headquarters"
->>>>>>> origin/main
     }
   ];
 
   const services = [
-<<<<<<< HEAD
     'AI Solutions',
     'Web Development',
     'Mobile Development',
@@ -261,32 +124,10 @@ const ContactPage: React.FC = () => {
                 <p className="text-sm text-gray-400">{info.description}</p>
               </div>
             ))}
-=======
-    "AI Solutions",
-    "IT Services",
-    "Micro SaaS Development",
-    "Business Intelligence",
-    "Consulting",
-    "Other"
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Get in <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">Touch</span>
-          </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Ready to transform your business with AI and technology? Let&apos;s start the conversation.
->>>>>>> origin/main
           </p>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Contact Info */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -307,28 +148,10 @@ const ContactPage: React.FC = () => {
                 </div>
               );
             })}
-=======
-      {/* Contact Info Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {contactInfo.map((info, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full mb-4 mx-auto">
-                  <info.icon className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{info.title}</h3>
-                <p className="text-emerald-600 font-medium mb-2">{info.details}</p>
-                <p className="text-gray-600 text-sm">{info.description}</p>
-              </div>
-            ))}
->>>>>>> origin/main
->>>>>>> origin/main
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Contact Form Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
@@ -500,73 +323,6 @@ const ContactPage: React.FC = () => {
                   <span className="font-medium">Average response time: 2 hours</span>
                 </div>
               </div>
-=======
-<<<<<<< HEAD
-      {/* Contact Form */}
-      <section className="py-20 px-4 bg-slate-800/30">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-white text-center mb-16">
-            Send us a Message
-          </h2>
-          
-          {isSubmitted ? (
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 text-center">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-6">
-                <Circle className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>
-              <p className="text-gray-300 mb-6">
-                Thank you for contacting us. We'll get back to you within 24 hours.
-              </p>
-              <button
-                onClick={() => {
-                  setIsSubmitted(false);
-                  setFormData({
-                    name: '',
-                    email: '',
-                    company: '',
-                    phone: '',
-                    subject: '',
-                    message: ''
-                  });
-                }}
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-              >
-                Send Another Message
-              </button>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label htmlFor="name" className="block text-white font-medium mb-2">
-=======
-      {/* Contact Form Section */}
-      <section className="py-20 px-4 bg-white/5">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Send us a Message
-            </h2>
-            <p className="text-xl text-gray-600">
-              Fill out the form below and we&apos;ll get back to you as soon as possible.
-            </p>
-          </div>
-
-          {isSubmitted ? (
-            <div className="bg-white p-8 rounded-xl shadow-lg text-center">
-              <div className="flex items-center justify-center w-16 h-16 bg-green-500 rounded-full mb-4 mx-auto">
-                <CheckCircle className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
-              <p className="text-gray-600">Your message has been sent successfully. We&apos;ll get back to you soon!</p>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
->>>>>>> origin/main
                     Full Name *
                   </label>
                   <input
@@ -574,24 +330,14 @@ const ContactPage: React.FC = () => {
                     id="name"
                     name="name"
                     value={formData.name}
-<<<<<<< HEAD
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-=======
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
->>>>>>> origin/main
                     placeholder="Your full name"
                   />
                 </div>
                 <div>
-<<<<<<< HEAD
                   <label htmlFor="email" className="block text-white font-medium mb-2">
-=======
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
->>>>>>> origin/main
                     Email Address *
                   </label>
                   <input
@@ -599,29 +345,17 @@ const ContactPage: React.FC = () => {
                     id="email"
                     name="email"
                     value={formData.email}
-<<<<<<< HEAD
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-=======
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
->>>>>>> origin/main
                     placeholder="your.email@company.com"
                   />
                 </div>
               </div>
 
-<<<<<<< HEAD
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label htmlFor="company" className="block text-white font-medium mb-2">
-=======
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
->>>>>>> origin/main
                     Company
                   </label>
                   <input
@@ -629,18 +363,12 @@ const ContactPage: React.FC = () => {
                     id="company"
                     name="company"
                     value={formData.company}
-<<<<<<< HEAD
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-=======
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
->>>>>>> origin/main
                     placeholder="Your company name"
                   />
                 </div>
                 <div>
-<<<<<<< HEAD
                   <label htmlFor="phone" className="block text-white font-medium mb-2">
                     Number
                   </label>
@@ -653,28 +381,10 @@ const ContactPage: React.FC = () => {
                     className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="+1 (555) 123-4567"
                   />
-=======
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                    Service Interest
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    value={formData.service}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
-                  >
-                    <option value="">Select a service</option>
-                    {services.map((service, index) => (
-                      <option key={index} value={service}>{service}</option>
-                    ))}
-                  </select>
->>>>>>> origin/main
                 </div>
               </div>
 
               <div className="mb-6">
-<<<<<<< HEAD
                 <label htmlFor="subject" className="block text-white font-medium mb-2">
                   Subject *
                 </label>
@@ -697,31 +407,20 @@ const ContactPage: React.FC = () => {
 
               <div className="mb-8">
                 <label htmlFor="message" className="block text-white font-medium mb-2">
-=======
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
->>>>>>> origin/main
                   Message *
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   value={formData.message}
-<<<<<<< HEAD
                   onChange={handleChange}
                   required
                   rows={6}
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
-=======
-                  onChange={handleInputChange}
-                  required
-                  rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
->>>>>>> origin/main
                   placeholder="Tell us about your project or how we can help you..."
                 />
               </div>
 
-<<<<<<< HEAD
               <div className="text-center">
                 <button
                   type="submit"
@@ -741,54 +440,13 @@ const ContactPage: React.FC = () => {
                   )}
                 </button>
               </div>
-=======
-              <button
-                type="submit"
-                className="w-full bg-gradient-to-r from-emerald-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-              >
-                <Send className="mr-2 h-5 w-5" />
-                Send Message
-              </button>
->>>>>>> origin/main
             </form>
           )}
         </div>
       </section>
-<<<<<<< HEAD
     </div>
   );
 }
-=======
-
-      {/* FAQ Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-xl text-gray-600">
-              Quick answers to common questions about our services.
-            </p>
-          </div>
-
-          <div className="space-y-6">
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">How quickly can you start a project?</h3>
-              <p className="text-gray-600">We typically begin new projects within 1-2 weeks of contract signing, depending on our current workload and project complexity.</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Do you work with small businesses?</h3>
-              <p className="text-gray-600">Absolutely! We work with businesses of all sizes, from startups to enterprise companies. Our solutions are scalable to meet your needs and budget.</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">What technologies do you specialize in?</h3>
-              <p className="text-gray-600">We specialize in AI/ML, cloud computing, web development, mobile apps, and data analytics. We stay current with the latest technologies and frameworks.</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Do you provide ongoing support?</h3>
-              <p className="text-gray-600">Yes, we offer comprehensive support and maintenance packages to ensure your solutions continue to perform optimally after launch.</p>
->>>>>>> origin/main
             </div>
           </div>
         </div>
@@ -797,9 +455,4 @@ const ContactPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default ContactPage;
-=======
-export default ContactPage;
->>>>>>> origin/main
->>>>>>> origin/main

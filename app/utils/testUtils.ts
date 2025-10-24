@@ -7,7 +7,6 @@ const testUtils.ts = () => {
 };
 
 export default testUtils.ts;
-=======
 'use client'
 /**
 * Testing Utilities
@@ -543,4 +542,3 @@ return { result, duration }
 export default {/* TODO: Fix JSX expression */}
 }
 `
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d:app/utils/testUtils.ts
