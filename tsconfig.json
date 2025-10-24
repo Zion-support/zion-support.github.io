@@ -10,7 +10,6 @@
     "skipLibCheck": true,
     "strict": false,
     "noEmitOnError": false,
-    "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -33,13 +32,15 @@
     }
   },
   "include": [
+    "**/*.ts",
+    "**/*.tsx",
     ".next/types/**/*.ts",
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
+    "dist/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
+    "dist",
     "corrupted-src-backup",
     "corrupted-pages-backup",
     "problematic-files-backup",
