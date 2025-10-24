@@ -3,7 +3,7 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check, Send, BarChart3, DollarSign, Activity, Lock, FileText, CreditCard, Building2, Sparkles, PieChart } from 'lucide-react'
+import { CheckCircle, ArrowRight, Zap, Shield, Brain, Users, Settings, BarChart3, FileText } from 'lucide-react'
 
 const AccessibilityPage: React.FC = () => {
   const features = [

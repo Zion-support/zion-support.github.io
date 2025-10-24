@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import {
@@ -10,9 +10,7 @@ import {
   InformationCircleIcon,
   BriefcaseIcon,
   PhoneIcon,
-  DocumentTextIcon,
-  AcademicCapIcon,
-  ChevronDownIcon
+  AcademicCapIcon
 } from '@heroicons/react/24/outline'
 
 const Navigation = () => {

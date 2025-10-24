@@ -1,8 +1,7 @@
-import React from 'react'
 import Link from 'next/link'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-import { ArrowRight, Brain, Cloud, Shield, Zap, Star, CheckCircle } from 'lucide-react'
+import { ArrowRight, Brain, Cloud, Shield, Zap } from 'lucide-react'
 
 export default function HomePage() {
   const features = [
