@@ -27,5 +27,9 @@ import { Home } from 'lucide-react'
     if (process.env.NODE_ENV=== 'production'
     console.log('Error data prepared for "reporting": ',
   windo w.location.href= '/'
+<<<<<<< HEAD
               We;
+=======
+              We'';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d1ed
             {process.env.NODE_ENV === 'development'

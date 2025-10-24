@@ -37,7 +37,11 @@ import { ArrowRight, Users, BarChart, CheckCircle, Brain, Settings, Target, Tren
     'Custom integrations'
   "name": 'Enterprise',
     "price": 'Custom',
+<<<<<<< HEAD
       "period": ''',
+=======
+      "period": '',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d1ed
     "description": 'For large organizations',
         'Unlimited projects'
         'Full AI suite'

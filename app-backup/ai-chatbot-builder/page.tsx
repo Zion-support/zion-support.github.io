@@ -54,7 +54,11 @@ import { ArrowRight, Zap, Brain, CheckCircle, Users, BarChart, MessageCircle, Ta
     'API access'
       "name": 'Enterprise',
     "price": 'Custom',
+<<<<<<< HEAD
       "period": ''',
+=======
+      "period": '',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d1ed
     "description": 'For large organizations with complex requirements',
         'Unlimited conversations'
         'Custom AI models'

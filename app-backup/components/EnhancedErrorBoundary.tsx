@@ -22,7 +22,13 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
+<<<<<<< HEAD
 const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className = ''',
     console.error('Error caught by "boundary": ";,
             <p className=&quot;text-gray-300 mb-6&quot;>We"
+=======
+const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className = '',
+    console.error('Error caught by "boundary": \';,
+            <p className=&quot;text-gray-300 mb-6&quot;>We\'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d1ed
             {process.env.NODE_ENV === 'development'

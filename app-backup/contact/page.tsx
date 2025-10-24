@@ -77,7 +77,11 @@ import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react"
                     id="service"
                     name="service"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg "focus": ring-2 focus:ring-emerald-500 focus:border-transparent",
+<<<<<<< HEAD
                     <option value="""
+=======
+                    <option value=""
+>>>>>>> cursor/fix-errors-and-merge-to-main-d1ed
               <div className="mb-6"
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2"
                   id="message"

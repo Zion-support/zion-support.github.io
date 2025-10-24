@@ -1,13 +1,13 @@
-'use client';
-import React from 'react';
-import Head from 'next/head';
+'use client'
+import React from 'react'
+import Head from 'next/head'
 
 interface SEOOptimizerProps {
-  title: string;
-  description: string;
-  keywords?: string | string[];
-  ogImage?: string;
-  className?: string;
+  title: string
+  description: string
+  keywords?: string | string[]
+  ogImage?: string
+  className?: string
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
@@ -17,8 +17,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   ogImage = '/og-image.jpg',
   className = ''
 }) => {
-  const fullTitle = title.includes('ZionTechGroup') ? title : `${title} | ZionTechGroup`;
-  const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
+  const fullTitle = title.includes('ZionTechGroup') ? title : `${title} | ZionTechGroup`
+  const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords
 
   return (
     <Head>
@@ -34,7 +34,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
     </Head>
-  );
-};
+  )
+}
 
-export default SEOOptimizer;
+export default SEOOptimizer
