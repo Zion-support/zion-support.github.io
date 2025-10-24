@@ -4,7 +4,7 @@ import { AlertTriangle, Home, RefreshCw } from 'lucide-react';
 interface AdvancedErrorBoundaryProps {
   children: ReactNode;
   className?: string;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (_error: Error, _errorInfo: ErrorInfo) => void;
 }
 
 
