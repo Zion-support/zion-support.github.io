@@ -1,25 +1,24 @@
-import { render, screen } from "@testing-library/react";
-import '@testing-library/jest-dom';
+import { render, screen } from '@testing-library/react';
+import { HelmetProvider } from 'react-helmet-async';
+import LoadingSpinner from '../app/components/LoadingSpinner';
 
-const TestComponent = () => {;
-  return <div>Test content</div>;
-};
+const TestComponent = () => <div>Test content</div>;
 
-describe("Advanced Components", () => {
-  it("should render without errors", () => {
-    expect(true).toBe(true);
+describe('LoadingSpinner Component', () => {
+  it('renders without crashing', () => {
+    render(
+      <HelmetProvider>
+        <LoadingSpinner />
+      </HelmetProvider>
+    );
+    expect(screen.getByText('Test content')).toBeInTheDocument();
   });
   
-  it("should render test content", () => {
-    render(<TestComponent />);
-    expect(screen.getByText("Test content")).toBeInTheDocument();
-  });
-  
-  it("should handle console errors", () => {
+  it('should handle console errors', () => {
     const consoleSpy = jest
-      .spyOn(console, "error");
+      .spyOn(console, 'error')
       .mockImplementation(() => {});
     // Test implementation
     consoleSpy.mockRestore();
   });
-});</TestComponent>
+});

@@ -1,7 +1,7 @@
 // dynamic utility
-export const dynamic = () => {};
+export const dynamic = () => {
   // Utility function implementation
-  return null
-{};
+  return null;
+};
 
-export default dynamic
+export default dynamic;

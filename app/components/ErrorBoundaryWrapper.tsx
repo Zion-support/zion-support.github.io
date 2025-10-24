@@ -3,13 +3,13 @@ import React from 'react';
 
 interface ErrorBoundaryWrapperProps {
   className?: string;
+  children: React.ReactNode;
 }
 
-const ErrorBoundaryWrapper: React.FC<ErrorBoundaryWrapperProps> = ({ className }) => {
+const ErrorBoundaryWrapper: React.FC<ErrorBoundaryWrapperProps> = ({ className, children }) => {
   return (
     <div className={className}>
-      <h2>ErrorBoundaryWrapper</h2>
-      <p>This component is being rebuilt.</p>
+      {children}
     </div>
   );
 };

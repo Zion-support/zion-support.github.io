@@ -1,101 +1,102 @@
-export function debounce<T extends (...args: any[]) => any>()</T>
-export function throttle<T extends (...args: any[]) => any>(
-export function createIntersectionObserver()
-export function getMemoryUsage(): any {
-export function preloadCriticalResources(): void {
-export function optimizeImage(sr,)
-  c: string, width?: number, height?: number): string {
-export function createLazyImageObserver(): IntersectionObserver | null {
-export function checkPerformanceBudget(): void {
-export function addResourceHints(): void {
 /**
- * Performance optimization utilities for the Zion Tech Group application;
+ * Performance optimization utilities for the Zion Tech Group application
  */
 
-// Debounce function for performance optimization;
+// Debounce function for performance optimization
+export function debounce<T extends (...args: any[]) => any>(
   func: T,
-  wait: number;</T>
+  wait: number
 ): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout;
-  return (...arg,</T>
-  s: Parameters<T>) => {
+  return (...args: Parameters<T>) => {
     clearTimeout(timeout);
- func(...args), wait);
+    timeout = setTimeout(() => func(...args), wait);
   };
+}
 
-// Throttle function for performance optimization;
+// Throttle function for performance optimization
+export function throttle<T extends (...args: any[]) => any>(
   func: T,
-  limit: number;</T>
+  limit: number
 ): (...args: Parameters<T>) => void {
   let inThrottle: boolean;
-  return (...arg,</T>
-  s: Parameters<T>) => {
+  return (...args: Parameters<T>) => {
     if (!inThrottle) {
       func(...args);
       inThrottle = true;
- (inThrottle = false), limit);
+      setTimeout(() => (inThrottle = false), limit);
+    }
   };
+}
 
-// Intersection Observer for lazy loading;
+// Intersection Observer for lazy loading
+export function createIntersectionObserver(
   callback: IntersectionObserverCallback,
-  options?: IntersectionObserverInit;
+  options?: IntersectionObserverInit
 ): IntersectionObserver | null {
   if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
     return null;
+  }
   
   return new IntersectionObserver(callback, {
     rootMargin: '50px',
-    threshold: 0.1,)
-    ...options,)
+    threshold: 0.1,
+    ...options,
   });
+}
 
-// Performance monitoring utilities;
- void): void {
-  if (typeof window === 'undefined' || !('performance' in window)) {
-    fn();
-    return;
+// Get memory usage information
+export function getMemoryUsage(): any {
+  if (typeof window !== 'undefined' && 'memory' in performance) {
+    return (performance as any).memory;
+  }
+  return null;
+}
 
-  const start = performance.now();
-  fn();
-  const end = performance.now();
-  
-  if (process.env.NODE_ENV === 'development') {
-    console.log(`${name} took ${end - start} milliseconds`);
-
-// Memory usage monitoring;
-  if (typeof window === 'undefined' || !('memory' in performance)) {
-    return null;
-  
-  return (performance, as, any).memory;
-
-// Bundle size optimization - preload critical resources;
+// Preload critical resources
+export function preloadCriticalResources(): void {
   if (typeof window === 'undefined') return;
   
-  const criticalResources = [;
+  const criticalResources = [
     '/fonts/inter.woff2',
-    '/images/logo.png',
-    '/images/og-image.jpg'
+    '/css/critical.css',
   ];
   
+  criticalResources.forEach(resource => {
     const link = document.createElement('link');
     link.rel = 'preload';
     link.href = resource;
-    link.as = resource.endsWith('.woff2') ? 'font' : 'image';
+    link.as = resource.endsWith('.css') ? 'style' : 'font';
     if (resource.endsWith('.woff2')) {
       link.crossOrigin = 'anonymous';
+    }
     document.head.appendChild(link);
   });
+}
 
-// Image optimization utility;
-  // Add image optimization parameters if needed;
-  const url = new URL(src, window.location.origin);
-  if (width) url.searchParams.set('w', width.toString());
-  if (height) url.searchParams.set('h', height.toString());
-  url.searchParams.set('q', '80'); // Quality;
-  url.searchParams.set('f', 'webp'); // Format;
-  return url.toString();
+// Optimize image loading
+export function optimizeImage(
+  src: string,
+  width?: number,
+  height?: number
+): string {
+  if (!src) return '';
+  
+  // Add responsive image parameters
+  let optimizedSrc = src;
+  
+  if (width && height) {
+    // Add size parameters for optimization
+    optimizedSrc += `?w=${width}&h=${height}&q=80&f=webp`;
+  }
+  
+  return optimizedSrc;
+}
 
-// Lazy loading utility for images;
+// Create lazy image observer
+export function createLazyImageObserver(): IntersectionObserver | null {
+  return createIntersectionObserver((entries) => {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
         const src = img.dataset.src;
@@ -103,33 +104,69 @@ export function addResourceHints(): void {
           img.src = src;
           img.classList.remove('lazy');
           img.classList.add('loaded');
+        }
+      }
     });
   });
+}
 
-// Performance budget monitoring;
+// Check performance budget
+export function checkPerformanceBudget(): void {
   if (typeof window === 'undefined') return;
   
   const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-  if (!navigation) return;
+  const paint = performance.getEntriesByType('paint');
   
-  const loadTime = navigation.loadEventEnd - navigation.fetchStart;
-  const budget = 3000; // 3 seconds;
- budget) {
- ${budget}ms`);
+  const metrics = {
+    domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+    loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+    firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
+    firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+  };
+  
+  // Performance budget thresholds
+  const budget = {
+    domContentLoaded: 1000, // 1s
+    loadComplete: 2000, // 2s
+    firstPaint: 1500, // 1.5s
+    firstContentfulPaint: 2000, // 2s
+  };
+  
+  // Log warnings for budget violations
+  Object.entries(metrics).forEach(([key, value]) => {
+    if (value > budget[key as keyof typeof budget]) {
+      console.warn(`Performance budget exceeded for ${key}: ${value}ms > ${budget[key as keyof typeof budget]}ms`);
+    }
+  });
+}
 
-// Resource hints for better performance;
+// Add resource hints
+export function addResourceHints(): void {
   if (typeof window === 'undefined') return;
   
-  const hints = [;
-    { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
-    { rel: 'dns-prefetch', href: '//fonts.gstatic.com' },
-    { rel: 'preconnect', href: 'http,
-  s://fonts.googleapis.com' },
-    { rel: 'preconnect', href: 'http,
-  s://fonts.gstatic.com', crossorigin: 'anonymous' },
+  // Add DNS prefetch for external domains
+  const externalDomains = [
+    'fonts.googleapis.com',
+    'fonts.gstatic.com',
   ];
   
+  externalDomains.forEach(domain => {
     const link = document.createElement('link');
-    Object.assign(link, hint);
+    link.rel = 'dns-prefetch';
+    link.href = `//${domain}`;
     document.head.appendChild(link);
-  });</T>
+  });
+  
+  // Add preconnect for critical external resources
+  const criticalDomains = [
+    'fonts.googleapis.com',
+  ];
+  
+  criticalDomains.forEach(domain => {
+    const link = document.createElement('link');
+    link.rel = 'preconnect';
+    link.href = `https://${domain}`;
+    link.crossOrigin = 'anonymous';
+    document.head.appendChild(link);
+  });
+}
