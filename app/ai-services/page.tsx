@@ -1,39 +1,4 @@
-'use client';
-import React from 'react';
-<<<<<<< HEAD
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Page - Zion Tech Group',
-  description: 'Comprehensive page solutions for modern businesses.',
-  keywords: 'page, AI solutions, technology services',
-  openGraph: {
-    title: 'Page - Zion Tech Group',
-    description: 'Comprehensive page solutions for modern businesses.',
-    type: 'website',
-    url: 'https://ziontechgroup.com/ai-services',
-  },
-};
-
-const PagePage = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive page solutions for modern businesses.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
-              Get Started
-            </a>
-            <a href="/services" className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
-              Learn More
-            </a>
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -78,7 +43,7 @@ export default function AIServicesPage() {
               Transform your business with cutting-edge artificial intelligence solutions 
               designed to drive innovation and growth.
             </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-45ea
+
           </div>
         </div>
       </section>
@@ -132,10 +97,37 @@ export default function AIServicesPage() {
       <Footer />
     </div>
   );
-<<<<<<< HEAD
-};
-
-export default PagePage;
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-45ea
+
+export default function AIServicesPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              AI <span className="text-blue-600">Services</span>
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              Comprehensive AI solutions designed to transform your business operations and drive innovation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+              </a>
+              <button className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-blue-700 transition-colors">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}
