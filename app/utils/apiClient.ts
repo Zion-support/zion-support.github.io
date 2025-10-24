@@ -1,110 +1,39 @@
-// Type definitions for API client
-// RequestInit is a built-in TypeScript type for fetch options
-export interface ApiResponse<T = unknown> {
+interface ApiResponse<T> {
   data: T;
-  status: number;
-  statusText: string;
-  headers: Record<string, string>;
+  success: boolean;
+  message?: string;
 }
 
-export interface RequestOptions extends globalThis.RequestInit {
-  timeout?: number;
-  retries?: number;
-}
-
-export class ApiClient {
+class ApiClient {
   private baseURL: string;
-  private defaultOptions: RequestOptions;
 
-  constructor(baseURL = '', options: RequestOptions = {}) {
+  constructor(baseURL: string = '/api') {
     this.baseURL = baseURL;
-    this.defaultOptions = {
-      timeout: 30000,
-      retries: 3,
-      ...options,
-    };
   }
 
-  private async makeRequest<T>(
-    url: string,
-    options: RequestOptions = {}
-  ): Promise<ApiResponse<T>> {
-    const { timeout = 30000, retries: _retries = 3, ...fetchOptions } = {
-      ...this.defaultOptions,
-      ...options,
-    };
-
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), timeout);
-
+  async get<T>(endpoint: string): Promise<ApiResponse<T>> {
     try {
-      const response = await fetch(url, {
-        ...fetchOptions,
-        signal: controller.signal,
-      });
-
-      clearTimeout(timeoutId);
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
+      const response = await fetch(`${this.baseURL}${endpoint}`);
       const data = await response.json();
-      const headers: Record<string, string> = {};
-      response.headers.forEach((value, key) => {
-        headers[key] = value;
-      });
-
-      return {
-        data,
-        status: response.status,
-        statusText: response.statusText,
-        headers,
-      };
-    } catch (error) {
-      clearTimeout(timeoutId);
-      throw error;
+      return { data, success: true };
+    } catch (_error) {
+      return { data: null as T, success: false, message: 'Request failed' };
     }
   }
 
-  async get<T>(url: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
-    return this.makeRequest<T>(`${this.baseURL}${url}`, {
-      ...options,
-      method: 'GET',
-    });
-  }
-
-  async post<T>(url: string, data?: unknown, options: RequestOptions = {}): Promise<ApiResponse<T>> {
-    return this.makeRequest<T>(`${this.baseURL}${url}`, {
-      ...options,
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        ...options.headers,
-      },
-      body: data ? JSON.stringify(data) : undefined,
-    });
-  }
-
-  async put<T>(url: string, data?: unknown, options: RequestOptions = {}): Promise<ApiResponse<T>> {
-    return this.makeRequest<T>(`${this.baseURL}${url}`, {
-      ...options,
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-        ...options.headers,
-      },
-      body: data ? JSON.stringify(data) : undefined,
-    });
-  }
-
-  async delete<T>(url: string, options: RequestOptions = {}): Promise<ApiResponse<T>> {
-    return this.makeRequest<T>(`${this.baseURL}${url}`, {
-      ...options,
-      method: 'DELETE',
-    });
+  async post<T>(endpoint: string, data: unknown): Promise<ApiResponse<T>> {
+    try {
+      const response = await fetch(`${this.baseURL}${endpoint}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      const result = await response.json();
+      return { data: result, success: true };
+    } catch (_error) {
+      return { data: null as T, success: false, message: 'Request failed' };
+    }
   }
 }
 
-// Export default instance
 export const apiClient = new ApiClient();

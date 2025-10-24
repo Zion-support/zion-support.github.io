@@ -1,76 +1,31 @@
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
-  }
-}
-
-interface PerformanceMetrics {
-  loadTime: number | null;
-  firstContentfulPaint: number | null;
-  largestContentfulPaint: number | null;
-  firstInputDelay: number | null;
-  cumulativeLayoutShift: number | null;
-  timeToInteractive: number | null;
-  totalBlockingTime: number | null;
-}
-
-// Global performance monitoring utilities
-export const performanceUtils = {
-  // Measure custom performance marks
-  mark: (name: string) => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      performance.mark(name);
-    }
-  },
-
-  // Measure time between marks
-  measure: (name: string, startMark: string, endMark?: string) => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      if (endMark) {
-        performance.measure(name, startMark, endMark);
-      } else {
-        performance.measure(name, startMark);
-      }
-    }
-  },
-
-  // Get performance entries
-  getEntries: (type?: string) => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      return type ? performance.getEntriesByType(type) : performance.getEntries();
-    }
-    return [];
-  },
-
-  // Clear performance entries
-  clearEntries: (type?: string) => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      if (type) {
-        performance.clearMeasures(type);
-        performance.clearMarks(type);
-      } else {
-        performance.clearMeasures();
-        performance.clearMarks();
-      }
-    }
-  }
+export const measurePerformance = (name: string, fn: () => void) => {
+  const start = performance.now();
+  fn();
+  const end = performance.now();
+  console.log(`${name} took ${end - start} milliseconds`);
 };
 
-// Google Analytics integration for performance tracking
-export const trackPerformanceToGA = (metrics: PerformanceMetrics) => {
-  if (typeof window !== 'undefined' && 'gtag' in window) {
-    window.gtag('event', 'performance_metrics', {
-      event_category: 'Performance',
-      event_label: 'Core Web Vitals',
-      custom_map: {
-        load_time: metrics.loadTime,
-        first_contentful_paint: metrics.firstContentfulPaint,
-        largest_contentful_paint: metrics.largestContentfulPaint,
-        first_input_delay: metrics.firstInputDelay,
-        cumulative_layout_shift: metrics.cumulativeLayoutShift,
-        time_to_interactive: metrics.timeToInteractive,
-        total_blocking_time: metrics.totalBlockingTime
-      }
-    });
-  }
+export const debounce = <T extends (..._args: unknown[]) => unknown>(
+  func: T,
+  wait: number
+): ((..._args: Parameters<T>) => void) => {
+  let timeout: ReturnType<typeof setTimeout>;
+  return (..._args: Parameters<T>) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(..._args), wait);
+  };
+};
+
+export const throttle = <T extends (..._args: unknown[]) => unknown>(
+  func: T,
+  limit: number
+): ((..._args: Parameters<T>) => void) => {
+  let inThrottle: boolean;
+  return (..._args: Parameters<T>) => {
+    if (!inThrottle) {
+      func(..._args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
 };
