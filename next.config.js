@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Disable static generation completely
-  output: 'export',
+  output: 'standalone',
   trailingSlash: true,
   distDir: 'dist',
   images: {

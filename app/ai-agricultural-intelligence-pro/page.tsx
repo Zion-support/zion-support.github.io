@@ -1,6 +1,8 @@
 'use client'
 
 import React from 'react'
+
+export const dynamic = 'force-dynamic'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { Brain, Target, CheckCircle, ArrowRight, BarChart, Globe, Zap } from 'lucide-react'
