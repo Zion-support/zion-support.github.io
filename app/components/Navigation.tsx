@@ -16,11 +16,9 @@ import {
   ShieldCheckIcon,
   CurrencyDollarIcon,
   CogIcon,
-  ChevronDownIcon,
-  Brain,
-  ArrowRight,
-  Mail
+  ChevronDownIcon
 } from '@heroicons/react/24/outline';
+import { Brain, ArrowRight, Mail } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

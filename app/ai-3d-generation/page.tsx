@@ -3,11 +3,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check, Send, BarChart3, DollarSign, Activity, Lock, FileText, CreditCard, Building2, Sparkles, PieChart } from 'lucide-react'
 
-<<<<<<< HEAD
-const Ai3dGenerationPage: React.FC = () => {
-=======
 const AI3DGenerationPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-04fb
   const features = [
     {
       icon: Brain,
@@ -53,11 +49,7 @@ const AI3DGenerationPage: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-<<<<<<< HEAD
-              Ai 3d Generation
-=======
               AI 3D Generation
->>>>>>> cursor/fix-errors-and-merge-to-main-04fb
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced AI-powered 3D generation solution for modern businesses.
@@ -146,8 +138,4 @@ const AI3DGenerationPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default Ai3dGenerationPage;
-=======
 export default AI3DGenerationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-04fb
