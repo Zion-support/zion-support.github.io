@@ -115,4 +115,8 @@ const AiTranslatorPage: React.FC = () => {
   );
 };
 
+
+
+
+
 export default AiTranslatorPage;

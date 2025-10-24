@@ -1,135 +1,124 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { ChevronDown, Phone, Mail, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, ShoppingCart, CreditCard, Heart, Stethoscope, Briefcase, Calculator, Calendar, Smartphone } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const services = [
+    { name: 'AI Solutions', icon: Brain, href: '/ai-solutions' },
+    { name: 'Cloud Services', icon: Cloud, href: '/cloud-services' },
+    { name: 'Cybersecurity', icon: Shield, href: '/cybersecurity' },
+    { name: 'DevOps', icon: Code, href: '/devops' },
+    { name: 'Data Analytics', icon: BarChart, href: '/data-analytics' },
+    { name: 'Mobile Development', icon: Smartphone, href: '/mobile-development' }
+  ];
 
   return (
-    <nav className="bg-gray-900 text-white shadow-lg">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-gray-900/95 backdrop-blur-sm' : 'bg-transparent'
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center">
-            <Link to="/" className="text-2xl font-bold text-purple-400">
-              Zion Tech Group
-            </Link>
-          </div>
+          <Link to="/" className="flex items-center space-x-2">
+            <Brain className="w-8 h-8 text-cyan-400" />
+            <span className="text-xl font-bold text-white">Zion Tech Group</span>
+          </Link>
 
-          {/* Desktop Menu */}
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="hover:text-purple-400 transition-colors">
+            <Link to="/" className="text-white hover:text-cyan-400 transition-colors duration-200">
               Home
             </Link>
-            <Link to="/about" className="hover:text-purple-400 transition-colors">
+            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors duration-200">
               About
             </Link>
-            <div className="relative group">
-              <button className="hover:text-purple-400 transition-colors flex items-center">
-                AI Services
-                <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
+            
+            {/* Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setIsServicesOpen(!isServicesOpen)}
+                className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors duration-200"
+              >
+                <span>Services</span>
+                <ChevronDown className="w-4 h-4" />
               </button>
-              <div className="absolute left-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <div className="py-1">
-                  <Link to="/ai-services" className="block px-4 py-2 text-sm hover:bg-gray-700">
-                    All AI Services
-                  </Link>
-                  <Link to="/ai-analytics" className="block px-4 py-2 text-sm hover:bg-gray-700">
-                    AI Analytics
-                  </Link>
-                  <Link to="/ai-automation" className="block px-4 py-2 text-sm hover:bg-gray-700">
-                    AI Automation
-                  </Link>
-                  <Link to="/ai-cybersecurity" className="block px-4 py-2 text-sm hover:bg-gray-700">
-                    AI Cybersecurity
-                  </Link>
+              
+              {isServicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-gray-900 rounded-lg shadow-lg py-2">
+                  {services.map((service) => (
+                    <Link
+                      key={service.name}
+                      to={service.href}
+                      className="flex items-center space-x-3 px-4 py-2 text-white hover:bg-gray-800 transition-colors duration-200"
+                    >
+                      <service.icon className="w-5 h-5" />
+                      <span>{service.name}</span>
+                    </Link>
+                  ))}
                 </div>
-              </div>
+              )}
             </div>
-            <div className="relative group">
-              <button className="hover:text-purple-400 transition-colors flex items-center">
-                IT Services
-                <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div className="absolute left-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <div className="py-1">
-                  <Link to="/it-services" className="block px-4 py-2 text-sm hover:bg-gray-700">
-                    All IT Services
-                  </Link>
-                  <Link to="/cloud-migration" className="block px-4 py-2 text-sm hover:bg-gray-700">
-                    Cloud Migration
-                  </Link>
-                  <Link to="/cybersecurity" className="block px-4 py-2 text-sm hover:bg-gray-700">
-                    Cybersecurity
-                  </Link>
-                  <Link to="/web-development" className="block px-4 py-2 text-sm hover:bg-gray-700">
-                    Web Development
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <Link to="/pricing" className="hover:text-purple-400 transition-colors">
-              Pricing
-            </Link>
-            <Link to="/contact" className="hover:text-purple-400 transition-colors">
+
+            <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors duration-200">
               Contact
             </Link>
-            <Link 
-              to="/demo" 
-              className="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-md transition-colors"
+            
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center space-x-2"
             >
-              Get Demo
+              <span>Get Started</span>
+              <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={toggleMenu}
-              className="text-gray-400 hover:text-white focus:outline-none focus:text-white"
-            >
-              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                {isMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
-            </button>
-          </div>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden text-white"
+          >
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800 rounded-md mt-2">
-              <Link to="/" className="block px-3 py-2 hover:text-purple-400">
+          <div className="md:hidden bg-gray-900 rounded-lg mt-2 p-4">
+            <div className="flex flex-col space-y-4">
+              <Link to="/" className="text-white hover:text-cyan-400 transition-colors duration-200">
                 Home
               </Link>
-              <Link to="/about" className="block px-3 py-2 hover:text-purple-400">
+              <Link to="/about" className="text-white hover:text-cyan-400 transition-colors duration-200">
                 About
               </Link>
-              <Link to="/ai-services" className="block px-3 py-2 hover:text-purple-400">
-                AI Services
-              </Link>
-              <Link to="/it-services" className="block px-3 py-2 hover:text-purple-400">
-                IT Services
-              </Link>
-              <Link to="/pricing" className="block px-3 py-2 hover:text-purple-400">
-                Pricing
-              </Link>
-              <Link to="/contact" className="block px-3 py-2 hover:text-purple-400">
+              <div className="space-y-2">
+                <span className="text-white font-semibold">Services</span>
+                {services.map((service) => (
+                  <Link
+                    key={service.name}
+                    to={service.href}
+                    className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 ml-4"
+                  >
+                    <service.icon className="w-4 h-4" />
+                    <span>{service.name}</span>
+                  </Link>
+                ))}
+              </div>
+              <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors duration-200">
                 Contact
-              </Link>
-              <Link to="/demo" className="block px-3 py-2 bg-purple-600 hover:bg-purple-700 rounded-md text-center">
-                Get Demo
               </Link>
             </div>
           </div>
