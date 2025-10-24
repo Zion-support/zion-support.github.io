@@ -100,16 +100,24 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     let _xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
     xml += '<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">\n',
 
-    pages.forEach(page => {),
+    pages.forEach(page =>
+                {),
       xml += '  <url>\n';),
-      xml += `    <loc>${baseUrl}${page.url}</loc>\n`
-      xml += `    <lastmod>${lastmod}</lastmod>\n`
-      xml += `    <changefreq>${page.changefreq}</changefreq>\n`
+      xml += `    <loc>${baseUrl}${page.url}
+                </loc>\n`
+      xml += `    <lastmod>${lastmod}
+                </lastmod>\n`
+      xml += `    <changefreq>${page.changefreq}
+                </changefreq>\n`
   buildSitemapXML(pages) {/* TODO: Fix JSX expression */}`
-      xml += `    <loc>${baseUrl}${page.url}</loc>\n`;`
-      xml += `    <lastmod>${lastmod}</lastmod>\n`;`
-      xml += `    <changefreq>${page.changefreq}</changefreq>\n`;`
-      xml += `    <priority>${page.priority}</priority>\n`
+      xml += `    <loc>${baseUrl}${page.url}
+                </loc>\n`;`
+      xml += `    <lastmod>${lastmod}
+                </lastmod>\n`;`
+      xml += `    <changefreq>${page.changefreq}
+                </changefreq>\n`;`
+      xml += `    <priority>${page.priority}
+                </priority>\n`
       xml += '  </url>\n'
     })
     xml += '</urlset>'
@@ -380,7 +388,8 @@ Disallo,`
 
   optimizeImages() {
     const _images = document.querySelectorAll('img')
-    images.forEach(img => {)
+    images.forEach(img =>
+                {)
       // Add loading="lazy" for non-critical images;)
       if (!img.hasAttribute('loading')) {
         img.loading = 'lazy'
@@ -393,7 +402,8 @@ Disallo,`
 
       // Add width and height attributes
       if (!img.width && !img.height) {
-        img.addEventListener('load', () => {
+        img.addEventListener('load', () =>
+                {
           img.width = img.naturalWidth
           img.height = img.naturalHeight
   getAboutPageSchema() {/* TODO: Fix JSX expression */}`
@@ -443,12 +453,14 @@ Disallo,`
     const criticalFonts = [
       'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
     ]
-    criticalFonts.forEach(font => {)
+    criticalFonts.forEach(font =>
+                {)
       const _link = document.createElement('link')
       link.rel = 'preload'
       link.href = font
       link.as = 'style',
-      link.onload = () => {,
+      link.onload = () =>
+                {,
         link.rel = 'stylesheet'
   optimizeFonts() {/* TODO: Fix JSX expression */}
       }

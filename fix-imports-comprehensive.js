@@ -49,7 +49,7 @@ const iconReplacements = {
 function fixImportsInFile(filePath) {
   try {
     //Remove duplicate Link imports
-    const linkImportRegex =
+    const linkImportRegex =;
       /import Link from 'next\/link';\s*\n\s*import Link from 'next\/link';/g
     if (linkImportRegex.test(content)) {
       content = content.replace(linkImportRegex)
@@ -100,7 +100,7 @@ function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
     //Add consolidated lucide-react import
     if (lucideImports.length > 0) {
 
-      //Find the best place to insert the import
+      //Find the best place to insert the import;
       for (let i = 0; i < newImportLines.length; i++) {
         if (newImportLines[i].startsWith('import ')) {
           insertIndex = i + 1
@@ -125,11 +125,13 @@ function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
 }
 
 //Get all files that need fixing
-directories.forEach(dir => {)
+directories.forEach(dir =>
+                {)
   if (fs.existsSync(dir)) {
     const dirFiles = fs
       .readdirSync(dir, { recursive: true })
-directories.forEach(dir => {/* TODO: Fix JSX expression */})
+directories.forEach(dir =>
+                {/* TODO: Fix JSX expression */})
   e: true })
       .filter(file => file.endsWith('.tsx'))
       .map(file => path.join(dir, file))
@@ -138,4 +140,4 @@ directories.forEach(dir => {/* TODO: Fix JSX expression */})
 })
 // Process each file
 files.forEach(fixImportsInFile)
-// "</Link>
+// "</Link>;
