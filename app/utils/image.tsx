@@ -61,7 +61,6 @@ const Image: React.FC<ImageProps> = ({
     <NextImage
       src={src}
       alt={alt}
-<<<<<<< HEAD
       width={width || 800}
       height={height || 600}
       className={className}
