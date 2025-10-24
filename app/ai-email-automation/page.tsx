@@ -19,17 +19,6 @@ export const metadata: Metadata = {
 }
 
 const AIEmailAutomationPage: React.FC = () => {
-  const iconMap = {
-    Brain,
-    Send,
-    TrendingUp,
-    Zap,
-    BarChart3,
-    DollarSign,
-    Clock,
-    Shield
-  };
-
   const features = [
     {
       icon: Brain,
