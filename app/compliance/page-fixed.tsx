@@ -41,22 +41,25 @@ const CompliancePageFixed: React.FC = () => {
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="..."></section>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /><div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
-          <div className="..."></div>
-            <h1 className="...">
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Page Fixed
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced page backup solutions powered by AI technology.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">,
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-              Learn More
+                Learn More
+              </button>
+            </div>
               
             </button>
           </div>
