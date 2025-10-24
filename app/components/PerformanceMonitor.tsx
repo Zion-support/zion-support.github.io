@@ -1,15 +1,30 @@
-import React, { useEffect } from 'react''
-      import('web-vitals''
-    if ('web-vitals''
-          if (process.env.NODE_ENV === 'development''
-    if ('performance''
-      window.addEventListener('load''
-          const navigation = performance.getEntriesByType('navigation''
-          const paint = performance.getEntriesByType('paint''
-          if (process.env.NODE_ENV === 'development''
-            console.log('Performance "Metrics": '',
-              "firstPaint": paint.find(entry => entry.name === 'first-paint'',
-              "firstContentfulPaint": paint.find(entry => entry.name === 'first-contentful-paint'',
-    if ('memory''
-      if (process.env.NODE_ENV === 'development'';
-        console.log('Memory "Usage": ''
+'use client';
+import React, { useEffect } from 'react';
+
+const PerformanceMonitor: React.FC = () => {
+  useEffect(() => {
+    const initPerformanceMonitoring = async () => {
+      try {
+        const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
+        
+        if (typeof window !== 'undefined') {
+          getCLS(console.log);
+          getFID(console.log);
+          getFCP(console.log);
+          getLCP(console.log);
+          getTTFB(console.log);
+        }
+      } catch (error) {
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('Performance monitoring not available:', error);
+        }
+      }
+    };
+
+    initPerformanceMonitoring();
+  }, []);
+
+  return null;
+};
+
+export default PerformanceMonitor;

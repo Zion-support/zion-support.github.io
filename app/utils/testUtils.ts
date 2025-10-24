@@ -1,20 +1,18 @@
 'use client';
-  if (typeof global !== 'undefined''
-      "href": '',
-      "t": 3000''
-      "origin": '',
-      "t": 3000''
-      "pathname": '/'',
-      "search": ''',
-      "hash": ''',
-      "t": 'test-agent''
-      "language": 'en-US'',
-      "platform": 'test-platform'',
-      "e": 'Test Document''
-      "createElement": jest.fn(() => createMockElement('div'',
-  Object.defineProperty(window, 'IntersectionObserver''
-  Object.defineProperty(window, 'ResizeObserver''
-  Object.defineProperty(window, 'matchMedia''
-  Object.defineProperty(window, 'performance''
-  Object.defineProperty(window, 'requestAnimationFrame''
-  Object.defineProperty(window, 'cancelAnimationFrame''
+
+export const testConfig = {
+  timeout: 3000,
+  retries: 3,
+  baseUrl: 'http://localhost:3000',
+};
+
+export const waitFor = (ms: number): Promise<void> => {
+  return new Promise(resolve => setTimeout(resolve, ms));
+};
+
+export const mockFetch = (data: any) => {
+  return Promise.resolve({
+    ok: true,
+    json: () => Promise.resolve(data),
+  });
+};

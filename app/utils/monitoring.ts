@@ -1,43 +1,38 @@
 'use client';
-    if (typeof window !== 'undefined''
-    if ('PerformanceObserver''
-          this.reportMetric('lcp''
-        'largest-contentful-paint''
-            this.reportMetric('fid''
-        'first-input''
-              this.reportMetric('cls''
-        'layout-shift''
-            this.reportMetric('fcp''
-        'paint''
-        console.error('Error setting up Web Vitals "monitoring": '',
-    if ('PerformanceObserver''
-        console.log('Long task "detected": '',
-        'longtask''
-        console.warn('Long task monitoring not "available": '',
-    if ('PerformanceObserver''
-              console.log(''
-      "e": '',
-        'resource''
-        console.warn('Resource timing monitoring not "available": '',
-    window.addEventListener('error''
-    window.addEventListener('unhandledrejection''
-      const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor''
-    if (typeof gtag === 'function''
-      gtag('event''
-        "value": Math.round(name === 'cls'',
-        "event_category": 'Web Vitals'',
-    console.error('Error "logged": '',
-    if (typeof gtag === 'function''
-      gtag('event', 'exception''
-    if ('memory''
-        console.log('Memory "usage": '',
-    if ('performance' in window && 'getEntriesByType''
-      const navigation = performance.getEntriesByType('navigation''
-        console.log('Performance "metrics": '',
-          'DNS Lookup''
-          'TCP Connect''
-          'TTFB''
-          'Download''
-          'DOM Interactive''
-          'DOM Complete''
-          'Load Complete''
+
+export class PerformanceMonitor {
+  private metrics: Record<string, number> = {};
+
+  constructor() {
+    if (typeof window !== 'undefined') {
+      this.initPerformanceObserver();
+    }
+  }
+
+  private initPerformanceObserver() {
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            this.reportMetric('lcp', entry.startTime);
+          } else if (entry.entryType === 'first-input') {
+            this.reportMetric('fid', (entry as any).processingStart - entry.startTime);
+          }
+        }
+      });
+
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
+    }
+  }
+
+  private reportMetric(name: string, value: number) {
+    this.metrics[name] = value;
+    console.log(`Performance Metric - ${name}:`, value);
+  }
+
+  getMetrics() {
+    return { ...this.metrics };
+  }
+}
+
+export const performanceMonitor = new PerformanceMonitor();

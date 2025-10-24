@@ -1,29 +1,38 @@
-/**
- * Sitemap Generator()
- * Generates sitemap and robots.txt for SEO optimization()
- */
-
-export interface SitemapEntry {
-  "loc": string,
-  "lastmod": string,
-  "changefreq": string,
-  "priority": number()
+interface SitemapEntry {
+  url: string;
+  lastmod: string;
+  changefreq: string;
+  priority: number;
 }
 
-export const generateSitemap = (): SitemapEntry[] => {}
-  const baseUrl = '"https": //ziontechgroup.com'',
-      "changefreq": 'daily'',
-      "changefreq": 'monthly'',
-      "changefreq": 'weekly'',
-      "changefreq": 'weekly'',
-      "changefreq": 'weekly'',
-      "changefreq": 'weekly'',
-      "changefreq": 'weekly'',
-      "changefreq": 'weekly'',
-      "changefreq": 'weekly'',
-      "changefreq": 'monthly'',
-      "changefreq": 'monthly'',
-      "changefreq": 'weekly'',
-      "changefreq": 'daily'',
-      "changefreq": 'yearly'',
-      "changefreq": 'yearly''
+export const generateSitemap = (): SitemapEntry[] => {
+  const baseUrl = 'https://ziontechgroup.com';
+  const currentDate = new Date().toISOString();
+
+  return [
+    {
+      url: baseUrl,
+      lastmod: currentDate,
+      changefreq: 'daily',
+      priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/about`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/services`,
+      lastmod: currentDate,
+      changefreq: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.7,
+    },
+  ];
+};
