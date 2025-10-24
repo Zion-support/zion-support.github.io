@@ -94,6 +94,7 @@ const nextConfig = {
     optimizeCss: false,
     optimizePackageImports: ["lucide-react", "@heroicons/react"],
   },
+  output: 'standalone',
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
   compiler: {

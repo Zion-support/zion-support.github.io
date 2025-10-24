@@ -1,7 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react'
-import { Mail } from 'lucide-react'
-import { Home } from 'lucide-react'
 
 interface AdvancedErrorBoundaryProps {
   className?: string;
@@ -13,8 +11,8 @@ interface State {
   errorInfo?: ErrorInfo
   errorId?: string
 }
-class AdvancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State> {
+  constructor(props: AdvancedErrorBoundaryProps) {
     super(props)
     this.state = { hasError: false }
   }

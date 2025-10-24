@@ -21,7 +21,7 @@ export default function AboutPage() {
     {
       icon: Users,
       title: 'Client-Focused',
-      description: 'Our success is measured by our clients\' success. We build lasting partnerships based on trust and results.'
+      description: 'Our success is measured by our clients&apos; success. We build lasting partnerships based on trust and results.'
     },
     {
       icon: Award,
@@ -87,7 +87,7 @@ export default function AboutPage() {
               Empowering businesses through innovative technology solutions and cutting-edge AI applications
             </p>
             <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-              Founded in 2020, we've been at the forefront of digital transformation, 
+              Founded in 2020, we&apos;ve been at the forefront of digital transformation, 
               helping companies leverage the power of artificial intelligence, cybersecurity, 
               and cloud technologies to achieve unprecedented growth.            </p>
           </div>
@@ -104,7 +104,7 @@ export default function AboutPage() {
                   and practical business implementation.
                 </p>
                 <p className="text-gray-300 mb-4">
-                  Today, we've grown into a trusted partner for organizations worldwide, helping them 
+                  Today, we&apos;ve grown into a trusted partner for organizations worldwide, helping them 
                   navigate the complex landscape of digital transformation while maintaining focus on 
                   security, scalability, and innovation.
                 </p>
@@ -236,7 +236,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Passion</h3>
               <p className="text-gray-300">
-                We're passionate about technology and its potential to transform businesses and improve lives.
+                We&apos;re passionate about technology and its potential to transform businesses and improve lives.
               </p>
             </div>
 
@@ -256,7 +256,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Innovation</h3>
               <p className="text-gray-300">
-                We continuously push the boundaries of what's possible with cutting-edge technology solutions.
+                We continuously push the boundaries of what&apos;s possible with cutting-edge technology solutions.
               </p>
             </div>
 
@@ -286,7 +286,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Growth</h3>
               <p className="text-gray-300">
-                We're committed to continuous learning and helping our clients achieve sustainable growth.
+                We&apos;re committed to continuous learning and helping our clients achieve sustainable growth.
               </p>
             </div>
           </div>
@@ -386,7 +386,7 @@ export default function AboutPage() {
               Ready to Work With Us?
             </h2>
             <p className="text-xl text-gray-300 mb-12">
-              Let's discuss how we can help transform your business with our technology solutions
+              Let&apos;s discuss how we can help transform your business with our technology solutions
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
