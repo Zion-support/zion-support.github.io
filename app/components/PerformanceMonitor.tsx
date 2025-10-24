@@ -3,6 +3,12 @@
 import React, { useEffect, useState } from 'react';
 import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
 
+declare global {
+  interface Window {
+    gtag?: (..._args: unknown[]) => void;
+  }
+}
+
 interface PerformanceMetrics {
   cls: number | null;
   fid: number | null;
@@ -31,8 +37,8 @@ const PerformanceMonitor: React.FC = () => {
       }));
 
       // Send to analytics service (replace with your analytics endpoint)
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', metric.name, {
+      if (typeof window !== 'undefined' && (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag) {
+        (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', metric.name, {
           event_category: 'Web Vitals',
           value: Math.round(metric.value),
           event_label: metric.id,

@@ -63,6 +63,8 @@ export const metadata: Metadata = {
   },
 }
 
+export const dynamic = 'force-dynamic'
+
 export default function RootLayout({
   children,
 }: {
@@ -80,11 +82,12 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
       </head>
       <body className={`${inter.className} antialiased`}>
-        <Analytics />
-        <PerformanceOptimizer />
-        <AccessibilityEnhancer />
-        {children}
-        <PerformanceMonitor />
+        <Analytics>
+          <PerformanceOptimizer />
+          <AccessibilityEnhancer />
+          {children}
+          <PerformanceMonitor />
+        </Analytics>
       </body>
     </html>
   )
