@@ -24,6 +24,6 @@ export default function GiotsolutionsPage() {
           </Link>
         </div>
       </div>
-      <Footer />
+      <EnhancedFooter />
     </div>);
 }

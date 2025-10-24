@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { Metadata } from 'next';
 import React from 'react'
 import  Helmet  from 'react-helmet-async'
@@ -23,5 +23,5 @@ import { { ArrowRight     } from 'lucide-react'
             
           </div>
         </div>
-      </section>
+      </section>;
 export default PerformanceEnhancerPage }

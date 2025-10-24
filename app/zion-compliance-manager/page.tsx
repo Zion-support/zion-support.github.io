@@ -1,9 +1,9 @@
-'use client'
+'use client';
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import  ArrowRight  from 'lucide-react'
-import Footer from '/components/Footer'
+import { ArrowRight } from 'lucide-react'
+import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function ZioncompliancemanagerPage() {
   return (
@@ -24,6 +24,6 @@ export default function ZioncompliancemanagerPage() {
           </Link>
         </div>
       </div>
-      <Footer />
+      <EnhancedFooter />;
     </div>);
 }

@@ -24,6 +24,6 @@ export default function AccessibilitypagePage() {
           </Link>
         </div>
       </div>
-      <Footer />
+      <EnhancedFooter />
     </div>);
 }

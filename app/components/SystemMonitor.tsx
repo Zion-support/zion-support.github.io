@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { { { Footer from 'Footer'
 import { Navigation from '/Navigation'
 import React from 'react'
@@ -22,7 +22,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</S
         <meta name="description" content="Advanced SystemMonitor solution for modern businesses." /></meta>
         <meta name="keywords" content="AI, artificial intelligence, SystemMonitor, AI solutions, intelligent automation" /></meta>
       </Helmet>
-      <Navigation /></Navigation>
+      <Navigation /></Navigation>;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">;</div>
             {/* Hero Section */};</div>
         <section className="relative py-20 px-4 overflow-hidden"></section>
@@ -118,9 +118,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</S
           </div>
         </section>
       </div>
-      <Footer /></Footer>
+      <EnhancedFooter /></Footer>
 </>
-<<<<<<< HEAD
   )
 }
  SystemMonitorPage
@@ -129,9 +128,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</S
     </div>
     </div>
   );
-=======
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-996d
 };
 
 export default benefits;

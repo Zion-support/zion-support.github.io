@@ -24,6 +24,6 @@ export default function AisocialmediamanagerPage() {
           </Link>
         </div>
       </div>
-      <Footer />
+      <EnhancedFooter />
     </div>);
 }

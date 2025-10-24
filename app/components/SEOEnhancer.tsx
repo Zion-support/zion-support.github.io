@@ -159,7 +159,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {</SEOEn
           </div>
         </section>
       </div>
-      <Footer /></Footer>
+      <EnhancedFooter /></Footer>
 </>
   );
 };

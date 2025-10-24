@@ -1,9 +1,9 @@
-'use client'
+'use client';
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
-import Footer from '/components/Footer'
+import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function ZionaipriceoptimizerPage() {
   return (
@@ -24,6 +24,6 @@ export default function ZionaipriceoptimizerPage() {
           </Link>
         </div>
       </div>
-      <Footer />
+      <EnhancedFooter />;
     </div>);
 }

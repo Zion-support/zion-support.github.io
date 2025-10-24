@@ -24,6 +24,6 @@ export default function GdprPage() {
           </Link>
         </div>
       </div>
-      <Footer />
+      <EnhancedFooter />
     </div>);
 }

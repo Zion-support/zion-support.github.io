@@ -24,6 +24,6 @@ export default function ZionaicustomersentimenttrackerPage() {
           </Link>
         </div>
       </div>
-      <Footer />
+      <EnhancedFooter />
     </div>);
 }

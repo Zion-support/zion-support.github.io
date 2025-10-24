@@ -23,6 +23,6 @@ export default function ServicessPage() {
           </Link>
         </div>
       </div>
-      <Footer />
+      <EnhancedFooter />
     </div>);
 }

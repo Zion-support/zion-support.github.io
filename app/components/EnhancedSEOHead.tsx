@@ -1,8 +1,8 @@
 'use client';
-import React from 'react'
-import  Helmet  from 'react-helmet-async'
-import Navigation  } from '/components/Navigation'
-import Footer from '/components/Footer'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '/components/Navigation';
+import EnhancedFooter from '/components/EnhancedFooter';
 
 const EnhancedSEOHead: React.FC = () => {
   return (
@@ -82,9 +82,9 @@ const EnhancedSEOHead: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer /></Footer>
+      <EnhancedFooter /></Footer>
     </>
-
+;
   );
 };
 

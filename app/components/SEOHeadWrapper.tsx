@@ -15,5 +15,5 @@ const SEOHeadWrapper: React.FC<SEOHeadProps> = ({ title, description, keywords }
       <meta name="description" content={description} /></meta>
       <meta name="keywords" content={keywords.join(', ')} /></meta>
     </Helmet>
-
+;
 export default SEOHeadWrapper

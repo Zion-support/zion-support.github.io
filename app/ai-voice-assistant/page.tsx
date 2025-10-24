@@ -24,6 +24,6 @@ export default function AivoiceassistantPage() {
           </Link>
         </div>
       </div>
-      <Footer />
+      <EnhancedFooter />
     </div>);
 }

@@ -24,6 +24,6 @@ export default function AivideoeditorPage() {
           </Link>
         </div>
       </div>
-      <Footer />
+      <EnhancedFooter />
     </div>);
 }

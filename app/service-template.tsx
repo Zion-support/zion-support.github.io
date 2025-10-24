@@ -1,8 +1,8 @@
-'use client'
+'use client';
 
 import React from 'react'
 
-interface ServiceTemplateProps {
+interface ServiceTemplateProps {;
   title: string;
   description: string;
   features: string[];

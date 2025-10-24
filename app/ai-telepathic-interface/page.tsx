@@ -24,6 +24,6 @@ export default function AitelepathicinterfacePage() {
           </Link>
         </div>
       </div>
-      <Footer />
+      <EnhancedFooter />
     </div>);
 }

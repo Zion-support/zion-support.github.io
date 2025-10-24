@@ -24,6 +24,6 @@ export default function DatabaseservicesPage() {
           </Link>
         </div>
       </div>
-      <Footer />
+      <EnhancedFooter />
     </div>);
 }

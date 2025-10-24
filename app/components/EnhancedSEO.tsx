@@ -26,7 +26,7 @@ const EnhancedSEOPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
+      <EnhancedFooter />
     </>
   );
 };

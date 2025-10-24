@@ -1,15 +1,11 @@
-<<<<<<< HEAD
-'use client'
-import { Metadata } from 'next';
-=======
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-75df
+import { Metadata } from 'next';
 import React from 'react'
 import  Helmet  from 'react-helmet-async'
 import Navigation  } from '/components/Navigation'
-import Footer from '/components/Footer'
+import EnhancedFooter from '/components/EnhancedFooter'
 
-interface SEOHeadProps {
+interface SEOHeadProps {;
   title?: string;
   description?: string;
   keywords?: string;
@@ -100,7 +96,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({ ,
           </div>
         </section>
       </div>
-      <Footer /></Footer>
+      <EnhancedFooter /></Footer>
     </>
 
 export default function SEOHeadPage() {

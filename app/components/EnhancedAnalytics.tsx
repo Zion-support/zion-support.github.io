@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 "use client";
-=======
-'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-75df
 
 import React from 'react';
 import Head from 'next/head';

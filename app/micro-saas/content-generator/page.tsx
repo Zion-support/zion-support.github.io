@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -24,6 +24,6 @@ export default function ContentgeneratorPage() {
           </Link>
         </div>
       </div>
-      <Footer />
+      <EnhancedFooter />;
     </div>);
 }

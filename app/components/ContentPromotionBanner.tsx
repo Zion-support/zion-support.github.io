@@ -2,7 +2,7 @@
 import React from 'react'
 import  Helmet  from 'react-helmet-async'
 import Navigation  } from '/components/Navigation'
-import Footer from '/components/Footer'
+import EnhancedFooter from '/components/EnhancedFooter'
 
 const ContentPromotionBanner: React.FC = () => {
   return (
@@ -82,8 +82,8 @@ const ContentPromotionBanner: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer /></Footer>
-    </>
+      <EnhancedFooter /></Footer>
+    </>;
   );
 };
 

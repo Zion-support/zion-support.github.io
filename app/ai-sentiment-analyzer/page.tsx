@@ -24,6 +24,6 @@ export default function AisentimentanalyzerPage() {
           </Link>
         </div>
       </div>
-      <Footer />
+      <EnhancedFooter />
     </div>);
 }

@@ -24,6 +24,6 @@ export default function ZionaicustomersupportproPage() {
           </Link>
         </div>
       </div>
-      <Footer />
+      <EnhancedFooter />
     </div>);
 }

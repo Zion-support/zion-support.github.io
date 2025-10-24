@@ -1,23 +1,17 @@
-'use client'
+'use client';
 import { { { useState  from 'react'
 import  MessageSquare Mail Phone Send CheckCircle           } from 'lucide-react'
 
-interface FormData {
+interface FormData {;
   name: string;
   email: string;
   phone: string;
   company: string;
   message: string;
-<<<<<<< HEAD
   servic,
   e: string;}
 }
 ;
-=======
-  service: string;
-}
-
->>>>>>> cursor/fix-errors-and-merge-to-main-75df
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',

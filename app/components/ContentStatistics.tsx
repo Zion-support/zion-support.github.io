@@ -1,9 +1,9 @@
-'use client'
+'use client';
 import React from 'react'
 import  Helmet  from 'react-helmet-async'
 import  ArrowRight Brain BarChart Target TrendingUp  from 'lucide-react'
 import Navigation from '/components/Navigation'
-import Footer from '/components/Footer'
+import EnhancedFooter from '/components/EnhancedFooter'
 import  CheckCircle ArrowRight Star Clock Zap Shield Brain BarChart Target TrendingUp Globe Database Users Settings     } from 'lucide-react'
 const ContentStatistics ReactFC =  =>     const steps = 60 const stepDuration = duration / steps const interval = setInterval => 
 const steps = 60 const stepDuration = duration / steps const interval = setInterval =>         
@@ -38,7 +38,7 @@ const ContentStatistics: React.FC = () => {
       satisfaction: 99,
       years: 10,
       countries: 25,
-      uptime: 99.9
+      uptime: 99.9;
     };
 
     const duration = 2000;
@@ -70,7 +70,6 @@ const ContentStatistics: React.FC = () => {
   </>
   }, []
     </div>
-<<<<<<< HEAD
   )
   const stats = [
     {
@@ -501,9 +500,6 @@ View Case Studies
 </div>
 </div>
 )
-=======
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-996d
 };
 
         <><div className="mt-16 text-center">
@@ -633,8 +629,7 @@ Our </h2><span className="text-transparent bg-clip-text bg-gradient-to-r from-bl
 </stat></div>
         <div className=text-4xl font-bold statcolor mb-2>statvaluestatsuffix</div></div></>div>
 <><div className="text-lg font-semibold text-white mb-2">statlabel</div></div>
-        <div className="text-gray-400 text-sm">statdescription</div></div></>
-</div>
+        <div className="text-gray-400 text-sm">statdescription</div></div></div>
 
 </div>
 / Features Section /

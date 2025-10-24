@@ -24,6 +24,6 @@ export default function AiprojectmanagementproPage() {
           </Link>
         </div>
       </div>
-      <Footer />
+      <EnhancedFooter />
     </div>);
 }

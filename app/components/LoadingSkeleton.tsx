@@ -144,7 +144,7 @@ const LoadingSkeletonPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer /></Footer>
+      <EnhancedFooter /></Footer>
 </>;
   );
 };

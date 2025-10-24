@@ -24,6 +24,6 @@ export default function Team() {
           </Link>
         </div>
       </div>
-      <Footer />
+      <EnhancedFooter />
     </div>);
 }

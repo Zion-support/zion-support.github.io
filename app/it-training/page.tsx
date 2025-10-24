@@ -24,6 +24,6 @@ export default function IttrainingPage() {
           </Link>
         </div>
       </div>
-      <Footer />
+      <EnhancedFooter />
     </div>);
 }

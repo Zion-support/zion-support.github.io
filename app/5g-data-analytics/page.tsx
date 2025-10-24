@@ -1,9 +1,9 @@
-'use client'
+'use client';
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
-import Footer from '/components/Footer'
+import EnhancedFooter from '/components/EnhancedFooter'
 
 export default function GdataanalyticsPage() {
   return (
@@ -30,6 +30,6 @@ export default function GdataanalyticsPage() {
           </Link>
         </div>
       </div>
-      <Footer />
+      <EnhancedFooter />;
     </div>);
 }

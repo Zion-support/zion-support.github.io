@@ -3,74 +3,69 @@ import os
 import re
 import glob
 
-def fix_file(filepath):
+def fix_syntax_errors(file_path):
+    """Fix common syntax errors in TSX files"""
     try:
-        with open(filepath, 'r', encoding='utf-8') as f:
+        with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-        # Fix "use client" directive
-        content = re.sub(r'"use client",\n', '"use client";\n', content)
-        content = re.sub(r"'use client',\n", "'use client";\n", content)
+        # Fix missing semicolons after imports
+        content = re.sub(r"import ([^;]+)\n", r"import \1;\n", content)
         
-        # Fix interface definitions with missing closing braces
-        def fix_interface(match):
-            name = match.group(1)
-            body = match.group(2)
-            next_part = match.group(3)
-            if not body.strip().endswith('}'):
-                return f"interface {name} {{{body}\n}}\n{next_part}"
-            return match.group(0)
+        # Fix missing semicolons after 'use client'
+        content = re.sub(r"'use client'\n", r"'use client';\n", content)
         
-        content = re.sub(r'interface\s+(\w+)\s*\{([^}]*?)(\n\s*const|\n\s*function|\n\s*export|\n\s*class|\n\s*interface|\n\s*type|\n\s*$)', fix_interface, content, flags=re.MULTILINE)
+        # Fix malformed JSX closing tags like </> 
+        content = re.sub(r'</>\s*</div>', r'</div>', content)
         
-        # Fix class definitions with missing closing braces
-        def fix_class(match):
-            name = match.group(1)
-            body = match.group(2)
-            next_part = match.group(3)
-            if not body.strip().endswith('}'):
-                return f"class {name} {{{body}\n}}\n{next_part}"
-            return match.group(0)
+        # Fix missing semicolons in function declarations
+        content = re.sub(r"export default function (\w+)\(\) \{\n", r"export default function \1() {\n", content)
         
-        content = re.sub(r'class\s+(\w+)[^{]*\{([^}]*?)(\n\s*const|\n\s*function|\n\s*export|\n\s*class|\n\s*interface|\n\s*type|\n\s*$)', fix_class, content, flags=re.MULTILINE)
+        # Fix missing closing parentheses in return statements
+        content = re.sub(r'    </div>;\n\}', r'    </div>\n  );\n}', content)
         
-        # Fix extra commas in interface properties
-        content = re.sub(r'(\w+):\s*([^;,\n]+),(\s*\n\s*[a-zA-Z_])', r'\1: \2;\n\3', content)
-        content = re.sub(r'(\w+):\s*([^;,\n]+),(\s*\n\s*})', r'\1: \2;\n\3', content)
+        # Fix malformed ArrowRight imports
+        content = re.sub(r"import\s+ArrowRight\s+from\s+'lucide-react'", r"import { ArrowRight } from 'lucide-react'", content)
         
-        # Fix missing semicolons after variable declarations
-        content = re.sub(r'(\w+):\s*([^;,\n]+)(\s*\n\s*[a-zA-Z_])', r'\1: \2;\n\3', content)
-        content = re.sub(r'(\w+):\s*([^;,\n]+)(\s*\n\s*})', r'\1: \2;\n\3', content)
+        # Fix duplicate imports
+        lines = content.split('\n')
+        seen_imports = set()
+        filtered_lines = []
+        for line in lines:
+            if line.strip().startswith('import '):
+                if line.strip() not in seen_imports:
+                    seen_imports.add(line.strip())
+                    filtered_lines.append(line)
+            else:
+                filtered_lines.append(line)
+        content = '\n'.join(filtered_lines)
         
+        # Only write if content changed
         if content != original_content:
-            with open(filepath, 'w', encoding='utf-8') as f:
+            with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
+            print(f"Fixed syntax in: {file_path}")
             return True
+        
         return False
         
     except Exception as e:
-        print(f"Error fixing {filepath}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
-def process_directory(dirpath):
+def main():
+    # Find all TypeScript/TSX files
+    pattern = "app/**/*.tsx"
+    files = glob.glob(pattern, recursive=True)
+    
     fixed_count = 0
+    for file_path in files:
+        if fix_syntax_errors(file_path):
+            fixed_count += 1
     
-    for root, dirs, files in os.walk(dirpath):
-        # Skip certain directories
-        dirs[:] = [d for d in dirs if d not in ['node_modules', '.git', '.next', 'dist', 'build']]
-        
-        for file in files:
-            if file.endswith(('.tsx', '.ts')):
-                filepath = os.path.join(root, file)
-                if fix_file(filepath):
-                    fixed_count += 1
-                    print(f"Fixed: {filepath}")
-    
-    return fixed_count
+    print(f"Fixed syntax in {fixed_count} files")
 
 if __name__ == "__main__":
-    print("Starting syntax fixes...")
-    fixed_count = process_directory('/workspace')
-    print(f"Fixed {fixed_count} files")
+    main()

@@ -48,7 +48,7 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />,
+      <EnhancedFooter />,
 </div>,
 }  );
 

@@ -24,6 +24,6 @@ export default function AicontentgeneratorPage() {
           </Link>
         </div>
       </div>
-      <Footer />
+      <EnhancedFooter />
     </div>);
 }

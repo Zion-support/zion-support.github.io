@@ -1,10 +1,10 @@
-'use client'
+'use client';
 import { Metadata } from 'next';
 import React from 'react'
 import  Helmet  from 'react-helmet-async'
 import  ArrowRight Search Target TrendingUp CheckCircle CheckCircle  from 'lucide-react'
 import Navigation  } from '/components/Navigation'
-import Footer from '/components/Footer'
+import EnhancedFooter from '/components/EnhancedFooter'
 const AdvancedSEOOptimizerPage ReactFC =  => </>
   
 </Footer></>
@@ -137,7 +137,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer /></Footer>
+      <EnhancedFooter /></Footer>;
 </>;
   );
 };

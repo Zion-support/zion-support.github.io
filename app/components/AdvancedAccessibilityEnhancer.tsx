@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-'use client'
+'use client';
 import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import Navigation from './Navigation'
+import Navigation from './Navigation';
 import React, { useEffect, useState, useCallback } from 'react';interface AdvancedAccessibilityEnhancerProps {
   enableKeyboardNavigation?: boolean
   enableScreenReader?: boolean
@@ -13,23 +12,6 @@ import React, { useEffect, useState, useCallback } from 'react';interface Advanc
   enableMotionReduction?: boolean
   enableFontScaling?: boolean
   enableVoiceNavigation?: boolean
-=======
-'use client';
-import { Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-import Navigation from './Navigation';
-import React, { useEffect, useState, useCallback } from 'react';
-interface AdvancedAccessibilityEnhancerProps {
-  enableKeyboardNavigation?: boolean;
-  enableScreenReader?: boolean;
-  enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
-  enableARIALabels?: boolean;
-  enableSkipLinks?: boolean;
-  enableColorContrast?: boolean;
-  enableMotionReduction?: boolean;
-  enableFontScaling?: boolean;
-  enableVoiceNavigation?: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-75df
 }
 
 constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s>= ({enableKeyboardNavigation= true,
@@ -48,12 +30,8 @@ constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s
     fontSize: 'normal',
     screenReader: false,
     keyboardNavigation: false
-<<<<<<< HEAD
   })
 
-=======
-  });
->>>>>>> cursor/fix-errors-and-merge-to-main-75df
   // Detect user preferences
   useEffect(() => {
     if (typeof window === 'undefined') return
@@ -71,18 +49,13 @@ constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s
       ...prev,
       reducedMotion: prefersReducedMotion,
       highContrast: prefersHighContrast
-<<<<<<< HEAD
     }))
 
-=======
-    }));
->>>>>>> cursor/fix-errors-and-merge-to-main-75df
     // Listen for changes in user preferences
     const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
     const contrastQuery = window.matchMedia('(prefers-contrast: high)')
 
     const handleMotionChange = (e: MediaQueryListEvent) => {
-<<<<<<< HEAD
       setAccessibilitySettings(prev => ({ ...prev, reducedMotion: e.matches }))
     }
 
@@ -99,20 +72,6 @@ constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s
     }
   }, [])
 
-=======
-      setAccessibilitySettings(prev => ({ ...prev, reducedMotion: e.matches }));
-    };
-    const handleContrastChange = (e: MediaQueryListEvent) => {
-      setAccessibilitySettings(prev => ({ ...prev, highContrast: e.matches }));
-    };
-    motionQuery.addEventListener('change', handleMotionChange);
-    contrastQuery.addEventListener('change', handleContrastChange);
-    return () => {
-      motionQuery.removeEventListener('change', handleMotionChange);
-      contrastQuery.removeEventListener('change', handleContrastChange);
-    };
-  }, []);
->>>>>>> cursor/fix-errors-and-merge-to-main-75df
   // Apply accessibility styles
   useEffect(() => {
     if (typeof window === 'undefined') return

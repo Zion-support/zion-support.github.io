@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React from 'react'
 import { ArrowRight } from 'lucide-react'
 import Link } from 'next/link'
@@ -25,6 +25,6 @@ export default function GenericServicePage() {
             <ArrowRight className="w-5 h-5 ml-2" /></ArrowRight>
           </Link>
         </div>
-      </div>
+      </div>;
     </div>);
 }

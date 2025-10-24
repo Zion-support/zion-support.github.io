@@ -1,16 +1,16 @@
-import { type  Metadata  from 'next'
-import  Inter     } from 'next/font/google'
-import '/globalscss'
+import { type Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
 
-const inter="Inter" subsets 'latin' 
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'ZionTechGroup - AI Solutions & Technology Services',
   description: 'Leading provider of AI solutions, technology services, and digital transformation for businesses worldwide.',
   keywords: ['AI solutions', 'technology services', 'digital transformation', 'machine learning', 'artificial intelligence'],
-  authors: [{ name: 'ZionTechGroup' }],
-  creator: 'ZionTechGroup',
-  publisher: 'ZionTechGroup',
+  authors: [{ name: 'Zion Tech Group' }],
+  creator: 'Zion Tech Group',
+  publisher: 'Zion Tech Group',
   formatDetection: {
     email: false,
     address: false,
@@ -33,23 +33,9 @@ export const metadata: Metadata = {
         alt: 'ZionTechGroup - AI Solutions',
       },
     ],
-    locale: 'en_US''',
-    type: 'website''',
+    locale: 'en_US',
+    type: 'website',
   },
-<<<<<<< HEAD
-  twitter: {card: 'summary_large_image''',
-    title: 'ZionTechGroup - AI Solutions & Technology Services''',
-    description: 'Leading provider of AI solution''',s, technology services, and digital transformation for businesses worldwide.''',
-    images: ['/og-image.jpg''',]},
-  robots: {index: tru,e,
-    follow: tru,e,
-    googleBot: {
-      index: tru,e,
-      follow: tru,e,
-      'max-video-preview': -1'',
-      'max-image-preview': 'large''',
-      'max-snippet': -1}'',
-=======
   twitter: {
     card: 'summary_large_image',
     title: 'ZionTechGroup - AI Solutions & Technology Services',
@@ -67,10 +53,6 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'your-google-verification-code',
->>>>>>> cursor/fix-errors-and-merge-to-main-1948
-  },
 };
 
 export default function RootLayout({
@@ -83,6 +65,6 @@ export default function RootLayout({
       <body className={inter.className}>
         {children}
       </body>
->>>>>>> origin/main
     </html>
+  );
 }

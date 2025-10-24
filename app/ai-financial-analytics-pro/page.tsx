@@ -24,6 +24,6 @@ export default function AifinancialanalyticsproPage() {
           </Link>
         </div>
       </div>
-      <Footer />
+      <EnhancedFooter />
     </div>);
 }

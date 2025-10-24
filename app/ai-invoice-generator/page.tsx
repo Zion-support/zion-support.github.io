@@ -24,6 +24,6 @@ export default function AiinvoicegeneratorPage() {
           </Link>
         </div>
       </div>
-      <Footer />
+      <EnhancedFooter />
     </div>);
 }

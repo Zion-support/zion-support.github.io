@@ -1,11 +1,11 @@
-'use client'
+'use client';
 import { { { React  useState useEffect  from 'react'
 import  ArrowRight X Brain BarChart Target TrendingUp Cloud Shield Globe Database Users Settings           } from 'lucide-react'
 
 interface Slide id number title string description string features string icon ReactReactNode color string const ContentCarousel ReactFC = 2 => 
 3 features     features       color "from-red-500 to-pink-500"
 
-const ContentCarousel: React.FC = () => {
+const ContentCarousel: React.FC = () => {;
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides: Slide[] = [
@@ -382,8 +382,7 @@ const ContentCarousel: React.FC = () => {
                 currentSlideDatastats  <><div className=quotgrid grid-cols-3 gap-6quot>currentSlideDatastatsmapstat index => </div></div>
         <divstatvalue</div>
                         </div>
-        <div className=quottext-gray-400 text-smquot>statlabel</div></div></>
-                      </div>
+        <div className=quottext-gray-400 text-smquot>statlabel</div></div></div>
                     
                   </div>
                 
@@ -416,8 +415,7 @@ const ContentCarousel: React.FC = () => {
             currentSlideDatastats  <div className=quotgrid grid-cols-1 mdgrid-cols-3 gap-6 mt-8 pt-8 border-t border-slate-700quot>currentSlideDatastatsmapstat index => </div></div>
         <divstatvalue</div>
                     </div>
-        <div className=quottext-sm text-gray-400quot>statlabel</div></div></>
-                  </div>
+        <div className=quottext-sm text-gray-400quot>statlabel</div></div></div>
                 
               </div>
             
@@ -482,7 +480,7 @@ const ContentCarousel: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
+      <EnhancedFooter />
 </div>
 <<<<<<< HEAD,
   ),
@@ -491,12 +489,7 @@ const ContentCarousel: React.FC = () => {
             <ArrowRight className="w-5 h-5 ml-2" />
           </button>
         </div>
-<<<<<<< HEAD
       </div>
     </div>
-=======
-    </div>);
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-1948
 
 export default ContentCarousel }

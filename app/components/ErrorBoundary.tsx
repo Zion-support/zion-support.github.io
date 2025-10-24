@@ -1,6 +1,6 @@
 import { React  Component ReactNode ErrorInfo  from 'react'
 
-interface Props {
+interface Props {;
   children: ReactNode;
 }
 
@@ -9,10 +9,7 @@ interface Props {
 ,
 
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 interface State {
   hasError: boolean;
   error: Error | undefined;
@@ -24,26 +21,17 @@ interface State {
 ,
 
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {,
     hasError: false,
     error: undefined,
   };
 
-<<<<<<< HEAD
   public static getDerivedStateFromError(error: Error): ErrorBoundaryState {
     return { hasError: true, error };
   }
 
-=======
-  public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-75df
   public componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     // Log error to console in development only
     if (process.env.NODE_ENV === 'development') {
@@ -177,7 +165,7 @@ class ErrorBoundary extends Component<Props, State> {
           </div>
         </section>
       </div>
-      <Footer />
+      <EnhancedFooter />
 </>
 
     return this.props.children;

@@ -24,6 +24,6 @@ export default function AichatbotbuilderPage() {
           </Link>
         </div>
       </div>
-      <Footer />
+      <EnhancedFooter />
     </div>);
 }

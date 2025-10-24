@@ -24,6 +24,6 @@ export default function AiemailautomationPage() {
           </Link>
         </div>
       </div>
-      <Footer />
+      <EnhancedFooter />
     </div>);
 }

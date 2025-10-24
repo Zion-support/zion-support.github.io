@@ -24,6 +24,6 @@ export default function AiexpensetrackerPage() {
           </Link>
         </div>
       </div>
-      <Footer />
+      <EnhancedFooter />
     </div>);
 }

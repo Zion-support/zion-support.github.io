@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { React  Suspense lazy  from 'react'
 import { BrowserRouter Routes Route  from 'react-router-dom'
@@ -274,7 +274,7 @@ function App() {
           </Suspense>
         </BrowserRouter>
       </ErrorBoundary>
-    </HelmetProvider>
+    </HelmetProvider>;
   );
 }
 

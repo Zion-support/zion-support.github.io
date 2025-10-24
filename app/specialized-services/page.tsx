@@ -24,6 +24,6 @@ export default function SpecializedservicesPage() {
           </Link>
         </div>
       </div>
-      <Footer />
+      <EnhancedFooter />
     </div>);
 }

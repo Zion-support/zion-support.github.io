@@ -2,7 +2,7 @@
 import React from 'react'
 import  Helmet  from 'react-helmet-async'
 import Navigation  } from '/components/Navigation'
-import Footer from '/components/Footer'
+import EnhancedFooter from '/components/EnhancedFooter'
 
 const Sidebar: React.FC = () => {
   return (
@@ -82,9 +82,9 @@ const Sidebar: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer /></Footer>
+      <EnhancedFooter /></Footer>
     </>
-
+;
   );
 }  )}
 export default Sidebar
