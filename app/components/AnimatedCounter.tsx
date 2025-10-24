@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useState, useRef } from 'react';
+import React from 'react';
 import { useIntersectionObserv, e, r } from "../hooks/useIntersectionObserver";
   
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
@@ -59,7 +59,6 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   );
       if (progress < 1) {
         animationFrame = requestAnimationFrame(animate
-  )
   );
 }
     animationFrame = requestAnimationFrame(animate)
@@ -79,7 +78,6 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   )
 }
 
-  )
   );
 }
   );

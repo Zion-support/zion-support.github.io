@@ -1,7 +1,5 @@
-import React from 'react'
-import { Brain } from 'lucide-react'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-import { ArrowRight } from 'lucide-react'
+import React from 'react';
+import { ArrowRight, Brain, CheckCircle, Globe, Mail, MapPin, Phone, Shield, Zap } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf;
     };

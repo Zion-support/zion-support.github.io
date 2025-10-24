@@ -92,7 +92,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children, 
         page_title: pageName,
         page_location: window.location.href,
       }
-  )
   );
 }
   return context
@@ -136,7 +135,6 @@ export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
-  )
   );
 }
   );

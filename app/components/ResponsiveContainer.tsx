@@ -1,9 +1,8 @@
-import Footer from './Footer'
-import Navigation from './Navigation'
-import { ArrowRight, CheckCircle } from 'lucide-react'
+import Footer from './Footer';
+import { ArrowRight, CheckCircle } from 'lucide-react';
+import Navigation from './Navigation';
 import React from 'react';
 import { cn  } from "../lib/utils";
-  
 interface ResponsiveContainerProps {
   className?: string
   );

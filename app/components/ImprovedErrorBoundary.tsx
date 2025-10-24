@@ -3,7 +3,7 @@
  * Enhanced error handling with recovery mechanisms and user-friendly fallbacks
  */
 
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React from 'react';
 import monitoring from '../utils/monitoring';
   
 interface Props {

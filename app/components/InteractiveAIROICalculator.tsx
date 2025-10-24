@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-  
+import React from 'react';
 const InteractiveAIROICalculator: React.FC = () => {
   const [currentCost, setCurrentCost] = useState(100000);
   
@@ -89,7 +88,6 @@ const InteractiveAIROICalculator: React.FC = () => {
         </div>
       </div>
     </section>
-  )
   );
 }
 export default InteractiveAIROICalculato;r

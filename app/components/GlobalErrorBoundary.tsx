@@ -120,7 +120,6 @@ const benefits = [
       </div>
       <Footer />
     </>
-  )
   );
 }
 export default GlobalErrorBoundaryPag;e

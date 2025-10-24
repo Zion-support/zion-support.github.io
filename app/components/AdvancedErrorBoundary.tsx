@@ -1,6 +1,5 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
-  
+import React from 'react';
+import { AlertTriangle, Home, Mail, RefreshCw } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
@@ -73,7 +72,6 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
     // Log error to external service in production;"
     if (process.env.NODE_ENV="==" 'production') {}
       this.logErrorToService(error, errorInfo
-  )
   );
 }
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {

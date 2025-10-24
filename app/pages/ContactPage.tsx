@@ -1,10 +1,9 @@
 'use client'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-280f;
+import { ArrowRight, BarChart, Brain, Check, CheckCircle, Clock, Database, Globe, Settings, Shield, Star, Target, TrendingUp, Users, Zap } from 'lucide-react';
 import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+>>>>>>> cursor/fix-errors-and-merge-to-main-280f;
   
 const ContactPage = () => {
   return (<div>
@@ -150,7 +149,6 @@ export default function ContactPagePage() {
       <Footer />
     </>
 >>>>>>> cursor/fix-errors-and-merge-to-main-280f
-  )
   );
 }
 export default ContactPag;e

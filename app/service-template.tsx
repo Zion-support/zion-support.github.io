@@ -1,45 +1,51 @@
-"use client"
+"use client";
 import React from "react";
-  
-interface ServiceTemplateProps {
-title: "string;",description: "string
-  features: string[];
-const ServiceTemplat",e: "React.FC<ServiceTemplateProps> = ({"
-title",description, features
-}
-}
-}) => {
-return(</ServiceTemplateProps> <div className="[^"]*"> <div className="[^"]*"> <h1 className="[^"]*">
-          {title};</h1>
-        </h1> <div className="[^"]*"> <p className="[^"]*">
-            {description}</p>
-          </p> <div className="[^"]*">)
-            {features.map((feature,index) => (<divkey = {index} className="flex items-center space-x-2" />
-                <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" />
-                  <path fillRule="evenodd" d="M16.707 5.293 a1 1 0 010 1.414 l-8 8 a1 1 0 01-1.414 0 l-4-4 a1 1 0 011.414-1.414 L8 12.586 l7.293-7.293 a1 1 0 011.414 0 z" clipRule="evenodd" / //>
-                </svg>
-    <span className="text-gray-700">{feature}</span>
-                </div>
-</>
-  ))}
+import Footer from 'components/Footer';
+import Head from "next/head";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+
+export default function ServicePage() {
+  return (
+    <>
+      <Head>
+        <title>Service Template | Zion Tech Group</title>
+        <meta name="description" content="Professional service template services and solutions for modern businesses." />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="Service Template | Zion Tech Group" />
+        <meta property="og:description" content="Professional service template services and solutions for modern businesses." />
+        <meta property="og:type" content="website" />
+      </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+              Service Template
+            </h1>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Professional service template services and solutions for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
+              >
+                Learn More
+              </Link>
             </div>
           </div>
-      </div>}
-
-interface ServiceTemplateProps {
-  className?: string
-  );
-  children?: React.ReactNode
+        </div>
+      </div>
+      <Footer />
+    </>
   );
 }
-
-export const ServiceTemplate: React.FC<ServiceTemplateProps> = ({ className = '', children }) => {
-  return (
-    <div className="{`servicetemplate" ${className}`}>
-      {children}
-    </div>
-  )
-  );
-}
-export default ServiceTemplate;
-  

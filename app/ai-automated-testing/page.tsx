@@ -1,17 +1,10 @@
-import React from 'react'
-import { Brain, Zap, Shield, Globe } from 'lucide-react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, Brain, Zap, Shield, Globe } from 'lucide-react'
-import { Brain, Globe, Shield, Zap } from 'lucide-react'
-import React from "react"
-import Footer from '../components/Footer'
-import Head from "next/head"
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
-import Footer from "../components/Footer"
+import React from 'react';
+import Footer from '../components/Footer';
+import Head from "next/head";
+import Link from "next/link";
 import Navigation from '../components/Navigation';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-  
+
 const Page: React.FC = () => {
   const features = [
     {
@@ -33,6 +26,7 @@ const Page: React.FC = () => {
       benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
     }
   ];
+
   return (
     <>
       <Navigation />
@@ -40,10 +34,10 @@ const Page: React.FC = () => {
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Page
+              Ai Automated Testing
             </h1>
             <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
-              Advanced Page solutions powered by artificial intelligence and machine learning.
+              Advanced ai automated testing solutions powered by artificial intelligence and machine learning.
             </p>
           </div>
 
@@ -82,10 +76,7 @@ const Page: React.FC = () => {
       </div>
       <Footer />
     </>
-  )
   );
-}
+};
+
 export default Page;
-export default PagePage;
-export default AiAutomatedTestingPage;
-  

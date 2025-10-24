@@ -324,7 +324,6 @@ const NeonButton: React.FC<NeonButtonProps> = ({
     </>
 
     <//>
-  )
   );
 }
   );
@@ -396,7 +395,6 @@ Learn More</button>
   )
 }
   );
-  )
   );
 }
 export default NeonButto;n;"

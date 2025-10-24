@@ -1,5 +1,5 @@
 import React, { memo } from "react
-interface AIToolCardProps { title: string
+interface AIToolCardProps { title: string;
   description: string;
   link: string };
   

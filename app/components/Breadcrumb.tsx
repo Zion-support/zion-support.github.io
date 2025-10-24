@@ -1,7 +1,6 @@
-import React from 'react'
-import { Home, ChevronRight } from 'lucide-react'
+import React from 'react';
+import { ChevronRight, Home } from 'lucide-react';
 import { useLocation } from 'react-router-dom'
-
 interface BreadcrumbItem {
   name: string
   path: string
@@ -9,7 +8,7 @@ interface BreadcrumbItem {
 }
 
 const Breadcrumb: React.FC = () => { const pathname = usePathname(
-  
+  ;
   const pathnames = pathname.split("/").filter((x) => x);
   );
   if (pathnames.length === 0) {
@@ -63,7 +62,6 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ className = '' }) => {
         </ol>
       </div>
     </nav>
-  )
   );
 }
 export default Breadcrumb;

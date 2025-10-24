@@ -1,7 +1,6 @@
 import React from 'react';
+import { ArrowLeft, Briefcase, Home, Info, Mail, Search } from 'lucide-react';
 import Link from 'next/link';
-import { Search, Home, Info, Briefcase, Mail, ArrowLeft } from 'lucide-react';
-  
   const popularPages = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
@@ -124,7 +123,6 @@ import { Search, Home, Info, Briefcase, Mail, ArrowLeft } from 'lucide-react';
         </div>
       </div>
     </div>
-  )
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf

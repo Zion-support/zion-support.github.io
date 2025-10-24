@@ -1,9 +1,8 @@
 'use client'
-import React from 'react'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import { ArrowRight, BarChart, Brain, CheckCircle, Clock, Database, Globe, Settings, Shield, Star, Target, TrendingUp, Users, Zap } from 'lucide-react';
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 interface AdvancedPerformanceMonitorProps {;
   className?: string;
@@ -198,7 +197,6 @@ constclsEntry="entry" as LayoutShift
 if (!clsEntry.hadRecentInput) {}
 clsValue += clsEntry.value}
 setMetrics(prev=> ({...prev, cls: clsValue})
-  )
   );
 }
 })

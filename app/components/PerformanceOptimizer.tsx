@@ -1,14 +1,11 @@
 'use client'
+import { AlertTriangle, ArrowRight, CheckCircle, Settings, Zap } from 'lucide-react';
   );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 import Navigation from './Navigation'
-import { ArrowRight } from 'lucide-react'
-
-import React, {useEffect, useState, useCallback } from 'react'
-import {Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react'
-import {CheckCircle } from 'lucide-react';
-import {AlertTriangle } from 'lucide-react';
+;
+import React from 'react';
   
 interface PerformanceOptimizerProps {}
   className?: string
@@ -47,7 +44,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({enableImageO
         const webpImg=";";}
               img.removeAttribute('data-src')}
               observer.unobserve(img
-  )
   );
 }
         })
@@ -196,7 +192,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ clas
   ),
 }
   );
-  )
   );
 }
 export default PerformanceOptimizerPag;e;"

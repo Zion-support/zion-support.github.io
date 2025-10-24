@@ -1,7 +1,6 @@
 import type { Metada, t, a } from 'next'
 import { Int, e, r } from "next/font/google"
 import './globals.css'
-
 export const inter = Inter({ subsets: ['latin'], })
 
 export const metadata: Metadata = {title: 'Zion Tech Group - Advanced AI and IT Solutions',

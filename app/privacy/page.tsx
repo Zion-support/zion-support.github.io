@@ -1,21 +1,13 @@
-import React from 'react'
-import { Brain, Zap, Shield, Globe } from 'lucide-react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, Brain, Zap, Shield, Globe } from 'lucide-react'
-import React from "react"
-import Footer from '../components/Footer'
-import Head from "next/head"
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
-import Footer from "../components/Footer"
+import React from 'react';
+import Footer from '../components/Footer';
+import Head from "next/head";
+import Link from "next/link";
 import Navigation from '../components/Navigation';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-  
+
 const Page: React.FC = () => {
   const features = [
-
-export default function PrivacyPage() {
-  const lastUpdated = 'January 1, 2024';    {
+    {
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
@@ -34,6 +26,7 @@ export default function PrivacyPage() {
       benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
     }
   ];
+
   return (
     <>
       <Navigation />
@@ -41,10 +34,10 @@ export default function PrivacyPage() {
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Page
+              Privacy
             </h1>
             <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
-              Advanced Page solutions powered by artificial intelligence and machine learning.
+              Advanced privacy solutions powered by artificial intelligence and machine learning.
             </p>
           </div>
 
@@ -83,10 +76,7 @@ export default function PrivacyPage() {
       </div>
       <Footer />
     </>
-  )
   );
-}
+};
+
 export default Page;
-export default PagePage;
-export default PrivacyPage;
-  

@@ -3,7 +3,7 @@
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
-import React, {useEffect } from 'react';
+import React from 'react';
 import Head from 'next/head';
   
 interface SEOOptimizerProps {}
@@ -70,7 +70,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({title: "'Zion" Tech Group - 
         ogTag.setAttribute('property', property);}
         ogTag.setAttribute('content', content)}
         document.head.appendChild(ogTag
-  )
   );
 }
   );
@@ -95,7 +94,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({title: "'Zion" Tech Group - 
         twitterTag.setAttribute('name', name);}
         twitterTag.setAttribute('content', content)}
         document.head.appendChild(twitterTag
-  )
   );
 }
   );
@@ -163,7 +161,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({title: "'Zion" Tech Group - 
           type=""application/ld+json"}
   );
           dangerouslySetInnerHTML="{{" __html: JSON.stringify(structuredData
-  )
   );
 }
         /></script>
@@ -175,7 +172,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({title: "'Zion" Tech Group - 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
-  )
   );
 }
 export default SEOOptimizerPag;e;"

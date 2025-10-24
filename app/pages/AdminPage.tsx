@@ -1,5 +1,4 @@
 import React from 'react';
-  
 const AdminPage = (): JSX.Element => {
   return (
     <div className='min-h-screen bg-gray-50 py-12'></div>

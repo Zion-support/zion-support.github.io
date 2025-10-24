@@ -20,7 +20,5 @@ export default function Error({
         </button>
       </div>
     </div>
-  )
   );
 }
-  );

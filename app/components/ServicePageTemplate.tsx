@@ -1,76 +1,51 @@
-import React  from "react";
-  
-"use client"
-import { Helmet }  from "react-helmet-async";
-  
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+"use client";
+import React from "react";
+import Footer from '../components/Footer';
+import Head from "next/head";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
-const ServicePageTemplatePage: React.FC = () => {
-  const features = [
-    {
-      icon: Brai,
-      title: 'AI-Powered Intelligence,',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {icon: BarChart,
-  );
-      title: 'Advanced Analytics',;}
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',}
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {icon: Target,
-  );
-      title: 'Precision Targeting',;}
-      description: 'Target specific goals and objectives with precision and accuracy.',}
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {icon: TrendingUp,
-  );
-      title: 'Growth Optimization',;}
-      description: 'Optimize your business growth with data-driven strategies.',}
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ];
-"
-  const benefits=";"
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ];
+export default function ServicePage() {
   return (
     <>
+      <Head>
+        <title>ServicePageTemplate | Zion Tech Group</title>
+        <meta name="description" content="Professional ServicePageTemplate services and solutions for modern businesses." />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="ServicePageTemplate | Zion Tech Group" />
+        <meta property="og:description" content="Professional ServicePageTemplate services and solutions for modern businesses." />
+        <meta property="og:type" content="website" />
+      </Head>
       
-      <section className=&quot;py-20 px-4&quot;></section>
-        <div className=&quot;container mx-auto max-w-6xl&quot;></div>
-          <div className=&quot;text-center mb-16&quot;></div>
-            <h1 className=&quot;text-5xl md:text-6xl font-bold text-white mb-6&quot;>ServicePageTemplate</h1>
-            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed&quot;>Professional ServicePageTemplate services tailored to your business needs.</p>p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+              ServicePageTemplate
+            </h1>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Professional ServicePageTemplate services and solutions for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center px-8 py-4 border border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
           </div>
         </div>
-    </div>
-  )
-  );
-      const features = [
-    {
-      icon: Brain
-      title: 'AI-Powered Intelligence'
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    </div>)
-  )
-}
-
-export default function; ServicePageTemplate({ className }: ServicePageTemplateProps) {
-  return (
-    <div className={className}>
-      <h1>Service Page Template</h1>
-    </div>
-  )
+      </div>
+      <Footer />
+    </>
   );
 }

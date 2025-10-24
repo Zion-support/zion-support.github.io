@@ -1,328 +1,82 @@
-'use client'
-import {Phone, Mail, Brain} from 'lucide-react'
-import React from 'react'
-import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import React from 'react';
+import Footer from '../components/Footer';
+import Head from "next/head";
+import Link from "next/link";
+import Navigation from '../components/Navigation';
+import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
-const SidebarPage: React.FC = () => {const features = [
-      title: 'AI-Powered Intelligence',}
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',}
+const Page: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    {icon: BarChart,
-      title: 'Advanced Analytics',}
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',}
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time monitoring', 'Custom dashboards', 'Data visualization', 'Performance metrics']
     },
-    {icon: Target,
-      title: 'Precision Targeting',}
-      description: 'Target specific goals and objectives with precision and accuracy.',}
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {icon: TrendingUp,
-      title: 'Growth Optimization',}
-      description: 'Optimize your business growth with data-driven strategies.',}
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'];
-    };
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target the right audience with AI-driven precision and accuracy.',
+      benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
+    }
   ];
-"
-  const benefits=";"
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ];
-const Sidebar: React.FC<SidebarProps> = ({ onSidebarToggle }) => {
+
   return (
-    <div className="{`sidebar" ${className}`}>
-      {children}
-    </div>
-      <Navigation//> <div className="[^"]*">
-        {/* Hero Section*/} <section className="relative py-20 px-4 overflow-hidden" /> <div className="[^"]*"> <div className="[^"]*"> <h1 className="[^"]*">
-Sidebar</h1>
-            </h1> <p className="[^"]*">
-Advanced Sidebar solution for modern businesses.</p>
-            </p>,<div className="[^"]*"> <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" />
-Get Started</button>
-              </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
-                Learn More
-              </button>
-            </div>
-          </div>
-        </section>
-    </>
-
-              </button>
-
-        </section>,{/* Features Section*/} <section className="py-20 px-4" /> <div className="[^"]*"> <div className="[^"]*">
-    <h1 className="text-4 xl font-bold text-white mb-4">Key Features</h2> <p className="[^"]*">
-Discover the powerful features that make Sidebar the perfect solution for your business.</p>
-              </p>
-    <divclassName="grid md: "grid-cols-2 l","
-g: grid-cols-4 gap-8" />,<div className="[^"]*">
-    <h1 className="text-xl font-semibold text-white mb-3">AI-Powered</h3>
-                <p className="text-gray-300">Advanced AI algorithms for intelligent automation.</p> <div className="[^"]*">
-    <h1 className="text-xl font-semibold text-white mb-3">Scalable</h3>
-                <p className="text-gray-300">Grows with your business needs and requirements.</p>
-                </div> <div className="[^"]*">
-    <h1 className="text-xl font-semibold text-white mb-3">Secure</h3>
-                <p className="text-gray-300">Enterprise-grade security and data protection.</p>
-                </div> <div className="[^"]*">
-    <h1 className="text-xl font-semibold text-white mb-3">Efficient</h3>
-
-                <p className="text-gray-300">Optimized performance for maximum productivity.</p>
-                </div>
-              </div>
-            </div>
-        </section>,{/* CTA Section*/} <section className="py-20 px-4" /> <div className="[^"]*">
-    <h1 className="text-4 xl font-bold text-white mb-6">Ready to Get Started?</h2> <p className="[^"]*">
-Join thousands of businesses already using Sidebar to transform their operations.</p>
-            </p> <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
-Start Your Free Trial</button>
-            </button>
-            </div>
-        </section>
-        </div>
-      </Footer>
-    </div>
-</>
-  )
-  )  )}
-
-        {/* Benefits Section */}
-        <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
-                Experience the benefits of cutting-edge AI technology
-              </p>
-            </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
-              {benefits.map((benefit, index) => (
-                <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
-                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
-                  <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
-            <p className=&quot;text-xl text-gray-300 mb-8&quot;>
-              Join thousands of businesses already using our AI solutions
+    <>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Sidebar
+            </h1>
+            <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
+              Advanced Sidebar solutions powered by artificial intelligence and machine learning.
             </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
-                Start Free Trial
-              </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
-                Contact Sales
-              </button>
-            </div>
           </div>
-        </section>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-slate-800 p-6 rounded-lg">
+                <feature.icon className="w-12 h-12 text-emerald-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Transform your business with our cutting-edge AI solutions. Contact us today to learn more.
+            </p>
+            <a
+              href="/contact"
+              className="inline-flex items-center bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-3 rounded-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-300"
+            >
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </a>
+          </div>
+        </div>
       </div>
-      <Footer /></Footer>
+      <Footer />
     </>
-  );,
-}
-export default SidebarPag;e
   );
-Menu,
-Home,
-Users,
-Settings,
-Brain,
-Cloud,
-Shield,
-Code,
-BarChart,
-ChevronDown,
-ChevronRight,
-Phone,
-Mail,
-  );
-MapPin,Clock;}
-} from 'lucide-react'"
-constSidebar: React.FC="()" =>{const [isOpensetIsOpen] = useState(false);
-  
-const [expandedSectionssetExpandedSections]=useState<Set<strin g>>(new Set(['ai-services', 'micro-saas', 'it-services']));"
-constlocation="useLocation()"
-  );
-useEffect(() => {
-;  "
-consthandleResize="()" => {
-;  }
-if (windo w.innerWidth >=1024) {}
-setIsOpen(false
-  )
-  );
-}
-windo w.addEventListener('resize', handleResize)
-  );
-return () => windo w.removeEventListener('resize', handleResize)
-}, [];"
-consttoggleSection="(section:" string) => {constnewExpanded="new" Set(expandedSections);}
-if (newExpanded.has(section)) {;) => {
-  }
-return (
-$3
-,)
-}
-setExpandedSections(newExpanded)
-}
-constnavigationSections="["
-{title: 'Main',}
-items: [
-{name: 'Home', path: '/', icon: Home},
-{name: 'About', path: '/about', icon: Users},
-{name: 'Services', path: '/services', icon: Settings},
-{name: 'Contact', path: '/contact', icon: Phone},
-{name: 'Blog', path: '/blog', icon: BarChart},
-{name: 'Case Studies', path: '/case-studies', icon: BarChart},
-];
-},
-{title: 'AI Services',}
-key: 'ai-services',}
-items: [
-{name: 'AI Services Overview', path: '/ai-services', icon: Brain},
-{name: 'Business Intelligence', path: '/ai-services/business-intelligence', icon: BarChart},
-{name: 'Document Processing', path: '/ai-services/do cument-processing', icon: Settings},
-{name: 'Customer Experience', path: '/ai-services/customer-experience', icon: Users},
-{name: 'Marketing Automation', path: '/ai-services/marketing-automation', icon: Settings},
-{name: 'Predictive Maintenance', path: '/ai-services/predictive-maintenance', icon: Settings},
-{name: 'Supply Chain', path: '/ai-services/supply-chain', icon: Settings},
-{name: 'Fraud Detection', path: '/ai-services/fraud-detection', icon: Shield},
-{name: 'Content Generation', path: '/ai-services/content-generation', icon: Settings},
-{name: 'HR Analytics', path: '/ai-services/hr-analytics', icon: BarChart},
-{name: 'Process Automation', path: '/ai-services/process-automation', icon: Settings},
-{name: 'Quality Assurance', path: '/ai-services/quality-assurance', icon: Shield},
-{name: 'Energy Management', path: '/ai-services/energy-management', icon: Settings},
-];
-},
-{title: 'Micro SaaS',}
-key: 'micro-saas',}
-items: [
-{name: 'Micro SaaS Overview', path: '/micro-saas', icon: Settings},
-{name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard', icon: BarChart},
-{name: 'Support Bot', path: '/micro-saas/support-bot', icon: Users},
-{name: 'Social Manager', path: '/micro-saas/social-manager', icon: Settings},
-{name: 'Email Marketing', path: '/micro-saas/email-marketing', icon: Mail},
-{name: 'Inventory Management', path: '/micro-saas/inventory-management', icon: Settings},
-{name: 'Lead Scoring', path: '/micro-saas/lead-scoring', icon: BarChart},
-{name: 'Document Processor', path: '/micro-saas/do cument-processor', icon: Settings},
-{name: 'SEO Optimizer', path: '/micro-saas/seo-optimizer', icon: Settings},
-{name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler', icon: Clock},
-{name: 'Chat Analytics', path: '/micro-saas/chat-analytics', icon: BarChart},
-{name: 'Expense Tracker', path: '/micro-saas/expense-tracker', icon: BarChart},
-{name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings},
-];
-},
-{title: 'IT Services',}
-key: 'it-services',}
-items: [
-{name: 'IT Services Overview', path: '/it-services', icon: Code},
-{name: 'IT Consulting', path: '/it-consulting', icon: Users},
-{name: 'IT Infrastructure', path: '/it-infrastructure', icon: Settings},
-{name: 'IT Support', path: '/it-support', icon: Users},
-{name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: Cloud},
-{name: 'Cloud Migration', path: '/cloud-migration', icon: Cloud},
-{name: 'Cybersecurity', path: '/cybersecurity', icon: Shield},
-{name: 'Database Management', path: '/database-management', icon: Settings},
-{name: 'Managed IT', path: '/managed-it', icon: Settings},
-];
-},
-{title: 'Company',}
-items: [
-{name: 'Team', path: '/team', icon: Users},
-{name: 'Careers', path: '/careers', icon: Users},
-{name: 'Consultation', path: '/consultation', icon: Phone},
-{name: 'Pricing', path: '/pricing', icon: BarChart},
-];
-},
-{title: 'Resources',}
-items: [
-{name: 'Documentation', path: '/do cs', icon: Settings},
-{name: 'API Docs', path: '/api-do cs', icon: Code},
-{name: 'Support', path: '/support', icon: Users},
-{name: 'Status', path: '/status', icon: Settings},
-];
-}
-];"
-constcontactInfo="{phone: " '(30 2) 46 4-095 0',
-email: 'kleber@ziontechgroup.com',}
-address: '364 E Main St STE 1008 Middletown, DE 19709',}
-hours: 'Mon-Fri 9AM-6PM EST'
-}</Set>
-return (</Set>
-<>
-{/* Mobile Menu Button */}
-<button
-onClick={() =></button> setIsOpen(true)}
-className=&quot;lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all&quot
-  );
-aria-label=&quot;Open sidebar&quot
-  );
->
-<Menu className=&quot;w-6 h-6&quot; />
-</button>
-{/* Sidebar Overlay *,/}
-{isOpen && (
-<div
-className=&quot;fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden&quot;;}
-onClick={() =>setIsOpen(false)}</div>
-/>
-)}
-{/* Sidebar */}</div>"
-<aside className="{`fixed" top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${}
-isOpen ? 'translate-x-0' : '-translate-x-full'
-} lg:translate-x-0 lg:static lg:z-auto`}>
-<div className=&quot;flex flex-col h-full&quot;></div>
-{/* Header */}</div>
-<div className=&quot;flex items-center justify-between p-6 border-b border-slate-700/50&quot;></div>
-<Link to=&quot;/&quot; className=&quot;flex items-center space-x-3&quot; onClick={() => setIsOpen(false)}>
-<div className=&quot;w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center&quot;></div>
-<Brain className=&quot;w-6 h-6 text-white&quot; />
-</div>
-<div></div>
-<h2 className=&quot;text-xl font-bold text-white cyber-text&quot;>Zion Tech Group</h2>
-<p className=&quot;text-xs text-cyan-400&quot;>AI & IT Solutions</p>
-</div>
-</Link>
-<button
-onClick={() =></button> setIsOpen(false)}
-className=&quot;lg:hidden text-gray-400 hover:text-white transition-colors&quot
-  );
-aria-label=&quot;Close sidebar&quot
-  );
->
-<X className=&quot;w-6 h-6&quot; />
-</button>
-{/* Navigation */}
-<div className=&quot;flex-1 overflow-y-auto py-6&quot;></div>
-<nav className=&quot;space-y-2 px-4&quot;>
-{navigationSections.map((section, sectionIndex) => (;}
-<div key={sectionIndex} className=&quot;space-y-1&quot;></div>
-<button
-onClick={() =></button> section.key && toggleSection(section.key)}
-className=&quot;flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors&quot;>
-<span>{section.title}</span>
-{section.key && (
-expandedSections.has(section.key) ?
-<ChevronDown className=&quot;w-4 h-4&quot; /> :
-<ChevronRight className=&quot;w-4 h-4&quot; />
-)}
-</button>
-{(!section.key || expandedSections.has(section.key)) && (
-<div className=&quot;ml-4 space-y-1&quot;></div>
-{section.items.map((item, itemIndex) => (</div>
-<Link}
-key="{itemIndex}"
+};
+
+export default Page;

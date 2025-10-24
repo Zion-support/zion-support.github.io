@@ -14,7 +14,5 @@ export default function GlobalError({
         <button onClick={() => reset()}>Try again</button>
       </body>
     </html>
-  )
   );
 }
-  );

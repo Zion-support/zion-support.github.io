@@ -1,8 +1,8 @@
 'use client'
+import { ArrowRight } from 'lucide-react';
 import Footer from './Footer'
-import Navigation from './Navigation'
-import { ArrowRight } from 'lucide-react'
-import React, { useState } from 'react'
+import Navigation from './Navigation';
+import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 

@@ -1,37 +1,57 @@
 const fs = require('fs');
 const path = require('path');
-;
-// Function to fix missing imports in micro-saas-services files;
-function fixMicroSaasImports() {
-  const microSaasDir = '/workspace/app/micro-saas-services'
-;
-  try {;
-    const files = fs.readdirSync(microSaasDir);
-    let fixedCount = 0;
-;
-    for (const file of files) {;
-      if (file.endsWith('.tsx')) {;
-        const filePath = path.join(microSaasDir, file);
-        let content = fs.readFileSync(filePath, 'utf8');
-;
-        // Check if file uses Link but doesn't import it;
-        if (content.includes('<Link') && !content.includes("import Link from 'next/link'")) {;
-          console.log(`Fixing imports in: ${file}`);
-;
-          // Add Link import after Head import;"
-          content = content.replace(";'"
-            "import Head from 'next/head'",";'"
-            "import Head from 'next/head';\nimport Link from 'next/link'");
-          );
-;
-          fs.writeFileSync(filePath, content, 'utf8');
-          fixedCount++}
-      }
-    }`
-    console.log(`Fixed ${fixedCount} micro-saas-services files`);
-    return true} catch (error) {;
-    console.error('Error fixing micro-saas-services files:', error.message);
-    return false}
+
+// Function to recursively find all .tsx files in micro-saas directory
+function findTsxFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      files.push(...findTsxFiles(fullPath));
+    } else if (item.endsWith('.tsx')) {
+      files.push(fullPath);
+    }
+  }
+  
+  return files;
 }
-// Run the fix;"
-fixMicroSaasImports()";`'"
+
+// Main execution
+const microSaasDir = path.join(__dirname, 'app', 'micro-saas');
+const tsxFiles = findTsxFiles(microSaasDir);
+
+console.log(`Found ${tsxFiles.length} .tsx files in micro-saas directory`);
+
+let fixedCount = 0;
+for (const file of tsxFiles) {
+  try {
+    let content = fs.readFileSync(file, 'utf8');
+    let modified = false;
+    
+    // Fix Footer import path
+    if (content.includes("import Footer from '../components/Footer'")) {
+      content = content.replace("import Footer from '../components/Footer'", "import Footer from '../../components/Footer'");
+      modified = true;
+    }
+    
+    // Fix Navigation import path
+    if (content.includes("import Navigation from '../components/Navigation'")) {
+      content = content.replace("import Navigation from '../components/Navigation'", "import Navigation from '../../components/Navigation'");
+      modified = true;
+    }
+    
+    if (modified) {
+      fs.writeFileSync(file, content);
+      console.log(`Fixed imports in: ${file}`);
+      fixedCount++;
+    }
+  } catch (error) {
+    console.error(`Error fixing ${file}:`, error.message);
+  }
+}
+
+console.log(`Fixed ${fixedCount} files`);

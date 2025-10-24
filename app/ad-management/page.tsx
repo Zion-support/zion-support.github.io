@@ -1,30 +1,31 @@
 "use client";
-import React from "react"
-import Footer from '../components/Footer'
-import Head from "next/head"
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import React from "react";
+import Footer from '../components/Footer';
+import Head from "next/head";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+
 export default function ServicePage() {
   return (
     <>
       <Head>
-        <title>Ad Management  | Zion Tech Group</title>
+        <title>Ad Management | Zion Tech Group</title>
         <meta name="description" content="Professional ad management services and solutions for modern businesses." />
-        <meta name="description" content="index, follow" />
-        <meta name="description" content="website" />
-        <meta name="description" content="Ad Management|Zion Tech Group" />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="Ad Management | Zion Tech Group" />
         <meta property="og:description" content="Professional ad management services and solutions for modern businesses." />
-      
+        <meta property="og:type" content="website" />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
-              Page
+              Ad Management
             </h1>
             <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-              Professional Page services designed to help your business grow and succeed.
+              Professional ad management services and solutions for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

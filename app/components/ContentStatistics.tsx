@@ -1,8 +1,8 @@
 'use client'
-import React from 'react'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import { ArrowRight, BarChart, Brain, Target, TrendingUp } from 'lucide-react';
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 const ContentStatistics: React.FC = () => {
   const [counter, s, setCounters] = useState({
@@ -221,7 +221,6 @@ constcurrent="prev[key" as keyof type of prev];}
 if(current< target) {}
 return {...prev,
 [key]: Math.min(current + increment, target
-  )
   );
 }
 return pre v

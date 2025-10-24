@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Link from 'next/link'
 import { 
   CheckCircleIcon,
@@ -7,7 +7,7 @@ import {
   ShieldCheckIcon,
   RocketLaunchIcon,
   HeartIcon,
-  ArrowRightIcon,
+  ArrowRightIcon,;
   StarIcon;
 } from '@heroicons/react/24/outline';
 export default function; AboutPage() {

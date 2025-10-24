@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
   
 const UltimateBusinessIntelligence2025Banner = () => {
@@ -219,7 +219,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
           ))}
         </div>
     </section>
-  )
   );
 }
 export default UltimateBusinessIntelligence2025Banne;r

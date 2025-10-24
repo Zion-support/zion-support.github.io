@@ -1,5 +1,5 @@
 'use client'
-import { useEffect } from 'react'
+import React from 'react';
 
 const CacheManager = () => {
   useEffect(() => {
@@ -78,7 +78,6 @@ const CacheManager = () => {
         }
         
         return originalFetch(input, init
-  )
   );
 }
     // Memory management for large objects
@@ -94,7 +93,6 @@ const CacheManager = () => {
             // Force garbage collection if available
             if ((window as any).gc) {
               (window as any).gc(
-  )
   );
 }
         }
@@ -116,7 +114,6 @@ const CacheManager = () => {
               img.src = img.dataset.src
               img.classList.remove('lazy')
               imageObserver.unobserve(img
-  )
   );
 }
         })

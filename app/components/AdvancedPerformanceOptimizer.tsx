@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useState, useCallback } from 'react';
+import React from 'react';
 interface AdvancedPerformanceOptimizerProps {enableAdvancedCaching?: boolean;
   
   enableImageOptimization?: boolean
@@ -63,7 +63,6 @@ new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             if (entry.name === 'first-contentful-paint') {
               setPerformanceMetrics(prev => ({ ...prev, fcp: entry.startTime
-  )
   );
 }))
   );
@@ -88,7 +87,6 @@ new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {"}
             if (entry.name="==" 'first-contentful-paint') {}
               setPerformanceMetrics(prev => ({...prev, fcp: entry.startTime })
-  )
   );
 }
         }).observe({entryTypes: ['paint'] })
@@ -242,7 +240,6 @@ const canvas = document.createElement('canvas')
             img.classList.remove('lazy')
   );
             imageObserver.unobserve(img
-  )
   );
 }
   );
@@ -433,7 +430,6 @@ const AdvancedPerformanceOptimizer: "React.FC<AdvancedPerformanceOptimizerProps>
               ...prev
               lcp: "entry.startTime")
             })
-  )
   );
 }
       })
