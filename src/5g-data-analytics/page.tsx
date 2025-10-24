@@ -1,45 +1,34 @@
 'use client';
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
+import { ArrowRight     } from 'lucide-react';
+import Footer from '../components/Footer';
+export default function DataAnalytics5 GPage() {
+return (
+    <div>
 
-const FiveGDataAnalyticsPage = () => {
-  return (
-    <>
       <Head>
-        <title>FiveGDataAnalytics | Zion Tech Group</title>
-        <meta name="description" content="Professional FiveGDataAnalytics services and solutions." />
+
+        <title>5 G Data Analytics - Zion Tech Group</title>
+        <meta name="description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." />
+
       </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              FiveGDataAnalytics
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional FiveGDataAnalytics services and solutions for your business.
-            </p>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-4xl mx-auto">
-              <h2 className="text-2xl font-semibold text-white mb-4">Our FiveGDataAnalytics Services</h2>
-              <p className="text-gray-300 mb-6">
-                We provide comprehensive FiveGDataAnalytics solutions tailored to your business needs.
-              </p>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-white/5 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold text-white mb-3">Service 1</h3>
-                  <p className="text-gray-300">Description of the first service offering.</p>
-                </div>
-                <div className="bg-white/5 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold text-white mb-3">Service 2</h3>
-                  <p className="text-gray-300">Description of the second service offering.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+    </div>,
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>,
+    <div className="max-w-7 xl mx-auto px-4 sm: px-6 lg:px-8 py-16 text-center"></div>,<h1 className="text-4 xl font-bold text-white mb-6"></h1>
+            5 G Data Analytics
+          </h1>
+          <p className="text-lg text-gray-300 mb-8"></p>
+Advanced 5 G data analytics solutions for real-time insights and business intelligence.
+          </p>
+          <Link href="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit">
+Contact Us
+            <ArrowRightclassName="w-5 h-5 ml-2" />
+          </Link>
         </div>
       </div>
-    </>
-  );
-};
-
-export default FiveGDataAnalyticsPage;
+      <Footer />
+    </div>
+  )
+,}

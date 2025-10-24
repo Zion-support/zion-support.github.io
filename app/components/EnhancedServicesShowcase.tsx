@@ -1,17 +1,8 @@
 'use client';
 import React from 'react';
-
-interface EnhancedServicesShowcaseProps {
-  className?: string;
-}
-
-const EnhancedServicesShowcase: React.FC<EnhancedServicesShowcaseProps> = ({ className }) => {
-  return (
-    <div className={className}>
-      <h2>EnhancedServicesShowcase</h2>
-      <p>This component is being rebuilt.</p>
-    </div>
-  );
-};
-
+import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe     } from 'lucide-react';
+import Navigation from '../components/Navigation'
+const EnhancedServicesShowcase: React.FC = () => {
+const services = [;
 export default EnhancedServicesShowcase;
+,}

@@ -1,2 +1,2 @@
-// Jest setup file
+// Jest setup file;
 import '@testing-library/jest-dom';

@@ -1,17 +1,32 @@
 'use client';
 import React from 'react';
-
+import React, { useEffect } from &quot;react&quot
 interface AnalyticsProps {
-  className?: string;
+
+className?: string
 }
+const Analytics: React.FC<AnalyticsProps> = ({ children ,}) => {
+useEffect(() => {
+    // Initialize analytics tracking
+const initAnalytics = () => {
+return // Google Analytics initialization
+if (typeof window !== 'undefined' && window.gtag) {
+window.gtag('config', 'GA_MEASUREMENT_ID', {
+page_title: document.title,page_location: window.location.href,})
+        });}
 
-const Analytics: React.FC<AnalyticsProps> = ({ className }) => {
-  return (
-    <div className={className}>
-      <h2>Analytics</h2>
-      <p>This component is being rebuilt.</p>
-    </div>
-  );
-};
+initAnalytics()
+  }, [])
+return (
+    <React.Fragment>
+      {children}
+    </React.Fragment>
+  );}
+// Extend Window interface for gtag
+declare global {
+interface Window {
 
+}
+    gtag: (...arg,s: any[]) => void;,}
 export default Analytics;
+}

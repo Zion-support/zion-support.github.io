@@ -1,17 +1,17 @@
-'use client';
-import React from 'react';
-
+import React from 'react'
 interface ContentNewsletterSignupProps {
-  className?: string;
+
+className?: string
+}
 }
 
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ className }) => {
-  return (
-    <div className={className}>
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ className = '' ,}) => {
+return (</ContentNewsletterSignupProps>,
+    <div className={className} /></div>
       <h2>ContentNewsletterSignup</h2>
-      <p>This component is being rebuilt.</p>
-    </div>
-  );
-};
-
+      <p>This component is under construction.</p>
+      </div>
+  )
+}
 export default ContentNewsletterSignup;
+}

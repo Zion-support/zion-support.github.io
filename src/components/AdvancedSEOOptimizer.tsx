@@ -1,17 +1,17 @@
-'use client';
-import React from 'react';
-
+import React from 'react'
 interface AdvancedSEOOptimizerProps {
-  className?: string;
+
+className?: string
+}
 }
 
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({ className }) => {
-  return (
-    <div className={className}>
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({ className = '' ,}) => {
+return (</AdvancedSEOOptimizerProps>,
+    <div className={className} /></div>
       <h2>AdvancedSEOOptimizer</h2>
-      <p>This component is being rebuilt.</p>
-    </div>
-  );
-};
-
+      <p>This component is under construction.</p>
+      </div>
+  )
+}
 export default AdvancedSEOOptimizer;
+}

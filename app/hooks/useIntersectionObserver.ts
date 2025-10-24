@@ -1,42 +1,35 @@
-import { useEffect, useRef, useState } from 'react';
-
+import { useEffect, useState, useRef } from 'react';
+;
 interface UseIntersectionObserverOptions {
-  threshold?: number | number[];
+;
+threshold?: number;
   root?: Element | null;
   rootMargin?: string;
+
 }
-
-interface UseIntersectionObserverReturn {
-  ref: React.RefObject<Element>;
-  isIntersecting: boolean;
-  entry: IntersectionObserverEntry | null;
-}
-
-export function useIntersectionObserver(
-  options: UseIntersectionObserverOptions = {}
-): UseIntersectionObserverReturn {
-  const [isIntersecting, setIsIntersecting] = useState(false);
-  const [entry, setEntry] = useState<IntersectionObserverEntry | null>(null);
-  const ref = useRef<Element>(null);
-
-  useEffect(() => {
-    const element = ref.current;
-    if (!element) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsIntersecting(entry.isIntersecting);
-        setEntry(entry);
-      },
-      options
+;
+export const useIntersectionObserver = (options: UseIntersectionObserverOptions = {,}) => {;
+const [entry, setEntry] = useState<IntersectionObserverEntry | null>(null);
+  const [node, setNode] = useState<Element | null>(null);
+  const observer = useRef<IntersectionObserver | null>(null);
+;
+useEffect(() => {;
+if (!node) return;
+;
+observer.current = new IntersectionObserver(
+      ([entry]) => setEntry(entry),;
+options
     );
-
-    observer.observe(element);
-
-    return () => {
-      observer.disconnect();
+;
+observer.current.observe(node);
+;
+return () => {;
+if (observer.current) {;
+observer.current.disconnect();
+      }
     };
-  }, [options]); // Include options in dependency array
-
-  return { ref, isIntersecting, entry };
+  }, [node, options.threshold, options.root, options.rootMargin]);
+;
+return [setNode, entry] as const;
+};
 }

@@ -1,17 +1,17 @@
-'use client';
-import React from 'react';
-
+import React from 'react'
 interface FooterProps {
-  className?: string;
+
+className?: string
+}
 }
 
-const Footer: React.FC<FooterProps> = ({ className }) => {
-  return (
-    <div className={className}>
+const Footer: React.FC<FooterProps> = ({ className = '' ,}) => {
+return (</FooterProps>,
+    <div className={className} /></div>
       <h2>Footer</h2>
-      <p>This component is being rebuilt.</p>
-    </div>
-  );
-};
-
+      <p>This component is under construction.</p>
+      </div>
+  )
+}
 export default Footer;
+}

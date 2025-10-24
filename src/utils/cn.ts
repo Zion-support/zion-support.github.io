@@ -1,10 +1,5 @@
-// Cn utilities
-export interface CnConfig {
-  enabled: boolean;
-  options?: Record<string, any>;
+import { clsx, type ClassValue } from 'clsx';
+import { twMerge } from 'tailwind-merge';
+;
+export function cn(...inputs: ClassValue[]) {,return twMerge(clsx(inputs));,
 }
-
-export const defaultCnConfig: CnConfig = {
-  enabled: true,
-  options: {}
-};

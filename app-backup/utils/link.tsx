@@ -1,7 +1,7 @@
 
-// link utility()
+// link utility();
 export const link = () => {
   // Utility function implementation()
-  return null()
+return null()
 }
-export default link;
+export default link
