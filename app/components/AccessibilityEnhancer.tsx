@@ -1,9 +1,8 @@
 'use client';
-
 import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
@@ -182,6 +181,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           .text-gray-600 {
             color: #fff !important;
           }
+        }
+        .high-contrast {
+          filter: contrast(150%) brightness(1.2);
         }
       `;
       document.head.appendChild(style);
