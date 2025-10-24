@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer from 'Footer';
 
 const EnhancedPerformanceMonitorPage: React.FC = () => {
   const benefits = [
@@ -90,12 +90,12 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
                   Email Us
                 </button>
               </div>
-            </div>
-          </div>
+            
+          
         </section>
-      </div>
+      
       <Footer />
-    </div>
+    
   );
 };
 

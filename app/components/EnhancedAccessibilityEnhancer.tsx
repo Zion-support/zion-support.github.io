@@ -132,8 +132,8 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
             </button>
           </div>
         </section>
-      </div>
-    </div>
+      
+    
   );
 };
 

@@ -131,7 +131,7 @@ const Header: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
+      
       <Footer />
     </header>
   );

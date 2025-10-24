@@ -72,39 +72,39 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</S
                       </li>
                     ))}
                   </ul>
-                </div>
+                
               ))}
-            </div>
-          </div>
+            
+          
         </section>
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Experience the benefits of cutting-edge AI technology</p>
               </p>
-            </div>
+            
             <div className="grid md:grid-cols-2 l,
-  g:grid-cols-3 gap-8"></div>
-            {benefits.map((benefit, index) => (</div>
-                <div key={index} className="flex items-start space-x-4"></div>
+  g:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-4">
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /></CheckCircle>
                   <p className="text-gray-300 text-lg">{benefit}</p>
-                </div>
+                
               ))}
-            </div>
-          </div>
+            
+          
         </section>
         {/* CTA Section */}
         <section className="py-20 px-4"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
+          <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8"></p>
               Join thousands of businesses already using our AI solutions</p>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
                 Start Free Trial</button>
               </button>
@@ -112,20 +112,20 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {</S
   r:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"></button>
                 Contact Sales</button>
               </button>
-            </div>
-          </div>
+            
+          
         </section>
-      </div>
+      
       <Footer /></Footer>
-</div>
+
 <<<<<<< HEAD
-  )
+  );
 }
  SystemMonitorPage
-            </div>
-        </div>
-    </div>
-    </div>
+            
+        
+    
+    
   );
 =======
   );

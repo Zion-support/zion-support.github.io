@@ -93,15 +93,15 @@ interface ContentNewsletterSignupProps {
         )}
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-          {features.map((feature, index) => (</div>
-            <div key={index} className="flex items-center space-x-2 text-gray-300"></div>
+          {features.map((feature, index) => (
+            <div key={index} className="flex items-center space-x-2 text-gray-300">
               <feature.icon className="h-5 w-5 text-emerald-400" /></feature>
               <span className="text-sm">{feature.text}</span>
-            </div>
+            
           ))}
-        </div>
-      </div>
-    </div>
+        
+      
+    
   );
 };
 

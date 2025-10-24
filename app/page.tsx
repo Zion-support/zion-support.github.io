@@ -3,7 +3,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-import Footer from '../components/Footer';
+import Footer from './components/Footer';
 
 export default function AppPage() {
   return (
@@ -20,15 +20,17 @@ export default function AppPage() {
           <p className="text-lg text-gray-300 mb-8">
             AI and technology solutions for your business. Transform your operations with cutting-edge AI services. services coming soon.
           </p>
-          <LinkContact Us
-            >
-            $2
-            <ArrowRight$3 />
+          <Link
+            href="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+          >
+            Contact Us
+            <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
       <Footer />
     </div>
-    </div>
+    
   );
 }

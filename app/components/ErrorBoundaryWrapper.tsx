@@ -38,8 +38,8 @@ class ErrorBoundaryWrapper extends Component<Props, State> {
             >
               Try Again</button>
             </button>
-          </div>
-        </div>
+          
+        
       );
     }
 

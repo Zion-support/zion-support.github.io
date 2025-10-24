@@ -6,7 +6,7 @@ import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react'
 
 const ContactPage = () => {
   return (
-    <>
+    <div>
       <Head>
         <title>404 - Page Not Found | Zion Tech Group</title>
         <meta name="robots" content="noindex, nofollow" />
@@ -108,8 +108,8 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
-};
+    
+      </div>
+  );;
 
 export default ContactPage;
