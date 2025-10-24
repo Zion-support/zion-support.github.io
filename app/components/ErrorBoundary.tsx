@@ -83,4 +83,8 @@ export default class ErrorBoundary extends React.Component<ErrorBoundaryProps, E
 
     return this.props.children
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 515ec9cbdfd47dd6dfdd38c0ed223b2c17b1851c

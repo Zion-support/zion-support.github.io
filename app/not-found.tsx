@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import Link from 'next/link'
 import { Home, ArrowLeft, RefreshCw } from 'lucide-react'

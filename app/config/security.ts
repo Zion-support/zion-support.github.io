@@ -124,7 +124,7 @@ export function generateSecureToken(length: number = 32): string {
   return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
 }
 
-export default {
+const securityConfig = {
   securityHeaders,
   rateLimitConfig,
   corsConfig,
@@ -135,3 +135,5 @@ export default {
   validateUrl,
   generateSecureToken,
 };
+
+export default securityConfig;
