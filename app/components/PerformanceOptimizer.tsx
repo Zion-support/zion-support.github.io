@@ -1,14 +1,14 @@
 'use client';
-import React from 'react'
-import  Helmet  from 'react-helmet-async'
-import Navigation  } from '/components/Navigation'
-import Footer from '../components/Footer'
+import React from 'react';
+import  Helmet  from 'react-helmet-async';
+import Navigation  } from '/components/Navigation';
+import Footer from '../components/Footer';
 
 const PerformanceOptimizer: React.FC = () => {
   return (
     <>
     
-  </>
+  
       <Helmet></Helmet>
         <title>PerformanceOptimizer</title>
         <meta name="description" content="Advanced PerformanceOptimizer solution for modern businesses." /></meta>

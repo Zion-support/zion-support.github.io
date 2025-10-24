@@ -159,7 +159,7 @@ const Footer: React.FC = () => {
               </ul>
             </div>
           </div>
-        </div>
+      </div>
 
         {/* Bottom Section */}
         <div className="border-t border-gray-700 mt-8 pt-8">

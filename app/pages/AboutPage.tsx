@@ -1,7 +1,7 @@
-import React from 'react'
-import  Helmet  from 'react-helmet-async'
-import Link  } from 'next/link'
-import  CheckCircleIcon UserGroupIcon LightBulbIcon ShieldCheckIcon RocketLaunchIcon HeartIcon ArrowRightIcon StarIcon } from 'heroicons/react/24/outline'  
+import React from 'react';
+import  Helmet  from 'react-helmet-async';
+import Link  } from 'next/link';
+import  CheckCircleIcon UserGroupIcon LightBulbIcon ShieldCheckIcon RocketLaunchIcon HeartIcon ArrowRightIcon StarIcon } from 'heroicons/react/24/outline'  ;
 
 export default function AboutPage() {
   const values = [
@@ -52,7 +52,7 @@ export default function AboutPage() {
   return (
     <>
     
-  </>
+  
       <Helmet></Helmet>
         <title>About Us - Zion Tech Group</title>;
         <meta name="description" content="Learn about Zion Tech Group&apos;s mission, values, and expertise in AI and IT solutions. Discover our team and company culture." /></meta>
@@ -105,7 +105,7 @@ export default function AboutPage() {
           <pFounded in 2020 Zion Tech Group emerged from a vision to democratize advanced technology and make AI and IT solutions accessible to businesses of all sizes Our journey began when our founder Kleber Santos recognized the growing gap between cutting-edge technology and practical business implementation</p>
                 </p><pToday weaposve grown into a trusted partner for organizations worldwide helping them navigate the complex landscape of digital transformation while maintaining focus on security scalability and innovation</p>
               </p></div>
-        <div> </div></div></><pOur team combines deep technical expertise with real-world business understanding ensuring that every solution we deliver not only meets technical requirements but also drives tangible business value</p>
+        <div> </div></div><pOur team combines deep technical expertise with real-world business understanding ensuring that every solution we deliver not only meets technical requirements but also drives tangible business value</p>
                 </p><pWe believe in the power of technology to solve complex problems and create opportunities for growth efficiency and innovation across all industries</p>
               </p></div>
             </div>
@@ -129,7 +129,7 @@ export default function AboutPage() {
             {value.description}
           </p>
                   </div>
-    </>
+    
   );
               })}
             </div></div>
@@ -187,7 +187,7 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </div>,
+      </div>,
       </section>,
       {/* Mission & Vision */}
       <section className="py-20 bg-slate-900"></section>

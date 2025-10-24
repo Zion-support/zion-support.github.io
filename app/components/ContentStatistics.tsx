@@ -1,10 +1,10 @@
-'use client'
-import React from 'react'
-import  Helmet  from 'react-helmet-async'
-import  ArrowRight Brain BarChart Target TrendingUp  from 'lucide-react'
-import Navigation from '/components/Navigation'
-import Footer from '../components/Footer'
-import  CheckCircle ArrowRight Star Clock Zap Shield Brain BarChart Target TrendingUp Globe Database Users Settings     } from 'lucide-react'
+'use client';
+import React from 'react';
+import  Helmet  from 'react-helmet-async';
+import  ArrowRight Brain BarChart Target TrendingUp  from 'lucide-react';
+import Navigation from '/components/Navigation';
+import Footer from '../components/Footer';
+import  CheckCircle ArrowRight Star Clock Zap Shield Brain BarChart Target TrendingUp Globe Database Users Settings     } from 'lucide-react';
 const ContentStatistics ReactFC =  =>     const steps = 60 const stepDuration = duration / steps const interval = setInterval => 
 const steps = 60 const stepDuration = duration / steps const interval = setInterval =>         
         return newCounters stepDuration return  => clearIntervalinterval const statistics="icon" Users label "Happy Clients"
@@ -67,6 +67,6 @@ const ContentStatistics: React.FC = () => {
     return (
     <>
     ) => clearInterval(interval)
-  </>
+  
   }, []
     </div>

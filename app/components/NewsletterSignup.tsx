@@ -1,4 +1,5 @@
 'use client';
+import React from 'react';
 import { useState } from 'react';
 import { AlertCircle } from 'lucide-react';
 interface NewsletterSignupProps {
@@ -62,17 +63,17 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
             {status === 'loading' ? (</button>
               <>
     
-  </>
+  
                 <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-purple-600 mr-2"></div>
                 Subscribing...
 </div>
             ) : (
               <>
     
-  </>
+  
                 <Send className="w-4 h-4 mr-2" /></Send>
                 Subscribe</Send>
-</>
+
             )}
           </button></div>
         {message && (
@@ -107,6 +108,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
       </div>
   return content;
 }
-    </>
+    
   );
 export default NewsletterSignup

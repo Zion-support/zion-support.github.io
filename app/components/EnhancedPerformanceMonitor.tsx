@@ -95,7 +95,7 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
         </section>
       </div>
       <Footer />
-    </>
+    
   );
 };
 

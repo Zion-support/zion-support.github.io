@@ -1,8 +1,8 @@
 'use client''',
-import React from 'react''',
-import Navigation from '../components/Navigation''',
-import Footer from '../components/Footer''',
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react''',
+import React from 'react''',;
+import Navigation from '../components/Navigation''',;
+import Footer from '../components/Footer''',;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react''',;
 const PageBackupPage: React.FC = () => {
   const features = [
     {
@@ -33,7 +33,7 @@ const PageBackupPage: React.FC = () => {
   return (
     <>
     
-  </>
+  
       <Helmet></Helmet>
         <title>Page Backup - Zion Tech Group</title>
         <meta name="description" content="Advanced page backup solutions powered by AI technology." /></meta>
@@ -100,7 +100,7 @@ const PageBackupPage: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-</>;
+;
   );
 };
 

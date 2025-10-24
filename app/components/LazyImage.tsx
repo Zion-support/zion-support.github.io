@@ -1,14 +1,14 @@
 'use client';
-import React from 'react'
-import  Helmet  from 'react-helmet-async'
-import Navigation  } from '/components/Navigation'
-import Footer from '../components/Footer'
+import React from 'react';
+import  Helmet  from 'react-helmet-async';
+import Navigation  } from '/components/Navigation';
+import Footer from '../components/Footer';
 
 const LazyImage: React.FC = () => {
   return (
     <>
     
-  </>
+  
       <Helmet></Helmet>
         <title>LazyImage</title>
         <meta name="description" content="Advanced LazyImage solution for modern businesses." /></meta>

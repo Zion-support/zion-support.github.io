@@ -1,6 +1,7 @@
-'use client'
-import { { { React  useState useEffect  from 'react'
-import  ArrowRight X Brain BarChart Target TrendingUp Cloud Shield Globe Database Users Settings           } from 'lucide-react'
+'use client';
+import React from 'react';
+import { { { React  useState useEffect  from 'react';
+import  ArrowRight X Brain BarChart Target TrendingUp Cloud Shield Globe Database Users Settings           } from 'lucide-react';
 
 interface Slide id number title string description string features string icon ReactReactNode color string const ContentCarousel ReactFC = 2 => 
 3 features     features       color "from-red-500 to-pink-500"
@@ -312,7 +313,7 @@ const ContentCarousel: React.FC = () => {
             </p></div>
         <div className=quotgrid md grid-cols-2 lggrid-cols-4 gap-8quot>
               featuresmapfeature index => 
-                </div></div></><><div key=index className=quotbg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20quot> </div></div><featureicon className=quoth-12 w-12 text-emerald-400 mb-4quot /> </feature><h3 className=quottext-xl font-semibold text-white mb-3quot>featuretitle</h3>
+                </div></div><><div key=index className=quotbg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20quot> </div></div><featureicon className=quoth-12 w-12 text-emerald-400 mb-4quot /> </feature><h3 className=quottext-xl font-semibold text-white mb-3quot>featuretitle</h3>
                   <p className=quottext-gray-300 mb-4quot>featuredescription</p></p>
                   <ul className=quotspace-y-2quot>featurebenefitsmapbenefit idx => 
                       </ul><li key=idx className=quotflex items-center text-sm text-gray-300quot> </li><CheckCircle className=quoth-4 w-4 text-emerald-400 mr-2 flex-shrink-0quot />benefit</CheckCircle></li>
@@ -331,18 +332,18 @@ const ContentCarousel: React.FC = () => {
         </p></div>
         <div className=quotrelativequot>
         </div>
-        <divslidesmapslide index =></div></div></>
+        <divslidesmapslide index =></div></div>
 <><div key=index className=quotw-full flex-shrink-0quot>
         </div>
         <div className=quotbg-white/10 backdrop-blur-sm rounded-xl p-8quot> </div></div>
         <div className=quottext-center mb-8quot>
         </div>
-        <div className=quotbg-white/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4quot> </div></div></><slideicon className=quoth-10 w-10 text-whitequot /> </slide></div>
+        <div className=quotbg-white/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4quot> </div></div><slideicon className=quoth-10 w-10 text-whitequot /> </slide></div>
                       <h3 className=quottext-2xl font-bold mb-4quot>slidetitle</h3>
                       <p className=quottext-purple-100 text-lg max-w-2xl mx-autoquot>slidedescription</p></p>
                     </div>
                     <><div className=quotgrid grid-cols-1 mdgrid-cols-2 gap-4quot>slidefeaturesmapfeature featureIndex => </div></div>
-        <div key=featureIndex className=quotflex items-centerquot> </div></div></><CheckCircle className=quoth-5 w-5 text-green-400 mr-3 flex-shrink-0quot /> </CheckCircle><span className=quottext-purple-100quot>feature</span>
+        <div key=featureIndex className=quotflex items-centerquot> </div></div><CheckCircle className=quoth-5 w-5 text-green-400 mr-3 flex-shrink-0quot /> </CheckCircle><span className=quottext-purple-100quot>feature</span>
                         </div>
                       </div>
                       <><div className="flex-1"> </div></div><h3 className="text-2xl font-bold text-gray-900 mb-4">slidetitle</h3>
@@ -356,7 +357,7 @@ const ContentCarousel: React.FC = () => {
                   </div>
                 </div>
         <div/ Header /</div></div>
-        <div className=quottext-center mb-16quot> </div></div></><h2 className=quottext-3xl md text-4xl font-bold text-white mb-6quot>
+        <div className=quottext-center mb-16quot> </div></div><h2 className=quottext-3xl md text-4xl font-bold text-white mb-6quot>
             Discover Our </h2><span className=quottext-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400quot>Solutions</span>
           </h2>
           <p className=quottext-xl text-gray-300 max-w-3xl mx-autoquot>Explore our comprehensive suite of AI and IT solutions designed to transform your business</p></p>p>
@@ -369,11 +370,11 @@ const ContentCarousel: React.FC = () => {
             </div></div>
         <div className=quotflex items-center justify-between mb-8quot>
         </div>
-        <div className=quotflex items-center gap-4quot> </div></div></><><div className=quotw-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl flex items-center justify-centerquot> </div></div><currentSlideDataicon className=quotw-8 h-8 text-slate-900quot /> </currentSlideData></div>
+        <div className=quotflex items-center gap-4quot> </div></div><><div className=quotw-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl flex items-center justify-centerquot> </div></div><currentSlideDataicon className=quotw-8 h-8 text-slate-900quot /> </currentSlideData></div>
                 / Features /
                 <div className=quotspace-y-4quot> </div></div><h4 className=quottext-lg font-semibold text-white mb-4quot>Key Features </h4>
                   <div className=quotgrid grid-cols-1 smgrid-cols-2 gap-3quot>currentSlideDatafeaturesmapfeature index => </div></div>
-        <div key=index className=quotflex items-center space-x-3quot> </div></div></><CheckCircle className=quotw-5 h-5 text-green-400 flex-shrink-0quot /> </CheckCircle><span className=quottext-gray-300quot>feature</span>
+        <div key=index className=quotflex items-center space-x-3quot> </div></div><CheckCircle className=quotw-5 h-5 text-green-400 flex-shrink-0quot /> </CheckCircle><span className=quottext-gray-300quot>feature</span>
                       </div>
                     
                   </div>
@@ -382,7 +383,7 @@ const ContentCarousel: React.FC = () => {
                 currentSlideDatastats  <><div className=quotgrid grid-cols-3 gap-6quot>currentSlideDatastatsmapstat index => </div></div>
         <divstatvalue</div>
                         </div>
-        <div className=quottext-gray-400 text-smquot>statlabel</div></div></>
+        <div className=quottext-gray-400 text-smquot>statlabel</div></div>
                       </div>
                     
                   </div>
@@ -400,14 +401,14 @@ const ContentCarousel: React.FC = () => {
         <div className=quotaspect-square bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-centerquot> </div></div>
         <div className=quottext-centerquot>
         </div>
-        <div className=quotw-32 h-32 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-centerquot> </div></div></><currentSlideDataicon className=quotw-16 h-16 text-whitequot /> </currentSlideData></div>
+        <div className=quotw-32 h-32 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-centerquot> </div></div><currentSlideDataicon className=quotw-16 h-16 text-whitequot /> </currentSlideData></div>
                     <><div className=quottext-4xl font-bold text-white mb-2quot>currentSlideDatatitle</div></div>div>
                     <div className=quottext-gray-300quot>Slide currentSlide  1 of slideslength</div></div>div>
                   </div>
                 </div>
               </div>
             </div>
-        <div className=quotgrid grid-cols-1 mdgrid-cols-2 lggrid-cols-4 gap-6quot>currentSlideDatafeaturesmapfeature index => </div></div></>
+        <div className=quotgrid grid-cols-1 mdgrid-cols-2 lggrid-cols-4 gap-6quot>currentSlideDatafeaturesmapfeature index => </div></div>
                 <><div key=index className=quotflex items-center gap-3quot> </div></div><CheckCircle className=quotw-5 h-5 text-cyan-400 flex-shrink-0quot /> </CheckCircle><span className=quottext-gray-300quot>feature</span>
                 </div>
               
@@ -416,7 +417,7 @@ const ContentCarousel: React.FC = () => {
             currentSlideDatastats  <div className=quotgrid grid-cols-1 mdgrid-cols-3 gap-6 mt-8 pt-8 border-t border-slate-700quot>currentSlideDatastatsmapstat index => </div></div>
         <divstatvalue</div>
                     </div>
-        <div className=quottext-sm text-gray-400quot>statlabel</div></div></>
+        <div className=quottext-sm text-gray-400quot>statlabel</div></div>
                   </div>
                 
               </div>

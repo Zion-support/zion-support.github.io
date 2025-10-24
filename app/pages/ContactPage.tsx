@@ -107,6 +107,6 @@ const ContactPage = () => {
             </p>
           
       </div>
-    </>
+    
   );
 }

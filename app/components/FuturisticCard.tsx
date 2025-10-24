@@ -107,7 +107,7 @@ const getVariantStyles = () => {
             </p>
           
       </div>
-    </>
+    
   );
 };
 

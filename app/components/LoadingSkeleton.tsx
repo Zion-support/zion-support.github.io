@@ -42,7 +42,7 @@ const LoadingSkeletonPage: React.FC = () => {
   return (
     <>
     
-  </>
+  
       <Helmet></Helmet>
         <title>Loading Skeleton - Zion Tech Group</title>
         <meta name="description" content="Advanced LoadingSkeleton solution for modern businesses." /></meta>
@@ -119,7 +119,7 @@ const LoadingSkeletonPage: React.FC = () => {
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /></CheckCircle>
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
-        <div key=index className="flex items-start space-x-4"> </div></div></><CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /> </CheckCircle><p className="text-gray-300 text-lg">benefit</p></p>
+        <div key=index className="flex items-start space-x-4"> </div></div><CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /> </CheckCircle><p className="text-gray-300 text-lg">benefit</p></p>
                 </div>
               
             </div>
@@ -145,7 +145,7 @@ const LoadingSkeletonPage: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-</>;
+;
   );
 };
 

@@ -107,7 +107,7 @@ const ContactPageBroken2 = () => {
               go wrong! 🤖
             </p>
           </div>
-        </div>
+      </div>
         <div className="max-w-4xl mx-auto px-4"> </div></div>
           <h1Contact Us</h1>
         
@@ -115,7 +115,7 @@ const ContactPageBroken2 = () => {
           <pThis is a backup contact page Please refer to the main contact page for current information</p>
         </p></div>
       </div>
-    </>
+    
   );
 };
 

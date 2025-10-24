@@ -107,9 +107,9 @@ const NotFound = () => {
               go wrong! 🤖
             </p>
           </div>
-        </div>
       </div>
-    </>
+      </div>
+    
   );
 };
 

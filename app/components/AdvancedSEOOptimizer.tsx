@@ -1,13 +1,13 @@
-'use client'
+'use client';
 import { Metadata } from 'next';
-import React from 'react'
-import  Helmet  from 'react-helmet-async'
-import  ArrowRight Search Target TrendingUp CheckCircle CheckCircle  from 'lucide-react'
-import Navigation  } from '/components/Navigation'
-import Footer from '../components/Footer'
-const AdvancedSEOOptimizerPage ReactFC =  => </>
+import React from 'react';
+import  Helmet  from 'react-helmet-async';
+import  ArrowRight Search Target TrendingUp CheckCircle CheckCircle  from 'lucide-react';
+import Navigation  } from '/components/Navigation';
+import Footer from '../components/Footer';
+const AdvancedSEOOptimizerPage ReactFC =  => 
   
-</Footer></>
+</Footer>
 
 const AdvancedSEOOptimizerPage: React.FC = () => {
   const features = [
@@ -41,7 +41,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
   return (
     <>
     
-  </>
+  
       <Helmet></Helmet>
         <title>Advanced SEO Optimizer</title>
         <meta name="description" content="Advanced SEO Optimizer solution for modern businesses." /></meta>
@@ -138,7 +138,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
         </section>
       </div>
       <Footer /></Footer>
-</>;
+;
   );
 };
 

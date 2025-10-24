@@ -1,9 +1,9 @@
-'use client'
+'use client';
 import { Metadata } from 'next';
-import React from 'react'
-import  Helmet  from 'react-helmet-async'
-import  Brain  CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain Globe        } from 'lucide-react'
-import { { ArrowRight     } from 'lucide-react'
+import React from 'react';
+import  Helmet  from 'react-helmet-async';
+import  Brain  CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain Globe        } from 'lucide-react';
+import { { ArrowRight     } from 'lucide-react';
   
   const benefits="'Increase" efficiency by up to 50'
     'Reduce costs by 30 with automation'
@@ -22,6 +22,6 @@ import { { ArrowRight     } from 'lucide-react'
               </div>
             
           </div>
-        </div>
+      </div>
       </section>
 export default PerformanceEnhancerPage }
