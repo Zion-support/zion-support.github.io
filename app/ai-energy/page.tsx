@@ -3,6 +3,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import Footer from '@/components/Footer';
 
 export default function AiEnergyPage() {
   return (
@@ -29,7 +30,6 @@ export default function AiEnergyPage() {
         </div>
       </div>
       <Footer />
-</>
-  )
+    </>
+  );
 }
-export default AiEnergyPage

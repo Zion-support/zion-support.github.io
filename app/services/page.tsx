@@ -3,6 +3,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import Footer from '@/components/Footer';
 
 export default function ServicesPage() {
   return (
@@ -16,8 +17,8 @@ export default function ServicesPage() {
           <h1 className="text-4xl font-bold text-white mb-6">
             Services
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            We provide comprehensive AI and IT solutions to help your business thrive in the digital age.
+          <p className="text-lg text-gray-300 mb-8">
+            Professional services services coming soon.
           </p>
           <Link
             href="/contact"
@@ -27,56 +28,8 @@ export default function ServicesPage() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </section>
-      {/* Services Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {serviceCategories.map((category, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover: bg-white/20 transition-all duration-300">
-                <div className="flex items-center mb-6">
-                  <category.icon className="w-8 h-8 text-white" />
-                  <h3 className="text-2xl font-bold text-white ml-4">{category.title}</h3>
-                </div>
-                <p className="text-gray-300 mb-6">{category.description}</p>
-                <ul className="space-y-3">
-                  {category.services.map((service, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300">
-                      <Circle className="w-8 h-8" />
-                      {service}
-                    </li>
-                  ))}
-                </ul>
-                <button className="mt-6 text-cyan-400 hover: text-cyan-300 font-semibold flex items-center">
-                  Learn More
-                  <ArrowRight className="w-8 h-8" />
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 text-center">
-          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-12">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let's discuss your project and see how we can help you achieve your goals.
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover: from-cyan-600 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
-                Contact Us
-                <ArrowRight className="w-8 h-8" />
-              </button>
-              <button className="border-2 border-white text-white hover: bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center">
-                Schedule Call
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  )
+      </div>
+      <Footer />
+    </>
+  );
 }
-export default ServicesPage

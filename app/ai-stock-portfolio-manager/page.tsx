@@ -3,6 +3,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import Footer from '@/components/Footer';
 
 export default function AiStockPortfolioManagerPage() {
   return (
@@ -29,7 +30,6 @@ export default function AiStockPortfolioManagerPage() {
         </div>
       </div>
       <Footer />
-</>
-  )
+    </>
+  );
 }
-export default AiStockPortfolioManagerPage
