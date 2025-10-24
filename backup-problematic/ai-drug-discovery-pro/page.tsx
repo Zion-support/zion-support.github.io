@@ -1,131 +1,75 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
+import React from 'react';'import { Helmet } from 'react-helmet-async';'import { Link } from 'react-router-dom';'import { ArrowRight } from 'lucide-react';'
 export default function AiDrugDiscoveryProPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">"      <Helmet>
         <title>AI Drug Discovery Pro - Zion Tech Group</title>
-        <meta name="description" content="Revolutionize pharmaceutical research with our advanced AI-powered drug discovery platform." />
-        <meta name="keywords" content="AI drug discovery, pharmaceutical research, drug development, Zion Tech Group" />
-      </Helmet>
+        <meta name="description" content="Revolutionize pharmaceutical research with our advanced AI-powered drug discovery platform." />"        <meta name="keywords" content="AI drug discovery, pharmaceutical research, drug development, Zion Tech Group" />"      </Helmet>
       
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">AI Drug Discovery Pro</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Revolutionize pharmaceutical research with our advanced AI-powered drug discovery platform.
+      <div className="container mx-auto px-4 py-16">"        <div className="text-center">"          <h1 className="text-4xl font-bold text-white mb-6">AI Drug Discovery Pro</h1>"          <p className="text-lg text-gray-300 mb-8">"            Revolutionize pharmaceutical research with our advanced AI-powered drug discovery platform.
             Accelerate drug development, reduce costs, and improve success rates with cutting-edge technology.
           </p>
           
-          <div className="flex gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-            >
+          <div className="flex gap-4 justify-center">"            <Link
+              to="/contact""              className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300""            >
               Get Started
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
+              <ArrowRight className="w-4 h-4 ml-2" />"            </Link>
             <Link
-              to="/demo"
-              className="inline-flex items-center bg-transparent border border-cyan-500 text-cyan-500 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
-            >
+              to="/demo""              className="inline-flex items-center bg-transparent border border-cyan-500 text-cyan-500 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300""            >
               Request Demo
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xll p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
-                <div className="mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">"            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xll p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">"                <div className="mb-4">{feature.icon}</div>"                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>"                <p className="text-gray-300">{feature.description}</p>"              </div>
             ))}
           </div>
       </section>
 
       {/* Applications Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xll p-8 lg:p-12 border border-white/20">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Research Applications
+      <section className="py-20 px-4 sm:px-6 lg:px-8">"        <div className="max-w-7xl mx-auto">"          <div className="bg-white/10 backdrop-blur-lg rounded-2xll p-8 lg:p-12 border border-white/20">"            <div className="text-center mb-12">"              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"                Research Applications
               </h2>
-              <p className="text-xl text-gray-300">
-                Our AI drug discovery platform supports research across multiple therapeutic areas
+              <p className="text-xl text-gray-300">"                Our AI drug discovery platform supports research across multiple therapeutic areas
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {applications.map((application, index) => (
-                <div key={index} className="flex items-center text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  <span className="text-sm">{application}</span>
-                </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">"              {applications.map((application, index) => (
+                <div key={index} className="flex items-center text-gray-300">"                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"                  <span className="text-sm">{application}</span>"                </div>
               ))}
             </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12 text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Accelerate Drug Discovery?
+      <section className="py-20 px-4 sm:px-6 lg:px-8">"        <div className="max-w-7xl mx-auto">"          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12 text-center">"            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">"              Ready to Accelerate Drug Discovery?
             </h2>
-            <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Transform your pharmaceutical research with our AI-powered drug discovery platform.
+            <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto">"              Transform your pharmaceutical research with our AI-powered drug discovery platform.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
-              >
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"              <Link
+                to="/contact""                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300""              >
                 Contact Our Experts
               </Link>
               <Link
-                to="/ai-services"
-                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
-              >
+                to="/ai-services""                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300""              >
                 View All AI Services
               </Link>
             </div>
         </div>
-      </section>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+      </section>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"      <Helmet>
         <title>AI Drug Discovery Pro - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered drug discovery platform. Accelerate pharmaceutical research with advanced machine learning and molecular modeling." />
-        <meta name="keywords" content="AI drug discovery, pharmaceutical AI, molecular modeling, drug development, clinical trials, biotechnology" />
-      </Helmet>
+        <meta name="description" content="Revolutionary AI-powered drug discovery platform. Accelerate pharmaceutical research with advanced machine learning and molecular modeling." />"        <meta name="keywords" content="AI drug discovery, pharmaceutical AI, molecular modeling, drug development, clinical trials, biotechnology" />"      </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Drug Discovery Pro
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">"        <div className="max-w-7xl mx-auto">"          <div className="text-center mb-16">"            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">"              AI Drug Discovery Pro
             </h1>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Revolutionize pharmaceutical research with our advanced AI-powered drug discovery platform.
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">"              Revolutionize pharmaceutical research with our advanced AI-powered drug discovery platform.
               Accelerate drug development, reduce costs, and improve success rates with cutting-edge technology.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-              >
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"              <Link
+                to="/contact""                className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center""              >
                 Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
+                <ArrowRight className="ml-2 w-5 h-5" />"              </Link>
               <Link
-                to="/demo"
-                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
-              >
+                to="/demo""                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300""              >
                 Request Demo
               </Link>
             </div>
@@ -133,73 +77,43 @@ export default function AiDrugDiscoveryProPage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Drug Discovery Features
+      <section className="py-20 px-4 sm:px-6 lg:px-8">"        <div className="max-w-7xl mx-auto">"          <div className="text-center mb-16">"            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"              Advanced Drug Discovery Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Cutting-edge AI technology to accelerate pharmaceutical research and development.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">"              Cutting-edge AI technology to accelerate pharmaceutical research and development.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xll p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
-                <div className="mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">"            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xll p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">"                <div className="mb-4">{feature.icon}</div>"                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>"                <p className="text-gray-300">{feature.description}</p>"              </div>
             ))}
           </div>
       </section>
 
       {/* Applications Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xll p-8 lg:p-12 border border-white/20">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Research Applications
+      <section className="py-20 px-4 sm:px-6 lg:px-8">"        <div className="max-w-7xl mx-auto">"          <div className="bg-white/10 backdrop-blur-lg rounded-2xll p-8 lg:p-12 border border-white/20">"            <div className="text-center mb-12">"              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"                Research Applications
               </h2>
-              <p className="text-xl text-gray-300">
-                Our AI drug discovery platform supports research across multiple therapeutic areas
+              <p className="text-xl text-gray-300">"                Our AI drug discovery platform supports research across multiple therapeutic areas
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {applications.map((application, index) => (
-                <div key={index} className="flex items-center text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  <span className="text-sm">{application}</span>
-                </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">"              {applications.map((application, index) => (
+                <div key={index} className="flex items-center text-gray-300">"                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"                  <span className="text-sm">{application}</span>"                </div>
               ))}
             </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12 text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Accelerate Drug Discovery?
+      <section className="py-20 px-4 sm:px-6 lg:px-8">"        <div className="max-w-7xl mx-auto">"          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12 text-center">"            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">"              Ready to Accelerate Drug Discovery?
             </h2>
-            <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Transform your pharmaceutical research with our AI-powered drug discovery platform.
+            <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto">"              Transform your pharmaceutical research with our AI-powered drug discovery platform.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
-              >
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"              <Link
+                to="/contact""                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300""              >
                 Contact Our Experts
               </Link>
               <Link
-                to="/ai-services"
-                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
-              >
+                to="/ai-services""                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300""              >
                 View All AI Services
               </Link>
             </div>
@@ -220,17 +134,13 @@ export default function AiDrugDiscoveryProPage() {return (
               Cutting-edge AI technology to accelerate pharmaceutical research and development.
 
  (
-                <div className="mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-  ))}
+                <div className="mb-4">{feature.icon}</div>"                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>"                <p className="text-gray-300">{feature.description}</p>"  ))}
 
       {/* Applications Section */}
                 Research Applications;
                 Our AI drug discovery platform supports research across multiple therapeutic areas;
  (
-                  <span className="text-sm">{application}</span>
-  ))}
+                  <span className="text-sm">{application}</span>"  ))}
 
       {/* CTA Section */}
               Ready to Accelerate Drug Discovery?
@@ -250,17 +160,13 @@ export default function AiDrugDiscoveryProPage() {return (
               Cutting-edge AI technology to accelerate pharmaceutical research and development.
 
  (
-                <div className="mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-  ))}
+                <div className="mb-4">{feature.icon}</div>"                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>"                <p className="text-gray-300">{feature.description}</p>"  ))}
 
       {/* Applications Section */}
                 Research Applications;
                 Our AI drug discovery platform supports research across multiple therapeutic areas;
  (
-                  <span className="text-sm">{application}</span>
-  ))}
+                  <span className="text-sm">{application}</span>"  ))}
 
       {/* CTA Section */}
               Ready to Accelerate Drug Discovery?
@@ -269,3 +175,4 @@ export default function AiDrugDiscoveryProPage() {return (
                 View All AI Services;
   );
 }
+</div></div></div></div></div></div></div></div></div>
