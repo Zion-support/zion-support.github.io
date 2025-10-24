@@ -2,7 +2,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Users, Target, Award, Shield, Globe, Brain, ArrowRight, Star, Zap } from 'lucide-react';
+import { CheckCircle, Users, Target, Award, ArrowRight } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
   const values = [
