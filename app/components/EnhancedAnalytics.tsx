@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:app/components/EnhancedAnalytics.tsx
 &quot;use client&quot;
 
 import React, { createContext, useContext, useEffect } from &quot;react&quot;
@@ -94,17 +96,118 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
     identify,
     page,
   }
+=======
+'use client';
+
+import { createContext, useContext, useEffect } from 'react';
+
+interface AnalyticsContextType {
+  track: (event: string, properties?: Record<string, any>) => void;
+  identify: (userId: string, traits?: Record<string, any>) => void;
+  page: (name: string, properties?: Record<string, any>) => void;
+}
+
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext);
+  if (!context) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
+};
+
+interface AnalyticsProviderProps {
+  children: React.ReactNode;
+}
+
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  // Initialize analytics
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // Google Analytics
+      if (process.env.NODE_ENV === 'production') {
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID}`;
+        document.head.appendChild(script);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(...args: any[]) {
+          window.dataLayer.push(args);
+        }
+        gtag('js', new Date());
+        gtag('config', process.env.REACT_APP_GA_ID);
+      }
+    }
+  }, []);
+
+  const track = (event: string, properties?: Record<string, any>) => {
+    if (typeof window !== 'undefined') {
+      // Google Analytics
+      if (window.gtag) {
+        window.gtag('event', event, properties);
+      }
+      
+      // Custom analytics
+      console.log('Analytics Event: ', event, properties);
+    }
+  };
+
+  const identify = (userId: string, traits?: Record<string, any>) => {
+    if (typeof window !== 'undefined') {
+      // Google Analytics
+      if (window.gtag) {
+        window.gtag('config', process.env.REACT_APP_GA_ID, {
+          user_id: userId,
+          custom_map: traits
+        });
+      }
+      
+      // Custom analytics
+      console.log('Analytics Identify: ', userId, traits);
+    }
+  };
+
+  const page = (name: string, properties?: Record<string, any>) => {
+    if (typeof window !== 'undefined') {
+      // Google Analytics
+      if (window.gtag) {
+        window.gtag('event', 'page_view', {
+          page_title: name,
+          page_location: window.location.href,
+          ...properties
+        });
+      }
+      
+      // Custom analytics
+      console.log('Analytics Page: ', name, properties);
+    }
+  };
+
+  const value: AnalyticsContextType = {
+    track,
+    identify,
+    page
+  };
+>>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15
 
   return (
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+};
+>>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15
 
 // Extend Window interface for TypeScript
 declare global {
   interface Window {
+<<<<<<< HEAD
     dataLayer: unknown[]
     gtag: (...args: any[]) => void
   }
@@ -150,10 +253,18 @@ const EnhancedAnalyticsPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
+========
+import React from 'react';
 
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
+>>>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15:app/ai-crm/page.tsx
+
+export default function AiCrmPage() {
   return (
     <>
       
+<<<<<<<< HEAD:app/components/EnhancedAnalytics.tsx
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         {/* Hero Section */}
@@ -244,10 +355,38 @@ const EnhancedAnalyticsPage: React.FC = () => {
             </div>
           </div>
         </section>
+========
+        <title>AiCrm - Zion Tech Group</title>
+        <meta name="description" content="Professional aicrm services by Zion Tech Group." />
+      
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white mb-6">AiCrm</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional aicrm services by Zion Tech Group.</p>
+          
+          <Link 
+            href="/contact" 
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </div>
+>>>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15:app/ai-crm/page.tsx
       </div>
-      <Footer />
     </>
   );
+<<<<<<<< HEAD:app/components/EnhancedAnalytics.tsx
 };
 
 export default EnhancedAnalyticsPage;
+========
+}
+>>>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15:app/ai-crm/page.tsx
+=======
+    dataLayer: any[];
+    gtag: (...args: any[]) => void;
+  }
+}
+>>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15

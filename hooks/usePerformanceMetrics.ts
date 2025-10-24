@@ -1,8 +1,7 @@
-"use client";
-import React from 'react';
+import React from 'react'
 
-const usePerformanceMetrics.ts = () => {
-  return null;
-};
+const usePerformanceMetrics = () => {
+  return null
+}
 
-export default usePerformanceMetrics.ts;
+export default usePerformanceMetrics

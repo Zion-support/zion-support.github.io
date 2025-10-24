@@ -1,3 +1,4 @@
+<<<<<<< HEAD:app/components/AdvancedPerformanceMonitor.tsx
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -40,9 +41,17 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
+=======
+import React from 'react';
 
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
+>>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15:app/5g-implementation/page.tsx
+
+export default function Implementation5GPage() {
   return (
     <>
+<<<<<<< HEAD:app/components/AdvancedPerformanceMonitor.tsx
       <Helmet>
         <title>Advanced Performance Monitor</title>
         <meta name="description" content="Advanced Performance Monitor solution for modern businesses." />
@@ -141,10 +150,35 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
             </div>
           </div>
         </section>
+=======
+      
+        <title>5G Implementation - Zion Tech Group</title>
+        <meta name="description" content="Professional 5G implementation services for enterprise solutions." />
+      
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white mb-6">5G Implementation</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional 5G implementation services for enterprise solutions.</p>
+          
+          <Link 
+            href="/contact" 
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </div>
+>>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15:app/5g-implementation/page.tsx
       </div>
-      <Footer />
     </>
+<<<<<<< HEAD:app/components/AdvancedPerformanceMonitor.tsx
   )
 }
 
 export default AdvancedPerformanceMonitorPage
+=======
+  );
+}
+
+>>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15:app/5g-implementation/page.tsx

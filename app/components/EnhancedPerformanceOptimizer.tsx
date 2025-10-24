@@ -1,47 +1,39 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+'use client';
+import { useEffect } from 'react';
 
-const EnhancedPerformanceOptimizerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ]
+const EnhancedPerformanceOptimizer: React.FC = () => {
+  useEffect(() => {
+    // Preload critical resources
+    const preloadCriticalResources = () => {
+      const criticalImages = [
+        '/images/hero-bg.jpg',
+        '/images/logo.png'
+      ];
+      
+      criticalImages.forEach(src => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'image';
+        link.href = src;
+        document.head.appendChild(link);
+      });
+    };
 
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
+    // Optimize images
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            img.src = img.dataset.src || '';
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
+          }
+        });
+      });
 
+<<<<<<< HEAD
   return (
     <>
       <Helmet>
@@ -253,3 +245,58 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
 const { trackEvent } = useAnalytics()
 const optimizeImages = useCallback(() => {
 const images = document.querySelectorAll('img')
+=======
+      images.forEach(img => imageObserver.observe(img));
+    };
+
+    // Lazy load non-critical CSS
+    const lazyLoadCSS = () => {
+      const nonCriticalCSS = [
+        '/styles/animations.css',
+        '/styles/print.css'
+      ];
+
+      nonCriticalCSS.forEach(href => {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = href;
+        link.media = 'print';
+        link.onload = () => {
+          link.media = 'all';
+        };
+        document.head.appendChild(link);
+      });
+    };
+
+    // Preconnect to external domains
+    const preconnectDomains = [
+      'https://fonts.googleapis.com',
+      'https://fonts.gstatic.com',
+      'https://www.google-analytics.com'
+    ];
+
+    preconnectDomains.forEach(domain => {
+      const link = document.createElement('link');
+      link.rel = 'preconnect';
+      link.href = domain;
+      document.head.appendChild(link);
+    });
+
+    // Initialize optimizations
+    preloadCriticalResources();
+    optimizeImages();
+    lazyLoadCSS();
+
+    // Cleanup
+    return () => {
+      // Remove any added preload links
+      const preloadLinks = document.querySelectorAll('link[rel="preload"]');
+      preloadLinks.forEach(link => link.remove());
+    };
+  }, []);
+
+  return null;
+};
+
+export default EnhancedPerformanceOptimizer;
+>>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15

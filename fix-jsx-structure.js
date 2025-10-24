@@ -1,76 +1,68 @@
-const fs = require('fs');
-const path = require('path');
 
+const fs = require('fs')
+const path = require('path')
 function fixFile(filePath) {
   try {
-    const fullPath = path.join(__dirname, filePath);
+    const fullPath = path.join(__dirname, filePath)
     if (!fs.existsSync(fullPath)) {
-      return;
+      return
+}
+    let content = fs.readFileSync(fullPath, 'utf8')
+    let modified = false
+    // Fix malformed JSX closing structure like </div>))
+    if (content.includes('))')) {
+      content = content.replace(/<\/div>\s*\)\s*\)/g, '\n    </div>\n  )\n}')
+      modified = true
     }
-
-    let content = fs.readFileSync(fullPath, 'utf8');
-    let modified = false;
-
-    // Fix malformed JSX closing structure like </div>););
-    if (content.includes('););')) {
-      content = content.replace(/<\/div>\s*\);\s*\);/g, '\n    </div>\n  );\n}');
-      modified = true;
-    }
-
     // Fix missing closing div tags
-    if (content.includes('</div>\n  );')) {
-      content = content.replace(/<\/div>\s*\);\s*}/g, '\n    </div>\n  );\n}');
-      modified = true;
+    if (content.includes('</div>\n  )')) {
+      content = content.replace(/<\/div>\s*\)\s*}/g, '\n    </div>\n  )\n}')
+      modified = true
     }
-
     // Fix extra closing div tags pattern
-    const extraDivPattern = /(\s*<\/div>\s*){2,}(\s*<\/div>\s*){2,}/g;
+    const extraDivPattern = /(\s*<\/div>\s*){2}(\s*<\/div>\s*){2}/g
     if (extraDivPattern.test(content)) {
-      content = content.replace(extraDivPattern, '\n    </div>\n  );');
-      modified = true;
-    }
-
+  content = content.replace(extraDivPattern, '\n    </div>\n  )')
+      modified = true
+}
     // Fix incorrect closing tags
-    content = content.replace(/<\s*\/\s*>/g, '</div>');
+    content = content.replace(/<\s*\/\s*>/g, '</div>')
     if (content.includes('</>')) {
-      modified = true;
-    }
-
+  modified = true
+}
     // Fix h1/h2/h3 tag mismatches
-    content = content.replace(/<h1([^>]*)>\s*([^<]*)\s*<\/h2>/g, '<h1$1>$2</h1>');
-    content = content.replace(/<h2([^>]*)>\s*([^<]*)\s*<\/h1>/g, '<h2$1>$2</h2>');
-    content = content.replace(/<h3([^>]*)>\s*([^<]*)\s*<\/h1>/g, '<h3$1>$2</h3>');
-
+    content = content.replace(/<h1([^>]*)>\s*([^<]*)\s*<\/h2>/g, '<h1$1>$2</h1>')
+    content = content.replace(/<h2([^>]*)>\s*([^<]*)\s*<\/h1>/g, '<h2$1>$2</h2>')
+    content = content.replace(/<h3([^>]*)>\s*([^<]*)\s*<\/h1>/g, '<h3$1>$2</h3>')
     if (modified) {
-      fs.writeFileSync(fullPath, content);
-      console.log(`Fixed: ${filePath}`);
+      fs.writeFileSync(fullPath, content)
+      // eslint-disable-next-line no-console
+    console.log(`Fixed: ${filePath}`)
     }
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    // eslint-disable-next-line no-console
+    console.error(`Error fixing ${filePath}:`, error.message)
   }
 }
-
 // Get all TypeScript/TSX files in the app directory
 function getAllTsxFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
-  
+  const files = []
+  const items = fs.readdirSync(dir)
   for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
+    const fullPath = path.join(dir, item)
+    const stat = fs.statSync(fullPath)
     if (stat.isDirectory()) {
-      files.push(...getAllTsxFiles(fullPath));
+      files.push(...getAllTsxFiles(fullPath))
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-      files.push(fullPath.replace(__dirname + '/', ''));
+      files.push(fullPath.replace(__dirname + '/', ''))
     }
   }
-  
-  return files;
+  return files
 }
-
 // Fix all TSX/TS files
-console.log('Starting JSX structure fixes...');
-const allFiles = getAllTsxFiles(path.join(__dirname, 'app'));
-allFiles.forEach(fixFile);
-console.log('JSX structure fixes completed!');
+// eslint-disable-next-line no-console
+    console.log('Starting JSX structure fixes...')
+const allFiles = getAllTsxFiles(path.join(__dirname, 'app'))
+allFiles.forEach(fixFile)
+// eslint-disable-next-line no-console
+    console.log('JSX structure fixes completed!')

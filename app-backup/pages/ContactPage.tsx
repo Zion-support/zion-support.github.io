@@ -1,6 +1,5 @@
-"use client";
-import React from 'react';
-
+import React from 'react'
+"use client"
 const ContactPage = () => {
   return (
     <div className="min-h-screen bg-gray-100 py-8">
@@ -15,7 +14,6 @@ const ContactPage = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default ContactPage;
+  )
+}
+export default ContactPage

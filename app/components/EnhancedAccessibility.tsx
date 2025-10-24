@@ -1,47 +1,23 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
+'use client';
+import { useEffect } from 'react';
 
-const EnhancedAccessibilityPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ]
+const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  useEffect(() => {
+    // Add high contrast mode support
+    const handleContrastChange = (e: MediaQueryListEvent) => {
+      if (e.matches) {
+        document.documentElement.classList.add('high-contrast');
+      } else {
+        document.documentElement.classList.remove('high-contrast');
+      }
+    };
 
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
+    const mediaQuery = window.matchMedia('(prefers-contrast: high)');
+    mediaQuery.addEventListener('change', handleContrastChange);
+    // Call with the MediaQueryList directly
+    handleContrastChange(mediaQuery as any);
 
+<<<<<<< HEAD
   return (
     <>
       <Helmet>
@@ -143,6 +119,69 @@ const EnhancedAccessibilityPage: React.FC = () => {
       <Footer />
     </>
   );
+=======
+    return () => {
+      mediaQuery.removeEventListener('change', handleContrastChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    // Add reduced motion support
+    const handleMotionChange = (e: MediaQueryListEvent) => {
+      if (e.matches) {
+        document.documentElement.classList.add('reduce-motion');
+      } else {
+        document.documentElement.classList.remove('reduce-motion');
+      }
+    };
+
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    mediaQuery.addEventListener('change', handleMotionChange);
+    // Call with the MediaQueryList directly
+    handleMotionChange(mediaQuery as any);
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleMotionChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    // Add screen reader announcements
+    const announcement = document.createElement('div');
+    announcement.setAttribute('aria-live', 'polite');
+    announcement.setAttribute('aria-atomic', 'true');
+    announcement.className = 'sr-only';
+    announcement.id = 'announcements';
+    document.body.appendChild(announcement);
+
+    return () => {
+      const existingAnnouncement = document.getElementById('announcements');
+      if (existingAnnouncement) {
+        document.body.removeChild(existingAnnouncement);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    // Add keyboard navigation support
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Skip to main content
+      if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
+        const mainContent = document.querySelector('main');
+        if (mainContent) {
+          (mainContent as HTMLElement).focus();
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
+  return <>{children}</>;
+>>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15
 };
 
-export default EnhancedAccessibilityPage;
+export default EnhancedAccessibility;
