@@ -1662,6 +1662,7 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
+<<<<<<< HEAD
   
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const realEstateSaaS = [
@@ -3396,6 +3397,11 @@ const MicroSAASPage: React.FC = () => {
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03f4
       <Helmet>
         <title>Micro SAAS Solutions - Zion Tech Group</title>
         <meta name="description" content="50+ AI-powered micro SAAS applications for modern businesses. Affordable, powerful tools for developers, marketers, and entrepreneurs. Starting at $49/month." />

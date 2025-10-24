@@ -81,6 +81,15 @@ const AiAnalyticsPage: React.FC = () => {
       title: 'Real-Time Dashboards',
       description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
       benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']
+<<<<<<< HEAD
+=======
+    },
+    {
+      icon: Target,
+      title: 'Automated Reporting',
+      description: 'Generate comprehensive reports automatically with AI-optimized content and visualizations.',
+      benefits: ['Scheduled reports', 'Custom templates', 'PDF export', 'Email delivery']}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03f4
     },
     {
       icon: TrendingUp,

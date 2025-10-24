@@ -45,9 +45,13 @@ export default function OptimizedHomePage() {
   return (
     <div className="min-h-screen bg-white">
       <SEOOptimizer />
+<<<<<<< HEAD
       <AccessibilityEnhancer>
         <div />
       </AccessibilityEnhancer>
+=======
+      <AccessibilityEnhancer />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03f4
       <PerformanceMonitor />
       {/* Main Content */}
       <main className="relative">

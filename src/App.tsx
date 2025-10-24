@@ -131,6 +131,7 @@ import AIAutomationPage from './ai-automation/page';
 import AIMLPlatformPage from './ai-ml-platform/page';
 
 const App: React.FC = () => {
+<<<<<<< HEAD
   const [isInitialized, setIsInitialized] = useState(false);
   const [, setEnhancers] = useState<{
     performance: unknown;
@@ -142,6 +143,12 @@ const App: React.FC = () => {
 
   useEffect(() => {
     initializeEnhancers();
+=======
+  // Initialize performance monitoring
+  React.useEffect(() => {
+    performanceMonitor.measurePageLoad();
+    performanceMonitor.measureCoreWebVitals();
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03f4
   }, []);
 
   const initializeEnhancers = async () => {

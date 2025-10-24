@@ -169,8 +169,13 @@ class HealthCheckService {
    */
   private checkPerformance(): HealthCheck {
     try {
+<<<<<<< HEAD
       const report = performanceMonitor.getReport()
       const { poor, needsImprovement, good } = report.summary
+=======
+      // Performance monitoring is available but no report method
+      const reportData = { status: 'available', metrics: 'basic' }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03f4
       let status: 'pass' | 'warn' | 'fail' = 'pass'
       let message = `Performance: ${good} good, ${needsImprovement} needs improvement, ${poor} poor`
       if (poor > 0) {
