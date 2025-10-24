@@ -2,31 +2,31 @@
 import React from 'react';
 import SEOHead from '../components/SEOHead';
 
-const AiAnalyticsPage: React.FC = () => {
+const AiApiManagementPage: React.FC = () => {
   return (
     <>
       <SEOHead
-        title="AI Analytics - Zion Tech Group"
-        description="Advanced AI-powered analytics solutions"
-        keywords="AI analytics, data analysis, business intelligence, machine learning"
+        title="AI API Management - Zion Tech Group"
+        description="Intelligent API management solutions powered by AI"
+        keywords="API management, AI APIs, microservices, API gateway"
       />
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-6">
-              AI Analytics
+              AI API Management
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Unlock insights from your data with AI-powered analytics
+              Manage and optimize your APIs with AI-powered tools
             </p>
             <div className="grid md:grid-cols-2 gap-8 mt-12">
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold mb-4">Data Processing</h3>
-                <p className="text-gray-600">Process large datasets with AI algorithms</p>
+                <h3 className="text-xl font-semibold mb-4">API Gateway</h3>
+                <p className="text-gray-600">Centralized API management and routing</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold mb-4">Pattern Recognition</h3>
-                <p className="text-gray-600">Identify patterns and trends in your data</p>
+                <h3 className="text-xl font-semibold mb-4">Performance Monitoring</h3>
+                <p className="text-gray-600">Monitor API performance with AI insights</p>
               </div>
             </div>
           </div>
@@ -36,5 +36,5 @@ const AiAnalyticsPage: React.FC = () => {
   );
 };
 
-export default AiAnalyticsPage;
+export default AiApiManagementPage;
 
