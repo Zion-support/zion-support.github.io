@@ -45,7 +45,7 @@ const AiCybersecurityPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
+  )
 };
 
 export default AiCybersecurityPage;

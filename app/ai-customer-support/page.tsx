@@ -45,7 +45,7 @@ const AiCustomerSupportPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
+  )
 };
 
 export default AiCustomerSupportPage;

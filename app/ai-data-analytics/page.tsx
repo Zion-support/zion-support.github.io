@@ -45,7 +45,7 @@ const AiDataAnalyticsPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
+  )
 };
 
 export default AiDataAnalyticsPage;
