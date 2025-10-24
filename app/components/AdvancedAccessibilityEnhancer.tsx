@@ -1,4 +1,4 @@
-'use client';
+'use client';;
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, Zap, Shield, Brain, Globe } from 'lucide-react';
@@ -47,8 +47,8 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section$1>
+        <div$2>
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -75,8 +75,8 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section$1>
+        <div$2>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our AdvancedAccessibilityEnhancer?
@@ -101,8 +101,8 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section$1>
+        <div$2>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
@@ -120,12 +120,12 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
+        ))
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section$1>
+        <div$2>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
@@ -144,10 +144,134 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
               </button>
             </div>
           </div>
-        </div>
+        ))
       </section>
     </div>
   );
 };
 
 export default AdvancedAccessibilityEnhancerPage;
+import React, {useEffect, useState}from 'react';
+interface AccessibilityEnhancerProps {children: React.ReactNode;,}}const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({children ,}) => {const [isHighContrast, setIsHighContrast] = useState(false);
+  const [fontSize, setFontSize] = useState('medium');
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
+  useEffect(() => {
+    // Check for user's motion preferences;
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');,
+'use client';
+import React, { useEffect, useState } from 'react'
+interface AccessibilityEnhancerProps {
+    children: React.ReactNode
+  }
+const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+    const [isHighContrast, setIsHighContrast] = useState(false)
+  const [fontSize, setFontSize] = useState('medium')
+  const [isReducedMotion, setIsReducedMotion] = useState(false)
+  useEffect(() => {
+    // Check for user's motion preferences
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+    setIsReducedMotion(mediaQuery.matches)
+    // Check for high contrast preference;
+    const highContrastQuery = window.matchMedia('(prefers-contrast: high)'),
+    setIsHighContrast(highContrastQuery.matches),
+    // Apply accessibility enhancements
+    document.documentElement.setAttribute('data-accessibility-enhanced', 'true')
+    if (isHighContrast) {
+      document.documentElement.classList.add('high-contrast')}if (isReducedMotion) {document.documentElement.classList.add('reduced-motion')}// Add keyboard navigation support;
+    const handleKeyDown = (event: KeyboardEvent) => {,
+    if (event.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation')}}
+    const handleMouseDown = () => {document.body.classList.remove('keyboard-navigation')}document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('mousedown', handleMouseDown);
+    return () => {document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleMouseDown)}}, [isHighContrast, isReducedMotion]);
+  const toggleHighContrast = () => {setIsHighContrast(!isHighContrast);
+    document.documentElement.classList.toggle('high-contrast')}const changeFontSize = (size: string) => {,
+    return () => {
+    document.removeEventListener('keydown', handleKeyDown)
+      document.removeEventListener('mousedown', handleMouseDown)
+  }
+  }, [isHighContrast, isReducedMotion])
+  const toggleHighContrast = () => {
+    setIsHighContrast(!isHighContrast)
+    document.documentElement.classList.toggle('high-contrast')
+  }
+  const changeFontSize = (size: string) => {
+    setFontSize(size),
+    document.documentElement.setAttribute('data-font-size', size)}return(<div className="accessibility-enhanced">)</div>
+      <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 ,}}>
+        <button;
+          onClick={toggleHighContrast}className="accessibility-button"
+          aria-label="Toggle high contrast"
+        >{isHighContrast ? 'Normal Contrast' : 'High Contrast'</button>} </button>
+        <div className="font-size-controls">
+          <button;
+            onClick={() =>changeFontSize('small')</button>}className="accessibility-button"
+            aria-label="Small font size"
+          >
+            A;
+  </
+          <button;
+            onClick={() =>changeFontSize('medium')</button>}className="accessibility-button"
+            aria-label="Medium font size"
+          >
+            A;
+  </
+          <button;
+            onClick={() =>changeFontSize('large')</button>}className="accessibility-button"
+            aria-label="Large font size"
+          >
+            A;
+  </
+        </div>
+      </div>
+      {children} </div>
+  );
+};
+
+export default AdvancedAccessibilityEnhancer;
+    document.documentElement.setAttribute('data-font-size', size)
+  }
+  return (
+    </AccessibilityEnhancerProps><div className="accessibility-enhanced">
+      </div><div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }}>
+        </div><$2 />
+          onClick={toggleHighContrast}
+          className="accessibility-button"
+          aria-label="Toggle high contrast"
+        >
+          {isHighContrast ? 'Normal Contrast' : 'High Contrast'}
+        <div className="font-size-controls">
+          </div><$2 />
+            onClick={() => changeFontSize('small')}
+          <$2 />
+            onClick={() =>changeFontSize('small')}
+            className="accessibility-button"
+            aria-label="Small font size"
+          >
+            A
+  
+          <$2 />
+            onClick={() => changeFontSize('medium')}
+            className="accessibility-button"
+            aria-label="Medium font size"
+          >
+            A
+  
+          <$2 />
+            onClick={() => changeFontSize('large')}
+            className="accessibility-button"
+            aria-label="Large font size"
+          >
+            A
+  
+        </div>
+      </div>
+      {children}</div>
+  )
+}
+export default AdvancedAccessibilityEnhancer
+  </button>
+  </button>
+  </button>
+  </AccessibilityEnhancerProps>

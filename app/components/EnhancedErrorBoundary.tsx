@@ -1,4 +1,18 @@
-'use client';
+'use client';;
+
+import React from 'react';
+
+interface EnhancedErrorBoundaryProps {
+  // Add props here
+}
+
+const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = (_props) => {
+  return (
+    <div>
+      {/* Component content */}
+    </div>
+  );
+};
 
 import React from 'react';
 
@@ -50,4 +64,3 @@ class EnhancedErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBou
 }
 
 export default EnhancedErrorBoundary;
-

@@ -1,4 +1,4 @@
-'use client';
+'use client';;
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, Zap, Shield, Brain, Globe } from 'lucide-react';
@@ -38,6 +38,128 @@ const AdvancedPerformanceOptimizerPage: React.FC = () => {
     'Proven track record of success'
   ];
 
+'use client';;
+import React, {useEffect, useState, useCallback}from 'react';
+interface PerformanceOptimizerProps {children: React.ReactNode,}
+  enableOptimizations?: boolean;}const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
+  children,
+  enableOptimizations = true;}) => {const [isOptimized, setIsOptimized] = useState(false);
+  const [optimizationMetrics, setOptimizationMetrics] = useState({)
+    imagesOptimized: 0,
+    scriptsOptimized: 0,
+    cssOptimized: 0,
+    totalSavings: 0;,})
+  const optimizeImages = useCallback(() => {if (typeof window === 'undefined') return;
+    const images = document.querySelectorAll('img');
+    let optimizedCount = 0;
+'use client';
+import React, { useEffect, useState, useCallback } from 'react'
+interface PerformanceOptimizerProps {
+    children: React.ReactNode,
+  enableOptimizations?: boolean
+  }
+const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
+}) => {
+  const [isOptimized, setIsOptimized] = useState(false)
+  const [optimizationMetrics, setOptimizationMetrics] = useState()
+  })
+  const optimizeImages = useCallback(() => {
+    if (typeof window === 'undefined') return
+    const images = document.querySelectorAll('img')
+    let optimizedCount = 0
+    images.forEach((img) => {
+      // Add lazy loading if not already present;
+      if (!img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'lazy');
+        optimizedCount++}// Add decoding attribute for better performance;
+      if (!img.hasAttribute('decoding')) {img.setAttribute('decoding', 'async');
+        optimizedCount++}})
+    return optimizedCount;
+  }, []);
+  const optimizeScripts = useCallback(() => {if (typeof window === 'undefined') return;
+    const scripts = document.querySelectorAll('script[src]');
+    let optimizedCount = 0;
+        img.setAttribute('loading', 'lazy')
+        optimizedCount++
+  }
+      // Add decoding attribute for better performance
+      if (!img.hasAttribute('decoding')) {
+    img.setAttribute('decoding', 'async')
+        optimizedCount++
+  }
+    })
+    return optimizedCount
+  }, [])
+  const optimizeScripts = useCallback(() => {
+    if (typeof window === 'undefined') return
+    const scripts = document.querySelectorAll('script[src]')
+    let optimizedCount = 0
+    scripts.forEach((script) => {
+      // Add defer attribute if not already present;
+      if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {
+        script.setAttribute('defer', '');
+        optimizedCount++}})
+    return optimizedCount;
+  }, []);
+  const optimizeCSS = useCallback(() => {if (typeof window === 'undefined') return;
+    const stylesheets = document.querySelectorAll('link[rel="stylesheet"]');
+    let optimizedCount = 0;
+        script.setAttribute('defer', '')
+        optimizedCount++
+  }
+    })
+    return optimizedCount
+  }, [])
+  const optimizeCSS = useCallback(() => {
+    if (typeof window === 'undefined') return
+    const stylesheets = document.querySelectorAll('link[rel="stylesheet"]')
+    let optimizedCount = 0
+    stylesheets.forEach((link) => {
+      // Add media attribute for non-critical CSS;
+      if (!link.hasAttribute('media') && !link.hasAttribute('data-critical')) {
+        link.setAttribute('media', 'print');
+        link.setAttribute('onload', "this.media='all'");
+        optimizedCount++}})
+    return optimizedCount;
+  }, []);
+  const runOptimizations = useCallback(() => {if (!enableOptimizations) return;
+    const imagesOptimized = optimizeImages();
+    const scriptsOptimized = optimizeScripts();
+    const cssOptimized = optimizeCSS();
+    setOptimizationMetrics({)
+      imagesOptimized,
+      scriptsOptimized,
+      cssOptimized,
+      totalSavings: imagesOptimized + scriptsOptimized + cssOptimized;,})
+    setIsOptimized(true);
+  }, [enableOptimizations, optimizeImages, optimizeScripts, optimizeCSS]);
+  useEffect(() => {// Run optimizations after component mount;
+    const timer = setTimeout(runOptimizations, 100);
+    return () => clearTimeout(timer)}, [runOptimizations]);
+  // Add performance monitoring;
+  useEffect(() => {if (typeof window === 'undefined') return;
+    const observer = new PerformanceObserver((list) => {
+    return () => clearTimeout(timer)
+  }, [runOptimizations])
+  // Add performance monitoring
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const observer = new PerformanceObserver((list) => {;
+      const entries = list.getEntries();
+    if (typeof window === 'undefined') return
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries()
+      entries.forEach((entry) => {
+        if (entry.entryType === 'navigation') {
+          const navEntry = entry as PerformanceNavigationTiming
+          if (navEntry.loadEventEnd - navEntry.loadEventStart > 1000) {
+            console.warn('Page load time exceeded 1 second')}}
+      })
+    })
+    observer.observe({entryTypes: ['navigation', 'paint', 'largest-contentful-paint'])})
+    return () => observer.disconnect();
+  }, []);
+  return(<div className="performance-optimized" data-optimized={isOptimized)}>{children</div>}{process.env.NODE_ENV === 'development' && (
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -47,8 +169,8 @@ const AdvancedPerformanceOptimizerPage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section$1>
+        <div$2>
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -58,7 +180,7 @@ const AdvancedPerformanceOptimizerPage: React.FC = () => {
               <span className="text-white">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced performance optimization solutions. 
+              Transform your business with our advanced advancedperformanceoptimizer solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -75,14 +197,14 @@ const AdvancedPerformanceOptimizerPage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section$1>
+        <div$2>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our AdvancedPerformanceOptimizer?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our performance optimization solutions deliver unmatched performance, security, and scalability.
+              Our advancedperformanceoptimizer solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
 
@@ -101,14 +223,14 @@ const AdvancedPerformanceOptimizerPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section$1>
+        <div$2>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our performance optimization solutions for your business.
+              Experience the power of our advancedperformanceoptimizer solutions for your business.
             </p>
           </div>
 
@@ -120,18 +242,18 @@ const AdvancedPerformanceOptimizerPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
+        ))
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section$1>
+        <div$2>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your performance optimization needs and get a customized solution.
+              Contact our experts to discuss your advancedperformanceoptimizer needs and get a customized solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
@@ -144,10 +266,58 @@ const AdvancedPerformanceOptimizerPage: React.FC = () => {
               </button>
             </div>
           </div>
-        </div>
+        ))
       </section>
+        <div className="optimization-debug" style={{
+    observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] })
+    return () => observer.disconnect()
+  }, [])
+  return (
+    </PerformanceOptimizerProps><div className="performance-optimized" data-optimized={isOptimized}>
+      {children}
+      {process.env.NODE_ENV === 'development' && (
+        </div>< className="optimization-debug" style={{$2 />
+          position: 'fixed',
+          bottom: '10px',
+          right: '10px',
+  return ()
+          background: 'rgba(0,0,0,0.8)',
+          color: 'white',
+          padding: '10px',
+          borderRadius: '5px',
+          fontSize: '12px',
+          zIndex: 1000;,}}>
+          <div>Images: {optimizationMetrics.imagesOptimized,</div>}</div>
+          <div>Scripts: {optimizationMetrics.scriptsOptimized,</div>}</div>
+          <div>CSS: {optimizationMetrics.cssOptimized,</div>}</div>
+          <div>Total: {optimizationMetrics.totalSavings,</div>}</div>
+        </div>
+      )}
     </div>
   );
 };
 
 export default AdvancedPerformanceOptimizerPage;
+export default AdvancedPerformanceOptimizer;
+  </PerformanceOptimizerProps>
+          zIndex: 1000
+        }}>
+          </div><div>Images: {optimizationMetrics.imagesOptimized}</div>
+          <div>Scripts: {optimizationMetrics.scriptsOptimized}</div>
+          <div>CSS: {optimizationMetrics.cssOptimized}</div>
+          <div>Total: {optimizationMetrics.totalSavings}</div>
+        </div>
+      )}
+    </div>
+  )
+}
+export default AdvancedPerformanceOptimizer
+  </PerformanceOptimizerProps>
+          <div>Images: {optimizationMetrics.imagesOptimized}
+          <div>Scripts: {optimizationMetrics.scriptsOptimized}
+          <div>CSS: {optimizationMetrics.cssOptimized}
+          <div>Total: {optimizationMetrics.totalSavings}
+      )}
+  )
+}
+export default AdvancedPerformanceOptimizer</div></div></div></div></div>
