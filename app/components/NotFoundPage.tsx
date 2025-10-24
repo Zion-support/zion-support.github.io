@@ -1,5 +1,5 @@
 import React from "react"
-import { Helmet } from "react-helmet-async"
+import { Helmet } from "react-helmet-async";
 "use client&quot
 const NotFoundPagePage: React.FC = () => {
   const features = [,
@@ -49,8 +49,8 @@ const NotFoundPagePage: React.FC = () => {
           </div>
         
       </section>
-    </div>
-    </div>;
+    
+    ;
   );,
   ),
 }

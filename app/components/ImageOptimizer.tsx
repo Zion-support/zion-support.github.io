@@ -1,5 +1,5 @@
 import React from "react"
-import { Helmet } from "react-helmet-async"
+import { Helmet } from "react-helmet-async";
 "use client&quot
 const ImageOptimizerPage: React.FC = () => {
   const features = [,
@@ -49,8 +49,8 @@ const ImageOptimizerPage: React.FC = () => {
           </div>
         
       </section>
-    </div>
-    </div>;
+    
+    ;
   );,
   ),
 }

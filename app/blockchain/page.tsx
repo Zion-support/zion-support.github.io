@@ -25,5 +25,5 @@ export default function BlockchainPage() {
         </div>
       </div>
       <EnhancedFooter />
-    </div>);
+    );
 }

@@ -164,7 +164,7 @@ export default function HomePage() {
                 <GlobeAltIcon className="w-8 h-8 text-white" /></GlobeAltIcon>
               </div>
         <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-6 group-hover scale-110 transition-transform">
-                </div><GlobeAltIcon className="w-8 h-8 text-white" /> </GlobeAltIcon></div>
+                <GlobeAltIcon className="w-8 h-8 text-white" /> </GlobeAltIcon>
               <h3 className="text-2xl font-bold text-white mb-4">5G Solutions</h3>
               <p className="text-gray-300 mb-6">
                 Next-generation 5G technology solutions for enhanced connectivity</p>
@@ -174,9 +174,9 @@ export default function HomePage() {
   r:gap-3 transition-all"></Link>
                 Learn More <ArrowRightIcon className="w-4 h-4" /></ArrowRightIcon>
               </Link>
-            </div>
-          </div>
-      </div>,
+            
+          
+      ,
       </section>,
       {/* About Section */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900"></section>

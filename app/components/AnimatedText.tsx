@@ -1,8 +1,7 @@
 'use client';
 import React from 'react'
 import { ArrowRight } from 'lucide-react'
-import Link } from 'next/link'
-
+import Link } from 'next/link';
 export default function AnimatedText() {
   return (
     <>
@@ -24,7 +23,7 @@ export default function AnimatedText() {
             Contact Us</Link>
             <ArrowRight className="w-5 h-5 ml-2" /></ArrowRight>
           </Link>
-        </div>
-      </div>;
-    </div>);
+        
+      ;
+    );
 }

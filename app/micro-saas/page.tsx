@@ -25,5 +25,5 @@ export default function MicrosaasPage() {
         </div>
       </div>
       <EnhancedFooter />
-    </div>);
+    );
 }

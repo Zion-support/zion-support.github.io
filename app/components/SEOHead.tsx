@@ -3,8 +3,7 @@ import { Metadata } from 'next';
 import React from 'react'
 import  Helmet  from 'react-helmet-async'
 import Navigation  } from '/components/Navigation'
-import EnhancedFooter from '/components/EnhancedFooter'
-
+import Footer from 'Footer';
 interface SEOHeadProps {;
   title?: string;
   description?: string;
@@ -16,7 +15,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({ ,
   keywords = "AI, artificial intelligence, technology solutions, business automation" }
 }) => {</SEOHeadProps>
   return (</SEOHeadProps>
-    <>
+    <div>
     
   </div>
       <Helmet></Helmet>
@@ -97,11 +96,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({ ,
         </section>
       </div>
       <EnhancedFooter /></Footer>
-    </>
+    </div>
 
 export default function SEOHeadPage() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>SEOHead - Zion Tech Group</title>
         <meta name="description" content="Professional seohead services by Zion Tech Group. Transform your business with our expert solutions." />
@@ -123,8 +122,8 @@ export default function SEOHeadPage() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      
+    </div>
   );
 }  )}
 export default SEOHead

@@ -4,10 +4,10 @@ import React from 'react'
 import  Helmet  from 'react-helmet-async'
 import  ArrowRight Search Target TrendingUp CheckCircle CheckCircle  from 'lucide-react'
 import Navigation  } from '/components/Navigation'
-import EnhancedFooter from '/components/EnhancedFooter'
-const AdvancedSEOOptimizerPage ReactFC =  => </>
+import Footer from 'Footer';
+const AdvancedSEOOptimizerPage ReactFC =  => </div>
   
-</Footer></>
+</Footer></div>
 
 const AdvancedSEOOptimizerPage: React.FC = () => {
   const features = [
@@ -39,7 +39,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
     'Stay ahead of SEO trends and updates'
   ]
   return (
-    <>
+    <div>
     
   </div>
       <Helmet></Helmet>
@@ -94,9 +94,9 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
                         {benefit}</CheckCircle>
                       </li>
                     ))}
-                  </ul></div>
+                  </ul>
               ))}
-            </div></div></section>
+            </section>
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5"></section>
           <div className="max-w-7xl mx-auto">
@@ -114,7 +114,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 
               ))}
-            </div></div></section>
+            </section>
         {/* CTA Section */}
         <section className="py-20 px-4"></section>
           <div className="max-w-4xl mx-auto text-center">
@@ -136,9 +136,9 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
             
           
         </section>
-      </div>
+      
       <EnhancedFooter /></Footer>;
-</>;
+</div>;
   );
 };
 

@@ -34,7 +34,7 @@ const ServiceTemplat,
                 <span className="text-gray-700">{feature}</span>
               
             ))}
-          </div>
+          
         
-    </div>}
+    }
 export default ServiceTemplate;

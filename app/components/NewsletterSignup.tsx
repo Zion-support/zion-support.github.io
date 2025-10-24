@@ -101,11 +101,11 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
     <>
       <div className="fixed inset-0 z-50 overflow-y-auto"></div>
         <div className="flex min-h-screen items-center justify-center px-4 py-6"></div>
-          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} /></div>
-          <div className="relative w-full max-w-md"></div>
-            {content}</div>
+          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
+          <div className="relative w-full max-w-md">
+            {content}
           
-      </div>
+      
   return content;
 }
     

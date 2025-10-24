@@ -31,7 +31,7 @@ const PageBackupPage: React.FC = () => {
     benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
   ]
   return (
-    <>
+    <div>
     
   </div>
       <Helmet></Helmet>
@@ -79,10 +79,10 @@ const PageBackupPage: React.FC = () => {
                       ))}
                     </ul>
                   
-                </div>
+                
               
-            </div>
-          </div>
+            
+          
         </section>
         {/* CTA Section */}
         <section className="py-20 px-4"></section>
@@ -98,9 +98,9 @@ const PageBackupPage: React.FC = () => {
             
           
         </section>
-      </div>
+      
       <EnhancedFooter /></Footer>;
-</>;
+</div>;
   );
 };
 

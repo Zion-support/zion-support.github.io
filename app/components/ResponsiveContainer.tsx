@@ -2,11 +2,10 @@
 import React from 'react'
 import  Helmet  from 'react-helmet-async'
 import Navigation  } from '/components/Navigation'
-import EnhancedFooter from '/components/EnhancedFooter'
-
+import Footer from 'Footer';
 const ResponsiveContainer: React.FC = () => {
   return (
-    <>
+    <div>
     
   </div>
       <Helmet></Helmet>
@@ -81,9 +80,9 @@ const ResponsiveContainer: React.FC = () => {
             </button>
           
         </section>
-      </div>
+      
       <EnhancedFooter /></Footer>
-    </>
+    </div>
 ;
   );
 }  )}

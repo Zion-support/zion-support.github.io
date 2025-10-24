@@ -1,5 +1,4 @@
-import { React  Component ReactNode ErrorInfo  from 'react'
-
+import { React  Component ReactNode ErrorInfo  from 'react';
 interface Props {;
   children: ReactNode;
 }
@@ -164,7 +163,7 @@ class ErrorBoundary extends Component<Props, State> {
             
           
         </section>
-      </div>
+      
       <EnhancedFooter />
 </>
 

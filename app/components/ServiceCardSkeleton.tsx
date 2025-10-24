@@ -3,11 +3,10 @@ import { Metadata } from 'next';
 import React from 'react'
 import  Helmet  from 'react-helmet-async'
 import Navigation  } from '/components/Navigation'
-import EnhancedFooter from '/components/EnhancedFooter'
-
+import Footer from 'Footer';
 const ServiceCardSkeleton: React.FC = () => {
   return (
-    <>
+    <div>
     
   </div>
       <Helmet></Helmet>
@@ -82,9 +81,9 @@ const ServiceCardSkeleton: React.FC = () => {
             </button>
           
         </section>
-      </div>
+      
       <EnhancedFooter /></Footer>
-    </>
+    </div>
 ;
   );
 }  )}

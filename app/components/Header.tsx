@@ -130,10 +130,10 @@ const Header: React.FC = () => {
               <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semiboldtransition-colorsduration-200"></button>
                 Contact Sales
               </button>
-            </div>
-          </div>
+            
+          
         </section>
-      </div>
+      
       <EnhancedFooter />
     </header>
   );

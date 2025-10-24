@@ -39,7 +39,7 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ];
   return (
-    <>
+    <div>
     
   </div>
       <Helmet></Helmet>
@@ -94,9 +94,9 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
                         {benefit}</CheckCircle>
                       </li>
                     ))}
-                  </ul></div>
+                  </ul>
               ))}
-            </div></div></section>
+            </section>
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5"></section>
           <div className="max-w-7xl mx-auto">
@@ -114,7 +114,7 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 
               ))}
-            </div></div></section>
+            </section>
         {/* CTA Section */}
         <section className="py-20 px-4"></section>
           <div className="max-w-4xl mx-auto text-center">
@@ -136,9 +136,9 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
             
           
         </section>
-      </div>
+      
       <EnhancedFooter /></Footer>
-</>;
+</div>;
   );
 };
 

@@ -3,7 +3,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-import EnhancedFooter from '/components/EnhancedFooter';
+import Footer from '../components/Footer';
 
 export default function CareersPage() {
   return (
@@ -30,6 +30,6 @@ export default function CareersPage() {
         </div>
       </div>
       <EnhancedFooter />
-    </div>
+    
   );
 }

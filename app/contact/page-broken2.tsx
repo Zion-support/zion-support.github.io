@@ -113,8 +113,8 @@ const ContactPageBroken2 = () => {
         
         <div className="bg-white rounded-lg shadow p-6"> </div></div>
           <pThis is a backup contact page Please refer to the main contact page for current information</p>
-        </p></div>
-      </div>
+        </p>
+      
     
   );
 };

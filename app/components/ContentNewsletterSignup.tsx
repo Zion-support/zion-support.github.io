@@ -94,9 +94,9 @@ interface ContentNewsletterSignupProps {
               <span className="text-sm">{feature.text}</span>
             
           ))}
-        </div>
-          </div>
-    </div>
+        
+          
+    
   );
 };
 

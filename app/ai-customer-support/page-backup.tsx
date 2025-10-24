@@ -32,7 +32,7 @@ const PageBackupPage: React.FC = () => {
   };
 ];
   return (
-    <>
+    <div>
     
   </div>
       <Helmet></Helmet>
@@ -80,10 +80,10 @@ const PageBackupPage: React.FC = () => {
                       ))}
                     </ul>
                   
-                </div>
+                
               
-            </div>
-          </div>
+            
+          
         </section>
         {/* CTA Section */}
         <section className="py-20 px-4"></section>
@@ -99,9 +99,9 @@ const PageBackupPage: React.FC = () => {
             
           
         </section>
-      </div>
+      
       <EnhancedFooter /></Footer>
-</>;
+</div>;
   );
 };
 

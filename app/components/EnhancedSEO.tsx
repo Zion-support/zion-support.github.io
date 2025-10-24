@@ -43,7 +43,7 @@ export default EnhancedSEOPage
                 <p className="text-gray-300 text-lg">{benefit}</p>
               
             ))}
-          </div></div></section>
+          </div></section>
       {/* CTA Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
         <div className="max-w-4xl mx-auto text-center">

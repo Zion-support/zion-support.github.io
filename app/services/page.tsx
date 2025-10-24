@@ -24,5 +24,5 @@ export default function ServicessPage() {
         </div>
       </div>
       <EnhancedFooter />
-    </div>);
+    );
 }

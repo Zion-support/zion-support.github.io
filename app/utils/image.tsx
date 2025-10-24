@@ -116,7 +116,7 @@ imageStyle
 {...props})
 >)
 <span className="text-gray-500text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
-</div>;
+;
   );
 {...props}
 >

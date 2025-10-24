@@ -8,7 +8,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 import { Phone, Mail, ArrowRight } from 'lucide-react';
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {</SEOEnhancerProps>
   return (</SEOEnhancerProps>
-    <>
+    <div>
     
   </div>
       <Helmet></Helmet>
@@ -101,7 +101,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {</SEOEn
             <feature.icon className="h-6 w-6 text-white" /></feature>
                 
               ))}
-            </div></div></section>
+            </div></section>
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5"></section>
           <div className="max-w-7xl mx-auto">
@@ -117,12 +117,12 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {</SEOEn
                 <div key={index} className="flex items-start space-x-4">
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /></CheckCircle>
                   <p className="text-gray-300 text-lg">{benefit}</p>
-                </div>
-        <div key=index className="flex items-start space-x-4"> </div></div></><CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /> </CheckCircle><p className="text-gray-300 text-lg">benefit</p></p>
-                </div>
+                
+        <div key=index className="flex items-start space-x-4"> </div><CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /> </CheckCircle><p className="text-gray-300 text-lg">benefit</p></p>
+                
               
-            </div>
-          </div>
+            
+          
         </section>
         {/* CTA Section */}
         <section className="py-20 px-4"></section>
@@ -136,10 +136,10 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {</SEOEn
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" /></CheckCircle>
                 <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
+              
             
-          </div>
-        </div>
+          
+        
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
@@ -158,9 +158,9 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {</SEOEn
             
           
         </section>
-      </div>
+      
       <EnhancedFooter /></Footer>
-</>
+</div>
   );
 };
 

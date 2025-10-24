@@ -40,7 +40,7 @@ const LoadingSkeletonPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
   ]
   return (
-    <>
+    <div>
     
   </div>
       <Helmet></Helmet>
@@ -100,8 +100,8 @@ const LoadingSkeletonPage: React.FC = () => {
                   </ul>
                 </div>
               
-            </div>
-          </div>
+            
+          
         </section>
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5"></section>
@@ -118,12 +118,12 @@ const LoadingSkeletonPage: React.FC = () => {
                 <div key={index} className="flex items-start space-x-4">
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /></CheckCircle>
                   <p className="text-gray-300 text-lg">{benefit}</p>
-                </div>
-        <div key=index className="flex items-start space-x-4"> </div></div></><CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /> </CheckCircle><p className="text-gray-300 text-lg">benefit</p></p>
-                </div>
+                
+        <div key=index className="flex items-start space-x-4"> </div><CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /> </CheckCircle><p className="text-gray-300 text-lg">benefit</p></p>
+                
               
-            </div>
-          </div>
+            
+          
         </section>
         {/* CTA Section */}
         <section className="py-20 px-4"></section>
@@ -143,9 +143,9 @@ const LoadingSkeletonPage: React.FC = () => {
             
           
         </section>
-      </div>
+      
       <EnhancedFooter /></Footer>
-</>;
+</div>;
   );
 };
 
