@@ -5,7 +5,7 @@ interface ImageProps {
 
 
   src: string,
-    alt: string}
+    alt: string};
 interface ImageProps {};
 src: string,
     alt: string

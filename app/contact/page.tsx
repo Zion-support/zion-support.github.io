@@ -46,7 +46,7 @@ export default function ContactPage() {
           </Link>
 >>>>>>> origin/main
         </div>
-      </div>
+        </div>
       <Footer />
     </div>);
 }
