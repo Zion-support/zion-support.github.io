@@ -1,61 +1,49 @@
+'use client';
 import React from 'react';
-'use client'
-import React from 'react'
-import { Helmet} from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
-const ServiceCard: React.FC = ($2) => {
+interface ServiceCardProps {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  href: string;
+  features?: string[];
+}
 
-$3};
-        <section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"><div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
-              ServiceCard
-            </h1>
-            <p>Advanced ServiceCard solution for modern businesses.</p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">,
-                Get Started
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">,
-                Learn More
-              </button>
-            
-          
-        </section>,
-,
-        {/* Features Section */}
-        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto"><div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p>Discover the powerful features that make ServiceCard the perfect solution for your business.</p>
-            </div>
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"> </div><h3 className="text-xl font-semibold text-white mb-3">AI-Powered</h3>
-                <p className="text-gray-300">Advanced AI algorithms for intelligent automation.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"> </div><h3 className="text-xl font-semibold text-white mb-3">Scalable</h3>
-                <p className="text-gray-300">Grows with your business needs and requirements.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"> </div><h3 className="text-xl font-semibold text-white mb-3">Secure</h3>
-                <p className="text-gray-300">Enterprise-grade security and data protection.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"> </div><h3 className="text-xl font-semibold text-white mb-3">Efficient</h3>
-                <p className="text-gray-300">Optimized performance for maximum productivity.</p>
-                </div>
-              </div>
-        </div>
-      </section>,
-,
-        {/* CTA Section */}
-        <section className="py-20 px-4"> </section><div className="max-w-4xl mx-auto text-center"> </div><h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-            <p>Join thousands of businesses already using ServiceCard to transform their operations.</p>
-            <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-              Start Your Free Trial
-            
-            </button>
-          </div>
-        </section>
-        </div>
-      </Footer>
+const ServiceCard: React.FC<ServiceCardProps> = ({
+  title,
+  description,
+  icon,
+  href,
+  features = []
+}) => {
+  return (
+    <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+      <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+        {icon}
       </div>
+      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      {features.length > 0 && (
+        <ul className="text-sm text-gray-500 mb-4">
+          {features.map((feature, index) => (
+            <li key={index} className="flex items-center mb-1">
+              <span className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2"></span>
+              {feature}
+            </li>
+          ))}
+        </ul>
+      )}
+      <Link 
+        href={href}
+        className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
+      >
+        Learn More
+        <ArrowRight className="ml-1 h-4 w-4" />
+      </Link>
+    </div>
+  );
+};
 
-  )}  )}
-export default ServiceCard};
+export default ServiceCard;

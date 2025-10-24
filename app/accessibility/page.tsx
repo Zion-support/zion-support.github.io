@@ -1,47 +1,39 @@
 'use client';
-
 import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const stats = [
-  { number: '1B+', label: 'People with Disabilities' },
-  { number: '71%', label: 'Websites with Issues' },
-  { number: '15%', label: 'Global Population' },
-  { number: '100%', label: 'Compliance Possible' }
+  { number: '1B+', label: 'People with disabilities worldwide' },
+  { number: '15%', label: 'Of global population' },
+  { number: '$13T', label: 'Annual spending power' },
+  { number: '71%', label: 'Leave sites due to accessibility issues' }
 ];
 
 const features = [
   {
     title: 'AI-Powered Audits',
-    description: 'Automated accessibility testing using advanced AI algorithms to identify and fix issues.',
-    icon: () => (
-      <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
+    description: 'Automated accessibility testing using advanced AI algorithms to identify issues quickly and accurately.',
+    icon: () => <div className="w-6 h-6 bg-emerald-600 rounded" />,
     benefits: [
-      'Automated scanning and testing',
-      'WCAG 2.1 AA compliance checking',
-      'Real-time issue detection',
-      'Detailed remediation reports'
+      'Comprehensive WCAG 2.1 AA compliance checking',
+      'Real-time issue detection and reporting',
+      'Automated remediation suggestions',
+      'Detailed accessibility score and recommendations'
     ]
   },
   {
-    title: 'Screen Reader Optimization',
-    description: 'Ensure your content is properly structured for screen readers and assistive technologies.',
-    icon: () => (
-      <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-      </svg>
-    ),
+    title: 'Manual Testing',
+    description: 'Expert human testing to catch issues that automated tools might miss.',
+    icon: () => <div className="w-6 h-6 bg-emerald-600 rounded" />,
     benefits: [
-      'Semantic HTML structure',
-      'ARIA labels and descriptions',
-      'Keyboard navigation support',
-      'Focus management'
+      'Screen reader compatibility testing',
+      'Keyboard navigation verification',
+      'Color contrast and visual accessibility',
+      'User experience evaluation'
     ]
   }
 ];
@@ -50,43 +42,26 @@ const services = [
   {
     title: 'Accessibility Audit',
     description: 'Comprehensive evaluation of your digital assets',
-    price: 'Starting at $500',
-    icon: () => (
-      <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    )
+    icon: () => <div className="w-8 h-8 bg-emerald-600 rounded" />,
+    price: 'Starting at $500'
   },
   {
     title: 'Implementation',
-    description: 'Fix identified issues and implement solutions',
-    price: 'Starting at $1,500',
-    icon: () => (
-      <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-    )
+    description: 'Fix identified accessibility issues',
+    icon: () => <div className="w-8 h-8 bg-emerald-600 rounded" />,
+    price: 'Starting at $1,000'
   },
   {
     title: 'Training',
-    description: 'Educate your team on accessibility best practices',
-    price: 'Starting at $800',
-    icon: () => (
-      <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-      </svg>
-    )
+    description: 'Team training on accessibility best practices',
+    icon: () => <div className="w-8 h-8 bg-emerald-600 rounded" />,
+    price: 'Starting at $300'
   },
   {
     title: 'Ongoing Support',
     description: 'Continuous monitoring and maintenance',
-    price: 'Starting at $300/mo',
-    icon: () => (
-      <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5z" />
-      </svg>
-    )
+    icon: () => <div className="w-8 h-8 bg-emerald-600 rounded" />,
+    price: 'Starting at $200/mo'
   }
 ];
 
@@ -103,7 +78,8 @@ export default function AccessibilityPage() {
             Accessibility Solutions
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Make your digital experiences inclusive and accessible to everyone. Our AI-powered accessibility solutions ensure compliance and improve user experience for all.
+            Make your digital experiences inclusive and accessible to everyone. 
+            Our AI-powered accessibility solutions ensure compliance and improve user experience for all.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="inline-flex items-center px-8 py-3 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors font-semibold">
