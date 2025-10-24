@@ -1,2 +1,15 @@
 import React from 'react'
-const "MetaTags": React.FC<MetaTagsProps> = ({ className = ' }) => {
+
+interface MetaTagsProps {
+  className?: string;
+}
+
+const MetaTags: React.FC<MetaTagsProps> = ({ className = '' }) => {
+  return (
+    <div className={className}>
+      {/* Meta Tags component */}
+    </div>
+  );
+};
+
+export default MetaTags;
