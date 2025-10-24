@@ -7,16 +7,12 @@ interface UserExperienceEnhancerProps {
   className?: string;
 
 interface FeedbackState {
-<<<<<<< HEAD
-  rating: number;
-  comment: string;
-  submitted: boolean;
-=======
+
   rating: number;,
   comment: string;,
   submitted: boolean;,
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
 
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({,
   children,
@@ -51,15 +47,11 @@ const buttons = document.querySelectorAll('button');
   }, []);
 
   return (
-<<<<<<< HEAD
-    <div className={className}>
-      {children}
-    </div>}
-=======
+
     <div className={className}>{children}
     </div></div>
   );
 };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
 export default UserExperienceEnhancer;

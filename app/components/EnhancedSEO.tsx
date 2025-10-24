@@ -23,14 +23,11 @@ const benefits = [
         </section>
       </div>
       <Footer />
-<<<<<<< HEAD
-</>
-}  );
-=======
+
 </Footer></>
   )
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
 
 export default EnhancedSEOPage
                 </div>

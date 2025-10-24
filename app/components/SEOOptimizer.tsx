@@ -2,14 +2,11 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 interface SEOOptimizerProps {
-<<<<<<< HEAD
-  className?: string
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-=======
+
   className?: string;
 }
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
   title = 'Zion Tech Group - Advanced AI and IT Solutions'
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.'
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI']
@@ -50,15 +47,12 @@ const metaKeywords = document.querySelector('meta[name=&quot;keywords&quot;]')
       canonicalLink.rel = 'canonical'
       canonicalLink.href = canonicalUrl
       document.head.appendChild(canonicalLink)
-<<<<<<< HEAD
-    // Update Open Graph tags
-    const updateOGTag = (property: string, content: string) => {
-=======
+
     }
     // Update Open Graph tags;
 
 const updateOGTag = (property: string, content: string) => {,
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
       let ogTag = document.querySelector(`meta[property=&quot;${property}&quot;]`)
       if (ogTag) {
         ogTag.setAttribute('content', content)
@@ -118,20 +112,9 @@ const updateTwitterTag = (name: string, content: string) => {,
       {structuredData && (
         </meta><script
           type=&quot;application/ld+json&quot
-<<<<<<< HEAD
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData)}
-        />
-      )}
-    </Head>
-<<<<<<< HEAD
-  )
-}
- SEOOptimizer
-  )
-}
-=======
+
 export default SEOOptimizer
->>>>>>> cursor/fix-errors-and-merge-to-main-996d
+
 =======
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />)}
@@ -144,4 +127,4 @@ export default SEOOptimizer
 }
 
 export default SEOOptimizerPage
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+

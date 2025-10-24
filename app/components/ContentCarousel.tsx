@@ -3,33 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { ArrowRight, X, Brain, BarChart, Target, TrendingUp, Cloud, Shield, Globe, Database, Users, Settings } from 'lucide-react';
 
 interface Slide {
-<<<<<<< HEAD
-  id: number;
-  title: string;
-  description: string;
-  features: string[];
-  icon: React.ReactNode;
-  color: string;
-}
 
-const ContentCarousel: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const slides: Slide[] = [
-    {
-      id: 1,
-      title: "AI-Powered Analytics",
-      description: "Transform your data into actionable insights with our advanced AI analytics platform.",
-      features: [
-        "Real-time data processing",
-        "Predictive analytics",
-        "Custom dashboards",
-        "Automated reporting"
-      ],
-      icon: <BarChart className="h-12 w-12" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-=======
   id: number,
     title: string,
       description: string,
@@ -39,7 +13,7 @@ const ContentCarousel: React.FC = () => {
 const ContentCarousel: React.FC = ($2) => {
 $3
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
     {
       id: 2,
       title: "Cloud Infrastructure",
@@ -57,119 +31,16 @@ $3
       id: 3,
       title: "Cybersecurity Solutions",
       description: "Protect your business with our comprehensive cybersecurity services.",
-<<<<<<< HEAD
-      features: [
-=======
+
     features: [,
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
         "Threat detection",
         "Vulnerability assessment",
         "Incident response",
         "Security training"
       ],
       icon: <Shield className="h-12 w-12" />,
-<<<<<<< HEAD
-      color: "from-red-500 to-pink-500"
-    },
-    {
-      id: 4,
-      title: "Digital Transformation",
-      description: "Modernize your business processes with cutting-edge technology solutions.",
-      features: [
-        "Process automation",
-        "Digital workflows",
-        "Integration services",
-        "Change management"
-      ],
-      icon: <Settings className="h-12 w-12" />,
-      color: "from-purple-500 to-indigo-500"
-    }
-  ];
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-
-    return () => clearInterval(timer);
-  }, [slides.length]);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
-
-  return (
-    <div className="relative w-full max-w-6xl mx-auto">
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-gray-800 border border-white/10">
-        {/* Slide Content */}
-        <div className="relative h-96">
-          {slides.map((slide, index) => (
-            <div
-              key={slide.id}
-              className={`absolute inset-0 transition-opacity duration-500 ${
-                index === currentSlide ? 'opacity-100' : 'opacity-0'
-              }`}
-            >
-              <div className="flex h-full">
-                {/* Left side - Content */}
-                <div className="flex-1 p-8 flex flex-col justify-center">
-                  <div className="max-w-lg">
-                    <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${slide.color} mb-6`}>
-                      {slide.icon}
-                    </div>
-                    <h2 className="text-3xl font-bold text-white mb-4">
-                      {slide.title}
-                    </h2>
-                    <p className="text-gray-300 text-lg mb-6">
-                      {slide.description}
-                    </p>
-                    <ul className="space-y-2">
-                      {slide.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-300">
-                          <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Right side - Visual */}
-                <div className="flex-1 p-8 flex items-center justify-center">
-                  <div className={`w-64 h-64 rounded-2xl bg-gradient-to-br ${slide.color} flex items-center justify-center`}>
-                    <div className="text-white text-6xl">
-                      {slide.icon}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Navigation Controls */}
-        <div className="absolute top-4 right-4 flex space-x-2">
-          <button
-            onClick={prevSlide}
-            className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-          >
-            <ArrowRight className="w-5 h-5 text-white rotate-180" />
-          </button>
-          <button
-            onClick={nextSlide}
-            className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-          >
-            <ArrowRight className="w-5 h-5 text-white" />
-          </button>
-=======
     color: "from-red-500 to-pink-500"}
   ]
   const nextSlide = ($2) => {
@@ -189,8 +60,7 @@ $3
         <div className=&quot;relative max-w-7xl mx-auto text-center&quot;> </div><h1 className=&quot;text-5xl md: text-7xl font-bold text-white mb-6 leading-tight&quot;>,
               ContentCarousel
             </h1>
-            <pAdvanced ContentCarousel solution for modern businesses.
-            </p>
+            <p>Advanced ContentCarousel solution for modern businesses.</p>
             <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;>,
               </div><button className=&quot;bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>,
                 Get Started
@@ -205,8 +75,7 @@ $3
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;> </section><div className=&quot;max-w-7xl mx-auto&quot;>
         <div className=&quot;text-center mb-16&quot;> </div><h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
-              <pPowerful AI-driven features designed to transform your business operations
-              </p>
+              <p>Powerful AI-driven features designed to transform your business operations</p>
             </div>
             <div className=&quot;grid md: grid-cols-2 lg:grid-cols-4 gap-8&quot;>,
               {features.map((feature, index) => (
@@ -225,8 +94,7 @@ $3
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;> </section><div className=&quot;max-w-7xl mx-auto&quot;>
         <div className=&quot;text-center mb-16&quot;> </div><h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
-              <pExperience the benefits of cutting-edge AI technology
-              </p>
+              <p>Experience the benefits of cutting-edge AI technology</p>
         </div>
         <div className=&quot;relative&quot;>
         <div{slides.map((slide, index) =>(</div>
@@ -332,7 +200,7 @@ $3
             onClick={nextSlide}
             className=&quot;absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover: bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;,
           > </button><ChevronRight className=&quot;w-6 h-6&quot; /> </ChevronRight></button>
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
         </div>
 
         {/* Slide Indicators */}
@@ -347,14 +215,7 @@ $3
             />
           ))}
         </div>
-<<<<<<< HEAD
-      </div>
-    </div>
-  );
-};
 
-export default ContentCarousel;
-=======
         {/* Additional Info */}
         <div className=&quot;mt-16 text-center&quot;>
         <div className=&quot;grid grid-cols-1 md: grid-cols-3 gap-8 max-w-4xl mx-auto&quot;>,
@@ -372,8 +233,7 @@ export default ContentCarousel;
         </section>
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;> </section><div className=&quot;max-w-4xl mx-auto text-center&quot;> </div><h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
-            <pJoin thousands of businesses already using our AI solutions
-            </p>
+            <p>Join thousands of businesses already using our AI solutions</p>
             <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;>,
               </div><button className=&quot;bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>,
                 Start Free Trial
@@ -400,4 +260,4 @@ export default ContentCarouselPage
 }
 
 export default ContentCarousel
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+

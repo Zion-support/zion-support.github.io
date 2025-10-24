@@ -7,14 +7,7 @@ interface PerformanceMetrics {
     fcp: number,
   ttfb: number}
 interface AdvancedPerformanceOptimizerProps {
-<<<<<<< HEAD
-  enableWebVitals?: boolean
-  enableAdvancedCaching?: boolean
-  enableImageOptimization?: boolean
-  enablePreloading?: boolean
-  enableServiceWorker?: boolean
-const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({
-=======
+
   enableWebVitals?: boolean;
   enableAdvancedCaching?: boolean;
   enableImageOptimization?: boolean;
@@ -22,7 +15,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   enableServiceWorker?: boolean;
 }
 const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({,
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
   enableWebVitals = true
   enableAdvancedCaching = true
   enableImageOptimization = true
@@ -103,15 +96,12 @@ const setupAdvancedCaching = useCallback(() => {
           // eslint-disable-next-line no-console
     console.error('Service Worker registration failed:', registrationError)
         })
-<<<<<<< HEAD
-    // Memory-based caching for API responses
-    const cache = new Map()
-=======
+
     }
     // Memory-based caching for API responses;
 
 const cache = new Map()
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
     const originalFetch = window.fetch
     window.fetch = async (input, init) => {
       const url = typeof input === 'string' ? input : input.url;
@@ -188,9 +178,8 @@ const reportPerformanceMetrics = useCallback(() => {
       reportPerformanceMetrics()
   }, [enableWebVitals, performanceMetrics, reportPerformanceMetrics])
   return null
-<<<<<<< HEAD
-=======
+
 }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
 export default AdvancedPerformanceOptimizer

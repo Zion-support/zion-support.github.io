@@ -20,22 +20,7 @@ export default function FuturisticGlow({
     const container = containerRef.current;
     if (!container) return;
 
-<<<<<<< HEAD
-    const getIntensityValue = () => {
-      switch (intensity) {
-        case 'low': return '0.3';
-        case 'high': return '0.8';
-        default: return '0.5';}
-    const getColorValue = () => {
-      switch (color) {
-        case 'cyan': return '0, 255, 255';
-        case 'purple': return '168, 85, 247';
-        case 'pink': return '236, 72, 153';
-        case 'green': return '34, 197, 94';
-        case 'blue': return '59, 130, 246';
-        case 'red': return '239, 68, 68';
-        default: return '0, 255, 255';}
-=======
+
     const getIntensityValue = ($2) => {
 $3
 };
@@ -46,7 +31,7 @@ $3
 };
     };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
     const rgb = getColorValue();
     const opacity = getIntensityValue();
     // Apply CSS custom properties for dynamic glow
@@ -80,13 +65,9 @@ $3
         hover: after:opacity-100,
         ${className}
       `}
-<<<<<<< HEAD
-    >
-      {children}
-    </div>
-=======
+
     >{children}
     </div></div>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
 }

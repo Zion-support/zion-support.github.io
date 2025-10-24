@@ -48,20 +48,13 @@ const PerformanceImagePage: React.FC = () => {,
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-    </>
-  );
-  )
-}
-<<<<<<< HEAD
- PerformanceImagePage
-=======
+
 export default PerformanceImagePage
->>>>>>> cursor/fix-errors-and-merge-to-main-996d
+
 =======
 
   </>
 export default PerformanceImagePage;
 
 export default PerformanceImagePage
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+

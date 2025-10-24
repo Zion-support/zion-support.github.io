@@ -16,7 +16,5 @@ export default function RootLayout({
       </body></body>
     </html>
   )
-<<<<<<< HEAD
-}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-996d
+
+

@@ -10,12 +10,10 @@ interface FuturisticButtonProps {
   loading?: boolean;
   className?: string;
   type?: 'button' | 'submit' | 'reset'
-<<<<<<< HEAD
-const FuturisticButton: React.FC<FuturisticButtonProps> = ({
-=======
+
 }
 const FuturisticButton: React.FC<FuturisticButtonProps> = ({,
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
   children
   onClick
   variant = 'primary'
@@ -26,28 +24,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({,
   type = 'button'
 }) => {
   const [isHovered, setIsHovered] = useState(false)
-<<<<<<< HEAD
-  const getVariantClasses = () => {
-    switch (variant) {
-      case 'primary':
-        return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover: shadow-cyan-500/40';
-      case 'secondary':
-        return 'bg-white/10 text-white border border-white/20 hover: bg-white/20 backdrop-blur-sm';
-      case 'accent':
-        return 'bg-gradient-to-r from-orange-500 to-red-600 text-white shadow-lg shadow-orange-500/25 hover: shadow-orange-500/40';
-      case 'ghost':
-        return 'text-cyan-400 hover: text-cyan-300 hover:bg-cyan-500/10';,
-    default: return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'}
-  const getSizeClasses = () => {
-  switch (size) {
-      case 'sm':
-        return 'px-4 py-2 text-sm'
-      case 'md':
-        return 'px-6 py-3 text-base'
-      case 'lg':
-        return 'px-8 py-4 text-lg'
-      default: return 'px-6 py-3 text-base'}
-=======
+
   const getVariantClasses = ($2) => {
 $3
 };
@@ -56,7 +33,7 @@ $3
 $3
 };
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
   const baseClasses = `
     relative overflow-hidden rounded-lg font-semibold transition-all duration-300
     transform hover: scale-105 active:scale-95,
@@ -80,50 +57,31 @@ $3
       {/* Animated background */}
       <motion.div
         className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-purple-400/20"
-<<<<<<< HEAD
-        initial={{ opacity: 0}
-        animate={{ opacity: isHovered ? 1 : 0}
-        transition={{ duration: 0.3}
-      />
-      {/* Loading spinner */}
-=======
+
         initial={{ opacity: 0 }}
         animate={{ opacity: isHovered ? 1 : 0 }}
         transition={{ duration: 0.3 }}
       />{/* Loading spinner */}
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
       {loading && (
         </motion><motion.div
           className="absolute inset-0 flex items-center justify-center"
-<<<<<<< HEAD
-          initial={{ opacity: 0}
-          animate={{ opacity: 1}
-          exit={{ opacity: 0}
-        >
-          <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-        </motion.div>
-=======
+
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         > </motion><div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" /> </div></motion.div>
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
       )}
       {/* Button content */}
       <motion.span
         className="relative z-10 flex items-center justify-center"
-<<<<<<< HEAD
-        animate={{ opacity: loading ? 0 : 1}
-        transition={{ duration: 0.2}
-      >
-        {children}
-      </motion.span>
-=======
+
         animate={{ opacity: loading ? 0 : 1 }}
         transition={{ duration: 0.2 }}
       >{children}
       </motion></motion.span>
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
       {/* Glow effect */}
       <motion.div
         className="absolute inset-0 rounded-lg"
@@ -134,15 +92,11 @@ $3
           transform: isHovered ? 'translateX(100%)' : 'translateX(-100%)'}
         transition={{
           duration: 0.6,
-<<<<<<< HEAD
-    ease: 'easeInOut'}
-      />
-    </motion.button>
-=======
+
     ease: 'easeInOut'}}
       /> </motion></motion.button>
   )
 }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
 export default FuturisticButton

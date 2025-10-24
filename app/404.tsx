@@ -98,14 +98,10 @@ const NotFound = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-</>
-  );
-}
-=======
+
     </>
   );
 };
 
 export default NotFound;
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+

@@ -37,8 +37,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
   const content = (
     <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
         <div className="text-center mb-6"> </div><Mail className="w-12 h-12 mx-auto mb-4 text-white/90" /> </Mail><h3 className="text-2xl font-bold mb-2">Stay Updated</h3>
-        <pGet the latest updates on AI technology, IT solutions, and industry insights.
-        </p>
+        <p>Get the latest updates on AI technology, IT solutions, and industry insights.</p>
       </div>
       <form onSubmit={handleSubmit} className="space-y-4"> </form><div className="flex flex-col sm: flex-row gap-3">,
           <input
@@ -92,10 +91,8 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
         </div>
       </div>
   return content
-<<<<<<< HEAD
-}  );
-=======
+
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
 
 export default NewsletterSignup

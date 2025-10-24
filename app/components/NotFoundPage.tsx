@@ -48,20 +48,13 @@ const NotFoundPagePage: React.FC = () => {,
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-    </>
-  );
-  )
-}
-<<<<<<< HEAD
- NotFoundPagePage
-=======
+
 export default NotFoundPagePage
->>>>>>> cursor/fix-errors-and-merge-to-main-996d
+
 =======
 
   </>
 export default NotFoundPagePage;
 
 export default NotFoundPagePage
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+

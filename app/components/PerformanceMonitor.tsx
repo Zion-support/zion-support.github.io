@@ -4,20 +4,14 @@ import React, { useEffect, useState } from 'react';
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
-<<<<<<< HEAD
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-=======
+
   fcp: number | null;,
   lcp: number | null;,
   fid: number | null;,
   cls: number | null;,
   ttfb: number | null;,
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
 
 const PerformanceMonitor: React.FC = () => {,
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -63,18 +57,7 @@ const monitorCoreWebVitals = () => {
           setMetrics(prev => ({ ...prev, ttfb: metric.value }));
           if (metric.value > 600) {
             setWarnings(prev => [...prev, `TTFB is ${metric.value.toFixed(0)}ms (should be < 600ms)`]);
-<<<<<<< HEAD
-        });}
-    // Monitor performance metrics
-    const monitorPerformance = () => {
-      if (typeof window !== 'undefined' && 'performance' in window) {
-        // Monitor page load time
-        window.addEventListener('load', () => {
-          const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-          if (process.env.NODE_ENV === 'development') {
-            // eslint-disable-next-line no-console
-            console.log('Page load time:', navigation.loadEventEnd - navigation.loadEventStart);
-=======
+
           }
         });
       }
@@ -85,7 +68,7 @@ const monitorCoreWebVitals = () => {
 const monitorPerformance = ($2) => {
 $3
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
         });
 
         // Monitor resource loading;
@@ -104,17 +87,7 @@ const observer = new PerformanceObserver((list) => {
     monitorPerformance();
 
     // Cleanup
-<<<<<<< HEAD
-    return () => {
-<<<<<<< HEAD
-      window.removeEventListener('load', measurePageLoad);
-    };
-  }, [])
 
-      // Cleanup if needed
-  }, []);
-
-=======
     return (
     <>
       ) => {
@@ -125,7 +98,7 @@ const observer = new PerformanceObserver((list) => {
   }, []
     </>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
   return (
     <div className="fixed bottom-4 right-4 bg-white shadow-lg rounded-lg p-4 max-w-sm z-50"> </div><h3 className="text-sm font-semibold text-gray-900 mb-2">Performance Monitor</h3>
       <div className="space-y-1 text-xs">

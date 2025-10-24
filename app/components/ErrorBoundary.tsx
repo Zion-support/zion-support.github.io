@@ -1,13 +1,6 @@
 import React, { Component, ReactNode, ErrorInfo } from 'react';
 
-<<<<<<< HEAD
-interface Props {
-  children: ReactNode;
 
-interface State {
-  hasError: boolean;
-  error: Error | undefined;
-=======
 
 import Footer from '@/components/Footer';interface Props {
   children: ReactNode;,
@@ -17,17 +10,12 @@ interface State {
   hasError: boolean;,
   error: Error | undefined;,
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
 
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {,
     hasError: false,
-<<<<<<< HEAD
-    error: undefined,}
-  public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error}
-  public componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-=======
+
     error: undefined,
   };
 
@@ -36,7 +24,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   public componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {,
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
     // Log error to console in development only
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
@@ -60,8 +48,7 @@ class ErrorBoundary extends Component<Props, State> {
               </div>
               <h2 className="text-xl font-semibold text-white mb-2">Something went wrong
               </h2></h2>
-              <pWe're sorry, but something unexpected happened. Please try refreshing the page.
-              </p>
+              <p>We're sorry, but something unexpected happened. Please try refreshing the page.</p>
               <div className="space-y-2"> </div><button
                   onClick={() => window.location.reload()}
                   className="w-full bg-purple-600 hover: bg-purple-700 text-white font-medium py-2 px-4 rounded-md transition-colors",
@@ -88,8 +75,7 @@ class ErrorBoundary extends Component<Props, State> {
         {/* Features Section */}
         <section className=&quot;py-20 px-4&quot;> </section><div className=&quot;max-w-7xl mx-auto&quot;>
         <div className=&quot;text-center mb-16&quot;> </div><h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
-              <pPowerful AI-driven features designed to transform your business operations
-              </p>
+              <p>Powerful AI-driven features designed to transform your business operations</p>
             </div>
             <div className=&quot;grid md: grid-cols-2 lg:grid-cols-4 gap-8&quot;>,
               {features.map((feature, index) => (
@@ -108,8 +94,7 @@ class ErrorBoundary extends Component<Props, State> {
         {/* Benefits Section */}
         <section className=&quot;py-20 px-4 bg-white/5&quot;> </section><div className=&quot;max-w-7xl mx-auto&quot;>
         <div className=&quot;text-center mb-16&quot;> </div><h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
-              <pExperience the benefits of cutting-edge AI technology
-              </p>
+              <p>Experience the benefits of cutting-edge AI technology</p>
             </div>
             <div className=&quot;grid md: grid-cols-2 lg:grid-cols-3 gap-8&quot;>,
               {benefits.map((benefit, index) => (
@@ -121,8 +106,7 @@ class ErrorBoundary extends Component<Props, State> {
         </section>
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;> </section><div className=&quot;max-w-4xl mx-auto text-center&quot;> </div><h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
-            <pJoin thousands of businesses already using our AI solutions
-            </p>
+            <p>Join thousands of businesses already using our AI solutions</p>
             <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;>,
               </div><button className=&quot;bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>,
                 Start Free Trial
@@ -135,40 +119,28 @@ class ErrorBoundary extends Component<Props, State> {
         </section>
       </div>
       <Footer />
-<<<<<<< HEAD
-</>
 
-  );
-}
-}export default ErrorBoundaryPage
-error?: Error
-=======
 </Footer></>
   )
 }
 
 export default ErrorBoundaryPage
 error?: Error;
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
 errorInfo?: ErrorInfo}
 class ErrorBoundary extends Component<Props, State>{constructor(props: Props) {,
 super(props)
 this.state= { hasError: false}
 static getDerivedStateFromError(error: Error): State {return { hasError: true, error}
-<<<<<<< HEAD
-componentDidCatch(error: Error, errorInfo: ErrorInfo) {// Log error for monitoring in production
-=======
+
 }
 componentDidCatch(error: Error, errorInfo: ErrorInfo) {// Log error for monitoring in production,
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
 if (process.env.NODE_ENV=== 'production') {
 // In production, you would send this to an error reporting service
 // Example: errorReportingService.captureException(error, { extra: errorInfo})
 this.setState({errorerrorInfo})
-<<<<<<< HEAD
-handleReload= () => {windo w.location.reload()}
-handleGoHome= () => {windo w.location.href= '/'}
-=======
+
 }
 handleReload = ($2) => {
 $3
@@ -176,7 +148,7 @@ $3
 handleGoHome = ($2) => {
 $3
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
 render() {
   if (this.state.hasError) {
 if (this.props.fallback) {

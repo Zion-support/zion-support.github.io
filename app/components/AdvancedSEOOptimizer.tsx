@@ -4,12 +4,9 @@ import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Search, Target, TrendingUp, CheckCircle, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 
-const AdvancedSEOOptimizerPage: React.FC = () => {
-=======
 const AdvancedSEOOptimizerPage: React.FC = () => {,
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
   const features = [
     {
       icon: Search,
@@ -48,8 +45,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {,
         <div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
               Advanced SEO Optimizer
             </h1>
-            <pAdvanced SEO Optimizer solution for modern businesses.
-            </p>
+            <p>Advanced SEO Optimizer solution for modern businesses.</p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
               <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">,
                 Get Started
@@ -64,8 +60,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {,
         {/* Features Section */}
         <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <pPowerful AI-driven SEO features designed to transform your online presence
-              </p>
+              <p>Powerful AI-driven SEO features designed to transform your online presence</p>
             </div>
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
               {features.map((feature, index) => (
@@ -84,8 +79,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {,
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5"> </section><div className="max-w-7xl mx-auto">
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Why Choose Our SEO Solution?</h2>
-              <pExperience the power of AI-driven SEO optimization
-              </p>
+              <p>Experience the power of AI-driven SEO optimization</p>
             </div>
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
               {benefits.map((benefit, index) => (
@@ -98,8 +92,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {,
         {/* CTA Section */}
         <section className="py-20 px-4"> </section><div className="max-w-4xl mx-auto text-center"> </div><h2 className="text-4xl font-bold text-white mb-6">Ready to Boost Your SEO?
             </h2></h2>
-            <pJoin thousands of businesses already using our AI-powered SEO solutions
-            </p>
+            <p>Join thousands of businesses already using our AI-powered SEO solutions</p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
               <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">,
                 Start Free Trial
@@ -113,14 +106,10 @@ const AdvancedSEOOptimizerPage: React.FC = () => {,
         </section>
       </div>
       <Footer />
-<<<<<<< HEAD
-</>
-  );
-}
-=======
+
 </Footer></>
   )
 }
 
 export default AdvancedSEOOptimizerPage
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+

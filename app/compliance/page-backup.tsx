@@ -80,14 +80,10 @@ const PageBackupPage: React.FC = () => {,
         </section>
       </div>
       <Footer />
-<<<<<<< HEAD
-</>
-  );
-}
-=======
+
 </Footer></>
   )
 }
 
 export default PageBackupPage
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+

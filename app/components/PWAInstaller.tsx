@@ -2,30 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { X , Download  } from 'lucide-react';
 interface BeforeInstallPromptEvent extends Event {
-<<<<<<< HEAD
-  prompt(): Promise<void>
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>
-const PWAInstaller: React.FC = () => {
-  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null)
-  const [showInstallPrompt, setShowInstallPrompt] = useState(false)
-  const [isInstalled, setIsInstalled] = useState(false)
-  useEffect(() => {
-    // Check if app is already installed
-    const checkInstalled = () => {
-      if (window.matchMedia('(display-mode: standalone)').matches) {
-        setIsInstalled(true)}
-    checkInstalled()
-    // Listen for beforeinstallprompt event
-    const handleBeforeInstallPrompt = (e: Event) => {
-      e.preventDefault()
-      setDeferredPrompt(e as BeforeInstallPromptEvent)
-      setShowInstallPrompt(true)
-    // Listen for appinstalled event
-    const handleAppInstalled = () => {
-      setIsInstalled(true)
-      setShowInstallPrompt(false)
-      setDeferredPrompt(null)
-=======
+
   prompt(): Promise<void>userChoice: Promise</void><{ outcome: 'accepted' | 'dismissed' }>
 }
 const PWAInstaller: React.FC = ($2) => {
@@ -43,7 +20,7 @@ $3
 const handleAppInstalled = ($2) => {
 $3
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt)
     window.addEventListener('appinstalled', handleAppInstalled)
     return (
@@ -67,18 +44,7 @@ $3
       setShowInstallPrompt(false)
     } catch (error) {
       // // eslint-disable-next-line no-console
-<<<<<<< HEAD
-    console.error('Installation failed:', error)}
-  const handleDismiss = () => {
-    setShowInstallPrompt(false)
-    // Don&apos;t show again for this session
-    sessionStorage.setItem('pwa-install-dismissed', 'true')
-  // Don&apos;t show if already installed or dismissed this session
-  if (isInstalled || !showInstallPrompt || sessionStorage.getItem('pwa-install-dismissed')
-    </>
-  );
-}
-=======
+
     console.error('Installation failed:', error)
     }
   }
@@ -127,4 +93,4 @@ $3
 }
 
 export default PWAInstaller
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+

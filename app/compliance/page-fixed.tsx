@@ -80,14 +80,10 @@ const PageFixedPage: React.FC = () => {,
         </section>
       </div>
       <Footer />
-<<<<<<< HEAD
-</>
-  );
-}
-=======
+
 </Footer></>
   )
 }
 
 export default PageFixedPage
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+

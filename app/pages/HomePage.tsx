@@ -29,9 +29,8 @@ export default function HomePage() {  return (
             <p className="text-xl md: text-2xl text-gray-300 mb-8 leading-relaxed">,
               Advanced AI and IT Solutions for Modern Businesses
             </p>
-            <pEmpowering businesses with cutting-edge artificial intelligence, cybersecurity solutions
-              cloud infrastructure, and digital transformation services to drive innovation and growth.
-            </p>
+            <p>Empowering businesses with cutting-edge artificial intelligence, cybersecurity solutions
+              cloud infrastructure, and digital transformation services to drive innovation and growth.</p>
             
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">,
               <Link 
@@ -56,8 +55,7 @@ export default function HomePage() {  return (
         <div className="text-center mb-16"> </div><h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
               Our Core Services
             </h2>
-            <pComprehensive technology solutions designed to accelerate your business growth
-            </p>
+            <p>Comprehensive technology solutions designed to accelerate your business growth</p>
           </div>
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
             {/* AI Solutions */}
@@ -65,9 +63,8 @@ export default function HomePage() {  return (
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform">,
                 <CpuChipIcon className="w-8 h-8 text-white" /> </CpuChipIcon></div>
               <h3 className="text-2xl font-bold text-white mb-4">AI Solutions</h3>
-              <pAdvanced artificial intelligence services including machine learning
-                natural language processing, and predictive analytics.
-              </p>
+              <p>Advanced artificial intelligence services including machine learning
+                natural language processing, and predictive analytics.</p>
               <Link href="/ai-solutions" className="text-purple-400 hover: text-purple-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">,
                 Learn More <ArrowRightIcon className="w-4 h-4" /> </ArrowRightIcon></Link>
             </div>
@@ -76,9 +73,8 @@ export default function HomePage() {  return (
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform">,
                 <ShieldCheckIcon className="w-8 h-8 text-white" /> </ShieldCheckIcon></div>
               <h3 className="text-2xl font-bold text-white mb-4">Cybersecurity</h3>
-              <pComprehensive security solutions to protect your digital assets
-                data, and infrastructure from evolving threats.
-              </p>
+              <p>Comprehensive security solutions to protect your digital assets
+                data, and infrastructure from evolving threats.</p>
               <Link href="/cybersecurity" className="text-cyan-400 hover: text-cyan-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">,
                 Learn More <ArrowRightIcon className="w-4 h-4" /> </ArrowRightIcon></Link>
             </div>
@@ -87,9 +83,8 @@ export default function HomePage() {  return (
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform">,
                 <CloudIcon className="w-8 h-8 text-white" /> </CloudIcon></div>
               <h3 className="text-2xl font-bold text-white mb-4">Cloud Infrastructure</h3>
-              <pScalable cloud solutions and infrastructure management to optimize
-                performance and reduce operational costs.
-              </p>
+              <p>Scalable cloud solutions and infrastructure management to optimize
+                performance and reduce operational costs.</p>
               <Link href="/cloud-solutions" className="text-green-400 hover: text-green-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">,
                 Learn More <ArrowRightIcon className="w-4 h-4" /> </ArrowRightIcon></Link>
             </div>
@@ -98,9 +93,8 @@ export default function HomePage() {  return (
               <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform">,
                 <ChartBarIcon className="w-8 h-8 text-white" /> </ChartBarIcon></div>
               <h3 className="text-2xl font-bold text-white mb-4">Digital Transformation</h3>
-              <pStrategic digital transformation services to modernize your business
-                processes and enhance customer experiences.
-              </p>
+              <p>Strategic digital transformation services to modernize your business
+                processes and enhance customer experiences.</p>
               <Link href="/digital-transformation" className="text-yellow-400 hover: text-yellow-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">,
                 Learn More <ArrowRightIcon className="w-4 h-4" /> </ArrowRightIcon></Link>
             </div>
@@ -109,9 +103,8 @@ export default function HomePage() {  return (
               <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform">,
                 <GlobeAltIcon className="w-8 h-8 text-white" /> </GlobeAltIcon></div>
               <h3 className="text-2xl font-bold text-white mb-4">Micro SaaS</h3>
-              <pCustom micro SaaS solutions designed to solve specific business
-                challenges with scalable, cost-effective applications.
-              </p>
+              <p>Custom micro SaaS solutions designed to solve specific business
+                challenges with scalable, cost-effective applications.</p>
               <Link href="/micro-saas" className="text-pink-400 hover: text-pink-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">,
                 Learn More <ArrowRightIcon className="w-4 h-4" /> </ArrowRightIcon></Link>
             </div>
@@ -120,9 +113,8 @@ export default function HomePage() {  return (
               <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform">,
                 <GlobeAltIcon className="w-8 h-8 text-white" /> </GlobeAltIcon></div>
               <h3 className="text-2xl font-bold text-white mb-4">5G Solutions</h3>
-              <pNext-generation 5G technology solutions for enhanced connectivity
-                IoT applications, and ultra-low latency services.
-              </p>
+              <p>Next-generation 5G technology solutions for enhanced connectivity
+                IoT applications, and ultra-low latency services.</p>
               <Link href="/5g-solutions" className="text-indigo-400 hover: text-indigo-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">,
                 Learn More <ArrowRightIcon className="w-4 h-4" /> </ArrowRightIcon></Link>
             </div>
@@ -134,10 +126,9 @@ export default function HomePage() {  return (
         <div className="max-w-4xl mx-auto text-center"> </div><h2 className="text-4xl md: text-5xl font-bold text-white mb-8">,
               Why Choose Zion Tech Group?
             </h2>
-            <pWith over 4 years of experience in cutting-edge technology solutions, 
+            <p>With over 4 years of experience in cutting-edge technology solutions, 
               we&apos;ve helped businesses across various industries transform their operations 
-              and achieve unprecedented growth.
-            </p>
+              and achieve unprecedented growth.</p>
             <div className="grid md: grid-cols-3 gap-8 mb-12">,
               <div50+</div>
                 <div className="text-gray-300">Projects Completed</div>
@@ -164,8 +155,7 @@ export default function HomePage() {  return (
         <div className="max-w-4xl mx-auto text-center"> </div><h2 className="text-4xl md: text-5xl font-bold text-white mb-8">,
               Ready to Transform Your Business?
             </h2>
-            <pLet&apos;s discuss how our technology solutions can drive your business forward
-            </p>
+            <p>Let&apos;s discuss how our technology solutions can drive your business forward</p>
             <div className="grid md: grid-cols-3 gap-8 mb-12">,
               <div className="flex items-center justify-center gap-4 text-gray-300"> </div><PhoneIcon className="w-6 h-6 text-purple-400" /> </PhoneIcon><span>+1-302-464-0950</span>
               </div>

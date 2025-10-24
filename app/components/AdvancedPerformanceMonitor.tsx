@@ -3,13 +3,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import Footer from 'Footer';
-const AdvancedPerformanceMonitorPage: React.FC = () => {
-=======
+
 import Footer from '../components/Footer';
 const AdvancedPerformanceMonitorPage: React.FC = () => {,
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
   const features = [
     {
       icon: Brain,
@@ -53,8 +50,7 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {,
         <div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
               Advanced SEO Optimizer New
             </h1>
-            <pAdvanced Performance Monitor solution for modern businesses.
-            </p>
+            <p>Advanced Performance Monitor solution for modern businesses.</p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
               <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">,
                 Get Started
@@ -69,8 +65,7 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {,
         {/* Features Section */}
         <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <pPowerful AI-driven features designed to transform your business operations
-              </p>
+              <p>Powerful AI-driven features designed to transform your business operations</p>
             </div>
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
               {features.map((feature, index) => (
@@ -89,8 +84,7 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {,
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5"> </section><div className="max-w-7xl mx-auto">
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution?</h2>
-              <pExperience the power of AI-driven performance monitoring
-              </p>
+              <p>Experience the power of AI-driven performance monitoring</p>
             </div>
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
               {benefits.map((benefit, index) => (
@@ -103,8 +97,7 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {,
         {/* CTA Section */}
         <section className="py-20 px-4"> </section><div className="max-w-4xl mx-auto text-center"> </div><h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?
             </h2></h2>
-            <pJoin thousands of businesses already using our AI-powered solutions
-            </p>
+            <p>Join thousands of businesses already using our AI-powered solutions</p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
               <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">,
                 Start Free Trial
@@ -118,14 +111,10 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {,
         </section>
       </div>
       <Footer />
-<<<<<<< HEAD
-</>
-  );
-}
-=======
+
 </Footer></>
   )
 }
 
 export default AdvancedPerformanceMonitorPage
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+

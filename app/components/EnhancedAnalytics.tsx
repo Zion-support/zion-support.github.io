@@ -10,20 +10,7 @@ interface AnalyticsContextType {
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined
-<<<<<<< HEAD
-);
 
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
-  if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
-};
-
-interface AnalyticsProviderProps {
-  children: React.ReactNode;
-=======
 )
 export const useAnalytics = ($2) => {
 $3
@@ -32,7 +19,7 @@ $3
 }
 interface AnalyticsProviderProps {
   children: React.ReactNode,
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
 }
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
@@ -46,16 +33,12 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`;
         document.head.appendChild(script);
 
-<<<<<<< HEAD
-        (window as any).dataLayer = (window as any).dataLayer || [];
-        function gtag(...args: any[]) {
-          (window as any).dataLayer.push(args);
-=======
+
         ;(window as unknown as { dataLayer: unknown[] }).dataLayer =
           (window as unknown as { dataLayer: unknown[] }).dataLayer || []
         function gtag(...args: unknown[]) {,
           ;(window as unknown as { dataLayer: unknown[] }).dataLayer.push(args)
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
         }
         gtag('js', new Date());
         gtag('config', process.env.NEXT_PUBLIC_GA_ID);
@@ -110,17 +93,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   };
 
   return (
-<<<<<<< HEAD
-    <AnalyticsContext.Provider value={value}>
-      {children}
-    </AnalyticsContext.Provider>
-  );
-};
-=======
+
     <AnalyticsContext.Provider value={value}>{children}
     </AnalyticsContext></AnalyticsContext.Provider>
   )
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
 
 export default AnalyticsProvider;

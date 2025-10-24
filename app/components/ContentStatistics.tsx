@@ -1,10 +1,5 @@
 'use client';
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { ArrowRight, Brain, BarChart, Target, TrendingUp, Users, Globe, Database, Settings, Shield, Zap } from 'lucide-react';
 
-const ContentStatistics: React.FC = () => {
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
@@ -12,7 +7,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 const ContentStatistics: React.FC = () => {,
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
   const [counters, setCounters] = useState({
     clients: 0,
     projects: 0,
@@ -33,19 +28,14 @@ const ContentStatistics: React.FC = () => {,
 
   useEffect(() => {
     const duration = 2000;
-<<<<<<< HEAD
-    const steps = 60;
-    const stepDuration = duration / steps;
-    
-    const interval = setInterval(() => {
-=======
+
 
 const steps = 60;
 
 const stepDuration = duration / steps;
 
 const interval = setInterval(() => {
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
       setCounters(prev => {
         const newCounters = { ...prev };
         let allComplete = true;
@@ -67,26 +57,7 @@ const interval = setInterval(() => {
         if (allComplete) {
           clearInterval(interval);
         }
-<<<<<<< HEAD
-        
-        return newCounters;
-      });
-    }, stepDuration);
 
-    return () => clearInterval(interval);
-  }, []);
-
-  const statistics = [
-    {
-      icon: Users,
-      label: "Happy Clients",
-      value: Math.round(counters.clients),
-      suffix: "+",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: BarChart,
-=======
         return newCounters
       })
     }, stepDuration)
@@ -107,7 +78,7 @@ const interval = setInterval(() => {
   {
     icon: <Target className="h-8 w-8" />,
     value: Math.round(counters.projects),
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
       label: "Projects Completed",
       value: Math.round(counters.projects),
       suffix: "+",
@@ -116,21 +87,7 @@ const interval = setInterval(() => {
     {
       icon: Target,
       label: "Client Satisfaction",
-<<<<<<< HEAD
-      value: Math.round(counters.satisfaction),
-      suffix: "%",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      icon: TrendingUp,
-      label: "Years Experience",
-      value: Math.round(counters.years),
-      suffix: "+",
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      icon: Globe,
-=======
+
     color: "from-yellow-500 to-orange-500"},
   {
     icon: <Clock className="h-8 w-8" />,
@@ -140,7 +97,7 @@ const interval = setInterval(() => {
   {
     icon: <Globe className="h-8 w-8" />,
     value: Math.round(counters.countries),
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
       label: "Countries Served",
       value: Math.round(counters.countries),
       suffix: "+",
@@ -156,31 +113,7 @@ const interval = setInterval(() => {
   ];
 
   return (
-<<<<<<< HEAD
-    <section className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Trusted by Industry Leaders
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our track record speaks for itself. We've helped businesses across the globe achieve their digital transformation goals.
-          </p>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {statistics.map((stat, index) => (
-            <div
-              key={index}
-              className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 group"
-            >
-              <div className="text-center">
-                <div className={`inline-flex p-4 rounded-xl bg-gradient-to-r ${stat.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <stat.icon className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-4xl font-bold text-white mb-2">
-                  {stat.value}{stat.suffix}
-=======
     <>
       
     </>
@@ -191,8 +124,7 @@ const interval = setInterval(() => {
         <div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
               ContentStatistics
             </h1>
-            <pAdvanced ContentStatistics solution for modern businesses.
-            </p>
+            <p>Advanced ContentStatistics solution for modern businesses.</p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
             <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">,
                 Get Started
@@ -207,8 +139,7 @@ const interval = setInterval(() => {
         {/* Features Section */}
         <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <pPowerful AI-driven features designed to transform your business operations
-              </p>
+              <p>Powerful AI-driven features designed to transform your business operations</p>
             </div>
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
             {features.map((feature, index) => (
@@ -227,42 +158,24 @@ const interval = setInterval(() => {
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5"> </section><div className="max-w-7xl mx-auto">
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
-              <pExperience the benefits of cutting-edge AI technology
-              </p>
+              <p>Experience the benefits of cutting-edge AI technology</p>
             </div>
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
             {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-4"> </div><CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /> </CheckCircle><p className="text-gray-300 text-lg">{benefit}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
                 </div>
                 <div className="text-gray-300 text-lg">
                   {stat.label}
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-          ))}
-        </div>
 
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl p-8 border border-cyan-500/20">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Join Our Success Stories?
-            </h3>
-            <p className="text-gray-300 mb-6">
-              Let us help you achieve similar results with our proven expertise and innovative solutions.
-            </p>
-            <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-              Get Started Today
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
-=======
           </div>
         </section>
         {/* CTA Section */}
         <section className="py-20 px-4"> </section><div className="max-w-4xl mx-auto text-center"> </div><h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <pJoin thousands of businesses already using our AI solutions
-            </p>
+            <p>Join thousands of businesses already using our AI solutions</p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
             <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">,
                 Start Free Trial
@@ -271,17 +184,12 @@ const interval = setInterval(() => {
                 Contact Sales
               </button>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
           </div>
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  );
-};
 
-export default ContentStatistics;
-=======
   )
 }
 
@@ -516,4 +424,4 @@ View Case Studies
 }
 
 export default ContentStatistics
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+

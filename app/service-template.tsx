@@ -3,16 +3,12 @@
 import React from 'react';
 
 interface ServiceTemplateProps {
-<<<<<<< HEAD
-  title: string;
-  description: string;
-  features: string[];
-=======
+
   title: string;,
   description: string;,
   features: string[];,
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
 
 const ServiceTemplate: React.FC<ServiceTemplateProps> = ({,
   title,

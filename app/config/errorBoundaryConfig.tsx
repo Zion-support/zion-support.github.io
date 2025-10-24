@@ -61,14 +61,11 @@ showErrorOverlay: isDevelopment,
 customMessages: DEFAULT_ERROR_MESSAGES,
     fallbackComponents: {,
 default: DefaultErrorFallback,
-<<<<<<< HEAD
-    network: NetworkErrorFallback
-notFound: NotFoundFallback}
-=======
+
     network: NetworkErrorFallback,
 notFound: NotFoundFallback}}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
 /**
 * Default error fallback component
 */
@@ -190,9 +187,8 @@ name: error.name,
 timestamp: new Date().toISOString(),
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
 url: typeof window !== 'undefined' ? window.location.href : 'unknown'}
-<<<<<<< HEAD
-=======
+
 }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
 export default getErrorBoundaryConfig

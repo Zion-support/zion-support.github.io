@@ -22,9 +22,8 @@ import { ArrowRight } from 'lucide-react';
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
+
 }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
 export default PerformanceEnhancerPage

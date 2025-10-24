@@ -49,8 +49,7 @@ const LoadingSkeletonPage: React.FC = () => {,
         <div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
               LoadingSkeleton
             </h1>
-            <pAdvanced LoadingSkeleton solution for modern businesses.
-            </p>
+            <p>Advanced LoadingSkeleton solution for modern businesses.</p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
             <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">,
                 Get Started
@@ -65,8 +64,7 @@ const LoadingSkeletonPage: React.FC = () => {,
         {/* Features Section */}
         <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <pPowerful AI-driven features designed to transform your business operations
-              </p>
+              <p>Powerful AI-driven features designed to transform your business operations</p>
             </div>
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
             {features.map((feature, index) => (
@@ -85,8 +83,7 @@ const LoadingSkeletonPage: React.FC = () => {,
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5"> </section><div className="max-w-7xl mx-auto">
         <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
-              <pExperience the benefits of cutting-edge AI technology
-              </p>
+              <p>Experience the benefits of cutting-edge AI technology</p>
             </div>
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
             {benefits.map((benefit, index) => (
@@ -98,8 +95,7 @@ const LoadingSkeletonPage: React.FC = () => {,
         </section>
         {/* CTA Section */}
         <section className="py-20 px-4"> </section><div className="max-w-4xl mx-auto text-center"> </div><h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <pJoin thousands of businesses already using our AI solutions
-            </p>
+            <p>Join thousands of businesses already using our AI solutions</p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
             <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">,
                 Start Free Trial
@@ -112,14 +108,10 @@ const LoadingSkeletonPage: React.FC = () => {,
         </section>
       </div>
       <Footer />
-<<<<<<< HEAD
-</>
-  );
-}
-=======
+
 </Footer></>
   )
 }
 
 export default LoadingSkeletonPage
->>>>>>> cursor/fix-errors-and-merge-to-main-998c
+
