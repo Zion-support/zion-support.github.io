@@ -30,6 +30,11 @@ const nextConfig = {
   },
   // Enable compression
   compress: true,
+  // Enable experimental features for better performance
+  experimental: {
+    missingSuspenseWithCSRBailout: false,
+    optimizePackageImports: ['@heroicons/react', 'lucide-react'],
+  },
   // Exclude problematic files temporarily
   webpack: (config, { isServer }) => {
     if (!isServer) {
