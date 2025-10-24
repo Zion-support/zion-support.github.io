@@ -1,4 +1,4 @@
-'use client'
+'use client';
 /**
  * Comprehensive Monitoring Utility
  * Real-time application monitoring, performance tracking, and error reporting
@@ -6,32 +6,24 @@
 
 // Declare gtag function for Google Analytics
 declare global {
-  function gtag(...args: any[]): void
-};
+  function gtag(...args: any[]): void;
+}
 
-  const performanceConfig = {
+const performanceConfig = {
   monitoring: {
-    enableLongTaskDetectio,
-      n: true,
+    enableLongTaskDetection: true,
     enableMemoryMonitoring: true,
     sampleRate: 0.1
   },
   webVitals: {
-    lc,
-      p: { goo,
-      d: 2500, needsImprovement: 4000 },
-    fid: { goo,
-      d: 100, needsImprovement: 300 },
-    cls: { goo,
-      d: 0.1, needsImprovement: 0.25 },
-    fcp: { goo,
-      d: 1800, needsImprovement: 3000 },
-    ttfb: { goo,
-      d: 800, needsImprovement: 1800 },
-    inp: { goo,
-      d: 200, needsImprovement: 500 }
+    lcp: { good: 2500, needsImprovement: 4000 },
+    fid: { good: 100, needsImprovement: 300 },
+    cls: { good: 0.1, needsImprovement: 0.25 },
+    fcp: { good: 1800, needsImprovement: 3000 },
+    ttfb: { good: 800, needsImprovement: 1800 },
+    inp: { good: 200, needsImprovement: 500 }
   }
-}
+};
 
 export interface PerformanceMetrics {
   lcp?: number
@@ -43,21 +35,18 @@ export interface PerformanceMetrics {
 }
 
 export interface ErrorReport {
-  message: string
-  stack?: string
-  component?: string
-  timestamp: number
-  userAgen,
-      t: string
-  ur,
-      l: string
+  message: string;
+  stack?: string;
+  component?: string;
+  timestamp: number;
+  userAgent: string;
+  url: string;
 }
 
 class MonitoringService {
-  private metrics: PerformanceMetrics = {}
-  private errors: ErrorReport[] = []
-  private observe,
-      r: PerformanceObserver | null = null
+  private metrics: PerformanceMetrics = {};
+  private errors: ErrorReport[] = [];
+  private observer: PerformanceObserver | null = null;
 
   constructor() {
     if (typeof window !== 'undefined') {
@@ -164,8 +153,7 @@ class MonitoringService {
           entries.forEach((entry: PerformanceResourceTiming) => {
             if (entry.duration > 1000) {
               // eslint-disable-next-line no-console
-              console.log('Slow resourc,
-      e:', entry.name, entry.duration)
+              console.log('Slow resource:', entry.name, entry.duration);
             }
           })
         })
@@ -194,13 +182,12 @@ class MonitoringService {
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
       this.logError({
-        message: `Unhandled Promise Rejectio,
-      n: ${event.reason}`,
+        message: `Unhandled Promise Rejection: ${event.reason}`,
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
         url: window.location.href
-      })
-    })
+      });
+    });
   }
 
   private reportMetric(name: string, value: number): void {
@@ -209,20 +196,19 @@ class MonitoringService {
       return
     };
 
-  const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
+    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals];
     if (thresholds) {
-      const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
+      const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor';
       // eslint-disable-next-line no-console
-      console.log(`Web Vital ${name}:`, value, `(${rating})`)
+      console.log(`Web Vital ${name}:`, value, `(${rating})`);
     }
 
     // Send to analytics (if configured)
     if (typeof gtag === 'function') {
       gtag('event', name, {
-        value: Math.round(name === 'cls' ? value * 100,
-      0: value),
+        value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals'
-      })
+      });
     }
   }
 
@@ -259,9 +245,7 @@ class MonitoringService {
 
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSiz,
-      e: number; jsHeapSizeLimi,
-      t: number } }).memory
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       if (memory) {
         // eslint-disable-next-line no-console
         console.log('Memory usage:', {
@@ -295,5 +279,5 @@ class MonitoringService {
 }
 
 // Singleton instance
-const monitoring = new MonitoringService()
-export default Page;
+const monitoring = new MonitoringService();
+export default monitoring;

@@ -16,8 +16,7 @@ export const generateSitemap = (): SitemapEntry[] => {
 
   return [
     {
-      lo,
-      c: `${baseUrl}/`,
+      loc: `${baseUrl}/`,
       lastmod: currentDate,
       changefreq: 'daily',
       priority: 1.0

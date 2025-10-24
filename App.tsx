@@ -39,15 +39,7 @@ const FiveGSolutionsPage = lazy(() => import('./app/5g-solutions/page'));
 
 // Additional AI Services
 const AIChatbotBuilderPage = lazy(() => import('./app/ai-chatbot-builder/page'));
-const AIVoiceAssistantPage = lazy(() => import('./app/ai-voice-assistant/page'));
-const AISocialMediaManagerPage = lazy(() => import('./app/ai-social-media-manager/page'));
-const AIVideoEditorPage = lazy(() => import('./app/ai-video-editor/page'));
-const AIAccountingAssistantPage = lazy(() => import('./app/ai-accounting-assistant/page'));
-const AIFinancialAnalyticsProPage = lazy(() => import('./app/ai-financial-analytics-pro/page'));
-const AIInvoiceGeneratorPage = lazy(() => import('./app/ai-invoice-generator/page'));
-const AIEmailAutomationPage = lazy(() => import('./app/ai-email-automation/page'));
 const AIAutomationPage = lazy(() => import('./app/ai-automation/page'));
-const AI3DGenerationPage = lazy(() => import('./app/ai-3d-generation/page'));
 
 // IT Solutions Pages
 const ITSolutionsPage = lazy(() => import('./app/it-solutions/page'));
@@ -103,15 +95,7 @@ const App: React.FC = () => {
                   <Route path="/ai-services" element={<AIServicesPage />} />
                   <Route path="/ai-solutions" element={<AISolutionsPage />} />
                   <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
-                  <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage />} />
-                  <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
-                  <Route path="/ai-video-editor" element={<AIVideoEditorPage />} />
-                  <Route path="/ai-accounting-assistant" element={<AIAccountingAssistantPage />} />
-                  <Route path="/ai-financial-analytics-pro" element={<AIFinancialAnalyticsProPage />} />
-                  <Route path="/ai-invoice-generator" element={<AIInvoiceGeneratorPage />} />
-                  <Route path="/ai-email-automation" element={<AIEmailAutomationPage />} />
                   <Route path="/ai-automation" element={<AIAutomationPage />} />
-                  <Route path="/ai-3d-generation" element={<AI3DGenerationPage />} />
 
                   {/* IT Services */}
                   <Route path="/it-services" element={<ITServicesPage />} />
@@ -147,9 +131,11 @@ const App: React.FC = () => {
             <AccessibilityEnhancer>
               <div></div>
             </AccessibilityEnhancer>
-            <SEOOptimizer>
-              <div></div>
-            </SEOOptimizer>
+            <SEOOptimizer
+              title="Zion Tech Group - Advanced AI and IT Solutions"
+              description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
+              keywords={['AI solutions', 'IT services', 'quantum computing', 'autonomous systems', 'enterprise technology']}
+            />
           </div>
         </Router>
       </GlobalErrorBoundary>
