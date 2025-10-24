@@ -2,8 +2,13 @@
 import React from 'react';
 interface AccessibilityComponentsProps {
   className?: string;
+
+
+
+
 }
-const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({ className }) => {
+
+const AccessibilityComponents: React.FC<AccessibilityComponentsProps> = ({ className }) =;>; ;{;
   return (
     <div className={className}>
       <h2>Accessibility Components</h2>

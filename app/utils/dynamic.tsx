@@ -1,7 +1,9 @@
 'use client';
-import React from 'react;
-export const dynamic = (;
-  return null;
-) => {"
-$3"
-,};
+import React from 'react';
+
+// dynamic utility
+export const dynamic = () => {
+  // Utility function implementation
+  return null
+export default dynamic;
+}

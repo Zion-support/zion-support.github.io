@@ -1,54 +1,39 @@
-// Performance monitoring utilities;
-export interface PerformanceMetric {;
-;
-name: "string;
-  value: number;
-  timestamp: number;
-  ur",l: "string;",
+import { useEffect } from 'react';
+
+export interface PerformanceMetrics {
+  loadTime:  ; ; ;n;u;m;b;e;r;
+  domContentLoaded:  ; ; ;n;u;m;b;e;r;
+  firstPaint:  ; ; ;n;u;m;b;e;r;
+  firstContentfulPaint:  ; ; ;n;u;m;b;e;r;
+  largestContentfulPaint:  ; ; ;n;u;m;b;e;r;
+  cumulativeLayoutShift:  ; ; ;n;u;m;b;e;r;
+  firstInputDelay:  ; ; ;n;u;m;b;e;r;
+
+
+
+
 }
-}"
-class PerformanceMonitor{;
-private metrics: "PerformanceMetric[] = [];
-  private isEnable",d: "boolean;
-;
-constructor() {  ",this.isEnabled = typeof window !== "undefined" && "performance" in window;,;
-}
-}"
-;
-class PerformanceMonitor{;
-private metrics: "PerformanceMetric[] = [];
-  private isEnable",d: "boolean;
-;
-constructor() {  ",this.isEnabled = typeof window !== "undefined" && "performance" in window;,
-, , }
+
+export class PerformanceMonitor {
+  private static instance: PerformanceMon;i;t;o;r;
+  private metrics: PerformanceMetrics | null = ;n;u;l;l;
+  private observers: ((metrics: PerformanceMetrics) => void)[] ;=; ;[;];
+
+  static getInstance(): PerformanceMonitor {
+    if (!PerformanceMonitor.instance) {
+      PerformanceMonitor.instance = new PerformanceMonitor();
+    }
+    return PerformanceMonitor.instance;
   }
-  // Measure page load time;
-measurePageLoad(): number | null{;
-if (!this.isEnabled) return null;
-;
-const navigation = performance.getEntriesByType("navigation")[0,] as PerformanceNavigationTiming;
-    if (!navigation) return null;
-;
-const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-    this.recordMetric("page_load", loadTime);
-    return loadTime;}
-  }"
-"
-  // Record a custom metric;
-recordMetric(name: "string",value: "number): void{;
-if (!this.isEnabled) return;
-;
-const metri",c: "PerformanceMetric = {;
-name",value,;
-}
-timestamp: "Date.now()",url: "window.location.href",};
-;
-this.metrics.push(metric);
-"
-    // Send to analytics in production;
-if(process.env.NODE_ENV = == "production") {  ;
-this.sendToAnalytics(metric);
-    ,}
+
+  subscribe(callback: (metrics: PerformanceMetrics) => void): () => voi;d; ;{;
+    this.observers.push(callback);
+    if (this.metrics) {
+      callback(this.metrics);
+    }
+    return () => {
+      this.observers = this.observers.filter(obs => obs !== callback);
+    };
   }
   // Get all recorded metrics;
 getMetrics(): PerformanceMetric[] {;
@@ -64,8 +49,83 @@ event_category: "Performance",);
 }
 value: "Math.round(metric.value)",});
     }
+
+    const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const paintEntries = window.performance.getEntriesByType('paint');
+    
+    const metrics: PerformanceMetrics ;=; ;{;
+      loadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart; ;:; ;0,
+      domContentLoaded: navigation ? navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart; ;:; ;0,
+      firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime ;|;|; ;0,
+      firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime ;|;|; ;0,
+      largestContentfulPaint:  ; ; ; ;0,
+      cumulativeLayoutShift:  ; ; ; ;0,
+      firstInputDelay:  ; ; ; ;0,
+    };
+
+    // Measure LCP
+    if ('PerformanceObserver' in window) {
+      try {
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          metrics.largestContentfulPaint = lastEntry.startTime;
+        });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint';]; ;};);
+      } catch {
+        console.warn('LCP measurement not supported');
+      }
+    }
+
+    this.metrics = metrics;
+    this.observers.forEach(obs => obs(metrics));
+    return metrics;
+  }
+
+  private getDefaultMetrics(): PerformanceMetrics {
+    return {
+      loadTime:  ; ; ; ;0,
+      domContentLoaded:  ; ; ; ;0,
+      firstPaint:  ; ; ; ;0,
+      firstContentfulPaint:  ; ; ; ;0,
+      largestContentfulPaint:  ; ; ; ;0,
+      cumulativeLayoutShift:  ; ; ; ;0,
+      firstInputDelay:  ; ; ; ;0,
+    };
   }
 }
-// Export singleton instance;
-export const performanceMonitor = new PerformanceMonitor();
-,}"
+
+export const usePerformanceMetrics = () => {
+  const monitor = PerformanceMonitor.getInstance();
+  
+  useEffect(() => {
+    monitor.measurePerformance();
+  }, [monitor]);
+
+  return monitor;
+};
+
+export const debounce = <T extends (...args: any[]) => an;y;>;(;
+  func:  ; ; ; ;T,
+  wait: num;b;e;r;
+): ((...args: Parameters<T>) => void) =;>; ;{;
+  let timeout: NodeJS.Tim;e;o;u;t;
+  return (...args: Parameters<T>) =;>; ;{;
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(...args), wait);
+  };
+};
+
+export const throttle = <T extends (...args: any[]) => an;y;>;(;
+  func:  ; ; ; ;T,
+  limit: num;b;e;r;
+): ((...args: Parameters<T>) => void) =;>; ;{;
+  let inThrottle: boo;l;e;a;n;
+  return (...args: Parameters<T>) =;>; ;{;
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => inThrottle = false, limit);
+    }
+  };
+};

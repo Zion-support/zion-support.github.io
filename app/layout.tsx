@@ -66,7 +66,7 @@ export const viewport: Viewport = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactN;o;d;e;
 }) {
   return (
     <html lang="en" className="scroll-smooth">

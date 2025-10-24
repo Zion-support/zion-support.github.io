@@ -4,23 +4,23 @@ import Helmet from 'react-helmet-async;
 import ArrowRight Brain  CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain, Globe         } from 'lucide-react;
 import { { Phone, Mail } from 'lucide-react;
     'use client'
-      'Gain competitive advantage with advanced technology'"
-const EnhancedHero: "React.FC = () => {"
-const benefits = ["'"
-    'Increase efficiency by up to 50%'",'Reduce costs by 30% with automation'
+      'Gain competitive advantage with advanced technology'
+
+const EnhancedHero: React.FC = () =;>; ;{;
+  const benefits = [
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
     'Improve decision-making with AI insights'
-    'Scale operations without proportional staff increases'"
-'Gain competitive advantage with advanced technology","
-    <div className="flex flex-col sm: flex-row gap-4 justify-center" />
-        </section>"
-"
-        / Benefits Section /"
-        <section className="py-20 px-4 bg-white/5">"
-"
-      <divkey=index className="flex items-start space-x-4" / />"
-    </div>,<div className="flex-shrink-0" /><CheckCircle className="w-6 h-6 text-emerald-400" />"
-                    </div>"
-                  <p className="text-gray-300">benefit</p>
+    'Scale operations without proportional staff increases'
+    'Gain competitive advantage with advanced technology'
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></d;i;v;>;
+        </section>
+
+        / Benefits Section /
+        <section className="py-20 px-4 bg-white/5"></section>
+                </div>
+        </div>
+        </div><CheckCircle className="w-6 h-6 text-emerald-400" />
                   </div>
               </div>
             </div>

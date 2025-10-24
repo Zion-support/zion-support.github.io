@@ -1,39 +1,41 @@
 import { useCallback, useEffect, useState, useRef } from 'react;
 interface UsePerformanceMonitorOptions {
-;
-enabled?: boolean;
-threshold?: number;
-measureMemoryUsage?: boolean;
-}
-}
-};
-interface PerformanceData {"
-;
-fps: "number;
-memoryUsage: number;
-loadTime: number;
-renderTim",e: "number",
-}
+  enabled?: boolean
+  threshold?: number
+  measureMemoryUsage?: boolean
+
+
+
 }
 };
-;
-export const usePerformanceMonitor = (;
-const [metrics, setMetrics,] = useState<PerformanceData>({;
-fps: "0",memoryUsage: "0",loadTime: "0",renderTime: "0",) => {
-$3
-});
-const [isMonitoringFPS, setIsMonitoringFPS,] = useState(false);
+interface PerformanceData {
+  fps:  ; ;n;u;m;b;e;r;
+  memoryUsage:  ; ;n;u;m;b;e;r;
+  loadTime:  ; ;n;u;m;b;e;r;
+  renderTim
+  e:  ; ;n;u;m;b;e;r;
+
+
+
+}
+};
+export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}) =;>; ;{;
+  const [metrics, setMetrics] = useState<PerformanceData>({
+    fps:  ; ; ;0;
+    memoryUsage:  ; ; ;0;
+    loadTime:  ; ; ;0;
+    renderTime:  ; ; ;0;
+  })
+  const [isMonitoringFPS, setIsMonitoringFPS] = useState(false);
   const frameCountRef = useRef(0);
-  const lastTimeRef = useRef(performance.now());
-const measureMemoryUsage = useCallback(() => {;
-if (typeof window !== 'undefined' && 'memory" in, performance) {;
-const memory = (performance, as, any).memory;
-setMetrics(prev = > ({;
-        ...prev,;
-)
-memoryUsage: "memory.usedJSHeapSize / 1024 / 1024 // Convert, to, MB)"
-"
-      ",}))
+  const lastTimeRef = useRef(performance.now())
+  const measureMemoryUsage = useCallback(() => {
+    if (typeof window !== 'undefined' && 'memory' in performance) {
+      const memory = (performance as any).memory
+      setMetrics(prev => ({
+        ...prev
+        memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to ;M;B;);
+      }))
     }
   }, []);
 const init = useCallback(() => {;

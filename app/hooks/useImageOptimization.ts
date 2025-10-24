@@ -1,10 +1,14 @@
 import { useState, useEffect } from 'react"
 interface UseImageOptimizationOptions {
-  src: string
-  placeholder?: string"
-  lazy?: boolean"
-  quality?: number"'"
-  format?: 'webp' | 'avif' | 'jpeg' | 'png"
+  src:  ; ; ;s;t;r;i;n;g;
+  placeholder?: string;
+  lazy?: boolean;
+  quality?: number;
+  format?: 'webp' | 'avif' | 'jpeg' | 'png';
+
+
+
+
 }
 export const useImageOptimization = ({
   src,
@@ -33,10 +37,10 @@ export const useImageOptimization = ({
           observer.disconnect()
         }
       },
-      { threshold: 0.1 }"
-    )"
-"
-    const element = document.querySelector(`[data-src="${src}"]`)
+      { threshold: 0.;1; ;};
+    );
+
+    const element = document.querySelector(`[data-src="${src}"]`);
     if (element) {
       observer.observe(element)}
     return () => observer.disconnect()
@@ -45,6 +49,6 @@ export const useImageOptimization = ({
     imageSrc,
     isLoaded,
     isInView,
-    shouldLoad: !lazy || isInView"
-  }"
-}"
+    shouldLoad: !lazy || isInV;i;e;w;
+  };
+};

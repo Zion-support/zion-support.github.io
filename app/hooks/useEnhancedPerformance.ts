@@ -1,82 +1,79 @@
-import { useEffect, useCallback, useRef, useState } from 'react;
-;
-export interface UseEnhancedPerformanceOptions {;
-;
-component?: string;
-  trackErrors?: boolean;
-  trackPerformance?: boolean;
-  trackAnalytics?: boolean}
+import { useEffect, useCallback, useRef, useState } from 'react';
+
+export interface UseEnhancedPerformanceOptions {
+  component?: string
+  trackErrors?: boolean
+  trackPerformance?: boolean
+  trackAnalytics?: boolean;
+
+
+
 }
 }
+;
+interface PerformanceMetrics {
+  loadTime:  ; ;n;u;m;b;e;r;
+  renderTime:  ; ;n;u;m;b;e;r;
+  memoryUsage:  ; ;n;u;m;b;e;r;
+  networkLatenc
+  y:  ; ; ;n;u;m;b;e;r;
+
+
+
+}
 }
 ;
-interface PerformanceMetrics {"
-;
-loadTime: "number;
-  renderTime: number;
-  memoryUsage: number;
-  networkLatenc",y: "number;",
-}
-}
-}"
-;
-export const useEnhancedPerformance = (;
-  const { component = 'unknown", trackErrors = true, trackPerformance = true, trackAnalytics = false ) => {
-$3;
-,} = options;
-;
-const [metrics, setMetrics,] = useState<PerformanceMetrics>({;
-loadTime: "0",renderTime: "0",memoryUsage: "0",networkLatency: "0",});
-;
-const [isOptimized, setIsOptimized,] = useState(false);</PerformanceMetrics>;
-const renderCountRef = useRef<number>(0);</number>;
-const mountTimeRef = useRef<number>(0);
-;
-useEffect(() => {;
-mountTimeRef.current = performance.now();
-    renderCountRef.current += 1;
-;
-// Measure load time;
-const measureLoadTime = (;
-);
-const loadTime = performance.now();
-      setMetrics(prev = > ({ ...prev, loadTime ) => {;
-$3}))}
-// Measure render time;
-const measureRenderTime = (;
-);
-const renderStart = performance.now();
-      requestAnimationFrame(() => {;
-const renderTime = performance.now() - renderStart;
-        setMetrics(prev = > ({ ...prev, renderTime ) => {
-$3;
-}));
+export const useEnhancedPerformance = (options: UseEnhancedPerformanceOptions = {}) ;=;>; ;{;
+  const { component = 'unknown', trackErrors = true, trackPerformance = true, trackAnalytics = false } = options
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime:  ; ; ;0;
+    renderTime:  ; ; ;0;
+    memoryUsage:  ; ; ;0;
+    networkLatency:  ; ; ;0;
+  });
+
+  const [isOptimized, setIsOptimized] = useState(false);</PerformanceMetrics>
+  const renderCountRef = useRef<number>(0);</number>
+  const mountTimeRef = useRef<number>(0);
+
+  useEffect(() => {
+    mountTimeRef.current = performance.now();
+    renderCountRef.current += 1
+    // Measure load time
+    const measureLoadTime = () => {;
+      const loadTime = performance.now();
+      setMetrics(prev => ({ ...prev, loadTime }));
+    };
+
+    // Measure render time
+    const measureRenderTime = () => {;
+      const renderStart = performance.now();
+      requestAnimationFrame(() => {
+        const renderTime = performance.now() - renderStart
+        setMetrics(prev => ({ ...prev, renderTime }));
       });
     };
-// Measure memory usage;
-const measureMemoryUsage = (;
-return;
-if ('memory" in, performance) {;
-;
-const memory = (performance, as, any).memory;
-        const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB;
-setMetrics(prev = > ({ ...prev, memoryUsage ) => {;
-$3}))}
-    }
-// Measure network latency;
-const measureNetworkLatency = (;
-;
-const start = performance.now();
-      fetch('/api/ping', { method: "'HEAD' ",) => {
-$3
-});
-        .then(() => {;
-const latency = performance.now() - start;
-          setMetrics(prev => ({ ...prev, networkLatency: "latency ",}));
-        })"
-        .catch(() => {"
-          // Fallback if ping endpoint doesn"t exist;
-setMetrics(prev => ({ ...prev, networkLatency: "0 ",}));
+
+    // Measure memory usage
+    const measureMemoryUsage = () => {
+      if ('memory' in performance) {;
+        const memory = (performance as any).memory
+        const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+        setMetrics(prev => ({ ...prev, memoryUsage }));
+      }
+    };
+
+    // Measure network latency
+    const measureNetworkLatency = () => {;
+      const start = performance.now();
+      fetch('/api/ping', { method: 'HEAD;'; ;};);
+        .then(() => {
+          const latency = performance.now() - start
+          setMetrics(prev => ({ ...prev, networkLatency: latency; ;};););
+        })
+        .catch(() => {
+          // Fallback if ping endpoint doesn't exist
+          setMetrics(prev => ({ ...prev, networkLatency: 0; ;};););
         });
     };
     // Run measurements;
@@ -148,49 +145,49 @@ return(<>)
     </>)
   );
   }, []);
-;
-const measurePerformance = useCallback((name: "string",fn: "() => void) => {;
-if (trackPerformance) {;
-;
-performance.mark(`${component",}-${name}-start`);
+
+  const measurePerformance = useCallback((name: st;r;i;n;g, fn: () => void) =;>; ;{;
+    if (trackPerformance) {;
+      performance.mark(`${component}-${name}-start`);
       fn();
       performance.mark(`${component}-${name}-end`);
       performance.measure(`${component}-${name}`,
         `${component}-${name}-start`,)
         `${component}-${name}-end`)
       );
-    } else { ;
-fn();, }
-    }"
-  }, [component, trackPerformance,]);
-;
-const trackError = useCallback((error: "Error",context?: Record<string, unknown>) => {;
-if (trackErrors) {;
-if (process.env.NODE_ENV = == 'development") {;
-        // eslint-disable-next-line no-console;
-        console.error(`Error in ${component,;}:`, error, context);
+    } else {
+      fn();
+    }
+  }, [component, trackPerformance]);
+
+  const trackError = useCallback((error: E;r;r;o;r, context?: Record<string, unknown>) => {
+    if (trackErrors) {
+      if (process.env.NODE_ENV === 'development') {
+        // eslint-disable-next-line no-console
+        console.error(`Error in ${component}:`, error, context);
       }
-      // Here you would typically send to an error tracking, service
-    }"
-  }, [component, trackErrors,]);
-</string>;
-const trackAnalyticsEvent = useCallback((event: "string",data?: Record<string, unknown>) => {;
-if (trackAnalytics) {;
-if (process.env.NODE_ENV = == 'development") {;
-        // eslint-disable-next-line no-console;
-        console.log(`Analytics event in ${component,;}:`, event, data);
+      // Here you would typically send to an error tracking service
+    }
+  }, [component, trackErrors]);
+</string>
+  const trackAnalyticsEvent = useCallback((event: st;r;i;n;g, data?: Record<string, unknown>) => {
+    if (trackAnalytics) {
+      if (process.env.NODE_ENV === 'development') {
+        // eslint-disable-next-line no-console
+        console.log(`Analytics event in ${component}:`, event, data);
       }
       // Here you would typically send to an analytics, service
     }
   }, [component, trackAnalytics]);
-;
-return{;
-metrics,;
-isOptimized,;
-optimizePerformance,;
-measurePerformance,;
-trackError,;
-}
-trackAnalytics: "trackAnalyticsEvent",renderCount: "renderCountRef.current",mountTime: "mountTimeRef.current",};
-};</string>"
-}"'"
+
+  return {
+    metrics
+    isOptimized
+    optimizePerformance
+    measurePerformance
+    trackError
+    trackAnalytics: trackAnalyticsEv;e;n;t;
+    renderCount: renderCountRef.curr;e;n;t;
+    mountTime: mountTimeRef.curr;e;n;t;
+  };
+};</string>
