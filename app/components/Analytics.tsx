@@ -1,4 +1,4 @@
-import React, { useEffect } from &quot;react&quot;
+import React, { useEffect } from "react"
 interface AnalyticsProps {
   className?: string
 const Analytics: React.FC = () => {
