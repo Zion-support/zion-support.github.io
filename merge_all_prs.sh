@@ -1,95 +1,83 @@
 #!/bin/bash
 
-# Script to merge all open PRs into main branch
-# This script will handle merge conflicts automatically
+# Script to merge all open PRs
+echo "Starting to merge all open PRs..."
 
-set -e
-
-echo "Starting comprehensive PR merge process..."
-
-# Get all open PRs
-echo "Fetching all open PRs..."
-PRS=$(gh pr list --state open --json number,title,headRefName --jq '.[].number')
-
-# Convert to array
-PR_ARRAY=($PRS)
-
-echo "Found ${#PR_ARRAY[@]} open PRs to merge"
-
-# Function to merge a single PR
-merge_pr() {
-    local pr_number=$1
-    echo "Processing PR #$pr_number..."
-    
-    # Check if PR is draft
-    local is_draft=$(gh pr view $pr_number --json isDraft --jq '.isDraft')
-    
-    if [ "$is_draft" = "true" ]; then
-        echo "PR #$pr_number is a draft, converting to ready for review..."
-        gh pr ready $pr_number
-    fi
-    
-    # Try to merge the PR
-    echo "Attempting to merge PR #$pr_number..."
-    if gh pr merge $pr_number --merge --delete-branch; then
-        echo "Successfully merged PR #$pr_number"
-        return 0
-    else
-        echo "Failed to merge PR #$pr_number, checking for conflicts..."
-        
-        # Check out the PR branch
-        gh pr checkout $pr_number
-        
-        # Try to merge with main
-        if git merge main; then
-            echo "No conflicts found, merging..."
-            git checkout main
-            git merge $pr_number
-            git push origin main
-            gh pr close $pr_number --delete-branch
-            echo "Successfully merged PR #$pr_number after resolving conflicts"
-        else
-            echo "Conflicts found in PR #$pr_number, attempting to resolve..."
-            
-            # Use git merge strategy to resolve conflicts
-            git checkout main
-            git merge $pr_number --strategy-option=ours || {
-                echo "Failed to resolve conflicts for PR #$pr_number, skipping..."
-                git merge --abort
-                return 1
-            }
-            
-            git push origin main
-            gh pr close $pr_number --delete-branch
-            echo "Successfully merged PR #$pr_number with conflict resolution"
-        fi
-        
-        return 0
-    fi
-}
+# Get list of open PRs
+PR_LIST=$(gh pr list --state open --json number,title,headRefName --jq '.[] | "\(.number) \(.headRefName)"')
 
 # Process each PR
-for pr in "${PR_ARRAY[@]}"; do
-    echo "=========================================="
-    echo "Processing PR #$pr"
-    echo "=========================================="
-    
-    if merge_pr $pr; then
-        echo "✅ Successfully processed PR #$pr"
-    else
-        echo "❌ Failed to process PR #$pr"
+while IFS= read -r line; do
+    if [ -z "$line" ]; then
+        continue
     fi
     
-    echo ""
-done
+    PR_NUMBER=$(echo "$line" | awk '{print $1}')
+    BRANCH_NAME=$(echo "$line" | awk '{print $2}')
+    
+    echo "Processing PR #$PR_NUMBER ($BRANCH_NAME)..."
+    
+    # Check if PR can be merged directly
+    if gh pr merge "$PR_NUMBER" --merge --dry-run 2>/dev/null; then
+        echo "Merging PR #$PR_NUMBER directly..."
+        gh pr merge "$PR_NUMBER" --merge
+    else
+        echo "PR #$PR_NUMBER has conflicts, resolving..."
+        
+        # Checkout the PR branch
+        gh pr checkout "$PR_NUMBER"
+        
+        # Fetch latest main
+        git fetch origin main
+        
+        # Try to merge main into the branch
+        if git merge origin/main; then
+            echo "Merge successful, pushing changes..."
+            git push origin "$BRANCH_NAME"
+            
+            # Now try to merge the PR
+            if gh pr merge "$PR_NUMBER" --merge; then
+                echo "Successfully merged PR #$PR_NUMBER"
+            else
+                echo "Failed to merge PR #$PR_NUMBER after conflict resolution"
+            fi
+        else
+            echo "Merge conflict detected, attempting to resolve..."
+            
+            # Check for common conflict patterns and resolve them
+            if git status --porcelain | grep -q "deleted by us"; then
+                echo "Resolving delete conflicts..."
+                git status --porcelain | grep "deleted by us" | awk '{print $2}' | xargs git rm
+            fi
+            
+            if git status --porcelain | grep -q "deleted by them"; then
+                echo "Resolving delete conflicts (deleted by them)..."
+                git status --porcelain | grep "deleted by them" | awk '{print $2}' | xargs git add
+            fi
+            
+            # Add all changes
+            git add .
+            
+            # Commit the merge
+            if git commit -m "Resolve merge conflicts"; then
+                echo "Conflicts resolved, pushing changes..."
+                git push origin "$BRANCH_NAME"
+                
+                # Try to merge the PR
+                if gh pr merge "$PR_NUMBER" --merge; then
+                    echo "Successfully merged PR #$PR_NUMBER after conflict resolution"
+                else
+                    echo "Failed to merge PR #$PR_NUMBER after conflict resolution"
+                fi
+            else
+                echo "Failed to resolve conflicts for PR #$PR_NUMBER"
+            fi
+        fi
+    fi
+    
+    echo "Completed processing PR #$PR_NUMBER"
+    echo "---"
+    
+done <<< "$PR_LIST"
 
-echo "=========================================="
-echo "PR merge process completed!"
-echo "=========================================="
-
-# Final status check
-echo "Final git status:"
-git status
-
-echo "Recent commits:"
-git log --oneline -10
+echo "Finished processing all PRs"

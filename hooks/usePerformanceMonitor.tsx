@@ -8,6 +8,7 @@ import { useEffect } from 'react';
 //   cls?: number;
 //   ttfb?: number;
 // }
+
 export const usePerformanceMonitor = () => {
   useEffect(() => {
     // Only run in browser environment
@@ -23,7 +24,7 @@ export const usePerformanceMonitor = () => {
               console.log('FCP:', entry.startTime);
               // Send to analytics
               if ('gtag' in window) {
-                (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'web_vitals', {
+                (window as any).gtag('event', 'web_vitals', {
                   event_category: 'Performance',
                   event_label: 'FCP',
                   value: Math.round(entry.startTime)
@@ -40,7 +41,7 @@ export const usePerformanceMonitor = () => {
           const lastEntry = entries[entries.length - 1];
           console.log('LCP:', lastEntry.startTime);
           if ('gtag' in window) {
-            (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'web_vitals', {
+            (window as any).gtag('event', 'web_vitals', {
               event_category: 'Performance',
               event_label: 'LCP',
               value: Math.round(lastEntry.startTime)
@@ -52,10 +53,10 @@ export const usePerformanceMonitor = () => {
         // First Input Delay (FID)
         const fidObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            const fid = (entry as { processingStart: number }).processingStart - entry.startTime;
+            const fid = (entry as any).processingStart - entry.startTime;
             console.log('FID:', fid);
             if ('gtag' in window) {
-              (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'web_vitals', {
+              (window as any).gtag('event', 'web_vitals', {
                 event_category: 'Performance',
                 event_label: 'FID',
                 value: Math.round(fid)
@@ -69,13 +70,13 @@ export const usePerformanceMonitor = () => {
         let clsValue = 0;
         const clsObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            if (!(entry as { hadRecentInput: boolean }).hadRecentInput) {
-              clsValue += (entry as { value: number }).value;
+            if (!(entry as any).hadRecentInput) {
+              clsValue += (entry as any).value;
             }
           }
           console.log('CLS:', clsValue);
           if ('gtag' in window) {
-            (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'web_vitals', {
+            (window as any).gtag('event', 'web_vitals', {
               event_category: 'Performance',
               event_label: 'CLS',
               value: Math.round(clsValue * 1000)
@@ -90,7 +91,7 @@ export const usePerformanceMonitor = () => {
     const analyzeResourceTiming = () => {
       if ('performance' in window && 'getEntriesByType' in performance) {
         const resources = performance.getEntriesByType('resource');
-        const slowResources = resources.filter((resource: PerformanceResourceTiming) => 
+        const slowResources = resources.filter((resource: any) => 
           resource.duration > 1000 || resource.transferSize > 100000
         );
         
@@ -103,7 +104,7 @@ export const usePerformanceMonitor = () => {
     // Memory usage monitoring
     const monitorMemoryUsage = () => {
       if ('memory' in performance) {
-        const memory = (performance as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number } }).memory;
+        const memory = (performance as any).memory;
         const memoryUsage = {
           used: memory.usedJSHeapSize,
           total: memory.totalJSHeapSize,

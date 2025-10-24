@@ -2,22 +2,31 @@ import { describe, test, expect } from '@jest/globals';
 import { render, screen } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
 import '@testing-library/jest-dom';
+import Loading from '../app/components/Loading';
+import SEOHeadWrapper from '../app/components/SEOHeadWrapper';
 
-import LoadingSpinner from '../app/components/LoadingSpinner';
-import SEOHead from '../app/components/SEOHead';
-
-describe('Component Tests', () => {
-  test('LoadingSpinner renders correctly', () => {
-    render(<LoadingSpinner />);
-    expect(screen.getByRole('status')).toBeTruthy();
-  });
-  
-  test('SEOHead renders without crashing', () => {
+describe('Loading Component', () => {
+  test('renders loading text', () => {
     render(
       <HelmetProvider>
-        <SEOHead />
+        <Loading />
       </HelmetProvider>
     );
-    expect(document.head).toBeTruthy();
+    expect(screen.getByText('Loading')).toBeTruthy();
+  });
+});
+
+describe('SEOHeadWrapper Component', () => {
+  test('renders without crashing', () => {
+    const { container } = render(
+      <HelmetProvider>
+        <SEOHeadWrapper 
+          title="Test Title"
+          description="Test Description"
+          keywords={['test', 'keywords']}
+        />
+      </HelmetProvider>
+    );
+    expect(container).toBeTruthy();
   });
 });

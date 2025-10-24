@@ -1,94 +1,95 @@
-import { useEffect, useCallback, useRef } from 'react'
+import { useState, useEffect, useCallback } from 'react';
 
-export interface UseEnhancedPerformanceOptions {
-  component?: string
-  trackErrors?: boolean
-  trackPerformance?: boolean
-  trackAnalytics?: boolean
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  fps: number;
 }
 
-export function useEnhancedPerformance(options: UseEnhancedPerformanceOptions = {}) {
-  const {
-    component = 'Unknown',
-    trackErrors = true,
-    trackPerformance = true,
-    trackAnalytics = true
-  } = options
+interface UseEnhancedPerformanceReturn {
+  metrics: PerformanceMetrics;
+  isOptimized: boolean;
+  optimize: () => void;
+}
 
-  const mountTimeRef = useRef<number>(0)
-  const renderCountRef = useRef<number>(0)
-
-  useEffect(() => {
-    mountTimeRef.current = performance.now()
-    renderCountRef.current += 1
-
-    // Track component mount
-    if (trackAnalytics) {
-      console.log(`Component ${component} mounted`)
-    }
-
-    return () => {
-      // Track component unmount duration
-      if (trackPerformance) {
-        const duration = performance.now() - mountTimeRef.current
-        
-        if (duration > 5000) {
-          // Long-lived component
-          console.log(`Long component lifetime: ${component} - ${Math.round(duration)}ms`)
-        }
-      }
-
-      // Track component unmount
-      if (trackAnalytics) {
-        console.log(`Component ${component} unmounted`)
-      }
-    };
-  }, [component, trackAnalytics, trackPerformance]);
-
-  // Track render performance
-  useEffect(() => {
-    renderCountRef.current++;
-
-    if (trackPerformance && renderCountRef.current > 10) {
-      // Many re-renders detected
-      console.log(`High render count in ${component}: ${renderCountRef.current}`)
-    }
+const useEnhancedPerformance = (): UseEnhancedPerformanceReturn => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    fps: 60
   });
 
-  const measurePerformance = useCallback((name: string, fn: () => void) => {
-    if (trackPerformance) {
-      performance.mark(`${component}-${name}-start`)
-      fn()
-      performance.mark(`${component}-${name}-end`)
-      performance.measure(
-        `${component}-${name}`,
-        `${component}-${name}-start`,
-        `${component}-${name}-end`
-      )
-    } else {
-      fn()
-    }
-  }, [component, trackPerformance])
+  const [isOptimized, setIsOptimized] = useState(false);
 
-  const trackError = useCallback((error: Error, context?: Record<string, unknown>) => {
-    if (trackErrors) {
-      console.error(`Error in ${component}:`, error, context)
-      // Here you would typically send to an error tracking service
-    }
-  }, [component, trackErrors])
+  const measurePerformance = useCallback(() => {
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+    
+    const renderTime = performance.now();
+    
+    const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
+    
+    // Simple FPS calculation
+    let fps = 60;
+    let lastTime = performance.now();
+    const calculateFPS = () => {
+      const currentTime = performance.now();
+      fps = 1000 / (currentTime - lastTime);
+      lastTime = currentTime;
+    };
+    
+    calculateFPS();
 
-  const trackAnalyticsEvent = useCallback((event: string, data?: Record<string, unknown>) => {
-    if (trackAnalytics) {
-      console.log(`Analytics event in ${component}:`, event, data)
-      // Here you would typically send to an analytics service
+    setMetrics({
+      loadTime,
+      renderTime,
+      memoryUsage,
+      fps
+    });
+  }, []);
+
+  const optimize = useCallback(() => {
+    // Implement performance optimizations
+    if (typeof window !== 'undefined') {
+      // Lazy load images
+      const images = document.querySelectorAll('img[data-src]');
+      images.forEach((img) => {
+        const image = img as HTMLImageElement;
+        if (image.dataset.src) {
+          image.src = image.dataset.src;
+          image.removeAttribute('data-src');
+        }
+      });
+
+      // Preload critical resources
+      const criticalResources = document.querySelectorAll('[data-preload]');
+      criticalResources.forEach((resource) => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = resource.getAttribute('href') || '';
+        link.as = resource.getAttribute('as') || 'script';
+        document.head.appendChild(link);
+      });
+
+      setIsOptimized(true);
     }
-  }, [component, trackAnalytics])
+  }, []);
+
+  useEffect(() => {
+    measurePerformance();
+    
+    const interval = setInterval(measurePerformance, 1000);
+    
+    return () => clearInterval(interval);
+  }, [measurePerformance]);
 
   return {
-    measurePerformance,
-    trackError,
-    trackAnalytics: trackAnalyticsEvent,
-    renderCount: renderCountRef.current,
-    mountTime: mountTimeRef.current
-  }
-}
+    metrics,
+    isOptimized,
+    optimize
+  };
+};
+
+export default useEnhancedPerformance;

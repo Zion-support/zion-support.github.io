@@ -1,66 +1,88 @@
 #!/usr/bin/env python3
-"""
-Script to fix duplicate function definitions in TypeScript/TSX files
-"""
 import os
 import re
 import glob
 
 def fix_duplicate_functions(file_path):
-    """Fix duplicate function definitions in a single file"""
+    """Fix duplicate function declarations and malformed JSX"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Check if file has duplicate function definitions
-        if 'export default function PagePage()' not in content:
+        original_content = content
+        
+        # Fix duplicate function declarations
+        # Pattern: const SomePage: React.FC = () => { ... const PagePage: React.FC = () => {
+        content = re.sub(
+            r'(\s*const\s+\w+Page:\s*React\.FC\s*=\s*\(\)\s*=>\s*\{[^}]*?)(\s*const\s+PagePage:\s*React\.FC\s*=\s*\(\)\s*=>\s*\{)',
+            r'\1',
+            content,
+            flags=re.DOTALL
+        )
+        
+        # Fix malformed JSX structure where div is not properly closed
+        content = re.sub(
+            r'(\s*<div[^>]*>\s*{/\* Hero Section \*/}\s*</div>\s*)(\s*<section[^>]*>)',
+            r'\1\n        \2',
+            content,
+            flags=re.DOTALL
+        )
+        
+        # Fix missing opening div tag
+        content = re.sub(
+            r'(\s*<Navigation />\s*)(\s*<div[^>]*>\s*{/\* Hero Section \*/}\s*</div>\s*<section)',
+            r'\1<div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">\n        <section',
+            content,
+            flags=re.DOTALL
+        )
+        
+        # Fix incomplete JSX structure
+        content = re.sub(
+            r'(\s*<div[^>]*>\s*{/\* Hero Section \*/}\s*</div>\s*<section[^>]*>\s*<div[^>]*>\s*<div[^>]*>\s*</div>\s*</div>\s*</section>)',
+            r'\1\n        </div>',
+            content,
+            flags=re.DOTALL
+        )
+        
+        # Fix missing closing tags
+        if '<div className="min-h-screen' in content and content.count('<div') > content.count('</div>'):
+            # Add missing closing div
+            content = content.rstrip() + '\n      </div>'
+        
+        # Fix missing Footer and closing tags
+        if '<Footer />' not in content and 'export default' in content:
+            # Find the last closing div and add Footer before it
+            content = re.sub(
+                r'(\s*</div>\s*)(\s*</>\s*;\s*\};\s*export default)',
+                r'\1      <Footer />\n    \2',
+                content,
+                flags=re.DOTALL
+            )
+        
+        # Only write if content changed
+        if content != original_content:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            print(f"Fixed: {file_path}")
+            return True
+        else:
+            print(f"No changes needed: {file_path}")
             return False
-        
-        print(f"Fixing duplicate functions in: {file_path}")
-        
-        # Extract the component name from the file path
-        component_name = os.path.basename(file_path).replace('.tsx', '').replace('.ts', '')
-        # Convert kebab-case to PascalCase
-        component_name = ''.join(word.capitalize() for word in component_name.split('-'))
-        
-        # Pattern to match the duplicate function structure
-        pattern = r'export default function PagePage\(\) \{\s*const features = \[.*?\];\s*const ' + component_name + r'Page: React\.FC = \(\) => \{'
-        
-        # Replace with just the component function
-        fixed_content = re.sub(pattern, f'const {component_name}Page: React.FC = () => {{\n  const features = [', content, flags=re.DOTALL)
-        
-        # Add export at the end
-        if 'export default' not in fixed_content:
-            fixed_content = re.sub(r'(\s*);\s*$', r'\1;\n\nexport default ' + component_name + 'Page;', fixed_content)
-        
-        # Write the fixed content back
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(fixed_content)
-        
-        return True
-        
+            
     except Exception as e:
         print(f"Error fixing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to fix all duplicate functions"""
-    # Find all TypeScript/TSX files
-    patterns = [
-        'app/**/*.tsx',
-        'app/**/*.ts'
-    ]
+    # Find all page.tsx files in the app directory
+    page_files = glob.glob('/workspace/app/**/page.tsx', recursive=True)
     
-    files_fixed = 0
-    total_files = 0
+    fixed_count = 0
+    for file_path in page_files:
+        if fix_duplicate_functions(file_path):
+            fixed_count += 1
     
-    for pattern in patterns:
-        for file_path in glob.glob(pattern, recursive=True):
-            total_files += 1
-            if fix_duplicate_functions(file_path):
-                files_fixed += 1
-    
-    print(f"Fixed duplicate functions in {files_fixed} out of {total_files} files")
+    print(f"\nFixed {fixed_count} files out of {len(page_files)} total page files")
 
 if __name__ == "__main__":
     main()

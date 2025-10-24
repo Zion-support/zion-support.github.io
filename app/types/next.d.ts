@@ -1,63 +1,22 @@
-// Type definitions for Next.js compatibility in Vite
+// import { MetadataRoute } from 'next' // Unused import removed
 
-export interface Metadata {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  authors?: Array<{ name: string; url?: string }> | string[];
-  creator?: string;
-  publisher?: string;
-  formatDetection?: {
-    email?: boolean;
-    address?: boolean;
-    telephone?: boolean;
-  };
-  metadataBase?: URL;
-  alternates?: {
-    canonical?: string;
-    languages?: Record<string, string>;
-  };
-  openGraph?: {
-    title?: string;
-    description?: string;
-    url?: string;
-    siteName?: string;
-    images?: Array<{
-      url: string,
-      width?: number;
-      height?: number;
-      alt?: string;
-    }>;
-    locale?: string;
-    type?: string;
-    authors?: Array<{ name: string; url?: string }> | string[];
-    publishedTime?: string;
-  };
-  twitter?: {
-    card?: 'summary' | 'summary_large_image' | 'app' | 'player';
-    site?: string;
-    creator?: string;
-    title?: string;
-    description?: string;
-    images?: string[];
-  };
-  robots?: {
-    index?: boolean;
-    follow?: boolean;
-    googleBot?: {
-      index?: boolean;
-      follow?: boolean;
-      'max-video-preview'?: number;
-      'max-image-preview'?: 'none' | 'standard' | 'large';
-      'max-snippet'?: number;
-    };
-  };
-  verification?: {
-    google?: string;
-    yandex?: string;
-    yahoo?: string;
-    other?: Record<string, string>;
-  };
+// Extend Next.js types
+declare module 'next' {
+  interface NextConfig {
+    experimental?: {
+      appDir?: boolean
+      serverComponentsExternalPackages?: string[]
+    }
+    images?: {
+      domains?: string[]
+      remotePatterns?: Array<{
+        protocol: 'http' | 'https'
+        hostname: string
+        port?: string
+        pathname?: string
+      }>
+    }
+  }
 }
 
 // Extend Next.js metadata types
@@ -130,4 +89,10 @@ export interface MiddlewareRequest extends Request {
   ua?: string
 }
 
-export {};
+export interface MiddlewareResponse extends Response {
+  cookies: {
+    get: (name: string) => { name: string; value: string } | undefined
+    set: (name: string, value: string, options?: any) => void
+    delete: (name: string) => void
+  }
+}

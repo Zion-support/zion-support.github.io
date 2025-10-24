@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 // Template for components
 const createComponent = (name) => `import React from 'react';
@@ -27,34 +27,34 @@ export default ${name};`;
 // Find all component files
 const findComponentFiles = () => {
   const componentFiles = [];
-  
+
   const scanDirectory = (dir) => {
     const items = fs.readdirSync(dir);
-    items.forEach(item => {
+    items.forEach((item) => {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-      
+
       if (stat.isDirectory()) {
         scanDirectory(fullPath);
-      } else if (item.endsWith('.tsx') && !item.includes('page.tsx')) {
+      } else if (item.endsWith(".tsx") && !item.includes("page.tsx")) {
         componentFiles.push(fullPath);
       }
     });
   };
-  
-  scanDirectory('app/components');
+
+  scanDirectory("app/components");
   return componentFiles;
 };
 
 // Fix all component files
 const fixComponents = () => {
   const componentFiles = findComponentFiles();
-  
-  componentFiles.forEach(filePath => {
+
+  componentFiles.forEach((filePath) => {
     try {
-      const fileName = path.basename(filePath, '.tsx');
+      const fileName = path.basename(filePath, ".tsx");
       const content = createComponent(fileName);
-      
+
       fs.writeFileSync(filePath, content);
       console.log(`Fixed component: ${filePath}`);
     } catch (error) {
@@ -64,4 +64,4 @@ const fixComponents = () => {
 };
 
 fixComponents();
-console.log('All components have been fixed!');
+console.log("All components have been fixed!");

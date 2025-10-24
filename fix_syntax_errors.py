@@ -1,193 +1,200 @@
 #!/usr/bin/env python3
 """
-Script to fix syntax errors in TypeScript/JavaScript files
+Script to fix common syntax errors after merge conflict resolution.
 """
+
 import os
 import re
 import glob
+from pathlib import Path
 
-def fix_hook_file(file_path):
-    """Fix hook files that have incorrect syntax"""
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
+def fix_jsx_parent_element(content):
+    """Fix JSX expressions that need one parent element."""
+    # Find patterns where multiple JSX elements are at the same level
+    # and wrap them in a fragment or div
+    
+    # Look for patterns like:
+    # <Component1 />
+    # <Component2 />
+    # at the same indentation level
+    
+    lines = content.split('\n')
+    fixed_lines = []
+    i = 0
+    
+    while i < len(lines):
+        line = lines[i]
         
-        # Check if this is a hook file that was incorrectly converted to a component
-        if 'useAdvancedPerformanceMonitoring' in content or 'useEnhancedPerformance' in content or 'usePerformanceMonitoring' in content:
-            # This should be a hook, not a component
-            hook_name = None
-            if 'useAdvancedPerformanceMonitoring' in content:
-                hook_name = 'useAdvancedPerformanceMonitoring'
-            elif 'useEnhancedPerformance' in content:
-                hook_name = 'useEnhancedPerformance'
-            elif 'usePerformanceMonitoring' in content:
-                hook_name = 'usePerformanceMonitoring'
+        # Check if this line starts a JSX element
+        if re.match(r'^\s*<[A-Z]', line) and not re.match(r'^\s*</', line):
+            # Look ahead to see if there are multiple JSX elements at the same level
+            jsx_elements = []
+            current_indent = len(line) - len(line.lstrip())
+            j = i
             
-            if hook_name:
-                # Create a proper hook file
-                new_content = f"""import {{ useState, useEffect, useCallback }} from 'react';
-
-interface {hook_name}Options {{
-  enabled?: boolean;
-  threshold?: number;
-}}
-
-export const {hook_name} = (options: {hook_name}Options = {{}}) => {{
-  const [isVisible, setIsVisible] = useState(false);
-  const [performance, setPerformance] = useState<number>(0);
-
-  useEffect(() => {{
-    if (options.enabled !== false) {{
-      const observer = new PerformanceObserver((list) => {{
-        const entries = list.getEntries();
-        if (entries.length > 0) {{
-          setPerformance(entries[0].duration);
-        }}
-      }});
-      
-      observer.observe({{ entryTypes: ['measure'] }});
-      
-      return () => observer.disconnect();
-    }}
-  }}, [options.enabled]);
-
-  const measurePerformance = useCallback((name: string, fn: () => void) => {{
-    performance.mark(name + '-start');
-    fn();
-    performance.mark(name + '-end');
-    performance.measure(name, name + '-start', name + '-end');
-  }}, []);
-
-  return {{
-    isVisible,
-    performance,
-    measurePerformance
-  }};
-}};
-"""
-                with open(file_path, 'w', encoding='utf-8') as f:
-                    f.write(new_content)
-                return True
+            while j < len(lines):
+                current_line = lines[j]
+                if not current_line.strip():
+                    j += 1
+                    continue
+                    
+                line_indent = len(current_line) - len(current_line.lstrip())
+                
+                # If we hit a line with less indentation, we're done
+                if line_indent < current_indent:
+                    break
+                    
+                # If this is a JSX element at the same level
+                if (line_indent == current_indent and 
+                    re.match(r'^\s*<[A-Z]', current_line) and 
+                    not re.match(r'^\s*</', current_line)):
+                    jsx_elements.append((j, current_line))
+                
+                j += 1
+            
+            # If we found multiple JSX elements at the same level, wrap them
+            if len(jsx_elements) > 1:
+                # Add opening fragment
+                indent = ' ' * current_indent
+                fixed_lines.append(f"{indent}<>")
+                
+                # Add all JSX elements with proper indentation
+                for _, element_line in jsx_elements:
+                    fixed_lines.append(f"{indent}  {element_line.strip()}")
+                
+                # Add closing fragment
+                fixed_lines.append(f"{indent}</>")
+                
+                # Skip the original lines
+                i = jsx_elements[-1][0] + 1
+                continue
         
-        return False
-    except Exception as e:
-        print(f"Error fixing hook file {file_path}: {e}")
-        return False
+        fixed_lines.append(line)
+        i += 1
+    
+    return '\n'.join(fixed_lines)
 
-def fix_page_file(file_path):
-    """Fix page files with syntax errors"""
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
+def fix_missing_commas(content):
+    """Fix missing commas in JSX props."""
+    # Fix patterns like: prop1="value" prop2="value"
+    # Should be: prop1="value", prop2="value"
+    
+    # Look for JSX props that are missing commas
+    lines = content.split('\n')
+    fixed_lines = []
+    
+    for line in lines:
+        # Fix missing commas in JSX props
+        # Pattern: prop="value" prop2="value"
+        if re.search(r'"[^"]*"\s+[a-zA-Z][a-zA-Z0-9]*=', line):
+            # Add comma before the second prop
+            line = re.sub(r'("[^"]*")\s+([a-zA-Z][a-zA-Z0-9]*=)', r'\1, \2', line)
         
-        # Fix common syntax issues
-        # Fix malformed JSX closing tags
-        content = re.sub(r'</\s*>\s*$', '', content)
-        
-        # Fix missing closing braces
-        if content.strip().endswith('}'):
-            # Already has closing brace
+        fixed_lines.append(line)
+    
+    return '\n'.join(fixed_lines)
+
+def fix_jsx_closing_tags(content):
+    """Fix JSX closing tag issues."""
+    lines = content.split('\n')
+    fixed_lines = []
+    
+    for line in lines:
+        # Fix unclosed tags
+        if re.search(r'<[^>]*[^/]>[^<]*$', line) and not re.search(r'</[^>]*>', line):
+            # This might be an unclosed tag, but we need more context
             pass
-        elif content.strip().endswith('</>'):
-            # Add closing brace
-            content = content.rstrip() + '\n}'
-        elif content.strip().endswith('</div>'):
-            # Add closing brace
-            content = content.rstrip() + '\n}'
         
-        # Fix malformed JSX
-        content = re.sub(r'<>\s*$', '', content)
+        # Fix malformed closing tags
+        if re.search(r'</[^>]*[^>]$', line):
+            line = re.sub(r'</([^>]*)[^>]$', r'</\1>', line)
         
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(content)
-        
-        return True
-    except Exception as e:
-        print(f"Error fixing page file {file_path}: {e}")
-        return False
+        fixed_lines.append(line)
+    
+    return '\n'.join(fixed_lines)
 
-def fix_utils_file(file_path):
-    """Fix utility files with syntax errors"""
+def fix_declaration_errors(content):
+    """Fix declaration and statement errors."""
+    lines = content.split('\n')
+    fixed_lines = []
+    
+    for line in lines:
+        # Fix missing semicolons
+        if (re.match(r'^\s*(const|let|var|function)', line) and 
+            not line.strip().endswith(';') and 
+            not line.strip().endswith('{') and
+            not line.strip().endswith('(')):
+            line = line.rstrip() + ';'
+        
+        # Fix missing commas in object literals
+        if re.search(r'}\s*$', line) and not re.search(r'[;,]\s*$', line):
+            # Check if next line starts with a property
+            pass
+        
+        fixed_lines.append(line)
+    
+    return '\n'.join(fixed_lines)
+
+def fix_file(file_path):
+    """Fix syntax errors in a single file."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Check if this is a utility file that was incorrectly converted to a component
-        if 'errorHandler' in content or 'performanceUtils' in content:
-            # This should be a utility file, not a component
-            if 'errorHandler' in content:
-                new_content = """export const errorHandler = {
-  log: (error: Error, context?: string) => {
-    console.error('Error:', error.message, context ? `Context: ${context}` : '');
-  },
-  
-  handle: (error: Error, fallback?: () => void) => {
-    console.error('Handled error:', error.message);
-    if (fallback) {
-      fallback();
-    }
-  }
-};
-"""
-            elif 'performanceUtils' in content:
-                new_content = """export const performanceUtils = {
-  measure: (name: string, fn: () => void) => {
-    performance.mark(name + '-start');
-    fn();
-    performance.mark(name + '-end');
-    performance.measure(name, name + '-start', name + '-end');
-  },
-  
-  getMetrics: () => {
-    return performance.getEntriesByType('measure');
-  }
-};
-"""
-            
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(new_content)
-            return True
+        original_content = content
         
-        return False
+        # Apply fixes
+        content = fix_jsx_parent_element(content)
+        content = fix_missing_commas(content)
+        content = fix_jsx_closing_tags(content)
+        content = fix_declaration_errors(content)
+        
+        # Additional specific fixes
+        # Fix common patterns that cause parsing errors
+        
+        # Fix malformed JSX expressions
+        content = re.sub(r'<([^>]*)\s*>\s*<([^>]*)\s*>', r'<>\n    <\1>\n    <\2>\n</>', content)
+        
+        # Fix missing closing parentheses
+        content = re.sub(r'\([^)]*$', lambda m: m.group(0) + ')', content, flags=re.MULTILINE)
+        
+        # Fix malformed function calls
+        content = re.sub(r'(\w+)\s*\(\s*$', r'\1()', content, flags=re.MULTILINE)
+        
+        # Only write if content changed
+        if content != original_content:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            print(f"Fixed syntax errors in {file_path}")
+            return True
+        else:
+            return False
+            
     except Exception as e:
-        print(f"Error fixing utils file {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to fix syntax errors"""
-    # Fix hook files
-    hook_files = glob.glob('/workspace/app/hooks/*.ts')
-    for file_path in hook_files:
-        if fix_hook_file(file_path):
-            print(f"Fixed hook file: {file_path}")
+    """Main function to fix syntax errors in all files."""
+    print("Fixing syntax errors...")
     
-    # Fix page files with syntax errors
-    problematic_pages = [
-        '/workspace/app/ai-content-generator/page.tsx',
-        '/workspace/app/ai-solutions/page.tsx',
-        '/workspace/app/case-studies/page.tsx',
-        '/workspace/app/cloud-infrastructure/page.tsx',
-        '/workspace/app/contact/page.tsx',
-        '/workspace/app/micro-saas-solutions/page.tsx',
-        '/workspace/app/pricing/page.tsx',
-        '/workspace/app/services/page.tsx'
-    ]
+    # Get all TypeScript and JavaScript files
+    patterns = ['**/*.tsx', '**/*.ts', '**/*.js', '**/*.jsx']
+    files_to_fix = []
     
-    for file_path in problematic_pages:
-        if os.path.exists(file_path):
-            if fix_page_file(file_path):
-                print(f"Fixed page file: {file_path}")
+    for pattern in patterns:
+        for file_path in glob.glob(pattern, recursive=True):
+            if 'node_modules' not in file_path:
+                files_to_fix.append(file_path)
     
-    # Fix utils files
-    utils_files = [
-        '/workspace/app/utils/errorHandler.ts',
-        '/workspace/app/utils/performanceUtils.ts'
-    ]
+    print(f"Found {len(files_to_fix)} files to check")
     
-    for file_path in utils_files:
-        if os.path.exists(file_path):
-            if fix_utils_file(file_path):
-                print(f"Fixed utils file: {file_path}")
+    fixed_count = 0
+    for file_path in files_to_fix:
+        if fix_file(file_path):
+            fixed_count += 1
+    
+    print(f"Fixed syntax errors in {fixed_count} files")
 
 if __name__ == "__main__":
     main()

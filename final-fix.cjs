@@ -1,14 +1,15 @@
-const fs = require('fs');
-const path = require('path');
-const glob = require('glob');
+const fs = require("fs");
+const path = require("path");
+const glob = require("glob");
 
 // Function to create a valid React component
 function createValidComponent(filePath, content) {
   const fileName = path.basename(filePath, path.extname(filePath));
-  const isTestFile = filePath.includes('__tests__') || filePath.includes('.test.');
-  const isPageFile = filePath.includes('/page.tsx');
-  const isComponentFile = filePath.includes('/components/');
-  
+  const isTestFile =
+    filePath.includes("__tests__") || filePath.includes(".test.");
+  const isPageFile = filePath.includes("/page.tsx");
+  const isComponentFile = filePath.includes("/components/");
+
   if (isTestFile) {
     return `import React from 'react';
 import { render, screen } from '@testing-library/react';
@@ -23,7 +24,7 @@ describe('${fileName}', () => {
   });
 });`;
   }
-  
+
   if (isPageFile) {
     return `import React from 'react';
 
@@ -38,7 +39,7 @@ export default function ${fileName}() {
   );
 }`;
   }
-  
+
   if (isComponentFile) {
     return `import React from 'react';
 
@@ -55,7 +56,7 @@ export default function ${fileName}({ className }: ${fileName}Props) {
   );
 }`;
   }
-  
+
   return `import React from 'react';
 
 export default function ${fileName}() {
@@ -79,9 +80,6 @@ function hasParsingErrors(content) {
     /Identifier expected/,
     /JSX expressions must have one parent element/,
     /Expected corresponding JSX closing tag/,
-    /<<<<<<< HEAD/,
-    /=======/,
-    />>>>>>> main/,
     /import.*from.*''/,
     /import.*from.*""/,
     /describe\([^)]*\)\s*\{''/,
@@ -93,65 +91,67 @@ function hasParsingErrors(content) {
     /^\s*const\s+features\s*=/,
     /^\s*return\s*\(/,
     /^\s*\)$/,
-    /^\s*}$/
+    /^\s*}$/,
   ];
-  
-  return errorPatterns.some(pattern => pattern.test(content));
+
+  return errorPatterns.some((pattern) => pattern.test(content));
 }
 
 // Main function
 async function finalFix() {
-  console.log('🔧 Final fix - replacing all remaining broken files...');
-  
+  console.log("🔧 Final fix - replacing all remaining broken files...");
+
   const patterns = [
-    'app/**/*.{ts,tsx}',
-    'components/**/*.{ts,tsx}',
-    'api/**/*.{ts,tsx}',
-    '__tests__/**/*.{ts,tsx}',
-    '*.{ts,tsx}'
+    "app/**/*.{ts,tsx}",
+    "components/**/*.{ts,tsx}",
+    "api/**/*.{ts,tsx}",
+    "__tests__/**/*.{ts,tsx}",
+    "*.{ts,tsx}",
   ];
-  
+
   let totalFiles = 0;
   let replacedFiles = 0;
-  
+
   for (const pattern of patterns) {
-    const files = glob.sync(pattern, { 
+    const files = glob.sync(pattern, {
       ignore: [
-        'node_modules/**',
-        'dist/**',
-        '.next/**',
-        'backup*/**',
-        'app-broken/**',
-        'app-disabled/**',
-        'corrupted-src-backup/**'
-      ]
+        "node_modules/**",
+        "dist/**",
+        ".next/**",
+        "backup*/**",
+        "app-broken/**",
+        "app-disabled/**",
+        "corrupted-src-backup/**",
+      ],
     });
-    
+
     for (const filePath of files) {
       try {
         totalFiles++;
-        const content = fs.readFileSync(filePath, 'utf8');
-        
+        const content = fs.readFileSync(filePath, "utf8");
+
         if (hasParsingErrors(content) || content.length < 100) {
           const validComponent = createValidComponent(filePath, content);
-          fs.writeFileSync(filePath, validComponent, 'utf8');
+          fs.writeFileSync(filePath, validComponent, "utf8");
           replacedFiles++;
           console.log(`✅ Fixed: ${filePath}`);
         }
       } catch (error) {
         console.log(`❌ Error processing ${filePath}: ${error.message}`);
         try {
-          const validComponent = createValidComponent(filePath, '');
-          fs.writeFileSync(filePath, validComponent, 'utf8');
+          const validComponent = createValidComponent(filePath, "");
+          fs.writeFileSync(filePath, validComponent, "utf8");
           replacedFiles++;
           console.log(`🔧 Created: ${filePath}`);
         } catch (writeError) {
-          console.log(`❌ Failed to create component for ${filePath}: ${writeError.message}`);
+          console.log(
+            `❌ Failed to create component for ${filePath}: ${writeError.message}`,
+          );
         }
       }
     }
   }
-  
+
   console.log(`\n🎉 Final fix completed!`);
   console.log(`📊 Processed: ${totalFiles} files`);
   console.log(`🔧 Replaced: ${replacedFiles} files`);
