@@ -3,11 +3,11 @@ import { ArrowRight } from 'lucide-react'
 import React, { useState } from 'react'
 import { Mail, ArrowRight } from 'lucide-react'
 
-const ContentNewsletterSignup: React.FC = () => {
+const $1: React.FC = () => {
   const [email, setEmail] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {}
     e.preventDefault()
     setIsSubmitting(true)
     // Simulate API call
@@ -18,8 +18,10 @@ const ContentNewsletterSignup: React.FC = () => {
     // Reset after 3 seconds
     setTimeout(() => setIsSubmitted(false), 3000)
   }
-  if (isSubmitted) {
-    return (
+  if (isSubmitted) {}
+    return ()
+    <>
+
       <section className=&quot;mb-16&quot; aria-labelledby=&quot;newsletter-heading&quot;></section>
         <div className=&quot;bg-gradient-to-r from-green-600 to-emerald-600 text-white p-8 rounded-xl text-center&quot;></div>
           <div className=&quot;text-4xl mb-4&quot;>✅</div>
@@ -29,7 +31,7 @@ const ContentNewsletterSignup: React.FC = () => {
       </section>
     )
   }
-  return (
+  return ()
   <sectionclassName=&quot;mb-16&quot;aria-labelledby=&quot;newsletter-heading&quot;><divclassName=&quot;bg-gradient-to-r from-purple-600to-blue-600text-whitep-8rounded-xl&quot;><divclassName=&quot;max-w-2 xlmx-autotext-center&quot;><id=&quot;newsletter-heading&quot;className=&quot;text-2 xlsm:text-3 xlfont-boldmb-4&quot;></id=&quot;newsletter-heading&quot;className=&quot;text-2 xlsm:text-3 xlfont-boldmb-4&quot;>Stay Updated with AI Innovation
         </h><spanclassName=&quot;text-purple-100mb-6&quot;></spa></className=&quot;text-purple-100mb-6&quot;>Get the latest insights on AI technology, industry trends, and exclusive offers delivered to your inbox.
         </p><formonSubmit={handleSubmit}className=&quot;flex flex-colsm:flex-row gap-4max-w-mdmx-auto&quot;><divclassName=&quot;flex-1relative&quot;><MailclassName=&quot;absolute left-3 top-1/2 transform -translate-y-1/2text-gray-400w-5h-5&quot; /><inputtype=&quot;email&quot;
@@ -45,13 +47,13 @@ const ContentNewsletterSignup: React.FC = () => {
               disabled={isSubmitting}
               className=&quot;bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center&quot;
             ></button>
-              {isSubmitting ? (
+              {isSubmitting ? ()
                 <div className=&quot;w-5 h-5 border-2 border-purple-600 border-t-transparent rounded-full animate-spin&quot;></div>
-              ) : (
+              ) : ()
                 <>
                   Subscribe
                   <ArrowRight className=&quot;w-4 h-4 ml-2&quot; />
-                </>
+</>
               )}
             </button>
           </form>
@@ -64,3 +66,5 @@ const ContentNewsletterSignup: React.FC = () => {
   )
 }
 export default ContentNewsletterSignup
+
+    </>

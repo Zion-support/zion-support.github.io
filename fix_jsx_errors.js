@@ -1,84 +1,69 @@
 const fs = require('fs');
 const path = require('path');
 
-// Common JSX fixes
-const fixes = [
-  // Fix malformed closing tags
-  { pattern: /  <\//g, replacement: '  </' },
-  { pattern: /  <\/h1>/g, replacement: '  </h1>' },
-  { pattern: /  <\/h2>/g, replacement: '  </h2>' },
-  { pattern: /  <\/p>/g, replacement: '  </p>' },
-  { pattern: /  <\/button>/g, replacement: '  </button>' },
-  { pattern: /  <\/div>/g, replacement: '  </div>' },
+// Function to fix common JSX errors
+function fixJSXErrors(content) {
+  let fixed = content;
   
-  // Fix React.Fragment issues
-  { pattern: /<React\.Fragment>/g, replacement: '<>' },
-  { pattern: /<\/React\.Fragment>/g, replacement: '</>' },
+  // Fix unclosed JSX fragments
+  fixed = fixed.replace(/<>\s*$/gm, '<>');
+  fixed = fixed.replace(/^\s*<\/>/gm, '</>');
   
-  // Fix malformed JSX closing tags
-  { pattern: /  <\/\n/g, replacement: '  </\n' },
-  { pattern: /  <\/\s*\n/g, replacement: '  </\n' },
+  // Fix malformed JSX elements
+  fixed = fixed.replace(/<(\w+)\s*>\s*<\/\1>\s*$/gm, '');
   
-  // Fix specific malformed patterns
-  { pattern: /  <\/\s*$/gm, replacement: '  </' },
-  { pattern: /  <\/\s*\n\s*$/gm, replacement: '  </\n' },
-];
+  // Fix missing closing tags for common elements
+  fixed = fixed.replace(/<div[^>]*>\s*$/gm, (match) => {
+    if (!match.includes('</div>')) {
+      return match + '\n        </div>';
+    }
+    return match;
+  });
+  
+  // Fix merge conflict markers
+  fixed = fixed.replace(/<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> [^\n]+\n/g, '');
+  
+  // Fix common syntax errors
+  fixed = fixed.replace(/\*\s*100\s+0\)/g, '* 1000)');
+  fixed = fixed.replace(/,\s*\)/g, ')');
+  fixed = fixed.replace(/,\s*}/g, '}');
+  
+  return fixed;
+}
 
-function fixFile(filePath) {
+// Function to process a file
+function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixJSXErrors(content);
     
-    // Apply fixes
-    for (const fix of fixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
-    }
-    
-    // Fix specific malformed closing tags
-    content = content.replace(/  <\/\s*$/gm, '  </');
-    content = content.replace(/  <\/\s*\n/gm, '  </\n');
-    
-    // Fix unterminated regexp literals
-    content = content.replace(/  <\/\s*$/gm, '  </');
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed);
       console.log(`Fixed: ${filePath}`);
-      return true;
     }
-    
-    return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error processing ${filePath}:`, error.message);
   }
 }
 
-function walkDir(dir) {
-  const files = fs.readdirSync(dir);
-  let fixedCount = 0;
+// Function to recursively find and process files
+function processDirectory(dirPath) {
+  const items = fs.readdirSync(dirPath);
   
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+  for (const item of items) {
+    const fullPath = path.join(dirPath, item);
+    const stat = fs.statSync(fullPath);
     
-    if (stat.isDirectory()) {
-      fixedCount += walkDir(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      if (fixFile(filePath)) {
-        fixedCount++;
-      }
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      processDirectory(fullPath);
+    } else if (item.endsWith('.tsx') || item.endsWith('.jsx')) {
+      processFile(fullPath);
     }
   }
-  
-  return fixedCount;
 }
 
-// Start fixing
-console.log('Starting JSX fixes...');
-const fixedCount = walkDir('./app');
-console.log(`Fixed ${fixedCount} files`);
+// Process the app directory
+console.log('Fixing JSX errors...');
+processDirectory('/workspace/app');
+processDirectory('/workspace/src');
+console.log('JSX error fixing complete!');

@@ -7,16 +7,16 @@ import { Key, Copy } from 'lucide-react'
 import { Code } from 'lucide-react'
 import { Check } from 'lucide-react'
 
-const ApiDocsPage: React.FC = () => {
+const $1: React.FC = () => {
   const [copiedCode, setCopiedCode] = useState<string | null>(null)
 
-  const copyToClipboard = (code: string, id: string) => {
+  const copyToClipboard = (code: string, id: string) => {}
     navigator.clipboard.writeText(code)
     setCopiedCode(id)
     setTimeout(() => setCopiedCode(null), 2000)
   }
 
-  constapiEndpoints= [
+  constapiEndpoints= []
     {id: 'ai-chat',
       title: 'AI Chat API',
       method: 'POST',
@@ -25,7 +25,7 @@ const ApiDocsPage: React.FC = () => {
       example: `curl -X POST &quot;https://api.ziontechgroup.com/$1/ai/chat&quot; \\
   -H &quot;Authorization: BearerYOUR_API_KEY&quot; \\
   -H &quot;Content-Type:application/json&quot; \\
-  -d '{
+  -d '{}
     &quot;message&quot;:&quot;Hello, how can you help me?&quot;,
    &quot;context&quot;:&quot;customer_support&quot;
 }'`
@@ -38,15 +38,15 @@ const ApiDocsPage: React.FC = () => {
       example: `curl -X POST&quot;https:// api.ziontechgroup.com/$1/ai/analyze&quot; \\
   -H&quot;Authorization: Bearer YOUR_API_KEY&quot; \\
   -H&quot;Content-Type: application/json&quot; \\
-  -d '{
+  -d '{}
    &quot;data&quot;: [1, 2, 3, 4, 5],
    &quot;analysis_type&quot;:&quot;trend_analysis&quot;
 }'`
     }
   ]
 
-const Page = () => {
-  return (
+const Page = () => {}
+  return ()
     <>
       <div className=&quot;min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900&quot;></div>
         <Navigation />
@@ -69,11 +69,11 @@ const Page = () => {
           <section className=&quot;mb-16&quot;></section>
             <h2 className=&quot;text-3xl font-bold text-white mb-8 text-center&quot;>API Endpoints</h2>
             <div className=&quot;space-y-6&quot;></div>
-              {apiEndpoints.map((endpoint) => (
+              {apiEndpoints.map((endpoint) => ()
                 <div key={endpoint.id} className=&quot;bg-gray-800 rounded-lg p-6&quot;></div>
                   <div className=&quot;flex items-center justify-between mb-4&quot;></div>
                     <div className=&quot;flex items-center space-x-4&quot;></div>
-                      <span className={`px-3 py-1 rounded text-sm font-semibold ${
+                      <span className={`px-3 py-1 rounded text-sm font-semibold ${}
                         endpoint.method === 'POST' ? 'bg-green-600 text-white' : 'bg-blue-600 text-white'
                       }`}>
                         {endpoint.method}
@@ -125,7 +125,7 @@ const Page = () => {
         </div>
       </div>
       <Footer />
-    </>
+</>
   )
 }
 

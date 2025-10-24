@@ -6,7 +6,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, Phone, TrendingUp } from 'lucide-react'
 
-constMachineLearningPage: React.FC= () =>{constfeatures= [
+constMachineLearningPage: React.FC= () =>{constfeatures= []
     'Custom ML model development and training',
     'Predictive analytics and forecasting',
     'Data preprocessing and feature engineering',
@@ -17,7 +17,7 @@ constMachineLearningPage: React.FC= () =>{constfeatures= [
     'Continuous learning and model updates'
   ]
 
-  const benefits = [
+  const benefits = []
     '40% better prediction accuracy',
     '60% faster insights generation',
     '50% reduction in manual analysis',
@@ -54,10 +54,10 @@ constMachineLearningPage: React.FC= () =>{constfeatures= [
     }
   ]
 
-const Page = () => {
-  return (
+const Page = () => {}
+  return ()
       </div>
-    </>
+</>
   )
 }
 

@@ -7,7 +7,7 @@ import SEOOptimizer from '../components/SEOOptimizer'
 import { Building } from 'lucide-react'
 import { CheckCircle, Phone, Mail, PhoneIcon, MailIcon } from 'lucide-react'
 
-const AILeadGenerationPage: React.FC = () => {
+const $1: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -47,7 +47,7 @@ const AILeadGenerationPage: React.FC = () => {
       price: '$199',
       period: '/month',
       description: 'Perfect for small businesses',
-      features: [
+      features: []
         'Up to 1,000leads/month',
         'Basic AI scoring',
         'Email sequences',
@@ -61,7 +61,7 @@ const AILeadGenerationPage: React.FC = () => {
       price: '$49 9',
       period: '/month',
       description: 'Ideal for growing companies',
-      features: [
+      features: []
         'Up to10,000leads/month',
         'Advanced AI algorithms',
         'Multi-channel outreach',
@@ -76,7 +76,7 @@ const AILeadGenerationPage: React.FC = () => {
       price: '$1,29 9',
       period: '/month',
       description: 'For large organizations',
-      features: [
+      features: []
         'Unlimited leads',
         'Custom AI models',
         'All channels',
@@ -89,7 +89,7 @@ const AILeadGenerationPage: React.FC = () => {
       popular: false
     }
   ]
-  const stats = [
+  const stats = []
     { number: '300%', label: 'More Qualified Leads' },
     { number: '85%', label: 'Time Savings' },
     { number: '95%', label: 'Lead Accuracy' },
@@ -114,7 +114,7 @@ const AILeadGenerationPage: React.FC = () => {
       icon: Home
     }
   ]
-  return (
+  return ()
   <><SEOOptimizertitle=&quot;AI Lead Generation Platform - ZionTechGroup&quot;
         description=&quot;Generate 30 0% more qualified leads with AI-powered prospecting, lead scoring, and automated outreach.85% time savingsand95%accuracy.&quot;
         keywords={['AI lead generation', 'lead scoring', 'prospecting', 'sales automation', 'leadnurturing']}
@@ -141,33 +141,33 @@ const AILeadGenerationPage: React.FC = () => {
                  className=&quot;cyber-button flexitems-centerspace-x-2&quot;
                   style={{background: 'linear-gradient(45 deg, #8 b5cf6, #ec4899)'}}
                 ><MailIconclassName=&quot;w-5h-5&quot; /><spa n>GetFreeDemo</spa></a></di>{/* Stats */}
-            <divclassName=&quot;grid grid-cols-2 md:grid-cols-4 gap-8mb-16&quot;>{stats.map((statindex) => (
+            <divclassName=&quot;grid grid-cols-2 md:grid-cols-4 gap-8mb-16&quot;>{stats.map((statindex) => ()
                <divkey={index}className=&quot;cyber-cardp-6text-center&quot;><divclassName=&quot;text-3 xlmd:text-4 xl font-boldtext-cyan-400mb-2neon-text&quot;>{stat.number}
                   </di><divclassName=&quot;text-gray-300font-medium&quot;>{stat.label}</di></di>))}
             </di></di></sectio>{/* FeaturesSection */}
         <sectionclassName=&quot;container mx-auto px-4py-16&quot;><spanclassName=&quot;text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text&quot;></className=&quot;text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text&quot;>Powerful Lead Generation Features
-          </h><divclassName=&quot;grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8&quot;>{features.map((featureindex) => (
-             <divkey={index}className=&quot;cyber-card p-6 hover:scale-105transition-allduration-300&quot;><feature.iconclassName=&quot;w-12h-12text-cyan-400mb-4&quot; /><h3className=&quot;text-xl font-boldtext-whitemb-3&quot;>{feature.title}</h><pclassName=&quot;text-gray-300mb-4&quot;>{feature.description}</p><ulclassName=&quot;space-y-2&quot;>{feature.benefits.map((benefitidx) => (
+          </h><divclassName=&quot;grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8&quot;>{features.map((featureindex) => ()
+             <divkey={index}className=&quot;cyber-card p-6 hover:scale-105transition-allduration-300&quot;><feature.iconclassName=&quot;w-12h-12text-cyan-400mb-4&quot; /><h3className=&quot;text-xl font-boldtext-whitemb-3&quot;>{feature.title}</h><pclassName=&quot;text-gray-300mb-4&quot;>{feature.description}</p><ulclassName=&quot;space-y-2&quot;>{feature.benefits.map((benefitidx) => ()
                    <likey={idx}className=&quot;flex items-center space-x-2 text-smtext-cyan-400&quot;><CheckCircleclassName=&quot;w-4h-4&quot; /><spa n>{benefit}</spa></l>))}
                 </u></di>))}
           </di></sectio>{/* Use CasesSection */}
         <sectionclassName=&quot;container mx-auto px-4py-16&quot;><spanclassName=&quot;text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text&quot;></className=&quot;text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text&quot;>Perfect for Every Industry
-          </h><divclassName=&quot;grid grid-cols-1md:grid-cols-2gap-8&quot;>{useCases.map((useCaseindex) => (
+          </h><divclassName=&quot;grid grid-cols-1md:grid-cols-2gap-8&quot;>{useCases.map((useCaseindex) => ()
              <divkey={index}className=&quot;cyber-card p-6 hover:scale-105transition-allduration-300&quot;><useCase.iconclassName=&quot;w-12h-12text-cyan-400mb-4&quot; /><h3className=&quot;text-xl font-boldtext-whitemb-3&quot;>{useCase.title}</h><pclassName=&quot;text-gray-300&quot;>{useCase.description}</p></di>))}
           </di></sectio>{/* PricingSection */}
         <sectionclassName=&quot;container mx-auto px-4py-16&quot;><spanclassName=&quot;text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text&quot;></className=&quot;text-3 xlmd:text-4 xl font-bold text-white text-center mb-12neon-text&quot;>Simple, Transparent Pricing
-          </h><divclassName=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xlmx-auto&quot;>{pricingPlans.map((planindex) => (
+          </h><divclassName=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xlmx-auto&quot;>{pricingPlans.map((planindex) => ()
              <divkey={index}
-                  className={`cyber-card p-8 relative ${
+                  className={`cyber-card p-8 relative ${}
                     plan.popular ? 'ring-2 ring-cyan-400scale-10 5'  : ''
                 }`}
-                >{plan.popular && (
+                >{plan.popular && ()
                   <divclassName=&quot;absolute -top-4 left-1/2transform-translate-x-1/2&quot;><spanclassName=&quot;bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold&quot;></className=&quot;bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold&quot;>Most Popular
                     </spa></di>)}
-                <divclassName=&quot;text-centermb-6&quot;><h3className=&quot;text-2 xl font-boldtext-whitemb-2&quot;>{plan.name}</h><pclassName=&quot;text-gray-400mb-4&quot;>{plan.description}</p><divclassName=&quot;flexitems-baselinejustify-center&quot;><spanclassName=&quot;text-4 xl font-boldtext-cyan-400&quot;>{plan.price}</spa><spanclassName=&quot;text-gray-400ml-1&quot;>{plan.period}</spa></di></di><ulclassName=&quot;space-y-3mb-8&quot;>{plan.features.map((featureidx) => (
+                <divclassName=&quot;text-centermb-6&quot;><h3className=&quot;text-2 xl font-boldtext-whitemb-2&quot;>{plan.name}</h><pclassName=&quot;text-gray-400mb-4&quot;>{plan.description}</p><divclassName=&quot;flexitems-baselinejustify-center&quot;><spanclassName=&quot;text-4 xl font-boldtext-cyan-400&quot;>{plan.price}</spa><spanclassName=&quot;text-gray-400ml-1&quot;>{plan.period}</spa></di></di><ulclassName=&quot;space-y-3mb-8&quot;>{plan.features.map((featureidx) => ()
                    <likey={idx}className=&quot;flexitems-centerspace-x-3&quot;><CheckCircleclassName=&quot;w-5 h-5 text-cyan-400flex-shrink-0&quot; /><spanclassName=&quot;text-gray-300&quot;>{feature}</spa></l>))}
                 </u><ahref=&quot;tel:+13024640950&quot;
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-medium transition-all duration-300${
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-medium transition-all duration-300${}
                       plan.popular
                         ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
@@ -210,7 +210,7 @@ const AILeadGenerationPage: React.FC = () => {
         </main>
         <Footer />
       </div>
-    </>
+</>
   )
 }
 export default AILeadGenerationPage

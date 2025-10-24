@@ -3,8 +3,8 @@ import { Helmet } from 'lucide-react'
 import React from 'react';
 import { Star, Code, Helmet } from 'lucide-react';
 
-const InnovationLabsPage: React.FC = () => {
-  return (
+const InnovationLabsPage: React.FC = () => {}
+  return ()
     <>
       <Helmet>
         <title>AI Innovation Labs: Product Development Revolution 2025 | Zion Tech Group</title>
@@ -131,7 +131,7 @@ const InnovationLabsPage: React.FC = () => {
         </div>
       </div>
     </div>
-    </>
+</>
   )
 }
 export default InnovationLabsPage

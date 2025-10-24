@@ -26,7 +26,7 @@ constCloudServicesPage: React.FC= () =>{constservices= [
       features: ['Real-time Monitoring', 'Cost Analytics', 'Performance Metrics', 'Predictive Insights']
     }
   ]
-  const benefits = [
+  const benefits = []
     '99.9% Uptime Guarantee',
     '24/7 Expert Support',
     'Cost Optimization',
@@ -34,7 +34,7 @@ constCloudServicesPage: React.FC= () =>{constservices= [
     'Enhanced Security',
     'Global CDN'
   ]
-  return (
+  return ()
     <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
       <Navigation />
       <main className=&quot;container mx-auto px-4 py-16 pt-24&quot;>
@@ -66,13 +66,13 @@ constCloudServicesPage: React.FC= () =>{constservices= [
         <section className=&quot;mb-16&quot;></section>
           <h2 className=&quot;text-3xl font-bold text-white mb-12 text-center&quot;>Our Cloud Services</h2>
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
-            {services.map((service, index) => (
+            {services.map((service, index) => ()
               <div key={index} className=&quot;bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20&quot;></div>
                 <service.icon className=&quot;w-12 h-12 text-cyan-400 mb-4&quot; />
                 <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{service.title}</h3>
                 <p className=&quot;text-gray-300 mb-4&quot;>{service.description}</p>
                 <ul className=&quot;space-y-2&quot;>
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((feature, featureIndex) => ()
                     <li key={featureIndex} className=&quot;flex items-center text-sm text-gray-300&quot;>
                       <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2&quot; />
                       {feature}
@@ -87,7 +87,7 @@ constCloudServicesPage: React.FC= () =>{constservices= [
         <section className=&quot;mb-16&quot;></section>
           <h2 className=&quot;text-3xl font-bold text-white mb-12 text-center&quot;>Why Choose Our Cloud Services?</h2>
           <div className=&quot;grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6&quot;></div>
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => ()
               <div key={index} className=&quot;text-center&quot;></div>
                 <div className=&quot;bg-gradient-to-r from-cyan-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4&quot;></div>
                   <CheckCircle className=&quot;w-8 h-8 text-white&quot; />

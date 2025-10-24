@@ -6,7 +6,7 @@ import SEOOptimizer from '../components/SEOOptimizer'
 import { MessageCircle } from 'lucide-react'
 import { CheckCircle, Phone, Mail } from 'lucide-react'
 
-const AICustomerSupportPage: React.FC = () => {
+const $1: React.FC = () => {
   const features = [
     {
       icon: MessageCircle,
@@ -31,7 +31,7 @@ const AICustomerSupportPage: React.FC = () => {
     }
   ]
 
-  constpricing= [
+  constpricing= []
     {name: 'Starter',
       price: '$14 9/month',
       description: 'Perfect for small businesses',
@@ -49,14 +49,14 @@ const AICustomerSupportPage: React.FC = () => {
     }
   ]
 
-  const stats = [
+  const stats = []
     { number: '95%', label: 'Customer Satisfaction' },
     { number: '60%', label: 'Faster Resolution' },
     { number: '24/7', label: 'Availability' },
     { number: '50+', label: 'Languages Supported' }
   ]
 
-  return (
+  return ()
   <><SEOOptimizertitle=&quot;AI Customer Support Solutions - ZionTechGroup&quot;
         description=&quot;Revolutionary AI-powered customer support with chatbots, omnichannel support, and intelligent automation. Boost satisfaction by95% and reduce costs by60%.&quot;
         keywords={['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', 'AIhelpdesk']}
@@ -97,13 +97,13 @@ const AICustomerSupportPage: React.FC = () => {
               Key Features
             </h2>
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
-              {features.map((feature, index) => (
+              {features.map((feature, index) => ()
                 <div key={index} className=&quot;cyber-card p-6 text-center hover:scale-105 transition-all duration-300&quot;></div>
                   <feature.icon className=&quot;w-12 h-12 text-cyan-400 mx-auto mb-4&quot; />
                   <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{feature.title}</h3>
                   <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
                   <ul className=&quot;space-y-2&quot;>
-                    {feature.benefits.map((benefit, benefitIndex) => (
+                    {feature.benefits.map((benefit, benefitIndex) => ()
                       <li key={benefitIndex} className=&quot;flex items-center text-sm text-gray-300&quot;>
                         <CheckCircle className=&quot;w-4 h-4 text-green-400 mr-2 flex-shrink-0&quot; />
                         {benefit}
@@ -120,14 +120,14 @@ const AICustomerSupportPage: React.FC = () => {
               Pricing Plans
             </h2>
             <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto&quot;></div>
-              {pricing.map((plan, index) => (
+              {pricing.map((plan, index) => ()
                 <div
                   key={index}
-                  className={`cyber-card p-8 relative ${
+                  className={`cyber-card p-8 relative ${}
                     index === 1 ? 'ring-2 ring-cyan-400 scale-105' : ''
                   }`}
                 ></div>
-                  {index === 1 && (
+                  {index === 1 && ()
                     <div className=&quot;absolute -top-4 left-1/2 transform -translate-x-1/2&quot;></div>
                       <span className=&quot;bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold&quot;>
                         Most Popular
@@ -138,7 +138,7 @@ const AICustomerSupportPage: React.FC = () => {
                   <p className=&quot;text-gray-300 mb-4&quot;>{plan.description}</p>
                   <div className=&quot;text-4xl font-bold text-cyan-400 mb-6&quot;>{plan.price}</div>
                   <ul className=&quot;space-y-3 mb-8&quot;>
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map((feature, featureIndex) => ()
                       <li key={featureIndex} className=&quot;flex items-center text-gray-300&quot;>
                         <CheckCircle className=&quot;w-5 h-5 text-green-400 mr-3 flex-shrink-0&quot; />
                         {feature}
@@ -185,7 +185,7 @@ const AICustomerSupportPage: React.FC = () => {
           </section>
         </div>
       </div>
-    </>
+</>
   )
 }
 

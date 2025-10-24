@@ -7,7 +7,7 @@ import SEOOptimizer from '../components/SEOOptimizer'
 import { CheckCircle, Star, Phone, Mail } from 'lucide-react'
 import { Clock } from 'lucide-react'
 
-constDemoPage: React.FC= () =>{const [formDatasetFormData] = useState({
+constDemoPage: React.FC= () =>{const [formDatasetFormData] = useState({}
     name: '',
     email: '',
     company: '',
@@ -16,15 +16,15 @@ constDemoPage: React.FC= () =>{const [formDatasetFormData] = useState({
     message: ''
   })
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
     const { name, value } = e.target
-    setFormData(prev => ({
+    setFormData(prev => ({}
       ...prev,
       [name]: value
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {}
     e.preventDefault()
     // Handle form submission
     const subject = `Demo Request from ${formData.name} - ${formData.company}`
@@ -32,7 +32,7 @@ constDemoPage: React.FC= () =>{const [formDatasetFormData] = useState({
     window.location.href = `mailto:kleber@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
   }
 
-  constdemoFeatures= [
+  constdemoFeatures= []
     {icon: Brain,
       title: 'AI Solutions Demo',
       description: 'See our AI services in action with live demonstrations'
@@ -51,7 +51,7 @@ constDemoPage: React.FC= () =>{const [formDatasetFormData] = useState({
     }
   ]
 
-  consttestimonials= [
+  consttestimonials= []
     {name: 'Sarah Johnson',
       company: 'TechCorp Inc.',
       text: 'The demo was incredibly insightful. We saw immediate value in their AI solutions.',
@@ -67,8 +67,8 @@ constDemoPage: React.FC= () =>{const [formDatasetFormData] = useState({
     }
   ]
 
-const Page = () => {
-  return (
+const Page = () => {}
+  return ()
   <><SEOOptimizertitle=&quot;Request a Demo - ZionTechGroup&quot;
         description=&quot;Schedule a personalized demo of our AI and IT services. See how we can transform your business withcutting-edgetechnology.&quot;
         keywords={['demo', 'AI demo', 'IT demo', 'business consultation', 'technologydemonstration']}
@@ -98,7 +98,7 @@ const Page = () => {
               What to Expect
             </h2>
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
-              {demoFeatures.map((feature, index) => (
+              {demoFeatures.map((feature, index) => ()
                 <div key={index} className=&quot;cyber-card p-6 text-center hover:scale-105 transition-all duration-300&quot;></div>
                   <feature.icon className=&quot;w-12 h-12 text-cyan-400 mx-auto mb-4&quot; />
                   <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{feature.title}</h3>
@@ -115,7 +115,7 @@ const Page = () => {
                 <div className=&quot;cyber-card p-8&quot;></div>
                   <h2 className=&quot;text-2xl font-bold text-white mb-6&quot;>Schedule Your Demo</h2>
                   <form onSubmit={handleSubmit} className=&quot;space-y-6&quot;>
-                    <div></div>
+                    
                       <label htmlFor=&quot;name&quot; className=&quot;block text-sm font-medium text-gray-300 mb-2&quot;>
                         Full Name *
                       </label>
@@ -230,15 +230,15 @@ const Page = () => {
               What Our Clients Say
             </h2>
             <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;></div>
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial, index) => ()
                 <div key={index} className=&quot;cyber-card p-6&quot;></div>
                   <div className=&quot;flex items-center mb-4&quot;></div>
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating)].map((_, i) => ()
                       <Star key={i} className=&quot;w-5 h-5 text-yellow-400 fill-current&quot; />
                     ))}
                   </div>
                   <p className=&quot;text-gray-300 mb-4&quot;>&quot;{testimonial.text}&quot;</p>
-                  <div></div>
+                  
                     <div className=&quot;font-bold text-white&quot;>{testimonial.name}</div>
                     <div className=&quot;text-cyan-400 text-sm&quot;>{testimonial.company}</div>
                   </div>
@@ -249,7 +249,7 @@ const Page = () => {
         </main>
         <Footer />
       </div>
-    </>
+</>
   )
 }
 

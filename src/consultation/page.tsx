@@ -7,7 +7,7 @@ import SEOOptimizer from '../components/SEOOptimizer'
 import { CheckCircle, Star, Phone, Mail } from 'lucide-react'
 import { Clock } from 'lucide-react'
 
-constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
+constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({}
     name: '',
     email: '',
     company: '',
@@ -21,15 +21,15 @@ constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
     message: ''
   })
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
     const { name, value } = e.target
-    setFormData(prev => ({
+    setFormData(prev => ({}
       ...prev,
       [name]: value
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {}
     e.preventDefault()
     // Handle form submission
     const subject = `Free Consultation Request from ${formData.name} - ${formData.company}`
@@ -37,7 +37,7 @@ constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
     window.location.href = `mailto:kleber@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
   }
 
-  constconsultationBenefits= [
+  constconsultationBenefits= []
     {icon: Target,
       title: 'Strategic Assessment',
       description: 'Comprehensive analysis of your current technology stack and business processes'
@@ -56,7 +56,7 @@ constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
     }
   ]
 
-  constconsultationProcess= [
+  constconsultationProcess= []
     {step: '1',
       title: 'Initial Assessment',
       description: 'We review your current setup and understand your business goals'
@@ -75,7 +75,7 @@ constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
     }
   ]
 
-  consttestimonials= [
+  consttestimonials= []
     {name: 'David Thompson',
       company: 'Manufacturing Plus',
       text: 'The free consultation opened our eyes to possibilities we never considered. Highly valuable session.',
@@ -91,8 +91,8 @@ constConsultationPage: React.FC= () =>{const [formDatasetFormData] = useState({
     }
   ]
 
-const Page = () => {
-  return (
+const Page = () => {}
+  return ()
   <><SEOOptimizertitle=&quot;Free Business Consultation - ZionTechGroup&quot;
         description=&quot;Get a free30-minute consultation with our technology experts. Discover how AI and IT solutions can transformyourbusiness.&quot;
         keywords={['free consultation', 'business consultation', 'technology assessment', 'AI consultation', 'ITconsultation']}
@@ -139,7 +139,7 @@ const Page = () => {
               What You'll Get
             </h2>
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
-              {consultationBenefits.map((benefit, index) => (
+              {consultationBenefits.map((benefit, index) => ()
                 <div key={index} className=&quot;cyber-card p-6 text-center hover:scale-105 transition-all duration-300&quot;></div>
                   <benefit.icon className=&quot;w-12 h-12 text-cyan-400 mx-auto mb-4&quot; />
                   <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{benefit.title}</h3>
@@ -154,7 +154,7 @@ const Page = () => {
               Our Consultation Process
             </h2>
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
-              {consultationProcess.map((step, index) => (
+              {consultationProcess.map((step, index) => ()
                 <div key={index} className=&quot;cyber-card p-6 text-center&quot;></div>
                   <div className=&quot;w-16 h-16 bg-cyan-400 text-slate-900 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4&quot;></div>
                     {step.step}
@@ -174,7 +174,7 @@ const Page = () => {
                   <h2 className=&quot;text-2xl font-bold text-white mb-6&quot;>Schedule Your Free Consultation</h2>
                   <form onSubmit={handleSubmit} className=&quot;space-y-6&quot;>
                     <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4&quot;></div>
-                      <div></div>
+                      
                         <label htmlFor=&quot;name&quot; className=&quot;block text-sm font-medium text-gray-300 mb-2&quot;>
                           Full Name *
                         </label>
@@ -327,15 +327,15 @@ const Page = () => {
               What Our Clients Say
             </h2>
             <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8&quot;></div>
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial, index) => ()
                 <div key={index} className=&quot;cyber-card p-6&quot;></div>
                   <div className=&quot;flex items-center mb-4&quot;></div>
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating)].map((_, i) => ()
                       <Star key={i} className=&quot;w-5 h-5 text-yellow-400 fill-current&quot; />
                     ))}
                   </div>
                   <p className=&quot;text-gray-300 mb-4&quot;>&quot;{testimonial.text}&quot;</p>
-                  <div></div>
+                  
                     <div className=&quot;font-bold text-white&quot;>{testimonial.name}</div>
                     <div className=&quot;text-cyan-400 text-sm&quot;>{testimonial.company}</div>
                   </div>
@@ -346,7 +346,7 @@ const Page = () => {
         </main>
         <Footer />
       </div>
-    </>
+</>
   )
 }
 

@@ -11,7 +11,7 @@ constPricingPage: React.FC= () =>{constpricingPlans= [
       price: '$29 9',
       period: '/month',
       description: 'Perfect for small businesses getting started',
-      features: [
+      features: []
         'Up to5AI services',
         'Basic IT support',
         'Email support',
@@ -26,7 +26,7 @@ constPricingPage: React.FC= () =>{constpricingPlans= [
       price: '$59 9',
       period: '/month',
       description: 'Ideal for growing companies',
-      features: [
+      features: []
         'Up to 15AI services',
         'Priority IT support',
         'Phone & email support',
@@ -43,7 +43,7 @@ constPricingPage: React.FC= () =>{constpricingPlans= [
       price: '$1,29 9',
       period: '/month',
       description: 'For large organizations',
-      features: [
+      features: []
         'Unlimited AI services',
         '2 4/7 IT support',
         'Dedicated support team',
@@ -59,7 +59,7 @@ constPricingPage: React.FC= () =>{constpricingPlans= [
     }
   ]
 
-  constaddOns= [
+  constaddOns= []
     {name: 'AI Model Training',
       price: '$19 9/month',
       description: 'Custom AI model training for your specific needs'
@@ -78,7 +78,7 @@ constPricingPage: React.FC= () =>{constpricingPlans= [
     }
   ]
 
-  constfaqs= [
+  constfaqs= []
     {question: 'Can I change my plan anytime?',
       answer: 'Yes, you can upgrade or do wngrade your plan at any time. Changes take effect on your next billing cycle.'
    },
@@ -88,14 +88,14 @@ constPricingPage: React.FC= () =>{constpricingPlans= [
     {question: 'What payment methods do you accept?',
       answer: 'We accept all major credit cards, bank transfers, and can arrange custom payment terms for enterprise clients.'
     },
-    {
+    {}
       question: 'Is there a free trial available?',
       answer: 'Yes, we offer a 14-day free trial for all plans. No credit card required to get started.'
     }
   ]
 
-const Page = () => {
-  return (
+const Page = () => {}
+  return ()
   <><SEOOptimizertitle=&quot;Pricing Plans - ZionTechGroup&quot;
         description=&quot;Transparent pricing for AI and IT services. Choose the perfect plan for your business needs. Starting at$299/month.&quot;
         keywords={['pricing', 'AI services pricing', 'IT services pricing', 'business plans', 'enterprisepricing']}
@@ -122,20 +122,20 @@ const Page = () => {
           {/* Pricing Plans */}
           <section className=&quot;container mx-auto px-4 py-16&quot;></section>
             <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto&quot;></div>
-              {pricingPlans.map((plan, index) => (
+              {pricingPlans.map((plan, index) => ()
                 <div
                   key={index}
-                  className={`cyber-card p-8 relative ${
+                  className={`cyber-card p-8 relative ${}
                     plan.popular ? 'ring-2 ring-cyan-400scale-10 5'  : ''
                 }`}
-                >{plan.popular && (
+                >{plan.popular && ()
                   <divclassName=&quot;absolute -top-4 left-1/2transform-translate-x-1/2&quot;><spanclassName=&quot;bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold&quot;></className=&quot;bg-cyan-400text-slate-900px-4 py-1 rounded-fulltext-smfont-bold&quot;>{plan.cta}
                     </spa></di>)}
-                <divclassName=&quot;text-centermb-8&quot;><h3className=&quot;text-2 xl font-boldtext-whitemb-2&quot;>{plan.name}</h><pclassName=&quot;text-gray-300mb-4&quot;>{plan.description}</p><divclassName=&quot;flexitems-baselinejustify-center&quot;><spanclassName=&quot;text-5 xl font-boldtext-cyan-400&quot;>{plan.price}</spa><spanclassName=&quot;text-gray-400ml-2&quot;>{plan.period}</spa></di></di><ulclassName=&quot;space-y-4mb-8&quot;>{plan.features.map((featurefeatureIndex) => (
+                <divclassName=&quot;text-centermb-8&quot;><h3className=&quot;text-2 xl font-boldtext-whitemb-2&quot;>{plan.name}</h><pclassName=&quot;text-gray-300mb-4&quot;>{plan.description}</p><divclassName=&quot;flexitems-baselinejustify-center&quot;><spanclassName=&quot;text-5 xl font-boldtext-cyan-400&quot;>{plan.price}</spa><spanclassName=&quot;text-gray-400ml-2&quot;>{plan.period}</spa></di></di><ulclassName=&quot;space-y-4mb-8&quot;>{plan.features.map((featurefeatureIndex) => ()
                    <likey={featureIndex}className=&quot;flex items-centertext-gray-300&quot;><CheckCircleclassName=&quot;w-5 h-5text-green-400mr-3flex-shrink-0&quot; />{feature}
                     </l>))}
                 </u><ahref={plan.popular ?&quot;mailto:kleber@ziontechgroup.com&quot; :&quot;tel:+13024640950&quot;}
-                    className={`w-full text-center block py-3 px-6 rounded-lg font-medium transition-all ${
+                    className={`w-full text-center block py-3 px-6 rounded-lg font-medium transition-all ${}
                       plan.popular
                         ? 'cyber-button'
                         : 'bg-gray-700 text-white hover:bg-gray-600'
@@ -153,7 +153,7 @@ const Page = () => {
               Additional Services
             </h2>
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto&quot;></div>
-              {addOns.map((addon, index) => (
+              {addOns.map((addon, index) => ()
                 <div key={index} className=&quot;cyber-card p-6 text-center&quot;></div>
                   <h3 className=&quot;text-xl font-bold text-white mb-2&quot;>{addon.name}</h3>
                   <div className=&quot;text-2xl font-bold text-cyan-400 mb-2&quot;>{addon.price}</div>
@@ -168,7 +168,7 @@ const Page = () => {
               Frequently Asked Questions
             </h2>
             <div className=&quot;max-w-4xl mx-auto space-y-6&quot;></div>
-              {faqs.map((faq, index) => (
+              {faqs.map((faq, index) => ()
                 <div key={index} className=&quot;cyber-card p-6&quot;></div>
                   <h3 className=&quot;text-xl font-bold text-white mb-3&quot;>{faq.question}</h3>
                   <p className=&quot;text-gray-300&quot;>{faq.answer}</p>
@@ -207,7 +207,7 @@ const Page = () => {
         </main>
         <Footer />
       </div>
-    </>
+</>
   )
 }
 
