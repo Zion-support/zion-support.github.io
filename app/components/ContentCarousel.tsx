@@ -99,7 +99,7 @@ const ContentCarousel: React.FC = () => {
         'Natural Language Processing',
         'Computer Vision',
         'Predictive Analytics'
-      ],
+  ],
       icon: Zap,
       color: 'from-purple-500 to-pink-600',
     },
@@ -112,7 +112,7 @@ const ContentCarousel: React.FC = () => {
         '99.9% uptime guarantee',
         'Advanced security',
         'Cost optimization'
-      ],
+  ],
       icon: Cloud,
       color: 'from-green-500 to-blue-600',
     },
@@ -125,7 +125,7 @@ const ContentCarousel: React.FC = () => {
         'Workflow optimization',
         'Smart decision making',
         'Performance monitoring'
-      ],
+  ],
       icon: Brain,
       color: 'from-orange-500 to-red-600',
     },
@@ -138,28 +138,27 @@ const ContentCarousel: React.FC = () => {
         'Real-time monitoring',
         'Automated response',
         'Compliance management'
-      ],
+  ],
       icon: Shield,
-      color: 'from-red-500 to-pink-600',
-    }
-  ];
+      color: 'from-red-500 to-pink-600'
+  ]
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
+      setCurrentSlide((prev) => (prev + 1) % slides.length)
+    }, 5000)
 
-    return () => clearInterval(timer);
-  }, [slides.length]);
+    return () => clearInterval(timer)
+  }, [slides.length])
 
 >>>>>>> 29d49925dca88a534c75f2643000c6a1ecf43fea
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
+    setCurrentSlide((prev) => (prev + 1) % slides.length)
+  }
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
+  }
 
 <<<<<<< HEAD
   const goToSlide = (index: number) => {
@@ -291,81 +290,81 @@ const ContentCarousel: React.FC = () => {
 export default ContentCarousel;
 =======
   return (
-    <div className="relative w-full max-w-6xl mx-auto">
-      <div className="overflow-hidden rounded-2xl">
+    <div className="relative w-full max-w-6xl mx-auto"></div>
+      <div className="overflow-hidden rounded-2xl"></div>
         <div
           className="flex transition-transform duration-500 ease-in-out"
-          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-        >
+          style={{ transform: `translateX(-${currentSlide * 100}%)` }
+        ></div>
           {slides.map((slide) => (
-            <div key={slide.id} className="w-full flex-shrink-0">
-              <div className={`bg-gradient-to-br ${slide.color} p-8 md:p-12 text-white`}>
-                <div className="max-w-4xl mx-auto">
-                  <div className="flex items-center justify-center mb-6">
-                    <div className="bg-white/20 p-4 rounded-full">
+            <div key={slide.id} className="w-full flex-shrink-0"></div>
+              <div className={`bg-gradient-to-br ${slide.color} p-8 md:p-12 text-white`}></div>
+                <div className="max-w-4xl mx-auto"></div>
+                  <div className="flex items-center justify-center mb-6"></div>
+                    <div className="bg-white/20 p-4 rounded-full"></div>
                       <slide.icon className="h-12 w-12" />
                     </div>
                   </div>
                   <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-                    {slide.title}
+                    {slide.title
                   </h2>
                   <p className="text-xl text-center mb-8 text-white/90">
-                    {slide.description}
+                    {slide.description
                   </p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
                     {slide.features.map((feature, index) => (
-                      <div key={index} className="flex items-center space-x-3">
+                      <div key={index} className="flex items-center space-x-3"></div>
                         <div className="w-2 h-2 bg-white rounded-full"></div>
                         <span className="text-white/90">{feature}</span>
                       </div>
-                    ))}
+                    ))
                   </div>
                   {slide.stats && (
-                    <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4"></div>
                       {slide.stats.map((stat, index) => (
-                        <div key={index} className="text-center">
+                        <div key={index} className="text-center"></div>
                           <div className="text-2xl font-bold text-white">{stat.value}</div>
                           <div className="text-white/80">{stat.label}</div>
                         </div>
-                      ))}
+                      ))
                     </div>
-                  )}
+                  )
                 </div>
               </div>
             </div>
-          ))}
+          ))
         </div>
       </div>
       
-      {/* Navigation buttons */}
+      {/* Navigation buttons */
       <button
-        onClick={prevSlide}
+        onClick={prevSlide
         className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
       >
         <ChevronLeft className="h-6 w-6" />
       </button>
       <button
-        onClick={nextSlide}
+        onClick={nextSlide
         className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
       >
         <ChevronRight className="h-6 w-6" />
       </button>
       
-      {/* Dots indicator */}
-      <div className="flex justify-center mt-6 space-x-2">
+      {/* Dots indicator */
+      <div className="flex justify-center mt-6 space-x-2"></div>
         {slides.map((_, index) => (
           <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
+            key={index
+            onClick={() => setCurrentSlide(index)
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
               index === currentSlide ? 'bg-white' : 'bg-white/30'
-            }`}
+            }`
           />
-        ))}
+        ))
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default ContentCarousel;
 >>>>>>> 29d49925dca88a534c75f2643000c6a1ecf43fea

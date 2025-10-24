@@ -1,16 +1,19 @@
-'use client';;
-import React from 'react';
+'use client';
+import React from 'react'
 
 interface EnhancedPerformanceMonitorProps {
   // Add props here
-}
+
 
 const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = (_props) => {
   return (
     <div>
-      {/* Component content */}
+      {/* Component content */
     </div>
-  );
-};
+  )
+}
 
-export default EnhancedPerformanceMonitor;
+}
+
+export default EnhancedPerformanceMonitor
+}

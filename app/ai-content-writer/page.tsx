@@ -42,7 +42,6 @@ const AiContentWriterPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );

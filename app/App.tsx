@@ -2,7 +2,7 @@
 const App: React.FC = () => {
   return (
     <ErrorBoundary>
-      <HelmetProvider>
+      <HelmetProvider></HelmetProvider></Helmet>
         <BrowserRouter>
           <div className="App">
           </div>
