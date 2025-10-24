@@ -10,13 +10,7 @@ export default function ZionAiSeoOptimizerPage() {
 <<<<<<< HEAD:all-pages-backup/zion-ai-seo-optimizer/page.tsx
       <title>ZionAiSeoOptimizer - Zion Tech Group</title>
         <meta name="description" content="Professional zionaiseooptimizer services by Zion Tech Group." />
-=======
-      
-        <Head>
-        <title>ZionAiSeoOptimizer - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/zion-ai-seo-optimizer/page.tsx
+:app/zion-ai-seo-optimizer/page.tsx
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

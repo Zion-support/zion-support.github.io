@@ -10,13 +10,7 @@ export default function ComplianceAutomationPage() {
 <<<<<<< HEAD:all-pages-backup/compliance-automation/page.tsx
       <title>ComplianceAutomation - Zion Tech Group</title>
         <meta name="description" content="Professional complianceautomation services by Zion Tech Group." />
-=======
-      
-        <Head>
-        <title>ComplianceAutomation - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/compliance-automation/page.tsx
+:app/compliance-automation/page.tsx
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

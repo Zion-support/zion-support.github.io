@@ -92,19 +92,11 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ service }) => {};
             Get Started
             <ArrowRight className="w-4h-4ml-2" />
           </a>
-<<<<<<< HEAD
           <p className="text-xs text-gray-400 mt-2 text-center">{service.contactInfo}</p>
-=======
-          <p className="tex t-xstext-gray-400 mt-2 text-center">{service.contactInfo}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
         </div>
       </div>
     </div>
   )
-<<<<<<< HEAD
 {};
 ;
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 export default MicroSAASCard;

@@ -12,20 +12,7 @@ interface OptimizedImageProps {;
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {;
-=======
-import Footer from './Footer'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Brain, ArrowRight, Mail } from 'lucide-react'
-import { Brain, ArrowRight, Mail } from 'lucide-react'
-import { Brain, ArrowRight, Mail } from 'lucide-react'
-
-interface OptimizedImageProps {;
-  className?: string;
-}
-
-const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/OptimizedImage.tsx
+:app/components/OptimizedImage.tsx
   return (;
     <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
       <Helmet>
@@ -143,8 +130,4 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {
   )};
 
 export default OptimizedImagePage
-=======
-  );
-}
-export default OptimizedImagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/OptimizedImage.tsx
+:app/components/OptimizedImage.tsx

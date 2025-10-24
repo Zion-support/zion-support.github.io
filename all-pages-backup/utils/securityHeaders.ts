@@ -25,9 +25,7 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {;
     "base-uri 'self'"
 <<<<<<< HEAD:all-pages-backup/utils/securityHeaders.ts
     "form-action 'self'",
-=======
-    "form-action 'self'"
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/securityHeaders.ts
+:app/utils/securityHeaders.ts
     'upgrade-insecure-requests';
   ].join('; ')
   // HTTP Strict Transport Security (HSTS)
@@ -42,17 +40,7 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {;
   // Permissions Policy (formerly Feature Policy)
   permissionsPolicy: [
     'camera=()'
-=======
-  // Prevent clickjacking
-  xFrameOptions: 'DENY'
-  // Prevent MIME type sniffing
-  xContentTypeOptions: 'nosniff'
-  // Referrer Policy
-  referrerPolicy: 'strict-origin-when-cross-origin'
-  // Permissions Policy (formerly Feature Policy)
-  permissionsPolicy: [
-    'camera = ()'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/securityHeaders.ts
+:app/utils/securityHeaders.ts
     'microphone=()'
     'geolocation=()'
     'payment=()'
@@ -72,12 +60,7 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
   const config = { ...defaultSecurityHeaders, ...customConfig };
   const headers: Record<string, string> = {;
     'X-XSS-Protection': '1; mode=block'
-=======
-export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>): Record<string, string> {
-  const config = { ...defaultSecurityHeaders, ...customConfig }
-  const headers: Record<string, string> = {;
-    'X-XSS-Protection': '1; mode = block'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/securityHeaders.ts
+:app/utils/securityHeaders.ts
     'X-DNS-Prefetch-Control': 'on'
   }
 
@@ -116,7 +99,4 @@ export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersCon
 <<<<<<< HEAD:all-pages-backup/utils/securityHeaders.ts
 ;
 export default defaultSecurityHeaders
-=======
-
-export default defaultSecurityHeaders;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/securityHeaders.ts
+:app/utils/securityHeaders.ts

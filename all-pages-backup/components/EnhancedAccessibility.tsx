@@ -11,15 +11,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
         document.documentElement.classList.remove('high-contrast')}
     };
 
-=======
-    const handleContrastChange = (e: MediaQueryListEvent) => {
-      if (e.matches) {;
-        document.documentElement.classList.add('high-contrast');
-      } else {
-        document.documentElement.classList.remove('high-contrast');
-      }
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/EnhancedAccessibility.tsx
+:app/components/EnhancedAccessibility.tsx
     const mediaQuery = window.matchMedia('(prefers-contrast: high)');
     mediaQuery.addEventListener('change', handleContrastChange);
     // Call with the MediaQueryList directly
@@ -184,7 +176,4 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
   return <>{children}</>};
 
 export default EnhancedAccessibility
-=======
-}
-export default EnhancedAccessibility;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/EnhancedAccessibility.tsx
+:app/components/EnhancedAccessibility.tsx

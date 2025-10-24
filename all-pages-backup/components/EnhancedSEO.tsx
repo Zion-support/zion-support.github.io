@@ -6,14 +6,7 @@ import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain } from 'lucide-react';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 import { Phone, Mail, ArrowRight } from 'lucide-react';
-=======
-import Footer from './Footer'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Brain, ArrowRight, Mail } from 'lucide-react'
-import { Brain, ArrowRight, Mail } from 'lucide-react'
-import { Brain, ArrowRight, Mail } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/EnhancedSEO.tsx
+:app/components/EnhancedSEO.tsx
 
   const benefits = [
     'Advanced AI technology integration'
@@ -24,10 +17,7 @@ import { Brain, ArrowRight, Mail } from 'lucide-react'
 <<<<<<< HEAD:all-pages-backup/components/EnhancedSEO.tsx
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-=======
-    'Easy integration with existing systems'
-    'Cost-effective pricing plans';
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/EnhancedSEO.tsx
+:app/components/EnhancedSEO.tsx
     'Proven track record of success';
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
               <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot;></button>
@@ -47,10 +37,7 @@ import { Brain, ArrowRight, Mail } from 'lucide-react'
 {};
 
 export default EnhancedSEOPage
-=======
-}
-export default EnhancedSEOPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/EnhancedSEO.tsx
+:app/components/EnhancedSEO.tsx
                 </div>
 {              ))}
             </div>

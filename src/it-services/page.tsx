@@ -1,19 +1,10 @@
 'use client'
-<<<<<<< HEAD
 import { ArrowRight, X, Target } from 'lucide-react';
 import React from 'react';
 import { Smartphone, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2, ShieldCheck, FileText, Rocket, Lock } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Star, ArrowRight } from 'lucide-react';
-=======
-import { ArrowRight, Users, Mail, Target, X, Award } from 'lucide-react'
-import React from 'react'
-import { ArrowRight, Users, Mail, Target, X, Award } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { ArrowRight, Users, Mail, Target, X, Award } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 
 interface ITService {}
   title: string
@@ -246,7 +237,6 @@ constITServicesPage: React.FC = () => {constitServices: ITService[] = []
     }
   ]
 
-<<<<<<< HEAD
   const categories = [];
     { name: 'All', count: itServices.length },
     { name: 'Infrastructure', count: itServices.filter(s => s.category === 'Infrastructure').length },
@@ -259,20 +249,6 @@ constITServicesPage: React.FC = () => {constitServices: ITService[] = []
     { name: 'Cloud Services', count: itServices.filter(s => s.category === 'Cloud Services').length },
     { name: 'Communications', count: itServices.filter(s => s.category === 'Communications').length },
     { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
-=======
-  const categories = []
-    { name: 'All', count: itServices.length }
-    { name: 'Infrastructure', count: itServices.filter(s => s.category === 'Infrastructure').length }
-    { name: 'Security', count: itServices.filter(s => s.category === 'Security').length }
-    { name: 'Data', count: itServices.filter(s => s.category === 'Data').length }
-    { name: 'Development', count: itServices.filter(s => s.category === 'Development').length }
-    { name: 'Support', count: itServices.filter(s => s.category === 'Support').length }
-    { name: 'Consulting', count: itServices.filter(s => s.category === 'Consulting').length }
-    { name: 'Management', count: itServices.filter(s => s.category === 'Management').length }
-    { name: 'Cloud Services', count: itServices.filter(s => s.category === 'Cloud Services').length }
-    { name: 'Communications', count: itServices.filter(s => s.category === 'Communications').length }
-    { name: 'Training', count: itServices.filter(s => s.category === 'Training').length }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
     { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length }
   ]
 
@@ -583,10 +559,6 @@ const Page = () => {};
       <Footer />
     </div>
   )
-<<<<<<< HEAD
 {};
 ;
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 export default Page;

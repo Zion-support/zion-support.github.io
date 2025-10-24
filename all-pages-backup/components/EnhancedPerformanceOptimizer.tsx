@@ -8,9 +8,7 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
       const criticalImages = [
 <<<<<<< HEAD:all-pages-backup/components/EnhancedPerformanceOptimizer.tsx
         '/images/hero-bg.jpg',
-=======
-        '/images/hero-bg.jpg'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/EnhancedPerformanceOptimizer.tsx
+:app/components/EnhancedPerformanceOptimizer.tsx
         '/images/logo.png';
       ];
       
@@ -22,12 +20,7 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
         link.href = src
         document.head.appendChild(link)})};
 
-=======
-        link.href = src;
-        document.head.appendChild(link);
-      });
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/EnhancedPerformanceOptimizer.tsx
+:app/components/EnhancedPerformanceOptimizer.tsx
     // Optimize images
     const optimizeImages = () => {;
       const images = document.querySelectorAll('img[data-src]');
@@ -36,9 +29,7 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
           if (entry.isIntersecting) {;
 <<<<<<< HEAD:all-pages-backup/components/EnhancedPerformanceOptimizer.tsx
             const img = entry.target as HTMLImageElement
-=======
-            const img = entry.target as HTMLImageElement;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/EnhancedPerformanceOptimizer.tsx
+:app/components/EnhancedPerformanceOptimizer.tsx
             img.src = img.dataset.src || '';
             img.classList.remove('lazy');
             imageObserver.unobserve(img)}
@@ -168,26 +159,7 @@ icon: Brain,
   description: 'Worldwide deployment and support for international businesses'}
 ]
 constbenefits= [
-=======
-  );
-}
-export default EnhancedPerformanceOptimizerPage;
-{
-icon: Brain
-title: 'AI-Powered Solutions'
-description: 'Advanced AI technology to transform your business operations and improve efficiency'}
-{icon: Zap
-title: 'High Performance'
-description: 'Lightning-fast processing and real-time analytics for optimal results'}
-{icon: Shield
-title: 'Enterprise Security'
-description: 'Bank-level security with encryption and compliance standards'}
-{icon: Globe
-title: 'Global Reach'
-description: 'Worldwide deployment and support for international businesses'}
-]
-constbenefits = [
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/EnhancedPerformanceOptimizer.tsx
+:app/components/EnhancedPerformanceOptimizer.tsx
 'Advanced AI technology integration'
 'Real-time processing and analytics'
 'Enterprise-grade security and compliance'
@@ -203,13 +175,7 @@ return (;
 <<<<<<< HEAD:all-pages-backup/components/EnhancedPerformanceOptimizer.tsx
 <title>EnhancedPerformanceOptimizer | Zion Tech Group</title>
         <meta name=&quot;description&quot; content=&quot;Professional EnhancedPerformanceOptimizer services by Zion Tech Group. Advanced AI and IT solutions for your business.&quot; />
-=======
-<Head>
-        <title>EnhancedPerformanceOptimizer | Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Professional EnhancedPerformanceOptimizer services by Zion Tech Group. Advanced AI and IT solutions for your business.&quot; />
-<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/EnhancedPerformanceOptimizer.tsx
+:app/components/EnhancedPerformanceOptimizer.tsx
 <meta name=&quot;keywords&quot; content=&quot;EnhancedPerformanceOptimizer, AI solutions, IT services, Zion Tech Group, enhancedperformanceoptimizer&quot; />
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
       </Head>
@@ -279,11 +245,7 @@ Email Us
 import { useEffect, useCallback } from 'react';
 import { useAnalytics } from './EnhancedAnalytics';
 import { Phone, Mail } from 'lucide-react';
-=======
-import { useEffect, useCallback } from 'react'
-import { useAnalytics } from './EnhancedAnalytics'
-import { Phone, Mail, CheckCircle } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/EnhancedPerformanceOptimizer.tsx
+:app/components/EnhancedPerformanceOptimizer.tsx
 
 interface PerformanceMetrics {
 lcp: number | null,
@@ -343,9 +305,4 @@ const images = document.querySelectorAll('img');
 };
 
 export default EnhancedPerformanceOptimizer
-=======
-const EnhancedPerformanceOptimizer: React.FC = () => {
-const { trackEvent } = useAnalytics()
-const optimizeImages = useCallback(() => {
-const images = document.querySelectorAll('img');
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/EnhancedPerformanceOptimizer.tsx
+:app/components/EnhancedPerformanceOptimizer.tsx

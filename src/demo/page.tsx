@@ -1,5 +1,4 @@
 'use client'
-<<<<<<< HEAD
 import { Brain } from 'lucide-react';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
@@ -7,15 +6,6 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, Star, Phone, Mail } from 'lucide-react';
 import { Clock } from 'lucide-react';
-=======
-import { Brain, Users, Mail } from 'lucide-react'
-import React, { useState } from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { Brain, Users, Mail } from 'lucide-react'
-import { Brain, Users, Mail } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 
 constDemoPage: React.FC = () =>{const [formDatasetFormData] = useState({}
     name: ''
@@ -77,15 +67,9 @@ constDemoPage: React.FC = () =>{const [formDatasetFormData] = useState({}
     }
   ]
 
-<<<<<<< HEAD
 const Page = () => {};
   return ();
   <><SEOOptimizertitle=&quot;Request a Demo - ZionTechGroup&quot;
-=======
-const Page = () => {}
-  return ();
-  <><SEOOptimizertitle =&quot;Request a Demo - ZionTechGroup&quot;>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
         description=&quot;Schedule a personalized demo of our AI and IT services. See how we can transform your business withcutting-edgetechnology.&quot;
         keywords = {['demo', 'AI demo', 'IT demo', 'business consultation', 'technologydemonstration']}
         canonicalUrl=&quot;https: //ziontechgroup.com/demo&quot;

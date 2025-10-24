@@ -1,5 +1,4 @@
 'use client'
-<<<<<<< HEAD
 import { Brain, BarChart, Target } from 'lucide-react';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -7,15 +6,6 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Building } from 'lucide-react';
 import { CheckCircle, Phone, Mail, PhoneIcon, MailIcon } from 'lucide-react';
-=======
-import { Users, Mail, Target, BarChart, Brain } from 'lucide-react'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { Users, Mail, Target, BarChart, Brain } from 'lucide-react'
-import { Users, Mail, Target, BarChart, Brain } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 
 const $1: React.FC = () => {;
   const features = [;
@@ -99,17 +89,10 @@ const $1: React.FC = () => {;
       popular: false
     }
   ]
-<<<<<<< HEAD
   const stats = [];
     { number: '300%', label: 'More Qualified Leads' },
     { number: '85%', label: 'Time Savings' },
     { number: '95%', label: 'Lead Accuracy' },
-=======
-  const stats = []
-    { number: '300%', label: 'More Qualified Leads' }
-    { number: '85%', label: 'Time Savings' }
-    { number: '95%', label: 'Lead Accuracy' }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
     { number: '50+', label: 'CRM Integrations' }
   ]
   const useCases = [;
@@ -132,11 +115,7 @@ const $1: React.FC = () => {;
     }
   ];
   return ();
-<<<<<<< HEAD
   <><SEOOptimizertitle=&quot;AI Lead Generation Platform - ZionTechGroup&quot;
-=======
-  <><SEOOptimizertitle =&quot;AI Lead Generation Platform - ZionTechGroup&quot;>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
         description=&quot;Generate 30 0% more qualified leads with AI-powered prospecting, lead scoring, and automated outreach.85% time savingsand95%accuracy.&quot;
         keywords = {['AI lead generation', 'lead scoring', 'prospecting', 'sales automation', 'leadnurturing']}
         canonicalUrl=&quot;https: //ziontechgroup.com/ai-lead-generation&quot;

@@ -1,13 +1,7 @@
 'use client'
-<<<<<<< HEAD
 import { BarChart, Target, TrendingUp } from 'lucide-react';
 import React from 'react';
 import { CheckCircle, Star, BarChart, TrendingUp, Target } from 'lucide-react';
-=======
-import { BarChart, TrendingUp, Target } from 'lucide-react'
-import React from 'react'
-import { BarChart, TrendingUp, Target } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 
 constBusinessIntelligencePage: React.FC = () =>{constbiServices= [
     {

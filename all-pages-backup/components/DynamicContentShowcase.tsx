@@ -6,14 +6,7 @@ import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/DynamicContentShowcase.tsx
+:app/components/DynamicContentShowcase.tsx
 
 interface Testimonial {
   id: number,
@@ -50,27 +43,7 @@ const DynamicContentShowcase: React.FC = () => {;
   company: company,
   content: content,
   rating: 5
-=======
-      id: 1
-      name: "Sarah Johnson"
-      company: "TechCorp"
-      content: "Zion Tech Group transformed our AI capabilities. Their solutions increased our operational efficiency by 40%."
-      rating: 5
-    }
-    {
-      id: 2
-      name: "Michael Chen"
-      company: "InnovateLab"
-      content: "The micro SaaS platform they built for us has been a game-changer. Highly recommend their services."
-      rating: 5
-    }
-    {
-      id: 3
-      name: "Emily Rodriguez"
-      company: "StartupXYZ"
-      content: "The micro SaaS solutions they provided helped us scale faster than we ever imagined possible."
-      rating: 5
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/DynamicContentShowcase.tsx
+:app/components/DynamicContentShowcase.tsx
     }
   ]
 
@@ -105,27 +78,7 @@ const DynamicContentShowcase: React.FC = () => {;
     }
   ];
 ;
-=======
-      icon: <Brain className="h-8w-8" />
-      title: "AI-Powered Solutions"
-      description: "Advanced artificial intelligence to transform your business operations"
-      color: "from-blue-500 to-cyan-500"
-    }
-    {
-      icon: <Shield className="h-8w-8" />
-      title: "Cybersecurity"
-      description: "Comprehensive security solutions to protect your digital assets"
-      color: "from-green-500 to-emerald-500"
-    }
-    {
-      icon: <Zap className="h-8w-8" />
-      title: "Automation"
-      description: "Streamline processes and increase efficiency with smart automation"
-      color: "from-purple-500 to-pink-500"
-    }
-  ]
-
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/DynamicContentShowcase.tsx
+:app/components/DynamicContentShowcase.tsx
   return (;
     <div className=&quot;bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
         <section className=&quot;py-20 px-4&quot;></section>

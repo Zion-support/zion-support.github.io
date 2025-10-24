@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import { BarChart3 } from 'lucide-react';
 import { CheckCircle, Brain, Target, Database } from 'lucide-react';
-=======
-import React from 'react'
-import { Target, BarChart3 } from 'lucide-react'
-import { Target, BarChart3 } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 
 const $1: React.FC = () => {;
   const analyticsServices = [;
@@ -324,9 +318,5 @@ const $1: React.FC = () => {;
       </div>
     </div>
   )
-<<<<<<< HEAD
 };
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 export default AIDataAnalyticsPage;

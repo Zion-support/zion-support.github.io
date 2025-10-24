@@ -10,13 +10,7 @@ export default function DatabaseServicesPage() {
 <<<<<<< HEAD:all-pages-backup/database-services/page.tsx
       <title>DatabaseServices - Zion Tech Group</title>
         <meta name="description" content="Professional databaseservices services by Zion Tech Group." />
-=======
-      
-        <Head>
-        <title>DatabaseServices - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/database-services/page.tsx
+:app/database-services/page.tsx
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

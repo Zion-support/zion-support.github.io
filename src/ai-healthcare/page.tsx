@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import { CheckCircle, Star, Zap, Brain, Shield, Target, Users, Heart, Helmet } from 'lucide-react';
-=======
-import React from 'react'
-import { Heart, Helmet, Users, Target, Zap, CheckCircle, Shield, Brain, Star } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 import React from 'react';
 import { Heart, Helmet, Users, Target, Zap, CheckCircle, Shield, Brain, Star } from 'lucide-react';
 

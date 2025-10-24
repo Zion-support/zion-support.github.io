@@ -6,14 +6,7 @@ import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/OptimizedLoadingSpinner.tsx
+:app/components/OptimizedLoadingSpinner.tsx
 
 const OptimizedLoadingSpinnerPage: React.FC = () => {
   const features = [
@@ -41,30 +34,7 @@ const OptimizedLoadingSpinnerPage: React.FC = () => {
   title: title,
   description: description,
   benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-=======
-      icon: Brain
-      title: 'AI-Powered Intelligence'
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    }
-    {
-      icon: BarChart
-      title: 'Advanced Analytics'
-      description: 'Comprehensive analytics dashboard with real-time data visualization.'
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    }
-    {
-      icon: Target
-      title: 'Precision Targeting'
-      description: 'Target specific goals and objectives with precision and accuracy.'
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    }
-    {
-      icon: TrendingUp
-      title: 'Growth Optimization'
-      description: 'Optimize your business growth with data-driven strategies.'
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/OptimizedLoadingSpinner.tsx
+:app/components/OptimizedLoadingSpinner.tsx
     }
   ]
 
@@ -80,11 +50,7 @@ const OptimizedLoadingSpinnerPage: React.FC = () => {
 <<<<<<< HEAD:all-pages-backup/components/OptimizedLoadingSpinner.tsx
     <>;
       <Helmet>;
-=======
-    <>
-      <Helmet>;
-        <Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/OptimizedLoadingSpinner.tsx
+:app/components/OptimizedLoadingSpinner.tsx
         <title>OptimizedLoadingSpinner</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced OptimizedLoadingSpinner solution for modern businesses.&quot; />
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
@@ -190,11 +156,7 @@ const OptimizedLoadingSpinnerPage: React.FC = () => {
   )};
 
 export default OptimizedLoadingSpinnerPage
-=======
-  );
-}
-export default OptimizedLoadingSpinnerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/OptimizedLoadingSpinner.tsx
+:app/components/OptimizedLoadingSpinner.tsx
 text?: string
 class Nam e?: string
 color?: 'blue' | 'gray' | 'green' | 'red' | 'purple'
@@ -203,9 +165,7 @@ color?: 'blue' | 'gray' | 'green' | 'red' | 'purple'
 constOptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProp s>= memo(
 <<<<<<< HEAD:all-pages-backup/components/OptimizedLoadingSpinner.tsx
 ({size= 'md'
-=======
-({size = 'md'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/OptimizedLoadingSpinner.tsx
+:app/components/OptimizedLoadingSpinner.tsx
 variant= 'spinner'
 text= 'Loading...'
 className= ''
@@ -234,29 +194,7 @@ constcolorClasses= useMemo(
   green: green,
   red: red,
   purple: 'border-purple-600bg-purple-60 0',})
-=======
-xs: 'h-3 w-3'
-sm: 'h-4 w-4'
-md: 'h-8 w-8'
-lg: 'h-1 2 w-1 2'
-xl: 'h-16w-1 6',})
-[]
-)
-consttextSizeClasses= useMemo(
-() => ({xs: 'text-xs'
-sm: 'text-sm'
-md: 'text-base'
-lg: 'text-lg'
-xl: 'text-xl',})
-[]
-)
-constcolorClasses= useMemo(
-() => ({blue: 'border-blue-60 0 bg-blue-60 0'
-gray: 'border-gray-60 0 bg-gray-60 0'
-green: 'border-green-600bg-green-60 0'
-red: 'border-red-600bg-red-60 0'
-purple: 'border-purple-600bg-purple-60 0',})
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/OptimizedLoadingSpinner.tsx
+:app/components/OptimizedLoadingSpinner.tsx
 []
 )
 constrenderSpinner= useMemo(() => {switch (variant) {
@@ -283,11 +221,7 @@ className={`w-1 ${colorClasses[color].split('')[1]}animate-pulse`}
 style={{}
 height: height,
   animationDelay: `${i*0.1}s`
-=======
-style={{;}
-height: `${12+ i*4}px`
-animationDelay: `${i*0.1}s`
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/OptimizedLoadingSpinner.tsx
+:app/components/OptimizedLoadingSpinner.tsx
 }}
 /></di>))}</di>)
 case 'spinner':
@@ -306,11 +240,7 @@ return (</div>
 {text && (</div>}
 <p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>{text}</p>p>
 {)}
-=======
-{text && (</div>;}
-<p className = {`mt-2 text-gray-600 ${textSizeClasses[size]}`}>{text}</p>p>
-)}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/OptimizedLoadingSpinner.tsx
+:app/components/OptimizedLoadingSpinner.tsx
 </div>
 )
 {}

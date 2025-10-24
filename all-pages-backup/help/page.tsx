@@ -10,13 +10,7 @@ export default function HelpPage() {
 <<<<<<< HEAD:all-pages-backup/help/page.tsx
       <title>Help - Zion Tech Group</title>
         <meta name="description" content="Professional help services by Zion Tech Group." />
-=======
-      
-        <Head>
-        <title>Help - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/help/page.tsx
+:app/help/page.tsx
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

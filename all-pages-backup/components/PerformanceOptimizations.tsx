@@ -25,30 +25,7 @@ const PerformanceOptimizationsPage: React.FC = () => {
   title: title,
   description: description,
   benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-=======
-      icon: Brain
-      title: 'AI-Powered Intelligence'
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    }
-    {
-      icon: BarChart
-      title: 'Advanced Analytics'
-      description: 'Comprehensive analytics dashboard with real-time data visualization.'
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    }
-    {
-      icon: Target
-      title: 'Precision Targeting'
-      description: 'Target specific goals and objectives with precision and accuracy.'
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    }
-    {
-      icon: TrendingUp
-      title: 'Growth Optimization'
-      description: 'Optimize your business growth with data-driven strategies.'
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/PerformanceOptimizations.tsx
+:app/components/PerformanceOptimizations.tsx
     }
   ]
 
@@ -64,10 +41,7 @@ const PerformanceOptimizationsPage: React.FC = () => {
     <>
 <<<<<<< HEAD:all-pages-backup/components/PerformanceOptimizations.tsx
       <Helmet>;
-=======
-      <Helmet>
-        <Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/PerformanceOptimizations.tsx
+:app/components/PerformanceOptimizations.tsx
         <title>PerformanceOptimizations</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced PerformanceOptimizations solution for modern businesses.&quot; />
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
@@ -173,8 +147,4 @@ const PerformanceOptimizationsPage: React.FC = () => {
   )};
 
 export default PerformanceOptimizationsPage
-=======
-  );
-}
-export default PerformanceOptimizationsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/PerformanceOptimizations.tsx
+:app/components/PerformanceOptimizations.tsx

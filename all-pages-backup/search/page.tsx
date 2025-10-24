@@ -10,13 +10,7 @@ export default function SearchPage() {
 <<<<<<< HEAD:all-pages-backup/search/page.tsx
       <title>Search - Zion Tech Group</title>
         <meta name="description" content="Professional search services by Zion Tech Group." />
-=======
-      
-        <Head>
-        <title>Search - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/search/page.tsx
+:app/search/page.tsx
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

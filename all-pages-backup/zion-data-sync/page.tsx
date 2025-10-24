@@ -10,13 +10,7 @@ export default function ZionDataSyncPage() {
 <<<<<<< HEAD:all-pages-backup/zion-data-sync/page.tsx
       <title>ZionDataSync - Zion Tech Group</title>
         <meta name="description" content="Professional ziondatasync services by Zion Tech Group." />
-=======
-      
-        <Head>
-        <title>ZionDataSync - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/zion-data-sync/page.tsx
+:app/zion-data-sync/page.tsx
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

@@ -10,13 +10,7 @@ export default function ComputerVisionPage() {
 <<<<<<< HEAD:all-pages-backup/computer-vision/page.tsx
       <title>ComputerVision - Zion Tech Group</title>
         <meta name="description" content="Professional computervision services by Zion Tech Group." />
-=======
-      
-        <Head>
-        <title>ComputerVision - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/computer-vision/page.tsx
+:app/computer-vision/page.tsx
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

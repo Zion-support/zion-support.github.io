@@ -10,13 +10,7 @@ export default function DataEngineeringPage() {
 <<<<<<< HEAD:all-pages-backup/data-engineering/page.tsx
       <title>DataEngineering - Zion Tech Group</title>
         <meta name="description" content="Professional dataengineering services by Zion Tech Group." />
-=======
-      
-        <Head>
-        <title>DataEngineering - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/data-engineering/page.tsx
+:app/data-engineering/page.tsx
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

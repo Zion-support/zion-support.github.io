@@ -5,13 +5,7 @@ import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import React from 'react';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
-=======
-import Navigation from './Navigation'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react'
-import React from 'react'
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ContentPromotionBanner.tsx
+:app/components/ContentPromotionBanner.tsx
 
 const ContentPromotionBanner: React.FC = () => {
   const benefits = [
@@ -26,11 +20,7 @@ const ContentPromotionBanner: React.FC = () => {
 <<<<<<< HEAD:all-pages-backup/components/ContentPromotionBanner.tsx
     <>;
       <Helmet>;
-=======
-    <>
-      <Helmet>;
-        <Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ContentPromotionBanner.tsx
+:app/components/ContentPromotionBanner.tsx
         <title>ContentPromotionBanner</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced ContentPromotionBanner solution for modern businesses.&quot; />
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />

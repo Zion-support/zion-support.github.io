@@ -10,13 +10,7 @@ export default function NetworkSecurityPage() {
 <<<<<<< HEAD:all-pages-backup/network-security/page.tsx
       <title>NetworkSecurity - Zion Tech Group</title>
         <meta name="description" content="Professional networksecurity services by Zion Tech Group." />
-=======
-      
-        <Head>
-        <title>NetworkSecurity - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/network-security/page.tsx
+:app/network-security/page.tsx
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

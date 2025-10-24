@@ -75,16 +75,7 @@ export class PerformanceMetrics {;
   metadata: {
                   domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
   domInteractive: navEntry.domInteractive - navEntry.fetchStart
-=======
-                name: 'pageLoadTime'
-                value: navEntry.loadEventEnd - navEntry.fetchStart
-                unit: 'ms'
-                timestamp: new Date()
-                category: 'load'
-                metadata: {
-                  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart
-                  domInteractive: navEntry.domInteractive - navEntry.fetchStart
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceMetrics.ts
+:app/utils/performanceMetrics.ts
                 }
               })
             }
@@ -104,12 +95,7 @@ export class PerformanceMetrics {;
   value: entry.startTime,
   unit: unit,
   timestamp: new Date()
-=======
-                name: 'FCP'
-                value: entry.startTime
-                unit: 'ms'
-                timestamp: new Date()
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceMetrics.ts
+:app/utils/performanceMetrics.ts
                 category: 'load'
               })
             }
@@ -130,12 +116,7 @@ export class PerformanceMetrics {;
   value: lastEntry.startTime,
   unit: unit,
   timestamp: new Date()
-=======
-              name: 'LCP'
-              value: lastEntry.startTime
-              unit: 'ms'
-              timestamp: new Date()
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceMetrics.ts
+:app/utils/performanceMetrics.ts
               category: 'load'
             })
           }
@@ -157,12 +138,7 @@ export class PerformanceMetrics {;
   value: clsValue,
   unit: unit,
   timestamp: new Date()
-=======
-            name: 'CLS'
-            value: clsValue
-            unit: 'score'
-            timestamp: new Date()
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceMetrics.ts
+:app/utils/performanceMetrics.ts
             category: 'runtime'
           })
         })
@@ -205,18 +181,7 @@ export class PerformanceMetrics {;
   tcpConnection: perfData.connectEnd - perfData.connectStart,
   serverResponse: perfData.responseEnd - perfData.requestStart,
   domParsing: perfData.domComplete - perfData.domLoading
-=======
-      name: 'pageLoad'
-      value: pageLoadTime
-      unit: 'ms'
-      timestamp: new Date()
-      category: 'load'
-      metadata: {
-        dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart
-        tcpConnection: perfData.connectEnd - perfData.connectStart
-        serverResponse: perfData.responseEnd - perfData.requestStart
-        domParsing: perfData.domComplete - perfData.domLoading
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceMetrics.ts
+:app/utils/performanceMetrics.ts
       }
     })
   }
@@ -233,14 +198,7 @@ export class PerformanceMetrics {;
   timestamp: new Date()
       category: category,
   metadata: {
-=======
-      name: 'networkRequest'
-      value: duration
-      unit: 'ms'
-      timestamp: new Date()
-      category: 'network'
-      metadata: {
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceMetrics.ts
+:app/utils/performanceMetrics.ts
         url
         status
       }
@@ -265,17 +223,7 @@ export class PerformanceMetrics {;
         total: memory.totalJSHeapSize,
   limit: memory.jsHeapSizeLimit,
   percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
-=======
-      name: 'memoryUsage'
-      value: memory.usedJSHeapSize
-      unit: 'bytes'
-      timestamp: new Date()
-      category: 'memory'
-      metadata: {
-        total: memory.totalJSHeapSize
-        limit: memory.jsHeapSizeLimit
-        percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceMetrics.ts
+:app/utils/performanceMetrics.ts
       }
     })
   }
@@ -293,12 +241,7 @@ export class PerformanceMetrics {;
   value: endTime - startTime,
   unit: unit,
   timestamp: new Date()
-=======
-      name: `function:${name}`
-      value: endTime - startTime
-      unit: 'ms'
-      timestamp: new Date()
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceMetrics.ts
+:app/utils/performanceMetrics.ts
       category: 'runtime'
     })
     return result
@@ -317,12 +260,7 @@ export class PerformanceMetrics {;
   value: endTime - startTime,
   unit: unit,
   timestamp: new Date()
-=======
-      name: `async:${name}`
-      value: endTime - startTime
-      unit: 'ms'
-      timestamp: new Date()
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceMetrics.ts
+:app/utils/performanceMetrics.ts
       category: 'runtime'
     })
     return result
@@ -416,11 +354,7 @@ export class PerformanceMetrics {;
         avgLoadTime,
   totalMetrics: this.metrics.length,
   performanceScore: this.calculatePerformanceScore()
-=======
-        avgLoadTime
-        totalMetrics: this.metrics.length
-        performanceScore: this.calculatePerformanceScore()
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceMetrics.ts
+:app/utils/performanceMetrics.ts
         recommendations: this.getRecommendations()
       }
       timestamp: new Date()
@@ -470,7 +404,4 @@ interface LayoutShift extends PerformanceEntry {
 <<<<<<< HEAD:all-pages-backup/utils/performanceMetrics.ts
 export const performanceMetrics = PerformanceMetrics.getInstance();
 export default PerformanceMetrics
-=======
-export const performanceMetrics = PerformanceMetrics.getInstance()
-export default PerformanceMetrics;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceMetrics.ts
+:app/utils/performanceMetrics.ts

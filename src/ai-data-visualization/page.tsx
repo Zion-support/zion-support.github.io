@@ -1,19 +1,10 @@
 'use client'
-<<<<<<< HEAD
 import { Brain, BarChart, TrendingUp } from 'lucide-react';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, Phone, Mail } from 'lucide-react';
-=======
-import { BarChart, Brain, TrendingUp, Mail } from 'lucide-react'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { BarChart, Brain, TrendingUp, Mail } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 
 constAIDataVisualizationPage: React.FC = () =>{constfeatures= [
     {
@@ -56,17 +47,10 @@ constAIDataVisualizationPage: React.FC = () =>{constfeatures= [
       features: ['Everything in Professional', 'Unlimited data sources', 'Custom integrations', 'Dedicated support', 'On-premise deployment']
     }
   ]
-<<<<<<< HEAD
   const stats = [];
     { number: '85%', label: 'Faster Decision Making' },
     { number: '300%', label: 'Data Processing Speed' },
     { number: '50+', label: 'Visualization Types' },
-=======
-  const stats = []
-    { number: '85%', label: 'Faster Decision Making' }
-    { number: '300%', label: 'Data Processing Speed' }
-    { number: '50+', label: 'Visualization Types' }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
     { number: '99.9%', label: 'Uptime Guarantee' }
   ]
 
@@ -89,15 +73,9 @@ constAIDataVisualizationPage: React.FC = () =>{constfeatures= [
     }
   ]
 
-<<<<<<< HEAD
 const Page = () => {};
   return ();
   <><SEOOptimizertitle=&quot;AI Data Visualization Solutions - ZionTechGroup&quot;
-=======
-const Page = () => {}
-  return ();
-  <><SEOOptimizertitle =&quot;AI Data Visualization Solutions - ZionTechGroup&quot;>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
         description=&quot;Transform your data into actionable insights with AI-powered visualization tools. Create interactive dashboards, automated reports, andintelligentanalytics.&quot;
         keywords = {['AI data visualization', 'business intelligence', 'data analytics', 'interactive dashboards', 'datainsights']}
         canonicalUrl=&quot;https: //ziontechgroup.com/ai-data-visualization&quot;

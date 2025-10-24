@@ -17,7 +17,6 @@ constAISocialMediaManagerPage: React.FC = () =>{constfeatures= []
     'Multi-platform campaign management'
   ]
 
-<<<<<<< HEAD
   const benefits = [];
     '200% increase in engagement rates',
     '20+ hours saved per week',
@@ -33,23 +32,6 @@ constAISocialMediaManagerPage: React.FC = () =>{constfeatures= []
     { name: 'Twitter', icon: '🐦', users: '450M' },
     { name: 'LinkedIn', icon: '💼', users: '900M' },
     { name: 'TikTok', icon: '🎵', users: '1B' },
-=======
-  const benefits = []
-    '200% increase in engagement rates'
-    '20+ hours saved per week'
-    '40% improvement in reach'
-    '50% better ROI on campaigns'
-    '95% content quality consistency'
-    '60% faster content creation'
-  ]
-
-  const platforms = []
-    { name: 'Facebook', icon: '📘', users: '2.9B' }
-    { name: 'Instagram', icon: '📷', users: '1.4B' }
-    { name: 'Twitter', icon: '🐦', users: '450M' }
-    { name: 'LinkedIn', icon: '💼', users: '900M' }
-    { name: 'TikTok', icon: '🎵', users: '1B' }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
     { name: 'YouTube', icon: '📺', users: '2.7B' }
   ]
 
@@ -58,10 +40,6 @@ const Page = () => {};
       </div>
 </>
   )
-<<<<<<< HEAD
 };
 ;
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 export default Page;

@@ -51,15 +51,9 @@ constAIFashionDesignPage: React.FC = () =>{constfeatures= []
     }
   ]
 
-<<<<<<< HEAD
 const Page = () => {};
   return ();
   <><SEOOptimizertitle=&quot;AI Fashion Designer - AI-Powered Fashion Design & Trend Analysis | ZionTechGroup&quot;
-=======
-const Page = () => {}
-  return ();
-  <><SEOOptimizertitle =&quot;AI Fashion Designer - AI-Powered Fashion Design & Trend Analysis | ZionTechGroup&quot;>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
         description=&quot;Revolutionize fashion design with AI Fashion Designer. Generate designs, analyze trends, and optimize collections with AI-powered fashion technology starting at$249/month.&quot;
         keywords = {['AI fashion design', 'fashion trends', 'design generation', 'fashion AI', 'trend analysis', 'fashiontechnology']}
         canonicalUrl=&quot;https: //ziontechgroup.com/ai-fashion-design&quot;

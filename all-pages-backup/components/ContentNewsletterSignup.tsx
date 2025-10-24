@@ -7,15 +7,7 @@ import { ArrowRight } from 'lucide-react';
 import React, { useState } from 'react';
 import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react';
 import { CheckCircle, ArrowRight } from 'lucide-react';
-=======
-import Footer from './Footer'
-import Navigation from './Navigation'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Users } from 'lucide-react'
-import React, { useState } from 'react'
-import { ArrowRight, Users } from 'lucide-react'
-import { ArrowRight, Users } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ContentNewsletterSignup.tsx
+:app/components/ContentNewsletterSignup.tsx
 
 interface ContentNewsletterSignupProps {
   title?: string
@@ -28,9 +20,7 @@ interface ContentNewsletterSignupProps {
   }>
 <<<<<<< HEAD:all-pages-backup/components/ContentNewsletterSignup.tsx
   onSubscribe?: (email: string) => void
-=======
-  onSubscribe?: (email: string) => void;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ContentNewsletterSignup.tsx
+:app/components/ContentNewsletterSignup.tsx
 }constContentNewsletterSignup:React.FC<ContentNewsletterSignupProp s>= ({title= &quot;Stay Updated with Our LatestInsights&quot;
   subtitle= &quot;Get exclusive content, industry insights, and early access to new features delivered to yourinbox.&quot;
   placeholder= &quot;Enter your emailaddress&quot;
@@ -48,20 +38,7 @@ interface ContentNewsletterSignupProps {
   const [isSubscribedsetIsSubscribed] = useState(false);
   const [isLoadingsetIsLoading] = useState(false);
   consthandleSubmit= async (e: React.FormEvent) => {
-=======
-  features = [;
-    { icon: Star, text:&quot;Exclusive content&quot;}
-    {icon: Users, text:&quot;Industry insights&quot;}
-    {icon: Globe, text:&quot;Global updates&quot;}
-    {icon: Zap, text:&quot;Early access&quot;}
-  ]
-  onSubscribe
-}) => {const [emailsetEmail] = useState('')
-  const [isSubmittingsetIsSubmitting] = useState(false)
-  const [isSubscribedsetIsSubscribed] = useState(false)
-  const [isLoadingsetIsLoading] = useState(false)
-  consthandleSubmit = async (e: React.FormEvent) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ContentNewsletterSignup.tsx
+:app/components/ContentNewsletterSignup.tsx
   
     e.preventDefault()
     if (!email) return setIsLoadin g(true)
@@ -93,9 +70,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ class
     <>
       <Helmet>
 <<<<<<< HEAD:all-pages-backup/components/ContentNewsletterSignup.tsx
-=======
-        <Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ContentNewsletterSignup.tsx
+:app/components/ContentNewsletterSignup.tsx
         <title>ContentNewsletterSignup</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced ContentNewsletterSignup solution for modern businesses.&quot; />
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
@@ -176,17 +151,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ class
               <button
                 type=&quot;submit&quot
                 disabled={isLoading || !email}
-=======
-                <input type=&quot;email&quot;>
-                  value = {email}
-                  onChange={(e) =>setEmail(e.target.value)}
-                  placeholder={placeholder}
-                 requiredclassName=&quot;w-full pl-10pr-4 py-4 bg-white/10border border-white/20rounded-lg text-white placeholder-gray-400 focus: outline-nonefocus:ring-2focus:ring-blue-500focus:border-transparent&quot;
-                />
-              </div>
-              <button type=&quot;submit&quot;,>
-                disabled = {isLoading || !email}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ContentNewsletterSignup.tsx
+:app/components/ContentNewsletterSignup.tsx
                 className=&quot;w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center&quot;></button>
                 {isLoading ? (
                   <>
@@ -239,8 +204,4 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ class
   )};
 
 export default ContentNewsletterSignupPage
-=======
-  );
-}
-export default ContentNewsletterSignupPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ContentNewsletterSignup.tsx
+:app/components/ContentNewsletterSignup.tsx

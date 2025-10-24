@@ -49,15 +49,9 @@ constAIMusicCompositionPage: React.FC = () =>{constfeatures= []
     }
   ]
 
-<<<<<<< HEAD
 const Page = () => {};
   return ();
   <><SEOOptimizertitle=&quot;AI Music Composer - Generate Royalty-Free Music with AI | ZionTechGroup&quot;
-=======
-const Page = () => {}
-  return ();
-  <><SEOOptimizertitle =&quot;AI Music Composer - Generate Royalty-Free Music with AI | ZionTechGroup&quot;>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
         description=&quot;Create professional, royalty-free music and soundtracks with AI Music Composer. Generate custom compositions in any genre starting at$99/month.&quot;
         keywords = {['AI music composition', 'royalty-free music', 'AI music generation', 'background music', 'music automation', 'AIcomposer']}
         canonicalUrl=&quot;https: //ziontechgroup.com/ai-music-composition&quot;

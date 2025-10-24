@@ -1,5 +1,4 @@
 'use client'
-<<<<<<< HEAD
 import { Brain, BarChart } from 'lucide-react';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -7,15 +6,6 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Workflow } from 'lucide-react';
 import { CheckCircle, Phone, Mail } from 'lucide-react';
-=======
-import { BarChart, Brain, Users, Mail } from 'lucide-react'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { BarChart, Brain, Users, Mail } from 'lucide-react'
-import { BarChart, Brain, Users, Mail } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 
 const $1: React.FC = () => {;
   const features = [;
@@ -59,17 +49,10 @@ const $1: React.FC = () => {;
       features: ['Unlimited workflows', 'Custom AI models', 'Advanced analytics', 'Dedicated support', 'On-premise deployment']
     }
   ]
-<<<<<<< HEAD
   const stats = [];
     { number: '70%', label: 'Process Efficiency' },
     { number: '90%', label: 'Error Reduction' },
     { number: '50%', label: 'Time Savings' },
-=======
-  const stats = []
-    { number: '70%', label: 'Process Efficiency' }
-    { number: '90%', label: 'Error Reduction' }
-    { number: '50%', label: 'Time Savings' }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
     { number: '99.9%', label: 'Reliability' }
   ]
 
@@ -99,10 +82,6 @@ const Page = () => {};
       </div>
 </>
   )
-<<<<<<< HEAD
 };
 ;
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 export default Page;

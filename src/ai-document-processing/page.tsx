@@ -1,5 +1,4 @@
 'use client'
-<<<<<<< HEAD
 import { Brain, BarChart } from 'lucide-react';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -7,15 +6,6 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { FileText, FileImage } from 'lucide-react';
 import { CheckCircle, Phone, Mail } from 'lucide-react';
-=======
-import { BarChart, Brain, Users, Mail } from 'lucide-react'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { BarChart, Brain, Users, Mail } from 'lucide-react'
-import { BarChart, Brain, Users, Mail } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 
 const $1: React.FC = () => {;
   const features = [;
@@ -99,17 +89,10 @@ const $1: React.FC = () => {;
       popular: false
     }
   ]
-<<<<<<< HEAD
   const stats = [];
     { number: '99.9%', label: 'Accuracy Rate' },
     { number: '90%', label: 'Time Savings' },
     { number: '50+', label: 'Document Types' },
-=======
-  const stats = []
-    { number: '99.9%', label: 'Accuracy Rate' }
-    { number: '90%', label: 'Time Savings' }
-    { number: '50+', label: 'Document Types' }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
     { number: '24/7', label: 'Processing' }
   ]
   const useCases = [;
@@ -132,11 +115,7 @@ const $1: React.FC = () => {;
     }
   ];
   return ();
-<<<<<<< HEAD
   <><SEOOptimizertitle=&quot;AI Document Processing Platform - ZionTechGroup&quot;
-=======
-  <><SEOOptimizertitle =&quot;AI Document Processing Platform - ZionTechGroup&quot;>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
         description=&quot;Automate do cument processing with AI-powered OCR and data extraction. 9 9.9% accuracy,90% time savings, and50+ do cument typessupported.&quot;
         keywords = {['AI do cument processing', 'OCR', 'data extraction', 'do cument automation', 'AIparsing']}
         canonicalUrl=&quot;https: //ziontechgroup.com/ai-document-processing&quot;

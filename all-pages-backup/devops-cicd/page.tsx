@@ -10,13 +10,7 @@ export default function DevopsCicdPage() {
 <<<<<<< HEAD:all-pages-backup/devops-cicd/page.tsx
       <title>DevopsCicd - Zion Tech Group</title>
         <meta name="description" content="Professional devopscicd services by Zion Tech Group." />
-=======
-      
-        <Head>
-        <title>DevopsCicd - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/devops-cicd/page.tsx
+:app/devops-cicd/page.tsx
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

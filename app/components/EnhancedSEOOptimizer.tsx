@@ -1,13 +1,6 @@
 'use client'
 import React from 'react'
-<<<<<<< HEAD
 import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Phone, Mail, MapPin, Zap, Shield, Globe } from 'lucide-react'
-=======
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Target, Mail, BarChart, Brain, TrendingUp } from 'lucide-react'
-import { ArrowRight, Target, Mail, BarChart, Brain, TrendingUp } from 'lucide-react'
-import { ArrowRight, Target, Mail, BarChart, Brain, TrendingUp } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 
 const EnhancedSEOOptimizerPage: React.FC = () => {
   const features = [
@@ -100,12 +93,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
                 </ul>
               </div>
             ))}
-<<<<<<< HEAD
-=======
-          </div>;
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
           </div>
         </div>
       </section>
@@ -151,8 +138,4 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
   )
 }
 
-<<<<<<< HEAD
 export default EnhancedSEOOptimizerPage
-=======
-export default EnhancedSEOOptimizerPage
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4

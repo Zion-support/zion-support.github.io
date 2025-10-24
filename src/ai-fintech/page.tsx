@@ -1,17 +1,9 @@
 'use client'
-<<<<<<< HEAD
 import { X, Brain, Target, TrendingUp } from 'lucide-react';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Star, Zap, Brain, DollarSign, Shield, TrendingUp, Target } from 'lucide-react';
-=======
-import { Brain, TrendingUp, Target, X } from 'lucide-react'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { Brain, TrendingUp, Target, X } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 
 constAIFintechPage: React.FC = () =>{constaiFintechServices= [
     {
@@ -371,9 +363,5 @@ constAIFintechPage: React.FC = () =>{constaiFintechServices= [
       <Footer />
     </div>
   )
-<<<<<<< HEAD
 };
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 export default AIFintechPage;

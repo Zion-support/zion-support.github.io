@@ -1,15 +1,8 @@
 'use client'
-<<<<<<< HEAD
 import { Brain, Target } from 'lucide-react';
 import React from 'react';
 import { PenTool, FileText } from 'lucide-react';
 import { CheckCircle, Star, Phone } from 'lucide-react';
-=======
-import { Mail, Brain, Users, Target } from 'lucide-react'
-import React from 'react'
-import { Mail, Brain, Users, Target } from 'lucide-react'
-import { Mail, Brain, Users, Target } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 
 constAIWritingAssistantPage: React.FC = () =>{constfeatures= [
     {
@@ -331,10 +324,6 @@ const Page = () => {};
       </section>
     </div>
   )
-<<<<<<< HEAD
 {};
 ;
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 export default Page;

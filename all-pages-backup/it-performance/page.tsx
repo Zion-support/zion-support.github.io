@@ -10,13 +10,7 @@ export default function ItPerformancePage() {
 <<<<<<< HEAD:all-pages-backup/it-performance/page.tsx
       <title>ItPerformance - Zion Tech Group</title>
         <meta name="description" content="Professional itperformance services by Zion Tech Group." />
-=======
-      
-        <Head>
-        <title>ItPerformance - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/it-performance/page.tsx
+:app/it-performance/page.tsx
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

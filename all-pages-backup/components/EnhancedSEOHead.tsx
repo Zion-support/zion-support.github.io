@@ -9,18 +9,7 @@ import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
 'use client';
 
-=======
-import { Helmet, Users, Target } from 'lucide-react';
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Helmet, Users, Target } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { Helmet, Users, Target } from 'lucide-react'
-
-import React from 'react';
-import Head from "next/head";
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/EnhancedSEOHead.tsx
+:app/components/EnhancedSEOHead.tsx
 
 interface SEOHeadProps {
   title?: string
@@ -35,9 +24,7 @@ interface SEOHeadProps {
 
 <<<<<<< HEAD:all-pages-backup/components/EnhancedSEOHead.tsx
 const SEOHead: React.FC<SEOHeadProps> = ({;
-=======
-const SEOHead: React.FC<SEOHeadProps> = ({
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/EnhancedSEOHead.tsx
+:app/components/EnhancedSEOHead.tsx
   title = 'Zion Tech Group - Advanced AI & IT Solutions'
   description = 'Leading technology company providing cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development services.'
   keywords = 'AI solutions, cloud computing, cybersecurity, software development, IT services, business automation, data analytics, machine learning, artificial intelligence'
@@ -49,9 +36,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 }) => {
 <<<<<<< HEAD:all-pages-backup/components/EnhancedSEOHead.tsx
   const defaultStructuredData = {;
-=======
-  const defaultStructuredData = {
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/EnhancedSEOHead.tsx
+:app/components/EnhancedSEOHead.tsx
     "@context": "https://schema.org"
     "@type": "Organization"
     "name": "Zion Tech Group"
@@ -63,9 +48,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       "https://linkedin.com/company/ziontechgroup"
 <<<<<<< HEAD:all-pages-backup/components/EnhancedSEOHead.tsx
       "https://github.com/ziontechgroup"
-=======
-      "https: //github.com/ziontechgroup"
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/EnhancedSEOHead.tsx
+:app/components/EnhancedSEOHead.tsx
     ]
     "contactPoint": {
       "@type": "ContactPoint"
@@ -84,18 +67,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       "addressCountry": "US"
     }};
 
-=======
-    }
-    "address": {
-      "@type": "PostalAddress"
-      "streetAddress": "123 Tech Street"
-      "addressLocality": "San Francisco"
-      "addressRegion": "CA"
-      "postalCode": "94105"
-      "addressCountry": "US"
-    }
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/EnhancedSEOHead.tsx
+:app/components/EnhancedSEOHead.tsx
   return (
     <>
       <Helmet>
@@ -237,9 +209,4 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   )};
 
 export default SEOHead
-=======
-    </>
-  );
-}
-export default SEOHead;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/EnhancedSEOHead.tsx
+:app/components/EnhancedSEOHead.tsx

@@ -10,13 +10,7 @@ export default function MobileApplications5GPage() {
 <<<<<<< HEAD:all-pages-backup/5g-mobile-applications/page.tsx
       <title>5G Mobile Applications - Zion Tech Group</title>
         <meta name="description" content="Professional 5G mobile application development services by Zion Tech Group. Transform your business with our expert solutions." />
-=======
-      
-        <Head>
-        <title>5G Mobile Applications - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/5g-mobile-applications/page.tsx
+:app/5g-mobile-applications/page.tsx
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

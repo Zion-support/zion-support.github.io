@@ -36,10 +36,7 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
   return <>{children}</>};
 'use client';
 import { useEffect } from 'react';
-=======
-'use client'
-import Navigation from './Navigation';
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AccessibilityEnhancer.tsx
+:app/components/AccessibilityEnhancer.tsx
 
 const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
@@ -63,17 +60,7 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
           const firstLink = navigation.querySelector('a') as HTMLElement
           if (firstLink) {
             firstLink.focus()}
-=======
-    if (enableKeyboardNavigation) {
-      const handleKeyDown = (event: KeyboardEvent) => {
-        // Skip to main content
-        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {;
-          const mainContent = document.querySelector('main, [role=&quot;main&quot;]');
-          if (mainContent) {
-            (mainContent as HTMLElement).focus();
-            event.preventDefault();
-          }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AccessibilityEnhancer.tsx
+:app/components/AccessibilityEnhancer.tsx
         }
       }
     }
@@ -82,11 +69,7 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
     return () => {
 <<<<<<< HEAD:all-pages-backup/components/AccessibilityEnhancer.tsx
       document.removeEventListener('keydown', handleKeyDown)}}, []);
-=======
-      document.removeEventListener('keydown', handleKeyDown);
-    }
-  }, []);
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AccessibilityEnhancer.tsx
+:app/components/AccessibilityEnhancer.tsx
 
   useEffect(() => {
     // Add focus indicators
@@ -96,11 +79,7 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
       *:focus {
         outline: 2px solid #8b5cf6 !important
         outline-offset: 2px !important
-=======
-      *:focus {;
-        outline: 2px solid #8b5cf6 !important;
-        outline-offset: 2px !important;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AccessibilityEnhancer.tsx
+:app/components/AccessibilityEnhancer.tsx
       }
 
       const nav = document.querySelector('nav');
@@ -122,10 +101,7 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
 <<<<<<< HEAD:all-pages-backup/components/AccessibilityEnhancer.tsx
           * {
             border-color: currentColor !important
-=======
-          * {;
-            border-color: currentColor !important;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AccessibilityEnhancer.tsx
+:app/components/AccessibilityEnhancer.tsx
           }
           button, a {
             border: 2px solid currentColor !important
@@ -166,11 +142,7 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
     return () => {
 <<<<<<< HEAD:all-pages-backup/components/AccessibilityEnhancer.tsx
       document.head.removeChild(style)}}, []);
-=======
-      document.head.removeChild(style);
-    }
-  }, []);
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AccessibilityEnhancer.tsx
+:app/components/AccessibilityEnhancer.tsx
 
       // Apply focus trapping to modals
       const modals = document.querySelectorAll('[role=&quot;dialog&quot;]');
@@ -181,9 +153,7 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
     const main = document.querySelector('main');
     if (main && !main.getAttribute('role')) {
       main.setAttribute('role', 'main')}
-=======
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AccessibilityEnhancer.tsx
+:app/components/AccessibilityEnhancer.tsx
 
     const nav = document.querySelector('nav');
     if (nav && !nav.getAttribute('role')) {
@@ -198,8 +168,4 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
   return <>{children}</>};
 
 export default AccessibilityEnhancer
-=======
-  return <>{children}</>
-}
-export default AccessibilityEnhancer;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AccessibilityEnhancer.tsx
+:app/components/AccessibilityEnhancer.tsx

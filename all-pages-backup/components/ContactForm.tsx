@@ -5,9 +5,7 @@ import { MessageSquare, Mail, Phone, Send, CheckCircle } from 'lucide-react';
 
 import { useState } from 'react';
 <<<<<<< HEAD:all-pages-backup/components/ContactForm.tsx
-=======
-import { Send, Phone, Mail, CheckCircle, MessageSquare } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ContactForm.tsx
+:app/components/ContactForm.tsx
 
 interface FormData {
   name: string,
@@ -49,15 +47,7 @@ const ContactForm: React.FC = () => {;
     setTimeout(() => {
       setIsSubmitted(false);
     service: ''});
-=======
-    name: ''
-    email: ''
-    phone: ''
-    company: ''
-    message: ''
-    service: '';
-  });
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ContactForm.tsx
+:app/components/ContactForm.tsx
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -69,11 +59,7 @@ const ContactForm: React.FC = () => {;
       [e.target.name]: e.target.value
     })};
 
-=======
-      [e.target.name]: e.target.value;
-    });
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ContactForm.tsx
+:app/components/ContactForm.tsx
   const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault();
     setIsSubmitting(true);
@@ -100,17 +86,7 @@ const ContactForm: React.FC = () => {;
   }
       })}, 3000)};
 
-=======
-        name: ''
-        email: ''
-        phone: ''
-        company: ''
-        message: ''
-        service: ''
-      });
-    }, 3000);
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ContactForm.tsx
+:app/components/ContactForm.tsx
   const services = [
     'AI Solutions'
     'Web Development'
@@ -121,9 +97,7 @@ const ContactForm: React.FC = () => {;
     'DevOps'
 <<<<<<< HEAD:all-pages-backup/components/ContactForm.tsx
     'Consulting'
-=======
-    'Consulting';
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ContactForm.tsx
+:app/components/ContactForm.tsx
   ];
     'Consulting';
   ];
@@ -146,15 +120,7 @@ const ContactForm: React.FC = () => {;
         <p className="text-gray-300">Thank you for reaching out. We'll get back to you soon.</p>
       </div>
     )}
-=======
-      <div className = "bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center">
-        <CheckCircle className="w-16h-16te x t-green-400 mx-auto mb-4" />
-        <h3 className="tex t-xlfont-semibold text-white mb-2">Message Sent!</h3>
-        <p className="tex t-gray-300">Thank you for reaching out. We'll get back to you soon.</p>
-      </div>;
-    );
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ContactForm.tsx
+:app/components/ContactForm.tsx
 
   return (
     <div className = "bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
@@ -175,9 +141,7 @@ const ContactForm: React.FC = () => {;
 <<<<<<< HEAD:all-pages-backup/components/ContactForm.tsx
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-=======
-              className="w-ful lpx-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ContactForm.tsx
+:app/components/ContactForm.tsx
               placeholder="Your full name"
             />
           </div>
@@ -194,9 +158,7 @@ const ContactForm: React.FC = () => {;
 <<<<<<< HEAD:all-pages-backup/components/ContactForm.tsx
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-=======
-              className="w-ful lpx-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ContactForm.tsx
+:app/components/ContactForm.tsx
               placeholder="your@email.com"
             />
           </div>
@@ -216,9 +178,7 @@ const ContactForm: React.FC = () => {;
 <<<<<<< HEAD:all-pages-backup/components/ContactForm.tsx
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-=======
-              className="w-ful lpx-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ContactForm.tsx
+:app/components/ContactForm.tsx
               placeholder="+1 (555) 123-4567"
             />
           </div>
@@ -234,9 +194,7 @@ const ContactForm: React.FC = () => {;
 <<<<<<< HEAD:all-pages-backup/components/ContactForm.tsx
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-=======
-              className="w-ful lpx-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ContactForm.tsx
+:app/components/ContactForm.tsx
               placeholder="Your company name"
             />
           </div>
@@ -253,9 +211,7 @@ const ContactForm: React.FC = () => {;
 <<<<<<< HEAD:all-pages-backup/components/ContactForm.tsx
             className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
             className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-=======
-            className="w-ful lpx-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ContactForm.tsx
+:app/components/ContactForm.tsx
           >
             <option value="">Select a service</option>
             {services.map((service, index) => (
@@ -286,9 +242,7 @@ const ContactForm: React.FC = () => {;
           disabled={isSubmitting}
           className="w-full flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-purple-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
             className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
-=======
-            className="w-ful lpx-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ContactForm.tsx
+:app/components/ContactForm.tsx
             placeholder="Tell us about your project or how we can help..."
           />
         </div>
@@ -342,9 +296,4 @@ export default ContactForm
 {};
 
 export default ContactForm
-=======
-    </div>;
-  );
-}
-export default ContactForm;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ContactForm.tsx
+:app/components/ContactForm.tsx

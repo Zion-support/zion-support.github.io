@@ -10,13 +10,7 @@ export default function CloudMigrationPage() {
 <<<<<<< HEAD:all-pages-backup/cloud-migration/page.tsx
       <title>CloudMigration - Zion Tech Group</title>
         <meta name="description" content="Professional cloudmigration services by Zion Tech Group." />
-=======
-      
-        <Head>
-        <title>CloudMigration - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/it-services/cloud-migration/page.tsx
+:app/it-services/cloud-migration/page.tsx
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

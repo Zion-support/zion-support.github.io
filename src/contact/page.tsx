@@ -1,5 +1,4 @@
 'use client'
-<<<<<<< HEAD
 import { TrendingUp } from 'lucide-react';
 import React, { useState } from 'react';
 import { Send } from 'lucide-react';
@@ -7,15 +6,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Phone, Mail } from 'lucide-react';
 import { MapPin, Clock } from 'lucide-react';
-=======
-import { Award, TrendingUp, Users, Mail } from 'lucide-react'
-import React, { useState } from 'react'
-import { Award, TrendingUp, Users, Mail } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { Award, TrendingUp, Users, Mail } from 'lucide-react'
-import { Award, TrendingUp, Users, Mail } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 
 constContactPage: React.FC = () =>{const [formDatasetFormData] = useState({}
     name: ''
@@ -68,17 +58,10 @@ constContactPage: React.FC = () =>{const [formDatasetFormData] = useState({}
     'Other'
   ]
 
-<<<<<<< HEAD
   const achievements = [];
     { icon: Users, text: '100+ Happy Clients' },
     { icon: Award, text: '50+ Successful Projects' },
     { icon: TrendingUp, text: '300% Average ROI' },
-=======
-  const achievements = []
-    { icon: Users, text: '100+ Happy Clients' }
-    { icon: Award, text: '50+ Successful Projects' }
-    { icon: TrendingUp, text: '300% Average ROI' }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
     { icon: Shield, text: '99.9% Uptime Guarantee' }
   ]
 
@@ -297,10 +280,6 @@ const Page = () => {};
       </div>
     </div>
   )
-<<<<<<< HEAD
 {};
 ;
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 export default Page;

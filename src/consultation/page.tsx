@@ -1,5 +1,4 @@
 'use client'
-<<<<<<< HEAD
 import { Brain, Target, TrendingUp } from 'lucide-react';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
@@ -7,15 +6,6 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, Star, Phone, Mail } from 'lucide-react';
 import { Clock } from 'lucide-react';
-=======
-import { Mail, Brain, TrendingUp, Target } from 'lucide-react'
-import React, { useState } from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { Mail, Brain, TrendingUp, Target } from 'lucide-react'
-import { Mail, Brain, TrendingUp, Target } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 
 constConsultationPage: React.FC = () =>{const [formDatasetFormData] = useState({}
     name: ''
@@ -101,15 +91,9 @@ constConsultationPage: React.FC = () =>{const [formDatasetFormData] = useState({
     }
   ]
 
-<<<<<<< HEAD
 const Page = () => {};
   return ();
   <><SEOOptimizertitle=&quot;Free Business Consultation - ZionTechGroup&quot;
-=======
-const Page = () => {}
-  return ();
-  <><SEOOptimizertitle =&quot;Free Business Consultation - ZionTechGroup&quot;>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
         description=&quot;Get a free30-minute consultation with our technology experts. Discover how AI and IT solutions can transformyourbusiness.&quot;
         keywords = {['free consultation', 'business consultation', 'technology assessment', 'AI consultation', 'ITconsultation']}
         canonicalUrl=&quot;https: //ziontechgroup.com/consultation&quot;

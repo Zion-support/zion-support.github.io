@@ -7,15 +7,7 @@ import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
-=======
-import { Phone, Target, Mail, Users, Brain } from 'lucide-react';
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Phone, Target, Mail, Users, Brain } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { Phone, Target, Mail, Users, Brain } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Sidebar.tsx
+:app/components/Sidebar.tsx
 
 const SidebarPage: React.FC = () => {
   const features = [
@@ -43,30 +35,7 @@ const SidebarPage: React.FC = () => {
   title: title,
   description: description,
   benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-=======
-      icon: Brain
-      title: 'AI-Powered Intelligence'
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    }
-    {
-      icon: BarChart
-      title: 'Advanced Analytics'
-      description: 'Comprehensive analytics dashboard with real-time data visualization.'
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    }
-    {
-      icon: Target
-      title: 'Precision Targeting'
-      description: 'Target specific goals and objectives with precision and accuracy.'
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    }
-    {
-      icon: TrendingUp
-      title: 'Growth Optimization'
-      description: 'Optimize your business growth with data-driven strategies.'
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Sidebar.tsx
+:app/components/Sidebar.tsx
     }
   ]
 
@@ -82,11 +51,7 @@ const SidebarPage: React.FC = () => {
 <<<<<<< HEAD:all-pages-backup/components/Sidebar.tsx
     <>;
       <Helmet>;
-=======
-    <>
-      <Helmet>;
-        <Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Sidebar.tsx
+:app/components/Sidebar.tsx
         <title>Sidebar</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced Sidebar solution for modern businesses.&quot; />
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
@@ -192,11 +157,7 @@ const SidebarPage: React.FC = () => {
   )};
 
 export default SidebarPage
-=======
-  );
-}
-export default SidebarPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Sidebar.tsx
+:app/components/Sidebar.tsx
 Menu
 Home
 Users
@@ -215,12 +176,7 @@ Mail
 {} from 'lucide-react'
 constSidebar: React.FC= () =>{const [isOpensetIsOpen] = useState(false);
 const [expandedSectionssetExpandedSections]=useState<Set<strin g>>(new Set(['ai-services', 'micro-saas', 'it-services']));
-=======
-MapPin,Clock;}
-} from 'lucide-react'
-constSidebar: React.FC = () =>{const [isOpensetIsOpen] = useState(false)
-const [expandedSectionssetExpandedSections]=useState<Set<strin g>>(new Set(['ai-services', 'micro-saas', 'it-services']))
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Sidebar.tsx
+:app/components/Sidebar.tsx
 constlocation= useLocation()
 useEffect(() => {
   
@@ -247,12 +203,7 @@ setExpandedSections(newExpanded)
 constnavigationSections= [
 {title: title,
   items: [
-=======
-}
-constnavigationSections = [
-{title: 'Main'
-items: [
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Sidebar.tsx
+:app/components/Sidebar.tsx
 { name: 'Home', path: '/', icon: Home}
 {name: 'About', path: '/about', icon: Users}
 {name: 'Services', path: '/services', icon: Settings}
@@ -265,11 +216,7 @@ items: [
 {title: title,
   key: key,
   items: [
-=======
-{title: 'AI Services'
-key: 'ai-services'
-items: [
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Sidebar.tsx
+:app/components/Sidebar.tsx
 { name: 'AI Services Overview', path: '/ai-services', icon: Brain}
 {name: 'Business Intelligence', path: '/ai-services/business-intelligence', icon: BarChart}
 {name: 'Document Processing', path: '/ai-services/do cument-processing', icon: Settings}
@@ -289,11 +236,7 @@ items: [
 {title: title,
   key: key,
   items: [
-=======
-{title: 'Micro SaaS'
-key: 'micro-saas'
-items: [
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Sidebar.tsx
+:app/components/Sidebar.tsx
 { name: 'Micro SaaS Overview', path: '/micro-saas', icon: Settings}
 {name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard', icon: BarChart}
 {name: 'Support Bot', path: '/micro-saas/support-bot', icon: Users}
@@ -313,11 +256,7 @@ items: [
 {title: title,
   key: key,
   items: [
-=======
-{title: 'IT Services'
-key: 'it-services'
-items: [
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Sidebar.tsx
+:app/components/Sidebar.tsx
 { name: 'IT Services Overview', path: '/it-services', icon: Code}
 {name: 'IT Consulting', path: '/it-consulting', icon: Users}
 {name: 'IT Infrastructure', path: '/it-infrastructure', icon: Settings}
@@ -332,10 +271,7 @@ items: [
 <<<<<<< HEAD:all-pages-backup/components/Sidebar.tsx
 {title: title,
   items: [
-=======
-{title: 'Company'
-items: [
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Sidebar.tsx
+:app/components/Sidebar.tsx
 { name: 'Team', path: '/team', icon: Users}
 {name: 'Careers', path: '/careers', icon: Users}
 {name: 'Consultation', path: '/consultation', icon: Phone}
@@ -345,10 +281,7 @@ items: [
 <<<<<<< HEAD:all-pages-backup/components/Sidebar.tsx
 {title: title,
   items: [
-=======
-{title: 'Resources'
-items: [
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Sidebar.tsx
+:app/components/Sidebar.tsx
 { name: 'Documentation', path: '/do cs', icon: Settings}
 {name: 'API Docs', path: '/api-do cs', icon: Code}
 {name: 'Support', path: '/support', icon: Users}
@@ -361,12 +294,7 @@ constcontactInfo= {phone: phone,
   email: email,
   address: address,
   hours: 'Mon-Fri 9AM-6PM EST'
-=======
-constcontactInfo= {phone: '(30 2) 46 4-095 0'
-email: 'kleber@ziontechgroup.com'
-address: '364 E Main St STE 1008 Middletown, DE 19709'
-hours: 'Mon-Fri 9AM-6PM EST'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Sidebar.tsx
+:app/components/Sidebar.tsx
 }
 return (
 <>
@@ -376,10 +304,7 @@ onClick={() =></button> setIsOpen(true)}
 <<<<<<< HEAD:all-pages-backup/components/Sidebar.tsx
 className=&quot;lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all&quot
 aria-label=&quot;Open sidebar&quot
-=======
-className=&quot;lg: hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all&quot;
-aria-label=&quot;Open sidebar&quot;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Sidebar.tsx
+:app/components/Sidebar.tsx
 >
 <Menu className=&quot;w-6 h-6&quot; />
 </button>
@@ -389,10 +314,7 @@ aria-label=&quot;Open sidebar&quot;
 <div
 className=&quot;fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden&quot;}
 onClick={() =>setIsOpen(false)}</div>
-=======
-<div className=&quot;fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden&quot;;}>
-onClick = {() =>setIsOpen(false)}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Sidebar.tsx
+:app/components/Sidebar.tsx
 />
 {)}
 {/* Sidebar */}</div>
@@ -416,12 +338,7 @@ isOpen ? 'translate-x-0' : '-translate-x-full'
 onClick={() =></button> setIsOpen(false)}
 className=&quot;lg:hidden text-gray-400 hover:text-white transition-colors&quot
 aria-label=&quot;Close sidebar&quot
-=======
-<button >
-onClick = {() =></button> setIsOpen(false)}
-className=&quot;lg: hidden text-gray-400 hover:text-white transition-colors&quot;
-aria-label=&quot;Close sidebar&quot;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Sidebar.tsx
+:app/components/Sidebar.tsx
 >
 <X className=&quot;w-6 h-6&quot; />
 </button>

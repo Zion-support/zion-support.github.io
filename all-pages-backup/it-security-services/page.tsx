@@ -10,13 +10,7 @@ export default function ItSecurityServicesPage() {
 <<<<<<< HEAD:all-pages-backup/it-security-services/page.tsx
       <title>ItSecurityServices - Zion Tech Group</title>
         <meta name="description" content="Professional itsecurityservices services by Zion Tech Group." />
-=======
-      
-        <Head>
-        <title>ItSecurityServices - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/it-security-services/page.tsx
+:app/it-security-services/page.tsx
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

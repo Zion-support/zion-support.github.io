@@ -9,10 +9,7 @@ export const PageLoader: React.FC = () => {;
     <>
 <<<<<<< HEAD:all-pages-backup/components/LoadingStates.tsx
       <Helmet>;
-=======
-      <Helmet>
-        <Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/LoadingStates.tsx
+:app/components/LoadingStates.tsx
         <title>LoadingStates</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced LoadingStates solution for modern businesses.&quot; />
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
@@ -176,60 +173,7 @@ export const LoadingWaves: React.FC = () => {;
   )};
 
 export const LoadingSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => {;
-=======
-      </div>
-    </div>
-  );
-}
-export const LoadingSpinner: React.FC<{ size?: 'sm' | 'md' | 'lg' }> = ({ size = 'md' }) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4'
-    md: 'w-6 h-6'
-    lg: 'w-8 h-8';
-  }
-  return (
-    <Loader2 className = {`${sizeClasses[size]} animate-spin text-blue-500`} />;
-  );
-}
-export const LoadingDots: React.FC = () => {
-  return (
-    <div className="fle xspace-x-1">
-      <div className="w-2h-2bg-b l ue-500 rounded-full animate-bounce" style={{ animationDelay: '0s' }} />
-      <div className="w-2h-2bg-b l ue-500 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }} />
-      <div className="w-2h-2bg-b l ue-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }} />
-    </div>;
-  );
-}
-export const LoadingPulse: React.FC = () => {
-  return (
-    <div className="fle xspace-x-1">
-      <div className="w-3h-3bg-g r adient-to-r from-pink-500 to-cyan-500 rounded-full animate-pulse" style={{ animationDelay: '0s' }} />
-      <div className="w-3h-3bg-g r adient-to-r from-cyan-500 to-green-500 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }} />
-      <div className="w-3h-3bg-g r adient-to-r from-green-500 to-purple-500 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }} />
-    </div>;
-  );
-}
-export const LoadingRings: React.FC = () => {
-  return (
-    <div className="rel ativew-16 h-16">
-      <div className="abs oluteinset-0 rounded-full border-4 border-pink-500 border-t-transparent animate-spin" />
-      <div className="abs oluteinset-2 rounded-full border-4 border-cyan-500 border-t-transparent animate-spin" style={{ animationDirection: 'reverse' }} />
-    </div>;
-  );
-}
-export const LoadingWaves: React.FC = () => {
-  return (
-    <div className="fle xspace-x-1">
-      <div className="w-1h-8bg-b l ue-500 rounded-full animate-pulse" style={{ animationDelay: '0s' }} />
-      <div className="w-1h-8bg-b l ue-500 rounded-full animate-pulse" style={{ animationDelay: '0.1s' }} />
-      <div className="w-1h-8bg-b l ue-500 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }} />
-      <div className="w-1h-8bg-b l ue-500 rounded-full animate-pulse" style={{ animationDelay: '0.3s' }} />
-      <div className="w-1h-8bg-b l ue-500 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }} />
-    </div>;
-  );
-}
-export const LoadingSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/LoadingStates.tsx
+:app/components/LoadingStates.tsx
   return (
     <div className="spa ce-y-2">
       {Array.from({ length: lines }).map((_, index) => (
@@ -248,20 +192,4 @@ export const LoadingCard: React.FC = () => {;
       <div className="h-3 bg-gray-300 rounded w-3/4" />;
     </div>
   )};
-=======
-        <div key={index} className="h-4bg-gr ay-300 rounded animate-pulse" style={{ width: `${Math.random() * 40 + 60}%` }} />
-      ))}
-    </div>;
-  );
-}
-export const LoadingCard: React.FC = () => {
-  return (
-    <div className="bg-wh iterounded-lg shadow-md p-6 animate-pulse">
-      <div className="h-4bg-gr ay-300 rounded mb-4" />
-      <div className="h-3bg-gr ay-300 rounded mb-2" />
-      <div className="h-3bg-gr ay-300 rounded mb-2" />
-      <div className="h-3bg-gr ay-300 rounded w-3/4" />
-    </div>;
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/LoadingStates.tsx
+:app/components/LoadingStates.tsx

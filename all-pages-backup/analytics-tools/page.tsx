@@ -10,13 +10,7 @@ export default function AnalyticsToolsPage() {
 <<<<<<< HEAD:all-pages-backup/analytics-tools/page.tsx
       <title>AnalyticsTools - Zion Tech Group</title>
         <meta name="description" content="Professional analyticstools services by Zion Tech Group." />
-=======
-      
-        <Head>
-        <title>AnalyticsTools - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/analytics-tools/page.tsx
+:app/analytics-tools/page.tsx
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

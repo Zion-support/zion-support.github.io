@@ -1,13 +1,7 @@
 'use client'
-<<<<<<< HEAD
 import { Brain, Target } from 'lucide-react';
 import React from 'react';
 import { CheckCircle, Star, Phone, Calendar } from 'lucide-react';
-=======
-import { Brain, Users, Target } from 'lucide-react'
-import React from 'react'
-import { Brain, Users, Target } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 
 constAISchedulerPage: React.FC = () =>{constfeatures= [
     {
@@ -92,7 +86,6 @@ constAISchedulerPage: React.FC = () =>{constfeatures= [
     }
   ]
 
-<<<<<<< HEAD
   const integrations = [];
     { name: 'Google Calendar', icon: '📅', description: 'Seamless Google integration' },
     { name: 'Outlook', icon: '📧', description: 'Microsoft Office 365' },
@@ -101,16 +94,6 @@ constAISchedulerPage: React.FC = () =>{constfeatures= [
     { name: 'Teams', icon: '👥', description: 'Microsoft Teams' },
     { name: 'Calendly', icon: '⏰', description: 'Scheduling platform' },
     { name: 'Salesforce', icon: '💼', description: 'CRM integration' },
-=======
-  const integrations = []
-    { name: 'Google Calendar', icon: '📅', description: 'Seamless Google integration' }
-    { name: 'Outlook', icon: '📧', description: 'Microsoft Office 365' }
-    { name: 'Zoom', icon: '🎥', description: 'Video conferencing' }
-    { name: 'Slack', icon: '💬', description: 'Team communication' }
-    { name: 'Teams', icon: '👥', description: 'Microsoft Teams' }
-    { name: 'Calendly', icon: '⏰', description: 'Scheduling platform' }
-    { name: 'Salesforce', icon: '💼', description: 'CRM integration' }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
     { name: 'HubSpot', icon: '🎯', description: 'Marketing automation' }
   ]
 
@@ -327,10 +310,6 @@ const Page = () => {};
       </section>
     </div>
   )
-<<<<<<< HEAD
 {};
 ;
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 export default Page;

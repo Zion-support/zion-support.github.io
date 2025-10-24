@@ -14,12 +14,7 @@ interface PerformanceOptimizerProps {;
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
-=======
-  className?: string;
-}
-
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/PerformanceOptimizer.tsx
+:app/components/PerformanceOptimizer.tsx
   enableImageOptimization = true
   enableLazyLoading = true
   enablePreloading = true
@@ -37,12 +32,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   lazyLoading: false,
   preloading: false,
   codeSplitting: false
-=======
-    images: false
-    lazyLoading: false
-    preloading: false
-    codeSplitting: false
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/PerformanceOptimizer.tsx
+:app/components/PerformanceOptimizer.tsx
   })
 
   const optimizeImages = useCallback(() => {;
@@ -167,9 +157,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     <>
       <Helmet>
 <<<<<<< HEAD:all-pages-backup/components/PerformanceOptimizer.tsx
-=======
-        <Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/PerformanceOptimizer.tsx
+:app/components/PerformanceOptimizer.tsx
         <title>PerformanceOptimizer</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced PerformanceOptimizer solution for modern businesses.&quot; />
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
@@ -279,7 +267,4 @@ export default PerformanceOptimizer
 {};
 
 export default PerformanceOptimizerPage
-=======
-}
-export default PerformanceOptimizerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/PerformanceOptimizer.tsx
+:app/components/PerformanceOptimizer.tsx

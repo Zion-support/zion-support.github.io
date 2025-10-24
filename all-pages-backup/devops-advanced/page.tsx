@@ -10,13 +10,7 @@ export default function DevopsAdvancedPage() {
 <<<<<<< HEAD:all-pages-backup/devops-advanced/page.tsx
       <title>DevopsAdvanced - Zion Tech Group</title>
         <meta name="description" content="Professional devopsadvanced services by Zion Tech Group." />
-=======
-      
-        <Head>
-        <title>DevopsAdvanced - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/devops-advanced/page.tsx
+:app/devops-advanced/page.tsx
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

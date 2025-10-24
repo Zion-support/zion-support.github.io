@@ -10,13 +10,7 @@ export default function HealthPage() {
 <<<<<<< HEAD:all-pages-backup/health/page.tsx
       <title>Health - Zion Tech Group</title>
         <meta name="description" content="Professional health services by Zion Tech Group." />
-=======
-      
-        <Head>
-        <title>Health - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/health/page.tsx
+:app/health/page.tsx
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

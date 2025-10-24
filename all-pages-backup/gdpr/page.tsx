@@ -10,13 +10,7 @@ export default function GdprPage() {
 <<<<<<< HEAD:all-pages-backup/gdpr/page.tsx
       <title>Gdpr - Zion Tech Group</title>
         <meta name="description" content="Professional gdpr services by Zion Tech Group." />
-=======
-      
-        <Head>
-        <title>Gdpr - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/gdpr/page.tsx
+:app/gdpr/page.tsx
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

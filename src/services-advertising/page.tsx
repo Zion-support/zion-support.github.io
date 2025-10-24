@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import { ArrowLeft } from 'lucide-react';
 import { CheckCircle, Target, ArrowRight } from 'lucide-react';
-=======
-import React from 'react'
-import { Target, ArrowLeft } from 'lucide-react'
-import { Target, ArrowLeft } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 
 export default function ServicesAdvertisingPage;
 ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {}
@@ -398,10 +392,5 @@ ServicesAdvertisingPage.displayName = "ServicesAdvertisingPage"() {}
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   );
 {};
-=======
-  )
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4

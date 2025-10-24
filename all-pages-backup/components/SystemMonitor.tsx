@@ -7,15 +7,7 @@ import { Helmet } from 'react-helmet-async';
 import { Brain } from 'lucide-react';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 import { ArrowRight } from 'lucide-react';
-=======
-import Footer from './Footer'
-import Navigation from './Navigation'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Brain, Mail } from 'lucide-react'
-import { Brain, Mail } from 'lucide-react'
-import { Brain, Mail } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/SystemMonitor.tsx
+:app/components/SystemMonitor.tsx
 
 {    }
   ]
@@ -33,9 +25,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {;
     <>
       <Helmet>;
 <<<<<<< HEAD:all-pages-backup/components/SystemMonitor.tsx
-=======
-        <Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/SystemMonitor.tsx
+:app/components/SystemMonitor.tsx
         <title>SystemMonitor</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced SystemMonitor solution for modern businesses.&quot; />
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
@@ -141,11 +131,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {;
   )};
 
 export default SystemMonitorPage
-=======
-  );
-}
-export default SystemMonitorPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/SystemMonitor.tsx
+:app/components/SystemMonitor.tsx
             </div>
         </div>
     </div>

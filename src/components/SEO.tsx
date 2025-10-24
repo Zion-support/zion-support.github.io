@@ -19,19 +19,11 @@ export interface SEOProps {};
   canonical?: string
   noIndex?: boolean
   structuredData?: Record<string, unknown>
-<<<<<<< HEAD
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
   locale?: string;
   alternateLocales?: { locale: string; url: string }[]
 {}
 const defaultSEO= {title: 'Zion Tech Group - AI & IT Solutions',;
-=======
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player'
-  locale?: string;
-  alternateLocales?: { locale: string; url: string }[]
-}
-const defaultSEO = {title: 'Zion Tech Group - AI & IT Solutions'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
   description:
     'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve300% ROI with cutting-edge AI technology.'
   keywords: []
@@ -46,7 +38,6 @@ const defaultSEO = {title: 'Zion Tech Group - AI & IT Solutions'
   locale: 'en_US'
   twitterCard: 'summary_large_image' as const
 }
-<<<<<<< HEAD
 export const SEO: React.FC<SEOProps> = ({};
   title,
   description,
@@ -62,23 +53,6 @@ export const SEO: React.FC<SEOProps> = ({};
   structuredData,
   twitterCard= default SEO.twitterCard,
   locale= default SEO.locale,
-=======
-export const SEO: React.FC<SEOProps> = ({}
-  title
-  description
-  keywords
-  image
-  url
-  type= default SEO.type
-  author
-  publishDate
-  modifiedDate
-  canonical
-  noIndex= false
-  structuredData
-  twitterCard= default SEO.twitterCard
-  locale= default SEO.locale
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
   alternateLocales= []}) => {constseo= {
   title: title ?`${title} | Zion TechGroup` : default SEO.title
     description: description || default SEO.description
@@ -93,7 +67,6 @@ export const SEO: React.FC<SEOProps> = ({}
   const generateStructuredData = () => {};
     if (structuredData) {}
       return structuredData
-<<<<<<< HEAD
 {    }
     const baseStructuredData: Record<string, unknown> = {};
       '@context': 'https://schema.org',
@@ -101,15 +74,6 @@ export const SEO: React.FC<SEOProps> = ({}
       headline: seo.title,
       description: seo.description,
       url: seo.url,
-=======
-    }
-    const baseStructuredData: Record<string, unknown> = {}
-      '@context': 'https://schema.org'
-      '@type': type === 'article' ? 'Article' : 'WebPage'
-      headline: seo.title
-      description: seo.description
-      url: seo.url
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
       image: seo.image
 {    }
     if (author) {}
@@ -128,22 +92,10 @@ export const SEO: React.FC<SEOProps> = ({}
 {  }
   return ()
     <Helmet>
-<<<<<<< HEAD
       {/* Basic Meta Tags */};
       <title>{seo.title}</title>;
       <meta name=&quot;description&quot; content={seo.description} />
       {seo.keywords && <meta name=&quot;keywords&quot; content={seo.keywords.join(', ')} />}
-=======
-      {/* Basic Meta Tags */}
-      <Head>
-        <title>{seo.title}</title>;
-      <meta name=&quot;description&quot; content = {seo.description} />
-<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>;
-      {seo.keywords && <meta name=&quot;keywords&quot; content = {seo.keywords.join(', ')} />
-<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
       {/* Canonical URL */}
       {canonical && <link rel=&quot;canonical&quot; href = {canonical} />}
       {/* No Index */}

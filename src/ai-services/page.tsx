@@ -1,19 +1,10 @@
 'use client'
-<<<<<<< HEAD
 import { ArrowRight, Brain, BarChart, Target } from 'lucide-react';
 import React from 'react';
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight } from 'lucide-react';
-=======
-import { ArrowRight, Users, Target, BarChart, Brain } from 'lucide-react'
-import React from 'react'
-
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { ArrowRight, Users, Target, BarChart, Brain } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 
 constAIServicesPage: React.FC = () =>{constservices= [
     {
@@ -195,10 +186,6 @@ const Page = () => {};
       <Footer />
     </div>
   )
-<<<<<<< HEAD
 };
 ;
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 export default Page;

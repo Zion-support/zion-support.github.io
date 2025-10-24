@@ -1,15 +1,8 @@
 'use client'
-<<<<<<< HEAD
 import { X, Brain, Target, TrendingUp } from 'lucide-react';
 import React from 'react';
 import { Receipt } from 'lucide-react';
 import { CheckCircle, Star, Phone } from 'lucide-react';
-=======
-import { Brain, TrendingUp, Target, X } from 'lucide-react'
-import React from 'react'
-import { Brain, TrendingUp, Target, X } from 'lucide-react'
-import { Brain, TrendingUp, Target, X } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 
 constExpenseTrackerPage: React.FC = () =>{constfeatures= [
     {
@@ -94,7 +87,6 @@ constExpenseTrackerPage: React.FC = () =>{constfeatures= [
     }
   ]
 
-<<<<<<< HEAD
   const integrations = [];
     { name: 'QuickBooks', icon: '📊', description: 'Accounting software' },
     { name: 'Xero', icon: '💰', description: 'Cloud accounting' },
@@ -103,16 +95,6 @@ constExpenseTrackerPage: React.FC = () =>{constfeatures= [
     { name: 'PayPal', icon: '💸', description: 'Online payments' },
     { name: 'Slack', icon: '💬', description: 'Team communication' },
     { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration' },
-=======
-  const integrations = []
-    { name: 'QuickBooks', icon: '📊', description: 'Accounting software' }
-    { name: 'Xero', icon: '💰', description: 'Cloud accounting' }
-    { name: 'Sage', icon: '📈', description: 'Business management' }
-    { name: 'Stripe', icon: '💳', description: 'Payment processing' }
-    { name: 'PayPal', icon: '💸', description: 'Online payments' }
-    { name: 'Slack', icon: '💬', description: 'Team communication' }
-    { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration' }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
     { name: 'Google Workspace', icon: '📧', description: 'Productivity suite' }
   ]
 
@@ -329,10 +311,6 @@ const Page = () => {};
       </section>
     </div>
   )
-<<<<<<< HEAD
 {};
 ;
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 export default Page;

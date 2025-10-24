@@ -102,7 +102,4 @@ export default function Breadcrumb() {;
       </div>
     </nav>
   )}
-=======
-
-export default Breadcrumb;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Breadcrumb.tsx
+:app/components/Breadcrumb.tsx

@@ -6,14 +6,7 @@ import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/EnhancedLoadingStates.tsx
+:app/components/EnhancedLoadingStates.tsx
 
 const EnhancedLoadingStatesPage: React.FC = () => {
   const features = [
@@ -41,30 +34,7 @@ const EnhancedLoadingStatesPage: React.FC = () => {
   title: title,
   description: description,
   benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-=======
-      icon: Brain
-      title: 'AI-Powered Intelligence'
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    }
-    {
-      icon: BarChart
-      title: 'Advanced Analytics'
-      description: 'Comprehensive analytics dashboard with real-time data visualization.'
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    }
-    {
-      icon: Target
-      title: 'Precision Targeting'
-      description: 'Target specific goals and objectives with precision and accuracy.'
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    }
-    {
-      icon: TrendingUp
-      title: 'Growth Optimization'
-      description: 'Optimize your business growth with data-driven strategies.'
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/EnhancedLoadingStates.tsx
+:app/components/EnhancedLoadingStates.tsx
     }
   ]
 
@@ -80,11 +50,7 @@ const EnhancedLoadingStatesPage: React.FC = () => {
 <<<<<<< HEAD:all-pages-backup/components/EnhancedLoadingStates.tsx
     <>;
       <Helmet>;
-=======
-    <>
-      <Helmet>;
-        <Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/EnhancedLoadingStates.tsx
+:app/components/EnhancedLoadingStates.tsx
         <title>EnhancedLoadingStates</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced EnhancedLoadingStates solution for modern businesses.&quot; />
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
@@ -193,14 +159,7 @@ export default EnhancedLoadingStatesPage,
   sm: sm,
   md: 'w-8 h-8'
 {lg: 'w-12h-1 2'}
-=======
-  );
-}
-export default EnhancedLoadingStatesPage;
-sm: 'w-4 h-4'
-md: 'w-8 h-8'
-lg: 'w-12h-1 2'}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/EnhancedLoadingStates.tsx
+:app/components/EnhancedLoadingStates.tsx
 return(<divclassName=&quot;flex flex-colitems-centerjustify-centerp-8&quot;><Loader2className={`${sizeClasses[size]} animate-spin text-blue-500`} />{text &&(<pclassName=&quot;mt-2text-smtext-gray-500&quot;>{text}</p>)}</di>)
 {}
 return (
@@ -213,9 +172,7 @@ return (
 )
 <<<<<<< HEAD:all-pages-backup/components/EnhancedLoadingStates.tsx
 {}
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/EnhancedLoadingStates.tsx
+:app/components/EnhancedLoadingStates.tsx
 export const PageLoader: React.FC = () => (;
 <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center&quot;></div>
 <div className=&quot;text-center&quot;></div>

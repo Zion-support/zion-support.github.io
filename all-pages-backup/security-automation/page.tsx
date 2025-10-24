@@ -10,13 +10,7 @@ export default function SecurityAutomationPage() {
 <<<<<<< HEAD:all-pages-backup/security-automation/page.tsx
       <title>SecurityAutomation - Zion Tech Group</title>
         <meta name="description" content="Professional securityautomation services by Zion Tech Group." />
-=======
-      
-        <Head>
-        <title>SecurityAutomation - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/security-automation/page.tsx
+:app/security-automation/page.tsx
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

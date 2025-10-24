@@ -1,5 +1,4 @@
 'use client'
-<<<<<<< HEAD
 import { BarChart, Target } from 'lucide-react';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -7,15 +6,6 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Building } from 'lucide-react';
 import { CheckCircle, Phone, Mail } from 'lucide-react';
-=======
-import { Mail, BarChart, Users, Target } from 'lucide-react'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { Mail, BarChart, Users, Target } from 'lucide-react'
-import { Mail, BarChart, Users, Target } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 
 const $1: React.FC = () => {;
   const features = [;
@@ -59,17 +49,10 @@ const $1: React.FC = () => {;
       features: ['Unlimited contacts', 'Custom AI models', 'Advanced analytics', 'Dedicated support', 'Custom integrations']
     }
   ]
-<<<<<<< HEAD
   const stats = [];
     { number: '40%', label: 'Increase in Sales' },
     { number: '60%', label: 'Time Saved' },
     { number: '85%', label: 'Lead Accuracy' },
-=======
-  const stats = []
-    { number: '40%', label: 'Increase in Sales' }
-    { number: '60%', label: 'Time Saved' }
-    { number: '85%', label: 'Lead Accuracy' }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
     { number: '200%', label: 'ROI Improvement' }
   ]
 
@@ -92,15 +75,9 @@ const $1: React.FC = () => {;
     }
   ]
 
-<<<<<<< HEAD
 const Page = () => {};
   return ();
   <><SEOOptimizertitle=&quot;AI Sales Automation Solutions - ZionTechGroup&quot;
-=======
-const Page = () => {}
-  return ();
-  <><SEOOptimizertitle =&quot;AI Sales Automation Solutions - ZionTechGroup&quot;>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
         description=&quot;Revolutionize your sales process with AI-powered automation. Increase sales by40%, save60% time, and improve lead accuracy by85%.&quot;
         keywords = {['AI sales automation', 'lead scoring', 'sales forecasting', 'customer segmentation', 'salesoptimization']}
         canonicalUrl=&quot;https: //ziontechgroup.com/ai-sales-automation&quot;

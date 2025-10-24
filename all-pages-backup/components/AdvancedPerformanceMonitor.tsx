@@ -5,13 +5,7 @@ import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Target, CheckCircle, BarChart, Brain, TrendingUp } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AdvancedPerformanceMonitor.tsx
+:app/components/AdvancedPerformanceMonitor.tsx
 
 const Ai3dGenerationPage: React.FC = () => {
 const AdvancedPerformanceMonitorPage: React.FC = () => {
@@ -40,30 +34,7 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
   title: title,
   description: description,
   benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-=======
-      icon: Brain
-      title: 'AI-Powered Intelligence'
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    }
-    {
-      icon: BarChart
-      title: 'Advanced Analytics'
-      description: 'Comprehensive analytics dashboard with real-time data visualization.'
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    }
-    {
-      icon: Target
-      title: 'Precision Targeting'
-      description: 'Target specific goals and objectives with precision and accuracy.'
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    }
-    {
-      icon: TrendingUp
-      title: 'Growth Optimization'
-      description: 'Optimize your business growth with data-driven strategies.'
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AdvancedPerformanceMonitor.tsx
+:app/components/AdvancedPerformanceMonitor.tsx
     }
   ]
 
@@ -78,11 +49,7 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
 
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-=======
-    'Scale operations without proportional staff increases'
-    'Gain competitive advantage with advanced technology'
-  ]
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AdvancedPerformanceMonitor.tsx
+:app/components/AdvancedPerformanceMonitor.tsx
 
 export default function Implementation5GPage() {
   return (
@@ -105,12 +72,7 @@ export default function Implementation5GPage() {
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               AI 3D Generation
-=======
-        <section className="rel ativepy-20 px-4 overflow-hidden">
-          <div className="abs oluteinset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="rel ativemax-w-7xl mx-auto text-center">
-            <h1 className="tex t-5xlmd: text-7xl font-bold text-white mb-6 leading-tight">
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AdvancedPerformanceMonitor.tsx
+:app/components/AdvancedPerformanceMonitor.tsx
               Advanced Performance Monitor
             </h1>
             <p className="tex t-xltext-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -216,19 +178,4 @@ export default function Implementation5GPage() {
             <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AdvancedPerformanceMonitor.tsx
-      </div>
-    </>
-  )
-}
-<<<<<<< HEAD:all-pages-backup/components/AdvancedPerformanceMonitor.tsx
-;
-export default AdvancedPerformanceMonitorPage
-  )}
-
-export default Ai3dGenerationPage
-=======
-
-export default AdvancedPerformanceMonitorPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AdvancedPerformanceMonitor.tsx
+:app/components/AdvancedPerformanceMonitor.tsx

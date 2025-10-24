@@ -7,15 +7,7 @@ import { ArrowRight, CheckCircle, Brain, BarChart, Target, TrendingUp } from 'lu
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 import { Home } from 'lucide-react';
-=======
-import Footer from './Footer'
-import Navigation from './Navigation'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Send, Target, CheckCircle, BarChart, Brain, TrendingUp } from 'lucide-react'
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { ArrowRight, Send, Target, CheckCircle, BarChart, Brain, TrendingUp } from 'lucide-react'
-import { ArrowRight, Send, Target, CheckCircle, BarChart, Brain, TrendingUp } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ErrorHandler.tsx
+:app/components/ErrorHandler.tsx
 
 const ErrorHandlerPage: React.FC = () => {
   const features = [
@@ -43,30 +35,7 @@ const ErrorHandlerPage: React.FC = () => {
   title: title,
   description: description,
   benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-=======
-      icon: Brain
-      title: 'AI-Powered Intelligence'
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    }
-    {
-      icon: BarChart
-      title: 'Advanced Analytics'
-      description: 'Comprehensive analytics dashboard with real-time data visualization.'
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    }
-    {
-      icon: Target
-      title: 'Precision Targeting'
-      description: 'Target specific goals and objectives with precision and accuracy.'
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    }
-    {
-      icon: TrendingUp
-      title: 'Growth Optimization'
-      description: 'Optimize your business growth with data-driven strategies.'
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ErrorHandler.tsx
+:app/components/ErrorHandler.tsx
     }
   ]
 
@@ -82,11 +51,7 @@ const ErrorHandlerPage: React.FC = () => {
 <<<<<<< HEAD:all-pages-backup/components/ErrorHandler.tsx
     <>;
       <Helmet>;
-=======
-    <>
-      <Helmet>;
-        <Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ErrorHandler.tsx
+:app/components/ErrorHandler.tsx
         <title>ErrorHandler</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced ErrorHandler solution for modern businesses.&quot; />
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
@@ -129,12 +94,7 @@ const ErrorHandlerPage: React.FC = () => {
   stack: error.stack,
   componentStack: errorInfo.componentStack,
   timestamp: new Date().toISOString()
-=======
-        message: error.message
-        stack: error.stack
-        componentStack: errorInfo.componentStack
-        timestamp: new Date().toISOString()
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ErrorHandler.tsx
+:app/components/ErrorHandler.tsx
       }
       // Send to your error reporting service here
       // // console.log('Error data prepared for reporting:', errorData)
@@ -148,11 +108,7 @@ const ErrorHandlerPage: React.FC = () => {
       hasError: false,
   error: null,
   errorInfo: null
-=======
-      hasError: false
-      error: null
-      errorInfo: null
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ErrorHandler.tsx
+:app/components/ErrorHandler.tsx
    })
   }
 
@@ -205,10 +161,7 @@ const ErrorHandlerPage: React.FC = () => {
               <button
                 onClick={this.handleGoHome}
                 className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors&quot
-=======
-              <button onClick = {this.handleGoHome};>
-                className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors&quot;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ErrorHandler.tsx
+:app/components/ErrorHandler.tsx
               ></button>
                 <Home className=&quot;w-4 h-4 mr-2&quot; />
                 Go Home
@@ -257,17 +210,7 @@ const ErrorHandlerPage: React.FC = () => {
               ></
                 onClick={this.handleGoHome}
                className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot
-=======
-                onClick = {this.handleRetry}
-               className=&quot;flex items-center justify-center px-4 py-2 bg-blue-600text-white rounded-lghover:bg-blue-700transition-colors&quot;
-              ><RefreshCwclassName=&quot;w-4h-4mr-2&quot; />Try Again
-            </butto><
-                onClick = {this.handleGoHome}
-               className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot;
-              ></
-                onClick = {this.handleGoHome}
-               className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ErrorHandler.tsx
+:app/components/ErrorHandler.tsx
               ><HomeclassName=&quot;w-4h-4mr-2&quot; />Go Home
             </butto></di></di></di>
       )
@@ -322,7 +265,4 @@ const ErrorHandlerPage: React.FC = () => {
 {};
 
 export default ErrorHandlerPage
-=======
-}
-export default ErrorHandlerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ErrorHandler.tsx
+:app/components/ErrorHandler.tsx

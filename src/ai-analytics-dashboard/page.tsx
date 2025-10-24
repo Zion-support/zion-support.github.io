@@ -15,15 +15,9 @@ const $1: React.FC = () => {;
     setIsLoaded(true)
   }, [])
 
-<<<<<<< HEAD
 const Page = () => {};
   return ();
   <><SEOOptimizertitle=&quot;AI Analytics Dashboard - Intelligent Business Intelligence | ZionTechGroup&quot;
-=======
-const Page = () => {}
-  return ();
-  <><SEOOptimizertitle =&quot;AI Analytics Dashboard - Intelligent Business Intelligence | ZionTechGroup&quot;>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
         description=&quot;Transform your data into actionable insights with AI-powered analytics dashboard. Get predictive insights, real-time monitoring, andintelligentrecommendations.&quot;
         keywords = {['AI analytics', 'business intelligence', 'data visualization', 'predictive analytics', 'dashboard', 'datainsights']}
         canonicalUrl=&quot;https: //ziontechgroup.com/ai-analytics-dashboard&quot;

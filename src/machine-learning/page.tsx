@@ -17,21 +17,12 @@ constMachineLearningPage: React.FC = () =>{constfeatures= []
     'Continuous learning and model updates'
   ]
 
-<<<<<<< HEAD
   const benefits = [];
     '40% better prediction accuracy',
     '60% faster insights generation',
     '50% reduction in manual analysis',
     '30% improvement in decision making',
     '95% model reliability',
-=======
-  const benefits = []
-    '40% better prediction accuracy'
-    '60% faster insights generation'
-    '50% reduction in manual analysis'
-    '30% improvement in decision making'
-    '95% model reliability'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
     '80% cost savings on analytics'
   ]
 
@@ -68,10 +59,6 @@ const Page = () => {};
       </div>
 </>
   )
-<<<<<<< HEAD
 };
 ;
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 export default Page;

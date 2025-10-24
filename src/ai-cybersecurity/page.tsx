@@ -1,5 +1,4 @@
 'use client'
-<<<<<<< HEAD
 import { Brain, BarChart } from 'lucide-react';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -7,15 +6,6 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Lock } from 'lucide-react';
 import { CheckCircle, Phone, Mail } from 'lucide-react';
-=======
-import { BarChart, Brain, Users, Mail } from 'lucide-react'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { BarChart, Brain, Users, Mail } from 'lucide-react'
-import { BarChart, Brain, Users, Mail } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 
 const $1: React.FC = () => {;
   const features = [;
@@ -102,17 +92,10 @@ const $1: React.FC = () => {;
       popular: false
     }
   ]
-<<<<<<< HEAD
   const stats = [];
     { number: '99.9%', label: 'Threat Detection' },
     { number: '24/7', label: 'Monitoring' },
     { number: '60%', label: 'Faster Response' },
-=======
-  const stats = []
-    { number: '99.9%', label: 'Threat Detection' }
-    { number: '24/7', label: 'Monitoring' }
-    { number: '60%', label: 'Faster Response' }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
     { number: '100%', label: 'Compliance' }
   ]
   const threats = [;
@@ -135,11 +118,7 @@ const $1: React.FC = () => {;
     }
   ];
   return ();
-<<<<<<< HEAD
   <><SEOOptimizertitle=&quot;AI Cybersecurity Solutions - ZionTechGroup&quot;
-=======
-  <><SEOOptimizertitle =&quot;AI Cybersecurity Solutions - ZionTechGroup&quot;>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
         description=&quot;Advanced AI-powered cybersecurity with99.9% threat detection,24/7 monitoring, and automated response. Protect your business from evolvingcyberthreats.&quot;
         keywords = {['AI cybersecurity', 'threat detection', 'security monitoring', 'cyber protection', 'AIsecurity']}
         canonicalUrl=&quot;https: //ziontechgroup.com/ai-cybersecurity&quot;

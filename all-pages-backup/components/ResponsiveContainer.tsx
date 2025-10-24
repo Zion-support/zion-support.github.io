@@ -17,25 +17,7 @@ constResponsiveContainer= ({children
   md: md,
   lg: lg,
   xl: 'max-w-xl'
-=======
-import Footer from './Footer'
-import Navigation from './Navigation'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, CheckCircle } from 'lucide-react'
-import React from 'react'
-import { cn } from '../lib/utils'
-interface ResponsiveContainerProps {;
-  className?: string;
-}
-
-constResponsiveContainer = ({children
-  class Nam e
-  maxWidth= '7 xl'}: ResponsiveContainerProps) =>{constmaxWidthClasses= {
-    sm: 'max-w-sm'
-    md: 'max-w-md'
-    lg: 'max-w-lg'
-    xl: 'max-w-xl'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ResponsiveContainer.tsx
+:app/components/ResponsiveContainer.tsx
     '2 xl': 'max-w-2 xl'
     '3 xl': 'max-w-3 xl'
     '4 xl': 'max-w-4 xl'
@@ -50,9 +32,7 @@ const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ className = '
     <>
       <Helmet>
 <<<<<<< HEAD:all-pages-backup/components/ResponsiveContainer.tsx
-=======
-        <Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ResponsiveContainer.tsx
+:app/components/ResponsiveContainer.tsx
         <title>ResponsiveContainer</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced ResponsiveContainer solution for modern businesses.&quot; />
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
@@ -161,11 +141,4 @@ export default ResponsiveContainerPage
   )};
 
 export default ResponsiveContainer
-=======
-  );
-}
-export default ResponsiveContainerPage;
-  );
-}
-export default ResponsiveContainer;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ResponsiveContainer.tsx
+:app/components/ResponsiveContainer.tsx

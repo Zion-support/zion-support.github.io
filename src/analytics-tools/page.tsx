@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react';
 import { MapPin } from 'lucide-react';
-=======
-import React from 'react'
-import { Phone, Target, Mail, CheckCircle, Helmet } from 'lucide-react'
-import { Phone, Target, Mail, CheckCircle, Helmet } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 import React from 'react';
 import Head from "next/head";
 import { Phone, Target, Mail, CheckCircle, Helmet } from 'lucide-react';

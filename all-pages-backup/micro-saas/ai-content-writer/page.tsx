@@ -10,13 +10,7 @@ export default function AiContentWriterPage() {
 <<<<<<< HEAD:all-pages-backup/micro-saas/ai-content-writer/page.tsx
       <title>AiContentWriter - Zion Tech Group</title>
         <meta name="description" content="Professional aicontentwriter services by Zion Tech Group." />
-=======
-      
-        <Head>
-        <title>AiContentWriter - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/ai-content-writer/page.tsx
+:app/ai-content-writer/page.tsx
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

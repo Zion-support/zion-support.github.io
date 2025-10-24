@@ -10,13 +10,7 @@ export default function ArVrSolutionsPage() {
 <<<<<<< HEAD:all-pages-backup/ar-vr-solutions/page.tsx
       <title>ArVrSolutions - Zion Tech Group</title>
         <meta name="description" content="Professional arvrsolutions services by Zion Tech Group." />
-=======
-      
-        <Head>
-        <title>ArVrSolutions - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/ar-vr-solutions/page.tsx
+:app/ar-vr-solutions/page.tsx
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

@@ -6,14 +6,7 @@ import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Users, Target, BarChart, Brain, X, TrendingUp } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { ArrowRight, Users, Target, BarChart, Brain, X, TrendingUp } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ContentCarousel.tsx
+:app/components/ContentCarousel.tsx
 
 interface Slide {
   id: number,
@@ -51,44 +44,7 @@ const ContentCarousel: React.FC = () => {;
   description: description,
   features: features,
   icon: <Shield className="h-12 w-12" />
-=======
-      id: 1
-      title: "AI-Powered Analytics"
-      description: "Transform your data into actionable insights with our advanced AI analytics platform."
-      features: [
-        "Real-time data processing"
-        "Predictive analytics"
-        "Custom dashboards"
-        "Automated reporting"
-      ]
-      icon: <BarChart className="h-12w-12" />
-      color: "from-blue-500 to-cyan-500"
-    }
-    {
-      id: 2
-      title: "Cloud Infrastructure"
-      description: "Scalable, secure, and reliable cloud solutions for your business needs."
-      features: [
-        "99.9% uptime guarantee"
-        "Auto-scaling capabilities"
-        "Advanced security"
-        "24/7 monitoring"
-      ]
-      icon: <Cloud className="h-12w-12" />
-      color: "from-green-500 to-emerald-500"
-    }
-    {
-      id: 3
-      title: "Cybersecurity Solutions"
-      description: "Protect your business with our comprehensive cybersecurity services."
-      features: [
-        "Threat detection"
-        "Vulnerability assessment"
-        "Incident response"
-        "Security training"
-      ]
-      icon: <Shield className="h-12w-12" />
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ContentCarousel.tsx
+:app/components/ContentCarousel.tsx
       color: "from-red-500 to-pink-500"
     }
   ]
@@ -105,9 +61,7 @@ const ContentCarousel: React.FC = () => {;
     <>
       <Helmet>;
 <<<<<<< HEAD:all-pages-backup/components/ContentCarousel.tsx
-=======
-        <Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ContentCarousel.tsx
+:app/components/ContentCarousel.tsx
         <title>ContentCarousel</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced ContentCarousel solution for modern businesses.&quot; />
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
@@ -185,11 +139,7 @@ const ContentCarousel: React.FC = () => {;
               className=&quot;flex transition-transform duration-500 ease-in-out&quot
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >{slides.map((slide, index) => (</div>
-=======
-            <div className=&quot;flex transition-transform duration-500 ease-in-out&quot;>
-              style = {{ transform: `translateX(-${currentSlide * 100}%)` }}
-            >{slides.map((slide, index) => (</div>;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ContentCarousel.tsx
+:app/components/ContentCarousel.tsx
 <div key={index} className=&quot;w-full flex-shrink-0&quot;></div>
                   <div className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-8&quot;></div>
                     <div className=&quot;text-center mb-8&quot;></div>
@@ -321,11 +271,7 @@ const ContentCarousel: React.FC = () => {;
           <button
             onClick={nextSlide}
             className=&quot;absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot
-=======
-          <button ,>
-            onClick = {nextSlide}
-            className=&quot;absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20&quot;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ContentCarousel.tsx
+:app/components/ContentCarousel.tsx
           ></button>
             <ChevronRight className=&quot;w-6 h-6&quot; />
           </button>
@@ -386,11 +332,7 @@ const ContentCarousel: React.FC = () => {;
   )};
 
 export default ContentCarouselPage
-=======
-  );
-}
-export default ContentCarouselPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ContentCarousel.tsx
+:app/components/ContentCarousel.tsx
             <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
           </button>
         </div>
@@ -401,6 +343,4 @@ export default ContentCarouselPage;
 
 <<<<<<< HEAD:all-pages-backup/components/ContentCarousel.tsx
 export default ContentCarousel
-=======
-export default ContentCarousel
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/ContentCarousel.tsx
+:app/components/ContentCarousel.tsx

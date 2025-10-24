@@ -11,9 +11,5 @@ const $1: React.FC = () => {;
       </div>
 </>
   )
-<<<<<<< HEAD
 };
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 export default BlockchainWeb3Page;

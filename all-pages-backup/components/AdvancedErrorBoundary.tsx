@@ -6,9 +6,7 @@ import { Home } from 'lucide-react';
 interface AdvancedErrorBoundaryProps {;
 <<<<<<< HEAD:all-pages-backup/components/AdvancedErrorBoundary.tsx
   className?: string
-=======
-  className?: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AdvancedErrorBoundary.tsx
+:app/components/AdvancedErrorBoundary.tsx
 }
 
 interface State {
@@ -29,12 +27,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       errorId: this.state.errorId || this.generateErrorId()
       error,
   errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-=======
-    const errorReport: ErrorReport = {
-      errorId: this.state.errorId || this.generateErrorId()
-      error
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AdvancedErrorBoundary.tsx
+:app/components/AdvancedErrorBoundary.tsx
     }
   }
 

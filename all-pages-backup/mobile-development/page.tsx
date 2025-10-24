@@ -10,13 +10,7 @@ export default function MobileDevelopmentPage() {
 <<<<<<< HEAD:all-pages-backup/mobile-development/page.tsx
       <title>MobileDevelopment - Zion Tech Group</title>
         <meta name="description" content="Professional mobiledevelopment services by Zion Tech Group." />
-=======
-      
-        <Head>
-        <title>MobileDevelopment - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/mobile-development/page.tsx
+:app/mobile-development/page.tsx
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

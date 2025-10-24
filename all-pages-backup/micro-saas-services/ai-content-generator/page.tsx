@@ -10,13 +10,7 @@ export default function AiContentGeneratorPage() {
 <<<<<<< HEAD:all-pages-backup/micro-saas-services/ai-content-generator/page.tsx
       <title>AiContentGenerator - Zion Tech Group</title>
         <meta name="description" content="Professional aicontentgenerator services by Zion Tech Group." />
-=======
-      
-        <Head>
-        <title>AiContentGenerator - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/ai-content-generator/page.tsx
+:app/ai-content-generator/page.tsx
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

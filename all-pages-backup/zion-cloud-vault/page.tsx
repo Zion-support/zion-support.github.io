@@ -10,13 +10,7 @@ export default function ZionCloudVaultPage() {
 <<<<<<< HEAD:all-pages-backup/zion-cloud-vault/page.tsx
       <title>ZionCloudVault - Zion Tech Group</title>
         <meta name="description" content="Professional zioncloudvault services by Zion Tech Group." />
-=======
-      
-        <Head>
-        <title>ZionCloudVault - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/zion-cloud-vault/page.tsx
+:app/zion-cloud-vault/page.tsx
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

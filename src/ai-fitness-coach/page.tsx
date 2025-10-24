@@ -49,15 +49,9 @@ constAIFitnessCoachPage: React.FC = () =>{constfeatures= []
     }
   ]
 
-<<<<<<< HEAD
 const Page = () => {};
   return ();
   <><SEOOptimizertitle=&quot;AI Fitness Coach - Personalized Fitness & Nutrition Plans | ZionTechGroup&quot;
-=======
-const Page = () => {}
-  return ();
-  <><SEOOptimizertitle =&quot;AI Fitness Coach - Personalized Fitness & Nutrition Plans | ZionTechGroup&quot;>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
         description=&quot;Get personalized fitness and nutrition plans powered by AI analysis. Track progress, get24/7 guidance, and achieve your health goals starting at$99/month.&quot;
         keywords = {['AI fitness coach', 'personalized fitness', 'nutrition plans', 'health tracking', 'AI health', 'fitnessautomation']}
         canonicalUrl=&quot;https: //ziontechgroup.com/ai-fitness-coach&quot;

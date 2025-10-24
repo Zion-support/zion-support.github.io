@@ -9,13 +9,7 @@ export const debounce = <T extends (...args: any[]) => any>(;
   wait: number
 ): ((...args: Parameters<T>) => void) => {;
   let timeout: NodeJS.Timeout
-=======
-export const debounce = <T extends (...args: any[]) => any>(
-  func: T
-  wait: number;
-): ((...args: Parameters<T>) => void) => {;
-  let timeout: NodeJS.Timeout;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceOptimizations.ts
+:app/utils/performanceOptimizations.ts
   return (...args: Parameters<T>) => {
     clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait)
@@ -29,13 +23,7 @@ export const throttle = <T extends (...args: any[]) => any>(;
   limit: number
 ): ((...args: Parameters<T>) => void) => {;
   let inThrottle: boolean
-=======
-export const throttle = <T extends (...args: any[]) => any>(
-  func: T
-  limit: number
-): ((...args: Parameters<T>) => void) => {;
-  let inThrottle: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceOptimizations.ts
+:app/utils/performanceOptimizations.ts
   return (...args: Parameters<T>) => {
     if (!inThrottle) {
       func(...args)
@@ -49,10 +37,7 @@ export const throttle = <T extends (...args: any[]) => any>(
 <<<<<<< HEAD:all-pages-backup/utils/performanceOptimizations.ts
 export const useIntersectionObserver = (;
   callback: (entries: IntersectionObserverEntry[]) => void,
-=======
-export const useIntersectionObserver = (
-  callback: (entries: IntersectionObserverEntry[]) => void
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceOptimizations.ts
+:app/utils/performanceOptimizations.ts
   options: IntersectionObserverInit = {}
 ) => {
   const observer = useMemo(;
@@ -62,10 +47,7 @@ export const useIntersectionObserver = (
 <<<<<<< HEAD:all-pages-backup/utils/performanceOptimizations.ts
             threshold: 0.1,
   rootMargin: '50px'
-=======
-            threshold: 0.1
-            rootMargin: '50px'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceOptimizations.ts
+:app/utils/performanceOptimizations.ts
             ...options
           })
         : null
@@ -149,10 +131,7 @@ export const usePerformanceMonitoring = () => {;
 <<<<<<< HEAD:all-pages-backup/utils/performanceOptimizations.ts
         lcp,
   ttfb: navigation?.responseStart - navigation?.requestStart
-=======
-        lcp
-        ttfb: navigation?.responseStart - navigation?.requestStart
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceOptimizations.ts
+:app/utils/performanceOptimizations.ts
       })
     }
 
@@ -201,11 +180,7 @@ export const useMemoryMonitoring = () => {;
           usedJSHeapSize: memory.usedJSHeapSize,
   totalJSHeapSize: memory.totalJSHeapSize,
   jsHeapSizeLimit: memory.jsHeapSizeLimit
-=======
-          usedJSHeapSize: memory.usedJSHeapSize
-          totalJSHeapSize: memory.totalJSHeapSize
-          jsHeapSizeLimit: memory.jsHeapSizeLimit
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceOptimizations.ts
+:app/utils/performanceOptimizations.ts
         })
       }
     }
@@ -296,9 +271,7 @@ export const useBundleSizeMonitoring = () => {;
 
 <<<<<<< HEAD:all-pages-backup/utils/performanceOptimizations.ts
 const performanceOptimizations = {;
-=======
-const performanceOptimizations = {
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceOptimizations.ts
+:app/utils/performanceOptimizations.ts
   debounce
   throttle
   useIntersectionObserver
@@ -312,8 +285,4 @@ const performanceOptimizations = {
 };
 ;
 export default performanceOptimizations
-=======
-}
-
-export default performanceOptimizations;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/utils/performanceOptimizations.ts
+:app/utils/performanceOptimizations.ts

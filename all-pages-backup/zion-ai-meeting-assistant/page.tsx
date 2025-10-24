@@ -10,13 +10,7 @@ export default function ZionAiMeetingAssistantPage() {
 <<<<<<< HEAD:all-pages-backup/zion-ai-meeting-assistant/page.tsx
       <title>ZionAiMeetingAssistant - Zion Tech Group</title>
         <meta name="description" content="Professional zionaimeetingassistant services by Zion Tech Group." />
-=======
-      
-        <Head>
-        <title>ZionAiMeetingAssistant - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/zion-ai-meeting-assistant/page.tsx
+:app/zion-ai-meeting-assistant/page.tsx
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

@@ -10,13 +10,7 @@ export default function QuantumComputingPage() {
 <<<<<<< HEAD:all-pages-backup/quantum-computing/page.tsx
       <title>QuantumComputing - Zion Tech Group</title>
         <meta name="description" content="Professional quantumcomputing services by Zion Tech Group." />
-=======
-      
-        <Head>
-        <title>QuantumComputing - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/quantum-computing/page.tsx
+:app/quantum-computing/page.tsx
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

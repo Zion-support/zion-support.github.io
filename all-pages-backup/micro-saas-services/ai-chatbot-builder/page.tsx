@@ -10,13 +10,7 @@ export default function AiChatbotBuilderPage() {
 <<<<<<< HEAD:all-pages-backup/micro-saas-services/ai-chatbot-builder/page.tsx
       <title>AiChatbotBuilder - Zion Tech Group</title>
         <meta name="description" content="Professional aichatbotbuilder services by Zion Tech Group." />
-=======
-      
-        <Head>
-        <title>AiChatbotBuilder - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/micro-saas-services/ai-chatbot-builder/page.tsx
+:app/micro-saas-services/ai-chatbot-builder/page.tsx
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React from 'react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 import { Star } from 'lucide-react';
 import React from 'react';
 import { Star } from 'lucide-react';

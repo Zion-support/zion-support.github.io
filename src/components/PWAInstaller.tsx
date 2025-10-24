@@ -62,11 +62,7 @@ const $1: React.FC = () => {;
 {    }
 {  }
 
-<<<<<<< HEAD
   const handleDismiss = () => {};
-=======
-  const handleDismiss = () => {}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
     setShowInstallPrompt(false);
     // Don&apos;t show again for this session
     sessionStorage.setItem('pwa-install-dismissed', 'true')

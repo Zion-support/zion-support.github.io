@@ -1,5 +1,4 @@
 'use client'
-<<<<<<< HEAD
 import { X } from 'lucide-react';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
@@ -7,15 +6,6 @@ import Footer from '../components/Footer';
 import { Key, Copy } from 'lucide-react';
 import { Code } from 'lucide-react';
 import { Check } from 'lucide-react';
-=======
-import { Send, X } from 'lucide-react'
-import React, { useState } from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { Send, X } from 'lucide-react'
-import { Send, X } from 'lucide-react'
-import { Send, X } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 
 const $1: React.FC = () => {;
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
@@ -27,19 +17,11 @@ const $1: React.FC = () => {;
   }
 
   constapiEndpoints= []
-<<<<<<< HEAD
     {id: 'ai-chat',
       title: 'AI Chat API',
       method: 'POST',
       endpoint: '/$1/v1/$1/chat',;
       description: 'Send messages to our AI chatbot and get intelligent responses.',;
-=======
-    {id: 'ai-chat'
-      title: 'AI Chat API'
-      method: 'POST'
-      endpoint: '/$1/v1/$1/chat';
-      description: 'Send messages to our AI chatbot and get intelligent responses.';
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
       example: `curl -X POST &quot;https://api.ziontechgroup.com/$1/ai/chat&quot; \\
   -H &quot;Authorization: BearerYOUR_API_KEY&quot; \\
   -H &quot;Content-Type:application/json&quot; \\
@@ -47,21 +29,12 @@ const $1: React.FC = () => {;
     &quot;message&quot;:&quot;Hello, how can you help me?&quot;
    &quot;context&quot;:&quot;customer_support&quot;
 }'`
-<<<<<<< HEAD
 {    },
     {id: 'ai-analysis',
       title: 'AI Data Analysis',
       method: 'POST',
       endpoint: '/$1/v1/$1/analyze',
       description: 'Analyze data using our AI models for insights and predictions.',
-=======
-    }
-    {id: 'ai-analysis'
-      title: 'AI Data Analysis'
-      method: 'POST'
-      endpoint: '/$1/v1/$1/analyze'
-      description: 'Analyze data using our AI models for insights and predictions.'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
       example: `curl -X POST&quot;https:// api.ziontechgroup.com/$1/ai/analyze&quot; \\
   -H&quot;Authorization: Bearer YOUR_API_KEY&quot; \\
   -H&quot;Content-Type: application/json&quot; \\

@@ -26,21 +26,12 @@ constCloudServicesPage: React.FC = () =>{constservices= [
       features: ['Real-time Monitoring', 'Cost Analytics', 'Performance Metrics', 'Predictive Insights']
     }
   ]
-<<<<<<< HEAD
   const benefits = [];
     '99.9% Uptime Guarantee',
     '24/7 Expert Support',
     'Cost Optimization',
     'Scalable Infrastructure',
     'Enhanced Security',
-=======
-  const benefits = []
-    '99.9% Uptime Guarantee'
-    '24/7 Expert Support'
-    'Cost Optimization'
-    'Scalable Infrastructure'
-    'Enhanced Security'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
     'Global CDN'
   ];
   return ();

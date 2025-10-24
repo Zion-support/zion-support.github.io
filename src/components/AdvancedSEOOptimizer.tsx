@@ -30,27 +30,17 @@ interface AdvancedSEOOptimizerProps {}
   enableOpenGraph?: boolean
   enableTwitterCards?: boolean
   enableSchemaMarkup?: boolean
-<<<<<<< HEAD
 {}
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({};
   seoData,
   enableStructuredData = true,
   enableOpenGraph = true,
   enableTwitterCards = true,
-=======
-}
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
-  seoData
-  enableStructuredData = true
-  enableOpenGraph = true
-  enableTwitterCards = true
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
   enableSchemaMarkup = true
 {}) => {}
   const _structuredDataRef = useRef<HTMLScriptElement | null>(null);
   const generateStructuredData = useCallback(() => {};
     if (!enableStructuredData || !seoData.structuredData) return null
-<<<<<<< HEAD
     const baseStructuredData = {};
       '@context': 'https://schema.org',
       '@type': 'Organization',
@@ -58,23 +48,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       url: 'https:// ziontechgroup.com',
       logo: 'https:// ziontechgroup.com/logo.png',
       description: 'Advanced AI and IT Solutions',
-=======
-    const baseStructuredData = {}
-      '@context': 'https://schema.org'
-      '@type': 'Organization'
-      name: 'Zion Tech Group'
-      url: 'https:// ziontechgroup.com'
-      logo: 'https:// ziontechgroup.com/logo.png'
-      description: 'Advanced AI and IT Solutions'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
       address: {}
         '@type': 'PostalAddress'
         addressCountry: 'US'
-<<<<<<< HEAD
 {     },
-=======
-     }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
       sameAs: []
         'https:// www.linkedin.com/$1/zion-tech-group'
         'https:// twitter.com/ziontechgroup'
@@ -85,32 +62,19 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
 {  }, [enableStructuredData, seoData.structuredData])
   const generateBreadcrumbStructuredData = useCallback(() => {};
     if (!enableSchemaMarkup) return null
-<<<<<<< HEAD
     const breadcrumbData = {};
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
-=======
-    const breadcrumbData = {}
-      '@context': 'https://schema.org'
-      '@type': 'BreadcrumbList'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
       itemListElement: []
         {}
           '@type': 'ListItem'
           position: 1
           name: 'Home'
           item: 'https:// ziontechgroup.com'
-<<<<<<< HEAD
 {       },
         {'@type': 'ListItem',
           position: 2,
           name: seoData.title,
-=======
-       }
-        {'@type': 'ListItem'
-          position: 2
-          name: seoData.title
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
           item: seoData.canonicalUrl
        }]
 {    }
@@ -118,15 +82,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
 {  }, [enableSchemaMarkup, seoData.title, seoData.canonicalUrl])
   const generateFAQStructuredData = useCallback(() => {};
     if (!enableSchemaMarkup) return null
-<<<<<<< HEAD
     const faqData = {};
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-=======
-    const faqData = {}
-      '@context': 'https://schema.org'
-      '@type': 'FAQPage'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
       mainEntity: []
         {}
           '@type': 'Question'
@@ -134,17 +92,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
           acceptedAnswer: {}
             '@type': 'Answer'
             text: 'Zion Tech Group offers advanced AI and IT solutions including custom software development, AI integration, cloud solutions, and digital transformation services.'
-<<<<<<< HEAD
 {         }
 {        },
         {'@type': 'Question',
           name: 'How can I contact Zion Tech Group?',
-=======
-         }
-        }
-        {'@type': 'Question'
-          name: 'How can I contact Zion Tech Group?'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
           acceptedAnswer: {}
             '@type': 'Answer'
             text: 'You can contact us through our website contact form, email, or phone. Visit our contact page for more information.'
@@ -152,7 +103,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
 {        }]
 {    }
     return faqData
-<<<<<<< HEAD
 {  }, [enableSchemaMarkup])
   const _structuredData = generateStructuredData();
   const _breadcrumbData = generateBreadcrumbStructuredData();
@@ -160,15 +110,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
   useEffect(() => {};
     // Update meta description;
     const metaDescription = document.querySelector('meta[name=&quot;description&quot;]');
-=======
-  }, [enableSchemaMarkup])
-  const _structuredData = generateStructuredData()
-  const _breadcrumbData = generateBreadcrumbStructuredData()
-  const _faqData = generateFAQStructuredData()
-  useEffect(() => {}
-    // Update meta description;
-    const metaDescription = document.querySelector('meta[name=&quot;description&quot;]')
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
     if (metaDescription) {}
       metaDescription.setAttribute('content', seoData.description)
 {    } else {}
@@ -176,15 +117,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       newMetaDescription.setAttribute('name', 'description')
       document.head.appendChild(newMetaDescription)
       newMetaDescription.setAttribute('content', seoData.description)
-<<<<<<< HEAD
 {    }
     // Update canonical URL;
     const canonicalLink = document.querySelector('link[rel=&quot;canonical&quot;]');
-=======
-    }
-    // Update canonical URL;
-    const canonicalLink = document.querySelector('link[rel=&quot;canonical&quot;]')
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
     if (canonicalLink) {}
       canonicalLink.setAttribute('href', seoData.canonicalUrl)
 {    } else {}
@@ -225,15 +160,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
 {    }
 {  }
   return ()
-<<<<<<< HEAD
   <Helme t>{/* Basic MetaTags */};
     <titl e>{seoData.title}</titl><metaname=&quot;description&quot; content={seoData.description} /><metaname=&quot;keywords&quot; content={seoData.keywords.join(',')} /><linkrel=&quot;canonical&quot; href={seoData.canonicalUrl} />{/* Open GraphTags */}
       {enableOpenGraph && ()
-=======
-  <Helme t>{/* Basic MetaTags */}
-    <titl e>{seoData.title}</titl><metaname=&quot;description&quot; content={seoData.description} /><metaname=&quot;keywords&quot; content={seoData.keywords.join(',')} /><linkrel=&quot;canonical&quot; href = {seoData.canonicalUrl} />{/* Open GraphTags */}
-      {enableOpenGraph && ();
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
       <><metaproperty=&quot;og:title&quot;content={seoData.title} /><metaproperty=&quot;og:image:height&quot;content=&quot;630&quot; /><metaproperty=&quot;og:site_name&quot;content=&quot;Zion TechGroup&quot; /><metaproperty=&quot;og:locale&quot;content=&quot;en_US&quot; /></>)}
       {/* Twitter CardTags */}
       {enableTwitterCards && ()

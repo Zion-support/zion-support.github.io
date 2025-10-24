@@ -10,13 +10,7 @@ export default function EdgeComputingPage() {
 <<<<<<< HEAD:all-pages-backup/edge-computing/page.tsx
       <title>EdgeComputing - Zion Tech Group</title>
         <meta name="description" content="Professional edgecomputing services by Zion Tech Group." />
-=======
-      
-        <Head>
-        <title>EdgeComputing - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/edge-computing/page.tsx
+:app/edge-computing/page.tsx
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

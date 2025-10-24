@@ -1,13 +1,7 @@
 'use client'
-<<<<<<< HEAD
 import { Brain, BarChart, Target } from 'lucide-react';
 import React from 'react';
 import { CheckCircle, Star, Phone, BarChart } from 'lucide-react';
-=======
-import { Users, Mail, Target, BarChart, Brain } from 'lucide-react'
-import React from 'react'
-import { Users, Mail, Target, BarChart, Brain } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 
 constSmartAnalyticsPage: React.FC = () =>{constfeatures= [
     {
@@ -92,7 +86,6 @@ constSmartAnalyticsPage: React.FC = () =>{constfeatures= [
     }
   ]
 
-<<<<<<< HEAD
   const integrations = [];
     { name: 'Google Analytics', icon: '📊', description: 'Website traffic and behavior' },
     { name: 'Salesforce', icon: '💼', description: 'CRM and sales data' },
@@ -101,16 +94,6 @@ constSmartAnalyticsPage: React.FC = () =>{constfeatures= [
     { name: 'Facebook Ads', icon: '📱', description: 'Social media advertising' },
     { name: 'Stripe', icon: '💳', description: 'Payment processing' },
     { name: 'Mailchimp', icon: '📧', description: 'Email marketing' },
-=======
-  const integrations = []
-    { name: 'Google Analytics', icon: '📊', description: 'Website traffic and behavior' }
-    { name: 'Salesforce', icon: '💼', description: 'CRM and sales data' }
-    { name: 'HubSpot', icon: '🎯', description: 'Marketing automation' }
-    { name: 'Shopify', icon: '🛒', description: 'E-commerce analytics' }
-    { name: 'Facebook Ads', icon: '📱', description: 'Social media advertising' }
-    { name: 'Stripe', icon: '💳', description: 'Payment processing' }
-    { name: 'Mailchimp', icon: '📧', description: 'Email marketing' }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
     { name: 'Slack', icon: '💬', description: 'Team communication' }
   ]
 
@@ -327,10 +310,6 @@ const Page = () => {};
       </section>
     </div>
   )
-<<<<<<< HEAD
 {};
 ;
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 export default Page;

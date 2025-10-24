@@ -5,13 +5,7 @@ import { Helmet } from 'react-helmet-async';
 import { Brain } from 'lucide-react';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 import { ArrowRight } from 'lucide-react';
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Brain, Mail } from 'lucide-react'
-import { Brain, Mail } from 'lucide-react'
-import { Brain, Mail } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/PerformanceEnhancer.tsx
+:app/components/PerformanceEnhancer.tsx
 
 {    }
   ]
@@ -27,9 +21,7 @@ import { Brain, Mail } from 'lucide-react'
             </div>
 <<<<<<< HEAD:all-pages-backup/components/PerformanceEnhancer.tsx
           </div>
-=======
-          </div>;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/PerformanceEnhancer.tsx
+:app/components/PerformanceEnhancer.tsx
           </div>;
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>{benefits.map((benefit, index) => (</div>
               <div key={index} className=&quot;flex items-start space-x-3&quot;></div>

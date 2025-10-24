@@ -9,11 +9,7 @@ export default function DataAnalytics5GPage() {
     <>
 <<<<<<< HEAD:all-pages-backup/5g-data-analytics/page.tsx
       <title>5G Data Analytics - Zion Tech Group</title>
-=======
-      
-        <Head>
-        <title>5G Data Analytics - Zion Tech Group</title>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/5g-data-analytics/page.tsx
+:app/5g-data-analytics/page.tsx
         <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
       </Head>
       

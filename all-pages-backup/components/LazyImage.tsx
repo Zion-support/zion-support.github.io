@@ -7,15 +7,7 @@ import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain } from 'lucide-react';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 import { Phone, Mail, ArrowRight } from 'lucide-react';
-=======
-import Footer from './Footer'
-import Navigation from './Navigation'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Brain, ArrowRight, Mail } from 'lucide-react'
-import { Brain, ArrowRight, Mail } from 'lucide-react'
-import { Brain, ArrowRight, Mail } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/LazyImage.tsx
+:app/components/LazyImage.tsx
 
 {    }
   ]
@@ -33,9 +25,7 @@ const LazyImage: React.FC<LazyImageProps> = ({ className = '' }) => {;
     <>
       <Helmet>;
 <<<<<<< HEAD:all-pages-backup/components/LazyImage.tsx
-=======
-        <Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/LazyImage.tsx
+:app/components/LazyImage.tsx
         <title>LazyImage</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced LazyImage solution for modern businesses.&quot; />
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
@@ -185,8 +175,4 @@ const LazyImage: React.FC<LazyImageProps> = ({ className = '' }) => {;
   )};
 
 export default LazyImagePage
-=======
-  );
-}
-export default LazyImagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/LazyImage.tsx
+:app/components/LazyImage.tsx

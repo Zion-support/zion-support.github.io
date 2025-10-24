@@ -1,19 +1,10 @@
 'use client'
-<<<<<<< HEAD
 import { Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import React from 'react';
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Star } from 'lucide-react';
-=======
-import { Send, Users, Mail, Target, BarChart, Brain, TrendingUp } from 'lucide-react'
-import React from 'react'
-
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { Send, Users, Mail, Target, BarChart, Brain, TrendingUp } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 
 constAICRMPage: React.FC = () =>{constfeatures= [
     {
@@ -324,10 +315,6 @@ const Page = () => {};
       </div>
     </div>
   )
-<<<<<<< HEAD
 {};
 ;
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 export default Page;

@@ -9,17 +9,7 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 
 interface HeaderProps {;
   className?: string
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react'
-
-interface HeaderProps {;
-  className?: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Header.tsx
+:app/components/Header.tsx
 }
 
 const Header: React.FC<HeaderProps> = ({ className = '' }) => {;
@@ -27,9 +17,7 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {;
     <>
       <Helmet>
 <<<<<<< HEAD:all-pages-backup/components/Header.tsx
-=======
-        <Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Header.tsx
+:app/components/Header.tsx
         <title>Header</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced Header solution for modern businesses.&quot; />
 <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
@@ -138,11 +126,4 @@ export default HeaderPage
   )
 {}
 export default Header
-=======
-  );
-}
-export default HeaderPage;
-  )
-}
-export default Header
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/Header.tsx
+:app/components/Header.tsx

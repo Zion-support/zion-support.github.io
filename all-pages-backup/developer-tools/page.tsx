@@ -10,13 +10,7 @@ export default function DeveloperToolsPage() {
 <<<<<<< HEAD:all-pages-backup/developer-tools/page.tsx
       <title>DeveloperTools - Zion Tech Group</title>
         <meta name="description" content="Professional developertools services by Zion Tech Group." />
-=======
-      
-        <Head>
-        <title>DeveloperTools - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/developer-tools/page.tsx
+:app/developer-tools/page.tsx
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

@@ -11,11 +11,6 @@ const AIEmailMarketingPage: React.FC = () => {};
       </div>
 </>
   )
-<<<<<<< HEAD
 {}
 ;
-=======
-}
-
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 export default AIEmailMarketingPage;

@@ -21,11 +21,7 @@ const $1: React.FC = () => {;
   if (isSubmitted) {}
     return ()
     <>;
-<<<<<<< HEAD
 ;
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
       <section className=&quot;mb-16&quot; aria-labelledby=&quot;newsletter-heading&quot;></section>
         <div className=&quot;bg-gradient-to-r from-green-600 to-emerald-600 text-white p-8 rounded-xl text-center&quot;></div>
           <div className=&quot;text-4xl mb-4&quot;>✅</div>

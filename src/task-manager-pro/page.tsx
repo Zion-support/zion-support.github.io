@@ -1,15 +1,8 @@
 'use client'
-<<<<<<< HEAD
 import { Brain, BarChart, Target } from 'lucide-react';
 import React from 'react';
 import { CheckSquare } from 'lucide-react';
 import { CheckCircle, Star, Phone } from 'lucide-react';
-=======
-import { BarChart, Brain, Users, Target } from 'lucide-react'
-import React from 'react'
-import { BarChart, Brain, Users, Target } from 'lucide-react'
-import { BarChart, Brain, Users, Target } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 
 constTaskManagerProPage: React.FC = () =>{constfeatures= [
     {
@@ -94,7 +87,6 @@ constTaskManagerProPage: React.FC = () =>{constfeatures= [
     }
   ]
 
-<<<<<<< HEAD
   const integrations = [];
     { name: 'Slack', icon: '💬', description: 'Team communication' },
     { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration platform' },
@@ -103,16 +95,6 @@ constTaskManagerProPage: React.FC = () =>{constfeatures= [
     { name: 'Asana', icon: '📋', description: 'Task management' },
     { name: 'Trello', icon: '📌', description: 'Visual boards' },
     { name: 'Notion', icon: '📝', description: 'Documentation' },
-=======
-  const integrations = []
-    { name: 'Slack', icon: '💬', description: 'Team communication' }
-    { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration platform' }
-    { name: 'Google Workspace', icon: '📧', description: 'Productivity suite' }
-    { name: 'Jira', icon: '🎯', description: 'Project management' }
-    { name: 'Asana', icon: '📋', description: 'Task management' }
-    { name: 'Trello', icon: '📌', description: 'Visual boards' }
-    { name: 'Notion', icon: '📝', description: 'Documentation' }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
     { name: 'GitHub', icon: '💻', description: 'Development workflow' }
   ]
 
@@ -329,10 +311,6 @@ const Page = () => {};
       </section>
     </div>
   )
-<<<<<<< HEAD
 {};
 ;
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 export default Page;

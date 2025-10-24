@@ -49,15 +49,9 @@ constAIVoiceCloningPage: React.FC = () =>{constfeatures= []
     }
   ]
 
-<<<<<<< HEAD
 const Page = () => {};
   return ();
   <><SEOOptimizertitle=&quot;AI Voice Cloning Studio - Create Realistic Voice Clones | ZionTechGroup&quot;
-=======
-const Page = () => {}
-  return ();
-  <><SEOOptimizertitle =&quot;AI Voice Cloning Studio - Create Realistic Voice Clones | ZionTechGroup&quot;>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
         description=&quot;Create realistic voice clones for content, presentations, and customer service with AI Voice Cloning Studio. Professional voice synthesis technology starting at$199/month.&quot;
         keywords = {['AI voice cloning', 'voice synthesis', 'text to speech', 'voice generation', 'AI voices', 'voiceautomation']}
         canonicalUrl=&quot;https: //ziontechgroup.com/ai-voice-cloning&quot;

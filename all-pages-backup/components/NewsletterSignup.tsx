@@ -54,24 +54,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
         <Mail className="w-12 h-12 mx-auto mb-4 text-white/90" />
         <h3 className="text-2xl font-bold mb-2">Stay Updated</h3>
         <p className="text-white/90">
-=======
-      if (variant = == 'modal' && onClose) {
-        setTimeout(() => {;
-          onClose();
-        }, 2000);
-      }
-    } catch (error) {
-      setStatus('error');
-      setMessage('Something went wrong. Please try again.');
-    }
-  }
-  const content = (
-    <div className="bg-gr adient-to-rfrom-purple-600 to-pink-600 rounded-2xl p-8 text-white">
-      <div className="tex t-centermb-6">
-        <Mail className="w-12h-12mx-a u to mb-4 text-white/90" />
-        <h3 className="tex t-2xlfont-bold mb-2">Stay Updated</h3>
-        <p className="tex t-white/90">
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/NewsletterSignup.tsx
+:app/components/NewsletterSignup.tsx
           Get the latest updates on AI technology, IT solutions, and industry insights.
         </p>
       </div>
@@ -144,12 +127,4 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
 };
 
 export default NewsletterSignup
-=======
-      </div>;
-    );
-  }
-
-  return content;
-}
-export default NewsletterSignup;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/NewsletterSignup.tsx
+:app/components/NewsletterSignup.tsx

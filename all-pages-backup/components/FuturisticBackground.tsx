@@ -16,14 +16,7 @@ const FuturisticBackground: React.FC = () => {;
       canvas.height = window.innerHeight
     };
 
-=======
-    if (!ctx) return;
-
-    const resizeCanvas = () => {;
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/FuturisticBackground.tsx
+:app/components/FuturisticBackground.tsx
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
@@ -48,16 +41,7 @@ const FuturisticBackground: React.FC = () => {;
   size: Math.random() * 3 + 1,
   opacity: Math.random() * 0.5 + 0.1
       })}
-=======
-        x: Math.random() * canvas.width
-        y: Math.random() * canvas.height
-        vx: (Math.random() - 0.5) * 2
-        vy: (Math.random() - 0.5) * 2
-        size: Math.random() * 3 + 1
-        opacity: Math.random() * 0.5 + 0.1
-      });
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/FuturisticBackground.tsx
+:app/components/FuturisticBackground.tsx
 
     const animate = () => {;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -100,16 +84,7 @@ const FuturisticBackground: React.FC = () => {;
 
     return () => {
       window.removeEventListener('resize', resizeCanvas)}}, []);
-=======
-      requestAnimationFrame(animate);
-    }
-    animate();
-
-    return () => {
-      window.removeEventListener('resize', resizeCanvas);
-    }
-  }, []);
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/FuturisticBackground.tsx
+:app/components/FuturisticBackground.tsx
 
   return (
     <>
@@ -224,8 +199,4 @@ const FuturisticBackground: React.FC = () => {;
   )};
 
 export default FuturisticBackground
-=======
-  );
-}
-export default FuturisticBackground;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/FuturisticBackground.tsx
+:app/components/FuturisticBackground.tsx

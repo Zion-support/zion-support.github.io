@@ -14,9 +14,7 @@ interface FuturisticButtonProps {
 
 <<<<<<< HEAD:all-pages-backup/components/FuturisticButton.tsx
 const FuturisticButton: React.FC<FuturisticButtonProps> = ({;
-=======
-const FuturisticButton: React.FC<FuturisticButtonProps> = ({
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/FuturisticButton.tsx
+:app/components/FuturisticButton.tsx
   children
   onClick
   variant = 'primary'
@@ -33,9 +31,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
       case 'primary':;
 <<<<<<< HEAD:all-pages-backup/components/FuturisticButton.tsx
         return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40';
-=======
-        return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover: shadow-cyan-500/40';
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/FuturisticButton.tsx
+:app/components/FuturisticButton.tsx
       case 'secondary':
         return 'bg-white/10 text-white border border-white/20 hover:bg-white/20 backdrop-blur-sm';
       case 'accent':
@@ -48,12 +44,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   };
 
   const getSizeClasses = () => {;
-=======
-        return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40';
-    }
-  }
-  const getSizeClasses = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/FuturisticButton.tsx
+:app/components/FuturisticButton.tsx
     switch (size) {
       case 'sm':;
         return 'px-4 py-2 text-sm';
@@ -71,16 +62,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
     transform hover:scale-105 active:scale-95,
   focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900,
   disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none
-=======
-      default: return 'px-6 py-3 text-base';
-    }
-  }
-  const baseClasses = `
-    relative overflow-hidden rounded-lg font-semibold transition-all duration-300
-    transform hover: scale-105 active:scale-95
-    focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900
-    disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/FuturisticButton.tsx
+:app/components/FuturisticButton.tsx
     ${getVariantClasses()}
     ${getSizeClasses()}
     ${className};
@@ -133,10 +115,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
 <<<<<<< HEAD:all-pages-backup/components/FuturisticButton.tsx
           background: background,
   transform: 'translateX(-100%)'
-=======
-          background: 'linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%)'
-          transform: 'translateX(-100%)'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/FuturisticButton.tsx
+:app/components/FuturisticButton.tsx
         }}
         animate={{
           transform: isHovered ? 'translateX(100%)' : 'translateX(-100%)'
@@ -151,13 +130,4 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   )};
 
 export default FuturisticButton
-=======
-          duration: 0.6
-          ease: 'easeInOut'
-        }}
-      />
-    </motion.button>;
-  );
-}
-export default FuturisticButton;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/FuturisticButton.tsx
+:app/components/FuturisticButton.tsx

@@ -1,19 +1,10 @@
 'use client'
-<<<<<<< HEAD
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { MessageCircle } from 'lucide-react';
 import { CheckCircle, Phone, Mail } from 'lucide-react';
-=======
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { MessageCircle, Users, Mail } from 'lucide-react'
-import { MessageCircle, Users, Mail } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 
 const $1: React.FC = () => {;
   const features = [;
@@ -58,7 +49,6 @@ const $1: React.FC = () => {;
     }
   ]
 
-<<<<<<< HEAD
   const stats = [];
     { number: '95%', label: 'Customer Satisfaction' },
     { number: '60%', label: 'Faster Resolution' },
@@ -68,17 +58,6 @@ const $1: React.FC = () => {;
 ;
   return ();
   <><SEOOptimizertitle=&quot;AI Customer Support Solutions - ZionTechGroup&quot;
-=======
-  const stats = []
-    { number: '95%', label: 'Customer Satisfaction' }
-    { number: '60%', label: 'Faster Resolution' }
-    { number: '24/7', label: 'Availability' }
-    { number: '50+', label: 'Languages Supported' }
-  ]
-
-  return ();
-  <><SEOOptimizertitle =&quot;AI Customer Support Solutions - ZionTechGroup&quot;>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
         description=&quot;Revolutionary AI-powered customer support with chatbots, omnichannel support, and intelligent automation. Boost satisfaction by95% and reduce costs by60%.&quot;
         keywords = {['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', 'AIhelpdesk']}
         canonicalUrl=&quot;https: //ziontechgroup.com/ai-customer-support&quot;

@@ -10,13 +10,7 @@ export default function ZionContentStudioPage() {
 <<<<<<< HEAD:all-pages-backup/zion-content-studio/page.tsx
       <title>ZionContentStudio - Zion Tech Group</title>
         <meta name="description" content="Professional zioncontentstudio services by Zion Tech Group." />
-=======
-      
-        <Head>
-        <title>ZionContentStudio - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/zion-content-studio/page.tsx
+:app/zion-content-studio/page.tsx
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

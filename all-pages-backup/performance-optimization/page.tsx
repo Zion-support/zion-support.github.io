@@ -10,13 +10,7 @@ export default function PerformanceOptimizationPage() {
 <<<<<<< HEAD:all-pages-backup/performance-optimization/page.tsx
       <title>PerformanceOptimization - Zion Tech Group</title>
         <meta name="description" content="Professional performanceoptimization services by Zion Tech Group." />
-=======
-      
-        <Head>
-        <title>PerformanceOptimization - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/performance-optimization/page.tsx
+:app/performance-optimization/page.tsx
       
       
       <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

@@ -17,14 +17,7 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
 
 export const useAnalytics = () => {;
   const context = useContext(AnalyticsContext);
-=======
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
-  undefined
-)
-
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext)
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AnalyticsProvider.tsx
+:app/components/AnalyticsProvider.tsx
   if (!context) {;
     throw new Error(&quot;useAnalytics must be used within an AnalyticsProvider&quot;)
   }
@@ -62,12 +55,7 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
     eventName: string
     parameters?: Record<string, unknown>
   ) => {
-=======
-  consttrackEvent = (
-    eventName: string
-    parameters?: Record<string, unknown>
-  ) => {;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AnalyticsProvider.tsx
+:app/components/AnalyticsProvider.tsx
     if (typeof window !== &quot;undefined&quot; && window.gtag) {
       window.gtag(&quot;event&quot;, eventName, parameters)
     }
@@ -78,10 +66,7 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
 <<<<<<< HEAD:all-pages-backup/components/AnalyticsProvider.tsx
         page_title: pageName,
   page_location: window.location.href
-=======
-        page_title: pageName
-        page_location: window.location.href
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AnalyticsProvider.tsx
+:app/components/AnalyticsProvider.tsx
       })
     }
   }
@@ -103,7 +88,4 @@ export default AnalyticsProvider;
 {};
 
 export default AnalyticsProviderPage
-=======
-}
-export default AnalyticsProviderPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4:app/components/AnalyticsProvider.tsx
+:app/components/AnalyticsProvider.tsx

@@ -17,21 +17,12 @@ constAIProjectManagerPage: React.FC = () =>{constfeatures= []
     'Integration with popular project management tools'
   ]
 
-<<<<<<< HEAD
   const benefits = [];
     '40% increase in project delivery speed',
     '70% reduction in project delays',
     '85% improvement in planning accuracy',
     '30% cost reduction through optimization',
     '95% team productivity boost',
-=======
-  const benefits = []
-    '40% increase in project delivery speed'
-    '70% reduction in project delays'
-    '85% improvement in planning accuracy'
-    '30% cost reduction through optimization'
-    '95% team productivity boost'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
     '50% faster decision making'
   ]
 
@@ -62,10 +53,6 @@ const Page = () => {};
       </div>
 </>
   )
-<<<<<<< HEAD
 };
 ;
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 export default Page;

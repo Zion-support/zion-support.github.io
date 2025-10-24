@@ -1,17 +1,9 @@
 'use client'
-<<<<<<< HEAD
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, Phone, Mail } from 'lucide-react';
-=======
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { Phone, Mail, CheckCircle } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 
 constPricingPage: React.FC = () =>{constpricingPlans= [
     {
@@ -102,15 +94,9 @@ constPricingPage: React.FC = () =>{constpricingPlans= [
     }
   ]
 
-<<<<<<< HEAD
 const Page = () => {};
   return ();
   <><SEOOptimizertitle=&quot;Pricing Plans - ZionTechGroup&quot;
-=======
-const Page = () => {}
-  return ();
-  <><SEOOptimizertitle =&quot;Pricing Plans - ZionTechGroup&quot;>
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
         description=&quot;Transparent pricing for AI and IT services. Choose the perfect plan for your business needs. Starting at$299/month.&quot;
         keywords = {['pricing', 'AI services pricing', 'IT services pricing', 'business plans', 'enterprisepricing']}
         canonicalUrl=&quot;https: //ziontechgroup.com/pricing&quot;
