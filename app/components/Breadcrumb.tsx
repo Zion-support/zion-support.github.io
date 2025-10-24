@@ -1,7 +1,6 @@
 import React from 'react'
 import { Home, ChevronRight } from 'lucide-react'
 import { useLocation } from 'react-router-dom'
-
 interface BreadcrumbItem {
   name: string
   path: string

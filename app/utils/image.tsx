@@ -1,5 +1,4 @@
 import React from 'react'
-import React, { useState, useCallback } from 'react'
 'use client'
 'use client'
 interface ImageProps {
@@ -37,9 +36,7 @@ onLoad?: () => void;
 onError?: () => void;}
 }
 export const Image: React.FC<ImageProps>= ({;}</ImageProps>;
-export const Image: React.FC<ImageProps> = ({}</ImageProps>
 src,</ImageProps>;
-export const Image: React.FC<ImageProps> = ({,
 src;
 alt,
 width,
@@ -58,10 +55,8 @@ onError,}
 }) => {}
 const [, setIsLoaded] = useState(false);
 const [hasError, setHasError] = useState(false);"
-export const handleLoad=";";
 if (onLoad) onLoad();}
 }, [onLoad]);"
-export const handleError=";";
 if (onError) onError();}
 }, [onError]);"
 const imageStyle: React.CSSProperties="{"
@@ -89,20 +84,16 @@ return (
 if (hasError) {;}
 return(<div}
 'use client';
-import React, {useState, useCallback } from 'react'
 interface ImageProps {/* TODO: Fix JSX expression */}
 }
-export const,);
 Image: React.FC<ImageProps>= ({/* TODO: Fix JSX expression */})</div>
 }) => {/* TODO: Fix JSX expression */}
 }, [onLoad]);"
-export const handleError=";";"
 loading="{priority" ? 'eager' : 'lazy'}
 onLoad="{handleLoad};
 onError="{handleError}
 {...props}
 >)</img>
 }</img>;
-export default Image;</img>"
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf

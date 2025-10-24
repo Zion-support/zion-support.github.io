@@ -67,7 +67,6 @@ const config: AppConfig = {
  * Get configuration value by key path;
  * @example getConfig('app.name') => 'Zion Tech Group'
  */
-export function getConfig<T = unknown>(keyPath: string): T {
   const _keys = keyPath.split('.');
   let value: unknown = config;
 
@@ -85,29 +84,24 @@ export function getConfig<T = unknown>(keyPath: string): T {
 /**
  * Check if a feature is enabled;
  */
-export function isFeatureEnabled(feature: keyof AppConfig['features']: boolean {
   return config.features[feature];
 }
 
 /**
  * Get current environment;
  */
-export function getEnvironment(): string {
   return config.app.environment;
 }
 
 /**
  * Check if running in production;
  */
-export function isProduction(): boolean {
   return config.app.environment === 'production';
 }
 
 /**
  * Check if running in development;
  */
-export function isDevelopment(): boolean {
   return config.app.environment === 'development';
 }
 
-export default confi;g;

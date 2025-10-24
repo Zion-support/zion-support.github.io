@@ -66,4 +66,3 @@ value: "Math.round(metric.value)"})
 }
 
 //Export singleton instance
-export const performanceMonitor = new PerformanceMonitor()

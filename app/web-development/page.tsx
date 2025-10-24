@@ -1,20 +1,7 @@
 import React from 'react';
-import { Brain, Zap, Shield, Globe } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Brain, Zap, Shield, Globe } from 'lucide-react';
-import React from "react";
-import Footer from '../components/Footer';
-import Head from "next/head";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import Footer from "../components/Footer";
-import React from 'react';
+import Head from 'next/head';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import PerformanceOptimizer from '../components/PerformanceOptimizer';
-import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
-import SecurityEnhancer from '../components/SecurityEnhancer';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
 const Page: React.FC = () => {
@@ -41,15 +28,20 @@ const Page: React.FC = () => {
 
   return (
     <>
+      <Head>
+        <title>Web development - Zion Tech Group</title>
+        <meta name="description" content="Professional web development services and solutions from Zion Tech Group." />
+      </Head>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Page
+              Web development
             </h1>
             <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
-              Advanced Page solutions powered by artificial intelligence and machine learning.
+              Advanced web development solutions powered by artificial intelligence and machine learning.
             </p>
           </div>
 
@@ -92,9 +84,3 @@ const Page: React.FC = () => {
 };
 
 export default Page;
-
-export default PagePage;
-
-export default WebDevelopmentPage;
-
-export default WebDevelopmentPage;

@@ -13,7 +13,6 @@ export function generateId(prefix = 'a11y'): string {
 /**
  * Announce message to screen readers;
  */
-export function announceToScreenReader(
   message: string,
   priority: 'polite' | 'assertive' = 'polite'
 ): void {
@@ -34,7 +33,6 @@ export function announceToScreenReader(
 /**
  * Trap focus within a container (useful for modals)
  */
-export function trapFocus(element: HTMLElement): ( => void {
   const focusableElements = element.querySelectorAll(
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
   );
@@ -68,7 +66,6 @@ export function trapFocus(element: HTMLElement): ( => void {
 /**
  * Check if element is keyboard accessible;
  */
-export function isKeyboardAccessible(element: HTMLElement): boolean {
   const tabIndex = element.getAttribute('tabindex';
   return tabIndex !== null && tabIndex !== '-1';
 }
@@ -76,7 +73,6 @@ export function isKeyboardAccessible(element: HTMLElement): boolean {
 /**
  * Add keyboard navigation support to custom interactive elements;
  */
-export function makeKeyboardAccessible(
   element: HTMLElement,
   onClick: (e: Event => void,
   options: {
@@ -108,7 +104,6 @@ export function makeKeyboardAccessible(
 /**
  * Check color contrast ratio (WCAG 2.1)
  */
-export function getContrastRatio(color1: string, color2: string): number {
   const getLuminance = (color: string): number => {
     const rgb = color.match(/\d+/g)?.map(Number || [0, 0, 0];
     const [r, g, b] = rgb.map(c => {
@@ -129,7 +124,6 @@ export function getContrastRatio(color1: string, color2: string): number {
 /**
  * Check if contrast ratio meets WCAG standards;
  */
-export function meetsContrastRequirements(
   color1: string,
   color2: string,
   level: 'AA' | 'AAA' = 'AA',
@@ -142,7 +136,6 @@ export function meetsContrastRequirements(
 /**
  * Skip to content link helper;
  */
-export function createSkipLink(targetId: string, text = 'Skip to main content'): HTMLAnchorElement {
   const skipLink = document.createElement('a');
   skipLink.href = `#${targetId}`;
   skipLink.textContent = text;
@@ -170,21 +163,18 @@ export function createSkipLink(targetId: string, text = 'Skip to main content'):
 /**
  * Detect if user prefers reduced motion;
  */
-export function prefersReducedMotion(): boolean {
   return window.matchMedia('(prefers-reduced-motion: reduce)'.matches;
 }
 
 /**
  * Detect if user prefers dark mode;
  */
-export function prefersDarkMode(): boolean {
   return window.matchMedia('(prefers-color-scheme: dark)'.matches;
 }
 
 /**
  * Get ARIA label for form validation error;
  */
-export function getAriaInvalid(hasError: boolean: Record<string, string> {
   return {
     ...(hasError && { 'aria-describedby': generateId('error') })
   };
@@ -193,7 +183,6 @@ export function getAriaInvalid(hasError: boolean: Record<string, string> {
 /**
  * Create accessible tooltip;
  */
-export function createAccessibleTooltip(
   trigger: HTMLElement,
   content: string,
   placement: 'top' | 'bottom' | 'left' | 'right' = 'top'
@@ -258,7 +247,6 @@ export function createAccessibleTooltip(
 /**
  * Manage focus restoration (useful for modals)
  */
-export class FocusManager {
   private previousActiveElement: HTMLElement | null = null;
 
   saveFocus(: void {

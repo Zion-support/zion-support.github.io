@@ -21,7 +21,6 @@ Contact Us</Link> <ArrowRight className="w-5 h-5 ml-2" />
     </div>
 }
 
-export const CookieConsent: React.FC<CookieConsentProps> = ({ className = '', children }) => {
   return (
     <div className="{`cookieconsent" ${className}`}>
       {children}
@@ -29,4 +28,3 @@ export const CookieConsent: React.FC<CookieConsentProps> = ({ className = '', ch
   );
 };
 
-export default CookieConsent;

@@ -164,4 +164,3 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
   );
 };
 
-export default FuturisticCar;d;

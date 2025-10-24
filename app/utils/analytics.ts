@@ -125,7 +125,6 @@ class Analytics {
 
 export const analytics = Analytics.getInstance()
 //React hooks for easy integration
-export function useAnalytics() {
 
   return {
     track: analytics.track.bind(analytics)
@@ -145,7 +144,6 @@ export function useAnalytics() {
 }
 
 //Higher-order component for automatic page view tracking
-export function withAnalytics<T extends React.ComponentType<any>>(WrappedComponent: T): T {
   return ((props: any) => {
     const { trackPageView } = useAnalytics()
     React.useEffect(() => {

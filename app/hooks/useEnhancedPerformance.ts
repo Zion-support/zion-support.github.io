@@ -6,7 +6,6 @@
 import { useEffect, useCallback, useRef } from 'react';
 import { errorTracker } from '../utils/enhancedErrorTracking';
 import { analytics } from '../utils/enhancedAnalytics';
-
 export interface UseEnhancedPerformanceOptions {
   component?: string;
   trackErrors?: boolean;
@@ -14,7 +13,6 @@ export interface UseEnhancedPerformanceOptions {
   trackAnalytics?: boolean;
 }
 
-export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) {
   const {
     component = 'Unknown',
     trackErrors = true,
@@ -123,4 +121,3 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
   };
 }
 
-export default useEnhancedPerformanc;e;

@@ -7,13 +7,11 @@ export interface AccessibilityIssue {
   column?: number
 }
 
-export interface AccessibilityReport {
   issues: AccessibilityIssue[]
   score: number
   passed: boolean
 }
 
-export class AccessibilityChecker {
   private issues: AccessibilityIssue[] = []
 
   checkElement(element: HTMLElement): AccessibilityIssue[] {
@@ -69,4 +67,3 @@ export class AccessibilityChecker {
   }
 }
 
-export default AccessibilityChecker

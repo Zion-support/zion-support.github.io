@@ -73,7 +73,6 @@ export class PerformanceMonitor {
 }
 
 //Hook for React components
-export function usePerformanceMonitor() {
 
   const monitor = PerformanceMonitor.getInstance()
   return {
@@ -90,7 +89,6 @@ export function usePerformanceMonitor() {
 }
 
 //Utility function to measure component render time
-export function measureComponentRender(componentName: string) {
   return function <T extends React.ComponentType<any>>(WrappedComponent: T): T {
     return ((props: any) => {
       const monitor = PerformanceMonitor.getInstance()

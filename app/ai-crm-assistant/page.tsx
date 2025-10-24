@@ -1,15 +1,7 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import React from "react";
-import Footer from '../components/Footer';
-import Head from "next/head";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import Footer from "../components/Footer";
-import React from 'react';
+import Head from 'next/head';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
 const Page: React.FC = () => {
@@ -29,7 +21,6 @@ const Page: React.FC = () => {
     {
       icon: Target,
       title: 'Precision Targeting',
-import { CheckCircle, ArrowRight } from 'lucide-react';
       description: 'Target the right audience with AI-driven precision and accuracy.',
       benefits: ['Audience segmentation', 'Behavioral analysis', 'Conversion optimization', 'ROI tracking']
     }
@@ -37,15 +28,20 @@ import { CheckCircle, ArrowRight } from 'lucide-react';
 
   return (
     <>
+      <Head>
+        <title>Ai crm assistant - Zion Tech Group</title>
+        <meta name="description" content="Professional ai crm assistant services and solutions from Zion Tech Group." />
+      </Head>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Page
+              Ai crm assistant
             </h1>
             <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
-              Advanced Page solutions powered by artificial intelligence and machine learning.
+              Advanced ai crm assistant solutions powered by artificial intelligence and machine learning.
             </p>
           </div>
 
@@ -83,15 +79,8 @@ import { CheckCircle, ArrowRight } from 'lucide-react';
         </div>
       </div>
       <Footer />
-    </>);
-
+    </>
+  );
 };
 
 export default Page;
-
-export default PagePage;
-
-export default AICrmAssistantPage;
-
-export default AiCrmAssistantPage;
-export default AICrmAssistantPage;

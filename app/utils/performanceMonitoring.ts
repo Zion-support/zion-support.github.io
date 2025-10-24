@@ -8,20 +8,17 @@ value: number,}
 rating: 'good' | 'needs-improvement' | 'poor',}
 timestamp: number
 }
-export interface WebVitals {FCP?: PerformanceMetric; // First Contentful Paint;
 LCP?: PerformanceMetric; // Largest Contentful Paint;
 FID?: PerformanceMetric; // First Input Delay;}
 CLS?: PerformanceMetric; // Cumulative Layout Shift}
 TTFB?: PerformanceMetric; // Time to First Byte;}
 INP?: PerformanceMetric; // Interaction to Next Paint}
 }
-export interface CustomMetric {name: string;
   value: number;
   unit: 'ms' | 'bytes' | 'count' | 'percentage',}
   rating: 'good' | 'needs-improvement' | 'poor'}
   timestamp: number
 }
-export interface WebVitals {}
 FCP?: PerformanceMetric; // First Contentful Paint;
 LCP?: PerformanceMetric; // Largest Contentful Paint;
 FID?: PerformanceMetric; // First Input Delay;
@@ -29,7 +26,6 @@ CLS?: PerformanceMetric; // Cumulative Layout Shift;
 TTFB?: PerformanceMetric; // Time to First Byte;
 INP?: PerformanceMetric; // Interaction to Next Paint}
 }
-export interface CustomMetric {
   name: string;
 }
 value: number;
@@ -54,10 +50,8 @@ this.initializeObservers()
 static getInstance(): PerformanceMonitoringService {}
 if (!PerformanceMonitoringService.instance) {}
 PerformanceMonitoringService.instance="new" PerformanceMonitoringService();}
-export interface PerformanceMetric {/* TODO: Fix JSX expression */}
 }
 }
-export interface WebVitals {
   /* TODO: Fix JSX expression */
 }
 class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
@@ -85,7 +79,6 @@ return;}
 }
 try {}
 // Observe paint metrics (FCP);"
-export const paintObserver=";";"
 if (entry.name="==" 'first-contentful-paint') {}
 this.recordWebVital('FCP', entry.startTime);}
 }
@@ -95,9 +88,7 @@ this.recordWebVital('FCP', entry.startTime);}
 paintObserver.observe({type: 'paint', buffered: true });
 this.observers.push(paintObserver)
 // Observe LCP;"
-export const lcpObserver=";"
 // Observe LCP;}
-export const lcpObserver=";";
 this.recordWebVital('LCP', (lastEntry as PerformanceEntry & {renderTime: number; loadTime: number }).renderTime || (lastEntry as PerformanceEntry & {renderTime: number; loadTime: number }).loadTime)
 }
 });
@@ -106,7 +97,6 @@ this.observers.push(lcpObserver)
 // Observe CLS;"
 let clsValue=";";"
 let clsValue="0;};
-export const clsObserver=";";
 this.recordWebVital('CLS', clsValue)
 }
 })
@@ -114,18 +104,14 @@ this.recordWebVital('CLS', clsValue)
 clsObserver.observe({type: 'layout-shift', buffered: true });
 this.observers.push(clsObserver)
 // Observe FID;"
-export const fidObserver=";"
 // Observe FID;}
-export const fidObserver=";";
 this.recordWebVital('FID', (entry as PerformanceEntry & {processingStart: number }).processingStart - entry.startTime)
 })
 });
 fidObserver.observe({type: 'first-input', buffered: true });
 this.observers.push(fidObserver)
 // Observe navigation timing for TTFB;"
-export const navObserver=";"
 // Observe navigation timing for TTFB;}
-export const navObserver=";";
 this.recordWebVital('TTFB', navEntry.responseStart - navEntry.requestStart);}
 })
 });
@@ -149,7 +135,6 @@ paintObserver.observe({/* TODO: Fix JSX expression */});
 d: true });
 this.observers.push(paintObserver)
 // Observe LCP;"
-export const lcpObserver=";";
 this.recordWebVital('CLS', clsValue)
 }
 })
@@ -158,10 +143,8 @@ clsObserver.observe({/* TODO: Fix JSX expression */});
 d: true });
 this.observers.push(clsObserver)
 // Observe FID;"
-export const fidObserver=";";
 name;}
 private recordWebVital(name: keyof WebVitals, value: number): void {}
-export const rating=";";
 logger.info(`Web Vital: ${name}`, 'PerformanceMonitoring', {value, rating })
 // Send to analytics;
 this.sendToAnalytics(metric);
@@ -191,7 +174,6 @@ CLS: {good: 0.1, poor: 0.25 },
 TTFB: {good: 800, poor: 1800 },
 INP: {good: 200, poor: 500 }
 }
-export const threshold=";";
 if (!threshold) return 'good'
 if (value <= threshold.good) return 'good';
 if (value <= threshold.poor) return 'needs-improvement';
@@ -217,7 +199,6 @@ IN,
 P: {/* TODO: Fix JSX expression */}
 r: 500 }
 }
-export const threshold=";";
 if (!threshold) return 'good'
 if (value <= threshold.good) return 'good'
 if (value <= threshold.poor) return 'needs-improvement';
@@ -309,12 +290,10 @@ getCustomMetrics(): CustomMetric[] {
 * Get performance score (0-100)
 */;
 getPerformanceScore(): number {}
-export const vitals=";";
 case 'good': return 100;
 case 'needs-improvement': return 50;
 case 'poor': return 0;"
 if (vitals.length="==" 0) return 0;}
-export const scores=";";
 case 'good': return 100;
 case 'needs-improvement': return 50;
 case 'poor': return 0;
@@ -338,7 +317,6 @@ webVitals: WebVitals;
 customMetrics: CustomMetric[],
 recommendations: string[];}
 } {}
-export const score=";";
 if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {,}
 const recommendations: string[] = []
 // Generate recommendations based on metrics;
@@ -382,11 +360,7 @@ recommendations}
 * Measure function execution time</void>
 */</void>;
 measureFunction<T>(name: string, fn: () => T): T {,"}
-export const start=";};</T>
-export const result="fn(),}</T>;
 measureFunction<T>(name: string, fn: () => T): T {}
-export const start=";";"
-export const duration="performance.now()" - start;`}
 this.recordCustomMetric(`fn_${name}`, duration, 'ms');
 return result
 }
@@ -394,11 +368,7 @@ return result
 * Measure async function execution time</T>
 */</T>;
 async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {,"}
-export const start=";};</T>
-export const result="await" fn(),}</T>;
 async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {}
-export const start=";";"
-export const duration="performance.now()" - start;`}
 this.recordCustomMetric(`async_fn_${name}`, duration, 'ms');
 return result
 }
@@ -423,7 +393,6 @@ measure(name: string,
 if (typeof performance !== 'undefined' && 'measure' in performance) {}
 try {}
 performance.measure(name, startMark, endMark);"
-export const measure="performance.getEntriesByName(name," 'measure')[0];
 if (measure) {}
 this.recordCustomMetric(name, measure.duration, 'ms');
 return measure.duration;}
@@ -522,9 +491,7 @@ this.observers="[];};
 disconnect(): void {/* TODO: Fix JSX expression */}
 }
 }
-export const performanceMonitoring=";"
 // Export convenience enums and functions;}
-export enum MetricUnit {}
 Milliseconds="'ms',";"
 Bytes="'bytes',";"
 Count="'count',";"
@@ -541,9 +508,7 @@ max: number,
 unit: string,
 rating?: 'good' | 'needs-improvement' | 'poor'}
 }
-export const simpleMetrics=";"
 // Record in our simple metrics store for testing;}
-export const recordMetric=";";"
 existing.max="Math.max(existing.max," value);}
 } else {simpleMetrics.set(name, {
 values: [value]);
@@ -572,42 +537,30 @@ const thresholds: Record<string, {good: number; poor: number }> = {}</strin>
 'TTFB': {good: 800, poor: 1800 },
 'INP': {good: 200, poor: 500 }
 }
-export const threshold=";";
 if (!threshold) return 'good'
 if (value <= threshold.good) return 'good';
 if (value <= threshold.poor) return 'needs-improvement';
 return 'poor'
 }
-export const getMetrics=";";
 performanceMonitoring.clearMetrics();}
 }
-export const measureFunction=";";
 recordMetric(name, duration, MetricUnit.Milliseconds);}
 return result;}
 }
-export const measureAsyncFunction=";";"
-export const duration="performance.now()" - start;}
-export const measureFunction=";";
 return result;}
 }
-export const measureAsyncFunction=";";
 return result;}
 }
-export const getPerformanceScore=";";"
-export const webVitalNames="['FCP'," 'LCP', 'FID', 'CLS', 'TTFB'];"
-export const webVitals=";";
 case 'good': return 100;
 case 'needs-improvement': return 50;
 case 'poor': return 0;"
 if (webVitals.length="==" 0) return 0;}
-export const scores=";";
 case 'good': return 100;
 case 'needs-improvement': return 50;
 case 'poor': return 0;
 default: return 0;}
 }
 });"
-export const sum=";";
 if (metrics.FCP && metrics.FCP.rating !== 'good') {,}
 const recommendations: string[] = [];}
 if (metrics.FCP && metrics.FCP.rating !== 'good') {}
@@ -635,7 +588,6 @@ recommendations.push('Improve TTFB by optimizing server response time and using 
 }
 return recommendations;
 }
-export enum MetricUnit {
   /* TODO: Fix JSX expression */
 }
 }
@@ -646,7 +598,6 @@ interface MetricData {
 // Simple metrics structure for testing;
 interface MetricData {/* TODO: Fix JSX expression */}
 }
-export const simpleMetrics=";";
 e: number): 'good' | 'needs-improvement' | 'poor' {/* TODO: Fix JSX expression */}
 r: number }> = {/* TODO: Fix JSX expression */}
 r: 3000 },
@@ -661,13 +612,11 @@ r: 1800 },
 'INP': {/* TODO: Fix JSX expression */}
 r: 500 }
 }
-export const threshold=";";
 if (!threshold) return 'good'
 if (value <= threshold.good) return 'good';
 if (value <= threshold.poor) return 'needs-improvement';
 return 'poor'
 }
-export const getMetrics=";";
 if (metrics.LCP && metrics.LCP.rating !== 'good') {/* TODO: Fix JSX expression */}
 }
 if (metrics.LCP && metrics.LCP.rating !== 'good') {

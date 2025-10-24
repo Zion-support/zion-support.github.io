@@ -7,14 +7,12 @@ export interface RequestConfig {
   cacheTTL?: number
 }
 
-export interface APIResponse<T = any> {
   data: T
   status: number
   statusText: string
   headers: Record<string, string>
 }
 
-export class APIClient {
   private baseURL: string
   private defaultHeaders: Record<string, string>
 
@@ -64,4 +62,3 @@ export class APIClient {
   }
 }
 
-export default APIClient

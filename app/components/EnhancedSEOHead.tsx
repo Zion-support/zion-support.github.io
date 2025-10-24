@@ -1,9 +1,7 @@
 import {Helmet} from 'lucide-react';
 import React from 'react'
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-
 interface EnhancedSEOHeadProps {}
   className?: string;
 }

@@ -20,7 +20,6 @@ import Navigation from './Navigation'
  * Real-time application monitoring, performance tracking, and error reporting;
  */
 import React from 'react'
-
 const performanceConfig = {
   monitoring: {
     enableLongTaskDetection: true,
@@ -36,7 +35,6 @@ const performanceConfig = {
     inp: { good: 200, needsImprovement: 500 }
   }
 };
-export interface PerformanceMetrics {
 
 lcp?: number
 fid?: number
@@ -46,7 +44,6 @@ ttfb?: number
 inp?: number
 }
 
-export interface ErrorReport {
   message: string;
   stack?: string;
   component?: string;
@@ -370,4 +367,3 @@ const monitoring = new MonitoringService()
 >>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d:app/utils/monitoring.ts
 
 
-export default monitoring;

@@ -43,7 +43,6 @@ class EnvironmentConfig {}
       sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.VITE_SENTRY_DSN;
       gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID}
     }
-export interface EnvConfig {/* TODO: Fix JSX expression */}
 }
 class EnvironmentConfig {/* TODO: Fix JSX expression */}
   }
@@ -152,18 +151,6 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   }
 }
 // Export singleton instance;
-export const envConfig = new EnvironmentConfig()
 // Export convenient helper functions;
-export const isProduction = () => envConfig.isProduction()
-export const isDevelopment = () => envConfig.isDevelopment()
-export const isTest = () => envConfig.isTest()
-export const getConfig = () => envConfig.getConfig()
-export const getApiHeaders = () => envConfig.getApiHeaders()
-export const envConfig = new EnvironmentConfig();
 // Export convenient helper functions;
-export const isProduction = () => envConfig.isProduction();
-export const isDevelopment = () => envConfig.isDevelopment();
-export const isTest = () => envConfig.isTest();
-export const getConfig = () => envConfig.getConfig();
-export const getApiHeaders = () => envConfig.getApiHeaders();
 `

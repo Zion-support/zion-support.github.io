@@ -5,7 +5,6 @@ export interface TransformConfig {
   filters?: Record<string, any>
 }
 
-export class DataTransformer {
   private config: TransformConfig
 
   constructor(config: TransformConfig = {}) {
@@ -78,4 +77,3 @@ export class DataTransformer {
   }
 }
 
-export default DataTransformer

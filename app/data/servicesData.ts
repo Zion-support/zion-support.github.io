@@ -21,7 +21,6 @@ export interface Service {
   category: "ai" | "it" | "cloud" | "security" | "data" | "automation";
 }
 
-export const aiServices: Service[] = [
   {
     id: "ai-analytics",
     title: "AI Analytics & BI",
@@ -121,7 +120,6 @@ export const aiServices: Service[] = [
   }
 ];
 
-export const itServices: Service[] = [
   {
     id: "web-development",
     title: "Web Development",
@@ -221,25 +219,19 @@ export const itServices: Service[] = [
   }
 ];
 
-export const itSolutions = itServices;
-export const allServices: Service[] = [...aiServices, ...itServices];
 
 // Export as servicesData for backward compatibility
-export const servicesData = {
   aiServices,
   itServices,
   itSolutions: itServices,
   allServices
 };
 
-export const getServiceById = (id: string): Service | undefined => {
   return allServices.find(service => service.id === id);
 };
 
-export const getServicesByCategory = (category: Service["category"]): Service[] => {
   return allServices.filter(service => service.category === category);
 };
 
-export const getPopularServices = (): Service[] => {
   return allServices.filter(service => service.popular);
 };

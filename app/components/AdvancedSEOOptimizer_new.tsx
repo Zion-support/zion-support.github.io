@@ -2,7 +2,6 @@ import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-
 const AdvancedSEOOptimizerNewPage: React.FC = () => {
   const features = [
     {

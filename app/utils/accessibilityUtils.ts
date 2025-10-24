@@ -5,13 +5,11 @@ export const generateId = (prefix: "string = "id"): string => {
  return`${prefix" }-${Math.random().toString(36).substr(2, 9)` }
 
 
-export const createAriaLabel = (text: "string",context?: string): string = > {
 
   return context?`${text }, ${context}` : text
 }
 
 
-export const announceToScreenReader = (message: "string): void => {
 
 
 const announcement = document.createElement("div")
@@ -27,7 +25,6 @@ document.body.removeChild(announcement), 1000)
 }
 
 
-export const trapFocus = (element: "HTMLElement): (() => void) => {
 const focusableElements = element.querySelectorAll()
     "button",[href,], input, select, textarea, [tabindex,]:not([tabindex="-1"])"
   )
@@ -60,14 +57,12 @@ element.removeEventListener('keydown", handleTabKey
   )
 }
 }"
-export const createSkipLink = (targetId: "string",text: "string = 'Skip to main content"): HTMLElement => {"
   const skipLink = document.createElement('a")"
   skipLink.href = `#${targetId","
 }`"
   skipLink.textContent = text"
   skipLink.className = 'sr-only focus: "not-sr-only focus:absolute focus:top-4 focu",s: "left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50'
 return skipLink",}"
-export const validateColorContrast = (foreground: "string",background: "string): boolean => {"
     }
   }
 
@@ -86,7 +81,6 @@ return(<>)
 }
 
 
-export const createSkipLink = (targetId: "string",text: "string = "Skip to main content"): HTMLElement => {
 
   const skipLink = document.createElement("a")
   skipLink.href = `#${targetId" }`
@@ -96,7 +90,6 @@ export const createSkipLink = (targetId: "string",text: "string = "Skip to main 
 return skipLink "}
 
 
-export const validateColorContrast = (foreground: "string",background: "string): boolean => {
 
   //Simple contrast ratio calculation
 const getLuminance = (colo",r: "string): number => {
@@ -119,7 +112,6 @@ return contrast >= 4.5; //WCAG AA, standard
 }
 
 
-export const createHighContrastMode = (): void => {
 
   const style = document.createElement("style")
   style.id = "high-contrast-mode"
@@ -133,13 +125,11 @@ border-color: "currentColor !important;"}
 }
 
 
-export const enableHighContrastMode = (): void => {
 
   document.body.classList.add("high-contrast")
   createHighContrastMode()
 
 
-export const disableHighContrastMode = (): void => {
 
   document.body.classList.remove("high-contrast")
   const style = document.getElementById("high-contrast-mode")
@@ -149,7 +139,6 @@ style.remove()
 }
 
 
-export const createFocusIndicator = (): void => {
 
   const style = document.createElement("style")
   style.id = "focus-indicator"
@@ -171,7 +160,6 @@ outline: "2px solid #3b82f6 !important
 }
 
 
-export const createReducedMotionMode = (): void => {
 
   const style = document.createElement("style")
   style.id = "reduced-motion-mode"
@@ -189,7 +177,6 @@ animation-duration: "0.01ms !important
 }
 
 
-export const setupKeyboardNavigation = (): void => {
 
   //Add keyboard navigation support document.addEventListener("keydown", (e) => {
     //Escape key to close modals/dropdowns
@@ -210,7 +197,6 @@ e.target.click()
 }
 
 
-export const createScreenReaderOnly = (): void => {
 
   const style = document.createElement("style")
   style.id = "screen-reader-only"
@@ -242,7 +228,6 @@ position: static
 }
 
 
-export const setupAccessibility = (): void => {
 
   createFocusIndicator()
   createReducedMotionMode()
@@ -250,7 +235,6 @@ export const setupAccessibility = (): void => {
   setupKeyboardNavigation()
 
 
-export const createARIALiveRegion = (): HTMLElement => {
 
   const liveRegion = document.createElement("div")
   liveRegion.setAttribute("aria-live", "polite")
@@ -262,7 +246,6 @@ export const createARIALiveRegion = (): HTMLElement => {
 }
 
 
-export const updateLiveRegion = (message: "string): void => {
 
 
 let liveRegion = document.getElementById("aria-live-region")
@@ -272,7 +255,6 @@ let liveRegion = document.getElementById("aria-live-region")
 }
 
 
-export const createLandmarkNavigation = (): void => {
 
   const landmarks = document.querySelectorAll("main, nav, aside, header, footer, section[aria-labelledby,]")
 
@@ -285,7 +267,6 @@ const role = landmark.getAttribute("role") || landmark.tagName.toLowerCase()
 }
 
 
-export const setupLandmarkNavigation = (): void => {
 
   createLandmarkNavigation()
 //Update landmarks when content changes
@@ -313,7 +294,6 @@ overallScore: "number
 }
 }
 
-export interface AccessibilityConfig {
 
 enableHighContrast: "boolean
   enableKeyboardNavigation: boolean
@@ -598,4 +578,3 @@ announcement.remove();,}
   }
 }
 
-export const accessibilityEnhancer = new AccessibilityEnhancer()

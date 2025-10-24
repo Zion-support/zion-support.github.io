@@ -9,12 +9,10 @@ export enum ErrorSeverity {}
   HIGH = 'high',
   CRITICAL = 'critical'});;)
 }
-export interface ErrorLogEntry {
   timestamp: string,
   severity: ErrorSeverity,
   message: string,
   error?: Error;
-export interface ErrorLogEntry {}
   timestamp: string,
   severity: ErrorSeverity,
   message: string;
@@ -70,9 +68,7 @@ class ErrorLogger {}
     // Send to external logging service in production;
     if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {}
       this.sendToExternalService(entry);}
-export enum ErrorSeverity {/* TODO: Fix JSX expression */});;)
 }
-export interface ErrorLogEntry {/* TODO: Fix JSX expression */});;)
 }
 class ErrorLogger {/* TODO: Fix JSX expression */});;)
 };
@@ -205,33 +201,23 @@ class ErrorLogger {/* TODO: Fix JSX expression */});;)
 // Singleton instance;
 const errorLogger = new ErrorLogger()
 // Convenience functions;
-export const logError = (message: string, error?: Error, context?: Record<string></string>) =>
   errorLogger.log(message, ErrorSeverity.MEDIUM, error, context)
-export const logCritical = (message: string, error?: Error, context?: Record<string></string>) =>
   errorLogger.log(message, ErrorSeverity.CRITICAL, error, context)
-export const logWarning = (message: string, context?: Record<string></string>) =>
   errorLogger.log(message, ErrorSeverity.LOW, undefined, context)
-export const logInfo = (message: string, context?: Record<string></string>) =>
   errorLogger.log(message, ErrorSeverity.LOW, undefined, context)
-export default errorLogger;
   exportLogs(): string {/* TODO: Fix JSX expression */});;)
 }
 }
 // Singleton instance;
 const errorLogger = new ErrorLogger();
 // Convenience functions;
-export const logError = (messag)
   e: string, error?: Error, context?: Record<string></string>) =>
   errorLogger.log(message, ErrorSeverity.MEDIUM, error, context);
-export const logCritical = (messag)
   e: string, error?: Error, context?: Record<string></string>) =>
   errorLogger.log(message, ErrorSeverity.CRITICAL, error, context);
-export const logWarning = (messag)
   e: string, context?: Record<string></string>) =>
   errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
-export const logInfo = (messag)
   e: string, context?: Record<string></string>) =>
   errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
-export default errorLogger;
 `
 }

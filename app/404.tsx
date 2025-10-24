@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { Search, Home, Info, Briefcase, Mail, ArrowLeft } from 'lucide-react';
-
   const popularPages = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },

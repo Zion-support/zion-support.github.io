@@ -8,7 +8,6 @@ export interface SecurityConfig {
   enableCSP: boolean
 }
 
-export class SecurityManager {
   private config: SecurityConfig
   private attempts: Map<string, { count: number; lastAttempt: Date }> = new Map()
   private sessions: Map<string, { userId: string; lastActivity: Date }> = new Map()
@@ -117,4 +116,3 @@ export class SecurityManager {
   }
 }
 
-export default SecurityManager

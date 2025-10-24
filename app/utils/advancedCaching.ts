@@ -4,7 +4,6 @@ export interface advancedCachingConfig {
   debug?: boolean
 }
 
-export class advancedCaching {
   private config: advancedCachingConfig
 
   constructor(config: advancedCachingConfig) {
@@ -24,4 +23,3 @@ export class advancedCaching {
   }
 }
 
-export default advancedCaching

@@ -1,74 +1,100 @@
-#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
 
-import fs from 'fs';
-import path from 'path';
-
-//Mapping of broken imports to correct imports
-const iconMappings = {
-  rrowleft: 'ArrowLeft',
-  alendar: 'Calendar',
-  ser: 'User',
-  lock: 'Clock',
-  ag: 'Tag',
-  rendingup: 'TrendingUp',
-  ollarsign: 'DollarSign',
-  sers: 'Users',
-  arget: 'Target',
-  rain: 'Brain',
-  ap: 'Zap',
-  hield: 'Shield',
-  rrowright: 'ArrowRight',
-  og: 'Log',
-  pu: 'Cpu',
-  lobe: 'Globe',
-  ocket: 'Rocket',
-  heckcircle: 'CheckCircle',
-  hare2: 'Share2',
-  ookmark: 'Bookmark',
-  ot: 'Bot',
-  ookopen: 'BookOpen',
-};
-
-//Function to fix imports in a file
-function fixImportsInFile(filePath) {
+// Function to clean up duplicate imports and exports
+function cleanFile(filePath) {
   try {
-    let _content = fs.readFileSync(filePath, 'utf8');
-    let _modified = false;
-
-    //Fix lucide-react imports
-    for (const [broken, correct] of Object.entries(iconMappings)) {
-      //       const oldImport = `lucide-react/dist/esm/icons/${broken}`;
-      //       const newImport = `lucide-react`;
-
-      if (content.includes(oldImport)) {
-        content = content.replace(
-          new RegExp(`import ${correct} from '${oldImport}';`, 'g'),
-        );
-        modified = true;
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Split into lines
+    let lines = content.split('\n');
+    let cleanedLines = [];
+    let seenImports = new Set();
+    let seenExports = new Set();
+    let inImportBlock = false;
+    let inExportBlock = false;
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      // Check if we're starting an import block
+      if (line.trim().startsWith('import ')) {
+        inImportBlock = true;
+        inExportBlock = false;
+        
+        // Extract the import name (simplified)
+        const importMatch = line.match(/import\s+.*?from\s+['"]([^'"]+)['"]/);
+        if (importMatch) {
+          const importPath = importMatch[1];
+          if (!seenImports.has(importPath)) {
+            seenImports.add(importPath);
+            cleanedLines.push(line);
+          }
+        } else {
+          cleanedLines.push(line);
+        }
+      }
+      // Check if we're starting an export block
+      else if (line.trim().startsWith('export ')) {
+        inImportBlock = false;
+        inExportBlock = true;
+        
+        // Only add if we haven't seen this export before
+        if (!seenExports.has('default')) {
+          seenExports.add('default');
+          cleanedLines.push(line);
+        }
+      }
+      // If we're in an import block and this line is empty or another import, continue
+      else if (inImportBlock && (line.trim() === '' || line.trim().startsWith('import '))) {
+        // Skip duplicate imports
+        continue;
+      }
+      // If we're in an export block and this line is another export, skip
+      else if (inExportBlock && line.trim().startsWith('export ')) {
+        continue;
+      }
+      // Otherwise, add the line
+      else {
+        inImportBlock = false;
+        inExportBlock = false;
+        cleanedLines.push(line);
       }
     }
-
-    //Fix Link imports if missing
-    if (content.includes('Link') && !content.includes("import Link from 'next/link'")) {
-      content = "import Link from 'next/link';\n" + content;
-      modified = true;
-    }
-
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      //       }
+    
+    // Write the cleaned content back
+    fs.writeFileSync(filePath, cleanedLines.join('\n'));
+    console.log(`Cleaned: ${filePath}`);
   } catch (error) {
-    //     }
+    console.error(`Error cleaning ${filePath}:`, error.message);
+  }
 }
 
-//Get all blog files
-// const blogDir = '/workspace/app/blog';
-const files = fs
-  .readdirSync(blogDir, { recursive: true })
-  .filter(file => file.endsWith('.tsx'))
-  .map(file => path.join(blogDir, file));
+// Function to find all TypeScript/JavaScript files in app directory
+function findFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      files.push(...findFiles(fullPath));
+    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+      files.push(fullPath);
+    }
+  }
+  
+  return files;
+}
 
-// Process each file
-files.forEach(fixImportsInFile);
+// Clean all files in the app directory
+const appDir = './app';
+const files = findFiles(appDir);
 
-// 
+console.log(`Found ${files.length} files to clean...`);
+
+files.forEach(cleanFile);
+
+console.log('Done cleaning files!');

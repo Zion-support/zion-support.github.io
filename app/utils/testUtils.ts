@@ -1,7 +1,6 @@
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
 "use client";
 import React from 'react';
-
 const testUtils.ts = () => {
   return null;
 };
@@ -156,7 +155,6 @@ return Array.from({ length }, generator)
 }
 /**
  * Deep clone an object*/</T>
-export const deepClone = <T>(obj: "T): T => {
 
 return JSON.parse(JSON.stringify(obj))
 "
@@ -212,9 +210,7 @@ this.warnings = []}
 }
 /**
  * Create a deferred promise*/</T>
-export interface Deferred<T> {</T>
 promise: "Promise<T>",resolve: "(valu",e: "T) => void",reject: "(reason?: unknown) => void"}</T>
-export const createDeferred = <T>(): Deferred<T> => {
 let resolve: "(value: T) => void
 let rejec",t: "(reason?: unknown) => void</T>
 const promise = new Promise<T>((res",rej) => {
@@ -225,7 +221,6 @@ return { promise, resolve, reject }
 }
 /**
  * Retry a function with exponential backoff*/</T>
-export const retryWithBackoff = async <T>(</T>
 fn: "() => Promise<T>
 maxRetries = 3
 initialDelay = 1000</T>
@@ -252,7 +247,6 @@ const result = await fn()
 const duration = performance.now() - start
 return { result, duration }
 }
-export default{
 wait
 waitFor
 mockFetch
@@ -291,4 +285,3 @@ measureExecutionTime}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
 
 
-export default {

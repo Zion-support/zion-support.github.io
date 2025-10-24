@@ -40,7 +40,6 @@ export const securityHeaders = {
 /**
  * Rate limiting configuration;
  */
-export const rateLimitConfig = {
   windowMs: 15 * 60 * 1000, // 15 minutes;
   max: 100, // Limit each IP to 100 requests per windowMs;
   message: 'Too many requests from this IP, please try again later.',
@@ -49,7 +48,6 @@ export const rateLimitConfig = {
 /**
  * CORS configuration;
  */
-export const corsConfig = {
   origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
@@ -60,7 +58,6 @@ export const corsConfig = {
 /**
  * Session configuration;
  */
-export const sessionConfig = {
   secret: process.env.SESSION_SECRET || 'your-secret-key-change-in-production',
   resave: false,
   saveUninitialized: false,
@@ -75,7 +72,6 @@ export const sessionConfig = {
 /**
  * Input validation patterns;
  */
-export const validationPatterns = {
   email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
   phone: /^\+?[1-9]\d{1,14}$/,
   url: /^https?:\/\/(www\.?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/,
@@ -86,7 +82,6 @@ export const validationPatterns = {
 /**
  * Sanitize user input;
  */
-export function sanitizeInput(input: string: string {
   return input;
     .replace(/[<>]/g, '') // Remove < and >
     .replace(/javascript:/gi, '') // Remove javascript: protocol;
@@ -97,21 +92,18 @@ export function sanitizeInput(input: string: string {
 /**
  * Validate email address;
  */
-export function validateEmail(email: string): boolean {
   return validationPatterns.email.test(email;
 }
 
 /**
  * Validate URL;
  */
-export function validateUrl(url: string): boolean {
   return validationPatterns.url.test(url;
 }
 
 /**
  * Generate secure token;
  */
-export function generateSecureToken(length: number = 32): string {
   const _array = new Uint8Array(length);
   if (typeof window !== 'undefined' && window.crypto) {
     window.crypto.getRandomValues(array);
@@ -124,7 +116,6 @@ export function generateSecureToken(length: number = 32): string {
   return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
 }
 
-export default {
   securityHeaders,
   rateLimitConfig,
   corsConfig,

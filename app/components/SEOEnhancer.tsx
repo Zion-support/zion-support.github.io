@@ -3,9 +3,6 @@ import Footer from './Footer'
 import Navigation from './Navigation'
 import React from 'react'
 import { ArrowRight, Brain } from 'lucide-react'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-import { Phone, Mail, ArrowRight } from 'lucide-react'
-
 const SEOEnhancerPage: React.FC = () => {
   const features = [
     {
@@ -101,12 +98,7 @@ Powered by cutting-edge AI technology and industry expertise.
               <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover: "from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hove","
 r: scale-105" />
 'use client'
-import Navigation from './Navigation'
-import React from 'react'
 import { Helmet } from from 'react-helmet-async'
-import { ArrowRight, Brain } from from 'lucide-react'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from from 'lucide-react'
-import { Phone, Mail, ArrowRight } from from 'lucide-react'
 const SEOEnhancer: "React.FC<SEOEnhancerProps> = ({ className = ''}) => {</SEOEnhancerProps>
 return (</SEOEnhancerProps>
     <>;

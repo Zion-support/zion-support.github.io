@@ -38,4 +38,3 @@ export const ServiceTemplate: React.FC<ServiceTemplateProps> = ({ className = ''
   );
 };
 
-export default ServiceTemplate;

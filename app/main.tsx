@@ -298,5 +298,4 @@ export default Innovationlab;s;
 </div><//div>
   )
 }
-export default MainPage
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be4b

@@ -9,26 +9,21 @@ export enum CacheStorage {}
   SessionStorage = 'sessionStorage'});
 }
 
-export interface CacheOptions {
   ttl?: number; // Time to live in milliseconds;
-export interface CacheOptions {}
   ttl?: number; // Time to live in milliseconds;
   storage?: CacheStorage;
   compress?: boolean});
 }
 
-export interface CacheConfig {}
   storage?: CacheStorage;
   defaultTTL?: number});
 }
 
-export interface CacheEntry<T></T> {}
   value: T,
   timestamp: number,
   ttl: number,});
 }
 
-export interface CacheStats {}
   hits: number,
   misses: number,
   hitRate: number,
@@ -36,7 +31,6 @@ export interface CacheStats {}
   entries: number,});
 }
 
-export class CacheManager<T></T> {}
   private cache: Map<string></string>> = new Map(;
   private stats: CacheStats = {,
   hits: 0,
@@ -88,17 +82,11 @@ export class CacheManager<T></T> {}
     // Save to persistent storage if needed;
     if (this.config.storage !== CacheStorage.Memory) {}
       this.saveToStorage();
-export enum CacheStorage {/* TODO: Fix JSX expression */});;)
 }
-export interface CacheOptions {/* TODO: Fix JSX expression */});;)
 }
-export interface CacheConfig {/* TODO: Fix JSX expression */});;)
 }
-export interface CacheEntry<T></T> {/* TODO: Fix JSX expression */});;)
 }
-export interface CacheStats {/* TODO: Fix JSX expression */});;)
 }
-export class CacheManager {/* TODO: Fix JSX expression */}
   s: 0 };
   constructor(confi)
   g: CacheConfig = {}); {/* TODO: Fix JSX expression */});;)
@@ -530,25 +518,17 @@ export class CacheManager {/* TODO: Fix JSX expression */}
 }
 
 // Create singleton instances for different use cases;
-export const memoryCache = new CacheManager({ storage: CacheStorage.Memory });;
-export const localStorageCache = new CacheManager({)
   storage: CacheStorage.LocalStorage,
   defaultTTL: 30 * 60 * 1000 // 30 minutes;
-export const sessionStorageCache = new CacheManager({)
   storage: CacheStorage.SessionStorage,
   defaultTTL: 60 * 60 * 1000 // 1 hour;
-export const localStorageCache = new CacheManager({;
   storage: CacheStorage.LocalStorage,
   defaultTTL: 30 * 60 * 1000 // 30 minutes;
-export const sessionStorageCache = new CacheManager({;
   storage: CacheStorage.SessionStorage,
   defaultTTL: 60 * 60 * 1000 // 1 hour;
-export default CacheManager;
     return {/* TODO: Fix JSX expression */});;)
 }});
 }
 }
-export const cacheManager = new CacheManager();
-export default CacheManager;
 `
 }

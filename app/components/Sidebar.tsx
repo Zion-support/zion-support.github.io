@@ -1,10 +1,8 @@
 'use client';
 import {Phone, Mail, Brain} from 'lucide-react';
 import React from 'react'
-import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-
 const SidebarPage: React.FC = () => {const features = [
       title: 'AI-Powered Intelligence',}
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',}

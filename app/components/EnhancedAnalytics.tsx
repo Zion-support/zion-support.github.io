@@ -12,7 +12,6 @@ return (<div>
         <meta property="og: type" content="website" />
 
 import React, { createContext, useContext, useEffect } from &quot;react&quot;
-
 &quot;use client&quot;
 
 interface AnalyticsContextType {
@@ -120,11 +119,9 @@ declare global {interface Window {}
  , }
 }
 'use client'
-import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
 ;"
 const EnhancedAnalyticsPage: React.FC = () => {const features = [
       title: 'AI-Powered Intelligence',}
@@ -263,7 +260,8 @@ Oops! The page you"re looking for seems to have vanished into the digital void. 
       </div>
       <Footer /></Footer>
     </>
+  );
+};
   ;);,
 };
-export default EnhancedAnalyticsPag;e;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80

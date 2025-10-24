@@ -2,8 +2,6 @@ import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
-
 const EnhancedLoadingStatesPage: React.FC = () => {const features = [
       title: 'AI-Powered Intelligence',}
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',}
@@ -149,7 +147,6 @@ return (
 </div>
 )
 }
-export const PageLoader: React.FC = () => (
 <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center&quot;></div>
 <div className=&quot;text-center&quot;></div>
 <div className=&quot;w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4 mx-auto animate-pulse&quot;></div>
@@ -162,7 +159,6 @@ export const PageLoader: React.FC = () => (
 <p className="text-gray-300" >Loading amazing content...</p>
 </div>
 )
-export const ServiceCardSkeleton: React.FC = () => (
 <div className=&quot;bg-white/5 backdrop-blur-sm rounded-2xl p-8 animate-pulse&quot;></div>
 <div className=&quot;w-16 h-16 bg-gray-600 rounded-2xl mb-6&quot;></div>
 <div className=&quot;h-6 bg-gray-600 rounded mb-4&quot;></div>
@@ -174,7 +170,6 @@ export const ServiceCardSkeleton: React.FC = () => (
 </div>
 </div>
 )
-export const StatsSkeleton: React.FC = () => (
 <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8&quot;>{Array.from({ length: 4 }).map((_, index) => (</div>
 <div key={index} className=&quot;text-center animate-pulse&quot;></div>
 <div className=&quot;h-8 bg-gray-600 rounded mb-2&quot;></div>
@@ -183,7 +178,6 @@ export const StatsSkeleton: React.FC = () => (
 ))}
 </div>
 )
-export const ContentSkeleton: React.FC = () => (
 <div className=&quot;space-y-6 animate-pulse&quot;></div>
 <div className=&quot;h-8 bg-gray-600 rounded w-3/4&quot;></div>
 <div className=&quot;space-y-2&quot;></div>

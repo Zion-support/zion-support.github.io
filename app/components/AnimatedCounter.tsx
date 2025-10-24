@@ -184,5 +184,4 @@ return (<spanclassName="{className}" />
   )
 }
 
-export default AnimatedCounter;
 >>>>>>> d05312d5d680673ba2e628470e93a08bc6917172

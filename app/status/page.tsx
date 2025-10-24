@@ -1,26 +1,12 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle } from 'lucide-react';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import React from "react";
-import Footer from '../components/Footer';
-import Head from "next/head";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import Footer from "../components/Footer";
-import React from 'react';
+import Head from 'next/head';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
 const Page: React.FC = () => {
   const features = [
-
-export default function StatusPage() {
-  const [lastUpdated, setLastUpdated] = useState(new Date());    {
+    {
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
@@ -42,15 +28,20 @@ export default function StatusPage() {
 
   return (
     <>
+      <Head>
+        <title>Status - Zion Tech Group</title>
+        <meta name="description" content="Professional status services and solutions from Zion Tech Group." />
+      </Head>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Page
+              Status
             </h1>
             <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
-              Advanced Page solutions powered by artificial intelligence and machine learning.
+              Advanced status solutions powered by artificial intelligence and machine learning.
             </p>
           </div>
 
@@ -90,15 +81,6 @@ export default function StatusPage() {
       <Footer />
     </>
   );
-
 };
 
 export default Page;
-
-export default PagePage;
-
-export default StatusPage;
-
-export default AiAutomationPage;
-
-export default StatusPage;

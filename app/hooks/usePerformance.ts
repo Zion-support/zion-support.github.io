@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { analytics } from '../utils/analytics';
-
 interface PerformanceMetrics {
   loadTime: number;
   domContentLoaded: number;

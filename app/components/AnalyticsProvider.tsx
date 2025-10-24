@@ -19,7 +19,6 @@ export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined,
 )
 
-export const useAnalytics = () => {
   const context = useContext(AnalyticsContext)
   if (!context) {
     throw new Error("useAnalytics must be used within an AnalyticsProvider");
@@ -28,7 +27,6 @@ export const useAnalytics = () => {
   return context
 }
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children, }) => {
   useEffect(() => {
     if (typeof window !== &quot;undefined&quot;) {
       // Google Analytics
@@ -85,7 +83,6 @@ interface AnalyticsProviderProps {
   children: React.ReactNode;
 }
 
-export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
   useEffect(() => {
     // Initialize analytics
     // Analytics initialization logic here
@@ -123,5 +120,4 @@ export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-export default AnalyticsProvide;r;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80

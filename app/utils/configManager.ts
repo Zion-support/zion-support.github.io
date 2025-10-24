@@ -7,7 +7,6 @@
 
 export type Environment = 'development' | 'staging' | 'production' | 'test'
 
-export interface AppConfig {
   environment: Environment,
   api: {,
   baseURL: string,
@@ -154,10 +153,6 @@ class ConfigManager {
 }
 
 // Export singleton instance;
-export const configManager = new ConfigManager()
-export default configManager;
-export type Environment = 'development' | 'staging' | 'production' | 'test';
-export interface AppConfig {/* TODO: Fix JSX expression */});;)
 };
   feature,
   s: {/* TODO: Fix JSX expression */});;)
@@ -237,7 +232,6 @@ const,
   g: {/* TODO: Fix JSX expression */});;)
 }
 };
-export class ConfigManager {/* TODO: Fix JSX expression */}
   overrides: Partial<AppConfig></AppConfig> = {};
   constructor() {/* TODO: Fix JSX expression */});;)
 }
@@ -451,6 +445,4 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
 }
 }
 // Export singleton instance;
-export const configManager = ConfigManager.getInstance();
-export default ConfigManager;
 }

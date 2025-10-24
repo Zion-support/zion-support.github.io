@@ -1,5 +1,4 @@
 import { Brain, Shield, Stethoscope, DollarSign, Truck, FileText, Factory, GraduationCap, MessageSquare, Settings, BarChart, Eye, CreditCard, Cloud, Building, Database, Lock, Code, Smartphone, Settings as SettingsIcon, Target, Zap, BarChart as BarChartIcon, Users, Globe, Cpu, Lock as LockIcon; } from 'lucide-react';
-
 export const microSAASServices = [
   // Productivity & Management Tools;
   {
@@ -257,7 +256,6 @@ export const microSAASServices = [
     freeTrial: '7 days'}
 ];
 
-export const aiServices = [
   {
     title: 'Machine Learning Solutions',
     description: 'Custom ML models for predictive analytics, decision-making, and intelligent automation. Trusted by Fortune 500 companies.',
@@ -372,7 +370,6 @@ export const aiServices = [
     freeTrial: '30 days'}
 ];
 
-export const itServices = [
   {
     title: 'Cloud Migration Services',
     description: 'Seamless cloud migration with zero downtime and optimized performance. Migrate to the cloud with confidence.',
@@ -459,7 +456,6 @@ export const itServices = [
     freeTrial: '30 days'}
 ];
 
-export const specializedServices = [
   {
     title: 'Quantum Computing Solutions',
     description: 'Cutting-edge quantum computing with quantum algorithms, optimization, and research. Solve complex problems with quantum power.',
@@ -517,7 +513,6 @@ export const specializedServices = [
     users: '400+',
     freeTrial: '30 days'}
 ];
-export interface Service {
   id: string,
   name: string,
   category: 'ai' | 'it' | 'micro-saas' | 'emerging-tech';
@@ -548,7 +543,6 @@ export interface Service {
   };
 }
 
-export const services: Service[] = [
   // AI Services;
   {
     id: 'ai-project-manager',
@@ -1328,7 +1322,6 @@ export const services: Service[] = [
   }
 ];
 
-export const serviceCategories = [
   {
     id: 'ai',
     name: 'AI Services',
@@ -1363,7 +1356,6 @@ export const serviceCategories = [
   }
 ];
 
-export const contactInfo = {
   phone: '+1 (302 464-0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',

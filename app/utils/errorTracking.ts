@@ -6,7 +6,6 @@
 export enum ErrorSeverity {/* TODO: Fix JSX expression */});;)
 }
 
-export enum ErrorCategory {
   Network = 'network',
   Validation = 'validation',
   Authorization = 'authorization',
@@ -15,7 +14,6 @@ export enum ErrorCategory {
   ExternalService = 'external_service'});
 }
 
-export interface ErrorMetadata {
   category: ErrorCategory,
   severity: ErrorSeverity,
   userId?: string;
@@ -28,7 +26,6 @@ export interface ErrorMetadata {
   url?: string});
 }
 
-export interface TrackedError {
   id: string,
   message: string,
   metadata: ErrorMetadata,
@@ -136,11 +133,8 @@ class ErrorTrackingService {
       this.reportToExternalService(errorId).catch(err => {)
         logger.error('Failed to report error to external service', { error: err.message });;)
 });
-export enum ErrorCategory {/* TODO: Fix JSX expression */});;)
 }
-export interface ErrorMetadata {/* TODO: Fix JSX expression */});;)
 }
-export interface TrackedError {/* TODO: Fix JSX expression */});;)
 }
 class ErrorTrackingService {/* TODO: Fix JSX expression */});;)
 }
@@ -300,7 +294,6 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */});;)
 }
 
 // Export singleton instance;
-export const errorTracking = ErrorTrackingService.getInstance()
   /**
    * Report critical errors to external service;
    */
@@ -358,24 +351,17 @@ export const errorTracking = ErrorTrackingService.getInstance()
     });;)
 }
 }
-export const errorTracking = ErrorTrackingService.getInstance();
-export default ErrorTrackingService;
 // Export convenience functions for easier testing and usage;
-export const trackError = (erro)
   r: Error, options?: Partial<Omit></Omit>>) => {/* TODO: Fix JSX expression */});;)
 });;)
 };
-export const getErrorStatistics = () => {/* TODO: Fix JSX expression */});;)
 }););
   return {/* TODO: Fix JSX expression */});;)
 }});
 };
-export const clearErrorHistory = () => errorTracking.clearErrors();
-export const addErrorListener = (listene,
   r: (erro,
   r: TrackedError) => void) =>
   errorTracking.addListener(listener;
-export const removeErrorListener = (listene,
   r: (erro,
   r: TrackedError) => void) =>
   errorTracking.removeListener(listener;

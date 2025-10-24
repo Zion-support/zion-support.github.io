@@ -1,14 +1,20 @@
-import React from 'react';
+const fs = require('fs');
+const path = require('path');
+
+// Function to rebuild a page with correct structure
+function rebuildPage(filePath) {
+  try {
+    // Read the original file to extract the title and content
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Extract the page name from the file path
+    const pathParts = filePath.split('/');
+    const pageName = pathParts[pathParts.length - 2] || 'Page';
+    const capitalizedPageName = pageName.charAt(0).toUpperCase() + pageName.slice(1).replace(/-/g, ' ');
+    
+    // Create a new, clean page structure
+    const newContent = `import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Brain, Zap, Shield, Globe } from 'lucide-react';
-import { Brain, CheckCircle, Globe, Shield, Zap } from 'lucide-react';
-import React from "react";
-import Footer from '../components/Footer';
-import Head from "next/head";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import Footer from "../components/Footer";
-import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
@@ -35,18 +41,22 @@ const Page: React.FC = () => {
     }
   ];
 
-export default function ServicePage() {
   return (
     <>
+      <Helmet>
+        <title>${capitalizedPageName} - Zion Tech Group</title>
+        <meta name="description" content="Professional ${capitalizedPageName.toLowerCase()} services and solutions from Zion Tech Group." />
+      </Helmet>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Page
+              ${capitalizedPageName}
             </h1>
             <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
-              Advanced Page solutions powered by artificial intelligence and machine learning.
+              Advanced ${capitalizedPageName.toLowerCase()} solutions powered by artificial intelligence and machine learning.
             </p>
           </div>
 
@@ -81,13 +91,49 @@ export default function ServicePage() {
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
           </div>
-        </section>
+        </div>
       </div>
       <Footer />
     </>
-  ;
+  );
 };
 
 export default Page;
+`;
 
-export default PagePage;
+    // Write the new content
+    fs.writeFileSync(filePath, newContent);
+    console.log(`Rebuilt: ${filePath}`);
+  } catch (error) {
+    console.error(`Error rebuilding ${filePath}:`, error.message);
+  }
+}
+
+// Function to find all problematic page files
+function findProblematicFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      files.push(...findProblematicFiles(fullPath));
+    } else if (item === 'page.tsx') {
+      files.push(fullPath);
+    }
+  }
+  
+  return files;
+}
+
+// Rebuild all page files
+const appDir = './app';
+const files = findProblematicFiles(appDir);
+
+console.log(`Found ${files.length} page files to rebuild...`);
+
+files.forEach(rebuildPage);
+
+console.log('Done rebuilding pages!');

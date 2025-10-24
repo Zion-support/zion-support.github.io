@@ -21,7 +21,6 @@ Contact Us</Link> <ArrowRight className="w-5 h-5 ml-2" />
     </div>
 }
 
-export const LazyWrapper: React.FC<LazyWrapperProps> = ({ className = '', children }) => {
   return (
     <div className="{`lazywrapper" ${className}`}>
       {children}
@@ -29,4 +28,3 @@ export const LazyWrapper: React.FC<LazyWrapperProps> = ({ className = '', childr
   );
 };
 
-export default LazyWrapper;

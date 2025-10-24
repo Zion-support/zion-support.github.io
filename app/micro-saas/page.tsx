@@ -1,19 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle } from 'lucide-react';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import React from "react";
-import Footer from '../components/Footer';
-import Head from "next/head";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import Footer from "../components/Footer";
-import React from 'react';
+import Head from 'next/head';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
@@ -42,15 +28,20 @@ const Page: React.FC = () => {
 
   return (
     <>
+      <Head>
+        <title>Micro saas - Zion Tech Group</title>
+        <meta name="description" content="Professional micro saas services and solutions from Zion Tech Group." />
+      </Head>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Page
+              Micro saas
             </h1>
             <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
-              Advanced Page solutions powered by artificial intelligence and machine learning.
+              Advanced micro saas solutions powered by artificial intelligence and machine learning.
             </p>
           </div>
 
@@ -90,13 +81,6 @@ const Page: React.FC = () => {
       <Footer />
     </>
   );
-
 };
 
 export default Page;
-
-export default MicroSaasPage;
-
-export default AiAutomationPage;
-
-export default MicrosaasPage;

@@ -72,7 +72,6 @@ export interface Metadata {
 </string, string>
 }
 }
-export interface MetadataRoute {
   ;
   url: string;
   lastModified?: string | Date;
@@ -80,14 +79,12 @@ export interface MetadataRoute {
   priority?: number;
 }
 
-export interface MetadataRouteSitemap extends MetadataRoute {
   url: string;
   lastModified?: string | Date;
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
   priority?: number;
 }
 // Custom Next.js types;
-export interface NextPageProps {
   params: { [key: string]: string
 }
   searchParams: {
@@ -96,7 +93,6 @@ export interface NextPageProps {
 }
 
 // API route types;
-export interface ApiRouteHandler {
   (req: Request): Promise<Response >
         </Response>
         </Response>
@@ -104,7 +100,6 @@ export interface ApiRouteHandler {
 </Response>
 }
 // Server components types;
-export interface ServerComponentProps {
   params: { [key: string]: string
 }
   searchParams: {
@@ -113,13 +108,11 @@ export interface ServerComponentProps {
 }
 
 // Client components types;
-export interface ClientComponentProps {
   
   children?: React.ReactNode;
   className?: string;
 }
 // Route handlers;
-export interface RouteHandler {
   
   GET?: (req: Request) => Promise<Response >
         </Response>
@@ -148,14 +141,12 @@ export interface RouteHandler {
 </Response>
 }
 // Dynamic route types;
-export interface DynamicRoute {
   
   params: { [key: string]: string
 }
 }
 
 // Static generation types;
-export interface StaticProps {
   props: { [key: string]: any
 }
   revalidate?: number;
@@ -164,18 +155,15 @@ export interface StaticProps {
 //ISR types
 
 // ISR types;
-export interface ISRConfig {
   
   revalidate: number;
   tags?: string[]
 }
 // Edge runtime types;
-export interface EdgeRuntime {
   
   runtime: 'edge'
 }
 // Node.js runtime types;
-export interface NodeRuntime {
   
   runtime: 'nodejs'
 }
@@ -190,11 +178,8 @@ declare module 'next' {
 }
   }
 }"
-export {}</Response>
 }"
 }
-export {}</Response>
 }
-export {
   
 }

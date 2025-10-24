@@ -4,7 +4,6 @@
 'use client'
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 import Navigation from './Navigation';
-
 const AccessibilityEnhancer: React.FC = () => {
   return null // Placeholder component
 }

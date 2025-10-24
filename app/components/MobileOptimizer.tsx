@@ -87,4 +87,3 @@ export default preventZoom
     </div>
 }
 
-export default MobileOptimizer;

@@ -1,45 +1,51 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix import paths
+// Function to fix import paths based on directory depth
 function fixImportPaths(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Fix Navigation import paths
-    if (content.includes("import Navigation from '../components/Navigation'")) {
-      content = content.replace(/import Navigation from '\.\.\/components\/Navigation'/g, "import Navigation from '../../components/Navigation'");
-      modified = true;
-    }
-
-    // Fix Footer import paths
-    if (content.includes("import Footer from '../components/Footer'")) {
-      content = content.replace(/import Footer from '\.\.\/components\/Footer'/g, "import Footer from '../../components/Footer'");
-      modified = true;
-    }
-
-    // Fix other component import paths
-    if (content.includes("import") && content.includes("../components/")) {
-      content = content.replace(/import (\w+) from '\.\.\/components\/(\w+)'/g, "import $1 from '../../components/$2'");
-      modified = true;
-    }
-
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-      return true;
+    let fixed = false;
+    
+    // Calculate the depth of the file
+    const pathParts = filePath.split('/');
+    const depth = pathParts.length - 2; // Subtract 2 for 'app' and 'page.tsx'
+    
+    // Generate the correct relative path
+    let relativePath = '';
+    for (let i = 0; i < depth; i++) {
+      relativePath += '../';
     }
     
-    return false;
+    // Fix Navigation import
+    if (content.includes("import Navigation from '../components/Navigation';")) {
+      content = content.replace(
+        "import Navigation from '../components/Navigation';",
+        `import Navigation from '${relativePath}components/Navigation';`
+      );
+      fixed = true;
+    }
+    
+    // Fix Footer import
+    if (content.includes("import Footer from '../components/Footer';")) {
+      content = content.replace(
+        "import Footer from '../components/Footer';",
+        `import Footer from '${relativePath}components/Footer';`
+      );
+      fixed = true;
+    }
+    
+    if (fixed) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed imports: ${filePath}`);
+    }
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
   }
 }
 
-// Function to recursively find all .tsx files
-function findTSXFiles(dir) {
+// Function to find all page files
+function findPageFiles(dir) {
   const files = [];
   const items = fs.readdirSync(dir);
   
@@ -47,9 +53,9 @@ function findTSXFiles(dir) {
     const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
     
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-      files.push(...findTSXFiles(fullPath));
-    } else if (item.endsWith('.tsx')) {
+    if (stat.isDirectory()) {
+      files.push(...findPageFiles(fullPath));
+    } else if (item === 'page.tsx') {
       files.push(fullPath);
     }
   }
@@ -57,17 +63,12 @@ function findTSXFiles(dir) {
   return files;
 }
 
-// Main execution
-const appDir = path.join(__dirname, 'app');
-const tsxFiles = findTSXFiles(appDir);
+// Fix all page files
+const appDir = './app';
+const files = findPageFiles(appDir);
 
-console.log(`Found ${tsxFiles.length} .tsx files`);
+console.log(`Found ${files.length} page files to fix...`);
 
-let fixedCount = 0;
-for (const file of tsxFiles) {
-  if (fixImportPaths(file)) {
-    fixedCount++;
-  }
-}
+files.forEach(fixImportPaths);
 
-console.log(`Fixed ${fixedCount} files`);
+console.log('Done fixing import paths!');

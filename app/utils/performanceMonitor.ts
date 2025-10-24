@@ -10,7 +10,6 @@ export interface PerformanceMonitorConfig {
   trackTTFB: boolean
 }
 
-export interface PerformanceMetric {
   name: string
   value: number
   timestamp: Date
@@ -18,7 +17,6 @@ export interface PerformanceMetric {
   category?: string
 }
 
-export class PerformanceMonitor {
   private config: PerformanceMonitorConfig
   private metrics: PerformanceMetric[] = []
   private observer?: PerformanceObserver
@@ -194,4 +192,3 @@ export class PerformanceMonitor {
   }
 }
 
-export default PerformanceMonitor

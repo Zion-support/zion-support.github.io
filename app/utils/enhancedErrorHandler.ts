@@ -9,7 +9,6 @@ export interface ErrorInfo {
   sessionId?: string
 }
 
-export interface ErrorHandlerConfig {
   enabled: boolean
   maxErrors: number
   reportToConsole: boolean
@@ -17,7 +16,6 @@ export interface ErrorHandlerConfig {
   serviceEndpoint?: string
 }
 
-export class EnhancedErrorHandler {
   private config: ErrorHandlerConfig
   private errors: ErrorInfo[] = []
 
@@ -101,4 +99,3 @@ export class EnhancedErrorHandler {
   }
 }
 
-export default EnhancedErrorHandler

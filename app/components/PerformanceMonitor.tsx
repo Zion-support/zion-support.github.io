@@ -144,7 +144,6 @@ interface PerformanceMonitorProp s {onMetricsUpdate?: (metrics: PerformanceMetri
   enableRealTimeMonitoring?: boolean}
   logToConsole?: boolean}
 ;
-import React from 'react';
 PerformanceMonitor.displayName = "PerformanceMonitor"({onMetricsUpdate,"}
   enableRealTimeMonitoring: "true,};
   logToConsole="true"

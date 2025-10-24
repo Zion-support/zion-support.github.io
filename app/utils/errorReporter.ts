@@ -12,7 +12,6 @@ export interface ErrorReport {
   severity: 'low' | 'medium' | 'high' | 'critical'
 }
 
-export interface ErrorReporterConfig {
   enabled: boolean
   endpoint: string
   apiKey?: string
@@ -22,7 +21,6 @@ export interface ErrorReporterConfig {
   flushInterval: number
 }
 
-export class ErrorReporter {
   private config: ErrorReporterConfig
   private reports: ErrorReport[] = []
   private flushTimer?: NodeJS.Timeout
@@ -146,4 +144,3 @@ export class ErrorReporter {
   }
 }
 
-export default ErrorReporter

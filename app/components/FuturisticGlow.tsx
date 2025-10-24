@@ -87,7 +87,6 @@ export default getIntensityValue
     </div>
 }
 
-export const FuturisticGlow: React.FC<FuturisticGlowProps> = ({ className = '', children }) => {
   return (
     <div className="{`futuristicglow" ${className}`}>
       {children}
@@ -95,4 +94,3 @@ export const FuturisticGlow: React.FC<FuturisticGlowProps> = ({ className = '', 
   );
 };
 
-export default FuturisticGlow;

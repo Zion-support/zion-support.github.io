@@ -167,7 +167,6 @@ export class SEOManager {
 }
 
 // Utility functions;
-export const generateMetaDescription = (content: string, maxLength: number = 160: string => {
   const cleanContent = content.replace(/<[^>]*>/g, '').trim();
   if (cleanContent.length <= maxLength) {
     return cleanContent;
@@ -178,7 +177,6 @@ export const generateMetaDescription = (content: string, maxLength: number = 160
   });
 };
 
-export const addStructuredData = (data: any): void => {
   if (typeof document === 'undefined') return;
 
   const script = document.createElement('script');

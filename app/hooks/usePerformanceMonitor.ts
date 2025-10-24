@@ -80,8 +80,6 @@ init}
   }
 }
 
-export default usePerformanceMonitor;</PerformanceData>
 }"
 }
-export default usePerformanceMonitor;</PerformanceData>
 }"

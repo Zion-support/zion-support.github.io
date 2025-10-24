@@ -2,7 +2,6 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
-
 const TestRunnerPage: React.FC = () => {
   const features = [
     {
@@ -141,7 +140,6 @@ const TestRunnerPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-280f
 "use client";
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
-import React from 'react';
 const testRunner = (): JSX.Element => {
   return null;
 };

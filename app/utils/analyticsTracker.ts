@@ -5,13 +5,11 @@ export interface AnalyticsEvent {
   timestamp?: Date
 }
 
-export interface AnalyticsConfig {
   trackingId: string
   enabled: boolean
   debug?: boolean
 }
 
-export class AnalyticsTracker {
   private config: AnalyticsConfig
   private events: AnalyticsEvent[] = []
 
@@ -43,4 +41,3 @@ export class AnalyticsTracker {
   }
 }
 
-export default AnalyticsTracker

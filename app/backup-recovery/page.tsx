@@ -1,15 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Database, Clock, ShieldCheck } from 'lucide-react';
-import Footer from '../components/Footer';
-import { CheckCircle, Database, Clock, ShieldCheck, Globe, Phone, Mail } from 'lucide-react';
-import React from "react";
-import Footer from '../components/Footer';
-import Head from "next/head";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import Footer from "../components/Footer";
-import React from 'react';
+import Head from 'next/head';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
@@ -38,15 +28,20 @@ const Page: React.FC = () => {
 
   return (
     <>
+      <Head>
+        <title>Backup recovery - Zion Tech Group</title>
+        <meta name="description" content="Professional backup recovery services and solutions from Zion Tech Group." />
+      </Head>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Page
+              Backup recovery
             </h1>
             <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
-              Advanced Page solutions powered by artificial intelligence and machine learning.
+              Advanced backup recovery solutions powered by artificial intelligence and machine learning.
             </p>
           </div>
 
@@ -89,7 +84,3 @@ const Page: React.FC = () => {
 };
 
 export default Page;
-
-export default PagePage;
-
-export default BackupRecoveryPage;

@@ -2,8 +2,6 @@ import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
-
 const OptimizedLoadingSpinnerPage: React.FC = () => {const features = [
       title: 'AI-Powered Intelligence',}
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',}
@@ -208,4 +206,3 @@ export const containerClasses=";"
 OptimizedLoadingSpinner.displayName="'OptimizedLoadingSpinner'";
 
 
-export default OptimizedLoadingSpinner;"

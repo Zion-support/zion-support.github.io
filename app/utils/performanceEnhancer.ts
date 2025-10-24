@@ -6,8 +6,6 @@ import React from 'react';
  * Advanced performance optimization tools for the application
  */
 
-import { useRef } from 'react';
-
 // Debounce function for performance optimization
 export const debounce = <T extends (...args: any[]) => any>(
   func: T,
@@ -21,7 +19,6 @@ export const debounce = <T extends (...args: any[]) => any>(
 };
 
 // Throttle function for performance optimization
-export const throttle = <T extends (...args: any[]) => any>(
   func: T,
   limit: number
 ): ((...args: Parameters<T>) => void) => {
@@ -35,7 +32,6 @@ export const throttle = <T extends (...args: any[]) => any>(
   };
 };
 // Performance monitoring utilities;</T>
-export class PerformanceMonitor {private static instance: PerformanceMonitor;</T>;
   private metrics: Map<string, number> = new Map();
   private observers: PerformanceObserver[] = [];
   static getInstance(): PerformanceMonitor {}
@@ -85,7 +81,6 @@ export class PerformanceMonitor {private static instance: PerformanceMonitor;</T
   }
 }
 // React hook for performance monitoring;"</string>
-export const usePerformanceMonitor=";"</string>;"
   const renderStartTime="useRef<number">(0);"
   const monitor="PerformanceMonitor.getInstance();";"
   useEffect(() => {renderStartTime.current: "performance.now();";
@@ -104,7 +99,6 @@ export const usePerformanceMonitor=";"</string>;"
   };
 };
 // Image lazy loading utility;"
-export const lazyLoadImages=";";"
   if (typeof window="==" 'undefined') return;"
   const images="document.querySelectorAll('img[data-src]');";"
   const imageObserver=";";"
@@ -117,7 +111,6 @@ export const lazyLoadImages=";";"
   images.forEach((i, m, g) => imageObserver.observe(i, m, g));
 };
 // Preload critical resources;"
-export const preloadCriticalResources=";";"
   if (typeof window="==" 'undefined') return;"
   const criticalResources=";"
     '/fonts/inter-var.woff2',
@@ -134,7 +127,6 @@ export const preloadCriticalResources=";";"
   });
 };
 // Optimize scroll performance;"
-export const optimizeScrollPerformance=";";"
   if (typeof window="==" 'undefined') return;"
   let ticking="false;";"
   const updateScrollPosition=";";"
@@ -193,7 +185,6 @@ export const optimizeScrollPerformance=";";"
     cleanupFID();
 };
 // Memory usage monitoring;"
-export const getMemoryUsage=";";"
   if (typeof window="==" 'undefined' || !('memory' in performance)) {}
     return null;
   }"
@@ -205,7 +196,6 @@ export const getMemoryUsage=";";"
   };
 };
 // Performance metrics collection;"
-export const collectPerformanceMetrics=";";"
   if (typeof window="==" 'undefined') return null;"
   const navigation="performance.getEntriesByType('navigation')[0]" as PerformanceNavigationTiming;"
   const paint="performance.getEntriesByType('paint');";
@@ -222,7 +212,6 @@ export const collectPerformanceMetrics=";";"
   };
 };
 // Initialize performance enhancements;"
-export const initializePerformanceEnhancements=";";"
   if (typeof window="==" 'undefined') return;
   // Initialize lazy loading;
   lazyLoadImages();

@@ -454,4 +454,3 @@ export const ErrorHandler: React.FC<ErrorHandlerProps> = ({ className = '', chil
     <//>
   );
 };
-export default ErrorHandlerPag;e;"

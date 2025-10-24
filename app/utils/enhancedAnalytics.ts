@@ -7,7 +7,6 @@ export interface AnalyticsEvent {
   sessionId?: string
 }
 
-export interface AnalyticsConfig {
   trackingId: string
   enabled: boolean
   debug?: boolean
@@ -15,7 +14,6 @@ export interface AnalyticsConfig {
   flushInterval?: number
 }
 
-export class EnhancedAnalytics {
   private config: AnalyticsConfig
   private events: AnalyticsEvent[] = []
   private flushTimer?: NodeJS.Timeout
@@ -101,4 +99,3 @@ export class EnhancedAnalytics {
   }
 }
 
-export default EnhancedAnalytics

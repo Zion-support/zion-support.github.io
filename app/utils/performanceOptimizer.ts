@@ -15,7 +15,6 @@ export const debounce = <T extends (...args: any[] => any>(
   };
 };
 
-export const throttle = <T extends (...args: any[] => any>(
   func: T,
   limit: number,
 ): ((...args: Parameters<T>) => void => {
@@ -35,7 +34,6 @@ export const throttle = <T extends (...args: any[] => any>(
   };
 };
 
-export const lazyLoad = (callback: ( => void, options?: IntersectionObserverInit) => {}
   if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {}
     callback();
     return;
@@ -53,9 +51,7 @@ export const lazyLoad = (callback: ( => void, options?: IntersectionObserverInit
   return observer;
 };
 
-export const preloadImage = (src: string: Promise<void> => {,
   return new Promise((resolve, reject) => {
-export const preloadImage = (src: string: Promise<void> => {}
   return new Promise((resolve, reject) => {}
     const img = new Image();
     img.onload = () => resolve();
@@ -64,9 +60,7 @@ export const preloadImage = (src: string: Promise<void> => {}
 
 };
 
-export const preloadScript = (src: string: Promise<void> => {,
   return new Promise((resolve, reject) => {
-export const preloadScript = (src: string: Promise<void> => {}
   return new Promise((resolve, reject) => {}
     const script = document.createElement('script');
     script.src = src;
@@ -76,9 +70,7 @@ export const preloadScript = (src: string: Promise<void> => {}
 
 };
 
-export const measurePerformance = (name: string, fn: () => void => {,
   if (typeof window === 'undefined' || !('performance' in window)) {,
-export const measurePerformance = (name: string, fn: () => void => {}
   if (typeof window === 'undefined' || !('performance' in window)) {}
     fn();
     return;
@@ -92,7 +84,6 @@ export const measurePerformance = (name: string, fn: () => void => {}
     }
 };
 
-export const getDeviceInfo = () => {}
   if (typeof window === 'undefined') {}
     return { isMobile: false, isTablet: false, isDesktop: true };
   }
@@ -584,7 +575,4 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
   }
 }
 // Export singleton instance;
-export const performanceOptimizer = new PerformanceOptimizer();
-export default PerformanceOptimizer;
-export { PerformanceOptimizer, type PerformanceMetrics, type PerformanceConfig };
 `

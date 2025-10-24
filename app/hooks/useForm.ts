@@ -22,7 +22,6 @@ export interface UseFormConfig<T extends Record<string, unknown>> {
   validateOnBlur?: boolean;
 }
 
-export interface UseFormReturn<T extends Record<string, unknown>> {
   values: T;
   errors: Record<keyof T, string[]>;
   touched: Record<keyof T, boolean>;
@@ -39,7 +38,6 @@ export interface UseFormReturn<T extends Record<string, unknown>> {
   validateAllFields: () => boolean;
 }
 
-export function useForm<T extends Record<string, unknown>>({
   initialValues, validationSchema = {}, onSubmit: _onSubmit, validateOnChange = true, validateOnBlur = true
 }: UseFormConfig<T>): UseFormReturn<T> {
   const [values, setValues] = useState<T>(initialValues);

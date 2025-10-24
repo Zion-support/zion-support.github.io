@@ -27,10 +27,6 @@ Our enhanced performance monitoring system provides comprehensive insights and o
                         {benefit}
                       </li>
 'use client'
-import React from 'react'
-import { ArrowRight, Brain } from 'lucide-react'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-import { Phone, Mail } from 'lucide-react'
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 

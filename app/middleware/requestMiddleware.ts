@@ -4,10 +4,8 @@
  */
 
 import logger from '../utils/logger';
-
 export type NextFunction = () => Promise<unknown> | unknown;
 
-export interface MiddlewareContext {
   request: {
     url: string;
     method: string;
@@ -22,7 +20,6 @@ export interface MiddlewareContext {
   metadata: Record<string, unknown>;
 }
 
-export type Middleware = (
   context: MiddlewareContext,
   next: NextFunction
 ) => Promise<unknown> | unknown;
@@ -30,7 +27,6 @@ export type Middleware = (
 /**
  * Middleware executor
  */
-export class MiddlewareExecutor {
   private middlewares: Middleware[] = [];
 
   /**
@@ -63,7 +59,6 @@ export class MiddlewareExecutor {
 /**
  * Logging middleware
  */
-export const loggingMiddleware: Middleware = async (context, next) => {
   const _startTime = Date.now();
 
   logger.info('Request started', 'RequestMiddleware', {
@@ -102,7 +97,6 @@ export const loggingMiddleware: Middleware = async (context, next) => {
 /**
  * Authentication middleware
  */
-export const authMiddleware: Middleware = async (context, next) => {
   const _token = getAuthToken();
 
   if (token) {
@@ -123,7 +117,6 @@ function getAuthToken(): string | null {
 /**
  * Error handling middleware
  */
-export const errorHandlingMiddleware: Middleware = async (context, next) => {
   try {
     return await next();
   } catch (error) {
@@ -147,7 +140,6 @@ export const errorHandlingMiddleware: Middleware = async (context, next) => {
 /**
  * Rate limiting middleware
  */
-export const rateLimitMiddleware = (maxRequests: number, windowMs: number): Middleware => {
   const _requests = new Map<string, number[]>();
 
   return async (context, next) => {
@@ -172,7 +164,6 @@ export const rateLimitMiddleware = (maxRequests: number, windowMs: number): Midd
 /**
  * Caching middleware
  */
-export const cachingMiddleware = (ttl: number): Middleware => {
   const _cache = new Map<string, { data: unknown; timestamp: number }>();
 
   return async (context, next) => {
@@ -202,7 +193,6 @@ export const cachingMiddleware = (ttl: number): Middleware => {
 /**
  * Retry middleware
  */
-export const retryMiddleware = (maxRetries: number, delay: number): Middleware => {
   return async (context, next) => {
     let lastError: Error | null = null;
 
@@ -234,7 +224,6 @@ export const retryMiddleware = (maxRetries: number, delay: number): Middleware =
 /**
  * Timeout middleware
  */
-export const timeoutMiddleware = (timeoutMs: number): Middleware => {
   return async (context, next) => {
     return await Promise.race([
       next(),
@@ -246,7 +235,6 @@ export const timeoutMiddleware = (timeoutMs: number): Middleware => {
 /**
  * Request transformation middleware
  */
-export const transformRequestMiddleware = (
   transformer: (context: MiddlewareContext) => MiddlewareContext | Promise<MiddlewareContext>
 ): Middleware => {
   return async (context, next) => {
@@ -259,7 +247,6 @@ export const transformRequestMiddleware = (
 /**
  * Response transformation middleware
  */
-export const transformResponseMiddleware = (
   transformer: (data: unknown) => unknown | Promise<unknown>
 ): Middleware => {
   return async (context, next) => {
@@ -271,7 +258,6 @@ export const transformResponseMiddleware = (
 /**
  * Create default middleware chain
  */
-export function createDefaultMiddlewareChain(): MiddlewareExecutor {
   const _executor = new MiddlewareExecutor();
 
   return executor
@@ -282,7 +268,6 @@ export function createDefaultMiddlewareChain(): MiddlewareExecutor {
     .use(retryMiddleware(2, 1000));
 }
 
-export default {
   MiddlewareExecutor,
   loggingMiddleware,
   authMiddleware,

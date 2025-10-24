@@ -4,7 +4,6 @@ import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check, useAnalytics } from './EnhancedAnalytics'
-
 const EnhancedPerformanceOptimizerPage: React.FC = () => {const features = [
       title: 'AI-Powered Intelligence',}
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',}
@@ -223,9 +222,6 @@ Email Us
 </button>
 </button>
 </h2>;
-import {useEffect, useCallback } from 'react'
-import {useAnalytics } from './EnhancedAnalytics'
-import {Phone, Mail } from 'lucide-react'
 ;
 interface PerformanceMetrics {lcp: number | null;
 fid: number | null;
@@ -235,5 +231,3 @@ ttfb: number | null
 }
 const EnhancedPerformanceOptimizer: React.FC = () => {}
 const {trackEvent } = useAnalytics();"
-export const optimizeImages=";";"
-export const images="document.querySelectorAll('img')""

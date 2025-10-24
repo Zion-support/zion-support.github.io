@@ -21,7 +21,6 @@ interface RequestRecord {
  * Simple in-memory rate limiter
  * For production, use Redis or similar distributed storage
  */
-export class RateLimiter {
   private requests: Map<string, RequestRecord> = new Map();
   private config: RateLimitConfig;
 
@@ -99,7 +98,6 @@ export class RateLimiter {
 /**
  * Pre-configured rate limiters for common use cases
  */
-export const rateLimiters = {
   // Strict: 10 requests per minute
   strict: new RateLimiter({
     windowMs: 60 * 1000,
@@ -140,7 +138,6 @@ export const rateLimiters = {
  * @param request - Request object
  * @returns Client identifier (IP address or user ID)
  */
-export function getClientIdentifier(request: Request): string {
   // Try to get real IP from headers (for proxied requests)
   const _headers = request.headers;
   const _forwardedFor = headers.get('x-forwarded-for');
@@ -160,7 +157,6 @@ export function getClientIdentifier(request: Request): string {
  * @param limiter - Rate limiter instance
  * @returns Middleware function
  */
-export function createRateLimitMiddleware(limiter: RateLimiter) {
   return async (request: Request): Promise<Response | null> => {
     const _identifier = getClientIdentifier(request);
     const { allowed, remaining, resetTime } = limiter.check(identifier);
@@ -189,4 +185,3 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {
   };
 }
 
-export default RateLimite;r;

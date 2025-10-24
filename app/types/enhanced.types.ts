@@ -1,5 +1,4 @@
 import React from 'react';
-
 // Enhanced type definitions for better type safety
 export interface PerformanceMetrics {
   loadTime: number
@@ -10,7 +9,6 @@ export interface PerformanceMetrics {
   timeToInteractive: number
   firstMeaningfulPaint: number
 }
-export interface ErrorContext {
   url?: string
   userAgent?: string
   timestamp?: string
@@ -20,7 +18,6 @@ export interface ErrorContext {
   action?: string
   stack?: string
 }
-export interface ErrorReport {
   id: string
   message: string
   stack?: string
@@ -30,8 +27,6 @@ export interface ErrorReport {
   createdAt: string
   updatedAt?: string
 }
-export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical'
-export interface Service {
   id: string
   title: string
   description: string
@@ -55,7 +50,6 @@ export interface Service {
   category: 'ai' | 'it' | '5g' | 'blockchain' | 'iot'
   tags: string[]
 }
-export interface User {
   id: string
   email: string
   name: string
@@ -64,13 +58,11 @@ export interface User {
   createdAt: string
   lastLogin?: string
 }
-export interface UserPreferences {
   theme: 'light' | 'dark' | 'auto'
   language: string
   notifications: boolean
   analytics: boolean
 }
-export interface ContactFormData {
   name: string
   email: string
   company: string
@@ -80,14 +72,12 @@ export interface ContactFormData {
   budget?: string
   timeline?: string
 }
-export interface AnalyticsEvent {
   name: string
   timestamp: number
   properties?: Record<string, string | number | boolean | null>
   userId?: string
   sessionId?: string
 }
-export interface SEOData {
   title: string
   description: string
   keywords: string[]
@@ -98,14 +88,12 @@ export interface SEOData {
   twitterCard?: 'summary' | 'summary_large_image'
   structuredData?: Record<string, unknown>
 }
-export interface NavigationItem {
   name: string
   href: string
   icon?: React.ComponentType<{ className?: string }>
   submenu?: NavigationItem[]
   external?: boolean
 }
-export interface PerformanceConfig {
   enableLazyLoading: boolean
   enablePreloading: boolean
   enableCodeSplitting: boolean
@@ -113,7 +101,6 @@ export interface PerformanceConfig {
   enableBundleAnalysis: boolean
   enableServiceWorker: boolean
 }
-export interface AccessibilityConfig {
   enableKeyboardNavigation: boolean
   enableScreenReader: boolean
   enableHighContrast: boolean
@@ -121,20 +108,15 @@ export interface AccessibilityConfig {
   enableFocusIndicators: boolean
 }
 // Utility types
-export type Optional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>
-export type RequiredFields<T, K extends keyof T> = T & Required<Pick<T, K>>
-export type DeepPartial<T> = {
   [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P]
 }
 // API Response types
-export interface ApiResponse<T = unknown> {
   success: boolean
   data?: T
   error?: string
   message?: string
   timestamp: string
 }
-export interface PaginatedResponse<T = unknown> extends ApiResponse<T[]> {
   pagination: {
     page: number
     limit: number
@@ -143,12 +125,10 @@ export interface PaginatedResponse<T = unknown> extends ApiResponse<T[]> {
   }
 }
 // Form validation types
-export interface ValidationError {
   field: string
   message: string
   code: string
 }
-export interface FormState<T = Record<string, unknown>> {
   values: T
   errors: ValidationError[]
   touched: Record<keyof T, boolean>
@@ -156,18 +136,15 @@ export interface FormState<T = Record<string, unknown>> {
   isValid: boolean
 }
 // Component props types
-export interface BaseComponentProps {
   className?: string
   children?: React.ReactNode
   id?: string
   'data-testid'?: string
 }
-export interface LoadingProps extends BaseComponentProps {
   size?: 'sm' | 'md' | 'lg' | 'xl'
   color?: 'primary' | 'secondary' | 'white'
   text?: string
 }
-export interface ButtonProps extends BaseComponentProps {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger'
   size?: 'sm' | 'md' | 'lg'
   disabled?: boolean
@@ -175,7 +152,6 @@ export interface ButtonProps extends BaseComponentProps {
   onClick?: () => void
   type?: 'button' | 'submit' | 'reset'
 }
-export interface InputProps extends BaseComponentProps {
   type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'search'
   placeholder?: string
   value?: string

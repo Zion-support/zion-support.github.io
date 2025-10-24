@@ -1,7 +1,6 @@
 <<<<<<< HEAD:app/page-backup.tsx
 'use client'
 import React from 'react'
-
 const PageBackupPage: React.FC = ( => {
   const features = [
     {
@@ -26,7 +25,6 @@ const PageBackupPage: React.FC = ( => {
     }
 <<<<<<< HEAD:app/page-backup.tsx
 'use client'
-import React from 'react'
 'use client'
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
@@ -192,5 +190,4 @@ export default PageBackupPage;
 </div><//div>
   )
 }
-export default PageBackupPage
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be4b

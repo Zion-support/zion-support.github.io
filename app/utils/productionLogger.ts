@@ -91,4 +91,3 @@ class ProductionLogger {}
 }
 
 export const logger = new ProductionLogger();
-export default logger;

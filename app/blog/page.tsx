@@ -1,24 +1,5 @@
 import React from 'react';
-import { Brain, Zap, Shield, Globe } from 'lucide-react';
-import React, { useState } from "react";
-import { ArrowRight, Search, Calendar, Clock, User, Zap } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Brain, Zap, Shield, Globe } from 'lucide-react';
-import { Brain, Globe, Shield, Zap } from 'lucide-react';
-import React from "react";
-import Footer from '../components/Footer';
-import Head from "next/head";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import Footer from "../components/Footer";
-import React from 'react';
+import Head from 'next/head';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
@@ -47,15 +28,20 @@ const Page: React.FC = () => {
 
   return (
     <>
+      <Head>
+        <title>Blog - Zion Tech Group</title>
+        <meta name="description" content="Professional blog services and solutions from Zion Tech Group." />
+      </Head>
+      
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Page
+              Blog
             </h1>
             <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
-              Advanced Page solutions powered by artificial intelligence and machine learning.
+              Advanced blog solutions powered by artificial intelligence and machine learning.
             </p>
           </div>
 
@@ -94,11 +80,7 @@ const Page: React.FC = () => {
       </div>
       <Footer />
     </>
-  ;
+  );
 };
 
 export default Page;
-
-export default PagePage;
-
-export default BlogPage;

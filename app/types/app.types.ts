@@ -34,7 +34,6 @@ phone: string
     website: string
   "}
   link: "string "}
-export interface ContactFormData {
 
 name: "string
   email: string
@@ -43,7 +42,6 @@ name: "string
   service: string "
 }
 }
-export interface AnalyticsEvent {
 
 name: "string
   timestamp: number
@@ -51,10 +49,8 @@ name: "string
 
 }
 }"
-export interface PerformanceMetrics {"
   service: string"}
 }
-export interface PerformanceMetrics {
 
 loadTime: "number
   firstContentfulPaint: number
@@ -63,14 +59,12 @@ loadTime: "number
   firstInputDelay: number "
 }
 }
-export interface PerformanceMetrics {"
 loadTime: "number
   firstContentfulPaint: number
   largestContentfulPaint: number"
   cumulativeLayoutShift: number;  firstInputDelay: number",
   firstInputDelay: number"}
 }
-export interface ErrorContext {
 
 url?: string
 userAgent?: string
@@ -81,9 +75,7 @@ component?: string
 action?: string
 }
 }"
-export interface ErrorReport {"
 }
-export interface ErrorReport {
 
 id: "string
   message: string
@@ -94,9 +86,7 @@ context: ErrorContext
   createdAt: string "
 }
 }"
-export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical'
 ,}
   createdAt: string"}
 }
-export type ErrorSeverity = "low" | "medium" | "high" | "critical"
 }

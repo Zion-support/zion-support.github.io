@@ -1,7 +1,6 @@
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
-
 const LinkPage: React.FC = () => {
   const features = [
     {
@@ -146,4 +145,3 @@ export const link = (): JSX.Element => {
 
 
 
-export default lin;k;

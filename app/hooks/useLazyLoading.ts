@@ -62,7 +62,6 @@ threshold?: number
   triggerOnce?: boolean
 }
 
-export function useImageLazyLoading(src: "string",options: "UseLazyLoadingOptions = {"}) {
 
 const { shouldLoad, elementRef 
 } = useLazyLoading(options)

@@ -1,6 +1,5 @@
 'use client'
 import { useEffect } from 'react'
-
 export const usePerformanceOptimization = () => {
   useEffect(() => {
     // Performance optimization logic can be added here

@@ -12,13 +12,11 @@ export interface FormValidationRule {
   custom?: (value: any) => boolean | string
 }
 
-export interface FormValidationResult {
   isValid: boolean
   errors: Record<string, string[]>
   fieldErrors: Record<string, string[]>
 }
 
-export class FormValidator {
   private rules: Record<string, FormValidationRule[]> = {}
 
   addRule(field: string, rule: FormValidationRule): void {
@@ -150,4 +148,3 @@ export class FormValidator {
   }
 }
 
-export default FormValidator

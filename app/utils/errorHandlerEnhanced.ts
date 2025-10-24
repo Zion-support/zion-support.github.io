@@ -12,7 +12,6 @@ export class AppError extends Error {
     Error.captureStackTrace(this, this.constructor)
   }
 }
-export const errorHandler = (error: AppError | Error) => {
   const isDevelopment = process.env.NODE_ENV === 'development'
   const appError = error instanceof AppError ? error : new AppError(error.message);
   
@@ -26,7 +25,6 @@ export const errorHandler = (error: AppError | Error) => {
     statusCode: appError.statusCode || 500
   };
 };
-export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => unknown) => (req: unknown, res: unknown, next: unknown) => {
   Promise.resolve(fn(req, res, next)).catch((error: unknown) => {
     if (next && typeof next === 'function') {
       next(error);

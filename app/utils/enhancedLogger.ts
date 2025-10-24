@@ -18,12 +18,10 @@ export enum LogLevel {
   WARN = 2,
   ERROR = 3,
   FATAL = 4;
-export enum LogLevel {/* TODO: Fix JSX expression */});;)
 }
 /**
  * Log entry interface;
  */
-export interface LogEntry {
   /** Unique identifier for the log entry */
   id: string,
   /** Log level */
@@ -44,12 +42,10 @@ export interface LogEntry {
   sessionId?: string;
   /** Environment (development, production, etc.) */
   environment?: string;
-export interface LogEntry {/* TODO: Fix JSX expression */});;)
 }
 /**
  * Logger configuration interface;
  */
-export interface LoggerConfig {
   /** Minimum log level to output */
   minLevel: LogLevel,
   /** Enable console logging */
@@ -66,7 +62,6 @@ export interface LoggerConfig {
   enablePerformance: boolean,
   /** Environment name */,
   environment: string,
-export interface LoggerConfig {/* TODO: Fix JSX expression */});;)
 }
 /**
  * Default logger configuration;
@@ -95,7 +90,6 @@ const,
  * logger.error('API request failed', { error: err }, err)
  * ``
  */
-export class EnhancedLogger {
   private static instance: EnhancedLogger,
   private config: LoggerConfig,
   private logs: LogEntry[] = [],
@@ -110,7 +104,6 @@ export class EnhancedLogger {
   r: err }, err);`
  * ```
  */
-export class EnhancedLogger {/* TODO: Fix JSX expression */}
   g: Partial<LoggerConfig></LoggerConfig> = {}); {/* TODO: Fix JSX expression */}
     this.config = { ...defaultConfig, ...config }});
 }
@@ -685,9 +678,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
 }
 }
 // Export singleton instance;
-export const logger = EnhancedLogger.getInstance()
 // Export default;
-export default EnhancedLogger;
   public exportLogs(): string {/* TODO: Fix JSX expression */});;)
 });),
       null,
@@ -696,8 +687,6 @@ export default EnhancedLogger;
 }
 }
 // Export singleton instance;
-export const logger = EnhancedLogger.getInstance();
 // Export default;
-export default EnhancedLogger;
 "`
 }

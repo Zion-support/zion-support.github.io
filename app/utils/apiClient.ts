@@ -86,5 +86,4 @@ method: ""DELETE"",headers
 const apiClient = new ApiClient()
 
 export default apiClient
-export { ApiClient, type, ApiResponse, type, ApiError  };</T>
 }

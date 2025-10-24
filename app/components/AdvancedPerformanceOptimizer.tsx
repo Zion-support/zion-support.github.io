@@ -1,6 +1,5 @@
 'use client';
 import React, { useEffect, useState, useCallback } from 'react'
-
 interface AdvancedPerformanceOptimizerProps {enableAdvancedCaching?: boolean;
   enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
@@ -412,5 +411,4 @@ const AdvancedPerformanceOptimizer: "React.FC<AdvancedPerformanceOptimizerProps>
   )
 }
 
-export default AdvancedPerformanceOptimizer;
 >>>>>>> d05312d5d680673ba2e628470e93a08bc6917172

@@ -1,6 +1,5 @@
 'use client'
 import { useEffect } from 'react'
-
 const CacheManager = () => {
   useEffect(() => {
     // Service Worker registration for caching

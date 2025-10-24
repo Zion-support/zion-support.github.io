@@ -1,6 +1,5 @@
 import { useEffect, useCallback } from 'react';
 import { useAnalytics } from '../components/AnalyticsProvider';
-
 // PerformanceMetrics interface removed as it's not used in this hook
 
 export const usePerformanceMonitoring = () => {
@@ -149,4 +148,3 @@ export const usePerformanceMonitoring = () => {
   };
 };
 
-export default usePerformanceMonitorin;g;

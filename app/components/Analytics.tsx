@@ -69,4 +69,3 @@ export default Analytics
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
 
 
-export default AnalyticsPag;e;

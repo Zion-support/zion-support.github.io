@@ -10,7 +10,6 @@ export interface ErrorTrackingConfig {
   includeUrl: boolean
 }
 
-export interface TrackedError {
   id: string
   message: string
   stack?: string
@@ -23,7 +22,6 @@ export interface TrackedError {
   severity: 'low' | 'medium' | 'high' | 'critical'
 }
 
-export class EnhancedErrorTracking {
   private config: ErrorTrackingConfig
   private errors: TrackedError[] = []
   private errorIdCounter = 0
@@ -123,4 +121,3 @@ export class EnhancedErrorTracking {
   }
 }
 
-export default EnhancedErrorTracking

@@ -5,13 +5,6 @@ import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
-import React, { Suspense, lazy } from "react"
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
-import { ErrorBoundary } from "./components/ErrorBoundary";
-import { PerformanceMonitor  } from "./components/PerformanceMonitor";
-import { AccessibilityEnhancer  } from "./components/AccessibilityEnhancer"
-import { LoadingSpinner  } from "./components/LoadingSpinner"
 //Lazy load pages for better performance
 const HomePage = lazy(() => import("./page"))
 const AboutPage = lazy(() => import("./about/page"))
@@ -138,9 +131,7 @@ const FiveGImplementationPage = lazy(() => import("./5g-implementation/page"))
 const FiveGIoTSolutionsPage = lazy(() => import("./5g-iot-solutions/page"))
 const FiveGMobileApplicationsPage = lazy(() => import("./5g-mobile-applications/page"))
 const FiveGNetworkInfrastructurePage = lazy(() => import("./5g-network-infrastructure/page"));
-import React from 'react';;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf
-import React from 'react';
 const App = (): JSX.Element => {
   return (
     <div className='min-h-screen bg-gray-100 py-8'></div>
@@ -164,8 +155,4 @@ const App = (): JSX.Element => {
 
 export default Ap;p;
 
-export default App;
 
-export default App;
-
-export default App;

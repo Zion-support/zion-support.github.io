@@ -4,16 +4,13 @@
 export interface ServiceWorkerConfig {
   onSuccess?: (registration: ServiceWorkerRegistration) => void;
   onUpdate?: (registration: ServiceWorkerRegistration => void;
-export interface ServiceWorkerConfig {}
   onSuccess?: (registration: ServiceWorkerRegistration) => void;
   onUpdate?: (registration: ServiceWorkerRegistration) => void;
   onError?: (error: Error => void;}
-export interface ServiceWorkerConfig {/* TODO: Fix JSX expression */}
 }
 /**
  * Register service worker with lifecycle callbacks;
  */
-export async function registerServiceWorker(config: ServiceWorkerConfig = {})
 ): Promise<ServiceWorkerRegistration | undefined> {
   // Check if service workers are supported;
   if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
@@ -22,7 +19,6 @@ export async function registerServiceWorker(config: ServiceWorkerConfig = {})
   // Only register in production or if explicitly enabled;
   const isLocalhost = Boolean(window.location.hostname === 'localhost' ||)
       window.location.hostname === '[::1]' ||)
-export async function registerServiceWorker()
   config: ServiceWorkerConfig = {}
 ): Promise<ServiceWorkerRegistration | undefined> {}
   // Check if service workers are supported;
@@ -86,7 +82,6 @@ export async function registerServiceWorker()
             // Content cached for offline use;
             if (config.onSuccess) {}
               config.onSuccess(registration);}
-export async function registerServiceWorker(confi,
   g: ServiceWorkerConfig = {})
 ): Promise<ServiceWorkerRegistration | undefined> {/* TODO: Fix JSX expression */}
   }
@@ -127,7 +122,6 @@ export async function registerServiceWorker(confi,
 /**
  * Unregister service worker;
  */
-export async function unregisterServiceWorker(): Promise<boolean> {}
   if (!('serviceWorker' in navigator)) {}
     return false;}
   }
@@ -139,7 +133,6 @@ export async function unregisterServiceWorker(): Promise<boolean> {}
     return result;}
   } catch (error) {}
     return false;}
-export async function unregisterServiceWorker(): Promise<boolean> {/* TODO: Fix JSX expression */}
   }
   try {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}
@@ -148,7 +141,6 @@ export async function unregisterServiceWorker(): Promise<boolean> {/* TODO: Fix 
 /**
  * Check for service worker updates;
  */
-export async function checkForUpdates(): Promise<void> {}
   if (!('serviceWorker' in navigator)) {}
     return;}
   }
@@ -158,7 +150,6 @@ export async function checkForUpdates(): Promise<void> {}
     const registration = await navigator.serviceWorker.ready;
     await registration.update();}
     } catch (error) {}
-export async function checkForUpdates(): Promise<void> {/* TODO: Fix JSX expression */}
   }
   try {/* TODO: Fix JSX expression */}
     } catch (error) {/* TODO: Fix JSX expression */}
@@ -167,12 +158,10 @@ export async function checkForUpdates(): Promise<void> {/* TODO: Fix JSX express
 /**
  * Skip waiting and activate new service worker;
  */
-export function skipWaiting(): void {}
   if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {}
     return;}
   }
   navigator.serviceWorker.controller.postMessage({ action: 'skipWaiting' })
-export function skipWaiting(): void {/* TODO: Fix JSX expression */}
   }
   navigator.serviceWorker.controller.postMessage({/* TODO: Fix JSX expression */})
   n: 'skipWaiting' });
@@ -180,12 +169,10 @@ export function skipWaiting(): void {/* TODO: Fix JSX expression */}
 /**
  * Clear all caches;
  */
-export function clearCaches(): void {}
   if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {}
     return;}
   }
   navigator.serviceWorker.controller.postMessage({ action: 'clearCache' })
-export function clearCaches(): void {/* TODO: Fix JSX expression */}
   }
   navigator.serviceWorker.controller.postMessage({/* TODO: Fix JSX expression */})
   n: 'clearCache' });
@@ -193,7 +180,6 @@ export function clearCaches(): void {/* TODO: Fix JSX expression */}
 /**
  * Get service worker registration status;
  */
-export async function getServiceWorkerStatus(): Promise<{
   supported: boolean,
   registered: boolean,
   active: boolean;}
@@ -202,7 +188,6 @@ export async function getServiceWorkerStatus(): Promise<{
     return {
       supported: false,
       registered: false,
-export async function getServiceWorkerStatus(): Promise<{}
   supported: boolean,
     registered: boolean;
   active: boolean;}
@@ -236,7 +221,6 @@ export async function getServiceWorkerStatus(): Promise<{}
       registered: false,
       active: false}
     }
-export async function getServiceWorkerStatus(): Promise<{/* TODO: Fix JSX expression */}
 }> {/* TODO: Fix JSX expression */}
     };
   }
@@ -246,4 +230,3 @@ export async function getServiceWorkerStatus(): Promise<{/* TODO: Fix JSX expres
     };
   }
 }
-export default registerServiceWorker;

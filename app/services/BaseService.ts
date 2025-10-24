@@ -5,7 +5,6 @@
 
 import { apiClient } from '../utils/apiClient';
 import logger from '../utils/logger';
-
 export interface ServiceOptions {
   baseUrl?: string;
   timeout?: number;
@@ -14,12 +13,10 @@ export interface ServiceOptions {
   cacheDuration?: number;
 }
 
-export interface CacheEntry<T> {
   data: T;
   timestamp: number;
 }
 
-export class BaseService {
   protected baseUrl: string;
   protected options: ServiceOptions;
   private cache: Map<string, CacheEntry<unknown>> = new Map();
@@ -207,5 +204,3 @@ export class BaseService {
     throw error;
   }
 }
-
-export default BaseServic;e;

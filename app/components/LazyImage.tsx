@@ -25,4 +25,3 @@ Get Started</button>
 r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
 Learn More</button>
 
-export default LazyImag;e;

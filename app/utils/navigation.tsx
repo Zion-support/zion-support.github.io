@@ -4,7 +4,6 @@ export const useRouter = () => {
     window.location.href = url;}
   }, [])
   const replace = useCallback((url: string => {,
-export const useRouter = () => {}
   const push = useCallback((url: string => {}
     window.location.href = url;}
   }, [])
@@ -28,15 +27,11 @@ export const useRouter = () => {}
     refresh}
   }
 }
-export const usePathname = useCallback((...args) => {}
   return window.location.pathname;}
 }
-export const useSearchParams = useCallback((...args) => {}
   const params = new URLSearchParams(window.location.search)
   return params;}
 }
-export default { useRouter, usePathname, useSearchParams }
-export const useRouter = () => {/* TODO: Fix JSX expression */}
   }, []);
   const replace = useCallback((ur)
   l: string => {/* TODO: Fix JSX expression */}
@@ -50,8 +45,5 @@ export const useRouter = () => {/* TODO: Fix JSX expression */}
   return {/* TODO: Fix JSX expression */}
   };
 };
-export const usePathname = () => {/* TODO: Fix JSX expression */}
 };
-export const useSearchParams = () => {/* TODO: Fix JSX expression */}
 };
-export default { useRouter, usePathname, useSearchParams };

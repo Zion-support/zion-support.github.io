@@ -1,50 +1,62 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to replace react-helmet-async with Next.js Head
-function fixHelmetInFile(filePa, t, h) {
+// Function to replace Helmet with Next.js Head
+function fixHelmet(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
+    let fixed = false;
     
-    // Replace import
-    content = content.replace(
-      /import { Helm, e, t } from "react-helmet-async";/g,
-      'import Head from "next/head";'
-    );
+    // Replace Helmet import with Next.js Head
+    if (content.includes("import { Helmet } from 'react-helmet-async';")) {
+      content = content.replace(
+        "import { Helmet } from 'react-helmet-async';",
+        "import Head from 'next/head';"
+      );
+      fixed = true;
+    }
     
     // Replace Helmet component with Head
-    content = content.replace(
-      /<Helmet>\s*([\s\S]*?)\s*<\/Helmet>/g,
-      '<Head>\n        $1\n      </Head>'
-    );
+    if (content.includes('<Helmet>')) {
+      content = content.replace(/<Helmet>/g, '<Head>');
+      content = content.replace(/<\/Helmet>/g, '</Head>');
+      fixed = true;
+    }
     
-    // Replace React.Fragment with <>
-    content = content.replace(/React\.Fragment/g, '<>');
-    content = content.replace(/<\/React\.Fragment>/g, '</>');
-    
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${ filePa, t, h }`);
-  } catch (err, o, r) {
-    console.error(`Error fixing ${ filePa, t, h }:`, error.message);
+    if (fixed) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed Helmet: ${filePath}`);
+    }
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-// Function to recursively find and fix all .tsx files
-function fixAllFiles(d, i, r) {
-  const files = fs.readdirSync(d, i, r);
+// Function to find all page files
+function findPageFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
   
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePa, t, h);
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory()) {
-      fixAllFiles(filePa, t, h);
-    } else if (file.endsWith('.tsx')) {
-      fixHelmetInFile(filePa, t, h);
+      files.push(...findPageFiles(fullPath));
+    } else if (item === 'page.tsx') {
+      files.push(fullPath);
     }
-  });
+  }
+  
+  return files;
 }
 
-// Start fixing from the app directory
-fixAllFiles('./app');
-console.log('Helmet replacement completed!');
+// Fix all page files
+const appDir = './app';
+const files = findPageFiles(appDir);
+
+console.log(`Found ${files.length} page files to fix...`);
+
+files.forEach(fixHelmet);
+
+console.log('Done fixing Helmet!');

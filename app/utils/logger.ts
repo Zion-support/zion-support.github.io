@@ -6,14 +6,12 @@ export enum LogLevel {
   ERROR = 'error'
 }
 
-export interface LogEntry {
   level: LogLevel
   message: string
   timestamp: Date
   context?: Record<string, any>
 }
 
-export class Logger {
   private logs: LogEntry[] = []
   private minLevel: LogLevel = LogLevel.INFO
 
@@ -65,4 +63,3 @@ export class Logger {
   }
 }
 
-export default Logger

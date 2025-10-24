@@ -1,7 +1,6 @@
 <<<<<<< HEAD:app/micro-saas-services/microSaasServices.tsx
 'use client'
 import React from 'react'
-
 const MicroSaasServicesPage: React.FC = ( => {
   const features = [
     {
@@ -358,5 +357,4 @@ export default MicroSaasServicesPage;
 </div><//div>
   )
 }
-export default MicroSaasServicesPage
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be4b

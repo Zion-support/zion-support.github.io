@@ -8,7 +8,6 @@ export interface StructuredData {
   sameAs?: string[];
 }
 
-export interface SEOData {
   title: string;
   description: string;
   keywords: string[];
@@ -24,7 +23,6 @@ export interface SEOData {
   structuredData?: StructuredData;
 }
 
-export const defaultSEOData: SEOData = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Leading provider of AI-powered solutions, 5G technology, and innovative software development services.',
   keywords: ['AI', 'Artificial Intelligence', '5G', 'Technology', 'Software Development', 'Machine Learning'],
@@ -51,7 +49,6 @@ export const defaultSEOData: SEOData = {
   }
 };
 
-export const generateSEOData = (customData: Partial<SEOData> = {}): SEOData => {
   return {
     ...defaultSEOData,
     ...customData,

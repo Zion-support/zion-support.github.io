@@ -6,11 +6,9 @@ export const measurePerformance = (name: string, fn: () => void): number => {
   return end - start;
 };
 
-export const logPerformance = (name: string, duration: number): void => {
   // console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
 };
 
-export const createPerformanceObserver = (callback: (entry: PerformanceEntry) => void) => {
   if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
     const observer = new PerformanceObserver((list) => {
       list.getEntries().forEach(callback);

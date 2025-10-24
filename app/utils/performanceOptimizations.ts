@@ -13,7 +13,6 @@ export const debounce = <T extends (...args: any[]) => any>(
   };
 };
 // Throttle utility for performance
-export const throttle = <T extends (...args: any[]) => any>(
   func: T,
   limit: number
 ): ((...args: Parameters<T>) => void) => {
@@ -27,7 +26,6 @@ export const throttle = <T extends (...args: any[]) => any>(
   };
 };
 // Intersection Observer hook for lazy loading
-export const useIntersectionObserver = (
   callback: (entries: IntersectionObserverEntry[]) => void,
   options: IntersectionObserverInit = {}
 ) => {
@@ -63,7 +61,6 @@ export const useIntersectionObserver = (
   return { observe, disconnect };
 };
 // Image lazy loading hook
-export const useLazyImage = (src: string, placeholder?: string) => {
   const [imageSrc, setImageSrc] = useState(placeholder || '');
   const [isLoaded, setIsLoaded] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -90,7 +87,6 @@ export const useLazyImage = (src: string, placeholder?: string) => {
   return { imageSrc, isLoaded, isError, observe };
 };
 // Performance monitoring hook
-export const usePerformanceMonitoring = () => {
   const [metrics, setMetrics] = useState<{
     fcp?: number;
     lcp?: number;
@@ -134,7 +130,6 @@ export const usePerformanceMonitoring = () => {
   return metrics;
 };
 // Memory usage monitoring
-export const useMemoryMonitoring = () => {
   const [memoryInfo, setMemoryInfo] = useState<{
     usedJSHeapSize?: number;
     totalJSHeapSize?: number;
@@ -159,7 +154,6 @@ export const useMemoryMonitoring = () => {
   return memoryInfo;
 };
 // Resource preloading utility
-export const preloadResource = (href: string, as: string) => {
   if (typeof window === 'undefined') return;
   const link = document.createElement('link');
   link.rel = 'preload';
@@ -168,7 +162,6 @@ export const preloadResource = (href: string, as: string) => {
   document.head.appendChild(link);
 };
 // Critical resource preloading
-export const preloadCriticalResources = () => {
   if (typeof window === 'undefined') return;
   // Preload critical fonts
   preloadResource('/fonts/inter-var.woff2', 'font');
@@ -180,7 +173,6 @@ export const preloadCriticalResources = () => {
   preloadResource('/styles/critical.css', 'style');
 };
 // Bundle size monitoring
-export const useBundleSizeMonitoring = () => {
   const [bundleSize, setBundleSize] = useState<{
     totalSize?: number;
     jsSize?: number;
@@ -237,4 +229,3 @@ const performanceOptimizations = {
   useBundleSizeMonitoring
 };
 
-export default performanceOptimization;s;

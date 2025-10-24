@@ -37,7 +37,6 @@ class EnvValidator {}
       isValid: this.errors.length === 0,
       errors: this.errors,
       warnings: this.warnings;
-export interface EnvConfig {/* TODO: Fix JSX expression */}
 }
 class EnvValidator {/* TODO: Fix JSX expression */}
   s: string[] } {/* TODO: Fix JSX expression */}
@@ -133,15 +132,9 @@ class EnvValidator {/* TODO: Fix JSX expression */}
   }
 }
 // Export singleton instance;
-export const envValidator = new EnvValidator()
 // Export convenience function;
-export function validateEnv(): EnvConfig {
 // Export convenience function;
-export function validateEnv(): EnvConfig {}
   return envValidator.getConfig()
 }
-export default envValidator;
 // Export convenience function;
-export function validateEnv(): EnvConfig {/* TODO: Fix JSX expression */}
 }
-export default envValidator;`

@@ -3,7 +3,6 @@ import React from 'react'
 * Error Boundary Configuration
 * Centralized configuration for error handling across the application
 */;
-import React from 'react'
 export interface ErrorBoundaryConfig {/**
 * Whether to log errors to console
 */;
@@ -44,7 +43,6 @@ notFound: React.ComponentType<{error: Error; resetError: () => void }>
 /**
 * Default error messages
 */;
-export const DEFAULT_ERROR_MESSAGES=";";
 default: 'Something went wrong. Please try again.',
 network: 'Network connection issue. Please check your internet connection.',
 notFound: 'The requested resource was not found.',
@@ -55,7 +53,6 @@ validation: 'Validation error. Please check your input.',
 /**
 * Get error boundary configuration based on environment
 */;
-export function getErrorBoundaryConfig(){: ErrorBoundaryConfig {return {
 logErrors: true,
 showDetails: isDevelopment,
 reportErrors: !isDevelopment,
@@ -170,7 +167,6 @@ Go Back
 /**
 * Get error type from error object
 */;
-export function getErrorType(error: Error){: keyof typeof DEFAULT_ERROR_MESSAGES {if (error.message.includes('Network') || error.message.includes('fetch')) {}
 return 'network'
 }
 if (error.message.includes('404') || error.message.includes('not found')) {}
@@ -190,7 +186,6 @@ return 'default'
 /**
 * Format error for logging
 */;
-export function formatErrorForLogging(error: Error){: Record<string, unknown> {return {
 message: error.message,
 stack: error.stack,
 name: error.name,
@@ -200,6 +195,5 @@ userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',}
 url: typeof window !== 'undefined' ? window.location.href : 'unknown',
 }
 }</string>
-export default getErrorBoundaryConfig;</string>"
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-dbdf

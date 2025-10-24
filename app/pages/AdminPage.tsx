@@ -125,4 +125,3 @@ export default function AdminPagePage() {
   );,
 };
 
-export default AdminPag;e;

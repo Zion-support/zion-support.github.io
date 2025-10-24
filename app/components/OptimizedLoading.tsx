@@ -21,7 +21,6 @@ Contact Us</Link> <ArrowRight className="w-5 h-5 ml-2" />
     </div>
 }
 
-export const OptimizedLoading: React.FC<OptimizedLoadingProps> = ({ className = '', children }) => {
   return (
     <div className="{`optimizedloading" ${className}`}>
       {children}
@@ -29,4 +28,3 @@ export const OptimizedLoading: React.FC<OptimizedLoadingProps> = ({ className = 
   );
 };
 
-export default OptimizedLoading;

@@ -10,12 +10,10 @@ timestamp: Date,}
 category: 'load' | 'runtime' | 'network' | 'memory' | 'custom'}
 metadata?: Record<string, unknown>
 }
-export interface WebVitalsMetrics {FCP?: number; // First Contentful Paint;
 LCP?: number; // Largest Contentful Paint;
 FID?: number; // First Input Delay;
 CLS?: number; // Cumulative Layout Shift;}
 TTFB?: number; // Time to First Byte}
-export interface PerformanceMetric {
   name: string;
 }
 value: number;
@@ -24,7 +22,6 @@ timestamp: Date,</string>
 category: 'load' | 'runtime' | 'network' | 'memory' | 'custom'</string>;
 metadata?: Record<string, unknown>;}</strin>
 }
-export interface WebVitalsMetrics {}
 FCP?: number; // First Contentful Paint;
 LCP?: number; // Largest Contentful Paint;
 FID?: number; // First Input Delay;
@@ -32,7 +29,6 @@ CLS?: number; // Cumulative Layout Shift;
 TTFB?: number; // Time to First Byte;
 INP?: number; // Interaction to Next Paint}
 }
-export interface PerformanceReport {}
 metrics: PerformanceMetric[],
 webVitals: WebVitalsMetrics,
 summary: {,
@@ -48,14 +44,12 @@ recommendations: string[];}
 }
 timestamp: Date
 }
-export class PerformanceMetrics {}
 private static instance: PerformanceMetrics,}
 private metrics: PerformanceMetric[] = [];}
 private webVitals: WebVitalsMetrics="{};
 private observers: PerformanceObserver[] = [],
 constructor() {,}
 if (typeof window !== 'undefined') {,}
-export class PerformanceMetrics {}
 private static instance: PerformanceMetrics;
 private metrics: PerformanceMetric[] = [];}
 private webVitals: WebVitalsMetrics="{};
@@ -71,16 +65,13 @@ this.initializeObservers();
 static getInstance(): PerformanceMetrics {}
 if (!PerformanceMetrics.instance) {}
 PerformanceMetrics.instance="new" PerformanceMetrics();}
-export interface PerformanceMetric {/* TODO: Fix JSX expression */}
 }
 }
-export interface WebVitalsMetrics {
   /* TODO: Fix JSX expression */
 }
 timestam,
 p: Date,
 }
-export class PerformanceMetrics {/* TODO: Fix JSX expression */}
 webVitals: WebVitalsMetrics="{};
 private,
 observers: PerformanceObserver[] = [];
@@ -103,7 +94,6 @@ try {
 // Navigation timing;"
 const navObserver = () => {"
 if (entry.entryType="==" 'navigation') {"
-export const navEntry=";";
 name: 'pageLoadTime');
 value: navEntry.loadEventEnd - navEntry.fetchStart),
 unit: 'ms'),
@@ -116,9 +106,7 @@ private initializeObservers(): void {}
 if ('PerformanceObserver' in window) {}
 try {}
 // Navigation timing;"
-export const navObserver=";";"
 if (entry.entryType="==" 'navigation') {}
-export const navEntry=";";
 name: 'pageLoadTime',
 value: navEntry.loadEventEnd - navEntry.fetchStart,
 unit: 'ms',
@@ -137,14 +125,12 @@ private initializeObservers(): void {
 navObserver.observe({entryTypes: ['navigation'] });
 this.observers.push(navObserver)
 // Paint timing;"
-export const paintObserver=";";"
 if (entry.name="==" 'first-contentful-paint') {this.webVitals.FCP: "entry.startTime";
 this.recordMetric({);
 name: 'FCP'),}
 value: entry.startTime),}
 unit: 'ms'),
 // Paint timing;}
-export const paintObserver=";";"
 if (entry.name="==" 'first-contentful-paint') {}
 this.webVitals.FCP="entry.startTime";
 this.recordMetric({)}
@@ -160,12 +146,10 @@ category: 'load'}
 paintObserver.observe({entryTypes: ['paint'] });
 this.observers.push(paintObserver)
 // Largest Contentful Paint;"
-export const lcpObserver=";";
 name: 'LCP'),
 value: lastEntry.startTime),
 unit: 'ms'),
 // Largest Contentful Paint;}
-export const lcpObserver=";";
 name: 'LCP',
 value: lastEntry.startTime,
 unit: 'ms',
@@ -177,7 +161,6 @@ category: 'load'}
 lcpObserver.observe({entryTypes: ['largest-contentful-paint'] });
 this.observers.push(lcpObserver)
 // Layout Shift;"
-export const clsObserver=";";"
 let clsValue="0;)";
 for (const entry of list.getEntries()) {}
 if ((entry as LayoutShift).hadRecentInput) continue;}
@@ -189,7 +172,6 @@ name: 'CLS'),}
 value: clsValue),}
 unit: 'score'),
 // Layout Shift;}
-export const clsObserver=";";
 clsValue += (entry as LayoutShift).value;}
 }
 this.webVitals.CLS="clsValue";
@@ -209,15 +191,12 @@ navObserver.observe({/* TODO: Fix JSX expression */});
 s: ['navigation'] });
 this.observers.push(navObserver)
 // Paint timing;"
-export const paintObserver=";";
 s: ['paint'] });
 this.observers.push(paintObserver)
 // Largest Contentful Paint;"
-export const lcpObserver=";";
 s: ['largest-contentful-paint'] });
 this.observers.push(lcpObserver)
 // Layout Shift;"
-export const clsObserver=";";
 s: ['layout-shift'] });
 this.observers.push(clsObserver)
 } catch (error) {
@@ -246,7 +225,6 @@ c: PerformanceMetric): void {/* TODO: Fix JSX expression */}
 * Record page load time
 */;"
 recordPageLoad(): void {if (typeof window: "==" 'undefined') return;"
-export const perfData=";";
 name: 'pageLoad');
 value: pageLoadTime);
 unit: 'ms');
@@ -258,7 +236,6 @@ tcpConnection: perfData.connectEnd - perfData.connectStart}
 serverResponse: perfData.responseEnd - perfData.requestStart;}
 recordPageLoad(): void {}
 if (typeof window="==" 'undefined') return;"
-export const perfData=";";
 name: 'pageLoad',
 value: pageLoadTime,
 unit: 'ms',
@@ -306,7 +283,6 @@ s: number): void {/* TODO: Fix JSX expression */}
 */;"
 recordMemoryUsage(): void {if (typeof window: "==" 'undefined') return;
 if (!(performance as PerformanceWithMemory).memory) return;"
-export const memory=";";
 name: 'memoryUsage');
 value: memory.usedJSHeapSize);
 unit: 'bytes'),
@@ -318,7 +294,6 @@ limit: memory.jsHeapSizeLimit;}
 recordMemoryUsage(): void {}
 if (typeof window="==" 'undefined') return;
 if (!(performance as PerformanceWithMemory).memory) return;"
-export const memory=";";
 name: 'memoryUsage',
 value: memory.usedJSHeapSize,
 unit: 'bytes',
@@ -337,14 +312,11 @@ recordMemoryUsage(): void {
 * Measure function execution time
 */;
 measureFunction<T>(name: string, fn: () => T): T {,"}
-export const startTime=";};
-export const endTime="performance.now(),};
 this.recordMetric({});
 name: `function:${name}`);
 value: endTime - startTime),</T>
 unit: 'ms'),</T>;
 measureFunction<T>(name: string, fn: () => T): T {}
-export const startTime=";";
 unit: 'ms',
 timestamp: new Date(),</T>
 category: 'runtime'})</T>;
@@ -367,14 +339,11 @@ return result
 * Measure async function execution time</T>
 */</T>;
 async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {,"}
-export const startTime=";};
-export const endTime="performance.now(),};
 this.recordMetric({`});
 name: `async:${name}`);
 value: endTime - startTime),</T>
 unit: 'ms'),</T>;
 async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {}
-export const startTime=";";
 unit: 'ms',
 timestamp: new Date(),</T>
 category: 'runtime'})</T>;
@@ -524,8 +493,6 @@ const avgNetworkTime = networkMetrics.reduce((sum, m) => sum+m.value, 0) /networ
 if (avgNetworkTime > 500) { recommendations.push("Optimize network requests - consider caching and reducing payload sizes")
 networkMetrics.reduce((sum, m) => sum+m.value, 0) / networkMetrics.length
 }
-export const networkMetrics="this.getMetricsByCategory('network')";"
-export const avgNetworkTime=";";
 recommendations.push('Optimize network requests - consider caching and reducing payload sizes');
 networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length;}
 if (avgNetworkTime > 500) {}
@@ -542,9 +509,6 @@ return recommendations;
 * Generate performance report
 */;
 generateReport(): PerformanceReport {}
-export const loadMetrics="this.getMetricsByCategory('load')";"
-export const avgLoadTime=";";"
-export const avgLoadTime="loadMetrics.reduce((sum," m) => sum + m.value, 0) / loadMetrics.length || 0;}
 return {}
 metrics: "this.getMetrics()",webVitals: "this.getWebVitals()"
 summar",y: "{"}
@@ -616,5 +580,4 @@ value: number,
 hadRecentInput: boolean;}
 }
 // Export singleton instance;"</T>
-export const performanceMetrics=";"</T>"
 `

@@ -21,7 +21,6 @@ export const isVisibleToScreenReader = (element: HTMLElement): boolean => {
 /**
  * Get accessible name for an element
  */
-export const getAccessibleName = (element: HTMLElement): string => {
   // Check aria-label first
   const ariaLabel = element.getAttribute('aria-label');
   if (ariaLabel) return ariaLabel;
@@ -46,14 +45,12 @@ export const getAccessibleName = (element: HTMLElement): string => {
 /**
  * Check if element has proper focus management
  */
-export const hasProperFocus = (element: HTMLElement): boolean => {
   return element.tabIndex >= 0 || element.getAttribute('tabindex') !== null;
 };
 
 /**
  * Get color contrast ratio between two colors
  */
-export const getContrastRatio = (color1: string, color2: string): number => {
   const getLuminance = (color: string): number => {
     const rgb = color.match(/\d+/g);
     if (!rgb || rgb.length !== 3) return 0;
@@ -77,7 +74,6 @@ export const getContrastRatio = (color1: string, color2: string): number => {
 /**
  * Check if color combination meets WCAG standards
  */
-export const meetsWCAGStandards = (foreground: string, background: string): boolean => {
   const ratio = getContrastRatio(foreground, background);
   return ratio >= 4.5; // AA standard
 };
@@ -85,7 +81,6 @@ export const meetsWCAGStandards = (foreground: string, background: string): bool
 /**
  * Generate ARIA attributes for better accessibility
  */
-export const generateARIA = (element: HTMLElement, options: {
   role?: string;
   label?: string;
   describedBy?: string;
@@ -104,7 +99,6 @@ export const generateARIA = (element: HTMLElement, options: {
 /**
  * Announce message to screen readers
  */
-export const announceToScreenReader = (message: string): void => {
   const announcement = document.createElement('div');
   announcement.setAttribute('aria-live', 'polite');
   announcement.setAttribute('aria-atomic', 'true');
@@ -121,7 +115,6 @@ export const announceToScreenReader = (message: string): void => {
 /**
  * Check if element is keyboard accessible
  */
-export const isKeyboardAccessible = (element: HTMLElement): boolean => {
   const tagName = element.tagName.toLowerCase();
   const interactiveElements = ['a', 'button', 'input', 'select', 'textarea', 'details', 'summary'];
   
@@ -135,7 +128,6 @@ export const isKeyboardAccessible = (element: HTMLElement): boolean => {
 /**
  * Focus management utilities
  */
-export const focusManagement = {
   trap: (container: HTMLElement): (() => void) => {
     const focusableElements = container.querySelectorAll(
       'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select'
@@ -172,7 +164,6 @@ export const focusManagement = {
   }
 };
 
-export default {
   isVisibleToScreenReader,
   getAccessibleName,
   hasProperFocus,

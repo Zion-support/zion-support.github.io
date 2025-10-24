@@ -516,7 +516,6 @@ const defaultConfig: SEOConfig = {}
   googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID});;)
 }
 export const seoOptimizer = new SEOOptimizer(defaultConfig)
-export default seoOptimizer;
   getSEOScore(): number {/* TODO: Fix JSX expression */});;)
 }
 }
@@ -524,6 +523,4 @@ export default seoOptimizer;
 const,
   defaultConfig: SEOConfig = {/* TODO: Fix JSX expression */});;)
 };
-export const seoOptimizer = new SEOOptimizer(defaultConfig);
-export default seoOptimizer;"`
 }

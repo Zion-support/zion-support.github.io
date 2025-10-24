@@ -110,7 +110,6 @@ class APIInterceptor {
 // Create singleton instance;
 export const apiInterceptor = new APIInterceptor();
 
-export default APIInterceptor;
  * Centralized API request handling with error handling, retry logic, and caching;
  */
 // ErrorHandler class definition;
@@ -123,16 +122,11 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
   l: string, config?: unknown): void {/* TODO: Fix JSX expression */}
     }
 }
-export interface APIConfig {/* TODO: Fix JSX expression */}
   };
 }
-export interface RequestConfig {/* TODO: Fix JSX expression */}
 }
-export interface APIResponse<T = unknown> {/* TODO: Fix JSX expression */}
 }
-export interface CacheEntry {/* TODO: Fix JSX expression */}
 }
-export class APIInterceptor {/* TODO: Fix JSX expression */}
   g: Partial<APIConfig> = {}) {/* TODO: Fix JSX expression */}
   headers: config.headers || {},
       interceptor,
@@ -363,6 +357,4 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   }
 }
 // Export singleton instance;
-export const apiInterceptor = APIInterceptor.getInstance();
-export default APIInterceptor;
 `
