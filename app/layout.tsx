@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   description: 'Advanced AI and IT solutions for modern businesses',
 }
 
+// Force dynamic rendering to avoid prerendering errors
+export const dynamic = 'force-dynamic'
+
 export default function RootLayout({
   children,
 }: {

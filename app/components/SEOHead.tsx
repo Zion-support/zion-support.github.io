@@ -155,8 +155,9 @@ canonical,
 ogImage= '/og-image.jpg',
 ogType= 'website',
 twitterCard= 'summary_large_image',
-structuredData}) => {constfullTitle= title.includes('Zion Tech Group') ? title:`${title} | Zion TechGroup`
-constcanonicalUrl= canonical || (type of windo w !== 'undefined' ? windo w.location.href: '')
+structuredData}) => {
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
+const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '')
 const defaultStructuredData= {&quot;@context&quot;:&quot;https:// schema.org&quot;,&quot;@type&quot;:&quot;Organization&quot;,&quot;name&quot;:&quot;Zion Tech Group&quot;,&quot;url&quot;:&quot;https:// ziontechgroup.com&quot;,&quot;logo&quot;:&quot;https:// ziontechgroup.com/logo.png&quot;,&quot;description&quot;:&quot;Advanced AI and IT Solutions company providing cutting-edge technology services&quot;,&quot;address&quot;: {&quot;@type&quot;:&quot;PostalAddress&quot;,&quot;streetAddress&quot;:&quot;364E Main St STE1008&quot;,&quot;addressLocality&quot;:&quot;Middletown&quot;,&quot;addressRegion&quot;:&quot;DE&quot;,&quot;postalCode&quot;:&quot;1970 9&quot;,&quot;addressCountry&quot;:&quot;US&quot;},&quot;contactPoint&quot;: {&quot;@type&quot;:&quot;ContactPoint&quot;,&quot;telephone&quot;:&quot;+1-30 2-46 4-095 0&quot;,&quot;contactType&quot;:&quot;customer service&quot;,&quot;email&quot;:&quot;kleber@ziontechgroup.com&quot;},&quot;sameAs&quot;: [&quot;https:// www.linkedin.com/$1/zion-tech-group&quot;,&quot;https:// twitter.com/ziontechgroup&quot;
 ]
 }
