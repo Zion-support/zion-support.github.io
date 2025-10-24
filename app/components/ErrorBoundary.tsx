@@ -9,24 +9,21 @@ interface ErrorBoundaryState {
   error: Error | undefined;
 }
 
-class ErrorBoundary extends Component<Props, State> {
-  public state: State = {
+class ErrorBoundary extends Component<Props, ErrorBoundaryState> {
+  public state: ErrorBoundaryState = {
     hasError: false,
+    error: undefined,
   };
 
-  public static getDerivedStateFromError(error: Error): State {
+  public static getDerivedStateFromError(error: Error): ErrorBoundaryState {
     return { hasError: true, error };
   }
 
-    this.setState({},)
-
-  override   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
 
-    // Log error to console in development
-
-  override render() {
+  public render() {
     if (this.state.hasError) {
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-900">
@@ -83,6 +80,8 @@ class ErrorBoundary extends Component<Props, State> {
       );
     }
 
-
+    return this.props.children;
+  }
+}
 
 export default ErrorBoundary;

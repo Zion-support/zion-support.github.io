@@ -1,63 +1,34 @@
 'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
-import React, { useEffect } from 'react';
-
-const PerformanceOptimizer: React.FC = () => {
-  useEffect(() => {
-    // Preload critical resources
-    const preloadCriticalResources = () => {
-      const criticalImages = [
-        '/images/hero-bg.jpg',
-        '/images/logo.png'
-      ];
+export default function EnhancedPerformanceOptimizerPage() {
+  return (
+    <>
+      <Helmet>
+        <title>EnhancedPerformanceOptimizer - Zion Tech Group</title>
+        <meta name="description" content="Professional enhancedperformanceoptimizer services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
       
-      criticalImages.forEach((src) => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.as = 'image';
-        link.href = src;
-        document.head.appendChild(link);
-      });
-    };
-
-    // Optimize images
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img');
-      images.forEach((img) => {
-        if (!img.loading) {
-          img.loading = 'lazy';
-        }
-        if (!img.decoding) {
-          img.decoding = 'async';
-        }
-      });
-    };
-
-    // Add service worker for caching
-    const registerServiceWorker = () => {
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js')
-          .then((registration) => {
-            console.log('SW registered: ', registration);
-          })
-          .catch((registrationError) => {
-            console.log('SW registration failed: ', registrationError);
-          });
-      }
-    };
-
-    // Initialize performance optimizations
-    preloadCriticalResources();
-    optimizeImages();
-    registerServiceWorker();
-
-    // Cleanup
-    return () => {
-      // Cleanup if needed
-    };
-  }, []);
-
-  return null;
-};
-
-export default PerformanceOptimizer;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">
+            EnhancedPerformanceOptimizer
+          </h1>
+          <p className="text-lg text-gray-300 mb-8">
+            Professional enhancedperformanceoptimizer services coming soon.
+          </p>
+          <Link 
+            href="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+          >
+            Contact Us
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
+        </div>
+      </div>
+    </>
+  );
+}
