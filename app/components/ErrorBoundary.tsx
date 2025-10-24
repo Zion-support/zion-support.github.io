@@ -31,7 +31,6 @@ const ErrorBoundaryPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
     benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
 }
-<<<<<<< HEAD
   ]
   const benefits = [
   'Increase efficiency by up to 50%',
@@ -208,53 +207,3 @@ kleber@ziontechgroup.com
 </div>
 </div>
 </div>
-=======
-
-interface State {
-  hasError: boolean;
-  error?: Error;
-}
-
-class ErrorBoundary extends Component<Props, State> {
-  public state: State = {
-    hasError: false;
-  }
-  public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error }
-  }
-
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log error in development, send to error reporting service in production
-    if (process.env.NODE_ENV === 'development') {
-      // eslint-disable-next-line no-console
-      console.error('ErrorBoundary caught an error: ', error, errorInfo);
-    }
-    // TODO: Send error to error reporting service in production
-  }
-
-  public render() {
-    if (this.state.hasError) {
-      return (
-        <div className = "min-h-screen flex items-center justify-center bg-gray-900">
-          <div className="tex t-center">
-            <h1 className="tex t-4xlfont-bold text-white mb-4">Something went wrong</h1>
-            <p className="tex t-gray-300mb-8">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
-            </p>
-            <button >
-              onClick={() => window.location.reload()}
-              className="px-6py-3 b g-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Refresh Page
-            </button>
-          </div>
-        </div>;
-      );
-    }
-
-    return this.props.children;
-  }
-}
-
-export default ErrorBoundary;
->>>>>>> cursor/fix-errors-and-merge-to-main-f713

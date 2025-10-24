@@ -514,7 +514,6 @@ Recommendations:
 `;
   }
 }
-=======
   ];
 
   const benefits = [
@@ -641,4 +640,3 @@ Recommendations:
 };
 
 export default AccessibilityEnhancerPage;
->>>>>>> f7c4928b2138abffab75f9beb3ca62b8e0c3452d

@@ -3,15 +3,19 @@ const nextConfig = {
   // Disable static generation completely
   output: 'export',
   trailingSlash: true,
+  distDir: 'dist',
   images: {
     unoptimized: true
   },
   
-  // Disable static generation to avoid serialization issues
+  // Disable experimental features that might cause issues
   experimental: {
-    optimizePackageImports: ['@heroicons/react', 'lucide-react', 'framer-motion'],
-    webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
+    // optimizePackageImports: ['@heroicons/react', 'lucide-react', 'framer-motion'],
+    // webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
   },
+  
+  // Disable static optimization
+  generateStaticParams: false,
   
   // Disable linting and type checking during build
   eslint: {

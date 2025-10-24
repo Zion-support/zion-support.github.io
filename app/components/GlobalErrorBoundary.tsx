@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react',;
     }
   ]
@@ -9,63 +8,6 @@ import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react',;
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology',
             <div className=&quot;flex flex-col sm: flex-row gap-4 justify-center&quot;></div>
-=======
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Link } from 'react-router-dom';
-import { Bug, RefreshCw, Home } from 'lucide-react';
-
-interface Props {
-  children: ReactNode;
-}
-
-interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
-  errorId?: string;
-}
-
-class GlobalErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error: Error): State {
-    return {
-      hasError: true,
-      error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo
-    });
-
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
-
-    // In production, you might want to send this to an error reporting service
-    // Example: errorReportingService.captureException(error, { extra: errorInfo });
-  }
-
-  handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
-
-  render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center border border-white/20">
-            <div className="w-16 h-16 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center">
-              <Bug className="w-8 h-8 text-red-400" />
->>>>>>> cursor/fix-errors-and-merge-to-main-f713
             </div>
             
             <h1 className="text-2xl font-bold text-white mb-4">
