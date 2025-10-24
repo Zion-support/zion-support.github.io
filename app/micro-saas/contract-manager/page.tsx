@@ -24,6 +24,6 @@ export default function ContractManagerPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

@@ -3,24 +3,24 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 interface FuturisticButtonProps {
-  children: React.ReactNode;
-  onClick?: () => void;
+  children: React.ReactNode
+  onClick?: () => void
   variant?: 'primary' | 'secondary' | 'accent' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
-  disabled?: boolean;
-  loading?: boolean;
-  className?: string;
+  disabled?: boolean
+  loading?: boolean
+  className?: string
   type?: 'button' | 'submit' | 'reset';
 }
 
 const FuturisticButton: React.FC<FuturisticButtonProps> = ({;
-  children,
-  onClick,
-  variant = 'primary',
-  size = 'md',
-  disabled = false,
-  loading = false,
-  className = '',
+  children
+  onClick
+  variant = 'primary'
+  size = 'md'
+  disabled = false
+  loading = false
+  className = ''
   type = 'button'
 }) => {;
   const [isHovered, setIsHovered] = useState(false);
@@ -107,19 +107,19 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({;
       <motion.div
         className="absolute inset-0 rounded-lg"
         style={{
-          background: 'linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%)',
-          transform: 'translateX(-100%)',
+          background: 'linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%)'
+          transform: 'translateX(-100%)'
         }}
         animate={{
-          transform: isHovered ? 'translateX(100%)' : 'translateX(-100%)',
+          transform: isHovered ? 'translateX(100%)' : 'translateX(-100%)'
         }}
         transition={{
-          duration: 0.6,
-          ease: 'easeInOut',
+          duration: 0.6
+          ease: 'easeInOut'
         }}
       />
     </motion.button>
   );
 };
 
-export default FuturisticButton;
+export default FuturisticButton

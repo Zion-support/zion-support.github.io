@@ -1,5 +1,5 @@
-import React from &quot;react&quot;
-import { ArrowRight } from &quot;lucide-react&quot;
+import React from &quot;react&quot
+import { ArrowRight } from &quot;lucide-react&quot
 interface NeonButtonProps {
   children?: React.ReactNode
   className?: string
@@ -7,36 +7,35 @@ interface NeonButtonProps {
   description?: string
   href?: string
   onClick?: () => void
-  variant?: &quot;primary&quot; | &quot;secondary&quot; | &quot;accent&quot;
-  size?: &quot;sm&quot; | &quot;md&quot; | &quot;lg&quot;
+  variant?: &quot;primary&quot; | &quot;secondary&quot; | &quot;accent&quot
+  size?: &quot;sm&quot; | &quot;md&quot; | &quot;lg&quot
   icon?: React.ReactNode
   disabled?: boolean
 }
 
 const NeonButton: React.FC<NeonButtonProps> = ({;
-  children,
-  href,
+  children
+  href
   onClick,;
-  variant=&quot;primary&quot;,
-  size=&quot;md&quot;,
-  className=&quot;&quot;,
-  icon,
+  variant=&quot;primary&quot;
+  size=&quot;md&quot;
+  className=&quot;&quot;
+  icon
   disabled = false
 }) => {
   const baseClasses =;
-    &quot;relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100&quot;
-
+    &quot;relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100&quot
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ]
 
   return (
     <>
-      <Helmet>
+      <Helmet>;
         <title>NeonButton</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced NeonButton solution for modern businesses.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, NeonButton, AI solutions, intelligent automation&quot; />
@@ -137,19 +136,17 @@ const NeonButton: React.FC<NeonButtonProps> = ({;
   );
 };
 
-export default NeonButtonPage;
-
+export default NeonButtonPage
   constvariantClasses= {primary:
-     &quot;bg-gradient-to-r from-blue-600to-purple-600text-white shado w-lghover:shado w-blue-50 0/25 hover:shado w-2 xl&quot;,
+     &quot;bg-gradient-to-r from-blue-600to-purple-600text-white shado w-lghover:shado w-blue-50 0/25 hover:shado w-2 xl&quot;
     secondary:
-     &quot;bg-gradient-to-r from-purple-600to-pink-600text-white shado w-lghover:shado w-purple-50 0/25 hover:shado w-2 xl&quot;,
+     &quot;bg-gradient-to-r from-purple-600to-pink-600text-white shado w-lghover:shado w-purple-50 0/25 hover:shado w-2 xl&quot;
     accent:
-      &quot;bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg hover:shadow-cyan-500/25 hover:shadow-2xl&quot;
+      &quot;bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg hover:shadow-cyan-500/25 hover:shadow-2xl&quot
   }
 
   const neonEffect =;
-    &quot;before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 before:-z-10&quot;
-
+    &quot;before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 before:-z-10&quot
   const buttonClasses = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${neonEffect} ${className}`;
 
   constcontent= (;
@@ -174,8 +171,8 @@ export default NeonButtonPage;
   )
 {}
 
-export default NeonButton;
+export default NeonButton
   );
 {};
 
-export default NeonButton;
+export default NeonButton

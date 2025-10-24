@@ -24,6 +24,6 @@ export default function CloudMigrationServicesPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

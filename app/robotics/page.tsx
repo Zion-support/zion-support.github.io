@@ -24,6 +24,6 @@ export default function RoboticsPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

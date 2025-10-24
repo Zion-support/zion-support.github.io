@@ -15,8 +15,8 @@ export const wait = (ms: number): Promise<void> => {;
  * Wait for a condition to be true
  */
 export const waitFor = async (;
-  condition: () => boolean,
-  timeout = 5000,
+  condition: () => boolean
+  timeout = 5000
   interval = 100
 ): Promise<void> => {
   const startTime = Date.now();
@@ -32,17 +32,17 @@ export const waitFor = async (;
  * Mock fetch for testing
  */
 export const mockFetch = (;
-  response: unknown,
-  status = 200,
+  response: unknown
+  status = 200
   headers: Record<string, string> = {}
 ): void => {
   if (typeof global !== 'undefined') {
     (global as typeof global & { fetch: typeof fetch }).fetch = jest.fn(() =>
       Promise.resolve({
-        ok: status >= 200 && status < 300,
-        status,
-        headers: new Headers(headers),
-        json: async () => response,
+        ok: status >= 200 && status < 300
+        status
+        headers: new Headers(headers)
+        json: async () => response
         text: async () => JSON.stringify(response)
       } as Response)
     ) as typeof fetch
@@ -95,9 +95,9 @@ export const mockWindow = (overrides: Partial<Window> = {}): void => {;
   if (typeof global !== 'undefined') {
     Object.defineProperty(global, 'window', {
       value: {
-        ...global.window,
+        ...global.window
         ...overrides
-      },
+      }
       writable: true
     })
   }
@@ -109,41 +109,41 @@ export const mockWindow = (overrides: Partial<Window> = {}): void => {;
 export const createMockPerformance = (): Performance => {;
   const entries: PerformanceEntry[] = [];
   return {
-    now: () => Date.now(),
+    now: () => Date.now()
     mark: (name: string) => {
       entries.push({
-        name,
-        entryType: 'mark',
-        startTime: Date.now(),
-        duration: 0,
+        name
+        entryType: 'mark'
+        startTime: Date.now()
+        duration: 0
         toJSON: () => ({})
       } as PerformanceEntry)
-    },
+    }
     measure: (name: string, startMark?: string, endMark?: string) => {
       entries.push({
-        name,
-        entryType: 'measure',
-        startTime: Date.now(),
-        duration: 100,
+        name
+        entryType: 'measure'
+        startTime: Date.now()
+        duration: 100
         toJSON: () => ({})
       } as PerformanceEntry)
-    },
-    getEntriesByName: (name: string) => entries.filter(e => e.name === name),
-    getEntriesByType: (type: string) => entries.filter(e => e.entryType === type),
-    getEntries: () => entries,
+    }
+    getEntriesByName: (name: string) => entries.filter(e => e.name === name)
+    getEntriesByType: (type: string) => entries.filter(e => e.entryType === type)
+    getEntries: () => entries
     clearMarks: () => {
       entries.length = 0
-    },
+    }
     clearMeasures: () => {
       entries.length = 0
-    },
-    clearResourceTimings: () => {},
-    setResourceTimingBufferSize: () => {},
-    toJSON: () => ({}),
-    addEventListener: () => {},
-    removeEventListener: () => {},
-    dispatchEvent: () => true,
-    onresourcetimingbufferfull: null,
+    }
+    clearResourceTimings: () => {}
+    setResourceTimingBufferSize: () => {}
+    toJSON: () => ({})
+    addEventListener: () => {}
+    removeEventListener: () => {}
+    dispatchEvent: () => true
+    onresourcetimingbufferfull: null
     timeOrigin: Date.now()
   } as unknown as Performance
 }
@@ -156,22 +156,22 @@ export const generateTestData = {;
     return Math.random()
       .toString(36)
       .substring(2, length + 2)
-  },
+  }
   number: (min = 0, max = 100): number => {
     return Math.floor(Math.random() * (max - min + 1)) + min
-  },
+  }
   boolean: (): boolean => {
     return Math.random() > 0.5
-  },
+  }
   email: (): string => {
     return `test${generateTestData.string(5)}@example.com`
-  },
+  }
   url: (): string => {
     return `https://example.com/${generateTestData.string(10)}`
-  },
+  }
   date: (): Date => {
     return new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000)
-  },
+  }
   array: <T>(generator: () => T, length = 5): T[] => {
     return Array.from({ length }, generator)
   }
@@ -253,8 +253,8 @@ export interface Deferred<T> {;
 }
 
 export const createDeferred = <T>(): Deferred<T> => {;
-  let resolve: (value: T) => void;
-  let reject: (reason?: unknown) => void;
+  let resolve: (value: T) => void
+  let reject: (reason?: unknown) => void
   const promise = new Promise<T>((res, rej) => {;
     resolve = res
     reject = rej
@@ -266,11 +266,11 @@ export const createDeferred = <T>(): Deferred<T> => {;
  * Retry a function with exponential backoff
  */
 export const retryWithBackoff = async <T>(;
-  fn: () => Promise<T>,
-  maxRetries = 3,
+  fn: () => Promise<T>
+  maxRetries = 3
   initialDelay = 1000
 ): Promise<T> => {;
-  let lastError: Error;
+  let lastError: Error
   for (let i = 0; i < maxRetries; i++) {
     try {
       return await fn()
@@ -292,24 +292,24 @@ export const measureExecutionTime = async <T>(;
 ): Promise<{ result: T; duration: number }> => {
   const start = performance.now();
   const result = await fn();
-  const duration = performance.now() - start;
+  const duration = performance.now() - start
   return { result, duration }
 }
 
 const testUtils = {;
-  wait,
-  waitFor,
-  mockFetch,
-  createMockStorage,
-  mockWindow,
-  createMockPerformance,
-  generateTestData,
-  deepClone,
-  deepEqual,
-  ConsoleSpy,
-  createDeferred,
-  retryWithBackoff,
+  wait
+  waitFor
+  mockFetch
+  createMockStorage
+  mockWindow
+  createMockPerformance
+  generateTestData
+  deepClone
+  deepEqual
+  ConsoleSpy
+  createDeferred
+  retryWithBackoff
   measureExecutionTime
 }
 ;
-export default testUtils;
+export default testUtils

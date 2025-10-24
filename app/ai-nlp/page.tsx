@@ -24,6 +24,6 @@ export default function AiNlpPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

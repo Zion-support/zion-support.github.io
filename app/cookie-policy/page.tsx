@@ -24,6 +24,6 @@ export default function CookiePolicyPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

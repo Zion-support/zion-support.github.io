@@ -9,7 +9,7 @@ interface BreadcrumbItem {
   icon?: React.ComponentType<{ className?: string }>
 }
 
-const Breadcrumb: React.FC = () => {
+const Breadcrumb: React.FC = () => {;
   const location = useLocation();
 
   if (location.pathname === '/') {
@@ -55,20 +55,19 @@ const Breadcrumb: React.FC = () => {
   )
 }
 ;
-export default Breadcrumb;
+export default Breadcrumb
 'use client';
 
-import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ChevronRight, Home } from 'lucide-react';
 
-export default function Breadcrumb() {
+export default function Breadcrumb() {;
   const pathname = usePathname();
   const pathnames = pathname.split('/').filter((x) => x);
   
   if (pathnames.length === 0) {
-    return null;
+    return null
   }
 
   return (
@@ -83,8 +82,7 @@ export default function Breadcrumb() {
           </li>
           {pathnames.map((name, index) => {
             const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
-            const isLast = index === pathnames.length - 1;
-            
+            const isLast = index === pathnames.length - 1
             return (
               <li key={name} className="flex items-center">
                 <ChevronRight className="w-4 h-4 mx-2 text-gray-400" />

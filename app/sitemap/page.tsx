@@ -24,6 +24,6 @@ export default function SitemapPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

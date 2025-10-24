@@ -1,139 +1,132 @@
-<<<<<<< HEAD
 import React from 'react'
 import Link from 'next/link'
-import { Brain, Send, TrendingUp, Zap, BarChart3, Shield, DollarSign, Clock, Mail, ArrowRight, CheckCircle, Star } from 'lucide-react'
-=======
+import { Brain, Send, TrendingUp, Zap, BarChart3, Shield, DollarSign, Clock, Mail, ArrowRight, CheckCircle, Star } from 'lucide-react';
 import React from 'react';
 import { ArrowRight, Brain, Mail, CheckCircle, Zap, TrendingUp, Send, BarChart3, Shield, DollarSign, Clock, Star, BarChart } from 'lucide-react';
 import Link from 'next/link';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
 const AIEmailAutomationPage: React.FC = () => {
   const features = [
     {
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      title: 'AI Email Generation',
-      description: 'Generate personalized, high-converting emails using AI that understands your audience and brand voice.',
+      icon: <Brain className="w-8 h-8 text-cyan-400" />
+      title: 'AI Email Generation'
+      description: 'Generate personalized, high-converting emails using AI that understands your audience and brand voice.'
       benefits: ['Personalized content', 'A/B testing', 'Brand voice training', 'Multi-language support']
-    },
+    }
     {
-      icon: <Send className="w-8 h-8 text-emerald-400" />,
-      title: 'Smart Automation',
-      description: 'Create complex email workflows with AI-powered triggers, segmentation, and behavioral targeting.',
+      icon: <Send className="w-8 h-8 text-emerald-400" />
+      title: 'Smart Automation'
+      description: 'Create complex email workflows with AI-powered triggers, segmentation, and behavioral targeting.'
       benefits: ['Behavioral triggers', 'Smart segmentation', 'Dynamic content', 'Cross-channel sync']
-    },
+    }
     {
-      icon: <TrendingUp className="w-8 h-8 text-purple-400" />,
-      title: 'Performance Analytics',
-      description: 'Advanced analytics with AI insights to optimize email performance and improve ROI.',
+      icon: <TrendingUp className="w-8 h-8 text-purple-400" />
+      title: 'Performance Analytics'
+      description: 'Advanced analytics with AI insights to optimize email performance and improve ROI.'
       benefits: ['Open rate optimization', 'Click-through analysis', 'Revenue tracking', 'Predictive insights']
-    },
+    }
     {
-      icon: <Zap className="w-8 h-8 text-red-400" />,
-      title: 'Automated Sequences',
-      description: 'AI-powered email sequences that adapt based on recipient behavior and engagement patterns.',
+      icon: <Zap className="w-8 h-8 text-red-400" />
+      title: 'Automated Sequences'
+      description: 'AI-powered email sequences that adapt based on recipient behavior and engagement patterns.'
       benefits: ['Adaptive sequences', 'Behavioral triggers', 'Personalization', 'Optimal timing']
-    },
+    }
     {
-      icon: <BarChart3 className="w-8 h-8 text-orange-400" />,
-      title: 'Lead Scoring',
-      description: 'AI automatically scores leads based on email engagement and behavior to prioritize follow-ups.',
+      icon: <BarChart3 className="w-8 h-8 text-orange-400" />
+      title: 'Lead Scoring'
+      description: 'AI automatically scores leads based on email engagement and behavior to prioritize follow-ups.'
       benefits: ['Lead scoring', 'Engagement tracking', 'Priority alerts', 'CRM integration']
-    },
+    }
     {
-      icon: <Shield className="w-8 h-8 text-pink-400" />,
-      title: 'Deliverability Optimization',
-      description: 'AI ensures maximum deliverability with reputation monitoring and content optimization.',
+      icon: <Shield className="w-8 h-8 text-pink-400" />
+      title: 'Deliverability Optimization'
+      description: 'AI ensures maximum deliverability with reputation monitoring and content optimization.'
       benefits: ['Reputation monitoring', 'Content optimization', 'Spam prevention', 'Compliance checks']
     }
   ]
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$59',
-      period: '/month',
-      description: 'Perfect for small businesses getting started with AI email automation',
+      name: 'Starter'
+      price: '$59'
+      period: '/month'
+      description: 'Perfect for small businesses getting started with AI email automation'
       features: [
-        'Up to 10,000 emails/month',
-        'AI email generation',
-        'Basic automation',
-        'Email analytics',
+        'Up to 10,000 emails/month'
+        'AI email generation'
+        'Basic automation'
+        'Email analytics'
         'Email support'
-      ],
+      ]
       popular: false
-    },
+    }
     {
-      name: 'Professional',
-      price: '$149',
-      period: '/month',
-      description: 'Advanced features for growing businesses',
+      name: 'Professional'
+      price: '$149'
+      period: '/month'
+      description: 'Advanced features for growing businesses'
       features: [
-        'Up to 50,000 emails/month',
-        'Advanced AI features',
-        'Complex automation workflows',
-        'Advanced analytics',
-        'A/B testing',
+        'Up to 50,000 emails/month'
+        'Advanced AI features'
+        'Complex automation workflows'
+        'Advanced analytics'
+        'A/B testing'
         'Priority support'
-      ],
+      ]
       popular: true
-    },
+    }
     {
-      name: 'Enterprise',
-      price: '$399',
-      period: '/month',
-      description: 'Full-featured solution for large organizations',
+      name: 'Enterprise'
+      price: '$399'
+      period: '/month'
+      description: 'Full-featured solution for large organizations'
       features: [
-        'Unlimited emails',
-        'All AI features',
-        'Custom automation',
-        'Advanced reporting',
-        'Dedicated account manager',
+        'Unlimited emails'
+        'All AI features'
+        'Custom automation'
+        'Advanced reporting'
+        'Dedicated account manager'
         '24/7 phone support'
-      ],
+      ]
       popular: false
     }
   ]
-<<<<<<< HEAD
   const testimonials = [
     {
-      name: 'Jennifer Lee',
-      company: 'E-commerce Store',
-      content: 'AI Email Automation increased our email revenue by 300%. The AI-generated content is incredibly effective.',
-      rating: 5,
+      name: 'Jennifer Lee'
+      company: 'E-commerce Store'
+      content: 'AI Email Automation increased our email revenue by 300%. The AI-generated content is incredibly effective.'
+      rating: 5
       avatar: 'JL'
-    },
+    }
     {
-      name: 'Mark Thompson',
-      company: 'SaaS Company',
-      content: 'The lead scoring feature helped us identify high-value prospects and increased our conversion rate by 150%.',
-      rating: 5,
+      name: 'Mark Thompson'
+      company: 'SaaS Company'
+      content: 'The lead scoring feature helped us identify high-value prospects and increased our conversion rate by 150%.'
+      rating: 5
       avatar: 'MT'
-    },
+    }
     {
-      name: 'Lisa Chen',
-      company: 'Marketing Agency',
-      content: 'Saves us 20+ hours per week on email campaigns. The automation features are incredibly powerful.',
-      rating: 5,
+      name: 'Lisa Chen'
+      company: 'Marketing Agency'
+      content: 'Saves us 20+ hours per week on email campaigns. The automation features are incredibly powerful.'
+      rating: 5
       avatar: 'LC'
     }
   ]
   const stats = [
-    { number: '300%', label: 'Revenue Increase', icon: <DollarSign className="w-6 h-6 text-cyan-400" /> },
-    { number: '150%', label: 'Conversion Boost', icon: <TrendingUp className="w-6 h-6 text-emerald-400" /> },
-    { number: '20hrs', label: 'Time Saved/Week', icon: <Clock className="w-6 h-6 text-purple-400" /> },
+    { number: '300%', label: 'Revenue Increase', icon: <DollarSign className="w-6 h-6 text-cyan-400" /> }
+    { number: '150%', label: 'Conversion Boost', icon: <TrendingUp className="w-6 h-6 text-emerald-400" /> }
+    { number: '20hrs', label: 'Time Saved/Week', icon: <Clock className="w-6 h-6 text-purple-400" /> }
     { number: '95%', label: 'Deliverability Rate', icon: <Shield className="w-6 h-6 text-orange-400" /> }
-=======
 
   const benefits = [
-    'Increase email open rates by up to 40%',
-    'Reduce email marketing costs by 60%',
-    'Improve conversion rates with AI optimization',
-    'Save 20+ hours per week on email management',
+    'Increase email open rates by up to 40%'
+    'Reduce email marketing costs by 60%'
+    'Improve conversion rates with AI optimization'
+    'Save 20+ hours per week on email management'
     'Scale email campaigns without proportional resource increases'
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
   ]
   return (
-<<<<<<< HEAD
     <>
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -152,7 +145,7 @@ const AIEmailAutomationPage: React.FC = () => {
             </span>
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Transform your email marketing with AI-powered automation, 
+            Transform your email marketing with AI-powered automation
             content generation, and performance optimization that increases revenue by 300%.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
@@ -190,7 +183,6 @@ const AIEmailAutomationPage: React.FC = () => {
                 </div>
               </div>
             ))}
-=======
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
@@ -212,7 +204,6 @@ const AIEmailAutomationPage: React.FC = () => {
             <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
               View Demo
             </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
           </div>
         </div>
       </section>
@@ -267,7 +258,6 @@ const AIEmailAutomationPage: React.FC = () => {
                     Most Popular
                   </div>
                 )}
-<<<<<<< HEAD
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 mb-4">{plan.description}</p>
@@ -277,7 +267,6 @@ const AIEmailAutomationPage: React.FC = () => {
                   </div>
                 </div>
                 <div className="space-y-4 mb-8">
-=======
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                 <p className="text-gray-600 mb-4">{plan.description}</p>
                 <div className="mb-6">
@@ -285,14 +274,12 @@ const AIEmailAutomationPage: React.FC = () => {
                   <span className="text-gray-600">{plan.period}</span>
                 </div>
                 <ul className="space-y-3 mb-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-600">
                       <CheckCircle className="w-5 h-5 mr-3 text-cyan-500" />
                       {feature}
                     </li>
                   ))}
-<<<<<<< HEAD
                 </div>
                 <Link 
                   href="/contact" 
@@ -302,14 +289,12 @@ const AIEmailAutomationPage: React.FC = () => {
                       : 'border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-gray-900'
                   }`}
                 >
-=======
                 </ul>
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors duration-200 ${
                   plan.popular 
                     ? 'bg-cyan-600 hover:bg-cyan-700 text-white' 
                     : 'bg-gray-900 hover:bg-gray-800 text-white'
                 }`}>
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
                   Get Started
                 </button>
               </div>
@@ -317,14 +302,11 @@ const AIEmailAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Testimonials Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-blue-900/50 to-purple-900/50">
-=======
 
       {/* Benefits Section */}
       <section className="py-20 px-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -334,7 +316,6 @@ const AIEmailAutomationPage: React.FC = () => {
               Our proven track record and innovative approach deliver measurable results.
             </p>
           </div>
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
@@ -351,15 +332,13 @@ const AIEmailAutomationPage: React.FC = () => {
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
-                </div>
+                </div>;
                 <p className="text-gray-300 italic">&ldquo;{testimonial.content}&rdquo;</p>
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="w-6 h-6 text-cyan-500 mt-1" />
                 <p className="text-gray-700 text-lg">{benefit}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
               </div>
             ))}
           </div>
@@ -382,11 +361,8 @@ const AIEmailAutomationPage: React.FC = () => {
       </section>
     </div>
   )
-<<<<<<< HEAD
 }
 export default AIEmailAutomationPage
-=======
 };
 ;
-export default AIEmailAutomationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
+export default AIEmailAutomationPage

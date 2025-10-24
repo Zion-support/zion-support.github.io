@@ -24,6 +24,6 @@ export default function DataAnalyticsPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

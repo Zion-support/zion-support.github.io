@@ -2,7 +2,7 @@
 import React from 'react';
 
 const testRunner = () => {};
-  return null;
+  return null
 {};
 
-export default testRunner;
+export default testRunner

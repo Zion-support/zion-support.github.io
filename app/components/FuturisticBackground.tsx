@@ -2,19 +2,17 @@
 
 import React, { useRef, useEffect } from 'react';
 
-const FuturisticBackground: React.FC = () => {
+const FuturisticBackground: React.FC = () => {;
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
+    const canvas = canvasRef.current
+    if (!canvas) return
     const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
+    if (!ctx) return
     const resizeCanvas = () => {;
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      canvas.width = window.innerWidth
+      canvas.height = window.innerHeight
     };
 
     resizeCanvas();
@@ -22,23 +20,23 @@ const FuturisticBackground: React.FC = () => {
 
     // Particle system
     const particles: Array<{
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      opacity: number;
+      x: number
+      y: number
+      vx: number
+      vy: number
+      size: number
+      opacity: number
     }> = [];
 
     // Create particles
     for (let i = 0; i < 50; i++) {
       particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 2,
-        vy: (Math.random() - 0.5) * 2,
-        size: Math.random() * 3 + 1,
-        opacity: Math.random() * 0.5 + 0.1,
+        x: Math.random() * canvas.width
+        y: Math.random() * canvas.height
+        vx: (Math.random() - 0.5) * 2
+        vy: (Math.random() - 0.5) * 2
+        size: Math.random() * 3 + 1
+        opacity: Math.random() * 0.5 + 0.1
       });
     }
 
@@ -47,15 +45,13 @@ const FuturisticBackground: React.FC = () => {
 
       // Update and draw particles
       particles.forEach((particle) => {
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-
+        particle.x += particle.vx
+        particle.y += particle.vy
         // Wrap around screen
-        if (particle.x < 0) particle.x = canvas.width;
-        if (particle.x > canvas.width) particle.x = 0;
-        if (particle.y < 0) particle.y = canvas.height;
-        if (particle.y > canvas.height) particle.y = 0;
-
+        if (particle.x < 0) particle.x = canvas.width
+        if (particle.x > canvas.width) particle.x = 0
+        if (particle.y < 0) particle.y = canvas.height
+        if (particle.y > canvas.height) particle.y = 0
         // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
@@ -66,8 +62,8 @@ const FuturisticBackground: React.FC = () => {
       // Draw connections
       particles.forEach((particle, i) => {
         particles.slice(i + 1).forEach((otherParticle) => {
-          const dx = particle.x - otherParticle.x;
-          const dy = particle.y - otherParticle.y;
+          const dx = particle.x - otherParticle.x
+          const dy = particle.y - otherParticle.y
           const distance = Math.sqrt(dx * dx + dy * dy);
 
           if (distance < 100) {
@@ -75,7 +71,7 @@ const FuturisticBackground: React.FC = () => {
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
             ctx.strokeStyle = `rgba(139, 92, 246, ${0.1 * (1 - distance / 100)})`;
-            ctx.lineWidth = 1;
+            ctx.lineWidth = 1
             ctx.stroke();
           }
         });
@@ -198,4 +194,4 @@ const FuturisticBackground: React.FC = () => {
   );
 };
 
-export default FuturisticBackground;
+export default FuturisticBackground

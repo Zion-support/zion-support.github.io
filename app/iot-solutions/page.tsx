@@ -24,6 +24,6 @@ export default function IotSolutionsPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

@@ -24,6 +24,6 @@ export default function AiCrmAssistantPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

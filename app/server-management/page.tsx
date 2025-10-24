@@ -24,6 +24,6 @@ export default function ServerManagementPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

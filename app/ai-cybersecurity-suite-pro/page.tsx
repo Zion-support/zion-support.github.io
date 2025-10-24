@@ -24,6 +24,6 @@ export default function AiCybersecuritySuiteProPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

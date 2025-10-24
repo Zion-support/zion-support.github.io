@@ -24,6 +24,6 @@ export default function DataEngineeringPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

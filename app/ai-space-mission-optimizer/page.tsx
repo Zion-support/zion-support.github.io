@@ -24,6 +24,6 @@ export default function AiSpaceMissionOptimizerPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

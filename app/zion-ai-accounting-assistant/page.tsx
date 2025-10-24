@@ -24,6 +24,6 @@ export default function ZionAiAccountingAssistantPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

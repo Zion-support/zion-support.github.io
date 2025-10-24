@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';
 
 interface HeaderProps {;
-  className?: string;
+  className?: string
 }
 
 const Header: React.FC<HeaderProps> = ({ className = '' }) => {;
@@ -114,7 +114,7 @@ const Header: React.FC<HeaderProps> = ({ className = '' }) => {;
   );
 };
 
-export default HeaderPage;
+export default HeaderPage
   )
 {}
-export default Header;
+export default Header

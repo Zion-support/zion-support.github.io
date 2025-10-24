@@ -24,6 +24,6 @@ export default function ContentGeneratorPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

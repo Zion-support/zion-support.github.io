@@ -24,6 +24,6 @@ export default function AiAnalyticsPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

@@ -24,6 +24,6 @@ export default function AiFinancialForecastingPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

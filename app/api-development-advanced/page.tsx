@@ -24,6 +24,6 @@ export default function ApiDevelopmentAdvancedPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

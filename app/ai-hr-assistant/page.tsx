@@ -24,6 +24,6 @@ export default function AiHrAssistantPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

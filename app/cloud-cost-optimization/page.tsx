@@ -24,6 +24,6 @@ export default function CloudCostOptimizationPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

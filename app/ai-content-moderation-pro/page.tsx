@@ -24,6 +24,6 @@ export default function AiContentModerationProPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

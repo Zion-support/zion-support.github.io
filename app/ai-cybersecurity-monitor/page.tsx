@@ -24,6 +24,6 @@ export default function AiCybersecurityMonitorPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

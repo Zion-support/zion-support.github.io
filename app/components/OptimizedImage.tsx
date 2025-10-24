@@ -7,7 +7,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 import { Phone, Mail, ArrowRight } from 'lucide-react';
 
 interface OptimizedImageProps {;
-  className?: string;
+  className?: string
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {;
@@ -122,4 +122,4 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' }) => {;
   );
 };
 
-export default OptimizedImagePage;
+export default OptimizedImagePage

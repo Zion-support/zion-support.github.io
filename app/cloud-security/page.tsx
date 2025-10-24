@@ -24,6 +24,6 @@ export default function CloudSecurityPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

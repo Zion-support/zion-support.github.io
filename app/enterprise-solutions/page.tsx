@@ -24,6 +24,6 @@ export default function EnterpriseSolutionsPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

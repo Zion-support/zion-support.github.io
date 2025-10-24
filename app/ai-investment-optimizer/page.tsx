@@ -24,6 +24,6 @@ export default function AiInvestmentOptimizerPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

@@ -24,6 +24,6 @@ export default function AiExpenseTrackerPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

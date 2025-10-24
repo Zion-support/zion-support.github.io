@@ -24,6 +24,6 @@ export default function FinancialItPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

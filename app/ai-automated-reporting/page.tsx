@@ -24,6 +24,6 @@ export default function AiAutomatedReportingPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

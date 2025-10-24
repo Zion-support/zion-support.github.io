@@ -24,6 +24,6 @@ export default function CloudInfrastructureManagementPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

@@ -24,6 +24,6 @@ export default function ZionAiPredictiveMaintenancePage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

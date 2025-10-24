@@ -24,6 +24,6 @@ export default function ChatAnalyticsPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

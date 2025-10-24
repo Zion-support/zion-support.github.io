@@ -24,6 +24,6 @@ export default function CybersecurityAuditPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

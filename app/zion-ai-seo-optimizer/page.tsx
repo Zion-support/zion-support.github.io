@@ -24,6 +24,6 @@ export default function ZionAiSeoOptimizerPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

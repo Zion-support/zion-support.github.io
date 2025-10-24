@@ -24,6 +24,6 @@ export default function EnterpriseSecurityPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

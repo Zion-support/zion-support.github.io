@@ -24,6 +24,6 @@ export default function BusinessAppsPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

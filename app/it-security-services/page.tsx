@@ -24,6 +24,6 @@ export default function ItSecurityServicesPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

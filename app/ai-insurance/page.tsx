@@ -24,6 +24,6 @@ export default function AiInsurancePage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

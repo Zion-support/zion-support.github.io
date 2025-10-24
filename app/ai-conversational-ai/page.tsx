@@ -24,6 +24,6 @@ export default function AiConversationalAiPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

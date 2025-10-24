@@ -24,6 +24,6 @@ export default function EmailOptimizerPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

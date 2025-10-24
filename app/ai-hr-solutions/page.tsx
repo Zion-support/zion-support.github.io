@@ -24,6 +24,6 @@ export default function AiHrSolutionsPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

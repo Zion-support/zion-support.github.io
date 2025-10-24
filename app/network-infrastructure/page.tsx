@@ -24,6 +24,6 @@ export default function NetworkInfrastructurePage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

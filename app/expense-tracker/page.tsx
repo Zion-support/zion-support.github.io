@@ -24,6 +24,6 @@ export default function ExpenseTrackerPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

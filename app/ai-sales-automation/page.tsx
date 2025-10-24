@@ -24,6 +24,6 @@ export default function AiSalesAutomationPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

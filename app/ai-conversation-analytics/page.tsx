@@ -24,6 +24,6 @@ export default function AiConversationAnalyticsPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

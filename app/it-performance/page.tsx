@@ -24,6 +24,6 @@ export default function ItPerformancePage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

@@ -24,6 +24,6 @@ export default function AiLoadTestingPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

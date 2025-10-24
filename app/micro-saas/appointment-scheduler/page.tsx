@@ -24,6 +24,6 @@ export default function AppointmentSchedulerPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

@@ -24,6 +24,6 @@ export default function CloudServicesPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

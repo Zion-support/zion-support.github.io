@@ -24,6 +24,6 @@ export default function DataAnalytics5GPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

@@ -24,6 +24,6 @@ export default function AiLogoDesignerPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

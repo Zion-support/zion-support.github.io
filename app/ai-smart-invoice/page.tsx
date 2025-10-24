@@ -24,6 +24,6 @@ export default function AiSmartInvoicePage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

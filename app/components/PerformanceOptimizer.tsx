@@ -9,14 +9,14 @@ import { CheckCircle } from 'lucide-react';
 import { AlertTriangle } from 'lucide-react';
 
 interface PerformanceOptimizerProps {;
-  className?: string;
+  className?: string
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
-  enableImageOptimization = true,
-  enableLazyLoading = true,
-  enablePreloading = true,
-  enableCodeSplitting = true,
+  enableImageOptimization = true
+  enableLazyLoading = true
+  enablePreloading = true
+  enableCodeSplitting = true
 }) => {
   const [isOptimizing, setIsOptimizing] = useState(false);
   const [optimizationStatus, setOptimizationStatus] = useState<{;
@@ -25,10 +25,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
     preloading: boolean
     codeSplitting: boolean
   }>({
-    images: false,
-    lazyLoading: false,
-    preloading: false,
-    codeSplitting: false,
+    images: false
+    lazyLoading: false
+    preloading: false
+    codeSplitting: false
   })
 
   const optimizeImages = useCallback(() => {;
@@ -65,7 +65,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
         entries.forEach((entry) => {
   
           if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
+            const img = entry.target as HTMLImageElement
             if (img.dataset.src) {
               img.src = img.dataset.src
               img.removeAttribute('data-src')
@@ -73,7 +73,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
             }
           }
         })
-      },
+      }
       { rootMargin: '50px' }
     )
 
@@ -88,11 +88,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
 
     // Preload critical resources
     const criticalResources = [
-      '/fonts/main.woff2',
-      '/css/critical.css',
+      '/fonts/main.woff2'
+      '/css/critical.css'
     ]
 
-    criticalResources.forEach((resource) => {
+    criticalResources.forEach((resource) => {;
       const link = document.createElement('link');
       link.rel = 'preload'
       link.href = resource
@@ -131,10 +131,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
 
     try {
       await Promise.all([
-        optimizeImages(),
-        enableLazyLoadingOptimization(),
-        enablePreloadingOptimization(),
-        enableCodeSplittingOptimization(),
+        optimizeImages()
+        enableLazyLoadingOptimization()
+        enablePreloadingOptimization()
+        enableCodeSplittingOptimization()
       ])
     } catch (error) {
       // // console.error('Optimization failed:', error)
@@ -251,8 +251,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
   )
 }
 
-export default PerformanceOptimizer;
+export default PerformanceOptimizer
   );
 {};
 
-export default PerformanceOptimizerPage;
+export default PerformanceOptimizerPage

@@ -24,6 +24,6 @@ export default function MarketingToolsPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

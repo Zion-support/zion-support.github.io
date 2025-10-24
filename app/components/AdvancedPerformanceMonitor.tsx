@@ -5,46 +5,42 @@ import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lu
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-<<<<<<< HEAD:app/ai-3d-generation/page.tsx
 const Ai3dGenerationPage: React.FC = () => {
-=======
 const AdvancedPerformanceMonitorPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d:app/components/AdvancedPerformanceMonitor.tsx
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      icon: Brain
+      title: 'AI-Powered Intelligence'
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
+    }
     {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      icon: BarChart
+      title: 'Advanced Analytics'
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
+    }
     {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
+      icon: Target
+      title: 'Precision Targeting'
+      description: 'Target specific goals and objectives with precision and accuracy.'
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
+    }
     {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+      icon: TrendingUp
+      title: 'Growth Optimization'
+      description: 'Optimize your business growth with data-driven strategies.'
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ]
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases',;
     'Gain competitive advantage with advanced technology';
   ];
-import React from 'react';
 
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
@@ -64,11 +60,8 @@ export default function Implementation5GPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-<<<<<<< HEAD:app/ai-3d-generation/page.tsx
               AI 3D Generation
-=======
               Advanced Performance Monitor
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d:app/components/AdvancedPerformanceMonitor.tsx
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced Performance Monitor solution for modern businesses.
@@ -176,12 +169,9 @@ export default function Implementation5GPage() {
     </>
   )
 }
-
-export default AdvancedPerformanceMonitorPage;
+;
+export default AdvancedPerformanceMonitorPage
   );
 }
 
-<<<<<<< HEAD:app/ai-3d-generation/page.tsx
-export default Ai3dGenerationPage;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d:app/components/AdvancedPerformanceMonitor.tsx
+export default Ai3dGenerationPage

@@ -16,19 +16,19 @@ interface ContentNewsletterSignupProps {
     icon: React.ComponentType<{ className?: string }>
     text: string
   }>
-  onSubscribe?: (email: string) => void;
-}constContentNewsletterSignup:React.FC<ContentNewsletterSignupProp s>= ({title= &quot;Stay Updated with Our LatestInsights&quot;,
-  subtitle= &quot;Get exclusive content, industry insights, and early access to new features delivered to yourinbox.&quot;,
-  placeholder= &quot;Enter your emailaddress&quot;,
-  buttonText= &quot;Subscribe&quot;,
+  onSubscribe?: (email: string) => void
+}constContentNewsletterSignup:React.FC<ContentNewsletterSignupProp s>= ({title= &quot;Stay Updated with Our LatestInsights&quot;
+  subtitle= &quot;Get exclusive content, industry insights, and early access to new features delivered to yourinbox.&quot;
+  placeholder= &quot;Enter your emailaddress&quot;
+  buttonText= &quot;Subscribe&quot;
   features= [
-    { icon: Star, text:&quot;Exclusive content&quot;},
-    {icon: Users, text:&quot;Industry insights&quot;},
-    {icon: Globe, text:&quot;Global updates&quot;},
+    { icon: Star, text:&quot;Exclusive content&quot;}
+    {icon: Users, text:&quot;Industry insights&quot;}
+    {icon: Globe, text:&quot;Global updates&quot;}
     {icon: Zap, text:&quot;Early access&quot;}
-  ],
+  ]
   onSubscribe
-}) => {const [emailsetEmail] = useState('')
+}) => {const [emailsetEmail] = useState('');
   const [isSubmittingsetIsSubmitting] = useState(false);
   const [isSubscribedsetIsSubscribed] = useState(false);
   const [isLoadingsetIsLoading] = useState(false);
@@ -52,13 +52,13 @@ interface ContentNewsletterSignupProps {
   ]
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ]
-
+;
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ className = '' }) => {;
   return (
     <>
@@ -128,15 +128,15 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ class
                 <label htmlFor=&quot;email&quot; className=&quot;block text-sm font-medium text-white mb-2&quot;>
                   Email Address
                 <input
-                  type=&quot;email&quot;
+                  type=&quot;email&quot
                   value={email}
                   onChange={(e) =>setEmail(e.target.value)}
                   placeholder={placeholder}
-                 requiredclassName=&quot;w-full pl-10pr-4 py-4 bg-white/10border border-white/20rounded-lg text-white placeholder-gray-400 focus:outline-nonefocus:ring-2focus:ring-blue-500focus:border-transparent&quot;
+                 requiredclassName=&quot;w-full pl-10pr-4 py-4 bg-white/10border border-white/20rounded-lg text-white placeholder-gray-400 focus:outline-nonefocus:ring-2focus:ring-blue-500focus:border-transparent&quot
                 />
               </div>
               <button
-                type=&quot;submit&quot;
+                type=&quot;submit&quot
                 disabled={isLoading || !email}
                 className=&quot;w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center&quot;></button>
                 {isLoading ? (
@@ -189,4 +189,4 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ class
   );
 };
 
-export default ContentNewsletterSignupPage;
+export default ContentNewsletterSignupPage

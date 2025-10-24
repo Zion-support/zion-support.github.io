@@ -11,13 +11,13 @@ import { ArrowRight } from 'lucide-react';
   ]
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ]
-
+;
 const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {;
   return (
     <>
@@ -122,10 +122,10 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' }) => {;
   );
 };
 
-export default SystemMonitorPage;
+export default SystemMonitorPage
             </div>
         </div>
     </div>
   )
 {}
-export default SystemMonitorPage;
+export default SystemMonitorPage

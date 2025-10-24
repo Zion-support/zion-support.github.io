@@ -17,6 +17,6 @@ export default function SolutionsPage() {
         </div>
       </main>
       <Footer />
-    </div>
-  )
+    </div>;
+  );
 }

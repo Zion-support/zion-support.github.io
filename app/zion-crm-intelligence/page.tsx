@@ -24,6 +24,6 @@ export default function ZionCrmIntelligencePage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

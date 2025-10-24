@@ -24,6 +24,6 @@ export default function ResourcesPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

@@ -181,4 +181,4 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
   return <>{children}</>;
 };
 
-export default EnhancedAccessibility;
+export default EnhancedAccessibility

@@ -24,6 +24,6 @@ export default function ZionAiTranslatorProPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

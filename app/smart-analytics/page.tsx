@@ -24,6 +24,6 @@ export default function SmartAnalyticsPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

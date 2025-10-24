@@ -24,6 +24,6 @@ export default function AiKnowledgeManagementPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

@@ -24,6 +24,6 @@ export default function CybersecurityAdvancedPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

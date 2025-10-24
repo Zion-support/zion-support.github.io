@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client"
 
 import React from 'react'
@@ -9,9 +8,8 @@ export default function LoadingSpinner() {
       <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
     </div>
   )
-}
-=======
-'use client'
+};
+'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
@@ -22,41 +20,41 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 const LoadingSpinnerPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      icon: Brain
+      title: 'AI-Powered Intelligence'
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
+    }
     {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      icon: BarChart
+      title: 'Advanced Analytics'
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
+    }
     {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
+      icon: Target
+      title: 'Precision Targeting'
+      description: 'Target specific goals and objectives with precision and accuracy.'
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
+    }
     {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+      icon: TrendingUp
+      title: 'Growth Optimization'
+      description: 'Optimize your business growth with data-driven strategies.'
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ]
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ]
 
   return (
-    <>
+    <>;
       <Helmet>;
         <title>LoadingSpinner</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced LoadingSpinner solution for modern businesses.&quot; />
@@ -158,23 +156,23 @@ const LoadingSpinnerPage: React.FC = () => {
   );
 };
 
-export default LoadingSpinnerPage;
+export default LoadingSpinnerPage
 color?: 'primary' | 'secondary' | 'white'
 {text?: string}
-constLoadingSpinner: React.FC<LoadingSpinnerProp s>= ({size= 'md',
-color= 'primary',
+constLoadingSpinner: React.FC<LoadingSpinnerProp s>= ({size= 'md'
+color= 'primary'
 text}) => {constsizeClasses= {
-sm: 'w-4 h-4',
-md: 'w-8 h-8',
+sm: 'w-4 h-4'
+md: 'w-8 h-8'
 lg: 'w-12h-1 2'}
-constcolorClasses= {primary: 'text-indigo-60 0',
-secondary: 'text-gray-60 0',
+constcolorClasses= {primary: 'text-indigo-60 0'
+secondary: 'text-gray-60 0'
 white: 'text-white'}
 return(<divclassName=&quot;flex flex-colitems-centerjustify-centerspace-y-2&quot; role=&quot;status&quot;aria-label=&quot;Loading&quot;><divclassName={`animate-spin rounded-full border-2 border-gray-300border-t-transparent${sizeClasses[size]}${colorClasses[color]}`}></di>{text &&(< className={`text-sm${colorClasses[color]}animate-pulse`}></ className={`text-sm${colorClasses[color]}animate-pulse`}>{text}</p>)}</di>)
 }
 const colorClasses = {;
-primary: 'text-indigo-600',
-secondary: 'text-gray-600',
+primary: 'text-indigo-600'
+secondary: 'text-gray-600'
 white: 'text-white'
 }
 return (;
@@ -186,5 +184,4 @@ return (;
 </div>
 )
 {}
-export default LoadingSpinner;
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
+export default LoadingSpinner

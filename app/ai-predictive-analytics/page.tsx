@@ -24,6 +24,6 @@ export default function AiPredictiveAnalyticsPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

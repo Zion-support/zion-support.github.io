@@ -24,6 +24,6 @@ export default function ECommerceDevelopmentPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

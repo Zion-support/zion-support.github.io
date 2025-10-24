@@ -24,6 +24,6 @@ export default function FraudDetectionPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

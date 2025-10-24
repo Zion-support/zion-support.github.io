@@ -24,6 +24,6 @@ export default function CommunityPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

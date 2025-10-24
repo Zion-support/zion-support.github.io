@@ -24,6 +24,6 @@ export default function DataCenterPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

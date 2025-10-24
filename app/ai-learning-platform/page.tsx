@@ -24,6 +24,6 @@ export default function AiLearningPlatformPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

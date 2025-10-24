@@ -30,6 +30,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       {...props}
     />
   )
-}
-
+};
+;
 export default OptimizedImage

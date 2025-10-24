@@ -24,6 +24,6 @@ export default function AiSmartCitySolutionsPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

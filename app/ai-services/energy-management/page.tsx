@@ -24,6 +24,6 @@ export default function EnergyManagementPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

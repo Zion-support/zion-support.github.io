@@ -24,6 +24,6 @@ export default function AiSmartHomeControllerPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

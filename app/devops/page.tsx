@@ -24,6 +24,6 @@ export default function DevopsPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

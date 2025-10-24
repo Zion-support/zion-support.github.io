@@ -4,7 +4,7 @@ import { Mail } from 'lucide-react';
 import { Home } from 'lucide-react';
 
 interface AdvancedErrorBoundaryProps {;
-  className?: string;
+  className?: string
 }
 
 interface State {
@@ -21,15 +21,15 @@ class AdvancedErrorBoundary extends Component<Props, State> {
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     const errorReport: ErrorReport = {;
-      errorId: this.state.errorId || this.generateErrorId(),
-      error,
+      errorId: this.state.errorId || this.generateErrorId()
+      error
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-      error,
+      error
       errorInfo
     })
     // Call custom error handler if provided

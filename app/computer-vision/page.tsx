@@ -24,6 +24,6 @@ export default function ComputerVisionPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

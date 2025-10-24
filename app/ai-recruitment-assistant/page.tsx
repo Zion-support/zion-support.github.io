@@ -24,6 +24,6 @@ export default function AiRecruitmentAssistantPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

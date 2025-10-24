@@ -24,6 +24,6 @@ export default function AiEcommerceAssistantPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

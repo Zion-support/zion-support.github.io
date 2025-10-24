@@ -24,6 +24,6 @@ export default function AiOpsPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

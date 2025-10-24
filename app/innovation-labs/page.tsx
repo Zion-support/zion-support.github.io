@@ -24,6 +24,6 @@ export default function InnovationLabsPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

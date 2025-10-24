@@ -24,6 +24,6 @@ export default function IotPlatformPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

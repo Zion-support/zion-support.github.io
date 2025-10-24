@@ -24,6 +24,6 @@ export default function AiMlPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

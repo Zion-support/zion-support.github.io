@@ -24,6 +24,6 @@ export default function AiTranslationServicePage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

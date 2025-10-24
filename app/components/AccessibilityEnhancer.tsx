@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client"
 
 import React, { useEffect } from 'react'
@@ -32,10 +31,9 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
       }
     }
   }, [])
-
-  return <>{children}</>
-}
-=======
+;
+  return <>{children}</>;
+};
 'use client';
 import { useEffect } from 'react';
 
@@ -44,7 +42,7 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
     // Add keyboard navigation support
     const handleKeyDown = (e: KeyboardEvent) => {
       // Skip to main content with Alt + M
-      if (e.altKey && e.key === 'm') {
+      if (e.altKey && e.key === 'm') {;
         e.preventDefault();
         const mainContent = document.getElementById('main-content');
         if (mainContent) {
@@ -58,7 +56,7 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
         e.preventDefault();
         const navigation = document.querySelector('nav');
         if (navigation) {
-          const firstLink = navigation.querySelector('a') as HTMLElement;
+          const firstLink = navigation.querySelector('a') as HTMLElement
           if (firstLink) {
             firstLink.focus();
           }
@@ -78,8 +76,8 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
     const style = document.createElement('style');
     style.textContent = `
       *:focus {
-        outline: 2px solid #8b5cf6 !important;
-        outline-offset: 2px !important;
+        outline: 2px solid #8b5cf6 !important
+        outline-offset: 2px !important
       }
 
       const nav = document.querySelector('nav');
@@ -101,10 +99,10 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
       style.textContent = `
         @media (prefers-contrast: high) {
           * {
-            border-color: currentColor !important;
+            border-color: currentColor !important
           }
           button, a {
-            border: 2px solid currentColor !important;
+            border: 2px solid currentColor !important
           }
         }
       `;
@@ -118,15 +116,15 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
       const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])';
       
       .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
+        position: absolute
+        width: 1px
+        height: 1px
+        padding: 0
+        margin: -1px
+        overflow: hidden
         clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border: 0;
+        white-space: nowrap
+        border: 0
       }
       
       .high-contrast {
@@ -134,9 +132,9 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
       }
       
       .reduce-motion * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important
+        animation-iteration-count: 1 !important
+        transition-duration: 0.01ms !important
       }
     `;
     document.head.appendChild(style);
@@ -170,5 +168,4 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
   return <>{children}</>;
 };
 
-export default AccessibilityEnhancer;
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
+export default AccessibilityEnhancer

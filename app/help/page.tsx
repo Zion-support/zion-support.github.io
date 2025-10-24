@@ -24,6 +24,6 @@ export default function HelpPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

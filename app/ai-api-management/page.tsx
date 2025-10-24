@@ -24,6 +24,6 @@ export default function AiApiManagementPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

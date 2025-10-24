@@ -24,6 +24,6 @@ export default function ArVrPlatformPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

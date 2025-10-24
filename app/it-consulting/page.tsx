@@ -24,6 +24,6 @@ export default function ItConsultingPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

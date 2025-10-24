@@ -24,6 +24,6 @@ export default function EdgeComputingPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

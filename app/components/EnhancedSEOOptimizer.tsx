@@ -8,36 +8,36 @@ import { Phone, Mail, ArrowRight } from 'lucide-react';
 const EnhancedSEOOptimizerPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered SEO',
-      description: 'Advanced AI algorithms that optimize your content for search engines automatically.',
+      icon: Brain
+      title: 'AI-Powered SEO'
+      description: 'Advanced AI algorithms that optimize your content for search engines automatically.'
       benefits: ['Keyword optimization', 'Content analysis', 'Ranking predictions', 'Competitor insights']
-    },
+    }
     {
-      icon: BarChart,
-      title: 'Performance Analytics',
-      description: 'Comprehensive SEO analytics dashboard with real-time performance metrics.',
+      icon: BarChart
+      title: 'Performance Analytics'
+      description: 'Comprehensive SEO analytics dashboard with real-time performance metrics.'
       benefits: ['Ranking tracking', 'Traffic analysis', 'Conversion metrics', 'ROI reporting']
-    },
+    }
     {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific keywords and audiences with precision and accuracy.',
+      icon: Target
+      title: 'Precision Targeting'
+      description: 'Target specific keywords and audiences with precision and accuracy.'
       benefits: ['Keyword research', 'Audience targeting', 'Content optimization', 'Link building']
-    },
+    }
     {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your SEO strategy for maximum growth and visibility.',
+      icon: TrendingUp
+      title: 'Growth Optimization'
+      description: 'Optimize your SEO strategy for maximum growth and visibility.'
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ]
 
   const benefits = [
-    'Increase organic traffic by up to 300%',
-    'Reduce SEO costs by 50% with automation',
-    'Improve search rankings with AI insights',
-    'Scale SEO efforts without proportional resource increases',
+    'Increase organic traffic by up to 300%'
+    'Reduce SEO costs by 50% with automation'
+    'Improve search rankings with AI insights'
+    'Scale SEO efforts without proportional resource increases'
     'Gain competitive advantage with advanced SEO technology'
   ]
 
@@ -94,7 +94,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </div>;
             ))};
           </div>
             <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
@@ -144,4 +144,4 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
   )
 }
 
-export default EnhancedSEOOptimizerPage;
+export default EnhancedSEOOptimizerPage

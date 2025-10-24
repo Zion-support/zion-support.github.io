@@ -6,43 +6,40 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-const ContentStatistics: React.FC = () => {
+const ContentStatistics: React.FC = () => {;
   const [counters, setCounters] = useState({;
-    clients: 0,
-    projects: 0,
-    satisfaction: 0,
-    years: 0,
-    countries: 0,
+    clients: 0
+    projects: 0
+    satisfaction: 0
+    years: 0
+    countries: 0
     uptime: 0
   })
 
   const targetCounters = {;
-    clients: 1000,
-    projects: 500,
-    satisfaction: 99,
-    years: 10,
-    countries: 25,
+    clients: 1000
+    projects: 500
+    satisfaction: 99
+    years: 10
+    countries: 25
     uptime: 99.9
   }
 
   useEffect(() => {
-    const duration = 2000;
-    const steps = 60;
-    const stepDuration = duration / steps;
-
+    const duration = 2000
+    const steps = 60
+    const stepDuration = duration / steps
     const interval = setInterval(() => {;
       setCounters(prev => {
         const newCounters = { ...prev };
-        let allComplete = true;
-
+        let allComplete = true
         Object.keys(targetCounters).forEach(key => {
           const target = targetCounters[key as keyof typeof targetCounters];
           const current = prev[key as keyof typeof prev];
-          const increment = target / steps;
-
+          const increment = target / steps
           if (current < target) {
             newCounters[key as keyof typeof newCounters] = Math.min(
-              current + increment,
+              current + increment
               target
             )
             allComplete = false
@@ -62,45 +59,45 @@ const ContentStatistics: React.FC = () => {
 
   const stats = [
     {
-      icon: <Users className="h-8 w-8" />,
-      value: Math.round(counters.clients),
-      label: "Happy Clients",
+      icon: <Users className="h-8 w-8" />
+      value: Math.round(counters.clients)
+      label: "Happy Clients"
       color: "from-blue-500 to-cyan-500"
-    },
+    }
     {
-      icon: <Target className="h-8 w-8" />,
-      value: Math.round(counters.projects),
-      label: "Projects Completed",
+      icon: <Target className="h-8 w-8" />
+      value: Math.round(counters.projects)
+      label: "Projects Completed"
       color: "from-green-500 to-emerald-500"
-    },
+    }
     {
-      icon: <Star className="h-8 w-8" />,
-      value: `${Math.round(counters.satisfaction)}%`,
-      label: "Client Satisfaction",
+      icon: <Star className="h-8 w-8" />
+      value: `${Math.round(counters.satisfaction)}%`
+      label: "Client Satisfaction"
       color: "from-yellow-500 to-orange-500"
-    },
+    }
     {
-      icon: <Clock className="h-8 w-8" />,
-      value: Math.round(counters.years),
-      label: "Years Experience",
+      icon: <Clock className="h-8 w-8" />
+      value: Math.round(counters.years)
+      label: "Years Experience"
       color: "from-purple-500 to-pink-500"
-    },
+    }
     {
-      icon: <Globe className="h-8 w-8" />,
-      value: Math.round(counters.countries),
-      label: "Countries Served",
+      icon: <Globe className="h-8 w-8" />
+      value: Math.round(counters.countries)
+      label: "Countries Served"
       color: "from-indigo-500 to-blue-500"
-    },
+    }
     {
-      icon: <Zap className="h-8 w-8" />,
-      value: `${Math.round(counters.uptime * 10) / 10}%`,
-      label: "Uptime Guarantee",
+      icon: <Zap className="h-8 w-8" />
+      value: `${Math.round(counters.uptime * 10) / 10}%`
+      label: "Uptime Guarantee"
       color: "from-red-500 to-pink-500"
     }
   ]
 
   return (
-    <>
+    <>;
       <Helmet>;
         <title>ContentStatistics</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced ContentStatistics solution for modern businesses.&quot; />
@@ -201,91 +198,91 @@ const ContentStatistics: React.FC = () => {
   )
 }
 
-export default ContentStatisticsPage;
-clients: 0,
-projects: 0,
-satisfaction: 0,
-years: 0,
-countries: 0,
+export default ContentStatisticsPage
+clients: 0
+projects: 0
+satisfaction: 0
+years: 0
+countries: 0
 {uptime: 0})
-consttargetCounters= {clients: 1000 0,
-projects: 500 0,
-satisfaction: 9 9,
-years: 1 5,
-countries: 5 0,
+consttargetCounters= {clients: 1000 0
+projects: 500 0
+satisfaction: 9 9
+years: 1 5
+countries: 5 0
 uptime:99}
 conststatistics= [
-{icon: Users,
-value: counters.clients,
-label: 'Happy Clients',
-suffix: '+',
-color: 'text-blue-40 0',
-description: 'Businesses trust our solutions'},
-{icon: Award,
-value: counters.projects,
-label: 'Projects Completed',
-suffix: '+',
-color: 'text-purple-40 0',
-description: 'Successful implementations'},
-{icon: TrendingUp,
-value: counters.satisfaction,
-label: 'Client Satisfaction',
-suffix: '%',
-color: 'text-green-40 0',
-description: 'Customer satisfaction rate'},
-{icon: Clock,
-value: counters.years,
-label: 'Years Experience',
-suffix: '+',
-color: 'text-yellow-40 0',
-description: 'Industry expertise'},
-{icon: Globe,
-value: counters.countries,
-label: 'Countries Served',
-suffix: '+',
-color: 'text-cyan-40 0',
-description: 'Global presence'},
-{icon: BarChart3,
-value: counters.uptime,
-label: 'Uptime Guarantee',
-suffix: '%',
-color: 'text-red-40 0',
+{icon: Users
+value: counters.clients
+label: 'Happy Clients'
+suffix: '+'
+color: 'text-blue-40 0'
+description: 'Businesses trust our solutions'}
+{icon: Award
+value: counters.projects
+label: 'Projects Completed'
+suffix: '+'
+color: 'text-purple-40 0'
+description: 'Successful implementations'}
+{icon: TrendingUp
+value: counters.satisfaction
+label: 'Client Satisfaction'
+suffix: '%'
+color: 'text-green-40 0'
+description: 'Customer satisfaction rate'}
+{icon: Clock
+value: counters.years
+label: 'Years Experience'
+suffix: '+'
+color: 'text-yellow-40 0'
+description: 'Industry expertise'}
+{icon: Globe
+value: counters.countries
+label: 'Countries Served'
+suffix: '+'
+color: 'text-cyan-40 0'
+description: 'Global presence'}
+{icon: BarChart3
+value: counters.uptime
+label: 'Uptime Guarantee'
+suffix: '%'
+color: 'text-red-40 0'
 description: 'Service reliability'}
 ]
 constachievements= [
-{icon: Brain,
-title: 'AI Innovation',
-description: 'Leading the industry in AI-powered solutions'},
-{icon: Shield,
-title: 'Security Excellence',
-description: 'Bank-level security for all our solutions'},
-{icon: Globe,
-title: 'Global Reach',
-description: 'Worldwide deployment and support for international businesses',
+{icon: Brain
+title: 'AI Innovation'
+description: 'Leading the industry in AI-powered solutions'}
+{icon: Shield
+title: 'Security Excellence'
+description: 'Bank-level security for all our solutions'}
+{icon: Globe
+title: 'Global Reach'
+description: 'Worldwide deployment and support for international businesses'
 stats: ['5 0+ Countries', '1 5+ Languages', '2 4/7 Support']}
 ]
 constbenefits= [
-'Advanced AI technology integration',
-'Real-time processing and analytics',
-'Enterprise-grade security and compliance',
-'Scalable and flexible solutions',
-'2 4/7 technical support',
-'Easy integration with existing systems',
-'Cost-effective pricing plans',
+'Advanced AI technology integration'
+'Real-time processing and analytics'
+'Enterprise-grade security and compliance'
+'Scalable and flexible solutions'
+'2 4/7 technical support'
+'Easy integration with existing systems'
+'Cost-effective pricing plans'
 'Proven track record of success'
 ]
 constachievements= [
-{icon: Star,
-title: 'Industry Recognition',
-description: 'Awarded Best AI Solutions Provider2024',
-value: '2 5+'},
-{icon: Target,
-title: 'Success Rate',
-description: 'Projects delivered on time and within budget',
-value: '9 8%'},
-{icon: Rocket,
-title: 'Growth Rate',
-description: 'Year-over-year business growth',
+{icon: Star
+title: 'Industry Recognition'
+description: 'Awarded Best AI Solutions Provider2024'
+value: '2 5+'}
+{icon: Target
+title: 'Success Rate'
+description: 'Projects delivered on time and within budget'
+value: '9 8%'}
+{icon: Rocket
+title: 'Growth Rate'
+description: 'Year-over-year business growth'
 value: '30 0%'}
 ]
 useEffect(() => {constduration= 300 0; // 3secondsconststeps= 60conststepDuration= duration / steps
@@ -300,7 +297,7 @@ setCounters(prev=> {
 constcurrent= prev[key as keyof type of prev]
 if(current< target) {
 return {
-...prev,
+...prev
 [key]: Math.min(current + increment, target)}
 }
 return pre v
@@ -434,4 +431,4 @@ View Case Studies
 </div>
 )
 {}
-export default ContentStatistics;
+export default ContentStatistics

@@ -24,6 +24,6 @@ export default function AiEcommerceOptimizerProPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Link from 'next/link';
-<<<<<<< HEAD
 import { Metadata } from 'next';
 import { 
   ArrowRight, Users, Shield, Globe, Brain, CheckCircle, Award, Star
@@ -9,50 +8,48 @@ import {
 
 export const metadata: Metadata = {
   title: 'About Us - Zion Tech Group | AI & IT Solutions',
-  description: 'Learn about Zion Tech Group\'s mission, values, and team. We\'re dedicated to delivering cutting-edge AI and IT solutions that transform businesses.',
-  keywords: 'about us, AI solutions, IT services, technology company, digital transformation',
+  description: 'Learn about Zion Tech Group\'s mission, values, and team. We\'re dedicated to delivering cutting-edge AI and IT solutions that transform businesses.'
+  keywords: 'about us, AI solutions, IT services, technology company, digital transformation'
   openGraph: {
-    title: 'About Us - Zion Tech Group',
-    description: 'Learn about Zion Tech Group\'s mission, values, and team. We\'re dedicated to delivering cutting-edge AI and IT solutions that transform businesses.',
-    type: 'website',
-    url: 'https://ziontechgroup.com/about',
-  },
+    title: 'About Us - Zion Tech Group'
+    description: 'Learn about Zion Tech Group\'s mission, values, and team. We\'re dedicated to delivering cutting-edge AI and IT solutions that transform businesses.'
+    type: 'website'
+    url: 'https://ziontechgroup.com/about',;
+  },;
 };
 
 const AboutPage: React.FC = () => {
 
   const values = [
     {
-      icon: Brain,
-      title: 'Innovation',
+      icon: Brain
+      title: 'Innovation'
       description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions.'
-    },
-    {
-      icon: Shield,
-      title: 'Security',
-      description: 'Your data and systems are protected with enterprise-grade security measures.'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Serving clients worldwide with localized support and expertise.'
-    },
-    {
-      icon: Users,
-      title: 'Collaboration',
-      description: 'We work closely with our clients to understand their unique needs.'
     }
+    {
+      icon: Shield
+      title: 'Security'
+      description: 'Your data and systems are protected with enterprise-grade security measures.'
+    }
+    {
+      icon: Globe
+      title: 'Global Reach'
+      description: 'Serving clients worldwide with localized support and expertise.'
+    }
+    {
+      icon: Users
+      title: 'Collaboration'
+      description: 'We work closely with our clients to understand their unique needs.'
+    };
   ];
 
   const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '5+', label: 'Years Experience' },
-    { number: '24/7', label: 'Support Available' }
+    { number: '500+', label: 'Projects Completed' }
+    { number: '50+', label: 'Happy Clients' }
+    { number: '5+', label: 'Years Experience' }
+    { number: '24/7', label: 'Support Available' };
   ];
-=======
 import { ArrowRight, Users, Award, Target, Lightbulb } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
 
 export default function AboutPage() {
   return (
@@ -147,6 +144,6 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-</>
+</>;
   );
 }

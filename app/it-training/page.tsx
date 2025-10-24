@@ -24,6 +24,6 @@ export default function ItTrainingPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

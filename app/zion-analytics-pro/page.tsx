@@ -24,6 +24,6 @@ export default function ZionAnalyticsProPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

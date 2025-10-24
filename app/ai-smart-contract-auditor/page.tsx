@@ -24,6 +24,6 @@ export default function AiSmartContractAuditorPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

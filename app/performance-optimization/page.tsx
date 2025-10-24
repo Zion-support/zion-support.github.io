@@ -24,6 +24,6 @@ export default function PerformanceOptimizationPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

@@ -8,7 +8,7 @@ interface BeforeInstallPromptEvent extends Event {
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>
 }
 
-const PWAInstaller: React.FC = () => {
+const PWAInstaller: React.FC = () => {;
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [showInstallPrompt, setShowInstallPrompt] = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
@@ -49,7 +49,7 @@ const PWAInstaller: React.FC = () => {
     if (!deferredPrompt) return
     try {
       await deferredPrompt.prompt()
-      const { outcome } = await deferredPrompt.userChoice;
+      const { outcome } = await deferredPrompt.userChoice
       if (outcome === 'accepted') {
         // Installation successful
       } else {
@@ -88,8 +88,8 @@ const PWAInstaller: React.FC = () => {
           </div>
           <button
             onClick={handleDismiss}
-            className=&quot;text-gray-400 hover:text-white transition-colors&quot;
-            aria-label=&quot;Dismiss install prompt&quot;
+            className=&quot;text-gray-400 hover:text-white transition-colors&quot
+            aria-label=&quot;Dismiss install prompt&quot
           >
             <X className=&quot;w-4 h-4&quot; />
           </button>
@@ -97,13 +97,13 @@ const PWAInstaller: React.FC = () => {
         <div className=&quot;space-y-2&quot;></div>
           <button
             onClick={handleInstallClick}
-            className=&quot;w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-sm font-medium&quot;
+            className=&quot;w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-sm font-medium&quot
           >
             Install Now
           </button>
           <button
             onClick={handleDismiss}
-            className=&quot;w-full bg-transparent border border-gray-600 text-gray-300 px-4 py-2 rounded-lg hover:bg-slate-700 hover:text-white transition-all duration-300 text-sm&quot;
+            className=&quot;w-full bg-transparent border border-gray-600 text-gray-300 px-4 py-2 rounded-lg hover:bg-slate-700 hover:text-white transition-all duration-300 text-sm&quot
           >
             Not Now
           </button>
@@ -118,4 +118,4 @@ const PWAInstaller: React.FC = () => {
   )
 }
 
-export default PWAInstaller;
+export default PWAInstaller

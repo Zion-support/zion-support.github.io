@@ -24,6 +24,6 @@ export default function DatabaseServicesPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

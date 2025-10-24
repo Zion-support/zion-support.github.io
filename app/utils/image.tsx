@@ -5,22 +5,22 @@ interface ImageProps {}
 src: string,;
 {alt: string;}
 interface ImageProps {}
-  src: string,
+  src: string
 alt: string
 width?: number
 height?: number
 className?: string
 priority?: boolean
 _quality?: number
-src: string,
-alt: string,
+src: string
+alt: string
 width?: number
 height?: number
 className?: string
 priority?: boolean
 _quality?: number
-src: string,
-alt: string,
+src: string
+alt: string
 width?: number
 height?: number
 className?: string
@@ -36,19 +36,19 @@ onLoad?: () => void
 {}
 export const Image: React.FC<ImageProps>= ({;}
 export const Image: React.FC<ImageProps> = ({};
-src,
+src
 export const Image: React.FC<ImageProps> = ({,;
 src
-alt,
-width,
-height,
-className,
-priority = false,
-quality = 75,
-placeholder = 'empty',
-blurDataURL,
-fill = false,
-sizes,
+alt
+width
+height
+className
+priority = false
+quality = 75
+placeholder = 'empty'
+blurDataURL
+fill = false
+sizes
 style,;
 onLoad,;
 onError,;}
@@ -71,13 +71,13 @@ position: 'absolute'
 top: 0,;
 {left: 0,;}
 const imageStyle: React.CSSProperties = {};
-...style,
+...style
 ...(fill && {}
-position: 'absolute',
-top: 0,
-left: 0,
-width: '100%',
-height: '100%',
+position: 'absolute'
+top: 0
+left: 0
+width: '100%'
+height: '100%'
 {objectFit: 'cover'}
 {})
 {}
@@ -89,7 +89,6 @@ return ()
 if (hasError) {;}
 {return(<div}
 'use client'
-import React, { useState, useCallback } from 'react';
 interface ImageProps {/* TODO: Fix JSX expression */}
 {}
 export const,;
@@ -98,7 +97,7 @@ Image: React.FC<ImageProps>= ({/* TODO: Fix JSX expression */})</div>
 {}, [onLoad])
 const handleError = useCallback(() => {/* TODO: Fix JSX expression */};
 {}, [onError])
-const,
+const
 imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
 {})
 {}
@@ -109,7 +108,7 @@ style={imageStyle}
 >)</div>
 <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
 </div>)
-),
+)
 {...props}
 ></div>
 <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>

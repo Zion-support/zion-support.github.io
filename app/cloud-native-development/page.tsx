@@ -24,6 +24,6 @@ export default function CloudNativeDevelopmentPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

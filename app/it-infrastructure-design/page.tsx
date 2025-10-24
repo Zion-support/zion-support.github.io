@@ -24,6 +24,6 @@ export default function ItInfrastructureDesignPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

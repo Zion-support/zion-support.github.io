@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
 
 interface PerformanceMonitorProps {
-  performanceData?: any;
+  performanceData?: any
 }
 
-<<<<<<< HEAD
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData }) => {
   useEffect(() => {
     // Monitor Core Web Vitals
@@ -21,7 +20,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
         getFCP(logMetric);
         getLCP(logMetric);
         getTTFB(logMetric);
-=======
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData }) => {;
   useEffect(() => {
     // Monitor Core Web Vitals
@@ -32,7 +30,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
         getFCP(console.log);
         getLCP(console.log);
         getTTFB(console.log);
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
       });
     }
 
@@ -40,43 +37,38 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
     if ('performance' in window) {
       window.addEventListener('load', () => {
         setTimeout(() => {
-          const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+          const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
           const paint = performance.getEntriesByType('paint');
-<<<<<<< HEAD
           if (process.env.NODE_ENV === 'development') {
             // eslint-disable-next-line no-console
             console.log('Performance Metrics: ', {
-              domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-              loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-              firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
-              firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
+              domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
+              loadComplete: navigation.loadEventEnd - navigation.loadEventStart
+              firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime
+              firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
             });
           }
-=======
           console.log('Performance Metrics: ', {
-            domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-            loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-            firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
-            firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
+            domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
+            loadComplete: navigation.loadEventEnd - navigation.loadEventStart
+            firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime
+            firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
           });
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
         }, 0);
       });
     }
 
-<<<<<<< HEAD
     // Monitor memory usage
     if ('memory' in performance) {
-      const memory = (performance as any).memory;
+      const memory = (performance as any).memory
       if (process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console
         console.log('Memory Usage: ', {
-          used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
-          total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
-          limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB',
+          used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB'
+          total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB'
+          limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB'
         });
       }
-=======
   return (
     <>
       <Helmet>
@@ -180,37 +172,36 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData
   );
 };
 
-export default PerformanceMonitorPage;
-
+export default PerformanceMonitorPage
 interface PerformanceMonitorProp s {onMetricsUpdate?: (metrics: PerformanceMetrics) =>void
   enableRealTimeMonitoring?: boolean
   logToConsole?: boolean}
 
-export default function PerformanceMonitor;
+export default function PerformanceMonitor
 PerformanceMonitor.displayName = "PerformanceMonitor"({
-  onMetricsUpdate,
-  enableRealTimeMonitoring = true,
+  onMetricsUpdate
+  enableRealTimeMonitoring = true
   logToConsole = true
 }: PerformanceMonitorProps) {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({;
-    loadTime: null,
-    firstContentfulPaint: null,
-    largestContentfulPaint: null,
-    firstInputDelay: null,
-    cumulativeLayoutShift: null,
-    timeToInteractive: null,
+    loadTime: null
+    firstContentfulPaint: null
+    largestContentfulPaint: null
+    firstInputDelay: null
+    cumulativeLayoutShift: null
+    timeToInteractive: null
     totalBlockingTime: null
   })
   useEffect(() => {
     if (!enableRealTimeMonitoring || typeof window === 'undefined') return
     const measurePerformance = () => {;
       const newMetrics: PerformanceMetrics = {;
-        loadTime: null,
-        firstContentfulPaint: null,
-        largestContentfulPaint: null,
-        firstInputDelay: null,
-        cumulativeLayoutShift: null,
-        timeToInteractive: null,
+        loadTime: null
+        firstContentfulPaint: null
+        largestContentfulPaint: null
+        firstInputDelay: null
+        cumulativeLayoutShift: null
+        timeToInteractive: null
         totalBlockingTime: null
      }
 
@@ -320,7 +311,7 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
     if (type of windo w !== 'undefined' && 'performance' in windo w) {
       performance.mark(name)
    }
-  },
+  }
   // Measure time between marks
   measure: (name: string, startMark: string, endMark?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -329,14 +320,14 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
      } else {performance.measure(namestartMark)
      }
     }
-  },
+  }
   // Get performance entries
   getEntries: (type?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       return type ? performance.getEntriesByType(type) : performance.getEntries()
     }
     return []
-  },
+  }
   // Clear performance entries
   clearEntries: (type?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -352,15 +343,15 @@ PerformanceMonitor.displayName = "PerformanceMonitor"({
 
 // Google Analytics integration for performance trackingexportconsttrackPerformanceToGA= (metrics: PerformanceMetrics) => {if (type of windo w !== 'undefined' && 'gtag' in windo w) {
     windo w.gtag('event', 'performance_metrics', {
-      event_category: 'Performance',
-      event_label: 'Core Web Vitals',
+      event_category: 'Performance'
+      event_label: 'Core Web Vitals'
       custom_map: {
-        load_time: metrics.loadTime,
-        first_contentful_paint: metrics.firstContentfulPaint,
-        largest_contentful_paint: metrics.largestContentfulPaint,
-        first_input_delay: metrics.firstInputDelay,
-        cumulative_layout_shift: metrics.cumulativeLayoutShift,
-        time_to_interactive: metrics.timeToInteractive,
+        load_time: metrics.loadTime
+        first_contentful_paint: metrics.firstContentfulPaint
+        largest_contentful_paint: metrics.largestContentfulPaint
+        first_input_delay: metrics.firstInputDelay
+        cumulative_layout_shift: metrics.cumulativeLayoutShift
+        time_to_interactive: metrics.timeToInteractive
         total_blocking_time: metrics.totalBlockingTime
      }
     })
@@ -374,23 +365,19 @@ declare global {
 }
     // Monitor memory usage
     if ('memory' in performance) {
-      const memory = (performance as any).memory;
+      const memory = (performance as any).memory
       console.log('Memory Usage: ', {
-        used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
-        total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
-        limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB',
+        used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB'
+        total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB'
+        limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB'
       });
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
     }
   }, []);
 
-  return null;
-<<<<<<< HEAD
+  return null
 };
 
-export default PerformanceMonitor;
-=======
+export default PerformanceMonitor
 {};
 
-export default PerformanceMonitor;
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
+export default PerformanceMonitor

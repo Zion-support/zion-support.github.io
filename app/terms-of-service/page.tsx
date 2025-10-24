@@ -24,6 +24,6 @@ export default function TermsOfServicePage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

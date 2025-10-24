@@ -24,6 +24,6 @@ export default function IotIntegrationPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-=======
-<&quot;use client&quot;
-
-import React, { createContext, useContext, useEffect } from &quot;react&quot;
-
+<&quot;use client&quot
+import React, { createContext, useContext, useEffect } from &quot;react&quot
 interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, unknown>) => void
   identify: (userId: string, traits?: Record<string, unknown>) => void
@@ -11,7 +7,7 @@ interface AnalyticsContextType {
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
-  undefined,
+  undefined
 )
 
 export const useAnalytics = () => {;
@@ -51,9 +47,9 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
   consttrack= (event: string,properties?:Record<string, unknown>) => {if (type of windo w !==&quot;undefined&quot;) {
       // Google Analytics
       if ((windo w as unknown as { gtag?: (...args: unknown[]) => void}).gtag) {(windo w as unknown as { gtag: (...args: unknown[]) => void}).gtag(
-         &quot;event&quot;,
-          event,
-          properties,
+         &quot;event&quot;
+          event
+          properties
         )
       }
 
@@ -64,11 +60,11 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
   constidentify= (userId: string,traits?:Record<string, unknown>) => {if (type of windo w !==&quot;undefined&quot;) {
       // Google Analytics
       if ((windo w as unknown as { gtag?: (...args: unknown[]) => void}).gtag) {(windo w as unknown as { gtag: (...args: unknown[]) => void}).gtag(
-         &quot;config&quot;,
-          process.env.REACT_APP_GA_ID,
-          {user_id: userId,
-            custom_map: traits,
-          },
+         &quot;config&quot;
+          process.env.REACT_APP_GA_ID
+          {user_id: userId
+            custom_map: traits
+          }
         )
       }
 
@@ -79,12 +75,12 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
   constpage= (name: string,properties?:Record<string, unknown>) => {if (type of windo w !==&quot;undefined&quot;) {
       // Google Analytics
       if ((windo w as unknown as { gtag?: (...args: unknown[]) => void}).gtag) {(windo w as unknown as { gtag: (...args: unknown[]) => void}).gtag(
-         &quot;event&quot;,
-         &quot;page_view&quot;,
-          {page_title: name,
-            page_location: windo w.location.href,
-            ...properties,
-          },
+         &quot;event&quot;
+         &quot;page_view&quot;
+          {page_title: name
+            page_location: windo w.location.href
+            ...properties
+          }
         )
       }
 
@@ -92,56 +88,49 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
       }
   }
 
-  constvalue: AnalyticsContextType = {track,
-    identify,
-    page,
+  constvalue: AnalyticsContextType = {track
+    identify
+    page
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
 'use client';
 
 import { createContext, useContext, useEffect } from 'react';
 
 interface AnalyticsContextType {
-  track: (event: string, properties?: Record<string, any>) => void;
-  identify: (userId: string, traits?: Record<string, any>) => void;
-  page: (name: string, properties?: Record<string, any>) => void;
+  track: (event: string, properties?: Record<string, any>) => void
+  identify: (userId: string, traits?: Record<string, any>) => void
+  page: (name: string, properties?: Record<string, any>) => void
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
-<<<<<<< HEAD
-export const useAnalytics = () => {
-=======
 export const useAnalytics = () => {;
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
+export const useAnalytics = () => {;
   const context = useContext(AnalyticsContext);
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
-  return context;
+  return context
 };
 
 interface AnalyticsProviderProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
-<<<<<<< HEAD
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   // Initialize analytics
   useEffect(() => {
     if (typeof window !== 'undefined') {
       // Google Analytics
-      if (process.env.NODE_ENV === 'production') {
-=======
+      if (process.env.NODE_ENV === 'production') {;
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {;
   // Initialize analytics
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      // Google Analytics;
+      // Google Analytics
       if (process.env.NODE_ENV === 'production') {;
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
         const script = document.createElement('script');
-        script.async = true;
+        script.async = true
         script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID}`;
         document.head.appendChild(script);
 
@@ -155,11 +144,10 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
   }, []);
 
-<<<<<<< HEAD
   const track = (event: string, properties?: Record<string, any>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
-      if (window.gtag) {
+      if (window.gtag) {;
         window.gtag('event', event, properties);
       }
       
@@ -171,8 +159,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
   };
 
-  const identify = (userId: string, traits?: Record<string, any>) => {
-=======
+  const identify = (userId: string, traits?: Record<string, any>) => {;
   const track = (event: string, properties?: Record<string, any>) => {;
     if (typeof window !== 'undefined') {
       // Google Analytics
@@ -186,13 +173,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   };
 
   const identify = (userId: string, traits?: Record<string, any>) => {;
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
     if (typeof window !== 'undefined') {
       // Google Analytics
       if (window.gtag) {
         window.gtag('config', process.env.REACT_APP_GA_ID, {
-          user_id: userId,
-<<<<<<< HEAD
+          user_id: userId
           custom_map: traits
         });
       }
@@ -205,9 +190,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
   };
 
-  const page = (name: string, properties?: Record<string, any>) => {
-=======
-          custom_map: traits;
+  const page = (name: string, properties?: Record<string, any>) => {;
+          custom_map: traits
         });
       }
       
@@ -217,14 +201,12 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   };
 
   const page = (name: string, properties?: Record<string, any>) => {;
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
     if (typeof window !== 'undefined') {
       // Google Analytics
       if (window.gtag) {
         window.gtag('event', 'page_view', {
-          page_title: name,
-          page_location: window.location.href,
-<<<<<<< HEAD
+          page_title: name
+          page_location: window.location.href
           ...properties
         });
       }
@@ -238,11 +220,10 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   };
 
   const value: AnalyticsContextType = {
-    track,
-    identify,
+    track
+    identify
     page
-=======
-          ...properties;
+          ...properties
         });
       }
       
@@ -252,37 +233,31 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   };
 
   const value: AnalyticsContextType = {;
-    track,
-    identify,
-    page;
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
+    track
+    identify
+    page
   };
 
   return (
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
-<<<<<<< HEAD
-=======
   )
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
   );
 };
 
 // Extend Window interface for TypeScript
 declare global {
   interface Window {
-<<<<<<< HEAD
     dataLayer: any[];
-    gtag: (...args: any[]) => void;
-  }
-}
-=======
-    dataLayer: unknown[]
     gtag: (...args: any[]) => void
   }
 }
+    dataLayer: unknown[]
+    gtag: (...args: any[]) => void
+{  }
+{}
 'use client'
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -292,39 +267,38 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 const EnhancedAnalyticsPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      icon: Brain
+      title: 'AI-Powered Intelligence'
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
+    }
     {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      icon: BarChart
+      title: 'Advanced Analytics'
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
+    }
     {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
+      icon: Target
+      title: 'Precision Targeting'
+      description: 'Target specific goals and objectives with precision and accuracy.'
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
+    }
     {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+      icon: TrendingUp
+      title: 'Growth Optimization'
+      description: 'Optimize your business growth with data-driven strategies.'
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ]
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases',;
     'Gain competitive advantage with advanced technology';
   ];
-import React from 'react';
 
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
@@ -441,14 +415,13 @@ export default function AiCrmPage() {
           </Link>
         </div>
 >      </div>
-</>
+</>;
   );
 <};
 
-export default EnhancedAnalyticsPage;
+export default EnhancedAnalyticsPage
 }
 >    dataLayer: any[];
-    gtag: (...args: any[]) => void;
+    gtag: (...args: any[]) => void
 {  }
 {}
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d

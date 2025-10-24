@@ -24,6 +24,6 @@ export default function LandingPageBuilderPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

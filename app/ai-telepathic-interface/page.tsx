@@ -24,6 +24,6 @@ export default function AiTelepathicInterfacePage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

@@ -24,6 +24,6 @@ export default function AiMarketingPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

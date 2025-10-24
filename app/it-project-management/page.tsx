@@ -24,6 +24,6 @@ export default function ItProjectManagementPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

@@ -24,7 +24,7 @@ export default function NetworkInfrastructure5GPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }
 

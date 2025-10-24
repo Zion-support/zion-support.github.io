@@ -24,6 +24,6 @@ export default function ArVrSolutionsPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

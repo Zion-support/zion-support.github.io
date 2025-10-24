@@ -24,6 +24,6 @@ export default function AiContentStudioPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

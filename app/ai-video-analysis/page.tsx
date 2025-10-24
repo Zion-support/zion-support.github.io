@@ -24,6 +24,6 @@ export default function AiVideoAnalysisPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

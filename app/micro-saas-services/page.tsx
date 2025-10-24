@@ -24,6 +24,6 @@ export default function MicroSaasServicesPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

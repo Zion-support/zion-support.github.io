@@ -24,6 +24,6 @@ export default function AiClimatePredictionEnginePage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

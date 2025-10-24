@@ -24,6 +24,6 @@ export default function ZionAiContentModerationPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

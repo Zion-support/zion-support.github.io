@@ -24,6 +24,6 @@ export default function AiQuantumComputingPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

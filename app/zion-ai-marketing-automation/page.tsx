@@ -24,6 +24,6 @@ export default function ZionAiMarketingAutomationPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

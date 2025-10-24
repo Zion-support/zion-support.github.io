@@ -24,6 +24,6 @@ export default function AiCodeGenerationPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

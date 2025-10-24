@@ -24,6 +24,6 @@ export default function AiEnergyGridManagementProPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

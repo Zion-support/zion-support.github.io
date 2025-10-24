@@ -24,6 +24,6 @@ export default function DataProtectionPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

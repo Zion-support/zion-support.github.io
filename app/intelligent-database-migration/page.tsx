@@ -24,6 +24,6 @@ export default function IntelligentDatabaseMigrationPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

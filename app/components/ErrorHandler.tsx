@@ -10,41 +10,41 @@ import { Home } from 'lucide-react';
 const ErrorHandlerPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      icon: Brain
+      title: 'AI-Powered Intelligence'
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
+    }
     {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      icon: BarChart
+      title: 'Advanced Analytics'
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
+    }
     {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
+      icon: Target
+      title: 'Precision Targeting'
+      description: 'Target specific goals and objectives with precision and accuracy.'
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
+    }
     {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+      icon: TrendingUp
+      title: 'Growth Optimization'
+      description: 'Optimize your business growth with data-driven strategies.'
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ]
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ]
 
   return (
-    <>
+    <>;
       <Helmet>;
         <title>ErrorHandler</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced ErrorHandler solution for modern businesses.&quot; />
@@ -79,9 +79,9 @@ const ErrorHandlerPage: React.FC = () => {
   logErrorToService= (error: Error, errorInfo: ErrorInfo) => {// Example: Send to monitoring service
     try {
       // Replace with your actual error reportingserviceconsterrorData= {
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
+        message: error.message
+        stack: error.stack
+        componentStack: errorInfo.componentStack
         timestamp: new Date().toISOString()
       }
       // Send to your error reporting service here
@@ -92,8 +92,8 @@ const ErrorHandlerPage: React.FC = () => {
   }
 
   handleRetry= () => {this.setState({
-      hasError: false,
-      error: null,
+      hasError: false
+      error: null
       errorInfo: null
    })
   }
@@ -145,7 +145,7 @@ const ErrorHandlerPage: React.FC = () => {
               </button>
               <button
                 onClick={this.handleGoHome}
-                className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors&quot;
+                className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors&quot
               ></button>
                 <Home className=&quot;w-4 h-4 mr-2&quot; />
                 Go Home
@@ -182,17 +182,17 @@ const ErrorHandlerPage: React.FC = () => {
             </div>
           </div>
         </section>
-               className=&quot;flex items-center justify-center px-4 py-2 bg-blue-600text-white rounded-lghover:bg-blue-700transition-colors&quot;
+               className=&quot;flex items-center justify-center px-4 py-2 bg-blue-600text-white rounded-lghover:bg-blue-700transition-colors&quot
               ></
                 onClick={this.handleRetry}
-               className=&quot;flex items-center justify-center px-4 py-2 bg-blue-600text-white rounded-lghover:bg-blue-700transition-colors&quot;
+               className=&quot;flex items-center justify-center px-4 py-2 bg-blue-600text-white rounded-lghover:bg-blue-700transition-colors&quot
               ><RefreshCwclassName=&quot;w-4h-4mr-2&quot; />Try Again
             </butto><
                 onClick={this.handleGoHome}
-               className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot;
+               className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot
               ></
                 onClick={this.handleGoHome}
-               className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot;
+               className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600text-white rounded-lghover:bg-gray-700transition-colors&quot
               ><HomeclassName=&quot;w-4h-4mr-2&quot; />Go Home
             </butto></di></di></di>
       )
@@ -245,4 +245,4 @@ const ErrorHandlerPage: React.FC = () => {
   );
 {};
 
-export default ErrorHandlerPage;
+export default ErrorHandlerPage

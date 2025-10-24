@@ -6,7 +6,7 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
     // Preload critical resources
     const preloadCriticalResources = () => {;
       const criticalImages = [
-        '/images/hero-bg.jpg',
+        '/images/hero-bg.jpg',;
         '/images/logo.png';
       ];
       
@@ -14,7 +14,7 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
         const link = document.createElement('link');
         link.rel = 'preload';
         link.as = 'image';
-        link.href = src;
+        link.href = src
         document.head.appendChild(link);
       });
     };
@@ -25,7 +25,7 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
       const imageObserver = new IntersectionObserver((entries) => {;
         entries.forEach(entry => {
           if (entry.isIntersecting) {;
-            const img = entry.target as HTMLImageElement;
+            const img = entry.target as HTMLImageElement
             img.src = img.dataset.src || '';
             img.classList.remove('lazy');
             imageObserver.unobserve(img);
@@ -136,29 +136,29 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
   );
 };
 
-export default EnhancedPerformanceOptimizerPage;
+export default EnhancedPerformanceOptimizerPage
 {
-icon: Brain,
-title: 'AI-Powered Solutions',
-description: 'Advanced AI technology to transform your business operations and improve efficiency'},
-{icon: Zap,
-title: 'High Performance',
-description: 'Lightning-fast processing and real-time analytics for optimal results'},
-{icon: Shield,
-title: 'Enterprise Security',
-description: 'Bank-level security with encryption and compliance standards'},
-{icon: Globe,
-title: 'Global Reach',
+icon: Brain
+title: 'AI-Powered Solutions'
+description: 'Advanced AI technology to transform your business operations and improve efficiency'}
+{icon: Zap
+title: 'High Performance'
+description: 'Lightning-fast processing and real-time analytics for optimal results'}
+{icon: Shield
+title: 'Enterprise Security'
+description: 'Bank-level security with encryption and compliance standards'}
+{icon: Globe
+title: 'Global Reach'
 description: 'Worldwide deployment and support for international businesses'}
 ]
 constbenefits= [
-'Advanced AI technology integration',
-'Real-time processing and analytics',
-'Enterprise-grade security and compliance',
-'Scalable and flexible solutions',
-'2 4/7 technical support',
-'Easy integration with existing systems',
-'Cost-effective pricing plans',
+'Advanced AI technology integration'
+'Real-time processing and analytics'
+'Enterprise-grade security and compliance'
+'Scalable and flexible solutions'
+'2 4/7 technical support'
+'Easy integration with existing systems'
+'Cost-effective pricing plans'
 'Proven track record of success'
 ]
 return (
@@ -240,7 +240,7 @@ cls: number | null
 fcp: number | null
 ttfb: number | null
 }
-const EnhancedPerformanceOptimizer: React.FC = () => {
+const EnhancedPerformanceOptimizer: React.FC = () => {;
 const { trackEvent } = useAnalytics();
 const optimizeImages = useCallback(() => {;
 const images = document.querySelectorAll('img');
@@ -250,14 +250,14 @@ const images = document.querySelectorAll('img');
     // Lazy load non-critical CSS
     const lazyLoadCSS = () => {;
       const nonCriticalCSS = [
-        '/styles/animations.css',
+        '/styles/animations.css',;
         '/styles/print.css';
       ];
 
       nonCriticalCSS.forEach(href => {
         const link = document.createElement('link');
         link.rel = 'stylesheet';
-        link.href = href;
+        link.href = href
         link.media = 'print';
         link.onload = () => {
           link.media = 'all';
@@ -268,15 +268,15 @@ const images = document.querySelectorAll('img');
 
     // Preconnect to external domains
     const preconnectDomains = [
-      'https://fonts.googleapis.com',
-      'https://fonts.gstatic.com',
+      'https://fonts.googleapis.com'
+      'https://fonts.gstatic.com',;
       'https://www.google-analytics.com';
     ];
 
     preconnectDomains.forEach(domain => {
       const link = document.createElement('link');
       link.rel = 'preconnect';
-      link.href = domain;
+      link.href = domain
       document.head.appendChild(link);
     });
 
@@ -293,7 +293,7 @@ const images = document.querySelectorAll('img');
     };
   }, []);
 
-  return null;
+  return null
 };
 
-export default EnhancedPerformanceOptimizer;
+export default EnhancedPerformanceOptimizer

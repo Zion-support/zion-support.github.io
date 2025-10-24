@@ -24,6 +24,6 @@ export default function DataVisualizationPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

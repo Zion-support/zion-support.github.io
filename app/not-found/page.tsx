@@ -24,6 +24,6 @@ export default function NotFoundPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

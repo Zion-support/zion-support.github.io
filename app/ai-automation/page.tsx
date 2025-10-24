@@ -1,77 +1,74 @@
 import React from 'react';
 
 import Link from 'next/link';
-<<<<<<< HEAD
 import { 
-  ArrowRight, Zap, Brain, Settings, Globe, Users, Star, CheckCircle,
+  ArrowRight, Zap, Brain, Settings, Globe, Users, Star, CheckCircle
   Clock, Shield, TrendingUp, BarChart, MessageCircle, FileText, Cpu
 } from 'lucide-react';
 
 const AIAutomationPage: React.FC = () => {
   const features = [
     {
-      icon: Zap,
-      title: 'Workflow Automation',
+      icon: Zap
+      title: 'Workflow Automation'
       description: 'Automate complex business processes with intelligent workflow management.'
-    },
-    {
-      icon: Brain,
-      title: 'Intelligent Decision Making',
-      description: 'AI-powered decision making based on data analysis and business rules.'
-    },
-    {
-      icon: Settings,
-      title: 'Custom Integrations',
-      description: 'Seamlessly integrate with your existing systems and third-party applications.'
-    },
-    {
-      icon: Globe,
-      title: 'Scalable Solutions',
-      description: 'Automation solutions that grow with your business and adapt to changing needs.'
     }
+    {
+      icon: Brain
+      title: 'Intelligent Decision Making'
+      description: 'AI-powered decision making based on data analysis and business rules.'
+    }
+    {
+      icon: Settings
+      title: 'Custom Integrations'
+      description: 'Seamlessly integrate with your existing systems and third-party applications.'
+    }
+    {
+      icon: Globe
+      title: 'Scalable Solutions'
+      description: 'Automation solutions that grow with your business and adapt to changing needs.'
+    };
   ];
 
   const useCases = [
     {
-      title: 'Customer Service',
-      description: 'Automate ticket routing, response generation, and issue resolution.',
+      title: 'Customer Service'
+      description: 'Automate ticket routing, response generation, and issue resolution.'
       icon: Users
-    },
-    {
-      title: 'Data Processing',
-      description: 'Automate data collection, validation, and analysis workflows.',
-      icon: BarChart
-    },
-    {
-      title: 'Marketing Automation',
-      description: 'Automate email campaigns, lead scoring, and customer segmentation.',
-      icon: MessageCircle
-    },
-    {
-      title: 'Financial Operations',
-      description: 'Automate invoice processing, expense management, and financial reporting.',
-      icon: FileText
     }
+    {
+      title: 'Data Processing'
+      description: 'Automate data collection, validation, and analysis workflows.'
+      icon: BarChart
+    }
+    {
+      title: 'Marketing Automation'
+      description: 'Automate email campaigns, lead scoring, and customer segmentation.'
+      icon: MessageCircle
+    }
+    {
+      title: 'Financial Operations'
+      description: 'Automate invoice processing, expense management, and financial reporting.'
+      icon: FileText
+    };
   ];
 
   const benefits = [
-    'Reduce operational costs by up to 70%',
-    'Increase productivity and efficiency',
-    'Eliminate human errors in repetitive tasks',
-    '24/7 automated operations',
-    'Scalable and adaptable solutions',
-    'ROI within 3-6 months'
+    'Reduce operational costs by up to 70%'
+    'Increase productivity and efficiency'
+    'Eliminate human errors in repetitive tasks'
+    '24/7 automated operations'
+    'Scalable and adaptable solutions'
+    'ROI within 3-6 months';
   ];
 
   const stats = [
-    { number: '70%', label: 'Cost Reduction', icon: TrendingUp },
-    { number: '24/7', label: 'Automated Operations', icon: Clock },
-    { number: '99.9%', label: 'Accuracy Rate', icon: Shield },
-    { number: '3-6', label: 'Months ROI', icon: Star }
+    { number: '70%', label: 'Cost Reduction', icon: TrendingUp }
+    { number: '24/7', label: 'Automated Operations', icon: Clock }
+    { number: '99.9%', label: 'Accuracy Rate', icon: Shield }
+    { number: '3-6', label: 'Months ROI', icon: Star };
   ];
-=======
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
 
 export default function AiAutomationPage() {
   return (
@@ -94,6 +91,6 @@ export default function AiAutomationPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

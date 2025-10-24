@@ -24,6 +24,6 @@ export default function PredictiveMaintenancePage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

@@ -24,6 +24,6 @@ export default function ZionComplianceManagerPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

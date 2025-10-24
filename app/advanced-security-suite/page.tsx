@@ -22,8 +22,7 @@ export default function AdvancedSecuritySuitePage() {
             Contact Us
             <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
-        </div>
       </div>
-</>
+    </div>
   );
 }

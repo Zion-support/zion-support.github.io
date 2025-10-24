@@ -24,6 +24,6 @@ export default function PenetrationTestingPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

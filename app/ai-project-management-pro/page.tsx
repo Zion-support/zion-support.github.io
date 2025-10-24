@@ -24,6 +24,6 @@ export default function AiProjectManagementProPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

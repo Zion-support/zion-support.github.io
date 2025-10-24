@@ -24,6 +24,6 @@ export default function AiContentWriterProPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

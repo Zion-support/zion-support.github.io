@@ -24,6 +24,6 @@ export default function HealthcareItPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

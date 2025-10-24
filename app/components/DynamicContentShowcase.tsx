@@ -15,30 +15,30 @@ interface Testimonial {
   avatar?: string
 }
 
-const DynamicContentShowcase: React.FC = () => {
+const DynamicContentShowcase: React.FC = () => {;
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
   const testimonials: Testimonial[] = [;
     {
-      id: 1,
-      name: "Sarah Johnson",
-      company: "TechCorp",
-      content: "Zion Tech Group transformed our AI capabilities. Their solutions increased our operational efficiency by 40%.",
+      id: 1
+      name: "Sarah Johnson"
+      company: "TechCorp"
+      content: "Zion Tech Group transformed our AI capabilities. Their solutions increased our operational efficiency by 40%."
       rating: 5
-    },
+    }
     {
-      id: 2,
-      name: "Michael Chen",
-      company: "InnovateLab",
-      content: "The micro SaaS platform they built for us has been a game-changer. Highly recommend their services.",
+      id: 2
+      name: "Michael Chen"
+      company: "InnovateLab"
+      content: "The micro SaaS platform they built for us has been a game-changer. Highly recommend their services."
       rating: 5
-    },
+    }
     {
-      id: 3,
-      name: "Emily Rodriguez",
-      company: "StartupXYZ",
-      content: "The micro SaaS solutions they provided helped us scale faster than we ever imagined possible.",
+      id: 3
+      name: "Emily Rodriguez"
+      company: "StartupXYZ"
+      content: "The micro SaaS solutions they provided helped us scale faster than we ever imagined possible."
       rating: 5
     }
   ]
@@ -54,24 +54,24 @@ const DynamicContentShowcase: React.FC = () => {
 
   const features = [
     {
-      icon: <Brain className="h-8 w-8" />,
-      title: "AI-Powered Solutions",
-      description: "Advanced artificial intelligence to transform your business operations",
+      icon: <Brain className="h-8 w-8" />
+      title: "AI-Powered Solutions"
+      description: "Advanced artificial intelligence to transform your business operations"
       color: "from-blue-500 to-cyan-500"
-    },
+    }
     {
-      icon: <Shield className="h-8 w-8" />,
-      title: "Cybersecurity",
-      description: "Comprehensive security solutions to protect your digital assets",
+      icon: <Shield className="h-8 w-8" />
+      title: "Cybersecurity"
+      description: "Comprehensive security solutions to protect your digital assets"
       color: "from-green-500 to-emerald-500"
-    },
+    }
     {
-      icon: <Zap className="h-8 w-8" />,
-      title: "Automation",
-      description: "Streamline processes and increase efficiency with smart automation",
+      icon: <Zap className="h-8 w-8" />
+      title: "Automation"
+      description: "Streamline processes and increase efficiency with smart automation"
       color: "from-purple-500 to-pink-500"
     }
-  ]
+  ];
 ;
   return (;
     <div className=&quot;bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot;></div>
@@ -181,7 +181,7 @@ const DynamicContentShowcase: React.FC = () => {
                   ))}
                 </div>
                 <blockquote className=&quot;text-xl text-gray-300 mb-8 max-w-4xl mx-auto&quot;>
-                  &quot;{currentTestimonial.content}&quot;
+                  &quot;{currentTestimonial.content}&quot
                 </blockquote>
                 <div className=&quot;flex items-center justify-center gap-4&quot;></div>
                   <div className=&quot;w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center&quot;></div>
@@ -334,4 +334,4 @@ const DynamicContentShowcase: React.FC = () => {
   )
 }
 
-export default DynamicContentShowcase;
+export default DynamicContentShowcase

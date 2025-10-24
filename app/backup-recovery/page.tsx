@@ -24,6 +24,6 @@ export default function BackupRecoveryPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

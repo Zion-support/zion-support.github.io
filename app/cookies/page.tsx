@@ -24,6 +24,6 @@ export default function CookiesPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

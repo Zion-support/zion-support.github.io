@@ -24,6 +24,6 @@ export default function DatabaseManagementPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

@@ -24,6 +24,6 @@ export default function ProjectManagementProPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

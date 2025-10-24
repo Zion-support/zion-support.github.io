@@ -24,6 +24,6 @@ export default function TutorialsPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

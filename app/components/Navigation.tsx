@@ -1,44 +1,39 @@
-<<<<<<< HEAD
 'use client';
-=======
 "use client"
 
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
-  Bars3Icon, 
-  XMarkIcon,
-  HomeIcon,
-  InformationCircleIcon,
-  BriefcaseIcon,
-  PhoneIcon,
-  DocumentTextIcon,
-  AcademicCapIcon,
-  PlayIcon,
-  QuestionMarkCircleIcon,
-  ShieldCheckIcon,
-  CurrencyDollarIcon,
-  CogIcon,
-  ChevronDownIcon,
+  Bars3Icon
+  XMarkIcon
+  HomeIcon
+  InformationCircleIcon
+  BriefcaseIcon
+  PhoneIcon
+  DocumentTextIcon
+  AcademicCapIcon
+  PlayIcon
+  QuestionMarkCircleIcon
+  ShieldCheckIcon
+  CurrencyDollarIcon
+  CogIcon
+  ChevronDownIcon,;
 } from '@heroicons/react/24/outline';
-<<<<<<< HEAD
 import { Brain, ArrowRight, Mail } from 'lucide-react';
 
-const Navigation: React.FC = () => {
+const Navigation: React.FC = () => {;
   const [isOpen, setIsOpen] = useState(false);
 
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Team', href: '/team' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'Home', href: '/' }
+    { name: 'About', href: '/about' }
+    { name: 'Services', href: '/services' }
+    { name: 'Team', href: '/team' }
+    { name: 'Contact', href: '/contact' };
   ];
-=======
 
-const Navigation: React.FC = () => {
+const Navigation: React.FC = () => {;
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -54,34 +49,33 @@ const Navigation: React.FC = () => {
   }, []);
 
   const navigation = [
-    { name: 'Home', href: '/', icon: HomeIcon },
-    { name: 'About', href: '/about', icon: InformationCircleIcon },
+    { name: 'Home', href: '/', icon: HomeIcon }
+    { name: 'About', href: '/about', icon: InformationCircleIcon }
     { 
-      name: 'Services', 
-      href: '/services', 
-      icon: BriefcaseIcon,
+      name: 'Services'
+      href: '/services'
+      icon: BriefcaseIcon
       submenu: [
-        { name: 'AI Solutions', href: '/ai-solutions' },
-        { name: 'Cybersecurity', href: '/cybersecurity' },
-        { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
-        { name: 'Digital Transformation', href: '/digital-transformation' },
-        { name: '5G Solutions', href: '/5g-solutions' },
+        { name: 'AI Solutions', href: '/ai-solutions' }
+        { name: 'Cybersecurity', href: '/cybersecurity' }
+        { name: 'Cloud Infrastructure', href: '/cloud-solutions' }
+        { name: 'Digital Transformation', href: '/digital-transformation' }
+        { name: '5G Solutions', href: '/5g-solutions' }
         { name: 'Micro SaaS', href: '/micro-saas' }
       ]
-    },
-    { name: 'Solutions', href: '/solutions', icon: CogIcon },
-    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
-    { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
-    { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
-    { name: 'Demo', href: '/demo', icon: PlayIcon },
-    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
-    { name: 'Contact', href: '/contact', icon: PhoneIcon },
+    }
+    { name: 'Solutions', href: '/solutions', icon: CogIcon }
+    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon }
+    { name: 'Blog', href: '/blog', icon: DocumentTextIcon }
+    { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon }
+    { name: 'Demo', href: '/demo', icon: PlayIcon }
+    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon }
+    { name: 'Contact', href: '/contact', icon: PhoneIcon },;
   ];
 
   const isActive = (path: string) => {;
-    return pathname === path;
+    return pathname === path
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -100,7 +94,7 @@ const Navigation: React.FC = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => {
-              const Icon = item.icon;
+              const Icon = item.icon
               return (
                 <div key={item.name} className="relative group">
                   <Link
@@ -146,7 +140,6 @@ const Navigation: React.FC = () => {
             </Link>
           </div>
 
-<<<<<<< HEAD
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
             <a
@@ -170,13 +163,11 @@ const Navigation: React.FC = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white p-2"
-=======
           {/* Mobile menu button */}
           <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-400 hover:text-white hover:bg-gray-700 p-2 rounded-md transition-colors duration-200"
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
             >
               {isOpen ? <XMarkIcon className="w-6 h-6" /> : <Bars3Icon className="w-6 h-6" />}
             </button>
@@ -188,7 +179,7 @@ const Navigation: React.FC = () => {
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg mt-2">
               {navigation.map((item) => {
-                const Icon = item.icon;
+                const Icon = item.icon
                 return (
                   <div key={item.name}>
                     <Link
@@ -236,4 +227,4 @@ const Navigation: React.FC = () => {
   );
 };
 
-export default Navigation;
+export default Navigation

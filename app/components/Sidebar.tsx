@@ -10,41 +10,41 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 const SidebarPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      icon: Brain
+      title: 'AI-Powered Intelligence'
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
+    }
     {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      icon: BarChart
+      title: 'Advanced Analytics'
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
+    }
     {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
+      icon: Target
+      title: 'Precision Targeting'
+      description: 'Target specific goals and objectives with precision and accuracy.'
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
+    }
     {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+      icon: TrendingUp
+      title: 'Growth Optimization'
+      description: 'Optimize your business growth with data-driven strategies.'
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ]
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ]
 
   return (
-    <>
+    <>;
       <Helmet>;
         <title>Sidebar</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced Sidebar solution for modern businesses.&quot; />
@@ -146,23 +146,23 @@ const SidebarPage: React.FC = () => {
   );
 };
 
-export default SidebarPage;
-Menu,
-Home,
-Users,
-Settings,
-Brain,
-Cloud,
-Shield,
-Code,
-BarChart,
-ChevronDown,
-ChevronRight,
-Phone,
-Mail,
+export default SidebarPage
+Menu
+Home
+Users
+Settings
+Brain
+Cloud
+Shield
+Code
+BarChart
+ChevronDown
+ChevronRight
+Phone
+Mail
 {MapPin,Clock;}
 {} from 'lucide-react'
-constSidebar: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
+constSidebar: React.FC= () =>{const [isOpensetIsOpen] = useState(false);
 const [expandedSectionssetExpandedSections]=useState<Set<strin g>>(new Set(['ai-services', 'micro-saas', 'it-services']));
 constlocation= useLocation()
 useEffect(() => {
@@ -187,86 +187,86 @@ newExpanded.delete(section);}
 setExpandedSections(newExpanded)
 {}
 constnavigationSections= [
-{title: 'Main',
+{title: 'Main'
 items: [
-{ name: 'Home', path: '/', icon: Home},
-{name: 'About', path: '/about', icon: Users},
-{name: 'Services', path: '/services', icon: Settings},
-{name: 'Contact', path: '/contact', icon: Phone},
-{name: 'Blog', path: '/blog', icon: BarChart},
-{name: 'Case Studies', path: '/case-studies', icon: BarChart},
+{ name: 'Home', path: '/', icon: Home}
+{name: 'About', path: '/about', icon: Users}
+{name: 'Services', path: '/services', icon: Settings}
+{name: 'Contact', path: '/contact', icon: Phone}
+{name: 'Blog', path: '/blog', icon: BarChart}
+{name: 'Case Studies', path: '/case-studies', icon: BarChart}
 ]
-},
-{title: 'AI Services',
-key: 'ai-services',
+}
+{title: 'AI Services'
+key: 'ai-services'
 items: [
-{ name: 'AI Services Overview', path: '/ai-services', icon: Brain},
-{name: 'Business Intelligence', path: '/ai-services/business-intelligence', icon: BarChart},
-{name: 'Document Processing', path: '/ai-services/do cument-processing', icon: Settings},
-{name: 'Customer Experience', path: '/ai-services/customer-experience', icon: Users},
-{name: 'Marketing Automation', path: '/ai-services/marketing-automation', icon: Settings},
-{name: 'Predictive Maintenance', path: '/ai-services/predictive-maintenance', icon: Settings},
-{name: 'Supply Chain', path: '/ai-services/supply-chain', icon: Settings},
-{name: 'Fraud Detection', path: '/ai-services/fraud-detection', icon: Shield},
-{name: 'Content Generation', path: '/ai-services/content-generation', icon: Settings},
-{name: 'HR Analytics', path: '/ai-services/hr-analytics', icon: BarChart},
-{name: 'Process Automation', path: '/ai-services/process-automation', icon: Settings},
-{name: 'Quality Assurance', path: '/ai-services/quality-assurance', icon: Shield},
-{name: 'Energy Management', path: '/ai-services/energy-management', icon: Settings},
+{ name: 'AI Services Overview', path: '/ai-services', icon: Brain}
+{name: 'Business Intelligence', path: '/ai-services/business-intelligence', icon: BarChart}
+{name: 'Document Processing', path: '/ai-services/do cument-processing', icon: Settings}
+{name: 'Customer Experience', path: '/ai-services/customer-experience', icon: Users}
+{name: 'Marketing Automation', path: '/ai-services/marketing-automation', icon: Settings}
+{name: 'Predictive Maintenance', path: '/ai-services/predictive-maintenance', icon: Settings}
+{name: 'Supply Chain', path: '/ai-services/supply-chain', icon: Settings}
+{name: 'Fraud Detection', path: '/ai-services/fraud-detection', icon: Shield}
+{name: 'Content Generation', path: '/ai-services/content-generation', icon: Settings}
+{name: 'HR Analytics', path: '/ai-services/hr-analytics', icon: BarChart}
+{name: 'Process Automation', path: '/ai-services/process-automation', icon: Settings}
+{name: 'Quality Assurance', path: '/ai-services/quality-assurance', icon: Shield}
+{name: 'Energy Management', path: '/ai-services/energy-management', icon: Settings}
 ]
-},
-{title: 'Micro SaaS',
-key: 'micro-saas',
+}
+{title: 'Micro SaaS'
+key: 'micro-saas'
 items: [
-{ name: 'Micro SaaS Overview', path: '/micro-saas', icon: Settings},
-{name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard', icon: BarChart},
-{name: 'Support Bot', path: '/micro-saas/support-bot', icon: Users},
-{name: 'Social Manager', path: '/micro-saas/social-manager', icon: Settings},
-{name: 'Email Marketing', path: '/micro-saas/email-marketing', icon: Mail},
-{name: 'Inventory Management', path: '/micro-saas/inventory-management', icon: Settings},
-{name: 'Lead Scoring', path: '/micro-saas/lead-scoring', icon: BarChart},
-{name: 'Document Processor', path: '/micro-saas/do cument-processor', icon: Settings},
-{name: 'SEO Optimizer', path: '/micro-saas/seo-optimizer', icon: Settings},
-{name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler', icon: Clock},
-{name: 'Chat Analytics', path: '/micro-saas/chat-analytics', icon: BarChart},
-{name: 'Expense Tracker', path: '/micro-saas/expense-tracker', icon: BarChart},
-{name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings},
+{ name: 'Micro SaaS Overview', path: '/micro-saas', icon: Settings}
+{name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard', icon: BarChart}
+{name: 'Support Bot', path: '/micro-saas/support-bot', icon: Users}
+{name: 'Social Manager', path: '/micro-saas/social-manager', icon: Settings}
+{name: 'Email Marketing', path: '/micro-saas/email-marketing', icon: Mail}
+{name: 'Inventory Management', path: '/micro-saas/inventory-management', icon: Settings}
+{name: 'Lead Scoring', path: '/micro-saas/lead-scoring', icon: BarChart}
+{name: 'Document Processor', path: '/micro-saas/do cument-processor', icon: Settings}
+{name: 'SEO Optimizer', path: '/micro-saas/seo-optimizer', icon: Settings}
+{name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler', icon: Clock}
+{name: 'Chat Analytics', path: '/micro-saas/chat-analytics', icon: BarChart}
+{name: 'Expense Tracker', path: '/micro-saas/expense-tracker', icon: BarChart}
+{name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings}
 ]
-},
-{title: 'IT Services',
-key: 'it-services',
+}
+{title: 'IT Services'
+key: 'it-services'
 items: [
-{ name: 'IT Services Overview', path: '/it-services', icon: Code},
-{name: 'IT Consulting', path: '/it-consulting', icon: Users},
-{name: 'IT Infrastructure', path: '/it-infrastructure', icon: Settings},
-{name: 'IT Support', path: '/it-support', icon: Users},
-{name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: Cloud},
-{name: 'Cloud Migration', path: '/cloud-migration', icon: Cloud},
-{name: 'Cybersecurity', path: '/cybersecurity', icon: Shield},
-{name: 'Database Management', path: '/database-management', icon: Settings},
-{name: 'Managed IT', path: '/managed-it', icon: Settings},
+{ name: 'IT Services Overview', path: '/it-services', icon: Code}
+{name: 'IT Consulting', path: '/it-consulting', icon: Users}
+{name: 'IT Infrastructure', path: '/it-infrastructure', icon: Settings}
+{name: 'IT Support', path: '/it-support', icon: Users}
+{name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: Cloud}
+{name: 'Cloud Migration', path: '/cloud-migration', icon: Cloud}
+{name: 'Cybersecurity', path: '/cybersecurity', icon: Shield}
+{name: 'Database Management', path: '/database-management', icon: Settings}
+{name: 'Managed IT', path: '/managed-it', icon: Settings}
 ]
-},
-{title: 'Company',
+}
+{title: 'Company'
 items: [
-{ name: 'Team', path: '/team', icon: Users},
-{name: 'Careers', path: '/careers', icon: Users},
-{name: 'Consultation', path: '/consultation', icon: Phone},
-{name: 'Pricing', path: '/pricing', icon: BarChart},
+{ name: 'Team', path: '/team', icon: Users}
+{name: 'Careers', path: '/careers', icon: Users}
+{name: 'Consultation', path: '/consultation', icon: Phone}
+{name: 'Pricing', path: '/pricing', icon: BarChart}
 ]
-},
-{title: 'Resources',
+}
+{title: 'Resources'
 items: [
-{ name: 'Documentation', path: '/do cs', icon: Settings},
-{name: 'API Docs', path: '/api-do cs', icon: Code},
-{name: 'Support', path: '/support', icon: Users},
-{name: 'Status', path: '/status', icon: Settings},
+{ name: 'Documentation', path: '/do cs', icon: Settings}
+{name: 'API Docs', path: '/api-do cs', icon: Code}
+{name: 'Support', path: '/support', icon: Users}
+{name: 'Status', path: '/status', icon: Settings}
 ]
 }
 ]
-constcontactInfo= {phone: '(30 2) 46 4-095 0',
-email: 'kleber@ziontechgroup.com',
-address: '364 E Main St STE 1008 Middletown, DE 19709',
+constcontactInfo= {phone: '(30 2) 46 4-095 0'
+email: 'kleber@ziontechgroup.com'
+address: '364 E Main St STE 1008 Middletown, DE 19709'
 hours: 'Mon-Fri 9AM-6PM EST'
 }
 return (
@@ -274,8 +274,8 @@ return (
 {/* Mobile Menu Button */}
 <button
 onClick={() =></button> setIsOpen(true)}
-className=&quot;lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all&quot;
-aria-label=&quot;Open sidebar&quot;
+className=&quot;lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all&quot
+aria-label=&quot;Open sidebar&quot
 >
 <Menu className=&quot;w-6 h-6&quot; />
 </button>
@@ -304,8 +304,8 @@ isOpen ? 'translate-x-0' : '-translate-x-full'
 </Link>
 <button
 onClick={() =></button> setIsOpen(false)}
-className=&quot;lg:hidden text-gray-400 hover:text-white transition-colors&quot;
-aria-label=&quot;Close sidebar&quot;
+className=&quot;lg:hidden text-gray-400 hover:text-white transition-colors&quot
+aria-label=&quot;Close sidebar&quot
 >
 <X className=&quot;w-6 h-6&quot; />
 </button>

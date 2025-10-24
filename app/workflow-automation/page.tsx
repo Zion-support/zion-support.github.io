@@ -24,6 +24,6 @@ export default function WorkflowAutomationPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

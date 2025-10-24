@@ -24,6 +24,6 @@ export default function RoboticsIntegrationPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

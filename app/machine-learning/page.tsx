@@ -24,6 +24,6 @@ export default function MachineLearningPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

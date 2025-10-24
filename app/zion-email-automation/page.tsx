@@ -24,6 +24,6 @@ export default function ZionEmailAutomationPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

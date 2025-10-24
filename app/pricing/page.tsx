@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client"
 
 import React from "react"
@@ -18,9 +17,8 @@ export default function PricingPage() {
         </div>
       </main>
       <Footer />
-    </div>
-  )
-=======
+    </div>;
+  );
 import React from 'react';
 
 import Link from 'next/link';
@@ -47,7 +45,6 @@ export default function PricingPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
 }

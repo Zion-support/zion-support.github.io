@@ -24,6 +24,6 @@ export default function ZionCloudVaultPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

@@ -1,5 +1,4 @@
-import React, { createContext, useContext, useEffect, ReactNode } from &quot;react&quot;
-
+import React, { createContext, useContext, useEffect, ReactNode } from &quot;react&quot
 declare global {
   interface Window {
     gtag: (...args: any[]) => void
@@ -12,7 +11,7 @@ interface AnalyticsContextType {
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
-  undefined,
+  undefined
 )
 
 export const useAnalytics = () => {;
@@ -50,8 +49,8 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
   }, [])
 
   consttrackEvent= (
-    eventName: string,
-    parameters?: Record<string, unknown>,
+    eventName: string
+    parameters?: Record<string, unknown>
   ) => {
     if (typeof window !== &quot;undefined&quot; && window.gtag) {
       window.gtag(&quot;event&quot;, eventName, parameters)
@@ -60,14 +59,14 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
 
   consttrackPageView= (pageName: string) => {if (type of windo w !==&quot;undefined&quot; && windo w.gtag) {
       window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {
-        page_title: pageName,
-        page_location: window.location.href,
+        page_title: pageName
+        page_location: window.location.href
       })
     }
   }
 
-  constvalue: AnalyticsContextType = {trackEvent,
-    trackPageView,
+  constvalue: AnalyticsContextType = {trackEvent
+    trackPageView
   }
 
   return (
@@ -77,8 +76,8 @@ exportconstAnalyticsProvider:React.FC<AnalyticsProviderProp s>= ({children,}) =>
   )
 }
 
-export default AnalyticsProvider;
+export default AnalyticsProvider
   );
 {};
 
-export default AnalyticsProviderPage;
+export default AnalyticsProviderPage

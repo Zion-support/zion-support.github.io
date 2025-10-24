@@ -1,212 +1,211 @@
-<<<<<<< HEAD
 'use client';
 import Link from 'next/link';
 import { Brain, BarChart3, Shield, Target, Zap, Globe, DollarSign, Calculator, Activity, TrendingUp, Lock, Building2, Database, FileText, CreditCard, Wallet, ArrowRight, CheckCircle, Star, Sparkles, PieChart } from 'lucide-react';
 export default function AiFinancialAnalyticsProPage() {
   const features = [
     {
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      title: 'AI-Powered Insights',
-      description: 'Advanced machine learning algorithms analyze your financial data to provide actionable insights',
+      icon: <Brain className="w-8 h-8 text-cyan-400" />
+      title: 'AI-Powered Insights'
+      description: 'Advanced machine learning algorithms analyze your financial data to provide actionable insights'
       benefits: ['Predictive analytics', 'Risk assessment', 'Trend identification', 'Anomaly detection']
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8 text-purple-400" />,
-      title: 'Real-Time Analytics',
-      description: 'Monitor your financial performance with live dashboards and instant reporting',
-      benefits: ['Live data feeds', 'Instant alerts', 'Real-time KPIs', 'Dynamic reporting']
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-green-400" />,
-      title: 'Enterprise Security',
-      description: 'Bank-grade security with end-to-end encryption and compliance standards',
-      benefits: ['256-bit encryption', 'SOC 2 compliance', 'GDPR ready', 'Audit trails']
-    },
-    {
-      icon: <Target className="w-8 h-8 text-orange-400" />,
-      title: 'Custom Dashboards',
-      description: 'Create personalized financial dashboards tailored to your business needs',
-      benefits: ['Drag-and-drop builder', 'Custom widgets', 'Role-based views', 'Mobile optimization']
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
-      title: 'Automated Reporting',
-      description: 'Generate comprehensive financial reports automatically with AI-driven insights',
-      benefits: ['Scheduled reports', 'Custom templates', 'Multi-format export', 'Email delivery']
-    },
-    {
-      icon: <Globe className="w-8 h-8 text-blue-400" />,
-      title: 'Multi-Currency Support',
-      description: 'Handle multiple currencies and global financial operations seamlessly',
-      benefits: ['Real-time exchange rates', 'Currency conversion', 'Global compliance', 'Tax calculations']
     }
+    {
+      icon: <BarChart3 className="w-8 h-8 text-purple-400" />
+      title: 'Real-Time Analytics'
+      description: 'Monitor your financial performance with live dashboards and instant reporting'
+      benefits: ['Live data feeds', 'Instant alerts', 'Real-time KPIs', 'Dynamic reporting']
+    }
+    {
+      icon: <Shield className="w-8 h-8 text-green-400" />
+      title: 'Enterprise Security'
+      description: 'Bank-grade security with end-to-end encryption and compliance standards'
+      benefits: ['256-bit encryption', 'SOC 2 compliance', 'GDPR ready', 'Audit trails']
+    }
+    {
+      icon: <Target className="w-8 h-8 text-orange-400" />
+      title: 'Custom Dashboards'
+      description: 'Create personalized financial dashboards tailored to your business needs'
+      benefits: ['Drag-and-drop builder', 'Custom widgets', 'Role-based views', 'Mobile optimization']
+    }
+    {
+      icon: <Zap className="w-8 h-8 text-yellow-400" />
+      title: 'Automated Reporting'
+      description: 'Generate comprehensive financial reports automatically with AI-driven insights'
+      benefits: ['Scheduled reports', 'Custom templates', 'Multi-format export', 'Email delivery']
+    }
+    {
+      icon: <Globe className="w-8 h-8 text-blue-400" />
+      title: 'Multi-Currency Support'
+      description: 'Handle multiple currencies and global financial operations seamlessly'
+      benefits: ['Real-time exchange rates', 'Currency conversion', 'Global compliance', 'Tax calculations'];
+    };
   ];
   const analyticsTypes = [
     {
-      category: 'Revenue Analytics',
-      icon: <DollarSign className="w-6 h-6 text-green-400" />,
+      category: 'Revenue Analytics'
+      icon: <DollarSign className="w-6 h-6 text-green-400" />
       items: [
-        'Revenue forecasting',
-        'Sales performance tracking',
-        'Customer lifetime value',
-        'Revenue optimization',
+        'Revenue forecasting'
+        'Sales performance tracking'
+        'Customer lifetime value'
+        'Revenue optimization'
         'Market share analysis'
       ]
-    },
+    }
     {
-      category: 'Expense Management',
-      icon: <Calculator className="w-6 h-6 text-blue-400" />,
+      category: 'Expense Management'
+      icon: <Calculator className="w-6 h-6 text-blue-400" />
       items: [
-        'Cost center analysis',
-        'Budget variance tracking',
-        'Expense categorization',
-        'Spend optimization',
+        'Cost center analysis'
+        'Budget variance tracking'
+        'Expense categorization'
+        'Spend optimization'
         'Vendor performance'
       ]
-    },
+    }
     {
-      category: 'Cash Flow Analysis',
-      icon: <Activity className="w-6 h-6 text-purple-400" />,
+      category: 'Cash Flow Analysis'
+      icon: <Activity className="w-6 h-6 text-purple-400" />
       items: [
-        'Cash flow forecasting',
-        'Working capital analysis',
-        'Liquidity management',
-        'Payment optimization',
+        'Cash flow forecasting'
+        'Working capital analysis'
+        'Liquidity management'
+        'Payment optimization'
         'Credit risk assessment'
       ]
-    },
+    }
     {
-      category: 'Investment Analytics',
-      icon: <TrendingUp className="w-6 h-6 text-yellow-400" />,
+      category: 'Investment Analytics'
+      icon: <TrendingUp className="w-6 h-6 text-yellow-400" />
       items: [
-        'Portfolio performance',
-        'Risk-return analysis',
-        'Asset allocation',
-        'Investment tracking',
+        'Portfolio performance'
+        'Risk-return analysis'
+        'Asset allocation'
+        'Investment tracking'
         'ROI calculations'
       ]
-    },
+    }
     {
-      category: 'Compliance & Audit',
-      icon: <Lock className="w-6 h-6 text-red-400" />,
+      category: 'Compliance & Audit'
+      icon: <Lock className="w-6 h-6 text-red-400" />
       items: [
-        'Regulatory compliance',
-        'Audit trail management',
-        'Financial controls',
-        'Risk monitoring',
+        'Regulatory compliance'
+        'Audit trail management'
+        'Financial controls'
+        'Risk monitoring'
         'Documentation'
       ]
-    },
+    }
     {
-      category: 'Predictive Modeling',
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
+      category: 'Predictive Modeling'
+      icon: <Brain className="w-6 h-6 text-cyan-400" />
       items: [
-        'Financial forecasting',
-        'Scenario planning',
-        'Risk modeling',
-        'Market predictions',
+        'Financial forecasting'
+        'Scenario planning'
+        'Risk modeling'
+        'Market predictions'
         'Trend analysis'
       ]
-    }
+    };
   ];
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$199',
-      period: '/month',
-      description: 'Perfect for small businesses and startups',
+      name: 'Starter'
+      price: '$199'
+      period: '/month'
+      description: 'Perfect for small businesses and startups'
       features: [
-        'Up to 5 data sources',
-        'Basic analytics dashboard',
-        'Monthly reports',
-        'Email support',
-        'Standard integrations',
+        'Up to 5 data sources'
+        'Basic analytics dashboard'
+        'Monthly reports'
+        'Email support'
+        'Standard integrations'
         '1GB data storage'
-      ],
-      popular: false,
+      ]
+      popular: false
       cta: 'Start Free Trial'
-    },
-    {
-      name: 'Professional',
-      price: '$499',
-      period: '/month',
-      description: 'Ideal for growing businesses and finance teams',
-      features: [
-        'Unlimited data sources',
-        'Advanced analytics suite',
-        'Real-time dashboards',
-        'Priority support',
-        'Custom integrations',
-        '10GB data storage',
-        'AI-powered insights',
-        'Custom reporting'
-      ],
-      popular: true,
-      cta: 'Get Started'
-    },
-    {
-      name: 'Enterprise',
-      price: '$1,299',
-      period: '/month',
-      description: 'For large organizations with complex financial needs',
-      features: [
-        'Everything in Professional',
-        'Custom AI models',
-        'White-label options',
-        'Dedicated support',
-        'Unlimited storage',
-        'API access',
-        'On-premise deployment',
-        'Custom compliance'
-      ],
-      popular: false,
-      cta: 'Contact Sales'
     }
+    {
+      name: 'Professional'
+      price: '$499'
+      period: '/month'
+      description: 'Ideal for growing businesses and finance teams'
+      features: [
+        'Unlimited data sources'
+        'Advanced analytics suite'
+        'Real-time dashboards'
+        'Priority support'
+        'Custom integrations'
+        '10GB data storage'
+        'AI-powered insights'
+        'Custom reporting'
+      ]
+      popular: true
+      cta: 'Get Started'
+    }
+    {
+      name: 'Enterprise'
+      price: '$1,299'
+      period: '/month'
+      description: 'For large organizations with complex financial needs'
+      features: [
+        'Everything in Professional'
+        'Custom AI models'
+        'White-label options'
+        'Dedicated support'
+        'Unlimited storage'
+        'API access'
+        'On-premise deployment'
+        'Custom compliance'
+      ]
+      popular: false
+      cta: 'Contact Sales'
+    };
   ];
   const testimonials = [
     {
-      name: 'Jennifer Walsh',
-      company: 'FinTech Solutions',
-      role: 'CFO',
-      content: 'AI Financial Analytics Pro has transformed our financial reporting. The AI insights help us make data-driven decisions and identify opportunities we would have missed.',
-      rating: 5,
-      avatar: 'JW',
+      name: 'Jennifer Walsh'
+      company: 'FinTech Solutions'
+      role: 'CFO'
+      content: 'AI Financial Analytics Pro has transformed our financial reporting. The AI insights help us make data-driven decisions and identify opportunities we would have missed.'
+      rating: 5
+      avatar: 'JW'
       results: '35% faster financial reporting'
-    },
-    {
-      name: 'Robert Kim',
-      company: 'Global Investments',
-      role: 'Financial Director',
-      content: 'The predictive analytics are incredibly accurate. We can now forecast revenue with 95% accuracy, helping us plan better and reduce financial risks.',
-      rating: 5,
-      avatar: 'RK',
-      results: '95% forecast accuracy'
-    },
-    {
-      name: 'Lisa Thompson',
-      company: 'Enterprise Corp',
-      role: 'VP Finance',
-      content: 'The automated reporting saves us 20+ hours per week. Our team can now focus on strategic analysis instead of manual data processing.',
-      rating: 5,
-      avatar: 'LT',
-      results: '20+ hours saved weekly'
     }
+    {
+      name: 'Robert Kim'
+      company: 'Global Investments'
+      role: 'Financial Director'
+      content: 'The predictive analytics are incredibly accurate. We can now forecast revenue with 95% accuracy, helping us plan better and reduce financial risks.'
+      rating: 5
+      avatar: 'RK'
+      results: '95% forecast accuracy'
+    }
+    {
+      name: 'Lisa Thompson'
+      company: 'Enterprise Corp'
+      role: 'VP Finance'
+      content: 'The automated reporting saves us 20+ hours per week. Our team can now focus on strategic analysis instead of manual data processing.'
+      rating: 5
+      avatar: 'LT'
+      results: '20+ hours saved weekly'
+    };
   ];
   const stats = [
-    { number: '500+', label: 'Financial Institutions', icon: <Building2 className="w-6 h-6" /> },
-    { number: '1M+', label: 'Transactions Analyzed', icon: <Database className="w-6 h-6" /> },
-    { number: '99.9%', label: 'Data Accuracy', icon: <Shield className="w-6 h-6" /> },
-    { number: '50%', label: 'Faster Reporting', icon: <Zap className="w-6 h-6" /> }
+    { number: '500+', label: 'Financial Institutions', icon: <Building2 className="w-6 h-6" /> }
+    { number: '1M+', label: 'Transactions Analyzed', icon: <Database className="w-6 h-6" /> }
+    { number: '99.9%', label: 'Data Accuracy', icon: <Shield className="w-6 h-6" /> }
+    { number: '50%', label: 'Faster Reporting', icon: <Zap className="w-6 h-6" /> };
   ];
   const integrations = [
-    { name: 'QuickBooks', icon: <Calculator className="w-6 h-6" />, category: 'Accounting' },
-    { name: 'Xero', icon: <FileText className="w-6 h-6" />, category: 'Accounting' },
-    { name: 'SAP', icon: <Database className="w-6 h-6" />, category: 'ERP' },
-    { name: 'Oracle', icon: <Building2 className="w-6 h-6" />, category: 'ERP' },
-    { name: 'Salesforce', icon: <TrendingUp className="w-6 h-6" />, category: 'CRM' },
-    { name: 'HubSpot', icon: <Target className="w-6 h-6" />, category: 'CRM' },
-    { name: 'Stripe', icon: <CreditCard className="w-6 h-6" />, category: 'Payments' },
-    { name: 'PayPal', icon: <Wallet className="w-6 h-6" />, category: 'Payments' }
+    { name: 'QuickBooks', icon: <Calculator className="w-6 h-6" />, category: 'Accounting' }
+    { name: 'Xero', icon: <FileText className="w-6 h-6" />, category: 'Accounting' }
+    { name: 'SAP', icon: <Database className="w-6 h-6" />, category: 'ERP' }
+    { name: 'Oracle', icon: <Building2 className="w-6 h-6" />, category: 'ERP' }
+    { name: 'Salesforce', icon: <TrendingUp className="w-6 h-6" />, category: 'CRM' }
+    { name: 'HubSpot', icon: <Target className="w-6 h-6" />, category: 'CRM' }
+    { name: 'Stripe', icon: <CreditCard className="w-6 h-6" />, category: 'Payments' }
+    { name: 'PayPal', icon: <Wallet className="w-6 h-6" />, category: 'Payments' };
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -220,7 +219,7 @@ export default function AiFinancialAnalyticsProPage() {
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Transform your financial analysis with AI-powered insights, real-time analytics, 
+            Transform your financial analysis with AI-powered insights, real-time analytics
             and predictive modeling. Make smarter financial decisions with advanced intelligence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -456,10 +455,8 @@ export default function AiFinancialAnalyticsProPage() {
         </section>
       </div>
     </div>
-=======
 import React from 'react';
 
-import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 export default function AiFinancialAnalyticsProPage() {
@@ -483,7 +480,6 @@ export default function AiFinancialAnalyticsProPage() {
           </Link>
         </div>
       </div>
-</>
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
+</>;
   );
 }

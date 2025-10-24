@@ -24,6 +24,6 @@ export default function EmployeeDirectoryPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

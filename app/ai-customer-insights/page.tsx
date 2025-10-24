@@ -24,6 +24,6 @@ export default function AiCustomerInsightsPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

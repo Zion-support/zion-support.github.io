@@ -24,6 +24,6 @@ export default function DevopsAdvancedPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

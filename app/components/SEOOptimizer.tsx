@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client"
 
 import React, { useEffect } from 'react'
@@ -14,10 +13,10 @@ export default function SEOOptimizer({ children }: SEOOptimizerProps) {
     if (typeof window !== 'undefined') {
       // Add structured data
       const structuredData = {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Zion Tech Group",
-        "description": "Professional AI and IT solutions for modern businesses",
+        "@context": "https://schema.org"
+        "@type": "Organization"
+        "name": "Zion Tech Group"
+        "description": "Professional AI and IT solutions for modern businesses"
         "url": window.location.origin
       }
 
@@ -45,30 +44,29 @@ export default function SEOOptimizer({ children }: SEOOptimizerProps) {
       {children}
     </>
   )
-}
-=======
-'use client'
-
+};
+'use client';
+;
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 
 interface SEOOptimizerProps {;
-  className?: string;
+  className?: string
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({;
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
-  canonicalUrl = 'https://ziontechgroup.com',
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+  title = 'Zion Tech Group - Advanced AI and IT Solutions'
+  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.'
+  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI']
+  canonicalUrl = 'https://ziontechgroup.com'
+  ogImage = 'https://ziontechgroup.com/og-image.jpg'
   structuredData
 }) => {
   useEffect(() => {
     // Update page title
     document.title = title
 
-    // Update meta description;
+    // Update meta description
     const metaDescription = document.querySelector('meta[name=&quot;description&quot;]');
     if (metaDescription) {
       metaDescription.setAttribute('content', description)
@@ -80,7 +78,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({;
     }
   ]
 
-    // Update keywords;
+    // Update keywords
     const metaKeywords = document.querySelector('meta[name=&quot;keywords&quot;]');
     if (metaKeywords) {
       metaKeywords.setAttribute('content', keywords.join(', '))
@@ -91,7 +89,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({;
       document.head.appendChild(meta)
     }
 
-    // Update canonical URL;
+    // Update canonical URL
     let canonicalLink = document.querySelector('link[rel=&quot;canonical&quot;]');
     if (canonicalLink) {
       canonicalLink.setAttribute('href', canonicalUrl)
@@ -147,7 +145,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({;
       document.head.appendChild(script)
     }
 
-    // Add viewport meta tag if not present;
+    // Add viewport meta tag if not present
     let viewport = document.querySelector('meta[name=&quot;viewport&quot;]');
     if (!viewport) {
       viewport = document.createElement('meta')
@@ -191,7 +189,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({;
       {/* Structured Data */}
       {structuredData && (
         <script
-          type=&quot;application/ld+json&quot;
+          type=&quot;application/ld+json&quot
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       )}
@@ -199,9 +197,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({;
   )
 }
 
-export default SEOOptimizer;
+export default SEOOptimizer
   );
 {};
 
-export default SEOOptimizerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
+export default SEOOptimizerPage

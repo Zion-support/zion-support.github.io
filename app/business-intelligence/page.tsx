@@ -24,6 +24,6 @@ export default function BusinessIntelligencePage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

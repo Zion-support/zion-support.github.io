@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Link from 'next/link';
@@ -7,110 +6,110 @@ import { ArrowRight, Calculator, Receipt, BarChart, Target, CheckCircle, Zap, Br
 const AiExpenseTrackerPage: React.FC = () => {
   const features = [
     {
-      icon: <Camera className="w-8 h-8 text-cyan-400" />,
-      title: 'Smart Receipt Scanning',
-      description: 'Automatically extract expense data from receipts using advanced OCR and AI technology.',
+      icon: <Camera className="w-8 h-8 text-cyan-400" />
+      title: 'Smart Receipt Scanning'
+      description: 'Automatically extract expense data from receipts using advanced OCR and AI technology.'
       benefits: ['Instant data extraction', 'Multi-language support', 'Automatic categorization', 'Duplicate detection']
-    },
-    {
-      icon: <Brain className="w-8 h-8 text-purple-400" />,
-      title: 'AI-Powered Categorization',
-      description: 'Intelligent expense categorization that learns from your spending patterns and preferences.',
-      benefits: ['Smart categorization', 'Learning algorithms', 'Custom rules', 'Pattern recognition']
-    },
-    {
-      icon: <BarChart className="w-8 h-8 text-green-400" />,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive spending analytics with insights and recommendations to optimize your budget.',
-      benefits: ['Spending trends', 'Budget alerts', 'Cost optimization', 'ROI analysis']
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-orange-400" />,
-      title: 'Automated Workflows',
-      description: 'Streamline expense management with automated approval workflows and policy compliance.',
-      benefits: ['Auto-approval rules', 'Policy compliance', 'Workflow automation', 'Exception handling']
     }
+    {
+      icon: <Brain className="w-8 h-8 text-purple-400" />
+      title: 'AI-Powered Categorization'
+      description: 'Intelligent expense categorization that learns from your spending patterns and preferences.'
+      benefits: ['Smart categorization', 'Learning algorithms', 'Custom rules', 'Pattern recognition']
+    }
+    {
+      icon: <BarChart className="w-8 h-8 text-green-400" />
+      title: 'Advanced Analytics'
+      description: 'Comprehensive spending analytics with insights and recommendations to optimize your budget.'
+      benefits: ['Spending trends', 'Budget alerts', 'Cost optimization', 'ROI analysis']
+    }
+    {
+      icon: <Zap className="w-8 h-8 text-orange-400" />
+      title: 'Automated Workflows'
+      description: 'Streamline expense management with automated approval workflows and policy compliance.'
+      benefits: ['Auto-approval rules', 'Policy compliance', 'Workflow automation', 'Exception handling']
+    };
   ];
 
   const useCases = [
     {
-      title: 'Business Travel',
-      description: 'Track and manage business travel expenses with automatic categorization',
-      icon: <Globe className="w-6 h-6 text-blue-400" />,
+      title: 'Business Travel'
+      description: 'Track and manage business travel expenses with automatic categorization'
+      icon: <Globe className="w-6 h-6 text-blue-400" />
       benefits: ['Per diem tracking', 'Mileage logging', 'Receipt management', 'Policy compliance']
-    },
-    {
-      title: 'Team Expenses',
-      description: 'Manage team expenses with approval workflows and budget controls',
-      icon: <Building2 className="w-6 h-6 text-green-400" />,
-      benefits: ['Team budgets', 'Approval workflows', 'Expense policies', 'Reporting']
-    },
-    {
-      title: 'Project Costs',
-      description: 'Track project-specific expenses and allocate costs accurately',
-      icon: <Target className="w-6 h-6 text-purple-400" />,
-      benefits: ['Project allocation', 'Cost tracking', 'Budget monitoring', 'Client billing']
-    },
-    {
-      title: 'Personal Finance',
-      description: 'Manage personal expenses and budget with AI-powered insights',
-      icon: <Wallet className="w-6 h-6 text-yellow-400" />,
-      benefits: ['Personal budgets', 'Spending insights', 'Goal tracking', 'Financial planning']
     }
+    {
+      title: 'Team Expenses'
+      description: 'Manage team expenses with approval workflows and budget controls'
+      icon: <Building2 className="w-6 h-6 text-green-400" />
+      benefits: ['Team budgets', 'Approval workflows', 'Expense policies', 'Reporting']
+    }
+    {
+      title: 'Project Costs'
+      description: 'Track project-specific expenses and allocate costs accurately'
+      icon: <Target className="w-6 h-6 text-purple-400" />
+      benefits: ['Project allocation', 'Cost tracking', 'Budget monitoring', 'Client billing']
+    }
+    {
+      title: 'Personal Finance'
+      description: 'Manage personal expenses and budget with AI-powered insights'
+      icon: <Wallet className="w-6 h-6 text-yellow-400" />
+      benefits: ['Personal budgets', 'Spending insights', 'Goal tracking', 'Financial planning']
+    };
   ];
 
   const pricing = [
     {
-      name: 'Individual',
-      price: '$9',
-      period: '/month',
-      description: 'Perfect for freelancers and small businesses',
+      name: 'Individual'
+      price: '$9'
+      period: '/month'
+      description: 'Perfect for freelancers and small businesses'
       features: [
-        'Up to 100 receipts/month',
-        'Basic categorization',
-        'Mobile app access',
-        'Basic reporting',
+        'Up to 100 receipts/month'
+        'Basic categorization'
+        'Mobile app access'
+        'Basic reporting'
         'Email support'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$29',
-      period: '/month',
-      description: 'Ideal for growing businesses',
-      features: [
-        'Up to 1,000 receipts/month',
-        'AI-powered categorization',
-        'Advanced analytics',
-        'Team collaboration',
-        'Priority support',
-        'API access'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'For large organizations',
-      features: [
-        'Unlimited receipts',
-        'Custom AI models',
-        'Advanced workflows',
-        'Dedicated support',
-        'Custom integrations',
-        'SLA guarantee'
-      ],
+      ]
       popular: false
     }
+    {
+      name: 'Professional'
+      price: '$29'
+      period: '/month'
+      description: 'Ideal for growing businesses'
+      features: [
+        'Up to 1,000 receipts/month'
+        'AI-powered categorization'
+        'Advanced analytics'
+        'Team collaboration'
+        'Priority support'
+        'API access'
+      ]
+      popular: true
+    }
+    {
+      name: 'Enterprise'
+      price: 'Custom'
+      period: ''
+      description: 'For large organizations'
+      features: [
+        'Unlimited receipts'
+        'Custom AI models'
+        'Advanced workflows'
+        'Dedicated support'
+        'Custom integrations'
+        'SLA guarantee'
+      ]
+      popular: false
+    };
   ];
 
   const stats = [
-    { number: '95%', label: 'Accuracy Rate', icon: <Target className="w-6 h-6" /> },
-    { number: '80%', label: 'Time Saved', icon: <Clock className="w-6 h-6" /> },
-    { number: '50K+', label: 'Receipts Processed', icon: <Receipt className="w-6 h-6" /> },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6" /> }
+    { number: '95%', label: 'Accuracy Rate', icon: <Target className="w-6 h-6" /> }
+    { number: '80%', label: 'Time Saved', icon: <Clock className="w-6 h-6" /> }
+    { number: '50K+', label: 'Receipts Processed', icon: <Receipt className="w-6 h-6" /> }
+    { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6" /> };
   ];
 
   return (
@@ -311,11 +310,7 @@ const AiExpenseTrackerPage: React.FC = () => {
   );
 };
 
-export default AiExpenseTrackerPage;
-=======
-import React from 'react';
-
-import Link from 'next/link';
+export default AiExpenseTrackerPage
 import { ArrowRight } from 'lucide-react';
 
 export default function AiExpenseTrackerPage() {
@@ -339,7 +334,6 @@ export default function AiExpenseTrackerPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d

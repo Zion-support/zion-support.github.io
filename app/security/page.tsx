@@ -24,6 +24,6 @@ export default function SecurityPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

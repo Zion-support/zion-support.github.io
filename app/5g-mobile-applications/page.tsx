@@ -24,7 +24,7 @@ export default function MobileApplications5GPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }
 

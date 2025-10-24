@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Link from 'next/link';
@@ -7,110 +6,110 @@ import { ArrowRight, FileText, Calculator, CheckCircle, Brain, Settings, Target,
 const AiInvoiceGeneratorPage: React.FC = () => {
   const features = [
     {
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      title: 'AI-Powered Generation',
-      description: 'Automatically generate professional invoices using AI that understands your business patterns and client preferences.',
+      icon: <Brain className="w-8 h-8 text-cyan-400" />
+      title: 'AI-Powered Generation'
+      description: 'Automatically generate professional invoices using AI that understands your business patterns and client preferences.'
       benefits: ['Smart templates', 'Auto-population', 'Brand consistency', 'Learning algorithms']
-    },
-    {
-      icon: <Calculator className="w-8 h-8 text-purple-400" />,
-      title: 'Automatic Calculations',
-      description: 'AI handles all calculations including taxes, discounts, and currency conversions automatically.',
-      benefits: ['Tax calculations', 'Discount management', 'Multi-currency', 'Error prevention']
-    },
-    {
-      icon: <Target className="w-8 h-8 text-green-400" />,
-      title: 'Smart Categorization',
-      description: 'Intelligent categorization of expenses and services for better financial tracking and reporting.',
-      benefits: ['Auto-categorization', 'Expense tracking', 'Financial insights', 'Reporting']
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-orange-400" />,
-      title: 'Workflow Automation',
-      description: 'Streamline your invoicing process with automated workflows and follow-up reminders.',
-      benefits: ['Auto-reminders', 'Payment tracking', 'Workflow automation', 'Time savings']
     }
+    {
+      icon: <Calculator className="w-8 h-8 text-purple-400" />
+      title: 'Automatic Calculations'
+      description: 'AI handles all calculations including taxes, discounts, and currency conversions automatically.'
+      benefits: ['Tax calculations', 'Discount management', 'Multi-currency', 'Error prevention']
+    }
+    {
+      icon: <Target className="w-8 h-8 text-green-400" />
+      title: 'Smart Categorization'
+      description: 'Intelligent categorization of expenses and services for better financial tracking and reporting.'
+      benefits: ['Auto-categorization', 'Expense tracking', 'Financial insights', 'Reporting']
+    }
+    {
+      icon: <Zap className="w-8 h-8 text-orange-400" />
+      title: 'Workflow Automation'
+      description: 'Streamline your invoicing process with automated workflows and follow-up reminders.'
+      benefits: ['Auto-reminders', 'Payment tracking', 'Workflow automation', 'Time savings']
+    };
   ];
 
   const useCases = [
     {
-      title: 'Freelancers',
-      description: 'Perfect for freelancers who need to create professional invoices quickly',
-      icon: <Users className="w-6 h-6 text-blue-400" />,
+      title: 'Freelancers'
+      description: 'Perfect for freelancers who need to create professional invoices quickly'
+      icon: <Users className="w-6 h-6 text-blue-400" />
       benefits: ['Quick generation', 'Professional templates', 'Time tracking', 'Client management']
-    },
-    {
-      title: 'Small Business',
-      description: 'Ideal for small businesses managing multiple clients and projects',
-      icon: <Building2 className="w-6 h-6 text-green-400" />,
-      benefits: ['Multi-client support', 'Project tracking', 'Team collaboration', 'Scalable pricing']
-    },
-    {
-      title: 'Service Providers',
-      description: 'Great for service-based businesses with recurring billing needs',
-      icon: <Settings className="w-6 h-6 text-purple-400" />,
-      benefits: ['Recurring billing', 'Service templates', 'Automated reminders', 'Payment integration']
-    },
-    {
-      title: 'E-commerce',
-      description: 'Perfect for online stores with complex product catalogs and pricing',
-      icon: <ShoppingCart className="w-6 h-6 text-yellow-400" />,
-      benefits: ['Product integration', 'Inventory sync', 'Bulk invoicing', 'Order management']
     }
+    {
+      title: 'Small Business'
+      description: 'Ideal for small businesses managing multiple clients and projects'
+      icon: <Building2 className="w-6 h-6 text-green-400" />
+      benefits: ['Multi-client support', 'Project tracking', 'Team collaboration', 'Scalable pricing']
+    }
+    {
+      title: 'Service Providers'
+      description: 'Great for service-based businesses with recurring billing needs'
+      icon: <Settings className="w-6 h-6 text-purple-400" />
+      benefits: ['Recurring billing', 'Service templates', 'Automated reminders', 'Payment integration']
+    }
+    {
+      title: 'E-commerce'
+      description: 'Perfect for online stores with complex product catalogs and pricing'
+      icon: <ShoppingCart className="w-6 h-6 text-yellow-400" />
+      benefits: ['Product integration', 'Inventory sync', 'Bulk invoicing', 'Order management']
+    };
   ];
 
   const pricing = [
     {
-      name: 'Starter',
-      price: '$19',
-      period: '/month',
-      description: 'Perfect for freelancers and small businesses',
+      name: 'Starter'
+      price: '$19'
+      period: '/month'
+      description: 'Perfect for freelancers and small businesses'
       features: [
-        'Up to 50 invoices/month',
-        'Basic AI features',
-        'Standard templates',
-        'Email support',
+        'Up to 50 invoices/month'
+        'Basic AI features'
+        'Standard templates'
+        'Email support'
         'PDF export'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$49',
-      period: '/month',
-      description: 'Ideal for growing businesses',
-      features: [
-        'Up to 500 invoices/month',
-        'Advanced AI features',
-        'Custom templates',
-        'Priority support',
-        'API access',
-        'Payment integration'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'For large organizations',
-      features: [
-        'Unlimited invoices',
-        'Full AI suite',
-        'White-label options',
-        'Dedicated support',
-        'Custom integrations',
-        'SLA guarantee'
-      ],
+      ]
       popular: false
     }
+    {
+      name: 'Professional'
+      price: '$49'
+      period: '/month'
+      description: 'Ideal for growing businesses'
+      features: [
+        'Up to 500 invoices/month'
+        'Advanced AI features'
+        'Custom templates'
+        'Priority support'
+        'API access'
+        'Payment integration'
+      ]
+      popular: true
+    }
+    {
+      name: 'Enterprise'
+      price: 'Custom'
+      period: ''
+      description: 'For large organizations'
+      features: [
+        'Unlimited invoices'
+        'Full AI suite'
+        'White-label options'
+        'Dedicated support'
+        'Custom integrations'
+        'SLA guarantee'
+      ]
+      popular: false
+    };
   ];
 
   const stats = [
-    { number: '95%', label: 'Time Saved', icon: <Clock className="w-6 h-6" /> },
-    { number: '10K+', label: 'Invoices Generated', icon: <FileText className="w-6 h-6" /> },
-    { number: '99.9%', label: 'Accuracy Rate', icon: <Target className="w-6 h-6" /> },
-    { number: '24/7', label: 'Customer Support', icon: <Shield className="w-6 h-6" /> }
+    { number: '95%', label: 'Time Saved', icon: <Clock className="w-6 h-6" /> }
+    { number: '10K+', label: 'Invoices Generated', icon: <FileText className="w-6 h-6" /> }
+    { number: '99.9%', label: 'Accuracy Rate', icon: <Target className="w-6 h-6" /> }
+    { number: '24/7', label: 'Customer Support', icon: <Shield className="w-6 h-6" /> };
   ];
 
   return (
@@ -311,11 +310,7 @@ const AiInvoiceGeneratorPage: React.FC = () => {
   );
 };
 
-export default AiInvoiceGeneratorPage;
-=======
-import React from 'react';
-
-import Link from 'next/link';
+export default AiInvoiceGeneratorPage
 import { ArrowRight } from 'lucide-react';
 
 export default function AiInvoiceGeneratorPage() {
@@ -339,7 +334,6 @@ export default function AiInvoiceGeneratorPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d

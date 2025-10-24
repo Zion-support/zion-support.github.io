@@ -24,6 +24,6 @@ export default function AiTransportationPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

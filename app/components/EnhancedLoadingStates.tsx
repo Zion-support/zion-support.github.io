@@ -9,41 +9,41 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 const EnhancedLoadingStatesPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      icon: Brain
+      title: 'AI-Powered Intelligence'
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
+    }
     {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      icon: BarChart
+      title: 'Advanced Analytics'
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
+    }
     {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
+      icon: Target
+      title: 'Precision Targeting'
+      description: 'Target specific goals and objectives with precision and accuracy.'
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
+    }
     {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+      icon: TrendingUp
+      title: 'Growth Optimization'
+      description: 'Optimize your business growth with data-driven strategies.'
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ]
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ]
 
   return (
-    <>
+    <>;
       <Helmet>;
         <title>EnhancedLoadingStates</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced EnhancedLoadingStates solution for modern businesses.&quot; />
@@ -145,9 +145,9 @@ const EnhancedLoadingStatesPage: React.FC = () => {
   );
 };
 
-export default EnhancedLoadingStatesPage;
-sm: 'w-4 h-4',
-md: 'w-8 h-8',
+export default EnhancedLoadingStatesPage
+sm: 'w-4 h-4'
+md: 'w-8 h-8'
 {lg: 'w-12h-1 2'}
 return(<divclassName=&quot;flex flex-colitems-centerjustify-centerp-8&quot;><Loader2className={`${sizeClasses[size]} animate-spin text-blue-500`} />{text &&(<pclassName=&quot;mt-2text-smtext-gray-500&quot;>{text}</p>)}</di>)
 {}

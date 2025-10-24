@@ -24,6 +24,6 @@ export default function AiMeetingTranscriberPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

@@ -24,7 +24,7 @@ export default function PrivateNetworks5GPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }
 

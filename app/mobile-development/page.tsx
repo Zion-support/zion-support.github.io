@@ -24,6 +24,6 @@ export default function MobileDevelopmentPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

@@ -24,6 +24,6 @@ export default function AiCustomerServicePage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

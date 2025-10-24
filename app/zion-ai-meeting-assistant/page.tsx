@@ -24,6 +24,6 @@ export default function ZionAiMeetingAssistantPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

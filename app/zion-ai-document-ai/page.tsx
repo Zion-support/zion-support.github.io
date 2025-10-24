@@ -24,6 +24,6 @@ export default function ZionAiDocumentAiPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

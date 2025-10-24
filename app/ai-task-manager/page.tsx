@@ -24,6 +24,6 @@ export default function AiTaskManagerPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

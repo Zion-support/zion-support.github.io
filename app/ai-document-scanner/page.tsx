@@ -24,6 +24,6 @@ export default function AiDocumentScannerPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

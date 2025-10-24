@@ -24,6 +24,6 @@ export default function DocumentProcessorPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

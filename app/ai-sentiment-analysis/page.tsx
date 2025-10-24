@@ -24,6 +24,6 @@ export default function AiSentimentAnalysisPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

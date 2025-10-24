@@ -1,50 +1,46 @@
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Smartphone, Zap, Sparkles, Star } from 'lucide-react';
-=======
 import { Brain } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
 
-const Footer: React.FC = () => {
+const Footer: React.FC = () => {;
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
-    { name: 'AI Analytics & BI', url: '/ai-analytics', description: 'Business intelligence' },
-    { name: 'AI Automation', url: '/ai-automation', description: 'Process automation' },
-    { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder', description: 'Conversational AI' },
-    { name: 'AI Content Generation', url: '/ai-content-generation', description: 'Automated content' },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security' },
-    { name: 'Computer Vision', url: '/computer-vision', description: 'Image recognition' },
-    { name: 'Predictive Analytics', url: '/predictive-analytics', description: 'Forecasting' },
-    { name: 'Speech & Voice AI', url: '/ai-voice-assistant', description: 'Voice technology' }
+    { name: 'AI Analytics & BI', url: '/ai-analytics', description: 'Business intelligence' }
+    { name: 'AI Automation', url: '/ai-automation', description: 'Process automation' }
+    { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder', description: 'Conversational AI' }
+    { name: 'AI Content Generation', url: '/ai-content-generation', description: 'Automated content' }
+    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security' }
+    { name: 'Computer Vision', url: '/computer-vision', description: 'Image recognition' }
+    { name: 'Predictive Analytics', url: '/predictive-analytics', description: 'Forecasting' }
+    { name: 'Speech & Voice AI', url: '/ai-voice-assistant', description: 'Voice technology' };
   ];
 
   const itServices = [
-    { name: 'Web Development', url: '/web-development', description: 'Custom websites' },
-    { name: 'Mobile Development', url: '/mobile-development', description: 'iOS & Android apps' },
-    { name: 'Cloud Migration', url: '/cloud-migration', description: 'Cloud solutions' },
-    { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security services' },
-    { name: 'DevOps', url: '/devops', description: 'Development operations' },
-    { name: 'Data Analytics', url: '/data-analytics', description: 'Data insights' },
-    { name: 'IoT Solutions', url: '/iot-solutions', description: 'Internet of Things' },
-    { name: 'Blockchain', url: '/blockchain', description: 'Blockchain technology' }
+    { name: 'Web Development', url: '/web-development', description: 'Custom websites' }
+    { name: 'Mobile Development', url: '/mobile-development', description: 'iOS & Android apps' }
+    { name: 'Cloud Migration', url: '/cloud-migration', description: 'Cloud solutions' }
+    { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security services' }
+    { name: 'DevOps', url: '/devops', description: 'Development operations' }
+    { name: 'Data Analytics', url: '/data-analytics', description: 'Data insights' }
+    { name: 'IoT Solutions', url: '/iot-solutions', description: 'Internet of Things' }
+    { name: 'Blockchain', url: '/blockchain', description: 'Blockchain technology' };
   ];
 
   const company = [
-    { name: 'About Us', url: '/about' },
-    { name: 'Our Team', url: '/team' },
-    { name: 'Careers', url: '/careers' },
-    { name: 'News', url: '/news' },
-    { name: 'Contact', url: '/contact' }
-<<<<<<< HEAD
+    { name: 'About Us', url: '/about' }
+    { name: 'Our Team', url: '/team' }
+    { name: 'Careers', url: '/careers' }
+    { name: 'News', url: '/news' }
+    { name: 'Contact', url: '/contact' };
   ];
 
   const legalLinks = [
-    { name: 'Privacy Policy', url: '/privacy' },
-    { name: 'Terms of Service', url: '/terms' },
-    { name: 'Cookie Policy', url: '/cookies' },
-    { name: 'GDPR Compliance', url: '/gdpr' }
+    { name: 'Privacy Policy', url: '/privacy' }
+    { name: 'Terms of Service', url: '/terms' }
+    { name: 'Cookie Policy', url: '/cookies' }
+    { name: 'GDPR Compliance', url: '/gdpr' };
   ];
 
   return (
@@ -55,20 +51,19 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <Brain className="h-8 w-8 text-emerald-400" />
-=======
   ]
 
   const resources = [
-    { name: 'Documentation', url: '/docs' },
-    { name: 'API Reference', url: '/api' },
-    { name: 'Blog', url: '/blog' },
-    { name: 'Tutorials', url: '/tutorials' },
-    { name: 'Case Studies', url: '/case-studies' },
-    { name: 'Support', url: '/support' },
+    { name: 'Documentation', url: '/docs' }
+    { name: 'API Reference', url: '/api' }
+    { name: 'Blog', url: '/blog' }
+    { name: 'Tutorials', url: '/tutorials' }
+    { name: 'Case Studies', url: '/case-studies' }
+    { name: 'Support', url: '/support' },;
   ];
 
   const legal = [
-    { name: 'Privacy Policy', url: '/privacy' },
+    { name: 'Privacy Policy', url: '/privacy' }
     { name: 'Terms of Service', url: '/terms' }
   ]
 
@@ -82,7 +77,6 @@ const Footer: React.FC = () => {
               <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
               <span className="text-xl font-bold">Zion Tech Group</span>
             </div>
             <p className="text-gray-400 text-sm">
@@ -123,10 +117,7 @@ const Footer: React.FC = () => {
                     href={service.url} 
                     className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
-<<<<<<< HEAD
                     <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
                     {service.name}
                   </Link>
                 </li>
@@ -147,10 +138,7 @@ const Footer: React.FC = () => {
                     href={service.url} 
                     className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
-<<<<<<< HEAD
                     <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
                     {service.name}
                   </Link>
                 </li>
@@ -158,7 +146,6 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-<<<<<<< HEAD
           {/* Company & Legal */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white">Company</h3>
@@ -230,12 +217,11 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-    </footer>
+    </footer>;
   );
 };
 
-export default Footer;
-=======
+export default Footer
           {/* Company & Resources */}
           <div className="space-y-6">
             <div>
@@ -292,7 +278,6 @@ export default Footer;
       </div>
     </footer>
   )
-}
+{}
 
-export default Footer;
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
+export default Footer

@@ -24,6 +24,6 @@ export default function AnalyticsToolsPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

@@ -24,6 +24,6 @@ export default function AiAutonomousSystemsPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

@@ -24,6 +24,6 @@ export default function InvestorsPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

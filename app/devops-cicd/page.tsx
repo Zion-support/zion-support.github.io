@@ -24,6 +24,6 @@ export default function DevopsCicdPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

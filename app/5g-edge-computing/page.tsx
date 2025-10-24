@@ -24,7 +24,7 @@ export default function EdgeComputing5GPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }
 

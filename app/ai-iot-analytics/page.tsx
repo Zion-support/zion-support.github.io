@@ -24,6 +24,6 @@ export default function AiIotAnalyticsPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

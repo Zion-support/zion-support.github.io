@@ -2,7 +2,7 @@
 import React from 'react';
 
 const errorHandler = () => {};
-  return null;
+  return null
 {};
 
-export default errorHandler;
+export default errorHandler

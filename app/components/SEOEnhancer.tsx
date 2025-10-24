@@ -155,4 +155,4 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' }) => {;
   );
 };
 
-export default SEOEnhancerPage;
+export default SEOEnhancerPage

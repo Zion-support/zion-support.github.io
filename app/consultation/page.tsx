@@ -24,6 +24,6 @@ export default function ConsultationPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

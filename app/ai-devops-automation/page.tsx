@@ -24,6 +24,6 @@ export default function AiDevopsAutomationPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

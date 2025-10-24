@@ -24,6 +24,6 @@ export default function AiSocialSchedulerPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

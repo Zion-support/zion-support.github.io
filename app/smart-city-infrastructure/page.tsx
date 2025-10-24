@@ -24,6 +24,6 @@ export default function SmartCityInfrastructurePage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

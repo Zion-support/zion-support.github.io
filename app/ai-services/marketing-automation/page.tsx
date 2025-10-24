@@ -24,6 +24,6 @@ export default function MarketingAutomationPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

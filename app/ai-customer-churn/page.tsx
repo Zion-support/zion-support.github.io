@@ -24,6 +24,6 @@ export default function AiCustomerChurnPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

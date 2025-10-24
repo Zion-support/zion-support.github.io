@@ -24,6 +24,6 @@ export default function AiLegalResearchProPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

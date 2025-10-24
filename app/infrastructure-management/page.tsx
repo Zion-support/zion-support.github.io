@@ -24,6 +24,6 @@ export default function InfrastructureManagementPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

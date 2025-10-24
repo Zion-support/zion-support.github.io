@@ -16,20 +16,20 @@ interface AdvancedAccessibilityEnhancerProps {
   enableVoiceNavigation?: boolean
 }
 
-constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s>= ({enableKeyboardNavigation= true,
-  enableScreenReader= true,
-  enableHighContrast= true,
-  enableFocusManagement= true,
-  enableARIALabels= true,
-  enableSkipLinks= true,
-  enableColorContrast= true,
-  enableMotionReduction= true,
-  enableFontScaling= true,
+constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s>= ({enableKeyboardNavigation= true
+  enableScreenReader= true
+  enableHighContrast= true
+  enableFocusManagement= true
+  enableARIALabels= true
+  enableSkipLinks= true
+  enableColorContrast= true
+  enableMotionReduction= true
+  enableFontScaling= true
   enableVoiceNavigation= true}) => {const [accessibilitySettingssetAccessibilitySettings] = useState({
-    highContrast: false,
-    reducedMotion: false,
-    fontSize: 'normal',
-    screenReader: false,
+    highContrast: false
+    reducedMotion: false
+    fontSize: 'normal'
+    screenReader: false
     keyboardNavigation: false
   })
 
@@ -38,17 +38,14 @@ constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s
     if (typeof window === 'undefined') return
 
     // Check for reduced motion preference
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     // Check for high contrast preference
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-
+    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches
     // Check for color scheme preference
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches
     setAccessibilitySettings(prev => ({
-      ...prev,
-      reducedMotion: prefersReducedMotion,
+      ...prev
+      reducedMotion: prefersReducedMotion
       highContrast: prefersHighContrast
     }))
 
@@ -77,8 +74,7 @@ constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s
   useEffect(() => {
     if (typeof window === 'undefined') return
 
-    const root = document.documentElement;
-
+    const root = document.documentElement
     // Apply high contrast mode
     if (accessibilitySettings.highContrast) {
       root.classList.add('high-contrast')
@@ -88,27 +84,27 @@ constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s
 const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      icon: Brain
+      title: 'AI-Powered Intelligence'
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
+    }
     {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      icon: BarChart
+      title: 'Advanced Analytics'
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
+    }
     {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
+      icon: Target
+      title: 'Precision Targeting'
+      description: 'Target specific goals and objectives with precision and accuracy.'
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
+    }
     {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+      icon: TrendingUp
+      title: 'Growth Optimization'
+      description: 'Optimize your business growth with data-driven strategies.'
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ]
@@ -132,7 +128,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   
       // Skip to main content
       if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-        const skipLink = document.querySelector('[data-skip-link]') as HTMLElement;
+        const skipLink = document.querySelector('[data-skip-link]') as HTMLElement
         if (skipLink) {
           skipLink.focus()
           event.preventDefault()
@@ -141,15 +137,15 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 
       // Escape key to close modals/dropdowns
       if (event.key === 'Escape') {
-        const activeElement = document.activeElement as HTMLElement;
+        const activeElement = document.activeElement as HTMLElement
         if (activeElement && activeElement.hasAttribute('data-close-on-escape')) {
           activeElement.click()
         }
       }
 
-      // Arrow keys for menu navigation;
+      // Arrow keys for menu navigation
       if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {;
-        const menu = document.querySelector('[role=&quot;menu&quot;]') as HTMLElement;
+        const menu = document.querySelector('[role=&quot;menu&quot;]') as HTMLElement
         if (menu && menu.contains(event.target as Node)) {
           event.preventDefault()
           const menuItems = Array.from(menu.querySelectorAll('[role=&quot;menuitem&quot;]')) as HTMLElement[];
@@ -187,9 +183,8 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     }
 
     // Listen for route changes (if using client-side routing)
-    const originalPushState = history.pushState;
-    const originalReplaceState = history.replaceState;
-
+    const originalPushState = history.pushState
+    const originalReplaceState = history.replaceState
     history.pushState = function(...args) {
       originalPushState.apply(history, args)
       announcePageChange('Page changed')
@@ -237,7 +232,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       return () => element.removeEventListener('keydown', handleTabKey)
     }
 
-    // Apply focus trap to modals;
+    // Apply focus trap to modals
     const modals = document.querySelectorAll('[role=&quot;dialog&quot;]');
     modals.forEach(modal => {
       const cleanup = trapFocus(modal as HTMLElement);
@@ -285,11 +280,11 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     if (typeof window === 'undefined') return
 
     const skipLinks = [
-      { href: '#main-content', text: 'Skip to main content' },
-      { href: '#navigation', text: 'Skip to navigation' },
+      { href: '#main-content', text: 'Skip to main content' }
+      { href: '#navigation', text: 'Skip to navigation' }
       { href: '#footer', text: 'Skip to footer' }
     ]
-
+;
     const skipLinksContainer = document.createElement('div');
     skipLinksContainer.className = 'skip-links'
     skipLinksContainer.setAttribute('aria-label', 'Skip links')
@@ -311,9 +306,8 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 
     const checkElementContrast = (element: HTMLElement) => {;
       const styles = window.getComputedStyle(element);
-      const backgroundColor = styles.backgroundColor;
-      const color = styles.color;
-
+      const backgroundColor = styles.backgroundColor
+      const color = styles.color
       // Simple contrast check (this would need a more sophisticated implementation)
       if (backgroundColor && color) {
         // Add visual indicator for low contrast elements
@@ -394,8 +388,8 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   return null
 }
 
-export default AdvancedAccessibilityEnhancer;
+export default AdvancedAccessibilityEnhancer
 }}}}};
 };
 
-export default AdvancedAccessibilityEnhancerPage;
+export default AdvancedAccessibilityEnhancerPage

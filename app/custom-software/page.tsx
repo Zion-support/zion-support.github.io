@@ -24,6 +24,6 @@ export default function CustomSoftwarePage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

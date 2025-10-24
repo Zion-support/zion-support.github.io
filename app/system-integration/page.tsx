@@ -24,6 +24,6 @@ export default function SystemIntegrationPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

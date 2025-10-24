@@ -24,6 +24,6 @@ export default function AiCyberDefenseMatrixPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

@@ -24,6 +24,6 @@ export default function ItAssetManagementPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

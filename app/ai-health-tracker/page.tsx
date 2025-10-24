@@ -24,6 +24,6 @@ export default function AiHealthTrackerPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

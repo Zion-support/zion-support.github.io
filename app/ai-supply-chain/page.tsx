@@ -24,6 +24,6 @@ export default function AiSupplyChainPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

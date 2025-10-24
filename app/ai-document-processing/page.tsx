@@ -24,6 +24,6 @@ export default function AiDocumentProcessingPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

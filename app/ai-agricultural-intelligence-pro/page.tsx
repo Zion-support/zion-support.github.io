@@ -24,6 +24,6 @@ export default function AiAgriculturalIntelligenceProPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

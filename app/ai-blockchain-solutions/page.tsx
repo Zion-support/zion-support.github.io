@@ -24,6 +24,6 @@ export default function AiBlockchainSolutionsPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

@@ -24,6 +24,6 @@ export default function AiNeuralInterfacePage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

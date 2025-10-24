@@ -1,43 +1,35 @@
-<<<<<<< HEAD
 'use client'
 import { useState } from 'react'
-import { MessageSquare, Mail, Phone, Send, CheckCircle } from 'lucide-react'
-=======
+import { MessageSquare, Mail, Phone, Send, CheckCircle } from 'lucide-react';
 'use client';
 
 import { useState } from 'react';
-import { MessageSquare, Mail, Phone, Send, CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
 
 interface FormData {
-  name: string;
-  email: string;
-  phone: string;
-  company: string;
-  message: string;
-  service: string;
+  name: string
+  email: string
+  phone: string
+  company: string
+  message: string
+  service: string
 }
-<<<<<<< HEAD
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-=======
 
-const ContactForm: React.FC = () => {
+const ContactForm: React.FC = () => {;
   const [formData, setFormData] = useState<FormData>({;
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    message: '',
-<<<<<<< HEAD
+    name: ''
+    email: ''
+    phone: ''
+    company: ''
+    message: ''
     service: ''
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
   setFormData({
-      ...formData,
+      ...formData
       [e.target.name]: e.target.value
 })
   }
@@ -50,8 +42,7 @@ const ContactForm: React.FC = () => {
     setIsSubmitted(true)
     // Reset form after 3 seconds
     setTimeout(() => {
-      setIsSubmitted(false)
-=======
+      setIsSubmitted(false);
     service: '';
   });
 
@@ -60,8 +51,8 @@ const ContactForm: React.FC = () => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
     setFormData({
-      ...formData,
-      [e.target.name]: e.target.value;
+      ...formData
+      [e.target.name]: e.target.value
     });
   };
 
@@ -78,46 +69,38 @@ const ContactForm: React.FC = () => {
     // Reset form after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
       setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        message: '',
+        name: ''
+        email: ''
+        phone: ''
+        company: ''
+        message: ''
         service: ''
-<<<<<<< HEAD
       })
     }, 3000)
   }
-=======
       });
     }, 3000);
   };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
   const services = [
-    'AI Solutions',
-    'Web Development',
-    'Mobile Development',
-    'Cloud Migration',
-    'Cybersecurity',
-    'Data Analytics',
-    'DevOps',
-<<<<<<< HEAD
+    'AI Solutions'
+    'Web Development'
+    'Mobile Development'
+    'Cloud Migration'
+    'Cybersecurity'
+    'Data Analytics'
+    'DevOps'
     'Consulting'
-  ]
-=======
+  ];
     'Consulting';
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
   if (isSubmitted) {
     return (
       <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-center">
         <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
         <h3 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>
-<<<<<<< HEAD
         <p className="text-gray-300">Thank you for reaching out. We&apos;ll get back to you soon.</p>
       </div>
     )
@@ -127,7 +110,6 @@ const ContactForm: React.FC = () => {
       <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid md: grid-cols-2 gap-6">
-=======
         <p className="text-gray-300">Thank you for reaching out. We'll get back to you soon.</p>
       </div>
     );
@@ -139,7 +121,6 @@ const ContactForm: React.FC = () => {
       
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid md:grid-cols-2 gap-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
               Full Name *
@@ -151,11 +132,8 @@ const ContactForm: React.FC = () => {
               value={formData.name}
               onChange={handleChange}
               required
-<<<<<<< HEAD
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-=======
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
               placeholder="Your full name"
             />
           </div>
@@ -170,21 +148,15 @@ const ContactForm: React.FC = () => {
               value={formData.email}
               onChange={handleChange}
               required
-<<<<<<< HEAD
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-=======
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
               placeholder="your@email.com"
             />
           </div>
         </div>
-<<<<<<< HEAD
         <div className="grid md: grid-cols-2 gap-6">
-=======
 
         <div className="grid md:grid-cols-2 gap-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
           <div>
             <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
               Phone Number
@@ -195,11 +167,8 @@ const ContactForm: React.FC = () => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-<<<<<<< HEAD
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-=======
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
               placeholder="+1 (555) 123-4567"
             />
           </div>
@@ -213,19 +182,13 @@ const ContactForm: React.FC = () => {
               name="company"
               value={formData.company}
               onChange={handleChange}
-<<<<<<< HEAD
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-=======
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
               placeholder="Your company name"
             />
           </div>
         </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
         <div>
           <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
             Service Interest
@@ -235,11 +198,8 @@ const ContactForm: React.FC = () => {
             name="service"
             value={formData.service}
             onChange={handleChange}
-<<<<<<< HEAD
             className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-=======
             className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
           >
             <option value="">Select a service</option>
             {services.map((service, index) => (
@@ -249,10 +209,7 @@ const ContactForm: React.FC = () => {
             ))}
           </select>
         </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
         <div>
           <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
             Message *
@@ -264,7 +221,6 @@ const ContactForm: React.FC = () => {
             onChange={handleChange}
             required
             rows={6}
-<<<<<<< HEAD
             className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
             placeholder="Tell us about your project or how we can help..."
           />
@@ -273,7 +229,6 @@ const ContactForm: React.FC = () => {
           type="submit"
           disabled={isSubmitting}
           className="w-full flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-purple-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-=======
             className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
             placeholder="Tell us about your project or how we can help..."
           />
@@ -283,33 +238,26 @@ const ContactForm: React.FC = () => {
           type="submit"
           disabled={isSubmitting}
           className="w-full flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
         >
           {isSubmitting ? (
             <>
               <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
               Sending...
-<<<<<<< HEAD
 </>
-=======
             </>
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
           ) : (
             <>
               <Send className="w-5 h-5 mr-2" />
               Send Message
-<<<<<<< HEAD
 </>
           )}
         </button>
       </form>
-=======
             </>
-          )}
+{          )}
         </button>
       </form>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
       <div className="mt-8 pt-8 border-t border-white/10">
         <h3 className="text-lg font-semibold text-white mb-4">Contact Information</h3>
         <div className="space-y-3">
@@ -328,13 +276,10 @@ const ContactForm: React.FC = () => {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   )
-}
+{}
 export default ContactForm
-=======
   );
-};
+{};
 
-export default ContactForm;
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
+export default ContactForm

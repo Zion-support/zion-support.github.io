@@ -24,6 +24,6 @@ export default function AiContentGeneratorPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

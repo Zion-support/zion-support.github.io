@@ -24,6 +24,6 @@ export default function AiFinancialPlannerPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

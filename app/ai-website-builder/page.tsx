@@ -24,6 +24,6 @@ export default function AiWebsiteBuilderPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

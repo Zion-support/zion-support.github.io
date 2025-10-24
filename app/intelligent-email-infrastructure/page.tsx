@@ -24,6 +24,6 @@ export default function IntelligentEmailInfrastructurePage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

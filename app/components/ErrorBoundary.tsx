@@ -1,12 +1,12 @@
 import { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
-  children: ReactNode;
+  children: ReactNode
 }
 
 interface State {
-  hasError: boolean;
-  error?: Error;
+  hasError: boolean
+  error?: Error
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -19,16 +19,13 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-<<<<<<< HEAD
     // Log error in development, send to error reporting service in production
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
       console.error('ErrorBoundary caught an error: ', error, errorInfo);
     }
     // TODO: Send error to error reporting service in production
-=======
     console.error('ErrorBoundary caught an error: ', error, errorInfo);
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
   }
 
   public render() {
@@ -51,19 +48,17 @@ class ErrorBoundary extends Component<Props, State> {
       );
     }
 
-<<<<<<< HEAD
-=======
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ]
 
   return (
     <>
-      <Helmet>
+      <Helmet>;
         <title>ErrorBoundary</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced ErrorBoundary solution for modern businesses.&quot; />
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial intelligence, ErrorBoundary, AI solutions, intelligent automation&quot; />
@@ -164,7 +159,7 @@ class ErrorBoundary extends Component<Props, State> {
   );
 };
 
-export default ErrorBoundaryPage;
+export default ErrorBoundaryPage
 error?: Error
 errorInfo?: ErrorInfo}
 class ErrorBoundary extends Component<Props, State>{constructor(props: Props) {
@@ -208,14 +203,14 @@ Error Details (Development)
 <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
 <button
 onClick={this.handleReload}
-className=&quot;flex items-center justify-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200&quot;
+className=&quot;flex items-center justify-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200&quot
 ></button>
 <RefreshCw className=&quot;w-4 h-4&quot; />
 <span>Reload Page</span>
 </button>
 <button
 onClick={this.handleGoHome}
-className=&quot;flex items-center justify-center space-x-2 border border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200&quot;
+className=&quot;flex items-center justify-center space-x-2 border border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200&quot
 ></button>
 <Home className=&quot;w-4 h-4&quot; />
 <span>Go Home</span>
@@ -224,7 +219,7 @@ className=&quot;flex items-center justify-center space-x-2 border border-cyan-60
 <div className=&quot;mt-6 pt-6 border-t border-white/20&quot;></div>
 <p className=&quot;text-sm text-gray-400 mb-3&quot;>Still having trouble? Contact our support team:</p>p>
 <a
-href=&quot;mailto:kleber@ziontechgroup.com&quot;
+href=&quot;mailto:kleber@ziontechgroup.com&quot
 className=&quot;inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors&quot;>
 <Phone className=&quot;w-4 h-4 mr-2&quot; />
 kleber@ziontechgroup.com
@@ -232,13 +227,9 @@ kleber@ziontechgroup.com
 </div>
 </div>
 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
-    return this.props.children;
+    return this.props.children
   }
 }
 
-<<<<<<< HEAD
-export default ErrorBoundary;
-=======
-export default ErrorBoundary;
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
+export default ErrorBoundary
+export default ErrorBoundary

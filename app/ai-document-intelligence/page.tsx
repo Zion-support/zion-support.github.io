@@ -24,6 +24,6 @@ export default function AiDocumentIntelligencePage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

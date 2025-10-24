@@ -24,6 +24,6 @@ export default function CrmLitePage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

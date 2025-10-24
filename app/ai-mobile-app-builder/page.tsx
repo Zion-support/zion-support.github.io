@@ -24,6 +24,6 @@ export default function AiMobileAppBuilderPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

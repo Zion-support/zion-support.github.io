@@ -24,6 +24,6 @@ export default function CybersecurityConsultingPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

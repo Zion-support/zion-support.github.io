@@ -4,7 +4,7 @@ import { AlertCircle } from 'lucide-react';
 
 interface NewsletterSignupProps {
   variant?: 'inline' | 'modal';
-  onClose?: () => void;
+  onClose?: () => void
 }
 
 const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline', onClose }) => {;
@@ -18,13 +18,13 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
     if (!email) {
       setStatus('error');
       setMessage('Please enter your email address');
-      return;
+      return
     }
 
     if (!/\S+@\S+\.\S+/.test(email)) {
       setStatus('error');
       setMessage('Please enter a valid email address');
-      return;
+      return
     }
 
     setStatus('loading');
@@ -126,7 +126,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
     );
   }
 
-  return content;
+  return content
 };
 
-export default NewsletterSignup;
+export default NewsletterSignup

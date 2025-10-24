@@ -24,6 +24,6 @@ export default function AiHealthcareSolutionsPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

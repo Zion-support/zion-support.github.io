@@ -24,6 +24,6 @@ export default function SmartCitiesPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

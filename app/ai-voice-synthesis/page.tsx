@@ -24,6 +24,6 @@ export default function AiVoiceSynthesisPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

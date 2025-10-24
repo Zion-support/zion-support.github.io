@@ -24,6 +24,6 @@ export default function AiVoiceSolutionsPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

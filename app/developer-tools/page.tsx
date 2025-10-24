@@ -24,6 +24,6 @@ export default function DeveloperToolsPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

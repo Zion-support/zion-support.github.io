@@ -24,6 +24,6 @@ export default function AiEnergyPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

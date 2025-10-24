@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Link from 'next/link';
@@ -7,110 +6,110 @@ import { ArrowRight, Mail, Target, BarChart, Users, CheckCircle, Zap, Brain, Set
 const AiEmailMarketingAutomationPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Campaigns',
-      description: 'Create intelligent email campaigns that adapt to user behavior and preferences automatically.',
+      icon: Brain
+      title: 'AI-Powered Campaigns'
+      description: 'Create intelligent email campaigns that adapt to user behavior and preferences automatically.'
       benefits: ['Smart segmentation', 'Predictive content', 'Optimal send times', 'Personalization engine']
-    },
-    {
-      icon: Target,
-      title: 'Advanced Segmentation',
-      description: 'Segment your audience with precision using AI-driven behavioral and demographic analysis.',
-      benefits: ['Behavioral triggers', 'Demographic targeting', 'Engagement scoring', 'Lifecycle stages']
-    },
-    {
-      icon: BarChart,
-      title: 'Analytics & Insights',
-      description: 'Comprehensive analytics dashboard with AI-powered insights and recommendations.',
-      benefits: ['Real-time metrics', 'Predictive analytics', 'A/B testing', 'ROI tracking']
-    },
-    {
-      icon: Zap,
-      title: 'Automation Workflows',
-      description: 'Build complex email automation workflows with drag-and-drop visual builder.',
-      benefits: ['Visual workflow builder', 'Multi-step sequences', 'Conditional logic', 'Trigger-based actions']
     }
+    {
+      icon: Target
+      title: 'Advanced Segmentation'
+      description: 'Segment your audience with precision using AI-driven behavioral and demographic analysis.'
+      benefits: ['Behavioral triggers', 'Demographic targeting', 'Engagement scoring', 'Lifecycle stages']
+    }
+    {
+      icon: BarChart
+      title: 'Analytics & Insights'
+      description: 'Comprehensive analytics dashboard with AI-powered insights and recommendations.'
+      benefits: ['Real-time metrics', 'Predictive analytics', 'A/B testing', 'ROI tracking']
+    }
+    {
+      icon: Zap
+      title: 'Automation Workflows'
+      description: 'Build complex email automation workflows with drag-and-drop visual builder.'
+      benefits: ['Visual workflow builder', 'Multi-step sequences', 'Conditional logic', 'Trigger-based actions']
+    };
   ];
 
   const useCases = [
     {
-      title: 'Welcome Series',
-      description: 'Automated welcome email sequences for new subscribers',
-      icon: Mail,
+      title: 'Welcome Series'
+      description: 'Automated welcome email sequences for new subscribers'
+      icon: Mail
       benefits: ['Increase engagement by 40%', 'Build brand awareness', 'Set expectations']
-    },
-    {
-      title: 'Abandoned Cart Recovery',
-      description: 'Re-engage customers who left items in their cart',
-      icon: ShoppingCart,
-      benefits: ['Recover 15-25% of lost sales', 'Personalized offers', 'Multi-touch sequences']
-    },
-    {
-      title: 'Re-engagement Campaigns',
-      description: 'Win back inactive subscribers with targeted campaigns',
-      icon: Users,
-      benefits: ['Reduce churn by 30%', 'Identify at-risk subscribers', 'Personalized content']
-    },
-    {
-      title: 'Post-Purchase Follow-up',
-      description: 'Nurture customers after purchase with relevant content',
-      icon: Star,
-      benefits: ['Increase customer lifetime value', 'Gather feedback', 'Cross-sell opportunities']
     }
+    {
+      title: 'Abandoned Cart Recovery'
+      description: 'Re-engage customers who left items in their cart'
+      icon: ShoppingCart
+      benefits: ['Recover 15-25% of lost sales', 'Personalized offers', 'Multi-touch sequences']
+    }
+    {
+      title: 'Re-engagement Campaigns'
+      description: 'Win back inactive subscribers with targeted campaigns'
+      icon: Users
+      benefits: ['Reduce churn by 30%', 'Identify at-risk subscribers', 'Personalized content']
+    }
+    {
+      title: 'Post-Purchase Follow-up'
+      description: 'Nurture customers after purchase with relevant content'
+      icon: Star
+      benefits: ['Increase customer lifetime value', 'Gather feedback', 'Cross-sell opportunities']
+    };
   ];
 
   const pricing = [
     {
-      name: 'Starter',
-      price: '$49',
-      period: '/month',
-      description: 'Perfect for small businesses',
+      name: 'Starter'
+      price: '$49'
+      period: '/month'
+      description: 'Perfect for small businesses'
       features: [
-        'Up to 10,000 contacts',
-        'Basic automation',
-        'Email templates',
-        'Analytics dashboard',
+        'Up to 10,000 contacts'
+        'Basic automation'
+        'Email templates'
+        'Analytics dashboard'
         'Email support'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$149',
-      period: '/month',
-      description: 'Ideal for growing businesses',
-      features: [
-        'Up to 50,000 contacts',
-        'Advanced automation',
-        'AI-powered insights',
-        'A/B testing',
-        'Priority support',
-        'Custom integrations'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'For large organizations',
-      features: [
-        'Unlimited contacts',
-        'Advanced AI features',
-        'Dedicated support',
-        'Custom development',
-        'White-label options',
-        'SLA guarantee'
-      ],
+      ]
       popular: false
     }
+    {
+      name: 'Professional'
+      price: '$149'
+      period: '/month'
+      description: 'Ideal for growing businesses'
+      features: [
+        'Up to 50,000 contacts'
+        'Advanced automation'
+        'AI-powered insights'
+        'A/B testing'
+        'Priority support'
+        'Custom integrations'
+      ]
+      popular: true
+    }
+    {
+      name: 'Enterprise'
+      price: 'Custom'
+      period: ''
+      description: 'For large organizations'
+      features: [
+        'Unlimited contacts'
+        'Advanced AI features'
+        'Dedicated support'
+        'Custom development'
+        'White-label options'
+        'SLA guarantee'
+      ]
+      popular: false
+    };
   ];
 
   const stats = [
-    { number: '2.5M+', label: 'Emails Sent Daily', icon: Send },
-    { number: '40%', label: 'Higher Open Rates', icon: TrendingUp },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
-    { number: '24/7', label: 'Customer Support', icon: Clock }
+    { number: '2.5M+', label: 'Emails Sent Daily', icon: Send }
+    { number: '40%', label: 'Higher Open Rates', icon: TrendingUp }
+    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield }
+    { number: '24/7', label: 'Customer Support', icon: Clock };
   ];
 
   return (
@@ -311,11 +310,7 @@ const AiEmailMarketingAutomationPage: React.FC = () => {
   );
 };
 
-export default AiEmailMarketingAutomationPage;
-=======
-import React from 'react';
-
-import Link from 'next/link';
+export default AiEmailMarketingAutomationPage
 import { ArrowRight } from 'lucide-react';
 
 export default function AiEmailMarketingAutomationPage() {
@@ -339,7 +334,6 @@ export default function AiEmailMarketingAutomationPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d

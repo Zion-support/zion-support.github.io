@@ -24,6 +24,6 @@ export default function AiBusinessIntelligenceProPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

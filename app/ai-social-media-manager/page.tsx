@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Link from 'next/link';
@@ -24,11 +23,8 @@ export default function AISocialMediaManagerPage() {
           </Link>
         </div>
       </div>
-    </div>
-=======
-import React from 'react';
+    </div>;
 
-import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 export default function AiSocialMediaManagerPage() {
@@ -52,7 +48,6 @@ export default function AiSocialMediaManagerPage() {
           </Link>
         </div>
       </div>
-</>
->>>>>>> cursor/fix-errors-and-merge-to-main-f44d
+</>;
   );
 }

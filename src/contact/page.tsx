@@ -15,7 +15,7 @@ constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({}
     service: '',
     message: ''
   })
-
+;
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {};

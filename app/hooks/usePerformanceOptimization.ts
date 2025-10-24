@@ -12,10 +12,10 @@ interface PerformanceOptimizationOptions {
 
 export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {}) => {
   const {
-    enableLazyLoading = true,
-    enablePreloading = true,
-    enableImageOptimization = true,
-    enableCodeSplitting = true,
+    enableLazyLoading = true
+    enablePreloading = true
+    enableImageOptimization = true
+    enableCodeSplitting = true
     enableCaching = true
   } = options
 
@@ -44,9 +44,9 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
             }
           }
         })
-      },
+      }
       {
-        rootMargin: '50px 0px',
+        rootMargin: '50px 0px'
         threshold: 0.01
       }
     )
@@ -61,8 +61,8 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     if (!enablePreloading || typeof window === 'undefined') return
 
     const criticalResources = [
-      '/fonts/inter.woff2',
-      '/images/hero-bg.jpg',
+      '/fonts/inter.woff2'
+      '/images/hero-bg.jpg'
       '/images/logo.svg'
     ]
 
@@ -110,7 +110,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
 
     // Preload critical chunks
     const criticalChunks = [
-      '/static/js/main.js',
+      '/static/js/main.js'
       '/static/css/main.css'
     ]
 
@@ -180,9 +180,9 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     if (typeof window === 'undefined') return
 
     const hints = [
-      { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: '//www.google-analytics.com' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'dns-prefetch', href: '//fonts.googleapis.com' }
+      { rel: 'dns-prefetch', href: '//www.google-analytics.com' }
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' }
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
     ]
 
@@ -216,20 +216,20 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       }
     }
   }, [
-    setupLazyLoading,
-    preloadCriticalResources,
-    optimizeImages,
-    optimizeCodeSplitting,
-    registerServiceWorker,
-    setupPerformanceMonitoring,
+    setupLazyLoading
+    preloadCriticalResources
+    optimizeImages
+    optimizeCodeSplitting
+    registerServiceWorker
+    setupPerformanceMonitoring
     addResourceHints
   ])
 
   return {
-    setupLazyLoading,
-    preloadCriticalResources,
-    optimizeImages,
-    registerServiceWorker,
+    setupLazyLoading
+    preloadCriticalResources
+    optimizeImages
+    registerServiceWorker,;
     setupPerformanceMonitoring
-  }
+  };
 }

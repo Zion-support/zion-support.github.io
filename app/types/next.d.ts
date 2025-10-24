@@ -121,7 +121,7 @@ export interface NodeRuntime {;
 declare module 'next' {
   interface NextApiRequest {
     user?: {
-      id: string,
+      id: string
     email: string
       name?: string
 }

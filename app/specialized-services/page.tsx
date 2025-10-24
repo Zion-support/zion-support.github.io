@@ -24,6 +24,6 @@ export default function SpecializedServicesPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

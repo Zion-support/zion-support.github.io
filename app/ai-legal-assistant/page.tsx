@@ -24,6 +24,6 @@ export default function AiLegalAssistantPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

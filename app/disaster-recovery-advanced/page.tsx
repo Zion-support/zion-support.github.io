@@ -24,6 +24,6 @@ export default function DisasterRecoveryAdvancedPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

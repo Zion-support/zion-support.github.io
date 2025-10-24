@@ -24,6 +24,6 @@ export default function GdprCompliancePage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

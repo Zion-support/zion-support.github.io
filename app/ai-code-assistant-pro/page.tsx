@@ -24,6 +24,6 @@ export default function AiCodeAssistantProPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

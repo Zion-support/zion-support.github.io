@@ -8,52 +8,52 @@ import Footer from '../components/Footer';
 const AdvancedSEOOptimizerPage: React.FC = () => {
   const features = [
     {
-      icon: Search,
-      title: 'Advanced SEO Analysis',
-      description: 'Comprehensive SEO analysis and optimization recommendations.',
+      icon: Search
+      title: 'Advanced SEO Analysis'
+      description: 'Comprehensive SEO analysis and optimization recommendations.'
       benefits: ['Keyword research', 'Content optimization', 'Technical SEO', 'Performance insights']
-    },
+    }
     {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific keywords and audiences with precision.',
+      icon: Target
+      title: 'Precision Targeting'
+      description: 'Target specific keywords and audiences with precision.'
       benefits: ['Keyword targeting', 'Audience analysis', 'Competitor research', 'Market insights']
-    },
+    }
     {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your website for maximum growth and visibility.',
+      icon: TrendingUp
+      title: 'Growth Optimization'
+      description: 'Optimize your website for maximum growth and visibility.'
       benefits: ['Growth strategies', 'Traffic optimization', 'Conversion tracking', 'ROI analysis']
-      icon: Brain,
-      title: 'AI-Powered 3D Generation',
-      description: 'Advanced AI algorithms that generate high-quality 3D models and assets automatically.',
+      icon: Brain
+      title: 'AI-Powered 3D Generation'
+      description: 'Advanced AI algorithms that generate high-quality 3D models and assets automatically.'
       benefits: ['Automated 3D modeling', 'Real-time generation', 'Quality optimization', 'Custom parameters']
-    },
+    }
     {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time 3D generation metrics.',
+      icon: BarChart
+      title: 'Advanced Analytics'
+      description: 'Comprehensive analytics dashboard with real-time 3D generation metrics.'
       benefits: ['Generation metrics', 'Performance tracking', 'Quality analysis', 'Usage statistics']
-    },
+    }
     {
-      icon: Target,
-      title: 'Precision Control',
-      description: 'Fine-tune 3D generation parameters for precise control over output quality.',
+      icon: Target
+      title: 'Precision Control'
+      description: 'Fine-tune 3D generation parameters for precise control over output quality.'
       benefits: ['Parameter tuning', 'Quality control', 'Style customization', 'Output optimization']
-    },
+    }
     {
-      icon: TrendingUp,
-      title: 'Scalable Generation',
-      description: 'Generate multiple 3D assets at scale with consistent quality and performance.',
+      icon: TrendingUp
+      title: 'Scalable Generation'
+      description: 'Generate multiple 3D assets at scale with consistent quality and performance.'
       benefits: ['Batch processing', 'Scalable infrastructure', 'Consistent quality', 'Performance optimization']
     }
   ]
 
   const benefits = [
-    'Increase organic traffic by up to 300%',
-    'Improve search rankings with AI-powered insights',
-    'Optimize content for better visibility',
-    'Track performance with detailed analytics',
+    'Increase organic traffic by up to 300%'
+    'Improve search rankings with AI-powered insights'
+    'Optimize content for better visibility'
+    'Track performance with detailed analytics'
     'Stay ahead of SEO trends and updates'
   ]
 
@@ -111,10 +111,10 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-    'Generate 3D models 10x faster than traditional methods',
-    'Reduce 3D asset creation costs by 70%',
-    'Create high-quality 3D content with minimal expertise',
-    'Scale 3D content production without proportional resource increases',
+    'Generate 3D models 10x faster than traditional methods'
+    'Reduce 3D asset creation costs by 70%'
+    'Create high-quality 3D content with minimal expertise'
+    'Scale 3D content production without proportional resource increases'
     'Access cutting-edge 3D generation technology'
   ]
 
@@ -259,10 +259,10 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
     </>
   )
 }
-
-export default AdvancedSEOOptimizerPage;
+;
+export default AdvancedSEOOptimizerPage
     </div>
   )
 };
 ;
-export default AI3DGenerationPage;
+export default AI3DGenerationPage

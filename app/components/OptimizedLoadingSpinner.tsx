@@ -9,41 +9,41 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 const OptimizedLoadingSpinnerPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      icon: Brain
+      title: 'AI-Powered Intelligence'
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.'
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
+    }
     {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      icon: BarChart
+      title: 'Advanced Analytics'
+      description: 'Comprehensive analytics dashboard with real-time data visualization.'
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
+    }
     {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
+      icon: Target
+      title: 'Precision Targeting'
+      description: 'Target specific goals and objectives with precision and accuracy.'
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
+    }
     {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
+      icon: TrendingUp
+      title: 'Growth Optimization'
+      description: 'Optimize your business growth with data-driven strategies.'
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ]
 
   const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'
     'Gain competitive advantage with advanced technology'
   ]
 
   return (
-    <>
+    <>;
       <Helmet>;
         <title>OptimizedLoadingSpinner</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced OptimizedLoadingSpinner solution for modern businesses.&quot; />
@@ -145,41 +145,41 @@ const OptimizedLoadingSpinnerPage: React.FC = () => {
   );
 };
 
-export default OptimizedLoadingSpinnerPage;
+export default OptimizedLoadingSpinnerPage
 text?: string
 class Nam e?: string
 color?: 'blue' | 'gray' | 'green' | 'red' | 'purple'
 {fullScreen?:boolean;}
 {}
 constOptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProp s>= memo(
-({size= 'md',
-variant= 'spinner',
-text= 'Loading...',
-className= '',
-color= 'blue',
+({size= 'md'
+variant= 'spinner'
+text= 'Loading...'
+className= ''
+color= 'blue'
 fullScreen= false,}) => {constsizeClasses= useMemo(
 () => ({
-xs: 'h-3 w-3',
-sm: 'h-4 w-4',
-md: 'h-8 w-8',
-lg: 'h-1 2 w-1 2',
-xl: 'h-16w-1 6',}),
+xs: 'h-3 w-3'
+sm: 'h-4 w-4'
+md: 'h-8 w-8'
+lg: 'h-1 2 w-1 2'
+xl: 'h-16w-1 6',})
 []
 )
 consttextSizeClasses= useMemo(
-() => ({xs: 'text-xs',
-sm: 'text-sm',
-md: 'text-base',
-lg: 'text-lg',
-xl: 'text-xl',}),
+() => ({xs: 'text-xs'
+sm: 'text-sm'
+md: 'text-base'
+lg: 'text-lg'
+xl: 'text-xl',})
 []
 )
 constcolorClasses= useMemo(
-() => ({blue: 'border-blue-60 0 bg-blue-60 0',
-gray: 'border-gray-60 0 bg-gray-60 0',
-green: 'border-green-600bg-green-60 0',
-red: 'border-red-600bg-red-60 0',
-purple: 'border-purple-600bg-purple-60 0',}),
+() => ({blue: 'border-blue-60 0 bg-blue-60 0'
+gray: 'border-gray-60 0 bg-gray-60 0'
+green: 'border-green-600bg-green-60 0'
+red: 'border-red-600bg-red-60 0'
+purple: 'border-purple-600bg-purple-60 0',})
 []
 )
 constrenderSpinner= useMemo(() => {switch (variant) {
@@ -203,8 +203,8 @@ case 'bars':
 return(<divclassName='flex space-x-1' role='status' aria-label='Loading'>{[0, 1, 2, 3].map(i=>(</di><divkey={i}
 className={`w-1 ${colorClasses[color].split('')[1]}animate-pulse`}
 style={{;}
-height: `${12+ i*4}px`,
-animationDelay: `${i*0.1}s`,
+height: `${12+ i*4}px`
+animationDelay: `${i*0.1}s`
 }}
 /></di>))}</di>)
 case 'spinner':
@@ -228,4 +228,4 @@ return (</div>
 {}
 )
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'
-export default OptimizedLoadingSpinner;
+export default OptimizedLoadingSpinner

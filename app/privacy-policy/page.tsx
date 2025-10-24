@@ -24,6 +24,6 @@ export default function PrivacyPolicyPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

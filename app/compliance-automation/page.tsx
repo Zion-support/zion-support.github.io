@@ -24,6 +24,6 @@ export default function ComplianceAutomationPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }

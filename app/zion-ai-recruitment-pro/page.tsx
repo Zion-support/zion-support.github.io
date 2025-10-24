@@ -24,6 +24,6 @@ export default function ZionAiRecruitmentProPage() {
           </Link>
         </div>
       </div>
-</>
+</>;
   );
 }
