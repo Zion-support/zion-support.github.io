@@ -59,6 +59,7 @@ export default defineConfig({
           if (id.includes('/app/utils/')) {
             return 'utils';
           }
+          return 'app';
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
