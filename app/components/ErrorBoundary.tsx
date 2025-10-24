@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const Component: React.FC = () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 'use client';
 
 =======
@@ -26,6 +30,7 @@ interface State {
   errorInfo?: ErrorInfo;
 }
 
+<<<<<<< HEAD
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
@@ -38,6 +43,27 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+=======
+class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps,) {
+    super(props);
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null;
+    };
+  }
+
+  static getDerivedStateFromError(error: Error,): ErrorBoundaryState {
+    return {
+      hasError: true,
+      error,
+      errorInfo: null;
+    };
+  }
+
+  componentDidCatch(error: Error, errorInfo: any,) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     this.setState({
       error,
       errorInfo,
@@ -75,6 +101,7 @@ class ErrorBoundary extends Component<Props, State> {
       }
 
       return (
+<<<<<<< HEAD
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
             <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4">
@@ -96,6 +123,19 @@ class ErrorBoundary extends Component<Props, State> {
               Something went wrong
             </h2>
             <p className="text-gray-600 text-center mb-6">
+=======
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+          <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 text-center">
+            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <AlertTriangle className="w-8 h-8 text-red-400" />
+            </div></div></div>
+            
+            <h1 className="text-3xl font-bold text-white mb-4">
+              Oops! Something went wrong
+            </h1>
+            
+            <p className="text-gray-300 mb-6">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
             <div className="flex space-x-3">
@@ -133,6 +173,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 }
 
+<<<<<<< HEAD
 export default ErrorBoundary;
 =======
 export default function Errorboundary({ className = '', children, ...props }: ErrorboundaryProps) {
@@ -150,3 +191,8 @@ export default function Errorboundary({ className = '', children, ...props }: Er
 
 export default ErrorBoundary
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
+=======
+};
+
+export default Component;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361

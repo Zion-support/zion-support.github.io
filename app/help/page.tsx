@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const Component: React.FC = () => {
+'use client';
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import { Link } from 'react-router-dom';
@@ -243,6 +249,7 @@ import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, HelpCircle, Search, FileText, MessageCircle, Phone, Mail } from 'lucide-react'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const HelpPage: React.FC = () => {
   const faqItems = [
     {
@@ -464,3 +471,8 @@ export default HelpPage
 =======
 export default HelpCenterPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
+=======
+};
+
+export default Component;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361

@@ -11,6 +11,7 @@ const PerformanceMonitor: React.FC = () => {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         
         if (navigation) {
+<<<<<<< HEAD
           const loadTime = navigation.loadEventEnd - navigation.fetchStart;
           const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.fetchStart;
           const firstPaint = performance.getEntriesByName('first-paint')[0]?.startTime || 0;
@@ -36,6 +37,25 @@ const PerformanceMonitor: React.FC = () => {
               firstContentfulPaint
             });
           }
+=======
+          const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+          const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
+          
+          // Get memory usage if available
+          const memory = (performance as any).memory;
+          const memoryUsage = memory ? Math.round(memory.usedJSHeapSize / 1024 / 1024) : 0;
+          
+          // Get connection speed
+          const connection = (navigator as any).connection;
+          const connectionSpeed = connection ? connection.effectiveType || 'unknown' : 'unknown';
+          
+          setMetrics({
+            loadTime: Math.round(loadTime),
+            memoryUsage,
+            connectionSpeed,
+            renderTime: Math.round(domContentLoaded),
+          });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
         }
       };
 
@@ -46,6 +66,24 @@ const PerformanceMonitor: React.FC = () => {
         window.removeEventListener('load', monitorPerformance);
       };
     }
+<<<<<<< HEAD
+=======
+
+    // Keyboard shortcut to toggle visibility
+    const handleKeyDown = (e: KeyboardEvent,) => {
+      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
+        e.preventDefault();
+        setIsVisible(prev => !prev);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('load', measureWebVitals);
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   }, []);
 
   return null;

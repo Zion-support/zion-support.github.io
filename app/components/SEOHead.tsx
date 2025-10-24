@@ -176,6 +176,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <html lang={locale.split('_')[0]} />
       <meta property="og:locale" content={locale} />
       
+<<<<<<< HEAD
       {/* Author and publishing info */}
       {author && <meta name="author" content={author} />}
       {publishedTime && <meta name="article:published_time" content={publishedTime} />}
@@ -191,8 +192,17 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:image" content={defaultOgImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
+=======
+      {/* Open Graph Meta Tags */}
+      <meta property="og: title" content={fullTitle,} />
+      <meta property="og: description" content={description,} />
+      <meta property="og: type" content={ogType,} />
+      <meta property="og: url" content={canonicalUrl,} />
+      <meta property="og: image" content={ogImage,} />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
       <meta property="og:site_name" content="Zion Tech Group" />
       
+<<<<<<< HEAD
       {/* Twitter */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={fullTitle} />
@@ -200,6 +210,13 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="twitter:image" content={defaultOgImage} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
+=======
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter: card" content={twitterCard,} />
+      <meta name="twitter: title" content={fullTitle,} />
+      <meta name="twitter: description" content={description,} />
+      <meta name="twitter: image" content={ogImage,} />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
       
       {/* Additional SEO */}
       <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />

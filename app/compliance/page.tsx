@@ -141,6 +141,7 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 const CompliancePage: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
@@ -175,6 +176,26 @@ const CompliancePage: React.FC = () => {
       title: 'Secure Analytics',
       description: 'Enterprise-grade security for your sensitive data and analytics.',
       benefits: ['Data encryption', 'Access controls', 'Audit trails', 'Compliance ready']
+=======
+      icon: FileCheck,
+      title: 'Compliance Management',
+      description: 'Comprehensive compliance management solutions for various industry standards',
+    },
+    {
+      icon: Lock,
+      title: 'Security Compliance',
+      description: 'Ensure your systems meet the highest security and compliance standards',
+    },
+    {
+      icon: Award,
+      title: 'Certification Support',
+      description: 'Get support for achieving and maintaining industry certifications',
+    },
+    {
+      icon: Shield,
+      title: 'Audit Readiness',
+      description: 'Stay audit-ready with continuous compliance monitoring and reporting',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     }
   ];
 
@@ -194,6 +215,7 @@ const CompliancePage: React.FC = () => {
         <meta name="keywords" content="compliance, regulations, standards, audit" />
       </Helmet>
 
+<<<<<<< HEAD
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">
         {/* Hero Section */}
@@ -300,6 +322,64 @@ const CompliancePage: React.FC = () => {
             </div>
           </div>
         </section>
+=======
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Compliance
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Ensure your business meets all regulatory and compliance requirements. 
+            Powered by advanced AI technology and industry expertise.
+          </p>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Our compliance solutions deliver unmatched performance, security, and scalability.
+          </p>
+        </div></div></div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {features.map((feature, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
+              <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+              <p className="text-gray-300">{feature.description}</p>
+            </div></div>
+          ))}
+        </div>
+
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-8">
+            Why Choose Our Compliance Solutions?
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center space-x-3">
+                <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
+                <span className="text-gray-300">{benefit}</span>
+              </div></div></div>
+            ))}
+          </div>
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-purple-100 mb-8">
+            Contact our experts to discuss your compliance needs and get a customized solution.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+              <Phone className="mr-2 h-5 w-5" />
+              Call Now
+            </button>
+            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+              <Mail className="mr-2 h-5 w-5" />
+              Email Us
+            </button>
+          </div></div>
+        </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
       </div>
       <Footer />
     </>

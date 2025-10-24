@@ -147,7 +147,7 @@ const AIContentWriterPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>AI Content Writer - Zion Tech Group</title>
         <meta name="description" content="Intelligent AI-powered content writing assistant for enhanced productivity." />
@@ -189,6 +189,7 @@ const AIContentWriterPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Advanced AI technology that drives results
               </p>
+<<<<<<< HEAD
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -211,6 +212,16 @@ const AIContentWriterPage: React.FC = () => {
                   )}
                 </div>
               ))}
+=======
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                  Get Started
+                </button>
+                <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
+                  Learn More
+                </button>
+              </div></div></div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
             </div>
           </div>
         </section>
@@ -225,6 +236,7 @@ const AIContentWriterPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Proven results that drive business growth and efficiency
               </p>
+<<<<<<< HEAD
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -234,6 +246,26 @@ const AIContentWriterPage: React.FC = () => {
                     <CheckCircle className="w-8 h-8 text-white" />
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
+=======
+            </div></div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="flex items-center mb-4">
+                    <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
+                    <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
+                  </div></div></div>
+                  <p className="text-gray-600 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
                 </div>
               ))}
             </div>
@@ -265,11 +297,15 @@ const AIContentWriterPage: React.FC = () => {
       </div>
       <Footer />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
 =======
     </>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
+=======
+    </React.Fragment>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   );
 <<<<<<< HEAD
 }

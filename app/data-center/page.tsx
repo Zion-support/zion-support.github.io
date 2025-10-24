@@ -70,6 +70,7 @@ const DataCenterPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
+<<<<<<< HEAD
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
@@ -103,6 +104,25 @@ const DataCenterPage: React.FC = () => {
       title: 'Secure Analytics',
       description: 'Enterprise-grade security for your sensitive data and analytics.',
       benefits: ['Data encryption', 'Access controls', 'Audit trails', 'Compliance ready']
+=======
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal results',
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards',
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     }
   ];
 
@@ -142,7 +162,7 @@ const DataCenterPage: React.FC = () => {
               <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 View Demo
               </button>
-            </div>
+            </div></div></div></div>
           </div>
         </section>
 

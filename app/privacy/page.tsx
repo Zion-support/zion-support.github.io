@@ -4,6 +4,7 @@ import React from "react";
 import { Helmet } from 'react-helmet-async';
 export default function PrivacyPage() {
 
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -45,6 +46,30 @@ import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { Shield, Database, Lock, Eye, CheckCircle, AlertTriangle, Info } from 'lucide-react'
+=======
+  const purposes = [
+    {
+      title: 'Service Provision',
+      icon: Globe,
+      description: 'To provide and maintain our services',
+    },
+    {
+      title: 'Communication',
+      icon: Mail,
+      description: 'To communicate with you about our services',
+    },
+    {
+      title: 'Improvement',
+      icon: ArrowRight,
+      description: 'To improve and develop new features',
+    },
+    {
+      title: 'Security',
+      icon: Shield,
+      description: 'To protect against fraud and abuse',
+    }
+  ];
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 
 const PrivacyPage: React.FC = () => {
   const lastUpdated = 'January 1, 2024'
@@ -53,17 +78,21 @@ const PrivacyPage: React.FC = () => {
     {
       title: 'Access',
       description: 'Request access to your personal data',
+<<<<<<< HEAD
       icon: Database
+=======
+      icon: Eye;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     },
     {
       title: 'Rectification',
       description: 'Correct inaccurate or incomplete data',
-      icon: CheckCircle
+      icon: CheckCircle;
     },
     {
       title: 'Erasure',
       description: 'Request deletion of your personal data',
-      icon: Lock
+      icon: Lock;
     },
     {
       title: 'Restriction',
@@ -78,7 +107,7 @@ const PrivacyPage: React.FC = () => {
     {
       title: 'Portability',
       description: 'Receive your data in a structured format',
-      icon: Database
+      icon: Database;
     }
   ]
 =======
@@ -139,6 +168,7 @@ const PrivacyPolicyPage: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>Privacy Policy - Zion Tech Group</title>
@@ -267,6 +297,20 @@ const PrivacyPolicyPage: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
               </p>
             </div>
+=======
+    <div className="min-h-screen bg-white"></div>
+      <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20"></div>
+        <div className="container mx-auto px-4 text-center"></div>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            Privacy Policy</h1>
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+            Your privacy is important to us. Learn how we collect, use, and protect your information.
+          </p>
+          <div className="flex items-center justify-center text-sm text-blue-200"></div>
+            <Calendar className="h-4 w-4 mr-2" />
+            Last updated: {lastUpdated,}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
           </div>
         </div>
 <<<<<<< HEAD

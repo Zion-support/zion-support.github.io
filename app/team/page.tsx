@@ -206,7 +206,7 @@ const OurTeamPage: React.FC = () => {
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Our Team - Zion Tech Group</title>
 <<<<<<< HEAD
@@ -452,8 +452,12 @@ export default TeamPage
           </div>
         </section>
       </div>
+<<<<<<< HEAD
       <Footer />
     </>
+=======
+    </React.Fragment>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   );
 };
 

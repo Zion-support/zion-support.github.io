@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+const Component: React.FC = () => {
+'use client';
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import { Link } from 'react-router-dom';
@@ -62,6 +68,7 @@ const IoTPlatformPage: React.FC = () => {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Iot Platform - Zion Tech Group</title>
@@ -71,6 +78,73 @@ const IoTPlatformPage: React.FC = () => {
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold mb-8">Iot Platform</h1>
         <div className="prose prose-invert max-w-none">
+=======
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our IoT platform provides everything you need to build, deploy, and scale 
+              Internet of Things solutions for any industry or use case.
+            </p>
+          </div>
+                  ))}
+                </ul>
+</div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              IoT Use Cases
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our IoT platform supports a wide range of industries and applications, 
+              from smart manufacturing to connected cities.
+            </p>
+          </div></div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
+                <div className="text-4xl mb-4">{useCase.icon}</div></div></div>
+                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                <p className="text-gray-300">{useCase.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Why Choose Our IoT Platform?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the benefits of a comprehensive IoT platform designed for scale, 
+              security, and performance.
+            </p>
+          </div></div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <CheckCircle className="w-8 h-8 text-white" />
+                </div></div></div>
+                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive iot platform solutions designed to meet your business needs.
           </p>
@@ -235,5 +309,11 @@ const IoTPlatformPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default IoTPlatformPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
+=======
+};
+
+export default Component;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361

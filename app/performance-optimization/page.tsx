@@ -99,9 +99,19 @@ const PerformanceOptimizationPage: React.FC = () => {
     },
     {
       icon: Shield,
+<<<<<<< HEAD
       title: 'Secure Analytics',
       description: 'Enterprise-grade security for your sensitive data and analytics.',
       benefits: ['Data encryption', 'Access controls', 'Audit trails', 'Compliance ready']
+=======
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards',
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     }
   ];
 

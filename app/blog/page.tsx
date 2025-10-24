@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import { Helmet } from 'react-helmet-async';
 export default function BlogPage() {
@@ -182,6 +183,13 @@ import { Link } from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Calendar, User, Tag } from 'lucide-react'
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Calendar, User, Tag } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 
 const BlogPage: React.FC = () => {
   const blogPosts = [
@@ -191,6 +199,7 @@ const BlogPage: React.FC = () => {
       excerpt: 'Explore the latest AI trends and how they\'re transforming businesses across industries.',
       author: 'Sarah Johnson',
       date: '2024-01-15',
+<<<<<<< HEAD
       readTime: '5 min read',
       category: 'AI & Machine Learning',
       image: '/images/blog/ai-trends-2024.jpg',
@@ -206,6 +215,19 @@ const BlogPage: React.FC = () => {
       category: 'Cloud Computing',
       image: '/images/blog/cloud-infrastructure.jpg',
       featured: false
+=======
+      category: 'AI & Technology',
+      readTime: '5 min read',
+    },
+    {
+      id: 2,
+      title: 'Cloud Migration Best Practices: A Complete Guide',
+      excerpt: 'Learn the essential steps and strategies for successful cloud migration that minimizes downtime and maximizes benefits.',
+      author: 'Cloud Solutions Team',
+      date: '2024-01-10',
+      category: 'Cloud Services',
+      readTime: '8 min read',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     },
     {
       id: 3,
@@ -215,6 +237,7 @@ const BlogPage: React.FC = () => {
       date: '2024-01-10',
       readTime: '6 min read',
       category: 'Cybersecurity',
+<<<<<<< HEAD
       image: '/images/blog/ai-cybersecurity.jpg',
       featured: false
     },
@@ -250,6 +273,18 @@ const BlogPage: React.FC = () => {
       category: 'Data Analytics',
       image: '/images/blog/ai-analytics.jpg',
       featured: false
+=======
+      readTime: '6 min read',
+    },
+    {
+      id: 4,
+      title: 'Micro SaaS Solutions: Building Scalable AI-Powered Tools',
+      excerpt: 'Learn how to create and scale micro SaaS applications that leverage AI to solve specific business problems.',
+      author: 'Product Team',
+      date: '2024-01-01',
+      category: 'Micro SaaS',
+      readTime: '7 min read',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     }
   ]
 
@@ -271,7 +306,7 @@ const BlogPage: React.FC = () => {
   ]
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Blog | Zion Tech Group</title>
         <meta name="description" content="Stay updated with the latest insights on AI, technology, and business trends from our expert team." />
@@ -283,6 +318,7 @@ const BlogPage: React.FC = () => {
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         {/* Hero Section */}
         <section className="py-20 px-4">
+<<<<<<< HEAD
           <div className="container mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
               Our Blog
@@ -291,6 +327,18 @@ const BlogPage: React.FC = () => {
               Stay updated with the latest insights on AI, technology, and business trends. 
               Our expert team shares knowledge to help you stay ahead of the curve.
             </p>
+=======
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Tech Insights & Updates
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Stay ahead with the latest trends, insights, and best practices in AI, cloud computing, and technology.
+              </p>
+            </div></div></div>
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {stats.map((stat, index) => (
                 <div key={index} className="flex items-center gap-2 bg-slate-800/50 backdrop-blur-sm rounded-lg px-4 py-2 border border-slate-700">
@@ -303,6 +351,7 @@ const BlogPage: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Featured Post */}
         <section className="py-16 px-4">
           <div className="container mx-auto">
@@ -311,6 +360,30 @@ const BlogPage: React.FC = () => {
               <div key={post.id} className="bg-slate-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-slate-700 hover:border-cyan-400/50 transition-all duration-300 group">
                 <div className="grid lg:grid-cols-2 gap-8">
                   <div className="p-8">
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {blogPosts.map((post) => (
+                <article
+                  key={post.id}
+                  className="bg-white/5 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group"
+                >
+                  <div className="aspect-video bg-gray-700 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-purple-500/20"></div></div></div>
+                  </div>
+                  
+                  <div className="p-6">
+                    <div className="flex items-center gap-4 mb-3 text-sm text-gray-400">
+                      <span className="flex items-center gap-1">
+                        <Calendar className="w-4 h-4" />
+                        {new Date(post.date).toLocaleDateString()}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <User className="w-4 h-4" />
+                        {post.author}
+                      </span>
+                    </div></div>
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
                     <div className="flex items-center gap-2 mb-4">
                       <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm font-medium rounded-full">
                         Featured
@@ -400,6 +473,7 @@ const BlogPage: React.FC = () => {
                 </article>
               ))}
             </div>
+<<<<<<< HEAD
           </div>
         </section>
 
@@ -433,3 +507,19 @@ const BlogPage: React.FC = () => {
 
 export default BlogPage
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
+=======
+
+            <div className="text-center mt-12">
+              <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
+                Load More Articles
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </React.Fragment>
+  );
+};
+
+export default BlogPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361

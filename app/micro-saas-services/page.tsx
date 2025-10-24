@@ -359,6 +359,7 @@ export default function Page() {
   return null;
 };
 
+<<<<<<< HEAD
 export default function MicroSaasServicesPage() {
 
   return (
@@ -593,3 +594,13 @@ const MicroSaaSServicesPage: React.FC = () => {
 
 export default MicroSaaSServicesPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
+=======
+// Contact information;
+export const contactInfo = {
+  phone: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008, Middletown, DE 19709',
+  website: 'https://ziontechgroup.com',
+  hours: '24/7 Support Available',
+  timezone: 'EST (Eastern Standard Time)',};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361

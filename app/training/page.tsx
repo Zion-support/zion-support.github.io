@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+const Component: React.FC = () => {
+'use client';
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import { Link } from 'react-router-dom';
@@ -234,5 +240,11 @@ const TrainingProgramsPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default TrainingProgramsPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
+=======
+};
+
+export default Component;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361

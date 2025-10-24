@@ -137,7 +137,7 @@ const NaturalLanguageProcessingPage: React.FC = () => {
               <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 View Demo
               </button>
-            </div>
+            </div></div></div>
           </div>
         </section>
 

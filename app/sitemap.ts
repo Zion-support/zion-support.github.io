@@ -6,10 +6,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
   
   return [
     {
+<<<<<<< HEAD
       url: baseUrl,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 1,
+=======
+      url: 'https://ziontechgroup.com',
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     },
     {
       url: `${baseUrl}/about`,

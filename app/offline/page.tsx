@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+const Component: React.FC = () => {
+'use client';
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import { Link } from 'react-router-dom';
@@ -134,7 +140,7 @@ const OfflineModePage: React.FC = () => {
               <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 View Demo
               </button>
-            </div>
+            </div></div></div></div>
           </div>
         </section>
 
@@ -226,5 +232,11 @@ const OfflineModePage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default OfflineModePage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
+=======
+};
+
+export default Component;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361

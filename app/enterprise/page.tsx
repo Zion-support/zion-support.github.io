@@ -110,11 +110,29 @@ const EnterpriseSolutionsPage: React.FC = () => {
   ];
 
   const benefits = [
+<<<<<<< HEAD
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
+=======
+    'Reduce operational costs by 30%',
+    'Improve productivity by 50%',
+    'Enhance security and compliance',
+    'Streamline business processes',
+    'Enable data-driven decisions',
+    'Scale with business growth',
+    'Integrate with existing systems',
+    'Provide 24/7 support and monitoring'
+  ];
+
+  const stats = [
+    { number: '500+', label: 'Enterprise Clients', icon: Building; },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield; },
+    { number: '50%', label: 'Cost Reduction', icon: TrendingUp; },
+    { number: '24/7', label: 'Support Available', icon: Clock; }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   ];
 
   return (
@@ -126,6 +144,7 @@ const EnterpriseSolutionsPage: React.FC = () => {
       </Helmet>
 
       <Navigation />
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
@@ -137,6 +156,62 @@ const EnterpriseSolutionsPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Comprehensive enterprise solutions for large organizations.
+=======
+      
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>
+        <div className="relative max-w-7xl mx-auto text-center"></div>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Enterprise</h1>
+            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Solutions
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Comprehensive enterprise-grade solutions designed for large-scale business operations. 
+            Transform your organization with cutting-edge technology and expert implementation.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+              Get Enterprise Consultation
+              <ArrowRight className="inline-block ml-2 w-5 h-5" />
+            </button>
+            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              View Case Studies
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="flex justify-center mb-4">
+                  <stat.icon className="w-12 h-12 text-purple-400" />
+                </div></div></div></div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-300 text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Enterprise-Grade Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Built for scale, security, and performance to meet the demands of large organizations.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">

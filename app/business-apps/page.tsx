@@ -70,6 +70,7 @@ const BusinessApplicationsPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
+<<<<<<< HEAD
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
@@ -103,6 +104,25 @@ const BusinessApplicationsPage: React.FC = () => {
       title: 'Secure Analytics',
       description: 'Enterprise-grade security for your sensitive data and analytics.',
       benefits: ['Data encryption', 'Access controls', 'Audit trails', 'Compliance ready']
+=======
+      title: 'AI-Powered Business Apps',
+      description: 'Advanced AI technology to transform your business applications and improve efficiency',
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal business results',
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards for your business data',
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international business applications',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     }
   ];
 
@@ -122,6 +142,7 @@ const BusinessApplicationsPage: React.FC = () => {
         <meta name="keywords" content="business apps, productivity, custom software, enterprise" />
       </Helmet>
 
+<<<<<<< HEAD
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">
         {/* Hero Section */}
@@ -228,6 +249,64 @@ const BusinessApplicationsPage: React.FC = () => {
             </div>
           </div>
         </section>
+=======
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Business Apps
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Transform your business with our advanced business application solutions. 
+            Powered by cutting-edge AI technology and industry expertise.
+          </p>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Our business app solutions deliver unmatched performance, security, and scalability.
+          </p>
+        </div></div></div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {features.map((feature, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
+              <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+              <p className="text-gray-300">{feature.description}</p>
+            </div></div>
+          ))}
+        </div>
+
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-8">
+            Why Choose Our Business Apps?
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center space-x-3">
+                <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
+                <span className="text-gray-300">{benefit}</span>
+              </div></div></div>
+            ))}
+          </div>
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-purple-100 mb-8">
+            Contact our experts to discuss your business app needs and get a customized solution.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+              <Phone className="mr-2 h-5 w-5" />
+              Call Now
+            </button>
+            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+              <Mail className="mr-2 h-5 w-5" />
+              Email Us
+            </button>
+          </div></div>
+        </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
       </div>
       <Footer />
     </>

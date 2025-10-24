@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Clock } from 'lucide-react';
@@ -93,6 +94,13 @@ const ConsultationPage: React.FC = () => {
         'Incident response planning'
       ],
       popular: false
+=======
+const Component: React.FC = () => {
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
   ];
@@ -174,8 +182,12 @@ const ConsultationPage: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div>
 <<<<<<< HEAD
+=======
+    <React.Fragment>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
       <Helmet>
         <title>Free Consultation - Zion Tech Group | AI & IT Strategy Planning</title>
         <meta
@@ -188,6 +200,7 @@ const ConsultationPage: React.FC = () => {
         />
       </Helmet>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
@@ -483,12 +496,46 @@ const ConsultationPage: React.FC = () => {
                   </button>
                 </form>
               )}
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Contact Info */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+=======
+        {/* Process Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Our Consultation Process
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                A structured approach to delivering the best consultation experience.
+              </p>
+            </div></div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {process.map((step, index) => (
+                <div key={index} className="text-center">
+                  <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl font-bold text-white">{step.step}</span>
+                  </div></div></div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
+                  <p className="text-gray-300">{step.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-2xl font-bold text-white mb-6">
@@ -545,6 +592,7 @@ const ConsultationPage: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
       </div>
 </div>
 =======
@@ -574,3 +622,12 @@ const ConsultationPage: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
   );
 }
+=======
+      </main>
+      
+      <Footer />
+    </React.Fragment>
+  );
+};
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361

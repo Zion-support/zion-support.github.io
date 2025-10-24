@@ -16,6 +16,7 @@ import Footer from '../components/Footer';
 
 const ChatAnalyticsPage: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Chat Analytics - Zion Tech Group</title>
@@ -73,6 +74,13 @@ const ChatAnalyticsPage: React.FC = () => {
 =======
         <meta name="description" content="Advanced chat analytics and insights." />
         <meta name="keywords" content="chat, analytics, insights, communication" />
+=======
+    <React.Fragment>
+      <Helmet>
+        <title>{title} | Zion Tech Group - Micro SaaS Solutions</title>
+        <meta name="description" content={`Powerful ${title.toLowerCase()} micro SaaS solution for modern businesses.`} />
+        <link rel="canonical" href={`https: //ziontechgroup.com/micro-saas/${serviceName,}`} />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
       </Helmet>
 
       <Navigation />
@@ -96,8 +104,12 @@ const ChatAnalyticsPage: React.FC = () => {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
       <Footer />
     </>
+=======
+    </React.Fragment>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   );
 };
 

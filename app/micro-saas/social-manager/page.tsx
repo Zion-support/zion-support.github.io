@@ -17,7 +17,11 @@ import Footer from '../components/Footer';
 const SocialManagerPage: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-900 text-white">
+=======
+    <React.Fragment>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
       <Helmet>
         <title>Social Manager - Zion Tech Group</title>
 <<<<<<< HEAD
@@ -97,8 +101,12 @@ const SocialManagerPage: React.FC = () => {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
       <Footer />
     </>
+=======
+    </React.Fragment>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   );
 };
 

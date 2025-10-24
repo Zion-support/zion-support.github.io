@@ -34,8 +34,12 @@ const ContactPage: React.FC = () => {
     company: '',
     phone: '',
     service: '',
+<<<<<<< HEAD
     message: ''
 <<<<<<< HEAD
+=======
+    message: '',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -61,7 +65,7 @@ const ContactPage: React.FC = () => {
         company: '',
         phone: '',
         service: '',
-        message: ''
+        message: '',
       });
     }, 3000);
   };
@@ -114,17 +118,56 @@ const ContactPage: React.FC = () => {
         <meta name="description" content="Contact Zion Tech Group for AI and IT solutions" />
       </Helmet>
       
+<<<<<<< HEAD
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
             Contact Us
+=======
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} />
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Get in
+            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Touch
+            </span>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Ready to transform your business with AI and cutting-edge technology? 
             Get in touch with our experts today.
           </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
         </div>
+=======
+        </div></div></div></div>
+      </section>
+
+      {/* Contact Form and Info */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Form */}
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+              <h2 className="text-3xl font-bold text-white mb-6">Send us a message</h2>
+              
+              {submitStatus === 'success' && (
+                <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+                  <span className="text-green-400">Message sent successfully!</span>
+                </div></div></div></div>
+              )}
+
+              {submitStatus === 'error' && (
+                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg">
+                  <span className="text-red-400">Failed to send message. Please try again.</span>
+                </div>
+              )}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           {/* Contact Form */}
@@ -154,7 +197,7 @@ const ContactPage: React.FC = () => {
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Your full name"
                     />
-                  </div>
+                  </div></div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium mb-2">
                       Email Address *
@@ -186,6 +229,7 @@ const ContactPage: React.FC = () => {
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Your company name"
                     />
+<<<<<<< HEAD
 =======
   })
 
@@ -348,6 +392,9 @@ const ContactPage: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3
                   </div>
 
+=======
+                  </div></div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
                   <div>
 <<<<<<< HEAD
                     <label htmlFor="phone" className="block text-sm font-medium mb-2">
@@ -403,8 +450,22 @@ const ContactPage: React.FC = () => {
                   type="submit"
                   className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2"
                 >
+<<<<<<< HEAD
                   <Send className="w-5 h-5" />
                   Send Message
+=======
+                  {isSubmitting ? (
+                    <React.Fragment>
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                      Sending...
+                    </React.Fragment>
+                  ) : (
+                    <React.Fragment>
+                      <Send className="w-5 h-5 mr-2" />
+                      Send Message
+                    </React.Fragment>
+                  )}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
                 </button>
               </form>
             )}
@@ -419,6 +480,7 @@ const ContactPage: React.FC = () => {
               </p>
             </div>
 
+<<<<<<< HEAD
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
                 <div key={index} className="flex items-start space-x-4">
@@ -564,6 +626,62 @@ const ContactPage: React.FC = () => {
                       <span>Competitive pricing and flexible terms</span>
                     </li>
                   </ul>
+=======
+            {/* Contact Information */}
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-3xl font-bold text-white mb-6">Get in touch</h2>
+                <p className="text-gray-300 mb-8">
+                  We're here to help you succeed. Reach out to us through any of the channels below, 
+                  and we'll get back to you within 24 hours.
+                </p>
+              </div></div>
+
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-6 h-6 text-white" />
+                  </div></div></div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-1">Phone</h3>
+                    <p className="text-gray-300">+1-302-464-0950</p>
+                    <p className="text-sm text-gray-400">Mon-Fri 9AM-6PM EST</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-6 h-6 text-white" />
+                  </div></div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
+                    <p className="text-gray-300">kleber@ziontechgroup.com</p>
+                    <p className="text-sm text-gray-400">We'll respond within 24 hours</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-6 h-6 text-white" />
+                  </div></div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-1">Office</h3>
+                    <p className="text-gray-300">364 E Main St STE 1008</p>
+                    <p className="text-gray-300">Middletown, DE 19709</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-6 h-6 text-white" />
+                  </div></div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-1">Business Hours</h3>
+                    <p className="text-gray-300">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                    <p className="text-gray-300">Saturday: 10:00 AM - 4:00 PM</p>
+                    <p className="text-gray-300">Sunday: Closed</p>
+                  </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
                 </div>
               </div>
             </div>

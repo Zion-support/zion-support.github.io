@@ -433,7 +433,7 @@ const PricingPage: React.FC = () => {
         'Monthly Reports',
         'Basic Analytics Dashboard'
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Professional',
@@ -448,7 +448,7 @@ const PricingPage: React.FC = () => {
         'API Integration',
         'Training & Documentation'
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise',
@@ -463,7 +463,7 @@ const PricingPage: React.FC = () => {
         'White-label Options',
         'SLA Guarantee'
       ],
-      popular: false
+      popular: false;
     }
   ]
 
@@ -502,12 +502,13 @@ const PricingPage: React.FC = () => {
   ]
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Pricing | Zion Tech Group</title>
         <meta name="description" content="Transparent pricing for AI and IT solutions. Choose from Starter, Professional, or Enterprise plans." />
         <meta name="keywords" content="AI pricing, IT services pricing, cloud solutions cost, enterprise AI pricing, Zion Tech Group" />
       </Helmet>
+<<<<<<< HEAD
       
       <Navigation />
       
@@ -580,6 +581,12 @@ const PricingPage: React.FC = () => {
             </div>
           </div>
         </section>
+=======
+
+    </React.Fragment>
+  );
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 
         {/* Add-ons Section */}
         <section className="py-16 px-4">

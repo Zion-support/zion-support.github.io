@@ -128,6 +128,7 @@ const GDPRCompliancePage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Ensure GDPR compliance for your business.
             </p>
+<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Get Started
@@ -138,6 +139,9 @@ const GDPRCompliancePage: React.FC = () => {
             </div>
           </div>
         </section>
+=======
+          </div></div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 
         {/* Features Section */}
         <section className="py-20 px-4">

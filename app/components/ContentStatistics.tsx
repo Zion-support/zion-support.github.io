@@ -1,10 +1,112 @@
 import React from 'react';
 
 const ContentStatistics: React.FC = () => {
+<<<<<<< HEAD
   return (
     <div className="contentstatistics">
       <h2>ContentStatistics</h2>
       <p>ContentStatistics component.</p>
+=======
+  const [counters, setCounters] = useState({
+    clients: 0,
+    projects: 0,
+    satisfaction: 0,
+    years: 0;
+  });
+
+  const targetCounters = {
+    clients: 500,
+    projects: 1000,
+    satisfaction: 99,
+    years: 10;
+  };
+
+  const statistics = [
+    {
+      icon: Users,
+      value: counters.clients,
+      label: 'Happy Clients',
+      suffix: '+',
+      color: 'text-cyan-400',
+    },
+    {
+      icon: Award,
+      value: counters.projects,
+      label: 'Projects Completed',
+      suffix: '+',
+      color: 'text-purple-400',
+    },
+    {
+      icon: TrendingUp,
+      value: counters.satisfaction,
+      label: 'Client Satisfaction',
+      suffix: '%',
+      color: 'text-green-400',
+    },
+    {
+      icon: Clock,
+      value: counters.years,
+      label: 'Years Experience',
+      suffix: '+',
+      color: 'text-yellow-400',
+    }
+  ];
+
+  const achievements = [
+    {
+      icon: Brain,
+      title: 'AI Innovation',
+      description: 'Leading the industry in AI-powered solutions',
+    },
+    {
+      icon: Shield,
+      title: 'Security Excellence',
+      description: 'Bank-level security for all our solutions',
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Serving clients across 50+ countries',
+    },
+    {
+      icon: Zap,
+      title: 'Performance',
+      description: '99.9% uptime and lightning-fast response',
+    }
+  ];
+
+  useEffect(() => {
+    const timers = Object.keys(targetCounters).map(key => {
+      const target = targetCounters[key as keyof typeof targetCounters];
+      const duration = 2000; // 2 seconds
+      const increment = target / (duration / 16); // 60fps
+      
+      return setInterval(() => {
+        setCounters(prev => {
+          const current = prev[key as keyof typeof prev];
+          if (current < target) {
+            return {
+              ...prev,
+              [key]: Math.min(current + increment, target)
+            };
+          }
+          return prev;
+        });
+      }, 16);
+    });
+
+    return () => {
+      timers.forEach(timer => clearInterval(timer));
+    };
+  }, []);
+
+  return (
+
+            </div>
+          ))}
+        </div>
+      </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     </div>
   );
 };

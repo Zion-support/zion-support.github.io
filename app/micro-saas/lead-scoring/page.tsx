@@ -16,6 +16,7 @@ import Footer from '../components/Footer';
 
 const LeadScoringPage: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Lead Scoring - Zion Tech Group</title>
@@ -73,6 +74,13 @@ const LeadScoringPage: React.FC = () => {
 =======
         <meta name="description" content="AI-powered lead scoring and qualification." />
         <meta name="keywords" content="lead, scoring, qualification, sales" />
+=======
+    <React.Fragment>
+      <Helmet>
+        <title>{title} | Zion Tech Group - Micro SaaS Solutions</title>
+        <meta name="description" content={`Powerful ${title.toLowerCase()} micro SaaS solution for modern businesses.`} />
+        <link rel="canonical" href={`https: //ziontechgroup.com/micro-saas/${serviceName,}`} />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
       </Helmet>
 
       <Navigation />
@@ -96,8 +104,12 @@ const LeadScoringPage: React.FC = () => {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
       <Footer />
     </>
+=======
+    </React.Fragment>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   );
 };
 

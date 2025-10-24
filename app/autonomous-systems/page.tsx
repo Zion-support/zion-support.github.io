@@ -7,12 +7,17 @@ import { ArrowRight } from 'lucide-react';
 export default function GDataAnalyticsZionTechGroupPage() {
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-900 text-white">
+=======
+    <React.Fragment>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
       <Helmet>
         <title>Autonomous Systems - Zion Tech Group</title>
         <meta name="description" content="Autonomous Systems solutions by Zion Tech Group" />
       </Helmet>
       
+<<<<<<< HEAD
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold mb-8">Autonomous Systems</h1>
         <div className="prose prose-invert max-w-none">
@@ -58,5 +63,20 @@ export default function GDataAnalyticsZionTechGroupPage() {
       <Footer />
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
+=======
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Autonomous <span className="text-cyan-400">Systems</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Advanced autonomous systems solutions for modern businesses.
+            </p>
+          </div></div></div>
+        </div>
+      </div>
+    </React.Fragment>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   );
 }

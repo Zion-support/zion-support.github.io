@@ -1,9 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Database } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 
 export default function Partners() {
   const partners = [
@@ -46,14 +50,18 @@ const PartnersPage: React.FC = () => {
       logo: '/images/partners/microsoft.png',
       description: 'Strategic partnership for Azure cloud solutions and AI services',
       category: 'Cloud & AI',
+<<<<<<< HEAD
       website: 'https://microsoft.com',
       tier: 'strategic'
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     },
     {
       name: 'Amazon Web Services',
       logo: '/images/partners/aws.png',
       description: 'Leading cloud infrastructure and machine learning platform provider',
       category: 'Cloud Computing',
+<<<<<<< HEAD
       website: 'https://aws.amazon.com',
       tier: 'strategic'
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
@@ -64,6 +72,14 @@ const PartnersPage: React.FC = () => {
       description: "Customer relationship management platform",
       category: "CRM Partner",
       tier: "Gold"
+=======
+    },
+    {
+      name: 'Google Cloud',
+      logo: '/api/placeholder/200/100',
+      description: 'Advanced cloud computing and AI platform solutions',
+      category: 'Cloud & AI',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     },
     {
 <<<<<<< HEAD
@@ -89,6 +105,7 @@ const PartnersPage: React.FC = () => {
       benefits: ["Highest priority support", "Dedicated account manager", "Custom solutions", "Joint go-to-market"]
 =======
       name: 'IBM',
+<<<<<<< HEAD
       logo: '/images/partners/ibm.png',
       description: 'Enterprise AI solutions and hybrid cloud platform',
       category: 'Enterprise AI',
@@ -131,10 +148,16 @@ const PartnersPage: React.FC = () => {
       category: 'Analytics & Security',
       website: 'https://splunk.com',
       tier: 'certified'
+=======
+      logo: '/api/placeholder/200/100',
+      description: 'Enterprise AI and hybrid cloud solutions',
+      category: 'Enterprise AI',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     }
   ];
 
   const benefits = [
+<<<<<<< HEAD
     'Access to cutting-edge technology platforms',
     'Joint go-to-market strategies',
     'Co-marketing opportunities',
@@ -279,12 +302,27 @@ const PartnersPage: React.FC = () => {
                   </div>
                   <h3 className={`text-2xl font-bold ${tier.color} mb-4`}>{tier.name}</h3>
                   <p className="text-gray-300">{tier.description}</p>
+=======
+    'Access to cutting-edge technology',
+    'Joint go-to-market opportunities',
+    'Technical support and training',
+
+  ];
+
+  return (
+    <React.Fragment>
+      <Helmet>
+
+                    {partner.category}
+                  </span>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
                 </div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Partners Grid */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -346,6 +384,9 @@ const PartnersPage: React.FC = () => {
                   <div key={index} className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                     <span className="text-gray-300">{benefit}</span>
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
                   </div>
                 ))}
               </div>
@@ -374,8 +415,15 @@ const PartnersPage: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
       </div>
     </>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0234
+=======
+      </main>
+      
+      <Footer />
+    </React.Fragment>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   );
 }

@@ -62,6 +62,7 @@ const TermsofServicePage: React.FC = () => {
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
+<<<<<<< HEAD
       icon: Target,
       title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision and accuracy.',
@@ -78,9 +79,15 @@ const TermsofServicePage: React.FC = () => {
       title: 'Fast Processing',
       description: 'Process large datasets in seconds with our optimized AI analytics engine.',
       benefits: ['High-speed processing', 'Scalable infrastructure', 'Real-time analysis', 'Batch processing']
+=======
+      title: 'Service Availability',
+      icon: Server,
+      content: 'We strive to maintain high service availability but cannot guarantee uninterrupted access to our services.',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     },
     {
       icon: Shield,
+<<<<<<< HEAD
       title: 'Secure Analytics',
       description: 'Enterprise-grade security for your sensitive data and analytics.',
       benefits: ['Data encryption', 'Access controls', 'Audit trails', 'Compliance ready']
@@ -94,6 +101,48 @@ const TermsofServicePage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ];
+=======
+      content: 'In no event shall Zion Tech Group or its suppliers be liable for any damages arising out of the use or inability to use our services.',
+    },
+    {
+      title: 'Privacy Policy',
+      icon: Lock,
+      content: 'Your privacy is important to us. Please review our Privacy Policy, which also governs your use of our services.'
+    },
+    {
+      title: 'Intellectual Property',
+      icon: Database,
+      content: 'All content, trademarks, and other intellectual property on this website are the property of Zion Tech Group.'
+    },
+    {
+      title: 'Termination',
+      icon: AlertTriangle,
+      content: 'We may terminate or suspend your access to our services immediately, without prior notice, for any reason whatsoever.'
+    },
+    {
+      title: 'Governing Law',
+      icon: Scale,
+      content: 'These terms shall be governed by and construed in accordance with the laws of the United States.',
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-white"></div>
+      <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20"></div>
+        <div className="container mx-auto px-4 text-center"></div>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            Terms of Service</h1>
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+            Please read these terms carefully before using our services
+          </p>
+          <div className="flex items-center justify-center text-sm text-blue-200"></div>
+            <Calendar className="h-4 w-4 mr-2" />
+            Last updated: {lastUpdated,}
+          </div>
+        </div>
+      </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 
   return (
     <>

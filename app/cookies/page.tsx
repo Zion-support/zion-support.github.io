@@ -80,13 +80,14 @@ const CookiesPage: React.FC = () => {
 const CookiePolicyPage: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02f6
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Cookie Policy - Zion Tech Group</title>
 <<<<<<< HEAD
         <meta name="description" content="Learn about how we use cookies on our website and your options for managing them." />
       </Helmet>
       
+<<<<<<< HEAD
       <Navigation />
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
@@ -118,6 +119,37 @@ const CookiePolicyPage: React.FC = () => {
                     <p className="text-gray-300 text-sm">{cookie.description}</p>
                   </div>
                 ))}
+=======
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
+        <Navigation />
+        
+        <main className="pt-20">
+          <div className="container mx-auto px-4 py-16"></div>
+            <div className="max-w-4xl mx-auto"></div>
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+                Cookie Policy</h1>
+              </h1>
+              
+              <div className="prose prose-lg max-w-none"></div>
+                <p className="text-xl text-gray-600 mb-8">
+                  Last updated: {new Date().toLocaleDateString(),}
+                </p>
+                
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">What Are Cookies</h2>
+                <p className="text-gray-700 mb-6">
+                  Cookies are small text files that are placed on your computer or mobile device when you visit our website.
+                </p>
+                
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">How We Use Cookies</h2>
+                <p className="text-gray-700 mb-6">
+                  We use cookies to improve your experience on our website, analyze site traffic, and personalize content.
+                </p>
+                
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Managing Cookies</h2>
+                <p className="text-gray-700 mb-6">
+                  You can control and/or delete cookies as you wish through your browser settings.
+                </p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
               </div>
 
               <h2 className="text-2xl font-semibold text-white mb-4">Managing cookies</h2>
@@ -177,6 +209,7 @@ const CookiePolicyPage: React.FC = () => {
         </div>
 <<<<<<< HEAD
       </div>
+<<<<<<< HEAD
 =======
           <Link
             href="/contact"
@@ -194,6 +227,11 @@ const CookiePolicyPage: React.FC = () => {
         <meta name="description" content="Information about our use of cookies and tracking technologies." />
         <meta name="keywords" content="cookies, privacy, tracking, policy" />
       </Helmet>
+=======
+    </React.Fragment>
+  );
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">

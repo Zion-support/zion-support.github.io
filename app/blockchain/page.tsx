@@ -17,6 +17,7 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 const BlockchainSolutionsPage: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
@@ -51,6 +52,26 @@ const BlockchainSolutionsPage: React.FC = () => {
       title: 'Secure Analytics',
       description: 'Enterprise-grade security for your sensitive data and analytics.',
       benefits: ['Data encryption', 'Access controls', 'Audit trails', 'Compliance ready']
+=======
+      icon: Shield,
+      title: 'Secure Blockchain Solutions',
+      description: 'Advanced blockchain technology with enterprise-grade security and compliance',
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast blockchain transactions and smart contract execution',
+    },
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Intelligent blockchain solutions powered by advanced AI technology',
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide blockchain deployment and support for international businesses',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     }
   ];
 
@@ -78,6 +99,7 @@ const BlockchainSolutionsPage: React.FC = () => {
             Discover our comprehensive blockchain solutions designed to meet your business needs.
           </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -101,6 +123,54 @@ const BlockchainSolutionsPage: React.FC = () => {
               </p>
             </div>
           </div>
+=======
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Our blockchain solutions deliver unmatched performance, security, and scalability.
+          </p>
+        </div></div></div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {features.map((feature, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
+              <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+              <p className="text-gray-300">{feature.description}</p>
+            </div></div>
+          ))}
+        </div>
+
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-8">
+            Why Choose Our Blockchain Solutions?
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center space-x-3">
+                <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
+                <span className="text-gray-300">{benefit}</span>
+              </div></div></div>
+            ))}
+          </div>
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-purple-100 mb-8">
+            Contact our experts to discuss your blockchain needs and get a customized solution.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+              <Phone className="mr-2 h-5 w-5" />
+              Call Now
+            </button>
+            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+              <Mail className="mr-2 h-5 w-5" />
+              Email Us
+            </button>
+          </div></div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
         </div>
       </div>
 =======

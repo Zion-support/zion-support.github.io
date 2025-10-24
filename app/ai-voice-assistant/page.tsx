@@ -165,7 +165,7 @@ const AiVoiceAssistantPage: React.FC = () => {
   ]
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>AI Voice Assistant | Zion Tech Group</title>
         <meta name="description" content="Professional AI voice assistant solutions for modern businesses. Natural language processing and voice recognition." />
@@ -176,10 +176,19 @@ const AiVoiceAssistantPage: React.FC = () => {
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
+<<<<<<< HEAD
         <section className="relative py-20 px-4">
           <div className="container mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
               AI Voice Assistant
+=======
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Ai Voice Assistant
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your business with our intelligent AI voice assistant. 
@@ -200,6 +209,7 @@ const AiVoiceAssistantPage: React.FC = () => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
               >
                 Get Started
+<<<<<<< HEAD
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -209,6 +219,13 @@ const AiVoiceAssistantPage: React.FC = () => {
                 Try Demo
               </Link>
             </div>
+=======
+              </button>
+              <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                View Demo
+              </button>
+            </div></div></div></div></div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
           </div>
         </section>
 
@@ -223,12 +240,24 @@ const AiVoiceAssistantPage: React.FC = () => {
                 Our AI voice assistant comes equipped with cutting-edge features designed to 
                 provide natural, intelligent, and efficient voice interactions.
               </p>
+<<<<<<< HEAD
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-400/50 transition-all duration-300 group">
                   <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+=======
+            </div></div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div></div></div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
@@ -255,6 +284,7 @@ const AiVoiceAssistantPage: React.FC = () => {
                 Select the perfect plan for your voice AI needs. 
                 All plans include our core features with no setup fees.
               </p>
+<<<<<<< HEAD
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
@@ -294,6 +324,17 @@ const AiVoiceAssistantPage: React.FC = () => {
                   >
                     Get Started
                   </Link>
+=======
+            </div></div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <CheckCircle className="w-8 h-8 text-white" />
+                  </div></div></div>
+                  <p className="text-lg text-white font-medium">{benefit}</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
                 </div>
               ))}
             </div>
@@ -302,6 +343,7 @@ const AiVoiceAssistantPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4">
+<<<<<<< HEAD
           <div className="container mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business with Voice AI?
@@ -324,15 +366,39 @@ const AiVoiceAssistantPage: React.FC = () => {
               >
                 Schedule Demo
               </Link>
+=======
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Contact our experts to discuss your requirements and get started today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Contact Us
+                </button>
+                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Learn More
+                </button>
+              </div></div></div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
             </div>
           </div>
         </section>
       </main>
       
       <Footer />
+<<<<<<< HEAD
     </>
   )
 }
+=======
+    </React.Fragment>
+  );
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 
 export default AiVoiceAssistantPage
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-02d3

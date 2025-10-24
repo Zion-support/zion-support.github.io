@@ -1,12 +1,54 @@
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+=======
+import { Users, Search, Brain, Target, CheckCircle, ArrowRight, Zap, Shield, BarChart } from 'lucide-react';
+
+const AIRecruitmentAssistantPage: React.FC = () => {
+  const features = [
+    {
+      icon: Search,
+      title: 'Smart Candidate Matching',
+      description: 'AI-powered matching algorithm that finds the best candidates based on skills, experience, and cultural fit.'
+    },
+    {
+      icon: Brain,
+      title: 'Resume Analysis',
+      description: 'Automated resume screening and analysis to identify top talent quickly and efficiently.',
+    },
+    {
+      icon: Target,
+      title: 'Job Description Optimization',
+      description: 'AI-generated job descriptions that attract the right candidates and improve application quality.',
+    },
+    {
+      icon: Users,
+      title: 'Interview Scheduling',
+      description: 'Automated interview scheduling and coordination to streamline the hiring process.',
+    },
+    {
+      icon: BarChart,
+      title: 'Analytics & Insights',
+      description: 'Comprehensive analytics on hiring metrics, candidate pipeline, and recruitment performance.'
+    },
+    {
+      icon: Zap,
+      title: 'Automated Screening',
+      description: 'AI-powered initial screening questions and assessments to filter candidates effectively.',
+    }
+  ];
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 
 export default function GDataAnalyticsZionTechGroupPage() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-900 text-white">
+=======
+    <React.Fragment>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
       <Helmet>
         <title>Ai Recruitment Assistant - Zion Tech Group</title>
         <meta name="description" content="Ai Recruitment Assistant solutions by Zion Tech Group" />
@@ -26,6 +68,7 @@ export default function GDataAnalyticsZionTechGroupPage() {
               <p className="text-gray-300">
                 Our team of experts delivers tailored solutions for your specific requirements.
               </p>
+<<<<<<< HEAD
             </div>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -40,10 +83,28 @@ export default function GDataAnalyticsZionTechGroupPage() {
               <p className="text-gray-300">
                 Get round-the-clock support from our dedicated team of professionals.
               </p>
+=======
+            </div></div></div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div
+                  key={index}
+                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div></div></div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
             </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 =======
           <Link
             href="/contact"
@@ -57,5 +118,8 @@ export default function GDataAnalyticsZionTechGroupPage() {
       <Footer />
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
+=======
+    </React.Fragment>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   );
 }

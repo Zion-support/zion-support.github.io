@@ -1,5 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
+=======
+import React from 'react';
+'use client';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 import { Helmet } from 'react-helmet-async';
 export default function SupportPage() {
 =======
@@ -11,6 +17,7 @@ import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const SupportPage: React.FC = () => {
+<<<<<<< HEAD
   const features = [
     {
       icon: Brain,
@@ -167,12 +174,52 @@ const SupportPage: React.FC = () => {
                       ))}
                     </ul>
                   )}
+=======
+
+  const supportChannels = [
+    {
+      icon: Phone,
+      title: 'Phone Support',
+      description: 'Speak directly with our technical experts',
+      contact: '(302) 464-0950',
+      availability: 'Mon-Fri: 9AM-6PM EST',
+    },
+    {
+      icon: Mail,
+      title: 'Email Support',
+      description: 'Get help via email with detailed responses',
+      contact: 'support@ziontechgroup.com',
+
+    },
+    {
+      icon: MessageCircle,
+      title: 'Live Chat',
+      description: 'Chat with our support team in real-time',
+      contact: 'Available on website',
+
+    }
+  ];
+
+  const filteredFaqs = faqs.filter(faq =>
+    faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    faq.answer.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  return (
+    <React.Fragment>
+      <Helmet>
+
+                  <p className="text-gray-300 mb-4">{channel.description}</p>
+                  <p className="text-cyan-400 font-medium">{channel.contact}</p>
+                  <p className="text-sm text-gray-400 mt-2">{channel.availability}</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
                 </div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -224,6 +271,10 @@ const SupportPage: React.FC = () => {
       <Footer />
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0210
     </div>
+=======
+
+    </React.Fragment>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
   );
 <<<<<<< HEAD
 }

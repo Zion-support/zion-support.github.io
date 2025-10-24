@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 "use client";
 
+<<<<<<< HEAD
 import { useEffect } from 'react';
 
 export default function AccessibilityEnhancer() {
@@ -35,6 +36,19 @@ export default function AccessibilityEnhancer() {
       });
       
       document.body.insertBefore(skipLink, document.body.firstChild);
+=======
+const AccessibilityEnhancer: React.FC<{ children: React.ReactNode ,}> = ({ children }) => {
+  useEffect(() => {
+    // Add keyboard navigation support
+    const handleKeyDown = (event: KeyboardEvent,) => {
+      if (event.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
+      }
+    };
+
+    const handleMouseDown = () => {
+      document.body.classList.remove('keyboard-navigation');
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
     };
 
     // Add focus indicators
@@ -135,6 +149,7 @@ export default function AccessibilityEnhancer() {
     addReducedMotionSupport();
   }, []);
 
+<<<<<<< HEAD
   return null;
 =======
 import React from 'react';
@@ -155,6 +170,10 @@ export default function Accessibilityenhancer({ className = '', children, ...pro
 import React, { useEffect } from 'react'
 =======
 import React from 'react';
+=======
+  return <React.Fragment>{children}</React.Fragment>;
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0361
 
 const AccessibilityEnhancer: React.FC = () => {
   return (
