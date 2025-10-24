@@ -11,7 +11,7 @@ export default function Page() {
 
       <Head>
         <title>Advanced Security Suite - Zion Tech Group</title>
-        <meta name="description" content="Professional services by Zion Tech Group." />
+        <meta name="description" content="Professional advanced security suite services and solutions by Zion Tech Group." />
       </Head>
 <<<<<<< HEAD:app/advanced-security-suite/page.tsx
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -36,6 +36,12 @@ export default function Page() {
           </div>
         </div>
         <Footer />
+<<<<<<< HEAD:app/advanced-security-suite/page.tsx
+      </div>
+    </div>
+  )
+}
+=======
       </main>
     </div>
   )
@@ -44,4 +50,5 @@ export default function Page() {
 =======
 };
   </div>
+>>>>>>> origin/main:temp-backup/advanced-security-suite/page.tsx
 >>>>>>> origin/main:temp-backup/advanced-security-suite/page.tsx
