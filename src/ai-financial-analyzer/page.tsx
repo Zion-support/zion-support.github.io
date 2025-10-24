@@ -1,10 +1,7 @@
-import React from 'react'
 import React from 'react';
 import { Phone } from 'lucide-react';
-
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { Phone } from 'lucide-react'
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 const Page: React.FC = () => {
   return (
@@ -14,13 +11,13 @@ const Page: React.FC = () => {
         <main className="container mx-auto px-4 py-16 pt-24">
           <section className="text-center mb-16">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
-              Service Coming Soon
+              AI Financial Analyzer
             </h1>
             <p className="text-xl text-cyan-400 mb-8">
-              This service is currently under development
+              Advanced AI-powered financial analysis and insights
             </p>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
-              We're working hard to bring you this amazing service. Contact us to learn more about our development timeline.
+              Our AI Financial Analyzer provides comprehensive financial analysis, risk assessment, and investment insights powered by cutting-edge artificial intelligence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -39,10 +36,10 @@ const Page: React.FC = () => {
             </div>
           </section>
         </main>
-        <Footer />
       </div>
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

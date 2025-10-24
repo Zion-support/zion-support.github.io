@@ -1,22 +1,10 @@
-'use client'
-<<<<<<< HEAD
-=======
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
+'use client';
 
 import React, { useEffect } from 'react'
 import Head from 'next/head'
 
 interface SEOOptimizerProps {
-  title?: string
-  description?: string
-  keywords?: string[]
-  canonicalUrl?: string
-  ogImage?: string
-  structuredData?: Record<string, unknown>
+  className?: string;
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
@@ -32,7 +20,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     document.title = title
 
     // Update meta description
-    const metaDescription = document.querySelector('meta[name="description"]')
+    const metaDescription = document.querySelector('meta[name=&quot;description&quot;]')
     if (metaDescription) {
       metaDescription.setAttribute('content', description)
     } else {
@@ -44,7 +32,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   ]
 
     // Update keywords
-    const metaKeywords = document.querySelector('meta[name="keywords"]')
+    const metaKeywords = document.querySelector('meta[name=&quot;keywords&quot;]')
     if (metaKeywords) {
       metaKeywords.setAttribute('content', keywords.join(', '))
     } else {
@@ -55,7 +43,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
 
     // Update canonical URL
-    let canonicalLink = document.querySelector('link[rel="canonical"]')
+    let canonicalLink = document.querySelector('link[rel=&quot;canonical&quot;]')
     if (canonicalLink) {
       canonicalLink.setAttribute('href', canonicalUrl)
     } else {
@@ -67,7 +55,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
     // Update Open Graph tags
     const updateOGTag = (property: string, content: string) => {
-      let ogTag = document.querySelector(`meta[property="${property}"]`)
+      let ogTag = document.querySelector(`meta[property=&quot;${property}&quot;]`)
       if (ogTag) {
         ogTag.setAttribute('content', content)
       } else {
@@ -86,7 +74,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
     // Update Twitter Card tags
     const updateTwitterTag = (name: string, content: string) => {
-      let twitterTag = document.querySelector(`meta[name="${name}"]`)
+      let twitterTag = document.querySelector(`meta[name=&quot;${name}&quot;]`)
       if (twitterTag) {
         twitterTag.setAttribute('content', content)
       } else {
@@ -111,7 +99,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
 
     // Add viewport meta tag if not present
-    let viewport = document.querySelector('meta[name="viewport"]')
+    let viewport = document.querySelector('meta[name=&quot;viewport&quot;]')
     if (!viewport) {
       viewport = document.createElement('meta')
       viewport.setAttribute('name', 'viewport')
@@ -130,65 +118,37 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData])
 
   return (
-<<<<<<< HEAD
     <Head>
       <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
-      <link rel="canonical" href={canonicalUrl} />
+      <meta name=&quot;description&quot; content={description} />
+      <meta name=&quot;keywords&quot; content={keywords.join(', ')} />
+      <link rel=&quot;canonical&quot; href={canonicalUrl} />
       {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:type" content="website" />
+      <meta property=&quot;og:title&quot; content={title} />
+      <meta property=&quot;og:description&quot; content={description} />
+      <meta property=&quot;og:image&quot; content={ogImage} />
+      <meta property=&quot;og:url&quot; content={canonicalUrl} />
+      <meta property=&quot;og:type&quot; content=&quot;website&quot; />
       {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
+      <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
+      <meta name=&quot;twitter:title&quot; content={title} />
+      <meta name=&quot;twitter:description&quot; content={description} />
+      <meta name=&quot;twitter:image&quot; content={ogImage} />
       {/* Additional SEO meta tags */}
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta charSet="UTF-8" />
+      <meta name=&quot;robots&quot; content=&quot;index, follow&quot; />
+      <meta name=&quot;author&quot; content=&quot;Zion Tech Group&quot; />
+      <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; />
+      <meta charSet=&quot;UTF-8&quot; />
       {/* Structured Data */}
       {structuredData && (
         <script
-          type="application/ld+json"
+          type=&quot;application/ld+json&quot;
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       )}
     </Head>
   )
 }
-=======
-    <>
-      
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              SEOOptimizer
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              website
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
 export default SEOOptimizer
   );

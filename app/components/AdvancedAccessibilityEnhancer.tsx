@@ -1,5 +1,6 @@
-'use client'
-<<<<<<< HEAD
+'use client';
+import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from './Navigation'
 import React, { useEffect, useState, useCallback } from 'react'
 
 interface AdvancedAccessibilityEnhancerProps {
@@ -83,12 +84,6 @@ constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s
       root.classList.add('high-contrast')
     } else {
       root.classList.remove('high-contrast')
-=======
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
 const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   const features = [
@@ -125,38 +120,9 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       root.classList.remove('reduced-motion')
     }
 
-<<<<<<< HEAD
     // Apply font scaling
     root.style.setProperty('--font-scale', accessibilitySettings.fontSize === 'large' ? '1.2' : '1')
   }, [accessibilitySettings])
-=======
-  return (
-    <>
-      
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              AdvancedAccessibilityEnhancer
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced AdvancedAccessibilityEnhancer solution for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
   // Keyboard navigation enhancement
   const setupKeyboardNavigation = useCallback(() => {
@@ -183,10 +149,10 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 
       // Arrow keys for menu navigation
       if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-        const menu = document.querySelector('[role="menu"]') as HTMLElement
+        const menu = document.querySelector('[role=&quot;menu&quot;]') as HTMLElement
         if (menu && menu.contains(event.target as Node)) {
           event.preventDefault()
-          const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"]')) as HTMLElement[]
+          const menuItems = Array.from(menu.querySelectorAll('[role=&quot;menuitem&quot;]')) as HTMLElement[]
           const currentIndex = menuItems.indexOf(event.target as HTMLElement)
           const nextIndex = event.key === 'ArrowDown'
             ? (currentIndex + 1) % menuItems.length
@@ -242,7 +208,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     // Trap focus in modals
     const trapFocus = (element: HTMLElement) => {
       const focusableElements = element.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex=&quot;-1&quot;])'
       ) as NodeListOf<HTMLElement>
 
       const firstElement = focusableElements[0]
@@ -272,7 +238,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
     }
 
     // Apply focus trap to modals
-    const modals = document.querySelectorAll('[role="dialog"]')
+    const modals = document.querySelectorAll('[role=&quot;dialog&quot;]')
     modals.forEach(modal => {
       const cleanup = trapFocus(modal as HTMLElement)
       // Store cleanup function for later use

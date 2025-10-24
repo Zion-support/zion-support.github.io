@@ -1,5 +1,6 @@
-'use client'
+'use client';
 import React from 'react'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
@@ -44,23 +45,23 @@ const PerformanceDashboardPage: React.FC = () => {
     <>
       
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+      <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+        <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
+          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
+          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
+            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
               PerformanceDashboard
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
               Advanced PerformanceDashboard solution for modern businesses.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
                 Learn More
               </button>
             </div>
@@ -68,24 +69,24 @@ const PerformanceDashboardPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        <section className=&quot;py-20 px-4&quot;></section>
+          <div className=&quot;max-w-7xl mx-auto&quot;></div>
+            <div className=&quot;text-center mb-16&quot;></div>
+              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;></div>
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
+                <div key={index} className=&quot;bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20&quot;></div>
+                  <feature.icon className=&quot;h-12 w-12 text-emerald-400 mb-4&quot; />
+                  <h3 className=&quot;text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
+                  <p className=&quot;text-gray-300 mb-4&quot;>{feature.description}</p>
+                  <ul className=&quot;space-y-2&quot;>
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
+                      <li key={idx} className=&quot;flex items-center text-sm text-gray-300&quot;>
+                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; />
                         {benefit}
                       </li>
                     ))}
@@ -97,19 +98,19 @@ const PerformanceDashboardPage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
+          <div className=&quot;max-w-7xl mx-auto&quot;></div>
+            <div className=&quot;text-center mb-16&quot;></div>
+              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
+              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
-                  <p className="text-gray-300 text-lg">{benefit}</p>
+                <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
+                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
+                  <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
                 </div>
               ))}
             </div>
@@ -117,17 +118,17 @@ const PerformanceDashboardPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8">
+        <section className=&quot;py-20 px-4&quot;></section>
+          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
+            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
+            <p className=&quot;text-xl text-gray-300 mb-8&quot;>
               Join thousands of businesses already using our AI solutions
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
                 Start Free Trial
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
                 Contact Sales
               </button>
             </div>
@@ -201,10 +202,10 @@ constgetPerformanceColor= (value: number, thresholds: {good: numberwarning: numb
 if (value <= thresholds.warning) return 'text-yellow-40 0'
 return 'text-red-40 0'}
 return (
-<div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-<div className="flex items-center justify-between mb-6">
-<h3 className="text-xl font-semibold text-white flex items-center gap-2"></h3>
-<Activity className="w-5 h-5" />
+<div className=&quot;bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10&quot;></div>
+<div className=&quot;flex items-center justify-between mb-6&quot;></div>
+<h3 className=&quot;text-xl font-semibold text-white flex items-center gap-2&quot;></h3>
+<Activity className=&quot;w-5 h-5&quot; />
 Performance Dashboard
 <button
 onClick={toggleMonitoring}
@@ -216,52 +217,52 @@ isMonitoring
 >{isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}</button>button>
 </div>
 {alerts.length > 0 && (
-<div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
-<div className="flex items-center gap-2 mb-2">
-<AlertTriangle className="w-5 h-5 text-red-400" />
-<h4 className="text-red-400 font-semibold">Performance Alerts</h4>
+<div className=&quot;mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg&quot;></div>
+<div className=&quot;flex items-center gap-2 mb-2&quot;></div>
+<AlertTriangle className=&quot;w-5 h-5 text-red-400&quot; />
+<h4 className=&quot;text-red-400 font-semibold&quot;>Performance Alerts</h4>
 </div>
-<ul className="space-y-1">
+<ul className=&quot;space-y-1&quot;>
 {alerts.map((alert, index) => (
-<li key={index} className="text-red-300 text-sm">• {alert}</li>
+<li key={index} className=&quot;text-red-300 text-sm&quot;>• {alert}</li>
 ))}
 </ul>
 </div>
 )}
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-<div className="bg-white/5 rounded-lg p-4">
-<div className="flex items-center gap-2 mb-2">
-<Zap className="w-4 h-4 text-blue-400" />
-<span className="text-gray-300 text-sm">Load Time</span>
+<div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4&quot;></div>
+<div className=&quot;bg-white/5 rounded-lg p-4&quot;></div>
+<div className=&quot;flex items-center gap-2 mb-2&quot;></div>
+<Zap className=&quot;w-4 h-4 text-blue-400&quot; />
+<span className=&quot;text-gray-300 text-sm&quot;>Load Time</span>
 </div>
-<div className={`text-2xl font-bold ${getPerformanceColor(metrics.loadTime, { good: 1000, warning: 2000 })}`}>
+<div className={`text-2xl font-bold ${getPerformanceColor(metrics.loadTime, { good: 1000, warning: 2000 })}`}></div>
 {metrics.loadTime.toFixed(0)}ms
 </div>
-<div className="bg-white/5 rounded-lg p-4">
-<div className="flex items-center gap-2 mb-2">
-<Cpu className="w-4 h-4 text-green-400" />
-<span className="text-gray-300 text-sm">Render Time</span>
+<div className=&quot;bg-white/5 rounded-lg p-4&quot;></div>
+<div className=&quot;flex items-center gap-2 mb-2&quot;></div>
+<Cpu className=&quot;w-4 h-4 text-green-400&quot; />
+<span className=&quot;text-gray-300 text-sm&quot;>Render Time</span>
 </div>
-<div className={`text-2xl font-bold ${getPerformanceColor(metrics.renderTime, { good: 16, warning: 33 })}`}>
+<div className={`text-2xl font-bold ${getPerformanceColor(metrics.renderTime, { good: 16, warning: 33 })}`}></div>
 {metrics.renderTime.toFixed(2)}ms
 </div>
-<div className="bg-white/5 rounded-lg p-4">
-<div className="flex items-center gap-2 mb-2">
-<MemoryStick className="w-4 h-4 text-purple-400" />
-<span className="text-gray-300 text-sm">Memory Usage</span>
+<div className=&quot;bg-white/5 rounded-lg p-4&quot;></div>
+<div className=&quot;flex items-center gap-2 mb-2&quot;></div>
+<MemoryStick className=&quot;w-4 h-4 text-purple-400&quot; />
+<span className=&quot;text-gray-300 text-sm&quot;>Memory Usage</span>
 </div>
 <div className={`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 10 * 1024 * 1024, warning: 30 * 1024 * 1024 })}`}>{formatBytes(metrics.memoryUsage)}</div>div>
 </div>
-<div className="bg-white/5 rounded-lg p-4">
-<div className="flex items-center gap-2 mb-2">
-<TrendingUp className="w-4 h-4 text-orange-400" />
-<span className="text-gray-300 text-sm">FPS</span>
+<div className=&quot;bg-white/5 rounded-lg p-4&quot;></div>
+<div className=&quot;flex items-center gap-2 mb-2&quot;></div>
+<TrendingUp className=&quot;w-4 h-4 text-orange-400&quot; />
+<span className=&quot;text-gray-300 text-sm&quot;>FPS</span>
 </div>
 <div className={`text-2xl font-bold ${getPerformanceColor(60 - metrics.fps, { good: 10, warning: 20 })}`}>{metrics.fps}</div>div>
 </div>
 </div>
-<div className="mt-6 text-center">
-<p className="text-gray-400 text-sm">{isMonitoring ? 'Monitoring performance metrics...' : 'Click "Start Monitoring" to begin tracking performance'}</p>p>
+<div className=&quot;mt-6 text-center&quot;></div>
+<p className=&quot;text-gray-400 text-sm&quot;>{isMonitoring ? 'Monitoring performance metrics...' : 'Click &quot;Start Monitoring&quot; to begin tracking performance'}</p>p>
 </div>
 </div>
 )

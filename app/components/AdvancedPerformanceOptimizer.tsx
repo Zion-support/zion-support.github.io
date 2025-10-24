@@ -1,12 +1,5 @@
-'use client'
-<<<<<<< HEAD
+'use client';
 import React, { useEffect, useState, useCallback } from 'react'
-=======
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
 interface AdvancedPerformanceOptimizerProps {
   enableAdvancedCaching?: boolean
@@ -20,15 +13,18 @@ interface AdvancedPerformanceOptimizerProps {
   enableWebVitals?: boolean
 }
 
-constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> = ({enableAdvancedCaching= true,
-  enableImageOptimization= true,
-  enableLazyLoading= true,
-  enablePreloading= true,
-  enableCodeSplitting= true,
-  enableResourceHints= true,
-  enableServiceWorker= true,
-  enableCriticalCSS= true,
-  enableWebVitals= true}) => {const [performanceMetricssetPerformanceMetrics] = useState({
+const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({
+  enableAdvancedCaching = true,
+  enableImageOptimization = true,
+  enableLazyLoading = true,
+  enablePreloading = true,
+  enableCodeSplitting = true,
+  enableResourceHints = true,
+  enableServiceWorker = true,
+  enableCriticalCSS = true,
+  enableWebVitals = true
+}) => {
+  const [performanceMetrics, setPerformanceMetrics] = useState({
     fcp: 0,
     lcp: 0,
     fid: 0,
@@ -37,8 +33,9 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
   })
 
   // Web Vitals monitoring
-  useEffect(() => {if (enableWebVitals && type of windo w !== 'undefined') {
-      constmeasureWebVitals= () => {
+  useEffect(() => {
+    if (enableWebVitals && typeof window !== 'undefined') {
+      const measureWebVitals = () => {
   
         // First Contentful Paint
         new PerformanceObserver((list) => {
@@ -84,43 +81,16 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
   const setupAdvancedCaching = useCallback(() => {
     if (typeof window === 'undefined') return
 
-<<<<<<< HEAD
     // Service Worker for advanced caching
     if ('serviceWorker' in navigator && enableServiceWorker) {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
-          // })
+          console.log('Service Worker registered:', registration);
+        })
         .catch((registrationError) => {
-          // })
+          console.error('Service Worker registration failed:', registrationError);
+        });
     }
-=======
-  return (
-    <>
-      
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              AdvancedPerformanceOptimizer
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced AdvancedPerformanceOptimizer solution for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-280f
 
     // Memory-based caching for API responses
     const cache = new Map()

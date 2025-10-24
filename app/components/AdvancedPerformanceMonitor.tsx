@@ -1,5 +1,6 @@
-'use client'
+'use client';
 import React from 'react'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
@@ -55,7 +56,7 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced AdvancedPerformanceMonitor solution for modern businesses.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -68,17 +69,17 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Powerful AI-driven features designed to transform your business operations
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>
                   <feature.icon className="h-12 w-12 text-emerald-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -97,17 +98,17 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section className="py-20 px-4 bg-white/5"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the benefits of cutting-edge AI technology
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4">
+                <div key={index} className="flex items-start space-x-4"></div>
                   <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
@@ -117,13 +118,13 @@ const AdvancedPerformanceMonitorPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of businesses already using our AI solutions
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
                 Start Free Trial
               </button>
@@ -232,7 +233,7 @@ constslowResources= resources.filter(
 (resource: PerformanceResourceTiming) => resource.duration > 1000)
 if (slowResources.length > 0) {
 // eslint-disable-next-line no-console
-// console.log(
+// // console.log(
 'Slow resources detected:',
 slowResources.map((r: PerformanceResourceTiming) => ({
 name: r.name,
@@ -316,9 +317,9 @@ return recommendations
 const _recommendations = getPerformanceRecommendations()
 if (process.env.NODE_ENV === 'development') {
 return (
-<div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>
+<div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'></div>
 <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
-<div className='text-xs space-y-1'>
+<div className='text-xs space-y-1'></div>
 <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
 <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
 <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
@@ -331,7 +332,7 @@ return (
 </div>
 </div>
 {_recommendations.length > 0 && (
-<div className='mt-2'>
+<div className='mt-2'></div>
 <h4 className='font-semibold text-xs text-red-600'>
 Recommendations:
 </h4>

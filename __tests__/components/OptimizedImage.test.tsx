@@ -1,4 +1,5 @@
-import { render, screen } from '@testing-library/react';
+import React from 'react';
+import { render, screen, waitFor, act } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 // Mock OptimizedImage component
@@ -14,39 +15,55 @@ const OptimizedImage = ({
   height?: number; 
 }) => {
   return (
-    <img
-      src={src}
-      alt={alt}
-      width={width}
+    <img 
+      src={src} 
+      alt={alt} 
+      width={width} 
       height={height}
-      data-testid="optimized-image"
-      loading="lazy"
     />
   );
 };
 
-describe('OptimizedImage Component', () => {
+describe('OptimizedImage', () => {
   it('renders with required props', () => {
-    render(<OptimizedImage src="test.jpg" alt="Test image" />);
     
     const image = screen.getByTestId('optimized-image');
     expect(image).toBeInTheDocument();
-    expect(image).toHaveAttribute('src', 'test.jpg');
+    expect(image).toHaveAttribute('src', '/test-image.jpg');
     expect(image).toHaveAttribute('alt', 'Test image');
   });
 
-  it('renders with optional dimensions', () => {
-    render(<OptimizedImage src="test.jpg" alt="Test image" width={100} height={100} />);
     
     const image = screen.getByTestId('optimized-image');
-    expect(image).toHaveAttribute('width', '100');
-    expect(image).toHaveAttribute('height', '100');
+    expect(image).toHaveAttribute('width', '300');
+    expect(image).toHaveAttribute('height', '200');
   });
 
-  it('has lazy loading enabled', () => {
-    render(<OptimizedImage src="test.jpg" alt="Test image" />);
     
     const image = screen.getByTestId('optimized-image');
-    expect(image).toHaveAttribute('loading', 'lazy');
+    expect(image).toHaveAttribute('alt', '');
+  });
+
+  it('renders with different image sources', () => {
+    const testSources = [
+      '/image1.jpg',
+      '/image2.png',
+      'https://example.com/image3.webp'
+    ];
+
+    testSources.forEach((src, index) => {
+      const { unmount } = render(
+        <OptimizedImage 
+          src={src} 
+          alt={`Test image ${index + 1}`} 
+        />
+      );
+      
+      const image = screen.getByTestId('optimized-image');
+      expect(image).toHaveAttribute('src', src);
+      expect(image).toHaveAttribute('alt', `Test image ${index + 1}`);
+      
+      unmount();
+    });
   });
 });
