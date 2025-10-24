@@ -18,15 +18,15 @@ interface OptimizedImageProps {
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({ 
-  className = '',
-  src,
-  alt,
-  width,
-  height,
-  priority = false,
-  quality = 75,
-  placeholder = 'empty',
-  blurDataURL
+  _className = '',
+  _src,
+  _alt,
+  _width,
+  _height,
+  _priority = false,
+  _quality = 75,
+  _placeholder = 'empty',
+  _blurDataURL
 }) => {
   const features = [
     {

@@ -1,10 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud } from 'lucide-react';
 
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear()
-  const aiServices = [
+  const _currentYear = new Date().getFullYear()
+  const _aiServices = [
     { name: 'AI Analytics & BI', url: '/ai-analytics', description: 'Business intelligence' },
     { name: 'AI Automation', url: '/ai-automation', description: 'Process automation' },
     { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder', description: 'Conversational AI' },
@@ -14,7 +13,7 @@ const Footer: React.FC = () => {
     { name: 'Predictive Analytics', url: '/predictive-analytics', description: 'Forecasting' },
     { name: 'Speech & Voice AI', url: '/ai-voice-assistant', description: 'Voice technology' }
   ]
-  const itServices = [
+  const _itServices = [
     { name: 'Web Development', url: '/web-development', description: 'Custom websites' },
     { name: 'Mobile Development', url: '/mobile-development', description: 'iOS & Android apps' },
     { name: 'Cloud Migration', url: '/cloud-migration', description: 'Cloud solutions' },
@@ -24,14 +23,14 @@ const Footer: React.FC = () => {
     { name: 'IoT Solutions', url: '/iot-solutions', description: 'Internet of Things' },
     { name: 'Blockchain', url: '/blockchain', description: 'Blockchain technology' }
   ]
-  const company = [
+  const _company = [
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
     { name: 'Careers', url: '/careers' },
     { name: 'News', url: '/news' },
     { name: 'Contact', url: '/contact' }
   ]
-  const resources = [
+  const _resources = [
     { name: 'Documentation', url: '/docs' },
     { name: 'API Reference', url: '/api' },
     { name: 'Blog', url: '/blog' },
@@ -39,7 +38,7 @@ const Footer: React.FC = () => {
     { name: 'Case Studies', url: '/case-studies' },
     { name: 'Support', url: '/support' }
   ]
-  const legal = [
+  const _legal = [
     { name: 'Privacy Policy', url: '/privacy' },
     { name: 'Terms of Service', url: '/terms' },
     { name: 'Cookie Policy', url: '/cookies' },

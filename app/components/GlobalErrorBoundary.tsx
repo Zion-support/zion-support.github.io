@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+   
   onError?: (_error: Error, _errorInfo: ErrorInfo) => void;
 }
 
