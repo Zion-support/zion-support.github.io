@@ -47,8 +47,8 @@ export const defaultSEOData: SEOData = {
     sameAs: [
       'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup'
-  ]
-  
+    ]
+  }
 }
 
 export const generateSEOData = (customData: Partial<SEOData> = {}): SEOData => {
@@ -60,4 +60,4 @@ export const generateSEOData = (customData: Partial<SEOData> = {}): SEOData => {
       ...customData.structuredData
     }
   }
-};}
+}

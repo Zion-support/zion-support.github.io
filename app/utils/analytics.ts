@@ -47,6 +47,7 @@ class Analytics {
         page_url: window.location.href
       }
     })
+  }
 
   // Track user interactions
   trackClick(element: string, location?: string): void {
@@ -76,7 +77,7 @@ class Analytics {
       value,
       custom_parameters: {
         unit
-      
+      }
     })
 
   // Track errors
@@ -89,7 +90,7 @@ class Analytics {
         error_name: error.name,
         error_stack: error.stack,
         context
-      
+      }
     })
 
   // Get all events
@@ -110,7 +111,8 @@ class Analytics {
         value: event.value,
         ...event.custom_parameters
       })
-  }}}}}}}}
+  }
+}
 
 
 export const analytics = Analytics.getInstance()
@@ -131,5 +133,8 @@ export function withAnalytics<T extends React.ComponentType<unknown>>(WrappedCom
   return ((props: unknown) => {
     const { trackPageView } = useAnalytics()
     React.useEffect(() => {
-      trackPageView(window.location.pathname, document.title)}, [trackPageView])
-    return React.createElement(WrappedComponent, props)}) as T}
+      trackPageView(window.location.pathname, document.title)
+    }, [trackPageView])
+    return React.createElement(WrappedComponent, props)
+  }) as T
+}
