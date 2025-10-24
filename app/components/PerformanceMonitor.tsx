@@ -81,7 +81,12 @@ const PerformanceMonitor: React.FC = () => {
 
     // Cleanup
     return () => {
-      // Cleanup if needed}
+<<<<<<< HEAD
+      window.removeEventListener('load', measurePageLoad);
+    };
+  }, [])
+
+      // Cleanup if needed
   }, []);
 
   return (
@@ -132,5 +137,8 @@ const PerformanceMonitor: React.FC = () => {
           ))}
         </div>
       )}
-    </div>}
+    </div>
+  );
+};
+
 export default PerformanceMonitor;
