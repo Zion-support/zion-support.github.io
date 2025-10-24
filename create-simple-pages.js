@@ -1,15 +1,53 @@
-'use client';
+const fs = require('fs');
+const path = require('path');
+
+// List of files to fix
+const filesToFix = [
+  'app/ai-powered-devops/page.tsx',
+  'app/ai-powered-email-analyzer/page.tsx',
+  'app/ecommerce-analytics-pro/page.tsx',
+  'app/legal-document-manager/page.tsx',
+  'app/medical-records-manager/page.tsx',
+  'app/test/page.tsx',
+  'app/property-management-ai/page.tsx',
+  'app/supply-chain-optimizer/page.tsx',
+  'app/micro-saas-services/ai-chatbot-builder/page.tsx',
+  'app/micro-saas-services/ai-analytics-dashboard/page.tsx',
+  'app/it-services/cybersecurity-audit/page.tsx',
+  'app/micro-saas-services/ai-lead-generation/page.tsx',
+  'app/micro-saas-services/ai-content-generator/page.tsx',
+  'app/micro-saas-services/page.tsx',
+  'app/micro-saas-services/ai-email-assistant/page.tsx',
+  'app/online-learning-platform/page.tsx'
+];
+
+function createSimplePage(filePath) {
+  try {
+    const fullPath = path.join(__dirname, filePath);
+    
+    // Extract page name from path
+    const pathParts = filePath.split('/');
+    const pageName = pathParts[pathParts.length - 2] || 'page';
+    const title = pageName.split('-').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join(' ');
+    
+    // Determine import path for components
+    const depth = pathParts.length - 2; // app/.../page.tsx
+    const componentPath = '../'.repeat(depth) + 'components';
+    
+    const simplePageContent = `'use client';
 
 export const dynamic = 'force-dynamic';
 
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '${componentPath}/Navigation';
+import Footer from '${componentPath}/Footer';
 
 const Page: React.FC = () => {
   // Set document title for SEO
   React.useEffect(() => {
-    document.title = 'Supply Chain Optimizer - Zion Tech Group';
+    document.title = '${title} - Zion Tech Group';
   }, []);
 
   return (
@@ -19,10 +57,10 @@ const Page: React.FC = () => {
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Supply Chain Optimizer
+              ${title}
             </h1>
             <p className="text-xl text-emerald-400 max-w-3xl mx-auto">
-              Professional supply chain optimizer services and solutions from Zion Tech Group.
+              Professional ${title.toLowerCase()} services and solutions from Zion Tech Group.
             </p>
           </div>
 
@@ -126,4 +164,15 @@ const Page: React.FC = () => {
   );
 };
 
-export default Page;
+export default Page;`;
+    
+    fs.writeFileSync(fullPath, simplePageContent);
+    console.log(`Created simple page: ${filePath}`);
+  } catch (error) {
+    console.error(`Error creating ${filePath}:`, error.message);
+  }
+}
+
+// Create all simple pages
+filesToFix.forEach(createSimplePage);
+console.log('All pages have been simplified!');

@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Use standalone output for better compatibility
-  output: 'standalone',
+  // Disable static generation completely
+  output: 'export',
   trailingSlash: true,
+  images: {
+    unoptimized: true
+  },
   
   // Disable static generation to avoid serialization issues
   experimental: {
