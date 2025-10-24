@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import { ArrowRight, Mail, CheckCircle, Star, Brain, Send, Zap, Shield, BarChart3, DollarSign, Clock, TrendingUp } from 'lucide-react';
+=======
+import { ArrowRight, Mail, CheckCircle, Star, DollarSign, TrendingUp, Clock, Shield, Brain, Send, BarChart, Target, Zap, BarChart3, Users } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59
 
 
 import Link from 'next/link';
@@ -22,6 +26,7 @@ const AIEmailAutomationPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
+<<<<<<< HEAD
     title: 'AI Email Generation',
       description: 'Generate personalized, high-converting emails using AI that understands your audience and brand voice.',
       benefits: ['Personalized content', 'A/B testing', 'Brand voice training', 'Multi-language support']
@@ -35,6 +40,21 @@ const AIEmailAutomationPage: React.FC = () => {
   {
     icon: TrendingUp,
     title: 'Performance Analytics',
+=======
+      title: 'AI Email Generation',
+      description: 'Generate personalized, high-converting emails using AI that understands your audience and brand voice.',
+      benefits: ['Personalized content', 'A/B testing', 'Brand voice training', 'Multi-language support']
+    },
+    {
+      icon: Send,
+      title: 'Smart Automation',
+      description: 'Create complex email workflows with AI-powered triggers, segmentation, and behavioral targeting.',
+      benefits: ['Behavioral triggers', 'Smart segmentation', 'Dynamic content', 'Cross-channel sync']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Performance Analytics',
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59
       description: 'Advanced analytics with AI insights to optimize email performance and improve ROI.',
     benefits: ['Open rate optimization', 'Click-through analysis', 'Revenue tracking', 'Predictive insights']
 },
@@ -43,7 +63,7 @@ const AIEmailAutomationPage: React.FC = () => {
     title: 'Automated Sequences',
       description: 'AI-powered email sequences that adapt based on recipient behavior and engagement patterns.',
     benefits: ['Adaptive sequences', 'Behavioral triggers', 'Personalization', 'Optimal timing']
-},
+  },
   {
     icon: BarChart3,
     title: 'Lead Scoring',
@@ -177,13 +197,19 @@ const AIEmailAutomationPage: React.FC = () => {
       <section className="py-20 px-4 bg-gray-900">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {stats.map((stat, index) => {
+              const IconComponent = stat.icon;
+              return (
               <div key={index} className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
                 <div className="flex justify-center mb-4">
+<<<<<<< HEAD
                   {(() => {
         const IconComponent = stat.icon;
         return <IconComponent className="w-8 h-8 text-blue-400" />;
       })()}
+=======
+                  <IconComponent className="w-8 h-8 text-blue-400" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59
                 </div>
                 <div className="text-3xl md: text-4xl font-bold text-white mb-2">
                   {stat.number}
@@ -192,7 +218,8 @@ const AIEmailAutomationPage: React.FC = () => {
                   {stat.label}
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -209,13 +236,19 @@ const AIEmailAutomationPage: React.FC = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index) => {
+              const IconComponent = feature.icon;
+              return (
               <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-105">
                 <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2xl mb-6 group-hover: scale-110 transition-transform duration-300">
+<<<<<<< HEAD
                   {(() => {
         const IconComponent = feature.icon;
         return <IconComponent className="w-8 h-8 text-white" />;
       })()}
+=======
+                  <IconComponent className="w-8 h-8 text-white" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover: text-blue-400 transition-colors">
                   {feature.title}
@@ -232,7 +265,8 @@ const AIEmailAutomationPage: React.FC = () => {
                   ))}
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

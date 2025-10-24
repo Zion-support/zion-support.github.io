@@ -4,6 +4,7 @@ import Link from 'next/link';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Brain, Shield, Zap } from 'lucide-react';
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-d028
@@ -11,6 +12,9 @@ import { Brain, Shield, Zap } from 'lucide-react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-ac10
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-2b81
+=======
+import { ArrowRight, Brain, Globe, Shield, Zap } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59
 
 
 const teamMembers = [
@@ -66,11 +70,18 @@ const teamMembers = [
 const values = [
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59
     icon: Brain,
     title: "Innovation",
       description: "We constantly push the boundaries of what's possible with AI and technology."},
   {
+<<<<<<< HEAD
     icon: Brain,
+=======
+    icon: Globe,
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59
     title: "Global Impact",
       description: "Our solutions create positive change for businesses and communities worldwide."},
   {
@@ -79,6 +90,7 @@ const values = [
       description: "We prioritize data security and ethical AI practices in everything we do."},
   {
     icon: Zap,
+<<<<<<< HEAD
 =======
     icon: '🧠',
     title: "Innovation",
@@ -94,6 +106,8 @@ const values = [
   {
     icon: '⚡',
 >>>>>>> cursor/fix-errors-and-merge-to-main-2b81
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59
     title: "Excellence",
     description: "We deliver exceptional results through meticulous attention to detail."}
   ]
@@ -168,9 +182,12 @@ const TeamPage: React.FC = () => {
               The principles that guide everything we do and shape our company culture.
             </p>
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => (
+              {values.map((value, index) => {
+                const IconComponent = value.icon;
+                return (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
                     {(() => {
         const IconComponent = value.icon;
@@ -179,6 +196,9 @@ const TeamPage: React.FC = () => {
 =======
                     <span className="text-2xl">{value.icon}</span>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2b81
+=======
+                    <IconComponent className="w-8 h-8 text-white" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {value.title}
@@ -187,7 +207,8 @@ const TeamPage: React.FC = () => {
                     {value.description}
                   </p>
                 </div>
-              ))}
+                );
+              })}
             </div>
           </div>
           {/* CTA Section */}

@@ -6,6 +6,7 @@ import '@testing-library/jest-dom';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Jest globals are already available in test environment
 
 // Polyfill for TextEncoder/TextDecoder
@@ -40,11 +41,16 @@ declare global {
   const PerformanceObserverCallback: any;
 }
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59
 // Polyfill for TextEncoder/TextDecoder
 import { TextEncoder, TextDecoder } from 'util';
 global.TextEncoder = TextEncoder as any;
 global.TextDecoder = TextDecoder as any;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-2b81
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59
 
 // Suppress jsdom navigation warnings
 const originalConsoleError = console.error;
@@ -124,7 +130,10 @@ global.localStorage = localStorageMock as unknown as Storage;
 Object.defineProperty(window, 'localStorage', {
   value: localStorageMock
 });
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-2b81
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59
 
 // Mock sessionStorage
 const sessionStorageMock = {
@@ -139,11 +148,15 @@ global.sessionStorage = sessionStorageMock as unknown as Storage;
 Object.defineProperty(window, 'sessionStorage', {
   value: sessionStorageMock
 });
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-2b81
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59
 
 // Mock fetch
 global.fetch = jest.fn();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Mock IntersectionObserver
 global.IntersectionObserver = jest.fn().mockImplementation(() => ({
@@ -169,16 +182,21 @@ global.PerformanceObserver = jest.fn().mockImplementation((_callback) => ({
 
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-2b81
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59
 // Mock console methods for cleaner test output
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.warn = (...args: unknown[]) => {
 =======
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-2b81
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59
 console.warn = (...args) => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-ac10
   const message = args[0]?.toString?.() || '';
@@ -190,10 +208,13 @@ console.warn = (...args) => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.info = (...args: unknown[]) => {
 =======
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-2b81
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59
 console.info = (...args) => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-ac10
   const message = args[0]?.toString?.() || '';
@@ -204,8 +225,11 @@ console.info = (...args) => {
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-2b81
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59
 
 // Mock PerformanceObserver
 global.PerformanceObserver = class MockPerformanceObserver {
@@ -223,6 +247,7 @@ global.PerformanceObserver = class MockPerformanceObserver {
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // Suppress JSDOM navigation warnings
 console.error = (...args: unknown[]) => {
@@ -234,6 +259,8 @@ console.error = (...args: unknown[]) => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-d028
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-2b81
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59
 
 // Mock window.location
 delete (window as unknown as Record<string, unknown>).location;

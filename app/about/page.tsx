@@ -65,8 +65,11 @@ export default function AboutPage() {
 >>>>>>> cursor/fix-errors-and-merge-to-main-d028
 =======
 
+<<<<<<< HEAD
 export default function AboutPage() {
 >>>>>>> cursor/fix-errors-and-merge-to-main-ac10
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59
   return (
     <div className="min-h-screen py-12">
       <div className="max-w-4xl mx-auto px-4">
@@ -82,4 +85,6 @@ export default function AboutPage() {
       </div>
     </div>
   );
-}
+};
+
+export default AboutPage;

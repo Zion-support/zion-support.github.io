@@ -4,7 +4,7 @@ import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (_error: Error, _errorInfo: ErrorInfo) => void;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
@@ -27,6 +27,7 @@ class ErrorBoundary extends Component<Props, State> {
     // Log error for monitoring in production
     if (process.env.NODE_ENV === 'production') {
       // In production, you would send this to an error reporting service
+<<<<<<< HEAD
       // Example: errorReportingService.captureException(error, { extra: errorInfo })
     }
     
@@ -36,6 +37,11 @@ class ErrorBoundary extends Component<Props, State> {
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
+=======
+      // Example: errorReportingService.captureException(error, { extra: errorInfo });
+    }
+    this.setState({ error, errorInfo });
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59
   }
 
   handleReload = () => {
@@ -47,6 +53,7 @@ class ErrorBoundary extends Component<Props, State> {
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   handleReload = () => {
     window.location.reload();
   };
@@ -57,6 +64,8 @@ class ErrorBoundary extends Component<Props, State> {
 
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-ac10
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
@@ -71,15 +80,19 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             
 >>>>>>> cursor/fix-errors-and-merge-to-main-d028
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-ac10
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59
             <h1 className="text-2xl font-bold text-white mb-4">Oops! Something went wrong</h1>
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page or go back to the home page.
             </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             
@@ -89,6 +102,8 @@ class ErrorBoundary extends Component<Props, State> {
 =======
             
 >>>>>>> cursor/fix-errors-and-merge-to-main-ac10
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
                 <summary className="text-sm text-gray-400 cursor-pointer mb-2">
@@ -102,6 +117,7 @@ class ErrorBoundary extends Component<Props, State> {
             )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             
 =======
 
@@ -109,6 +125,8 @@ class ErrorBoundary extends Component<Props, State> {
 =======
             
 >>>>>>> cursor/fix-errors-and-merge-to-main-ac10
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={this.handleReload}
@@ -127,6 +145,7 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             
 =======
 
@@ -134,6 +153,8 @@ class ErrorBoundary extends Component<Props, State> {
 =======
             
 >>>>>>> cursor/fix-errors-and-merge-to-main-ac10
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59
             <div className="mt-6 pt-6 border-t border-white/20">
               <p className="text-sm text-gray-400 mb-3">Still having trouble? Contact our support team:</p>
               <a
@@ -153,4 +174,8 @@ class ErrorBoundary extends Component<Props, State> {
   }
 }
 
+<<<<<<< HEAD
 export default ErrorBoundary;
+=======
+export default ErrorBoundary;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59

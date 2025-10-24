@@ -1,6 +1,7 @@
 'use client';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-d028
@@ -90,36 +91,89 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
       title: 'Growth Tracking',
       description: 'Monitor your progress and see measurable results',
       benefits: ['Performance metrics', 'ROI tracking', 'Growth analytics']
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle } from 'lucide-react';
+import Navigation from './Navigation';
+import Footer from './Footer';
+
+interface EnhancedSEOHeadProps {
+  className?: string;
+  title?: string;
+}
+
+const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ 
+  className = '', 
+  title = 'Zion Tech Group - AI & IT Solutions' 
+}) => {
+  const features = [
+    {
+      icon: ArrowRight,
+      title: 'AI Analytics',
+      description: 'Advanced analytics powered by artificial intelligence',
+      benefits: ['Real-time insights', 'Predictive modeling', 'Data visualization']
+    },
+    {
+      icon: CheckCircle,
+      title: 'Automation',
+      description: 'Streamline your business processes',
+      benefits: ['Workflow automation', 'Task optimization', 'Efficiency gains']
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59
     }
   ];
 
   const benefits = [
+<<<<<<< HEAD
     'Increase organic traffic by up to 300%',
     'Improve search engine rankings',
     'Boost conversion rates',
     'Save time with automated optimization',
     'Get detailed performance insights',
     'Stay ahead of algorithm changes'
+=======
+    'Increase productivity by 300%',
+    'Reduce operational costs by 50%',
+    'Improve decision making with AI insights',
+    'Scale your business effortlessly',
+    '24/7 automated support',
+    'Enterprise-grade security'
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59
   ];
 
   return (
     <>
       <Helmet>
         <title>{title}</title>
+<<<<<<< HEAD
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
       </Helmet>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+=======
+        <meta name="description" content="Zion Tech Group - Leading provider of AI and IT solutions for modern businesses" />
+        <meta name="keywords" content="AI, artificial intelligence, IT solutions, automation, analytics, business intelligence" />
+      </Helmet>
+      <Navigation />
+      <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 ${className}`}>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+<<<<<<< HEAD
               Enhanced SEO Head
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced SEO optimization solutions powered by AI technology
+=======
+              AI-Powered Solutions
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Transform your business with cutting-edge AI and IT solutions
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">
@@ -185,7 +239,11 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
+<<<<<<< HEAD
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your SEO?</h2>
+=======
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of businesses already using our AI-powered SEO solutions
             </p>
@@ -205,5 +263,9 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
   );
 };
 
+<<<<<<< HEAD
 export default EnhancedSEOHead;
 >>>>>>> cursor/fix-errors-and-merge-to-main-ac10
+=======
+export default EnhancedSEOHead;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6d59
