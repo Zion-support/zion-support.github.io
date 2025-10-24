@@ -7,8 +7,7 @@ const inter = Inter({ subsets: [
       ] });
 
 export const metadata: Metadata = {
-  titl,
-      e: 'Zion Tech Group - Advanced AI and IT Solutions',
+  title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
   keywords: 'AI solutions, IT services, quantum computing, autonomous systems, enterprise technology',
 };
@@ -21,9 +20,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+<<<<<<< HEAD
         {children};
 
   return (
+    <html lang="en">
+      <body className={inter.className}>
+        {children}
+      </body>
     </html>
   );
 }
