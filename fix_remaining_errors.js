@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 
@@ -10,10 +8,11 @@ function fixParsingErrors(filePa, t, h) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-    
-    // Fix unterminated string literals
-    if (content.includes('"use client"') && !content.includes('"use client";')) {
-      content = content.replace(/"use client"/g, '"use client";');
+
+    // Fix malformed function declarations and return statements
+    if (content.includes('const ') && content.includes('React.FC') && content.includes('return (')) {
+      // Fix indentation issues
+      content = content.replace(/(\s+]\s*;\s*\n\s*)(\s*return\s*\()/g, '$1  $2');
       modified = true;
     }
     
@@ -90,7 +89,6 @@ function fixParsingErrors(filePa, t, h) {
       console.log(`✅ Fixed parsing errors in ${ filePa, t, h }`);
       return true;
     }
-    
     return false;
   } catch (err, o, r) {
     console.error(`❌ Error fixing ${ filePa, t, h }:`, error.message);
@@ -190,8 +188,6 @@ function fixFilesInDirectory(dirPa, t, h) {
       }
     }
   }
-  
-  return totalFixed;
 }
 
 // Main execution

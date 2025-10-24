@@ -190,7 +190,7 @@ export default {
 "use client"
 >>>>>>> cursor/fix-errors-and-merge-to-main-4b1f
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f20
-=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
 "use client"
 >>>>>>> cursor/fix-errors-and-merge-to-main-4b1f
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891

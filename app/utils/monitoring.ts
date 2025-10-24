@@ -6,7 +6,6 @@ export const monitoring = () => {
 };
 
 export default monitoring;
-=======
 <<<<<<< HEAD:app/utils/monitoring.ts
 'use client';
 'use client'

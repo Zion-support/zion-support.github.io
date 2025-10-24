@@ -32,6 +32,31 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
   // Web Vitals monitoring;
   useEffect(() => {if (enableWebVitals && type of windo w !== 'undefined') {"
       constmeasureWebVitals="()" => {
+
+  // Web Vitals monitoring,
+useEffect(() => {
+    if (enableWebVitals && typeof window !== 'undefined') {
+      const measureWebVitals = () => {
+<<<<<<< HEAD:app-broken/app/components/AdvancedPerformanceOptimizer.tsx
+  return (
+    // First Contentful Paint,
+new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.name === 'first-contentful-paint') {
+              setPerformanceMetrics(prev => ({ ...prev, fcp: entry.startTime
+  );
+}));
+            }
+          }
+        }).observe({ entryTypes: ['paint'],});
+
+        // Largest Contentful Paint,
+new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          setPerformanceMetrics(prev => ({ ...prev, lcp: lastEntry.startTime,}));
+        }).observe({ entryTypes: ['largest-contentful-paint'],});
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
   
         // First Contentful Paint;
         new PerformanceObserver((list) => {
@@ -51,6 +76,28 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
         // First Input Delay;
         new PerformanceObserver((list) => {for (const entry of list.getEntries()) {}
             setPerformanceMetrics(prev => ({...prev, fid: entry.processingStart - entry.startTime }))
+
+        // First Input Delay,
+new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+<<<<<<< HEAD:app-broken/app/components/AdvancedPerformanceOptimizer.tsx
+            setPerformanceMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime,}));
+          }
+        }).observe({ entryTypes: ['first-input'],});
+
+        // Cumulative Layout Shift,
+let clsValue = 0;
+        new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (!(entry as any).hadRecentInput) {
+              clsValue += (entry as any).value;
+              setPerformanceMetrics(prev => ({ ...prev, cls: clsValue,}));
+            }
+          }
+        }).observe({ entryTypes: ['layout-shift'],});
+      };
+            setPerformanceMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }))
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
           }
         }).observe({entryTypes: ['first-input'] })
 
@@ -59,6 +106,8 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
         }).observe({entryTypes: ['layout-shift'] })
       }
 ;
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
       measureWebVitals()
     }
   }, [enableWebVita, l, s])
@@ -69,6 +118,10 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
 
     // Service Worker for advanced caching;
     if ('serviceWorker' in navigator && enableServiceWorker) {}
+
+    // Service Worker for advanced caching,
+if ('serviceWorker' in navigator && enableServiceWorker) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
           console.log('Service Worker registered:', registration);
@@ -93,6 +146,57 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
               img.src="src.replace(/\.(jpg|jpeg|png)$/i," '.webp')
             } else {}
               img.src="src"
+    window.fetch = async (input, init) => {
+      const url = typeof input === 'string' ? input : input.url
+      const cacheKey = `${url}_${JSON.stringify(init)}`
+
+      if (cache.has(cacheKey)) {
+        return cache.get(cacheKey)
+      }
+
+      const response = await originalFetch(input, init)
+      if (response.ok) {
+        cache.set(cacheKey, response.clone())
+      }
+
+      return response
+    }
+  }, [enableServiceWorker])
+
+<<<<<<< HEAD:app-broken/app/components/AdvancedPerformanceOptimizer.tsx
+  // Image optimization with WebP and lazy loading,
+const optimizeImages = useCallback(() => {
+    if (typeof window === 'undefined') return;
+  // Image optimization with WebP and lazy loading
+  const optimizeImages = useCallback(() => {
+    if (typeof window === 'undefined') return
+>>>>>>> main:app/components/AdvancedPerformanceOptimizer.tsx
+
+    const images = document.querySelectorAll('img[data-src]')
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+  
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement
+          const src = img.dataset.src
+          if (src) {
+<<<<<<< HEAD:app-broken/app/components/AdvancedPerformanceOptimizer.tsx
+            // Check for WebP support,
+const canvas = document.createElement('canvas');
+            const webpSupported = canvas.toDataURL('image/webp').indexOf('data: image/webp') === 0;
+
+            if (webpSupported && !src.includes('.webp')) {
+              img.src = src.replace(/\.(jpg|jpeg|png)$/i,, '.webp');
+            // Check for WebP support
+            const canvas = document.createElement('canvas')
+            const webpSupported = canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0
+
+            if (webpSupported && !src.includes('.webp')) {
+              img.src = src.replace(/\.(jpg|jpeg|png)$/i, '.webp')
+>>>>>>> main:app/components/AdvancedPerformanceOptimizer.tsx
+            } else {
+              img.src = src
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
             }
 ;
             img.classList.remove('lazy');
@@ -108,6 +212,9 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
     if (typeof window="==" 'undefined') return;
 "
     const criticalResources=";"
+
+    const criticalResources = [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
       '/fonts/inter-var.woff2',
       '/css/critical.css',
       '/js/main.js'
@@ -137,6 +244,14 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
       link.href="hint.href";"}
       if (hint.rel="==" 'preconnect') {}
         link.crossOrigin="'anonymous'"
+
+    hints.forEach((hint) => {
+      const link = document.createElement('link')
+      link.rel = hint.rel
+      link.href = hint.href
+      if (hint.rel === 'preconnect') {
+        link.crossOrigin = 'anonymous'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
       }
       document.head.appendChild(link)
 
@@ -162,6 +277,32 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
   const reportPerformanceMetrics=";";"
     if (typeof window="==" 'undefined') return
 
+    const style = document.createElement('style')
+    style.textContent = criticalCSS
+    document.head.insertBefore(style, document.head.firstChild)
+  }, [])
+
+<<<<<<< HEAD:app-broken/app/components/AdvancedPerformanceOptimizer.tsx
+  // Performance monitoring and reporting,
+const reportPerformanceMetrics = useCallback(() => {
+    if (typeof window === 'undefined') return;
+
+    // Report to analytics,
+if ('gtag' in window) {
+      (window as any).gtag('event', 'web_vitals', {
+        event_category: 'Performance',,
+        event_label: 'Core Web Vitals',,
+        value: Math.round(performanceMetrics.lcp),,
+        custom_map: {
+          fcp: Math.round(performanceMetrics.fcp),,
+          lcp: Math.round(performanceMetrics.lcp),,
+          fid: Math.round(performanceMetrics.fid),,
+          cls: Math.round(performanceMetrics.cls * 1000) / 1000,}
+  // Performance monitoring and reporting
+  const reportPerformanceMetrics = useCallback(() => {
+    if (typeof window === 'undefined') return
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
+
     // Report to analytics
     if ('gtag' in window) {
       (window as any).gtag('event', 'web_vitals', {
@@ -174,6 +315,8 @@ constAdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProp s> 
           fid: Math.round(performanceMetrics.fid)
           cls: Math.round(performanceMetrics.cls * 100 0) / 1000
 }
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
     }
   }, [performanceMetrics]);
 
@@ -206,3 +349,4 @@ export default AdvancedPerformanceOptimizer
 }}}}}
 };</AdvancedPerformanceOptimizerProp>
 export default AdvancedPerformanceOptimizerPage;</AdvancedPerformanceOptimizerProp>"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928

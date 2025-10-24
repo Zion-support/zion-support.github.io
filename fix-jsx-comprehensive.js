@@ -6,21 +6,20 @@ function fixJSXFile(filePa, t, h) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Check if this is a React component file
-    if (!content.includes('React') && !content.includes('react')) {
-      return false;
-    }
+    // Fix the main issue - malformed return statements
+    content = content.replace(/\]\s*return \(\s*<React\.Fragment>/g, ']\n  return (\n    <React.Fragment>');
+    content = content.replace(/\]\s*return \(\s*<Helmet>/g, ']\n  return (\n    <Helmet>');
+    content = content.replace(/\]\s*return \(\s*<Navigation>/g, ']\n  return (\n    <Navigation>');
+    content = content.replace(/\]\s*return \(\s*<main/g, ']\n  return (\n    <main');
+    content = content.replace(/\]\s*return \(\s*<div/g, ']\n  return (\n    <div');
     
-    // Fix React.Fragment issues
-    content = content.replace(/<React\.Fragment>/g, '<>');
-    content = content.replace(/<\/React\.Fragment>/g, '</>');
+    // Fix other malformed return statements
+    content = content.replace(/}\s*\]\s*return \(\s*<React\.Fragment>/g, '}\n  ]\n  return (\n    <React.Fragment>');
+    content = content.replace(/}\s*\]\s*return \(\s*<Helmet>/g, '}\n  ]\n  return (\n    <Helmet>');
     
-    // Fix malformed JSX structure
-    const lines = content.split('\n');
-    let fixedLines = [];
-    let inJSX = false;
-    let braceCount = 0;
-    let parenCount = 0;
+    // Fix malformed Helmet tags
+    content = content.replace(/<Helmet>\s*<title>Page \| Zion Tech Group<\/title>/g, '<Helmet>\n        <title>AI API Management - Zion Tech Group</title>');
+    content = content.replace(/<Helmet>\s*<title>Page \| Zion Tech Group<\/title>/g, '<Helmet>\n        <title>AI API Manager - Zion Tech Group</title>');
     
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
@@ -84,9 +83,8 @@ function fixJSXFile(filePa, t, h) {
       }
     }
     
-    // Remove duplicate or malformed lines at the end
-    const finalLines = [];
-    let foundProperEnd = false;
+    // Fix missing closing tags and proper structure
+    content = content.replace(/<\/React\.Fragment>\s*\)\s*}\s*export default.*$/g, '    </React.Fragment>\n  )\n}\n\nexport default $1');
     
     for (let i = fixedLines.length - 1; i >= 0; i--) {
       const line = fixedLines[i].trim();
@@ -115,7 +113,8 @@ function fixJSXFile(filePa, t, h) {
       finalLines.push(`export default ${ componentNa, m, e }Page;`);
     }
     
-    const fixedContent = finalLines.join('\n');
+    // Fix Navigation component calls
+    content = content.replace(/<Navigation \/>/g, '      <Navigation />');
     
     // Only write if content changed
     if (fixedContent !== content) {
@@ -145,6 +144,8 @@ problematicFiles.forEach(file => {
   if (fixJSXFile(fi, l, e)) {
     fixedCount++;
   }
-});
+  
+  console.log(`Fixed ${fixedCount} out of ${problematicFiles.length} specific files`);
+}
 
 console.log(`Fixed ${ fixedCou, n, t } out of ${problematicFiles.length} files`);

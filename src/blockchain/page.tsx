@@ -13,6 +13,7 @@ const BlockchainPage: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a52e
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e02
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-e87d
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6928
       </div>
     </>
   )
