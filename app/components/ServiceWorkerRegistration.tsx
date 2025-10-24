@@ -1,12 +1,9 @@
 'use client'
 import { Metadata } from 'next';
-import Footer from './Footer'
-import {CheckCircle, Phone, Mail, ArrowRight} from 'lucide-react';
+import Footer from './Footer';import {CheckCircle, Phone, Mail, ArrowRight} from 'lucide-react';
 import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
-import { CheckCircle, Phone, Mail, ArrowRight } from 'lucide-react'
-
-const ServiceWorkerRegistrationPage: React.FC = () => {
+import { CheckCircle, Phone, Mail, ArrowRight } from 'lucide-react';const ServiceWorkerRegistrationPage: React.FC = () => {
   const features = [
     {
       icon: Brain,

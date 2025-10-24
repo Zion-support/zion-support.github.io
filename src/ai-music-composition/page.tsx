@@ -3,9 +3,7 @@ import { Play } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Zap, Music } from 'lucide-react'
-
-constAIMusicCompositionPage: React.FC= () =>{constfeatures= [
+import { CheckCircle, Zap, Music } from 'lucide-react';constAIMusicCompositionPage: React.FC = () => {constfeatures= [
     'AI Composition',
     'Multiple Genres',
     'Custom Length',
@@ -198,4 +196,4 @@ const Page = () => {
   )
 }
 
-export default Page;
+export default Page;}

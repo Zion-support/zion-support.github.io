@@ -2,8 +2,7 @@
 import React, { lazy, Suspense } from 'react'
 import SEOOptimizer from './components/SEOOptimizer'
 import AccessibilityEnhancer from './components/AccessibilityEnhancer'
-import PerformanceMonitor from './components/PerformanceMonitor'
-// Fallback component
+import PerformanceMonitor from './components/PerformanceMonitor';// Fallback component
 const EmptyComponent = () => null
 // Lazy load heavy components - these may not exist, so make them optional
 const UnifiedBanner = lazy(() =>

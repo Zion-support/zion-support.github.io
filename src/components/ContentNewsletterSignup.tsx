@@ -1,9 +1,7 @@
 'use client'
 import { ArrowRight } from 'lucide-react'
 import React, { useState } from 'react'
-import { Mail, ArrowRight } from 'lucide-react'
-
-const ContentNewsletterSignup: React.FC = () => {
+import { Mail, ArrowRight } from 'lucide-react';const ContentNewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)

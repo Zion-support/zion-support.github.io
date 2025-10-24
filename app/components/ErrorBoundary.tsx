@@ -4,9 +4,7 @@ import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
-
-const ErrorBoundaryPage: React.FC = () => {
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';const ErrorBoundaryPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -157,8 +155,8 @@ if (process.env.NODE_ENV=== 'production') {
 }
 this.setState({errorerrorInfo})
 }
-handleReload= () => {windo w.location.reload()}
-handleGoHome= () => {windo w.location.href= '/'}
+handleReload = () => {windo w.location.reload()}
+handleGoHome = () => {windo w.location.href= '/'}
 render() {if (this.state.hasError) {
 if (this.props.fallback) {
 return this.props.fallback
@@ -209,3 +207,4 @@ kleber@ziontechgroup.com
 </div>
 </div>
 </div>
+}})

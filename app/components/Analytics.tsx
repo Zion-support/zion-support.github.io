@@ -17,7 +17,7 @@ const Analytics: React.FC = () => {
     initAnalytics()
   }, [])
 
-  return null; // Analytics component doesn&apos;t render anything
+  return null; // Analytics component doesn't render anything
 }
 
 export default Analytics

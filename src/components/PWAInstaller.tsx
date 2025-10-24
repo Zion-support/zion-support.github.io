@@ -1,9 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import { X } from 'lucide-react'
-import { Download } from 'lucide-react'
-
-interface BeforeInstallPromptEvent extends Event {
+import { Download } from 'lucide-react';interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<void>
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>
 }
@@ -64,11 +62,11 @@ const PWAInstaller: React.FC = () => {
 
   const handleDismiss = () => {
     setShowInstallPrompt(false)
-    // Don&apos;t show again for this session
+    // Don't show again for this session
     sessionStorage.setItem('pwa-install-dismissed', 'true')
   }
 
-  // Don&apos;t show if already installed or dismissed this session
+  // Don't show if already installed or dismissed this session
   if (isInstalled || !showInstallPrompt || sessionStorage.getItem('pwa-install-dismissed')) {
     return null
   }

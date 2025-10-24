@@ -4,9 +4,7 @@ import React from 'react'
 import { Smartphone, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2, ShieldCheck, FileText, Rocket, Lock } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Star, ArrowRight } from 'lucide-react'
-
-interface ITService {
+import { CheckCircle, Star, ArrowRight } from 'lucide-react';interface ITService {
   title: string
   description: string
   icon: React.ComponentType<{ className?: string }>
@@ -19,7 +17,7 @@ interface ITService {
   color?: string
 }
 
-constITServicesPage: React.FC= () => {constitServices: ITService[] = [
+constITServicesPage: React.FC = () => {constitServices: ITService[] = [
     // Infrastructure & Cloud Services
     {
       title: 'Data Center Services',
@@ -538,3 +536,4 @@ const Page = () => {
 }
 
 export default Page;
+}

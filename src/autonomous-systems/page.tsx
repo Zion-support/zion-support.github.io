@@ -2,9 +2,7 @@
 import { BarChart } from 'lucide-react'
 import React from 'react'
 import { CheckCircle, Star, BarChart } from 'lucide-react'
-import { Bot, Cpu } from 'lucide-react'
-
-constAutonomousSystemsPage: React.FC= () =>{constautonomousServices= [
+import { Bot, Cpu } from 'lucide-react';constAutonomousSystemsPage: React.FC = () => {constautonomousServices= [
     {
       id: 'self-healing-infrastructure',
       title: 'Self-Healing Infrastructure',

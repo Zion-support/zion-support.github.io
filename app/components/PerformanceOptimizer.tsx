@@ -6,9 +6,7 @@ import { ArrowRight } from 'lucide-react'
 import React, { useEffect, useState, useCallback } from 'react'
 import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react'
 import { CheckCircle } from 'lucide-react'
-import { AlertTriangle } from 'lucide-react'
-
-interface PerformanceOptimizerProps {
+import { AlertTriangle } from 'lucide-react';interface PerformanceOptimizerProps {
   className?: string;
 }
 

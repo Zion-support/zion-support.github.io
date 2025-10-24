@@ -176,7 +176,7 @@ const AIServicesPage: React.FC = () => {
             Ready to Harness the Power of AI?
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            Let&apos;s discuss how our AI solutions can transform your business operations.
+            Let's discuss how our AI solutions can transform your business operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

@@ -5,9 +5,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 import { Workflow } from 'lucide-react'
-import { CheckCircle, Phone, Mail } from 'lucide-react'
-
-const AIWorkflowAutomationPage: React.FC = () => {
+import { CheckCircle, Phone, Mail } from 'lucide-react';const AIWorkflowAutomationPage: React.FC = () => {
   const features = [
     {
       icon: Workflow,
@@ -84,4 +82,4 @@ const Page = () => {
   )
 }
 
-export default Page;
+export default Page;}

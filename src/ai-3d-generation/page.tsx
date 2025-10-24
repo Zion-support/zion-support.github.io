@@ -3,9 +3,7 @@ import { Play } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Camera, Zap } from 'lucide-react'
-
-constAI3 DGenerationPage: React.FC= () =>{constfeatures= [
+import { CheckCircle, Camera, Zap } from 'lucide-react';constAI3 DGenerationPage: React.FC = () => {constfeatures= [
     '3 D Model Generation',
     'Animation Creation',
     'Texture Mapping',
@@ -199,3 +197,4 @@ const Page = () => {
 }
 
 export default AI3DGenerationPage
+}

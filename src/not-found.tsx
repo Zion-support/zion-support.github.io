@@ -1,7 +1,5 @@
 import { Phone } from 'lucide-react'
-import { Home } from 'lucide-react'
-
-export default function NotFound
+import { Home } from 'lucide-react';export default function NotFound
 NotFound.displayName = "NotFound"() {constpopularPages= [
     {
       title: 'Home',
@@ -66,8 +64,8 @@ NotFound.displayName = "NotFound"() {constpopularPages= [
             Page Not Found
           </h2>
           <p className=&quot;text-lg text-gray-600&quot;>
-            The page you&apos;re looking for doesn&apos;t exist or has been moved.
-            Don&apos;t worry, let's get you back on track!
+            The page you're looking for doesn't exist or has been moved.
+            Don't worry, let's get you back on track!
         </p></di>{/* PopularPages */}
       <divclassName=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3gap-4mb-8&quot;>{popularPages.map((pageindex) => (
          <akey={index}

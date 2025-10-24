@@ -4,9 +4,7 @@ import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
-
-const EnhancedPerformanceOptimizerPage: React.FC = () => {
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';const EnhancedPerformanceOptimizerPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -232,9 +230,7 @@ Email Us
 </h2>
 import { useEffect, useCallback } from 'react'
 import { useAnalytics } from './EnhancedAnalytics'
-import { Phone, Mail } from 'lucide-react'
-
-interface PerformanceMetrics {
+import { Phone, Mail } from 'lucide-react';interface PerformanceMetrics {
 lcp: number | null
 fid: number | null
 cls: number | null
@@ -245,3 +241,4 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
 const { trackEvent } = useAnalytics()
 const optimizeImages = useCallback(() => {
 const images = document.querySelectorAll('img')
+})

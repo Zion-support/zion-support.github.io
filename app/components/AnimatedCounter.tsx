@@ -1,7 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
-import { useIntersectionObserver } from '../utils/performanceOptimizations'
-
-interface AnimatedCounterProps {
+import { useIntersectionObserver } from '../utils/performanceOptimizations';interface AnimatedCounterProps {
   className?: string;
 }
 

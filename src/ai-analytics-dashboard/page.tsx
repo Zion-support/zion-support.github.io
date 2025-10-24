@@ -6,9 +6,7 @@ import { BarChart3 } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Star, Phone } from 'lucide-react'
-
-const AIAnalyticsDashboardPage: React.FC = () => {
+import { CheckCircle, Star, Phone } from 'lucide-react';const AIAnalyticsDashboardPage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
@@ -244,3 +242,4 @@ const Page = () => {
 }
 
 export default AIAnalyticsDashboardPage
+}

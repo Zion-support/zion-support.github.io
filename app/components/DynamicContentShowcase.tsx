@@ -4,9 +4,7 @@ import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
-
-interface Testimonial {
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';interface Testimonial {
   id: number
   name: string
   company: string
@@ -169,7 +167,7 @@ const DynamicContentShowcase: React.FC = () => {
         <div className=&quot;max-w-6xl mx-auto&quot;></div>
           <div className=&quot;text-center mb-16&quot;></div>
             <h2 className=&quot;text-3xl font-bold text-white mb-6&quot;>What Our Customers Say</h2>
-            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>Don&apos;t just take our word for it. Here's what our satisfied customers have to say about their experience.</p>p>
+            <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>Don't just take our word for it. Here's what our satisfied customers have to say about their experience.</p>p>
           </div>
           <div className=&quot;relative&quot;></div>
             <div className=&quot;bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20&quot;></div>
@@ -334,4 +332,4 @@ const DynamicContentShowcase: React.FC = () => {
   )
 }
 
-export default DynamicContentShowcase
+export default DynamicContentShowcase})))

@@ -91,8 +91,7 @@ const Navigation = () => {
                         : 'text-gray-300 hover:text-white hover:bg-slate-800'
                     }`}
                     onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
-                    onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
-                  >
+                    onMouseLeave={() => item.submenu && setIsServicesOpen(false)}>
                     <Icon className="w-4 h-4" />
                     <span>{item.name}</span>
                     {item.submenu && <ChevronDownIcon className="w-4 h-4 ml-1" />}
@@ -163,8 +162,7 @@ const Navigation = () => {
                           <Link key={subItem.name}
                             href={subItem.href}
                             className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm"
-                            onClick={() => setIsOpen(false)}
-                          >
+                            onClick={() => setIsOpen(false)}>
                             {subItem.name}
                           </Link>
                         ))}

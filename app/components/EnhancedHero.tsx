@@ -3,9 +3,7 @@ import { Metadata } from 'next';
 import React from 'react'
 import { ArrowRight, Brain } from 'lucide-react'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-import { Phone, Mail } from 'lucide-react'
-
-  ]
+import { Phone, Mail } from 'lucide-react';]
 
   const benefits = [
     'Increase efficiency by up to 50%',

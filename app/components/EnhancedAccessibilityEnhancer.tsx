@@ -3,9 +3,7 @@ import { Metadata } from 'next';
 import React from 'react'
 import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-import { ArrowRight } from 'lucide-react'
-
-const EnhancedAccessibilityEnhancerPage: React.FC = () => {
+import { ArrowRight } from 'lucide-react';const EnhancedAccessibilityEnhancerPage: React.FC = () => {
   const features = [
     {
       icon: Brain,

@@ -204,4 +204,4 @@ y: 0.3
 ]
 }
 export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */}
-};`
+};`))

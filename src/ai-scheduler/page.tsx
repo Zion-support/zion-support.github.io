@@ -1,9 +1,7 @@
 'use client'
 import { Brain, Target } from 'lucide-react'
 import React from 'react'
-import { CheckCircle, Star, Phone, Calendar } from 'lucide-react'
-
-constAISchedulerPage: React.FC= () =>{constfeatures= [
+import { CheckCircle, Star, Phone, Calendar } from 'lucide-react';constAISchedulerPage: React.FC = () => {constfeatures= [
     {
       icon: Calendar,
       title: 'Smart Scheduling',
@@ -303,3 +301,4 @@ const Page = () => {
 }
 
 export default Page;
+}

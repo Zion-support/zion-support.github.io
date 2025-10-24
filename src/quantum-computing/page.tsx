@@ -2,9 +2,7 @@
 import { Brain } from 'lucide-react'
 import React from 'react'
 import { Atom, Lock } from 'lucide-react'
-import { CheckCircle, Star, Brain, Shield } from 'lucide-react'
-
-const QuantumComputingPage: React.FC = () => {
+import { CheckCircle, Star, Brain, Shield } from 'lucide-react';const QuantumComputingPage: React.FC = () => {
   const quantumServices = [
     {
       id: 'quantum-algorithms',

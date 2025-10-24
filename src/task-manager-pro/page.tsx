@@ -2,9 +2,7 @@
 import { Brain, BarChart, Target } from 'lucide-react'
 import React from 'react'
 import { CheckSquare } from 'lucide-react'
-import { CheckCircle, Star, Phone } from 'lucide-react'
-
-constTaskManagerProPage: React.FC= () =>{constfeatures= [
+import { CheckCircle, Star, Phone } from 'lucide-react';constTaskManagerProPage: React.FC = () => {constfeatures= [
     {
       icon: CheckSquare,
       title: 'AI Task Prioritization',
@@ -302,3 +300,4 @@ const Page = () => {
 }
 
 export default Page;
+}

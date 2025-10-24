@@ -5,9 +5,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { Key, Copy } from 'lucide-react'
 import { Code } from 'lucide-react'
-import { Check } from 'lucide-react'
-
-const ApiDocsPage: React.FC = () => {
+import { Check } from 'lucide-react';const ApiDocsPage: React.FC = () => {
   const [copiedCode, setCopiedCode] = useState<string | null>(null)
 
   const copyToClipboard = (code: string, id: string) => {
@@ -129,4 +127,4 @@ const Page = () => {
   )
 }
 
-export default Page;
+export default Page;}

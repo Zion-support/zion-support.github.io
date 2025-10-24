@@ -3,9 +3,7 @@ import { Brain, BarChart } from 'lucide-react'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Zap, Brain, Eye, BarChart } from 'lucide-react'
-
-constAIContentGenerationPage: React.FC= () =>{constcontentServices= [
+import { CheckCircle, Zap, Brain, Eye, BarChart } from 'lucide-react';constAIContentGenerationPage: React.FC = () => {constcontentServices= [
     {
       title: 'AI Blog Content Generator Pro',
       description: 'Advanced AI-powered blog content creation with SEO optimization, research integration, and brand voice consistency.',

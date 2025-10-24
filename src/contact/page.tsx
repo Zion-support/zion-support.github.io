@@ -5,9 +5,7 @@ import { Send } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, Phone, Mail } from 'lucide-react'
-import { MapPin, Clock } from 'lucide-react'
-
-constContactPage: React.FC= () =>{const [formDatasetFormData] = useState({
+import { MapPin, Clock } from 'lucide-react';constContactPage: React.FC = () => {const [formDatasetFormData] = useState({
     name: '',
     email: '',
     company: '',
@@ -278,3 +276,4 @@ const Page = () => {
 }
 
 export default Page;
+}

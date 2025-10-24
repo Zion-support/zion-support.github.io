@@ -1,9 +1,7 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react'
 import { Mail } from 'lucide-react'
-import { Home } from 'lucide-react'
-
-interface AdvancedErrorBoundaryProps {
+import { Home } from 'lucide-react';interface AdvancedErrorBoundaryProps {
   className?: string;
 }
 
@@ -49,3 +47,4 @@ class AdvancedErrorBoundary extends Component<Props, State> {
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     // You can integrate with services like Sentry, LogRocket, etc.
     const errorData = {
+}}}

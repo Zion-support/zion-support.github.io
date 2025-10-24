@@ -5,9 +5,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 import { Building } from 'lucide-react'
-import { CheckCircle, Phone, Mail, PhoneIcon, MailIcon } from 'lucide-react'
-
-const AILeadGenerationPage: React.FC = () => {
+import { CheckCircle, Phone, Mail, PhoneIcon, MailIcon } from 'lucide-react';const AILeadGenerationPage: React.FC = () => {
   const features = [
     {
       icon: Brain,

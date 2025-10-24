@@ -1,9 +1,7 @@
 'use client'
 import { BarChart, Target, TrendingUp } from 'lucide-react'
 import React from 'react'
-import { CheckCircle, Star, BarChart, TrendingUp, Target } from 'lucide-react'
-
-constBusinessIntelligencePage: React.FC= () =>{constbiServices= [
+import { CheckCircle, Star, BarChart, TrendingUp, Target } from 'lucide-react';constBusinessIntelligencePage: React.FC = () => {constbiServices= [
     {
       id: 'data-analytics',
       title: 'Advanced Data Analytics',

@@ -4,9 +4,7 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Phone, Mail } from 'lucide-react'
-
-constAIDataVisualizationPage: React.FC= () =>{constfeatures= [
+import { CheckCircle, Phone, Mail } from 'lucide-react';constAIDataVisualizationPage: React.FC = () => {constfeatures= [
     {
       icon: BarChart,
       title: 'Interactive Dashboards',
@@ -240,4 +238,4 @@ const Page = () => {
   )
 }
 
-export default Page;
+export default Page;}

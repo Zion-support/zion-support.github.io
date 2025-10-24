@@ -1,9 +1,7 @@
 'use client'
 import { Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from './Navigation'
-import React, { useEffect, useState, useCallback } from 'react'
-
-interface AdvancedAccessibilityEnhancerProps {
+import React, { useEffect, useState, useCallback } from 'react';interface AdvancedAccessibilityEnhancerProps {
   enableKeyboardNavigation?: boolean
   enableScreenReader?: boolean
   enableHighContrast?: boolean
@@ -399,3 +397,4 @@ export default AdvancedAccessibilityEnhancer
 };
 
 export default AdvancedAccessibilityEnhancerPage;
+})))))

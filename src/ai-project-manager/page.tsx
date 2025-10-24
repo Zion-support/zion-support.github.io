@@ -1,12 +1,9 @@
-import React from 'react'
-import React from 'react';
+import React from 'react';import React from 'react';
 import { CheckCircle, Phone, Star, TrendingUp, Check } from 'lucide-react';
 
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Phone, TrendingUp } from 'lucide-react'
-
-constAIProjectManagerPage: React.FC= () =>{constfeatures= [
+import { CheckCircle, Phone, TrendingUp } from 'lucide-react';constAIProjectManagerPage: React.FC = () => {constfeatures= [
     'AI-powered project planning and resource allocation',
     'Intelligent timeline prediction and risk assessment',
     'Smart task management with priority optimization',
@@ -55,4 +52,4 @@ const Page = () => {
   )
 }
 
-export default Page;
+export default Page;}

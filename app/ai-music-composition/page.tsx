@@ -2,8 +2,7 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Music, Check } from 'lucide-react'
-export const dynamic = 'force-dynamic';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Music, Check } from 'lucide-react';export const dynamic = 'force-dynamic';
 
 const AiMusicCompositionPage: React.FC = () => {
   const features = [

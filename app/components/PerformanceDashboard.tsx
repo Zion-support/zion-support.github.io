@@ -4,9 +4,7 @@ import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
-
-const PerformanceDashboardPage: React.FC = () => {
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';const PerformanceDashboardPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -148,7 +146,7 @@ memoryUsage: 0,
 fps: 0})
 const [isMonitoringsetIsMonitoring] = useState(false)
 const [alertssetAlerts]=useState<string[]>([])
-useEffect(() => {constupdateMetrics= () => {
+useEffect(() => {constupdateMetrics = () => {
   
 constnavigation= performance.getEntriesByType(
 'navigation'
@@ -162,7 +160,7 @@ constmemory= (performance as { memory?: { usedJSHeapSize : number} }).memorymemo
 letfps= 6 0
 if ('requestAnimationFrame' in windo w) {letlastTime= performance.now()
 letframeCount= 0
-constmeasureFPS= () => {
+constmeasureFPS = () => {
   
 constcurrentTime= performance.now()
 frameCount++
@@ -194,7 +192,7 @@ newAlerts.push('Memory usage is high')}
 if(currentMetrics.fps< 3 0) {newAlerts.push('FPS is below30')}
 setAlerts(newAlerts)
 }
-consttoggleMonitoring= () =>{setIsMonitoring(!isMonitoring)}
+consttoggleMonitoring = () => {setIsMonitoring(!isMonitoring)}
 constformatBytes= (bytes: number) => {if (bytes=== 0) return '0 Bytes'
 constk= 1024constsizes= ['Bytes', 'KB', 'MB', 'GB']
 consti= Math.floor(Math.log(bytes) / Math.log(k))

@@ -44,7 +44,7 @@ const ContactPage: React.FC = () => {
       icon: Mail,
       title: "Email Us",
       details: "hello@ziontechgroup.com",
-      description: "Send us an email and we&apos;ll respond within 24 hours"
+      description: "Send us an email and we'll respond within 24 hours"
     },
     {
       icon: Phone,
@@ -79,7 +79,7 @@ const ContactPage: React.FC = () => {
             Get in <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">Touch</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Ready to transform your business with AI and technology? Let&apos;s start the conversation.
+            Ready to transform your business with AI and technology? Let's start the conversation.
           </p>
         </div>
       </section>
@@ -110,7 +110,7 @@ const ContactPage: React.FC = () => {
               Send us a Message
             </h2>
             <p className="text-xl text-gray-600">
-              Fill out the form below and we&apos;ll get back to you as soon as possible.
+              Fill out the form below and we'll get back to you as soon as possible.
             </p>
           </div>
 
@@ -120,7 +120,7 @@ const ContactPage: React.FC = () => {
                 <CheckCircle className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
-              <p className="text-gray-600">Your message has been sent successfully. We&apos;ll get back to you soon!</p>
+              <p className="text-gray-600">Your message has been sent successfully. We'll get back to you soon!</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="bg-white p-8 rounded-xl shadow-lg">

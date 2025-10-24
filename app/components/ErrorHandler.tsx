@@ -5,9 +5,7 @@ import Navigation from './Navigation'
 import { ArrowRight, CheckCircle, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
-import { Home } from 'lucide-react'
-
-const ErrorHandlerPage: React.FC = () => {
+import { Home } from 'lucide-react';const ErrorHandlerPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -87,14 +85,14 @@ const ErrorHandlerPage: React.FC = () => {
     }
   }
 
-  handleRetry= () => {this.setState({
+  handleRetry = () => {this.setState({
       hasError: false,
       error: null,
       errorInfo: null
    })
   }
 
-  handleGoHome= () => {windo w.location.href= '/'
+  handleGoHome = () => {windo w.location.href= '/'
  }
 
   render() {if (this.state.hasError) {

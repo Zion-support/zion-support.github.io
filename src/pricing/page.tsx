@@ -3,9 +3,7 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, Phone, Mail } from 'lucide-react'
-
-constPricingPage: React.FC= () =>{constpricingPlans= [
+import { CheckCircle, Phone, Mail } from 'lucide-react';constPricingPage: React.FC = () => {constpricingPlans= [
     {
       name: 'Starter',
       price: '$29 9',
@@ -211,4 +209,4 @@ const Page = () => {
   )
 }
 
-export default Page;
+export default Page;}

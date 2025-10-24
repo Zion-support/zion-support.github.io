@@ -4,9 +4,7 @@ import React from 'react'
 import { BookOpen, ShieldCheck, Wifi, Server, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Cog, Settings2 } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle } from 'lucide-react'
-
-constMicroSAASPage: React.FC= () =>{constcategories= [
+import { CheckCircle } from 'lucide-react';constMicroSAASPage: React.FC = () => {constcategories= [
     {
       title: 'AI-Powered Tools',
       icon: Brain,
@@ -310,3 +308,4 @@ const Page = () => {
 }
 
 export default Page;
+}

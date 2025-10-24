@@ -2,9 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Lock, BarChart3, FileText } from 'lucide-react'
 import { Phone, Mail, Zap, Brain, ArrowRight } from 'lucide-react'
-import { MapPin } from 'lucide-react'
-
-const Footer: React.FC = () => {
+import { MapPin } from 'lucide-react';const Footer: React.FC = () => {
   const microSaasServices = [
     { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' },
     { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
@@ -283,4 +281,4 @@ const Footer = () => {
   )
 }
 
-export default Footer;
+export default Footer;}

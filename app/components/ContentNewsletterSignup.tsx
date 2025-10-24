@@ -5,9 +5,7 @@ import Navigation from './Navigation'
 import { ArrowRight } from 'lucide-react'
 import React, { useState } from 'react'
 import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react'
-import { CheckCircle, ArrowRight } from 'lucide-react'
-
-interface ContentNewsletterSignupProps {
+import { CheckCircle, ArrowRight } from 'lucide-react';interface ContentNewsletterSignupProps {
   title?: string
   subtitle?: string
   placeholder?: string
@@ -186,3 +184,4 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({ class
 };
 
 export default ContentNewsletterSignupPage;
+}}

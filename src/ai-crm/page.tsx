@@ -4,9 +4,7 @@ import React from 'react'
 
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Star } from 'lucide-react'
-
-constAICRMPage: React.FC= () =>{constfeatures= [
+import { CheckCircle, Star } from 'lucide-react';constAICRMPage: React.FC = () => {constfeatures= [
     {
       icon: Brain,
       title: 'AI-Powered Lead Scoring',
@@ -307,3 +305,4 @@ const Page = () => {
 }
 
 export default Page;
+}

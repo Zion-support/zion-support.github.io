@@ -5,9 +5,7 @@ import React from 'react'
 import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
-
-const SidebarPage: React.FC = () => {
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';const SidebarPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -158,12 +156,12 @@ Phone,
 Mail,
 MapPin,Clock;}
 } from 'lucide-react'
-constSidebar: React.FC= () =>{const [isOpensetIsOpen] = useState(false)
+constSidebar: React.FC = () => {const [isOpensetIsOpen] = useState(false)
 const [expandedSectionssetExpandedSections]=useState<Set<strin g>>(new Set(['ai-services', 'micro-saas', 'it-services']))
 constlocation= useLocation()
 useEffect(() => {
   
-consthandleResize= () => {
+consthandleResize = () => {
   
 if (windo w.innerWidth >=1024) {
 setIsOpen(false)}
@@ -326,3 +324,4 @@ expandedSections.has(section.key) ?
 {section.items.map((item, itemIndex) => (</div>
 <Link
 key={itemIndex}
+)))))

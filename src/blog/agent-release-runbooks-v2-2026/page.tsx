@@ -1,8 +1,6 @@
 import { ListChecks, FileWarning, RefreshCw } from 'lucide-react'
 import { Calendar } from 'lucide-react'
-import { Clock } from 'lucide-react'
-
-export default function Page
+import { Clock } from 'lucide-react';export default function Page
 Page.displayName = "Page"() {
   return (
     <main className='min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50'>

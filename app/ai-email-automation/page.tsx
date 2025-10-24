@@ -1,8 +1,6 @@
 import React from 'react'
 import { ArrowRight, Brain, Mail, CheckCircle, Zap, TrendingUp, Send, BarChart3, Shield, DollarSign, Clock, Star } from 'lucide-react'
-import Link from 'next/link'
-
-const AIEmailAutomationPage: React.FC = () => {
+import Link from 'next/link';const AIEmailAutomationPage: React.FC = () => {
   const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,

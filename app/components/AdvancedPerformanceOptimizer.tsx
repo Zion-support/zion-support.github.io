@@ -1,7 +1,5 @@
 'use client'
-import React, { useEffect, useState, useCallback } from 'react'
-
-interface AdvancedPerformanceOptimizerProps {
+import React, { useEffect, useState, useCallback } from 'react';interface AdvancedPerformanceOptimizerProps {
   enableAdvancedCaching?: boolean
   enableImageOptimization?: boolean
   enableLazyLoading?: boolean
@@ -250,3 +248,4 @@ export default AdvancedPerformanceOptimizer
 };
 
 export default AdvancedPerformanceOptimizerPage;
+)))))

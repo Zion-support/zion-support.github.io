@@ -1,9 +1,7 @@
 'use client'
 import { ArrowRight } from 'lucide-react'
 import React from 'react'
-import { CheckCircle, Star, ArrowRight } from 'lucide-react'
-
-interface MicroSAASCardProps {
+import { CheckCircle, Star, ArrowRight } from 'lucide-react';interface MicroSAASCardProps {
   service: {
     title: string
     description: string

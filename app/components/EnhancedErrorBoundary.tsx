@@ -4,9 +4,7 @@ import React from 'react'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
-
-const EnhancedErrorBoundaryPage: React.FC = () => {
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react';const EnhancedErrorBoundaryPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -170,7 +168,7 @@ class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
     // Log error to monitoring service
     // // console.error('Error caught by boundary:', error, errorInfo)
   }
-  handleReload= () => {windo w.location.reload()
+  handleReload = () => {windo w.location.reload()
  }
   render() {if (this.state.hasError) {
       if (this.props.fallback) {
@@ -191,3 +189,4 @@ class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: Pro
                 </summary>
                 <pre className=&quot;text-xs text-red-300 bg-black/20 p-3 rounded overflow-auto&quot;></p>
                   {this.state.error.toString()}
+}}}}))

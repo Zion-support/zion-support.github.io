@@ -4,9 +4,7 @@ import React from 'react'
 
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight } from 'lucide-react'
-
-constAIServicesPage: React.FC= () =>{constservices= [
+import { CheckCircle, ArrowRight } from 'lucide-react';constAIServicesPage: React.FC = () => {constservices= [
     {
       icon: Brain,
       title: 'Machine Learning Solutions',
@@ -185,3 +183,4 @@ const Page = () => {
 }
 
 export default Page;
+}

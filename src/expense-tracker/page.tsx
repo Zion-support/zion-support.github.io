@@ -2,9 +2,7 @@
 import { X, Brain, Target, TrendingUp } from 'lucide-react'
 import React from 'react'
 import { Receipt } from 'lucide-react'
-import { CheckCircle, Star, Phone } from 'lucide-react'
-
-constExpenseTrackerPage: React.FC= () =>{constfeatures= [
+import { CheckCircle, Star, Phone } from 'lucide-react';constExpenseTrackerPage: React.FC = () => {constfeatures= [
     {
       icon: Receipt,
       title: 'Smart Receipt Scanning',
@@ -302,3 +300,4 @@ const Page = () => {
 }
 
 export default Page;
+}

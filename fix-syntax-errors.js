@@ -1,158 +1,94 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+const fs = require('fs');
+const path = require('path');
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Common fixes for syntax errors
+const fixes = [
+  // Fix unescaped entities
+  {
+    pattern: /'/g,
+    replacement: '&apos;',
+    description: 'Fix unescaped apostrophes'
+  },
+  // Fix merge conflict markers
+  {
+    pattern: /<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g,
+    replacement: '',
+    description: 'Remove merge conflict markers'
+  },
+  // Fix common JSX syntax issues
+  {
+    pattern: /(\w+)\s*=\s*{([^}]*?)}\s*>/g,
+    replacement: '$1={$2}>',
+    description: 'Fix JSX attribute spacing'
+  },
+  // Fix missing semicolons in imports
+  {
+    pattern: /import\s+([^;]+)\s+from\s+['"]([^'"]+)['"]\s*(?!;)/g,
+    replacement: 'import $1 from \'$2\';',
+    description: 'Add missing semicolons to imports'
+  },
+  // Fix common parsing errors
+  {
+    pattern: /(\w+)\s*=\s*\(\s*\)\s*=>\s*{/g,
+    replacement: '$1 = () => {',
+    description: 'Fix arrow function syntax'
+  }
+];
 
-function fixSyntaxErrors(filePath) {
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
     
-    // Check if file has syntax issues
-    if (!content.includes(';') || !content.includes('</')) {
-      return false; // No obvious syntax issues
+    // Apply fixes
+    fixes.forEach(fix => {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+        console.log(`Applied fix: ${fix.description} to ${filePath}`);
+      }
+    });
+    
+    // Additional specific fixes
+    // Fix common JSX closing tag issues
+    if (content.includes('</div>') && !content.includes('<div')) {
+      content = content.replace(/<\/div>/g, '');
     }
     
-    console.log(`Fixing syntax errors in: ${filePath}`);
-    
-    // Fix common syntax issues
-    let fixedContent = content
-      // Remove trailing semicolons that shouldn't be there
-      .replace(/;\s*$/gm, '')
-      // Fix JSX closing tags that have semicolons
-      .replace(/<\/([^>]+)>;\s*$/gm, '</$1>')
-      // Fix JSX opening tags that have semicolons
-      .replace(/<([^>]+)>;\s*$/gm, '<$1>')
-      // Fix JSX attributes that have semicolons
-      .replace(/(\w+)="([^"]*)"\s*;\s*$/gm, '$1="$2"')
-      // Fix JSX expressions that have semicolons
-      .replace(/\{\s*([^}]+)\s*\}\s*;\s*$/gm, '{$1}')
-      // Remove standalone semicolons
-      .replace(/^\s*;\s*$/gm, '')
-      // Fix multiple empty lines
-      .replace(/\n\s*\n\s*\n/g, '\n\n')
-      // Fix JSX fragments
-      .replace(/<>\s*;\s*$/gm, '<>')
-      .replace(/<\/>\s*;\s*$/gm, '</>')
-      // Fix React.Fragment
-      .replace(/<React\.Fragment>\s*;\s*$/gm, '<React.Fragment>')
-      .replace(/<\/React\.Fragment>\s*;\s*$/gm, '</React.Fragment>')
-      // Fix common JSX syntax issues
-      .replace(/>\s*;\s*</gm, '><')
-      .replace(/>\s*;\s*$/gm, '>')
-      // Fix function declarations
-      .replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*\(\s*;\s*$/gm, 'const $1 = () => (')
-      .replace(/const\s+(\w+)\s*=\s*\(\s*;\s*$/gm, 'const $1 = (')
-      // Fix return statements
-      .replace(/return\s*\(\s*;\s*$/gm, 'return (')
-      // Fix JSX elements that are missing closing tags
-      .replace(/<(\w+)([^>]*)>\s*;\s*$/gm, '<$1$2>')
-      // Clean up extra whitespace
-      .replace(/\s+$/gm, '')
-      .replace(/^\s+/gm, '');
-    
-    // Try to fix incomplete JSX structures
-    const lines = fixedContent.split('\n');
-    const fixedLines = [];
-    let inJSX = false;
-    let jsxDepth = 0;
-    
-    for (let i = 0; i < lines.length; i++) {
-      let line = lines[i];
-      
-      // Skip lines that are just semicolons or empty
-      if (line.trim() === ';' || line.trim() === '') {
-        continue;
-      }
-      
-      // Skip lines that are just closing braces with semicolons
-      if (line.trim() === '};' || line.trim() === '}') {
-        if (jsxDepth > 0) {
-          jsxDepth--;
-        }
-        fixedLines.push(line.replace(/;+$/, ''));
-        continue;
-      }
-      
-      // Skip lines that are just opening braces with semicolons
-      if (line.trim() === '{;' || line.trim() === '{') {
-        jsxDepth++;
-        fixedLines.push(line.replace(/;+$/, ''));
-        continue;
-      }
-      
-      // Fix lines that end with semicolons inappropriately
-      if (line.includes(';') && !line.includes('//') && !line.includes('*')) {
-        // Check if this is a JSX line
-        if (line.includes('<') && line.includes('>')) {
-          line = line.replace(/;\s*$/, '');
-        } else if (line.includes('return') || line.includes('const') || line.includes('let') || line.includes('var')) {
-          // Keep semicolons for regular JavaScript
-        } else {
-          line = line.replace(/;\s*$/, '');
-        }
-      }
-      
-      fixedLines.push(line);
+    // Fix missing closing braces
+    const openBraces = (content.match(/{/g) || []).length;
+    const closeBraces = (content.match(/}/g) || []).length;
+    if (openBraces > closeBraces) {
+      content += '}'.repeat(openBraces - closeBraces);
+      modified = true;
     }
     
-    const finalContent = fixedLines.join('\n');
-    
-    // Only write if content changed
-    if (finalContent !== content) {
-      fs.writeFileSync(filePath, finalContent);
-      return true;
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed syntax errors in: ${filePath}`);
     }
-    
-    return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
   }
 }
 
-function findTsxFiles(dir) {
-  const files = [];
+function walkDirectory(dir) {
+  const files = fs.readdirSync(dir);
   
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
     
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-        files.push(fullPath);
-      }
+    if (stat.isDirectory()) {
+      walkDirectory(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      fixFile(filePath);
     }
-  }
-  
-  traverse(dir);
-  return files;
+  });
 }
 
-// Main execution
-const appDir = path.join(__dirname, 'app');
-const files = findTsxFiles(appDir);
-
-console.log(`Found ${files.length} TypeScript files to check`);
-
-let fixedCount = 0;
-for (const file of files) {
-  if (fixSyntaxErrors(file)) {
-    fixedCount++;
-  }
-}
-
-console.log(`Fixed syntax errors in ${fixedCount} files`);
-
-// Also check the root App.tsx
-if (fixSyntaxErrors(path.join(__dirname, 'App.tsx'))) {
-  fixedCount++;
-  console.log('Fixed syntax errors in App.tsx');
-}
-
-console.log(`Total files fixed: ${fixedCount}`);
+console.log('Starting syntax error fixes...');
+walkDirectory('./app');
+walkDirectory('./src');
+console.log('Syntax error fixes completed!');

@@ -2,9 +2,7 @@
 import { Brain, Target } from 'lucide-react'
 import React from 'react'
 import { PenTool, FileText } from 'lucide-react'
-import { CheckCircle, Star, Phone } from 'lucide-react'
-
-constAIWritingAssistantPage: React.FC= () =>{constfeatures= [
+import { CheckCircle, Star, Phone } from 'lucide-react';constAIWritingAssistantPage: React.FC = () => {constfeatures= [
     {
       icon: PenTool,
       title: 'AI Content Generation',
@@ -317,3 +315,4 @@ const Page = () => {
 }
 
 export default Page;
+}

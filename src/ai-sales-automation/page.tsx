@@ -5,9 +5,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 import { Building } from 'lucide-react'
-import { CheckCircle, Phone, Mail } from 'lucide-react'
-
-const AISalesAutomationPage: React.FC = () => {
+import { CheckCircle, Phone, Mail } from 'lucide-react';const AISalesAutomationPage: React.FC = () => {
   const features = [
     {
       icon: Target,
@@ -242,4 +240,4 @@ const Page = () => {
   )
 }
 
-export default Page;
+export default Page;}
