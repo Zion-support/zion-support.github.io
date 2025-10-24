@@ -106,4 +106,4 @@ const ContentStatistics: React.FC = () => {
   );
 };
 
-export default ContentStatistics
+export default ContentStatistics;

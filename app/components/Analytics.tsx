@@ -45,8 +45,8 @@ const Analytics: React.FC<AnalyticsProps> = ({
     if (typeof window !== 'undefined') {
       // Initialize gtag
       window.gtag = window.gtag || function() {
-        (window.gtag as any).q = (window.gtag as any).q || [];
-        (window.gtag as any).q.push(arguments);
+        (window.gtag as { q?: unknown[] }).q = (window.gtag as { q?: unknown[] }).q || [];
+        (window.gtag as { q: unknown[] }).q.push(arguments);
       };
 
       // Load GA script
