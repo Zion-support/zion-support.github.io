@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { ArrowRight, Calculator, Building2, Wallet, PiggyBank, BarChart, TrendingUp, CheckCircle, Brain, Settings, BarChart3, Shield, Target, Zap, Globe, DollarSign, Activity, Lock, Database, FileText, CreditCard, Helmet, Star } from 'lucide-react';
+import { ArrowRight, Calculator, Building2, Wallet, PiggyBank, BarChart, TrendingUp, CheckCircle, Brain, Settings, BarChart3, Shield, Target, Zap, Globe, DollarSign, Activity, Lock, Database, FileText, CreditCard, Star } from 'lucide-react';
 
 export default function AiFinancialAnalyticsProPage() {
 
@@ -218,7 +218,7 @@ export default function AiFinancialAnalyticsProPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
+      <div>
         <title>AI Financial Analytics Pro - Zion Tech Group | Advanced Financial Intelligence Platform</title>
         <meta name="description" content="Transform your financial analysis with AI Financial Analytics Pro. Advanced machine learning, real-time insights, and predictive analytics for smarter financial decisions. Start your free trial today." />
         <meta name="keywords" content="AI financial analytics, financial intelligence, predictive analytics, financial reporting, business intelligence, Zion Tech Group" />
@@ -270,7 +270,7 @@ export default function AiFinancialAnalyticsProPage() {
             }
           })}
         </script>
-      </Helmet>
+      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Hero Section */}

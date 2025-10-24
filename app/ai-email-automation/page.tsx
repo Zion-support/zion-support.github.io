@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowRight, Brain, Mail, CheckCircle, Zap, TrendingUp, Send, BarChart3, Shield, DollarSign, Clock, Helmet, Star } from 'lucide-react'
+import { ArrowRight, Brain, Mail, CheckCircle, Zap, TrendingUp, Send, BarChart3, Shield, DollarSign, Clock, Star } from 'lucide-react'
 import Link from 'next/link'
 
 const AIEmailAutomationPage: React.FC = () => {
@@ -122,13 +122,13 @@ const AIEmailAutomationPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <div>
         <title>AI Email Automation - Smart Email Marketing | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered email automation with content generation, smart segmentation, and performance analytics. Increase revenue by 300% and save 20+ hours per week." />
         <meta name="keywords" content="AI email automation, email marketing, email generation, lead scoring, email analytics, marketing automation, AI content creation" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-email-automation" />
-      </Helmet>
+      </div>
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">

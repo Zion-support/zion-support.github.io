@@ -1,5 +1,4 @@
 'use client'
-import {Helmet} from 'lucide-react';
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
