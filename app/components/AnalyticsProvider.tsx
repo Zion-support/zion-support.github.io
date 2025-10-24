@@ -34,13 +34,10 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
         document.head.appendChild(script);
 
         // Initialize gtag
-        const gtagFunction = function(...args: unknown[]) {
-          const gtag = window as { gtag?: { q?: unknown[] } };
-          gtag.gtag = gtag.gtag || { q: [] };
-          gtag.gtag.q = gtag.gtag.q || [];
-          gtag.gtag.q.push(args);
+        const gtagFunction = function(..._args: unknown[]) {
+          ((window as unknown as { gtag: { q?: unknown[] } }).gtag.q = (window as unknown as { gtag: { q?: unknown[] } }).gtag.q || []).push(_args);
         };
-        (window as { gtag?: unknown }).gtag = (window as { gtag?: unknown }).gtag || gtagFunction;
+        (window as unknown as { gtag: unknown }).gtag = (window as unknown as { gtag: unknown }).gtag || gtagFunction;
         window.gtag = window.gtag || gtagFunction;
         window.gtag('js', new Date());
         window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX');
@@ -51,7 +48,7 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const trackEvent = (_eventName: string, _parameters?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
-      if ((window as unknown as { gtag: (..._args: unknown[]) => void }).gtag) {
+      if ((window as unknown as { gtag: unknown }).gtag) {
         (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', _eventName, _parameters);
       }
       
@@ -65,7 +62,7 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const trackPageView = (_pageName: string, _pagePath: string) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
-      if ((window as unknown as { gtag: (..._args: unknown[]) => void }).gtag) {
+      if ((window as unknown as { gtag: unknown }).gtag) {
         (window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', 'page_view', {
           page_title: _pageName,
           page_location: window.location.href,
