@@ -7,7 +7,7 @@ interface AnalyticsEvent {
   label?: string;
   value?: number;
   timestamp?: number;
-  custom_parameters?: Record<string, unknown>;
+  custom_parameters?: Record<string, string | number | boolean | null>;
 }
 
 class Analytics {
@@ -28,14 +28,11 @@ class Analytics {
       timestamp: Date.now()
     });
 
-    // Send to external analytics service
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', event.action, {
-        event_category: event.category,
-        event_label: event.label,
-        value: event.value,
-        ...event.custom_parameters
-      });
+    // In production, you would send this to your analytics service
+    if (process.env.NODE_ENV === "production") {
+      this.sendToAnalytics(event);
+    } else {
+      console.log("Analytics Event:", event);
     }
   }
 
@@ -46,8 +43,8 @@ class Analytics {
       action: "View",
       label: page,
       custom_parameters: {
-        page_title: title || (typeof document !== 'undefined' ? document.title : ''),
-        page_url: typeof window !== 'undefined' ? window.location.href : ''
+        page_title: title || document.title,
+        page_url: window.location.href
       }
     });
   }
@@ -55,32 +52,34 @@ class Analytics {
   // Track user interactions
   trackClick(element: string, location?: string): void {
     this.track({
-      category: "Interaction",
+      category: "User Interaction",
       action: "Click",
       label: element,
       custom_parameters: {
-        location: location || 'unknown'
+        location
       }
     });
   }
 
   // Track form submissions
-  trackFormSubmit(formName: string, success: boolean): void {
+  trackFormSubmission(formName: string, success: boolean): void {
     this.track({
       category: "Form",
-      action: "Submit",
-      label: formName,
-      value: success ? 1 : 0
+      action: success ? "Submit Success" : "Submit Error",
+      label: formName
     });
   }
 
   // Track performance metrics
-  trackPerformance(metric: string, value: number): void {
+  trackPerformance(metric: string, value: number, unit: string = "ms"): void {
     this.track({
       category: "Performance",
       action: "Metric",
       label: metric,
-      value: Math.round(value)
+      value,
+      custom_parameters: {
+        unit
+      }
     });
   }
 
@@ -93,7 +92,7 @@ class Analytics {
       custom_parameters: {
         error_name: error.name,
         error_stack: error.stack,
-        context: context || 'unknown'
+        context
       }
     });
   }
@@ -107,6 +106,19 @@ class Analytics {
   clearEvents(): void {
     this.events = [];
   }
+
+  // Send to analytics service (implement based on your analytics provider)
+  private sendToAnalytics(event: AnalyticsEvent): void {
+    // Example implementation for Google Analytics
+    if (typeof window !== "undefined" && (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
+      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag("event", event.action, {
+        event_category: event.category,
+        event_label: event.label,
+        value: event.value,
+        ...event.custom_parameters
+      });
+    }
+  }
 }
 
 export const analytics = Analytics.getInstance();
@@ -117,23 +129,19 @@ export function useAnalytics() {
     track: analytics.track.bind(analytics),
     trackPageView: analytics.trackPageView.bind(analytics),
     trackClick: analytics.trackClick.bind(analytics),
-    trackFormSubmit: analytics.trackFormSubmit.bind(analytics),
+    trackFormSubmission: analytics.trackFormSubmission.bind(analytics),
     trackPerformance: analytics.trackPerformance.bind(analytics),
     trackError: analytics.trackError.bind(analytics)
   };
 }
 
 // Higher-order component for automatic page view tracking
-export function withAnalytics<T extends React.ComponentType<unknown>>(WrappedComponent: T): T {
-  return ((props: unknown) => {
+export function withAnalytics<T extends React.ComponentType<Record<string, unknown>>>(WrappedComponent: T): T {
+  return ((props: Record<string, unknown>) => {
     const { trackPageView } = useAnalytics();
     React.useEffect(() => {
-      if (typeof window !== 'undefined') {
-        trackPageView(window.location.pathname, document.title);
-      }
+      trackPageView(window.location.pathname, document.title);
     }, [trackPageView]);
     return React.createElement(WrappedComponent, props);
   }) as T;
 }
-
-export default Analytics;
