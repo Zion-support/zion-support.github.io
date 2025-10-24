@@ -13,15 +13,18 @@ interface AdvancedPerformanceOptimizerProps {
   enableWebVitals?: boolean
 }
 
-const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({enableAdvancedCaching= true,
-  enableImageOptimization= true,
-  enableLazyLoading= true,
-  enablePreloading= true,
-  enableCodeSplitting= true,
-  enableResourceHints= true,
-  enableServiceWorker= true,
-  enableCriticalCSS= true,
-  enableWebVitals= true}) => {const [performanceMetricssetPerformanceMetrics] = useState({
+const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({
+  enableAdvancedCaching = true,
+  enableImageOptimization = true,
+  enableLazyLoading = true,
+  enablePreloading = true,
+  enableCodeSplitting = true,
+  enableResourceHints = true,
+  enableServiceWorker = true,
+  enableCriticalCSS = true,
+  enableWebVitals = true
+}) => {
+  const [performanceMetrics, setPerformanceMetrics] = useState({
     fcp: 0,
     lcp: 0,
     fid: 0,
@@ -30,12 +33,11 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   })
 
   // Web Vitals monitoring
-  useEffect(() => {if (enableWebVitals && type of windo w !== 'undefined') {
-      constmeasureWebVitals= () => {
-  
+  useEffect(() => {
+    if (enableWebVitals && typeof window !== 'undefined') {
+      const measureWebVitals = () => {
         // First Contentful Paint
         new PerformanceObserver((list) => {
-  
           for (const entry of list.getEntries()) {
             if (entry.name === 'first-contentful-paint') {
               setPerformanceMetrics(prev => ({ ...prev, fcp: entry.startTime }))
@@ -53,7 +55,10 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         // First Input Delay
         new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            setPerformanceMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }))
+            const fidEntry = entry as any
+            if (fidEntry.processingStart) {
+              setPerformanceMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }))
+            }
           }
         }).observe({ entryTypes: ['first-input'] })
 
@@ -81,16 +86,18 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     if ('serviceWorker' in navigator && enableServiceWorker) {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
-          // })
+          console.log('Service Worker registered:', registration)
+        })
         .catch((registrationError) => {
-          // })
+          console.error('Service Worker registration failed:', registrationError)
+        })
     }
 
     // Memory-based caching for API responses
     const cache = new Map()
     const originalFetch = window.fetch
     window.fetch = async (input, init) => {
-      const url = typeof input === 'string' ? input : input.url
+      const url = typeof input === 'string' ? input : (input as Request).url
       const cacheKey = `${url}_${JSON.stringify(init)}`
 
       if (cache.has(cacheKey)) {
@@ -113,7 +120,6 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     const images = document.querySelectorAll('img[data-src]')
     const imageObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-  
         if (entry.isIntersecting) {
           const img = entry.target as HTMLImageElement
           const src = img.dataset.src
@@ -132,6 +138,8 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
             imageObserver.unobserve(img)
           }
         }
+      })
+    })
 
     images.forEach((img) => imageObserver.observe(img))
   }, [])
@@ -152,7 +160,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       link.href = resource
       link.as = resource.endsWith('.css') ? 'style' : 'script'
       document.head.appendChild(link)
-
+    })
   }, [])
 
   // Resource hints for better performance
@@ -174,7 +182,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         link.crossOrigin = 'anonymous'
       }
       document.head.appendChild(link)
-
+    })
   }, [])
 
   // Critical CSS inlining
@@ -198,8 +206,8 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     if (typeof window === 'undefined') return
 
     // Report to analytics
-    if ('gtag' in windo w) {
-      (windo w as any).gtag('event', 'web_vitals', {
+    if ('gtag' in window) {
+      (window as any).gtag('event', 'web_vitals', {
         event_category: 'Performance',
         event_label: 'Core Web Vitals',
         value: Math.round(performanceMetrics.lcp),
@@ -207,8 +215,9 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           fcp: Math.round(performanceMetrics.fcp),
           lcp: Math.round(performanceMetrics.lcp),
           fid: Math.round(performanceMetrics.fid),
-          cls: Math.round(performanceMetrics.cls * 100 0) / 1000}
-
+          cls: Math.round(performanceMetrics.cls * 1000) / 1000
+        }
+      })
     }
   }, [performanceMetrics])
 
@@ -240,7 +249,3 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 }
 
 export default AdvancedPerformanceOptimizer
-}}}}}
-};
-
-export default AdvancedPerformanceOptimizerPage;
