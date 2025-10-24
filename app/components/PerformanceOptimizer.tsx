@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-'use client';;
-import React from 'react';
-
-interface PerformanceOptimizerProps {
-  // Add props here
-=======
-'use client'
-import React, { useEffect, useState } from 'react'
-
-interface PerformanceMetrics {
-  loadTime: number
-  renderTime: number
-  memoryUsage: number
-  isSlowConnection: boolean
->>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
 }
 
 const PerformanceOptimizer: React.FC = () => {

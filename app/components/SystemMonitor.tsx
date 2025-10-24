@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-'use client';;
-import React from 'react';
-=======
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { Activity, Cpu, HardDrive, Wifi, Battery } from 'lucide-react';
->>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
 
 interface SystemMonitorProps {
   showDetails?: boolean;
@@ -65,25 +56,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   };
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>SystemMonitor | Zion Tech Group</title>
-        <meta name="description" content="Professional SystemMonitor services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="SystemMonitor, AI solutions, IT services, Zion Tech Group, systemmonitor" />
-      </Helmet>
-=======
-    <div className={`bg-white rounded-lg shadow-lg p-4 ${className}`}>
-      <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg font-semibold text-gray-900 flex items-center">
-          <Activity className="w-5 h-5 mr-2" />
-          System Monitor
-        </h3>
-        <div className="text-sm text-gray-500">
-          {new Date().toLocaleTimeString()}
-        </div>
-      </div>
->>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {/* CPU */}
@@ -176,11 +148,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-      </section>
-=======
-      )}
->>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
     </div>
   );
 };

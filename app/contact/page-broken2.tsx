@@ -247,15 +247,11 @@ const ContactPage: React.FC = () => {
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
               >
                 {isSubmitting ? (
-                  <>
                     <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                     <span>Sending...</span>
-                  </>
                 ) : (
-                  <>
                     <Send className="w-5 h-5" />
                     <span>Send Message</span>
-                  </>
                 )}
               </button>
             </form>

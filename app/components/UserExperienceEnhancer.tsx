@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-'use client';;
-import React from 'react';
-'use client';;
-import React, {useEffect, useState}from 'react';
-interface UserExperienceEnhancerProps {children: React.ReactNode;,}}}
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({children ,}) => {}const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({})
-useEffect(() => {// UX enhancement logic;
-    const enhanceUX = (;
-      // Add smooth scrolling;
-      document.documentElement.style.scrollBehavior = 'smooth';
-// Add loading states for interactive elements;
-=======
-'use client';
-
-import React, { useEffect, useState } from 'react';
->>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
 
 interface UserExperienceEnhancerProps {
   children: React.ReactNode;

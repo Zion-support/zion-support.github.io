@@ -1,147 +1,51 @@
 'use client';
+
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-import { CheckCircle, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-=======
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
->>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
 
-const AIAgriculturalIntelligenceProPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-<<<<<<< HEAD
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Machine learning models', 'Predictive analytics', 'Automated decision making', 'Real-time insights']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization and reporting.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ];
-
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce operational costs by 30%',
-    'Improve decision-making accuracy',
-    'Scale analytics across departments',
-    'Enhance competitive advantage'
-  ];
-
+const AiAgriculturalIntelligenceProPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-      title: 'Crop Monitoring',
-      description: 'AI-powered crop health monitoring and disease detection using satellite imagery and IoT sensors.',
-      benefits: ['Real-time monitoring', 'Disease detection', 'Yield prediction', 'Growth tracking']
-    },
-    {
-      icon: BarChart,
-      title: 'Yield Optimization',
-      description: 'Maximize crop yields through data-driven insights and predictive analytics.',
-  
-    }
-  ];
-
-  return (
-    <>
-      <Helmet>
-        <title>AI Agricultural Intelligence Pro - Zion Tech Group | Smart Farming Solutions</title>
-        <meta name="description" content="Revolutionize your farming with AI-powered agricultural intelligence. Crop monitoring, yield optimization, and precision agriculture solutions." />
-        <meta name="keywords" content="AI agriculture, smart farming, precision agriculture, crop monitoring, yield optimization, agricultural intelligence" />
+      <Navigation />
       
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
->>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
-        <Navigation />
-        
-        {/* Hero Section */}
+      <main>
         <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(34,197,94,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              AI Agricultural
-              <span className="block bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                Intelligence Pro
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Revolutionize your farming with AI-powered agricultural intelligence. 
-              Monitor crops, optimize yields, and implement precision agriculture solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-green-500/25">
-                Get Started
-              </button>
-              <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Demo
-              </button>
-            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Ai Agricultural Intelligence Pro</h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Advanced AI solutions for modern businesses.</p>
           </div>
         </section>
 
-        {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Smart Farming Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI agricultural intelligence platform provides comprehensive solutions 
-                for modern farming challenges.
-              </p>
+              <h2 className="text-4xl font-bold text-white mb-4">Features</h2>
+              <p className="text-xl text-gray-300">Advanced AI solutions</p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
-                  <div className="flex items-center mb-4">
-                    <feature.icon className="w-8 h-8 text-green-400 mr-3" />
-                    <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
-                  </div>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-400">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">AI-Powered</h3>
+                <p className="text-gray-300">Leverage artificial intelligence for enhanced performance and insights.</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Scalable</h3>
+                <p className="text-gray-300">Built to scale with your business needs and growth.</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">Secure</h3>
+                <p className="text-gray-300">Enterprise-grade security and compliance features.</p>
+              </div>
             </div>
           </div>
         </section>
+      </main>
 
-        <Footer />
-      </div>
-    </>
+      <Footer />
+    </div>
   );
 };
 
-<<<<<<< HEAD
-export default AIAgriculturalIntelligenceProPage;
-=======
-export default AIAgriculturalIntelligenceProPage;
->>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
+export default AiAgriculturalIntelligenceProPage;

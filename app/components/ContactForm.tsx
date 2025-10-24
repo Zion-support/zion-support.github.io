@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import React, {useState}from 'react';
-=======
-
-import React, { useState } from 'react';
->>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 interface FormData {
@@ -192,15 +186,11 @@ const ContactForm: React.FC = () => {
           className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
         >
           {status.type === 'loading' ? (
-            <>
               <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
               <span>Sending...</span>
-            </>
           ) : (
-            <>
               <Send className="w-5 h-5" />
               <span>Send Message</span>
-            </>
           )}
         </button>
       </form>

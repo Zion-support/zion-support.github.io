@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 
 import React, { memo } from 'react';
 import Link from 'next/link';
@@ -31,74 +30,30 @@ const Footer: React.FC = memo(() => {
   ];
 
   const companyLinks = [
-=======
-import React from 'react';
-import Link from 'next/link';
-import { Facebook, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
-
-const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-  
-  const aiServices = [
-    { name: 'AI Analytics & BI', url: '/ai-analytics', description: 'Business intelligence' },
-    { name: 'AI Automation', url: '/ai-automation', description: 'Process automation' },
-    { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder', description: 'Conversational AI' },
-    { name: 'AI Content Generation', url: '/ai-content-generation', description: 'Automated content' },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security' },
-    { name: 'Computer Vision', url: '/computer-vision', description: 'Image recognition' },
-    { name: 'Predictive Analytics', url: '/predictive-analytics', description: 'Forecasting' },
-    { name: 'Speech & Voice AI', url: '/ai-voice-assistant', description: 'Voice technology' }
-  ];
-
-  const itServices = [
-    { name: 'Web Development', url: '/web-development', description: 'Custom websites' },
-    { name: 'Mobile Development', url: '/mobile-development', description: 'iOS & Android apps' },
-    { name: 'Cloud Migration', url: '/cloud-migration', description: 'Cloud solutions' },
-    { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security services' },
-    { name: 'DevOps', url: '/devops', description: 'Development operations' },
-    { name: 'Data Analytics', url: '/data-analytics', description: 'Data insights' },
-    { name: 'IoT Solutions', url: '/iot-solutions', description: 'Internet of Things' },
-    { name: 'Blockchain', url: '/blockchain', description: 'Blockchain technology' }
-  ];
-
-  const company = [
->>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
     { name: 'Careers', url: '/careers' },
     { name: 'Contact', url: '/contact' }
   ];
 
-<<<<<<< HEAD
   const resourceLinks = [
-=======
-  const resources = [
->>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
     { name: 'Documentation', url: '/docs' },
     { name: 'API Reference', url: '/api' },
     { name: 'Blog', url: '/blog' },
     { name: 'Support', url: '/support' }
   ];
 
-<<<<<<< HEAD
   const legalLinks = [
-    { name: 'Privacy Policy', url: '/privacy' },
-    { name: 'Terms of Service', url: '/terms' },
-    { name: 'Cookie Policy', url: '/cookies' }
-=======
-  const legal = [
     { name: 'Privacy Policy', url: '/privacy' },
     { name: 'Terms of Service', url: '/terms' },
     { name: 'Cookie Policy', url: '/cookies' },
     { name: 'GDPR Compliance', url: '/gdpr' }
->>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
   ];
 
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
-          {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
@@ -126,7 +81,6 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* AI Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4 flex items-center">
               <Brain className="w-5 h-5 mr-2 text-blue-400" />
@@ -137,12 +91,8 @@ const Footer: React.FC = () => {
                 <li key={service.name}>
                   <Link
                     href={service.url}
-<<<<<<< HEAD
                     className="text-gray-300 hover:text-white transition-colors block"
                   >
-=======
-                    className="text-gray-300 hover:text-white transition-colors block">
->>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
                     {service.name}
                   </Link>
                 </li>
@@ -150,7 +100,6 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* IT Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4">IT Services</h3>
             <ul className="space-y-2">
@@ -158,12 +107,8 @@ const Footer: React.FC = () => {
                 <li key={service.name}>
                   <Link
                     href={service.url}
-<<<<<<< HEAD
                     className="text-gray-300 hover:text-white transition-colors block"
                   >
-=======
-                    className="text-gray-300 hover:text-white transition-colors block">
->>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
                     {service.name}
                   </Link>
                 </li>
@@ -171,7 +116,6 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Company */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
@@ -188,23 +132,16 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Resources */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               {resourceLinks.map((link) => (
                 <li key={link.name}>
                   <Link
-<<<<<<< HEAD
                     href={link.url}
                     className="text-gray-300 hover:text-white transition-colors block"
                   >
                     {link.name}
-=======
-                    href={item.url}
-                    className="text-gray-300 hover:text-white transition-colors block">
-                    {item.name}
->>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
                   </Link>
                 </li>
               ))}
@@ -212,7 +149,6 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Contact Info */}
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex items-center space-x-3">
@@ -239,8 +175,6 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-<<<<<<< HEAD
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-4 mb-4 md:mb-0">
             <p className="text-gray-400 text-sm">
@@ -257,28 +191,11 @@ const Footer: React.FC = () => {
                 {link.name}
               </Link>
             ))}
-=======
-        <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-300 text-sm">
-              &copy; {currentYear} Zion Tech Group. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              {legal.map(item => (
-                <Link
-                  key={item.name}
-                  href={item.url}
-                  className="text-gray-400 hover:text-white text-sm transition-colors">
-                  {item.name}
-                </Link>
-              ))}
-            </div>
->>>>>>> 95f63d1bffe2d416304750c17f0532b44f8a7886
           </div>
         </div>
       </div>
     </footer>
   );
-};
+});
 
 export default Footer;
