@@ -36,6 +36,13 @@ const nextConfig = {
   swcMinify: true,
   compress: true,
   
+  // Disable static generation to avoid serialization issues
+  experimental: {
+    missingSuspenseWithCSRBailout: false,
+    optimizePackageImports: ['@heroicons/react', 'lucide-react', 'framer-motion'],
+    webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
+  },
+  
   // Generate build ID for better caching
   generateBuildId: async () => {
     return 'build-' + Date.now();
