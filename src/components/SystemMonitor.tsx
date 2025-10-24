@@ -1,19 +1,19 @@
 'use client"
-:all-pages-backup/components/SystemMonitor.tsx;"'"
-import Footer from './Footer";"
-import Navigation from './Navigation";"
+:all-pages-backup/components/SystemMonitor.tsx;
+import Footer from './Footer;
+import Navigation from './Navigation;
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { Brain } from 'lucide-react";"
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react";"
-import { ArrowRight } from 'lucide-react";"
-import Footer from './Footer";"
-import Navigation from './Navigation";"
+import { Helmet } from 'react-helmet-async;
+import { Brain } from 'lucide-react;
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react;
+import { ArrowRight } from 'lucide-react;
+import Footer from './Footer;
+import Navigation from './Navigation;
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { Brain, Mail } from 'lucide-react";"
-import { Brain, Mail } from 'lucide-react";"
-import { Brain, Mail } from 'lucide-react";
+import { Helmet } from 'react-helmet-async;
+import { Brain, Mail } from 'lucide-react;
+import { Brain, Mail } from 'lucide-react;
+import { Brain, Mail } from 'lucide-react;
 {    }"
   ]"
 const benefits = ["'
@@ -21,23 +21,22 @@ const benefits = ["'
     'Reduce costs by 30% with automation'
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases'"
-    'Gain competitive advantage with advanced technology";"
-  ];"'"
-const SystemMonitor: "React.FC<SystemMonitorProps> = ({ className = '' ",;}) => {;</SystemMonitorProps>
+    'Gain competitive advantage with advanced technology;
+  ];
+const SystemMonitor: React.FC<SystemMonitorProps> = ({ className = '' ",;}) => {;</SystemMonitorProps>
 return(</SystemMonitorProps>
     <>
-
   </>
       <Helmet>;</Helmet>
 :all-pages-backup/components/SystemMonitor.tsx</Helmet>
         <Head />"
         <title>SystemMonitor</title>"
         <meta name=&quot;description&quot; content=&quot;Advanced SystemMonitor solution for modern businesses.&quot; / />"
-<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;"
-      </Head>;"
+<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;
+      </Head>;
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, SystemMonitor, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />
-      </>;"
+      </>;
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, SystemMonitor, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." /  />
       </Head>;
@@ -142,5 +141,5 @@ export default SystemMonitorPage;
       </div>
   )
 {}"
-export default SystemMonitorPage;"
+export default SystemMonitorPage;
 }"'"

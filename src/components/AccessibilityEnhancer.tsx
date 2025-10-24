@@ -1,11 +1,12 @@
 'use client"
 :all-pages-backup/components/AccessibilityEnhancer.tsx"
 'use client';
-import, React, { useEffect } from 'react"
+import React, { useEffect } from 'react"
 interface AccessibilityEnhancerProps {
 "
 "
-;}"
+;
+}
 children: "React.ReactNode",;}
 ;}
 ;
@@ -25,21 +26,22 @@ document.body.insertBefore(skipLink",document.body.firstChild)"
 const main = document.querySelector('main")"
       if (main && !main.id) {"'"
 main.id = 'main-content"
-      
-,;}"
+,;
+}
 "
 return () => {"'"
 const existingSkipLink = document.querySelector('a[href="#main-content"]")
-        if(existingSkipLink) {  
+        if(existingSkipLink) {
 existingSkipLink.remove()
         ,, , ;}
       ;}
-    ;}"
-  ;}, []);"
-  return <div>{children}</div>;};"'"
-import { useEffect } from 'react";"
+    ;
+}
+  ;}, []);
+  return <div>{children}</div>;};
+import { useEffect } from 'react;
 import Navigation from './Navigation'"
-const AccessibilityEnhancer: "React.FC<{ childre",n: "React.ReactNode ",}> = ({ children }) => {"
+const AccessibilityEnhancer: React.FC<{ childre",n: "React.ReactNode ",}> = ({ children }) => {"
 useEffect(() => {"
     // Add keyboard navigation support: "all-pages-backup/components/AccessibilityEnhancer.tsx"
 const handleKeyDown = ("
@@ -53,7 +55,8 @@ mainContent.focus()"
 r: "'smooth' ",) => {
 $3
 });}
-      ;}"
+      ;
+}
 "
       // Skip to navigation with Alt + N"'"
 if (e.altKey && e.key = == 'n") {"
@@ -65,8 +68,8 @@ if (firstLink) {
 firstLink.focus(),;}
     if(enableKeyboardNavigation) {  "
 const handleKeyDown = ("
-        // Skip to main content;"'"
-        if (event.key === 'Tab" && event.shiftKey && event.target === document.body) {;"'"
+        // Skip to main content;
+        if (event.key === 'Tab" && event.shiftKey && event.target === document.body) {;
           const mainContent = document.querySelector('main,[role=&quot;main&quot;]")
           if (mainContent) {
             (mainContent, as, HTMLElement).focus()
@@ -124,8 +127,8 @@ border: "2 px solid currentColor !important",}
       document.head.appendChild(style);}
   ;}, [enableHighContrast,])
 useEffect(() => {"
-    // Add focus management;"
-if (enableFocusManagement) {;"'
+    // Add focus management;
+if (enableFocusManagement) {;
 const focusableElements = 'button, [href,], input, select, textarea, [tabindex,]:not([tabindex=&quot;-1&quot;])'"
       .sr-only{position: "absolute",width: "1 px",height: "1 px",padding: "0",margin: "-1 px",overflow: "hidden",clip: "rect(0",0, 0, 0)}"
         white-space: "nowrap",border: "0",}"
@@ -173,11 +176,11 @@ document.removeEventListener('keydown', handleKeyDown)}}, []);
 useEffect(() => {;
     // Add focus indicators;
 const style = document.createElement('style');
-    style.textContent = `;"
+    style.textContent = `;
 :all-pages-backup/components/AccessibilityEnhancer.tsx"
       *:focus{outline: "2 px solid #8 b5cf6 !important;
 outline-offset: 2 px !important;
-      *:focus {;"
+      *:focus {;
         outline: 2 px solid #8 b5cf6 !important"
         outline-offse",t: "2 px !important"}
       }'
@@ -197,7 +200,7 @@ const style = document.createElement('style');`"
         @media (prefers-contrast: "high) {;
 :all-pages-backup/components/AccessibilityEnhancer.tsx;
           * {;
-border-color: currentColor !important;"
+border-color: currentColor !important;
           * {"
             border-colo",r: "currentColor !important"
           "}"
@@ -216,7 +219,7 @@ const focusableElements = 'button, [href], input, select, textarea, [tabindex]:n
       .high-contrast {"
 filter: "contrast(150%)"}"
       .reduce-motion * {"
-animation-duration: "0.01 ms !important;"
+animation-duration: "0.01 ms !important;
 animation-iteration-count: 1 !important"
 transition-duratio",n: "0.01 ms !important"
       "}`
@@ -249,6 +252,7 @@ footer.setAttribute('role', 'contentinfo')}
 return <div>{children}</div>}
 export default AccessibilityEnhancer;
 return <div>{children}  </div>
-;}"
-export default AccessibilityEnhancer;"
+;
+}
+export default AccessibilityEnhancer;
 }"'"

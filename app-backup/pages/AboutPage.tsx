@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
+import { Helmet } from 'react-helmet-async;
 import Link from 'next/link'"
  } from "@heroicons/react/24/outline";'"
     "title": 'Mission-Driven'"
@@ -24,5 +24,5 @@ import Link from 'next/link'"
     "role": 'Head of Security'"
       "description": 'Cybersecurity specialist with expertise in enterprise security solutions.'"
       "name": 'Emily Rodriguez'"
-    "role": 'Lead AI Engineer";"'"
+    "role": 'Lead AI Engineer";'"
     "description": 'Machine learning expert focused on developing cutting-edge AI solutions.'"

@@ -1,14 +1,14 @@
 'use client"
-:all-pages-backup/components/AdvancedPerformanceMonitor.tsx;"'"
+:all-pages-backup/components/AdvancedPerformanceMonitor.tsx;
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle } from 'lucide-react;
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Target, CheckCircle, BarChart, Brain, TrendingUp } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Target, CheckCircle, BarChart, Brain, TrendingUp } from 'lucide-react;
+import Navigation from '../components/Navigation;
 import Footer from '../components/Footer'"
 const Ai3 dGenerationPage: "React.FC = () => {
 const AdvancedPerformanceMonitorPage: React.FC = () => {
@@ -31,26 +31,29 @@ titl",e: "'AI-Powered Intelligence'",description: "'Advanced AI algorithms that 
   {"
 icon: "BarChart"'"
 titl",e: "'Advanced Analytics'",description: "'Comprehensive analytics dashboard with real-time data visualization.'",benefits: "['Real-time dashboards'",'Custom reports', 'Data visualization', 'Performance metrics"]"
-    ;}"
+    ;
+}
   {"
 icon: "Target"'"
 titl",e: "'Precision Targeting'",description: "'Target specific goals and objectives with precision and accuracy.'",benefits: "['Goal tracking'",'Performance optimization', 'Strategic planning', 'Success metrics"]"
-    ;}"
+    ;
+}
   {"
 icon: "TrendingUp"'"
 titl",e: "'Growth Optimization'",description: "'Optimize your business growth with data-driven strategies.'",benefits: "['Growth strategies'",'Market analysis', 'Competitive insights', 'ROI optimization"]
-    ;}"
+    ;
+}
   ]"
 const benefits = ["'
     'Increase efficiency by up to 50%'
     'Reduce costs by 30% with automation'"
     'Improve decision-making with AI insights"
 :all-pages-backup/components/AdvancedPerformanceMonitor.tsx"'"
-    'Scale operations without proportional staff increases";"'"
-    'Gain competitive advantage with advanced technology";"
-  ];"'"
-import Link from 'next/link";"
-import { ArrowRight } from 'lucide-react";"
+    'Scale operations without proportional staff increases";'"
+    'Gain competitive advantage with advanced technology;
+  ];
+import Link from 'next/link;
+import { ArrowRight } from 'lucide-react;
     'Scale operations without proportional staff increases'"
     'Gain competitive advantage with advanced technology"
   ];
@@ -143,7 +146,8 @@ Experience the power of AI-driven performance monitoring</p>"
               </div>
         </section>"
 "
-        {/* CTA Section */;}"
+        {/* CTA Section */;
+}
         <section className="py-20 px-4" />,"
     <div className="max-w-4 x lmx-auto text-center" />,"
     <h1 className="tex t-4 xlfont-bold text-white mb-6" /></h2>"
@@ -183,6 +187,6 @@ Contact Us</Link>"
 export default AdvancedPerformanceMonitorPage;
   )}
 ;
-export default Ai3; dGenerationPage;"
-export default AdvancedPerformanceMonitorPage;"
+export default Ai3; dGenerationPage;
+export default AdvancedPerformanceMonitorPage;
 }"'"

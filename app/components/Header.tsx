@@ -1,10 +1,8 @@
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
-
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,7 +10,6 @@ const Header: React.FC = () => {
           <Link href="/" className="text-2xl font-bold text-white hover:text-cyan-400 transition-colors">
             <span>Zion Tech</span>
           </Link>
-          
           <nav className="hidden md:flex space-x-8">
             <Link href="/about" className="text-white hover:text-cyan-400 transition-colors">
               About
@@ -24,7 +21,6 @@ const Header: React.FC = () => {
               Contact
             </Link>
           </nav>
-
           <button
             className="md:hidden text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -34,7 +30,6 @@ const Header: React.FC = () => {
             </svg>
           </button>
         </div>
-
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-white/10">
             <nav className="flex flex-col space-y-4">
@@ -54,5 +49,4 @@ const Header: React.FC = () => {
     </header>
   );
 };
-
 export default Header;

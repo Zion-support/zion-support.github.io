@@ -1,7 +1,6 @@
-'use client";"
-import React from 'react";"
-import Head from 'next/head";
-
+'use client;
+import React from 'react;
+import Head from 'next/head;
 export default function ServicePage() {
   return (
     <>"
@@ -39,8 +38,7 @@ export default function ServicePage() {
       </div>
     </div>
   );
-
     </>
-  );"
-}"
+  );
+}
 "'"

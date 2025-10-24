@@ -1,7 +1,5 @@
 import React from 'react';
-
 // Performance monitoring utilities
-
 export class PerformanceMonitor {
   private static instance: PerformanceMonitor;
   private metrics: Map<string, number> = new Map();
@@ -51,7 +49,6 @@ export class PerformanceMonitor {
         this.metrics.set('FID', fid);
       });
     }).observe({ entryTypes: ['first-input'] });
-
     // Cumulative Layout Shift
     let clsValue = 0;
     new PerformanceObserver((entryList) => {;

@@ -1,11 +1,9 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight } from 'lucide-react";
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight } from 'lucide-react;
 // Note: These components are not available in this context;
 export default function AccessibilityEnhancerPage() {
-
 return(<>
-
   </>"
       <Helmet />"
         <title>Accessibility Enhancer - Zion Tech Group</title>"
@@ -28,5 +26,5 @@ Learn More</button>"
       </main>
     </>)
   )"
-,;"
-};"'"
+,;
+};

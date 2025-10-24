@@ -1,9 +1,9 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react";"
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react;
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react;
 'use client';'"
     "title": 'AI-Powered Intelligence'"
       "description": 'Advanced AI algorithms that provide intelligent insights and recommendations.'"
@@ -35,7 +35,7 @@ constgetPerformanceColor= ("value": number, "thresholds": {good: "numberwarnin",
 if (value <= thresholds.warning) return 'text-yellow-40 0'
 return 'text-red-40 0'"
 ? 'bg-red-600 text-white "hover": bg-red-700'"
-: 'bg-green-600 text-white "hover": bg-green-700";"'"
->{isMonitoring ? 'Stop Monitoring' : 'Start Monitoring";"'"
+: 'bg-green-600 text-white "hover": bg-green-700";'"
+>{isMonitoring ? 'Stop Monitoring' : 'Start Monitoring";'"
 <p className=&quot;text-gray-400 text-sm&quot;>{isMonitoring ? 'Monitoring performance metrics...' : 'Click &quot;Start Monitoring&quot; to begin tracking performance"</p>"
 }}}}))'"

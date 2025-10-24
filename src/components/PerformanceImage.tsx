@@ -14,7 +14,8 @@ icon: "Target",title: "title",description: "description",benefits: "['Goal track
     }"
   {"'"
 icon: "TrendingUp",title: "title",description: "description",benefits: "['Growth strategies'",'Market analysis', 'Competitive insights', 'ROI optimization"]
-    ;}"
+    ;
+}
   ]"
 const benefits = ["'
     'Increase efficiency by up to 50%'
@@ -44,6 +45,6 @@ return(<>
   );
 }
 ;
-export default PerformanceImagePage;"
-export default PerformanceImagePage;"
+export default PerformanceImagePage;
+export default PerformanceImagePage;
 }"'"

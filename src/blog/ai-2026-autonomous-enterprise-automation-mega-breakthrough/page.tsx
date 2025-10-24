@@ -1,11 +1,11 @@
 import React from 'react';
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
 import SEOOptimizer from '../components/SEOOptimizer"
 const Page: React.FC = () => {
 return(<>"
-;"
-  </>;"
+;
+  </>;
       <SEOOptimizer title="Page",description="Read our latest insights on page and stay updated with industry trends.", keywords={ ["blog","AI insights","technology trends","industry news"] }; </div>"
 canonicalUrl = "https: //ziontechgroup.com/page"
       /></SEOOptimizer>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />"
@@ -30,6 +30,6 @@ This page is under development. Please check back soon for more information abou
       </div>)
   )
 ,};
-};"
-export default Page;"
+};
+export default Page;
 }"'"

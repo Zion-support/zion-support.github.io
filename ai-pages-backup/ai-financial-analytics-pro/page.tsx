@@ -1,6 +1,6 @@
 'use client';
-import Link from 'next/link";"
-import { Brain, BarChart3, Shield, Target, Zap, Globe, DollarSign, Calculator, Activity, TrendingUp, Lock, Building2, Database, FileText, CreditCard, Wallet, ArrowRight, CheckCircle, Star, Sparkles, PieChart } from 'lucide-react";"
+import Link from 'next/link;
+import { Brain, BarChart3, Shield, Target, Zap, Globe, DollarSign, Calculator, Activity, TrendingUp, Lock, Building2, Database, FileText, CreditCard, Wallet, ArrowRight, CheckCircle, Star, Sparkles, PieChart } from 'lucide-react;
     { "number": '500+', "label": 'Financial Institutions'"
     { "number": '1 M+', "label": 'Transactions Analyzed'"
     { "number": '99.9%', "label": 'Data Accuracy'"
@@ -11,6 +11,6 @@ import { Brain, BarChart3, Shield, Target, Zap, Globe, DollarSign, Calculator, A
     { "name": 'Oracle'"
     { "name": 'Salesforce'"
     { "name": 'HubSpot'"
-    { "name": 'Stripe";"'"
+    { "name": 'Stripe";'"
     { "name": 'PayPal'
 }}}}}}}}}}}}'"

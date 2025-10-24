@@ -1,48 +1,49 @@
 'use client"
-:all-pages-backup/components/OptimizedImage.tsx;"'"
-import Footer from './Footer";"
+:all-pages-backup/components/OptimizedImage.tsx;
+import Footer from './Footer;
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Brain } from 'lucide-react";"
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react";"
-import { Phone, Mail, ArrowRight } from 'lucide-react";
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Brain } from 'lucide-react;
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react;
+import { Phone, Mail, ArrowRight } from 'lucide-react;
 interface OptimizedImageProps {
 className?: string
 }
-;}"
-;}"
+;
+}
+;
+}
 "'"
-const OptimizedImage: "React.FC<OptimizedImageProps> = ({ className = '' ",;}) => {;"'"
-import Footer from './Footer";"
+const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' ",;}) => {;
+import Footer from './Footer;
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { Brain, ArrowRight, Mail } from 'lucide-react";"
-import { Brain, ArrowRight, Mail } from 'lucide-react";"
-import { Brain, ArrowRight, Mail } from 'lucide-react";
+import { Helmet } from 'react-helmet-async;
+import { Brain, ArrowRight, Mail } from 'lucide-react;
+import { Brain, ArrowRight, Mail } from 'lucide-react;
+import { Brain, ArrowRight, Mail } from 'lucide-react;
 interface OptimizedImageProps {
 className?: string
 }
-;}"
-;}"
+;
+}
+;
+}
 ;</OptimizedImageProps>"'"
-const OptimizedImage: "React.FC<OptimizedImageProps> = ({ className = '' ",;}) => {;
+const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '' ",;}) => {;
 return(;</OptimizedImageProps>,
     <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900&quot; />
-
       <Helmet />
-
         <Head />"
         <title>OptimizedImage | Zion Tech Group</title>"
         <meta name=&quot;description&quot; content=&quot;Professional OptimizedImage services by Zion Tech Group. Advanced AI and IT solutions for your business.&quot; / />"
-<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;"
-      </Head>;"
+<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;
+      </Head>;
         <meta name=&quot;keywords&quot; content=&quot;OptimizedImage, AI, solutions, IT, services, Zion, Tech, Group, optimizedimage&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />
       </Head>
-
       </Helmet>"
-    </div>;"
-      {/* Hero Section */,};"
+    </div>;
+      {/* Hero Section */,};
       <section className=&quot;relative py-20 px-4 sm: "px-6 lg:px-8&quot; />",<divclassName=&quot;max-w-7 xl mx-auto&quot; / />,"
     <divclassName=&quot;text-center&quot; / />,"
     <h1className=&quot;text-4 xl md: "text-6 xl font-bold text-white mb-6&quot; / />",<spanclassName=&quot;bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent&quot; / />
@@ -139,5 +140,5 @@ Email Us</Mail>
 export default OptimizedImagePage;
   )
 }"
-export default OptimizedImagePage;"
+export default OptimizedImagePage;
 }"'"

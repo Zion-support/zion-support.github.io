@@ -1,7 +1,7 @@
 
 'use client';
-import React from 'react";
-import React from &quot;react&quot;"
+import React from 'react;
+import React from &quot;react&quot;
 import { Helmet ;} from &quot;react-helmet-async&quot"
 &quot;use client&quot"
 const ImageOptimizerPage: "React.FC = () => {"
@@ -13,7 +13,8 @@ icon: "BarChart",title: "'Advanced Analytics'",description: "'Comprehensive anal
 }"
   {"'"
 icon: "Target",title: "'Precision Targeting'",description: "'Target specific goals and objectives with precision and accuracy.'",benefits: "['Goal tracking'",'Performance optimization', 'Strategic planning', 'Success metrics"]"
-;}"
+;
+}
   {"'"
 icon: "TrendingUp",title: "'Growth Optimization'",description: "'Optimize your business growth with data-driven strategies.'",benefits: "['Growth strategies'",'Market analysis', 'Competitive insights', 'ROI optimization"]"
   ]"
@@ -29,7 +30,6 @@ return(;
 export default ImageOptimizerPage;
 export default ImageOptimizerPage;
     <div>
-
       <Helmet />"
 "
         <title>ImageOptimizer | Zion Tech Group</title>"
@@ -43,7 +43,6 @@ export default ImageOptimizerPage;
     <div className="text-center mb-16" />,"
     <h1 className="text-5 xl md: text-6 xl font-bold text-white mb-6">ImageOptimizer</h1>"
             <p className="text-xl text-gray-300 max-w-3 xl mx-auto leading-relaxed">Professional ImageOptimizer services tailored to your business needs.</p>p>
-
         </div>;
       </section>;
     </div>;

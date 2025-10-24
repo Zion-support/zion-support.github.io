@@ -1,4 +1,4 @@
-import { Component, ErrorInfo, ReactNode } from 'react";
+import { Component, ErrorInfo, ReactNode } from 'react;
 interface Props {
 "
 "
@@ -10,23 +10,26 @@ interface State {"
 hasError: "boolean"
 ",}
 error?: Error,}
-;}"
+;
+}
 "
 class ErrorBoundary extends Component<Props, State> {"
 public state: "State = {"
 hasErro",r: "false"
-  ",;}"
+  ",;
+}
 public static getDerivedStateFromError(error: "Error): State {"
-return { hasErro",r: "true",error ;};}"
+return { hasErro",r: "true",error ;};
+}
 "
 public componentDidCatch(error: "Error",errorInfo: "ErrorInfo) {",// Log error, in, development, send to error reporting service in production"'"
 if(process.env.NODE_ENV === 'development") {"
       // eslint-disable-next-line no-console"'"
-console.error('ErrorBoundary caught an error: "'",error, errorInfo);}"
+console.error('ErrorBoundary caught an error: "'",error, errorInfo);
+}
     // TODO: "Send error to error reporting service in production"'"
 console.error('ErrorBoundary caught an erro",)"'"
 r: "'",error, errorInfo);}
-
 public render() {"
 if(this.state.hasError) {</Props>"
 return(</Props>,"
@@ -37,12 +40,14 @@ return(</Props>,"
 We"re, sorry, but something unexpected happened. Please try refreshing the page.</p>
             </p>"
             <button)"
-onClick = {() => window.location.reload(),;}"
+onClick = {() => window.location.reload(),;
+}
               className="px-6 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors"></button>
 Refresh Page</button>
             </button>
           </div>,</div>
-      );}"
+      );
+}
 "
 const benefits = ["'
     'Increase efficiency by up to 50%'
@@ -149,7 +154,7 @@ Contact Sales</button>
       <Footer/ />"
     </>"
   )",}
-export default ErrorBoundaryPage;"
+export default ErrorBoundaryPage;
 error?: Error"
 errorInfo?: ErrorInfo}"
 class ErrorBoundary extends Component<Props, State>{constructor(props: "Props) {  "
@@ -165,7 +170,8 @@ componentDidCatch(error: "Error",errorInfo: "ErrorInfo) {// Log error for monito
   )
 ;}
 this.setState({errorerrorInfo;})"
-;}"
+;
+}
 handleReload = () => {windo w.location.reload(),;}"'"
 handleGoHome = () => {windo w.location.href= '/",;}
 render() {if(this.state.hasError) {
@@ -193,16 +199,16 @@ Error Details (Development)</summary>
 )},"
     <divclassName=&quot;flex flex-col sm: "flex-row gap-4 justify-center&quot; / />",<button
 onClick = {"
-this.handleReload;"
-,};"
+this.handleReload;
+,};
 className=&quot;flex items-center justify-center space-x-2 bg-cyan-600 hover: "bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200&quot
  />"
 <RefreshCwclassName=&quot;w-4 h-4&quot; / />"
 <span>Reload Page</span>"
 </button>",<button
 onClick = {"
-this.handleGoHome;"
-,};"
+this.handleGoHome;
+,};
 className=&quot;flex items-center justify-center space-x-2 border border-cyan-600 text-cyan-400 hover: "bg-cyan-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200&quot
  />
 <HomeclassName=&quot;w-4 h-4&quot; / />"
@@ -222,6 +228,6 @@ kleber@ziontechgroup.com</Phone>
   }
 ;}
 ;
-export default ErrorBoundary;"
-export default ErrorBoundary;"
+export default ErrorBoundary;
+export default ErrorBoundary;
 }"'"

@@ -1,19 +1,19 @@
 'use client"
-:all-pages-backup/components/Sidebar.tsx;"'"
-import { Phone, Mail, Brain } from 'lucide-react";"
+:all-pages-backup/components/Sidebar.tsx;
+import { Phone, Mail, Brain } from 'lucide-react;
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react";"
-import { Phone, Target, Mail, Users, Brain } from 'lucide-react";"
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react;
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react;
+import { Phone, Target, Mail, Users, Brain } from 'lucide-react;
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { Phone, Target, Mail, Users, Brain } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
-import { Phone, Target, Mail, Users, Brain } from 'lucide-react";"
+import { Helmet } from 'react-helmet-async;
+import { Phone, Target, Mail, Users, Brain } from 'lucide-react;
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
+import { Phone, Target, Mail, Users, Brain } from 'lucide-react;
 const SidebarPage: "React.FC = () => {
 const features = ["
     {"
@@ -42,7 +42,8 @@ titl",e: "'Precision Targeting'",description: "'Target specific goals and object
   {"
 icon: "TrendingUp"'"
 titl",e: "'Growth Optimization'",description: "'Optimize your business growth with data-driven strategies.'",benefits: "['Growth strategies'",'Market analysis', 'Competitive insights', 'ROI optimization"]
-    ;}"
+    ;
+}
   ]"
 const benefits = ["'
     'Increase efficiency by up to 50%'
@@ -57,17 +58,16 @@ return(:all-pages-backup/components/Sidebar.tsx
   </>;
       <Helmet>;</Helmet>
     </>
-
   </>
       <Helmet>;</Helmet>
         <Head />"
         <title>Sidebar</title>"
         <meta name=&quot;description&quot; content=&quot;Advanced Sidebar solution for modern businesses.&quot; / />"
-<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;"
-      </Head>;"
+<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;
+      </Head>;
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, Sidebar, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />
-      </>;"
+      </>;
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, Sidebar, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." /  />
       </Head>;
@@ -192,12 +192,13 @@ constlocation= useLocation()
 useEffect(() => {
 consthandleResize= () => {
 if(windo, w.innerWidth >=1024) {  "
-setIsOpen(false), , ;}"
+setIsOpen(false), , ;
+}
 ;}"'"
 windo w.addEventListener('resize", handleResize)"'"
 return () => windo w.removeEventListener('resize", handleResize)"
-;}, []);"
-consttoggleSection= (section: "string) => {constnewExpanded= new Set(expandedSections);"
+;}, []);
+consttoggleSection= (section: "string) => {constnewExpanded= new Set(expandedSections);
 if (newExpanded.has(section)) {;) => {"
 return(",$3)
 )}
@@ -297,8 +298,8 @@ return(</Set>
     {/* Mobile Menu Button */}
   </>
 <button  />)"
-onClick = {() =></button> setIsOpen(true),};"
-:all-pages-backup/components/Sidebar.tsx;"
+onClick = {() =></button> setIsOpen(true),};
+:all-pages-backup/components/Sidebar.tsx;
 className=&quot;lg: "hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all&quot"
 aria-label=&quot;Open sidebar&quot"
 className=&quot;lg: hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hove",r: "bg-slate-700/90 transition-all&quot
@@ -311,15 +312,15 @@ aria-label=&quot;Open sidebar&quot
 :all-pages-backup/components/Sidebar.tsx"
 <div"
 className=&quot;fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg: "hidden&quot;",}"
-onClick = {() =>setIsOpen(false),}</div>,;"
+onClick = {() =>setIsOpen(false),}</div>,;
     <divclassName=&quot;fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg: "hidden&quot;",} / />
 onClick = {() =>setIsOpen(false),}</div>
 />
 {)}"
 {/* Sidebar */}</div>"
-<aside className = {`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${ />"'"
-isOpen ? 'translate-x-0' : '-translate-x-full";"
-,} lg: "translate-x-0 lg:static l",</aside>;"
+<aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${ />"'"
+isOpen ? 'translate-x-0' : '-translate-x-full;
+} lg: "translate-x-0 lg:static l",</aside>;
 g: "z-auto`",}>;</aside>,
     <divclassName = &quot;flex flex-col h-full&quot; / />
 {/* Header */,}</div>,
@@ -338,11 +339,11 @@ g: "z-auto`",}>;</aside>,
 </Link>
 :all-pages-backup/components/Sidebar.tsx"
 <button"
-onClick = {() = /> setIsOpen(false),};"
+onClick = {() = /> setIsOpen(false),};
 className=&quot;lg: "hidden text-gray-400 hove",r: "text-white transition-colors&quot"
 aria-label=&quot;Close sidebar&quot"
 <button  />"
-onClick = {() =></button> setIsOpen(false)",};"
+onClick = {() =></button> setIsOpen(false)",};
 className=&quot;lg: "hidden text-gray-400 hove",r: "text-white transition-colors&quot
 aria-label=&quot;Close sidebar&quot
 >
@@ -355,8 +356,9 @@ aria-label=&quot;Close sidebar&quot
 {navigationSections.map((section, sectionIndex) => (}</nav>
 <divkey = {sectionIndex,} className = &quot;space-y-1&quot; / />"
 <button  />"
-onClick = {() =></button> section.key && toggleSection(section.key),};"
-className=&quot;flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover: "text-cyan-300 transition-colors&quot;>"
+onClick = {() =></button> section.key && toggleSection(section.key),};
+className=&quot;flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover: "text-cyan-300 transition-colors&quot;
+>
 <span>{section.title",}</span>
 {section.key && (
 expandedSections.has(section.key) ?
@@ -367,5 +369,5 @@ expandedSections.has(section.key) ?
 {(!section.key || expandedSections.has(section.key)) && (,
     <divclassName=&quot;ml-4 space-y-1&quot; / />
 {section.items.map((item, itemIndex) => (</div>"
-<Linkkey = {itemIndex,} / />;"
+<Linkkey = {itemIndex,} / />;
 }}}}};")'"

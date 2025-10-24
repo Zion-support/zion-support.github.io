@@ -1,19 +1,20 @@
 'use client';
 import React from 'react';
-import { Home, ChevronRight } from 'lucide-react";"
-import { useLocation } from 'react-router-dom";
+import { Home, ChevronRight } from 'lucide-react;
+import { useLocation } from 'react-router-dom;
 interface BreadcrumbItem {
 "
 "
 }"
 name: "string",path: "string",}
   icon?: React.ComponentType<{ className?: string }>"
-;}"
+;
+}
 "
 const Breadcrumb: "React.FC = () => {"
   const location = useLocation()"'"
-if(location.pathname === '/') {",return, null;"
-  }"
+if(location.pathname === '/') {",return, null;
+}
 "'"
 const pathSegments = location.pathname.split('/').filter(segment => segment !== '")"
   const breadcrumbItems: "BreadcrumbItem[] = ["'"
@@ -36,7 +37,7 @@ return(<nav aria-label="Breadcrumb" className="bg-sl ate-800/50 backdrop-blur-sm
 className={`flex items-center space-x-1 transition-colors duration-200 ${"
 index === breadcrumbItems.length - 1"'
                     ? 'text-cyan-400 font-medium'"
-                    : 'text-gray-300 hover: "text-cyan-400'",}`}"
+                    : 'text-gray-300 hover: "text-cyan-400'"}`}"
               ></a>"
                 {item.icon && <item.icon className = "w-4 h-4" />,}</item>
                 <span>{item.name;}</span>
@@ -47,20 +48,19 @@ index === breadcrumbItems.length - 1"'
         </div>
     </nav>
   );
-};"
-:all-pages-backup/components/Breadcrumb.tsx;"
-export default Breadcrumb;"'"
-import Link from 'next/link";"
-import { usePathname } from 'next/navigation";"
-import { ChevronRight, Home } from 'lucide-react";
+};
+:all-pages-backup/components/Breadcrumb.tsx;
+export default Breadcrumb;
+import Link from 'next/link;
+import { usePathname } from 'next/navigation;
+import { ChevronRight, Home } from 'lucide-react;
 export default function Breadcrumb() {"
 "
   const pathname = usePathname()"'"
   const pathnames = pathname.split('/").filter((x) => x)
 if(pathnames.length === 0) {
 return, null;
-  "
-}"
+}
 "
 return(<nav className="bg-gray-800 text-white py-2 px-4" />,"
     <div className="container mx-auto" />"
@@ -89,6 +89,6 @@ return(<li key={name,} className="flex items-center" />"
         </div>
     </nav>;
   )};
-;"
-export default Breadcrumb;"
+;
+export default Breadcrumb;
 }"'"

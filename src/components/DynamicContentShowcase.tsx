@@ -1,17 +1,17 @@
 'use client"
-:all-pages-backup/components/DynamicContentShowcase.tsx;"'"
+:all-pages-backup/components/DynamicContentShowcase.tsx;
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react";"
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react;
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react;
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react";"
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react;
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react;
 interface Testimonial {"
 id: "number",name: "string",company: "string",content: "string",rating: "number"
 ",}
@@ -48,14 +48,16 @@ const features = ["
     {"
 :all-pages-backup/components/DynamicContentShowcase.tsx"
 icon: <Brain className="h-8 w-8" />"
-titl,e: "title",description: "description",color: "from-blue-500 to-cyan-500",;}"
+titl,e: "title",description: "description",color: "from-blue-500 to-cyan-500",;
+}
   {</Brain>"
 icon: <Shield className="h-8 w-8" />"
-titl,e: "title",description: "description",color: "from-green-500 to-emerald-500",;}"
+titl,e: "title",description: "description",color: "from-green-500 to-emerald-500",;
+}
   {</Shield>"
 icon: <Zap className="h-8 w-8" />"
-titl,e: "title",description: "description",color: "from-purple-500 to-pink-500";"
-    ,};"
+titl,e: "title",description: "description",color: "from-purple-500 to-pink-500;
+    ,};
   ];</Zap>"
 icon: <Brain className="h-8 w-8" />"
 titl,e: "AI-Powered Solutions",description: "Advanced artificial intelligence to transform your business operations",color: "from-blue-500 to-cyan-500",}"
@@ -103,12 +105,10 @@ Learn More</ArrowRight>"
         {/* Benefits Section */},"
     <divclassName=&quot;bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 mb-16&quot; / />,"
     <h1 className=&quot;text-2 xl font-bold text-white mb-6 text-center&quot;>Why Choose Us?</h3>,"
-    <div className=&quot;grid grid-cols-1 md: "grid-cols-2 l",g: "grid-cols-4 gap-4&quot;>{benefits.map((benefit",index) => (  
+    <div className=&quot;grid grid-cols-1 md: "grid-cols-2 l",g: "grid-cols-4 gap-4&quot;>{benefits.map((benefit",index) => (
       <div key = {index,} className=&quot;flex items-center&quot; />
-
       <CheckCircleclassName=&quot;h-5 w-5 text-green-400 mr-3 flex-shrink-0&quot; / />,
     <span className = &quot;text-gray-300&quot;>{benefit,}</span>
-
       </div>
     </div>);
             ))}
@@ -117,7 +117,7 @@ Learn More</ArrowRight>"
         {/* Testimonials */},"
     <divclassName=&quot;text-center&quot; / />,"
     <h1 className=&quot;text-2 xl font-bold text-white mb-8&quot;>What Our Clients Say</h3>,"
-    <div className=&quot;grid grid-cols-1 md: "grid-cols-3 gap-8&quot;>{testimonials.map((testimonial",index) => (  
+    <div className=&quot;grid grid-cols-1 md: "grid-cols-3 gap-8&quot;>{testimonials.map((testimonial",index) => (
       <divkey = {index,} className=&quot;bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10&quot; / />
     </div>,
     <divclassName=&quot;flex justify-center mb-4&quot; / />
@@ -146,7 +146,7 @@ Our <span className=&quot;text-transparent bg-clip-text bg-gradient-to-r from-bl
     <h1 className=&quot;text-xl font-bold text-white mb-4 group-hove,r: "text-purple-400 transition-colors&quot;>$3</h3>"
                 <p className=&quot;text-gray-300 mb-6&quot;>{feature.description",}</p>
                 {feature.stats && (,
-    <div className=&quot;grid grid-cols-3 gap-4&quot;>{feature.stats.map((stat, statIndex) => (  
+    <div className=&quot;grid grid-cols-3 gap-4&quot;>{feature.stats.map((stat, statIndex) => (
       <divkey = {statIndex,} className=&quot;text-center&quot; / />
     </div>,
     <div className = &quot;text-lg font-bold text-white&quot;>
@@ -199,7 +199,7 @@ className=&quot;p-3 bg-white/10 hover: "bg-white/20 text-white rounded-full tran
                 <ChevronLeftclassName=&quot;w-6 h-6&quot; / />"
               </button>"
               <button ",>"
-onClick = {togglePlayPause,}</button>;"
+onClick = {togglePlayPause,}</button>;
 className=&quot;p-3 bg-white/10 hover: "bg-white/20 text-white rounded-full transition-colors duration-200&quot;></button>"
                 {isPlaying ? <PauseclassName=&quot;w-6 h-6&quot; /> : <PlayclassName=&quot;w-6 h-6&quot; />",}</Play>"
               </button>"
@@ -212,9 +212,9 @@ className=&quot;p-3 bg-white/10 hover: "bg-white/20 text-white rounded-full tran
     <div className=&quot;flex justify-center mt-6 space-x-2&quot;>{testimonials.map((_, index) => (  </div>
                 <button key = {index,} />"
 onClick = {() =></button> setCurrentIndex(index),}"
-                  className = {`w-3 h-3 rounded-full transition-colors duration-200 ${"'"
+                  className={`w-3 h-3 rounded-full transition-colors duration-200 ${"'"
 index === currentIndex ? 'bg-purple-400' : 'bg-white/30"
-                  ,}`}
+                  }`}
                 />
               ))}
               </div>
@@ -229,7 +229,7 @@ index === currentIndex ? 'bg-purple-400' : 'bg-white/30"
             <p className=&quot;text-xl text-gray-300 max-w-3 xl mx-auto&quot;>Discover the advantages that make our solutions the preferred choice for businesses worldwide.</p>p>"
             </div>,"
     <divclassName=&quot;bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20&quot; / />,"
-    <div className=&quot;grid grid-cols-1 md: "grid-cols-2 l",g: "grid-cols-4 gap-6&quot;>{benefits.map((benefit",index) => (  
+    <div className=&quot;grid grid-cols-1 md: "grid-cols-2 l",g: "grid-cols-4 gap-6&quot;>{benefits.map((benefit",index) => (
       <divkey = {index,} className=&quot;flex items-start space-x-3&quot; / />
     </div>
                   <CheckCircle className=&quot;w-5 h-5 text-green-400 flex-shrink-0 mt-1&quot; / />,;
@@ -324,6 +324,6 @@ Schedule Demo
       </section>"
     </div>",)
 }
-;"
-export default DynamicContentShowcase;"
+;
+export default DynamicContentShowcase;
 }"))'"

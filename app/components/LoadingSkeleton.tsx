@@ -1,9 +1,9 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react";"
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react;
+import Navigation from '../components/Navigation;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react;
 const LoadingSkeletonPage: "React.FC = () => {"
 const features = ["
     {"'"
@@ -27,13 +27,11 @@ const benefits = ["'
   ]
 return(<>
       <div>
-
       <Helmet />"
 "
         <title>Loading Skeleton - Zion Tech Group</title>"
         <meta name="description" content="Advanced LoadingSkeleton solution for modern businesses." / />"
         <meta name="keywords" content="AI, artificial, intelligence, LoadingSkeleton, AI, solutions, intelligent automation" / />
-
       </Helmet>"
     </div>"
       <Navigation/ />,"
@@ -55,10 +53,10 @@ Get Started</button>"
               <button className="border border-emerald-400 text-emerald-400 hover: "bg-emerald-400 hove","
 r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
 Learn More</button>
-
               </button>"
 "
-        </section>,{/* Features Section */;}"
+        </section>,{/* Features Section */;
+}
 <section className="py-20 px-4" />,"
     <div className="max-w-7 xl mx-auto" />,"
     <div className="text-center mb-16" />,"
@@ -67,14 +65,14 @@ Learn More</button>
 Powerful AI-driven features designed to transform your business operations</p>"
               </p>,"
     <divclassName="grid md: "grid-cols-2 l","
-g: grid-cols-4 gap-8" />);"
-            {features.map((feature,index) => (;"
+g: grid-cols-4 gap-8" />);
+            {features.map((feature,index) => (;
                 <divkey = {index,};className = "bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20" />"
                   <feature.icon className="h-12 w-12 text-emerald-400 mb-4" / />,"
     <h1 className = "text-xl font-semibold text-white mb-3">{feature.title,}</h3>"
                   <p className = "text-gray-300 mb-4">{feature.description,}</p>"
-                  <ul className="space-y-2" />;"
-                    {feature.benefits.map((benefit, idx) => (</ul>;"
+                  <ul className="space-y-2" />;
+                    {feature.benefits.map((benefit, idx) => (</ul>;
                       <li key = {idx,};className = "flex items-center text-sm text-gray-300" />"
                         <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
                         {benefit,}</CheckCircle>
@@ -94,12 +92,12 @@ Experience the benefits of cutting-edge AI technology</p>"
               </p>"
             </div>,"
     <divclassName="grid md: "grid-cols-2 l","
-g: grid-cols-3 gap-8" / />;"
-            {benefits.map((benefit,index) => (;"
+g: grid-cols-3 gap-8" / />;
+            {benefits.map((benefit,index) => (;
       <divkey = {index,};className = "flex items-start space-x-4" / />"
-    </div>;"
-                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />;"
-                  <p className="text-gray-300 text-lg">{benefit,}</p>;"
+    </div>;
+                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />;
+                  <p className="text-gray-300 text-lg">{benefit,}</p>;
 "
       <divkey = index className="flex items-start space-x-4" / />"
     </div><CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /><p className="text-gray-300 text-lg">benefit</p>
@@ -131,6 +129,6 @@ Contact Sales</button>
     </>
   );
 ,};
-export default LoadingSkeletonPage;"
+export default LoadingSkeletonPage;
 }}}"
 ")))'"

@@ -1,17 +1,17 @@
 'use client"
-:all-pages-backup/components/ServiceCard.tsx;"'"
+:all-pages-backup/components/ServiceCard.tsx;
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react";"
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react;
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react;
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react";"
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react;
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react;
 const ServiceCardPage: "React.FC = () => {
 const features = ["
     {"
@@ -40,7 +40,8 @@ titl",e: "'Precision Targeting'",description: "'Target specific goals and object
   {"
 icon: "TrendingUp"'"
 titl",e: "'Growth Optimization'",description: "'Optimize your business growth with data-driven strategies.'",benefits: "['Growth strategies'",'Market analysis', 'Competitive insights', 'ROI optimization"]
-    ;}"
+    ;
+}
   ]"
 const benefits = ["'
     'Increase efficiency by up to 50%'
@@ -55,17 +56,16 @@ return(:all-pages-backup/components/ServiceCard.tsx
   </>;
       <Helmet>;</Helmet>
     </>
-
   </>
       <Helmet>;</Helmet>
         <Head />"
         <title>ServiceCard</title>"
         <meta name=&quot;description&quot; content=&quot;Advanced ServiceCard solution for modern businesses.&quot; / />"
-<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;"
-      </Head>;"
+<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;
+      </Head>;
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, ServiceCard, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />
-      </>;"
+      </>;
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, ServiceCard, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." /  />
       </Head>;
@@ -165,10 +165,10 @@ Contact Sales</button>
 export default ServiceCardPage;
   )
 }
-export default ServiceCardPage;"
+export default ServiceCardPage;
 price?: string"
 popular?: boolean"
-onSelect?: () =>void class Nam e?: string;}constServiceCard: "React.FC<ServiceCardProp s>= ({title
+onSelect?: () =>void class Nam e?: string;}constServiceCard: React.FC<ServiceCardProp s> = ({title
 description
 features
 price
@@ -179,7 +179,7 @@ onSelect"'
 className = ''"
 ",;}) => {</ServiceCardProp>"
 return(</ServiceCardProp>,"
-    <divclassName={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: "bg-white/10 transition-all duration-300 group ${className",;} ${ / />"'"
+    <divclassName={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: "bg-white/10 transition-all duration-300 group ${className"} ${ / />"'"
 popular ? 'border-purple-400 shadow-2 xl shadow-purple-500/25' : '"  </div>;
 }`}>{popular && (  </div>,;
     <divclassName=&quot;flex items-center gap-2 mb-4&quot; / />,
@@ -190,7 +190,7 @@ popular ? 'border-purple-400 shadow-2 xl shadow-purple-500/25' : '"  </div>;
     <divclassName=&quot;mb-4&quot; / />,"
     <h1 className=&quot;text-xl font-bold text-white mb-2 group-hover: "text-purple-400 transition-colors&quot;>$3</h3>",<p className = &quot;text-gray-300 text-sm&quot;>{description,}</p>
   </div>,
-    <div className=&quot;space-y-2 mb-6&quot;>{features.map((feature, index) => (  
+    <div className=&quot;space-y-2 mb-6&quot;>{features.map((feature, index) => (
       <divkey = {index,} className=&quot;flex items-center gap-2&quot; / />
     </div>
 <CheckCircle className=&quot;w-4 h-4 text-green-400 flex-shrink-0&quot; / />,;
@@ -214,5 +214,5 @@ Get Started"
   </div>
 )
 {}"
-export default ServiceCard;"
+export default ServiceCard;
 }"'"

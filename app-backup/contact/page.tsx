@@ -1,6 +1,6 @@
-import, React, { useState } from "react";"
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react";"
-'use client';"
+import React, { useState } from "react;
+import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react;
+'use client';
     "name": ""
     "email": ""
     "company": ""
@@ -12,7 +12,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react";"
     "service": ""
         "message": ""
     "title": "Email Us"
-      "details": "hello@ziontechgroup.com";"
+      "details": "hello@ziontechgroup.com;
     "description": "Send us an email and we&apos;ll respond within 24 hours"
     "title": "Call Us"
       "details": "+1 (555) 123-4567"
@@ -96,5 +96,5 @@ className="w-full bg-gradient-to-r from-emerald-600 to-blue-600 text-white px-8 
     <h1 className="text-lg font-semibold text-gray-900 mb-2"
               <p className="text-gray-600","
     <div className="bg-white p-6 rounded-xl shadow-lg","
-    <h1 className="text-lg font-semibold text-gray-900 mb-2";"
-              <p className="text-gray-600";"'"
+    <h1 className="text-lg font-semibold text-gray-900 mb-2;
+              <p className="text-gray-600";'"

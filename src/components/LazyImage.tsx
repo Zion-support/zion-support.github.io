@@ -1,19 +1,19 @@
 'use client"
-:all-pages-backup/components/LazyImage.tsx;"'"
-import Footer from './Footer";"
-import Navigation from './Navigation";"
+:all-pages-backup/components/LazyImage.tsx;
+import Footer from './Footer;
+import Navigation from './Navigation;
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Brain } from 'lucide-react";"
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react";"
-import { Phone, Mail, ArrowRight } from 'lucide-react";"
-import Footer from './Footer";"
-import Navigation from './Navigation";"
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Brain } from 'lucide-react;
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react;
+import { Phone, Mail, ArrowRight } from 'lucide-react;
+import Footer from './Footer;
+import Navigation from './Navigation;
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { Brain, ArrowRight, Mail } from 'lucide-react";"
-import { Brain, ArrowRight, Mail } from 'lucide-react";"
-import { Brain, ArrowRight, Mail } from 'lucide-react";
+import { Helmet } from 'react-helmet-async;
+import { Brain, ArrowRight, Mail } from 'lucide-react;
+import { Brain, ArrowRight, Mail } from 'lucide-react;
+import { Brain, ArrowRight, Mail } from 'lucide-react;
 {    }"
   ]"
 const benefits = ["'
@@ -21,23 +21,22 @@ const benefits = ["'
     'Reduce costs by 30% with automation'
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases'"
-    'Gain competitive advantage with advanced technology";"
-  ];"'"
-const LazyImage: "React.FC<LazyImageProps> = ({ className = '' ",;}) => {;</LazyImageProps>
+    'Gain competitive advantage with advanced technology;
+  ];
+const LazyImage: React.FC<LazyImageProps> = ({ className = '' ",;}) => {;</LazyImageProps>
 return(</LazyImageProps>
     <>
-
   </>
       <Helmet>;</Helmet>
 :all-pages-backup/components/LazyImage.tsx</Helmet>
         <Head />"
         <title>LazyImage</title>"
         <meta name=&quot;description&quot; content=&quot;Advanced LazyImage solution for modern businesses.&quot; / />"
-<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;"
-      </Head>;"
+<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;
+      </Head>;
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, LazyImage, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />
-      </>;"
+      </>;
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, LazyImage, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." /  />
       </Head>;
@@ -143,7 +142,7 @@ Key Benefits
             <pclassName=&quot;text-xl text-gray-300 max-w-3 xl mx-auto&quot; / />"
 Experience the power of our lazyimage solutions for your business.</p>"
             </p>"
-            </div>",<div className=&quot;grid grid-cols-1, m,d: "grid-cols-2 gap-6&quot;>{benefits.map((benefit",index) => (  
+            </div>",<div className=&quot;grid grid-cols-1, m,d: "grid-cols-2 gap-6&quot;>{benefits.map((benefit",index) => (
       <divkey = {index,} className = &quot;flex items-start space-x-3&quot; / />
     </div>
                 <CheckCircle className=&quot;h-6 w-6 text-purple-400 mt-1 flex-shrink-0&quot; /  />;
@@ -175,5 +174,5 @@ export default LazyImagePage;
       </div>
   )
 }"
-export default LazyImagePage;"
+export default LazyImagePage;
 }"'"

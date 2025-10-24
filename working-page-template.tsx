@@ -1,9 +1,7 @@
 'use client';
-"'"
 import React from 'react';
-import Head from 'next/head';"
-import Link from 'next/link";
-
+import Head from 'next/head';
+import Link from 'next/link;
 const WorkingPage = (
   return(<>
       <Head>
@@ -30,6 +28,6 @@ $3"
       </div>;
     </>;)
   );
-,};"
+,};
 "
-export default WorkingPage;"'"
+export default WorkingPage;

@@ -1,15 +1,13 @@
 'use client';
 import React from 'react';
-import Link from 'next/link";
+import Link from 'next/link;
 export default function HomePage() {
 return(<div>
-
       <Helmet />"
 "
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>"
         <meta name = "description" content="Leading provider of advanced AI and, IT, solutions, cybersecurity, cloud, infrastructure, and digital transformation services for businesses worldwide." / />"
         <meta name="keywords" content="AI, solutions, cybersecurity, cloud, computing, digital, transformation, IT, services, micro, SaaS, 5 G solutions" / />
-
       </Helmet>
     </div>"
       {/* Hero Section */"
@@ -34,7 +32,6 @@ cloud, infrastructure, and digital transformation services to drive innovation a
     <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">"
       <Linkhref="/contact"
 className="group bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2" />
-
 Get Started Today"
       </Link>"
     </div>"
@@ -145,13 +142,14 @@ Learn More <ArrowRightIcon className="w-4 h-4" />
                 </div>
               </div>"
         </div>,</section>"
-      {/* About Section */;}"
+      {/* About Section */;
+}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900" />,"
     <div className="container mx-auto px-4" />,"
     <div className="max-w-4 xl mx-auto text-center" />,"
     <h1 className="text-4 xl md: text-5 xl font-bold text-white mb-8" /></h2>"
 Why Choose Zion Tech Group?</h2>"
-            </h2>;"
+            </h2>;
             <p className="text-xl text-gray-300 mb-12 leading-relaxed" />;
 With over 4 years of experience in cutting-edge, technology, solutions,we&apos;ve helped businesses across various industries transform their operations </p>"
 and achieve unprecedented growth.</p>"
@@ -174,7 +172,6 @@ className="inline-flex items-center gap-2 bg-white text-slate-900 px-8 py-4 roun
 r: bg-gray-100 transition-colors" />"
 "
 Learn More About Us <ArrowRightIcon className="w-5 h-5" />
-
       </Link>
     </div>
               </div>"
@@ -185,8 +182,8 @@ Learn More About Us <ArrowRightIcon className="w-5 h-5" />
     <div className="max-w-4 xl mx-auto text-center" />,"
     <h1 className="text-4 xl md: text-5 xl font-bold text-white mb-8" /></h2>"
 Ready to Transform Your Business?</h2>"
-            </h2>;"
-            <p className="text-xl text-gray-300 mb-12" />;"
+            </h2>;
+            <p className="text-xl text-gray-300 mb-12" />;
 Let&apos;s discuss how our technology solutions can drive your business forward</p>"
             </p>,<divclassName = "grid, m,"
 d: grid-cols-3 gap-8 mb-12" / />,<div className="flex items-center justify-center gap-4 text-gray-300" />"
@@ -205,7 +202,6 @@ d: grid-cols-3 gap-8 mb-12" / />,<div className="flex items-center justify-cente
     <div className="flex flex-col sm: flex-row gap-4 justify-center" />"
       <Linkhref="/contact"
 className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300" />
-
 Get In Touch
       </Link>"
     </div>"
@@ -219,6 +215,7 @@ Schedule Demo</Link>
               </div>
             </div>
       </section>;
-</div>;)"
+</div>;
+)
   );
 ,}"

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async";
+import { Helmet } from 'react-helmet-async;
 export default function AICybersecuritySuitePage() {
 "
 const features = ["
@@ -15,7 +15,6 @@ icon: "⚡",title: "Automated Response",description: "Automated incident respons
     }
   ]
 return(<>
-
   </>"
       <Helmet />"
         <title>AI Cybersecurity Suite - Zion Tech Group</title>"
@@ -77,7 +76,8 @@ Protect your organization with cutting-edge AI-powered cybersecurity solutions.<
         </div>
       </section>"
 "
-      {/* CTA Section */;}"
+      {/* CTA Section */;
+}
       <section className="py-20 bg-gradient-to-r from-red-900 to-purple-900 text-white" />,"
     <div className="max-w-7 xl mx-auto px-4 text-center" />,"
     <h1 className="text-4 xl font-bold mb-6">Ready to Secure Your Organization?</h2>"
@@ -95,5 +95,5 @@ View Pricing</button>
         </div>
       </section>
     </>"
-  );"
-,};"'"
+  );
+,};

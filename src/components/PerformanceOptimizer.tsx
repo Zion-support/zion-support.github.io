@@ -1,28 +1,30 @@
 'use client';
-import Navigation from './Navigation";"
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight } from 'lucide-react";"
-import, React, { useEffect, useState, useCallback } from "react";"
-import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react";"
-import { CheckCircle } from 'lucide-react";"
-import { AlertTriangle } from 'lucide-react";
+import Navigation from './Navigation;
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight } from 'lucide-react;
+import React, { useEffect, useState, useCallback } from "react;
+import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react;
+import { CheckCircle } from 'lucide-react;
+import { AlertTriangle } from 'lucide-react;
 interface PerformanceOptimizerProps {
 :all-pages-backup/components/PerformanceOptimizer.tsx
 className?: string
 }
-;}"
-;}"
+;
+}
+;
+}
 "
-const PerformanceOptimizer: "React.FC<PerformanceOptimizerProps> = ({"
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({"
   className?: string"
 ",;}</PerformanceOptimizerProps>"
 </PerformanceOptimizerProps>"
-const PerformanceOptimizer: "React.FC<PerformanceOptimizerProps> = ({
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 enableImageOptimization = true
 enableLazyLoading = true"
 enablePreloading = true"
-enableCodeSplitting = true;"
-",}) => {</PerformanceOptimizerProps>;"
+enableCodeSplitting = true;
+",}) => {</PerformanceOptimizerProps>;
 const [isOptimizing, setIsOptimizing,] = useState(false);</PerformanceOptimizerProps>"
 const [optimizationStatus, setOptimizationStatus,] = useState<{"
     images: "boolean",lazyLoading: "boolean",preloading: "boolean",codeSplitting: "boolean",}>({"
@@ -55,7 +57,7 @@ const enableLazyLoadingOptimization = useCallback(() => {
     if (!enableLazyLoading) return // Intersection Observer for lazyloadingconstobserver= new IntersectionObserver()
       (entries) => {
 entries.forEach((entry) => {
-if(entry.isIntersecting) {  
+if(entry.isIntersecting) {
 const img = entry.target as HTMLImageElement"
 if(img.dataset.src) {"
 img.src = img.dataset.src"'"
@@ -98,14 +100,14 @@ const module = await import(`../components/${componentName,}.tsx`)"
         // // console.warn(`Failed to load component: "${componentName",;}`, error)
         return, null;
       }
-      document.head.appendChild(link);"
+      document.head.appendChild(link);
     })"
 setOptimizationStatus(prev => ({ ...prev, preloading: "true "}));
-  }, [enablePreloading]);"
+  }, [enablePreloading]);
 const enableCodeSplittingOptimization = useCallback(() => {"
     if (!enableCodeSplitting) return // Dynamic imports for codesplittingconstloadComponent= async (componentName: "string) => {"
   ",try {;
-const module = await import(`../components/${componentName}.tsx`);"
+const module = await import(`../components/${componentName}.tsx`);
         return module.default } catch(error) {";`"
         // // console.warn(`Failed to load component: "${componentName"}`, error);
         return, null}
@@ -122,7 +124,8 @@ optimizeImages()
 enableLazyLoadingOptimization()
 enablePreloadingOptimization()
 enableCodeSplittingOptimization()"
-      ]),, ;}"
+      ]),, ;
+}
     ;} catch(error) {"'"
       // // console.error('Optimization failed: "'",error)
     ;} finally {  setIsOptimizing(false), , ;}
@@ -133,18 +136,17 @@ runOptimizations()
   ;}, [runOptimizations,])
 const allOptimizationsComplete = Object.values(optimizationStatus).every(Boolean)
 return(<>
-
   </>
       <Helmet />
 :all-pages-backup/components/PerformanceOptimizer.tsx</Helmet>
-        <Head />;"
-        <title>PerformanceOptimizer</title>;"
+        <Head />;
+        <title>PerformanceOptimizer</title>;
         <meta name=&quot;description&quot; content=&quot;Advanced PerformanceOptimizer solution for modern businesses.&quot; / />"
-<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;"
-      </Head>;"
+<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;
+      </Head>;
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, PerformanceOptimizer, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />
-      </>;"
+      </>;
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, PerformanceOptimizer, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." /  />
       </Head>;
@@ -246,6 +248,6 @@ export default PerformanceOptimizer;
 :all-pages-backup/components/PerformanceOptimizer.tsx;
 {}
 export default PerformanceOptimizerPage;
-}"
-export default PerformanceOptimizerPage;"
+}
+export default PerformanceOptimizerPage;
 }"'"

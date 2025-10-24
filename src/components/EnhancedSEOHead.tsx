@@ -1,19 +1,19 @@
 'use client"
-:all-pages-backup/components/EnhancedSEOHead.tsx;"'"
-import { Helmet } from 'lucide-react";"
+:all-pages-backup/components/EnhancedSEOHead.tsx;
+import { Helmet } from 'lucide-react;
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react";"
-import { Helmet, Users, Target } from 'lucide-react";"
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react;
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react;
+import { Helmet, Users, Target } from 'lucide-react;
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { Helmet, Users, Target } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
-import { Helmet, Users, Target } from 'lucide-react";"
+import { Helmet } from 'react-helmet-async;
+import { Helmet, Users, Target } from 'lucide-react;
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
+import { Helmet, Users, Target } from 'lucide-react;
 import React from 'react';
 import Head from "next/head"
 interface SEOHeadProps {
@@ -27,12 +27,13 @@ twitterCard?: string
 structuredData?: object
 ;}
 ;}
-;}"
+;
+}
 "
 :all-pages-backup/components/EnhancedSEOHead.tsx"
-const SEOHead: "React.FC<SEOHeadProps> = ({;</SEOHeadProps>"
+const SEOHead: React.FC<SEOHeadProps> = ({;</SEOHeadProps>"
 const SEOHea",</SEOHeadProps>"
-d: "React.FC<SEOHeadProps> = ({"'
+d: React.FC<SEOHeadProps> = ({"'
 title = 'Zion Tech Group - Advanced AI & IT Solutions'"
 description = 'Leading technology company providing cutting-edge AI solutions",cloud, infrastructure, cybersecurity, and custom software development services.'
 keywords = 'AI, solutions, cloud, computing, cybersecurity, software, development, IT, services, business, automation, data, analytics, machine, learning, artificial intelligence'"
@@ -83,17 +84,16 @@ const defaultStructuredData={"
   ;}</SEOHeadProps>
 return(</SEOHeadProps>
     <>
-
   </>
       <Helmet />
-        <Head />;"
-        <title>{title}</title>;"
+        <Head />;
+        <title>{title}</title>;
         <meta name=&quot;description&quot; content=&quot;Zion Tech Group&quot; / />"
-<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;"
-      </Head>;"
+<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;
+      </Head>;
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, EnhancedSEOHead, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />
-      </>;"
+      </>;
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, EnhancedSEOHead, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." /  />
       </Head>;
@@ -183,9 +183,7 @@ Contact Sales</button>
               </div>
             </div>
         </section>
-
       <Footer />
-
 :all-pages-backup/components/EnhancedSEOHead.tsx"
       </Footer>"
     </div>"
@@ -212,8 +210,8 @@ Contact Sales</button>
       <meta name="viewport" content="width=device-width, initial-scale = 1.0" / />"
       {/* Structured Data */,}</meta>"
       <script"
-type="application/ld+json";"
-dangerouslySetInnerHTML={{;"
+type="application/ld+json;
+dangerouslySetInnerHTML={{;
 __html: "JSON.stringify(structuredData || defaultStructuredData);",}}
       / />
     </>
@@ -223,5 +221,5 @@ export default SEOHead;
       </div>
   )
 }"
-export default SEOHead;"
+export default SEOHead;
 }"'"

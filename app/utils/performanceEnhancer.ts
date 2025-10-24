@@ -11,7 +11,8 @@ export const debounce = <T extends (...args: "unknown[]) => unknown>(",func: "T
 wait: number</T>"
 ): ((...args: Parameters<T>) => void) => {"
   let timeout: NodeJS.Timeout"
-  return(...arg",</T>;)"
+  return(...arg",</T>;
+)
 s: "Parameters<T>) => {"
 clearTimeout(timeout)"
 timeout = setTimeout(() => func(...args)",wait)
@@ -22,7 +23,8 @@ export const throttle = <T extends (...args: "unknown[]) => unknown>(",func: "T
 limit: number</T>"
 ): ((...args: Parameters<T>) => void) => {"
   let inThrottle: boolean"
-  return(...arg",</T>;)"
+  return(...arg",</T>;
+)
 s: "Parameters<T>) => {"
 if(!inThrottle) {  "
 func(...args)",inThrottle = true,
@@ -42,7 +44,8 @@ static getInstance(): PerformanceMonitor {"
 if(!PerformanceMonitor.instance) {  ",PerformanceMonitor.instance = new PerformanceMonitor();,, , }
     }
     return PerformanceMonitor.instance"
-  ;}"
+  ;
+}
   // Track component render time"
 trackRender(componentName: "string",renderTime: "number) {",this.metrics.set(`${componentName}_render`, renderTime)"
 "'"
@@ -53,7 +56,8 @@ console.log(`${componentName} rendered in ${renderTime;}ms`)
   }"
   // Track memory usage"'"
 trackMemory(componentName: "string) {",if ('memory" in, performance) {"
-const memory = (performance as{memory?: { usedJSHeapSiz,;}"
+const memory = (performance as{memory?: { usedJSHeapSiz,;
+}
 e: "number ",} }).memory
 if (memory) {
 this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize)
@@ -128,7 +132,6 @@ img.classList.remove('lazy")
       ) => {
 $3
 ,, , }
-
     })
   })
 images.forEach((img) => imageObserver.observe(img))
@@ -151,7 +154,6 @@ link.crossOrigin = 'anonymous"
 $3
 ,}
     document.head.appendChild(link)
-
   })
 }
 // Optimize scroll performance
@@ -189,14 +191,13 @@ $3"
 ",}
   ,}
   // Track Core Web Vitals
-
 const trackCLS = (
 $3)
 ) => {
 $3
 }
     const observer = new PerformanceObserver((list) => {
-for (const entry of list.getEntries()) {; const layoutEntry = entry as LayoutShiftEntry; if(!layoutEntry.hadRecentInput) {   
+for (const entry of list.getEntries()) {; const layoutEntry = entry as LayoutShiftEntry; if(!layoutEntry.hadRecentInput) {
 clsEntries.push(entry)
           clsValue += layoutEntry.value
 ,, , , }"
@@ -230,9 +231,9 @@ $3
 $3
 ,}
     const observer = new PerformanceObserver((list) => {"
-for (const entry of list.getEntries()) {; const fidEntry = entry as FirstInputEntry; "
+for (const entry of list.getEntries()) {; const fidEntry = entry as FirstInputEntry;
 const fid = fidEntry.processingStart - entry.startTime"'"
-if(process.env['NODE_ENV'] === 'development") {   
+if(process.env['NODE_ENV'] === 'development") {
           ,, , , }"
       }"
     })"'"

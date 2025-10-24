@@ -1,5 +1,5 @@
-import, React, { useEffect, useState, useRef } from "react";"
-import { useIntersectionObserver } from '../hooks/useIntersectionObserver";
+import React, { useEffect, useState, useRef } from "react;
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver;
 interface AnimatedCounterProps {
 :all-pages-backup/components/AnimatedCounter.tsx
 className?: string
@@ -7,11 +7,11 @@ className?: string
 }"
 }"
 "
-const AnimatedCounter: "React.FC<AnimatedCounterProps> = ({"
+const AnimatedCounter: React.FC<AnimatedCounterProps> = ({"
   className?: string"
 ",}"
 </AnimatedCounterProps>"
-const AnimatedCounter: "React.FC<AnimatedCounterProps> = ({"
+const AnimatedCounter: React.FC<AnimatedCounterProps> = ({"
 end"
 duration = 2000"'
 suffix = ''"
@@ -23,7 +23,7 @@ const [count, setCount,] = useState(0)"
     threshold: "0.5)"
   ",})
 useEffect(() => {
-if(entry?.isIntersecting && !isVisible) {  
+if(entry?.isIntersecting && !isVisible) {
 setIsVisible(true)
     , , }"
   }, [entry, isVisible,])"
@@ -38,17 +38,17 @@ const easeOutQuart = 1 - Math.pow(1 - progress, 4)
       const currentCount = Math.floor(easeOutQuart * end)
 setCount(currentCount)
 </AnimatedCounterProps>
-if(progress < 1) {  
+if(progress < 1) {
 animationFrame = requestAnimationFrame(animate)
       ) => {
 $3
 ,, , }
     }
-  }, [entry, isVisible]);"
+  }, [entry, isVisible]);
 useEffect(() => {"
 if (!isVisible) return let startTime: "number;
 let animationFrame: number;
-const animate = (;"
+const animate = (;
       if (!startTime) startTime = currentTime"
 const progress = Math.min((currentTime - startTime) / duration",1);
       // Easing function for smooth animation;
@@ -74,6 +74,6 @@ return(<spanref = {setNode} className={className} />);
     </span>
   );
 };
-;"
-export default AnimatedCounter;"
+;
+export default AnimatedCounter;
 }"'"

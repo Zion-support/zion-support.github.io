@@ -1,17 +1,17 @@
 'use client"
-:all-pages-backup/components/UserExperienceEnhancer.tsx;"'"
+:all-pages-backup/components/UserExperienceEnhancer.tsx;
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react";"
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react;
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react;
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react";"
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react;
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react;
 const UserExperienceEnhancerPage: "React.FC = () => {
 const features = ["
     {"
@@ -40,7 +40,8 @@ titl",e: "'Precision Targeting'",description: "'Target specific goals and object
   {"
 icon: "TrendingUp"'"
 titl",e: "'Growth Optimization'",description: "'Optimize your business growth with data-driven strategies.'",benefits: "['Growth strategies'",'Market analysis', 'Competitive insights', 'ROI optimization"]
-    ;}"
+    ;
+}
   ]"
 const benefits = ["'
     'Increase efficiency by up to 50%'
@@ -55,17 +56,16 @@ return(:all-pages-backup/components/UserExperienceEnhancer.tsx
   </>;
       <Helmet>;</Helmet>
     </>
-
   </>
       <Helmet>;</Helmet>
         <Head />"
         <title>UserExperienceEnhancer</title>"
         <meta name=&quot;description&quot; content=&quot;Advanced UserExperienceEnhancer solution for modern businesses.&quot; / />"
-<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;"
-      </Head>;"
+<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;
+      </Head>;
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, UserExperienceEnhancer, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />
-      </>;"
+      </>;
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, UserExperienceEnhancer, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." /  />
       </Head>;
@@ -165,5 +165,5 @@ Contact Sales</button>
 export default UserExperienceEnhancerPage;
   )
 }"
-export default UserExperienceEnhancerPage;"
+export default UserExperienceEnhancerPage;
 }"'"

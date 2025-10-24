@@ -1,7 +1,7 @@
 'use client';
 'use client';
 import React from "react"
-:all-pages-backup/components/LoadingSpinner.tsx";
+:all-pages-backup/components/LoadingSpinner.tsx;
 export default function LoadingSpinner() {"
 "
 return(<>,"
@@ -10,19 +10,19 @@ return(<>,"
       </>)
   )
 "
-,;};"
-};"'"
+,;};
+};
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react";"
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react";"
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react;
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react;
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react;
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react;
 const LoadingSpinnerPage: "React.FC = () => {
 const features = ["
     {"
@@ -51,7 +51,8 @@ titl",e: "'Precision Targeting'",description: "'Target specific goals and object
   {"
 icon: "TrendingUp"'"
 titl",e: "'Growth Optimization'",description: "'Optimize your business growth with data-driven strategies.'",benefits: "['Growth strategies'",'Market analysis', 'Competitive insights', 'ROI optimization"]
-    ;}"
+    ;
+}
   ]"
 const benefits = ["'
     'Increase efficiency by up to 50%'
@@ -71,11 +72,11 @@ return(:all-pages-backup/components/LoadingSpinner.tsx
         <Head />"
         <title>LoadingSpinner</title>"
         <meta name=&quot;description&quot; content=&quot;Advanced LoadingSpinner solution for modern businesses.&quot; / />"
-<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;"
-      </Head>;"
+<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;
+      </Head>;
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, LoadingSpinner, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />
-      </>;"
+      </>;
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, LoadingSpinner, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." /  />
       </Head>;
@@ -172,13 +173,13 @@ Contact Sales</button>
       </>"
 :all-pages-backup/components/LoadingSpinner.tsx"
   )",}"
-export default LoadingSpinnerPage;"'"
+export default LoadingSpinnerPage;
 color?: 'primary' | 'secondary' | 'white"
 {text?: string}"'"
-constLoadingSpinner: "React.FC<LoadingSpinnerProp s>= ({size = 'md'",color = 'primary"
+constLoadingSpinner: React.FC<LoadingSpinnerProp s> = ({size = 'md'",color = 'primary"
 text,}) => {constsizeClasses={"'"
 sm: "sm",md: "md",lg: "'w-12 h-1 2'",}"
-constcolorClasses={primary: "primary",secondary: "secondary",</LoadingSpinnerProp>;"'"
+constcolorClasses={primary: "primary",secondary: "secondary",</LoadingSpinnerProp>;
 white: "'text-white'",}</LoadingSpinnerProp>;
 return(<divclassName=&quot;flex flex-colitems-centerjustify-centerspace-y-2&quot; role=&quot;status&quot;aria-label=&quot;Loading&quot;>
       <divclassName = {`animate-spin rounded-full border-2 border-gray-300 border-t-transparent${sizeClasses[size,]}${colorClasses[color,]}`} / />)
@@ -188,19 +189,18 @@ return(<divclassName=&quot;flex flex-colitems-centerjustify-centerspace-y-2&quot
 }"
 const colorClasses={"
 "'"
-primary: "primary",secondary: "secondary",white: "'text-white'",);"
-};"
-export default LoadingSpinnerPage;"'"
+primary: "primary",secondary: "secondary",white: "'text-white'",);
+};
+export default LoadingSpinnerPage;
 color?: 'primary' | 'secondary' | 'white"
 text?: string}"'"
-constLoadingSpinner: "React.FC<LoadingSpinnerProp s>= ({size = 'md'",color = 'primary"
+constLoadingSpinner: React.FC<LoadingSpinnerProp s> = ({size = 'md'",color = 'primary"
 text,}) => {constsizeClasses={"'"
 sm: "'w-4 h-4'",md: "'w-8 h-8'",lg: "'w-12 h-1 2'",}"'"
 constcolorClasses={primary: "'text-indigo-60 0'"
-secondar",y: "'text-gray-60 0'",</LoadingSpinnerProp>;"'"
+secondar",y: "'text-gray-60 0'",</LoadingSpinnerProp>;
 white: "'text-white'",}</LoadingSpinnerProp>;
 return(<divclassName=&quot;flex flex-colitems-centerjustify-centerspace-y-2&quot; role=&quot;status&quot;aria-label=&quot;Loading&quot;>
-
       <divclassName = {`animate-spin rounded-full border-2 border-gray-300 border-t-transparent${sizeClasses[size,]}${colorClasses[color,]}`} / />)
     </div>{text &&(< className={`text-sm${colorClasses[color,]}animate-pulse`}></ className={`text-sm${colorClasses[color,]}animate-pulse`}>{text}</p>)}</di>)"
 }"

@@ -1,12 +1,11 @@
 'use client'
 import React from 'react'
-import, React, { useState, useCallback } from 'react'
+import React, { useState, useCallback } from 'react'
 interface ImageProps {
 }
 src: "string",alt: "string"}
-interface ImageProps {
-}"
-}"
+interface ImageProps  {
+}
 src: "string",alt: "string
 width?: number
 height?: number
@@ -31,10 +30,10 @@ fill?: boolean"
 sizes?: string"
 style?: React.CSSProperties",onLoad?: () => void"
 onError?: () => void}"
-export const Image: "React.FC<ImageProps>= ({"}</>
-export const Image: "React.FC<ImageProps> = ({"}"
+export const Image: React.FC<ImageProps> = ({"}</>
+export const Image: React.FC<ImageProps> = ({"}"
 src</>
-export const Image: "React.FC<ImageProps> = ({
+export const Image: React.FC<ImageProps> = ({
 src
 alt
 width
@@ -81,7 +80,7 @@ interface ImageProps {"
 "
 /* TODO: "Fix JSX expression */"})"
 export, const)"
-Image: "React.FC<ImageProps />= ({/* TOD",)"
+Image: React.FC<ImageProps /> = ({/* TOD",)"
 O: "Fix JSX expression */"})"
 }) => {/* TODO: "Fix JSX expression */"}"
 }, [onLoad])"

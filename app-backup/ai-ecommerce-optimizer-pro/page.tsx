@@ -1,6 +1,6 @@
 import React from 'react';
-import Link from 'next/link";"
-import { ArrowRight, CheckCircle, Zap, Shield, BarChart3, Users, Send, Target, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react";"
+import Link from 'next/link;
+import { ArrowRight, CheckCircle, Zap, Shield, BarChart3, Users, Send, Target, Globe, DollarSign, Clock, Star, Activity, Lock, FileText, CreditCard, Database, Building2, Sparkles, PieChart } from 'lucide-react;
 'use client';'"
     "title": 'AI-Powered Optimization'"
       "description": 'Advanced machine learning algorithms to optimize your e-commerce performance.'"

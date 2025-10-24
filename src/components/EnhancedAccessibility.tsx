@@ -1,9 +1,9 @@
 'use client';
-import { useEffect } from 'react";"
-const EnhancedAccessibility: "React.FC<{ childre",n: "React.ReactNode ",}> = ({ children ;}) => {"
+import { useEffect } from 'react;
+const EnhancedAccessibility: React.FC<{ childre",n: "React.ReactNode ",}> = ({ children ;}) => {"
   useEffect(() => {"
     // Add high contrast mode support: "all-pages-backup/components/EnhancedAccessibility.tsx"
-const handleContrastChange = (;",if(e.matches) {;"'"
+const handleContrastChange = (;",if(e.matches) {;
 document.documentElement.classList.add('high-contrast")) => {"
 $3"
 } else { "'"
@@ -15,23 +15,22 @@ const handleContrastChange = ("
       ,) => {"
 $3"'"
 } else { document.documentElement.classList.remove('high-contrast"), }"
-      ;};"
-    };"'"
+      ;};
+    };
     const mediaQuery = window.matchMedia('(prefers-contrast: "high)');",mediaQuery.addEventListener('change", handleContrastChange)
     // Call with the MediaQueryList directly
 handleContrastChange(mediaQuery, as, any)
 return(<>
-
   </>
       <Helmet />
         <Head />"
         <title>EnhancedAccessibility</title>"
         <meta name=&quot;description&quot; content=&quot;Advanced EnhancedAccessibility solution for modern businesses.&quot; / />"
-<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;"
-      </Head>;"
+<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;
+      </Head>;
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, EnhancedAccessibility, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />
-      </>;"
+      </>;
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, EnhancedAccessibility, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." /  />
       </Head>;
@@ -130,7 +129,7 @@ Contact Sales</button>
 mediaQuery.removeEventListener('change", handleContrastChange)};}, [])
 useEffect(() => {"
     // Add reduced motion support"
-const handleMotionChange = (;,if(e.matches) {;"'"
+const handleMotionChange = (;,if(e.matches) {;
 document.documentElement.classList.add('reduce-motion")) => {"
 $3"
 } else { "'"
@@ -151,14 +150,14 @@ const announcement = document.createElement('div")"'"
     document.body.appendChild(announcement)"
 return () => {"'"
 const existingAnnouncement = document.getElementById('announcements")
-      if(existingAnnouncement) {  
+      if(existingAnnouncement) {
 document.body.removeChild(existingAnnouncement),, , }
     ;};}, [])
 useEffect(() => {
     // Add keyboard navigation support"
 const handleKeyDown = ("
-      // Skip to main content;"'"
-if(e.key === 'Tab" && e.shiftKey && e.target === document.body) {  ;"'"
+      // Skip to main content;
+if(e.key === 'Tab" && e.shiftKey && e.target === document.body) {  ;
         const mainContent = document.querySelector('main");,if(mainContent) {
           (mainContent, as, HTMLElement).focus()) => {
 $3
@@ -170,6 +169,6 @@ document.addEventListener('keydown", handleKeyDown)"
 document.removeEventListener('keydown", handleKeyDown)}}, [])
 return <div>{children}</div>;}
 export default EnhancedAccessibility;
-}"
-export default EnhancedAccessibility;"
+}
+export default EnhancedAccessibility;
 }"'"

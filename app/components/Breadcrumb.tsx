@@ -1,7 +1,8 @@
 'use client';
-import{Link from 'next/link";}"
-import { usePathname } from 'next/navigation";"
-import, React   } from 'react'"
+import{Link from 'next/link;
+}
+import { usePathname } from 'next/navigation;
+import React   } from 'react'"
 const Breadcrumb: "React.FC = () => {"
 const pathname = usePathname()"'"
   const pathnames = pathname.split('/").filter((x) => x)"
@@ -42,9 +43,9 @@ clipRule="evenodd"
                   </Link>
                 )}
               </li>
-
         </ol>;
       </div>;
-    </nav>;"
-export default Breadcrumb; }"
+    </nav>;
+export default Breadcrumb;
+}
 }}")'"

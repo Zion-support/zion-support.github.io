@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
-import Head from 'next/head';"
-import Link from 'next/link";"
-import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react";
+import Head from 'next/head';
+import Link from 'next/link;
+import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react;
 const ContactPageBroken2 = ("
 "
   return(,"
@@ -16,4 +16,4 @@ const ContactPageBroken2 = ("
 ) => {
 $3"
 ,}"
-export default ContactPageBroken2;"'"
+export default ContactPageBroken2;

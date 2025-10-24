@@ -36,6 +36,6 @@ export const generateSitemap = useCallback((...args) => {,;}
 '/network-infrastructure''
 '/it-support''
 '/compliance''"
-"/developer-tools;"
-"/marketing-tools;"
-    '/productivity'";")'"
+"/developer-tools;
+"/marketing-tools;
+    '/productivity';)'"

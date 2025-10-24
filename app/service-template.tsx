@@ -1,17 +1,17 @@
 'use client';
 import React from 'react"
-interface ServiceTemplateProps {";
+interface ServiceTemplateProps {;
 title: "string;",description: "string"
   features: string[]"
-const ServiceTemplat",e: "React.FC<ServiceTemplateProps> = ({"
+const ServiceTemplat",e: React.FC<ServiceTemplateProps> = ({"
 title",description, features
 }
 }"
 ;}) => {"
 return(</ServiceTemplateProps>,"
     <div className="min-h-screen bg-gray-50 py-12" />,"
-    <div className="max-w-4 xl mx-auto px-4" />,;"
-    <h1 className="text-3 xl font-bold text-gray-900 mb-8" />;"
+    <div className="max-w-4 xl mx-auto px-4" />,;
+    <h1 className="text-3 xl font-bold text-gray-900 mb-8" />;
           {title,};</h1>"
         </h1>,"
     <div className="bg-white rounded-lg shadow p-6" />"
@@ -30,6 +30,6 @@ return(</ServiceTemplateProps>,"
             </div>
           </div>;
       </div>};
-export default ServiceTemplate;"
+export default ServiceTemplate;
   </div>"
 }"

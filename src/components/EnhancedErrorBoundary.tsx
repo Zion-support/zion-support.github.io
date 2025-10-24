@@ -1,17 +1,17 @@
 'use client"
-:all-pages-backup/components/EnhancedErrorBoundary.tsx;"'"
+:all-pages-backup/components/EnhancedErrorBoundary.tsx;
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react";"
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react;
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react;
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Users, Target, Mail, BarChart, Brain, TrendingUp } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
-import { ArrowRight, Users, Target, Mail, BarChart, Brain, TrendingUp } from 'lucide-react";"
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Users, Target, Mail, BarChart, Brain, TrendingUp } from 'lucide-react;
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
+import { ArrowRight, Users, Target, Mail, BarChart, Brain, TrendingUp } from 'lucide-react;
 const EnhancedErrorBoundaryPage: "React.FC = () => {
 const features = ["
     {"
@@ -40,30 +40,30 @@ titl",e: "'Precision Targeting'",description: "'Target specific goals and object
   {"
 icon: "TrendingUp"'"
 titl",e: "'Growth Optimization'",description: "'Optimize your business growth with data-driven strategies.'",benefits: "['Growth strategies'",'Market analysis', 'Competitive insights', 'ROI optimization"]
-    ;}"
+    ;
+}
   ]"
 const benefits = ["'
     'Increase efficiency by up to 50%'
     'Reduce costs by 30% with automation'
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases'"
-    'Gain competitive advantage with advanced technology";"
-  ];"'"
-const EnhancedErrorBoundary: "React.FC<EnhancedErrorBoundaryProps> = ({ className = '' ",;}) => {;</EnhancedErrorBoundaryProps>
+    'Gain competitive advantage with advanced technology;
+  ];
+const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = ({ className = '' ",;}) => {;</EnhancedErrorBoundaryProps>
 return(</EnhancedErrorBoundaryProps>
     <>
-
   </>
       <Helmet>;</Helmet>
 :all-pages-backup/components/EnhancedErrorBoundary.tsx</Helmet>
         <Head />"
         <title>EnhancedErrorBoundary | Zion Tech Group</title>"
         <meta name=&quot;description&quot; content=&quot;Professional EnhancedErrorBoundary services by Zion Tech Group. Advanced AI and IT solutions for your business.&quot; / />"
-<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;"
-      </Head>;"
+<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;
+      </Head>;
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, EnhancedErrorBoundary, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />
-      </>;"
+      </>;
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, EnhancedErrorBoundary, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." /  />
       </Head>;
@@ -82,11 +82,8 @@ Professional EnhancedErrorBoundary services by Zion Tech Group. Advanced AI and 
             </p>)"
           </div>",<div className=&quot;grid grid-cols-1, m,d: "grid-cols-2 gap-6&quot;>{benefits.map((benefit",index) => (
       <div key = {index,} className = &quot;flex items-start space-x-3&quot; />
-
       <CheckCircleclassName=&quot;h-6 w-6 text-purple-400 mt-1 flex-shrink-0&quot; / />
-
                 <p className=&quot;text-gray-300 text-lg&quot;>{benefit,}</p>
-
       </div>
     </div>);
             ))}
@@ -180,15 +177,18 @@ export default EnhancedErrorBoundaryPage;
     </div>
   );
 }
-export default EnhancedErrorBoundaryPage;"
+export default EnhancedErrorBoundaryPage;
   error?: Error"
 errorInfo?: ErrorInfo}"
 class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: "Props) {  "
 super(props)"
 this.state = { hasErro",r: "false",, , }"
-  ;}"
-  static getDerivedStateFromError(error: "Error): State {return { hasErro",r: "true",error;}"
-  ;}"
+  ;
+}
+  static getDerivedStateFromError(error: "Error): State {return { hasErro",r: "true",error;
+}
+  ;
+}
   componentDidCatch(error: "Error",errorInfo: "ErrorInfo) {this.setState({errorerrorInfo",;})"
     // Log error to monitoring service"'"
     // // console.error('Error caught by boundary: "'",error, errorInfo)

@@ -15,8 +15,8 @@ import React from "react,
       icon: <Globe className=w-6 h-6 text-emerald-400
       icon: <Cpu className=w-6 h-6 text-purple-400
       icon: <Shield className=w-6 h-6 text-red-400"
-    { number: 10 Gbps, label: Peak Speed";"
-    { "number": '1 ms', "label": 'Latency";"'"
-    { "number": '1 M+', "label": 'Devices per km²";"'"
+    { number: 10 Gbps, label: Peak Speed;
+    { "number": '1 ms', "label": 'Latency";'"
+    { "number": '1 M+', "label": 'Devices per km²";'"
     { "number": '99.9%', "label": 'Reliability'
 }}}}'"

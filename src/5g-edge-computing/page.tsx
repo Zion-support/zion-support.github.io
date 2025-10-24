@@ -1,12 +1,11 @@
 'use client';
 import React from 'react';
-import Head from 'next/head';"
-import Link from 'next/link";"
-import { ArrowRight } from 'lucide-react";"
-import Footer from '../components/Footer";
+import Head from 'next/head';
+import Link from 'next/link;
+import { ArrowRight } from 'lucide-react;
+import Footer from '../components/Footer;
 export default function EdgeComputing5 GPage() {
 return(<div>
-
       <Head>"
 "
         <title>5 G Edge Computing - Zion Tech Group</title>"
@@ -29,5 +28,5 @@ Contact Us"
       </div>
       <Footer />
     </div>)"
-  );"
-,};"'"
+  );
+,};

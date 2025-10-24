@@ -1,12 +1,14 @@
 'use client';
 import React from 'react';
-import { useState } from 'react";"
-import { AlertCircle } from 'lucide-react";"
+import { useState } from 'react;
+import { AlertCircle } from 'lucide-react;
 interface NewsletterSignupProps {"'"
 variant?: 'inline' | 'modal"
-onClose?: () => void ;}"
-;}"
-const NewsletterSignup: "React.FC<NewsletterSignupProps> = ({ variant = 'inline'",onClose ;}) => {</NewsletterSignupProps>"'"
+onClose?: () => void ;
+}
+;
+}
+const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline'",onClose ;}) => {</NewsletterSignupProps>"'"
 const [email, setEmail,] = useState('")</NewsletterSignupProps>"'"
 const [status, setStatus,] = useState<'idle' | 'loading' | 'success' | 'error'>('idle")"'"
 const [message, setMessage,] = useState('")"
@@ -29,11 +31,13 @@ setStatus('success")"'"
       // Close modal after success if it"s a modal variant"'"
 if(variant = == 'modal" && onClose) {
 setTimeout(() => {
-onClose(),, , ;}"
+onClose(),, , ;
+}
         ;}, 2000)"
     ;} catch(error) {"'"
 setStatus('error")"'"
-      setMessage('Something went wrong. Please try again.");}"
+      setMessage('Something went wrong. Please try again.");
+}
   const content = (,"
     <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2 xl p-8 text-white" />,"
     <div className="text-center mb-6" />"
@@ -41,40 +45,37 @@ setStatus('error")"'"
     <h1 className="text-2 xl font-bold mb-2">Stay Updated</h3>"
         <p className="text-white/90" />
 Get the latest updates on, AI, technology, IT, solutions, and industry insights.</p>"
-        </p>;"
-;"
+        </p>;
+;
       <form onSubmit = {handleSubmit,};className = "space-y-4" />,"
     <div className="flex flex-col sm: flex-row gap-3" />"
-          <input;"
-type="email";"
+          <input;
+type="email;
             value={email,};onChange = {(e) => setEmail(e.target.value),};placeholder = "Enter your email address"
-className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus: "outline-none focus:ring-2 focus:ring-white/50 focu",";"
-s: border-transparent";"'"
+className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus: "outline-none focus:ring-2 focus:ring-white/50 focu",;
+s: border-transparent";'"
             disabled={status === 'loading",};</input>"
           /></input>"
           <button"
-type = "submit";"'"
+type = "submit";'"
             disabled={status === 'loading',};className = "bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover: "bg-white/90 transition-colors disabled:opacity-50 disable","
 d: cursor-not-allowed flex items-center justify-center"
            />"'"
             {status === 'loading" ? (</button>"
               <>,<div className="animate-spin rounded-full h-4 w-4 border-b-2 border-purple-600 mr-2" />
 Subscribing...
-
             ) : ("
               <>"
 "
                 <Send className="w-4 h-4 mr-2" />
 Subscribe</Send>
-
             ),}
           </button>
-
         {"
 message && (,"
-    <divclassName = {`flex items-center space-x-2 text-sm ${;"'"
-status === 'success' ? 'text-green-200' : 'text-red-200";"
-,};`} />"'"
+    <divclassName={`flex items-center space-x-2 text-sm ${;
+status === 'success' ? 'text-green-200' : 'text-red-200;
+};`} />"'"
             {status = == 'success" ? ("
               <CheckCircle className="w-4 h-4" />"
             ) : (</CheckCircle>"
@@ -91,8 +92,8 @@ status === 'success' ? 'text-green-200' : 'text-red-200";"
         </p>"'"
 if(variant === 'modal") {"
 return(,"
-    <div className="fixed inset-0 z-50 overflow-y-auto" />,;"
-    <div className="flex min-h-screen items-center justify-center px-4 py-6" />,;"
+    <div className="fixed inset-0 z-50 overflow-y-auto" />,;
+    <div className="flex min-h-screen items-center justify-center px-4 py-6" />,;
     <divclassName = "fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose,};/ / />,"
     <div className="relative w-full max-w-md" />
             {content,}</div>
@@ -103,6 +104,6 @@ return, content;
 });
     </div>);
   );
-export default NewsletterSignup;"
+export default NewsletterSignup;
 }}}}}}"
 "))'"

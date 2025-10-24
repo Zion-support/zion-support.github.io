@@ -1,8 +1,6 @@
 'use client'
-
 import Link from 'next/link'
 import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react'
-
 const Navigation = () => {
   return (
     <>
@@ -30,5 +28,4 @@ const Navigation = () => {
     </div>
   )
 }
-
 export default Navigation

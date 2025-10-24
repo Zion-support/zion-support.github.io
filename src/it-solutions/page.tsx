@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
 export default function ITSolutionsPage() {"
 "
 return(,"
@@ -17,5 +17,5 @@ Custom IT solutions designed for your business requirements.</p>
       </main>
       <Footer/ />
         </div>)"
-  );"
-,};"'"
+  );
+,};

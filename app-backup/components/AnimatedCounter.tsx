@@ -1,4 +1,4 @@
-import, React, { useEffect, useState, useRef } from "react";"
-import { useIntersectionObserver } from '../hooks/useIntersectionObserver";
+import React, { useEffect, useState, useRef } from "react;
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver;
   suffix = ;
-className = ;"
+className = ;

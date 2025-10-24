@@ -1,11 +1,10 @@
 'use client';
 import React from 'react';
-import Head from 'next/head';"
-import Link from 'next/link";"
-import { ArrowRight } from 'lucide-react";
+import Head from 'next/head';
+import Link from 'next/link;
+import { ArrowRight } from 'lucide-react;
 export default function CybersecurityauditPage() {
 return(<div>
-
       <Head>"
 "
         <title>Cybersecurity Audit - Zion Tech Group</title>"
@@ -23,5 +22,5 @@ cybersecurity-audit services Transform your business with our expert solutions. 
           <Link"
 href="/contact"
 "
-,;"
+,;
 };)"'"

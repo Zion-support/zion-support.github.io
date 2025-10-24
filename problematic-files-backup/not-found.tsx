@@ -1,5 +1,5 @@
-import Link from 'next/link";"
-import { Home, ArrowLeft, RefreshCw } from 'lucide-react";
+import Link from 'next/link;
+import { Home, ArrowLeft, RefreshCw } from 'lucide-react;
 export default function NotFound() {"
 "
 return(,"
@@ -13,18 +13,19 @@ return(,"
 "
             <Home className="w-5 h-5 mr-2" />
 Go Home
-
       </Link>
     </div>
           <button)"
 onClick={() => window.history.back(),"
-;}"
+;
+}
             className="flex items-center justify-center px-6 py-3 bg-gray-600 hover: bg-gray-700 text-white font-medium rounded-lg transition-colors">"
             <ArrowLeft className="w-5 h-5 mr-2" />
 Go Back
           </button>"
           <button"
-onClick={() => window.location.reload(),;}"
+onClick={() => window.location.reload(),;
+}
             className="flex items-center justify-center px-6 py-3 bg-purple-600 hover: bg-purple-700 text-white font-medium rounded-lg transition-colors">"
             <RefreshCw className="w-5 h-5 mr-2" />
 Refresh
@@ -32,5 +33,5 @@ Refresh
         </div>
       </div>
     </div>"
-  );"
-,};"'"
+  );
+,};

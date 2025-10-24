@@ -1,28 +1,28 @@
 
 'use client'
 import React from 'react'
-import, React, { createContext, useContext, useEffect, ReactNode } from &quot;react&quot;
+import React, { createContext, useContext, useEffect, ReactNode } from &quot;react&quot;
 declare global{interface Window {;
 }
 gtag: "(...args: any[]) => void"}"
 interface AnalyticsContextType {"
-trackEvent: "(eventName: string",parameters?: Record<string, unknown>) => void;"
-}"
+trackEvent: "(eventName: string",parameters?: Record<string, unknown>) => void;
+}
 trackPageView: "(pageName: string) => void"}
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
 undefined;
 export const useAnalytics = ();
-return const context = useContext(AnalyticsContext);"
+return const context = useContext(AnalyticsContext);
   if(!context) {"
 throw new Error("useAnalytics must be used within an AnalyticsProvider");
 return context;
 interface AnalyticsProviderProps {;
 ) => {;
-$3;"
-}"
+$3;
+}
 children: "ReactNode"}"
-exportconstAnalyticsProvider: "React.FC<AnalyticsProviderProp s>= ({children"}) => {useEffect(() => {"
-if(type, of, windo, w !=="undefined") {;"
+exportconstAnalyticsProvider: React.FC<AnalyticsProviderProp s> = ({children"}) => {useEffect(() => {"
+if(type, of, windo, w !=="undefined") {;
       // Google Analytics"
 if(process.env.NODE_ENV === "production") {"
 const script = document.createElement("script")"
@@ -32,26 +32,26 @@ document.head.appendChild(script);
         window.gtag =;
 window.gtag ||;
 function(...args: any[]) {;
-            (window.gtag, as, any).q = (window.gtag, as, any).q || [];"
+            (window.gtag, as, any).q = (window.gtag, as, any).q || [];
             (window.gtag, as, any).q.push(args)"
 window.gtag("js",new Date()"
 window.gtag("config", process.env.REACT_APP_GA_MEASUREMENT_ID || "")}
   }, []);
 consttrackEvent = ($2) => {;
 $3;
-}"
+}
   }"
   consttrackPageView= (pageName: "string) => {if (type of windo w !==&quot;undefined&quot; && windo w.gtag) {",window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {)"
 page_title: "pageName",page_location: "window.location.href"});
-    }"
+}
   }"
   constvalue: "AnalyticsContextType = {trackEvent",trackPageView}
   return(<AnalyticsContext.Provider value = {value} >{children});
     </AnalyticsContext></AnalyticsContext.Provider>);
   );
-}"
+}
 consttrackEvent= ("
-eventName: "string",parameters?: Record<string, unknown />);"
+eventName: "string",parameters?: Record<string, unknown />);
   ) => {"
 if(typeof, window !== "undefined" && window.gtag) {"
 window.gtag("event", eventName, parameters)}"
@@ -64,5 +64,5 @@ page_title: "pageName",page_location: "window.location.href"})}"
     <AnalyticsContext .Provider value = {value};  />;
       {children}
     </AnalyticsContext.Provider>;
-export default AnalyticsProvider}}}}}}}});"
+export default AnalyticsProvider}}}}}}}});
 )";`'"

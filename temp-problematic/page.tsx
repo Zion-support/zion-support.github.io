@@ -1,10 +1,9 @@
 'use client';
 import React from 'react';
-import Head from 'next/head';"
-import Link from 'next/link";"
-import { ArrowRight } from 'lucide-react";
+import Head from 'next/head';
+import Link from 'next/link;
+import { ArrowRight } from 'lucide-react;
 export default function AiautomatedtestingPage() {
-
 return(<>"
       <Head>"
         <title>Ai Automated Testing - Zion Tech Group</title>"
@@ -21,8 +20,8 @@ Contact Us"
 "
 >>>>>>> cursor/fix-errors-and-merge-to-main-9 f8a: "temp-problematic/page.tsx)"
   )"
-",;"
-};"'"
-  )"
+",;
+};
+)
 "}";'"
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70

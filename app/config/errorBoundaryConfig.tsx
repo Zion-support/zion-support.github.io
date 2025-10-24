@@ -2,8 +2,8 @@
 import React from "react
 /**
 * Error Boundary Configuration
-* Centralized configuration for error handling across the application";
-*/";
+* Centralized configuration for error handling across the application;
+*/;
 export interface ErrorBoundaryConfig {
 /**"
 * Whether to log errors to console"
@@ -36,28 +36,28 @@ customMessage",s: "Record<string",string>
 /**
 * Fallback UI components"
 */"
-;}"
+;
+}
 fallbackComponents: "{",;}</string>"
 default: "React.ComponentType<{ error: Error; resetErro",r: "() => void ",;}>"
 network: "React.ComponentType<{ error: Error; resetErro",r: "() => void ",;}>"
 notFound: "React.ComponentType<{ error: Error; resetErro",r: "() => void ",;}>;}
-
 /**
 * Default error messages"
 */"
 const DEFAULT_ERROR_MESSAGES = {"'"
 default: "'Something went wrong. Please try again.'",network: "'Network connection issue. Please check your internet connection.'",notFound: "'The requested resource was not found.'",timeout: "'Request timed out. Please try again.'",serverError: "'Server error occurred. Please try again later.'",validation: "'Validation error. Please check your input.'",;}
 /**;
-* Get error boundary configuration based on environment;"
-*/;"
+* Get error boundary configuration based on environment;
+*/;
 export function getErrorBoundaryConfig(): ErrorBoundaryConfig{return {"
 logErrors: "true",showDetails: "isDevelopment"
 reportError",s: "!isDevelopment",reportingEndpoint: "process.env.REACT_APP_ERROR_REPORTING_ENDPOINT"
 showErrorOverla",y: "isDevelopment",maxStoredErrors: "50"
 customMessage",s: "DEFAULT_ERROR_MESSAGES",fallbackComponents: "{"
-defaul",t: "DefaultErrorFallback",network: "NetworkErrorFallback",;}"
+defaul",t: "DefaultErrorFallback",network: "NetworkErrorFallback",;
+}
 notFoun,d: "NotFoundFallback",;}
-
 /**"
 * Default error fallback component"
 */"
@@ -90,20 +90,19 @@ d="M6 18 L18 6 M6 6 l12 12"
 <pre className = "mt-4 p-4 bg-gray-100 roundedtext-xsoverflow-auto" />{error.stack,}</pre>)"
 )},"
     <div className="mt-6 flexgap-4" />
-
 <button
 onClick={"
 resetError"
-,;}"
+,;
+}
 className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 transition-colors">Try Again</button>,<button"'"
 onClick = {() =>(window.location.href = '/"),;}</button>"
 className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover: bg-gray-300 transition-colors">
 Go Home
 </
-
 /**"
-* Network error fallback component;"
-*/;"
+* Network error fallback component;
+*/;
 function NetworkErrorFallback({ resetError ,;}: { error: "Error; resetErro",)"
 r: "() => void ",}) {"
 return(,"
@@ -134,7 +133,8 @@ Unable to connect to the server. Please check your internet connection and try a
 <button
 onClick={"
 resetError"
-,;}"
+,;
+}
 className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 transition-colors">Retry Connection</button>
 </div>
 </div>
@@ -151,7 +151,8 @@ function NotFoundFallback(): JSX.Element{return(,<div className="min-h-screen fl
 <p className="mt-2 text-gray-600" />"'"
 The page you're looking for doesn"t exist or has been moved."
           </p>,"
-    <div className="mt-6 flexgap-4 justify-center" />,<button);}"
+    <div className="mt-6 flexgap-4 justify-center" />,<button);
+}
 onClick = {() =>(window.location.href = '/"),;}</button>"
 className="bg-blue-600 text-white px-6 py-2 rounded-lg hover: bg-blue-700 transition-colors">
 Go Home"
@@ -163,28 +164,34 @@ Go Back
 </div>
 </div>
 </div>
-/**;"
-* Get error type from 'error object";"
-*/;"
+/**;
+* Get error type from 'error object;
+*/;
 export function getErrorType(erro,)"'"
 r: "Error): keyof typeof DEFAULT_ERROR_MESSAGES{if (error.message.includes('Network') || error.message.includes('fetch")) {"'"
-return 'network'",if (error.message.includes('404') || error.message.includes('not found")) {;}"
-return 'notFound";}"
+return 'network'",if (error.message.includes('404') || error.message.includes('not found")) {;
+}
+return 'notFound;
+}
 if (error.message.includes('timeout")) {"'"
-return 'timeout";}"
+return 'timeout;
+}
 if (error.message.includes('500') || error.message.includes('server")) {"'"
-return 'serverError";}"
+return 'serverError;
+}
 if (error.message.includes('validation")) {"'"
-return 'validation";}"
+return 'validation;
+}
 return 'default"
 /**"
 * Format error for logging"
-*/;"
+*/;
 export function formatErrorForLogging(error: "Error): Record<string",unknown> {"
 return{message: "error.message",stack: "error.stack"
 nam",e: "error.name",type: "getErrorType(error)"'"
 timestam",p: "new Date().toISOString()",userAgent: "typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'",}"
 ur,l: "typeof window !== 'undefined' ? window.location.href : 'unknown'",}
 export default getErrorBoundaryConfig</string>"
-}};};};};};}"
+}};};};};};
+}
 "'"

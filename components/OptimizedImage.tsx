@@ -11,7 +11,7 @@ className?: string"
   [ke,y: "string,]: any",}"
 }"
 "
-const OptimizedImage: "React.FC<OptimizedImageProps /> = ({"
+const OptimizedImage: React.FC<OptimizedImageProps /> = ({"
 src",alt"
 width = 800"
 height = 600"
@@ -24,10 +24,10 @@ return(</OptimizedImageProps>
       alt = {alt,}
       width = {width,;}
       height = {height,;}
-      className = {className,;}
+      className={className}
       data-testid = {testId,;}
       {...props;} />)
   );
-};"
-;"
+};
+;
 export default OptimizedImage;</Image>"

@@ -1,7 +1,5 @@
 import React from 'react';
-
 // Analytics utilities for tracking user interactions and performance
-
 interface AnalyticsEvent {
   category: string;
   action: string;
@@ -11,7 +9,6 @@ interface AnalyticsEvent {
   custom_parameters?: Record<string, any>;
   timestamp?: number;
 }
-
 class Analytics {
   private static instance: Analytics;
   private events: AnalyticsEvent[] = [];

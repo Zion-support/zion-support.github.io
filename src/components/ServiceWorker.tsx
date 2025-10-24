@@ -1,17 +1,17 @@
 'use client"
-:all-pages-backup/components/ServiceWorker.tsx;"'"
+:all-pages-backup/components/ServiceWorker.tsx;
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react";"
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react;
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react;
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react";"
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react;
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react;
 const ServiceWorkerPage: "React.FC = () => {
 const features = ["
     {"
@@ -40,30 +40,30 @@ titl",e: "'Precision Targeting'",description: "'Target specific goals and object
   {"
 icon: "TrendingUp"'"
 titl",e: "'Growth Optimization'",description: "'Optimize your business growth with data-driven strategies.'",benefits: "['Growth strategies'",'Market analysis', 'Competitive insights', 'ROI optimization"]
-   ;}"
+   ;
+}
   ]"
 const benefits = ["'
     'Increase efficiency by up to 50%'
     'Reduce costs by 30% with automation'
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases'"
-    'Gain competitive advantage with advanced technology";"
-  ];"'"
-const ServiceWorker: "React.FC<ServiceWorkerProps> = ({ className = '' ",;}) => {;</ServiceWorkerProps>
+    'Gain competitive advantage with advanced technology;
+  ];
+const ServiceWorker: React.FC<ServiceWorkerProps> = ({ className = '' ",;}) => {;</ServiceWorkerProps>
 return(</ServiceWorkerProps>
     <>
-
   </>
       <Helmet>;</Helmet>
 :all-pages-backup/components/ServiceWorker.tsx</Helmet>
         <Head />"
         <title>ServiceWorker - Zion Tech Group</title>"
         <meta name=&quot;description&quot; content=&quot;Advanced serviceworker solutions powered by AI technology.&quot; / />"
-<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;"
-      </Head>;"
+<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;
+      </Head>;
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, ServiceWorker, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />
-      </>;"
+      </>;
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, ServiceWorker, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." /  />
       </Head>;
@@ -162,7 +162,7 @@ export default ServiceWorkerPage;
       </div>
   )"
 }"
-export default ServiceWorkerPage;"'"
+export default ServiceWorkerPage;
     if('serviceWorker" in, navigator) {"
 navigator.serviceWorker"'"
         .register('/sw.js")"
@@ -175,6 +175,7 @@ navigator.serviceWorker"'"
     }
   }, [])
 return nul l
-{;}"
-export default ServiceWorker;"
+{;
+}
+export default ServiceWorker;
 }"'"

@@ -16,9 +16,8 @@ export interface Service {;
   icon?: string;
   href: string;
   popular?: boolean;
-  category: 'ai' | 'it' | 'cloud' | 'security' | 'data' | 'automation";
+  category: 'ai' | 'it' | 'cloud' | 'security' | 'data' | 'automation;
 }
-"
 export const aiServices: Service[] = ["
   {"'"
     id: 'ai-analytics","'"
@@ -118,7 +117,6 @@ export const aiServices: Service[] = ["
     category: 'ai"
   }
 ];
-"
 export const itServices: Service[] = ["
   {"'"
     id: 'web-development","'"
@@ -222,7 +220,6 @@ export const itServices: Service[] = ["
 export const itSolutions = itServices;
 ;
 export const allServices: Service[] = [...aiServices, ...itServices];
-
 // Export as servicesData for backward compatibility
 export const servicesData = {
   aiServices,
@@ -230,16 +227,14 @@ export const servicesData = {
   itSolutions: itServices, // Add alias for itSolutions
   allServices
 };
-
 export const getServiceById = (id: string): Service | undefined => {
-  return allServices.find(service => service.id === id);"
-};"
+  return allServices.find(service => service.id === id);
+};
 "'"
 export const getServicesByCategory = (category: Service['category"]): Service[] => {
   return allServices.filter(service => service.category === category);
 };
-
 export const getPopularServices = (): Service[] => {
-  return allServices.filter(service => service.popular);"
-};"
+  return allServices.filter(service => service.popular);
+};
 "'"

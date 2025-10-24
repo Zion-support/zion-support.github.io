@@ -1,15 +1,15 @@
 'use client"
-:all-pages-backup/components/ContentPromotionBanner.tsx;"'"
-import Navigation from './Navigation";"
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"
+:all-pages-backup/components/ContentPromotionBanner.tsx;
+import Navigation from './Navigation;
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react;
 import React from 'react';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react";"
-import Navigation from './Navigation";"
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react";"
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react;
+import Navigation from './Navigation;
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react;
 import React from 'react';
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react";"
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react;
 const ContentPromotionBanner: "React.FC = () => {",const benefits = ["'
     'Increase efficiency by up to 50%'
     'Reduce costs by 30% with automation'
@@ -23,17 +23,16 @@ return(:all-pages-backup/components/ContentPromotionBanner.tsx
   </>;
       <Helmet>;</Helmet>
     </>
-
   </>
       <Helmet>;</Helmet>
         <Head />"
         <title>ContentPromotionBanner</title>"
         <meta name=&quot;description&quot; content=&quot;Advanced ContentPromotionBanner solution for modern businesses.&quot; / />"
-<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;"
-      </Head>;"
+<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;
+      </Head>;
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, ContentPromotionBanner, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />
-      </>;"
+      </>;
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, ContentPromotionBanner, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." /  />
       </Head>;
@@ -57,9 +56,10 @@ Advanced ContentPromotionBanner solution for modern businesses.</p>"
 Learn More</button>"
             <ArrowRight className="inl ine-blockml-1 h-4 w-4" />
           </button>"
-          </div>;"
-        {/* Stats Section */,},;)"
-    <div className=&quot;grid grid-cols-1 md: "grid-cols-3 gap-8 mb-16&quot;>{stats.map((stat",index) => (  
+          </div>;
+        {/* Stats Section */,},;
+)
+    <div className=&quot;grid grid-cols-1 md: "grid-cols-3 gap-8 mb-16&quot;>{stats.map((stat",index) => (
       <divkey = {index,} className=&quot;text-center&quot; / />
     </div>,
     <divclassName=&quot;w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center&quot; / />
@@ -101,7 +101,7 @@ Learn More</button>"
 Get Started Today"
           </div>",</div>"
         {/* Features Grid */},"
-    <div className=&quot;grid md: "grid-cols-2 l",g: "grid-cols-4 gap-8 mb-16&quot;>{features.map((feature",index) => (  
+    <div className=&quot;grid md: "grid-cols-2 l",g: "grid-cols-4 gap-8 mb-16&quot;>{features.map((feature",index) => (
       <divkey = {index,} className=&quot;text-center&quot; / />
     </div>,
     <divclassName=&quot;w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4&quot; / />
@@ -119,7 +119,7 @@ Get Started Today"
             <p className=&quot;text-xl text-gray-300 max-w-3 xl mx-auto&quot;>We provide comprehensive AI and IT solutions that deliver real results for your business.</p>p>"
             </div>,"
     <div className=&quot;grid grid-cols-1 md: "grid-cols-2 l",g: "grid-cols-4 gap-6&quot;>{/* Stats Section */",}  </div>,"
-    <div className=&quot;grid md: "grid-cols-3 gap-8 mb-16&quot;>{stats.map((stat",index) => (  
+    <div className=&quot;grid md: "grid-cols-3 gap-8 mb-16&quot;>{stats.map((stat",index) => (
       <divkey = {index,} className=&quot;text-center&quot; / />
     </div>,
     <divclassName=&quot;flex justify-center mb-4&quot; / />
@@ -134,12 +134,10 @@ Get Started Today"
         {/* Benefits Section */},"
     <divclassName=&quot;bg-white/5 backdrop-blur-sm rounded-2 xl p-8 mb-16&quot; / />,"
     <h1 className=&quot;text-3 xl font-bold text-white text-center mb-8&quot;>Why Choose Our Solutions?</h2>,"
-    <div className=&quot;grid md: "grid-cols-2 gap-4&quot;>{benefits.map((benefit",index) => (  
+    <div className=&quot;grid md: "grid-cols-2 gap-4&quot;>{benefits.map((benefit",index) => (
       <div key = {index,} className=&quot;flex items-center gap-3&quot; />
-
       <CheckCircleclassName=&quot;w-5 h-5 text-green-400 flex-shrink-0&quot; / />,
     <span className = &quot;text-gray-300&quot;>{benefit,}</span>
-
       </div>
     </div>);
             ))}
@@ -234,6 +232,6 @@ Get Started Now
     </div>",)
       </div>
 }
-;"
-export default ContentPromotionBanner;"
+;
+export default ContentPromotionBanner;
 }"'"

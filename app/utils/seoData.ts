@@ -1,5 +1,5 @@
 export interface StructuredData {
-  '@context": string;"'"
+  '@context": string;
   '@type": string;
   name: string;
   description: string;
@@ -8,13 +8,13 @@ export interface StructuredData {
   sameAs?: string[];
   telephone?: string;
   email?: string;
-  openingHours?: string[];"
-  priceRange?: string;"
+  openingHours?: string[];
+  priceRange?: string;
   contactPoint?: {"'"
     '@type": string;
     telephone: string;
-    contactType: string;"
-  };"
+    contactType: string;
+  };
   address?: {"'"
     '@type": string;
     streetAddress: string;
@@ -52,7 +52,7 @@ export const generateStructuredData = (data: Partial<StructuredData>): Structure
     },
     ...data
   };
-};"
+};
 "
 export const defaultSEOData = {"'"
   title: 'Zion Tech Group - AI Solutions","'"
@@ -60,5 +60,5 @@ export const defaultSEOData = {"'"
   keywords: 'AI, artificial intelligence, technology solutions, business automation, IT services, cloud computing, cybersecurity","'"
   ogImage: '/og-image.jpg","'"
   canonical: 'https://ziontechgroup.com"
-};"
+};
 "'"

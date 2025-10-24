@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import Navigation from '../components/Navigation";"
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"
+import Navigation from '../components/Navigation;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react;
 const PageFixedPage: "React.FC = () => {"
 const features = ["
     {"'"
@@ -29,6 +29,6 @@ return(
             </div>
           </div>
         </section>"
-      </div>;"
-;"
+      </div>;
+;
 }'"

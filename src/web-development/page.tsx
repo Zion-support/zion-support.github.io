@@ -1,9 +1,8 @@
 import React from 'react';
-import Head from 'next/head';"
-import Link from 'next/link";"
-import { ArrowRight } from 'lucide-react";
+import Head from 'next/head';
+import Link from 'next/link;
+import { ArrowRight } from 'lucide-react;
 export default function WebDevelopmentPage() {
-
 return(<>
     :all-pages-backup/web-development/page.tsx"
     </>"
@@ -24,6 +23,7 @@ Contact Us</Link>"
           </Link>
             </div>;
       </div>;
-</div>;)"
+</div>;
+)
   ),"
 }"'"

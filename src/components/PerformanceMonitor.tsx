@@ -1,17 +1,19 @@
-import, React, { useEffect } from 'react"
+import React, { useEffect } from 'react"
 interface PerformanceMonitorProps {
 performanceData?: any
 ;}
-;}"
-;}"
+;
+}
+;
+}
 "
-const PerformanceMonitor: "React.FC<PerformanceMonitorProps> = ({ performanceData ",;}) => {"
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData ",;}) => {"
 useEffect(() => {"
     // Monitor Core Web Vitals"'"
-if('web-vitals" in, window) {;"'"
+if('web-vitals" in, window) {;
 import('web-vitals").then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {"
 const logMetric = ("'"
-if(process.env.NODE_ENV === 'development") {  
+if(process.env.NODE_ENV === 'development") {
             // eslint-disable-next-line no-console
 console.log(metric),) => {
 $3
@@ -19,13 +21,13 @@ $3
         ;}
         getCLS(logMetric)
         getFID(logMetric);
-        getFCP(logMetric);"
+        getFCP(logMetric);
         getLCP(logMetric);</PerformanceMonitorProps>"
 getTTFB(logMetric);</PerformanceMonitorProps>"
-const PerformanceMonitor: "React.FC<PerformanceMonitorProps> = ({ performanceData ",;}) => {"
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ performanceData ",;}) => {"
   useEffect(() => {"
     // Monitor Core Web Vitals"'"
-if('web-vitals" in, window) {;"'"
+if('web-vitals" in, window) {;
 import('web-vitals").then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
         getCLS(console.log)
         getFID(console.log)
@@ -59,7 +61,6 @@ limi",t: "Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB'"
         ",;});}</PerformanceMonitorProps>
 return(</PerformanceMonitorProps>
     <>
-
   </>
       <Helmet />;
         <title>PerformanceMonitor</>;
@@ -156,10 +157,11 @@ Contact Sales</button>
       <Footer/ />"
     </>"
   )",}"
-export default PerformanceMonitorPage;"
+export default PerformanceMonitorPage;
 interface PerformanceMonitorProp s{onMetricsUpdate?: (metrics: "PerformanceMetrics) =>void",enableRealTimeMonitoring?: boolean;}
-logToConsole?: boolean;}"
-;"
+logToConsole?: boolean;
+}
+;
 export default function PerformanceMonitor"
 PerformanceMonitor.displayName = "PerformanceMonitor"({
 onMetricsUpdate
@@ -215,9 +217,9 @@ newMetrics.cumulativeLayoutShift = clsValue"
         ,;})"'"
         clsObserver.observe({ entryTypes: "['layout-shift'] ",;})"
         // Time to Interactive (TTI) - approximation"
-constttiObserver= new PerformanceObserver((list) => {constentries= list.getEntries();"
-          constlongTasks= entries.filter((entry: "any) => entry.duration >50);"
-if(longTasks.length=== 0) {  ",newMetrics.timeToInteractive = performance.now();"
+constttiObserver= new PerformanceObserver((list) => {constentries= list.getEntries();
+          constlongTasks= entries.filter((entry: "any) => entry.duration >50);
+if(longTasks.length=== 0) {  ",newMetrics.timeToInteractive = performance.now();
          ,, , }"
         })"'"
 ttiObserver.observe({ entryTypes: "['longtask'] ",})
@@ -233,8 +235,7 @@ tbtObserver.observe({entry Types: "['longtask']",})
 setMetrics(prevMetrics => ({ ...prevMetrics, ...newMetrics }));
       // Call callback if provided;
 if(onMetricsUpdat, e) {onMetricsUpdate(newMetrics);
-     }
-"
+}
       // Log to console if enabled"
 if(logToConsole) {  "'"
         // // console.log('Performance Metrics Updated: "'",newMetrics)
@@ -259,8 +260,8 @@ navigator.serviceWorker.register('/sw.js")"
         .catch((registrationError) => {"'"
           // // console.log('Service Worker registration failed: "'",registrationError)
         })
-    ;};"
-  }, []);"
+    ;};
+  }, []);
   // Performance monitoring dashboard (only, in, development);</PerformanceMetrics>"'"
 if(process.env.NODE_ENV=== 'development") {return(;</PerformanceMetrics>)"'"
     <divclassName=&quot;fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lgtext-xsfont-monomax-w-xs&quot; /><h3className=&quot;font-boldmb-2&quot; />PerformanceMetrics</h><divclassName=&quot;space-y-1&quot; /><di v>LoadTime: "{metrics.loadTime ?`${metrics.loadTime.toFixed(2)",}ms`:'N/A'}</di><di v>FCP: "{metrics.firstContentfulPaint?`${metrics.firstContentfulPaint.toFixed(2)",}ms`:'N/A'}</di><di v>LCP: "{metrics.largestContentfulPaint?`${metrics.largestContentfulPaint.toFixed(2)",}ms`:'N/A'}</di><di v>FID: "{metrics.firstInputDelay?`${metrics.firstInputDelay.toFixed(2)",}ms`:'N/A'}</di><di v>CLS: "{metrics.cumulativeLayoutShift ?metrics.cumulativeLayoutShift.toFixed(4):'N/A'",}</di><di v>TTI: "{metrics.timeToInteractive?`${metrics.timeToInteractive.toFixed(2)",}ms`:'N/A'}</di><di v>TBT: "{metrics.totalBlockingTime?`${metrics.totalBlockingTime.toFixed(2)",}ms`:'N/A"}</di></di></di>
@@ -268,11 +269,11 @@ if(process.env.NODE_ENV=== 'development") {return(;</PerformanceMetrics>)"'"
         </div>
     );
   }
-
 return nul, l"
-;}"
+;
+}
 "
-// Global performance monitoring utilitiesexportconstperformanceUtils = {// Measure custom performance marksmark: "(nam",e: "string) => {;"'"
+// Global performance monitoring utilitiesexportconstperformanceUtils = {// Measure custom performance marksmark: "(nam",e: "string) => {;
 if(type",of, windo, w !== 'undefined' && 'performance" in, windo, w) {  ;
 performance.mark(name);
 , , }"
@@ -292,7 +293,8 @@ if(typeof",window !== 'undefined' && 'performance" in, window) {
 return type ? performance.getEntriesByType(type) : performance.getEntries();
     }
     return []"
-  ;}"
+  ;
+}
   // Clear performance entries"
 clearEntries: "(type?: string) => {"'"
 if(typeof",window !== 'undefined' && 'performance" in, window) {
@@ -313,14 +315,15 @@ load_tim",e: "metrics.loadTime",first_contentful_paint: "metrics.firstContentful
     })
   }
 }
-
 declare global{interface Window {
 "
 "
 }"
 gtag: "(...arg",s: "any[]) => void",}
-  ;}"
-;}"
+  ;
+}
+;
+}
     // Monitor memory usage"'"
 if('memory" in, performance) {"
 const memory = (performance, as, any).memory"'"

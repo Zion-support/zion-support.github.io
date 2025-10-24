@@ -4,9 +4,7 @@ import './globals.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import ErrorBoundary from './components/ErrorBoundary'
-
 const inter = Inter({ subsets: ['latin'] })
-
 export const metadata: Metadata = {
   metadataBase: new URL('https://zion.app'),
   title: 'Zion Tech Group - Advanced AI & IT Solutions',
@@ -41,12 +39,10 @@ export const metadata: Metadata = {
   },
   category: 'technology',
 }
-
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
 }
-
 export default function RootLayout({
   children,
 }: {
@@ -64,7 +60,6 @@ export default function RootLayout({
                   // Measure page load time
                   const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart
                   console.log('Page load time:', loadTime + 'ms')
-                  
                   // Track Core Web Vitals
                   if ('web-vitals' in window) {
                     import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {

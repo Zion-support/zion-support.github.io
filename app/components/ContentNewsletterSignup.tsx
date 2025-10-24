@@ -2,13 +2,13 @@
 import React from 'react'
 import Footer from './Footer'
 import Navigation from './Navigation'
-import { Helmet } from from 'react-helmet-async'
-import { ArrowRight, CheckCircle } from from 'lucide-react''use client'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle } from 'lucide-react''use client'
 import Navigation from './Navigation'
-import { Helmet } from from 'react-helmet-async'
-import { ArrowRight } from from 'lucide-react'
-import, React, { useState } from 'react'
-import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from from 'lucide-react';
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight } from 'lucide-react'
+import React, { useState } from 'react'
+import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react';
 interface ContentNewsletterSignupProps {;
 title?: string;
 subtitle?: string;
@@ -26,30 +26,30 @@ placeholder="Enter your emailaddress""
 buttonText="Subscribe"
 features= ["
     { icon: "Star",text: "Exclusive content&quot;
-  }"
+}
   {"
 icon: "Users",text: "Industry insights&quot;
-  }"
+}
   {"
 icon: "Globe",text: "Global updates&quot;
-  }"
+}
   {"
 icon: "Zap",text: "Early access&quot];
 onSubscribe);
 }) => {;
 const [email, setEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);"
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false)"
 const handleSubmit = async (e: "React.FormEvent) => {;
 e.preventDefault();
-    if (!email) return setIsSubmitting(true);"
+    if (!email) return setIsSubmitting(true);
 try { // Simulate API call"
 await new Promise(resolve => setTimeout(resolve",1000));
       if(onSubscribe) {;
 onSubscribe(email), }
       }
       setIsSubscribed(true);
-      setEmail('');"
+      setEmail('');
     } catch(error) {";'"
 console.error('Subscription failed: "'",error);
     } finally {;
@@ -69,7 +69,7 @@ value={email});
               placeholder = {placeholder}"
 className="flex-1 px-4 py-3 rounded-lg bg-slate-800 border border-slate-600 text-white placeholder-gray-400 focus: "outline-none focus:ring-2 focus:ring-emerald-500 focu",s: border-transparent"
 required;
-            /></input>;"
+            /></input>;
             <button"
 type="submit"
 disabled={isLoading}"
@@ -77,14 +77,14 @@ disabled={isLoading}"
               {isLoading ? 'Subscribing...' : buttonText}</button>
               <ArrowRight className="ml-2 h-4 w-4" /  />;
             </button>
-        </form>;"
+        </form>;
         {isSubscribed && (,"
     <div className="mt-4 p-4 bg-emerald-600/20 border border-emerald-500/50 rounded-lg" />"
             <p className="text-emerald-400 flex items-center justify-center" / />"
               <CheckCircle className="h-5 w-5 mr-2"  />;
 Thank you for subscribing!</CheckCircle>;
             </p>
-);"
+);
         )},"
     <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mt-8"  />"
           {features.map((feature,index) => ("

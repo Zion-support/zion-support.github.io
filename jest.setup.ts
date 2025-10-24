@@ -1,6 +1,5 @@
-import { TextEncoder, TextDecoder } from 'util";"
-import '@testing-library/jest-dom";"
-"
+import { TextEncoder, TextDecoder } from 'util;
+import '@testing-library/jest-dom;
 // Mock window.matchMedia"'"
 Object.defineProperty(window, 'matchMedia", {
   writable: true,
@@ -14,7 +13,7 @@ Object.defineProperty(window, 'matchMedia", {
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn(),
   })),
-});"
+});
 "
 // Mock URL.revokeObjectURL"'"
 if (typeof URL.revokeObjectURL === 'undefined") {"'"
@@ -22,7 +21,7 @@ if (typeof URL.revokeObjectURL === 'undefined") {"'"
     writable: true,
     value: jest.fn(),
   });
-}"
+}
 "
 // Mock window.scrollTo"'"
 if (typeof window.scrollTo === 'undefined") {"'"
@@ -31,7 +30,6 @@ if (typeof window.scrollTo === 'undefined") {"'"
     value: jest.fn(),
   });
 }
-
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
@@ -39,7 +37,6 @@ global.IntersectionObserver = class IntersectionObserver {
   observe() {}
   unobserve() {}
 } as any;
-
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
   constructor() {}
@@ -47,10 +44,9 @@ global.ResizeObserver = class ResizeObserver {
   observe() {}
   unobserve() {}
 };
-
 // Mock TextEncoder and TextDecoder
 global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder as any;"
+global.TextDecoder = TextDecoder as any;
 "
 // Mock Next.js router"'"
 jest.mock('next/router", () => ({"
@@ -74,7 +70,7 @@ jest.mock('next/router", () => ({"
       isFallback: false,
     };
   },
-}));"
+}));
 "
 // Mock Next.js navigation"'"
 jest.mock('next/navigation", () => ({
@@ -89,12 +85,12 @@ jest.mock('next/navigation", () => ({
     };
   },
   useSearchParams() {
-    return new URLSearchParams();"
+    return new URLSearchParams();
   },"
   usePathname() {"'"
-    return '/";
+    return '/;
   },
-}));"
+}));
 "
 // Mock framer-motion"'"
 jest.mock('framer-motion", () => ({"
@@ -126,13 +122,13 @@ jest.mock('framer-motion", () => ({"
   useSpring: () => ({ get: jest.fn(), set: jest.fn() }),
   useScroll: () => ({ scrollY: { get: jest.fn() } }),
   useViewportScroll: () => ({ scrollY: { get: jest.fn() } }),
-}));"
+}));
 "
 // Mock react-helmet-async"'"
 jest.mock('react-helmet-async", () => ({
   Helmet: ({ children }: { children: React.ReactNode }) => children,
   HelmetProvider: ({ children }: { children: React.ReactNode }) => children,
-}));"
+}));
 "
 // Mock web-vitals"'"
 jest.mock('web-vitals", () => ({
@@ -141,6 +137,6 @@ jest.mock('web-vitals", () => ({
   getFCP: jest.fn(),
   getLCP: jest.fn(),"
   getTTFB: jest.fn(),"
-}));"'"
+}));
 ";'"
 >>>>>>> cursor/fix-errors-and-merge-to-main-eb70

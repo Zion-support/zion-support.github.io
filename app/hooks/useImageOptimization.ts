@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react"
-
 interface UseImageOptimizationOptions {
   src: string
   placeholder?: string"
@@ -7,7 +6,6 @@ interface UseImageOptimizationOptions {
   quality?: number"'"
   format?: 'webp' | 'avif' | 'jpeg' | 'png"
 }
-
 export const useImageOptimization = ({
   src,
   placeholder,"
@@ -18,7 +16,6 @@ export const useImageOptimization = ({
   const [imageSrc, setImageSrc] = useState(placeholder || '")
   const [isLoaded, setIsLoaded] = useState(false)
   const [isInView, setIsInView] = useState(!lazy)
-
   useEffect(() => {
     if (!lazy || isInView) {
       const img = new Image()
@@ -27,10 +24,8 @@ export const useImageOptimization = ({
         setIsLoaded(true)}
       img.src = src}
   }, [src, lazy, isInView])
-
   useEffect(() => {
     if (!lazy) return
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -46,7 +41,6 @@ export const useImageOptimization = ({
       observer.observe(element)}
     return () => observer.disconnect()
   }, [src, lazy])
-
   return {
     imageSrc,
     isLoaded,

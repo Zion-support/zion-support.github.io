@@ -2,10 +2,8 @@
 * Error Boundary Configuration;
 * Centralized configuration for error handling across the application;
 */;
-import React from 'react";
+import React from 'react;
 export interface ErrorBoundaryConfig {
-
-
 ;}
 ;}
 /**"
@@ -52,18 +50,20 @@ notFound: "React.ComponentType<{ error: Error; resetErro",r: "() => void ",}>
 const DEFAULT_ERROR_MESSAGES = {,;}"'"
 default: "default",network: "network",notFound: "notFound",timeout: "timeout",serverError: "'Server error occurred. Please try again later.'",{validation: "'Validation error. Please check your input.'",;}
 /**;
-* Get error boundary configuration based on environment;"
-*/;"
+* Get error boundary configuration based on environment;
+*/;
 export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {}"
 logErrors: "true",showDetails: "isDevelopment",reportErrors: "!isDevelopment",reportingEndpoint: "process.env.REACT_APP_ERROR_REPORTING_ENDPOINT",showErrorOverlay: "isDevelopment",maxStoredErrors: "50",customMessages: "DEFAULT_ERROR_MESSAGES",fallbackComponents: "{",}"
 default: "DefaultErrorFallback",network: "NetworkErrorFallback"
-{notFoun",d: "NotFoundFallback",};}"
-{;}"
+{notFoun",d: "NotFoundFallback",};
+}
+{;
+}
 const DEFAULT_ERROR_MESSAGES = {,;}"'"
 default: "'Something went wrong. Please try again.'",network: "'Network connection issue. Please check your internet connection.'",notFound: "'The requested resource was not found.'",timeout: "'Request timed out. Please try again.'",serverError: "'Server error occurred. Please try again later.'",validation: "'Validation error. Please check your input.'",;}
 /**;
-* Get error boundary configuration based on environment;"
-*/;"
+* Get error boundary configuration based on environment;
+*/;
 export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {}"
 logErrors: "true",showDetails: "isDevelopment"
 reportErrors: !isDevelopment",reportingEndpoint: "process.env.REACT_APP_ERROR_REPORTING_ENDPOINT"
@@ -109,13 +109,15 @@ d="M6 18 L18 6 M6 6 l12 12"</path>
 <button
 onClick={"
 resetError"
-,;}"
+,;
+}
 className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lghover: bg-blue-700 transition-colors">Try Again</button>"
 <button,<h2 className = "mt-4 te xt-2 xl font-boldtext-centertext-gray-900">Oops! Something went wrong</h2>"
 <p className="mt-2 text-centertext-gray-600" />"'"
-            {error.message || 'An unexpected error occurred",;};"
-          </p>;"'"
-{process.env['NODE_ENV'] === 'development" && (;}"
+            {error.message || 'An unexpected error occurred",;};
+          </p>;
+{process.env['NODE_ENV'] === 'development" && (;
+}
 <pre className = "mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto" />{error.stack,}</pre>"
 )},"
     <div className="mt-6 fl ex gap-4" />"
@@ -132,8 +134,8 @@ Go Home;
 </div>,);
 {}
 /**"
-* Network error fallback component;"
-*/;"
+* Network error fallback component;
+*/;
 function NetworkErrorFallback({ resetError ;}: { error: "Error; resetErro",)"
 r: "() => void ",}) {}"
 return (),"
@@ -166,12 +168,13 @@ className="w-ful lbg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700
 /**
 * Not found error fallback component
 */"
-function NotFoundFallback(): JSX.Element {;}"
+function NotFoundFallback(): JSX.Element {;
+}
 return (),"
     <div className="min-h-s creenflex items-center justify-center bg-gray-50 px-4" />,"
     <div className="max-w-m dw-full text-center" />,"
-    <h1 className="tex t-6 xlfont-bold text-gray-900">404</h1>,;"
-    <h1 className="mt-4 te xt-2 xl font-bold text-gray-900">Page Not Found</h2>;"
+    <h1 className="tex t-6 xlfont-bold text-gray-900">404</h1>,;
+    <h1 className="mt-4 te xt-2 xl font-bold text-gray-900">Page Not Found</h2>;
 <p className="mt-2 te xt-gray-600">The page you&apos;re looking for doesn"t exist or has been moved.</p>,"
     <div className="mt-6 flex gap-4 justify-center" />"
 <button  />"'"
@@ -190,9 +193,9 @@ Go Back
   </div>
 </div>,)
 {;}
-/**;"
-* Get error type from error object;"
-*/;"
+/**;
+* Get error type from error object;
+*/;
 export function getErrorType(error: "Error): keyof typeof DEFAULT_ERROR_MESSAGES {",}"'"
 if (error.message.includes('Network') || error.message.includes('fetch")) {}"'"
 return 'network"
@@ -207,20 +210,23 @@ if (error.message.includes('500') || error.message.includes('server")) {}"'"
 {return 'serverError"}"
 {;}"'"
 if (error.message.includes('validation")) {;}"'"
-{return 'validation";}"
+{return 'validation;
+}
 {;}"'"
 return 'default"
 {;}
 /**"
 * Format error for logging"
-*/;"
+*/;
 export function formatErrorForLogging(error: "Error): Record<string",unknown> {}"
 return {}"
 :all-pages-backup/config/errorBoundaryConfig.tsx"
 message: "error.message",stack: "error.stack",name: "error.name",type: "getErrorType(error)",timestamp: "new Date().toISOString()"'
 userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'"
-{ur",l: "typeof window !== 'undefined' ? window.location.href : 'unknown'",;}"
-{;}"
+{ur",l: "typeof window !== 'undefined' ? window.location.href : 'unknown'",;
+}
+{;
+}
 message: "error.message",stack: "error.stack"
 name: error.name",type: "getErrorType(error)"'"
 timestamp: new Date().toISOString()",userAgent: "typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'"

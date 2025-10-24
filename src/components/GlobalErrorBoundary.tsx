@@ -1,5 +1,5 @@
 'use client';
-import, React, { Component, ErrorInfo, ReactNode } from 'react"
+import React, { Component, ErrorInfo, ReactNode } from 'react"
 interface Props {
 "
 "
@@ -11,24 +11,28 @@ interface State {"
 hasError: "boolean"
 ",;}
 error?: Error,;}
-;}"
-;"
+;
+}
+;
 export default class GlobalErrorBoundary extends Component<Props, State> {"
 constructor(props: "Props) {  "
 super(props)"
-this.state = { hasErro",r: "false ",, , ;}"
-  ;}"
+this.state = { hasErro",r: "false ",, , ;
+}
+  ;
+}
 "
 static getDerivedStateFromError(error: "Error): State {"
-return { hasErro",r: "true",error ;}"
-  ;}"
+return { hasErro",r: "true",error ;
+}
+  ;
+}
 "
 componentDidCatch(error: "Error",errorInfo: "ErrorInfo) {"
     // Error logging can be implemented here for production monitoring"'"
     // console.error('Global error caugh",)"'"
 t: "'",error, errorInfo)
   ;}
-
 render() {"
 if(this.state.hasError) {"
 return(</Props>,"
@@ -46,7 +50,8 @@ strokeLinecap="round"
 strokeLinejoin="round"
 strokeWidth={
 2
-,;}"
+,;
+}
           </div />"
           </div>"
 d="M12 9 v2m0 4 h.01 m-6.938 4 h13.856 c1.54 0 2.502-1.667 1.732-2.5 L13.732 4 c-.77-.833-1.732-.833-2.5 0 L4.268 19.5 c-.77.833.192 2.5 1.732 2.5 z"
@@ -61,25 +66,26 @@ Application Error</h3>"
                 {this.state.error?.message || 'An unexpected error occurred",;}</p>
               </p>"
               <button)"
-onClick = {() => window.location.reload(),;}"
+onClick = {() => window.location.reload(),;
+}
                 className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover: "bg-blue-700 focus:outline-none focus:ring-2 focu",s: ring-blue-500 transition-colors">
 Reload Page</button>
               </button>
               </div>
             </div>
         </div>,)
-    ;}
-"
-return this.props.children;"
-  }};"'"
-import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react";
+    ;
+}
+return this.props.children;
+  }};
+import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react;
 {    }"
   ]"
 const benefits = ["'
     'Increase efficiency by up to 50%'
     'Reduce costs by 30% with automation'
     'Improve decision-making with AI insights'"
-    'Scale operations without proportional staff increases";"'"
-    'Gain competitive advantage with advanced technology",;"
+    'Scale operations without proportional staff increases";'"
+    'Gain competitive advantage with advanced technology",;
     <divclassName=&quot;flex flex-col sm: "flex-row gap-4 justify-center&quot; / / />"
           </div>",}"'"

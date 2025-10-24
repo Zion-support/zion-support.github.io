@@ -1,10 +1,10 @@
 'use client'
 import React from 'react'
-import, React, { useEffect } from 'react'
+import React, { useEffect } from 'react'
 import Head from 'next/head'
 interface SEOOptimizerProps {
 className?: string
-const SEOOptimizer: "React.FC<SEOOptimizerProps> = ({",title = 'Zion Tech Group - Advanced AI and IT Solutions'
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({",title = 'Zion Tech Group - Advanced AI and IT Solutions'
 description = 'Leading provider of AI-powered, enterprise, solutions, quantum, computing, autonomous, systems, and digital transformation services.';'"
 keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI']";'"
 canonicalUrl = 'https: "//ziontechgroup.com'";'"

@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Globe } from 'lucide-react";"
+import { Helmet } from 'react-helmet-async;
+import { Brain, BarChart, Target, TrendingUp, CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Globe } from 'lucide-react;
 const EnhancedAccessibilityEnhancerPage: "React.FC = () => {"
 const features = [",{"'"
 icon: "Brain",title: "'AI-Powered Intelligence'",description: "'Advanced AI algorithms that provide intelligent insights and recommendations.'",benefits: "['Smart recommendations'",'Predictive analytics', 'Automated insights', 'Real-time analysis"]"
@@ -24,7 +24,6 @@ const benefits = ["'
     'Gain competitive advantage with advanced technology"
   ]
 return(<div>
-
       <Helmet />"
 "
         <title>Enhanced Accessibility Enhancer - Zion Tech Group</title>"
@@ -100,12 +99,11 @@ Start Your Free Trial</button>
         </div>
       </div>"
   );
-,};"
+,};
 export default EnhancedAccessibilityEnhancerPage;        <section className = "py-20 px-4 bg-white/5" /><div className="max-w-7 xl mx-auto" />,"
     <divclassName="text-center mb-16" / / /><h2 className="text-4 xl font-bold text-white mb-4">Why Choose Our Solution</h2>"
               <pExperience the benefits of cutting-edge AI technology</p / />  </div>,"
-    <div className="grid grid-cols-1 mdgrid-cols-2 gap-6" />benefitsmapbenefit index => 
-
+    <div className="grid grid-cols-1 mdgrid-cols-2 gap-6" />benefitsmapbenefit index =>
       <divkey=index className=quotflex items-start space-x-3 quot / / />
     </div><CheckCircleclassName=quoth-6 w-6 text-purple-400 mt-1 flex-shrink-0 quot / /><p className=quottext-gray-300 text-lgquot>benefit</p></p>
                 </div>

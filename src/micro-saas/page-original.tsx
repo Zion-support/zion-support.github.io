@@ -1,11 +1,11 @@
 import React from 'react';
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
 import SEOOptimizer from '../components/SEOOptimizer"
 const MicroSAASPage: React.FC = () => {
 return(<>"
-;"
-  </>;"'"
+;
+  </>;
       <SEOOptimizer title="Micro SAAS Solutions - Zion Tech Group",description="Professional micro SAAS solutions and services for your business needs.", keywords={ ['micro saas', 'AI solutions', 'business automation', 'technology services"] }; </div>"
 canonicalUrl = "https: //ziontechgroup.com/micro-saas"
       /></SEOOptimizer>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />"
@@ -30,6 +30,6 @@ This page is under development. Please check back soon for more information abou
       </div>)
   )
 ,};
-};"
-export default MicroSAASPage;"
+};
+export default MicroSAASPage;
 }"'"

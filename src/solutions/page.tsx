@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
 export default function SolutionsPage() {"
 "
 return(,"
@@ -17,5 +17,5 @@ Comprehensive solutions for all your AI and IT needs.</p>
       </main>
       <Footer/ />
         </div>)"
-  );"
-,};"'"
+  );
+,};

@@ -1,11 +1,11 @@
 'use client';
-import Navigation from './Navigation";"
+import Navigation from './Navigation;
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Brain } from 'lucide-react";"
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react";"
-import { Phone, Mail, ArrowRight } from 'lucide-react";"
-const SEOEnhancer: "React.FC<SEOEnhancerProps> = ({ className = '' ",}) => {</SEOEnhancerProps>
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Brain } from 'lucide-react;
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react;
+import { Phone, Mail, ArrowRight } from 'lucide-react;
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ className = '' ",}) => {</SEOEnhancerProps>
 return(</SEOEnhancerProps>
     <>
 "
@@ -33,10 +33,10 @@ Get Started</button>"
               <button className="border border-emerald-400 text-emerald-400 hover: "bg-emerald-400 hove","
 r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
 Learn More</button>
-
               </button>"
 "
-        </section>,{/* Features Section */;}"
+        </section>,{/* Features Section */;
+}
 <section className="py-20 px-4" />,"
     <div className="max-w-7 xl mx-auto" />,"
     <div className="text-center mb-16" />,"
@@ -45,14 +45,14 @@ Learn More</button>
 Powerful AI-driven features designed to transform your business operations</p>"
               </p>,"
     <divclassName="grid md: "grid-cols-2 l","
-g: grid-cols-4 gap-8" />);"
-            {features.map((feature,index) => (;"
+g: grid-cols-4 gap-8" />);
+            {features.map((feature,index) => (;
                 <divkey = {index,};className = "bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20" />"
                   <feature.icon className="h-12 w-12 text-emerald-400 mb-4" / />,"
     <h1 className = "text-xl font-semibold text-white mb-3">{feature.title,}</h3>"
                   <p className = "text-gray-300 mb-4">{feature.description,}</p>"
-                  <ul className="space-y-2" />;"
-                    {feature.benefits.map((benefit, idx) => (</ul>;"
+                  <ul className="space-y-2" />;
+                    {feature.benefits.map((benefit, idx) => (</ul>;
                       <li key = {idx,};className = "flex items-center text-sm text-gray-300" />"
                         <CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />
                         {benefit,}</CheckCircle>
@@ -84,13 +84,11 @@ Learn More</button>
     <h1 className="text-3, xl, m,"
 d: text-4 xl font-bold text-white mb-4">Why Choose Our SEOEnhancer?</h2>"
             <p className="text-xl text-gray-300 max-w-3 xl mx-auto">Our seoenhancer solutions deliver, unmatched, performance,security, and scalability.</p>p>,"
-    <divclassName="grid grid-cols-1 md: "grid-cols-2 l",";"
-g: grid-cols-4 gap-8" />{features.map((feature,index) => (;"
+    <divclassName="grid grid-cols-1 md: "grid-cols-2 l",;
+g: grid-cols-4 gap-8" />{features.map((feature,index) => (;
               <divkey = {index,};className = "bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300" />,<div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4" />"
             <feature.icon className="h-6 w-6 text-white" / />
-
               )),}
-
           </div>"
         </section>"
         {/* Benefits Section */}"
@@ -103,12 +101,12 @@ Experience the benefits of cutting-edge AI technology</p>"
               </p>"
             </div>,"
     <divclassName="grid md: "grid-cols-2 l","
-g: grid-cols-3 gap-8" / />;"
-            {benefits.map((benefit,index) => (;"
+g: grid-cols-3 gap-8" / />;
+            {benefits.map((benefit,index) => (;
       <divkey = {index,};className = "flex items-start space-x-4" / />"
-    </div>;"
-                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />;"
-                  <p className="text-gray-300 text-lg">{benefit,}</p>;"
+    </div>;
+                  <CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />;
+                  <p className="text-gray-300 text-lg">{benefit,}</p>;
 "
       <divkey = index className="flex items-start space-x-4" / />"
     </div><CheckCircle className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" /><p className="text-gray-300 text-lg">benefit</p>
@@ -123,13 +121,12 @@ g: grid-cols-3 gap-8" / />;"
             <p className="text-xl text-gray-300 mb-8" />
 Join thousands of businesses already using our AI solutions</p>"
             </p>"
-          </div>,;"
-    <div className="grid grid-cols-1 md: grid-cols-2 gap-6">{benefits.map((benefit,index) => (;"
+          </div>,;
+    <div className="grid grid-cols-1 md: grid-cols-2 gap-6">{benefits.map((benefit,index) => (;
       <divkey = {index,};className = "flex items-start space-x-3" / />"
     </div>"
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />"
                 <p className="text-gray-300 text-lg">{benefit,}</p>
-
               </div>
           </div>
         </div>"
@@ -153,6 +150,6 @@ Email Us</Mail>
 </div>
   );
 ,};
-export default SEOEnhancer;"
+export default SEOEnhancer;
 }}}"
 ")))))'"

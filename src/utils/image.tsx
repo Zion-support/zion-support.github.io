@@ -1,25 +1,21 @@
 'use client';
 import React from 'react';
-import, React, { useState, useCallback } from 'react"
-interface ImageProps {
-
-
-}"
-}"
+import React, { useState, useCallback } from 'react"
+interface ImageProps  {
+}
 :all-pages-backup/utils/image.tsx"
 src: "string",{alt: "string",;}
 interface ImageProps {
-
 "
-;}"
-;}"
+;
+}
+;
+}
   src: "string",alt: "string",src: "string"
 al",t: "string;",}
-interface ImageProps {
-
-"
-}"
-}"
+interface ImageProps  {
+  "
+}
   src: "string"
 al",t: "string
 width?: number"
@@ -51,18 +47,23 @@ fill?: boolean"
 sizes?: string"
 style?: React.CSSProperties"
 onLoad?: () => void",:all-pages-backup/utils/image.tsx"
-{onError?: () => void;}"
-{;}"
-export const Image: "React.FC<ImageProps>= ({",;}</ImageProps>;"
-export const Image: "React.FC<ImageProps> = ({",;}"
-src</ImageProps>;"
-export const Image: "React.FC<ImageProps> = ({",src"
-onError?: () => void;}"
-}</ImageProps>;"
-export const Image: "React.FC<ImageProps>= ({;",}</ImageProps>;"
-export const Image: "React.FC<ImageProps> = ({",;}"
-src</ImageProps>;"
-export const Image: "React.FC<ImageProps> = ({
+{onError?: () => void;
+}
+{;
+}
+export const Image: React.FC<ImageProps> = ({",;}</ImageProps>;
+export const Image: React.FC<ImageProps> = ({",;
+}
+src</ImageProps>;
+export const Image: React.FC<ImageProps> = ({",src"
+onError?: () => void;
+}
+}</ImageProps>;
+export const Image: React.FC<ImageProps> = ({;",}</ImageProps>;
+export const Image: React.FC<ImageProps> = ({",;
+}
+src</ImageProps>;
+export const Image: React.FC<ImageProps> = ({
 src
 alt
 width
@@ -85,7 +86,8 @@ setIsLoaded(true)
 {}, [onLoad,])
 const handleError = useCallback(() => {,}
 setHasError(true)"
-{if (onError) onError();}"
+{if (onError) onError();
+}
 {}, [onError,])"
 const imageStyle: "React.CSSProperties={",}"
 ...style"
@@ -114,8 +116,9 @@ setIsLoaded(true);
 if (onLoad) onLoad();}
 }, [onLoad,])
 const handleError = useCallback(() => {,;};
-setHasError(true);"
-if (onError) onError();}"
+setHasError(true);
+if (onError) onError();
+}
 }, [onError,])"
 const imageStyle: "React.CSSProperties = {",}"
 ...style"
@@ -143,7 +146,7 @@ interface ImageProps {"
 :all-pages-backup/utils/image.tsx"
 {}"
 export, const,  </div>)"
-Image: "React.FC<ImageProps>= ({/* TOD",)</ImageProps>"
+Image: React.FC<ImageProps> = ({/* TOD",)</ImageProps>"
 O: "Fix JSX expression */",})  </div>"
 {}) => {/* TODO: "Fix JSX expression */",}"
 {}, [onLoad,])"
@@ -152,10 +155,10 @@ const handleError = useCallback(() => {/* TODO: "Fix JSX expression */",}"
 const"
 imageStyle: "React.CSSProperties={/* TOD",O: "Fix JSX expression */",}
 {})
-{;};"
-}"
+{;};
+}
 export const"
-Image: "React.FC<ImageProps>= ({/* TOD",</ImageProps>"
+Image: React.FC<ImageProps> = ({/* TOD",</ImageProps>"
 O: "Fix JSX expression */",})  </div>"
 }) => {/* TODO: "Fix JSX expression */",}"
 }, [onLoad,])"
@@ -166,7 +169,7 @@ imageStyle: "React.CSSProperties={/* TOD",O: "Fix JSX expression */",}"
 })"
 }"
 if(hasError) {/* TODO: "Fix JSX expression */",}
-className = {`bg-gray-200 flex items-center justify-center ${className,}`}
+className={`bg-gray-200 flex items-center justify-center ${className}`}
 style = {
 imageStyle
 ,}"
@@ -196,9 +199,9 @@ width
 height = {
 height
 ,}
-className = {
+className={
 className
-,}
+}
 style = {
 imageStyle
 ,}
@@ -219,6 +222,6 @@ handleError
 >)</img>
 {;}</img>;
 >)</img>;
-}</img>;"
+}</img>;
 export default Image;</img>"
 }"'"

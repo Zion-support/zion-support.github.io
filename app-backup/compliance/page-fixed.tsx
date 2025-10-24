@@ -1,7 +1,7 @@
 import React from 'react';
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react;
 'use client';'"
     "title": 'AI-Powered Analysis'"
       "description": 'Advanced AI algorithms provide intelligent insights and recommendations.'"
@@ -13,5 +13,5 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
       "description": 'Target specific goals and objectives with precision and accuracy.'"
     "benefits": ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics'"
     "title": 'Growth Optimization'"
-      "description": 'Optimize your business growth with data-driven strategies.";"'"
+      "description": 'Optimize your business growth with data-driven strategies.";'"
     "benefits": ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'"

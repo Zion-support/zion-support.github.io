@@ -1,9 +1,9 @@
 import React from 'react';
-import { Play } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
-import SEOOptimizer from '../components/SEOOptimizer";"
-import { CheckCircle, Camera, Zap } from 'lucide-react";"
+import { Play } from 'lucide-react;
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
+import SEOOptimizer from '../components/SEOOptimizer;
+import { CheckCircle, Camera, Zap } from 'lucide-react;
 const AI3 DGenerationPage: "React.FC = () => {",const features = ["'
     '3 D Model Generation'
     'Animation Creation'
@@ -36,8 +36,8 @@ name: "'Enterprise'",price: "'$999'",period: "'/month'",features: "['Everything 
 popular: "false",;}
   ]
 return(<>"
-;"
-  </>;"'"
+;
+  </>;
       <SEOOptimizer title="AI 3 D Generation Studio - Create 3 D Models & Animations with AI | ZionTechGroup" description="Create professional 3, D, models, animations, and virtual environments with AI 3 D Generation Studio. No 3 D, skills, needed, starting at $299/month." keywords={ ['AI 3 D generation', '3 D models', '3 D animation', 'VR AR content', '3 D automation', 'AI 3 D"] ;}; </div>"
 canonicalUrl = "https: //ziontechgroup.com/ai-3 d-generation"
       /></SEOOptimizer>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />"
@@ -114,7 +114,7 @@ Simple, Transparent Pricing</h2>"
             </h2>,"
     <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6 xl mx-auto" />"
               {pricingPlans.map((plan,index) => (  "'"
-      <divkey = {index,} className = {`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : '",}`} / />"
+      <divkey = {index,} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : '"}`} / />"
     </div>"
                   {plan.popular && (  </div>,"
     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2" />,"
@@ -146,7 +146,7 @@ className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all
 plan.popular"
                         ? "cyber-button"
                         : "border-2 border-cyan-400 text-cyan-400 hover: "bg-cyan-400 hove",r: text-slate-900"
-                    ,}`}
+                    }`}
                    />
 Get Started</a>
                   </a>
@@ -154,7 +154,8 @@ Get Started</a>
               ))}
               </div>"
           </section>"
-          {/* CTA Section */;}"
+          {/* CTA Section */;
+}
           <section className="text-center mb-16" />,"
     <div className="cyber-card p-12 max-w-4 xl mx-auto" />,"
     <h1 className="text-3 xl font-bold text-white mb-4 neon-text" /></h2>"
@@ -184,6 +185,6 @@ className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 p
         </div>
     </div>,);
 };
-;"
+;
 export default AI3; DGenerationPage"
 }"'"

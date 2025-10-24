@@ -4,7 +4,6 @@ return(<div>
         <title>ServiceCardSkeleton</title>
         <meta name="description" content="Advanced ServiceCardSkeleton solution for modern businesses." / />"
         <meta name="keywords" content="AI,artificial, intelligence, ServiceCardSkeleton, AI, solutions, intelligent automation" / />
-
       </Helmet>"
     </div>"
       <Navigation/ />,"
@@ -25,7 +24,6 @@ Get Started</button>"
               <button className="border border-emerald-400 text-emerald-400 hover: "bg-emerald-400 hove","
 r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
 Learn More</button>
-
               </button>"
 "
         </section>,{/* Features Section */}"
@@ -55,7 +53,8 @@ g: grid-cols-4 gap-8" />,<div className="bg-white/10 backdrop-blur-sm rounded-lg
                 </div>
               </div>"
             </div>"
-        </section>,{/* CTA Section */;}"
+        </section>,{/* CTA Section */;
+}
 <section className="py-20 px-4" />,"
     <div className="max-w-4 xl mx-auto text-center" />,"
     <h1 className="text-4 xl font-bold text-white mb-6">Ready to Get Started?</h2>"
@@ -71,6 +70,6 @@ Start Your Free Trial</button>
       </Footer>
     </div>)
   );
-,}  )};"
-export default ServiceCardSkeleton;"
-}"
+,}  )};
+export default ServiceCardSkeleton;
+}

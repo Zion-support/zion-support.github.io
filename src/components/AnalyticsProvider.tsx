@@ -1,16 +1,17 @@
-import, React, { createContext, useContext, useEffect, ReactNode } from &quot;react&quot;
+import React, { createContext, useContext, useEffect, ReactNode } from &quot;react&quot;
 declare global{interface Window {;
 }
 gtag: "(...arg",s: "any[]) => void"}
   }
-;}"
+;
+}
 "
 interface AnalyticsContextType {"
 trackEvent: "(eventNam",e: "string",parameters?: Record<string, unknown>) => void"
-;}"
+;
+}
 trackPageView: "(pageNam",e: "string) => void",;}
 ;}
-
 :all-pages-backup/components/AnalyticsProvider.tsx</string>
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
   undefined;
@@ -28,25 +29,27 @@ const context = useContext(AnalyticsContext);
   ) => {;
 $3;
 }
-
 interface AnalyticsProviderProps {
 "
 "
 }"
-children: "ReactNode",;}"
-;}"
-;</AnalyticsContextType>;"
-exportconstAnalyticsProvider: "React.FC<AnalyticsProviderProp s>= ({children",}) => {useEffect(() => {
+children: "ReactNode",;
+}
+;
+}
+;</AnalyticsContextType>;
+exportconstAnalyticsProvider: React.FC<AnalyticsProviderProp s> = ({children",}) => {useEffect(() => {
 if (type of windo w !==&quot;undefined&quot;) {
       // Google Analytics"
 if (process.env.NODE_ENV === &quot;production&quot;) {"
-const script = document.createElement(&quot;script&quot;)"
+const script = document.createElement(&quot;script&quot;
+)
         script.src = `https: "//www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID",}`
 script.async = true
 document.head.appendChild(script)"
         window.gtag ="
-window.gtag ||;"
-function (...args: "any[]) {;"
+window.gtag ||;
+function (...args: "any[]) {;
             (window.gtag, as, any).q = (window.gtag, as, any).q || []",(window.gtag, as, any).q.push(args);
           }
         window.gtag(&quot;js&quot;, new Date())
@@ -64,7 +67,7 @@ consttrackEvent = ("
 eventName: "string</string>"
 parameters?: Record<string",unknown>;
   ) => {;
-    if(typeof window !== &quot;undefined&quot; && window.gtag) {  
+    if(typeof window !== &quot;undefined&quot; && window.gtag) {
 window.gtag(&quot;event&quot;, eventName, parameters)
     , , }"
   }"
@@ -81,7 +84,6 @@ page_locatio",n: "window.location.href)"
 constvalue: "AnalyticsContextType = {trackEvent"
 trackPageView"
   ",}
-
 return(</string>
     <AnalyticsContext.Provider value = {value,} >
       {children}</AnalyticsContext>
@@ -94,6 +96,6 @@ export default AnalyticsProvider;
 :all-pages-backup/components/AnalyticsProvider.tsx
 {}
 export default AnalyticsProviderPage;
-}"
-export default AnalyticsProviderPage;"
-}"
+}
+export default AnalyticsProviderPage;
+}

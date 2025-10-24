@@ -1,11 +1,11 @@
 'use client"
-:all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx;"'"
-import { Brain, BarChart, Target, TrendingUp } from 'lucide-react";"
-import Navigation from './Navigation";"
-import, React, { useEffect, useState, useCallback } from "react";"
-import { BarChart, Brain, TrendingUp, Target } from 'lucide-react";"
-import Navigation from './Navigation";"
-import, React, { useEffect, useState, useCallback } from 'react"
+:all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx;
+import { Brain, BarChart, Target, TrendingUp } from 'lucide-react;
+import Navigation from './Navigation;
+import React, { useEffect, useState, useCallback } from "react;
+import { BarChart, Brain, TrendingUp, Target } from 'lucide-react;
+import Navigation from './Navigation;
+import React, { useEffect, useState, useCallback } from 'react"
 interface AdvancedAccessibilityEnhancerProps {
 enableKeyboardNavigation?: boolean
 enableScreenReader?: boolean
@@ -22,9 +22,9 @@ enableVoiceNavigation?: boolean
 }"
 "
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx"
-constAdvancedAccessibilityEnhancer: "React.FC<AdvancedAccessibilityEnhancerProp s>= ({enableKeyboardNavigation = true"
+constAdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProp s> = ({enableKeyboardNavigation = true"
 constAdvancedAccessibilityEnhance",</AdvancedAccessibilityEnhancerProp>"
-r: "React.FC<AdvancedAccessibilityEnhancerProp s>= ({enableKeyboardNavigation = true
+r: React.FC<AdvancedAccessibilityEnhancerProp s> = ({enableKeyboardNavigation = true
 enableScreenReader= true
 enableHighContrast= true
 enableFocusManagement= true
@@ -65,8 +65,8 @@ const handleMotionChange = ("
       setAccessibilitySettings(prev => ({ ...prev",reducedMotion: "e.matches ",) => {
 $3
 ;}))"
-    ;};"
-;"
+    ;};
+;
 const handleContrastChange = (;,setAccessibilitySettings(prev = > ({ ...prev, highContrast: "e.matches ",) => {
 $3
 }))"
@@ -123,7 +123,8 @@ titl",e: "'Growth Optimization'",description: "'Optimize your business growth wi
 if (accessibilitySettings.reducedMotion) {"'"
 root.classList.add('reduced-motion")"'"
     ;} else { root.classList.remove('reduced-motion"), ;}
-    ;}"
+    ;
+}
 "
     // Apply font scaling"'"
 root.style.setProperty('--font-scale', accessibilitySettings.fontSize = == 'large' ? '1.2' : '1")
@@ -136,8 +137,8 @@ consthandleKeyDown= (event: "KeyboardEvent) => {"
 "
       // Skip to main content"'"
 if(event.key === 'Tab" && event.shiftKey && event.target === document.body) {  "'"
-const skipLink = document.querySelector('[data-skip-link,]") as HTMLElement;"
-if (skipLink) {;"
+const skipLink = document.querySelector('[data-skip-link,]") as HTMLElement;
+if (skipLink) {;
 skipLink.focus();",event.preventDefault();
         , , }
       }"
@@ -149,11 +150,10 @@ if (activeElement && activeElement.hasAttribute('data-close-on-escape")) {
 activeElement.click()
         ,, , ;}
       ;}
-
 :all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx"
       // Arrow keys for menu navigation"
-      // Arrow keys for menu navigation;"'"
-      if(event.key === 'ArrowDown' || event.key === 'ArrowUp") {  ;"'"
+      // Arrow keys for menu navigation;
+      if(event.key === 'ArrowDown' || event.key === 'ArrowUp") {  ;
         const menu = document.querySelector('[role=&quot;menu&quot;]") as HTMLElement"
 if (menu && menu.contains(event.target, as, Node)) {"
 event.preventDefault()"'"
@@ -187,15 +187,14 @@ const announcePageChange = ("'"
 $3
 ,, , ;}
     ;}
-
     // Listen for route changes (if using client-side, routing)
 const originalPushState = history.pushState
 const originalReplaceState = history.replaceState"
 history.pushState = function(...args) {"
 originalPushState.apply(history, args)"'"
       announcePageChange('Page changed")
-    ;}
-"
+    ;
+}
 history.replaceState = function(...args) {"
 originalReplaceState.apply(history, args)"'"
       announcePageChange('Page updated")
@@ -205,8 +204,8 @@ originalReplaceState.apply(history, args)"'"
   // Focus management"
   const setupFocusManagement = useCallback(() => {"'"
     if (typeof window === 'undefined') return // Trap focus in modals: "all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx"
-const trapFocus = (;"
-    const trapFocus = (elemen",t: "HTMLElement) => {;"
+const trapFocus = (;
+    const trapFocus = (elemen",t: "HTMLElement) => {;
       const focusableElements = element.querySelectorAll(;)"'"
         'button",[href,], input, select, textarea, [tabindex,]:not([tabindex=&quot;-1&quot;])",</AdvancedAccessibilityEnhancerProp>
       ) as NodeListOf<HTMLElement>"
@@ -214,13 +213,13 @@ const firstElement = focusableElements[0,]"
       const lastElement = focusableElements[focusableElements.length - 1,]"
 consthandleTabKey= (e: "KeyboardEvent) => {"'"
 if(e.key=== 'Tab") {  "
-if (e.shiftKey) {;"
-if (document.activeElement === firstElement) {;"
+if (e.shiftKey) {;
+if (document.activeElement === firstElement) {;
 lastElement.focus();",e.preventDefault();
             ) => {
 $3
 , , }
-          } else { if(document.activeElement = == lastElement) {  
+          } else { if(document.activeElement = == lastElement) {
 firstElement.focus()
               e.preventDefault(),, , , }
             }
@@ -231,20 +230,19 @@ firstElement.focus()
 element.addEventListener('keydown", handleTabKey)"
       firstElement?.focus()"'"
       return () => element.removeEventListener('keydown", handleTabKey)
-    ;}
-"
-:all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx;"
-    // Apply focus trap to modals;"'"
+    ;
+}
+:all-pages-backup/components/AdvancedAccessibilityEnhancer.tsx;
+    // Apply focus trap to modals;
 const modals = document.querySelectorAll('[role=&quot;dialog&quot;]")
     modals.forEach(modal = > {)"
-const cleanup = trapFocus(modal, as, HTMLElement);"
-    // Apply focus trap to modals;"'"
+const cleanup = trapFocus(modal, as, HTMLElement);
+    // Apply focus trap to modals;
     const modals = document.querySelectorAll('[role=&quot;dialog&quot;]")
 modals.forEach(modal = > {)
 const cleanup = trapFocus(modal, as, HTMLElement)
       // Store cleanup function for later use
       (modal, as, any).__focusTrapCleanup = cleanup
-
   ,}, [])
 "
   // ARIA labels enhancement"
@@ -281,7 +279,6 @@ input.setAttribute('aria-label", label)"
       } else {"'"
 input.setAttribute('aria-label", `Input ${index + 1;}`)
       }
-
   }, [])
 "
   // Skip links"
@@ -353,11 +350,10 @@ voiceButton.className = 'voice-navigation-button'"
 voiceButton.setAttribute('aria-label', 'Start voice navigation")"
     voiceButton.onclick = () => recognition.start()"'"
     const header = document.querySelector('header') || document.querySelector('nav")
-    if(header) {  
+    if(header) {
 header.appendChild(voiceButton)
     ,, , }
   ;}, [])
-
   // Initialize all accessibility features
 useEffect(() => {
 if (enableKeyboardNavigation) {
@@ -387,6 +383,6 @@ export default AdvancedAccessibilityEnhancer;: all-pages-backup/components/Advan
 }}}}}}
 export default AdvancedAccessibilityEnhancerPage}}}}}
 }
-export default AdvancedAccessibilityEnhancerPage;"
+export default AdvancedAccessibilityEnhancerPage;
 </HTMLElement>"
 }"'"

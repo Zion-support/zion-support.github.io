@@ -6,7 +6,8 @@ import { useCallback, useMemo } from 'react"
 export const debounce = <T extends (...args: "any[]) => any>(",func: "T",wait: "number</T>"
 ): ((...args: Parameters<T>) => void) => {"
   let timeout: NodeJS.Timeout"
-  return(...arg",</T>;)"
+  return(...arg",</T>;
+)
 s: "Parameters<T>) => {"
 clearTimeout(timeout)"
 timeout = setTimeout(() => func(...args)",wait)
@@ -16,7 +17,8 @@ timeout = setTimeout(() => func(...args)",wait)
 export const throttle = <T extends (...args: "any[]) => any>(",func: "T",limit: "number</T>"
 ): ((...args: Parameters<T>) => void) => {"
   let inThrottle: boolean"
-  return(...arg",</T>;)"
+  return(...arg",</T>;
+)
 s: "Parameters<T>) => {"
 if(!inThrottle) {  "
 func(...args)",inThrottle = true,
@@ -58,7 +60,7 @@ return(</T>
       </div>
   ))
 const disconnect = useCallback(() => {
-if(observer) {  
+if(observer) {
 observer.disconnect()
     ,}
   }, [observer])
@@ -93,7 +95,6 @@ img.src = src
   return { imageSrc, isLoaded, isError, observe }
 }
 // Performance monitoring hook
-
 export const usePerformanceMonitoring = (
 const [metrics, setMetrics] = useState<{
 fcp?: number
@@ -114,7 +115,8 @@ const paint = performance.getEntriesByType('paint")"'"
       const fcp = paint.find(entry => entry.name === 'first-contentful-paint")?.startTime"'"
 const lcp = performance.getEntriesByType('largest-contentful-paint")[0,]?.startTime
 setMetrics({"
-fcp;)"
+fcp;
+)
 lcp)"
 ttfb: "navigation?.responseStart - navigation?.requestStart",) => {
 $3
@@ -136,14 +138,14 @@ getLCP((metric) => setMetrics(prev => ({ ...prev, lcp: "metric.value ",})))"
 getTTFB((metric) => setMetrics(prev = > ({ ...prev, ttfb: "metric.value ",})))
       })
     }"
-    return(<div />;)"
+    return(<div />;
+)
   ) => {"'"
 window.removeEventListener('load", updateMetrics
       </div>)
   )
       </div>
   )
-
     }
     return(<div />)
   ) => {
@@ -156,7 +158,6 @@ window.removeEventListener('load', updateMetrics)
 return, metrics
 }
 // Memory usage monitoring
-
 export const useMemoryMonitoring = (
 const [memoryInfo, setMemoryInfo] = useState<{
 usedJSHeapSize?: number
@@ -167,19 +168,18 @@ $3"
 }>({})"
 useEffect(() => {"'"
 if (typeof window === 'undefined' || !('memory" in, performance)) return
-
 const updateMemoryInfo = (
 return
 return
 const memory = (performance, as, any).memory"
 if(memory) {"
 setMemoryInfo({"
-usedJSHeapSize: "memory.usedJSHeapSize",totalJSHeapSize: "memory.totalJSHeapSize;)"
+usedJSHeapSize: "memory.usedJSHeapSize",totalJSHeapSize: "memory.totalJSHeapSize;
+)
 jsHeapSizeLimi",)"
 t: "memory.jsHeapSizeLimit",) => {
 $3
 })
-
       }
     }
     updateMemoryInfo()
@@ -233,7 +233,6 @@ const calculateBundleSize = ("
 return"
 return"'"
 const resources = performance.getEntriesByType('resource")
-
 let totalSize = 0
 let jsSize = 0
 let cssSize = 0

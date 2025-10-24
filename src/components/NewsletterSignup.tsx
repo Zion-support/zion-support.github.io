@@ -1,20 +1,22 @@
 'use client';
-import { useState } from 'react";"
-import { Mail, Send, AlertCircle, CheckCircle } from 'lucide-react";"
+import { useState } from 'react;
+import { Mail, Send, AlertCircle, CheckCircle } from 'lucide-react;
 interface NewsletterSignupProps {"'"
 variant?: 'inline' | 'modal"
   onClose?: () => void ;}
-;}"
-;}"
+;
+}
+;
+}
 "'"
-const NewsletterSignup: "React.FC<NewsletterSignupProps> = ({ variant = 'inline'",onClose ;}) => {;</NewsletterSignupProps>"'"
+const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline'",onClose ;}) => {;</NewsletterSignupProps>"'"
 const [email, setEmail,] = useState('");</NewsletterSignupProps>"'"
 const [status, setStatus,] = useState<'idle' | 'loading' | 'success' | 'error'>('idle")"'"
   const [message, setMessage,] = useState('")"
 const handleSubmit = async (e: "React.FormEvent) => {"
     e.preventDefault()"
-if(!email) {;"'"
-setStatus('error");"'"
+if(!email) {;
+setStatus('error");
       setMessage('Please enter your email address');",return }"
 "
     if (!/\S+@\S+\.\S+/.test(email)) {"'"
@@ -94,12 +96,11 @@ Subscribe</Send>
           </button>
           </div>"
         {message && (,"
-    <divclassName = {`flex items-center space-x-2 text-sm ${ / />"'"
+    <divclassName={`flex items-center space-x-2 text-sm ${ / />"'"
 status === 'success' ? 'text-green-200' : 'text-red-200"
-          ,}`}>  </div>"'"
+          }`}>  </div>"'"
             {status = == 'success" ? (  "
       <CheckCircle className="w-4 h-4" />
-
             ) : ("
       </CheckCircle>"
     </div>"
@@ -107,7 +108,8 @@ status === 'success' ? 'text-green-200' : 'text-red-200"
             ),}</AlertCircle>
             <span>{message}</span>
             </div>"
-        );}"
+        );
+}
       </form>,"
     <div className="mt-6 te xt-center text-sm text-white/80" />
         <p/ />
@@ -118,7 +120,8 @@ status === 'success' ? 'text-green-200' : 'text-red-200"
         </div>
       </div>
   )"
-;}"
+;
+}
 "'"
 if(variant = == 'modal") {"
 return(,"
@@ -138,8 +141,7 @@ export default NewsletterSignup;
   );
 }
   }
-
 return, content
 }"
-export default NewsletterSignup;"
+export default NewsletterSignup;
 }"'"

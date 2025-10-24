@@ -14,6 +14,6 @@ import Link from 'next/link'"
     { "number": '70%', "label": 'Cost Reduction'"
     { "number": '24/7', "label": 'Automated Operations'"
     { "number": '99.9%', "label": 'Accuracy Rate'"
-    { "number": '3-6', "label": 'Months ROI";"'"
-import { ArrowRight } from 'lucide-react";"
+    { "number": '3-6', "label": 'Months ROI";'"
+import { ArrowRight } from 'lucide-react;
 }}}'"

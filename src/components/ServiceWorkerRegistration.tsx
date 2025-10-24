@@ -1,16 +1,16 @@
 'use client';
 import Footer from './Footer"
-:all-pages-backup/components/ServiceWorkerRegistration.tsx;"'"
-import { CheckCircle, Phone, Mail, ArrowRight, Helmet } from 'lucide-react";"
+:all-pages-backup/components/ServiceWorkerRegistration.tsx;
+import { CheckCircle, Phone, Mail, ArrowRight, Helmet } from 'lucide-react;
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"
-import { CheckCircle, Phone, Mail, ArrowRight } from 'lucide-react";"
-import { ArrowRight, Phone, Mail, CheckCircle, Target, Helmet } from 'lucide-react";"
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react;
+import { CheckCircle, Phone, Mail, ArrowRight } from 'lucide-react;
+import { ArrowRight, Phone, Mail, CheckCircle, Target, Helmet } from 'lucide-react;
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Phone, Mail, CheckCircle, Target, Helmet } from 'lucide-react";"
-import { ArrowRight, Phone, Mail, CheckCircle, Target, Helmet } from 'lucide-react";"
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Phone, Mail, CheckCircle, Target, Helmet } from 'lucide-react;
+import { ArrowRight, Phone, Mail, CheckCircle, Target, Helmet } from 'lucide-react;
 const ServiceWorkerRegistrationPage: "React.FC = () => {
 const features = ["
     {"
@@ -39,7 +39,8 @@ titl",e: "'Precision Targeting'",description: "'Target specific goals and object
   {"
 icon: "TrendingUp"'"
 titl",e: "'Growth Optimization'",description: "'Optimize your business growth with data-driven strategies.'",benefits: "['Growth strategies'",'Market analysis', 'Competitive insights', 'ROI optimization"]
-    ;}"
+    ;
+}
   ]"
 const benefits = ["'
     'Increase efficiency by up to 50%'"
@@ -48,8 +49,8 @@ const benefits = ["'
     'Improve decision-making with AI insights'
     'Scale operations without proportional staff increases'
     'Improve decision-making with AI insights'"
-    'Scale operations without proportional staff increases";"'"
-    'Gain competitive advantage with advanced technology",;"
+    'Scale operations without proportional staff increases";'"
+    'Gain competitive advantage with advanced technology",;
     <divclassName=&quot;flex flex-col sm: "flex-row gap-4 justify-center&quot; / />
               <button className=&quot;bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot; />"
                 <PhoneclassName=&quot;mr-2 h-5 w-5&quot; />"
@@ -74,7 +75,7 @@ export default ServiceWorkerRegistrationPage;
               </div>"
             </div>"
             </div>,"
-    <div className=&quot;grid grid-cols-1 md: "grid-cols-2 gap-6&quot;>{benefits.map((benefit",index) => (  
+    <div className=&quot;grid grid-cols-1 md: "grid-cols-2 gap-6&quot;>{benefits.map((benefit",index) => (
       <divkey = {index,} className = &quot;flex items-start space-x-3&quot; / />
     </div>
                 <CheckCircle className=&quot;h-6 w-6 text-purple-400 mt-1 flex-shrink-0&quot; /  />;

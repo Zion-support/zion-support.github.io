@@ -1,32 +1,32 @@
 'use client"
-:all-pages-backup/components/ResponsiveContainer.tsx;"'"
-import Footer from './Footer";"
-import Navigation from './Navigation";"
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, CheckCircle } from 'lucide-react";"
+:all-pages-backup/components/ResponsiveContainer.tsx;
+import Footer from './Footer;
+import Navigation from './Navigation;
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, CheckCircle } from 'lucide-react;
 import React from 'react';
-import { cn } from '../lib/utils";
+import { cn } from '../lib/utils;
 interface ResponsiveContainerProps {
 className?: string
 }
 ;}
-;}
-"
+;
+}
 constResponsiveContainer = ({children"
-class Nam e;"'"
-maxWidth= '7 xl",}: ResponsiveContainerProps) =>{constmaxWidthClasses={;"'"
-sm: "sm",md: "md",lg: "lg",xl: "'max-w-xl'",import Footer from './Footer";"
-import Navigation from './Navigation";"
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, CheckCircle } from 'lucide-react";"
+class Nam e;
+maxWidth= '7 xl",}: ResponsiveContainerProps) =>{constmaxWidthClasses={;
+sm: "sm",md: "md",lg: "lg",xl: "'max-w-xl'",import Footer from './Footer;
+import Navigation from './Navigation;
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, CheckCircle } from 'lucide-react;
 import React from 'react';
-import { cn } from '../lib/utils";
+import { cn } from '../lib/utils;
 interface ResponsiveContainerProps {
 className?: string
 }
 }
-;}
-"
+;
+}
 constResponsiveContainer = ({children"
 class Nam e"'"
 maxWidth= '7 xl",;}: ResponsiveContainerProps) =>{constmaxWidthClasses={"'"
@@ -37,23 +37,22 @@ sm: "'max-w-sm'",md: "'max-w-md'",lg: "'max-w-lg'",xl: "'max-w-xl'",'2 xl': 'max
     '6 xl': 'max-w-6 xl'
     '7 xl': 'max-w-7 xl'"
 full: "'max-w-full'"
-  ",;};"
-;"'"
-const ResponsiveContainer: "React.FC<ResponsiveContainerProps> = ({ className = '' ",;}) => {;</ResponsiveContainerProps>
+  ",;};
+;
+const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ className = '' ",;}) => {;</ResponsiveContainerProps>
 return(</ResponsiveContainerProps>
     <>
-
   </>
       <Helmet />
 :all-pages-backup/components/ResponsiveContainer.tsx</Helmet>
         <Head />"
         <title>ResponsiveContainer</title>"
         <meta name=&quot;description&quot; content=&quot;Advanced ResponsiveContainer solution for modern businesses.&quot; / />"
-<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;"
-      </Head>;"
+<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;
+      </Head>;
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, ResponsiveContainer, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />
-      </>;"
+      </>;
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, ResponsiveContainer, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." /  />
       </Head>;
@@ -157,5 +156,5 @@ export default ResponsiveContainer;
 export default ResponsiveContainerPage;
   )
 }"
-export default ResponsiveContainer;"
+export default ResponsiveContainer;
 }"'"

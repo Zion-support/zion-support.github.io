@@ -1,17 +1,17 @@
 'use client"
-:all-pages-backup/components/EnhancedLoadingStates.tsx;"'"
+:all-pages-backup/components/EnhancedLoadingStates.tsx;
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react";"
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react;
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react;
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react";"
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react;
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react;
 const EnhancedLoadingStatesPage: "React.FC = () => {
 const features = ["
     {"
@@ -40,7 +40,8 @@ titl",e: "'Precision Targeting'",description: "'Target specific goals and object
   {"
 icon: "TrendingUp"'"
 titl",e: "'Growth Optimization'",description: "'Optimize your business growth with data-driven strategies.'",benefits: "['Growth strategies'",'Market analysis', 'Competitive insights', 'ROI optimization"]
-    ;}"
+    ;
+}
   ]"
 const benefits = ["'
     'Increase efficiency by up to 50%'
@@ -55,17 +56,16 @@ return(:all-pages-backup/components/EnhancedLoadingStates.tsx
   </>;
       <Helmet>;</Helmet>
     </>
-
   </>
       <Helmet>;</Helmet>
         <Head />"
         <title>EnhancedLoadingStates</title>"
         <meta name=&quot;description&quot; content=&quot;Advanced EnhancedLoadingStates solution for modern businesses.&quot; / />"
-<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;"
-      </Head>;"
+<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;
+      </Head>;
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, EnhancedLoadingStates, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />
-      </>;"
+      </>;
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, EnhancedLoadingStates, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." /  />
       </Head>;
@@ -162,11 +162,11 @@ Contact Sales</button>
     </>"
 :all-pages-backup/components/EnhancedLoadingStates.tsx"
   )",}"
-export default EnhancedLoadingStatesPage;"'"
+export default EnhancedLoadingStatesPage;
 sm: "sm",md: "'w-8 h-8'",{lg: "'w-12 h-1 2'",}
   )"
 }"
-export default EnhancedLoadingStatesPage;"'"
+export default EnhancedLoadingStatesPage;
 sm: "'w-4 h-4'",md: "'w-8 h-8'",lg: "'w-12 h-1 2'",}
 return(<divclassName=&quot;flex flex-colitems-centerjustify-centerp-8&quot;>
       <Loader2 className = {`${sizeClasses[size,]} animate-spin text-blue-500`} />;)
@@ -185,8 +185,8 @@ return(,;
   </div>
 )
 :all-pages-backup/components/EnhancedLoadingStates.tsx"
-{};"
-}"
+{};
+}
 export const PageLoader: "React.FC = () => (",<divclassName=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center&quot; / />,
     <divclassName=&quot;text-center&quot; / />,
     <divclassName=&quot;w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2 xl flex items-center justify-center mb-4 mx-auto animate-pulse&quot; / />
@@ -196,7 +196,7 @@ export const PageLoader: "React.FC = () => (",<divclassName=&quot;min-h-screen b
 <p className=&quot;text-gray-300&quot;>Loading amazing content...</p>
   </div>"
   </div>"
-);"
+);
 export const ServiceCardSkeleton: "React.FC = () => (",<divclassName=&quot;bg-white/5 backdrop-blur-sm rounded-2 xl p-8 animate-pulse&quot; / />,
     <divclassName=&quot;w-16 h-16 bg-gray-600 rounded-2 xl mb-6&quot; / />,
     <divclassName=&quot;h-6 bg-gray-600 rounded mb-4&quot; / />,
@@ -206,16 +206,16 @@ export const ServiceCardSkeleton: "React.FC = () => (",<divclassName=&quot;bg-wh
     <divclassName=&quot;h-3 bg-gray-600 rounded&quot; / />,
     <divclassName=&quot;h-3 bg-gray-600 rounded w-3/4&quot; / / />"
   </div>"
-);"
+);
 export const StatsSkeleton: "React.FC = () => (",<div className=&quot;grid grid-cols-2 md: "grid-cols-4 gap-8&quot;>{Array.from({ lengt",)  </div>"
-h: "4 ",}).map((_, index) => (  
+h: "4 ",}).map((_, index) => (
       <divkey = {index,} className=&quot;text-center animate-pulse&quot; / />
     </div>,
     <divclassName=&quot;h-8 bg-gray-600 rounded mb-2&quot; / />,
     <divclassName = &quot;h-4 bg-gray-600 rounded w-3/4 mx-auto&quot; / / />
 )),}"
   </div>"
-);"
+);
 export const ContentSkeleton: "React.FC = () => (",<divclassName=&quot;space-y-6 animate-pulse&quot; / />,
     <divclassName=&quot;h-8 bg-gray-600 rounded w-3/4&quot; / />,
     <divclassName=&quot;space-y-2&quot; / />,

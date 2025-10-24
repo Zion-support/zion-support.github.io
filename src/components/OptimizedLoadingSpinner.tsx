@@ -1,17 +1,17 @@
 'use client"
-:all-pages-backup/components/OptimizedLoadingSpinner.tsx;"'"
+:all-pages-backup/components/OptimizedLoadingSpinner.tsx;
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react";"
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react;
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react;
 import React from 'react';
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react";"
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";"
-import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react";"
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react;
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from 'lucide-react;
 const OptimizedLoadingSpinnerPage: "React.FC = () => {
 const features = ["
     {"
@@ -40,7 +40,8 @@ titl",e: "'Precision Targeting'",description: "'Target specific goals and object
   {"
 icon: "TrendingUp"'"
 titl",e: "'Growth Optimization'",description: "'Optimize your business growth with data-driven strategies.'",benefits: "['Growth strategies'",'Market analysis', 'Competitive insights', 'ROI optimization"]
-    ;}"
+    ;
+}
   ]"
 const benefits = ["'
     'Increase efficiency by up to 50%'
@@ -55,17 +56,16 @@ return(:all-pages-backup/components/OptimizedLoadingSpinner.tsx
   </>;
       <Helmet>;</Helmet>
     </>
-
   </>
       <Helmet>;</Helmet>
         <Head />"
         <title>OptimizedLoadingSpinner</title>"
         <meta name=&quot;description&quot; content=&quot;Advanced OptimizedLoadingSpinner solution for modern businesses.&quot; / />"
-<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;"
-      </Head>;"
+<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;
+      </Head>;
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, OptimizedLoadingSpinner, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />
-      </>;"
+      </>;
         <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, OptimizedLoadingSpinner, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." /  />
       </Head>;
@@ -165,7 +165,7 @@ Contact Sales</button>
 export default OptimizedLoadingSpinnerPage;
   )
 }
-export default OptimizedLoadingSpinnerPage;"
+export default OptimizedLoadingSpinnerPage;
 text?: string"
 class Nam e?: string"'"
 color?: 'blue' | 'gray' | 'green' | 'red' | 'purple"
@@ -212,12 +212,12 @@ return(<>"'"
 className={`w-2 h-2 rounded-full animate-bounce${colorClasses[color,].split('")[1,]}`}"
 style={{ animationDelay: "`${i*0.1",}s` }}</divkey>"
 /></di>))}</di>)"'"
-case 'pulse": return(<divclassName = {`${baseClasses,,} rounded-fullanimate-pulse`} />"'"
+case 'pulse": return(<divclassName={`${baseClasses,} rounded-fullanimate-pulse`} />"'"
 role='status"</divclassName>)"'"
 aria-label='Loading")</divclassName>"
 /></di>)"'"
 case 'skeleton': return(</di><divclassName='space-y-2' role='status' aria-label='Loading" />
-      <divclassName={`h-4 bg-gray-200 roundedanimate-pulse${sizeClasses[size,],}`} / />"
+      <divclassName={`h-4 bg-gray-200 roundedanimate-pulse${sizeClasses[size,]}`} / />"
     </div>"
 /></di><divclassName={`h-4 bg-gray-200 roundedanimate-pulse${sizeClasses[size,]}`} / />"'"
 style={{ width: "'7 5%'",}}</divclassName>"
@@ -241,7 +241,7 @@ height: "`${12+ i*4",}px`"
 animationDelay: "`${i*0.1",}s`"
 }}</divkey>"
 /></di>))}</di>)"'"
-case 'spinner': default: "return(<divclassName={`${baseClasses",,} rounded-full border-2 border-t-transparentanimate-spin`} />"'"
+case 'spinner': default: "return(<divclassName={`${baseClasses",} rounded-full border-2 border-t-transparentanimate-spin`} />"'"
 role = 'status"</divclassName>)"'"
 aria-label='Loading")</divclassName>
 /></di>)
@@ -249,7 +249,7 @@ aria-label='Loading")</divclassName>
 }, [size, variant, color, sizeClasses, colorClasses,])
 const containerClasses = useMemo(() => {return `${baseClasses,} ${fullScreenClasses} ${className}`}, [fullScreen, className,])"
 return(</div>,"
-    <div className={containerClasses,} />,"'"
+    <div className={containerClasses} />,"'"
     <div className = 'text-center">{renderSpinner,}  </div>
 :all-pages-backup/components/OptimizedLoadingSpinner.tsx
 {text && (</div>;}
@@ -260,8 +260,8 @@ return(</div>,"
 )}
   </div>
 )"
-{};"
-);"'"
-OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner";"
-export default OptimizedLoadingSpinner;"
+{};
+);
+OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner;
+export default OptimizedLoadingSpinner;
 ,}"'"

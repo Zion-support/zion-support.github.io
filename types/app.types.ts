@@ -2,7 +2,6 @@
  * Application Type Definitions
  * Core types used across the application
  */
-
 /**
  * Performance Metrics Interface
  * Web Vitals and performance measurement types
@@ -19,7 +18,6 @@ export interface PerformanceMetrics {
   /** Time to First Byte */
   ttfb?: number;
 }
-
 /**
  * Navigation Performance Metrics
  */
@@ -39,7 +37,6 @@ export interface NavigationMetrics {
   /** Speed Index */
   si: number;
 }
-
 /**
  * Resource Performance Metrics
  */
@@ -59,7 +56,6 @@ export interface ResourceMetrics {
   /** Total decoded size in bytes */
   decodedSize: number;
 }
-
 /**
  * Memory Performance Metrics
  */
@@ -71,7 +67,6 @@ export interface MemoryMetrics {
   /** JavaScript heap size limit in bytes */
   jsHeapSizeLimit: number;
 }
-
 /**
  * Performance Report Interface
  */
@@ -93,7 +88,6 @@ export interface PerformanceReport {
     rtt: number;
   };
 }
-
 /**
  * Performance Thresholds
  */
@@ -109,11 +103,10 @@ export interface PerformanceThresholds {
   /** Good performance threshold for TTFB (ms) */
   ttfb: { good: number; needsImprovement: number };
 }
-
 /**
  * Performance Observer Entry Types
  */
-export type PerformanceEntryType = 
+export type PerformanceEntryType =
   | 'navigation'
   | 'resource'
   | 'paint'
@@ -122,7 +115,6 @@ export type PerformanceEntryType =
   | 'layout-shift'
   | 'measure'
   | 'mark';
-
 /**
  * Performance Measurement Options
  */
@@ -136,12 +128,10 @@ export interface PerformanceMeasurementOptions {
   /** Custom thresholds */
   thresholds?: Partial<PerformanceThresholds>;
 }
-
 /**
  * Performance Event Callback
  */
 export type PerformanceEventCallback = (report: PerformanceReport) => void;
-
 /**
  * Performance Monitor Configuration
  */
@@ -155,7 +145,6 @@ export interface PerformanceMonitorConfig {
   /** Report interval in milliseconds */
   reportInterval?: number;
 }
-
 /**
  * Error Types
  */
@@ -171,7 +160,6 @@ export interface AppError {
   /** Error timestamp */
   timestamp: number;
 }
-
 /**
  * API Response Types
  */
@@ -185,7 +173,6 @@ export interface ApiResponse<T = unknown> {
   /** Response timestamp */
   timestamp: number;
 }
-
 /**
  * Component Props Base Interface
  */
@@ -199,19 +186,16 @@ export interface BaseComponentProps {
   /** Children elements */
   children?: React.ReactNode;
 }
-
 /**
  * Theme Types
  */
 export type Theme = 'light' | 'dark' | 'system';
-
 export interface ThemeConfig {
   /** Current theme */
   theme: Theme;
   /** Whether to use system preference */
   useSystemPreference: boolean;
 }
-
 /**
  * SEO Types
  */
@@ -233,7 +217,6 @@ export interface SEOConfig {
   /** Robots directive */
   robots?: string;
 }
-
 /**
  * Analytics Types
  */
@@ -249,7 +232,6 @@ export interface AnalyticsEvent {
   /** Session ID */
   sessionId?: string;
 }
-
 /**
  * Feature Flag Types
  */
@@ -265,7 +247,6 @@ export interface FeatureFlag {
   /** Flag conditions */
   conditions?: Record<string, unknown>;
 }
-
 /**
  * Configuration Types
  */
@@ -283,7 +264,6 @@ export interface AppConfig {
   /** Performance thresholds */
   performanceThresholds: PerformanceThresholds;
 }
-
 /**
  * Utility Types
  */
@@ -292,14 +272,12 @@ export type RequiredFields<T, K extends keyof T> = T & Required<Pick<T, K>>;
 export type DeepPartial<T> = {
   [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
 };
-
 /**
  * Event Types
  */
 export interface CustomEvent<T = unknown> extends Event {
   detail: T;
 }
-
 /**
  * Storage Types
  */
@@ -311,7 +289,6 @@ export interface StorageItem<T = unknown> {
   /** Creation timestamp */
   createdAt: number;
 }
-
 /**
  * Cache Types
  */

@@ -1,27 +1,21 @@
 'use client'
-
 import React, { useState, useEffect } from 'react'
 import { usePerformanceMonitor } from '../utils/performance'
 import { useAnalytics } from '../utils/analytics'
-
 interface PerformanceDashboardProps {
   show?: boolean
 }
-
 export default function PerformanceDashboard({ show = false }: PerformanceDashboardProps) {
   const [isVisible, setIsVisible] = useState(show)
   const [metrics, setMetrics] = useState<Record<string, number>>({})
   const { getAllMetrics } = usePerformanceMonitor()
   // Note: getEvents is not available in the current analytics hook
-
   useEffect(() => {
     const interval = setInterval(() => {
       setMetrics(getAllMetrics())
     }, 1000)
-
     return () => clearInterval(interval)
   }, [getAllMetrics])
-
   if (!isVisible) {
     return (
       <button
@@ -33,7 +27,6 @@ export default function PerformanceDashboard({ show = false }: PerformanceDashbo
       </button>
     )
   }
-
   return (
     <div className="fixed bottom-4 right-4 bg-white dark:bg-gray-800 rounded-lg shadow-xl p-4 w-80 max-h-96 overflow-y-auto z-50 border">
       <div className="flex justify-between items-center mb-4">
@@ -47,7 +40,6 @@ export default function PerformanceDashboard({ show = false }: PerformanceDashbo
           ✕
         </button>
       </div>
-
       <div className="space-y-3">
         <div>
           <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -69,7 +61,6 @@ export default function PerformanceDashboard({ show = false }: PerformanceDashbo
             )}
           </div>
         </div>
-
         <div>
           <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             System Info

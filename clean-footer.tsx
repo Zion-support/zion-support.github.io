@@ -50,7 +50,7 @@ const Footer: React.FC = () => {;
           <div>"
             <h3 className="text-lg font-semibold mb-4 flex items-center">
               <Brain className="w-5 h-5 mr-2 text-purple-400"  />;
-              AI Services;"
+              AI Services;
             </h3>
             <ul className="space-y-2">);
               {aiServices.map((service) => (<li key={service.name}>
@@ -68,7 +68,7 @@ const Footer: React.FC = () => {;
           <div>"
             <h3 className="text-lg font-semibold mb-4 flex items-center">
               <Cloud className="w-5 h-5 mr-2 text-blue-400"  />;
-              IT Services;"
+              IT Services;
             </h3>
             <ul className="space-y-2">
               {itServices.map((service) => (<li key={service.name}>
@@ -150,7 +150,7 @@ const Footer: React.FC = () => {;
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex space-x-6 mb-4 md:mb-0">
               <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
-                <Github className="w-6 h-6"  />;"
+                <Github className="w-6 h-6"  />;
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
                 <Linkedin className="w-6 h-6"  />"

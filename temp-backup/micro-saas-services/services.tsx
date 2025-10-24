@@ -1,7 +1,7 @@
-'use client";"
-import React from 'react";"
-import Link from 'next/link";"
-import { ArrowRight } from 'lucide-react";
+'use client;
+import React from 'react;
+import Link from 'next/link;
+import { ArrowRight } from 'lucide-react;
 export default function services() {"
 "
 return ("
@@ -25,5 +25,5 @@ Contact Us</Link>"
 ;}
     </div>
     </div>"
-    </div>;"
-};"'"
+    </div>;
+};

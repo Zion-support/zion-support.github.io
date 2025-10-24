@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import Navigation from '../components/Navigation";"
-import Footer from '../components/Footer";
+import Navigation from '../components/Navigation;
+import Footer from '../components/Footer;
 export default function ServicesPage() {"
 "
 return(<>,"
@@ -16,15 +16,15 @@ Comprehensive AI and IT solutions tailored to your business needs.</p>
             </div>
       </main>
       <Footer/ />
-        </div>;"
-      </>;)"
-  );"'"
+        </div>;
+      </>;
+)
+  );
 import React from 'react';
-import Head from 'next/head';"
-import Link from 'next/link";"
-import { ArrowRight } from 'lucide-react";
+import Head from 'next/head';
+import Link from 'next/link;
+import { ArrowRight } from 'lucide-react;
 export default function ServicesPage() {
-
 return(<>
     :all-pages-backup/services/page.tsx"
     </>"
@@ -45,7 +45,8 @@ Contact Us</Link>"
           </Link>
             </div>;
       </div>;
-</div>;)"
+</div>;
+)
   ),"
 }"
 }'"

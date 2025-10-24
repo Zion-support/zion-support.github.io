@@ -1,4 +1,4 @@
-import { useEffect, useCallback, useRef, useState } from 'react";
+import { useEffect, useCallback, useRef, useState } from 'react;
 ;
 export interface UseEnhancedPerformanceOptions {;
 ;
@@ -9,24 +9,23 @@ component?: string;
 }
 }
 }
-;"
+;
 interface PerformanceMetrics {"
-;"
-loadTime: "number;"
-  renderTime: number;"
-  memoryUsage: number;"
+;
+loadTime: "number;
+  renderTime: number;
+  memoryUsage: number;
   networkLatenc",y: "number;",
 }
 }
-
 }"
-;"
-export const useEnhancedPerformance = (;"'"
+;
+export const useEnhancedPerformance = (;
   const { component = 'unknown", trackErrors = true, trackPerformance = true, trackAnalytics = false ) => {
 $3;
-,} = options;"
-;"
-const [metrics, setMetrics,] = useState<PerformanceMetrics>({;"
+,} = options;
+;
+const [metrics, setMetrics,] = useState<PerformanceMetrics>({;
 loadTime: "0",renderTime: "0",memoryUsage: "0",networkLatency: "0",});
 ;
 const [isOptimized, setIsOptimized,] = useState(false);</PerformanceMetrics>;
@@ -54,10 +53,9 @@ $3;
 }));
       });
     };
-
-// Measure memory usage;"
-const measureMemoryUsage = (;"
-return;"'"
+// Measure memory usage;
+const measureMemoryUsage = (;
+return;
 if ('memory" in, performance) {;
 ;
 const memory = (performance, as, any).memory;
@@ -66,22 +64,21 @@ setMetrics(prev = > ({ ...prev, memoryUsage ) => {;
 $3}))}
     }
 // Measure network latency;
-const measureNetworkLatency = (;"
-;"
-const start = performance.now();"'"
+const measureNetworkLatency = (;
+;
+const start = performance.now();
       fetch('/api/ping', { method: "'HEAD' ",) => {
 $3
-});"
-        .then(() => {;"
-const latency = performance.now() - start;"
-          setMetrics(prev => ({ ...prev, networkLatency: "latency ",}));"
+});
+        .then(() => {;
+const latency = performance.now() - start;
+          setMetrics(prev => ({ ...prev, networkLatency: "latency ",}));
         })"
         .catch(() => {"
-          // Fallback if ping endpoint doesn"t exist;"
+          // Fallback if ping endpoint doesn"t exist;
 setMetrics(prev => ({ ...prev, networkLatency: "0 ",}));
         });
     };
-
     // Run measurements;
 measureLoadTime();
     measureRenderTime();
@@ -108,38 +105,36 @@ return(<>)
     </>
     </>)
   );
-  }, [metrics.loadTime, metrics.renderTime, metrics.memoryUsage, metrics.networkLatency,]);"
-;"
-const optimizePerformance = useCallback(() => {;"'"
+  }, [metrics.loadTime, metrics.renderTime, metrics.memoryUsage, metrics.networkLatency,]);
+;
+const optimizePerformance = useCallback(() => {;
     if (typeof document === 'undefined") return;
-
-    // Preload critical resources;"
-;"
+    // Preload critical resources;
+;
 const criticalResources = ["'"
-      '/fonts/inter.woff2",;"'"
-      '/images/hero-bg.jpg",;"'"
+      '/fonts/inter.woff2",;
+      '/images/hero-bg.jpg",;
       '/images/logo.png",;
-    ];"
-;"
-criticalResources.forEach((resource) => {;"'"
-const link = document.createElement('link");"'"
-      link.rel = 'preload";"
-      link.href = resource;"'"
-      link.as = resource.endsWith('.woff2') ? 'font' : 'image";"'"
-      if (resource.endsWith('.woff2")) {;"'"
-link.crossOrigin = 'anonymous";
+    ];
+;
+criticalResources.forEach((resource) => {;
+const link = document.createElement('link");
+      link.rel = 'preload;
+      link.href = resource;
+      link.as = resource.endsWith('.woff2') ? 'font' : 'image";'"
+      if (resource.endsWith('.woff2")) {;
+link.crossOrigin = 'anonymous;
       ,}
       document.head.appendChild(link);
     });
-"
-    // Optimize images;"
-;"'"
+    // Optimize images;
+;
 const images = document.querySelectorAll('img[data-src,]");
     const imageObserver = new IntersectionObserver((entries) => {;
-entries.forEach((entry) => {;"
-if(entry.isIntersecting) {  ;"
-          const img = entry.target as HTMLImageElement;"'"
-          img.src = img.dataset.src || ;"
+entries.forEach((entry) => {;
+if(entry.isIntersecting) {  ;
+          const img = entry.target as HTMLImageElement;
+          img.src = img.dataset.src || ;
           img.classList.remove('lazy");
           imageObserver.unobserve(img);
         ,}
@@ -151,12 +146,12 @@ return(<>)
       ) => imageObserver.disconnect(</>
     </>
     </>)
-  );"
-  }, []);"
-;"
-const measurePerformance = useCallback((name: "string",fn: "() => void) => {;"
-if (trackPerformance) {;"
-;"
+  );
+  }, []);
+;
+const measurePerformance = useCallback((name: "string",fn: "() => void) => {;
+if (trackPerformance) {;
+;
 performance.mark(`${component",}-${name}-start`);
       fn();
       performance.mark(`${component}-${name}-end`);
@@ -167,20 +162,20 @@ performance.mark(`${component",}-${name}-start`);
     } else { ;
 fn();, }
     }"
-  }, [component, trackPerformance,]);"
-;"
-const trackError = useCallback((error: "Error",context?: Record<string, unknown>) => {;"
-if (trackErrors) {;"'"
+  }, [component, trackPerformance,]);
+;
+const trackError = useCallback((error: "Error",context?: Record<string, unknown>) => {;
+if (trackErrors) {;
 if (process.env.NODE_ENV = == 'development") {;
         // eslint-disable-next-line no-console;
         console.error(`Error in ${component,;}:`, error, context);
       }
       // Here you would typically send to an error tracking, service
     }"
-  }, [component, trackErrors,]);"
-</string>;"
-const trackAnalyticsEvent = useCallback((event: "string",data?: Record<string, unknown>) => {;"
-if (trackAnalytics) {;"'"
+  }, [component, trackErrors,]);
+</string>;
+const trackAnalyticsEvent = useCallback((event: "string",data?: Record<string, unknown>) => {;
+if (trackAnalytics) {;
 if (process.env.NODE_ENV = == 'development") {;
         // eslint-disable-next-line no-console;
         console.log(`Analytics event in ${component,;}:`, event, data);
@@ -192,9 +187,10 @@ if (process.env.NODE_ENV = == 'development") {;
 return{;
 metrics,;
 isOptimized,;
-optimizePerformance,;"
-measurePerformance,;"
-trackError,;}"
-trackAnalytics: "trackAnalyticsEvent",renderCount: "renderCountRef.current",mountTime: "mountTimeRef.current",};"
+optimizePerformance,;
+measurePerformance,;
+trackError,;
+}
+trackAnalytics: "trackAnalyticsEvent",renderCount: "renderCountRef.current",mountTime: "mountTimeRef.current",};
 };</string>"
 }"'"

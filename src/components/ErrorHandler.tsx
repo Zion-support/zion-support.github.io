@@ -1,19 +1,19 @@
 'use client"
-:all-pages-backup/components/ErrorHandler.tsx;"'"
-import Footer from './Footer";"
-import Navigation from './Navigation";"
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, CheckCircle, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"
-import, React, { Component, ErrorInfo, ReactNode } from "react";"
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react";"
-import { Home } from 'lucide-react";"
-import Footer from './Footer";"
-import Navigation from './Navigation";"
-import { Helmet } from 'react-helmet-async";"
-import { ArrowRight, Send, Target, CheckCircle, BarChart, Brain, TrendingUp } from 'lucide-react";"
-import, React, { Component, ErrorInfo, ReactNode } from "react";"
-import { ArrowRight, Send, Target, CheckCircle, BarChart, Brain, TrendingUp } from 'lucide-react";"
-import { ArrowRight, Send, Target, CheckCircle, BarChart, Brain, TrendingUp } from 'lucide-react";"
+:all-pages-backup/components/ErrorHandler.tsx;
+import Footer from './Footer;
+import Navigation from './Navigation;
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, CheckCircle, Brain, BarChart, Target, TrendingUp } from 'lucide-react;
+import React, { Component, ErrorInfo, ReactNode } from "react;
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react;
+import { Home } from 'lucide-react;
+import Footer from './Footer;
+import Navigation from './Navigation;
+import { Helmet } from 'react-helmet-async;
+import { ArrowRight, Send, Target, CheckCircle, BarChart, Brain, TrendingUp } from 'lucide-react;
+import React, { Component, ErrorInfo, ReactNode } from "react;
+import { ArrowRight, Send, Target, CheckCircle, BarChart, Brain, TrendingUp } from 'lucide-react;
+import { ArrowRight, Send, Target, CheckCircle, BarChart, Brain, TrendingUp } from 'lucide-react;
 const ErrorHandlerPage: "React.FC = () => {
 const features = ["
     {"
@@ -42,7 +42,8 @@ titl",e: "'Precision Targeting'",description: "'Target specific goals and object
   {"
 icon: "TrendingUp"'"
 titl",e: "'Growth Optimization'",description: "'Optimize your business growth with data-driven strategies.'",benefits: "['Growth strategies'",'Market analysis', 'Competitive insights', 'ROI optimization"]
-    ;}"
+    ;
+}
   ]"
 const benefits = ["'
     'Increase efficiency by up to 50%'
@@ -57,17 +58,16 @@ return(:all-pages-backup/components/ErrorHandler.tsx
   </>;
       <Helmet>;</Helmet>
     </>
-
   </>
       <Helmet>;</Helmet>
         <Head />"
         <title>ErrorHandler</title>"
         <meta, name=&quot;description&quot; content=&quot;Advanced, ErrorHandler, solution, for, modern, businesses.&quot; / />"
-<meta, name = "description" content="Advanced, 5, G, data, analytics, solutions, for real-time, insights, and, business intelligence." / />;"
-      </Head>;"
+<meta, name = "description" content="Advanced, 5, G, data, analytics, solutions, for real-time, insights, and, business intelligence." / />;
+      </Head>;
         <meta, name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, ErrorHandler, AI, solutions, intelligent, automation&quot; / />"
 <meta, name = "description" content="Advanced, 5, G, data, analytics, solutions, for real-time, insights, and, business intelligence." / />
-      </>;"
+      </>;
         <meta, name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, ErrorHandler, AI, solutions, intelligent, automation&quot; / />"
 <meta , name = "description" content="Advanced, 5, G, data, analytics, solutions, for real-time, insights, and, business intelligence." /  />
       </Head>;
@@ -79,7 +79,7 @@ return(:all-pages-backup/components/ErrorHandler.tsx
       </div>
         <section, className=&quot;relative, py-20, px-4, overflow-hidden&quot; />
           <div, className=&quot;absolute, inset-0, bg-gradient-to-r, from-emerald-600/20, to-blue-600/20&quot; />"
-      <div, className=&quot;relative, max-w-7, xl, mx-auto, text-center&quot; / />;"
+      <div, className=&quot;relative, max-w-7, xl, mx-auto, text-center&quot; / />;
     </div>"
     <h1, className=&quot;text-5, xl, md: "text-7 xl",font-bold, text-white, mb-6, leading-tight&quot; / />
 ErrorHandler</h1>
@@ -99,12 +99,14 @@ if (process.env.NODE_ENV = == 'development") {// Error caught by, handler
     // Send error to monitoring service in production"'"
 if(process.env.NODE_ENV=== 'production") {  // You can integrate with services, like, Sentry, LogRocket, etc.
 this.logErrorToService(errorerrorInfo)
-   , , ;}"
-  ;}"
+   , , ;
+}
+  ;
+}
 "
 logErrorToService= (error: "Error",errorInfo: "ErrorInfo) => {// Example: Send to monitoring service"
-try{// Replace with your actual error reportingserviceconsterrorData={;"
-:all-pages-backup/components/ErrorHandler.tsx;"
+try{// Replace with your actual error reportingserviceconsterrorData={;
+:all-pages-backup/components/ErrorHandler.tsx;
 messag",e: "error.message",stack: "error.stack",componentStack: "errorInfo.componentStack",timestamp: "new Date().toISOString();",message: "error.message"
 stack: error.stack",componentStack: "errorInfo.componentStack"
 timestam",p: "new Date().toISOString()",}"
@@ -125,7 +127,6 @@ errorInf",o: "null)"
 "'"
 handleGoHome = () => {windo w.location.href= '/"
  ,}
-
 render() {if(this.state.hasError) {
 if(this.props.fallback) {
 return thi s.props.fallback
@@ -143,7 +144,7 @@ Oops! Something went wrong</h1>"
             <pclassName=&quot;text-gray-600 mb-6&quot; / />"
 We"re, sorry, but something unexpected happened. Our team has been notified and is working to fix it.</p>"
             </p>"'"
-            {process.env.NODE_ENV = == 'development" && this.state.error && (;"
+            {process.env.NODE_ENV = == 'development" && this.state.error && (;
               <details className=&quot;mb-6 text-left&quot; />"
                 <summary className=&quot;cursor-pointer text-sm text-gray-500 hover: "text-gray-700&quot; />)"
 Error Details (Development)</summary>"
@@ -168,7 +169,7 @@ r: "</strong> {this.state.error.message",}
               </button>
 :all-pages-backup/components/ErrorHandler.tsx"
               <button"
-onClick = {this.handleGoHome,};"
+onClick = {this.handleGoHome,};
                 className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover: "bg-gray-700 transition-colors&quot"
               <button onClick={this.handleGoHome",}; />"
 className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover: "bg-gray-700 transition-colors&quot;</button>
@@ -209,30 +210,29 @@ Powerful AI-driven features designed to transform your business operations</p>"
 className=&quot;flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lghover: "bg-blue-700 transition-colors&quot"
               ></",:all-pages-backup/components/ErrorHandler.tsx
 onClick = {"
-this.handleRetry;"
-,};"
+this.handleRetry;
+,};
                className=&quot;flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lghover: "bg-blue-700 transition-colors&quot"
               ><RefreshCwclassName=&quot;w-4 h-4 mr-2&quot; />Try Again</RefreshCwclassName>"
             </butto><"
-onClick = {this.handleGoHome",};"
+onClick = {this.handleGoHome",};
                className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lghover: "bg-gray-700 transition-colors&quot"
               ></"
-onClick = {this.handleGoHome",};"
+onClick = {this.handleGoHome",};
                className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lghover: "bg-gray-700 transition-colors&quot"
-onClick = {this.handleRetry",};"
+onClick = {this.handleRetry",};
                className=&quot;flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lghover: "bg-blue-700 transition-colors&quot"
               ><RefreshCwclassName=&quot;w-4 h-4 mr-2&quot; />Try Again</RefreshCwclassName>"
             </butto><"
-onClick = {this.handleGoHome",};"
+onClick = {this.handleGoHome",};
                className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lghover: "bg-gray-700 transition-colors&quot"
               ></"
-onClick = {this.handleGoHome",};"
+onClick = {this.handleGoHome",};
                className=&quot;flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lghover: "bg-gray-700 transition-colors&quot
               ><HomeclassName=&quot;w-4 h-4 mr-2&quot; />Go Home</HomeclassName>"
             </butto></di></di></di>"
       )"
     ",}
-
 return thi s.props.children
   }
 {}
@@ -279,6 +279,6 @@ Contact Sales</button>
 :all-pages-backup/components/ErrorHandler.tsx"
 {",}
 export default ErrorHandlerPage;
-}"
-export default ErrorHandlerPage;"
+}
+export default ErrorHandlerPage;
 }"'"

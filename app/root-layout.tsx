@@ -10,5 +10,5 @@ return(<html lang = "en">;
         {children}
       </body>);
     </html>);
-  );"
+  );
 }";'"

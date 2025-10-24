@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import Head from 'next/head';"
-import { Loader2, CheckCircle } from 'lucide-react";
+import Head from 'next/head';
+import { Loader2, CheckCircle } from 'lucide-react;
 export const PageLoader: React.FC = () => {
   return(<>
     :all-pages-backup/components/LoadingStates.tsx;
@@ -11,11 +11,11 @@ export const PageLoader: React.FC = () => {
         <Head />"
         <title>LoadingStates</title>"
         <meta name=&quot;description&quot; content=&quot;Advanced LoadingStates solution for modern businesses.&quot; / />"
-<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;"
-      </Head>;"
+<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />;
+      </Head>;
         <meta name=&quot;keywords&quot; content=&quot;AI,artificial, intelligence, LoadingStates, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />
-      </>;"
+      </>;
         <meta name=&quot;keywords&quot; content=&quot;AI,artificial, intelligence, LoadingStates, AI, solutions, intelligent automation&quot; / />"
 <meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." /  />
       </Head>;
@@ -120,28 +120,28 @@ Contact Sales</button>
         </div>"
       </div>"
   )}"'"
-export const LoadingSpinner: "React.FC<{ size?: 'sm' | 'md' | 'lg' ",}> = ({ size = 'md" ,}) => {"
+export const LoadingSpinner: React.FC<{ size?: 'sm' | 'md' | 'lg' ",}> = ({ size = 'md" ,}) => {"
   const sizeClasses={"'"
     sm: "sm",md: "'w-6 h-6'",lg: "'w-8 h-8'",}"
-  return(<Loader2 className={`${sizeClasses[size,];} animate-spin text-blue-500`;} / />);"
-  )};"
+  return(<Loader2 className={`${sizeClasses[size,];} animate-spin text-blue-500`;} / />);
+  )};
 export const LoadingDots: "React.FC = () => {;</Loader2>"
 return(</Loader2>",<div className="flex space-x-1" />,"'"
-    <divclassName="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style={{ animationDela,y: "'0 s' ",}} / / />,;"'"
-    <divclassName="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: "'0.1 s' ",}} / / />,;"'"
+    <divclassName="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style={{ animationDela,y: "'0 s' ",}} / / />,;
+    <divclassName="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: "'0.1 s' ",}} / / />,;
     <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: "'0.2 s' ",}} />;  </div>"
       </div>)"
   )}"
 export const LoadingPulse: "React.FC = () => {"
   return(",<div className="flex space-x-1" />,"'"
-    <divclassName="w-3 h-3 bg-gradient-to-r from-pink-500 to-cyan-500 rounded-full animate-pulse" style={{ animationDela,y: "'0 s' ",;};} / / />,;"'"
-    <divclassName="w-3 h-3 bg-gradient-to-r from-cyan-500 to-green-500 rounded-full animate-pulse" style={{ animationDelay: "'0.2 s' ",}} / / />,;"'"
+    <divclassName="w-3 h-3 bg-gradient-to-r from-pink-500 to-cyan-500 rounded-full animate-pulse" style={{ animationDela,y: "'0 s' ",;};} / / />,;
+    <divclassName="w-3 h-3 bg-gradient-to-r from-cyan-500 to-green-500 rounded-full animate-pulse" style={{ animationDelay: "'0.2 s' ",}} / / />,;
     <div className="w-3 h-3 bg-gradient-to-r from-green-500 to-purple-500 rounded-full animate-pulse" style={{ animationDelay: "'0.4 s' ",}} />;  </div>"
       </div>)"
   )}"
 export const LoadingRings: "React.FC = () => {"
-  return(",<div className="relative w-16 h-16" />,;"
-    <divclassName="absolute inset-0 rounded-full border-4 border-pink-500 border-t-transparent animate-spin" / / />,;"'"
+  return(",<div className="relative w-16 h-16" />,;
+    <divclassName="absolute inset-0 rounded-full border-4 border-pink-500 border-t-transparent animate-spin" / / />,;
     <div className="absolute inset-2 rounded-full border-4 border-cyan-500 border-t-transparent animate-spin" style={{ animationDirectio,n: "'reverse' ",}} />;  </div>"
       </div>)"
   )}"
@@ -149,12 +149,12 @@ export const LoadingWaves: "React.FC = () => {"
   return(",<div className="flex space-x-1" />,"'"
     <divclassName="w-1 h-8 bg-blue-500 rounded-full animate-pulse" style={{ animationDela,y: "'0 s' ",}} / / />,"'"
     <divclassName="w-1 h-8 bg-blue-500 rounded-full animate-pulse" style={{ animationDelay: "'0.1 s' ",}} / / />,"'"
-    <divclassName="w-1 h-8 bg-blue-500 rounded-full animate-pulse" style={{ animationDelay: "'0.2 s' ",;};} / / />,;"'"
-    <divclassName="w-1 h-8 bg-blue-500 rounded-full animate-pulse" style={{ animationDelay: "'0.3 s' ",}} / / />,;"'"
+    <divclassName="w-1 h-8 bg-blue-500 rounded-full animate-pulse" style={{ animationDelay: "'0.2 s' ",;};} / / />,;
+    <divclassName="w-1 h-8 bg-blue-500 rounded-full animate-pulse" style={{ animationDelay: "'0.3 s' ",}} / / />,;
     <div className="w-1 h-8 bg-blue-500 rounded-full animate-pulse" style={{ animationDelay: "'0.4 s' ",}} />;  </div>"
       </div>)"
   )}"
-export const LoadingSkeleton: "React.FC<{ lines?: number ",}> = ({ lines = 3 ,}) => {
+export const LoadingSkeleton: React.FC<{ lines?: number ",}> = ({ lines = 3 ,}) => {
         </div>
       </div>
       </div>
@@ -162,7 +162,7 @@ export const LoadingSkeleton: "React.FC<{ lines?: number ",}> = ({ lines = 3 ,})
   )"
   )"
 }"'"
-export const LoadingSpinner: "React.FC<{ size?: 'sm' | 'md' | 'lg' ",}> = ({ size = 'md" ,;}) => {"
+export const LoadingSpinner: React.FC<{ size?: 'sm' | 'md' | 'lg' ",}> = ({ size = 'md" ,;}) => {"
 const sizeClasses={"'"
 sm: "'w-4 h-4'",md: "'w-6 h-6'
     lg: 'w-8 h-8'"
@@ -206,7 +206,7 @@ return(<>",<div className="fle xspace-x-1" />,"'"
     </>)"
   )"
 }"
-export const LoadingSkeleton: "React.FC<{ lines?: number ",}> = ({ lines = 3 ,}) => {"
+export const LoadingSkeleton: React.FC<{ lines?: number ",}> = ({ lines = 3 ,}) => {"
 return(,"
     <div className="spa ce-y-2" />)"
       {Array.from({ length: "lines ",}).map((_, index) => (  </div>"
@@ -219,8 +219,8 @@ return(,"
 export const LoadingCard: "React.FC = () => {"
   return(",<div className="bg-white rounded-lg shadow-md p-6 animate-pulse" />,"
     <divclassName="h-4 bg-gray-300 rounded mb-4" / / />,"
-    <divclassName="h-3 bg-gray-300 rounded mb-2" / / />,;"
-    <divclassName="h-3 bg-gray-300 rounded mb-2" / / />,;"
+    <divclassName="h-3 bg-gray-300 rounded mb-2" / / />,;
+    <divclassName="h-3 bg-gray-300 rounded mb-2" / / />,;
     <div className="h-3 bg-gray-300 rounded w-3/4">;  </div>"
       </div>)"
   ),}"
@@ -238,6 +238,6 @@ return(<>",<div className="bg-wh iterounded-lg shadow-md p-6 animate-pulse" />,"
     <divclassName="h-3 bg-gr ay-300 rounded w-3/4" / / />
     </>)
   );
-,};"
-export default PageLoader;"
+,};
+export default PageLoader;
 }"'"

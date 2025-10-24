@@ -1,6 +1,5 @@
 'use client';
-import React from 'react";
-
+import React from 'react;
 const AdminPage = (
   return(<div>
       <h1>Admin Page</h1>
@@ -9,6 +8,6 @@ const AdminPage = (
   );
 ) => {
 $3
-,};"
+,};
 "
-export default AdminPage;"'"
+export default AdminPage;

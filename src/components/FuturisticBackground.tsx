@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
-import Head from 'next/head';"
-import Link from 'next/link";"
-import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react";
+import Head from 'next/head';
+import Link from 'next/link;
+import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from 'lucide-react;
 const resizeCanvas = (
 return(<>"
       <Head>"
@@ -55,11 +55,11 @@ Oops! The page you're looking for seems to have vanished into the digital void. 
 "
               <Home className="w-5 h-5 mr-2" />
 Go Home
-
       </Link>
     </div>"
             <button"
-onClick={() => window.history.back(),;}"
+onClick={() => window.history.back(),;
+}
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">"
               <ArrowLeft className="w-5 h-5 mr-2" />
 Go Back
@@ -76,7 +76,6 @@ Our support team is here to help you navigate our services and find exactly what
 "
                 <RefreshCw className="w-4 h-4 mr-2" />
 Contact Support
-
       </Link>"
     </div>"
               <a"
@@ -98,6 +97,7 @@ go wrong! 🤖
           </div>"
       </>"
   )"
-",;}"
-export default resizeCanvas;"
-};"'"
+",;
+}
+export default resizeCanvas;
+};
