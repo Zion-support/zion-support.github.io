@@ -1,4 +1,7 @@
+const Loading: React.FC = () => {
+return(<div>
 import React from 'react'
+<<<<<<< HEAD
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -38,70 +41,136 @@ const Loading: React.FC<LoadingProps> = ({ className = '' }) => {
       
       <Navigation />
       <div className=&quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot;></div>
+=======
+<<<<<<< HEAD
+        <title>Loading</title>
+=======
+       ; ;<title>"Loading"</title>
+>>>>>>> origin/main
+        <meta name="description" content="Advanced Loading solution for modern businesses." / />
+        <meta name="keywords" content="AI,artificial, intelligence, Loading, AI, solutions, intelligent automation" /  />
+      </Helmet>
+    </div>
+<<<<<<< HEAD
+      <Navigation/ />,
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"  />"
+>>>>>>> origin/main
         {/* Hero Section */}
-        <section className=&quot;relative py-20 px-4 overflow-hidden&quot;></section>
-          <div className=&quot;absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot;></div>
-          <div className=&quot;relative max-w-7xl mx-auto text-center&quot;></div>
-            <h1 className=&quot;text-5xl md:text-7xl font-bold text-white mb-6 leading-tight&quot;>
-              Loading
+        <section className="relative py-20 px-4 overflow-hidden" />,
+    <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20" />,
+    <div className="relative max-w-7 xl mx-auto text-center" />,
+    <h1 className="text-5 xl md: text-7 xl font-bold text-white mb-6 leading-tight" /  />
+Loading</h1>
             </h1>
-            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed&quot;>
-              Advanced Loading solution for modern businesses.
-            </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot;>
-                Get Started
-                <ArrowRight className=&quot;ml-2 h-5 w-5&quot; />
+            <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed" /  />
+Advanced Loading solution for modern businesses.</p></p>,<div className="flex flex-col sm: flex-row gap-4 justify-center" />
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"  />
+Get Started</button>
+=======
+      <Navigation/ />,"}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900  /">
+  );
+        {/* Hero Section */}"
+        <section className="relative py-20 px-4 overflow-hidden /">,
+    <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20 /">,"
+    <div className="relative max-w-7 xl mx-auto text-center /">,
+    <h1 className="text-5 xl md: text-7 xl font-bold text-white mb-6 leading-tight /  /">"
+Loading</h1>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed /  /">
+"Advanced Loading solution for modern businesses."</p>
+            </p>,<div className="flex flex-col sm: flex-row gap-4 justify-center /">"
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center  /">
+"Get Started"</button>
+>>>>>>> origin/main
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover: "bg-emerald-400 hove","
+              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hove",""
 r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"  />
-Learn More</button>
+"Learn More"</button>
               </button>
-            </div>
-          </div>
-        </section>
-    </>
-
-        {/* Features Section */}
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Key Features</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
-                Powerful AI-driven features designed to transform your business operations
-              </p>
-    <divclassName="grid md: "grid-cols-2 l","
-g: grid-cols-4 gap-8" />,<div className="[^"]*">
+<<<<<<< HEAD
+</section>,{/* Features Section */}
+        <section className="py-20 px-4" />,
+    <div className="max-w-7 xl mx-auto" />,
+    <div className="text-center mb-16" />,
+    <h1 className="text-4 xl font-bold text-white mb-4">Key Features</h2>
+              <p className="text-xl text-gray-300 max-w-3 xl mx-auto" /  />
+Discover the powerful features that make Loading the perfect solution for your business.</p>
+              </>
+    <div className="grid md: "grid-cols-2 l","
+g: grid-cols-4 gap-8" />,<div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20" />,
     <h1 className="text-xl font-semibold text-white mb-3">AI-Powered</h3>
-                <p className="text-gray-300">Advanced AI algorithms for intelligent automation.</p> <div className="[^"]*">
+                <p className="text-gray-300">Advanced AI algorithms for intelligent automation.</>
+    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20" / />,
     <h1 className="text-xl font-semibold text-white mb-3">Scalable</h3>
                 <p className="text-gray-300">Grows with your business needs and requirements.</p>
-                </div> <div className="[^"]*">
+                </>
+    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20" / />,
     <h1 className="text-xl font-semibold text-white mb-3">Secure</h3>
                 <p className="text-gray-300">Enterprise-grade security and data protection.</p>
-                </div> <div className="[^"]*">
+                </>
+    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20" / />,
     <h1 className="text-xl font-semibold text-white mb-3">Efficient</h3>
                 <p className="text-gray-300">Optimized performance for maximum productivity.</p>
                 </div>
               </div>
             </div>
-</section>,{/* CTA Section*/} <section className="py-20 px-4" /> <div className="[^"]*">
-    <h1 className="text-4 xl font-bold text-white mb-6">Ready to Get Started?</h2> <p className="[^"]*">
+</section>,{/* CTA Section */}
+        <section className="py-20 px-4" />,
+    <div className="max-w-4 xl mx-auto text-center" / />,
+    <h1 className="text-4 xl font-bold text-white mb-6">Ready to Get Started?</h2>
+            <p className="text-xl text-gray-300 mb-8" /  />
 Join thousands of businesses already using Loading to transform their operations.</p>
-            </p> <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
+            </p>
+            <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"  />
 Start Your Free Trial</button>
+=======
+</section>,{/* Features Section */}"
+        <section className="py-20 px-4 /">,
+    <div className="max-w-7 xl mx-auto /">,"
+    <div className="text-center mb-16 /">,
+    <h1 className="text-4 xl font-bold text-white mb-4">"Key Features"</h2>"
+              <p className="text-xl text-gray-300 max-w-3 xl mx-auto /  /">
+"Discover the powerful features that make Loading the perfect solution for your business."</p>
+              </>
+    <div className="grid md: grid-cols-2 l",""
+g: grid-cols-4 gap-8" />,<div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 /">,
+    <h1 className="text-xl font-semibold text-white mb-3">"AI-Powered"</h3>"
+                <p className="text-gray-300">"Advanced AI algorithms for intelligent automation."</>
+    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 / /">,"
+    <h1 className="text-xl font-semibold text-white mb-3">"Scalable"</h3>
+                <p className="text-gray-300">"Grows with your business needs and requirements."</p>
+                </>
+    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 / /">,
+    <h1 className="text-xl font-semibold text-white mb-3">"Secure"</h3>"
+                <p className="text-gray-300">"Enterprise-grade security and data protection."</p>
+                </>
+    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 / /">,"
+    <h1 className="text-xl font-semibold text-white mb-3">"Efficient"</h3>
+                <p className="text-gray-300">"Optimized performance for maximum productivity."</p>
+                </div>
+              </div>
+            </div>
+</section>,{/* CTA Section */}"
+        <section className="py-20 px-4 /">,
+    <div className="max-w-4 xl mx-auto text-center / /">,"
+    <h1 className="text-4 xl font-bold text-white mb-6">"Ready to Get Started?"</h2>
+            <p className="text-xl text-gray-300 mb-8" /  />
+"Join thousands of businesses already using Loading to transform their operations."</p>
+            </p>
+            <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200  /">
+"Start Your Free Trial"</button>
+>>>>>>> origin/main
             </button>
             </div>
         </section>
         </div>
-      </Footer>
-    </div>
-</>
-  )
-  )  )}
-
-export default Loading
+<<<<<<< HEAD
+      </Footer>)
+    </div>)
+  )}      )
 }
+<<<<<<< HEAD
 
         {/* CTA Section */}
         <section className=&quot;py-20 px-4&quot;></section>
@@ -125,3 +194,38 @@ export default Loading
     </>
   );,
 };
+=======
+export default Loading}'
+const Loading: React.FC<LoadingProps> = ({ size = 'md', className = '' }) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+  }
+  return (<div className={`flex items-center justify-center ${className}`}>`
+      <div className={`${sizeClasses[size]} border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin`}
+       />
+    </div>)
+    )
+}
+export default Loading";`'
+=======
+      </Footer>")"
+    </div>)
+  )}  )}
+export default Loading}'
+const Loading: React.FC<LoadingProps> = ({ size = 'md', className = '' }) = ({ }) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',}
+    lg: 'w-12 h-12'
+  );
+}
+  return (<div className="{`flex" items-center justify-center ${className}`}>```
+      <div className="{`${sizeClasses[size]}" border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin`}
+       />
+    </div>)`
+  )}"``
+export default Loading";`'"``
+>>>>>>> origin/main
+>>>>>>> origin/main

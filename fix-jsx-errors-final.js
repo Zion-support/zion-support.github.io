@@ -1,47 +1,102 @@
-#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
 
-import fs from 'fs';
-import { glob } from 'glob';
-
-//Find all TypeScript/JSX files in src/components
-const _files = await glob('src/components/**/*.{tsx,ts}');
-
-// let fixedFiles = 0;
-
-for (const filePath of files) {
+// Function to fix JSX errors in a file
+function fixJSXErrors(filePath) {
   try {
-    let _content = fs.readFileSync(filePath, 'utf8');
-    let _originalContent = content;
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
 
-    //Fix orphaned /> tags (standalone /> on their own lines)
-    content = content.replace(/^\s*\/>\s*$/gm, '');
+    // Fix missing closing div tag before closing fragment
+    // Pattern: </div>\n    </> should be </div>\n      </div>\n    </>
+    if (content.includes('        </div>\n    </>')) {
+      content = content.replace(/        <\/div>\n    <\/>/g, '        </div>\n      </div>\n    </>');
+      modified = true;
+    }
 
-    //Fix unterminated regular expression literals in object properties
-    //Pattern: property: /pattern without closing /content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
-      const _value = match.split(':')[1].trim();
-      if (value.startsWith('/') && !value.endsWith('/')) {
-        return `${prop}: '${value.substring(1)}'`;
-      }
-      return match;
-    });
+    // Fix extra closing div tags
+    if (content.includes('      </div>\n      </div>\n    </>')) {
+      content = content.replace(/      <\/div>\n      <\/div>\n    <\/>/g, '      </div>\n    </>');
+      modified = true;
+    }
 
-    //Fix malformed <br> tags
-    content = content.replace(/<br\s*>\s*<\/br>/g, '<br />');
-    content = content.replace(/<br\s*>\s*$/gm, '<br />');
+    // Fix missing closing fragment tag
+    if (content.includes('<Footer />') && !content.includes('</>')) {
+      content = content.replace(/<Footer \/>\s*<\/div>\s*\)\s*}/g, '</div>\n    </>\n  );');
+      modified = true;
+    }
 
-    //Fix backticks after JSX tags
-    content = content.replace(/<(\w+)`/g, '<$1');
+    // Fix missing closing fragment tag for other patterns
+    if (content.includes('return (') && content.includes('<>') && !content.includes('</>')) {
+      // Look for patterns like: <Footer />\n    </div>\n  )\n}
+      content = content.replace(/<Footer \/>\s*<\/div>\s*\)\s*}/g, '</div>\n    </>\n  );');
+      modified = true;
+    }
 
-    //Fix specific patterns where /> appears in wrong places
-    content = content.replace(/\s*\/>\s*<(\w+)/g, ' <$1');
-    content = content.replace(/\s*\/>\s*<\/(\w+)>/g, '</$1>');
+    // Fix missing semicolon after return statement
+    if (content.includes('  )\n}') && !content.includes('  );\n}')) {
+      content = content.replace(/  \)\n}/g, '  );\n}');
+      modified = true;
+    }
 
-    if (content !== originalContent) {
+    // Fix any remaining Footer references that shouldn't be there
+    if (content.includes('<Footer />')) {
+      content = content.replace(/<Footer \/>\s*/g, '');
+      modified = true;
+    }
+
+    // Fix any orphaned closing div tags
+    if (content.includes('</div>\n  )\n}') && !content.includes('</>')) {
+      content = content.replace(/<\/div>\s*\)\s*}/g, '</div>\n    </>\n  );');
+      modified = true;
+    }
+
+    // Fix extra closing div tags before closing fragment
+    if (content.includes('      </div>\n      </div>\n    </>')) {
+      content = content.replace(/      <\/div>\n      <\/div>\n    <\/>/g, '      </div>\n    </>');
+      modified = true;
+    }
+
+    if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-//       fixedFiles++;
+      console.log(`Fixed: ${filePath}`);
+      return true;
     }
   } catch (error) {
-//     }
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+  return false;
 }
 
-// 
+// Function to recursively find all .tsx files
+function findTSXFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      files.push(...findTSXFiles(fullPath));
+    } else if (item.endsWith('.tsx')) {
+      files.push(fullPath);
+    }
+  }
+  
+  return files;
+}
+
+// Main execution
+console.log('Starting JSX error fixes final...');
+const appDir = '/workspace/app';
+const tsxFiles = findTSXFiles(appDir);
+
+let fixedCount = 0;
+for (const file of tsxFiles) {
+  if (fixJSXErrors(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed ${fixedCount} files out of ${tsxFiles.length} total .tsx files`);

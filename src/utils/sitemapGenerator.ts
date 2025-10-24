@@ -1,116 +1,77 @@
-// Sitemap generator utility,
-export interface SitemapUrl {;
-    // TODO: Add content;
-  }
-  }
+<<<<<<< HEAD
+/**
+ * Sitemap Generator
+ * Generates sitemap and robots.txt for SEO optimization
+ */
+export interface SitemapEntry {
+  loc: "string",lastmod: "string",changefreq: "string",priority: "number"}
 }
-  loc: string;
-  lastmod?: string;
-  changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority?: number;
 }
-export const _generateSitemap = (urls: SitemapUrl[]): string => {;
-    // TODO: Add content;
-  }
-  }
+export const generateRobotsTxt = (): string =>{"
+  return `User-agent: "*
+Allow: /
+=======
+/**;
+ * Sitemap Generator;*/
+ * Generates sitemap and robots.txt for SEO optimization;*/
+ */
+export interface SitemapEntry {;}
+;}
+  loc: "string",lastmod: "string",changefreq: "string",priority: "number"
+  );
 }
-  const baseUrl = 'https://ziontechgroup.com';
-  const currentDate = new Date().toISOString().split('T')[0];
-  const sitemap = `;
-          <?xml version='1.0' encoding='UTF-8'?>
-<urlset xmlns='http:// www.sitemaps.org/schemas/sitemap/0.9'>
-${;
-    urls,;
-    .map((u, r, l) => {
-  ;
-  // TODO: Add content;
-    }
-    const fullUrl = url.loc.startsWith('http') ? url.loc : `${ baseU, r, l }${url.loc}`;
-    return `;
-          <url>
-    <loc>${ fullU, r, l }</loc>
-    <lastmod>${url.lastmod || currentDate}</lastmod>
-    <changefreq>${url.changefreq || 'weekly'}</changefreq>
-    <priority>${url.priority || 0.8}</priority>
-  </url>`;
-  });
-  .join('\n')}
-</urlset>`;
-  return sitemap;
+}"
+;"
+export const generateSitemap = (): SitemapEntry[] => {;"
+  const baseUrl = 'https: "//ziontechgroup.com";
+  const currentDate = new Date().toISOString();"
+;"}
+return[{;"}
+lo",c: "loc",lastmod: "currentDate",changefreq: "changefreq",priority: "1.0",}"
+    {;"}
+loc: "loc",lastmod: "currentDate",changefreq: "changefreq",priority: "0.8",}"
+    {;"}
+loc: "loc",lastmod: "currentDate",changefreq: "changefreq",priority: "0.9",}"
+    {;"}
+loc: "loc",lastmod: "currentDate",changefreq: "changefreq",priority: "0.9",}"
+    {;"}
+loc: "loc",lastmod: "currentDate",changefreq: "changefreq",priority: "0.9",}"
+    {;"}
+loc: "loc",lastmod: "currentDate",changefreq: "changefreq",priority: "0.9",}"
+    {;"}
+loc: "loc",lastmod: "currentDate",changefreq: "changefreq",priority: "0.9",}"
+    {;"}
+loc: "loc",lastmod: "currentDate",changefreq: "changefreq",priority: "0.8",}"
+    {;"}
+loc: "loc",lastmod: "currentDate",changefreq: "changefreq",priority: "0.9",}"
+    {;"}
+loc: "loc",lastmod: "currentDate",changefreq: "changefreq",priority: "0.8",}"
+    {;"}
+loc: "loc",lastmod: "currentDate",changefreq: "changefreq",priority: "0.7",}"
+    {;"}
+loc: "loc",lastmod: "currentDate",changefreq: "changefreq",priority: "0.8",}"
+    {;"}
+loc: "loc",lastmod: "currentDate",changefreq: "changefreq",priority: "0.8",}"
+    {;"}
+loc: "loc",lastmod: "currentDate",changefreq: "changefreq",priority: "0.3",}"
+    {;"}
+loc: "loc",lastmod: "currentDate",changefreq: "changefreq",priority: "0.3",}]
+  ]
 }
-// Define all the pages for the sitemap,
-export const getAllPages = (): SitemapUrl[] => {;
-    // TODO: Add content;
-  }
-  }
-}
-  const currentDate = new Date().toISOString().split('T')[0];
-  return [;
-  // TODO: Add items,
-];
-    // Main pages,
-    { loc: '/', priority: 1.0, changefreq: 'daily' },
-    { loc: '/about', priority: 0.9, changefreq: 'monthly' },
-    { loc: '/contact', priority: 0.9, changefreq: 'monthly' },
-    { loc: '/services', priority: 0.9, changefreq: 'weekly' },
-    { loc: '/blog', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/case-studies', priority: 0.8, changefreq: 'monthly' },
-    { loc: '/pricing', priority: 0.8, changefreq: 'monthly' },
-    { loc: '/team', priority: 0.7, changefreq: 'monthly' },
-    { loc: '/careers', priority: 0.7, changefreq: 'weekly' },
-    // AI Services,
-    { loc: '/ai-services', priority: 0.9, changefreq: 'weekly' },
-    { loc: '/ai-marketing', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-automation', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-healthcare', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-fintech', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-data-analytics', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-cybersecurity', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-workflow-automation', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-customer-support', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-sales-automation', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-data-visualization', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-email-marketing', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-social-media-manager', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-project-manager', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-content-generation', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-code-generation', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-voice-cloning', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-video-generation', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-music-composition', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-fashion-design', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-fitness-coach', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-3d-generation', priority: 0.8, changefreq: 'weekly' },
-    // IT Services,
-    { loc: '/it-services', priority: 0.9, changefreq: 'weekly' },
-    { loc: '/cloud-migration', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/cybersecurity', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/devops-cicd', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/database-management', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/it-consulting', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/it-infrastructure', priority: 0.8, changefreq: 'weekly' },
-    // Micro SAAS,
-    { loc: '/micro-saas', priority: 0.9, changefreq: 'weekly' },
-    { loc: '/ai-crm', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-analytics-dashboard', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-chatbot-builder', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-email-marketing', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-mobile-app-builder', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-design-studio', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-seo-optimizer', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-writing-assistant', priority: 0.8, changefreq: 'weekly' },
-    // Specialized Solutions,
-    { loc: '/quantum-computing', priority: 0.8, changefreq: 'monthly' },
-    { loc: '/autonomous-systems', priority: 0.8, changefreq: 'monthly' },
-    { loc: '/blockchain-web3', priority: 0.8, changefreq: 'monthly' },
-    { loc: '/iot-edge-computing', priority: 0.8, changefreq: 'monthly' },
-    { loc: '/business-intelligence', priority: 0.8, changefreq: 'monthly' },
-    { loc: '/digital-transformation', priority: 0.8, changefreq: 'monthly' },
-    // Legal pages,
-    { loc: '/privacy', priority: 0.5, changefreq: 'yearly' },
-    { loc: '/terms', priority: 0.5, changefreq: 'yearly' },
-    { loc: '/cookies', priority: 0.5, changefreq: 'yearly' },
-    { loc: '/gdpr', priority: 0.5, changefreq: 'yearly' },
-    { loc: '/accessibility', priority: 0.5, changefreq: 'yearly' },
-  ];
-}
+;"
+export const generateRobotsTxt = (): string => {;"
+;"
+  return `User-agent: "*;
+Allow: /;
+Sitemap: https://ziontechgroup.com/sitemap.xml"
+
+# Crawl-delay for better server performance;"
+Crawl-dela",y: "1"
+
+# Disallow admin and private areas",Disallow: "/admin/;"
+Disallow: /api/;"`
+Disallow: /_next/;"``}
+Disallo",w: "/private/`","}
+}"'"`
+``
+>>>>>>> origin/main

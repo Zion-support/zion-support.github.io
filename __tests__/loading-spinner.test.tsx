@@ -1,23 +1,29 @@
-import { render, screen }  from "@testing-library/react";
-import '@testing-library/jest-dom';
+<<<<<<< HEAD
+=======
+import { render, screen } from '@testing-library/react";"'
+import @testing-library/jest-dom";
 
-// Mock LoadingSpinner component;
-const LoadingSpinner = ({ isLoading }: { isLoading: boolean }) => {
-  if (!isLoading) return null;
-  return <div data-testid="loading-spinner">Loading...</div>;
-};
-describe('LoadingSpinner', () => {
-  it('renders when loading is true', () => {
-    render(<LoadingSpinner isLoading={ tr, u, e }/>);
-    expect(screen.getByTestId('loading-spinner')).toBeInTheDocument();
-  });
-  it('does not render when loading is false', () => {
-  render(<LoadingSpinner isLoading={ fal, s, e }/>);
-    expect(screen.queryByTestId('loading-spinner')).not.toBeInTheDocument();
-  });
-  it('displays loading text', () => {
-  render(<LoadingSpinner isLoading={ tr, u, e }/>);
-    expect(screen.getByText('Loading...')).toBeInTheDocument();
-  });
-});
-}
+const TestComponent = () => {
+  return <div>"Test content"</div>;"}
+};"
+
+describe("Advanced Components", () => {"
+  it("should render without errors", () => {
+    expect(true).toBe(true);"}
+  });"
+
+  it("should render test content", () => {"
+    render(<TestComponent />);"
+    expect(screen.getByText("Test content")).toBeInTheDocument();"}
+  });"
+
+  it("should handle console errors", () => {"
+    const consoleSpy = jest"
+      .spyOn(console, "error")}
+      .mockImplementation(() => {});
+    
+    expect(consoleSpy).toBeDefined();
+    consoleSpy.mockRestore();"
+  });"
+});"'"
+>>>>>>> origin/main

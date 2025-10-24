@@ -1,284 +1,31 @@
-import React from 'react'
-import Head from "next/head"
-import Link from 'next/link'
-import { ArrowRight } from from 'lucide-react'
-export default function PartnersPage() {
-return (<>;
-import React from "react";
-import { Head  } from "next/head"
-import { Link  } from "next/link";
-import { ArrowRight  } from "lucide-react";
-import {;
-    Building,
-    Handshake,
-    Award,
-    Users,
-    Globe,
-    Star,
-    CheckCircle,
-    Phone,
-    Mail,
-    Building,
-    Handshake,
-    Award,
-    Globe,
-    Users,
-    Star,
-    CheckCircle from 'lucide-react';
-'use client';
+<<<<<<< HEAD
+=======
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-  }
-const PartnersPage: React.FC = () => {
-  ;
-    const partnerTypes = [;
-    {;
-  // TODO: Add content;
- ,
-    }
-  title: 'Technology Partners,',;
-      description: 'Leading technology companies that provide the foundation for our solutions',;
-      icon: Buildin,;
-      color: 'text-blue-400,',;
-      bgColor: 'value,',;
-  ];
-      partners: [;
-  // TODO: Add item,s,;
-];
-        { name: 'Microsoft,',
-      description: 'Azure Cloud Services & AI Platform', logo: '', },;
-        { name: 'Amazon Web Services,',
-      description: 'Cloud Infrastructure & AI Services', logo: '', },;
-        { name: 'Google Cloud,',
-      description: 'AI/ML Platform & Analytics', logo: '', },;
-        { name: 'IBM,',
-      description: 'Watson AI & Enterprise Solutions', logo: '', },;
-        { name: 'NVIDIA,',
-      description: 'GPU Computing & AI Hardware', logo: '', },;
-        {;
-    name: 'Intel,',;
-    description: 'AI Processors & Edge Computing',;
-    logo: '';
- , }
-//       ];
-    },;
-      title: 'Solution Partners,',;
-      description: 'Specialized solution providers that complement our offerings',;
-      icon: Handshak,;
-      color: 'text-green-400,',;
-      bgColor: 'bg-green-500/10,',;
-        { name: 'Salesforce,',
-      description: 'CRM & Customer Experience Platform', logo: '☁️', },;
-        { name: 'ServiceNow,',
-      description: 'IT Service Management & Automation', logo: '⚙️', },;
-        { name: 'Splunk,',
-      description: 'Data Analytics & Security Monitoring', logo: '📊', },;
-        { name: 'Tableau,',
-      description: 'Business Intelligence & Visualization', logo: '📈', },;
-        { name: 'Workday,',
-      description: 'HR & Financial Management', logo: '👥', },;
-        {;
-    name: 'Zendesk,',;
-    description: 'Customer Support & Engagement',;
-    logo: '🎧';
- , }
-  title: 'Integration Partners,',;
-      description: 'Partners that help us integrate with existing enterprise systems',;
-      icon: Awar,;
-      color: 'text-purple-400,',;
-      bgColor: 'bg-purple-500/10,',;
-{ name: 'Dell Technologies,',
-      description: 'Infrastructure & Storage Solutions', logo: '💾', },;
-        { name: 'Cisco,',
-      description: 'Networking & Security Infrastructure', logo: '🌐', },;
-        { name: 'VMware,',
-      description: 'Virtualization & Cloud Management', logo: '🖥️', },;
-        { name: 'Red Hat,',
-      description: 'Open Source Solutions & Support', logo: '🎩', },;
-        { name: 'Oracle,',
-      description: 'Database & Enterprise Applications', logo: '🗄️', },;
-        {;
-    name: 'SAP,',;
-    description: 'Enterprise Resource Planning',;
-    logo: '📋';
- , }
-    }
-  ];
-  const benefits = [;
-    icon: Glob,;
-      title: 'Global Reach,',;
-      description: 'Access to worldwide markets and customers through our partner network',;
-      icon: User,;
-      title: 'Expertise Sharing,',;
-      description: 'Collaborative knowledge sharing and best practices across industries',;
-      icon: Sta,;
-      title: 'Innovation,',;
-      description: 'Joint innovation initiatives and cutting-edge technology development',;
-      icon: CheckCircl,;
-      title: 'Quality Assurance,',;
-      description: 'Rigorous partner certification and quality standards',;
-  const partnershipTiers = [,;
-      name: 'Strategic Partners,',;
-      level: 'Platinum,',;
-      description: 'value',;
-  ];
-      benefits: [;
-  // TODO: Add item,s,;
-];
-//         'Joint marketing and sales initiatives',
-//         'Co-development of solutions',
-//         'Priority support and resources',
-//         'Executive relationship management',
-//         'Custom pricing and terms';
-//       ],;
-      color: 'text-yellow-400,',;
-      bgColor: 'bg-yellow-500/10,',;
-      name: 'Solution Partners,',;
-      level: 'Gold,',;
-      description: 'Technology integration and solution delivery partnerships',;
-        'Technical integration support',;
-        'Joint solution development',;
-        'Marketing support and co-marketing',;
-        'Training and certification',;
-        'Preferred pricing';
-      color: 'text-gray-400,',;
-      bgColor: 'bg-gray-500/10,',;
-      name: 'Channel Partners,',;
-      level: 'Silver,',;
-      description: 'Reseller and referral partnerships for market expansion',;
-        'Reseller program access',;
-        'Sales training and support',;
-        'Marketing materials and tools',;
-        'Lead sharing and referrals',;
-        'Competitive margins';
-      color: 'text-orange-400,',;
-      bgColor: 'bg-orange-500/10,',;
-  return (;
-          <div>Coming Soon</div>
-  );
-          <>;
-      <Navigation /></Navigation>
-      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'></div>
-        <div className='container mx-auto px-4 py-16 pt-24'></div>
-          {;
-    /* Header */;
-  }
-          <div className='text-center mb-16'></div>
-            <h1 className='text-4xl md: text-5xl font-bold text-white mb-6 neon-text'></h1>
-// Our Partner,s,;
-          </h1>
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'></p>
-// We work with industry-leading technology partners to deliver comprehensive solutions,;
-//               that drive innovation and business success.;
-          </p>
-          </div>
-          {;
-    /* Partner Types */;
-  }
-          <div className='mb-16'></div>
-            {;
-    partnerTypes.map((type,
-    index) => ();
-  }
-  }
-  }
-          <div key={ ind, e, x }className='mb-12'></div>
-                <div className='flex items-center mb-8'></div>
-                  <div className={`w-12 h-12 ${type.bgColor}rounded-lg flex items-center justify-center mr-4`}></div>
-                    <type.icon className={`w-6 h-6 ${type.color}`} /></type>
-                  <div></div>
-                    <h2 className='text-2xl font-bold text-white neon-text'>{type.title}</h2>
-                    <p className='text-gray-300'>{type.description}</p>
-                <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'></div>
-                  {;
-    </>
-    type.partners.map((partne,r,;
-    partnerIndex) => ();
-  }
-  }
-  }
-          <div key={ partnerInd, e, x }className='bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover: border-cyan-400/50 transition-all duration-300'></div>
-                      <div className='text-3xl mb-3'>{partner.log,o}</div>
-                      <h3 className='text-lg font-semibold text-white mb-2'>{partner.name}</h3>
-                      <p className='text-gray-300 text-sm'>{partner.description}</p>
-                  ))}
-          {;
-    /* Partnership Benefits */;
-  }
-            <h2 className='text-3xl font-bold text-white text-center mb-12 neon-text'></h2>
-// Why Partner With Us?;
-          </h2>
-            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6'></div>
-              {;
-    benefits.map((benefi,t,;
-    index) => ();
-  }
-  }
-  }
-          <div key={ ind, e, x }className='text-center'></div>
-                  <div className='w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4'></div>
-                    <benefit.icon className='w-8 h-8 text-cyan-400' /></benefit>
-                  <h3 className='text-lg font-semibold text-white mb-2'>{benefit.title}</h3>
-                  <p className='text-gray-300 text-sm'>{benefit.description}</p>
-{;
-    /* Partnership Tiers */;
-  }
-              Partnership Tiers;
-            <div className='grid grid-cols-1 md: grid-cols-3 gap-8'></div>
-              {;
-    partnershipTiers.map((tie,r,;
-    index) => ();
-  }
-  }
-  }
-          <div key={ ind, e, x }className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50`}></div>
-                  <div className='text-center mb-6'></div>
-                    <div className={`text-2xl font-bold ${tier.color}mb-2`}>{tier.level}</div>
-                    <h3 className='text-xl font-semibold text-white mb-2'>{tier.name}</h3>
-                    <p className='text-gray-300 text-sm'>{tier.description}</p>
-                  <ul className='space-y-3'></ul>
-                    {;
-    tier.benefits.map((benefit,
-    benefitIndex) => ();
-  }
-  }
-  }
-          <li key={ benefitInd, e, x }className='flex items-start'></li>
-                        <CheckCircle className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0' /></CheckCircle>
-                        <span className='text-gray-300 text-sm'>{ benef, i, t }</span>
-                      </li>
-                  </ul>
-{;
-    /* Become a Partner CTA */;
-  }
-          <div className='bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center'></div>
-            <h2 className='text-2xl font-bold text-white mb-4'></h2>
-              Become Our Partner;
-            <p className='text-gray-300 mb-6 max-w-2xl mx-auto'></p>
-              Join our partner ecosystem and unlock new opportunities for growth, innovation, and success.;
-              Let's build the future together.;
-            <div className='flex flex-col sm: flex-row gap-4 justify-center items-center'></div>
-              <a;
-                href='/contact';
-                className='cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105'
-// ></a>
-          <Handshake className='w-5 h-5 mr-2' /></Handshake>
-// Become a Partne,r,;
-          </a>
-                href='tel: +13024640950';
-                className='border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center'
-<Phone className='w-4 h-4 mr-2' /></Phone>
-                (3, 0, 2) 464-0950;
-                href='mailto:kleber@ziontechgroup.com';
-                className='border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center'
-                <Mail className='w-4 h-4 mr-2' /></Mail>
-                Email Us;
-      <Footer /></Footer>
-    </>
-  );,
-}
-export default PartnersPage;
-
+import Head from 'next/head';"
+import Link from 'next/link";"'
+import { ArrowRight } from lucide-react"
 export default function PartnersPage() {
-return (<>;
+  return (
+    <>
+    :all-pages-backup/partners/page.tsx"
+    </>
+      <title>"Partners - Zion Tech Group"</title>
+        <meta name = description" content="Professional partners services by Zion Tech Group. / / /">
+        <Head />
+        <title>"Partners - Zion Tech Group"</title>
+        <meta name="description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence. / /">
+      </Head>,
+    <div className="min-h-s" creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 />,"
+    <div className="con tainermx-auto px-4 py-16 /">,
+    <h1 className="tex t-4 xlfont-bold text-white mb-6">"Partners"</h1>"
+          <p className="tex" t-lgtext-gray-300 mb-8>"Professional partners services by Zion Tech Group."</p>
+          <Linkhref="/contact className="inl ine-flexitems-center px-6 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors /">"
+Contact Us</Link>
+            <ArrowRight className="ml-2" h-4 w-4 />
+          </Link>
+            </div>";"
+      </div>";"
+</div>;)"}
+  ),"}
+}"'"
+>>>>>>> origin/main

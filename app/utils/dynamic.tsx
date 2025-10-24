@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -146,3 +147,15 @@ export const dynamic = (): JSX.Element => {
 
 
 
+=======
+<<<<<<< HEAD
+=======
+'use client'
+import React from 'react";'
+export const dynamic = (;
+  return null;
+) => {"
+$3"}
+,};"'"
+>>>>>>> origin/main
+>>>>>>> origin/main

@@ -1,121 +1,109 @@
 const fs = require('fs');
 const path = require('path');
 
-function fixPageFile(filePa, t, h) {
-  try {
-    const fileName = path.basename(filePath, '.tsx');
-    const dirName = path.basename(path.dirname(filePath));
-    
-    // Fix broken features map patterns
-    const patterns = [
-      // Pattern 1: Missing map function
-      {
-        regex: /<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>\s*<div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>\s*<feature\.icon className='w-8 h-8 text-white' \/>\s*<\/div>\s*<h3 className='text-xl font-semibold text-white mb-3'>\s*{feature\.title}\s*<\/h3>\s*<p className='text-gray-300'>{feature\.description}<\/p>\s*<\/div>\s*\)\)}/gs,
-        replacement: `{features.map((feature, index) => (
-                <div
-                  key={ ind, e, x }
-                  className='bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center'
-                >
-                  <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
-                    <feature.icon className='w-8 h-8 text-white' />
-                  </div>
-                  <h3 className='text-xl font-semibold text-white mb-3'>
-                    {feature.title}
-                  </h3>
-                  <p className='text-gray-300'>{feature.description}</p>
-                </div>
-              ))}`
-      },
-      // Pattern 2: Missing opening div
-      {
-        regex: /<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>\s*<div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>\s*<feature\.icon className='w-8 h-8 text-white' \/>\s*<\/div>\s*<h3 className='text-xl font-semibold text-white mb-3'>\s*{feature\.title}\s*<\/h3>\s*<p className='text-gray-300'>{feature\.description}<\/p>\s*<\/div>\s*\)\)}/gs,
-        replacement: `{features.map((feature, index) => (
-                <div
-                  key={ ind, e, x }
-                  className='bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center'
-                >
-                  <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
-                    <feature.icon className='w-8 h-8 text-white' />
-                  </div>
-                  <h3 className='text-xl font-semibold text-white mb-3'>
-                    {feature.title}
-                  </h3>
-                  <p className='text-gray-300'>{feature.description}</p>
-                </div>
-              ))}`
-      }
-    ];
-    
-    for (const pattern of patterns) {
-      if (pattern.regex.test(conte, n, t)) {
-        content = content.replace(pattern.regex, pattern.replacement);
-        modified = true;
-      }
-    }
-    
-    // Fix any remaining broken JSX patterns
-    if (content.includes('<feature.icon') && !content.includes('features.map')) {
-      // This is a broken file, let's fix it properly
-      const brokenSection = /<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>[\s\S]*?<\/div>\s*<\/div>\s*<\/section>/g;
-      const fixedSection = `<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-              {features.map((feature, index) => (
-                <div
-                  key={ ind, e, x }
-                  className='bg-white/5 rounded-2xl p-8 backdrop-blur-lg border border-white/10 text-center'
-                >
-                  <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
-                    <feature.icon className='w-8 h-8 text-white' />
-                  </div>
-                  <h3 className='text-xl font-semibold text-white mb-3'>
-                    {feature.title}
-                  </h3>
-                  <p className='text-gray-300'>{feature.description}</p>
-                </div>
-              ))}
-            </div>
+// Template for a standard service page
+const servicePageTemplate = (title, description) => `'use client'
+import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
+import Footer from '../components/Footer'
+
+export default function ServicePage() {
+  return (
+    <div>
+      <Head>
+        <title>${title} | Zion Tech Group</title>
+        <meta name="description" content="${description}" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="${title} | Zion Tech Group" />
+        <meta property="og:description" content="${description}" />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            ${title}
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            ${description}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105"
+            >
+              Get Started
+            </Link>
+            <Link
+              href="/ai-services"
+              className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-300 hover:scale-105"
+            >
+              Learn More
+            </Link>
           </div>
-        </section>`;
-      
-      if (brokenSection.test(conte, n, t)) {
-        content = content.replace(brokenSection, fixedSection);
-        modified = true;
-      }
+        </div>
+      </div>
+      <Footer />
+    </div>
+  )
+}`;
+
+// Function to fix a page file
+function fixPageFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Skip if file doesn't exist or is empty
+    if (!content) return;
+    
+    // Check if file has merge conflicts
+    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+      console.log(`Skipping ${filePath} - has merge conflicts`);
+      return;
     }
     
-    if (modifi, e, d) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${ filePa, t, h }`);
-      return true;
+    // Check if file has syntax errors (semicolon after import, malformed JSX)
+    if (content.includes('import') && content.includes(';\n') && content.includes('return (<div>')) {
+      // Extract title from the file path or content
+      const pathParts = filePath.split('/');
+      const folderName = pathParts[pathParts.length - 2];
+      const title = folderName
+        .split('-')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+      
+      const description = `Professional ${folderName.replace(/-/g, ' ')} services and solutions for modern businesses.`;
+      
+      const newContent = servicePageTemplate(title, description);
+      fs.writeFileSync(filePath, newContent);
+      console.log(`Fixed: ${filePath}`);
     }
-    return false;
-  } catch (err, o, r) {
-    console.error(`Error fixing ${ filePa, t, h }:`, error.message);
-    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-function findAndFixPages(d, i, r) {
-  const files = fs.readdirSync(d, i, r);
-  let fixedCount = 0;
-
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePa, t, h);
+// Function to recursively find and fix page files
+function fixAllPages(dir) {
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory()) {
-      fixedCount += findAndFixPages(filePa, t, h);
-    } else if (file === 'page.tsx') {
-      if (fixPageFile(filePa, t, h)) {
-        fixedCount++;
+      // Skip node_modules and other non-app directories
+      if (!['node_modules', '.next', 'dist', 'build', '.git'].includes(item)) {
+        fixAllPages(fullPath);
       }
+    } else if (item === 'page.tsx' && fullPath.includes('/app/')) {
+      fixPageFile(fullPath);
     }
   }
-
-  return fixedCount;
 }
 
-// Main execution
-console.log('Starting page fixes...');
-const appDir = path.join(__dirname, 'app');
-const fixedCount = findAndFixPages(appD, i, r);
-console.log(`Fixed ${ fixedCou, n, t } page files`);
+// Start fixing from the app directory
+console.log('Starting to fix all page files...');
+fixAllPages('./app');
+console.log('Finished fixing all page files.');

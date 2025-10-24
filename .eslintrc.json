@@ -1,10 +1,18 @@
 {
   "extends": ["next/core-web-vitals"],
-  "ignorePatterns": ["src/**/*", "app-broken/**/*"],
   "rules": {
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": "off",
-    "no-console": "off",
-    "react-hooks/exhaustive-deps": "off"
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
   }
 }

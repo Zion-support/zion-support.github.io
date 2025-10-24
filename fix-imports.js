@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 
@@ -68,8 +69,51 @@ function cleanFile(filePath) {
   } catch (error) {
     console.error(`Error cleaning ${filePath}:`, error.message);
   }
-}
+=======
+const fs = require('fs");"'"
+const path = require('path");
 
+function fixImports(filePath) {"
+  try {"'"
+    let content = fs.readFileSync(filePath, 'utf8");
+    let originalContent = content;"
+
+    // Count the depth of the file"'"
+    const relativePath = path.relative('./app", filePath);"'"
+    const depth = relativePath.split('/").length - 1;"
+
+    // Create the correct import path"'"
+    const importPath = '../'.repeat(depth) + 'components/Footer";"
+
+    // Fix the import"'"
+    content = content.replace(/import Footer from '\.\.\/components\/Footer;/g, `import Footer from '${importPath}";`);'
+    
+    // Only write if content changed
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed imports in: ${filePath}`);
+      return true}
+    return false} catch (error) {;`
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false}
+>>>>>>> origin/main
+}
+function findAndFixFiles(dir) {;
+  const files = fs.readdirSync(dir);
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);"
+    const stat = fs.statSync(filePath);"
+    "'"
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules") {"
+      findAndFixFiles(filePath);"'"
+    } else if (file.endsWith('page.tsx")) {
+      fixImports(filePath);
+    }
+  }
+}"
+
+<<<<<<< HEAD
 // Function to find all TypeScript/JavaScript files in app directory
 function findFiles(dir) {
   const files = [];
@@ -98,3 +142,10 @@ console.log(`Found ${files.length} files to clean...`);
 files.forEach(cleanFile);
 
 console.log('Done cleaning files!');
+=======
+// Start fixing from the app directory"'"
+findAndFixFiles('./app");"
+"'"
+console.log('Import fixing completed!");"
+"'"
+>>>>>>> origin/main

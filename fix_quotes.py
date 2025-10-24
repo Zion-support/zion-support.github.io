@@ -1,37 +1,33 @@
 #!/usr/bin/env python3
-"""
-Script to fix escaped quotes in JavaScript strings that are breaking syntax.
-"""
-
 import os
 import re
 import glob
 
-def fix_file(file_path):
-    """Fix escaped quotes in JavaScript strings."""
+def fix_quotes(file_path):
+    """Fix quote issues in TypeScript/JavaScript files"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-        # Fix escaped quotes in JavaScript strings (not JSX content)
-        # Look for patterns like: '&apos;text&apos;' or "&quot;text&quot;"
-        content = re.sub(r"'&apos;([^']*)&apos;'", r"'\1'", content)
-        content = re.sub(r'"&quot;([^"]*)&quot;"', r'"\1"', content)
+        # Fix unterminated string literals by adding missing quotes
+        content = re.sub(r"import React from 'react''", "import React from 'react';", content)
+        content = re.sub(r"import Link from 'next/link''", "import Link from 'next/link';", content)
+        content = re.sub(r"import { Metadata } from 'next''", "import { Metadata } from 'next';", content)
+        content = re.sub(r"from 'lucide-react''", "from 'lucide-react';", content)
+        content = re.sub(r"'use client''", "'use client';", content)
         
-        # Fix any remaining escaped quotes in string literals
-        content = re.sub(r"&apos;", "'", content)
-        content = re.sub(r"&quot;", '"', content)
+        # Fix other common quote issues
+        content = re.sub(r"(\w+):\s*'([^']*)'([^,}\n])", r'\1: "\2"\3', content)
+        content = re.sub(r"(\w+):\s*\"([^\"]*)\"([^,}\n])", r'\1: "\2"\3', content)
         
-        # Only write if content changed
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
-            print(f"Fixed quotes: {file_path}")
+            print(f"Fixed quotes in {file_path}")
             return True
         else:
-            print(f"No quote fixes needed: {file_path}")
             return False
             
     except Exception as e:
@@ -39,30 +35,17 @@ def fix_file(file_path):
         return False
 
 def main():
-    """Main function to fix all files."""
-    # Find all TypeScript/TSX files
-    patterns = [
-        'src/**/*.tsx',
-        'app/**/*.tsx',
-        'components/**/*.tsx',
-        '**/*.tsx'
-    ]
-    
-    files_to_fix = []
-    for pattern in patterns:
-        files_to_fix.extend(glob.glob(pattern, recursive=True))
-    
-    # Remove duplicates
-    files_to_fix = list(set(files_to_fix))
-    
-    print(f"Found {len(files_to_fix)} files to check...")
+    # Find all TypeScript/JavaScript files in the app directory
+    files = []
+    for ext in ['*.tsx', '*.ts', '*.js', '*.jsx']:
+        files.extend(glob.glob(f'./app/**/{ext}', recursive=True))
     
     fixed_count = 0
-    for file_path in files_to_fix:
-        if fix_file(file_path):
+    for file_path in files:
+        if fix_quotes(file_path):
             fixed_count += 1
     
-    print(f"\nFixed {fixed_count} files out of {len(files_to_fix)} files checked.")
+    print(f"\nFixed quotes in {fixed_count} files")
 
 if __name__ == "__main__":
     main()

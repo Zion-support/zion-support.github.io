@@ -1,44 +1,22 @@
-"use client";
-import React from 'react';
-interface DefaultSEOProps {
-className?: string
-}
-}
-}
-
-const DefaultSEO: React.FC<DefaultSEOProps> = ({ className = &apos;&apos;, }) => {
-  return (
-    <div className={ classNa, m, e }></div>
-      <h2>DefaultSEO</h2>
-      <p>This component is under construction.</p>
-    </div>
-    </>
-  )
-  )
-}
-
-export const DefaultSEO: React.FC<DefaultSEOProps> = ({ className = '', children }) => {
-  return (
-    <div className={`defaultseo ${className}`}>
-      {children}
-    </div>
+<<<<<<< HEAD
+=======
+import React from "react"
+;"
+;use client";
+interface DefaultSEOProps {}
+className?: string}
+;}
+;}"
+;}"
+"'"
+const DefaultSEO: "React.FC<DefaultSEOProps> = ({ className = '' ",;}) => {}
+return(</DefaultSEOProps>,}
+    <div className="{className,;}" />
+      <h2>"DefaultSEO"</h2>
+      <p>"This component is under construction."</p>
+    </div>)
   );
-import React from 'react'
-"use client"
-interface DefaultSEOProps {;
-className?: string;
-}
-}
-}"
-";'"
-const DefaultSEO: "React.FC<DefaultSEOProps> = ({ className = '' "}) => {;
-return(</>;
-    <div className={className}  />
-      <h2>DefaultSEO</h2>
-      <p>This component is under construction.</p>);
-    </div>);
-  )}"
-export default DefaultSEO;";'"
-};
-
-export default DefaultSEO;
+};"
+;"
+export default DefaultSEO;"'"
+>>>>>>> origin/main

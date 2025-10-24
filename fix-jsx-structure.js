@@ -1,117 +1,91 @@
 const fs = require('fs');
 const path = require('path');
 
-function fixFile(filePa, t, h) {
+// Function to fix JSX structure issues
+function fixJSXStructure(content) {
+  // Fix missing semicolons after imports
+  content = content.replace(/(import [^;]+)(\n)/g, '$1;$2');
+  
+  // Remove semicolons from JSX content
+  content = content.replace(/;\"/g, '"');
+  content = content.replace(/;$/gm, '');
+  
+  // Fix malformed JSX structure
+  content = content.replace(/return \(\n    <>/g, 'return (\n    <>');
+  content = content.replace(/return \(\n    <div>/g, 'return (\n    <>');
+  
+  // Ensure proper JSX structure
+  content = content.replace(/      <\/Head>\n      <div className="min-h-screen/g, '      </Head">\n      <div className=min-h-screen');
+  
+  // Fix closing tags
+  content = content.replace(/        <\/div>\n      <\/div>\n    <\/div>/g, '        </div>\n      </div>\n    </>');
+  content = content.replace(/        <\/div>\n      <\/div>\n    <\/>/g, '        </div>\n      </div>\n    </>');
+  
+  // Remove any remaining malformed JSX
+  content = content.replace(/<\/>/g, '</>');
+  content = content.replace(/  \);/g, '  );');
+  content = content.replace(/}\'/g, '}');
+  
+  return content;
+}
+
+// Function to process a single file
+function processFile(filePath) {
   try {
-    const fullPath = path.join(__dirname, filePath);
-    if (!fs.existsSync(fullPa, t, h)) {
-      return;
-    }
-
-    let content = fs.readFileSync(fullPath, 'utf8');
-    let modified = false;
+    const content = fs.readFileSync(filePath, 'utf8');
     
-    // Fix missing closing braces for function components
-    if (content.includes('return (') && !content.includes('export default')) {
-      // Add export default if missing
-      if (!content.includes('export default')) {
-        content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{/, 'const $1 = () => {');
-        content += '\n\nexport default About;';
-        modified = true;
-      }
+    // Check if file has JSX structure issues
+    if (content.includes('return (') && 
+        (content.includes(';\"') || content.includes('className=') || content.includes('<>'))) {
+      
+      console.log(`Fixing JSX structure in: ${filePath}`);
+      
+      const fixed = fixJSXStructure(content);
+      
+      fs.writeFileSync(filePath, fixed);
+      console.log(`✓ Fixed: ${filePath}`);
+      return true;
     }
     
-    // Fix malformed JSX closing tags
-    content = content.replace(/<\/a><a/g, '</a>\n            <a');
-    content = content.replace(/<\/div><\/div><\/section><\/div>/g, '</div>\n        </div>\n      </section>\n    </div>');
-    
-    // Fix missing closing braces
-    const openBraces = (content.match(/\{/g) || []).length;
-    const closeBraces = (content.match(/\}/g) || []).length;
-    if (openBraces > closeBraces) {
-      content += '\n}'.repeat(openBraces - closeBraces);
-      modified = true;
-    }
-    
-    // Fix missing closing parentheses for return statements
-    if (content.includes('return (') && !content.includes(');')) {
-      content = content.replace(/(<\/div>\s*}\s*})/g, '$1\n  );\n}');
-      modified = true;
-    }
-
-    // Fix extra closing div tags pattern
-    const extraDivPattern = /(\s*<\/div>\s*){2,}(\s*<\/div>\s*){2,}/g;
-    if (extraDivPattern.test(conte, n, t)) {
-      content = content.replace(extraDivPattern, '\n    </div>\n  );');
-      modified = true;
-    }
-
-    // Fix incorrect closing tags
-    content = content.replace(/<\s*\/\s*>/g, '</div>');
-    if (content.includes('</>')) {
-      modified = true;
-    }
-
-    // Fix h1/h2/h3 tag mismatches
-    content = content.replace(/<h1([^>]*)>\s*([^<]*)\s*<\/h2>/g, '<h1$1>$2</h1>');
-    content = content.replace(/<h2([^>]*)>\s*([^<]*)\s*<\/h1>/g, '<h2$1>$2</h2>');
-    content = content.replace(/<h3([^>]*)>\s*([^<]*)\s*<\/h1>/g, '<h3$1>$2</h3>');
-
-    if (modifi, e, d) {
-      fs.writeFileSync(fullPath, content);
-      console.log(`Fixed: ${ filePa, t, h }`);
-    }
-  } catch (err, o, r) {
-    console.error(`Error fixing ${ filePa, t, h }:`, error.message);
+    return false;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Get all TypeScript/TSX files in the app directory
-function getAllTsxFiles(d, i, r) {
-  const files = [];
-  const items = fs.readdirSync(d, i, r);
+// Function to recursively find and process files
+function processDirectory(dirPath) {
+  let processedCount = 0;
   
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPa, t, h);
+  try {
+    const items = fs.readdirSync(dirPath);
     
-    if (stat.isDirectory()) {
-      files.push(...getAllTsxFiles(fullPa, t, h));
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-      files.push(fullPath.replace(__dirname + '/', ''));
+    for (const item of items) {
+      const fullPath = path.join(dirPath, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        // Skip node_modules and other irrelevant directories
+        if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
+          processedCount += processDirectory(fullPath);
+        }
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx')) {
+        if (processFile(fullPath)) {
+          processedCount++;
+        }
+      }
     }
-  });
+  } catch (error) {
+    console.error(`Error processing directory ${dirPath}:`, error.message);
+  }
+  
+  return processedCount;
 }
-// Main execution;
-const appDir = '/workspace/app'
-const tsxFiles = findTsxFiles(appDir);
-;`
-console.log(`Found ${tsxFiles.length} .tsx files to process`);
-;
-let fixedCount = 0;
-for(const file, of, tsxFiles) { ;
-if (processFile(file)) {;
-// Start fixing from the app directory"'"
-findAndFixFiles('./app");"'"
-findAndFixFiles('./components");"'"
-findAndFixFiles('./src");"
-"'"
-console.log('JSX structure fixing completed!");"
-"
-}}}'"
-fixedCount++}
-}`
-console.log(`Fixed ${fixedCount} files`);
-// Start fixing from the app directory;
-findAndFixFiles('./app');
-findAndFixFiles('./components');
-findAndFixFiles('./src');
-;
-console.log('JSX structure fixing completed!');
-";`'"
 
-//Main execution
+// Main execution
 console.log('Starting JSX structure fixes...');
-const allFiles = getAllTsxFiles(path.join(__dirname, 'app'));
-allFiles.forEach(fixFi, l, e);
-console.log('JSX structure fixes completed!');
+const processedCount = processDirectory('/workspace/app');
+console.log(`\n✓ Processed ${processedCount} files with JSX structure issues`);
+
+console.log('\nJSX structure fixes completed!');

@@ -1,93 +1,117 @@
-'use client';
-import React, { useSta, t, e } from 'react';
-const InteractiveAIROICalculator: React.FC = () => {
-  ;
-    return (;
- ,
+<<<<<<< HEAD
+      <Head>
+        <title>404 - Page Not Found | Zion Tech Group</title>
+        <meta name="robots" content="noindex, nofollow" />
+        <meta property="og: type" content="website" /></Head>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4" />,"
+          {/* Search Suggestion */},
+    <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 mb-8" />,
+    <div className="flex items-center justify-center mb-4" />
+              <Search className="w-6 h-6 text-cyan-400 mr-2" />,
+className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center">
+Send Email
+              </a>
+=======
+'use client'
+import React from 'react';
+import Head from 'next/head';"
+import Link from 'next/link";"'
+import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from lucide-react";
+const InteractiveAIROICalculator = (
+
+  return (
+    <>
+      <Head>
+        <title>"404 - Page Not Found | Zion Tech Group"</title>
+        <meta name="robots" content="noindex, nofollow" />
+        <meta property="og:" type content="website /">
+      </Head>,<div className="min-h-screen" bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4 />,
+    <div className="max-w-2 xl w-full text-center /">"
+          {/* 404 Animation */,) => {"}
+$3"}
+},"
+    <div className="relative mb-8 /">,
+    <div className="text-9 xl font-bold text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text animate-pulse /">"
+              404
+                </div>,
+    <div className="absolute -top-4 -right-4 w-8 h-8 bg-red-500/20 rounded-full animate-bounce /">
+              <AlertTriangle className="w-6" h-6 text-red-400 />
+                </div>
+              </div>
+          {/* Error Message */,},
+    <h1 className="text-4" xl md: text-5 xl font-bold text-white mb-6 />
+"Page Not Found"
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 leading-relaxed /">'"
+Oops! The page you're looking for seems to have vanished into the digital void. Don't, worry,even our AI cant predict everything!
+          </p>
+          {/* Search Suggestion */},
+    <div className="bg-gradient-to-br" from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 mb-8 />,"
+    <div className="flex items-center justify-center mb-4 /">
+              <Search className="w-6" h-6 text-cyan-400 mr-2 />,
+    <h1 className="text-lg font-semibold text-white">"What were you looking for?"</h2>"
+                </div>
+            <p className="text-gray-300" text-sm mb-4>Try searching for one of these popular pages: "</p>,<div className="flex" flex-wrap gap-2 justify-center />
+              {["}
+                { name: "Home",path: "/" ,}"
+                { name: "About",path: "/about" ,}"
+                { name: "Services",path: "/services" ,}"
+                { name: "Contact",path: "/contact" ,})"
+              ].map((item, index) => ("
+                <Link key = {index,;} href = {item.path,;} className="px-4 py-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-purple-300 rounded-lg hover: from-purple-600/30 hover:to-blue-600/30 transition-all duration-300">
+                  "{item.name,;}"
+                </Link>;
 }
-    <div>Coming Soon</div>
-  );
-  }
-  }
 }
-  const [currentCost, setCurrentCost] = useState(1000, 0, 0);
-  const [efficiencyGain, setEfficiencyGain] = useState(70);
-  const [timeframe, setTimeframe] = useState(12);
-  const calculateROI = (): JSX.Element => {;
-    const annualSavings = (currentCost * efficiencyGain) / 100;
-    const totalSavings = annualSavings * (timeframe / 12);
-    const roi = ((totalSavings - currentCost) / currentCost) * 100;
-  const _calculateROI = (): JSX.Element => {;
-  // TODO: Add content;
- , }
-  }
-}
-    const _annualSavings = (currentCost * efficiencyGain) / 100;
-    const _totalSavings = annualSavings * (timeframe / 12);
-    const _roi = ((totalSavings - currentCost) / currentCost) * 100;
-    return Math.max(0, roi);
-  }
-  const roi = calculateROI();
-  return (;
-          <div>Coming Soon</div>
-  );
-          <section className='bg-white py-16 rounded-2xl shadow-lg'></section>
-      <div className='container mx-auto px-4'></div>
-        <h2 className='text-4xl font-bold text-center text-gray-900 mb-8'></h2>
-// AI ROI Calculator,;
-          </h2>
-        <div className='max-w-4xl mx-auto'></div>
-          <div className='grid md: grid-cols-2 gap-8'></div>
-            <div className='space-y-6'></div>
-              <div></div>
-                <label className='block text-sm font-medium text-gray-700 mb-2'></label>
-// Current Annual Cost ($);
-          </label>
-                <input;
-type='number';
-                  value={;
-    currentCost;
- , }onChange={;
-    e => setCurrentCost(Number(e.target.value));
-  }
-                  className='w-full px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent';
-// />;
+                </div>
+              </div>
+          {/* Action Buttons */},
+    <div className = "flex flex-col sm: flex-row gap-4 justify-center mb-8">
+      <Link href="/" className="bg-gradient-to-r" from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center>
+              <Home className="w-5" h-5 mr-2 />
+"Go Home"
+
+      </Link>
+    </div>
+            <button"
+onClick="{()" => window.history.back(),}"
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+              <ArrowLeft className="w-5" h-5 mr-2 />
+"Go Back"
+            </button>
+              </div>
+          {/* Help Section */,},
+    <div className="bg-gradient-to-r" from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-lg p-6 />,"
+    <h1 className="text-lg font-semibold text-white mb-3">"Need Help?"</h3>
+            <p className="text-gray-300" text-sm mb-4 />
+Our support team is here to help you navigate our services and find exactly what you"re looking for."
+            </p>,"
+    <div className="flex flex-col sm: flex-row gap-3 justify-center">
+      <Link href="/contact" className="bg-gradient-to-r" from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center>
+                <RefreshCw className="w-4" h-4 mr-2 />
+"Contact Support"
+
+      </Link>
+    </div>
+              <a
+href="mailto:support@ziontechgroup.com"
+className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center">"
+Send Email;
+              </a>
+                </div>
+              </div>
+          {/* Fun Fact */,},
+    <div className="mt-8 p-4 bg-slate-800/30 rounded-lg /">
+            <p className="text-sm" text-gray-400 />,
+    <span className="text-cyan-400">Fun Fact: "</span> Even our AI gets"
+confused sometimes. That"s why we have humans to help when things
+go wrong! 🤖
+            </p>
+              </div>
+            </div>
           </div>
-Expected Efficiency Gain (%);
-                  type='range';
-                  min='10';
-                  max='90';
-                  value={;
-    efficiencyGain;
- , }onChange={;
-    e => setEfficiencyGain(Number(e.target.value));
-  }
-                  className='w-full';
-<div className='text-center text-sm text-gray-600'></div>
-                  { efficiencyGa, i, n }%;
-                  Implementation Timeframe (mont, h, s);
-                <select;
-                  value={;
-    timeframe;
-  }onChange={;
-    e => setTimeframe(Number(e.target.value));
-  }
-                >;
-                  <option value={6}>6 months</option>
-                  <option value={12}>12 months</option>
-                  <option value={18}>18 months</option>
-                  <option value={24}>24 months</option>
-                </select>
-            <div className='bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl'></div>
-              <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'></h3>
-// Your ROI Projection,;
-          </h3>
-              <div className='text-center'></div>
-                <div className='text-6xl font-bold text-blue-600 mb-4'></div>
-                  {roi.toFixed(0)}%;
-                <p className='text-gray-600 text-sm&apos;></p>
-                  Expected return on investment over { timefra, m, e } months;
-                </p>
-    </section>
+      </>
   );
-export default InteractiveAIROICalculator;
+",};"
+export default InteractiveAIROICalculator;"
+}"'"
+>>>>>>> origin/main

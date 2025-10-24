@@ -1,205 +1,220 @@
-interface ContentPreviewCardProps {;
-    // TODO: Add content;
- , }
-  }
-}
-  id: string;
-    title: string;
-    description: string,;,;
-    category: string,;,;
-    readTime: string,;,;
-    date: string,;,;
-    path: string,;,;
-    image: string;
-  featured?: boolean;
-  stats?: {;
-    // TODO: Add content;
- , }
-  }
-}
-  views: number,;,;
-    engagement: number;
- , }
-  excerpt?: string;
-}
-const ContentPreviewCard: React.FC;
-          <ContentPreviewCardProps> = ({;
-    // TODO: Add content;
- , }
-  }
-}
-  // id,;
-//   title,;
-//   description,;
-//   category,;
-//   readTime,;
-//   date,;
-//   path,;
-//   image,;
-  featured = false,;
-//   stats,;
-//   excerpt,;
-}) => {
-  ;
-    if (num >= 1000) {;
-  // TODO: Add content;
- ,
-    }
-      return (num / 1000).toFixed(1) + 'k';
-    }
-  }
-  const getCategoryColor = (category: string): string => {;
-    // TODO: Add content;
- , }
-  }
-}
-    const colors: {;
-    [key: strin,
-      g,;
-    : string;
-  } = {;
-    // TODO: Add content;
- , }
-  }
-}
-      'Success Story': 'from-green-500 to-emerald-600',
-      'Mega Trends': 'from-blue-500 to-cyan-600',
-      'Architecture': 'from-purple-500 to-pink-600',
-      'AI Agents': 'from-orange-500 to-red-600',
-      'Cost Optimization': 'from-yellow-500 to-orange-600',
-      'Intelligence': 'from-indigo-500 to-purple-600',
-      'Transformation': 'from-teal-500 to-blue-600',
-      'default': 'from-gray-500 to-gray-600';
-    }
-    return colors[catego, r, y] || colors.default;
-  }
-  return (;
-          <div>Coming Soon</div>
-  );
-          <article className={;
-    `bg-white rounded-xl shadow-lg overflow-hidden hover: shadow-2xl transition-all duration-300 transform hover:-translate-y-1 ${;
-  // TODO: Add content;
- , }}
-}
-      featured ? 'ring-2 ring-indigo-200' : '';
-    }`}></article>
-      {;
-    /* Image/Visual Header */;
-  }
-          <div className={`h-48 bg-gradient-to-br ${getCategoryColor(catego, r, y)}flex items-center justify-center relative`}></div>
-        <div className='text-center text-white'></div>
-          <div className='text-6xl mb-2'>{ ima, g, e }</div>
-          <div className='text-sm font-medium opacity-90'>{ catego, r, y }</div>
-        </div>
-        {;
-    /* Featured Badge */;
-  }
-        {;
-    featured && ();
-  }
-          <div className='absolute top-4 left-4'></div>
-            <span className='bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold'></span>
-// Featured,;
-          </span>
-          </div>
-  }
-  }
-        )}
-        {;
-    /* Stats Overlay */;
-  }
-        {;
-    stats && ();
-  }
-          <div className='absolute top-4 right-4 bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-2'></div>
-            <div className='text-center'></div>
-              <div className='text-lg font-bold text-white'></div>
-  }
-  }
-                {;
-    formatNumber(stats.views);
-  }
-              </div>
-              <div className='text-xs text-white opacity-90'>views</div>
-            </div>
-          </div>
-        )}
-        {;
-    /* Read Time Badge */;
-  }
-        <div className='absolute bottom-4 left-4'></div>
-          <span className='bg-white bg-opacity-90 text-gray-800 px-3 py-1 rounded-full text-sm font-medium'></span>
-            {;
-    readTime;
-  }
-          </span>
-        </div>
+<<<<<<< HEAD
+<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />
+      </>
+        <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, ContentPreviewCard, AI, solutions, intelligent automation&quot; / />
+<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." /  />
+      </Head>
+      </>
+      <Navigation/ />,
+    <div className = &quotmin-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot /  />
+        {/* Hero Section */}
       </div>
-      {;
-    /* Content */;
-  }
-      <div className='p-6'></div>
-        <div className='mb-3'></div>
-          <span className='inline-block bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium'></span>
-            {;
-    category;
-  }
-          </span>
-        </div>
-        <h3 className='text-xl font-bold text-gray-900 mb-3 line-clamp-2'></h3>
-          {;
-    title;
-  }
-        </h3>
-        <p className='text-gray-600 mb-4 line-clamp-3'></p>
-          {;
-    excerpt || description;
-  }
-        </p>
-        {;
-    /* Stats Row */;
-  }
-        {;
-    stats && ();
-  }
-          <div className='flex items-center justify-between mb-4 text-sm'></div>
-            <div className='flex items-center space-x-4'></div>
-              <div className='flex items-center'></div>
-                <svg className='w-4 h-4 text-gray-400 mr-1' fill='none' stroke='currentColor' viewBox='0 0 24 24'></svg>
-  }
-  }
-                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2}d='M15 12a3 3 0 11-6 0 3 3 0 016 0z' /></path>
-                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2}d='M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z' /></path>
-                </svg>
-                <span className='text-gray-600'>{formatNumber(stats.views)} views</span>
-              </div>
-              <div className='flex items-center'></div>
-                <svg className='w-4 h-4 text-green-500 mr-1' fill='none' stroke='currentColor' viewBox='0 0 24 24'></svg>
-                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2}d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' /></path>
-                </svg>
-                <span className='text-green-600 font-medium'>{stats.engagement}% engagement</span>
+      </div>
+Learn More</button>
+              </button></div></div></section>",{/* Features Section */}
+        <section className=&quot;py-20 px-4&quot; />,
+    <div className=&quot;max-w-7 xl mx-auto&quot; / />,
+    <div className=&quot;text-center mb-16&quot; / />,
+    <h1 className=&quot;text-4 xl font-bold text-white mb-4&quot;>Key Features</h2>
+                    {feature.benefits.map((benefit, idx) => (</ul>
+                      <li key = {idx} className = &quotflex items-center text-sm text-gray-300&quot;  />
+                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; /  />
+                        {benefit}</CheckCircle>
+                      </li>)
+                    )    )
+}
+                  </ul>
+                  </div>
+              )    )
+}
+=======
+'use client"
+:all-pages-backup/components/ContentPreviewCard.tsx;"'"
+import React from 'react';
+import { Helmet } from 'react-helmet-async";"'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"'
+import Navigation from ../components/Navigation";"
+import Footer from '../components/Footer";"'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react";"'
+import React from react'
+import { Helmet } from 'react-helmet-async";"'
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from lucide-react";"
+import Navigation from '../components/Navigation";"'
+import Footer from '../components/Footer";"'
+import { ArrowRight, Users, Target, BarChart, Brain, TrendingUp } from lucide-react";"
+const ContentPreviewCardPage: "React.FC = () => {
+const features = ["
+    {"
+:all-pages-backup/components/ContentPreviewCard.tsx"'"}
+ico",n: "Brain",title: "title",description: "description",benefits: "['Smart recommendations'",'Predictive analytics', 'Automated insights', 'Real-time analysis"]"}
+    }"
+  {"'"}
+icon: "BarChart",title: "title",description: "description",benefits: "['Real-time dashboards'",'Custom reports', 'Data visualization', 'Performance metrics"]"}
+    }"
+  {"'"}
+icon: "Target",title: "title",description: "description",benefits: "['Goal tracking'",'Performance optimization', 'Strategic planning', 'Success metrics"]"}
+    }"
+  {"'"
+icon: "TrendingUp",title: "title",description: "description",benefits: "['Growth strategies'",'Market analysis', 'Competitive insights', 'ROI optimization"]"
+icon: "Brain"'"}
+titl",e: "'AI-Powered Intelligence'",description: "'Advanced AI algorithms that provide intelligent insights and recommendations.'",benefits: "['Smart recommendations'",'Predictive analytics', 'Automated insights', 'Real-time analysis"]"}
+    }"
+  {"
+icon: "BarChart"'"}
+titl",e: "'Advanced Analytics'",description: "'Comprehensive analytics dashboard with real-time data visualization.'",benefits: "['Real-time dashboards'",'Custom reports', 'Data visualization', 'Performance metrics"]"}
+    }"
+  {"
+icon: "Target"'"}
+titl",e: "'Precision Targeting'",description: "'Target specific goals and objectives with precision and accuracy.'",benefits: "['Goal tracking'",'Performance optimization', 'Strategic planning', 'Success metrics"]"}
+    }"
+  {"
+icon: "TrendingUp"'"}
+titl",e: "'Growth Optimization'",description: "'Optimize your business growth with data-driven strategies.'",benefits: "['Growth strategies'",'Market analysis', 'Competitive insights', 'ROI optimization"]}
+    ;}"
+  ]"
+const benefits = ["'
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'"
+    'Gain competitive advantage with advanced technology"
+  ]
+return(:all-pages-backup/components/ContentPreviewCard.tsx
+    <>
+";"
+  </>;
+      <Helmet>";"</Helmet>
+    </>
+  </>
+      <Helmet>";"</Helmet>
+        <Head />
+        <title>"ContentPreviewCard"</title>
+        <meta name="&quot;description&quot;" content="&quot;Advanced" ContentPreviewCard solution for modern businesses.&quot; / />
+<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence. / /">;"
+      </Head>;"
+        <meta name="&quot;keywords&quot;" content="&quot;AI," artificial, intelligence, ContentPreviewCard, AI, solutions, intelligent automation&quot; / />
+<meta name = description content="Advanced 5 G data analytics solutions for real-time insights and business intelligence. / /">
+      </>;"
+        <meta name="&quot;keywords&quot;" content="&quot;AI," artificial, intelligence, ContentPreviewCard, AI, solutions, intelligent automation&quot; / />
+<meta name = description content="Advanced 5 G data analytics solutions for real-time insights and business intelligence. /  /">
+      </Head>";"
+      </>;
+      <Navigation/ />,;
+    <div className = &quotmin-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot /  />;
+        {/* Hero Section */}
+      </div>
+      </div>
+        <section className="&quot;relative" py-20 px-4 overflow-hidden&quot; />,"
+    <divclassName="&quot;absolute" inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot; / />,"
+    <divclassName="&quot;relative" max-w-7 xl mx-auto text-center&quot; / />,"
+    <h1className="&quot;text-5" xl md: "text-7 xl font-bold text-white mb-6 leading-tight&quot; / />
+"ContentPreviewCard"</h1>
+            </h1>
+            <pclassName="&quot;text-xl" text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed&quot; / />
+"Advanced ContentPreviewCard solution for modern businesses."</p>
+            </p>,<divclassName="&quot;flex" flex-col sm: flex-row gap-4 justify-center&quot; / />
+              <button className="&quot;bg-emerald-600" hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot; />
+"Get Started"</button>
+                <ArrowRightclassName="&quot;ml-2" h-5 w-5&quot; / />
+              </button>
+              <button className="&quot;border" border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,r: "text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
+"Learn More"</button>
+              </button>
               </div>
             </div>
-          </div>
-        )}
-        {;
-    /* Date and CTA */;
-  }
-        <div className='flex items-center justify-between'></div>
-          <span className='text-sm text-gray-500'>{ da, t, e }</span>
-          <Link;
-            href={;
-    path;
-  }className='inline-flex items-center text-indigo-600 hover: text-indigo-700 font-medium text-sm'
-// ></Link>
-//             Read Articl,e,;
-          <svg className='ml-1 w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'></svg>
-              <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2}d='M9 5l7 7-7 7' /></path>
-            </svg>
-          </Link>
-        </div>
-      </div>
-    </article>
+        </section>,{/* Features Section */}
+        <section className="&quot;py-20" px-4&quot; />,;
+    <div className="&quot;max-w-7" xl mx-auto&quot; / />,;
+    <div className="&quot;text-center" mb-16&quot; / />,;
+    <h1 className="&quot;text-4" xl font-bold text-white mb-4&quot;>"Key Features"</h2>
+              <pclassName="&quot;text-xl" text-gray-300 max-w-3 xl mx-auto&quot; / />
+"Powerful AI-driven features designed to transform your business operations"</p>
+              </p>
+              </div>,"
+    <divclassName="&quot;grid" md: "grid-cols-2 l",g: "grid-cols-4 gap-8&quot; / />)"
+              {features.map((feature",index) => (}
+                <divkey = {index,} className="&quot;bg-white/10" backdrop-blur-sm rounded-xl p-6 border border-white/20&quot; / />
+                  <feature.icon className="&quot;h-12" w-12 text-emerald-400 mb-4&quot; / />,
+    <h1 className = &quot;text-xl font-semibold text-white mb-3&quot;>"{feature.title,}"</h3>
+                  <p className = &quot;text-gray-300 mb-4&quot;>"{feature.description,}"</p>
+                  <ul className="&quot;space-y-2&quot;" />
+                    {feature.benefits.map((benefit, idx) => "("</ul>
   );
+                      <li key = {idx} className = &quotflex items-center text-sm text-gray-300&quot;  />;
+                        <CheckCircle className="&quot;h-4" w-4 text-emerald-400 mr-2 flex-shrink-0&quot; /  />;
+                        {benefit}</CheckCircle>";"
+                      </li>);
+                    ))}
+                  </ul>
+                  </div>
+              "))}"
+>>>>>>> origin/main
+              </div>
+            </div>
+        </section>
+        {/* Benefits Section */}
+<<<<<<< HEAD
+        <section className=&quot;py-20 px-4 bg-white/5&quot; />,
+    <div className=&quot;max-w-7 xl mx-auto&quot; / />,
+    <div className=&quot;text-center mb-16&quot; / />,
+    <h1 className=&quot;text-4 xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
+              )    )
 }
-export default ContentPreviewCard;
+=======
+        <section className="&quot;py-20" px-4 bg-white/5&quot; />,;
+    <div className="&quot;max-w-7" xl mx-auto&quot; / />,;
+    <div className="&quot;text-center" mb-16&quot; / />,;
+    <h1 className="&quot;text-4" xl font-bold text-white mb-4&quot;>"Why Choose Our Solution"</h2>
+              <pclassName="&quot;text-xl" text-gray-300 max-w-3 xl mx-auto&quot; / />
+"Experience the benefits of cutting-edge AI technology"</p>
+              </p>
+              </div>,
+    <divclassName="&quot;grid" md: "grid-cols-2 l",g: "grid-cols-3 gap-8&quot; / />
+              {benefits.map((benefit,index) => (}
+                <divkey = {index,} className = &quot;flex items-start space-x-4&quot; / />
+                  <CheckCircleclassName="&quot;h-6" w-6 text-emerald-400 mt-1 flex-shrink-0&quot; / />
+                  <p className="&quot;text-gray-300" text-lg&quot;>"{benefit,}"</p>
+                  </div>
+              "))}"
+>>>>>>> origin/main
+              </div>
+            </div>
+        </section>
+        {/* CTA Section */}
+<<<<<<< HEAD
+        <section className=&quot;py-20 px-4&quot; />,
+    <div className=&quot;max-w-4 xl mx-auto text-center&quot; / />,
+    <h1 className=&quot;text-4 xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
+Contact Sales</button>
+=======
+        <section className="&quot;py-20" px-4&quot; />,;
+    <div className="&quot;max-w-4" xl mx-auto text-center&quot; / />,;
+    <h1 className="&quot;text-4" xl font-bold text-white mb-6&quot;>"Ready to Transform Your Business?"</h2>
+            <pclassName="&quot;text-xl" text-gray-300 mb-8&quot; / />
+"Join thousands of businesses already using our AI solutions"</p>
+            </p>,
+    <divclassName="&quot;flex" flex-col sm: flex-row gap-4 justify-center&quot; / />
+              <button className="&quot;bg-emerald-600" hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
+"Start Free Trial"</button>
+              </button>
+              <button className="&quot;border" border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove",r: "text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
+"Contact Sales"</button>
+>>>>>>> origin/main
+              </button>
+              </div>
+            </div>
+        </section>
+<<<<<<< HEAD
+        </div>
+=======
+        </div>
+      <Footer/ />
+    </>
+:all-pages-backup/components/ContentPreviewCard.tsx
+  )",}
+export default ContentPreviewCardPage;
+  )
+}"
+export default ContentPreviewCardPage;"
+}"'"
+>>>>>>> origin/main

@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 """
-Comprehensive syntax error fixer for the Next.js project - Advanced version
+Comprehensive script to fix all syntax errors in TSX files.
+This script will:
+1. Fix malformed function declarations
+2. Fix JSX structure issues
+3. Fix import statements
+4. Fix missing closing tags
+5. Fix malformed JSX expressions
 """
 
 import os
@@ -8,182 +14,93 @@ import re
 import glob
 from pathlib import Path
 
-def fix_component_syntax(content):
-    """Fix common component syntax issues"""
-    # Fix malformed component declarations
-    content = re.sub(r'const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*return\s*null\s*}\s*export\s+default\s+\1', 
-                     r'const \1: React.FC = () => {\n  return null\n}\n\nexport default \1', content)
-    
-    # Fix missing return statements
-    content = re.sub(r'const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{([^}]*)}', 
-                     lambda m: f'const {m.group(1)}: React.FC = () => {{\n  return (\n    <div>\n      {m.group(2).strip()}\n    </div>\n  )\n}}', content)
-    
-    # Fix malformed JSX
-    content = re.sub(r'<(\w+)\s*className="([^"]*)"\s*>\s*$', r'<\1 className="\2">\n        </\1>', content, flags=re.MULTILINE)
-    
-    return content
-
-def fix_interface_declarations(content):
-    """Fix interface and type declarations"""
-    # Fix malformed interfaces
-    content = re.sub(r'interface\s+(\w+)\s*{\s*([^}]*)\s*}\s*$', 
-                     lambda m: f'interface {m.group(1)} {{\n  {m.group(2).strip()}\n}}', content, flags=re.MULTILINE)
-    
-    # Fix type declarations
-    content = re.sub(r'type\s+(\w+)\s*=\s*([^;]+);?\s*$', r'type \1 = \2;', content, flags=re.MULTILINE)
-    
-    return content
-
-def fix_jsx_fragments(content):
-    """Fix JSX fragment issues"""
-    # Fix unclosed fragments
-    content = re.sub(r'<>\s*$', '<>\n        </>', content, flags=re.MULTILINE)
-    
-    # Fix malformed fragments
-    content = re.sub(r'<>\s*([^<]+)\s*</>', r'<>\n          \1\n        </>', content)
-    
-    return content
-
-def fix_function_declarations(content):
-    """Fix function declaration issues"""
-    # Fix arrow functions
-    content = re.sub(r'const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{([^}]*)}', 
-                     lambda m: f'const {m.group(1)} = () => {{\n  {m.group(2).strip()}\n}}', content)
-    
-    # Fix async functions
-    content = re.sub(r'const\s+(\w+)\s*=\s*async\s*\(\s*\)\s*=>\s*{([^}]*)}', 
-                     lambda m: f'const {m.group(1)} = async () => {{\n  {m.group(2).strip()}\n}}', content)
-    
-    return content
-
-def fix_object_literals(content):
-    """Fix object literal syntax"""
-    # Fix missing commas in objects
-    content = re.sub(r'(\w+):\s*([^,}\n]+)\s*\n(\s*[a-zA-Z])', r'\1: \2,\n\3', content)
-    
-    # Fix malformed objects
-    content = re.sub(r'{\s*([^}]*)\s*}\s*$', lambda m: f'{{\n  {m.group(1).strip()}\n}}', content, flags=re.MULTILINE)
-    
-    return content
-
-def fix_import_statements(content):
-    """Fix import statement issues"""
-    # Remove empty imports
-    content = re.sub(r'import\s+{\s*}\s*from\s+["\'][^"\']+["\']\s*;?\s*', '', content)
-    
-    # Fix malformed imports
-    content = re.sub(r'import\s+([^"\']+)\s*from\s*["\']([^"\']+)["\']\s*;?\s*', r'import \1 from "\2";', content)
-    
-    return content
-
-def fix_export_statements(content):
-    """Fix export statement issues"""
-    # Remove duplicate exports
-    lines = content.split('\n')
-    seen_exports = set()
-    fixed_lines = []
-    
-    for line in lines:
-        if line.strip().startswith('export default'):
-            export_name = line.strip().split()[-1].rstrip(';')
-            if export_name in seen_exports:
-                continue
-            seen_exports.add(export_name)
-        fixed_lines.append(line)
-    
-    return '\n'.join(fixed_lines)
-
-def fix_jsx_attributes(content):
-    """Fix JSX attribute issues"""
-    # Fix malformed className attributes
-    content = re.sub(r'className="([^"]*)"\s*>\s*$', r'className="\1">\n        </div>', content, flags=re.MULTILINE)
-    
-    # Fix missing closing tags
-    content = re.sub(r'<(\w+)\s*([^>]*)\s*>\s*$', r'<\1 \2>\n        </\1>', content, flags=re.MULTILINE)
-    
-    return content
-
-def fix_typescript_syntax(content):
-    """Fix TypeScript specific syntax issues"""
-    # Fix generic type parameters
-    content = re.sub(r'<(\w+)>\s*$', r'<\1>', content, flags=re.MULTILINE)
-    
-    # Fix optional properties
-    content = re.sub(r'(\w+)\?\s*:\s*([^;]+);?\s*$', r'\1?: \2;', content, flags=re.MULTILINE)
-    
-    # Fix union types
-    content = re.sub(r'(\w+)\s*\|\s*(\w+)', r'\1 | \2', content)
-    
-    return content
-
-def fix_file(file_path):
-    """Fix a single file with comprehensive fixes"""
+def fix_file_comprehensively(file_path):
+    """Fix all syntax errors in a single file comprehensively"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-        # Apply all fixes
-        content = fix_component_syntax(content)
-        content = fix_interface_declarations(content)
-        content = fix_jsx_fragments(content)
-        content = fix_function_declarations(content)
-        content = fix_object_literals(content)
-        content = fix_import_statements(content)
-        content = fix_export_statements(content)
-        content = fix_jsx_attributes(content)
-        content = fix_typescript_syntax(content)
+        # Fix malformed import statements
+        content = re.sub(r"import\s+([^,]+)\s+from\s+'([^']+)'", r"import { \1 } from '\2'", content)
+        content = re.sub(r"import\s+([^,]+)\s+from\s+\"([^\"]+)\"", r"import { \1 } from \"\2\"", content)
         
-        # Clean up extra whitespace
+        # Fix malformed function declarations
+        content = re.sub(r'const\s+(\w+)\s*=\s*=>\s*{', r'const \1 = () => {', content)
+        content = re.sub(r'export\s+default\s+function\s+(\w+);', r'export default function \1() {', content)
+        content = re.sub(r'const\s+(\w+)\s*=\s*=>\s*;', r'const \1 = () => {', content)
+        
+        # Fix malformed return statements
+        content = re.sub(r'return;\s*', r'return (', content)
+        content = re.sub(r'return\s*\(\s*;\s*', r'return (', content)
+        
+        # Fix malformed JSX fragments
+        content = re.sub(r'<>\s*;\s*', r'<>', content)
+        content = re.sub(r';\s*</>', r'</>', content)
+        
+        # Fix malformed JSX elements
+        content = re.sub(r'<(\w+)([^>]*)>\s*;\s*', r'<\1\2>', content)
+        content = re.sub(r';\s*</(\w+)>', r'</\1>', content)
+        
+        # Fix malformed Head tags
+        content = re.sub(r'<Head>\s*</Head>', r'<Head></Head>', content)
+        content = re.sub(r'</Head><title>', r'<title>', content)
+        content = re.sub(r'</title>\s*<meta', r'</title>\n        <meta', content)
+        
+        # Fix malformed div tags
+        content = re.sub(r'</div><div', r'</div>\n        <div', content)
+        content = re.sub(r'</div><h1', r'</div>\n          <h1', content)
+        content = re.sub(r'</div><p', r'</div>\n          <p', content)
+        
+        # Fix malformed text content
+        content = re.sub(r'([^>])\s*;\s*([^<])', r'\1 \2', content)
+        content = re.sub(r'([^>])\s*;\s*$', r'\1', content, flags=re.MULTILINE)
+        
+        # Fix missing closing braces
+        if 'export default' in content and not content.strip().endswith('}'):
+            content = content.rstrip() + '\n}'
+        
+        # Fix malformed JSX attributes
+        content = re.sub(r'className="([^"]*);', r'className="\1"', content)
+        content = re.sub(r'content="([^"]*);', r'content="\1"', content)
+        
+        # Clean up multiple semicolons
+        content = re.sub(r';+', ';', content)
+        
+        # Clean up multiple empty lines
         content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
         
-        # Only write if content changed
-        if content != original_content:
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(content)
-            print(f"Fixed: {file_path}")
-            return True
-        else:
-            print(f"No changes needed: {file_path}")
-            return False
-            
+        # Write the cleaned content back
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(content)
+        
+        return content != original_content
+        
     except Exception as e:
         print(f"Error fixing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to fix all files"""
-    # Get all TypeScript/JavaScript files
-    patterns = [
-        'app/**/*.tsx',
-        'app/**/*.ts',
-        'src/**/*.tsx',
-        'src/**/*.ts',
-        'components/**/*.tsx',
-        'components/**/*.ts',
-        'api/**/*.ts',
-        'api/**/*.js',
-        '__tests__/**/*.tsx',
-        '__tests__/**/*.ts'
-    ]
+    """Main function to fix all files comprehensively"""
+    app_dir = Path('/workspace/app')
     
-    files_to_fix = []
-    for pattern in patterns:
-        files_to_fix.extend(glob.glob(pattern, recursive=True))
+    if not app_dir.exists():
+        print("App directory not found!")
+        return
     
-    # Remove duplicates and sort
-    files_to_fix = sorted(list(set(files_to_fix)))
+    # Find all TSX files
+    tsx_files = list(app_dir.rglob('*.tsx'))
     
-    print(f"Found {len(files_to_fix)} files to check")
+    print(f"Found {len(tsx_files)} TSX files to fix")
     
     fixed_count = 0
-    for file_path in files_to_fix:
-        if os.path.isfile(file_path):
-            if fix_file(file_path):
-                fixed_count += 1
+    for file_path in tsx_files:
+        if fix_file_comprehensively(file_path):
+            fixed_count += 1
+            print(f"Fixed: {file_path}")
     
-    print(f"\nFixed {fixed_count} files out of {len(files_to_fix)} checked")
+    print(f"Fixed {fixed_count} files")
 
 if __name__ == "__main__":
     main()

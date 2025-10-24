@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -141,9 +142,15 @@ const ErrorHandlerPage: React.FC = () => {
 "use client";
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 const errorHandler = (): JSX.Element => {
+=======
+<<<<<<< HEAD
+=======
+'use client'
+import React from 'react";'
+export const errorHandler = (;
+>>>>>>> origin/main
   return null;
-};
-
-
-
-export default errorHandle;r;
+) => {"
+$3"}
+,};"'"
+>>>>>>> origin/main

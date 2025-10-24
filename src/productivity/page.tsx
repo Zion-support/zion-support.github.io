@@ -1,137 +1,31 @@
-import React from 'react'
-import Head from "next/head"
-import Link from 'next/link'
-import { ArrowRight } from from 'lucide-react'
+<<<<<<< HEAD
+=======
+import React from 'react';
+import Head from 'next/head';"
+import Link from 'next/link";"'
+import { ArrowRight } from lucide-react"
 export default function ProductivityPage() {
-return (<>;
-import React from "react";
-import { Head  } from "next/head"
-import { Link  } from "next/link";
-import { ArrowRight  } from "lucide-react";
-
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, Star  } from "lucide-react";
-const ProductivityPage: React.FC = () => {
-  ;
-    return (;
- ,
-}
-    <div></div>
-      <Navigation /></Navigation>
-      <main className='container mx-auto px-4 py-16 pt-24'></main>
-  }
-  }
-        {;
-    /* Hero Section */;
-  }
-        <section className='text-center mb-16'></section>
-<h1 className='text-4xl md: text-6xl font-bold text-white mb-6 neon-text'>Productivity Tools</h1>
-          <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>AI-powered productivity tools to streamline your workflo,w, boost efficiency, and achieve more in less time</p>
-            <a;
-              href='/contact';
-              className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: from-cyan-600 hover:to-blue-700 transition-all'
-            >Get Productivity Suite</a>
-              href='/micro-saas';
-              className='border-2 border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all'
-            >View All Tools</a>
-          </div>
-        </section>
-        {;
-    /* Key Benefits */;
- , }
-        <section className='mb-16'></section>
-          <h2 className='text-3xl font-bold text-white mb-12 text-center neon-text'></h2>
-// Why Choose Our Productivity Tools?;
-          </h2>
-<div className='text-4xl mb-4'>⚡</div>
-              <h3 className='text-xl font-bold text-white mb-3'>AI-Powered</h3>
-              <p className='text-gray-300 text-sm'>Intelligent automation and insights powered by advanced AI</p>
-              <div className='text-4xl mb-4'>🎯</div>
-              <h3 className='text-xl font-bold text-white mb-3'>Focused Efficiency</h3>
-              <p className='text-gray-300 text-sm'>Tools designed to eliminate distractions and boost focus</p>
-              <div className='text-4xl mb-4'>📈</div>
-              <h3 className='text-xl font-bold text-white mb-3'>Measurable Results</h3>
-              <p className='text-gray-300 text-sm'>Track and measure your productivity improvements</p>
-              <div className='text-4xl mb-4'>🔗</div>
-              <h3 className='text-xl font-bold text-white mb-3'>Seamless Integration</h3>
-              <p className='text-gray-300 text-sm'>Works with your existing tools and workflows</p>
-        {;
-    /* Tools by Category */;
-  }
-        {;
-    categories.map(category => ();
-  }
-  }
-          <section key={ catego, r, y }className='mb-16'></section>
-            <h3 className='text-2xl font-bold text-white mb-8 text-center neon-text'>{ catego, r, y } Tools</h3>
-            <div>{;
-    productivityTools;
-                .filter(tool => tool.category === category);
-                .map((tool,
-    index) => (;
-  }
-  }
-  }
-<div className='text-4xl mb-4 text-center'>{tool.icon}</div>
-                    <h4 className='text-xl font-bold text-white mb-3 text-center'>{tool.title}</h4>
-                    <p className='text-gray-300 mb-4 text-sm text-center'>{tool.description}</p>
-                        <span className='text-2xl font-bold text-cyan-400'>{tool.price}</span>
-                        <span className='text-sm text-gray-400'>Market: {tool.marketPric,e}</span>
-                      <div>Save up to 50% vs market rates</div>
-                      <h5 className='font-semibold text-white mb-2 text-sm'>Key Features: </h5>
-                      <ul className='space-y-1'></ul>
-                        {;
-    tool.features.slice(,0,;
-    3).map((feature,;
-    featureIndex) => ();
-  }
-  }
-  }
-          <li key={ featureInd, e, x }className='flex items-center text-xs text-gray-300'></li>
-                            <CheckCircle className='w-3 h-3 text-green-500 mr-2 flex-shrink-0' /></CheckCircle>
-                            {;
-    feature;
-  }
-                          </li>
-                        ))}
-                        {;
-    tool.features.length > 3 && (;
-  }
-  }
-  }
-<li className='text-xs text-gray-400'>+{tool.features.length - 3} more features</li>
-                        )}
-                      </ul>
-                      <h5 className='font-semibold text-white mb-2 text-sm'>Benefits: </h5>
-                        {;
-    tool.benefits.map((benefi,t,;
-    benefitIndex) => ();
-  }
-  }
-  }
-          <li key={ benefitInd, e, x }className='flex items-center text-xs text-gray-300'></li>
-                            <Star className='w-3 h-3 text-yellow-500 mr-2 flex-shrink-0' /></Star>
-                            {;
-    benefit;
-  }
-className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover: from-cyan-600 hover:to-blue-700 transition-all text-sm inline-block'
-                      >Get This Tool</a>
-        {;
-    /* CTA Section */;
- , }
-        <section className='text-center'></section>
-          <h2 className='text-3xl font-bold text-white mb-6 neon-text'></h2>
-            Ready to Boost Your Productivity?;
-          <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>Get started with our productivity tools and transform how you work</p>
-            >Get Started Today</a>
-              href='tel: +13024640950';
-            >Call (3, 0, 2) 464-0950</a>
-      </main>
-      <Footer /></Footer>
-</div>);,
-}
-export default ProductivityPage;
-
-export default function ProductivityPage() {
-return (<>;
+  return (
+    <>
+    :all-pages-backup/productivity/page.tsx"
+    </>
+      <title>"Productivity - Zion Tech Group"</title>
+        <meta name = description" content="Professional productivity services by Zion Tech Group. / / /">
+        <Head />
+        <title>"Productivity - Zion Tech Group"</title>
+        <meta name="description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence. / /">
+      </Head>,
+    <div className="min-h-s" creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 />,"
+    <div className="con tainermx-auto px-4 py-16 /">,
+    <h1 className="tex t-4 xlfont-bold text-white mb-6">"Productivity"</h1>"
+          <p className="tex" t-lgtext-gray-300 mb-8>"Professional productivity services by Zion Tech Group."</p>
+          <Linkhref="/contact className="inl ine-flexitems-center px-6 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors /">"
+Contact Us</Link>
+            <ArrowRight className="ml-2" h-4 w-4 />
+          </Link>
+            </div>";"
+      </div>";"
+</div>;)"}
+  ),"}
+}"'"
+>>>>>>> origin/main

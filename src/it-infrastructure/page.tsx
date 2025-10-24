@@ -1,106 +1,46 @@
-import { Server, Lock, Monitor, CheckCircle, Star, Zap, Shield, Database, Clock, Code, BarChart, Helmet, Check } from 'lucide-react';
-import React from 'react';
-import { Server, Lock, Monitor } from 'lucide-react'
-import { CheckCircle, Star, Zap, BarChart, Shield, Helmet } from 'lucide-react'
-import { Clock } from 'lucide-react'
-
 <<<<<<< HEAD
-const ITInfrastructurePage: React.FC = () => {
-  const itServices = [
-  return (
-    <>
-      <Helmet>
-        <title>IT Infrastructure Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT infrastructure services including cloud management, DevOps, database administration, and 24/7 support. Enterprise-grade solutions at competitive prices." />
-        <meta name="keywords" content="IT infrastructure, cloud management, DevOps, database administration, server management, IT support, cybersecurity" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
-        {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20"></section>
-          <div className="absolute inset-0 bg-black opacity-20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-            <div className="text-center"></div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                IT Infrastructure Services</h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-                Enterprise-grade IT infrastructure solutions with 99.9% uptime guarantee and 24/7 expert support
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <a
-                  href="tel:+13024640950"
-                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
-                >
-                  📞 +1 302 464 0950</a>
-                <a;
-
-"use client";
-import { Server, Lock, Monitor } from "lucide-react";
-import { CheckCircle, Star, Zap, BarChart, Shield, Helmet  } from "lucide-react";
-import { Clo, c, k } from "lucide-react";
-const ITInfrastructurePage: React.FC = () => {
-  const itServices = [
-  return (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1c80
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e02
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-12b7
-      </div>
-    </>
-  ),
-}
-export default ITInfrastructurePage
-
-export default ITInfrastructurePage;
+This page is under development. Please check back soon for more information about our page services.</p>
 =======
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-const Page: React.FC = () => {;
-return (<>;
-  </>;
-      <SEOOptimizer title="Page",description="Professional page services and solutions for your business needs.", keywords={ ["page","AI solutions","business automation","technology services"] }; </div>
-canonicalUrl = "https: //ziontechgroup.com/page""
-      /></SEOOptimizer>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /  />"
-        <Navigation/ />"
-        <main className="container mx-auto px-4 py-16 pt-24" />,"
-    <div className="text-center" / />,"
-    <h1 className="text-4, xl, m,d: text-5 xl font-bold text-white mb-8 neon-text" /  />
+import React from 'react';
+import Navigation from '../components/Navigation";"'
+import Footer from '../components/Footer";"'
+import SEOOptimizer from ../components/SEOOptimizer"
+const Page: React.FC = () => {
+return (
+    <>
+";"}
+  </>;}
+      <SEOOptimizer title="Page,description="Professional page services and solutions for your business needs.", keywords="{" ["page","AI solutions","business automation","technology services"] }; </div>
+canonicalUrl = https: //ziontechgroup.com/page
+      /></SEOOptimizer>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 /">
+        <Navigation/ />
+        <main className="container" mx-auto px-4 py-16 pt-24 />,"
+    <div className="text-center /">,
+    <h1 className="text-4, xl, m,d: text-5 xl font-bold text-white mb-8 neon-text /">"
 Page</h1>
             </h1>
-            <p className="text-xl text-gray-300 mb-8" /  />"
-Professional page services and solutions for your business needs.</p>
-            </p>,<div className="cyber-card p-8 max-w-4 xl mx-auto" / />"
-              <p className="text-gray-300" /  />
-import { React from "react";
-import { Navigation  } from "../components/Navigation";
-import { Footer  } from "../components/Footer";
-import { SEOOptimizer  } from "../components/SEOOptimizer";
-const Page: React.FC = () => {
-return (<SEOOptimizer title="Page",description="Professional page services and solutions for your business needs.", keywords={ ["page","AI solutions","business automation","technology services"] }; </div>
-canonicalUrl = "https: //ziontechgroup.com/page"
-      /></SEOOptimizer>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
-        <Navigation/ /> <main className="container mx-auto px-4 py-16 pt-24" /> <div className="text-center" /> <h1 className="text-4, xl, m,d: text-5 xl font-bold text-white mb-8 neon-text" />
-Page</h1>
-            </h1> <p className="text-xl text-gray-300 mb-8" />
-Professional page services and solutions for your business needs.</p>
-            </p>,<div className="cyber-card p-8 max-w-4 xl mx-auto" /> <p className="text-gray-300" />
-This page is under development. Please check back soon for more information about our page services.</p>
+            <p className="text-xl text-gray-300 mb-8 /">
+"Professional page services and solutions for your business needs."</p>
+            </p>,<div className="cyber-card" p-8 max-w-4 xl mx-auto />
+              <p className="text-gray-300" />
+"This page is under development. Please check back soon for more information about our page services."</p>
+>>>>>>> origin/main
               </p>
               </div>
             </div>
         </main>
-        <Footer//>
+<<<<<<< HEAD
+        <Footer /  />
         </div>
-      </div>);
-      </div>);
+=======
+        <Footer /  />";"
+        </div>
+      </div>
+      </div>
   );
 }
-}"
-export default Page}";'"
-  )
-
+,};
 }
-
-export default Page
-}
->>>>>>> d05312d5d680673ba2e628470e93a08bc6917172
+export default Page;"
+}"'"
+>>>>>>> origin/main

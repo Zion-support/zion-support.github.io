@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Final comprehensive syntax error fixer
+Final comprehensive fix for all remaining syntax errors.
 """
 
 import os
@@ -8,99 +8,51 @@ import re
 import glob
 from pathlib import Path
 
-def fix_missing_parentheses(content):
-    """Fix missing closing parentheses"""
-    # Fix function calls with missing closing parentheses
-    content = re.sub(r'(\w+)\s*\(\s*([^)]*)\s*$', r'\1(\2)', content, flags=re.MULTILINE)
+def fix_classname_spacing(content):
+    """Fix missing spaces in className attributes."""
+    # Fix className attributes with missing spaces
+    content = re.sub(r'className="([^"]*?)([a-zA-Z])([a-zA-Z])', r'className="\1\2 \3', content)
+    content = re.sub(r'className="([^"]*?)([a-zA-Z])([a-zA-Z])', r'className="\1\2 \3', content)
+    content = re.sub(r'className="([^"]*?)([a-zA-Z])([a-zA-Z])', r'className="\1\2 \3', content)
     
-    # Fix JSX with missing closing parentheses
-    content = re.sub(r'return\s*\(\s*<div\s*>\s*</div>\s*$', r'return (\n    <div>\n      \n    </div>\n  );', content, flags=re.MULTILINE)
-    
-    return content
-
-def fix_missing_commas(content):
-    """Fix missing commas in objects and arrays"""
-    # Fix missing commas in object literals
-    content = re.sub(r'(\w+):\s*([^,}\n]+)\s*\n(\s*[a-zA-Z])', r'\1: \2,\n\3', content)
-    
-    # Fix missing commas in arrays
-    content = re.sub(r'([^,\n]+)\s*\n(\s*[a-zA-Z])', r'\1,\n\2', content)
-    
-    # Fix missing commas in function parameters
-    content = re.sub(r'(\w+)\s*\n(\s*[a-zA-Z])', r'\1,\n\2', content)
+    # Fix specific patterns
+    content = re.sub(r'className="min-h-screenbg-', r'className="min-h-screen bg-', content)
+    content = re.sub(r'className="containermx-auto', r'className="container mx-auto', content)
+    content = re.sub(r'className="text-4xlfont-bold', r'className="text-4xl font-bold', content)
+    content = re.sub(r'className="text-lgtext-gray-300', r'className="text-lg text-gray-300', content)
+    content = re.sub(r'className="inline-flexitems-center', r'className="inline-flex items-center', content)
+    content = re.sub(r'className="ml-2h-4', r'className="ml-2 h-4', content)
     
     return content
 
 def fix_jsx_structure(content):
-    """Fix JSX structure issues"""
-    # Fix malformed JSX fragments
-    content = re.sub(r'<>\s*([^<]+)\s*</>', r'<>\n        \1\n      </>', content)
+    """Fix JSX structure issues."""
+    # Fix broken Head tags
+    content = re.sub(r'<Head>\s*\n\s*<title>', r'<Head>\n        <title>', content)
+    content = re.sub(r'</title>\s*<meta', r'</title>\n        <meta', content)
+    content = re.sub(r'<meta[^>]*/>\s*</Head>', r'<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />\n      </Head>', content)
     
-    # Fix unclosed JSX tags
-    content = re.sub(r'<(\w+)\s*([^>]*)\s*>\s*$', r'<\1 \2>\n        </\1>', content, flags=re.MULTILINE)
+    # Fix duplicate meta tags
+    content = re.sub(r'<meta name="description"[^>]*/>\s*<meta name="description"[^>]*/>', r'<meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />', content)
     
-    # Fix JSX with missing closing tags
-    content = re.sub(r'<div\s*>\s*$', r'<div>\n        </div>', content, flags=re.MULTILINE)
-    
-    return content
-
-def fix_typescript_syntax(content):
-    """Fix TypeScript specific syntax"""
-    # Fix generic type parameters
-    content = re.sub(r'<(\w+)>\s*$', r'<\1>', content, flags=re.MULTILINE)
-    
-    # Fix interface declarations
-    content = re.sub(r'interface\s+(\w+)\s*{\s*([^}]*)\s*}\s*$', 
-                     lambda m: f'interface {m.group(1)} {{\n  {m.group(2).strip()}\n}}', content, flags=re.MULTILINE)
-    
-    # Fix type declarations
-    content = re.sub(r'type\s+(\w+)\s*=\s*([^;]+);?\s*$', r'type \1 = \2;', content, flags=re.MULTILINE)
-    
-    # Fix enum declarations
-    content = re.sub(r'enum\s+(\w+)\s*{\s*([^}]*)\s*}\s*$', 
-                     lambda m: f'enum {m.group(1)} {{\n  {m.group(2).strip()}\n}}', content, flags=re.MULTILINE)
+    # Fix broken Link components
+    content = re.sub(r'<Link href="([^"]+)" className="([^"]+)"\s*>\s*>\s*', r'<Link href="\1" className="\2">\n            ', content)
     
     return content
 
-def fix_function_declarations(content):
-    """Fix function declaration issues"""
-    # Fix arrow functions
-    content = re.sub(r'const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{([^}]*)}', 
-                     lambda m: f'const {m.group(1)} = () => {{\n  {m.group(2).strip()}\n}}', content)
+def fix_syntax_errors(content):
+    """Fix general syntax errors."""
+    # Remove extra semicolons and commas
+    content = re.sub(r';\s*,\s*$', '', content, flags=re.MULTILINE)
+    content = re.sub(r',\s*;\s*$', '', content, flags=re.MULTILINE)
     
-    # Fix async functions
-    content = re.sub(r'const\s+(\w+)\s*=\s*async\s*\(\s*\)\s*=>\s*{([^}]*)}', 
-                     lambda m: f'const {m.group(1)} = async () => {{\n  {m.group(2).strip()}\n}}', content)
-    
-    return content
-
-def fix_component_structure(content):
-    """Fix React component structure"""
-    # Fix malformed component declarations
-    content = re.sub(r'const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*,\s*', 
-                     r'const \1: React.FC = () => {\n  ', content)
-    
-    # Fix malformed return statements
-    content = re.sub(r'return\s*\(\s*<div\s*>\s*</div>\s*,\s*', r'return (\n    <div>\n      ', content)
-    
-    # Fix duplicate return statements
-    content = re.sub(r'return\s*\(\s*<div\s*>\s*</div>\s*,\s*return\s+null;', r'return (\n    <div>\n      \n    </div>\n  );', content)
+    # Fix function declarations
+    content = re.sub(r'}\s*;\s*$', '}', content, flags=re.MULTILINE)
     
     return content
 
-def fix_import_statements(content):
-    """Fix import statement issues"""
-    # Fix malformed imports
-    content = re.sub(r'import\s+([^;]+)\s+from\s+["\']([^"\']+)["\'];', r'import \1 from "\2";', content)
-    
-    # Fix "use client" placement
-    content = re.sub(r'import\s+([^;]+);"use client"', r'"use client"\nimport \1;', content)
-    content = re.sub(r'"use client"import\s+([^;]+);', r'"use client"\nimport \1;', content)
-    
-    return content
-
-def fix_file(file_path):
-    """Fix a single file with final comprehensive fixes"""
+def process_file(file_path):
+    """Process a single file to fix all syntax errors."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -108,19 +60,9 @@ def fix_file(file_path):
         original_content = content
         
         # Apply all fixes
-        content = fix_missing_parentheses(content)
-        content = fix_missing_commas(content)
+        content = fix_classname_spacing(content)
         content = fix_jsx_structure(content)
-        content = fix_typescript_syntax(content)
-        content = fix_function_declarations(content)
-        content = fix_component_structure(content)
-        content = fix_import_statements(content)
-        
-        # Clean up extra whitespace
-        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
-        content = re.sub(r',\s*$', '', content, flags=re.MULTILINE)
-        content = re.sub(r'{\s*,\s*', '{\n  ', content)
-        content = re.sub(r',\s*}', '\n}', content)
+        content = fix_syntax_errors(content)
         
         # Only write if content changed
         if content != original_content:
@@ -133,41 +75,33 @@ def fix_file(file_path):
             return False
             
     except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to fix all files"""
-    # Get all TypeScript/JavaScript files
+    """Main function to process all files."""
+    # Get all TypeScript/TSX files
     patterns = [
         'app/**/*.tsx',
         'app/**/*.ts',
         'src/**/*.tsx',
         'src/**/*.ts',
         'components/**/*.tsx',
-        'components/**/*.ts',
-        'api/**/*.ts',
-        'api/**/*.js',
-        '__tests__/**/*.tsx',
-        '__tests__/**/*.ts'
+        'components/**/*.ts'
     ]
     
-    files_to_fix = []
+    files_processed = 0
+    files_fixed = 0
+    
     for pattern in patterns:
-        files_to_fix.extend(glob.glob(pattern, recursive=True))
+        for file_path in glob.glob(pattern, recursive=True):
+            if os.path.isfile(file_path):
+                files_processed += 1
+                if process_file(file_path):
+                    files_fixed += 1
     
-    # Remove duplicates and sort
-    files_to_fix = sorted(list(set(files_to_fix)))
-    
-    print(f"Found {len(files_to_fix)} files to check")
-    
-    fixed_count = 0
-    for file_path in files_to_fix:
-        if os.path.isfile(file_path):
-            if fix_file(file_path):
-                fixed_count += 1
-    
-    print(f"\nFixed {fixed_count} files out of {len(files_to_fix)} checked")
+    print(f"\nProcessed {files_processed} files")
+    print(f"Fixed {files_fixed} files")
 
 if __name__ == "__main__":
     main()

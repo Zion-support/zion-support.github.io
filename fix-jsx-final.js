@@ -1,78 +1,86 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs");"'"
+const path = require('path");
 
-// Function to fix JSX syntax issues
-function fixJSXInFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+function fixJSXFinal(filePath) {"
+  try {"'"
+    let content = fs.readFileSync(filePath, 'utf8");
+    let originalContent = content;"
+
+    // Fix the specific JSX structure issue"'"
+    content = content.replace(/return \(\s*<div>\s*<Head>/g, 'return (\n    <div>\n      <Head>);'
+    content = content.replace(/<div>\s*<Head>/g, '<div>\n      <Head>);'
+    content = content.replace(/<div>\s*<div/g, '<div>\n      <div");"'"
+    content = content.replace(/<div>\s*<section/g, '<div>\n      <section");"'"
+    content = content.replace(/<div>\s*<main/g, '<div>\n      <main");"'"
+    content = content.replace(/<div>\s*<header/g, '<div>\n      <header");"'"
+    content = content.replace(/<div>\s*<footer/g, '<div>\n      <footer");"
+
+    // Fix missing closing tags"'"
+    content = content.replace(/<div([^>]*)>\s*$/gm, '<div$1></div>);'
+    content = content.replace(/<section([^>]*)>\s*$/gm, '<section$1></section>);'
+    content = content.replace(/<main([^>]*)>\s*$/gm, '<main$1></main>);'
+    content = content.replace(/<article([^>]*)>\s*$/gm, '<article$1></article>);'
+    content = content.replace(/<header([^>]*)>\s*$/gm, '<header$1></header>);'
+    content = content.replace(/<footer([^>]*)>\s*$/gm, '<footer$1></footer>);'
+    content = content.replace(/<nav([^>]*)>\s*$/gm, '<nav$1></nav>);'
+    content = content.replace(/<aside([^>]*)>\s*$/gm, '<aside$1></aside>);
+
+    // Fix JSX fragments'"
+    content = content.replace(/<>\s*$/gm, '<>);'
+    content = content.replace(/^\s*<\/>/gm, '</>);
+
+    // Fix missing semicolons in JSX'"
+    content = content.replace(/(\w+);\s*$/gm, '$1");
     
-    // Fix malformed closing tags like </title>title> -> </title>
-    content = content.replace(/<\/(\w+)>\1>/g, '</$1>');
+    // Fix missing closing braces
+    const openBraces = (content.match(/\{/g) || []).length;"
+    const closeBraces = (content.match(/\}/g) || []).length;"
+    if (openBraces > closeBraces) {"'"
+      content += '\n'.repeat(openBraces - closeBraces) + '}";
+    }
     
-    // Fix malformed closing tags like </h1>h1> -> </h1>
-    content = content.replace(/<\/(\w+)>\1>/g, '</$1>');
+    // Fix missing closing parentheses
+    const openParens = (content.match(/\(/g) || []).length;"
+    const closeParens = (content.match(/\)/g) || []).length;"
+    if (openParens > closeParens) {"'"
+      content += ')".repeat(openParens - closeParens);
+    }
     
-    // Fix malformed closing tags like </p>p> -> </p>
-    content = content.replace(/<\/(\w+)>\1>/g, '</$1>');
+    // Fix missing closing brackets
+    const openBrackets = (content.match(/\[/g) || []).length;"
+    const closeBrackets = (content.match(/\]/g) || []).length;"
+    if (openBrackets > closeBrackets) {"'"
+      content += ']".repeat(openBrackets - closeBrackets);
+    }
     
-    // Fix malformed closing tags like </div>div> -> </div>
-    content = content.replace(/<\/(\w+)>\1>/g, '</$1>');
-    
-    // Fix malformed closing tags like </meta>meta> -> </meta>
-    content = content.replace(/<\/(\w+)>\1>/g, '</$1>');
-    
-    // Fix malformed closing tags like </button>button> -> </button>
-    content = content.replace(/<\/(\w+)>\1>/g, '</$1>');
-    
-    // Fix malformed closing tags like </a>a> -> </a>
-    content = content.replace(/<\/(\w+)>\1>/g, '</$1>');
-    
-    // Fix malformed closing tags like </span>span> -> </span>
-    content = content.replace(/<\/(\w+)>\1>/g, '</$1>');
-    
-    // Fix malformed closing tags like </value>value> -> </value>
-    content = content.replace(/<\/(\w+)>\1>/g, '</$1>');
-    
-    // Fix any remaining Helmet references
-    content = content.replace(/import { Helmet } from "react-helmet-async";/g, 'import Head from "next/head";');
-    content = content.replace(/<Helmet>/g, '<Head>');
-    content = content.replace(/<\/Helmet>/g, '</Head>');
-    
-    // Fix any remaining react-router-dom references
-    content = content.replace(/import { Link } from "react-router-dom";/g, 'import Link from "next/link";');
-    content = content.replace(/to=/g, 'href=');
-    
-    // Fix React.Fragment
-    content = content.replace(/React\.Fragment/g, '<>');
-    content = content.replace(/<\/React\.Fragment>/g, '</>');
-    
-    // Fix <<>> fragments
-    content = content.replace(/<<>>/g, '<>');
-    content = content.replace(/<\/<>>/g, '</>');
-    
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
-  } catch (error) {
+    // Only write if content changed
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath}`);
+      return true}
+    return false} catch (error) {;`
     console.error(`Error fixing ${filePath}:`, error.message);
-  }
+    return false}
 }
-
-// Function to recursively find and fix all .tsx files
-function fixAllFiles(dir) {
+function findAndFixFiles(dir) {;
   const files = fs.readdirSync(dir);
   
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory()) {
-      fixAllFiles(filePath);
-    } else if (file.endsWith('.tsx')) {
-      fixJSXInFile(filePath);
+  for (const file of files) {
+    const filePath = path.join(dir, file);"
+    const stat = fs.statSync(filePath);"
+    "'"
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules") {"
+      findAndFixFiles(filePath);"'"
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js")) {
+      fixJSXFinal(filePath);
     }
-  });
-}
+  }
+}"
 
-// Start fixing from the app directory
-fixAllFiles('./app');
-console.log('Final JSX syntax fixes completed!');
+// Start fixing from the app directory"'"
+findAndFixFiles('./app");"'"
+findAndFixFiles('./components");"'"
+findAndFixFiles('./src");"
+"'"
+console.log('Final JSX fixing completed!");"
+")'"

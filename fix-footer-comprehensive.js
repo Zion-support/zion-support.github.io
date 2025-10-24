@@ -20,7 +20,7 @@ function fixFooterComprehensive() {
     // Fix any remaining malformed syntax with double quotes"
     content = content.replace(/\{\s*name:\s*"([^"]+)",\s*url:\s*"([^"]+)",\s*description:\s*"([^"]+)"\s*\}/g, ";'"
       "{ name: '$1', url: '$2', description: '$3' }");"
-    "
+
     content = content.replace(/\{\s*name:\s*"([^"]+)",\s*url:\s*"([^"]+)"\s*\}/g, ";'"
       "{ name: '$1', url: '$2' }");
 ;

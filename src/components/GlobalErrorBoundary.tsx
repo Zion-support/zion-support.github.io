@@ -1,201 +1,92 @@
-'use client';
-interface Props {;
-    // TODO: Add content;
- , }
-  }
-}
-  children: ReactNode;
-  fallback?: ReactNode;,
-}
-interface State {;
-    // TODO: Add content;
- , }
-  }
-}
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;,
-}
-class GlobalErrorBoundary extends Component;
-          <Props, State> {;
-    // TODO: Add content;
- , }
-  }
-}
-  constructor(props: Props) {;
-    // TODO: Add content;
- , }
-  }
-}
-    super(pro, p, s);
-    this.state={;
-    hasError: false;
- , }}
-  static getDerivedStateFromError(error: Error): State {
-  ;
-    // TODO: Add content;
- ,
-    }
-    return {;
-    hasError: tru,
-      e,;
-    error;
-  }
-  }
-  componentDidCatch(error: Erro,
-      r, errorInfo: ErrorInfo) {;
-    // TODO: Add content;
- , }
-  }
-}
-    this.setState({;
-    // TODO: Add content;
- , }
-  }
-}
-//       error,
-//       errorInfo,
-    });
-    // Log error to console in development,
-    if (process.env.NODE_ENV === 'development') {;
-    // TODO: Add content;
- , }
-  }
-}
-      }
-    // In production, you might want to send this to an error reporting service,;
-    // Example: errorReportingService.captureException(erro,r, { extra: errorInfo, });
-  }
-  handleRetry = () => {
-  ;
-    // TODO: Add content;
- ,
-    }
-    this.setState({ hasError: fals,
-      e, error: undefine,
-      d, errorInfo: undefined, });
-  }
-  render() {;
-    // TODO: Add content;
- , }
-  }
-}
-    if (this.state.hasError) {;
-    // TODO: Add content;
- , }
-  }
-}
-      if (this.props.fallback) {;
-    // TODO: Add content;
- , }
-  }
-}
-        return this.props.fallback;
-      }
-      return (;
-          <div>Coming Soon</div>
-  );
-          <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4'></div>
-          <div className='max-w-md w-full text-center'></div>
-            {;
-    /* Error Icon */;
-  }
-            <div className='w-16 h-16 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center'></div>
-              <svg className='w-8 h-8 text-red-400' fill='none' stroke='currentColor' viewBox='0 0 24 24'></svg>
-                <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2}d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z' /></path>
-              </svg>
+<<<<<<< HEAD
+Reload Page</button>
+              </button>
+              </div>
             </div>
-            {;
-    /* Error Message */;
-  }
-            <h1 className='text-2xl font-bold text-white mb-4'></h1>
-// Something went wrong,;
-          </h1>
-            <p className='text-gray-300 mb-6'></p>
-              We're sorry, but something unexpected happened. Please try refreshing the page.;
-            </p>
-            {;
-    /* Error Details (Development, Onl, y) */;
-  }
-            {;
-    process.env.NODE_ENV === &apos;development' && this.state.error && ();
-  }
-          <details className='mb-6 text-left'></details>
-                <summary className='text-sm text-gray-400 cursor-pointer hover: text-white'></summary>
-// Error Details (Developme, n, t);
-          </summary>
-                <div className='mt-2 p-4 bg-slate-800 rounded-lg text-xs text-red-300 font-mono overflow-auto'></div>
-                  <div className='mb-2'></div>
- , }
-  }
-                    <strong>Error: </strong> {;
-    this.state.error.message;
- , }
-                  </div>
-                  {;
-    this.state.errorInfo && ();
-  }
-          <div></div>
-                      <strong>Stack: </strong>
-                      <pre className='mt-1 whitespace-pre-wrap'></pre>
- , }
-  }
-                        {;
-    this.state.errorInfo.componentStack;
-  }
-                      </pre>
-                    </div>
-                  )}
-                </div>
-              </details>
-            )}
-            {;
-    /* Action Buttons */;
-  }
-            <div className='space-y-3'></div>
-              <button;
-                onClick={;
-    this.handleRetry;
-  }className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 font-medium'
-// ></button>
-//                 Try Agai,n,;
-          </button>
-              <button;
-                onClick={;
-    () => window.location.reload();
-  }className='w-full bg-slate-700 text-white px-6 py-3 rounded-lg hover: bg-slate-600 transition-colors duration-300 font-medium'
-// >;
-//                 Refresh Pag,e,;
-          </button>
-              <a;
-                href='/';
-                className='block w-full bg-transparent border border-gray-600 text-gray-300 px-6 py-3 rounded-lg hover: bg-slate-800 hover:text-white transition-all duration-300 font-medium'
-// ></a>
-//                 Go Hom,e,;
-          </a>
-            </div>
-            {;
-    /* Contact Information */;
-  }
-            <div className='mt-8 pt-6 border-t border-gray-700'></div>
-              <p className='text-sm text-gray-400 mb-2'></p>
-                Need help? Contact our support team: ;
-              </p>
-              <a;
-                href='tel:+13024640950';
-                className='text-cyan-400 hover:text-cyan-300 font-medium'
-// ></a>
-//                 (3, 0, 2) 464-0950;
-          </a>
-            </div>
+=======
+'use client'
+import, React, { Component, ErrorInfo, ReactNode } from 'react"'
+interface Props {
+
+}
+}"
+children: "ReactNode",}
+}"
+
+interface State {"
+hasError: "boolean"}
+",;}
+error?: Error,;}
+;}"
+;"
+export default class GlobalErrorBoundary extends Component<Props, State> {"
+constructor(props: "Props) {  "
+super(props)"}
+this.state = { hasErro",r: "false ",, , ;}"
+  ;}"
+
+static getDerivedStateFromError(error: "Error): State {"}
+return { hasErro",r: "true",error ;}"
+  ;}"
+
+componentDidCatch(error: "Error",errorInfo: "ErrorInfo) {"
+    // Error logging can be implemented here for production monitoring""
+    // console.error('Global error caugh",)"'"
+t: "'",error, errorInfo)}
+  ;}
+
+render() {"
+if(this.state.hasError) {"
+return(</Props>,"
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 /">,
+    <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 /">,"
+    <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full /">
+              <svg
+className="w-6" h-6 text-red-600
+fill="none"
+stroke="currentColor
+viewBox="0 0 24 24"
+               />
+                <path
+strokeLinecap=round"
+strokeLinejoin="round
+strokeWidth="{"
+2}
+,;}"
+          </div />
           </div>
-        </div>
-      );
-   , }
-    return this.props.children;
-  }
-}
-export {;
-    GlobalErrorBoundary;
-  }
-export default GlobalErrorBoundary;
+d="M12" 9 v2m0 4 h.01 m-6.938 4 h13.856 c1.54 0 2.502-1.667 1.732-2.5 L13.732 4 c-.77-.833-1.732-.833-2.5 0 L4.268 19.5 c-.77.833.192 2.5 1.732 2.5 z"
+                /></path>
+              </svg>
+              </div>,
+    <div className="mt-4 text-center /">,
+    <h1 className = "text-lg font-medium text-gray-900"></h3>
+"Application Error"</h3>
+              </h3>
+              <p className="mt-2 text-sm text-gray-500 /">'
+                {this.state.error?.message || 'An unexpected error occurred,;}</p>
+              </p>
+              <button)
+onClick = {() => window.location.reload(),;}
+                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover: bg-blue-700 focus:outline-none focus:ring-2 focu",s: ring-blue-500 transition-colors">
+"Reload Page"</button>
+              </button>
+              </div>
+            </div>
+        </div>,)
+    ;}
+
+return this.props.children;"
+  }};"'"
+import { CheckCircle, Phone, Mail, Helmet } from 'lucide-react";'
+{    }"
+  ]"
+const benefits = ["
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'"
+    'Scale operations without proportional staff increases";"'"
+    'Gain competitive advantage with advanced technology",;"
+    <divclassName="&quot;flex" flex-col sm: "flex-row gap-4 justify-center&quot; / / />
+          </div>,}'"
+>>>>>>> origin/main

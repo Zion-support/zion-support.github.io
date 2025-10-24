@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react'
@@ -145,3 +146,15 @@ export const link = (): JSX.Element => {
 
 
 
+=======
+<<<<<<< HEAD
+=======
+'use client'
+import React from 'react";'
+export const link = (;
+  return null;
+) => {"
+$3"}
+,};"'"
+>>>>>>> origin/main
+>>>>>>> origin/main

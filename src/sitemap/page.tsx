@@ -1,52 +1,31 @@
-import React from 'react'
-import Head from "next/head"
-import Link from 'next/link'
-import { ArrowRight } from from 'lucide-react'
-export default function SitemapPage() {
-return (<>;
-import React from "react";
-import { Head  } from "next/head"
-import { Link  } from "next/link";
-import { ArrowRight  } from "lucide-react";
-
+<<<<<<< HEAD
+=======
 import React from 'react';
-const SitemapPage: React.FC = () => {
-  ;
-    return (;
- ,
-}
-    <div>Coming Soon</div>
-  );
-  }
-  }
-}
-  return (;
-    <div>Coming Soon</div>
-  );
-          <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'></div>
-      <div className='container mx-auto px-4 py-16'></div>
-        <h1 className='text-4xl font-bold text-white mb-8 text-center'>Sitemap</h1>
-        <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'></div>
-          <div className='cyber-card p-6'></div>
-            <h2 className='text-xl font-bold text-white mb-4'>Main Pages</h2>
-            <ul className='space-y-2'></ul>
-              <li><a href='/' className='text-cyan-400 hover:text-cyan-300'>Home</a></li>
-              <li><a href='/services' className='text-cyan-400 hover:text-cyan-300'>Services</a></li>
-              <li><a href='/contact' className='text-cyan-400 hover:text-cyan-300'>Contact</a></li>
-              <li><a href='/about' className='text-cyan-400 hover:text-cyan-300'>About</a></li>
-            </ul>
-          </div>
-            <h2 className='text-xl font-bold text-white mb-4'>AI Services</h2>
-              <li><a href='/ai-services' className='text-cyan-400 hover:text-cyan-300'>AI Solutions</a></li>
-              <li><a href='/machine-learning' className='text-cyan-400 hover:text-cyan-300'>Machine Learning</a></li>
-              <li><a href='/automation' className='text-cyan-400 hover:text-cyan-300'>Automation</a></li>
-            <h2 className='text-xl font-bold text-white mb-4'>IT Services</h2>
-              <li><a href='/it-services' className='text-cyan-400 hover:text-cyan-300'>IT Solutions</a></li>
-              <li><a href='/cloud-services' className='text-cyan-400 hover:text-cyan-300'>Cloud Services</a></li>
-              <li><a href='/cybersecurity' className='text-cyan-400 hover:text-cyan-300'>Cybersecurity</a></li>
-  );,
-}
-export default SitemapPage;
-
+import Head from 'next/head';"
+import Link from 'next/link";"'
+import { ArrowRight } from lucide-react"
 export default function SitemapPage() {
-return (<>;
+  return (
+    <>
+    :all-pages-backup/sitemap/page.tsx"
+    </>
+      <title>"Sitemap - Zion Tech Group"</title>
+        <meta name = description" content="Professional sitemap services by Zion Tech Group. / / /">
+        <Head />
+        <title>"Sitemap - Zion Tech Group"</title>
+        <meta name="description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence. / /">
+      </Head>,
+    <div className="min-h-s" creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 />,"
+    <div className="con tainermx-auto px-4 py-16 /">,
+    <h1 className="tex t-4 xlfont-bold text-white mb-6">"Sitemap"</h1>"
+          <p className="tex" t-lgtext-gray-300 mb-8>"Professional sitemap services by Zion Tech Group."</p>
+          <Linkhref="/contact className="inl ine-flexitems-center px-6 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors /">"
+Contact Us</Link>
+            <ArrowRight className="ml-2" h-4 w-4 />
+          </Link>
+            </div>";"
+      </div>";"
+</div>;)"}
+  ),"}
+}"'"
+>>>>>>> origin/main

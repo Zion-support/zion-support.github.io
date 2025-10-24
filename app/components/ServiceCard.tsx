@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+'use client'
 import React from 'react'
+<<<<<<< HEAD
 import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -31,155 +34,104 @@ const ServiceCardPage: React.FC = () => {const features = [
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ];
+=======
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ className = '' }) => {
+interface ServiceCardProps {
+  title?: string
+  description?: string
+  className?: string
+}
+>>>>>>> origin/main
+
+const ServiceCard: React.FC<ServiceCardProps> = ({ 
+  title = "Service", 
+  description = "Professional service solution for modern businesses.",
+  className = ""
+}) => {
   return (
-    <div className="{`servicecard" ${className}`}>
-      {children}
+    <div className={`bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 ${className}`}>
+      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <button className="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 transition-colors duration-300">
+        Learn More
+      </button>
     </div>
-      <Navigation//> <div className="[^"]*">
-        {/* Hero Section*/} <section className="relative py-20 px-4 overflow-hidden" /> <div className="[^"]*"> <div className="[^"]*"> <h1 className="[^"]*">
-ServiceCard</h1>
-            </h1> <p className="[^"]*">
+  )
+}
+
+export default ServiceCard
+=======
+const ServiceCard: React.FC = () => {;
+return(<div>
+      <Helmet  />;
+        <title>"ServiceCard"</title>
+        <meta name="description" content="Advanced ServiceCard solution for modern businesses." / />
+        <meta name="keywords" content="AI,artificial, intelligence, ServiceCard, AI, solutions, intelligent automation / /">
+      </Helmet>
+    </div>
+      <Navigation/ />,
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 /">"}
+        {/* Hero Section */,}
+        <section className="relative" py-20 px-4 overflow-hidden />,"
+    <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20 /">,
+    <div className="relative max-w-7 xl mx-auto text-center /">,"
+    <h1 className="text-5 xl md: text-7 xl font-bold text-white mb-6 leading-tight /">
+"ServiceCard"</h1>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed /">"
 Advanced ServiceCard solution for modern businesses.</p>
-            </p>,<div className="[^"]*"> <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center" />
-Get Started</button>
+            </p>,<div className="flex" flex-col sm: flex-row gap-4 justify-center />
+              <button className="bg-emerald-600" hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center />
+"Get Started"</button>
               </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
-                Learn More
+              <button className="border" border-emerald-400 text-emerald-400 hover: bg-emerald-400 hove","
+r: text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
+"Learn More"</button>
               </button>
-            </div>
-          </div>
-        </section>
-    </>
+        </section>,{/* Features Section */}
+<section className="py-20" px-4 />,"
+    <div className="max-w-7 xl mx-auto /">,
+    <div className="text-center mb-16 /">,"
+    <h1 className="text-4 xl font-bold text-white mb-4">"Key Features"</h2>
+              <p className="text-xl" text-gray-300 max-w-3 xl mx-auto />
+"Discover the powerful features that make ServiceCard the perfect solution for your business."</p>
+              </p>,
+    <divclassName="grid" md: grid-cols-2 l","
+g: grid-cols-4 gap-8" />,<div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 /">,
+    <h1 className="text-xl font-semibold text-white mb-3">"AI-Powered"</h3>"
+                <p className="text-gray-300">"Advanced AI algorithms for intelligent automation."</p>,
+    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 /">,
+    <h1 className="text-xl font-semibold text-white mb-3">"Scalable"</h3>"
+                <p className="text-gray-300">"Grows with your business needs and requirements."</p>
+                </div>,"
+    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 /">,
+    <h1 className="text-xl font-semibold text-white mb-3">"Secure"</h3>"
+                <p className="text-gray-300">"Enterprise-grade security and data protection."</p>
+                </div>,"
+    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 /">,
+    <h1 className="text-xl font-semibold text-white mb-3">"Efficient"</h3>"
 
-              </button>
-
-        </section>,{/* Features Section*/} <section className="py-20 px-4" /> <div className="[^"]*"> <div className="[^"]*">
-    <h1 className="text-4 xl font-bold text-white mb-4">Key Features</h2> <p className="[^"]*">
-Discover the powerful features that make ServiceCard the perfect solution for your business.</p>
-              </p>
-    <divclassName="grid md: "grid-cols-2 l","
-g: grid-cols-4 gap-8" />,<div className="[^"]*">
-    <h1 className="text-xl font-semibold text-white mb-3">AI-Powered</h3>
-                <p className="text-gray-300">Advanced AI algorithms for intelligent automation.</p> <div className="[^"]*">
-    <h1 className="text-xl font-semibold text-white mb-3">Scalable</h3>
-                <p className="text-gray-300">Grows with your business needs and requirements.</p>
-                </div> <div className="[^"]*">
-    <h1 className="text-xl font-semibold text-white mb-3">Secure</h3>
-                <p className="text-gray-300">Enterprise-grade security and data protection.</p>
-                </div> <div className="[^"]*">
-    <h1 className="text-xl font-semibold text-white mb-3">Efficient</h3>
-
-                <p className="text-gray-300">Optimized performance for maximum productivity.</p>
+                <p className="text-gray-300">"Optimized performance for maximum productivity."</p>
                 </div>
               </div>
             </div>
-        </section>,{/* CTA Section*/} <section className="py-20 px-4" /> <div className="[^"]*">
-    <h1 className="text-4 xl font-bold text-white mb-6">Ready to Get Started?</h2> <p className="[^"]*">
-Join thousands of businesses already using ServiceCard to transform their operations.</p>
-            </p> <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200" />
-Start Your Free Trial</button>
+        </section>,{/* CTA Section */;}
+<section className="py-20" px-4 />,"
+    <div className="max-w-4 xl mx-auto text-center /">,
+    <h1 className="text-4 xl font-bold text-white mb-6">"Ready to Get Started?"</h2>"
+            <p className="text-xl" text-gray-300 mb-8 />
+"Join thousands of businesses already using ServiceCard to transform their operations."</p>
+            </p>
+            <button className="bg-emerald-600" hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 />
+"Start Your Free Trial"</button>
             </button>
             </div>
         </section>
         </div>
       </Footer>
-    </div>
-</>
-  )
-  )  )}
-
-        {/* Benefits Section */}
-        <section className=&quot;py-20 px-4 bg-white/5&quot;></section>
-          <div className=&quot;max-w-7xl mx-auto&quot;></div>
-            <div className=&quot;text-center mb-16&quot;></div>
-              <h2 className=&quot;text-4xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
-              <p className=&quot;text-xl text-gray-300 max-w-3xl mx-auto&quot;>
-                Experience the benefits of cutting-edge AI technology
-              </p>
-            </div>
-            <div className=&quot;grid md:grid-cols-2 lg:grid-cols-3 gap-8&quot;></div>
-              {benefits.map((benefit, index) => (
-                <div key={index} className=&quot;flex items-start space-x-4&quot;></div>
-                  <CheckCircle className=&quot;h-6 w-6 text-emerald-400 mt-1 flex-shrink-0&quot; />
-                  <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className=&quot;py-20 px-4&quot;></section>
-          <div className=&quot;max-w-4xl mx-auto text-center&quot;></div>
-            <h2 className=&quot;text-4xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
-            <p className=&quot;text-xl text-gray-300 mb-8&quot;>
-              Join thousands of businesses already using our AI solutions
-            </p>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
-              <button className=&quot;bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
-                Start Free Trial
-              </button>
-              <button className=&quot;border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot;>
-                Contact Sales
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-      <Footer /></Footer>
-    </>
-  );,
-};
-price?: string;
-popular?: boolean;
-onSelect?: () =>void;
-class Nam e?: string}constServiceCard:React.FC<ServiceCardProp s>= ({title,
-description,
-features,
-price,"
-popular: "false,";}
-onSelect,}
-className="''"
-}) => {}</ServiceCardProp>
-return (</ServiceCardProp>"
-<div className="{`bg-white/5" backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group ${className} ${});
-popular ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : ''
-}`}>{popular && (</div>
-<div className=&quot;flex items-center gap-2 mb-4&quot;></div>
-<div className=&quot;w-2 h-2 bg-purple-400 rounded-full&quot;></div>
-<span className=&quot;text-purple-400 text-sm font-semibold&quot;>Most Popular</span>
-</div>
-)}
-<div className=&quot;mb-4&quot;></div>
-<h3 className=&quot;text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors&quot;>$3</h3>
-<p className=&quot;text-gray-300 text-sm&quot;>{description}</p>
-</div>
-<div className=&quot;space-y-2 mb-6&quot;>{features.map((feature, index) => (</div>
-<div key={index} className=&quot;flex items-center gap-2&quot;></div>
-<CheckCircle className=&quot;w-4 h-4 text-green-400 flex-shrink-0&quot; />
-<span className=&quot;text-gray-300 text-sm&quot;>{feature}</span>
-</div>
-))}
-</div>
-{price && (
-<div className=&quot;mb-6&quot;></div>
-<div className=&quot;text-3xl font-bold text-white mb-1&quot;>{price}</div>
-<div className=&quot;text-gray-400 text-sm&quot;>per month</div>
-</div>
-)}
-{onSelect && (
-<button;
-onClick={onSelect}
-className=&quot;w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group&quot;></button>
-Get Started
-<ArrowRight className=&quot;w-4 h-4 group-hover:translate-x-1 transition-transform&quot; />
-</button>
-,)}
-</div>
-)
-}
-
-
+    </div>)
+  );
+,}  )};"
 export default ServiceCard;"
+}"
+>>>>>>> origin/main

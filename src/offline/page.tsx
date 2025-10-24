@@ -1,71 +1,31 @@
-import React from 'react'
-import Head from "next/head"
-import Link from 'next/link'
-import { ArrowRight } from from 'lucide-react'
+<<<<<<< HEAD
+=======
+import React from 'react';
+import Head from 'next/head';"
+import Link from 'next/link";"'
+import { ArrowRight } from lucide-react"
 export default function OfflinePage() {
-return (<>;
-import React from "react";
-import { Head  } from "next/head"
-import { Link  } from "next/link";
-import { ArrowRight  } from "lucide-react";
-
-'use client';
-/**;
- * Offline Page;
- * Displayed when the user is offline and tries to access a page;
- */;
-const OfflinePage: React.FC = () => {
-  ;
-    const handleRetry = (): JSX.Element => {;
-    window.location.reload();
- ,
-    }
-  }
-  const handleGoHome = (): JSX.Element => {;
-    // TODO: Add content;
- , }
-  }
-}
-    window.location.href = '/';
-  return (;
-          <div>Coming Soon</div>
-  );
-          <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4'></div>
-      <div className='max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20'></div>
-        <div className='w-16 h-16 mx-auto mb-6 bg-orange-500/20 rounded-full flex items-center justify-center'></div>
-          <WifiOff className='w-8 h-8 text-orange-400' /></WifiOff>
-        </div>
-        <h1 className='text-2xl font-bold text-white mb-4'></h1>
-// You're Offline,;
-          </h1>
-        <p className='text-gray-300 mb-6'></p>
-          It looks like you're not connected to the internet. Please check your connection and try again.;
-        </p>
-        <div className='space-y-3'></div>
-          <button;
-            onClick={;
-    handleRetry;
-  }className='w-full flex items-center justify-center gap-2 px-6 py-3 bg-cyan-500 hover: bg-cyan-600 text-white rounded-lg transition-colors duration-200 font-medium'
-// ></button>
-          <RefreshCw className='w-4 h-4' /></RefreshCw>
-// Try Agai,n,;
-          </button>
-onClick={;
-    handleGoHome;
-  }className='w-full flex items-center justify-center gap-2 px-6 py-3 bg-white/10 hover: bg-white/20 text-white rounded-lg transition-colors duration-200 font-medium border border-white/20'
-            <Home className='w-4 h-4' /></Home>
-            Go Home;
-        <div className='mt-6 text-sm text-gray-400'></div>
-          <p className='flex items-center justify-center gap-2'></p>
-            <Wifi className='w-4 h-4' /></Wifi>
-            Check your internet connection;
-        <div className='mt-8 p-4 bg-black/20 rounded-lg'></div>
-          <h3 className='text-sm font-medium text-white mb-2'>Available Offline</h3>
-          <p className='text-xs text-gray-400'></p>
-            Some content may be available offline thanks to our service worker.;
-            Try refreshing the page once you're back online.;
-  );
-export default OfflinePage,;
-
-export default function OfflinePage() {
-return (<>;
+  return (
+    <>
+    :all-pages-backup/offline/page.tsx"
+    </>
+      <title>"Offline - Zion Tech Group"</title>
+        <meta name = description" content="Professional offline services by Zion Tech Group. / / /">
+        <Head />
+        <title>"Offline - Zion Tech Group"</title>
+        <meta name="description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence. / /">
+      </Head>,
+    <div className="min-h-s" creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 />,"
+    <div className="con tainermx-auto px-4 py-16 /">,
+    <h1 className="tex t-4 xlfont-bold text-white mb-6">"Offline"</h1>"
+          <p className="tex" t-lgtext-gray-300 mb-8>"Professional offline services by Zion Tech Group."</p>
+          <Linkhref="/contact className="inl ine-flexitems-center px-6 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors /">"
+Contact Us</Link>
+            <ArrowRight className="ml-2" h-4 w-4 />
+          </Link>
+            </div>";"
+      </div>";"
+</div>;)"}
+  ),"}
+}"'"
+>>>>>>> origin/main

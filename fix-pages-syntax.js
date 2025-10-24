@@ -1,34 +1,59 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix page syntax
-function fixPageSyntax(filePath) {
+// Function to fix malformed page files
+function fixPageFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Fix missing spaces in titles
-    content = content.replace(/<title>([^|]+)\|([^<]+)<\/title>/g, '<title>$1 | $2</title>');
+    // Skip if file doesn't exist or is empty
+    if (!content) return;
     
-    // Fix JSX syntax issues - add proper spacing and formatting
-    content = content.replace(/export default function ServicePage\(\) \{\n\n  return \(<>\n      <Head>/g, 
-      'export default function ServicePage() {\n  return (\n    <>\n      <Head>');
+    // Check if file has merge conflicts or is heavily corrupted
+    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+      console.log(`Skipping ${filePath} - has merge conflicts`);
+      return;
+    }
     
-    // Fix missing closing tags and malformed JSX
-    content = content.replace(/      <\/Head>\n      \n      <div className=/g, '      </Head>\n      \n      <div className=');
+    // Fix common syntax issues
+    let fixed = content
+      // Remove extra semicolons after imports
+      .replace(/import\s+[^;]+;\s*;/g, (match) => match.replace(/;\s*;/, ';'))
+      // Fix malformed JSX return statements
+      .replace(/return\s*\(\s*<div>/g, 'return (\n    <div>')
+      // Remove extra semicolons in JSX
+      .replace(/;\s*>/g, '>')
+      .replace(/;\s*<\//g, '</')
+      // Fix malformed closing tags
+      .replace(/;\s*\)\s*}\s*;?\s*['"]\s*$/, ')\n  )\n}')
+      // Remove extra quotes and semicolons at the end
+      .replace(/;\s*['"]\s*$/, '')
+      // Fix malformed function declarations
+      .replace(/;\s*const\s+/g, '\nconst ')
+      .replace(/;\s*export\s+/g, '\nexport ')
+      // Fix malformed JSX attributes
+      .replace(/;\s*\/>/g, ' />')
+      // Remove extra semicolons in arrays and objects
+      .replace(/,\s*;\s*}/g, '\n  }')
+      .replace(/,\s*;\s*]/g, '\n  ]')
+      // Fix malformed closing parentheses
+      .replace(/;\s*\)\s*;?\s*$/gm, ')')
+      // Clean up extra whitespace
+      .replace(/\n\s*\n\s*\n/g, '\n\n')
+      .trim();
     
-    // Fix the specific pattern we're seeing
-    content = content.replace(/  return \(<>\n      <Head>/g, '  return (\n    <>\n      <Head>');
-    
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
+    // Only write if content changed
+    if (fixed !== content) {
+      fs.writeFileSync(filePath, fixed);
+      console.log(`Fixed: ${filePath}`);
+    }
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-// Function to find all page.tsx files
-function findPageFiles(dir) {
-  const files = [];
+// Function to recursively find and fix page files
+function fixAllPages(dir) {
   const items = fs.readdirSync(dir);
   
   for (const item of items) {
@@ -36,21 +61,17 @@ function findPageFiles(dir) {
     const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory()) {
-      files.push(...findPageFiles(fullPath));
-    } else if (item === 'page.tsx') {
-      files.push(fullPath);
+      // Skip node_modules and other non-app directories
+      if (!['node_modules', '.next', 'dist', 'build', '.git'].includes(item)) {
+        fixAllPages(fullPath);
+      }
+    } else if (item === 'page.tsx' && fullPath.includes('/app/')) {
+      fixPageFile(fullPath);
     }
   }
-  
-  return files;
 }
 
-// Find and fix all page files
-const appDir = path.join(__dirname, 'app');
-const pageFiles = findPageFiles(appDir);
-
-console.log(`Found ${pageFiles.length} page files to fix`);
-
-pageFiles.forEach(fixPageSyntax);
-
-console.log('All pages fixed!');
+// Start fixing from the app directory
+console.log('Starting to fix page files...');
+fixAllPages('./app');
+console.log('Finished fixing page files.');

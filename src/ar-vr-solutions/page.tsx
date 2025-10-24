@@ -1,122 +1,31 @@
-import React from 'react'
-import Head from "next/head"
-import Link from 'next/link'
-import { ArrowRight } from from 'lucide-react'
-export default function ArVrSolutionsPage() {
-return (<>;
-import React from "react";
-import { Head  } from "next/head"
-import { Link  } from "next/link";
-import { ArrowRight  } from "lucide-react";
+<<<<<<< HEAD
+=======
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {;
-    Eye,
-    Target,
-    Zap,
-    Settings,
-    CheckCircle,
-    Star,
-    Eye,
-    Target,
-    Settings from 'lucide-react';
-  }
-const ARVRSolutionsPage: React.FC = () => {
-  ;
-    const features = [;
-    {;
-  // TODO: Add content;
- ,
-    }
-  icon: Ey,;
-      title: 'AR Development,',;
-      description: 'value',;
-  ];
-      benefits: ['AR apps,', '3D visualization', 'Interactive experiences'];
-    },;
-      icon: Targe,;
-      title: 'VR Solutions,',;
-      description: 'Virtual reality platforms and immersive experiences',;
-      benefits: ['VR environments,', 'Training simulations', 'Virtual meetings'];
-      icon: Setting,;
-      title: 'Hardware Integration,',;
-      description: 'Integration with AR/VR hardware and devices',;
-      benefits: ['Device compatibility,', 'Performance optimization', 'Hardware support'];
-    }
-  ];
-  return (;
-          <div>Coming Soon</div>
-  );
-          <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'></div>
-      <Navigation /></Navigation>
-      <main className='container mx-auto px-4 py-16 pt-24'></main>
-        <section className='text-center mb-16'></section>
-          <h1 className='text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse'></h1>
-// AR/VR Solution,s,;
-          </h1>
-          <p className='text-xl text-cyan-400 mb-8 font-medium neon-pulse'></p>
-// Immersive Technology Solutions,;
-          </p>
-          <p className='text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed'></p>
-            Create immersive experiences with our AR/VR solutions. From augmented reality applications to virtual reality platforms,;
-            we help you build the future of interactive technology.;
-          <div className='flex flex-col sm: flex-row gap-4 justify-center items-center'></div>
-            <a;
-              href='/contact';
-              className='cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300'
-// ></a>
-//               Get Starte,d,;
-          </a>
-              href='tel: +13024640950';
-              className='flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300'
-<Eye className='w-5 h-5' /></Eye>
-              +1 302 464 0950;
-          </div>
-        </section>
-        <section className='mb-16'></section>
-          <h2 className='text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text'></h2>
-// AR/VR Capabilitie,s,;
-          </h2>
-          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'></div>
-            {;
-    features.map((featur,e,;
-    index) => ();
-  }
-  }
-  }
-          <div key={ ind, e, x }className='cyber-card p-6 hover: scale-105 transition-all duration-300'></div>
-                <div className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto'></div>
-                  <feature.icon className='w-8 h-8 text-white' /></feature>
-                <h3 className='text-xl font-bold text-white mb-4 text-center neon-text'></h3>
-                  {;
-    feature.title;
- , }
-                </h3>
-                <p className='text-gray-300 mb-6 text-center text-sm leading-relaxed'></p>
-                  {;
-    feature.description;
-  }
-                <ul className='space-y-2'></ul>
-                  {;
-    feature.benefits.map((benefit,
-    benefitIndex) => ();
-  }
-  }
-  }
-          <li key={ benefitInd, e, x }className='flex items-center text-xs text-gray-300'></li>
-                      <CheckCircle className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' /></CheckCircle>
-                      {;
-    benefit;
-  }
-                    </li>
-                  ))}
-                </ul>
-      </main>
-      <Footer /></Footer>
-  );
-}
-export default ARVRSolutionsPage;
-
+import Head from 'next/head';"
+import Link from 'next/link";"'
+import { ArrowRight } from lucide-react"
 export default function ArVrSolutionsPage() {
-return (<>;
+  return (
+    <>
+    :all-pages-backup/ar-vr-solutions/page.tsx"
+    </>
+      <title>"ArVrSolutions - Zion Tech Group"</title>
+        <meta name = description" content="Professional arvrsolutions services by Zion Tech Group. / / /">
+        <Head />
+        <title>"ArVrSolutions - Zion Tech Group"</title>
+        <meta name="description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence. / /">
+      </Head>,
+    <div className="min-h-s" creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 />,"
+    <div className="con tainermx-auto px-4 py-16 /">,
+    <h1 className="tex t-4 xlfont-bold text-white mb-6">"ArVrSolutions"</h1>"
+          <p className="tex" t-lgtext-gray-300 mb-8>"Professional arvrsolutions services by Zion Tech Group."</p>
+          <Linkhref="/contact className="inl ine-flexitems-center px-6 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors /">"
+Contact Us</Link>
+            <ArrowRight className="ml-2" h-4 w-4 />
+          </Link>
+            </div>";"
+      </div>";"
+</div>;)"}
+  ),"}
+}"'"
+>>>>>>> origin/main

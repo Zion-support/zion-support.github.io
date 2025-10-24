@@ -1,116 +1,94 @@
-#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
 
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
-
-//Function to fix JSX syntax errors
+// Function to fix JSX syntax issues
 function fixJSXSyntax(content) {
-  let _fixed = content;
-
-  //Fix function declarations with malformed comments
-  fixed = fixed.replace(
-    /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\/\*\s*content\s*\/\}/g,
-    'const $1: React.FC = () => {'
-  );
-
-  //Fix malformed JSX elements that are self-closing but shouldn't be
-  //Pattern: <div></div> followed by content that should be inside
-  fixed = fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*([^<]+)/g, '<$1$2>$3</$1>');
-
-  //Fix malformed JSX elements with attributes
-  fixed = fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*<(\w+)([^>]*?)><\/\3>/g, '<$1$2><$3$4></$3></$1>');
-
-  //Fix array syntax issues
-  fixed = fixed.replace(/\[\s*\{\/\*\s*content\s*\/\}/g, '[{');
-
-  //Fix object syntax issues
-  fixed = fixed.replace(/\{\/\*\s*content\s*\/\}/g, '{');
-
-  //Fix missing closing braces for objects
-  fixed = fixed.replace(
-    /(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*\}/g,
-    "$1: '$2',\n      $3: '$4',\n      $5: '$6',\n      $7: '$8'\n    }"
-  );
-
-  return fixed;
+  // Fix missing semicolons after imports
+  content = content.replace(/(import [^;]+)(\n)/g, '$1;$2');
+  
+  // Remove extra semicolons
+  content = content.replace(/;\n;/g, ';');
+  content = content.replace(/;\n\nexport/g, ';\n\nexport');
+  
+  // Fix malformed JSX return statements
+  content = content.replace(/return \(\n    <div>/g, 'return (\n    <div>');
+  
+  // Fix unterminated strings and malformed JSX
+  content = content.replace(/content="([^]*)"  \/>/g, 'content=$1 />');
+  content = content.replace(/\/>/g, '/>');
+  content = content.replace(/<\/Head>\n/g, '</Head>\n');
+  content = content.replace(/    <\/>/g, '    </>');
+  content = content.replace(/  \);"/g, '  );');
+  content = content.replace(/}\"'/g, '}');
+  
+  // Fix malformed JSX structure - ensure proper wrapping
+  content = content.replace(/return \(\n    <div>\n      <Head>/g, 'return (\n    <>\n      <Head>');
+  content = content.replace(/      <\/Head>\n      <div className="min-h-screen/g, '      </Head">\n      <div className=min-h-screen');
+  
+  // Ensure proper closing tags
+  content = content.replace(/        <\/div>\n      <\/div>\n    <\/div>/g, '        </div>\n      </div>\n    </>');
+  
+  return content;
 }
 
-//Function to process a single file
+// Function to process a single file
 function processFile(filePath) {
   try {
-    //     const content = fs.readFileSync(filePath, 'utf8');
-    const _fixed = fixJSXSyntax(content);
-
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      //       return true;
+    const content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check if file has JSX syntax issues
+    if (content.includes('return (') && 
+        (content.includes('<div>') || content.includes('<Head>')) &&
+        (content.includes('import [^;]+$') || content.includes(';\n;') || content.includes('/>"'))) {
+      
+      console.log(`Fixing JSX syntax in: ${filePath}`);
+      
+      const fixed = fixJSXSyntax(content);
+      
+      fs.writeFileSync(filePath, fixed);
+      console.log(`✓ Fixed: ${filePath}`);
+      return true;
     }
+    
     return false;
   } catch (error) {
-    //     return false;
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-//Main function
-async function main() {
-  const _patterns = ['src/**/*.tsx', 'src/**/*.ts', 'app/**/*.tsx', 'app/**/*.ts'];
-
-  let _totalFixed = 0;
-
-  for (const pattern of patterns) {
-    const files = await glob(pattern, {
-      ignore: [
-        '**/node_modules/**',
-        '**/dist/**',
-        '**/build/**',
-        '**/__tests__/**',
-        '**/_app_disabled/**',
-        '**/_conflicted_disabled/**',
-        '**/_pages_api_disabled/**',
-        '**/_pages_disabled/**',
-        '**/admin-api-disabled/**',
-        '**/api-disabled/**',
-        '**/api.disabled/**',
-        '**/api.disabled.temp/**',
-        '**/api-backup/**',
-        '**/apps.backup/**',
-        '**/automation_backup/**',
-        '**/ai-optimization-backups/**',
-        '**/automation_logs/**',
-        '**/all-automations-reports/**',
-        '**/accessibility-reports/**',
-      ],
-    });
-
-    for (const file of files) {
-      if (processFile(file)) {
-        totalFixed++;
+// Function to recursively find and process files
+function processDirectory(dirPath) {
+  let processedCount = 0;
+  
+  try {
+    const items = fs.readdirSync(dirPath);
+    
+    for (const item of items) {
+      const fullPath = path.join(dirPath, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        // Skip node_modules and other irrelevant directories
+        if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
+          processedCount += processDirectory(fullPath);
+        }
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx')) {
+        if (processFile(fullPath)) {
+          processedCount++;
+        }
       }
     }
+  } catch (error) {
+    console.error(`Error processing directory ${dirPath}:`, error.message);
   }
-
-  //   }
-
-if (import.meta.url === `file://${process.argv[1]}`) {
-  //   main().catch(console.error);
-}
-
-export { fixJSXSyntax, processFile };
-  return files;
+  
+  return processedCount;
 }
 
 // Main execution
-console.log('Starting JSX syntax fix...');
-const appDir = path.join(__dirname, 'app');
-const tsxFiles = findTSXFiles(appDir);
+console.log('Starting JSX syntax fixes...');
+const processedCount = processDirectory('/workspace/app');
+console.log(`\n✓ Processed ${processedCount} files with JSX syntax issues`);
 
-let fixedCount = 0;
-for (const file of tsxFiles) {
-  if (fixJSXFile(file)) {
-    fixedCount++;
-  }
-}
-
-console.log(`Fixed ${fixedCount} files out of ${tsxFiles.length} total files.`);
->>>>>>> d05312d5d680673ba2e628470e93a08bc6917172
+console.log('\nJSX syntax fixes completed!');

@@ -1,140 +1,57 @@
-import React from "react"
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-export default function CareersPage() {"
-return(<>,"
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50" /  />"
-      <Navigation/ />"
-      <main className="py-20 px-4" />,"
-    <div className="max-w-4 xl mx-auto" / />,"
-    <h1 className="text-4 xl font-bold text-gray-900 mb-8">Careers</h1>
-          <p className="text-xl text-gray-600 mb-8" /  />
-"use client"
-import { { React   } from "react";
-import { Navigation  } from "../components/Navigation";
-import Footer from "../components/Footer";
-import React from 'react'
-import Head from "next/head"
-import Link from 'next/link'
-import { ArrowRight;
-import React from "react";
-import { Head  } from "next/head"
-import { Link  } from "next/link";
-import { ArrowRight  } from "lucide-react";
-import React from 'react';
-const CareersPage: React.FC = () => {
-  ;
-    return (;
- ,
-}
-    <div>Coming Soon</div>
-  );
-  }
-  }
-}
-  const _openPositions = [;
-  // TODO: Add item,s,;
-];
-    {;
-    // TODO: Add content;
- , }
-  }
-}
-  title: 'Senior AI Engineer,',;
-      department: 'Engineering,',;
-      location: 'Remote / Middletow,n, DE',;
-      type: 'Full-time,',;
-      description: 'Lead development of cutting-edge AI solutions and machine learning models',;
-      requirements: ['5+ years AI/ML experience,', 'Python, TensorFlow, PyTorch', 'PhD in Computer Science preferred'],;
-      icon: Brain;
-   , },;
-    {;
-    // TODO: Add content;
- , }
-  }
-}
-  title: 'Full-Stack Developer,',;
-      department: 'Engineering,',;
-      location: 'Remote / Middletow,n, DE',;
-      type: 'Full-time,',;
-      description: 'Build scalable web applications and integrate AI solutions',;
-      requirements: ['3+ years full-stack experience,', 'React, Node.js, TypeScript', 'Cloud platform experience'],;
-      icon: Code;
-   , },;
-    {;
-    // TODO: Add content;
- , }
-  }
-}
-  title: 'AI Product Manager,',;
-      department: 'Product,',;
-      location: 'Remote / Middletow,n, DE',;
-      type: 'Full-time,',;
-      description: 'Drive AI product strategy and work with cross-functional teams',;
-      requirements: ['3+ years product management,', 'AI/ML domain knowledge', 'Strong analytical skills'],;
-      icon: Users;
-   , },;
-    {;
-    // TODO: Add content;
- , }
-  }
-}
-  title: 'Cybersecurity Specialist,',;
-      department: 'Security,',;
-      location: 'Remote / Middletow,n, DE',;
-      type: 'Full-time,',;
-      description: 'Ensure security of AI systems and protect client data',;
-      requirements: ['4+ years cybersecurity experience,', 'AI security knowledge', 'Certifications preferred'],;
-      icon: Shield;
-   , }
-  ];
-  const benefits = [;
-  // TODO: Add item,s,;
-];
-//     'Competitive salary and equity',
-//     'Comprehensive health insurance',
-//     'Flexible remote work options',
-//     'Professional development budget',
-//     'Unlimited PTO',
-//     'Latest technology equipment',
-//     'Team building events',
-//     'Mentorship programs';
-  ];
-  return (;
-          <div>Coming Soon</div>
-  );
-          <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center'></div>
-      <div className='text-center'></div>
-        <h1 className='text-4xl font-bold text-white mb-4'>Careers</h1>
-        <p className='text-gray-300 mb-8'>Coming Soon - Advanced careers solutions</p>
-        <a href='/contact' className='bg-cyan-500 text-white px-6 py-3 rounded-lg hover: bg-cyan-600 transition-colors'></a>
-// Contact U,s,;
-          </a>
-      </div>
-    </div>
-  );
-}
-export default CareersPage;
-
-export default function CareersPage() {"
-return(<>,"
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50" /  />"
-      <Navigation/ />"
-      <main className="py-20 px-4" />,"
-    <div className="max-w-4 xl mx-auto" / />,"
-    <h1 className="text-4 xl font-bold text-gray-900 mb-8">Careers</h1>
-          <p className="text-xl text-gray-600 mb-8" /  />
-"use client"
-import { { React   } from "react";
-export default function CareersPage() {
-
-return(<> <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50" />
-      <Navigation/ /> <main className="py-20 px-4" /> <div className="max-w-4 xl mx-auto" />
-    <h1 className="text-4 xl font-bold text-gray-900 mb-8">Careers</h1> <p className="text-xl text-gray-600 mb-8" />
+<<<<<<< HEAD
 Join our team and help shape the future of AI and IT solutions.</p>
           </p>
             </div>
       </main>
-      <Footer /  />;
+=======
+'use client'
+import React from 'react';
+import Navigation from '../components/Navigation";"'
+import Footer from '../components/Footer";'
+export default function CareersPage() {"
+
+return(<>,"
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 /">
+      <Navigation/ />
+      <main className="py-20" px-4 />,"
+    <div className="max-w-4 xl mx-auto /">,
+    <h1 className = "text-4 xl font-bold text-gray-900 mb-8">"Careers"</h1>
+          <p className="text-xl" text-gray-600 mb-8 />
+"Join our team and help shape the future of AI and IT solutions."</p>
+          </p>
+            </div>
+      </main>
+      <Footer/ />
+        </div>";"
+      </>;)"
+  );""
+import React from 'react';
+import Head from 'next/head;";'}
+import Link from 'next/link";"'}
+import { ArrowRight } from 'lucide-react";'
 export default function CareersPage() {
-return (<>;
+  return (
+    <>
+    :all-pages-backup/careers/page.tsx"
+    </>
+      <title>"Careers - Zion Tech Group"</title>
+        <meta name = description" content="Professional careers services by Zion Tech Group. / / /">
+        <Head />
+        <title>"Careers - Zion Tech Group"</title>
+        <meta name="description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence. / /">
+      </Head>,
+    <div className="min-h-s" creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 />,"
+    <div className="con tainermx-auto px-4 py-16 /">,
+    <h1 className="tex t-4 xlfont-bold text-white mb-6">"Careers"</h1>"
+          <p className="tex" t-lgtext-gray-300 mb-8>"Professional careers services by Zion Tech Group."</p>
+          <Linkhref="/contact className="inl ine-flexitems-center px-6 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors /">"
+Contact Us</Link>
+            <ArrowRight className="ml-2" h-4 w-4 />
+          </Link>
+            </div>";"
+      </div>";"
+</div>;)"}
+  ),"}
+}"
+}'"
+>>>>>>> origin/main

@@ -1,283 +1,115 @@
+import, React, { createContext, useContext, useEffect, ReactNode } from &quot;react&quot
+declare global{interface Window {
+}
+<<<<<<< HEAD
+gtag: "(...arg",s: "any[]) => void"}
+  }
+export const useAnalytics = () => {
+return
+const context = useContext(AnalyticsContext)
+  if (!context) {
+    throw new Error(&quot;useAnalytics must be used within an AnalyticsProvider&quot)
+  ) => {
+$3
+}
+=======
+gtag: "(...arg",s: "any[]) => void"
+  );
+}
+;}"
 
-interface AnalyticsContextType {;
-    // TODO: Add content;
- , }
-  }
+interface AnalyticsContextType {"
+trackEvent: "(eventNam",e: "string",parameters?: Record<string, unknown>) => void"}
+;}"
+trackPageView: "(pageNam",e: "string) => void",;}
+;}
+
+:all-pages-backup/components/AnalyticsProvider.tsx</string>
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
+  undefined;
+)
+export const useAnalytics = (;
+  const context = useContext(AnalyticsContext);</AnalyticsContextType>
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
+undefined;
+)
+export const useAnalytics = () => {
+return;
+const context = useContext(AnalyticsContext);
+  if (!context) {;
+    throw new Error(&quot;useAnalytics must be used within an AnalyticsProvider&quot);
+  ) => {;
+$3;
 }
-  trackEvent: (eventName: strin,
-      g, parameters?: Record;
-          <string, unknown>) => void;
-  trackPageView: (pageName: strin,
-      g, pagePath?: string) => void;
-  setUserId: (userId: string) => void,;,;
-    setUserProperties: (properties: Record<strin,g, unknown>) => void;
+interface AnalyticsProviderProps {
+
 }
-interface AnalyticsProviderProps {;
-    // TODO: Add content;
- , }
-  }
-}
-  children: React.ReactNode;
-  trackingId?: string;
-  enableDebug?: boolean;,
-}
-export const AnalyticsProvider: React.FC;
-          <AnalyticsProviderProps> = ({;
-    // TODO: Add content;
- , }
-  }
-}
-//   children,;
-  trackingId = 'G-XXXXXXXXXX',;
-  enableDebug = false,;
-}) => {
-  ;
-    // TODO: Add content;
- ,
-    }
-  const [isInitialized, setIsInitialized] = useState(fal, s, e);
-  useEffect(() => {
-  ;
-    // TODO: Add content;
- ,
-    }
-    if (typeof window === 'undefined') return;
-    // Initialize Google Analytics,;
-export const initAnalytics = (): JSX.Element => {;
-    // TODO: Add content;
- , }
-  }
-}
-      if (!trackingId || trackingId === 'G-XXXXXXXXXX') {;
-    // TODO: Add content;
- , }
-  }
-}
-        if (enableDeb, u, g) {;
-    // console.warn('Analytics: No valid tracking ID provided');
- , }
-  }
-        }
-        return;
-      }
-      // Load Google Analytics script,;
-export const script = document.createElement('script');
-      script.async = true;
-      script.src = `https: //www.googletagmanager.com/gtag/js?id=${trackingI,d}`;
-      document.head.appendChild(scri, p, t);
-      // Initialize gtag,;
-      (window, as, any).dataLayer = (window, as, any).dataLayer || [];
-      (window, as, any).gtag = function() {;
-    // TODO: Add content;
- , }
-  }
-}
-        (window, as, any).dataLayer.push(argumen, t, s);
-      }
-      (window, as, any).gtag('js', new Date());
-      (window, as, any).gtag('config', trackingId, {;
-    // TODO: Add content;
- , }
-  }
-}
-  page_title: document.titl,e,;
-        page_location: window.location.hre,f,;
-      });
-      setIsInitialized(tr, u, e);
-      if (enableDeb, u, g) {;
-    // console.log('Analytics initialized with tracking ID: ',;
-    trackingId);
-  }
-  }
-      }
-    }
-  }, [trackingId, enableDebug]);
-  const trackEvent = (eventName: strin,
-      g, parameters?: Record,;
-          <string, unknown>) => {
-  ;
-    // TODO: Add content;
- ,
-    }
-    if (!isInitialized || typeof window === 'undefined') return;
-    if (enableDeb, u, g) {;
-    // console.log('Analytics Event: ',;
-    eventName,;
-    parameters);
-  }
-  }
-    }
-    if ((window as unknown as {;
-    gtag: (...args: unknown[,
-    ) => void;
-  }).gtag) {;
-    // TODO: Add content;
- , }
-  }
-}
-      (window as unknown as {;
-    gtag: (...args: unknown[,
-    ) => void;
-  }).gtag('event', eventName, parameters);
-    }
-  }
-  const trackPageView = (pageName: strin,
-      g, pagePath?: string) => {
-  ;
-    // TODO: Add content;
- ,
-    }
-    if (!isInitialized || typeof window === 'undefined') return;
-    if (enableDeb, u, g) {;
-    // console.log('Analytics Page View: ',;
-    pageName,;
-    pagePath);
-  }
-  }
-    }
-    if ((window as unknown as {;
-    gtag: (...args: unknown[,
-    ) => void;
-  }).gtag) {;
-    // TODO: Add content;
- , }
-  }
-}
-      (window as unknown as {;
-    gtag: (...args: unknown[,
-    ) => void;
-  }).gtag('event', 'page_view', {;
-    // TODO: Add content;
- , }
-  }
-}
-  page_title: pageNam,
-      e,;
-        page_location: pagePath || window.location.hre,f,;
-      });
-    }
-  }
-  const setUserId = (userId: string) => {
-  ;
-    // TODO: Add content;
- ,
-    }
-    if (!isInitialized || typeof window === 'undefined') return;
-    if ((window as unknown as {;
-    gtag: (...args: unknown[,
-    ) => void;
-  }).gtag) {;
-    // TODO: Add content;
- , }
-  }
-}
-      (window as unknown as {;
-    gtag: (...args: unknown[,
-    ) => void;
-  }).gtag('config', trackingId, {;
-    // TODO: Add content;
- , }
-  }
-}
-  user_id: userI,
-      d,;
-      });
-    }
-  }
-  const setUserProperties = (properties: Recor,
-      d,;
-          <string, unknown>) => {
-  ;
-    // TODO: Add content;
- ,
-    }
-    if (!isInitialized || typeof window === 'undefined') return;
-    if ((window as unknown as {;
-    gtag: (...args: unknown[,
-    ) => void;
-  }).gtag) {;
-    // TODO: Add content;
- , }
-  }
-}
-      (window as unknown as {;
-    gtag: (...args: unknown[,
-    ) => void;
-  }).gtag('set', properties);
-    }
-  }
-  const trackError = (error: Erro,
-      r, context?: string) => {
-  ;
-    // TODO: Add content;
- ,
-    }
-    if (!isInitialized || typeof window === 'undefined') return;
-    if (enableDeb, u, g) {;
-    // TODO: Add content;
- , }
-  }
-}
-      // eslint-disable-next-line no-console,;
-      // console.error('Analytics Error: ', error, context);
-    }
-    if ((window as unknown as {;
-    gtag: (...args: unknown[,
-    ) => void;
-  }).gtag) {;
-    // TODO: Add content;
- , }
-  }
-}
-      (window as unknown as {;
-    gtag: (...args: unknown[,
-    ) => void;
-  }).gtag('event', 'exception', {;
-    // TODO: Add content;
- , }
-  }
-}
-  description: error.messag,e,;
-        fatal: fals,
-      e,;
-        custom_map: {;
-    // TODO: Add content;
- , }
-  }
-}
-  context: context || 'unknown,',;
-        },;
-      });
-    }
-  }
-trackEvent,
-    trackPageView,
-    setUserId,
-    setUserProperties,
-  }
-  return (;
-          <div>Coming Soon</div>
-  );
-          <AnalyticsContext.Provider value={ contextVal, u, e }></AnalyticsContext>
-      {;
-    children;
-  }
-    </AnalyticsContext.Provider>
+}"
+children: "ReactNode",;}"
+;}"
+;</AnalyticsContextType>;"
+exportconstAnalyticsProvider: "React.FC<AnalyticsProviderProp s>= ({children",}) => {useEffect(() => {
+if (type of windo w !==&quot;undefined&quot;) {
+      // Google Analytics"
+if (process.env.NODE_ENV === &quot;production&quot;) {"
+const script = document.createElement(&quot;script&quot;)"}
+        script.src = `https: "//www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID",}`
+script.async = true
+document.head.appendChild(script)"
+        window.gtag ="
+window.gtag ||;"
+function (...args: "any[]) {;"
+            (window.gtag, as, any).q = (window.gtag, as, any).q || []",(window.gtag, as, any).q.push(args
   );
 }
-export const useAnalytics = (): AnalyticsContextType => {;
-    // TODO: Add content;
- , }
-  }
+        window.gtag(&quot;js&quot;, new Date(
+  );
 }
-  const context = useContext(AnalyticsConte, x, t);
-  if (context === undefined) {;
-    // TODO: Add content;
- , }
-  }
+window.gtag(&quot;config&quot;, process.env.REACT_APP_GA_MEASUREMENT_ID || &quot;&quot;)
+  );
 }
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
-}
+  }, [])
+
+:all-pages-backup/components/AnalyticsProvider.tsx"
+consttrackEvent = ("
+eventName: "string</AnalyticsProviderProp>
+parameters?: Record<string,unknown>
+  ) => {"
+consttrackEvent = ("
+eventName: "string</string>
+parameters?: Record<string,unknown>;
+  ) => {;
+    if(typeof window !== &quot;undefined&quot; && window.gtag) {  
+window.gtag(&quot;event&quot;, eventName, parameters)}
+    , , }
+  }"
+
+consttrackPageView= (pageName: "string) => {if (type of windo w !==&quot;undefined&quot; && windo w.gtag) {",window.gtag(&quot;config&quot;,&quot;GA_MEASUREMENT_ID&quot;, {"
+:all-pages-backup/components/AnalyticsProvider.tsx"
+page_title: "pageName",page_location: "window.location.href"
+page_title: pageName)"
+page_locatio",n: "window.location.href)"}
+      ",})
+    }"
+  }"
+
+constvalue: "AnalyticsContextType = {trackEvent"
+trackPageView"}
+  ",}
+
+return(</string>
+    <AnalyticsContext.Provider value = {value,} >
+      "{children}"</AnalyticsContext>
+    </AnalyticsContext.Provider>)
+  );
+};
 export default AnalyticsProvider;
+  )
+:all-pages-backup/components/AnalyticsProvider.tsx
+{}
+export default AnalyticsProviderPage;
+}"
+export default AnalyticsProviderPage;"
+}"
+`
+>>>>>>> origin/main

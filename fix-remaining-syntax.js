@@ -1,90 +1,62 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix remaining syntax errors
+// Function to fix remaining syntax issues
 function fixRemainingSyntax(content) {
-  // Fix malformed closing parentheses and braces
-  content = content.replace(/<Footer\s+\/>\s*<\/div>\)\s*\)\}/g, '<Footer />\n    </div>\n  );\n}');
-  content = content.replace(/<Footer\s+\/>\s*<\/div>\)\s*\)\s*}/g, '<Footer />\n    </div>\n  );\n}');
-  content = content.replace(/<Footer\s+\/>\s*<\/div>\)\s*\)\s*}\s*$/gm, '<Footer />\n    </div>\n  );\n}');
+  let fixed = content;
+
+  // Fix lines ending with quotes and semicolons
+  fixed = fixed.replace(/";"$/gm, '"');
+  fixed = fixed.replace(/';"$/gm, "'");
+  fixed = fixed.replace(/";$/gm, '"');
+  fixed = fixed.replace(/';$/gm, "'");
   
-  // Fix malformed quotes at the end of files
-  content = content.replace(/}\s*'$/gm, '}');
-  content = content.replace(/;\s*'$/gm, ';');
-  content = content.replace(/\)\s*'$/gm, ')');
-  content = content.replace(/\]\s*'$/gm, ']');
-  content = content.replace(/\}\s*'$/gm, '}');
+  // Fix specific JSX patterns
+  fixed = fixed.replace(/<Link";"$/gm, '<Link');
+  fixed = fixed.replace(/href="([^]*)";"$/gm, 'href="$1');"
+  fixed = fixed.replace(/className="([^]*);"$/gm, 'className="$1');
   
-  // Fix malformed quotes in JSX attributes
-  content = content.replace(/content="([^"]*)"\s*"/g, 'content="$1"');
-  content = content.replace(/href="([^"]*)"\s*"/g, 'href="$1"');
-  content = content.replace(/className="([^"]*)"\s*"/g, 'className="$1"');
-  content = content.replace(/name="([^"]*)"\s*"/g, 'name="$1"');
-  content = content.replace(/property="([^"]*)"\s*"/g, 'property="$1"');
+  // Fix closing tags
+  fixed = fixed.replace(/<\/Link">;$/gm, '</Link>');
+  fixed = fixed.replace(/<\/div>;"$/gm, '</div>');
+  fixed = fixed.replace(/<\/p>;$/gm, '</p>');
+  fixed = fixed.replace(/<\/h1>;"$/gm, '</h1>');
+  fixed = fixed.replace(/<\/h2>;$/gm, '</h2>');
+  fixed = fixed.replace(/<\/h3>;"$/gm, '</h3>');
   
-  // Fix malformed quotes in JSX text content
-  content = content.replace(/>([^<]*)"\s*</g, '>$1<');
-  content = content.replace(/>([^<]*);"\s*</g, '>$1<');
+  // Fix opening tags
+  fixed = fixed.replace(/<div className="([^]*);"$/gm, '<div className="$1');
+  fixed = fixed.replace(/<p className="([^"]*)";"$/gm, '<p className="$1');
+  fixed = fixed.replace(/<h1 className="([^"]*)";"$/gm, '<h1 className="$1');
+  fixed = fixed.replace(/<h2 className="([^"]*)";"$/gm, '<h2 className="$1');
+  fixed = fixed.replace(/<h3 className="([^"]*)";"$/gm, '<h3 className="$1');
   
-  // Fix malformed quotes in JSX closing tags
-  content = content.replace(/<\/\s*([^>]*)\s*>\s*"/g, '</$1>');
-  content = content.replace(/<\/\s*([^>]*)\s*>\s*;\s*"/g, '</$1>');
+  // Fix self-closing tags
+  fixed = fixed.replace(/<meta[^">]*";"$/gm, (match) => match.replace(/";"$/, ' />'));
+  fixed = fixed.replace(/<link[^>]*";"$/gm, (match) => match.replace(/";"$/, ' />'));
   
-  // Fix malformed quotes in JSX opening tags
-  content = content.replace(/<\s*([^>]*)\s*>\s*"/g, '<$1>');
-  content = content.replace(/<\s*([^>]*)\s*>\s*;\s*"/g, '<$1>');
+  // Fix ArrowRight component
+  fixed = fixed.replace(/<ArrowRight[^>]*";"$/gm, '<ArrowRight className="w-5 h-5 ml-2 /">');
   
-  // Fix malformed quotes in function returns
-  content = content.replace(/return\s*\(\s*([^)]*)\s*\)\s*;\s*"/g, 'return ($1);');
-  content = content.replace(/return\s*\(\s*([^)]*)\s*\)\s*"/g, 'return ($1)');
-  
-  // Fix malformed quotes in function definitions
-  content = content.replace(/\)\s*}\s*;\s*"/g, ')}');
-  content = content.replace(/\)\s*}\s*"/g, ')}');
-  
-  // Fix malformed quotes in array definitions
-  content = content.replace(/\[\s*([^\]]*)\s*\]\s*;\s*"/g, '[$1];');
-  content = content.replace(/\[\s*([^\]]*)\s*\]\s*"/g, '[$1]');
-  
-  // Fix malformed quotes in object definitions
-  content = content.replace(/\{\s*([^}]*)\s*\}\s*;\s*"/g, '{$1};');
-  content = content.replace(/\{\s*([^}]*)\s*\}\s*"/g, '{$1}');
-  
-  // Fix malformed quotes in string literals
-  content = content.replace(/"([^"]*)"\s*"/g, '"$1"');
-  content = content.replace(/'([^']*)'\s*"/g, "'$1'");
-  
-  // Fix malformed quotes in comments
-  content = content.replace(/\/\*\s*([^*]*)\s*\*\/\s*"/g, '/* $1 */');
-  content = content.replace(/\/\/\s*([^\n]*)\s*"/g, '// $1');
-  
-  // Fix function declaration syntax
-  content = content.replace(/export default function ServicePage\(\) \{return \(/g, 'export default function ServicePage() {\n  return (');
-  
-  // Remove all semicolons that are incorrectly placed
-  content = content.replace(/;\s*$/gm, '');
-  content = content.replace(/;\s*"/g, '"');
-  content = content.replace(/;\s*>/g, '>');
-  content = content.replace(/;\s*\)/g, ')');
-  content = content.replace(/;\s*}/g, '}');
-  content = content.replace(/;\s*]/g, ']');
-  
-  return content;
+  // Fix specific patterns
+  fixed = fixed.replace(/Contact Us<\/Link>;$/gm, 'Contact Us</Link>');
+  fixed = fixed.replace(/Learn More<\/Link>;"$/gm, 'Learn More</Link>');
+  fixed = fixed.replace(/Get Started<\/Link>";"$/gm, 'Get Started</Link>');
+
+  return fixed;
 }
 
 // Function to process a single file
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixedContent = fixRemainingSyntax(content);
+    const fixed = fixRemainingSyntax(content);
     
-    // Only write if content changed
-    if (fixedContent !== content) {
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
-    
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
@@ -92,42 +64,33 @@ function processFile(filePath) {
   }
 }
 
-// Function to recursively find all .tsx and .ts files
-function findFiles(dir, extensions = ['.tsx', '.ts', '.js']) {
-  const files = [];
+// Function to recursively find and process files
+function processDirectory(dirPath) {
+  let fixedCount = 0;
   
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
+  try {
+    const items = fs.readdirSync(dirPath);
     
     for (const item of items) {
-      const fullPath = path.join(currentDir, item);
+      const fullPath = path.join(dirPath, item);
       const stat = fs.statSync(fullPath);
       
-      if (stat.isDirectory()) {
-        // Skip node_modules and other common directories
-        if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
-          traverse(fullPath);
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        fixedCount += processDirectory(fullPath);
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) {
+        if (processFile(fullPath)) {
+          fixedCount++;
         }
-      } else if (extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
       }
     }
+  } catch (error) {
+    console.error(`Error processing directory ${dirPath}:`, error.message);
   }
   
-  traverse(dir);
-  return files;
+  return fixedCount;
 }
 
 // Main execution
-console.log('Starting remaining syntax error fixes...');
-
-const files = findFiles('./app');
-let fixedCount = 0;
-
-for (const file of files) {
-  if (processFile(file)) {
-    fixedCount++;
-  }
-}
-
-console.log(`Fixed ${fixedCount} files.`);
+console.log('Starting remaining syntax fixes...');
+const fixedCount = processDirectory('/workspace');
+console.log(`Fixed ${fixedCount} files`);

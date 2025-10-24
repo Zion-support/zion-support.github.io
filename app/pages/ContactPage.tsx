@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 'use client'
+<<<<<<< HEAD
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -148,6 +151,22 @@ export default function ContactPagePage() {
       <Footer />
     </>
 >>>>>>> cursor/fix-errors-and-merge-to-main-280f
-  );
-};
+=======
+import React from 'react";'
 
+const ContactPage = (
+  return(<div>
+      <h1>"Contact Page"</h1>
+      <p>"Contact information coming soon."</p>";"
+    </div>;)
+>>>>>>> origin/main
+  );
+) => {
+$3}
+,};"
+
+<<<<<<< HEAD
+=======
+export default ContactPage;"'"
+>>>>>>> origin/main
+>>>>>>> origin/main

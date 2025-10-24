@@ -1,86 +1,58 @@
 #!/usr/bin/env python3
 """
-Script to fix remaining linting errors:
-1. Add missing icon imports
-2. Fix unescaped entities in JSX content only
-3. Fix merge conflict markers
-4. Fix const vs let issues
+Script to fix remaining syntax errors in TypeScript/JSX files
 """
 
 import os
 import re
 import glob
 
-# Icon mappings for missing imports
-ICON_MAPPINGS = {
-    'BarChart': 'BarChart3',
-    'PhoneIcon': 'Phone',
-    'MailIcon': 'Mail',
-    'AlertTriangle': 'AlertTriangle',
-    'Download': 'Download',
-    'Home': 'Home',
-    'Settings': 'Settings'
-}
-
-def fix_file(file_path):
-    """Fix remaining linting errors in a single file."""
+def fix_remaining_errors(file_path):
+    """Fix remaining syntax errors in a single file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-        # Fix merge conflict markers
-        if '<<<<<<< HEAD' in content or '=======' in content or '>>>>>>>' in content:
-            print(f"Found merge conflict markers in {file_path}, skipping...")
-            return False
+        # Fix 1: Remove duplicate export default statements
+        lines = content.split('\n')
+        export_defaults = []
+        other_lines = []
         
-        # Find missing icons
-        missing_icons = set()
-        for icon_name, lucide_name in ICON_MAPPINGS.items():
-            if f"<{icon_name}" in content and f"import {{ {lucide_name}" not in content:
-                missing_icons.add(lucide_name)
-        
-        # Add missing icon imports
-        if missing_icons:
-            # Find existing lucide-react import
-            lucide_import_pattern = r"import\s*{\s*([^}]+)\s*}\s*from\s*['\"]lucide-react['\"]"
-            lucide_match = re.search(lucide_import_pattern, content)
-            
-            if lucide_match:
-                # Add to existing import
-                existing_icons = [icon.strip() for icon in lucide_match.group(1).split(',')]
-                all_icons = list(set(existing_icons + list(missing_icons)))
-                all_icons.sort()
-                
-                new_import = f"import {{ {', '.join(all_icons)} }} from 'lucide-react';"
-                content = re.sub(lucide_import_pattern, new_import, content)
+        for line in lines:
+            if line.strip().startswith('export default'):
+                export_defaults.append(line)
             else:
-                # Add new import after React import
-                react_import_pattern = r"(import\s+React[^;]+;)"
-                if re.search(react_import_pattern, content):
-                    new_import = f"import {{ {', '.join(sorted(missing_icons))} }} from 'lucide-react';\n"
-                    content = re.sub(react_import_pattern, r"\1\n" + new_import, content)
-                else:
-                    # Add at the top
-                    new_import = f"import {{ {', '.join(sorted(missing_icons))} }} from 'lucide-react';\n"
-                    content = new_import + content
+                other_lines.append(line)
         
-        # Fix unescaped entities in JSX content only
-        # This is more targeted - only fix quotes in JSX text content
-        def fix_jsx_quotes(match):
-            text = match.group(1)
-            # Only fix if it's not already escaped and not in a code context
-            if '&apos;' not in text and '&quot;' not in text:
-                text = text.replace("'", "&apos;")
-                text = text.replace('"', "&quot;")
-            return f">{text}<"
+        # Keep only the first export default
+        if len(export_defaults) > 1:
+            other_lines.append(export_defaults[0])
+            content = '\n'.join(other_lines)
         
-        # Fix quotes in JSX text content
-        content = re.sub(r'>([^<]*[\'"][^<]*)<', fix_jsx_quotes, content)
+        # Fix 2: Fix malformed function syntax
+        content = re.sub(r'\);\s*\n\s*};\s*\n\s*$', ');\n}', content)
         
-        # Fix const vs let issue
-        content = re.sub(r'let\s+clsEntries\s*=', 'const clsEntries =', content)
+        # Fix 3: Fix malformed JSX structure
+        content = re.sub(r'<div className="min-h-screen[^"]*">\s*<div className="[^"]*">\s*<h1>([^<]+)</h1>', 
+                        r'<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">\n        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">\n          <h1>\1</h1>', content)
+        
+        # Fix 4: Fix missing semicolons
+        content = re.sub(r'const\s+\w+\s*=\s*new\s+Date\(\)\.getFullYear\(\)\n', 'const \\1 = new Date().getFullYear();\n', content)
+        
+        # Fix 5: Fix malformed JSX attributes
+        content = re.sub(r'className="([^"]*)"\s*,', r'className="\1"', content)
+        
+        # Fix 6: Fix malformed grid classes
+        content = re.sub(r'grid-cols-1 md:\s*grid-cols-2', 'grid-cols-1 md:grid-cols-2', content)
+        
+        # Fix 7: Fix malformed JSX structure with commas
+        content = re.sub(r'<div className="grid[^"]*">,', r'<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">', content)
+        
+        # Fix 8: Fix malformed footer structure
+        content = re.sub(r'<footer className="[^"]*">\s*</footer><div className="[^"]*">,', 
+                        r'<footer className="bg-slate-900 text-white">\n      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">', content)
         
         # Only write if content changed
         if content != original_content:
@@ -96,30 +68,24 @@ def fix_file(file_path):
         return False
 
 def main():
-    """Main function to fix all files."""
-    # Find all TypeScript/TSX files
+    """Main function to fix remaining errors in all files"""
     patterns = [
-        'src/**/*.tsx',
         'app/**/*.tsx',
-        'components/**/*.tsx',
-        '**/*.tsx'
+        'app/**/*.ts'
     ]
     
-    files_to_fix = []
+    files_processed = 0
+    files_fixed = 0
+    
     for pattern in patterns:
-        files_to_fix.extend(glob.glob(pattern, recursive=True))
+        for file_path in glob.glob(pattern, recursive=True):
+            if os.path.isfile(file_path):
+                files_processed += 1
+                if fix_remaining_errors(file_path):
+                    files_fixed += 1
     
-    # Remove duplicates
-    files_to_fix = list(set(files_to_fix))
-    
-    print(f"Found {len(files_to_fix)} files to check...")
-    
-    fixed_count = 0
-    for file_path in files_to_fix:
-        if fix_file(file_path):
-            fixed_count += 1
-    
-    print(f"\nFixed {fixed_count} files out of {len(files_to_fix)} files checked.")
+    print(f"\nProcessed {files_processed} files")
+    print(f"Fixed remaining errors in {files_fixed} files")
 
 if __name__ == "__main__":
     main()

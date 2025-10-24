@@ -1,123 +1,79 @@
-
-interface SEOProps {;
-    // TODO: Add content;
- , }
-  }
+<<<<<<< HEAD
+=======
+'use client"
+:all-pages-backup/components/EnhancedSEO.tsx;"'"
+import Footer from './Footer";"'
+import React from react'
+import { Helmet } from 'react-helmet-async";"'
+import { ArrowRight, Brain } from lucide-react";"
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react";"'
+import { Phone, Mail, ArrowRight } from 'lucide-react";"'
+import Footer from ./Footer";"
+import React from 'react';
+import { Helmet } from 'react-helmet-async";"'
+import { Brain, ArrowRight, Mail } from lucide-react";"
+import { Brain, ArrowRight, Mail } from 'lucide-react";"'
+import { Brain, ArrowRight, Mail } from 'lucide-react";"'
+  const benefits = ["
+    'Advanced AI technology integration'
+    'Real-time processing and analytics'
+    'Enterprise-grade security and compliance'
+    'Scalable and flexible solutions'"
+    '2 4/7 technical support"
+:all-pages-backup/components/EnhancedSEO.tsx"'
+    'Easy integration with existing systems'
+    'Cost-effective pricing plans'
+    'Easy integration with existing systems'"
+    'Cost-effective pricing plans";"'"
+    'Proven track record of success",;"
+    <divclassName="&quot;flex" flex-col sm: "flex-row gap-4 justify-center&quot; / />
+              <button className="&quot;bg-gradient-to-r" from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot; />
+                <PhoneclassName="&quot;mr-2" h-5 w-5&quot; />
+"Call Now"</Phone>
+              <button className="&quot;bg-gradient-to-r" from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hove",r: "scale-105&quot; />
+                <MailclassName="&quot;mr-2" h-5 w-5&quot; />
+"Email Us"</Mail>
+>>>>>>> origin/main
+              </div>
+            </div>
+        </section>
+        </div>
+<<<<<<< HEAD
+    </div>
+                <CheckCircle className=&quot;h-6 w-6 text-purple-400 mt-1 flex-shrink-0&quot; /  />
+                <p className=&quot;text-gray-300 text-lg&quot;>{benefit}</p>
+                </div>)
+            )    )
 }
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  twitterSite?: string;
-  structuredData?: unknown;
-  noindex?: boolean;
-  nofollow?: boolean;
-  lang?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
+            </div>
+=======
+      <Footer/ />
+    </>
+  )
+:all-pages-backup/components/EnhancedSEO.tsx
+{",}
+export default EnhancedSEOPage;
 }
-const EnhancedSEO: React.FC;
-          <SEOProps> = ({;
-    // TODO: Add content;
- , }
-  }
-}
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',;
-  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',;
-  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services'],;
-//   canonicalUrl,;
-  ogImage = 'https: //ziontechgroup.com/og-image.jpg,',;
-  ogType = 'website',;
-  twitterCard = 'summary_large_image',;
-  twitterSite = '@ziontechgroup',;
-//   structuredData,;
-  noindex = false,;
-  nofollow = false,;
-  lang = 'en',;
-  author = 'Zion Tech Group',;
-//   publishedTime,;
-//   modifiedTime,;
-//   section,;
-  tags = [],;
-}) => {
-  ;
-    const fullDescription = description.length > 160 ? description.substring(0,;
-    157) + '...' : description,;
-    const keywordsString = Array.isArray(keywor, d, s) ? keywords.join(',;
-    ') : keywords,;
-    return (;
-}
-          <div>Coming Soon</div>
-  );
-          <Helmet></Helmet>
-  }
-  }
-      {;
-    /* Basic Meta Tags */;
-  }
-      <title>{ fullTit, l, e }</title><meta name='description' content={ fullDescripti, o, n }/><meta name='keywords' content={ keywordsStri, n, g }/><meta name='author' content={ auth, o, r }/><meta name='robots' content={`${noindex ? 'noindex' : 'index'
-    }, ${nofollow ? 'nofollow' : 'follow'
-    }`} /><meta name='language' content={ la, n, g }/><link rel='canonical' href={ canonicalU, r, l }/></link>
-      {;
-    /* Open Graph Meta Tags */;
-  }
-      <meta property='og: title' content={fullTitl,e}/><meta property='og: description' content={fullDescriptio,n}/><meta property='og: type' content={ogTyp,e}/><meta property='og: url' content={canonicalUr,l}/><meta property='og: image' content={ogImag,e}/><meta property='og: image:width' content='1200' /><meta property='og:image:height' content='630' /><meta property='og:site_name' content='Zion Tech Group' /><meta property='og:locale' content='en_US' /></meta>
-      {;
-    /* Twitter Card Meta Tags */;
- , }
-      <meta name='twitter: card' content={twitterCar,d}/><meta name='twitter: site' content={twitterSit,e}/><meta name='twitter: title' content={fullTitl,e}/><meta name='twitter: description' content={fullDescriptio,n}/><meta name='twitter: image' content={ogImag,e}/></meta>
-      {;
-    /* Additional Meta Tags */;
-  }
-      <meta name='viewport' content='width=device-width, initial-scale=1.0' /><meta name='theme-color' content='#00ffff' /><meta name='msapplication-TileColor' content='#00ffff' /><meta name='apple-mobile-web-app-capable' content='yes' /><meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' /><meta name='apple-mobile-web-app-title' content='Zion Tech Group' /></meta>
-      {;
-    /* Article Meta Tags */;
-  }
-      {publishedTime && <meta property='article: published_time' content={publishedTim,e}/>}
-      {modifiedTime && <meta property='article: modified_time' content={modifiedTim,e}/>}
-      {section && <meta property='article: section' content={sectio,n}/>}
-      {;
-    tags.length > 0 && tags.map((tag,
-    index) => ();
-  }
-  }
-  }
-          <meta key={ ind, e, x }property='article: tag' content={ta,g} /></meta>
-      ))}
-      {;
-    /* Structured Data */;
-  }
-      {;
-    structuredData && ();
-  }
-          <script type='application/ld+json'></script>
-  }
-  }
-          {;
-    JSON.stringify(structuredDa, t, a);
-  }
-        </script>
-      )}
-      {;
-    /* Preconnect to external domains */;
-  }
-<link rel='preconnect' href='https: // fonts.googleapis.com' /></link>
-          <link rel='preconnect' href='https:// fonts.gstatic.com' crossOrigin='anonymous' /></link>
-          <link rel='preconnect' href='https:// www.google-analytics.com' /></link>
-          <link rel='preconnect' href='https:// www.googletagmanager.com' /></link>
-      {;
-    /* DNS Prefetch */;
- , }
-          <link rel='dns-prefetch' href='// fonts.googleapis.com' /></link>
-          <link rel='dns-prefetch' href='// www.google-analytics.com' /></link>
-          <link rel='dns-prefetch' href='// www.googletagmanager.com' /></link>
-          </Helmet>
-  );
-}
-export default EnhancedSEO;
+export default EnhancedSEOPage;
+                  </div>
+"{              ))}"
+              </div>
+            </div>
+            </div>,
+    <div className="&quot;grid" grid-cols-1 md: "grid-cols-2 gap-6&quot;>{benefits.map((benefit",index) => (  }
+      <divkey = {index,} className = &quot;flex items-start space-x-3&quot; / />
+    </div>
+                <CheckCircle className="&quot;h-6" w-6 text-purple-400 mt-1 flex-shrink-0&quot; /  />;
+                <p className="&quot;text-gray-300" text-lg&quot;>"{benefit}"</p>
+                </div>);
+            ))}
+            </div>
+          </div>
+      </section>
+      {/* CTA Section */}
+      <section className="&quot;py-20" px-4 sm: "px-6 lg:px-8&quot; />,<divclassName="&quot;max-w-4" xl mx-auto text-center&quot; / />,
+    <divclassName="&quot;bg-gradient-to-r" from-purple-600 to-blue-600 rounded-2 xl p-8 md: p-12&quot; / />,<h1 className="&quot;text-3" xl md: text-4 xl font-bold text-white mb-4&quot;>"Ready to Get Started?"</h2>h2>
+            <p className="&quot;text-xl" text-purple-100 mb-8&quot;>"Contact our experts to discuss your enhancedseo needs and get a customized solution."</p>p>,<divclassName="&quot;flex" flex-col, s,m: flex-row gap-4 justify-center&quot; / / />
+            </div>
+,}'"
+>>>>>>> origin/main

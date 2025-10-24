@@ -5,7 +5,9 @@
       "dom.iterable",
       "esnext"
     ],
-    "types": ["@testing-library/jest-dom"],
+    "types": [
+      "@testing-library/jest-dom"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -26,29 +28,27 @@
     "target": "ES2017",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./app/*"]
+      "@/*": [
+        "./app/*"
+      ]
     }
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
-    "app/page.tsx",
-    "app/layout.tsx",
-    "app/team/page.tsx",
-    "app/_not-found.tsx"
+    "**/*.ts",
+    "**/*.tsx",
+    "jest.setup.ts"
   ],
   "exclude": [
     "node_modules",
-    "app-broken/**/*",
-    "app-disabled/**/*",
-    "__tests__/**/*",
-    "**/*.test.tsx",
-    "**/*.test.ts",
-    "jest.setup.ts",
-    "vite.config.ts",
-    "vite.config.optimized.ts",
-    "src/**/*",
-    "app/components/**/*",
-    "app/utils/**/*"
+    "app-backup/**/*",
+    "ai-pages-backup/**/*",
+    "all-pages-backup/**/*",
+    "backup-problematic/**/*",
+    "corrupted-src-backup/**/*",
+    "problematic-files-backup/**/*",
+    "problematic-pages/**/*",
+    "temp-pages/**/*"
   ]
 }

@@ -1,350 +1,270 @@
-
-interface Props {;
-    // TODO: Add content;
- , }
-  }
+<<<<<<< HEAD
+<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />
+      </>
+        <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, EnhancedErrorBoundary, AI, solutions, intelligent automation&quot; / />
+<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." /  />
+      </Head>
+      </>
+      <Navigation/ />,
+      </div>
+    </div>)
+            )    )
 }
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Erro,
-      r, errorInfo: ErrorInfo) => void;
-  showDetails?: boolean;
-  enableReporting?: boolean;,
-}
-interface State {;
-    // TODO: Add content;
- , }
-  }
-}
-  hasError: boolean,;,;
-    error: Error | null,;,;
-    errorInfo: ErrorInfo | null,;,;
-    errorId: string | null;,
-}
-class EnhancedErrorBoundary extends Component;
-          <Props, State> {;
-    // TODO: Add content;
- , }
-  }
-}
-  constructor(props: Props) {;
-    // TODO: Add content;
- , }
-  }
-}
-    super(pro, p, s);
-    this.state={;
-    // TODO: Add content;
- , }}
-}
-  hasError: fals,
-      e,;
-      error: nul,
-      l,;
-      errorInfo: nul,
-      l,;
-      errorId: nul,
-      l,;
-    }
-  }
-  static getDerivedStateFromError(error: Error): Partial;
-          <State> {;
-    // TODO: Add content;
- , }
-  }
-}
-    return {;
-    // TODO: Add content;
- , }
-  }
-}
-  hasError: tru,
-      e,;
-//       error,;
-      errorId: `error_${Date.now(,)}_${Math.random().toString(36).substr(2, 9)}`,;
-    }
-  }
-  componentDidCatch(error: Erro,
-      r, errorInfo: ErrorInfo) {;
-    // TODO: Add content;
- , }
-  }
-}
-    this.setState({;
-    // TODO: Add content;
- , }
-  }
-}
-//       error,
-//       errorInfo,
-    });
-    // Log error to console in development,
-    if (process.env.NODE_ENV === 'development') {;
-    // console.error('Error Boundary caught an error: ',;
-    error,;
-    errorInfo);
-  }
-  }
-    }
-    // Report error to monitoring service,
-    if (this.props.enableReporting !== false) {;
-    // TODO: Add content;
- , }
-  }
-}
-      this.reportError(error, errorInfo);
-    }
-    // Call custom error handler,
-    this.props.onError?.(error, errorInfo);
-  }
-  private reportError = (error: Erro,
-      r, errorInfo: ErrorInfo) => {
-  ;
-    errorId: this.state.errorI,d,;
-      message: error.messag,e,;
-      stack: error.stac,k,;
-      componentStack: errorInfo.componentStac,k,;
-      timestamp: new Date().toISOString(,),;
-      userAgent: navigator.userAgen,t,;
-      url: window.location.hre,f,;
-      userId: this.getUserId(,),;
-      sessionId: this.getSessionId();
- ,
-    }
-  }
-    }
-    // Send to error reporting service,;
-    this.sendErrorReport(errorRepo, r, t);
-    // Send to Google Analytics if available,;
-    if (typeof window !== 'undefined' && 'gtag' in window) {;
-    // TODO: Add content;
- , }
-  }
-}
-      (window, as, any).gtag('event', 'exception', {;
-    // TODO: Add content;
- , }
-  }
-}
-  description: error.messag,e,;
-        fatal: fals,
-      e,;
-        custom_map: {;
-    // TODO: Add content;
- , }
-  }
-}
-  error_id: this.state.errorI,d,;
-        },;
-      });
-    }
-  }
-  private sendErrorReport = (errorReport: any) => {
-  ;
-    // TODO: Add content;
- ,
-    }
-    // In a real application, you would send this to your error reporting service,;
-    // For now, we'll just log it,;
-    if (!sessionId) {;
-    // TODO: Add content;
- , }
-  }
-}
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-      sessionStorage.setItem('sessionId', sessionId);
-    }
-    return sessionId;
-  }
-  private handleRetry = () => {
-  ;
-    // TODO: Add content;
- ,
-    }
-    this.setState({;
-    // TODO: Add content;
- , }
-  }
-}
-  hasError: fals,
-      e,;
-      error: nul,
-      l,;
-      errorInfo: nul,
-      l,;
-      errorId: nul,
-      l,;
-    });
-  }
-  private handleReload = () => {
-  ;
-    // TODO: Add content;
- ,
-    }
-    window.location.reload();
-  }
-  private handleGoHome = () => {
-  ;
-    // TODO: Add content;
- ,
-    }
-    window.location.href = '/';
-  }
-  private copyErrorDetails = () => {
-  ;
-    // TODO: Add content;
- ,
-    }
-    const errorDetails={;
-    // TODO: Add content;
- , }}
-}
-  errorId: this.state.errorI,d,;
-      message: this.state.error?.message,;
-      stack: this.state.error?.stack,;
-      componentStack: this.state.errorInfo?.componentStack,;
-      timestamp: new Date().toISOString(,),;
-    }
-//     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2));
-      .then(() => {
-  ;
-    // TODO: Add content;
- ,
-    }
-        alert('Error details copied to clipboard');
-      });
-      .catch(() => {
-  ;
-    // TODO: Add content;
- ,
-    }
-        alert('Failed to copy error details');
-      });
-  }
-  render() {;
-    // TODO: Add content;
- , }
-  }
-}
-    if (this.state.hasError) {;
-    // TODO: Add content;
- , }
-  }
-}
-      // Use custom fallback if provided,
-      if (this.props.fallback) {;
-    // TODO: Add content;
- , }
-  }
-}
-        return this.props.fallback;
-      }
-      const { retryCount, error, errorId } = this.state,
-      const canRetry = retryCount,
-          < this.maxRetries;
-      return (;
-    <div>Coming Soon</div>
+          </div>
+        </section>",{/* Features Section */}
+        <section className=&quot;py-20 px-4&quot; />,
+    <div className=&quot;max-w-7 xl mx-auto&quot; / />,
+    <div className=&quot;text-center mb-16&quot; / />,
+    <h1 className=&quot;text-4 xl font-bold text-white mb-4&quot;>Key Features</h2>
+                    {feature.benefits.map((benefit, idx) => (</ul>
+                      <li key = {idx} className = &quotflex items-center text-sm text-gray-300&quot;  />
+                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; /  />
+=======
+'use client"
+:all-pages-backup/components/EnhancedErrorBoundary.tsx;"'"
+import React from 'react';
+import { Helmet } from 'react-helmet-async";"'
+import { ArrowRight, Brain, BarChart, Target, TrendingUp } from 'lucide-react";"'
+import Navigation from ../components/Navigation";"
+import Footer from '../components/Footer";"'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Check } from 'lucide-react";"'
+import React from react'
+import { Helmet } from 'react-helmet-async";"'
+import { ArrowRight, Users, Target, Mail, BarChart, Brain, TrendingUp } from lucide-react";"
+import Navigation from '../components/Navigation";"'
+import Footer from '../components/Footer";"'
+import { ArrowRight, Users, Target, Mail, BarChart, Brain, TrendingUp } from lucide-react";"
+const EnhancedErrorBoundaryPage: "React.FC = () => {
+const features = ["
+    {"
+:all-pages-backup/components/EnhancedErrorBoundary.tsx"'"}
+ico",n: "Brain",title: "title",description: "description",benefits: "['Smart recommendations'",'Predictive analytics', 'Automated insights', 'Real-time analysis"]"}
+    }"
+  {"'"}
+icon: "BarChart",title: "title",description: "description",benefits: "['Real-time dashboards'",'Custom reports', 'Data visualization', 'Performance metrics"]"}
+    }"
+  {"'"}
+icon: "Target",title: "title",description: "description",benefits: "['Goal tracking'",'Performance optimization', 'Strategic planning', 'Success metrics"]"}
+    }"
+  {"'"
+icon: "TrendingUp",title: "title",description: "description",benefits: "['Growth strategies'",'Market analysis', 'Competitive insights', 'ROI optimization"]"
+icon: "Brain"'"}
+titl",e: "'AI-Powered Intelligence'",description: "'Advanced AI algorithms that provide intelligent insights and recommendations.'",benefits: "['Smart recommendations'",'Predictive analytics', 'Automated insights', 'Real-time analysis"]"}
+    }"
+  {"
+icon: "BarChart"'"}
+titl",e: "'Advanced Analytics'",description: "'Comprehensive analytics dashboard with real-time data visualization.'",benefits: "['Real-time dashboards'",'Custom reports', 'Data visualization', 'Performance metrics"]"}
+    }"
+  {"
+icon: "Target"'"}
+titl",e: "'Precision Targeting'",description: "'Target specific goals and objectives with precision and accuracy.'",benefits: "['Goal tracking'",'Performance optimization', 'Strategic planning', 'Success metrics"]"}
+    }"
+  {"
+icon: "TrendingUp"'"}
+titl",e: "'Growth Optimization'",description: "'Optimize your business growth with data-driven strategies.'",benefits: "['Growth strategies'",'Market analysis', 'Competitive insights', 'ROI optimization"]}
+    ;}"
+  ]"
+const benefits = ["'
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'"
+    'Gain competitive advantage with advanced technology";"
+  ];"'"
+const EnhancedErrorBoundary: "React.FC<EnhancedErrorBoundaryProps> = ({ className = '' ",;}) => "{;"</EnhancedErrorBoundaryProps>
+"return("</EnhancedErrorBoundaryProps>
+    <>
+  </>
+      <Helmet>";"</Helmet>
+":all-pages-backup/components/EnhancedErrorBoundary.tsx"</Helmet>
+        <Head />
+        <title>"EnhancedErrorBoundary | Zion Tech Group"</title>
+        <meta name="&quot;description&quot;" content="&quot;Professional" EnhancedErrorBoundary services by Zion Tech Group. Advanced AI and IT solutions for your business.&quot; / />
+<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence. / /">;"
+      </Head>;"
+        <meta name="&quot;keywords&quot;" content="&quot;AI," artificial, intelligence, EnhancedErrorBoundary, AI, solutions, intelligent automation&quot; / />
+<meta name = description content="Advanced 5 G data analytics solutions for real-time insights and business intelligence. / /">
+      </>;"
+        <meta name="&quot;keywords&quot;" content="&quot;AI," artificial, intelligence, EnhancedErrorBoundary, AI, solutions, intelligent automation&quot; / />
+<meta name = description content="Advanced 5 G data analytics solutions for real-time insights and business intelligence. /  /">
+      </Head>";"
+      </>;
+      <Navigation/ />,;}
+    <divclassName = &quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot; / />
   );
-          <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4'></div>
-          <div className='max-w-2xl w-full bg-slate-800/50 backdrop-blur-md border border-red-500/20 rounded-lg p-8 text-center'></div>
-            <div className='mb-6'></div>
-              <AlertTriangle className='w-16 h-16 text-red-400 mx-auto mb-4' /></AlertTriangle>
-              <h1 className='text-2xl font-bold text-white mb-2'></h1>
-// Oops! Something went wrong,;
-          </h1>
-              <p className='text-gray-300 mb-4'></p>
-// We&apos;re sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.;
-          </p>
-            </div>
-            <div className='space-y-4'></div>
-              <div className='flex flex-col sm: flex-row gap-3 justify-center'></div>
-                <button;
-                  onClick={;
-    this.handleRetry;
- , }className='flex items-center justify-center px-6 py-3 bg-cyan-600 hover: bg-cyan-700 text-white rounded-lg transition-colors duration-200'
-// ></button>
-          <RefreshCw className='w-4 h-4 mr-2' /></RefreshCw>
-// Try Agai,n,;
-          </button>
-                <button;
-                  onClick={;
-    this.handleReload;
-  }className='flex items-center justify-center px-6 py-3 bg-blue-600 hover: bg-blue-700 text-white rounded-lg transition-colors duration-200'
-// ></button>
-          <RefreshCw className='w-4 h-4 mr-2' /></RefreshCw>
-// Reload Pag,e,;
-          </button>
-                <button;
-                  onClick={;
-    this.handleGoHome;
-  }className='flex items-center justify-center px-6 py-3 bg-purple-600 hover: bg-purple-700 text-white rounded-lg transition-colors duration-200'
-// ></button>
-          <Home className='w-4 h-4 mr-2' /></Home>
-// Go Hom,e,;
-          </button>
-              </div>
-              {;
-    this.state.errorId && ();
-  }
-          <div className='mt-6 p-4 bg-slate-700/50 rounded-lg'></div>
-                  <p className='text-sm text-gray-400 mb-2'></p>
-  }
-  }
-                    Error ID: <code className='text-cyan-400'>{this.state.errorI,d}</code>
-                  </p>
-                  <p className='text-xs text-gray-500'></p>
-// Please include this ID when contacting support.;
-          </p>
-                </div>
-              )}
-              {;
-    this.props.showDetails && this.state.error && ();
-  }
-          <details className='mt-6 text-left'></details>
-                  <summary className='cursor-pointer text-sm text-gray-400 hover: text-white mb-2 flex items-center'></summary>
-                    <Bug className='w-4 h-4 mr-2' /></Bug>
-// Technical Detail,s,;
-          </summary>
-                  <div className='mt-2 p-4 bg-slate-900/50 rounded-lg'></div>
-                    <pre className='text-xs text-gray-300 whitespace-pre-wrap overflow-auto max-h-40'></pre>
-  }
-  }
-                      {;
-    this.state.error.message;
-  }
-                      {;
-    '\n\n';
-  }
-                      {;
-    this.state.error.stack;
-  }
-                    </pre>
-                    <button;
-                      onClick={;
-    this.copyErrorDetails;
-  }className='mt-2 text-xs text-cyan-400 hover: text-cyan-300'
-// ></button>
-//                       Copy Error Detail,s,;
-          </button>
-                  </div>
-                </details>
-              )}
-            </div>
-            <div className='mt-8 text-sm text-gray-500'></div>
-              <p></p>
-                If this problem persists, please contact our support team at{;
-    ' &apos;;
-  }
-                <a href='mailto: support@ziontechgroup.com' className='text-cyan-400 hover:text-cyan-300'></a>
-// support@ziontechgroup.co,m,;
-          </a>
-              </p>
-            </div>
+        {/* Hero Section */,}
+        <section className="&quot;relative" py-20 px-4 overflow-hidden&quot; />,"
+    <divclassName="&quot;absolute" inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot; / />,"
+    <divclassName="&quot;relative" max-w-7 xl mx-auto text-center&quot; / />,"
+    <h1className="&quot;text-5" xl md: "text-7 xl font-bold text-white mb-6 leading-tight&quot; / />
+"EnhancedErrorBoundary"</h1>
+            </h1>
+            <pclassName="&quot;text-xl" text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed&quot; / />
+"Professional EnhancedErrorBoundary services by Zion Tech Group. Advanced AI and IT solutions for your business."</p>
+            </p>")"
+          </div>,<div className="&quot;grid" grid-cols-1, m,d: grid-cols-2 gap-6&quot;>{benefits.map((benefit,index) => (}
+      <div key = {index,} className = &quot;flex items-start space-x-3&quot; />
+      <CheckCircleclassName="&quot;h-6" w-6 text-purple-400 mt-1 flex-shrink-0&quot; / />
+                <p className="&quot;text-gray-300" text-lg&quot;>"{benefit,}"</p>
+      </div>
+    </div>);
+            ))}
           </div>
         </div>
-      );
-    }
-    return this.props.children;
-  }
+      </section>
+      {/* CTA Section */}
+      <section className="&quot;py-20" px-4 sm: "px-6 lg:px-8&quot; />,<divclassName="&quot;max-w-4" xl mx-auto text-center&quot; / />,
+    <divclassName="&quot;bg-gradient-to-r" from-purple-600 to-blue-600 rounded-2 xl p-8 md: p-12&quot; / />,<h1 className="&quot;text-3" xl md: text-4 xl font-bold text-white mb-4&quot;>"Ready to Get Started?"</h2>
+            <p className="&quot;text-xl" text-purple-100 mb-8&quot;>"Contact our experts to discuss your enhancederrorboundary needs and get a customized solution."</p>p>,<divclassName="&quot;flex" flex-col sm: flex-row gap-4 justify-center&quot; / />
+              <button className="&quot;bg-gradient-to-r" from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105&quot; />
+                <PhoneclassName="&quot;mr-2" h-5 w-5&quot; / />
+"Call Now"</Phone>
+              <button className="&quot;bg-gradient-to-r" from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hove,r: "scale-105&quot; />
+                <MailclassName="&quot;mr-2" h-5 w-5&quot; / />
+"Email Us"</Mail>
+            </div>
+          </div>
+        </section>,{/* Features Section */}
+        <section className="&quot;py-20" px-4&quot; />,;
+    <div className="&quot;max-w-7" xl mx-auto&quot; / />,;
+    <div className="&quot;text-center" mb-16&quot; / />,;
+    <h1 className="&quot;text-4" xl font-bold text-white mb-4&quot;>"Key Features"</h2>
+              <pclassName="&quot;text-xl" text-gray-300 max-w-3 xl mx-auto&quot; / />
+"Powerful AI-driven features designed to transform your business operations"</p>
+              </p>
+            </div>,"
+    <divclassName="&quot;grid" md: "grid-cols-2 l",g: "grid-cols-4 gap-8&quot; / />
+              {features.map((feature,index) => (}
+                <divkey = {index,} className="&quot;bg-white/10" backdrop-blur-sm rounded-xl p-6 border border-white/20&quot; / />
+                  <feature.icon className="&quot;h-12" w-12 text-emerald-400 mb-4&quot; / />,
+    <h1 className = &quot;text-xl font-semibold text-white mb-3&quot;>"{feature.title,}"</h3>
+                  <p className = &quot;text-gray-300 mb-4&quot;>"{feature.description,}"</p>
+                  <ul className="&quot;space-y-2&quot;" />
+                    {feature.benefits.map((benefit, idx) => "("</ul>
+  );
+                      <li key = {idx} className = &quotflex items-center text-sm text-gray-300&quot;  />;
+                        <CheckCircle className="&quot;h-4" w-4 text-emerald-400 mr-2 flex-shrink-0&quot; /  />;
+>>>>>>> origin/main
+                        {benefit}
+      </CheckCircle>";"
+    </div>
+                      </li>)
+                    )    )
 }
-export default EnhancedErrorBoundary;
+                  </ul>
+                </div>
+<<<<<<< HEAD
+              )    )
+}
+=======
+              "))}"
+>>>>>>> origin/main
+            </div>
+          </div>
+        </section>
+        {/* Benefits Section */}
+<<<<<<< HEAD
+        <section className=&quot;py-20 px-4 bg-white/5&quot; />,
+    <div className=&quot;max-w-7 xl mx-auto&quot; / />,
+    <div className=&quot;text-center mb-16&quot; / />,
+    <h1 className=&quot;text-4 xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
+              )    )
+}
+=======
+        <section className="&quot;py-20" px-4 bg-white/5&quot; />,;
+    <div className="&quot;max-w-7" xl mx-auto&quot; / />,;
+    <div className="&quot;text-center" mb-16&quot; / />,;
+    <h1 className="&quot;text-4" xl font-bold text-white mb-4&quot;>"Why Choose Our Solution"</h2>
+              <pclassName="&quot;text-xl" text-gray-300 max-w-3 xl mx-auto&quot; / />
+"Experience the benefits of cutting-edge AI technology"</p>
+              </p>
+            </div>,
+    <divclassName="&quot;grid" md: grid-cols-2 l",g: "grid-cols-3 gap-8&quot; / />
+              {benefits.map((benefit,index) => (}
+                <divkey = {index,} className = &quot;flex items-start space-x-4&quot; / />
+                  <CheckCircleclassName="&quot;h-6" w-6 text-emerald-400 mt-1 flex-shrink-0&quot; / />
+                  <p className="&quot;text-gray-300" text-lg&quot;>"{benefit,}"</p>
+                </div>
+              "))}"
+>>>>>>> origin/main
+            </div>
+          </div>
+        </section>
+        {/* CTA Section */}
+<<<<<<< HEAD
+        <section className=&quot;py-20 px-4&quot; />,
+    <div className=&quot;max-w-4 xl mx-auto text-center&quot; / />,
+    <h1 className=&quot;text-4 xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
+Contact Sales</button>
+=======
+        <section className="&quot;py-20" px-4&quot; />,;
+    <div className="&quot;max-w-4" xl mx-auto text-center&quot; / />,;
+    <h1 className="&quot;text-4" xl font-bold text-white mb-6&quot;>"Ready to Transform Your Business?"</h2>
+            <pclassName="&quot;text-xl" text-gray-300 mb-8&quot; / />
+"Join thousands of businesses already using our AI solutions"</p>
+            </p>,
+    <divclassName="&quot;flex" flex-col sm: flex-row gap-4 justify-center&quot; / />
+              <button className="&quot;bg-emerald-600" hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
+"Start Free Trial"</button>
+              </button>
+              <button className="&quot;border" border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove",r: "text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
+"Contact Sales"</button>
+>>>>>>> origin/main
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+<<<<<<< HEAD
+export default EnhancedErrorBoundaryPage
+    </div>
+      )
+}
+=======
+      <Footer/ />
+    </>
+:all-pages-backup/components/EnhancedErrorBoundary.tsx
+  )",}
+export default EnhancedErrorBoundaryPage;
+    </div>
+  );
+}
+export default EnhancedErrorBoundaryPage;"
+  error?: Error"
+errorInfo?: ErrorInfo}"
+class EnhancedErrorBoundaryextendsComponent<Props, State>{constructor(props: "Props) {  "}
+super(props)"}
+this.state = { hasErro",r: "false",, , }"
+  ;}"
+  static getDerivedStateFromError(error: "Error): State {return { hasErro",r: "true",error;}"
+  ;}"
+  componentDidCatch(error: "Error",errorInfo: "ErrorInfo) {this.setState({errorerrorInfo",;})"
+    // Log error to monitoring service"'"
+    // // console.error('Error caught by boundary: "'",error, errorInfo)
+  ;}
+  handleReload = () => {windo w.location.reload()}
+ ,;}
+  render() {if(this.state.hasError) {
+if(this.props.fallback) {}
+return thi s.props.fallback;}
+     }</Props>;
+return(;</Props>,
+    <divclassName="&quot;min-h-screen" bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4&quot; / />,
+    <divclassName="&quot;max-w-md" w-full bg-white/10 backdrop-blur-sm rounded-2 xl p-8 text-center&quot; / />,
+    <divclassName="&quot;w-16" h-16 bg-red-500/20 rounded-2 xl flex items-center justify-center mb-6 mx-auto&quot; / />
+              <AlertTriangleclassName="&quot;w-8" h-8 text-red-400&quot; / />
+            </div>,
+    <h1 className="&quot;text-2" xl font-bold text-white mb-4&quot;>"Oops! Something went wrong"</h1>
+            <p className="&quot;text-gray-300" mb-6&quot;>We"re, sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.</p>p>'
+            {process.env.NODE_ENV = == 'development && this.state.error && (;
+              <details className="&quot;mb-6" text-left&quot; />
+                <summary className="&quot;text-sm" text-gray-400 cursor-pointer mb-2&quot; />)
+Error Details (Development)</summary>
+                </summary>
+  );
+                <pre className="&quot;text-xs" text-red-300 bg-black/20 p-3 rounded overflow-auto&quot; / />
+  );
+                  {this.state.error.toString(),}"
+
+}}}"'"
+>>>>>>> origin/main

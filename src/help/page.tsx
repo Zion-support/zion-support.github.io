@@ -1,120 +1,31 @@
-import React from 'react'
-import Head from "next/head"
-import Link from 'next/link'
-import { ArrowRight } from from 'lucide-react'
+<<<<<<< HEAD
+=======
+import React from 'react';
+import Head from 'next/head';"
+import Link from 'next/link";"'
+import { ArrowRight } from lucide-react"
 export default function HelpPage() {
-return (<>;
-import React from "react";
-import { Head  } from "next/head"
-import { Link  } from "next/link";
-import { ArrowRight  } from "lucide-react";
-import {;
-    HelpCircle,
-    Search,
-    Phone,
-    Mail,
-    MessageSquare,
-    BookOpen,
-    Video,
-    Download,
-    CheckCircle,
-    ArrowRight,
-    Users,
-    BookOpen,
-    HelpCircle,
-    MessageSquare,
-    Video,
-    Mail,
-    Users from 'lucide-react';
-'use client';
-  }
-  }
-  }
-import React, { useSta, t, e } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-const HelpPage: React.FC = () => {
-  ;
-    return (;
- ,
-}
-    <div>Coming Soon</div>
-  );
-  }
-  }
-}
-  const [searchTerm, setSearchTerm] = useState(&apos;&apos;);
-  const [activeCategory, setActiveCategory] = useState('getting-started');
-export const categories = [;
-    {;
-    // TODO: Add content;
- , }
-  }
-}
-  id: 'getting-started,',;
-      name: 'Getting Started,',;
-      icon: BookOpe,;
-      color: 'text-blue-400,',;
-      bgColor: 'bg-blue-500/10,',;
-    },;
-      id: 'troubleshooting,',;
-      name: 'Troubleshooting,',;
-      icon: HelpCircl,;
-      color: 'text-red-400,',;
-      bgColor: 'bg-red-500/10,',;
-      id: 'technical,',;
-      name: 'Technical Support,',;
-      icon: MessageSquar,;
-      color: 'value,',;
-  ];
-      bgColor: 'bg-purple-500/10,',;
-    }
-  ];
-  const helpArticles={;
-    // TODO: Add content;
- , }}
-}
-    'getting-started': [;
-    title: 'Setting Up Your First Dashboard,',;
-        description: 'Step-by-step instructions for creating and customizing your analytics dashboard',;
-        readTime: '3 min read,',;
-        title: 'Integration with Existing Systems,',;
-        description: 'How to integrate our AI services with your current business systems',;
-        readTime: '7 min read,',;
-        difficulty: 'Intermediate,',;
-        title: 'Security Best Practices,',;
-        description: 'Implement security measures to protect your data and systems',;
-        readTime: '8 min read,',;
-      title: 'Video Tutorials,',;
-      description: 'Step-by-step video guides for all our services',;
-      icon: Vide,;
-      count: '50+ videos,',;
-      title: 'API Reference,',;
-      description: 'Complete API documentation with examples',;
-      count: '100+ endpoints,',;
-      title: 'Email Support,',;
-      description: 'Send us a detailed message and we\'ll respond quickly,',;
-      icon: Mai,;
-      responseTime: 'Within 4 hours,',;
-      title: 'Community Forum,',;
-      description: 'Connect with other users and share knowledge',;
-      icon: User,;
-      responseTime: 'Community driven,',;
-          <MessageSquare className='w-5 h-5 mr-2' /></MessageSquare>
-// Contact Support,;
-          </a>
-                href='tel: +13024640950';
-                className='border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center'
-                <Phone className='w-4 h-4 mr-2' /></Phone>
-                (3, 0, 2) 464-0950;
-                href='mailto:kleber@ziontechgroup.com';
-                className='border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center'
-                <Mail className='w-4 h-4 mr-2' /></Mail>
-                Email Us;
-      <Footer /></Footer>
+  return (
+    <>
+    :all-pages-backup/help/page.tsx"
     </>
-export default HelpPag,e,;
-  ];
-
-export default function HelpPage() {
-return (<>;
+      <title>"Help - Zion Tech Group"</title>
+        <meta name = description" content="Professional help services by Zion Tech Group. / / /">
+        <Head />
+        <title>"Help - Zion Tech Group"</title>
+        <meta name="description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence. / /">
+      </Head>,
+    <div className="min-h-s" creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 />,"
+    <div className="con tainermx-auto px-4 py-16 /">,
+    <h1 className="tex t-4 xlfont-bold text-white mb-6">"Help"</h1>"
+          <p className="tex" t-lgtext-gray-300 mb-8>"Professional help services by Zion Tech Group."</p>
+          <Linkhref="/contact className="inl ine-flexitems-center px-6 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors /">"
+Contact Us</Link>
+            <ArrowRight className="ml-2" h-4 w-4 />
+          </Link>
+            </div>";"
+      </div>";"
+</div>;)"}
+  ),"}
+}"'"
+>>>>>>> origin/main

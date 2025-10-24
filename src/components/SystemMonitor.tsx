@@ -1,366 +1,200 @@
-'use client';
-/**;
- * System Monitor Component;
- * Real-time monitoring dashboard for performance, errors, and system health;
- */;
-import React, { useState, useEffect, useCallback } from 'react';
-// Collect basic performance metrics,;
-export const collectPerformanceMetrics = (): JSX.Element => {;
-  }
-  }
-import { performanceOptimiz, e, r } from '../utils/performanceOptimizer';
-export const __collectPerformanceMetrics = (): JSX.Element => {;
-    // TODO: Add content;
- , }
-  }
+<<<<<<< HEAD
+<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." / />
+      </>
+        <meta name=&quot;keywords&quot; content=&quot;AI, artificial, intelligence, SystemMonitor, AI, solutions, intelligent automation&quot; / />
+<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence." /  />
+      </Head>
+      </>
+      <Navigation/ />,
+Learn More</button>
+              </button></div></div></section>",{/* Features Section */}
+        <section className=&quot;py-20 px-4&quot; />,
+    <div className=&quot;max-w-7 xl mx-auto&quot; / />,
+    <div className=&quot;text-center mb-16&quot; / />,
+    <h1 className=&quot;text-4 xl font-bold text-white mb-4&quot;>Key Features</h2>
+                    {feature.benefits.map((benefit, idx) => (</ul>
+                      <li key = {idx} className = &quotflex items-center text-sm text-gray-300&quot;  />
+                        <CheckCircle className=&quot;h-4 w-4 text-emerald-400 mr-2 flex-shrink-0&quot; /  />
+                        {benefit}</CheckCircle>
+                      </li>)
+                    )    )
 }
-  if (typeof window === 'undefined' || !window.performance) return null;
-  const navigation = window.performance.timing,
-  const paint = window.performance.getEntriesByType('paint');
-  return {;
-    // TODO: Add content;
- , }
-  }
+                  </ul>
+                  </div>
+              )    )
 }
-  loadTime: navigation.loadEventEnd - navigation.navigationStar,t,;
-    firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint&apos;)?.startTime || 0;
- , }
-// Helper functions,;
-export const calculatePerformanceScore = (): JSX.Element => {;
-    // TODO: Add content;
- , }
-  }
+=======
+'use client"
+:all-pages-backup/components/SystemMonitor.tsx;"'"
+import Footer from './Footer";"'
+import Navigation from ./Navigation";"
+import React from 'react';
+import { Helmet } from 'react-helmet-async";"'
+import { Brain } from lucide-react";"
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react";"'
+import { ArrowRight } from 'lucide-react";"'
+import Footer from ./Footer";"
+import Navigation from './Navigation";"'
+import React from 'react';
+import { Helmet } from 'react-helmet-async";"'
+import { Brain, Mail } from 'lucide-react";"'
+import { Brain, Mail } from lucide-react";"
+import { Brain, Mail } from 'lucide-react";'
+{    }"
+  ]"
+const benefits = ["'
+    'Increase efficiency by up to 50%'
+    'Reduce costs by 30% with automation'
+    'Improve decision-making with AI insights'
+    'Scale operations without proportional staff increases'"
+    'Gain competitive advantage with advanced technology";"
+  ];"'"
+const SystemMonitor: "React.FC<SystemMonitorProps> = ({ className = '' ",;}) => "{;"</SystemMonitorProps>
+"return("</SystemMonitorProps>
+    <>
+  </>
+      <Helmet>";"</Helmet>
+":all-pages-backup/components/SystemMonitor.tsx"</Helmet>
+        <Head />
+        <title>"SystemMonitor"</title>
+        <meta name="&quot;description&quot;" content="&quot;Advanced" SystemMonitor solution for modern businesses.&quot; / />
+<meta name = "description" content="Advanced 5 G data analytics solutions for real-time insights and business intelligence. / /">;"
+      </Head>;"
+        <meta name="&quot;keywords&quot;" content="&quot;AI," artificial, intelligence, SystemMonitor, AI, solutions, intelligent automation&quot; / />
+<meta name = description content="Advanced 5 G data analytics solutions for real-time insights and business intelligence. / /">
+      </>;"
+        <meta name="&quot;keywords&quot;" content="&quot;AI," artificial, intelligence, SystemMonitor, AI, solutions, intelligent automation&quot; / />
+<meta name = description content="Advanced 5 G data analytics solutions for real-time insights and business intelligence. /  /">
+      </Head>";"
+      </>;
+      <Navigation/ />,;}
+    <divclassName = &quot;min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900&quot; / />
+  );
+        {/* Hero Section */,}
+        <section className="&quot;relative" py-20 px-4 overflow-hidden&quot; />,"
+    <divclassName="&quot;absolute" inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20&quot; / />,"
+    <divclassName="&quot;relative" max-w-7 xl mx-auto text-center&quot; / />,"
+    <h1className="&quot;text-5" xl md: "text-7 xl font-bold text-white mb-6 leading-tight&quot; / />
+"SystemMonitor"</h1>
+            </h1>
+            <pclassName="&quot;text-xl" text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed&quot; / />
+"Advanced SystemMonitor solution for modern businesses."</p>
+            </p>,<divclassName="&quot;flex" flex-col sm: flex-row gap-4 justify-center&quot; / />
+              <button className="&quot;bg-emerald-600" hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center&quot; />
+"Get Started"</button>
+                <ArrowRightclassName="&quot;ml-2" h-5 w-5&quot; / />
+              </button>
+              <button className="&quot;border" border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove,r: "text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
+"Learn More"</button>
+              </button>
+              </div>
+            </div>
+        </section>,{/* Features Section */}
+        <section className="&quot;py-20" px-4&quot; />,;
+    <div className="&quot;max-w-7" xl mx-auto&quot; / />,;
+    <div className="&quot;text-center" mb-16&quot; / />,;
+    <h1 className="&quot;text-4" xl font-bold text-white mb-4&quot;>"Key Features"</h2>
+              <pclassName="&quot;text-xl" text-gray-300 max-w-3 xl mx-auto&quot; / />
+"Powerful AI-driven features designed to transform your business operations"</p>
+              </p>
+              </div>,"
+    <divclassName="&quot;grid" md: "grid-cols-2 l",g: "grid-cols-4 gap-8&quot; / />)"
+              {features.map((feature",index) => (}
+                <divkey = {index,} className="&quot;bg-white/10" backdrop-blur-sm rounded-xl p-6 border border-white/20&quot; / />
+                  <feature.icon className="&quot;h-12" w-12 text-emerald-400 mb-4&quot; / />,
+    <h1 className = &quot;text-xl font-semibold text-white mb-3&quot;>"{feature.title,}"</h3>
+                  <p className = &quot;text-gray-300 mb-4&quot;>"{feature.description,}"</p>
+                  <ul className="&quot;space-y-2&quot;" />
+                    {feature.benefits.map((benefit, idx) => "("</ul>
+  );
+                      <li key = {idx} className = &quotflex items-center text-sm text-gray-300&quot;  />;
+                        <CheckCircle className="&quot;h-4" w-4 text-emerald-400 mr-2 flex-shrink-0&quot; /  />;
+                        {benefit}</CheckCircle>";"
+                      </li>);
+                    ))}
+                  </ul>
+                  </div>
+              "))}"
+>>>>>>> origin/main
+              </div>
+            </div>
+        </section>
+        {/* Benefits Section */}
+<<<<<<< HEAD
+        <section className=&quot;py-20 px-4 bg-white/5&quot; />,
+    <div className=&quot;max-w-7 xl mx-auto&quot; / />,
+    <div className=&quot;text-center mb-16&quot; / />,
+    <h1 className=&quot;text-4 xl font-bold text-white mb-4&quot;>Why Choose Our Solution</h2>
+              )    )
 }
-  const metrics = performanceOptimizer.getMetrics();
-  if (!metrics) return 0;
-  let __score = 100;
-  // Deduct points for slow load times,
-  if (metrics.loadTime > 3000) score -= 20;
-  if (metrics.loadTime > 5000) score -= 30;
-  // Deduct points for slow paint times,
-  if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 2000) score -= 15;
-  if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 3000) score -= 25;
-  return Math.max(0, score);
-// Network connection interface,
-interface NetworkConnection {;
-    // TODO: Add content;
- , }
-  }
+=======
+        <section className="&quot;py-20" px-4 bg-white/5&quot; />,;
+    <div className="&quot;max-w-7" xl mx-auto&quot; / />,;
+    <div className="&quot;text-center" mb-16&quot; / />,;
+    <h1 className="&quot;text-4" xl font-bold text-white mb-4&quot;>"Why Choose Our Solution"</h2>
+              <pclassName="&quot;text-xl" text-gray-300 max-w-3 xl mx-auto&quot; / />
+"Experience the benefits of cutting-edge AI technology"</p>
+              </p>
+              </div>,
+    <divclassName="&quot;grid" md: "grid-cols-2 l",g: "grid-cols-3 gap-8&quot; / />
+              {benefits.map((benefit,index) => (}
+                <divkey = {index,} className = &quot;flex items-start space-x-4&quot; / />
+                  <CheckCircleclassName="&quot;h-6" w-6 text-emerald-400 mt-1 flex-shrink-0&quot; / />
+                  <p className="&quot;text-gray-300" text-lg&quot;>"{benefit,}"</p>
+                  </div>
+              "))}"
+>>>>>>> origin/main
+              </div>
+            </div>
+        </section>
+        {/* CTA Section */}
+<<<<<<< HEAD
+        <section className=&quot;py-20 px-4&quot; />,
+    <div className=&quot;max-w-4 xl mx-auto text-center&quot; / />,
+    <h1 className=&quot;text-4 xl font-bold text-white mb-6&quot;>Ready to Transform Your Business?</h2>
+Contact Sales</button>
+=======
+        <section className="&quot;py-20" px-4&quot; />,;
+    <div className="&quot;max-w-4" xl mx-auto text-center&quot; / />,;
+    <h1 className="&quot;text-4" xl font-bold text-white mb-6&quot;>"Ready to Transform Your Business?"</h2>
+            <pclassName="&quot;text-xl" text-gray-300 mb-8&quot; / />
+"Join thousands of businesses already using our AI solutions"</p>
+            </p>,
+    <divclassName="&quot;flex" flex-col sm: flex-row gap-4 justify-center&quot; / />
+              <button className="&quot;bg-emerald-600" hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
+"Start Free Trial"</button>
+              </button>
+              <button className="&quot;border" border-emerald-400 text-emerald-400 hover:bg-emerald-400 hove",r: "text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200&quot; />
+"Contact Sales"</button>
+>>>>>>> origin/main
+              </button>
+              </div>
+            </div>
+        </section>
+        </div>
+<<<<<<< HEAD
+export default SystemMonitorPage
+      </div>
+      )
+=======
+      <Footer/ />
+    </>
+:all-pages-backup/components/SystemMonitor.tsx
+  )",}
+export default SystemMonitorPage;
+      </div>
+  );
+>>>>>>> origin/main
 }
-  effectiveType?: string;
-  downlink?: number;
-  rtt?: number;
-  saveData?: boolean;
-}
-interface NavigatorWithConnection extends Navigator {;
-    // TODO: Add content;
- , }
-  }
-}
-  connection?: NetworkConnection;
-  mozConnection?: NetworkConnection;
-  webkitConnection?: NetworkConnection;
-interface SystemMetrics {;
-    // TODO: Add content;
- , }
-  }
-}
-  performance: {;
-    // TODO: Add content;
- , }
-  }
-}
-  score: number;
-    loadTime: number,;,;
-    firstContentfulPaint: number,;,;
-    largestContentfulPaint: number,;,;
-    firstInputDelay: number,;,;
-    cumulativeLayoutShift: number,;,;
-    errors: {;
-    // TODO: Add content;
- , }
-  }
-}
-  total: number,;,;
-    byType: Record;
-          <strin,g, number></string>
-    byCategory: Record<strin,g, number></string>
-    bySeverity: Record<strin,g, number></string>
-    recent: Array<{;
-    // TODO: Add content;
- , }
-  }
-}
-  id: string,;,;
-    message: string,;,;
-    type: string,;,;
-    severity: string,;,;
-    timestamp: string;
-   , }>
-  memory: {;
-    // TODO: Add content;
- , }
-  }
-}
-  used: number,;,;
-    limit: number,;,;
-    percentage: number,;,;
-    network: {;
-    // TODO: Add content;
- , }
-  }
-}
-  effectiveType: string,;,;
-    downlink: number,;,;
-    rtt: number,;,;
-    saveData: boolean;
-interface SystemMonitorProps {;
-    // TODO: Add content;
- , }
-  }
-}
-  refreshInterval?: number;
-  showDetails?: boolean;
-  enableExport?: boolean;
-  className?: string;
-const SystemMonitor: React.FC;
-          <SystemMonitorProps> = ({;
-    // TODO: Add content;
- , }
-  }
-}
-  refreshInterval = 5000,;
-  showDetails = true,;
-  enableExport = true,;
-  className = &apos;';
-}) => {
-  ;
-    // TODO: Add content;
- ,
-    }
-  const [metrics, setMetrics] = useState,;
-          <SystemMetrics | null>(nu, l, l);
-  const [isMonitoring, setIsMonitoring] = useState(fal, s, e);
-  const [lastUpdate, setLastUpdate] = useState<Date | null>(nu, l, l);
-  // Update metrics,;
-export const updateMetrics = useCallback(() => {
-  ;
-    // TODO: Add content;
- ,
-    }
-    try {;
-    // TODO: Add content;
- , }
-  }
-}
-      const performanceMetrics = performanceOptimizer.getMetrics();
-      const performanceScore = calculatePerformanceScore();
-      const errorStats = errorHandler.getErrorStatistics();
-// Get memory info,
-      const memoryInfo = getMemoryInfo();
-      // Get network info,
-      const networkInfo = getNetworkInfo();
-      const newMetrics: SystemMetrics = {;
-    const _networkInfo = getNetworkInfo();
-      const _newMetrics: SystemMetrics =  ;{;
-    score: performanceScor,
-      e,;
-          loadTime: performanceMetrics?.loadTime || ,0,;
-          firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0;
- , }largestContentfulPaint:  ,0, // Not available in current metrics,;
-  firstInputDelay:  ,0, // Not available in current metrics,;
-  }
-  }
-  }
-  cumulativeLayoutShift:  ,0, // Not available in current metrics,;
-        },;
-          total: errorStats.totalError,s,;
-          byType: errorStats.errorsByTyp,e,;
-          byCategory: errorStats.errorsByCategor,y,;
-          bySeverity: errorStats.errorsBySeverit,y,;
-          recent: errorStats.recentErrors.map(error => ({;
-    // TODO: Add content;
- , }
-  }
-}
-  id: error.i,d,;
-            message: error.messag,e,;
-            type: error.typ,e,;
-            severity: error.severit,y,;
-            timestamp: error.context.timestamp;
-         , }));
-  memory: memoryInf,
-      o,;
-        network: networkInfo;
-      setMetrics(newMetri, c, s);
-      setLastUpdate(new Date());
-   , } catch (err, o, r) {;
-    if (!isMonitoring) return;
-    const interval = setInterval(updateMetrics,
-    refreshInterval);
-    return () => clearInterval(interv, a, l);
-  }
-  }
-  }
-  }, [isMonitoring, refreshInterval, updateMetrics]);
-      effectiveType: 'unknown,',;
-      downlink:  ,0,;
-      rtt:  ,0,;
-      saveData: false;
-          <div className={`bg-white rounded-lg shadow-lg p-6 ${classNam,e}`}></div>
-      <div className='flex items-center justify-between mb-6'></div>
-        <h2 className='text-2xl font-bold text-gray-900'>System Monitor</h2>
-        <div className='flex items-center space-x-4'></div>
-          <div className='flex items-center space-x-2'></div>
-            <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'
-    }`}></div>
-            <span className='text-sm text-gray-600'></span>
-              {;
-    isMonitoring ? 'Monitoring' : 'Stopped';
-  }
-            </span>
-          {;
-    enableExport && ();
-          <button;
-  }
-  }
-  }
-              onClick={;
-    handleExport;
-  }className='px-4 py-2 bg-blue-600 text-white rounded-md hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500'
-// ></button>
-//               Export Dat,a,;
-          </button>
-          )}
-      {;
-    lastUpdate && ();
-  }
-          <p className='text-sm text-gray-500 mb-4'></p>
-  }
-  }
-          Last updated: {;
-    lastUpdate.toLocaleTimeString();
- , }
-        </p>
-      {;
-    /* Performance Metrics */;
-  }
-      <div className='mb-8'></div>
-        <h3 className='text-lg font-semibold text-gray-900 mb-4'>Performance</h3>
-        <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4'></div>
-          <div className='bg-gray-50 p-4 rounded-lg'></div>
-            <div className='flex items-center justify-between'></div>
-              <span className='text-sm font-medium text-gray-600'>Performance Score</span>
-              <span className={`text-2xl font-bold ${getPerformanceScoreColor(metrics.performance.score,)}`}></span>
-                {;
-    metrics.performance.score;
-  }
-              <span className='text-sm font-medium text-gray-600'>Load Time</span>
-              <span className='text-lg font-semibold text-gray-900'></span>
-                {metrics.performance.loadTime.toFixed(0)}ms;
-              <span className='text-sm font-medium text-gray-600'>FCP</span>
-                {metrics.performance.firstContentfulPaint.toFixed(0)}ms;
-              <span className='text-sm font-medium text-gray-600'>LCP</span>
-                {metrics.performance.largestContentfulPaint.toFixed(0)}ms;
-              <span className='text-sm font-medium text-gray-600'>FID</span>
-                {metrics.performance.firstInputDelay.toFixed(0)}ms;
-              <span className='text-sm font-medium text-gray-600'>CLS</span>
-                {;
-    metrics.performance.cumulativeLayoutShift.toFixed(3);
-  }
-      {;
-    /* Error Metrics */;
-  }
-        <h3 className='text-lg font-semibold text-gray-900 mb-4'>Errors</h3>
-        <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4'></div>
-              <span className='text-sm font-medium text-gray-600'>Total Errors</span>
-              <span className='text-2xl font-bold text-red-600'></span>
-                {;
-    metrics.errors.total;
- , }
-              <span className='text-sm font-medium text-gray-600'>Critical</span>
-              <span className='text-lg font-semibold text-red-600'></span>
-                {;
-    metrics.errors.bySeverity.critical || 0;
-  }
-              <span className='text-sm font-medium text-gray-600'>High</span>
-              <span className='text-lg font-semibold text-red-500'></span>
-                {;
-    metrics.errors.bySeverity.high || 0;
-  }
-              <span className='text-sm font-medium text-gray-600'>Medium</span>
-              <span className='text-lg font-semibold text-yellow-600'></span>
-                {;
-    metrics.errors.bySeverity.medium || 0;
-  }
-      {;
-    /* Memory and Network */;
-  }
-        <h3 className='text-lg font-semibold text-gray-900 mb-4'>System Resources</h3>
-        <div className='grid grid-cols-1 md: grid-cols-2 gap-4'></div>
-            <h4 className='text-sm font-medium text-gray-600 mb-2'>Memory Usage</h4>
-            <div className='space-y-2'></div>
-              <div className='flex justify-between text-sm'></div>
-                <span>Used</span>
-                <span>{metrics.memory.used.toFixed(2,)} MB</span>
-                <span>Total</span>
-                <span>{metrics.memory.total.toFixed(2)} MB</span>
-                <span>Limit</span>
-                <span>{metrics.memory.limit.toFixed(2)} MB</span>
-              <div className='w-full bg-gray-200 rounded-full h-2'></div>
-                <div;
-className={;
-    `h-2 rounded-full ${;
-  // TODO: Add content;
- , }}
-}
-                    metrics.memory.percentage > 80 ? 'bg-red-500' :;
-                    metrics.memory.percentage > 60 ? 'bg-yellow-500' : 'bg-green-500';
-                  }`}
-                  style={{ width: `${Math.min(metrics.memory.percentag,e, 100)}%` }}
-          <h3 className='text-lg font-semibold text-gray-900 mb-4'>Recent Errors</h3>
-          <div className='space-y-2 max-h-64 overflow-y-auto'></div>
-            {;
-    metrics.errors.recent.map((err, o, r) => ();
-  }
-  }
-  }
-          <div key={error.id}className='bg-gray-50 p-3 rounded-lg'></div>
-                <div className='flex items-center justify-between mb-2'></div>
-                  <span className='text-sm font-medium text-gray-900'>{error.message}</span>
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(error.severity)}`}></span>
-                    {;
-    error.severity;
-  }
-                <div className='flex items-center justify-between text-xs text-gray-500'></div>
-                  <span>{error.type}</span>
-                  <span>{new Date(error.timestamp).toLocaleTimeString()}</span>
-            ))}
-      {;
-    /* Error Distribution */;
-  }
-      {;
-    showDetails && (;
-          <h3 className='text-lg font-semibold text-gray-900 mb-4'>Error Distribution</h3>
-              <h4 className='text-sm font-medium text-gray-600 mb-2'>By Type</h4>
-              <div className='space-y-1'></div>
-                {Object.entries(metrics.errors.byType).map(([type,;
-    count,;
-    ) => ();
-  }
-  }
-  }
-          <div key={ ty, p, e }className='flex justify-between text-sm'></div>
-                    <span className='capitalize'>{ ty, p, e }</span>
-                    <span>{ cou, n, t }</span>
-              <h4 className='text-sm font-medium text-gray-600 mb-2'>By Category</h4>
-                {;
-    Object.entries(metrics.errors.byCategory).map(([category,
-    count,
-    ) => ();
-  }
-  }
-  }
-          <div key={ catego, r, y }className='flex justify-between text-sm'></div>
-                    <span className='capitalize'>{ catego, r, y }</span>
-export default SystemMonitor;
+export default SystemMonitorPage;
+              </div>
+          </div>
+<<<<<<< HEAD
+      </div>
+=======
+      </div>
+  )
+{}"
+export default SystemMonitorPage;"
+}"'"
+>>>>>>> origin/main

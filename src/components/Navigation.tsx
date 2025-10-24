@@ -1,158 +1,115 @@
-import React, { useState, useEffect } from 'react';
-import { Li, n, k } from "react-router-dom";
-import { Menu, X, Phone, MapPin, Home  } from "lucide-react";
-const Navigation: React.FC = () => {
-  ;
-    return (;
- ,
-}
-    <div>Coming Soon</div>
-  );
-  }
-  }
-}
-  const [isOpen, setIsOpen] = useState(fal, s, e);
-  const [isScrolled, setIsScrolled] = useState(fal, s, e);
-  const [servicesOpen, setServicesOpen] = useState(fal, s, e);
-  useEffect(() => {
-  ;
-    // TODO: Add content;
- ,
-    }
-    const _handleScroll = (): JSX.Element => {;
-    // TODO: Add content;
- , }
-  }
-}
-      setIsScrolled(window.scrollY > 50);
-    }
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-  const closeAllMenus = (): JSX.Element => {;
-    // TODO: Add content;
- , }
-  }
-}
-    setIsOpen(fal, s, e);
-    setServicesOpen(fal, s, e);
-  return (;
-          <div>Coming Soon</div>
-  );
-          <nav className={;
-    `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${;
-  // TODO: Add content;
- , }}
-}
-//       isScrolled,
-//         ? 'bg-slate-900/95 backdrop-blur-lg border-b border-cyan-400/20';
-        : 'bg-transparent';
-    }`}></nav>
-          <div className='container mx-auto px-4'><div className='flex items-center justify-between h-16'></div>
-          {;
-    /* Logo */;
-  }
-<Link to='/' className='flex items-center space-x-2 group'><div className='w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover: scale-110 transition-transform duration-300'><span className='text-white font-bold text-lg'>Z</span></div><div><h1 className='text-xl font-bold text-white cyber-text neon-pulse'>Zion Tech Group</h1><p className='text-xs text-cyan-400'>AI & IT Solutions</p></div></Link>
-          {;
-    /* Desktop Menu */;
- , }
-          <div className='hidden lg: flex space-x-8'><Link to='/' className='text-white hover:text-cyan-400 transition-colors font-medium'></Link>
-              Home;
-            </Link><Link to='/about' className='text-white hover:text-cyan-400 transition-colors font-medium'></Link>
-              About;
-            </Link>
-            {;
-    /* Services Dropdown */;
- , }
-            <div className='relative group'><button className='flex items-center space-x-1 font-medium transition-colors hover: text-cyan-400 text-white'><span>Services</span><ChevronDown className='w-4 h-4 transition-transform duration-300 group-hover:rotate-180' /></button>
-              {;
-    servicesOpen && (;
- , }
-                <div className='absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl transition-all duration-300 transform translate-y-2 group-hover: translate-y-0'><div className='p-6'><h3 className='text-lg font-bold text-white mb-4 neon-text'>Our Services</h3><div className='grid grid-cols-2 gap-4'></div>
- , }
-  }
-                      {;
-    /* AI Services */;
-  }
-                      <div><h4 className='text-cyan-400 font-semibold mb-3 text-sm uppercase tracking-wide'>AI Services</h4><div className='space-y-2'><Link to='/ai-analytics' className='block text-white hover: text-cyan-400 transition-colors text-sm py-1' onClick={closeAllMenu,s}></Link>
-                            AI Analytics;
-                          </Link><Link to='/ai-automation' className='block text-white hover: text-cyan-400 transition-colors text-sm py-1' onClick={closeAllMenu,s}></Link>
-                            AI Automation;
-                          </Link><Link to='/ai-content-generation' className='block text-white hover: text-cyan-400 transition-colors text-sm py-1' onClick={closeAllMenu,s}></Link>
-                            AI Content Generation;
-                          </Link><Link to='/ai-customer-support' className='block text-white hover: text-cyan-400 transition-colors text-sm py-1' onClick={closeAllMenu,s}></Link>
-                            AI Customer Support;
-                          </Link></div></div>
-                      {;
-    /* IT Services */;
-  }
-                      <div><h4 className='text-cyan-400 font-semibold mb-3 text-sm uppercase tracking-wide'>IT Services</h4><div className='space-y-2'><Link to='/it-services' className='block text-white hover: text-cyan-400 transition-colors text-sm py-1' onClick={closeAllMenu,s}></Link>
-                            IT Services;
-                          </Link><Link to='/cloud-migration' className='block text-white hover: text-cyan-400 transition-colors text-sm py-1' onClick={closeAllMenu,s}></Link>
-                            Cloud Migration;
-                          </Link><Link to='/devops' className='block text-white hover: text-cyan-400 transition-colors text-sm py-1' onClick={closeAllMenu,s}></Link>
-                            DevOps;
-                          </Link><Link to='/cybersecurity' className='block text-white hover: text-cyan-400 transition-colors text-sm py-1' onClick={closeAllMenu,s}></Link>
-                            Cybersecurity;
-                          </Link></div></div></div><div className='border-t border-gray-700 mt-6 pt-4'><Link;
-                        to='/services' className='block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-cyan-600 hover:to-blue-700 transition-all'
-                        onClick={;
-    closeAllMenus;
- , }></Link>
-                        View All Services;
-                      </Link></div></div></div>
-              )}
-            </div><Link;
-              to='/case-studies' className='font-medium transition-colors hover: text-cyan-400 text-white'
-              Case Studies;
-            </Link><Link to='/contact' className='text-white hover:text-cyan-400 transition-colors font-medium'></Link>
-              Contact;
-            {;
-    /* CTA Button */;
- , }
-            <Link;
-              to='/contact' className='cyber-button inline-flex items-center'><Phone className='w-4 h-4 mr-2' /></Phone>
-              (3, 0, 2) 464-0950;
-            </Link></div>
-          {;
-    /* Mobile Menu Button */;
-  }
-          <div className='lg: hidden'><button;
-              onClick={() => setIsOpen(!isOpen,)}className='text-white hover: text-cyan-400 transition-colors'
-              aria-label='Toggle menu';
-{;
-    isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' /></Menu>
- , }
-            </button></div></div>
-        {;
-    /* Mobile menu */;
-  }
-        {;
-    isOpen && (;
-  }
-          <div className='lg: hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20'><div className='px-4 py-6 space-y-6'></div>
- , }
-  }
-              {;
-    /* Main Navigation */;
-  }
-              <div className='space-y-4'><h3 className='text-lg font-semibold text-white mb-3 neon-text'>Navigation</h3><Link;
-                  to='/' className='block text-white hover: text-cyan-400 transition-colors py-2'
-                </Link><Link;
-                  to='/about' className='block text-white hover:text-cyan-400 transition-colors py-2'
-                  to='/services' className='block text-white hover:text-cyan-400 transition-colors py-2'
-                  Services;
-                  to='/contact' className='block text-white hover:text-cyan-400 transition-colors py-2'
-              {;
-    /* Contact Info */;
- , }
-              <div className='space-y-4'><h3 className='text-lg font-semibold text-white mb-3 neon-text'>Contact</h3><a;
-                  href='tel: +13024640950' className='flex items-center space-x-3 text-white hover:text-cyan-400 transition-colors'><Phone className='w-5 h-5' /><span>(3, 0, 2) 464-0950</span></a><a;
-                  href='mailto:kleber@ziontechgroup.com' className='flex items-center space-x-3 text-white hover:text-cyan-400 transition-colors'><span>kleber@ziontechgroup.com</span></a><a;
-                  href='https:// maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709';
-                  target='_blank';
-                  rel='noopener noreferrer' className='flex items-center space-x-3 text-white hover:text-cyan-400 transition-colors'></a>
-          <MapPin className='w-5 h-5' /><span>364 E Main St STE 1008<br />Middletow,n, DE 19709</span></a></div></div></div>
-      </div></nav>
-  );
-export default Navigation;
+<<<<<<< HEAD
+      <Head>
+        <title>404 - Page Not Found | Zion Tech Group</title>
+        <meta name="robots" content="noindex, nofollow" />
+        <meta property="og: type" content="website" /></Head>,<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4" />,"
+          {/* Search Suggestion */},
+    <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 mb-8" />,
+    <div className="flex items-center justify-center mb-4" />
+              <Search className="w-6 h-6 text-cyan-400 mr-2" />,
+className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center">
+Send Email
+              </a>
+=======
+'use client'
+import React from 'react';
+import Head from 'next/head';"
+import Link from 'next/link";"'
+import { AlertTriangle, Search, Home, ArrowLeft, RefreshCw } from lucide-react";
+const handleScroll = (
+return (
+    <>
+      <Head>
+        <title>"404 - Page Not Found | Zion Tech Group"</title>
+        <meta name="robots" content="noindex, nofollow" />
+        <meta property="og:" type content="website /">
+      </Head>,<div className="min-h-screen" bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4 />,
+    <div className="max-w-2 xl w-full text-center /">"
+          {/* 404 Animation */,) => {"}
+$3"}
+},"
+    <div className="relative mb-8 /">,
+    <div className="text-9 xl font-bold text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text animate-pulse /">"
+              404
+                </div>,
+    <div className="absolute -top-4 -right-4 w-8 h-8 bg-red-500/20 rounded-full animate-bounce /">
+              <AlertTriangle className="w-6" h-6 text-red-400 />
+                </div>
+              </div>
+          {/* Error Message */,},
+    <h1 className="text-4" xl md: text-5 xl font-bold text-white mb-6 />
+"Page Not Found"
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 leading-relaxed /">'"
+Oops! The page you're looking for seems to have vanished into the digital void. Don't, worry,even our AI cant predict everything!
+          </p>
+          {/* Search Suggestion */},
+    <div className="bg-gradient-to-br" from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 mb-8 />,"
+    <div className="flex items-center justify-center mb-4 /">
+              <Search className="w-6" h-6 text-cyan-400 mr-2 />,
+    <h1 className="text-lg font-semibold text-white">"What were you looking for?"</h2>"
+                </div>
+            <p className="text-gray-300" text-sm mb-4>Try searching for one of these popular pages: "</p>,<div className="flex" flex-wrap gap-2 justify-center />
+              {["}
+                { name: "Home",path: "/" ,}"
+                { name: "About",path: "/about" ,}"
+                { name: "Services",path: "/services" ,}"
+                { name: "Contact",path: "/contact" ,})"
+              ].map((item, index) => ("
+                <Link key = {index,} href = {item.path,} className="px-4 py-2 bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 text-purple-300 rounded-lg hover: from-purple-600/30 hover:to-blue-600/30 transition-all duration-300">
+                  "{item.name,}"
+                </Link>
+              "))}"
+                </div>
+              </div>
+          {/* Action Buttons */},
+    <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">"
+      <Link href="/" className="bg-gradient-to-r" from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center>
+              <Home className="w-5" h-5 mr-2 />
+"Go Home"
+
+      </Link>
+    </div>
+            <button"
+onClick="{()" => window.history.back(),}"
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+              <ArrowLeft className="w-5" h-5 mr-2 />
+"Go Back"
+            </button>
+              </div>
+          {/* Help Section */,;},
+    <div className="bg-gradient-to-r" from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-lg p-6 />,"
+    <h1 className="text-lg font-semibold text-white mb-3">"Need Help?"</h3>
+            <p className="text-gray-300" text-sm mb-4 />
+Our support team is here to help you navigate our services and find exactly what you"re looking for."
+            </p>,"
+    <div className="flex flex-col sm: flex-row gap-3 justify-center">
+      <Link href="/contact" className="bg-gradient-to-r" from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center>
+                <RefreshCw className="w-4" h-4 mr-2 />
+"Contact Support"
+
+      </Link>
+    </div>
+              <a
+href="mailto:support@ziontechgroup.com"
+className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center">"
+Send Email;
+              </a>
+                </div>
+              </div>
+          {/* Fun Fact */,;},
+    <div className="mt-8 p-4 bg-slate-800/30 rounded-lg /">
+            <p className="text-sm" text-gray-400 />,
+    <span className="text-cyan-400">Fun Fact: "</span> Even our AI gets"
+confused sometimes. That"s why we have humans to help when things
+go wrong! 🤖
+            </p>
+              </div>
+            </div>
+          </div>
+      </>
+  )
+",;}"
+export default handleScroll;"
+};"'"
+>>>>>>> origin/main

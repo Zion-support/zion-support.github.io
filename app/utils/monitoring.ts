@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:src/utils/monitoring.ts
 // monitoring utility
 export const monitoring = () => {
@@ -36,6 +37,12 @@ const performanceConfig = {
   }
 };
 
+=======
+<<<<<<< HEAD
+  }
+}
+export interface PerformanceMetrics {
+>>>>>>> origin/main
 lcp?: number
 fid?: number
 cls?: number
@@ -43,6 +50,7 @@ fcp?: number
 ttfb?: number
 inp?: number
 }
+<<<<<<< HEAD
 
   message: string;
   stack?: string;
@@ -63,307 +71,267 @@ class MonitoringService {
     if (typeof window !== 'undefined') {
       this.initializeMonitoring();
     }
+=======
+>>>>>>> origin/main
   }
-
-  private initializeMonitoring(): void {
-  // Monitor Web Vitals
-    this.monitorWebVitals();
+  private initializeMonitoring(): void{// Monitor Web Vitals
+this.monitorWebVitals()
     // Monitor Long Tasks
-    this.monitorLongTasks();
+this.monitorLongTasks()
     // Monitor Resource Loading
-    this.monitorResourceTiming();
+this.monitorResourceTiming()
     // Global Error Handler
-    this.setupErrorHandling();
+    }
+    // Send to error tracking service (if, configured    )
 }
-
-  private monitorWebVitals(): void {
-  if('PerformanceObserver' in window) {
-      try {
-        // Largest Contentful Paint
-        const lcpObserver = new PerformanceObserver((li, s, t) => {
-  const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number
-};
-          this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0;
-          this.reportMetric('lcp', this.metrics.lcp);
-        });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-        // First Input Delay
-        const fidObserver = new PerformanceObserver((li, s, t) => {
-  const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry) => {
-            this.metrics.fid = (entry, as, any).processingStart - entry.startTime;
-            this.reportMetric('fid', this.metrics.fid);
-});
-        });
-        fidObserver.observe({ entryTypes: ['first-input'] });
-
-        // Cumulative Layout Shift
-        let clsValue = 0;
-        const clsObserver = new PerformanceObserver(list => {
-          const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry) => {
-  if (!(entry, as, any).hadRecentInput) {
-              clsValue += entry.value;
-              this.metrics.cls = clsValue;
-              this.reportMetric('cls', clsValue);
-    });
-        });
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-        // First Contentful Paint
-        const fcpObserver = new PerformanceObserver(list => {
-          const entries = list.getEntries();
-          entries.forEach(entry => {
-            this.metrics.fcp = entry.startTime;
-            this.reportMetric('fcp', entry.startTime);
-          });
-        });
-        fcpObserver.observe({ entryTypes: ['paint'] });
-      } catch (error) {
-<<<<<<< HEAD:app/utils/monitoring.ts
-        }
-        // // // console.error('Error setting up performance observers:', error)
-      }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
-    }
-  }
-
-  private monitorLongTasks(): void {
-  if('PerformanceObserver' in window) {
-      try {
-        const longTaskObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-<<<<<<< HEAD:app/utils/monitoring.ts
-            }
-            // // // console.warn('Long task detected:', {
-            //   duration: entry.duration,
-            //   startTime: entry.startTime
-            // })
-          }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
-        })
-clsObserver.observe({ entryTypes: "["layout-shift"] "})
-        //First Contentful Paint
-const fcpObserver = new PerformanceObserver(list => {
-)
-const entries = list.getEntries()
-entries.forEach(entry => {)
-this.metrics.fcp = entry.startTime)
-this.reportMetric("fcp", entry.startTime)
-          
-})
-        })
-fcpObserver.observe({ entryTypes: "["paint"] "})
-      } catch(error) {   
-        , }
-    }
-  }
-
-  private monitorResourceTiming(): void {
-  if('PerformanceObserver' in window) {
-      try {
-        const resourceObserver = new PerformanceObserver((li, s, t) => {
-  const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry) => {
-            const resourceEntry = entry as PerformanceResourceTiming;
-            if (resourceEntry.duration > 1000) {
-              // Slow resource detected
-    });
-        });
-        resourceObserver.observe({ entryTypes: ['resource'] });
-      } catch (_error) {
-        }
-          const entries = list.getEntries()
-          entries.forEach((entry: PerformanceEntry) => {
-            const resourceEntry = entry as PerformanceResourceTiming
-            if (resourceEntry.duration > 1000) {
-              // // // console.warn('Slow resource detected:', {
-              //   name: resourceEntry.name,
-              //   duration: resourceEntry.duration,
-              //   type: resourceEntry.initiatorType
-              // })
-            }
-          })
-        })
-        resourceObserver.observe({ entryTypes: ['resource'] })
-      } catch (_error) {
-        // // // console.error('Error monitoring resources:', _error)
-      }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
-    }
-  }
-
-  private setupErrorHandling(): void {
-  // Global error handler
-    window.addEventListener('error', (eve, n, t) => {
-  this.logError({
-        message: event.message,
-        stack: event.error?.stack
-        timestamp: Date.now(),
-        userAgent: navigator.userAgent,
-        url: window.location.href
-});
-    });
-
-    // Unhandled promise rejection handler
-    window.addEventListener('unhandledrejection', (eve, n, t) => {
-  this.logError({
-        message: `Unhandled Promise Rejection: ${event.reason
-}`,
-        timestamp: Date.now(),
-        userAgent: navigator.userAgent,
-        url: window.location.href
-      });
-    });
-  }
-  private reportMetric(name: string, value: number): void {
-    // Sample rate;
-    if (Math.random() > performanceConfig.monitoring.sampleRate {
-      return;
-    }
-    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
-    if (thresholds) {
-      const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
-<<<<<<< HEAD:app/utils/monitoring.ts
-      }
-      // // // console.log(`[Performance] ${name}:`, {
-      //   value,
-      //   rating,
-      //   unit: name === 'cls' ? 'score' : 'ms'
-      // })
-    }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
-    // Send to analytics (if configured)
-    if (typeof gtag === 'function') {
-      gtag('event', name, {
-        value: Math.round(name === 'cls' ? value * 1000 : value),
-        event_category: 'Web Vitals'
-      });
-    }
-
-  }
-
-  public logError(error: ErrorReport): void {
-  this.errors.push(err, o, r);
-    // Keep only last 50 errors
-    if (this.errors.length > 50) {
-      this.errors = this.errors.slice(-50;
-    }
-<<<<<<< HEAD:app/utils/monitoring.ts
-    // // // console.error('[Error]', error)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
-    // Send to error tracking service (if configured)
-  }
   public getMetrics(): PerformanceMetrics{}
 return { ...this.metrics }
   }
   public getErrors(): ErrorReport[] {
-    return [...this.errors]
-  }
-  public clearErrors(): void {
-    this.errors = []
-  }
-  public measureMemory(): void {
-    if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-      if (memory) {
-<<<<<<< HEAD:app/utils/monitoring.ts
-        this.metrics.memory = {
-          used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
-          total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
-          limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
-        }
-        // // // console.log('[Memory]', {
-        //   used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
-        //   total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
-        //   limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
-        // })
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
-      }
-    }
-  }
-  public measureNavigationTiming(): void {
-    if ('performance' in window && 'getEntriesByType' in performance) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigation) {
-<<<<<<< HEAD:app/utils/monitoring.ts
-        console.log('Performance metrics:', {
-          'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,
-          'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,
-          'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`,
-          'Download': `${Math.round(navigation.responseEnd - navigation.responseStart)}ms`,
-          'DOM Interactive': `${Math.round(navigation.domInteractive - navigation.fetchStart)}ms`,
-          'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`,
-          'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
-        });
-        })
-        // // // console.log('[Navigation Timing]', {
-        //   'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,
-        //   'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,
-        //   'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`,
-        //   'Download': `${Math.round(navigation.responseEnd - navigation.responseStart)}ms`,
-        //   'DOM Interactive': `${Math.round(navigation.domInteractive - navigation.fetchStart)}ms`,
-        //   'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`,
-        //   'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
-        // })
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d891
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9ef9
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e7ea
+return [...this.errors]
+}
+  public clearErrors(): void{
       }
     }
   }
 }
-
-    // Send to error tracking service (if, configure, d)
-  }
-
-  public getMetrics(): PerformanceMetrics {
-  return { ...this.metrics
-};
-  }
-
-  public getErrors(): ErrorReport[] {
-    return [...this.errors];
-  }
-
-  public clearErrors(): void {
-  this.errors = [];
-}
-
-  public measureMemory(): void {
-  if('memory' in performance) {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number
-    }).memory;
-      if (memo, r, y) {
-        // Memory usage logged
-      }
-    }
-  }
-
-  public measureNavigationTiming(): void {
-  if('performance' in window && 'getEntriesByType' in performance) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigati, o, n) {
-        // Navigation timing logged
-    }
-}
-
 // Singleton instance
-const monitoring = new MonitoringService()
->>>>>>> 33a3472fdd6542a46cedfafebd3b6b0a7cc5e02d:app/utils/monitoring.ts
+const monitoring = new MonitoringService()"
+=======
+'use client'
+import React from 'react";'
+/**
+ * Comprehensive Monitoring Utility*/
+ * Real-time, application, monitoring, performance, tracking, and error reporting"*/
+ */;"
+const performanceConfig = {;"}
+monitoring: "{",enableLongTaskDetection: "true;"}
+enableMemoryMonitorin",g: "true",sampleRate: "0.1",}"
+  webVitals: "{",lcp: "{ goo",d: "2500",needsImprovement: "4000 ",}"
+    fid: "{ goo",d: "100",needsImprovement: "300 ",}"
+    cls: "{ goo",d: "0.1",needsImprovement: "0.25 ",}"
+    fcp: "{ goo",d: "1800",needsImprovement: "3000 ",}"
+    ttfb: "{ goo",d: "800",needsImprovement: "1800 ",}"
+    inp: "{ goo",d: "200",needsImprovement: "500 ",
+  );
+}
+export interface PerformanceMetrics {;
+}
+lcp?: number;
+fid?: number;
+cls?: number;
+fcp?: number;
+ttfb?: number;}
+inp?: number;
+}
+};
+};"
+export interface ErrorReport {"
+;"
+message: "string;"
+  stack?: string;"
+component?: string;"
+timestam",p: "number;",userAgent: "string;"}
+  ur",l: "string",
+  );
+}
+}"
+  };"
+class MonitoringService{;}"
+private metrics: "PerformanceMetrics = {",;};"
+  private errors: "ErrorReport[] = [];"
+private observe",r: "PerformanceObserver | null = null;"
+constructor() {  ;""}
+if (typeof window !== 'undefined') { ",this.initializeMonitoring();,}
+    , , ,
+  );
+}
+  private initializeMonitoring(): void{// Monitor Web Vitals;
+this.monitorWebVitals();
+    // Monitor Long Tasks;
+this.monitorLongTasks();
+    // Monitor Resource Loading;
+this.monitorResourceTiming(
+  );
+}
+    // Global Error Handler;}
+this.setupErrorHandling();}"
+  }"
+  private monitorWebVitals(): void{;"'"
+if ('PerformanceObserver" in, window) {;
+try {
+// Largest Contentful Paint;
+const lcpObserver = new PerformanceObserver((list) => {;}
+const entries = list.getEntries(
+  );
+}
+;,}"
+const lastEntry = entries[entries.length - 1,] as PerformanceEntry & { renderTime?: number; loadTime?: number }"
+          this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0;"'"
+this.reportMetric('lcp", this.metrics.lcp);"
+        });"'"
+lcpObserver.observe({ entryTypes: "['largest-contentful-paint'] ",});
+        // First Input Delay;"
+const fidObserver = new PerformanceObserver((list) => {;"
+const entries = list.getEntries();"
+          entries.forEach((entry: "PerformanceEntry) => {",this.metrics.fid = (entry, as, any).processingStart - entry.startTime,;"'"
+this.reportMetric('fid", this.metrics.fid
+  );
+}
+          })"
+        });"'"
+fidObserver.observe({ entryTypes: "['first-input'] ",});
+        // Cumulative Layout Shift;
+let clsValue = 0;
+const clsObserver = new PerformanceObserver(list => {;"
+);"
+const entries = list.getEntries();"
+entries.forEach((entry: "PerformanceEntry) => {",if (!(entry, as, any).hadRecentInput) {;"
+clsValue += entry.value,;"
+this.metrics.cls = clsValue,;"'"
+this.reportMetric('cls", clsValue
+  );
+}
+}"
+          })"
+        });"'"
+clsObserver.observe({ entryTypes: "['layout-shift'] ",});
+        // First Contentful Paint;
+const fcpObserver = new PerformanceObserver(list => {;
+}
+const entries = list.getEntries();"
+entries.forEach(entry => {;)"
+this.metrics.fcp = entry.startTime);"'"
+this.reportMetric('fcp", entry.startTime)
+  );
+}
+})"
+        });"'"
+fcpObserver.observe({ entryTypes: "['paint'] ",
+  );
+} catch(error) {   }
+        , , , }
+    }"
+  }"
+  private monitorLongTasks(): void{;"'"
+if('PerformanceObserver" in window && performanceConfig.monitoring.enableLongTaskDetection) {  ;
+try { ;}
+const longTaskObserver = new PerformanceObserver((list) => {;"}
+for (const entry of list.getEntries()) {,, , , ;}"
+            ;}"'"
+        ;}); longTaskObserver.observe({ entryTypes: "['longtask'] ",
+  );
+} catch(error) {    }
+  // Long task API might not be, available}
+, , , , }
+    }"
+  }"
+  private monitorResourceTiming(): void{;"'"
+if('PerformanceObserver" in, window) {  ;
+try { ;"
+const resourceObserver = new PerformanceObserver((list) => {;"
+const entries = list.getEntries();"}
+          entries.forEach((entry: "PerformanceResourceTiming) => {",if (entry.duration > 1000) {,}
+, , , }
+              }"
+          })"
+        });"'"
+resourceObserver.observe({ entryTypes: "['resource'] ",
+  );
+} catch(_error) {   }
+        , , , }
+    }"
+  }"
+  private setupErrorHandling(): void{// Global error handler;"'"
+window.addEventListener('error", (event) => {;"
+this.logError({;"
+message: "event.message",stack: "event.error?.stack;)"}
+timestam",);"}
+p: "Date.now()",userAgent: "navigator.userAgent;",}"
+ur,l: "window.location.href",})
 
+    })"
+    // Unhandled promise rejection handler;"'"
+window.addEventListener('unhandledrejection", (event) => {;"}
+this.logError({;)"}
+message: "`Unhandled Promise Rejectio",n: "${event.reason",}`);"
+timestamp: "Date.now()",userAgent: "navigator.userAgent;"
+ur",l: "window.location.href",})
 
+<<<<<<< HEAD
+=======
+    })"
+  }"
+  private reportMetric(name: "string",value: "number): void{",// Sample rate;}
+if (Math.random() > performanceConfig.monitoring.sampleRate) {,;}
+return,}
+}"
+    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals,];"
+if (thresholds) {;"'"}
+const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor";"}
+,};"
+    // Send to analytics (if, configured);"'"
+if (typeof gtag === 'function") {;"'"}
+gtag('event", name, {);"'"}
+value: "Math.round(name = == 'cls' ? value * 1000 : value)",event_category: "'Web Vitals'",})"
+    };"
+  };"
+public logError(error: "ErrorReport): void{;
+this.errors.push(error);"
+}
+    // Keep only last 50 errors;"}
+if(this.errors.length > 50) {  ",this.errors = this.errors.slice(-50);,, ,
+  );
+}
+    // Send to error tracking service (if, configured
+  );
+}
+  public getMetrics(): PerformanceMetrics{}
+return { ...this.metrics
+  );
+}
+  public getErrors(): ErrorReport[] {;}
+return [...this.errors];
+}
+  public clearErrors(): void{;}
+this.errors = [],;};"
+};"
+  public measureMemory(): void{;"'"}
+if ('memory" in performance && performanceConfig.monitoring.enableMemoryMonitoring) {;}"
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: "number; totalJSHeapSize: number; jsHeapSizeLimi",t: "number ",} }).memory;"
+if (memory) {;"`}
+this.metrics.memory = {;"`}`
+used: "`${Math.round(memory.usedJSHeapSize / 1048576)",}MB`;"``
+total: "`${Math.round(memory.totalJSHeapSize / 1048576)",}MB`;"``
+limit: "`${Math.round(memory.jsHeapSizeLimit / 1048576)",}MB`
+  );
+}
+    }"
+  }"
+  public measureNavigationTiming(): void{;"'"
+if ('performance' in window && 'getEntriesByType" in, performance) {;"'"
+const navigation = performance.getEntriesByType('navigation")[0,] as PerformanceNavigationTiming;"
+if (navigation) {"}
+        // eslint-disable-next-line no-console;"'"}`
+console.log('Performance metrics: "'",{)}"'"``
+          'DNS Lookup": `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`"'"``
+          'TCP Connect": `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`"'"``
+          'TTFB": `${Math.round(navigation.responseStart - navigation.requestStart)}ms`"'"``
+          'Download": `${Math.round(navigation.responseEnd - navigation.responseStart)}ms`"'"``
+          'DOM Interactive": `${Math.round(navigation.domInteractive - navigation.fetchStart)}ms`"'"``
+          'DOM Complete": `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`"'"``
+          'Load Complete": `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
+        })
+        })
+  );
+}
+  );
+}
+// Singleton instance;
+}
+const monitoring = new MonitoringService();"
+export default monitoring;"
+,}"'"`
+``
+>>>>>>> origin/main
+>>>>>>> origin/main

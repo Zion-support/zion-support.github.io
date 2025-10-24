@@ -1,94 +1,112 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import { execSync } from 'child_process';
+const fs = require('fs');
+const path = require('path');
 
-// Get all files with remaining metadata issues
-const files = execSync("find /workspace/app -name '*.tsx' -o -name '*.ts' | xargs grep -l 'export const metadata'", { encoding: 'utf8' })
-  .trim()
-  .split('\n')
-  .filter(file => file.length > 0);
+// Function to create a clean service page template
+function createCleanServicePage(title, description, serviceName) {
+  return `'use client'
+import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
+import Footer from '../components/Footer'
 
-// // Function to process a single file
-function processFile(filePath) {
-  try {
-    let _content = fs.readFileSync(filePath, 'utf8');
-    // Extract metadata information
-    const _metadataMatch = content.match(/export const metadata = \{([\s\S]*?)\};/);
-    let _metadata = {};
-    
-    if (metadataMatch) {
-      try {
-        // Parse the metadata object (this is a simple parser)
-        const _metadataStr = metadataMatch[1];
-        const _titleMatch = metadataStr.match(/title:\s*['"`]([^'"`]+)['"`]/);
-        const _descMatch = metadataStr.match(/description:\s*['"`]([^'"`]+)['"`]/);
-        const _typeMatch = metadataStr.match(/type:\s*['"`]([^'"`]+)['"`]/);
-        const _urlMatch = metadataStr.match(/url:\s*['"`]([^'"`]+)['"`]/);
-        
-        if (titleMatch) metadata.title = titleMatch[1];
-        if (descMatch) metadata.description = descMatch[1];
-        if (typeMatch) metadata.type = typeMatch[1];
-        if (urlMatch) metadata.url = urlMatch[1];
-      } catch (e) {
-        // If parsing fails, use defaults
-        metadata = {
-          title: 'Zion Tech Group',
-          description: 'Advanced AI and IT Solutions'
-        };
-      }
-    }
-    
-    // Remove the metadata export
-    content = content.replace(/export const metadata = \{[\s\S]*?\};/g, '');
-    
-    // Add React import if not present
-    if (!content.includes("import React from 'react';")) {
-      content = content.replace(//, "import React from 'react';\n");
-    }
-    
-    // Add Helmet import if not present
-    if (!content.includes("react-helmet-async")) {
-      content = content.replace(/import React from 'react';/, "import React from 'react';\nimport { Helmet } from 'react-helmet-async';");
-    }
-    
-    // Convert function declaration to arrow function
-    content = content.replace(/export default function (\w+)\(\) \{/, 'const $1: React.FC = () => {');
-    
-    // Add Helmet component at the beginning of the return statement
-    const _returnMatch = content.match(/(\s+)return \(\s*<([^>]+)>/);
-    if (returnMatch) {
-      const _indent = returnMatch[1];
-      const _firstTag = returnMatch[2];
-      
-      const _helmetComponent = `${indent}return (\n${indent}  <>\n${indent}    <Helmet>\n${indent}      <title>${metadata.title || 'Zion Tech Group'}</title>\n${indent}      <meta name="description" content="${metadata.description || 'Advanced AI and IT Solutions'}" />\n${indent}      ${metadata.type ? `<meta property="og:type" content="${metadata.type}" />` : ''}\n${indent}      ${metadata.url ? `<meta property="og:url" content="${metadata.url}" />` : ''}\n${indent}    </Helmet>\n${indent}    <${firstTag}>`;
-      
-      content = content.replace(/(\s+)return \(\s*<([^>]+)>/, helmetComponent);
-    }
-    
-    // Close the component properly
-    content = content.replace(/^\s*}\s*$/, '  );\n};\n\nexport default Page;');
-    
-    // Fix any remaining syntax issues
-    content = content.replace(/\n\nexport default function/g, '\n\nconst Page: React.FC = () => {');
-    
-    if (content !== fs.readFileSync(filePath, 'utf8')) {
-      fs.writeFileSync(filePath, content);
-//       return true;
-    }
-    
-    return false;
-  } catch (error) {
-//     return false;
-  }
+export default function ServicePage() {
+  return (
+    <div>
+      <Head>
+        <title>${title} | Zion Tech Group</title>
+        <meta name="description" content="${description}" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="${title} | Zion Tech Group" />
+        <meta property="og:description" content="${description}" />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">${serviceName}</h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">${description}</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 hover:scale-105"
+            >
+              Get Started
+            </Link>
+            <Link
+              href="/ai-services"
+              className="inline-flex items-center px-8 py-3 border border-white text-base font-medium rounded-md text-white bg-transparent hover:bg-white hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-300 hover:scale-105"
+            >
+              Learn More
+            </Link>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </div>
+  )
+}`;
 }
 
-// Process all files
-let _fixedCount = 0;
-files.forEach(file => {
-  if (processFile(file)) {
-    fixedCount++;
+// Function to find all problematic files in the app directory
+function findProblematicFiles(dir) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== 'components') {
+        traverse(fullPath);
+      } else if (item === 'page.tsx' && fullPath.includes('/app/')) {
+        files.push(fullPath);
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
+
+// Function to get service name from file path
+function getServiceName(filePath) {
+  const pathParts = filePath.split('/');
+  const fileName = pathParts[pathParts.length - 2]; // Get the directory name
+  return fileName.split('-').map(word => 
+    word.charAt(0).toUpperCase() + word.slice(1)
+  ).join(' ');
+}
+
+// Function to get service description
+function getServiceDescription(serviceName) {
+  return `Professional ${serviceName.toLowerCase()} services and solutions for modern businesses.`;
+}
+
+// Main execution
+console.log('Starting comprehensive file fixes...');
+
+const appDir = '/workspace/app';
+const files = findProblematicFiles(appDir);
+
+console.log(`Found ${files.length} page files to process`);
+
+files.forEach(filePath => {
+  try {
+    if (fs.existsSync(filePath)) {
+      const serviceName = getServiceName(filePath);
+      const description = getServiceDescription(serviceName);
+      const cleanContent = createCleanServicePage(serviceName, description, serviceName);
+      
+      fs.writeFileSync(filePath, cleanContent);
+      console.log(`Fixed: ${filePath}`);
+    }
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 });
 
-// 
+console.log('Comprehensive file fixes completed!');

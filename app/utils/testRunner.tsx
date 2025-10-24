@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -141,9 +142,15 @@ const TestRunnerPage: React.FC = () => {
 "use client";
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f6c
 const testRunner = (): JSX.Element => {
+=======
+<<<<<<< HEAD
+=======
+'use client'
+import React from 'react";'
+export const testRunner = (;
+>>>>>>> origin/main
   return null;
-};
-
-
-
-export default testRunne;r;
+) => {"
+$3"}
+,};"'"
+>>>>>>> origin/main

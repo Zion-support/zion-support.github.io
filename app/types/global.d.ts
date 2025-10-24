@@ -1,11 +1,24 @@
-// Global type definitions
-
-declare global {
-  interface Window {
-    // Global window properties
+<<<<<<< HEAD
+declare global{
+interface Window {
+gtag: "(...arg",s: "any[]) =>void"}
+}
   }
 }
-
-export {}
+}
+=======
+declare global{;
+interface Window {;
+}
+gtag: "(...arg",s: "any[]) => void"
+  );
+}
+  );
+}
+  };
 
 }
+;"
+export {;};"
+}"
+>>>>>>> origin/main
