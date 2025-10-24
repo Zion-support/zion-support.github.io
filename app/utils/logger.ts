@@ -3,7 +3,16 @@ interface LogContext {
   component?: string;
   userId?: string;
   sessionId?: string;
-  [key: string]: string | number | boolean | null | undefined;
+  error?: {
+    name: string;
+    message: string;
+    stack?: string;
+  };
+  [key: string]: string | number | boolean | null | undefined | {
+    name: string;
+    message: string;
+    stack?: string;
+  };
 }
 
 class Logger {

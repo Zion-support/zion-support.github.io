@@ -1,6 +1,16 @@
 // API Client for making HTTP requests
 import logger from './logger';
 
+// Extend RequestInit to include our custom options
+interface ExtendedRequestInit {
+  method?: string;
+  headers?: Record<string, string>;
+  body?: string;
+  signal?: AbortSignal;
+  timeout?: number;
+  retries?: number;
+}
+
 export interface ApiResponse<T = unknown> {
   data: T;
   status: number;
@@ -29,7 +39,7 @@ class ApiClient {
 
   private async makeRequest<T>(
     url: string,
-    options: RequestInit & RequestOptions = {}
+    options: ExtendedRequestInit & RequestOptions = {}
   ): Promise<ApiResponse<T>> {
     const {
       timeout = this.defaultOptions.timeout,
@@ -65,7 +75,11 @@ class ApiClient {
       if (retries > 0 && error instanceof Error && error.name === 'AbortError') {
         logger.warn(`Request failed, retrying... (${retries} retries left)`, {
           url,
-          error: error.message,
+          error: {
+            name: error.name,
+            message: error.message,
+            stack: error.stack
+          },
         });
         return this.makeRequest<T>(url, { ...options, retries: retries - 1 });
       }
