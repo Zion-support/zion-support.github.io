@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from '../components/Footer'
 import Navigation from '../components/Navigation'
-import { CheckCircle, Brain, BarChart, Target, ArrowRight } from 'lucide-react'
+import { CheckCircle, Brain, BarChart, Target, ArrowRight, } from 'lucide-react';
 
 const Page: React.FC = () => {
   const features = [
@@ -51,11 +51,16 @@ const Page: React.FC = () => {
                       <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
                       {benefit}
                     </li>
-                  ))
+                  ))}
                 </ul>
               </div>
+<<<<<<< HEAD
             </div>
           ))}
+=======
+            ))}
+          </div>
+>>>>>>> origin/main
 
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>

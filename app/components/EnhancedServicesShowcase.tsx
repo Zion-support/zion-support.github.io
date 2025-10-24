@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
-import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react'
-
+import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react'
 const EnhancedServicesShowcase: React.FC = () => {
   const services = [
     {
@@ -83,7 +82,7 @@ const EnhancedServicesShowcase: React.FC = () => {
                     <CheckCircle className="h-4 w-4 text-green-400 flex-shrink-0" />
                     <span className="text-gray-300 text-sm">{feature}</span>
                   </li>
-                ))
+                ))}
               </ul>
 
               <button className="w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
@@ -91,8 +90,12 @@ const EnhancedServicesShowcase: React.FC = () => {
                 <ArrowRight className="h-4 w-4 ml-2" />
               </button>
             </div>
+<<<<<<< HEAD
           </div>
         ))}
+=======
+          ))}
+>>>>>>> origin/main
         </div>
       </div>
     </div>

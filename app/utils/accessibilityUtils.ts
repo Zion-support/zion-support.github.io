@@ -53,6 +53,7 @@ export const trapFocus = (element: HTMLElement): (() => void) => {
   return () => {
     element.removeEventListener('keydown', handleTabKey);
   };
+};
 
 export const isElementVisible = (element: HTMLElement): boolean => {
   const rect = element.getBoundingClientRect();

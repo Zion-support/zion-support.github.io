@@ -45,7 +45,7 @@ describe('AdvancedErrorBoundary', () => {
       </MemoryRouter>
     );
 
-    expect(screen.getByText('Something went wrong')).toBeInTheDocument();
+    expect(screen.getByText('Oops! Something went wrong')).toBeInTheDocument();
     expect(screen.getByText('Try Again')).toBeInTheDocument();
     expect(screen.getByText('Go Home')).toBeInTheDocument();
     
@@ -74,7 +74,7 @@ describe('AdvancedErrorBoundary', () => {
       .spyOn(console, 'error')
       .mockImplementation(() => {});
 
-    render(
+    const { rerender } = render(
       <MemoryRouter>
         <AdvancedErrorBoundary>
           <ThrowError shouldThrow={true} />
@@ -87,6 +87,15 @@ describe('AdvancedErrorBoundary', () => {
     
     // Click retry button
     retryButton.click();
+    
+    // Rerender with shouldThrow=false to simulate the error being fixed
+    rerender(
+      <MemoryRouter>
+        <AdvancedErrorBoundary>
+          <ThrowError shouldThrow={false} />
+        </AdvancedErrorBoundary>
+      </MemoryRouter>
+    );
     
     // Should render children again
     expect(screen.getByText('Test content')).toBeInTheDocument();
