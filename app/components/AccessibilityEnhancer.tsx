@@ -96,7 +96,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         }
       };
 
-      modal.addEventListener('keydown', handleTabKey);
+      modal.addEventListener('keydown', handleTabKey as EventListener);
     });
 
     // Announce page changes to screen readers

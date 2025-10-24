@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useCallback, useMemo } from 'react';
+import React, { useEffect, useCallback } from 'react';
 
 interface PerformanceOptimizerProps {
   enableImageOptimization?: boolean;
@@ -13,9 +13,9 @@ interface PerformanceOptimizerProps {
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true,
   enableLazyLoading = true,
-  enableCodeSplitting = true,
+  enableCodeSplitting: _enableCodeSplitting = true,
   enableCaching = true,
-  enableCompression = true,
+  enableCompression: _enableCompression = true,
 }) => {
   // Image optimization
   const optimizeImages = useCallback(() => {
@@ -88,7 +88,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           console.log('LCP:', entry.startTime);
         }
         if (entry.entryType === 'first-input') {
-          console.log('FID:', entry.processingStart - entry.startTime);
+          const fidEntry = entry as any;
+          console.log('FID:', fidEntry.processingStart - entry.startTime);
         }
         if (entry.entryType === 'layout-shift') {
           console.log('CLS:', (entry as any).value);
@@ -109,16 +110,16 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     }
   }, []);
 
-  // Memoized performance optimizations
-  const performanceOptimizations = useMemo(() => {
-    return {
-      imageOptimization: enableImageOptimization,
-      lazyLoading: enableLazyLoading,
-      codeSplitting: enableCodeSplitting,
-      caching: enableCaching,
-      compression: enableCompression,
-    };
-  }, [enableImageOptimization, enableLazyLoading, enableCodeSplitting, enableCaching, enableCompression]);
+  // Memoized performance optimizations (commented out as not used)
+  // const _performanceOptimizations = useMemo(() => {
+  //   return {
+  //     imageOptimization: enableImageOptimization,
+  //     lazyLoading: enableLazyLoading,
+  //     codeSplitting: enableCodeSplitting,
+  //     caching: enableCaching,
+  //     compression: enableCompression,
+  //   };
+  // }, [enableImageOptimization, enableLazyLoading, enableCodeSplitting, enableCaching, enableCompression]);
 
   useEffect(() => {
     // Run optimizations on mount
