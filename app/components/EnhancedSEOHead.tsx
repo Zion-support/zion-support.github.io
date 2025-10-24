@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 
 interface EnhancedSEOHeadProps {
   title: string;
@@ -88,7 +88,7 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
   } : null;
 
   return (
-    <Helmet>
+    <Head>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={fullDescription} />
@@ -167,7 +167,7 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
           {JSON.stringify(breadcrumbStructuredData)}
         </script>
       )}
-    </Helmet>
+    </Head>
   );
 };
 

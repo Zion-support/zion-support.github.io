@@ -1,5 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Bug, RefreshCw, Home } from 'lucide-react';
 
 interface Props {

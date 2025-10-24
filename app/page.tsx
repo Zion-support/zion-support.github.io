@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 import React, { memo, useMemo } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import EnhancedSEOHead from './components/EnhancedSEOHead';
 
 const HomePage: React.FC = memo(() => {
