@@ -80,9 +80,7 @@ function resolveConflicts() {
       
       // Simple conflict resolution - take the incoming changes (after =======)
       let resolved = content
-        .replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g, '$1')
-        .replace(/<<<<<<< [^\n]+[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
-      
+        .replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)        .replace(/<<<<<<< [^\n]+[\s\S]*?=======([\s\S]*?)      
       // Write the resolved content back
       fs.writeFileSync(`/workspace/${file}`, resolved);
       

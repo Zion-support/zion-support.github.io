@@ -6,7 +6,7 @@ const makeGitHubRequest = (path) => {
       hostname: 'api.github.com',
       path: path,
       method: 'GET',
-      headers: {,
+      headers: {
         'User-Agent': 'Zion-App-Automation',
         Accept: 'application/vnd.github.v3+json'}}
 
