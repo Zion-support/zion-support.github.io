@@ -10,7 +10,7 @@ interface EnhancedAccessibilityEnhancerProps {
   enableHighContrast?: boolean
   enableFocusManagement?: boolean
   enableVoiceNavigation?: boolean
-
+}
 
 const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({
   children,
@@ -137,15 +137,13 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
             className="accessibility-button"
             aria-label="Toggle voice navigation"
           >
-            {isVoiceEnabled ? '🔊' : '🔇'
+            {isVoiceEnabled ? '🔊' : '🔇'}
           </button>
-        )
+        )}
       </div>
-      {children
+      {children}
     </div>
   )
 }
 
-}
-
-export default EnhancedAccessibilityEnhancer;}
+export default EnhancedAccessibilityEnhancer

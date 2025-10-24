@@ -1,6 +1,5 @@
 'use client'
 import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
 import { ArrowRight, Mail, Phone, MapPin, Clock } from 'lucide-react'
 
 const ContactPage: React.FC = () => {
@@ -27,14 +26,7 @@ const ContactPage: React.FC = () => {
   }
 
   return (
-    <>
-      <Helmet>
-        <title>Contact Us - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact our experts to discuss your project requirements and get started today." />
-        <meta name="keywords" content="contact us, AI solutions, IT services, project consultation, business inquiry" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -170,7 +162,6 @@ const ContactPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
   )
 }
 
