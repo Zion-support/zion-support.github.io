@@ -43,14 +43,14 @@ export interface TestSuite {
 }
 
 // Mock utilities
-export const createMock = <T,>(defaultValue: T): T => {
-  return defaultValue;
+export const createMock = <T,>(defaultValue: T): any => {
+  return defaultValue as any;
 };
 
-export const mockFunction = <T extends (..._args: unknown[]) => unknown>(
-  implementation?: T
-): T => {
-  return (implementation || (() => {})) as T;
+export const mockFunction = <T extends (..._args: any[]) => any,>(
+  _implementation?: T
+): any => {
+  return (() => {}) as any;
 };
 
 // Test runner component
@@ -68,7 +68,7 @@ const TestRunner: React.FC<TestRunnerProps> = ({
   onCoverageUpdate,
 }) => {
   const runTests = useCallback(async () => {
-    const _results: TestSuite[] = [];
+    const results: TestSuite[] = [];
     
     try {
       // Run performance tests
@@ -86,10 +86,10 @@ const TestRunner: React.FC<TestRunnerProps> = ({
       // Run accessibility tests
       if (config.enableAccessibility) {
         const accessibilityResults = await runAccessibilityTests();
-        _results.push(accessibilityResults);
+        results.push(accessibilityResults);
       }
 
-      onTestComplete?.(_results);
+      onTestComplete?.(results);
     } catch (error) {
       console.error('Test execution failed:', error);
     }
@@ -97,13 +97,13 @@ const TestRunner: React.FC<TestRunnerProps> = ({
 
   const measurePerformance = async (): Promise<PerformanceMetrics> => {
     const startTime = performance.now();
-    const startMemory = (performance as unknown as { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || 0;
+    const startMemory = (performance as any).memory?.usedJSHeapSize || 0;
     
     // Simulate some work
     await new Promise(resolve => setTimeout(resolve, 100));
     
     const endTime = performance.now();
-    const endMemory = (performance as unknown as { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || 0;
+    const endMemory = (performance as any).memory?.usedJSHeapSize || 0;
     
     return {
       renderTime: endTime - startTime,
