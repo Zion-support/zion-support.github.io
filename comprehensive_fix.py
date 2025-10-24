@@ -1,234 +1,146 @@
 #!/usr/bin/env python3
 """
-<<<<<<< HEAD
-Comprehensive fix for syntax errors and merge conflicts
+Comprehensive script to fix all syntax errors in TypeScript/JSX files
 """
-=======
-Comprehensive script to fix all remaining syntax errors in the codebase.
-"""
-
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
 import os
 import re
 import glob
-from pathlib import Path
 
-<<<<<<< HEAD
-def fix_syntax_errors(content):
-    """Fix common syntax errors"""
-    lines = content.split('\n')
-    fixed_lines = []
-    
-    for i, line in enumerate(lines):
-        # Fix missing semicolons after imports
-        if line.strip().startswith('import ') and not line.strip().endswith(';'):
-            line = line.rstrip() + ';'
-        
-        # Fix missing semicolons after variable declarations
-        if re.match(r'^\s*(const|let|var)\s+[^=]+=', line) and not line.strip().endswith(';'):
-            line = line.rstrip() + ';'
-        
-        # Fix missing semicolons after function declarations
-        if re.match(r'^\s*(export default|export)\s+[^;]+$', line) and not line.strip().endswith(';'):
-            line = line.rstrip() + ';'
-        
-        # Fix JSX return statements
-        if 'return (' in line and not line.strip().endswith('{'):
-            line = line.replace('return (', 'return (')
-        
-        # Fix missing opening braces
-        if re.match(r'^\s*const\s+\w+\s*=\s*\(\)\s*$', line):
-            line = line.replace('()', '() => {')
-        
-        # Fix missing closing braces
-        if re.match(r'^\s*return\s*\(\s*$', line):
-            line = line.replace('return (', 'return (')
-        
-        # Fix JSX fragments
-        if line.strip() == '<>' and i < len(lines) - 1:
-            if lines[i + 1].strip().startswith('<title>'):
-                line = '<>'
-        
-        # Fix missing closing tags
-        if line.strip() == '</>;' and i > 0:
-            if lines[i - 1].strip() == '</div>':
-                line = '</>'
-        
-        # Fix missing semicolons after JSX
-        if line.strip() == '</>;' and i < len(lines) - 1:
-            if lines[i + 1].strip() == ');':
-                line = '</>'
-        
-        fixed_lines.append(line)
-    
-    return '\n'.join(fixed_lines)
-
-def fix_jsx_syntax(content):
-    """Fix JSX specific syntax issues"""
-    # Fix missing opening tags
-    content = re.sub(r'return\s*\(\s*\n\s*<>\s*\n\s*<title>', 'return (\n    <>\n      <title>', content)
-    
-    # Fix missing closing tags
-    content = re.sub(r'</div>\s*\n\s*</>\s*;\s*\n\s*\)\s*;', '</div>\n    </>\n  );', content)
-    
-    # Fix missing semicolons
-    content = re.sub(r'export default function (\w+)', r'export default function \1', content)
-=======
-def fix_jsx_syntax(content):
-    """Fix common JSX syntax errors."""
-    # Fix malformed meta tags
-    content = re.sub(r'<meta name = "([^"]+)"', r'<meta name="\1"', content)
-    
-    # Fix malformed className attributes
-    content = re.sub(r'className="([^"]*?)\s+([^"]*?)"', r'className="\1\2"', content)
-    
-    # Fix broken Link components with misplaced attributes
-    content = re.sub(r'<Link href="([^"]+)"\s*>\s*className="([^"]+)"', r'<Link href="\1" className="\2"', content)
-    
-    # Fix missing closing tags
-    content = re.sub(r'<(\w+)\s+([^>]*?)(?<!>)$', r'<\1 \2>', content, flags=re.MULTILINE)
-    
-    # Fix extra commas and semicolons
-    content = re.sub(r';\s*,\s*$', r';', content, flags=re.MULTILINE)
-    content = re.sub(r',\s*;\s*$', r';', content, flags=re.MULTILINE)
-    
-    # Fix missing semicolons after return statements
-    content = re.sub(r'(\s+);\s*$', r'\1', content, flags=re.MULTILINE)
-    
-    return content
-
-def fix_import_issues(content):
-    """Fix import issues."""
-    # Add missing Head import if needed
-    if '<title>' in content and 'import Head' not in content and 'from "next/head"' not in content:
-        content = re.sub(r'(import React from [\'"]react[\'"];)', r'\1\nimport Head from "next/head";', content)
-    
-    # Fix missing imports for lucide-react icons
-    icons_needed = []
-    if 'Mail' in content and 'import { Mail' not in content:
-        icons_needed.append('Mail')
-    if 'Send' in content and 'import { Send' not in content:
-        icons_needed.append('Send')
-    if 'CheckCircle' in content and 'import { CheckCircle' not in content:
-        icons_needed.append('CheckCircle')
-    if 'Users' in content and 'import { Users' not in content:
-        icons_needed.append('Users')
-    if 'Award' in content and 'import { Award' not in content:
-        icons_needed.append('Award')
-    if 'Target' in content and 'import { Target' not in content:
-        icons_needed.append('Target')
-    if 'Lightbulb' in content and 'import { Lightbulb' not in content:
-        icons_needed.append('Lightbulb')
-    
-    if icons_needed:
-        # Find existing lucide-react import
-        lucide_match = re.search(r"import\s*{\s*([^}]+)\s*}\s*from\s*['\"]lucide-react['\"]", content)
-        if lucide_match:
-            existing_icons = [icon.strip() for icon in lucide_match.group(1).split(',')]
-            all_icons = list(set(existing_icons + icons_needed))
-            content = re.sub(
-                r"import\s*{\s*[^}]+\s*}\s*from\s*['\"]lucide-react['\"]",
-                f"import {{ {', '.join(all_icons)} }} from 'lucide-react'",
-                content
-            )
-        else:
-            # Add new import
-            content = re.sub(
-                r'(import React from [\'"]react[\'"];)',
-                f'\\1\nimport {{ {", ".join(icons_needed)} }} from "lucide-react";',
-                content
-            )
-    
-    return content
-
-def fix_jsx_structure(content):
-    """Fix JSX structure issues."""
-    # Wrap title and meta tags in Head component
-    if '<title>' in content and '<Head>' not in content:
-        content = re.sub(
-            r'(\s+)(<title>.*?</title>)',
-            r'\1<Head>\n\1  \2',
-            content,
-            flags=re.DOTALL
-        )
-        content = re.sub(
-            r'(<meta[^>]*/>)',
-            r'\1\n\1  </Head>',
-            content,
-            flags=re.DOTALL
-        )
-    
-    # Fix broken JSX attributes
-    content = re.sub(r'hover:\s+bg-', r'hover:bg-', content)
-    content = re.sub(r'sm:\s+flex-row', r'sm:flex-row', content)
-    
-    return content
-
-def fix_syntax_errors(content):
-    """Fix general syntax errors."""
-    # Remove extra commas at end of lines
-    content = re.sub(r',\s*$', '', content, flags=re.MULTILINE)
-    
-    # Fix function declarations
-    content = re.sub(r'}\s*;\s*$', '}', content, flags=re.MULTILINE)
-    
-    # Fix return statements
-    content = re.sub(r'return\s*\(\s*<>\s*;\s*$', 'return (\n    <>', content, flags=re.MULTILINE)
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
-    
-    return content
-
-def process_file(file_path):
-<<<<<<< HEAD
-    """Process a single file"""
-=======
-    """Process a single file to fix all syntax errors."""
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
+def comprehensive_fix(file_path):
+    """Comprehensive fix for all syntax errors in a file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-<<<<<<< HEAD
-        # Apply fixes
-        content = fix_syntax_errors(content)
-        content = fix_jsx_syntax(content)
-=======
-        # Apply all fixes
-        content = fix_jsx_syntax(content)
-        content = fix_import_issues(content)
-        content = fix_jsx_structure(content)
-        content = fix_syntax_errors(content)
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
+        # Fix 1: Remove all malformed JSX comments and empty braces
+        content = re.sub(r'\{/\*.*?\*/\};\s*', '', content)
+        content = re.sub(r'\{\}\s*', '', content)
+        
+        # Fix 2: Fix malformed return statements
+        content = re.sub(r'return\s*\(\s*\n\s*\n\s*<', 'return (\n    <', content)
+        content = re.sub(r'return\s*\(\s*\n\s*<', 'return (\n    <', content)
+        
+        # Fix 3: Remove duplicate export statements
+        # Find all export default statements and keep only the last one
+        export_matches = list(re.finditer(r'export default \w+;', content))
+        if len(export_matches) > 1:
+            # Keep only the last export statement
+            for i, match in enumerate(export_matches[:-1]):
+                content = content.replace(match.group(), '')
+        
+        # Fix 4: Fix malformed function declarations
+        # Replace PagePage with proper component names
+        if 'const PagePage = () => {' in content:
+            filename = os.path.basename(file_path)
+            if filename == 'page.tsx':
+                dir_name = os.path.basename(os.path.dirname(file_path))
+                component_name = ''.join(word.capitalize() for word in dir_name.split('-')) + 'Page'
+            else:
+                component_name = filename.replace('.tsx', '').replace('.ts', '')
+                component_name = ''.join(word.capitalize() for word in component_name.split('-'))
+            
+            content = content.replace('const PagePage = () => {', f'const {component_name} = () => {{')
+            content = content.replace('export default PagePage;', f'export default {component_name};')
+        
+        # Fix 5: Fix malformed JSX structure
+        # Remove empty lines and fix indentation
+        lines = content.split('\n')
+        fixed_lines = []
+        in_jsx = False
+        jsx_indent = 0
+        
+        for line in lines:
+            stripped = line.strip()
+            
+            # Track JSX context
+            if 'return (' in line:
+                in_jsx = True
+                jsx_indent = 0
+            elif in_jsx and stripped.startswith('</'):
+                in_jsx = False
+                jsx_indent = 0
+            
+            # Fix empty lines in JSX
+            if in_jsx and not stripped and jsx_indent > 0:
+                continue
+            
+            # Fix indentation in JSX
+            if in_jsx and stripped.startswith('<'):
+                if stripped.startswith('</'):
+                    jsx_indent -= 1
+                line = '    ' * (jsx_indent + 1) + stripped
+                if not stripped.startswith('</'):
+                    jsx_indent += 1
+            
+            fixed_lines.append(line)
+        
+        content = '\n'.join(fixed_lines)
+        
+        # Fix 6: Remove semicolons after JSX elements
+        content = re.sub(r';\s*$', '', content, flags=re.MULTILINE)
+        
+        # Fix 7: Fix malformed JSX attributes
+        content = re.sub(r'className="([^"]*)"\s*;\s*', r'className="\1" ', content)
+        
+        # Fix 8: Fix missing closing braces
+        # Count braces and ensure proper closing
+        brace_count = 0
+        paren_count = 0
+        in_function = False
+        lines = content.split('\n')
+        fixed_lines = []
+        
+        for line in lines:
+            if 'const ' in line and '= () => {' in line:
+                in_function = True
+                brace_count = 1
+                paren_count = 0
+            elif in_function:
+                if '{' in line:
+                    brace_count += line.count('{')
+                if '}' in line:
+                    brace_count -= line.count('}')
+                if '(' in line:
+                    paren_count += line.count('(')
+                if ')' in line:
+                    paren_count -= line.count(')')
+                
+                if brace_count == 0 and paren_count == 0 and in_function:
+                    in_function = False
+                    if not line.strip().endswith('};'):
+                        line = line.rstrip() + ';'
+            
+            fixed_lines.append(line)
+        
+        content = '\n'.join(fixed_lines)
+        
+        # Fix 9: Clean up any remaining malformed patterns
+        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)  # Remove multiple empty lines
+        content = re.sub(r';\s*;', ';', content)  # Remove duplicate semicolons
+        content = re.sub(r'\{\s*\}', '{}', content)  # Clean up empty braces
         
         # Only write if content changed
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
-            print(f"Fixed: {file_path}")
+            print(f"Comprehensively fixed: {file_path}")
             return True
-        else:
-            print(f"No changes needed: {file_path}")
-            return False
-            
+        
+        return False
+        
     except Exception as e:
         print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-<<<<<<< HEAD
-    """Main function to process all files"""
-    # Get all TypeScript and JavaScript files
-=======
-    """Main function to process all files."""
-    # Get all TypeScript/TSX files
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
+    """Main function to comprehensively fix all files"""
     patterns = [
         'app/**/*.tsx',
         'app/**/*.ts',
-        'src/**/*.tsx',
-        'src/**/*.ts'
+        'components/**/*.tsx',
+        'components/**/*.ts'
     ]
     
     files_processed = 0
@@ -238,15 +150,11 @@ def main():
         for file_path in glob.glob(pattern, recursive=True):
             if os.path.isfile(file_path):
                 files_processed += 1
-                if process_file(file_path):
+                if comprehensive_fix(file_path):
                     files_fixed += 1
     
-<<<<<<< HEAD
-    print(f"\nProcessed {files_processed} files, fixed {files_fixed} files")
-=======
     print(f"\nProcessed {files_processed} files")
-    print(f"Fixed {files_fixed} files")
->>>>>>> cursor/fix-errors-and-merge-to-main-92e4
+    print(f"Comprehensively fixed {files_fixed} files")
 
 if __name__ == "__main__":
     main()

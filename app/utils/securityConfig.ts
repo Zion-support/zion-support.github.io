@@ -84,23 +84,26 @@ export const SECURITY_CONFIG = {
     },
     allowedSchemes: ['http', 'https', 'mailto', 'tel']
   }
-};
-
+}
 export const generateCSPHeader = (): string => {
   return Object.entries(SECURITY_CONFIG.CSP)
     .map(([directive, sources]) => `${directive} ${sources.join(' ')}`)
-    .join('; ');
-};
-
+    .join('; ')
+}
 export const validateInput = (input: string, type: keyof typeof SECURITY_CONFIG.VALIDATION): boolean => {
+<<<<<<< HEAD
   const pattern = SECURITY_CONFIG.VALIDATION[type];
   return pattern.test(input);
 }
 
+=======
+  const pattern = SECURITY_CONFIG.VALIDATION[type]
+  return pattern.test(input)
+}
+>>>>>>> origin/main
 export const sanitizeInput = (input: string): string => {
   // Remove script tags
-  let sanitized = input.replace(SECURITY_CONFIG.VALIDATION.noScript, '');
-  
+  let sanitized = input.replace(SECURITY_CONFIG.VALIDATION.noScript, '')
   // Basic HTML entity encoding
   sanitized = sanitized
     .replace(/&/g, '&')
@@ -108,16 +111,23 @@ export const sanitizeInput = (input: string): string => {
     .replace(/>/g, '>')
     .replace(/"/g, '"')
     .replace(/'/g, '&#x27;')
+<<<<<<< HEAD
     .replace(/\//g, '&#x2F;');
   
   return sanitized;
 }
 
+=======
+    .replace(/\//g, '&#x2F;')
+  return sanitized
+}
+>>>>>>> origin/main
 export const generateSecurityHeaders = (): Record<string, string> => {
   return {
     ...SECURITY_CONFIG.HEADERS,
     'Content-Security-Policy': generateCSPHeader()
   }
+<<<<<<< HEAD
 };
 
 export const isSecureContext = (): boolean => {
@@ -136,3 +146,20 @@ export const generateCSRFToken = (): string => {
   crypto.getRandomValues(array);
   return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
 }
+=======
+}
+export const isSecureContext = (): boolean => {
+  if (typeof window === 'undefined') return false
+  return window.isSecureContext || window.location.protocol === 'https:'
+}
+export const validateCSRFToken = (token: string, sessionToken: string): boolean => {
+  // In a real application, you would validate against a stored session token
+  // This is a simplified example
+  return token === sessionToken && token.length > 0
+}
+export const generateCSRFToken = (): string => {
+  const array = new Uint8Array(32)
+  crypto.getRandomValues(array)
+  return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
+}
+>>>>>>> origin/main
