@@ -3,7 +3,7 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Users, Target, Award, Shield, Globe, Brain, ArrowRight, Star, Zap } from 'lucide-react'
+import { Target, Shield, Globe, Users } from 'lucide-react'
 
 const AboutPage: React.FC = () => {
   const values = [
@@ -28,6 +28,8 @@ const AboutPage: React.FC = () => {
       description: 'We work closely with our clients to understand their unique challenges and goals.'
     }
   ]
+<<<<<<< HEAD
+=======
 
   const team = [
     {
@@ -62,6 +64,7 @@ const AboutPage: React.FC = () => {
     { number: '99%', label: 'Client Satisfaction' },
     { number: '24/7', label: 'Support Available' }
   ]
+>>>>>>> 6ff1a4f2fe1a5fd41dbeb6ed8148ca267e5cb8f1
 
   return (
     <>
@@ -76,7 +79,7 @@ const AboutPage: React.FC = () => {
                 About Zion Tech Group
               </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                We're a team of passionate technologists dedicated to transforming businesses 
+                We&apos;re a team of passionate technologists dedicated to transforming businesses 
                 through innovative AI and IT solutions that drive real-world impact.
               </p>
             </div>
@@ -150,6 +153,28 @@ const AboutPage: React.FC = () => {
         </section>
 
         {/* Values Section */}
+<<<<<<< HEAD
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Values</h2>
+                <p className="text-xl text-gray-600">
+                  The principles that guide everything we do
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {values.map((value, index) => (
+                  <div key={index} className="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <value.icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                      {value.title}
+                    </h3>
+                    <p className="text-gray-600">
+                      {value.description}
+                    </p>
+=======
         <section className="py-16 px-4 bg-gray-50">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-16">
@@ -166,6 +191,7 @@ const AboutPage: React.FC = () => {
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <value.icon className="w-6 h-6 text-blue-600" />
+>>>>>>> 6ff1a4f2fe1a5fd41dbeb6ed8148ca267e5cb8f1
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     {value.title}
@@ -221,7 +247,7 @@ const AboutPage: React.FC = () => {
               Ready to Work With Us?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Let's discuss how we can help transform your business with our AI and IT solutions.
+              Let&apos;s discuss how we can help transform your business with our AI and IT solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">

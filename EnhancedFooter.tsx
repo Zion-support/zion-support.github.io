@@ -1,39 +1,54 @@
-import { Facebook, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react'
+'use client'
 import React from 'react'
 import Link from 'next/link'
+import { Facebook, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react'
 
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear()
   
-  const services = [
-    { name: 'AI Solutions', href: '/services/ai' },
-    { name: 'Cloud Architecture', href: '/services/cloud' },
-    { name: 'Web Development', href: '/services/web' },
-    { name: 'Mobile Apps', href: '/services/mobile' },
-    { name: 'Data Analytics', href: '/services/analytics' },
-    { name: 'DevOps', href: '/services/devops' },
+  const aiServices = [
+    { name: 'AI Analytics & BI', url: '/ai-analytics', description: 'Business intelligence' },
+    { name: 'AI Automation', url: '/ai-automation', description: 'Process automation' },
+    { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder', description: 'Conversational AI' },
+    { name: 'AI Content Generation', url: '/ai-content-generation', description: 'Automated content' },
+    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security' },
+    { name: 'Computer Vision', url: '/computer-vision', description: 'Image recognition' },
+    { name: 'Predictive Analytics', url: '/predictive-analytics', description: 'Forecasting' },
+    { name: 'Speech & Voice AI', url: '/ai-voice-assistant', description: 'Voice technology' }
   ]
 
-  const products = [
-    { name: 'AI Platform', href: '/products/ai-platform' },
-    { name: 'Cloud Suite', href: '/products/cloud-suite' },
-    { name: 'Analytics Dashboard', href: '/products/analytics' },
-    { name: 'Mobile SDK', href: '/products/mobile-sdk' },
+  const itServices = [
+    { name: 'Web Development', url: '/web-development', description: 'Custom websites' },
+    { name: 'Mobile Development', url: '/mobile-development', description: 'iOS & Android apps' },
+    { name: 'Cloud Migration', url: '/cloud-migration', description: 'Cloud solutions' },
+    { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security services' },
+    { name: 'DevOps', url: '/devops', description: 'Development operations' },
+    { name: 'Data Analytics', url: '/data-analytics', description: 'Data insights' },
+    { name: 'IoT Solutions', url: '/iot-solutions', description: 'Internet of Things' },
+    { name: 'Blockchain', url: '/blockchain', description: 'Blockchain technology' }
   ]
 
-  const quickLinks = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Privacy Policy', href: '/legal/privacy' },
-    { name: 'Terms of Service', href: '/legal/terms' },
+  const company = [
+    { name: 'About Us', url: '/about' },
+    { name: 'Our Team', url: '/team' },
+    { name: 'Careers', url: '/careers' },
+    { name: 'Contact', url: '/contact' },
+    { name: 'Blog', url: '/blog' },
+    { name: 'News', url: '/news' }
+  ]
+
+  const legal = [
+    { name: 'Privacy Policy', url: '/privacy' },
+    { name: 'Terms of Service', url: '/terms' },
+    { name: 'Cookie Policy', url: '/cookies' },
+    { name: 'GDPR Compliance', url: '/gdpr' }
   ]
 
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
@@ -69,14 +84,13 @@ const EnhancedFooter: React.FC = () => {
             </div>
           </div>
 
+          {/* AI Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <h3 className="text-lg font-semibold mb-4">AI Services</h3>
             <ul className="space-y-2">
-              {services.slice(0, 6).map(service => (
+              {aiServices.slice(0, 6).map(service => (
                 <li key={service.name}>
-                  <Link
-                    href={service.href}
-                    className="text-gray-300 hover:text-white transition-colors block">
+                  <Link href={service.url} className="text-gray-300 hover:text-white transition-colors">
                     {service.name}
                   </Link>
                 </li>
@@ -84,29 +98,37 @@ const EnhancedFooter: React.FC = () => {
             </ul>
           </div>
 
+          {/* IT Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Products</h3>
+            <h3 className="text-lg font-semibold mb-4">IT Services</h3>
             <ul className="space-y-2">
-              {products.slice(0, 6).map(product => (
-                <li key={product.name}>
-                  <Link
-                    href={product.href}
-                    className="text-gray-300 hover:text-white transition-colors block">
-                    {product.name}
+              {itServices.slice(0, 6).map(service => (
+                <li key={service.name}>
+                  <Link href={service.url} className="text-gray-300 hover:text-white transition-colors">
+                    {service.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
+          {/* Company & Legal */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              {quickLinks.map(item => (
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <ul className="space-y-2 mb-6">
+              {company.map(item => (
                 <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-gray-300 hover:text-white transition-colors block">
+                  <Link href={item.url} className="text-gray-300 hover:text-white transition-colors">
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <h3 className="text-lg font-semibold mb-4">Legal</h3>
+            <ul className="space-y-2">
+              {legal.map(item => (
+                <li key={item.name}>
+                  <Link href={item.url} className="text-gray-300 hover:text-white transition-colors">
                     {item.name}
                   </Link>
                 </li>
@@ -115,6 +137,7 @@ const EnhancedFooter: React.FC = () => {
           </div>
         </div>
 
+        {/* Contact Info */}
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex items-center space-x-3">
@@ -141,25 +164,20 @@ const EnhancedFooter: React.FC = () => {
           </div>
         </div>
 
+        {/* Copyright */}
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-300 text-sm">
               &copy; {currentYear} Zion Tech Group. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link
-                href="/legal/privacy"
-                className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Privacy Policy
               </Link>
-              <Link
-                href="/legal/terms"
-                className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Terms of Service
               </Link>
-              <Link
-                href="/legal/cookies"
-                className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Cookie Policy
               </Link>
             </div>

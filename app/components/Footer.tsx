@@ -1,5 +1,4 @@
 'use client'
-
 import React from 'react'
 import Link from 'next/link'
 import { Facebook, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react'
@@ -33,6 +32,9 @@ const Footer: React.FC = () => {
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
     { name: 'Careers', url: '/careers' },
+<<<<<<< HEAD
+    { name: 'Contact', url: '/contact' },
+=======
     { name: 'News', url: '/news' },
     { name: 'Contact', url: '/contact' }
   ]
@@ -41,8 +43,9 @@ const Footer: React.FC = () => {
     { name: 'Documentation', url: '/docs' },
     { name: 'API Reference', url: '/api' },
     { name: 'Tutorials', url: '/tutorials' },
+>>>>>>> 6ff1a4f2fe1a5fd41dbeb6ed8148ca267e5cb8f1
     { name: 'Blog', url: '/blog' },
-    { name: 'Support', url: '/support' }
+    { name: 'News', url: '/news' }
   ]
 
   const legal = [
@@ -54,8 +57,13 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-gray-900 text-white">
+<<<<<<< HEAD
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+=======
         <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+>>>>>>> 6ff1a4f2fe1a5fd41dbeb6ed8148ca267e5cb8f1
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
@@ -96,11 +104,15 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">AI Services</h3>
             <ul className="space-y-2">
-              {aiServices.map(service => (
+              {aiServices.slice(0, 6).map(service => (
                 <li key={service.name}>
+<<<<<<< HEAD
+                  <Link href={service.url} className="text-gray-300 hover:text-white transition-colors">
+=======
                   <Link
                     href={service.url}
                     className="text-gray-300 hover:text-white transition-colors block">
+>>>>>>> 6ff1a4f2fe1a5fd41dbeb6ed8148ca267e5cb8f1
                     {service.name}
                   </Link>
                 </li>
@@ -112,11 +124,9 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">IT Services</h3>
             <ul className="space-y-2">
-              {itServices.map(service => (
+              {itServices.slice(0, 6).map(service => (
                 <li key={service.name}>
-                  <Link
-                    href={service.url}
-                    className="text-gray-300 hover:text-white transition-colors block">
+                  <Link href={service.url} className="text-gray-300 hover:text-white transition-colors">
                     {service.name}
                   </Link>
                 </li>
@@ -124,31 +134,27 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
+<<<<<<< HEAD
+          {/* Company & Legal */}
+=======
           {/* Company */}
+>>>>>>> 6ff1a4f2fe1a5fd41dbeb6ed8148ca267e5cb8f1
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 mb-6">
               {company.map(item => (
                 <li key={item.name}>
-                  <Link
-                    href={item.url}
-                    className="text-gray-300 hover:text-white transition-colors block">
+                  <Link href={item.url} className="text-gray-300 hover:text-white transition-colors">
                     {item.name}
                   </Link>
                 </li>
               ))}
             </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+            <h3 className="text-lg font-semibold mb-4">Legal</h3>
             <ul className="space-y-2">
-              {resources.map(item => (
+              {legal.map(item => (
                 <li key={item.name}>
-                  <Link
-                    href={item.url}
-                    className="text-gray-300 hover:text-white transition-colors block">
+                  <Link href={item.url} className="text-gray-300 hover:text-white transition-colors">
                     {item.name}
                   </Link>
                 </li>
@@ -184,21 +190,22 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
+        {/* Copyright */}
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-300 text-sm">
               &copy; {currentYear} Zion Tech Group. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              {legal.map(item => (
-                <Link
-                  key={item.name}
-                  href={item.url}
-                  className="text-gray-400 hover:text-white text-sm transition-colors">
-                  {item.name}
-                </Link>
-              ))}
+              <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
+                Terms of Service
+              </Link>
+              <Link href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
+                Cookie Policy
+              </Link>
             </div>
           </div>
         </div>
@@ -207,4 +214,8 @@ const Footer: React.FC = () => {
   )
 }
 
+<<<<<<< HEAD
 export default Footer
+=======
+export default Footer
+>>>>>>> 6ff1a4f2fe1a5fd41dbeb6ed8148ca267e5cb8f1

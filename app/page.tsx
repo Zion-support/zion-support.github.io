@@ -2,7 +2,8 @@
 import React from 'react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-import { ArrowRight, Users, Zap, Shield } from 'lucide-react'
+import PerformanceOptimizer from './components/PerformanceOptimizer'
+import { Users, Zap, Shield } from 'lucide-react'
 
 const HomePage: React.FC = () => {
   const features = [
@@ -33,6 +34,7 @@ const HomePage: React.FC = () => {
   return (
     <>
       <Navigation />
+      <PerformanceOptimizer />
       
       <main className="pt-16">
         {/* Hero Section */}
@@ -117,7 +119,7 @@ const HomePage: React.FC = () => {
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-blue-100 mb-8">
-                Let's discuss how we can help you achieve your technology goals.
+                Let&apos;s discuss how we can help you achieve your technology goals.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">

@@ -4,45 +4,25 @@ import React, { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import { 
   ChevronDown, 
-  Phone, 
-  Mail, 
-  MapPin, 
   Menu, 
   X, 
-  Brain, 
   Cloud, 
-  Shield, 
-  Code, 
   BarChart, 
-  Users, 
   Zap, 
-  ArrowRight, 
-  Cpu, 
-  Target, 
   Globe, 
-  Database, 
   Smartphone, 
   Lock, 
   TrendingUp, 
   Settings, 
-  Calendar, 
-  CheckSquare, 
-  FileText, 
   MessageCircle, 
-  Heart, 
-  DollarSign, 
-  Box, 
-  Monitor, 
-  Link as LinkIcon, 
-  Server, 
-  Package, 
   Mic, 
-  Workflow, 
-  Eye, 
-  Wifi, 
-  MessageSquare, 
-  CheckCircle, 
-  ShoppingCart 
+  Eye,
+  Shield,
+  FileText,
+  Users,
+  Brain,
+  Code,
+  Package
 } from 'lucide-react'
 
 const Navigation: React.FC = () => {
@@ -68,6 +48,15 @@ const Navigation: React.FC = () => {
     setMicroSaasOpen(false)
   }, [])
 
+<<<<<<< HEAD
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (isOpen && !(event.target as Element).closest('.mobile-menu')) {
+        closeAllMenus()
+      }
+    }
+=======
   // Service data
   const aiServices = [
     { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' },
@@ -77,14 +66,47 @@ const Navigation: React.FC = () => {
     { name: 'Predictive Analytics', href: '/ai-predictive-analytics', icon: TrendingUp, description: 'Forecasting' },
     { name: 'Voice AI', href: '/ai-voice-assistant', icon: Mic, description: 'Voice technology' }
   ]
+>>>>>>> 6ff1a4f2fe1a5fd41dbeb6ed8148ca267e5cb8f1
 
-  const itServices = [
-    { name: 'Cloud Infrastructure', href: '/cloud-architecture', icon: Cloud, description: 'Scalable cloud solutions' },
-    { name: 'Cybersecurity Solutions', href: '/cybersecurity', icon: Lock, description: 'Security solutions' },
-    { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Modern web applications' },
-    { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'iOS & Android apps' },
-    { name: 'DevOps', href: '/devops', icon: Settings, description: 'Development operations' },
-    { name: 'Data Analytics', href: '/data-analytics', icon: BarChart, description: 'Data insights' }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [isOpen, closeAllMenus])
+
+  const services = [
+    {
+      name: 'AI Services',
+      icon: BarChart,
+      items: [
+        { name: 'AI Analytics & BI', href: '/ai-analytics' },
+        { name: 'AI Automation', href: '/ai-automation' },
+        { name: 'AI Chatbots', href: '/ai-chatbot-builder' },
+        { name: 'AI Content Generation', href: '/ai-content-generation' },
+        { name: 'AI Cybersecurity', href: '/ai-cybersecurity' },
+        { name: 'Computer Vision', href: '/computer-vision' }
+      ]
+    },
+    {
+      name: 'IT Services',
+      icon: Cloud,
+      items: [
+        { name: 'Web Development', href: '/web-development' },
+        { name: 'Mobile Development', href: '/mobile-development' },
+        { name: 'Cloud Migration', href: '/cloud-migration' },
+        { name: 'Cybersecurity', href: '/cybersecurity' },
+        { name: 'DevOps', href: '/devops' },
+        { name: 'Data Analytics', href: '/data-analytics' }
+      ]
+    },
+    {
+      name: 'Solutions',
+      icon: Zap,
+      items: [
+        { name: 'IoT Solutions', href: '/iot-solutions' },
+        { name: 'Blockchain', href: '/blockchain' },
+        { name: 'API Development', href: '/api-development' },
+        { name: 'Digital Transformation', href: '/digital-transformation' }
+      ]
+    }
   ]
 
   const microSaasServices = [
@@ -98,7 +120,7 @@ const Navigation: React.FC = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
@@ -114,6 +136,26 @@ const Navigation: React.FC = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
+<<<<<<< HEAD
+            {services.map((service) => (
+              <div key={service.name} className="relative group">
+                <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors">
+                  <service.icon className="w-4 h-4" />
+                  <span>{service.name}</span>
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+                
+                {/* Dropdown Menu */}
+                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                  <div className="py-2">
+                    {service.items.map((item) => (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors"
+                      >
+                        {item.name}
+=======
             <Link 
               href="/" 
               className={`py-2 px-3 rounded-lg transition-colors ${
@@ -194,10 +236,25 @@ const Navigation: React.FC = () => {
                           <div className="font-medium text-gray-900">{service.name}</div>
                           <div className="text-sm text-gray-500">{service.description}</div>
                         </div>
+>>>>>>> 6ff1a4f2fe1a5fd41dbeb6ed8148ca267e5cb8f1
                       </Link>
                     ))}
                   </div>
                 </div>
+<<<<<<< HEAD
+              </div>
+            ))}
+            
+            <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
+              About
+            </Link>
+            <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">
+              Contact
+            </Link>
+            <Link 
+              href="/contact" 
+              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+=======
               )}
             </div>
 
@@ -267,6 +324,7 @@ const Navigation: React.FC = () => {
                   ? 'bg-blue-600 text-white hover:bg-blue-700'
                   : 'bg-white text-blue-600 hover:bg-gray-100'
               }`}
+>>>>>>> 6ff1a4f2fe1a5fd41dbeb6ed8148ca267e5cb8f1
             >
               Get Started
             </Link>
@@ -274,6 +332,12 @@ const Navigation: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <button
+<<<<<<< HEAD
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+=======
             className="lg:hidden p-2"
             onClick={() => setIsOpen(!isOpen)}
           >
@@ -282,11 +346,40 @@ const Navigation: React.FC = () => {
             ) : (
               <Menu className={`w-6 h-6 ${isScrolled ? 'text-gray-900' : 'text-white'}`} />
             )}
+>>>>>>> 6ff1a4f2fe1a5fd41dbeb6ed8148ca267e5cb8f1
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isOpen && (
+<<<<<<< HEAD
+          <div className="lg:hidden mobile-menu">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+              {services.map((service) => (
+                <div key={service.name} className="space-y-1">
+                  <div className="flex items-center space-x-2 px-3 py-2 text-gray-700 font-medium">
+                    <service.icon className="w-4 h-4" />
+                    <span>{service.name}</span>
+                  </div>
+                  <div className="pl-6 space-y-1">
+                    {service.items.map((item) => (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-colors"
+                        onClick={closeAllMenus}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ))}
+              
+              <Link
+                href="/about"
+                className="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors"
+=======
           <div className="lg:hidden bg-white border-t border-gray-200">
             <div className="px-4 py-6 space-y-4">
               <Link
@@ -348,20 +441,29 @@ const Navigation: React.FC = () => {
               <Link
                 href="/about"
                 className="block py-2 text-gray-900 hover:text-blue-600"
+>>>>>>> 6ff1a4f2fe1a5fd41dbeb6ed8148ca267e5cb8f1
                 onClick={closeAllMenus}
               >
                 About
               </Link>
               <Link
                 href="/contact"
+<<<<<<< HEAD
+                className="block px-3 py-2 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors"
+=======
                 className="block py-2 text-gray-900 hover:text-blue-600"
+>>>>>>> 6ff1a4f2fe1a5fd41dbeb6ed8148ca267e5cb8f1
                 onClick={closeAllMenus}
               >
                 Contact
               </Link>
               <Link
                 href="/contact"
+<<<<<<< HEAD
+                className="block mx-3 mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors text-center"
+=======
                 className="block w-full bg-blue-600 text-white text-center py-3 rounded-lg font-medium hover:bg-blue-700"
+>>>>>>> 6ff1a4f2fe1a5fd41dbeb6ed8148ca267e5cb8f1
                 onClick={closeAllMenus}
               >
                 Get Started
@@ -374,4 +476,8 @@ const Navigation: React.FC = () => {
   )
 }
 
+<<<<<<< HEAD
 export default Navigation
+=======
+export default Navigation
+>>>>>>> 6ff1a4f2fe1a5fd41dbeb6ed8148ca267e5cb8f1

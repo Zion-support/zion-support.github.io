@@ -128,7 +128,7 @@ export default [
         'warn',
         {
           allowConstantExport: true, 
-          allowExportNames: ['metadata', 'useAnalytics', 'AnalyticsProvider'] 
+          allowExportNames: ['metadata', 'viewport', 'useAnalytics', 'AnalyticsProvider'] 
         }
       ],
       '@typescript-eslint/no-unused-vars': ['error', { 

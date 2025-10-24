@@ -16,9 +16,11 @@ const AnalyticsToolsPage: React.FC = () => {
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards for your data'
     },
-    {icon: Globe,
+    {
+      icon: Globe,
       title: 'Global Scalability',
-      description: 'Worldwide deployment and support for international business analytics',}
+      description: 'Worldwide deployment and support for international business analytics'
+    }
   ]
   const benefits = [
     'Advanced AI-powered data analysis',

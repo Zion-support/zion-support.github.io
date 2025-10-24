@@ -1,119 +1,157 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest'
-import { NextApiRequest, NextApiResponse } from 'next'
+import { describe, it, expect, beforeEach, vi } from 'vitest'
+import { render, screen, fireEvent, waitFor } from '@testing-library/react'
+import { useRouter } from 'next/navigation'
+import LoginPage from '@/app/login/page'
 
-const mockSignInWithPassword = vi.fn()
+// Mock Next.js router
+vi.mock('next/navigation', () => ({
+  useRouter: vi.fn()
+}))
 
-vi.mock('@supabase/supabase-js', () => ({
-  createClient: vi.fn(() => ({
+// Mock Supabase client
+vi.mock('@/integrations/supabase/client', () => ({
+  supabase: {
     auth: {
-      signInWithPassword: mockSignInWithPassword,
+      signInWithPassword: vi.fn(),
       signUp: vi.fn(),
-      onAuthStateChange: vi.fn(() => ({ data: { subscription: { unsubscribe: vi.fn() } } })),
-      getSession: vi.fn().mockResolvedValue({ data: { session: null }, error: null })
-    },
-    from: vi.fn().mockReturnThis()
-  }))
-}));
-
-// Import the handler AFTER setting up the mock
-import loginHandler from '../../pages/api/auth/login'
-
-// Helper to create mock NextApiRequest
-const mockApiReq = (body: unknown, method: string = 'POST') => ({
-  method,
-  body
-} as NextApiRequest)
-
-// Helper to create mock NextApiResponse
-const mockApiRes = () => {
-  const res: Partial<NextApiResponse> = {
-    status: vi.fn().mockReturnThis(),
-    json: vi.fn().mockReturnThis(),
-    setHeader: vi.fn().mockReturnThis(),
-    end: vi.fn().mockReturnThis()
-  }
-  return res as NextApiResponse
-}
-
-describe('/api/auth/login API Handler', () => {
-  beforeEach(() => {
-    mockSignInWithPassword.mockReset()
-  })
-
-  it('should return 405 if method is not POST', async () => {
-    const req = mockApiReq({}, 'GET')
-    const res = mockApiRes()
-    await loginHandler(req, res)
-    expect(res.status).toHaveBeenCalledWith(405)
-    expect(res.end).toHaveBeenCalled()
-  })
-
-  it('should successfully log in a verified user and set authToken cookie', async () => {
-    const testEmail = 'verified@example.com'
-    const testPassword = 'password123'
-    const mockAuthToken = 'mock-access-token'
-    const mockSessionData = {
-      access_token: mockAuthToken,
-      refresh_token: 'mock-refresh-token'
+      signOut: vi.fn(),
+      onAuthStateChange: vi.fn(() => ({
+        data: { subscription: { unsubscribe: vi.fn() } }
+      }))
     }
-    const mockUserData = { id: 'user-123', email: testEmail }
+  }
+}))
 
-    mockSignInWithPassword.mockResolvedValueOnce({
-      data: {
-        user: mockUserData,
-        session: mockSessionData
-      },
+// Mock Analytics context
+vi.mock('@/app/contexts/AnalyticsContext', () => ({
+  useAnalytics: () => ({
+    trackEvent: vi.fn(),
+    trackPageView: vi.fn(),
+    isLoaded: true
+  })
+}))
+
+describe('LoginPage', () => {
+  const mockPush = vi.fn()
+  const mockRouter = { push: mockPush }
+
+  beforeEach(() => {
+    vi.clearAllMocks()
+    ;(useRouter as any).mockReturnValue(mockRouter)
+  })
+
+  it('renders login form correctly', () => {
+    render(<LoginPage />)
+    
+    expect(screen.getByText('Welcome Back')).toBeInTheDocument()
+    expect(screen.getByLabelText(/email/i)).toBeInTheDocument()
+    expect(screen.getByLabelText(/password/i)).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /sign in/i })).toBeInTheDocument()
+  })
+
+  it('shows validation errors for empty fields', async () => {
+    render(<LoginPage />)
+    
+    const submitButton = screen.getByRole('button', { name: /sign in/i })
+    fireEvent.click(submitButton)
+
+    await waitFor(() => {
+      expect(screen.getByText('Email is required')).toBeInTheDocument()
+      expect(screen.getByText('Password is required')).toBeInTheDocument()
+    })
+  })
+
+  it('shows validation error for invalid email', async () => {
+    render(<LoginPage />)
+    
+    const emailInput = screen.getByLabelText(/email/i)
+    const submitButton = screen.getByRole('button', { name: /sign in/i })
+    
+    fireEvent.change(emailInput, { target: { value: 'invalid-email' } })
+    fireEvent.click(submitButton)
+
+    await waitFor(() => {
+      expect(screen.getByText('Please enter a valid email address')).toBeInTheDocument()
+    })
+  })
+
+  it('handles successful login', async () => {
+    const { supabase } = await import('@/integrations/supabase/client')
+    ;(supabase.auth.signInWithPassword as any).mockResolvedValue({
+      data: { user: { id: '123', email: 'test@example.com' } },
       error: null
     })
 
-    const req = mockApiReq({
-      email: testEmail,
-      password: testPassword
-    })
-    const res = mockApiRes()
+    render(<LoginPage />)
+    
+    const emailInput = screen.getByLabelText(/email/i)
+    const passwordInput = screen.getByLabelText(/password/i)
+    const submitButton = screen.getByRole('button', { name: /sign in/i })
+    
+    fireEvent.change(emailInput, { target: { value: 'test@example.com' } })
+    fireEvent.change(passwordInput, { target: { value: 'password123' } })
+    fireEvent.click(submitButton)
 
-    await loginHandler(req, res)
-
-    expect(res.status).toHaveBeenCalledWith(200)
-    expect(res.json).toHaveBeenCalledWith({
-      success: true,
-      user: mockUserData
+    await waitFor(() => {
+      expect(supabase.auth.signInWithPassword).toHaveBeenCalledWith({
+        email: 'test@example.com',
+        password: 'password123'
+      })
     })
-    expect(res.setHeader).toHaveBeenCalledWith(
-      'Set-Cookie',
-      expect.stringContaining('authToken=')
-    )
   })
 
-  it('should return 400 for invalid credentials', async () => {
-    mockSignInWithPassword.mockResolvedValueOnce({
-      data: { user: null, session: null },
+  it('handles login error', async () => {
+    const { supabase } = await import('@/integrations/supabase/client')
+    ;(supabase.auth.signInWithPassword as any).mockResolvedValue({
+      data: null,
       error: { message: 'Invalid credentials' }
     })
 
-    const req = mockApiReq({
-      email: 'invalid@example.com',
-      password: 'wrongpassword'
-    })
-    const res = mockApiRes()
+    render(<LoginPage />)
+    
+    const emailInput = screen.getByLabelText(/email/i)
+    const passwordInput = screen.getByLabelText(/password/i)
+    const submitButton = screen.getByRole('button', { name: /sign in/i })
+    
+    fireEvent.change(emailInput, { target: { value: 'test@example.com' } })
+    fireEvent.change(passwordInput, { target: { value: 'wrongpassword' } })
+    fireEvent.click(submitButton)
 
-    await loginHandler(req, res)
-
-    expect(res.status).toHaveBeenCalledWith(400)
-    expect(res.json).toHaveBeenCalledWith({
-      error: 'Invalid credentials'
+    await waitFor(() => {
+      expect(screen.getByText('Invalid credentials')).toBeInTheDocument()
     })
   })
 
-  it('should return 400 for missing email or password', async () => {
-    const req = mockApiReq({ email: 'test@example.com' }) // missing password
-    const res = mockApiRes()
+  it('toggles password visibility', () => {
+    render(<LoginPage />)
+    
+    const passwordInput = screen.getByLabelText(/password/i)
+    const toggleButton = screen.getByRole('button', { name: /toggle password visibility/i })
+    
+    expect(passwordInput).toHaveAttribute('type', 'password')
+    
+    fireEvent.click(toggleButton)
+    expect(passwordInput).toHaveAttribute('type', 'text')
+    
+    fireEvent.click(toggleButton)
+    expect(passwordInput).toHaveAttribute('type', 'password')
+  })
 
-    await loginHandler(req, res)
+  it('navigates to sign up page', () => {
+    render(<LoginPage />)
+    
+    const signUpLink = screen.getByText(/don't have an account/i)
+    fireEvent.click(signUpLink)
+    
+    expect(mockPush).toHaveBeenCalledWith('/signup')
+  })
 
-    expect(res.status).toHaveBeenCalledWith(400)
-    expect(res.json).toHaveBeenCalledWith({
-      error: 'Email and password are required'
-    })
+  it('navigates to forgot password page', () => {
+    render(<LoginPage />)
+    
+    const forgotPasswordLink = screen.getByText(/forgot your password/i)
+    fireEvent.click(forgotPasswordLink)
+    
+    expect(mockPush).toHaveBeenCalledWith('/forgot-password')
   })
 })
