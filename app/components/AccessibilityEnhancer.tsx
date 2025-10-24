@@ -4,6 +4,9 @@ import { useEffect } from 'react';
 
 export default function AccessibilityEnhancer() {
   useEffect(() => {
+    // Only run in browser
+    if (typeof window === 'undefined' || !document) return;
+
     // Add skip link functionality
     const addSkipLink = () => {
       const skipLink = document.createElement('a');
@@ -16,16 +19,11 @@ export default function AccessibilityEnhancer() {
         left: 6px;
         background: #2563eb;
         color: white;
-<<<<<<< HEAD
-        padding: 8px;
-=======
         padding: 8px 16px;
->>>>>>> 515ec9cbdfd47dd6dfdd38c0ed223b2c17b1851c
         text-decoration: none;
         border-radius: 4px;
         z-index: 1000;
         transition: top 0.3s;
-<<<<<<< HEAD
       `;
       
       skipLink.addEventListener('focus', () => {
@@ -39,33 +37,12 @@ export default function AccessibilityEnhancer() {
       document.body.insertBefore(skipLink, document.body.firstChild);
     };
 
-    // Add focus indicators
-    const addFocusIndicators = () => {
+    // Add focus indicators for keyboard navigation
+    const addFocusStyles = () => {
       const style = document.createElement('style');
       style.textContent = `
         *:focus {
-          outline: 2px solid #2563eb !important;
-=======
-      `
-      
-      skipLink.addEventListener('focus', () => {
-        skipLink.style.top = '6px'
-      })
-      
-      skipLink.addEventListener('blur', () => {
-        skipLink.style.top = '-40px'
-      })
-      
-      document.body.insertBefore(skipLink, document.body.firstChild)
-    }
-
-    // Add focus indicators for keyboard navigation
-    const addFocusStyles = () => {
-      const style = document.createElement('style')
-      style.textContent = `
-        *:focus {
           outline: 2px solid #3b82f6 !important;
->>>>>>> 515ec9cbdfd47dd6dfdd38c0ed223b2c17b1851c
           outline-offset: 2px !important;
         }
         
@@ -158,7 +135,7 @@ export default function AccessibilityEnhancer() {
 
     // Initialize all enhancements
     addSkipLink();
-    addFocusIndicators();
+    addFocusStyles();
     addAriaLandmarks();
     addKeyboardNavigation();
     addHighContrastSupport();
