@@ -30,7 +30,7 @@ const ContentCarousel: React.FC = () => {
         "Custom dashboards",
         "Automated reporting"
       ],
-      icon: <BarChart className="h-12 w-12" />,
+      icon: BarChart,
       color: "from-blue-500 to-cyan-500"
     },
     {
@@ -43,7 +43,7 @@ const ContentCarousel: React.FC = () => {
         "Advanced security",
         "24/7 monitoring"
       ],
-      icon: <Cloud className="h-12 w-12" />,
+      icon: Cloud,
       color: "from-green-500 to-emerald-500"
     },
     {
@@ -56,7 +56,7 @@ const ContentCarousel: React.FC = () => {
         "Incident response",
         "Security training"
       ],
-      icon: <Shield className="h-12 w-12" />,
+      icon: Shield,
       color: "from-red-500 to-pink-500"
     }
   ]

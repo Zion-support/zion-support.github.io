@@ -20,25 +20,25 @@ const AiChatbotBuilderPage: React.FC = () => {
     {
       title: 'Advanced Analytics',
       description: 'Track performance with detailed analytics, conversation insights, and user behavior data',
-      icon: <BarChart className="w-8 h-8 text-purple-400" />,
+      icon: BarChart,
       color: 'from-purple-500 to-pink-500'
     },
     {
       title: 'AI-Powered Responses',
       description: 'Leverage advanced NLP and machine learning for intelligent, context-aware conversations',
-      icon: <Brain className="w-8 h-8 text-orange-400" />,
+      icon: Brain,
       color: 'from-orange-500 to-red-500'
     },
     {
       title: 'Easy Integration',
       description: 'Seamlessly integrate with your existing systems, websites, and messaging platforms',
-      icon: <Workflow className="w-8 h-8 text-blue-400" />,
+      icon: Workflow,
       color: 'from-blue-500 to-cyan-500'
     },
     {
       title: 'Custom Branding',
       description: 'Customize the chatbot appearance to match your brand identity and design guidelines',
-      icon: <Settings className="w-8 h-8 text-indigo-400" />,
+      icon: Settings,
       color: 'from-indigo-500 to-purple-500'
     }
   ];
@@ -140,14 +140,14 @@ const AiChatbotBuilderPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
             >
               Start Building Free
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link
-              to="/ai-services"
+              href="/ai-services"
               className="inline-flex items-center px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
             >
               View All AI Services
@@ -271,7 +271,7 @@ const AiChatbotBuilderPage: React.FC = () => {
                   ))}
                 </ul>
                 <Link
-                  to="/contact"
+                  href="/contact"
                   className={`w-full inline-flex items-center justify-center px-6 py-3 font-semibold rounded-lg transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600'
@@ -298,14 +298,14 @@ const AiChatbotBuilderPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              to="/contact" 
+              href="/contact" 
               className="inline-flex items-center px-8 py-3 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
             >
               Start Building Today
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link 
-              to="/ai-services" 
+              href="/ai-services" 
               className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-600 transition-colors duration-300"
             >
               Explore All AI Services

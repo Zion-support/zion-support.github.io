@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import {Phone, Mail, Brain} from 'lucide-react';
 import React from 'react'
 import { ArrowRight, X, Brain, BarChart, Target, TrendingUp } from 'lucide-react'

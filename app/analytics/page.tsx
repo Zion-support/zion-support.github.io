@@ -6,22 +6,22 @@ import { ArrowRight, BarChart, TrendingUp, CheckCircle, Brain, Settings, Target,
 const AnalyticsPage: React.FC = () => {
   const features = [
     {
-      icon: <BarChart className="w-8 h-8 text-cyan-400" />,
+      icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive data analysis and visualization tools for deep business insights.'
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-purple-400" />,
+      icon: TrendingUp,
       title: 'Performance Tracking',
       description: 'Real-time performance monitoring and trend analysis across all business metrics.'
     },
     {
-      icon: <Brain className="w-8 h-8 text-green-400" />,
+      icon: Brain,
       title: 'AI-Powered Insights',
       description: 'Machine learning algorithms that identify patterns and predict future trends.'
     },
     {
-      icon: <Target className="w-8 h-8 text-orange-400" />,
+      icon: Target,
       title: 'Custom Dashboards',
       description: 'Personalized dashboards tailored to your specific business needs and KPIs.'
     }
@@ -50,14 +50,14 @@ const AnalyticsPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
             >
               Get Started
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link
-              to="/ai-services"
+              href="/ai-services"
               className="inline-flex items-center px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
             >
               View All AI Services
@@ -81,7 +81,7 @@ const AnalyticsPage: React.FC = () => {
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
                 <div className="mb-6">
-                  {feature.icon}
+                  <feature.icon className="w-8 h-8 text-cyan-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -139,14 +139,14 @@ const AnalyticsPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              to="/contact" 
+              href="/contact" 
               className="inline-flex items-center px-8 py-3 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
             >
               Start Your Analytics Journey
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link 
-              to="/ai-services" 
+              href="/ai-services" 
               className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-600 transition-colors duration-300"
             >
               Explore All AI Services

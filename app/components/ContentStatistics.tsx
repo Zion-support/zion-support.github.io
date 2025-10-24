@@ -61,37 +61,37 @@ const ContentStatistics: React.FC = () => {
 
   const stats = [
     {
-      icon: <Users className="h-8 w-8" />,
+      icon: Users,
       value: Math.round(counters.clients),
       label: "Happy Clients",
       color: "from-blue-500 to-cyan-500"
     },
     {
-      icon: <Target className="h-8 w-8" />,
+      icon: Target,
       value: Math.round(counters.projects),
       label: "Projects Completed",
       color: "from-green-500 to-emerald-500"
     },
     {
-      icon: <Star className="h-8 w-8" />,
+      icon: Star,
       value: `${Math.round(counters.satisfaction)}%`,
       label: "Client Satisfaction",
       color: "from-yellow-500 to-orange-500"
     },
     {
-      icon: <Clock className="h-8 w-8" />,
+      icon: Clock,
       value: Math.round(counters.years),
       label: "Years Experience",
       color: "from-purple-500 to-pink-500"
     },
     {
-      icon: <Globe className="h-8 w-8" />,
+      icon: Globe,
       value: Math.round(counters.countries),
       label: "Countries Served",
       color: "from-indigo-500 to-blue-500"
     },
     {
-      icon: <Zap className="h-8 w-8" />,
+      icon: Zap,
       value: `${Math.round(counters.uptime * 10) / 10}%`,
       label: "Uptime Guarantee",
       color: "from-red-500 to-pink-500"
