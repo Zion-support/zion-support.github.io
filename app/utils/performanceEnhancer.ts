@@ -140,9 +140,8 @@ export const preloadCriticalResources = () => {if (typeof window === 'undefined'
   criticalResources.forEach((resource) => {
     const link = document.createElement('link');
     link.rel = 'preload'
-    link.href = resource
     link.as = resource.endsWith('.woff2') ? 'font' : 'style'
-    if (resource.endsWith('.woff2')) {
+    if (resource.endsWith('.woff2'
       link.crossOrigin = 'anonymous'
 }
     document.head.appendChild(link);
