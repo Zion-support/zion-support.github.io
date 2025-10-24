@@ -1,4 +1,5 @@
-import React, { useState, useRef, useEffect, memo } from 'react';
+import React, { useState, useRef, useEffect, memo } from "react";
+import Image from "next/image";
 import { optimizeImageUrl, generateImagePlaceholder, lazyLoadImage } from '../utils/imageOptimizer';
 
 interface OptimizedImageProps {
@@ -78,28 +79,28 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
   return (
     <div className={`relative overflow-hidden ${className}`} style={{ width, height }}>
       {placeholder && !isLoaded && placeholderSrc && (
-        <img
+        <Image
           src={placeholderSrc}
           alt=""
+          width={width || 0}
+          height={height || 0}
           className="absolute inset-0 w-full h-full object-cover"
           aria-hidden="true"
         />
       )}
-      
-      <img
+      <Image
         ref={imgRef}
-        src={lazy ? undefined : optimizedSrc}
-        data-src={lazy ? optimizedSrc : undefined}
+        src={lazy ? placeholderSrc || '/placeholder.jpg' : optimizedSrc}
         alt={alt}
-        width={width}
-        height={height}
+        width={width || 0}
+        height={height || 0}
         onLoad={handleLoad}
         onError={handleError}
         className={`w-full h-full object-cover transition-opacity duration-300 ${
           isLoaded ? 'opacity-100' : 'opacity-0'
         }`}
         loading={lazy ? 'lazy' : 'eager'}
-        decoding="async"
+        quality={quality}
       />
     </div>
   );

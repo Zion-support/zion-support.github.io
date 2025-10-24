@@ -4,7 +4,6 @@ export interface User {
   name: string;
   role: 'admin' | 'user' | 'guest';
 }
-
 export interface Service {
   id: string;
   title: string;
@@ -26,7 +25,6 @@ export interface Service {
     phone: string;
   };
 }
-
 export interface ContactFormData {
   name: string;
   email: string;
@@ -34,13 +32,11 @@ export interface ContactFormData {
   message: string;
   service: string;
 }
-
 export interface AnalyticsEvent {
   name: string;
   timestamp: number;
   properties?: Record<string, any>;
 }
-
 export interface PerformanceMetrics {
   loadTime: number;
   firstContentfulPaint: number;
@@ -48,7 +44,6 @@ export interface PerformanceMetrics {
   cumulativeLayoutShift: number;
   firstInputDelay: number;
 }
-
 export interface ErrorContext {
   url?: string;
   userAgent?: string;
@@ -58,7 +53,6 @@ export interface ErrorContext {
   component?: string;
   action?: string;
 }
-
 export interface ErrorReport {
   id: string;
   message: string;
@@ -68,5 +62,4 @@ export interface ErrorReport {
   resolved: boolean;
   createdAt: string;
 }
-
 export type ErrorSeverity = 'low' | 'medium' | 'high' | 'critical';

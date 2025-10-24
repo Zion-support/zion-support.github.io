@@ -1,14 +1,39 @@
-import React from 'react''
-import '@testing-library/jest-dom''
-jest.mock('react-router-dom''
-  const actual = jest.requireActual('react-router-dom''
-      "pathname": '/'',
-      "search": ''',
-      "hash": ''',
-      "key": 'default'',
-      const mockReact = jest.requireActual('react''
-      return mockReact.createElement('a''
-      const mockReact = jest.requireActual('react''
-        "path": '/'',
-        "element": mockReact.createElement('div'';,
-    if (typeof args[0] === 'string' && args[0].includes('"Warning": ReactDOM.render is no longer supported''
+import '@testing-library/jest-dom';
+
+// Mock Next.js router
+jest.mock('next/router', () => ({
+  useRouter() {
+    return {
+      route: '/',
+      pathname: '/',
+      query: {},
+      asPath: '/',
+      push: jest.fn(),
+      pop: jest.fn(),
+      reload: jest.fn(),
+      back: jest.fn(),
+      prefetch: jest.fn().mockResolvedValue(undefined),
+      beforePopState: jest.fn(),
+      events: {
+        on: jest.fn(),
+        off: jest.fn(),
+        emit: jest.fn(),
+      },
+      isFallback: false,
+    };
+  },
+}));
+
+// Mock Next.js Image component
+jest.mock('next/image', () => {
+  return function MockedImage({ src, alt, ...props }) {
+    return <img src={src} alt={alt} {...props} />;
+  };
+});
+
+// Mock Next.js Link component
+jest.mock('next/link', () => {
+  return function MockedLink({ children, href, ...props }) {
+    return <a href={href} {...props}>{children}</a>;
+  };
+});

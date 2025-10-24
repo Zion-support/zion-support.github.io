@@ -1,14 +1,10 @@
 'use client';
-
 import React, { createContext, useContext, useEffect, useState } from 'react';
-
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
   trackPageView: (page: string) => void;
 }
-
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
   if (!context) {
@@ -16,14 +12,11 @@ export const useAnalytics = () => {
   }
   return context;
 };
-
 interface AnalyticsProviderProps {
   children: React.ReactNode;
 }
-
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-
   useEffect(() => {
     // Initialize Google Analytics
     if (typeof window !== 'undefined' && !window.gtag) {
@@ -31,7 +24,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       script.async = true;
       script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`;
       document.head.appendChild(script);
-
       script.onload = () => {
         window.dataLayer = window.dataLayer || [];
         window.gtag = function() {
@@ -45,13 +37,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       setIsLoaded(true);
     }
   }, []);
-
   const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
     if (isLoaded && window.gtag) {
       window.gtag('event', eventName, parameters);
     }
   };
-
   const trackPageView = (page: string) => {
     if (isLoaded && window.gtag) {
       window.gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
@@ -59,12 +49,10 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       });
     }
   };
-
   const value: AnalyticsContextType = {
     trackEvent,
     trackPageView
   };
-
   return (
     <AnalyticsContext.Provider value={value}>
       {children}

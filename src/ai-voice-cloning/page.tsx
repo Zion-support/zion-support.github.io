@@ -1,39 +1,24 @@
-import React from 'react''
-import { Play } from 'lucide-react''
-import Navigation from '../components/Navigation''
-import Footer from '../components/Footer''
-import SEOOptimizer from '../components/SEOOptimizer''
-import { CheckCircle, Zap, Music } from 'lucide-react''
-    'Voice Cloning''
-    'Text-to-Speech''
-    'Emotion Control''
-    'Multi-language Support''
-    'Voice Training''
-    'API Integration''
-    'Real-time Processing''
-    'High Quality Audio''
-    'Custom Voice Models''
-    'Batch Processing''
-    'Natural voice quality''
-    'Cost-effective solution''
-    'Scalable technology''
-    'Custom voices''
-    'Multi-language support''
-    'Easy integration''
-      "name": 'Starter'',
-      "price": '$19 9'',
-      "d": '/month''
-      "s": ['5 voice clones', '10hours/month', 'Basic emotions', 'Email support''
-    {"name": 'Professional'',
-      "price": '$29 9'',
-      "d": '/month''
-      "s": ['Unlimited clones', '50hours/month', 'Full emotions', 'API access', 'Priority support''
-    {"name": 'Enterprise'',
-      "price": '$59 9'',
-      "d": '/month''
-      "s": ['Everything in Pro', 'Unlimited hours', 'Custom training', 'Dedicated support', 'White-label''
-        keywords = {['AI voice cloning', 'voice synthesis', 'text to speech', 'voice generation', 'AI voices', 'voiceautomation''
-                <div key = {index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : '''
-                        ? 'cyber-button''
-                        : '';
-      "r": text-slate-900''
+import React from "react";
+
+interface PagePageProps {
+  // Add props here
+}
+
+const PagePage: React.FC<PagePageProps> = () => {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">
+          
+        </h1>
+        <div className="prose max-w-none">
+          <p className="text-lg text-gray-600">
+            This is a placeholder for the  page.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default PagePage;

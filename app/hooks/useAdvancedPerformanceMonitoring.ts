@@ -1,5 +1,4 @@
-import { useEffect, useCallback, useRef } from 'react';
-
+import { useEffect, useCallback, useRef } from "'react';"
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -13,7 +12,6 @@ interface PerformanceMetrics {
     firstContentfulPaint: number;
   } | null;
 }
-
 interface PerformanceMonitoringOptions {
   enableWebVitals?: boolean;
   enableNavigationTiming?: boolean;
@@ -23,7 +21,6 @@ interface PerformanceMonitoringOptions {
   reportInterval?: number;
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
 }
-
 export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringOptions = {}) => {
   const {
     enableWebVitals = true,
@@ -34,7 +31,6 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
     reportInterval = 5000,
     onMetricsUpdate
   } = options;
-
   const metricsRef = useRef<PerformanceMetrics>({
     fcp: null,
     lcp: null,
@@ -43,33 +39,25 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
     ttfb: null,
     navigation: null
   });
-
   const observerRef = useRef<PerformanceObserver | null>(null);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
-
   const updateMetrics = useCallback((newMetrics: Partial<PerformanceMetrics>) => {
     metricsRef.current = { ...metricsRef.current, ...newMetrics };
     onMetricsUpdate?.(metricsRef.current);
   }, [onMetricsUpdate]);
-
   const measureWebVitals = useCallback(() => {
     if (!enableWebVitals || typeof window === 'undefined') return;
-
     // Load web-vitals library dynamically
     import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
       onCLS((metric: any) => {
         updateMetrics({ cls: metric.value });
       });
-
       onFCP((metric) => {
         updateMetrics({ fcp: metric.value });
       });
-
       onLCP((metric) => {
         updateMetrics({ lcp: metric.value });
       });
-
-
       onTTFB((metric) => {
         updateMetrics({ ttfb: metric.value });
       });
@@ -79,10 +67,8 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
       }
     });
   }, [enableWebVitals, updateMetrics]);
-
   const measureNavigationTiming = useCallback(() => {
     if (!enableNavigationTiming || typeof window === 'undefined') return;
-
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigation) {
       const navigationMetrics = {
@@ -91,7 +77,6 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
         firstPaint: 0,
         firstContentfulPaint: 0
       };
-
       // Get paint timing
       const paintEntries = performance.getEntriesByType('paint');
       paintEntries.forEach((entry) => {
@@ -101,14 +86,11 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
           navigationMetrics.firstContentfulPaint = entry.startTime;
         }
       });
-
       updateMetrics({ navigation: navigationMetrics });
     }
   }, [enableNavigationTiming, updateMetrics]);
-
   const measureResourceTiming = useCallback(() => {
     if (!enableResourceTiming || typeof window === 'undefined') return;
-
     const resources = performance.getEntriesByType('resource');
     const resourceMetrics = {
       totalResources: resources.length,
@@ -116,43 +98,34 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
       slowResources: 0,
       failedResources: 0
     };
-
     resources.forEach((resource) => {
       const resourceTiming = resource as PerformanceResourceTiming;
       resourceMetrics.totalSize += resourceTiming.transferSize || 0;
-      
       if (resourceTiming.duration > 1000) {
         resourceMetrics.slowResources++;
       }
-      
       if (resourceTiming.transferSize === 0 && resourceTiming.decodedBodySize > 0) {
         resourceMetrics.failedResources++;
       }
     });
-
     if (process.env.NODE_ENV === 'development') {
       console.log('Resource Metrics:', resourceMetrics);
     }
   }, [enableResourceTiming]);
-
   const measureMemoryUsage = useCallback(() => {
     if (!enableMemoryMonitoring || typeof window === 'undefined' || !('memory' in performance)) return;
-
     const memory = (performance as any).memory;
     const memoryMetrics = {
       usedJSHeapSize: memory.usedJSHeapSize,
       totalJSHeapSize: memory.totalJSHeapSize,
       jsHeapSizeLimit: memory.jsHeapSizeLimit
     };
-
     if (process.env.NODE_ENV === 'development') {
       console.log('Memory Usage:', memoryMetrics);
     }
   }, [enableMemoryMonitoring]);
-
   const measureNetworkInfo = useCallback(() => {
     if (!enableNetworkMonitoring || typeof window === 'undefined' || !('connection' in navigator)) return;
-
     const connection = (navigator as any).connection;
     const networkInfo = {
       effectiveType: connection.effectiveType,
@@ -160,15 +133,12 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
       rtt: connection.rtt,
       saveData: connection.saveData
     };
-
     if (process.env.NODE_ENV === 'development') {
       console.log('Network Info:', networkInfo);
     }
   }, [enableNetworkMonitoring]);
-
   const startPerformanceObserver = useCallback(() => {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
-
     try {
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
@@ -177,7 +147,6 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
           }
         });
       });
-
       observer.observe({ entryTypes: ['measure', 'navigation', 'resource', 'paint'] });
       observerRef.current = observer;
     } catch (error) {
@@ -186,17 +155,14 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
       }
     }
   }, []);
-
   const startPeriodicMonitoring = useCallback(() => {
     if (reportInterval <= 0) return;
-
     intervalRef.current = setInterval(() => {
       measureMemoryUsage();
       measureNetworkInfo();
       measureResourceTiming();
     }, reportInterval);
   }, [measureMemoryUsage, measureNetworkInfo, measureResourceTiming, reportInterval]);
-
   useEffect(() => {
     // Initial measurements
     measureWebVitals();
@@ -204,11 +170,9 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
     measureResourceTiming();
     measureMemoryUsage();
     measureNetworkInfo();
-
     // Start observers and monitoring
     startPerformanceObserver();
     startPeriodicMonitoring();
-
     return () => {
       if (observerRef.current) {
         observerRef.current.disconnect();
@@ -226,15 +190,12 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
     startPerformanceObserver,
     startPeriodicMonitoring
   ]);
-
   const getCurrentMetrics = useCallback(() => metricsRef.current, []);
-
   const markPerformance = useCallback((name: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       performance.mark(name);
     }
   }, []);
-
   const measurePerformance = useCallback((name: string, startMark: string, endMark?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       if (endMark) {
@@ -244,7 +205,6 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
       }
     }
   }, []);
-
   return {
     metrics: metricsRef.current,
     getCurrentMetrics,

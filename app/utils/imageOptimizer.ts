@@ -1,7 +1,6 @@
 /**
  * Image optimization utilities for better performance
  */
-
 export interface ImageOptimizationOptions {
   quality?: number;
   format?: 'webp' | 'avif' | 'jpeg' | 'png';
@@ -9,7 +8,6 @@ export interface ImageOptimizationOptions {
   height?: number;
   blur?: boolean;
 }
-
 export const optimizeImageUrl = (
   src: string,
   options: ImageOptimizationOptions = {}
@@ -21,7 +19,6 @@ export const optimizeImageUrl = (
     height,
     blur = false
   } = options;
-
   // For external images, use a placeholder service or CDN
   if (src.startsWith('http')) {
     // If using a CDN like Cloudinary, Vercel, or similar
@@ -31,13 +28,10 @@ export const optimizeImageUrl = (
     if (width) params.set('w', width.toString());
     if (height) params.set('h', height.toString());
     if (blur) params.set('blur', '20');
-    
     return `${src}?${params.toString()}`;
   }
-
   return src;
 };
-
 export const generateImagePlaceholder = (width: number, height: number): string => {
   return `data:image/svg+xml;base64,${btoa(`
     <svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
@@ -48,7 +42,6 @@ export const generateImagePlaceholder = (width: number, height: number): string 
     </svg>
   `)}`;
 };
-
 export const preloadCriticalImages = (imageUrls: string[]): void => {
   imageUrls.forEach((url) => {
     const link = document.createElement('link');
@@ -58,7 +51,6 @@ export const preloadCriticalImages = (imageUrls: string[]): void => {
     document.head.appendChild(link);
   });
 };
-
 export const lazyLoadImage = (img: HTMLImageElement): void => {
   const observer = new IntersectionObserver(
     (entries) => {
@@ -75,6 +67,5 @@ export const lazyLoadImage = (img: HTMLImageElement): void => {
     },
     { rootMargin: '50px' }
   );
-
   observer.observe(img);
 };

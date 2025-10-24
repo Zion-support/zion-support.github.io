@@ -1,7 +1,6 @@
 /**
  * Security configuration and utilities
  */
-
 export const SECURITY_CONFIG = {
   // Content Security Policy
   CSP: {
@@ -41,7 +40,6 @@ export const SECURITY_CONFIG = {
     'form-action': ["'self'"],
     'frame-ancestors': ["'none'"]
   },
-
   // Rate limiting configuration
   RATE_LIMITS: {
     api: {
@@ -55,7 +53,6 @@ export const SECURITY_CONFIG = {
       message: 'Too many contact form submissions, please try again later.'
     }
   },
-
   // Security headers
   HEADERS: {
     'X-Content-Type-Options': 'nosniff',
@@ -65,7 +62,6 @@ export const SECURITY_CONFIG = {
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
   },
-
   // Input validation patterns
   VALIDATION: {
     email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
@@ -75,7 +71,6 @@ export const SECURITY_CONFIG = {
     alphanumeric: /^[a-zA-Z0-9\s]+$/,
     noScript: /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi
   },
-
   // Sanitization options
   SANITIZATION: {
     allowedTags: ['p', 'br', 'strong', 'em', 'u', 'a', 'ul', 'ol', 'li'],
@@ -85,22 +80,18 @@ export const SECURITY_CONFIG = {
     allowedSchemes: ['http', 'https', 'mailto', 'tel']
   }
 };
-
 export const generateCSPHeader = (): string => {
   return Object.entries(SECURITY_CONFIG.CSP)
     .map(([directive, sources]) => `${directive} ${sources.join(' ')}`)
     .join('; ');
 };
-
 export const validateInput = (input: string, type: keyof typeof SECURITY_CONFIG.VALIDATION): boolean => {
   const pattern = SECURITY_CONFIG.VALIDATION[type];
   return pattern.test(input);
 };
-
 export const sanitizeInput = (input: string): string => {
   // Remove script tags
   let sanitized = input.replace(SECURITY_CONFIG.VALIDATION.noScript, '');
-  
   // Basic HTML entity encoding
   sanitized = sanitized
     .replace(/&/g, '&amp;')
@@ -109,28 +100,23 @@ export const sanitizeInput = (input: string): string => {
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#x27;')
     .replace(/\//g, '&#x2F;');
-  
   return sanitized;
 };
-
 export const generateSecurityHeaders = (): Record<string, string> => {
   return {
     ...SECURITY_CONFIG.HEADERS,
     'Content-Security-Policy': generateCSPHeader()
   };
 };
-
 export const isSecureContext = (): boolean => {
   if (typeof window === 'undefined') return false;
   return window.isSecureContext || window.location.protocol === 'https:';
 };
-
 export const validateCSRFToken = (token: string, sessionToken: string): boolean => {
   // In a real application, you would validate against a stored session token
   // This is a simplified example
   return token === sessionToken && token.length > 0;
 };
-
 export const generateCSRFToken = (): string => {
   const array = new Uint8Array(32);
   crypto.getRandomValues(array);

@@ -2,18 +2,15 @@
  * Sitemap Generator
  * Generates sitemap and robots.txt for SEO optimization
  */
-
 export interface SitemapEntry {
   loc: string;
   lastmod: string;
   changefreq: string;
   priority: number;
 }
-
 export const generateSitemap = (): SitemapEntry[] => {
   const baseUrl = 'https://ziontechgroup.com';
   const currentDate = new Date().toISOString();
-
   return [
     {
       loc: `${baseUrl}/`,
@@ -71,27 +68,21 @@ export const generateSitemap = (): SitemapEntry[] => {
     }
   ];
 };
-
 export const generateRobotsTxt = (): string => {
   const baseUrl = 'https://ziontechgroup.com';
-  
   return `User-agent: *
 Allow: /
-
 Sitemap: ${baseUrl}/sitemap.xml
 Sitemap: ${baseUrl}/sitemap-pages.xml
 Sitemap: ${baseUrl}/sitemap-blog.xml
-
 # Crawl-delay for better server performance
 Crawl-delay: 1
-
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /private/`;
 };
-
 export const generateSitemapXml = (entries: SitemapEntry[]): string => {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -102,6 +93,5 @@ ${entries.map(entry => `  <url>
     <priority>${entry.priority}</priority>
   </url>`).join('\n')}
 </urlset>`;
-
   return xml;
 };

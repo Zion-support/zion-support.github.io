@@ -1,19 +1,21 @@
-<<<<<<< HEAD
-import type { Metadata } from 'next'';import { Inter } from 'next/font/google'';import './globals.css'';const inter = Inter({ subsets: ['latin'] })';export const metadata: Metadata = {title: title,;
-description: description,;
-keywords: 'AI solutions, IT services, quantum computing, autonomous systems, enterprise technology'';}
-export default function RootLayout({children
-}: {children: React.ReactNode
-}) {return (
-    <html lang="en">";      <body className={inter.className}>
+import React from "react";
+
+interface RootLayoutProps {
+  children: React.ReactNode;
+}
+
+const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
+  return (
+    <html lang="en">
+      <head>
+        <title>Zion Tech Group</title>
+        <meta name="description" content="Leading provider of AI and IT solutions" />
+      </head>
+      <body>
         {children}
       </body>
-    </html>;
-  )};
-=======
-import type { Metadata } from 'next''
-import { Inter } from 'next/font/google''
-import './globals.css''
-const inter = Inter({ "subsets": ['latin'';,
-  "keywords": 'AI solutions, IT services, quantum computing, autonomous systems, enterprise technology''
->>>>>>> cursor/fix-errors-and-merge-to-main-45ea
+    </html>
+  );
+};
+
+export default RootLayout;
