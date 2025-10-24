@@ -9,7 +9,6 @@ const nextConfig = {
   
   // Disable static generation to avoid serialization issues
   experimental: {
-    missingSuspenseWithCSRBailout: false,
     optimizePackageImports: ['@heroicons/react', 'lucide-react', 'framer-motion'],
     webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
   },

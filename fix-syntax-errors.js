@@ -1,279 +1,125 @@
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
-// Function to fix common syntax errors in TSX files
-function fixSyntaxErrors(content) {
-  let fixed = content;
-  
-  // Fix missing semicolons after imports
-  fixed = fixed.replace(/(import[^;]+)(\n)/g, '$1;$2');
-  
-  // Fix missing semicolons after variable declarations
-  fixed = fixed.replace(/(const|let|var)\s+(\w+)\s*=\s*[^;]+(\n)/g, (match, decl, varName, newline) => {
-    if (!match.includes(';')) {
-      return match.replace(newline, ';' + newline);
-    }
-    return match;
-  });
-  
-  // Fix malformed function declarations
-  fixed = fixed.replace(/const(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\}/g, 'const $1: React.FC = () => {');
-  fixed = fixed.replace(/const(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\s*return\s*\(\)\s*;/g, 'const $1: React.FC = () => {');
-  
-  // Fix malformed JSX return statements
-  fixed = fixed.replace(/return\s*\(\s*\)\s*;/g, 'return (');
-  fixed = fixed.replace(/return\s*\(\s*\)\s*<>/g, 'return (<>');
-  
-  // Fix missing closing parentheses and brackets
-  fixed = fixed.replace(/\(\s*\)\s*<>/g, '(<');
-  fixed = fixed.replace(/\(\s*\)\s*<\/>/g, '(</>');
-  
-  // Fix malformed array declarations
-  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\[\s*\]\s*(\w+)/g, 'const $1 = [\n    $2');
-  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\[\s*(\w+)/g, 'const $1 = [\n    $2');
-  
-  // Fix malformed object declarations
-  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\[\s*\{/g, 'const $1 = [\n    {');
-  
-  // Fix missing closing brackets for arrays
-  fixed = fixed.replace(/(\w+)\s*\]\s*(\w+)/g, '$1\n  ];\n  const $2');
-  
-  // Fix malformed JSX attributes
-  fixed = fixed.replace(/title=&quot;([^&]+)&quot;/g, 'title="$1"');
-  fixed = fixed.replace(/description=&quot;([^&]+)&quot;/g, 'description="$1"');
-  fixed = fixed.replace(/className=&quot;([^&]+)&quot;/g, 'className="$1"');
-  fixed = fixed.replace(/href=&quot;([^&]+)&quot;/g, 'href="$1"');
-  fixed = fixed.replace(/id=&quot;([^&]+)&quot;/g, 'id="$1"');
-  
-  // Fix malformed JSX closing tags
-  fixed = fixed.replace(/<\/div>\s*<\/div>\s*<\/div>/g, '</div>\n            </div>\n          </div>');
-  
-  // Fix missing semicolons after function calls
-  fixed = fixed.replace(/(\w+)\s*\(\s*\)\s*(\n)/g, '$1();$2');
-  
-  // Fix malformed export statements
-  fixed = fixed.replace(/export default (\w+)\s*$/g, 'export default $1;');
-  
-  // Fix duplicate imports
-  const lines = fixed.split('\n');
-  const seenImports = new Set();
-  const filteredLines = lines.filter(line => {
-    if (line.trim().startsWith('import ')) {
-      if (seenImports.has(line.trim())) {
-        return false;
-      }
-      seenImports.add(line.trim());
-    }
-    return true;
-  });
-  fixed = filteredLines.join('\n');
-  
-  // Fix malformed function parameters
-  fixed = fixed.replace(/\(\{\s*children\s*\}\s*:\s*\{\s*children:\s*React\.ReactNode\s*\}\s*\)/g, '({ children }: { children: React.ReactNode })');
-  
-  // Fix malformed JSX structure
-  fixed = fixed.replace(/<>\s*<\/div>\s*<\/>/g, '<>\n        </div>\n      </>');
-  
-  return fixed;
-}
-
-<<<<<<< HEAD
-// Function to process a single file
-function processFile(filePath) {
+function fixSyntaxErrors(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixSyntaxErrors(content);
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
     
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+    // Fix common syntax errors from merge conflict resolution
+    const fixes = [
+      // Fix malformed JSX with extra characters
+      { pattern: /,\s*-\s*>\s*([^<]+)/g, replacement: '>' },
+      { pattern: /`\s*-\s*>\s*([^<]+)/g, replacement: '>' },
+      { pattern: /`\s*---\s*-\s*>\s*([^<]+)/g, replacement: '>' },
+      
+      // Fix malformed function declarations
+      { pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*{\s*return\(\<\>\)\s*\)/g, replacement: 'const $1: React.FC = () => {\n  return (\n    <div>' },
+      
+      // Fix malformed JSX closing tags
+      { pattern: /\)\s*\)\s*\)/g, replacement: ')' },
+      { pattern: /\)\s*\)\s*\)\s*\)/g, replacement: ')' },
+      
+      // Fix malformed imports in the middle of functions
+      { pattern: /export default function\s+\w+\(\)\s*{\s*\n\s*import\s+/g, replacement: 'import ' },
+      
+      // Fix malformed JSX attributes
+      { pattern: /className="([^"]*)\s*,\s*-\s*>\s*([^"]*)"/g, replacement: 'className="$1$2"' },
+      
+      // Fix malformed closing tags
+      { pattern: /<\/div><\/div><\/div>/g, replacement: '</div>' },
+      
+      // Fix malformed return statements
+      { pattern: /return\s*\(\s*\)\s*\)/g, replacement: 'return (' },
+      
+      // Fix malformed JSX fragments
+      { pattern: /return\(\<\>\)\s*\)/g, replacement: 'return (\n    <div>' },
+      
+      // Fix malformed function names
+      { pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*{\s*return\(\<\>\)\s*\)/g, replacement: 'const $1: React.FC = () => {\n  return (\n    <div>' },
+      
+      // Fix malformed closing braces
+      { pattern: /}\s*\)\s*\)\s*\)/g, replacement: '}' },
+      
+      // Fix malformed JSX with extra characters
+      { pattern: /,\s*-\s*>\s*([^<]+)/g, replacement: '>' },
+      { pattern: /`\s*-\s*>\s*([^<]+)/g, replacement: '>' },
+      
+      // Fix malformed className attributes
+      { pattern: /className="([^"]*)\s*,\s*-\s*>\s*([^"]*)"/g, replacement: 'className="$1$2"' },
+      
+      // Fix malformed closing tags with extra characters
+      { pattern: /<\/div><\/div><\/div>/g, replacement: '</div>' },
+      
+      // Fix malformed return statements
+      { pattern: /return\s*\(\s*\)\s*\)/g, replacement: 'return (' },
+      
+      // Fix malformed JSX fragments
+      { pattern: /return\(\<\>\)\s*\)/g, replacement: 'return (\n    <div>' },
+      
+      // Fix malformed function names
+      { pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*{\s*return\(\<\>\)\s*\)/g, replacement: 'const $1: React.FC = () => {\n  return (\n    <div>' },
+      
+      // Fix malformed closing braces
+      { pattern: /}\s*\)\s*\)\s*\)/g, replacement: '}' },
+    ];
+    
+    for (const fix of fixes) {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed syntax errors in: ${filePath}`);
       return true;
     }
+    
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to recursively find and process TSX files
-function processDirectory(dirPath) {
-  let processedCount = 0;
+function findFilesWithSyntaxErrors(dir) {
+  const files = [];
   
-  try {
-    const items = fs.readdirSync(dirPath);
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
     
     for (const item of items) {
-      const fullPath = path.join(dirPath, item);
+      const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        processedCount += processDirectory(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-        if (processFile(fullPath)) {
-          processedCount++;
+        traverse(fullPath);
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts'))) {
+        const content = fs.readFileSync(fullPath, 'utf8');
+        // Check for common syntax errors
+        if (content.includes('->') || content.includes('`-') || content.includes('return(<>))') || content.includes('const ') && content.includes(': React.FC = () => {') && content.includes('return(<>))')) {
+          files.push(fullPath);
         }
       }
     }
-  } catch (error) {
-    console.error(`Error processing directory ${dirPath}:`, error.message);
   }
   
-  return processedCount;
+  traverse(dir);
+  return files;
 }
 
-// Main execution
-console.log('Starting syntax error fixes...');
-const processedCount = processDirectory('/workspace');
-console.log(`Processed ${processedCount} files with syntax fixes.`);
-=======
-<<<<<<< HEAD
-export default function Page() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional services coming soon." />
-      </Helmet>
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">
-          Coming Soon
-        </h1>
-        <p className="text-lg text-gray-300 mb-8">
-          Professional services coming soon.
-        </p>
-        <Link
-          to="/contact"
-          className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-        >
-          Contact Us
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Link>
-      </div>
-    </div>
-  );
-}
-=======
-// Function to fix syntax errors in a file
-function fixSyntaxErrors(filePath) {
-  try {
-    if (!fs.existsSync(filePath) || (!filePath.endsWith('.tsx') && !filePath.endsWith('.ts'))) {
-      return;
-    }
+// Find and fix files with syntax errors
+const filesWithErrors = findFilesWithSyntaxErrors('./app');
+console.log(`Found ${filesWithErrors.length} files with potential syntax errors`);
 
-    const content = fs.readFileSync(filePath, 'utf8');
-    const lines = content.split('\n');
-    
-    // Fix common syntax errors
-    let fixed = false;
-    const newLines = [];
-    
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      // Fix malformed import statements
-      if (line.trim() === 'import { ' && i + 1 < lines.length) {
-        const nextLine = lines[i + 1];
-        if (nextLine.trim().startsWith('import { ')) {
-          // Skip the malformed line and use the next one
-          continue;
-        }
-      }
-      
-      // Fix duplicate import statements
-      if (line.trim().startsWith('import { ') && i + 1 < lines.length) {
-        const nextLine = lines[i + 1];
-        if (nextLine.trim().startsWith('import { ') && line.trim() === nextLine.trim()) {
-          // Skip duplicate
-          continue;
-        }
-      }
-      
-      // Fix incomplete import statements
-      if (line.trim() === 'import { ' && i + 1 < lines.length) {
-        const nextLine = lines[i + 1];
-        if (nextLine.trim().startsWith('} from ')) {
-          // Merge the lines
-          newLines.push('import { ' + nextLine.trim().substring(1));
-          i++; // Skip the next line
-          continue;
-        }
-      }
-      
-      newLines.push(line);
-    }
-    
-    const newContent = newLines.join('\n');
-    
-    if (newContent !== content) {
-      fs.writeFileSync(filePath, newContent);
-      console.log(`Fixed syntax errors in: ${filePath}`);
-      fixed = true;
-    }
-    
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+let fixedCount = 0;
+for (const file of filesWithErrors) {
+  if (fixSyntaxErrors(file)) {
+    fixedCount++;
   }
 }
 
-// Function to recursively find all TypeScript files
-function findFiles(dir, fileList = []) {
-  const files = fs.readdirSync(dir);
-  
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory() && !file.includes('node_modules') && !file.includes('.git')) {
-      findFiles(filePath, fileList);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      fileList.push(filePath);
-    }
-  });
-  
-  return fileList;
-}
-
-// Main execution
-console.log('Starting to fix syntax errors...');
-
-const files = findFiles('/workspace/app');
-files.forEach(file => {
-  fixSyntaxErrors(file);
-});
-
-console.log('Finished fixing syntax errors.');
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0314
-=======
-    // Fix JSX fragment issues;
-        modified = true;
-        return `<div>${inner}</div>`;
-      return match;
-    });
-
-    // Fix unclosed JSX tags by adding proper closing tags;
-    ];
-
-      // Find unclosed opening tags;
-      const openTagRegex = new RegExp(`<${tag}([^>]*)>(?!.*</${tag}>
-  )`, 'gs');
-      const matches = content.match(openTagRegex);
-
-        // This is a complex fix, let's use a simpler approach;
-        // Just ensure proper closing for common patterns;
-        content = content.replace(new RegExp(`<${tag}([^>]*)>\\s*$`, 'gm'), `<${tag}$1></${tag}>`);
-        modified = true;
-
-    // Fix missing closing tags for self-closing elements;
-    const selfClosingElements = ['img', 'br', 'hr', 'input', 'meta', 'link'];
-      content = content.replace(new RegExp(`<${element}([^>]*?)(?<!/)>`, 'g'), `<${element}$1   />`);
-      modified = true;
-
-    // Fix JSX expressions that need wrapping;
-    content = content.replace(/\{([^}]*?)\s*\}\s*\{([^}]*?)\s*\}/g, '{$1}{$2}');
-
-    // Fix missing semicolons in JSX;
-    content = content.replace(/(\w+)\s*(\n\s*
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-048f
+console.log(`Fixed ${fixedCount} files`);
