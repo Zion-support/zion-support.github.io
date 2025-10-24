@@ -20,11 +20,12 @@ export interface Metadata {
     description?: string;
     url?: string;
     siteName?: string;
-    images?: Array</string><{;
-      url: string,
+    images?: Array<{
+      url: string;
       width?: number;
       height?: number;
-      alt?: string}>
+      alt?: string;
+    }>;
     locale?: string;
     type?: string;
     authors?: Array<{ name: string; url?: string }> | string[]

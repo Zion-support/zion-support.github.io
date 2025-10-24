@@ -35,12 +35,27 @@ const benefits = [
   "Scale your business with cloud solutions",
   "Make data-driven decisions with analytics",
   "Enhance security with advanced monitoring",
-  "Improve customer experience with AI";
+  "Improve customer experience with AI"
 ];
 
+import Footer from '../components/Footer';
 
-import Footer from '../components/Footer';const Header: React.FC = ($2) => {
-$3
+const Header: React.FC = () => {
+  return (
+    <header className="bg-gray-900 text-white">
+      <div className="container mx-auto px-4 py-6">
+        <div className="flex justify-between items-center">
+          <div className="text-2xl font-bold">Zion Tech Group</div>
+          <nav className="hidden md:flex space-x-6">
+            <a href="/" className="hover:text-blue-400">Home</a>
+            <a href="/services" className="hover:text-blue-400">Services</a>
+            <a href="/about" className="hover:text-blue-400">About</a>
+            <a href="/contact" className="hover:text-blue-400">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+  );
 };
         <section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20">
         <div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
