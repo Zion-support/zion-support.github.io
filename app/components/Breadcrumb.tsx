@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { Home, ChevronRight } from 'lucide-react'
-import { useLocation } from 'react-router-dom'
+import Link from 'next/link'
 
 interface BreadcrumbItem {
   name: string
@@ -11,101 +10,33 @@ interface BreadcrumbItem {
 }
 
 const Breadcrumb: React.FC = () => {
-  const location = useLocation()
-
-  if (location.pathname === '/') {
-    return null
-  }
-
-  const pathSegments = location.pathname.split('/').filter(segment => segment !== '')
+  // For Next.js, we'll use a simple breadcrumb implementation
+  // In a real app, you'd get the current path from usePathname or useRouter
+  
   const breadcrumbItems: BreadcrumbItem[] = [
-    { name: 'Home', path: '/', icon: Home }
+    { name: 'Home', path: '/', icon: Home },
+    { name: 'Services', path: '/services' },
+    { name: 'AI Solutions', path: '/ai-solutions' }
   ]
 
-  pathSegments.forEach((segment, index) => {
-    const path = '/' + pathSegments.slice(0, index + 1).join('/')
-    const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ')
-    breadcrumbItems.push({ name, path, icon: null })
-  })
-
   return (
-    <nav aria-label="Breadcrumb" className="bg-slate-800/50 backdrop-blur-sm border-b border-slate-700">
-      <div className="max-w-7xl mx-auto px-4 py-3">
-        <ol className="flex items-center space-x-2 text-sm">
-          {breadcrumbItems.map((item, index) => (
-            <li key={item.path} className="flex items-center">
-              {index > 0 && (
-                <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
-              )}
-              <a
-                href={item.path}
-                className={`flex items-center space-x-1 transition-colors duration-200 ${
-                  index === breadcrumbItems.length - 1
-                    ? 'text-cyan-400 font-medium'
-                    : 'text-gray-300 hover:text-cyan-400'
-                }`}
-              >
-                {item.icon && <item.icon className="w-4 h-4" />}
-                <span>{item.name}</span>
-              </a>
-            </li>
-          ))}
-        </ol>
-      </div>
+    <nav className="flex items-center space-x-2 text-sm text-gray-500 mb-4">
+      {breadcrumbItems.map((item, index) => (
+        <React.Fragment key={item.path}>
+          {index > 0 && (
+            <ChevronRight className="w-4 h-4 text-gray-400" />
+          )}
+          <Link
+            href={item.path}
+            className="flex items-center space-x-1 hover:text-gray-700 transition-colors"
+          >
+            {item.icon && <item.icon className="w-4 h-4" />}
+            <span>{item.name}</span>
+          </Link>
+        </React.Fragment>
+      ))}
     </nav>
   )
 }
 
 export default Breadcrumb
-=======
-'use client';
-
-import React from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { ChevronRight, Home } from 'lucide-react';
-
-export default function Breadcrumb() {
-  const pathname = usePathname();
-  const pathnames = pathname.split('/').filter((x) => x);
-  
-  if (pathnames.length === 0) {
-    return null;
-  }
-
-  return (
-    <nav className="bg-gray-800 text-white py-2 px-4">
-      <div className="container mx-auto">
-        <ol className="flex items-center space-x-2 text-sm">
-          <li>
-            <Link href="/" className="flex items-center hover:text-blue-400 transition-colors">
-              <Home className="w-4 h-4 mr-1" />
-              Home
-            </Link>
-          </li>
-          {pathnames.map((name, index) => {
-            const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
-            const isLast = index === pathnames.length - 1;
-            
-            return (
-              <li key={name} className="flex items-center">
-                <ChevronRight className="w-4 h-4 mx-2 text-gray-400" />
-                {isLast ? (
-                  <span className="text-gray-300 capitalize">{name.replace(/-/g, ' ')}</span>
-                ) : (
-                  <Link 
-                    href={routeTo} 
-                    className="hover:text-blue-400 transition-colors capitalize"
-                  >
-                    {name.replace(/-/g, ' ')}
-                  </Link>
-                )}
-              </li>
-            );
-          })}
-        </ol>
-      </div>
-    </nav>
-  );
-}
->>>>>>> 9dec2721a0f50ac14397b8d140dbd45d3cfacd15
