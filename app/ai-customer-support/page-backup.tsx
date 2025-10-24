@@ -2,8 +2,6 @@
 import React from 'react';
 
 export default function AiCustomerSupportBackup() {
-  AiCustomerSupportBackup.displayName = 'AI Customer Support Backup';
-  
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -19,3 +17,5 @@ export default function AiCustomerSupportBackup() {
     </div>
   );
 }
+
+AiCustomerSupportBackup.displayName = 'AI Customer Support Backup';
