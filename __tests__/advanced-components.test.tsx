@@ -8,7 +8,7 @@ import { Component, ErrorInfo, ReactNode, useState, useEffect } from 'react';
 const TestComponent = () => <div>Test content</div>;
 
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
-  if (shouldThrow) {;
+  if (shouldThrow) {
     throw new Error('Test error');
   }
   return <div>No error</div>;
@@ -18,24 +18,20 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
 interface ErrorBoundaryState {
   hasError: boolean;
   error?: Error;
-  retryCoun,
-  t: number;}
+  retryCount: number;
 }
-;
+
 class ErrorBoundary extends Component<
-  { children: ReactNode; onError?: (erro,
-  r: Error) => void },
+  { children: ReactNode; onError?: (error: Error) => void },
   ErrorBoundaryState
 > {
-  constructor(props: { children: ReactNode; onError?: (erro,)
-  r: Error) => void }) {
+  constructor(props: { children: ReactNode; onError?: (error: Error) => void }) {
     super(props);
     this.state = { hasError: false, retryCount: 0 };
   }
 
   static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasErro,
-  r: true, error, retryCount: 0 };
+    return { hasError: true, error, retryCount: 0 };
   }
 
   componentDidCatch(error: Error, _errorInfo: ErrorInfo) {
@@ -51,13 +47,9 @@ class ErrorBoundary extends Component<
   render() {
     if (this.state.hasError) {
       return (
-        <div></div>
-          <h2>Oops! Something went wrong</h2>
-          <button onClick={this.handleRetry}>
-            Try Again ({3 - this.state.retryCount} attempts left)</button>
-          </button>
-          <button onClick={() => window.location.reload()}>Reload Page</button>
-          <button onClick={() => window.location.href = '/'}>Go to Homepage</button>
+        <div data-testid="error-boundary">
+          <h2>Something went wrong.</h2>
+          <button onClick={this.handleRetry}>Retry</button>
         </div>
       );
     }
@@ -66,327 +58,188 @@ class ErrorBoundary extends Component<
   }
 }
 
-// SEO Optimizer Component
-interface SEOData {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl: string;
-  ogImage: string;
-  structuredDat,
-  a: Record<string, any>;}
-}
-;
-const AdvancedSEOOptimizer = ({ seoData }: { seoData: SEOData }) => {
-  return (</string>
-    <HelmetProvider></HelmetProvider>
-      <Helmet></Helmet>
-        <title>{seoData.title}</title>
-        <meta name="description" content={seoData.description} /></meta>
-        <meta name="keywords" content={seoData.keywords.join(', ')} /></meta>
-        <link rel="canonical" href={seoData.canonicalUrl} /></link>
-        <meta property="og:title" content={seoData.title} /></meta>
-        <meta property="og:description" content={seoData.description} /></meta>
-        <meta property="og:image" content={seoData.ogImage} /></meta>
-        <script type="application/ld+json">
-          {JSON.stringify(seoData.structuredData)}</script>
-        </script>
-      </Helmet>
-      <div>Test content</div>
-    </HelmetProvider>;
-  );
-};
-
 // Performance Monitor Component
-interface PerformanceMetrics {
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cl,
-  s: number;}
-}
-;
-const AdvancedPerformanceMonitor = ({ 
-  onMetricsUpdate 
-}: { 
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void 
-}) => {;
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+const PerformanceMonitor = () => {
+  const [metrics, setMetrics] = useState({
+    renderTime: 0,
+    memoryUsage: 0,
+    errorCount: 0
+  });
 
   useEffect(() => {
-    if (process.env.NODE_ENV !== 'development') return;
-
-    const measurePerformance = () => {;
-    const performanceEntries = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const startTime = performance.now();
     
-    if (performanceEntries) {
-      const newMetrics: PerformanceMetrics = {
-        fc,
-  p: performanceEntries.loadEventEnd - performanceEntries.fetchStart,
-        lcp: performanceEntries.loadEventEnd - performanceEntries.fetchStart,
-        fid: 0,
-        cls: 0
-      };
-        
-        setMetrics(newMetrics);
-        onMetricsUpdate?.(newMetrics);
-      }
+    const measurePerformance = () => {
+      const endTime = performance.now();
+      setMetrics(prev => ({
+        ...prev,
+        renderTime: endTime - startTime
+      }));
     };
 
     measurePerformance();
-  }, [onMetricsUpdate]);
+  }, []);
 
-  if (process.env.NODE_ENV !== 'development') {
-    return null;
-  }
-
-  return (</PerformanceMetrics>
-    <div></div>
-      <h3>Performance Monitor</h3>
-      {metrics && (
-        <div></div>
-          <p>FCP: {metrics.fcp}ms</p>
-          <p>LCP: {metrics.lcp}ms</p>
-          {metrics.fcp > 1000 && (
-            <div></div>
-              <h4>Recommendations:</h4>
-              <ul></ul>
-                <li>Optimize images</li>
-                <li>Reduce bundle size</li>
-                <li>Enable compression</li>
-              </ul>
-            </div>
-          )}
-        </div>
-      )}
+  return (
+    <div data-testid="performance-monitor">
+      <div>Render Time: {metrics.renderTime.toFixed(2)}ms</div>
+      <div>Memory Usage: {metrics.memoryUsage}MB</div>
+      <div>Error Count: {metrics.errorCount}</div>
     </div>
   );
 };
 
-describe('ErrorBoundary', () => {
-  it('renders children when there is no error', () => {
-    render(
-      <ErrorBoundary></ErrorBoundary>
-        <TestComponent /></TestComponent>
-      </ErrorBoundary>)
-    );
-    expect(screen.getByText('Test content')).toBeInTheDocument();
-  });
+// Accessibility Enhancer Component
+const AccessibilityEnhancer = ({ children }: { children: ReactNode }) => {
+  useEffect(() => {
+    // Add accessibility enhancements
+    document.body.setAttribute('data-enhanced', 'true');
+    
+    return () => {
+      document.body.removeAttribute('data-enhanced');
+    };
+  }, []);
 
-  it('renders error UI when there is an error', () => {
-    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
-    
-    render(
-      <ErrorBoundary></ErrorBoundary>
-        <ThrowError shouldThrow={true} /></ThrowError>
-      </ErrorBoundary>)
-    );
-    
-    expect(screen.getByText('Oops! Something went wrong')).toBeInTheDocument();
-    expect(screen.getByText(/Try Again/)).toBeInTheDocument();
-    expect(screen.getByText('Reload Page')).toBeInTheDocument();
-    expect(screen.getByText('Go to Homepage')).toBeInTheDocument();
-    
-    consoleSpy.mockRestore();
-  });
+  return <div data-testid="accessibility-enhancer">{children}</div>;
+};
 
-  it('calls onError when error occurs', () => {
-    const onError = jest.fn();
-    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
-    
-    render(
-      <ErrorBoundary onError={onError}></ErrorBoundary>
-        <ThrowError shouldThrow={true} /></ThrowError>
-      </ErrorBoundary>)
-    );
-    
-    expect(onError).toHaveBeenCalled();
-    consoleSpy.mockRestore();
-  });
+// SEO Optimizer Component
+const SEOOptimizer = ({ title, description }: { title: string; description: string }) => {
+  return (
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+    </Helmet>
+  );
+};
 
-  it('retries after error when retry button is clicked', () => {
-    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
-    
-    let shouldThrow = true;
-    const TestComponent = () => <ThrowError shouldThrow={shouldThrow} />;
-    
-    render(</ThrowError>
-      <ErrorBoundary></ErrorBoundary>
-        <TestComponent /></TestComponent>
-      </ErrorBoundary>)
-    );
-    
-    const retryButton = screen.getByText('Try Again (3 attempts left)');
-    shouldThrow = false;
-    fireEvent.click(retryButton);
-    
-    expect()
-      screen.queryByText('Oops! Something went wrong')
-    ).not.toBeInTheDocument();
-    
-    consoleSpy.mockRestore();
-  });
-});
-
-describe('AdvancedSEOOptimizer', () => {
-  const mockSEOData = {
-    title: 'Test Title',
-    description: 'Test Description',
-    keywords: ['test', 'keywords'],
-    canonicalUrl: 'http,
-  s://example.com',
-    ogImage: 'http,
-  s://example.com/image.jpg',
-    structuredData: {
-      '@type': 'Organization',
-      name: 'Test Organization',
-    },;
-  };
-
-  it('renders children', () => {
-    render(
-      <AdvancedSEOOptimizer seoData={mockSEOData} />)
-    );
-    expect(screen.getByText('Test content')).toBeInTheDocument();
-  });
-
-  it('updates document title', async () => {
-    render(</AdvancedSEOOptimizer>
-      <AdvancedSEOOptimizer seoData={mockSEOData} />)
-    );
-    
-    await waitFor(() => {
-      expect(document.title).toBe('Test Title');
-    });
-  });
-
-  it('renders meta tags', () => {
-    const _helmetContext = {};
-    const { container } = render(</AdvancedSEOOptimizer>
-      <AdvancedSEOOptimizer seoData={mockSEOData} />)
-    );
-    expect(container).toBeTruthy();
-  });
-});
-
-describe('AdvancedPerformanceMonitor', () => {
-  // Mock performance API
-  const mockPerformance = {
-    getEntriesByName: jest.fn(() => []),
-    getEntriesByType: jest.fn(() => []),
-    getEntries: jest.fn(() => []),
-    measurePageLoad: jest.fn(),
-    reportWebVitals: jest.fn(),;
-  };
-
-  // Mock PerformanceObserver
-  class MockPerformanceObserver {
-    constructor(callback: PerformanceObserverCallback) {
-      this.callback = callback;
-    }
-    callback: PerformanceObserverCallback;
-    observe() {}
-    disconnect() {}
-    takeRecords() { return []; }
-  }
-
-  beforeEach(() => {
-    // Mock performance API
-    Object.defineProperty(window, 'performance', {
-      value: mockPerformance,
-      writable: true,
-      configurable: true,)
-    });
-    
-    // Mock PerformanceObserver
-    global.PerformanceObserver = MockPerformanceObserver as unknown as typeof PerformanceObserver;
-    jest.clearAllMocks();
-  });
-
-  it('renders nothing in production mode', () => {
-    const originalEnv = process.env.NODE_ENV;
-    Object.defineProperty(process.env, 'NODE_ENV', { value: 'production', writable: true });
-    
-    const { container } = render(</AdvancedSEOOptimizer>
-      <MemoryRouter></MemoryRouter>
-        <AdvancedPerformanceMonitor /></AdvancedPerformanceMonitor>
-      </MemoryRouter>)
-    );
-    
-    expect(container.firstChild).toBeNull();
-    Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true });
-  });
-
-  it('renders performance monitor in development mode', () => {
-    const originalEnv = process.env.NODE_ENV;
-    Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
-    
-    render(
-      <MemoryRouter></MemoryRouter>
-        <AdvancedPerformanceMonitor /></AdvancedPerformanceMonitor>
-      </MemoryRouter>)
-    );
-    
-    expect(screen.getByText('Performance Monitor')).toBeInTheDocument();
-    Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true });
-  });
-
-  it('calls onMetricsUpdate when metrics change', async () => {
-    const onMetricsUpdate = jest.fn();
-    const originalEnv = process.env.NODE_ENV;
-    Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
-    
-    mockPerformance.getEntriesByType.mockReturnValue([{ loadEventEnd: 1000, fetchStart: 0 }] as any);
-    
-    render(
-      <MemoryRouter></MemoryRouter>
-        <AdvancedPerformanceMonitor onMetricsUpdate={onMetricsUpdate} /></AdvancedPerformanceMonitor>
-      </MemoryRouter>)
-    );
-    
-    await waitFor(() => {
-      expect(onMetricsUpdate).toHaveBeenCalled();
-    });
-    
-    Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true });
-  });
-
-  it('shows performance recommendations when metrics are poor', async () => {
-    const originalEnv = process.env.NODE_ENV;
-    Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
-    
-    // Mock poor performance metrics
-    mockPerformance.getEntriesByType.mockReturnValue([{ loadEventEnd: 2000, fetchStart: 0 }] as any);
-    
-    render(
-      <MemoryRouter></MemoryRouter>
-        <AdvancedPerformanceMonitor /></AdvancedPerformanceMonitor>
-      </MemoryRouter>)
-    );
-    
-    // Should show recommendations for poor performance
-    await waitFor(() => {
-      expect(screen.getByText('Recommendations:')).toBeInTheDocument();
-    }, { timeout: 2000 });
-    
-    Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true });
-  });
-
-  it('handles errors gracefully', () => {
-    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
-    
-    expect(() => {
+// Tests
+describe('Advanced Components', () => {
+  describe('ErrorBoundary', () => {
+    it('should catch errors and display error UI', () => {
+      const onError = jest.fn();
+      
       render(
-        <MemoryRouter></MemoryRouter>
-          <AdvancedPerformanceMonitor /></AdvancedPerformanceMonitor>
-        </MemoryRouter>)
+        <ErrorBoundary onError={onError}>
+          <ThrowError shouldThrow={true} />
+        </ErrorBoundary>
       );
-    }).not.toThrow();
-    
-    consoleSpy.mockRestore();
+
+      expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
+      expect(screen.getByText('Something went wrong.')).toBeInTheDocument();
+      expect(onError).toHaveBeenCalledWith(expect.any(Error));
+    });
+
+    it('should render children when no error occurs', () => {
+      render(
+        <ErrorBoundary>
+          <TestComponent />
+        </ErrorBoundary>
+      );
+
+      expect(screen.getByText('Test content')).toBeInTheDocument();
+      expect(screen.queryByTestId('error-boundary')).not.toBeInTheDocument();
+    });
+
+    it('should retry on button click', () => {
+      render(
+        <ErrorBoundary>
+          <ThrowError shouldThrow={true} />
+        </ErrorBoundary>
+      );
+
+      expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
+      
+      fireEvent.click(screen.getByText('Retry'));
+      
+      // After retry, the error boundary should reset
+      expect(screen.queryByTestId('error-boundary')).not.toBeInTheDocument();
+    });
   });
 
-  afterEach(() => {
-    jest.clearAllMocks();
+  describe('PerformanceMonitor', () => {
+    it('should render performance metrics', () => {
+      render(<PerformanceMonitor />);
+
+      expect(screen.getByTestId('performance-monitor')).toBeInTheDocument();
+      expect(screen.getByText(/Render Time:/)).toBeInTheDocument();
+      expect(screen.getByText(/Memory Usage:/)).toBeInTheDocument();
+      expect(screen.getByText(/Error Count:/)).toBeInTheDocument();
+    });
+  });
+
+  describe('AccessibilityEnhancer', () => {
+    it('should enhance accessibility', () => {
+      render(
+        <AccessibilityEnhancer>
+          <div>Test content</div>
+        </AccessibilityEnhancer>
+      );
+
+      expect(screen.getByTestId('accessibility-enhancer')).toBeInTheDocument();
+      expect(document.body.getAttribute('data-enhanced')).toBe('true');
+    });
+
+    it('should clean up on unmount', () => {
+      const { unmount } = render(
+        <AccessibilityEnhancer>
+          <div>Test content</div>
+        </AccessibilityEnhancer>
+      );
+
+      expect(document.body.getAttribute('data-enhanced')).toBe('true');
+      
+      unmount();
+      
+      expect(document.body.getAttribute('data-enhanced')).toBeNull();
+    });
+  });
+
+  describe('SEOOptimizer', () => {
+    it('should set meta tags', () => {
+      render(
+        <HelmetProvider>
+          <SEOOptimizer 
+            title="Test Title" 
+            description="Test Description" 
+          />
+        </HelmetProvider>
+      );
+
+      expect(document.title).toBe('Test Title');
+      
+      const metaDescription = document.querySelector('meta[name="description"]');
+      expect(metaDescription).toHaveAttribute('content', 'Test Description');
+    });
+  });
+
+  describe('Integration Tests', () => {
+    it('should work with all components together', () => {
+      const onError = jest.fn();
+      
+      render(
+        <HelmetProvider>
+          <MemoryRouter>
+            <ErrorBoundary onError={onError}>
+              <AccessibilityEnhancer>
+                <PerformanceMonitor />
+                <SEOOptimizer 
+                  title="Integration Test" 
+                  description="Testing all components together" 
+                />
+                <TestComponent />
+              </AccessibilityEnhancer>
+            </ErrorBoundary>
+          </MemoryRouter>
+        </HelmetProvider>
+      );
+
+      expect(screen.getByText('Test content')).toBeInTheDocument();
+      expect(screen.getByTestId('performance-monitor')).toBeInTheDocument();
+      expect(screen.getByTestId('accessibility-enhancer')).toBeInTheDocument();
+      expect(document.title).toBe('Integration Test');
+    });
   });
 });

@@ -1,8 +1,6 @@
 "use client";
 import React from 'react';
 
-const errorHandler = ($2) => {
-$3
+export const errorHandler = () => {
+  return null;
 };
-
-export default errorHandler

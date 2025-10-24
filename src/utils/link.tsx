@@ -1,7 +1,6 @@
-// link utility
-export const link = () => {};
-  // Utility function implementation
-  return null
-{};
+"use client";
+import React from 'react';
 
-export default link
+export const link = () => {
+  return null;
+};
