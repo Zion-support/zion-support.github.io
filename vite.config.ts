@@ -1,78 +1,98 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { resolve } from 'path';
 
+// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react({
+      // Optimize JSX runtime
+      jsxRuntime: 'automatic',
+    })
+  ],
   resolve: {
     alias: {
       '@': resolve(__dirname, './app'),
-      '@/components': resolve(__dirname, './app/components'),
-      '@/pages': resolve(__dirname, './app'),
-      '@/utils': resolve(__dirname, './utils'),
-      '@/types': resolve(__dirname, './types'),
-      '@/hooks': resolve(__dirname, './hooks'),
-      '@/config': resolve(__dirname, './config'),
-      '@/data': resolve(__dirname, './data'),
-      '@/content': resolve(__dirname, './content')
-    }
+      '@components': resolve(__dirname, './app/components'),
+      '@pages': resolve(__dirname, './app/pages'),
+      '@utils': resolve(__dirname, './utils'),
+      '@types': resolve(__dirname, './types'),
+    },
   },
   build: {
     outDir: 'dist',
-    assetsDir: 'assets',
     sourcemap: false,
-    minify: "esbuild",
-    cssCodeSplit: true,
-    modulePreload: {
-      polyfill: false,
-    },
-    // Performance optimizations
-    chunkSizeWarningLimit: 150, // Reduced threshold for better performance
-    assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
-    // Enable compression
-    reportCompressedSize: true,
-    // Target modern browsers for smaller bundles
+    minify: 'esbuild',
     target: 'es2020',
-    // Enable tree shaking
-    treeshake: {
-      moduleSideEffects: false,
-    },
-    // Optimize for production
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug'],
-        passes: 2,
-      },
-      mangle: {
-        safari10: true,
-      },
-    },
-    // Additional optimizations
-    cssMinify: true,
-    minifyInternalExports: true,
+    cssCodeSplit: true,
+    cssTarget: 'chrome80',
+    reportCompressedSize: true,
+    chunkSizeWarningLimit: 500,
     emptyOutDir: true,
-    // Advanced optimizations
-    assetsDir: 'assets',
     copyPublicDir: true,
+    // Additional optimizations
+    assetsInlineLimit: 4096,
+    cssMinify: true,
     rollupOptions: {
+      treeshake: {
+        moduleSideEffects: false,
+        propertyReadSideEffects: false,
+        tryCatchDeoptimization: false,
+      },
       output: {
+        chunkFileNames: 'assets/[name]-[hash].js',
         manualChunks: (id) => {
-          // Core React libraries - keep smaller
-          if (id.includes('react') || id.includes('react-dom')) {
-            return 'react-vendor'
+          if (id.includes('node_modules')) {
+            // Split React into smaller chunks
+            if (id.includes('react-dom')) {
+              return 'react-dom';
+            }
+            if (id.includes('react/') && !id.includes('react-dom')) {
+              return 'react-core';
+            }
+            if (id.includes('react-router')) {
+              return 'router';
+            }
+            if (id.includes('@heroicons') || id.includes('lucide-react')) {
+              return 'icons';
+            }
+            if (id.includes('framer-motion')) {
+              return 'motion';
+            }
+            if (id.includes('clsx') || id.includes('tailwind-merge')) {
+              return 'utils';
+            }
+            if (id.includes('web-vitals')) {
+              return 'analytics';
+            }
+            if (id.includes('react-helmet-async')) {
+              return 'seo';
+            }
+            if (id.includes('recharts')) {
+              return 'charts';
+            }
+            if (id.includes('axios')) {
+              return 'http';
+            }
+            return 'vendor';
           }
-          // Router - separate chunk
-          if (id.includes('react-router')) {
-            return 'router'
+          // Split app code by feature
+          if (id.includes('/app/components/')) {
+            return 'components';
           }
-          // UI libraries - split further
-          if (id.includes('framer-motion')) {
-            return 'ui-animations'
+          if (id.includes('/app/hooks/')) {
+            return 'hooks';
           }
-          if (id.includes('lucide-react')) {
-            return 'ui-icons'
+          if (id.includes('/app/utils/')) {
+            return 'utils';
           }
-          // SEO and meta - separate chunk
+          if (id.includes('/app/data/')) {
+            return 'data';
+          }
+          if (id.includes('/app/pages/')) {
+            return 'pages';
+          }
+          // SEO and meta
           if (id.includes('react-helmet')) {
             return 'seo'
           }
@@ -80,131 +100,63 @@ export default defineConfig({
           if (id.includes('recharts')) {
             return 'charts'
           }
-          // Utility libraries - group small utilities
+          // Utility libraries
           if (id.includes('clsx') || id.includes('tailwind-merge')) {
             return 'utils'
           }
-          // Performance monitoring - separate chunk
+          // Performance monitoring
           if (id.includes('web-vitals')) {
             return 'performance'
           }
-          // Error handling - separate chunk
-          if (id.includes('react-error-boundary')) {
-            return 'error-handling'
+          // AI service pages
+          if (id.includes('/app/ai-') && id.includes('/page.tsx')) {
+            return 'ai-pages'
           }
-          // Components - split by functionality
-          if (id.includes('/components/')) {
-            if (id.includes('Enhanced') || id.includes('Advanced')) {
-              return 'enhanced-components'
-            }
-            if (id.includes('react-router')) {
-              return 'vendor-router'
-            }
-            if (id.includes('framer-motion')) {
-              return 'vendor-framer';
-            }
-            return 'base-components'
+          // IT service pages
+          if (id.includes('/app/') && (id.includes('cloud-') || id.includes('cybersecurity-') || id.includes('web-development') || id.includes('mobile-development')) && id.includes('/page.tsx')) {
+            return 'it-pages'
           }
-          // AI service pages - group by category with smaller chunks
-          if (id.includes('/ai-') && id.includes('/page.tsx')) {
-            return 'ai-services'
+          // Micro SAAS pages
+          if (id.includes('/app/zion-') && id.includes('/page.tsx')) {
+            return 'saas-pages'
           }
-          // Group all Zion service pages
-          if (id.includes('/zion-') && id.includes('/page.tsx')) {
-            return 'zion-services'
+          // Other pages
+          if (id.includes('/app/') && id.includes('/page.tsx')) {
+            return 'pages'
           }
-          // Group all 5G service pages
-          if (id.includes('/5g-') && id.includes('/page.tsx')) {
-            return '5g-services'
-          }
-          // Main pages - split further
-          if (id.includes('/app/') && id.includes('/page.tsx') && 
-              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
-            if (id.includes('about') || id.includes('contact') || id.includes('services')) {
-              return 'core-pages'
-            }
-            if (id.includes('recharts')) {
-              return 'vendor-charts'
-            }
-            if (id.includes('web-vitals')) {
-              return 'vendor-analytics'
-            }
-            if (id.includes('clsx') || id.includes('tailwind-merge')) {
-              return 'vendor-utils';
-            }
-            return 'vendor-misc';
-          }
-          // App chunks - better organization
-          if (id.includes('/app/ai-')) {
-            return 'ai-services';
-          }
-          // Components
-          if (id.includes('/src/components/')) {
-            return 'components';
-          }
-          if (id.includes('/app/blog/')) {
-            return 'blog';
-          }
-          if (id.includes('/app/case-studies/')) {
-            return 'case-studies';
-          }
-          return 'app';
+          // Default chunk for other modules
+          return 'vendor'
         },
-        chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: (assetInfo) => {
-          const ext = assetInfo.name?.split('.').pop()
-          if (/\.(css)$/i.test(assetInfo.name || '')) {
-            return `assets/css/[name]-[hash].${ext}`
-          }
-          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name || '')) {
-            return `assets/images/[name]-[hash].${ext}`
-          }
-          if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name || '')) {
-            return `assets/fonts/[name]-[hash].${ext}`
-          }
-          return `assets/[name]-[hash].${ext}`
-        }
-      }
-    },
-    server: {
-      port: 3000,
-      host: true,
-      open: false,
-      hmr: {
-        overlay: false,
+        assetFileNames: 'assets/[name]-[hash].[ext]',
       },
-      watch: {
-        ignored: ['**/node_modules/**', '**/dist/**', '**/build/**', '**/temp_backup/**', '**/pages_backup/**', '**/src.broken/**', '**/*.backup.*', '**/*.cleanup-backup.*']
-      }
     },
-    chunkSizeWarningLimit: 500,
-    reportCompressedSize: true,
-    cssCodeSplit: true,
-    assetsInlineLimit: 4096,
   },
   server: {
     port: 3000,
-    host: true
+    open: true,
+    host: true,
+    cors: true,
   },
   preview: {
     port: 4173,
-    host: true
+    open: true,
+    host: true,
   },
+  // Optimize dependencies
   optimizeDeps: {
     include: [
-      'react', 
-      'react-dom', 
-      'framer-motion', 
-      'lucide-react', 
+      'react',
+      'react-dom',
       'react-router-dom',
+      '@heroicons/react/24/outline',
+      'framer-motion',
       'clsx',
-      'tailwind-merge',
-      'web-vitals'
+      'tailwind-merge'
     ],
-    exclude: ['@vite/client', '@vite/env']
   },
+  // CSS optimization
   css: {
-    devSourcemap: true
-  }
-})
+    devSourcemap: true,
+  },
+});

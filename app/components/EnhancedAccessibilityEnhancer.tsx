@@ -1,6 +1,7 @@
+
 'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+
+import React, { useState, useEffect } from 'react';
 
 interface EnhancedAccessibilityEnhancerProps {
   children: React.ReactNode
@@ -11,37 +12,44 @@ interface EnhancedAccessibilityEnhancerProps {
   enableVoiceNavigation?: boolean
 }
 
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({
+  children,
+  enableKeyboardNavigation: _enableKeyboardNavigation = true,
+  enableScreenReaderSupport: _enableScreenReaderSupport = true,
+  enableHighContrast: _enableHighContrast = false,
+  enableFocusManagement: _enableFocusManagement = true,
+  enableVoiceNavigation = false,
+}) => {
+  const [isHighContrast, setIsHighContrast] = useState(false)
+  const [_fontSize, setFontSize] = useState('medium')
+  const [isReducedMotion, setIsReducedMotion] = useState(false)
+  const [isVoiceEnabled, setIsVoiceEnabled] = useState(false)
+
+  useEffect(() => {
+    // Check for user's motion preferences
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+    setIsReducedMotion(mediaQuery.matches)
+
+    // Check for high contrast preference
+    const highContrastQuery = window.matchMedia('(prefers-contrast: high)')
+    setIsHighContrast(highContrastQuery.matches)
+
+    // Apply accessibility enhancements
+    document.documentElement.setAttribute('data-accessibility-enhanced', 'true')
+    
+    if (isHighContrast) {
+      document.documentElement.classList.add('high-contrast')
+    
+    
+    if (isReducedMotion) {
+      document.documentElement.classList.add('reduced-motion')
+    
 
     // Add keyboard navigation support
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
         document.body.classList.add('keyboard-navigation')
-      }
+      
       
       // Add skip links functionality
       if (event.key === 'Enter' && event.target instanceof HTMLElement) {
@@ -51,9 +59,9 @@ interface EnhancedAccessibilityEnhancerProps {
           if (target) {
             target.focus()
             target.scrollIntoView({ behavior: 'smooth' })
-          }
-        }
-      }
+          
+        
+      
     }
 
     const handleMouseDown = () => {
@@ -82,104 +90,62 @@ interface EnhancedAccessibilityEnhancerProps {
   const toggleVoiceNavigation = () => {
     if (enableVoiceNavigation && 'speechSynthesis' in window) {
       setIsVoiceEnabled(!isVoiceEnabled)
-    }
+    
   }
 
   return (
-<<<<<<< HEAD
-    <>
-      
-    </>
-      <Helmet> </Helmet><title>Enhanced Accessibility Enhancer - Zion Tech Group</title>
-        <meta name="description" content="Advanced Enhanced Accessibility Enhancer solution for modern businesses." /> </meta><meta name="keywords" content="AI, artificial intelligence, enhanced accessibility enhancer, AI solutions, intelligent automation" /> </meta></Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">{/* Hero Section */}
-        </div><section className="relative py-20 px-4 overflow-hidden"> </section><div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20">
-        <div className="relative max-w-7xl mx-auto text-center"> </div><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">,
-              Enhanced Accessibility Enhancer
-            </h1>
-            <p>Advanced Enhanced Accessibility Enhancer solution for modern businesses.</p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-              <button className="bg-emerald-600 hover: bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center">,
-                Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </button>
-              <button className="border border-emerald-400 text-emerald-400 hover: bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">,
-                Learn More
-              </button>
-              </div>
-            </div>
-        </section>,
-,
-        {/* Features Section */}
-=======
-    <div className="...">
+    <div className="accessibility-enhanced"></div>
       <div 
         className="accessibility-controls" 
-        style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }}
-      >
+        style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }
+      ></div>
         <button
-          onClick={toggleHighContrast}
+          onClick={toggleHighContrast
           className="accessibility-button"
           aria-label="Toggle high contrast"
         >
-          {isHighContrast ? 'Normal Contrast' : 'High Contrast'}
+          {isHighContrast ? 'Normal Contrast' : 'High Contrast'
         </button>
         
-        <div className="...">
+        <div className="font-size-controls"></div>
           <button
-            onClick={() => changeFontSize('small')}
+            onClick={() => changeFontSize('small')
             className="accessibility-button"
             aria-label="Small font size"
           >
             A
           </button>
           <button
-            onClick={() => changeFontSize('medium')}
+            onClick={() => changeFontSize('medium')
             className="accessibility-button"
             aria-label="Medium font size"
           >
             A
           </button>
           <button
-            onClick={() => changeFontSize('large')}
+            onClick={() => changeFontSize('large')
             className="accessibility-button"
             aria-label="Large font size"
           >
             A
           </button>
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8836
 
-        <section className="py-20 px-4"> </section><div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p>Powerful AI-driven features designed to transform your business operations
-</p>
-            </div>
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
-              {features.map((feature, index) => (
+        {enableVoiceNavigation && (
+          <button
+            onClick={toggleVoiceNavigation
+            className="accessibility-button"
+            aria-label="Toggle voice navigation"
+          >
+            {isVoiceEnabled ? '🔊' : '🔇'
+          </button>
+        )
+      </div>
+      {children
+    </div>
+  )
+}
 
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"> </div><feature.icon className="h-12 w-12 text-emerald-400 mb-4" /> </feature><h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">{feature.benefits.map((benefit, idx) => (
-                      </ul><li key={idx} className="flex items-center text-sm text-gray-300"> </li><CheckCircle className="h-4 w-4 text-emerald-400 mr-2 flex-shrink-0" />{benefit}
-                      </CheckCircle></li>
+}
 
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-
-        <section className="py-20 px-4 bg-white/5"> </section><div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16"> </div><h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution</h2>
-              <p>Experience the benefits of cutting-edge AI technology</p>
-            </div>
-          </div>
-      </section>
-
-  </>
-export default EnhancedAccessibilityEnhancerPage
+export default EnhancedAccessibilityEnhancer;}
