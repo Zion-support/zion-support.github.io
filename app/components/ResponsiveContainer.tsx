@@ -9,7 +9,7 @@ return (<div>
 
 export const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ className = '', children }) => {
   return (
-    <div className={`responsivecontainer ${className}`}>
+    <div className="{`responsivecontainer" ${className}`}>
       {children}
     </div>
       <Navigation//> <div className="[^"]*">
@@ -57,7 +57,7 @@ Start Your Free Trial</button>
         </div>
       </Footer>
     </div>
-    </>
+</>
   )
   )  )}
 

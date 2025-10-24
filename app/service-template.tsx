@@ -19,7 +19,7 @@ return(</ServiceTemplateProps> <div className="[^"]*"> <div className="[^"]*"> <
                 </svg>
     <span className="text-gray-700">{feature}</span>
                 </div>
-    </>
+</>
   ))}
             </div>
           </div>
@@ -32,7 +32,7 @@ interface ServiceTemplateProps {
 
 export const ServiceTemplate: React.FC<ServiceTemplateProps> = ({ className = '', children }) => {
   return (
-    <div className={`servicetemplate ${className}`}>
+    <div className="{`servicetemplate" ${className}`}>
       {children}
     </div>
   );

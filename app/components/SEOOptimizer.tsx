@@ -1,6 +1,6 @@
 "use client"
 import React from "react";
-import React, { useEffect } from "react"
+import React, { useEffect } from "react";
 import { Head  } from "next/head";
 interface SEOOptimizerProps {
 className?: string
@@ -71,7 +71,7 @@ let viewport = document.querySelector("meta[name="viewport"]")
 if(!viewport) {
 viewport = document.createElement("meta")
       viewport.setAttribute("name", "viewport")
-      viewport.setAttribute("content", "width= device-width, initial-scale= 1")
+      viewport.setAttribute("content", "width="device-width," initial-scale="1")"
       document.head.appendChild(viewport)
     //Add charset if not present
 let charset = document.querySelector("meta[charset,]")
@@ -106,7 +106,7 @@ return (dangerouslySetInnerHTML={{ __html: "JSON.stringify(structuredData) "}}
       
         <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width= device-width, initial-scale = 1" />
+      <meta name="viewport" content="width="device-width," initial-scale = 1" />
       <meta charSet="UTF-8" />
       {/* Structured Data*/}
       {structuredData && (<script type="application/ld+json&quot

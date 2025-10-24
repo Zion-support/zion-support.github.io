@@ -1,7 +1,7 @@
 "use client"
 import React from "react";
 import { Helmet  } from "react-helmet-async";
-import ArrowRight Brain  CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain, Globe        } from "lucide-react"
+import ArrowRight Brain  CheckCircle ArrowRight Phone Mail MapPin Zap Shield Brain, Globe        } from "lucide-react";
 import { Phone, Mail  } from "lucide-react";
     "use client"
       "Gain competitive advantage with advanced technology"
@@ -16,7 +16,7 @@ const benefits = [
 
         /Benefits Section /<section className="py-20 px-4 bg-white/5">
 
-      <divkey= index className="flex items-start space-x-4" />
+      <divkey="index" className="flex items-start space-x-4" />
     </div>,<div className="[^"]*"><CheckCircle className="w-6 h-6 text-emerald-400" />
                     </div>
                   <p className="text-gray-300">benefit</p>
@@ -33,7 +33,7 @@ Start Your Free Trial</button>
         </section>
         </div>
       </div>
-    </>
+</>
   )
 
 export default EnhancedHero;    "Gain competitive advantage with advanced technology"
@@ -43,7 +43,7 @@ export default EnhancedHero;    "Gain competitive advantage with advanced techno
 
 export const EnhancedHero: React.FC<EnhancedHeroProps> = ({ className = '', children }) => {
   return (
-    <div className={`enhancedhero ${className}`}>
+    <div className="{`enhancedhero" ${className}`}>
       {children}
     </div>
   );

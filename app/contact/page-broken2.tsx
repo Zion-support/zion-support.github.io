@@ -30,12 +30,12 @@ const WorkingPage = () => {
           </Link>
         </div>
       </div>
-    </>)
+</>)
   )
 
 export const PageBroken2: React.FC<PageBroken2Props> = ({ className = '', children }) => {
   return (
-    <div className={`pagebroken2 ${className}`}>
+    <div className="{`pagebroken2" ${className}`}>
       {children}
     </div>
   );

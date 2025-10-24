@@ -9,7 +9,7 @@ return (<div>
 
 export const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({ className = '', children }) => {
   return (
-    <div className={`enhancedseohead ${className}`}>
+    <div className="{`enhancedseohead" ${className}`}>
       {children}
     </div>
       <Navigation//> <div className="[^"]*">
@@ -57,7 +57,7 @@ Start Your Free Trial</button>
         </div>
       </Footer>
     </div>
-    </>
+</>
   )
   )
 

@@ -9,7 +9,7 @@ return (<div>
 
 export const ErrorHandler: React.FC<ErrorHandlerProps> = ({ className = '', children }) => {
   return (
-    <div className={`errorhandler ${className}`}>
+    <div className="{`errorhandler" ${className}`}>
       {children}
     </div>
       <Navigation//> <div className="[^"]*">
@@ -57,7 +57,7 @@ Start Your Free Trial</button>
         </div>
       </Footer>
     </div>
-    </>
+</>
   )
   )
 

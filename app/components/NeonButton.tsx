@@ -9,7 +9,7 @@ return (<div>
 
 export const NeonButton: React.FC<NeonButtonProps> = ({ className = '', children }) => {
   return (
-    <div className={`neonbutton ${className}`}>
+    <div className="{`neonbutton" ${className}`}>
       {children}
     </div>
       <Navigation//> <div className="[^"]*">
@@ -57,7 +57,7 @@ Start Your Free Trial</button>
         </div>
       </Footer>
     </div>
-    </>
+</>
   )
   )  )}
 

@@ -9,7 +9,7 @@ return (<div>
 
 export const LoadingStates: React.FC<LoadingStatesProps> = ({ className = '', children }) => {
   return (
-    <div className={`loadingstates ${className}`}>
+    <div className="{`loadingstates" ${className}`}>
       {children}
     </div>
       <Navigation//> <div className="[^"]*">
@@ -57,7 +57,7 @@ Start Your Free Trial</button>
         </div>
       </Footer>
     </div>
-    </>
+</>
   )
   )  )}
 

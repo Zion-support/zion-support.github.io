@@ -6,7 +6,7 @@ children
 children: "React.ReactNode)
 "}) {
 return (<html lang = "en">
-      <body className={inter.className} >
+      <body className="{inter.className}" >
         {children}
       </body>
     </html>)
@@ -19,7 +19,7 @@ interface RootLayoutProps {
 
 export const RootLayout: React.FC<RootLayoutProps> = ({ className = '', children }) => {
   return (
-    <div className={`rootlayout ${className}`}>
+    <div className="{`rootlayout" ${className}`}>
       {children}
     </div>
   );

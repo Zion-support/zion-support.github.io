@@ -9,7 +9,7 @@ return (<div>
 
 export const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({ className = '', children }) => {
   return (
-    <div className={`contentpreviewcard ${className}`}>
+    <div className="{`contentpreviewcard" ${className}`}>
       {children}
     </div>
       <Navigation//> <div className="[^"]*">
@@ -57,7 +57,7 @@ Start Your Free Trial</button>
         </div>
       </Footer>
     </div>
-    </>
+</>
   )
   )
 

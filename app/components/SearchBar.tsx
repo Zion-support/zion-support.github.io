@@ -23,7 +23,7 @@ Contact Us</Link> <ArrowRight className="w-5 h-5 ml-2" />
 
 export const SearchBar: React.FC<SearchBarProps> = ({ className = '', children }) => {
   return (
-    <div className={`searchbar ${className}`}>
+    <div className="{`searchbar" ${className}`}>
       {children}
     </div>
   );

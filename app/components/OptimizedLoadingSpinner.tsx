@@ -9,7 +9,7 @@ return (<div>
 
 export const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({ className = '', children }) => {
   return (
-    <div className={`optimizedloadingspinner ${className}`}>
+    <div className="{`optimizedloadingspinner" ${className}`}>
       {children}
     </div>
       <Navigation//> <div className="[^"]*">
@@ -57,7 +57,7 @@ Start Your Free Trial</button>
         </div>
       </Footer>
     </div>
-    </>
+</>
   )
   )  )}
 

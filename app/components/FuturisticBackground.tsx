@@ -9,7 +9,7 @@ return (<div>
 
 export const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ className = '', children }) => {
   return (
-    <div className={`futuristicbackground ${className}`}>
+    <div className="{`futuristicbackground" ${className}`}>
       {children}
     </div>
       <Navigation//> <div className="[^"]*">
@@ -57,7 +57,7 @@ Start Your Free Trial</button>
         </div>
       </Footer>
     </div>
-    </>
+</>
   )
   )
 

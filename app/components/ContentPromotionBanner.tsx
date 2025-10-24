@@ -9,7 +9,7 @@ return (<div>
 
 export const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({ className = '', children }) => {
   return (
-    <div className={`contentpromotionbanner ${className}`}>
+    <div className="{`contentpromotionbanner" ${className}`}>
       {children}
     </div>
       <Navigation//> <div className="[^"]*">
@@ -57,7 +57,7 @@ Start Your Free Trial</button>
         </div>
       </Footer>
     </div>
-    </>
+</>
   )
   )
 

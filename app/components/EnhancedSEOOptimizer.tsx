@@ -71,7 +71,7 @@ Key Features
               {benefits.map((benefit,index) => (<divkey = {index} className="flex items-start space-x-3" /> <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
     </div>
-    </>
+</>
   ))
             </div>
           </div>
@@ -94,7 +94,7 @@ Email Us
         </section>
       </div>
     </div>
-    </>
+</>
   )
 
 export default EnhancedSEOOptimizerPage
@@ -103,7 +103,7 @@ export default EnhancedSEOOptimizerPage
 
 export const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({ className = '', children }) => {
   return (
-    <div className={`enhancedseooptimizer ${className}`}>
+    <div className="{`enhancedseooptimizer" ${className}`}>
       {children}
     </div>
   );

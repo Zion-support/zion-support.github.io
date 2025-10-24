@@ -9,7 +9,7 @@ return (<div>
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({ className = '', children }) => {
   return (
-    <div className={`optimizedimage ${className}`}>
+    <div className="{`optimizedimage" ${className}`}>
       {children}
     </div>
       <Navigation//> <div className="[^"]*">
@@ -57,7 +57,7 @@ Start Your Free Trial</button>
         </div>
       </Footer>
     </div>
-    </>
+</>
   )
   )  )}
 

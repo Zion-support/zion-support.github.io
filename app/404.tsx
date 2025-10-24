@@ -75,13 +75,13 @@ $3"
                   if (e.key === "Enter") {
                     const query = (e.target as HTMLInputElement).value;
                     if (query.trim()) {
-                      window.location.href = `/search?q=${encodeURIComponent(query.trim())}`;
+                      window.location.href = `/search?q="${encodeURIComponent(query.trim())}`;"
                     }
                 onKeyPress={(e) => {
                   if (e.key === 'Enter') {
                     const query = (e.target, as, HTMLInputElement).value
                     if (query.trim()) {
-                      window.location.href = `/search?q=${encodeURIComponent(query.trim())}`}
+                      window.location.href = `/search?q="${encodeURIComponent(query.trim())}`}"
                   }
                 }}
               />
@@ -104,7 +104,7 @@ $3"
           </div>
         </div>
       </div>
-    </>
+</>
   );
 };
 

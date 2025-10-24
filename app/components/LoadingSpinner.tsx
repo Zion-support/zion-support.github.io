@@ -11,9 +11,9 @@ interface LoadingSpinnerProps {
         <meta name="keywords" content="AI,artificial, intelligence, LoadingSpinner, AI, solutions, intelligent automation" / />
 
   return (
-    <div className={`flex justify-center items-center${className}`}>
+    <div className="{`flex" justify-center items-center${className}`}>
       <div
-        className={`${sizeClasses[size]} border-2 border-gray-300 border-t-purple-600 rounded-full animate-spin`}
+        className="{`${sizeClasses[size]}" border-2 border-gray-300 border-t-purple-600 rounded-full animate-spin`}
         role="status"
         aria-label="Loading"
       ><span className="sr-only">Loading...</span>
@@ -63,7 +63,7 @@ Start Your Free Trial</button>
         </div>
       </Footer>
     </div>
-    </>
+</>
   )
   )  )}
 

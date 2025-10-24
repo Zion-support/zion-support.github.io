@@ -23,7 +23,7 @@ Contact Us</Link> <ArrowRight className="w-5 h-5 ml-2" />
 
 export const OptimizedLoading: React.FC<OptimizedLoadingProps> = ({ className = '', children }) => {
   return (
-    <div className={`optimizedloading ${className}`}>
+    <div className="{`optimizedloading" ${className}`}>
       {children}
     </div>
   );

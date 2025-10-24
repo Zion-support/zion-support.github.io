@@ -27,7 +27,7 @@ export default function AnimatedText() {
 
 export const AnimatedText: React.FC<AnimatedTextProps> = ({ className = '', children }) => {
   return (
-    <div className={`animatedtext ${className}`}>
+    <div className="{`animatedtext" ${className}`}>
       {children}
     </div>
   );

@@ -1,5 +1,5 @@
 "use client"
-import React, { Component, ErrorInfo, ReactNode } from "react"
+import React, { Component, ErrorInfo, ReactNode } from "react";
 import { AlertTriangle, RefreshCw, Home, Mail   } from "lucide-react";
 interface AdvancedErrorBoundaryProps {
 className?: string
@@ -28,8 +28,8 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
       errorId: this.state.errorId || this.generateErrorId()"
       error
       errorInfo
-      timestamp: "new Date().toISOString()"
-      userAgent: "navigator.userAgent"
+      timestamp: "new Date().toISOString()",
+    userAgent: "navigator.userAgent"
       url: "window.location.href"
     }
 
@@ -74,7 +74,7 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
             </div>
           </div>
         </div>
-    </>
+</>
   )
 
     return this.props.children
@@ -83,7 +83,7 @@ class AdvancedErrorBoundary extends Component<AdvancedErrorBoundaryProps, State>
 
 export const AdvancedErrorBoundary: React.FC<AdvancedErrorBoundaryProps> = ({ className = '', children }) => {
   return (
-    <div className={`advancederrorboundary ${className}`}>
+    <div className="{`advancederrorboundary" ${className}`}>
       {children}
     </div>
   );

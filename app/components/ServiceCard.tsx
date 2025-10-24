@@ -9,7 +9,7 @@ return (<div>
 
 export const ServiceCard: React.FC<ServiceCardProps> = ({ className = '', children }) => {
   return (
-    <div className={`servicecard ${className}`}>
+    <div className="{`servicecard" ${className}`}>
       {children}
     </div>
       <Navigation//> <div className="[^"]*">
@@ -57,7 +57,7 @@ Start Your Free Trial</button>
         </div>
       </Footer>
     </div>
-    </>
+</>
   )
   )  )}
 
