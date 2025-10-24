@@ -60,7 +60,6 @@ const DynamicContentShowcase: React.FC = () => {
               <div className={`bg-gradient-to-r ${currentFeature.color} p-4 rounded-full`}>
                 <currentFeature.icon className="h-12 w-12 text-white" />
               </div>
-              </div>
             </div>
             
             <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-4">

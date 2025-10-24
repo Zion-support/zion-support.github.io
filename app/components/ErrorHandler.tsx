@@ -55,7 +55,7 @@ const Page: React.FC = () => {
                 </ul>
               </div>
             </div>
-          ))
+          ))}
 
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
@@ -70,7 +70,6 @@ const Page: React.FC = () => {
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
           </div>
-        </div>
         </div>
       </div>
       <Footer />
