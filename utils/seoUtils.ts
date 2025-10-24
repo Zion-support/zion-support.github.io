@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // SEO utility functions
 
 import { SEO_DEFAULTS, SOCIAL_MEDIA, OPEN_GRAPH, STRUCTURED_DATA } from './seoConstants'
@@ -88,4 +89,9 @@ export const seoUtils = {
   generateSEOMeta,
   generateStructuredData,
   validateSEO
+=======
+// SEO utility functions()
+export const seoUtils = {
+  // Add SEO utility functions here()
+>>>>>>> origin/main
 }

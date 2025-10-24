@@ -35,6 +35,20 @@
     "app-backup/**/*",
     "ai-pages-backup/**/*",
     "all-pages-backup/**/*",
+<<<<<<< HEAD
     "problematic-files-backup/**/*"
+=======
+    "problematic-files-backup/**/*",
+    "src/**/*",
+    "components/**/*",
+    "hooks/**/*",
+    "types/**/*",
+    "utils/**/*",
+    "jest.d.ts",
+    "jest.setup.ts",
+    "setupTests.ts",
+    "app/App.tsx",
+    "app/root-layout.tsx"
+>>>>>>> origin/main
   ]
 }

@@ -1,4 +1,5 @@
 import { useEffect, useCallback, useRef } from 'react'
+<<<<<<< HEAD
 
 interface PerformanceOptimizationOptions {
   enableLazyLoading?: boolean
@@ -66,15 +67,27 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
 
     criticalResources.forEach((resource) => {
       const link = document.createElement('link')
+=======
+    if (!enableLazyLoading || typeof window === 'undefined'
+    const images = document.querySelectorAll('img[data-src]';
+            const src = img.getAttribute('data-src'
+              img.removeAttribute('data-src'
+              img.classList.add('loaded'
+        "rootMargin": '50px 0px',
+    if (!enablePreloading || typeof window === 'undefined'
+      '/fonts/inter.woff2'
+      '/images/hero-bg.jpg'
+      '/images/logo.svg'
+      const link = document.createElement('link'
+>>>>>>> origin/main
       link.rel = 'preload'
-      link.href = resource
-
-      if (resource.endsWith('.woff2')) {
+      if (resource.endsWith('.woff2'
         link.as = 'font'
         link.type = 'font/woff2'
         link.crossOrigin = 'anonymous'
-      } else if (resource.endsWith('.jpg') || resource.endsWith('.png')) {
+      } else if (resource.endsWith('.jpg') || resource.endsWith('.png'
         link.as = 'image'
+<<<<<<< HEAD
       }
 
       document.head.appendChild(link)
@@ -231,3 +244,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     setupPerformanceMonitoring
   }
 }
+=======
+    if (!enableImageOptimization || typeof window === 'undefined';
+    const images = document.querySelectorAll('img'
+>>>>>>> origin/main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Accessibility utility functions
 
 export const checkAriaLabels = (element: HTMLElement): boolean => {
@@ -27,4 +28,9 @@ export const accessibilityUtils = {
   checkColorContrast,
   checkKeyboardNavigation,
   checkFocusManagement
+=======
+// Accessibility utility functions()
+export const accessibilityUtils = {
+  // Add accessibility utility functions here()
+>>>>>>> origin/main
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client"
 
 import { useState, useEffect } from 'react';
@@ -90,3 +91,6 @@ export const usePerformanceMonitor = () => {
 
   return { performanceData };
 };
+=======
+import React from 'react'
+>>>>>>> origin/main

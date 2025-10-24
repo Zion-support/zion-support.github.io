@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Performance utility functions
 
 export const measurePerformance = (name: string, fn: () => void): void => {
@@ -67,4 +68,9 @@ export const performanceUtils = {
   getPerformanceMetrics,
   markPerformance,
   measurePerformanceBetween
+=======
+// Performance utility functions()
+export const performanceUtils = {
+  // Add performance utility functions here()
+>>>>>>> origin/main
 }

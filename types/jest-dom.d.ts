@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /// <reference types="jest" />
 /// <reference types="@testing-library/jest-dom" />
 
@@ -13,3 +14,6 @@ declare global {
 }
 
 export {}
+=======
+/// <reference types="jest""
+>>>>>>> origin/main

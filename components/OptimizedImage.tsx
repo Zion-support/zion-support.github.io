@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client"
 
 import React from 'react'
@@ -32,6 +33,25 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   blurDataURL,
   'data-testid': dataTestId,
   ...props
+=======
+import React from 'react';
+import Image from 'next/image';
+
+interface OptimizedImageProps {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+}
+
+const OptimizedImage: React.FC<OptimizedImageProps> = ({ 
+  src, 
+  alt, 
+  width, 
+  height, 
+  className = '' 
+>>>>>>> origin/main
 }) => {
   if (fill) {
     return (
@@ -55,9 +75,10 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     <Image
       src={src}
       alt={alt}
-      width={width || 300}
-      height={height || 200}
+      width={width}
+      height={height}
       className={className}
+<<<<<<< HEAD
       priority={priority}
       quality={quality}
       sizes={sizes}
@@ -70,3 +91,10 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 }
 
 export default OptimizedImage
+=======
+    />
+  );
+};
+
+export default OptimizedImage;
+>>>>>>> origin/main

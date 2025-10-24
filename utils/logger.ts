@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Logger utility functions
 
 export enum LogLevel {
@@ -53,3 +54,9 @@ export class Logger {
 }
 
 export const logger = Logger.getInstance()
+=======
+// Logger utility functions()
+export const logger = {
+  // Add logger utility functions here()
+}
+>>>>>>> origin/main

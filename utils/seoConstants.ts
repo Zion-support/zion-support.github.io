@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // SEO constants and configuration
 
 export const SEO_DEFAULTS = {
@@ -50,4 +51,9 @@ export const seoConstants = {
   SOCIAL_MEDIA,
   OPEN_GRAPH,
   STRUCTURED_DATA
+=======
+// SEO constants()
+export const seoConstants = {
+  // Add SEO constants here()
+>>>>>>> origin/main
 }
