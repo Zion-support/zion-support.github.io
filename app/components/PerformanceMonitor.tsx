@@ -14,12 +14,8 @@ const PerformanceMonitor: React.FC = () => {
           const firstPaint = performance.getEntriesByName('first-paint')[0]?.startTime || 0
           const firstContentfulPaint = performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0
 
-          console.log('Performance Metrics:', {
-            loadTime: `${loadTime}ms`,
-            domContentLoaded: `${domContentLoaded}ms`,
-            firstPaint: `${firstPaint}ms`,
-            firstContentfulPaint: `${firstContentfulPaint}ms`
-          })
+          // Performance metrics collected - could be sent to analytics service
+          // Metrics: loadTime, domContentLoaded, firstPaint, firstContentfulPaint
         }
       }
 

@@ -7,14 +7,14 @@ const Analytics: React.FC = () => {
     if (typeof window !== 'undefined') {
       // Track page views
       const trackPageView = () => {
-        console.log('Page view tracked:', window.location.pathname)
+        // Track page view - analytics implementation would go here
       }
 
       trackPageView()
 
       // Track user interactions
       const trackInteraction = (event: Event) => {
-        console.log('User interaction tracked:', event.type)
+        // Track user interaction - analytics implementation would go here
       }
 
       document.addEventListener('click', trackInteraction)
