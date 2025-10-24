@@ -1,5 +1,4 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Link } from 'react-router-dom';
 import { Bug, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
@@ -27,7 +26,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
     };
   }
 
-  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
@@ -35,65 +34,74 @@ class GlobalErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+      console.error('Global Error Boundary caught an error:', error, errorInfo);
     }
-
-    // In production, you might want to send this to an error reporting service
-    // Example: errorReportingService.captureException(error, { extra: errorInfo });
   }
 
-  handleRetry = () => {
-    this.setState({ hasError: false, error: undefined as any, errorInfo: undefined as any });
-  };
-
-  override render() {
+  render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center border border-white/20">
-            <div className="w-16 h-16 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center">
-              <Bug className="w-8 h-8 text-red-400" />
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="max-w-lg w-full bg-white shadow-xl rounded-lg p-8">
+            <div className="flex items-center justify-center w-16 h-16 mx-auto bg-red-100 rounded-full mb-6">
+              <Bug className="w-8 h-8 text-red-600" />
             </div>
             
-            <h1 className="text-2xl font-bold text-white mb-4">
+            <h1 className="text-2xl font-bold text-gray-900 text-center mb-4">
               Oops! Something went wrong
             </h1>
             
-            <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
+            <p className="text-gray-600 text-center mb-6">
+              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
 
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <div className="mb-6 p-4 bg-red-900/20 border border-red-500/30 rounded-lg text-left">
-                <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
-                <p className="text-red-200 text-sm font-mono break-all">
-                  {this.state.error.message}
-                </p>
-                {this.state.errorId && (
-                  <p className="text-gray-400 text-xs mt-2">
-                    Error ID: {this.state.errorId}
-                  </p>
-                )}
-              </div>
+            {this.state.errorId && (
+              <p className="text-sm text-gray-500 text-center mb-6">
+                Error ID: {this.state.errorId}
+              </p>
             )}
 
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                onClick={this.handleRetry}
-                className="flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300"
+                onClick={() => window.location.reload()}
+                className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
-                <RefreshCw className="w-4 h-4" />
-                Try Again
+                <RefreshCw className="w-4 h-4 mr-2" />
+                Refresh Page
               </button>
               
-              <Link
-                to="/"
-                className="flex items-center justify-center gap-2 border border-white/30 text-white hover:bg-white/10 font-semibold py-3 px-6 rounded-lg transition-all duration-300"
+              <button
+                onClick={() => window.location.href = '/'}
+                className="inline-flex items-center px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
               >
-                <Home className="w-4 h-4" />
+                <Home className="w-4 h-4 mr-2" />
                 Go Home
-              </Link>
+              </button>
             </div>
+
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="mt-6 p-4 bg-gray-100 rounded-lg">
+                <summary className="cursor-pointer font-medium text-gray-700 mb-2">
+                  Error Details (Development Only)
+                </summary>
+                <div className="space-y-2">
+                  <div>
+                    <strong>Error:</strong>
+                    <pre className="text-sm text-gray-600 whitespace-pre-wrap mt-1">
+                      {this.state.error.toString()}
+                    </pre>
+                  </div>
+                  {this.state.errorInfo && (
+                    <div>
+                      <strong>Component Stack:</strong>
+                      <pre className="text-sm text-gray-600 whitespace-pre-wrap mt-1">
+                        {this.state.errorInfo.componentStack}
+                      </pre>
+                    </div>
+                  )}
+                </div>
+              </details>
+            )}
           </div>
         </div>
       );

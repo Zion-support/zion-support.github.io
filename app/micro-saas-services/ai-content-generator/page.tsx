@@ -1,32 +1,28 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { Metadata } from 'next';
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
+import SEOOptimizer from '../../components/SEOOptimizer';
 
-export const metadata: Metadata = {
-  title: 'Page - Zion Tech Group',
-  description: 'Comprehensive page solutions for modern businesses.',
-  keywords: 'page, AI solutions, technology services',
-  openGraph: {
-    title: 'Page - Zion Tech Group',
-    description: 'Comprehensive page solutions for modern businesses.',
-    type: 'website',
-    url: 'https://ziontechgroup.com/micro-saas-services/ai-content-generator',
-  },
-};
-
-const PagePage = () => {
+export default function AIContentGeneratorPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+      <SEOOptimizer
+        title="AIContentGeneratorPage - ZionTechGroup"
+        description="ZionTechGroup aicontentgeneratorpage solutions and services."
+        keywords="aicontentgeneratorpage, solutions, services"
+      />
+      <Navigation />
+      
+      <main className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            AIContentGeneratorPage
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive page solutions for modern businesses.
+          <p className="text-xl text-gray-600">
+            AIContentGeneratorPage solutions and services coming soon.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
               Get Started
             </a>
@@ -35,37 +31,9 @@ const PagePage = () => {
             </a>
           </div>
         </div>
-      </div>
-=======
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
-import SEOOptimizer from '../../components/SEOOptimizer';
-
-export default function Page() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-      <SEOOptimizer
-        title="Page - ZionTechGroup"
-        description="ZionTechGroup page"
-        keywords="ziontechgroup"
-      />
-      <Navigation />
-      
-      <main className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            Page Title
-          </h1>
-          <p className="text-xl text-gray-600">
-            Page content coming soon.
-          </p>
-        </div>
       </main>
       
       <Footer />
->>>>>>> cursor/fix-errors-and-merge-to-main-45ea
     </div>
   );
-};
-
-export default PagePage;
+}

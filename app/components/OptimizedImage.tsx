@@ -1,20 +1,18 @@
-import React, { useState, useRef, useEffect, memo } from 'react';
-import { optimizeImageUrl, generateImagePlaceholder, lazyLoadImage } from '../utils/imageOptimizer';
-
+import React, { useState, useRef, useEffect, memo } from 'react'
+import { optimizeImageUrl, generateImagePlaceholder, lazyLoadImage } from '../utils/imageOptimizer'
 interface OptimizedImageProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  quality?: number;
-  format?: 'webp' | 'avif' | 'jpeg' | 'png';
-  className?: string;
-  lazy?: boolean;
-  placeholder?: boolean;
-  onLoad?: () => void;
-  onError?: () => void;
+  src: string
+  alt: string
+  width?: number
+  height?: number
+  quality?: number
+  format?: 'webp' | 'avif' | 'jpeg' | 'png'
+  className?: string
+  lazy?: boolean
+  placeholder?: boolean
+  onLoad?: () => void
+  onError?: () => void
 }
-
 const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
   src,
   alt,
@@ -28,53 +26,46 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
   onLoad,
   onError
 }) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [hasError, setHasError] = useState(false)
+  const imgRef = useRef<HTMLImageElement>(null)
   const optimizedSrc = optimizeImageUrl(src, {
     quality,
     format,
     width: width || 0,
     height: height || 0
-  });
-
+  })
   const placeholderSrc = placeholder && (width && height) 
     ? generateImagePlaceholder(width, height)
-    : undefined;
-
+    : undefined
   useEffect(() => {
     if (lazy && imgRef.current) {
-      lazyLoadImage(imgRef.current);
+      lazyLoadImage(imgRef.current)
     }
-  }, [lazy]);
-
+  }, [lazy])
   const handleLoad = () => {
-    setIsLoaded(true);
-    onLoad?.();
+    setIsLoaded(true)
+    onLoad?.()
   };
-
   const handleError = () => {
-    setHasError(true);
-    onError?.();
+    setHasError(true)
+    onError?.()
   };
-
   if (hasError) {
     return (
-      <div 
+    <div
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={{ width, height }}
       >
         <div className="text-center text-gray-500">
-          <svg className="w-8 h-8 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+            <svg className="w-8 h-8 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
           </svg>
           <span className="text-sm">Failed to load</span>
         </div>
       </div>
-    );
+    )
   }
-
   return (
     <div className={`relative overflow-hidden ${className}`} style={{ width, height }}>
       {placeholder && !isLoaded && placeholderSrc && (
@@ -85,8 +76,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
           aria-hidden="true"
         />
       )}
-      
-      <img
+            <img
         ref={imgRef}
         src={lazy ? undefined : optimizedSrc}
         data-src={lazy ? optimizedSrc : undefined}
@@ -102,9 +92,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
         decoding="async"
       />
     </div>
-  );
-});
-
-OptimizedImage.displayName = 'OptimizedImage';
-
-export default OptimizedImage;
+  )
+})
+OptimizedImage.displayName = 'OptimizedImage'
+export default OptimizedImage

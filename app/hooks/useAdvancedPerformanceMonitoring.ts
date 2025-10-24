@@ -1,29 +1,28 @@
-import { useEffect, useCallback, useRef } from 'react';
-
+'use client'
+import React from 'react'
+import { useEffect, useCallback, useRef } from 'react'
 interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
+  fcp: number | null
+  lcp: number | null
+  fid: number | null
+  cls: number | null
+  ttfb: number | null
   navigation: {
-    loadTime: number;
-    domContentLoaded: number;
-    firstPaint: number;
-    firstContentfulPaint: number;
-  } | null;
+    loadTime: number
+    domContentLoaded: number
+    firstPaint: number
+    firstContentfulPaint: number
+  } | null
 }
-
 interface PerformanceMonitoringOptions {
-  enableWebVitals?: boolean;
-  enableNavigationTiming?: boolean;
-  enableResourceTiming?: boolean;
-  enableMemoryMonitoring?: boolean;
-  enableNetworkMonitoring?: boolean;
-  reportInterval?: number;
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+  enableWebVitals?: boolean
+  enableNavigationTiming?: boolean
+  enableResourceTiming?: boolean
+  enableMemoryMonitoring?: boolean
+  enableNetworkMonitoring?: boolean
+  reportInterval?: number
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void
 }
-
 export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringOptions = {}) => {
   const {
     enableWebVitals = true,
@@ -33,8 +32,7 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
     enableNetworkMonitoring = false,
     reportInterval = 5000,
     onMetricsUpdate
-  } = options;
-
+  } = options
   const metricsRef = useRef<PerformanceMetrics>({
     fcp: null,
     lcp: null,
@@ -42,181 +40,149 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
     cls: null,
     ttfb: null,
     navigation: null
-  });
-
-  const observerRef = useRef<PerformanceObserver | null>(null);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
-
+  })
+  const observerRef = useRef<PerformanceObserver | null>(null)
+  const intervalRef = useRef<NodeJS.Timeout | null>(null)
   const updateMetrics = useCallback((newMetrics: Partial<PerformanceMetrics>) => {
-    metricsRef.current = { ...metricsRef.current, ...newMetrics };
-    onMetricsUpdate?.(metricsRef.current);
-  }, [onMetricsUpdate]);
-
+    metricsRef.current = { ...metricsRef.current, ...newMetrics }
+    onMetricsUpdate?.(metricsRef.current)
+  }, [onMetricsUpdate])
   const measureWebVitals = useCallback(() => {
-    if (!enableWebVitals || typeof window === 'undefined') return;
-
+    if (!enableWebVitals || typeof window === 'undefined') return
     // Load web-vitals library dynamically
     import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
       onCLS((metric: any) => {
-        updateMetrics({ cls: metric.value });
-      });
-
+        updateMetrics({ cls: metric.value })
+      })
       onFCP((metric) => {
-        updateMetrics({ fcp: metric.value });
-      });
-
+        updateMetrics({ fcp: metric.value })
+      })
       onLCP((metric) => {
-        updateMetrics({ lcp: metric.value });
-      });
-
-
+        updateMetrics({ lcp: metric.value })
+      })
       onTTFB((metric) => {
-        updateMetrics({ ttfb: metric.value });
-      });
+        updateMetrics({ ttfb: metric.value })
+      })
     }).catch((error) => {
       if (process.env.NODE_ENV === 'development') {
-        console.warn('Failed to load web-vitals:', error);
+        console.warn('Failed to load web-vitals:', error)
       }
-    });
-  }, [enableWebVitals, updateMetrics]);
-
+    })
+  }, [enableWebVitals, updateMetrics])
   const measureNavigationTiming = useCallback(() => {
-    if (!enableNavigationTiming || typeof window === 'undefined') return;
-
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (!enableNavigationTiming || typeof window === 'undefined') return
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
     if (navigation) {
       const navigationMetrics = {
         loadTime: navigation.loadEventEnd - navigation.loadEventStart,
         domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
         firstPaint: 0,
         firstContentfulPaint: 0
-      };
-
+      }
       // Get paint timing
-      const paintEntries = performance.getEntriesByType('paint');
+      const paintEntries = performance.getEntriesByType('paint')
       paintEntries.forEach((entry) => {
         if (entry.name === 'first-paint') {
-          navigationMetrics.firstPaint = entry.startTime;
+          navigationMetrics.firstPaint = entry.startTime
         } else if (entry.name === 'first-contentful-paint') {
-          navigationMetrics.firstContentfulPaint = entry.startTime;
+          navigationMetrics.firstContentfulPaint = entry.startTime
         }
-      });
-
-      updateMetrics({ navigation: navigationMetrics });
+      })
+      updateMetrics({ navigation: navigationMetrics })
     }
-  }, [enableNavigationTiming, updateMetrics]);
-
+  }, [enableNavigationTiming, updateMetrics])
   const measureResourceTiming = useCallback(() => {
-    if (!enableResourceTiming || typeof window === 'undefined') return;
-
-    const resources = performance.getEntriesByType('resource');
+    if (!enableResourceTiming || typeof window === 'undefined') return
+    const resources = performance.getEntriesByType('resource')
     const resourceMetrics = {
       totalResources: resources.length,
       totalSize: 0,
       slowResources: 0,
       failedResources: 0
-    };
-
-    resources.forEach((resource) => {
-      const resourceTiming = resource as PerformanceResourceTiming;
-      resourceMetrics.totalSize += resourceTiming.transferSize || 0;
-      
-      if (resourceTiming.duration > 1000) {
-        resourceMetrics.slowResources++;
-      }
-      
-      if (resourceTiming.transferSize === 0 && resourceTiming.decodedBodySize > 0) {
-        resourceMetrics.failedResources++;
-      }
-    });
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Resource Metrics:', resourceMetrics);
     }
-  }, [enableResourceTiming]);
-
+    resources.forEach((resource) => {
+      const resourceTiming = resource as PerformanceResourceTiming
+      resourceMetrics.totalSize += resourceTiming.transferSize || 0
+      if (resourceTiming.duration > 1000) {
+        resourceMetrics.slowResources++
+      }
+      if (resourceTiming.transferSize === 0 && resourceTiming.decodedBodySize > 0) {
+        resourceMetrics.failedResources++
+      }
+    })
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Resource Metrics:', resourceMetrics)
+    }
+  }, [enableResourceTiming])
   const measureMemoryUsage = useCallback(() => {
-    if (!enableMemoryMonitoring || typeof window === 'undefined' || !('memory' in performance)) return;
-
-    const memory = (performance as any).memory;
+    if (!enableMemoryMonitoring || typeof window === 'undefined' || !('memory' in performance)) return
+    const memory = (performance as any).memory
     const memoryMetrics = {
       usedJSHeapSize: memory.usedJSHeapSize,
       totalJSHeapSize: memory.totalJSHeapSize,
       jsHeapSizeLimit: memory.jsHeapSizeLimit
-    };
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Memory Usage:', memoryMetrics);
     }
-  }, [enableMemoryMonitoring]);
-
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Memory Usage:', memoryMetrics)
+    }
+  }, [enableMemoryMonitoring])
   const measureNetworkInfo = useCallback(() => {
-    if (!enableNetworkMonitoring || typeof window === 'undefined' || !('connection' in navigator)) return;
-
-    const connection = (navigator as any).connection;
+    if (!enableNetworkMonitoring || typeof window === 'undefined' || !('connection' in navigator)) return
+    const connection = (navigator as any).connection
     const networkInfo = {
       effectiveType: connection.effectiveType,
       downlink: connection.downlink,
       rtt: connection.rtt,
       saveData: connection.saveData
-    };
-
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Network Info:', networkInfo);
     }
-  }, [enableNetworkMonitoring]);
-
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Network Info:', networkInfo)
+    }
+  }, [enableNetworkMonitoring])
   const startPerformanceObserver = useCallback(() => {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
-
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return
     try {
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (process.env.NODE_ENV === 'development') {
-            console.log('Performance Entry:', entry);
+            console.log('Performance Entry:', entry)
           }
-        });
-      });
-
-      observer.observe({ entryTypes: ['measure', 'navigation', 'resource', 'paint'] });
-      observerRef.current = observer;
+        })
+      })
+      observer.observe({ entryTypes: ['measure', 'navigation', 'resource', 'paint'] })
+      observerRef.current = observer
     } catch (error) {
       if (process.env.NODE_ENV === 'development') {
-        console.warn('Failed to create PerformanceObserver:', error);
+        console.warn('Failed to create PerformanceObserver:', error)
       }
     }
-  }, []);
-
+  }, [])
   const startPeriodicMonitoring = useCallback(() => {
-    if (reportInterval <= 0) return;
-
+    if (reportInterval <= 0) return
     intervalRef.current = setInterval(() => {
-      measureMemoryUsage();
-      measureNetworkInfo();
-      measureResourceTiming();
-    }, reportInterval);
-  }, [measureMemoryUsage, measureNetworkInfo, measureResourceTiming, reportInterval]);
-
+      measureMemoryUsage()
+      measureNetworkInfo()
+      measureResourceTiming()
+    }, reportInterval)
+  }, [measureMemoryUsage, measureNetworkInfo, measureResourceTiming, reportInterval])
   useEffect(() => {
     // Initial measurements
-    measureWebVitals();
-    measureNavigationTiming();
-    measureResourceTiming();
-    measureMemoryUsage();
-    measureNetworkInfo();
-
+    measureWebVitals()
+    measureNavigationTiming()
+    measureResourceTiming()
+    measureMemoryUsage()
+    measureNetworkInfo()
     // Start observers and monitoring
-    startPerformanceObserver();
-    startPeriodicMonitoring();
-
+    startPerformanceObserver()
+    startPeriodicMonitoring()
     return () => {
       if (observerRef.current) {
-        observerRef.current.disconnect();
+        observerRef.current.disconnect()
       }
       if (intervalRef.current) {
-        clearInterval(intervalRef.current);
+        clearInterval(intervalRef.current)
       }
-    };
+    }
   }, [
     measureWebVitals,
     measureNavigationTiming,
@@ -225,30 +191,26 @@ export const useAdvancedPerformanceMonitoring = (options: PerformanceMonitoringO
     measureNetworkInfo,
     startPerformanceObserver,
     startPeriodicMonitoring
-  ]);
-
-  const getCurrentMetrics = useCallback(() => metricsRef.current, []);
-
+  ])
+  const getCurrentMetrics = useCallback(() => metricsRef.current, [])
   const markPerformance = useCallback((name: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
-      performance.mark(name);
+      performance.mark(name)
     }
-  }, []);
-
+  }, [])
   const measurePerformance = useCallback((name: string, startMark: string, endMark?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       if (endMark) {
-        performance.measure(name, startMark, endMark);
+        performance.measure(name, startMark, endMark)
       } else {
-        performance.measure(name, startMark);
+        performance.measure(name, startMark)
       }
     }
-  }, []);
-
+  }, [])
   return {
     metrics: metricsRef.current,
     getCurrentMetrics,
     markPerformance,
     measurePerformance
-  };
-};
+  }
+}
