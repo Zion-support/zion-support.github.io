@@ -1,4 +1,5 @@
 'use client';
+import React from 'react';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
@@ -26,25 +27,22 @@ class ErrorBoundaryWrapper extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       return (</Props>
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>
-          <div className="text-center p-8"></div>
-            <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300 mb-6">We're sorry, but something unexpected happened.</p>
+        <div className=" min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>
+          <div className=" text-center p-8"></div>
+            <h1 className=" text-4xl font-bold text-white mb-4">Something went wrong</h1>
+            <p className=" text-gray-300 mb-6">We're sorry, but something unexpected happened.</p>
             <button
               onClick = {
 () => window.location.reload();
 };
-              className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-semiboldtransition-colorsduration-200"
+              className=" bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-semiboldtransition-colorsduration-200"
             >
               Try Again</button>
             </button>
           </div>
-        </div>
-      );
-    }
+  );
+}
 
     return this.props.children;
   }
 }
-
-export default ErrorBoundaryWrapper;

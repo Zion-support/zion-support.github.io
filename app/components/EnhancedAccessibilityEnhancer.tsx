@@ -47,24 +47,24 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
         <meta name="description" content="Advanced Enhanced Accessibility Enhancer solution for modern businesses." /></meta>
         <meta name="keywords" content="AI, artificial intelligence, enhanced accessibility enhancer, AI solutions, intelligent automation" /></meta>
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-emerald-900to-slate-900"></div>
+      <div className=" min-h-screen bg-gradient-to-brfrom-slate-900via-emerald-900to-slate-900"></div>
         {/* Hero Section */}
     </div>
-        <section className="relativepy-20px-4overflow-hidden"></section>
-          <div className="absolute inset-0bg-gradient-to-rfrom-emerald-600/20to-blue-600/20">
-        <div className="relativemax-w-7xlmx-autotext-center">
-            <h1 className="text-5xl md:text-7xl font-boldtext-whitemb-6leading-tight">
+        <section className=" relativepy-20px-4overflow-hidden"></section>
+          <div className=" absolute inset-0bg-gradient-to-rfrom-emerald-600/20to-blue-600/20">
+        <div className=" relativemax-w-7xlmx-autotext-center">
+            <h1 className=" text-5xl md:text-7xl font-boldtext-whitemb-6leading-tight">
             Enhanced Accessibility Enhancer
             </h1>
-            <p className="text-xl text-gray-300 mb-8max-w-3xlmx-autoleading-relaxed">
+            <p className=" text-xl text-gray-300 mb-8max-w-3xlmx-autoleading-relaxed">
             Advanced Enhanced Accessibility Enhancer solution for modern businesses.
             </p>
-            <div className="flex flex-colsm:flex-rowgap-4justify-center"></div>
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200flex items-center justify-center"></button>
+            <div className=" flex flex-colsm:flex-rowgap-4justify-center"></div>
+              <button className=" bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200flex items-center justify-center"></button>
                 Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className=" ml-2 w-5 h-5" />
               </button>
-              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semiboldtransition-colorsduration-200"></button>
+              <button className=" border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white px-8 py-4 rounded-lg font-semiboldtransition-colorsduration-200"></button>
                 Learn More
               </button>
             </div>
@@ -72,26 +72,26 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
         </section>,
 ,
         {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        <section className=" py-20 px-4">
+          <div className=" max-w-7xl mx-auto">
+            <div className=" text-center mb-16">
+              <h2 className=" text-4xl font-bold text-white mb-4">Key Features</h2>
+              <p className=" text-xl text-gray-300 max-w-3xl mx-auto">
                 Discover the powerful features that make Enhanced Accessibility Enhancer the perfect solution for your business.
               </p>
             </div>
-            <div className="gridmd:grid-cols-2lg:grid-cols-4gap-8">,
+            <div className=" gridmd:grid-cols-2lg:grid-cols-4gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-                  <div className="flex items-center mb-4">
-                    <feature.icon className="w-8 h-8 text-emerald-400 mr-3" />
-                    <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                <div key={index} className=" bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                  <div className=" flex items-center mb-4">
+                    <feature.icon className="w-8 h-8  text-emerald-400 mr-3" />
+                    <h3 className=" text-xl font-semibold text-white">{feature.title}</h3>
                   </div>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
+                  <p className=" text-gray-300 mb-4">{feature.description}</p>
+                  <ul className=" space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-emerald-400 mr-2" />
+                      <li key={benefitIndex} className=" flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4  text-emerald-400 mr-2" />
                         {benefit}
                       </li>
                     ))}
@@ -103,38 +103,35 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Us?</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        <section className=" py-20 px-4 bg-white/5">
+          <div className=" max-w-7xl mx-auto">
+            <div className=" text-center mb-16">
+              <h2 className=" text-4xl font-bold text-white mb-4">Why Choose Us?</h2>
+              <p className=" text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the benefits of our Enhanced Accessibility Enhancer solution.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3"></div>
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
+            <div className=" grid grid-cols-1 md:grid-cols-2 gap-6">{benefits.map((benefit, index) => (
+              <div key={index} className=" flex items-start space-x-3"></div>
+                <CheckCircle className="h-6 w-6  text-purple-400 mt-1 flex-shrink-0" />
+                <p className=" text-gray-300 text-lg">{benefit}</p>
               </div>
             ))}
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-            <p className="text-xl text-gray-300 mb-8">
+        <section className=" py-20 px-4">
+          <div className=" max-w-4xl mx-auto text-center">
+            <h2 className=" text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+            <p className=" text-xl text-gray-300 mb-8">
               Join thousands of businesses already using Enhanced Accessibility Enhancer to transform their operations.
             </p>
-            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
+            <button className=" bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
               Start Your Free Trial
             </button>
           </div>
         </section>
       </div>
-    </div>
   );
 };
-
-export default EnhancedAccessibilityEnhancerPage;

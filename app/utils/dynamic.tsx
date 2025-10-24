@@ -5,4 +5,3 @@ import React from 'react';
 export const dynamic = () => {
   // Utility function implementation
   return null
-export default dynamic;

@@ -1,4 +1,5 @@
 'use client';
+import React from 'react';
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 interface SEOOptimizerProps {
@@ -92,8 +93,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,
       document.head.insertBefore(charset, document.head.firstChild);
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData])
   return (
-    <Head></Head>
-      <title>{title}</title>
+    <Head>
+        <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
       <link rel="canonical" href={canonicalUrl} />

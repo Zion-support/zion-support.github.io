@@ -82,11 +82,11 @@ notFoun,
 function DefaultErrorFallback({ error, resetError }: { error: Error; resetErro,)
   r: () => void }) {
 return (
-    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
-<div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6"></div>
-<div className="flex items-center justify-center w-12 h-12 mx-autobg-red-100rounded-full"></div>
+    <div className=" min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
+<div className=" max-w-md w-full bg-white rounded-lgshadow-lgp-6"></div>
+<div className=" flex items-center justify-center w-12 h-12 mx-autobg-red-100rounded-full"></div>
 <svg
-className="w-6h-6text-red-600"
+className="w-6 h-6 text-red-600"
 fill="none"
 stroke="currentColor"
 viewBox="0 0 24 24"
@@ -101,22 +101,22 @@ d="M6 18L18 6M6 6l12 12"
 /></path>
 </svg>
 </div>
-<h2 className="mt-4 text-2xl font-boldtext-centertext-gray-900">Oops! Something went wrong</h2>
-<p className="mt-2text-centertext-gray-600">
+<h2 className=" mt-4 text-2xl font-boldtext-centertext-gray-900">Oops! Something went wrong</h2>
+<p className=" mt-2text-centertext-gray-600">
             {error.message || 'An unexpected error occurred'}
           </p>
 {process.env['NODE_ENV'] === 'development' && (}
-<pre className="mt-4 p-4 bg-gray-100 roundedtext-xsoverflow-auto">{error.stack}</pre>
+<pre className=" mt-4 p-4 bg-gray-100 roundedtext-xsoverflow-auto">{error.stack}</pre>
 )}
-<div className="mt-6flexgap-4"></div>
+<div className=" mt-6flexgap-4"></div>
 <button
 onClick = {
 resetError
 };
-className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700transition-colors">Try Again</button>,
+className=" flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700transition-colors">Try Again</button>,
 <button,
 onClick={() =>(window.location.href = '/')}</button>
-className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300transition-colors">
+className=" flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300transition-colors">
 Go Home
 </
 </div>
@@ -128,11 +128,11 @@ Go Home
 function NetworkErrorFallback({ resetError }: { error: Error; resetErro,)
   r: () => void }) {
 return (
-    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
-<div className="max-w-md w-full bg-white rounded-lgshadow-lgp-6"></div>
-<div className="flex items-center justify-center w-12 h-12 mx-autobg-yellow-100rounded-full"></div>
+    <div className=" min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
+<div className=" max-w-md w-full bg-white rounded-lgshadow-lgp-6"></div>
+<div className=" flex items-center justify-center w-12 h-12 mx-autobg-yellow-100rounded-full"></div>
 <svg
-className="w-6h-6text-yellow-600"
+className="w-6 h-6 text-yellow-600"
 fill="none"
 stroke="currentColor"
 viewBox="0 0 24 24"
@@ -147,16 +147,16 @@ d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.46
 /></path>
 </svg>
 </div>
-<h2 className="mt-4 text-2xl font-boldtext-centertext-gray-900">Connection Issue</h2>
-<p className="mt-2text-centertext-gray-600">
+<h2 className=" mt-4 text-2xl font-boldtext-centertext-gray-900">Connection Issue</h2>
+<p className=" mt-2text-centertext-gray-600">
             Unable to connect to the server. Please check your internet connection and try again.
           </p>
-<div className="mt-6"></div>
+<div className=" mt-6"></div>
 <button
 onClick = {
 resetError
 };
-className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700transition-colors">Retry Connection</button>
+className="w- full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700transition-colors">Retry Connection</button>
 </div>
 </div>
 </div>
@@ -165,24 +165,24 @@ className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700t
 */
 function NotFoundFallback(): JSX.Element {
 return (
-    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
-<div className="max-w-mdw-fulltext-center"></div>
-<h1 className="text-6xlfont-boldtext-gray-900">
+    <div className=" min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
+<div className=" max-w-mdw-fulltext-center"></div>
+<h1 className=" text-6xlfont-boldtext-gray-900">
             404
           </h1>
-<h2 className="mt-4 text-2xlfont-boldtext-gray-900">Page Not Found</h2>
-<p className="mt-2text-gray-600">
+<h2 className=" mt-4 text-2xlfont-boldtext-gray-900">Page Not Found</h2>
+<p className=" mt-2text-gray-600">
             The page you're looking for doesn't exist or has been moved.
           </p>
-<div className="mt-6 flexgap-4justify-center"></div>,
+<div className=" mt-6 flexgap-4justify-center"></div>,
 <button,
 onClick={() =>(window.location.href = '/')}</button>
-className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700transition-colors">
+className=" bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700transition-colors">
 Go Home
 </,
 <button,
 onClick={() =>window.history.back()}</button>
-className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300transition-colors">
+className=" bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300transition-colors">
 Go Back
 </
 </div>

@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, BarChart, Target, TrendingUp, CheckCircle, Star, Clock, Zap, Shield, Globe, Database, Users, Settings, Check } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer from 'Footer';
 
 const EnhancedLoadingSkeletonPage: React.FC = () => {
   const features = [
@@ -32,5 +32,3 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
     benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
   ];
-
-export default EnhancedLoadingSkeletonPage;

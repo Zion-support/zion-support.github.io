@@ -1,92 +1,101 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix function names that start with numbers
-function fixFunctionName(serviceName) {
-  // Remove numbers and special characters, then convert to proper case
-  let cleanName = serviceName.replace(/^[0-9]+/, '').replace(/[^a-zA-Z0-9]/g, '');
-  if (cleanName.length === 0) {
-    cleanName = 'Service';
-  }
-  return cleanName.charAt(0).toUpperCase() + cleanName.slice(1) + 'Page';
-}
-
-// Function to fix all remaining issues
-function fixAllRemainingIssues(filePath) {
+function fixComprehensiveIssues(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    let originalContent = content;
 
-    // Fix 1: Fix function names that start with numbers
-    const functionMatch = content.match(/export default function (\w+)\(\)/);
-    if (functionMatch) {
-      const functionName = functionMatch[1];
-      if (/^[0-9]/.test(functionName)) {
-        const serviceName = path.basename(path.dirname(filePath));
-        const newFunctionName = fixFunctionName(serviceName);
-        content = content.replace(`export default function ${functionName}()`, `export default function ${newFunctionName}()`);
-        modified = true;
+    // Fix 1: Add missing React import if not present
+    if (!content.includes("import React from 'react'") && content.includes('return (') && content.includes('<')) {
+      if (content.includes("'use client'")) {
+        content = content.replace("'use client';", "'use client';\nimport React from 'react';");
+      } else {
+        content = "import React from 'react';\n" + content;
       }
     }
 
-    // Fix 2: Add missing closing tags and braces
-    if (content.includes('return (') && !content.includes('  );')) {
-      // Find the last closing tag and add proper closing
-      const lastClosingTag = content.lastIndexOf('</>');
-      if (lastClosingTag > 0) {
-        const beforeClosing = content.substring(0, lastClosingTag + 4);
-        const afterClosing = content.substring(lastClosingTag + 4);
-        
-        // Check if we need to add proper closing
-        if (!afterClosing.includes('  );') && !afterClosing.includes(');')) {
-          content = beforeClosing + '\n  );\n}' + afterClosing;
-          modified = true;
-        }
-      }
-    }
+    // Fix 2: Fix malformed div with comma
+    content = content.replace(/<div className="([^"]*?)">,(\s*)/g, '<div className="$1">$2');
 
-    // Fix 3: Fix malformed function names with spaces or special characters
-    content = content.replace(/export default function ([^()]+)\(\)/g, (match, functionName) => {
-      const cleanName = functionName.replace(/[^a-zA-Z0-9]/g, '');
-      if (cleanName !== functionName) {
-        modified = true;
-        return `export default function ${cleanName}()`;
-      }
-      return match;
-    });
+    // Fix 3: Fix malformed array syntax
+    content = content.replace(/{\s*\[\s*{([^}]+)}\s*<\/div>\s*{([^}]+)}\s*{([^}]+)}\s*{([^}]+)}\s*\]\.map\(/g, '{\n                [\n                  { $1 },\n                  { $2 },\n                  { $3 },\n                  { $4 }\n                ].map(');
 
-    // Fix 4: Ensure proper JSX structure
-    if (content.includes('return (') && !content.includes('  );\n}')) {
-      // Find the last return statement and fix structure
-      const returnMatch = content.match(/(\s*return\s*\([\s\S]*?)(\s*)(<\/>)/);
-      if (returnMatch) {
-        const beforeReturn = content.substring(0, returnMatch.index);
-        const returnContent = returnMatch[1];
-        const afterReturn = content.substring(returnMatch.index + returnMatch[0].length);
-        
-        content = beforeReturn + returnContent + returnMatch[2] + returnMatch[3] + '\n  );\n}';
-        modified = true;
-      }
-    }
+    // Fix 4: Fix unclosed h1 tags
+    content = content.replace(/(<h1[^>]*>[\s\S]*?)\s*<\/h1>\s*<\/h1>/g, '$1\n          </h1>');
 
-    // Fix 5: Remove any remaining duplicate exports
-    const exportMatches = content.match(/export default/g);
-    if (exportMatches && exportMatches.length > 1) {
-      const firstExportIndex = content.indexOf('export default');
-      const secondExportIndex = content.indexOf('export default', firstExportIndex + 1);
-      
-      if (secondExportIndex > firstExportIndex) {
-        content = content.substring(0, secondExportIndex).trim();
-        modified = true;
-      }
-    }
+    // Fix 5: Fix extra closing divs
+    content = content.replace(/<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>/g, '</div>\n      </div>\n    </div>');
 
-    // Fix 6: Clean up empty lines at the end
-    content = content.replace(/\n\s*\n\s*$/g, '\n');
+    // Fix 6: Fix malformed className attributes with missing spaces
+    content = content.replace(/className="([^"]*?)w-6h-6([^"]*?)"/g, 'className="$1w-6 h-6$2"');
+    content = content.replace(/className="([^"]*?)text-cyan-400mr-2"/g, 'className="$1text-cyan-400 mr-2"');
+    content = content.replace(/className="([^"]*?)rounded-xl p-6 mb-8"/g, 'className="$1rounded-xl p-6 mb-8"');
 
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed remaining issues: ${filePath}`);
+    // Fix 7: Fix malformed closing tags
+    content = content.replace(/<\/Search>/g, '');
+    content = content.replace(/<\/ArrowLeft>/g, '');
+    content = content.replace(/<\/ArrowRight>/g, '');
+
+    // Fix 8: Fix malformed div closing
+    content = content.replace(/<\/div>,\s*<div/g, '</div>\n        <div');
+    content = content.replace(/<\/div>,\s*{/g, '</div>\n            {');
+
+    // Fix 9: Fix malformed array syntax in JSX
+    content = content.replace(/{\s*\[\s*{([^}]+)}\s*<\/div>\s*{([^}]+)}\s*{([^}]+)}\s*{([^}]+)}\s*\]\.map\(/g, '{\n                [\n                  { $1 },\n                  { $2 },\n                  { $3 },\n                  { $4 }\n                ].map(');
+
+    // Fix 10: Fix malformed closing tags and structure
+    content = content.replace(/<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>/g, '</div>\n        </div>\n      </div>\n    </div>');
+
+    // Fix 11: Fix malformed JSX fragments
+    content = content.replace(/<>\s*<\/>/g, '');
+    content = content.replace(/<Fragment>\s*<\/Fragment>/g, '');
+
+    // Fix 12: Fix malformed function parameters
+    content = content.replace(/function\s+(\w+)\(\)\s*{\s*return\s*\(\s*<div>/g, 'function $1() {\n  return (\n    <div>');
+
+    // Fix 13: Fix malformed className attributes
+    content = content.replace(/className="([^"]*?)justify-centerp-4"/g, 'className="$1justify-center p-4"');
+    content = content.replace(/className="([^"]*?)max-w-2xlw-fulltext-center"/g, 'className="$1max-w-2xl w-full text-center"');
+    content = content.replace(/className="([^"]*?)rounded-xlp-6mb-8"/g, 'className="$1rounded-xl p-6 mb-8"');
+    content = content.replace(/className="([^"]*?)justify-centermb-4"/g, 'className="$1justify-center mb-4"');
+    content = content.replace(/className="([^"]*?)w-6h-6text-cyan-400mr-2"/g, 'className="$1w-6 h-6 text-cyan-400 mr-2"');
+    content = content.replace(/className="([^"]*?)text-lgfont-semiboldtext-white"/g, 'className="$1text-lg font-semibold text-white"');
+    content = content.replace(/className="([^"]*?)w-5h-5mr-2"/g, 'className="$1w-5 h-5 mr-2"');
+    content = content.replace(/className="([^"]*?)mt-8p-4bg-slate-800\/30rounded-lg"/g, 'className="$1mt-8 p-4 bg-slate-800/30 rounded-lg"');
+    content = content.replace(/className="([^"]*?)text-smtext-gray-400"/g, 'className="$1text-sm text-gray-400"');
+
+    // Fix 14: Fix malformed closing tags
+    content = content.replace(/<\/Search>/g, '');
+    content = content.replace(/<\/ArrowLeft>/g, '');
+    content = content.replace(/<\/ArrowRight>/g, '');
+
+    // Fix 15: Fix malformed div closing
+    content = content.replace(/<\/div>,\s*<div/g, '</div>\n        <div');
+    content = content.replace(/<\/div>,\s*{/g, '</div>\n            {');
+
+    // Fix 16: Fix malformed Head tags
+    content = content.replace(/<Head><\/Head>\s*<title>/g, '<Head>\n        <title>');
+    content = content.replace(/<meta name="robots" content="noindex, nofollow" \/>\s*<meta property="og:type" content="website" \/>\s*<\/Head>/g, '<meta name="robots" content="noindex, nofollow" />\n        <meta property="og:type" content="website" />\n      </Head>');
+
+    // Fix 17: Fix malformed LinkContact components
+    content = content.replace(/<LinkContact([^>]*)>/g, '<Link href="/contact"$1>');
+    content = content.replace(/<\/LinkContact>/g, '</Link>');
+
+    // Fix 18: Fix malformed JSX with extra characters
+    content = content.replace(/\$(\d+)/g, ''); // Remove $1, $2, etc.
+    content = content.replace(/<ArrowRight\$3 \/>/g, '<ArrowRight className="w-5 h-5 ml-2" />');
+
+    // Fix 19: Fix malformed array syntax in components
+    content = content.replace(/{\s*\[\s*{([^}]+)}\s*<\/div>\s*{([^}]+)}\s*{([^}]+)}\s*{([^}]+)}\s*\]\.map\(/g, '{\n                [\n                  { $1 },\n                  { $2 },\n                  { $3 },\n                  { $4 }\n                ].map(');
+
+    // Fix 20: Fix malformed closing tags for specific components
+    content = content.replace(/<Suspense([^>]*)>/g, '<Suspense$1>');
+    content = content.replace(/<div([^>]*)>\s*<\/div>/g, '<div$1></div>');
+
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
@@ -105,7 +114,7 @@ function findTsxFiles(dir) {
     const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
     
-    if (stat.isDirectory()) {
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
       files.push(...findTsxFiles(fullPath));
     } else if (item.endsWith('.tsx')) {
       files.push(fullPath);
@@ -116,21 +125,15 @@ function findTsxFiles(dir) {
 }
 
 // Main execution
-console.log('Starting final comprehensive fix...');
-
-const appDir = 'app';
+console.log('Starting final comprehensive fixes...');
+const appDir = path.join(__dirname, 'app');
 const tsxFiles = findTsxFiles(appDir);
 
 let fixedCount = 0;
-let totalFiles = tsxFiles.length;
-
-console.log(`Found ${totalFiles} .tsx files to check`);
-
 for (const file of tsxFiles) {
-  if (fixAllRemainingIssues(file)) {
+  if (fixComprehensiveIssues(file)) {
     fixedCount++;
   }
 }
 
-console.log(`\nFixed ${fixedCount} out of ${totalFiles} files`);
-console.log('Final comprehensive fix completed!');
+console.log(`Fixed ${fixedCount} files out of ${tsxFiles.length} total .tsx files`);
