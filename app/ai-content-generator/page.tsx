@@ -11,7 +11,6 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { PenTool, Brain, Zap, Target, CheckCircle, Star, ArrowRight, Users, BarChart, Clock, FileText, Image, Video, Mic } from 'lucide-react'
-
 const AiContentGeneratorPage: React.FC = () => {
 >>>>>>> 29d49925dca88a534c75f2643000c6a1ecf43fea
   const features = [
@@ -93,9 +92,7 @@ const AiContentGeneratorPage: React.FC = () => {
       title: 'Bulk Generation',
       description: 'Create hundreds of pieces of content in minutes',
       details: ['Batch Processing', 'Template System', 'Auto-scheduling', 'Content Calendar']
-    }
   ]
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -109,7 +106,7 @@ const AiContentGeneratorPage: React.FC = () => {
         'Standard templates',
         'Email support',
         '1 user'
-      ],
+  ],
       popular: false
     },
     {
@@ -125,7 +122,7 @@ const AiContentGeneratorPage: React.FC = () => {
         'Priority support',
         '3 users',
         'API access'
-      ],
+  ],
       popular: true
     },
     {
@@ -141,19 +138,16 @@ const AiContentGeneratorPage: React.FC = () => {
         'Dedicated support',
         'Unlimited users',
         'Custom integrations'
-      ],
+  ],
       popular: false
-    }
   ]
-
   const stats = [
     { value: '10x', label: 'Faster Content Creation', icon: <Clock className="w-8 h-8 text-green-400" /> },
     { value: '95%', label: 'Content Quality Score', icon: <Star className="w-8 h-8 text-blue-400" /> },
     { value: '80%', label: 'Time Savings', icon: <Zap className="w-8 h-8 text-purple-400" /> },
-    { value: '50+', label: 'Content Types', icon: <FileText className="w-8 h-8 text-cyan-400" /> }
+    { value: '50+', label: 'Content Types', icon: <FileText className="w-8 h-8 text-cyan-400" />
   ]
-
-  const contentTypes = [
+  const contentTypes = [,
     {
       title: 'Blog Posts',
       description: 'Long-form articles optimized for SEO and engagement',
@@ -173,9 +167,7 @@ const AiContentGeneratorPage: React.FC = () => {
       title: 'Product Descriptions',
       description: 'Compelling product copy that converts',
       icon: <BarChart className="w-8 h-8 text-purple-400" />
-    }
   ]
-
   const testimonials = [
     {
       name: 'Sarah Johnson',
@@ -196,26 +188,24 @@ const AiContentGeneratorPage: React.FC = () => {
       role: 'Founder, Creative Agency',
       content: 'We can now serve 3x more clients with the same team. Game-changing tool!',
       rating: 5,
-      company: 'Creative Agency',
-    }
+      company: 'Creative Agency'
   ]
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
       
-      {/* Hero Section */}
+      {/* Hero Section */
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center"></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
               AI <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Content Generator</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Create high-quality content 10x faster with AI. Generate blogs, social media posts, 
               emails, and more with just a few clicks.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
               </button>
@@ -226,21 +216,20 @@ const AiContentGeneratorPage: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Stats Section */}
+      {/* Stats Section */
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center"></div>
                 <div className="flex justify-center mb-4">
-                  {stat.icon}
+                  {stat.icon
                 </div>
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">
-                  {stat.value}
+                  {stat.value
                 </div>
                 <div className="text-gray-300">
-                  {stat.label}
+                  {stat.label
                 </div>
               </div>
             ))}
@@ -274,8 +263,8 @@ const AiContentGeneratorPage: React.FC = () => {
                       {benefit}
 =======
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Powerful AI Features
             </h2>
@@ -284,11 +273,11 @@ const AiContentGeneratorPage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mr-4">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300"></div>
+                <div className="flex items-center mb-4"></div>
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mr-4"></div>
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white">{feature.title}</h3>
@@ -301,10 +290,10 @@ const AiContentGeneratorPage: React.FC = () => {
                       {detail}
 >>>>>>> 29d49925dca88a534c75f2643000c6a1ecf43fea
                     </li>
-                  ))}
+                  ))
                 </ul>
               </div>
-            ))}
+            ))
           </div>
         </div>
       </section>
@@ -336,8 +325,8 @@ const AiContentGeneratorPage: React.FC = () => {
 =======
       {/* Content Types Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Content Types
             </h2>
@@ -346,24 +335,23 @@ const AiContentGeneratorPage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {contentTypes.map((type, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/20 transition-all duration-300">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/20 transition-all duration-300"></div>
                 <div className="flex justify-center mb-4">
-                  {type.icon}
+                  {type.icon
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{type.title}</h3>
                 <p className="text-gray-300">{type.description}</p>
               </div>
-            ))}
+            ))
           </div>
         </div>
       </section>
-
-      {/* Pricing Section */}
+      {/* Pricing Section */
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Simple Pricing
             </h2>
@@ -372,22 +360,22 @@ const AiContentGeneratorPage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-2xl p-8 relative ${
                 plan.popular ? 'ring-2 ring-cyan-400 bg-white/15' : ''
-              }`}>
+              }`}></div>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
                   </div>
-                )}
-                <div className="text-center mb-8">
+                )
+                <div className="text-center mb-8"></div>
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
+                  <div className="flex items-baseline justify-center"></div>
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-300 ml-1">{plan.period}</span>
                   </div>
@@ -396,9 +384,9 @@ const AiContentGeneratorPage: React.FC = () => {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      {feature
                     </li>
-                  ))}
+                  ))
                 </ul>
                 <button className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-300 ${
                   plan.popular 
@@ -408,15 +396,14 @@ const AiContentGeneratorPage: React.FC = () => {
                   Start Free Trial
                 </button>
               </div>
-            ))}
+            ))
           </div>
         </div>
       </section>
-
-      {/* Testimonials Section */}
+      {/* Testimonials Section */
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               What Our Users Say
             </h2>
@@ -425,36 +412,35 @@ const AiContentGeneratorPage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-                <div className="flex items-center mb-4">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8"></div>
+                <div className="flex items-center mb-4"></div>
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
+                  ))
                 </div>
                 <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
-                <div>
+                <div></div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-cyan-400 text-sm">{testimonial.role}</div>
                   <div className="text-gray-400 text-sm">{testimonial.company}</div>
                 </div>
               </div>
-            ))}
+            ))
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* CTA Section */
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center"></div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Create Amazing Content?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Start your free trial today and experience the power of AI content generation.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
               <ArrowRight className="w-5 h-5 mr-2" />
               Start Free Trial
@@ -465,11 +451,9 @@ const AiContentGeneratorPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   )
-}
 
 export default AiContentGeneratorPage
 >>>>>>> 29d49925dca88a534c75f2643000c6a1ecf43fea

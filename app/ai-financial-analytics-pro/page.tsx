@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: 'AI Financial Analytics Pro - Advanced Financial Intelligence Platform',
       description: 'Transform your financial analysis with AI-powered insights, real-time analytics, and predictive modeling. Make smarter financial decisions with advanced intelligence.',
     type: 'website',
-    url: 'https://ziontechgroup.com/ai-financial-analytics-pro'}}
+    url: 'https://ziontechgroup.com/ai-financial-analytics-pro'}
 export default function AiFinancialAnalyticsProPage() {
 >>>>>>> 29d49925dca88a534c75f2643000c6a1ecf43fea
   const features = [
@@ -67,9 +67,7 @@ export default function AiFinancialAnalyticsProPage() {
   {
     icon: BarChart3,
       title: 'Real-Time Analytics',
-      description: 'Monitor your financial performance with live dashboards and instant reporting',
-  
-    }
+      description: 'Monitor your financial performance with live dashboards and instant reporting'
   ]
 >>>>>>> 29d49925dca88a534c75f2643000c6a1ecf43fea
   const analyticsTypes = [
@@ -171,7 +169,6 @@ export default function AiFinancialAnalyticsProPage() {
 =======
     'Trend analysis'
   ]
-}
   ]
   const pricingPlans = [
   {
@@ -306,7 +303,7 @@ export default function AiFinancialAnalyticsProPage() {
     content: 'The automated reporting saves us 20+ hours per week. Our team can now focus on strategic analysis instead of manual data processing.',
       rating: 5,
     avatar: 'LT',
-    results: '20+ hours saved weekly'}
+    results: '20+ hours saved weekly'
   ]
 >>>>>>> 29d49925dca88a534c75f2643000c6a1ecf43fea
   const stats = [
@@ -415,7 +412,7 @@ export default function AiFinancialAnalyticsProPage() {
 >>>>>>> 29d49925dca88a534c75f2643000c6a1ecf43fea
             and predictive modeling. Make smarter financial decisions with advanced intelligence.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8"></div>
             <Link 
               href="/contact" 
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
@@ -447,18 +444,18 @@ export default function AiFinancialAnalyticsProPage() {
 =======
         {/* Stats Section */}
         <section className="py-16 px-4 sm: px-6 lg:px-8 bg-white/5 backdrop-blur-sm rounded-2xl mb-16">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="grid grid-cols-2 md: grid-cols-4 gap-8"></div>
               {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4">
+                <div key={index} className="text-center"></div>
+                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4"></div>
                     <stat.icon className="h-8 w-8 text-white" />
 >>>>>>> 29d49925dca88a534c75f2643000c6a1ecf43fea
                   </div>
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-300">{stat.label}</div>
                 </div>
-              ))}
+              ))
             </div>
           </div>
         </section>
@@ -468,7 +465,7 @@ export default function AiFinancialAnalyticsProPage() {
 >>>>>>> 29d49925dca88a534c75f2643000c6a1ecf43fea
         {/* Features Section */}
         <section className="mb-16">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12"></div>
             <h2 className="text-3xl font-bold text-white mb-4">Advanced AI Features</h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
 <<<<<<< HEAD
@@ -487,7 +484,7 @@ export default function AiFinancialAnalyticsProPage() {
               to provide unprecedented insights into your financial data.
             </p>
           </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700 hover: border-cyan-500/30 transition-all duration-300 group">
                 <div className="mb-6">
@@ -507,11 +504,11 @@ export default function AiFinancialAnalyticsProPage() {
 >>>>>>> 29d49925dca88a534c75f2643000c6a1ecf43fea
                         {benefit}
                       </li>
-                    ))}
+                    ))
                   </ul>
                 </div>
               </div>
-            ))}
+            ))
           </div>
         </section>
 <<<<<<< HEAD
@@ -520,7 +517,7 @@ export default function AiFinancialAnalyticsProPage() {
 >>>>>>> 29d49925dca88a534c75f2643000c6a1ecf43fea
         {/* Analytics Types Section */}
         <section className="mb-16">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12"></div>
             <h2 className="text-3xl font-bold text-white mb-4">Comprehensive Analytics</h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               Cover every aspect of your financial operations with our comprehensive analytics suite.
@@ -550,10 +547,10 @@ export default function AiFinancialAnalyticsProPage() {
 >>>>>>> 29d49925dca88a534c75f2643000c6a1ecf43fea
                       {item}
                     </li>
-                  ))}
+                  ))
                 </ul>
               </div>
-            ))}
+            ))
           </div>
         </section>
 <<<<<<< HEAD
@@ -562,7 +559,7 @@ export default function AiFinancialAnalyticsProPage() {
 >>>>>>> 29d49925dca88a534c75f2643000c6a1ecf43fea
         {/* Integrations Section */}
         <section className="mb-16">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12"></div>
             <h2 className="text-3xl font-bold text-white mb-4">Seamless Integrations</h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               Connect with your existing financial systems and tools for a unified analytics experience.
@@ -585,7 +582,7 @@ export default function AiFinancialAnalyticsProPage() {
                 <h3 className="text-white font-semibold mb-1">{integration.name}</h3>
                 <p className="text-gray-400 text-sm">{integration.category}</p>
               </div>
-            ))}
+            ))
           </div>
         </section>
 <<<<<<< HEAD
@@ -594,7 +591,7 @@ export default function AiFinancialAnalyticsProPage() {
 >>>>>>> 29d49925dca88a534c75f2643000c6a1ecf43fea
         {/* Pricing Section */}
         <section className="mb-16">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12"></div>
             <h2 className="text-3xl font-bold text-white mb-4">Choose Your Plan</h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
               Flexible pricing plans designed to meet your financial analytics needs at any scale.
@@ -614,7 +611,7 @@ export default function AiFinancialAnalyticsProPage() {
                 plan.popular ? 'border-cyan-500/50 ring-2 ring-cyan-500/20' : 'border-slate-700 hover: border-cyan-500/30'}`}>
 >>>>>>> 29d49925dca88a534c75f2643000c6a1ecf43fea
                 {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
@@ -626,7 +623,7 @@ export default function AiFinancialAnalyticsProPage() {
 >>>>>>> 29d49925dca88a534c75f2643000c6a1ecf43fea
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center mb-2">
+                  <div className="flex items-baseline justify-center mb-2"></div>
                     <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
                     <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
@@ -646,7 +643,7 @@ export default function AiFinancialAnalyticsProPage() {
 >>>>>>> 29d49925dca88a534c75f2643000c6a1ecf43fea
                       {feature}
                     </li>
-                  ))}
+                  ))
                 </ul>
 <<<<<<< HEAD
                 
@@ -665,11 +662,11 @@ export default function AiFinancialAnalyticsProPage() {
                       : 'border-2 border-cyan-500 text-cyan-400 hover: bg-cyan-500 hover:text-white'}`}
 >>>>>>> 29d49925dca88a534c75f2643000c6a1ecf43fea
                 >
-                  {plan.cta}
+                  {plan.cta
                   <ArrowRight className="w-8 h-8" />
                 </Link>
               </div>
-            ))}
+            ))
           </div>
         </section>
 <<<<<<< HEAD
@@ -694,21 +691,21 @@ export default function AiFinancialAnalyticsProPage() {
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
 >>>>>>> 29d49925dca88a534c75f2643000c6a1ecf43fea
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
-                  <div className="flex items-center mb-4">
+                <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700"></div>
+                  <div className="flex items-center mb-4"></div>
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
-                      {testimonial.avatar}
+                      {testimonial.avatar
                     </div>
-                    <div>
+                    <div></div>
                       <h4 className="text-white font-semibold">{testimonial.name}</h4>
                       <p className="text-gray-400 text-sm">{testimonial.role}</p>
                       <p className="text-cyan-400 text-sm font-semibold">{testimonial.company}</p>
                     </div>
                   </div>
-                  <div className="flex items-center mb-3">
+                  <div className="flex items-center mb-3"></div>
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                    ))}
+                    ))
                   </div>
 <<<<<<< HEAD
                   <p className="text-gray-300 italic mb-3">&ldquo;{testimonial.content}&rdquo;</p>
@@ -716,10 +713,10 @@ export default function AiFinancialAnalyticsProPage() {
                   <p className="text-gray-300 italic mb-3">&quot;{testimonial.content}&quot;</p>
 >>>>>>> 29d49925dca88a534c75f2643000c6a1ecf43fea
                   <div className="text-cyan-400 font-semibold text-sm">
-                    Result: {testimonial.results}
+                    Result: {testimonial.results
                   </div>
                 </div>
-              ))}
+              ))
             </div>
           </div>
         </section>
@@ -729,7 +726,7 @@ export default function AiFinancialAnalyticsProPage() {
 >>>>>>> 29d49925dca88a534c75f2643000c6a1ecf43fea
         {/* CTA Section */}
         <section className="text-center">
-          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 border border-cyan-500/30">
+          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 border border-cyan-500/30"></div>
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Financial Analysis?
             </h2>
@@ -760,7 +757,7 @@ export default function AiFinancialAnalyticsProPage() {
                 <PieChart className="w-8 h-8" />
               </Link>
             </div>
-            <div className="mt-8 text-white/80 text-sm">
+            <div className="mt-8 text-white/80 text-sm"></div>
               <p>✓ 14-day free trial • ✓ Bank-grade security • ✓ 24/7 support • ✓ Cancel anytime</p>
             </div>
           </div>

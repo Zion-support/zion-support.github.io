@@ -1,26 +1,26 @@
 export interface StructuredData {
-  '@context': string;
-  '@type': string;
-  name: string;
-  description: string;
-  url: string;
-  logo?: string;
-  sameAs?: string[]}
+  '@context': string
+  '@type': string
+  name: string
+  description: string
+  url: string
+  logo?: string
+  sameAs?: string[]
 
 export interface SEOData {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonical?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  ogUrl?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  structuredData?: StructuredData}
+  title: string
+  description: string
+  keywords: string[]
+  canonical?: string
+  ogTitle?: string
+  ogDescription?: string
+  ogImage?: string
+  ogUrl?: string
+  twitterCard?: string
+  twitterTitle?: string
+  twitterDescription?: string
+  twitterImage?: string
+  structuredData?: StructuredData
 
 export const defaultSEOData: SEOData = {
   title: 'Zion Tech Group - AI & Technology Solutions',
@@ -45,9 +45,9 @@ export const defaultSEOData: SEOData = {
     sameAs: [
       'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup'
-    ]
-  }
-};
+  ]
+  
+}
 
 export const generateSEOData = (customData: Partial<SEOData> = {}): SEOData => {
   return {
@@ -56,5 +56,5 @@ export const generateSEOData = (customData: Partial<SEOData> = {}): SEOData => {
     structuredData: {
       ...defaultSEOData.structuredData,
       ...customData.structuredData
-    }
-  }};
+    
+  }};}

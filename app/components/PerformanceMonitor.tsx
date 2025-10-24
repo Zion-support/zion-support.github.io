@@ -1,20 +1,20 @@
-'use client';
+'use client'
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 
 interface PerformanceMetrics {
-  loadTime: number | null;
-  firstContentfulPaint: number | null;
-  largestContentfulPaint: number | null;
-  firstInputDelay: number | null;
-  cumulativeLayoutShift: number | null;
-  timeToInteractive: number | null;
-  totalBlockingTime: number | null}
+  loadTime: number | null
+  firstContentfulPaint: number | null
+  largestContentfulPaint: number | null
+  firstInputDelay: number | null
+  cumulativeLayoutShift: number | null
+  timeToInteractive: number | null
+  totalBlockingTime: number | null
 
 interface PerformanceMonitorProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-  enableRealTimeMonitoring?: boolean;
-  logToConsole?: boolean}
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void
+  enableRealTimeMonitoring?: boolean
+  logToConsole?: boolean
 
   onMetricsUpdate,
   enableRealTimeMonitoring = true,
@@ -28,13 +28,13 @@ interface PerformanceMonitorProps {
     cumulativeLayoutShift: null,
     timeToInteractive: null,
     totalBlockingTime: null,
-  });
+  })
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined') return
 
     const measurePerformance = () => {
-      const newMetrics: PerformanceMetrics = { ...metrics };
+      const newMetrics: PerformanceMetrics = { ...metrics }
 
       // Measure page load time
       if (performance.timing) {
@@ -44,6 +44,6 @@ interface PerformanceMonitorProps {
 
       setMetrics(newMetrics);
       if (onMetricsUpdate) {
-        onMetricsUpdate(newMetrics)}
+        onMetricsUpdate(newMetrics)
 
       if (logToConsole) {
