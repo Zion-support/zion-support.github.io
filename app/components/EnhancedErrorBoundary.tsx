@@ -1,29 +1,29 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
   enableErrorReporting?: boolean;
+  maxRetries?: number;
 }
-
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
   errorId?: string;
-  retryCount?: number;
+  retryCount: number;
 }
 class EnhancedErrorBoundary extends Component<Props, State> {
-  private maxRetries = 3;
-  
+  private maxRetries: number;
+
   constructor(props: Props) {
     super(props);
     this.state = { 
-      hasError: false,
+      hasError: false, 
       retryCount: 0,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
+    this.maxRetries = props.maxRetries || 3;
   }
   static getDerivedStateFromError(error: Error): State {
     return { 
@@ -38,7 +38,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       error,
       errorInfo
     });
-    
+
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
@@ -70,7 +70,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
       url: window.location.href,
-      retryCount: this.state.retryCount || 0,
+      retryCount: this.state.retryCount,
       userId: this.getUserId(),
       sessionId: this.getSessionId(),
     };
@@ -83,7 +83,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         fatal: false,
         custom_map: {
           error_id: this.state.errorId,
-          retry_count: this.state.retryCount || 0,
+          retry_count: this.state.retryCount,
         }
       });
     }
@@ -118,12 +118,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     return sessionId;
   };
   private handleRetry = () => {
-    if ((this.state.retryCount || 0) < this.maxRetries) {
+    if (this.state.retryCount < this.maxRetries) {
       this.setState(prevState => ({
         hasError: false,
         error: undefined,
         errorInfo: undefined,
-        retryCount: (prevState.retryCount || 0) + 1
+        retryCount: prevState.retryCount + 1
       }));
     } else {
       // Max retries reached, reload the page
@@ -159,34 +159,74 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       })
       .catch(() => {
         // eslint-disable-next-line no-console
-        console.error('Error reporting failed');
+        console.warn('Failed to copy error details');
       });
   };
+
+  // In production, you might want to send this to an error reporting service
+  if (process.env.NODE_ENV === 'production') {
+    // Example: send to error reporting service
+    // errorReportingService.captureException(error, { extra: errorInfo });
+  }
+
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
       }
       const { retryCount, error, errorId } = this.state;
-      const canRetry = (retryCount || 0) < this.maxRetries;
+      const canRetry = retryCount < this.maxRetries;
       return (
-        <div className="error-boundary">
-          <h2>Something went wrong</h2>
-          <p>Error ID: {errorId}</p>
-          {canRetry && (
-            <button onClick={this.handleRetry}>
-              Try again
-            </button>
-          )}
-          <button onClick={this.handleReload}>
-            Reload Page
-          </button>
-          <button onClick={this.handleGoHome}>
-            Go Home
-          </button>
-          <button id="copy-error-details" onClick={this.copyErrorDetails}>
-            Copy Error Details
-          </button>
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
+            <div className="text-6xl mb-4">⚠️</div>
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">
+              Oops! Something went wrong
+            </h1>
+            <p className="text-gray-600 mb-6">
+              We're sorry, but something unexpected happened. Please try refreshing the page.
+            </p>
+            <div className="space-y-4">
+              {canRetry && (
+                <button
+                  onClick={this.handleRetry}
+                  className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+                >
+                  Try Again ({this.maxRetries - retryCount} attempts left)
+                </button>
+              )}
+              <button
+                onClick={this.handleReload}
+                className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+              >
+                Refresh Page
+              </button>
+              <button
+                onClick={this.handleGoHome}
+                className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
+              >
+                Go Home
+              </button>
+            </div>
+            {process.env.NODE_ENV === 'development' && error && (
+              <details className="mt-6 text-left">
+                <summary className="cursor-pointer text-sm text-gray-500">
+                  Error Details (Development)
+                </summary>
+                <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">
+                  {error.toString()}
+                  {this.state.errorInfo?.componentStack}
+                </pre>
+                <button
+                  id="copy-error-details"
+                  onClick={this.copyErrorDetails}
+                  className="mt-2 text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded hover:bg-gray-300"
+                >
+                  Copy Error Details
+                </button>
+              </details>
+            )}
+          </div>
         </div>
       );
     }

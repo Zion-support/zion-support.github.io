@@ -1,6 +1,4 @@
-"use client";
-
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
   lcp: number | null;
@@ -24,6 +22,8 @@ const PerformanceMonitor: React.FC = () => {
     loadTime: 0,
     memoryUsage: 0,
   });
+
+  const [, setPerformanceScore] = useState(0);
 
   useEffect(() => {
     const updateMetrics = () => {
@@ -161,52 +161,43 @@ const PerformanceMonitor: React.FC = () => {
             }
           }
         }, 2000);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-bb9d
       });
+    };
 
-      try {
-        observer.observe({ entryTypes: ["measure", "navigation", "paint"] });
-      } catch (e) {
-        console.warn("Performance Observer not supported");
-      }
+    measureWebVitals();
 
-      // Monitor resource loading
-      window.addEventListener("load", () => {
-        const navigation = performance.getEntriesByType(
-          "navigation",
-        )[0] as PerformanceNavigationTiming;
-        if (navigation) {
-          console.log(
-            "Page Load Time:",
-            navigation.loadEventEnd - navigation.loadEventStart,
-          );
+    // Monitor resource loading
+    const monitorResources = () => {
+      if ('PerformanceObserver' in window) {
+        const resourceObserver = new PerformanceObserver((list) => {
+          list.getEntries().forEach((entry) => {
+            if (entry.duration > 1000) { // Track slow resources
+              // Could send to analytics or error reporting service
+            }
+          });
+        });
+        
+        try {
+          resourceObserver.observe({ entryTypes: ['resource'] });
+        } catch {
+          // Resource observer not supported
         }
-      });
+      }
+    };
 
-<<<<<<< HEAD
-      return () => {
-        observer.disconnect();
-      };
-    }
+    monitorResources();
 
-=======
     // Initial metrics update
     updateMetrics();
 
     // Set up interval for continuous monitoring
     const interval = setInterval(updateMetrics, 5000);
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-bb9d
     return () => {
-      // Cleanup function
+      clearInterval(interval);
     };
   }, []);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-bb9d
   return null;
 };
 
 export default PerformanceMonitor;
-
