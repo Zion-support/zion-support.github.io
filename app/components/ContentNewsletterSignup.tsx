@@ -109,7 +109,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
                   <>
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2"></div>
                     Subscribing...
-                  </>
+                  < />
                 ) : (
                   <>
                     {buttonText}
