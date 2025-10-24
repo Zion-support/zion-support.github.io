@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import Head from 'next/head'
+import Footer from '../components/Footer'
 
 interface FormData {
   name: string
@@ -28,7 +29,7 @@ const ContactPage: React.FC = () => {
   }
 
   return (
-    <>
+    <div>
       <Head>
         <title>Contact Us - Zion Tech Group</title>
         <meta name="description" content="Get in touch with Zion Tech Group for AI and technology solutions." />
@@ -104,9 +105,10 @@ const ContactPage: React.FC = () => {
             </form>
           </div>
         </div>
-      </main>
+        <Footer />
+      </div>
     </div>
   )
 }
-  </form>
-  </div>
+
+export default ContactPage

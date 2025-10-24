@@ -10,15 +10,15 @@ export default function Page() {
     <div>
       <Head>
         <title>Devops Automation - Zion Tech Group</title>
-        <meta name="description" content="Professional services by Zion Tech Group." />
+        <meta name="description" content="Professional devops automation services and solutions by Zion Tech Group." />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
-            Page
+            Devops Automation
           </h1>
           <p className="text-xl text-gray-300 mb-8">
-            Professional devops automation services and solutions.
+            Professional devops automation services and solutions by Zion Tech Group.
           </p>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
             <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
@@ -27,8 +27,8 @@ export default function Page() {
             </p>
           </div>
         </div>
-      </main>
+        <Footer />
+      </div>
     </div>
   )
 }
-  </div>
