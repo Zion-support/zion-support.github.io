@@ -14,7 +14,7 @@ interface AnalyticsProps {
   enableUserBehaviorTracking?: boolean;
 }
 
-const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_TRACKING_ID;
+const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_TRACKING_ID || '';
 
 const Analytics: React.FC<AnalyticsProps> = ({
   enableGoogleAnalytics = true,
@@ -41,6 +41,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
   }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]);
 
   const initializeGoogleAnalytics = () => {
+    // Load Google Analytics
     if (typeof window !== 'undefined') {
       // Initialize gtag
       window.gtag = window.gtag || function() {
@@ -48,19 +49,20 @@ const Analytics: React.FC<AnalyticsProps> = ({
         (window.gtag as any).q.push(arguments);
       };
 
-      // Load Google Analytics script
+      // Load GA script
       const script = document.createElement('script');
       script.async = true;
       script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
       document.head.appendChild(script);
 
-      // Configure Google Analytics
+      // Configure GA
       window.gtag('js', new Date());
       window.gtag('config', GA_TRACKING_ID);
     }
   };
 
   const initializePerformanceMonitoring = () => {
+    // Initialize performance monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
       // Performance monitoring logic
       const observer = new PerformanceObserver((list) => {
@@ -75,10 +77,11 @@ const Analytics: React.FC<AnalyticsProps> = ({
   };
 
   const initializeErrorTracking = () => {
+    // Initialize error tracking
     if (typeof window !== 'undefined') {
       window.addEventListener('error', (event) => {
         console.error('Error tracked:', event.error);
-        // Send error to analytics service
+        // Send error to analytics
         if (window.gtag) {
           window.gtag('event', 'exception', {
             description: event.error?.message || 'Unknown error',
@@ -90,12 +93,14 @@ const Analytics: React.FC<AnalyticsProps> = ({
   };
 
   const initializeUserBehaviorTracking = () => {
+    // Initialize user behavior tracking
     if (typeof window !== 'undefined') {
       // Track page views
       const trackPageView = () => {
         if (window.gtag) {
           window.gtag('config', GA_TRACKING_ID, {
-            page_path: window.location.pathname,
+            page_title: document.title,
+            page_location: window.location.href
           });
         }
       };

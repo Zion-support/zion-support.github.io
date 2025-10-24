@@ -12,11 +12,25 @@ const PerformanceOptimizer: React.FC = () => {
       fontLink.as = 'style';
       document.head.appendChild(fontLink);
 
+      // Preload critical resources
+      const criticalResources = [
+        '/fonts/inter.woff2',
+        '/css/critical.css'
+      ];
+
       // Preload critical images
       const criticalImages = [
         '/images/hero-bg.jpg',
         '/images/logo.png'
       ];
+
+      criticalResources.forEach(href => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = href;
+        link.as = href.endsWith('.css') ? 'style' : 'font';
+        document.head.appendChild(link);
+      });
 
       criticalImages.forEach(src => {
         const img = new Image();

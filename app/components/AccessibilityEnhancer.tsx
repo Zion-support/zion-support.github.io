@@ -33,8 +33,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     // Enhance focus management
     const enhanceFocusManagement = () => {
-      if (!_enableFocusManagement) return;
-      
       // Add focus indicators
       const style = document.createElement('style');
       style.textContent = `
@@ -90,8 +88,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     // Add ARIA labels and roles
     const enhanceARIA = () => {
-      if (!_enableScreenReaderSupport) return;
-      
       // Add ARIA labels to buttons without text
       const iconButtons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
       iconButtons.forEach(button => {
@@ -142,8 +138,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     // Enhance keyboard navigation
     const enhanceKeyboardNavigation = () => {
-      if (!_enableKeyboardNavigation) return;
-      
       // Add keyboard support for dropdowns
       const dropdowns = document.querySelectorAll('[data-dropdown]');
       dropdowns.forEach(dropdown => {
@@ -168,8 +162,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     // Add high contrast mode support
     const addHighContrastSupport = () => {
-      if (!_enableHighContrast) return;
-      
       const style = document.createElement('style');
       style.textContent = `
         @media (prefers-contrast: high) {
@@ -228,9 +220,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     return () => {
       observer.disconnect();
     };
-  }, [_enableKeyboardNavigation, _enableScreenReaderSupport, _enableHighContrast, _enableFocusManagement]);
+  }, []);
 
-  return <>{children}</>;
+  return children ? <>{children}</> : null;
 };
 
 export default AccessibilityEnhancer;
