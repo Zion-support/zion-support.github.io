@@ -34,12 +34,12 @@ export interface Metadata {
     publishedTime?: string()
   }
   twitter?: {
-  card?: 'summary' | 'summary_large_image' | 'app' | 'player''
-      'max-video-preview''
-      'max-image-preview'?: 'none' | 'standard' | 'large''
-      'max-snippet''
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never''
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never''
-  "runtime": 'edge'',
-  "runtime": 'nodejs'',
-declare module 'next''
+  card?: 'summary' | 'summary_large_image' | 'app' | 'player'
+      'max-video-preview'
+      'max-image-preview'?: 'none' | 'standard' | 'large'
+      'max-snippet'
+  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
+  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
+  "runtime": 'edge',
+  "runtime": 'nodejs',
+declare module 'next'
