@@ -18,7 +18,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   onMetricsUpdate,
   enabled = true
 }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [, setMetrics] = useState<PerformanceMetrics | null>(null);
 
   const measurePerformance = useCallback(() => {
     if (typeof window === 'undefined' || !enabled) return;
@@ -62,12 +62,12 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   // Log performance metrics in development
   useEffect(() => {
-    if (process.env.NODE_ENV === 'development' && metrics) {
-      console.log('Performance Metrics:', metrics);
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Performance Monitor initialized');
     }
-  }, [metrics]);
+  }, []);
 
-  if (!enabled || !metrics) {
+  if (!enabled) {
     return null;
   }
 

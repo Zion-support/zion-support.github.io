@@ -1,4 +1,4 @@
-import React, { Component, ReactNode, ErrorInfo } from 'react';
+import React, { Component, ReactNode, ErrorInfo, memo } from 'react';
 
 interface OptimizedErrorBoundaryProps {
   children: ReactNode;
@@ -46,7 +46,7 @@ class OptimizedErrorBoundary extends Component<
     });
     // Log error to console in development
     if (process.env['NODE_ENV'] === 'development') {
-
+      console.error('Error caught by OptimizedErrorBoundary:', error, errorInfo);
     }
 
     // Call custom error handler if provided

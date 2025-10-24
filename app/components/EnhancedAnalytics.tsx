@@ -3,8 +3,11 @@
 import React, { createContext, useContext, useEffect } from 'react';
 
 interface AnalyticsContextType {
+  // eslint-disable-next-line no-unused-vars
   track: (event: string, properties?: Record<string, unknown>) => void
+  // eslint-disable-next-line no-unused-vars
   identify: (userId: string, traits?: Record<string, unknown>) => void
+  // eslint-disable-next-line no-unused-vars
   page: (name: string, properties?: Record<string, unknown>) => void
 }
 
@@ -37,8 +40,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 
         ;(window as unknown as { dataLayer: unknown[] }).dataLayer =
           (window as unknown as { dataLayer: unknown[] }).dataLayer || []
-        function gtag(...args: unknown[]) {
-          ;(window as unknown as { dataLayer: unknown[] }).dataLayer.push(args)
+        function gtag(..._args: unknown[]) {
+          ;(window as unknown as { dataLayer: unknown[] }).dataLayer.push(_args)
         }
         gtag('js', new Date())
         gtag('config', process.env.REACT_APP_GA_ID)
@@ -49,8 +52,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   const track = (event: string, properties?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
-      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
-        ;(window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', event, properties)
+      if ((window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag) {
+        ;(window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('event', event, properties)
       }
 
       // Custom analytics
@@ -61,8 +64,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   const identify = (userId: string, traits?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
-      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
-        ;(window as unknown as { gtag: (...args: unknown[]) => void }).gtag('config', process.env.REACT_APP_GA_ID, {
+      if ((window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag) {
+        ;(window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('config', process.env.REACT_APP_GA_ID, {
           user_id: userId,
           custom_map: traits
         })
@@ -76,8 +79,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   const page = (name: string, properties?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
-      if ((window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
-        ;(window as unknown as { gtag: (...args: unknown[]) => void }).gtag('config', process.env.REACT_APP_GA_ID, {
+      if ((window as unknown as { gtag?: (..._args: unknown[]) => void }).gtag) {
+        ;(window as unknown as { gtag: (..._args: unknown[]) => void }).gtag('config', process.env.REACT_APP_GA_ID, {
           page_title: name,
           page_location: window.location.href,
           ...properties
