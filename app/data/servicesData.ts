@@ -1,6 +1,5 @@
 export interface Service {
-  id: string
-  title: string
+  id="string  title: "string
   description: string
   shortDescription: string
-  category: 'AI' | 'IT' | 'SaaS' | 'Cybersecurity' | 'Cloud' | '5G' | 'Blockchain' | '
+  category: 'AI' | 'IT' | 'SaaS' | 'Cybersecurity' | 'Cloud' | '5G' | 'Blockchain' | '""}

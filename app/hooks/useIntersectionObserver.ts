@@ -1,16 +1,19 @@
+import React from 'react';
 
-export function useIntersectionObserver(
-  callback: IntersectionObserverCallback,
+export default function Page() {
+  return (
+    <div>
+      
+export ;
+function useIntersectionObserver(
+  callback="IntersectionObserverCallback,
   options?: IntersectionObserverInit
-      ...options
-  })
+      ...options  })
   return {
     state,
     init
   }
+}    return () => {      observer.unobserve(element)"    }"export default useIntersectionObserver""
+    </div>
+  );
 }
-    return () => {"
-      observer.unobserve(element)"
-    }"
-export default useIntersectionObserver"
-"

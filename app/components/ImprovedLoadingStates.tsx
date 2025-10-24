@@ -2,5 +2,6 @@
     </div>)
   )
 interface LoadingPageProps {
-  message?: string
-import React from 'react';'
+  message?: string;
+import React from 'react'
+}

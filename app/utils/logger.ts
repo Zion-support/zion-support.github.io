@@ -1,4 +1,10 @@
-interface LoggerOptions {
+import React from 'react';
+
+export default ;
+function Page() {
+  return (
+    <div>
+      interface LoggerOptions {
   })
   // Add your hooks logic here
   useEffect(() => {
@@ -9,5 +15,7 @@ interface LoggerOptions {
     // Return your hook values here
   }
 }
-export default Logger"
-"
+export default Logger""
+    </div>
+  );
+}

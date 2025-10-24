@@ -1,4 +1,10 @@
+import React from 'react';
 
+export default ;
+function Page() {
+  return (
+    <div>
+      
 interface AdvancedAnalyticsOptions {
   })
   // Add your hooks logic here
@@ -10,5 +16,7 @@ interface AdvancedAnalyticsOptions {
     // Return your hook values here
   }
 }
-export default AdvancedAnalytics"
-"
+export default AdvancedAnalytics""
+    </div>
+  );
+}

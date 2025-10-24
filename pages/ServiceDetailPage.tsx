@@ -1,37 +1,14 @@
+import React from 'react';import { Helmet } from 'react-helmet-async';
 
-      const ServiceDetailPage: React.FC = () => {}
-}const { id } = useParams<{ id: string }>()
-  // Mock service data - in a real app, this would come from an API",""
-  const serviceData  = {}'ai-analytics-dashboard-pro'
-      name: 'AI Analytics Dashboard Pro'
-      description: 'Advanced business intelligence platform with AI-powered insights and real-time analytics'
-      price: '$299/month'
-      category: 'AI Services'
-        'Real-time Data Visualization',","AI-Powered Predictions',","Custom Dashboard Builder',","API Integration',","Mobile App Access',","24/7 Support',","Advanced Analytics',","Custom Reports',","Data Export'
-        'Increase decision speed by 40%',","Reduce manual reporting by 80%',","Improve forecast accuracy by 60%',","Save 20+ hours per week'
-    },","cloud-infrastructure-management'
-      name: 'Cloud Infrastructure Management'
-      description: 'Comprehensive cloud solutions with auto-scaling, monitoring, and security compliance'
-      price: '$199/month'
-      category: 'IT Services'
-        'Auto-scaling Infrastructure',","99.9% Uptime Guarantee',","24/7 ing',","Security Compliance',","Backup & Recovery',","Cost Optimization',","Load Balancing',","CDN Integration',","SSL Certificates'
-        'Reduce infrastructure costs by 30%',","Improve system reliability',","Scale automatically with demand',","Enhance security posture'
-    },","project-management-pro'
-      name: 'Project Management Pro'
-      description: 'Comprehensive project management platform with AI-powered insights and team collaboration'
-      price: '$149/month'
-      category: 'Micro SAAS'
-        'Task Management',","Team Collaboration',","AI Progress Insights',","Resource Planning',","Time Tracking',","Reporting & Analytics',","Gantt Charts',","File Sharing',","Communication Tools'
-        'Increase project success rate by 40%',","Improve team productivity by 50%',","Reduce project delays by 60%',","Better resource utilization'
-  const service  = serviceData[id as keyof typeof serviceData] || serviceData['ai-analytics-dashboard-pro'
-      name: 'AI Content Generator'
-      name: 'Cybersecurity Suite'
-      price: '$499/month'
-      category: 'IT Services'
-      category: 'AI Services'
-      name: 'Cybersecurity Suite'
-      price: '$499/month'
-      category: 'IT Services'
-      name: 'API Management'
-      price: '$179/month'
-      category: 'Micro SAAS'
+const ServiceDetailPage: "React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Service Details | Zion Tech Group</title>        <meta name="description" content="Detailed information about our services." />
+      </Helmet>      <div className="min-h-screen bg-gray-50">        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">          <h1 className="text-4xl font-bold text-gray-900 mb-8">Service Details</h1>          <p className="text-xl text-gray-600">Detailed information about our services.</p>
+        </div>
+      </div>
+    </>
+  );"};
+
+export default ServiceDetailPage;

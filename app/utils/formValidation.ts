@@ -1,4 +1,10 @@
+import React from 'react';
 
+export default ;
+function Page() {
+  return (
+    <div>
+      
 interface FormValidationOptions {
   })
   // Add your hooks logic here
@@ -10,5 +16,7 @@ interface FormValidationOptions {
     // Return your hook values here
   }
 }
-export default FormValidation"
-"
+export default FormValidation""
+    </div>
+  );
+}

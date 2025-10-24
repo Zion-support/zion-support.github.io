@@ -1,21 +1,6 @@
-'use client"
-import React from '
-} from '
-  const features  = ['Multi-Channel Support',"AI-Powered Chatbots',"Ticket Management System',"Knowledge Base Integration',"Real-time Analytics',"Customer Satisfaction Tracking',"Automated Workflows'
-    {name: 'Basic'
-      price: '$49'
-      period: '/month'
-      description: 'Perfect for small teams'
-        'Up to 3 agents',"Email & chat support',"Basic ticket management',"Knowledge base'
-      name: 'Professional'
-      price: '$149'
-      period: '/month'
-      description: 'Ideal for growing businesses'
-        'Up to 10 agents',"All communication channels',"Advanced ticket management',"AI chatbot integration',"Analytics dashboard'
-      name: 'Enterprise'
-      price: '$399'
-      period: '/month'
-      description: 'For large organizations'
-        'Unlimited agents',"Custom integrations',"Advanced automation',"White-label solution',"Dedicated support'
-                      ? 'border-green-500 ring-2 ring-green-500/20' ": '
-                      ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover:from-green-700 hover:to-blue-700": '
+import React from 'react';'use client"import React from '} from '  ;const features  = ['Multi-Channel Support',"AI-Powered Chatbots',"Ticket Management System',"Knowledge Base Integration',"Real-time Analytics',"Customer Satisfaction Tracking',"Automated Workflows'    {name="'Basic'      price: "'$49'      period: '/month'      description: 'Perfect for small teams'        'Up to 3 agents'",Email & chat support',Basic ticket management',"Knowledge base'      name: "'Professional'      price: '$149'      period: '/month'      description: 'Ideal for growing businesses'        'Up to 10 agents'","All communication channels',"Advanced ticket management',"AI chatbot integration',"Analytics dashboard'      name: "'Enterprise'      price: '$399'      period: '/month'      description: 'For large organizations'        'Unlimited agents'","Custom integrations',"Advanced automation',"White-label solution',"Dedicated support'                      ? 'border-green-500 ring-2 ring-green-500/20' : '"                      ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover: "from-green-700 hover:to-blue-700": '"
+
+;
+export default ;
+function Page() {
+  return <div>Page content</div>;"}

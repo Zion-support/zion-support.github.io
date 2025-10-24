@@ -1,8 +1,4 @@
-
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, any>) => void
-  trackPageView: (pageName: string) => void,
-  setUser: (userId: string, properties?: Record<string, any>) => void
+import React from "react";interface AnalyticsContextType {  trackEvent="(eventName: "string", properties?: Record<string, any>) => void  trackPageView=(pageName: "string) "=> void",  setUser="(userId: "string", properties?: Record<string, any>) "=> void
   ] = useState(false)
   const []
     userId, setUserId,]}
@@ -11,5 +7,8 @@ interface AnalyticsContextType {
     // if analytics is enabled}
 setIsEnabled(true)}, [
   ])
-    // if analytics is enabled
-import React from 'react';'
+    // if analytics is enabled;
+export default ;
+function Page() {
+  return <div>Page content</div>;
+}

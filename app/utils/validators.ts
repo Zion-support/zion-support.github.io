@@ -1,4 +1,10 @@
+import React from 'react';
 
+export default ;
+function Page() {
+  return (
+    <div>
+      
 interface ValidatorsOptions {
   })
   // Add your hooks logic here
@@ -10,5 +16,7 @@ interface ValidatorsOptions {
     // Return your hook values here
   }
 }
-export default Validators"
-"
+export default Validators""
+    </div>
+  );
+}

@@ -1,6 +1,4 @@
-"use client";
-import React from 'react';
-
+import React from "react";"use client";
 const testRunner = () => {
   return;
   return null;
@@ -8,3 +6,8 @@ const testRunner = () => {
 };
 
 export default testRunner;
+
+export default ;
+function Page() {
+  return <div>Page content</div>;
+}

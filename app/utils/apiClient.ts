@@ -1,4 +1,10 @@
+import React from 'react';
 
+export default ;
+function Page() {
+  return (
+    <div>
+      
 interface ApiClientOptions {
   })
   // Add your hooks logic here
@@ -10,5 +16,7 @@ interface ApiClientOptions {
     // Return your hook values here
   }
 }
-export default ApiClient"
-"
+export default ApiClient""
+    </div>
+  );
+}

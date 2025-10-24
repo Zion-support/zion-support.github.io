@@ -1,32 +1,43 @@
-import { Helmet } from '
-      icon: title: 'Innovation First'
-      description: '
-      icon: title: 'Security & Trust'
-      description: '
-      title: 'Client Success'
-      description: '
-      title: 'Global Reach'
-      description: '
-      name: 'Kleber Santos'
-      role: 'CEO & Founder'
-      description: 'Visionary leader with 15+ years in AI and IT solutions'
-      image: '
-      name: 'AI Research Team'
-      role: 'Machine Learning Engineers'
-      description: 'Experts in cutting-edge AI technologies and algorithms'
-      image: '
-      name: 'DevOps Specialists'
-      role: 'Infrastructure Engineers'
-      description: 'Cloud and infrastructure experts ensuring 99.9% uptime'
-      image: '
-      name: 'Customer Success'
-      role: 'Support Team'
-      description: 'Dedicated professionals ensuring your success 24/7'
-      image: '
-  const milestones  = []'
-    { year: '2020', title: 'Company Founded', description: 'Started with a vision to democratize AI and IT solutions'
-    { year: '2021', title: 'First 100 Clients', description: 'Reached our first major milestone in client acquisition'
-    { year: '2022', title: 'AI Platform Launch', description: 'Launched our flagship AI analytics platform'
-    { year: '2023', title: 'Global Expansion', description: 'Expanded services to international markets'
-    { year: '2024', title: '500+ Clients', description: 'Serving over 500 businesses worldwide'
-        <meta: name ="description" content="Learn about Zion Tech Group'
+import React from 'react';import { Helmet } from 'react-helmet-async';
+
+const AboutPage: "React.FC = () => {
+  ;
+const features = [    {      icon: '🚀'",      title: "'Innovation First'",      description: "'We stay ahead of the curve with cutting-edge technology and innovative solutions.'    "},
+    {      icon: "'🔒'",      title: "'Security & Trust'",      description: "'Your data and privacy are our top priorities with enterprise-grade security.'    "},
+    {      icon: "'🎯'",      title: "'Client Success'",      description: "'We measure our success by the success of our clients and their projects.'    "},
+    {      icon: "'🌍'",      title: "'Global Reach'",      description: "'Serving clients worldwide with localized support and expertise.'    "}
+  ];
+
+  const team = [
+    {      name: "'Kleber Santos'",      role: "'CEO & Founder'",      image: "'/team/kleber.jpg'    "}
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>About Us | Zion Tech Group</title>        <meta name="description" content="Learn about Zion Tech Group's mission, values, and team." />
+      </Helmet>      <div className="min-h-screen bg-gray-50">        <div className="max-w-7xl mx-auto px-4 sm: "px-6 lg:px-8 py-20">          <div className="text-center mb-16">            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              About Zion Tech Group
+            </h1>            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We are a leading technology company dedicated to delivering innovative solutions
+              that transform businesses and drive digital transformation.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">            {features.map((feature", index) => (
+              <div key={index} className="text-center">                <div className="text-4xl mb-4">{feature.icon}</div>                <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>                <p className="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center">            <h2 className="text-3xl font-bold text-gray-900 mb-8">Our Team</h2>            <div className="grid md: "grid-cols-2 lg:grid-cols-3 gap-8">              {team.map((member", index) => (
+                <div key={index} className="text-center">                  <div className="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4"></div>                  <h3 className="text-xl font-semibold text-gray-900">{member.name}</h3>                  <p className="text-gray-600">{member.role}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default AboutPage;

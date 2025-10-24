@@ -1,37 +1,21 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import EnhancedErrorBoundary from '../EnhancedErrorBoundary';
-
-// Mock component that throws an error
-const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
-  if (shouldThrow) {
-    throw new Error('Test error');
+import React from "react";
+import { render, screen } from '@testing-library/react';import '@testing-library/jest-dom';import EnhancedErrorBoundary from '../EnhancedErrorBoundary';
+// Mock component that throws an errorconst ThrowError = ({ shouldThrow }: { shouldThrow="boolean "}) => {  if (shouldThrow) {    throw new Error('Test error');
   }
   return <div>No error</div>;
-};
-
-describe('EnhancedErrorBoundary', () => {
-  beforeEach(() => {
-    // Suppress console.error for this test
-    jest.spyOn(console, 'error').mockImplementation(() => {});
+};describe('EnhancedErrorBoundary', () => {
+  beforeEach(() => {    // Suppress console.error for this test    jest.spyOn(console, 'error').mockImplementation(() => {});
   });
 
   afterEach(() => {
     jest.restoreAllMocks();
-  });
-
-  it('renders children when there is no error', () => {
+  });  it('renders children when there is no error', () => {
     render(
       <EnhancedErrorBoundary>
         <ThrowError shouldThrow={false} />
       </EnhancedErrorBoundary>
-    );
-
-    expect(screen.getByText('No error')).toBeInTheDocument();
-  });
-
-  it('renders error fallback when there is an error', () => {
+    );    expect(screen.getByText('No error')).toBeInTheDocument();
+  });  it('renders error fallback when there is an error', () => {
     render(
       <EnhancedErrorBoundary>
         <ThrowError shouldThrow={true} />
@@ -39,9 +23,7 @@ describe('EnhancedErrorBoundary', () => {
     );
 
     expect(screen.getByText(/Something went wrong/i)).toBeInTheDocument();
-  });
-
-  it('calls onError when an error occurs', () => {
+  });  it('calls onError when an error occurs', () => {
     const onError = jest.fn();
     
     render(
@@ -56,3 +38,8 @@ describe('EnhancedErrorBoundary', () => {
     );
   });
 });
+
+export default ;
+function Page() {
+  return <div>Page content</div>;
+}

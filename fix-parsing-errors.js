@@ -1,36 +1,165 @@
-export { fixFileContent, processFile }
-#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+
 // Function to fix common parsing errors
-function fixFileContent() {}
-  // Function body
+function fixParsingErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
 
+    // Fix 1: Add missing closing tags and fix malformed JSX
+    if (content.includes('export default') && !content.includes('</div>') && content.includes('<div')) {
+      // Find the last opening div and add closing tag
+      const lastDivIndex = content.lastIndexOf('<div');
+      if (lastDivIndex !== -1) {
+        const beforeDiv = content.substring(0, lastDivIndex);
+        const afterDiv = content.substring(lastDivIndex);
+        const divEndIndex = afterDiv.indexOf('>');
+        if (divEndIndex !== -1) {
+          const divContent = afterDiv.substring(divEndIndex + 1);
+          const exportIndex = divContent.indexOf('export default');
+          if (exportIndex !== -1) {
+            const beforeExport = divContent.substring(0, exportIndex);
+            const afterExport = divContent.substring(exportIndex);
+            content = beforeDiv + afterDiv.substring(0, divEndIndex + 1) + beforeExport + '</div>' + afterExport;
+            modified = true;
+          }
+        }
+      }
+    }
 
-  // Fix className spacing issues (missing spaces, between, classes)
-    // Only fix if it looks like a className issue (contains common, Tailwind, patterns)"
-    if (match.includes('from-') || match.includes('to-') || match.includes('bg-'
-        match.includes('text-') || match.includes('border-') || match.includes('px-'
-        match.includes('py-') || match.includes('mb-') || match.includes('mt-'
-        match.includes('ml-') || match.includes('mr-') || match.includes('mx-'
-        match.includes('pt-') || match.includes('pb-') || match.includes('pl-'
-        match.includes('pr-') || match.includes('gap-') || match.includes('col-'
-        match.includes('md:') || match.includes('lg:') || match.includes('sm:'
-        match.includes('xl:') || match.includes('2xl:'
-      return p1 + ' '
-  fixed = fixed.replace(/from-slate-900pt-20/g, 'from-slate-900 pt-20')'
-  fixed = fixed.replace(/text-whitemb-6/g, 'text-white mb-6')'
-  fixed = fixed.replace(/text-gray-300mb-8/g, 'text-gray-300 mb-8')'
-  fixed = fixed.replace(/mx-autow-fit/g, 'mx-auto w-fit')'
-  fixed = fixed.replace(/w-5 h-5ml-2/g, 'w-5 h-5 ml-2')'
-  fixed = fixed.replace(/border-tborder-slate-800/g, 'border-t border-slate-800')'
-  fixed = fixed.replace(/px-4 sm:px-6 lg:px-8py-12/g, 'px-4 sm:px-6 lg:px-8 py-12'
-  fixed = fixed.replace(/grid-cols-1 md:grid-cols-4gap-8/g, 'grid-cols-1 md:grid-cols-4 gap-8'
-  fixed = fixed.replace(/col-span-1md:col-span-2/g, 'col-span-1 md:col-span-2'
-  // Fix self-closing divs that should be opening tags: fixed = fixed.replace(/<div: className ="([^"]*)" \/></div>\s*<([^>]+)>/g, '<div: className ="$1"></div>\n        <$2>'
-  // Remove invalid 'use client'
-  fixed = fixed.replace(/'use client';\s*\n/g, '
-  // Fix JSX expressions that need parent elements: fixed = fixed.replace(/<Helmet \/>\s*<title>/g, '<Helmet>\n        <title>'
-  fixed = fixed.replace(/<\/title>\s*<meta/g, '</title>\n        <meta'
-  fixed = fixed.replace(/<\/meta>\s*<\/Helmet>/g, '</meta>\n      </Helmet>'
-      fs.writeFileSync(filePath, fixed, 'utf8'
-}// console.log('Starting to fix parsing errors...'
-const files  = await glob('**/*.{ts,tsx}'
+    // Fix 2: Fix unterminated string constants
+    content = content.replace(/"([^"]*)\n/g, '"$1"\n');
+    content = content.replace(/'([^']*)\n/g, "'$1'\n");
+
+    // Fix 3: Fix unexpected token issues with proper JSX structure
+    if (content.includes('Unexpected token :') || content.includes('Unexpected token <')) {
+      // Add proper React import if missing
+      if (!content.includes("import React") && content.includes('<')) {
+        content = 'import React from "react";\n' + content;
+        modified = true;
+      }
+    }
+
+    // Fix 4: Fix return outside function issues
+    if (content.includes("'return' outside of function")) {
+      // Wrap content in a proper function
+      if (!content.includes('export default function') && !content.includes('const ') && content.includes('return')) {
+        content = `import React from 'react';\n\nexport default function Page() {\n  return (\n    ${content}\n  );\n}`;
+        modified = true;
+      }
+    }
+
+    // Fix 5: Fix missing closing braces and parentheses
+    const openBraces = (content.match(/\{/g) || []).length;
+    const closeBraces = (content.match(/\}/g) || []).length;
+    if (openBraces > closeBraces) {
+      content += '\n' + '}'.repeat(openBraces - closeBraces);
+      modified = true;
+    }
+
+    // Fix 6: Fix missing closing parentheses
+    const openParens = (content.match(/\(/g) || []).length;
+    const closeParens = (content.match(/\)/g) || []).length;
+    if (openParens > closeParens) {
+      content += ')'.repeat(openParens - closeParens);
+      modified = true;
+    }
+
+    // Fix 7: Fix malformed JSX by ensuring proper structure
+    if (content.includes('<') && !content.includes('</') && content.includes('export default')) {
+      const lines = content.split('\n');
+      let inJSX = false;
+      let jsxContent = [];
+      let exportLine = -1;
+      
+      for (let i = 0; i < lines.length; i++) {
+        if (lines[i].includes('<') && !inJSX) {
+          inJSX = true;
+          jsxContent.push(lines[i]);
+        } else if (inJSX && lines[i].includes('export default')) {
+          exportLine = i;
+          break;
+        } else if (inJSX) {
+          jsxContent.push(lines[i]);
+        }
+      }
+      
+      if (jsxContent.length > 0 && exportLine !== -1) {
+        const beforeJSX = lines.slice(0, lines.findIndex(line => line.includes('<')));
+        const afterExport = lines.slice(exportLine);
+        
+        // Find the root element and close it
+        const rootElement = jsxContent[0].match(/<(\w+)/);
+        if (rootElement) {
+          const closingTag = `</${rootElement[1]}>`;
+          jsxContent.push(closingTag);
+        }
+        
+        content = beforeJSX.join('\n') + '\n' + jsxContent.join('\n') + '\n' + afterExport.join('\n');
+        modified = true;
+      }
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Function to recursively find all .tsx and .ts files
+function findFiles(dir, extensions = ['.tsx', '.ts']) {
+  let results = [];
+  const list = fs.readdirSync(dir);
+  
+  list.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat && stat.isDirectory()) {
+      // Skip node_modules and .next directories
+      if (file !== 'node_modules' && file !== '.next' && !file.startsWith('.')) {
+        results = results.concat(findFiles(filePath, extensions));
+      }
+    } else {
+      const ext = path.extname(file);
+      if (extensions.includes(ext)) {
+        results.push(filePath);
+      }
+    }
+  });
+  
+  return results;
+}
+
+// Main execution
+console.log('Starting comprehensive parsing error fix...');
+
+const appDir = path.join(__dirname, 'app');
+const files = findFiles(appDir);
+
+let fixedCount = 0;
+let errorCount = 0;
+
+files.forEach(file => {
+  try {
+    if (fixParsingErrors(file)) {
+      fixedCount++;
+    }
+  } catch (error) {
+    console.error(`Failed to process ${file}:`, error.message);
+    errorCount++;
+  }
+});
+
+console.log(`\nFix complete!`);
+console.log(`Files fixed: ${fixedCount}`);
+console.log(`Errors encountered: ${errorCount}`);
+console.log(`Total files processed: ${files.length}`);

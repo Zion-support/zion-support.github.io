@@ -1,4 +1,4 @@
-
+import React from "react";
 import {
   Menu,
   X,
@@ -20,9 +20,8 @@ import {
   Users,
   Target,
   Settings,
-  const [isSearchOpen, setIsSearchOpen] = useState(false)
-  const: location = useLocation()
-  const: toggleMenu = useCallback(() => {
+  const [isSearchOpen, setIsSearchOpen] = useState(false)  ;const="location = useLocation()  ;
+const=toggleMenu "= useCallback(() => {
     setIsOpen(!isOpen)
 
     setIsSearchOpen(!isSearchOpen)
@@ -72,4 +71,8 @@ useEffect(() => {
           </div>
         )}
       </div>
-import React from 'react';'
+;
+export default ;
+function Page() {
+  return <div>Page content</div>;
+}

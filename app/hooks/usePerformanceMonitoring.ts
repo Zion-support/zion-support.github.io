@@ -1,8 +1,10 @@
-import { useEffect } from 'react';'
-    if (typeof window === 'undefined') return;'
-if ('web-vitals' in window) {'
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {'
-          console.log('Time to First Byte:', metric.value);'
-console.log('Performance Metrics:', metrics);'
-    if (typeof window !== 'undefined' && (window as any).gtag) {'
-      (window as any).gtag('event', 'performance_metrics', metrics);'
+import React from 'react';
+
+export default ;
+function Page() {
+  return (
+    <div>      ;import { useEffect } from 'react''    if (typeof window === 'undefined') return;''if ('web-vitals' in window) {''      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {''          console.log('Time to First Byte="', metric.value);''console.log('Performance Metrics: "'", metrics);''    if (typeof window !"== 'undefined' && (window as any).gtag) {''      (window as any).gtag('event', 'performance_metrics', metrics);'
+}}})
+    </div>
+  );
+}

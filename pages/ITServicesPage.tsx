@@ -1,22 +1,14 @@
-import { Helmet } from '
-      id: 'cloud-infrastructure-management'
-      name: 'Cloud Infrastructure Management'
-      description: 'Comprehensive cloud solutions with auto-scaling, monitoring, and security compliance'
-      price: '$199/month'
-        '
-      id: 'devops-automation-platform'
-      name: 'DevOps Automation Platform'
-      description: 'Complete CI/CD pipeline automation with monitoring, testing, and deployment management'
-      price: '$349/month'
-        '
-      id: 'network-infrastructure'
-      name: 'Network Infrastructure Services'
-      description: 'Comprehensive network design, implementation, and management for enterprise environments'
-      price: '$229/month'
-        '
-  // const categories  = ['All', 'Infrastructure', 'Security', 'DevOps', ', 'Networking', 'Consulting'
-      const stats  = [{ number: '500+', label: 'Infrastructure Projects'
-    { number: '99.9%', label: 'Uptime Guarantee'
-    { number: '24/7', label: 'Support Available'
-    { number: '4.8/5', label: 'Client Rating'
-                  ? 'border-purple-500/60 ring-2 ring-purple-500/20": '
+import React from 'react';import { Helmet } from 'react-helmet-async';
+
+const ITServicesPage: "React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>IT Services | Zion Tech Group</title>        <meta name="description" content="Comprehensive IT services for your business needs." />
+      </Helmet>      <div className="min-h-screen bg-gray-50">        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">          <h1 className="text-4xl font-bold text-gray-900 mb-8">IT Services</h1>          <p className="text-xl text-gray-600">Comprehensive IT solutions for your business.</p>
+        </div>
+      </div>
+    </>
+  );"};
+
+export default ITServicesPage;

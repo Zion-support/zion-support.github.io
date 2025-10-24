@@ -1,4 +1,10 @@
+import React from 'react';
 
+export default ;
+function Page() {
+  return (
+    <div>
+      
 interface AnalyticsTrackerOptions {
   })
   // Add your hooks logic here
@@ -10,5 +16,7 @@ interface AnalyticsTrackerOptions {
     // Return your hook values here
   }
 }
-export default AnalyticsTracker"
-"
+export default AnalyticsTracker""
+    </div>
+  );
+}

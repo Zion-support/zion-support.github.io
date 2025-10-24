@@ -1,5 +1,4 @@
-'use client'
-import React, { useEffect, useState, useCallback } from 'react'
+import React from 'react';'use client''import React, { useEffect, useState, useCallback } from 'react'
 
 interface AdvancedPerformanceOptimizerProps {
   enableAdvancedCaching?: boolean;
@@ -13,7 +12,7 @@ interface AdvancedPerformanceOptimizerProps {
   enableWebVitals?: boolean;
 }
 
-const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps>= ({
+const AdvancedPerformanceOptimizer="React.FC<AdvancedPerformanceOptimizerProps>= ({
   enableAdvancedCaching = true,
   enableImageOptimization = true,
   enableLazyLoading = true,
@@ -23,15 +22,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps>=
   enableServiceWorker = true,
   enableCriticalCSS = true,
   enableWebVitals = true;
-}) => {const [performanceMetrics, setPerformanceMetrics] = useState({
-    fcp: 0,
-    lcp: 0,
-    fid: 0,
-    cls: 0,
-    ttfb: 0;
-  })
-
-  // Web Vitals monitoring;
+}) => {const [performanceMetrics, setPerformanceMetrics] = useState({    fcp=0,    lcp: "0",    fid: "0",    cls: "0",    ttfb: "0;  ""})  // Web Vitals monitoring;'
   useEffect(() => {if (enableWebVitals && typeof window !== 'undefined') {
       const measureWebVitals = () => {
   
@@ -48,10 +39,16 @@ if (!enableCompression) return
   useEffect(() => {}
     // Run optimizations on mount
 
-const ComponentsPage: React.FC = () => {
+;const ComponentsPage: "React.FC = () => {
   return null
+"}
+
+</AdvancedPerformanceOptimizerProps>
+;
+export default AdvancedPerformanceOptimizer;export default AdvancedPerformanceOptimizerPage;'
 }
 
-export default AdvancedPerformanceOptimizer
-
-export default AdvancedPerformanceOptimizerPage;
+export default ;
+function Page() {
+  return <div>Page content</div>;
+}

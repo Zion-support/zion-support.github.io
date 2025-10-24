@@ -1,4 +1,9 @@
-  return null
+import React from "react";
+export default ;
+function Page() {
+  return (
+    <div>
+        return null
 }
       <Helmet>
         <title>AI Automation Platform - Intelligent Process Automation | Zion Tech Group</title>
@@ -25,5 +30,6 @@
       </div>
     </>
 
-
-import React from 'react';'
+</div>
+  );
+}

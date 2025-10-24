@@ -1,4 +1,4 @@
-
+import React from 'react';
 
 import {
   CpuChipIcon,
@@ -7,44 +7,10 @@ import {
   DocumentTextIcon,
   LightBulbIcon,
   ArrowRightIcon,
-  CheckIcon,
-  SparklesIcon
-} from '
-    {title: 'Machine Learning Models'
-      description: 'Custom machine learning models tailored to your specific business needs with advanced algorithms and real-time processing.'
-        'Custom algorithm development',"Real-time model training',"A/B testing framework',"Model performance monitoring',"Automated retraining'
-      color: 'from-purple-500 to-pink-500'
-      price: 'Starting at $3,500/month'
-      benefits: ['95% accuracy', 'Real-time processing', 'Custom algorithms'
-      useCases: ['Predictive analytics', 'Recommendation engines', 'Fraud detection'
-      href: '
-      title: 'Computer Vision'
-      description: 'Advanced image and video analysis solutions for automated visual inspection, object detection, and facial recognition.'
-        'Object detection and classification',"Facial recognition systems',"Image segmentation',"Real-time video analysis',"Quality control automation'
-      color: 'from-blue-500 to-cyan-500'
-      price: 'Starting at $4,200/month'
-      benefits: ['99% accuracy', 'Real-time processing', 'Custom models'
-      useCases: ['Quality control', 'Security systems', 'Medical imaging'
-      href: '
-      title: 'Natural Language Processing'
-      description: 'Intelligent text analysis and language understanding for chatbots, sentiment analysis, and content generation.'
-        'Sentiment analysis',"Text classification',"Language translation',"Content generation',"Chatbot development'
-      color: 'from-green-500 to-emerald-500'
-      price: 'Starting at $2,800/month'
-      benefits: ['Multi-language support', 'Real-time processing', 'Custom training'
-      useCases: ['Customer service', 'Content moderation', 'Language translation'
-      href: '
-      title: 'AI Automation'
-      description: 'Intelligent process automation solutions that streamline workflows and reduce manual tasks across your organization.'
-        'Workflow automation',"Document processing',"Data extraction',"Process optimization',"Intelligent routing'
-      color: 'from-orange-500 to-red-500'
-      price: 'Starting at $3,200/month'
-      benefits: ['80% time savings', 'Error reduction', 'Scalable solutions'
-      useCases: ['Document processing', 'Data entry', 'Workflow optimization'
-      href: '
-  const industries  = [{ name: 'Healthcare', icon: '🏥', description: 'Medical imaging, drug discovery, patient care'
-    { name: 'Finance', icon: '💰', description: 'Fraud detection, risk assessment, trading algorithms'
-    { name: 'E-commerce', icon: '🛒', description: 'Recommendation engines, price optimization, inventory management'
-    { name: 'Manufacturing', icon: '🏭', description: 'Quality control, predictive maintenance, supply chain optimization'
-    { name: 'Education', icon: '🎓', description: 'Personalized learning, content generation, assessment tools'
-    { name: 'Transportation', icon: '🚗', description: 'Autonomous vehicles, route optimization, traffic management'
+  CheckIcon,  SparklesIcon} from ''    {title: "'Machine Learning Models''      description: 'Custom machine learning models tailored to your specific business needs with advanced algorithms and real-time processing.''        'Custom algorithm development'","Real-time model training',"A/B testing framework',"Model performance monitoring',"Automated retraining''      color: "'from-purple-500 to-pink-500''      price: 'Starting at $3",500/month''      benefits: "['95% accuracy'", 'Real-time processing', 'Custom algorithms''      useCases: "['Predictive analytics'", 'Recommendation engines', 'Fraud detection''      href: "''      title: 'Computer Vision''      description: 'Advanced image and video analysis solutions for automated visual inspection", object detection, and facial recognition.''"        'Object detection and classification',"Facial recognition systems',"Image segmentation',"Real-time video analysis',"Quality control automation''      color: "'from-blue-500 to-cyan-500''      price: 'Starting at $4",200/month''      benefits: "['99% accuracy'", 'Real-time processing', 'Custom models''      useCases: "['Quality control'", 'Security systems', 'Medical imaging''      href: "''      title: 'Natural Language Processing''      description: 'Intelligent text analysis and language understanding for chatbots", sentiment analysis, and content generation.''"        'Sentiment analysis',"Text classification',"Language translation',"Content generation',"Chatbot development''      color: "'from-green-500 to-emerald-500''      price: 'Starting at $2",800/month''      benefits: "['Multi-language support'", 'Real-time processing', 'Custom training''      useCases: "['Customer service'", 'Content moderation', 'Language translation''      href: "''      title: 'AI Automation''      description: 'Intelligent process automation solutions that streamline workflows and reduce manual tasks across your organization.''"        'Workflow automation'","Document processing',"Data extraction',"Process optimization',"Intelligent routing''      color: "'from-orange-500 to-red-500''      price: 'Starting at $3",200/month''      benefits: "['80% time savings'", 'Error reduction', 'Scalable solutions''      useCases: "['Document processing'", 'Data entry', 'Workflow optimization''      href: "''  ;const industries  "= [{ name="'Healthcare'", icon: "'🏥'", description: "'Medical imaging", drug discovery, patient care''    { name: "'Finance'", icon: "'💰'", description: "'Fraud detection", risk assessment, trading algorithms''    { name: "'E-commerce'", icon: "'🛒'", description: "'Recommendation engines", price optimization, inventory management''    { name: "'Manufacturing'", icon: "'🏭'", description: "'Quality control", predictive maintenance, supply chain optimization''    { name: "'Education'", icon: "'🎓'", description: "'Personalized learning", content generation, assessment tools''    { name: "'Transportation'", icon: "'🚗'", description: "'Autonomous vehicles", route optimization, traffic management'""}}}}}}}
+
+;
+export default ;
+function Page() {
+  return <div>Page content</div>;
+}

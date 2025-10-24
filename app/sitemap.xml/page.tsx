@@ -1,41 +1,10 @@
-
+import React from 'react';
 
         </div>
       </div>
-    </>
-  )
-import React from '
-import { ArrowRight } from '
-import { CheckCircle } from '
-import { Star } from '
-import { Users } from '
-import { Clock } from '
-import { DollarSign } from '
-import { Shield } from '
-import { Code } from '
-import { Database } from '
-import { Mail } from '
-import { Settings } from '
-import { Target } from '
-import { TrendingUp } from '
-import { PieChart } from '
-import { MessageSquare } from '
-import { Heart } from '
-import { Globe } from '
-import { Smartphone } from '
-import { Network } from '
-import { Lock } from '
-import { Cpu } from '
-import { Wifi } from '
-import { Building2 } from '
-import { Briefcase } from '
-import { Lightbulb } from '
-import { Link } from '
-import EnhancedSEO from '
-      title: 'Advanced Features'
-      description: '
-      title: 'Secure & Reliable'
-      description: '
-      title: 'Expert Support'
-              Let'
-const page = React.lazy(() => import('./page'
+    </>  )import React from ''import { ArrowRight } from ''import { CheckCircle } from ''import { Star } from ''import { Users } from ''import { Clock } from ''import { DollarSign } from ''import { Shield } from ''import { Code } from ''import { Database } from ''import { Mail } from ''import { Settings } from ''import { Target } from ''import { TrendingUp } from ''import { PieChart } from ''import { MessageSquare } from ''import { Heart } from ''import { Globe } from ''import { Smartphone } from ''import { Network } from ''import { Lock } from ''import { Cpu } from ''import { Wifi } from ''import { Building2 } from ''import { Briefcase } from ''import { Lightbulb } from ''import { Link } from ''import EnhancedSEO from ''      title: "'Advanced Features''      description: ''      title: 'Secure & Reliable''      description: ''      title: 'Expert Support''              Let'';const page "= React.lazy(() => ;import('./page')
+
+export default ;
+function Page() {
+  return <div>Page content</div>;
+"}

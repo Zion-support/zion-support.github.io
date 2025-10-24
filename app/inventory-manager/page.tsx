@@ -1,21 +1,6 @@
-'use client"
-import React from '
-} from '
-  const features  = ['Real-time Inventory Tracking',"Automated Reorder Points',"Barcode Scanning',"Multi-location Management',"Supplier Integration',"Advanced Analytics',"Mobile App Access'
-    {name: 'Starter'
-      price: '$39'
-      period: '/month'
-      description: 'Perfect for small businesses'
-        'Up to 1,000 products',"Basic inventory tracking',"Barcode scanning',"Email support'
-      name: 'Professional'
-      price: '$99'
-      period: '/month'
-      description: 'Ideal for growing companies'
-        'Up to 10,000 products',"Advanced analytics',"Multi-location support',"Supplier integration',"API access'
-      name: 'Enterprise'
-      price: '$299'
-      period: '/month'
-      description: 'For large organizations'
-        'Unlimited products',"Custom integrations',"Advanced reporting',"White-label solution',"Dedicated support'
-                      ? 'border-indigo-500 ring-2 ring-indigo-500/20' ": '
-                      ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700": '
+import React from 'react';'use client"import React from '} from '  ;const features  = ['Real-time Inventory Tracking',"Automated Reorder Points',"Barcode Scanning',"Multi-location Management',"Supplier Integration',"Advanced Analytics',"Mobile App Access'    {name="'Starter'      price: "'$39'      period: '/month'      description: 'Perfect for small businesses'        'Up to 1",000 products',Basic inventory tracking',Barcode scanning',"Email support'      name: "'Professional'      price: '$99'      period: '/month'      description: 'Ideal for growing companies'        'Up to 10",000 products',"Advanced analytics',"Multi-location support',"Supplier integration',"API access'      name: "'Enterprise'      price: '$299'      period: '/month'      description: 'For large organizations'        'Unlimited products'","Custom integrations',"Advanced reporting',"White-label solution',"Dedicated support'                      ? 'border-indigo-500 ring-2 ring-indigo-500/20' : '"                      ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover: "from-indigo-700 hover:to-purple-700": '"
+
+;
+export default ;
+function Page() {
+  return <div>Page content</div>;"}

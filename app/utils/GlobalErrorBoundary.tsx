@@ -1,5 +1,2 @@
-import React from 'react';'
-    console.error('Global Error Boundary caught an error:', error, errorInfo);'
-if (typeof window !== 'undefined') {'
-      // In a real app, you'd send this to your error tracking service'
-      console.log('Error reported to monitoring service');'
+import React from 'react''    console.error('Global Error Boundary caught an error="', error, errorInfo);''if (typeof window !"== 'undefined') {''      // In a real app, you'd send this to your error tracking service''      console.log('Error reported to monitoring service');'
+}

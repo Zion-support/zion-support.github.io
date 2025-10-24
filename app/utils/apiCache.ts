@@ -1,4 +1,10 @@
+import React from 'react';
 
+export default ;
+function Page() {
+  return (
+    <div>
+      
 interface ApiCacheOptions {
   })
   // Add your hooks logic here
@@ -10,5 +16,7 @@ interface ApiCacheOptions {
     // Return your hook values here
   }
 }
-export default ApiCache"
-"
+export default ApiCache""
+    </div>
+  );
+}

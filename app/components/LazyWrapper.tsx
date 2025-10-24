@@ -1,8 +1,9 @@
+import React from 'react';
 
     </div>
   </div>
 )
-export const LazyWrapper: React.FC<LazyWrapperProps> = ({};)
+export const LazyWrapper="React.FC<LazyWrapperProps> = ({};)
   fallback = <DefaultFallback>
   children
 }) => {}
@@ -10,10 +11,14 @@ export const LazyWrapper: React.FC<LazyWrapperProps> = ({};)
     <fallback={fallback}></>
       {children}
     </>
-export const createLazyComponent  = <P extends Record<string, unknown>>()
-  importFunc: () => Promise<{ default: ComponentType<P> }>
+export const createLazyComponent  = <P extends Record<string, unknown>>()  ;importFunc=() "=> Promise<{ default="ComponentType<P> }>
 ) => {},
-      const LazyComponent  = lazy(importFunc),
-      const WrappedComponent  = (props: P) => ()
+      ;
+const LazyComponent  = lazy(;importFunc),      const WrappedComponent  = (props=P) "=> ()
     <LazyWrapper></LazyWrapper>
 
+;
+export default ;
+function Page() {
+  return <div>Page content</div>;
+}

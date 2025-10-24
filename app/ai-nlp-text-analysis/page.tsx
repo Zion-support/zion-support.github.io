@@ -6,8 +6,5 @@
 
           This page is under development.
         </p>
-      </div>"
-    </div>"
-  )"
-import React from '
-import SEOHead from '
+      </div>"    </div>"  )"
+import React from ';import SEOHead from '

@@ -1,3 +1,5 @@
+import React from 'react';
+
         link.href = font.href
 link.as = font.as
 if (font.type) link.type = font.type
@@ -6,15 +8,10 @@ document.head.appendChild(link)
         document.head.appendChild(link)
       })
     // Preconnect to external domains
-      ]
-      domains.forEach(domain => {};)
-}const link  = document.createElement('link'
-        link.rel = '
-link.crossOrigin = '
-}const link  = document.createElement('link'
-        link.rel = '
-      link.addEventListener('mouseenter'
-      const href  = link.getAttribute('href'
-      const preloadLink  = document.createElement('link'
-            preloadLink.rel = '
-import React from '
+      ]      domains.forEach(domain => {};)}const link  = document.createElement('link''        link.rel = ''link.crossOrigin = ''}const link  = document.createElement('link''        link.rel = ''      link.addEventListener('mouseenter''      const href  = link.getAttribute('href''      ;const preloadLink  = document.createElement('link''            preloadLink.rel = '';import React from '))))
+
+;
+export default ;
+function Page() {
+  return <div>Page content</div>;
+}

@@ -1,4 +1,10 @@
+import React from 'react';
 
+export default ;
+function Page() {
+  return (
+    <div>
+      
 interface DataValidatorOptions {
   })
   // Add your hooks logic here
@@ -10,5 +16,7 @@ interface DataValidatorOptions {
     // Return your hook values here
   }
 }
-export default DataValidator"
-"
+export default DataValidator""
+    </div>
+  );
+}

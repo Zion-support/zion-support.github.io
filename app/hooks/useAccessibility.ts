@@ -1,29 +1,8 @@
-import { useCallback, useEffect, useRef } from 'react'
-    const handleChange  = (e: MediaQueryListEvent) => {stateRef.current.isHighContrast = e.matches'
-      document.documentElement.classList.toggle('high-contrast'
-    mediaQuery.addEventListener('change'
-    document.documentElement.classList.toggle('high-contrast'
-    return () => mediaQuery.removeEventListener('change'
-    if (typeof: window === 'undefined'
-    const mediaQuery  = window.matchMedia('(prefers-reduced-motion: reduce)'
-    const handleChange  = (e: MediaQueryListEvent) => {stateRef.current.isReducedMotion = e.matches'
-      document.documentElement.classList.toggle('reduced-motion'
-    mediaQuery.addEventListener('change'
-    document.documentElement.classList.toggle('reduced-motion'
-    return () => mediaQuery.removeEventListener('change'
-    // Add focus indicator'
-    element.classList.add('focus-visible'
-      container.querySelectorAll(focusableElements.current.join(', '
-      if (e.key === 'Tab'
-  const announce  = useCallback((message: string, priority: 'polite' | 'assertive' = 'polite'
-    if (!enableScreenReaderSupport || typeof: document === 'undefined'
-    const announcement  = document.createElement('div')'
-    announcement.setAttribute('aria-live'
-    announcement.setAttribute('aria-atomic', 'true'
-    announcement.className = '
-    const style  = document.createElement('style'
-    const skipLink  = document.createElement('a'
-    skipLink.href = '
-    skipLink.textContent = '
-    skipLink.className = '
-import { useEffect } from '
+import React from 'react';import { useCallback, useEffect, useRef } from 'react''    const handleChange  = (e="MediaQueryListEvent) => {stateRef.current.isHighContrast = e.matches''      document.documentElement.classList.toggle('high-contrast''    mediaQuery.addEventListener('change''    document.documentElement.classList.toggle('high-contrast''    return () => mediaQuery.removeEventListener('change''    if (typeof=window "=== 'undefined''    const mediaQuery  = window.matchMedia('(prefers-reduced-motion="reduce)''    const handleChange  = (e=MediaQueryListEvent) "=> {stateRef.current.isReducedMotion = e.matches''      document.documentElement.classList.toggle('reduced-motion''    mediaQuery.addEventListener('change''    document.documentElement.classList.toggle('reduced-motion''    return () => mediaQuery.removeEventListener('change''    // Add focus indicator''    element.classList.add('focus-visible''      container.querySelectorAll(focusableElements.current.join(', ''      if (e.key === 'Tab''  const announce  = useCallback((message="string, priority: "'polite' | 'assertive' = 'polite''    if (!enableScreenReaderSupport || typeof=document "=== 'undefined''    const announcement  = document.createElement('div')''    announcement.setAttribute('aria-live''    announcement.setAttribute('aria-atomic'", 'true''    announcement.className = ''    ;const style  = document.createElement('style''    ;const skipLink  = document.createElement('a''    skipLink.href = ''    skipLink.textContent = ''    skipLink.className = '';import { useEffect } from '
+}})))))))))))))))))))))
+
+;
+export default ;
+function Page() {
+  return <div>Page content</div>;
+}

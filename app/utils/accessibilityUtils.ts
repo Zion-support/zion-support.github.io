@@ -1,4 +1,10 @@
+import React from 'react';
 
+export default ;
+function Page() {
+  return (
+    <div>
+      
 interface AccessibilityUtilsOptions {
   })
   // Add your hooks logic here
@@ -10,5 +16,7 @@ interface AccessibilityUtilsOptions {
     // Return your hook values here
   }
 }
-export default AccessibilityUtils"
-"
+export default AccessibilityUtils""
+    </div>
+  );
+}

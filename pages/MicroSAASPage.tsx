@@ -1,55 +1,14 @@
-import { Helmet } from '
-      id: 'project-management-pro'
-      name: 'Project Management Pro'
-      description: 'Comprehensive project management platform with AI-powered insights and team collaboration'
-      price: '$149/month'
-      category: '
-      id: 'api-management-platform'
-      name: 'API Management Platform'
-      description: 'Complete API lifecycle management with monitoring, security, and developer portal'
-      price: '$179/month'
-      category: '
-      id: 'monitoring-suite'
-      name: 'Application Monitoring Suite'
-      description: 'Real-time application performance monitoring with alerting and root cause analysis'
-      price: '$129/month'
-      category: '
-      id: 'automation-tools'
-      name: 'Business Automation Tools'
-      description: 'Workflow automation platform with drag-and-drop builder and integration capabilities'
-      price: '$99/month'
-      category: '
-      id: 'email-marketing-suite'
-      name: 'Email Marketing Suite'
-      description: 'Advanced email marketing platform with AI-powered personalization and analytics'
-      price: '$89/month'
-      category: '
-      id: 'document-management'
-      name: 'Document Management System'
-      description: 'Secure document storage, collaboration, and workflow management platform'
-      price: '$79/month'
-      category: '
-      id: 'api-management-platform'
-      name: 'API Management Platform'
-      description: 'Complete API lifecycle management with monitoring, security, and developer portal'
-      price: '$179/month'
-        '
-      id: 'monitoring-suite'
-      name: 'Application ing Suite'
-      description: 'Real-time application performance monitoring with alerting and root cause analysis'
-      price: '$129/month'
-        '
-      id: 'automation-tools'
-      name: 'Business Automation Tools'
-      description: 'Workflow automation platform with drag-and-drop builder and integration capabilities'
-      price: '$99/month'
-      id: 'document-management'
-      name: 'Document Management System'
-      description: 'Secure document storage, collaboration, and workflow management platform'
-      price: '$79/month'
-  // const categories  = ['All', 'Productivity', 'Development', 'ing', 'Automation', 'Marketing', 'Document Management'
-      const stats  = [{ number: '200+', label: 'Micro SAAS Solutions'
-    { number: '99.9%', label: 'Uptime Guarantee'
-    { number: '24/7', label: 'Support Available'
-    { number: '4.7/5', label: 'Client Rating'
-                  ? 'border-purple-500/60 ring-2 ring-purple-500/20": '
+import React from 'react';import { Helmet } from 'react-helmet-async';
+
+const MicroSAASPage: "React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Micro SaaS Solutions | Zion Tech Group</title>        <meta name="description" content="Micro SaaS solutions for your business needs." />
+      </Helmet>      <div className="min-h-screen bg-gray-50">        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">          <h1 className="text-4xl font-bold text-gray-900 mb-8">Micro SaaS Solutions</h1>          <p className="text-xl text-gray-600">Scalable micro SaaS solutions for your business.</p>
+        </div>
+      </div>
+    </>
+  );"};
+
+export default MicroSAASPage;

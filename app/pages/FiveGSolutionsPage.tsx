@@ -1,5 +1,4 @@
-
-const FiveGSolutionsPage: React.FC = () => {}
+import React from "react";const FiveGSolutionsPage: "React.FC = () => {"}
   return ()
     <>{}</>
       <SEOHead>
@@ -7,4 +6,8 @@ const FiveGSolutionsPage: React.FC = () => {}
       </div>
     </>,
   ),
-import React from 'react';'
+;
+export default ;
+function Page() {
+  return <div>Page content</div>;
+}

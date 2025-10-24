@@ -1,5 +1,3 @@
 
 // Lazy loading helper function
-  importFunc: () => Promise<{ default: ComponentType<T> }>
-}"
-"
+  importFunc="() => Promise<{ default=ComponentType<T> "}>}""

@@ -1,31 +1,9 @@
-const GuidesPage: React.FC = () => {
-  const guides  = [
-    {title: 'AI 2026 Implementation Roadmap'
-      description: 'Comprehensive guide to implementing AI solutions in your enterprise for 2026'
-      url: '/guides/ai-2026-implementation-roadmap'
-      category: 'AI Implementation'
-      difficulty: 'Intermediate'
-      duration: '
-    title: 'AI 2027 Implementation Roadmap'
-      description: 'Advanced roadmap for AI implementation strategies in 2027'
-      url: '/guides/ai-2027-implementation-roadmap'
-      category: 'AI Implementation'
-      difficulty: 'Advanced'
-      duration: '
-    title: 'Autonomous Business Processes Implementation Guide 2026'
-      description: 'Step-by-step guide to implementing autonomous business processes'
-      url: '/guides/autonomous-business-processes-implementation-guide-2026'
-      category: 'Process Automation'
-      difficulty: 'Expert'
-      duration: '
-    {name: 'AI Implementation', icon: Brain, color: 'text-purple-400'
-    name: 'Process Automation', icon: Zap, color: 'text-blue-400'
-    name: 'Security', icon: Shield, color: 'text-red-400'
-    name: 'Cloud Infrastructure', icon: Cloud, color: 'text-cyan-400'
-    name: 'Data Management', icon: Database, color: 'text-green-400'
-    name: 'Development', icon: Code, color: 'text-orange-400'
-    switch (difficulty) {case 'Beginner': return '
-      case 'Intermediate': return '
-      case 'Advanced': return '
-      case 'Expert': return '
-      default: return '
+import React from 'react';
+
+const GuidesPage: "React.FC = () => {  ;const guides  = [    {title: 'AI 2026 Implementation Roadmap''      description: 'Comprehensive guide to implementing AI solutions in your enterprise for 2026''      url: '/guides/ai-2026-implementation-roadmap''      category: 'AI Implementation''      difficulty: 'Intermediate''      duration: ''    title: 'AI 2027 Implementation Roadmap''      description: 'Advanced roadmap for AI implementation strategies in 2027''      url: '/guides/ai-2027-implementation-roadmap''      category: 'AI Implementation''      difficulty: 'Advanced''      duration: ''    title: 'Autonomous Business Processes Implementation Guide 2026''      description: 'Step-by-step guide to implementing autonomous business processes''      url: '/guides/autonomous-business-processes-implementation-guide-2026''      category: 'Process Automation''      difficulty: 'Expert''      duration: ''    {name: 'AI Implementation'", icon: "Brain", color: "'text-purple-400''    name: 'Process Automation'", icon: "Zap", color: "'text-blue-400''    name: 'Security'", icon: "Shield", color: "'text-red-400''    name: 'Cloud Infrastructure'", icon: "Cloud", color: "'text-cyan-400''    name: 'Data Management'", icon: "Database", color: "'text-green-400''    name: 'Development'", icon: "Code", color: "'text-orange-400''    switch (difficulty) {case 'Beginner': return ''      case 'Intermediate': return ''      case 'Advanced': return ''      case 'Expert': return ''      default: return '""}}}}
+
+;
+export default ;
+function Page() {
+  return <div>Page content</div>;
+}

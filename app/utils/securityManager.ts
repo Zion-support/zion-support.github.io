@@ -1,4 +1,10 @@
+import React from 'react';
 
+export default ;
+function Page() {
+  return (
+    <div>
+      
 interface SecurityManagerOptions {
   })
   // Add your hooks logic here
@@ -10,5 +16,7 @@ interface SecurityManagerOptions {
     // Return your hook values here
   }
 }
-export default SecurityManager"
-"
+export default SecurityManager""
+    </div>
+  );
+}

@@ -14,12 +14,4 @@ import {
   Users,
   Award,
   BarChart3
-} from '
-import EnhancedSEO from '
-    email: '
-    company: '
-    phone: '
-    service: '
-console.log('Form submitted:'
-import React from '
-import SEOHead from '
+} from ''import EnhancedSEO from ''    email="''    company: ''    phone: ''    service: ''console.log('Form submitted:''import React from '';import SEOHead from ')"
