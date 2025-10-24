@@ -1,5 +1,9 @@
 'use client';
+<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
+=======
+import React, {useEffect, useState, useCallback}from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-4a55
 import { Helmet } from 'react-helmet-async';
 
 interface SEOOptimizerProps {
