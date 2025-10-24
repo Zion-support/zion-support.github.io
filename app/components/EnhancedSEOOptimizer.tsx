@@ -43,7 +43,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
               ))}
             </div>
           </div>
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             </div>
           </div>
 =======
