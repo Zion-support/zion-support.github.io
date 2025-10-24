@@ -1,187 +1,149 @@
 'use client';
-import React, { useState, useEffect } from 'react';
 
-// Extend interfaces for browser APIs
-declare global {
-  interface Performance {
-    memory?: {
-      usedJSHeapSize: number
-    }
-  }
-  
-  interface Navigator {
-    connection?: {
-      effectiveType: string
-    }
-    mozConnection?: {
-      effectiveType: string
-    }
-    webkitConnection?: {
-      effectiveType: string
-    }
-  }
+import React, { useEffect, useCallback, useMemo } from 'react';
+
+interface PerformanceOptimizerProps {
+  enableImageOptimization?: boolean;
+  enableLazyLoading?: boolean;
+  enableCodeSplitting?: boolean;
+  enableCaching?: boolean;
+  enableCompression?: boolean;
 }
 
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  isSlowConnection: boolean;
-}
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  enableImageOptimization = true,
+  enableLazyLoading = true,
+  enableCodeSplitting = true,
+  enableCaching = true,
+  enableCompression = true,
+}) => {
+  // Image optimization
+  const optimizeImages = useCallback(() => {
+    if (!enableImageOptimization) return;
 
-const PerformanceOptimizer: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isOptimized, setIsOptimized] = useState(false);
-
-  useEffect(() => {
-    const measurePerformance = () => {
-      const startTime = performance.now();
-      
-      // Measure load time
-      const loadTime = performance.timing?.loadEventEnd 
-        ? performance.timing.loadEventEnd - performance.timing.navigationStart 
-        : 0;
-
-      // Measure render time
-      const renderTime = performance.now() - startTime;
-
-      // Check memory usage (if available)
-      const memoryUsage = performance.memory?.usedJSHeapSize || 0;
-
-      // Check connection speed
-      const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-      const isSlowConnection = connection ? connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g' : false;
-
-      setMetrics({
-        loadTime,
-        renderTime,
-        memoryUsage,
-        isSlowConnection
-      });
-
-      // Auto-optimize based on metrics
-      if (loadTime > 3000 || renderTime > 100 || isSlowConnection) {
-        setIsOptimized(true);
-        applyOptimizations();
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+      // Add loading="lazy" for better performance
+      if (enableLazyLoading && !img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'lazy');
       }
-    };
 
-    const applyOptimizations = () => {
-      // Lazy load images
-      const images = document.querySelectorAll('img[data-src]');
-      images.forEach(img => {
-        const imageElement = img as HTMLImageElement;
-        if (imageElement.dataset.src) {
-          imageElement.src = imageElement.dataset.src;
-          imageElement.removeAttribute('data-src');
+      // Add decoding="async" for non-blocking image loading
+      if (!img.hasAttribute('decoding')) {
+        img.setAttribute('decoding', 'async');
+      }
+
+      // Add fetchpriority="low" for below-the-fold images
+      if (!img.hasAttribute('fetchpriority')) {
+        img.setAttribute('fetchpriority', 'low');
+      }
+    });
+  }, [enableImageOptimization, enableLazyLoading]);
+
+  // Resource preloading
+  const preloadCriticalResources = useCallback(() => {
+    if (!enableCaching) return;
+
+    const criticalResources = [
+      { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2' },
+      { href: '/css/critical.css', as: 'style' },
+      { href: '/js/app.js', as: 'script' },
+    ];
+
+    criticalResources.forEach((resource) => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource.href;
+      link.as = resource.as;
+      if (resource.type) link.type = resource.type;
+      link.crossOrigin = 'anonymous';
+      document.head.appendChild(link);
+    });
+  }, [enableCaching]);
+
+  // Service Worker registration for caching
+  const registerServiceWorker = useCallback(() => {
+    if (!enableCaching || typeof window === 'undefined') return;
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('/sw.js')
+        .then((registration) => {
+          console.log('SW registered: ', registration);
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    }
+  }, [enableCaching]);
+
+  // Performance monitoring
+  const monitorPerformance = useCallback(() => {
+    if (typeof window === 'undefined') return;
+
+    // Monitor Core Web Vitals
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        if (entry.entryType === 'largest-contentful-paint') {
+          console.log('LCP:', entry.startTime);
+        }
+        if (entry.entryType === 'first-input') {
+          console.log('FID:', entry.processingStart - entry.startTime);
+        }
+        if (entry.entryType === 'layout-shift') {
+          console.log('CLS:', (entry as any).value);
         }
       });
+    });
 
-      // Preload critical resources
-      const criticalResources = [
-        '/fonts/inter.woff2',
-        '/css/critical.css'
-      ];
+    observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
 
-      criticalResources.forEach(resource => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = resource;
-        link.as = resource.endsWith('.woff2') ? 'font' : 'style';
-        document.head.appendChild(link);
+    // Monitor memory usage
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      console.log('Memory usage:', {
+        used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
+        total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
+        limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB',
       });
-
-      // Preload critical fonts
-      const fontLink = document.createElement('link');
-      fontLink.rel = 'preload';
-      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
-      fontLink.as = 'style';
-      document.head.appendChild(fontLink);
-
-      // Preload critical images
-      const criticalImages = [
-        '/images/hero-bg.jpg',
-        '/images/logo.png'
-      ];
-
-      criticalImages.forEach(src => {
-        const img = new Image();
-        img.src = src;
-      });
-    };
-
-    // Optimize images
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        // Add loading="lazy" to non-critical images
-        if (!img.hasAttribute('loading')) {
-          img.setAttribute('loading', 'lazy');
-        }
-        
-        // Add decoding="async" for better performance
-        if (!img.hasAttribute('decoding')) {
-          img.setAttribute('decoding', 'async');
-        }
-      });
-    };
-
-    // Optimize scroll performance
-    const optimizeScroll = () => {
-      let ticking = false;
-      
-      const updateScrollPosition = () => {
-        // Throttle scroll events
-        if (!ticking) {
-          requestAnimationFrame(() => {
-            // Update scroll-dependent elements
-            ticking = false;
-          });
-          ticking = true;
-        }
-      };
-
-      window.addEventListener('scroll', updateScrollPosition, { passive: true });
-      
-      return () => {
-        window.removeEventListener('scroll', updateScrollPosition);
-      };
-    };
-
-    // Initialize optimizations
-    applyOptimizations();
-    optimizeImages();
-    const cleanupScroll = optimizeScroll();
-
-    // Measure performance after component mount
-    const timer = setTimeout(measurePerformance, 100);
-
-    // Cleanup on unmount
-    return () => {
-      cleanupScroll();
-      clearTimeout(timer);
-    };
+    }
   }, []);
 
-  // Don't render anything in production
-  if (process.env.NODE_ENV === 'production') {
-    return null;
-  }
+  // Memoized performance optimizations
+  const performanceOptimizations = useMemo(() => {
+    return {
+      imageOptimization: enableImageOptimization,
+      lazyLoading: enableLazyLoading,
+      codeSplitting: enableCodeSplitting,
+      caching: enableCaching,
+      compression: enableCompression,
+    };
+  }, [enableImageOptimization, enableLazyLoading, enableCodeSplitting, enableCaching, enableCompression]);
 
-  return (
-    <div className="fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg text-xs font-mono z-50">
-      <div className="mb-2 font-bold">Performance Monitor</div>
-      {metrics && (
-        <div className="space-y-1">
-          <div>Load: {metrics.loadTime.toFixed(0)}ms</div>
-          <div>Render: {metrics.renderTime.toFixed(0)}ms</div>
-          <div>Memory: {(metrics.memoryUsage / 1024 / 1024).toFixed(1)}MB</div>
-          <div>Slow: {metrics.isSlowConnection ? 'Yes' : 'No'}</div>
-          {isOptimized && <div className="text-green-400">Optimized</div>}
-        </div>
-      )}
-    </div>
-  );
+  useEffect(() => {
+    // Run optimizations on mount
+    optimizeImages();
+    preloadCriticalResources();
+    registerServiceWorker();
+    monitorPerformance();
+
+    // Re-optimize images when new content is added
+    const observer = new MutationObserver(() => {
+      optimizeImages();
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [optimizeImages, preloadCriticalResources, registerServiceWorker, monitorPerformance]);
+
+  // Return null as this is a utility component
+  return null;
 };
 
 export default PerformanceOptimizer;

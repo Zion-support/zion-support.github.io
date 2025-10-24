@@ -3,6 +3,7 @@ import React from 'react';
 
 interface UltimateBusinessIntelligence2025BannerProps {
   className?: string;
+  title?: string;
 }
 
 const UltimateBusinessIntelligence2025Banner: React.FC<UltimateBusinessIntelligence2025BannerProps> = (_props) => {

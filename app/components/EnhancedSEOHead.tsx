@@ -2,7 +2,9 @@
 import React from 'react';
 
 interface EnhancedSEOHeadProps {
-  className?: string;
+  title?: string;
+  description?: string;
+  canonical?: string;
 }
 
 const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = (_props) => {
