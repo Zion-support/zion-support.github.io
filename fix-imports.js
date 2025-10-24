@@ -1,87 +1,88 @@
+const fs = require('fs');
+const path = require('path');
 
-const fs = require('fs')
-const path = require('path')
-// Common Lucide React icons that might be missing
-const commonIcons = [
-  'Send', 'BarChart3', 'Shield', 'Target', 'Mail', 'Phone', 'MapPin', 'Github', 'Linkedin', 'Twitter'
-  'ArrowRight', 'Brain', 'Cloud', 'Database', 'Smartphone', 'Zap', 'Sparkles', 'Star', 'CheckCircle'
-  'Clock', 'Users', 'Settings', 'Check', 'Globe', 'TrendingUp', 'BarChart', 'Calculator', 'Building2'
-  'Wallet', 'PiggyBank', 'Settings', 'Home', 'Info', 'Briefcase', 'Phone', 'DocumentText', 'AcademicCap'
-  'Play', 'QuestionMarkCircle', 'ShieldCheck', 'CurrencyDollar', 'Cog', 'ChevronDown', 'Bars3Icon'
-  'XMarkIcon', 'HomeIcon', 'InformationCircleIcon', 'BriefcaseIcon', 'PhoneIcon', 'DocumentTextIcon'
-  'AcademicCapIcon', 'PlayIcon', 'QuestionMarkCircleIcon', 'ShieldCheckIcon', 'CurrencyDollarIcon'
-  'CogIcon', 'ChevronDownIcon'
-]
-// Function to find missing imports in a file
-function findMissingImports(content) {
-  const missingImports = []
-  for (const icon of commonIcons) {
-    // Check if icon is used in JSX but not imported
-    const iconRegex = new RegExp(`<${icon}\\s`, 'g')
-    const importRegex = new RegExp(`import.*{.*${icon}.*}.*from.*lucide-react`, 'g')
-    if (iconRegex.test(content) && !importRegex.test(content)) {
-      missingImports.push(icon)
-    }
-  }
-  return missingImports
+// Function to fix import statements
+function fixImports(content) {
+  let fixed = content;
+  
+  // Fix multiple semicolons in imports
+  fixed = fixed.replace(/import\s+([^;]+);;+/g, 'import $1;');
+  
+  // Fix malformed import statements
+  fixed = fixed.replace(/import\s+([^;]+);';/g, "import $1;");
+  fixed = fixed.replace(/import\s+([^;]+);";/g, 'import $1;');
+  
+  // Fix multiple imports on same line
+  fixed = fixed.replace(/import\s+([^;]+);';import\s+([^;]+);/g, "import $1;\nimport $2;");
+  fixed = fixed.replace(/import\s+([^;]+);";import\s+([^;]+);/g, 'import $1;\nimport $2;');
+  
+  // Fix malformed export statements
+  fixed = fixed.replace(/export\s+([^;]+);;+/g, 'export $1;');
+  
+  // Fix malformed object properties
+  fixed = fixed.replace(/\{\s*;\s*/g, '{');
+  fixed = fixed.replace(/;\s*;\s*\}/g, '}');
+  
+  // Fix malformed function declarations
+  fixed = fixed.replace(/function\s+([^(]+)\([^)]*\)\s*\{;+/g, 'function $1() {');
+  
+  // Fix malformed arrow functions
+  fixed = fixed.replace(/=\s*\([^)]*\)\s*=>\s*\{;+/g, '= () => {');
+  
+  // Fix malformed JSX
+  fixed = fixed.replace(/<\s*;\s*>/g, '<>');
+  fixed = fixed.replace(/<\s*\/\s*;\s*>/g, '</>');
+  
+  // Fix malformed return statements
+  fixed = fixed.replace(/return\s*\(\s*;\s*\)/g, 'return null');
+  
+  // Fix malformed array/object syntax
+  fixed = fixed.replace(/\[\s*;\s*\]/g, '[]');
+  fixed = fixed.replace(/\{\s*;\s*\}/g, '{}');
+  
+  return fixed;
 }
-// Function to fix imports in a file
-function fixImports(filePath) {
+
+// Function to process a file
+function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8')
-    const missingImports = findMissingImports(content)
-    if (missingImports.length === 0) {
-      return false
-}
-    // Find the lucide-react import line
-    const importRegex = /import\s*{([^}]+)}\s*from\s*['"]lucide-react['"]/
-    const match = content.match(importRegex)
-    if (match) {
-      // Add missing imports to existing import
-      const existingImports = match[1].split(',').map(imp => imp.trim())
-      const allImports = [...new Set([...existingImports, ...missingImports])].sort()
-      const newImport = `import { ${allImports.join(', ')} } from 'lucide-react'`
-      content = content.replace(importRegex, newImport)
-    } else {
-      // Add new import line
-      const newImport = `import { ${missingImports.join(', ')} } from 'lucide-react';\n`
-      content = newImport + content
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixImports(content);
+    
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
     }
-    fs.writeFileSync(filePath, content)
-    // eslint-disable-next-line no-console
-    console.log(`Fixed imports in: ${filePath} - Added: ${missingImports.join(', ')}`)
-    return true
+    return false;
   } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error(`Error fixing imports in ${filePath}:`, error.message)
-    return false
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
 }
-// Function to recursively find and fix all page files
-function fixAllImports(dir) {
-  const items = fs.readdirSync(dir)
-  let fixedCount = 0
+
+// Function to recursively find and process files
+function processDirectory(dirPath) {
+  const items = fs.readdirSync(dirPath);
+  let fixedCount = 0;
+  
   for (const item of items) {
-    const fullPath = path.join(dir, item)
-    const stat = fs.statSync(fullPath)
-    if (stat.isDirectory()) {
-      // Check if this is a page directory (contains page.tsx)
-      const pagePath = path.join(fullPath, 'page.tsx')
-      if (fs.existsSync(pagePath)) {
-        if (fixImports(pagePath)) {
-          fixedCount++
-}
+    const fullPath = path.join(dirPath, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      fixedCount += processDirectory(fullPath);
+    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+      if (processFile(fullPath)) {
+        fixedCount++;
       }
-      // Recursively check subdirectories
-      fixedCount += fixAllImports(fullPath)
     }
   }
-  return fixedCount
+  
+  return fixedCount;
 }
-// Start fixing from the app directory
-const appDir = path.join(__dirname, 'app')
-// eslint-disable-next-line no-console
-    console.log('Starting to fix missing imports...')
-const totalFixed = fixAllImports(appDir)
-// eslint-disable-next-line no-console
-    console.log(`Fixed imports in ${totalFixed} page files.`)
+
+// Main execution
+console.log('Starting import fixes...');
+const fixedCount = processDirectory('./app');
+console.log(`Fixed ${fixedCount} files.`);

@@ -1,29 +1,41 @@
 import React from 'react';
-import Head from "next/head";
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'Page - Zion Tech Group',
+  description: 'Comprehensive page solutions for modern businesses.',
+  keywords: 'page, AI solutions, technology services',
+  openGraph: {
+    title: 'Page - Zion Tech Group',
+    description: 'Comprehensive page solutions for modern businesses.',
+    type: 'website',
+    url: 'https://ziontechgroup.com/micro-saas/ai-expense-tracker',
+  },
+};
 
-export default function AiExpenseTrackerPage() {
+const PagePage = () => {
   return (
-    <>
-
-        <Head>
-        <title >AiExpenseTracker - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
-      </Head>
-
-      <div className="min-h-s creenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="con tainermx-auto px-4 py-16">
-          <h1 className="tex t-4xlfont-bold text-white mb-6">AiExpenseTracker</h1>
-          <p className="tex t-lgtext-gray-300 mb-8">Professional aiexpensetracker services by Zion Tech Group.</p>
-
-          <Link href="/contact" className="inl ine-flexitems-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-            Contact Us
-            <ArrowRight className="ml-2h-4w-4" />
-          </Link>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+            Page
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Comprehensive page solutions for modern businesses.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+              Get Started
+            </a>
+            <a href="/services" className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
+              Learn More
+            </a>
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
-}
+};
+
+export default PagePage;
