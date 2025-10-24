@@ -43,6 +43,8 @@
     "all-pages-backup/**/*",
     "backup-problematic/**/*",
     "corrupted-src-backup/**/*",
-    "problematic-files-backup/**/*"
+    "problematic-files-backup/**/*",
+    "problematic-pages/**/*",
+    "temp-pages/**/*"
   ]
 }
